@@ -1,5 +1,5 @@
 ---
-title: (Beta) Verwenden Sie berechnete Felder, um Arrays in flachen Schemadateien zu exportieren
+title: (Beta) Verwenden von berechneten Feldern, um Arrays in flache Schemadateien zu exportieren
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden können, um Arrays in flachen Schemadateien aus Real-Time CDP in Cloud-Speicher-Ziele zu exportieren.
 badge: Beta
@@ -7,11 +7,11 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# (Beta) Verwenden Sie berechnete Felder, um Arrays in flachen Schemadateien zu exportieren {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# (Beta) Verwenden von berechneten Feldern, um Arrays in flache Schemadateien zu exportieren {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

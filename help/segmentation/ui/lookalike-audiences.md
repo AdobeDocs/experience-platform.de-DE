@@ -30,7 +30,7 @@ Bevor Sie mit Look-alike-Zielgruppen beginnen, sollten Sie sich mit den folgende
 - **Look-alike-Zielgruppe**: Eine Look-alike-Zielgruppe ist die Zielgruppe, die erstellt wird, wenn ein Look-alike-Modell mit einer ausgewählten Ähnlichkeitsschwelle auf die Basiszielgruppe angewendet wird. Sie können mehrere Look-alike-Zielgruppen mit demselben Look-alike-Modell erstellen. Die Look-alike-Zielgruppe wird bewertet.
 - **Gesamte adressierbare Zielgruppengröße**: Die gesamte adressierbare Zielgruppengröße ist die Gesamtanzahl der Profile in den letzten 30 Tagen abzüglich der Basiszielgruppe in den letzten 30 Tagen. Wenn beispielsweise ein Kunde in den letzten 30 Tagen 10 Millionen Profile hat und die Basiszielgruppe in den letzten 30 Tagen 1 Million Profile hat, beträgt die gesamte adressierbare Zielgruppengröße 9 Millionen Profile.
 
-## Look-alike-Modelldetails {#details}
+## Look-alike-Modell – Details {#details}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"

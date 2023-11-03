@@ -2,9 +2,9 @@
 title: Sandboxes-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
+source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1849'
 ht-degree: 9%
 
 ---
@@ -60,7 +60,7 @@ Oberflächen (z. B. Vorgaben) werden nicht kopiert. Das System wählt basierend 
 
 Benutzerdefinierte Identitätstypen werden beim Exportieren einer Journey nicht als abhängige Objekte unterstützt.
 
-## Objekte in ein Package exportieren {#export-objects}
+## Exportieren von Objekten in ein Paket {#export-objects}
 
 >[!NOTE]
 >
@@ -237,6 +237,12 @@ Die **[!UICONTROL Importdetails]** zeigt eine detaillierte Aufschlüsselung der 
 >[!NOTE]
 >
 >Nach Abschluss eines Imports erhalten Sie Benachrichtigungen in der Platform-Benutzeroberfläche. Sie können auf diese Benachrichtigungen über das Warnungssymbol zugreifen. Sie können von hier aus zur Fehlerbehebung navigieren, wenn ein Auftrag nicht erfolgreich war.
+
+## Video-Tutorial
+
+Das folgende Video soll Ihnen dabei helfen, die Sandbox-Tools zu verstehen, und beschreibt, wie Sie ein neues Paket erstellen, ein Paket veröffentlichen und ein Paket importieren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Nächste Schritte
 

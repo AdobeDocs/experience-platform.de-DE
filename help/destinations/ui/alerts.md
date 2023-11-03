@@ -26,7 +26,7 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Mit Observability können Sie Platform-Aktivitäten mithilfe von statistischen Metriken und Ereignisbenachrichtigungen überwachen.](../../observability/home.md)[!DNL Observability Insights]
    * [Warnhinweise](../../observability/alerts/overview.md): Wenn bestimmte Bedingungen in Ihren Platform-Vorgängen erfüllt sind (z. B. ein potenzielles Problem, wenn das System einen Schwellenwert überschreitet), kann Platform allen Benutzern in Ihrer Organisation, die sich für sie angemeldet haben, Warnhinweise bereitstellen.
 
-## Warnhinweise über die Benutzeroberfläche abonnieren {#subscribe-destination-alerts}
+## Abonnieren von Warnhinweisen in der Benutzeroberfläche {#subscribe-destination-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"

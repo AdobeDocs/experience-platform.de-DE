@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
 source-wordcount: '1462'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Mit Adobe Experience Platform Query Service können Sie eine Verbindung mit externen Clients herstellen. Sie können eine Verbindung zu diesen externen Clients herstellen, indem Sie entweder ablaufende oder nicht ablaufende Anmeldeinformationen verwenden.
 
-## Ablaufberechtigungen {#expiring-credentials}
+## Ablaufende Anmeldeinformationen {#expiring-credentials}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"

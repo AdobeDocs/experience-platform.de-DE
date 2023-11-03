@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -24,7 +24,7 @@ Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität in
 - [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
-## Identitäten-Dashboard überwachen {#identity-metrics}
+## Überwachen des Identitäten-Dashboards {#identity-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"

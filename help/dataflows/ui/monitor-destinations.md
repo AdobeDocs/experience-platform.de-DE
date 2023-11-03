@@ -8,7 +8,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '3227'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -107,7 +107,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ![Datenflussdatensätze für Streaming-Ziele](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Datenfluss-Ausführung für Batch-Ziele {#dataflow-runs-for-batch-destinations}
+### Datenflussausführungen für Batch-Ziele {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
@@ -165,7 +165,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ![Datenflussdatensätze für Batch-Ziele](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Dashboard &quot;Ziele überwachen&quot; {#monitoring-destinations-dashboard}
+## Dashboard „Ziele überwachen“ {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >

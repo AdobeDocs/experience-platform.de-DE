@@ -7,7 +7,7 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1475'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -111,7 +111,7 @@ Wenn eine Lösung zusätzliche Daten bereitgestellt hat, ist dies in diesem Dial
 
 Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie **[!UICONTROL Exportieren in CSV]** oben rechts im Dialogfeld.
 
-## Neue Datenschutzauftragsanforderung erstellen {#create-a-new-privacy-job-request}
+## Erstellen einer neuen Anfrage für einen Datenschutzauftrag {#create-a-new-privacy-job-request}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"

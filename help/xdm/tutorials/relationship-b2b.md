@@ -5,11 +5,11 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
-# Definieren einer 1:1-Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition {#relationship-b2b}
+# Definieren einer n:1-Zuordnung zwischen zwei Schemata in der Real-time Customer Data Platform B2B Edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -46,7 +46,7 @@ Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert
 
 Schemabeziehungen werden durch ein dediziertes Feld in einer **Quellschema** , das auf das primäre Identitätsfeld eines **Referenzschema**. In den folgenden Schritten: &quot;[!DNL Opportunities]&quot; dient als Quellschema, während &quot;[!DNL Accounts]&quot; dient als Referenzschema.
 
-### Identitäten in B2B-Beziehungen verstehen
+### Grundlegendes über Identitäten in B2B-Beziehungen
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"

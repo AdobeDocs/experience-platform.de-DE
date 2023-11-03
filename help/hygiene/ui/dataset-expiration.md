@@ -9,7 +9,7 @@ ht-degree: 53%
 
 ---
 
-# Automatisierte Datensatzabläufe {#dataset-expiration}
+# Automatisierte Datensatzablauffristen {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"

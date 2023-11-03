@@ -35,7 +35,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Aggregierte Monitoring-Ansicht {#aggregated-monitoring-view}
+## Ansicht „Aggregierte Überwachung“ {#aggregated-monitoring-view}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"

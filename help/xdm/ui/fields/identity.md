@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -23,7 +23,7 @@ Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Iden
    * [Identity-Namespaces](../../../identity-service/namespaces.md): In Identity-Namespaces werden die verschiedenen Arten von Identitätsinformationen definiert, die sich auf eine einzelne Person beziehen können. Sie sind eine erforderliche Komponente für jedes Identitätsfeld.
 * [Echtzeit-Kundenprofil](../../../profile/home.md): Nutzen von Diagrammen zur Kundenidentität, um ein einheitliches Verbraucherprofil basierend auf aggregierten Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
 
-## Identitätsfeld definieren {#define-a-identity-field}
+## Definieren eines Identitätsfelds {#define-a-identity-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"

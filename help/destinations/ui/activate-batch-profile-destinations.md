@@ -62,7 +62,7 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 >
 >Auswählen von Audiences, die von **[!UICONTROL Benutzerdefinierte Uploads]** aktiviert automatisch die [Anreicherungsattribute auswählen](#select-enrichment-attributes) Schritt.
 
-## Zielgruppenexport planen {#scheduling}
+## Planen eines Zielgruppenexports {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -432,9 +432,9 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 
 >[!IMPORTANT]
 > 
->Alle Cloud-Speicher-Ziele im Katalog können eine verbesserte anzeigen [[!UICONTROL Zuordnung] Schritt](#mapping) , der die **[!UICONTROL Attribute auswählen]** in diesem Abschnitt beschrieben.
+Alle Cloud-Speicher-Ziele im Katalog können eine verbesserte anzeigen [[!UICONTROL Zuordnung] Schritt](#mapping) , der die **[!UICONTROL Attribute auswählen]** in diesem Abschnitt beschrieben.
 >
->Diese **[!UICONTROL Attribute auswählen]** wird weiterhin für die E-Mail-Marketing-Ziele des Adobe Campaign-, Oracle Responsys-, Oracle Eloqua- und Salesforce-Marketings Cloud angezeigt.
+Diese **[!UICONTROL Attribute auswählen]** wird weiterhin für die E-Mail-Marketing-Ziele des Adobe Campaign-, Oracle Responsys-, Oracle Eloqua- und Salesforce-Marketings Cloud angezeigt.
 
 Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie an das Ziel senden möchten.
 
@@ -454,31 +454,31 @@ Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie a
 
 >[!NOTE]
 >
-> Adobe Experience Platform füllt Ihre Auswahl vorab mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform füllt Ihre Auswahl vorab mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 ![Bild mit vorausgefüllten empfohlenen Attributen im Zuordnungsschritt des Zielgruppenaktivierungs-Workflows.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Feld auswählen]** derzeit nicht verwenden, um `segmentMembership.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert manuell einfügen `xdm: segmentMembership.status` in das Schemafeld ein, wie unten dargestellt.
+Aufgrund einer bekannten Einschränkung können Sie das Fenster **[!UICONTROL Feld auswählen]** derzeit nicht verwenden, um `segmentMembership.status` zu Ihren Dateiexporten hinzuzufügen. Stattdessen müssen Sie den Wert manuell einfügen `xdm: segmentMembership.status` in das Schemafeld ein, wie unten dargestellt.
 >
->![Bildschirmaufzeichnung, die die Problemumgehung für die Zielgruppenzugehörigkeit im Zuordnungsschritt des Aktivierungs-Workflows anzeigt.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![Bildschirmaufzeichnung, die die Problemumgehung für die Zielgruppenzugehörigkeit im Zuordnungsschritt des Aktivierungs-Workflows anzeigt.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Dateiexporte variieren je nach dem, ob `segmentMembership.status` ausgewählt ist:
 * Wenn das Feld `segmentMembership.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
 * Wenn die Variable `segmentMembership.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur die **[!UICONTROL aktiven]** Mitglieder.
 
-## Anreicherungsattribute auswählen {#select-enrichment-attributes}
+## Auswählen von Anreicherungsattributen {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="Ausschließen von Anreicherungsattributen"
->abstract="Aktivieren Sie diese Option, um die Profile aus den ausgewählten benutzerdefinierten, hochgeladenen Zielgruppen zu exportieren und dabei alle zugehörigen Attribute auszuschließen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de#select-enrichment-attributes" text="Weitere Informationen finden Sie in der Dokumentation"
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="Ausschließen von Anreicherungsattributen"
+abstract="Aktivieren Sie diese Option, um die Profile aus den ausgewählten benutzerdefinierten, hochgeladenen Zielgruppen zu exportieren und dabei alle zugehörigen Attribute auszuschließen."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de#select-enrichment-attributes" text="Weitere Informationen finden Sie in der Dokumentation"
 
 >[!IMPORTANT]
 >
->Dieser Schritt wird nur angezeigt, wenn Sie **[!UICONTROL Benutzerdefinierter Upload]** Zielgruppen während der [Zielgruppenauswahl](#select-audiences) Schritt.
+Dieser Schritt wird nur angezeigt, wenn Sie **[!UICONTROL Benutzerdefinierter Upload]** Zielgruppen während der [Zielgruppenauswahl](#select-audiences) Schritt.
 
 Anreicherungsattribute entsprechen benutzerdefinierten, hochgeladenen Zielgruppen, die in Experience Platform als **[!UICONTROL Benutzerdefinierte Uploads]**. In diesem Schritt können Sie für jede ausgewählte externe Zielgruppe auswählen, welche Attribute Sie an Ihr Ziel exportieren möchten.
 
@@ -509,10 +509,10 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="Aktuelle Einverständnisrichtlinien anzeigen"
->abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="Aktuelle Einverständnisrichtlinien anzeigen"
+abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
 
 Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 

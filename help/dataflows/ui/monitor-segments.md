@@ -29,7 +29,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
    - [Exportaufträge](../../segmentation/api/export-jobs.md): Ein Exportauftrag ist ein asynchroner Vorgang, der verwendet wird, um Zielgruppensegmentmitglieder in Datensätzen zu erhalten.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
-## Segmente-Dashboard überwachen {#monitoring-segments-dashboard}
+## Überwachen des Segmente-Dashboards {#monitoring-segments-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
@@ -168,7 +168,7 @@ Für den Segmentabschnitt stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Name]** | Der Name des Segments, das ausgewertet wird. |
 | **[!UICONTROL Anzahl der Profile]** | Die Anzahl der Profile, die ausgewertet werden. |
 
-## Überwachen des Dashboards für Segmentaufträge {#monitoring-segment-jobs-dashboard}
+## Überwachen des Dashboards „Segmentvorgänge“ {#monitoring-segment-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"

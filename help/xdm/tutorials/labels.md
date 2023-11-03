@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -33,7 +33,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
    * [Schema Editor](../ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Platform-Benutzeroberfläche erstellen und verwalten.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Bietet die Infrastruktur zum Durchsetzen von Datennutzungsbeschränkungen für Platform-Vorgänge mithilfe von Richtlinien, die definieren, welche Marketing-Aktionen für gekennzeichnete Daten ausgeführt werden können (oder nicht).
 
-## Schema oder Feld auswählen, dem Beschriftungen hinzugefügt werden sollen {#select-schema-field}
+## Auswählen eines Schemas oder Felds, dem Beschriftungen hinzugefügt werden sollen {#select-schema-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"

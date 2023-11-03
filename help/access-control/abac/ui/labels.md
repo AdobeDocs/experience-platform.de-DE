@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 35%
+ht-degree: 37%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 35%
 
 Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungs- und Zugriffsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen.
 
-## Neue Bezeichnung erstellen {#create-new-label}
+## Erstellen einer neuen Kennzeichnung {#create-new-label}
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"

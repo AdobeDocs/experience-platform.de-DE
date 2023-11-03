@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
-ht-degree: 51%
+ht-degree: 52%
 
 ---
 
@@ -38,31 +38,31 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 | Ressource | Aktionen |
 | --- | --- |
-| [Zugriffskontrollrichtlinie (attributbasierte Zugriffskontrolle)](../../../access-control/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Konto (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Attributions-KI-Instanz](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
+| [Zugriffskontrollrichtlinie (attributbasierte Zugriffskontrolle)](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Konto (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Attributions-KI-Instanz](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
 | [Administratorprotokolle](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportieren</li></ul> |
-| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| Berechnetes Attribut | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
-| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Daten hinzufügen</li><li>Batch löschen</li></ul> |
-| [Datenstrom](../../../datastreams/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../datastreams/data-prep.md)</li></ul> |
-| [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Ziel](../../../destinations/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
-| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| Berechnetes Attribut | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Kunden-KI-Instanz](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li></ul> |
+| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Daten hinzufügen</li><li>Batch löschen</li></ul> |
+| [Datenstrom](../../../datastreams/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>[Zuordnung bearbeiten](../../../datastreams/data-prep.md)</li></ul> |
+| [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Ziel](../../../destinations/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
+| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
 | [Identitätsdiagramm](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ansicht</li></ul> |
-| [Identity-Namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Erstellen von</li><li>Update</li></ul> |
-| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
+| [Identity-Namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Erstellen</li><li>Update</li></ul> |
+| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
 | [Abfrage](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |
-| [Abfragevorlage](../../../query-service/ui/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Rolle (attributbasierte Zugriffssteuerung)](../../../access-control/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Benutzer hinzufügen</li><li>Benutzer löschen</li></ul> |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellen von</li><li>Update</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
-| [Geplante Abfrage](../../../query-service/ui/overview.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren Sie es für das Profil</li></ul> |
-| [Segment](../../../segmentation/home.md) | <ul><li>Erstellen von</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
-| [Quelldatenfluss](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen von</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profilaktivität</li><li>Profil entfernen</li></ul> |
-| [Arbeitsauftrag](../../../hygiene/home.md) | <ul><li>Erstellen von</li></ul> |
+| [Abfragevorlage](../../../query-service/ui/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Rolle (attributbasierte Zugriffssteuerung)](../../../access-control/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Benutzer hinzufügen</li><li>Benutzer löschen</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellen</li><li>Update</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
+| [Geplante Abfrage](../../../query-service/ui/overview.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren Sie es für das Profil</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Erstellen</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
+| [Quelldatenfluss](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellen</li><li>Update</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profilaktivität</li><li>Profil entfernen</li></ul> |
+| [Arbeitsauftrag](../../../hygiene/home.md) | <ul><li>Erstellen</li></ul> |
 
 ## Zugriff auf Auditprotokolle
 
@@ -70,7 +70,7 @@ Wenn diese Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten 
 
 Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!UICONTROL Protokoll zur Benutzeraktivität anzeigen]** Zugriffskontrollberechtigung erteilt (zu finden unter [!UICONTROL Data Governance] Kategorie). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../../access-control/home.md).
 
-## Verwalten von Prüfprotokollen in der Benutzeroberfläche {#managing-audit-logs-in-the-ui}
+## Verwalten von Audit-Protokollen in der Benutzeroberfläche {#managing-audit-logs-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"

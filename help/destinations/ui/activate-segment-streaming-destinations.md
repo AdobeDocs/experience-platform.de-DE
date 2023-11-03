@@ -99,7 +99,7 @@ Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel e
 
 ![Identitätszuordnung](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Zielgruppenexport planen {#scheduling}
+## Planen eines Zielgruppenexports {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"

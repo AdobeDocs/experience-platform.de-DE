@@ -37,7 +37,7 @@ Die [!UICONTROL Dashboard erstellen] angezeigt. Geben Sie einen benutzerfreundli
 
 Das neu erstellte leere Dashboard wird mit Ihrem Namen in der oberen linken Ecke der Ansicht angezeigt.
 
-## Widget erstellen {#create-widget}
+## Erstellen eines Widgets {#create-widget}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"

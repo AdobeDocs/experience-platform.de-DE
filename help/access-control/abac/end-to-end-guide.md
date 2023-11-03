@@ -6,7 +6,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1740'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -61,7 +61,7 @@ Sobald Sie über Administratorberechtigungen verfügen, wechseln Sie zu [Adobe E
 
 Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläche wird angezeigt und öffnet sich im **[!UICONTROL Rollen]** Seite.
 
-## Anwenden von Beschriftungen auf eine Rolle {#label-roles}
+## Anwenden von Kennzeichnungen auf eine Rolle {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
@@ -153,7 +153,7 @@ Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, sodass Sie die Besc
 
 Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 
-## Zugriffssteuerungsrichtlinie aktivieren {#policy}
+## Aktivieren der Zugriffssteuerungsrichtlinie {#policy}
 
 Die standardmäßige Zugriffssteuerungsrichtlinie nutzt Beschriftungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. In diesem Beispiel wird der Zugriff auf Schemafelder und -segmente in allen Sandboxes Benutzern verweigert, die sich nicht in einer Rolle befinden, die über die entsprechenden Beschriftungen im Schemafeld verfügt.
 
