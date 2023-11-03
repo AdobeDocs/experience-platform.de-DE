@@ -2,10 +2,10 @@
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
@@ -78,7 +78,7 @@ Datenelemente stellen die Bausteine zum Erstellen von Regeln dar. Dank Datenelem
       * Der Wert wird in einer JavaScript-Variablen gespeichert, bis die Seite aktualisiert oder eine neue Seite geladen wird.
       * Kann mithilfe der `_satellite`-Objektsyntax erstellt und in Skripten festgelegt werden:
 
-         `_satellite.setVar('data_element_name')`
+        `_satellite.setVar('data_element_name')`
    * Session
       * Werte bleiben bis zum Schließen der Browser-Registerkarte im Sitzungsspeicher des Browsers erhalten.
       * Verfügbar während des gesamten Site-Besuchs.
@@ -174,7 +174,7 @@ Nehmen wir beispielsweise an, das Markup enthält eine JavaScript-Variable namen
 
 Sie müssen den Pfad zu dieser Variablen angeben, wenn Sie das Datenelement erstellen.
 
-Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie im Pfad Punktnotation zur Referenzierung des Objekts und der Eigenschaft, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName`oder `digitalData.pageName` usw.
+Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie im Pfad Punktnotation zur Referenzierung des Objekts und der Eigenschaft, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName`oder `digitalData.pageName`, usw.
 
 #### Beispiel:
 
