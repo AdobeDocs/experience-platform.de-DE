@@ -4,16 +4,20 @@ solution: Experience Platform
 title: Anleitung zu Query Service-Anmeldedaten
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
-ht-degree: 5%
+source-wordcount: '1517'
+ht-degree: 4%
 
 ---
 
 # Handbuch zu Anmeldeinformationen
 
 Mit Adobe Experience Platform Query Service können Sie eine Verbindung mit externen Clients herstellen. Sie können eine Verbindung zu diesen externen Clients herstellen, indem Sie entweder ablaufende oder nicht ablaufende Anmeldeinformationen verwenden.
+
+>[!NOTE]
+>
+>Der Bereich &quot;Anmeldeinformationen&quot;ist nicht automatisch für alle Benutzer verfügbar. Wenden Sie sich an Ihr Adobe-Account-Team, um die [!UICONTROL Anmeldeinformationen] im Arbeitsbereich &quot;Query Service&quot;hinzugefügt werden. Auf Wunsch wird diese Änderung organisationsweit durchgeführt und vom Adobe Engineering Team durchgeführt. Es handelt sich nicht um eine Einstellung, die von Benutzern gesteuert wird.
 
 ## Ablaufende Anmeldeinformationen {#expiring-credentials}
 

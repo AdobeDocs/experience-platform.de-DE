@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 60%
+ht-degree: 72%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 60%
 * [Überblick über die erweiterte Lebenszyklusverwaltung](./home.md)
 * Data Lifecycle-Benutzeroberfläche {#ui}
    * [Übersicht](./ui/overview.md)
-   * [Automatisierte Datensatzabläufe](./ui/dataset-expiration.md)
+   * [Automatisierte Datensatzablauffristen](./ui/dataset-expiration.md)
    * [(Beta) Datensätze löschen](./ui/record-delete.md)
-   * [Durchsuchen von Arbeitsaufträgen für den Datenlebenszyklus](./ui/browse.md)
+   * [Durchsuchen von Datenlebenszyklus-Arbeitsaufträgen](./ui/browse.md)
 * Data Hygiene API {#api}
    * [Übersicht](./api/overview.md)
    * [Datensatzgültigkeiten](./api/dataset-expiration.md)

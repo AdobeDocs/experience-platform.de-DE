@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 96%
+source-wordcount: '1806'
+ht-degree: 94%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 96%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
+
+## Version 2.21.0 - 1. November 2023
+
+**Neue Funktionen**
+
+* hinzugefügt `Request default personalization` Option zum Senden der Ereignisaktion.
+* Zusätzliche Unterstützung für Seitenereignisse am oberen und unteren Rand in der Sendeereignisaktion.
+* hinzugefügt `Apply propositions` Aktion.
+* hinzugefügt `Evaluate rulesets` Maßnahmen und `Subscribe ruleset items` -Ereignis für In-App-Nachrichten.
+* hinzugefügt `Decision context` , um die Ereignisaktion zu senden.
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Enthält Version 2.19.0 des Adobe Experience Platform Web SDK.
 
 ## Version 2.20.3 - 8. August 2023
 
