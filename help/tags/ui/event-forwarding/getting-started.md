@@ -3,9 +3,9 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '870'
 ht-degree: 84%
 
 ---
@@ -20,7 +20,7 @@ Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Server-zu-Server-API](/help/server-api/overview.md)
+* [Edge Network Server-API](/help/server-api/overview.md)
 
 >[!NOTE]
 >Das Platform Web SDK und das Platform Mobile SDK erfordern keine Bereitstellung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
