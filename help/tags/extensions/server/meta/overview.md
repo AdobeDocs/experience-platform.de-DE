@@ -2,9 +2,9 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 1%
 
 ---
@@ -67,9 +67,9 @@ Durch die Integration mit der Ereignisqualitäts-Match-Bewertung (EMQ) können S
 
 ## Integration mit LiveRamp (Alpha) {#alpha}
 
-Die Integration mit LiveRamp fügt der Konfiguration der Meta Conversions API-Regel neue Felder hinzu, wodurch Kunden die Integration mit der LiveRamp Conversions-API erleichtern. Durch diese Integration entfällt die Notwendigkeit, personenbezogene Daten direkt für Ihren Partner oder Meta freizugeben. Aufgrund des robusten Identitätsdiagramms von LiveRamp ist die Einbeziehung von [!UICONTROL Partner-ID (Alpha)] kann die Integrationsqualität verbessern, indem die Übereinstimmungsrate für Benutzer erhöht wird.
+[!DNL LiveRamp] Kunden, die [!DNL LiveRamp]Die auf ihren Sites bereitgestellte authentifizierte Traffic-Lösung (ATS) kann sich dafür entscheiden, RampIDs als Parameter für Kundeninformationen freizugeben. Arbeiten Sie bitte mit Ihrem [!DNL Meta] Account-Team , um dem Alpha-Programm für diese Funktion beizutreten.
 
-![Die Meta-Forwarding [!UICONTROL Regel] Hervorhebung der Konfigurationsseite [!UICONTROL Partnername (Alpha)] und [!UICONTROL Partner-ID (Alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![Die Meta-Ereignisweiterleitung [!UICONTROL Regel] Hervorhebung der Konfigurationsseite [!UICONTROL Partnername (Alpha)] und [!UICONTROL Partner-ID (Alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Konfigurieren einer Ereignisweiterleitungsregel {#rule}
 
