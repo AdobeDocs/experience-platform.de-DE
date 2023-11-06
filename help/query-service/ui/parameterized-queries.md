@@ -2,23 +2,19 @@
 title: Parameterisierte Abfragen
 description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experience Platform-Benutzeroberfläche verwenden.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 11%
+source-wordcount: '734'
+ht-degree: 12%
 
 ---
 
-# Parametrisierte Abfragen (begrenzte Version) {#parameterized-queries}
+# Parametrierte Abfragen {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Parametrierte Abfragen"
 >abstract="Verwenden Sie parametrierte Abfragen, um zum Zeitpunkt der Ausführung Parameterwerte hinzuzufügen. Auf diese Weise können Sie mit dynamischen Daten arbeiten und Abfragen für unterschiedliche Anwendungsfälle wiederverwenden. Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Fügen Sie anschließend im Abschnitt „Abfrageparameter“ unter dem Editor einen Wert für den Schlüssel hinzu."
-
->[!IMPORTANT]
->
->Die parametrisierte Abfragebenutzeroberfläche-Funktion ist in einer **Nur begrenzte Version** und ist nicht für alle Kunden verfügbar.
 
 Query Service unterstützt die Verwendung parametrisierter Abfragen im Abfrage-Editor. Bei parametrierten Abfragen können Sie jetzt Platzhalter für Parameter verwenden und die Parameterwerte zur Ausführungszeit hinzufügen. Mit Platzhaltern können Sie mit dynamischen Daten arbeiten, bei denen Sie nicht wissen, welche Werte verwendet werden, bis die Anweisung ausgeführt wird. Sie können Ihre Abfragen auch vorzeitig vorbereiten und für ähnliche Zwecke wiederverwenden. Die Wiederverwendung von Abfragen erspart Ihnen erheblichen Aufwand, da Sie die Erstellung eigener SQL-Abfragen für jeden Anwendungsfall vermeiden.
 

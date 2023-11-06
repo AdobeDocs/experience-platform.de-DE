@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 113e74b3a4783a11bc88dc2d16134b68638604e5
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '310'
 ht-degree: 91%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 91%
    - [Benutzeroberfläche – Übersicht](ui/overview.md)
    - [Benutzerhandbuch zum Abfrage-Editor](ui/user-guide.md)
    - [Abfragevorlagen](ui/query-templates.md)
-   - [Parametrisierte Abfragen (begrenzt)](ui/parameterized-queries.md)
+   - [Parametrierte Abfragen](ui/parameterized-queries.md)
    - [Abfragepläne](ui/query-schedules.md)
    - [Abfrageprotokolle](ui/query-logs.md)
    - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
