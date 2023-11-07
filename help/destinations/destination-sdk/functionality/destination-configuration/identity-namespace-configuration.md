@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 95%
@@ -145,7 +145,7 @@ Nach dem Lesen dieses Artikels sollten Sie ein besseres Verständnis davon haben
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
 * [Kundenauthentifizierung](customer-authentication.md)
-* [OAuth 2-Authentifizierung](oauth2-authentication.md)
+* [OAuth 2-Authentifizierung](oauth2-authorization.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)

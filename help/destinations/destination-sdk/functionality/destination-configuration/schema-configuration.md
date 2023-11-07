@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 98%
@@ -246,7 +246,7 @@ Nach dem Lesen dieses Artikels sollten Sie besser verstehen, welche Schematypen 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
 * [Kundenauthentifizierung](customer-authentication.md)
-* [OAuth 2-Authentifizierung](oauth2-authentication.md)
+* [OAuth 2-Authentifizierung](oauth2-authorization.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Konfiguration von Identity-Namespaces](identity-namespace-configuration.md)

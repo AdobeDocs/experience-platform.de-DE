@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie einen Authentifizierungsmechanismus für Ihr Ziel einrichten und erhalten Sie einen Einblick darüber, was in der Benutzeroberfläche je nach gewählter Authentifizierungsmethode zu sehen sein wird.
 title: Konfiguration der Kundenauthentifizierung
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 100%
@@ -105,7 +105,7 @@ Um die Authentifizierung des Bearer-Typs für Ihr Ziel einzurichten, konfigurier
 
 ## OAuth 2-Authentifizierung {#oauth2}
 
-Benutzerinnen und Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel auszulösen (siehe folgendes Beispiel für das Ziel „Twitter Custom Audiences“). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authentication.md).
+Benutzerinnen und Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel auszulösen (siehe folgendes Beispiel für das Ziel „Twitter Custom Audiences“). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authorization.md).
 
 ![Darstellung der Benutzeroberfläche mit OAuth 2-Authentifizierung](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -233,7 +233,7 @@ Nach dem Lesen dieses Artikels sollten Sie besser verstehen, wie Sie die Benutze
 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
-* [OAuth 2-Authentifizierung](oauth2-authentication.md)
+* [OAuth 2-Authentifizierung](oauth2-authorization.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)

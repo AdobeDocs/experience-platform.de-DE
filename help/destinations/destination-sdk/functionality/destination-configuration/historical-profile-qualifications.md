@@ -2,7 +2,7 @@
 description: Erfahren Sie mehr über die historischen Profilqualifikationen, die von mit Destination SDK erstellten Zielen unterstützt werden.
 title: Historische Profilqualifikationen
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 100%
@@ -45,7 +45,7 @@ Nach dem Lesen dieses Artikels sollten Sie wissen, dass Experience Platform auto
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
 * [Kundenauthentifizierung](customer-authentication.md)
-* [OAuth 2-Authentifizierung](oauth2-authentication.md)
+* [OAuth 2-Authentifizierung](oauth2-authorization.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)

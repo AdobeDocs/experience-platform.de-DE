@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie einen API-Aufruf strukturieren, um eine Zielkonfiguration über Adobe Experience Platform Destination SDK zu erstellen.
 title: Erstellen einer Zielkonfiguration
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 98%
@@ -16,7 +16,7 @@ Diese Seite veranschaulicht die API-Anfrage und die Payload, die Sie verwenden k
 Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt konfigurieren können, finden Sie in den folgenden Artikeln:
 
 * [Konfiguration der Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth 2-Authentifizierung](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth 2-Authentifizierung](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Benutzerdefinierte Datenfelder](../../functionality/destination-configuration/customer-data-fields.md)
 * [Benutzeroberflächenattribute](../../functionality/destination-configuration/ui-attributes.md)
 * [Schemakonfiguration](../../functionality/destination-configuration/schema-configuration.md)

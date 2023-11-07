@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1201'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -214,7 +214,7 @@ ht-degree: 95%
          * [Konfiguration der Dateiformatierung](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Zielkonfigurationskomponenten {#destination-configuration}
          * [Konfiguration der Kundenauthentifizierung](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-         * [OAuth 2-Authentifizierung](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [OAuth2-Autorisierung](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Benutzerdefinierte Datenfelder](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
          * [Benutzeroberflächenattribute](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
          * [Konfiguration des Partnerschemas](./destination-sdk/functionality/destination-configuration/schema-configuration.md)

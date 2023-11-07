@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 64%
@@ -265,7 +265,7 @@ Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mi
 
 Je nachdem, ob Sie In der obigen Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` angeben, können Sie unter Verwendung des Endpunkts `/destination` oder `/credentials` die Authentifizierung für Ihr Ziel einrichten.
 
-Wenn Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in der Zielkonfiguration enthalten sind und Ihr Ziel die OAuth 2-Authentifizierungsmethode unterstützt, lesen Sie [OAuth 2-Authentifizierung](../functionality/destination-configuration/oauth2-authentication.md).
+Wenn Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in der Zielkonfiguration enthalten sind und Ihr Ziel die OAuth 2-Authentifizierungsmethode unterstützt, lesen Sie [OAuth 2-Authentifizierung](../functionality/destination-configuration/oauth2-authorization.md).
 
 Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"`, müssen Sie eine [Anmeldekonfiguration](../credentials-api/create-credential-configuration.md).
 

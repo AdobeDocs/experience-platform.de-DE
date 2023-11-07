@@ -2,7 +2,7 @@
 description: Der Ziel-Service in Adobe Experience Platform verwendet Konfigurationsendpunkte für verschiedene Komponenten, die die Zielfunktion aufbauen. Erfahren Sie, wie diese Komponenten zusammen es Experience Platform ermöglichen, eine Verbindung zu Zielpartnern herzustellen, benutzerdefinierte Nachrichten zu senden und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
 title: Konfigurationsoptionen in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 100%
@@ -39,7 +39,7 @@ Dieser Konfigurationsendpunkt enthält grundlegende und erweiterte Informationen
 Weitere Informationen zu den einzelnen Zielkonfigurationskomponenten finden Sie in der folgenden Dokumentation. Sie können die im Folgenden beschriebenen Funktionen über den [Endpunkt „destinations“](../authoring-api/destination-configuration/create-destination-configuration.md)konfigurieren.
 
 * [Konfiguration der Kundenauthentifizierung](destination-configuration/customer-authentication.md): Wählen Sie den Authentifizierungsmechanismus aus, den Experience Platform für die Verbindung mit Ihrem Ziel verwenden sollte. Diese Konfiguration erzeugt die Seite [Neues Ziel konfigurieren](../../ui/connect-destination.md) in der Benutzeroberfläche von Experience Platform, auf der Benutzerinnen und Benutzer Experience Platform mit ihren Konten und mit Ihrem Ziel verbinden.
-* [OAuth2-Authentifizierung](destination-configuration/oauth2-authentication.md): Erfahren Sie mehr über alle [!DNL OAuth2] von Destination SDK unterstützten Authentifizierungsabläufe und erhalten Sie Anweisungen zum Einrichten der [!DNL OAuth2] -Authentifizierung für Ihr Ziel.
+* [OAuth2-Authentifizierung](destination-configuration/oauth2-authorization.md): Erfahren Sie mehr über alle [!DNL OAuth2] von Destination SDK unterstützten Authentifizierungsabläufe und erhalten Sie Anweisungen zum Einrichten der [!DNL OAuth2] -Authentifizierung für Ihr Ziel.
 * [Kundendatenfelder](destination-configuration/customer-data-fields.md): Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 * [Benutzeroberflächenattribute](destination-configuration/ui-attributes.md): Erfahren Sie, wie Sie die Attribute der Benutzeroberfläche, wie z. B. den Dokumentations-Link, die Kategorie der Zielkarte sowie den Verbindungstyp und die Häufigkeit der Zielverbindungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 * [Schemakonfiguration](destination-configuration/schema-configuration.md): Erfahren Sie, wie Sie das Zielschema Ihres Ziels definieren, dem Benutzerinnen und Benutzer Profilattribute und Identitäten zuordnen können.
