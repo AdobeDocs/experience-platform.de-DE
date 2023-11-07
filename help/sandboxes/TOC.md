@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: b5ba5afaa06d27230a211efff25f7f0222fcc23a
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 84%
+ht-degree: 87%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 84%
 * Sandbox-UI {#ui}
    * [Übersicht zur Sandbox-UI](ui/overview.md)
    * [Sandbox-Benutzerhandbuch](ui/user-guide.md)
-   * [Sandbox-Tools](ui/sandbox-tooling.md)
+   * [Sandbox-Werkzeuge](ui/sandbox-tooling.md)
 * Sandbox-API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)

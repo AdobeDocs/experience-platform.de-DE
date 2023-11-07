@@ -86,7 +86,7 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Sandbox-Tools | Mit der Sandbox-Tool-Funktion können Sie die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen nahtlos zwischen Sandboxes exportieren und importieren. Sie können die Sandbox-Tool-Funktion verwenden, um verschiedene Objekte auszuwählen und sie in ein Paket zu exportieren. Weitere Informationen finden Sie unter [Handbuch zur Sandbox-Tools-Benutzeroberfläche](../../sandboxes/ui/sandbox-tooling.md). |
+| Sandbox-Werkzeuge | Mit der Sandbox-Tool-Funktion können Sie die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen nahtlos zwischen Sandboxes exportieren und importieren. Sie können die Sandbox-Tool-Funktion verwenden, um verschiedene Objekte auszuwählen und sie in ein Paket zu exportieren. Weitere Informationen finden Sie unter [Handbuch zur Sandbox-Tools-Benutzeroberfläche](../../sandboxes/ui/sandbox-tooling.md). |
 
 Weiterführende Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
 

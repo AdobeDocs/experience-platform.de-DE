@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; Einverständnis; Einverständnis; Voreinstellungen; Voreinstellungen; privacyOptOuts; marketingPreferences; optOutType; baseOfProcessing; Einverständnis; Einverständnis
+keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; API; Einverständnis; Einverständnis; Voreinstellungen; Voreinstellungen; privacyOptOuts; marketingPreferences; optOutType; baseOfProcessing; consent; Consent
 title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 2%
+source-wordcount: '2294'
+ht-degree: 1%
 
 ---
 
@@ -295,23 +295,23 @@ In der folgenden Tabelle sind die für `val`:
 
 ### Akzeptierte Werte für `preferred` {#preferred-values}
 
-In der folgenden Tabelle sind die für `preferred`:
+In der folgenden Tabelle sind die für `preferred`. Die `preferred` -Werte geben den bevorzugten Kanal des Kunden für den Empfang von Nachrichten an, über den er über Datenerfassung, Datenschutzrichtlinien und Personalisierungsoptionen informiert wird.
 
 | Wert | Beschreibung |
 | --- | --- |
-| `email` | E-Mail-Nachrichten. |
-| `push` | Push-Benachrichtigungen. |
-| `inApp` | In-App-Nachrichten. |
-| `sms` | SMS-Nachrichten. |
-| `phone` | Interaktionen mit Telefonaufrufen. |
-| `phyMail` | Physische Post. |
-| `inVehicle` | In-Vehicle-Nachrichten. |
-| `inHome` | In-Home-Nachrichten. |
-| `iot` | Internet der Nachrichten (IoT). |
-| `social` | Social-Media-Inhalte. |
-| `other` | Ein Kanal, der nicht in eine Standardkategorie passt. |
-| `none` | Kein bevorzugter Kanal. |
-| `unknown` | Der bevorzugte Kanal ist unbekannt. |
+| `email` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Empfang von Nachrichten per E-Mail an. |
+| `push` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Empfang von Push-Benachrichtigungen an. Hierbei handelt es sich um Nachrichten oder Warnhinweise, die direkt an ihr Gerät, häufig eine mobile Anwendung, gesendet werden. |
+| `inApp` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Empfang von In-App-Nachrichten an. Diese Nachrichten werden in einer Mobile- oder Webanwendung bereitgestellt und geben Informationen an, während der Benutzer aktiv mit der App interagiert. |
+| `sms` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Empfang von Nachrichten per SMS (Short Message Service) an. Dies sind Textnachrichten, die an ihr Mobiltelefon gesendet werden. |
+| `phone` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Empfang von Nachrichten über Telefongespräche an. |
+| `phyMail` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Empfang von Materialien über physische Post an. |
+| `inVehicle` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Erhalt von Benachrichtigungen während seiner Fahrt an. Diese Nachrichten können über Informationssysteme des Fahrzeugs oder andere Kommunikationskanäle im Fahrzeug übermittelt werden. |
+| `inHome` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Empfang von Nachrichten zu Hause an. Diese Nachrichten können über intelligente Heimgeräte oder andere heimische Kommunikationskanäle bereitgestellt werden. |
+| `iot` | Diese Voreinstellung bezeichnet die Zustimmung des Kunden zum Empfang von Nachrichten im Zusammenhang mit dem Internet der Dinge (IoT). Diese Nachrichten können über verbundene Geräte und Systeme in ihrer Umgebung bereitgestellt werden. |
+| `social` | Diese Voreinstellung gibt die Zustimmung des Kunden zum Erhalt von Nachrichten über soziale Medienplattformen an. |
+| `other` | Diese Voreinstellung umfasst Kanäle, die nicht in Standardkategorien passen. Es stellt alternative oder spezialisierte Kommunikationskanäle dar, die für ein bestimmtes Unternehmen oder eine bestimmte Branche spezifisch sein können. |
+| `none` | Diese Voreinstellung zeigt an, dass der Kunde keinen bevorzugten Kommunikationskanal hat. |
+| `unknown` | Diese Voreinstellung bedeutet, dass der bevorzugte Kommunikationskanal des Kunden nicht bekannt oder nicht angegeben ist. Dies kann vorkommen, wenn der Kunde keine ausdrückliche Einwilligung oder Präferenzinformationen erteilt hat. |
 
 {style="table-layout:auto"}
 
