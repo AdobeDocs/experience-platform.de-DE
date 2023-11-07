@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie einen Authentifizierungsmechanismus für Ihr Ziel einrichten und erhalten Sie einen Einblick darüber, was in der Benutzeroberfläche je nach gewählter Authentifizierungsmethode zu sehen sein wird.
 title: Konfiguration der Kundenauthentifizierung
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1094'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ Wenn Sie durch Destination SDK [ein Ziel erstellen](../../authoring-api/destinat
 
 * Für Ziele, die eine [einfache Authentifizierung](#basic) verwenden, müssen Benutzerinnen und Benutzer einen Benutzernamen und ein Kennwort direkt auf der Authentifizierungsseite der Experience Platform-Benutzeroberfläche angeben.
 * Für Ziele, die eine [Bearer-Authentifizierung](#bearer) verwenden, müssen Benutzerinnen und Benutzer ein Bearer-Token bereitstellen.
-* Für Ziele, die eine [OAuth2-Authentifizierung](#oauth2) verwenden, werden Benutzerinnen und Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
+* Für Ziele, die [OAuth2-Autorisierung](#oauth2), werden Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
 * Für [Amazon S3](#s3)-Ziele müssen Benutzerinnen und Benutzer ihren [!DNL Amazon S3]-Zugriffsschlüssel und geheimen Schlüssel angeben.
 * Für [Azure Blob](#blob)-Ziele müssen Benutzerinnen und Benutzer ihre [!DNL Azure Blob]-Verbindungszeichenfolge angeben.
 
@@ -233,7 +233,7 @@ Nach dem Lesen dieses Artikels sollten Sie besser verstehen, wie Sie die Benutze
 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
-* [OAuth 2-Authentifizierung](oauth2-authorization.md)
+* [OAuth2-Autorisierung](oauth2-authorization.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)

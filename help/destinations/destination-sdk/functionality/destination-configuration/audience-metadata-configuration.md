@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Zielgruppen-Metadateneinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Zielgruppen-Metadaten
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -68,7 +68,7 @@ Nach dem Lesen dieses Artikels sollten Sie ein besseres Verständnis davon haben
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
 * [Konfiguration der Kundenauthentifizierung](customer-authentication.md)
-* [OAuth 2-Authentifizierung](oauth2-authorization.md)
+* [OAuth2-Autorisierung](oauth2-authorization.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)

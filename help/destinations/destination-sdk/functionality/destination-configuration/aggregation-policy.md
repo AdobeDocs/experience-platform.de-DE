@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie eine Aggregationsrichtlinie einrichten, um zu bestimmen, wie HTTP-Anfragen an Ihr Ziel gruppiert und in Batches eingesetzt werden sollen.
 title: Aggregationsrichtlinie
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 96%
@@ -127,7 +127,7 @@ Nach dem Lesen dieses Artikels sollten Sie besser verstehen, wie Sie Aggregation
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
 * [Konfiguration der Kundenauthentifizierung](customer-authentication.md)
-* [OAuth 2-Authentifizierung](oauth2-authorization.md)
+* [OAuth2-Autorisierung](oauth2-authorization.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -568,7 +568,7 @@ Nachdem Sie diesen Artikel gelesen haben, sollten Sie besser verstehen, wie Sie 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
 * [Kundenauthentifizierung](customer-authentication.md)
-* [OAuth 2-Authentifizierung](oauth2-authorization.md)
+* [OAuth2-Autorisierung](oauth2-authorization.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Schemakonfiguration](schema-configuration.md)
 * [Konfiguration von Identity-Namespaces](identity-namespace-configuration.md)

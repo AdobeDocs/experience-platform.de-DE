@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die Zielbereitstellungseinstellungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden, um anzugeben, wohin die exportierten Daten gehen und welche Authentifizierungsregel an dem Ort verwendet wird, an dem die Daten landen.
 title: Zielbereitstellung
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -108,7 +108,7 @@ Nach dem Lesen dieses Artikels sollten Sie besser verstehen, wie Sie die Orte ko
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
 * [Kundenauthentifizierung](customer-authentication.md)
-* [OAuth 2-Authentifizierung](oauth2-authorization.md)
+* [OAuth2-Autorisierung](oauth2-authorization.md)
 * [Benutzeroberflächenattribute](ui-attributes.md)
 * [Benutzerdefinierte Datenfelder](customer-data-fields.md)
 * [Schemakonfiguration](schema-configuration.md)
