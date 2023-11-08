@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 100%
+source-wordcount: '2502'
+ht-degree: 87%
 
 ---
 
@@ -1203,13 +1203,18 @@ Der Kontext, der der Vorlage bereitgestellt wird, enthält `input` (die in diese
 
 Die nachstehende Tabelle enthält Beschreibungen der Funktionen in den obigen Beispielen.
 
-| Funktion | Beschreibung |
-|---------|----------|
+| Funktion | Beschreibung | Beispiel |
+|---------|----------|----------|
 | `input.profile` | Das Profil, dargestellt als ein [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Folgt dem weiter oben erwähnten Partner-XDM-Schema auf dieser Seite. |
-| `destination.segmentAliases` | Ordnen Sie Zielgruppen-IDs im Adobe Experience Platform-Namespace den Zielgruppenaliasen im System des Partners zu. |
-| `destination.segmentNames` | Ordnen Sie Zielgruppennamen im Adobe Experience Platform-Namespace den Zielgruppennamen im System des Partners zu. |
-| `addedSegments(listOfSegments)` | Gibt nur Zielgruppen mit Status `realized` zurück. |
-| `removedSegments(listOfSegments)` | Gibt nur Zielgruppen mit Status `exited` zurück. |
+| `hasSegments` | Diese Funktion akzeptiert eine Zuordnung von Namespace-Zielgruppen-IDs als Parameter. Die Funktion gibt `true` wenn mindestens eine Zielgruppe in der Zuordnung vorhanden ist (unabhängig vom Status) und `false` andernfalls. Sie können diese Funktion verwenden, um zu entscheiden, ob eine Zielgruppenzuordnung durchlaufen werden soll oder nicht. | `hasSegments(input.profile.segmentMembership)` |
+| `destination.namespaceSegmentAliases` | Zuordnen von Zielgruppen-IDs in einem bestimmten Adobe Experience Platform-Namespace zu Zielgruppen-Alias im System des Partners. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | Ordnen Sie den Zielgruppennamen in bestimmten Adobe Experience Platform-Namespaces den Zielgruppennamen im System des Partners zu. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentTimestamps` | Gibt den Zeitpunkt zurück, zu dem eine Zielgruppe im UNIX-Zeitstempelformat erstellt, aktualisiert oder aktiviert wurde. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: gibt die Zeit zurück, zu der das Segment mit der ID `seg-id-1`, aus dem `ups` -Namespace, wurde im UNIX-Zeitstempelformat erstellt.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: gibt die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1`, aus dem `ups` -Namespace wurde im UNIX-Zeitstempelformat aktualisiert.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: gibt die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1`, aus dem `ups` -Namespace, für das Ziel im UNIX-Zeitstempelformat aktiviert wurde.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: gibt den Zeitpunkt zurück, zu dem die Zielgruppenaktivierung am Ziel im UNIX-Zeitstempelformat aktualisiert wurde.</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | Gibt nur die Zielgruppen mit Status zurück `realized`, in allen Namespaces. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | Gibt nur die Zielgruppen mit Status zurück `exited`, in allen Namespaces. | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **Nicht mehr verwendet. Ersetzt durch`destination.namespaceSegmentAliases`** <br><br> Ordnen Sie den Zielgruppen-IDs im Adobe Experience Platform-Namespace Zielgruppen-Alias im System des Partners zu. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Nicht mehr verwendet. Ersetzt durch`destination.namespaceSegmentNames`** <br><br>  Ordnen Sie den Zielgruppennamen im Adobe Experience Platform-Namespace den Zielgruppennamen im System des Partners zu. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **Nicht mehr verwendet. Ersetzt durch`destination.namespaceSegmentTimestamps`** <br><br> Gibt den Zeitpunkt zurück, zu dem eine Zielgruppe im UNIX-Zeitstempelformat erstellt, aktualisiert oder aktiviert wurde. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: gibt die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1` wurde im UNIX-Zeitstempelformat erstellt.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: gibt die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1` wurde im UNIX-Zeitstempelformat aktualisiert.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: gibt die Zeit zurück, zu der die Zielgruppe mit der ID `seg-id-1` für das Ziel aktiviert wurde, im UNIX-Zeitstempelformat.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: gibt den Zeitpunkt zurück, zu dem die Zielgruppenaktivierung am Ziel im UNIX-Zeitstempelformat aktualisiert wurde.</li></ul> |
 
 {style="table-layout:auto"}
 
