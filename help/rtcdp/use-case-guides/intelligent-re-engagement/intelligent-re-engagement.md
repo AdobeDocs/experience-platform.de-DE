@@ -2,7 +2,7 @@
 title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
+source-git-commit: df82431f87f725a12cbc5b8f88fff6d4cc065450
 workflow-type: tm+mt
 source-wordcount: '3594'
 ht-degree: 6%
@@ -150,6 +150,8 @@ Das Schema für digitale Transaktionen des Kunden wird durch eine [[!UICONTROL X
 
 +++XDM ExperienceEvent (Klasse)
 
+Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse umfasst die folgenden Feldergruppen:
+
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
 | `_id` | Erforderlich | Identifiziert individuelle Ereignisse, die in erfasst werden [!DNL Adobe Experience Platform]. |
@@ -157,8 +159,6 @@ Das Schema für digitale Transaktionen des Kunden wird durch eine [[!UICONTROL X
 | `eventType` | Erforderlich | Eine Zeichenfolge, die den Typ der Kategorie für das Ereignis angibt. |
 
 +++
-
-Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse umfasst die folgenden Feldergruppen:
 
 + + + Endbenutzer-ID-Details (Feldergruppe)
 
@@ -189,6 +189,8 @@ Das Schema der Offline-Transaktionen des Kunden wird durch eine [[!UICONTROL XDM
 
 +++XDM ExperienceEvent (Klasse)
 
+Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse umfasst die folgenden Feldergruppen:
+
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
 | `_id` | Erforderlich | Identifiziert individuelle Ereignisse, die in erfasst werden [!DNL Adobe Experience Platform]. |
@@ -196,8 +198,6 @@ Das Schema der Offline-Transaktionen des Kunden wird durch eine [[!UICONTROL XDM
 | `eventType` | Erforderlich | Eine Zeichenfolge, die den Typ der Kategorie für das Ereignis angibt. |
 
 +++
-
-Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse umfasst die folgenden Feldergruppen:
 
 +++Commerce-Details (Feldergruppe)
 
@@ -247,6 +247,8 @@ Die [!DNL Adobe] Web-Connector-Schema durch eine [[!UICONTROL XDM ExperienceEven
 
 +++XDM ExperienceEvent (Klasse)
 
+Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse umfasst die folgenden Feldergruppen:
+
 | Felder | Anforderung | Beschreibung |
 | --- | --- | --- |
 | `_id` | Erforderlich | Identifiziert individuelle Ereignisse, die in erfasst werden [!DNL Adobe Experience Platform]. |
@@ -254,8 +256,6 @@ Die [!DNL Adobe] Web-Connector-Schema durch eine [[!UICONTROL XDM ExperienceEven
 | `eventType` | Erforderlich | Eine Zeichenfolge, die den Typ der Kategorie für das Ereignis angibt. |
 
 +++
-
-Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse umfasst die folgenden Feldergruppen:
 
 + + + Adobe Analytics ExperienceEvent-Vorlage (Feldergruppe)
 
