@@ -4,10 +4,10 @@ title: Verbindung mit Microsoft Dynamics 365
 description: Mit dem Microsoft Dynamics 365-Ziel können Sie Ihre Kontodaten exportieren und in Microsoft Dynamics 365 für Ihre geschäftlichen Anforderungen aktivieren.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 69%
+source-wordcount: '2183'
+ht-degree: 65%
 
 ---
 
@@ -86,7 +86,7 @@ Auf der Seite [Anforderungsbeschränkungen und Zuweisungen](https://docs.microso
 
 | Ziel-Identität | Beispiel | Beschreibung | Zu beachten |
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Eindeutige Kennung für einen Kontakt. | **Obligatorisch**. Siehe die [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), um weitere Informationen zu erhalten. |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Eindeutige Kennung für einen Kontakt. | **Obligatorisch**. Siehe die [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), um weitere Informationen zu erhalten. |
 
 {style="table-layout:auto"}
 
@@ -162,35 +162,36 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
    ![Beispiel-Screenshot der Platform-Benutzeroberfläche für „Neue Zuordnung hinzufügen“.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Identity-Namespace auswählen]** und klicken Sie auf `contactId`.
+1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Identity-Namespace auswählen]** und klicken Sie auf `contactid`.
    ![Screenshot-Beispiel der Platform-Benutzeroberfläche für die Quellzuordnung.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** den Typ des Zielfelds aus, dem Sie Ihr Quellfeld zuordnen möchten.
    * **[!UICONTROL Identity-Namespace auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem Identity-Namespace aus der Liste zuzuordnen.
-     ![Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnung für contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit Target-Zuordnung für die Kontaktaufnahme.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365]-Instanz hinzu:
 |XDM-Profilschema|[!DNL Dynamics 365] Instanz| Obligatorisch|
 |---|---|---|
-|`contactId`|`contactId`| Ja |
+|`contactid`|`contactid`| Ja |
 
    * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld **[!UICONTROL Attributname]** definieren. Eine umfassende Liste der unterstützten Attribute finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
-     ![Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnung für LastName.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![Screenshot der Platform-Benutzeroberfläche mit Target-Zuordnung für E-Mails.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     >Wenn Sie ein Quellfeld für Datum oder Zeitstempel haben, das einem [Datum- oder Zeitstempel](https://docs.microsoft.com/de-de/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest)-Zielfeld von [!DNL Dynamics 365] zugeordnet ist, stellen Sie sicher, dass der zugeordnete Wert nicht leer ist. Wenn der übergebene Wert leer ist, wird die Fehlermeldung *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* angezeigt und die Daten werden nicht aktualisiert. Dies ist eine [!DNL Dynamics 365]-Beschränkung.
+     > * Zielfeldnamen sollten in `lowercase`.
+     > * Wenn Sie außerdem über ein Quellfeld für Datum oder Zeitstempel verfügen, das einem [!DNL Dynamics 365] [Datum oder Zeitstempel](https://docs.microsoft.com/de-de/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) Zielfeld verwenden, stellen Sie sicher, dass der zugeordnete Wert nicht leer ist. Wenn der exportierte Feldwert leer ist, wird ein *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* -Fehlermeldung angezeigt und die Daten werden nicht aktualisiert. Dies ist eine [!DNL Dynamics 365]-Beschränkung.
 
    * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365]-Instanz ein: 
 |XDM-Profilschema|[!DNL Dynamics 365] Instanz|
 
 |---|---|
 
-|`person.name.firstName`|`FirstName`|
+|`person.name.firstName`|`firstname`|
 
-|`person.name.lastName`|`LastName`|
+|`person.name.lastName`|`lastname`|
 
-|`personalEmail.address`|`Email`|
+|`personalEmail.address`|`emailaddress1`|
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -255,6 +256,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
+| Oktober 2023 | Aktualisierung der Dokumentation | Die Anleitung zur Angabe aller Zielattribut-Namen sollte in Kleinbuchstaben, im [Zuordnungsüberlegungen und Beispiel](#mapping-considerations-example) Schritt. |
 | August 2023 | Funktions- und Dokumentationsaktualisierung | Hinzugefügte Unterstützung für [!DNL Dynamics 365] benutzerdefinierte Feldpräfixe für benutzerdefinierte Felder, die nicht in der Standardlösung in [!DNL Dynamics 365]. ein neues Eingabefeld, **[!UICONTROL Anpasspräfix]** wurde im Abschnitt [Zieldetails ausfüllen](#destination-details) Schritt. (PLATIR-31602). |
 | November 2022 | Erstmalige Veröffentlichung | Erste Zielversion und Veröffentlichung der Dokumentation. |
 
