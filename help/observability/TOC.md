@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Observability Insights-Anleitung
-user-guide-description: Verwenden Sie statistische Metriken und Ereignisbenachrichtigungen zur Überwachung von Experience Platform-Aktivitäten.
+user-guide-description: Erfahren Sie, wie Sie Platform-Aktivitäten mithilfe statistischer Metriken und Ereignisbenachrichtigungen aus Adobe Experience Platform Observability Insights überwachen können.
 feature: Observability
-source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 100%
+source-wordcount: '62'
+ht-degree: 67%
 
 ---
 

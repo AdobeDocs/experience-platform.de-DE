@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Anleitung zu Katalog und Datensätzen
-user-guide-description: Informieren Sie sich über Datenlinien, Metadaten, Dateibeschreibungen, Verzeichnissen und Datensätzen im Data Lake.
+user-guide-description: Erkunden Sie Datenherkunft, Metadaten, Dateibeschreibungen, Verzeichnisse und Datensätze im Data Lake und erfahren Sie mehr über das Catalog Service-System.
 feature: Catalog
-source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 100%
+source-wordcount: '119'
+ht-degree: 82%
 
 ---
 

@@ -3,11 +3,12 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenspeicherort;Datens
 solution: Experience Platform
 title: Übersicht zu Datensätzen
 description: Dieses Dokument bietet einen umfassenden Überblick über Datensätze in Experience Platform.
+user-guide-description: Verschaffen Sie sich mit diesem Handbuch einen Überblick über Datensätze auf hoher Ebene im Experience Platform. Hier erfahren Sie, wie Sie sie erstellen, Datenbeschränkungen erzwingen und Daten in Datensätze aufnehmen.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 94%
+source-wordcount: '870'
+ht-degree: 91%
 
 ---
 
