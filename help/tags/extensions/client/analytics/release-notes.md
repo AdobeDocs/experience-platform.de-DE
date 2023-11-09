@@ -2,10 +2,10 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 89%
+source-wordcount: '1416'
+ht-degree: 87%
 
 ---
 
@@ -17,13 +17,22 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 >
 >Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen des [AppMeasurement JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Siehe Abschnitt [AppMeasurement-Versionshinweise](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) für Details zu den spezifischen Versionen, die unten erwähnt werden.
 
+## 15. September 2023
+
+**Adobe Analytics-Erweiterung 1.9.3**
+
+**Funktionen**:
+
+* Aktualisiert auf [AppMeasurement auf v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 19. Juli 2023
 
 **Adobe Analytics-Erweiterung 1.9.2**
 
 **Funktionen**:
 
-* Auf AppMeasurement v2.24.0 aktualisiert.
+* Aktualisiert auf [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Eine optionale Konfiguration wurde hinzugefügt (`decodeLinkParameters` default `false`), die Link-URLs dekodieren, die doppelt byte-kodierte Zeichen enthalten.
 
 **Fehlerkorrekturen**:
