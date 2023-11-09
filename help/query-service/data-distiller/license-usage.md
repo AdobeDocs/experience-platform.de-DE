@@ -2,45 +2,32 @@
 title: Überwachung der Nutzung der Batch Query-Lizenz
 description: Die Benutzeroberfläche von Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Verwendung der Data Distiller-Lizenz durch Ihr Unternehmen anzeigen können.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-hide: true
-hidefromtoc: true
 recommendations: noCatalog, display
-source-git-commit: fa573dcf03eb711e946afe40d107871f5166ff58
+source-git-commit: e55cada0975d771f225e829aeeeeeeb64b9acf4a
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 15%
+source-wordcount: '274'
+ht-degree: 0%
 
 ---
 
-# (Alpha) Überwachen der Nutzung von Batch-Abfragelizenzen {#monitor-license-usage}
+# Überwachen der Nutzung von Batch-Abfragelizenzen {#monitor-license-usage}
 
->[!IMPORTANT]
+Das Dashboard zur Lizenznutzung bietet detaillierte Berichte über die Query Service-Lizenznutzung und -Nutzungsmetriken Ihres Unternehmens für jedes gekaufte Produkt. Weitere Informationen zu den verfügbaren Metriken, die im Dashboard angezeigt werden, finden Sie unter [Dashboard-Handbuch zur Lizenznutzung](../../dashboards/guides/license-usage.md#available-metrics).
+
+Das Dashboard bietet Nutzungsmetriken für jedes gekaufte Produkt, die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetriken aus einer bestimmten Sandbox. Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
+
+>[!NOTE]
 >
->Die Möglichkeit, die Nutzung der Batch-Abfragelizenz über die Benutzeroberfläche zu überwachen, ist noch nicht für alle Benutzer verfügbar. Diese Funktion befindet sich in der Alpha-Phase und wird noch getestet. Dieses Dokument kann sich ändern.
-
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Nutzung der Query Service-Lizenz in Ihrem Unternehmen anzeigen können.
-
-Eine detaillierte Anleitung dazu, wie Sie das Lizenznutzungs-Dashboard in der Benutzeroberfläche aufrufen und nutzen können, sowie Informationen zu den im Dashboard verfügbaren Metriken finden Sie im [Abschnitt zum Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md).
-
-Bitte lesen Sie die [Übersicht über Dashboards](../../dashboards/home.md) für eine Zusammenfassung aller Dashboard-Funktionen in Experience Platform.
-
-## Widgets {#widgets}
-
-Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metriken anzeigen, die wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen enthalten. Die sichtbaren Metriken hängen von der spezifischen Lizenzierung Ihres Unternehmens ab.
-
-Wählen Sie ein Optionsfeld aus, um eine Sandbox für die Analyse auszuwählen, und wählen Sie über das Dropdown-Menü einen Zeitraum für die Analyse aus. Die verfügbaren Optionen sind ein Zeitraum von 30 Tagen, 90 Tagen, 12 Monaten, das letzte Jahr, der vollständige Vertragszeitraum oder ein benutzerdefiniertes Datum.
+>Das Dashboard zur Lizenznutzung ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung &quot;Dashboard zur Lizenznutzung anzeigen&quot;gewährt werden, damit sie das Dashboard anzeigen können. Anweisungen zum Gewähren von Zugriffsberechtigungen für die Anzeige des Dashboards zur Lizenznutzung finden Sie im Abschnitt [Dashboard-Berechtigungshandbuch](../../dashboards/permissions.md).
 
 ## Berechnungsstunden {#compute-hours}
 
-Die [!UICONTROL Berechnungsstunden] Widget verwendet ein Liniendiagramm, um die Verarbeitungszeit für Batch-Abfragen in Ihrem Unternehmen jeden Tag zu visualisieren. Das Widget zeigt drei Metriken an, die durch eine Zahl oben links im Widget angegeben werden. Sie lauten wie folgt
+Die [!UICONTROL Berechnungsstunden] -Metrik gilt nur für Kunden mit der Data Distiller-Lizenz für Batch-Abfragen. [!UICONTROL Berechnungsstunden] sind die Zeitwerte, die von den Query Service-Engines benötigt werden, um Daten bei der Ausführung einer Batch-Abfrage zu lesen, zu verarbeiten und in den Data Lake zurückzuschreiben.
 
-- [!UICONTROL Aktuell]: Die Gesamtzahl der Berechnungsstunden für den im Dropdown-Menü &quot;Übersicht&quot;ausgewählten Zeitraum. Diese Metrik wird auch im Diagramm durch eine durchgehende Linie angezeigt.
-- [!UICONTROL Lizenziert]: Die Gesamtzahl der durch die Lizenzvereinbarung Ihres Unternehmens zulässigen Berechnungsstunden. Diese Metrik wird auch im Diagramm durch eine gepunktete Linie angezeigt.
-- [!UICONTROL Nutzung]: Dies ist der Prozentsatz Ihrer Nutzung in Bezug auf die maximalen von Ihrer Lizenz vereinbarten Berechnungsstunden.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Die [!UICONTROL Berechnungsstunden] -Widget gilt nur für Kunden mit der Data Distiller-Lizenz für Batch-Abfragen.
+>**Die Daten sind mit Einschränkungen verfügbar**: Die Daten beginnen am 1. Oktober 2023 ohne Trends.<br>Die **Aufstockung** von Daten aus Ihrem Vertragsbeginn ist eine laufende Arbeit. Es wird voraussichtlich bis Ende des Kalenderjahres verfügbar sein.
 
-![Das Dashboard zur Lizenznutzung mit hervorgehobenem Widget zur Berechnung der Stunden.](../images/data-distiller/compute-hours.png)
+![Das Dashboard zur Lizenznutzung mit hervorgehobener Metrik für Berechnungsstunden.](../images/data-distiller/compute-hours.png)
 
+Weitere Informationen zu den für Ihre Organisation basierend auf der erworbenen Lizenz verfügbaren Metriken finden Sie in der [Dashboard-Handbuch zur Lizenznutzung](../../dashboards/guides/license-usage.md).
