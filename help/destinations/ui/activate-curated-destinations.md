@@ -2,9 +2,9 @@
 title: Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-IDs
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der LiveRamp-Ramp-ID Zielgruppen aus Adobe Experience Platform für verbundene TV- und Audioziele und andere Integrationen aktivieren können.
-source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
+source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 4%
 
 ---
@@ -57,6 +57,12 @@ Nachdem Sie Ihre Zielgruppen exportiert haben, aktivieren Sie sie mithilfe der [
 >[!TIP]
 >
 >Dieser Prozess ermöglicht es Ihnen, Ihre Zielgruppen für Ziele wie [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)und mehr direkt über die Real-Time CDP-Benutzeroberfläche, ohne sich bei Ihrem [!DNL LiveRamp] Konto für die Aktivierung.
+
+### Video-Tutorial {#video}
+
+Sehen Sie sich das folgende Video an, um eine umfassende Erläuterung des auf dieser Seite beschriebenen Workflows zu erhalten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Schritt 1: Senden Sie Ihre Zielgruppen von Experience Platform an LiveRamp über die [!DNL LiveRamp - Onboarding] Ziel {#onboarding}
 
