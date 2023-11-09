@@ -2,10 +2,10 @@
 title: Anleitung zu Query Accelerated Store Reporting Insights
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1033'
-ht-degree: 82%
+source-wordcount: '1034'
+ht-degree: 84%
 
 ---
 
@@ -23,11 +23,7 @@ In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus 
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Siehe [Verpackung](../../packages.md) und [Limits](../../guardrails.md#query-accelerated-store) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die Dokumentation zu [Packaging](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 
