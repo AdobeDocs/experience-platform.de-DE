@@ -6,7 +6,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1740'
-ht-degree: 25%
+ht-degree: 26%
 
 ---
 
@@ -67,13 +67,13 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 >id="platform_permissions_labels_about"
 >title="Was sind Kennzeichnungen?"
 >abstract="Mit Kennzeichnungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Platform bietet einige von Adobe definierte Kennzeichnungen für die Datennutzung, die eine Vielzahl häufiger Einschränkungen beim Daten-Management abdecken. Beispielsweise können Sie mit der Kennzeichnung „S“ sensible Daten kategorisieren, wie etwa RHD (Regulated Health Data, gesetzlich geregelte Gesundheitsdaten), die geschützte Gesundheitsinformationen (Protected Health Information, PHI) enthalten. Sie können auch eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#understanding-data-usage-labels" text="Datennutzungskennzeichnungen – Übersicht"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="Erstellen neuer Kennzeichnungen"
 >abstract="Sie können eigene Kennzeichnungen entsprechend den Anforderungen Ihres Unternehmens definieren. Mithilfe benutzerdefinierter Kennzeichnungen können Sie auf Ihre Daten Konfigurationen für Data Governance und Zugriffssteuerung anwenden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Verwalten von benutzerdefinierten Kennzeichnungen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de#manage-labels" text="Verwalten von benutzerdefinierten Kennzeichnungen"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
@@ -85,7 +85,7 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 >id="platform_permissions_roles_about_create"
 >title="Erstellen einer neuen Rolle"
 >abstract="Sie können eine neue Rolle erstellen, um Benutzende, die auf Ihre Platform-Instanz zugreifen, besser zu kategorisieren. So können Sie beispielsweise eine Rolle für ein internes Marketing-Team erstellen und die RHD-Kennzeichnung auf diese Rolle anwenden, sodass Ihr internes Marketing-Team auf geschützte Gesundheitsinformationen (PHI) zugreifen kann. Alternativ können Sie auch eine Rolle für eine externe Agentur erstellen und dieser Rolle den Zugriff auf PHI-Daten verweigern, indem Sie die RHD-Kennzeichnung nicht auf diese Rolle anwenden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html#create-a-new-role" text="Erstellen einer neuen Rolle"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=de#create-a-new-role" text="Erstellen einer neuen Rolle"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
