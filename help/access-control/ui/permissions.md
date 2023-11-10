@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Berechtigungen für ein Produktprofil verwalten
 description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Verwalten von Berechtigungen für ein Produktprofil für Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 96%
+source-wordcount: '356'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ Unmittelbar nach der [Erstellung eines neuen Produktprofils](#create-a-new-produ
 
 ![Berechtigungen](../images/permissions.png)
 
-Berechtigungen werden in Kategorien unterteilt und auf dieser Seite aufgelistet. In der Liste werden der Name der Kategorie, die Anzahl der enthaltenen Berechtigungen (und die Anzahl der aktiven Berechtigungen) sowie die zugehörige Beschreibung angezeigt.
+Berechtigungen werden in Kategorien unterteilt und auf dieser Seite aufgelistet. In der Liste werden der Name der Kategorie, die Anzahl der enthaltenen Berechtigungen (und die Anzahl der aktiven Berechtigungen) sowie die zugehörige Beschreibung angezeigt. Siehe Tabelle unter [Ressourcenberechtigungen](/help/access-control/home.md#permissions) für eine Aufschlüsselung der für jede Rolle verfügbaren Berechtigungen.
 
 Klicken Sie auf eine Kategorie in der Liste, um die Seite **[!UICONTROL Berechtigungen bearbeiten]** zu öffnen.
 
