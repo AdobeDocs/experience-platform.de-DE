@@ -3,10 +3,10 @@ title: Exportieren von Datensätzen an Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 59%
+source-wordcount: '1751'
+ht-degree: 58%
 
 ---
 
@@ -60,6 +60,12 @@ Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwe
   </tr>
 </tbody>
 </table>
+
+## Video-Tutorial {#video-tutorial}
+
+Sehen Sie sich das folgende Video an, um eine umfassende Erläuterung des auf dieser Seite beschriebenen Workflows, die Vorteile der Verwendung der Exportdataset-Funktion und einige empfohlene Anwendungsfälle zu erhalten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Unterstützte Ziele {#supported-destinations}
 
