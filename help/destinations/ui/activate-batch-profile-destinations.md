@@ -4,7 +4,7 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
 workflow-type: tm+mt
 source-wordcount: '3781'
 ht-degree: 61%
@@ -30,7 +30,7 @@ In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgrupp
 
 Um Zielgruppen für Ziele aktivieren zu können, müssen Sie erfolgreich [mit Ziel verbunden](./connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
 
-### Unterstützte Dateiformate für den Export {#supported-file-formats-export}
+## Unterstützte Dateiformate für den Export {#supported-file-formats-export}
 
 Beim Exportieren von Zielgruppen werden die folgenden Dateiformate unterstützt:
 
