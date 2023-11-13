@@ -2,9 +2,9 @@
 title: Konfigurierbare und allgemeine Exporteinstellungen in Zielen
 description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene konfigurierbar sind und welche fest eingestellt sind und nicht bearbeitet werden können.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '842'
 ht-degree: 92%
 
 ---
@@ -58,7 +58,7 @@ Die folgenden verschiedenen Optionen und Schritte sind im Aktivierungs-Workflow 
 * [Aktivieren von Zielgruppendaten für Unternehmensziele ](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exportieren von Dateien nach Bedarf an Batch-Ziele](/help/destinations/ui/export-file-now.md)
-* [(Beta) Exportieren von Datensätzen an Cloud-Speicher-Ziele](/help/destinations/ui/export-datasets.md)
+* [Exportieren von Datensätzen an Cloud-Speicher-Ziele](/help/destinations/ui/export-datasets.md)
 
 ## Nächste Schritte {#next-steps}
 

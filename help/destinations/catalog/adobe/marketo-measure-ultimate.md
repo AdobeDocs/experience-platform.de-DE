@@ -3,9 +3,9 @@ title: Marketo Measure Ultimate-Ziel
 description: Erfahren Sie, wie Sie Daten mit dem Marketo Measure Ultimate-Ziel verbinden und aktivieren.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 37%
 
 ---
@@ -74,7 +74,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 > 
 >Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen Sie die [(Beta) Datensätze exportieren](/help/destinations/ui/export-datasets.md) Tutorial für ausführliche Anweisungen zum Exportieren von Datensätzen in dieses Ziel.
+Lesen Sie die [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) Tutorial für ausführliche Anweisungen zum Exportieren von Datensätzen in dieses Ziel.
 
 ## Überprüfen des Datenexports {#exported-data}
 

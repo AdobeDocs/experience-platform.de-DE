@@ -4,10 +4,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
-ht-degree: 63%
+source-wordcount: '3781'
+ht-degree: 61%
 
 ---
 
@@ -28,7 +28,19 @@ In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgrupp
 
 ## Voraussetzungen {#prerequisites}
 
-Um Zielgruppen für Ziele aktivieren zu können, müssen Sie erfolgreich [mit Ziel verbunden](./connect-destination.md). Wenn Sie das noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
+Um Zielgruppen für Ziele aktivieren zu können, müssen Sie erfolgreich [mit Ziel verbunden](./connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
+
+### Unterstützte Dateiformate für den Export {#supported-file-formats-export}
+
+Beim Exportieren von Zielgruppen werden die folgenden Dateiformate unterstützt:
+
+* CSV
+* JSON
+* Parquet
+
+Beachten Sie, dass der Export von CSV-Dateien Ihnen mehr Flexibilität hinsichtlich der Struktur Ihrer exportierten Dateien bietet. Mehr dazu [Dateiformatierungskonfiguration für CSV-Dateien](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+Wählen Sie das gewünschte Dateiformat für den Export aus, wenn [Erstellen einer Verbindung zum dateibasierten Ziel](/help/destinations/ui/connect-destination.md).
 
 ## Auswählen des Ziels {#select-destination}
 
@@ -532,7 +544,7 @@ Wenn Sie mit Ihrer Auswahl zufrieden sind und keine Richtlinienverletzungen fest
 
 ## Überprüfung der Zielgruppenaktivierung {#verify}
 
-Bei E-Mail-Marketing- und Cloud-Speicher-Zielen erstellt Adobe Experience Platform eine Datei des Typs `.csv` am von Ihnen angegebenen Speicherort. Wahrscheinlich wird eine neue Datei an Ihrem Speicherort entsprechend dem Zeitplan erstellt, den Sie im Workflow festgelegt haben. Das standardmäßige Dateiformat ist unten dargestellt, Sie können jedoch [Bearbeiten der Komponenten des Dateinamens](#file-names):
+Beim Exportieren von Zielgruppen in Cloud-Speicher-Ziele erstellt Adobe Experience Platform eine `.csv`, `.json`oder `.parquet` -Datei an dem Speicherort gespeichert, den Sie bereitgestellt haben. Wahrscheinlich wird eine neue Datei an Ihrem Speicherort entsprechend dem Zeitplan erstellt, den Sie im Workflow festgelegt haben. Das standardmäßige Dateiformat ist unten dargestellt, Sie können jedoch [Bearbeiten der Komponenten des Dateinamens](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Wenn Sie beispielsweise eine tägliche Exportfrequenz auswählen, könnten die Dateien, die Sie an drei aufeinander folgenden Tagen erhalten würden, wie folgt aussehen:
