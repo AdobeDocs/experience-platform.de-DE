@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -74,5 +74,6 @@ Identity Service erfasst nur Felder, die als Identität gekennzeichnet sind. Ide
 Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finden Sie in der folgenden Dokumentation:
 
 * [Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen](./overview.md)
+* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
 * [Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen](./example-scenarios.md)
 * [Identitätsverknüpfungslogik](./identity-linking-logic.md)

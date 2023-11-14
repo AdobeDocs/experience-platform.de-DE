@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 1%
 ## Inhaltsverzeichnis 
 
 * [Übersicht](./overview.md)
+* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
 * [Beispielszenarien](./example-scenarios.md)
 * [Identity Service und Echtzeit-Kundenprofil](identity-and-profile.md)
 * [Identitätsverknüpfungslogik](./identity-linking-logic.md)
@@ -39,13 +40,12 @@ Weitere Informationen zu Anwendungsszenarios für Identitätsdiagramm-Verknüpfu
 
 Mit den Regeln zur Verknüpfung von Identitätsdiagrammen können Sie:
 
-* Konfigurieren Sie Beschränkungen, um zu verhindern, dass zwei unterschiedliche Personen-IDs zu einem Identitätsdiagramm zusammengeführt werden, sodass ein einzelnes Identitätsdiagramm nur eine Person darstellt.
-   * Die von Ihnen konfigurierten Beschränkungen werden dann vom Identitätsoptimierungsalgorithmus erzwungen.
-* Konfigurieren Sie Prioritäten, um Online-Ereignisse zu verknüpfen, die von der authentifizierten Person an einen bestimmten Benutzer durchgeführt werden.
+* Erstellen Sie ein einzelnes Identitätsdiagramm/zusammengeführtes Profil für jeden Benutzer, indem Sie eindeutige Namespaces (Beschränkungen) konfigurieren. Dadurch wird verhindert, dass zwei unterschiedliche Personen-IDs zu einem Identitätsdiagramm zusammengeführt werden.
+* Verknüpfen Sie Online-authentifizierte Ereignisse mit der Person, indem Sie Prioritäten konfigurieren.
 
 ### Beschränkungen
 
-Sie können Namespace-Beschränkungen verwenden, um die maximale Anzahl von Identitäten zu definieren, die in einem Diagramm basierend auf einem bestimmten Namespace vorhanden sein können. Sie können beispielsweise festlegen, dass Ihr Diagramm maximal eine Identität mit einem CRM-ID-Namespace enthält, wodurch die Zusammenführung von zwei unterschiedlichen Personen-IDs innerhalb desselben Diagramms verhindert wird.
+Ein eindeutiger Namespace ist eine Kennung, die eine Person darstellt, z. B. CRM-ID, Anmelde-ID und Hash-E-Mail. Wenn ein Namespace als eindeutig gekennzeichnet ist, darf ein Diagramm nur eine Identität mit diesem Namespace (`limit=1`). Dadurch wird verhindert, dass zwei unterschiedliche Personen-IDs innerhalb desselben Diagramms zusammengeführt werden.
 
 * Wenn keine Begrenzung konfiguriert ist, kann dies zu unerwünschten Diagrammzusammenführungen führen, z. B. zu zwei Identitäten mit einem CRM-ID-Namespace in einem Diagramm.
 * Wenn keine Begrenzung konfiguriert ist, kann das Diagramm so viele Namespaces wie nötig hinzufügen, solange sich das Diagramm innerhalb der Limits befindet (50 Identitäten/Diagramm).
@@ -60,6 +60,8 @@ Im Folgenden finden Sie eine Liste der Auswirkungen des Algorithmus auf die Zuor
 * Die ECID wird dem zuletzt authentifizierten Benutzer zugeordnet, wenn die folgenden Bedingungen erfüllt sind:
    * Wenn CRM-IDs durch ECID (freigegebenes Gerät) zusammengeführt werden.
    * Wenn Begrenzungen auf nur eine CRM-ID konfiguriert sind.
+
+Weitere Informationen finden Sie im Dokument unter [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md).
 
 ### Priorität
 
@@ -106,6 +108,7 @@ Wenn die folgenden Erlebnisereignisse in Experience Platform aufgenommen werden,
 
 Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finden Sie in der folgenden Dokumentation:
 
+* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
 * [Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen](./example-scenarios.md)
 * [Identity Service und Echtzeit-Kundenprofil](identity-and-profile.md)
 * [Identitätsverknüpfungslogik](./identity-linking-logic.md)
