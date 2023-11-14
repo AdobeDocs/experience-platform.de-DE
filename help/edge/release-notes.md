@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1678'
 ht-degree: 93%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 93%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.19.1 - 10. November 2023
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Problem behoben, bei dem das Array Vorschläge zurückgegeben wurde von `sendEvent` -Aufrufe waren immer leer.
 
 ## Version 2.19.0 - 1. November 2023
 
