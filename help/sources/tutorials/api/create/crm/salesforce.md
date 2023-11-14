@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Salesforce; Salesforce
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Erstellen einer Salesforce-Basisverbindung mit der Flow Service-API
 type: Tutorial

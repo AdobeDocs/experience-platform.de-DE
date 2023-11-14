@@ -1,15 +1,15 @@
 ---
-title: Real-time Customer Data Platform Insights-Datenmodell
+title: Insights-Datenmodell von Real-Time Customer Data Platform
 description: Erfahren Sie, wie Sie SQL-Abfragen mit den Real-time Customer Data Platform Insights-Datenmodellen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Real-time Customer Data Platform Insights-Datenmodell
+# Insights-Datenmodell von Real-Time Customer Data Platform
 
 Die Real-time Customer Data Platform Insights-Datenmodell-Funktion stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu Query Accelerated Store Reporting Insights . [Erstellen eines Berichtseinblicke-Datenmodells über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
@@ -239,7 +239,7 @@ FROM
 
 #### Anwendungsfall für kürzlich aktivierte Zielgruppen
 
-Die Logik für die [!UICONTROL Kürzlich aktivierte Zielgruppen] -Widget stellt eine Liste der Zielgruppen bereit, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen. Siehe [[!UICONTROL Kürzlich aktivierte Zielgruppen] Widget-Dokumentation](./guides/destinations.md#recently-activated-audiences) für weitere Informationen.
+Die Logik für die [!UICONTROL Kürzlich aktivierte Zielgruppen] -Widget stellt eine Liste der Zielgruppen bereit, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen hilfreich sein. Siehe [[!UICONTROL Kürzlich aktivierte Zielgruppen] Widget-Dokumentation](./guides/destinations.md#recently-activated-audiences) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Kürzlich aktivierte Zielgruppen] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 
@@ -295,7 +295,7 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 +++
 
-### Überlagerungsnamespace-Modell
+### Überlagern eines Namespace-Modells
 
 Das Überschneidungs-Namespace-Modell besteht aus den folgenden Datensätzen:
 

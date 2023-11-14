@@ -23,10 +23,10 @@ ht-degree: 19%
 | `NAICSDescription` | Zeichenfolge | Eine kurze Beschreibung des Geschäftsbereichs einer Organisation, basierend auf ihrem NAICS-Code. |
 | `SICCode` | Zeichenfolge | Der SIC-Code (Standard Industrial Classification) der Organisation. Dies ist ein vierstelliger Code, der die Branche kategorisiert, zu der Unternehmen gehören, basierend auf ihrer Geschäftstätigkeit. |
 | `SICDescription` | Zeichenfolge | Eine kurze Beschreibung des Geschäftsbereichs einer Organisation, basierend auf ihrem SIC-Code. |
-| `companyProductAndServices` | Zeichenfolge | Die Produkte und Dienstleistungen, mit denen die Organisation handelt oder Geschäfte treibt. |
+| `companyProductAndServices` | Zeichenfolge | Die Produkte und Dienstleistungen, mit denen die Organisation handelt oder in denen sie Geschäfte tätigt. |
 | `facebookPageUrl` | Zeichenfolge | Ein Website-Link zum Facebook-Konto der Organisation. |
 | `industry` | Zeichenfolge | Die Branche, zu der diese Organisation gehört. Dies ist ein Freiformfeld. Es empfiehlt sich, einen strukturierten Wert für Abfragen oder die `xdm:classifier`-Eigenschaft zu verwenden. |
-| `jigsaw` | Zeichenfolge | Der Data.com-Schlüssel für die Organisation. |
+| `jigsaw` | Zeichenfolge | Der Data.com -Schlüssel für die Organisation. |
 | `linkedinPageUrl` | Zeichenfolge | Ein Website-Link zum LinkedIn-Konto der Organisation. |
 | `logoUrl` | Zeichenfolge | Ein Pfad, der mit der URL einer Salesforce-Instanz kombiniert werden soll (z. B. `https://yourInstance.salesforce.com/`), um eine URL zu generieren, um das Profilbild des sozialen Netzwerks anzufordern, das mit der Organisation verknüpft ist. Die generierte URL gibt eine HTTP-Umleitung (Code 302) zum Profilbild des sozialen Netzwerks für das Unternehmen zurück. |
 | `marketSegment` | Zeichenfolge | Die benannte Marktzielgruppe, an der das Unternehmen teilnimmt. Dies ist ein Freiformfeld. Es empfiehlt sich, einen strukturierten Wert für Abfragen oder die `xdm:identifier`-Eigenschaft zu verwenden. |
@@ -34,7 +34,7 @@ ht-degree: 19%
 | `organizationType` | Zeichenfolge | Eine Bezeichnung, die den Organisationstyp beschreibt. |
 | `primaryEmailDomain` | Zeichenfolge | Die primäre E-Mail-Domäne, die das Unternehmen für sein Personal verwendet. |
 | `rating` | Double | Die berechnete Bewertung oder die Sternbewertung für diese Organisation. `1` gibt die höchstmögliche Bewertung an und `0` ist die Mindestbewertung. |
-| `tickerSymbol` | Zeichenfolge | Das Börsensymbol für dieses Konto. Maximal 20 Zeichen. |
+| `tickerSymbol` | Zeichenfolge | Das Börsenkürzel für dieses Konto. Maximal 20 Zeichen. |
 | `twitterHandleUrl` | Zeichenfolge | Ein Website-Link zum twitter-Handle des Unternehmens. |
 | `website` | Zeichenfolge | Die URL der Website der Organisation. |
 

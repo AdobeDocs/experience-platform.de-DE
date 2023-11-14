@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Google Ads; Google Ads
+keywords: Experience Platform; home; beliebte Themen; Google Ads; Google Ads
 title: Google Ads Source Overview
 description: Erfahren Sie, wie Sie Google Ads über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; Workspace; Array; Feld;
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Datenmodell; ui; workspace; Array; field;
 solution: Experience Platform
 title: Definieren von Array-Feldern in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie ein Array-Feld in der Benutzeroberfläche "Experience Platform"definieren.
+description: Erfahren Sie, wie Sie ein Array-Feld in der Experience Platform-Benutzeroberfläche definieren.
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt

@@ -1,6 +1,6 @@
 ---
 title: Best Practices für die Organisation von Daten-Assets in Query Service
-description: In diesem Dokument wird eine logische Methode zur Organisation von Daten beschrieben, um die Verwendung von Query Service zu erleichtern.
+description: In diesem Dokument wird eine logische Methode zur Organisation von Daten beschrieben, um die Verwendung von Query Service zu vereinfachen.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
 source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
 workflow-type: tm+mt
@@ -42,7 +42,7 @@ Das Beispiel (für die Kürze leicht abgeschnitten) zeigt diese Methode, bei der
 
 Nachdem ein Schema erstellt wurde, um als Container für die Daten-Assets zu fungieren, kann jeder Datensatz mithilfe der SQL ALTER TABLE-Standardsyntax mit einem oder mehreren Schemas in der Datenbank verknüpft werden.
 
-Im folgenden Beispiel werden `dataset1`, `dataset2`, `dataset3` und `v1` der `databaseA.schema1` -Container, der im vorherigen Beispiel erstellt wurde.
+Im folgenden Beispiel werden `dataset1`, `dataset2`, `dataset3` und `v1` der `databaseA.schema1` im vorherigen Beispiel erstellt wurde.
 
 ```SQL
 ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
@@ -129,14 +129,14 @@ dataset3| table
 
 ## Aktualisieren oder Entfernen von Daten-Assets aus einem Datencontainer
 
-Wenn die Anzahl der Daten-Assets in Ihrer Organisation (oder Sandbox) zunimmt, ist es erforderlich, Daten-Assets aus einem Datencontainer zu aktualisieren oder zu entfernen. Einzelne Assets können aus dem Organisations-Container entfernt werden, indem mithilfe der Punktnotation auf die entsprechende Datenbank und den entsprechenden Schemanamen verwiesen wird. Die Tabelle und Ansicht (`t1` und `v1` bzw. hinzugefügt zu `databaseA.schema1` im ersten Beispiel werden mithilfe der Syntax im folgenden Beispiel entfernt.
+Wenn die Anzahl der Daten-Assets in Ihrer Organisation (oder Sandbox) zunimmt, ist es erforderlich, Daten-Assets aus einem Datencontainer zu aktualisieren oder zu entfernen. Einzelne Assets können aus dem Organisations-Container entfernt werden, indem mithilfe der Punktnotation auf die entsprechende Datenbank und den entsprechenden Schemanamen verwiesen wird. Die Tabelle und Ansicht (`t1` und `v1` hinzugefügt zu `databaseA.schema1` im ersten Beispiel werden mithilfe der Syntax im folgenden Beispiel entfernt.
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
 ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 ```
 
-### Entfernen von Daten-Assets
+### Entfernen von Datenelementen
 
 Die [DROP TABLE](../sql/syntax.md#drop-table) -Funktion entfernt ein Daten-Asset nur physisch aus der [!DNL Data Lake] wenn eine einzige Referenz auf die Tabelle in allen Datenbanken Ihres Unternehmens vorhanden ist.
 

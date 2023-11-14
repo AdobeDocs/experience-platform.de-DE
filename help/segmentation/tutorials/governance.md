@@ -20,8 +20,8 @@ In diesem Tutorial werden die Schritte zum Durchsetzen der Datennutzungskonformi
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL Adobe Experience Platform] voraus.
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] ist ein generischer Suchentitätsspeicher und wird zum Verwalten von [!DNL Experience Data Model (XDM)] Daten in [!DNL Platform]. Das Profil führt Daten aus verschiedenen Unternehmensdaten-Assets zusammen und ermöglicht den Zugriff auf diese Daten in einer einheitlichen Darstellung.
-   - [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md): Von [!DNL Real-Time Customer Profile] um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Zusammenführungsrichtlinien können für Data Governance-Zwecke konfiguriert werden.
-- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] unterteilt eine große Gruppe von Einzelanwendern im Profilspeicher in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
+   - [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md): Von verwendete Regeln [!DNL Real-Time Customer Profile] um zu bestimmen, welche Daten unter bestimmten Bedingungen zu einer einheitlichen Ansicht zusammengeführt werden können. Zusammenführungsrichtlinien können für Data Governance-Zwecke konfiguriert werden.
+- [[!DNL Segmentation]](../home.md): Wie [!DNL Real-Time Customer Profile] unterteilt eine große Gruppe von Einzelanwendern im Profilspeicher in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
 - [Data Governance](../../data-governance/home.md): Data Governance bietet die Infrastruktur für die Kennzeichnung und Durchsetzung der Datennutzung unter Verwendung der folgenden Komponenten:
    - [Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md): Bezeichnungen, die zur Beschreibung von Datensätzen und Feldern in Bezug auf die Sensibilität, mit der die jeweiligen Daten verarbeitet werden sollen, verwendet werden.
    - [Datennutzungsrichtlinien](../../data-governance/policies/overview.md): Konfigurationen, die angeben, welche Marketing-Aktionen für Daten zulässig sind, die nach bestimmten Datennutzungsbezeichnungen kategorisiert sind.
@@ -36,7 +36,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) lesen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -199,7 +199,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der Datennutzungsrichtlinie verknüpft ist, nach der die Datensätze ausgewertet werden. Je nachdem, ob die Richtlinie von Adobe oder Ihrem Unternehmen definiert wurde, müssen Sie `/marketingActions/core` oder `/marketingActions/custom`zurück. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der Datennutzungsrichtlinie verknüpft ist, nach der die Datensätze ausgewertet werden. Je nachdem, ob die Richtlinie von Adobe oder Ihrem Unternehmen definiert wurde, müssen Sie `/marketingActions/core` oder `/marketingActions/custom`, bzw. |
 
 **Anfrage**
 
@@ -374,9 +374,9 @@ Durch Aktualisieren der Zusammenführungsrichtlinie einer Segmentdefinition werd
 
 ### Eingrenzen bestimmter Datenfelder beim Exportieren der Segmentdefinition
 
-Beim Exportieren einer Segmentdefinition in einen Datensatz mithilfe der [!DNL Segmentation] API: Sie können die im Export enthaltenen Daten mithilfe der `fields` Parameter. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
+Beim Exportieren einer Segmentdefinition in einen Datensatz mithilfe der [!DNL Segmentation] API: Sie können die im Export enthaltenen Daten mithilfe der `fields` -Parameter. Alle diesem Parameter hinzugefügten Datenfelder werden in den Export einbezogen, während alle anderen Datenfelder ausgeschlossen werden.
 
-Betrachten Sie eine Segmentdefinition mit Datenfeldern namens &quot;A&quot;, &quot;B&quot;und &quot;C&quot;. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Dadurch werden die Felder &quot;A&quot;und &quot;B&quot;beim Exportieren der Segmentdefinition ausgeschlossen.
+Betrachten Sie eine Segmentdefinition mit Datenfeldern namens &quot;A&quot;, &quot;B&quot;und &quot;C&quot;. Wenn Sie nur das Feld „C“ exportieren möchten, enthält der `fields`-Parameter nur das Feld „C“. Auf diese Weise werden die Felder &quot;A&quot;und &quot;B&quot;beim Exportieren der Segmentdefinition ausgeschlossen.
 
 Siehe Abschnitt zu [Segmentdefinition exportieren](./evaluate-a-segment.md#export) im Tutorial zur Segmentierung für weitere Informationen.
 

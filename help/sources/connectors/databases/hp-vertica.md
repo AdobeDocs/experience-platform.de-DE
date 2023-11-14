@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; HP Vertica; hp vertica
+keywords: Experience Platform; home; beliebte Themen; HP Vertica; hp vertica
 solution: Experience Platform
 title: HP Vertica Source Connector - Überblick
 description: Erfahren Sie, wie Sie HP Vertica über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.

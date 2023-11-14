@@ -5,7 +5,7 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1644'
-ht-degree: 86%
+ht-degree: 90%
 
 ---
 
@@ -123,7 +123,7 @@ v2.0.4
 
 v1.9.0
 
-* **Neue Aktion &quot;Trigger Direct Call&quot;** - Die Haupterweiterung enthält jetzt einen neuen Aktionstyp namens `Trigger Direct Call`.  Dieser kann verwendet werden, um eine Direktaufrufregel über eine Aktion aus einer anderen Regel auszulösen. Er wird direkt der Methode `_satellite.track()` zugeordnet. Vielen Dank an Jan Exner für diesen Beitrag.
+* **Neue Aktion &quot;Trigger-Direktaufruf&quot;** - Die Haupterweiterung enthält jetzt einen neuen Aktionstyp namens `Trigger Direct Call`.  Dieser kann verwendet werden, um eine Direktaufrufregel über eine Aktion aus einer anderen Regel auszulösen. Er wird direkt der Methode `_satellite.track()` zugeordnet. Vielen Dank an Jan Exner für diesen Beitrag.
 
 ## 8. Dezember 2020
 
@@ -208,7 +208,7 @@ v1.4.2
 
 ## 8. November 2018
 
-* **Option „Kohorte beibehalten“** – Die Option, eine Kohorte dauerhaft beizubehalten, wurde zur Sampling-Bedingung hinzugefügt. Dadurch wird die Beispielkohorte für einen Benutzer sitzungsübergreifend beibehalten oder beendet. Wenn beispielsweise das Kontrollkästchen &quot;Kohorte beibehalten&quot;aktiviert ist und die Bedingung bei der ersten Ausführung für einen bestimmten Besucher &quot;true&quot;zurückgibt, wird bei allen nachfolgenden Ausführungen der Bedingung für denselben Besucher &quot;true&quot;zurückgegeben. Wenn das Kontrollkästchen &quot;Kohorte beibehalten&quot;aktiviert ist und die Bedingung bei der ersten Ausführung für einen bestimmten Besucher &quot;false&quot;zurückgibt, gibt sie bei allen nachfolgenden Ausführungen der Bedingung für denselben Besucher &quot;false&quot;zurück.
+* **Option „Kohorte beibehalten“** – Die Option, eine Kohorte dauerhaft beizubehalten, wurde zur Sampling-Bedingung hinzugefügt. Dadurch wird die Beispielkohorte für einen Benutzer sitzungsübergreifend beibehalten oder beendet. Wenn beispielsweise das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für eine bestimmte Besucherin bzw. einen bestimmten Besucher „true“ zurückgibt, gibt sie in allen nachfolgenden Ausführungen der Bedingung für dieselbe Person ebenfalls „true“ zurück. Wenn das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für eine bestimmte Besucherin bzw. für einen bestimmten Besucher „false“ zurückgibt, gibt sie gleichermaßen in allen nachfolgenden Ausführungen der Bedingung für dieselbe Person ebenfalls „false“ zurück.
 * **Fehlerbehebung** – Es wurde ein Problem behoben, durch das eine Regel mithilfe eines Seitenende-Ereignisses und einer benutzerdefinierten Code-Aktion auf einer Seite, auf der Tags zwar synchron geladen, aber nicht ordnungsgemäß installiert wurden (kein Aufruf von `_satellite.pageBottom()`), Inhalte der Website gelöscht hat.
 * **Fehlerbehebung** - Es wurde ein Problem behoben, bei dem der Viewport-Aufruf nicht funktionierte, wenn die Tag-Bibliothek asynchron geladen wurde und das Laden abgeschlossen wurde, nachdem das DOMContentLoaded-Ereignis des Browsers ausgelöst wurde.
 

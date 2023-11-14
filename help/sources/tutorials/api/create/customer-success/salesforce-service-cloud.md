@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Salesforce Service Cloud; Salesforce Service Cloud
+keywords: Experience Platform; home; beliebte Themen; Salesforce Service Cloud; Salesforce Service Cloud
 solution: Experience Platform
 title: Erstellen einer Salesforce Service Cloud-Quellverbindung mithilfe der Flow Service-API
 type: Tutorial

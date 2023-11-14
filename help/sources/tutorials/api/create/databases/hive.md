@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Apache-Hive; Hive; Hive
+keywords: Experience Platform;home;popular topics;Apache hive;hive;Hive
 solution: Experience Platform
 title: Erstellen eines Apache Hive auf Azure HDInsights-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
@@ -90,7 +90,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die mit Ihrer [!DNL Hive] -Konto. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrer [!DNL Hive] -Konto. |
 | `connectionSpec.id` | Die [!DNL Hive]-Verbindungsspezifikations-ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
 
 **Antwort**

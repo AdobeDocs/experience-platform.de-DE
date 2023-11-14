@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; teradata; teradata
+keywords: Experience Platform;home;popular topics;teradata;teradata Vantage
 title: Übersicht über den Teradata Vantage Source Connector
 description: Erfahren Sie, wie Sie Teradata Vantage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264

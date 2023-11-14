@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; FTP; FTP;
+keywords: Experience Platform; home; beliebte Themen; FTP; ftp;
 solution: Experience Platform
 title: FTP Source Connector - Übersicht
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen FTP-Server mit Adobe Experience Platform verbinden.

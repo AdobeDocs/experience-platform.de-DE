@@ -5,7 +5,7 @@ title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Zielgruppen für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 100%
 

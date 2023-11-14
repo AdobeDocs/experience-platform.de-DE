@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: Einverständnis in Segmenten
+title: Einverständniserklärung in Segmenten
 description: Erfahren Sie, wie Sie die Zustimmungseinstellungen von Kunden für die Erfassung und Freigabe personenbezogener Daten in Segmentvorgängen berücksichtigen.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
@@ -16,7 +16,7 @@ ht-degree: 2%
 >
 >In diesem Handbuch wird erläutert, wie Sie Einwilligungen in **Segmentdefinitionen**.
 
-Rechtliche Datenschutzbestimmungen wie die [!DNL California Consumer Privacy Act] (CCPA) bieten Verbrauchern das Recht, sich gegen die Erfassung oder Weitergabe personenbezogener Daten an Dritte zu entscheiden. Adobe Experience Platform bietet standardmäßige XDM-Komponenten (Experience Data Model), mit denen diese Voreinstellungen bezüglich der Kundenzustimmung in Echtzeit-Kundenprofildaten erfasst werden sollen.
+Rechtliche Datenschutzbestimmungen wie die [!DNL California Consumer Privacy Act] (CCPA) bieten Verbrauchern das Recht, sich gegen die Erfassung oder Weitergabe personenbezogener Daten an Dritte zu entscheiden. Adobe Experience Platform bietet standardmäßige Experience-Datenmodell (XDM)-Komponenten, mit denen diese Voreinstellungen bezüglich der Kundenzustimmung in Echtzeit-Kundenprofildaten erfasst werden sollen.
 
 Wenn ein Kunde die Freigabe seiner personenbezogenen Daten widerrufen oder verweigert hat, muss Ihr Unternehmen diese Voreinstellung beim Generieren von Zielgruppen für Marketingaktivitäten berücksichtigen. In diesem Dokument wird beschrieben, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Kundenzustimmungswerte in Ihre Segmentdefinitionen integrieren.
 
@@ -30,7 +30,7 @@ Die Einhaltung der Zustimmungswerte von Kunden erfordert ein Verständnis der ve
 
 ## Einverständnisschemafelder
 
-Um Kundeneinwilligungen und -präferenzen zu berücksichtigen, ist eines der Schemas, das Teil Ihrer [!UICONTROL XDM Individual Profile] Das Vereinigungsschema muss die Standardfeldgruppe enthalten. **[!UICONTROL Einverständnis und Voreinstellungen]**.
+Um Kundeneinwilligungen und -präferenzen zu berücksichtigen, ist eines der Schemas, das Teil Ihrer [!UICONTROL Individuelles XDM-Profil] Das Vereinigungsschema muss die Standardfeldgruppe enthalten **[!UICONTROL Einverständnis und Voreinstellungen]**.
 
 Weitere Informationen zur Struktur und zum vorgesehenen Anwendungsfall der einzelnen Attribute, die von der Feldergruppe bereitgestellt werden, finden Sie in der [Referenzhandbuch zu Einverständnissen und Voreinstellungen](../xdm/field-groups/profile/consents.md). Eine schrittweise Anleitung zum Hinzufügen einer Feldergruppe zu einem Schema finden Sie im Abschnitt [Handbuch zur XDM-Benutzeroberfläche](../xdm/ui/resources/schemas.md#add-field-groups).
 
@@ -49,7 +49,7 @@ Die folgenden Schritte zeigen, wie Sie die entsprechenden Felder für zwei Arten
 >
 >Während sich dieses Handbuch auf die beiden oben genannten Opt-out-Flags konzentriert, können Sie Ihre Segmentdefinitionen so konfigurieren, dass auch zusätzliche Zustimmungssignale einbezogen werden. Die [Referenzhandbuch zu Einverständnissen und Voreinstellungen](../xdm/field-groups/profile/consents.md) enthält weitere Informationen zu den einzelnen Optionen und den vorgesehenen Anwendungsfällen.
 
-Beim Erstellen einer Segmentdefinition in der Benutzeroberfläche unter **[!UICONTROL Attribute]**, navigieren Sie zu **[!UICONTROL XDM Individual Profile]**, wählen Sie **[!UICONTROL Einverständnis und Voreinstellungen]**. Von hier aus können Sie die Optionen für **[!UICONTROL Datenerfassung]** und **[!UICONTROL Daten freigeben]**.
+Beim Erstellen einer Segmentdefinition in der Benutzeroberfläche unter **[!UICONTROL Attribute]**, navigieren Sie zu **[!UICONTROL Individuelles XDM-Profil]**, wählen Sie **[!UICONTROL Einverständnis und Voreinstellungen]**. Von hier aus können Sie die Optionen für **[!UICONTROL Datenerfassung]** und **[!UICONTROL Daten freigeben]**.
 
 ![](./images/opt-outs/consents.png)
 
@@ -61,7 +61,7 @@ Ein Ansatz besteht darin, alle Kunden auszuschließen, die sich gegen die Erfass
 
 * **[!UICONTROL Nein (Opt-out)]**
 * **[!UICONTROL Standardwert Nein (Opt-out)]**
-* **[!UICONTROL unbekannt]** (wenn davon ausgegangen wird, dass die Einwilligung verweigert wird, sofern nicht anderweitig unbekannt ist)
+* **[!UICONTROL unbekannt]** (wenn davon ausgegangen wird, dass die Einwilligung verweigert wird, falls nicht anders bekannt)
 
 ![](./images/opt-outs/collect.png)
 

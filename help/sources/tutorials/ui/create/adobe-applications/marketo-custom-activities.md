@@ -13,7 +13,7 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->In diesem Tutorial werden spezifische Schritte zum Einrichten und Einführen von **benutzerdefinierte Aktivität** Daten aus [!DNL Marketo] in die Experience Platform. Schritte zum **Standardaktivität** -Daten, lesen Sie die [[!DNL Marketo] UI-Handbuch](./marketo.md).
+>In diesem Tutorial werden spezifische Schritte zum Einrichten und Einführen von **benutzerdefinierte Aktivität** Daten aus [!DNL Marketo] auf Experience Platform. Schritte zum **Standardaktivität** -Daten, lesen Sie die [[!DNL Marketo] UI-Handbuch](./marketo.md).
 
 Zusätzlich zu [Standardaktivitäten](../../../../connectors/adobe-applications/mapping/marketo.md#activities), können Sie auch die [!DNL Marketo] -Quelle, um benutzerdefinierte Aktivitätsdaten an Adobe Experience Platform zu übertragen. In diesem Dokument wird beschrieben, wie Sie eine Quellverbindung und einen Datenfluss für benutzerdefinierte Aktivitätsdaten mit der [!DNL Marketo] -Quelle in der Benutzeroberfläche.
 
@@ -31,7 +31,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ## Abrufen Ihrer benutzerdefinierten Aktivitätsdetails
 
-Der erste Schritt zum Abrufen benutzerdefinierter Aktivitätsdaten aus [!DNL Marketo] zur Experience Platform verwendet wird, um den API-Namen und den Anzeigenamen Ihrer benutzerdefinierten Aktivität abzurufen.
+Der erste Schritt zum Abrufen benutzerdefinierter Aktivitätsdaten aus [!DNL Marketo] zum Experience Platform bezeichnet, um den API-Namen und den Anzeigenamen Ihrer benutzerdefinierten Aktivität abzurufen.
 
 Melden Sie sich mit dem [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) -Schnittstelle. In der linken Navigation, unter [!DNL Database Management]auswählen **Benutzerdefinierte Marketo-Aktivitäten**.
 
@@ -41,11 +41,11 @@ Die Benutzeroberfläche aktualisiert eine Anzeige Ihrer benutzerdefinierten Akti
 
 Auswählen **Felder** aus der oberen Kopfzeile, um die mit Ihrer benutzerdefinierten Aktivität verknüpften Felder anzuzeigen. Auf dieser Seite können Sie die Namen, API-Namen, Beschreibungen und Datentypen der Felder in Ihrer benutzerdefinierten Aktivität anzeigen. Details zu einzelnen Feldern werden in einem späteren Schritt bei der Erstellung eines Schemas verwendet.
 
-![Die Seite mit den Details zu benutzerdefinierten Marketo-Aktivitätsfeldern in der Marketo Engage-Benutzeroberfläche.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
+![Die Seite &quot;Marketo Custom Activity Fields Details&quot;in der Marketo Engage-Benutzeroberfläche.](../../../../images/tutorials/create/marketo-custom-activities/marketo-custom-activity-fields.png)
 
 ## Einrichten von Feldergruppen für benutzerdefinierte Aktivitäten im Schema B2B-Aktivitäten
 
-Im *[!UICONTROL Schemas]* Dashboard der Experience Platform-Benutzeroberfläche, wählen Sie **[!UICONTROL Durchsuchen]** und wählen Sie **[!UICONTROL B2B-Aktivität]** aus der Liste der Schemas.
+Im *[!UICONTROL Schemas]* Dashboard der Experience Platform-Benutzeroberfläche auswählen **[!UICONTROL Durchsuchen]** und wählen Sie **[!UICONTROL B2B-Aktivität]** aus der Liste der Schemas.
 
 >[!TIP]
 >

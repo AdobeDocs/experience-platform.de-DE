@@ -21,7 +21,7 @@ Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen und Verwalten
 >
 >In diesem Handbuch wird die Verwendung von Exportvorgängen im [!DNL Profile API]. Informationen zum Verwalten von Exportaufträgen für den Segmentierungsdienst von Adobe Experience Platform finden Sie im Handbuch zu [Exportaufträge in der Segmentation-API](../../profile/api/export-jobs.md).
 
-Sie können nicht nur einen Exportauftrag erstellen, sondern auch auf [!DNL Profile] Daten, die `/entities` -Endpunkt, auch als &quot;[!DNL Profile Access]&quot;. Siehe [Endpunktleitfaden für Entitäten](./entities.md) für weitere Informationen. Anweisungen zum Zugriff auf [!DNL Profile] Daten über die Benutzeroberfläche, siehe [Benutzerhandbuch](../ui/user-guide.md).
+Zusätzlich zur Erstellung eines Exportauftrags können Sie auch auf [!DNL Profile] Daten, die `/entities` -Endpunkt, auch als &quot;[!DNL Profile Access]&quot;. Siehe [Endpunktleitfaden für Entitäten](./entities.md) für weitere Informationen. Anweisungen zum Zugriff auf [!DNL Profile] Daten über die Benutzeroberfläche, siehe [Benutzerhandbuch](../ui/user-guide.md).
 
 ## Erste Schritte
 
@@ -83,7 +83,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die schreibgeschützte, sy
 ] 
 ```
 
-### Exportauftrag starten {#initiate}
+### Exportauftrag initiieren {#initiate}
 
 Sobald Sie über einen Datensatz mit Vereinigungspersistenz verfügen, können Sie einen Exportauftrag erstellen, um die Profildaten in dem Datensatz zu speichern, indem Sie eine POST-Anfrage an die `/export/jobs` -Endpunkt in der Echtzeit-Kundenprofil-API verwenden und die Details der Daten angeben, die Sie im Text der Anfrage exportieren möchten.
 
@@ -135,7 +135,7 @@ curl -X POST \
 | `mergePolicy` | *(Optional)* Gibt die Zusammenführungsrichtlinie an, die für die exportierten Daten gelten soll. Schließen Sie diesen Parameter ein, wenn mehrere Zielgruppen exportiert werden. |
 | `mergePolicy.id` | Die Kennung der Zusammenführungsrichtlinie. |
 | `mergePolicy.version` | Die spezifische Version der zu verwendenden Zusammenführungsrichtlinie. Wird dieser Wert nicht angegeben, wird standardmäßig die neueste Version verwendet. |
-| `additionalFields.eventList` | *(Optional)* Steuert die Zeitreihen-Ereignisfelder, die für untergeordnete oder verknüpfte Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`eventList.fields`: Kontrollieren Sie die zu exportierenden Felder.</li><li>`eventList.filter`: Gibt Kriterien an, die die Ergebnisse aus verknüpften Objekten einschränken. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`eventList.filter.fromIngestTimestamp`: Filtert Zeitreihenereignisse nach denjenigen, die nach dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li></ul> |
+| `additionalFields.eventList` | *(Optional)* Steuert die Zeitreihen-Ereignisfelder, die für untergeordnete oder verknüpfte Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`eventList.fields`: Kontrollieren Sie die zu exportierenden Felder.</li><li>`eventList.filter`: Gibt Kriterien an, die die Ergebnisse begrenzen, die aus den verknüpften Objekten enthalten sind. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`eventList.filter.fromIngestTimestamp`: Filtert Zeitreihenereignisse nach denjenigen, die nach dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li></ul> |
 | `destination` | **(Erforderlich)** Zielinformationen für die exportierten Daten:<ul><li>`destination.datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`destination.segmentPerBatch`: *(Optional)* Ein boolescher Wert, der standardmäßig auf `false`. Ein Wert von `false` exportiert alle Segmentdefinitions-IDs in eine Batch-Kennung. Ein Wert von `true` exportiert eine Segmentdefinitions-ID in eine Batch-Kennung. Beachten Sie, dass die Einstellung von `true` kann sich auf die Batch-Exportleistung auswirken.</li></ul> |
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
 
@@ -403,7 +403,7 @@ curl -X GET \
 
 ## Abbrechen eines Exportvorgangs
 
-Mit der Experience Platform können Sie einen vorhandenen Exportauftrag abbrechen. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Exportauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängengeblieben ist. Um einen Exportauftrag abzubrechen, können Sie eine DELETE-Anfrage an die `/export/jobs` -Endpunkt und schließen Sie die `id` des Exportauftrags, den Sie zum Anfragepfad abbrechen möchten.
+Mit Experience Platform können Sie einen vorhandenen Exportauftrag abbrechen, was aus verschiedenen Gründen nützlich sein kann, z. B. wenn der Exportauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängengeblieben ist. Um einen Exportauftrag abzubrechen, können Sie eine DELETE-Anfrage an die `/export/jobs` -Endpunkt und schließen Sie die `id` des Exportauftrags, den Sie zum Anfragepfad abbrechen möchten.
 
 **API-Format**
 
@@ -432,7 +432,7 @@ Eine erfolgreiche Löschanfrage gibt den HTTP-Status 204 (Kein Inhalt) und einen
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake in Experience Platform verfügbar. Anschließend können Sie die [Data Access API](https://www.adobe.io/experience-platform-apis/references/data-access/) , um mithilfe der `batchId` mit dem Export verknüpft ist. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
+Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake im Experience Platform verfügbar. Anschließend können Sie die [Data Access API](https://www.adobe.io/experience-platform-apis/references/data-access/) , um auf die Daten mithilfe der `batchId` mit dem Export verknüpft ist. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Verwenden der Data Access-API für den Zugriff auf und den Download von Batch-Dateien finden Sie im Abschnitt [Tutorial zum Datenzugriff](../../data-access/tutorials/dataset-data.md).
 
@@ -446,7 +446,7 @@ Der folgende Abschnitt enthält zusätzliche Informationen zu Exportvorgängen i
 
 ### Beispiele für zusätzliche Exportnutzdaten
 
-Der Beispiel-API-Aufruf, der im Abschnitt [Initiieren eines Exportvorgangs](#initiate) erstellt einen Auftrag, der sowohl Profil- (Datensatz-) als auch Ereignisdaten (Zeitreihen) enthält. In diesem Abschnitt finden Sie zusätzliche Beispiele für Anfrage-Payload, mit denen Sie Ihren Export auf einen Datentyp beschränken können.
+Der Beispiel-API-Aufruf, der im Abschnitt [Initiieren eines Exportvorgangs](#initiate) erstellt einen Auftrag, der sowohl Profil- (Datensatz-) als auch Ereignis- (Zeitreihendaten) enthält. In diesem Abschnitt finden Sie zusätzliche Beispiele für Anfrage-Payload, mit denen Sie Ihren Export auf einen Datentyp beschränken können.
 
 Die folgende Payload erstellt einen Exportauftrag, der nur Profildaten (keine Ereignisse) enthält:
 

@@ -6,7 +6,7 @@ exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
 source-wordcount: '1442'
-ht-degree: 80%
+ht-degree: 97%
 
 ---
 
@@ -22,7 +22,7 @@ Mit der Streaming-Segmentierung in [!DNL Adobe Experience Platform] können Kund
 >
 >Die Streaming-Segmentierung funktioniert bei allen Daten, die über eine Streaming-Quelle aufgenommen wurden. Daten, die über eine Batch-basierte Quelle aufgenommen werden, werden jede Nacht ausgewertet, selbst wenn sie zur Streaming-Segmentierung geeignet sind.
 >
->Darüber hinaus können Segmente, die mit Streaming-Segmentierung ausgewertet werden, zwischen idealer und tatsächlicher Mitgliedschaft wechseln, wenn die Segmentdefinition auf einer anderen Segmentdefinition basiert, die mithilfe der Batch-Segmentierung ausgewertet wird. Wenn beispielsweise Segment A auf Segment B basiert und Segment B mithilfe der Batch-Segmentierung ausgewertet wird, entfernt sich Segment A weiter von den tatsächlichen Daten, bis es mit der Aktualisierung von Segment B erneut synchronisiert wird, da Segment B nur alle 24 Stunden aktualisiert wird.
+>Darüber hinaus können Segmente, die mithilfe der Streaming-Segmentierung ausgewertet werden, zwischen idealer und tatsächlicher Zugehörigkeit wechseln, wenn die Segmentdefinition auf einer anderen Segmentdefinition basiert, die durch eine Batch-Segmentierung ausgewertet wird. Wenn beispielsweise Segment A auf Segment B basiert und Segment B mithilfe der Batch-Segmentierung ausgewertet wird, entfernt sich Segment A weiter von den tatsächlichen Daten, bis es mit der Aktualisierung von Segment B erneut synchronisiert wird, da Segment B nur alle 24 Stunden aktualisiert wird.
 
 ## Abfragetypen für die Streaming-Segmentierung {#query-types}
 
@@ -47,7 +47,7 @@ Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Sz
 - Die Segmentdefinition umfasst Segmente oder Eigenschaften aus Adobe Audience Manager (AAM).
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
-   - Wenn die Segmentdefinition jedoch in der `inSegment` Ereignis nur Profil ist, wird die Segmentdefinition **will** für Streaming-Segmentierung aktiviert sein.
+   - Wenn die im `inSegment`-Ereignis enthaltene Segmentdefinition jedoch nur ein Profil ist, wird die Segmentdefinition für die Streaming-Segmentierung **aktiviert**.
 
 Bitte beachten Sie bei der Streaming-Segmentierung die folgenden Richtlinien:
 
@@ -60,11 +60,11 @@ Wenn eine Segmentdefinition geändert wird, sodass sie die Kriterien für die St
 
 Darüber hinaus erfolgt die Aufhebung der Segmentqualifikation, ähnlich wie die Segmentqualifikation selbst, in Echtzeit. Wenn sich eine Zielgruppe nicht mehr für ein Segment qualifiziert, wird deren Qualifikation daher sofort aufgehoben. Wenn in der Segmentdefinition beispielsweise nach „Alle Benutzenden, die in den letzten drei Stunden rote Schuhe gekauft haben“ gefragt wird, wird die Qualifikation nach drei Stunden für alle Profile, die sich ursprünglich für die Segmentdefinition qualifiziert haben, aufgehoben.
 
-## Definitionsdetails des Streaming-Segments
+## Details der Segmentdefinition für die Streaming-Segmentierung
 
 Nachdem Sie ein für Streaming aktiviertes Segment erstellt haben, können Sie Details zu diesem Segment anzeigen.
 
-![Die Detailseite der Segmentdefinition wird angezeigt.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![Die Seite mit den Details zur Segmentdefinition wird angezeigt.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 Insbesondere wird die Metrik **[!UICONTROL Gesamtzahl an Qualifizierten]** angezeigt, die die Gesamtzahl qualifizierter Zielgruppen basierend auf Batch- und Streaming-Auswertungen für dieses Segment umfasst.
 
@@ -72,7 +72,7 @@ Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen 
 
 >[!NOTE]
 >
->Eine Segmentdefinition gilt als qualifiziert, wenn sie von einem Status ohne realisiert wird oder wenn sie von einem Verlassen zum nächsten realisiert wird. Eine Segmentdefinition gilt als nicht qualifiziert, wenn sie von realisiert zu beendet wechselt.
+>Eine Segmentdefinition gilt als qualifiziert, wenn es von der Statuslosigkeit oder vom Status „beendet“ zum Status „realisiert“ wechselt. Eine Segmentdefinition gilt als nicht qualifiziert, wenn es von realisiert zu beendet wechselt.
 >
 >Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Segmentierungsübersicht](./overview.md#browse).
 
@@ -104,11 +104,11 @@ Die Streaming-Segmentierung funktioniert bei allen Daten, die über eine Streami
 
 ### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
 
-Eine Segmentdefinition wird als Batch-, Streaming- oder Edge-Segmentierung basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer definiert. Eine Liste der Segmente, die als Streaming-Segmentdefinition ausgewertet werden, finden Sie im Abschnitt [Abschnitt zu Streaming-Segmentierungs-Abfragetypen](#query-types).
+Eine Segmentdefinition wird – basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer – als Batch-, Streaming- oder Edge-Segmentierung definiert. Eine Liste der Segmente, die als Streaming-Segmentdefinitionen ausgewertet werden, finden Sie im [Abschnitt zu Abfragetypen von Streaming-Segmentierungen](#query-types).
 
-Beachten Sie Folgendes: Wenn eine Segmentdefinition **both** ein `inSegment` -Ausdruck und eine direkte Kette von Einzelereignissen verwenden, kann sie nicht für Streaming-Segmentierung qualifiziert sein. Wenn Sie möchten, dass diese Segmentdefinition für Streaming-Segmentierung qualifiziert ist, sollten Sie die direkte Single-Event-Kette zu einem eigenen Segment machen.
+Bitte beachten Sie, dass eine Segmentdefinition, die **sowohl** einen `inSegment`-Ausdruck als auch eine direkte Einzelereigniskette enthält, nicht für die Streaming-Segmentierung infrage kommt. Wenn Sie möchten, dass diese Segmentdefinition für die Streaming-Segmentierung qualifiziert wird, sollten Sie die direkte Einzelereigniskette zu einem eigenen Segment machen.
 
-### Warum steigt die Anzahl der &quot;insgesamt qualifizierten&quot;Segmente weiterhin, während die Zahl unter &quot;Letzte X Tage&quot;im Abschnitt mit Segmentdefinitionsdetails bei null bleibt?
+### Warum steigt die Anzahl der „insgesamt qualifizierten“ Segmente weiter an, während die Anzahl unter „Letzte X Tage“ im Abschnitt Segmentdefinitionsdetails bei null bleibt?
 
 Die Anzahl der insgesamt qualifizierten Segmente wird aus dem täglichen Segmentierungsauftrag abgerufen, der Zielgruppen enthält, die sich sowohl für Batch- als auch für Streaming-Segmente qualifizieren. Dieser Wert wird sowohl für Batch- als auch für Streaming-Segmente angezeigt.
 
@@ -118,4 +118,4 @@ Wenn Sie also feststellen, dass die Zahl unter „Letzte X Tage“ null ist und 
 
 ### Wie lange dauert es, bis eine Segmentdefinition verfügbar ist?
 
-Es dauert bis zu eine Stunde, bis eine Segmentdefinition verfügbar ist.
+Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.

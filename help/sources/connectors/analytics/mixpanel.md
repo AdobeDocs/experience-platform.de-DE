@@ -1,5 +1,5 @@
 ---
-title: Übersicht über den Connector für Mixpanel-Quellen
+title: Übersicht über den Quell-Connector für Mixpanel
 description: Erfahren Sie, wie Sie Mixpanel über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
@@ -14,7 +14,7 @@ ht-degree: 29%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Analytics-Anwendung von Drittanbietern. Unterstützung für Analytics-Anbieter: [!DNL Mixpanel].
+Experience Platform unterstützt die Aufnahme von Daten aus einer Analytics-Anwendung eines Drittanbieters. Unterstützung für Analytics-Anbieter: [!DNL Mixpanel].
 
 [[!DNL Mixpanel]](https://www.mixpanel.com) ist ein Produktanalysetool, mit dem Sie Daten darüber erfassen können, wie Benutzer mit einem digitalen Produkt interagieren. Mithilfe von Mixpanel können Sie diese Produktdaten mit einfachen, interaktiven Berichten analysieren, mit denen Sie die Daten mit nur wenigen Klicks abfragen und visualisieren können.
 
@@ -24,7 +24,7 @@ Quellen nutzen die [Mixpanel-Ereignis-Export-API > Herunterladen](https://develo
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-## Authentifizieren Sie Ihre [!DNL Mixpanel] account
+## Authentifizieren Ihrer [!DNL Mixpanel] account
 
 In diesem Abschnitt werden die erforderlichen Schritte beschrieben, die zum Authentifizieren Ihres Kontos und zum Übermitteln Ihrer [!DNL Mixpanel] Daten an Platform.
 
@@ -42,7 +42,7 @@ Navigieren Sie dann zum [!DNL Service Accounts] im [!DNL Project Settings] in de
 
 ![Mixpanel-Dienstkonto](../../images/tutorials/create/mixpanel-export-events/mixpanel-service-account.png)
 
-Erstellen Sie abschließend eine Plattform . [schema](../../../xdm/schema/composition.md) für [!DNL Mixpanel Event Export API]. Weitere Informationen zu den für Ihr Schema erforderlichen Zuordnungen finden Sie im Handbuch unter [Erstellen einer [!DNL Mixpanel] Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources).
+Erstellen Sie abschließend eine Plattform . [schema](../../../xdm/schema/composition.md) für die [!DNL Mixpanel Event Export API]. Weitere Informationen zu den für Ihr Schema erforderlichen Zuordnungen finden Sie im Handbuch unter [Erstellen einer [!DNL Mixpanel] Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/analytics/mixpanel.md#additional-resources).
 
 ![Schema erstellen](../../images/tutorials/create/mixpanel-export-events/schema.png)
 

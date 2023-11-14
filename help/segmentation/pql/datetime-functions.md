@@ -34,7 +34,7 @@ person.birthMonth = currentMonth()
 
 ## Monat abrufen
 
-Die `getMonth` gibt den Monat als Ganzzahl basierend auf einem angegebenen Zeitstempel zurück.
+Die `getMonth` -Funktion gibt den Monat als Ganzzahl basierend auf einem angegebenen Zeitstempel zurück.
 
 **Format**
 
@@ -104,9 +104,9 @@ Die folgende PQL-Abfrage prüft, ob der Geburtstag der Person mit dem aktuellen 
 person.birthDay = currentDayOfMonth()
 ```
 
-## Tag des Monats abrufen
+## Tag des Monats
 
-Die `getDayOfMonth` gibt den Tag basierend auf einem angegebenen Zeitstempel als Ganzzahl zurück.
+Die `getDayOfMonth` -Funktion gibt den Tag als Ganzzahl basierend auf einem angegebenen Zeitstempel zurück.
 
 **Format**
 

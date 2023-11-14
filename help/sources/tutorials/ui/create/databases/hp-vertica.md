@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; HP Vertica
+keywords: Experience Platform; home; beliebte Themen; HP Vertica
 solution: Experience Platform
 title: Erstellen einer HP Vertica-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
@@ -18,7 +18,7 @@ ht-degree: 35%
 >
 > Die HP [!DNL Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen einer HP beschrieben. [!DNL Vertica] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
+Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden Schritte zum Erstellen einer HP beschrieben. [!DNL Vertica] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -43,9 +43,9 @@ Weitere Informationen zu den ersten Schritten finden Sie unter [dieser HP [!DNL 
 
 ## HP anschließen [!DNL Vertica] account
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihre HP zu verknüpfen [!DNL Vertica] Konto [!DNL Platform].
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihre HP zu verknüpfen [!DNL Vertica] -Konto [!DNL Platform].
 
-Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste auf **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -53,11 +53,11 @@ Unter dem **[!UICONTROL Datenbanken]** category, select **[!UICONTROL HP Vertica
 
 ![Katalog](../../../../images/tutorials/create/hp-vertica/catalog.png)
 
-Die **[!UICONTROL Mit HP Vertica verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Verbindung zu HP Vertica herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre HP ein. [!DNL Vertica] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre HP ein. [!DNL Vertica] Anmeldedaten. Wählen Sie zum Abschluss **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![connect](../../../../images/tutorials/create/hp-vertica/new.png)
 

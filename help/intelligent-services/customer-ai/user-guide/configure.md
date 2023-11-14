@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Benutzerhandbuch; Kundenunterstützung; beliebte Themen; Instanz konfigurieren; Instanz erstellen;
+keywords: Experience Platform; Benutzerhandbuch; Kundenhilfe; beliebte Themen; Instanz konfigurieren; Instanz erstellen
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz

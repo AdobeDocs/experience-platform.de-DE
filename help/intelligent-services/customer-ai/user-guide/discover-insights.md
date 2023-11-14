@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen; Kundenai-Einblicke
+keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen; Kundendateneinblicke
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Insights mit Customer AI
@@ -48,7 +48,7 @@ Die **[!UICONTROL Leistungszusammenfassung]** zeigt die tatsächlichen Abwanderu
 
 ## Details zur Dienstinstanz
 
-Es gibt zwei Möglichkeiten, Details der Dienstinstanz anzuzeigen: aus dem Dashboard oder innerhalb der Dienstinstanz.
+Es gibt zwei Möglichkeiten, Details der Dienstinstanz anzuzeigen: über das Dashboard oder innerhalb der Dienstinstanz.
 
 ### Dashboard der Dienstinstanz
 
@@ -77,7 +77,7 @@ Die zweite Möglichkeit, zusätzliche Details für eine Dienstinstanz anzuzeigen
 
 ### Popover zur Vorschau von Customer AI-Datensätzen
 
-Wenn mehrere Datensätze von Customer AI verwendet werden, wird ein Hyperlink mit der Bezeichnung **[!UICONTROL Mehrere]** gefolgt von der Anzahl der Datensätze in eckigen Klammern `()` bereitgestellt wird.
+Wenn mehrere Datensätze von Customer AI verwendet werden, wird ein Hyperlink mit der Bezeichnung **[!UICONTROL Mehrere]** gefolgt von der Anzahl der Datensätze in Klammern `()` bereitgestellt wird.
 
 ![mehrere Datensätze](../images/insights/insights-multi-datasets.png)
 
@@ -91,7 +91,7 @@ Um eine Instanz zu bearbeiten, wählen Sie **[!UICONTROL Bearbeiten]** in der ob
 
 ![Auf Bearbeiten-Schaltfläche klicken](../images/insights/edit-button.png)
 
-Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie den Namen, die Beschreibung, den Status und die Scoring-Häufigkeit der Instanz bearbeiten können. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, wählen Sie **[!UICONTROL Speichern]** unten rechts.
+Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie den Namen, die Beschreibung, den Status und die Scoring-Häufigkeit der Instanz bearbeiten können. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, wählen Sie **[!UICONTROL Speichern]** in der rechten unteren Ecke.
 
 ![Bearbeiten-Popup-Fenster](../images/insights/edit-instance.png)
 
@@ -142,7 +142,7 @@ Darüber hinaus können Sie mithilfe von Drilldowns einen Verteilungsfaktor verg
 
 ![](../images/insights/drilldown-compare.png)
 
-Sie können sehen, dass Profile mit geringer Konversionsneigung einen kürzlichen Besuch auf den Webseiten von adobe.com weniger wahrscheinlich gemacht haben. Der Faktor &quot;Tage seit dem letzten WebVisit&quot;deckt nur 8 % ab, verglichen mit 26 % bei mittleren Tendenzprofilen. Mithilfe dieser Zahlen können Sie die Verteilung innerhalb der einzelnen Behälter anhand des Faktors vergleichen. Diese Informationen können verwendet werden, um darauf hinzuweisen, dass die Neuigkeit bei Webbesuch im Bereich der geringen Tendenz nicht so einflussreich ist wie bei der Gruppe der mittleren Tendenz.
+Sie können sehen, dass Profile mit geringer Konversionsneigung einen kürzlichen Besuch auf den Webseiten adobe.com weniger wahrscheinlich gemacht haben. Der Faktor &quot;Tage seit dem letzten WebVisit&quot;deckt nur 8 % ab, verglichen mit 26 % bei mittleren Tendenzprofilen. Mithilfe dieser Zahlen können Sie die Verteilung innerhalb der einzelnen Behälter anhand des Faktors vergleichen. Diese Informationen können verwendet werden, um darauf hinzuweisen, dass die Neuigkeit bei Webbesuch im Bereich der geringen Tendenz nicht so einflussreich ist wie bei der Gruppe der mittleren Tendenz.
 
 ### Erstellen eines Segments
 
@@ -156,7 +156,7 @@ Auswählen der **[!UICONTROL Segment erstellen]** -Schaltfläche in einem der Be
 
 ![Erstellen eines Segments](../images/insights/create-segment.png)
 
-Der Segment Builder wird verwendet, um ein Segment zu definieren. Bei Auswahl **[!UICONTROL Segment erstellen]** fügt Customer AI die ausgewählten Behälterinformationen automatisch zum Segment hinzu. Um die Erstellung des Segments abzuschließen, füllen Sie einfach das **Name** und **Beschreibung** Container in der rechten Leiste der Benutzeroberfläche von Segment Builder. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, wählen Sie **[!UICONTROL Speichern]** oben rechts.
+Der Segment Builder wird verwendet, um ein Segment zu definieren. Bei Auswahl von **[!UICONTROL Segment erstellen]** fügt Customer AI auf der Seite &quot;Einblicke&quot;die ausgewählten Behälterinformationen automatisch zum Segment hinzu. Um die Erstellung des Segments abzuschließen, füllen Sie einfach das **Name** und **Beschreibung** Container in der rechten Leiste der Benutzeroberfläche von Segment Builder. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, wählen Sie **[!UICONTROL Speichern]** oben rechts.
 
 >[!NOTE]
 >
@@ -205,7 +205,7 @@ Das Steigerungsdiagramm misst die Verbesserung der Verwendung eines Vorhersagemo
 Zu den hochwertigen Modellindikatoren gehören:
 
 - Hohe Steigerungswerte in den ersten Dezimalstellen. Das bedeutet, dass das Modell gut darin ist, die Benutzer zu identifizieren, die die größte Neigung haben, die gewünschten Aktionen durchzuführen.
-- Absteigende Steigerungswerte. Dies bedeutet, dass Kunden mit höheren Werten mit höherer Wahrscheinlichkeit die Aktion von Interesse ausführen als Kunden mit niedrigeren Werten.
+- Absteigende Steigerungswerte Dies bedeutet, dass Kunden mit höheren Werten mit höherer Wahrscheinlichkeit die Aktion von Interesse ausführen als Kunden mit niedrigeren Werten.
 
 ### Gewinnerdiagramm
 
@@ -217,7 +217,7 @@ Zu den hochwertigen Modellindikatoren gehören:
 
 - Die kumulierten Gewinne nähern sich 100% schnell.
 - Die kumulierte Gewinnkurve für das Modell ist näher an der oberen linken Ecke des Diagramms.
-- Das Diagramm für kumulierte Gewinne kann verwendet werden, um die Bewertungsabschläge für die Segmentierung und das Targeting zu bestimmen. Wenn das Modell beispielsweise 70 % der positiven Ergebnisse in den ersten 2 Bewertungsdezimeln erfasst, wird erwartet, dass das Targeting von Benutzern mit PerzentilScore > 80 ungefähr 70 % der positiven Ergebnisse erfasst.
+- Das Diagramm für kumulierte Gewinne kann verwendet werden, um die Bewertungsabbrüche für die Segmentierung und das Targeting zu bestimmen. Wenn das Modell beispielsweise 70 % der positiven Ergebnisse in den ersten 2 Bewertungsdezimeln erfasst, wird erwartet, dass das Targeting von Benutzern mit PerzentilScore > 80 ca. 70 % der positiven Ergebnisse erfasst.
 
 ### AUC (Fläche unter der Kurve)
 

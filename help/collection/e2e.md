@@ -11,7 +11,7 @@ ht-degree: 95%
 
 # Datenerfassung End-to-End – Übersicht
 
-Adobe Experience Platform erfasst und überträgt Ihre Daten an andere Adobe-Produkte und Drittanbieterziele. Um Ereignisdaten von Ihrem Programm an das Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
+Adobe Experience Platform erfasst und überträgt Ihre Daten an andere Adobe-Produkte und Ziele von Drittanbietern. Um Ereignisdaten von Ihrem Programm an das Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
 
 Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge-Netzwerk mithilfe der Datenerfassungsfunktionen von Platform. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
 
@@ -30,7 +30,7 @@ In diesem Tutorial wird die Datenerfassungs-Benutzeroberfläche verwendet, um ei
 
 Siehe Handbuch unter [Verwalten von Berechtigungen für die Datenerfassung](./permissions.md) , um zu erfahren, wie Sie Zugriff auf Eigenschaften und Eigentumsrechte gewähren.
 
-Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemas zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
+Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemas zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe-Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
 
 Wenn Sie bereits Zugriff auf Platform haben, müssen Sie sicherstellen, dass alle [Berechtigungen](../access-control/home.md#permissions) unter den folgenden Kategorien aktiviert sind:
 

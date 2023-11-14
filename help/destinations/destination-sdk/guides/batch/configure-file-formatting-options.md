@@ -5,7 +5,7 @@ exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 3%
+ht-degree: 24%
 
 ---
 
@@ -19,7 +19,7 @@ Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK Dateiformatierung
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](../../getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](../../getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Adobe I/O-Authentifizierungsberechtigungen und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
 
 Adobe empfiehlt Ihnen außerdem, sich mit der folgenden Dokumentation vertraut zu machen, bevor Sie fortfahren:
 
@@ -102,7 +102,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Überprüfen der Experience Platform-Benutzeroberfläche**. Wenn Sie die Dateiformatierungsoptionen mit den in den folgenden Abschnitten beschriebenen Konfigurationen konfigurieren, sollten Sie in der Experience Platform-Benutzeroberfläche prüfen, wie diese Optionen dargestellt werden.
+>**Überprüfen der Experience Platform-Benutzeroberfläche**. Wenn Sie die Dateiformatierungsoptionen mit den in den folgenden Abschnitten beschriebenen Konfigurationen konfigurieren, sollten Sie die Experience Platform-Benutzeroberfläche auf die Darstellung dieser Optionen überprüfen.
 
 Nachdem Sie die gewünschten Dateiformatierungsoptionen im vorherigen Schritt zum Zielserver hinzugefügt und die Dateiformatierungskonfiguration konfiguriert haben, können Sie jetzt die `/destinations` API-Endpunkt zum Hinzufügen der gewünschten Felder als Kundendatenfelder zur Zielkonfiguration.
 
@@ -112,13 +112,13 @@ Nachdem Sie die gewünschten Dateiformatierungsoptionen im vorherigen Schritt zu
 
 In diesem Schritt können Sie die angezeigten Optionen in beliebiger Reihenfolge gruppieren. Sie können benutzerdefinierte Gruppierungen, Dropdown-Felder und bedingte Gruppierungen basierend auf den ausgewählten Dateitypen erstellen. Alle diese Einstellungen werden in der Aufzeichnung und in den weiter unten stehenden Abschnitten angezeigt.
 
-![Bildschirmaufzeichnung mit verschiedenen Dateiformatierungsoptionen für Batch-Dateien.](../../assets/guides/batch/file-formatting-options.gif)
+![Bildschirmaufzeichnung mit verschiedenen Dateiformatierungsoptionen für Stapeldateien.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### Reihenfolge der Dateiformatierungsoptionen {#ordering}
 
 Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Benutzeroberfläche angezeigt. Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge angezeigt werden **[!UICONTROL Trennzeichen]**, **[!UICONTROL Anführungszeichen]**, **[!UICONTROL Escape-Zeichen]**, **[!UICONTROL Leerer Wert]**, **[!UICONTROL Nullwert]**.
 
-![Bild, das die Reihenfolge der Dateiformatierungsoptionen in der Benutzeroberfläche &quot;Experience Platform&quot;anzeigt.](../../assets/guides/batch/file-formatting-order.png)
+![Bild, das die Reihenfolge der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche anzeigt.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -241,7 +241,7 @@ Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder
 
 Sie können mehrere Dateiformatierungsoptionen in einem Abschnitt gruppieren. Beim Einrichten der Verbindung zum Ziel in der Benutzeroberfläche kann der Benutzer eine visuelle Gruppierung ähnlicher Felder sehen und davon profitieren.
 
-Verwenden Sie dazu `"type": "object"` , um die Gruppe zu erstellen und die gewünschten Dateiformatierungsoptionen innerhalb einer `properties` -Parameter, wie im folgenden Beispiel gezeigt, wobei die Gruppierung **[!UICONTROL CSV-Optionen]** hervorgehoben ist.
+Verwenden Sie dazu `"type": "object"` , um die Gruppe zu erstellen und die gewünschten Dateiformatierungsoptionen innerhalb einer `properties` , wie im folgenden Beispiel gezeigt, wobei die Gruppierung **[!UICONTROL CSV-Optionen]** hervorgehoben ist.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -283,9 +283,9 @@ Verwenden Sie dazu `"type": "object"` , um die Gruppe zu erstellen und die gewü
 
 ### Erstellen von Dropdown-Selektoren für Dateiformatierungsoptionen {#dropdown-selectors}
 
-In Situationen, in denen Sie Benutzern die Auswahl zwischen verschiedenen Optionen ermöglichen möchten, z. B. welche Zeichen zum Trennen der Felder in CSV-Dateien verwendet werden sollen, können Sie Dropdown-Felder zur Benutzeroberfläche hinzufügen.
+In Situationen, in denen Sie Benutzerinnen und Benutzern die Auswahl zwischen verschiedenen Optionen ermöglichen möchten, z. B. welche Zeichen zum Trennen der Felder in CSV-Dateien verwendet werden sollen, können Sie Dropdown-Felder zur Benutzeroberfläche hinzufügen.
 
-Verwenden Sie dazu die `namedEnum` -Objekt wie unten gezeigt und konfigurieren Sie eine `default` für die Optionen, die der Benutzer auswählen kann.
+Verwenden Sie dazu das `namedEnum`-Objekt wie unten gezeigt und konfigurieren Sie einen `default`-Wert für die Optionen, die Benutzerinnen und Benutzer auswählen können.
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
 [...]
@@ -328,9 +328,9 @@ Verwenden Sie dazu die `namedEnum` -Objekt wie unten gezeigt und konfigurieren S
 
 ### Optionen zum Formatieren bedingter Dateien erstellen {#conditional-options}
 
-Sie können bedingte Dateiformatierungsoptionen erstellen, die im Aktivierungs-Workflow nur angezeigt werden, wenn der Benutzer einen bestimmten Dateityp zum Export auswählt. Die folgende Konfiguration erstellt beispielsweise eine bedingte Gruppierung für CSV-Dateioptionen. Die CSV-Dateioptionen werden nur angezeigt, wenn der Benutzer CSV als gewünschten Dateityp für den Export auswählt.
+Sie können bedingte Dateiformatierungsoptionen erstellen, die im Aktivierungs-Workflow nur angezeigt werden, wenn der Benutzer einen bestimmten Dateityp zum Export auswählt. Die folgende Konfiguration erstellt beispielsweise eine bedingte Gruppierung für CSV-Dateioptionen. Die CSV-Dateioptionen werden nur angezeigt, wenn Benutzerinnen oder Benutzer CSV als gewünschten Dateityp für den Export auswählen.
 
-Um ein Feld als bedingt festzulegen, verwenden Sie die `conditional` -Parameter wie unten gezeigt:
+Um ein Feld als bedingt festzulegen, verwenden Sie den Parameter `conditional` wie unten gezeigt:
 
 ```json
             "conditional": {
@@ -340,7 +340,7 @@ Um ein Feld als bedingt festzulegen, verwenden Sie die `conditional` -Parameter 
             }
 ```
 
-In einem größeren Kontext können Sie die `conditional` -Feld, das in der folgenden Zielkonfiguration verwendet wird, neben dem `fileType` und `csvOptions` -Objekt, in dem es definiert ist.
+In einem größeren Kontext können Sie das Feld `conditional`, das in der folgenden Zielkonfiguration verwendet wird, neben der Zeichenfolge `fileType` und dem `csvOptions`-Objekt sehen, in dem es definiert ist.
 
 ```json
         {
@@ -483,9 +483,9 @@ In einem größeren Kontext können Sie die `conditional` -Feld, das in der folg
         }
 ```
 
-Unten sehen Sie den resultierenden Bildschirm der Benutzeroberfläche, der auf der oben beschriebenen Konfiguration basiert. Wenn der Benutzer den Dateityp CSV auswählt, werden in der Benutzeroberfläche zusätzliche Dateiformatierungsoptionen angezeigt, die auf den CSV-Dateityp verweisen.
+Unten sehen Sie den resultierenden Bildschirm der Benutzeroberfläche, der auf der oben beschriebenen Konfiguration basiert. Wenn die Benutzerinnen oder Benutzer den Dateityp CSV auswählen, werden in der Benutzeroberfläche zusätzliche Dateiformatierungsoptionen angezeigt, die sich auf den CSV-Dateityp beziehen.
 
-![Bildschirmaufzeichnung mit der Option zur Formatierung bedingter Dateien für CSV-Dateien.](../../assets/guides/batch/conditional-file-formatting.gif)
+![Bildschirmaufzeichnung mit der bedingten Option zur Dateiformatierung für CSV-Dateien.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### Vollständige API-Anfrage mit allen oben aufgeführten Optionen
 

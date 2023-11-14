@@ -5,7 +5,7 @@ exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
 source-wordcount: '884'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -54,7 +54,7 @@ Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum
 | `API_KEY` | Eine eindeutige Kennung, mit der Aufrufe an Experience Platform-APIs authentifiziert werden. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) für Informationen zum Abrufen Ihrer `{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `ACCESS_TOKEN` | Das Autorisierungstoken, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) für Informationen zum Abrufen Ihrer `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Im Hinblick auf [!DNL Marketo]festgelegt ist, ist dieser Wert fest und immer auf Folgendes festgelegt: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | Die `global` -Container enthält alle vom Standardpartner für Adoben und Experience Platformen bereitgestellten Klassen, Schemafeldgruppen, Datentypen und Schemas. Im Hinblick auf [!DNL Marketo]festgelegt ist, wird dieser Wert festgelegt und immer auf `global`. | `global` |
+| `CONTAINER_ID` | Die `global` -Container enthält alle vom Experience Platform-Partner bereitgestellten Standardklassen, Schemafeldgruppen, Datentypen und Schemas, die vom Adobe- und -Partner bereitgestellt werden. Im Hinblick auf [!DNL Marketo]festgelegt ist, wird dieser Wert festgelegt und immer auf `global`. | `global` |
 | `PRIVATE_KEY` | Eine Berechtigung zum Authentifizieren Ihrer [!DNL Postman] -Instanz zu Experience Platform-APIs. Siehe Tutorial zum Einrichten der Entwicklerkonsole und [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) Anweisungen zum Abrufen Ihrer {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Eine Berechtigung zur Integration in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Das Identity Management-System (IMS) stellt das Framework für die Authentifizierung bei Adobe-Diensten bereit. Im Hinblick auf [!DNL Marketo]festgelegt ist, wird dieser Wert festgelegt und immer auf Folgendes festgelegt: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |

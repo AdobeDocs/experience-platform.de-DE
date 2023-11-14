@@ -23,7 +23,7 @@ Zeichenfolgendaten werden in Segmentdefinitionen mit logischen, einschließlich-
 | Anweisungstyp | Beispiele |
 | -------------- | -------- |
 | Logisch       | `and`, `or`, `not` |
-| Einschließlich/exklusiv | `include`, `must` `exist`, `exclude`, `must not exist` |
+| Einschließlich/ausschließlich | `include`, `must` `exist`, `exclude`, `must not exist` |
 | Vergleich | `equals`, `does not equal`, `contains`, `starts with` |
 
 ## Datumsdaten
@@ -32,7 +32,7 @@ Mit Datumsdaten können Sie Ihren Segmentdefinitionen zeitbasierten Kontext zuwe
 
 | Beispielfeld | Datumsbezogene Erklärungen | Zeitleiste |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant für den Tag, an dem die Segmentdefinition erstellt wurde. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant für den Tag der Erstellung der Segmentdefinition. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevant innerhalb einer bestimmten Woche/eines bestimmten Monats. |
 
 ## Erlebnisereignisse
@@ -56,7 +56,7 @@ Derzeit wird nur Adobe Audience Manager als externe Zielgruppe unterstützt, wob
 
 ### Freigabe von Segmentdefinitionen
 
-In Platform erstellte Segmentdefinitionen können in anderen [Hauptdienste von Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=de). Um diese Funktion zu aktivieren, müssen Sie sich an Ihren Lösungsarchitekten oder Ihren Berater wenden.
+In Platform erstellte Segmentdefinitionen können in anderen [Hauptdienste von Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=de). Wenden Sie sich zur Aktivierung dieser Funktion an Ihren Lösungsarchitekten oder Ihren Berater.
 
 ## Andere Datentypen
 

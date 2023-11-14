@@ -83,7 +83,7 @@ Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der 
 
 ### Validierung {#validation}
 
-In den folgenden Schritten wird beschrieben, wie Sie überprüfen können, ob Sie Ihre [!DNL Zendesk] und [!DNL Zendesk] Profile werden in Platform erfasst.
+In den folgenden Schritten wird beschrieben, wie Sie überprüfen können, ob Sie Ihre [!DNL Zendesk] und dass [!DNL Zendesk] Profile werden in Platform erfasst.
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datensätze]** über die linke Navigationsleiste auf [!UICONTROL Datensätze] Arbeitsbereich. Die [!UICONTROL Datensatzaktivität] zeigt die Details der Ausführungen an.
 
@@ -93,7 +93,7 @@ Wählen Sie anschließend die Datenfluss-Start-ID des Datenflusses aus, den Sie 
 
 ![Dataflow-Seite](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-Wählen Sie abschließend **[!UICONTROL Vorschau des Datensatzes anzeigen]** , um die erfassten Daten anzuzeigen.
+Wählen Sie abschließend **[!UICONTROL Datensatz-Vorschau]** , um die erfassten Daten anzuzeigen.
 
 ![Zendesk-Datensatz](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
@@ -154,6 +154,6 @@ In der folgenden Tabelle sind die unterstützten Zuordnungen aufgeführt, die f�
 
 * Die [Zendesk Search API > Suchergebnisse exportieren](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) gibt maximal 1.000 Datensätze pro Seite zurück.
    * Der Wert für ``filter[type]`` -Parameter auf ``user`` und daher gibt die Zendesk-Verbindung nur Benutzer zurück.
-   * Die Anzahl der Ergebnisse pro Seite wird von der ``page[size]`` Parameter. Der Wert wird auf ``100``. Dies geschieht, um die Auswirkungen der von Zendesk festgelegten Geschwindigkeitsbegrenzungen zu reduzieren.
+   * Die Anzahl der Ergebnisse pro Seite wird von der ``page[size]`` -Parameter. Der Wert wird auf ``100``. Dies geschieht, um die Auswirkungen der von Zendesk festgelegten Geschwindigkeitsbegrenzungen zu reduzieren.
    * Siehe [Beschränkungen](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) und [Paginierung](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
-   * Weitere Informationen finden Sie unter [Paginieren durch Listen mit der Cursor-Paginierung](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).
+   * Sie können auch [Paginieren durch Listen mit der Cursor-Paginierung](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).

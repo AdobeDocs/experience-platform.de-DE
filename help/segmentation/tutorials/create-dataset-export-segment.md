@@ -51,13 +51,13 @@ Wählen Sie im nächsten Bildschirm **[!UICONTROL Datensatz aus Schema erstellen
 
 ## XDM Individual Profile Union Schema auswählen
 
-So wählen Sie die [!DNL XDM Individual Profile Union Schema] für die Verwendung in Ihrem Datensatz suchen Sie nach dem[!UICONTROL XDM Individual Profile]&quot; Schema im **[!UICONTROL Schema auswählen]** angezeigt. Nachdem Sie das Schema ausgewählt haben, können Sie überprüfen, ob es sich um das Vereinigungsschema unter **[!UICONTROL API-Nutzung]** in der rechten Leiste. Wenn die Variable [!UICONTROL Schema] path endet mit `_union`, ist es ein Vereinigungsschema.
+So wählen Sie die [!DNL XDM Individual Profile Union Schema] für die Verwendung in Ihrem Datensatz suchen Sie nach dem[!UICONTROL Individuelles XDM-Profil]&quot; Schema im **[!UICONTROL Schema auswählen]** angezeigt. Nachdem Sie das Schema ausgewählt haben, können Sie überprüfen, ob es sich um das Vereinigungsschema unter **[!UICONTROL API-Nutzung]** in der rechten Leiste. Wenn die Variable [!UICONTROL Schema] path endet mit `_union`, ist es ein Vereinigungsschema.
 
 >[!NOTE]
 >
 >Obwohl Vereinigungsschemas per Definition am Echtzeit-Kundenprofil teilnehmen, werden sie als &quot;Nicht aktiviert&quot;aufgeführt, da sie nicht wie herkömmliche Schemas für Profil aktiviert sind.
 
-Wählen Sie das Optionsfeld neben **[!UICONTROL XDM Individual Profile]**, wählen Sie **[!UICONTROL Nächste]**.
+Wählen Sie das Optionsfeld neben **[!UICONTROL Individuelles XDM-Profil]**, wählen Sie **[!UICONTROL Nächste]**.
 
 ![Das Schema &quot;XDM Individual Profile&quot;ist hervorgehoben.](../images/tutorials/segment-export-dataset/select-schema.png)
 

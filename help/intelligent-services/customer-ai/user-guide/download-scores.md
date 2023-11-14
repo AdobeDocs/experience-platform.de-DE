@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Herunterladen von Bewertungen; Kundenunterstützung; beliebte Themen; Exportieren; Exportieren; Herunterladen von Kundenai; Bewertung von Kundenai
+keywords: Experience Platform; Herunterladen von Bewertungen; Customer AI; beliebte Themen; Exportieren; Exportieren; Herunterladen von Kundenai; Bewertung von Kundenai
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Herunterladen von Bewertungen in Customer AI

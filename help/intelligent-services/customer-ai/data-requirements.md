@@ -7,7 +7,7 @@ topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Kunden-KI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2484'
 ht-degree: 100%
 

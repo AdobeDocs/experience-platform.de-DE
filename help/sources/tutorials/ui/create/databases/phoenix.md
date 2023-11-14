@@ -1,6 +1,6 @@
 ---
 title: Verbinden Ihres Phoenix-Kontos über die Experience Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie Ihr Phoenix-Konto verbinden und Daten aus Ihrer Phoenix-Datenbank über die Benutzeroberfläche in die Experience Platform übertragen können.
+description: Erfahren Sie, wie Sie Ihr Phoenix-Konto verbinden und Daten aus Ihrer Phoenix-Datenbank über die Benutzeroberfläche zum Experience Platform übertragen.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 source-git-commit: b7e42eb180b8f16344afedadf763c33bcf22fa35
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 25%
 
 ---
 
-# Verbinden Sie [!DNL Phoenix] Konto für die Experience Platform über die Benutzeroberfläche
+# Verbinden Sie [!DNL Phoenix] Konto für Experience Platform über die Benutzeroberfläche
 
 In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Phoenix] -Konto und -Daten aus Ihrem [!DNL Phoenix] Datenbank zu Experience Platform.
 
@@ -26,7 +26,7 @@ Wenn Sie bereits über eine authentifizierte [!DNL Phoenix] -Konto verwenden, k�
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um auf Ihre [!DNL Phoenix] -Konto in Experience Platform verwenden, müssen Sie die folgenden Werte angeben:
+Um auf Ihre [!DNL Phoenix] -Konto auf Experience Platform angegeben haben, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -39,11 +39,11 @@ Um auf Ihre [!DNL Phoenix] -Konto in Experience Platform verwenden, müssen Sie 
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [this [!DNL Phoenix] Dokument](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Phoenix] -Konto in die Experience Platform.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Phoenix] -Konto auf Experience Platform.
 
 ## Verbinden Ihres [!DNL Phoenix]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über das linke Navigationsmenü aus, um auf den Arbeitsbereich &quot;Quellen&quot;zuzugreifen. Die *[!UICONTROL Katalog]* -Bildschirm zeigt eine Vielzahl von Quellen an, die im Experience Platform-Quellkatalog verfügbar sind.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über das linke Navigationsmenü aus, um auf den Arbeitsbereich &quot;Quellen&quot;zuzugreifen. Die *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, die im Experience Platform-Quellkatalog verfügbar sind.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie eine bestimmte Quelle mithilfe der Suchoption finden.
 

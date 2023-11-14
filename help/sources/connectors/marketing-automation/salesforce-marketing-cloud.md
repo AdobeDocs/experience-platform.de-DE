@@ -24,7 +24,7 @@ Bevor Sie Ihre [!DNL Salesforce Marketing Cloud] -Quelle an Platform übermittel
 * `campaign_read`
 * `list_and_subscribers_read`
 
-Sie können Scopes anfordern, indem Sie einen Aufruf an die `v2/userinfo` Ressource [!DNL Salesforce Marketing Cloud] API. Siehe [[!DNL Salesforce Marketing Cloud] Dokument zu Berechtigungsbereichen für API-Integration](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) für Anleitungen zum Anfordern und Vergleichen von Bereichen.
+Sie können Scopes anfordern, indem Sie einen Aufruf an die `v2/userinfo` -Ressource [!DNL Salesforce Marketing Cloud] API. Siehe [[!DNL Salesforce Marketing Cloud] Dokument zu Berechtigungsbereichen für API-Integration](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) für Anleitungen zum Anfordern und Vergleichen von Bereichen.
 
 Weitere Informationen zu Bereichen, einschließlich einer Liste der zugehörigen Berechtigungen und Verhaltensweisen, finden Sie in diesem [[!DNL Salesforce Marketing Cloud] REST-API-Dokument](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 

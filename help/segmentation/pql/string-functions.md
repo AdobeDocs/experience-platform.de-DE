@@ -247,7 +247,7 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
+>Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, wenn **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
 
 ## Gruppe regelmäßiger Ausdrücke
 
@@ -269,7 +269,7 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
+>Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, wenn **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
 
 ## Nächste Schritte
 

@@ -1,15 +1,15 @@
 ---
-title: Authentifizierung und Zugriff auf die Reactor-API
+title: Authentifizieren von und Zugreifen auf die Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsberechtigungen.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '921'
-ht-degree: 53%
+ht-degree: 54%
 
 ---
 
-# Authentifizierung und Zugriff auf die Reactor-API
+# Authentifizieren von und Zugreifen auf die Reactor-API
 
 Um die [Reactor-API](https://developer.adobe.com/experience-platform-apis/references/reactor/) zum Erstellen und Verwalten von Tags-Erweiterungen muss jede Anfrage die folgenden Authentifizierungskopfzeilen enthalten:
 
@@ -69,7 +69,7 @@ Wählen Sie die gewünschten Produktprofile aus der Liste aus und klicken Sie da
 
 ### Sammeln von -Anmeldeinformationen {#gather-credentials}
 
-Nachdem die API zum Projekt hinzugefügt wurde, wird die **[!UICONTROL Experience Platform-API]** -Seite für das Projekt werden die folgenden Anmeldeinformationen angezeigt, die für alle Aufrufe von Experience Platform-APIs erforderlich sind:
+Nachdem die API zum Projekt hinzugefügt wurde, wird die **[!UICONTROL Experience Platform-API]** -Seite für das Projekt zeigt die folgenden Anmeldeinformationen an, die für alle Aufrufe von Experience Platform-APIs erforderlich sind:
 
 * `{API_KEY}` ([!UICONTROL Client-ID])
 * `{ORG_ID}` ([!UICONTROL Organisations-ID])
@@ -91,7 +91,7 @@ Je nach Anwendungsfall haben Sie zwei Möglichkeiten, Ihre Zugriffs-Token zu gen
 
 #### Manuelles Generieren von Zugriffs-Token {#manual}
 
-So generieren Sie manuell eine neue `{ACCESS_TOKEN}`, navigieren Sie zu **[!UICONTROL Anmeldeinformationen]** > **[!UICONTROL OAuth Server-zu-Server]** und wählen Sie **[!UICONTROL Zugriffstoken generieren]**, wie unten dargestellt.
+So generieren Sie manuell eine neue `{ACCESS_TOKEN}`, navigieren Sie zu **[!UICONTROL Anmeldeinformationen]** > **[!UICONTROL OAuth Server-zu-Server]** und wählen **[!UICONTROL Zugriffstoken generieren]**, wie unten dargestellt.
 
 ![Bildschirmaufzeichnung, wie und wie das Zugriffstoken in der Benutzeroberfläche der Developer Console generiert wird.](/help/tags/images/api/getting-started/generate-access-token.gif)
 
@@ -103,7 +103,7 @@ Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffstoken
 
 ## API-Anmeldeinformationen testen {#test-api-credentials}
 
-Durch Befolgen der Schritte in diesem Tutorial sollten Sie über gültige Werte für `{ORG_ID}`, `{API_KEY}`und `{ACCESS_TOKEN}`. Sie können diese Werte jetzt testen, indem Sie sie in einer einfachen cURL-Anfrage an die Reactor-API verwenden.
+Durch Befolgen der Schritte in diesem Tutorial sollten Sie über gültige Werte für `{ORG_ID}`, `{API_KEY}`, und `{ACCESS_TOKEN}`. Sie können diese Werte jetzt testen, indem Sie sie in einer einfachen cURL-Anfrage an die Reactor-API verwenden.
 
 Beginnen Sie mit dem Versuch, einen API-Aufruf durchzuführen, um [alle Unternehmen aufzulisten](./endpoints/companies.md#list).
 

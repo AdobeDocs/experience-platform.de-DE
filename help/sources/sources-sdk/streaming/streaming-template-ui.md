@@ -64,7 +64,7 @@ Unter dem **Streaming** category, select *YOURSOURCE* und wählen Sie **[!UICONT
 >
 >Die folgenden Screenshots sind Beispiele. Ersetzen Sie bei der Erstellung Ihrer Dokumentation die Bilder durch Screenshots Ihrer eigentlichen Quelle. Sie können dasselbe Markierungsmuster und dieselbe Farbe sowie dieselben Dateinamen verwenden. Stellen Sie sicher, dass Ihr Screenshot den gesamten Bildschirm der Platform-Benutzeroberfläche erfasst. Informationen zum Hochladen Ihrer Screenshots finden Sie im Handbuch unter [Übermitteln der Dokumentation zur Überprüfung](../documentation/github.md).
 
-![Der Experience Platform Sources-Katalog](../assets/streaming/catalog.png)
+![Der Experience Platform-Quellen-Katalog](../assets/streaming/catalog.png)
 
 ## Daten auswählen
 

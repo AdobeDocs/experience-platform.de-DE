@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Experience-Datenmodell;Datenmodell;ui;Workspace
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; Workspace
 solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche von Schemas
-description: Dieser Überblick behandelt die wichtigsten Funktionen des Arbeitsbereichs "Schemas"in Experience Platform.
+description: Dieser Überblick behandelt die wichtigsten Funktionen des Arbeitsbereichs "Schemas"im Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt

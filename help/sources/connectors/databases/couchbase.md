@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Couchbase; Couchbase
+keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
 title: Übersicht über den Connector für Couchbase-Quellen
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen Couchbase und Adobe Experience Platform herstellen.

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Apache Spark; Apache-Funken; Azure HDInsights
+keywords: Experience Platform;home;popular topics;Apache Spark;Apache spark;Azure HDInsights
 solution: Experience Platform
 title: Erstellen eines Apache Spark auf einer Azure HDInsights-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
@@ -94,8 +94,8 @@ curl -X POST \
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `auth.params.host` | Der Host der [!DNL Spark] Server. |
-| `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Spark] Verbindung. |
-| `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Spark] Verbindung. |
+| `auth.params.username` | Der mit Ihrer [!DNL Spark] Verbindung herzustellen. |
+| `auth.params.password` | Das Kennwort für Ihre [!DNL Spark] Verbindung herzustellen. |
 | `connectionSpec.id` | Die [!DNL Spark]-Verbindungsspezifikations-ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **Antwort**

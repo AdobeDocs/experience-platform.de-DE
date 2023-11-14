@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; HDFS; Hdfs; Apache HDFS; Apache Hdfs
+keywords: Experience Platform;home;popular topics;HDFS;hdfs;Apache HDFS;Apache HDFS;Apache hdfs
 solution: Experience Platform
 title: Überblick über den Apache HDFS Source Connector
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Apache HDFS mit Adobe Experience Platform verbinden.

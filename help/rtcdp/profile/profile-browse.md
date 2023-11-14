@@ -1,5 +1,5 @@
 ---
-keywords: Anzeigen von Profilen rtcdp;rtcdp-Profilansicht;rtcdp-Profile
+keywords: Profile anzeigen rtcdp;rtcdp-Profilansicht;rtcdp-Profile
 title: Profile in Real-time Customer Data Platform durchsuchen
 description: Mit Adobe Real-time Customer Data Platform können Sie Echtzeit-Kundenprofildaten über die Adobe Experience Platform-Benutzeroberfläche durchsuchen.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
@@ -23,13 +23,13 @@ Adobe Real-time Customer Data Platform basiert auf Adobe Experience Platform und
 
 Zusätzlich zu den von Adobe Experience Platform, Real-Time CDP und B2B Edition unterstützten Profilbrowserfunktionen können Benutzer auf B2B-Attribute und -Ereignisse im Kundenprofil im [!UICONTROL Attribute] und [!UICONTROL Veranstaltungen] Registerkarten. B2B-Daten können auch für die Segmentierung verwendet werden, wobei diese Zielgruppen unter den [!UICONTROL Zielgruppenmitgliedschaft] neben Nicht-B2B-Zielgruppen.
 
-Real-Time CDP, B2B Edition ermöglicht Ihnen auch, [!UICONTROL Konten], [!UICONTROL Chancen]und [!UICONTROL Quelldatensätze] aus allen Quellen Ihres Unternehmens, die mit einem einzelnen Kunden verknüpft sind.
+Real-Time CDP, B2B Edition ermöglicht Ihnen auch, [!UICONTROL Konten], [!UICONTROL Chancen], und [!UICONTROL Quelldatensätze] aus allen Quellen Ihres Unternehmens, die mit einem einzelnen Kunden verknüpft sind.
 
 Um diese Verbesserungen zu untersuchen, führen Sie zunächst die Schritte aus, die im Abschnitt [Benutzerhandbuch zum Echtzeit-Kundenprofil](../../profile/ui/user-guide.md) um ein Profil nach Zusammenführungsrichtlinie oder Identitäts-Namespace zu durchsuchen.
 
 ![](images/b2b-browse-profile.png)
 
-Zu den Profildetails gehört der Zugriff auf [!UICONTROL Konten], [!UICONTROL Chancen]und [!UICONTROL Quelldatensätze] Registerkarten zusätzlich zu den im Kundenprofil bereitgestellten Standardinformationen, die auch mit B2B-Ereignissen und -Attributen erweitert wurden.
+Die Profildetails enthalten Zugriff auf [!UICONTROL Konten], [!UICONTROL Chancen], und [!UICONTROL Quelldatensätze] Registerkarten zusätzlich zu den im Kundenprofil bereitgestellten Standardinformationen, die auch mit B2B-Ereignissen und -Attributen erweitert wurden.
 
 ![](images/b2b-profile-detail.png)
 
@@ -43,7 +43,7 @@ Weitere Informationen zum Anzeigen und Erkunden von Kontoprofilen erhalten Sie i
 
 ### Registerkarte „Opportunitys“
 
-Die **[!UICONTROL Chancen]** -Tab enthält Details zu den mit dem Konto verbundenen Öffnungs- und Schließungsmöglichkeiten. Diese Möglichkeiten können aus verschiedenen Quellen in die Experience Platform integriert werden. Real-Time CDP, B2B Edition, erleichtert es Marketing-Experten jedoch, all diese Möglichkeiten an einem Ort zu sehen.
+Die **[!UICONTROL Chancen]** -Tab enthält Details zu den mit dem Konto verbundenen offenen und geschlossenen Möglichkeiten. Diese Möglichkeiten können aus verschiedenen Quellen in Experience Platform eingebunden werden, aber Real-Time CDP, B2B Edition macht es für Marketingexperten einfach, all diese Möglichkeiten an einem Ort zu sehen.
 
 Jede Opportunity umfasst Informationen wie den Namen der Opportunity, ihren Umfang, die Phase und ob die Opportunity offen, geschlossen, gewonnen oder verloren ist.
 

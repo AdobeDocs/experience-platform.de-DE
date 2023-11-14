@@ -6,7 +6,7 @@ exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 78%
+ht-degree: 79%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 78%
 
 ## Übersicht {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] -Lösung hilft digitalen Marketingexperten, Online-Interesse und -Absicht mit offline, greifbaren Medien zu verbinden, die konvertieren. Marketingexperten können die von ihnen in Adobe erstellten benutzerdefinierten Datenzielgruppen nutzen, um jetzt Kunden mit einer relevanten, länger anhaltenden In-Home-Medienimpression anzusprechen. Analysieren Sie die Leistung in Echtzeit basierend auf der Aktivität des Antwortpfads und den Konversionen vor Ort.
+[!DNL PebblePost's Programmatic Direct Mail®] -Lösung hilft digitalen Marketingexperten, Online-Interesse und -Absicht mit offline, greifbaren Medien zu verbinden, die konvertieren. Marketingexperten können die benutzerdefinierten Datenzielgruppen nutzen, die sie in Adobe erstellt haben, um jetzt Kunden mit einer relevanten, länger anhaltenden In-Home-Media-Impression anzusprechen. Analysieren Sie die Leistung in Echtzeit basierend auf der Aktivität des Antwortpfads und den Konversionen vor Ort.
 
 [!DNL PebblePost] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu PebblePost finden Sie im [Integrations-Blogpost](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL PebblePost] Erweiterung:
+So installieren Sie die [!DNL PebblePost]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

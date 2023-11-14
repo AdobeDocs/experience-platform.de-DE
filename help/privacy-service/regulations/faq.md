@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; DSGVO; DSGVO; DSGVO; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; FAQ; FAQ; Regulierung; Regulierung; Verordnungen; Datenschutz; Datenschutz
+keywords: Experience Platform; home; beliebte Themen; DSGVO; DSGVO; DSGVO; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; FAQ; FAQ; Regulierung; Regulierung; Verordnungen; Datenschutz; Datenschutz
 solution: Experience Platform
 title: Häufig gestellte Fragen zu Datenschutzbestimmungen
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützten gesetzlichen Datenschutzbestimmungen und deren Implementierung in Adobe Experience Cloud.
@@ -25,7 +25,7 @@ Die folgenden Fragen beziehen sich auf alle von Experience Cloud unterstützten 
 
 ### Auf wen wirken sich die unterstützten Datenschutzbestimmungen aus?
 
-Die [Datenschutzbestimmungen, die von Experience Cloud unterstützt werden](./overview.md) gelten für alle Organisationen, die personenbezogene Daten von Bürgern innerhalb der jeweiligen Rechtsordnungen der jeweiligen Rechtsordnung speichern und verarbeiten, unabhängig vom geografischen Standort der Organisation.
+Die [Unterstützte Datenschutzbestimmungen von Experience Cloud](./overview.md) gelten für alle Organisationen, die personenbezogene Daten von Bürgern innerhalb der jeweiligen Rechtsordnungen der jeweiligen Rechtsordnung speichern und verarbeiten, unabhängig vom geografischen Standort der Organisation.
 
 ### Was sind personenbezogene Daten?
 
@@ -47,7 +47,7 @@ Personenbezogene Daten können auch Informationen über Aktivitäten im Internet
 * Suchverlauf
 * Informationen zur Interaktion eines Verbrauchers mit einer Website, Anwendung oder Werbung
 
-Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten abdecken, schreiben die Standardvertragsbedingungen der Adobe vor, dass vertrauliche personenbezogene Daten (wie SSN, Führerscheininformationen, Finanzkontoinformationen und biometrische Daten) generell nicht importiert und in Experience Cloud-Anwendungen verwendet werden dürfen.
+Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten abdecken, schreiben die Standardvertragsbedingungen vor, dass vertrauliche personenbezogene Daten (wie SSN, Führerscheininformationen, Finanzkontoinformationen und biometrische Daten) generell nicht importiert und in Experience Cloud-Anwendungen verwendet werden dürfen.
 
 ### Was ist der Unterschied zwischen einem Datenverantwortlichen und einem Datenverarbeiter?
 
@@ -65,7 +65,7 @@ Bei vielen Vorschriften wie der DSGVO ist eine ausdrückliche Zustimmung für di
 
 ### Können Datensubjekte unter einem bestimmten Alter ihre Einwilligung geben?
 
-In vielen Datenschutzbestimmungen ist festgelegt, dass betroffene Personen, die ein bestimmtes Alter nicht erreicht haben, keine Einwilligung zur Erhebung ihrer personenbezogenen Daten einholen können. Einige Verordnungen sehen vor, dass der Inhaber der elterlichen Verantwortung für die betroffene Person in diesen Fällen die Einwilligung erteilt, aber nicht in allen Fällen. In der folgenden Tabelle ist das Mindestalter für die Einwilligung von Datensubjekten in die einzelnen Verordnungen aufgeführt, wobei Hinweise für weitere Informationen beigefügt werden:
+In vielen Datenschutzbestimmungen ist festgelegt, dass betroffene Personen, die jünger als ein bestimmtes Alter sind, keine Einwilligung zur Erhebung ihrer personenbezogenen Daten einholen können. Einige Verordnungen sehen vor, dass der Inhaber der elterlichen Verantwortung für die betroffene Person in diesen Fällen die Einwilligung erteilt, aber nicht in allen Fällen. In der folgenden Tabelle ist das Mindestalter für die Einwilligung von Datensubjekten in die einzelnen Verordnungen aufgeführt, wobei Hinweise für weitere Informationen beigefügt werden:
 
 | Verordnung | Alter der Einwilligung | Anmerkungen |
 | --- | --- | --- |
@@ -126,7 +126,7 @@ Gemäß der Definition des CCPA gelten für Adobe und seine Kunden folgende Roll
 
 Als Dienstleister sammelt und verarbeitet Adobe personenbezogene Daten im Auftrag des Unternehmens und ist vertraglich dazu verpflichtet, diese Daten nur für die in der Vereinbarung festgelegten Zwecke zu verwenden.
 
-Angesichts dieser Beziehung und der Vertragssprache der Adobe würden Offenlegungen an die Adobe wahrscheinlich nicht als &quot;Verkauf&quot;betrachtet, für den die Unternehmen eine Bekanntmachung vorlegen und eine Zustimmung beantragen müssten.
+Angesichts dieser Beziehung und der Vertragssprache mit der Adobe wäre eine Offenlegung an die Adobe wahrscheinlich nicht als &quot;Verkauf&quot;zu betrachten, für den die Unternehmen eine Bekanntmachung vorlegen und die Zustimmung ersuchen müssten.
 
 Adobe-Dienste können jedoch verwendet werden, um bestimmte Daten auszutauschen und Übertragungen an Dritte zu ermöglichen. Diese Übertragungen Dritter könnten als &quot;Verkauf&quot;betrachtet werden und erfordern rechtlich die Offenlegung und Zustimmung. Kunden sollten mit ihrem Rechtsbeistand zusammenarbeiten, um einzelne Anwendungsfälle hinsichtlich der geltenden Anforderungen auszuwerten.
 

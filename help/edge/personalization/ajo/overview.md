@@ -6,7 +6,7 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Lesen Sie die [Adobe Journey Optimizer-Webkanal-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) Informationen zu den ersten Schritten mit [!DNL Journey Optimizer Web] Erlebnis-Authoring und -Berichterstellung.
+>Lesen Sie die [Adobe Journey Optimizer-Webkanal-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=de) Informationen zu den ersten Schritten mit [!DNL Journey Optimizer Web] Erlebnis-Authoring und -Reporting.
 
 ## Terminologie {#terminology}
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 Zu Beginn der Verwendung von [!DNL Adobe Journey Optimizer]führen Sie die folgenden Schritte aus.
 
-1. Durchsuchen Sie die [Voraussetzungen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) von [!DNL Adobe Journey Optimizer] [Handbuch für Web-Erlebnisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), insbesondere:
+1. Durchsuchen Sie die [Voraussetzungen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) aus dem [!DNL Adobe Journey Optimizer] [Handbuch für Web-Erlebnisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), insbesondere:
    * Einrichten [!DNL Adobe Experience Cloud Visual Editing Helper].
    * Aktivieren [!DNL Adobe Journey Optimizer] in [datastream](../../../datastreams/overview.md).
    * Aktivieren Sie die [!UICONTROL Richtlinie zur aktiven Zusammenführung auf Edge] -Option.
@@ -88,7 +88,7 @@ Befolgen Sie die [Erstellung von Web-Kampagnen](https://experienceleague.adobe.c
 
 ## Rendern von personalisiertem Inhalt {#rendering-personalized-content}
 
-Weitere Informationen finden Sie in der Dokumentation unter [Rendern von Personalisierungsinhalten](../rendering-personalization-content.md) für weitere Informationen.
+Siehe die Dokumentation unter [Rendern von Personalisierungsinhalten](../rendering-personalization-content.md) für weitere Informationen.
 
 Adobe Journey Optimizer-Vorschläge für Weboberflächen werden auf ähnliche Weise wie die `__view__` Vorschläge für den Entscheidungsbereich. Insbesondere wann `renderDecisions` ist auf `true` im `sendEvent` verwenden, werden diese automatisch vom Web SDK gerendert.
 
@@ -145,6 +145,6 @@ Beispiel für Journey Optimizer-Inhaltsvorschlag:
 
 ## Debugging {#debugging}
 
-Zum Debuggen von Adobe Journey Optimizer-Personalisierungsimplementierungen verwenden Sie [[!DNL Web SDK] Debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] Debug-Traces sind verfügbar, wenn Sie die Fehlerbehebung mit [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Suchen Sie nach Ereignissen mit dem `AJO:` -Präfix.
+Zum Debuggen von Adobe Journey Optimizer-Personalisierungsimplementierungen verwenden Sie [[!DNL Web SDK] Debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] Debugging-Traces sind verfügbar, wenn Sie die Fehlerbehebung mit [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Auf Ereignisse mit `AJO:` -Präfix.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

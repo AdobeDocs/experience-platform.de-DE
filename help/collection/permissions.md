@@ -70,7 +70,7 @@ Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern de
 
 Berechtigungen für die Datenerfassung werden über zwei Produktbezeichnungen verwaltet: **Adobe Experience Platform** und **Adobe Experience Platform-Datenerfassung**.
 
-In den folgenden Unterabschnitten erfahren Sie, wie Sie die entsprechenden Berechtigungen für die einzelnen Produkte in Admin Console verwalten:
+In den folgenden Unterabschnitten erfahren Sie, wie Sie die entsprechenden Berechtigungen für die einzelnen Produkte in der Admin Console verwalten:
 
 * [Adobe Experience Platform-Berechtigungen](#manage-platform)
 * [Adobe Experience Platform-Datenerfassungsberechtigungen](#manage-collection)
@@ -79,7 +79,7 @@ In den folgenden Unterabschnitten erfahren Sie, wie Sie die entsprechenden Berec
 
 Aus dem **[!UICONTROL Berechtigungen]** Wählen Sie in Adobe Experience Platform die Rolle aus, die Sie bearbeiten möchten.
 
-Um auf Datenerfassungsfunktionen zugreifen zu können, müssen Sie alle Berechtigungen in der **[!UICONTROL Sandboxes]**, **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Identity Management]** und **[!UICONTROL Datenerfassung]** Kategorien.
+Um auf Datenerfassungsfunktionen zugreifen zu können, müssen Sie alle Berechtigungen in der **[!UICONTROL Sandboxes]**, **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Identity Management]**, und **[!UICONTROL Datenerfassung]** Kategorien.
 
 ![Bild mit der Datenerfassungs-Produktkarte in Admin Console](./images/permissions/platform-permission-card.png)
 
@@ -101,7 +101,7 @@ Im nächsten Bildschirm wird eine Liste der verfügbaren Produktprofile für die
 
 ![Bild mit den Produktprofilen für die Datenerfassung in Admin Console](./images/permissions/new-profile.png)
 
-Nachdem Sie ein Produktprofil ausgewählt oder erstellt haben, können Sie die **[!UICONTROL Bearbeiten]** Symbole zum Starten [Berechtigungen bearbeiten](#edit-permissions) für das Profil oder wählen Sie die **[!UICONTROL Benutzer]** Registerkarte zum Start [Zuweisen von Benutzern](#assign-users) zum Profil.
+Nachdem Sie ein Produktprofil ausgewählt oder erstellt haben, können Sie die **[!UICONTROL Bearbeiten]** Symbole zum Starten [Berechtigungen bearbeiten](#edit-permissions) oder wählen Sie die **[!UICONTROL Benutzer]** Registerkarte zum Start [Zuweisen von Benutzern](#assign-users) zum Profil.
 
 ![Abbildung der Registerkarte „Berechtigungen“ für ein Produktprofil in Admin Console](./images/permissions/edit-permission-categories.png)
 

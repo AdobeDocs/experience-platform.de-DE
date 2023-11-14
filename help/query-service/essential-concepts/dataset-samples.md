@@ -3,7 +3,7 @@ title: Datensatzbeispiele
 description: Mit den Beispieldatensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, verringert jedoch die Abfragegenauigkeit. In diesem Handbuch erfahren Sie, wie Sie Ihre Beispiele für die annähernde Abfrageverarbeitung verwalten können
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: ef71371b04746bbf12ac58e91c9ecb5806f7e771
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 100%
 

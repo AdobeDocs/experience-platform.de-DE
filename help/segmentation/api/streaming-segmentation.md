@@ -6,7 +6,7 @@ exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
 source-wordcount: '1956'
-ht-degree: 69%
+ht-degree: 70%
 
 ---
 
@@ -42,7 +42,7 @@ In diesem Entwicklerhandbuch wird anhand von Beispielen für API-Aufrufe die kor
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) lesen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -452,4 +452,4 @@ Wenn Sie also feststellen, dass die Zahl unter &quot;Letzte X Tage&quot;null ist
 
 ### Wie lange dauert es, bis eine Segmentdefinition verfügbar ist?
 
-Es dauert bis zu eine Stunde, bis eine Segmentdefinition verfügbar ist.
+Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.

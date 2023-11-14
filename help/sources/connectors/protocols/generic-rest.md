@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; generische REST; generische Ruhezeit
+keywords: Experience Platform; home; beliebte Themen; generisches REST; generische Ruhe
 solution: Experience Platform
 title: Übersicht über den generischen REST API Source Connector
 description: Erfahren Sie, wie Sie die generische REST-API mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.

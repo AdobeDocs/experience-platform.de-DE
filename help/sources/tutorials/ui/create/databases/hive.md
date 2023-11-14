@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Apache Hive; Azure HDInsights; Azure Hdinsights
+keywords: Experience Platform;home;popular topics;Apache Hive;Azure HDInsights;azure hdinsights
 solution: Experience Platform
 title: Erstellen eines Apache Hive auf Azure HDInsights Source Connection in der Benutzeroberfläche
 type: Tutorial
@@ -18,7 +18,7 @@ ht-degree: 50%
 >
 > Die [!DNL Apache Hive] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Apache Hive] on [!DNL Azure HDInsights] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
+Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines [!DNL Apache Hive] on [!DNL Azure HDInsights] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -39,7 +39,7 @@ Um auf Ihr [!DNL Hive]-Konto in zugreifen zu können, müssen Sie die folgenden 
 | ---------- | ----------- |
 | `host` | Die IP-Adresse oder der Hostname der [!DNL Hive] Server. |
 | `username` | Der Benutzername, mit dem Sie auf die [!DNL Hive] Server. |
-| `password` | Das Kennwort, das dem Benutzer entspricht. |
+| `password` | Das dem Benutzer entsprechende Kennwort. |
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [this [!DNL Hive] Dokument](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
@@ -47,7 +47,7 @@ Weitere Informationen zu den ersten Schritten finden Sie unter [this [!DNL Hive]
 
 Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL Hive]-Konto mit [!DNL Platform] zu verknüpfen.
 
-Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste auf **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -59,7 +59,7 @@ Die **[!UICONTROL Mit Hive verbinden]** angezeigt. Auf dieser Seite können Sie 
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Hive] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Hive] Anmeldedaten. Wählen Sie zum Abschluss **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![connect](../../../../images/tutorials/create/hive/new.png)
 

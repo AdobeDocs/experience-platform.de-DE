@@ -37,7 +37,7 @@ Gehen Sie wie folgt vor, um vorhandene Zielkonten zu löschen.
 
    ![Ziele filtern](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie löschen möchten. Ein Popup-Bedienfeld wird angezeigt, das Optionen für **[!UICONTROL Aktivieren von Zielgruppen]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** das Konto. Wählen Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Löschen]** zum Löschen des gewünschten Kontos.
+3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie löschen möchten. Ein Popup-Bedienfeld wird angezeigt, das Optionen für **[!UICONTROL Aktivieren von Zielgruppen]**, **[!UICONTROL Details bearbeiten]**, und **[!UICONTROL Löschen]** das Konto. Wählen Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Löschen]** zum Löschen des gewünschten Kontos.
 
    ![Zielkonto löschen](../assets/ui/delete-accounts/delete-accounts.png)
 

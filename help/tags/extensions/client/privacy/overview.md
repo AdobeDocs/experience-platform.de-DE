@@ -111,4 +111,4 @@ Nach dem Installieren der Erweiterung können Sie sie deaktivieren oder löschen
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung der Datenschutz-Tag-Erweiterung der Adobe in der Benutzeroberfläche behandelt. Weitere Informationen zu den von der Erweiterung bereitgestellten Funktionen, einschließlich Beispielen für die Verwendung mit Rohcode, finden Sie in der [Übersicht über die Privacy-JavaScript-Bibliothek](../../../../privacy-service/js-library.md) in der Privacy Service-Dokumentation.
+In diesem Handbuch wurde die Verwendung der Adobe Privacy Tag-Erweiterung in der Benutzeroberfläche behandelt. Weitere Informationen zu den von der Erweiterung bereitgestellten Funktionen, einschließlich Beispielen für die Verwendung mit Rohcode, finden Sie in der [Übersicht über die Privacy-JavaScript-Bibliothek](../../../../privacy-service/js-library.md) in der Privacy Service-Dokumentation.

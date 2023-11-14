@@ -14,9 +14,9 @@ ht-degree: 30%
 
 Es werden drei Möglichkeiten zur Verwendung des Adobe Experience Platform Web SDK unterstützt:
 
-1. Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK besteht über die Datenerfassungs-Benutzeroberfläche oder die Benutzeroberfläche der Experience Platform.
+1. Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK besteht über die Datenerfassungs-Benutzeroberfläche oder die Experience Platform-Benutzeroberfläche.
 1. Das Adobe Experience Platform Web SDK ist auch in einem Inhaltsbereitstellungsnetzwerk (Content Delivery Network, CDN) verfügbar, das Sie verwenden können.
-1. Verwenden Sie die NPM-Bibliothek, die EcmaScript 5- und EcmaScript 2015 (ES6)-Module exportiert.
+1. Verwenden Sie die NPM-Bibliothek, die EcmaScript 5- und EcmaScript 2015-Module (ES6) exportiert.
 
 ## Option 1: Installieren der Tag-Erweiterung
 
@@ -37,7 +37,7 @@ Beispiel:
 
 ### Code hinzufügen {#adding-the-code}
 
-Die vordefinierte eigenständige Version erfordert einen &quot;Basis-Code&quot;, der direkt zur Seite hinzugefügt wird. Kopieren Sie den folgenden &quot;Basis-Code&quot;und fügen Sie ihn so weit wie möglich in die `<head>` -Tag Ihrer HTML:
+Die vordefinierte eigenständige Version erfordert einen &quot;Basis-Code&quot;, der direkt zur Seite hinzugefügt wird. Kopieren Sie den folgenden &quot;Basis-Code&quot;so weit wie möglich in den `<head>` -Tag Ihrer HTML:
 
 ```markup
 <script>
@@ -119,7 +119,7 @@ Das Adobe Experience Platform Web SDK ist auch als NPM-Paket verfügbar. [NPM](h
 npm install @adobe/alloy
 ```
 
-Das NPM-Paket des Adobe Experience Platform Web SDK stellt eine `createInstance` -Funktion. Diese Funktion wird zum Erstellen einer Instanz verwendet. Die an die Funktion übergebene Namensoption steuert das bei der Protokollierung verwendete Präfix. Im Folgenden finden Sie Beispiele für die Verwendung des Pakets.
+Das NPM-Paket des Adobe Experience Platform Web SDK stellt eine `createInstance` -Funktion. Diese Funktion wird zum Erstellen einer Instanz verwendet. Die an die Funktion übergebene Namensoption steuert das bei der Protokollierung verwendete Präfix. Im Folgenden finden Sie Beispiele für die Verwendung des -Pakets.
 
 ### Verwenden des Pakets als ECMAScript 2015 (ES6)-Modul
 
@@ -132,7 +132,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->Das NPM-Paket beruht auf CommonJS-Modulen. Stellen Sie daher bei Verwendung eines Bundlers sicher, dass der Bundler CommonJS-Module unterstützt. Einige Bundler, wie [Datenaggregation](https://rollupjs.org), erfordert eine [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) , die Unterstützung für CommonJS bietet.
+>Das NPM-Paket basiert auf CommonJS-Modulen. Stellen Sie daher bei Verwendung eines Bundlers sicher, dass der Bundler CommonJS-Module unterstützt. Einige Bundler, z. B. [Datenaggregation](https://rollupjs.org), erfordert eine [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) , die Unterstützung für CommonJS bietet.
 
 ### Verwenden des Pakets als ECMAScript 5-Modul
 

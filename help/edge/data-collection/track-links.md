@@ -1,6 +1,6 @@
 ---
 title: Verfolgen von Links mit dem Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie Linkdaten mit Experience Platform Web SDK an Adobe Analytics senden.
+description: Erfahren Sie, wie Sie Linkdaten mit dem Experience Platform Web SDK an Adobe Analytics senden.
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;Web Interaction;Seitenansichten;Linktracking;Links;Link verfolgen;ClickCollection;ClickCollection;Sammlung;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
 source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
@@ -105,7 +105,7 @@ alloy("configure", {
 });
 ```
 
-Beim Filtern von Linktracking-Ereignissen mithilfe des `onBeforeLinkClickSend` Befehl, Adobe empfiehlt, `false` für die Link-Klicks, die nicht verfolgt werden sollen. Bei jeder anderen Antwort sendet das Web SDK die Daten an das Edge-Netzwerk.
+Beim Filtern von Linktracking-Ereignissen mithilfe des `onBeforeLinkClickSend` Befehl, Adobe empfiehlt die Rückgabe `false` für die Link-Klicks, die nicht verfolgt werden sollen. Bei jeder anderen Antwort sendet das Web SDK die Daten an das Edge-Netzwerk.
 
 
 >[!NOTE]

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; einheitliches Profil; Einheitliches Profil; einheitliches Profil; Profil; rtcp; Profil aktivieren; Profil aktivieren; Vereinigungsschema; UNION PROFILE; Vereinigungsprofil
+keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; API; einheitliches Profil; einheitliches Profil; einheitliches Profil; Profil; rtcp; Profil aktivieren; Profil aktivieren; Vereinigungsschema; UNION PROFILE; Vereinigungsprofil
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
@@ -24,7 +24,7 @@ Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Pla
 
 ## [!UICONTROL Übersicht]
 
-Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option **[!UICONTROL Profile]** im linken Navigationsbereich, um die **[!UICONTROL Übersicht]** Registerkarte mit dem Profil-Dashboard.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Profile]** im linken Navigationsbereich, um die **[!UICONTROL Übersicht]** Registerkarte mit dem Profil-Dashboard.
 
 >[!NOTE]
 >
@@ -76,17 +76,17 @@ Im **[!UICONTROL Durchsuchen]** -Tab können Sie Beispielprofile mithilfe einer 
 
 ![Die Profile, die zur Organisation gehören, werden angezeigt.](../images/user-guide/none-selected.png)
 
-### Durchsuchen nach [!UICONTROL Zusammenführungsrichtlinie]
+### Nach [!UICONTROL Zusammenführungsrichtlinie]
 
 Die **[!UICONTROL Durchsuchen]** ist standardmäßig auf die standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festgelegt. Um eine andere Zusammenführungsrichtlinie auszuwählen, wählen Sie die `X` neben dem Namen der Zusammenführungsrichtlinie und verwenden Sie dann die Auswahl, um die **[!UICONTROL Zusammenführungsrichtlinie auswählen]** angezeigt.
 
 >[!NOTE]
 >
->Wenn keine Zusammenführungsrichtlinie ausgewählt ist, verwenden Sie die Auswahlschaltfläche neben dem **[!UICONTROL Zusammenführungsrichtlinie]** -Feld, um das Auswahldialogfeld zu öffnen.
+>Wenn keine Zusammenführungsrichtlinie ausgewählt ist, verwenden Sie die Auswahlschaltfläche neben dem **[!UICONTROL Zusammenführungsrichtlinie]** -Feld zum Öffnen des Auswahldialogfelds.
 
 ![Die Auswahl der Zusammenführungsrichtlinie ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
 
-So wählen Sie eine Zusammenführungsrichtlinie aus der **[!UICONTROL Zusammenführungsrichtlinie auswählen]** wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Auswählen]** , um zur [!UICONTROL Durchsuchen] Registerkarte. Sie können dann **[!UICONTROL Ansicht]** , um die Beispielprofile zu aktualisieren und eine Auswahl von Profilen mit der neuen Zusammenführungsrichtlinie anzuzeigen.
+So wählen Sie eine Zusammenführungsrichtlinie aus der **[!UICONTROL Zusammenführungsrichtlinie auswählen]** wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Auswählen]** , um zu [!UICONTROL Durchsuchen] Registerkarte. Sie können dann **[!UICONTROL Ansicht]** , um die Beispielprofile zu aktualisieren und eine Auswahl von Profilen mit der neuen Zusammenführungsrichtlinie anzuzeigen.
 
 ![Es wird ein Dialogfeld angezeigt, in dem Sie die Zusammenführungsrichtlinie auswählen können, nach der gefiltert werden soll.](../images/user-guide/select-merge-policy.png)
 
@@ -98,7 +98,7 @@ Um die Details eines der Beispielprofile anzuzeigen, wählen Sie die **[!UICONTR
 
 Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
-### Durchsuchen nach [!UICONTROL Identität] {#browse-identity}
+### Nach [!UICONTROL Identität] {#browse-identity}
 
 Im **[!UICONTROL Durchsuchen]** -Registerkarte verwenden, können Sie einen Identitäts-Namespace verwenden, um ein bestimmtes Profil nach einem Identitätswert zu suchen. Für das Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identitäts-Namespace und einen Identitätswert angeben.
 
@@ -114,7 +114,7 @@ Sie können einen Namespace auswählen, um weitere Details anzuzeigen, oder das 
 
 ![Es wird ein Dialogfeld angezeigt, in dem Sie den Identitäts-Namespace auswählen können, nach dem gefiltert werden soll.](../images/user-guide/select-identity-namespace.png)
 
-Nach Auswahl einer [!UICONTROL Identitäts-Namespace] und zurück zum [!UICONTROL Durchsuchen] Registerkarte können Sie eine **[!UICONTROL Identitätswert]** sich auf den ausgewählten Namespace beziehen.
+Nach Auswahl einer [!UICONTROL Identitäts-Namespace] und zurück zum [!UICONTROL Durchsuchen] auf, können Sie eine **[!UICONTROL Identitätswert]** sich auf den ausgewählten Namespace beziehen.
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Nach Auswahl einer [!UICONTROL Identitäts-Namespace] und zurück zum [!UICONTRO
 
 ![Der Identitätswert, nach dem Sie filtern möchten, ist hervorgehoben.](../images/user-guide/filter-identity-value.png)
 
-Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Ansicht]** und ein einzelnes Profil, das dem Wert entspricht, zurückgegeben wird. Wählen Sie die **[!UICONTROL Profil-ID]** um die Profildetails anzuzeigen.
+Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Ansicht]** und ein einzelnes Profil, das dem Wert entspricht, zurückgegeben wird. Wählen Sie die **[!UICONTROL Profil-ID]** , um die Profildetails anzuzeigen.
 
-![Das Profil, das dem Identitätswert entspricht, wird hervorgehoben.](../images/user-guide/filtered-identity-value.png)
+![Das dem Identitätswert entsprechende Profil wird hervorgehoben.](../images/user-guide/filtered-identity-value.png)
 
 ## Profildetails anzeigen {#profile-detail}
 
@@ -142,7 +142,7 @@ Die **[!UICONTROL Attribute]** bietet eine Listenansicht, die alle Attribute zus
 
 Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTROL JSON anzeigen]**. Dies ist hilfreich für alle Benutzer, die besser verstehen möchten, wie die Profilattribute in Platform erfasst werden.
 
-![Die Registerkarte Attribute ist hervorgehoben. Die Profilattribute werden angezeigt.](../images/user-guide/attributes.png)
+![Die Registerkarte &quot;Attribute&quot;ist hervorgehoben. Die Profilattribute werden angezeigt.](../images/user-guide/attributes.png)
 
 ### Registerkarte „Ereignisse“
 
@@ -162,7 +162,7 @@ Weitere Informationen zur Segmentierung in Experience Platform finden Sie im Abs
 
 ## Zusammenführungsrichtlinien
 
-Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICONTROL Zusammenführungsrichtlinien]** um eine Liste mit Zusammenführungsrichtlinien anzuzeigen, die zu Ihrer Organisation gehören. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, sowie die Schemaklasse, für die sie gilt.
+Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICONTROL Zusammenführungsrichtlinien]** um eine Liste mit Zusammenführungsrichtlinien anzuzeigen, die zu Ihrer Organisation gehören. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, und die Schemaklasse, für die sie gilt.
 
 Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](../merge-policies/overview.md).
 

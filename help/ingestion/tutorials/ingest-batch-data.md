@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Erfassung; Erfassen von Batch-Daten; Tutorial; Batch-Erfassung; Tutorial; UI-Handbuch
 solution: Experience Platform
-title: Daten in Experience Platform aufnehmen
+title: Daten in Experience Platform erfassen
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie Daten einfach als Batch-Dateien in Form von Parquet-Dateien oder Daten importieren, die einem bekannten Experience-Datenmodell (XDM)-Schema entsprechen.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
@@ -82,9 +82,9 @@ Auf der Registerkarte &quot;Info&quot;befindet sich auch eine  **[!UICONTROL Pro
 
 Datensätze werden zur Aufnahme von Daten in [!DNL Experience Platform]und dass Daten letztendlich zur Identifizierung von Einzelpersonen und zum Zusammenführen von Informationen aus mehreren Quellen verwendet werden. Diese zusammengeführten Informationen werden als [!DNL Real-Time Customer Profile]. Zur [!DNL Platform] , um zu erfahren, welche Informationen in die [!DNL Real-Time Profile], können Datensätze zur Aufnahme mit der **[!UICONTROL Profil]** umschalten.
 
-Standardmäßig ist der Umschalter deaktiviert. Wenn Sie sich dafür entscheiden, [!DNL Profile]verwendet werden, werden alle im Datensatz erfassten Daten verwendet, um eine Person zu identifizieren und ihre [!DNL Real-Time Profile].
+Standardmäßig ist der Umschalter deaktiviert. Wenn Sie sich dafür entscheiden, [!DNL Profile]verwendet werden, werden alle Daten, die in den Datensatz aufgenommen werden, verwendet, um eine Person zu identifizieren und ihre [!DNL Real-Time Profile].
 
-Weitere Informationen finden Sie unter [!DNL Real-Time Customer Profile] und mit Identitäten arbeiten, lesen Sie bitte die [Identity Service](../../identity-service/home.md) Dokumentation.
+Weitere Informationen zu [!DNL Real-Time Customer Profile] und mit Identitäten arbeiten, lesen Sie bitte die [Identity Service](../../identity-service/home.md) Dokumentation.
 
 So aktivieren Sie den Datensatz für [!DNL Real-Time Customer Profile], klicken Sie auf die **[!UICONTROL Profil]** Umschalten in der **[!UICONTROL Info]** Registerkarte.
 
@@ -112,7 +112,7 @@ Um Daten zum Datensatz hinzuzufügen, klicken Sie auf die Registerkarte **[!UICO
 
 ## Datei hochladen {#upload-file}
 
-Nachdem Sie eine Parquet- oder JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop (oder durch Durchsuchen und Auswählen) eingefügt haben, [!DNL Platform] beginnt sofort mit der Verarbeitung der Datei und ein **[!UICONTROL Hochladen]** wird in der **[!UICONTROL Daten hinzufügen]** den Fortschritt des Datei-Uploads anzeigen.
+Nachdem Sie eine Parquet- oder JSON-Datei, die Sie hochladen möchten, per Drag-and-Drop (oder durch Durchsuchen und Auswählen) eingefügt haben, [!DNL Platform] beginnt sofort mit der Verarbeitung der Datei und ein **[!UICONTROL Hochladen]** wird in der **[!UICONTROL Daten hinzufügen]** -Tab, der den Fortschritt des Datei-Uploads anzeigt.
 
 ![Dialog „Upload läuft“](../images/tutorials/ingest-batch-data/uploading-file.png)
 

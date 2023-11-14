@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Azure HDInsights; Apache Spark
+keywords: Experience Platform; home; beliebte Themen; Azure HDInsights; Apache Spark
 solution: Experience Platform
 title: Erstellen eines Apache Spark auf Azure HDInsights Source Connection in der Benutzeroberfläche
 type: Tutorial
@@ -18,7 +18,7 @@ ht-degree: 47%
 >
 > Die [!DNL Apache Spark] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Apache Spark] on [!DNL Azure HDInsights] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
+Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines [!DNL Apache Spark] on [!DNL Azure HDInsights] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -39,15 +39,15 @@ Um auf Ihr [!DNL Spark]-Konto in zugreifen zu können, müssen Sie die folgenden
 | ---------- | ----------- |
 | `host` | Die IP-Adresse oder der Hostname der [!DNL Spark] Server. |
 | `username` | Der Benutzername, mit dem Sie auf die [!DNL Spark] Server. |
-| `password` | Das Kennwort, das dem Benutzer entspricht. |
+| `password` | Das dem Benutzer entsprechende Kennwort. |
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Spark-Dokument](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
 
 ## Verbinden Ihres [!DNL Spark]-Kontos
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Spark] Konto, mit dem eine Verbindung hergestellt wird [!DNL Platform].
+Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Spark] Konto für Verbindung [!DNL Platform].
 
-Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste auf **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -59,7 +59,7 @@ Die **[!UICONTROL Mit Spark verbinden]** angezeigt. Auf dieser Seite können Sie
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Spark] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Spark] Anmeldedaten. Wählen Sie zum Abschluss **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![neu](../../../../images/tutorials/create/spark/new.png)
 

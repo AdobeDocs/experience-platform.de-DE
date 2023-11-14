@@ -1,11 +1,11 @@
 ---
 description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Benutzeroberfläche verwenden können, um den Datenerfassungsprozess für B2B-Daten zu beschleunigen.
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
-badge1: "Beta"
+badge1: „Beta“
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2259'
 ht-degree: 44%
 
 ---

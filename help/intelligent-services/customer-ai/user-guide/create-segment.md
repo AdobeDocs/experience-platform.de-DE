@@ -34,7 +34,7 @@ Geben Sie in der rechten Spalte *Segmenteigenschaften* einen Namen für das Segm
 
 ![](../images/user-guide/properties.png)
 
-Über der linken Seite *Felder* klicken Sie auf die **Zahnrad** und wählen Sie ein *Zusammenführungsrichtlinie* aus der Dropdown-Liste aus. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
+Über der linken Seite *Felder* klicken Sie auf die **Zahnrad** Symbol und wählen Sie eine *Zusammenführungsrichtlinie* aus der Dropdown-Liste aus. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
 
 ![](../images/user-guide/merge_policy.png)
 

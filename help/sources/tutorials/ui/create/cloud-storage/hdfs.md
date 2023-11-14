@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Apache HDFS; HDFS; Hdfs
+keywords: Experience Platform; home; beliebte Themen; Apache HDFS; HDFS; Hdfs
 solution: Experience Platform
 title: Erstellen einer Apache HDFS-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
@@ -18,7 +18,7 @@ ht-degree: 35%
 >
 >Die [!DNL Apache] Der HDFS-Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
-Quell-Connectoren in [!DNL Adobe Experience Platform] ermöglichen die Erfassung von extern bezogenen Daten auf geplanter Basis. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Apache Hadoop Distributed File System] (nachstehend &quot;HDFS&quot; genannt) Quell-Connector, der den [!DNL Platform] -Benutzeroberfläche.
+Quellverbindungen [!DNL Adobe Experience Platform] die Möglichkeit bieten, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Authentifizieren eines [!DNL Apache Hadoop Distributed File System] (nachstehend &quot;HDFS&quot; genannt) Quell-Connector, der den [!DNL Platform] -Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -39,11 +39,11 @@ Um Ihren HDFS-Quell-Connector zu authentifizieren, müssen Sie Werte für die fo
 | ---------- | ----------- |
 | `url` | Die URL definiert Authentifizierungsparameter, die für die anonyme Verbindung mit HDFS erforderlich sind. Weitere Informationen zum Abrufen dieses Werts finden Sie im folgenden Dokument unter [HTTPS-Authentifizierung für HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 
-## Verbinden Sie Ihr HDFS-Konto.
+## Verbinden Sie Ihr HDFS-Konto
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr HDFS-Konto mit [!DNL Platform].
 
-Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste auf **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 

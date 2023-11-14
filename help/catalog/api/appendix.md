@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Catalog Service; Katalog-API; Anhang
+keywords: Experience Platform; home; beliebte Themen; Catalog Service; Katalog-API; Anhang
 solution: Experience Platform
 title: Anhang zum Catalog Service API-Handbuch
 description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Catalog-API in Adobe Experience Platform unterstützen.

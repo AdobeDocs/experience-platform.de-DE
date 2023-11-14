@@ -19,14 +19,14 @@ In diesem Tutorial erfahren Sie, wie Sie eine Basisverbindung erstellen und Ihre
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Experience Platform Services zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Experience Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Phoenix] mithilfe der [!DNL Flow Service] API.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Sie müssen die folgenden Authentifizierungsberechtigungen angeben, um Ihre [!DNL Phoenix] -Konto in die Experience Platform.
+Sie müssen die folgenden Authentifizierungsberechtigungen angeben, um Ihre [!DNL Phoenix] -Konto auf Experience Platform.
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |

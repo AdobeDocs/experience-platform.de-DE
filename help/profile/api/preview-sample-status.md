@@ -32,7 +32,7 @@ Jedes einzelne Kundenprofil besteht aus mehreren Profilfragmenten, die zu einer 
 
 Wenn Profilfragmente in Platform erfasst werden, werden sie zusammengeführt (basierend auf einer Zusammenführungsrichtlinie), um ein einzelnes Profil für diesen Kunden zu erstellen. Daher ist die Gesamtanzahl der Profilfragmente wahrscheinlich immer höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
 
-Um mehr über Profile und ihre Rolle in der Experience Platform zu erfahren, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../home.md).
+Um mehr über Profile und ihre Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../home.md).
 
 ## Auslösen des Beispielauftrags
 
@@ -45,7 +45,7 @@ Die Profilanzahl und die Profile nach Namespace-Metriken sind auch in der Variab
 
 ## Letzten Beispielstatus anzeigen {#view-last-sample-status}
 
-Sie können eine GET-Anfrage an die `/previewsamplestatus` -Endpunkt, um die Details für den letzten erfolgreichen Beispielauftrag anzuzeigen, der für Ihr Unternehmen ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile im Beispiel sowie die Profilzählung oder die Gesamtanzahl der Profile, die Ihr Unternehmen innerhalb von Experience Platform hat.
+Sie können eine GET-Anfrage an die `/previewsamplestatus` -Endpunkt, um die Details für den letzten erfolgreichen Beispielauftrag anzuzeigen, der für Ihr Unternehmen ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile im Beispiel sowie die Profilzählung oder die Gesamtanzahl der Profile, die Ihr Unternehmen im Rahmen von Experience Platform hat.
 
 Die Profilanzahl wird nach dem Zusammenführen von Profilfragmenten generiert, um für jeden einzelnen Kunden ein einzelnes Profil zu erstellen. Mit anderen Worten: Wenn Profilfragmente zusammengeführt werden, geben sie die Anzahl der Profile &quot;1&quot;zurück, da sie alle mit derselben Person verbunden sind.
 
@@ -74,7 +74,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Beispielauftrag, der 
 
 >[!NOTE]
 >
->In dieser Beispielantwort `numRowsToRead` und `totalRows` sind gleich. Abhängig von der Anzahl der Profile, die Ihr Unternehmen in der Experience Platform hat, kann dies der Fall sein. Im Allgemeinen unterscheiden sich diese beiden Zahlen jedoch, wobei `numRowsToRead` ist die kleinere Zahl, da sie die Stichprobe als Teilmenge der Gesamtzahl der Profile darstellt (`totalRows`).
+>In dieser Beispielantwort `numRowsToRead` und `totalRows` sind gleich einander. Abhängig von der Anzahl der Profile, die Ihr Unternehmen im Experience Platform hat, kann dies der Fall sein. Im Allgemeinen unterscheiden sich diese beiden Zahlen jedoch, wobei `numRowsToRead` ist die kleinere Zahl, da sie die Stichprobe als Teilmenge der Gesamtzahl der Profile darstellt (`totalRows`).
 
 ```json
 {
@@ -105,7 +105,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Beispielauftrag, der 
 | `lastSuccessfulBatchTimestamp` | Letzter erfolgreicher Zeitstempel der Batch-Erfassung. |
 | `streamingDriven` | *Dieses Feld ist veraltet und enthält keine Bedeutung für die Antwort.* |
 | `totalRows` | Gesamtzahl der zusammengeführten Profile in Experience Platform, auch als &quot;Profilanzahl&quot;bezeichnet. |
-| `lastBatchId` | Kennung der letzten Batch-Erfassung. |
+| `lastBatchId` | Letzte Batch-Aufnahme-ID. |
 | `status` | Status des letzten Beispiels. |
 | `samplingRatio` | Verhältnis der gesampelten zusammengeführten Profile (`numRowsToRead`) auf die Gesamtzahl der zusammengeführten Profile (`totalRows`), ausgedrückt als Prozentsatz im Dezimalformat. |
 | `mergeStrategy` | In der Stichprobe verwendete Zusammenführungsstrategie. |
@@ -461,13 +461,13 @@ Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
 
 Dieser Bericht enthält die folgenden Informationen:
 
-* Es gibt 142 Profile, die aus `AAID`, `ECID`und `Email` Standardidentitäten sowie benutzerdefinierte `crmid` Identitäts-Namespace.
+* Es gibt 142 Profile, die aus `AAID`, `ECID`, und `Email` Standardidentitäten sowie benutzerdefinierte `crmid` Identitäts-Namespace.
 * Es gibt 24 Profile, die aus `AAID` und `ECID` Identitäts-Namespaces.
 * Es gibt 6.565 Profile, die nur eine `ECID` Identität.
 
 ## Bericht zu nicht zugeordneten Profilen erstellen
 
-Über den Bericht zu nicht zugewiesenen Profilen können Sie die Zusammensetzung des Profilspeichers Ihres Unternehmens besser einsehen. Ein Profil, das &quot;nicht zugeordnet&quot;ist, ist ein Profil, das nur ein Profilfragment enthält. Ein &quot;unbekanntes&quot;Profil ist ein Profil, das mit pseudonymen Identitäts-Namespaces wie `ECID` und `AAID`. Unbekannte Profile sind inaktiv, d. h. sie haben für den angegebenen Zeitraum keine neuen Ereignisse hinzugefügt. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
+Über den Bericht zu nicht zugewiesenen Profilen können Sie die Zusammensetzung des Profilspeichers Ihres Unternehmens besser einsehen. Ein Profil, das nur ein Profilfragment enthält, ist ein Profil, das die Zuordnung aufgehoben hat. Ein &quot;unbekanntes&quot;Profil ist ein Profil, das mit pseudonymen Identitäts-Namespaces wie `ECID` und `AAID`. Unbekannte Profile sind inaktiv, d. h. sie haben für den angegebenen Zeitraum keine neuen Ereignisse hinzugefügt. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
 
 Sie können den Bericht zu nicht zugewiesenen Profilen generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/unstitchedProfiles` -Endpunkt.
 
@@ -553,7 +553,7 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu nicht
 | `unstitchedProfiles` | Ein Objekt, das eine Aufschlüsselung der nicht zugeordneten Profile nach Zeiträumen enthält. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für Zeiträume von 7, 30, 60, 90 und 120 Tagen. |
 | `countOfProfiles` | Die Anzahl der nicht zugeordneten Profile für den Zeitraum oder die Anzahl der nicht zugeordneten Profile für den Namespace. |
 | `eventsAssociated` | Die Anzahl der ExperienceEvents für den Zeitraum oder die Anzahl der Ereignisse für den Namespace. |
-| `nsDistribution` | Ein Objekt, das einzelne Identitäts-Namespaces mit der Verteilung nicht zugewiesener Profile und Ereignisse für jeden Namespace enthält. Hinweis: Addieren der Gesamtsumme `countOfProfiles` für jeden Identitäts-Namespace im `nsDistribution` -Objekt entspricht dem `countOfProfiles` für den Zeitraum. Dasselbe gilt für `eventsAssociated` pro Namespace und der Gesamtwert `eventsAssociated` pro Zeitraum. |
+| `nsDistribution` | Ein Objekt, das einzelne Identitäts-Namespaces mit der Verteilung nicht zugewiesener Profile und Ereignisse für jeden Namespace enthält. Hinweis: Addieren Sie die Summe `countOfProfiles` für jeden Identitäts-Namespace im `nsDistribution` -Objekt entspricht dem `countOfProfiles` für den Zeitraum. Dasselbe gilt für `eventsAssociated` pro Namespace und der Gesamtwert `eventsAssociated` nach Zeiträumen. |
 | `reportTimestamp` | Der Zeitstempel des Berichts. |
 
 ### Interpretieren des Berichts über nicht zuordenbare Profile

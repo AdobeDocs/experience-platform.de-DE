@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Identitätsdienst-API; Entwicklerhandbuch für Identitätsdienste; Region
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
 title: Identity Service API-Anleitung
 description: Mit der Identity Service-API können Entwickler die geräteübergreifende, kanalübergreifende und nahezu echtzeitübergreifende Identifizierung Ihrer Kunden mithilfe von Identitätsdiagrammen in Adobe Experience Platform verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Identity Service] verwaltet die geräteübergrei
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Identity Service]](../home.md): Löst die grundlegende Herausforderung aus, die sich aus der Fragmentierung von Kundenprofildaten ergibt. Dies geschieht durch die Überbrückung von Identitäten zwischen Geräten und Systemen, auf denen Kunden mit Ihrer Marke interagieren.
+- [[!DNL Identity Service]](../home.md): Löst die grundlegende Herausforderung aus, die durch die Fragmentierung von Kundenprofildaten entsteht. Dies geschieht durch die Überbrückung von Identitäten zwischen Geräten und Systemen, auf denen Kunden mit Ihrer Marke interagieren.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
@@ -31,7 +31,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) lesen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -51,7 +51,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ### regionenbasiertes Routing
 
-Die [!DNL Identity Service] API verwendet regionenspezifische Endpunkte, für die die Einbeziehung einer `{REGION}` als Teil des Anfragepfads. Während der Bereitstellung Ihres Unternehmens wird eine Region bestimmt und in Ihrem Unternehmensprofil gespeichert. Durch Verwendung des richtigen Bereichs für jeden Endpunkt wird sichergestellt, dass alle Anfragen, die mit dem [!DNL Identity Service] Die API wird an die entsprechende Region weitergeleitet.
+Die [!DNL Identity Service] API verwendet regionenspezifische Endpunkte, für die die Einbeziehung einer `{REGION}` als Teil des Anfragepfads. Während der Bereitstellung Ihres Unternehmens wird eine Region bestimmt und in Ihrem Unternehmensprofil gespeichert. Die Verwendung des richtigen Bereichs für jeden Endpunkt stellt sicher, dass alle Anfragen, die mit dem [!DNL Identity Service] Die API wird an die entsprechende Region weitergeleitet.
 
 Derzeit werden zwei Regionen unterstützt von [!DNL Identity Service] APIs: VA7 und NLD2.
 
@@ -70,7 +70,7 @@ Wenn Sie die Region in Ihrem Unternehmensprofil nicht finden können, wenden Sie
 
 ## Verwenden der [!DNL Identity Service] API
 
-Identitätsparameter, die in diesen Diensten verwendet werden, können auf zwei Arten ausgedrückt werden: zusammengesetzt oder XID.
+Identitätsparameter, die in diesen Diensten verwendet werden, können auf zwei Arten ausgedrückt werden: &quot;Composite&quot;oder &quot;XID&quot;.
 
 Verbund-Identitäten sind Konstrukte, die sowohl den ID-Wert als auch den Namespace enthalten. Bei Verwendung von zusammengesetzten Identitäten kann der Namespace entweder mit einem Namen (`namespace.code`) oder ID (`namespace.id`).
 

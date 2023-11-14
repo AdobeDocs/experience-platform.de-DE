@@ -3,7 +3,7 @@ title: Erstellen von Entwürfen Ihrer Flow Service-Entitäten mithilfe der API
 description: Erfahren Sie, wie Sie Entwürfe Ihrer Basisverbindungen, Quellverbindungen, Zielverbindungen und Datenflüsse mithilfe der Flow Service-API erstellen
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 100%
 

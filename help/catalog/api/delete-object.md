@@ -13,7 +13,7 @@ ht-degree: 47%
 
 # Löschen eines Objekts in der API
 
-Sie können eine [!DNL Catalog] -Objekt, indem Sie die Kennung im Pfad einer DELETE-Anfrage angeben.
+Sie können [!DNL Catalog] -Objekt, indem Sie die Kennung im Pfad einer DELETE-Anfrage angeben.
 
 >[!WARNING]
 >
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Die `DELETE /batches/{ID}` -Endpunkt wird nicht mehr unterstützt. Um einen Batch zu löschen, sollten Sie die [Batch-Aufnahme-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Die `DELETE /batches/{ID}` -Endpunkt wird nicht mehr unterstützt. Um einen Batch zu löschen, sollten Sie [Batch-Aufnahme-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das gelöscht werden soll. Gültige Objekte sind: <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu löschen. Gültige Objekte sind: <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**

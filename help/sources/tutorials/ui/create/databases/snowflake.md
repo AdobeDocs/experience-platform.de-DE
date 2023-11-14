@@ -1,12 +1,12 @@
 ---
 title: Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Snowflake-Quellverbindung erstellen.
+description: Erfahren Sie, wie Sie eine Snowflake-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
 source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 36%
 
 ---
@@ -28,7 +28,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platfo
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um auf Ihr Snowflake-Konto zuzugreifen, klicken Sie auf [!DNL Platform]müssen Sie den folgenden Authentifizierungswert angeben:
+Um auf Ihr Snowflake-Konto zuzugreifen, auf [!DNL Platform]müssen Sie den folgenden Authentifizierungswert angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
@@ -40,13 +40,13 @@ Um auf Ihr Snowflake-Konto zuzugreifen, klicken Sie auf [!DNL Platform]müssen S
 | Rolle | Die standardmäßige Zugriffssteuerungsrolle, die in der [!DNL Snowflake] Sitzung. Die Rolle sollte eine bestehende sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle lautet `PUBLIC`. |
 | Verbindungszeichenfolge | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Snowflake] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
-Weitere Informationen zu diesen Werten finden Sie unter [Dieses Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+Weitere Informationen zu diesen Werten finden Sie unter [dieses Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!NOTE]
 >
 >Sie müssen die `PREVENT_UNLOAD_TO_INLINE_URL` Markierung auf `FALSE` , um das Entladen von Daten aus Ihrem [!DNL Snowflake] Datenbank zu Experience Platform.
 
-## Snowflake-Konto verbinden
+## Snowflake-Konto anschließen
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
@@ -56,7 +56,7 @@ Unter dem [!UICONTROL Datenbanken] category, select **[!UICONTROL Snowflake]** u
 
 ![](../../../../images/tutorials/create/snowflake/catalog.png)
 
-Die **[!UICONTROL Mit Snowflake verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Verbindung zu Snowflake herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
@@ -66,7 +66,7 @@ Um ein bestehendes Konto zu verbinden, wählen Sie das Snowflake-Konto aus, mit 
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Snowflake-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Snowflake-Anmeldedaten ein. Wählen Sie zum Abschluss **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![](../../../../images/tutorials/create/snowflake/new.png)
 

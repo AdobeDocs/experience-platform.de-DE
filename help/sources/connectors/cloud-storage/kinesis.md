@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '499'
 ht-degree: 19%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 19%
 >
 >Die [!DNL Amazon Kinesis] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform]und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform], und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
 
 Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übertragen, ohne sie herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. [!DNL Platform]Mit können Sie Daten aus [!DNL Amazon Kinesis] in Echtzeit importieren.
 
 >[!NOTE]
 >
->Der Skalierungsfaktor für [!DNL Kinesis] muss erhöht werden, wenn Sie Daten mit hohem Datenvolumen erfassen müssen. Derzeit können Sie ein Höchstvolumen an Daten aus Ihrem [!DNL Kinesis] -Konto in Platform enthält 4000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Ansprechpartner bei der Adobe, um Daten mit höherem Datenvolumen zu skalieren und zu erfassen.
+>Der Skalierungsfaktor für [!DNL Kinesis] muss erhöht werden, wenn Sie Daten mit hohem Datenvolumen erfassen müssen. Derzeit können Sie ein Höchstvolumen an Daten aus Ihrem [!DNL Kinesis] -Konto in Platform enthält 4000 Datensätze pro Sekunde. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Daten mit höherem Datenvolumen zu skalieren und aufzunehmen.
 
 ## Voraussetzungen
 
@@ -74,10 +74,10 @@ Weitere Informationen zur Zugriffskontrolle für [!DNL Kinesis] Datenströme, si
 
 [!DNL Kinesis] unterstützt die folgenden Iteratortypen, mit denen Sie die Reihenfolge angeben können, in der Ihre Daten gelesen werden:
 
-| Iterator-Typ | Beschreibung |
+| Trennzeichentyp | Beschreibung |
 | ------------- | ----------- |
 | `AT_SEQUENCE_NUMBER` | Die Daten werden ausgehend von einer Position gelesen, die durch eine bestimmte Sequenznummer identifiziert wird. |
-| `AFTER_SEQUENCE_NUMBER` | Die Daten werden nach Position gelesen, die durch eine bestimmte Sequenznummer identifiziert wird. |
+| `AFTER_SEQUENCE_NUMBER` | Die Daten werden ab der Position gelesen, die durch eine bestimmte Sequenznummer identifiziert wird. |
 | `AT_TIMESTAMP` | Die Daten werden ausgehend von einer Position gelesen, die durch einen bestimmten Zeitstempel identifiziert wird. |
 | `TRIM_HORIZON` | Die Daten werden ab dem ältesten Datensatz gelesen. |
 | `LATEST` | Die Daten werden ab dem letzten Datensatz gelesen. |

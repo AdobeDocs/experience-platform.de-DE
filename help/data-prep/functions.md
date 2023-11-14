@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; CSV zuordnen; CSV-Datei zuordnen; CSV-Datei xdm zuordnen; CSV xdm zuordnen; UI-Handbuch; Mapper; Mapping; Zuordnungsfelder; Zuordnungsfunktionen
+keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;fields;mapping fields;mapping features;
 solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.

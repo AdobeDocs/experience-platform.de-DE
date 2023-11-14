@@ -21,7 +21,7 @@ ht-degree: 19%
 
 >[!WARNING]
 >
->Während `segmentMembership` muss mithilfe dieser Feldergruppe manuell zum Profilschema hinzugefügt werden. Sie sollten nicht versuchen, dieses Feld manuell zu füllen oder zu aktualisieren. Das System aktualisiert automatisch die `segmentMembership` für jedes Profil zuordnen, da Segmentierungsaufträge ausgeführt werden.
+>Während `segmentMembership` muss mithilfe dieser Feldergruppe manuell zum Profilschema hinzugefügt werden. Sie sollten nicht versuchen, dieses Feld manuell zu füllen oder zu aktualisieren. Das System aktualisiert die `segmentMembership` für jedes Profil zuordnen, da Segmentierungsaufträge ausgeführt werden.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 

@@ -19,10 +19,10 @@ Die Segmentierung mehrerer Entitäten ist eine erweiterte Funktion, die als Teil
 Die Segmentierung mehrerer Entitäten erfordert ein Verständnis der verschiedenen Adobe Experience Platform-Dienste, die an der Segmentierung beteiligt sind. Bevor Sie mit diesem Handbuch fortfahren, lesen Sie bitte die folgende Dokumentation:
 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
-   * [ProfilLimits](../profile/guardrails.md): Best Practices zum Erstellen von Datenmodellen, die von [!DNL Profile].
+   * [ProfilLimits](../profile/guardrails.md): Best Practices zum Erstellen von Datenmodellen, die von unterstützt werden [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] Daten.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
-   * [Grundlagen der Schemakomposition](../xdm/schema/composition.md#union): Erfahren Sie mehr über Best Practices zum Erstellen von Schemas, die in Experience Platform verwendet werden sollen. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md) aufgenommen werden.
+   * [Grundlagen der Schemakomposition](../xdm/schema/composition.md#union): Erfahren Sie Best Practices zum Erstellen von Schemas, die in Experience Platform verwendet werden sollen. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md) aufgenommen werden.
 
 ## Anwendungsfälle
 

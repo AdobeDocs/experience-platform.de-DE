@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst; Flow Service-API; Quellen; Quellen
+keywords: Experience Platform;home;popular topics;flow service;Flow Service API;sources;Sources
 title: Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben.
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
@@ -56,7 +56,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 **Anfrage**
 
-Die folgende Anfrage ruft Verbindungsspezifikationen für ab [!DNL Google BigQuery].
+Die folgende Anfrage ruft Verbindungsspezifikationen für ab. [!DNL Google BigQuery].
 
 ```shell
 curl -X GET \
@@ -116,7 +116,7 @@ Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für [!DNL Google 
 | Operator | Beschreibung |
 | --- | --- |
 | `==` | Filtert danach, ob die Eigenschaft dem bereitgestellten Wert entspricht. |
-| `!=` | Filtert danach, ob die Eigenschaft nicht mit dem bereitgestellten Wert übereinstimmt. |
+| `!=` | Filtert danach, ob die Eigenschaft nicht dem bereitgestellten Wert entspricht. |
 | `<` | Filtert danach, ob die Eigenschaft kleiner als der angegebene Wert ist. |
 | `>` | Filtert danach, ob die Eigenschaft größer als der angegebene Wert ist. |
 | `<=` | Filtert danach, ob die Eigenschaft kleiner oder gleich dem angegebenen Wert ist. |

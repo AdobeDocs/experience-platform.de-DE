@@ -5,8 +5,8 @@ description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von K
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1015'
-ht-degree: 67%
+source-wordcount: '1016'
+ht-degree: 65%
 
 ---
 
@@ -112,11 +112,11 @@ Je nachdem, ob Sie auch Echtzeit-Kundenprofil eingeschlossen haben (`ProfileServ
 | --- | --- |
 | `identity` only | Die bereitgestellte Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt erhalten, wird jedoch nicht aktualisiert, da neue Daten erfasst werden, da die Identitätszuordnungen jetzt entfernt werden. Die mit dem Profil verknüpften Daten verbleiben ebenfalls im Data Lake. |
 | `identity` und `ProfileService` | Die bereitgestellte Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Die mit dem Profil verknüpften Daten verbleiben im Data Lake. |
-| `identity` und `aepDataLake` | Die bereitgestellte Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt erhalten, wird jedoch nicht aktualisiert, da neue Daten erfasst werden, da die Identitätszuordnungen jetzt entfernt werden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten weich gelöscht und stehen daher keinem [!DNL Platform] Dienst. Nach Abschluss des Auftrags werden die Daten vollständig aus dem Data Lake entfernt. |
-| `identity`, `ProfileService`, und `aepDataLake` | Die bereitgestellte Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten weich gelöscht und stehen daher keinem [!DNL Platform] Dienst. Nach Abschluss des Auftrags werden die Daten vollständig aus dem Data Lake entfernt. |
+| `identity` und `aepDataLake` | Die bereitgestellte Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das aus diesem Identitätsdiagramm erstellte Profil bleibt erhalten, wird jedoch nicht aktualisiert, da neue Daten erfasst werden, da die Identitätszuordnungen jetzt entfernt werden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten weich gelöscht und stehen daher keinem [!DNL Platform] -Dienst. Nach Abschluss des Auftrags werden die Daten vollständig aus dem Data Lake entfernt. |
+| `identity`, `ProfileService`, und `aepDataLake` | Die bereitgestellte Identität wird gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten weich gelöscht und stehen daher keinem [!DNL Platform] -Dienst. Nach Abschluss des Auftrags werden die Daten vollständig aus dem Data Lake entfernt. |
 
 Siehe Abschnitt [[!DNL Privacy Service] Dokumentation](../privacy-service/home.md#monitor) für weitere Informationen zum Verfolgen des Auftragsstatus.
 
 ## Nächste Schritte
 
-In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Identity Service] erhalten. Informationen zur Verarbeitung von Datenschutzanfragen für andere [!DNL Experience Cloud]-Anwendungen finden Sie im Dokument zu [[!DNL Privacy Service] and [!DNL Experience Cloud] -Anwendungen](../privacy-service/experience-cloud-apps.md).
+In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Identity Service] erhalten. Informationen zur Verarbeitung von Datenschutzanfragen für andere [!DNL Experience Cloud] Anwendungen, siehe das Dokument unter [[!DNL Privacy Service] und [!DNL Experience Cloud] Anwendungen](../privacy-service/experience-cloud-apps.md).

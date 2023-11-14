@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; einheitliches Profil; Einheitliches Profil; einheitliches Profil; Profil; rtcp; Profil aktivieren; Profil aktivieren; Profil aktivieren
+keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; einheitliches Profil; einheitliches Profil; einheitliches Profil; Profil; rtcp; Profil aktivieren; Profil aktivieren
 title: Handbuch zur Echtzeit-Kundenprofil-API
 description: Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und mit ihnen zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Beispielprofildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
@@ -24,7 +24,7 @@ Eine Anleitung zum Arbeiten mit [!DNL Real-Time Customer Profile] Daten in der [
 
 >[!IMPORTANT]
 >
->Die Funktion für berechnete Attribute befindet sich in der Beta-Phase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
+Die Funktion für berechnete Attribute befindet sich in der Beta-Phase und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
 Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 
@@ -34,7 +34,7 @@ Sie können berechnete Attribute mithilfe der Variablen `ca/attributes/` -Endpun
 
 ## Edge-Projektionen {#edge-projections}
 
-Die Adobe Experience Platform ermöglicht eine Personalisierung von Kundenerlebnissen in Echtzeit, indem sie Daten auf strategisch platzierten Servern („Edge“-Server genannt) leicht zugänglich macht. Die [!DNL Real-Time Customer Profile] API bietet Endpunkte für die Arbeit mit Edges über Komponenten, die als &quot;Projektionen&quot;bezeichnet werden. Dazu gehören Projektionskonfigurationen, um zu ermitteln, welche Daten auf die einzelnen Edge-Server projiziert werden sollen, sowie Projektionsziele, um zu definieren, wohin eine Projektion geleitet werden soll. Ausführliche Informationen zum Arbeiten mit Edge-Projektionen finden Sie im [Handbuch zu Projektionskonfigurationen und Endpunkten](edge-projections.md).
+Die Adobe Experience Platform ermöglicht eine Personalisierung von Kundenerlebnissen in Echtzeit, indem sie Daten auf strategisch platzierten Servern („Edge“-Server genannt) leicht zugänglich macht. Die [!DNL Real-Time Customer Profile] API bietet Endpunkte für die Arbeit mit Edges über Komponenten, die als &quot;Projektionen&quot;bezeichnet werden. Dazu gehören Projektionskonfigurationen, um zu ermitteln, welche Daten auf die einzelnen Edge-Server projiziert werden sollen, sowie Projektionsziele, um zu definieren, wohin eine Projektion geleitet werden soll. Ausführliche Informationen zum Arbeiten mit Edge-Projektionen finden Sie im [Anleitung zu Projektionskonfigurationen und Zielendpunkten](edge-projections.md).
 
 ## Entitäten ([!DNL Profile]-Zugriff) {#entities}
 
@@ -56,7 +56,7 @@ Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um di
 
 ## Profilsystemaufträge {#profile-system-jobs}
 
-Profilaktivierte Daten, die in [!DNL Platform] wird im [!DNL Data Lake] sowie [!DNL Real-Time Customer Profile] Datenspeicher. Gelegentlich kann es erforderlich sein, einen Datensatz oder Batch aus der [!DNL Profile] speichern, um Daten zu entfernen, die Sie nicht mehr benötigen oder die fehlerhaft hinzugefügt wurden. Dazu muss die API zum Erstellen einer [!DNL Profile System Job], auch als bezeichnet[!DNL delete request]&quot;, die bei Bedarf geändert, überwacht oder gelöscht werden können. Erfahren Sie, wie Sie Löschanfragen mit der `/system/jobs` -Endpunkt im [!DNL Real-Time Customer Profile] API ausführen, folgen Sie den Schritten, die im Abschnitt [Endleitfaden für Profilsystemaufträge](profile-system-jobs.md).
+Profilaktivierte Daten, die in [!DNL Platform] wird im [!DNL Data Lake] sowie [!DNL Real-Time Customer Profile] Datenspeicher. Gelegentlich kann es erforderlich sein, einen Datensatz oder Batch aus der [!DNL Profile] speichern, um Daten zu entfernen, die Sie nicht mehr benötigen oder die fehlerhaft hinzugefügt wurden. Dies erfordert die Verwendung der API zum Erstellen einer [!DNL Profile System Job], auch als bezeichnet[!DNL delete request]&quot;, die bei Bedarf geändert, überwacht oder gelöscht werden können. Erfahren Sie, wie Sie Löschanfragen mit der `/system/jobs` -Endpunkt im [!DNL Real-Time Customer Profile] API ausführen, folgen Sie den Schritten, die im Abschnitt [Endleitfaden für Profilsystemaufträge](profile-system-jobs.md).
 
 ## Profilattribute aktualisieren {#update-profile}
 
@@ -64,4 +64,4 @@ Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisati
 
 ## Nächste Schritte {#next-steps}
 
-So starten Sie Aufrufe mit dem [!DNL Real-Time Customer Profile] API, lesen Sie die [Erste Schritte](getting-started.md) Wählen Sie dann eine der Endpunktleitfäden aus, um zu erfahren, wie Sie bestimmte [!DNL Profile]-zugehörige Endpunkte. So arbeiten Sie mit [!DNL Profile] Daten, die [!DNL Experience Platform] Benutzeroberfläche, siehe [Benutzerhandbuch zum Echtzeit-Kundenprofil](../ui/user-guide.md).
+So starten Sie Aufrufe mit dem [!DNL Real-Time Customer Profile] API, lesen Sie die [Erste Schritte](getting-started.md) Wählen Sie dann eine der Endpunktleitfäden aus, um zu erfahren, wie Sie bestimmte [!DNL Profile]-zugehörige Endpunkte. Arbeiten mit [!DNL Profile] Daten, die [!DNL Experience Platform] Benutzeroberfläche, siehe [Benutzerhandbuch zum Echtzeit-Kundenprofil](../ui/user-guide.md).

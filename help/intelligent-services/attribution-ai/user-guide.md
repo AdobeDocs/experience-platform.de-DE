@@ -19,7 +19,7 @@ Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in d
 
 ## Erstellen eines Modells
 
-Im [!DNL Adobe Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Dienste]** in der linken Navigation. Die **[!UICONTROL Dienste]** angezeigt und zeigt verfügbare Adobe Intelligence Services an. Wählen Sie im Container für Attribution AI die Option **[!UICONTROL Öffnen]**.
+Im [!DNL Adobe Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Dienste]** in der linken Navigation. Die **[!UICONTROL Dienste]** angezeigt und zeigt verfügbare Adobe Intelligent Services an. Wählen Sie im Container für Attribution AI die Option **[!UICONTROL Öffnen]**.
 
 ![Zugriff auf Ihr Modell](./images/user-guide/open_Attribution_ai.png)
 

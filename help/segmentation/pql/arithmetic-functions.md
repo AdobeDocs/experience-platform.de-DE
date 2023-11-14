@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: PAL Arithmetische Funktionen
+title: PAL Arithmetic-Funktionen
 description: Mit arithmetischen Funktionen lassen sich Basisberechnungen für Werte in Profile Query Language (PQL) durchführen.
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6

@@ -32,11 +32,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ## Voraussetzungen {#prerequisites}
 
-Um eine Verbindung herzustellen [!DNL Pinterest Ads] zur Experience Platform hinzufügen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um eine Verbindung herzustellen [!DNL Pinterest Ads] zum Experience Platform müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 * Die [!DNL Pinterest] Zugriffstoken.
-* Die [!DNL Pinterest] Konto-ID der Anzeige.
-* Eines von [!DNL Pinterest] Kampagnen-, Anzeigengruppen- oder Anzeigen-IDs nach Bedarf.
+* Die [!DNL Pinterest] Kontokennung.
+* Eins von [!DNL Pinterest] Kampagne, Anzeigengruppe oder Anzeigen-IDs nach Bedarf.
 
 Weitere Informationen zu diesen Verbindungseigenschaften finden Sie im Abschnitt [[!DNL Pinterest Ads] Übersicht](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
@@ -56,7 +56,7 @@ Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirms
 
 Unter dem *Werbung* category, select **[!UICONTROL Pinterest Ads]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-![Der Quellkatalog zur Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
+![Der Quellkatalog auf Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
 Die **[!UICONTROL Pinterest Ads-Konto verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
@@ -80,7 +80,7 @@ Die **[!UICONTROL Daten auswählen]** angezeigt. Dieser Schritt bietet eine Ober
 
 | Feld | Beschreibung |
 | --- | --- |
-| [!UICONTROL ad_account_id] | Ihre [!DNL Pinterest Ads] Konto-ID der Anzeige. Siehe Abschnitt [[!DNL Pinterest] Handbuch zum Suchen von IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) wenn Sie eine Anleitung benötigen. |
+| [!UICONTROL ad_account_id] | Ihre [!DNL Pinterest Ads] Kontokennung. Siehe Abschnitt [[!DNL Pinterest] Handbuch zum Suchen von IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) wenn Sie eine Anleitung benötigen. |
 | [!UICONTROL object_type] | Wählen Sie eine von **Kampagnen**, **Anzeigengruppen** oder **Anzeigen** je nachdem, welcher der [!DNL Pinterest] Analytics-APIs, von denen Sie Informationen abrufen möchten. |
 | [!UICONTROL object_ids] | Die IDs des ausgewählten Objekts. Navigieren Sie zum [!DNL Pinterest] Seite für **Pinterest Business Hub** > **Anzeigenkontozusammenfassung** > **Kampagnen** / **Anzeigengruppen** / **Anzeigen** und kopieren Sie die erforderlichen IDs, die direkt unter jedem Namen erwähnt werden. |
 
@@ -98,11 +98,11 @@ Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL Pinterest Ads
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der [!DNL Pinterest Ads] -Quelle.
+Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL Pinterest Ads] -Quelle.
 
 ## Planung {#scheduling}
 
-Bei der Planung Ihrer [!DNL Pinterest Ads] Datenfluss zur Erfassung müssen Sie eine der folgenden Häufigkeits- und Intervallkonfigurationen auswählen:
+Bei der Planung Ihrer [!DNL Pinterest Ads] Datenfluss zur Aufnahme verwenden, müssen Sie eine der folgenden Häufigkeits- und Intervallkonfigurationen auswählen:
 
 | Häufigkeit | Intervall |
 | --- | --- |
@@ -119,7 +119,7 @@ Nachdem Sie die Werte für Ihren Zeitplan angegeben haben, wählen Sie **[!UICON
 
 Überprüfen, ob Sie die Quelle richtig eingerichtet haben und [!DNL Pinterest Ads] Daten werden erfasst, führen Sie die folgenden Schritte aus:
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Pinterest Ads] Kartenmenü auf der Katalogseite. Sie können dann [!UICONTROL Vorschau des Datensatzes anzeigen] , um die erfassten Daten zu überprüfen.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datenflüsse anzeigen]** neben dem [!DNL Pinterest Ads] Kartenmenü auf der Katalogseite. Sie können dann [!UICONTROL Datensatz-Vorschau] , um die erfassten Daten zu überprüfen.
 
 ![Screenshot der Platform-Benutzeroberfläche für den Pinterest Ads-Vorschau-Datensatz.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
@@ -133,7 +133,7 @@ Sie können die Daten anhand der auf der [!DNL Pinterest] Benutzeroberfläche
 
 >[!TAB Anzeigengruppen]
 
-![Seite &quot;pinterest-Anzeigengruppen&quot;.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
+![Pinterest-Anzeigengruppen .](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 
 >[!TAB Werbeanzeigen]
 

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
+keywords: Experience Platform; home; beliebte Themen; IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
 title: Erstellen einer IBM [!DNL IBM DB2] Basisverbindung mit der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie IBM verbinden. [!DNL IBM DB2] an Adobe Experience Platform mithilfe der Flow Service-API.
+description: Erfahren Sie, wie Sie IBM verbinden [!DNL IBM DB2] an Adobe Experience Platform mithilfe der Flow Service-API.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -91,7 +91,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die mit Ihrer [!DNL IBM DB2] -Konto. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrer [!DNL IBM DB2] -Konto. |
 | `connectionSpec.id` | Die [!DNL IBM DB2]-Verbindungsspezifikations-ID: `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **Antwort**

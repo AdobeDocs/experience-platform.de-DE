@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry; Vereinigung; Vereinigungen; SegmentMembership; timeSeriesEvents;
+keywords: Experience Platform; home; beliebte Themen; api; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry; Vereinigung; Vereinigungen; segmentMembership; timeSeriesEvents;
 solution: Experience Platform
 title: Unions-API-Endpunkt
 description: Mit dem Endpunkt /Vereinigungen in der Schema Registry-API können Sie XDM-Vereinigungsschemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
@@ -19,7 +19,7 @@ In diesem Dokument werden wesentliche Konzepte für die Arbeit mit Vereinigungen
 
 ## Felder des Vereinigungsschemas
 
-Die [!DNL Schema Registry] fügt automatisch drei Schlüsselfelder in ein Vereinigungsschema ein: `identityMap`, `timeSeriesEvents`und `segmentMembership`.
+Die [!DNL Schema Registry] fügt automatisch drei Schlüsselfelder in ein Vereinigungsschema ein: `identityMap`, `timeSeriesEvents`, und `segmentMembership`.
 
 ### Identitätszuordnung
 
@@ -57,7 +57,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Folgendes `Accept` -Kopfzeilen stehen zur Auflistung von Vereinigungen zur Verfügung:
+Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Die folgenden `Accept` -Kopfzeilen stehen zur Auflistung von Vereinigungen zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
@@ -95,7 +95,7 @@ Sie können eine bestimmte Vereinigung durch eine GET-Anfrage anzeigen, die die 
 
 >[!NOTE]
 >
->Die Suche nach Vereinigungen ist über die `/unions` und `/schemas` -Endpunkt, um sie zur Verwendung in zu aktivieren [!DNL Profile] Exportiert in einen Datensatz.
+>Die Suche nach Vereinigungen ist über die `/unions` und `/schemas` -Endpunkt, um sie für die Verwendung in zu aktivieren [!DNL Profile] Exportiert in einen Datensatz.
 
 **API-Format**
 
@@ -212,7 +212,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Folgendes `Accept` -Header stehen zur Auflistung von Schemas zur Verfügung:
+Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Die folgenden `Accept` -Header sind für die Auflistung von Schemas verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |

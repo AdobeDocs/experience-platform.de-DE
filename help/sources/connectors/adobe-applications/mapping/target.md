@@ -29,7 +29,7 @@ In der folgenden Tabelle sind die Felder eines Experience-Datenmodell (XDM)-Erle
 | **`channel`** | `context.channel` | Funktioniert nur mit der Anzeigebereitstellung. Die Optionen sind &quot;Web&quot;und &quot;Mobil&quot;, wobei &quot;Web&quot;die Standardeinstellung ist. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
-| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet. |
+| `endUserIds.experience.mcId` | `marketingCloudVisitorId` | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet. |
 | **`environment`** |
 | `environment.browserDetails.userAgent` | `mboxRequest.userAgent` |
 | `environment.browserDetails.viewPortHeight` | `mboxRequest.browserHeight` |
@@ -47,8 +47,8 @@ In der folgenden Tabelle sind die Felder eines Experience-Datenmodell (XDM)-Erle
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | Internes Mapping von Target für kundendefinierte Umgebungen (z. B. dev, qa oder prod). |
-| `experience.target.supplementalDataID` | Bezeichner, der zum Zuordnen von Target-Ereignissen zu Analytics-Ereignissen verwendet wird |
+| `experience.target.environmentID` | Internes Mapping von Target für kundendefinierte Umgebungen (wie dev, qa oder prod). |
+| `experience.target.supplementalDataID` | Bezeichner, mit dem Target-Ereignisse mit Analytics-Ereignissen verknüpft werden |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | Liste (Array) der Aktivitäten, für die sich der Besucher qualifiziert hat |
@@ -69,7 +69,7 @@ In der folgenden Tabelle sind die Felder eines Experience-Datenmodell (XDM)-Erle
 | `placeContext.geo.id` | Zufällige UID (erforderlich) |
 | `placeContext.geo.city` | Der Stadt-Name wird basierend auf der IP-Adresse der Anfrage aufgelöst. |
 | `placeContext.geo.countryCode` | Ländercode basierend auf der IP-Adresse der Anfrage aufgelöst. |
-| `placeContext.geo.dmaId` | Der angegebene Marktbereich-Code wurde basierend auf der IP-Adresse der Anfrage aufgelöst. |
+| `placeContext.geo.dmaId` | Der angegebene Marktbereich-Code, der basierend auf der IP-Adresse der Anfrage aufgelöst wurde. |
 | `placeContext.geo.postalCode` | Postleitzahl basierend auf der IP-Adresse der Anfrage aufgelöst. |
 | `placeContext.geo.stateProvince` | Bundesland oder Bundesland basierend auf der IP-Adresse der Anfrage aufgelöst. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |

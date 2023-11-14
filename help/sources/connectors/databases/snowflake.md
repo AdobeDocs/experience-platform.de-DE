@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Amazon Redshift; Amazon redshift; redshift; Redshift
+keywords: Experience Platform;home;popular topics;Amazon Redshift;Amazon redshift;redshift;Redshift
 solution: Experience Platform
-title: Übersicht über Snowflake Source Connector
-description: Erfahren Sie, wie Sie Snowflake mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
+title: Snowflake Source Connector - Übersicht
+description: Erfahren Sie, wie Sie Snowflake über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '256'
 ht-degree: 57%
 
 ---
@@ -30,7 +30,7 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Snowf
 
 ## Verbinden von [!DNL Snowflake] mit Platform mithilfe von APIs
 
-- [Erstellen einer Snowflake-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/databases/snowflake.md)
+- [Erstellen einer Snowflake-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake.md)
 - [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 

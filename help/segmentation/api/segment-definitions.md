@@ -200,7 +200,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | -------- | ----------- |
 | `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
 | `description` | (Optional.) Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
-| `evaluationInfo` | (Optional.) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, legen Sie `evaluationInfo.batch.enabled` auf wahr zu sein. Wenn Sie ein Streaming-Segment erstellen möchten, legen Sie `evaluationInfo.continuous.enabled` auf wahr zu sein. Wenn Sie ein Kantensegment erstellen möchten, legen Sie `evaluationInfo.synchronous.enabled` auf wahr zu sein. Wenn dies leer gelassen wird, wird die Segmentdefinition als **Batch** Segment. |
+| `evaluationInfo` | (Optional.) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, legen Sie `evaluationInfo.batch.enabled` auf wahr sein. Wenn Sie ein Streaming-Segment erstellen möchten, legen Sie `evaluationInfo.continuous.enabled` auf wahr sein. Wenn Sie ein Kantensegment erstellen möchten, legen Sie `evaluationInfo.synchronous.enabled` auf wahr sein. Wenn dies leer gelassen wird, wird die Segmentdefinition als **Batch** Segment. |
 | `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einer der beiden `id` oder `name` -Feld. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
 | `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |

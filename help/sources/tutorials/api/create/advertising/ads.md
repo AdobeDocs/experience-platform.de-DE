@@ -23,7 +23,7 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Experience Platform Services zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Experience Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Experience Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] API.
@@ -96,7 +96,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | Die Client-Kunden-ID Ihres Google Ads-Kontos. |
+| `auth.params.clientCustomerID` | Die Kunden-ID Ihres Google Ads-Kontos. |
 | `auth.params.loginCustomerID` | Die Anmelde-Kunden-ID, die Ihrem Google Ads Manager-Konto entspricht. |
 | `auth.params.developerToken` | Das Entwicklungstoken Ihres Google Ads-Kontos. |
 | `auth.params.refreshToken` | Das Aktualisierungstoken Ihres Google Ads-Kontos. |

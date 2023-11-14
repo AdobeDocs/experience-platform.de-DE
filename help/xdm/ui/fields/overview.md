@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Datenmodell; ui; Workspace; Feld;
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Datenmodell; ui; workspace; field;
 solution: Experience Platform
 title: Definieren von XDM-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie XDM-Felder in der Experience Platform-Benutzeroberfläche definieren.
@@ -17,13 +17,13 @@ Die [!DNL Schema Editor] In der Benutzeroberfläche von Adobe Experience Platfor
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und die [Grundlagen der Schemakomposition](../../schema/composition.md) um zu erfahren, wie Klassen und Feldergruppen Felder zu XDM-Schemas beitragen.
+Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und [Grundlagen der Schemakomposition](../../schema/composition.md) um zu erfahren, wie Klassen und Feldergruppen Felder zu XDM-Schemas beitragen.
 
 Für dieses Handbuch ist zwar nicht erforderlich, es wird jedoch empfohlen, auch das Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) sich mit den verschiedenen Fähigkeiten der [!DNL Schema Editor].
 
 ## Ressource auswählen, der Felder hinzugefügt werden sollen {#select-resource}
 
-Um neue XDM-Felder in der Benutzeroberfläche zu definieren, müssen Sie zunächst ein Schema innerhalb der [!DNL Schema Editor]. Je nachdem, welche Schemas Ihnen derzeit im [!DNL Schema Library]können Sie [Erstellen eines neuen Schemas](../resources/schemas.md#create) oder [ein vorhandenes Schema zur Bearbeitung auswählen](../resources/schemas.md#edit).
+Um neue XDM-Felder in der Benutzeroberfläche zu definieren, müssen Sie zunächst ein Schema innerhalb der [!DNL Schema Editor]. Je nachdem, welche Schemas Ihnen derzeit im [!DNL Schema Library], können Sie [Erstellen eines neuen Schemas](../resources/schemas.md#create) oder [ein vorhandenes Schema zur Bearbeitung auswählen](../resources/schemas.md#edit).
 
 Sobald Sie [!DNL Schema Editor] geöffnet, werden Steuerelemente zum Hinzufügen von Feldern auf der Arbeitsfläche angezeigt. Diese Steuerelemente werden neben dem Namen des Schemas sowie allen Feldern vom Typ Objekt angezeigt, die unter der ausgewählten Klasse oder Feldergruppe definiert wurden.
 
@@ -48,13 +48,13 @@ Nach Auswahl der **plus (+)** -Symbol, ein **[!UICONTROL Unbenanntes Feld]** Pla
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-In der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** können Sie die Details des neuen Felds konfigurieren. Für jedes Feld sind folgende Informationen erforderlich:
+Rechts unter **[!UICONTROL Feldeigenschaften]** können Sie die Details des neuen Felds konfigurieren. Für jedes Feld sind folgende Informationen erforderlich:
 
 | Feldeigenschaft | Beschreibung |
 | --- | --- |
-| [!UICONTROL Feldname] | Ein eindeutiger, beschreibender Name für das Feld. Beachten Sie, dass der Feldname nach dem Speichern des Schemas nicht mehr geändert werden kann. Dieser Wert wird verwendet, um das Feld im Code und in anderen nachgelagerten Anwendungen zu identifizieren und zu referenzieren.<br><br>Der Name sollte idealerweise in camelCase geschrieben werden. Sie kann alphanumerische Zeichen, Bindestriche oder Unterstriche enthalten, sie enthält jedoch **darf nicht** Beginnen Sie mit einem Unterstrich.<ul><li>**Richtig**: `fieldName`</li><li>**Zulässig:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Falsch**: `_fieldName`</li></ul> |
+| [!UICONTROL Feldname] | Ein eindeutiger, beschreibender Name für das Feld. Beachten Sie, dass der Feldname nach dem Speichern des Schemas nicht mehr geändert werden kann. Dieser Wert dient zur Identifizierung und Referenzierung des Felds im Code und in anderen nachgelagerten Anwendungen<br><br>Der Name sollte idealerweise in camelCase geschrieben werden. Sie kann alphanumerische Zeichen, Bindestriche oder Unterstriche enthalten, sie enthält jedoch **darf nicht** Beginnen Sie mit einem Unterstrich.<ul><li>**Richtig**: `fieldName`</li><li>**Zulässig:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Falsch**: `_fieldName`</li></ul> |
 | [!UICONTROL Anzeigename] | Ein Anzeigename für das Feld. Dies ist der Name, mit dem das Feld auf der Arbeitsfläche des Schema-Editors dargestellt wird. Der Feldname kann mithilfe der [Umschalter für Anzeigenamen](../resources/schemas.md#display-name-toggle). |
-| [!UICONTROL Typ] | Der Datentyp, den das Feld enthalten soll. In diesem Dropdown-Menü können Sie eine der [Standard-Skalartypen](../../schema/field-constraints.md) unterstützt von XDM oder einem der Felder mit mehreren Feldern [Datentypen](../resources/data-types.md) die zuvor in der [!DNL Schema Registry].<br><br>Sie können auch **[!UICONTROL Erweiterte Typsuche]** , um vorhandene Datentypen zu suchen und zu filtern und den gewünschten Typ leichter zu finden. |
+| [!UICONTROL Typ] | Der Datentyp, den das Feld enthalten soll. In diesem Dropdown-Menü können Sie eine der [Standard-Skalartypen](../../schema/field-constraints.md) unterstützt von XDM oder einem der Mehrfachfelder [Datentypen](../resources/data-types.md) die zuvor in der [!DNL Schema Registry].<br><br>Sie können auch **[!UICONTROL Erweiterte Typsuche]** , um vorhandene Datentypen zu suchen und zu filtern und den gewünschten Typ leichter zu finden. |
 
 {style="table-layout:auto"}
 
@@ -66,11 +66,11 @@ Sie können auch eine optionale, für Menschen lesbare **[!UICONTROL Beschreibun
 >
 >Die rechte Leiste bietet außerdem Kontrollkästchen für die Bezeichnung spezieller Feldtypen. Siehe Abschnitt zu [spezielle Feldtypen](#special) für weitere Informationen.
 
-Nachdem Sie die Konfiguration des Felds abgeschlossen haben, wählen Sie **[!UICONTROL Anwenden]**.
+Wählen Sie nach der Konfiguration des Felds **[!UICONTROL Anwenden]**.
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-Die Arbeitsfläche wird aktualisiert und zeigt das neu hinzugefügte Feld an, das sich in einem Objekt befindet, das mit Ihrer eindeutigen Mandanten-ID benannt ist (angezeigt als `_tenantId` im Beispiel unten). Alle benutzerdefinierten Felder, die einem Schema hinzugefügt werden, werden automatisch in diesen Namespace eingefügt, um Konflikte mit anderen Feldern aus von der Adobe bereitgestellten Klassen und Feldergruppen zu vermeiden. In der rechten Leiste wird jetzt der Pfad des Felds zusätzlich zu den anderen Eigenschaften aufgelistet.
+Die Arbeitsfläche wird aktualisiert und zeigt das neu hinzugefügte Feld an, das sich in einem Objekt befindet, das mit Ihrer eindeutigen Mandanten-ID benannt ist (angezeigt als `_tenantId` im Beispiel unten). Alle benutzerdefinierten Felder, die einem Schema hinzugefügt werden, werden automatisch in diesen Namespace eingefügt, um Konflikte mit anderen Feldern von von Adobe-bereitgestellten Klassen und Feldergruppen zu vermeiden. In der rechten Leiste wird jetzt der Pfad des Felds zusätzlich zu den anderen Eigenschaften aufgelistet.
 
 ![](../../images/ui/fields/overview/field-added.png)
 
@@ -82,7 +82,7 @@ Sie können die oben beschriebenen Schritte fortsetzen, um dem Schema weitere Fe
 
 ## Typspezifische Feldeigenschaften {#type-specific-properties}
 
-Bei der Definition eines neuen Felds werden in der rechten Leiste je nach **[!UICONTROL Typ]** wählen Sie für das Feld aus. In der folgenden Tabelle sind diese zusätzlichen Feldeigenschaften zusammen mit den kompatiblen Typen aufgeführt:
+Bei der Definition eines neuen Felds werden je nach der **[!UICONTROL Typ]** wählen Sie für das Feld aus. In der folgenden Tabelle sind diese zusätzlichen Feldeigenschaften zusammen mit den kompatiblen Typen aufgeführt:
 
 | Feldeigenschaft | Kompatible Typen | Beschreibung |
 | --- | --- | --- |
@@ -91,10 +91,10 @@ Bei der Definition eines neuen Felds werden in der rechten Leiste je nach **[!UI
 | [!UICONTROL Format] | [!UICONTROL String] | Wählen Sie aus einer Liste vordefinierter Formate für Zeichenfolgen aus, denen der Wert entsprechen muss. Zu den verfügbaren Formaten gehören: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL URI-Referenz]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Mindestlänge] | [!UICONTROL String] | Die Mindestanzahl von Zeichen, die die Zeichenfolge enthalten muss, damit der Wert während der Aufnahme akzeptiert wird. |
 | [!UICONTROL Maximale Länge] | [!UICONTROL String] | Die maximale Zeichenanzahl, die die Zeichenfolge enthalten muss, damit der Wert während der Aufnahme akzeptiert werden kann. |
-| [!UICONTROL Mindestwert] | [!UICONTROL Double] | Der Mindestwert für das Double, das bei der Aufnahme akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. Bei Verwendung dieser Beschränkung wird die[!UICONTROL Ausschließlicher Mindestwert]&quot;Beschränkung muss leer gelassen werden. |
-| [!UICONTROL Höchstwert] | [!UICONTROL Double] | Der Maximalwert für das Double, das bei der Erfassung akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. Bei Verwendung dieser Beschränkung wird die[!UICONTROL Exklusiver Maximalwert]&quot;Beschränkung muss leer gelassen werden. |
-| [!UICONTROL Ausschließlicher Mindestwert] | [!UICONTROL Double] | Der Maximalwert für das Double, das bei der Erfassung akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. Bei Verwendung dieser Beschränkung wird die[!UICONTROL Mindestwert]&quot;(Nicht-exklusive) Beschränkung muss leer gelassen werden. |
-| [!UICONTROL Exklusiver Maximalwert] | [!UICONTROL Double] | Der Maximalwert für das Double, das bei der Erfassung akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. Bei Verwendung dieser Beschränkung wird die[!UICONTROL Höchstwert]&quot;(Nicht-exklusive) Beschränkung muss leer gelassen werden. |
+| [!UICONTROL Mindestwert] | [!UICONTROL Double] | Der Mindestwert für das Double, das bei der Aufnahme akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. Bei Verwendung dieser Beschränkung wird der Wert[!UICONTROL Ausschließlicher Mindestwert]&quot;Beschränkung muss leer gelassen werden. |
+| [!UICONTROL Höchstwert] | [!UICONTROL Double] | Der Maximalwert für das Double, das bei der Erfassung akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert akzeptiert. Bei Verwendung dieser Beschränkung wird der Wert[!UICONTROL Exklusiver Maximalwert]&quot;Beschränkung muss leer gelassen werden. |
+| [!UICONTROL Ausschließlicher Mindestwert] | [!UICONTROL Double] | Der Maximalwert für das Double, das bei der Erfassung akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. Bei Verwendung dieser Beschränkung wird der Wert[!UICONTROL Mindestwert]&quot;(Nicht-exklusive) Beschränkung muss leer gelassen werden. |
+| [!UICONTROL Exklusiver Maximalwert] | [!UICONTROL Double] | Der Maximalwert für das Double, das bei der Erfassung akzeptiert werden soll. Wenn der erfasste Wert exakt mit dem hier eingegebenen Wert übereinstimmt, wird der Wert zurückgewiesen. Bei Verwendung dieser Beschränkung wird der Wert[!UICONTROL Höchstwert]&quot;(Nicht-exklusive) Beschränkung muss leer gelassen werden. |
 
 {style="table-layout:auto"}
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Katalog; API; Objekt ersetzen
+keywords: Experience Platform;home;popular topics;catalog;api;ersetzen Sie ein Objekt
 solution: Experience Platform
 title: Katalogobjekt ersetzen
 description: Sie können den Inhalt eines Catalog-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.

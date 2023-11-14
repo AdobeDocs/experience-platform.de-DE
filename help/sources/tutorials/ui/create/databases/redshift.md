@@ -5,12 +5,12 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '492'
 ht-degree: 41%
 
 ---
 
-# Verbinden Sie Ihre [!DNL Amazon Redshift] Konto, das den Arbeitsbereich &quot;Quellen&quot;verwendet
+# Verbinden Sie [!DNL Amazon Redshift] Konto, das den Arbeitsbereich &quot;Quellen&quot;verwendet
 
 >[!IMPORTANT]
 >
@@ -31,19 +31,19 @@ Wenn Sie bereits über eine gültige [!DNL Redshift]-Verbindung verfügen, könn
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um auf Ihre [!DNL Redshift] -Konto in Experience Platform verwenden, müssen Sie die folgenden Werte angeben:
+Um auf Ihre [!DNL Redshift] -Konto auf Experience Platform angegeben haben, müssen Sie die folgenden Werte angeben:
 
 | **Anmeldedaten** | **Beschreibung** |
 | -------------- | --------------- |
 | Server | Der mit Ihrem [!DNL Redshift] -Konto. |
 | Port | Der TCP-Port, der [!DNL Redshift] -Server verwendet , um auf Client-Verbindungen zu warten. |
-| Benutzername | Der Benutzername, der mit Ihrer [!DNL Redshift] -Konto. |
-| Kennwort | Das Kennwort, das mit Ihrem [!DNL Redshift] -Konto. |
+| Benutzername | Der mit Ihrer [!DNL Redshift] -Konto. |
+| Kennwort | Das Kennwort für Ihre [!DNL Redshift] -Konto. |
 | Datenbank | Die [!DNL Redshift] Datenbank, auf die Sie zugreifen. |
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [this [!DNL Redshift] Dokument](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Redshift] -Konto auf Experience Platform.
+Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Redshift] -Konto auf Experience Platform.
 
 ## Verbinden Ihres [!DNL Redshift]-Kontos
 
@@ -51,7 +51,7 @@ Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folge
 >
 >Der standardmäßige Kodierungsstandard für [!DNL Redshift] ist Unicode. Dies kann nicht geändert werden.
 
-Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Anmelden bei [Adobe Experience Platform](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste auf **[!UICONTROL Quellen]** Arbeitsbereich. Der Bildschirm **[!UICONTROL Katalog]** zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
@@ -63,7 +63,7 @@ Die **[!UICONTROL Verbinden mit Amazon Redshift]** angezeigt. Auf dieser Seite k
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Redshift] Anmeldedaten. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Redshift] Anmeldedaten. Wählen Sie zum Abschluss **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![](../../../../images/tutorials/create/redshift/new.png)
 

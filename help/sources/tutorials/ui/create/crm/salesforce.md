@@ -1,6 +1,6 @@
 ---
 title: Salesforce-Konto über die Experience Platform-Benutzeroberfläche verbinden
-description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche in die Experience Platform bringen.
+description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche an die Experience Platform übertragen können.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 31%
 
 ---
 
-# Verbinden Sie [!DNL Salesforce] Konto für die Experience Platform über die Benutzeroberfläche
+# Verbinden Sie [!DNL Salesforce] Konto für Experience Platform über die Benutzeroberfläche
 
 In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Salesforce] und bringen Sie Ihre CRM-Daten über die Experience Platform-Benutzeroberfläche in Adobe Experience Platform mit.
 
@@ -26,7 +26,7 @@ Wenn Sie bereits über eine authentifizierte [!DNL Salesforce] -Konto verwenden,
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
 
-Um Ihre [!DNL Salesforce] -Konto und -Experience Platform vergleichen, müssen Sie Werte angeben, die den folgenden [!DNL Salesforce] Anmeldeinformationen:
+Um Ihre [!DNL Salesforce] -Konto gegen Experience Platform verwenden, müssen Sie Werte angeben, die dem Folgenden entsprechen [!DNL Salesforce] Anmeldeinformationen:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
@@ -38,11 +38,11 @@ Um Ihre [!DNL Salesforce] -Konto und -Experience Platform vergleichen, müssen S
 
 Weitere Informationen zur Authentifizierung finden Sie unter [this [!DNL Salesforce] Authentifizierungshandbuch](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
-Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Salesforce] -Konto in die Experience Platform.
+Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Salesforce] -Konto auf Experience Platform.
 
 ## Verbinden Ihres [!DNL Salesforce]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über das linke Navigationsmenü aus, um auf den Arbeitsbereich &quot;Quellen&quot;zuzugreifen. Die *[!UICONTROL Katalog]* -Bildschirm zeigt eine Vielzahl von Quellen an, die im Experience Platform-Quellkatalog verfügbar sind.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über das linke Navigationsmenü aus, um auf den Arbeitsbereich &quot;Quellen&quot;zuzugreifen. Die *[!UICONTROL Katalog]* zeigt eine Vielzahl von Quellen an, die im Experience Platform-Quellkatalog verfügbar sind.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie eine bestimmte Quelle mithilfe der Suchoption finden.
 

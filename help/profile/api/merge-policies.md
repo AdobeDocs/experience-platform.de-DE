@@ -19,7 +19,7 @@ Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert,
 
 Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben.
 
-Informationen zum Arbeiten mit Zusammenführungsrichtlinien über die Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch zu Zusammenführungsrichtlinien](../merge-policies/ui-guide.md). Um mehr über Zusammenführungsrichtlinien im Allgemeinen und ihre Rolle innerhalb der Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+Informationen zum Arbeiten mit Zusammenführungsrichtlinien über die Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch zu Zusammenführungsrichtlinien](../merge-policies/ui-guide.md). Um mehr über Zusammenführungsrichtlinien im Allgemeinen und ihre Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 ## Erste Schritte
 
@@ -104,7 +104,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 
 ### Identitätsdiagramm {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jede Organisation in verwendet werden. [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
+[Adobe Experience Platform Identity-Dienst](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jede Organisation in verwendet werden. [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
 
 **identityGraph-Objekt**
 
@@ -141,8 +141,8 @@ Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der List
 
 Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
-* **`timestampOrdered`**: (Standard) Priorität vor dem zuletzt aktualisierten Profil. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich.
-* **`dataSetPrecedence`**: Profilfragmente erhalten je nach dem Datensatz, aus dem sie stammen, Priorität. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
+* **`timestampOrdered`**: (Standard) Räumt dem zuletzt aktualisierten Profil Priorität ein. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich.
+* **`dataSetPrecedence`**: Räumt Profilfragmenten je nach dem Datensatz, aus dem sie stammen, Priorität ein. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
    * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, wird ein `order` -Array muss mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
 #### Beispiel `attributeMerge` -Objekt verwenden `dataSetPrecedence` type
@@ -189,7 +189,7 @@ Wobei der Wert `name` der Name der XDM-Klasse ist, auf der das der Zusammenführ
     }
 ```
 
-Um mehr über XDM zu erfahren und mit Schemas in Experience Platform zu arbeiten, lesen Sie zunächst das [XDM-System - Übersicht](../../xdm/home.md).
+Um mehr über XDM zu erfahren und mit Schemas im Experience Platform zu arbeiten, lesen Sie zunächst das [XDM-System - Übersicht](../../xdm/home.md).
 
 ## Zusammenführungsrichtlinien aufrufen {#access-merge-policies}
 
@@ -762,4 +762,4 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 Nachdem Sie wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Kundenprofilen innerhalb von Platform anzupassen und Zielgruppen aus Ihrem Unternehmen zu erstellen [!DNL Real-Time Customer Profile] Daten.
 
-Siehe [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md) , um mit der Definition und Verwendung von Zielgruppen zu beginnen.
+Lesen Sie hierzu die [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md) , um mit der Definition und Verwendung von Zielgruppen zu beginnen.

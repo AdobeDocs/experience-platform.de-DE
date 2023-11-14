@@ -240,7 +240,7 @@ Mit der PATCH-Anfrage können Sie entweder die [state](#update-state) oder [Cron
 
 ### Aktualisieren des Status eines Zeitplans {#update-state}
 
-Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie die `path` Eigenschaft als `/state` und legen Sie die `value` entweder `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie im [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) Dokumentation.
+Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie `path` Eigenschaft als `/state` und legen Sie die `value` entweder `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie im [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) Dokumentation.
 
 **API-Format**
 
@@ -273,7 +273,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status des Zeitplans aktualisieren, müssen Sie den Wert von `path` auf &quot;/state&quot;. |
-| `value` | Der aktualisierte Wert des Status des Zeitplans. Dieser Wert kann entweder als &quot;aktiv&quot;oder &quot;inaktiv&quot;festgelegt werden, um den Zeitplan zu aktivieren oder zu deaktivieren. Bitte beachten Sie, dass Sie **cannot** einen Zeitplan deaktivieren, wenn die Organisation für Streaming aktiviert wurde. |
+| `value` | Der aktualisierte Wert des Status des Zeitplans. Dieser Wert kann entweder als &quot;aktiv&quot;oder &quot;inaktiv&quot;festgelegt werden, um den Zeitplan zu aktivieren oder zu deaktivieren. Bitte beachten Sie: **cannot** einen Zeitplan deaktivieren, wenn die Organisation für Streaming aktiviert wurde. |
 
 **Antwort**
 
@@ -376,20 +376,20 @@ In einer Cron-Ausdruckszeichenfolge stellt das erste Feld die Sekunden, das zwei
 
 >[!NOTE]
 >
->Die Namen der Monate und der Wochentage sind **not** Groß-/Kleinschreibung beachten. Daher `SUN` entspricht der Verwendung von `sun`.
+>Die Namen der Monate und der Wochentage sind **not** Groß-/Kleinschreibung beachten. Daher `SUN` entspricht der Verwendung `sun`.
 
 Die zulässigen Sonderzeichen stehen für die folgende Bedeutung:
 
 | Sonderzeichen | Beschreibung |
 | ----------------- | ----------- |
 | `*` | Dieser Wert wird zur Auswahl von **all** Werte in einem Feld. Beispiel: `*` im Stundenfeld würde **each** Stunde. |
-| `?` | Dieser Wert bedeutet, dass kein spezifischer Wert erforderlich ist. Dies wird im Allgemeinen verwendet, um etwas in einem Feld anzugeben, in dem das Zeichen zulässig ist, im anderen jedoch nicht. Wenn Sie z. B. möchten, dass alle drei Monate ein Ereignis ausgelöst wird, sich aber nicht darum kümmert, welcher Wochentag der Veranstaltung ist, würden Sie `3` im Tag des Monats und `?` im Feld Wochentag ein. |
+| `?` | Dieser Wert bedeutet, dass kein spezifischer Wert erforderlich ist. Dies wird in der Regel verwendet, um etwas in einem Feld anzugeben, in dem das Zeichen zulässig ist, in dem anderen jedoch nicht. Wenn Sie z. B. möchten, dass alle drei Monate ein Ereignis ausgelöst wird, sich aber nicht darum kümmert, welcher Wochentag der Veranstaltung ist, würden Sie `3` im Tag des Monats und `?` im Feld Wochentag ein. |
 | `-` | Dieser Wert wird verwendet, um **inklusive** Bereiche für das Feld. Wenn Sie beispielsweise `9-15` im Feld Stunden würde dies bedeuten, dass die Stunden 9, 10, 11, 12, 13, 14 und 15 umfassen würden. |
 | `,` | Dieser Wert wird verwendet, um zusätzliche Werte anzugeben. Wenn Sie beispielsweise `MON, FRI, SAT` im Feld Wochentag würde dies bedeuten, dass die Wochentage Montag, Freitag und Samstag umfassen würden. |
-| `/` | Dieser Wert wird zum Angeben von Inkrementen verwendet. Der Wert, der vor dem `/` bestimmt, von wo er inkrementiert, während der Wert nach der `/` bestimmt, um wie viel er erhöht wird. Wenn Sie beispielsweise `1/7` im Feld Minuten würde dies bedeuten, dass die Minuten 1, 8, 15, 22, 29, 36, 43, 50 und 57 umfassen würden. |
+| `/` | Dieser Wert wird zum Angeben von Inkrementen verwendet. Der vor dem `/` bestimmt, von wo er inkrementiert, während der Wert nach der `/` bestimmt, um wie viel er erhöht wird. Wenn Sie beispielsweise `1/7` würde dies bedeuten, dass die Minuten 1, 8, 15, 22, 29, 36, 43, 50 und 57 umfassen würden. |
 | `L` | Dieser Wert wird verwendet, um `Last`und hat je nach Feld, für das sie verwendet wird, eine andere Bedeutung. Wenn es mit dem Tag des Monats-Felds verwendet wird, stellt es den letzten Tag des Monats dar. Wenn es allein mit dem Wochentag verwendet wird, stellt es den letzten Wochentag dar, nämlich Samstag (`SAT`). Wenn es zusammen mit dem Wochentag in Verbindung mit einem anderen Wert verwendet wird, stellt es den letzten Tag dieses Typs für den Monat dar. Wenn Sie beispielsweise `5L` im Feld Wochentag **only** den letzten Freitag des Monats einschließen. |
 | `W` | Dieser Wert wird verwendet, um den Wochentag anzugeben, der dem angegebenen Tag am nächsten ist. Wenn Sie beispielsweise `18W` im Monatsfeld, und der 18. des Monats ein Samstag war, war es am Freitag, den 17., der nächstgelegene Wochentag, Trigger. Wenn der 18. des Monats ein Sonntag wäre, würde er am Montag am 19., dem nächstgelegenen Wochentag, Trigger haben. Bitte beachten Sie, dass wenn Sie `1W` im Feld Tag des Monats angegeben ist und der nächstgelegene Wochentag im Vormonat liegt, wird das Ereignis noch am nächsten Wochentag des **current** Monat.</br></br>Darüber hinaus können Sie `L` und `W` um `LW`, der den letzten Wochentag des Monats angibt. |
-| `#` | Dieser Wert wird verwendet, um den n-ten Tag der Woche in einem Monat anzugeben. Der Wert, der vor dem `#` stellt den Wochentag dar, während der Wert nach der `#` gibt an, welches Vorkommen im Monat es ist. Wenn Sie beispielsweise `1#3`, wird das Ereignis am dritten Sonntag des Monats Trigger. Bitte beachten Sie, dass wenn Sie `X#5` und es in diesem Monat keinen fünften Tag der Woche gibt, wird das Ereignis **not** ausgelöst werden. Wenn Sie beispielsweise `1#5`, und es gibt keinen fünften Sonntag in diesem Monat wird das Ereignis **not** ausgelöst werden. |
+| `#` | Dieser Wert wird verwendet, um den n-ten Tag der Woche in einem Monat anzugeben. Der vor dem `#` stellt den Wochentag dar, während der Wert nach der `#` gibt an, welches Vorkommen im Monat es ist. Wenn Sie beispielsweise `1#3`, wird das Ereignis am dritten Sonntag des Monats Trigger. Bitte beachten Sie, dass wenn Sie `X#5` und es in diesem Monat keinen fünften Tag der Woche gibt, wird das Ereignis **not** ausgelöst werden. Wenn Sie beispielsweise `1#5`, und es gibt keinen fünften Sonntag in diesem Monat wird das Ereignis **not** ausgelöst werden. |
 
 ### Beispiele
 

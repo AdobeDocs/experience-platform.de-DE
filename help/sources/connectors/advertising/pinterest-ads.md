@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Pinterest-Anzeigen;
+keywords: Experience Platform;home;popular topics;Pinterest Ads;
 title: Pinterest Ads Source Overview
 description: Erfahren Sie, wie Sie Pinterest Ads über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 badge: Beta
@@ -35,7 +35,7 @@ Die [!DNL Pinterest Ads] -Quelle verwendet die [!DNL Pinterest] APIs zum Abrufen
 * [Anzeigengruppenanalysen](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
 * [Anzeigenanalyse](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
-Verwenden Sie die [!DNL Pinterest Ads] Quelle, aus der Ihre Daten übertragen werden [!DNL Pinterest] zur Experience Platform, wo Sie dann Datenanalysen ausführen können. Daten werden ab dem Datum der Aufnahme für einen rückdatierten Zeitraum von 90 Tagen zurückgegeben. [!DNL Pinterest Ads] verwendet Trägertoken als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL Pinterest] APIs.
+Verwenden Sie die [!DNL Pinterest Ads] Quelle, aus der Ihre Daten übertragen werden [!DNL Pinterest] zum Experience Platform, wo Sie dann Datenanalysen ausführen können. Daten werden ab dem Datum der Aufnahme für einen rückdatierten Zeitraum von 90 Tagen zurückgegeben. [!DNL Pinterest Ads] verwendet Trägertoken als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL Pinterest] APIs.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -55,7 +55,7 @@ Um eine Verbindung zwischen [!DNL Pinterest Ads] und Platform herzustellen, müs
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Zugriffstoken | Die [!DNL Pinterest Ads] Zugriffstoken für Ihr Benutzerkonto. Das Benutzerkonto des Tokens muss entweder Eigentümer des angegebenen sein [!DNL Pinterest Ad] über Business Access einer der erforderlichen Rollen zugewiesen werden können: Admin, Analyst oder Campaign Manager. Weitere Informationen zum Zugriffstoken finden Sie im Abschnitt [[!DNL Pinterest] Handbuch zum Generieren Ihres Zugriffstokens](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
+| Zugriffstoken | Die [!DNL Pinterest Ads] Zugriffstoken für Ihr Benutzerkonto. Das Benutzerkonto des Tokens muss entweder Eigentümer des angegebenen sein [!DNL Pinterest Ad] über Business Access eine der erforderlichen Rollen zugewiesen haben: Admin, Analyst oder Campaign Manager. Weitere Informationen zum Zugriffstoken finden Sie im Abschnitt [[!DNL Pinterest] Handbuch zum Generieren Ihres Zugriffstokens](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
 | Anzeigen-Konto-ID | Die verwandten [!DNL Pinterest Ads] Anzeigen-Konto-ID für Ihren Geschäftsbereich. Informationen zum Abrufen Ihrer Anzeigenkonto-ID. Besuchen Sie die [[!DNL Pinterest] Handbuch zum Suchen von IDs in Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). |
 | Kampagnen-, Anzeigengruppen- oder Anzeigen-ID | Die `campaign`, `ad group`oder `ad` IDs, die Ihrer Anzeigenkonto-ID entsprechen. Um die erforderlichen IDs abzurufen, navigieren Sie zum [!DNL Pinterest] Seite für **Pinterest Business Hub** > **Anzeigenkontozusammenfassung** > **Kampagnen** / **Anzeigengruppen** / **Anzeigen** und kopieren Sie die erforderlichen IDs, die direkt unter jedem Namen erwähnt werden. |
 
@@ -81,7 +81,7 @@ Bei der Planung Ihres Datenflusses müssen Sie eine der folgenden Häufigkeits- 
 | `Day` | 1 |
 | `Hour` | 24 |
 
-Wenn beispielsweise die Aufnahme am 15. März 2023 mit einer Häufigkeit und einem Intervall festgelegt ist, die auf `Day=1` oder `Hour=24`, dann [!DNL Pinterest] Die API würde nur Daten ab dem 15. Dezember 2022 abrufen, da die Berechnung für 90 Tage zurückdatiert ist.
+Wenn beispielsweise die Aufnahme am 15. März 2023 mit einer Häufigkeit und einem Intervall festgelegt ist, die auf `Day=1` oder `Hour=24`, dann die [!DNL Pinterest] Die API würde nur Daten ab dem 15. Dezember 2022 abrufen, da die Berechnung für 90 Tage zurückdatiert ist.
 
 ### [!DNL Pinterest] Zeitraum {#pinterest-time-range}
 
@@ -95,7 +95,7 @@ Die [!DNL Pinterest] Die API unterstützt verschiedene Arten von Zeitgranularit�
 | **WÖCHENTLICH** | Die Datenmetriken werden wöchentlich aufgeschlüsselt. |
 | **MONATLICH** | Die Datenmetriken werden monatlich aufgeschlüsselt. |
 
-Für Platform wird die [!DNL Pinterest Ads] -Quelle intern konfiguriert ist, um `Day`, d. h. die Daten werden täglich aggregiert. Verwenden Sie beispielsweise `impressions recorded` als Metrik, da die Granularität als `DAY`, erhalten Sie `xx` Impressionen auf `day 1`, `yy` Impressionen auf `day 2` und so weiter.
+Für Platform wird die Variable [!DNL Pinterest Ads] -Quelle intern konfiguriert ist, um `Day`, d. h. die Daten werden täglich aggregiert. Verwenden Sie beispielsweise `impressions recorded` als Metrik, da die Granularität als `DAY`, erhalten Sie `xx` Impressionen auf `day 1`, `yy` Impressionen auf `day 2` und so weiter.
 
 >[!IMPORTANT]
 >

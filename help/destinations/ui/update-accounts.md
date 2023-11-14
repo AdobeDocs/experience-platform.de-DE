@@ -1,5 +1,5 @@
 ---
-keywords: Zielkonto, Zielkonten aktualisieren, Konten aktualisieren, Ziel aktualisieren
+keywords: Aktualisieren des Zielkontos, der Zielkonten, Aktualisieren von Konten, Aktualisieren des Ziels
 title: Aktualisieren von Zielkonten
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
@@ -37,7 +37,7 @@ Gehen Sie wie folgt vor, um Verbindungsdetails zu vorhandenen Zielen zu aktualis
 
    ![Zielkonten filtern](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie aktualisieren möchten. Ein Popup-Bedienfeld wird angezeigt, das Optionen für **[!UICONTROL Aktivieren von Zielgruppen]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** das Konto. Wählen Sie die ![Schaltfläche &quot;Details bearbeiten&quot;](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Details bearbeiten]** -Schaltfläche, um die Kontoinformationen zu bearbeiten.
+3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie aktualisieren möchten. Ein Popup-Bedienfeld wird angezeigt, das Optionen für **[!UICONTROL Aktivieren von Zielgruppen]**, **[!UICONTROL Details bearbeiten]**, und **[!UICONTROL Löschen]** das Konto. Wählen Sie die ![Schaltfläche &quot;Details bearbeiten&quot;](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Details bearbeiten]** -Schaltfläche, um die Kontoinformationen zu bearbeiten.
 
    ![Konto bearbeiten](../assets/ui/update-accounts/accounts-edit.png)
 

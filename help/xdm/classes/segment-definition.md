@@ -16,14 +16,14 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->Diese Klasse sollte nur zum Erfassen von Informationen zu Segmentdefinitionen selbst verwendet werden. Um Informationen zur Zielgruppenmitgliedschaft in Ihren Profildaten zu erfassen, sollten Sie die [Feldergruppe Segmentzugehörigkeitsdetails](../field-groups/profile/segmentation.md) in [!UICONTROL XDM Individual Profile] Schema.
+>Diese Klasse sollte nur zum Erfassen von Informationen zu Segmentdefinitionen selbst verwendet werden. Um Informationen zur Zielgruppenmitgliedschaft in Ihren Profildaten zu erfassen, sollten Sie die [Feldergruppe Segmentzugehörigkeitsdetails](../field-groups/profile/segmentation.md) in [!UICONTROL Individuelles XDM-Profil] Schema.
 
 ![](../images/classes/segment-definition.png)
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `_repo` | Ein Objekt, das Folgendes enthält: [!UICONTROL DateTime] -Felder: <ul><li>`createDate`: Datum und Uhrzeit der Erstellung der Ressource im Datenspeicher, z. B. Zeitpunkt der ersten Datenerfassung.</li><li>`modifyDate`: Datum und Uhrzeit der letzten Änderung der Ressource.</li></ul> |
-| `_id` | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemgeneriert wird, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten.<br><br>**** Es ist wichtig zu erkennen, dass dieses Feld keine Identität repräsentiert, die mit einer Person in Verbindung steht, sondern den Datensatz an sich. Identitätsdaten, die sich auf eine Person beziehen, sollten auf [Identitätsfelder](../schema/composition.md#identity) anstatt. |
+| `_id` | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemgeneriert ist, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten.<br><br>**** Es ist wichtig zu erkennen, dass dieses Feld keine Identität repräsentiert, die mit einer Person in Verbindung steht, sondern den Datensatz an sich. Identitätsdaten, die sich auf eine Person beziehen, sollten [Identitätsfelder](../schema/composition.md#identity) anstatt. |
 | `createdByBatchID` | Die ID des erfassten Batches, der zur Erstellung des Datensatzes geführt hat. |
 | `description` | Eine Beschreibung für die Segmentdefinition. |
 | `identityMap` | Ein Zuordnungsfeld mit einem Satz von Namespaced-Identitäten für die Kontakte, für die die Zielgruppe gilt. Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |

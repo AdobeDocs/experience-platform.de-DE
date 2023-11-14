@@ -23,7 +23,7 @@ Zusätzlich zu den erforderlichen Kopfzeilen, die im Abschnitt &quot;Erste Schri
 
 - x-ups-search-version: &quot;1.0&quot;
 
-### Durchsuchen mehrerer Namespaces
+### Suchen über mehrere Namespaces hinweg
 
 Dieser Suchendpunkt kann verwendet werden, um über verschiedene Namespaces hinweg zu suchen und eine Liste mit Suchergebnissen zurückzugeben. Es können mehrere Parameter verwendet werden, getrennt durch das kaufmännische Und-Zeichen (&amp;).
 
@@ -37,7 +37,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Wo {SCHEMA} stellt den Schemaklasse-Wert dar, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Wo {SEARCH_TERM} stellt eine Abfrage dar, die der Implementierung von Microsoft entspricht [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Wo {SEARCH_TERM} stellt eine Abfrage dar, die der Implementierung von Microsoft entspricht. [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -222,7 +222,7 @@ Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon,
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder zu suchen, [!DNL Platform]verwenden, würden Sie die folgende Suchabfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder zu suchen, [!DNL Platform]verwenden Sie die folgende Suchabfrage: `s=segmentName:AAM%20OR%20Platform`.
 
 >  Für Best Practices sollte der Suchausdruck wie im oben gezeigten Beispiel HTML-kodiert sein.
 
@@ -236,7 +236,7 @@ In der folgenden Tabelle sind die Felder aufgeführt, die im Suchabfrageparamete
 | folderLocation | Der Speicherort bzw. die Speicherorte mit dem Ordnerspeicherort der angegebenen Suche. |
 | parentFolderId | Die Segmentdefinition oder der Ordner mit der übergeordneten Ordner-ID der angegebenen Suche. |
 | segmentId | Die Segmentdefinition, die mit der Segment-ID Ihrer angegebenen Suche übereinstimmt. |
-| segmentName | Die Segmentdefinition, die mit dem Segmentnamen der angegebenen Suche übereinstimmt. |
+| segmentName | Die Segmentdefinition, die dem Segmentnamen der angegebenen Suche entspricht. |
 | segmentDescription | Die Segmentdefinition, die mit der Segmentbeschreibung der angegebenen Suche übereinstimmt. |
 
 ### Suchausdruck {#search-expression}
@@ -248,10 +248,10 @@ In der folgenden Tabelle finden Sie die Details zur Funktionsweise von Suchabfra
 | Beispielsuchausdruck | Beschreibung |
 | ------------------------- | ----------- |
 | foo | Suchen Sie nach einem beliebigen Wort. Dies gibt Ergebnisse zurück, wenn das Wort &quot;foo&quot;in einem der durchsuchbaren Felder gefunden wird. |
-| foo AND bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück, wenn **both** Die Wörter &quot;foo&quot; und &quot;bar&quot; befinden sich in allen durchsuchbaren Feldern. |
-| foo OR bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück, wenn **entweder** das Wort &quot;foo&quot; oder das Wort &quot;bar&quot; finden Sie in allen durchsuchbaren Feldern. |
-| foo NOT bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück, wenn das Wort &quot;foo&quot;gefunden wird, das Wort &quot;bar&quot;jedoch in keinem der durchsuchbaren Felder gefunden wird. |
-| name: foo AND bar | Eine boolesche Suche. Dies gibt Ergebnisse zurück, wenn **both** Die Wörter &quot;foo&quot; und &quot;bar&quot; finden Sie im Feld &quot;name&quot;. |
+| foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **both** Die Wörter &quot;foo&quot; und &quot;bar&quot; befinden sich in allen durchsuchbaren Feldern. |
+| foo OR bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **entweder** das Wort &quot;foo&quot; oder das Wort &quot;bar&quot; finden Sie in allen durchsuchbaren Feldern. |
+| foo NOT bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn das Wort &quot;foo&quot;gefunden wird, das Wort &quot;bar&quot;jedoch in keinem der durchsuchbaren Felder gefunden wird. |
+| name: foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **both** Die Wörter &quot;foo&quot; und &quot;bar&quot; finden Sie im Feld &quot;name&quot;. |
 | run* | Eine Platzhaltersuche. Die Verwendung eines Sternchens (*) entspricht 0 oder mehr Zeichen, d. h. es werden Ergebnisse ausgegeben, wenn der Inhalt eines durchsuchbaren Felds ein Wort enthält, das mit &quot;run&quot;beginnt. Dies gibt beispielsweise Ergebnisse zurück, wenn die Wörter &quot;wird ausgeführt&quot;, &quot;läuft&quot;, &quot;runner&quot;oder &quot;runt&quot;angezeigt werden. |
 | Cam? | Eine Platzhaltersuche. Verwenden eines Fragezeichens (?) entspricht nur genau einem Zeichen. Das bedeutet, dass Ergebnisse ausgegeben werden, wenn der Inhalt eines durchsuchbaren Felds mit &quot;cam&quot;und einem zusätzlichen Buchstaben beginnt. Dies gibt beispielsweise Ergebnisse zurück, wenn die Wörter &quot;Camp&quot;oder &quot;Cams&quot;angezeigt werden, aber keine Ergebnisse zurückgeben, wenn die Wörter &quot;Camera&quot;oder &quot;Campfire&quot;angezeigt werden. |
 | &quot;blauer Regenschirm&quot; | Eine Satzsuche. Dies gibt Ergebnisse zurück, wenn der Inhalt eines durchsuchbaren Felds den vollständigen Wortlaut &quot;blauer Schirm&quot;enthält. |

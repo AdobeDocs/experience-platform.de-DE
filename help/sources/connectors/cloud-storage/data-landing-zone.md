@@ -2,7 +2,7 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Datenquelle der Einstiegszone
-description: Erfahren Sie, wie Sie die Einstiegszone für Daten mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie die Data Landing Zone mit Adobe Experience Platform verbinden.
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
 source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 45%
 >
 >Diese Seite ist spezifisch für die [!DNL Data Landing Zone] *source* Connector in Experience Platform. Informationen zum Herstellen einer Verbindung zum [!DNL Data Landing Zone] *Ziel* Connector, siehe [[!DNL Data Landing Zone] Zieldokumentationsseite](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Produkt- und Services-Lizenz von Platform bereitgestellt werden. Alle Kundinnen und Kunden von Platform sowie die zugehörigen Anwendungs-Services wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] und [!DNL Adobe Real-Time Customer Data Platform] erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox. Sie können Dateien in Ihren Container lesen und schreiben, indem Sie [!DNL Azure Storage Explorer] oder der Befehlszeilenschnittstelle.
+[!DNL Data Landing Zone] ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden. Sie haben Zugriff auf einen [!DNL Data Landing Zone]-Container pro Sandbox, und das gesamte Datenvolumen über alle Container hinweg ist auf die Gesamtdaten beschränkt, die mit Ihrer Produkt- und Services-Lizenz von Platform bereitgestellt werden. Alle Kundinnen und Kunden von Platform sowie die zugehörigen Anwendungs-Services wie [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] und [!DNL Adobe Real-Time Customer Data Platform] erhalten einen [!DNL Data Landing Zone]-Container pro Sandbox. Sie können Dateien in Ihren Container durch lesen und schreiben. [!DNL Azure Storage Explorer] oder der Befehlszeilenschnittstelle.
 
 [!DNL Data Landing Zone] unterstützt die SAS-basierte Authentifizierung, und die Daten werden im Ruhezustand und bei der Übertragung mit standardmäßigen [!DNL Azure Blob]-Speichersicherheitsmechanismen geschützt. Mit der SAS-basierten Authentifizierung können Sie sicher über eine öffentliche Internetverbindung auf Ihren [!DNL Data Landing Zone]-Container zugreifen. Für die Verwendung Ihres [!DNL Data Landing Zone]-Containers sind keine Netzwerkänderungen erforderlich. Sie müssen also keine Zulassungslisten oder regionenübergreifende Setups für Ihr Netzwerk konfigurieren. Platform erzwingt für alle Dateien, die in eine [!DNL Data Landing Zone] Container. Alle Dateien werden nach sieben Tagen gelöscht.
 
@@ -62,11 +62,11 @@ Eine erfolgreiche Verbindung aktualisiert Ihre Benutzeroberfläche von [!DNL Azu
 
 ![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
 
-Mit [!DNL Data Landing Zone] Container, der mit [!DNL Azure Storage Explorer], können Sie jetzt mit dem Hochladen von Dateien in Ihre [!DNL Data Landing Zone] Container. Wählen Sie zum Hochladen **Hochladen** und wählen Sie **Hochladen von Dateien**.
+Mit [!DNL Data Landing Zone] Container mit [!DNL Azure Storage Explorer], können Sie jetzt mit dem Hochladen von Dateien in Ihre [!DNL Data Landing Zone] Container. Wählen Sie zum Hochladen **Hochladen** und wählen Sie **Hochladen von Dateien**.
 
 ![hochladen](../../images/tutorials/create/dlz/upload.png)
 
-Nachdem Sie die hochzuladende Datei ausgewählt haben, müssen Sie die [!DNL Blob] Geben Sie ein, dass Sie es als und das gewünschte Zielverzeichnis hochladen möchten. Wenn Sie fertig sind, wählen Sie **Hochladen**.
+Nachdem Sie die hochzuladende Datei ausgewählt haben, müssen Sie die [!DNL Blob] Geben Sie ein, dass Sie es als und das gewünschte Zielverzeichnis hochladen möchten. Wählen Sie zum Abschluss **Hochladen**.
 
 | [!DNL Blob] Typen | Beschreibung |
 | --- | --- |
@@ -136,7 +136,7 @@ except Exception as ex:
 
 ### Eine Datei hochladen mit [!DNL AzCopy]
 
-Das folgende Beispiel verwendet [!DNL Microsoft's] [!DNL AzCopy] Dienstprogramm zum Hochladen einer Datei in eine [!DNL Data Landing Zone]:
+Das folgende Beispiel verwendet [!DNL Microsoft's] [!DNL AzCopy] -Dienstprogramm zum Hochladen einer Datei in eine [!DNL Data Landing Zone]:
 
 >[!TIP]
 >
@@ -165,5 +165,5 @@ Die nachstehende Dokumentation enthält Informationen zum Datenimport von [!DNL 
 
 >[!IMPORTANT]
 >
->Private Links werden derzeit nicht unterstützt, wenn eine Verbindung mit Experience Platform über die [!DNL Data Landing Zone]. Die einzigen unterstützten Zugriffsmethoden sind die aufgelisteten Methoden [here](#manage-the-contents-of-your-data-landing-zone).
+>Private Links werden derzeit nicht unterstützt, wenn eine Verbindung mit Experience Platform über die [!DNL Data Landing Zone]. Die einzigen unterstützten Zugriffsmethoden sind die aufgeführten Methoden [here](#manage-the-contents-of-your-data-landing-zone).
 

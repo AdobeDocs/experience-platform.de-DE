@@ -7,7 +7,7 @@ exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: 7c83a946ca30f1bf016cc42245d7d52f2c034f18
 workflow-type: tm+mt
 source-wordcount: '1437'
-ht-degree: 77%
+ht-degree: 80%
 
 ---
 
@@ -26,11 +26,11 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Von Adoben erstellte und von Partnern erstellte Quellen {#adobe-and-partner-built-sources}
+## Von Adobe erstellte und von Partnern erstellte Quellen {#adobe-and-partner-built-sources}
 
-Einige der Connectoren im Experience Platform Sources-Katalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Quellen-SDK](/help/sources/sources-sdk/overview.md). Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector ruft ab, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispiel: die [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) wird von Adobe erstellt, während die Variable [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) wird vom RainFocus-Team erstellt und gepflegt.
+Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Quellen-SDK](/help/sources/sources-sdk/overview.md). Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector ruft ab, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispiel: die [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt wird, während die Variable [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) wird vom RainFocus-Team erstellt und gepflegt.
 
-Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (Kontaktmethode siehe Hinweis auf der Dokumentationsseite). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an Ihren Adobe-Support-Mitarbeiter oder an die Kundenunterstützung.
+Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (die Kontaktmethode ist jeweils im Hinweis auf der Dokumentationsseite angegeben). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an den Support oder den Kundendienst von Adobe.
 
 ## Arten von Datenquellen
 

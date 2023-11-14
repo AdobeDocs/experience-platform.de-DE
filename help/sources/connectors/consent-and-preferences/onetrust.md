@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; OneTrust; onetrust; Einverständnis; Einverständnis und Voreinstellungen; Einhaltung
+keywords: Experience Platform; home; beliebte Themen; OneTrust; onetrust; Einverständnis; Einverständnis und Voreinstellungen; Einhaltung
 solution: Experience Platform
 title: Übersicht über den Connector für OneTrust-Integrationsquellen
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine OneTrust-Integration mit Adobe Experience Platform verbinden.

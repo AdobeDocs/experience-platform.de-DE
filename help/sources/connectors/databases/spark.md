@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Apache Spark; Apache-Funken; Azure HDInsights; azure hdinsights
+keywords: Experience Platform;home;popular topics;Apache Spark;apache spark;Azure HDInsights;azure hdinsights
 solution: Experience Platform
 title: Apache Spark auf Azure HDInsights Source Connector - Übersicht
 description: Erfahren Sie, wie Sie Apache Spark in Azure HDInsights mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.

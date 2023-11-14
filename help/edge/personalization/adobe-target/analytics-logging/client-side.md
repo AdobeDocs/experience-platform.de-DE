@@ -31,7 +31,7 @@ In diesem Dokument werden die Schritte zum Einrichten der clientseitigen A4T-Pro
 In diesem Tutorial wird davon ausgegangen, dass Sie mit den grundlegenden Konzepten und Prozessen im Zusammenhang mit der Verwendung des Web SDK zu Personalisierungszwecken vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die folgende Dokumentation:
 
 * [Web SDK konfigurieren](../../../fundamentals/configuring-the-sdk.md)
-* [Senden von Ereignissen](../../../fundamentals/tracking-events.md)
+* [Ereignisse senden](../../../fundamentals/tracking-events.md)
 * [Rendern von Personalisierungsinhalten](../../rendering-personalization-content.md)
 
 ## Clientseitige Protokollierung in Analytics einrichten {#set-up-client-side-logging}
@@ -136,7 +136,7 @@ Im Folgenden finden Sie ein Beispiel für eine `interact` Antwort, wenn die clie
 }
 ```
 
-Vorschläge für formularbasierte Experience Composer-Aktivitäten können sowohl Inhalte als auch Klickmetriken unter demselben Vorschlag enthalten. Anstatt also nur ein Analytics-Token für die Inhaltsanzeige in `scopeDetails.characteristics.analyticsToken` -Eigenschaft verwenden, können diese sowohl ein Anzeigen- als auch ein Klick-Analyse-Token enthalten, das in `scopeDetails.characteristics.analyticsDisplayToken` und `scopeDetails.characteristics.analyticsClickToken` -Eigenschaften entsprechend.
+Vorschläge für formularbasierte Experience Composer-Aktivitäten können sowohl Inhalte als auch Klickmetriken unter demselben Vorschlag enthalten. Anstatt also nur ein einziges Analytics-Token für die Inhaltsanzeige in `scopeDetails.characteristics.analyticsToken` -Eigenschaft verwenden, können diese sowohl ein Anzeigen- als auch ein Klick-Analyse-Token enthalten, das in `scopeDetails.characteristics.analyticsDisplayToken` und `scopeDetails.characteristics.analyticsClickToken` -Eigenschaften entsprechend.
 
 ```json
 {
@@ -513,7 +513,7 @@ alloy("sendEvent", {
 
 Mithilfe von Adobe Target-Aktivitäten können Sie verschiedene Metriken auf der Seite einrichten, die entweder manuell an das DOM angehängt oder automatisch an das DOM (mit VEC erstellte Aktivitäten) angehängt werden. Bei beiden Typen handelt es sich um eine verzögerte Benutzerinteraktion auf der Webseite.
 
-Um dies zu berücksichtigen, empfiehlt es sich, Analytics-Payloads mithilfe der Variablen `onBeforeEventSend` Adobe Experience Platform Web SDK-Erweiterungspunkt. Die `onBeforeEventSend` Der Erweiterungspunkt sollte mithilfe der `configure` und wird für alle Ereignisse übernommen, die über den Datastream gesendet werden.
+Um dies zu berücksichtigen, empfiehlt es sich, Analytics-Payloads mithilfe der Variablen `onBeforeEventSend` Adobe Experience Platform Web SDK-Erweiterungspunkt. Die `onBeforeEventSend` Der Erweiterungspunkt sollte mithilfe der `configure` und wird über alle Ereignisse angezeigt, die über den Datastream gesendet werden.
 
 Im Folgenden finden Sie ein Beispiel dafür, wie `onBeforeEventSent` kann für Trigger Analytics-Treffer konfiguriert werden:
 

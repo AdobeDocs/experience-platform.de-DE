@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Teradata Vantage
+keywords: Experience Platform;home;popular topics;Teradata Vantage
 title: Erstellen einer Teradata Vantage-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit Teradata Vantage verbinden.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6

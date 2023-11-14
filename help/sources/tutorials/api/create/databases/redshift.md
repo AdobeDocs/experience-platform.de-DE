@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '509'
 ht-degree: 61%
 
 ---
@@ -37,8 +37,8 @@ Zur [!DNL Flow Service] zur Verbindung mit [!DNL Amazon Redshift]müssen Sie die
 | -------------- | --------------- |
 | `server` | Der mit Ihrem [!DNL Amazon Redshift] -Konto. |
 | `port` | Der TCP-Port, der [!DNL Amazon Redshift] -Server verwendet , um auf Client-Verbindungen zu warten. |
-| `username` | Der Benutzername, der mit Ihrer [!DNL Amazon Redshift] -Konto. |
-| `password` | Das Kennwort, das mit Ihrem [!DNL Amazon Redshift] -Konto. |
+| `username` | Der mit Ihrer [!DNL Amazon Redshift] -Konto. |
+| `password` | Das Kennwort für Ihre [!DNL Amazon Redshift] -Konto. |
 | `database` | Die [!DNL Amazon Redshift] Datenbank, auf die Sie zugreifen. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Amazon Redshift] ist `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
@@ -101,8 +101,8 @@ curl -X POST \
 | `auth.params.server` | Ihre [!DNL Amazon Redshift] Server. |
 | `auth.params.port` | Der TCP-Port, der die [!DNL Amazon Redshift] -Server verwendet , um auf Client-Verbindungen zu warten. |
 | `auth.params.database` | Die mit Ihrer [!DNL Amazon Redshift] -Konto. |
-| `auth.params.password` | Das Kennwort, das mit Ihrem [!DNL Amazon Redshift] -Konto. |
-| `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL Amazon Redshift] -Konto. |
+| `auth.params.password` | Das Kennwort für Ihre [!DNL Amazon Redshift] -Konto. |
+| `auth.params.username` | Der mit Ihrer [!DNL Amazon Redshift] -Konto. |
 | `connectionSpec.id` | Die [!DNL Amazon Redshift]-Verbindungsspezifikations-ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 **Antwort**

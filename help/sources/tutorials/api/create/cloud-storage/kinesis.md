@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '737'
 ht-degree: 66%
 
 ---
@@ -38,7 +38,7 @@ Zur [!DNL Flow Service] , um eine Verbindung mit Ihrer [!DNL Amazon Kinesis] -Ko
 | `region` | Die Region für Ihre [!DNL Kinesis] -Konto. Siehe Handbuch unter [Hinzufügen von IP-Adressen zu Ihrer Zulassungsliste](../../../../ip-address-allow-list.md) für weitere Informationen über Regionen. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Spezifikations-ID der [!DNL Kinesis]-Verbindung lautet: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
-Weitere Informationen finden Sie unter [!DNL Kinesis] Zugriffsschlüssel und deren Erstellung; siehe [[!DNL AWS] Handbuch zum Verwalten von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Weitere Informationen unter [!DNL Kinesis] Zugriffsschlüssel und deren Erstellung; siehe [[!DNL AWS] Handbuch zum Verwalten von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Verwenden von Platform-APIs
 

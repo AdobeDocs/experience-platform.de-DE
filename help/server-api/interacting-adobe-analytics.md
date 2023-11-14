@@ -5,7 +5,7 @@ exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '179'
-ht-degree: 2%
+ht-degree: 9%
 
 ---
 
@@ -31,7 +31,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Anfrage {#request}
 
-Das folgende Beispiel enthält mehrere automatisch zugeordnete Werte aus dem `_experience.analytics` Feldergruppe. Sie umfasst auch JSON-basierte Datenschichten. Diese Datenschichten können zwar nicht automatisch zugeordnet werden, es ist jedoch möglich, [Datenvorbereitung für die Datenerfassung](../datastreams/data-prep.md) , um diese Werte einem Schema zuzuordnen, das die oben referenzierten Feldergruppen enthält.
+Das folgende Beispiel enthält mehrere automatisch zugeordnete Werte aus dem `_experience.analytics` Feldergruppe. Sie umfasst auch JSON-basierte Datenschichten. Auch wenn diese Datenschichten nicht automatisch zugeordnet werden können, können Sie [Datenvorbereitung für die Datenerfassung](../datastreams/data-prep.md) , um diese Werte einem Schema zuzuordnen, das die oben referenzierten Feldergruppen enthält.
 
 Alle Werte, die Benutzer diesen Feldern zuordnen, werden automatisch den entsprechenden Analytics-Werten zugeordnet, so als wären sie in der API-Anfrage enthalten.
 

@@ -29,7 +29,7 @@ Das Adobe Experience Platform Web SDK unterstützt zwei Arten von Analytics-Prot
 | Serverseitige Analytics-Protokollierung | Alle Analytics-Treffer, die über das Edge-Netzwerk gesendet werden, werden mit Target-Details auf der Server-Seite erweitert, ohne den Trefferzuordnungsprozess durchlaufen zu müssen. |
 | Clientseitige Analytics-Protokollierung | Target-Daten werden Client-seitig zurückgegeben, sodass Sie Daten mithilfe der [Dateneinfüge-API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-Die Protokollierungsmethode hängt davon ab, ob Adobe Analytics in Ihrer Konfiguration aktiviert ist. [datastream](../../../../datastreams/overview.md):
+Die Protokollierungsmethode hängt davon ab, ob Adobe Analytics in Ihrer Konfiguration aktiviert ist [datastream](../../../../datastreams/overview.md):
 
 ![Entscheidungsfluss der Protokollierungsmethode](../assets/analytics-logging.png)
 

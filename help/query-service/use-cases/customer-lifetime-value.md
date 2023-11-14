@@ -28,7 +28,7 @@ Dieses Handbuch soll Ihnen dabei helfen, Ihr Kundenerlebnis besser zu verstehen,
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Query Service](../home.md): Bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie SQL-Abfragen zur Analyse und Anreicherung Ihrer Daten verwenden können.
-* [Segmentierungsdienst](../../segmentation/home.md): Ermöglicht die Erstellung von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
+* [Segmentierungsdienst](../../segmentation/home.md): Ermöglicht das Generieren von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
 
 ## Voraussetzungen
 
@@ -58,7 +58,7 @@ Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein
 
 Siehe die Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../dashboards/cdp-insights-data-model.md).
 
-Stellen Sie sicher, dass Sie einen Zeitplan festlegen, um Ihr benutzerdefiniertes Datenmodell in einem normalen Cadence zu aktualisieren. Dadurch wird sichergestellt, dass die Daten bei Bedarf im Rahmen Ihrer Aufnahme-Pipeline zurückgesendet und Ihre benutzerdefinierten Dashboards gefüllt werden. Siehe [Planen von Abfragen](../ui/query-schedules.md#create-schedule) um zu erfahren, wie Sie Ihren Zeitplan einrichten.
+Stellen Sie sicher, dass Sie einen Zeitplan festlegen, um Ihr benutzerdefiniertes Datenmodell in einem normalen Cadence zu aktualisieren. Dadurch wird sichergestellt, dass die Daten bei Bedarf im Rahmen Ihrer Aufnahme-Pipeline zurückgesendet und Ihre benutzerdefinierten Dashboards gefüllt werden. Siehe [Planen von Abfragen](../ui/query-schedules.md#create-schedule) , um zu erfahren, wie Sie Ihren Zeitplan einrichten.
 
 ## Erstellen eines Dashboards zum Erfassen von Einblicken {#build-a-custom-dashboard}
 
@@ -81,7 +81,7 @@ Der nächste Schritt besteht darin, eine Segmentdefinition zu erstellen und Ziel
 * Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 * Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
-Alternativ kann auch eine [Video-Tutorial zum Segment Builder](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) für weitere Informationen.
+Alternativ kann auch eine [Video-Tutorial zum Segment Builder](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) für weitere Informationen verfügbar.
 
 ## Aktivieren der Audience für eine E-Mail-Kampagne {#activate-audience-for-campaign}
 
@@ -91,7 +91,7 @@ Sobald Sie Ihre Audience erstellt haben, können Sie sie für ein Ziel aktiviere
 
 ## Anzeigen der zurückgegebenen Analysedaten aus Ihrer Kampagne {#post-campaign-data-analysis}
 
-Die Daten aus Quellen können jetzt [schrittweise verarbeitet](../essential-concepts/incremental-load.md) als Teil einer geplanten Aktualisierung Ihres Datenmodells im beschleunigten Datenspeicher. Alle Antwortereignisse von Kunden können bei ihrem Auftreten oder in Batches in Adobe Experience Platform aufgenommen werden. Ihr Datenmodell kann je nach Einstellungen oder Quell-Connectoren einmal oder mehrmals täglich aktualisiert werden. Siehe [Batch-Aufnahme-API - Übersicht](../../ingestion/batch-ingestion/api-overview.md) oder [Streaming-Erfassung - Übersicht](../../ingestion/streaming-ingestion/overview.md) für weitere Informationen.
+Die Daten aus Quellen können jetzt [inkrementell verarbeitet](../essential-concepts/incremental-load.md) als Teil einer geplanten Aktualisierung Ihres Datenmodells im beschleunigten Datenspeicher. Alle Antwortereignisse von Kunden können bei ihrem Auftreten oder in Batches in Adobe Experience Platform aufgenommen werden. Ihr Datenmodell kann je nach Einstellungen oder Quell-Connectoren einmal oder mehrmals täglich aktualisiert werden. Siehe [Batch-Aufnahme-API - Übersicht](../../ingestion/batch-ingestion/api-overview.md) oder [Streaming-Erfassung - Übersicht](../../ingestion/streaming-ingestion/overview.md) für weitere Informationen.
 
 Sobald Ihr Datenmodell aktualisiert wurde, stellen Ihre benutzerdefinierten Dashboard-Widgets aussagekräftige Signale bereit, mit denen Sie den Lebenszeitwert von Kunden messen und visualisieren können.
 
@@ -107,7 +107,7 @@ Diese Einblicke können Ihnen wiederum bei der Entwicklung Ihrer Geschäftsstrat
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments sollten Sie besser verstehen, wie Sie mit Real-time Customer Data Platform die CLV-Metrik (Customer Lifetime Value) verfolgen und visualisieren können. Um mehr über die vielen geschäftlichen Anwendungsfälle zu erfahren, die über Query Service und Experience Platform erfasst werden, sollten Sie die folgenden Dokumente lesen:
+Durch Lesen dieses Dokuments sollten Sie besser verstehen, wie Sie mit Real-time Customer Data Platform die CLV-Metrik (Customer Lifetime Value) verfolgen und visualisieren können. Um mehr über die vielen geschäftlichen Anwendungsfälle zu erfahren, die über Query Service und Experience Platform behandelt werden, sollten Sie die folgenden Dokumente lesen:
 
 * [Ein durchgängiges Beispiel für einen abgebrochenen Browseranwendungsfall, der die Vielseitigkeit und Vorteile von Query Service demonstriert.](./abandoned-browse.md)
 * [Verwendung von Query Service und maschinellem Lernen zur Bestimmung und Filterung von Bot-Aktivitäten anhand des echten Besucher-Traffics auf einer Online-Website](./bot-filtering.md)

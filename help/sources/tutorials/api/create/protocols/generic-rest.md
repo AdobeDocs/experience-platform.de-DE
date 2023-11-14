@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; generische REST; generische Ruhezeit
+keywords: Experience Platform; home; beliebte Themen; generisches REST; generische Ruhe
 solution: Experience Platform
 title: Erstellen einer generischen REST-API-Basisverbindung mit der Flow Service-API
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung der generischen REST-API mit Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung zwischen der generischen REST-API und Adobe Experience Platform herstellen.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -172,7 +172,7 @@ curl -X POST \
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle mit Platform verbinden. |
 | `auth.params.host` | Die Stamm-URL, die für die Verbindung mit Ihrer [!DNL Generic REST API] -Quelle. |
 | `auth.params.username` | Der Benutzername, der Ihrer [!DNL Generic REST API] -Quelle. Dies ist für die einfache Authentifizierung erforderlich. |
-| `auth.params.password` | Das Kennwort, das Ihrem [!DNL Generic REST API] -Quelle. Dies ist für die einfache Authentifizierung erforderlich. |
+| `auth.params.password` | Das Passwort, das Ihrer [!DNL Generic REST API] -Quelle. Dies ist für die einfache Authentifizierung erforderlich. |
 
 **Antwort**
 

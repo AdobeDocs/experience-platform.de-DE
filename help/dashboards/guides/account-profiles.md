@@ -35,17 +35,17 @@ So navigieren Sie zum [!UICONTROL Kontoprofile] Dashboard in der Platform-Benutz
 
 ![Die Platform-Benutzeroberfläche mit Kontoprofilen im linken Navigationsbereich wurde hervorgehoben und die Registerkarte Übersicht wurde angezeigt.](../images/account-profiles/account-profiles-dashboard.png)
 
-Aus dem [!UICONTROL Kontoprofile] Dashboard können Sie [die in Ihrer Organisation erfassten Kontoprofile durchsuchen](#browse-account-profiles)oder [Zeigen Sie die Gesamtheit Ihrer Kontoprofildaten mithilfe von Widgets auf einen Blick an.](#standard-widgets) , die Aspekte der Daten visualisieren.
+Aus dem [!UICONTROL Kontoprofile] Dashboard können Sie [die in Ihrer Organisation erfassten Kontoprofile durchsuchen](#browse-account-profiles)oder [Anzeigen aller Kontoprofildaten mit Widgets auf einen Blick](#standard-widgets) , die Aspekte der Daten visualisieren.
 
 ## Durchsuchen von Account-Profilen {#browse-account-profiles}
 
 Die [!UICONTROL Durchsuchen] -Tab können Sie die in Ihrem Unternehmen erfassten schreibgeschützten Kontoprofile mithilfe einer Konto-ID aus einer verbundenen Unternehmensquelle suchen und anzeigen oder Quelldetails direkt eingeben. Von hier aus können Sie wichtige Informationen aus dem Kontoprofil sehen, einschließlich Name, Branche, Umsatz und Zielgruppe.
 
-Wählen Sie die [!UICONTROL Profil-ID] aus den auf der [!UICONTROL Durchsuchen] Registerkarte zum Öffnen [!UICONTROL Details] für das Kontoprofil.
+Wählen Sie die [!UICONTROL Profil-ID] aus den Ergebnissen, die auf der [!UICONTROL Durchsuchen] Registerkarte zum Öffnen der [!UICONTROL Details] für das Kontoprofil.
 
 ![Auf der Registerkarte &quot;Kontoprofile&quot;werden die Ergebnisse angezeigt und die Profil-ID hervorgehoben.](../images/account-profiles/account-profiles-browse-tab.png)
 
-Die Kontoprofilinformationen werden auf der Seite [!UICONTROL Details] wurde aus mehreren Profilfragmenten zusammengeführt, um eine Ansicht des einzelnen Kontos zu bilden. Weitere Informationen finden Sie in der Dokumentation unter [Durchsuchen von Kontoprofilen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) , um mehr über die Anzeigefunktionen von Kontoprofilen in der Platform-Benutzeroberfläche zu erfahren.
+Die Kontoprofilinformationen werden auf der Seite [!UICONTROL Details] wurde aus mehreren Profilfragmenten zusammengeführt, um eine Ansicht des einzelnen Kontos zu bilden. Siehe die Dokumentation unter [Durchsuchen von Kontoprofilen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) , um mehr über die Anzeigefunktionen von Kontoprofilen in der Platform-Benutzeroberfläche zu erfahren.
 
 ## Die [!UICONTROL Kontoprofile] [!UICONTROL Übersicht] {#overview}
 
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie im Dokument unter [Ändern von Dashboards](../c
 
 ## Standard-Widgets {#standard-widgets}
 
-Adobe bietet Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Kontoprofilen visualisieren können.
+Adobe stellt standardmäßige Widgets bereit, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Kontoprofilen visualisieren können.
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
@@ -70,7 +70,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 
 Dieses Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik und verwendet ein Ringdiagramm, um die proportionalen Anteile für die Branchen zu veranschaulichen, aus denen sich die Gesamtanzahl zusammensetzt. Der Schlüssel bietet Informationen zur Farbcodierung für die verschiedenen Branchen, aus denen das Ringdiagramm besteht.
 
-Einzelne Zahlen für die verschiedenen Branchen werden in einem Dialogfeld angezeigt, wenn der Cursor über den entsprechenden Abschnitt des Ringdiagramms bewegt wird.
+Einzelne Zahlen für die verschiedenen Branchen werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
 ![Die Gesamtkonten nach Branchen-Widget.](../images/account-profiles/total-accounts-by-industry-widget.png)
 

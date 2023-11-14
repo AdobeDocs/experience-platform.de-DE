@@ -18,7 +18,7 @@ ht-degree: 13%
 >
 >Nach Abschluss der Beta-Phase wird die [!DNL ad-hoc activation API] ist jetzt allgemein für alle Experience Platform-Kunden verfügbar (GA). In der GA-Version wurde die API auf Version 2 aktualisiert. Schritt 4 ([Abrufen der neuesten ID des Zielgruppenexportauftrags](#segment-export-id)) ist nicht mehr erforderlich, da die API die Export-ID nicht mehr benötigt.
 >
->Siehe [Ausführen des Ad-hoc-Aktivierungsauftrags](#activation-job) Weitere Informationen finden Sie weiter unten in diesem Tutorial .
+>Siehe [Ad-hoc-Aktivierungsauftrag ausführen](#activation-job) Weitere Informationen finden Sie weiter unten in diesem Tutorial .
 
 ## Übersicht {#overview}
 
@@ -34,24 +34,24 @@ Das folgende Diagramm zeigt den durchgängigen Arbeitsablauf zum Aktivieren von 
 
 ## Anwendungsfälle {#use-cases}
 
-### Flash-Verkäufe oder -Promotions
+### Flash Vertrieb oder Verkaufsförderung
 
-Ein Online-Händler bereitet einen begrenzten Flash-Verkauf vor und möchte Kunden kurzfristig benachrichtigen. Über die Ad-hoc-Aktivierungs-API der Experience Platform kann das Marketing-Team Zielgruppen bei Bedarf exportieren und Werbe-E-Mails schnell an die Kundenbasis senden.
+Ein Online-Händler bereitet einen begrenzten Flash-Verkauf vor und möchte Kunden kurzfristig benachrichtigen. Über die Ad-hoc-Aktivierungs-API von Experience Platform kann das Marketing-Team Zielgruppen bei Bedarf exportieren und Werbe-E-Mails schnell an die Kundenbasis senden.
 
 ### Aktuelle Veranstaltungen oder aktuelle Nachrichten
 
-Ein Hotel erwartet ein schlechtes Wetter an den folgenden Tagen, und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Zielgruppen bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
+Ein Hotel erwartet ein schlechtes Wetter an den folgenden Tagen, und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Ad-hoc-Aktivierungs-API von Experience Platform verwenden, um Zielgruppen bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
 
 ### Integrationstests
 
-IT-Manager können die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Zielgruppen bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
+IT-Manager können die Experience Platform Ad-hoc-Aktivierungs-API verwenden, um Zielgruppen bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
 
 ## Leitplanken {#guardrails}
 
 Beachten Sie bei der Verwendung der Ad-hoc-Aktivierungs-API die folgenden Limits.
 
 * Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 80 Zielgruppen aktivieren. Der Versuch, mehr als 80 Zielgruppen pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
-* Ad-hoc-Aktivierungsvorgänge können nicht parallel zu geplanten Aktivitäten ausgeführt werden [Zielgruppenexport-Aufträge](../../segmentation/api/export-jobs.md). Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Zielgruppenexport-Auftrag abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
+* Ad-hoc-Aktivierungsvorgänge können nicht parallel zu geplanten Aktivitäten ausgeführt werden [Zielgruppenexport-Aufträge](../../segmentation/api/export-jobs.md). Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Zielgruppenexport-Auftrag abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) für Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
 * Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Zielgruppe aus.
 
 ## Überlegungen zur Segmentierung {#segmentation-considerations}
@@ -66,7 +66,7 @@ Bevor Sie die Adobe Experience Platform-APIs aufrufen können, stellen Sie siche
 * Ihr Experience Platform-Konto verfügt über die `developer` und `user` Rollen, die für das Adobe Experience Platform API-Produktprofil aktiviert sind. Wenden Sie sich an [Admin Console](../../access-control/home.md) Administrator, um diese Rollen für Ihr Konto zu aktivieren.
 * Du hast einen Adobe ID. Wenn Sie keine Adobe ID haben, navigieren Sie zum [Adobe Developer-Konsole](https://developer.adobe.com/console) und erstellen Sie ein neues Konto.
 
-## Schritt 2: Sammeln von Anmeldeinformationen {#credentials}
+## Schritt 2: Anmeldeinformationen sammeln {#credentials}
 
 Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
@@ -86,14 +86,14 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * Content-Type: `application/json`
 
-## Schritt 3: Erstellen eines Aktivierungsflusses in der Platform-Benutzeroberfläche {#activation-flow}
+## Schritt 3: Aktivierungsfluss in der Platform-Benutzeroberfläche erstellen {#activation-flow}
 
 Bevor Sie Zielgruppen über die Ad-hoc-Aktivierungs-API aktivieren können, muss zunächst ein Aktivierungsfluss in der Platform-Benutzeroberfläche für das ausgewählte Ziel konfiguriert werden.
 
 Dazu gehören der Einstieg in den Aktivierungs-Workflow, die Auswahl Ihrer Zielgruppen, die Konfiguration eines Zeitplans und die Aktivierung dieser Zielgruppen. Sie können die Benutzeroberfläche oder API verwenden, um einen Aktivierungsfluss zu erstellen:
 
 * [Verwenden Sie die Platform-Benutzeroberfläche, um einen Aktivierungsfluss zu Batch-Profil-Exportzielen zu erstellen](../ui/activate-batch-profile-destinations.md)
-* [Verwenden Sie die Flow Service-API, um eine Verbindung zu Batch-Profil-Exportzielen herzustellen und Daten zu aktivieren.](../api/connect-activate-batch-destinations.md)
+* [Verwenden Sie die Flow Service-API, um eine Verbindung zu Batch-Profil-Exportzielen herzustellen und Daten zu aktivieren](../api/connect-activate-batch-destinations.md)
 
 ## Schritt 4: Abrufen der neuesten Auftrags-ID für den Zielgruppenexport (in v2 nicht erforderlich) {#segment-export-id}
 
@@ -120,7 +120,7 @@ Die ID des Zielgruppenexportauftrags befindet sich im `id` -Eigenschaft, wie unt
 ![Auftrags-ID des Zielgruppenexports](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
-## Schritt 5: Ausführen des Ad-hoc-Aktivierungsauftrags {#activation-job}
+## Schritt 5: Ad-hoc-Aktivierungsauftrag ausführen {#activation-job}
 
 Adobe Experience Platform führt geplante Segmentierungsaufträge einmal alle 24 Stunden aus. Die Ad-hoc-Aktivierungs-API wird basierend auf den neuesten Segmentierungsergebnissen ausgeführt.
 
@@ -128,7 +128,7 @@ Adobe Experience Platform führt geplante Segmentierungsaufträge einmal alle 24
 >
 >Beachten Sie die folgende einmalige Einschränkung: Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass mindestens 20 Minuten nach dem Zeitpunkt vergangen sind, zu dem die Zielgruppe erstmals gemäß dem von Ihnen unter [Schritt 3: Erstellen eines Aktivierungsflusses in der Platform-Benutzeroberfläche](#activation-flow).
 
-Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Zielgruppenexport-Auftrag für Ihre Zielgruppen abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
+Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Zielgruppenexport-Auftrag für Ihre Zielgruppen abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) für Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen, um eine vollständige Datei zu exportieren.
 
 Nach Abschluss des Zielgruppenexportvorgangs kann die Aktivierung Trigger werden.
 
@@ -175,7 +175,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 >[!IMPORTANT]
 >
->**Veralteter Anforderungstyp**. Dieser Beispieltyp beschreibt den Anfragetyp für die API-Version 1. In v2 der Ad-hoc-Aktivierungs-API müssen Sie nicht die neueste ID des Zielgruppenexportauftrags angeben.
+>**Veralteter Anfragetyp**. Dieser Beispieltyp beschreibt den Anfragetyp für die API-Version 1. In v2 der Ad-hoc-Aktivierungs-API müssen Sie nicht die neueste ID des Zielgruppenexportauftrags angeben.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \

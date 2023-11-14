@@ -80,7 +80,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `predicateExpression` | Der PQL-Ausdruck, nach dem die Daten abgefragt werden sollen. |
-| `predicateType` | Der Prädikatyp für den Abfrageausdruck unter `predicateExpression`. Derzeit ist der einzige zulässige Wert für diese Eigenschaft `pql/text`. |
+| `predicateType` | Der Eigenschaftstyp für den Abfrageausdruck unter `predicateExpression`. Derzeit ist der einzige akzeptierte Wert für diese Eigenschaft `pql/text`. |
 | `predicateModel` | Der Name der [!DNL Experience Data Model] (XDM) Schemaklasse, auf der die Profildaten basieren. |
 | `graphType` | Der Diagrammtyp, aus dem Sie den Cluster abrufen möchten. Die unterstützten Werte sind `none` (keine Identitätszusammenfügung) und `pdg` (führt Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durch). |
 
@@ -244,7 +244,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 | -------- | ----------- |
 | `estimatedNamespaceDistribution` | Ein Array von Objekten, das die Anzahl der Profile innerhalb des Segments anzeigt, aufgeschlüsselt nach Identitäts-Namespace. Die Gesamtanzahl der Profile nach Namespace (addiert die für jeden Namespace angezeigten Werte) kann höher sein als die Profilzählungsmetrik, da ein Profil mit mehreren Namespaces verknüpft werden könnte. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet. |
 | `state` | Der aktuelle Status des Vorschauauftrags. Der Status lautet &quot;WIRD AUSGEFÜHRT&quot;, bis die Verarbeitung abgeschlossen ist. Anschließend wird sie zu &quot;RESULT_READY&quot;oder &quot;FEHLGESCHLAGEN&quot;. |
-| `_links.preview` | Wenn die `state` auf &quot;RESULT_READY&quot;eingestellt ist, stellt dieses Feld eine URL zum Anzeigen der Schätzung bereit. |
+| `_links.preview` | Wenn die Variable `state` auf &quot;RESULT_READY&quot;eingestellt ist, stellt dieses Feld eine URL zum Anzeigen der Schätzung bereit. |
 
 ## Nächste Schritte
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Vertica; Vertika
+keywords: Experience Platform;home;popular topics;Vertica;vertica
 solution: Experience Platform
 title: Erstellen einer HP Vertica-Basisverbindung mit der Flow Service-API
 type: Tutorial
@@ -89,7 +89,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die mit Ihrer [!DNL HP Vertica] -Konto. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] ist: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrer [!DNL HP Vertica] -Konto. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] ist: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | Die [!DNL HP Vertica]-Verbindungsspezifikations-ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Antwort**

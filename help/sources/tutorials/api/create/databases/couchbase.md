@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Couchbase; Couchbase
+keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
 title: Erstellen einer Basisverbindung für Couchbase mit der Flow Service-API
 type: Tutorial
@@ -89,7 +89,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
+Bei einer erfolgreichen Antwort werden die Details der neu erstellten Verbindung zurückgegeben, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
 
 ```json
 {

@@ -1,5 +1,5 @@
 ---
-title: Verknüpfen Sie Ihr Salesforce-Marketing Cloud-Konto über die Benutzeroberfläche mit Experience Platform.
+title: Verbinden Ihres Salesforce-Marketing Cloud-Kontos mit dem Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie über die Benutzeroberfläche Ihr Salesforce-Marketing Cloud-Konto mit Experience Platform verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
@@ -9,7 +9,7 @@ ht-degree: 27%
 
 ---
 
-# Verbinden Sie Ihre [!DNL Salesforce Marketing Cloud] Konto für die Experience Platform über die Benutzeroberfläche
+# Verbinden Sie [!DNL Salesforce Marketing Cloud] Experience Platform über die Benutzeroberfläche
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
    * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Wenn Sie bereits über eine [!DNL Salesforce Marketing Cloud] -Konto verwenden, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Marketing-Automatisierungsdaten über die Benutzeroberfläche in die Experience Platform bringen](../../dataflow/marketing-automation.md).
+Wenn Sie bereits über eine [!DNL Salesforce Marketing Cloud] -Konto verwenden, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Einbringen von Daten zur Marketing-Automatisierung zum Experience Platform über die Benutzeroberfläche](../../dataflow/marketing-automation.md).
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -69,4 +69,4 @@ Wenn Sie bereits über ein bestehendes Konto verfügen, wählen Sie **[!UICONTRO
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zwischen Ihrem [!DNL Salesforce Marketing Cloud] Konto und Experience Platform. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Ihre Daten zur Marketing-Automatisierung in Experience Platform zu integrieren](../../dataflow/marketing-automation.md).
+In diesem Tutorial haben Sie eine Verbindung zwischen Ihrem [!DNL Salesforce Marketing Cloud] Konto und Experience Platform. Sie können jetzt mit dem nächsten Tutorial fortfahren und [Erstellen eines Datenflusses, um Ihre Daten zur Marketing-Automatisierung in Experience Platform zu bringen](../../dataflow/marketing-automation.md).

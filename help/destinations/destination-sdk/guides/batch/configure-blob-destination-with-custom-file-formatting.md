@@ -21,7 +21,7 @@ Detaillierte Beschreibungen der unten verwendeten Parameter finden Sie unter [Ko
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](../../getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](../../getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Adobe I/O-Authentifizierungsberechtigungen und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Anfrage**
 
 Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
-Die folgende Payload enthält eine generische Azure Blob-Konfiguration mit benutzerdefiniertem [CSV-Dateiformatierung](../../functionality/destination-server/file-formatting.md) Konfigurationsparameter festlegen, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
+Die folgende Payload enthält eine generische Azure Blob-Konfiguration mit benutzerdefiniertem [CSV-Dateiformatierung](../../functionality/destination-server/file-formatting.md) Konfigurationsparameter, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -129,7 +129,7 @@ Eine erfolgreiche Antwort gibt die neue Zielserverkonfiguration zurück, einschl
 
 Nachdem Sie die Konfiguration des Zielservers und der Dateiformatierung im vorherigen Schritt erstellt haben, können Sie jetzt die `/destinations` API-Endpunkt zum Erstellen einer Zielkonfiguration.
 
-So verbinden Sie die Serverkonfiguration in [Schritt 1](#create-server-file-configuration) ersetzen Sie die `destinationServerId` -Wert in der API-Anfrage unten mit dem Wert, der beim Erstellen Ihres Zielservers in [Schritt 1](#create-server-file-configuration).
+So verbinden Sie die Serverkonfiguration in [Schritt 1](#create-server-file-configuration) in diese Zielkonfiguration eingeben, ersetzen Sie die `destinationServerId` -Wert in der API-Anfrage unten mit dem Wert, der beim Erstellen Ihres Zielservers in [Schritt 1](#create-server-file-configuration).
 
 **API-Format**
 
@@ -408,11 +408,11 @@ Eine erfolgreiche Antwort gibt die neue Zielkonfiguration zurück, einschließli
 
 ## Schritt 3: Überprüfen der Experience Platform-Benutzeroberfläche {#verify-ui}
 
-Basierend auf den obigen Konfigurationen zeigt der Experience Platform-Katalog jetzt eine neue private Zielkarte an, die Sie verwenden können.
+Basierend auf den obigen Konfigurationen zeigt der Experience Platform-Katalog nun eine neue private Zielkarte an, die Sie verwenden können.
 
 ![Bildschirmaufzeichnung mit der Zielkatalogseite mit der ausgewählten Zielkarte.](../../assets/guides/batch/blob-destination-card.gif)
 
-Beachten Sie in den unten stehenden Bildern und Aufzeichnungen, wie die Optionen in der [Aktivierungs-Workflow für dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) mit den Optionen übereinstimmen, die Sie in der Zielkonfiguration ausgewählt haben.
+Beachten Sie in den unten stehenden Bildern und Aufzeichnungen, wie die Optionen in der [Aktivierungs-Workflow für dateibasierte Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) entsprechen den Optionen, die Sie in der Zielkonfiguration ausgewählt haben.
 
 Beachten Sie beim Ausfüllen von Details zum Ziel, wie die angezeigten Felder die benutzerdefinierten Datenfelder sind, die Sie in der Konfiguration eingerichtet haben.
 
@@ -425,12 +425,12 @@ Beachten Sie beim Ausfüllen von Details zum Ziel, wie die angezeigten Felder di
 Beachten Sie bei der Planung von Exportintervallen, dass die angezeigten Felder die Felder sind, die Sie in der `batchConfig` Konfiguration.
 ![Planungsoptionen für Exporte](../../assets/guides/batch/file-export-scheduling.png)
 
-Beachten Sie bei der Anzeige der Konfigurationsoptionen für Dateinamen, wie die angezeigten Felder die `filenameConfig` -Optionen, die Sie in der Konfiguration eingerichtet haben.
+Beachten Sie bei der Anzeige der Konfigurationsoptionen für Dateinamen, wie die angezeigten Felder die `filenameConfig` -Optionen, die Sie in der -Konfiguration eingerichtet haben.
 ![Konfigurationsoptionen für Dateinamen](../../assets/guides/batch/file-naming-options.gif)
 
 Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Schritt 1](#create-server-file-configuration) und [two](#create-destination-configuration) um die Konfigurationen nach Bedarf zu ändern.
 
-## Schritt 4: (Optional) Veröffentlichen Sie Ihr Ziel {#publish-destination}
+## Schritt 4: (Optional) Ziel veröffentlichen {#publish-destination}
 
 >[!NOTE]
 >
@@ -438,7 +438,7 @@ Wenn Sie eines der oben genannten Felder anpassen möchten, wiederholen Sie [Sch
 
 Nachdem Sie Ihr Ziel konfiguriert haben, verwenden Sie die [Zielpublikations-API](../../publishing-api/create-publishing-request.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
 
-## Schritt 5: (Optional) Dokument Ihres Ziels {#document-destination}
+## Schritt 5: (Optional) Ziel dokumentieren {#document-destination}
 
 >[!NOTE]
 >

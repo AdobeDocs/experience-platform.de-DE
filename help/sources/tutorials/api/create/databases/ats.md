@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen[!DNL Azure Table Storage];[!DNL Azure Table Storage]Azure-Tabellenspeicher
+keywords: Experience Platform; home; beliebte Themen[!DNL Azure Table Storage];[!DNL Azure Table Storage]Azure-Tabellenspeicher
 solution: Experience Platform
 title: Erstellen einer Azure Table Storage-Basisverbindung mit der Flow Service-API
 type: Tutorial

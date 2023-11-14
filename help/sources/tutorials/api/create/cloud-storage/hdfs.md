@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Apache Hadoop Distributed File System; Apache hadoop; hdfs; HDFS
+keywords: Experience Platform;home;popular topics;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
 title: Erstellen einer Apache HDFS-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
@@ -100,4 +100,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL HDFS] Verbindung mithilfe der [!DNL Flow Service] API und haben den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, während Sie lernen, wie Sie [Erkunden eines Drittanbieter-Cloud-Speichers mithilfe der Flow Service-API](../../explore/cloud-storage.md).
+In diesem Tutorial haben Sie eine [!DNL HDFS] Verbindung mithilfe der [!DNL Flow Service] API verwenden und den eindeutigen ID-Wert der Verbindung erhalten haben. Sie können diese ID im nächsten Tutorial verwenden, während Sie lernen, wie Sie [Erkunden eines Drittanbieter-Cloud-Speichers mithilfe der Flow Service-API](../../explore/cloud-storage.md).

@@ -5,7 +5,7 @@ exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
 source-wordcount: '524'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
@@ -263,6 +263,6 @@ In diesem Szenario entspricht der Wert dem Schlüssel, wenn der Schlüssel in de
 
 >[!TIP]
 >
->Eine verschachtelte Iteration des obigen Vorgangs wäre ähnlich wie: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+>Eine verschachtelte Iteration des obigen Vorgangs würde in etwa wie folgt aussehen: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
 Weitere Informationen finden Sie unter [Dokument zu logischen Operatoren in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)

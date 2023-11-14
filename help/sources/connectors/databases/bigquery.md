@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '396'
 ht-degree: 36%
 
 ---
@@ -30,7 +30,7 @@ Im folgenden Abschnitt finden Sie weitere Informationen zur erforderlichen Einri
 
 ### Generieren Sie Ihre [!DNL Google BigQuery] Anmeldeinformationen
 
-Verbindung herstellen [!DNL Google BigQuery] in Platform verwenden, müssen Sie Werte für die folgenden Anmeldeinformationen generieren:
+Verbindung herstellen [!DNL Google BigQuery] in Platform platzieren, müssen Sie Werte für die folgenden Anmeldeinformationen generieren:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |

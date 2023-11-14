@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; API;
+keywords: Experience Platform; home; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; API;
 solution: Experience Platform
 title: Erste Schritte mit der Segmentation Service-API
 description: Die folgende Dokumentation enthält zusätzliche Informationen, die Sie benötigen, um erfolgreich mit der Segmentation-API arbeiten zu können.

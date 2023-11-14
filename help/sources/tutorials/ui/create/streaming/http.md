@@ -48,7 +48,7 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]**. Ge
 - **[!UICONTROL Authentifizierung]:** Diese Eigenschaft bestimmt, ob für die Streaming-Verbindung eine Authentifizierung erforderlich ist. Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Wenn Sie es mit persönlich identifizierbaren Informationen (PII) zu tun haben, sollte diese Eigenschaft aktiviert sein. Standardmäßig ist diese Eigenschaft deaktiviert.
 - **[!UICONTROL XDM-kompatibel]:** Diese Eigenschaft gibt an, ob diese Streaming-Verbindung Ereignisse sendet, die mit XDM-Schemas kompatibel sind. Standardmäßig ist diese Eigenschaft deaktiviert.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]** und wählen Sie **[!UICONTROL Nächste]** um fortzufahren.
+Wählen Sie zum Abschluss **[!UICONTROL Verbindung mit Quelle herstellen]** und wählen Sie **[!UICONTROL Nächste]** um fortzufahren.
 
 ![new-account](../../../../images/tutorials/create/http/new.png)
 
@@ -68,7 +68,7 @@ Nach dem Hochladen Ihrer Daten können Sie die rechte Seite der Benutzeroberflä
 
 Die [!UICONTROL Zuordnung] -Schritt angezeigt und stellt eine Schnittstelle zum Zuordnen der Quelldaten zu einem Platform-Datensatz bereit.
 
-Die [!DNL HTTP API] -Quelle unterstützt die Erfassung von JSON-Dateien. JSON-Dateien erfordern keine manuelle Konfiguration, wenn sie als XDM-Beschwerde gekennzeichnet sind. Ist dies nicht der Fall, müssen Sie die Zuordnung explizit konfigurieren.
+Die [!DNL HTTP API] -Quelle unterstützt die Erfassung von JSON-Dateien. JSON-Dateien erfordern keine manuelle Konfiguration, wenn sie als XDM-Beschwerde gekennzeichnet sind. Andernfalls müssen Sie die Zuordnung explizit konfigurieren.
 
 Wählen Sie einen Datensatz aus, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
@@ -114,7 +114,7 @@ Sobald Ihre Quellfelder allen entsprechenden Ziel-XDM-Feldern zugeordnet sind, w
 
 ## Datenflussdetails
 
-Die **[!UICONTROL Datenflussdetails]** angezeigt. Auf dieser Seite können Sie Details zum erstellten Datenfluss angeben, indem Sie einen Namen und eine optionale Beschreibung angeben.
+Die **[!UICONTROL Datenflussdetails]** wird angezeigt. Auf dieser Seite können Sie Details zum erstellten Datenfluss angeben, indem Sie einen Namen und eine optionale Beschreibung angeben.
 
 Nachdem Sie Details für den Datenfluss angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
 

@@ -747,7 +747,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 
 >[!NOTE]
 >
->Die folgende Antwort wurde aus Platzgründen abgeschnitten und zeigt nur teilweise Details zu jedem Segmentauftrag. In der vollständigen Antwort werden die vollständigen Details für die angeforderten Segmentaufträge aufgelistet.
+>Die folgende Antwort wurde aus Platzgründen abgeschnitten und zeigt nur teilweise Details zu jedem Segmentauftrag. Die vollständige Antwort enthält alle Details zu den angeforderten Segmentaufträgen.
 
 ```json
 {

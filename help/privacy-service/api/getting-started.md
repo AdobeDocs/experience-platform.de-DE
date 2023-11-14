@@ -5,7 +5,7 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 21%
+ht-degree: 23%
 
 ---
 
@@ -35,7 +35,7 @@ Die Schritte zum Generieren dieser Werte werden im Folgenden detailliert beschri
 
 Wechseln Sie zur [Adobe-Entwicklerkonsole](https://developer.adobe.com/console) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die im Tutorial [Erstellen eines leeren Projekts](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in der Dokumentation zur Entwicklerkonsole beschriebenen Schritte aus.
 
-Nachdem Sie ein neues Projekt erstellt haben, wählen Sie **[!UICONTROL Zum Projekt hinzufügen]** und wählen Sie **[!UICONTROL API]** aus dem Dropdown-Menü aus.
+Nachdem Sie ein neues Projekt erstellt haben, wählen Sie **[!UICONTROL Zum Projekt hinzufügen]** und wählen **[!UICONTROL API]** aus dem Dropdown-Menü aus.
 
 ![Die API-Option, die im [!UICONTROL Zum Projekt hinzufügen] Dropdown-Liste auf der Seite mit den Projektdetails in der Developer Console](../images/api/getting-started/add-api-button.png)
 
@@ -55,7 +55,7 @@ Wählen Sie anschließend den Authentifizierungstyp aus, um Zugriffstoken zu gen
 >
 >Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]** -Methode, da dies künftig die einzige unterstützte Methode sein wird. Die **[!UICONTROL Dienstkonto (JWT)]** -Methode veraltet ist. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum auf die neue OAuth Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt . [!BADGE Veraltet]{type=negative}[JSON-Web-Token (JWT) generieren](/help/landing/api-authentication.md#jwt).
 
-![Wählen Sie die Authentifizierungsmethode Oauth Server-to-Server .](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
+![Wählen Sie die Authentifizierungsmethode OAuth Server-zu-Server .](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
 #### Berechtigungen über Produktprofile zuweisen {#product-profiles}
 
@@ -65,7 +65,7 @@ Der letzte Konfigurationsschritt besteht darin, die Produktprofile auszuwählen,
 >
 Produktprofile und die granularen Berechtigungen, die sie bereitstellen, werden von Administratoren über Adobe Admin Console erstellt und verwaltet. Siehe Handbuch unter [Berechtigungen für Privacy Service](../permissions.md) für weitere Informationen.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Konfigurierte API speichern]**.
+Wählen Sie zum Abschluss **[!UICONTROL Konfigurierte API speichern]**.
 
 ![Vor dem Speichern der Konfiguration wird ein einzelnes Produktprofil aus der Liste ausgewählt](../images/api/getting-started/select-product-profiles.png)
 
@@ -87,7 +87,7 @@ Im Allgemeinen gibt es zwei Methoden zum Generieren eines Zugriffstokens:
 
 #### Manuelles Generieren eines Tokens {#manual-token}
 
-So generieren Sie manuell eine neue `{ACCESS_TOKEN}`, navigieren Sie zu **[!UICONTROL Anmeldeinformationen]** > **[!UICONTROL OAuth Server-zu-Server]** und wählen Sie **[!UICONTROL Zugriffstoken generieren]**, wie unten dargestellt.
+So generieren Sie manuell eine neue `{ACCESS_TOKEN}`, navigieren Sie zu **[!UICONTROL Anmeldeinformationen]** > **[!UICONTROL OAuth Server-zu-Server]** und wählen **[!UICONTROL Zugriffstoken generieren]**, wie unten dargestellt.
 
 ![Eine Bildschirmaufzeichnung, in der aufgezeichnet wird, wie ein Zugriffstoken in der Benutzeroberfläche der Developer Console generiert wird.](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
 

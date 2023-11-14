@@ -26,7 +26,7 @@ In diesem Dokument wird beschrieben, wie Sie die Erweiterung einrichten und Rege
 
 ## Voraussetzungen
 
-In diesem Dokument wird davon ausgegangen, dass Sie mit den relevanten Mailchimp-Produkten vertraut sind, die von der -Erweiterung genutzt werden. Weitere Informationen finden Sie in der Mailchimp-Hilfedokumentation für [Kampagnen](https://mailchimp.com/help/getting-started-with-campaigns/), [Journey](https://mailchimp.com/help/about-customer-journeys/)und [Transaktionen](https://mailchimp.com/help/transactional/).
+In diesem Dokument wird davon ausgegangen, dass Sie mit den relevanten Mailchimp-Produkten vertraut sind, die von der -Erweiterung genutzt werden. Weitere Informationen finden Sie in der Mailchimp-Hilfedokumentation für [Kampagnen](https://mailchimp.com/help/getting-started-with-campaigns/), [Journey](https://mailchimp.com/help/about-customer-journeys/), und [Transaktionen](https://mailchimp.com/help/transactional/).
 
 Für die Verwendung dieser Erweiterung ist ein Mailchimp-Konto erforderlich. Sie können sich für ein Konto anmelden [here](https://login.mailchimp.com/signup/). Notieren Sie sich im Dashboard des Mailchimp-Kontos die folgenden Werte, die in diesem Handbuch verwendet werden sollen:
 
@@ -43,7 +43,7 @@ Abhängig von Ihrem Mailchimp-Account-Plan haben Sie möglicherweise nur eingesc
 
 ### Domänenpräfix
 
-Nach der Anmeldung bei Mailchimp und dem Landing in der Dashboard-Ansicht sollte die Adressleiste Ihres Browsers eine URL wie `https://us11.admin.mailchimp.com` oder `us11.admin.mailchimp.com`. In diesem Beispiel wird das Präfix `us11` ist nur ein Platzhalter und Ihr Wert wird anders sein. Zeichnen Sie Ihre URL mit Ihrem Präfix für einen späteren Schritt auf.
+Nach der Anmeldung bei Mailchimp und dem Landing in der Dashboard-Ansicht sollte die Adressleiste Ihres Browsers eine URL wie `https://us11.admin.mailchimp.com` oder einfach `us11.admin.mailchimp.com`. In diesem Beispiel wird das Präfix `us11` ist nur ein Platzhalter und Ihr Wert wird anders sein. Zeichnen Sie Ihre URL mit Ihrem Präfix für einen späteren Schritt auf.
 
 ### API-Schlüssel
 
@@ -53,7 +53,7 @@ Auswählen **Extras**, dann **API-Schlüssel**:
 
 ![Extras-Menü, API-Schlüssel-Link](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
-under **Ihre API-Schlüssel** können Sie einen vorhandenen Schlüssel auswählen oder **Erstellen eines Schlüssels** , um eine neue zu erstellen. Sie können einen neuen Schlüssel erstellen, der speziell mit dieser Erweiterung verwendet werden soll. Kopieren Sie den API-Schlüssel und speichern Sie ihn für einen späteren Schritt. Weitere Informationen finden Sie in der Mailchimp-Dokumentation zum [API-Schlüssel generieren](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+under **Ihre API-Schlüssel**, können Sie einen vorhandenen Schlüssel auswählen oder **Schlüssel erstellen** , um eine neue zu erstellen. Sie können einen neuen Schlüssel erstellen, der speziell mit dieser Erweiterung verwendet werden soll. Kopieren Sie den API-Schlüssel und speichern Sie ihn für einen späteren Schritt. Weitere Informationen finden Sie in der Mailchimp-Dokumentation zum [API-Schlüssel generieren](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 ### Zielgruppen-ID und Absenderadresse
 
@@ -89,7 +89,7 @@ Wählen Sie in derselben Ereignisweiterleitungseigenschaft die Option **[!UICONT
 
 ![Installieren der Mailchimp-Erweiterung](../../../images/extensions/server/mailchimp/install.png)
 
-Der Konfigurationsbildschirm wird angezeigt. under **[!UICONTROL Mailchimp Server Prefix Domain Name]** Geben Sie die Domäne ein, die Sie zuvor aus Ihrem Mailchimp-Konto kopiert haben, einschließlich Ihres eindeutigen Domänenpräfixes.
+Der Konfigurationsbildschirm wird angezeigt. under **[!UICONTROL Mailchimp Server Prefix Domain Name]** Geben Sie die Domäne ein, die Sie zuvor aus Ihrem Mailchimp-Konto kopiert haben, einschließlich Ihres eindeutigen Domain-Präfixes.
 
 >[!IMPORTANT]
 >
@@ -97,7 +97,7 @@ Der Konfigurationsbildschirm wird angezeigt. under **[!UICONTROL Mailchimp Serve
 
 ![Erweiterungskonfiguration](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-under **[!UICONTROL Mailchimp-Token]**, wählen Sie das Datenelementsymbol aus und wählen Sie die `Mailchimp Token` -Datenelement, das Sie zuvor erstellt haben. Auswählen **[!UICONTROL Speichern]** , um die Änderungen zu speichern.
+under **[!UICONTROL Mailchimp-Token]**, wählen Sie das Datenelementsymbol und wählen Sie die `Mailchimp Token` -Datenelement, das Sie zuvor erstellt haben. Auswählen **[!UICONTROL Speichern]** , um die Änderungen zu speichern.
 
 Die Erweiterung wird jetzt installiert und für die Verwendung in Ihrer Eigenschaft konfiguriert.
 
@@ -115,7 +115,7 @@ Wenn beispielsweise ein Kunde einen Kauf tätigt oder sich für ein Ereignis auf
 
 Der Screenshot im vorherigen Abschnitt zeigt die Daten, die Sie mit jedem Ereignis von dieser Erweiterung an Mailchimp senden können. Nachdem Sie das Web SDK so konfiguriert haben, dass diese Daten an das Edge-Netzwerk gesendet werden, können Sie Datenelemente in der Ereignisweiterleitungseigenschaft erstellen, damit die Erweiterung auf diese Werte zugreifen kann.
 
-Die nachstehende Tabelle enthält weitere Details zu den einzelnen Werten.
+Die nachstehende Tabelle enthält für jeden möglichen Wert detailliertere Informationen.
 
 | Name | Beispielpfad | Typ | Beschreibung | Erforderlich | Beschränkungen |
 |:---|:---:|:---:|:---|:---:|:---|
@@ -130,7 +130,7 @@ Die nachstehende Tabelle enthält weitere Details zu den einzelnen Werten.
 
 >[!IMPORTANT]
 >  
->Die **Beispielpfad** -Werte sind nur Beispiele. Die Feldnamen und [Pfade](../../../ui/event-forwarding/overview.md#data-element-path) auf die in diesen Datenelementen verwiesen wird, kann in Ihrer Eigenschaft unterschiedlich sein, je nachdem, wie Sie das Web SDK in den oben genannten Schritten benannt und konfiguriert haben.
+>Die **Beispielpfad** -Werte sind nur Beispiele. Die Feldnamen und [paths](../../../ui/event-forwarding/overview.md#data-element-path) auf die in diesen Datenelementen verwiesen wird, kann in Ihrer Eigenschaft unterschiedlich sein, je nachdem, wie Sie das Web SDK in den oben genannten Schritten benannt und konfiguriert haben.
 
 In Ihrer Ereignisweiterleitungseigenschaft können Sie für jedes der oben genannten Felder ein Datenelement erstellen. Nach der Erstellung können Sie die Datenelemente im [!UICONTROL Ereignis hinzufügen] Aktion dieser Erweiterung.
 
@@ -144,4 +144,4 @@ Wenn Sie mit Erweiterungen für die Ereignisweiterleitung arbeiten, wird die [Ad
 
 ![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 
-Im Dashboard &quot;Mailchimp&quot;in der Ansicht &quot;Aktivitäts-Feed&quot;Ihrer Audience oder Audience-Mitglieder wird eine Liste der Ereignisse für diese Audience oder dieses Audience-Mitglied bereitgestellt. Dies sollte mit den von der Erweiterung gesendeten Ereignissen übereinstimmen und die gesendeten optionalen Daten zusammen mit der E-Mail oder Kampagne anzeigen, die sie erhalten haben. Siehe [Hilfeleitlinien zur Postimpfautomatisierung](https://mailchimp.com/help/automation/) für weitere Details.
+Im Dashboard &quot;Mailchimp&quot;in der Ansicht &quot;Aktivitäts-Feed&quot;Ihrer Audience oder Audience-Mitglieder wird eine Liste der Ereignisse für diese Audience oder dieses Audience-Mitglied bereitgestellt. Dies sollte mit den von der Erweiterung gesendeten Ereignissen übereinstimmen und die gesendeten optionalen Daten zusammen mit der E-Mail oder Kampagne anzeigen, die sie erhalten haben. Siehe [Hilfshandbücher für die Postimpfautomatisierung](https://mailchimp.com/help/automation/) für weitere Details.
