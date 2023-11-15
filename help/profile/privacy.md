@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 26%
+source-wordcount: '1739'
+ht-degree: 25%
 
 ---
 
@@ -46,13 +46,14 @@ Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] fi
 
 ## Übermitteln von Anfragen {#submit}
 
-In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für [!DNL Real-Time Customer Profile] mithilfe der [!DNL Privacy Service]-API oder -Benutzeroberfläche stellen. Bevor Sie diese Abschnitte lesen, wird dringend empfohlen, die [Privacy Service-API](../privacy-service/api/getting-started.md) oder [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) Dokumentation für die vollständigen Schritte zum Senden eines Datenschutzauftrags, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
+In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für [!DNL Real-Time Customer Profile] mithilfe der [!DNL Privacy Service]-API oder -Benutzeroberfläche stellen. Bevor Sie diese Abschnitte lesen, sollten Sie die [Privacy Service-API](../privacy-service/api/getting-started.md) oder [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) Dokumentation. Diese Dokumente enthalten vollständige Schritte zum Senden eines Datenschutzauftrags, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
 
 >[!IMPORTANT]
 >
 >Privacy Service kann nur verarbeitet werden [!DNL Profile] Daten mit einer Zusammenführungsrichtlinie verwenden, die keine Identitätszuordnung durchführt. Siehe Abschnitt zu [Einschränkungen bei Zusammenführungsrichtlinien](#merge-policy-limitations) für weitere Informationen.
 >
->Bitte beachten Sie, dass die Dauer des Abschlusses einer Datenschutzanfrage dauern kann **cannot** garantiert werden. Wenn Änderungen in Ihrer [!DNL Profile] -Daten, während eine Anforderung noch verarbeitet wird, unabhängig davon, ob diese Datensätze auch verarbeitet werden, nicht garantiert werden können.
+>Beachten Sie, dass Datenschutzanfragen asynchron innerhalb der regulatorischen Anforderungen verarbeitet werden. Die Zeit, die diese für die Durchführung benötigen, kann variieren. Wenn Änderungen in Ihrer [!DNL Profile] -Daten, während eine Anforderung noch verarbeitet wird, kann nicht garantiert werden, dass diese eingehenden Datensätze auch in dieser Anfrage verarbeitet werden. Es wird garantiert, dass nur Profile gelöscht werden, die zum Zeitpunkt der Anforderung des Datenschutzauftrags im Data Lake oder im Profilspeicher gespeichert sind. Wenn Sie während des Löschvorgangs Profildaten zum Betreff einer Löschanfrage erfassen, ist nicht garantiert, dass alle Profilfragmente gelöscht werden.
+>Es liegt in Ihrer Verantwortung, zum Zeitpunkt einer Löschanfrage alle in Platform oder Profile Service eingehenden Daten zu kennen, da diese Daten in Ihre Datensatzspeicher eingefügt werden. Sie müssen bei der Erfassung von Daten, die gelöscht wurden oder werden, vorsichtig sein.
 
 ### Verwenden der API
 
@@ -222,6 +223,6 @@ Privacy Service kann nur verarbeitet werden [!DNL Profile] Daten mit einer Zusam
 
 ## Nächste Schritte
 
-In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Experience Platform] erhalten. Um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen, lesen Sie bitte weiterhin die Dokumentation in diesem Handbuch.
+In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Experience Platform] erhalten. Um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen, lesen Sie weiterhin die Dokumentation in diesem Handbuch.
 
 Informationen zur Verarbeitung von Datenschutzanfragen für [!DNL Platform] nicht verwendete Ressourcen [!DNL Profile], siehe das Dokument unter [Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md).
