@@ -1,11 +1,11 @@
 ---
 title: Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies
-description: Erfahren Sie, wie Sie neue Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
+description: Erfahren Sie, wie Sie neue Kundinnen und Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
 source-wordcount: '2077'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 

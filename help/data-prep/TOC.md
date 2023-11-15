@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Datenvorbereitungsanleitung
-user-guide-description: Bereiten Sie Ihre Daten für die Aufnahme in Adobe Experience Platform vor und erfahren Sie, wie Sie mit der Datenvorbereitung Daten heute zuordnen, transformieren und validieren können.
+user-guide-description: Bereiten Sie Ihre Daten für die Aufnahme in Adobe Experience Platform vor und erfahren Sie noch heute, wie Sie mit der Datenvorbereitung Daten zuordnen, transformieren und validieren können.
 feature: Data Prep
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 60%
+ht-degree: 96%
 
 ---
 
