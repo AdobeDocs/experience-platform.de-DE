@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 09d17f6dad7bd7b1eda491e4fbd92e298243f3c3
+source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2571'
 ht-degree: 1%
 
 ---
@@ -63,19 +63,19 @@ Wählen Sie die **[!UICONTROL Symbol &quot;Assistent&quot;]** aus der Kopfzeile 
 
 ![Die Startseite der Experience Platform-Benutzeroberfläche mit ausgewähltem Assistenzsymbol.](./images/ai-assistant/ai-assistant.png)
 
-++ + Unterhaltungsmodus verwenden
+<!-- +++Use immersive mode
 
-Verwendung [!DNL Immersive mode] Wählen Sie das Fokussymbol in der Kopfzeilennavigation des Assistenten aus.
+To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
 ![select-immersive](./images/ai-assistant/select-immersive.png)
 
-Eine dedizierte Popup-Benutzeroberfläche für Assistenten wird in der Mitte Ihres Bildschirms angezeigt.
+A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 ![immersive-mode](./images/ai-assistant/immersive-mode.png)
 
 +++
 
-Von hier aus können Sie Ihre Frage in das Textfeld eingeben und den Abfrageassistenten für Konzepte zu Daten oder Audiences abfragen. Sie können auch Fragen zu Ihren Datenobjekten stellen, um besser zu verstehen, wie Sie sie für Ihren jeweiligen Anwendungsfall verwenden können.
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### Anwendungsbeispiel: Verwenden Sie den Assistenten, um die Erstellung Ihres Schemas zu beschleunigen
 
@@ -97,25 +97,45 @@ Eine gegebene Antwort bietet Hyperlinks zu allen referenzierten Entitäten. Wäh
 
 Assistenzkraft bietet Ihnen eine Möglichkeit, Ihre Antwort zu überprüfen, indem Sie die Quelle der Antwort anzeigen. Links zur Dokumentation werden für Konzeptfragen bereitgestellt, während Datennutzungsfragen mit einer SQL-Abfrage überprüft werden können, die zeigt, wie die Antwort berechnet wurde.
 
-![Optionen, die vom Assistenten nach der Rückgabe einer Antwort bereitgestellt werden.](./images/ai-assistant/options-post-answer.png)
-
-#### Verwandte Vorschläge
-
-Sie können auch das Thema Ihrer Abfrage vertiefen, indem Sie einen der entsprechenden Vorschläge auswählen, die Assistant bereitstellt.
-
-![Verwandte Vorschläge.](./images/ai-assistant/related-suggestions.png)
+![Optionen, die vom Assistenten nach der Rückgabe einer Antwort bereitgestellt werden.](./images/ai-assistant/options.png)
 
 #### Folgenachfrage
 
++++Auswählen , um ein Beispiel für eine Folgenachfrage anzuzeigen
+
 Sie können mehr über ein bestimmtes Thema erfahren, indem Sie eine Frage stellen. Im nächsten Beispiel wird der Assistent gefragt, wie der eventType in der Segmentierung verwendet werden kann.
 
-![Eine Frage und Antwort, die auf der Assistenzkraft für Experience Platform angezeigt werden.](./images/ai-assistant/follow-up-answer.png)
+![Eine Frage und Antwort, die auf der Assistenzkraft für Experience Platform angezeigt werden.](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### Frage zur Datennutzung
 
++++Auswählen , um ein Beispiel für eine Datennutzungsfrage anzuzeigen
+
 Sie können auch Fragen an den Assistenten bezüglich Ihrer Datennutzung stellen. Bei der Abfrage zur Datennutzung müssen Sie sich in einer aktiven Sandbox befinden, damit der Assistent Ihre Abfrage beantworten kann.
 
+Für Antworten, die Informationen zur Datennutzung enthalten, stellt Assistant Links zu den betreffenden Entitäten bereit. Darüber hinaus erläutert Ihnen Assistant, wie die Antwort berechnet wurde.
+
 ![Eine Frage zur Datennutzung, die fragt, wie viele Segmente ein Benutzer hat.](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### Autom. Abschluss verwenden
+
++++Auswählen , um ein Beispiel für die automatische Vervollständigung anzuzeigen
+
+Sie können die Funktion zum automatischen Ausfüllen verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung stehen für die folgenden Domänen zur Verfügung: Segmente, Schemas, Datensätze, Quellen und Ziele.
+
+Geben Sie zur Verwendung von &quot;autocomplete&quot;ein Pluszeichen (**`+`**) als Teil Ihrer Frage. Alternativ können Sie auch das Pluszeichen (**`+`**) im Texteingabefeld. Anschließend wird ein Fenster mit einer Liste empfohlener Datenobjekte angezeigt, die in Ihrer Sandbox vorhanden sind.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+Wählen Sie als Nächstes das Datenobjekt aus, das Sie abfragen möchten, um Ihre Frage abzuschließen, und senden Sie dann Ihre Frage.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## Anwendungsbereich
 
@@ -168,13 +188,9 @@ Sie können die Antwort, die der Assistent zurückgibt, auf verschiedene Weise �
 
 Bei jeder Antwort erhalten Sie von Assistant Zitate, auf die Sie zur Überprüfung oder zu weiteren Informationen verweisen können.
 
-Auswählen **[!UICONTROL Quelle anzeigen]** für eine Liste von Links zur Dokumentation, auf die der Assistent verweist, um seine Antwort zu berechnen.
+Auswählen **[!UICONTROL Quelle anzeigen]** für eine Liste von Links zur Dokumentation, auf die der Assistent verweist, um seine Antwort zu berechnen. Wenn Sie einen Link zur referenzierten Dokumentation auswählen, gelangen Sie zum entsprechenden Abschnitt dieser Seite, wobei die spezifischen Informationen hervorgehoben sind.
 
-![Die Links zur im Assistenten angezeigten Quelle.](./images/ai-assistant/sources.png)
-
-Für Antworten, die Informationen zur Datennutzung enthalten, stellt Assistant Links zu den betreffenden Entitäten bereit. Darüber hinaus erläutert Ihnen Assistant, wie die Antwort berechnet wurde.
-
-![Erläuterung](./images/ai-assistant/explanation.png)
+![Die Links zur im Assistenten angezeigten Quelle.](./images/ai-assistant/show-sources.png)
 
 ## Feedback geben
 
@@ -208,7 +224,7 @@ Wählen Sie das Daumen-nach-unten-Symbol aus, um Feedback dazu zu geben, was bas
 
 Wählen Sie das Flag-Symbol aus, um weitere Berichte über Ihr Erlebnis mit dem Assistenten anzuzeigen.
 
-![Das Fenster mit den Berichtsergebnissen.](./images/ai-assistant/report-results.png)
+![Das Fenster mit den Berichtsergebnissen.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 
