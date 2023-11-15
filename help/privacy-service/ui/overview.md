@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über die Privacy Service-Benutzeroberfläche
 description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfläche, um Datenschutzanfragen über verschiedene Experience Cloud-Applikationen hinweg zu koordinieren und zu überwachen.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 25%
+source-wordcount: '227'
+ht-degree: 23%
 
 ---
 
@@ -22,23 +22,24 @@ Die Privacy Service-Benutzeroberfläche [!DNL Privacy Service] ermöglicht die K
 
 >[!NOTE]
 >
->Informationen zum programmgesteuerten Verwalten von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie in der [Handbuch zur Privacy Service-API](../api/overview.md).
+>Informationen zum programmgesteuerten Verwalten von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie in der [Handbuch zur Privacy Service-API](../api/overview.md). Siehe Dokument Nr. [Verwalten von Privacy Service-Berechtigungen](../permissions.md) für weitere Informationen.
 
 ## Melden Sie sich bei der [!DNL Privacy Service]-Benutzeroberfläche an
 
 >[!IMPORTANT]
 >
->Sie müssen über eine Adobe ID verfügen, um sich bei der [!DNL Privacy Service] Benutzeroberfläche. Darüber hinaus müssen Sie in Ihrem Unternehmen über Systemadministratorberechtigungen verfügen.
+>Sie müssen über eine Adobe ID verfügen, um sich bei der [!DNL Privacy Service] Benutzeroberfläche.
 
 Um auf die Benutzeroberfläche zuzugreifen, melden Sie sich bei [Adobe Experience Cloud](https://experience.adobe.com/) und wählen **[!UICONTROL Datenschutz-Benutzeroberfläche]** unter dem Schnellzugriffsmenü.
 
-![](../images/ui-overview/quick-access.png)
+![Das Experience Cloud-Dashboard mit hervorgehobener Datenschutzbenutzeroberfläche.](../images/ui-overview/quick-access.png)
+
 
 ### Anmelden von [!DNL Experience Platform]
 
 Wenn Sie Zugriff auf die Adobe Experience Platform-Benutzeroberfläche haben, können Sie auch auf die [!DNL Privacy Service] Benutzeroberfläche durch **[!UICONTROL Anforderungen]** im linken Navigationsbereich.
 
-![](../images/ui-overview/platform.png)
+![Die Adobe Experience Platform-Benutzeroberfläche mit in der linken Navigationsleiste hervorgehobenen Anforderungen.](../images/ui-overview/platform.png)
 
 ## Nächste Schritte
 
