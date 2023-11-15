@@ -181,7 +181,7 @@ ht-degree: 94%
    * Social-Media-Ziele{#social}
       * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
-      * [LinkedIn Matched Audiences-Verbindung](./catalog/social/linkedin.md)
+      * [Verbindung für zugeordnete LinkedIn-Zielgruppen](./catalog/social/linkedin.md)
       * [TikTok-Verbindung](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences]-Verbindung](./catalog/social/twitter.md)
    * Streaming-Ziele {#streaming}

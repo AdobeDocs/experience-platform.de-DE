@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2769'
 ht-degree: 18%
 
 ---
@@ -264,6 +264,10 @@ Sie können einzelne **[!UICONTROL Batch-Kennung]** , um auf die **[!UICONTROL B
 ![Details zum ausgewählten Batch werden angezeigt. Dazu gehören die Anzahl der aufgenommenen Datensätze, die Anzahl der fehlgeschlagenen Datensätze, der Batch-Status, die Dateigröße, die Start- und Endzeiten der Aufnahme, die Datensatz- und Batch-IDs, die Organisations-ID, der Name des Datensatzes und die Zugriffsinformationen.](../images/datasets/user-guide/batch-overview.png)
 
 Wenn Sie den Batch löschen möchten, wählen Sie **[!UICONTROL Batch löschen]** oben rechts im Dashboard. Durch das Löschen eines Batches werden auch seine Datensätze aus dem Datensatz entfernt, in den der Batch ursprünglich aufgenommen wurde.
+
+>[!NOTE]
+>
+>Wenn die erfassten Daten für Profil aktiviert und verarbeitet wurden, werden diese Daten beim Löschen eines Batches nicht aus dem Profilspeicher gelöscht.
 
 ![Die Schaltfläche Batch löschen wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/delete-batch.png)
 
