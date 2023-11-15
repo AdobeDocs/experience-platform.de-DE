@@ -20,7 +20,7 @@ Mit [!DNL Segment Match] können Sie:
 * die Identitätsüberschneidung verwalten,
 * Schätzungen vor der Freigabe anzeigen,
 * Datennutzungs-Kennzeichnungen anwenden, um zu steuern, ob Daten für Partner freigegeben werden können,
-* nach der Veröffentlichung eines Feeds das freigegebene Audience-Lebenszyklus-Management pflegen und den dynamischen Datenaustausch durch Funktionen zum Hinzufügen, Löschen und Aufheben der Freigabe fortsetzen.
+* nach der Veröffentlichung eines Feeds das freigegebene Zielgruppen-Lebenszyklus-Management pflegen und den dynamischen Datenaustausch durch Funktionen zum Hinzufügen, Löschen und Aufheben der Freigabe fortsetzen.
 
 [!DNL Segment Match] verwendet einen Identitätsüberschneidungsprozess, um sicherzustellen, dass die Segmentfreigabe auf sichere und datenschutzorientierte Weise erfolgt. Eine **Identität mit Überschneidung** ist eine Identität, die sowohl in Ihrem Segment als auch im Segment Ihres ausgewählten Partners eine Übereinstimmung enthält. Vor der Freigabe eines Segments zwischen Absendenden und Empfangenden wird im Prozess zur Identitätsüberschneidung geprüft, ob Überschneidungen bei Namespaces und Einverständnisprüfungen zwischen Absendenden und Empfangenden vorhanden sind. Beide Überschneidungsprüfungen müssen bestanden werden, damit ein Segment freigegeben werden kann.
 

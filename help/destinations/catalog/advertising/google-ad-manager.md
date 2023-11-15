@@ -21,7 +21,7 @@ ht-degree: 78%
 Beachten Sie folgende Details, die speziell für [!DNL Google Ad Manager]-Ziele gelten:
 
 * Aktivierte Zielgruppen werden in der [!DNL Google]-Plattform programmgesteuert erstellt.
-* [!DNL Platform] umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Audience-Zahlen in Google, um die Integration zu validieren und die Audience-Größe zu verstehen.
+* [!DNL Platform] umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Zielgruppen-Zahlen in Google, um die Integration zu validieren und die Zielgruppen-Größe zu verstehen.
 * Nach dem Zuordnen einer Zielgruppe zu einem [!DNL Google Ad Manager] Ziel, wird der Zielgruppenname sofort im [!DNL Google Ad Manager] -Benutzeroberfläche.
 * Es dauert 24-48 Stunden, bis die Segmentpopulation in [!DNL Google Ad Manager] angezeigt wird. Darüber hinaus müssen Zielgruppen eine Zielgruppengröße von mindestens 50 Profilen aufweisen, damit sie in [!DNL Google Ad Manager]. Zielgruppen mit einer Größe von weniger als 50 Profilen werden nicht in [!DNL Google Ad Manager].
 

@@ -27,11 +27,11 @@ Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell 
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 
-In diesem Tutorial wird ein Beispiel für den Aufbau eines Audience-Insight-Datenmodells verwendet. Wenn Sie eine oder mehrere Advertiser-Plattformen verwenden, um Ihre Audience zu erreichen, können Sie die API des Advertisers verwenden, um eine ungefähre Anzahl von Übereinstimmungen mit Ihrer Audience zu erhalten.
+In diesem Tutorial wird ein Beispiel für den Aufbau eines Zielgruppen-Insight-Datenmodells verwendet. Wenn Sie eine oder mehrere Advertiser-Plattformen verwenden, um Ihre Zielgruppe zu erreichen, können Sie die API des Advertisers verwenden, um eine ungefähre Anzahl von Übereinstimmungen mit Ihrer Zielgruppe zu erhalten.
 
-Zu Beginn verfügen Sie über ein erstes Datenmodell aus Ihren Quellen (möglicherweise aus Ihrer Advertiser-Plattform-API). Um eine aggregierte Ansicht Ihrer Rohdaten zu erhalten, erstellen Sie ein Reporting-Insights-Modell wie in der folgenden Abbildung beschrieben. So kann ein Datensatz die oberen und unteren Grenzen der Audience-Übereinstimmung ermitteln.
+Zu Beginn verfügen Sie über ein erstes Datenmodell aus Ihren Quellen (möglicherweise aus Ihrer Advertiser-Plattform-API). Um eine aggregierte Ansicht Ihrer Rohdaten zu erhalten, erstellen Sie ein Reporting-Insights-Modell wie in der folgenden Abbildung beschrieben. So kann ein Datensatz die oberen und unteren Grenzen der Zielgruppen-Übereinstimmung ermitteln.
 
-![Ein Entitäts-Relations-Diagramm (ERD) des Audience-Insight-Benutzermodells.](../../images/query-accelerated-store/audience-insight-user-model.png)
+![Ein Entitäts-Relations-Diagramm (ERD) des Zielgruppen-Insight-Benutzermodells.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
 In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die `externalaudiencemapping` -Dimensionstabelle/-datensatz ordnet die externe ID einem Ziel und einer Zielgruppe in Platform zu.
 

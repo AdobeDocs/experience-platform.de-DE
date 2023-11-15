@@ -111,7 +111,7 @@ Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können
 
 ![Ein Bild, das zeigt, wie die Ordnerhierarchie für Zielgruppen funktioniert](../images/ui/segment-builder/audience-folder-structure.png)
 
-Sie können auch über die Suchleiste nach Zielgruppen suchen; dabei wird die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) verwendet. Wenn Sie auf dem Tab **[!UICONTROL Audiences]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. Wenn Sie beispielsweise eine Zielgruppen mit dem Namen `Online Shoppers` suchen, geben Sie in der Suchleiste „Online“ ein. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
+Sie können auch über die Suchleiste nach Zielgruppen suchen; dabei wird die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) verwendet. Wenn Sie auf der Registerkarte **[!UICONTROL Zielgruppen]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. Wenn Sie beispielsweise eine Zielgruppen mit dem Namen `Online Shoppers` suchen, geben Sie in der Suchleiste „Online“ ein. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
 
 ## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
 

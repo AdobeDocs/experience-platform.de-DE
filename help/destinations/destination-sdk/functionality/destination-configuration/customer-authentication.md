@@ -105,7 +105,7 @@ Um die Authentifizierung des Bearer-Typs für Ihr Ziel einzurichten, konfigurier
 
 ## OAuth 2-Authentifizierung {#oauth2}
 
-Benutzerinnen und Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel auszulösen (siehe folgendes Beispiel für das Ziel „Twitter Custom Audiences“). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authorization.md).
+Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss für Ihr Ziel auszulösen (siehe folgendes Beispiel für das Ziel „Benutzerdefinierte Twitter-Zielgruppen“). Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](oauth2-authorization.md).
 
 ![Darstellung der Benutzeroberfläche mit OAuth 2-Authentifizierung](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 

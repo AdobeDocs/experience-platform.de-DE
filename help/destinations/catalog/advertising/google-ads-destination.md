@@ -21,7 +21,7 @@ ht-degree: 97%
 Beachten Sie folgende Details, die speziell für [!DNL Google Ads]-Ziele gelten:
 
 * Aktivierte Zielgruppen werden in der [!DNL Google]-Plattform programmgesteuert erstellt.
-* [!DNL Platform] umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Audience-Zahlen in Google, um die Integration zu validieren und die Audience-Größe zu verstehen.
+* [!DNL Platform] umfasst derzeit keine Messmetrik zur Validierung erfolgreicher Aktivierungen. Konsultieren Sie die Zielgruppen-Zahlen in Google, um die Integration zu validieren und die Zielgruppen-Größe zu verstehen.
 
 >[!IMPORTANT]
 >

@@ -47,7 +47,7 @@ Alle benutzerbasierten Ziele, die in Audience Manager verfügbar sind – [Faceb
 
 Zusätzliche Erstanbieter-Daten- und -Medienstrategiepartner wie [Pinterest](/help/destinations/catalog/advertising/pinterest.md), [Snapchat](/help/destinations/catalog/advertising/snap-inc.md), [TikTok](/help/destinations/catalog/social/tiktok.md), [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) und [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md) sind verfügbar.
 
-Real-Time CDP unterstützt derzeit über 60 Ziele nativ im [Katalog](/help/destinations/catalog/overview.md), darunter mehr als 20 Werbe- oder Social-Ziele, die das Audience Matching von Erstanbietern unterstützen.
+Real-Time CDP unterstützt derzeit über 60 Ziele nativ im [Katalog](/help/destinations/catalog/overview.md), darunter mehr als 20 Werbe- oder Social-Ziele, die die Zielgruppen-Zuordnung von Erstanbietern unterstützen.
 
 ## Nächste Schritte
 

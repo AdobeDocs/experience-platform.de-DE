@@ -192,9 +192,9 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Nicht segmentierte Profile]](#unsegmented-profiles)
 * [[!UICONTROL Änderungs-Trend bei nicht segmentierten Profilen]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Nicht segmentierte Profile nach Identität]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL Audiences]](#audiences)
-* [[!UICONTROL Audiences, die einem Zielstatus zugeordnet sind]](#audiences-mapped-to-destination-status)
-* [[!UICONTROL Audience-Größe]](#audiences-size)
+* [[!UICONTROL Zielgruppen]](#audiences)
+* [[!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind]](#audiences-mapped-to-destination-status)
+* [[!UICONTROL Zielgruppen-Größe]](#audiences-size)
 * [[!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie]](#audience-overlap-by-merge-policy)
 * [[!UICONTROL Bericht zur Zielgruppenüberschneidung]](#audience-overlap-report)
 
@@ -410,7 +410,7 @@ Um ein Venn-Diagramm der Überschneidungsanalyse zu öffnen, wählen Sie eine Ze
 
 Wählen Sie **[!UICONTROL Schließen]** aus, um zum [!UICONTROL Profile]-Dashboard zurückzukehren.
 
-### [!UICONTROL Audiences, die einem Zielstatus zugeordnet sind] {#audiences-mapped-to-destination-status}
+### [!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind] {#audiences-mapped-to-destination-status}
 
 Die [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] -Widget zeigt die Gesamtanzahl der zugeordneten und nicht zugeordneten Zielgruppen in einer einzelnen Metrik an und verwendet ein Ringdiagramm, um den proportionalen Unterschied zwischen den Summen zu veranschaulichen. Die berechneten Zahlen hängen von der gewählten Zusammenführungsrichtlinie ab.
 
@@ -418,7 +418,7 @@ Wenn der Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt 
 
 ![Das Widget „Zielgruppen, die dem Zielstatus zugeordnet sind“.](../images/profiles/audiences-mapped-to-destination-status.png)
 
-### [!UICONTROL Audience-Größe] {#audiences-size}
+### [!UICONTROL Zielgruppen-Größe] {#audiences-size}
 
 Die [!UICONTROL Zielgruppengröße] -Widget bietet eine zweispaltige Tabelle, in der die Namen von bis zu 20 Zielgruppen und die Gesamtzahl der in den einzelnen Zielgruppen enthaltenen Profile aufgelistet werden. Die Liste wird in Abhängigkeit von der Gesamtzahl der in der Audience enthaltenen Profile von hoch bis niedrig geordnet. Die Gesamtzahl der Zielgruppengrößen hängt von der angewendeten Zusammenführungsrichtlinie ab.
 
