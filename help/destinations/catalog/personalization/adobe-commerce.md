@@ -2,10 +2,10 @@
 title: Adobe Commerce Destination Connector
 description: Erfahren Sie, wie Adobe Commerce- und Real-Time CDP-Händler das Einkaufserlebnis personalisieren können, indem sie hochrelevante Site-Inhalte und -Promotions bereitstellen, die auf in Real-Time CDP erstellte und verwaltete Kundenzielgruppen zugeschnitten sind.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: ddc4e877b3ae2f8b235faec1c29e71d389195e02
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 59%
+ht-degree: 58%
 
 ---
 
@@ -27,7 +27,7 @@ Um diese Zielverbindung zu verwenden, müssen Sie Zugriff auf Folgendes haben:
 
 Erstellen Sie in Experience Platform Folgendes:
 
-- [Schema](../../../xdm/schema/composition.md). Das Schema, das Sie erstellen, repräsentiert die Daten, die Sie aus Adobe Commerce aufnehmen möchten. [Erfahren Sie mehr](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html?lang=de) darüber, wie man ein Schema erstellt, das Commerce-spezifische Feldergruppen enthält.
+- [Schema](../../../xdm/schema/composition.md). Das Schema, das Sie erstellen, repräsentiert die Daten, die Sie aus Adobe Commerce aufnehmen möchten. [Erfahren Sie mehr](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) darüber, wie man ein Schema erstellt, das Commerce-spezifische Feldergruppen enthält.
 - [Datensatz](../../../catalog/datasets/user-guide.md#create). Ein Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten. Sie erstellen diesen Datensatz aus dem Schema, das Sie oben erstellt haben.
 - [Datenstrom](../../../datastreams/overview.md#create). ID, die den Datenfluss von Adobe Experience Platform zu anderen Adobe-DX-Produkten ermöglicht. Diese ID muss mit einer bestimmten Website in Ihrer jeweiligen Adobe Commerce-Instanz verknüpft sein. Wenn Sie diesen Datenstrom erstellen, geben Sie das von Ihnen oben erstellte XDM-Schema an.
 
@@ -73,7 +73,7 @@ Lesen [Profile und Zielgruppen für Profilanfrageziele aktivieren](../../ui/acti
 
 Nachdem Sie die [!DNL Commerce] Ziel innerhalb von Experience Platform, müssen Sie die [!DNL Audience Activation] Erweiterung in [!DNL Commerce] und konfigurieren Sie die [!DNL Commerce Admin] , um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
 
-## Validieren von Audience Activation in Commerce {#exported-data}
+## Validieren von Zielgruppen-Aktivierung in Commerce {#exported-data}
 
 Nachdem Sie Real-Time CDP-Zielgruppen für Ihre [!DNL Adobe Commerce] -Konto verwenden, werden diese Zielgruppen angezeigt, wenn Sie zum _Admin_ Seitenleiste, dann zu **[!UICONTROL Kunden]** > **[!UICONTROL Real-Time CDP Audience]**.
 
