@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Ereignissen oben und unten auf der Seite
 description: In diesem Artikel wird erläutert, wie Sie die Seitenereignisse oben und unten im Web SDK verwenden.
-source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Durch die Verwendung der Ereignisse oben und unten auf der Seite im Web SDK kann
 
 ## Beispiel für Seitenereignis oben {#top-of-page}
 
-Im folgenden Codebeispiel wird ein Anfang der Seitenereigniskonfiguration veranschaulicht, die eine Personalisierung anfordert, aber keine Anzeigebenachrichtigungen für automatisch gerenderte Vorschläge sendet. Die Anzeigenbenachrichtigungen werden als Teil des Seitenende-Ereignisses gesendet.
+Das folgende Codebeispiel veranschaulicht einen oberen Rand der Seitenereigniskonfiguration, der eine Personalisierung anfordert, jedoch nicht [Senden von Anzeigeereignissen](../personalization/display-events.md#send-sendEvent-calls) für automatisch gerenderte Vorschläge. Die [Anzeige von Ereignissen](../personalization/display-events.md#send-sendEvent-calls) wird als Teil des Seitenende-Ereignisses gesendet.
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 |---|---|---|
 | `type` | Erforderlich | Legen Sie diesen Parameter auf `decisioning.propositionFetch`. Dieser Ereignistyp weist Adobe Analytics an, dieses Ereignis abzulegen. Bei Verwendung von Customer Journey Analytics können Sie auch einen Filter einrichten, um diese Ereignisse abzulegen. |
 | `renderDecisions` | Erforderlich | Legen Sie diesen Parameter auf `true`. Dieser Parameter weist das Web SDK an, vom Edge Network zurückgegebene Entscheidungen zu rendern. |
-| `personalization.sendDisplayEvent` | Erforderlich | Legen Sie diesen Parameter auf `false`. Dadurch wird das Senden von Benachrichtigungen verhindert. |
+| `personalization.sendDisplayEvent` | Erforderlich | Legen Sie diesen Parameter auf `false`. Dadurch wird das Senden von Ereignissen verhindert. |
 
 >[!ENDTABS]
 
@@ -62,7 +62,7 @@ alloy("sendEvent", {
 
 >[!TAB Automatisch gerenderte Vorschläge]
 
-Das folgende Codebeispiel veranschaulicht einen unteren Teil der Seitenereigniskonfiguration, der Anzeigebenachrichtigungen für Vorschläge sendet, die automatisch auf der Seite gerendert wurden, für die jedoch Anzeigebenachrichtigungen unterdrückt wurden in [Seitenanfang](#top-of-page) -Ereignis.
+Das folgende Codebeispiel veranschaulicht einen unteren Teil der Seitenereigniskonfiguration, der Anzeigeereignisse für Vorschläge sendet, die automatisch auf der Seite gerendert wurden, für die jedoch Anzeigeereignisse unterdrückt wurden in [Seitenanfang](#top-of-page) -Ereignis.
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | Erforderlich | Legen Sie diesen Parameter auf `true`. Dies ermöglicht das Senden von Display-Benachrichtigungen, die oben im Seitenereignis unterdrückt wurden. |
+| `personalization.includeRenderedPropositions` | Erforderlich | Legen Sie diesen Parameter auf `true`. Dies ermöglicht das Senden von Anzeigeereignissen, die oben im Seitenereignis unterdrückt wurden. |
 | `xdm` | Optional | Verwenden Sie diesen Abschnitt, um alle Daten einzuschließen, die Sie für das Ende des Seitenereignisses benötigen. |
 
 >[!TAB Manuell gerenderte Vorschläge]
 
-Das folgende Codebeispiel veranschaulicht einen unteren Rand der Seitenereigniskonfiguration, der Anzeigebenachrichtigungen für Vorschläge sendet, die manuell auf der Seite gerendert wurden (d. h. für benutzerdefinierte Entscheidungsbereiche oder Oberflächen).
+Das folgende Codebeispiel veranschaulicht den unteren Rand der Seitenereigniskonfiguration, der Anzeigeereignisse für Vorschläge sendet, die manuell auf der Seite gerendert wurden (d. h. für benutzerdefinierte Entscheidungsbereiche oder Oberflächen).
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen den Vorschlag einbeziehen `ID`, `scope`, und `scopeDetails`. Weitere Informationen finden Sie in der Dokumentation [Personalisierung manuell rendern](../personalization/rendering-personalization-content.md#manually) für weitere Informationen zum Aufzeichnen von Anzeigebenachrichtigungen für manuell gerenderte Inhalte. Manuell gerenderte Personalisierungsinhalte müssen am Ende des Seitenaufrufs enthalten sein. |
+| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen den Vorschlag einbeziehen `ID`, `scope`, und `scopeDetails`. Weitere Informationen finden Sie in der Dokumentation [Personalisierung manuell rendern](../personalization/rendering-personalization-content.md#manually) für weitere Informationen zum Aufzeichnen von Anzeigeereignissen für manuell gerenderte Inhalte. Manuell gerenderte Personalisierungsinhalte müssen am Ende des Seitenaufrufs enthalten sein. |
 | `xdm._experience.decisioning.propositionEventType` | Erforderlich | Legen Sie diesen Parameter auf `display: 1`. |
 | `xdm` | Optional | Verwenden Sie diesen Abschnitt, um alle Daten einzuschließen, die Sie für das Ende des Seitenereignisses benötigen. |
 
@@ -149,7 +149,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
