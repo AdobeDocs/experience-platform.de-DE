@@ -2,14 +2,19 @@
 title: Pinterest Customer List-Verbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 51%
+source-wordcount: '844'
+ht-degree: 45%
 
 ---
 
 # [!DNL Pinterest Customer List]-Verbindung
+
+>[!IMPORTANT]
+>
+>* Ab dem 16. November 2023 werden im Zielkatalog zwei Pinterest-Karten nebeneinander angezeigt. Dies liegt an einem Upgrade der Pinterest Advertiser-API, die zum Exportieren von Daten in Pinterest verwendet wird. Der bestehende Pinterest-Ziel-Connector wurde in **[!UICONTROL (Veraltet) Pinterest]** und eine neue Karte **[!UICONTROL (Neu) Pinterest]** ist jetzt für Sie verfügbar.
+>* Verwenden Sie die **[!UICONTROL (Neu) Pinterest]** Verbindung im Katalog für alle Kampagnen mit Pinterest. Wenn Sie einen aktiven Datenfluss zum **[!UICONTROL (Veraltet) Pinterest]** Ziel, lesen Sie die [Upgrade-Dokumentation](/help/destinations/catalog/advertising/pinterest-upgrade.md) um Ihre Aktionselemente zu verstehen, um sicherzustellen, dass Ihre Kampagnen nicht gestört werden.
 
 ## Übersicht {#overview}
 
@@ -71,7 +76,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Advertiser-ID]**: Ihre Pinterest-Advertiser-ID.
+* **[!UICONTROL Anzeigen-Konto-ID]**: Ihre Pinterest-Advertiser-ID.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -95,3 +100,15 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 ## Zusätzliche Ressourcen {#additional-resources}
 
 Weitere Informationen finden Sie unter [Pinterest-Hilfeseite](https://help.pinterest.com/en/business/article/audience-targeting) für weitere Informationen.
+
++++ Änderungsprotokoll anzeigen
+
+
+| Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
+|---|---|---|
+| November 2023 | Funktions- und Dokumentationsaktualisierung | Das Pinterest-Ziel in Real-Time CDP verwendet jetzt die v5 Advertiser-API. |
+
+{style="table-layout:auto"}
+
+
++++
