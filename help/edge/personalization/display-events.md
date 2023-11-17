@@ -1,9 +1,9 @@
 ---
 title: Verwalten von Anzeigeereignissen im Web SDK
-description: In diesem Artikel wird beschrieben, was Anzeigeereignisse sind und wie sie im Web SDK funktionieren.
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+description: In diesem Artikel wird erläutert, was Anzeigeereignisse sind und wie Sie sie im Web SDK verwenden können.
+source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
