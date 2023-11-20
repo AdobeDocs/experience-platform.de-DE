@@ -3,14 +3,18 @@ title: Migration der pinterest-Ziele auf die neue API. Kundenaktion erforderlich
 description: Pinterest stellt die v4-Advertiser-API ein, die derzeit vom Pinterest-Ziel in Real-Time CDP verwendet wird. Machen Sie sich mit Ihren Aktionselementen vertraut, um ohne Unterbrechung Ihrer Pinterest-Kampagnen nahtlos zur neuen API zu wechseln.
 hide: true
 hidefromtoc: true
-source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
+source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
 # Pinterest-Ziel-Upgrade auf neue API. Vom 15. Dezember 2023 angeforderte Kundenaktion
+
+>[!IMPORTANT]
+>
+>Die Kundenaktionselemente auf dieser Seite gelten für Sie, wenn Ihr Unternehmen Datenflüsse eingerichtet hat, um Daten vor dem 16. November 2023 nach Pinterest zu exportieren (Datum, an dem die Variable **[!UICONTROL (Neu) Pinterest]** Das Ziel wurde mithilfe der neuesten Pinterest-API zum Zielkatalog hinzugefügt.
 
 ## Was geschieht?
 
@@ -26,7 +30,7 @@ Adobe veröffentlicht eine neue Pinterest-Zielkarte, die die Pinterest API v5 nu
 
 ## Muss ich irgendetwas tun, um meine aktivierten Zielgruppen funktionsfähig zu halten?
 
-Ja, sobald Adobe das Upgrade abgeschlossen und das neue Pinterest-Ziel veröffentlicht hat, müssen Sie sich mit Ihrem Pinterest-Advertiser-Konto in Real-Time CDP erneut bei Pinterest authentifizieren. Weitere Informationen finden Sie unten.
+Ja, nach dem 16. November 2023 müssen Sie sich mit Ihrem Pinterest-Advertiser-Konto in Real-Time CDP beim neuen Pinterest-Ziel authentifizieren. Weitere Informationen finden Sie unten.
 
 ### Erneutes Authentifizieren bei Pinterest {#reauthenticate}
 
