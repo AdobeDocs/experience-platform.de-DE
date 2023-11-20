@@ -1,18 +1,18 @@
 ---
-title: Standardmäßige Limits für Echtzeit-Kundenprofildaten
+title: Standardmäßige Limits für Daten und Segmentierung von Echtzeit-Kundenprofilen
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale Systemleistung gewährleistet ist.
+description: Erfahren Sie mehr über die Leistung und systemerzwungene Limits für Profildaten und die Segmentierung, um eine optimale Nutzung der Real-Time CDP-Funktionalität sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 69%
+source-wordcount: '2202'
+ht-degree: 66%
 
 ---
 
-# Standard-Leitplanken für [!DNL Real-Time Customer Profile]-Daten
+# Standardmäßige Limits für [!DNL Real-Time Customer Profile] Daten und Segmentierung
 
 Mit Adobe Experience Platform können Sie personalisierte kanalübergreifende Erlebnisse bereitstellen, die auf verhaltensbezogenen Einblicken und Kundenattributen in Form von Echtzeit-Kundenprofilen basieren. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
 
@@ -108,16 +108,17 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 
 {style="table-layout:auto"}
 
-## Leitplanken für die Segmentierung
+## Leitplanken für die Segmentierung {#segmentation-guardrails}
 
 Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Art der Zielgruppen, die eine Organisation innerhalb von Experience Platform erstellen kann, sowie auf die Zuordnung und Aktivierung von Zielgruppen zu Zielen.
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
-| Edge-Zielgruppen pro Sandbox | 150 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 150 Edge-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Zielgruppen enthalten sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
-| Streaming-Zielgruppen pro Sandbox | 500 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. |
+| Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) durch den Segment-Builder. |
+| Edge-Zielgruppen pro Sandbox | 150 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 150 Edge-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Zielgruppen enthalten sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
+| Streaming-Zielgruppen pro Sandbox | 500 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. Mehr dazu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
 | Batch-Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Zielgruppen enthalten sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
+| Konto-Zielgruppen pro Sandbox | 50 | Systemerzwungene Limits | Sie können nicht mehr als 50 Zielgruppen für ein Konto in einer Sandbox erstellen. Wenn Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird die **[!UICONTROL Erstellen einer Zielgruppe]** -Kontrolle beim Versuch, eine neue Konto-Audience zu erstellen, deaktiviert ist. Mehr dazu [Kontozielgruppen](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
