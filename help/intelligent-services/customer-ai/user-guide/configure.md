@@ -5,9 +5,9 @@ feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2824'
 ht-degree: 8%
 
 ---
@@ -197,15 +197,11 @@ Zusätzlich zu den [Standardereignisfelder](../data-requirements.md#standard-eve
 
 #### Profilattribute aus dem Profil-Snapshot-Export auswählen
 
-Sie können auch Profilattribute aus dem täglichen Profil-Snapshot-Export einbeziehen. Diese Attribute werden mit dem Profil-Snapshot-Export synchronisiert und zeigen den zuletzt verfügbaren Wert an.
+Sie können auch Profilattribute aus dem täglichen Profil-Snapshot-Export einbeziehen. Diese Attribute werden mit dem Profil-Snapshot-Export synchronisiert und zeigen den zuletzt verfügbaren Wert an. Sie werden automatisch angezeigt und erfordern nicht, dass im Konfigurationsschritt ein Datensatz ausgewählt wird.
 
 >[!WARNING]
 >
-> Achten Sie darauf, kein Profilattribut auszuwählen, das aufgrund des Prognoseziels aktualisiert oder stark mit dem Prognoseziel korreliert wird. Dies führt zu Datenlecks und Überanpassung des Modells. Ein Beispiel für ein solches Attribut ist `total_purchases_in_the_last_3_months` die Kaufkonversion vorhersagt.
-
->[!NOTE]
->
->Unterstützung für die Verwendung von Profilattributen aus dem UPS Snapshot-Export ist auf Anfrage in der Benutzeroberfläche verfügbar.
+> Wählen Sie kein Profilattribut aus, das aufgrund des Prognoseziels aktualisiert wurde oder in hohem Maße mit dem Prognoseziel korreliert ist. Dies führt zu Datenlecks und Überanpassung des Modells. Beispiel: `total_purchases_in_the_last_3_months` ist ein Attribut, das die Kaufkonversion vorhersagt.
 
 ### Beispiel für benutzerspezifisches Ereignis hinzufügen {#custom-event}
 
@@ -264,3 +260,5 @@ Das folgende Video unterstützt Sie beim Verständnis des Konfigurations-Workflo
 > Das folgende Video ist veraltet. Die aktuellsten Informationen finden Sie in der Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
+<!-- comment -->
