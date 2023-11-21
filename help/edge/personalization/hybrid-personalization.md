@@ -3,10 +3,10 @@ title: Hybride Personalisierung mit Web SDK und Edge Network Server API
 description: In diesem Artikel wird gezeigt, wie Sie das Web SDK in Verbindung mit der Server-API verwenden können, um hybride Personalisierung in Ihren Web-Eigenschaften bereitzustellen.
 keywords: Personalisierung;hybride;Server-API;Server-seitig;Hybridimplementierung;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 99%
+source-wordcount: '846'
+ht-degree: 96%
 
 ---
 
@@ -70,7 +70,7 @@ Wenn Sie für Analytics [einen Datenstrom konfigurieren](../../datastreams/overv
 Das Beispiel aus dieser Implementierung verwendet zwei verschiedene Datenströme:
 
 * Ein für Analytics konfigurierter Datenstrom. Dieser Datenstrom wird für Web SDK-Interaktionen verwendet.
-* Ein zweiter Datenstrom ohne eine Analytics-Konfiguration. Dieser Datenstrom wird für Server-API-Anfragen verwendet.
+* Ein zweiter Datenstrom ohne eine Analytics-Konfiguration. Dieser Datenstrom wird für Server-API-Anfragen verwendet. Sie müssen diesen Datastream mit derselben Zielkonfiguration wie den für Analytics konfigurierten Datastream konfigurieren.
 
 Auf diese Weise werden bei der Server-seitigen Anforderung keine Analytics-Ereignisse registriert, bei den Client-seitigen Anforderungen jedoch schon. Dies führt dazu, dass Analytics-Anforderungen genau gezählt werden.
 
