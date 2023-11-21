@@ -5,7 +5,7 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
+source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 1%
@@ -77,7 +77,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### Anwendungsbeispiel: Verwenden Sie den Assistenten, um die Erstellung Ihres Schemas zu beschleunigen
+### Anwendungsbeispiel: Verwenden Sie den Assistenten, um die Erstellung Ihres Schemas zu beschleunigen {#example-use-case}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Assistenzkraft bietet Ihnen eine Möglichkeit, Ihre Antwort zu überprüfen, ind
 
 ![Optionen, die vom Assistenten nach der Rückgabe einer Antwort bereitgestellt werden.](./images/ai-assistant/options.png)
 
-#### Folgenachfrage
+### Folgenachfrage {#follow-up-question}
 
 +++Auswählen , um ein Beispiel für eine Folgenachfrage anzuzeigen
 
@@ -109,7 +109,7 @@ Sie können mehr über ein bestimmtes Thema erfahren, indem Sie eine Frage stell
 
 +++
 
-#### Frage zur Datennutzung
+### Frage zur Datennutzung {#data-usage-question}
 
 +++Auswählen , um ein Beispiel für eine Datennutzungsfrage anzuzeigen
 
@@ -121,7 +121,7 @@ Für Antworten, die Informationen zur Datennutzung enthalten, stellt Assistant L
 
 +++
 
-#### Mehrfachumschaltung
+### Mehrfachumschaltung {#multi-turn}
 
 +++Auswählen, um ein Beispiel für eine Mehrfachumstellung anzuzeigen
 
@@ -137,7 +137,7 @@ Als Nächstes erhält die Assistenzkraft eine weitere Anfrage zur Nachverfolgung
 
 +++
 
-#### Autom. Abschluss verwenden
+### Autom. Abschluss verwenden {#use-auto-complete}
 
 +++Auswählen , um ein Beispiel für die automatische Vervollständigung anzuzeigen
 
@@ -153,7 +153,7 @@ Wählen Sie als Nächstes das Datenobjekt aus, das Sie abfragen möchten, um Ihr
 
 +++
 
-## Anwendungsbereich
+## Anwendungsbereich {#scope}
 
 Der Assistent kann Fragen zu Real-Time CDP- und Experience Platform-Konzepten sowie zur spezifischen Datennutzung für Ihr Benutzerkonto beantworten. Der Assistent kann auch Kontext basierend auf der Benutzeroberflächen-Seite abrufen, in der Sie sich befinden. Sie kann Folgendes identifizieren:
 
@@ -163,13 +163,13 @@ Der Assistent kann Fragen zu Real-Time CDP- und Experience Platform-Konzepten so
 * Die Ressource (einschließlich Typ und ID), die Sie auf Ihrem Bildschirm anzeigen.
 * Da Sie sich in einem bestimmten Experience Platform- oder Real-Time CDP-Workflow befinden, kann der Assistent Ihre Absicht verkünden.
 
-### Dokumentation
+### Dokumentation {#documentation}
 
 Derzeit umfasst der Dokumentationsindex Adobe Experience Platform (Real-Time CDP und Audiences). Der Index wird regelmäßig aktualisiert.
 
 Das Modell zum Abrufen der Dokumentation wird auf Experience Platform (Real-Time CDP und Zielgruppen) trainiert. Fragen, die nicht in Adobe Experience Platform enthalten sind, wie z. B. Fragen zu anderen Adobe-Produkten wie Adobe Target und der Creative Cloud Suite, können nicht beantwortet werden.
 
-### Datennutzung
+### Datennutzung {#data-usage}
 
 Sie können Assistenzfragen auch zur Datennutzung in den folgenden Domänen stellen:
 
@@ -184,7 +184,7 @@ Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen
 
 Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten wie Schemas, Datensätzen, Attributen, Zielen und Segmenten zu informieren.
 
-### Beispielhafte Fragen zur Datennutzung
+### Beispielhafte Fragen zur Datennutzung {#example-data-usage-questions}
 
 +++Auswählen, um eine Liste mit Beispieldatenverwendungsfragen anzuzeigen
 
@@ -196,11 +196,11 @@ Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Ob
 
 +++
 
-## Überprüfen der Antwort
+## Überprüfen der Antwort {#verify-the-response}
 
 Sie können die Antwort, die der Assistent zurückgibt, auf verschiedene Weise überprüfen.
 
-### Zitate zur Dokumentation
+### Zitate zur Dokumentation {#citations}
 
 Bei jeder Antwort erhalten Sie von Assistant Zitate, auf die Sie zur Überprüfung oder zu weiteren Informationen verweisen können.
 
@@ -208,7 +208,7 @@ Auswählen **[!UICONTROL Quelle anzeigen]** für eine Liste von Links zur Dokume
 
 ![Die Links zur im Assistenten angezeigten Quelle.](./images/ai-assistant/show-sources.png)
 
-## Feedback geben
+## Feedback geben {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -246,11 +246,11 @@ Wählen Sie das Flag-Symbol aus, um weitere Berichte über Ihr Erlebnis mit dem 
 
 +++
 
-## Weitere Informationen
+## Weitere Informationen {#additional-information}
 
 Weitere Informationen zum Assistenten für Experience Platform finden Sie in diesem Abschnitt .
 
-### Einschränkungen
+### Einschränkungen {#caveats-and-limitations}
 
 Im folgenden Abschnitt werden die Einschränkungen und Einschränkungen erläutert, die bei der Verwendung des Assistenten beachtet werden müssen.
 <!-- 
@@ -318,7 +318,7 @@ Die Assistenzkraft kann einen ungenauen Eindruck davon vermitteln, was sie tun k
 | &quot;Weißt du das? **x** Sprache?&quot; | Die Assistenzkraft unterstützt derzeit nur Englisch, kann aber &quot;Ja&quot;beantworten, da das zugrunde liegende Modell es unterstützen kann. |
 | &quot;Können Sie...?&quot; | Die Assistenzkraft kann ja antworten, auch wenn dies nicht möglich ist. |
 
-### Tipps
+### Tipps {#tips}
 
 Im folgenden Abschnitt finden Sie einige Tipps und Problemumgehungen, die bei der Verwendung von Assistenzkräften beachtet werden müssen.
 
