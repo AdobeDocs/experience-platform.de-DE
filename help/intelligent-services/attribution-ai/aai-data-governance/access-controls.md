@@ -5,14 +5,14 @@ feature: Attribution AI
 title: Zugriffssteuerung für Attributions-KI
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung für Attributions-KI.
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 100%
+source-wordcount: '493'
+ht-degree: 99%
 
 ---
 
-# Zugriffssteuerung
+# Zugriffssteuerung in Attribution AI
 
 Die Zugriffssteuerung für Attributions-KI wird über Adobe Experience Platform in [Adobe Admin Console](https://adminconsole.adobe.com/) bereitgestellt Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 

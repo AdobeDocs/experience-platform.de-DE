@@ -5,14 +5,14 @@ feature: Attribution AI
 title: Data Governance in Attributions-Ki
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten gemäß Ihren Geschäftspraktiken, Ihren rechtlichen Verpflichtungen und Ihrem Entwicklungsprozess sicher steuern können.
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 100%
+source-wordcount: '224'
+ht-degree: 98%
 
 ---
 
-# Attributions-KI und Data Governance
+# Attributions-KI und Data Governance in Attribution AI
 
 Sämtliche Einstellungen mit Bezug zu Data Governance in Attributions-KI werden von Adobe Experience Platform übernommen.
 

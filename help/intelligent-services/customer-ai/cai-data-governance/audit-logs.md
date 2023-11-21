@@ -3,14 +3,14 @@ keywords: Insights;Kunden-KI;Kunden-KI-Insights;CAI-Query-Service;Kunden-KI-Abfr
 title: Audit-Protokolle in Kunden-KI – Übersicht
 description: Erfahren Sie, wie Sie Audit-Protokolle in Kunden-KI anzeigen und verwalten.
 exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 100%
+source-wordcount: '282'
+ht-degree: 98%
 
 ---
 
-# Audit-Protokolle
+# Audit-Protokolle in Customer AI
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, werden Benutzeraktivitäten innerhalb des Kunden-KI-Workflows jetzt in Audit-Protokollen erfasst, um benutzergesteuerte Änderungen an den Kunden-KI-Modellen nachzuvollziehen. Diese Protokolle bilden einen Audit-Trail, der Ihnen bei der Fehlerbehebung und Ihrem Unternehmen helfen kann, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.  Wenn Sie dem US-amerikanischen Health Insurance Portability and Accounability Act (HIPAA) zum Schutz von Patientendaten unterliegen und zulässige sensible personenbezogene Daten über Attributions-KI oder Kunden-KI erstellen, empfangen, verwalten oder übertragen, sind Sie für die Ausführung einer Geschäftspartnervereinbarung mit Adobe und Healthcare Shield-Lizenzierung verantwortlich.
 
