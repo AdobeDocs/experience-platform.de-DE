@@ -2,11 +2,13 @@
 title: Verwandte Konten in Real-Time CDP B2B Edition
 type: Documentation
 description: Eine Übersicht und weitere Informationen über die zugehörige Kontofunktion in Experience Platform Real-Time CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 23%
+source-wordcount: '441'
+ht-degree: 22%
 
 ---
 
@@ -18,11 +20,11 @@ B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gesp
 
 | ID | Name | Website | Branche | Land | Telefon | Hat eine Opportunity mit dem Wert > `$1 million` |
 |---|---|---|---|---|---|---|
-| 1 | Acme | acme.com | Software | CA | (408)536-6000 |  |
+| 1 | Acme | acme.com | Software | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
-| 3 | Acme Inc |  |  | CA | (408)5366000 |  |
+| 3 | Acme Inc |   |   | CA | (408)5366000 |   |
 | 4 | Acme Consulting Service | `http://www.acme.com/consulting` | Technologieberatung | NY | (212)471-0904 | x |
-| 5 | Acme IT |  |  | CA |  |  |
+| 5 | Acme IT |   |   | CA |   |   |
 
 {style="table-layout:auto"}
 
@@ -30,13 +32,13 @@ mit den entsprechenden Konten, [!DNL Real-Time CDP B2B] zeigt Ihnen jetzt eine L
 
 ![Bildschirm mit verwandten Konten in der Experience Platform-Benutzeroberfläche.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Verwenden Sie diese Funktion, um verwandte Kontoprofile für ein Kontoprofil in der Experience Platform-Benutzeroberfläche anzuzeigen und dann die zugehörigen Konten in Ihre Segmentdefinitionen aufzunehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren  anzuwenden.
+Verwenden Sie diese Funktion, um verwandte Kontoprofile für ein Kontoprofil in der Experience Platform-Benutzeroberfläche anzuzeigen und dann die zugehörigen Konten in Ihre Segmentdefinitionen aufzunehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren Segmenten anzuwenden.
 
 ## Aktivieren des zugehörigen Kontodienstes {#enable}
 
 Um den Dienst zu aktivieren, wählen Sie **[!UICONTROL Profile]** in der Seitenleiste gefolgt von **[!UICONTROL Einstellungen]**.
 
-![Experience Platform-Benutzeroberfläche zur Hervorhebung von Profilen und Einstellungen.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![Experience Platform-UI, die Profile und Einstellungen hervorhebt.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
 Umschalten neben [!UICONTROL Zugehörige Konten aktivieren] , um den Dienst zu aktivieren, und wählen Sie dann **[!UICONTROL Speichern]**.
 
@@ -50,18 +52,18 @@ Tägliche Aufträge für maschinelles Lernen verwenden einen hierarchischen Algo
 * Webdomäne
 * Kontoname
 
-Nach einem erfolgreichen Verarbeitungsauftrag wird jedes Mitglied der Kontoprofilgruppe mit der Liste &quot;Zugehörige Konten&quot;getaggt. Sie können die Liste im **Verwandte Konten** auf der Seite &quot;Kontoprofil&quot;ein und verwenden Sie die zugehörigen Konten in Segmentdefinitionen.
+Nach einem erfolgreichen Verarbeitungsauftrag wird jedes Mitglied der Kontoprofilgruppe mit der Liste Zugehörige Konten markiert. Sie können die Liste im **Verwandte Konten** auf der Seite &quot;Kontoprofil&quot;ein und verwenden Sie die zugehörigen Konten in den Segmentdefinitionen.
 
-Weitere Informationen zu [Vorgänge im Zusammenhang mit der Profilanreicherung](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Weitere Informationen zu den [Vorgänge im Zusammenhang mit der Profilanreicherung](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
 
 ## Darstellung verwandter Konten {#how-to-view}
 
-Sie können zugehörige Konten für ein Konto, das Sie durchsuchen, in der Benutzeroberfläche von Experience Platform anzeigen.
+Sie können zugehörige Konten für ein Konto, das Sie durchsuchen, in der Experience Platform-Benutzeroberfläche anzeigen.
 
-Weitere Informationen zu [Finden verwandter Konten in der Benutzeroberfläche](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
+Weitere Informationen zu den [Finden verwandter Konten in der Benutzeroberfläche](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
 
 ## Verwendung verwandter Konten {#how-to-use}
 
 Sie können Konten und zugehörige Konten bei der Segmentierung verwenden. Die Entscheidung, ob verwandte Konten in Ihren Segmentdefinitionen verwendet werden sollen, hängt von Ihrem Marketing-Anwendungsfall ab. Sie können beispielsweise verwandte Konten für E-Mail-Marketing- oder Werbekampagnen verwenden, bei denen Sie im Austausch für eine größere Reichweite eine geringere Genauigkeit akzeptieren können.
 
-Siehe [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-accounts) verwendet verwandte Konten.
+Siehe [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-accounts) , die verwandte Konten verwendet.

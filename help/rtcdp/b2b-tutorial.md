@@ -3,11 +3,13 @@ keywords: RTCDP; CDP; B2B Edition; Real-time Customer Data Platform; Echtzeit-Ku
 solution: Experience Platform
 title: Erste Schritte mit Real-time Customer Data Platform B2B Edition
 description: Verwenden Sie dieses Beispielszenario als Beispiel für die Einrichtung Ihrer Implementierung von Adobe Real-time Customer Data Platform B2B Edition.
+feature: Get Started, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 82%
+source-wordcount: '1216'
+ht-degree: 81%
 
 ---
 
@@ -88,7 +90,7 @@ In diesem Beispiel findet das Segment alle Personen, die in der Verkaufsabteilun
 
 Mit Segment Builder können Sie aus Echtzeit-Kundenprofildaten eine vermarktbare Zielgruppe erstellen und Schätzungen Ihrer potenziellen Zielgruppe basierend auf der Kombination von Attributen, Ereignissen und vorhandenen Zielgruppen anzeigen, die Sie definiert haben.
 
-## Aktivieren von evaluierten Daten für ein Ziel
+## Aktivieren von ausgewerteten Daten für ein Ziel
 
 Nachdem das Segment erfolgreich erstellt wurde, wird im Abschnitt [!UICONTROL Details] des Arbeitsbereichs eine Zusammenfassung bereitgestellt. Da derzeit keine Ziele für das Segment aktiviert sind, muss der Bodea-Marketing-Experte die Zielgruppe in einen Datensatz exportieren, sodass der Zugriff und die Bearbeitung der Zielgruppe möglich ist.
 
@@ -104,4 +106,4 @@ Der Bodea-Marketing-Experte aktiviert das Segment für das Marketo-Ziel, das es 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich die verschiedenen Adobe Experience Platform-Dienste genutzt, die von Real-Time CDP B2B Edition verwendet werden. Sie haben gelernt, Ihre B2B-Daten als verwertbare Zielgruppen aufzunehmen, zu segmentieren, zu bewerten und zu exportieren, wobei diese Zielgruppen kanalübergreifend angesprochen werden können.
+In diesem Tutorial haben Sie erfolgreich die verschiedenen Adobe Experience Platform-Dienste genutzt, die von Real-Time CDP B2B Edition verwendet werden. Sie haben gelernt, Ihre B2B-Daten als verwertbare Zielgruppen aufzunehmen, zu segmentieren, auszuwerten und zu exportieren, wobei diese Zielgruppen kanalübergreifend angesprochen werden können.

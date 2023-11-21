@@ -2,11 +2,13 @@
 title: Prädiktive Lead- und Kontobewertung in Real-Time CDP B2B
 type: Documentation
 description: Eine Übersicht und weitere Informationen zur prädiktiven Lead- und Kontoauswertungsfunktion in der Experience Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 12%
+source-wordcount: '869'
+ht-degree: 14%
 
 ---
 
@@ -14,7 +16,7 @@ ht-degree: 12%
 
 B2B-Marketer stehen oben im Marketing-Trichter vor mehreren Herausforderungen. Um effektiv zu sein, benötigen B2B-Marketer eine automatisierte Möglichkeit, die große Anzahl von Personen zu qualifizieren, sodass sie sich auf die hochwertigen Ziele konzentrieren können. Die Qualifizierung sollte an dem endgültigen Verkaufsergebnis ausgerichtet werden, nicht nur an der Marketing-Konversion.
 
-Konten, sind die ultimativen Einheiten, die B2B-Produkte und -Dienstleistungen erwerben. Um effektiv zu vermarkten und zu verkaufen, müssen B2B-Marketer nicht nur die Wahrscheinlichkeit des Kaufs des Einzelnen, sondern auch die des Kontos kennen.
+Konten, sind die ultimativen Einheiten, die B2B-Produkte und -Dienstleistungen erwerben. Um effektiv zu vermarkten und zu verkaufen, müssen B2B-Marketer nicht nur die Wahrscheinlichkeit kennen, mit der die Person, sondern auch das Konto, kaufen kann.
 
 Kontenbasiertes Marketing, insbesondere die strategische Ausrichtung von Konten als Marketingziele. Die Neigung zum Kauf von Konten hilft den B2B-Marketingexperten bei der Priorisierung der Konten, um ihre Rendite zu maximieren.
 
@@ -78,17 +80,17 @@ Es werden mehrere Modelle unterstützt, wobei die folgenden harten Grenzwerte fe
 
 Die Datenqualitätsanforderungen lauten wie folgt:
 
-* Idealerweise gibt es die zwei Jahre aktuellsten Daten für Trainingszwecke.
+* Idealerweise gibt es die zwei Jahre aktuellsten Daten für Schulungszwecke.
 * Die erforderliche Mindestlänge der Daten beträgt sechs Monate plus Prognosefenster.
 * Für jedes Prognoseziel sind mindestens 10 qualifizierte Konversionsereignisse erforderlich.
 
 Scoring-Aufträge werden täglich ausgeführt und die Ergebnisse werden als Profilattribute und Kontoattribute gespeichert, die dann in Segmentdefinitionen und in der Personalisierung verwendet werden können. Native Analytics-Einblicke sind auch im Dashboard für die Kontoübersicht verfügbar.
 
-Weitere Informationen zum [prädiktive Lead- und Kontobewertung verwalten](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) Dienst.
+Weitere Informationen zum [prädiktive Lead- und Kontobewertung verwalten](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) -Dienst.
 
 ## Prognoseergebnisse für Lead- und Kontoauswertung anzeigen {#how-to-view}
 
-Nach Ausführung des Auftrags werden die Ergebnisse in einem neuen Systemdatensatz für jedes Modell unter dem Namen gespeichert `LeadsAI.Scores` - ***den Namen der Punktzahl***. Jede Feldergruppe mit Punktzahl kann sich unter `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Nach Ausführung des Auftrags werden die Ergebnisse in einem neuen Systemdatensatz für jedes Modell unter dem Namen gespeichert `LeadsAI.Scores` - ***den Namen der Punktzahl***. Jede Feldergruppe für Bewertungen kann sich unter `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | Attribut | Beschreibung |
 | --- | --- |
@@ -96,7 +98,7 @@ Nach Ausführung des Auftrags werden die Ergebnisse in einem neuen Systemdatensa
 | Perzentil | Dieser Wert enthält Informationen zur Leistung eines Profils im Vergleich zu anderen Profilen mit ähnlichen Werten. Die Perzentile liegen zwischen 1 und 100. |
 | Modelltyp | Der ausgewählte Modelltyp gibt an, ob es sich um eine Person oder ein Kontoergebnis handelt. |
 | Datum der Auswertung | Das Datum, an dem die Auswertung erfolgte. |
-| Einflussfaktoren | Prognostizierte Gründe, warum ein Profil wahrscheinlich konvertiert wird. Die Faktoren bestehen aus den folgenden Attributen:<ul><li>Code: Das Profil- oder Verhaltensattribut, das das prognostizierte Ergebnis eines Profils positiv beeinflusst.</li><li>Wert: Der Wert des Profil- oder Verhaltensattributs.</li><li>Wichtig: Gibt die Gewichtung an, die das Profil- oder Verhaltensattribut auf das prognostizierte Ergebnis hat (niedrig, mittel, hoch).</li></ul> |
+| Einflussfaktoren | Prognostizierte Gründe, warum ein Profil wahrscheinlich konvertiert wird. Die Faktoren bestehen aus den folgenden Attributen:<ul><li>Code: Das Profil- oder Verhaltensattribut, das das prognostizierte Ergebnis eines Profils positiv beeinflusst.</li><li>Wert: Der Wert des Profil- oder Verhaltensattributs.</li><li>Wichtigkeit: Gibt die Gewichtung an, die das Profil- oder Verhaltensattribut auf das prognostizierte Ergebnis hat (niedrig, mittel, hoch).</li></ul> |
 
 ### Anzeigen von Kundenprofilbewertungen
 

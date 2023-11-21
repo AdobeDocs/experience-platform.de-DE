@@ -2,8 +2,9 @@
 keywords: Data Governance rtcdp;rtcdp Data Governance;Echtzeit-Data Profil Data Governance
 title: Data Governance – Übersicht
 description: Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen.
+feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 34%

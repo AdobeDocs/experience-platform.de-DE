@@ -2,10 +2,12 @@
 title: Prädiktive Lead- und Kontobewertung in Real-Time CDP B2B verwalten
 type: Documentation
 description: Dieses Dokument enthält Informationen zur Verwaltung der prädiktiven Lead- und Kontoauswertungsfunktion in der Experience Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1029'
 ht-degree: 4%
 
 ---
@@ -16,11 +18,11 @@ ht-degree: 4%
 >
 >Nur Benutzer mit der Berechtigung B2B AI verwalten können Bewertungsziele erstellen, ändern und löschen.
 
-Dieses Tutorial führt Sie durch die Schritte zum Verwalten der Bewertungsziele des prädiktiven Lead- und Kontoauswertungsdienstes. Score-Ziele können entweder für das Personenprofil oder das Kontoprofil festgelegt werden.
+Dieses Tutorial führt Sie durch die Schritte zum Verwalten der Bewertungsziele des prädiktiven Lead- und Kontoauswertungsdienstes. Score-Ziele können entweder für Personenprofile oder Kontoprofile festgelegt werden.
 
 ## Neues Ergebnis erstellen
 
-Um eine neue Punktzahl zu erstellen, wählen Sie die **[!UICONTROL Dienste]** in der Seitenleiste und wählen Sie **[!UICONTROL Ergebnis erstellen]**.
+Um eine neue Punktzahl zu erstellen, wählen Sie die **[!UICONTROL Dienste]** in der Seitenleiste und wählen Sie **[!UICONTROL Punktzahl erstellen]**.
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
@@ -28,7 +30,7 @@ Die **[!UICONTROL Basisinformationen]** angezeigt, in dem Sie aufgefordert werde
 
 ![plas-enter-basic-information](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-Die **[!UICONTROL Ziel definieren]** angezeigt. Wählen Sie den Dropdown-Pfeil aus und wählen Sie dann einen Zieltyp aus dem angezeigten Dropdown-Fenster aus.
+Die **[!UICONTROL Ziel definieren]** angezeigt. Wählen Sie den Dropdown-Pfeil und dann einen Zieltyp aus dem angezeigten Dropdown-Fenster aus.
 
 ![plas-select-a-target](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
@@ -36,7 +38,7 @@ Die **[!UICONTROL Zielspezifikationen]** wird geöffnet. Wählen Sie den Dropdow
 
 ![plas-select-a-target-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-Die **[!UICONTROL Zielbedingungen]** Auswahl angezeigt. Wählen Sie den Dropdown-Pfeil aus und wählen Sie dann die Bedingung aus dem angezeigten Dropdown-Fenster aus.
+Die **[!UICONTROL Zielbedingungen]** Auswahl angezeigt. Wählen Sie den Dropdown-Pfeil und dann die Bedingung aus dem angezeigten Dropdown-Fenster aus.
 
 ![plas-target-specifics-condition](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
@@ -98,7 +100,7 @@ Um eine Punktzahl zu klonen, wählen Sie eine Punktzahl aus der **[!UICONTROL Di
 
 ![plas-clone-score](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-Die **[!UICONTROL Basisinformationen]** angezeigt. Der Profiltyp, der Name und die Beschreibung werden aus der ursprünglichen Punktzahl geklont. Ändern Sie diese Details und wählen Sie **[!UICONTROL Nächste]**.
+Die **[!UICONTROL Basisinformationen]** angezeigt. Der Profiltyp, der Name und die Beschreibung werden aus dem ursprünglichen Ergebnis geklont. Ändern Sie diese Details und wählen Sie **[!UICONTROL Nächste]**.
 
 ![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
@@ -130,27 +132,27 @@ Sie kehren zum **[!UICONTROL Dienste]** -Tab, wo die Punktzahl nicht mehr in der
 
 | Fehler-Code | Fehlermeldung |
 | --- | --- |
-| 401 | FEHLER 401. Lead-AI-Pipeline angehalten: nicht genügend gültige Konten für die Kontobewertung. Zählung der Konten: {}. |
-| 402 | FEHLER 402. Lead-AI-Pipeline angehalten: nicht genügend gültige Kontakte für die Auswertung von Kontakten. Anzahl der Kontakte: {}. |
-| 403 | FEHLER 403. Lead-AI-Pipeline angehalten: für das Modelltraining nicht genügend Aktivitätsvolumen. Anzahl der Ereignisse: {}. |
-| 404 | FEHLER 404. Lead-AI-Pipeline angehalten: nicht genügend Konversionen für das Trainieren von Modellen. Zählung der Konversionen: {}. |
-| 405 | FEHLER 405. Lead-AI-Pipeline angehalten: -Aktivität zu sparsam für eine gültige Modellschulung. Nur {} Prozent der Konten haben Aktivitäten. |
-| 406 | FEHLER 406. Lead-AI-Pipeline angehalten: -Aktivität zu sparsam für eine gültige Modellschulung. Nur {} Prozent der Kontakte haben Aktivität. |
-| 407 | FEHLER 407. Lead-AI-Pipeline angehalten: Die Aktivitätstypen für Scoring-Daten stimmen nicht mit den Trainings-Daten überein. |
-| 408 | FEHLER 408. Lead-AI-Pipeline angehalten: Die fehlende Rate ist für Aktivitätsfunktionen zu hoch. Fehlende Rate: {}. |
-| 409 | FEHLER 409. Lead-AI-Pipeline angehalten: Die Testauc ist zu niedrig. Testauc: {}. |
-| 410 | FEHLER 410. Lead-AI-Pipeline angehalten: Die Testauc ist nach der Parameteroptimierung zu niedrig. Testauc: {}. |
-| 411 | FEHLER 411. Lead-AI-Pipeline angehalten: Schulungsdaten verfügen nicht über genügend Konversionen, um ein zuverlässiges Modell zu erstellen. Konversionen: {}. |
-| 412 | FEHLER 412. Lead-AI-Pipeline angehalten: Testdaten haben keine Konversion zur Berechnung von AUC-ROC. |
+| 401 | FEHLER 401. Leads AI-Pipeline gestoppt: Nicht genügend gültige Konten für die Kontobewertung. Anzahl Konten: {}. |
+| 402 | FEHLER 402. Leads AI-Pipeline angehalten: Nicht genügend gültige Kontakte für die Kontaktscoring. Anzahl der Kontakte: {}. |
+| 403 | FEHLER 403. Leads AI-Pipeline angehalten: nicht genügend Aktivitätsvolumen für Modellschulungen. Anzahl der Ereignisse: {}. |
+| 404 | FEHLER 404. Leads AI-Pipeline angehalten: Nicht genügend Konversionen für Modellschulungen. Zählung der Konversionen: {}. |
+| 405 | FEHLER 405. Leads AI-Pipeline angehalten: Aktivität zu sparsam für eine gültige Modellschulung. Nur {} in Prozent der Konten eine Aktivität aufweist. |
+| 406 | FEHLER 406. Leads AI-Pipeline angehalten: Aktivität zu sparsam für eine gültige Modellschulung. Nur {} der Kontakte eine Aktivität aufweist. |
+| 407 | FEHLER 407. Leads AI-Pipeline angehalten: Die Aktivitätstypen für Scoring-Daten stimmen nicht mit den Trainings-Daten überein. |
+| 408 | FEHLER 408. Die Leads-AI-Pipeline wurde angehalten: Die fehlende Rate ist zu hoch für Aktivitätsfunktionen. Fehlende Rate: {}. |
+| 409 | FEHLER 409. Leads AI-Pipeline gestoppt: Testauc ist zu niedrig. Prüfung: {}. |
+| 410 | FEHLER 410. Leads AI-Pipeline gestoppt: Test-auc ist nach der Parameteroptimierung zu niedrig. Prüfung: {}. |
+| 411 | FEHLER 411. Leads AI-Pipeline angehalten: Trainings-Daten verfügen nicht über genügend Konversionen, um ein zuverlässiges Modell zu erstellen. Konversionen: {}. |
+| 412 | FEHLER 412. Leads AI-Pipeline angehalten: Testdaten haben keine Konversion zur Berechnung von AUC-ROC. |
 
 | Warn-/Info-Code | Nachricht |
 | --- | --- |
-| 100 | INFO 100. Führt eine KI-Qualitätsprüfung durch: Die Rechnungsanzahl beträgt: {}. |
-| 101 | INFO 101. Führt eine KI-Qualitätsprüfung durch: die Anzahl der Kontakte: {}. |
+| 100 | INFO 100. Führt eine KI-Qualitätsprüfung durch: Die Anzahl der Konten lautet: {}. |
+| 101 | INFO 101. Führt eine KI-Qualitätsprüfung durch: Die Anzahl der Kontakte lautet: {}. |
 | 102 | INFO 102. Führt eine KI-Qualitätsprüfung durch: Die Anzahl der Möglichkeiten beträgt: {}. |
 | 103 | INFO 103. Führt eine KI-Qualitätsprüfung durch: Testauc ist gering. Parameteroptimierung starten. Testauc: {}. |
-| 200 | WARNUNG 200. Führt eine KI-Qualitätsprüfung durch: Die fehlende Rate von firmografischen Funktionen ist: {}. |
-| 201 | WARNUNG 201. Führt eine KI-Qualitätsprüfung durch: Die fehlende Rate von Aktivitätsfunktionen lautet: {}. |
+| 200 | WARNUNG 200. Führt AI-Qualitätsprüfung durch: Die fehlende Rate von firmografischen Funktionen lautet: {}. |
+| 201 | WARNUNG 201. Führt eine KI-Qualitätsprüfung durch: Die fehlende Rate von Aktivitätsfunktionen ist: {}. |
 
 ## Nächste Schritte
 

@@ -2,8 +2,9 @@
 keywords: Data Governance rtcdp;rtcdp Data Governance;Data Governance für Echtzeit-Kundenprofil-Daten;Datenschutz rtcdp;rtcdp Datenschutz
 title: Datenschutz in Real-time Customer Data Platform
 description: Mit Adobe Real-time Customer Data Platform können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
+feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 100%

@@ -2,11 +2,13 @@
 keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsrichtlinie;Echtzeit-Kundenprofil
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Kontoprofilen ermöglicht Ihnen Adobe Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Kontoinformationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 58%
+source-wordcount: '1636'
+ht-degree: 57%
 
 ---
 
@@ -34,11 +36,11 @@ Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontopr
 >
 > Nur B2B AI-Administratoren können den Lead aktivieren, deaktivieren und konfigurieren, um den Dienst für die Kontoabstimmung zu aktivieren. Nach der Deaktivierung des Dienstes werden die entsprechenden Ergebnisse innerhalb von 24 Stunden gelöscht.
 
-Wählen Sie zum Konfigurieren des Interessenten-Kontoabgleichs die Option **[!UICONTROL Profile]** under [!UICONTROL Konten] in der linken Navigation. Im **[!UICONTROL Übersicht]** Registerkarte, wählen Sie **[!UICONTROL Einstellungen]** oben rechts.
+Wählen Sie zum Konfigurieren des Interessenten-Kontoabgleichs **[!UICONTROL Profile]** under [!UICONTROL Konten] in der linken Navigation. Im **[!UICONTROL Übersicht]** Registerkarte auswählen **[!UICONTROL Einstellungen]** oben rechts.
 
 ![Einstellungen auswählen](images/b2b-configuring-accounts-profile.png)
 
-Die **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier die **[!UICONTROL Lead-zu-Konto-Abgleich aktivieren]** aktivieren, um die Funktion zu aktivieren. Wählen Sie über das Dropdown-Menü **[!UICONTROL Täglich]** für **[!UICONTROL Übereinstimmende Cadence]** -Einstellung. Wählen Sie abschließend die **[!UICONTROL Übereinstimmende Kriterien]** Optionen gefolgt von **[!UICONTROL Speichern]** , um Ihre Einstellungen zu bestätigen und zur **[!UICONTROL Kontoprofile]** angezeigt.
+Die **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier die **[!UICONTROL Lead-zu-Konto-Abgleich aktivieren]** aktivieren, um die Funktion zu aktivieren. Wählen Sie über das Dropdown-Menü **[!UICONTROL Täglich]** für die **[!UICONTROL Übereinstimmende Cadence]** -Einstellung. Wählen Sie abschließend die entsprechende **[!UICONTROL Übereinstimmende Kriterien]** Optionen gefolgt von **[!UICONTROL Speichern]** , um Ihre Einstellungen zu bestätigen und zur **[!UICONTROL Kontoprofile]** angezeigt.
 
 >[!NOTE]
 >
@@ -86,7 +88,7 @@ Bei ausgewählter Quelle müssen Sie jetzt eine **[!UICONTROL Account-ID]** eing
 
 ### Durchsuchen nach [!UICONTROL Sonstige] {#browse-by-others}
 
-Real-Time CDP, B2B Edition unterstützt die Möglichkeit, eine direkte Suche durchzuführen, indem Sie eine **[!UICONTROL Quellname]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Konto-ID]** für ein Konto, das Sie anzeigen möchten. Indem Sie den Quellnamen und die Instanz direkt eingeben, geben Sie den Kontext an, den Experience Platform benötigt, um nach den richtigen Account-Profildaten zu suchen und diese anzuzeigen.
+Real-Time CDP, B2B Edition unterstützt die Möglichkeit, eine direkte Suche durchzuführen, indem Sie eine **[!UICONTROL Quellname]**, **[!UICONTROL Quellinstanz]**, und **[!UICONTROL Konto-ID]** für ein Konto, das Sie anzeigen möchten. Indem Sie den Quellnamen und die Instanz direkt eingeben, geben Sie den Kontext an, den Experience Platform benötigt, um nach den richtigen Account-Profildaten zu suchen und diese anzuzeigen.
 
 Die Möglichkeit, eine direkte Suche durchzuführen, ist unter Umständen nützlich, wenn eine direkte Quellverbindung zu den Daten nicht möglich ist. Wenn Ihr Unternehmen beispielsweise über Data Governance-Richtlinien verfügt, die eine direkte Verbindung zu einem CRM verhindern, können Sie diese Daten in ein Cloud-Speichersystem exportieren und dann in Experience Platform aufnehmen.
 
@@ -132,7 +134,7 @@ Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthä
 
 ## Registerkarte „Opportunitys“ {#opportunities-tab}
 
-Die Registerkarte **[!UICONTROL Opportunitys]** enthält Informationen zu offenen und geschlossenen Opportunitys im Zusammenhang mit dem Account. Diese Möglichkeiten können aus verschiedenen Quellen in die Experience Platform integriert werden. Real-Time CDP, B2B Edition, erleichtert es Marketing-Experten jedoch, all diese Möglichkeiten an einem Ort zu sehen.
+Die Registerkarte **[!UICONTROL Opportunitys]** enthält Informationen zu offenen und geschlossenen Opportunitys im Zusammenhang mit dem Account. Diese Möglichkeiten können aus verschiedenen Quellen in Experience Platform eingebunden werden, aber Real-Time CDP, B2B Edition macht es für Marketingexperten einfach, all diese Möglichkeiten an einem Ort zu sehen.
 
 >[!NOTE]
 >
@@ -150,7 +152,6 @@ Die **[!UICONTROL Verwandte Konten]** enthält Informationen zu anderen Konten, 
 >
 >* Eine Gruppe verwandter Konten kann über maximal 30 Kontoprofile verfügen. Wenn mehr als 30 Kontoprofile als verwandt gefunden wurden, werden sie willkürlich in mehrere Gruppen unterteilt, von denen jede maximal 30 Mitglieder hat. Die Gruppe Zugehörige Konten eines Kontoprofils enthält immer sich selbst.
 >* Die [!UICONTROL Verwandte Konten] zeigt derzeit eine Liste von bis zu 25 Konten an, die mit dem Konto verknüpft sind, das Sie durchsuchen. Dies ist eine Einschränkung, die in einer zukünftigen Aktualisierung behoben wird. Trotz dieser Benutzeroberflächenbeschränkung werden bei der Verwendung verwandter Konten in Segmentdefinitionen für Gruppen mit 30 verwandten Kontoprofilen alle Profile für das Targeting verwendet.
-
 
 Jedes zugehörige Konto enthält Informationen wie die Kontoprofil-ID und den Namen, den Kontoquellschlüssel und weitere Informationen zu Homepage, Adresse, übergeordnetem Konto, Telefon, Branche und Jahresumsatz.
 

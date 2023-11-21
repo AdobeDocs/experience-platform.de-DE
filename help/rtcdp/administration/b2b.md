@@ -1,9 +1,11 @@
 ---
 title: Zugriffskontrolle in Real-time Customer Data Platform B2B Edition
 description: Ein Überblick über die Rolle der Zugriffskontrolle in Adobe Real-time Customer Data Platform B2B Edition.
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+feature: Access Control, Sandboxes
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '164'
 ht-degree: 2%
 
 ---
@@ -16,5 +18,5 @@ Weitere Informationen zur Zugriffskontrolle finden Sie unter [Zugriffskontrolle 
 
 Detaillierte Anweisungen zur Verwendung der [Adobe Admin Console](https://adminconsole.adobe.com) um den Zugriff auf die B2B-Benutzeroberfläche für ein Produktprofil zu aktivieren:
 
-* [Aktivieren der B2B-Benutzeroberfläche für ein neues Produktprofil](../../access-control/ui/create-profile.md)
+* [B2B-Benutzeroberfläche für neues Produktprofil aktivieren](../../access-control/ui/create-profile.md)
 * [Aktivieren der B2B-Benutzeroberfläche für ein vorhandenes Produktprofil](../../access-control/ui/details-and-services.md)
