@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
-ht-degree: 91%
+source-wordcount: '1702'
+ht-degree: 89%
 
 ---
 
@@ -85,8 +85,8 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Alerts] | [!UICONTROL Verwalten von Warnhinweisen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen des Warnhinweisverlaufs. |
 | [!DNL Computed Attributes] | [!UICONTROL Berechnete Attribute anzeigen] | Schreibgeschützter Zugriff für die Registerkarte, den Bestand und Details berechneter Attribute. |
 | [!DNL Computed Attributes] | [!UICONTROL Berechnete Attribute verwalten] | Zugriff auf das Lesen, Erstellen, Löschen und Deaktivieren berechneter Attribute. |
-| [!DNL Data Hygiene] | [!UICONTROL Anzeigen der Datenhygiene] | Schreibgeschützter Zugriff auf die Datenhygiene. |
-| [!DNL Data Hygiene] | [!UICONTROL Verwalten der Datenhygiene] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen der Datenhygiene. |
+| [!DNL Data Lifecycle] | [!UICONTROL Datenlebenszyklus anzeigen] | Schreibgeschützter Zugriff für den Datenlebenszyklus. |
+| [!DNL Data Lifecycle] | [!UICONTROL Data Lebenszyklus verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen des Datenlebenszyklus. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Schemas] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schemas und zugehörigen Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Anzeigen von Schemas] | Schreibgeschützter Zugriff auf Schemas und zugehörige Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Beziehungen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schema-Beziehungen. |
@@ -123,7 +123,7 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Zugriff zum Erstellen, Akzeptieren und Ablehnen von Partner-Handshakes, um zwei Organisationen miteinander zu verbinden und [!DNL Segment Match]-Flüsse zu aktivieren. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Veröffentlichen von [!DNL Segment Match]-Feeds mit aktiven Partnern. |
 | [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen in [!DNL Data Science Workspace]. |
-| Data Governance | [!UICONTROL Anwenden von Datennutzungskennzeichnungen] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
+| Data Governance | [!UICONTROL Nutzungsbezeichnungen verwalten] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
 | Data Governance | [!UICONTROL Verwalten von Datennutzungsrichtlinien] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datennutzungsrichtlinien. |
 | Data Governance | [!UICONTROL Anzeigen von Datennutzungsrichtlinien] | Schreibgeschützter Zugriff auf Datennutzungsrichtlinien Ihres Unternehmens. |
 | Data Governance | [!UICONTROL Anzeigen des Benutzer-Aktivitätspotokolls] | Schreibgeschützter Zugriff zur Anzeige aufgezeichneter [Administratorprotokolle](../landing/governance-privacy-security/audit-logs/overview.md) von Platform-Aktivitäten. |

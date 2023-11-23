@@ -3,16 +3,16 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument enthält eine umfassende Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform.
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1739'
 ht-degree: 26%
 
 ---
 
 # Leitfaden zur attributbasierten Zugriffskontrolle von Ende zu Ende
 
-Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, die es Kunden mit mehreren Marken und datenschutzbewussten Kunden ermöglicht, den Benutzerzugriff flexibler zu verwalten. Der Zugriff auf einzelne Objekte wie Schemafelder und Segmente kann mit Richtlinien gewährt/verweigert werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
+Verwenden Sie die attributbasierte Zugriffskontrolle auf Adobe Experience Platform, um sich und anderen datenschutzbewussten Kunden mit mehreren Marken mehr Flexibilität bei der Verwaltung des Benutzerzugriffs zu geben. Der Zugriff auf einzelne Objekte wie Schemafelder und Segmente kann mit Richtlinien gewährt werden, die auf den Attributen und der Rolle des Objekts basieren. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
 
 Mit dieser Funktion können Sie Schemafelder, Segmente usw. mit Bezeichnungen kategorisieren, die Organisations- oder Datennutzungsbereiche definieren. Sie können diese Beschriftungen auf Journey, Angebote und andere Objekte in Adobe Journey Optimizer anwenden. Parallel dazu können Administratoren Zugriffsrichtlinien für Experience-Datenmodell (XDM)-Schemafelder definieren und besser verwalten, welche Benutzer oder Gruppen (interne, externe oder Drittanbieter-Benutzer) auf diese Felder zugreifen können.
 
