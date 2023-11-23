@@ -1,13 +1,13 @@
 ---
 title: Verwenden von Ereignissen oben und unten auf der Seite
 description: In diesem Artikel wird erläutert, wie Sie die Seitenereignisse oben und unten im Web SDK verwenden.
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
 
 ---
-
 
 # Verwenden von Seitenereignissen oben und unten im Web SDK
 

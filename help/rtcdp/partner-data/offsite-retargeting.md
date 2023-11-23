@@ -2,13 +2,13 @@
 title: Offsite-Retargeting nicht authentifizierter Besucher
 description: Erfahren Sie, wie Sie nicht authentifizierte Benutzer erneut ansprechen können, indem Sie mithilfe von Interessenten-IDs ein berechnetes Attribut erstellen, mit dem eine Zielgruppe nicht authentifizierter Benutzer erstellt werden kann.
 feature: Use Cases, Customer Acquisition
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 3%
 
 ---
-
 
 # Offsite-Retargeting nicht authentifizierter Besucher
 

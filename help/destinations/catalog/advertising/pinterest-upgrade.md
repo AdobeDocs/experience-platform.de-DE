@@ -3,7 +3,8 @@ title: Migration der pinterest-Ziele auf die neue API. Kundenaktion erforderlich
 description: Pinterest stellt die v4-Advertiser-API ein, die derzeit vom Pinterest-Ziel in Real-Time CDP verwendet wird. Machen Sie sich mit Ihren Aktionselementen vertraut, um ohne Unterbrechung Ihrer Pinterest-Kampagnen nahtlos zur neuen API zu wechseln.
 hide: true
 hidefromtoc: true
-source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
+exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%

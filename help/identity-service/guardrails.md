@@ -3,10 +3,10 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 54%
+source-wordcount: '1509'
+ht-degree: 44%
 
 ---
 
@@ -72,23 +72,6 @@ Wenn ein vollständiges Diagramm mit einer neuen Identität aktualisiert wird, b
 >
 >Wenn die zu löschende Identität mit mehreren anderen Identitäten im Diagramm verknüpft ist, werden auch die Verknüpfungen, die diese Identität verbinden, gelöscht.
 
->[!BEGINSHADEBOX]
-
-**Eine visuelle Darstellung der Löschlogik**
-
-![Ein Beispiel für die älteste Identität, die gelöscht wird, um die neueste Identität aufzunehmen](./images/graph-limits-v3.png)
-
-*Diagrammnotizen:*
-
-* `t` = Zeitstempel.
-* Der Wert eines Zeitstempels entspricht der Neuigkeit einer bestimmten Identität. Beispiel: `t1` stellt die erste verknüpfte Identität (älteste) dar und `t51` würde die neueste verknüpfte Identität darstellen.
-
-In diesem Beispiel löscht Identity Service zuerst die vorhandene Identität mit dem ältesten Zeitstempel, bevor das Diagramm auf der linken Seite mit einer neuen Identität aktualisiert werden kann. Da die älteste Identität jedoch eine Geräte-ID ist, überspringt Identity Service diese Identität, bis er zum Namespace mit einem Typ gelangt, der höher in der Liste mit Löschprioritäten ist, was in diesem Fall `ecid-3` ist. Sobald die älteste Identität mit einer höheren Löschpriorität entfernt wurde, wird das Diagramm mit einer neuen Verknüpfung, `ecid-51`, aktualisiert.
-
-* In dem seltenen Fall, dass es zwei Identitäten mit demselben Zeitstempel und Identitätstyp gibt, sortiert Identity Service die IDs basierend auf [XID](./api/list-native-id.md) und führen Löschung durch.
-
->[!ENDSHADEBOX]
-
 ### Auswirkungen auf die Implementierung
 
 In den folgenden Abschnitten werden die Implikationen erläutert, die die Löschlogik für Identity Service, Echtzeit-Kundenprofil und WebSDK hat.
@@ -116,7 +99,83 @@ Wenn Sie Ihre authentifizierten Ereignisse mit der CRM-ID vergleichen möchten, 
 * [Identitätszuordnung für Experience Platform-Tags konfigurieren](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identitätsdaten im Experience Platform Web SDK](../edge/identity/overview.md#using-identitymap)
 
+### Beispielszenarien
 
+#### Beispiel 1: typisches großes Diagramm
+
+*Diagrammnotizen:*
+
+* `t` = Zeitstempel.
+* Der Wert eines Zeitstempels entspricht der Neuigkeit einer bestimmten Identität. Beispiel: `t1` stellt die erste verknüpfte Identität (älteste) dar und `t51` würde die neueste verknüpfte Identität darstellen.
+
+In diesem Beispiel löscht Identity Service zuerst die vorhandene Identität mit dem ältesten Zeitstempel, bevor das Diagramm auf der linken Seite mit einer neuen Identität aktualisiert werden kann. Da die älteste Identität jedoch eine Geräte-ID ist, überspringt Identity Service diese Identität, bis er zum Namespace mit einem Typ gelangt, der höher in der Liste mit Löschprioritäten ist, was in diesem Fall `ecid-3` ist. Sobald die älteste Identität mit einer höheren Löschpriorität entfernt wurde, wird das Diagramm mit einer neuen Verknüpfung, `ecid-51`, aktualisiert.
+
+* In dem seltenen Fall, dass es zwei Identitäten mit demselben Zeitstempel und Identitätstyp gibt, sortiert Identity Service die IDs basierend auf [XID](./api/list-native-id.md) und führen Löschung durch.
+
+![Ein Beispiel für die älteste Identität, die gelöscht wird, um die neueste Identität aufzunehmen](./images/graph-limits-v3.png)
+
+#### Beispiel 2: &quot;Diagrammaufteilung&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Eingehendes Ereignis]
+
+*Diagrammnotizen:*
+
+* Das folgende Diagramm geht davon aus, dass bei `timestamp=50`, sind im Identitätsdiagramm 50 Identitäten vorhanden.
+* `(...)` bezeichnet die anderen Identitäten, die bereits im Diagramm verknüpft sind.
+
+In diesem Beispiel wird ECID:32110 erfasst und mit einem großen Diagramm unter `timestamp=51`, wodurch die Grenze von 50 Identitäten überschritten wird.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB Löschvorgang]
+
+Daher löscht Identity Service die älteste Identität basierend auf Zeitstempel und Identitätstyp. In diesem Fall wird ECID:35577 gelöscht.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB Diagrammausgabe]
+
+Infolge des Löschens von ECID:35577 werden auch die Edges gelöscht, die die CRM-ID:60013 und die CRM-ID:25212 mit der inzwischen gelöschten ECID:35577 verknüpft haben. Dieser Löschvorgang führt dazu, dass das Diagramm in zwei kleinere Diagramme aufgeteilt wird.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### Beispiel 3: &quot;Hub-and-Spoke&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Eingehendes Ereignis]
+
+*Diagrammnotizen:*
+
+* Das folgende Diagramm geht davon aus, dass bei `timestamp=50`, sind im Identitätsdiagramm 50 Identitäten vorhanden.
+* `(...)` bezeichnet die anderen Identitäten, die bereits im Diagramm verknüpft sind.
+
+Aufgrund der Löschlogik können auch einige &quot;Hub&quot;-Identitäten gelöscht werden. Diese Hub-Identitäten beziehen sich auf Knoten, die mit mehreren individuellen Identitäten verknüpft sind, die sonst nicht verknüpft wären.
+
+Im folgenden Beispiel wird ECID:21011 erfasst und mit dem Diagramm unter `timestamp=51`, wodurch die Grenze von 50 Identitäten überschritten wird.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Löschvorgang]
+
+Daher löscht Identity Service die älteste Identität, in diesem Fall ECID:35577. Durch das Löschen von ECID:35577 wird auch Folgendes gelöscht:
+
+* Die Verknüpfung zwischen CRM-ID 60013 und der inzwischen gelöschten ECID:35577, was zu einem Diagrammaufspaltungsszenario führte.
+* IDFA: 32110, IDFA: 02383 und die verbleibenden Identitäten, vertreten durch `(...)`. Diese Identitäten werden gelöscht, da sie einzeln nicht mit anderen Identitäten verknüpft sind und daher nicht in einem Diagramm dargestellt werden können.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Diagrammausgabe]
+
+Schließlich liefert der Löschvorgang zwei kleinere Diagramme.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Nächste Schritte
 
