@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Leistung und systemerzwungene Limits für Profildaten und die Segmentierung, um eine optimale Nutzung der Real-Time CDP-Funktionalität sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
+source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 66%
+source-wordcount: '2228'
+ht-degree: 65%
 
 ---
 
@@ -119,6 +119,7 @@ Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Ar
 | Streaming-Zielgruppen pro Sandbox | 500 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. Mehr dazu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
 | Batch-Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Zielgruppen enthalten sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
 | Konto-Zielgruppen pro Sandbox | 50 | Systemerzwungene Limits | Sie können nicht mehr als 50 Zielgruppen für ein Konto in einer Sandbox erstellen. Wenn Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird die **[!UICONTROL Erstellen einer Zielgruppe]** -Kontrolle beim Versuch, eine neue Konto-Audience zu erstellen, deaktiviert ist. Mehr dazu [Kontozielgruppen](/help/segmentation/ui/account-audiences.md). |
+| Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungsgarantie | Sie können nicht mehr als 10 veröffentlichte Kompositionen in einer Sandbox haben. Mehr dazu [Audience-Komposition im UI-Handbuch](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 
