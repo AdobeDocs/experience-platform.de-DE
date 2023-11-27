@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten
 description: Erfahren Sie, wie Sie ein Experience-Datenmodell (XDM)-Schema und einen -Datensatz konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -96,8 +96,8 @@ Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `consents`, de
 
 Um Einwilligungsdaten mithilfe des Adobe-Standards zu erfassen, müssen Sie über ein Profil-aktiviertes Schema verfügen, das die beiden folgenden Feldgruppen enthält:
 
-* [!UICONTROL Einverständnis und Präferenzdetails]
-* [!UICONTROL IdentityMap] (erforderlich, wenn das Platform Web oder Mobile SDK zum Senden von Zustimmungssignalen verwendet wird)
+* [[!UICONTROL Einverständnis und Präferenzdetails]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (erforderlich, wenn das Platform Web oder Mobile SDK zum Senden von Zustimmungssignalen verwendet wird)
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** im linken Navigationsbereich und wählen Sie dann die **[!UICONTROL Durchsuchen]** um eine Liste der vorhandenen Schemata anzuzeigen. Wählen Sie hier den Namen der [!DNL Profile]-aktiviertes Schema, dem Sie Einwilligungsfelder hinzufügen möchten. Die Screenshots in diesem Abschnitt verwenden das Schema &quot;Mitglieder des Treueprogramms&quot;, das im [Tutorial zur Schemaerstellung](../../../../xdm/tutorials/create-schema-ui.md) als Beispiel.
 

@@ -4,10 +4,10 @@ title: Handbuch zum Profile-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
 workflow-type: tm+mt
-source-wordcount: '4313'
-ht-degree: 54%
+source-wordcount: '4900'
+ht-degree: 48%
 
 ---
 
@@ -69,7 +69,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 Mit der Registerkarte [!UICONTROL Durchsuchen] können Sie die schreibgeschützten Profile Ihrer Organisation durchsuchen und anzeigen. Von hier aus können Sie wichtige Informationen aus dem Profil zu ihren Voreinstellungen, vergangenen Ereignissen, Interaktionen und Zielgruppen sehen.
 
-Weiterführende Informationen zu den in der Platform-Benutzeroberfläche bereitgestellten Funktionen zur Profilanzeige finden Sie in der Dokumentation unter [Durchsuchen von Profilen in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+## Profildetails {#profile-details}
+
+So öffnen Sie die [!UICONTROL Profile] [!UICONTROL Detail] Arbeitsbereich auswählen [!UICONTROL Profil-ID] aus der Liste.
+
+![Die Registerkarte &quot;Profile Browse&quot;, auf der die Profil-ID hervorgehoben ist.](../images/profiles/profile-id.png)
+
+Die [!UICONTROL Profile] [!UICONTROL Detail] Workspace zeigt mehrere vorkonfigurierte Widgets an, die Informationen zu diesem Profil enthalten. Anhand dieser Informationen können Sie die wichtigsten Attribute des Profils auf einen Blick nachvollziehen. Sie können auch Ihre [!UICONTROL Profile] [!UICONTROL Detail] Arbeitsbereich durch Erstellen eigener Widgets. Siehe Abschnitt zu [Hinzufügen von Widgets](#add-widgets) für weitere Details.
+
+![Die [!UICONTROL Profile] [!UICONTROL Detail] Arbeitsbereich mit [!UICONTROL Detail] hervorgehoben.](../images/profiles/profile-details-workspace.png)
+
+### Profildetails-Widgets {#widgets}
+
+Die vorkonfigurierten Profildetails-Widgets lauten wie folgt:
+
+#### Kundenprofil {#customer-profile}
+
+Die [!UICONTROL Kundenprofil] Widget zeigt den Vor- und Nachnamen des mit dem Profil verknüpften Benutzers sowie dessen [!UICONTROL Profil-ID]. Eine Profil-ID ist eine automatisch generierte Kennung, die mit einem Identitätstyp verknüpft ist und ein Profil darstellt. Weiterführende Informationen zu Identitäten und Identitäts-Namespaces finden Sie unter [Identitäten – Übersicht](../../rtcdp/profile/identities-overview.md).
+
+![Das Widget Kundenprofil .](../images/profiles/customer-profile.png)
+
+#### Grundlegende Attribute {#basic-attributes}
+
+Die [!UICONTROL Grundlegende Attribute] Widget zeigt die am häufigsten verwendeten Attribute an, die zum Definieren eines einzelnen Profils verwendet werden.
+
+![Das Widget Grundlegende Attribute .](../images/profiles/basic-attributes.png)
+
+#### Verknüpfte Identitäten {#linked-identities}
+
+Die [!UICONTROL Verknüpfte Identitäten] -Widget zeigt alle anderen Identitäten an, die mit dem Profil verknüpft sind.
+
+So zeigen Sie die Identitätsdetails des Profils tiefer an und navigieren zur [!UICONTROL Identitäten] Arbeitsbereich auswählen **[!UICONTROL Identitätsdiagramm anzeigen]**.
+
+![Das Widget Verknüpfte Identitäten .](../images/profiles/linked-identities.png)
+
+#### Kanaleinstellungen {#channel-preferences}
+
+Die [!UICONTROL Kanaleinstellungen] Widget zeigt die Kommunikationskanäle an, von denen der Benutzer dem Empfang von Nachrichten zugestimmt hat. Ein Häkchen kennzeichnet jeden Kanal, von dem der Benutzer dem Empfang von Nachrichten zugestimmt hat.
+
+<!-- image needs a blue tick added below -->
+
+![Das Widget Kanalvoreinstellungen .](../images/profiles/channel-preferences.png)
+
+Die Zustimmung des Kunden und die Kontakteinstellungen sind komplexe Themen. Um zu erfahren, wie Zustimmungs- und Kontextvoreinstellungen unter Experience Platform erfasst, verarbeitet und gefiltert werden können, sollten Sie die folgenden Dokumente lesen:
+
+* Informationen zu den für das Schema erforderlichen Feldergruppen [Einverständnisdaten gemäß dem Adobe-Standard erfassen](../../landing/governance-privacy-security/consent/adobe/overview.md), lesen Sie die Dokumentation zu diesen Profilaktivierten Schemafeldgruppen.
+   * [[!UICONTROL Einverständnis und Präferenzdetails]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (erforderlich, wenn das Platform Web oder Mobile SDK zum Senden von Zustimmungssignalen verwendet wird)
+* Informationen zur Verarbeitung von Einwilligungs- und Präferenzdaten von Kunden mithilfe des Adobe-Standards finden Sie in der Übersicht unter [Zustimmungsverarbeitung in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* Eine kombinierte Data Governance- und Einverständnisrichtlinie kann verwendet werden, um Profile nach Segmentierung basierend auf ihren Zustimmungseinstellungen und Ihren festgelegten Organisationsregeln zu filtern. Informationen zum Erstellen und Verwenden dieser kombinierten Richtlinien finden Sie im Benutzerhandbuch zu [Richtlinien zur Datennutzung verwalten](../../data-governance/policies/user-guide.md#combine-policies).
+
+### Hinzufügen von Widgets {#add-widgets}
+
+So fügen Sie Ihren [!UICONTROL Profile] [!UICONTROL Detail] Arbeitsbereich auswählen **[!UICONTROL Profildetails anpassen]**.
+
+![Der Arbeitsbereich &quot;Profildetails&quot;mit [!UICONTROL Profildetails anpassen] hervorgehoben.](../images/profiles/customize-profile-details.png)
+
+Sie können den Arbeitsbereich jetzt bearbeiten, indem Sie die Größe der Widgets ändern oder sie neu anordnen. Auswählen **[!UICONTROL Widget hinzufügen]** , um ein Widget mit benutzerdefinierten Attributen zu erstellen.
+
+![Die Profile [!UICONTROL Detail] Arbeitsbereich mit [!UICONTROL Widget hinzufügen] hervorgehoben.](../images/profiles/add-widget.png)
+
+Der Ersteller des Widgets wird angezeigt. Geben Sie einen beschreibenden Namen für Ihr Widget im [!UICONTROL Kartentitel] Textfeld und wählen Sie **[!UICONTROL Hinzufügen von Attributen]**.
+
+![Die Arbeitsfläche des Widget-Erstellers mit der [!UICONTROL Kartentitel] und [!UICONTROL Hinzufügen von Attributen] hervorgehoben.](../images/profiles/widget-creator.png)
+
+Es wird ein Dialogfeld mit einer Visualisierung des Vereinigungsschemas des Profils angezeigt. Verwenden Sie das Suchfeld oder scrollen Sie nach den Attributen, über die Sie mit Ihrem Widget Berichte erstellen möchten. Aktivieren Sie das Kontrollkästchen für alle Attribute, die Sie einbeziehen möchten. Auswählen **[!UICONTROL Auswählen]** , um den Erstellungs-Workflow fortzusetzen.
+
+>[!TIP]
+>
+>Eine Auswahl des Kontrollkästchens der obersten Ebene umfasst alle untergeordneten Elemente.
+
+![Das Vereinigungsschema-Diagramm mit dem Kontrollkästchen &quot;Treueattribut&quot;und [!UICONTROL Auswählen] hervorgehoben.](../images/profiles/union-schema-attributes.png)
+
+Auf der Arbeitsfläche wird eine Vorschau des abgeschlossenen Widgets angezeigt. Sobald Sie mit den von Ihnen ausgewählten Attributen zufrieden sind, wählen Sie **[!UICONTROL Speichern]** um Ihre Auswahl zu bestätigen und zur [!UICONTROL Profile] [!UICONTROL Detail] Arbeitsbereich. Das neu erstellte Widget ist jetzt im Arbeitsbereich sichtbar.
+
+![Die Arbeitsfläche des Widget-Erstellers mit hervorgehobenem Speichern und Anzeige der Widget-Vorschau.](../images/profiles/widget-preview.png)
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 
