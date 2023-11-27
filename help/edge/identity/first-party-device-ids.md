@@ -2,9 +2,9 @@
 title: FPIDs im Platform Web SDK
 description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) für das Adobe Experience Platform Web SDK konfigurieren.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1779'
 ht-degree: 2%
 
 ---
@@ -210,6 +210,10 @@ Wenn Sie zur Verwendung von FPIDs aus einer früheren Implementierung migrieren,
 Um diesen Vorgang zu veranschaulichen, sollten Sie sich ein Szenario ansehen, an dem ein Kunde beteiligt ist, der Ihre Site bereits besucht hat, und welche Auswirkungen eine FPID-Migration auf die Identifizierung dieses Kunden in Adobe-Lösungen haben würde.
 
 ![Abbildung, die zeigt, wie die ID-Werte eines Kunden zwischen Besuchen nach der Migration zu FPIDs aktualisiert werden](../assets/identity/tracking/visits.png)
+
+>[!IMPORTANT]
+>
+>Die `ECID` -Cookie wird immer priorisiert über die `FPID`.
 
 | Besuch | Beschreibung |
 | --- | --- |
