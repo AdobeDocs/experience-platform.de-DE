@@ -3,10 +3,10 @@ keywords: PebblePost;Pebblepost;PebblePost Programmatic Direct Mail;Pebblepost P
 title: PebblePost-Erweiterung
 description: Die PebblePost-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: baa0ea072c80e141974bb595dfff149aa5de6270
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 79%
+source-wordcount: '453'
+ht-degree: 82%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 79%
 
 ## Übersicht {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] -Lösung hilft digitalen Marketingexperten, Online-Interesse und -Absicht mit offline, greifbaren Medien zu verbinden, die konvertieren. Marketingexperten können die benutzerdefinierten Datenzielgruppen nutzen, die sie in Adobe erstellt haben, um jetzt Kunden mit einer relevanten, länger anhaltenden In-Home-Media-Impression anzusprechen. Analysieren Sie die Leistung in Echtzeit basierend auf der Aktivität des Antwortpfads und den Konversionen vor Ort.
+[!DNL PebblePost's Programmatic Direct Mail] -Lösung hilft digitalen Marketingexperten, Online-Interesse und -Absicht mit offline, greifbaren Medien zu verbinden, die konvertieren. Marketingexperten können die benutzerdefinierten Datenzielgruppen nutzen, die sie in Adobe erstellt haben, um jetzt Kunden mit einer relevanten, länger anhaltenden In-Home-Media-Impression anzusprechen. Analysieren Sie die Leistung in Echtzeit basierend auf der Aktivität des Antwortpfads und den Konversionen vor Ort.
 
-[!DNL PebblePost] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu PebblePost finden Sie im [Integrations-Blogpost](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
+[!DNL PebblePost] ist eine E-Mail-Erweiterung in Adobe Experience Platform.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
