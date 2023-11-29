@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Erstellen benutzerdefinierter Widgets für Dashboards
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen benutzerdefinierter Widgets zur Verwendung in Adobe Experience Platform-Dashboards.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 91%
+source-wordcount: '975'
+ht-degree: 90%
 
 ---
 
@@ -16,11 +16,11 @@ In Adobe Experience Platform können Sie die Daten Ihres Unternehmens mithilfe m
 
 Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen und Hinzufügen benutzerdefinierter Widgets zu den Dashboards [!UICONTROL Profile], [!UICONTROL Segmente] und [!UICONTROL Ziele] in der Platform-Benutzeroberfläche.
 
-Weiterführende Informationen zu Standard-Widgets finden Sie im Handbuch zum [Hinzufügen von Standard-Widgets zu Ihren Dashboards](standard-widgets.md).
-
 >[!NOTE]
 >
->Die im Dashboard [!UICONTROL Lizenznutzung] angezeigten Widgets können nicht angepasst werden. Weitere Informationen zu diesem speziellen Dashboard finden Sie in der [Dokumentation zum Lizenznutzungs-Dashboard](../guides/license-usage.md).
+>An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
+
+Weiterführende Informationen zu Standard-Widgets finden Sie im Handbuch zum [Hinzufügen von Standard-Widgets zu Ihren Dashboards](standard-widgets.md).
 
 ## Widget-Bibliothek {#widget-library}
 
@@ -110,7 +110,7 @@ Im Dialogfeld **[!UICONTROL Widget bearbeiten]** können Sie den Titel und die B
 >
 >Beim Bearbeiten eines Widgets in der Bibliothek wird das Widget nicht für einzelne Benutzer aktualisiert. Wenn ein Widget aktualisiert wurde, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da diese das veraltete Widget aus ihren Dashboards entfernen und dann das aktualisierte Widget aus der Widget-Bibliothek auswählen und hinzufügen müssen.
 
-![Das Dialogfeld Widget bearbeiten .](../images/customization/edit-widget.png)
+![Dialogfeld &quot;Widget bearbeiten&quot;.](../images/customization/edit-widget.png)
 
 ## Nächste Schritte
 

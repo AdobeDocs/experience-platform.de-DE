@@ -4,10 +4,10 @@ title: Datenschutz in Real-time Customer Data Platform
 description: Mit Adobe Real-time Customer Data Platform können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -33,7 +33,7 @@ Weitere Informationen finden Sie im Dokument zu [Berücksichtigung von Opt-out-A
 
 ## IAB TCF 2.0-Unterstützung
 
-[!DNL Real-Time CDP] basiert auf Adobe Experience Platform, das Teil der registrierten [Anbieterliste](https://iabeurope.eu/vendor-list-tcf-v2-0/) für den [!DNL Transparency & Consent Framework (TCF)] ist, wie vom [!DNL Interactive Advertising Bureau (IAB)] beschrieben. In Übereinstimmung mit den TCF 2.0-Anforderungen können Sie mit Platform detaillierte Kundeneinverständnisdaten erfassen und in Ihre gespeicherten Kundenprofile integrieren. Diese Einverständnisdaten können dann je nach Anwendungsfall bei der Frage berücksichtigt werden, ob bestimmte Profile in exportierte Zielgruppensegmente einbezogen werden.
+[!DNL Real-Time CDP] basiert auf Adobe Experience Platform, das Teil der registrierten [Anbieterliste](https://iabeurope.eu/vendor-list-tcf/) für den [!DNL Transparency & Consent Framework (TCF)] ist, wie vom [!DNL Interactive Advertising Bureau (IAB)] beschrieben. In Übereinstimmung mit den TCF 2.0-Anforderungen können Sie mit Platform detaillierte Kundeneinverständnisdaten erfassen und in Ihre gespeicherten Kundenprofile integrieren. Diese Einverständnisdaten können dann je nach Anwendungsfall bei der Frage berücksichtigt werden, ob bestimmte Profile in exportierte Zielgruppensegmente einbezogen werden.
 
 Weiterführende Informationen finden Sie in der Übersicht zur [IAB TCF 2.0-Unterstützung in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md).
 

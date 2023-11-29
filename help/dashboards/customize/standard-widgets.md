@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Standard-Dashboard-Widgets
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Hinzufügen von Standard-Widgets zu Ihren Adobe Experience Platform-Dashboards.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 75%
+source-wordcount: '436'
+ht-degree: 82%
 
 ---
 
@@ -14,18 +14,13 @@ ht-degree: 75%
 
 In Adobe Experience Platform können Sie die Daten Ihres Unternehmens mithilfe mehrerer Dashboards anzeigen und damit interagieren. Sie können bestimmte Dashboards auch aktualisieren, indem Sie Ihrer Dashboard-Ansicht neue Widgets hinzufügen. Adobe bietet eine Auswahl an Standard-Widgets, die Sie Ihren Dashboards hinzufügen können.
 
-Die [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Dashboards verfügen jeweils über ein standardmäßiges Widget-Load-out, wenn eine neue Platform-Instanz erstellt wird. Dieses Handbuch enthält schrittweise Anweisungen zum Hinzufügen von Standard-Widgets zum Anpassen der [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Dashboards in der Platform-Benutzeroberfläche.
+Die [[!UICONTROL Profile]](../guides/profiles.md#default-widgets), [[!UICONTROL Zielgruppen]](../guides/audiences.md#default-widgets), und [[!UICONTROL Ziele]](../guides/destinations.md#default-widgets) Dashboards verfügen jeweils über ein standardmäßiges Widget-Load-out, wenn eine neue Platform-Instanz erstellt wird. Dieses Handbuch enthält schrittweise Anweisungen zum Hinzufügen von Standard-Widgets zum Anpassen der [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Dashboards in der Platform-Benutzeroberfläche.
 
 >[!NOTE]
 >
->Seit dem 26. Juli 2023 [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Die Übersichts-Dashboards wurden für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf ein neues standardmäßiges Widget-Load-out zurückgesetzt.
->Weitere Informationen finden Sie in der Dokumentation unter [Profile](../guides/profiles.md#default-widgets), [Zielgruppen](../guides/audiences.md#default-widgets), und [Ziele](../guides/destinations.md#default-widgets) Standard-Widget-Abschnitte für Details darüber, welche Widgets als Teil der standardmäßigen Widget-Ladevorgänge einbezogen werden.
+>An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
 
 Mehr Informationen zu benutzerdefinierten Widgets finden Sie im Handbuch zum [Erstellen benutzerdefinierter Widgets](custom-widgets.md).
-
->[!NOTE]
->
->Die im Dashboard [!UICONTROL Lizenznutzung] angezeigten Widgets können nicht angepasst werden. Weitere Informationen zu diesem speziellen Dashboard finden Sie in der [Dokumentation zum Lizenznutzungs-Dashboard](../guides/license-usage.md).
 
 ## Widget-Bibliothek {#widget-library}
 

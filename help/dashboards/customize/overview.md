@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Übersicht über die Dashboard-Anpassung
 description: Hier erfahren Sie mehr darüber, wie Sie anpassen können, welche Daten in Ihren Adobe Experience Platform-Dashboards angezeigt werden.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 89%
+source-wordcount: '468'
+ht-degree: 86%
 
 ---
 
@@ -16,7 +16,7 @@ Die in Adobe Experience Platform verfügbaren Dashboards für Profile, Segmente 
 
 >[!NOTE]
 >
->Die im Dashboard [!UICONTROL Lizenznutzung] angezeigten Widgets können nicht angepasst werden. Weitere Informationen zu diesem speziellen Dashboard finden Sie in der [Dokumentation zum Lizenznutzungs-Dashboard](../guides/license-usage.md).
+>An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
 
 ## Dashboard ändern
 

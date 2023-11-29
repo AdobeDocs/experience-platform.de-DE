@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Übersicht über die Dashboard-Widget-Bibliothek
 description: Dieses Handbuch enthält schrittweise Anweisungen für den Zugriff auf die Widget-Bibliothek in Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 56%
+source-wordcount: '504'
+ht-degree: 53%
 
 ---
 
@@ -16,21 +16,21 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie die Daten Ihres
 
 Dieses Handbuch enthält schrittweise Anweisungen für den Zugriff auf die [!UICONTROL Widget-Bibliothek] in Experience Platform. Dort können Sie Standard-Widgets auswählen und benutzerdefinierte Widgets erstellen, um die in Ihren Dashboards angezeigten Informationen anzupassen.
 
-Informationen zum Ändern der Position und Größe der bereits in Ihren Dashboards angezeigten Widgets finden Sie im Handbuch [Dashboards ändern](modify.md).
-
 >[!NOTE]
 >
->Die im Dashboard [!UICONTROL Lizenznutzung] angezeigten Widgets können nicht angepasst werden. Weitere Informationen zu diesem speziellen Dashboard finden Sie in der [Dokumentation zum Lizenznutzungs-Dashboard](../guides/license-usage.md).
+>An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
+
+Informationen zum Ändern der Position und Größe der bereits in Ihren Dashboards angezeigten Widgets finden Sie im Handbuch [Dashboards ändern](modify.md).
 
 ## Zugriff auf die Widget-Bibliothek {#access}
 
-Wählen Sie in einem beliebigen Dashboard (z. B. im Dashboard Profile ) die Option **[!UICONTROL Widget hinzufügen]** direkt zur Widget-Bibliothek navigieren, in der Sie [Widgets hinzufügen](#add-widgets) in Ihr Dashboard.
+Wählen Sie in einem beliebigen Dashboard (z. B. im Dashboard Profile ) die Option **[!UICONTROL Widget hinzufügen]** direkt zur Widget-Bibliothek navigieren, in der Sie [Widgets hinzufügen](#add-widgets) in Ihr Dashboard ein.
 
 ![Die Registerkarte Übersicht des Profil-Dashboards mit der Schaltfläche Widget hinzufügen wurde hervorgehoben.](../images/customization/profiles-overview-add-widget.png)
 
-Auswählen **[!UICONTROL Dashboard ändern]** , um Widgets aus Ihrem Dashboard zu verschieben, zu verkleinern oder zu entfernen. In dieser Anzeige können Sie **[!UICONTROL Widget-Bibliothek]** zu durchsuchen und [Widgets hinzufügen](#add-widgets). Informationen zum Bearbeiten von Widget-Größen und -Layouts finden Sie unter [Dokumentation zu Dashboards ändern](./modify.md).
+Auswählen **[!UICONTROL Dashboard ändern]** , um Widgets aus Ihrem Dashboard zu verschieben, zu verkleinern oder zu entfernen. In dieser Anzeige können Sie auch **[!UICONTROL Widget-Bibliothek]** zu durchsuchen und [Widgets hinzufügen](#add-widgets). Informationen zum Bearbeiten von Widget-Größen und -Layouts finden Sie unter [Dokumentation zu Dashboards ändern](./modify.md).
 
-![Die Übersicht über das Profil-Dashboard mit Dashboard &quot;Ändern&quot;wurde hervorgehoben.](../images/customization/modify-dashboard.png)
+![Die Übersicht über das Profil-Dashboard mit Dashboard Ändern wurde hervorgehoben.](../images/customization/modify-dashboard.png)
 
 Wählen Sie **[!UICONTROL Widget-Bibliothek]** aus, um die Widget-Bibliothek zu öffnen und alle verfügbaren Standardmetriken anzuzeigen oder mit der Erstellung benutzerdefinierter Widgets zu beginnen.
 

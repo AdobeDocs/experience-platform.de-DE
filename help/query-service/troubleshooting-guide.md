@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4309'
-ht-degree: 100%
+source-wordcount: '4384'
+ht-degree: 98%
 
 ---
 
@@ -583,6 +583,16 @@ Ja, die attributbasierte Zugriffssteuerung wird erzwungen, wenn sie konfiguriert
 
 +++Antwort 
 Nein, Query Service unterstützt den Befehl „INSERT OVERWRITE INTO“ nicht.
++++
+
+### Wie häufig werden die Nutzungsdaten im Dashboard zur Lizenznutzung für Data Distiller-Berechnungszeiten aktualisiert?
+
++++Antwort Das Dashboard zur Lizenznutzung für Data Distiller-Computerzeiten wird viermal täglich, alle sechs Stunden aktualisiert.
++++
+
+### Kann ich den Befehl CREATE VIEW ohne Data Distiller-Zugriff verwenden?
+
++++Antwort Ja, Sie können `CREATE VIEW` -Befehl ohne Data Distiller-Zugriff. Dieser Befehl bietet eine logische Ansicht der Daten, schreibt sie jedoch nicht zurück in den Daten-Pool.
 +++
 
 ## Exportieren von Daten {#exporting-data}

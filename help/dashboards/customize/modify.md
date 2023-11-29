@@ -3,10 +3,10 @@ keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profil
 title: Ändern von Platform-Dashboards in der Benutzeroberfläche
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige der Adobe Experience Platform-Daten Ihres Unternehmens in Dashboards.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 91%
+source-wordcount: '496'
+ht-degree: 88%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 91%
 
 In der Adobe Experience Platform-Benutzeroberfläche können Sie die Daten Ihres Unternehmens mithilfe mehrerer Dashboards anzeigen lassen und damit interagieren. Die in den Dashboards angezeigten Standard-Widgets und Metriken können auf Benutzerebene angepasst werden, um die bevorzugten Daten anzuzeigen. Außerdem können Widgets erstellt und von Benutzern in derselben Organisation gemeinsam genutzt werden.
 
-Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige von Dashboard-Daten in den Dashboards [!UICONTROL Profile], [!UICONTROL Segmente] und [!UICONTROL Ziele] in der Platform-Benutzeroberfläche.
-
 >[!NOTE]
 >
->Die Widgets, die im Dashboard für Lizenznutzung angezeigt werden, können nicht angepasst werden. Weitere Informationen zu diesem einzigartigen Dashboard finden Sie in der [Dokumentation zum Dashboard zur Lizenznutzung](../guides/license-usage.md).
+>An den Dashboards vorgenommene Aktualisierungen erfolgen nach Organisation und Sandbox.
+
+Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzeige von Dashboard-Daten in den Dashboards [!UICONTROL Profile], [!UICONTROL Segmente] und [!UICONTROL Ziele] in der Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
