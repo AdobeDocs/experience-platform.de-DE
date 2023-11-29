@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, September 2022
 description: Versionshinweise September 2022 zu Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 99%
@@ -215,7 +215,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 | Funktion | Beschreibung |
 | --- | --- |
 | Warnhinweis-Abonnement-API | Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder über beide empfangen werden. Zurzeit können Abfrage-Warnhinweise nur mit der [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/) abonniert werden. |
-| Datensatzbeispiele | Mit den Muster-Datensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, während die Abfragegenauigkeit verringert wird. Weitere Informationen erhalten Sie im [Handbuch zu Datensatzmustern](../../query-service/essential-concepts/dataset-samples.md). |
+| Datensatzbeispiele | Mit den Muster-Datensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, während die Abfragegenauigkeit verringert wird. Weitere Informationen erhalten Sie im [Handbuch zu Datensatzmustern](../../query-service/key-concepts/dataset-samples.md). |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).
 

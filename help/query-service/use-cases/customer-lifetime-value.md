@@ -2,7 +2,7 @@
 title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
 description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 12%
@@ -91,7 +91,7 @@ Sobald Sie Ihre Audience erstellt haben, können Sie sie für ein Ziel aktiviere
 
 ## Anzeigen der zurückgegebenen Analysedaten aus Ihrer Kampagne {#post-campaign-data-analysis}
 
-Die Daten aus Quellen können jetzt [inkrementell verarbeitet](../essential-concepts/incremental-load.md) als Teil einer geplanten Aktualisierung Ihres Datenmodells im beschleunigten Datenspeicher. Alle Antwortereignisse von Kunden können bei ihrem Auftreten oder in Batches in Adobe Experience Platform aufgenommen werden. Ihr Datenmodell kann je nach Einstellungen oder Quell-Connectoren einmal oder mehrmals täglich aktualisiert werden. Siehe [Batch-Aufnahme-API - Übersicht](../../ingestion/batch-ingestion/api-overview.md) oder [Streaming-Erfassung - Übersicht](../../ingestion/streaming-ingestion/overview.md) für weitere Informationen.
+Die Daten aus Quellen können jetzt [inkrementell verarbeitet](../key-concepts/incremental-load.md) als Teil einer geplanten Aktualisierung Ihres Datenmodells im beschleunigten Datenspeicher. Alle Antwortereignisse von Kunden können bei ihrem Auftreten oder in Batches in Adobe Experience Platform aufgenommen werden. Ihr Datenmodell kann je nach Einstellungen oder Quell-Connectoren einmal oder mehrmals täglich aktualisiert werden. Siehe [Batch-Aufnahme-API - Übersicht](../../ingestion/batch-ingestion/api-overview.md) oder [Streaming-Erfassung - Übersicht](../../ingestion/streaming-ingestion/overview.md) für weitere Informationen.
 
 Sobald Ihr Datenmodell aktualisiert wurde, stellen Ihre benutzerdefinierten Dashboard-Widgets aussagekräftige Signale bereit, mit denen Sie den Lebenszeitwert von Kunden messen und visualisieren können.
 

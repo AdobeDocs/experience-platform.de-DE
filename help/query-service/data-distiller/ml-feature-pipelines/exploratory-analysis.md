@@ -2,7 +2,7 @@
 title: Explorative Datenanalyse
 description: Erfahren Sie, wie Sie mit Data Distiller Daten aus einem Python-Notebook untersuchen und analysieren können.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 18%
@@ -42,7 +42,7 @@ df
 
 ## Erstellen einer Stichprobenversion großer Datensätze {#create-dataset-sample}
 
-Wenn der Datensatz, den Sie abfragen möchten, sehr groß ist oder wenn genaue Ergebnisse aus explorativen Abfragen nicht erforderlich sind, verwenden Sie die [Sampling-Funktion](../../essential-concepts/dataset-samples.md) verfügbar für Data Distiller-Abfragen. Dies ist ein zweistufiger Prozess:
+Wenn der Datensatz, den Sie abfragen möchten, sehr groß ist oder wenn genaue Ergebnisse aus explorativen Abfragen nicht erforderlich sind, verwenden Sie die [Sampling-Funktion](../../key-concepts/dataset-samples.md) verfügbar für Data Distiller-Abfragen. Dies ist ein zweistufiger Prozess:
 
 - Erstens: **analysieren** Datensatz, um eine Version mit einer Stichprobe mit einem bestimmten Stichprobenverhältnis zu erstellen
 - Abfragen Sie als Nächstes die beprobte Version des Datensatzes. Je nach den Funktionen, die Sie auf den Datensatz mit gesampelten Datensätzen anwenden, können Sie die Ausgabe auf die Zahlen auf den vollständigen Datensatz skalieren

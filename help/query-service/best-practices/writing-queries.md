@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Schreiben von Abfragen; Schreiben von Abfragen;
+keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; Schreiben von Abfragen; Schreiben von Abfragen;
 solution: Experience Platform
 title: Allgemeine Anleitung für die Ausführung von Abfragen in Query Service
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 4%
@@ -20,13 +20,13 @@ Detaillierte Informationen zur SQL-Syntax finden Sie unter [!DNL Query Service],
 
 ## Ausführungsmodelle von Abfragen
 
-Adobe Experience Platform [!DNL Query Service] verfügt über zwei Ausführungsmodelle von Abfragen: interaktiv und nicht interaktiv sein. Die interaktive Ausführung wird in Business Intelligence-Tools zur Abfrageentwicklung und Berichterstellung verwendet, während nicht interaktive im Rahmen eines Datenverarbeitungs-Workflows für größere Aufträge und operative Abfragen verwendet werden.
+Adobe Experience Platform [!DNL Query Service] verfügt über zwei Ausführungsmodelle von Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird in Business Intelligence-Tools zur Abfrageentwicklung und Berichterstellung verwendet, während nicht interaktive im Rahmen eines Datenverarbeitungs-Workflows für größere Aufträge und operative Abfragen verwendet werden.
 
 ### Ausführung der interaktiven Abfrage
 
 Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service] Benutzeroberfläche oder [über einen verbundenen Client](../clients/overview.md). Beim Ausführen [!DNL Query Service] über einen verbundenen Client wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] bis entweder die gesendete Abfrage zurückgibt oder eine Zeitüberschreitung auftritt.
 
-Die Ausführung interaktiver Abfragen unterliegt folgenden Einschränkungen:
+Die Ausführung der interaktiven Abfrage weist die folgenden Einschränkungen auf:
 
 | Parameter | Einschränkung |
 | --------- | ---------- |
@@ -40,17 +40,17 @@ Die Ausführung interaktiver Abfragen unterliegt folgenden Einschränkungen:
 
 Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurückgegeben und sind **not** beibehalten. Um die Ergebnisse als Datensatz beizubehalten, verwenden Sie [!DNL Experience Platform], muss die Abfrage die `CREATE TABLE AS SELECT` Syntax.
 
-### Nicht interaktive Ausführung von Abfragen
+### Nicht-interaktive Abfrageausführung
 
 Über die [!DNL Query Service] APIs werden nicht interaktiv ausgeführt. Nicht interaktive Ausführung bedeutet, dass [!DNL Query Service] empfängt den API-Aufruf und führt die Abfrage in der Reihenfolge aus, in der sie empfangen wird. Nicht-interaktive Abfragen führen immer zur Generierung eines neuen Datensatzes in [!DNL Experience Platform] um die Ergebnisse zu erhalten oder neue Zeilen in einen vorhandenen Datensatz einzufügen.
 
 ## Zugreifen auf ein bestimmtes Feld in einem Objekt
 
-Um auf ein Feld innerhalb eines Objekts in Ihrer Abfrage zuzugreifen, können Sie die Punktnotation (`.`) oder Klammer (`[]`). Die folgende SQL-Anweisung verwendet die Punktnotation, um die `endUserIds` Objekt bis zum `mcid` -Objekt.
+Um auf ein Feld innerhalb eines Objekts in Ihrer Abfrage zuzugreifen, können Sie die Punktnotation (`.`) oder Klammer-Notation (`[]`). Die folgende SQL-Anweisung verwendet die Punktnotation, um die `endUserIds` Objekt bis zum `mcid` -Objekt.
 
 >[!NOTE]
 >
->Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
+>Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -120,7 +120,7 @@ Einfache Anführungszeichen, doppelte Anführungszeichen und Backquotes verwende
 
 ### Einzelne Anführungszeichen
 
-Das einfache Anführungszeichen (`'`) wird zum Erstellen von Textzeichenfolgen verwendet. Sie kann beispielsweise im `SELECT` -Anweisung, um einen statischen Textwert im Ergebnis und in der `WHERE` -Klausel, um den Inhalt einer Spalte zu bewerten.
+Das einfache Anführungszeichen (`'`) wird zum Erstellen von Textzeichenfolgen verwendet. Sie kann beispielsweise im `SELECT` -Anweisung, um einen statischen Textwert im Ergebnis und im `WHERE` -Klausel, um den Inhalt einer Spalte zu bewerten.
 
 Die folgende Abfrage deklariert einen statischen Textwert (`'datasetA'`) für eine Spalte:
 
@@ -232,7 +232,7 @@ Die `\d` -Befehl zeigt den Standard [!DNL PostgreSQL] -Ansicht für die Auflistu
 
 Um genauere Informationen über die Schemas in der Tabelle anzuzeigen, können Sie die `\d {TABLE_NAME}` -Befehl, wobei `{TABLE_NAME}` ist der Name der Tabelle, deren Schemadaten Sie anzeigen möchten.
 
-Das folgende Beispiel zeigt Schemainformationen für die `luma_midvalues` -Tabelle, die mithilfe von `\d luma_midvalues`:
+Das folgende Beispiel zeigt die Schemainformationen für die `luma_midvalues` -Tabelle, die mithilfe von `\d luma_midvalues`:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -255,7 +255,7 @@ Das folgende Beispiel zeigt Schemainformationen für die `luma_midvalues` -Tabel
  search            | search                      |           |          | 
 ```
 
-Zusätzlich können Sie weitere Informationen zu einer bestimmten Spalte erhalten, indem Sie den Namen der Spalte an den Tabellennamen anhängen. Dies würde im Format `\d {TABLE_NAME}_{COLUMN}`.
+Zusätzlich können Sie weitere Informationen zu einer bestimmten Spalte erhalten, indem Sie den Namen der Spalte an den Tabellennamen anhängen. Dies würde im folgenden Format geschrieben: `\d {TABLE_NAME}_{COLUMN}`.
 
 Das folgende Beispiel zeigt zusätzliche Informationen für die `web` und mit dem folgenden Befehl aufgerufen werden: `\d luma_midvalues_web`:
 
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Deduplizierung
 
-Query Service unterstützt die Deduplizierung von Daten oder das Entfernen doppelter Zeilen aus Daten. Weitere Informationen zur Deduplizierung finden Sie im [Handbuch zur Query Service-Deduplizierung](../essential-concepts/deduplication.md).
+Query Service unterstützt die Deduplizierung von Daten oder das Entfernen doppelter Zeilen aus Daten. Weitere Informationen zur Deduplizierung finden Sie im [Handbuch zur Query Service-Deduplizierung](../key-concepts/deduplication.md).
 
 ## Zeitzonenberechnungen in Query Service
 
@@ -323,8 +323,8 @@ Durch Lesen dieses Dokuments haben Sie einige wichtige Aspekte beim Schreiben vo
 
 Weitere Beispiele für Abfragen, die in Query Service verwendet werden können, finden Sie in der folgenden Anwendungsfalldokumentation:
 
-- [Analytics-Einblicke](../use-cases/analytics-insights.md)
+- [Analytics-Erkenntnisse](../use-cases/analytics-insights.md)
 - [Erstellen eines Trendberichts mit Ereignissen](../use-cases/trended-report-of-events.md)
 - [Anzeigen eines Rollup-Berichts eines Besuchers](../use-cases/roll-up-report-of-a-visitor.md)
 - [Auflisten der Seitenansichten von Benutzenden](../use-cases/list-visitor-sessions.md)
-- [Besucher nach Anzahl der Seitenansichten auflisten](../use-cases/visitors-by-number-of-page-views.md)
+- [Besucher nach der Anzahl der Seitenansichten auflisten](../use-cases/visitors-by-number-of-page-views.md)

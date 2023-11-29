@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2022
 description: Versionshinweise Januar 2022 für Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 97%
@@ -91,7 +91,7 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Anonymer Block | Das anonyme Block-SQL-Konstrukt ermöglicht es Ihnen, umfangreiche Datenvorbereitungsvorgänge im Abfrage-Service in kleinere Aufgaben zu zerlegen, sie dann wiederzuverwenden und nacheinander zum inkrementellen Laden der Daten zu verwenden. Weitere Informationen finden Sie in der [Dokumentation zu Beispielabfragen für den anonymen Block](../../query-service/essential-concepts/anonymous-block.md). |
+| Anonymer Block | Das anonyme Block-SQL-Konstrukt ermöglicht es Ihnen, umfangreiche Datenvorbereitungsvorgänge im Abfrage-Service in kleinere Aufgaben zu zerlegen, sie dann wiederzuverwenden und nacheinander zum inkrementellen Laden der Daten zu verwenden. Weitere Informationen finden Sie in der [Dokumentation zu Beispielabfragen für den anonymen Block](../../query-service/key-concepts/anonymous-block.md). |
 | Datensatzstruktur | Bietet eine kohärente, logische Datenstruktur zur Organisation Ihrer Datenelemente für die Verwendung mit dem Abfrage-Service, wenn die Anzahl der Datenelemente innerhalb der Sandbox zunimmt. Weitere Informationen finden Sie in der [Dokumentation zum Organisieren von Datenelementen](../../query-service/best-practices/organize-data-assets.md). |
 
 Weitere Informationen zu [!DNL Query Service] finden Sie in der [[!DNL Query Service] Übersicht](../../query-service/home.md).

@@ -4,7 +4,7 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 91%
@@ -52,6 +52,15 @@ ht-degree: 91%
    - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten ](use-cases/merchandising-variables.md)
    - [Anzeigen des Roll-up-Berichts für Besuchende](use-cases/roll-up-report-of-a-visitor.md)
    - [Web- und Mobile-Analyse-Einblicke](use-cases/analytics-insights.md)
+- Schlüsselkonzepte {#key-concepts}
+   - [Arbeiten mit verschachtelten Datenstrukturen](key-concepts/nested-data-structures.md)
+   - [Reduzieren von verschachtelten Datenstrukturen](key-concepts/flatten-nested-data.md)
+   - [Anonymer Block](key-concepts/anonymous-block.md)
+   - [Inline-Vorlage](key-concepts/inline-templates.md)
+   - [Inkrementelles Laden](key-concepts/incremental-load.md)
+   - [Deduplizierung von Daten](key-concepts/deduplication.md)
+   - [Datensatzbeispiele](key-concepts/dataset-samples.md)
+   - [Berechnung der Datensatzstatistiken](key-concepts/dataset-statistics.md)
 - Clients mit Query Service verbinden {#clients}
    - [Kundenverbindungen – Überblick](clients/overview.md)
    - [SSL-Modi](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 91%
 - Best Practices {#best-practices}
    - [Abfrageausführung](best-practices/writing-queries.md)
    - [Organisation von Daten-Medienelementen](./best-practices/organize-data-assets.md)
-- Grundlegende Konzepte {#essential-concepts}
-   - [Arbeiten mit verschachtelten Datenstrukturen](essential-concepts/nested-data-structures.md)
-   - [Reduzieren von verschachtelten Datenstrukturen](essential-concepts/flatten-nested-data.md)
-   - [Anonymer Block](essential-concepts/anonymous-block.md)
-   - [Inline-Vorlage](essential-concepts/inline-templates.md)
-   - [Inkrementelles Laden](essential-concepts/incremental-load.md)
-   - [Deduplizierung von Daten](essential-concepts/deduplication.md)
-   - [Datensatzbeispiele](essential-concepts/dataset-samples.md)
-   - [Berechnung der Datensatzstatistiken](essential-concepts/dataset-statistics.md)
 - SQL-Referenz {#sql}
    - [SQL – Übersicht](sql/overview.md)
    - [SQL-Syntax](sql/syntax.md)

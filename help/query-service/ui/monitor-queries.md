@@ -2,7 +2,7 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
+source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 39%
@@ -161,7 +161,7 @@ Abfragen, die anonyme Bausteine verwenden, um ihre SQL-Anweisungen zu enthalten,
 >
 >Die Ausführungsdetails eines anonymen Bausteins, der den Befehl DROP verwendet, werden **not** als separate Unterabfrage gemeldet werden. Separate Ausführungsdetails sind für CTAS-Abfragen, ITAS-Abfragen und COPY-Anweisungen verfügbar, die als anonyme Block-Subabfragen verwendet werden. Ausführungsdetails für den DROP-Befehl werden derzeit nicht unterstützt.
 
-Anonyme Bausteine werden mithilfe eines `$$` -Präfix vor der Abfrage. Weitere Informationen zu anonymen Bausteinen im Abfragedienst finden Sie im Abschnitt [Anonym-Blockdokument](../essential-concepts/anonymous-block.md).
+Anonyme Bausteine werden mithilfe eines `$$` -Präfix vor der Abfrage. Weitere Informationen zu anonymen Bausteinen im Abfragedienst finden Sie im Abschnitt [Anonym-Blockdokument](../key-concepts/anonymous-block.md).
 
 Unterabfragen anonymer Bausteine verfügen über Registerkarten links neben dem Ausführungsstatus. Wählen Sie eine Registerkarte aus, um die Ausführungsdetails anzuzeigen.
 
