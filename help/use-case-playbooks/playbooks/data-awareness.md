@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Übersicht über das Datenbewusstsein in "Anwendungsfallbüchern"
 description: Erfahren Sie, wie Sie die Wertschöpfungszeit beschleunigen können, indem Sie die in der zugrunde liegenden inspirierenden Sandbox erstellten Assets in andere Sandboxes kopieren.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 5b6b69d69a088f58d10f41debde859294285360d
+source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
    >
    > Das Paket kann nicht importiert werden, solange es sich noch im Entwurfsmodus befindet. Öffnen Sie daher die Seite mit den Paketdetails und veröffentlichen Sie das Paket.
 
-5. Wählen Sie die **+** Steuerung, um den Workflow zu starten und die durch die Anwendungsfallwiedergabe generierten Assets in die **[!UICONTROL Target-Sandbox]**. Wählen Sie eine Ziel-Sandbox aus und bestätigen Sie mithilfe des Dropdown-Menüs den Paketnamen, den Sie importieren möchten. Fügen Sie die Auftragsdetails wie Auftragsname und Auftragsbeschreibung hinzu, bevor Sie mit dem nächsten Schritt fortfahren.
+5. Wählen Sie die **+** den Workflow steuern und starten, um die durch die Fallwiedergabe generierten Assets in die **[!UICONTROL Target-Sandbox]**. Wählen Sie eine Ziel-Sandbox aus und bestätigen Sie mithilfe des Dropdown-Menüs den Paketnamen, den Sie importieren möchten. Fügen Sie die Auftragsdetails wie Auftragsname und Auftragsbeschreibung hinzu, bevor Sie mit dem nächsten Schritt fortfahren.
 
    ![Import-Workflow starten, Ziel auswählen, Paket bestätigen, Auftragsdetails hinzufügen.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
@@ -59,7 +59,7 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
 
 ### Schemata zuordnen {#map-schemas}
 
-1. Zuordnen des ersten Schemas Im Dialogfeld für die Schemazuordnung wird eine Dropdown-Liste zur Auswahl des Zielschemas angezeigt. Wenn das Quellschema ein Profilschema ist, gibt es neben dem [individuelles Vereinigungsprofilschema](/help/xdm/classes/individual-profile.md). Sie können automatisch generierte Zuordnungsempfehlungen zwischen Quelldaten und Zielfeldern sehen, wenn die Seite zum ersten Mal angezeigt wird. Sie können die Zuordnungen bearbeiten, indem Sie das Zielfeld auswählen und dann ein neues Feld auswählen. Wenn Sie Änderungen an den vorgeschlagenen Zuordnungen vornehmen, verwenden Sie die **Bestätigen** -Schaltfläche, um die neuen Zuordnungen zu validieren und alle Fehler anzuzeigen, die mit den neuen Zuordnungen verknüpft sein können. Auswählen **Speichern** sobald die Zuordnung abgeschlossen ist.
+1. Zuordnen des ersten Schemas Im Dialogfeld für die Schemazuordnung wird eine Dropdown-Liste zur Auswahl des Zielschemas angezeigt. Wenn das Quellschema ein Profilschema ist, gibt es neben dem [individuelles Vereinigungsprofilschema](/help/xdm/classes/individual-profile.md). Sie können automatisch generierte Zuordnungsempfehlungen zwischen Quelldaten und Zielfeldern sehen, wenn die Seite zum ersten Mal angezeigt wird. Sie können die Zuordnungen bearbeiten, indem Sie das Zielfeld auswählen und dann ein neues Feld auswählen. Wenn Sie die vorgeschlagenen Zuordnungen ändern, verwenden Sie die **Bestätigen** -Schaltfläche, um die neuen Zuordnungen zu validieren und alle Fehler anzuzeigen, die mit den neuen Zuordnungen verknüpft sein können. Auswählen **Speichern** sobald die Zuordnung abgeschlossen ist.
 
    ![Dialogfeld für die Schemazuordnung mit einer Dropdown-Liste zur Auswahl eines Zielschemas.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
@@ -81,7 +81,7 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
 
    >[!NOTE]
    >
-   > Sie können mit Ausnahme der Schemas keine Aktion für Assets durchführen, da es sich hierbei um eine inspirierende Sandbox handelt, sie jedoch als Abhängigkeiten des Pakets angezeigt werden.
+   > Sie können keine Assets mit Ausnahme der Schemas ändern, da es sich um eine inspirierende Sandbox handelt, sie jedoch als Abhängigkeiten des Pakets angezeigt werden.
 
 ### Importstatus {#import-status}
 
@@ -89,7 +89,7 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
 
    ![Seite mit dem Importfortschritt](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. Während das Paket importiert wird, werden die Assets des Pakets in der Ziel-Sandbox erstellt. Nach Abschluss referenzieren sie die Felder, denen Sie im Importprozess gerade zugeordnet haben. Der Prozess ist jetzt abgeschlossen und die Assets aus der inspirierenden Sandbox sind jetzt auch in Ihrer Ziel-Sandbox vorhanden, damit Sie sie testen können.
+2. Während das Paket importiert wird, werden die Assets des Pakets in der Ziel-Sandbox erstellt. Nach Abschluss referenzieren sie die Felder, die Sie während des Importvorgangs zugeordnet haben. Der Prozess ist jetzt abgeschlossen und die Assets aus der inspirierenden Sandbox sind jetzt auch in Ihrer Ziel-Sandbox vorhanden, damit Sie sie testen können.
 
    ![Generierte Assets in der Ziel-Sandbox](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
