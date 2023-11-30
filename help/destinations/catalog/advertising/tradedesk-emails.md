@@ -3,9 +3,9 @@ title: (Beta) Verbindung zwischen Trade Desk und CRM
 description: Aktivieren Sie Profile in Ihrem Trade Desk-Konto für Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1130'
 ht-degree: 22%
 
 ---
@@ -49,7 +49,7 @@ Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experi
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | E-Mail | E-Mail-Adressen (Klartext) | Eingabe `email` als Zielidentität, wenn Ihre Quellidentität ein E-Mail-Namespace oder -Attribut ist. |
-| Email_LC_SHA256 | E-Mail-Adressen müssen mit SHA256 gehasht und in Kleinbuchstaben geschrieben werden. Achten Sie darauf, allen [E-Mail-Normalisierung](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) Regeln erforderlich. Sie können diese Einstellung später nicht ändern. | Eingabe `hashed_email` als Zielidentität, wenn Ihre Quellidentität ein Namespace oder ein Attribut von Email_LC_SHA256 ist. |
+| Email_LC_SHA256 | E-Mail-Adressen müssen mit SHA256 gehasht und in Kleinbuchstaben geschrieben werden. Sie können diese Einstellung später nicht ändern. | Eingabe `hashed_email` als Zielidentität, wenn Ihre Quellidentität ein Namespace oder ein Attribut von Email_LC_SHA256 ist. |
 
 {style="table-layout:auto"}
 
