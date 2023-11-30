@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Teilweise Zeilen-Aktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 12%
+source-wordcount: '1225'
+ht-degree: 11%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 12%
 Das Streamen von Upserts in [!DNL Data Prep] ermöglicht es Ihnen, partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile]-Daten zu senden und gleichzeitig neue Identitätsverknüpfungen mit einer einzigen API-Anfrage zu erstellen und herzustellen.
 
 Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten in [!DNL Real-Time Customer Profile] PATCH-Anfragen während der Aufnahme. Basierend auf den von Ihnen bereitgestellten Eingaben [!DNL Data Prep] ermöglicht Ihnen das Senden einer einzelnen API-Payload und das Übersetzen der Daten in beide [!DNL Real-Time Customer Profile] PATCH und [!DNL Identity Service] ERSTELLEN SIE -Anfragen.
+
+>[!WARNING]
+>
+>Die Erfassung von Entitäts-Update-Meldungen für Experience-Datenmodell (XDM) (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Inlet wird nicht mehr unterstützt. Alternativ können Sie [Erfassen von Rohdaten in den DCS-Inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) und geben Sie die erforderlichen Datenzuordnungen an, um Ihre Daten in XDM-kompatible Nachrichten für Profilaktualisierungen umzuwandeln.
 
 Dieses Dokument enthält Informationen zum Streamen von Uploads in [!DNL Data Prep].
 
