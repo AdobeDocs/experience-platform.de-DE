@@ -2,10 +2,10 @@
 title: Anonymer Block in Query Service
 description: Der anonyme Block ist eine SQL-Syntax, die von Adobe Experience Platform Query Service unterstützt wird und mit der Abfragen effizient ausgeführt werden können.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 100%
+source-wordcount: '647'
+ht-degree: 74%
 
 ---
 
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## Anonymer Block für Drittanbieter-Kunden {#third-party-clients}
+
+Bestimmte Drittanbieter-Clients benötigen möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil des Skripts als einzelne Anweisung verarbeitet werden soll. Wenn Sie eine Fehlermeldung erhalten, wenn Sie Query Service mit einem Drittanbieter-Client verwenden, sollten Sie die Dokumentation des Drittanbieter-Clients zur Verwendung eines SQL-Blocks lesen.
+
+Beispiel: **DbVisualizer** erfordert, dass das Trennzeichen der einzige Text in der Zeile sein muss. In DbVisualizer lautet der Standardwert für die Begin-ID . `--/` und für die End-ID ist es `/`. Nachfolgend finden Sie ein Beispiel für einen anonymen Block in DbVisualizer:
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+Insbesondere für DbVisualizer gibt es in der Benutzeroberfläche auch die Option &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Siehe [Dokumentation zu DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) für weitere Informationen.
+
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. [Weitere Informationen zur Ausführung von Abfragen](../best-practices/writing-queries.md) finden Sie im Handbuch zum Ausführen von Abfragen in Query Service.
+Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. Bitte lesen Sie die [Handbuch zur Abfrageausführung](../best-practices/writing-queries.md) für weitere Informationen zum Schreiben von Abfragen.
 
-Sie sollten auch das Thema über die [Verwendung des anonymen Blocks mit dem Design-Muster zum inkrementellen Laden](./incremental-load.md) lesen, um die Abfrageeffizienz zu erhöhen.
+Sie sollten auch [Verwendung anonymer Bausteine mit dem Design-Muster für die inkrementelle Belastung](./incremental-load.md) , um die Abfrageeffizienz zu erhöhen.

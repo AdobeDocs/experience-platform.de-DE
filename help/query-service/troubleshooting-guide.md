@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
+source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
 workflow-type: tm+mt
-source-wordcount: '4384'
-ht-degree: 98%
+source-wordcount: '4450'
+ht-degree: 96%
 
 ---
 
@@ -593,6 +593,12 @@ Nein, Query Service unterstützt den Befehl „INSERT OVERWRITE INTO“ nicht.
 ### Kann ich den Befehl CREATE VIEW ohne Data Distiller-Zugriff verwenden?
 
 +++Antwort Ja, Sie können `CREATE VIEW` -Befehl ohne Data Distiller-Zugriff. Dieser Befehl bietet eine logische Ansicht der Daten, schreibt sie jedoch nicht zurück in den Daten-Pool.
++++
+
+### Kann ich anonyme Bausteine in DbVisualizer verwenden?
+
++++Antwort
+Ja. Einige Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil eines Skripts als einzelne Anweisung behandelt werden soll. Weitere Informationen finden Sie im [Anonyme Blockdokumentation](./key-concepts/anonymous-block.md) oder [die offizielle DbVisualizer-Dokumentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## Exportieren von Daten {#exporting-data}
