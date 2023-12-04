@@ -2,10 +2,10 @@
 title: Web SDK-Tag-Erweiterung konfigurieren
 description: Erfahren Sie, wie Sie die Tag-Erweiterung des Experience Platform Web SDK in der Benutzeroberfläche für Tags konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 11%
+source-wordcount: '1546'
+ht-degree: 6%
 
 ---
 
@@ -39,7 +39,7 @@ Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an
 
 ![Bild mit den allgemeinen Einstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Name]**: Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer Tag-Konfiguration an mehrere Organisationen zu senden. Der Instanzname wird standardmäßig auf `alloy`. Sie können den Instanznamen jedoch in einen beliebigen anderen gültigen JavaScript-Objektnamen ändern.
+* **[!UICONTROL Name]**: Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer Tag-Konfiguration an mehrere Organisationen zu senden. Der Instanzname wird standardmäßig auf `alloy`. Sie können den Instanznamen jedoch in einen beliebigen gültigen JavaScript-Objektnamen ändern.
 * **[!UICONTROL Kennung der IMS-Organisation]**: Die ID der Organisation, an die die Daten bei der Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
 * **[!UICONTROL Edge-Domäne]**: Die Domäne, von der die Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieterdomäne (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
 
@@ -65,7 +65,7 @@ Die standardmäßige Zustimmungsstufe wird nicht im Benutzerprofil gespeichert.
 
 | [!UICONTROL Standardeinverständnisebene] | Beschreibung |
 | --- | --- |
-| [!UICONTROL Enthalten] | Erfassen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
+| [!UICONTROL In] | Erfassen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
 | [!UICONTROL Out] | Verwerfen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
 | [!UICONTROL Ausstehend] | Einreihen von Ereignissen in die Warteschlange, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. Wenn Zustimmungsvoreinstellungen angegeben werden, werden die Ereignisse abhängig von den bereitgestellten Voreinstellungen erfasst oder verworfen. |
 | [!UICONTROL Wird vom Datenelement bereitgestellt] | Die standardmäßige Zustimmungsstufe wird durch ein separates Datenelement bestimmt, das Sie definieren. Bei Verwendung dieser Option müssen Sie das Datenelement über das bereitgestellte Dropdown-Menü angeben. |
@@ -85,13 +85,25 @@ In diesem Abschnitt können Sie das Verhalten des Web SDK bezüglich der Handhab
 
 ## Personalisierungseinstellungen konfigurieren {#personalization}
 
-In diesem Abschnitt können Sie konfigurieren, wie Sie bestimmte Teile einer Seite ausblenden möchten, während personalisierter Inhalt geladen wird.
-
-Sie können die Elemente angeben, die im Stil-Editor zum Vorab-Ausblenden ausgeblendet werden sollen. Sie können dann das Ihnen bereitgestellte standardmäßige Codefragment zur Vorab-Ausblendung kopieren und in das `<head>` -Element der [!DNL HTML] Code.
+In diesem Abschnitt können Sie konfigurieren, wie Sie bestimmte Teile einer Seite ausblenden möchten, während personalisierter Inhalt geladen wird. Dadurch wird sichergestellt, dass Ihre Besucher nur die personalisierte Seite sehen.
 
 ![Bild mit den Personalisierungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL Migrieren von Target von at.js zum Web SDK]**: Verwenden Sie diese Option, um [!DNL Web SDK] zum Lesen und Schreiben der alten `mbox` und `mboxEdgeCluster` von at.js verwendete Cookies `1.x` oder `2.x` -Bibliotheken. Auf diese Weise können Sie das Besucherprofil beim Wechsel von einer Seite, die das Web SDK verwendet, zu einer Seite, die at.js verwendet, beibehalten `1.x` oder `2.x` und umgekehrt.
+
+### Stil vorab ausblenden {#prehiding-style}
+
+Mit dem Stil-Editor für die Vorab-Ausblendung können Sie benutzerdefinierte CSS-Regeln definieren, um bestimmte Bereiche einer Seite auszublenden. Wenn die Seite geladen wird, verwendet das Web SDK diesen Stil, um die zu personalisierenden Abschnitte auszublenden, die Personalisierung abzurufen und dann die personalisierten Seitenabschnitte wieder einzublenden. Auf diese Weise werden Ihren Besuchern die bereits personalisierten Seiten angezeigt, ohne dass der Personalisierungs-Abrufprozess angezeigt wird.
+
+### Vorabausblenden eines Snippets {#prehiding-snippet}
+
+Das Vorabausblendungs-Snippet ist nützlich, wenn die Web SDK-Bibliothek asynchron geladen wird. In diesem Fall wird empfohlen, den Inhalt vor dem Laden der Web SDK-Bibliothek zu verbergen, um Flackern zu vermeiden.
+
+Um den Codeausschnitt zur Vorab-Ausblendung zu verwenden, kopieren Sie ihn und fügen Sie ihn in das `<head>` -Element Ihrer Seite.
+
+>[!IMPORTANT]
+>
+>Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe die Verwendung desselben [!DNL CSS] -Regel als von der [Pre-hiding-Stil](#prehiding-style).
 
 ## Datenerfassungseinstellungen konfigurieren {#data-collection}
 
@@ -110,7 +122,7 @@ Dies hilft Ihnen beim Auslösen anderer Datenstromverhaltensweisen als der stand
 Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
 
 1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../../../datastreams/configure.md) definieren.
-2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Tag-Erweiterung des Web SDK an das Edge-Netzwerk senden.
+2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Web SDK-Tag-Erweiterung an das Edge-Netzwerk senden.
 
 Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](../../../../datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
 
