@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zustimmungsverarbeitung in Adobe Experience Platform
 description: Erfahren Sie, wie Sie in Adobe Experience Platform mithilfe des Adobe 2.0-Standards Zustimmungssignale von Kunden verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ Nachdem Sie Ihren CMP so konfiguriert haben, dass er auf Zustimmungsänderungser
 
 Wenn in Ihrer Mobile App Zustimmungsvoreinstellungen von Kunden erforderlich sind, können Sie das Experience Platform Mobile SDK integrieren, um Zustimmungseinstellungen abzurufen und zu aktualisieren und sie an Platform zu senden, wann immer die API für die Einwilligung aufgerufen wird.
 
-Siehe Mobile SDK-Dokumentation für [Konfigurieren der mobilen Erweiterung &quot;Consent&quot;](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) und [über die API für die Zustimmung](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Weitere Informationen zum Umgang mit Datenschutzanliegen mit dem Mobile SDK finden Sie im Abschnitt . [Datenschutz und DSGVO](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+Siehe Mobile SDK-Dokumentation für [Konfigurieren der mobilen Erweiterung &quot;Consent&quot;](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) und [über die API für die Zustimmung](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Weitere Informationen zum Umgang mit Datenschutzanliegen mit dem Mobile SDK finden Sie im Abschnitt . [Datenschutz und DSGVO](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### Direktes Aufnehmen von XDM-konformen Einwilligungsdaten {#batch}
 

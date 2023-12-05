@@ -2,10 +2,10 @@
 title: Adobe Media Analytics for Audio and Video-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform vertraut.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 100%
+source-wordcount: '949'
+ht-degree: 99%
 
 ---
 
@@ -121,18 +121,19 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
 
    * Ein gültiges Delegatobjekt, das die folgenden Funktionen zur Verfügung stellt:
 
-      | Methode |  Beschreibung   |
-      | :--- | :--- |
-      | `getQoSObject()` | Gibt die `MediaObject`-Instanz zurück, die die aktuellen Informationen zur Servicequalität enthält. Diese Methode wird mehrmals während einer Wiedergabesitzung aufgerufen. Die Player-Implementierung muss stets die aktuellsten verfügbaren Servicequalitätsdaten zurückgeben. |
-      | `getCurrentPlaybackTime()` | Gibt die aktuelle Position der Abspielleiste zurück. Bei VOD-Tracking wird der Wert in Sekunden ab Beginn des Medienelements angegeben. Beim Tracking von LIVE-Assets wird der Wert in Sekunden ab Beginn des Programms angegeben. |
+     | Methode |  Beschreibung   |
+     | :--- | :--- |
+     | `getQoSObject()` | Gibt die `MediaObject`-Instanz zurück, die die aktuellen Informationen zur Servicequalität enthält. Diese Methode wird mehrmals während einer Wiedergabesitzung aufgerufen. Die Player-Implementierung muss stets die aktuellsten verfügbaren Servicequalitätsdaten zurückgeben. |
+     | `getCurrentPlaybackTime()` | Gibt die aktuelle Position der Abspielleiste zurück. Bei VOD-Tracking wird der Wert in Sekunden ab Beginn des Medienelements angegeben. Beim Tracking von LIVE-Assets wird der Wert in Sekunden ab Beginn des Programms angegeben. |
 
    * Ein optionales Konfigurationsobjekt, das die folgenden Eigenschaften zur Verfügung stellt:
 
-      | Eigenschaft | Beschreibung | Erforderlich |
-      | :--- | :--- | :--- |
-      | Online Video Provider | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
-      | Player Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
-      | Kanal | Kanalnamen-Eigenschaft | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+     | Eigenschaft | Beschreibung | Erforderlich |
+     | :--- | :--- | :--- |
+     | Online Video Provider | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+     | Player Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+     | Kanal | Kanalnamen-Eigenschaft | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+
    **Wert zurückgeben:** Eine Zusage, die entweder mit einer `MediaHeartbeat`-Instanz aufgelöst oder mit einer Fehlermeldung zurückgewiesen wird.
 
 1. **Auf MediaHeartbeat-Konstanten zugreifen:** Freigegebenes `media-heartbeat`-Modul
@@ -173,7 +174,7 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
    ...
    ```
 
-1. Verwenden Sie die Media Heartbeat-Instanz und befolgen Sie die [Medien-SDK-JS-](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html?lang=de) und die [JS-API-Dokumentation](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html), um das Medien-Tracking zu implementieren.
+1. Verwenden Sie die Media Heartbeat-Instanz und befolgen Sie die [Medien-SDK-JS-](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) und die [JS-API-Dokumentation](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html), um das Medien-Tracking zu implementieren.
 
 >[!NOTE]
 >
