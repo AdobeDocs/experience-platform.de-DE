@@ -3,14 +3,14 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung - Benutzer verwalten
 description: Dieses Dokument enthält Informationen zum Verwalten von Benutzern und Benutzergruppen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '217'
 ht-degree: 6%
 
 ---
 
-# Verwalten der Benutzenden
+# Benutzer verwalten
 
 Wenn Sie Benutzerdetails und Rollen anzeigen möchten, denen sie zugewiesen sind, wählen Sie die **[!UICONTROL Benutzer]** Registerkarte.
 
@@ -32,7 +32,7 @@ Wählen Sie die **[!UICONTROL Rollen]** um die Rollen anzuzeigen, denen der Benu
 >
 >Nur Systemadministratoren können API-Anmeldeinformationen in den Berechtigungen anzeigen und verwalten.
 
-Der Übergang zu Adobe Experience Platform-Berechtigungen umfasst zusätzliche Schritte, die für den Entwickler-API-Workflow durchgeführt werden müssen, der zuvor auf Produktprofile angewiesen war. Siehe Handbuch unter [API-Authentifizierung](../../../landing/api-authentication.md) für weitere Informationen.
+Der Übergang zu Adobe Experience Platform-Berechtigungen umfasst zusätzliche Schritte, die für den Entwickler-API-Workflow durchgeführt werden müssen, der zuvor auf Rollen angewiesen war. Siehe Handbuch unter [API-Authentifizierung](../../../landing/api-authentication.md) für weitere Informationen.
 
 ## Nächste Schritte
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Attributbasierte Zugriffssteuerung – Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 94%
+source-wordcount: '1840'
+ht-degree: 87%
 
 ---
 
@@ -46,7 +46,7 @@ Die attributbasierte Zugriffssteuerung umfasst die folgenden Komponenten:
 
 >[!IMPORTANT]
 >
->Sobald für Ihre Organisation die attributbasierte Zugriffssteuerung aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Produktprofilen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzende, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
+>Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
 
 Berechtigungen sind der Bereich von Experience Cloud, in dem Admins Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einem Produktprogramm zu verwalten.
 
@@ -62,7 +62,7 @@ Die folgenden Abschnitte enthalten Informationen dazu, wie die attributbasierte 
 
 ### Zugangssteuerung
 
-Platform nutzt [Adobe Admin Console](https://adminconsole.adobe.com)-Produktprofile, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald für Ihre Organisation die attributbasierte Zugriffssteuerung aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Produktprofilen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzende, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
+Plattformnutzungen [Adobe Admin Console](https://adminconsole.adobe.com) Rollen, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
 
 Es gibt nur eine begrenzte Verfügbarkeit der attributbasierten Zugriffssteuerung für Kunden, die Healthcare und/oder Privacy Shields erwerben. Zu den Features dieser Funktion gehören:
 
@@ -74,7 +74,7 @@ Die Verwaltungs-Workflows für alle Experience Platform-gestützten Anwendungen,
 
 >[!IMPORTANT]
 >
->Ihre Produktprofile werden automatisch in die Benutzeroberfläche für Berechtigungen migriert, sobald dies für Ihre Organisation aktiviert ist. Die Produktprofile in Admin Console bleiben bis auf Weiteres unverändert. Bitte ändern Sie **nicht** Ihre Produktprofile, nachdem dies für Ihre Organisation aktiviert wurde.
+>Ihre Rollen werden automatisch in die Benutzeroberfläche &quot;Berechtigungen&quot;migriert, wenn Ihre Organisation aktiviert ist. Die Rollen in der Admin Console bleiben bis jetzt unverändert. Bitte **nicht** ändern Sie Ihre Rollen, nachdem Ihre Organisation aktiviert wurde.
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../home.md).
 
