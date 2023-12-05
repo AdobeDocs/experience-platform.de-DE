@@ -2,10 +2,10 @@
 title: Identity Namespace - Überblick
 description: Erfahren Sie mehr über Identitäts-Namespaces im Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 26%
+source-wordcount: '1787'
+ht-degree: 18%
 
 ---
 
@@ -18,16 +18,29 @@ Im folgenden Dokument erfahren Sie mehr über die Möglichkeiten von Identitäts
 Identitäts-Namespaces erfordern ein Verständnis verschiedener Adobe Experience Platform-Dienste. Bevor Sie Namespaces nutzen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Identity Service]](./home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
+* [[!DNL Identity Service]](./home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und ihr Verhalten, indem Sie Identitäten zwischen Geräten und Systemen überbrücken.
 * [[!DNL Privacy Service]](../privacy-service/home.md): Identitäts-Namespaces werden in Compliance-Anfragen für gesetzliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) verwendet. Jede Datenschutzanfrage wird in Bezug auf einen Namespace gestellt, um zu ermitteln, welche Verbraucherdaten betroffen sein sollen.
 
 ## Identitäts-Namespaces verstehen
+
+![Eine Abbildung des Daten-Workflows mit Identity Service.](images/identity-service-stitching.png)
 
 Eine voll qualifizierte Identität umfasst zwei Komponenten: eine **Identitätswert** und **Identitäts-Namespace**. Wenn beispielsweise der Wert einer Identität `scott@acme.com`eingeben, stellt ein Namespace einen Kontext für diesen Wert bereit, indem er ihn als E-Mail-Adresse unterscheidet. Auf ähnliche Weise kann ein Namespace `555-123-456` als Telefonnummer und `3126ABC` als CRM-ID. Grundsätzlich gilt: **Ein Namespace stellt Kontext für eine bestimmte Identität bereit**. Beim Abgleich von Datensatzdaten über Profilfragmente hinweg, wie zum Beispiel wenn [!DNL Real-Time Customer Profile] Führt Profildaten zusammen, sowohl der Identitätswert als auch der Namespace müssen übereinstimmen.
 
 Zwei Profilfragmente können beispielsweise unterschiedliche primäre IDs enthalten, für den Namespace &quot;E-Mail&quot;jedoch denselben Wert verwenden. Daher kann Experience Platform sehen, dass diese Fragmente eigentlich dieselbe Person sind und die Daten im Identitätsdiagramm für die Person zusammenführen.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**Identitäts-Namespace erläutert**
+
+Eine andere Möglichkeit, das Konzept des Namespace besser zu verstehen, besteht darin, reale Beispiele wie Städte und ihre jeweiligen Staaten zu berücksichtigen. Zum Beispiel sind Portland, Maine und Portland, Oregon zwei verschiedene Orte in den Vereinigten Staaten. Während die Städte denselben Namen haben, fungiert der Staat als Namespace und bietet den erforderlichen Kontext, der die beiden Städte voneinander unterscheidet.
+
+Anwenden derselben Logik auf Identity Service:
+
+* Auf einen Blick ist der Identitätswert von: `1-234-567-8900` kann wie eine Telefonnummer aussehen. Aus Sicht des Systems hätte dieser Wert jedoch als CRM-ID konfiguriert werden können. Identity Service kann ohne einen entsprechenden Namespace den erforderlichen Kontext auf diesen Identitätswert nicht anwenden.
+* Ein weiteres Beispiel ist der Identitätswert von: `john@gmail.com`. Dieser Identitätswert kann zwar leicht als E-Mail-Adresse betrachtet werden, es ist jedoch durchaus möglich, dass er als benutzerdefinierte Namespace-CRM-ID konfiguriert ist. Mit dem Namespace können Sie `Email:john@gmail.com` von `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### Komponenten eines Namespace
 
@@ -57,11 +70,11 @@ Die folgenden Identitätstypen sind innerhalb von Experience Platform verfügbar
 
 | Identitätstyp | Beschreibung |
 | --- | --- |
-| Cookie ID | Cookie-IDs identifizieren Webbrowser. Diese Identitäten sind für Erweiterungen von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch naturgemäß schnell und verlieren mit der Zeit ihren Wert. |
+| Cookie-ID | Cookie-IDs identifizieren Webbrowser. Diese Identitäten sind für Erweiterungen von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch von Natur aus schnell und verlieren mit der Zeit ihren Wert. |
 | Geräteübergreifende ID | Geräteübergreifende IDs identifizieren eine Person und verbinden normalerweise andere IDs miteinander. Beispiele sind eine Anmelde-ID, CRM-ID und Loyalitäts-ID. Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 | Geräte-ID | Geräte-IDs identifizieren Hardwaregeräte wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam genutzt werden. |
-| E-Mail Adresse | E-Mail-Adressen sind oft mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
-| Nichtpersonenkennung | Nicht-Personen-IDs werden zum Speichern von Kennungen verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind. Beispielsweise eine Produkt-SKU, Daten, die sich auf Produkte, Organisationen oder Geschäfte beziehen. |
+| E-Mail-Adresse | E-Mail-Adressen sind oft mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies deutet darauf hin, dass [!DNL Identity Service] um den Wert sensibel zu behandeln. |
+| Personenidentifizierung | Nicht-Personen-IDs werden zum Speichern von Kennungen verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind. Beispielsweise eine Produkt-SKU, Daten, die sich auf Produkte, Organisationen oder Geschäfte beziehen. |
 | Partner-ID | <ul><li>Partner-IDs sind Kennungen, die von Datenpartnern zur Darstellung von Personen verwendet werden. Partner-IDs sind häufig pseudonym, sodass die wahre Identität einer Person nicht erkennbar ist und probabilistisch sein kann. In Real-time Customer Data Platform werden Partner-IDs primär für die erweiterte Zielgruppenaktivierung und Datenanreicherung und nicht zum Erstellen von Identitätsdiagrammverknüpfungen verwendet.</li><li>Identitätsdiagramme werden nicht bei der Erfassung einer Identität generiert, die einen Identitäts-Namespace enthält, der als Partner-ID-Typ angegeben wurde.</li><li>Wenn Partnerdaten nicht mit dem Identitätstyp Partner-ID erfasst werden, können für Identity Service Systemdiagrammbeschränkungen sowie unerwünschte Profilzusammenführungen auftreten.</li><ul> |
 | Telefonnummer | Telefonnummern sind häufig mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art umfassen PII. Dies deutet auf [!DNL Identity Service] um den Wert sensibel zu behandeln. |
 
@@ -69,9 +82,9 @@ Die folgenden Identitätstypen sind innerhalb von Experience Platform verfügbar
 
 ### Standard-Namespaces {#standard}
 
- Experience Platform bietet verschiedene Identitäts-Namespaces, die für alle Organisationen verfügbar sind. Diese werden als Standard-Namespaces bezeichnet und sind mithilfe der Variablen [!DNL Identity Service] API oder über die Platform-Benutzeroberfläche.
+Experience Platform bietet mehrere Identitäts-Namespaces, die für alle Organisationen verfügbar sind. Diese werden als Standard-Namespaces bezeichnet und sind mithilfe der Variablen [!DNL Identity Service] API oder über die Platform-Benutzeroberfläche.
 
-Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfügung:
+Die folgenden Standard-Namespaces stehen allen Organisationen in Platform zur Verfügung:
 
 | Anzeigename | Beschreibung |
 | ------------ | ----------- |
@@ -108,7 +121,7 @@ Es wird ein Verzeichnis der Namespaces in Ihrer Organisation angezeigt, in dem I
 
 ## Benutzerdefinierte Namespaces erstellen {#create-namespaces}
 
-Je nach den Daten und Anwendungsfällen in Ihrer Organisation benötigen Sie möglicherweise benutzerdefinierte Namespaces. Benutzerdefinierte Namespaces können mit der [[!DNL Identity Service]](./api/create-custom-namespace.md) API oder über die Benutzeroberfläche.
+Je nach Ihren Organisationsdaten und Anwendungsfällen benötigen Sie möglicherweise benutzerdefinierte Namespaces. Benutzerdefinierte Namespaces können mit der [[!DNL Identity Service]](./api/create-custom-namespace.md) API oder über die Benutzeroberfläche.
 
 Um einen benutzerdefinierten Namespace zu erstellen, wählen Sie **[!UICONTROL Identitäts-Namespace erstellen]**.
 
@@ -132,7 +145,7 @@ Wählen Sie anschließend den Identitätstyp aus, den Sie dem benutzerdefinierte
 
 ## Namespaces in Identitätsdaten
 
-Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der Sie Identitätsdaten bereitstellen. Einzelheiten zur Bereitstellung von Identitätsdaten finden Sie im Abschnitt zum [Bereitstellen von Identitätsdaten](./home.md#supplying-identity-data-to-identity-service) in der Übersicht über den [!DNL Identity Service]
+Die Angabe des Namespace für eine Identität hängt von der Methode ab, mit der Sie Identitätsdaten bereitstellen. Einzelheiten zur Bereitstellung von Identitätsdaten finden Sie im Abschnitt unter [Identitätsdaten bereitstellen](./home.md#supplying-identity-data-to-identity-service) im [!DNL Identity Service] Übersicht.
 
 ## Nächste Schritte
 
