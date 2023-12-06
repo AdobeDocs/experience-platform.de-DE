@@ -4,16 +4,29 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
+source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 77%
+source-wordcount: '660'
+ht-degree: 71%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
 
-## Version 1.5.1 - 2. November 2023
+## Version 1.5.3 – Donnerstag, 6. Dezember 2023
+
+### Neue Funktionen
+
+* Die Einstellung &quot;Sperren der aktiven Registerkarte beim Öffnen des Debuggers&quot;wurde hinzugefügt.
+
+### Fehlerbehebungen und Verbesserungen
+
+* Es wurde ein Problem behoben, bei dem Analytics-Anforderungen auf privaten Domänen fehlten.
+* Es wurde ein Problem behoben, bei dem Activity Map-Daten in der Analytics-Anforderungstabelle fehlten.
+* Es wurde ein Problem behoben, bei dem das Anzeigen der Target Trace zu einem Absturz führte.
+* Es wurde eine Warnung hinzugefügt, wenn der Debugger die Einrichtung einer On-Page-Infrastruktur in Firefox nicht durchführt.
+
+## Version 1.5.1 – Freitag, 2. November 2023
 
 ### Fehlerbehebungen und Verbesserungen
 
@@ -21,7 +34,7 @@ ht-degree: 77%
 * Es wurde ein Problem behoben, bei dem die maximale Speichergröße für den Status überschritten wurde.
 * Es wurde ein Problem behoben, bei dem die Suche nach Edge-Protokollen keine Ereignisse filtert.
 
-## Version 1.5.0 - 19. Oktober 2023
+## Version 1.5.0 – Freitag, 19. Oktober 2023
 
 ### Neue Funktionen
 
@@ -37,7 +50,7 @@ ht-degree: 77%
 * Es wurde ein Problem behoben, bei dem Edge-Protokolle nicht durchsuchbar waren.
 * Es wurde ein Hinweis zu zusätzlichen Profilen für bestimmte Kontotypen hinzugefügt.
 
-## Version 1.4.1 - 1. November 2022
+## Version 1.4.1 – Mittwoch, 1. November 2022
 
 * Die Leistung auf Seiten mit vielen Adobe Experience Platform Assurance-Ereignissen wurde verbessert.
 
