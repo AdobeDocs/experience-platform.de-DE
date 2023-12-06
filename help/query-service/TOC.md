@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 91%
+source-wordcount: '309'
+ht-degree: 89%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 91%
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
    - [Besuchende nach Seitenansichten auflisten](use-cases/visitors-by-number-of-page-views.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [Beispiel für eine Lambda-Funktion: Abrufen ähnlicher Datensätze](use-cases/retrieve-similar-records.md)
    - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten ](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Anzeigen des Roll-up-Berichts für Besuchende](use-cases/roll-up-report-of-a-visitor.md)
    - [Web- und Mobile-Analyse-Einblicke](use-cases/analytics-insights.md)
 - Schlüsselkonzepte {#key-concepts}
