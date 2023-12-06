@@ -1,18 +1,17 @@
 ---
 title: Installieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
-keywords: Web SDK-Installation;Web SDK installieren;Internet Explorer;Zusage;npm-Paket
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 30%
+source-wordcount: '864'
+ht-degree: 26%
 
 ---
 
-# Installieren des SDK {#installing-the-sdk}
 
-Es werden drei Möglichkeiten zur Verwendung des Adobe Experience Platform Web SDK unterstützt:
+# Web SDK installieren {#installing-the-sdk}
+
+Es werden drei Möglichkeiten zur Installation des Adobe Experience Platform Web SDK unterstützt:
 
 1. Die bevorzugte Methode zur Verwendung des Adobe Experience Platform Web SDK besteht über die Datenerfassungs-Benutzeroberfläche oder die Experience Platform-Benutzeroberfläche.
 1. Das Adobe Experience Platform Web SDK ist auch in einem Inhaltsbereitstellungsnetzwerk (Content Delivery Network, CDN) verfügbar, das Sie verwenden können.
@@ -29,7 +28,6 @@ Die vordefinierte Version ist in einem CDN verfügbar. Sie können die Bibliothe
 URL-Struktur: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js ODER legierungen.js für die nicht minimierte Version.
 
 Beispiel:
-
 
 * Minimiert: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
 * Nicht minimiert: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
@@ -77,7 +75,7 @@ So stellen Sie fest, ob Sie bereits über ein `window.Promise`-Polyfill verfüge
 
 1. Öffnen Sie Ihre Website in [!DNL Internet Explorer].
 1. Öffnen Sie die Debugging-Konsole des Browsers.
-1. Geben Sie `window.Promise` in die Konsole ein und drücken Sie die Eingabetaste.
+1. Typ `window.Promise` in die Konsole ein und drücken Sie die Eingabetaste.
 
 Wenn etwas anderes als `undefined` angezeigt wird, verfügen Sie vermutlich bereits über ein `window.Promise`-Polyfill. Eine weitere Möglichkeit, um festzustellen, ob ein `window.Promise`-Polyfill vorliegt, ist das Laden Ihrer Website nach Abschluss der oben genannten Installationsanweisungen. Wenn das SDK einen Fehler ausgibt, in dem ein Promise erwähnt wird, verfügen Sie vermutlich über kein `window.Promise`-Polyfill.
 
@@ -97,7 +95,7 @@ Dieses Tag lädt ein Skript, das sicherstellt, dass `window.Promise` ist eine g�
 
 Wie im Abschnitt beschrieben [Code hinzufügen](#adding-the-code), lädt der Basis-Code, den Sie kopiert und in die HTML Ihrer Website eingefügt haben, eine externe Datei. Die externe Datei enthält die Kernfunktionalität des SDK. Jeder Befehl, den Sie beim Laden dieser Datei ausführen möchten, wird in die Warteschlange gestellt und nach dem Laden der Datei verarbeitet. Das asynchrone Laden der Datei ist die leistungsfähigste Installationsmethode.
 
-Unter bestimmten Umständen möchten Sie die Datei jedoch möglicherweise synchron laden \(weitere Details zu diesen Umständen werden später dokumentiert\). Dadurch wird verhindert, dass der Rest des HTML-Dokuments vom Browser analysiert und gerendert wird, bis die externe Datei geladen und ausgeführt wurde. Diese zusätzliche Verzögerung vor der Anzeige von Primärinhalten für Nutzer wird in der Regel nicht empfohlen, kann aber je nach den Umständen sinnvoll sein.
+Unter bestimmten Umständen möchten Sie die Datei jedoch möglicherweise synchron laden. Dadurch wird verhindert, dass der Rest des HTML-Dokuments vom Browser analysiert und gerendert wird, bis die externe Datei geladen und ausgeführt wurde. Diese zusätzliche Verzögerung vor der Anzeige von Primärinhalten für Nutzer wird in der Regel nicht empfohlen, kann aber je nach den Umständen sinnvoll sein.
 
 Um die Datei synchron statt asynchron zu laden, entfernen Sie das `async`-Attribut aus dem zweiten `script`-Tag, wie nachstehend dargestellt:
 

@@ -1,17 +1,15 @@
 ---
 title: Konfigurieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK konfigurieren.
-seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
-exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 27%
+source-wordcount: '1088'
+ht-degree: 24%
 
 ---
 
-# Konfigurieren des Platform Web SDK
+
+# Web SDK konfigurieren
 
 Die Konfiguration für das SDK erfolgt mit dem `configure`-Befehl.
 
@@ -52,15 +50,15 @@ Ihre zugewiesene Konfigurations-ID, die das SDK mit den entsprechenden Konten un
 
 {style="table-layout:auto"}
 
-Gibt an, welche Kontextkategorien automatisch erfasst werden sollen, wie unter [Automatische Informationen](../data-collection/automatic-information.md) beschrieben. Wenn diese Konfiguration nicht angegeben ist, werden standardmäßig alle Kategorien verwendet.
+Gibt an, welche Kontextkategorien automatisch erfasst werden sollen, wie unter [Automatische Informationen](../data-collection/automatic-information.md). Wenn diese Konfiguration nicht angegeben ist, werden standardmäßig alle Kategorien verwendet.
 
 >[!IMPORTANT]
 >
->Alle Kontexteigenschaften, mit Ausnahme von `highEntropyUserAgentHints`, sind standardmäßig aktiviert. Wenn Sie die Kontexteigenschaften in Ihrer Web SDK-Konfiguration manuell angegeben haben, müssen Sie alle Kontexteigenschaften aktivieren, um die erforderlichen Informationen weiterhin erfassen zu können.
+>Alle Kontexteigenschaften, außer für `highEntropyUserAgentHints`, sind standardmäßig aktiviert. Wenn Sie die Kontexteigenschaften in Ihrer Web SDK-Konfiguration manuell angegeben haben, müssen Sie alle Kontexteigenschaften aktivieren, um die erforderlichen Informationen weiterhin erfassen zu können.
 
 Aktivieren [Clienthinweise mit hoher Entropie](user-agent-client-hints.md#enabling-high-entropy-client-hints) in Ihrer Web SDK-Bereitstellung müssen Sie die zusätzlichen `highEntropyUserAgentHints` -Kontextoption neben Ihrer vorhandenen Konfiguration.
 
-Um beispielsweise Hinweise zu hochentropy-Clients aus Web-Eigenschaften abzurufen, würde Ihre Konfiguration wie folgt aussehen:
+Um beispielsweise Hinweise zu hochgradigen Entropy-Clients aus Web-Eigenschaften abzurufen, würde Ihre Konfiguration wie folgt aussehen:
 
 `context: ["highEntropyUserAgentHints", "web"]`
 
@@ -83,7 +81,7 @@ Gibt an, ob das Debugging aktiviert ist. Durch das Festlegen dieser Konfiguratio
 
 ### `edgeDomain` {#edge-domain}
 
-Füllen Sie dieses Feld mit Ihrer Erstanbieterdomäne aus. Weitere Informationen finden Sie im [Dokumentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
+Füllen Sie dieses Feld mit Ihrer Erstanbieterdomäne aus. Weitere Informationen finden Sie unter [Dokumentation](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de).
 
 Die Domäne ähnelt dem `data.{customerdomain.com}` für eine Website unter www.{customerdomain.com}.
 
@@ -117,7 +115,7 @@ Ihr zugewiesener [!DNL Experience Cloud] Organisations-ID. Beim Konfigurieren me
 
 {style="table-layout:auto"}
 
-Gibt an, ob mit Link-Klicks verknüpfte Daten automatisch erfasst werden. Siehe [Automatische Linktracking](../data-collection/track-links.md#automaticLinkTracking) für weitere Informationen. Links werden auch als Downloadlinks bezeichnet, wenn sie ein Download-Attribut enthalten oder wenn der Link mit einer Dateierweiterung endet. Downloadlink-Qualifikatoren können mit einem regulären Ausdruck konfiguriert werden. Der Standardwert lautet `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
+Gibt an, ob mit Link-Klicks verknüpfte Daten automatisch erfasst werden. Siehe [Automatische Linktracking](../data-collection/track-links.md#automaticLinkTracking) für weitere Informationen. Links werden auch als Downloadlinks bezeichnet, wenn sie ein Download-Attribut enthalten oder wenn der Link mit einer Dateierweiterung endet. Downloadlink-Qualifikatoren können mit einem regulären Ausdruck konfiguriert werden. Der Standardwert ist `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
@@ -127,7 +125,7 @@ Gibt an, ob mit Link-Klicks verknüpfte Daten automatisch erfasst werden. Siehe 
 
 {style="table-layout:auto"}
 
-Konfigurieren Sie einen Callback, der für jedes Ereignis kurz vor dem Senden aufgerufen wird. Ein Objekt mit dem Feld `xdm` wird an den Rückruf gesendet. Um die gesendeten Nachrichten zu ändern, ändern Sie die `xdm` -Objekt. Innerhalb des Rückrufs wird die `xdm` -Objekt enthält bereits die Daten, die im Ereignisbefehl übergeben werden, und die automatisch erfassten Informationen. Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter [Globale Änderung von Ereignissen](tracking-events.md#modifying-events-globally).
+Konfigurieren Sie einen Callback, der für jedes Ereignis kurz vor dem Senden aufgerufen wird. Ein Objekt mit dem Feld `xdm` an den Callback gesendet. Um die gesendeten Nachrichten zu ändern, ändern Sie die `xdm` -Objekt. Innerhalb des Rückrufs wird die `xdm` -Objekt enthält bereits die Daten, die im Ereignisbefehl übergeben werden, und die automatisch erfassten Informationen. Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter [Globale Änderung von Ereignissen](tracking-events.md#modifying-events-globally).
 
 ### `onBeforeLinkClickSend` {#onBeforeLinkClickSend}
 
@@ -137,13 +135,13 @@ Konfigurieren Sie einen Callback, der für jedes Ereignis kurz vor dem Senden au
 
 {style="table-layout:auto"}
 
-Konfigurieren Sie einen Callback, der für jedes Linkklick-Tracking-Ereignis kurz vor dem Senden aufgerufen wird. Der Rückruf sendet ein Objekt mit der `xdm`, `clickedElement`und `data` -Felder.
+Konfigurieren Sie einen Callback, der für jedes Linkklick-Tracking-Ereignis kurz vor dem Senden aufgerufen wird. Der Rückruf sendet ein Objekt mit der `xdm`, `clickedElement`, und `data` -Felder.
 
-Beim Filtern des Linktrackings mithilfe der DOM-Elementstruktur können Sie die `clickElement` Befehl. `clickedElement` ist der DOM-Elementknoten, auf den geklickt wurde und der die Struktur der übergeordneten Knoten enthielt.
+Beim Filtern der Linktracking mithilfe der DOM-Elementstruktur können Sie die `clickElement` Befehl. `clickedElement` ist der DOM-Elementknoten, auf den geklickt wurde und der die Struktur der übergeordneten Knoten enthielt.
 
 Um zu ändern, welche Daten gesendet werden, ändern Sie die `xdm` und/oder `data` Objekte. Innerhalb des Rückrufs wird die `xdm` -Objekt enthält bereits die Daten, die im Ereignisbefehl übergeben werden, und die automatisch erfassten Informationen.
 
-* Ein anderer Wert als `false` ermöglicht die Verarbeitung des Ereignisses und das Senden des Rückrufs.
+* Ein anderer Wert als `false` ermöglicht die Verarbeitung des Ereignisses und des zu sendenden Rückrufs.
 * Wenn der Rückruf die `false` -Wert, wird die Ereignisverarbeitung angehalten, es wird kein Fehler ausgegeben und das Ereignis wird nicht gesendet. Dieser Mechanismus ermöglicht die Filterung bestimmter Ereignisse, indem die Ereignisdaten untersucht und `false` , wenn das Ereignis nicht gesendet werden soll.
 * Wenn der Rückruf eine Ausnahme auslöst, wird die Verarbeitung für das Ereignis angehalten und das Ereignis wird nicht gesendet.
 
@@ -186,7 +184,7 @@ Wenn beispielsweise ein Element auf Ihrer Web-Seite die ID `container`, deren St
 
 Diese Option sollte bei der Migration einzelner Seiten von [!DNL at.js] zum Web SDK.
 
-Verwenden Sie diese Option, um das Web SDK zum Lesen und Schreiben der Legacy zu aktivieren. `mbox` und `mboxEdgeCluster` Cookies, die von [!DNL at.js]. Auf diese Weise können Sie das Besucherprofil beibehalten, während Sie von einer Seite, die das Web SDK verwendet, zu einer Seite wechseln, die die Variable [!DNL at.js] Bibliothek und umgekehrt.
+Verwenden Sie diese Option, um das Web SDK zum Lesen und Schreiben der Legacy zu aktivieren. `mbox` und `mboxEdgeCluster` von [!DNL at.js]. Auf diese Weise können Sie das Besucherprofil beibehalten, während Sie von einer Seite, die das Web SDK verwendet, zu einer Seite wechseln, die die Variable [!DNL at.js] Bibliothek und umgekehrt.
 
 | Typ | Erforderlich | Standardwert |
 | -------- | ------------ | ----------------- |
@@ -236,4 +234,4 @@ Wenn die Besucher-API auf der Seite definiert ist, fragt das SDK die Besucher-AP
 
 {style="table-layout:auto"}
 
-Aktiviert die Einstellung von Adobe-Drittanbieter-Cookies. Das SDK kann die Besucher-ID in einem Drittanbieterkontext beibehalten, damit dieselbe Besucher-ID siteübergreifend verwendet werden kann. Verwenden Sie diese Option, wenn Sie mehrere Sites haben oder Daten mit Partnern teilen möchten. Manchmal ist diese Option jedoch aus Datenschutzgründen nicht wünschenswert.
+Aktiviert die Einstellung von Adobe-Drittanbieter-Cookies. Das SDK kann die Besucher-ID in einem Drittanbieterkontext beibehalten, damit dieselbe Besucher-ID siteübergreifend verwendet werden kann. Verwenden Sie diese Option, wenn Sie mehrere Sites haben oder Daten mit Partnern teilen möchten. Manchmal ist diese Option jedoch aus Datenschutzgründen nicht erwünscht.

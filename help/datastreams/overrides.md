@@ -1,11 +1,10 @@
 ---
 title: Konfigurieren von Datenstromüberschreibungen
 description: Erfahren Sie, wie Sie Datenstromüberschreibungen in der Datenstrom-Benutzeroberfläche konfigurieren und sie über das Web SDK aktivieren.
-exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 77%
+source-wordcount: '1450'
+ht-degree: 60%
 
 ---
 
@@ -13,23 +12,23 @@ ht-degree: 77%
 
 Mit Datenstromüberschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenströme definieren, die über das Web SDK an das Edge-Netzwerk übergeben werden.
 
-Dies hilft Ihnen beim Auslösen anderer Datenstromverhaltensweisen als der standardmäßigen, ohne einen neuen Datenstrom zu erstellen oder Ihre vorhandenen Einstellungen zu ändern.
+Auf diese Weise können Sie andere Verhaltensweisen von Datastreams als die Standardeinstellungen Trigger haben, ohne einen Datastream zu erstellen oder Ihre vorhandenen Einstellungen zu ändern.
 
-Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
+Die Außerkraftsetzung der Datastream-Konfiguration erfolgt in zwei Schritten:
 
-1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](configure.md) definieren.
+1. Zunächst müssen Sie Ihre Datastream-Konfigurationsüberschreibungen im [Datastream-Konfigurationsseite](configure.md).
 2. Anschließend müssen Sie die Überschreibungen auf eine der folgenden Arten an das Edge-Netzwerk senden:
    * Durch die `sendEvent` oder `configure` [Web SDK](#send-overrides-web-sdk) Befehle.
    * Über das Web SDK [Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * Über das Mobile SDK [sendEvent-API](#send-overrides-mobile-sdk) aufrufen.
+   * Über das Mobile SDK [sendEvent](#send-overrides-mobile-sdk) Befehl.
 
 In diesem Artikel wird der Prozess zur Überschreibung der End-to-End-Datenstromkonfiguration für jeden unterstützten Überschreibungstyp erläutert.
 
 >[!IMPORTANT]
 >
->Datenspeicherüberschreibungen werden nur für [Web SDK](../edge/home.md) und [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) Integrationen. [Server-API](../server-api/overview.md) -Integrationen unterstützen derzeit keine Überschreibungen von Datastream.
+>Datenspeicherüberschreibungen werden nur für [Web SDK](../edge/home.md) und [Mobile SDK](https://developer.adobe.com/client-sdks/home/) Integrationen. [Server-API](../server-api/overview.md) -Integrationen unterstützen derzeit keine Überschreibungen von Datastream.
 ><br>
->Datenstromüberschreibungen sollten verwendet werden, wenn Sie verschiedene Daten an verschiedene Datenströme senden müssen. Sie sollten keine Datenstromüberschreibungen für Personalisierungsanwendungsfälle oder Einverständnisdaten verwenden.
+>Datenstromüberschreibungen sollten verwendet werden, wenn Sie verschiedene Daten an verschiedene Datenströme senden müssen. Verwenden Sie keine Datastream-Überschreibungen für Anwendungsfälle zur Personalisierung oder Einverständnisdaten.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -41,11 +40,11 @@ Ein Unternehmen hat verschiedene Websites oder Subdomains für verschiedene Län
 
 Durch die Verwendung von Datenstromüberschreibungen kann das Unternehmen den Datenfluss dynamisch in verschiedene Datenströme umstellen, anstatt das Standardverhalten zu ändern, Daten an einen Datenstrom zu senden.
 
-Ein gängiger Anwendungsfall könnte darin bestehen, Daten an einen länderspezifischen Datenstrom zu senden und Daten auch an einen globalen Datenstrom zu senden, wo Kundinnen und Kunden wichtige Aktionen ausführen, wie z. B. eine Bestellung aufgeben oder ihr Benutzerprofil aktualisieren.
+Ein gängiger Anwendungsfall könnte das Senden von Daten an einen länderspezifischen Datastream und auch an einen globalen Datastream sein, wo Kunden wichtige Aktionen ausführen, wie z. B. eine Bestellung aufgeben oder ihr Benutzerprofil aktualisieren.
 
 **Unterscheiden von Profilen und Identitäten für verschiedene Geschäftseinheiten**
 
-Ein Unternehmen mit mehreren Geschäftseinheiten möchte mehrere Experience Platform-Sandboxes verwenden, um Daten zu speichern, die für jede Geschäftseinheit spezifisch sind.
+Ein Unternehmen mit mehreren Geschäftseinheiten möchte mehrere Experience Platform-Sandboxes verwenden, um für jede Geschäftseinheit spezifische Daten zu speichern.
 
 Anstatt Daten an einen standardmäßigen Datenstrom zu senden, kann das Unternehmen Datenstromüberschreibungen verwenden, um sicherzustellen, dass jede Geschäftseinheit über einen eigenen Datenstrom verfügt, über den Daten empfangen werden können.
 
@@ -62,7 +61,7 @@ Anstatt Daten an einen standardmäßigen Datenstrom zu senden, kann das Unterneh
 
 Um Datenstromüberschreibungen für einen Adobe Target-Datenstrom zu konfigurieren, müssen Sie zunächst einen Adobe Target-Datenstrom erstellen lassen. Befolgen Sie die Anweisungen, mit dem [Adobe Target](configure.md#target)-Dienst einen [Datenstrom zu konfigurieren](configure.md).
 
-Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den [Adobe Target](configure.md#target)-Dienst, den Sie hinzugefügt haben, und verwenden Sie den Abschnitt **[!UICONTROL Eigenschafts-Token-Überschreibungen]**, um die gewünschten Datenstromüberschreibungen hinzuzufügen, wie in der Abbildung unten dargestellt. Fügen Sie pro Zeile ein Eigenschafts-Token hinzu.
+Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Target](configure.md#target) -Dienst, den Sie hinzugefügt haben, und verwenden Sie **[!UICONTROL Eigenschafts-Token - Überschreibungen]** -Abschnitt, um die gewünschten Datastream-Umgehungen hinzuzufügen, wie in der Abbildung unten dargestellt. Fügen Sie pro Zeile ein Eigenschafts-Token hinzu.
 
 ![Screenshot der Datenstrom-Benutzeroberfläche mit den Einstellungen des Adobe Target-Dienstes, wobei die Eigenschafts-Token-Überschreibungen hervorgehoben sind.](assets/overrides/override-target.png)
 
@@ -74,7 +73,7 @@ Ihre Adobe Target-Datenstromüberschreibungen sollten jetzt konfiguriert sein. J
 
 Um Datenstromüberschreibungen für einen Adobe Analytics-Datenstrom zu konfigurieren, müssen Sie zunächst einen [Adobe Analytics](configure.md#analytics)-Datenstrom erstellen lassen. Befolgen Sie die Anweisungen, mit dem [Adobe Analytics](configure.md#analytics)-Dienst einen [Datenstrom zu konfigurieren](configure.md).
 
-Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den [Adobe Analytics](configure.md#target)-Dienst, den Sie hinzugefügt haben, und verwenden Sie den Abschnitt **[!UICONTROL Report Suite-Überschreibungen]**, um die gewünschten Datenstromüberschreibungen hinzuzufügen, wie in der Abbildung unten dargestellt.
+Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Analytics](configure.md#target) -Dienst, den Sie hinzugefügt haben, und verwenden Sie **[!UICONTROL Report Suite - Überschreibungen]** -Abschnitt, um die gewünschten Datastream-Umgehungen hinzuzufügen, wie in der Abbildung unten dargestellt.
 
 Wählen Sie **[!UICONTROL Batch-Modus anzeigen]** aus, um die Stapelbearbeitung der Report Suite-Überschreibungen zu aktivieren. Sie können eine Liste mit Report Suite-Überschreibungen kopieren und einfügen und dabei pro Zeile eine Report Suite eingeben.
 
@@ -88,7 +87,7 @@ Ihre Adobe Analytics-Datenstromüberschreibungen sollten jetzt konfiguriert sein
 
 Um Datenstromüberschreibungen für Experience Platform-Ereignisdatensätze zu konfigurieren, müssen Sie zunächst einen [Adobe Experience Platform](configure.md#aep)-Datenstrom erstellt haben. Befolgen Sie die Anweisungen, mit dem [Adobe Experience Platform](configure.md#aep)-Dienst einen [Datenstrom zu konfigurieren](configure.md).
 
-Nachdem Sie den Datenstrom erstellt haben, bearbeiten Sie den [Adobe Experience Platform](configure.md#aep)-Dienst, den Sie hinzugefügt haben, und wählen Sie die Option **[!UICONTROL Ereignisdatensatz hinzufügen]** aus, um einen oder mehrere Ereignisdatensätze zur Überschreibung hinzuzufügen, wie in der Abbildung unten dargestellt.
+Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Experience Platform](configure.md#aep) den Sie hinzugefügt haben, und wählen Sie **[!UICONTROL Ereignis-Datensatz hinzufügen]** -Option zum Hinzufügen eines oder mehrerer Ereignis-Datensätze überschreiben, wie in der Abbildung unten dargestellt.
 
 ![Screenshot der Datenstrom-Benutzeroberfläche mit den Einstellungen des Adobe Experience Platform-Dienstes, wobei die Überschreibungen des Ereignisdatensatzes hervorgehoben sind.](assets/overrides/override-aep.png)
 
@@ -124,9 +123,9 @@ Nach dem [Konfigurieren der Datenstromüberschreibungen](#configure-overrides) i
 
 Wenn Sie das Web SDK verwenden, senden Sie die Überschreibungen über das `edgeConfigOverrides` -Befehl ist der zweite und letzte Schritt zum Aktivieren von Überschreibungen der Datastream-Konfiguration.
 
-Die Überschreibungen der Datenstromkonfiguration werden über den Web SDK-Befehl `edgeConfigOverrides` gesendet. Mit diesem Befehl werden Datenstromüberschreibungen erstellt, die mit dem nächsten Befehl (bzw. im Fall des Befehls `configure` mit jeder Anfrage) an das [!DNL Edge Network] weitergegeben werden.
+Die Überschreibungen der Datenstromkonfiguration werden über den Web SDK-Befehl `edgeConfigOverrides` gesendet. Mit diesem Befehl werden Datastream-Überschreibungen erstellt, die an die [!DNL Edge Network] auf dem nächsten Befehl. Wenn Sie die `configure` -Befehl, werden die Überschreibungen für jede Anfrage übergeben.
 
-Der Befehl `edgeConfigOverrides` erstellt Datenstromüberschreibungen, die mit dem nächsten Befehl (bzw. im Fall des Befehls `configure` mit jeder Anfrage) an das [!DNL Edge Network] weitergegeben werden.
+Die `edgeConfigOverrides` -Befehl erstellt Datastream-Überschreibungen, die an die [!DNL Edge Network] auf dem nächsten Befehl.
 
 Wenn eine Konfigurationsüberschreibung mit dem Befehl `configure` gesendet wird, ist sie in den folgenden Web SDK-Befehlen enthalten.
 
@@ -246,7 +245,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
->[!TAB Android (Kotlin)]
+>[!TAB Android™ (Kotlin)]
 
 Dieses Beispiel zeigt, wie eine Datastream-ID-Überschreibung in einem Mobile SDK aussieht. [!DNL Android] Integration.
 

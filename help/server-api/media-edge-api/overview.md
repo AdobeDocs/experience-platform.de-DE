@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge-APIs
 description: Media Edge-APIs – Übersicht
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 86%
+source-wordcount: '331'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,7 @@ Media Edge-APIs basieren auf Adobe Experience Platform, um Medienereignis-Tracki
 
 ## Optimieren von Medien-Tracking-Datenflüssen
 
-Sowohl [Mediensammlungs-APIs](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html&amp;media-tracking-data-flows) als auch Media Edge-APIs stellen Medien-Tracking-Daten als RESTful-Services bereit. Die Nutzung des Media Edge-Service bietet jedoch die folgenden Vorteile:
+Sowohl [Mediensammlungs-APIs](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html#media-tracking-data-flows) als auch Media Edge-APIs stellen Medien-Tracking-Daten als RESTful-Services bereit. Die Nutzung des Media Edge-Service bietet jedoch die folgenden Vorteile:
 
 * Dies ist die einfachste Möglichkeit, um XDM-Schemata in Ihren Datenfluss zu integrieren.
 

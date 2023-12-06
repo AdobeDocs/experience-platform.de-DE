@@ -1,18 +1,17 @@
 ---
 title: Verfolgen von Ereignissen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignisse verfolgen.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;Send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 32%
+source-wordcount: '1163'
+ht-degree: 21%
 
 ---
 
+
 # Verfolgen von Ereignissen
 
-Um Ereignisdaten an Adobe Experience Cloud zu senden, verwenden Sie die `sendEvent` Befehl. Der `sendEvent`-Befehl ist die wichtigste Methode zum Senden von Daten an und zum Abrufen von personalisierten Inhalten, Identitäten und Zielgruppenzielen.[!DNL Experience Cloud]
+Um Ereignisdaten an Adobe Experience Cloud zu senden, verwenden Sie die `sendEvent` Befehl. Die `sendEvent` -Befehl ist die primäre Methode zum Senden von Daten an die [!DNL Experience Cloud]und um personalisierte Inhalte, Identitäten und Zielgruppenziele abzurufen.
 
 An Adobe Experience Cloud gesendete Daten gehören zwei Kategorien an:
 
@@ -103,7 +102,7 @@ alloy("sendEvent", {
 
 ### Einstellen von `eventType` {#event-types}
 
-In XDM ExperienceEvent-Schemata gibt es eine optionale `eventType` -Feld. Dies enthält den primären Ereignistyp für den Datensatz. Durch das Festlegen eines Ereignistyps können Sie zwischen den verschiedenen Ereignissen unterscheiden, die Sie senden. XDM bietet verschiedene vordefinierte Ereignistypen, die Sie verwenden können oder Sie immer eigene benutzerdefinierte Ereignistypen für Ihre Anwendungsfälle erstellen. Eine finden Sie in der XDM-Dokumentation . [Liste aller vordefinierten Ereignistypen](../../xdm/classes/experienceevent.md#eventType).
+In XDM ExperienceEvent-Schemata gibt es eine optionale `eventType` -Feld. Dies enthält den primären Ereignistyp für den Datensatz. Die Festlegung eines Ereignistyps kann Ihnen dabei helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden. XDM bietet verschiedene vordefinierte Ereignistypen, die Sie verwenden können oder Sie immer eigene benutzerdefinierte Ereignistypen für Ihre Anwendungsfälle erstellen. Eine finden Sie in der XDM-Dokumentation . [Liste aller vordefinierten Ereignistypen](../../xdm/classes/experienceevent.md#eventType).
 
 Diese Ereignistypen werden in einer Dropdown-Liste angezeigt, wenn Sie die Tag-Erweiterung verwenden oder sie immer ohne Tags übergeben können. Sie können als Teil der `xdm` -Option.
 
@@ -162,8 +161,9 @@ Benutzerdefinierte Identitätsinformationen können auch zum Ereignis hinzugefü
 
 ## Verwenden der sendBeacon-API
 
-Es kann schwierig sein, Ereignisdaten zu senden, kurz bevor der Nutzer die Web-Seite verlassen hat. Wenn die Anforderung zu lange dauert, kann der Browser die Anforderung abbrechen. Einige Browser haben eine Web-Standard-API namens `sendBeacon` implementiert, mit der Daten in dieser Zeit leichter erfasst werden können. Bei der Verwendung von `sendBeacon` stellt der Browser die Web-Anforderung im globalen Browser-Kontext dar. Das bedeutet, dass der Browser die Beacon-Anforderung im Hintergrund ausführt und die Seitennavigation nicht beeinträchtigt. Informationen zu Adobe Experience Platform [!DNL Web SDK] zur Verwendung `sendBeacon`, die Option `"documentUnloading": true` zum Ereignisbefehl.  Siehe folgendes Beispiel:
+Es kann schwierig sein, Ereignisdaten zu senden, kurz bevor der Nutzer die Web-Seite verlassen hat. Wenn die Anforderung zu lange dauert, kann der Browser die Anforderung abbrechen. Einige Browser haben eine Web-Standard-API namens `sendBeacon` implementiert, mit der Daten in dieser Zeit leichter erfasst werden können. Bei der Verwendung von `sendBeacon` stellt der Browser die Web-Anforderung im globalen Browser-Kontext dar. Das bedeutet, dass der Browser die Beacon-Anforderung im Hintergrund vornimmt und die Seitennavigation nicht beeinträchtigt. Informationen zu Adobe Experience Platform [!DNL Web SDK] zur Verwendung `sendBeacon`, die Option `"documentUnloading": true` zum Ereignisbefehl.
 
+**Beispiel**
 
 ```javascript
 alloy("sendEvent", {
@@ -181,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browser haben Beschränkungen für die Datenmenge, die mit `sendBeacon` gleichzeitig gesendet werden kann. In vielen Browsern beträgt die Beschränkung 64 K. Wenn der Browser das Ereignis ablehnt, weil die Payload zu groß ist, wird Adobe Experience Platform [!DNL Web SDK] zurück zu seiner normalen Transportmethode (z. B. Abruf).
+Browser haben Beschränkungen für die Datenmenge, die mit `sendBeacon` gleichzeitig gesendet werden kann. In vielen Browsern beträgt die Beschränkung 64 KB. Wenn der Browser das Ereignis ablehnt, weil die Payload zu groß ist, wird Adobe Experience Platform [!DNL Web SDK] zurück zu seiner normalen Transportmethode (z. B. Abruf).
 
 ## Umgang mit Antworten von Ereignissen
 
@@ -214,19 +214,19 @@ alloy("sendEvent", {
 
 Die `sendEvent` gibt einen Promise zurück, der mit einer `result` -Objekt. Die `result` -Objekt enthält die folgenden Eigenschaften:
 
-**Vorschläge**: Die Personalisierung bietet , für die sich der Besucher qualifiziert hat. [Erfahren Sie mehr über Vorschläge.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**Entscheidungen**: Diese Eigenschaft wird nicht mehr unterstützt. Verwenden Sie stattdessen `propositions`.
-
-**Ziele**: Segmente aus Adobe Experience Platform, die für externe Personalisierungsplattformen, Content-Management-Systeme, Anzeigen-Server und andere Anwendungen freigegeben werden können, die auf Kunden-Websites ausgeführt werden. [Erfahren Sie mehr über Ziele.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+| Eigenschaft | Beschreibung |
+|---------|----------|
+| `propositions` | Die Personalisierung bietet an, für die sich der Besucher qualifiziert hat. [Erfahren Sie mehr über Vorschläge.](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | Diese Eigenschaft wird nicht mehr unterstützt. Verwenden Sie stattdessen `propositions`. |
+| `destinations` | Zielgruppen aus Adobe Experience Platform, die für externe Personalisierungsplattformen, Content-Management-Systeme, Anzeigen-Server und andere Anwendungen freigegeben werden können, die auf Kunden-Websites ausgeführt werden. [Erfahren Sie mehr über Ziele.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalitäten können sich ändern.
+>Die `destinations` -Eigenschaft in der Beta-Phase. Dokumentation und Funktionalitäten können sich ändern.
 
 ## Globale Änderung von Ereignissen {#modifying-events-globally}
 
-Wenn Sie Felder global aus dem Ereignis hinzufügen, entfernen oder ändern möchten, können Sie einen `onBeforeEventSend`-Rückruf konfigurieren.  Dieser Rückruf wird jedes Mal abgerufen, wenn ein Ereignis gesendet wird.  Dieser Rückruf wird an ein Ereignis-Objekt mit einem `xdm`-Feld übergeben.  Ändern `content.xdm` , um die mit dem Ereignis gesendeten Daten zu ändern.
+Wenn Sie Felder global aus dem Ereignis hinzufügen, entfernen oder ändern möchten, können Sie eine `onBeforeEventSend` Callback. Dieser Rückruf wird jedes Mal aufgerufen, wenn ein Ereignis gesendet wird. Dieser Rückruf wird an ein Ereignisobjekt mit einer `xdm` -Feld. Um die mit dem Ereignis gesendeten Daten zu ändern, ändern Sie `content.xdm`.
 
 
 ```javascript
@@ -246,8 +246,8 @@ alloy("configure", {
 
 Die `xdm`-Felder werden in der folgenden Reihenfolge festgelegt:
 
-1. Werte, die als Optionen an den Ereignis-Befehl übergeben werden `alloy("sendEvent", { xdm: ... });`
-2. Automatisch erfasste Werte.  (Siehe [Automatische Informationen](../data-collection/automatic-information.md).)
+1. Werte, die als Optionen an den Ereignisbefehl übergeben werden `alloy("sendEvent", { xdm: ... });`.
+2. Automatisch erfasste Werte. Siehe [Automatische Informationen](../data-collection/automatic-information.md).
 3. Die Änderungen, die im `onBeforeEventSend`-Rückruf vorgenommen wurden.
 
 Einige Hinweise zu `onBeforeEventSend` callback:
@@ -297,4 +297,4 @@ Beliebiger Rückgabewert außer dem booleschen Wert `false` ermöglicht die Vera
 
 ## Potenzielle umsetzbare Fehler
 
-Beim Senden eines Ereignisses wird möglicherweise ein Fehler ausgegeben, wenn die gesendeten Daten zu groß sind (mehr als 32 KB für eine vollständige Anforderung). In diesem Fall müssen Sie die Menge der gesendeten Daten verringern.
+Beim Senden eines Ereignisses wird möglicherweise ein Fehler ausgegeben, wenn die gesendeten Daten zu groß sind (mehr als 32 KB für eine vollständige Anforderung). In diesem Fall müssen Sie die Menge der gesendeten Daten reduzieren.

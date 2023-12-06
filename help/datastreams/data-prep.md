@@ -1,11 +1,10 @@
 ---
 title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
-exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: ht
-source-wordcount: '914'
-ht-degree: 100%
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+workflow-type: tm+mt
+source-wordcount: '906'
+ht-degree: 85%
 
 ---
 
@@ -31,7 +30,7 @@ Eine kurze Erklärung des Prozesses „Datenvorbereitung für die Datenerfassung
 
 Wählen Sie nach der allgemeinen Konfiguration eines Datenstroms die Option **[!UICONTROL Speichern und Zuordnung hinzufügen]** aus. Daraufhin wird der Schritt **[!UICONTROL Daten auswählen]** angezeigt. Hier müssen Sie ein JSON-Beispielobjekt bereitstellen, das der Struktur der Daten entspricht, die Sie an Platform senden möchten.
 
-Um Eigenschaften direkt aus Ihrer Datenschicht zu erfassen, muss das JSON-Objekt über eine einzige Stammeigenschaft verfügen: `data`. Die Untereigenschaften des `data`-Objekts sollten dann so konstruiert werden, dass es den Datenschicht-Eigenschaften zugeordnet werden kann, die Sie erfassen möchten. Wählen Sie den folgenden Abschnitt aus, um ein Beispiel für ein ordnungsgemäß formatiertes JSON-Objekt mit einem `data`-Stamm zu sehen.
+Um Eigenschaften direkt aus Ihrer Datenschicht zu erfassen, muss das JSON-Objekt über eine einzige Stammeigenschaft verfügen: `data`. Die Untereigenschaften der `data` -Objekt sollte dann so konstruiert werden, dass es den Datenschichteigenschaften zugeordnet wird, die Sie erfassen möchten. Wählen Sie den folgenden Abschnitt aus, um ein Beispiel für ein ordnungsgemäß formatiertes JSON-Objekt mit einem `data`-Stamm zu sehen.
 
 +++JSON-Beispieldatei mit `data`-Stamm
 
@@ -137,12 +136,12 @@ Sie können die Option zum Hochladen des Objekts als Datei auswählen oder statt
 
 Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt, sodass Sie die Felder in Ihren Quelldaten dem Zielereignisschema in Platform zuordnen können. Sie haben die Möglichkeit, die Zuordnung auf zwei Arten zu konfigurieren:
 
-* [Erstellen Sie neue Zuordnungsregeln](#create-mapping) für diesen Datenstrom durch einen manuellen Prozess.
+* [Erstellen von Zuordnungsregeln](#create-mapping) für diesen Datastream durch einen manuellen Prozess.
 * [Importieren Sie Zuordnungsregeln](#import-mapping) aus einem vorhandenen Datenstrom.
 
-### Erstellen einer neuen Zuordnung {#create-mapping}
+### Erstellen von Zuordnungsregeln {#create-mapping}
 
-Wählen Sie zunächst **[!UICONTROL Neue Zuordnung hinzufügen]** aus, um eine neue Zuordnungszeile zu erstellen.
+Um eine Zuordnungsregel zu erstellen, wählen Sie **[!UICONTROL Neues Mapping hinzufügen]**.
 
 ![Hinzufügen einer neuen Zuordnung](assets/data-prep/add-new-mapping.png)
 
@@ -166,11 +165,11 @@ Die Zuordnungsseite wird erneut mit der abgeschlossenen Feld-Zuordnung angezeigt
 
 ### Importieren vorhandener Zuordnungsregeln {#import-mapping}
 
-Wenn Sie zuvor einen Datenstrom erstellt haben, können Sie seine konfigurierten Zuordnungsregeln für einen neuen Datenstrom wiederverwenden.
+Wenn Sie zuvor einen Datastream erstellt haben, können Sie die konfigurierten Zuordnungsregeln für einen neuen Datastream wiederverwenden.
 
 >[!WARNING]
 >
->Durch das Importieren von Zuordnungsregeln aus einem anderen Datenstrom werden alle vor dem Import hinzugefügten Feldzuordnungen überschrieben.
+>Beim Importieren von Zuordnungsregeln aus einem anderen Datenspeicher werden alle vor dem Import hinzugefügten Feldzuordnungen überschrieben.
 
 Wählen Sie zunächst **[!UICONTROL Zuordnung importieren]** aus.
 
@@ -194,9 +193,9 @@ Im nächsten Bildschirm wird eine Vorschau der gespeicherten Zuordnungsregeln f�
 
 ### Abschließen der Zuordnung
 
-Führen Sie die oben genannten Schritte erneut aus, um den Rest der Felder dem Zielschema zuzuordnen. Sie müssen zwar nicht alle verfügbaren Quellfelder zuordnen, jedoch müssen alle Felder im Zielschema, die als erforderliche Felder festgelegt sind, zugeordnet werden, um diesen Schritt abzuschließen. Der Zähler **[!UICONTROL Erforderliche Felder]** gibt an, wie viele erforderlichen Felder in der aktuellen Konfiguration noch nicht zugeordnet sind.
+Führen Sie die oben genannten Schritte erneut aus, um den Rest der Felder dem Zielschema zuzuordnen. Sie müssen zwar nicht alle verfügbaren Quellfelder zuordnen, jedoch müssen alle Felder im Zielschema, die wie erforderlich festgelegt sind, für diesen Schritt zugeordnet werden. Der Zähler **[!UICONTROL Erforderliche Felder]** gibt an, wie viele erforderlichen Felder in der aktuellen Konfiguration noch nicht zugeordnet sind.
 
-Nachdem der Zähler der erforderlichen Felder null erreicht hat und Sie Ihre Zuordnung überprüft haben, wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen abzuschließen.
+Sobald die erforderliche Feldanzahl null erreicht hat und Sie mit Ihrer Zuordnung zufrieden sind, wählen Sie **[!UICONTROL Speichern]** , um Ihre Änderungen abzuschließen.
 
 ![Zuordnungen abgeschlossen](assets/data-prep/mapping-complete.png)
 
