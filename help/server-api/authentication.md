@@ -2,10 +2,10 @@
 title: Authentifizierung
 description: Erfahren Sie, wie Sie die Authentifizierung für die Adobe Experience Platform Edge Network Server-API konfigurieren.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 21%
+source-wordcount: '633'
+ht-degree: 20%
 
 ---
 
@@ -36,7 +36,7 @@ Bevor Sie Aufrufe an die [!DNL Server API]müssen Sie die folgenden Voraussetzun
 * Ihr Experience Platform-Konto verfügt über die `developer` und `user` Rollen, die für das Adobe Experience Platform API-Produktprofil aktiviert sind. Wenden Sie sich an [Admin Console](../access-control/home.md) Administrator, um diese Rollen für Ihr Konto zu aktivieren.
 * Du hast einen Adobe ID. Wenn Sie keine Adobe ID haben, navigieren Sie zum [Adobe Developer-Konsole](https://developer.adobe.com/console) und erstellen Sie ein neues Konto.
 
-## Sammeln von -Anmeldeinformationen {#credentials}
+## Sammeln von Anmeldeinformationen {#credentials}
 
 Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](../landing/api-authentication.md) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 

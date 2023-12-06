@@ -2,10 +2,10 @@
 title: Implementierung von Einzelseitenanwendungen
 description: Erfahren Sie, wie Sie SPA Ansichten in Adobe Journey Optimizer implementieren
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 79%
+source-wordcount: '866'
+ht-degree: 77%
 
 ---
 
@@ -61,7 +61,7 @@ XDM-Ansichten können in Adobe Journey Optimizer genutzt werden, um Marketingexp
 
 Dazu müssen auf Entwicklerseite die folgenden Schritte ausgeführt werden, um ein einmaliges Setup abzuschließen:
 
-1. Installieren Sie [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md) und überprüfen Sie die Seite [Voraussetzungen für Web-Kanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html).
+1. Installieren [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md) und überprüfen Sie die [Voraussetzungen für Webkanäle](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) Seite.
 
 2. Bestimmen Sie alle XDM-Ansichten in Ihrer Einzelseitenanwendung, die Sie personalisieren möchten.
 
@@ -92,7 +92,7 @@ In diesem Abschnitt werden zwei Beispiele zum Aufrufen der Funktion `sendEvent()
 
 Das Marketing-Team möchte A/B-Tests auf der gesamten Startseite durchführen.
 
-![](assets/web-spa-home.png)
+![Beispielseite für einseitige Anwendungen.](assets/web-spa-home.png)
 
 So können A/B-Tests auf der gesamten Startseite durchgeführt werden: `sendEvent()` muss aufgerufen werden, während der XDM-`viewName` auf `home` eingestellt ist:
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 Das Marketing-Team möchte die zweite Reihe von Produkten personalisieren, indem es die Farbe der Preisbeschriftung in Rot ändert, nachdem jemand auf die Schaltfläche geklickt hat, um alle Männerprodukte anzuzeigen.
 
-![](assets/web-spa-men-products.png)
+![Beispielseite für Einzelseiten-Apps mit personalisierten Produkten.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

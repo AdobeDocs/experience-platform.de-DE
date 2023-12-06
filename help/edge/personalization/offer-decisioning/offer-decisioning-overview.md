@@ -3,10 +3,10 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Angebotsversand; Angebotspersonalisierung;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 19%
+source-wordcount: '849'
+ht-degree: 13%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 19%
 >
 >Die Verwendung von Offer decisioning im Adobe Experience Platform Web SDK ist für ausgewählte Benutzer in einem frühen Stadium verfügbar. Diese Funktion ist nicht für alle Organisationen verfügbar.
 
-Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte über APIs oder die Benutzeroberfläche (UI) von Offer Decisioning erstellen.
+Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche (UI) oder APIs erstellen.
 
 ## Voraussetzungen
 
@@ -51,7 +51,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
   >
   >Sie können den Entscheidungsbereichswert aus dem **Aktivitätsübersicht** in der Benutzeroberfläche.
 
-  ![](assets/decision-scope-copy.png)
+  ![Einstellungen für Entscheidungskopien.](assets/decision-scope-copy.png)
 
 * **Datenspeicher:** Weitere Informationen finden Sie im [datastreams](../../../datastreams/overview.md) Dokumentation.
 
@@ -84,7 +84,7 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
    * SDK über Tags installieren
 
-      1. [Erstellen Sie eine Tag-Eigenschaft](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Tag-Eigenschaft erstellen](../../../tags/ui/administration/companies-and-properties.md)
       1. [Fügen Sie den Einbettungs-Code hinzu](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=de)
       1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem von Ihnen erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen zu Datensätzen finden Sie in der Dokumentation zu [Erweiterungen](../../../tags/ui/managing-resources/extensions/overview.md).
 
@@ -104,7 +104,7 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. [](../../../tags/ui/publishing/libraries.md)Erstellen und veröffentlichen Sie eine Bibliothek mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
+      1. [Erstellen und Veröffentlichen einer Bibliothek](../../../tags/ui/publishing/libraries.md) mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
 
 ## Beispielanfragen und -antworten
 

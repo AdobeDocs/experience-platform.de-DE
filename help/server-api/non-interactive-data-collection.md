@@ -2,12 +2,13 @@
 title: Nicht interaktive Datenerfassung
 description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API eine nicht interaktive Datenerfassung durchführt.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 5%
 
 ---
+
 
 # Nicht interaktive Datenerfassung
 
@@ -92,7 +93,6 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | `dataStreamId` | `String` | Ja | Die ID des vom Datenerfassungs-Endpunkt verwendeten Datastreams. |
 | `requestId` | `String` | Nein | Geben Sie eine externe Anfrage-Tracking-ID an. Wenn keines angegeben ist, generiert das Edge-Netzwerk eines für Sie und gibt es im Antworttext/in den Kopfzeilen zurück. |
 | `silent` | `Boolean` | Nein | Optionaler boolescher Parameter, der angibt, ob das Edge-Netzwerk eine `204 No Content` -Antwort mit einer leeren Payload oder nicht. Kritische Fehler werden mithilfe des entsprechenden HTTP-Status-Codes und der Payload gemeldet. |
-
 
 ### Antwort {#response}
 

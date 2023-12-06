@@ -2,10 +2,10 @@
 title: Umgang mit Fehlern
 description: Erfahren Sie mehr über die möglichen Fehler, die bei der Ausführung von API-Anfragen an die Adobe Experience Platform Edge Network Server-API auftreten können.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 4%
+source-wordcount: '766'
+ht-degree: 9%
 
 ---
 
@@ -19,7 +19,7 @@ API-Fehler in der Adobe Experience Platform Edge Network Server-API können vers
 
 | Fehler | Typ | Beschreibung | Status-Code |
 | --- | --- | --- | --- |
-| `RequestProcessingError` | Intern | Allgemeiner Zweckfehler, der vom Adobe Experience Platform Edge Network unter unerwarteten Umständen ausgegeben wurde. | `500` |
+| `RequestProcessingError` | intern | Allgemeiner Zweckfehler, der vom Adobe Experience Platform Edge Network unter unerwarteten Umständen ausgegeben wurde. | `500` |
 | `InputError` | Extern | Enthält Fehler, die durch fehlerhafte Eingabe verursacht wurden, sowie Entitätsvalidierungsfehler. | `4xx` |
 | `ConfigurationError` | Extern | Serverseitige Konfigurationsfehler. | `422` |
 | `UpstreamError` | Extern | Kommunikationsfehler bei Upstream-Diensten. | `207 Multi-Status` |
@@ -30,7 +30,7 @@ Server-API-Fehler können auch nach Schweregrad aufgeteilt werden:
 
 * **Schwerwiegende Fehler** stoppt die Dispatch-Pipeline.
 * **Nicht tödliche Fehler** kann eine partielle Verarbeitung signalisieren und gleichzeitig die Weiterverarbeitung der Anforderung ermöglichen.
-   * Wenn vorhanden, wird der allgemeine Status-Code der Anfrage in `207 Multi-Status`.
+   * Sofern vorhanden, wird der allgemeine Status-Code der Anfrage in `207 Multi-Status`.
 
 | Fehler | Typ | Bemerkungen |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ Fehler werden von einem Antworttext begleitet, der ein Fehlerobjekt enthält. In
 
 Der zurückgegebene Inhaltstyp ist der `application/problem+json` Medientyp. Sofern vorhanden, enthält diese Antwort maschinenlesbare Details zum Fehler. Zu den Problemdetails zählen URI-Typen.
 
-Alle Fehlerobjekte haben eine `type`, `status`, `title`, `detail` und `report` Meldungseigenschaften, damit der API-Client das Problem erkennen kann.
+Alle Fehlerobjekte verfügen über eine `type`, `status`, `title`, `detail` und `report` Meldungseigenschaften, damit der API-Client das Problem erkennen kann.
 
 | Eigenschaft | Typ | Beschreibung |
 | -------- | ------ | ----------- |
@@ -79,8 +79,8 @@ Alle Fehlerobjekte haben eine `type`, `status`, `title`, `detail` und `report` M
 
 Nicht-tödliche Fehler können weiter aufgeschlüsselt werden in:
 
-* Fehler: Probleme, die bei der Verarbeitung der Anfrage aufgetreten sind, aber nicht dazu geführt haben, dass die gesamte Anfrage abgelehnt wurde (z. B. nicht kritische Upstream-Fehler).
-* Warnungen: Nachrichten von vorgelagerten Diensten, die darauf hinweisen könnten, dass die Anfrage teilweise verarbeitet wurde.
+* Fehler: Probleme, die während der Verarbeitung der Anfrage aufgetreten sind, aber nicht dazu geführt haben, dass die gesamte Anfrage abgelehnt wurde (z. B. nicht kritische Upstream-Fehler).
+* Warnungen: Nachrichten von Upstream-Diensten, die darauf hinweisen könnten, dass die Anfrage teilweise verarbeitet wurde.
 
 Bei nichtletalen Fehlern (ohne Warnungen) wird die [!DNL Server API] ändert den Antwortstatus in `207 Multi-Status`.
 
@@ -118,12 +118,11 @@ Nicht tödliche Fehler werden im _Problemdetails_ Format, jedoch direkt in die S
 
 ## Handhabung `4xx` und `5xx` Antworten
 
-
 | Fehler-Code | Beschreibung |
 |---|---|
 | `4xx Bad Request` | Am meisten `4xx` Fehler wie 400, 403, 404 sollten nicht im Namen des Kunden wiederholt werden, außer für `429`. Dies sind Client-Fehler und werden nicht erfolgreich sein. Der Client muss den Fehler beheben, bevor die Anfrage erneut versucht werden kann. |
-| `429 Too Many Requests` | `429` HTTP-Antwort-Code gibt an, dass das Adobe Experience Platform Edge Network oder ein Upstream-Dienst die Rate begrenzt. In diesem Fall muss der Anrufer in einem solchen Fall die `Retry-After` Antwortheader. Jede Antwort, die zurückfließt, muss den HTTP-Antwort-Code mit einem domänenspezifischen Fehlercode enthalten. |
-| `500 Internal Server Error` | `500` Fehler sind allgemeine, allgemeingültige Fehler. `500` -Fehler dürfen nicht wiederholt werden, mit Ausnahme von `502` und `503`. Vermittelnde Stellen müssen mit einer `500` und kann mit einem generischen Fehlercode/einer generischen Fehlermeldung oder einem domänenspezifischeren Fehlercode/einer domänenspezifischen Fehlermeldung reagieren. |
-| `502 Bad Gateway` | Gibt an, dass das Adobe Experience Platform Edge Network eine ungültige Antwort von Upstream-Servern erhalten hat. Dies kann aufgrund von Netzwerkproblemen zwischen Servern geschehen. Das temporäre Netzwerkproblem kann gelöst werden, sodass ein erneuter Versuch das Problem lösen kann, sodass Empfänger von `502` -Fehler können die Anfrage nach einiger Zeit erneut versuchen. |
-| `503 Service Unavailable` | Dieser Fehlercode zeigt an, dass der Dienst vorübergehend nicht verfügbar ist. Dies kann während der Wartungszeiträume geschehen. Empfänger `503` Fehler können die Anfrage möglicherweise erneut versuchen, müssen jedoch die `Retry-After` -Kopfzeile. |
+| `429 Too Many Requests` | `429` HTTP-Antwort-Code gibt an, dass das Adobe Experience Platform Edge Network oder ein Upstream-Dienst die Rate begrenzt. In diesem Fall muss der Anrufer in einem solchen Fall die `Retry-After` Antwortheader. Jede Antwort, die zurückgegeben wird, muss den HTTP-Antwort-Code mit einem Domain-spezifischen Fehler-Code enthalten. |
+| `500 Internal Server Error` | `500`-Fehler sind generische, allgemeingültige Fehler. `500` -Fehler dürfen nicht wiederholt werden, mit Ausnahme von `502` und `503`. Vermittelnde Stellen müssen mit einer `500` und kann mit einem generischen Fehlercode/einer generischen Fehlermeldung oder einem domänenspezifischeren Fehlercode/einer domänenspezifischen Fehlermeldung reagieren. |
+| `502 Bad Gateway` | Gibt an, dass das Adobe Experience Platform Edge Network eine ungültige Antwort von Upstream-Servern erhalten hat. Hierzu kann es aufgrund von Netzwerkproblemen zwischen Servern kommen. Das temporäre Netzwerkproblem kann gelöst werden, sodass ein erneuter Versuch das Problem lösen kann, sodass Empfänger von `502` -Fehler können die Anfrage nach einiger Zeit erneut versuchen. |
+| `503 Service Unavailable` | Dieser Fehler-Code gibt an, dass der Service vorübergehend nicht verfügbar ist. Hierzu kann es während Wartungszeiträumen kommen. Empfänger `503` Fehler können die Anfrage möglicherweise erneut versuchen, müssen jedoch die `Retry-After` -Kopfzeile. |
 | `504 Gateway Timeout` | Gibt an, dass bei der Adobe Experience Platform Edge Network-Anforderung an die Upstream-Server eine Zeitüberschreitung aufgetreten ist. Dies kann aufgrund von Netzwerkproblemen zwischen Servern, DNS-Problemen oder anderen Netzwerkproblemen auftreten. Die temporären Netzwerkprobleme können nach einiger Zeit behoben werden und ein erneuter Versuch kann das Problem lösen. |

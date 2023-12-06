@@ -3,10 +3,10 @@ title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 8%
+source-wordcount: '2167'
+ht-degree: 7%
 
 ---
 
@@ -857,7 +857,7 @@ Die Analytics-Payload (`tnta` Token) sollte im Analytics-Treffer mit [Dateneinf�
 Die serverseitige Protokollierung in Analytics kann durch Festlegen von `analyticsLogging: server_side` in den at.js-Einstellungen oder durch Überschreiben der Variablen `window.targetglobalSettings` -Objekt.
 Anschließend werden die Daten wie folgt übertragen:
 
-![](assets/a4t-server-side-atjs.png)
+![Diagramm mit dem Workflow für die serverseitige Protokollierung in Analytics](assets/a4t-server-side-atjs.png)
 
 [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -872,7 +872,7 @@ Web SDK unterstützt auch:
 
 Die clientseitige Protokollierung in Analytics ist aktiviert, wenn Adobe Analytics für diese DataStream-Konfiguration deaktiviert ist.
 
-![](assets/analytics-disabled-datastream-config.png)
+![Diagramm mit dem Workflow für die clientseitige Protokollierung in Analytics](assets/analytics-disabled-datastream-config.png)
 
 Der Kunde hat Zugriff auf das Analytics-Token (`tnta`), die für Analytics mit freigegeben werden muss, [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 in durch Verketten der `sendEvent` und navigieren Sie durch das resultierende Vorschlagsarray.
@@ -910,19 +910,19 @@ alloy("sendEvent", {
 
 Im Folgenden finden Sie ein Diagramm, das zeigt, wie Datenflüsse bei der Aktivierung von Analytics Client Side erfolgen:
 
-![](assets/analytics-client-side-logging.png)
+![Datenflussdiagramm in der clientseitigen Analytics-Protokollierung](assets/analytics-client-side-logging.png)
 
 #### Serverseitige Protokollierung in Analytics
 
 Die serverseitige Protokollierung in Analytics ist aktiviert, wenn Analytics für diese DataStream-Konfiguration aktiviert ist.
 
-![](assets/analytics-enabled-datastream-config.png)
+![Benutzeroberfläche von Datastreams mit den Analytics-Einstellungen.](assets/analytics-enabled-datastream-config.png)
 
 Wenn die serverseitige Analytics-Protokollierung aktiviert ist, muss die A4T-Payload für Analytics freigegeben werden, damit die Analytics-Berichterstellung zeigt, dass korrekte Impressionen und Konversionen auf Edge Network-Ebene freigegeben werden, sodass der Kunde keine zusätzliche Verarbeitung durchführen muss.
 
 So fließen Daten in unsere Systeme, wenn die serverseitige Analytics-Protokollierung aktiviert ist:
 
-![](assets/analytics-server-side-logging.png)
+![Diagramm, das den Datenfluss in der serverseitigen Analytics-Protokollierung anzeigt](assets/analytics-server-side-logging.png)
 
 ## Festlegen globaler Target-Einstellungen
 
@@ -1130,9 +1130,9 @@ Das Web SDK unterstützt die Target-Drittanbieter-ID. Es sind jedoch einige weit
 Mit Identity Map können Kunden mehrere Identitäten senden. Alle Identitäten sind mit einem Namespace versehen. Jeder Namespace kann eine oder mehrere Identitäten aufweisen. Eine bestimmte Identität kann als primär markiert werden.
 Mit diesem Wissen im Hinterkopf können wir sehen, welche Schritte zur Einrichtung des Web SDK zur Verwendung der Target-Drittanbieter-ID erforderlich sind.
 
-1. Richten Sie den Namespace ein, der die Target-Drittanbieter-ID in der Ansicht &quot;Data Stream Configuration&quot;enthält:
+1. Richten Sie den Namespace ein, der die Target-Drittanbieter-ID auf der Seite mit der Datastream-Konfiguration enthält:
 
-![](assets/mbox-3-party-id-setup.png)
+![Benutzeroberfläche von Datastreams mit dem Feld Namespace der Target-Drittanbieter-ID](assets/mbox-3-party-id-setup.png)
 
 1. Senden Sie diesen Identitäts-Namespace in jedem sendEvent-Befehl wie diesem:
 
@@ -1180,8 +1180,8 @@ window.targetPageParams = function() {
 
 ### Verwenden des Web SDK
 
-Mit dem Web SDK können Kunden die Eigenschaft bei der Einrichtung der Data Stream-Konfiguration auf einer höheren Ebene unter dem Adobe Target-Namespace einrichten:
-![](assets/at-property-setup.png)
+Mit dem Web SDK können Kunden die Eigenschaft bei der Einrichtung der Datastream-Konfiguration auf einer höheren Ebene unter dem Adobe Target-Namespace einrichten:
+![Benutzeroberfläche &quot;Datenspeicher&quot;mit den Adobe Target-Einstellungen.](assets/at-property-setup.png)
 Das bedeutet, dass jeder Target-Aufruf für diese spezifische Data Stream-Konfiguration dieses Eigenschafts-Token enthält.
 
 ## Wie kann ich mboxes vorab abrufen?

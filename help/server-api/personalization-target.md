@@ -2,10 +2,10 @@
 title: Personalisierung über Adobe Target
 description: Erfahren Sie, wie Sie mit der Server-API personalisierte Erlebnisse bereitstellen und rendern können, die in Adobe Target erstellt wurden.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 4%
+source-wordcount: '591'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,6 @@ Siehe [Handbuch zum Hinzufügen von Diensten zu einem Datastream](../datastreams
 Beim Konfigurieren Ihres Datastreams können Sie (optional) Werte für [!DNL Property Token], [!DNL Target Environment ID], und [!DNL Target Third Party ID Namespace].
 
 ![UI-Bild, das den Konfigurationsbildschirm des Datastream-Dienstes mit ausgewähltem Adobe Target anzeigt](assets/target-datastream.png)
-
 
 ## Benutzerdefinierte Parameter {#custom-parameters}
 

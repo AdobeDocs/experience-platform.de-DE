@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Erste Schritte mit Media Edge-APIs
 description: Erste Schritte mit Media Edge-APIs
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 95%
+source-wordcount: '806'
+ht-degree: 97%
 
 ---
+
 
 # Erste Schritte mit Media Edge-APIs
 
@@ -284,7 +285,7 @@ Die folgende Tabelle zeigt die möglichen Antwort-Codes, die sich aus Media Edge
 | Status | Beschreibung |
 | ---------- | --------- |
 | 200 | Sitzung erfolgreich erstellt |
-| 207 | Problem mit einem der Services, die eine Verbindung zu Edge Network herstellen (weitere Informationen im [Handbuch zur Fehlerbehebung](troubleshooting.md)) |
+| 207 | Problem mit einem der Dienste, die eine Verbindung zum Edge-Netzwerk herstellen (weitere Informationen finden Sie unter [Handbuch zur Fehlerbehebung](troubleshooting.md)) |
 | 400er-Reihe | Ungültige Anfrage |
 | 500er-Reihe | Server-Fehler |
 

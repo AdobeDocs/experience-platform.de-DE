@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie Variablen mithilfe von Verarbeitungsregeln im
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 25%
+source-wordcount: '333'
+ht-degree: 12%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 Adobe Experience Platform [!DNL Web SDK] kann bestimmte Variablen automatisch zuordnen, benutzerdefinierte Variablen müssen jedoch manuell zugeordnet werden.
 
-Für XDM-Daten, die nicht automatisch zugeordnet sind [!DNL Analytics]können Sie [Kontextdaten](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=de) passend zu [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de). Anschließend kann sie [!DNL Analytics] using [Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=de) , um [!DNL Analytics] Variablen.
+Für XDM-Daten, die nicht automatisch zugeordnet sind [!DNL Analytics], können Sie [Kontextdaten](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=de) passend zu [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=de). Anschließend kann sie [!DNL Analytics] using [Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=de) , um [!DNL Analytics] Variablen.
 
 Außerdem können Sie einen Standardsatz von Aktionen und Produktlisten verwenden, um Daten mit dem Adobe Experience Platform Web SDK zu senden oder abzurufen. Weitere Informationen hierzu finden Sie unter [Erfassen von Commerce- und Produktinformationen](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
@@ -52,8 +52,7 @@ Auf alle vom Edge Network erfassten Daten kann über [Verarbeitungsregeln](https
 
 In der folgenden Regel wird Adobe Analytics beispielsweise so eingestellt, dass **Interne Suchbegriffe (eVar2)** mit den Daten verknüpft sind, die **a.x._atag.search.term(Kontextdaten)**.
 
-![](assets/examplerule.png)
-
+![Analytics-UI-Bild mit einem Regelbeispiel.](assets/examplerule.png)
 
 ## XDM-Schema
 
