@@ -1,11 +1,10 @@
 ---
-keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen ermöglicht, Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '950'
 ht-degree: 97%
 
 ---
@@ -29,7 +28,7 @@ Beachten Sie folgende Details, die speziell für [!DNL Google Ads]-Ziele gelten:
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Google Ad Manager] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden.
+[!DNL Google Ads] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden.
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
