@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Suchen nach mehreren Katalogobjekten
 description: Wenn Sie mehrere bestimmte Objekte anzeigen möchten, anstatt eine Anfrage pro Objekt zu stellen, bietet der Katalog eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 99837f7aa803f3f992dce2127089bff6279c7008
 workflow-type: tm+mt
 source-wordcount: '237'
-ht-degree: 54%
+ht-degree: 49%
 
 ---
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt abgerufen werden. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt abgerufen werden. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | Eine Kennung für eines der spezifischen Objekte, die Sie abrufen möchten. |
 
 **Anfrage**
@@ -57,24 +57,24 @@ Eine erfolgreiche Antwort gibt eine Liste der angegebenen Datensätze zurück, d
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
     },
     "5bda3a4228babc0000126377": {
         "name": "Sample Dataset 4",
-        "files": "@/dataSets/5bda3a4228babc0000126377/views/5bda3a4228babc0000126378/files"
+        "files": "@/dataSetFiles?dataSetId=5bda3a4228babc0000126377"
     },
     "5bde21511dd27b0000d24e95": {
         "name": "Sample Dataset 5",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bde21511dd27b0000d24e95/views/5bde21511dd27b0000d24e96/files"
+        "files": "@/dataSetFiles?dataSetId=5bde21511dd27b0000d24e95"
     }
 }
 ```

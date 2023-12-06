@@ -4,9 +4,9 @@ title: Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an den Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1067'
 ht-degree: 92%
 
 ---
@@ -36,7 +36,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) lesen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -165,7 +165,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "{VIEW_ID}",
-        "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
+        "files": "@/dataSetFiles?dataSetId=5b020a27e7040801dedbf46e",
         "schema": "{SCHEMA}",
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",

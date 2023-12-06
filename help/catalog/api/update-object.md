@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aktualisieren eines Katalogobjekts
 description: Sie können einen Teil eines Katalogobjekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen. Dieses Dokument behandelt die Verwendung von Feldern und die Verwendung der JSON Patch-Notation zum Ausführen von PATCH-Vorgängen für Catalog-Objekte.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 296a988a67871933723ad0474c113cb93fdbf255
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 81%
+source-wordcount: '371'
+ht-degree: 74%
 
 ---
 
@@ -20,7 +20,7 @@ Sie können einen Teil eines [!DNL Catalog] -Objekt, indem die zugehörige ID in
 
 >[!NOTE]
 >
-> PATCH-Vorgänge können die erweiterbaren Felder eines Objekts, die miteinander verknüpfte Objekte darstellen, nicht ändern. Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
+>PATCH-Vorgänge für ein Objekt können die erweiterbaren Felder, die miteinander verknüpfte Objekte darstellen, nicht ändern. Änderungen an verknüpften Objekten müssen direkt vorgenommen werden.
 
 ## Aktualisieren mithilfe von Feldern
 
@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -69,11 +69,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten 
 
 Der folgende Beispielaufruf zeigt, wie ein Objekt, wie in [RFC-6902](https://tools.ietf.org/html/rfc6902) beschrieben, mit JSON Patch aktualisiert wird.
 
-<!-- (Include once API fundamentals guide is published) 
-
-For more information on JSON Patch syntax, see the [API fundamentals guide](). 
-
--->
+Weitere Informationen zur JSON Patch-Syntax finden Sie unter [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 **API-Format**
 
@@ -83,7 +79,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**

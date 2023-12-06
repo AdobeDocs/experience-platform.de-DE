@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Nachschlagen eines Katalogobjekts
 description: Wenn Sie die eindeutige Kennung eines bestimmten Catalog-Objekts kennen, können Sie eine GET-Anfrage ausführen, um Details zu diesem Objekt anzuzeigen.
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 0331b6bbd22255cab92c93070dda1ffaed5bbbcb
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 63%
+ht-degree: 44%
 
 ---
 
@@ -17,7 +17,7 @@ Wenn Sie die eindeutige Kennung für eine bestimmte [!DNL Catalog] -Objekt, kön
 
 >[!NOTE]
 >
->Beim Anzeigen einzelner Objekte empfiehlt es sich weiterhin, [nach Eigenschaften zu filtern](filter-data.md), um nur die Eigenschaften zurückzugeben, die Sie von Interesse sind.
+>Beim Anzeigen bestimmter Objekte empfiehlt es sich weiterhin, [nach Eigenschaften filtern](filter-data.md) und geben nur die Eigenschaften zurück, die Sie interessieren.
 
 **API-Format**
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt abgerufen werden. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt abgerufen werden. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie abrufen möchten. |
 
 **Anfrage**
@@ -58,11 +58,11 @@ Bei einer erfolgreichen Antwort wird der angegebene Datensatz nur mit den angefo
                 "sample_dataset"
             ]
         },
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     }
 }
 ```
 
 >[!NOTE]
 >
-> Eigenschaften, deren Werte mit einem `@`-Präfix versehen sind, stellen miteinander verknüpfte Objekte dar. Anweisungen zum Anzeigen dieser Objekte finden Sie im Anhangsbereich zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects).
+>Eigenschaften, deren Werte mit dem Präfix `@` stellen miteinander verknüpfte Objekte dar. Anweisungen zum Anzeigen dieser Objekte finden Sie im Anhangsbereich zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects).

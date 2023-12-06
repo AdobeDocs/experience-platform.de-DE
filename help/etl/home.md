@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '4081'
+source-wordcount: '3978'
 ht-degree: 100%
 
 ---
@@ -319,7 +319,7 @@ Die Antwort umfasst einen Datensatz (`limit=1`), der die Eigenschaft „files“
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
