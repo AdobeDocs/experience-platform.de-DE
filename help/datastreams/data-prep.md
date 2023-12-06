@@ -1,16 +1,40 @@
 ---
 title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 85%
+source-wordcount: '1201'
+ht-degree: 64%
 
 ---
+
 
 # Datenvorbereitung für die Datenerfassung
 
 Datenvorbereitung ist ein Adobe Experience Platform-Service, mit dem Sie Daten zuordnen, umwandeln und validieren können, die an das [Experience-Datenmodell (XDM)](../xdm/home.md) gesendet oder von ihm empfangen werden. Beim Konfigurieren eines Platform-aktivierten [Datenstroms](./overview.md) können Sie Datenvorbereitungs-Funktionen verwenden, um Ihre Quelldaten dem XDM zuzuordnen, wenn Sie sie an das Platform Edge Network senden.
+
+Alle Daten, die von einer Webseite gesendet werden, müssen als XDM in Experience Platform landen. Es gibt drei Möglichkeiten, Daten von einer On-Page-Datenschicht in das von Experience Platform akzeptierte XDM zu übersetzen:
+
+1. Formatieren Sie die Datenschicht in XDM auf der Webseite selbst.
+2. Verwenden Sie die Funktion Native Datenelemente von Tags , um das vorhandene Datenschichtformat einer Web-Seite in XDM umzuformatieren.
+3. Formatieren Sie das vorhandene Datenschichtformat einer Web-Seite über das Edge-Netzwerk in XDM um, indem Sie die Datenvorbereitung für die Datenerfassung verwenden.
+
+Dieser Leitfaden konzentriert sich auf die dritte Option.
+
+## Verwendung der Datenvorbereitung für die Datenerfassung {#when-to-use-data-prep}
+
+Es gibt zwei Anwendungsfälle, in denen die Datenvorbereitung für die Datenerfassung nützlich ist:
+
+1. Die Website verfügt über eine gut strukturierte, verwaltete und gepflegte Datenschicht. Daher ist es empfehlenswert, sie direkt an das Edge-Netzwerk zu senden, anstatt sie mithilfe von JavaScript-Manipulationen in XDM auf der Seite zu konvertieren (entweder über Tags-Datenelemente oder über manuelle JavaScript-Bearbeitung).
+2. Auf der Site wird ein anderes Tagging-System als Tags bereitgestellt.
+
+## Vorhandene Datenschicht über WebSDK an das Edge-Netzwerk senden {#send-datalayer-via-websdk}
+
+Die vorhandene Datenschicht muss mithilfe der `data` der `sendEvent` -Befehl, wie im Abschnitt [Web SDK-Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+Wenn Sie Tags verwenden, müssen Sie die **[!UICONTROL Daten]** des **[!UICONTROL Ereignis senden]** Aktionstyp, wie im Abschnitt [Dokumentation zur Web SDK-Tag-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+Der Rest dieses Handbuchs konzentriert sich auf die Zuordnung der Datenschicht zu XDM-Standards, nachdem sie vom WebSDK gesendet wurde.
 
 >[!NOTE]
 >
@@ -131,6 +155,10 @@ Bei der Erfassung von Eigenschaften aus einem XDM-Objekt-Datenelement gelten die
 Sie können die Option zum Hochladen des Objekts als Datei auswählen oder stattdessen das Raw-Objekt in das bereitgestellte Textfeld einfügen. Wenn die JSON gültig ist, wird im rechten Bereich ein Vorschauschema angezeigt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ![JSON-Beispiel für erwartete eingehende Daten](assets/data-prep/select-data.png)
+
+>[!NOTE]
+>
+> Verwenden Sie ein JSON-Beispielobjekt, das jedes Datenschichtelement darstellt, das auf einer beliebigen Seite verwendet werden kann. Beispielsweise verwenden nicht alle Seiten Datenschichtelemente des Warenkorbs. Die Datenschichtelemente des Warenkorbs sollten jedoch in dieses JSON-Beispielobjekt aufgenommen werden.
 
 ## [!UICONTROL Zuordnung]
 
