@@ -1,16 +1,16 @@
 ---
-title: Exportieren von Datensätzen an Cloud-Speicher-Ziele
+title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
+source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
 workflow-type: tm+mt
-source-wordcount: '1751'
-ht-degree: 58%
+source-wordcount: '1735'
+ht-degree: 53%
 
 ---
 
-# Exportieren von Datensätzen an Cloud-Speicher-Ziele
+# Exportieren von Datensätzen in Cloud-Speicher-Ziele
 
 >[!AVAILABILITY]
 >
@@ -136,11 +136,11 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 
 Im **[!UICONTROL Planung]** Schritt, können Sie ein Startdatum und eine Exportkadenz für Ihre Datensatzexporte festlegen.
 
-Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist automatisch ausgewählt. Dies löst einen Export aus, bei dem die erste Datei eine vollständige Momentaufnahme des Datensatzes ist und nachfolgende Dateien inkrementelle Ergänzungen zum Datensatz seit dem vorherigen Export darstellen.
+Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist automatisch ausgewählt. Dies Trigger den Export einer oder mehrerer Dateien, die eine vollständige Momentaufnahme des Datensatzes darstellen. Nachfolgende Dateien werden seit dem vorherigen Export inkrementell zum Datensatz hinzugefügt.
 
 >[!IMPORTANT]
 >
->Die erste exportierte inkrementelle Datei enthält alle vorhandenen Daten im Datensatz, sodass eine Aufstockung durchgeführt wird.
+>Der erste inkrementelle Dateiexport umfasst alle vorhandenen Daten im Datensatz, die als Aufstockung dienen. Der Export kann eine oder mehrere Dateien enthalten.
 
 ![Workflow für den Datensatzexport, der den Planungsschritt zeigt.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -167,7 +167,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ## Überprüfen eines erfolgreichen Datensatzexports {#verify}
 
-Beim Exportieren von Datensätzen erstellt Experience Platform eine `.json`- oder `.parquet`-Datei an dem von Ihnen angegebenen Speicherort. Sie können erwarten, dass eine neue Datei entsprechend dem von Ihnen angegebenen Exportplan an Ihrem Speicherort abgelegt wird.
+Beim Exportieren von Datensätzen erstellt Experience Platform eine oder mehrere `.json` oder `.parquet` -Dateien in dem von Ihnen angegebenen Speicherort. Erwarten Sie, dass neue Dateien entsprechend dem von Ihnen angegebenen Exportplan an Ihrem Speicherort abgelegt werden.
 
 Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in der die exportierten Datensatzdateien abgelegt werden. Für jeden Exportzeitpunkt wird ein neuer Ordner erstellt, wobei das folgende Muster befolgt wird:
 
