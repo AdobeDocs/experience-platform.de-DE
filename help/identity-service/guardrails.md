@@ -3,14 +3,14 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 44%
+source-wordcount: '1507'
+ht-degree: 43%
 
 ---
 
-# Leitplanken für [!DNL Identity Service]Daten
+# Limits [!DNL Identity Service] data
 
 Dieses Dokument enthält Informationen über die Verwendung und die Ratenbeschränkungen für [!DNL Identity Service]-Daten, um Ihnen bei der optimalen Nutzung des Identitätsdiagramms zu helfen. Bei der Überprüfung der folgenden Leitplanken wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
@@ -37,14 +37,18 @@ In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten au
 | Anzahl der benutzerdefinierten Namespaces | Keine | Die Anzahl der benutzerdefinierten Namespaces, die Sie erstellen können, ist unbegrenzt. |
 | Anzahl der Zeichen für einen Namespace-Anzeigenamen oder ein Identitätssymbol | Keine | Die Anzahl der Zeichen eines Namespace-Anzeigenamens oder Identitätssymbols ist unbegrenzt. |
 
+{style="table-layout:auto"}
+
 ### Überprüfung des Identitätswerts
 
 In der folgenden Tabelle sind die vorhandenen Regeln aufgeführt, die Sie befolgen müssen, um eine erfolgreiche Überprüfung Ihres Identitätswerts sicherzustellen.
 
 | Namespace | Validierungsregel | Systemverhalten bei Verletzung einer Regel |
 | --- | --- | --- |
-| ECID | <ul><li>Der Identitätswert einer ECID muss genau 38 Zeichen betragen.</li><li>Der Identitätswert einer ECID darf nur aus Zahlen bestehen.</li><li>Identitätswerte dürfen nicht &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot;oder eine leere Zeichenfolge sein (z. B.: &quot;&quot;, &quot;&quot;, &quot;&quot;).</li></ul> | <ul><li>Wenn der Identitätswert der ECID nicht genau 38 Zeichen beträgt, wird der Eintrag übersprungen.</li><li>Wenn der Identitätswert der ECID nicht-numerische Zeichen enthält, wird der Eintrag übersprungen.</li><li>Die Identität wird von der Erfassung ausgeschlossen.</li></ul> |
-| Nicht-ECID | Der Identitätswert darf 1024 Zeichen nicht überschreiten. | Wenn der Identitätswert 1024 Zeichen überschreitet, wird der Eintrag übersprungen. |
+| ECID | <ul><li>Der Identitätswert einer ECID muss genau 38 Zeichen betragen.</li><li>Der Identitätswert einer ECID darf nur aus Zahlen bestehen.</li></ul> | <ul><li>Wenn der Identitätswert der ECID nicht genau 38 Zeichen beträgt, wird der Eintrag übersprungen.</li><li>Wenn der Identitätswert der ECID nicht-numerische Zeichen enthält, wird der Eintrag übersprungen.</li></ul> |
+| Nicht-ECID | <ul><li>Der Identitätswert darf 1024 Zeichen nicht überschreiten.</li><li>Identitätswerte dürfen nicht &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot;oder eine leere Zeichenfolge sein (z. B.: &quot;&quot;, &quot;&quot;, &quot;&quot;).</li></ul> | <ul><li>Wenn der Identitätswert 1024 Zeichen überschreitet, wird der Eintrag übersprungen.</li><li>Die Identität wird von der Erfassung ausgeschlossen.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### Aufnahme von Identity-Namespaces
 
