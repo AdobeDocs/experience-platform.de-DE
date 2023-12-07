@@ -2,10 +2,10 @@
 title: Freie turbine-Variable
 description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Variablen, die Informationen und Dienstprogramme speziell für die Tag-Laufzeit in Adobe Experience Platform bereitstellt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 100%
+source-wordcount: '606'
+ht-degree: 97%
 
 ---
 
@@ -112,7 +112,7 @@ Ruft ein Modul ab, das von einer anderen Erweiterung freigegeben wurde. Wenn kei
 turbine.logger.error('Error!');
 ```
 
-Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung des [Adobe Experience Cloud-Debuggers](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Alternativ kann der Benutzer den Befehl `_satellite.setDebug(true)` in der Browser-Entwicklungskonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
+Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht darin, die [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Alternativ kann der Benutzer den Befehl `_satellite.setDebug(true)` in der Browser-Entwicklungskonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
 
 * `logger.log(message: string)`: Protokolliert eine Meldung auf der Browser-Konsole.
 * `logger.info(message: string)`: Protokolliert eine Informationsmeldung auf der Konsole.
@@ -137,8 +137,8 @@ Ein Objekt, das die folgenden Einstellungen enthält, die vom Benutzer für die 
 
 * `propertySettings.domains: Array<String>`
 
-   Ein Array von Domains, die von der Eigenschaft abgedeckt werden.
+  Ein Array von Domains, die von der Eigenschaft abgedeckt werden.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   Entwickler von Erweiterungen sollten sich nicht mit dieser Einstellung befassen.
+  Entwickler von Erweiterungen sollten sich nicht mit dieser Einstellung befassen.

@@ -4,10 +4,10 @@ title: Braze Event Forwarding-Erweiterung
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Edge Network-Ereignisse an Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 6%
+source-wordcount: '1692'
+ht-degree: 4%
 
 ---
 
@@ -51,7 +51,7 @@ Die Erweiterung verwendet zwei von [!DNL Braze]Die APIs und ihre Beschränkungen
 
 ### Abrechenbare Datenpunkte
 
-Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] kann die [!DNL Braze] Datenpunktverbrauch. Wenden Sie sich an Ihre [!DNL Braze] Kundenbetreuer vor dem Senden zusätzlicher benutzerdefinierter Attribute. Siehe Abschnitt [!DNL Braze] Dokumentation zu [Abrechnungsdatenpunkte](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) für weitere Informationen.
+Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] kann die [!DNL Braze] Datenpunktverbrauch. Wenden Sie sich an Ihre [!DNL Braze] Kundenbetreuer vor dem Senden zusätzlicher benutzerdefinierter Attribute. Siehe Abschnitt [!DNL Braze] Dokumentation zu [Abrechnungsdatenpunkte](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) für weitere Informationen.
 
 ### Erforderliche Konfigurationsdetails sammeln {#configuration-details}
 
@@ -72,7 +72,7 @@ So installieren Sie die Erweiterung: [Erstellen einer Ereignisweiterleitungs-Eig
 
 Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** Registerkarte auswählen **[!UICONTROL Installieren]** auf der Karte für die [!DNL Braze] -Erweiterung.
 
-![[!DNL Braze]Installieren der Erweiterung.](../../../images/extensions/server/braze/install-extension.png)
+![Installieren Sie die [!DNL Braze] -Erweiterung.](../../../images/extensions/server/braze/install-extension.png)
 
 Geben Sie im nächsten Bildschirm Folgendes ein: [Konfigurationswerte](#configuration-details) die Sie zuvor aus [!DNL Braze]:
 
@@ -107,7 +107,7 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
-| [!UICONTROL Ereignisname &#x200B;] | Name des Ereignisses. | Ja |
+| [!UICONTROL &#x200B;] | Name des Ereignisses. | Ja |
 | [!UICONTROL Ereigniszeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | Ja |
 | [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Ereigniseigenschaften &#x200B;] | Ein JSON-Objekt mit benutzerdefinierten Eigenschaften des Ereignisses. |  |
@@ -126,7 +126,7 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | --- | --- |
 | [!UICONTROL Vorname] | |
 | [!UICONTROL Nachname] | |
-| [!UICONTROL Telefon] | |
+| [!UICONTROL Phone] | |
 | [!UICONTROL E-Mail] | |
 | [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es empfiehlt sich, nicht zu sagen). |
 | [!UICONTROL Stadt] | |
@@ -163,11 +163,11 @@ Erstellen Sie nach der Installation der Erweiterung eine neue Ereignisweiterleit
 
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
-| [!UICONTROL Produkt-ID &#x200B;] | Kennung für den Kauf. (z. B. Produktname oder Produktkategorie) | Ja |
+| [!UICONTROL Produkt-ID-&#x200B;] | Kennung für den Kauf. (z. B. Produktname oder Produktkategorie) | Ja |
 | [!UICONTROL Kaufzeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | Ja |
-| [!UICONTROL Währung &#x200B;] | Währung als Zeichenfolge in [ISO 4217](https://de.wikipedia.org/wiki/ISO_4217) Alphabetisches Währungscode-Format. | Ja |
-| [!UICONTROL Preis &#x200B;] | Preis. | Ja |
-| [!UICONTROL Menge &#x200B;] | Wenn kein Wert angegeben wird, ist der Standardwert 1. Der Höchstwert muss unter 100 liegen. | |
+| [!UICONTROL &#x200B;] | Währung als Zeichenfolge in [ISO 4217](https://de.wikipedia.org/wiki/ISO_4217) Alphabetisches Währungscode-Format. | Ja |
+| [!UICONTROL &#x200B;] | Preis. | Ja |
+| [!UICONTROL &#x200B;] | Wenn kein Wert angegeben wird, ist der Standardwert 1. Der Höchstwert muss unter 100 liegen. | |
 | [!UICONTROL App-Kennung] | App-ID oder <strong>app_id</strong> ist ein Parameter, der die Aktivität mit einer bestimmten App in Ihrer App-Gruppe verknüpft. Sie gibt an, mit welcher App innerhalb der App-Gruppe Sie interagieren. Weitere Informationen zum [API-Kennungstypen](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL &#x200B;] | Ein JSON-Objekt mit benutzerdefinierten Eigenschaften des Kaufs. |  |
 
@@ -185,7 +185,7 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, die ein Att
 | --- | --- |
 | [!UICONTROL Vorname] | |
 | [!UICONTROL Nachname] | |
-| [!UICONTROL Telefon] | |
+| [!UICONTROL Phone] | |
 | [!UICONTROL E-Mail] | |
 | [!UICONTROL Geschlecht] | Eine der folgenden Zeichenfolgen: &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (sonstiges), &quot;N&quot; (nicht zutreffend), &quot;P&quot; (es empfiehlt sich, nicht zu sagen). |
 | [!UICONTROL Stadt] | |
