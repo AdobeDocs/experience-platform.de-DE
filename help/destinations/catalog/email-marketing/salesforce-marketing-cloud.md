@@ -1,12 +1,11 @@
 ---
-keywords: E-Mail;E-Mail;E-Mail-Ziele;Salesforce;Salesforce-Ziel
 title: Salesforce Marketing Cloud-Verbindung
 description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 57%
+source-wordcount: '795'
+ht-degree: 54%
 
 ---
 
@@ -14,9 +13,9 @@ ht-degree: 57%
 
 ## Übersicht {#overview}
 
-[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/de/products/marketing-cloud/email-marketing/) ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
+[[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/de/products/marketing-cloud/email-marketing/) ist eine Digital Marketing Suite, die früher als ExactTarget bekannt war und mit der Sie Journey für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 
-Senden von Zielgruppendaten an [!DNL Salesforce Marketing Cloud], müssen Sie zuerst [Ziel verbinden](#connect-destination) in Platform und dann [Datenimport einrichten](#import-data-into-salesforce) von Ihrem Speicherort zu [!DNL Salesforce Marketing Cloud].
+Senden von Zielgruppendaten an [!DNL Salesforce Marketing Cloud], müssen Sie zuerst [Verbindung zum Ziel herstellen](#connect-destination) in Platform und dann [Datenimport einrichten](#import-data-into-salesforce) von Ihrem Speicherort zu [!DNL Salesforce Marketing Cloud].
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -40,9 +39,9 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-## IP-Adressen-Zulassungsliste {#allow-list}
+## Zulassungsliste von IP-Adressen {#allow-list}
 
-Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, dass Sie bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzufügen.
+Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
 
 Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/ip-address-allow-list.md) , wenn Sie Ihrer Zulassungsliste Adobe-IPs hinzufügen müssen.
 

@@ -3,7 +3,7 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 75%

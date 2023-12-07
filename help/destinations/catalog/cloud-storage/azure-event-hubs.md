@@ -4,9 +4,9 @@ title: Azure Event Hubs-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Azure Event Hubs] -Speicherung zum Streamen von Daten von Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2084'
 ht-degree: 52%
 
 ---
@@ -133,7 +133,7 @@ Siehe [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](../..
 
 Experience Platform optimiert das Profil-Exportverhalten für Ihre [!DNL Azure Event Hubs] Ziel, um Daten nur dann an Ihr Ziel zu exportieren, wenn nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen relevante Aktualisierungen an einem Profil stattgefunden haben. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
-* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
+* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
 * Die Aktualisierung des Profils wurde durch eine Änderung der Attribute für mindestens eines der dem Ziel zugeordneten Attribute bestimmt. Beispielsweise wird eines der Attribute, die dem Ziel im Zuordnungsschritt zugeordnet sind, einem Profil hinzugefügt.
 

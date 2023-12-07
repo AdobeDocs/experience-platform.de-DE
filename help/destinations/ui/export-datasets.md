@@ -3,9 +3,9 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1739'
 ht-degree: 53%
 
 ---
@@ -71,7 +71,7 @@ Sehen Sie sich das folgende Video an, um eine umfassende Erläuterung des auf di
 
 Derzeit können Sie Datensätze zu den im Screenshot hervorgehobenen und unten aufgeführten Cloud-Speicher-Zielen exportieren.
 
-![Ziele, die Datensatzexporte unterstützen](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Zielkatalogseite, die anzeigt, welche Ziele Datensatzexporte unterstützen.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -221,7 +221,7 @@ In den Produktbeschreibungsdokumenten erfahren Sie, wie viele Daten Sie pro Expe
 
 Beachten Sie, dass die Berechtigungen für Datenexporte für verschiedene Anwendungen nicht additiv sind. Wenn Sie beispielsweise Real-Time CDP Ultimate und Adobe Journey Optimizer Ultimate erwerben, ist die Profilexportberechtigung gemäß den Produktbeschreibungen die größere der beiden Berechtigungen. Ihre Volumenberechtigungen werden berechnet, indem Sie die Gesamtzahl der lizenzierten Profile mit 500 KB für Real-Time CDP Prime oder 700 KB für Real-Time CDP Ultimate multiplizieren, um festzustellen, zu welchem Datenvolumen Sie berechtigt sind.
 
-Wenn Sie hingegen Add-ons wie Data Distiller erwerben, stellt die Datenexport-Beschränkung, zu der Sie berechtigt sind, die Summe der Produktebene und des Add-ons dar.
+Wenn Sie hingegen Add-ons wie Data Distiller erworben haben, stellt die Datenexport-Beschränkung, zu der Sie berechtigt sind, die Summe der Produktebene und des Add-ons dar.
 
 Sie können Ihre Profilexporte anhand Ihrer vertraglichen Beschränkungen im Lizenzierungs-Dashboard anzeigen und verfolgen.
 

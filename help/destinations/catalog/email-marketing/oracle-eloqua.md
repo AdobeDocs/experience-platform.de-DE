@@ -3,16 +3,16 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; oracle eloqua; oracle
 title: (Dateien) Oracle Eloqua-Verbindung
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 55%
+source-wordcount: '717'
+ht-degree: 49%
 
 ---
 
 # [!DNL (Files) Oracle Eloqua]-Verbindung
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)[!DNL Oracle] ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von , die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) ist eine Software as a Service (SaaS)-Plattform für Marketing-Automatisierung, die von [!DNL Oracle] , um B2B-Marketer und -Organisationen bei der Verwaltung von Marketing-Kampagnen und der Lead-Generierung im Vertrieb zu unterstützen.
 
 Senden von Zielgruppendaten an [!DNL Oracle Eloqua], müssen Sie zuerst [Ziel verbinden](#connect-destination) in Adobe Experience Platform und dann [Datenimport einrichten](#import-data-into-eloqua) von Ihrem Speicherort zu [!DNL Oracle Eloqua].
 
@@ -48,7 +48,7 @@ Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](../cloud-storage/i
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 

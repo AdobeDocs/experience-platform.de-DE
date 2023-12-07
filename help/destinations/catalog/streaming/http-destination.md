@@ -4,10 +4,10 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 85%
+source-wordcount: '2480'
+ht-degree: 79%
 
 ---
 
@@ -65,7 +65,7 @@ Um Daten aus Experience Platform mithilfe des HTTP-API-Ziels zu exportieren, mü
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
-Um die Sicherheits- und Compliance-Anforderungen von Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das HTTP-API-Ziel auf die Zulassungsliste setzen können. Siehe [Zulassungsliste von IP-Adressen für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md), um die vollständige Liste der IP-Adressen in der Zulassungsliste einzusehen.
+Um die Sicherheits- und Compliance-Anforderungen von Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das HTTP-API-Ziel auf die Zulassungsliste setzen können. Siehe Abschnitt [IP-Adressen-Zulassungsliste für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md) für die vollständige Liste der IP-Adressen in auf die Zulassungsliste setzen.
 
 ## Unterstützte Authentifizierungstypen {#supported-authentication-types}
 
@@ -73,7 +73,7 @@ Das HTTP-API-Ziel unterstützt mehrere Authentifizierungstypen für Ihren HTTP-E
 
 * HTTP-Endpunkt ohne Authentifizierung;
 * Authentifizierung mit Bearer-Token;
-* Authentifizierung über [Client-Anmeldeinformationen für OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) mit dem Textkörper-Formular, mit [!DNL client ID], [!DNL client secret] und [!DNL grant type] im Textkörper der HTTP-Anfrage, wie im folgenden Beispiel gezeigt.
+* [OAuth 2.0-Client-Anmeldeinformationen](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) Authentifizierung mit dem Hauptteilformular, mit [!DNL client ID], [!DNL client secret], und [!DNL grant type] im Hauptteil der HTTP-Anforderung, wie im folgenden Beispiel gezeigt.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -113,7 +113,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Wenn Sie den Authentifizierungstyp **[!UICONTROL Bearer-Token]** für die Verbindung zu Ihrem HTTP-Endpunkt wählen, füllen Sie die Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
 
-![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe der Bearer-Token-Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Bild des UI-Bildschirms, auf dem Sie mithilfe der Authentifizierung des Trägertokens eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer-Token]**: Fügen Sie das Bearer-Token ein, um sich bei Ihrer HTTP-Adresse zu authentifizieren.
 
@@ -121,7 +121,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Bearer-Token]** für die Verbin
 
 Wenn Sie **[!UICONTROL keinen]** Authentifizierungstyp zum Herstellen einer Verbindung mit Ihrem HTTP-Endpunkt auswählen:
 
-![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie ohne Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können](../../assets/catalog/http/http-api-authentication-none.png)
+![Bild des UI-Bildschirms, auf dem Sie ohne Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-none.png)
 
 Wenn Sie diese offene Authentifizierung auswählen, brauchen Sie nur auf **[!UICONTROL Mit Ziel verbinden]** zu klicken, und die Verbindung zu Ihrem Endpunkt wird hergestellt.
 
@@ -129,7 +129,7 @@ Wenn Sie diese offene Authentifizierung auswählen, brauchen Sie nur auf **[!UIC
 
 Wenn Sie für die Verbindung zu Ihrem HTTP-Endpunkt den Authentifizierungstyp **[!UICONTROL OAuth 2 mit Passwort]** wählen, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
 
-![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie mithilfe von OAuth 2 mit Passwort-Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Bild des UI-Bildschirms, auf dem Sie mithilfe von OAuth 2 mit Passwortauthentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
@@ -141,7 +141,7 @@ Wenn Sie für die Verbindung zu Ihrem HTTP-Endpunkt den Authentifizierungstyp **
 
 Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen für OAuth 2]** wählen, um sich mit Ihrem HTTP-Endpunkt zu verbinden, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
 
-![Abbildung des Bildschirms der Benutzeroberfläche, über den Sie eine Verbindung zum HTTP-API-Ziel herstellen können, indem Sie OAuth 2 mit einer Authentifizierung über Client-Anmeldeinformationen verwenden](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Bild des UI-Bildschirms, auf dem Sie mithilfe von OAuth 2 mit Client-Anmeldedaten-Authentifizierung eine Verbindung zum HTTP-API-Ziel herstellen können.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
@@ -179,7 +179,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen fü
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Abbildung des Bildschirms der Benutzeroberfläche mit ausgefüllten Feldern für die Details zum HTTP-Ziel](../../assets/catalog/http/http-api-destination-details.png)
+![Bild des UI-Bildschirms mit ausgefüllten Feldern für die HTTP-Zieldetails.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, um dieses Ziel in Zukunft zu erkennen.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
@@ -212,13 +212,13 @@ Im Schritt [[!UICONTROL Attribute auswählen]](../../ui/activate-streaming-profi
 
 Experience Platform optimiert das Verhalten des Profilexports an Ihr HTTP-API-Ziel, sodass nur Daten an Ihren API-Endpunkt exportiert werden, wenn nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen relevante Aktualisierungen an einem Profil stattgefunden haben. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
-* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
+* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
 * Die Aktualisierung des Profils wurde durch eine Änderung der Attribute für mindestens eines der dem Ziel zugeordneten Attribute bestimmt. Beispielsweise wird eines der Attribute, die dem Ziel im Zuordnungsschritt zugeordnet sind, einem Profil hinzugefügt.
 
 In allen oben beschriebenen Fällen werden nur die Profile exportiert, in denen relevante Aktualisierungen vorgenommen wurden. Wenn beispielsweise eine Zielgruppe, die dem Zielfluss zugeordnet ist, aus hundert Mitgliedern besteht und fünf neue Profile sich für das Segment qualifizieren, ist der Export in Ihr Ziel inkrementell und umfasst nur die fünf neuen Profile.
 
-Beachten Sie, dass alle zugeordneten Attribute unabhängig vom Speicherort der Änderungen für ein Profil exportiert werden. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
+Beachten Sie, dass alle zugeordneten Attribute unabhängig von der Art der Änderungen für ein Profil exportiert werden. Daher werden im obigen Beispiel alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
 
 ### Was bestimmt einen Datenexport und was ist im Export enthalten? {#what-determines-export-what-is-included}
 
@@ -232,7 +232,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 
 Betrachten Sie beispielsweise den folgenden Datenfluss an ein HTTP-Ziel, bei dem im Datenfluss drei Zielgruppen ausgewählt und dem Ziel vier Attribute zugeordnet sind.
 
-![HTTP-API-Ziel-Datenfluss](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Ein Beispiel für einen HTTP-API-Ziel-Datenfluss.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 Ein Profilexport an das Ziel kann durch ein Profil bestimmt werden, das sich für eines der *drei zugeordneten Segmente* qualifiziert. Im Datenexport jedoch wird im `segmentMembership` -Objekt (siehe [Exportierte Daten](#exported-data) unten), können weitere nicht zugeordnete Zielgruppen angezeigt werden, wenn dieses bestimmte Profil Mitglied dieser Zielgruppe ist und diese dieselbe Zusammenführungsrichtlinie wie die Zielgruppe nutzen, die den Export ausgelöst hat. Wenn ein Profil für die **Kunde mit DeLorean Cars** -Segment, ist aber auch Mitglied der **&quot;Zurück in die Zukunft&quot;** Film und **Fans von Science-Fiction** Segmente verwenden, sind diese beiden anderen Zielgruppen auch im `segmentMembership` -Objekt des Datenexports, auch wenn diese nicht im Datenfluss zugeordnet sind, wenn diese dieselbe Zusammenführungsrichtlinie mit der **Kunde mit DeLorean Cars** Segment.
 

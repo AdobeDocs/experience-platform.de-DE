@@ -2,10 +2,10 @@
 title: Azure Blob-Verbindung
 description: Stellen Sie eine aktive ausgehende Verbindung mit Ihrem Azure Blob-Speicher her, um regelmäßig CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 63%
+source-wordcount: '1045'
+ht-degree: 62%
 
 ---
 
@@ -123,7 +123,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-## Datensätze exportieren {#export-datasets}
+## Exportieren von Datensätzen {#export-datasets}
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 

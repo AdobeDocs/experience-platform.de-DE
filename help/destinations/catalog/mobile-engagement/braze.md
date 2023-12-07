@@ -3,9 +3,9 @@ keywords: mobil; braze; messaging;
 title: Braze-Verbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1122'
 ht-degree: 34%
 
 ---
@@ -154,8 +154,8 @@ Angenommen, Ihr XDM-Profilschema und Ihr [!DNL Braze] -Instanz enthält die folg
 
 |  | XDM-Profilschema | [!DNL Braze] Instanz |
 |---|---|---|
-| Attribute | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>Vorname</code></li><li><code>Nachname</code></li><li><code>PhoneNumber</code></li></ul> |
-| Identitäten | <ul><li><code>E-Mail</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID für Advertiser (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
+| Attribute | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>PhoneNumber</code></li></ul> |
+| Identitäten | <ul><li><code>Email</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID für Advertiser (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 Die korrekte Zuordnung würde wie folgt aussehen:
 

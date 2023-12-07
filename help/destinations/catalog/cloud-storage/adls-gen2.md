@@ -1,12 +1,12 @@
 ---
-title: Verbindung zu Azure Data Lake Storage Gen2
+title: Azure Data Lake Storage Gen2-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zu Azure Data Lake Storage Gen2 herstellen, um Zielgruppen zu aktivieren und Datensätze zu exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 66%
+source-wordcount: '878'
+ht-degree: 63%
 
 ---
 
@@ -104,7 +104,7 @@ Im Schritt **[!UICONTROL Planung]** können Sie für Ihr [!DNL Azure Data Lake S
 
 Im Schritt **[!UICONTROL Zuordnung]** können Sie festlegen, welche Attribute und Identitätsfelder für Ihre Profile exportiert werden sollen. Sie können auch festlegen, dass die Kopfzeilen in der exportierten Datei in einen beliebigen Anzeigenamen geändert werden. Weitere Informationen finden Sie im [Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) im Tutorial zur Benutzeroberfläche der Aktivierung von Batch-Zielen.
 
-## Datensätze exportieren {#export-datasets}
+## Exportieren von Datensätzen {#export-datasets}
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 

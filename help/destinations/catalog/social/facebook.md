@@ -3,10 +3,10 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 33%
+source-wordcount: '1949'
+ht-degree: 31%
 
 ---
 
@@ -18,7 +18,7 @@ Profile für Ihre [!DNL Facebook] Kampagnen für Zielgruppen-Targeting, Personal
 
 Sie können dieses Ziel für Zielgruppen-Targeting über [!DNL Facebook's] -Familie von Apps, die von [!DNL Custom Audiences], einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], und [!DNL Messenger]. Die Auswahl der App, für die Sie die Kampagne ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
 
-![Facebook-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/facebook/catalog.png)
+![Facebook-Ziel in der Benutzeroberfläche von Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Anwendungsfälle
 
@@ -30,7 +30,7 @@ Ein Online-Einzelhändler möchte bestehende Kunden über soziale Plattformen er
 
 ### Anwendungsfall 2
 
-Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silber und Gold) und möchte über soziale Plattformen für jede dieser Ebenen personalisierte Angebote bereitstellen. Es wird jedoch nicht von allen Kunden die App der Fluglinie verwendet, und einige von ihnen haben sich nicht bei der Website des Unternehmens angemeldet. Die einzigen Identifikatoren, die das Unternehmen über diese Kunden hat, sind Mitgliedschafts-IDs und E-Mail-Adressen.
+Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silber und Gold) und möchte über soziale Plattformen für jede dieser Ebenen personalisierte Angebote bereitstellen. Es wird jedoch nicht von allen Kunden die App der Fluglinie verwendet, und einige von ihnen haben sich nicht bei der Website des Unternehmens angemeldet. Die einzigen IDs, die das Unternehmen über diese Kunden hat, sind Mitgliedschafts-IDs und E-Mail-Adressen.
 
 Um sie über soziale Netzwerke hinweg anzusprechen, können sie die Kundendaten aus ihrem CRM-System in Adobe Experience Platform integrieren und dabei die E-Mail-Adressen als Kennungen verwenden.
 
@@ -38,7 +38,7 @@ Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Facebook Custom Audiences] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL Facebook Custom Audiences] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -123,7 +123,7 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
 > Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
 > Die **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Es wird nicht angezeigt, wenn Sie Namespaces auswählen.
 
-![Identity Mapping Transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Wenden Sie die im Zuordnungsschritt hervorgehobene Transformationssteuerung an.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
 
@@ -149,7 +149,7 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Faceboo
 
 1. Suchen Sie das Facebook-Ziel im Zielkatalog und wählen Sie **[!UICONTROL Einrichten]**.
 2. Auswählen **[!UICONTROL Mit Ziel verbinden]**.
-   ![Bei Facebook authentifizieren](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![Authentifizieren Sie sich beim Facebook-Schritt, der im Aktivierungs-Workflow angezeigt wird.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Geben Sie Ihre Facebook-Anmeldedaten ein und wählen Sie **Anmelden**.
 
 ### Ausfüllen der Zieldetails {#destination-details}
@@ -176,7 +176,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Ursprung der Zielgruppe"
->abstract="Wählen Sie aus, wie die Kundendaten in der Zielgruppe ursprünglich erfasst wurden. Die Daten werden in Facebook angezeigt, wenn ein Benutzer bzw. eine Benutzerin in die Zielgruppe des Segments fällt"
+>abstract="Wählen Sie aus, wie die Kundendaten in der Zielgruppe ursprünglich erfasst wurden. Die Daten werden in Facebook angezeigt, wenn ein Benutzer ein Ziel des Segments hat"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie [!UICONTROL Ursprung der Zielgruppe] beim Senden von Zielgruppen an [!DNL Facebook Custom Audiences].
 
-![Facebook-Ursprung der Zielgruppe](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Das Dropdown-Menü Herkunft der Zielgruppe wird im Facebook-Aktivierungsschritt angezeigt.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Zuordnungsbeispiel: Aktivieren von Zielgruppendaten in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Zielgruppenfelder auswählen:
 > 
 >Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
 
-![Identitätszuordnung](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Wenden Sie die im Zuordnungsschritt hervorgehobene Transformationssteuerung an.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Exportierte Daten {#exported-data}
 
@@ -251,4 +251,4 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 Dieser Fehler tritt auf, wenn Kunden neu erstellte Konten verwenden und die [!DNL Facebook] -Berechtigungen sind noch nicht aktiv.
 
-Wenn Sie die `400 Bad Request` Fehlermeldung nach dem Ausführen der Schritte unter [Voraussetzungen für facebook-Konten](#facebook-account-prerequisites), erlauben Sie bitte ein paar Tage für die [!DNL Facebook] -Berechtigungen in Kraft treten.
+Wenn Sie die `400 Bad Request` Fehlermeldung nach dem Ausführen der Schritte unter [Voraussetzungen für facebook-Konten](#facebook-account-prerequisites), lassen Sie einige Tage für die [!DNL Facebook] -Berechtigungen in Kraft treten.

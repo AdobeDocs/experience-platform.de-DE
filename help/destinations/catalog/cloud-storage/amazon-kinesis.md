@@ -4,10 +4,10 @@ title: Amazon Kinesis-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem Amazon Kinesis-Speicher, um Daten von Adobe Experience Platform zu streamen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1997'
-ht-degree: 57%
+source-wordcount: '1981'
+ht-degree: 55%
 
 ---
 
@@ -116,7 +116,7 @@ Füllen Sie die Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinde
 
 ![Bild des UI-Bildschirms mit ausgefüllten Feldern für die Authentifizierungsdetails der Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]-Zugriffsschlüssel und geheimer -Schlüssel**: Generieren Sie in [!DNL Amazon Web Services] ein `access key - secret access key`-Paar, um Platform Zugriff auf Ihr [!DNL Amazon Kinesis]-Konto zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel**: In [!DNL Amazon Web Services], generieren Sie eine `access key - secret access key` , um Platform Zugriff auf Ihre [!DNL Amazon Kinesis] -Konto. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Region]**: Geben Sie an, welche [!DNL Amazon Web Services] region zum Streamen von Daten an.
 
 ### Ausfüllen der Zieldetails {#destination-details}
@@ -168,7 +168,7 @@ Siehe [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](../..
 
 Experience Platform optimiert das Profil-Exportverhalten für Ihre [!DNL Amazon Kinesis] Ziel, um Daten nur dann an Ihr Ziel zu exportieren, wenn nach der Zielgruppenqualifizierung oder anderen wichtigen Ereignissen relevante Aktualisierungen an einem Profil stattgefunden haben. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
-* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der dem Ziel zugeordneten Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
+* Die Aktualisierung des Profils wurde durch eine Änderung der Zielgruppenzugehörigkeit für mindestens eine der Zielgruppen bestimmt. Beispielsweise hat sich das Profil für eine der Zielgruppen qualifiziert, die dem Ziel zugeordnet sind, oder es hat eine der dem Ziel zugeordneten Zielgruppen verlassen.
 * Die Aktualisierung des Profils wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md) bestimmt. Beispielsweise wurde einem Profil, das sich bereits für eine der dem Ziel zugeordneten Zielgruppen qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
 * Die Aktualisierung des Profils wurde durch eine Änderung der Attribute für mindestens eines der dem Ziel zugeordneten Attribute bestimmt. Beispielsweise wird eines der Attribute, die dem Ziel im Zuordnungsschritt zugeordnet sind, einem Profil hinzugefügt.
 

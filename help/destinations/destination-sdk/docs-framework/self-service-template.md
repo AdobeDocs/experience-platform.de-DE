@@ -2,7 +2,7 @@
 title: Vorlage für Dokumentations-Self-Service // Ersetzen durch den Namen Ihres Ziels
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1640'
 ht-degree: 37%

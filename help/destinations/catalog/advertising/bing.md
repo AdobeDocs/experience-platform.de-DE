@@ -3,7 +3,7 @@ keywords: Werbung; Bierwerbung;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie im gesamten Microsoft Advertising Network gezielte digitale Kampagnen für Zielgruppen und Zielgruppen ausführen, einschließlich Display-Werbung, Suche und nativ.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 57%

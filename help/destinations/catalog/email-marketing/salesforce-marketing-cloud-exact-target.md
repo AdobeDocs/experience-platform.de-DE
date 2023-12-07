@@ -1,12 +1,11 @@
 ---
-keywords: E-Mail;E-Mail;E-Mail-Ziele;Salesforce;API Salesforce Marketing Cloud-Ziel
 title: (API) Salesforce Marketing Cloud-Verbindung
 description: Mit dem Salesforce-Marketing Cloud (ehemals ExactTarget)-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce-Marketing Cloud für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3075'
-ht-degree: 23%
+source-wordcount: '2895'
+ht-degree: 22%
 
 ---
 
@@ -22,7 +21,7 @@ ht-degree: 23%
 
 Im Vergleich zu [!DNL Salesforce Marketing Cloud Account Engagement] die stärker auf **B2B** Marketing, [!DNL (API) Salesforce Marketing Cloud] Das Ziel ist ideal für **B2C** Anwendungsfälle mit kürzeren Transaktionsentscheidungen-Zyklen. Sie können größere Datensätze, die das Verhalten Ihrer Zielgruppe repräsentieren, zusammenfassen, um Marketing-Kampagnen anzupassen und zu verbessern, indem Sie Kontakte priorisieren und segmentieren, insbesondere aus Datensätzen außerhalb von [!DNL Salesforce]. *Beachten Sie, dass Experience Platform auch eine Verbindung für die [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [!DNL Salesforce Marketing Cloud] [Kontakte aktualisieren](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, mit der Sie **Hinzufügen von Kontakten und Aktualisieren von Kontaktdaten** für Ihre Geschäftsanforderungen, nachdem Sie sie in einer neuen [!DNL Salesforce Marketing Cloud] Segment.
+Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) verwendet die [!DNL Salesforce Marketing Cloud] [Kontakte aktualisieren](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, mit der Sie **Hinzufügen von Kontakten und Aktualisieren von Kontaktdaten** für Ihre Geschäftsanforderungen, nachdem Sie sie in einer neuen [!DNL Salesforce Marketing Cloud] Segment.
 
 [!DNL Salesforce Marketing Cloud] verwendet OAuth 2 mit Client-Anmeldeinformationen als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL Salesforce Marketing Cloud] API. Anweisungen zur Authentifizierung bei Ihrer [!DNL Salesforce Marketing Cloud]-Instanz sehen Sie weiter unten im Abschnitt [Authentifizieren bei Ziel](#authenticate).
 
@@ -94,7 +93,7 @@ Da dieses Ziel Zugriff auf die `[!DNL data extension]`, müssen Sie sie zulassen
 
 ![Salesforce Marketing Cloud-Benutzeroberfläche, die die E-Mail-Datenerweiterung mit den zulässigen Berechtigungen anzeigt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
-Um die Zugriffsebene zu beschränken, können Sie auch einzelne Zugriffe durch Verwendung granularer Berechtigungen überschreiben.
+Um die Zugriffsebene zu beschränken, können Sie auch den individuellen Zugriff mithilfe granularer Berechtigungen überschreiben.
 ![Salesforce Marketing Cloud-Benutzeroberfläche mit detaillierten Berechtigungen zur E-Mail-Datenerweiterung](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 Siehe Abschnitt [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) und [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) Seiten für ausführliche Anleitungen.
@@ -107,7 +106,7 @@ Beachten Sie die folgenden Elemente, bevor Sie sich bei der [!DNL (API) Salesfor
 | --- | --- | --- |
 | Subdomain | Siehe [[!DNL Salesforce Marketing Cloud domain prefix]](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/your-subdomain-tenant-specific-endpoints.html) , um zu erfahren, wie Sie diesen Wert aus dem [!DNL Salesforce Marketing Cloud] -Schnittstelle. | Wenn [!DNL Salesforce Marketing Cloud] Domäne ist<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br>Sie müssen `mcq4jrssqdlyc4lph19nnqgzzs84` als Wert. |
 | Client-ID | Siehe [!DNL Salesforce Marketing Cloud] [Dokumentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) , um zu erfahren, wie Sie diesen Wert aus dem [!DNL Salesforce Marketing Cloud] -Schnittstelle. | r23kxxxxxxxx0z05xxxxxx |
-| Client-Geheimnis | Siehe [!DNL Salesforce Marketing Cloud] [Dokumentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) , um zu erfahren, wie Sie diesen Wert aus dem [!DNL Salesforce Marketing Cloud] -Schnittstelle. | ipxxxxxxxxxxT4xxxxxxxxxx |
+| Client-Geheimnis | Siehe [!DNL Salesforce Marketing Cloud] [Dokumentation](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) , um zu erfahren, wie Sie diesen Wert aus dem [!DNL Salesforce Marketing Cloud] -Schnittstelle. | ipxxxxxxxxxxT4xxxxxxxxxxxx |
 
 {style="table-layout:auto"}
 
@@ -126,7 +125,7 @@ Beachten Sie die folgenden Elemente, bevor Sie sich bei der [!DNL (API) Salesfor
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL (API) Salesforce Marketing Cloud] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL (API) Salesforce Marketing Cloud] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -166,12 +165,12 @@ Within **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**, suchen Sie nach [!DNL 
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Eine Anleitung dazu finden Sie im Abschnitt [ [!DNL Salesforce Marketing Cloud] Sammeln von -Anmeldeinformationen](#gather-credentials).
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Siehe Abschnitt [Gather [!DNL Salesforce Marketing Cloud] Anmeldeinformationen](#gather-credentials) für Hinweise.
 
 | [!DNL (API) Salesforce Marketing Cloud] Ziel | [!DNL Salesforce Marketing Cloud] |
 | --- | --- |
 | **[!UICONTROL Subdomain]** | Ihre [!DNL Salesforce Marketing Cloud] Domänen-Präfix. <br>Beispiel: Ihre Domäne <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> Sie müssen `mcq4jrssqdlyc4lph19nnqgzzs84` als Wert. |
-| **[!UICONTROL Client-ID]** | Ihre [!DNL Salesforce Marketing Cloud] `Client ID`. |
+| **[!UICONTROL Client ID]** (Client-ID) | Ihre [!DNL Salesforce Marketing Cloud] `Client ID`. |
 | **[!UICONTROL Client-Geheimnis]** | Ihre [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
 ![Screenshot der Platform-Benutzeroberfläche, in dem gezeigt wird, wie die Authentifizierung für das Salesforce-Marketing Cloud erfolgt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
@@ -203,7 +202,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL (API) Salesforce Marketing Cloud]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den jeweiligen Entsprechungen vom Ziel zu erstellen.
+Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL (API) Salesforce Marketing Cloud]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodell (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
 
 So ordnen Sie Ihre XDM-Felder korrekt der [!DNL (API) Salesforce Marketing Cloud] Gehen Sie wie folgt vor:
 

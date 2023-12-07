@@ -3,10 +3,10 @@ title: Ziel der Data Landing Zone
 description: Erfahren Sie, wie Sie eine Verbindung zur Data Landing Zone herstellen, um Zielgruppen zu aktivieren und Datensätze zu exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 53%
+source-wordcount: '1509'
+ht-degree: 50%
 
 ---
 
@@ -58,15 +58,15 @@ Beachten Sie die folgenden Voraussetzungen, die erfüllt sein müssen, bevor Sie
 
 ### Verbinden Sie [!DNL Data Landing Zone] Container zu [!DNL Azure Storage Explorer]
 
-Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) verwenden, um die Inhalte Ihres [!DNL Data Landing Zone]-Containers zu verwalten. Zu Beginn der Verwendung von [!DNL Data Landing Zone], müssen Sie zunächst Ihre Anmeldedaten abrufen und sie in [!DNL Azure Storage Explorer]und verbinden Sie Ihre [!DNL Data Landing Zone] Container zu [!DNL Azure Storage Explorer].
+Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) die Inhalte Ihrer [!DNL Data Landing Zone] Container. Zu Beginn der Verwendung von [!DNL Data Landing Zone], müssen Sie zunächst Ihre Anmeldedaten abrufen und sie in [!DNL Azure Storage Explorer]und verbinden Sie Ihre [!DNL Data Landing Zone] Container zu [!DNL Azure Storage Explorer].
 
 Wählen Sie in der Benutzeroberfläche von [!DNL Azure Storage Explorer] in der linken Navigationsleiste das Verbindungssymbol aus. Das Fenster **Ressource auswählen** wird angezeigt, in dem Sie Optionen für das Verbinden finden. Wählen Sie **[!DNL Blob container]** aus, um eine Verbindung zu Ihrem [!DNL Data Landing Zone]-Speicher herzustellen.
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Wählen Sie eine Ressource aus, die in der Azure-Benutzeroberfläche hervorgehoben ist.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Wählen Sie als Nächstes **Shared Access Signature URL (SAS)** als Verbindungsmethode und klicken Sie dann auf **Weiter**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Wählen Sie die Verbindungsmethode aus, die in der Azure-Benutzeroberfläche hervorgehoben ist.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Nachdem Sie Ihre Verbindungsmethode ausgewählt haben, müssen Sie einen **Anzeigenamen** und die **[!DNL Blob]Container-SAS-URL** angeben, die mit Ihrem [!DNL Data Landing Zone]-Container übereinstimmt.
 
@@ -171,15 +171,15 @@ Die folgende Antwort gibt aktualisierte Werte für Ihre `SASToken` und `SASUri`.
 
 Geben Sie Ihren Anzeigenamen (`containerName`) und [!DNL Data Landing Zone] SAS-URL, wie im oben beschriebenen API-Aufruf zurückgegeben, und wählen Sie dann **Nächste**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Geben Sie Verbindungsinformationen ein, die in der Azure-Benutzeroberfläche hervorgehoben sind.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 Das Fenster **Zusammenfassung** wird angezeigt. Es gibt Ihnen einen Überblick über Ihre Einstellungen, einschließlich Informationen zu Ihrem [!DNL Blob]-Endpunkt und Berechtigungen. Wenn Sie bereit sind, klicken Sie auf **Verbinden**.
 
-![Zusammenfassung](/help/sources/images/tutorials/create/dlz/summary.png)
+![Zusammenfassung der in der Azure-Benutzeroberfläche angezeigten Einstellungen.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Eine erfolgreiche Verbindung aktualisiert Ihre Benutzeroberfläche von [!DNL Azure Storage Explorer] mit Ihrem [!DNL Data Landing Zone]-Container.
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Zusammenfassung des DLZ-Benutzercontainers, der in der Azure-Benutzeroberfläche hervorgehoben wurde.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 Da Ihr [!DNL Data Landing Zone]-Container jetzt mit [!DNL Azure Storage Explorer] verbunden ist, können Sie damit beginnen, Dateien von Experience Platform in Ihren [!DNL Data Landing Zone]-Container zu exportieren. Um Dateien zu exportieren, müssen Sie eine Verbindung zum [!DNL Data Landing Zone] Ziel in der Experience Platform-Benutzeroberfläche, wie im folgenden Abschnitt beschrieben.
 
@@ -234,7 +234,7 @@ Im Schritt **[!UICONTROL Planung]** können Sie für Ihr [!DNL Data Landing Zone
 
 Im Schritt **[!UICONTROL Zuordnung]** können Sie festlegen, welche Attribute und Identitätsfelder für Ihre Profile exportiert werden sollen. Sie können auch festlegen, dass die Kopfzeilen in der exportierten Datei in einen beliebigen Anzeigenamen geändert werden. Weitere Informationen finden Sie im [Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) im Tutorial zur Benutzeroberfläche der Aktivierung von Batch-Zielen.
 
-## Datensätze exportieren {#export-datasets}
+## Exportieren von Datensätzen {#export-datasets}
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 

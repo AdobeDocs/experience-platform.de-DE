@@ -3,10 +3,10 @@ keywords: Luftschiffsattribute;Luftschiffsziel
 title: Airship Attributes-Verbindung
 description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für Targeting innerhalb von Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 38%
+source-wordcount: '1036'
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ Weitere Informationen zu [!DNL Airship], siehe [Dokumente für die Luftfahrt](ht
 
 >[!TIP]
 >
->Dieser Ziel-Connector und die Dokumentationsseite werden vom [!DNL Airship]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
+>Diese Ziel-Connector- und Dokumentationsseite wird von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -75,7 +75,7 @@ Klicks **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertra
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Airship Attributes]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Airship Attributes] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Anwendungsfall 1
 

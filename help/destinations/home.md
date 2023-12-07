@@ -2,16 +2,16 @@
 title: Ziele – Übersicht
 description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in Adobe Experience Platform nutzen, um bekannte und unbekannte Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 96%
+source-wordcount: '1001'
+ht-degree: 79%
 
 ---
 
 # [!DNL Destinations] – Übersicht {#overview}
 
-![Übersichtsbanner Ziele](./assets/overview/destinations-overview-banner.png)
+![Übersichtsbanner Ziele .](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
@@ -29,7 +29,7 @@ Eine der Kernfunktionen von Platform besteht darin, Ihre Daten von Erstparteien 
 ## Ziele – Schritte {#steps}
 
 * Wählen Sie in einem [Selbstbedienungs-Katalog](./catalog/overview.md) unter allen in Platform verfügbaren Zielen.
-* Verwenden Sie Ziele, um Profile oder Zielgruppen an Plattformen für Marketing-Automatisierung, digitale Werbung usw. zu senden.
+* Verwenden Sie Ziele, um Zielgruppen oder Datensätze an Marketing-Automatisierungsplattformen, digitale Werbeplattformen und mehr zu senden.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
 ## Steuerelemente {#controls}
@@ -39,12 +39,13 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 * Katalog der Zielplattformen durchsuchen, wo Sie Ihre Daten aktivieren können;
 * Datenflüsse zu den Zielen im Katalog erstellen, bearbeiten, aktivieren und deaktivieren;
 * ein Konto an einem Speicherort erstellen oder Platform mit dem Konto auf der Zielplattform verknüpfen;
-* auswählen, welche Zielgruppen für Ziele aktiviert werden sollen;
-* auswählen, welche [Experience-Datenmodell(XDM)-Felder](../xdm/home.md) exportiert werden sollen, wenn Zielgruppen für E-Mail-Marketing-Ziele aktiviert werden.
+* Wählen Sie aus, welche Zielgruppen oder Datensätze für Ziele aktiviert werden sollen.
+* Auswählen [Experience-Datenmodell (XDM)-Felder](../xdm/home.md) , um beim Aktivieren von Zielgruppen zu bestimmten Zielen wie E-Mail-Marketing-Zielen, CRM-Plattformen, Cloud-Speicherorten und mehr zu exportieren.
+* Aktivieren verschiedener Typen von Profilen und Zielgruppen für Ziele - Personen, Konten und Interessenten.
 
 ## Zieltypen und Kategorien {#types-and-categories}
 
-Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihren Aktivierungs-Anwendungsfällen gerecht zu werden. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuchzielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie unter [Zieltypen und Kategorien – Übersicht](./destination-types.md).
+Mit Experience Platform können Sie Daten für verschiedene Zieltypen aktivieren, um Ihren Aktivierungs-Anwendungsfällen gerecht zu werden. Die Ziele reichen von API-basierten Integrationen über Integrationen mit Dateiempfangssystemen bis hin zu Profilsuchzielen und mehr. Detaillierte Informationen zu allen verfügbaren Zielen finden Sie im Abschnitt [Zieltypen und Kategorien - Übersicht](./destination-types.md).
 
 ## Von Adobe und von Partnern erstellte Ziele {#adobe-and-partner-built-destinations}
 
@@ -54,7 +55,7 @@ Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probl
 
 ## Ziele und Zugriffssteuerungen {#access-controls}
 
-Die Funktion „Ziele“ in Platform arbeitet mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugangssteuerung in Adobe Experience Platform](../access-control/home.md); scrollen Sie nach unten bis zum Ende der Seite.
+Die Funktion „Ziele“ in Platform arbeitet mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Anwenders können Sie Ziele anzeigen, verwalten und aktivieren. Informationen zu den individuellen Berechtigungen finden Sie unter [Zugriffskontrolle in Adobe Experience Platform](../access-control/home.md) und scrollen Sie nach unten zur Tabelle unten auf der Seite.
 
 In der folgenden Tabelle sind die Berechtigungen und Berechtigungskombinationen aufgeführt, die zum Ausführen bestimmter Aktionen für Ziele erforderlich sind:
 
@@ -81,9 +82,11 @@ Weitere Informationen dazu, wie Ziele mit attributbasierten Zugriffssteuerelemen
 
 Nachdem Sie eine Verbindung zu einem Ziel hergestellt und den Aktivierungs-Workflow abgeschlossen haben, können Sie die Datenexporte an Ihr Empfangssystem überwachen. Weitere Informationen finden Sie im [Handbuch zur Überwachung von Datenflüssen zu Zielen in der Benutzeroberfläche](/help/dataflows/ui/monitor-destinations.md).
 
-Sie können auch überprüfen, ob die Daten erfolgreich zum Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über einen *Abschnitt „Datenexport validieren“*, der anzeigt, wie Sie in der Zielplattform feststellen können, ob Daten erfolgreich aus Experience Platform importiert wurden.
+![Beispiel für die Zielüberwachungsseite.](./assets/overview/monitoring-page-example.png)
 
-## Data-Governance-Beschränkungen beim Aktivieren von Daten für Ziele {#data-governance}
+Sie können auch überprüfen, ob die Daten erfolgreich zum Ziel gelangen. Die meisten Zieldokumentationsseiten im Katalog verfügen über eine *Abschnitt &quot;Datenexport überprüfen&quot;*, der anzeigt, wie Sie in der Zielplattform überprüfen können, ob Daten erfolgreich von Experience Platform bereitgestellt wurden. Ein Beispiel für diesen Abschnitt anzeigen für [Amazon Ads-Ziel](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+
+## Data Governance-Einschränkungen bei der Aktivierung von Daten für Ziele {#data-governance}
 
 Data Governance wird für Platform-Ziele durchgesetzt durch:
 

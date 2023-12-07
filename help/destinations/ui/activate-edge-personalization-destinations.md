@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen von Adobe Experience Platform aus für Edge-Personalisierungsziele aktivieren können, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu nutzen.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 20%
+source-wordcount: '1922'
+ht-degree: 15%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 20%
 
 ## Übersicht {#overview}
 
-Adobe Experience Platform verwendet [Kantensegmentierung](../../segmentation/ui/edge-segmentation.md) zusammen mit Edge-Zielen, damit Kunden Zielgruppen in großem Maßstab in Echtzeit erstellen und ansprechen können. Mit dieser Funktion können Sie Anwendungsfälle für die Personalisierung von derselben Seite und von der nächsten Seite konfigurieren.
+Adobe Experience Platform verwendet [Kantensegmentierung](../../segmentation/ui/edge-segmentation.md) zusammen mit [Edge-Ziele](/help/destinations/destination-types.md#edge-personalization-destinations) , damit Kunden Zielgruppen in großem Maßstab in Echtzeit erstellen und ansprechen können. Mit dieser Funktion können Sie Anwendungsfälle für die Personalisierung von derselben Seite und von der nächsten Seite konfigurieren.
 
 Beispiele für Edge-Ziele sind die [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierung](../../destinations/catalog/personalization/custom-personalization.md) Verbindungen.
 
 >[!NOTE]
 >
->Wann [Konfigurieren der Adobe Target-Verbindung](../catalog/personalization/adobe-target-connection.md) ohne Verwendung einer Datastream-ID werden die in diesem Artikel beschriebenen Anwendungsfälle nicht unterstützt. Es werden nur Anwendungsfälle für die Personalisierung der nächsten Sitzung unterstützt, wenn kein Datastream vorhanden ist.
+>Wann [Konfigurieren der Adobe Target-Verbindung](../catalog/personalization/adobe-target-connection.md) *without* Wenn Sie eine Datastream-ID verwenden, werden die in diesem Artikel beschriebenen Anwendungsfälle nicht unterstützt. Es werden nur Anwendungsfälle für die Personalisierung der nächsten Sitzung unterstützt, wenn kein Datastream vorhanden ist.
 
 >[!IMPORTANT]
 > 
@@ -31,7 +31,7 @@ Beispiele für Edge-Ziele sind die [Adobe Target](../../destinations/catalog/per
 > 
 > Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppen in Adobe Experience Platform Edge-Zielen erforderlich ist. Bei Verwendung zusammen mit [Kantensegmentierung](../../segmentation/ui/edge-segmentation.md) und der optionalen [Profilattributzuordnung](#mapping)verwenden, ermöglichen diese Ziele Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten in Ihren Web- und mobilen Eigenschaften.
+In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppen für Adobe Experience Platform Edge-Ziele erforderlich ist. Bei Verwendung zusammen mit [Kantensegmentierung](../../segmentation/ui/edge-segmentation.md) und der optionalen [Profilattributzuordnung](#mapping)verwenden, ermöglichen diese Ziele Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten in Ihren Web- und mobilen Eigenschaften.
 
 Eine kurze Übersicht über die Konfiguration der Adobe Target-Verbindung für die Edge-Personalisierung finden Sie im folgenden Video.
 
@@ -47,7 +47,7 @@ Eine kurze Übersicht darüber, wie Sie Zielgruppen und Profilattribute für Ado
 
 ## Anwendungsfälle {#use-cases}
 
-Mit Edge-Personalisierungszielen können Sie Adobe-Personalisierungslösungen wie Adobe Target oder Ihre eigenen Personalisierungspartner-Plattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietären Systemen (z. B. internem CMS), um eine tiefere Kundenpersonalisierung über die [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Ziel. Dies alles nutzt gleichzeitig auch Experience Platform Edge Network-Datenerfassungs- und Segmentierungsfunktionen.
+Verwenden Sie Adobe-Personalisierungslösungen wie Adobe Target oder Ihre eigenen Personalisierungspartner-Plattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietären Systemen (z. B. internem CMS), um eine tiefere Kundenpersonalisierung über die [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Ziel. Dies alles nutzt gleichzeitig auch Experience Platform Edge Network-Datenerfassungs- und Segmentierungsfunktionen.
 
 Die unten beschriebenen Anwendungsfälle umfassen sowohl die Personalisierung der Site als auch zielgruppengerechte On-site-Werbung.
 
@@ -55,11 +55,11 @@ Um diese Anwendungsfälle zu aktivieren, benötigen Kunden eine schnelle, optimi
 
 ### Personalisierung derselben Seite {#same-page}
 
-Ein Benutzer besucht eine Seite Ihrer Website. Der Kunde kann die aktuellen Seitenbesuchsinformationen (z. B. verweisende URL, Browsersprache, eingebettete Produktinformationen) verwenden, um die nächste Aktion/Entscheidung (z. B. Personalisierung) mithilfe der [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Verbindung für Nicht-Adobe-Plattformen (z. B. [!DNL Pega], [!DNL Optimizely]usw.).
+Ein Benutzer besucht eine Seite Ihrer Website. Sie können die aktuellen Seitenbesuchsinformationen (z. B. verweisende URL, Browsersprache, eingebettete Produktinformationen) verwenden, um die nächste Aktion oder Entscheidung (z. B. Personalisierung) mithilfe der [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Verbindung für Nicht-Adobe-Plattformen (z. B. [!DNL Pega], [!DNL Optimizely] oder andere.).
 
 ### Personalisierung der nächsten Seite {#next-page}
 
-Ein Benutzer besucht Seite A auf Ihrer Website. Auf der Grundlage dieser Interaktion hat sich der Benutzer für eine Reihe von Zielgruppen qualifiziert. Der Benutzer klickt dann auf einen Link, der ihn von Seite A zu Seite B bringt. Die Zielgruppen, für die sich der Benutzer während der vorherigen Interaktion auf Seite A qualifiziert hat, werden zusammen mit den durch den aktuellen Website-Besuch festgelegten Profilaktualisierungen verwendet, um die nächste Aktion/Entscheidung zu ermöglichen (z. B. welches Werbebanner dem Besucher angezeigt werden soll oder im Fall von A/B-Tests, welche Version der Seite angezeigt werden soll).
+Ein Benutzer besucht Seite A auf Ihrer Website. Auf der Grundlage dieser Interaktion hat sich der Benutzer für eine Reihe von Zielgruppen qualifiziert. Der Benutzer klickt dann auf einen Link, der ihn von Seite A zu Seite B bringt. Die Zielgruppen, für die sich der Benutzer während der vorherigen Interaktion auf Seite A qualifiziert hat, werden zusammen mit den durch den aktuellen Website-Besuch festgelegten Profilaktualisierungen verwendet, um die nächste Aktion oder Entscheidung zu ermöglichen (z. B. welches Werbebanner dem Besucher angezeigt werden soll oder im Fall von A/B-Tests, welche Version der Seite angezeigt werden soll).
 
 ### Personalisierung der nächsten Sitzung {#next-session}
 
@@ -69,7 +69,7 @@ Am folgenden Tag kehrt der Benutzer zur gleichen Kundenwebsite zurück. Die Ziel
 
 ### Personalisieren eines Homepage-Banners {#home-page-banner}
 
-Ein häusliches Verleih- und Vertriebsunternehmen möchte seine Homepage mit einem Banner personalisieren, das auf den Zielgruppenqualifikationen in Adobe Experience Platform basiert. Das Unternehmen kann auswählen, welche Zielgruppen ein personalisiertes Erlebnis erhalten sollen, und diese als Kriterien zur Zielgruppenbestimmung für sein Zielgruppenangebot an Adobe Target senden.
+Ein häusliches Verleih- und Vertriebsunternehmen möchte seine Homepage mit einem Banner personalisieren, das auf den Zielgruppenqualifikationen in Adobe Experience Platform basiert. Das Unternehmen kann auswählen, welche Zielgruppen ein personalisiertes Erlebnis erhalten sollen, und diese Zielgruppen als Targeting-Kriterien für sein Target-Angebot an Adobe Target senden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -79,13 +79,13 @@ Der erste Schritt bei der Einrichtung Ihres Personalisierungsziels besteht darin
 
 Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experience Platform]** sicher, dass sowohl **[!UICONTROL Edge-Segmentierung]** als auch **[!UICONTROL Personalisierungsziele]** ausgewählt sind.
 
-![Datenstromkonfiguration](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Datastream-Konfiguration mit hervorgehobenen Edge-Segmentierungs- und Personalisierungszielen!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Weitere Informationen zum Einrichten eines Datenstroms finden Sie in den Anweisungen in der [Dokumentation zum Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Erstellen Sie eine [!DNL Active-On-Edge] Zusammenführungsrichtlinie {#create-merge-policy}
 
-Nachdem Sie Ihre Zielverbindung erstellt haben, müssen Sie eine [!DNL Active-On-Edge]-Zusammenführungsrichtlinie erstellen. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen kontinuierlich ausgewertet werden [am Rand](../../segmentation/ui/edge-segmentation.md) und sind für den Anwendungsfall der Personalisierung in Echtzeit und auf der nächsten Seite verfügbar.
+Nachdem Sie Ihre Zielverbindung erstellt haben, müssen Sie eine [!DNL Active-On-Edge] Zusammenführungsrichtlinie. Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen kontinuierlich ausgewertet werden [am Rand](../../segmentation/ui/edge-segmentation.md) und sind für den Anwendungsfall der Personalisierung in Echtzeit und auf der nächsten Seite verfügbar.
 
 >[!IMPORTANT]
 >
@@ -97,7 +97,7 @@ Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](.
 
 Nachdem Sie die [!DNL Active-On-Edge] Zusammenführungsrichtlinie erstellen, müssen Sie eine neue Zielgruppe in Platform erstellen.
 
-Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md) Anleitung zum Erstellen einer neuen Zielgruppe und stellen Sie sicher, dass [zuweisen](../../segmentation/ui/segment-builder.md#merge-policies) die [!DNL Active-On-Edge] Zusammenführungsrichtlinie, die Sie in Schritt 3 erstellt haben.
+Befolgen Sie die [Audience Builder](../../segmentation/ui/segment-builder.md) Anleitung zum Erstellen einer neuen Zielgruppe und stellen Sie sicher, dass [zuweisen](../../segmentation/ui/segment-builder.md#merge-policies) die [!DNL Active-On-Edge] Zusammenführungsrichtlinie, die Sie im vorherigen Schritt erstellt haben.
 
 ### Erstellen einer Zielverbindung {#connect-destination}
 
@@ -105,7 +105,7 @@ Nachdem Sie Ihren Datenstrom konfiguriert haben, können Sie mit der Konfigurati
 
 Im [Tutorial zur Erstellung von Zielverbindungen](../ui/connect-destination.md) finden Sie detaillierte Anweisungen zum Erstellen einer neuen Zielverbindung.
 
-Je nach dem Ziel, das Sie konfigurieren, finden Sie in den folgenden Artikeln zielspezifische Voraussetzungen und zugehörige Informationen:
+Abhängig vom konfigurierten Ziel finden Sie in den folgenden Artikeln Informationen zu zielspezifischen Voraussetzungen und zugehörigen Informationen:
 
 * [Adobe Target-Verbindung](../catalog/personalization/adobe-target-connection.md#parameters)
 * [Benutzerdefinierte Personalisierungsverbindung](../catalog/personalization/custom-personalization.md##parameters)
@@ -114,17 +114,17 @@ Je nach dem Ziel, das Sie konfigurieren, finden Sie in den folgenden Artikeln zi
 
 Nachdem Sie die Voraussetzungen erfüllt haben, können Sie jetzt das Edge-Personalisierungsziel auswählen, das für die Personalisierung der gleichen Seite und der nächsten Seite verwendet werden soll.
 
-1. Navigieren Sie zu **[!UICONTROL Verbindungen und Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
+1. Navigieren Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
 
-   ![Registerkarte „Zielkatalog“](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![Registerkarte &quot;Zielkatalog&quot;in der Experience Platform-Benutzeroberfläche hervorgehoben.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. Auswählen **[!UICONTROL Aktivieren von Zielgruppen]** auf der Karte, die dem Personalisierungsziel entspricht, an dem Sie Ihre Zielgruppen aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Schaltflächen aktivieren](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![Aktivieren Sie die Zielgruppenkontrolle, die auf einer Zielkarte im Katalog hervorgehoben ist.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Zielgruppen verwenden möchten, und wählen Sie dann **[!UICONTROL Nächste]**.
 
-   ![Auswählen des Ziels](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+   ![Wählen Sie den Zielschritt im Aktivierungs-Workflow aus.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Zum nächsten Abschnitt wechseln, um [Zielgruppen auswählen](#select-audiences).
 
@@ -140,7 +140,7 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
 * Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
-![Auswählen von Zielgruppen](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+![Wählen Sie im Aktivierungs-Workflow den Schritt Zielgruppen aus, wobei mehrere Zielgruppen hervorgehoben sind.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## Zuordnungsattribute {#mapping}
 
@@ -156,13 +156,13 @@ Wählen Sie die Attribute aus, auf deren Grundlage Sie die Anwendungsfälle der 
 
 Das Hinzufügen von Attributen ist optional. Sie können weiterhin mit dem nächsten Schritt fortfahren und die Personalisierung der gleichen Seite und der nächsten Seite aktivieren, ohne Attribute auszuwählen. Wenn Sie in diesem Schritt keine Attribute hinzufügen, erfolgt die Personalisierung weiterhin basierend auf der Zielgruppenzugehörigkeit und den Qualifikationen der Identitätszuordnung für Profile.
 
-![Bild mit dem Zuordnungsschritt und dem ausgewählten Attribut](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
+![Bild, das den Zuordnungsschritt mit einem ausgewählten Attribut anzeigt.](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
 
 ### Quellattribute auswählen {#select-source-attributes}
 
 Um Quellattribute hinzuzufügen, wählen Sie die **[!UICONTROL Neues Feld hinzufügen]** Kontrolle über **[!UICONTROL Quellfeld]** und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
 
-![Bildschirmaufzeichnung, die zeigt, wie ein Zielattribut im Zuordnungsschritt ausgewählt wird](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+![Bildschirmaufzeichnung, die zeigt, wie ein Zielattribut im Zuordnungsschritt ausgewählt wird.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Zielattribute auswählen {#select-target-attributes}
 
@@ -180,11 +180,11 @@ Standardmäßig wird die Variable [!UICONTROL Zielgruppenplanung] zeigt nur die 
 
 Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filteroption und deaktivieren Sie die **[!UICONTROL Nur neue Zielgruppen anzeigen]** Filter.
 
-![Alle Zielgruppen](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
+![Der Filter für alle Zielgruppen wurde hervorgehoben.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
 Im **[!UICONTROL Zielgruppenplanung]** Seite, wählen Sie jede Zielgruppe aus und verwenden Sie dann die **[!UICONTROL Startdatum]** und **[!UICONTROL Enddatum]** Selektoren zum Konfigurieren des Zeitintervalls für das Senden von Daten an Ihr Ziel.
 
-![Zielgruppenplanung](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
+![Schritt Zielgruppenplanung des Aktivierungs-Workflows mit hervorgehobenem Start- und Enddatum.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
 Auswählen **[!UICONTROL Nächste]** , um zu [!UICONTROL Überprüfen] Seite.
 
@@ -202,7 +202,7 @@ Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Secu
 
 Im **[!UICONTROL Überprüfen]** -Schritt, überprüft Experience Platform auch auf Verstöße gegen Datennutzungsrichtlinien. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Aktivierungs-Workflow für die Zielgruppe erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Abschnitt Data Governance-Dokumentation .
 
-![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
+![Ein Beispiel für eine Verletzung einer Datenrichtlinie.](../assets/common/data-policy-violation.png)
 
 ### Filtern von Zielgruppen {#filter-audiences}
 

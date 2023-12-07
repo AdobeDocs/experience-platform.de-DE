@@ -3,10 +3,10 @@ title: Experience Cloud-Zielgruppen
 description: Erfahren Sie, wie Sie Audiences von Real-time Customer Data Platform für verschiedene Experience Cloud-Apps freigeben können.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 19%
+source-wordcount: '1675'
+ht-degree: 18%
 
 ---
 
@@ -45,7 +45,7 @@ In Audience Manager können Sie Real-Time CDP-Zielgruppen für Anwendungsfälle 
 
 ### Granulare Steuerung exportierter Zielgruppen {#segments-control}
 
-Um auszuwählen, welche Zielgruppen in Audience Manager und darüber hinaus exportiert werden sollen, verwenden Sie die neue Self-Service-Zielgruppenfreigabe-Integration über das Experience Cloud Audiences-Ziel.  Auf diese Weise können Sie bestimmen, welche Zielgruppen Sie für andere Experience Cloud-Lösungen freigeben möchten und welche Zielgruppen Sie ausschließlich in Real-Time CDP beibehalten möchten.
+Verwenden Sie die neue Self-Service-Zielgruppenfreigabe-Integration über das Experience Cloud-Zielgruppen-Ziel, um festzulegen, welche Zielgruppen in Audience Manager und darüber hinaus exportiert werden sollen.  Auf diese Weise können Sie bestimmen, welche Zielgruppen Sie für andere Experience Cloud-Lösungen freigeben möchten und welche Zielgruppen Sie ausschließlich in Real-Time CDP beibehalten möchten.
 
 Die veraltete Zielgruppenfreigabe-Integration ermöglichte keine präzise Steuerung, welche Zielgruppen in Audience Manager und darüber hinaus exportiert werden sollten.
 
@@ -78,7 +78,7 @@ Adobe empfiehlt jedoch dringend die Verwendung der folgenden dedizierten Zielkar
 > * You *do* benötigen eine Audience Manager-Lizenz, um Real-Time CDP-Zielgruppen für Adobe Analytics freizugeben.
 > * You *nicht benötigen* eine Audience Manager-Lizenz zum Freigeben von Real-Time CDP-Zielgruppen für Adobe Advertising Cloud, Adobe Target, Marketo und andere Experience Cloud-Lösungen, die im Abschnitt [Abschnitt oben](#share-segments-with-other-solutions).
 
-### Für Kunden, die die alte Zielgruppen-Sharing-Lösung verwenden
+### Für Kunden, die die veraltete Lösung zur Freigabe von Zielgruppen verwenden
 
 Wenn Sie bereits Audiences von Real-Time CDP für Audience Manager und andere Experience Cloud-Lösungen über die [Integration älterer Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)müssen Sie sich an die Kundenunterstützung wenden, um die alte Integration zu deaktivieren.
 
@@ -168,7 +168,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 > 
 >Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele. ](/help/destinations/ui/activate-segment-streaming-destinations.md) Nein [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) ist erforderlich und nein [Planungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) für dieses Ziel verfügbar ist.
+Lesen [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppenexport-Ziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel. Nein [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) ist erforderlich und nein [Planungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) für dieses Ziel verfügbar ist.
 
 ## Überprüfen des Datenexports {#exported-data}
 

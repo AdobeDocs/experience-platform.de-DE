@@ -3,10 +3,10 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; oracle responsys-Ziel
 title: Oracle Responsys-Verbindung
 description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 54%
+source-wordcount: '704'
+ht-degree: 51%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 54%
 
 ## Übersicht {#overview}
 
-[Responsys](https://www.oracle.com/cx/marketing/campaign-management/)[!DNL Oracle] ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von [!DNL Oracle] um Interaktionen in E-Mail, Mobile, Display und Social zu personalisieren.
 
 Senden von Zielgruppendaten an [!DNL Oracle Responsys], müssen Sie zuerst [Verbindung zum Ziel herstellen](#connect-destination) in Adobe Experience Platform und dann [Datenimport einrichten](#import-data-into-responsys) von Ihrem Speicherort zu [!DNL Oracle Responsys].
 

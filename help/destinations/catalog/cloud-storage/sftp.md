@@ -2,10 +2,10 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 59%
+source-wordcount: '1022'
+ht-degree: 52%
 
 ---
 
@@ -55,7 +55,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-![SFTP-Profil-basierter Exporttyp](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![Profilbasierter SFTP-Exporttyp, der im Zielkatalog hervorgehoben ist.](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -79,7 +79,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Wenn Sie die **[!UICONTROL SFTP mit Kennwort]** Authentifizierungstyp für die Verbindung mit Ihrem SFTP-Speicherort:
 
-![Einfache Authentifizierung für SFTP-Ziel](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP-Ziel einfache Authentifizierung mit Kennwort.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Domäne]**: Die Adresse Ihres SFTP-Speicherorts;
 * **[!UICONTROL Benutzername]**: Der Benutzername, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden.
@@ -87,12 +87,12 @@ Wenn Sie die **[!UICONTROL SFTP mit Kennwort]** Authentifizierungstyp für die V
 * **[!UICONTROL Passwort]**: Das Passwort, mit dem Sie sich bei Ihrem SFTP-Speicherort anmelden.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Wenn Sie den Authentifizierungstyp **[!UICONTROL SFTP mit SSH-Schlüssel]** für die Verbindung mit Ihrem SFTP-Speicherort auswählen:
 
-![Authentifizierung bei SFTP-Ziel mit SSH-Schlüssel](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP-Ziel-SSH-Schlüsselauthentifizierung.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL Domain]**: Geben Sie die IP-Adresse oder den Domain-Namen Ihres SFTP-Kontos ein.
 * **[!UICONTROL Port]**: Der von Ihrem SFTP-Speicherort verwendete Port.
@@ -100,13 +100,13 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL SFTP mit SSH-Schlüssel]** für
 * **[!UICONTROL SSH-Schlüssel]**: Der private SSH-Schlüssel, der zum Anmelden bei Ihrem SFTP-Speicherort verwendet wird. Der private Schlüssel muss eine im RSA-Format formatierte Base64-kodierte Zeichenfolge sein und darf nicht kennwortgeschützt sein.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Zieldetails {#destination-details}
 
 Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort die folgenden Informationen für das Ziel ein:
 
-![Verfügbare Zieldetails für SFTP-Ziel](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Zieldetailfelder für das SFTP-Ziel.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Experience Platform-Benutzeroberfläche hilft.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für dieses Ziel ein.
@@ -129,7 +129,7 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 
 Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-## Datensätze exportieren {#export-datasets}
+## Exportieren von Datensätzen {#export-datasets}
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 
@@ -140,6 +140,6 @@ Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einri
 
 Für [!DNL SFTP]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Aktivierung der Zielgruppe.
 
-## IP-Adressen-Zulassungsliste {#ip-address-allow-list}
+## Zulassungsliste von IP-Adressen {#ip-address-allow-list}
 
-Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](ip-address-allow-list.md) , wenn Sie einer Zulassungsliste Adobe-IPs hinzufügen müssen.
+Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](ip-address-allow-list.md) wenn Sie Adobe IPs zu einer Zulassungsliste hinzufügen müssen.

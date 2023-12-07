@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1662'
 ht-degree: 52%
 
 ---
@@ -138,7 +138,7 @@ Bei geplanten oder wiederkehrenden Datensatzexporten sind die folgenden Limits f
 >
 >Exporte in JSON-Dateien werden nur im komprimierten Modus unterstützt.
 
-| Typ des Datensatzes | Leitplanke | Schutztyp | Beschreibung |
+| Datensatztyp | Leitplanke | Schutztyp | Beschreibung |
 ---------|----------|---------|-------|
 | Auf der Variablen **XDM-Erlebnisereignisschema** | Daten der letzten 365 Tage | Systemerzwungene Limits | Die Daten des letzten Kalenderjahres werden exportiert. |
 | Auf der Variablen **Schema &quot;XDM Individual Profile&quot;** | Zehn Milliarden Datensätze über alle exportierten Dateien in einem Datenfluss | Systemerzwungene Limits | Die Datensatzanzahl für komprimierte JSON- oder Parquet-Dateien muss weniger als zehn Milliarden und für unkomprimierte Parquet-Dateien eine Million betragen. Andernfalls schlägt der Export fehl. Reduzieren Sie die Größe des Datensatzes, den Sie exportieren möchten, wenn er den zulässigen Schwellenwert überschreitet. |

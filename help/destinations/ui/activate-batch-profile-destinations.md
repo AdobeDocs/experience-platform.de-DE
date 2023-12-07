@@ -1,13 +1,12 @@
 ---
-keywords: Profilattribute aktivieren;Ziele aktivieren;Daten aktivieren;E-Mail-Marketing-Ziele aktivieren;Cloud-Speicher-Ziele aktivieren
 title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3781'
-ht-degree: 61%
+source-wordcount: '3765'
+ht-degree: 59%
 
 ---
 
@@ -24,7 +23,7 @@ ht-degree: 61%
 
 ## Übersicht {#overview}
 
-In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppen in Adobe Experience Platform-Batch-profilbasierten Zielen wie Cloud-Speicher und E-Mail-Marketing-Zielen erforderlich ist.
+In diesem Artikel wird der Arbeitsablauf erläutert, der zum Aktivieren von Zielgruppen in Adobe Experience Platform erforderlich ist, um dateibasierte Batch-Profilziele wie Cloud-Speicher und E-Mail-Marketing-Ziele zu aktivieren.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -46,15 +45,15 @@ Wählen Sie das gewünschte Dateiformat für den Export aus, wenn [Erstellen ein
 
 1. Navigieren Sie zu **[!UICONTROL Verbindungen und Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
 
-   ![Abbildung mit hervorgehobenen Informationen zum Zugriff auf die Registerkarte „Zielkatalog“](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![Bild, das zeigt, wie Sie zur Registerkarte &quot;Zielkatalog&quot;gelangen.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Auswählen **[!UICONTROL Aktivieren von Zielgruppen]** auf der Karte, die dem Ziel entspricht, in dem Sie Ihre Zielgruppen aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Bild mit der Schaltfläche Zielgruppen aktivieren](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![Auf der Katalogseite hervorgehobenes Steuerelement Zielgruppen aktivieren.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Zielgruppen verwenden möchten, und wählen Sie dann **[!UICONTROL Nächste]**.
 
-   ![Bild, das die Auswahl eines oder mehrerer Ziele zum Aktivieren von Zielgruppen für](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![Markierte Kontrollkästchen zur Auswahl eines oder mehrerer Ziele, für die Zielgruppen aktiviert werden sollen.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Zum nächsten Abschnitt wechseln, um [Zielgruppen auswählen](#select-audiences).
 
@@ -68,7 +67,7 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
 * Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
-![Bild, das die Auswahl einer oder mehrerer Zielgruppen zur Aktivierung vorstellt](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Kontrollkästchen werden angezeigt, wenn eine oder mehrere zu aktivierende Zielgruppen ausgewählt werden.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 >title="Zeitplan"
 >abstract="Verwenden Sie das Stiftsymbol, um den Dateiexporttyp (vollständige Dateien oder inkrementelle Dateien) und die Exporthäufigkeit festzulegen."
 
-[!DNL Adobe Experience Platform] exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele in Form von [!DNL CSV]-Dateien. Im **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Zielgruppe konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+[!DNL Adobe Experience Platform] Exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele als [verschiedene Dateitypen](#supported-file-formats-export). Im **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Zielgruppe konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 >
 >Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Schaltfläche, die der Zielgruppe entspricht, die Sie an Ihr Ziel senden möchten.
+Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Kontrolle, die der Zielgruppe entspricht, die Sie an Ihr Ziel senden möchten.
 
-![Abbildung mit hervorgehobener Schaltfläche „Zeitplan erstellen“](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Erstellen Sie eine Steuerung des Zeitplans , die im Schritt Planung hervorgehoben ist.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportieren von vollständigen Dateien {#export-full-files}
 
@@ -113,14 +112,14 @@ Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Schaltfläche, die der Ziel
 
 Auswählen **[!UICONTROL Exportieren von vollständigen Dateien]** , um den Dateiexport mit einer vollständigen Momentaufnahme aller Profilqualifikationen für die ausgewählte Audience Trigger.
 
-![Abbildung der Benutzeroberfläche mit aktiviertem Umschalter „Vollständige Dateien exportieren“](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Vollständige Dateien exportieren - Umschalter aktiviert.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Verwenden Sie den **[!UICONTROL Häufigkeitsselektor]** zur Auswahl der Exportfrequenz:
 
    * **[!UICONTROL Einmal]**: plant einen einmaligen, bedarfsgesteuerten Export einer vollständigen Datei.
    * **[!UICONTROL Täglich]**: plant vollständige Dateiexporte einmal täglich zum angegebenen Zeitpunkt.
 
-1. Verwenden Sie die **[!UICONTROL Zeit]** umschalten, um festzulegen, ob der Export unmittelbar nach der Zielgruppenbewertung oder auf geplanter Basis zu einem bestimmten Zeitpunkt erfolgen soll. Bei Auswahl der Option **[!UICONTROL Geplant]** können Sie mit dem Selektor die Tageszeit für den Export im [!DNL UTC]-Format wählen.
+2. Verwenden Sie die **[!UICONTROL Zeit]** umschalten, um festzulegen, ob der Export unmittelbar nach der Zielgruppenbewertung oder auf geplanter Basis zu einem bestimmten Zeitpunkt erfolgen soll. Bei Auswahl der Option **[!UICONTROL Geplant]** können Sie mit dem Selektor die Tageszeit für den Export im [!DNL UTC]-Format wählen.
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang
 
    ![Abbildung mit hervorgehobener Option „Geplant“ im Aktivierungsfluss für Batch-Ziele und Anzeige der Zeitauswahl](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll. Für tägliche Exporte empfiehlt es sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+3. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll. Für tägliche Exporte empfiehlt es sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
 
    >[!IMPORTANT]
    >
    > Bei der Auswahl eines Exportintervalls wird der letzte Tag des Intervalls nicht in die Exporte einbezogen. Wenn Sie beispielsweise ein Intervall vom 4. bis 11. Januar auswählen, findet der letzte Dateiexport am 10. Januar statt.
 
-1. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
+4. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
 
 ### Exportieren von inkrementellen Dateien {#export-incremental-files}
 
@@ -151,22 +150,22 @@ Auswählen **[!UICONTROL Inkrementelle Dateien exportieren]** um einen Export Tr
 >
 >Die erste exportierte inkrementelle Datei enthält alle Profile, die sich für eine Zielgruppe qualifizieren und als Aufstockung fungieren.
 
-![Abbildung der Benutzeroberfläche mit aktiviertem Umschalter „Inkrementelle Dateien exportieren“](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Inkrementelle Dateien exportieren - Umschalter aktiviert.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Verwenden Sie den **[!UICONTROL Häufigkeitsselektor]** zur Auswahl der Exportfrequenz:
 
    * **[!UICONTROL Täglich]**: plant inkrementelle Dateiexporte einmal täglich zum angegebenen Zeitpunkt.
    * **[!UICONTROL Stündlich]**: plant inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden.
 
-1. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
+2. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
 
-1. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um das Intervall auszuwählen, in dem der Export stattfinden soll. Es empfiehlt sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+3. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um das Intervall auszuwählen, in dem der Export stattfinden soll. Es empfiehlt sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
 
    >[!IMPORTANT]
    >
    >Der letzte Tag des Intervalls ist nicht in den Exporten enthalten. Wenn Sie beispielsweise ein Intervall vom 4. bis 11. Januar auswählen, findet der letzte Dateiexport am 10. Januar statt.
 
-1. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
+4. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
 
 ### Konfigurieren der Dateinamen {#file-names}
 
@@ -198,7 +197,7 @@ Zielname und Zielgruppen-ID können nicht aus Dateinamen entfernt werden. Zusät
 | **[!UICONTROL Benutzerdefinierter Text]** | Beliebiger benutzerdefinierter Text, den Sie den Dateinamen hinzufügen möchten. |
 | **[!UICONTROL Ziel-ID]** | Die ID des Ziel-Datenflusses, den Sie zum Exportieren der Zielgruppe verwenden. |
 | **[!UICONTROL Zielname]** | Der Name des Ziel-Datenflusses, den Sie zum Exportieren der Zielgruppe verwenden. |
-| **[!UICONTROL Organisationsname]** | Ihr Organisationsname in Experience Platform. |
+| **[!UICONTROL Organisationsname]** | Ihr Organisationsname innerhalb von Experience Platform. |
 | **[!UICONTROL Sandbox-Name]** | Die Kennung der Sandbox, die Sie zum Exportieren der Audience verwenden. |
 
 {style="table-layout:auto"}
@@ -215,7 +214,7 @@ Nachdem Sie alle Ihre Zielgruppen konfiguriert haben, wählen Sie **[!UICONTROL 
 
 In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an das Ziel exportierten Dateien hinzufügen möchten. So wählen Sie Profilattribute und Identitäten für den Export aus:
 
-1. Wählen Sie auf der Seite **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neues Feld hinzufügen]** aus.
+1. Im **[!UICONTROL Zuordnung]** Seite, auswählen **[!UICONTROL Neues Mapping hinzufügen]**.
 
    ![Hervorgehobene Steuerung „Neues Feld hinzufügen“ im Zuordnungs-Workflow](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -434,7 +433,7 @@ Mehr dazu [Profil-Exportverhalten für dateibasierte Ziele](/help/destinations/h
 
 Die Auswahl von Identitäts-Namespaces für den Export, wie in der Abbildung unten dargestellt, wird derzeit nicht unterstützt. Die Auswahl von Identitäts-Namespaces für den Export führt zu einem Fehler im **[!UICONTROL Überprüfungsschritt]**.
 
-![Nicht unterstützte Zuordnung mit Identitätsexporten](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Nicht unterstützte Zuordnung, die Identitätsexporte anzeigt.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Namespaces hinzufügen müssen, haben Sie zur temporären Problemumgehung folgende Möglichkeiten:
 * Verwenden Sie die Legacy-Cloud-Speicherziele für die Datenflüsse, bei denen Sie Identitäts-Namespaces in die Exporte einbeziehen möchten.
@@ -517,7 +516,7 @@ Auswählen **[!UICONTROL Nächste]** , um zum [Überprüfen](#review) Schritt.
 
 Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihrer Auswahl sehen. Wählen Sie **[!UICONTROL Abbrechen]**, um den Fluss abzubrechen, **[!UICONTROL Zurück]**, um die Einstellungen zu ändern, oder **[!UICONTROL Fertig stellen]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
-![Auswahlzusammenfassung im Überprüfungsschritt.](../assets/ui/activate-batch-profile-destinations/review.png)
+![Auswahlzusammenfassung wird im Überprüfungsschritt angezeigt.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Secu
 
 Im **[!UICONTROL Überprüfen]** -Schritt, überprüft Experience Platform auch auf Verstöße gegen Datennutzungsrichtlinien. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Aktivierungs-Workflow für die Zielgruppe erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Abschnitt Data Governance-Dokumentation .
 
-![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
+![Beispiel für einen Verstoß gegen die Datenrichtlinie, der im Aktivierungs-Workflow angezeigt wird.](../assets/common/data-policy-violation.png)
 
 ### Filtern von Zielgruppen {#filter-audiences}
 

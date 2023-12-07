@@ -2,10 +2,10 @@
 title: (Beta)  [!DNL Google Ad Manager 360] -Verbindung
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die Publishern die Möglichkeit gibt, das Anzeigen von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 76%
+source-wordcount: '1027'
+ht-degree: 75%
 
 ---
 

@@ -1,13 +1,12 @@
 ---
-keywords: Zielgruppen-Streaming-Ziele aktivieren; Zielgruppen-Streaming-Ziele aktivieren; Daten aktivieren
 title: Aktivieren von Zielgruppendaten für Streaming-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren, indem Sie sie Streaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 24%
+source-wordcount: '1121'
+ht-degree: 20%
 
 ---
 
@@ -34,15 +33,15 @@ Um Zielgruppen für Ziele aktivieren zu können, müssen Sie erfolgreich [mit Zi
 
 1. Navigieren Sie zu **[!UICONTROL Verbindungen und Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
 
-   ![Registerkarte „Zielkatalog“](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![Registerkarte Zielkatalog mit verschiedenen Streaming-Zielen.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. Auswählen **[!UICONTROL Aktivieren von Zielgruppen]** auf der Karte, die dem Ziel entspricht, in dem Sie Ihre Zielgruppen aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Schaltflächen aktivieren](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![Aktivieren Sie die Kontrolle, die im Zielkatalog hervorgehoben ist.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Zielgruppen verwenden möchten, und wählen Sie dann **[!UICONTROL Nächste]**.
 
-   ![Auswählen des Ziels](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![Eine Zielverbindung, die im Schritt Ziel auswählen hervorgehoben ist.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Zum nächsten Abschnitt wechseln, um [Zielgruppen auswählen](#select-audiences).
 
@@ -56,7 +55,7 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 * **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
 * Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
-![Auswählen von Zielgruppen](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![Mehrere im Schritt Zielgruppen auswählen hervorgehobene Zielgruppen.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Zuordnen von Attributen und Identitäten {#mapping}
 
@@ -68,23 +67,23 @@ Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identit
 
 1. Im **[!UICONTROL Zuordnung]** Seite, auswählen **[!UICONTROL Neues Mapping hinzufügen]**.
 
-   ![Neue Zuordnung hinzufügen](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![Fügen Sie ein neues Zuordnungssteuerelement hinzu, das hervorgehoben ist.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. Wählen Sie den Pfeil rechts neben dem Eintrag **[!UICONTROL Quellfeld]** aus.
 
-   ![Quellfeld auswählen](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![Wählen Sie Quellfeldsteuerung hervorgehoben aus.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. Im **[!UICONTROL Quellfeld auswählen]** Seite, verwenden Sie die **[!UICONTROL Attribute auswählen]** oder **[!UICONTROL Identitäts-Namespace auswählen]** Optionen, um zwischen den beiden Kategorien der verfügbaren Quellfelder zu wechseln. In der [!DNL XDM] Profilattribute und Identitäts-Namespaces, die Sie dem Ziel zuordnen möchten, auswählen und dann **[!UICONTROL Auswählen]**.
 
-   ![Quellfeldseite auswählen](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![Wählen Sie die Quellfeldseite aus, die mehrere verfügbare Quellfelder anzeigt.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. Wählen Sie die Schaltfläche rechts neben dem **[!UICONTROL Zielfeld]** eingeben.
 
-   ![Zielgruppenfeld auswählen](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![Wählen Sie Zielfeld hervorgehoben aus.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Seite, wählen Sie den Zielidentitäts-Namespace aus, dem Sie das Quellfeld zuordnen möchten, und wählen Sie **[!UICONTROL Auswählen]**.
 
-   ![Zielfeldseite auswählen](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![Wählen Sie die Zielfeldseite aus, auf der die verfügbaren Optionen für Zielfeldzuordnungen angezeigt werden.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die Schritte 1 bis 5.
 
@@ -97,7 +96,7 @@ Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identit
 
 Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
 
-![Identitätszuordnung](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Wenden Sie die Transformationssteuerung an, die im Schritt Identitätszuordnung hervorgehoben ist.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Planen eines Zielgruppenexports {#scheduling}
 
@@ -114,19 +113,19 @@ Um alle für Ihr Ziel aktivierten Zielgruppen anzuzeigen, verwenden Sie die Filt
 
 1. Im **[!UICONTROL Zielgruppenplanung]** Seite, wählen Sie jede Zielgruppe aus und verwenden Sie dann die **[!UICONTROL Startdatum]** und **[!UICONTROL Enddatum]** Selektoren zum Konfigurieren des Zeitintervalls für das Senden von Daten an Ihr Ziel.
 
-   ![Zielgruppenplanung](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![Filter für Zielgruppenzeitpläne hervorgehoben.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * Bei einigen Zielen müssen Sie die **[!UICONTROL Ursprung der Zielgruppe]** für jede Zielgruppe mithilfe des Dropdown-Menüs unter den Kalenderselektoren. Wenn Ihr Ziel diesen Selektor nicht enthält, überspringen Sie diesen Schritt.
 
-     ![Zuordnungs-ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![Dropdown-Liste Zuordnungs-ID hervorgehoben.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * Für einige Ziele müssen Sie die Zuordnung manuell vornehmen [!DNL Platform] Zielgruppen zu ihrem Gegenstück im Ziel. Wählen Sie dazu die einzelnen Zielgruppen aus und geben Sie dann die entsprechende Zielgruppen-ID aus der Zielplattform im **[!UICONTROL Zuordnungs-ID]** -Feld. Wenn Ihr Ziel dieses Feld nicht enthält, überspringen Sie diesen Schritt.
 
-     ![Zuordnungs-ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![Herkunft des Zielgruppen-Dropdown hervorgehoben.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * Für einige Ziele müssen Sie eine **[!UICONTROL App-ID]** beim Aktivieren [!DNL IDFA] oder [!DNL GAID] Zielgruppen. Wenn Ihr Ziel dieses Feld nicht enthält, überspringen Sie diesen Schritt.
 
-     ![App-ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![Dropdown-Liste App-ID hervorgehoben.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. Auswählen **[!UICONTROL Nächste]** , um zu [!UICONTROL Überprüfen] Seite.
 
@@ -144,7 +143,7 @@ Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Secu
 
 Im **[!UICONTROL Überprüfen]** -Schritt, überprüft Experience Platform auch auf Verstöße gegen Datennutzungsrichtlinien. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Aktivierungs-Workflow für die Zielgruppe erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen zum Beheben von Richtlinienverletzungen finden Sie unter [Verstöße gegen Datennutzungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) im Abschnitt Data Governance-Dokumentation .
 
-![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
+![Ein Beispiel für einen Verstoß gegen die Datenrichtlinie, der im Aktivierungs-Workflow angezeigt wird.](../assets/common/data-policy-violation.png)
 
 ### Filtern von Zielgruppen {#filter-audiences}
 

@@ -3,9 +3,9 @@ keywords: crm;CRM;crm-Ziele;Salesforce crm;Salesforce crm-Ziel
 title: Salesforce-CRM-Verbindung
 description: Mit dem Salesforce CRM-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce CRM für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 21%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 21%
 
 ## Übersicht {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) ist eine beliebte CRM-Plattform (Customer Relationship Management) und unterstützt Folgendes:
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) ist eine beliebte CRM-Plattform (Customer Relationship Management) und unterstützt die unten beschriebenen Profiltypen:
 
 * [Leads](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - Ein Lead ist der Name einer Person oder Firma, die an den von Ihnen verkauften Produkten oder Dienstleistungen interessiert sein kann (oder nicht).
 * [Kontakte](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - Ein Kontakt ist eine Person, mit der einer Ihrer Mitarbeiter eine Beziehung aufgebaut hat und die als potenzieller Kunde qualifiziert wurde.
@@ -27,7 +27,7 @@ Wann [Segmente aktivieren](#activate)können Sie zwischen Leads oder Kontakten w
 
 ## Anwendungsbeispiele {#use-cases}
 
-Als Marketing-Experte können Sie Ihren Benutzern personalisierte Erlebnisse auf der Basis von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Zielgruppen aus Ihren Offline-Daten erstellen und diese Zielgruppen an Salesforce CRM senden, um sie in den Feeds der Benutzer anzuzeigen, sobald Zielgruppen und Profile in Adobe Experience Platform aktualisiert wurden.
+Als Marketing-Experte können Sie Ihren Benutzern personalisierte Erlebnisse auf der Basis von Attributen aus ihren Adobe Experience Platform-Profilen bereitstellen. Sie können Zielgruppen aus Ihren Offline-Daten erstellen und an Salesforce CRM senden, um die CRM-Mitgliedschaft zu aktualisieren, sobald Audiences und Profile in Adobe Experience Platform aktualisiert wurden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -152,8 +152,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Sales
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Eine Anleitung dazu finden Sie im Abschnitt [ [!DNL Salesforce CRM] Sammeln von -Anmeldeinformationen.
-](#gather-credentials)
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Siehe Abschnitt [Gather [!DNL Salesforce CRM] Anmeldeinformationen](#gather-credentials) für Hinweise.
 | Berechtigung | Beschreibung | | — | — | | **[!UICONTROL Benutzername]** | Ihr [!DNL Salesforce] Benutzername des Kontos. | | **[!UICONTROL Passwort]** | Eine verkettete Zeichenfolge aus Ihrem [!DNL Salesforce] Passwort des Kontos angehängt mit Ihrem [!DNL Salesforce] Sicherheitstoken.<br>Der verkettete Wert hat die Form `{PASSWORD}{TOKEN}`.<br> Beachten Sie, dass Sie keine geschweiften Klammern oder Leerzeichen verwenden.<br>Beispiel: Wenn [!DNL Salesforce] Kennwort ist `MyPa$$w0rd123` und [!DNL Salesforce] Sicherheits-Token `TOKEN12345....0000`, der verkettete Wert, den Sie im **[!UICONTROL Passwort]** Feld ist `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Benutzerdefinierte Domäne]** | Ihr [!DNL Salesforce] Domänen-Präfix. <br>Beispiel: Ihre Domäne *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, müssen Sie `d5i000000isb4eak-dev-ed` als Wert. | | **[!UICONTROL Client-ID]** | Ihr [!DNL Salesforce] vernetzte App `Consumer Key`. | | **[!UICONTROL Client Secret]** | Ihr [!DNL Salesforce] vernetzte App `Consumer Secret`. |
 
 ![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
@@ -188,7 +187,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Salesforce CRM]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den jeweiligen Entsprechungen vom Ziel zu erstellen.
+Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!DNL Salesforce CRM]-Ziel zu senden, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodell (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
 
 In der Variablen **[!UICONTROL Zielfeld]** sollte genau wie in der Tabelle der Attributzuordnungen beschrieben benannt werden, da diese Attribute den Anfragetext bilden.
 

@@ -3,9 +3,9 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google Customer Match-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1788'
 ht-degree: 23%
 
 ---
@@ -38,7 +38,7 @@ Einige Ziele in Experience Platform haben bestimmte Regeln und Pflichten für Da
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Google Customer Match] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL Google Customer Match] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -80,9 +80,9 @@ Stellen Sie als Nächstes sicher, dass Ihre [!DNL Google] -Konto für eine [!DNL
 
 ### Zulassungsliste {#allowlist}
 
-Vor der Erstellung [!DNL Google Customer Match] Ziel in Experience Platform, stellen Sie sicher, dass Ihr [!DNL Google Ads] das Konto erfüllt die [[!DNL Google Customer Match] policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Vor der Erstellung [!DNL Google Customer Match] Ziel in Experience Platform, stellen Sie sicher, dass Ihre [!DNL Google Ads] das Konto erfüllt die [[!DNL Google Customer Match] policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Kunden mit kompatiblen Konten werden von Google automatisch auf die Zulassungsliste gesetzt.
+Kunden mit kompatiblen Konten werden automatisch von Google auf die Zulassungsliste gesetzt.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## Videoüberblick {#video-overview}
+
+Sehen Sie sich das folgende Video an, um eine Erläuterung der Vorteile und wie Sie Daten für die Google-Kundenabstimmung aktivieren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie [!UICONTROL App-ID] beim Senden [!DNL IDFA] oder [!DNL GAID] Zielgruppen zu [!DNL Google Customer Match].
 
-![Google-Kunden-Match-App-ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![Das Feld Google-Kundenabgleich-App-ID wurde im Schritt Segmentzeitplan des Aktivierungs-Workflows hervorgehoben.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Weitere Informationen zum Auffinden der [!DNL App ID], siehe [Offizielle Dokumentation zu Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Weitere Informationen zum Auffinden der [!DNL App ID], siehe [Offizielle Dokumentation zu Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) oder fragen Sie Ihren Google-Support-Mitarbeiter.
 
 ### Zuordnungsbeispiel: Aktivieren von Zielgruppendaten in [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,17 +200,17 @@ Zielgruppenfelder auswählen:
 * Wählen Sie die `IDFA` oder `GAID` Namespaces als Zielidentität verwenden, wenn Ihre Quell-Namespaces `IDFA` oder `GAID`.
 * Wählen Sie die `User_ID` Namespace als Zielidentität verwenden, wenn es sich bei Ihrem Quell-Namespace um einen benutzerdefinierten Namespace handelt.
 
-![Identitätszuordnung](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![Identitätszuordnung zwischen Quell- und Zielfeldern, die im Schritt &quot;Zuordnung&quot;des Aktivierungs-Workflows angezeigt werden](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 Daten aus nicht gehashten Namespaces werden automatisch von [!DNL Platform] bei Aktivierung.
 
 Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
 
-![Identity Mapping Transformation](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![Wenden Sie die Transformationssteuerung an, die im Schritt Zuordnung des Aktivierungs-Workflows hervorgehoben ist.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Überprüfen, ob die Zielgruppenaktivierung erfolgreich war {#verify-activation}
 
-Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrer **[!UICONTROL Google Ads]** -Konto. Die aktivierten Zielgruppen werden in Ihrem Google-Konto als Kundenlisten angezeigt. Beachten Sie, dass je nach Größe Ihrer Zielgruppe einige Zielgruppen nur gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
+Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrer **[!UICONTROL Google Ads]** -Konto. Die aktivierten Zielgruppen werden in Ihrem Google-Konto als Kundenlisten angezeigt. Abhängig von der Größe Ihrer Zielgruppe füllen sich einige Zielgruppen nur aus, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
 
 Beim Zuordnen einer Zielgruppe zu [!DNL IDFA] und [!DNL GAID] mobile IDs, [!DNL Google Customer Match] erstellt für jede ID-Zuordnung eine separate Zielgruppe. Ihre [!DNL Google Ads] zeigt zwei verschiedene Segmente an: eines für die [!DNL IDFA]und einer für die [!DNL GAID] Mapping.
 
@@ -217,8 +223,3 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 Dieser Fehler tritt auf, wenn Kundenkonten die Variable [Voraussetzungen](#google-account-prerequisites). Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder einer höheren Berechtigungsebene. Siehe [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) für Details.
-
-## Zusätzliche Ressourcen {#additional-resources}
-
-* [Integrieren [!DNL Google Customer Match] - Video-Tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html?lang=de)
-

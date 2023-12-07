@@ -2,10 +2,10 @@
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem S3-Speicher in Amazon Web Services (AWS), um in regelmäßigen Abständen CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 66%
+source-wordcount: '1052'
+ht-degree: 62%
 
 ---
 
@@ -23,7 +23,7 @@ Mit der Experience Platform-Version vom Juli 2023 wird die [!DNL Amazon S3] Das 
 ## Verbinden Sie Ihre [!DNL Amazon S3] Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
 
 * So stellen Sie eine Verbindung zu Ihrer [!DNL Amazon S3] Speicherort mithilfe der Platform-Benutzeroberfläche, lesen Sie die Abschnitte . [Mit Ziel verbinden](#connect) und [Aktivieren von Zielgruppen für dieses Ziel](#activate) unten.
-* So stellen Sie eine Verbindung zu Ihrer [!DNL Amazon S3] Speicherort programmgesteuert, lesen Sie die [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
+* So stellen Sie eine Verbindung zu Ihrer [!DNL Amazon S3] Speicherort programmgesteuert speichern, lesen Sie die Anleitung zum [Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe des Tutorials zur Flow Service-API](../../api/activate-segments-file-based-destinations.md).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -47,7 +47,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-![Auf dem Amazon S3-Profil basierender Exporttyp](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![In der Benutzeroberfläche hervorgehobener profilbasierter Exporttyp für Amazon S3.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -69,7 +69,7 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 * **[!DNL Amazon S3]-Zugriffsschlüssel** und geheimer **[!DNL Amazon S3]-Schlüssel**: Generieren Sie in [!DNL Amazon S3] ein `access key - secret access key`-Paar, um Platform Zugriff auf Ihr [!DNL Amazon S3]-Konto zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
-  ![Abbildung eines Beispiels für einen korrekt formatierten PGP-Schlüssel in der Benutzeroberfläche](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -139,7 +139,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-## Datensätze exportieren {#export-datasets}
+## Exportieren von Datensätzen {#export-datasets}
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 

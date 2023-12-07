@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1202'
-ht-degree: 53%
+source-wordcount: '1109'
+ht-degree: 51%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen üb
 
 Adobe Target ist eine Personalisierungsverbindung im Adobe Experience Platform-Zielkatalog.
 
+## Videoüberblick {#video-overview}
+
 Eine kurze Übersicht über die Konfiguration der Adobe Target-Verbindung unter Experience Platform finden Sie im folgenden Video.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -41,7 +43,7 @@ Zum Konfigurieren der Adobe Target-Verbindung ohne Verwendung einer Datastraam-I
 
 >[!IMPORTANT]
 >
->Bevor Sie eine [!DNL Adobe Target]-Verbindung erstellen, lesen Sie das Handbuch zur [Konfiguration von Personalisierungszielen für die Personalisierung derselben Seite und der nächsten Seite](../../ui/activate-edge-personalization-destinations.md). In dieser Anleitung werden die erforderlichen Konfigurationsschritte für die Anwendungsfälle der Personalisierung derselben Seite und der nächsten Seite für mehrere Experience Platform-Komponenten erläutert. Für die Personalisierung der gleichen Seite und der nächsten Seite müssen Sie bei der Konfiguration der Adobe Target-Verbindung eine Datastraam-ID verwenden.
+>Bevor Sie eine [!DNL Adobe Target]-Verbindung erstellen, lesen Sie das Handbuch zur [Konfiguration von Personalisierungszielen für die Personalisierung derselben Seite und der nächsten Seite](../../ui/activate-edge-personalization-destinations.md). In diesem Handbuch werden die erforderlichen Konfigurationsschritte für die Personalisierungsfälle der gleichen und der nächsten Experience Platform-Seite beschrieben. Um die Personalisierung von derselben Seite und nächsten Seiten zu erreichen, müssen Sie beim Konfigurieren der Adobe Target-Verbindung eine Datastraam-ID verwenden.
 
 ### Voraussetzungen in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -103,7 +105,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **Name**: Geben Sie den gewünschten Namen für das Ziel ein.
 * **Beschreibung**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
 * **Datenspeicher-ID**: Dadurch wird bestimmt, in welchem Datenerfassungsdatenstrom die Zielgruppen einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target- und Adobe Experience Platform-Dienste aktiviert sind. Siehe [Konfigurieren eines Datenspeichers](../../../datastreams/configure.md#aep) für detaillierte Informationen zum Konfigurieren eines Datastreams für Adobe Experience Platform und Adobe Target.
-   * **[!UICONTROL Keines]**: Wählen Sie diese Option aus, wenn Sie die Adobe Target-Personalisierung konfigurieren möchten, die Implementierung der [Experience Platform Web SDK](../../../edge/home.md). Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Weiterführende Informationen finden Sie in der folgenden Tabelle.
+   * **[!UICONTROL Keines]**: Wählen Sie diese Option aus, wenn Sie die Adobe Target-Personalisierung konfigurieren möchten, die Implementierung der [Experience Platform Web SDK](../../../edge/home.md). Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Weitere Informationen finden Sie in der unten stehenden Tabelle.
 
   | Adobe Target-Implementierung (ohne Web SDK) | Web SDK-Implementierung |
   |---|---|
@@ -133,7 +135,7 @@ Lesen [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](../../ui/act
 
 ## Exportierte Daten {#exported-data}
 
-Adobe Target liest Profildaten aus dem Adobe Experience Platform Edge Network, sodass keine Daten exportiert werden.
+Adobe Target *reads* Profildaten aus dem Adobe Experience Platform Edge Network, sodass keine Daten exportiert werden.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

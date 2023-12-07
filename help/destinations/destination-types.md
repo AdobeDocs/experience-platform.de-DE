@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 71%
+source-wordcount: '776'
+ht-degree: 65%
 
 ---
 
@@ -16,11 +16,11 @@ Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Exper
 
 ## Zieltypen {#destination-types}
 
-In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen - Verbindungen, Datensatzexporten und Erweiterungen. Es gibt verschiedene Arten von Verbindungszielen, mit denen Sie Daten an API-basierte Ziele exportieren können.
+In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen - Verbindungen, Datensatzexporten und Erweiterungen. Es gibt verschiedene Arten von Verbindungszielen, mit denen Sie Daten an API-basierte Ziele, soziale Ziele, CRM-Plattformen und vieles mehr exportieren können.
 
 Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für alle im Zielkatalog enthaltenen Organisationen verfügbar sind, und privaten Zielen, die von Real-Time CDP Ultimate-Kunden erstellt werden können, um ihre spezifischen Anwendungsfälle für den Export zu erfüllen, unterschieden werden.
 
-![Abbildung mit den Zieltypen.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Zieltypen.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Verbindungen {#connections}
 
@@ -68,6 +68,21 @@ Erfahren Sie mehr darüber, wie Sie [Personalisierungsziele für die Personalisi
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Typen exportierter Zielgruppen {#exported-audiences-types}
+
+Sie können drei Zielgruppentypen vom Experience Platform an verschiedene Ziele exportieren:
+
+* Zielgruppen
+* Kontozielgruppen
+* Potenzielle Zielgruppen
+
+Weitere Informationen zum [Verschiedene Zielgruppentypen](/help/segmentation/ui/account-audiences.md#terminology).
+
+Ein Symbol auf der Zielkarte zeigt an, welche Zielgruppentypen Sie zu jedem Ziel exportieren können.
+
+![Beispielzielkarte mit Symbolen, die zeigen, welche Zielgruppentypen exportiert werden können.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## Datensatzexport-Ziele {#dataset-export-destinations}
 

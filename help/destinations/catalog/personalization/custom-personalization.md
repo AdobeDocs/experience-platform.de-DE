@@ -3,10 +3,10 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Zielgruppendaten aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Zielgruppenmitgliedschaft des Benutzerprofils.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 65%
+source-wordcount: '907'
+ht-degree: 64%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 65%
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, muss die Variable **[!UICONTROL Benutzerdefinierte Personalisierung]** Für das Ziel müssen Sie die [Edge Network Server-API](/help/server-api/overview.md) beim Konfigurieren des Ziels für eine attributbasierte Personalisierung. Alle Server-API-Aufrufe müssen in einem [authentifizierter Kontext](../../../server-api/authentication.md).
+>Profilattribute können vertrauliche Daten enthalten. Zum Schutz dieser Daten müssen Sie die Variable [Edge Network Server-API](/help/server-api/overview.md) bei der Konfiguration der **[!UICONTROL Benutzerdefinierte Personalisierung]** Ziel für attributbasierte Personalisierung. Alle Server-API-Aufrufe müssen in einem [authentifizierter Kontext](../../../server-api/authentication.md).
 >
 ><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >
@@ -31,7 +31,7 @@ ht-degree: 65%
 
 ## Übersicht {#overview}
 
-Mit diesem Ziel können Sie Zielgruppendaten von Adobe Experience Platform zu externen Personalisierungsplattformen, Content-Management-Systemen, Anzeigen-Servern und anderen Anwendungen abrufen, die auf Kunden-Websites ausgeführt werden.
+Richten Sie dieses Ziel ein, damit externe Personalisierungsplattformen, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Kunden-Websites ausgeführt werden, Zielgruppendaten aus Adobe Experience Platform abrufen können.
 
 ## Voraussetzungen {#prerequisites}
 

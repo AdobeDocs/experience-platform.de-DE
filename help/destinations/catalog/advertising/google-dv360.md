@@ -1,12 +1,11 @@
 ---
-keywords: DoubleClick Bid Manager;DoubleClick Bid Manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
 title: Google Display & Video 360-Verbindung
-description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
+description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Anzeige, Video und Mobilgeräte.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 81%
+source-wordcount: '974'
+ht-degree: 69%
 
 ---
 
@@ -14,18 +13,18 @@ ht-degree: 81%
 
 ## Übersicht {#overview}
 
-[!DNL Display & Video 360], früher bekannt als [!DNL DoubleClick Bid Manager], ist ein Tool, mit dem Sie Retargeting und zielgerichtete digitale Kampagnen für Display-, Video- und Mobile-Inventarquellen ausführen können.
+[!DNL Display & Video 360], früher bekannt als [!DNL DoubleClick Bid Manager], ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Display-, Video- und Mobile-Inventarquellen.
 
 ## Zielspezifikationen {#specifics}
 
 Beachten Sie folgende Details, die speziell für [!DNL Google Display & Video 360]-Ziele gelten:
 
 * Aktivierte Zielgruppen werden in der Google-Plattform programmgesteuert erstellt.
-* Die Aktivierung von Zielgruppen-Backfilets für die [!DNL Google Display & Video 360] Das Ziel soll 24-48 Stunden nach der ersten Zuordnung einer Zielgruppe zu einer Zielverbindung auftreten. Diese Aktualisierung ist eine Reaktion auf die Google-Richtlinie, 24 Stunden auf die Aufnahme von Daten zu warten, und soll die Übereinstimmungsraten zwischen Real-Time CDP und [!DNL Google Display & Video 360]. Beachten Sie, dass es sich hierbei um eine Backend-Konfiguration handelt, die nur für dieses Ziel gilt und nicht mit kundenkonfigurierbaren Planungsoptionen in der Benutzeroberfläche in Zusammenhang steht.
+* Die Aktivierung von Zielgruppen-Backfilets für die [!DNL Google Display & Video 360] Das Ziel soll 24-48 Stunden nach der ersten Zuordnung einer Zielgruppe zu einer Zielverbindung auftreten. Diese Aktualisierung ist eine Reaktion auf die Google-Richtlinie, 24 Stunden auf die Aufnahme von Daten zu warten, und soll die Übereinstimmungsraten zwischen Real-Time CDP und [!DNL Google Display & Video 360]. Dies ist eine Backend-Konfiguration, die nur für dieses Ziel gilt und nicht mit kundenkonfigurierbaren Planungsoptionen in der Benutzeroberfläche in Zusammenhang steht.
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit Google Display &amp; Video 360 erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) in Experience Cloud ID Service in der Vergangenheit nicht aktiviert hatten (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um die ID-Synchronisierung zu aktivieren. Wenn Sie zuvor schon Google-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
+>Wenn Sie Ihr erstes Ziel mit Google Display &amp; Video 360 erstellen möchten und die Funktion [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) Wenden Sie sich in der Vergangenheit (mit Adobe Audience Manager oder anderen Anwendungen) an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon Google-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -67,10 +66,10 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!NOTE]
 >
->Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Display & Video 360]-Ziel in Platform einrichten. Vergewissern Sie sich, dass der unten beschriebene Zulassungsauflistungsprozess von [!DNL Google] abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Zulassungsauflistung ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Display & Video 360]-Ziel in Platform einrichten. Stellen Sie sicher, dass der unten beschriebene Genehmigungsprozess durch [!DNL Google] vor dem Erstellen eines Ziels.
 >Die Ausnahme für diese Regel betrifft [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de)-Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut zu durchlaufen. Sie können mit den nächsten Schritten fortfahren.
 
-Vor der Erstellung [!DNL Google Display & Video 360] Ziel in Platform, müssen Sie sich an Google wenden und darum bitten, Adobe auf die Liste der zugelassenen Datenanbieter zu setzen und Ihr Konto zur Zulassungsliste hinzuzufügen. Kontaktieren Sie Google und machen Sie folgende Angaben:
+Vor der Erstellung [!DNL Google Display & Video 360] Ziel in Platform, müssen Sie sich an Google wenden und darum bitten, Adobe auf die Liste der zugelassenen Datenanbieter zu setzen und Ihr Konto der Zulassungsliste hinzuzufügen. Kontaktieren Sie Google und machen Sie folgende Angaben:
 
 * **Konto-ID**: Dies ist die Konto-ID von Adobe bei Google. Konto-ID: 87933855.
 * **Kunden-ID**: Dies ist die Kundenkonto-ID von Adobe bei Google. Kunden-ID: 89690775.
@@ -97,7 +96,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 >[!NOTE]
 >
->Wenn Sie ein [!DNL Google Display & Video 360]-Ziel einrichten, wenden Sie sich bitte an Ihren [!DNL Google Account Manager] oder den Adobe-Support-Mitarbeiter, um zu erfahren, welchen Kontotyp Sie haben.
+>Beim Einrichten einer [!DNL Google Display & Video 360] Ziel, verwenden Sie Ihre [!DNL Google Account Manager] oder Adobe-Support-Mitarbeiter, um zu verstehen, welchen Kontotyp Sie haben.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -125,4 +124,4 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kundenkonten die Variable [Voraussetzungen](#prerequisites). Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf die Zulassungsliste gesetzt ist.
+Dieser Fehler tritt auf, wenn Kundenkonten die Variable [Voraussetzungen](#prerequisites). Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht.
