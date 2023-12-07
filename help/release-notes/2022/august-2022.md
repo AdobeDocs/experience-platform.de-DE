@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise August 2022
 description: Versionshinweise August 2022 für Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
+source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
 workflow-type: tm+mt
-source-wordcount: '2082'
-ht-degree: 100%
+source-wordcount: '1999'
+ht-degree: 99%
 
 ---
 
@@ -116,7 +116,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL AJO-Entitätsklasse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | Eine auf Datensätzen basierende Klasse zum Erstellen von Lookup-Schemata für Adobe Journey Optimizer. |
+| Klasse | [[!UICONTROL AJO-Entitätsklasse]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Eine auf Datensätzen basierende Klasse zum Erstellen von Lookup-Schemata für Adobe Journey Optimizer. |
 | Feldgruppe | [[!UICONTROL Workfront-Arbeitsobjekte]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Eine Wrapper-Feldergruppe, die auf alle objektspezifischen Feldgruppen der unteren Ebene für Adobe Workfront verweist. |
 
 {style="table-layout:auto"}

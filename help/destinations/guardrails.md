@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Aktivierung;Fehlerbehebung;Leitplanken;Richtlinien;Limit
-title: Standard-Leitplanken für Aktivierungsdaten
+title: Standardmäßige Limits für die Datenaktivierung
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 52%
 
 ---
 
-# Leitplanken für Aktivierungsdaten
+# Limits für die Datenaktivierung
 
 Auf dieser Seite finden Sie standardmäßige Nutzungs- und Ratenbeschränkungen in Bezug auf das Aktivierungsverhalten. Bei der Betrachtung der folgenden Leitplanken wird angenommen, dass Sie eine ordnungsgemäße [Verbindung zu Zielen hergestellt haben](/help/destinations/ui/connect-destination.md).
 

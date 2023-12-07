@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: a3ba26fd6ee7b473d74cc3cf3d142e0f3ff069bb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 92%
+source-wordcount: '276'
+ht-degree: 89%
 
 ---
 
@@ -73,7 +73,9 @@ ht-degree: 92%
       * [Einrichten von CMK über die Benutzeroberfläche](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Lizenznutzung und Leitlinien {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
-   * [Dashboard zur Lizenzverwendung](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Lizenznutzungs-Dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Limits in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Limits in Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Migration von Data Lake Gen2](adls2-gen2-migration.md)
 * [Glossar](glossary.md)
