@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
+source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
 workflow-type: tm+mt
-source-wordcount: '2230'
-ht-degree: 66%
+source-wordcount: '2282'
+ht-degree: 64%
 
 ---
 
@@ -120,6 +120,7 @@ Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Ar
 | Batch-Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Zielgruppen enthalten sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
 | Konto-Zielgruppen pro Sandbox | 50 | Systemerzwungene Limits | Sie können maximal 50 Zielgruppen für ein Konto in einer Sandbox erstellen. Wenn Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird die **[!UICONTROL Erstellen einer Zielgruppe]** -Kontrolle beim Versuch, eine neue Konto-Audience zu erstellen, deaktiviert ist. Mehr dazu [Kontozielgruppen](/help/segmentation/ui/account-audiences.md). |
 | Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungsgarantie | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Mehr dazu [Audience-Komposition im UI-Handbuch](/help/segmentation/ui/audience-composition.md). |
+| Maximale Zielgruppengröße | 30 Prozent | Leistungsgarantie | Die empfohlene Höchstzahl an Zielgruppen beträgt 30 Prozent der Gesamt-Profilanzahl im System. Das Erstellen von Zielgruppen mit mehr als 30 % der Profile als Mitglieder oder mehreren großen Zielgruppen ist möglich, hat aber Auswirkungen auf die Systemleistung. |
 
 {style="table-layout:auto"}
 
@@ -129,7 +130,7 @@ Dieser Abschnitt enthält zusätzliche Details zu den Limits in diesem Dokument.
 
 ### Entitätstypen
 
-Das [!DNL Profile]-Datenspeichermodell besteht aus zwei Kernentitätstypen: [primäre Entitäten](#primary-entity) und [Dimensionselemente](#dimension-entity).
+Die [!DNL Profile] Store-Datenmodell besteht aus zwei Kernentitätstypen: [primäre Entitäten](#primary-entity) und [Dimensionselemente](#dimension-entity).
 
 #### Primäre Entität
 
@@ -141,7 +142,7 @@ Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe v
 
 #### Entität der Dimension
 
-Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionselementen, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md) bezeichnet.
+Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionselementen, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md).
 
 Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Nicht-[!DNL XDM Individual Profile] Schemas werden als &quot;Dimensionselemente&quot;(auch als &quot;Lookup-Entitäten&quot;bezeichnet) bezeichnet und enthalten keine Zeitreihendaten. Schemas, die Dimensionentitäten darstellen, werden mithilfe von [Schemabeziehungen](../xdm/tutorials/relationship-ui.md).
 
