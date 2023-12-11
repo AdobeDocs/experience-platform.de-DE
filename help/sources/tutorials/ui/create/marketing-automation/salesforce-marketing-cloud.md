@@ -2,9 +2,9 @@
 title: Verbinden Ihres Salesforce-Marketing Cloud-Kontos mit dem Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie über die Benutzeroberfläche Ihr Salesforce-Marketing Cloud-Konto mit Experience Platform verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '500'
 ht-degree: 27%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 27%
 >[!IMPORTANT]
 >
 >Die Erfassung benutzerdefinierter Objekte wird derzeit nicht von der [!DNL Salesforce Marketing Cloud] Quellintegration.
-
 
 In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Salesforce Marketing Cloud] -Konto über die Benutzeroberfläche in Adobe Experience Platform.
 
@@ -35,7 +34,7 @@ Um auf Ihr [!DNL Salesforce Marketing Cloud]-Konto in Platform zugreifen zu kön
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Host | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie nur die Subdomain und nicht die gesamte URL angeben. Wenn Ihre Host-URL beispielsweise `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`eingeben, müssen Sie nur `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` als Hostwert. |
+| Host | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie die `{subdomain}.rest.marketingcloudapis.com`. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`eingeben, müssen Sie nur `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` als Hostwert. |
 | Client-ID | Die mit Ihrer [!DNL Salesforce Marketing Cloud] Anwendung. |
 | Client-Geheimnis | Das Client-Geheimnis, das mit Ihrem [!DNL Salesforce Marketing Cloud] Anwendung. |
 
