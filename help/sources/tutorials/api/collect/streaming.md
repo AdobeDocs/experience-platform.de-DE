@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicherdaten;Streaming-Daten;Streaming
+keywords: Experience Platform; Homepage; beliebte Themen; Cloud-Speicher; Streaming-Daten; Streaming
 solution: Experience Platform
 title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Service-API
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 54%
+source-wordcount: '1138'
+ht-degree: 46%
 
 ---
 
@@ -194,7 +194,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Die Ziel-Datensatz-ID ist in späteren Schritten erforderlich, um eine Zielverbindung und einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, systemgenerierte Zeichenfolge, die in API-Aufrufen zum Verweisen auf den Datensatz verwendet wird. Die Ziel-Datensatz-ID ist in späteren Schritten erforderlich, um eine Zielverbindung und einen Datenfluss zu erstellen.
 
 ```json
 [
@@ -325,7 +325,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 
 ## Abrufen einer Liste von Datenfluss-Spezifikationen {#specs}
 
-Ein Datenfluss sorgt für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API senden.
+Ein Datenfluss sorgt für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API.
 
 **API-Format**
 
@@ -481,6 +481,86 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## Beitragsdaten zur Erfassung
+
+Sehen Sie sich unten die Beispiel-Payload für Beispiele für rohe oder XDM-kompatible JSON an, die Sie zur Aufnahme senden können.
+
+>[!TIP]
+>
+>Die folgenden Beispiele gelten für alle drei Elemente:
+>
+>- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+>- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+>- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB Rohdaten]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB XDM-Daten]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
 
 ## Nächste Schritte
 

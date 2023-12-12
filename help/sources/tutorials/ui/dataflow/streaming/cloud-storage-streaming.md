@@ -5,10 +5,10 @@ title: Erstellen eines Streaming-Datenflusses für eine Cloud-Speicherquelle in 
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Speicher-Basis-Connector beschrieben.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 25%
+source-wordcount: '1071'
+ht-degree: 23%
 
 ---
 
@@ -27,13 +27,17 @@ Bevor Sie dieses Tutorial durchführen, müssen Sie zunächst eine gültige und 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Datenflüsse](../../../../../dataflows/home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden für verschiedene Dienste konfiguriert, von Quellen bis [!DNL Identity Service], um [!DNL Profile]und [!DNL Destinations].
-- [Datenvorbereitung](../../../../../data-prep/home.md): Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, zu verwandeln und zu validieren. Die Datenvorbereitung wird als „Map“-Schritt in den Datenaufnahmemechanismen, einschließlich des Workflows der CSV-Aufnahme, angezeigt.
+- [Datenvorbereitung](../../../../../data-prep/home.md): Mit der Datenvorbereitung können Dateningenieure Daten dem Experience-Datenmodell (XDM) und daraus zuordnen, umwandeln und validieren. Die Datenvorbereitung wird als „Map“-Schritt in den Datenaufnahmemechanismen, einschließlich des Workflows der CSV-Aufnahme, angezeigt.
 - [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    - [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
    - [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Daten hinzufügen
+
+>[!NOTE]
+>
+>Sie können für einen bestimmten Ereignis-Hub nur einen Datenfluss pro Konsumentengruppe erstellen.
 
 Nach der Erstellung Ihres Authentifizierungskontos für Ihren Streaming-Cloud-Speicher muss die **[!UICONTROL Daten auswählen]** angezeigt. Dort können Sie über eine Benutzeroberfläche auswählen, welchen Datenstrom Sie in Platform bringen.
 
@@ -102,7 +106,7 @@ Wenn Ihr Datensatz und Ihr Schema erstellt sind, wird die Variable **[!UICONTROL
 
 >[!TIP]
 >
->Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
+>Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
 Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
@@ -122,7 +126,7 @@ Geben Sie Werte für den Datenfluss an und wählen Sie **[!UICONTROL Nächste]**
 
 Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neuen Datenfluss überprüfen können, bevor er hergestellt wird. Die Details lassen sich wie folgt kategorisieren:
 
-- **[!UICONTROL Verbindung]**: Zeigt Ihren Kontonamen, den Quelltyp und andere spezifische Informationen zur verwendeten Streaming-Cloud-Speicherquelle an.
+- **[!UICONTROL Verbindung]**: Zeigt Ihren Kontonamen, den Typ der Quelle und andere spezifische Informationen zur verwendeten Streaming-Cloud-Speicherquelle an.
 - **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt den Zieldatensatz und das Schema an, die Sie für Ihren Datenfluss verwenden.
 
 Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und gewähren Sie etwas Zeit für die Erstellung des Datenflusses.
