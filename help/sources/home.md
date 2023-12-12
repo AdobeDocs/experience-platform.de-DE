@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Quell-Connectoren
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 4c61cd575fe3fb1583900315030dd59579dd5206
+source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 79%
+source-wordcount: '1524'
+ht-degree: 75%
 
 ---
 
@@ -136,6 +136,12 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Batch]{type=Informative}
+
+### Datenpartner {#data-partner}
+
+Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+
+- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
 
 ### E-Commerce {#ecommerce}
 
