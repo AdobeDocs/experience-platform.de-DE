@@ -1,8 +1,9 @@
 ---
 title: Erstellen Sie eine Quellverbindung der Merkury Enterprise Identity-Lösung und einen Datenfluss in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung zur Enterprise Identity-Lösung für Merkury erstellen.
+last-substantial-update: 2023-12=12
 badge: Beta
-source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
+source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
 workflow-type: tm+mt
 source-wordcount: '2015'
 ht-degree: 30%
