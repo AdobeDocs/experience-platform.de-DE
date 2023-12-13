@@ -2,10 +2,10 @@
 title: Erstellen und Konfigurieren von Datenspeichern
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 56%
 
 ---
 
@@ -44,7 +44,7 @@ Mit den Einstellungen für Geolocation und Netzwerksuche können Sie die Granula
 
 Erweitern Sie die **[!UICONTROL Geolocation und Netzwerksuche]** um die unten beschriebenen Einstellungen zu konfigurieren.
 
-![Screenshot der Platform-Benutzeroberfläche mit dem Konfigurationsbildschirm des Datastreams mit hervorgehobenen Geolocation- und Netzwerksucheinstellungen.](assets/configure/geolookup.png)
+![Konfigurationsbildschirm für Datastream mit hervorgehobenen Geolocation- und Netzwerksucheinstellungen.](assets/configure/geolookup.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -63,7 +63,7 @@ Die **[!UICONTROL Gerätesuche]** -Einstellungen können Sie gerätespezifische 
 
 Erweitern Sie die **[!UICONTROL Gerätesuche]** um die unten beschriebenen Einstellungen zu konfigurieren.
 
-![Screenshot der Platform-Benutzeroberfläche, der den Konfigurationsbildschirm des Datastreams mit hervorgehobenen Gerätesucheinstellungen anzeigt.](assets/configure/device-lookup.png)
+![Konfigurationsbildschirm für Datastream mit hervorgehobenen Einstellungen für die Gerätesuche.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Wenn hier Ihren Datenstrom für Experience Platform konfigurieren, folgen Sie de
 
 Nachdem Sie einen neuen Datenstrom konfiguriert oder einen vorhandenen ausgewählt haben, um ihn anzuzeigen, wird die Detailseite für diesen Datenstrom angezeigt. Hier finden Sie weitere Informationen zum Datenstrom, einschließlich seiner Kennung.
 
-![Detailseite für einen erstellten Datenstrom](assets/configure/view-details.png)
+![Seite mit Datenspeicherdetails .](assets/configure/view-details.png)
 
 Im Bildschirm mit den Datenspeicherdetails können Sie [Services hinzufügen](#add-services), um Funktionen der Adobe Experience Cloud-Produkte zu aktivieren, auf die Sie Zugriff haben. Sie können auch die [Basiskonfiguration](#create) des Datenstroms bearbeiten, seine [Zuordnungsregeln](./data-prep.md) aktualisieren, [den Datenstrom kopieren](#copy) oder vollständig löschen.
 
@@ -117,11 +117,11 @@ Im Bildschirm mit den Datenspeicherdetails können Sie [Services hinzufügen](#a
 
 Wählen Sie auf der Detailseite eines Datenstroms die Option **[!UICONTROL Service hinzufügen]** aus, um verfügbare Services für diesen Datenstrom hinzuzufügen.
 
-![„Service hinzufügen“ auswählen, um fortzufahren](assets/configure/add-service.png)
+![Wählen Sie Dienst hinzufügen aus, um fortzufahren.](assets/configure/add-service.png)
 
 Wählen Sie im nächsten Bildschirm im Dropdown-Menü einen Service aus, der für diesen Datenstrom konfiguriert werden soll. In dieser Liste werden nur die Dienste angezeigt, auf die Sie Zugriff haben.
 
-![Wählen Sie einen Service aus der Liste aus](assets/configure/service-selection.png)
+![Wählen Sie einen Dienst aus der Liste aus.](assets/configure/service-selection.png)
 
 Wählen Sie den gewünschten Service aus, geben Sie die angezeigten Konfigurationsoptionen ein und wählen Sie dann **[!UICONTROL Speichern]** aus, um den Service zum Datenstrom hinzuzufügen. Alle hinzugefügten Services werden in der Detailansicht für den Datenstrom angezeigt.
 
@@ -137,7 +137,7 @@ In den folgenden Unterabschnitten werden die Konfigurationsoptionen für die ein
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Analytics gesendet werden. Weitere Informationen finden Sie in der Anleitung zum [Senden von Daten an Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics-Einstellungen](assets/configure/analytics-config.png)
+![Adobe Analytics-Datenspeichereinstellungen.](assets/configure/analytics-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -148,7 +148,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Analytics gesendet
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Audience Manager gesendet werden. Zum Senden von Daten an Audience Manager müssen Sie nur diesen Abschnitt aktivieren. Die anderen Einstellungen sind optional, werden jedoch empfohlen.
 
-![Adobe Audience Manager-Einstellungen](assets/configure/audience-manager-config.png)
+![Adobe Audience Verwalten von Datenspeichereinstellungen.](assets/configure/audience-manager-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -167,7 +167,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Audience Manager g
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Experience Platform gesendet werden.
 
-![Adobe Experience Platform-Einstellungen](assets/configure/platform-config.png)
+![Adobe Experience Platform-Datenspeichereinstellungen.](assets/configure/platform-config.png)
 
 | Einstellung | Beschreibung |
 |---| --- |
@@ -182,7 +182,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Experience Platfor
 
 Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Target gesendet werden.
 
-![Adobe Target-Einstellungen](assets/configure/target-config.png)
+![Adobe Target-Datenspeichereinstellungen.](assets/configure/target-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -195,7 +195,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Target gesendet we
 
 Mit diesem Service wird festgelegt, ob und wie Daten an die [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md) gesendet werden.
 
-![Abschnitt „Ereignisweiterleitung“ der Konfigurations-Benutzeroberfläche](assets/configure/event-forwarding-config.png)
+![Abschnitt &quot;Ereignisweiterleitung&quot;des Konfigurationsbildschirms des Datenspeichers.](assets/configure/event-forwarding-config.png)
 
 | Einstellung | Beschreibung |
 | --- | --- |
@@ -216,15 +216,15 @@ Sie können eine Kopie eines vorhandenen Datenstroms erstellen und seine Details
 
 Wählen Sie auf der Hauptseite im Arbeitsbereich [!UICONTROL Datenströme] die Auslassungszeichen für den entsprechenden Datenstrom aus (**...**) und danach **[!UICONTROL Kopieren]**.
 
-![Bild, das die Option [!UICONTROL Kopieren] zeigt, die in der Datenstrom-Listenansicht ausgewählt wird](assets/configure/copy-datastream-list.png)
+![Bild, das die in der Listenansicht des Datenspeichers ausgewählte Option Kopieren anzeigt.](assets/configure/copy-datastream-list.png)
 
 Alternativ können Sie in der Detailansicht eines Datenstroms **[!UICONTROL Datenstrom kopieren]** auswählen.
 
-![Bild, das die Option [!UICONTROL Kopieren] zeigt, die in der Datenstrom-Detailansicht ausgewählt wird](assets/configure/copy-datastream-details.png)
+![In der Detailansicht des Datenspeichers ausgewählte Option Kopieren .](assets/configure/copy-datastream-details.png)
 
 Ein Bestätigungsdialogfeld erscheint, in dem Sie aufgefordert werden, einen eindeutigen Namen für den neuen, zu erstellenden Datenstrom sowie Details zu den Konfigurationsoptionen, die kopiert werden, anzugeben. Wenn Sie bereit sind, wählen Sie **[!UICONTROL Kopieren]** aus.
 
-![Bild des Bestätigungsdialogfelds zum Kopieren eines Datenstroms](assets/configure/copy-datastream-confirm.png)
+![Bestätigungsdialogfeld zum Kopieren eines Datenspeichers.](assets/configure/copy-datastream-confirm.png)
 
 Die Hauptseite des Arbeitsbereichs [!UICONTROL Datenstrom] wird erneut angezeigt, diesmal mit dem neuen Datenstrom.
 

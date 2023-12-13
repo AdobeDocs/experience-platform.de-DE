@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie die Bot-Erkennung für Datastreams konfigurie
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -47,24 +47,22 @@ Damit die Bot-Erkennung auf Ihrem Datastream funktioniert, müssen Sie die **[!U
 
 Sie können die Bot-Erkennung konfigurieren, nachdem Sie eine Datastream-Konfiguration erstellt haben. Weitere Informationen finden Sie in der Dokumentation [Erstellen und Konfigurieren eines Datenspeichers](configure.md)folgen Sie dann den unten stehenden Anweisungen, um Ihrem Datastream Bot-Erkennungsfunktionen hinzuzufügen.
 
-
 Gehen Sie zur Liste der Datenspeicher und wählen Sie den Datastream aus, dem Sie die Bot-Erkennung hinzufügen möchten.
 
-![Bild der Benutzeroberfläche von Datastreams](assets/bot-detection/datastream-list.png)
+![Benutzeroberfläche &quot;Datastreams&quot;mit der Liste der Datenspeicher.](assets/bot-detection/datastream-list.png)
 
 Wählen Sie auf der Seite mit den Datenspeicherdetails die **[!UICONTROL Bot-Erkennung]** in der rechten Leiste.
 
-![Bild der Benutzeroberfläche von Datastreams mit hervorgehobener Option &quot;Bot-Erkennung&quot;](assets/bot-detection/bot-detection.png)
+![Die Option &quot;Bot-Erkennung&quot;wurde in der Benutzeroberfläche von Datastreams hervorgehoben.](assets/bot-detection/bot-detection.png)
 
 Die **[!UICONTROL Regeln zur Bot-Erkennung]** angezeigt.
 
-![Bild der Benutzeroberfläche von Datastreams mit hervorgehobener Option &quot;Bot-Erkennung&quot;](assets/bot-detection/bot-detection-page.png)
+![Einstellungen für die Bot-Erkennung auf der Seite mit den Datastream-Einstellungen .](assets/bot-detection/bot-detection-page.png)
 
 Auf der Seite &quot;Bot-Erkennungsregeln&quot;können Sie die Bot-Erkennung mithilfe der folgenden Funktionen konfigurieren:
 
 * Verwenden der [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Erstellen eigener Bot-Erkennungsregeln
-
 
 ### Verwenden der IAB/ABC International Spiders and Bots List {#iab-list}
 
@@ -72,8 +70,7 @@ Die [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 So konfigurieren Sie Ihren Datenspeicher für die Verwendung der [!DNL IAB/ABC International Spiders and Bots List], um die **[!UICONTROL Verwenden der IAB/ABC International Spiders and Bots List zur Bot-Erkennung für diesen Datastream]** und wählen Sie dann Speichern aus, um die Bot-Erkennungseinstellungen auf Ihren Datastream anzuwenden.
 
-![Bild des Bot-Erkennungseinstellungsbildschirms mit aktivierten IAB-Spiders und Bot-Liste.](assets/bot-detection/bot-detection-list.png)
-
+![IAB-Spider und Bot-Liste aktiviert.](assets/bot-detection/bot-detection-list.png)
 
 ### Erstellen von Bot-Erkennungsregeln {#rules}
 
@@ -97,25 +94,21 @@ Wenn Sie detailliertere Bot-Erkennungsregeln benötigen, können Sie die IP-Bedi
 | `sec-ch-ua-bitness` | Stellt die &quot;Bitness&quot;der zugrunde liegenden CPU-Architektur des Benutzeragenten bereit. Dies ist die Größe in Bits einer Integer- oder Speicheradresse, normalerweise 64 oder 32 Bit. |
 | `sec-ch-ua-wow64` | Gibt an, ob eine Benutzeragenten-Binärdatei im 32-Bit-Modus unter 64-Bit Windows ausgeführt wird. |
 
-
-
-
-
 Gehen Sie wie folgt vor, um eine Bot-Erkennungsregel zu erstellen:
 
 1. Auswählen **[!UICONTROL Neue Regel hinzufügen]**.
 
-   ![Bild des Bildschirms für Bot-Erkennungseinstellungen mit hervorgehobener Schaltfläche Neue Regel hinzufügen .](assets/bot-detection/bot-detection-new-rule.png)
+   ![Einstellungsbildschirm für die Bot-Erkennung mit hervorgehobener Schaltfläche Neue Regel hinzufügen .](assets/bot-detection/bot-detection-new-rule.png)
 
 2. Geben Sie einen Namen für die Regel im **[!UICONTROL Regelname]** -Feld.
 
-   ![Bild des Bot-Erkennungsregelbildschirms mit hervorgehobenem Regelnamen.](assets/bot-detection/rule-name.png)
+   ![Regelbildschirm zur Bot-Erkennung mit hervorgehobenem Regelnamen.](assets/bot-detection/rule-name.png)
 
 3. Auswählen **[!UICONTROL Neue IP-Bedingung hinzufügen]** , um eine neue IP-basierte Regel hinzuzufügen. Sie können die Regel nach IP-Adresse oder IP-Adressbereich definieren.
 
-   ![Bild des Bot-Erkennungsregelbildschirms mit hervorgehobenem Feld für die IP-Adresse.](assets/bot-detection/ip-address-rule.png)
+   ![Bot-Erkennungsregel-Bildschirm mit hervorgehobenem Feld für die IP-Adresse.](assets/bot-detection/ip-address-rule.png)
 
-   ![Bild des Bot-Erkennungsregelbildschirms mit hervorgehobenem IP-Bereichsfeld.](assets/bot-detection/ip-range-rule.png)
+   ![Regelbildschirm zur Bot-Erkennung mit hervorgehobenem Feld für den IP-Bereich.](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
@@ -123,15 +116,15 @@ Gehen Sie wie folgt vor, um eine Bot-Erkennungsregel zu erstellen:
 
 4. Wenn Sie der Regel Kopfzeilenbedingungen hinzufügen möchten, wählen Sie **[!UICONTROL Gruppe mit Kopfzeilenbedingungen hinzufügen]** und wählen Sie dann die Kopfzeilen aus, die die Regel verwenden soll.
 
-   ![Bild des Bot-Erkennungsregelbildschirms mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-conditions.png)
+   ![Bildschirm mit Bot-Erkennungsregeln mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-conditions.png)
 
    Fügen Sie dann die für die ausgewählte Kopfzeile zu verwendenden Bedingungen hinzu.
 
-   ![Bild des Bot-Erkennungsregelbildschirms mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-condition-rule.png)
+   ![Bildschirm mit Bot-Erkennungsregeln mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-condition-rule.png)
 
 5. Nachdem Sie die gewünschten Bot-Erkennungsregeln konfiguriert haben, wählen Sie **[!UICONTROL Speichern]** , damit die Regeln auf Ihren Datastream angewendet werden.
 
-   ![Bild des Bot-Erkennungsregelbildschirms mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/bot-detection-save.png)
+   ![Bildschirm mit Bot-Erkennungsregeln mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Beispiele für Bot-Erkennungsregeln {#examples}
@@ -142,19 +135,19 @@ Um Ihnen bei den ersten Schritten mit der Bot-Erkennung zu helfen, können Sie d
 
 Um alle Anforderungen einer bestimmten IP-Adresse als Bot-Traffic zu markieren, erstellen Sie eine neue Bot-Erkennungsregel, die eine einzelne IP-Adresse auswertet, wie in der Abbildung unten dargestellt.
 
-![Bild der Bot-Erkennungsregel basierend auf einer IP-Adresse.](assets/bot-detection/bot-detection-one-ip.png)
+![Bot-Erkennungsregel basierend auf einer IP-Adresse.](assets/bot-detection/bot-detection-one-ip.png)
 
 ### Bot-Erkennung basierend auf zwei IP-Adressen {#two-ip}
 
 Um alle Anforderungen von einer der beiden IP-Adressen als Bot-Traffic zu markieren, erstellen Sie eine neue Bot-Erkennungsregel, die zwei IP-Adressen auswertet, wie in der Abbildung unten dargestellt.
 
-![Bild der Bot-Erkennungsregel basierend auf zwei IP-Adressen.](assets/bot-detection/bot-detection-two-ips.png)
+![Bot-Erkennungsregel basierend auf zwei IP-Adressen.](assets/bot-detection/bot-detection-two-ips.png)
 
 ### Bot-Erkennung basierend auf einer Reihe von IP-Adressen {#range}
 
 Um alle Anforderungen aus einer beliebigen IP-Adresse in einem bestimmten Bereich als Bot-Traffic zu markieren, erstellen Sie eine neue Bot-Erkennungsregel, die einen gesamten IP-Adressbereich auswertet, wie in der Abbildung unten dargestellt.
 
-![Bild der Bot-Erkennungsregel basierend auf dem IP-Bereich.](assets/bot-detection/bot-detection-range.png)
+![Bot-Erkennungsregel basierend auf dem IP-Bereich.](assets/bot-detection/bot-detection-range.png)
 
 ### Bot-Erkennung basierend auf einer IP-Adresse und einem Anfrage-Header {#ip-header}
 
@@ -162,7 +155,7 @@ Um alle Anforderungen, die von einer bestimmten IP-Adresse stammen und einen bes
 
 Diese Regel prüft, ob die Anfrage von einer bestimmten IP-Adresse stammt und ob die `referer` Anfrage-Kopfzeile beginnt mit `www.adobe.com`.
 
-![Bild der Bot-Erkennungsregel basierend auf IP-Adresse und Anfrage-Kopfzeile.](assets/bot-detection/bot-detection-header-ip.png)
+![Bot-Erkennungsregel basierend auf IP-Adresse und Anfrage-Kopfzeile.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Bot-Erkennung basierend auf mehreren Bedingungen {#multiple-conditions}
 
@@ -175,4 +168,4 @@ Die in der folgenden Abbildung dargestellte Regel identifiziert eine Bot-Origin-
 
 Die Anfrage stammt von einer der beiden IP-Adressen, der `referer` -Kopfzeile beginnt mit `www.adobe.com`und die `sec-ch-ua-mobile` -Kopfzeile identifiziert die Anforderung als von einem Desktop-Browser stammt.
 
-![Bild der Bot-Erkennungsregel basierend auf mehreren Bedingungen.](assets/bot-detection/bot-detection-multiple.png)
+![Bot-Erkennungsregel basierend auf mehreren Bedingungen.](assets/bot-detection/bot-detection-multiple.png)
