@@ -1,16 +1,16 @@
 ---
-title: Personalisieren von Onsite-Erlebnissen für unbekannte Besuchende durch partnergestützte Besuchererkennung
+title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 91%
+source-wordcount: '2673'
+ht-degree: 89%
 
 ---
 
-# Personalisieren von Onsite-Erlebnissen für unbekannte Besuchende durch partnergestützte Besuchererkennung
+# Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung
 
 >[!AVAILABILITY]
 >
@@ -39,7 +39,7 @@ Diese Marke hat sich für eine Technologie zur Partnererkennung entschieden, um 
 Wenn Sie planen, von Partnern bereitgestellte Attribute zu verwenden, um Ihren authentifizierten und nicht authentifizierten Besucherinnen und Besuchern personalisierte Erlebnisse zu bieten, sollten Sie die folgenden Voraussetzungen in Ihrem Planungsprozess berücksichtigen:
 
 * Welche Eingaben erwartet die Erkennungstechnologie Ihres Partners, damit zusätzliche Attribute hinzugefügt werden können?
-* Inwiefern sind Sie damit einverstanden, Personalisierung in verschiedenen Kanälen und für verschiedene Anwendungsfälle auf der Grundlage von probabilistisch abgeleiteten Attributen zu liefern, im Gegensatz zu deterministisch bestätigten Attributen?
+* Inwieweit können Sie Personalisierungen in verschiedenen Kanälen und für verschiedene Anwendungsfälle bereitstellen, die auf probabilistisch abgeleiteten Datensätzen basieren, im Vergleich zu deterministisch bestätigten Attributen?
 * Wie sollte sich das Erlebnis für vorauthentifizierte, aber erkannte Besucherinnen und Besucher bei der Authentifizierung ändern?
 
 ### Benutzeroberflächenfunktionen, Platform-Komponenten und Experience Cloud-Produkte, die Sie verwenden werden {#ui-functionality-and-elements}
@@ -163,7 +163,7 @@ Als Nächstes müssen Sie verschiedene Erweiterungen in der Eigenschaft installi
 
 ![Eine neue Tag-Eigenschaft auswählen.](/help/rtcdp/assets/partner-data/onsite-personalization/select-tag-property.png)
 
-[!UICONTROL Core] ist bereits installiert. Wie in den nächsten Abschnitten beschrieben, müssen zwei weitere Erweiterungen installiert werden.
+[!UICONTROL Core]-Erweiterung ist bereits installiert. Wie in den nächsten Abschnitten beschrieben, müssen zwei weitere Erweiterungen installiert werden.
 
 ![Anzeigen der installierten Erweiterungen.](/help/rtcdp/assets/partner-data/onsite-personalization/view-existing-extensions.png)
 

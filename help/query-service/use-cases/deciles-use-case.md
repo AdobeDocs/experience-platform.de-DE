@@ -1,25 +1,25 @@
 ---
-title: Anwendungsfall für auf Entscheidungen basierende abgeleitete Attribute
-description: In diesem Handbuch werden die Schritte erläutert, die zur Verwendung von Query Service zum Erstellen von dezimalbasierten abgeleiteten Attributen für die Verwendung mit Ihren Profildaten erforderlich sind.
+title: Anwendungsfall für auf einem Beschluss basierende abgeleitete Datensätze
+description: In diesem Handbuch werden die Schritte erläutert, die zur Verwendung von Query Service zum Erstellen von dezimalbasierten abgeleiteten Datensätzen für die Verwendung mit Ihren Profildaten erforderlich sind.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 3%
+source-wordcount: '1511'
+ht-degree: 2%
 
 ---
 
-# Anwendungsfall für dezimalbasierte abgeleitete Attribute
+# Anwendungsfall für Decile-basierte abgeleitete Datensätze
 
-Abgeleitete Attribute erleichtern komplexe Anwendungsfälle für die Analyse von Daten aus dem Data Lake, die mit anderen nachgelagerten Platform-Diensten verwendet oder in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden können.
+Abgeleitete Datensätze erleichtern komplexe Anwendungsfälle für die Analyse von Daten aus dem Data Lake, die mit anderen nachgelagerten Platform-Diensten verwendet oder in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden können.
 
-In diesem Anwendungsbeispiel wird gezeigt, wie Sie dezimalbasierte abgeleitete Attribute für die Verwendung mit Ihren Echtzeit-Kundenprofildaten erstellen. Anhand eines Beispielszenarios zur Treue von Fluggesellschaften erfahren Sie in diesem Handbuch, wie Sie einen Datensatz erstellen, der kategorische Dezile verwendet, um Zielgruppen basierend auf Rangattributen zu segmentieren und zu erstellen.
+Dieser Beispielanwendungsfall zeigt, wie Sie dezimalbasierte abgeleitete Datensätze erstellen, die mit Ihren Echtzeit-Kundenprofildaten verwendet werden können. Anhand eines Beispielszenarios zur Treue von Fluggesellschaften erfahren Sie in diesem Handbuch, wie Sie einen Datensatz erstellen, der kategorische Dezile verwendet, um Zielgruppen basierend auf Rangattributen zu segmentieren und zu erstellen.
 
 Die folgenden Schlüsselkonzepte werden veranschaulicht:
 
 * Schemaerstellung für das Dezimalbucketing.
 * Kategorische Dezimalerstellung.
-* Erstellung komplexer abgeleiteter Attribute.
+* Erstellung komplexer abgeleiteter Datensätze.
 * Berechnung der Dezimalzahlen über einen Lookback-Zeitraum.
 * Eine Beispielabfrage, die die Aggregation, Rangfolge und das Hinzufügen eindeutiger Identitäten demonstriert, um die Erstellung von Zielgruppen auf der Grundlage dieser Dezimalgruppen zu ermöglichen.
 
@@ -30,13 +30,13 @@ Dieses Handbuch setzt ein Verständnis der [Abfrageausführung in Query Service]
 * [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas.
 * [Aktivieren eines Schemas für das Echtzeit-Kundenprofil](../../profile/tutorials/add-profile-data.md): In diesem Tutorial werden die Schritte beschrieben, die zum Hinzufügen von Daten zum Echtzeit-Kundenprofil erforderlich sind.
-* [So definieren Sie einen benutzerdefinierten Datentyp](../../xdm/api/data-types.md): Datentypen werden als Referenzfeldtypen in Klassen oder Schemafeldgruppen verwendet und ermöglichen die konsistente Verwendung einer Mehrfeldstruktur, die an einer beliebigen Stelle im Schema enthalten sein kann.
+* [So definieren Sie einen benutzerdefinierten Datentyp](../../xdm/api/data-types.md): Datentypen werden als Referenzfeld in Klassen oder Schemafeldgruppen verwendet und ermöglichen die konsistente Verwendung einer Mehrfeld-Struktur, die an einer beliebigen Stelle im Schema enthalten sein kann.
 
 ## Ziele
 
-Das in diesem Dokument angegebene Beispiel verwendet Dezimalstellen, um abgeleitete Attribute für die Rangdaten aus einem Treueschema einer Fluglinie zu erstellen. Abgeleitete Attribute ermöglichen es Ihnen, den Nutzwert Ihrer Daten zu maximieren, indem Sie eine Zielgruppe anhand der höchsten &#39;n&#39; % für eine bestimmte Kategorie identifizieren.
+Das in diesem Dokument gezeigte Beispiel verwendet Dezimalstellen, um abgeleitete Datensätze für die Rangeinstufung von Daten aus einem Treueschema einer Fluglinie zu erstellen. Abgeleitete Datensätze ermöglichen es Ihnen, den Nutzwert Ihrer Daten zu maximieren, indem Sie eine Zielgruppe anhand des obersten &#39;n&#39; % für eine bestimmte Kategorie identifizieren.
 
-## Erstellen von dezimalbasierten abgeleiteten Attributen
+## Erstellen von dezimalbasierten abgeleiteten Datensätzen
 
 Um die Rangfolge von Dezimalstellen basierend auf einer bestimmten Dimension und einer entsprechenden Metrik zu definieren, muss ein Schema so konzipiert sein, dass eine Dezimalzusammenfassung möglich ist.
 
@@ -50,13 +50,13 @@ Die Beispieldaten zur Treue von Fluglinien verwenden eine [XDM ExperienceEvents-
 
 ### Beispieldatensätze
 
-Der ursprüngliche Datensatz zur Treueprogramm von Fluggesellschaften für dieses Beispiel ist &quot;Daten zum Treueprogramm für Fluglinien&quot;und weist das folgende Schema auf. Beachten Sie, dass die primäre Identität für das Schema lautet `_profilefoundationreportingstg.membershipNumber`.
+Der ursprüngliche Datensatz zur Treueprogramm von Fluggesellschaften für dieses Beispiel ist &quot;Daten zum Treueprogramm für Fluglinien&quot;und weist das folgende Schema auf. Beachten Sie, dass die primäre Identität für das Schema lautet. `_profilefoundationreportingstg.membershipNumber`.
 
 ![Ein Diagramm des &quot;Airline Loyalty Data&quot;-Schemas.](../images/use-cases/airline-loyalty-data.png)
 
 **Beispieldaten**
 
-Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg` -Objekt, das für dieses Beispiel verwendet wird. Es bietet Kontext für die Verwendung von Dezimalbuckets zum Erstellen komplexer abgeleiteter Attribute.
+Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg` -Objekt, das für dieses Beispiel verwendet wird. Es bietet Kontext für die Verwendung von Dezimalbuckets zum Erstellen komplexer abgeleiteter Datensätze.
 
 >[!NOTE]
 >
@@ -64,11 +64,11 @@ Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg`
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Neues Mitglied | 5.000 | FLYER |
+| C435678623 | sfeldmark1vr@studiopress.com | 01.01.2022 | STATUS_MILES | Neues Mitglied | 5.000 | FLYER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | SILBER |
 | B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | SILBER |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5.000 | SILBER |
-| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Neue Kreditkarte | 10000 | FLYER |
+| B789279247 | pgalton32n@barnesandnoble.com | 10.02.2022 | AWARD_MILES | FRA-JFK | 5.000 | SILBER |
+| A123487284 | rritson1zn@sciencedaily.com | 07.01.2022 | STATUS_MILES | Neue Kreditkarte | 10000 | FLYER |
 
 {style="table-layout:auto"}
 
@@ -88,11 +88,11 @@ Daten, die zur Verwendung durch das Echtzeit-Kundenprofil in Experience Platform
 
 Erstellen Sie anschließend einen Datentyp, der für alle dezimalbezogenen Feldergruppen wiederverwendet werden soll. Die Erstellung der Dezimalfeldgruppe ist ein einmaliger Schritt pro Sandbox. Sie kann auch für alle dezimalbezogenen Schemas wiederverwendet werden.
 
-### Erstellen Sie einen Identitäts-Namespace und markieren Sie ihn als primäre Kennung {#identity-namespace}
+### Erstellen Sie einen Identitäts-Namespace und markieren Sie ihn als primäre Kennung. {#identity-namespace}
 
-Jedes Schema, das für die Verwendung mit Dezimalstellen erstellt wurde, muss eine primäre Identität aufweisen. Sie können [Identitätsfeld in der Benutzeroberfläche von Adobe Experience Platform-Schemas definieren](../../xdm/ui/fields/identity.md#define-an-identity-field)oder durch [Schema Registry-API](../../xdm/api/descriptors.md#create).
+Jedem Schema, das für die Verwendung mit Dezimalstellen erstellt wurde, muss eine primäre Identität zugewiesen sein. Sie können [Identitätsfeld in der Benutzeroberfläche von Adobe Experience Platform-Schemas definieren](../../xdm/ui/fields/identity.md#define-an-identity-field)oder durch die [Schema Registry-API](../../xdm/api/descriptors.md#create).
 
-Mit Query Service können Sie auch direkt über SQL eine Identität oder eine primäre Identität für Ad-hoc-Schema-Datensatzfelder festlegen. Weitere Informationen finden Sie in der Dokumentation unter [Festlegen einer sekundären Identität und primären Identität in Ad-hoc-Schemaidentitäten](../data-governance/ad-hoc-schema-identities.md) für weitere Informationen.
+Mit Query Service können Sie auch direkt über SQL eine Identität oder eine primäre Identität für Ad-hoc-Schema-Datensatzfelder festlegen. Siehe die Dokumentation unter [Festlegen einer sekundären Identität und primären Identität in Ad-hoc-Schemaidentitäten](../data-governance/ad-hoc-schema-identities.md) für weitere Informationen.
 
 ### Erstellen einer Abfrage zur Berechnung von Dezimalzahlen über einen Lookback-Zeitraum {#create-a-query}
 
@@ -216,7 +216,7 @@ Es ist wichtig, die Identitäts-, Dimensions- und Metrikspalten für die Abfrage
 
 #### Ranking
 
-Dekore ermöglichen kategorische Bucketings. Um die Rangnummer zu erstellen, muss die `NTILE` -Funktion mit einem Parameter von `10` innerhalb eines FENSTERS, gruppiert nach `loyaltyStatus` -Feld. Dies führt zu einer Rangfolge von 1 bis 10. Legen Sie die `ORDER BY` -Klausel `WINDOW` nach `DESC` , um sicherzustellen, dass der Rangwert von `1` wird dem **größte** Metrik innerhalb der Dimension.
+Dekore ermöglichen kategorische Bucketings. Um die Rangnummer zu erstellen, muss die `NTILE` -Funktion mit einem Parameter von `10` innerhalb eines FENSTERS, gruppiert nach `loyaltyStatus` -Feld. Dies führt zu einer Rangfolge von 1 bis 10. Legen Sie die `ORDER BY` -Klausel `WINDOW` nach `DESC` sicherstellen, dass der Rangwert von `1` wird dem **größte** Metrik innerhalb der Dimension.
 
 ```sql
 rankings_1 AS (
@@ -230,7 +230,7 @@ rankings_1 AS (
 
 #### Zuordnungsaggregation
 
-Bei mehreren Lookback-Zeiträumen müssen Sie die dezimalen Behälterzuordnungen im Voraus mithilfe des `MAP_FROM_ARRAYS` und `COLLECT_LIST` Funktionen. Im Beispielausschnitt `MAP_FROM_ARRAYS` erstellt eine Zuordnung mit einem Schlüsselpaar (`loyaltyStatus`) und -Werten (`decileBucket`) Arrays. `COLLECT_LIST` gibt ein Array mit allen Werten in der angegebenen Spalte zurück.
+Bei mehreren Lookback-Zeiträumen müssen Sie die dezimalen Behälterzuordnungen im Voraus mithilfe der `MAP_FROM_ARRAYS` und `COLLECT_LIST` Funktionen. Im Beispielausschnitt `MAP_FROM_ARRAYS` erstellt eine Zuordnung mit einem Schlüsselpaar (`loyaltyStatus`) und -Werten (`decileBucket`) Arrays. `COLLECT_LIST` gibt ein Array mit allen Werten in der angegebenen Spalte zurück.
 
 ```sql
 map_1 AS (
@@ -299,4 +299,4 @@ Führen Sie die Abfrage aus, um den Dezimaldatensatz zu füllen. Sie können die
 
 ## Nächste Schritte
 
-Im oben genannten Anwendungsbeispiel werden die Schritte erläutert, um Dezimalattribute im Echtzeit-Kundenprofil verfügbar zu machen. Dadurch kann Segmentation Service über eine Benutzeroberfläche oder eine RESTful-API Zielgruppen basierend auf diesen Dezimalgruppen generieren. Siehe [Übersicht über den Segmentierungsdienst](../../segmentation/home.md) für Informationen zum Erstellen, Auswerten und Zugreifen auf Segmente.
+Im oben genannten Anwendungsbeispiel werden die Schritte erläutert, die dazu dienen, dezimalbasierte abgeleitete Datensätze im Echtzeit-Kundenprofil verfügbar zu machen. Dadurch kann Segmentation Service über eine Benutzeroberfläche oder eine RESTful-API Zielgruppen basierend auf diesen Dezimalgruppen generieren. Siehe [Übersicht über den Segmentierungsdienst](../../segmentation/home.md) für Informationen zum Erstellen, Auswerten und Zugreifen auf Segmente.

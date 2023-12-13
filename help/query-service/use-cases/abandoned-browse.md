@@ -3,10 +3,10 @@ keywords: Experience Platform; Query Service; Query Service; Query
 title: Anwendungsbeispiel für Adobe Experience Platform Query Service
 description: Ein durchgehendes Beispiel, das die Vielseitigkeit und Vorteile von Adobe Experience Platform Query Service demonstriert.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 3%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Dieses Dokument und die zugehörige Videopräsentation bieten einen durchgängig
 * Methoden zum Erstellen der Abfrage basierend auf Ihrer vorhandenen Datenarchitektur.
 * Stellen Sie die Datenqualität sicher, die Ihren Anforderungen entspricht, und sorgen Sie für Methoden zur Reduzierung von Fehlern.
 * Der Prozess zum Planen einer Abfrage für die nachfolgende Verwendung in der Segmentierung und in Personalisierungszielen.
-* Die einfache Möglichkeit für Marketing-Experten, abgeleitete Attribute in ihre Zielgruppen einzubinden, indem die [!DNL Query Service].
+* Die einfache Möglichkeit für Marketing-Experten, abgeleitete Datensätze in ihre Zielgruppen einzubeziehen durch die Vorteile von [!DNL Query Service].
 
 ## Ziele {#objectives}
 
@@ -80,6 +80,6 @@ Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen
 Alternativ können diese Dokumente für Ihr Verständnis von [!DNL Query Service] Funktionen:
 
 * [Anleitung zur Ausführung von Abfragen](../best-practices/writing-queries.md)
-* [Informationen zur Ordnung von Daten-Medienelementen](../best-practices/organize-data-assets.md).
+* [Anleitung zur Organisation von Daten-Assets](../best-practices/organize-data-assets.md).
 
 

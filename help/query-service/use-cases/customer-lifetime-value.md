@@ -2,10 +2,10 @@
 title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
 description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '1269'
-ht-degree: 12%
+source-wordcount: '1263'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ Die folgende Infografik zeigt den Zyklus der Datenerfassung, -bearbeitung, -anal
 
 ![Die Rundreise informiert über Daten von Beobachtung über Analyse bis zum Handeln.](../images/use-cases/infographic-use-case-cycle.png)
 
-Dieser durchgängige Anwendungsfall zeigt, wie Datensignale erfasst und geändert werden können, um das abgeleitete Attribut für den Kundenlebenszeitwert zu berechnen. Diese abgeleiteten Attribute können dann auf Ihre Real-Time CDP-Profildaten angewendet werden und können mit benutzerdefinierten Dashboards verwendet werden, um ein Dashboard für die Insight-Analyse zu erstellen. Über Data Distiller können Sie das Real-Time CDP Insight-Datenmodell erweitern und mithilfe des CLV-abgeleiteten Attributs und der Dashboard-Einblicke eine neue Zielgruppe erstellen und für ein gewünschtes Ziel aktivieren. Diese leistungsstarken Zielgruppen können dann zur Unterstützung Ihrer nächsten Marketing-Kampagne verwendet werden.
+Dieser durchgängige Anwendungsfall zeigt, wie Datensignale erfasst und geändert werden können, um das abgeleitete Attribut für den Kundenlebenszeitwert zu berechnen. Diese abgeleiteten Datensätze können dann auf Ihre Real-Time CDP-Profildaten angewendet werden und können mit benutzerdefinierten Dashboards verwendet werden, um ein Dashboard für die Insight-Analyse zu erstellen. Über Data Distiller können Sie das Real-Time CDP Insight-Datenmodell erweitern und mithilfe der von CLV abgeleiteten Datensätze und Dashboard-Einblicke eine neue Zielgruppe erstellen und für ein gewünschtes Ziel aktivieren. Diese leistungsstarken Zielgruppen können dann zur Unterstützung Ihrer nächsten Marketing-Kampagne verwendet werden.
 
 Dieses Handbuch soll Ihnen dabei helfen, Ihr Kundenerlebnis besser zu verstehen, indem Sie Datensignale über wichtige Touchpoints hinweg messen, die CLV steuern und einen ähnlichen Anwendungsfall in Ihrer Umgebung implementieren. Der gesamte Prozess wird in der Abbildung unten zusammengefasst.
 
@@ -34,9 +34,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Für dieses Handbuch benötigen Sie die [Data Distiller](../data-distiller/overview.md) SKU als Teil Ihres Paketangebots. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, wenn Sie sich nicht sicher sind, ob Sie über dieses Angebot verfügen.
 
-## abgeleitetes Attribut erstellen {#create-derived-attribute}
+## abgeleiteten Datensatz erstellen {#create-derived-dataset}
 
-Der erste Schritt bei der Einrichtung Ihrer CLV besteht darin, ein abgeleitetes Attribut aus den von Benutzeraktionen erfassten Datensignalen zu erstellen. Dieser besondere Anwendungsfall wird in einem separaten Dokument über ein Treueprogramm für Fluggesellschaften erfasst. Weitere Informationen finden Sie im Handbuch . [Verwenden Sie Query Service , um dezimalbasierte abgeleitete Attribute zur Verwendung mit Ihren Profildaten zu erstellen.](./deciles-use-case.md). Vollständige Beispiele und Erläuterungen zu den folgenden Schritten finden Sie im Dokument:
+Der erste Schritt bei der Erstellung Ihrer CLV besteht darin, einen abgeleiteten Datensatz aus den von Benutzeraktionen erfassten Datensignalen zu erstellen. Dieser besondere Anwendungsfall wird in einem separaten Dokument über ein Treueprogramm für Fluggesellschaften erfasst. Weitere Informationen finden Sie im Handbuch . [Verwenden Sie Query Service , um dezimalbasierte abgeleitete Datensätze für die Verwendung mit Ihren Profildaten zu erstellen.](./deciles-use-case.md). Vollständige Beispiele und Erläuterungen zu den folgenden Schritten finden Sie im Dokument:
 
 * Erstellen Sie ein Schema, das die Dezile-Bucketing ermöglicht.
 * Verwenden Sie Query Service zum Erstellen von Dezimalstellen.
@@ -49,11 +49,11 @@ Der erste Schritt bei der Einrichtung Ihrer CLV besteht darin, ein abgeleitetes 
 
 Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein vorhandenes Adobe Real-Time CDP-Datenmodell erweitern, um mit Ihren CLV-Berichtseinblicken zu interagieren. Weitere Informationen finden Sie in der Dokumentation . [Erstellen eines Datenmodells mit Berichtseinblicken über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Das Tutorial umfasst die folgenden Schritte:
 
-* Erstellen eines Modells für Reporting-Insights mit Data Distiller.
-* Erstellen von Tabellen und Beziehungen und Auffüllen von Daten.
-* Abfrage des Reporting-Insights-Datenmodells.
-* Erweitern Ihres Datenmodells mit dem Real-Time CDP Insights-Datenmodell.
-* Erstellen von Dimensionstabellen, um Ihr Reporting-Insights-Modell zu erweitern.
+* Erstellen Sie ein Modell für die Berichterstellung von Einblicken mit Data Distiller.
+* Erstellen Sie Tabellen, Beziehungen und füllen Sie Daten aus.
+* Abfragen des Reporting-Insight-Datenmodells.
+* Erweitern Sie Ihr Datenmodell mit dem Real-Time CDP Insight-Datenmodell.
+* Erstellen Sie Dimensionstabellen, um Ihr Reporting-Insights-Modell zu erweitern.
 * Abfragen Ihres erweiterten Reporting-Insights-Datenmodells mit beschleunigtem Speicher
 
 Siehe die Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../dashboards/cdp-insights-data-model.md).

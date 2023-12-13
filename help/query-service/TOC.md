@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
+source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 89%
+ht-degree: 86%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 89%
 - Data Distiller {#data-distiller}
    - [Übersicht](data-distiller/overview.md)
    - [Lizenznutzung](data-distiller/license-usage.md)
+   - Abgeleitete Datensätze {#derived-datasets}
+      - [Übersicht](data-distiller/derived-datasets/overview.md)
+      - [Nahtloser SQL-Fluss](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Erstellen von dezimalbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Abfrage-beschleunigte Speicherung {#query-accelerated-store}
       - [Beschleunigte Abfragen senden](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-   - Abgeleitete Attribute {#derived-attributes}
-      - [Übersicht](data-distiller/derived-attributes/overview.md)
-      - [Nahtloser SQL-Fluss](data-distiller/derived-attributes/seamless-sql-flow.md)
-      - [Erstellen von dezilbasierten abgeleiteten Attributen](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - AI-/ML-Funktions-Pipelines {#ml-feature-pipelines}
       - [Übersicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Herstellen einer Verbindung zu Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -43,7 +43,7 @@ ht-degree: 89%
    - [Erstellen eines Trendberichts mit Ereignissen](use-cases/trended-report-of-events.md)
    - [Einverständnisanalyse](use-cases/consent-analysis.md)
    - [Kundenlebenszeitwert](use-cases/customer-lifetime-value.md)
-   - [Dezilbasierte abgeleitete Attribute](use-cases/deciles-use-case.md)
+   - [Entscheidungsbasierte abgeleitete Datensätze](use-cases/deciles-use-case.md)
    - [Ungefähre Übereinstimmung](use-cases/fuzzy-match.md)
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
    - [Besuchende nach Seitenansichten auflisten](use-cases/visitors-by-number-of-page-views.md)
