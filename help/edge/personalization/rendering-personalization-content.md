@@ -3,10 +3,10 @@ title: Rendern von personalisierten Inhalten mit dem Adobe Experience Platform W
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Adobe Experience Platform Web SDK rendern.
 keywords: personalization;renderDecisions;sendEvent;DecisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5f205792a03c3c7dd9074827ce4a989fae2e45d9
+source-git-commit: eb505b800994a484afb9dd3eee3b9b00cc02fdf6
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 4%
+source-wordcount: '929'
+ht-degree: 1%
 
 ---
 
@@ -297,7 +297,7 @@ alloy("sendEvent", {
 
 Das SDK bietet Funktionen für [Flackern verwalten](../personalization/manage-flicker.md) während des Personalisierungsprozesses.
 
-## Vorschläge rendern in Single-Page Applications ohne Inkrementierung von Metriken {#applypropositions}
+## Vorschläge in Einzelseitenanwendungen rendern, ohne Metriken zu erhöhen {#applypropositions}
 
 Die `applyPropositions` -Befehl ermöglicht es Ihnen, ein Array von Vorschlägen aus [!DNL Target] in Einzelseitenanwendungen, ohne die [!DNL Analytics] und [!DNL Target] Metriken. Dies erhöht die Genauigkeit des Reportings.
 
