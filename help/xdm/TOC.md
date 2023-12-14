@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell-System (XDM)
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 100%
+source-wordcount: '561'
+ht-degree: 93%
 
 ---
 
@@ -80,6 +80,7 @@ ht-degree: 100%
       * [Flugreservierung](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/event/iab.md)
       * [Unterkunftsreservierung](./field-groups/event/lodging-reservation.md)
+      * [Details zur MediaAnalytics-Interaktion](./field-groups/event/mediaanalytics-interaction.md)
       * [Preisanfragedetails](./field-groups/event/quote-request-details.md)
       * [Buchungsdetails](./field-groups/event/reservation-details.md)
       * [Sitetool-Details](./field-groups/event/sitetool-details.md)
@@ -104,17 +105,22 @@ ht-degree: 100%
 * Datentypen {#data-types}
    * [Kontodetails](./data-types/account-details.md)
    * [Anzeigenunterbrechung](./data-types/ad-break.md)
+   * [Informationen zu Werbedetails](./data-types/advertising-details-information.md)
+   * [Informationen zu Werbe-Pods](./data-types/advertising-pod-details-information.md)
    * [Programm](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browser-Details](./data-types/browser-details.md)
    * [B2B-Quelle](./data-types/b2b-source.md)
+   * [Informationen zu Kapiteldetails](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
    * [Zustimmungszeichenfolge](./data-types/consent-string.md)
    * [Zustimmungen und Voreinstellungen](./data-types/consents.md)
    * [Währung](./data-types/currency.md)
+   * [Informationen zu benutzerdefinierten Metadaten](./data-types/custom-metadata-details-information.md)
    * [Gerät](./data-types/device.md)
-   * [E-Mail Adresse](./data-types/email-address.md)
+   * [E-Mail-Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
+   * [Informationen zu Fehlerdetails](./data-types/error-details-information.md)
    * [Erlebniskanal](./data-types/experience-channel.md)
    * [Audit-Attribute des externen Quellsystems](./data-types/external-source-system-audit-attributes.md)
    * [Finanzkonto](./data-types/financial-account.md)
@@ -134,17 +140,22 @@ ht-degree: 100%
    * [Schlüssel-Wert-Paar](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Maßnahme](./data-types/measure.md)
+   * [Informationen zu Mediendetails](./data-types/media-details-information.md)
+   * [Medien-Ereignisinformationen](./data-types/media-event-information.md)
    * [Bestellung](./data-types/order.md)
    * [Zahlungselement](./data-types/payment-item.md)
    * [Person](./data-types/person.md)
    * [Personenname](./data-types/person-name.md)
    * [Telefonnummer](./data-types/phone-number.md)
    * [Ortskontext](./data-types/place-context.md)
+   * [Player-Statusinformationen](./data-types/player-state-data-information.md)
    * [POI-Details](./data-types/poi-details.md)
    * [POI-Interaktion](./data-types/poi-interaction.md)
    * [Postadresse](./data-types/postal-address.md)
    * [Produktlistenelement](./data-types/product-list-item.md)
+   * [Informationen zu QoE-Daten](./data-types/qoe-data-details-information.md)
    * [Suche](./data-types/search.md)
+   * [Sitzungsdetails - Informationen](./data-types/session-details-information.md)
    * [Abonnement](./data-types/subscription.md)
    * [Telekom-Abonnement](./data-types/telecom-subscription.md)
    * [Transaktion](./data-types/transaction.md)
@@ -194,7 +205,7 @@ ht-degree: 100%
    * [Hinzufügen bestimmter Felder zu einem Schema (API)](./tutorials/specific-fields-api.md)
    * [Definieren benutzerdefinierter Felder (API)](./tutorials/custom-fields-api.md)
    * [Hinzufügen empfohlener Werte zu einem Feld (API)](tutorials/suggested-values.md)
-   * [Einstellen eines XDM-Felds in der Benutzeroberfläche](tutorials/field-deprecation-ui.md)
+   * [Verwerfen eines XDM-Felds in der Benutzeroberfläche](tutorials/field-deprecation-ui.md)
    * [Ein XDM-Feld in der API verwerfen](tutorials/field-deprecation-api.md)
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
