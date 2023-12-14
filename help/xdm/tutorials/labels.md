@@ -2,9 +2,9 @@
 title: Verwalten von Datennutzungsbezeichnungen für ein Schema
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Schemafeldern des Experience-Datenmodell (XDM) Datennutzungsbezeichnungen hinzufügen.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '806'
 ht-degree: 10%
 
 ---
@@ -43,6 +43,10 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 Um Beschriftungen hinzuzufügen, müssen Sie zunächst [ein vorhandenes Schema zur Bearbeitung auswählen](../ui/resources/schemas.md#edit) oder [Erstellen eines neuen Schemas](../ui/resources/schemas.md#create) , um die Struktur im Schema-Editor anzuzeigen.
 
 Um die Beschriftungen für ein einzelnes Feld zu bearbeiten, können Sie das Feld auf der Arbeitsfläche auswählen und dann **[!UICONTROL Zugriff verwalten]** in der rechten Leiste.
+
+>[!IMPORTANT]
+>
+>Auf jedes Schema können maximal 300 Bezeichnungen angewendet werden.
 
 ![Wählen Sie ein Feld aus der Arbeitsfläche des Schema-Editors aus](../images/tutorials/labels/manage-access.png)
 

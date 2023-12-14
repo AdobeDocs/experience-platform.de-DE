@@ -5,10 +5,10 @@ title: Erstellen und Bearbeiten von Datentypen über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie Datentypen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 7%
+source-wordcount: '1384'
+ht-degree: 6%
 
 ---
 
@@ -22,6 +22,10 @@ ht-degree: 7%
 Im Experience-Datenmodell (XDM) sind Datentypen wiederverwendbare Felder, die mehrere Unterfelder enthalten. Auch wenn sie Schemafeldgruppen insofern ähneln, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können.
 
 Adobe Experience Platform bietet viele Standarddatentypen, mit denen eine Vielzahl gängiger Anwendungsfälle für das Erlebnismanagement abgedeckt werden kann. Sie können jedoch auch eigene benutzerdefinierte Datentypen definieren, um Ihren individuellen Geschäftsanforderungen gerecht zu werden.
+
+>[!NOTE]
+>
+>Wenn ein Feld als spezifischer Datentyp definiert ist, können Sie dasselbe Feld mit einem anderen Datentyp nicht in einem anderen Schema erstellen. Diese Einschränkung gilt für den gesamten Mandanten Ihres Unternehmens.
 
 In diesem Tutorial werden die Schritte zum Erstellen und Bearbeiten benutzerdefinierter Datentypen in der Benutzeroberfläche von Platform beschrieben.
 

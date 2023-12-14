@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '4141'
-ht-degree: 30%
+source-wordcount: '4143'
+ht-degree: 27%
 
 ---
 
@@ -115,7 +115,7 @@ Wie das obige Beispiel zeigt, enthält jeder Schlüssel im `identityMap` -Objekt
 >
 >Ein boolescher Wert, der angibt, ob der Wert eine primäre Identität ist (`primary`) kann auch für jeden Identitätswert bereitgestellt werden. Primäre Identitäten müssen nur für Schemata festgelegt werden, die in [!DNL Real-Time Customer Profile]. Siehe Abschnitt zu [Vereinigungsschemas](#union) für weitere Informationen.
 
-### Schema-Evolutionsprinzipien {#evolution}
+### Prinzipien der Schemaentwicklung {#evolution}
 
 In dem Maße, wie sich die Art der digitalen Erfahrungen weiterentwickelt, müssen sich auch die Schemas, die zu ihrer Darstellung verwendet werden, weiterentwickeln. Ein gut entworfenes Schema ist daher in der Lage, sich bei Bedarf anzupassen und weiterzuentwickeln, ohne destruktive Änderungen an früheren Versionen des Schemas zu verursachen.
 
@@ -157,7 +157,7 @@ Um Daten in [!DNL Experience Platform], muss zunächst ein Datensatz erstellt we
 
 ## Bausteine eines Schemas
 
-[!DNL Experience Platform]Die verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemas zu erstellen. Dieser Ansatz fördert die Wiederverwendbarkeit vorhandener Komponenten und sorgt für Standardisierung in der gesamten Branche, um Schemas und Komponenten von Anbietern in [!DNL Platform].
+[!DNL Experience Platform] verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemas zu erstellen. Dieser Ansatz fördert die Wiederverwendbarkeit vorhandener Komponenten und sorgt für Standardisierung in der gesamten Branche, um Schemas und Komponenten von Anbietern in [!DNL Platform].
 
 Schemas werden nach folgender Formel zusammengestellt:
 
@@ -222,7 +222,11 @@ Die aktuellste Liste der verfügbaren Standard-XDM-Feldgruppen finden Sie im Abs
 
 Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Teilfelder definieren können. Sie können mehrere Unterfelder auf die gleiche Weise wie Feldergruppen definieren. Der wesentliche Unterschied besteht jedoch darin, dass Datentypen an einer beliebigen Stelle in ein Schema eingefügt werden können, indem sie als &quot;Datentyp&quot;eines Felds hinzugefügt werden. Während Feldergruppen nur mit bestimmten Klassen kompatibel sind, können Datentypen in jede übergeordnete Klasse oder Feldergruppe aufgenommen werden.
 
-[!DNL Experience Platform] bietet eine Reihe gemeinsamer Datentypen als Teil der [!DNL Schema Registry] Unterstützung der Verwendung von Standardmustern zur Beschreibung gemeinsamer Datenstrukturen. Dies wird im Abschnitt [!DNL Schema Registry] -Tutorials, in denen es bei den Schritten zur Definition von Datentypen klarer wird.
+>[!NOTE]
+>
+>Wenn ein Feld als spezifischer Datentyp definiert ist, können Sie dasselbe Feld mit einem anderen Datentyp nicht in einem anderen Schema erstellen. Diese Einschränkung gilt für den gesamten Mandanten Ihres Unternehmens.
+
+[!DNL Experience Platform] bietet eine Reihe gemeinsamer Datentypen als Teil der [!DNL Schema Registry] Unterstützung der Verwendung von Standardmustern zur Beschreibung gemeinsamer Datenstrukturen. Dies wird im Abschnitt [Tutorials zur Schema Registry](../tutorials/create-schema-api.md), wo es beim Durchlaufen der Schritte zur Definition von Datentypen klarer wird.
 
 Der folgende Screenshot zeigt, wie Datentypen in der Platform-Benutzeroberfläche dargestellt werden. Eines der Felder, die vom [!UICONTROL Demografische Details] -Feldergruppe verwendet die[!UICONTROL Objekt]&quot;Datentyp, wie durch den Text nach dem senkrechten Strich (`|`) neben dem Feldnamen. Dieser bestimmte Datentyp bietet mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
 
@@ -257,7 +261,7 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 >[!NOTE]
 >
-> Der Feldtyp „Karte“ ermöglicht Daten für Schlüssel-Wertepaare, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Karten finden Sie in Standard-XDM-Klassen und Feldergruppen, Sie können jedoch auch benutzerdefinierte Maps mithilfe der Schema Registry-API definieren. Siehe Tutorial zu [Definieren von benutzerdefinierten Feldern](../tutorials/custom-fields-api.md#custom-maps) für weitere Informationen.
+>Der Feldtyp &quot;map&quot;ermöglicht Daten aus Schlüssel/Wert-Paaren, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Karten finden Sie in Standard-XDM-Klassen und Feldergruppen, Sie können jedoch auch benutzerdefinierte Maps mithilfe der Schema Registry-API definieren. Siehe Tutorial zu [Definieren von benutzerdefinierten Feldern](../tutorials/custom-fields-api.md#custom-maps) für weitere Informationen.
 
 ## Kompositionsbeispiel
 
@@ -271,13 +275,13 @@ Das folgende Diagramm zeigt diese Schemas und die von den einzelnen Feldergruppe
 
 ![](../images/schema-composition/composition.png)
 
-### Vereinigung {#union}
+### Union {#union}
 
 while [!DNL Experience Platform] ermöglicht es Ihnen, Schemas für bestimmte Anwendungsfälle zu erstellen. Außerdem können Sie eine &quot;Vereinigung&quot;von Schemas für einen bestimmten Klassentyp sehen. Das vorherige Diagramm zeigt zwei Schemas, die auf der XDM ExperienceEvent-Klasse basieren, und zwei Schemas, die auf [!DNL XDM Individual Profile] -Klasse. Die unten dargestellte Vereinigung aggregiert die Felder aller Schemas, die dieselbe Klasse ([!DNL XDM ExperienceEvent] und [!DNL XDM Individual Profile], bzw. ).
 
 ![](../images/schema-composition/union.png)
 
-Durch Aktivierung eines Schemas zur Verwendung mit [!DNL Real-Time Customer Profile], wird sie in die Vereinigung für diesen Klassentyp aufgenommen. [!DNL Profile] bietet robuste, zentralisierte Profile von Kundenattributen sowie ein mit Zeitstempel versehenes Konto für jedes Ereignis, das Kunden in allen Systemen hatten, die mit [!DNL Platform]. [!DNL Profile] verwendet die vereinigte Ansicht, um diese Daten zu repräsentieren und eine ganzheitliche Ansicht jedes einzelnen Kunden bereitzustellen.
+Durch Aktivierung eines Schemas zur Verwendung mit [!DNL Real-Time Customer Profile], wird sie in die Vereinigung für diesen Klassentyp aufgenommen. [!DNL Profile] bietet robuste, zentralisierte Profile von Kundenattributen sowie ein mit Zeitstempel versehenes Konto für jedes Ereignis, das Kunden in allen Systemen hatten, die mit [!DNL Platform]. [!DNL Profile] verwendet die Vereinigungsansicht, um diese Daten darzustellen und eine ganzheitliche Sicht auf jeden einzelnen Kunden bereitzustellen.
 
 Weitere Informationen zum Arbeiten mit [!DNL Profile], siehe [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
@@ -315,7 +319,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zu den Prinzipien 
 
 Bei der Arbeit mit relationalen Datenbanken bestehen die Best Practices darin, Daten zu normalisieren oder eine Entität in diskrete Teile zu zerlegen, die dann in mehreren Tabellen angezeigt werden. Um die Daten als Ganzes zu lesen oder die Entität zu aktualisieren, müssen Lese- und Schreibvorgänge über viele einzelne Tabellen mit JOIN durchgeführt werden.
 
-Durch die Verwendung von eingebetteten Objekten können XDM-Schemas komplexe Daten direkt darstellen und in eigenständigen Dokumenten mit hierarchischer Struktur speichern. Einer der Hauptvorteile dieser Struktur besteht darin, dass Sie damit die Daten abfragen können, ohne die Entität durch teure Verbindungen zu mehreren denormalisierten Tabellen rekonstruieren zu müssen. Es gibt keine Einschränkungen dafür, wie viele Ebenen Ihre Schemahierarchie sein kann.
+Durch die Verwendung von eingebetteten Objekten können XDM-Schemas komplexe Daten direkt darstellen und in eigenständigen Dokumenten mit hierarchischer Struktur speichern. Einer der Hauptvorteile dieser Struktur besteht darin, dass Sie die Daten abfragen können, ohne die Entität durch teure Verbindungen zu mehreren denormalisierten Tabellen rekonstruieren zu müssen. Es gibt keine Einschränkungen dafür, wie viele Ebenen Ihre Schemahierarchie sein kann.
 
 ### Schemas und Big Data {#big-data}
 

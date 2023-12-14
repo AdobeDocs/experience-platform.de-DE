@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry;
+keywords: Experience Platform; home; beliebte Themen; api; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry;
 solution: Experience Platform
 title: Handbuch zur Schema Registry-API
 description: Mit der Schema Registry-API können Entwickler alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 9%
+source-wordcount: '1141'
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Die [!DNL Schema Registry] wird verwendet, um auf die Schema Library in Adobe Experience Platform zuzugreifen und eine Benutzeroberfläche und RESTful-API bereitzustellen, über die alle verfügbaren Bibliotheksressourcen zugänglich sind.
 
-Die Schema Registry-API bietet mehrere Endpunkte, mit denen Sie alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen, die Ihnen in Platform zur Verfügung stehen, programmgesteuert verwalten können. Dies schließt die durch die Adobe definierten [!DNL Experience Platform] Partner und Anbieter, deren Anwendungen Sie verwenden.
+Die Schema Registry-API bietet mehrere Endpunkte, mit denen Sie alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen, die Ihnen in Platform zur Verfügung stehen, programmgesteuert verwalten können. Dies schließt die von Adobe definierten ein, [!DNL Experience Platform] Partner und Anbieter, deren Anwendungen Sie verwenden.
 
 Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
@@ -47,7 +47,11 @@ Feldergruppen sind wiederverwendbare Komponenten, die ein oder mehrere Felder de
 
 ## Datentypen
 
-Datentypen werden in Klassen oder Feldergruppen auf die gleiche Weise wie einfache literale Felder als Referenztypen verwendet, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Auch wenn sie Feldgruppen insofern ähnlich sind, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Siehe [Endleitfaden für Datentypen](./data-types.md) Weitere Informationen zum Arbeiten mit Datentypen in der API.
+Datentypen werden in Klassen oder Feldergruppen auf die gleiche Weise wie einfache literale Felder als Referenztypen verwendet, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Auch wenn sie Feldgruppen insofern ähnlich sind, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Siehe [Endleitfaden für Datentypen](./data-types.md) für weitere Informationen zum Arbeiten mit Datentypen in der API.
+
+>[!NOTE]
+>
+>Wenn ein Feld als spezifischer Datentyp definiert ist, können Sie dasselbe Feld mit einem anderen Datentyp nicht in einem anderen Schema erstellen. Diese Einschränkung gilt für den gesamten Mandanten Ihres Unternehmens.
 
 ## Deskriptoren
 
@@ -67,7 +71,7 @@ Siehe [Handbuch zur Konversion von CSV zu Schemas](./export.md) für weitere Inf
 
 >[!NOTE]
 >
->Sie können die Benutzeroberfläche auch für [Zuordnen einer CSV zu einem Schema mithilfe von KI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md) (derzeit in der Beta-Phase).
+>Sie können die Benutzeroberfläche auch für [eine CSV mit KI-generierten Empfehlungen einem Schema zuordnen](../../ingestion/tutorials/map-csv/recommendations.md) (derzeit in der Beta-Phase).
 
 ## Exportieren {#export}
 
@@ -77,7 +81,7 @@ Siehe [Export-Endpunkthandbuch](./export.md) für weitere Informationen zum Erst
 
 ## Importieren
 
-Wenn Sie [export](#export) oder [Konvertierung von CSV in Schemas](./import.md) -Endpunkte zum Erstellen einer Export-Payload können Sie diese Payload an eine Zielorganisation und Sandbox senden, um die angegebenen Ressourcen zu importieren.
+Wenn Sie die [export](#export) oder [Konvertierung von CSV in Schemas](./import.md) -Endpunkte zum Erstellen einer Export-Payload können Sie diese Payload an eine Zielorganisation und Sandbox senden, um die angegebenen Ressourcen zu importieren.
 
 Siehe [Import-Endpunkthandbuch](./export.md) für weitere Informationen zum Generieren von XDM-Ressourcen aus Export-Payloads.
 

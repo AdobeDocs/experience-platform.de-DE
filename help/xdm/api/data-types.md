@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Datenmodell; Datentypregistrierung; Schema Registry; Datentyp; Datentyp; Datentypen; erstellen
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Datenmodell;Datentypregistrierung;Schema Registry;Datentyp;Datentyp;Datentypen;erstellen
 solution: Experience Platform
 title: Datentypen-API-Endpunkt
 description: Mit dem Endpunkt /datatypes in der Schema Registry-API können Sie XDM-Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 15%
+source-wordcount: '1247'
+ht-degree: 13%
 
 ---
 
 # Datentypendpunkt
 
-Datentypen werden in Klassen oder Schemafeldgruppen auf die gleiche Weise als Referenztyp-Felder verwendet wie einfache literale Felder, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Auch wenn sie Feldgruppen insofern ähnlich sind, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Die `/datatypes` -Endpunkt im [!DNL Schema Registry] Mit der API können Sie Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Datentypen werden in Klassen oder Schemafeldgruppen auf die gleiche Weise wie einfache literale Felder als Referenztyp verwendet, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Auch wenn sie Feldgruppen insofern ähnlich sind, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Die `/datatypes` -Endpunkt im [!DNL Schema Registry] Mit der API können Sie Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+
+>[!NOTE]
+>
+>Wenn ein Feld als spezifischer Datentyp definiert ist, können Sie dasselbe Feld mit einem anderen Datentyp nicht in einem anderen Schema erstellen. Diese Einschränkung gilt für den gesamten Mandanten Ihres Unternehmens.
 
 ## Erste Schritte
 
@@ -21,7 +25,7 @@ Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] 
 
 ## Liste von Datentypen abrufen {#list}
 
-Sie können alle Datentypen unter der `global` oder `tenant` Container durch eine GET-Anfrage an `/global/datatypes` oder `/tenant/datatypes`zurück.
+Sie können alle Datentypen unter der `global` oder `tenant` Container durch eine GET-Anfrage an `/global/datatypes` oder `/tenant/datatypes`, bzw.
 
 >[!NOTE]
 >
@@ -35,8 +39,8 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, aus dem Sie Datentypen abrufen möchten: `global` für von der Adobe erstellte Datentypen oder `tenant` für Datentypen, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anhang](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
+| `{CONTAINER_ID}` | Der Container, aus dem Sie Datentypen abrufen möchten: `global` für von Adobe erstellte Datentypen oder `tenant` für Datentypen, die Ihrem Unternehmen gehören. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe [Anlagendokument](./appendix.md#query) für eine Liste der verfügbaren Parameter. |
 
 {style="table-layout:auto"}
 
@@ -54,7 +58,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Folgendes `Accept` -Header sind für die Auflistung von Datentypen verfügbar:
+Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Die folgenden `Accept` -Header sind für die Auflistung von Datentypen verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
@@ -65,7 +69,7 @@ Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesende
 
 **Antwort**
 
-Die obige Anfrage verwendete die `application/vnd.adobe.xed-id+json` `Accept` -Kopfzeile; daher enthält die Antwort nur die `title`, `$id`, `meta:altId`und `version` -Attribute für jeden Datentyp. Andere verwenden `Accept` header (`application/vnd.adobe.xed+json`) gibt alle Attribute jedes Datentyps zurück. Wählen Sie die entsprechende `Accept` -Kopfzeile entsprechend den Informationen, die Sie in Ihrer Antwort benötigen.
+Die obige Anfrage verwendete die `application/vnd.adobe.xed-id+json` `Accept` -Kopfzeile; daher enthält die Antwort nur die `title`, `$id`, `meta:altId`, und `version` -Attribute für jeden Datentyp. Andere verwenden `Accept` header (`application/vnd.adobe.xed+json`) gibt alle Attribute jedes Datentyps zurück. Wählen Sie die entsprechende `Accept` -Kopfzeile entsprechend den Informationen, die Sie in Ihrer Antwort benötigen.
 
 ```json
 {
@@ -128,7 +132,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Alle Suchanfragen erfordern eine `version` enthalten sein. `Accept` -Kopfzeile. Folgendes `Accept` Header sind verfügbar:
+Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Alle Anfragen zum Nachschlagen erfordern eine `version` enthalten sein. `Accept` -Kopfzeile. Die folgenden `Accept` Header sind verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | ------- | ------------ |
@@ -237,7 +241,7 @@ Im Gegensatz zu Feldergruppen erfordert das Definieren eines Datentyps keine `me
 
 Bei der Definition der Feldstruktur des Datentyps selbst können Sie Primitive-Typen verwenden (wie `string` oder `object`) oder Sie können andere vorhandene Datentypen über referenzieren. `$ref` -Attribute. Siehe Handbuch unter [Definieren benutzerdefinierter XDM-Felder in der API](../tutorials/custom-fields-api.md) für ausführliche Anleitungen zum erwarteten Format für verschiedene XDM-Feldtypen.
 
-Die folgende Anfrage erstellt einen Objektdatentyp &quot;Property Construction&quot;mit Untereigenschaften `yearBuilt`, `propertyType`und `location`:
+Die folgende Anfrage erstellt einen Objektdatentyp &quot;Property Construction&quot;mit Untereigenschaften `yearBuilt`, `propertyType`, und `location`:
 
 ```SHELL
 curl -X POST \
@@ -351,7 +355,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 
 Durchführen einer GET-Anfrage an [alle Datentypen auflisten](#list) im Mandanten-Container nun den Datentyp Eigenschaftendetails enthalten, oder Sie können [Anfrage zum Nachschlagen (GET) ausführen](#lookup) mit der URL-kodierten `$id` URI, um den neuen Datentyp direkt anzuzeigen.
 
-## Aktualisieren eines Datentyps {#put}
+## Datentyp aktualisieren {#put}
 
 Sie können einen ganzen Datentyp durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Datentyps über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die erforderlich sind, wenn [Erstellen eines neuen Datentyps](#create) in einer POST-Anfrage.
 
@@ -484,7 +488,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Datentyps zurück.
 
 ## Einen Teil eines Datentyps aktualisieren {#patch}
 
-Sie können einen Teil eines Datentyps mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Datentyps mithilfe einer PATCH-Anfrage aktualisieren. Die [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove`, und `replace`. Weitere Informationen zu JSON-Patch-Vorgängen finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
