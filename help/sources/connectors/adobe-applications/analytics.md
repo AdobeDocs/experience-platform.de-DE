@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics Source Connector für Report Suite-Daten
-description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
+description: Dieses Dokument bietet einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 17%
+source-wordcount: '1110'
+ht-degree: 10%
 
 ---
 
@@ -21,13 +21,13 @@ Dieses Dokument bietet einen Überblick über [!DNL Analytics] und beschreibt di
 
 ![Eine Grafik, die die Journey von Daten aus verschiedenen Adobe-Applikationen, einschließlich Adobe Analytics, veranschaulicht.](./images/analytics-data-experience-platform.png)
 
-Auf hoher Ebene [!DNL Analytics] erfasst Daten aus verschiedenen digitalen Kanälen und Rechenzentren auf der ganzen Welt. Nachdem die Daten erfasst wurden, werden VISTA-Regeln (Visitor Identification, Segmentation and Transformation Architecture) und Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. Nachdem die Rohdaten diese einfache Verarbeitung durchlaufen haben, werden sie von [!DNL Real-Time Customer Profile]. In einem Prozess, der parallel zu den oben genannten erfolgt, werden dieselben verarbeiteten Daten in Mikro-Batches gepackt und in Platform-Datensätzen erfasst, die von [!DNL Data Science Workspace], [!DNL Query Service]und anderen Anwendungen zur Datenerkennung.
+Auf hoher Ebene [!DNL Analytics] erfasst Daten aus verschiedenen digitalen Kanälen und Rechenzentren auf der ganzen Welt. Nachdem die Daten erfasst wurden, werden VISTA-Regeln (Visitor Identification, Segmentation and Transformation Architecture) und Verarbeitungsregeln angewendet, um die eingehenden Daten zu formen. Nachdem die Rohdaten diese einfache Verarbeitung durchlaufen haben, werden sie von [!DNL Real-Time Customer Profile]. In einem Prozess, der parallel zu den oben genannten erfolgt, werden dieselben verarbeiteten Daten in Mikro-Batches gepackt und in Platform-Datensätzen erfasst, die von [!DNL Query Service]und anderen Anwendungen zur Datenerkennung.
 
 Siehe [Übersicht über Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=de) für weitere Informationen zu Verarbeitungsregeln.
 
 ## Experience-Datenmodell (XDM)
 
-XDM ist eine öffentlich dokumentierte Spezifikation, die einheitliche Strukturen und Definitionen für eine Anwendung bereitstellt, damit diese mit Diensten in Experience Platform kommunizieren kann.
+XDM ist eine öffentlich dokumentierte Spezifikation, die gemeinsame Strukturen und Definitionen für eine Anwendung bereitstellt, die zur Kommunikation mit Diensten auf dem Experience Platform verwendet werden kann.
 
 Durch Einhaltung von XDM-Standards können Daten einheitlich integriert werden, was die Bereitstellung von Daten und das Sammeln von Informationen erleichtert.
 
@@ -45,7 +45,7 @@ Detaillierte Informationen zum Feld-Mapping, das zwischen [!DNL Analytics] und E
 
 ## Wie hoch ist die erwartete Latenz für Analytics-Daten in Platform?
 
-Die erwartete Latenz für Analytics-Daten in Platform ist in der folgenden Tabelle dargestellt.  Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
+Die erwartete Latenz für Analytics-Daten in Platform ist in der folgenden Tabelle dargestellt. Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
 
 | Analytics-Daten | Erwartete Latenz |
 | -------------- | ---------------- |
