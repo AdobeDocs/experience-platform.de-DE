@@ -5,10 +5,10 @@ title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Se
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 46%
+source-wordcount: '1169'
+ht-degree: 44%
 
 ---
 
@@ -486,13 +486,15 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 Sehen Sie sich unten die Beispiel-Payload für Beispiele für rohe oder XDM-kompatible JSON an, die Sie zur Aufnahme senden können.
 
->[!TIP]
+>[!NOTE]
 >
->Die folgenden Beispiele gelten für alle drei Elemente:
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>Sie müssen zwischen der Erstellung des Datenflusses und der Aufnahme von Streaming-Daten eine Verzögerung von mindestens ca. 5 Minuten hinzufügen. Dadurch kann der Datenfluss vollständig aktiviert werden, bevor Daten erfasst werden.
+
+Die folgenden Beispiele gelten für alle:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 

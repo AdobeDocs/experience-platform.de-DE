@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung
 title: Erstellen einer HTTP-API-Streaming-Verbindung mithilfe der Flow Service-API
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Flow Service-API eine Streaming-Verbindung mithilfe der HTTP-API-Quelle für Roh- und XDM-Daten erstellen
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f94a51e22731977e120351c3b3598570666a624d
+source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 38%
+source-wordcount: '1568'
+ht-degree: 35%
 
 ---
 
@@ -563,6 +563,10 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zum neu erstellte
 ```
 
 ## Beitragsdaten, die in Platform erfasst werden sollen {#ingest-data}
+
+>[!NOTE]
+>
+>Sie müssen zwischen der Erstellung des Datenflusses und der Aufnahme von Streaming-Daten eine Verzögerung von mindestens ca. 5 Minuten hinzufügen. Dadurch kann der Datenfluss vollständig aktiviert werden, bevor Daten erfasst werden.
 
 Nachdem Sie Ihren Fluss erstellt haben, können Sie Ihre JSON-Nachricht an den zuvor erstellten Streaming-Endpunkt senden.
 
