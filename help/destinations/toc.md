@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 94%
+source-wordcount: '1188'
+ht-degree: 92%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 94%
    * [Aktualisieren von Ziel-Datenflüssen](./api/update-destination-dataflows.md)
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
-   * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
+   * [Exportieren von Datensätzen](/help/destinations/api/export-datasets.md)
    * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
@@ -45,7 +45,7 @@ ht-degree: 94%
       * [Aktivieren von potenziellen Zielgruppen für Ziele](./ui/activate-prospect-audiences.md)
       * [(Eingeschränkte Verfügbarkeit) Konto-Zielgruppen für Ziele aktivieren](./ui/activate-account-audiences.md)
       * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
-      * [Exportieren von Datensätzen mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
+      * [Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
       * [(Beta) Verwenden von berechneten Feldern, um Arrays in flache Schemadateien zu exportieren](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
@@ -54,7 +54,7 @@ ht-degree: 94%
    * [Bearbeiten von Aktivierungsdatenflüssen](./ui/edit-activation.md)
    * [Löschen von Zielen](./ui/delete-destinations.md)
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
-   * [Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](./ui/batch-destinations-file-formatting-options.md)
+   * [Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren](./ui/batch-destinations-file-formatting-options.md)
    * [Abonnieren von kontextbezogenen Zielwarnhinweisen](ui/alerts.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
@@ -91,6 +91,7 @@ ht-degree: 94%
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
       * [Pinterest-Verbindungs-Upgrade](./catalog/advertising/pinterest-upgrade.md)
+      * [Verbindung zum PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads-Verbindung](./catalog/advertising/snap-inc.md)
       * [Verbindung mit The Trade Desk](./catalog/advertising/tradedesk.md)
       * [(Beta) The Trade Desk CRM-Verbindung ](./catalog/advertising/tradedesk-emails.md)
@@ -204,7 +205,7 @@ ht-degree: 94%
 * Destination SDK {#destination-sdk}
    * [Übersicht](./destination-sdk/overview.md)
    * [Voraussetzungen für die Integration](./destination-sdk/integration-prerequisites.md)
-   * [Erste Schritte  mit Destination SDK](./destination-sdk/getting-started.md)
+   * [Erste Schritte mit dem Destination SDK](./destination-sdk/getting-started.md)
    * Funktionalität {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/functionality/configuration-options.md)
       * Ziel-Server-Komponenten {#destination-server}

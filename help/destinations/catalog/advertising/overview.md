@@ -3,10 +3,10 @@ keywords: Werbeziele; Ziele; Plattformziele
 title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 58%
+source-wordcount: '263'
+ht-degree: 51%
 
 ---
 
@@ -36,6 +36,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Google Customer Match-Verbindung](google-customer-match.md)
 * [Microsoft Bing-Verbindung](bing.md)
 * [Pinterest Customer List-Verbindung](pinterest.md)
+* [PubMatic Connect-Ziel](pubmatic.md)
 * [(Beta) Snapchat Ads-Verbindung](snap-inc.md)
 * [Verbindung mit The Trade Desk](tradedesk.md)
 * [(Beta) The Trade Desk CRM-Verbindung ](tradedesk-emails.md)
@@ -44,7 +45,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 ### Erweiterungen
 
 * [Adobe Advertising Cloud-Erweiterung](adobe-advertising-cloud.md)
-* [Awin Advertising Conversion Tag-Erweiterung](awin-conversiontag.md)
+* [Advertising Conversion Tag-Erweiterung](awin-conversiontag.md)
 * [Awin Advertising Mastertag-Erweiterung](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking-Erweiterung](bing-ads.md)
 * [Branch-Erweiterung](branch.md)
