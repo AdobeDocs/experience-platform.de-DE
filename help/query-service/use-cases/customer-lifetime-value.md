@@ -2,7 +2,7 @@
 title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
 description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -47,7 +47,7 @@ Der erste Schritt bei der Erstellung Ihrer CLV besteht darin, einen abgeleiteten
 
 ## Erweitern des Insight-Datenmodells und Planen von Aktualisierungen {#extend-data-model-and-set-refresh-schedule}
 
-Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein vorhandenes Adobe Real-Time CDP-Datenmodell erweitern, um mit Ihren CLV-Berichtseinblicken zu interagieren. Weitere Informationen finden Sie in der Dokumentation . [Erstellen eines Datenmodells mit Berichtseinblicken über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Das Tutorial umfasst die folgenden Schritte:
+Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein vorhandenes Adobe Real-Time CDP-Datenmodell erweitern, um mit Ihren CLV-Berichtseinblicken zu interagieren. Weitere Informationen finden Sie in der Dokumentation . [Erstellen eines Datenmodells mit Berichtseinblicken über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Das Tutorial umfasst die folgenden Schritte:
 
 * Erstellen Sie ein Modell für die Berichterstellung von Einblicken mit Data Distiller.
 * Erstellen Sie Tabellen, Beziehungen und füllen Sie Daten aus.

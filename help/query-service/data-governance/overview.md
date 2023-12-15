@@ -2,10 +2,10 @@
 title: Data Governance in Query Service
 description: Dieser Überblick behandelt die wichtigsten Elemente der Data Governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
-ht-degree: 3%
+source-wordcount: '3129'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Unternehmen, die routinemäßig Datenverarbeitung durchführen, sollten diese Ri
 Die folgenden Kategorien sind bei der Verwendung von Query Service für die Einhaltung von Vorschriften zur Datenkonformität von entscheidender Bedeutung:
 
 1. Sicherheit
-1. Audit
+1. Verfolgung
 1. Datennutzung
 1. Datenschutz   
 1. Datenhygiene
@@ -93,7 +93,7 @@ Die `CREATE VIEW` -Keyword definiert eine Ansicht einer Abfrage, aber die Ansich
 
 #### Feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze erstellen {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Mit dem [Attributbasierte Zugriffssteuerungsfunktion](../../access-control/abac/overview.md) Sie können Organisations- oder Datennutzungsbereiche für Fakten- und Dimensionsdatensätze in der [beschleunigter Speicher](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Dadurch können Administratoren den Zugriff auf bestimmte Segmente verwalten und den Zugriff für Benutzer oder Benutzergruppen besser verwalten.
+Mit dem [Attributbasierte Zugriffssteuerungsfunktion](../../access-control/abac/overview.md) Sie können Organisations- oder Datennutzungsbereiche für Fakten- und Dimensionsdatensätze in der [beschleunigter Speicher](../data-distiller/customizable-insights/send-accelerated-queries.md). Dadurch können Administratoren den Zugriff auf bestimmte Segmente verwalten und den Zugriff für Benutzer oder Benutzergruppen besser verwalten.
 
 Um feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze zu erstellen, können Sie CTAS-Abfragen von Query Service verwenden, um beschleunigte Datensätze zu erstellen und diese Datensätze basierend auf vorhandenen XDM-Schemas oder Ad-hoc-Schemas zu strukturieren. Administratoren können dann [Hinzufügen und Bearbeiten von Datennutzungsbezeichnungen für das Schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) oder [Ad-hoc-Schema](./ad-hoc-schema-labels.md#edit-governance-labels). Sie können Beschriftungen auf Ihre Schemata anwenden, erstellen und bearbeiten über die [!UICONTROL Bezeichnungen] Arbeitsbereich im [!UICONTROL Schemas] Benutzeroberfläche.
 
@@ -140,9 +140,9 @@ Die Datenkonformität von Query Service stellt sicher, dass Daten immer verschl�
 Daten-in-Transit sind immer HTTPS-konform und auf ähnliche Weise, wenn sich die Daten im Data Lake befinden, erfolgt die Verschlüsselung mit dem Customer Management Key (CMK), der bereits von Data Lake Management unterstützt wird. Die derzeit unterstützte Version ist TLS1.2. Siehe [Dokumentation zu kundenverwalteten Schlüsseln (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) , um zu erfahren, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 
 
-## Audit {#audit}
+## Verfolgung {#audit}
 
-Query Service zeichnet die Benutzeraktivität auf und kategorisiert diese Aktivität in verschiedene Protokolltypen. Logs liefern Informationen zu **who** ausgeführt **what** Aktion und **when**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben.
+Query Service zeichnet die Benutzeraktivität auf und kategorisiert diese Aktivität in verschiedene Protokolltypen. Logs liefern Informationen zu **who** ausgeführt **what** Aktion und **when**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des/der Benutzenden, der/die die Aktion ausgeführt hat, und zusätzliche Attribute des Aktionstyps angeben.
 
 Eine beliebige Protokollkategorie kann von einem Platform-Benutzer angefordert werden. In diesem Abschnitt finden Sie Details zum Typ der für Query Service erfassten Informationen und darüber, wo auf diese Informationen zugegriffen werden kann.
 

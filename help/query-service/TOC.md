@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
+source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 86%
+source-wordcount: '313'
+ht-degree: 84%
 
 ---
 
@@ -26,9 +26,10 @@ ht-degree: 86%
       - [Übersicht](data-distiller/derived-datasets/overview.md)
       - [Nahtloser SQL-Fluss](data-distiller/derived-datasets/seamless-sql-flow.md)
       - [Erstellen von dezimalbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Abfrage-beschleunigte Speicherung {#query-accelerated-store}
-      - [Beschleunigte Abfragen senden](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-      - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - Anpassbare Insights für erweiterte App-Berichte {#customizable-insights}
+      - [Übersicht](data-distiller/customizable-insights/overview.md)
+      - [Beschleunigte Abfragen senden](data-distiller/customizable-insights/send-accelerated-queries.md)
+      - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI-/ML-Funktions-Pipelines {#ml-feature-pipelines}
       - [Übersicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Herstellen einer Verbindung zu Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
