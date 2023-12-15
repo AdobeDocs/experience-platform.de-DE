@@ -2,10 +2,10 @@
 title: On-Demand-Aufnahme für Datenflüsse zu Quellen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Datenflüsse bei Bedarf für Ihre Quellverbindungen erstellen.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 11%
+source-wordcount: '522'
+ht-degree: 10%
 
 ---
 
@@ -24,6 +24,10 @@ Flussläufe stellen eine Instanz der Ausführung des Datenflusses dar. Wenn beis
 >[!ENDSHADEBOX]
 
 ## Erste Schritte
+
+>[!NOTE]
+>
+>Um einen Flusslauf zu erstellen, müssen Sie zunächst über die Fluss-ID eines Datenflusses verfügen, der für die einmalige Erfassung geplant ist.
 
 Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
