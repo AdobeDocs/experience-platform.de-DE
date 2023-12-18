@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe;
 solution: Experience Platform
 title: Feldgruppe "Campaign Marketing Details"
-description: Dieses Dokument bietet einen Überblick über die Schemakontrolle des Campaign-Marketing-Details-Schemas.
+description: Erfahren Sie mehr über die Schemakonferenz für Marketing-Details in Campaign.
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 17%
+source-wordcount: '124'
+ht-degree: 20%
 
 ---
 

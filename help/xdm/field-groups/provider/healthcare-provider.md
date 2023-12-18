@@ -1,11 +1,11 @@
 ---
 title: Schema-Gruppe des Gesundheitsdienstleisters
-description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe des Gesundheitsdienstleisters.
+description: Erfahren Sie mehr über die Schemafeldergruppe "Health Care Provider".
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 9%
+source-wordcount: '254'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 9%
 | `emailAddress` | [[!UICONTROL E-Mail-Adresse]](../../data-types/email-address.md) | Die E-Mail-Adresse des Providers. |
 | `fax` | [[!UICONTROL Telefonnummer]](../../data-types/phone-number.md) | Faxnummer des Providers. |
 | `phoneNumber` | [[!UICONTROL Telefonnummer]](../../data-types/phone-number.md) | Die Telefonnummer des Providers. |
-| `qualifications` | Array von Objekten | Führt die für die Betreuung erforderlichen Zertifizierungen, Lizenzen oder Schulungen auf. Jedes Objekt enthält die folgenden Eigenschaften: <ul><li>`issuer`: ([[!UICONTROL Kontodetails]](../../data-types/account-details.md)): Die Organisation, die die Qualifikation reguliert und ausstellt.</li><li>`activePeriod`: (Ganzzahl) Das Jahr, bis zu dem die Qualifikation gültig ist.</li><li>`code`: (String) Eine kodierte Darstellung der Qualifizierung.</li></ul> |
+| `qualifications` | Array von Objekten | Führt die für die Betreuung erforderlichen Zertifizierungen, Lizenzen oder Schulungen auf. Jedes Objekt enthält die folgenden Eigenschaften: <ul><li>`issuer`: ([[!UICONTROL Kontodetails]](../../data-types/account-details.md)): Die Organisation, die die Qualifikation reguliert und ausstellt.</li><li>`activePeriod`: (Integer) Das Jahr, bis zu dem die Qualifikation gültig ist.</li><li>`code`: (String) Eine kodierte Darstellung der Qualifizierung.</li></ul> |
 | `classification` | Zeichenfolge | Die Service Provider-Klassifizierung basierend auf der Klasse oder Kategorie (wie Patientenversorgung, ambulante Pflege usw.). |
 | `isActive` | Boolesch | Gibt an, ob der Provider aktiv ist. |
 | `languages` | Zeichenfolgen-Array | Eine Liste der Sprachen, in denen der Provider Vorgänge durchführt. |
@@ -32,4 +32,4 @@ ht-degree: 9%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).
+Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json).

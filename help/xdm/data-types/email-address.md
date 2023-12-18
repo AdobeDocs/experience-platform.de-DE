@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; emailAddress; xdm:emailAddress; E-Mail; E-Mail-Adresse; E-Mail-Adresse; Datentyp; Datentyp;
+keywords: Experience Platform;home;popular topics;schema;XDM;fields;schemas;Schemas;Schemas;emailAddress;xdm:emailAddress;email;email address;datatype;data-type;data type; data type
 solution: Experience Platform
 title: Datentyp E-Mail-Adresse
-description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "E-Mail-Adresse".
+description: Erfahren Sie mehr über den Datentyp "E-Mail-Adresse - XDM".
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 3%
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 | `label` | Zusätzliche verfügbare Anzeigeinformationen. Wenn beispielsweise eine E-Mail eine Rich-Adresse in Microsoft Outlook aufweist, wird Folgendes angezeigt: `John Smith smithjr@company.uk`, `John Smith` in dieses Feld eingefügt werden. |
 | `primary` | Gibt an, ob dies die primäre E-Mail-Adresse des Kontakts ist. Ein Profil kann nur eine `primary` E-Mail-Adresse zu einem bestimmten Zeitpunkt. |
 | `status` | Gibt an, ob die E-Mail-Adresse derzeit verwendet werden kann |
-| `statusReason` | Eine Beschreibung des aktuellen `status`. |
+| `statusReason` | Eine Beschreibung der aktuellen `status`. |
 | `type` | Die Art und Weise, wie das Konto die Person betrifft (z. B. `work` oder `personal`). |
 
 {style="table-layout:auto"}

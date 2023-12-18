@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Suche; Datentyp; Datentyp; Datentyp; Datentyp
+keywords: Experience Platform; home; beliebte Themen; schema; XDM; Felder; Schemas; Schemas; Suche; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Suchdatentyp
-description: Dieses Dokument bietet einen Überblick über den Datentyp "Search Experience Data Model (XDM)".
+description: Erfahren Sie mehr über den Datentyp "Search Experience Data Model"(XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 23%
+source-wordcount: '160'
+ht-degree: 18%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 23%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `isPaid` | Boolesch | Wird verwendet, um anzugeben, ob die Suche gebührenpflichtig ist oder nicht. |
+| `isPaid` | Boolesch | Wird verwendet, um anzugeben, ob die Suche bezahlt wurde oder nicht. |
 | `keywords` | Zeichenfolge | Die Suchbegriffe für die Suche. |
 | `pageDepth` | Ganzzahl | Die Klicktiefe in den Suchergebnissen. |
 | `position` | Ganzzahl | Die Position oder der Rang der Auflistung auf der Suchergebnisseite. |
 | `searchEngine` | Zeichenfolge | Die von der Suche verwendete Suchmaschine. |
 | `searchEngineID` | Zeichenfolge | Die anwendungsspezifische Kennung, die zur Identifizierung der Suchmaschine verwendet wird. |
-| `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss mit einem der bekannten Enum-Werte übereinstimmen, die Sie definieren, z. B. `top`, `side`oder `bottom`. |
+| `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss einem der bekannten Enum-Werte entsprechen, die Sie definieren, z. B. `top`, `side`oder `bottom`. |
 
 {style="table-layout:auto"}
 

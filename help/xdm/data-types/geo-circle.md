@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Kreis; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Kreis; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Geo-Kreis-Datentyp
-description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Geo Circle".
+description: Erfahren Sie mehr über den XDM-Datentyp "Geo-Kreis".
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 21%
+source-wordcount: '124'
+ht-degree: 12%
 
 ---
 
@@ -21,5 +21,5 @@ ht-degree: 21%
 | --- | --- | --- |
 | `_schema.coordinates` | [[!UICONTROL Geo-Koordinaten]](./geo-coordinates.md) | Beschreibt die geografischen Koordinaten des Kreiszentrums. |
 | `_schema.description` | Zeichenfolge | Eine Beschreibung dessen, was der Kreis enthält. |
-| `_schema.radius` | Double | Die Länge des Radius des Kreises. Dieser Wert entspricht dem [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/)-Datum und wird in Metern gemessen. |
+| `_schema.radius` | Double | Die Länge des Radius des Kreises. Dieser Wert entspricht dem [WGS 84](https://gisgeography.com/wgs84-world-geodetic-system/) Datum und wird in Metern gemessen. |
 | `_id` | Zeichenfolge | Eine eindeutige, systemgenerierte ID für den Kreis. |

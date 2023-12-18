@@ -1,11 +1,11 @@
 ---
 title: XDM Business Marketing List-Klasse
-description: Dieses Dokument bietet einen Überblick über die XDM Business Marketing List-Klasse im Experience-Datenmodell (XDM).
+description: Erfahren Sie mehr über die XDM Business Marketing List-Klasse im Experience-Datenmodell (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 5%
+source-wordcount: '299'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 | `extSourceSystemAudit` | [[!UICONTROL Audit-Attribute des externen Quellsystems]](../../data-types/external-source-system-audit-attributes.md) | Wenn die Marketing-Liste aus einem externen Quellsystem stammt, erfasst dieses Objekt Prüfattribute für dieses System. |
 | `marketingListKey` | [[!UICONTROL B2B-Quelle]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für die Marketing-Listenentität. |
 | `_id` | Zeichenfolge | Eine eindeutige Kennung für den Datensatz. Dies ist ein systemgenerierter Wert, der getrennt vom `marketingListID`. |
-| `isDeleted` | Boolesch | Gibt an, ob diese Entität der Marketingliste in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
+| `isDeleted` | Boolesch | Gibt an, ob diese Entität der Marketingliste im Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `marketingListDescription` | Zeichenfolge | Eine Beschreibung für die Marketing-Liste. |
 | `marketingListID` | Zeichenfolge | Eine eindeutige ID für die Marketing-Listenentität. |
 | `marketingListName` | Zeichenfolge | Der Name der Marketing-Liste. |

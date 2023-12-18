@@ -2,12 +2,12 @@
 keywords: Experience Platform; home; beliebte Themen; schema; XDM; Felder; Schemas; Schemas; Identität; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Identitätsdatentyp
-description: Dieses Dokument bietet einen Überblick über den Identitäts-XDM-Datentyp.
+description: Erfahren Sie mehr über den Identitäts-XDM-Datentyp.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 15%
+source-wordcount: '262'
+ht-degree: 11%
 
 ---
 

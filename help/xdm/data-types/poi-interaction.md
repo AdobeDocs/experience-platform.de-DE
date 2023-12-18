@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; POI; Interaktion; Zielpunkt; Point-of-Interest; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; poi; Interaktion; Zielpunkt; Zielpunkt; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: POI-Interaktionsdatentyp
-description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp von POI Interaction.
+description: Erfahren Sie mehr über den XDM-Datentyp von POI Interaction.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 12%
+source-wordcount: '162'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 12%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Interessenspunktdetails]](./poi-details.md) | Beschreibt die Details des POI, der das Ereignis verursacht hat. |
+| `poiDetail` | [[!UICONTROL Details zum POI]](./poi-details.md) | Beschreibt die Details des POI, der das Ereignis verursacht hat. |
 | `poiEntries` | Objekt | Beschreibt, wie oft eine Person am POI teilgenommen hat. Enthält zwei Eigenschaften: <ul><li>`id`: Eine eindeutige Kennung für die Kennzahl.</li><li>`value`: Der quantifizierbare Wert der Maßnahme.</li></ul> |
 | `poiExits` | Objekt | Beschreibt, wie oft eine Person den POI verlassen hat. Enthält zwei Eigenschaften: <ul><li>`id`: Eine eindeutige Kennung für die Kennzahl.</li><li>`value`: Der quantifizierbare Wert der Maßnahme.</li></ul> |
 

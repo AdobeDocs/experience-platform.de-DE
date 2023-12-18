@@ -1,11 +1,11 @@
 ---
 title: XDM Business Opportunity-Klasse
-description: Dieses Dokument bietet einen Überblick über die XDM Business Opportunity-Klasse im Experience-Datenmodell (XDM).
+description: Erfahren Sie mehr über die XDM Business Opportunity-Klasse im Experience-Datenmodell (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 7%
+source-wordcount: '309'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 7%
 | `opportunityKey` | [[!UICONTROL B2B-Quelle]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für die Opportunity. |
 | `_id` | Zeichenfolge | Eine eindeutige Kennung für den Datensatz. Dies ist ein systemgenerierter Wert, der getrennt vom `opportunityID`. |
 | `accountID` | Zeichenfolge | Eine eindeutige ID für das Konto, mit dem diese Gelegenheit verknüpft ist. |
-| `isDeleted` | Boolesch | Gibt an, ob diese Entität der Marketingliste in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
+| `isDeleted` | Boolesch | Gibt an, ob diese Entität der Marketingliste im Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `opportunityDescription` | Zeichenfolge | Eine Beschreibung der Gelegenheit. |
 | `opportunityID` | Zeichenfolge | Eine eindeutige ID für die Opportunity. |
 | `opportunityName` | Zeichenfolge | Der Name der Gelegenheit. |

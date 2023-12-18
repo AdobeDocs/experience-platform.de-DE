@@ -1,17 +1,17 @@
 ---
 title: Schemafeldergruppe "Balancetransfers"
-description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe Balance-Übertragungen .
+description: Erfahren Sie mehr über die Schemafeldgruppe Balance-Übertragungen .
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 7%
+source-wordcount: '101'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Bilanzübertragungen] Schemafeldgruppe
 
-[!UICONTROL Bilanzübertragungen] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe stellt eine `personalFinances.balanceTransfers` -Objekt zu einem Schema, das Details zu einer Übertragung des finanziellen Saldos zwischen Konten erfasst.
+[!UICONTROL Bilanzübertragungen] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe stellt eine einzelne `personalFinances.balanceTransfers` -Objekt zu einem Schema, das Details zu einer Übertragung des finanziellen Saldos zwischen Konten erfasst.
 
 ![](../../images/field-groups/balance-transfers.png)
 
@@ -23,4 +23,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).
+Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).

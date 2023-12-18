@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Zahlungselement; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; schema; XDM; Felder; Schemas; Schemas; Zahlungselement; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp des Zahlungselements
-description: Dieses Dokument bietet einen Überblick über den Datentyp "Payment Item Experience Data Model (XDM)".
+description: Erfahren Sie mehr über den Datentyp des Experience-Datenmodells für Zahlungselemente (XDM).
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 32%
+source-wordcount: '139'
+ht-degree: 22%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 32%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `currencyCode` | Zeichenfolge | Der für die Bestellsummen verwendete Währungscode nach ISO 4217. Alle Instanzen müssen dem regulären Ausdruck entsprechen `^[A-Z]{3}$`. Beispiele sind `USD` und `EUR`. |
+| `currencyCode` | Zeichenfolge | Der für die Bestellsummen verwendete Währungscode nach ISO 4217. Alle Instanzen müssen dem regulären Ausdruck entsprechen `^[A-Z]{3}$`. Beispiele sind `USD` und `EUR`. |
 | `paymentAmount` | Double | Der Betrag der Zahlung. |
 | `paymentType` | Zeichenfolge | Die Zahlungsmethode für diese Bestellung. Zu den zulässigen Enum-Werten gehören: <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | Zeichenfolge | Die eindeutige Transaktionskennung für diesen Zahlungsposten. |

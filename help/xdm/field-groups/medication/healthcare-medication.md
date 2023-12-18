@@ -1,17 +1,17 @@
 ---
 title: Schema-Gruppe für Gesundheitsmedikation
-description: Dieses Dokument bietet einen Überblick über die Feldgruppe der Gesundheitsmedikation.
+description: Erfahren Sie mehr über die Feldergruppe Gesundheitsmedikation .
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 11%
+source-wordcount: '197'
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Arzneimittel] Schemafeldgruppe
+# [!UICONTROL Medizin] Schemafeldgruppe
 
-[!UICONTROL Arzneimittel] ist eine Standardschemafeldgruppe für die [[!UICONTROL Medizin] class](../../classes/medication.md). Es wird ein einzelnes Feld vom Typ Objekt bereitgestellt `medication` erfasst Details wie Markenname, Losnummer und Menge.
+[!UICONTROL Medizin] ist eine Standardschemafeldgruppe für die [[!UICONTROL Medizin] class](../../classes/medication.md). Es wird ein einzelnes Feld vom Typ Objekt bereitgestellt `medication` erfasst Details wie Markenname, Losnummer und Menge.
 
 ![](../../images/field-groups/healthcare-medication.png)
 
@@ -24,7 +24,7 @@ ht-degree: 11%
 | `dosageUnitOfMeasurement` | Zeichenfolge | Die Maßeinheit für die Dosiernummer. |
 | `expiryDate` | DateTime | Verfalldatum des Arzneimittels. |
 | `genericName` | Zeichenfolge | Der generische Name des Arzneimittels. |
-| `lotNumber` | Zeichenfolge | Die eindeutige Kennung für den Arzneimittelstapel. |
+| `lotNumber` | Zeichenfolge | Die eindeutige Kennung für die Charge des Medikaments. |
 | `manufacturerName` | Zeichenfolge | Der Name des Arzneimittelherstellers. |
 | `quantity` | Double | Die Menge des Arzneimittels in der Packung. |
 | `status` | Zeichenfolge | Allgemeiner Status, der angibt, ob das Arzneimittel/Medikament aktiv ist oder nicht. |
@@ -32,4 +32,4 @@ ht-degree: 11%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).
+Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

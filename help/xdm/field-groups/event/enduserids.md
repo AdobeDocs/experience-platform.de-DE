@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Endbenutzer; Endbenutzer; Endbenutzer; ID;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Endbenutzer; Endbenutzer; Endbenutzer; ID;
 solution: Experience Platform
 title: Schemafeldgruppe "Endbenutzer-ID-Details"
-description: Dieses Dokument bietet eine Übersicht über die Schemakonstengruppe "Endbenutzer-ID-Details".
+description: Erfahren Sie mehr über die Feldergruppe "Endbenutzer-ID-Details".
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 14%
+source-wordcount: '200'
+ht-degree: 16%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 14%
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Details zur Endbenutzer-ID] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), mit dem die Identitätsdaten einer Person in mehreren Adobe Apps beschrieben werden. Die Feldergruppe stellt eine Stammebene bereit `endUserIDs` -Objekt, das selbst ein schreibgeschütztes enthält `_experience` -Feld, dessen Werte automatisch aktualisiert werden, wenn Daten erfasst werden.
+[!UICONTROL Details zur Endbenutzer-ID] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), mit dem die Identitätsdaten einer Person in mehreren Adobe-Applikationen beschrieben werden. Die Feldergruppe stellt eine Stammebene bereit `endUserIDs` -Objekt, das selbst ein schreibgeschütztes enthält `_experience` -Feld, dessen Werte automatisch aktualisiert werden, wenn Daten erfasst werden.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 

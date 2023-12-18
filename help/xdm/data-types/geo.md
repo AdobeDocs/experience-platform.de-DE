@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Geo-Datentyp
-description: Dieses Dokument bietet einen Überblick über den Geo-XDM-Datentyp.
+description: Erfahren Sie mehr über den Geo-XDM-Datentyp.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 43%
+source-wordcount: '174'
+ht-degree: 41%
 
 ---
 

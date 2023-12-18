@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Feld für allgemeine Marketing-Voreinstellungen mit Abonnementdatentyp
-description: Dieses Dokument bietet einen Überblick über das Feld "Allgemeine Marketing-Voreinstellung"mit dem XDM-Datentyp "Abonnements".
+description: Erfahren Sie mehr über das Feld "Allgemeine Marketing-Voreinstellung"mit dem XDM-Datentyp Abonnements.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 3%
+source-wordcount: '872'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 | `reason` | Zeichenfolge | Wenn ein Kunde einen Marketing-Anwendungsfall ablehnt, stellt dieses Zeichenfolgenfeld den Grund dar, warum der Kunde sich abgemeldet hat. |
 | `subscriptions` | Zuordnung | Eine Karte der Marketing-Voreinstellungen von Kunden für bestimmte Abonnements. Siehe Abschnitt zu [subscriptions](#subscriptions) für weitere Informationen. |
 | `time` | DateTime | Ein ISO 8601-Zeitstempel, mit dem die Marketing-Voreinstellung geändert wurde (falls zutreffend). |
-| `val` | Zeichenfolge | Die vom Kunden bereitgestellte bevorzugte Auswahl für diesen Marketing-Anwendungsfall. Siehe [nächster Abschnitt](#val) für akzeptierte Werte und Definitionen. |
+| `val` | Zeichenfolge | Die vom Kunden bereitgestellte Voreinstellungsoption für diesen Marketing-Anwendungsfall. Siehe [nächster Abschnitt](#val) für akzeptierte Werte und Definitionen. |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ In der folgenden Tabelle sind die für `val`:
 | Wert | Titel | Beschreibung |
 | --- | --- | --- |
 | `y` | Ja (Opt-in) | Der Kunde hat sich für die Präferenz entschieden. Mit anderen Worten, sie **do** Zustimmung zur Verwendung ihrer Daten, wie durch die betreffende Präferenz angegeben. |
-| `n` | Nein (Opt-out) | Der Kunde hat sich gegen die Präferenz entschieden. Mit anderen Worten, sie **nicht** Zustimmung zur Verwendung ihrer Daten, wie durch die betreffende Präferenz angegeben. |
+| `n` | Nein (Opt-out) | Der Kunde hat sich von der Präferenz abgemeldet. Mit anderen Worten, sie **nicht** Zustimmung zur Verwendung ihrer Daten, wie durch die betreffende Präferenz angegeben. |
 | `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Präferenzwert erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat; an diesem Punkt würde die Zustimmung auf `y`.<br><br>Wenn diese Voreinstellung keinen zweistufigen Überprüfungsprozess verwendet, wird die `p` choice kann stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einverständnisaufforderung reagiert hat. Sie können beispielsweise den Wert automatisch auf `p` auf der ersten Seite einer Website, bevor der Kunde auf die Einwilligungsaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
 | `u` | Unbekannt | Die Präferenzinformationen des Kunden sind unbekannt. |
 | `dy` | Standardwert Ja (Opt-in) | Der Kunde hat selbst keinen Zustimmungswert angegeben und wird standardmäßig als Opt-in (&quot;Ja&quot;) behandelt. Mit anderen Worten, die Zustimmung wird angenommen, bis der Kunde etwas Anderes angibt.<br><br>Beachten Sie, dass Sie alle Profile, die Standardwerte enthalten, manuell aktualisieren müssen, wenn die Datenschutzrichtlinien Ihres Unternehmens Änderungen an den Standardeinstellungen einiger oder aller Benutzer zur Folge haben. |
@@ -97,7 +97,7 @@ Die folgende JSON stellt ein Beispiel für ein Marketing-Feld für einen Marketi
 | `val` | Die [Zustimmungswert](#val) für das Abonnement. |
 | `type` | Der Abonnementtyp. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst. |
 | `topics` | Ein Array von Zeichenfolgen, die die Interessensgebiete darstellen, die ein Kunde abonniert hat und die zum Senden relevanter Inhalte verwendet werden können. |
-| `subscribers` | Ein optionales Feld vom Typ Zuordnung , das eine Reihe von Kennungen (wie E-Mail-Adressen oder Telefonnummern) darstellt, die ein bestimmtes Abonnement abonniert haben. Jeder Schlüssel in diesem Objekt stellt die betreffende Kennung dar und enthält zwei Untereigenschaften: <ul><li>`time`: Ein ISO 8601-Zeitstempel, der angibt, wann die Identität abonniert hat (falls zutreffend).</li><li>`source`: Die Quelle, aus der der Abonnent stammt. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst.</li></ul> |
+| `subscribers` | Ein optionales Feld vom Typ Zuordnung , das eine Reihe von Kennungen (wie E-Mail-Adressen oder Telefonnummern) darstellt, die ein bestimmtes Abonnement abonniert haben. Jeder Schlüssel in diesem Objekt stellt die betreffende Kennung dar und enthält zwei Untereigenschaften: <ul><li>`time`: Ein ISO 8601-Zeitstempel, der angibt, wann die Identität abonniert hat (falls zutreffend).</li><li>`source`: Die Quelle, von der der Abonnent stammt. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst.</li></ul> |
 
 {style="table-layout:auto"}
 

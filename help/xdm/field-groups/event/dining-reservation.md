@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Speisen;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Speisen;
 title: Definieren der Feldergruppe "Reservierungsschema"
-description: Dieses Dokument bietet einen Überblick über die Feldergruppe Buchungs-Schema definieren.
+description: Erfahren Sie mehr über die Feldergruppe Buchungsschema definieren .
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '435'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ Die Struktur der einzelnen Objekte, die unter `diningReservations` ist unten ang
 | --- | --- | --- |
 | `ID` | Zeichenfolge | Die Reservierungsnummer oder -kennung. |
 | `cancellation` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung abgebrochen wurde. |
-| `confirmationNumber` | Zeichenfolge | Die Reservierungsbestätigungsnummer oder -kennung. |
+| `confirmationNumber` | Zeichenfolge | Die Buchungsbestätigungsnummer oder -kennung. |
 | `created` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung erstellt wurde. |
 | `cuisine` | Ganzzahl | Die Art der Restaurantküche. |
 | `currencyCode` | Zeichenfolge | Der Währungscode nach ISO 4217, der für den Kauf verwendet wird. |
@@ -44,7 +44,7 @@ Die Struktur der einzelnen Objekte, die unter `diningReservations` ist unten ang
 | `length` | Ganzzahl | Die Gesamtanzahl der Tage für die Reservierung. |
 | `loyaltyID` | Zeichenfolge | Die Kennung des Treueprogramms für den in der Reservierung aufgelisteten Gast. |
 | `modification` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung geändert wurde. |
-| `modificationDate` | DateTime | Der Zeitpunkt, zu dem die Reservierung zuletzt geändert wurde. |
+| `modificationDate` | DateTime | Der Zeitpunkt der letzten Änderung der Reservierung. |
 | `numberOfAdults` | Ganzzahl | Die Anzahl der Erwachsenen, die mit der Reservierung verbunden sind. |
 | `numberOfChildren` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Kinder. |
 | `numberOfRooms` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Zimmer. |

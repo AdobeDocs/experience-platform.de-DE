@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Gerät; Handel; Handel; Handel; Handel in;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schemadesign; Feldergruppe; Feldergruppe; Gerät; Handel; Handel; Handel; Handel; Handel;
 solution: Experience Platform
 title: Schema-Feldergruppe "Device Trade-in-Details"
-description: Dieses Dokument bietet einen Überblick über die Schemakonferenz für das Schema "Device Trade-In Details".
+description: Erfahren Sie mehr über die Schemafeldgruppe "Gerätehandelsdetails".
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 15%
+source-wordcount: '150'
+ht-degree: 18%
 
 ---
 

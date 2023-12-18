@@ -1,11 +1,11 @@
 ---
 title: Impressions-Datentyp
-description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Impressionen".
+description: Erfahren Sie mehr über den XDM-Datentyp Impressionen.
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 5%
+source-wordcount: '115'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 | --- | --- | --- |
 | `ID` | Zeichenfolge | Eine eindeutige ID für die Impression. |
 | `displays` | Ganzzahl | Die Häufigkeit, mit der das Impressionselement einem Kunden angezeigt wurde. |
-| `selected` | Ganzzahl | Die Häufigkeit, mit der das Impressionselement ausgewählt oder angeklickt wurde. |
+| `selected` | Ganzzahl | Die Anzahl der ausgewählten oder angeklickten Impressionselemente. |
 | `type` | Zeichenfolge | Die Art der Impression. |
 
 {style="table-layout:auto"}

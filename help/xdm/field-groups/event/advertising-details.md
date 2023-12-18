@@ -1,17 +1,17 @@
 ---
 title: Schema-Feldergruppe "Advertising Details"
-description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Advertising Details".
+description: Erfahren Sie mehr über die Feldergruppe "Advertising Details".
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 21%
+source-wordcount: '992'
+ht-degree: 15%
 
 ---
 
 # [!UICONTROL Werbedetails] Schemafeldgruppe
 
-[!UICONTROL Werbedetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe stellt eine `advertising` -Objekt zu einem Schema, das Informationen zu Werbeimpressionen, Clickthroughs und Attribution erfasst.
+[!UICONTROL Werbedetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe stellt eine einzelne `advertising` -Objekt zu einem Schema, das Informationen zu Werbeimpressionen, Clickthroughs und Attribution erfasst.
 
 ![Feldgruppenstruktur](../../images/field-groups/advertising-details/structure.png)
 
@@ -30,7 +30,7 @@ ht-degree: 21%
 | `starts` | [[!UICONTROL Maßnahme]](../../data-types/measure.md) | Die Häufigkeit, mit der die Wiedergabe einer digitalen Videoanzeige gestartet wurde. |
 | `thirdQuartiles` | [[!UICONTROL Maßnahme]](../../data-types/measure.md) | Die Häufigkeit, mit der eine digitale Videoanzeige 75 % ihrer Dauer mit normaler Geschwindigkeit wiedergegeben hat. |
 | `timePlayed` | [[!UICONTROL Maßnahme]](../../data-types/measure.md) | Die Zeit, die ein Endbenutzer mit einem bestimmten zeitgesteuerten Medien-Asset verbracht hat. |
-| `downloadedPlayback` | Boolesch | Wenn auf `true`gibt an, dass der Treffer aufgrund der Wiedergabe einer heruntergeladenen Anzeigensitzung generiert wird. |
+| `downloadedPlayback` | Boolesch | Wenn festgelegt auf `true`gibt an, dass der Treffer aufgrund der Wiedergabe einer heruntergeladenen Anzeigensitzung generiert wird. |
 
 {style="table-layout:auto"}
 
@@ -45,10 +45,10 @@ Die `adAssetReference` -Objekt erfasst Asset-Informationen über die Anzeige.
 | `_dc.title` | Zeichenfolge | Der benutzerfreundliche und für Menschen lesbare Name des Anzeigen-Assets. |
 | `_xmpDM.duration` | Ganzzahl | Die Länge oder Dauer des Assets in Sekunden. |
 | `_id` | Zeichenfolge | Eine eindeutige Kennung des Anzeigen-Assets, die der [Ad-ID-Standard](https://datatracker.ietf.org/doc/html/rfc8107). |
-| `advertiser` | Zeichenfolge | Das Unternehmen oder die Marke des Produkts, das in der Anzeige vorgestellt wird. |
+| `advertiser` | Zeichenfolge | Das Unternehmen oder die Marke, deren Produkt in der Anzeige vorgestellt wird. |
 | `campaign` | Zeichenfolge | Die ID der Anzeigenkampagne. |
-| `creativeID` | Zeichenfolge | Die ID der Werbeanzeige. |
-| `creativeURL` | Zeichenfolge | Die URL der Werbeanzeige. |
+| `creativeID` | Zeichenfolge | Die ID des Anzeigenmotivs. |
+| `creativeURL` | Zeichenfolge | Die URL des Anzeigenmotivs. |
 | `placementID` | Zeichenfolge | Die Platzierungs-ID der Anzeige. |
 | `siteID` | Zeichenfolge | Die ID der Anzeigen-Site. |
 
@@ -62,9 +62,9 @@ Die `adAssetViewDetails` -Objekt erfasst Ansichtsdetails für die Anzeigenwieder
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `adBreak` | [[!UICONTROL Anzeigenunterbrechung]](../../data-types/ad-break.md) | Beschreibt, wie eine zeitgesteuerte Anzeige in zeitgesteuerte Medien eingefügt wird. |
+| `adBreak` | [[!UICONTROL Werbeunterbrechung]](../../data-types/ad-break.md) | Beschreibt, wie eine zeitgesteuerte Anzeige in zeitgesteuerte Medien eingefügt wird. |
 | `index` | Ganzzahl | Der Index der Anzeige innerhalb der übergeordneten Werbeunterbrechung. Beispielsweise hat die erste Anzeige einen Index `0` und die zweite Anzeige einen Index aufweist `1`. |
-| `playerName` | Zeichenfolge | Der Name des Players, der für das Rendering der Werbeanzeige verantwortlich ist. |
+| `playerName` | Zeichenfolge | Der Name des Players, der für die Wiedergabe der Anzeige verantwortlich ist. |
 
 {style="table-layout:auto"}
 
@@ -93,11 +93,11 @@ Die `adViewability` -Objekt erfasst die Anzahl der Impressionen, die von Endbenu
 | `adWidth` | Ganzzahl | Die Anzahl der zur Laufzeit gemessenen horizontalen Pixel des Players. Diese kann größer sein als die Größe der Anzeige, wenn der Player über zusätzliche Steuerelemente oder Miniaturansichten verfügt. |
 | `measurementEligible` | Boolesch | Ob die Sichtbarkeitsmessungen für die Anzeige zulässig sind. Eine Anzeige ist zulässig, wenn das Gerät über ein unterstütztes kreatives Format und einen unterstützten Tag-Typ verfügt. |
 | `percentViewable` | Ganzzahl | Der Prozentsatz der Pixel in der Anzeige, der zum Zeitpunkt der Messung als sichtbar erachtet wird. |
-| `playerVolume` | Ganzzahl | Der Prozentsatz der Player-Lautstärke, gemessen zur Laufzeit, wobei `0` stummgeschaltet ist und `100` ist das maximale Volumen. |
+| `playerVolume` | Ganzzahl | Der Prozentsatz der Player-Lautstärke, gemessen zur Laufzeit, wobei `0` stummgeschaltet ist und `100` ist die maximale Lautstärke. |
 | `viewable` | Boolesch | Gibt an, ob die Anzeige zur Laufzeit sichtbar war. Display-Anzeigen gelten als sichtbar, wenn mindestens 50 % der Anzeige mindestens eine Sekunde lang sichtbar sind. Videoanzeigen gelten als sichtbar, wenn mindestens 50 % der Anzeige während der Videowiedergabe mindestens zwei Sekunden lang sichtbar sind. |
 | `viewportHeight` | Ganzzahl | Die vertikale Größe (in Pixel) des Fensters, in dem das Erlebnis zur Laufzeit angezeigt wurde. Bei einem Webansichtsereignis gibt dieser Wert die Höhe des Browser-Viewports an. |
-| `viewportWidth` | Ganzzahl | Die horizontale Größe (in Pixel) des Fensters, in dem das Erlebnis zur Laufzeit angezeigt wurde. Bei einem Webansichtsereignis gibt dieser Wert die Breite des Browser-Ansichtsfensters an. |
+| `viewportWidth` | Ganzzahl | Die horizontale Größe (in Pixel) des Fensters, in dem das Erlebnis zur Laufzeit angezeigt wurde. Bei einem Webansichtsereignis gibt dieser Wert die Breite des Browser-Viewports an. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).
+Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

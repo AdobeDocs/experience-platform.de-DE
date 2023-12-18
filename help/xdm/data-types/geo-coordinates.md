@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Koordinaten; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Geo; Koordinaten; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp "Geo-Koordinaten"
-description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Geo Coordinates".
+description: Erfahren Sie mehr über den XDM-Datentyp "Geo-Koordinaten".
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 12%
+source-wordcount: '122'
+ht-degree: 13%
 
 ---
 

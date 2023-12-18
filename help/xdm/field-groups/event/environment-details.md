@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Umgebung; Umgebungsdetails;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Umgebung; Umgebungsdetails;
 solution: Experience Platform
 title: Feldergruppe "Umgebungsdetails"
-description: Dieses Dokument bietet einen Überblick über die Schemakontrollgruppe ExperienceEvent Environment Details .
+description: Erfahren Sie mehr über die Feldergruppe ExperienceEvent Environment Details .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '189'
 ht-degree: 13%
 
 ---

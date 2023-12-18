@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Umgebung; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Umgebung; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Umgebungstyp
-description: Dieses Dokument bietet einen Überblick über den Umgebungs-XDM-Datentyp.
+description: Erfahren Sie mehr über den Umgebungs-XDM-Datentyp.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 18%
+source-wordcount: '440'
+ht-degree: 14%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 18%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `_dc` | Objekt | Ein Objekt, das ein einzelnes Feld enthält, `language`, die die Sprache der Umgebung angibt, die die sprachlichen, geografischen oder kulturellen Präferenzen des Benutzers für die Datendarstellung darstellt. Sprachen werden in Sprachcode angegeben, wie in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
-| `browserDetails` | [Browser-Details](./browser-details.md) | Beschreibt die browserspezifischen Details der Umgebung, wie z. B. Browsername, Version, JavaScript-Version, Benutzeragenten-Zeichenfolge und akzeptierte Sprache. |
+| `_dc` | Objekt | Ein Objekt, das ein einzelnes Feld enthält, `language`, die die Sprache der Umgebung angibt, die die sprachlichen, geografischen oder kulturellen Präferenzen des Benutzers für die Datendarstellung repräsentiert. Sprachen werden in Sprachcode angegeben, wie in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
+| `browserDetails` | [Browserdetails](./browser-details.md) | Beschreibt die browserspezifischen Details der Umgebung, wie z. B. Browsername, Version, JavaScript-Version, Benutzeragenten-Zeichenfolge und akzeptierte Sprache. |
 | `ISP` | Zeichenfolge | Der Name des Internetdienstanbieters des Benutzers. |
 | `carrier` | Zeichenfolge | Name des Mobilfunknetzbetreibers oder der Mobilfunknetzbetreiber (auch als drahtloser Dienstleister, drahtloser Netzbetreiber, Mobilfunkunternehmen oder Mobilfunknetzbetreiber bezeichnet), der Kommunikationsdienste an den Benutzer verkauft und bereitstellt. |
 | `colorDepth` | Ganzzahl | Die Anzahl der Bit, die für jede Farbkomponente eines einzelnen Pixels verwendet werden. |
@@ -35,7 +35,7 @@ ht-degree: 18%
 | `operatingSystem` | Zeichenfolge | Der Name des Betriebssystems, das bei der Beobachtung verwendet wurde. Das Attribut sollte keine Versionsinformationen enthalten, z. B. `10.5.3`, jedoch stattdessen &quot;Bearbeitungsbezeichnungen&quot;wie `Ultimate` oder `Professional`. |
 | `operatingSystemVendor` | Zeichenfolge | Der Name des Betriebssystemanbieters, das bei der Beobachtung verwendet wurde. |
 | `operatingSystemVersion` | Zeichenfolge | Die Vollversionskennung des Betriebssystems, das bei der Beobachtung verwendet wurde. Versionen sind im Allgemeinen numerisch aufgebaut, können jedoch in einem vom Anbieter definierten Format vorliegen. |
-| `type` | Zeichenfolge | Der Typ der Anwendungsumgebung. Siehe [Anhang](#type) für gültige Werte. |
+| `type` | Zeichenfolge | Der Typ der Anwendungsumgebung. Siehe [Anhang](#type) für akzeptierte Werte. |
 | `viewportHeight` | Ganzzahl | Die vertikale Größe in Pixel des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Webansichtsereignis ist dies die Höhe des Browser-Ansichtsfensters. |
 | `viewPortWidth` | Ganzzahl | Die horizontale Größe in Pixel des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Webansichtsereignis ist dies die Breite des Browser-Ansichtsfensters. |
 
@@ -57,7 +57,7 @@ In der folgenden Tabelle sind die für `type` und ihre zugehörige Bedeutung:
 | Wert | Beschreibung |
 | --- | --- |
 | `browser` | Browser |
-| `application` | Applikation |
+| `application` | Anwendung |
 | `iot` | Internet der Dinge |
 | `external` | Externes System |
 | `widget` | Anwendungserweiterung |

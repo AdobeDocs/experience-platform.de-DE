@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemata;identityMap;identität zuordnen;Identität zuordnen;Schema-Design;map;Map;Vereinigungsschema;Vereinigung
 solution: Experience Platform
 title: XDM Individual Profile Class
-description: Dieses Dokument bietet einen Überblick über die Klasse „XDM Individual Profile“.
+description: Erfahren Sie mehr über die Klasse XDM Individual Profile .
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 38%
+source-wordcount: '573'
+ht-degree: 31%
 
 ---
 
@@ -45,10 +45,10 @@ Adobe bietet mehrere Standardfeldgruppen zur Verwendung mit der [!DNL XDM Indivi
 * [[!UICONTROL Demografische Details]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Treuedetails]](../field-groups/profile/loyalty-details.md)
-* [[!UICONTROL Persönliche Kontaktdaten]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL Persönliche Kontaktangaben]](../field-groups/profile/personal-contact-details.md)
 * [[!UICONTROL Details zur Segmentzugehörigkeit]](../field-groups/profile/segmentation.md)
-* [[!UICONTROL Telekom-Abonnement]](../field-groups/profile/telecom-subscription.md)
-* [[!UICONTROL Details zu Arbeitskontakten]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Telekom-Anmeldung]](../field-groups/profile/telecom-subscription.md)
+* [[!UICONTROL Kontaktangaben für Arbeitskontakte]](../field-groups/profile/work-contact-details.md)
 * [[!UICONTROL XDM-Geschäftspersonenkomponenten]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM-Geschäftspersonendetails]](../field-groups/profile/business-person-details.md)\*
 

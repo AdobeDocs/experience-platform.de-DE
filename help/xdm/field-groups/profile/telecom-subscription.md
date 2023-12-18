@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Telekom; Abonnement; Telekommunikation; Schema-Design; Feldergruppe; Feldergruppe;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Telecom; Abonnement; Telekommunikation; Schema-Design; Feldergruppe; Feldergruppe;
 solution: Experience Platform
 title: Feldgruppe "Telecom Subscription Schema"
-description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Telecom Subscription".
+description: Erfahren Sie mehr über die Feldergruppe "Telecom Subscription".
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 10%
+source-wordcount: '692'
+ht-degree: 9%
 
 ---
 
-# [!UICONTROL Telekom-Abonnement] Schemafeldgruppe
+# [!UICONTROL Telekom-Anmeldung] Schemafeldgruppe
 
 >[!NOTE]
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Telekom-Abonnement] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) beschreibt den Telekom-Abonnementplan eines Kunden, einschließlich Preisen, Paketen und individuellen Produktabonnements.
+[!UICONTROL Telekom-Anmeldung] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) beschreibt den Telekom-Abonnementplan eines Kunden, einschließlich Preisen, Paketen und individuellen Produktabonnements.
 
 Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `telecomSubscription`, deren Eigenschaften nachfolgend beschrieben werden.
 
@@ -48,7 +48,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `subscriptionDetails` | [[!UICONTROL Telekom-Abonnement]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
+| `subscriptionDetails` | [[!UICONTROL Telekom-Anmeldung]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
 | `connectionType` | Zeichenfolge | Der Verbindungstyp für das Abonnement. |
 | `dataCap` | Ganzzahl | Die maximale Datenmenge für das Konto in Megabyte (MB). |
 | `downloadSpeed` | Ganzzahl | Die maximale Download-Geschwindigkeit für das Abonnement in Megabyte (MB). |
@@ -66,7 +66,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `phoneNumber` | [[!UICONTROL Telefonnummer]](../../data-types/telecom-subscription.md) | Die diesem Abonnement zugewiesene Telefonnummer. |
-| `subscriptionDetails` | [[!UICONTROL Telekom-Abonnement]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
+| `subscriptionDetails` | [[!UICONTROL Telekom-Anmeldung]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
 | `callBlocking` | Boolesch | Gibt an, ob die Festnetz-Abonnement-Funktionen eine Aufrufblockierung enthalten. |
 | `callForwarding` | Boolesch | Gibt an, ob die Festnetz-Abonnementfunktionen die Anrufweiterleitung enthalten. |
 | `callWaiting` | Boolesch | Gibt an, ob die Festnetz-Abonnementfunktionen das Warten auf Anrufe enthalten. |
@@ -88,8 +88,8 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `streamingServices` | Array von Objekten | Eine Liste aller Streaming-Dienste, die im Abonnement enthalten sind. Jedes Array-Element enthält die folgenden Eigenschaften: <ul><li>`promotionLength`: Die Dauer der Promotion in Monaten, wenn der Streaming-Dienst im Rahmen einer Promotion hinzugefügt wurde.</li><li>`promotionalAddition`: Gibt an, ob der Streaming-Dienst im Rahmen einer Promotion hinzugefügt wurde.</li><li>`serviceName`: Der Name des Streaming-Dienstes.</li></ul> |
-| `subscriptionDetails` | [[!UICONTROL Telekom-Abonnement]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
+| `streamingServices` | Array von Objekten | Eine Liste aller im Abonnement enthaltenen Streaming-Dienste. Jedes Array-Element enthält die folgenden Eigenschaften: <ul><li>`promotionLength`: Die Dauer der Promotion in Monaten, wenn der Streaming-Dienst im Rahmen einer Promotion hinzugefügt wurde.</li><li>`promotionalAddition`: Gibt an, ob der Streaming-Dienst im Rahmen einer Promotion hinzugefügt wurde.</li><li>`serviceName`: Der Name des Streaming-Dienstes.</li></ul> |
+| `subscriptionDetails` | [[!UICONTROL Telekom-Anmeldung]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
 | `channels` | Ganzzahl | Die Anzahl der im Medienabonnement enthaltenen Kanäle. |
 
 {style="table-layout:auto"}
@@ -103,7 +103,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `phoneNumber` | [[!UICONTROL Telefonnummer]](../../data-types/telecom-subscription.md) | Die diesem Abonnement zugewiesene Telefonnummer. |
-| `subscriptionDetails` | [[!UICONTROL Telekom-Abonnement]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
+| `subscriptionDetails` | [[!UICONTROL Telekom-Anmeldung]](../../data-types/telecom-subscription.md) | Beschreibt allgemeine Details zum Abonnement, einschließlich Abonnementlänge, Gebühren, Status und mehr. |
 | `earlyUpgradeEnrollment` | Boolesch | Gibt an, ob der Kunde sich für frühe Aktualisierungen anmeldet. |
 | `planLevel` | Zeichenfolge | Der Name des Mobile-Plans, der diesem Abonnement zugewiesen ist. |
 | `portedNumber` | Boolesch | Gibt an, ob der Kunde seine Nummer von einem anderen Netzbetreiber aus anbietet. |

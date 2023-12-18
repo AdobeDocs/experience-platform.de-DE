@@ -1,11 +1,11 @@
 ---
 title: Datentyp der externen Quell-System-Prüfattribute
-description: Dieses Dokument bietet einen Überblick über den Datentyp "External Source System Audit Attributes Experience Data Model (XDM)".
+description: Erfahren Sie mehr über den Datentyp "Experience-Datenmodell (XDM)"der Audit-Attribute des externen Quellsystems.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 14%
+source-wordcount: '168'
+ht-degree: 7%
 
 ---
 

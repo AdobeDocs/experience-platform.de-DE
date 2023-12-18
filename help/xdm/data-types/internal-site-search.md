@@ -1,11 +1,11 @@
 ---
 title: Datentyp "Interne Site-Suche"
-description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Interne Site-Suche".
+description: Erfahren Sie mehr über den XDM-Datentyp "Interne Site-Suche".
 exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 5%
+source-wordcount: '383'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `autoCompleteClicked` | [!UICONTROL Boolesch] | Gibt an, ob ein Besucher einen vorgeschlagenen oder automatisch ausgefüllten Suchwert verwendet hat, um die Suche auszuführen. |
+| `autoCompleteClicked` | [!UICONTROL Boolesch] | Gibt an, ob ein Besucher einen vorgeschlagenen oder automatisch ausgefüllten Suchwert zur Ausführung der Suche verwendet hat. |
 | `autoCompleteTypedValue` | [!UICONTROL String] | In Szenarien mit automatischem Vervollständigen verlassen Benutzer manchmal die Suche und wählen einen bestimmten Begriff aus der Dropdown-Liste aus. Mit diesem Wert wird verfolgt, was der Benutzer eingegeben hat, um den spezifischen Satz der vorgeschlagenen Suchbegriffe zu generieren. |
 | `autoCompleteValue` | [!UICONTROL String] | In Fällen, in denen die Suche automatisch abgeschlossen wird, verlassen Benutzer manchmal die Suche und wählen einen bestimmten Begriff aus dem Dropdown-Menü aus. Dieser Wert wird verwendet, um die ausgewählten Begriffe zu verfolgen. |
 | `instances` | [!UICONTROL Ganzzahl] | Die Häufigkeit, mit der die interne Site-Suche stattgefunden hat. |

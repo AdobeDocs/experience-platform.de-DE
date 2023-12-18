@@ -1,11 +1,11 @@
 ---
 title: XDM Business Person Components Schema Field Group
-description: Dieses Dokument bietet einen Überblick über die Schemakomponentenfeldgruppe "XDM Business Person Components".
+description: Erfahren Sie mehr über die Schemafeldgruppe "XDM Business Person Components".
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 6%
+source-wordcount: '514'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ Die Feldergruppe stellt eine Stammebene bereit `personComponents` -Feld, das ein
 >
 >Sie müssen die Aufnahmemuster befolgen, wie im Abschnitt [Quelldokumentation](../../../rtcdp/sources/b2b.md). Andere Feldzuordnungsmethoden funktionieren nicht immer.
 >
->Beispielsweise jedes Objekt der `personComponents` -Array wird einzeln während standardmäßigen Erfassungsmustern gesendet und dann von Platform zum Array hinzugefügt. Wenn Sie der Business Person-Komponente manuell ein Array von Objekten hinzufügen, wird ein Fehler zurückgegeben.
+>Zum Beispiel jedes Objekt der `personComponents` -Array wird einzeln während standardmäßigen Erfassungsmustern gesendet und dann von Platform zum Array hinzugefügt. Wenn Sie der Business Person-Komponente manuell ein Array von Objekten hinzufügen, wird ein Fehler zurückgegeben.
 >Sie sollten beim Erstellen von Schemas für Ihre B2B-Daten das Dienstprogramm zur automatischen Generierung verwenden. Anweisungen zur Verwendung der [B2B-Namespace- und Schema-Dienstprogramm zur automatischen Generierung](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden und Ihr Datenmodell manuell zuordnen möchten, lesen Sie die Dokumentation im Abschnitt [Adobe Real-time Customer Data Platform B2B Edition XDM-Klassen](../../../rtcdp/schemas/b2b.md) vor der Zuordnung Ihrer Daten.
 >
 >Siehe [End-to-End-Tutorial](../../../rtcdp/b2b-tutorial.md) für Informationen zu empfohlenen Workflows für B2B-Daten.

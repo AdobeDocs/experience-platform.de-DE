@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe;
 solution: Experience Platform
 title: Feldgruppe "Webdetails-Schema"
-description: Dieses Dokument bietet einen Überblick über die Feldergruppe Webdetails .
+description: Erfahren Sie mehr über die Feldergruppe Webdetails .
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 18%
+source-wordcount: '118'
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 18%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `web` | [Web-Informationen](../../data-types/web-information.md) | Beschreibt Link-Klicks, Webseitendetails, Referrer-Informationen und Browserdetails. |
+| `web` | [Webinformationen](../../data-types/web-information.md) | Beschreibt Link-Klicks, Webseitendetails, Referrer-Informationen und Browserdetails. |
 
 {style="table-layout:auto"}
 

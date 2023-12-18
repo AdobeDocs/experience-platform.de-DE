@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Abonnement; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; schema; XDM; Felder; Schemas; Schemas; Abonnement; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Abonnementdatentyp
-description: Dieses Dokument bietet einen Überblick über den Datentyp "Abonnement-Experience-Datenmodell (XDM)".
+description: Erfahren Sie mehr über den Datentyp des Abonnement-Experience-Datenmodells (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 28%
+source-wordcount: '388'
+ht-degree: 18%
 
 ---
 
@@ -28,8 +28,8 @@ ht-degree: 28%
 | `category` | Zeichenfolge | Die wichtigste Kategorisierung dieser Art von Abonnement auf oberster Ebene. |
 | `chargeMethod` | Zeichenfolge | Die Art und Weise, wie die Abrechnung eingerichtet ist, um den Kunden zu belasten. |
 | `contractID` | Zeichenfolge | Die eindeutige ID für den Vertrag, der für dieses Abonnement gilt. |
-| `country` | Zeichenfolge | Das Land, in dem die vertraglichen und vertraglichen Bedingungen der Abonnements verwurzelt sind. |
-| `endDate` | Datum | Das Datum, an dem das aktuelle Abonnement endet. Das Datumsformat (ohne Uhrzeit) sollte dem [RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) Standard. |
+| `country` | Zeichenfolge | Das Land, in dem die vertraglichen und vertraglichen Bedingungen der Abonnements wurzelt. |
+| `endDate` | Datum | Das Datum, an dem der aktuelle Abonnementzeitraum endet. Das Datumsformat (ohne Uhrzeit) sollte dem [RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) Standard. |
 | `paymentMethod` | Zeichenfolge | Die Zahlungsmethode für wiederkehrende Zahlungen. |
 | `paymentStatus` | Zeichenfolge | Die Zahlungsbilanz des Kontos. |
 | `planName` | Zeichenfolge | Der für Menschen lesbare Name des Abonnements. |

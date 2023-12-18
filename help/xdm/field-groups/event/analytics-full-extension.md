@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics ExperienceEvent Full Extension – Schemafeldgruppe
-description: Dieses Dokument bietet einen Überblick über die Schemafeldgruppe „Adobe Analytics ExperienceEvent Full Extension“.
+description: Erfahren Sie mehr über die Feldergruppe Adobe Analytics ExperienceEvent Full Extension-Schema .
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 100%
+source-wordcount: '811'
+ht-degree: 95%
 
 ---
 
@@ -17,7 +17,7 @@ In diesem Dokument werden die Struktur und der Anwendungsfall der Feldgruppe der
 
 >[!NOTE]
 >
->Aufgrund des Umfangs und der Anzahl der sich wiederholenden Elemente in dieser Feldgruppe wurden viele der in diesem Handbuch angezeigten Felder reduziert, um Platz zu sparen. Um die gesamte Struktur dieser Feldgruppe zu untersuchen, können Sie [sie in der Platform-Benutzeroberfläche nachschlagen ](../../ui/explore.md) oder das vollständige Schema im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) anzeigen.
+>Aufgrund des Umfangs und der Anzahl der sich wiederholenden Elemente in dieser Feldgruppe wurden viele der in diesem Handbuch angezeigten Felder reduziert, um Platz zu sparen. Um die gesamte Struktur dieser Feldergruppe zu untersuchen, können Sie [in der Platform-Benutzeroberfläche nachschlagen](../../ui/explore.md) oder das vollständige Schema im [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Feldgruppenstruktur
 

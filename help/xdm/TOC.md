@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell-System (XDM)
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
-source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
+source-git-commit: f0d437743b33818c27de94eb522227bb950e60cb
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 93%
+source-wordcount: '589'
+ht-degree: 89%
 
 ---
 
@@ -58,16 +58,20 @@ ht-degree: 93%
       * [Details zum versicherten Mitglied](./field-groups/profile/healthcare-member-details.md)
       * [Treuedetails](./field-groups/profile/loyalty-details.md)
       * [Persönliche Kontaktdaten](./field-groups/profile/personal-contact-details.md)
+      * [Profilpartner-Anreicherung (Beispiel)](./field-groups/profile/profile-partner-enrichment.md)
       * [Details zur Segmentzugehörigkeit](./field-groups/profile/segmentation.md)
       * [Telekom-Abonnement](./field-groups/profile/telecom-subscription.md)
       * [Details zu Arbeitskontakten](./field-groups/profile/work-contact-details.md)
       * [XDM-Geschäftspersonenkomponenten](./field-groups/profile/business-person-components.md)
       * [XDM-Geschäftspersonendetails](./field-groups/profile/business-person-details.md)
+   * XDM Individual Prospect Profile {#prospect-profile}
+      * [Details zur Partnervorschau (Beispiel)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Volle Adobe Analytics-Erweiterung](./field-groups/event/analytics-full-extension.md)
       * [Werbedetails](./field-groups/event/advertising-details.md)
       * [Anwendungsdetails](./field-groups/event/application-details.md)
       * [Bilanzübertragungen](./field-groups/event/balance-transfers.md)
+      * [Bot-Erkennung](./field-groups/event/bot-detection-information.md)
       * [Kampagnen-Marketing-Details](./field-groups/event/campaign-marketing-details.md)
       * [Kartenaktionen](./field-groups/event/card-actions.md)
       * [Kanaldetails](./field-groups/event/channel-details.md)
@@ -105,14 +109,18 @@ ht-degree: 93%
 * Datentypen {#data-types}
    * [Kontodetails](./data-types/account-details.md)
    * [Anzeigenunterbrechung](./data-types/ad-break.md)
+   * [Adresse](./data-types/address.md)
    * [Informationen zu Werbedetails](./data-types/advertising-details-information.md)
    * [Informationen zu Werbe-Pods](./data-types/advertising-pod-details-information.md)
    * [Programm](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browser-Details](./data-types/browser-details.md)
    * [B2B-Quelle](./data-types/b2b-source.md)
+   * [Korb](./data-types/cart.md)
+   * [Kategoriedaten](./data-types/category-data.md)
    * [Informationen zu Kapiteldetails](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
+   * [Commerce-Umfang](./data-types/commerce-scope.md)
    * [Zustimmungszeichenfolge](./data-types/consent-string.md)
    * [Zustimmungen und Voreinstellungen](./data-types/consents.md)
    * [Währung](./data-types/currency.md)
@@ -153,9 +161,14 @@ ht-degree: 93%
    * [POI-Interaktion](./data-types/poi-interaction.md)
    * [Postadresse](./data-types/postal-address.md)
    * [Produktlistenelement](./data-types/product-list-item.md)
+   * [Erstattungsbetrag](./data-types/refund-item.md)
+   * [Anforderungsliste](./data-types/requisition-list.md)
+   * [Zurückgeben](./data-types/return.md)
+   * [Rückgabeelement](./data-types/return-item.md)
    * [Informationen zu QoE-Daten](./data-types/qoe-data-details-information.md)
    * [Suche](./data-types/search.md)
    * [Sitzungsdetails - Informationen](./data-types/session-details-information.md)
+   * [Versand](./data-types/shipping.md)
    * [Abonnement](./data-types/subscription.md)
    * [Telekom-Abonnement](./data-types/telecom-subscription.md)
    * [Transaktion](./data-types/transaction.md)

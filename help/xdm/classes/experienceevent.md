@@ -2,11 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen;schema;Schema;XDM;Felder;schemas;Schemas;Schemata;identityMap;IdentityMap;Identitätszuordnung;Schema-Design;map;Map;Zuordnung;event modeling;Ereignismodellierung;Best Practices;Ereignis;Ereignisse;
 solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
-description: Dieses Dokument enthält einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
+description: Erfahren Sie mehr über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ac504f588b34961dff6887167e2cd07bc0eda453
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2659'
 ht-degree: 43%
 
 ---

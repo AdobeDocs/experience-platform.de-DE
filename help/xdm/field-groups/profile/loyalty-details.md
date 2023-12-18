@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Loyalitätsdetails; Schema-Design; Feldergruppe; Feldergruppe;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Loyalitätsdetails; Schema-Design; Feldergruppe; Feldergruppe;
 solution: Experience Platform
 title: Schemafeldgruppe "Loyalitätsdetails"
-description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Loyalitätsdetails".
+description: Erfahren Sie mehr über die Feldergruppe "Loyalitätsdetails".
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 10%
+source-wordcount: '281'
+ht-degree: 11%
 
 ---
 

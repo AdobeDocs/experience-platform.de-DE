@@ -1,11 +1,11 @@
 ---
 title: XDM Business Person Details Schema Field Group
-description: Dieses Dokument bietet einen Überblick über die Schemakontrollgruppe "XDM Business Person Details".
+description: Erfahren Sie mehr über die Feldergruppe XDM Business Person Details .
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 16%
+source-wordcount: '567'
+ht-degree: 11%
 
 ---
 
@@ -42,18 +42,18 @@ ht-degree: 16%
 | `extendedWorkDetails.photoUrl` | Zeichenfolge | Eine URL zu einem Foto der Person. |
 | `extendedWorkDetails.reportsToID` | Zeichenfolge | Eine Kennung für den Reporting-Manager der Person. |
 | `faxPhone` | [Telefonnummer](../../data-types/phone-number.md) | Die Faxnummer der Person. |
-| `homeAddress` | [Postadresse](../../data-types/postal-address.md) | Die Privatadresse der Person. |
+| `homeAddress` | [Postanschrift](../../data-types/postal-address.md) | Die Privatadresse der Person. |
 | `homePhone` | [Telefonnummer](../../data-types/phone-number.md) | Die Privattelefonnummer der Person. |
 | `mobilePhone` | [Telefonnummer](../../data-types/phone-number.md) | Die Mobiltelefonnummer der Person. |
-| `otherAddress` | [Postadresse](../../data-types/postal-address.md) | Eine alternative Adresse für die Person. |
+| `otherAddress` | [Postanschrift](../../data-types/postal-address.md) | Eine alternative Adresse für die Person. |
 | `otherPhone` | [Telefonnummer](../../data-types/phone-number.md) | Eine alternative Telefonnummer für die Person. |
 | `person` | [Person](../../data-types/person.md) | Ein einzelner Akteur, Ansprechpartner oder Inhaber. |
 | `personalEmail` | [E-Mail-Adresse](../../data-types/email-address.md) | Die persönliche E-Mail-Adresse der Person. |
-| `workAddress` | [Postadresse](../../data-types/postal-address.md) | Die Arbeitsadresse der Person. |
+| `workAddress` | [Postanschrift](../../data-types/postal-address.md) | Die Arbeitsadresse der Person. |
 | `workEmail` | [E-Mail-Adresse](../../data-types/email-address.md) | Die geschäftliche E-Mail-Adresse der Person. |
 | `workPhone` | [Telefonnummer](../../data-types/phone-number.md) | Die Telefonnummer der Person am Arbeitsplatz. |
 | `identityMap` | Zuordnung | Ein map -Feld, das eine Reihe von Namespaced-Identitäten für die Person enthält. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld ordnungsgemäß zu verwenden, verwenden Sie [Echtzeit-Kundenprofil](../../../profile/home.md)versuchen Sie nicht, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
-| `isDeleted` | Boolesch | Gibt an, ob diese Person in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
+| `isDeleted` | Boolesch | Gibt an, ob diese Person im Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `organizations` | Zeichenfolgen-Array | Eine Liste der Organisationsnamen, in denen die Person arbeitet. |
 
 {style="table-layout:auto"}

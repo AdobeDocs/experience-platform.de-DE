@@ -1,11 +1,11 @@
 ---
 title: XDM Business Campaign-Mitgliederklasse
-description: Dieses Dokument bietet einen Überblick über die XDM Business Campaign Members-Klasse im Experience-Datenmodell (XDM).
+description: Erfahren Sie mehr über die Klasse "XDM Business Campaign Members"im Experience-Datenmodell (XDM).
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 7%
+source-wordcount: '235'
+ht-degree: 2%
 
 ---
 
@@ -31,4 +31,4 @@ ht-degree: 7%
 
 Informationen dazu, wie diese Klasse konzeptionell mit den anderen B2B-Klassen verknüpft ist und wie Sie diese Beziehungen in der Benutzeroberfläche von Adobe Experience Platform herstellen können, finden Sie im Handbuch unter [Schemabeziehungen in Real-Time CDP B2B Edition](../../tutorials/relationship-b2b.md)
 
-Weitere Felder, die mit dieser Klasse kompatibel sind, finden Sie in der Feldergruppenreferenz für [[!UICONTROL Details zu XDM-Business-Campaign-Mitgliedern]](../../field-groups/b2b-campaign-members/details.md).
+Weitere mit dieser Klasse kompatible Felder finden Sie in der Feldergruppenreferenz für [[!UICONTROL XDM Business Campaign-Mitgliederdetails]](../../field-groups/b2b-campaign-members/details.md).

@@ -1,24 +1,24 @@
 ---
 title: Schemafeldgruppe für Kartenaktionen
-description: Dieses Dokument bietet einen Überblick über die Feldgruppe Kartenaktionen .
+description: Erfahren Sie mehr über die Feldgruppe Kartenaktionen .
 exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 7%
+source-wordcount: '176'
+ht-degree: 8%
 
 ---
 
 # [!UICONTROL Kartenaktionen] Schemafeldgruppe
 
-[!UICONTROL Kartenaktionen] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe stellt eine `personalFinances.cardActions` -Feld in ein Schema, das Details zu einer Kartenaktion wie Kartentyp, Aktivierungsstatus und Sperrstatus erfasst.
+[!UICONTROL Kartenaktionen] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe stellt eine einzelne `personalFinances.cardActions` -Feld in ein Schema, das Details zu einer Kartenaktion wie Kartentyp, Aktivierungsstatus und Sperrstatus erfasst.
 
 ![](../../images/field-groups/card-actions.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `cardActivated` | Ganzzahl | Verfolgt, wann die Karte erfolgreich aktiviert wurde. |
-| `cardActivationStart` | Ganzzahl | Verfolgt, wann der Kartenaktivierungsprozess gestartet wurde. |
+| `cardActivated` | Ganzzahl | Verfolgt die erfolgreiche Aktivierung der Karte. |
+| `cardActivationStart` | Ganzzahl | Verfolgt den Start des Kartenaktivierungsprozesses. |
 | `cardCancelled` | Ganzzahl | Verfolgt den Abbruch einer Karte. |
 | `cardControlsLocked` | Ganzzahl | Verfolgt, wenn die Steuerelemente einer Karte gesperrt sind. |
 | `cardControlsUnlocked` | Ganzzahl | Verfolgt, wenn die Steuerelemente einer Karte entsperrt wurden. |
@@ -31,4 +31,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).
+Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).

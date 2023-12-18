@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Unterbringung;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Unterbringung;
 title: Feldergruppe "Reservierungsschema"
-description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Reservierungsschema".
+description: Erfahren Sie mehr über die Feldergruppe "Reservierungsschema".
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 7%
+source-wordcount: '655'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ Die Feldergruppe ist eine Erweiterung der [!UICONTROL Buchungsdetails] Feldergru
 >
 >In diesem Dokument werden die Details der `lodgingReservations` Array. Für Informationen über die anderen Felder, die im `reservations` -Objekt, siehe [[!UICONTROL Buchungsdetails] Feldergruppenreferenz](./reservation-details.md).
 
-![Buchungsstruktur](../../images/field-groups/lodging-reservation/structure.png)
+![Reservierungsstruktur](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
@@ -33,16 +33,16 @@ Die Struktur der einzelnen Objekte, die unter `lodgingReservations` ist unten an
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `averageDailyPrice` | [[!UICONTROL Währung]](../../data-types/currency.md) | Der durchschnittliche Tagespreis des Hotelzimmers. |
-| `lodgingCheckIn` | Objekt | Ein Objekt, das die Unterbringung von Check-in-Details beschreibt. Umfasst die folgenden Werte:<ul><li>`digitalKey`: (Ganzzahl) Gibt an, wann ein Gast beim Einchecken die Verwendung eines digitalen Schlüssels auswählt.</li><li>`earlyCheckInRequested`: (Ganzzahl) Gibt an, wann ein Gast vor dem normalen Einchecken einen Check-in anfordert.</li><li>`lateCheckInRequested`: (Ganzzahl) Gibt an, wann ein Gast einen Check-in zu einem späteren Zeitpunkt als zu den normalen Check-in-Stunden anfordert.</li><li>`noRoomCheckIn`: (Ganzzahl) Dieser Wert wird erfasst, wenn ein Gast die Anmeldung abschließt, wenn zu diesem Zeitpunkt keine Zimmer verfügbar sind.</li><li>`oneRoomCheckIn`: (Ganzzahl) Dieser Wert wird erfasst, wenn ein Gast die Anmeldung abgeschlossen hat, wenn zu diesem Zeitpunkt nur ein Zimmer verfügbar ist.</li><li>`roomKeys`: (Ganzzahl) Die Anzahl der Standard-Zimmerschlüssel, die beim Check-in bereitgestellt werden.</li><li>`userSelectedRoom`: (Boolesch) Gibt an, ob der Gast beim Einchecken sein Zimmer ausgewählt hat.</li></ul> |
+| `lodgingCheckIn` | Objekt | Ein Objekt, das die Unterbringung von Check-in-Details beschreibt. Umfasst die folgenden Werte:<ul><li>`digitalKey`: (Integer) Gibt an, wann ein Gast beim Einchecken die Verwendung eines digitalen Schlüssels auswählt.</li><li>`earlyCheckInRequested`: (Integer) Gibt an, wann ein Gast vor dem normalen Einchecken einen Check-in anfordert.</li><li>`lateCheckInRequested`: (Integer) Gibt an, wann ein Gast einen Check-in zu einem späteren Zeitpunkt als zu den normalen Check-in-Stunden anfordert.</li><li>`noRoomCheckIn`: (Integer) Dieser Wert wird erfasst, wenn ein Gast die Anmeldung abschließt, wenn zu diesem Zeitpunkt keine Zimmer verfügbar sind.</li><li>`oneRoomCheckIn`: (Ganzzahl) Dieser Wert wird erfasst, wenn ein Gast die Anmeldung abgeschlossen hat, wenn zu diesem Zeitpunkt nur ein Zimmer verfügbar ist.</li><li>`roomKeys`: (Integer) Die Anzahl der Standardzimmerschlüssel, die beim Check-in bereitgestellt werden.</li><li>`userSelectedRoom`: (Boolesch) Gibt an, ob der Gast beim Einchecken sein Zimmer ausgewählt hat.</li></ul> |
 | `rackrate` | [[!UICONTROL Währung]](../../data-types/currency.md) | Die Kosten für eine Buchung am selben Tag ohne vorherige Reservierung. |
 | `ID` | Zeichenfolge | Die Reservierungsnummer oder -kennung. |
 | `agentID` | Zeichenfolge | Die mit der Hotelbuchung verknüpfte Agenten-ID. |
 | `basePrice` | Zeichenfolge | Der Basispreis vor Rabatten wird hinzugefügt. |
-| `bookingID` | Zeichenfolge | Die mit der Hotelbuchung verbundene Buchungskennung. |
+| `bookingID` | Zeichenfolge | Die mit der Hotelbuchung verknüpfte Buchungskennung. |
 | `cancellation` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung abgebrochen wurde. |
 | `checkInDate` | DateTime | Das Check-in Datum für die Zimmerreservierung. |
 | `checkOutDate` | DateTime | Das Datum des Auscheckens für die Zimmerreservierung. |
-| `confirmationNumber` | Zeichenfolge | Die Reservierungsbestätigungsnummer oder -kennung. |
+| `confirmationNumber` | Zeichenfolge | Die Buchungsbestätigungsnummer oder -kennung. |
 | `couponCode` | Zeichenfolge | Gutscheincode für die Hotelbuchung. |
 | `created` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung erstellt wurde. |
 | `currencyCode` | Zeichenfolge | Der Währungscode nach ISO 4217, der für den Kauf verwendet wird. |
@@ -52,7 +52,7 @@ Die Struktur der einzelnen Objekte, die unter `lodgingReservations` ist unten an
 | `length` | Ganzzahl | Die Gesamtanzahl der Tage für die Reservierung. |
 | `loyaltyID` | Zeichenfolge | Die Kennung des Treueprogramms für den in der Reservierung aufgelisteten Gast. |
 | `modification` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung geändert wurde. |
-| `modificationDate` | DateTime | Der Zeitpunkt, zu dem die Reservierung zuletzt geändert wurde. |
+| `modificationDate` | DateTime | Der Zeitpunkt der letzten Änderung der Reservierung. |
 | `numberOfAdults` | Ganzzahl | Die Anzahl der Erwachsenen, die mit der Reservierung verbunden sind. |
 | `numberOfChildren` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Kinder. |
 | `numberOfRooms` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Zimmer. |

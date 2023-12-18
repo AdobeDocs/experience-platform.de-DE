@@ -1,17 +1,17 @@
 ---
 title: XDM Business Campaign-Schema-Feldergruppe "Mitgliederdetails"
-description: Dieses Dokument bietet einen Überblick über die Schemakonzerne XDM Business Campaign Member Details .
+description: Erfahren Sie mehr über die Schemafeldgruppe XDM Business Campaign Member Details .
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 6%
+source-wordcount: '335'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Details zu XDM-Business-Campaign-Mitgliedern] Schemafeldgruppe
+# [!UICONTROL XDM Business Campaign-Mitgliederdetails] Schemafeldgruppe
 
-[!UICONTROL Details zu XDM-Business-Campaign-Mitgliedern] ist eine Standardschemafeldgruppe für die [[!UICONTROL XDM Business Campaign-Mitglieder] class](../../classes/b2b/business-campaign-members.md), das detaillierte Informationen zu einer Geschäftskampagne erfasst.
+[!UICONTROL XDM Business Campaign-Mitgliederdetails] ist eine Standardschemafeldgruppe für die [[!UICONTROL XDM Business Campaign-Mitglieder] class](../../classes/b2b/business-campaign-members.md), das detaillierte Informationen zu einer Geschäftskampagne erfasst.
 
 ![Die Struktur der Feldergruppe &quot;XDM Business Campaign Member Details&quot;, wie sie in der Benutzeroberfläche angezeigt wird](../../images/field-groups/b2b/business-campaign-member-details.png)
 
@@ -22,7 +22,7 @@ ht-degree: 6%
 | `firstRespondedDate` | [!UICONTROL DateTime] | Ein ISO 8601-Zeitstempel, der angibt, wann die Person zum ersten Mal auf die Kampagne reagiert hat. |
 | `hasReachedSuccess` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied zu einer erfolgreichen Konvertierung geführt hat. |
 | `hasResponded` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied auf die Kampagne reagiert hat. |
-| `isDeleted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
+| `isDeleted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied unter Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch in das Echtzeit-Kundenprofil übernommen. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `isExhausted` | [!UICONTROL Boolesch] | Gibt an, ob dieses Kampagnenmitglied alle Kampagneninteraktionen ausgeschöpft hat. |
 | `lastStatus` | [!UICONTROL String] | Der letzte Status für das Kampagnenmitglied. |
 | `memberStatus` | [!UICONTROL String] | Der aktuelle Status für das Kampagnenmitglied. |

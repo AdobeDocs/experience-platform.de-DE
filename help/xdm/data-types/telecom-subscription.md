@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Telekom; Abonnement; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Telekom; Abonnement; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp "Telecom Subscription"
-description: Dieses Dokument bietet einen Überblick über den Datentyp "Telecom Subscription Experience Data Model (XDM)".
+description: Erfahren Sie mehr über den Datentyp "Telecom Subscription Experience Data Model (XDM)".
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 19%
+source-wordcount: '572'
+ht-degree: 13%
 
 ---
 
-# [!UICONTROL Telekom-Abonnement] Datentyp
+# [!UICONTROL Telekom-Anmeldung] Datentyp
 
-[!UICONTROL Telekom-Abonnement] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Details zu bestimmten Telekommunikations-Abonnementtypen wie Internet, Mobilgeräte, Medien oder Festnetz beschreibt.
+[!UICONTROL Telekom-Anmeldung] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Details zu bestimmten Telekommunikations-Abonnementtypen wie Internet, Mobilgeräte, Medien oder Festnetz beschreibt.
 
 >[!NOTE]
 >
->In diesem Dokument wird der Datentyp beschrieben. Die gleichnamige Feldergruppe wird im Abschnitt [[!UICONTROL Telekom-Abonnement] Referenzhandbuch für Feldergruppen](../field-groups/profile/telecom-subscription.md).
+>In diesem Dokument wird der Datentyp beschrieben. Die gleichnamige Feldergruppe wird im Abschnitt [[!UICONTROL Telekom-Anmeldung] Referenzhandbuch für Feldergruppen](../field-groups/profile/telecom-subscription.md).
 >
 >Wenn Sie einen Abonnementtyp beschreiben, der nicht mit der Telekommunikationsbranche in Verbindung steht, verwenden Sie bitte die generische [[!UICONTROL Abonnement] Datentyp](./subscription.md) anstatt.
 
@@ -32,8 +32,8 @@ ht-degree: 19%
 | `billingStartDate` | Datum | Das Datum, an dem der Abrechnungszeitraum beginnt. Das Datumsformat (ohne Uhrzeit) sollte dem [RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) Standard. |
 | `chargeMethod` | Zeichenfolge | Die Art und Weise, wie die Abrechnung eingerichtet ist, um den Kunden zu belasten. |
 | `contractID` | Zeichenfolge | Die eindeutige ID für den Vertrag, der für dieses Abonnement gilt. |
-| `country` | Zeichenfolge | Das Land, in dem die vertraglichen und vertraglichen Bedingungen der Abonnements verwurzelt sind. |
-| `endDate` | Datum | Das Datum, an dem das aktuelle Abonnement endet. Das Datumsformat (ohne Uhrzeit) sollte dem [RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) Standard. |
+| `country` | Zeichenfolge | Das Land, in dem die vertraglichen und vertraglichen Bedingungen der Abonnements wurzelt. |
+| `endDate` | Datum | Das Datum, an dem der aktuelle Abonnementzeitraum endet. Das Datumsformat (ohne Uhrzeit) sollte dem [RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) Standard. |
 | `paymentDueDate` | Datum | Das Datum, an dem die Abonnement-Zahlung fällig ist. Das Datumsformat (ohne Uhrzeit) sollte dem [RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) Standard. |
 | `paymentMethod` | Zeichenfolge | Die Zahlungsmethode für wiederkehrende Zahlungen. |
 | `paymentStatus` | Zeichenfolge | Die Zahlungsbilanz des Kontos. |
@@ -65,7 +65,7 @@ Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `deviceFees` | Objekt | Ein Objekt, das alle Gerätegebühren für Elemente wie Router, Modems und Empfänger erfasst. erwartet die folgenden Eigenschaften:<ul><li>`amount`: Der Geldbetrag, der sich aus dem `currencyCode`.</li><li>`conversionDate`: Das Datum, an dem die Währungsumrechnung vorgenommen wurde.</li><li>`currencyCode`: Die [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) Währungscode für `amount`.</li></ul> |
+| `deviceFees` | Objekt | Ein Objekt, das alle Gerätegebühren für Elemente wie Router, Modems und Empfänger erfasst. erwartet die folgenden Eigenschaften:<ul><li>`amount`: Geldbetrag, der sich aus dem `currencyCode`.</li><li>`conversionDate`: Das Datum, an dem die Währungsumrechnung vorgenommen wurde.</li><li>`currencyCode`: Die [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) Währungscode für `amount`.</li></ul> |
 | `ID` | Zeichenfolge | Eine eindeutige ID für das Gerät. |
 | `OS` | Zeichenfolge | Das Betriebssystem des Geräts. |
 | `deviceInsurance` | Zeichenfolge | Gibt an, ob sich ein Kunde für eine Versicherung dieses Geräts entschieden hat. |

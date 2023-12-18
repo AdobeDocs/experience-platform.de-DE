@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Schemadesign; Feldergruppe; Feldergruppe; iab; tcf; Einverständnis
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; Schemadesign; Feldergruppe; Feldergruppe; iab; tcf; Einverständnis
 solution: Experience Platform
 title: IAB TCF 2.0 Consent Field Group für Profilschemas
-description: Dieses Dokument bietet einen Überblick über die IAB TCF 2.0-Feldergruppe für das Einwilligungsschema für die Klasse "XDM Individual Profile".
+description: Erfahren Sie mehr über die IAB TCF 2.0-Feldergruppe für das Einwilligungsschema für die Klasse "XDM Individual Profile".
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 5%
+source-wordcount: '321'
+ht-degree: 1%
 
 ---
 
@@ -50,7 +50,7 @@ Die folgende JSON-Datei zeigt die Struktur der `identityPrivacyInfo` map.
 }
 ```
 
-Wie das Beispiel zeigt, enthält jeder Schlüssel der Stammebene von `xdm:identityPrivacyInfo` entspricht einem vom Identity Service erkannten Identitäts-Namespace. Jede Namespace-Eigenschaft muss wiederum mindestens eine Untereigenschaft aufweisen, deren Schlüssel mit dem entsprechenden Identitätswert des Kunden für diesen Namespace übereinstimmt. In diesem Beispiel wird der Kunde mit einer Experience Cloud-ID (`ECID`) Wert von `13782522493631189`.
+Wie das Beispiel zeigt, ist jeder Schlüssel auf der Stammebene von `xdm:identityPrivacyInfo` entspricht einem vom Identity Service erkannten Identitäts-Namespace. Jede Namespace-Eigenschaft muss wiederum mindestens eine Untereigenschaft aufweisen, deren Schlüssel mit dem entsprechenden Identitätswert des Kunden für diesen Namespace übereinstimmt. In diesem Beispiel wird der Kunde mit einer Experience Cloud-ID (`ECID`) Wert `13782522493631189`.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Wie das Beispiel zeigt, enthält jeder Schlüssel der Stammebene von `xdm:identi
 
 Für jeden Identitätswert wird ein `identityIABConsent` -Eigenschaft muss angegeben werden, die den TCF-Zustimmungswert für die Identität bereitstellt. Der Wert für diese Eigenschaft muss mit dem [[!UICONTROL Zustimmungszeichenfolge] Datentyp](../../data-types/consent-string.md).
 
-Siehe Handbuch unter [IAB TCF 2.0-Unterstützung in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) für weitere Informationen zum Anwendungsfall dieser Feldergruppe. Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
+Siehe Handbuch unter [IAB TCF 2.0-Unterstützung in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) für weitere Informationen zum Anwendungsfall dieser Feldergruppe. Weitere Informationen zur Feldergruppe selbst finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

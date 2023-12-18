@@ -1,10 +1,10 @@
 ---
-title: Schemafeldgruppe Gesundheitsplan
-description: Dieses Dokument bietet einen Überblick über die Feldgruppe "Details zum Gesundheitsplan".
+title: Schemafeldgruppe Gesundheitsplan Details
+description: Erfahren Sie mehr über die Feldergruppe "Details des Gesundheitsplans".
 exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '202'
 ht-degree: 9%
 
 ---
@@ -29,4 +29,4 @@ ht-degree: 9%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).
+Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).

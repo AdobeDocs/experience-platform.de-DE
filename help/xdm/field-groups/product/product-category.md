@@ -1,11 +1,11 @@
 ---
 title: Schemafeldgruppe für Produktkategorie
-description: Dieses Dokument bietet einen Überblick über die Feldgruppe "Produktkategorie".
+description: Erfahren Sie mehr über die Feldgruppe "Produktkategorie".
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 8%
+source-wordcount: '86'
+ht-degree: 9%
 
 ---
 
@@ -24,4 +24,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).
+Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).

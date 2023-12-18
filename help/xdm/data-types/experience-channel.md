@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Webseitendetails; Datentyp; Datentyp; Datentyp; Datentyp; Webseite
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Webseitendetails; Datentyp; Datentyp; Datentyp; Datentyp; Webseite
 solution: Experience Platform
 title: Experience-Kanal-Datentyp
-description: Dieses Dokument bietet einen Überblick über den Experience-Kanal-Datenmodell (XDM)-Datentyp.
+description: Erfahren Sie mehr über den Experience-Kanal-Experience-Datenmodell (XDM)-Datentyp.
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 23%
+source-wordcount: '244'
+ht-degree: 20%
 
 ---
 

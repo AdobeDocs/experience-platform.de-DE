@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Reservierungsdetails;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Reservierungsdetails;
 title: Feldergruppe "Buchungsdetails"
-description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Buchungsdetails".
+description: Erfahren Sie mehr über die Feldergruppe Buchungsdetails .
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 7%
+source-wordcount: '310'
+ht-degree: 8%
 
 ---
 
@@ -30,7 +30,7 @@ Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `reservations`
 | `endDate` | DateTime | Das Enddatum für die Reservierung (Abbruch, Rückgabe oder Checkout). |
 | `length` | Ganzzahl | Die Gesamtanzahl der Tage für die Reservierung. |
 | `modification` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung geändert wurde. |
-| `modificationDate` | DateTime | Der Zeitpunkt, zu dem die Reservierung zuletzt geändert wurde. |
+| `modificationDate` | DateTime | Der Zeitpunkt der letzten Änderung der Reservierung. |
 | `numberOfAdults` | Ganzzahl | Die Anzahl der Erwachsenen, die mit der Reservierung verbunden sind. |
 | `numberOfChildren` | Ganzzahl | Die Anzahl der mit der Reservierung verbundenen Kinder. |
 | `purpose` | Zeichenfolge | Der Zweck der Reservierung, in der Regel geschäftlich oder persönlich. |

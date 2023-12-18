@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Beacon; Interaktionsdetails; Datentyp; Datentyp; Datentyp;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Beacon; Interaktionsdetails; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
 title: Beacon-Datentyp
-description: Dieses Dokument bietet einen Überblick über die Klasse „XDM Individual Profile“.
+description: Erfahren Sie mehr über die Klasse XDM Individual Profile .
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 16%
+source-wordcount: '233'
+ht-degree: 4%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 16%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `beaconMajor` | Double | Wichtige Werte identifizieren und unterscheiden eine Gruppe und vorzeichenlose ganzzahlige Werte zwischen 1 und 65.535. |
-| `beaconMinor` | Double | Geringfügige Werte kennzeichnen und unterscheiden einzelne und nicht vorzeichenbehaftete ganzzahlige Werte zwischen 1 und 65.535. |
+| `beaconMajor` | Double | Wichtige Werte identifizieren und unterscheiden eine Gruppe und vorzeichenlose Ganzzahlwerte zwischen 1 und 65.535. |
+| `beaconMinor` | Double | Geringfügige Werte kennzeichnen und unterscheiden einzelne und nicht vorzeichenbehaftete Ganzzahlwerte zwischen 1 und 65.535. |
 | `proximity` | Zeichenfolge | Geschätzte Entfernung vom Beacon. Siehe [Anhang](#proximity) für akzeptierte Werte und Definitionen. |
 | `proximityUUID` | Zeichenfolge | Eine Näherungs-UUID (Universally Unique Identifier) ist ein spezieller Kennungstyp, mit dem Beacons in Ihrem Netzwerk von allen anderen Beacons in Netzwerken außerhalb Ihrer Kontrolle unterschieden werden. Die Näherungs-UUID wird in ein Beacon konfiguriert, das an Mobilgeräte im Bereich der Identifizierung der Beacons eines Unternehmens übertragen wird. |
 
