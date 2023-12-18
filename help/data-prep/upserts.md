@@ -3,22 +3,26 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Teilweise Zeilen-Aktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
+source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 11%
+source-wordcount: '1242'
+ht-degree: 5%
 
 ---
 
 # Teilweise Zeilenaktualisierungen senden an [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
 
-Das Streamen von Upserts in [!DNL Data Prep] ermöglicht es Ihnen, partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile]-Daten zu senden und gleichzeitig neue Identitätsverknüpfungen mit einer einzigen API-Anfrage zu erstellen und herzustellen.
-
-Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten in [!DNL Real-Time Customer Profile] PATCH-Anfragen während der Aufnahme. Basierend auf den von Ihnen bereitgestellten Eingaben [!DNL Data Prep] ermöglicht Ihnen das Senden einer einzelnen API-Payload und das Übersetzen der Daten in beide [!DNL Real-Time Customer Profile] PATCH und [!DNL Identity Service] ERSTELLEN SIE -Anfragen.
-
 >[!WARNING]
 >
 >Die Erfassung von Entitäts-Update-Meldungen für Experience-Datenmodell (XDM) (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Inlet wird nicht mehr unterstützt. Alternativ können Sie [Erfassen von Rohdaten in den DCS-Inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) und geben Sie die erforderlichen Datenzuordnungen an, um Ihre Daten in XDM-kompatible Nachrichten für Profilaktualisierungen umzuwandeln.
+
+Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilenaktualisierungen an zu senden [!DNL Real-Time Customer Profile] -Daten sowie beim Erstellen und Erstellen neuer Identitätslinks mit einer einzelnen API-Anfrage.
+
+Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten in [!DNL Real-Time Customer Profile] PATCH-Anfragen während der Aufnahme. Basierend auf den von Ihnen bereitgestellten Eingaben [!DNL Data Prep] ermöglicht Ihnen das Senden einer einzelnen API-Payload und das Übersetzen der Daten in beide [!DNL Real-Time Customer Profile] PATCH und [!DNL Identity Service] ERSTELLEN SIE -Anfragen.
+
+>[!NOTE]
+>
+>Um die Upload-Funktion zu nutzen, wird empfohlen, XDM-kompatible Konfigurationen während der Datenerfassung zu deaktivieren und die eingehende Payload mit [Datenvorbereitung](./ui/mapping.md).
 
 Dieses Dokument enthält Informationen zum Streamen von Uploads in [!DNL Data Prep].
 
@@ -26,8 +30,8 @@ Dieses Dokument enthält Informationen zum Streamen von Uploads in [!DNL Data Pr
 
 Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Data Prep]](./home.md): [!DNL Data Prep] ermöglicht Dateningenieuren das Zuordnen, Transformieren und Validieren von Daten in und aus dem Experience-Datenmodell (XDM).
-* [[!DNL Identity Service]](../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
+* [[!DNL Data Prep]](./home.md): [!DNL Data Prep] ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuwandeln und zu validieren.
+* [[!DNL Identity Service]](../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und ihr Verhalten, indem Sie Identitäten zwischen Geräten und Systemen überbrücken.
 * [Echtzeit-Kundenprofil](../profile/home.md): Das Echtzeit-Kundenprofli bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Quellen](../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
@@ -58,7 +62,7 @@ Wenn neue Identitäten verknüpft werden müssen, müssen Sie einen zusätzliche
 
 #### Erforderliche Felder in den Schemas, die mit dem Identitätsdatensatz verknüpft sind {#identity-dataset-required-fileds}
 
-Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] um nur die Identitäten zu empfangen. Sie können die Validierung unterdrücken, indem Sie die `disabled` -Wert `acp_validationContext` -Parameter. Siehe Beispiel unten:
+Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] um nur die Identitäten zu empfangen. Sie können die Validierung unterdrücken, indem Sie die `disabled` -Wert `acp_validationContext` -Parameter. Siehe folgendes Beispiel:
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
