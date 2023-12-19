@@ -2,10 +2,10 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
+source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
 workflow-type: tm+mt
-source-wordcount: '2595'
-ht-degree: 1%
+source-wordcount: '2565'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ In der angezeigten Konfigurationsansicht müssen Sie die Variable [!DNL Pixel] I
 
 Sie müssen außerdem ein Zugriffstoken bereitstellen, um die [!DNL Conversions API] speziell. Siehe Abschnitt [!DNL Conversions API] Dokumentation zu [Zugriffstoken generieren](https://developers.facebook.com/docs/marketing-api/conversions-api/get-started#access-token) für Schritte zum Abrufen dieses Werts.
 
-Klicken Sie abschließend auf **[!UICONTROL Speichern]**
+Wählen Sie zum Abschluss **[!UICONTROL Speichern]**
 
 ![Die [!DNL Pixel] ID, die in der Erweiterungskonfigurationsansicht als Datenelement bereitgestellt wird.](../../../images/extensions/server/meta/configure.png)
 
@@ -115,6 +115,12 @@ Stellen Sie beim Senden von freigegebenen Ereignissen sicher, dass Sie eine Erei
 >* Die Schnellstartfunktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- und Ultimate-Package erworben haben. Bitte wenden Sie sich an den Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
 >* Diese Funktion ist für neue Netto-Implementierungen vorgesehen und unterstützt derzeit nicht die automatische Installation von Erweiterungen und Konfigurationen für vorhandene Tags und Ereignisweiterleitungseigenschaften.
 
+>[!NOTE]
+>
+>Jeder vorhandene Client kann die Schnellstart-Workflows verwenden, um eine Referenzimplementierung zu erstellen, die für Folgendes verwendet werden kann:
+>* Verwenden Sie ihn als Beginn einer brandneuen Implementierung.
+>* Nutzen Sie ihn als Referenzimplementierung, die Sie untersuchen können, um zu sehen, wie er konfiguriert wurde, und dann in Ihren aktuellen Produktionsimplementierungen replizieren können.
+
 Mit der Schnellstartfunktion können Sie mit der Meta-Konversions-API und den Meta-Pixel-Erweiterungen einfach und effizient einrichten. Dieses Tool automatisiert mehrere Schritte, die in Adobe-Tags und Ereignisweiterleitung ausgeführt werden, wodurch die Einrichtungszeit erheblich verkürzt wird.
 
 Diese Funktion installiert und konfiguriert automatisch sowohl die Meta Conversions-API als auch die Meta-Pixel-Erweiterungen für neu automatisch generierte Tags und die Ereignisweiterleitungs-Eigenschaft mit den erforderlichen Regeln und Datenelementen. Außerdem werden das Experience Platform Web SDK und Datastream automatisch installiert und konfiguriert. Schließlich veröffentlicht die Schnellstartfunktion die Bibliothek automatisch in der angegebenen URL in einer Entwicklungsumgebung, was die clientseitige Datenerfassung und die serverseitige Ereignisweiterleitung über die Ereignisweiterleitung und das Experience Platform Edge Network in Echtzeit ermöglicht.
@@ -152,7 +158,7 @@ Aus dem **[!UICONTROL Code zu Ihrer Site hinzufügen]** Kopieren Sie den Code, d
 
 ![Code zum Dialogfeld Ihrer Site hinzufügen](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-Die [!UICONTROL Überprüfungsergebnisse] zeigt die Implementierungsergebnisse der Meta-Erweiterung an. Klicken Sie auf **[!UICONTROL Weiter]**. Sie können auch zusätzliche Überprüfungsergebnisse anzeigen, indem Sie die **[!UICONTROL Assurance]** -Link.
+Die [!UICONTROL Überprüfungsergebnisse] zeigt die Implementierungsergebnisse der Meta-Erweiterung an. Auswählen **[!UICONTROL Nächste]**. Sie können auch zusätzliche Überprüfungsergebnisse anzeigen, indem Sie die **[!UICONTROL Assurance]** -Link.
 
 ![Dialogfeld mit Testergebnissen mit Implementierungsergebnissen](../../../images/extensions/server/meta/test-results.png)
 
