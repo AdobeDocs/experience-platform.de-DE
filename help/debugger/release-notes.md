@@ -4,14 +4,21 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
+source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 71%
+source-wordcount: '704'
+ht-degree: 69%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
+
+## Version 1.5.4 – Mittwoch, 19. Dezember 2023
+
+### Fehlerbehebungen und Verbesserungen
+
+* Es wurde ein Problem behoben, bei dem Einstellungen nicht beibehalten wurden.
+* Es wurde ein Fehler behoben, der dazu führte, dass der Debugger abstürzte, während die Analytics-Treffer nach der Verarbeitung angezeigt wurden.
 
 ## Version 1.5.3 – Donnerstag, 6. Dezember 2023
 
@@ -25,6 +32,14 @@ ht-degree: 71%
 * Es wurde ein Problem behoben, bei dem Activity Map-Daten in der Analytics-Anforderungstabelle fehlten.
 * Es wurde ein Problem behoben, bei dem das Anzeigen der Target Trace zu einem Absturz führte.
 * Es wurde eine Warnung hinzugefügt, wenn der Debugger die Einrichtung einer On-Page-Infrastruktur in Firefox nicht durchführt.
+
+## Version 1.5.2 – Samstag, 10. November 2023
+
+(Nur Firefox)
+
+### Fehlerbehebungen und Verbesserungen
+
+* Die Dateiorganisation wurde aktualisiert.
 
 ## Version 1.5.1 – Freitag, 2. November 2023
 
