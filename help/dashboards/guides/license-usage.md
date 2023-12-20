@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform; Benutzeroberfläche; UI; Anpassung; Dashboard zur Lizenznutzung; Dashboard; Lizenznutzung; Berechtigung; Verbrauch
-title: Lizenznutzungs-Dashboard Handbuch
+title: Dashboard-Anleitung zur Lizenznutzung
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 8%
+source-wordcount: '2108'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,14 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Lizenznutzungs-Dashboard"
->abstract="Das Lizenznutzungs-Dashboard bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken, sowie Ihr vertraglich vereinbarter Lizenzbetrag. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
+>abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken und Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="Lizenznutzungs-Dashboard"
+>abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken und Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt.<br>Die Nutzungsprognosen werden am Ende des Monats monatlich aktualisiert und prognostizieren Ihre Nutzung für den kommenden Sechsmonatszeitraum. Um die Nutzung zu reduzieren, konfigurieren Sie den Datenablauf für Datensätze oder Pseudonyme Profile für die Sandboxes und Datensätze."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Datensatzgültigkeiten"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Datenabläufe für Pseudonyme Profile"
 
 Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über die Adobe Experience Platform anzeigen [!UICONTROL Lizenzverwendung] Dashboard. Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
 
@@ -36,7 +43,7 @@ Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunk
 >
 >Änderungen oder Aktualisierungen, die seit der Aufnahme der Momentaufnahme an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn die nächste Momentaufnahme erstellt wird.
 
-## Erkunden des Lizenznutzungs-Dashboards {#explore}
+## Dashboard zur Lizenznutzung {#explore}
 
 Um in der Platform-Benutzeroberfläche zum Dashboard zur Lizenzverwendung zu navigieren, wählen Sie **[!UICONTROL Lizenzverwendung]** in der linken Leiste. Die [!UICONTROL Übersicht] -Tab mit einer Liste der verfügbaren Produkte öffnen.
 
@@ -46,7 +53,7 @@ Um in der Platform-Benutzeroberfläche zum Dashboard zur Lizenzverwendung zu nav
 
 ![Die Registerkarte Übersicht über die Lizenznutzung des Dashboards mit der Lizenznutzung, wobei die Lizenznutzung in der linken Navigationsleiste hervorgehoben ist.](../images/license-usage/dashboard-overview.png)
 
-## [!UICONTROL Registerkarte „Überblick“] {#overview-tab}
+## [!UICONTROL Übersicht] tab {#overview-tab}
 
 In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte, einschließlich Add-ons, in Tabellenformat angezeigt. Die Tabelle enthält wichtige Informationen zur Nutzung Ihrer Lizenz für alle verfügbaren Profile.
 
@@ -56,7 +63,7 @@ In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte,
 | **[!UICONTROL Primäre Metrik]** | Die primäre Metrik, die zur Verfolgung in für dieses Produkt verwendet wird. |
 | **[!UICONTROL Lizenzbetrag]** | Der vertraglich vereinbarte Wert für den Höchstbetrag der Primären Metrik, wie in Ihrem Produktlizenzvertrag vereinbart. |
 | **[!UICONTROL Verwendung]** | Die Menge Ihrer verwendeten primären Metrik. Dieser Wert gibt die Gesamtverwendung dieser Metrik über alle Sandboxes hinweg an, entweder in der Produktion oder in der Entwicklung. |
-| **[!UICONTROL Verwendung %]** | Der Prozentsatz Ihrer primären Metrik, der gemäß Ihrem Lizenzbetrag verwendet wird. |
+| **[!UICONTROL Nutzung %]** | Der Prozentsatz Ihrer primären Metrik, der gemäß Ihrem Lizenzbetrag verwendet wird. |
 
 >[!NOTE]
 >
@@ -64,7 +71,7 @@ In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte,
 
 Die Tabelle zeigt die primäre Metrik für jedes Produkt an, da jedes Produkt zahlreiche Metriken verfolgen kann.
 
-## [!UICONTROL Registerkarte „Zusammenfassung“] {#summary-tab}
+## [!UICONTROL Zusammenfassung] tab {#summary-tab}
 
 Um weitere Metriken und detaillierte Einblicke in die Nutzung Ihrer Produktlizenz anzuzeigen, wählen Sie einen Produktnamen aus der Liste aus. Die [!UICONTROL Zusammenfassung] -Ansicht für dieses Produkt angezeigt. Alle verfügbaren Metriken werden auf der Seite [!UICONTROL Zusammenfassung] Registerkarte. Die verfügbaren Metriken hängen vom lizenzierten Produkt ab. Diese Ansicht bietet **eine konsolidierte Ansicht aller Metriken in allen Produktions- oder Entwicklungs-Sandboxes**. Die gleiche Analyseebene wird sowohl für Produktions- als auch für Entwicklungs-Sandboxes bereitgestellt.
 
@@ -72,7 +79,7 @@ Um weitere Metriken und detaillierte Einblicke in die Nutzung Ihrer Produktlizen
 
 Im Tab Zusammenfassung enthält die Tabelle die [!UICONTROL Metrik] Spalte. Diese für Menschen lesbaren Beschreibungen zeigen alle Metriken an, die für diesen Sandbox-Typ verwendet werden.
 
-### Wählen Sie eine Sandbox aus {#select-sandbox}
+### Sandbox auswählen {#select-sandbox}
 
 Um die Ansicht zwischen Produktions- und Entwicklungs-Sandbox-Typen zu ändern, wählen Sie entweder [!UICONTROL Produktions-Sandboxes] oder [!UICONTROL Entwicklungs-Sandboxes]. Der ausgewählte Sandbox-Typ wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
 
@@ -102,7 +109,7 @@ Jedes Visualisierungs-Widget umfasst die folgenden Aspekte:
 
 - Ein Liniendiagramm, das die Änderung der Metrik im Zeitverlauf verfolgt
 - Ein Schlüssel für das Liniendiagramm
-- den Sandbox-Namen
+- Der Sandbox-Name
 - Ein Dropdown-Menü zum Anpassen des Zeitraums für das Liniendiagramm
 
 Die Liniendiagramme vergleichen die Nutzungszahlen für Ihr Unternehmen mit der Gesamtsumme, die für die Lizenzierung Ihres Unternehmens zur Verfügung steht, und geben einen Prozentsatz der Gesamtnutzung an.
@@ -145,7 +152,7 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
-Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
+Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
 
 | Lizenz | Produktbeschreibung |
 |---|---|
