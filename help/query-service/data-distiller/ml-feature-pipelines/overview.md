@@ -2,9 +2,9 @@
 title: AI-/ML-Funktions-Pipelines
 description: Erfahren Sie, wie Sie mit Data Distiller Ihre Pipelines für maschinelles Lernen mit Funktionen anreichern können, die aus Adobe Experience Platform-Daten abgeleitet wurden. Transformieren Sie Rohdaten in Funktionen und stellen Sie die Funktionsdaten bereit, um ein Modell zu trainieren oder zu bewerten, das Ihre Marketing-Anwendungsfälle unterstützt.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 3%
 
 ---
@@ -25,9 +25,9 @@ Mit Data Distiller können Datenwissenschaftler und -ingenieure ihre Pipelines f
 
 ![Eine Infografik mit Details zur AI-ML-Feature-Pipeline.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. Mit den leistungsstarken Abfragefunktionen von Data Distiller können Sie aussagekräftige Funktionen aus den umfangreichen Verhaltensdaten der Experience Platform extrahieren und die destillierten Funktionsdaten in Ihre maschinelle Lernumgebung übertragen, ohne große Mengen von Ereignisdaten außerhalb der Experience Platform kopieren zu müssen.
-2. Lesen Sie den bereitgestellten Funktionsdatensatz in Ihre bevorzugten Tools für das maschinelle Lernen und kombinieren Sie ihn mit anderen aus Unternehmensdaten abgeleiteten Funktionen, um auf Ihr Unternehmen zugeschnittene benutzerdefinierte Modelle zu trainieren, zu testen, zu optimieren und bereitzustellen.
-3. Generieren Sie Bewertungen, Prognosen oder Empfehlungen aus Ihren Modellen und geben Sie die Ausgabe an die Experience Platform zurück, um Kundenerlebnisse über Real-time Customer Data Platform und Adobe Journey Optimizer zu optimieren.
+- Mit den leistungsstarken Abfragefunktionen von Data Distiller können Sie aussagekräftige Funktionen aus den umfangreichen Verhaltensdaten extrahieren, die in der Experience Platform verfügbar sind. Anschließend können Sie die destillierten Funktionsdaten in Ihre maschinelle Lernumgebung übertragen, ohne große Mengen von Ereignisdaten außerhalb der Experience Platform kopieren zu müssen.
+- Lesen Sie den bereitgestellten Funktionsdatensatz in Ihre bevorzugten Tools für das maschinelle Lernen und kombinieren Sie ihn mit anderen aus Unternehmensdaten abgeleiteten Funktionen, um auf Ihr Unternehmen zugeschnittene benutzerdefinierte Modelle zu trainieren, zu testen, zu optimieren und bereitzustellen.
+- Generieren Sie Bewertungen, Prognosen oder Empfehlungen aus Ihren Modellen und geben Sie die Ausgabe an die Experience Platform zurück, um Kundenerlebnisse über Real-time Customer Data Platform und Adobe Journey Optimizer zu optimieren.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -43,10 +43,13 @@ Durch Lesen dieses Dokuments haben Sie sich mit den wichtigen Konzepten vertraut
 
 In den in dieser Reihe von Handbüchern enthaltenen Dokumenten werden die grundlegenden Schritte zum Erstellen von Feature Pipelines von Experience Platform beschrieben, um benutzerdefinierte Modelle in Ihrer Umgebung für maschinelles Lernen zu erstellen. Sie können jetzt eine Verbindung zwischen Data Distiller und Ihrer [!DNL Jupyter Notebook].
 
-- [Verbindung zu Data Distiller über eine [!DNL Python] Notebook](./establish-connection.md)
-- [Datensätze untersuchen und analysieren](./exploratory-analysis.md)
-- [Technische Funktionen für maschinelles Lernen](./feature-engineering.md)
-- [Exportieren von Funktionsdatensätzen](./export-data.md)
+- **Einrichten**: [Verbindung zu Data Distiller über eine [!DNL Python] Notebook](./establish-connection.md)
+
+Die nachstehende Dokumentation entspricht den Schritten, die in der obigen Infografik angegeben sind.
+
+- **Schritt 1**: [Datensätze untersuchen und analysieren](./exploratory-analysis.md)
+- **Schritt 2**: [Technische Funktionen für maschinelles Lernen](./feature-engineering.md)
+- **Schritt 3**: [Exportieren von Funktionsdatensätzen](./export-data.md)
 
 ## Zusätzliche Ressourcen
 
