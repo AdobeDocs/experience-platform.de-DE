@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Python-SDK;Spark-SDK;Datenzugriffs-API;export;export
+keywords: Experience Platform; Startseite; beliebte Themen; Datenzugriff; Python-SDK; Spark SDK; Datenzugriffs-API; Export; Export
 solution: Experience Platform
 title: Data Access API-Anleitung
-description: Die Data Access API unterstützt Adobe Experience Platform, indem sie Entwicklern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze in Experience Platform konzentriert.
+description: Die Data Access API unterstützt Adobe Experience Platform, indem sie Entwicklern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von Experience Platform konzentriert.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
 workflow-type: tm+mt
 source-wordcount: '524'
-ht-degree: 20%
+ht-degree: 12%
 
 ---
 
@@ -15,24 +15,24 @@ ht-degree: 20%
 
 Die Data Access API unterstützt Adobe Experience Platform, indem sie Benutzern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze in [!DNL Experience Platform].
 
-![Data Access auf Experience Platform](images/Data_Access_Experience_Platform.png)
+![Ein Diagramm, wie Data Access die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von Experience Platform erleichtert.](images/Data_Access_Experience_Platform.png)
 
 ## API-Spezifikationsreferenz
 
-Die Referenzdokumentation zur Swagger-API finden Sie [here](https://www.adobe.io/experience-platform-apis/references/data-access/).
+Die Referenzdokumentation zur Swagger-API finden Sie [here](https://developer.adobe.com/experience-platform-apis/references/data-access/).
 
-## Terminologie
+## Terminologie {#terminology}
 
-Eine Beschreibung einiger häufig verwendeter Begriffe in diesem Dokument.
+Die Tabelle enthält eine Beschreibung einiger Begriffe, die in diesem Dokument häufig verwendet werden.
 
 | Begriff | Beschreibung |
 | ----- | ------------ |
-| Datensatz | Eine Sammlung von Daten, die Schema und Felder enthält. |
+| Datensatz | Eine Sammlung von Daten, die ein Schema und Felder enthält. |
 | Batch | Eine Gruppe von Daten, die über einen bestimmten Zeitraum gesammelt und als Einheit verarbeitet wurden. |
 
-## Liste der Dateien in einem Batch abrufen
+## Liste der Dateien in einem Batch abrufen {#retrieve-list-of-files-in-a-batch}
 
-Mithilfe einer Batch-Kennung (batchID) kann die Data Access API eine Liste der Dateien abrufen, die zu diesem Batch gehören.
+Um eine Liste von Dateien abzurufen, die zu einem bestimmten Batch gehören, verwenden Sie die Batch-Kennung (batchID) mit der Data Access API.
 
 **API-Format**
 
@@ -93,7 +93,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-Die `"data"` -Array enthält eine Liste aller Dateien im angegebenen Batch. Jede zurückgegebene Datei verfügt über eine eigene eindeutige ID (`{FILE_ID}`) in der `"dataSetFileId"` -Feld. Diese eindeutige ID kann dann verwendet werden, um auf die Datei zuzugreifen oder sie herunterzuladen.
+Die `"data"` -Array enthält eine Liste aller Dateien im angegebenen Batch. Jede zurückgegebene Datei verfügt über eine eigene eindeutige ID (`{FILE_ID}`), die in der `"dataSetFileId"` -Feld. Sie können diese eindeutige ID verwenden, um auf die Datei zuzugreifen oder sie herunterzuladen.
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
@@ -102,7 +102,7 @@ Die `"data"` -Array enthält eine Liste aller Dateien im angegebenen Batch. Jede
 
 ## Zugreifen auf und Herunterladen von Dateien in einem Batch
 
-Durch Verwendung der Datei-ID (`{FILE_ID}`), kann die Data Access API verwendet werden, um auf bestimmte Details einer Datei zuzugreifen, einschließlich Name, Größe in Byte und Link zum Herunterladen.
+Verwenden Sie eine Datei-ID (`{FILE_ID}`) mit der Data Access API, einschließlich des Namens, der Größe in Byte und eines Links zum Herunterladen.
 
 Die Antwort enthält ein Daten-Array. Je nachdem, ob es sich bei der von der ID referenzierten Datei um eine einzelne Datei oder ein Verzeichnis handelt, kann das zurückgegebene Datenarray einen einzelnen Eintrag oder eine Liste von Dateien enthalten, die zu diesem Verzeichnis gehören. Jedes Dateielement enthält die Details der Datei.
 
@@ -150,8 +150,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.name` | Name der Datei (z. B. profiles.csv). |
-| `data.length` | Größe der Datei (in Byte). |
+| `data.name` | Der Name der Datei (z. B. `profiles.csv`). |
+| `data.length` | Die Größe der Datei (in Byte). |
 | `data._links.self.href` | Die URL zum Herunterladen der Datei. |
 
 **Verzeichnisantwort**
@@ -197,12 +197,12 @@ Wenn ein Verzeichnis zurückgegeben wird, enthält es ein Array aller Dateien im
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.name` | Name der Datei (z. B. profiles.csv). |
+| `data.name` | Der Name der Datei (z. B. `profiles.csv`). |
 | `data._links.self.href` | Die URL zum Herunterladen der Datei. |
 
-## Dateiinhalt aufrufen
+## Dateiinhalt aufrufen {#access-file-contents}
 
-Die [!DNL Data Access] API kann auch verwendet werden, um auf den Inhalt einer Datei zuzugreifen. Damit können Sie den Inhalt dann in eine externe Quelle herunterladen.
+Sie können auch die [!DNL Data Access] API für den Zugriff auf den Inhalt einer Datei. Sie können die Inhalte dann in eine externe Quelle herunterladen.
 
 **API-Format**
 
@@ -227,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `{FILE_ID}` | Die ID der Datei in einem Datensatz. |
-| `{FILE_NAME}` | Der vollständige Name der Datei (z. B. profiles.csv). |
+| `{FILE_NAME}` | Der vollständige Name der Datei (z. B. `profiles.csv`). |
 
 **Antwort**
 
@@ -235,8 +235,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Zusätzliche Codebeispiele
 
-Weitere Proben finden Sie im Abschnitt [Tutorial zum Datenzugriff](tutorials/dataset-data.md).
+Weitere Beispiele finden Sie im Abschnitt [Tutorial zum Datenzugriff](tutorials/dataset-data.md).
 
-## Abonnieren von Datenerfassungsereignissen
+## Abonnieren von Datenerfassungsereignissen {#subscribe-to-data-ingestion-events}
 
-[!DNL Platform] stellt bestimmte hochwertige Ereignisse über [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) zum Abonnieren bereit. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenaufnahmebenachrichtigungen](../ingestion/quality/subscribe-events.md).
+Sie können bestimmte Ereignisse mit hohem Wert über die [Adobe Developer-Konsole](https://developer.adobe.com/console/). Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenaufnahmebenachrichtigungen](../ingestion/quality/subscribe-events.md).

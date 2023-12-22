@@ -4,22 +4,22 @@ solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
 description: Erfahren Sie mehr über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
-source-wordcount: '2659'
-ht-degree: 43%
+source-wordcount: '2656'
+ht-degree: 41%
 
 ---
 
 # [!DNL XDM ExperienceEvent]-Klasse:
 
-[!DNL XDM ExperienceEvent] ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, mit der Sie einen mit einem Zeitstempel versehenen Schnappschuss des Systems erstellen können, wenn ein bestimmtes Ereignis auftritt oder eine Reihe von Bedingungen erfüllt worden sind.
+[!DNL XDM ExperienceEvent] ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse. Verwenden Sie diese Klasse, um eine Momentaufnahme des Systems mit Zeitstempel zu erstellen, wenn ein bestimmtes Ereignis auftritt oder bestimmte Bedingungen erreicht wurden.
 
 Ein Erlebnisereignis ist eine Aufzeichnung des Geschehens in Form von Fakten, einschließlich des Zeitpunkts und der Identität der beteiligten Person. Ereignisse können entweder explizit (direkt beobachtbare menschliche Aktionen) oder implizit (ohne direkte menschliche Aktion ausgelöst) sein und werden ohne Aggregation oder Interpretation aufgezeichnet. Weitere wichtige Informationen zur Verwendung dieser Klasse im Platform-Ökosystem finden Sie im Abschnitt [XDM-Übersicht](../home.md#data-behaviors).
 
-Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene Felder für ein Schema bereit. Zwei dieser Felder (`_id` und `timestamp`) **erforderlich** für alle Schemas, die auf der Klasse basieren, während der Rest optional ist. Die Werte einiger Felder werden bei der Datenerfassung automatisch ausgefüllt.
+Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene Felder für ein Schema bereit. Zwei dieser Felder (`_id` und `timestamp`) **erforderlich** für alle Schemas, die auf dieser Klasse basieren, während der Rest optional ist. Die Werte einiger Felder werden bei der Datenerfassung automatisch ausgefüllt.
 
-![Die Struktur von XDM ExperienceEvent, wie sie in der Platform-Benutzeroberfläche angezeigt wird](../images/classes/experienceevent/structure.png)
+![Die Struktur von XDM ExperienceEvent, wie sie in der Platform-Benutzeroberfläche angezeigt wird.](../images/classes/experienceevent/structure.png)
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
@@ -27,7 +27,7 @@ Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene F
 | `eventMergeId` | Wenn Sie [Adobe Experience Platform Web SDK](../../edge/home.md) verwenden, um Daten aufzunehmen, stellt dies die ID des erfassten Batches dar, der zur Erstellung des Datensatzes geführt hat. Dieses Feld wird bei der Datenaufnahme automatisch vom System ausgefüllt. Die Verwendung dieses Felds außerhalb des Kontexts einer Web SDK-Implementierung wird nicht unterstützt. |
 | `eventType` | Eine Zeichenfolge, die den Typ oder die Kategorie des Ereignisses angibt. Dieses Feld kann verwendet werden, wenn Sie innerhalb desselben Schemas und Datensatzes eine Unterscheidung zwischen verschiedenen Ereignistypen treffen möchten, z. B. eine Unterscheidung zwischen einem Produktansichtsereignis und einem Zum-Einkaufskorb-Hinzufügen-Ereignis bei einem Einzelhandelsunternehmen.<br><br>Standardwerte für diese Eigenschaft sind im [Anhang](#eventType) zusammen mit Beschreibungen des vorgesehenen Anwendungsfalls angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Ereignistyp-Zeichenfolgen verwenden, um die Ereignisse, die Sie nachverfolgen, zu kategorisieren.<br><br>`eventType` beschränkt Sie auf die Verwendung nur eines einzigen Ereignisses pro Treffer in Ihrem Programm. Daher müssen Sie berechnete Felder verwenden, um dem System mitzuteilen, welches Ereignis am wichtigsten ist. Weitere Informationen finden Sie im Abschnitt zu [Best Practices für berechnete Felder](#calculated). |
 | `producedBy` | Ein Zeichenfolge-Wert, der den Verursacher oder Ursprung des Ereignisses beschreibt. Dieses Feld kann verwendet werden, um bestimmte Ereignisverursacher bei Bedarf für Segmentierungszwecke herauszufiltern.<br><br>Einige empfohlene Werte für diese Eigenschaft sind im [Anhang](#producedBy) angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Zeichenfolgen verwenden, um verschiedene Ereignisverursacher darzustellen. |
-| `identityMap` | Ein Verknüpfungsfeld, das einen Satz von Identitäten mit Namespace für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld ordnungsgemäß zu verwenden, verwenden Sie [Echtzeit-Kundenprofil](../../profile/home.md)versuchen Sie nicht, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
+| `identityMap` | Ein Verknüpfungsfeld, das einen Satz von Identitäten mit Namespace für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. So nutzen Sie dieses Feld ordnungsgemäß für [Echtzeit-Kundenprofil](../../profile/home.md)versuchen Sie nicht, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
 | `timestamp`<br>**(Erforderlich)** | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß [RFC 3339 Abschnitt 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Dieser Zeitstempel muss in der Vergangenheit erfolgt sein. Best Practices zur Verwendung dieses Feldes finden Sie im nachstehenden Abschnitt [Zeitstempel](#timestamps). |
 
 {style="table-layout:auto"}
@@ -50,7 +50,7 @@ Indem Sie den Zeitstempel auf Klassenebene von anderen zugehörigen Datums-/Zeit
 
 Bestimmte Interaktionen in Ihren Erlebnisprogrammen können zu mehreren verwandten Ereignissen führen, die technisch denselben Ereigniszeitstempel aufweisen und daher als ein Ereignisdatensatz dargestellt werden. Wenn ein Kunde beispielsweise ein Produkt auf Ihrer Website ansieht, kann dies zu einem Ereignisdatensatz führen, der zwei potenzielle `eventType`-Werte hat: ein „Produktansicht“-Ereignis (`commerce.productViews`) oder ein generisches „Seitenansicht“-Ereignis (`web.webpagedetails.pageViews`). In diesen Fällen können Sie berechnete Felder verwenden, um die wichtigsten Attribute zu erfassen, wenn mehrere Ereignisse in einem Treffer erfasst werden.
 
-[Adobe Experience Platform-Datenvorbereitung](../../data-prep/home.md) ermöglicht die Zuordnung, Umwandlung und Validierung von Daten zu und von XDM. Mithilfe der verfügbaren [Zuordnungsfunktionen](../../data-prep/functions.md), die vom Service bereitgestellt werden, können Sie logische Operatoren aufrufen, um Daten aus Datensätzen mit mehreren Ereignissen zu priorisieren, umzuwandeln und/oder zu konsolidieren, wenn sie in Experience Platform aufgenommen werden. Im obigen Beispiel könnten Sie `eventType` als berechnetes Feld festlegen, das eine „Produktansicht“ gegenüber einer „Seitenansicht“ priorisiert, wenn beide auftreten.
+Verwendung [Adobe Experience Platform-Datenvorbereitung](../../data-prep/home.md) zum Zuordnen, Transformieren und Validieren von Daten zu und von XDM. Mithilfe der verfügbaren [Zuordnungsfunktionen](../../data-prep/functions.md), die vom Service bereitgestellt werden, können Sie logische Operatoren aufrufen, um Daten aus Datensätzen mit mehreren Ereignissen zu priorisieren, umzuwandeln und/oder zu konsolidieren, wenn sie in Experience Platform aufgenommen werden. Im obigen Beispiel könnten Sie `eventType` als berechnetes Feld festlegen, das eine „Produktansicht“ gegenüber einer „Seitenansicht“ priorisiert, wenn beide auftreten.
 
 Wenn Sie Daten manuell über die UI in Platform erfassen, finden Sie das Handbuch unter [berechnete Felder](../../data-prep/ui/mapping.md#calculated-fields) spezifische Schritte zur Erstellung berechneter Felder.
 

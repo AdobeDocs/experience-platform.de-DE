@@ -2,18 +2,18 @@
 keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; SQL-Syntax; SQL; ctas; CTAS; Erstellen einer Tabelle als ausgewählt
 solution: Experience Platform
 title: SQL-Syntax in Query Service
-description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
+description: In diesem Dokument wird die von Adobe Experience Platform Query Service unterstützte SQL-Syntax erläutert.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
 workflow-type: tm+mt
-source-wordcount: '4134'
-ht-degree: 10%
+source-wordcount: '4111'
+ht-degree: 5%
 
 ---
 
 # SQL-Syntax in Query Service
 
-Adobe Experience Platform Query Service bietet die Möglichkeit, standardmäßige ANSI-SQL für `SELECT` -Anweisungen und anderen eingeschränkten Befehlen. In diesem Dokument wird die von [!DNL Query Service].
+Sie können standardmäßige ANSI-SQL für `SELECT` Anweisungen und andere eingeschränkte Befehle in Adobe Experience Platform Query Service. In diesem Dokument wird die von [!DNL Query Service].
 
 ## Abfragen auswählen {#select-queries}
 
@@ -35,7 +35,11 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-where `from_item` kann eine der folgenden Optionen sein:
+Im Abschnitt Registerkarten unten finden Sie die verfügbaren Optionen für die Suchbegriffe VON, GRUPPE und MIT .
+
+>[!BEGINTABS]
+
+>[!TAB `from_item`]
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -53,7 +57,7 @@ with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-und `grouping_element` kann eine der folgenden Optionen sein:
+>[!TAB `grouping_element`]
 
 ```sql
 ( )
@@ -79,11 +83,13 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-und `with_query`:
+>[!TAB `with_query`]
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
+
+>[!ENDTABS]
 
 Die folgenden Unterabschnitte enthalten Details zu zusätzlichen Klauseln, die Sie in Ihren Abfragen verwenden können, sofern sie dem oben beschriebenen Format entsprechen.
 
@@ -113,13 +119,13 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Bitte beachten Sie, dass eine `SNAPSHOT` -Klausel funktioniert mit einem Tabellen- oder Tabellenalias, jedoch nicht über einer Unter-Abfrage oder Ansicht. A `SNAPSHOT` -Klausel funktioniert überall in einer `SELECT` -Abfrage auf eine Tabelle angewendet werden.
+A `SNAPSHOT` -Klausel funktioniert mit einem Tabellen- oder Tabellenalias, jedoch nicht über einer Unterabfrage oder Ansicht. A `SNAPSHOT` -Klausel funktioniert überall `SELECT` -Abfrage auf eine Tabelle angewendet werden.
 
-Darüber hinaus können Sie `HEAD` und `TAIL` als spezielle Offset-Werte für Momentaufnahmen-Klauseln. Verwenden `HEAD` bezieht sich auf einen Offset vor dem ersten Snapshot, während `TAIL` bezieht sich auf einen Versatz nach dem letzten Schnappschuss.
+Außerdem können Sie `HEAD` und `TAIL` als spezielle Offset-Werte für Momentaufnahmen-Klauseln. Verwenden `HEAD` bezieht sich auf einen Offset vor dem ersten Snapshot, während `TAIL` bezieht sich auf einen Versatz nach dem letzten Schnappschuss.
 
 >[!NOTE]
 >
->Wenn Sie zwischen zwei Snapshot-IDs abfragen und der Start-Snapshot abgelaufen ist, können die beiden folgenden Szenarien eintreten, je nachdem, ob das optionale Fallback-Verhalten-Flag (`resolve_fallback_snapshot_on_failure`) festgelegt ist:
+>Wenn Sie zwischen zwei Snapshot-IDs abfragen, können die beiden folgenden Szenarien eintreten, wenn der Start-Snapshot abgelaufen ist, und die optionale Ausweichverhaltenskennzeichnung (`resolve_fallback_snapshot_on_failure`) festgelegt ist:
 >
 >- Wenn das optionale Fallback-Verhalten-Flag gesetzt ist, wählt Query Service den frühesten verfügbaren Snapshot aus, legt ihn als Start-Snapshot fest und gibt die Daten zwischen dem frühesten verfügbaren Snapshot und dem angegebenen End-Snapshot zurück. Diese Daten sind **inklusive** der frühesten verfügbaren Momentaufnahme.
 >
@@ -183,7 +189,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameter | Beschreibung |
 | ----- | ----- |
 | `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage erstellt wurde. |
-| `rowvalidation` | (Optional) Gibt an, ob der Benutzer die Überprüfung aller neuen Batches auf Zeilenebene wünscht, die für den neu erstellten Datensatz erfasst werden. Der Standardwert lautet `true`. |
+| `rowvalidation` | (Optional) Gibt an, ob der Benutzer eine Überprüfung jedes neuen Batches auf Zeilenebene wünscht, der für den neu erstellten Datensatz erfasst wird. Der Standardwert lautet `true`. |
 | `label` | Wenn Sie einen Datensatz mit einer CTAS-Abfrage erstellen, verwenden Sie diese Bezeichnung mit dem Wert von `profile` , um Ihren Datensatz als für das Profil aktiviert zu kennzeichnen. Das bedeutet, dass Ihr Datensatz bei der Erstellung automatisch für das Profil markiert wird. Weitere Informationen zur Verwendung von `label`. |
 | `select_query` | A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries). |
 
@@ -199,7 +205,7 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->Die `SELECT`-Anweisung muss einen Alias für die Aggregat-Funktionen wie `COUNT`, `SUM`, `MIN` usw. enthalten. Darüber hinaus wird die `SELECT` -Anweisung kann mit oder ohne Klammern () bereitgestellt werden. Sie können eine `SNAPSHOT` -Klausel, um inkrementelle Deltas in die Zieltabelle zu lesen.
+>Die `SELECT` -Anweisung muss einen Alias für die Aggregatfunktionen wie `COUNT`, `SUM`, `MIN`usw. Außerdem wird die `SELECT` -Anweisung kann mit oder ohne Klammern () bereitgestellt werden. Sie können eine `SNAPSHOT` -Klausel, um inkrementelle Deltas in die Zieltabelle zu lesen.
 
 ## INSERT INTO
 
@@ -228,7 +234,7 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
-> Die `SELECT` statement **darf nicht** in Klammern (). Außerdem wird das Schema des Ergebnisses der `SELECT` -Anweisung muss mit der in der `INSERT INTO` -Anweisung. Sie können eine `SNAPSHOT` -Klausel, um inkrementelle Deltas in die Zieltabelle zu lesen.
+>Do **not** die `SELECT` -Anweisung in Klammern (). Außerdem das Schema des Ergebnisses der `SELECT` -Anweisung muss mit der in der `INSERT INTO` -Anweisung. Sie können eine `SNAPSHOT` -Klausel, um inkrementelle Deltas in die Zieltabelle zu lesen.
 
 Die meisten Felder in einem echten XDM-Schema befinden sich nicht auf der Stammebene und SQL lässt die Verwendung der Punktnotation nicht zu. Um mithilfe verschachtelter Felder ein realistisches Ergebnis zu erzielen, müssen Sie jedes Feld in Ihrem `INSERT INTO` Pfad.
 
@@ -290,9 +296,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `IF EXISTS` | Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn das Schema **not** existieren. |
-| `RESTRICT` | Standardwert für den Modus. Wenn dies angegeben wird, wird das Schema nur gelöscht, wenn es **nicht** enthält alle Tabellen. |
-| `CASCADE` | Wenn dies angegeben wird, wird das Schema zusammen mit allen im Schema vorhandenen Tabellen abgelegt. |
+| `IF EXISTS` | Wenn dieser Parameter angegeben ist und das Schema **not** vorhanden ist, wird keine Ausnahme ausgelöst. |
+| `RESTRICT` | Der Standardwert für den Modus. Wenn angegeben, wird das Schema nur abgelegt, wenn dies der Fall ist **not** enthält alle Tabellen. |
+| `CASCADE` | Wenn angegeben, wird das Schema zusammen mit allen im Schema vorhandenen Tabellen abgelegt. |
 
 ## CREATE VIEW
 
@@ -416,7 +422,7 @@ $$END;
 
 Die Kontrollstruktur IF-THEN-ELSE ermöglicht die bedingte Ausführung einer Liste von Anweisungen, wenn eine Bedingung als TRUE ausgewertet wird. Diese Kontrollstruktur ist nur innerhalb eines anonymen Blocks verfügbar. Wenn diese Struktur als eigenständiger Befehl verwendet wird, tritt ein Syntaxfehler auf (&quot;Ungültiger Befehl außerhalb des anonymen Blocks&quot;).
 
-Der folgende Codeausschnitt zeigt das richtige Format für bedingte Anweisungen des Typs IF-THEN-ELSE in einem anonymen Block.
+Der folgende Codeausschnitt zeigt das richtige Format für eine bedingte IF-THEN-ELSE-Anweisung in einem anonymen Block.
 
 ```javascript
 IF booleanExpression THEN
@@ -451,7 +457,7 @@ $$BEGIN
  END$$;
 ```
 
-Diese Struktur kann in Kombination mit `raise_error();` , um eine benutzerdefinierte Fehlermeldung zurückzugeben. Der unten dargestellte Codeblock beendet den anonymen Baustein mit &quot;Benutzerdefinierte Fehlermeldung&quot;.
+Diese Struktur kann mit `raise_error();` , um eine benutzerdefinierte Fehlermeldung zurückzugeben. Der unten dargestellte Codeblock beendet den anonymen Baustein mit &quot;Benutzerdefinierte Fehlermeldung&quot;.
 
 **Beispiel**
 
@@ -609,11 +615,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Siehe Handbuch unter [Logische Organisation von Datenelementen](../best-practices/organize-data-assets.md) für eine detaillierte Erläuterung der Best Practices für Query Service.
+Siehe [Logische Organisation von Datenelementen](../best-practices/organize-data-assets.md) Anleitung für eine detailliertere Erläuterung der Best Practices für Query Service.
 
 ## Tabelle vorhanden
 
-Die `table_exists` Der SQL-Befehl wird verwendet, um zu überprüfen, ob eine Tabelle im System vorhanden ist oder nicht. Der Befehl gibt einen booleschen Wert zurück: `true`, wenn eine Tabelle **vorhanden** ist, und `false`, wenn **keine** Tabelle vorhanden ist.
+Die `table_exists` Der SQL-Befehl wird verwendet, um zu überprüfen, ob eine Tabelle derzeit im System vorhanden ist. Der Befehl gibt einen booleschen Wert zurück: `true` , wenn die Tabelle **does** vorhanden und `false` , wenn die Tabelle **not** existieren.
 
 Wenn Sie überprüfen, ob eine Tabelle vorhanden ist, bevor Sie die Anweisungen ausführen, wird die `table_exists` -Funktion vereinfacht das Schreiben eines anonymen Blocks, um beide `CREATE` und `INSERT INTO` Anwendungsbeispiele.
 
@@ -682,7 +688,7 @@ Die Werte, die aus dem `source_dataset` werden zum Ausfüllen der Zieltabelle ve
 
 | SKU | _experience  | quantity | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
-| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot;) | 5 | 10.5 |
+| product-id-1 | (&quot;(&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;)&quot;) | 5 | 10,5 |
 | product-id-5 | (&quot;(&quot;(&quot;(&quot;(A, pass, B, NULL)&quot;)&quot;)&quot;)&quot;) |          |              |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
@@ -742,7 +748,7 @@ Im Folgenden finden Sie eine Liste statistischer Berechnungen, die nach Verwendu
 
 Sie können nun Statistiken auf Spaltenebene berechnen über [!DNL Azure Data Lake Storage] (ADLS)-Datensätzen mit der `COMPUTE STATISTICS` SQL-Befehl. Berechnen Sie Spaltenstatistiken für den gesamten Datensatz, eine Untergruppe eines Datensatzes, alle Spalten oder eine Untergruppe von Spalten.
 
-`COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, und `FOR COLUMNS` -Befehle werden für beschleunigte Store-Tabellen nicht unterstützt. Diese Erweiterungen für den Befehl `ANALYZE TABLE` werden derzeit nur für ADLS-Tabellen unterstützt.
+`COMPUTE STATISTICS` erweitert die `ANALYZE TABLE` Befehl. Die Variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, und `FOR COLUMNS` -Befehle werden für beschleunigte Store-Tabellen nicht unterstützt. Diese Erweiterungen für `ANALYZE TABLE` -Befehl werden derzeit nur für ADLS-Tabellen unterstützt.
 
 **Beispiel**
 
@@ -754,7 +760,7 @@ Die `FILTER CONTEXT` berechnet basierend auf der bereitgestellten Filterbedingun
 
 >[!NOTE]
 >
->Die `Statistics ID` und die generierten Statistiken gelten nur für jede Sitzung und können nicht über verschiedene PSQL-Sitzungen hinweg aufgerufen werden.<br><br>Einschränkungen:<ul><li>Die Erstellung von Statistiken wird für Array- oder Zuordnungsdatentypen nicht unterstützt</li><li>Berechnete Statistiken sind **not** über mehrere Sitzungen hinweg beibehalten.</li></ul><br><br>Optionen:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Standardmäßig ist diese Markierung auf „true“ eingestellt. Wenn daher Statistiken für einen Datentyp angefordert werden, der nicht unterstützt wird, wird kein Fehler ausgegeben, es werden jedoch Felder mit den nicht unterstützten Datentypen still übersprungen.<br>Um Benachrichtigungen zu Fehlern zu aktivieren, wenn Statistiken zu nicht unterstützten Datentypen angefordert werden, verwenden Sie: `SET skip_stats_for_complex_datatypes = false`.
+>Die `Statistics ID` und die generierten Statistiken gelten nur für jede Sitzung und können nicht über verschiedene PSQL-Sitzungen hinweg aufgerufen werden.<br><br>Einschränkungen:<ul><li>Die Erstellung von Statistiken wird für Array- oder Zuordnungsdatentypen nicht unterstützt</li><li>Berechnete Statistiken sind **not** über mehrere Sitzungen hinweg beibehalten.</li></ul><br><br>Optionen:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Standardmäßig ist das Flag auf &quot;true&quot;gesetzt. Wenn daher Statistiken für einen Datentyp angefordert werden, der nicht unterstützt wird, wird kein Fehler ausgegeben, es werden jedoch Felder mit den nicht unterstützten Datentypen still übersprungen.<br>Um Benachrichtigungen zu Fehlern zu aktivieren, wenn Statistiken zu nicht unterstützten Datentypen angefordert werden, verwenden Sie: `SET skip_stats_for_complex_datatypes = false`.
 
 Die Konsolenausgabe wird wie unten dargestellt angezeigt.
 
@@ -765,7 +771,7 @@ Die Konsolenausgabe wird wie unten dargestellt angezeigt.
 (1 row)
 ```
 
-Sie können dann die berechneten Statistiken direkt abfragen, indem Sie die `Statistics ID` referenzieren. Mit der folgenden Beispielanweisung können Sie die vollständige Ausgabe anzeigen, wenn Sie `Statistics ID` oder den Aliasnamen verwenden. Weitere Informationen zu dieser Funktion finden Sie unter [Alias-Namensdokumentation](../key-concepts/dataset-statistics.md#alias-name).
+Sie können die berechneten Statistiken dann direkt abfragen, indem Sie auf die `Statistics ID`. Verwenden Sie die `Statistics ID` oder den Aliasnamen, wie in der folgenden Beispielanweisung dargestellt, um die Ausgabe vollständig anzuzeigen. Weitere Informationen zu dieser Funktion finden Sie unter [Alias-Namensdokumentation](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -792,12 +798,13 @@ Siehe [Dokumentation zu Datensatzstatistiken](../key-concepts/dataset-statistics
 
 #### TABLESAMPEL {#tablesample}
 
-Der Abfrage-Service von Adobe Experience Platform bietet Beispieldatensätze als Teil der Funktionen zur annähernden Abfrageverarbeitung.
-Beispiele für Datensätze werden am besten verwendet, wenn Sie keine genaue Antwort für einen Aggregat-Vorgang über einen Datensatz benötigen. Mit dieser Funktion können Sie effizientere Explorationsabfragen zu großen Datensätzen durchführen, indem Sie eine ungefähre Abfrage senden, um eine ungefähre Antwort zurückzugeben.
+Adobe Experience Platform Query Service bietet Beispiel-Datensätze als Teil seiner Funktionen zur ungefähren Abfrageverarbeitung.
+
+Beispiele für Datensätze werden am besten verwendet, wenn Sie keine genaue Antwort für einen Aggregat-Vorgang über einen Datensatz benötigen. Verwenden Sie das `TABLESAMPLE` Funktion.
 
 Beispieldatensätze werden mit einheitlichen Zufallsproben aus vorhandenen [!DNL Azure Data Lake Storage] (ADLS)-Datensätze, bei denen nur ein Prozentsatz der Datensätze aus dem Original verwendet wird. Die Datensatzbeispielfunktion erweitert die `ANALYZE TABLE` mit dem Befehl `TABLESAMPLE` und `SAMPLERATE` SQL-Befehle.
 
-In den Beispielen unten zeigt Zeile eins, wie eine 5 %-Probe der Tabelle berechnet wird. Zeile zwei zeigt, wie ein 5 %-Sample aus einer gefilterten Ansicht der Daten in der Tabelle berechnet wird.
+Im folgenden Beispiel zeigt Zeile 1, wie eine 5 %-Probe der Tabelle berechnet wird. Zeile zwei zeigt, wie ein 5 %-Sample aus einer gefilterten Ansicht der Daten in der Tabelle berechnet wird.
 
 **Beispiel**
 
@@ -827,18 +834,18 @@ CLOSE name
 CLOSE ALL
 ```
 
-Wenn `CLOSE name` verwendet wird, `name` stellt den Namen eines geöffneten Cursors dar, der geschlossen werden muss. Wenn `CLOSE ALL` verwendet wird, werden alle geöffneten Cursor geschlossen.
+Wenn `CLOSE name` verwendet wird, `name` stellt den Namen eines geöffneten Cursors dar, der geschlossen werden muss. Wenn `CLOSE ALL` verwendet wird, sind alle geöffneten Cursor geschlossen.
 
 ### DEALLOCATE
 
-Die `DEALLOCATE` -Befehl können Sie die Zuordnung einer zuvor vorbereiteten SQL-Anweisung aufheben. Wenn Sie die Zuordnung einer vorbereiteten Anweisung nicht explizit aufheben, wird dies am Ende der Sitzung ausgeführt. Weitere Informationen zu vorbereiteten Anweisungen finden Sie im [VORBEREITEN, Befehl](#prepare) Abschnitt.
+Um die Zuordnung einer zuvor vorbereiteten SQL-Anweisung aufzuheben, verwenden Sie die `DEALLOCATE` Befehl. Wenn Sie die Zuordnung einer vorbereiteten Anweisung nicht explizit aufgehoben haben, wird die Zuweisung zum Ende der Sitzung aufgehoben. Weitere Informationen zu vorbereiteten Anweisungen finden Sie im [VORBEREITEN, Befehl](#prepare) Abschnitt.
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-Wenn `DEALLOCATE name` verwendet wird, `name` stellt den Namen der vorbereiteten Anweisung dar, die aufgehoben werden muss. Wenn `DEALLOCATE ALL` verwendet wird, wird die Zuweisung aller vorbereiteten Anweisungen aufgehoben.
+Wenn `DEALLOCATE name` verwendet wird, `name` stellt den Namen der vorbereiteten Anweisung dar, die aufgehoben werden muss. Wenn `DEALLOCATE ALL` verwendet wird, wird die Zuordnung aller vorbereiteten Anweisungen aufgehoben.
 
 ### DECLARE
 
@@ -851,11 +858,11 @@ DECLARE name CURSOR FOR query
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `name` | Der Name des zu erstellenden Cursors. |
-| `query` | Ein `SELECT`- oder `VALUES`-Befehl, der die vom Cursor zurückzugebenden Zeilen angibt. |
+| `query` | A `SELECT` oder `VALUES` -Befehl, der die vom Cursor zurückzugebenden Zeilen angibt. |
 
 ### EXECUTE
 
-Die `EXECUTE` -Befehl wird zum Ausführen einer zuvor vorbereiteten Anweisung verwendet. Da vorbereitete Anweisungen nur für die Dauer einer Sitzung vorhanden sind, muss die vorbereitete Anweisung von einer `PREPARE` -Anweisung, die zuvor in der aktuellen Sitzung ausgeführt wurde. Weitere Informationen zur Verwendung vorbereiteter Anweisungen finden Sie im [`PREPARE` command](#prepare) Abschnitt.
+Die `EXECUTE` -Befehl wird zum Ausführen einer zuvor vorbereiteten Anweisung verwendet. Da vorbereitete Anweisungen nur während einer Sitzung vorhanden sind, muss die vorbereitete Anweisung von einer `PREPARE` -Anweisung, die zuvor in der aktuellen Sitzung ausgeführt wurde. Weitere Informationen zur Verwendung vorbereiteter Anweisungen finden Sie im [`PREPARE` command](#prepare) Abschnitt.
 
 Wenn die Variable `PREPARE` -Anweisung, die die Anweisung erstellt hat, die einige Parameter angegeben hat, muss ein kompatibler Satz von Parametern an `EXECUTE` -Anweisung. Wenn diese Parameter nicht übergeben werden, wird ein Fehler erzeugt.
 
@@ -866,17 +873,17 @@ EXECUTE name [ ( parameter ) ]
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `name` | Der Name der vorbereiteten Anweisung, die ausgeführt werden soll. |
-| `parameter` | Der tatsächliche Wert eines Parameters für die vorbereitete Anweisung. Hierbei muss es sich um einen Ausdruck handeln, der einen Wert liefert, der mit dem Datentyp dieses Parameters kompatibel ist, der bei der Erstellung der vorbereiteten Anweisung festgelegt wurde.  Wenn mehrere Parameter für die vorbereitete Anweisung vorhanden sind, werden sie durch Kommas getrennt. |
+| `parameter` | Der tatsächliche Wert eines Parameters für die vorbereitete Anweisung. Hierbei muss es sich um einen Ausdruck handeln, der einen Wert liefert, der mit dem Datentyp dieses Parameters kompatibel ist, der bei der Erstellung der vorbereiteten Anweisung festgelegt wurde. Wenn mehrere Parameter für die vorbereitete Anweisung vorhanden sind, werden sie durch Kommas getrennt. |
 
 ### EXPLAIN
 
-Die `EXPLAIN` zeigt den Ausführungsplan für die angegebene Anweisung an. Der Ausführungsplan zeigt, wie die in der Anweisung referenzierten Tabellen gescannt werden.  Wenn mehrere Tabellen referenziert werden, wird angezeigt, welche Join-Algorithmen verwendet werden, um die erforderlichen Zeilen aus jeder Eingabetabelle zusammenzuführen.
+Die `EXPLAIN` zeigt den Ausführungsplan für die angegebene Anweisung an. Der Ausführungsplan zeigt, wie die in der Anweisung referenzierten Tabellen gescannt werden. Wenn mehrere Tabellen referenziert werden, wird angezeigt, welche Join-Algorithmen verwendet werden, um die erforderlichen Zeilen aus jeder Eingabetabelle zusammenzuführen.
 
 ```sql
 EXPLAIN statement
 ```
 
-Verwenden Sie die `FORMAT` mit dem Keyword `EXPLAIN` -Befehl, um das Format der Antwort zu definieren.
+Um das Format der Antwort zu definieren, verwenden Sie die `FORMAT` mit dem Keyword `EXPLAIN` Befehl.
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -885,7 +892,7 @@ EXPLAIN FORMAT { TEXT | JSON } statement
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `FORMAT` | Verwenden Sie die `FORMAT` -Befehl, um das Ausgabeformat anzugeben. Die verfügbaren Optionen sind `TEXT` oder `JSON`. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT` voreingestellt. |
-| `statement` | Jede `SELECT`-, `INSERT`-, `UPDATE`-, `DELETE`-, `VALUES`-, `EXECUTE`-, `DECLARE`-, `CREATE TABLE AS`- oder `CREATE MATERIALIZED VIEW AS`-Anweisung, deren Ausführungsplan Sie sehen möchten. |
+| `statement` | Alle `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`oder `CREATE MATERIALIZED VIEW AS` -Anweisung, deren Ausführungsplan Sie sehen möchten. |
 
 >[!IMPORTANT]
 >
@@ -923,7 +930,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 Die `PREPARE` -Befehl können Sie eine vorbereitete Anweisung erstellen. Eine vorbereitete Anweisung ist ein serverseitiges Objekt, das zur Vorlagenbildung für ähnliche SQL-Anweisungen verwendet werden kann.
 
-Vorbereitete Anweisungen können Parameter annehmen, d. h. Werte, die bei der Ausführung in der Anweisung ersetzt werden. Parameter werden nach Position referenziert, indem bei der Verwendung vorbereiteter Anweisungen $1, $2 usw. verwendet werden.
+Vorbereitete Anweisungen können Parameter annehmen, d. h. Werte, die bei der Ausführung in der Anweisung ersetzt werden. Parameter werden nach Position referenziert, wobei bei Verwendung vorbereiteter Anweisungen $1, $2 usw. verwendet wird.
 
 Optional können Sie eine Liste von Parameterdatentypen angeben. Wenn der Datentyp eines Parameters nicht aufgeführt ist, kann der Typ aus dem Kontext abgeleitet werden.
 
@@ -971,8 +978,8 @@ Weitere Informationen zu den standardmäßigen SELECT-Abfrageparametern finden S
 
 | Parameter | Beschreibung |
 | ------ | ------ |
-| `TEMPORARY` oder `TEMP` | Ein optionaler Parameter. Wenn angegeben, ist die zu erstellende Tabelle eine temporäre Tabelle. |
-| `UNLOGGED` | Ein optionaler Parameter. Wenn angegeben, ist die Tabelle, die wie erstellt wird, eine nicht protokollierte Tabelle. Weitere Informationen zu nicht protokollierten Tabellen finden Sie im [[!DNL PostgreSQL] Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `TEMPORARY` oder `TEMP` | Ein optionaler Parameter. Wenn der Parameter angegeben ist, ist die erstellte Tabelle eine temporäre Tabelle. |
+| `UNLOGGED` | Ein optionaler Parameter. Wenn der Parameter angegeben ist, ist die erstellte Tabelle eine nicht protokollierte Tabelle. Weitere Informationen zu nicht protokollierten Tabellen finden Sie im [[!DNL PostgreSQL] Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Der Name der zu erstellenden Tabelle. |
 
 **Beispiel**
@@ -995,7 +1002,7 @@ SHOW ALL
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `name` | Der Name des Laufzeitparameters, zu dem Sie Informationen benötigen. Mögliche Werte für den Laufzeitparameter sind die folgenden Werte:<br>`SERVER_VERSION`: Dieser Parameter zeigt die Versionsnummer des Servers an.<br>`SERVER_ENCODING`: Dieser Parameter zeigt die serverseitige Zeichensatzkodierung an.<br>`LC_COLLATE`: Dieser Parameter zeigt die Gebietsschemaeinstellung der Datenbank für die Sortierung (Textanordnung) an.<br>`LC_CTYPE`: Dieser Parameter zeigt die Gebietsschemaeinstellung der Datenbank für die Zeichenklassifizierung an.<br>`IS_SUPERUSER`: Dieser Parameter zeigt an, ob die aktuelle Rolle über Superuser-Berechtigungen verfügt. |
-| `ALL` | Zeigt die Werte aller Konfigurationsparameter mit Beschreibungen an. |
+| `ALL` | Zeigen Sie die Werte aller Konfigurationsparameter mit Beschreibungen an. |
 
 **Beispiel**
 
@@ -1025,15 +1032,15 @@ COPY query
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `query` | Die Abfrage, die Sie kopieren möchten. |
-| `format_name` | Das Format, in das die Abfrage kopiert werden soll. Die `format_name` kann eines von `parquet`, `csv`oder `json`. Standardmäßig ist der Wert `parquet`. |
+| `format_name` | Das Format, in das die Abfrage kopiert werden soll. Die `format_name` kann eines von `parquet`, `csv`oder `json`. Standardmäßig lautet der Wert `parquet`. |
 
 >[!NOTE]
 >
->Der vollständige Ausgabepfad `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>Der vollständige Ausgabepfad lautet `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### ALTERSTABELLE {#alter-table}
 
-Die `ALTER TABLE` -Befehl können Sie Primär- oder Fremdschlüsseleinschränkungen hinzufügen oder ablegen sowie Spalten zur Tabelle hinzufügen.
+Die `ALTER TABLE` -Befehl können Sie Primär- oder Fremdschlüsseleinschränkungen hinzufügen oder dort ablegen und der Tabelle Spalten hinzufügen.
 
 #### EINSCHRÄNKUNG HINZUFÜGEN ODER ABLEGEN
 
@@ -1086,14 +1093,13 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 | `referenced_table_name` | Der Name der Tabelle, auf die der Fremdschlüssel verweist. |
 | `primary_column_name` | Der Name der Spalte, auf die der Fremdschlüssel verweist. |
 
-
 >[!NOTE]
 >
->Das Tabellenschema sollte eindeutig sein und nicht von mehreren Tabellen gemeinsam genutzt werden. Darüber hinaus ist der Namespace für Primärschlüssel, primäre Identität und Identitätseinschränkungen obligatorisch.
+>Das Tabellenschema sollte eindeutig sein und nicht von mehreren Tabellen gemeinsam genutzt werden. Außerdem ist der Namespace für Primärschlüssel, primäre Identität und Identitätseinschränkungen obligatorisch.
 
 #### Primäre und sekundäre Identitäten hinzufügen oder löschen
 
-Die `ALTER TABLE` -Befehl können Sie über SQL direkt Begrenzungen für primäre und sekundäre Identitätstabelle-Spalten hinzufügen oder löschen.
+Verwenden Sie zum Hinzufügen oder Löschen von Begrenzungen für die Spalten der primären und sekundären Identitätstabelle die `ALTER TABLE` Befehl.
 
 Die folgenden Beispiele fügen eine primäre Identität und eine sekundäre Identität hinzu, indem Einschränkungen hinzugefügt werden.
 
@@ -1109,7 +1115,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Siehe Dokument unter [Festlegen von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md) für detailliertere Informationen.
+Weitere Informationen finden Sie im Dokument unter [Festlegen von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md).
 
 #### SPALTE HINZUFÜGEN
 
@@ -1134,8 +1140,8 @@ In der folgenden Tabelle sind die zulässigen Datentypen für das Hinzufügen vo
 | 5 | `varchar(len)` | `string` | `varchar(len)` | Ein Datentyp mit Zeichen, der variablengroß ist. `varchar` wird am besten verwendet, wenn die Größe der Spaltendateneinträge erheblich variiert. |
 | 6 | `double` | `float8` | `double precision` | `FLOAT8` und `FLOAT` sind gültige Synonyme für `DOUBLE PRECISION`. `double precision` ist ein Gleitkomma-Datentyp. Gleitkommawerte werden in 8 Byte gespeichert. |
 | 7 | `double precision` | `float8` | `double precision` | `FLOAT8` ist ein gültiges Synonym für `double precision`.`double precision` ist ein Gleitkomma-Datentyp. Gleitkommawerte werden in 8 Byte gespeichert. |
-| 8 | `date` | `date` | `date` | Die `date` -Datentyp sind 4-Byte-gespeicherte Kalenderdatumswerte ohne Zeitstempelinformationen. Der Datumsbereich reicht vom 01-01-0001 bis zum 12-31-999. |
-| 9 | `datetime` | `datetime` | `datetime` | Ein Datentyp, mit dem ein als Kalenderdatum und -zeit ausgedrückter Zeitpunkt gespeichert wird. `datetime` umfasst die Zähler für: Jahr, Monat, Tag, Stunde, Sekunde und Fraktion. A `datetime` Die Deklaration kann eine Teilmenge dieser Zeiteinheiten enthalten, die in dieser Sequenz zusammengefügt sind, oder sogar nur eine Zeiteinheit umfassen. |
+| 8 | `date` | `date` | `date` | Die `date` -Datentypen sind 4-Byte-gespeicherte Kalenderdatumswerte ohne Zeitstempelinformationen. Der Datumsbereich reicht vom 01-01-0001 bis zum 12-31-999. |
+| 9 | `datetime` | `datetime` | `datetime` | Ein Datentyp, mit dem ein als Kalenderdatum und -zeit ausgedrückter Zeitpunkt gespeichert wird. `datetime` beinhaltet die Qualifikatoren von: Jahr, Monat, Tag, Stunde, Sekunde und Bruchzahl. A `datetime` Die Deklaration kann eine Teilmenge dieser Zeiteinheiten enthalten, die in dieser Sequenz zusammengefügt sind, oder sogar nur eine Zeiteinheit umfassen. |
 | 10 | `char(len)` | `string` | `char(len)` | Die `char(len)` -Keyword wird verwendet, um anzugeben, dass es sich bei dem Element um ein Zeichen mit fester Länge handelt. |
 
 #### SCHEMA HINZUFÜGEN
@@ -1223,7 +1229,7 @@ SHOW DATAGROUPS
 
 ### DATENAGROUPS FÜR Tabelle ANZEIGEN
 
-Die `SHOW DATAGROUPS FOR` Der Befehl &#39;table_name&#39; gibt eine Tabelle aller zugehörigen Datenbanken zurück, die den Parameter als untergeordnetes Element enthalten. Die Tabelle enthält für jede Datenbank Schema, Gruppentyp, untergeordneten Typ, untergeordneten Namen und untergeordnete ID.
+Die `SHOW DATAGROUPS FOR 'table_name'` gibt eine Tabelle aller zugehörigen Datenbanken zurück, die den Parameter als untergeordnetes Element enthalten. Die Tabelle enthält für jede Datenbank Schema, Gruppentyp, untergeordneten Typ, untergeordneten Namen und untergeordnete ID.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'
