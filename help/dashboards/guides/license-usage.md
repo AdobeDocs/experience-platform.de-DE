@@ -4,7 +4,7 @@ title: Dashboard-Anleitung zur Lizenznutzung
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
+source-git-commit: fabc6611baec68e7948ed2539c496b5a0125cd72
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 5%
@@ -21,7 +21,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Lizenznutzungs-Dashboard"
->abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken und Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt.<br>Die Nutzungsprognosen werden am Ende des Monats monatlich aktualisiert und prognostizieren Ihre Nutzung für den kommenden Sechsmonatszeitraum. Um die Nutzung zu reduzieren, konfigurieren Sie den Datenablauf für Datensätze oder Pseudonyme Profile für die Sandboxes und Datensätze."
+>abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken und Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt.<br><br>Die Nutzungsprognosen werden am Ende des Monats monatlich aktualisiert und prognostizieren Ihre Nutzung für den kommenden Sechsmonatszeitraum. Um die Nutzung zu reduzieren, konfigurieren Sie den Datenablauf für Datensätze oder Pseudonyme Profile für die Sandboxes und Datensätze."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Datensatzgültigkeiten"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Datenabläufe für Pseudonyme Profile"
 
