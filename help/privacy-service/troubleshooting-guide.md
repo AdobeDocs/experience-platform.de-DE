@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Privacy Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Privacy Service sowie Informationen zu häufig aufgetretenen Fehlern in der API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 100%
+source-wordcount: '1028'
+ht-degree: 89%
 
 ---
 
@@ -69,7 +69,7 @@ Adobe unterstützt nicht die Verwendung von [!DNL Privacy Service] zum Löschen 
 
 Diese Anfragen sind zeitkritisch und werden gemäß dem geltenden Datenschutzrecht ausgeführt. Die Übermittlung von Anfragen, bei denen es sich nicht um Anfragen zum Zugriff auf Daten oder zur Löschung von Daten von Betroffenen oder Verbraucherinnen und Verbrauchern handelt, wirkt sich auf alle Kundinnen und Kunden von [!DNL Privacy Service] und auf die Fähigkeit von [!DNL Privacy Service] aus, die entsprechenden rechtlichen Fristen einzuhalten. Es gibt jetzt eine feste tägliche Upload-Grenze, um einen Missbrauch des Dienstes zu verhindern.
 
-Wenden Sie sich an Ihr Adobe-Konto-Team, um die Entfernung von personenbezogenen Daten oder die Beseitigung von Datenproblemen koordinieren zu lassen.
+Wenden Sie sich an Ihr Adobe-Accountteam, um die Entfernung von personenbezogenen Daten oder die Beseitigung von Datenproblemen koordinieren zu lassen.
 
 ## Wie erhalte ich Informationen über den Status meiner Datenschutzanfrage bzw. meines Auftrags?
 
@@ -97,7 +97,7 @@ Weitere Details finden Sie im [!DNL Privacy Service]-API-Handbuch im Abschnitt z
 
 Suchen Sie im Dashboard der [!DNL Privacy Service]-Benutzeroberfläche den Auftrag, den Sie herunterladen möchten, über das Widget **Auftragsanfragen**. Wählen Sie die ID des Auftrags aus, um die Seite „Auftragsdetails“ zu öffnen. Wählen Sie hier oben rechts die Option **Herunterladen** aus, um die ZIP-Datei herunterzuladen. Ausführliche Anweisungen finden Sie im [Privacy Service-Benutzerhandbuch](ui/user-guide.md).
 
-## Allgemeine Fehlermeldungen
+## Allgemeine Fehlermeldungen {#common-error-messages}
 
 In der folgenden Tabelle sind einige häufige Fehler in [!DNL Privacy Service] mit Beschreibungen aufgeführt, die bei der Lösung der jeweiligen Probleme helfen.
 
@@ -111,3 +111,4 @@ In der folgenden Tabelle sind einige häufige Fehler in [!DNL Privacy Service] m
 | Zugriff und Berechtigungen sind erforderlich. | Zugriff und Berechtigungen sind erforderlich, um [!DNL Privacy Service] verwenden zu können. Wenden Sie sich an Ihre Admins, um Zugriff zu erhalten. |
 | Beim Hochladen und Archivieren der Zugriffsdaten ist ein Problem aufgetreten. | Laden Sie bei diesem Fehler die Zugriffsdaten erneut hoch und versuchen Sie es erneut. |
 | Arbeitslast für aktuelles Limit der Dokumentzahl überschritten. | Reduzieren Sie bei diesem Fehler die Übermittlungsrate und versuchen Sie es erneut. |
+| Zu viele Anforderungen<br>(HTTP 429-Fehler) | Wenn Ihre Sendemuster die überwachte Grenze der zulässigen Aufträge für betroffene Personen überschreiten, erhalten Sie als Reaktion auf anhaltenden Traffic von Ihrem Unternehmen einen HTTP-429-Fehler. Privacy Service ist für die Verarbeitung von Datenschutzanfragen der betroffenen Person vorgesehen. Sie darf nicht für die Datenbereinigung verwendet werden. Wenn Sie HTTP 429-Fehler erhalten, werden Einschränkungen für Einschränkungen und Anfragen implementiert, um Adobe vor Missbrauch zu schützen, der die ordnungsgemäße Einhaltung gefährden könnte.<br>Alternative Methoden zur Minimierung Ihrer Daten finden Sie unter [Festlegen von Ablaufplänen für Datensätze](../hygiene/ui/dataset-expiration.md) und unter Verwendung der [Funktion zum Löschen von Datensätzen](../hygiene/ui/record-delete.md). Weitere Informationen zur Anwendung dieser Funktionen finden Sie in der entsprechenden Dokumentation . |
