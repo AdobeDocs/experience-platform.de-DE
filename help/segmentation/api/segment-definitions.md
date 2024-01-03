@@ -3,10 +3,10 @@ solution: Experience Platform
 title: API-Endpunkt für Segmentdefinitionen
 description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentation Service-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: d47ec6fca05191f532b5a2e94f1943c4337258ed
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 21%
+source-wordcount: '1228'
+ht-degree: 14%
 
 ---
 
@@ -18,7 +18,7 @@ Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentdefi
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Abrufen einer Liste von Segmentdefinitionen {#list}
 
@@ -26,7 +26,7 @@ Sie können eine Liste aller Segmentdefinitionen für Ihr Unternehmen abrufen, i
 
 **API-Format**
 
-Der `/segment/definitions`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Diese Parameter sind zwar optional, doch wird ihre Verwendung dringend empfohlen, um den teuren Verwaltungsaufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Segmentdefinitionen abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+Der `/segment/definitions`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Diese Parameter sind zwar optional, doch wird ihre Verwendung dringend empfohlen, um den teuren Verwaltungsaufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Segmentdefinitionen abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /segment/definitions
@@ -153,6 +153,10 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentde
 
 Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an den `/segment/definitions`-Endpunkt senden.
 
+>[!IMPORTANT]
+>
+>Über die API erstellte Segmentdefinitionen **cannot** mit Segment Builder bearbeitet werden.
+
 **API-Format**
 
 ```http
@@ -276,7 +280,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id`-Wert der Segmentdefinition, die Sie abrufen möchten. |
+| `{SEGMENT_ID}` | Die `id` -Wert der Segmentdefinition, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -495,7 +499,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | : Der `id`-Wert der Segmentdefinition, die Sie löschen möchten. |
+| `{SEGMENT_ID}` | Die `id` -Wert der Segmentdefinition, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -523,7 +527,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Der `id`-Wert der Segmentdefinition, die Sie aktualisieren möchten. |
+| `{SEGMENT_ID}` | Die `id` -Wert der Segmentdefinition, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -560,7 +564,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu aktualisierten Segmentdefinition zurück. Beachten Sie, dass das Land der Arbeitsadresse von den USA (USA) nach Kanada (CA) aktualisiert wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu aktualisierten Segmentdefinition zurück. Beachten Sie, dass das Land der Arbeitsadresse von den USA (USA) nach Kanada (CA) aktualisiert wurde.
 
 ```json
 {
