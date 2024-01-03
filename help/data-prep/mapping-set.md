@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Zuordnungssätze
 description: Erfahren Sie, wie Sie Zuordnungssätze mit der Funktion zur Datenvorbereitung von Adobe Experience Platform verwenden.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -74,8 +74,8 @@ Die folgende JSON-Datei ist ein Beispiel für einen typischen Zuordnungssatz:
 | `outputSchema` | Das XDM-Schema, mit dem die Eingabedaten entsprechend konvertiert werden. |
 | `mappings` | Ein Array mit Feld-zu-Feld-Zuordnungen vom Quellschema zum Zielschema. |
 | `sourceType` | Für jede aufgelistete Zuordnung gibt deren `sourceType`-Attribut den Typ der Quelle an, die zugeordnet werden soll. Kann `ATTRIBUTE`, `STATIC` oder `EXPRESSION` sein: <ul><li> `ATTRIBUTE` wird für jeden Wert verwendet, der im Quellpfad gefunden wird. </li><li>`STATIC` wird für Werte verwendet, die in den Zielpfad eingefügt werden. Dieser Wert bleibt konstant und wird vom Quellschema nicht beeinflusst.</li><li> `EXPRESSION` wird für einen Ausdruck verwendet, der während der Laufzeit aufgelöst wird. Eine Liste der verfügbaren Ausdrücke finden Sie im [Handbuch für Zuordnungsfunktionen](./functions.md).</li> </ul> |
-| `source` | Für jede aufgelistete Zuordnung gibt das `source`-Attribut das Feld an, das Sie zuordnen möchten. Weitere Informationen zum Konfigurieren Ihrer Quelle finden Sie im Abschnitt [Quellen](#sources). |
-| `destination` | Für jede aufgelistete Zuordnung gibt das `destination`-Attribut das Feld oder den Pfad zum Feld an, in dem der aus dem Feld `source` extrahierte Wert platziert werden wird. Weitere Informationen zum Konfigurieren Ihrer Ziele finden Sie im Abschnitt [Ziele](#destination). |
+| `source` | Für jede aufgelistete Zuordnung gibt das `source`-Attribut das Feld an, das Sie zuordnen möchten. Weitere Informationen zur Konfiguration der Quelle finden Sie im Abschnitt [Quellen - Übersicht](../sources/home.md). |
+| `destination` | Für jede aufgelistete Zuordnung gibt das `destination`-Attribut das Feld oder den Pfad zum Feld an, in dem der aus dem Feld `source` extrahierte Wert platziert werden wird. Weitere Informationen zum Konfigurieren Ihrer Ziele finden Sie unter [Zielübersicht](../destinations/home.md). |
 | `mappings.name` | (*Optional*) Ein Name für die Zuordnung. |
 | `mappings.description` | (*Optional*) Eine Beschreibung der Zuordnung. |
 

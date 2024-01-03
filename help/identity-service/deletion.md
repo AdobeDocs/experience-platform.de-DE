@@ -2,10 +2,10 @@
 title: Löschungen in Identity Service
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 100%
+source-wordcount: '1199'
+ht-degree: 97%
 
 ---
 
@@ -31,7 +31,7 @@ Das nachstehende Dokument verweist auf die folgenden Funktionen von Experience P
 
 ## Löschen einzelner Identitäten
 
-Anfragen zum Löschen einzelner Identitäten ermöglichen das Löschen einer Identität innerhalb eines Diagramms, sodass Links entfernt werden, die mit einer einzelnen mit einem Identity-Namespace verknüpften Benutzeridentität verbunden sind. Sie können Mechanismen verwenden, die von [Privacy Service](../privacy-service/home.md) für Anwendungsfälle wie Kundenanfragen zum Löschen von Daten und die Einhaltung von Datenschutzbestimmungen, etwa der Datenschutz-Grundverordnung (DSGVO), bereitgestellt werden.
+Anfragen zum Löschen einzelner Identitäten ermöglichen das Löschen einer Identität innerhalb eines Diagramms, sodass Links entfernt werden, die mit einer einzelnen mit einem Identity-Namespace verknüpften Benutzeridentität verbunden sind. Sie können Mechanismen verwenden, die von [Privacy Service](../privacy-service/home.md) für Anwendungsfälle wie Kundenanfragen zum Löschen von Daten und Einhaltung von Datenschutzbestimmungen wie der Datenschutz-Grundverordnung (DSGVO).
 
 Die folgenden Abschnitte beschreiben die Mechanismen, die Sie für Anfragen zum Löschen einzelner Identitäten in Experience Platform verwenden können.
 
