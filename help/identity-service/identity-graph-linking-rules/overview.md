@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -69,12 +69,16 @@ Weitere Informationen finden Sie im Dokument unter [Identitätsoptimierungsalgor
 >
 >Namespace-Prioritäten sind derzeit nicht für Alpha verfügbar.
 
-Sie können die Namespace-Priorität verwenden, um zu definieren, welche Namespaces wichtiger sind als andere. Die Hierarchie, die Sie für Ihre Namespaces festlegen, wird dann zum Definieren von primären Identitäten und zum Speichern von Profilfragmenten verwendet. Wenn Prioritätseinstellungen konfiguriert sind, wird die primäre Identitätseinstellung im Web SDK nicht mehr verwendet, um zu bestimmen, welche Profilfragmente gespeichert werden.
+Sie können die Namespace-Priorität verwenden, um zu definieren, welche Namespaces wichtiger sind als andere. Die Priorität, die Sie für Ihre Namespaces festlegen, wird dann zur Definition von primären Identitäten verwendet. Dies ist die Identität, die Profilfragmente (Attribut- und Ereignisdaten) im Echtzeit-Kundenprofil speichert. Wenn Prioritätseinstellungen konfiguriert sind, wird die primäre Identitätseinstellung im Web SDK nicht mehr verwendet, um zu bestimmen, welche Profilfragmente gespeichert werden.
 
 * Einschränkungen und Priorität sind unabhängige Konfigurationen und tun **not** beeinflussen sich gegenseitig:
    * Beschränkungen sind eine Identitätsdiagrammkonfiguration im Identity Service.
    * Die Priorität ist eine Profilfragmentkonfiguration im Echtzeit-Kundenprofil.
    * Priorität **not** die Limits des Identitätsdiagramms beeinflussen.
+* **Namespace-Priorität ist ein numerischer Wert** einem Namespace zugewiesen ist, der seine relative Bedeutung angibt. Dies ist eine Eigenschaft eines Namespace.
+* **Primäre Identität ist die Identität, mit der ein Profilfragment gespeichert wird.**. Ein Profilfragment ist ein Datensatz mit Daten, in dem Informationen über einen bestimmten Benutzer gespeichert werden: Attribute (in der Regel über CRM-Datensätze erfasst) oder Ereignisse (in der Regel aus Erlebnisereignissen oder Online-Daten erfasst).
+* Die Namespace-Priorität bestimmt die primäre Identität für Erlebnisereignisse.
+   * Für Profildatensätze können Sie den Arbeitsbereich &quot;Schemas&quot;in der Experience Platform-Benutzeroberfläche verwenden, um Identitätsfelder, einschließlich der primären Identität, zu definieren. Lesen Sie das Handbuch unter [Identitätsfelder in der Benutzeroberfläche definieren](../../xdm/ui/fields/identity.md) für weitere Informationen.
 
 >[!BEGINSHADEBOX]
 
