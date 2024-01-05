@@ -4,10 +4,10 @@ title: Abonnieren von Adobe I/O-Ereignisbenachrichtigungen
 description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Services von Adobe Experience Platform abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren  [!DNL Platform] -Service bereitgestellt.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 49f4cf07d2f002e45e27dffac4fd0049446bc68f
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 99%
+source-wordcount: '769'
+ht-degree: 90%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 99%
 
 Mit [!DNL Observability Insights] können Sie Ereignisbenachrichtigungen zu Aktivitäten von Adobe Experience Platform abonnieren. Diese Ereignisse werden an einen konfigurierten Webhook gesendet, um eine effiziente Automatisierung der Aktivitätsüberwachung zu ermöglichen.
 
-In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Services von Adobe Experience Platform abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden entsprechenden [!DNL Platform]-Service bereitgestellt.
+In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Adobe Experience Platform-Dienste abonnieren können. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für die einzelnen zutreffenden [!DNL Platform] -Dienst.
 
 ## Erste Schritte
 
@@ -39,6 +39,10 @@ Wechseln Sie zur [Adobe-Entwicklerkonsole](https://www.adobe.com/go/devs_console
 
 ## Abonnieren von Ereignissen
 
+>[HINWEIS!]
+>
+>Die Datenerfassungsbenachrichtigung wird vom Adobe IO-Abonnement entfernt. Stattdessen sollten Sie die **Informationen zum Quellenfluss** E/A-Ereignis.
+
 Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbildschirm dieses Projekts. Wählen Sie hier **[!UICONTROL Ereignis hinzufügen]** aus.
 
 ![](../images/notifications/add-event-button.png)
@@ -60,7 +64,6 @@ Im nächsten Bildschirm wird eine Liste der Ereignistypen angezeigt, die abonnie
 >
 >* [Platform-Benachrichtigungen](./rules.md)
 >* [Privacy Service-Benachrichtigungen](../../privacy-service/privacy-events.md)
-
 
 ![](../images/notifications/choose-event-subscriptions.png)
 
