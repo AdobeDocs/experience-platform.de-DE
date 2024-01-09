@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung Rolle erstellen
 description: Dieses Dokument enthält Informationen zum Verwalten von Rollen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '531'
 ht-degree: 16%
 
 ---
@@ -16,7 +16,7 @@ Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein En
 
 ## Erstellen einer neuen Rolle
 
-Um eine neue Rolle zu erstellen, wählen Sie die **[!UICONTROL Rollen]** Registerkarte in der Seitenleiste und wählen Sie **[!UICONTROL Rolle erstellen]**.
+Um eine neue Rolle zu erstellen, wählen Sie **[!UICONTROL Rollen]** Registerkarte in der Seitenleiste und wählen Sie **[!UICONTROL Rolle erstellen]**.
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
@@ -48,13 +48,17 @@ Die neue Rolle wurde erfolgreich erstellt und Sie werden zum **[!UICONTROL Rolle
 
 Siehe die Abschnitte unter [Verwalten von Berechtigungen für eine Rolle](#manage-permissions-for-a-role) Weitere Informationen zum Verwalten von Rollenberechtigungen nach deren Erstellung.
 
+Das folgende Video soll Ihnen dabei helfen, eine neue Rolle zu erstellen und Benutzer für diese Rolle zu verwalten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Rolle duplizieren
 
 Um eine vorhandene Rolle zu duplizieren, wählen Sie die Rolle aus dem **[!UICONTROL Rollen]** Registerkarte. Alternativ können Sie die Filteroption verwenden, um die Ergebnisse zu filtern und die Rolle zu finden, die Sie duplizieren möchten.
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
-Wählen Sie als Nächstes **[!UICONTROL Duplizieren]** oben rechts im Bildschirm.
+Wählen Sie als Nächstes **[!UICONTROL Duplizieren]** oben rechts auf dem Bildschirm.
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
@@ -72,7 +76,7 @@ Die neue Rolle wird in der Liste auf der **[!UICONTROL Rollen]** Seite.
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## Rollen löschen
+## Löschen einer Rolle
 
 Wählen Sie die Auslassungszeichen (`…`) neben dem Namen einer Rolle angezeigt. In einer Dropdown-Liste werden Steuerelemente zum Bearbeiten, Löschen oder Duplizieren der Rolle angezeigt. Wählen Sie im Dropdown-Menü die Option „Löschen“ aus.
 

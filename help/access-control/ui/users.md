@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzer für ein Produktprofil verwalten
 description: Dieses Dokument zeigt Ihnen, wie Sie Benutzer für ein Produktprofil in der Benutzeroberfläche von Adobe Experience Platform verwalten.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 100%
+source-wordcount: '228'
+ht-degree: 82%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Um Benutzer einem Produktprofil zuzuweisen oder daraus zu entfernen, öffnen Sie die Detailseite des Profils und navigieren Sie zur Registerkarte **[!UICONTROL Benutzer]**. Wählen Sie hier **[!UICONTROL Benutzer hinzufügen]**.
 
-![add-user](../images/add-user.png)
+![Auf der Seite mit den Produktprofildetails werden die in der [!UICONTROL Benutzer] Registerkarte.](../images/add-user.png)
 
 Das Dialogfeld **[!UICONTROL Benutzer hinzufügen]** wird angezeigt. Mithilfe des Suchfelds können Sie Benutzer suchen, um sie entweder per Name oder E-Mail-Adresse hinzuzufügen. Während der Eingabe werden übereinstimmende Benutzer in einem Fenster mit automatischer Vervollständigung unterhalb des Textfelds angezeigt.
 
@@ -25,7 +25,11 @@ Das Dialogfeld **[!UICONTROL Benutzer hinzufügen]** wird angezeigt. Mithilfe de
 
 Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **[!UICONTROL Speichern]**, um ihn zum Produktprofil hinzuzufügen.
 
-![save-user](../images/save-user.png)
+![Fügen Sie Benutzer zur Produktprofilseite hinzu, auf der Benutzerdetails hervorgehoben werden.](../images/save-user.png)
+
+Das folgende Video soll Ihr Verständnis für die Verwaltung von Administratoren für ein Produktprofil unterstützen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
 
 ## Nächste Schritte
 

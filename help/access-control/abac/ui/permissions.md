@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 97%
+source-wordcount: '986'
+ht-degree: 95%
 
 ---
 
@@ -100,6 +100,10 @@ Hinzugefügte Benutzer erscheinen auf der Registerkarte **[!UICONTROL Benutzer]*
 Um einen Benutzer aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X** neben dem Namen des Benutzers.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+
+Das folgende Video soll Ihnen dabei helfen, eine neue Rolle zu erstellen und Benutzer für diese Rolle zu verwalten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Verwalten von API-Anmeldeinformationen für Rollen {#manage-api-credentials-for-role}
 
