@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
+source-git-commit: 17aa9029dc83454133847352c21aa9ac68f23be8
 workflow-type: tm+mt
-source-wordcount: '2282'
-ht-degree: 64%
+source-wordcount: '2430'
+ht-degree: 61%
 
 ---
 
@@ -114,13 +114,27 @@ Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Ar
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) durch den Segment-Builder. |
+| Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Dies umfasst Batch-, Streaming- und Edge-Zielgruppen. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) durch den Segment-Builder. |
 | Edge-Zielgruppen pro Sandbox | 150 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 150 Edge-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Zielgruppen enthalten sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
-| Streaming-Zielgruppen pro Sandbox | 500 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. Mehr dazu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
+| Edge-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungsgarantie | Die Edge-Segmentierung unterstützt bis zu 1500 eingehende Ereignisse pro Sekunde, die in das Adobe Experience Platform Edge Network eintreten. Die Edge-Segmentierung kann bis zu 350 Millisekunden dauern, bis ein eingehendes Ereignis verarbeitet wird, nachdem es in das Adobe Experience Platform Edge Network gelangt ist. Mehr dazu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
+| Streaming-Zielgruppen pro Sandbox | 500 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Dies umfasst sowohl Streaming- als auch Edge-Zielgruppen. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. Mehr dazu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
+| Streaming-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungsgarantie | Streaming-Segmentierung unterstützt bis zu 1500 eingehende Ereignisse pro Sekunde. Die Qualifizierung eines Profils für die Segmentzugehörigkeit kann bis zu 5 Minuten dauern. Mehr dazu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
 | Batch-Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Zielgruppen enthalten sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
 | Konto-Zielgruppen pro Sandbox | 50 | Systemerzwungene Limits | Sie können maximal 50 Zielgruppen für ein Konto in einer Sandbox erstellen. Wenn Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird die **[!UICONTROL Erstellen einer Zielgruppe]** -Kontrolle beim Versuch, eine neue Konto-Audience zu erstellen, deaktiviert ist. Mehr dazu [Kontozielgruppen](/help/segmentation/ui/account-audiences.md). |
 | Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungsgarantie | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Mehr dazu [Audience-Komposition im UI-Handbuch](/help/segmentation/ui/audience-composition.md). |
 | Maximale Zielgruppengröße | 30 Prozent | Leistungsgarantie | Die empfohlene Höchstzahl an Zielgruppen beträgt 30 Prozent der Gesamt-Profilanzahl im System. Das Erstellen von Zielgruppen mit mehr als 30 % der Profile als Mitglieder oder mehreren großen Zielgruppen ist möglich, hat aber Auswirkungen auf die Systemleistung. |
+
+{style="table-layout:auto"}
+
+## Erwartete Verfügbarkeit
+
+Im folgenden Abschnitt wird die **erwartet** Verfügbarkeit für Zielgruppen und Zusammenführungsrichtlinien in nachgelagerten Diensten wie Real-Time CDP-Zielen:
+
+| Sandbox-Typ | Zeit |
+| ------------ | ---- |
+| Vorhandene Sandboxes | 1 Stunde |
+| Neue Sandboxes | 2 Stunden |
+| Neu zurückgesetzte Sandboxes | 2 Stunden |
 
 {style="table-layout:auto"}
 
