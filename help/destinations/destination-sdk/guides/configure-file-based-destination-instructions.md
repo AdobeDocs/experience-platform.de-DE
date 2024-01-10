@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe des Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 70%
+source-wordcount: '732'
+ht-degree: 55%
 
 ---
 
@@ -27,7 +27,7 @@ Bevor Sie mit den unten dargestellten Schritten fortfahren, informieren Sie sich
 
 Beginnen bei [Erstellen einer Server- und Dateikonfiguration](../authoring-api/destination-server/create-destination-server.md) mithilfe der `/destinations-server` -Endpunkt.
 
-Nachfolgend finden Sie eine Beispielkonfiguration für ein [!DNL Amazon S3]-Ziel. Informationen zum Konfigurieren anderer Typen dateibasierter Ziele finden Sie in den entsprechenden [Server-Konfigurationen](../functionality/destination-server/server-specs.md).
+Nachfolgend finden Sie eine Beispielkonfiguration für ein [!DNL Amazon S3]-Ziel. Weitere Informationen zu den in der Konfiguration verwendeten Feldern und zum Konfigurieren anderer Typen dateibasierter Ziele finden Sie in den entsprechenden [Serverkonfigurationen](../functionality/destination-server/server-specs.md).
 
 **API-Format**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -114,9 +114,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Schritt 2: Erstellen einer Zielkonfiguration {#create-destination-configuration}
 
-Unten sehen Sie ein Beispiel für eine Zielkonfiguration, die mithilfe des API-Endpunkts `/destinations` erstellt wurde.
+Nachfolgend finden Sie ein Beispiel für eine Zielkonfiguration, die mithilfe der `/destinations` API-Endpunkt.
 
-Um die Server- und Dateikonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID des Servers und die Vorlagenkonfiguration hier als `destinationServerId` hinzu.
+Um die Server- und Dateikonfiguration von Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die `instance ID` der Server- und Dateikonfiguration als `destinationServerId` hier.
 
 **API-Format**
 
@@ -124,7 +124,7 @@ Um die Server- und Dateikonfiguration in Schritt 1 mit dieser Zielkonfiguration 
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ Für einige Ziele erfordert das Destination SDK, dass Sie eine Zielgruppen-Metad
 
 Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. Fügen Sie die Instanz-ID Ihrer Zielgruppen-Metadatenkonfiguration als `audienceTemplateId` zu Ihrer Zielkonfiguration hinzu.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mi
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mi
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mi
 ## Schritt 4: Einrichten der Authentifizierung {#set-up-authentication}
 
 Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` in der obigen Zielkonfiguration angeben, können Sie die Authentifizierung für Ihr Ziel einrichten, indem Sie den Endpunkt `/destination` oder `/credentials` verwenden.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` ist der häufigere der beiden Authentifizierungsregeln und der zu verwendende, wenn Sie von Benutzern verlangen, dass sie für Ihr Ziel eine bestimmte Form der Authentifizierung bereitstellen, bevor sie eine Verbindung einrichten und Daten exportieren können.
 
 * Wenn Sie in der Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ausgewählt haben, finden Sie in den folgenden Abschnitten Informationen zu den Authentifizierungstypen, die vom Destination SDK für dateibasierte Ziele unterstützt werden:
 
@@ -384,10 +418,10 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
 
 Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritten eingerichtet haben, können Sie das [Zieltest-Tool](../testing-api/batch-destinations/file-based-destination-testing-overview.md) verwenden, um die Integration zwischen Adobe Experience Platform und Ihrem Ziel zu testen.
 
-Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche zum Erstellen von Segmenten verwenden, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden unten stehenden Ressourcen:
+Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche verwenden, um Zielgruppen zu erstellen, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden unten stehenden Ressourcen:
 
-* [Erstellen einer Dokumentationsseite für Zielgruppen](/help/segmentation/ui/overview.md#create-segment)
-* [Videoeinführung zum Erstellen einer Zielgruppe](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Erstellen einer Zielgruppe - Dokumentationsseite](/help/segmentation/ui/overview.md#create-segment)
+* [Erstellen einer Zielgruppe - Videoeinführung](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Schritt 6: Veröffentlichen des Ziels {#publish-destination}
 

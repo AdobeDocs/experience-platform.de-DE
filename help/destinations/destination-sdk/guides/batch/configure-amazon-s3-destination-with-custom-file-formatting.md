@@ -1,11 +1,11 @@
 ---
 description: Erfahren Sie, wie Sie mit Destination SDK ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen konfigurieren.
-title: Konfigurieren eines Amazon S3-Ziels mit benutzerdefinierten Dateinamen- und Formatierungsoptionen.
+title: Konfigurieren Sie ein Amazon S3-Ziel mit benutzerdefinierten Dateinamen- und Formatierungsoptionen.
 exl-id: eed73572-5050-44fa-ba16-90729c65495e
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 14%
+source-wordcount: '707'
+ht-degree: 10%
 
 ---
 
@@ -35,7 +35,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
+Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
 Die nachstehende Payload enthält eine generische Amazon S3-Konfiguration mit benutzerdefinierter [CSV-Dateiformatierung](../../functionality/destination-server/file-formatting.md) Konfigurationsparameter, die Benutzer in der Experience Platform-Benutzeroberfläche definieren können.
 
 ```shell
@@ -49,7 +49,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "name":"Amazon S3 destination server with custom file formatting options",
    "destinationServerType":"FILE_BASED_S3",
    "fileBasedS3Destination":{
-      "bucketName":{
+      "bucket":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.bucketName}}"
       },

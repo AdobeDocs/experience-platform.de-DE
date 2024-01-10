@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 64%
+source-wordcount: '865'
+ht-degree: 58%
 
 ---
 
@@ -17,7 +17,7 @@ Auf dieser Seite wird die Verwendung der Informationen unter [Konfigurationsopti
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten dargestellten Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte mit dem Destination SDK](../getting-started.md), wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten. Dies setzt voraus, dass Sie die Voraussetzungen für Partnerschaft und Berechtigung erfüllt haben und bereit sind, mit der Entwicklung Ihres Ziels zu beginnen.
+Bevor Sie mit den unten dargestellten Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](../getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Adobe I/O-Authentifizierungsberechtigungen und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs. Dies setzt voraus, dass Sie die Voraussetzungen für Partnerschaft und Berechtigung erfüllt haben und bereit sind, mit der Entwicklung Ihres Ziels zu beginnen.
 
 ## Schritte zum Verwenden der Konfigurationsoptionen im Destination SDK zum Einrichten Ihres Ziels {#steps}
 
@@ -264,6 +264,10 @@ Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mi
 ## Schritt 5: Einrichten der Authentifizierung {#set-up-authentication}
 
 Je nachdem, ob Sie In der obigen Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` angeben, können Sie unter Verwendung des Endpunkts `/destination` oder `/credentials` die Authentifizierung für Ihr Ziel einrichten.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` ist der häufigere der beiden Authentifizierungsregeln und der zu verwendende, wenn Sie von Benutzern verlangen, dass sie für Ihr Ziel eine bestimmte Form der Authentifizierung bereitstellen, bevor sie eine Verbindung einrichten und Daten exportieren können.
 
 Wenn Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in der Zielkonfiguration enthalten sind und Ihr Ziel die OAuth 2-Authentifizierungsmethode unterstützt, lesen Sie [OAuth 2-Authentifizierung](../functionality/destination-configuration/oauth2-authorization.md).
 
