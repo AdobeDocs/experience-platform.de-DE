@@ -2,16 +2,16 @@
 description: Erfahren Sie, wie Sie die Attribute der Benutzeroberfläche, wie z. B. den Dokumentations-Link, die Kategorie der Zielkarte sowie den Verbindungstyp und die Häufigkeit der Zielverbindungen für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Benutzeroberflächenattribute
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 99%
+source-wordcount: '800'
+ht-degree: 85%
 
 ---
 
 # Benutzeroberflächenattribute
 
-Benutzeroberflächenattribute definieren die visuellen Elemente, die Adobe für Ihre Zielkarte in der Adobe Experience Platform-Benutzeroberfläche anzeigen soll, z. B. das Zielplattformlogo, einen Link zur Dokumentationsseite, eine Zielbeschreibung und deren Kategorie und Typ.
+Benutzeroberflächenattribute definieren die visuellen Elemente, die Adobe für Ihre Zielkarte in der Adobe Experience Platform-Benutzeroberfläche anzeigen soll, z. B. ein Logo, einen Link zur Dokumentationsseite, eine Zielbeschreibung und deren Kategorie und Typ.
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder auf den folgenden Übersichtsseiten zur Zielkonfiguration:
 
@@ -21,10 +21,10 @@ Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte In
 Wenn Sie durch Destination SDK [ein Ziel erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md), werden im Abschnitt `uiAttributes` die folgenden visuellen Eigenschaften Ihrer Zielkarte definiert:
 
 * Die URL Ihrer Zieldokumentationsseite im [Zielkatalog](../../../catalog/overview.md).
-* Die URL, unter der das Symbol gehostet wird, das auf der Zielkatalogkarte angezeigt werden soll.
 * Die Kategorie, unter der Ihr Ziel in der Platform-Benutzeroberfläche angezeigt wird.
 * Die Häufigkeit des Datenexports für Ihr Ziel.
 * Der Zielverbindungstyp, z. B. Amazon S3, Azure Blob usw.
+* Die URL, unter der das Symbol gehostet wird, das auf der Zielkatalogkarte angezeigt werden soll.
 
 Sie können Benutzeroberflächenattribute über den Endpunkt `/authoring/destinations` konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
@@ -82,14 +82,6 @@ Benutzerinnen und Benutzer können die Liste der Zielkategorien auf der linken S
 
 ![UI-Bild, das den Ort der Zielkategorie anzeigt.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` ist ein Zeichenfolgenparameter, der sich je nach Ziel auf den Verbindungstyp bezieht. Unterstützte Werte: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -114,9 +106,17 @@ Zu diesem Zweck können Sie den Parameter `isBeta: "true"` im Abschnitt „Benut
 
 ![UI-Bild, das eine als Beta markierte Zielkarte zeigt.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
+### `icon` {#icon}
+
+Sie können ein Logo-Symbol zu Ihrem Ziel hinzufügen, wie in der Abbildung unten dargestellt.
+
+![Benutzeroberflächenbild mit der Symbolposition.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+Um Ihrer Zielkarte ein Logo hinzuzufügen, müssen Sie das gewünschte Bild beim Adobe-Team freigeben [Ziel zur Überprüfung übermitteln](../../guides/submit-destination.md#logo).
+
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Artikels sollten Sie besser verstehen, welche Benutzeroberflächenattribute Sie für Ihr Ziel konfigurieren können und wo die Benutzerinnen und Benutzer sie in der Platform-Benutzeroberfläche sehen.
+Nach dem Lesen dieses Artikels sollten Sie besser verstehen, welche Benutzeroberflächenattribute Sie für Ihr Ziel konfigurieren können und wo die Benutzer sie in der Platform-Benutzeroberfläche sehen.
 
 Weitere Informationen zu den anderen Zielkomponenten finden Sie in den folgenden Artikeln:
 
