@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 52%
+source-wordcount: '2714'
+ht-degree: 34%
 
 ---
 
@@ -27,11 +27,36 @@ Zu diesem Zeitpunkt werden nur profilbasierte Zielgruppen unterstützt. Unterst�
 
 Ja, extern generierte, vordefinierte Zielgruppen werden in Audience Portal unterstützt. Zu diesem Zeitpunkt können Sie eine extern generierte Zielgruppe über eine CSV-Datei importieren. Zukünftig können Sie Zielgruppen über Batch- oder Streaming-basierte Quell-Connectoren hinzufügen.
 
+### Welche Berechtigungen benötige ich, um extern generierte Zielgruppen hochzuladen?
+
+Um extern generierte Zielgruppen hochladen zu können, benötigen Sie sowohl die Berechtigungen &quot;Zielgruppen/Segmente verwalten&quot;als auch &quot;Datensätze verwalten&quot;. Zum Hochladen extern generierter Zielgruppen sind keine bestimmten rollenbasierten Steuerelemente erforderlich.
+
+### Was passiert, wenn ich eine extern generierte Zielgruppe hochlade?
+
+Wenn Sie eine extern generierte Zielgruppe hochladen, werden die folgenden Elemente erstellt:
+
+- Datensatz
+   - Der Datensatz wird im Datensatzinventar angezeigt, und der Name des Datensatzes ist der **same** als Name der extern generierten Zielgruppe, die Sie hochgeladen haben.
+- Batch-Auftrag
+   - Ein Batch-Auftrag wird **automatisch** ausgeführt werden, wenn Sie eine extern generierte Zielgruppe hochladen. Das bedeutet, dass Sie **not** muss warten, bis der tägliche Segmentierungsauftrag ausgeführt wird, um die extern generierte Zielgruppe zu aktivieren.
+- Ad-hoc-Schema
+   - A **new** Das XDM-Schema wird für die Verwendung mit der extern generierten Zielgruppe erstellt. Die Felder in diesem XDM-Schema sind Namespaces zur Verwendung mit dem ebenfalls erstellten Datensatz.
+
+### Woraus besteht eine extern generierte Zielgruppe und was passiert mit diesen Daten, wenn sie in Platform importiert werden?
+
+Während des Workflows &quot;Externe Audience importieren&quot;müssen Sie angeben, welche Spalte in der CSV-Datei der **Primäre Identität**. Ein Beispiel für eine primäre Identität sind E-Mail-Adresse, ECID oder ein unternehmensspezifischer benutzerdefinierter Identitäts-Namespace.
+
+Die mit dieser primären Identitätsspalte verknüpften Daten umfassen die **only** Daten, die an das Profil angehängt sind. Wenn keine vorhandenen Profile vorhanden sind, die mit den Daten in der primären Identitätsspalte übereinstimmen, wird ein neues Profil erstellt. Dieses Profil ist jedoch im Wesentlichen ein verwaistes Profil, da **no** -Attribute oder Erlebnisereignisse mit diesem Profil verknüpft sind.
+
+Alle anderen Daten innerhalb der extern generierten Zielgruppe werden berücksichtigt **Payload-Attribute**. Diese Attribute können **only** zur Personalisierung und Anreicherung während der Aktivierung verwendet werden und **not** an ein Profil angehängt. Diese Attribute werden jedoch im Data Lake gespeichert.
+
+Während beim Erstellen von Zielgruppen mit dem Segment Builder auf die extern generierte Zielgruppe verwiesen werden kann, können einzelne Profilattribute **cannot** verwendet werden.
+
 ### Kann ich extern generierte Zielgruppendaten mit einem vorhandenen Profil in Platform abstimmen?
 
 Ja, die extern generierte Zielgruppe wird mit dem in Platform vorhandenen Profil zusammengeführt, wenn die primären Kennungen übereinstimmen. Die Abstimmung dieser Daten kann bis zu 24 Stunden dauern. Wenn noch keine Profildaten vorhanden sind, wird bei der Aufnahme der Daten ein neues Profil erstellt.
 
-## Kann ich eine extern generierte Zielgruppe verwenden, um andere Zielgruppen zu erstellen?
+### Kann ich eine extern generierte Zielgruppe verwenden, um andere Zielgruppen zu erstellen?
 
 Ja, alle extern generierten Zielgruppen werden im Zielgruppeninventar angezeigt und können verwendet werden, wenn Zielgruppen innerhalb des [Segment Builders](./ui/segment-builder.md) erstellt werden.
 
@@ -45,13 +70,33 @@ Wenn Sie Ihre Zielgruppen jedoch Batch- oder dateibasierten Zielen zuordnen, kö
 
 Weitere Informationen zu dieser Funktion finden Sie im Handbuch zum [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
-### Kann ich extern generierte Zielgruppen für Adobe Journey Optimizer aktivieren?
+### Gibt es eine spezifische Zusammenführungsrichtlinie für extern generierte Zielgruppen?
 
-Zu diesem Zeitpunkt nicht. Diese Funktion wird jedoch demnächst verfügbar sein.
+Die unternehmensspezifische standardmäßige Zusammenführungsrichtlinie wird beim Hochladen von extern generierten Zielgruppen automatisch angewendet. Sie können jedoch die Zusammenführungsrichtlinie ändern, die während des Import-Audience-Workflows auf die extern generierte Audience angewendet wird.
+
+### Wo kann ich extern generierte Zielgruppen aktivieren?
+
+Eine extern generierte Zielgruppe kann jedem RTCDP-Ziel zugeordnet und in Adobe Journey Optimizer-Kampagnen verwendet werden.
+
+### Wie bald sind extern generierte Zielgruppen zur Aktivierung bereit?
+
+Bei Aktivierung für ein Streaming-Ziel stehen die Daten aus der extern generierten Zielgruppe innerhalb von zwei Stunden zur Verfügung.
+
+Wenn sie für ein Batch-Ziel aktiviert wird, werden die Daten aus der extern generierten Zielgruppe mit dem nächsten 24-Stunden-Segmentierungsauftrag synchronisiert.
 
 ### Kann ich eine extern generierte Zielgruppe löschen?
 
-Zu diesem Zeitpunkt nicht. Sie können diese Zielgruppe stattdessen entweder deaktivieren oder archivieren. In diesem Zustand werden Profile für nachgelagerte Anwendungen **weiterhin aktiv** bleiben. Die Unterstützung für das Löschen extern generierter Zielgruppen wird in einer nachfolgenden Version hinzugefügt.
+Zu diesem Zeitpunkt können Sie nur eine extern generierte Zielgruppe deaktivieren. In diesem Zustand werden Profile für nachgelagerte Anwendungen **weiterhin aktiv** bleiben. Die Unterstützung für das Löschen extern generierter Zielgruppen wird in einer nachfolgenden Version hinzugefügt.
+
+### Was sollte ich tun, wenn ich versehentlich eine extern generierte Zielgruppe hochgeladen habe?
+
+Wenn Sie versehentlich eine extern generierte Audience hochgeladen haben und die Daten entfernen möchten, können Sie die mit der Audience verknüpften Profile löschen, indem Sie eine CSV-Datei mit einer Zeile und ohne Daten hochladen.
+
+### Wie lange halten extern generierte Zielgruppen an?
+
+Der aktuelle Datenablauf für extern generierte Zielgruppen lautet **30 Tage**. Diese Datengültigkeit wurde ausgewählt, um die Menge an überschüssigen Daten zu reduzieren, die in Ihrem Unternehmen gespeichert werden.
+
+Nach Ablauf des Datenablaufzeitraums ist der zugehörige Datensatz weiterhin im Datensatzbestand sichtbar, Sie werden dies jedoch tun. **not** die Audience aktivieren können und die Profilanzahl als Null angezeigt wird.
 
 ### Was stellen die verschiedenen Lebenszyklusstatus dar?
 
@@ -61,7 +106,7 @@ In der folgenden Tabelle werden die verschiedenen Lebenszyklusstatus, ihre Darst
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Entwurf | Eine Zielgruppe im **Entwurf** state ist eine Zielgruppe, die sich noch in der Entwicklung befindet und noch nicht für andere Dienste verwendet werden kann. | Ja, aber kann ausgeblendet werden. | Nein | Ja | Kann während des Verfeinerungsprozesses importiert oder aktualisiert werden. | Kann ausgewertet werden, um genaue Veröffentlichungszahlen zu erhalten. | Ja, jedoch nicht empfohlen, verwendet zu werden. |
 | Veröffentlicht | Eine Zielgruppe im **Veröffentlicht** state ist eine Zielgruppe, die für alle nachgelagerten Dienste verwendet werden kann. | Ja | Ja | Ja | Kann importiert oder aktualisiert werden. | Wird mit Batch-, Streaming- oder Edge-Segmentierung ausgewertet. | Ja |
-| Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Nein länger aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Ja |
+| Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Wird nicht mehr aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Ja |
 | Gelöscht | Eine Zielgruppe im **Gelöscht** state ist eine Zielgruppe, die gelöscht wurde. Das tatsächliche Löschen der Daten kann bis zu einigen Minuten dauern. | Nein | Nein | Nein | Zugrunde liegende Daten werden gelöscht. | Nach Abschluss des Löschvorgangs erfolgt keine Datenauswertung oder -ausführung. | Nein |
 
 ### Wie interagieren Audience Portal und die Zielgruppenkomposition mit der Veröffentlichung von Real-Time CDP-Partnerdaten?
@@ -124,13 +169,13 @@ Im folgenden Abschnitt werden Fragen im Zusammenhang mit der Zielgruppenkomposit
 
 Sowohl die Zielgruppenkomposition als auch der Segment Builder haben beim Erstellen von Zielgruppen in Platform wichtige Rollen.
 
-Der Segment Builder eignet sich besser für die Zielgruppe **Erstellung** (um eine Zielgruppe von Grund auf neu zu erstellen), während die Zielgruppenkomposition besser für die Zielgruppe geeignet ist **Kuratierung** (zur Erstellung neuer Zielgruppen auf der Basis einer existierenden Zielgruppe).
+Der Segment Builder eignet sich besser für die Zielgruppe **Erstellung** (um eine Zielgruppe von Grund auf neu zu erstellen), während die Zielgruppenkomposition besser für die Zielgruppe geeignet ist **Kuratierung und Personalisierung** (zur Erstellung neuer Zielgruppen auf der Basis einer existierenden Zielgruppe).
 
 Die folgende Tabelle zeigt den Unterschied zwischen den beiden Diensten:
 
 | Segment Builder | Zielgruppenkomposition |
 | --------------- | -------------------- |
-| <ul><li>Einzelstufige Zielgruppenerstellung</li><li>Erstellt die grundlegenden Bausteine von Zielgruppen aus Profil-, Zeitreihen- und Daten aus mehreren Entitäten</li><li>Wird zur Erstellung verwendet **one** audience</li></ul> | <ul><li>Mehrstufige Zielgruppenerstellung mit set-basierten Vorgängen</li><li>Verwendet die vom Segment Builder erstellten Zielgruppen und wendet Datenanreicherungsoptionen wie Profilattribute an</li><li>Wird zur Erstellung verwendet **multiple** Zielgruppen auf einmal</li></ul> |
+| <ul><li>Einzelstufige Zielgruppenerstellung</li><li>Erstellt die grundlegenden Bausteine von Zielgruppen aus Profil-, Zeitreihen- und Daten aus mehreren Entitäten</li><li>Wird zur Erstellung verwendet **one** audience</li></ul> | <ul><li>Mehrstufige Zielgruppenerstellung mit set-basierten Vorgängen</li><li>Verwendet die vom Segment Builder erstellten Zielgruppen und wendet Anreicherungsoptionen für Daten an, z. B. Profilattribute einordnen und in Unterzielgruppen unterteilen</li><li>Wird zur Erstellung verwendet **multiple** Zielgruppen auf einmal</li></ul> |
 
 Weitere Informationen zum Segment Builder finden Sie in der [Segment Builder-Handbuch](./ui/segment-builder.md). Weitere Informationen zur Zielgruppenkomposition finden Sie im Abschnitt [Handbuch zur Zielgruppenkomposition](./ui/audience-composition.md).
 
@@ -152,11 +197,35 @@ Die Platzierung der Kompositionskomponente folgt einer starren Struktur wie folg
 
 1. Begonnen wird **immer** mit dem Block [!UICONTROL Zielgruppe], um die Startaktivität auszuwählen. Es kann maximal **ein** Block [!UICONTROL Zielgruppe] ausgewählt werden.
 2. Es kann optional ein Block [!UICONTROL Ausschließen], der auf den Block [!UICONTROL Zielgruppe] folgt, hinzugefügt werden.
-3. Es kann optional ein Block [!UICONTROL Anreichern] hinzugefügt werden, der auf den Block [!UICONTROL Ausschließen] folgt.
+3. Sie können optional eine [!UICONTROL Anreichern] -Block, der auf [!UICONTROL Ausschließen] blockieren. Sie können **one** [!UICONTROL Anreichern] Block pro Komposition.
 4. Es kann optional ein Block für den [!UICONTROL Rang] oder die [!UICONTROL Aufspaltung] hinzugefügt werden. Es kann **nur** einer dieser Blöcke pro Komposition ausgewählt werden.
 5. Es sollte **immer** mit einem Block zum [!UICONTROL Speichern] abgeschlossen werden, um die Zielgruppe zu speichern.
 
+Zusätzlich werden die folgenden Einschränkungen(?) bei Verwendung dieser Blöcke anwenden:
+
+- Geteilter Block
+   - Dieser Block unterstützt nur **Zeichenfolge** Datentypen. Der Aufspaltungsbaustein **not** unterstützt das Datum oder den booleschen Datentyp.
+   - Außerdem bewirkt dieser Block **not** unterstützt Anreicherungsattribute.
+- Block ausschließen
+   - Dieser Block **not** unterstützt das Datum oder den booleschen Datentyp.
+- Rang-Block
+   - Dieser Block **not** unterstützt Anreicherungsattribute.
+
 Weitere Informationen zur Verwendung der Zielgruppenkomposition finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./ui/audience-composition.md).
+
+### Wann werden Zielgruppen, die mit der Zielgruppenkomposition erstellt wurden, gespeichert und ausgewertet?
+
+Zielgruppen werden automatisch gespeichert, während sie in der Zielgruppenkomposition erstellt werden. Die Erstellungszeit der Zielgruppe ist das erste Mal, dass diese automatische Speicherung erfolgt.
+
+Nach der Erstellung der Audience kann die Auswertung bis zu 24 Stunden dauern.
+
+### Wann kann ich die erstellte Zielgruppe verwenden?
+
+Die in der Zielgruppenkomposition erstellte Zielgruppe wird **sofort** in Audience Portal angezeigt. Um es jedoch in Adobe Journey Optimizer verwenden zu können, müssen Sie mindestens 24 Stunden nach der Auswertung warten.
+
+### Sind Auswertungsaufträge im Monitoring-Abschnitt sichtbar?
+
+Derzeit sind Auswertungsaufträge **not** in der Monitoring-Benutzeroberfläche angezeigt.
 
 ### Kann ich eine Zielgruppen-Komposition in einer anderen Komposition verwenden?
 
@@ -164,7 +233,11 @@ Nein, Zielgruppen, die mithilfe der Zielgruppen-Komposition erstellt wurden, kö
 
 ### Wie funktioniert die Aufteilung in Zielgruppen-Kompositionen?
 
-Durch die Aufteilung von Zielgruppen können Zielgruppen in weitere kleinere Gruppen unterteilt werden. Diese Aufteilung erzwingt, dass sich die Gruppen gegenseitig ausschließen. Wenn also ein Eintrag die Kriterien für mehrere Aufspaltungspfade erfüllt, wird ihm der **erste** Pfad von links und **keiner** der anderen Pfade zugewiesen.
+Durch die Zielgruppenteilung können Sie Ihre Zielgruppe weiter in kleinere Gruppen unterteilen.
+
+Bei der Aufteilung nach Attribut besteht eine gegenseitige Exklusivität zwischen den Gruppen. Wenn also ein Eintrag die Kriterien für mehrere Aufspaltungspfade erfüllt, wird ihm der **erste** Pfad von links und **keiner** der anderen Pfade zugewiesen.
+
+Beim Aufteilen nach Prozentsatz werden Aufspaltungen **zufällig** getan. Dies bedeutet, dass die Profile zufällig jedem Pfad zugewiesen werden. Die Aufteilung ist **not** persistent sein, sodass sich das Profil bei jeder Auswertung in einer anderen Unterzielgruppe befinden könnte.
 
 Weiterführende Informationen zum Block „Aufspaltung“ finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./ui/audience-composition.md#split).
 

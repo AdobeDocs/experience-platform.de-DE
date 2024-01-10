@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 99%
+source-wordcount: '1789'
+ht-degree: 97%
 
 ---
 
@@ -28,7 +28,7 @@ Das Popup-Fenster **[!UICONTROL Kompositionseigenschaften]** erscheint. Sie kön
 
 >[!NOTE]
 >
->Wenn Sie **keinen** Titel für Ihre Komposition vergeben, trägt sie standardmäßig den Titel „Komposition“, gefolgt von Erstellungsdatum und -zeit.
+>Wenn Sie **not** Geben Sie Ihrer Komposition einen Titel, sie hat einen Titel &quot;Komposition&quot;, gefolgt von dem Erstellungsdatum und der Erstellungszeit standardmäßig. Zusätzlich wird jede Komposition **must** einen eigenen eindeutigen Namen haben.
 
 Nachdem Sie die Details Ihrer Komposition aktualisiert haben, wählen Sie **[!UICONTROL Speichern]**, um diese Aktualisierungen zu bestätigen. Die Arbeitsfläche für die Zielgruppenkomposition wird erneut angezeigt.
 
