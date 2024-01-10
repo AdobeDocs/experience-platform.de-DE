@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 93%
+source-wordcount: '1990'
+ht-degree: 91%
 
 ---
 
@@ -14,7 +14,16 @@ ht-degree: 93%
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
 
-## Version 2.21.3 - 10. November 2023
+## Version 2.21.4 – Donnerstag, 10. Januar 2024
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Problem behoben, durch das beim Speichern von Konfigurationsüberschreibungen ohne alle 3 Umgebungen die Erweiterungs-Benutzeroberfläche abstürzte.
+* Es wurde ein Problem behoben, bei dem das Kontrollkästchen &quot;Vorhandenen Wert löschen&quot;beim Bearbeiten einer Update-Variablenaktion nicht aufgefüllt wurde.
+
+Enthält Version 2.19.2 des Adobe Experience Platform Web SDK.
+
+## Version 2.21.3 – Samstag, 10. November 2023
 
 Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
@@ -22,7 +31,7 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 * Es wurde ein Problem behoben, bei dem das Array Vorschläge in `Send event complete` -Ereignisse war immer leer.
 
-## Version 2.21.2 - 1. November 2023
+## Version 2.21.2 – Donnerstag, 1. November 2023
 
 **Neue Funktionen**
 
@@ -36,19 +45,19 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 * Enthält Version 2.19.0 des Adobe Experience Platform Web SDK.
 
-## Version 2.20.3 - 8. August 2023
+## Version 2.20.3 – Mittwoch, 8. August 2023
 
 **Fehlerbehebungen und Verbesserungen**
 
 * Es wurde ein Problem behoben, bei dem Datenelemente nicht im Feld ID-Synchronisierungs-Container-ID-Überschreibung gespeichert werden konnten.
 
-## Version 2.20.1 - 3. August 2023
+## Version 2.20.1 – Freitag, 3. August 2023
 
 **Fehlerbehebungen und Verbesserungen**
 
 * Die Validierung gespeicherter Einstellungen zur Außerkraftsetzung von Datensätzen wurde verbessert.
 
-## Version 2.20.0 – 31. Juli 2023
+## Version 2.20.0 – Dienstag, 31. Juli 2023
 
 **Neue Funktionen**
 
@@ -56,7 +65,7 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Statt `edgeConfigId` wird jetzt `datastreamId` in der SDK-Konfiguration unterstützt.
+* Veraltet `edgeConfigId` zugunsten von `datastreamId` in der SDK-Konfiguration.
 * Die Benutzeroberfläche wird durch mehrere Verbesserungen des Benutzererlebnisses für die Datastream-Konfiguration außer Kraft gesetzt.
 
 ## Version 2.19.0 – 21. Juni 2023

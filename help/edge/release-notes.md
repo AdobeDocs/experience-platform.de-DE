@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: e46ac94a2328b045d7270b2498d6cb7ef5f0464b
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 93%
+source-wordcount: '1740'
+ht-degree: 90%
 
 ---
 
@@ -16,13 +16,21 @@ ht-degree: 93%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.19.1 - 10. November 2023
+## Version 2.19.2 – Donnerstag, 10. Januar 2024
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Problem behoben, durch das Identitätsfehler andere Fehler maskierten und Identitätsfehler in Warnungen geändert wurden.
+* Es wurde ein Problem behoben, durch das Seitenaufrufe am unteren Rand nicht gesendet wurden, wenn der Seitenaufruf am Anfang war und renderDecisions auf false festgelegt war.
+* Es wurde ein Problem behoben, bei dem das Web SDK domänenübergreifende Identitäten nicht gelesen hat, wenn mehrere Abfragezeichenfolgenparameter von adobe_mc vorhanden waren.
+
+## Version 2.19.1 – Samstag, 10. November 2023
 
 **Fehlerbehebungen und Verbesserungen**
 
 * Es wurde ein Problem behoben, bei dem das Array Vorschläge zurückgegeben wurde von `sendEvent` -Aufrufe waren immer leer.
 
-## Version 2.19.0 - 1. November 2023
+## Version 2.19.0 – Donnerstag, 1. November 2023
 
 **Neue Funktionen**
 
