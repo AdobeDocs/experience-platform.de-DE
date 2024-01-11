@@ -2,11 +2,10 @@
 solution: Experience Platform
 title: Look-alike-Zielgruppen
 description: Erfahren Sie, wie Sie neue hochwertige Zielgruppen in Adobe Experience Platform mit Look-alike-Zielgruppen ansprechen.
-badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2212'
 ht-degree: 10%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Beachten Sie, dass Look-alike-Einblicke und Look-alike-Zielgruppen in **begrenzte Verfügbarkeit**.
+>Look-alike-Einblicke und Look-alike-Zielgruppen sind nur in der **B2C-Bearbeitung**.
 
 In Adobe Experience Platform bieten Look-alike-Zielgruppen intelligente Einblicke in jede Ihrer Zielgruppen, indem sie auf maschinellem Lernen basierende Einblicke nutzen, um hochwertige Kunden mit Ihren Marketingkampagnen zu identifizieren und anzusprechen.
 
@@ -29,6 +28,15 @@ Bevor Sie mit Look-alike-Zielgruppen beginnen, sollten Sie sich mit den folgende
 - **Look-alike-Modell**: Ein Look-alike-Modell ist ein Modell für maschinelles Lernen, das für jede berechtigte Zielgruppe ohne Kundeneingabe trainiert wird. Jedes Look-alike-Modell erstellt die einflussreichen Faktoren und Ähnlichkeitsdiagramme. Ein Look-alike-Modell **not** werden.
 - **Look-alike-Zielgruppe**: Eine Look-alike-Zielgruppe ist die Zielgruppe, die erstellt wird, wenn ein Look-alike-Modell mit einer ausgewählten Ähnlichkeitsschwelle auf die Basiszielgruppe angewendet wird. Sie können mehrere Look-alike-Zielgruppen mit demselben Look-alike-Modell erstellen. Die Look-alike-Zielgruppe wird bewertet.
 - **Gesamte adressierbare Zielgruppengröße**: Die gesamte adressierbare Zielgruppengröße ist die Gesamtanzahl der Profile in den letzten 30 Tagen abzüglich der Basiszielgruppe in den letzten 30 Tagen. Wenn beispielsweise ein Kunde in den letzten 30 Tagen 10 Millionen Profile hat und die Basiszielgruppe in den letzten 30 Tagen 1 Million Profile hat, beträgt die gesamte adressierbare Zielgruppengröße 9 Millionen Profile.
+
+## Eignung {#eligibility}
+
+Um Look-alike-Einblicke zu verwenden, muss die Basiszielgruppe **must** die folgenden Förderkriterien erfüllen:
+
+- Basiszielgruppe **must** in Platform erstellt werden.
+   - Extern generierte Zielgruppen sind **not** für Look-alike-Einblicke geeignet.
+- Basiszielgruppe **must** in der standardmäßigen Zusammenführungsrichtlinie verwendet werden.
+- Basiszielgruppe **must** Verwenden Sie keine Felder, die durch Data Governance eingeschränkt sind.
 
 ## Look-alike-Modell – Details {#details}
 
@@ -177,13 +185,19 @@ Die Seite mit den Details zur Zielgruppe wird angezeigt. Weitere Informationen a
 
 ## Ausschließen von Datenfeldern aus der Look-alike-Modellierung {#exclude}
 
+>[!IMPORTANT]
+>
+> **You** sind dafür verantwortlich, sicherzustellen, dass Daten, einschließlich sensibler Daten, angemessen gekennzeichnet werden und dass die Datennutzungsrichtlinien definiert wurden und es ihnen ermöglicht wurde, die rechtlichen und regulatorischen Verpflichtungen einzuhalten, unter denen Sie tätig sind. Beachten Sie auch, dass die Datenfelder oder Segmentmitgliedschaften, die **not** die direkte Korrelation mit Datenfeldern, die normalerweise mit sensiblen oder geschützten Datentypen verknüpft sind, kann eine potenzielle Verzerrung darstellen. **You** sind für die Analyse Ihrer Daten verantwortlich, um die entsprechenden Datennutzungsrichtlinien zu identifizieren, zu beschriften und auf Ihre Daten anzuwenden, einschließlich aller Datenfelder, die für vertrauliche oder geschützte Datentypen geeignet sind und von der Modellierung ausgeschlossen werden sollten.
+
 Look-alike-Zielgruppen können so konfiguriert werden, dass Datenfelder ausgeschlossen werden, die für die Marketing-Aktion &quot;Data Science&quot;eingeschränkt sind, indem die relevanten Datennutzungsbezeichnungen und -richtlinien angewendet werden. Daten, die als für die Datenwissenschaft eingeschränkt gekennzeichnet sind, werden beim Trainieren eines Look-alike-Zielgruppenmodells und beim Generieren einer Look-alike-Zielgruppe aus dem trainierten Modell nicht berücksichtigt. 
+
+>[!NOTE]
+>
+>Änderungen an den Datennutzungsbezeichnungen der Basiszielgruppe können bis zu 48 Stunden in Kraft treten.
 
 Die standardmäßige Bezeichnung &quot;C9&quot;kann verwendet werden, um Daten zu beschriften, die nicht für die Datenwissenschaft verwendet werden sollten, und kann durch Aktivierung der standardmäßigen Richtlinie &quot;Datenwissenschaft beschränken&quot;durchgesetzt werden. Sie können auch zusätzliche Richtlinien erstellen, um Daten mit anderen Bezeichnungen, einschließlich sensibler Bezeichnungen, aus der Nutzung für die Datenwissenschaft zu beschränken. Weitere Informationen zur Verwaltung von Datennutzungsrichtlinien finden Sie im Abschnitt [Benutzeroberflächenleitfaden für Datennutzungsrichtlinien](../../data-governance/policies/user-guide.md). Weitere Informationen zur Verwaltung von Datennutzungsbezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu den Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md).
 
 Standardmäßig wird der Modellierungsprozess für Look-alike-Zielgruppen ausgeschlossen **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen. Wenn die Basiszielgruppe keine Vertragsbezeichnungen hat, wird der Modellierungsprozess **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen.
-
-Bitte beachten Sie, dass **you** sind dafür verantwortlich sicherzustellen, dass Daten, einschließlich sensibler Daten, angemessen gekennzeichnet werden und dass Datennutzungsrichtlinien definiert wurden und es ermöglicht wird, die rechtlichen und regulatorischen Verpflichtungen einzuhalten, unter denen Sie tätig sind. Sie sollten auch wissen, dass Datenfelder oder Segmentmitgliedschaften, die **not** die direkte Korrelation mit Datenfeldern, die normalerweise mit sensiblen oder geschützten Datentypen verknüpft sind, kann eine potenzielle Verzerrung darstellen. **You** sind für die Analyse Ihrer Daten verantwortlich, um die entsprechenden Datennutzungsrichtlinien zu identifizieren, zu beschriften und auf Ihre Daten anzuwenden, einschließlich aller Datenfelder, die für vertrauliche oder geschützte Datentypen geeignet sind und von der Modellierung ausgeschlossen werden sollten.
 
 ## Nächste Schritte
 
