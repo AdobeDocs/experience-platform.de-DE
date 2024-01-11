@@ -3,10 +3,10 @@ title: SFTP-Ziele für die IP-Adressen-Zulassungsliste
 type: Documentation
 description: Diese Seite enthält IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform auf Ihren SFTP-Server zu exportieren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 9%
+source-wordcount: '189'
+ht-degree: 8%
 
 ---
 
@@ -33,9 +33,17 @@ Adobe empfiehlt, dass Sie die folgenden IP-Bereiche zu einer Zulassungsliste hin
 
 * `52.252.71.64/29`
 
+## Kanada-Kunden
+
+* `20.220.135.16/29`
+
 ## EMEA-Kunden
 
 * `51.137.8.208/29`
+
+## UK-Kunden
+
+* `20.26.133.96/29`
 
 ## APAC-Kunden
 
