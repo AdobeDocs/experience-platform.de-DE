@@ -1,14 +1,15 @@
 ---
 title: Lambda-Funktionsbeispiel - Abrufen ähnlicher Datensätze
 description: Erfahren Sie, wie Sie anhand einer Ähnlichkeitsmetrik und eines Ähnlichkeitsschwellenwerts ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen identifizieren und abrufen. Dieser Workflow kann aussagekräftige Beziehungen oder Überschneidungen zwischen verschiedenen Datensätzen hervorheben.
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 3%
 
 ---
 
-# Lambda-Funktionsbeispiel: Abrufen ähnlicher Datensätze
+# Beispiel für eine Lambda-Funktion: Abrufen ähnlicher Datensätze
 
 Beheben Sie mehrere gängige Anwendungsfälle, indem Sie Data Distiller-Lambda-Funktionen verwenden, um ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen zu identifizieren und abzurufen. Sie können dieses Handbuch verwenden, um Produkte aus verschiedenen Datensätzen zu identifizieren, die sich in ihren Eigenschaften oder Attributen erheblich ähneln. Die in diesem Dokument verwendete Methodik bietet u. a. Lösungen für Datendeduplizierung, Datensatzverknüpfung, Empfehlungssysteme, Informationsabruf und Textanalyse.
 

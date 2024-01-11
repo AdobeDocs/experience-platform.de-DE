@@ -2,10 +2,10 @@
 title: Anonymer Block in Query Service
 description: Der anonyme Block ist eine SQL-Syntax, die von Adobe Experience Platform Query Service unterstützt wird und mit der Abfragen effizient ausgeführt werden können.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
+source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 74%
+source-wordcount: '616'
+ht-degree: 73%
 
 ---
 
@@ -14,10 +14,6 @@ ht-degree: 74%
 Adobe Experience Platform Query Service unterstützt anonyme Blöcke. Mit der Funktion für anonyme Blöcke können Sie eine oder mehrere SQL-Anweisungen verketten, die nacheinander ausgeführt werden. Sie beinhalten auch die Möglichkeit der Ausnahmebehandlung.
 
 Die Funktion für anonyme Blöcke bietet eine effiziente Möglichkeit, um mehrere Vorgänge oder Abfragen nacheinander auszuführen. Die Kette von Abfragen innerhalb des Blocks kann als Vorlage gespeichert und zur Ausführung zu einer bestimmten Zeit oder in einem bestimmten Intervall geplant werden. Diese Abfragen können zum Schreiben und Anhängen von Daten verwendet werden, um einen neuen Datensatz zu erstellen. Sie werden normalerweise im Falle von Abhängigkeiten verwendet.
-
->[!IMPORTANT]
->
->Die Planung von Abfragen mithilfe anonymer Blöcke ist derzeit nur über die [!DNL Query Service]-API möglich. Weitere Informationen finden Sie in der Dokumentation für [vollständige Anweisungen zum Planen von Abfragen über die API](../api/scheduled-queries.md).
 
 Die folgende Tabelle ist nach den Hauptabschnitten des Blocks unterteilt: Ausführung und Ausnahmebehandlung. Die Abschnitte sind durch die Schlüsselwörter `BEGIN`, `END` und `EXCEPTION` definiert.
 
