@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppensegmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 74%
+source-wordcount: '287'
+ht-degree: 71%
 
 ---
 
 
 # Hilfe zur Real-Time Customer Data Platform {#rtcdp}
 
-* [Real-Time CDP – Übersicht](overview.md)
-* [Real-Time CDP B2B Edition – Übersicht](b2b-overview.md)
+* [Real-Time CDP-Dokumentation](home.md)
 * Erste Schritte {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Real-Time CDP – Übersicht](overview.md)
       * [Erste Schritte mit Real-time CDP](get-started.md)
       * [Startseite](home-page-dashboards.md)
    * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
+      * [Real-Time CDP B2B Edition – Übersicht](b2b-overview.md)
       * [Beispielanwendungsfall](./b2b-use-case.md)
       * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
       * [Leitlinien für die Real-time CDP B2B Edition](b2b-guardrails.md)
@@ -37,12 +38,12 @@ ht-degree: 74%
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
    * [Ziele in der Real-time CDP B2B Edition](destinations/b2b.md)
-* Leitplanken {#guardrails}
+* Schutzschilde {#guardrails}
    * [Übersicht über Real-Time CDP-Limits](guardrails/overview.md)
-   * [Schutzmaßnahmen bei der Datenaufnahme](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Limits für die Datenerfassung](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Limits für die [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [Limits [!DNL Real-Time Customer Profile] Daten und Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de){target="_blank"}
-   * [Leitplanken für  [!DNL Identity Service] Daten](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Limits [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [Limits [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
    * [Limits für die Datenaktivierung über Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identitäten {#identity}
@@ -73,11 +74,12 @@ ht-degree: 74%
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Quellen in der Real-time CDP B2B Edition](sources/b2b.md)
 * Anwendungsfälle {#use-cases}
+   * [Überblick über unterstützte Anwendungsfälle](/help/rtcdp/use-case-guides/overview.md)
    * Personalisierung, Einblicke und Interaktion {#personalization-insights-engagement}
       * [Intelligentes erneutes Ansprechen Ihrer Kunden](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Kundenakquise {#customer-acquisition}
       * [Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies](/help/rtcdp/partner-data/prospecting.md)
-      * [Personalisieren von Onsite-Erlebnissen für unbekannte Besuchende durch partnergestützte Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/offsite-retargeting.md)
    * Profilanreicherung {#profile-enrichment}
       * [Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
