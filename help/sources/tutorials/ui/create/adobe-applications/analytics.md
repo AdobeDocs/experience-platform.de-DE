@@ -2,10 +2,10 @@
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 46%
+source-wordcount: '2695'
+ht-degree: 41%
 
 ---
 
@@ -26,9 +26,9 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
 * **Standardattribut**: Standardattribute sind alle Attribute, die von Adobe vordefiniert wurden. Sie haben dieselbe Bedeutung für alle Kunden und sind in den [!DNL Analytics]-Quelldaten und [!DNL Analytics]-Schemafeldergruppen verfügbar.
-* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in [!DNL Analytics]. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Sie können sich bei ihrer Verwendung von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=de) finden Sie weitere Informationen zu eVars.
+* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in [!DNL Analytics]. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Sie können sich bei ihrer Verwendung von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) finden Sie weitere Informationen zu eVars.
 * **Attribute in benutzerdefinierten Feldgruppen**: Attribute, die aus von Kunden erstellten Feldgruppen stammen, sind alle benutzerdefiniert und gelten weder als Standard- noch als benutzerdefinierte Attribute.
-* **Anzeigenamen**: Anzeigenamen sind von Benutzern bereitgestellte Bezeichnungen für benutzerdefinierte Variablen in einer [!DNL Analytics]-Implementierung. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=de) finden Sie weitere Informationen zu Anzeigenamen.
+* **Anzeigenamen**: Anzeigenamen sind von Benutzern bereitgestellte Bezeichnungen für benutzerdefinierte Variablen in einer [!DNL Analytics]-Implementierung. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) finden Sie weitere Informationen zu Anzeigenamen.
 
 ## Erstellen einer Quellverbindung mit Adobe Analytics
 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in das Echtzeit-Kundenprofil ein- oder auszuschließen. Filterunterstützung ist nur verfügbar für [!DNL Analytics] Daten und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Daten-Pool aufgenommen.
 
+>[!BEGINSHADEBOX]
+
+**Zusätzliche Informationen zur Datenvorbereitung und Filterung von Analytics-Daten für Echtzeit-Kundenprofil**
+
+* Sie können die Filterfunktion für Daten verwenden, die an das Profil gesendet werden, nicht aber für Daten, die an Data Lake gesendet werden.
+* Sie können die Filterung für Live-Daten verwenden, Sie können aber keine Aufstockungsdaten filtern.
+   * Die [!DNL Analytics] -Quelle füllt keine Daten in Profil auf.
+* Wenn Sie während der ersten Einrichtung eines [!DNL Analytics] -Fluss, werden diese Änderungen auch auf die automatische 13-monatige Aufstockung angewendet.
+   * Dies ist jedoch nicht der Fall für die Filterung, da die Filterung nur für Live-Daten reserviert ist.
+* Die Datenvorbereitung wird sowohl auf Streaming- als auch auf Batch-Erfassungspfade angewendet. Wenn Sie eine vorhandene Datenvorbereitung ändern, werden diese Änderungen auf neue eingehende Daten über Streaming- und Batch-Erfassungswege hinweg angewendet.
+   * Datenvorbereitung-Konfigurationen gelten jedoch nicht für Daten, die bereits in Experience Platform erfasst wurden, unabhängig davon, ob es sich um Streaming- oder Batch-Daten handelt.
+* Standardattribute aus Analytics werden immer automatisch zugeordnet. Daher können Sie keine Transformationen auf Standardattribute anwenden.
+   * Sie können jedoch Standardattribute herausfiltern, solange sie in Identity Service oder Profil nicht benötigt werden.
+* Sie können die Filterung auf Spaltenebene nicht verwenden, um erforderliche Felder und Identitätsfelder zu filtern.
+* Sie können zwar sekundäre Identitäten herausfiltern, insbesondere &quot;AAID&quot;und &quot;AACustomID&quot;, aber Sie können die ECID nicht herausfiltern.
+* Wenn ein Transformationsfehler auftritt, wird in der entsprechenden Spalte NULL angezeigt.
+
+>[!ENDSHADEBOX]
+
 #### Filterung auf Zeilenebene
 
 >[!IMPORTANT]
 >
->Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und festzulegen, welche Daten **in die Profilaufnahme** eingeschlossen werden sollen. Verwenden Sie die Filterung auf Spaltenebene, um die Datenspalten auszuwählen, die **bei der Profilaufnahme** ausgeschlossen werden sollen.
+>Verwenden Sie die Filterung auf Zeilenebene, um Bedingungen anzuwenden und festzulegen, welche Daten **in die Profilaufnahme** eingeschlossen werden sollen. Verwenden Sie Filter auf Spaltenebene, um die Datenspalten auszuwählen, die Sie verwenden möchten **zur Profilaufnahme ausschließen**.
 
 Sie können Daten nach [!DNL Profile] Aufnahme auf Zeilen- und Spaltenebene. Mit der Filterung auf Zeilenebene können Sie Kriterien definieren, z. B. Zeichenfolge enthält, gleich, beginnt oder endet mit. Sie können auch die Filterung auf Zeilenebene verwenden, um Join-Bedingungen mithilfe von `AND` sowie `OR`, und umgekehrt Bedingungen mithilfe von `NOT`.
 
@@ -207,8 +226,8 @@ Die Liste der konfigurierbaren Bedingungen umfasst:
 * [!UICONTROL endet mit]
 * [!UICONTROL endet nicht mit]
 * [!UICONTROL contains]
-* [!UICONTROL „Enthält nicht“]
-* [!UICONTROL vorhanden]
+* [!UICONTROL enthält nicht]
+* [!UICONTROL exists]
 * [!UICONTROL nicht vorhanden]
 
 ![Bedingungen](../../../../images/tutorials/create/analytics/conditions.png)
@@ -298,7 +317,7 @@ Die Benutzeroberfläche aktualisiert eine Liste einzelner Batches, einschließli
 
 | Metriken | Beschreibung |
 | --- | --- |
-| Batch-ID | Die Kennung eines bestimmten Batches. Dieser Wert wird intern generiert. |
+| Batch-Kennung | Die Kennung eines bestimmten Batches. Dieser Wert wird intern generiert. |
 | Datensatzname | Der Name eines bestimmten Datensatzes, der für Analytics-Daten verwendet wird. |
 | Quelle | Die Quelle der aufgenommenen Daten. |
 | Aktualisiert | Das Datum der letzten Durchlaufdurchlauf-Iteration. |
