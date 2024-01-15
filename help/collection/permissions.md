@@ -2,10 +2,10 @@
 title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht darüber, wie Sie Berechtigungen verwalten und den Zugriff auf Datenerfassungsfunktionen in Adobe Experience Platform steuern können.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 30%
+source-wordcount: '1285'
+ht-degree: 29%
 
 ---
 
@@ -58,7 +58,8 @@ Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern de
 | Eigenschaftsrechte | Erweiterungen verwalten | Ermöglicht die Verwaltung der [Erweiterungen](../tags/ui/managing-resources/extensions/overview.md) für die Eigenschaften, auf die ein Benutzer Zugriff hat. |
 | Eigenschaftsrechte | Veröffentlichen Sie | Ermöglicht die Veröffentlichung eines Bibliotheks-Builds als Teil der [Veröffentlichungsfluss](../tags/ui/publishing/publishing-flow.md). |
 | Unternehmensrechte | Entwickeln von Erweiterungen | Ermöglicht das Erstellen und Ändern von Erweiterungspaketen, die Ihrem Unternehmen gehören, einschließlich privater Versionen und Anforderungen zur öffentlichen Veröffentlichung. |
-| Unternehmensrechte | Erweiterungen verwalten | Diese Berechtigung gilt nur, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt. Auf diese Weise können Sie Apps verwalten, von denen Adobe Experience Cloud weiß, sowie die erforderlichen Push-Anmeldeinformationen, die für die Kommunikation mit dem Firebase Cloud Messaging-Dienst und dem Apple-Push-Benachrichtigungsdienst erforderlich sind. |
+| Unternehmensrechte | Mobile-App-Konfigurationen verwalten | Diese Berechtigung gilt nur, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt. Auf diese Weise können Sie Apps verwalten, von denen Adobe Experience Cloud weiß, sowie die erforderlichen Push-Anmeldeinformationen, die für die Kommunikation mit dem Firebase Cloud Messaging-Dienst und dem Apple-Push-Benachrichtigungsdienst erforderlich sind. |
+| Unternehmensrechte | Eigenschaften verwalten | Ermöglicht Ihnen die Erstellung und Verwaltung von Tags (Webeigenschaft), Ereignisweiterleitung (Edge-Eigenschaft) und mobilen Eigenschaften. |
 
 {style="table-layout:auto"}
 
