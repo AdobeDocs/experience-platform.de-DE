@@ -2,10 +2,10 @@
 title: Sandboxes-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 10%
+source-wordcount: '1859'
+ht-degree: 6%
 
 ---
 
@@ -67,19 +67,14 @@ Benutzerdefinierte Identitätstypen werden beim Exportieren einer Journey nicht 
 >Alle Exportaktionen werden in den Prüfprotokollen aufgezeichnet.
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="Speichern und Beenden eines Pakets"
->abstract="Um das Paket zu beenden und zu speichern, können Benutzende einfach die Option „Zurück“ verwenden."
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Entfernen eines Objekts"
->abstract="Die Benutzerin bzw. der Benutzer muss die Zeile auswählen und dann die Löschoption (die bei Auswahl verfügbar gemacht wird) verwenden, um die entsprechende Zeile zu entfernen."
+>abstract="Um ein Objekt aus dem Package zu entfernen, wählen Sie die zu entfernende Zeile aus und verwenden Sie dann die Löschoption, die bei Auswahl zur Verfügung gestellt wird. Beachten Sie, dass Sie keine Objekte aus veröffentlichten Paketen entfernen können."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Ablaufeinstellungen des Pakets"
->abstract="Das Datum ist ab heute für 90 Tage festgelegt. Dieses Datum verändert sich, bis das Paket veröffentlicht wird. Wenn eine Benutzerin bzw. ein Benutzer das Paket morgen im Entwurfsstatus besucht, wird das Datum um +1 Tag verschoben (es sei denn, dies wird von der Benutzerin bzw. vom Benutzer festgelegt)."
+>abstract="Pakete laufen nach einem Zeitraum der Inaktivität im Entwurfsstatus ab. Das Standarddatum wird ab heute auf 90 Tage festgelegt. Dieses Datum verändert sich, bis das Paket veröffentlicht wird. Wenn Sie das Paket morgen im Entwurfsstatus besuchen, wird das Datum um +1 Tag verschoben, es sei denn, Sie legen dies manuell fest."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
