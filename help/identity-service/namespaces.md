@@ -2,10 +2,10 @@
 title: Identity Namespace - Überblick
 description: Erfahren Sie mehr über Identitäts-Namespaces im Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
+source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 18%
+source-wordcount: '1869'
+ht-degree: 19%
 
 ---
 
@@ -21,7 +21,19 @@ Identitäts-Namespaces erfordern ein Verständnis verschiedener Adobe Experience
 * [[!DNL Identity Service]](./home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und ihr Verhalten, indem Sie Identitäten zwischen Geräten und Systemen überbrücken.
 * [[!DNL Privacy Service]](../privacy-service/home.md): Identitäts-Namespaces werden in Compliance-Anfragen für gesetzliche Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) verwendet. Jede Datenschutzanfrage wird in Bezug auf einen Namespace gestellt, um zu ermitteln, welche Verbraucherdaten betroffen sein sollen.
 
-## Identitäts-Namespaces verstehen
+## Identitäts-Namespaces verstehen {#understanding-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Identity-Namespaces"
+>abstract="Ein Identitäts-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte entsprechen **name<span>@acme.com**. Auf ähnliche Weise wird ein Namespace von `Phone` könnte entsprechen `555-555-1234`."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Identitätswerte"
+>abstract="Ein Identitätswert ist eine Kennung, die für eine eindeutige Person, eine eindeutige Organisation oder ein eindeutiges Asset steht. Der Kontext oder der Typ der Identität, den der Wert darstellt, wird durch einen entsprechenden Identity-Namespace definiert. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen."
+>text="Learn more in documentation"
 
 Eine voll qualifizierte Identität umfasst zwei Komponenten: eine **Identitätswert** und **Identitäts-Namespace**. Wenn beispielsweise der Wert einer Identität `scott@acme.com`eingeben, stellt ein Namespace einen Kontext für diesen Wert bereit, indem er ihn als E-Mail-Adresse unterscheidet. Auf ähnliche Weise kann ein Namespace `555-123-456` als Telefonnummer und `3126ABC` als CRM-ID. Grundsätzlich gilt: **Ein Namespace stellt Kontext für eine bestimmte Identität bereit**. Beim Abgleich von Datensatzdaten über Profilfragmente hinweg, wie zum Beispiel wenn [!DNL Real-Time Customer Profile] Führt Profildaten zusammen, sowohl der Identitätswert als auch der Namespace müssen übereinstimmen.
 
