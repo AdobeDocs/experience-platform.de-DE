@@ -2,10 +2,10 @@
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 95%
+source-wordcount: '1614'
+ht-degree: 91%
 
 ---
 
@@ -91,13 +91,15 @@ Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibli
 
 ## Datenelement-Typen {#types-of-data-elements}
 
-Datenelementtypen werden durch die Erweiterung bestimmt. Die erstellbaren Typen sind nicht beschränkt.
+>[!NOTE]
+>
+>Datenelementtypen werden durch die Erweiterung bestimmt. Die erstellbaren Typen sind nicht beschränkt.
 
-In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Datenelementtypen beschrieben. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
+In den folgenden Abschnitten werden die in der Variablen **Haupterweiterung**. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
 
 ### Cookie
 
-Jedes verfügbare Domain-Cookie kann im Cookie-Namensfeld referenziert werden.
+Auf jedes verfügbare Domänen-Cookie kann im Feld Cookie-Name verwiesen werden.
 
 #### Beispiel:
 
@@ -161,7 +163,7 @@ Wert abrufen von:
 
 Verfügbare JavaScript-Objekte oder -Variablen können mit dem Pfadfeld referenziert werden.
 
-Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie das Datenelement allen Ihren Regeln referenzieren, und sollte sich die Quelle der Daten jemals ändern, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle in  ändern.
+Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie das Datenelement in allen Ihren Regeln referenzieren. Wenn sich die Datenquelle der Daten jemals ändert, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle ändern.
 
 Nehmen wir beispielsweise an, das Markup enthält eine JavaScript-Variable namens `Page_Name` wie hier gezeigt:
 
