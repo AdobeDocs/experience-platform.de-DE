@@ -1,13 +1,13 @@
 ---
 title: Erstanbieter-Geräte-IDs im Web SDK
 description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) für das Adobe Experience Platform Web SDK konfigurieren.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
-
 
 # Erstanbieter-Geräte-IDs im Web SDK
 
@@ -16,6 +16,11 @@ Das Adobe Experience Platform Web SDK weist [Adobe Experience Cloud IDs (ECIDs)]
 >[!NOTE]
 >
 >Die Unterstützung der Erstanbieter-Geräte-ID ist nur verfügbar, wenn Daten über das Platform Web SDK an das Platform Edge Network gesendet werden.
+
+>[!IMPORTANT]
+>
+>Erstanbieter-Geräte-IDs sind nicht mit der [Drittanbieter-Cookies](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) -Funktion im Web SDK.
+>Sie können entweder Geräte-IDs von Erstanbietern verwenden oder Sie können Drittanbieter-Cookies verwenden, aber Sie können nicht beide Funktionen gleichzeitig verwenden.
 
 In diesem Dokument wird beschrieben, wie Sie Erstanbieter-Geräte-IDs für Ihre Platform Web SDK-Implementierung konfigurieren.
 

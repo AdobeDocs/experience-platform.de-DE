@@ -2,9 +2,9 @@
 title: Web SDK-Tag-Erweiterung konfigurieren
 description: Erfahren Sie, wie Sie die Tag-Erweiterung des Experience Platform Web SDK in der Benutzeroberfläche für Tags konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1580'
 ht-degree: 6%
 
 ---
@@ -83,6 +83,10 @@ In diesem Abschnitt können Sie das Verhalten des Web SDK bezüglich der Handhab
 * **[!UICONTROL Migrieren der ECID aus der VisitorAPI]**: Diese Option ist standardmäßig aktiviert. Wenn diese Funktion aktiviert ist, kann das SDK die `AMCV` und `s_ecid` Cookies und legen Sie die `AMCV` von [!DNL Visitor.js]. Diese Funktion ist bei der Migration zum Web SDK wichtig, da einige Seiten möglicherweise weiterhin verwenden. [!DNL Visitor.js]. Mit dieser Option kann das SDK weiterhin dieselbe [!DNL ECID] sodass Benutzer nicht als zwei getrennte Benutzer identifiziert werden.
 * **[!UICONTROL Verwenden von Drittanbieter-Cookies]**: Wenn diese Option aktiviert ist, versucht das Web SDK, eine Benutzer-ID in einem Drittanbieter-Cookie zu speichern. Bei erfolgreicher Ausführung wird der Benutzer als einzelner Benutzer identifiziert, der über mehrere Domänen navigiert, anstatt für jede Domäne als separater Benutzer identifiziert zu werden. Wenn diese Option aktiviert ist, kann das SDK die Benutzer-ID möglicherweise weiterhin nicht in einem Drittanbieter-Cookie speichern, wenn der Browser keine Drittanbieter-Cookies unterstützt oder vom Benutzer so konfiguriert wurde, dass keine Drittanbieter-Cookies zugelassen werden. In diesem Fall speichert das SDK die Kennung nur in der Erstanbieterdomäne.
 
+  >[!IMPORTANT]
+  >>Drittanbieter-Cookies sind nicht mit dem [Erstanbieter-Geräte-ID](../../../../edge/identity/first-party-device-ids.md) -Funktion im Web SDK.
+Sie können entweder Geräte-IDs von Erstanbietern verwenden oder Sie können Drittanbieter-Cookies verwenden, aber Sie können nicht beide Funktionen gleichzeitig verwenden.
+  >
 ## Personalisierungseinstellungen konfigurieren {#personalization}
 
 In diesem Abschnitt können Sie konfigurieren, wie Sie bestimmte Teile einer Seite ausblenden möchten, während personalisierter Inhalt geladen wird. Dadurch wird sichergestellt, dass Ihre Besucher nur die personalisierte Seite sehen.
@@ -103,7 +107,7 @@ Um den Codeausschnitt zur Vorab-Ausblendung zu verwenden, kopieren Sie ihn und f
 
 >[!IMPORTANT]
 >
->Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe die Verwendung desselben [!DNL CSS] -Regel als von der [Pre-hiding-Stil](#prehiding-style).
+Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe die Verwendung desselben [!DNL CSS] -Regel als von der [Pre-hiding-Stil](#prehiding-style).
 
 ## Datenerfassungseinstellungen konfigurieren {#data-collection}
 
@@ -130,7 +134,7 @@ Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl 
 
 >[!IMPORTANT]
 >
-> Datastream-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben alle separate Außerkraftsetzungen. Sie können die Einstellungen zwischen ihnen mithilfe der entsprechenden Optionen kopieren, die im folgenden Bildschirm angezeigt werden.
+Datastream-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben alle separate Außerkraftsetzungen. Sie können die Einstellungen zwischen ihnen mithilfe der entsprechenden Optionen kopieren, die im folgenden Bildschirm angezeigt werden.
 
 ![Bild, das die Konfiguration des Datenspeichers anzeigt, überschreibt die Seite Web SDK-Tag-Erweiterung.](assets/datastream-overrides.png)
 
