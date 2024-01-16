@@ -2,7 +2,7 @@
 title: Anwendungsbeispiele in Real-Time CDP
 description: Sehen Sie sich Beispielanwendungsfälle für alle Dienste an, um Ihre Real-Time CDP-Implementierung optimal zu nutzen.
 feature: Use Cases
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -23,7 +23,7 @@ Wenn Drittanbieter-Cookies in den nächsten Jahren verschwinden sollen, kann die
 
 Adobe Real-Time CDP bietet umfassende Unterstützung für Partner-IDs, sodass Sie potenzielle Zielgruppen erstellen, bekannte Zielgruppen mit Attributen von Partnern anreichern und vieles mehr.
 
-Die unterstützten Anwendungsfälle können in Kundenakquise- und Profilanreicherungsfälle gruppiert werden. Ausführliche Informationen zur Implementierung finden Sie in den folgenden Dokumentations-Links.
+Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsfälle gruppiert werden. Ausführliche Informationen zur Implementierung finden Sie in den folgenden Dokumentations-Links.
 
 ### Kundenakquise {#customer-acquisition}
 
