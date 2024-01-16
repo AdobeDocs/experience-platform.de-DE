@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 8%
 
 ---
@@ -33,7 +33,7 @@ Bevor Sie sich mit den Details von Identity Service befassen, lesen Sie bitte di
 | --- | --- |
 | Identität | Eine Identität sind Daten, die für eine Entität eindeutig sind. In der Regel handelt es sich hierbei um ein echtes Objekt, z. B. eine Person, ein Hardwaregerät oder einen Webbrowser (dargestellt durch ein Cookie). Eine voll qualifizierte Identität besteht aus zwei Elementen: einer **Identitäts-Namespace** und **Identitätswert**. |
 | Identity-Namespace | Ein Identitäts-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte entsprechen **julien<span>@acme.com**. Auf ähnliche Weise wird ein Namespace von `Phone` könnte entsprechen `555-555-1234`. Weitere Informationen finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](./namespaces.md) |
-| Identitätswert | Ein Identitätswert ist eine Zeichenfolge, die eine reale Entität darstellt und innerhalb von Identity Service über einen Namespace kategorisiert wird. Beispielsweise die E-Mail **julien<span>@acme.com** könnte als `Email` Namespace. |
+| Identitätswert | Ein Identitätswert ist eine Zeichenfolge, die eine reale Entität darstellt und innerhalb von Identity Service über einen Namespace kategorisiert wird. Beispielsweise der Identitätswert (Zeichenfolge) **julien<span>@acme.com** könnte als `Email` Namespace. |
 | Identitätstyp | Ein Identitätstyp ist eine Komponente eines Identitäts-Namespace. Der Identitätstyp gibt an, ob Identitätsdaten in einem Identitätsdiagramm verknüpft sind. |
 | Link | Ein Link oder eine Verknüpfung ist eine Methode, um festzustellen, dass zwei unterschiedliche Identitäten dieselbe Entität repräsentieren. Beispielsweise eine Verknüpfung zwischen`Email` = julien<span>@acme.com und &quot;`Phone` = 555-555-1234&quot; bedeutet, dass beide Identitäten dieselbe Entität repräsentieren. Dies deutet darauf hin, dass der Kunde, der mit Ihrer Marke sowohl mit der E-Mail-Adresse von julien interagiert hat<span>@acme.com und die Telefonnummer 555-555-1234 ist identisch. |
 | Identity Service | Identity Service ist ein Dienst innerhalb von Experience Platform, der Identitäten verknüpft (oder aufhebt), um Identitätsdiagramme zu verwalten. |
@@ -91,7 +91,7 @@ Siehe folgendes Beispiel:
 * Wenn Sie sich als Nächstes mit denselben Anmeldedaten bei derselben E-Commerce-Website anmelden, aber den Webbrowser auf Ihrem Telefon anstelle des Webbrowsers auf Ihrem Laptop verwenden, wird eine neue ECID im Identity Service registriert.
 * Hinter den Kulissen verarbeitet Identity Service dieses neue Ereignis als `{CRM_ID:ABC, ECID:456}`, wobei CRM_ID: ABC Ihre authentifizierte Kunden-ID darstellt und ECID:456 den Webbrowser auf Ihrem Mobilgerät darstellt.
 
-In Anbetracht der obigen Szenarien erstellt Identity Service eine Verknüpfung zwischen `CRM_ID:ABC, ECID:123`sowie `{CRM_ID:ABC, ECID:456}`. Dies führt zu einem Identitätsdiagramm, in dem Sie drei Identitäten &quot;besitzen&quot;: eine für die Personen-ID (CRM ID) und zwei für Cookie-IDs (ECIDs).
+In Anbetracht der obigen Szenarien erstellt Identity Service eine Verknüpfung zwischen `{CRM_ID:ABC, ECID:123}`sowie `{CRM_ID:ABC, ECID:456}`. Dies führt zu einem Identitätsdiagramm, in dem Sie drei Identitäten &quot;besitzen&quot;: eine für die Personen-ID (CRM ID) und zwei für Cookie-IDs (ECIDs).
 
 ## Identitätsdiagramme
 
