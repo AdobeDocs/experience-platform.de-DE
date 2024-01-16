@@ -4,16 +4,16 @@ description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 38%
+source-wordcount: '1052'
+ht-degree: 37%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 25. Oktober 2023**
+**Veröffentlichungsdatum: Donnerstag, 25. Oktober 2023**
 
-Aktualisierungen vorhandener Funktionen in Experience Platform:
+Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 - [Dashboards](#dashboards)
 - [Datenerfassung](#data-collection)
