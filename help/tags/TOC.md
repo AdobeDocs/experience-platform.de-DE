@@ -5,10 +5,10 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 99%
+source-wordcount: '770'
+ht-degree: 98%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 99%
    * [Entfernen von Ressourcen aus einer Bibliothek](./ui/managing-resources/remove-resources-from-library.md)
 * Veröffentlichen {#publish}
    * [Übersicht](./ui/publishing/overview.md)
-   * [Publishing-Ablauf](./ui/publishing/publishing-flow.md)
+   * [Veröffentlichungsablauf](./ui/publishing/publishing-flow.md)
    * Hosts {#hosts}
       * [Übersicht](./ui/publishing/hosts/hosts-overview.md)
       * [Von Adobe verwaltete Hosts](./ui/publishing/hosts/managed-by-adobe-host.md)
@@ -294,7 +294,7 @@ ht-degree: 99%
       * [Eigenschaften](./api/endpoints/properties.md)
       * [Datenelemente](./api/endpoints/data-elements.md)
       * [Regeln](./api/endpoints/rules.md)
-      * [Regel Komponenten](./api/endpoints/rule-components.md)
+      * [Regelkomponenten](./api/endpoints/rule-components.md)
       * [Erweiterungspakete](./api/endpoints/extension-packages.md)
       * [Erweiterungen](./api/endpoints/extensions.md)
       * [Bibliotheken](./api/endpoints/libraries.md)
@@ -321,10 +321,5 @@ ht-degree: 99%
 * [FAQs](./faq.md)
 * [Aktualisierungen der Terminologie](./term-updates.md)
 * [Auslaufende Unterstützung für Internet Explorer 10 und 11](./ie-deprecation.md)
-* Versionshinweise {#release-notes}
-   * [Neueste Version](./release-notes/current.md)
-   * [Versionshinweise für 2021](./release-notes/2021.md)
-   * [Versionshinweise für 2020](./release-notes/2020.md)
-   * [Versionshinweise für 2019](./release-notes/2019.md)
-   * [Versionshinweise für 2018](./release-notes/2018.md)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)
 
