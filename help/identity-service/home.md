@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
+source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
 workflow-type: tm+mt
-source-wordcount: '1452'
-ht-degree: 9%
+source-wordcount: '1522'
+ht-degree: 8%
 
 ---
 
@@ -20,8 +20,8 @@ Unternehmen und Unternehmen stehen heutzutage vor einer großen Menge unterschie
 Sie können diese Probleme mit dem Adobe Experience Platform Identity Service und seinen Funktionen lösen, um:
 
 * Generieren Sie eine **Identitätsdiagramm** , die unterschiedliche Identitäten miteinander verknüpfen, sodass Sie eine visuelle Darstellung erhalten, wie ein Kunde über verschiedene Kanäle mit Ihrer Marke interagiert.
-* Stellen Sie Tools für die Validierung und das Debugging bereit.
 * Erstellen Sie ein Diagramm für das Echtzeit-Kundenprofil, das dann verwendet wird, um durch Zusammenführen von Attributen und Verhaltensweisen eine umfassende Ansicht des Kunden zu erstellen.
+* Führen Sie mithilfe der verschiedenen Tools eine Validierung und ein Debugging durch.
 
 In diesem Dokument erhalten Sie einen Überblick über Identity Service und darüber, wie Sie seine Funktionen im Kontext von Experience Platform verwenden können.
 
@@ -39,7 +39,7 @@ Bevor Sie sich mit den Details von Identity Service befassen, lesen Sie bitte di
 | Identity Service | Identity Service ist ein Dienst innerhalb von Experience Platform, der Identitäten verknüpft (oder aufhebt), um Identitätsdiagramme zu verwalten. |
 | Identitätsdiagramm | Das Identitätsdiagramm ist eine Sammlung von Identitäten, die einen einzelnen Kunden repräsentieren. Weitere Informationen finden Sie im Handbuch unter [Verwenden des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md). |
 | Echtzeit-Kundenprofil | Das Echtzeit-Kundenprofil ist ein Dienst in Adobe Experience Platform, der Folgendes ermöglicht: <ul><li>Führt Profilfragmente zusammen, um ein Profil zu erstellen, das auf einem Identitätsdiagramm basiert.</li><li>Segmente von Profilen, damit sie zur Aktivierung an das Ziel gesendet werden können.</li></ul> |
-| Profil | Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson. Ein Profil besteht aus zwei Elementen: <ul><li>Attribute: Attribute liefern Informationen wie Name, Alter oder Geschlecht.</li><li>Verhalten: Verhalten liefert Informationen zu den Aktivitäten eines bestimmten Profils. Beispielsweise kann ein Profilverhalten erkennen, ob ein bestimmtes Profil &quot;nach Sandalen suchen&quot;oder &quot;T-Shirts bestellen&quot;war.</li></ul> |
+| Profil | Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson. Ein Profil besteht aus vier Elementen: <ul><li>Attribute: Attribute liefern Informationen wie Name, Alter oder Geschlecht.</li><li>Verhalten: Verhalten liefert Informationen zu den Aktivitäten eines bestimmten Profils. Beispielsweise kann ein Profilverhalten erkennen, ob ein bestimmtes Profil &quot;nach Sandalen suchen&quot;oder &quot;T-Shirts bestellen&quot;war.</li><li>Identitäten: Bei einem zusammengeführten Profil werden hierdurch Informationen zu allen Identitäten bereitgestellt, die mit der Person verknüpft sind. Identitäten können in drei Kategorien unterteilt werden: Person (CRMID, E-Mail, Telefon), Gerät (IDFA, GAID) und Cookie (ECID, AAID).</li><li>Zielgruppenmitgliedschaften: Die Gruppen, zu denen das Profil gehört (treue Benutzer, in Kalifornien lebende Benutzer usw.)</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,14 +67,10 @@ Betrachten Sie die folgende Customer Journey:
 
 Identity Service bietet die folgenden Vorgänge, um seinen Auftrag zu erfüllen:
 
-Mit Identity Service können Sie die folgenden Vorgänge durchführen:
-
 * Erstellen Sie benutzerdefinierte Namespaces, die den Anforderungen Ihres Unternehmens entsprechen.
 * Identitätsdiagramme erstellen, aktualisieren und anzeigen.
 * Identitäten basierend auf Datensätzen löschen.
 * Identitäten löschen, um die Einhaltung von Vorschriften sicherzustellen.
-
->[!BEGINSHADEBOX]
 
 ## Verknüpfen von Identitäten mit Identity Service
 
@@ -97,8 +93,6 @@ Siehe folgendes Beispiel:
 
 In Anbetracht der obigen Szenarien erstellt Identity Service eine Verknüpfung zwischen `CRM_ID:ABC, ECID:123`sowie `{CRM_ID:ABC, ECID:456}`. Dies führt zu einem Identitätsdiagramm, in dem Sie drei Identitäten &quot;besitzen&quot;: eine für die Personen-ID (CRM ID) und zwei für Cookie-IDs (ECIDs).
 
->[!ENDSHADEBOX]
-
 ## Identitätsdiagramme
 
 Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identity-Namespaces, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Tutorial lesen unter [Verwenden des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md) für weitere Informationen.
@@ -111,9 +105,11 @@ Das folgende Video soll Ihnen Identitäten und Identitätsdiagramme näherbringe
 
 Identity Service spielt bei der Experience Platform eine wichtige Rolle. Zu diesen wichtigen Integrationen gehören die folgenden:
 
-* [Echtzeit-Kundenprofil](../profile/home.md): Bevor Attribute und Ereignisse für ein bestimmtes Profil zusammengeführt werden, kann das Echtzeit-Kundenprofil auf das Identitätsdiagramm verweisen.
 * [Schemas](../xdm/home.md): Innerhalb eines bestimmten Schemas ermöglichen die Erstellung von Identitätsdiagrammen die Schemafelder, die als Identität markiert sind.
 * [Datensätze](../catalog/datasets/overview.md): Wenn ein Datensatz für die Aufnahme in das Echtzeit-Kundenprofil aktiviert ist, werden Identitätsdiagramme aus dem Datensatz generiert, da der Datensatz mindestens zwei als Identität markierte Felder aufweist.
+* [Web SDK](../edge/home.md): Web SDK sendet Erlebnisereignisse an Adobe Experience Platform und Identity Service generiert ein Diagramm, wenn im Ereignis zwei oder mehr Identitäten vorhanden sind.
+* [Echtzeit-Kundenprofil](../profile/home.md): Bevor Attribute und Ereignisse für ein bestimmtes Profil zusammengeführt werden, kann das Echtzeit-Kundenprofil auf das Identitätsdiagramm verweisen.
 * [Ziele](../destinations/home.md): Ziele können Profilinformationen basierend auf einem Identitäts-Namespace an andere Systeme senden, z. B. Hash-E-Mails.
 * [Segmentübereinstimmung](../segmentation/ui/segment-match/overview.md): Die Segmentübereinstimmung stimmt mit zwei Profilen in zwei verschiedenen Sandboxes überein, die denselben Identitäts-Namespace und denselben Identitätswert aufweisen.
 * [Privacy Service](../privacy-service/home.md): Wenn die Löschanfrage Folgendes enthält: `identity`festgelegt ist, kann die angegebene Kombination aus Namespace und Identitätswert mithilfe der Datenschutzanfrage-Verarbeitungsfunktion in Privacy Service aus dem Identity Service gelöscht werden.
+
