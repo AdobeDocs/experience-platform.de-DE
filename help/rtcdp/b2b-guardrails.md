@@ -6,10 +6,10 @@ description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybr
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 59%
+source-wordcount: '1675'
+ht-degree: 58%
 
 ---
 
@@ -66,6 +66,7 @@ Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von
 | Keine verschachtelten Legacy-Beziehungen | 0 | Weich | Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile]-Schemas erstellen. Die Möglichkeit, Beziehungen zu erstellen, wird für keine Schemas empfohlen, die nicht Teil des einheitlichen [!DNL Profile]-Schemas sind. |
 | Nur B2B-Objekte können Teil von Viele-zu-eins-Beziehungen sein | 0 | Hart | Das System unterstützt nur Viele-zu-Eins-Beziehung zwischen B2B-Objekten. Weiterführende Informationen zu Viele-zu-Eins-Beziehungen finden Sie im Tutorial zum [Definieren von B2B-Schemabeziehungen](../xdm/tutorials/relationship-b2b.md). |
 | Maximale Tiefe verschachtelter Beziehungen zwischen B2B-Objekten | 3 | Hart | Die maximale Tiefe verschachtelter Beziehungen zwischen B2B-Objekten beträgt 3. Das bedeutet, dass Sie in einem hochverschachtelten Schema keine Beziehung zwischen B2B-Objekten haben sollten, die mehr als drei Ebenen tief verschachtelt sind. |
+| Einzelnes Schema für jede Dimensionentität | 1 | Hard | Jede Dimensionentität muss über ein einzelnes Schema verfügen. Der Versuch, aus mehr als einem Schema erstellte Dimensionselemente zu verwenden, kann sich auf die Segmentierungsergebnisse auswirken. Es wird erwartet, dass verschiedene Dimensionentitäten über separate Schemas verfügen. |
 
 ## Datengrößenbeschränkungen
 
@@ -119,7 +120,7 @@ Dieser Abschnitt enthält zusätzliche Details zu den Limits in diesem Dokument.
 
 ### Entitätstypen
 
-Das [!DNL Profile]-Datenspeichermodell besteht aus zwei Kernentitätstypen: [primäre Entitäten](#primary-entity) und [Dimensionselemente](#dimension-entity).
+Die [!DNL Profile] Store-Datenmodell besteht aus zwei Kernentitätstypen: [primäre Entitäten](#primary-entity) und [Dimensionselemente](#dimension-entity).
 
 #### Primäre Entität
 
@@ -131,7 +132,7 @@ Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe v
 
 #### Entität der Dimension
 
-Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionselementen, um Segmente auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md) bezeichnet.
+Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionselementen, um Segmente auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md).
 
 Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Nicht-[!DNL XDM Individual Profile] Schemas werden als &quot;Dimensionselemente&quot;(auch als &quot;Lookup-Entitäten&quot;bezeichnet) bezeichnet und enthalten keine Zeitreihendaten. Schemas, die Dimensionentitäten darstellen, werden mithilfe von [Schemabeziehungen](../xdm/tutorials/relationship-ui.md).
 
