@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ec47f07f20e0f4ccda4c791882361bdc7a77aa98
+source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
 workflow-type: tm+mt
 source-wordcount: '2434'
 ht-degree: 60%
@@ -36,7 +36,7 @@ Die folgenden Experience Platform-Services sind an der Modellierung von Echtzeit
 In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 | Schutztyp | Beschreibung |
-|----------|---------|
+| -------------- | ----------- |
 | **Leistungsgarantie (weiche Begrenzung)** | Leistungsgarantien sind Nutzungsbeschränkungen, die sich auf das Scoping Ihrer Anwendungsfälle beziehen. Wenn Sie die Leistungsgarantien überschreiten, kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die eine Leistungsgarantie konsequent überschreiten, können zusätzliche Kapazität lizenzieren, um Leistungsbeeinträchtigungen zu vermeiden. |
 | **Systemerzwungene Limits (Hard Limit)** | Systemerzwungene Limits werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und API Sie davon abhält oder einen Fehler zurückgibt. |
 
@@ -55,7 +55,7 @@ Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von
 ### Leitplanken für primäre Entitäten
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | XDM Individual Profile-Klassendatensätze | 20 | Leistungsgarantie | Es werden maximal 20 Datensätze empfohlen, die die XDM Individual Profile-Klasse nutzen. |
 | XDM ExperienceEvent-Klassendatensätze | 20 | Leistungsgarantie | Es werden maximal 20 Datensätze empfohlen, die die XDM ExperienceEvent-Klasse nutzen. |
 | Für Profil aktivierte Adobe Analytics Report Suite-Datensätze | 1 | Leistungsgarantie | Es sollte maximal ein (1) Analytics Report Suite-Datensatz für Profil aktiviert werden. Der Versuch, mehrere Analytics Report Suite-Datensätze für Profil zu aktivieren, kann unbeabsichtigte Auswirkungen auf die Datenqualität haben. Weitere Informationen finden Sie im Abschnitt zu [Adobe Analytics-Datensätzen](#aa-datasets) im Anhang. |
@@ -70,7 +70,7 @@ Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von
 ### Leitplanken für Dimensionsentitäten
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Keine Zeitreihendaten zulässig für Nicht-[!DNL XDM Individual Profile]-Entitäten | 0 | Systemerzwungene Limits | **Zeitreihendaten sind für Nicht-[!DNL XDM Individual Profile]-Entitäten im Profil-Service nicht zulässig.** Wenn ein Zeitreihen-Datensatz mit einer Nicht-[!DNL XDM Individual Profile]-ID verknüpft ist, sollte der Datensatz nicht für [!DNL Profile] aktiviert sein. |
 | Keine verschachtelten Beziehungen | 0 | Leistungsgarantie | Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile]-Schemas erstellen. Die Möglichkeit, Beziehungen zu erstellen, wird für keine Schemas empfohlen, die nicht Teil des einheitlichen [!DNL Profile]-Schemas sind. |
 | JSON-Tiefe für primäres ID-Feld | 4 | Leistungsgarantie | Die empfohlene maximale JSON-Tiefe für das primäre ID-Feld ist 4. Das bedeutet, dass Sie in einem stark verschachtelten Schema kein Feld als primäre ID auswählen sollten, wenn es mehr als vier Ebenen tief verschachtelt ist. Ein Feld, das sich auf der vierten verschachtelten Ebene befindet, kann als primäre ID verwendet werden. |
@@ -88,7 +88,7 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 ### Leitplanken für primäre Entitäten
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Maximale ExperienceEvent-Größe | 10 KB | Systemerzwungene Limits | **Die maximale Größe eines Ereignisses ist 10 KB.** Die Aufnahme wird fortgesetzt, jedoch werden alle Ereignisse, die größer als 10 KB sind, entfernt. |
 | Maximale Größe von Profildatensätzen | 100 KB | Systemerzwungene Limits | **Die maximale Größe eines einzelnen Profildatensatzes ist 100 MB.** Die Aufnahme wird fortgesetzt, jedoch werden Profildatensätze, die größer als 100 KB sind, entfernt. |
 | Maximale Größe von Profilfragmenten | 50 MB | Systemerzwungene Limits | **Die maximale Größe eines einzelnen Profldatensatzes ist 50 MB.** Die Segmentierung, der Export und die Suche können bei [Profilfragmenten](#profile-fragments), die größer als 50 MB sind, fehlschlagen. |
@@ -101,7 +101,7 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 ### Leitplanken für Dimensionsentitäten
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Gesamtgröße für alle dimensionalen Entitäten | 5 GB | Leistungsgarantie | Die empfohlene Gesamtgröße für alle dimensionalen Entitäten beträgt 5 GB. Die Aufnahme großer Dimensionsentitäten kann die Systemleistung beeinträchtigen. Es wird beispielsweise nicht empfohlen, einen 10 GB großen Produktkatalog als Dimensionsentität zu laden. |
 | Datensätze pro Dimensionsentitätsschema | 5 | Leistungsgarantie | Es wird empfohlen, maximal 5 Datensätze mit jedem Dimensionsschema zu verknüpfen. Wenn Sie beispielsweise ein Schema für „Produkte“ erstellen und fünf beitragende Datensätze hinzufügen, sollten Sie keinen sechsten Datensatz erstellen, der mit dem Produktschema verknüpft ist. |
 | Dimensionsentitäts-Batches, die pro Tag aufgenommen werden | 4 pro Entität | Leistungsgarantie | Die empfohlene maximale Anzahl von Dimensionsentitäts-Batches, die pro Tag aufgenommen werden, beträgt 4 pro Entität. Sie können beispielsweise Aktualisierungen an einem Produktkatalog bis zu 4-mal täglich aufnehmen. Die Aufnahme zusätzlicher Dimensionsentitäts-Batches für dieselbe Entität kann sich auf die Systemleistung auswirken. |
@@ -113,7 +113,7 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Art der Zielgruppen, die eine Organisation innerhalb von Experience Platform erstellen kann, sowie auf die Zuordnung und Aktivierung von Zielgruppen zu Zielen.
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Dies umfasst Batch-, Streaming- und Edge-Zielgruppen. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) durch den Segment-Builder. |
 | Edge-Zielgruppen pro Sandbox | 150 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 150 Edge-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Zielgruppen enthalten sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
 | Edge-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungsgarantie | Die Edge-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde, die in das Adobe Experience Platform Edge Network eintreten. Die Edge-Segmentierung kann bis zu 350 Millisekunden dauern, bis ein eingehendes Ereignis verarbeitet wird, nachdem es in das Adobe Experience Platform Edge Network gelangt ist. Mehr dazu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |

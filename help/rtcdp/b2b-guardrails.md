@@ -6,10 +6,10 @@ description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybr
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
+source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
 workflow-type: tm+mt
-source-wordcount: '1675'
-ht-degree: 58%
+source-wordcount: '1794'
+ht-degree: 49%
 
 ---
 
@@ -31,9 +31,10 @@ Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen,
 
 In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
-* **Weiche Grenze:** Es ist möglich, über eine weiche Grenze hinauszugehen, jedoch bieten weiche Grenzen eine empfohlene Richtlinie für die Systemleistung.
-
-* **Harte Grenze:** Eine harte Grenze bietet ein absolutes Maximum.
+| Schutztyp | Beschreibung |
+| -------------- | ----------- |
+| **Leistungsgarantie (weiche Begrenzung)** | Leistungsgarantien sind Nutzungsbeschränkungen, die sich auf das Scoping Ihrer Anwendungsfälle beziehen. Wenn Sie die Leistungsgarantien überschreiten, kann es zu Leistungseinbußen und Latenzzeiten kommen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich. Kunden, die eine Leistungsgarantie konsequent überschreiten, können zusätzliche Kapazität lizenzieren, um Leistungsbeeinträchtigungen zu vermeiden. |
+| **Systemerzwungene Limits (Hard Limit)** | Systemerzwungene Limits werden von der Real-Time CDP-Benutzeroberfläche oder -API erzwungen. Dies sind Beschränkungen, die Sie nicht überschreiten können, da die Benutzeroberfläche und API Sie davon abhält oder einen Fehler zurückgibt. |
 
 >[!INFO]
 >
@@ -50,10 +51,11 @@ Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von
 >Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Datendokumentation zu Echtzeit-Kundenprofilen](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
-| Real-Time CDP B2B Edition Standard-XDM-Klassendatensätze | 60 | Weich | Es wird empfohlen, maximal 60 Datensätze zu verwenden, die die standardmäßigen Experience-Datenmodell (XDM)-Klassen von Real-Time CDP B2B Edition nutzen. Eine vollständige Liste der Standard-XDM-Klassen für B2B-Anwendungsfälle finden Sie im Abschnitt [Schemata in der Dokumentation zu Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Hinweis: Aufgrund der Beschaffenheit des denormalisierten Hybrid-Datenmodells von Experience Platform überschreiten die meisten Kunden diese Grenze nicht. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie Fragen zur Datenmodellierung haben oder mehr über benutzerdefinierte Limits erfahren möchten.* |
-| Alte Beziehungen mit mehreren Entitäten | 20 | Weich | Es werden maximal 20 Beziehungen mit mehreren Entitäten empfohlen, die in primären Entitäten oder Dimensionsentitäten definiert sind. Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
-| Viele-zu-eins-Beziehungen pro XDM-Klasse | 2 | Weich | Es wird empfohlen, pro XDM-Klasse maximal zwei Viele-zu-eins-Beziehungen zu definieren. Zusätzliche Beziehungen sollten erst dann hergestellt werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. Anweisungen zum Erstellen einer Beziehung zwischen zwei Schemas finden Sie im Tutorial zum [Erstellen von B2B-Schemabeziehungen](../xdm/tutorials/relationship-b2b.md). |
+| --------- | ----- | ---------- | ----------- |
+| Real-Time CDP B2B Edition Standard-XDM-Klassendatensätze | 60 | Leistungsgarantie | Es wird empfohlen, maximal 60 Datensätze zu verwenden, die die standardmäßigen Experience-Datenmodell (XDM)-Klassen von Real-Time CDP B2B Edition nutzen. Eine vollständige Liste der Standard-XDM-Klassen für B2B-Anwendungsfälle finden Sie im Abschnitt [Schemata in der Dokumentation zu Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Hinweis: Aufgrund der Beschaffenheit des denormalisierten Hybrid-Datenmodells von Experience Platform überschreiten die meisten Kunden diese Grenze nicht. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie Fragen zur Datenmodellierung haben oder mehr über benutzerdefinierte Limits erfahren möchten.* |
+| Identitätsanzahl für einzelne Konten in einem Identitätsdiagramm | 50 | Leistungsgarantie | Die maximale Anzahl von Identitäten in einem Identitätsdiagramm für ein einzelnes Konto beträgt 50. Alle Profile mit mehr als 50 Identitäten werden von der Segmentierung, dem Export und der Suche ausgeschlossen. |
+| Alte Beziehungen mit mehreren Entitäten | 20 | Leistungsgarantie | Es werden maximal 20 Beziehungen mit mehreren Entitäten empfohlen, die in primären Entitäten oder Dimensionsentitäten definiert sind. Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
+| Viele-zu-eins-Beziehungen pro XDM-Klasse | 2 | Leistungsgarantie | Es wird empfohlen, pro XDM-Klasse maximal zwei Viele-zu-eins-Beziehungen zu definieren. Zusätzliche Beziehungen sollten erst dann hergestellt werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. Anweisungen zum Erstellen einer Beziehung zwischen zwei Schemas finden Sie im Tutorial zum [Erstellen von B2B-Schemabeziehungen](../xdm/tutorials/relationship-b2b.md). |
 
 ### Leitplanken für Dimensionsentitäten
 
@@ -62,11 +64,11 @@ Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von
 >Die in diesem Abschnitt beschriebenen Datenmodellbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Datendokumentation zu Echtzeit-Kundenprofilen](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
-| Keine verschachtelten Legacy-Beziehungen | 0 | Weich | Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile]-Schemas erstellen. Die Möglichkeit, Beziehungen zu erstellen, wird für keine Schemas empfohlen, die nicht Teil des einheitlichen [!DNL Profile]-Schemas sind. |
-| Nur B2B-Objekte können Teil von Viele-zu-eins-Beziehungen sein | 0 | Hart | Das System unterstützt nur Viele-zu-Eins-Beziehung zwischen B2B-Objekten. Weiterführende Informationen zu Viele-zu-Eins-Beziehungen finden Sie im Tutorial zum [Definieren von B2B-Schemabeziehungen](../xdm/tutorials/relationship-b2b.md). |
-| Maximale Tiefe verschachtelter Beziehungen zwischen B2B-Objekten | 3 | Hart | Die maximale Tiefe verschachtelter Beziehungen zwischen B2B-Objekten beträgt 3. Das bedeutet, dass Sie in einem hochverschachtelten Schema keine Beziehung zwischen B2B-Objekten haben sollten, die mehr als drei Ebenen tief verschachtelt sind. |
-| Einzelnes Schema für jede Dimensionentität | 1 | Hard | Jede Dimensionentität muss über ein einzelnes Schema verfügen. Der Versuch, aus mehr als einem Schema erstellte Dimensionselemente zu verwenden, kann sich auf die Segmentierungsergebnisse auswirken. Es wird erwartet, dass verschiedene Dimensionentitäten über separate Schemas verfügen. |
+| --------- | ----- | ---------- | ----------- |
+| Keine verschachtelten Legacy-Beziehungen | 0 | Leistungsgarantie | Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile]-Schemas erstellen. Erstellen von Beziehungen **not** empfohlen für alle Schemas, die nicht Teil der [!DNL Profile] Vereinigungsschema. |
+| Nur B2B-Objekte können Teil von Viele-zu-eins-Beziehungen sein | 0 | Systemerzwungene Limits | Das System unterstützt nur Viele-zu-Eins-Beziehung zwischen B2B-Objekten. Weiterführende Informationen zu Viele-zu-Eins-Beziehungen finden Sie im Tutorial zum [Definieren von B2B-Schemabeziehungen](../xdm/tutorials/relationship-b2b.md). |
+| Maximale Tiefe verschachtelter Beziehungen zwischen B2B-Objekten | 3 | Systemerzwungene Limits | Die maximale Tiefe verschachtelter Beziehungen zwischen B2B-Objekten beträgt 3. Das bedeutet, dass Sie in einem hochverschachtelten Schema keine Beziehung zwischen B2B-Objekten haben sollten, die mehr als drei Ebenen tief verschachtelt sind. |
+| Einzelnes Schema für jede Dimensionentität | 1 | Systemerzwungene Limits | Jede Dimensionentität muss über ein einzelnes Schema verfügen. Der Versuch, aus mehr als einem Schema erstellte Dimensionselemente zu verwenden, kann sich auf die Segmentierungsergebnisse auswirken. Es wird erwartet, dass verschiedene Dimensionentitäten über separate Schemas verfügen. |
 
 ## Datengrößenbeschränkungen
 
@@ -83,8 +85,8 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 >Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Datendokumentation zu Echtzeit-Kundenprofilen](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
-| Batches, die pro XDM-Klasse pro Tag aufgenommen werden | 45 | Weich | Die Gesamtanzahl der täglich pro XDM-Klasse aufgenommenen Batches sollte 45 nicht überschreiten. Die Aufnahme zusätzlicher Batches kann die optimale Leistungsfähigkeit verringern. |
+| --------- | ----- | ---------- | ----------- |
+| Batches, die pro XDM-Klasse pro Tag aufgenommen werden | 45 | Leistungsgarantie | Die Gesamtanzahl der täglich pro XDM-Klasse aufgenommenen Batches sollte 45 nicht überschreiten. Die Aufnahme zusätzlicher Batches kann die optimale Leistungsfähigkeit verringern. |
 
 ### Leitplanken für Dimensionsentitäten
 
@@ -93,10 +95,10 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 >Die in diesem Abschnitt beschriebenen Datengrößenbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Datendokumentation zu Echtzeit-Kundenprofilen](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
-| Gesamtgröße für alle dimensionalen Entitäten | 5 GB | Weich | Die empfohlene Gesamtgröße für alle dimensionalen Entitäten beträgt 5 GB. Die Aufnahme großer Dimensionsentitäten kann die Systemleistung beeinträchtigen. Es wird beispielsweise nicht empfohlen, einen 10 GB großen Produktkatalog als Dimensionsentität zu laden. |
-| Datensätze pro Dimensionsentitätsschema | 5 | Weich | Es wird empfohlen, maximal 5 Datensätze mit jedem Dimensionsschema zu verknüpfen. Wenn Sie beispielsweise ein Schema für „Produkte“ erstellen und fünf beitragende Datensätze hinzufügen, sollten Sie keinen sechsten Datensatz erstellen, der mit dem Produktschema verknüpft ist. |
-| Dimensionsentitäts-Batches, die pro Tag aufgenommen werden | 4 pro Entität | Weich | Die empfohlene maximale Anzahl von Dimensionsentitäts-Batches, die pro Tag aufgenommen werden, beträgt 4 pro Entität. Sie können beispielsweise Aktualisierungen an einem Produktkatalog bis zu 4-mal täglich aufnehmen. Die Aufnahme zusätzlicher Dimensionsentitäts-Batches für dieselbe Entität kann sich auf die Systemleistung auswirken. |
+| --------- | ----- | ---------- | ----------- |
+| Gesamtgröße für alle dimensionalen Entitäten | 5 GB | Leistungsgarantie | Die empfohlene Gesamtgröße für alle dimensionalen Entitäten beträgt 5 GB. Die Aufnahme großer Dimensionsentitäten kann die Systemleistung beeinträchtigen. Es wird beispielsweise nicht empfohlen, einen 10 GB großen Produktkatalog als Dimensionsentität zu laden. |
+| Datensätze pro Dimensionsentitätsschema | 5 | Leistungsgarantie | Es wird empfohlen, maximal 5 Datensätze mit jedem Dimensionsschema zu verknüpfen. Wenn Sie beispielsweise ein Schema für „Produkte“ erstellen und fünf beitragende Datensätze hinzufügen, sollten Sie keinen sechsten Datensatz erstellen, der mit dem Produktschema verknüpft ist. |
+| Dimensionsentitäts-Batches, die pro Tag aufgenommen werden | 4 pro Entität | Leistungsgarantie | Die empfohlene maximale Anzahl von Dimensionsentitäts-Batches, die pro Tag aufgenommen werden, beträgt 4 pro Entität. Sie können beispielsweise Aktualisierungen an einem Produktkatalog bis zu 4-mal täglich aufnehmen. Die Aufnahme zusätzlicher Dimensionsentitäts-Batches für dieselbe Entität kann sich auf die Systemleistung auswirken. |
 
 ## Leitplanken für die Segmentierung
 
@@ -107,8 +109,8 @@ Die in diesem Abschnitt beschriebenen Leitplanken beziehen sich auf die Anzahl u
 >Die in diesem Abschnitt beschriebenen Segmentierungsbeschränkungen stellen die von Real-time Customer Data Platform B2B Edition aktivierten Änderungen dar. Für eine vollständige Liste der Standardbeschränkungen für Real-Time CDP B2B Edition kombinieren Sie diese Beschränkungen mit den allgemeinen Adobe Experience Platform-Beschränkungen, die im Abschnitt [Limits für die Datendokumentation zu Echtzeit-Kundenprofilen](../profile/guardrails.md).
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
-| --- | --- | --- | --- |
-| Segmente pro B2B-Sandbox | 400 | Weich | Eine Organisation kann insgesamt über mehr als 400 Segmente verfügen, sofern in jeder einzelnen B2B-Sandbox weniger als 400 Segmente vorhanden sind. Der Versuch, zusätzliche Segmente zu erstellen, kann sich auf die Systemleistung auswirken. |
+| --------- | ----- | ---------- | ----------- |
+| Segmentdefinitionen pro B2B-Sandbox | 400 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 400 Segmentdefinitionen verfügen, sofern in jeder einzelnen B2B-Sandbox weniger als 400 Segmentdefinitionen vorhanden sind. Der Versuch, zusätzliche Segmentdefinitionen zu erstellen, kann sich auf die Systemleistung auswirken. |
 
 ## Nächste Schritte
 
