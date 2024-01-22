@@ -2,19 +2,14 @@
 title: Pinterest Customer List-Verbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
+source-git-commit: 02110e4b4156774c2961803f78ae1c3fc9d6240a
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 45%
+source-wordcount: '719'
+ht-degree: 48%
 
 ---
 
 # [!DNL Pinterest Customer List]-Verbindung
-
->[!IMPORTANT]
->
->* Ab dem 16. November 2023 werden im Zielkatalog zwei Pinterest-Karten nebeneinander angezeigt. Dies liegt an einem Upgrade der Pinterest Advertiser-API, die zum Exportieren von Daten in Pinterest verwendet wird. Der bestehende Pinterest-Ziel-Connector wurde in **[!UICONTROL (Veraltet) Pinterest]** und eine neue Karte **[!UICONTROL (Neu) Pinterest]** ist jetzt für Sie verfügbar.
->* Verwenden Sie die **[!UICONTROL (Neu) Pinterest]** Verbindung im Katalog für alle Kampagnen mit Pinterest. Wenn Sie einen aktiven Datenfluss zum **[!UICONTROL (Veraltet) Pinterest]** Ziel, lesen Sie die [Upgrade-Dokumentation](/help/destinations/catalog/advertising/pinterest-upgrade.md) um Ihre Aktionselemente zu verstehen, um sicherzustellen, dass Ihre Kampagnen nicht gestört werden.
 
 ## Übersicht {#overview}
 
@@ -56,7 +51,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Pinterest Customer List]-Ziel verwenden sollten, finden Sie hier einige Beispielanwendungsfälle, die Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel bewältigen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Pinterest Customer List] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Anwendungsfall 1
 
