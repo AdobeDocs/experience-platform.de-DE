@@ -4,10 +4,10 @@ title: Identitäten in Real-time Customer Data Platform
 description: Mit Adobe Experience Platform Identity Service können Sie sich einen genaueren Überblick über Kundinnen und Kunden und ihr Verhalten verschaffen, indem Sie Identitäten über Geräte und Systeme hinweg zusammenführen.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 100%
+source-wordcount: '422'
+ht-degree: 81%
 
 ---
 
@@ -23,9 +23,9 @@ Identity-Namespaces sind eine [!DNL Identity Service]-Komponente und dienen als 
 
 ## Identitätsdiagramme
 
-Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäts-Namespaces, die visuell veranschaulicht, wie Ihr Kunde über unterschiedliche Kanäle hinweg mit Ihrer Marke interagiert. Alle Diagramme zur Kundenidentität werden von [!DNL Identity Service] als Reaktion auf Kundenaktivität gemeinsam nahezu in Echtzeit verwaltet und aktualisiert.
+Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanäle hinweg. Alle Diagramme zur Kundenidentität werden von Identity Service als Reaktion auf Kundenaktivitäten gemeinsam verwaltet und aktualisiert.
 
-[!DNL Identity Service] verwaltet ein Identitätsdiagramm, das nur für Ihr Unternehmen sichtbar ist und auf Grundlage Ihrer Daten erstellt wird (als privates Diagramm bezeichnet). [!DNL Identity Service] erweitert das private Diagramm, wenn ein erfasster Datensatz mehr als eine Identität enthält, indem eine Beziehung zwischen den gefundenen Identitäten hinzugefügt wird.
+[!DNL Identity Service] verwaltet ein Identitätsdiagramm, das nur für Ihre Organisation sichtbar und basierend auf Ihren Daten erstellt ist. [!DNL Identity Service] erweitert Ihr Diagramm, wenn ein erfasster Datensatz mehr als eine Identität enthält, und fügt eine Beziehung zwischen den gefundenen Identitäten hinzu.
 
 ## Nächste Schritte
 
