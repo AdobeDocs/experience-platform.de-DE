@@ -3,10 +3,10 @@ keywords: crm;CRM;crm-Ziele;Salesforce crm;Salesforce crm-Ziel
 title: Salesforce-CRM-Verbindung
 description: Mit dem Salesforce CRM-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce CRM für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2818'
-ht-degree: 21%
+source-wordcount: '2821'
+ht-degree: 20%
 
 ---
 
@@ -144,7 +144,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -153,7 +153,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Sales
 ### Beim Ziel authentifizieren {#authenticate}
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Siehe Abschnitt [Gather [!DNL Salesforce CRM] Anmeldeinformationen](#gather-credentials) für Hinweise.
-| Berechtigung | Beschreibung | | — | — | | **[!UICONTROL Benutzername]** | Ihr [!DNL Salesforce] Benutzername des Kontos. | | **[!UICONTROL Passwort]** | Eine verkettete Zeichenfolge aus Ihrem [!DNL Salesforce] Passwort des Kontos angehängt mit Ihrem [!DNL Salesforce] Sicherheitstoken.<br>Der verkettete Wert hat die Form `{PASSWORD}{TOKEN}`.<br> Beachten Sie, dass Sie keine geschweiften Klammern oder Leerzeichen verwenden.<br>Beispiel: Wenn [!DNL Salesforce] Kennwort ist `MyPa$$w0rd123` und [!DNL Salesforce] Sicherheits-Token `TOKEN12345....0000`, der verkettete Wert, den Sie im **[!UICONTROL Passwort]** Feld ist `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Benutzerdefinierte Domäne]** | Ihr [!DNL Salesforce] Domänen-Präfix. <br>Beispiel: Ihre Domäne *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, müssen Sie `d5i000000isb4eak-dev-ed` als Wert. | | **[!UICONTROL Client-ID]** | Ihr [!DNL Salesforce] vernetzte App `Consumer Key`. | | **[!UICONTROL Client Secret]** | Ihr [!DNL Salesforce] vernetzte App `Consumer Secret`. |
+| Berechtigung | Beschreibung | | — | — | | **[!UICONTROL Benutzername]** | Ihre [!DNL Salesforce] Benutzername des Kontos. | | **[!UICONTROL Passwort]** | Eine verkettete Zeichenfolge, die aus [!DNL Salesforce] Passwort des Kontos angehängt mit Ihrem [!DNL Salesforce] Sicherheitstoken.<br>Der verkettete Wert hat die Form `{PASSWORD}{TOKEN}`.<br> Beachten Sie, dass Sie keine geschweiften Klammern oder Leerzeichen verwenden.<br>Beispiel: Wenn [!DNL Salesforce] Kennwort ist `MyPa$$w0rd123` und [!DNL Salesforce] Sicherheits-Token `TOKEN12345....0000`, der verkettete Wert, den Sie im **[!UICONTROL Passwort]** Feld ist `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Benutzerdefinierte Domäne]** | Ihre [!DNL Salesforce] Domänen-Präfix. <br>Beispiel: Ihre Domäne *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, müssen Sie `d5i000000isb4eak-dev-ed` als Wert. | | **[!UICONTROL Client-ID]** | Ihre [!DNL Salesforce] vernetzte App `Consumer Key`. | | **[!UICONTROL Client Secret]** | Ihre [!DNL Salesforce] vernetzte App `Consumer Secret`. |
 
 ![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -180,7 +180,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
@@ -205,8 +205,8 @@ Um Ihre XDM-Felder den [!DNL (API) Salesforce CRM]-Zielfeldern korrekt zuzuordne
 
    * Wenn Sie mit *Kontakte* in Ihrem Segment finden Sie in der Objektreferenz in Salesforce für [Kontakt](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) , um Zuordnungen für die zu aktualisierenden Felder zu definieren.
    * Sie können Pflichtfelder identifizieren, indem Sie nach dem Wort suchen *Erforderlich*, was in den Feldbeschreibungen im obigen Link erwähnt wird.
-   * Fügen Sie je nach den Feldern, die Sie exportieren oder aktualisieren möchten, Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce CRM]: |Quellfeld|Zielfeld | Hinweise | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Nachname des Kontakts mit bis zu 80 Zeichen. |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| Vorname des Kontakts mit einer Länge von bis zu 40 Zeichen. | |`xdm: personalEmail.address`|`Attribute: Email`| Die E-Mail-Adresse des Kontakts. |
+   * Fügen Sie je nach den Feldern, die Sie exportieren oder aktualisieren möchten, Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce CRM]: |Quellfeld|Zielfeld| Hinweise | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Nachname des Kontakts mit bis zu 80 Zeichen. |\
+     |`xdm: person.name.firstName`|`Attribute: FirstName`| Vorname des Kontakts mit bis zu 40 Zeichen. | |`xdm: personalEmail.address`|`Attribute: Email`| Die E-Mail-Adresse des Kontakts. |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -215,7 +215,7 @@ Um Ihre XDM-Felder den [!DNL (API) Salesforce CRM]-Zielfeldern korrekt zuzuordne
 
    * Wenn Sie mit *Leads* in Ihrem Segment finden Sie in der Objektreferenz in Salesforce für [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) , um Zuordnungen für die zu aktualisierenden Felder zu definieren.
    * Sie können Pflichtfelder identifizieren, indem Sie nach dem Wort suchen *Erforderlich*, was in den Feldbeschreibungen im obigen Link erwähnt wird.
-   * Fügen Sie je nach den Feldern, die Sie exportieren oder aktualisieren möchten, Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce CRM]: |Quellfeld|Zielfeld | Hinweise | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Nachname des Leads mit bis zu 80 Zeichen. |\
+   * Fügen Sie je nach den Feldern, die Sie exportieren oder aktualisieren möchten, Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce CRM]: |Quellfeld|Zielfeld| Hinweise | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Nachname des Leads mit bis zu 80 Zeichen. |\
      |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. Die Führung ist dabei. | |`xdm: personalEmail.address`|`Attribute: Email`| Die E-Mail-Adresse des Leads. |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:

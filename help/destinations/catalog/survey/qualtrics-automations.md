@@ -4,10 +4,10 @@ title: Qualtrics Automation
 description: Synchronisieren Sie Erlebnisse und operative Kundendaten, um die Personalisierung skaliert zu entsperren. Verwenden Sie die Aggregation mehrerer Quellen operativer Daten in Adobe Experience Platform als Input für Qualtrics Experience iD, um Ihre Kunden besser zu verstehen und zielgerichtete Kontakte zu ermöglichen, um die Lücke im Hinblick auf das Verständnis von Intent-, Emotions- und Erlebnistreibern zu schließen.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1149'
-ht-degree: 32%
+source-wordcount: '1139'
+ht-degree: 29%
 
 ---
 
@@ -81,7 +81,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -111,7 +111,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffssteuerung – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -123,7 +123,7 @@ Dieses Ziel verfügt über ein geöffnetes Schema, sodass Sie alle Eigenschaften
 
 Um Ihrer Zuordnung ein Attribut hinzuzufügen, wählen Sie einfach **benutzerdefinierte Attribute** beim Hinzufügen einer neuen Zuordnung. Sie können einen beliebigen Namen für Ihr Attribut eingeben. Qualtrics fördert die *camelCase* Namenskonvention für Attributnamen (ein Beispiel finden Sie im folgenden Screenshot).
 
-![Benutzerdefiniertes Attribut](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
+![Benutzerspezifisches Attribut](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
 Im folgenden Screenshot finden Sie ein Beispiel für mögliche Attribut-Mappings.
 
@@ -140,7 +140,7 @@ Es ist erforderlich, einen Identitäts-Namespace für dieses Ziel auszuwählen. 
 
 Ein Beispiel finden Sie im folgenden Screenshot.
 
-![Identity-Namespace](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
+![Identitäts-Namespace](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 

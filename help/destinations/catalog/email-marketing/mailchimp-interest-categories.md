@@ -3,10 +3,10 @@ title: Mailchimp-Interessenkategorien
 description: Mailchimp (auch Intuit Mailchimp genannt) ist eine beliebte Marketing-Automatisierungsplattform und ein E-Mail-Marketing-Service, die von Unternehmen verwendet werden, um Kontakte (Kunden, Kunden oder andere interessierte Parteien) mithilfe von Mailinglisten und E-Mail-Marketing-Kampagnen zu verwalten und mit ihnen zu kommunizieren. Verwenden Sie diesen Connector, um Ihre Kontakte nach deren Interessen und Präferenzen zu sortieren.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 23%
+source-wordcount: '2299'
+ht-degree: 19%
 
 ---
 
@@ -78,7 +78,7 @@ Weitere Informationen finden Sie im Abschnitt [!DNL Mailchimp] [Grenzwerte](http
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Mailchimp] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL Mailchimp] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
@@ -101,7 +101,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die [Zugriffsberechtigung](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**. Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -130,7 +130,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 | Feld | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Name]** | Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können. |
+| **[!UICONTROL Name]** | Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden. |
 | **[!UICONTROL Beschreibung]** | Eine Beschreibung, die Ihnen bei der Identifizierung dieses Ziels in der Zukunft hilft. |
 | **[!UICONTROL Rechenzentrum]** | Ihre [!DNL Mailchimp] account `data center`. Siehe Abschnitt [Identifizieren [!DNL Mailchimp] Rechenzentrum](#identify-data-center) für Hinweise. |
 | **[!UICONTROL Zielgruppenname (Bitte wählen Sie zuerst Data Center aus)]** | Nachdem Sie die **[!UICONTROL Rechenzentrum]** enthalten, wird diese Dropdown-Liste automatisch mit den Zielgruppennamen aus Ihren [!DNL Mailchimp] -Konto. Wählen Sie die Zielgruppe aus, die mit Daten aus Platform aktualisiert werden soll. |
@@ -152,14 +152,14 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnungsüberlegungen und Beispiel {#mapping-considerations-example}
 
-So senden Sie Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an die [!DNL Mailchimp Interest Categories] Ziel, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodells (XDM) in Ihrem Platform-Konto und den jeweiligen Entsprechungen vom Ziel zu erstellen.
+So senden Sie Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an die [!DNL Mailchimp Interest Categories] Ziel, müssen Sie den Schritt zur Feldzuordnung durchlaufen. Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern Ihres Experience-Datenmodell (XDM) in Ihrem Platform-Konto und den entsprechenden Entsprechungen vom Ziel zu erstellen.
 
 So ordnen Sie Ihre XDM-Felder korrekt der [!DNL Mailchimp Interest Categories] Gehen Sie wie folgt vor:
 
@@ -167,7 +167,7 @@ So ordnen Sie Ihre XDM-Felder korrekt der [!DNL Mailchimp Interest Categories] G
 1. Im **[!UICONTROL Quellfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Attribute auswählen]** und wählen Sie das XDM-Attribut oder die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität.
 1. Im **[!UICONTROL Zielgruppenfeld auswählen]** Fenster, wählen Sie die **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität oder **[!UICONTROL Attribute auswählen]** und wählen Sie aus der Liste der Attribute aus, die aus der [!DNL Mailchimp] API. *Alle benutzerdefinierten Attribute, die Sie der ausgewählten [!DNL Mailchimp] Die Zielgruppe kann auch als Zielfelder ausgewählt werden.*
 
-   Die Zuordnungen, die zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Interest Categories] wie folgt aussehen: | Quellfeld | Zielfeld | Anmerkungen | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Obligatorisch: ja | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+   Die Zuordnungen, die zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Interest Categories] wie folgt aussehen: | Quellfeld | Zielfeld | Hinweise | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Obligatorisch: ja | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
    Zusätzlich `ADDRESS` ist ein spezielles Zielfeld, das als `merge field` in [!DNL Mailchimp] Zielgruppe. Die [[!DNL Mailchimp] Dokumentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) definiert die erforderlichen Schlüssel als `addr1`, `city`, `state`, und `zip`und die optionalen Schlüssel `addr2` und `country`. Die Werte für diese Felder müssen Zeichenfolgen sein. Wenn einer der `ADDRESS` Feldzuordnungen vorhanden sind, übergibt das Ziel die `ADDRESS` -Objekt [!DNL Mailchimp] API zur Aktualisierung. Alle `ADDRESS` Felder, die nicht zugeordnet sind, haben den Standardwert `NULL` mit Ausnahme des Landes, in dem der Standardwert `US`.
 
@@ -229,7 +229,7 @@ Siehe Abschnitt [[!DNL Mailchimp] Fehlerseite](https://mailchimp.com/developer/m
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere nützliche Informationen aus der [!DNL Mailchimp]Dokumentation finden Sie im Folgenden:
+Zusätzliche nützliche Informationen aus dem [!DNL Mailchimp] Die Dokumentation finden Sie unten:
 * [Erste Schritte mit [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Erste Schritte mit Zielgruppen](https://mailchimp.com/help/getting-started-audience/)
 * [Erstellen von Zielgruppen](https://mailchimp.com/help/create-audience/)

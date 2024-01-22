@@ -3,10 +3,10 @@ keywords: crm;CRM;CRM-Ziele;Outreach;CRM-Ziel erreichen
 title: Outreach-Verbindung
 description: Mit dem Ziel Outreach können Sie Ihre Kontodaten exportieren und für Ihre geschäftlichen Anforderungen in Outreach aktivieren.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1742'
-ht-degree: 44%
+source-wordcount: '1678'
+ht-degree: 43%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 44%
 
 Diese [!DNL Adobe Experience Platform] [Ziel](/help/destinations/home.md) nutzt die [Outreach Update Resource API](https://api.outreach.io/api/v2/docs#update-an-existing-resource), mit dem Sie Identitäten innerhalb einer Audience aktualisieren können, die potenziellen Kunden in [!DNL Outreach].
 
-[!DNL Outreach] verwendet OAuth 2 mit Autorisierungs-Grant als Authentifizierungsmechanismus für die Kommunikation mit der [!DNL Outreach] [!DNL Update Resource API]. Anweisungen zur Authentifizierung bei Ihrem [!DNL Outreach] -Instanz befindet sich weiter unten in [An Ziel authentifizieren](#authenticate) Abschnitt.
+[!DNL Outreach] verwendet OAuth 2 mit Autorisierungszuschuss als Authentifizierungsmechanismus für die Kommunikation mit dem [!DNL Outreach] [!DNL Update Resource API]. Anweisungen zur Authentifizierung bei Ihrem [!DNL Outreach] -Instanz befindet sich weiter unten in [An Ziel authentifizieren](#authenticate) Abschnitt.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -75,7 +75,7 @@ Siehe Abschnitt [[!DNL Outreach] Dokumentation](https://api.outreach.io/api/v2/d
 
 | Zielgruppenidentität | Beschreibung | Zu beachten |
 |---|---|---|
-| `OutreachId` | <ul><li>[!DNL Outreach] identifier. Dies ist ein numerischer Wert, der dem Prospektprofil entspricht.</li><li>Die ID muss mit der ID innerhalb der [!DNL Outreach] URL für den zu aktualisierenden Interessenten.</li><li>Siehe die [[!DNL Outreach] Dokumentation](https://api.outreach.io/api/v2/docs#update-an-existing-resource), um weitere Informationen zu erhalten.</li></ul> | Obligatorisch |
+| `OutreachId` | <ul><li>[!DNL Outreach] Kennung. Dies ist ein numerischer Wert, der dem Prospektprofil entspricht.</li><li>Die ID muss mit der ID innerhalb der [!DNL Outreach] URL für den zu aktualisierenden Interessenten.</li><li>Siehe die [[!DNL Outreach] Dokumentation](https://api.outreach.io/api/v2/docs#update-an-existing-resource), um weitere Informationen zu erhalten.</li></ul> | Obligatorisch |
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -96,7 +96,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Outreach]. Alternativ können Sie es unter der CRM-Kategorie finden.
+Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Outreach]. Alternativ können Sie sie unter der Kategorie CRM finden.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
@@ -135,7 +135,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die [Zugriffskontrollberechtigungen](/help/access-control/home.md#permissions) **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]**. Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 >* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
