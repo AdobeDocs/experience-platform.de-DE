@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service – Übersicht
 description: Erfahren Sie mehr über die Rolle von Query Service im Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
+source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 25%
@@ -29,7 +29,7 @@ Query Service interagiert und kann mit mehreren Experience Platform-Services ver
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lernen und künstliche Intelligenz, um Einblicke aus in Experience Platform gespeicherten Daten zu gewinnen. Datenwissenschaftler können [!DNL Data Science Workspace] , um Rezepte zu erstellen, die auf Datensatz- und Zeitreihendaten zu Kunden und deren Aktivitäten basieren. Diese Rezepte erleichtern Vorhersagen wie Kaufneigung und empfohlene Angebote, die der Kontakt schätzen und nutzen kann. Sie können SQL in [!DNL Data Science Workspace] durch Integration von Query Service in [!DNL JupyterLab] zur Untersuchung, Transformation und Analyse von Adobe Analytics-Daten. Lesen Sie die [[!DNL Data Science Workspace] Übersicht](../data-science-workspace/home.md) und [Jypiter Notebook-Verbindungshandbuch](./clients/jupyter-notebook.md) für weitere Informationen zur [!DNL Data Science Workspace] interagiert mit Query Service.
+Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lernen und künstliche Intelligenz, um Einblicke aus in Experience Platform gespeicherten Daten zu gewinnen. Datenwissenschaftler können [!DNL Data Science Workspace] , um Rezepte zu erstellen, die auf Datensatz- und Zeitreihendaten zu Kunden und deren Aktivitäten basieren. Diese Rezepte erleichtern Vorhersagen wie Kaufneigung und empfohlene Angebote, die der Kontakt schätzen und nutzen kann. Sie können SQL in [!DNL Data Science Workspace] durch Integration von Query Service in [!DNL JupyterLab] zur Untersuchung, Transformation und Analyse von Adobe Analytics-Daten. Lesen Sie die [[!DNL Data Science Workspace] Übersicht](../data-science-workspace/home.md) und [Jupyter Notebook-Verbindungshandbuch](./clients/jupyter-notebook.md) für weitere Informationen zur [!DNL Data Science Workspace] interagiert mit Query Service.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
