@@ -4,9 +4,9 @@ description: Pinterest stellt die v4-Advertiser-API ein, die derzeit vom Pintere
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 3968c8e2a0ebd2084a7047fb41e2b85c5da7a6e7
+source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Wir haben festgestellt, dass Ihr Unternehmen über aktive Datenflüsse verfügt,
 
 ## Was ist der Plan?
 
-Adobe veröffentlicht eine neue Pinterest-Zielkarte, die die Pinterest API v5 nutzt und Ihre vorhandenen Datenflüsse in der neuen Verbindung erhält.
+Adobe hat eine neue Pinterest-Zielkarte veröffentlicht, die die Pinterest API v5 nutzt und Ihre vorhandenen Datenflüsse in der neuen Verbindung behält.
 
 ## Muss ich irgendetwas tun, um meine aktivierten Zielgruppen funktionsfähig zu halten?
 
@@ -45,7 +45,7 @@ Ja, vor dem 18. Januar 2024 müssen Sie sich mit Ihrem Pinterest-Advertiser-Kont
 
 ### Fluss zum neuen Ziel aktivieren {#disable-old-enable-new-flows}
 
-Anschließend müssen Sie die Datenflüsse auf die neue Karte aktivieren **[!UICONTROL (Neu) Pinterest]**.
+Anschließend müssen Sie die Datenflüsse für die neue  **[!UICONTROL Pinterest]** Karte.
 
 1. Navigieren Sie zu **[!UICONTROL Ziele > Durchsuchen]** und den Filter auf dem Bildschirm verwenden, um die **[!UICONTROL Pinterest]** nur Ziel.
    ![Filtern von Pinterest-Datenflüssen nur auf der Registerkarte Durchsuchen](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
@@ -66,14 +66,18 @@ Ja, siehe unten:
 
 ![Altes und neues Pinterest-Ziel nebeneinander](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
+<!--
+
 >[!IMPORTANT]
 >
->Nach dem 16. November 2023 wird das alte Pinterest-Ziel als **[!UICONTROL Veraltet]**. <span class="preview">Änderungen, die Sie nach dem 16. November an den Datenflüssen an dem Pinterest-Ziel (veraltet) vornehmen, werden *not* automatisch an das neue Pinterest-Ziel übertragen werden. </span>
->Beispiel: Wir *nicht empfehlen* dass Sie nach dem 16. November neue Zielgruppen für das alte Ziel aktivieren. Wenn Sie dies tun, müssen Sie dann dem [regelmäßige Aktivierungsschritte](/help/destinations/ui/activate-segment-streaming-destinations.md) , um die Zielgruppe zum neuen Ziel hinzuzufügen, sobald die Kundenaktionen ausgeführt wurden.
+>After November 16th, 2023 the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
+>For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
+
+-->
 
 **Bis zum 15. Dezember 2023**: <span class="preview">Kundenaktion 1</span>. Sie müssen sich erneut bei Pinterest authentifizieren, damit die neue Karte mit Pinterest verbunden ist. Vollständige Anweisungen anzeigen in [diesem Abschnitt](#reauthenticate).
 
-<span class="preview">Kundenaktion 2</span>.Dann müssen Sie die Datenflüsse zu Pinterest in der alten Karte deaktivieren und die Datenflüsse in der neuen Karte aktivieren. Vollständige Anweisungen anzeigen in [diesem Abschnitt](#disable-old-enable-new-flows).
+<span class="preview">Kundenaktion 2</span>.Dann müssen Sie die Datenflüsse in der neuen Karte aktivieren. Vollständige Anweisungen anzeigen in [diesem Abschnitt](#disable-old-enable-new-flows).
 
 <!--
 
@@ -83,8 +87,12 @@ Ja, siehe unten:
 
 -->
 
-**Nach dem 18. Januar 2024**: <span class="preview">Pinterest hat den Zugriff auf die V4-Advertiser-API deaktiviert. Kunden von Real-Time CDP, die noch kein Upgrade auf das neue Ziel durchgeführt haben, werden nun feststellen, dass ihre Datenflüsse zum Pinterest-Ziel fehlschlagen. [Erneutes Authentifizieren bei Pinterest](#reauthenticate) und [Datenflüsse aktivieren](#disable-old-enable-new-flows) zum aktualisierten Ziel, um Ihre Kampagnen in Pinterest wiederaufzunehmen</span>.
+**Nach dem 18. Januar 2024**: <span class="preview">Pinterest hat den Zugriff auf die V4-Advertiser-API deaktiviert. Kunden von Real-Time CDP, die noch kein Upgrade auf das neue Ziel durchgeführt haben, werden nun feststellen, dass ihre Datenflüsse zum Pinterest-Ziel fehlschlagen. [Erneutes Authentifizieren bei Pinterest](#reauthenticate) und [Datenflüsse aktivieren](#disable-old-enable-new-flows) zum aktualisierten Ziel, um Ihre Kampagnen in Pinterest wiederaufzunehmen.</span>
 
-## Sonstige zu beachtende Punkte
+<!--
 
-Nachdem Sie die Datenflüsse auf der neuen Zielkarte aktiviert und die Datenflüsse auf den alten Zielkarten deaktiviert haben, sollten Sie keine Unterbrechung Ihrer Kampagnen oder der Anzahl der qualifizierten Profile in den Zielgruppen sehen, die aus Adobe Real-Time CDP eingehen.
+## Other items to note
+
+After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
+
+-->
