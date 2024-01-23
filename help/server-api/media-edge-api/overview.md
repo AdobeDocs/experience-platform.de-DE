@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge-APIs
 description: Media Edge-APIs – Übersicht
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
+source-git-commit: b247790a155c04301215b03dad2f2765a1afd8fe
 workflow-type: tm+mt
 source-wordcount: '331'
-ht-degree: 92%
+ht-degree: 85%
 
 ---
 
@@ -42,7 +42,7 @@ Die folgende Tabelle zeigt einen möglichen Adobe-API-Service für verschiedene 
 
 >[!NOTE]
 >
-> Der Mediensammlungs-API-Service für Analytics empfängt weiterhin XDM-Daten, ist dafür jedoch nicht im selben Umfang wie der Media Edge-Service optimiert. Je nach den vom Media Player gesendeten Daten können einige reine Analytics-Daten auch über den Media Edge-API-Service weitergeleitet werden.
+> Der Mediensammlungs-API-Dienst für Analytics empfängt weiterhin XDM-Daten, ist jedoch nicht so weit optimiert, wie der Media Edge-Dienst dies ist. Je nach den vom Media Player gesendeten Daten können einige reine Analytics-Daten auch über den Media Edge-API-Service weitergeleitet werden.
 
 Die folgende Abbildung zeigt die Datenflüsse für die beiden API-Services:
 
