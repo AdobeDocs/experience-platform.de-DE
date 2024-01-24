@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platfor
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1045'
 ht-degree: 100%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 100%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Asynchrone Bereitstellung"
->abstract="Wenn diese Option aktiviert ist, beginnt der Browser beim Parsen dieses Skript-Tags mit dem Laden der JavaScript-Datei, aber anstatt darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, fährt er mit dem Parsen und Rendern des restlichen Dokuments fort. Dies kann die Leistung der Web-Seite verbessern, hat jedoch wichtige Auswirkungen auf die Ausführung bestimmter Regeln. Einzelheiten finden Sie in der Dokumentation."
+>abstract="Wenn diese Option aktiviert ist, beginnt der Browser beim Parsen dieses Skript-Tags mit dem Laden der JavaScript-Datei, aber anstatt darauf zu warten, dass die Bibliothek geladen und ausgeführt wird, fährt er mit dem Parsen und Rendern des restlichen Dokuments fort. Dies kann die Performance der Web-Seite verbessern, hat jedoch wichtige Auswirkungen auf die Ausführung bestimmter Regeln. Einzelheiten finden Sie in der Dokumentation."
 
 >[!NOTE]
 >
