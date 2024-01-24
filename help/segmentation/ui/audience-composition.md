@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
-ht-degree: 97%
+source-wordcount: '1844'
+ht-degree: 94%
 
 ---
 
@@ -115,6 +115,10 @@ Wenn Sie nach Attribut ausschließen, können Sie durch Auswahl des Symbols ![Fi
 Eine Liste der Profilattribute wird angezeigt. Wählen Sie den Attributtyp aus, den Sie ausschließen möchten, und dann **[!UICONTROL Auswählen]**, um diese Attribute zu Ihrem Ausschlussblock hinzuzufügen.
 
 ![Eine Liste mit Attributen wird angezeigt.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>Beim Ausschließen nach Attribut können Sie nur Folgendes festlegen: **one** -Wert auszuschließen. Die Verwendung einer beliebigen Trennlinie, wie Kommas oder Semikolons, führt nur dazu, dass dieser genaue Wert ausgeschlossen wird. Setzen Sie den Wert beispielsweise auf `red, blue` führt dazu, dass der Begriff ausgeschlossen wird `red, blue` aus dem -Attribut, aber wird **not** Ergebnis: Ausschluss eines Begriffs `red` oder `blue`.
 
 ## [!UICONTROL Anreichern] {#enrich-block}
 

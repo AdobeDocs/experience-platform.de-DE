@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '2714'
+source-wordcount: '2739'
 ht-degree: 34%
 
 ---
@@ -108,6 +108,7 @@ In der folgenden Tabelle werden die verschiedenen Lebenszyklusstatus, ihre Darst
 | Veröffentlicht | Eine Zielgruppe im **Veröffentlicht** state ist eine Zielgruppe, die für alle nachgelagerten Dienste verwendet werden kann. | Ja | Ja | Ja | Kann importiert oder aktualisiert werden. | Wird mit Batch-, Streaming- oder Edge-Segmentierung ausgewertet. | Ja |
 | Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Wird nicht mehr aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Ja |
 | Gelöscht | Eine Zielgruppe im **Gelöscht** state ist eine Zielgruppe, die gelöscht wurde. Das tatsächliche Löschen der Daten kann bis zu einigen Minuten dauern. | Nein | Nein | Nein | Zugrunde liegende Daten werden gelöscht. | Nach Abschluss des Löschvorgangs erfolgt keine Datenauswertung oder -ausführung. | Nein |
+| Aktiv | Dieser Status wurde **veraltet** und wird durch die **Veröffentlicht** -Status. | K. A. | K. A. | K. A. | K. A. | K. A. | K. A. |
 
 ### Wie interagieren Audience Portal und die Zielgruppenkomposition mit der Veröffentlichung von Real-Time CDP-Partnerdaten?
 

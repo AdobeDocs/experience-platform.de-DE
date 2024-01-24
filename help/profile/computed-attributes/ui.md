@@ -2,10 +2,10 @@
 title: Handbuch zur Benutzeroberfläche "Berechnete Attribute"
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen, anzeigen und aktualisieren.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 11%
+source-wordcount: '1576'
+ht-degree: 8%
 
 ---
 
@@ -112,7 +112,7 @@ Bei Anwendung der Aggregationsfunktion können Sie eine schnelle Aktualisierung 
 
 ![Die [!UICONTROL Schnelles Aktualisieren] markiert ist.](./images/ui/enable-fast-refresh.png)
 
-Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Wenn Sie diese Option aktivieren, können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
+Mit der schnellen Aktualisierung können Sie Ihre Attribute auf dem neuesten Stand halten. Durch Aktivierung dieser Option können Sie Ihre berechneten Attribute täglich aktualisieren, auch über längere Lookback-Zeiträume, sodass Sie schnell auf Benutzeraktivitäten reagieren können.
 
 Weitere Informationen zur schnellen Aktualisierung finden Sie im [Bereich für schnelle Aktualisierung](./overview.md#fast-refresh) der Übersicht über berechnete Attribute.
 
@@ -155,6 +155,10 @@ Bei der Auswahl eines Entwurfs für ein berechnetes Attribut muss die **[!UICONT
 >Wenn Sie z. B. eine Segmentdefinition erstellen, die nach &quot;Alle Profile mit einer gültigen E-Mail-Adresse&quot;sucht, bei der das Feld für die E-Mail-Adresse durch ein berechnetes Attribut mit der neuesten Funktion ausgefüllt wird, haben Sie folgende Möglichkeiten: **must** den Wert beider E-Mail-Adressen einschließen **und** Der Zeitstempel der E-Mail-Adresse ist vorhanden.
 
 Nachdem Sie ein berechnetes Attribut erstellt haben, können Sie **veröffentlicht** berechnete Attribute in anderen nachgelagerten Diensten. Da berechnete Attribute Profilattributfelder sind, die in Ihrem Profilvereinigungsschema erstellt wurden, können Sie berechnete Attributwerte für ein Echtzeit-Kundenprofil nachschlagen, sie in einer Zielgruppe verwenden, sie für ein Ziel aktivieren oder sie zur Personalisierung in Journey in Adobe Journey Optimizer verwenden.
+
+>[!NOTE]
+>
+>Berechnete Attribute **cannot** in der Audience verwendet werden **Kompositionen**.
 
 ![Der Segmentaufbau wird angezeigt und zeigt ein berechnetes Attribut als Teil der Segmentdefinitionskomposition an.](./images/ui/use-ca.png)
 
