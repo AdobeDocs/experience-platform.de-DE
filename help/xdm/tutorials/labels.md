@@ -2,10 +2,10 @@
 title: Verwalten von Datennutzungsbezeichnungen für ein Schema
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Schemafeldern des Experience-Datenmodell (XDM) Datennutzungsbezeichnungen hinzufügen.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
+source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 10%
+source-wordcount: '913'
+ht-degree: 9%
 
 ---
 
@@ -39,6 +39,12 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 >id="platform_schemas_editgovernancelabels"
 >title="Governance-Kennzeichnungen bearbeiten"
 >abstract="Wenden Sie eine Kennzeichnung auf ein Schemafeld an, um die Nutzungsrichtlinien festzulegen, die für die in diesem Feld enthaltenen Daten gelten."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_labelusageacknowledgement"
+>title="Verwendung von Kennzeichnungen"
+>abstract="Bevor Sie die Beschriftungen für dieses Objekt bearbeiten, beachten Sie die folgenden nachgelagerten Effekte:<br>Governance-Richtlinien: Legen Sie mithilfe von Bezeichnungen fest, ob Daten für nachgelagerte Ziele aktiviert werden können. Eine falsche Beschriftung verhindert möglicherweise, dass Daten nachgelagert zugänglich sind.<br>Einverständnisrichtlinien: Verwenden Sie Beschriftungen, um Einverständniserklärungen und Voreinstellungen von Kunden zu erzwingen, wenn Profile in Segmente aufgenommen werden. Eine falsche Beschriftung verhindert möglicherweise, dass Daten nachgelagert zugänglich sind.<br>Zugriffsrichtlinie: Die attributbasierte Zugriffskontrolle verwendet Beschriftungen, um zu bestimmen, welche Benutzerrollen auf bestimmte Assets zugreifen können. Die unbeabsichtigte Verwendung von Beschriftungen kann verhindern, dass einige Personen in Ihrer Organisation Assets verwenden, auf die sie zuvor Zugriff hatten."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=de" text="Attributbasierte Zugriffssteuerung – Übersicht"
 
 Um Beschriftungen hinzuzufügen, müssen Sie zunächst [ein vorhandenes Schema zur Bearbeitung auswählen](../ui/resources/schemas.md#edit) oder [Erstellen eines neuen Schemas](../ui/resources/schemas.md#create) , um die Struktur im Schema-Editor anzuzeigen.
 
