@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Verbinden; Verbindung mit Query Service; Aqua Data Studio; Aqua Data Studio; Looker; Looker; Postico; postico; Power BI; Power bi; psql; Rstudio; PSQL; RStudio; Tableau; Tableau; tableau;
+keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
 title: Clients mit Query Service verbinden
 description: In diesem Dokument wird beschrieben, wie Sie über verschiedene Desktop-Client-Anwendungen eine Verbindung zu Query Service herstellen und diese Verbindungen überprüfen können.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 778c65c6310ed4a627be0fd3ae076784cfc8495b
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 6%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
 # Clients mit verbinden [!DNL Query Service]
 
 In diesem Abschnitt wird beschrieben, wie Sie eine Verbindung zu [!DNL Query Service] von verschiedenen Desktop-Client-Anwendungen und wie diese Verbindungen überprüft werden. [!DNL Query Service] verwendet die [!DNL PostgreSQL] -Protokoll verwenden. Daher wird in den Anweisungen in diesem Abschnitt die Verwendung von [!DNL PostgreSQL] Tools und Treiber zum Verbinden und Schreiben von Abfragen.
+
+>[!IMPORTANT]
+>
+>Die TLS/SSL-Zertifikate für Produktionsumgebungen für die Query Service Interactive Postgres API wurden am Mittwoch, 24. Januar 2024 aktualisiert.<br>Obwohl dies eine Jahresanforderung ist, hat sich in diesem Fall auch das Stammzertifikat in der Kette geändert, da der Adobe TLS/SSL-Zertifikatanbieter seine Zertifikatshierarchie aktualisiert hat. Dies kann sich auf bestimmte Postgres-Clients auswirken, wenn in ihrer Liste der Zertifizierungsstellen das Stammzertifikat fehlt. Beispielsweise muss einem PSQL-CLI-Client möglicherweise die Root-Zertifikate zu einer expliziten Datei hinzugefügt werden. `~/postgresql/root.crt`, andernfalls kann dies zu einem Fehler führen. Beispiel: `psql: error: SSL error: certificate verify failed`. Siehe [offizielle PostgreSQL-Dokumentation](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) für weitere Informationen zu diesem Thema.<br>Das Stammzertifikat, das hinzugefügt werden soll, kann heruntergeladen werden von [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Anweisungen werden für folgende Clients bereitgestellt:
 
