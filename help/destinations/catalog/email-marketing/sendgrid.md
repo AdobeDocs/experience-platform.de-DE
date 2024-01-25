@@ -3,7 +3,7 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; sendgrid; sendgrid; sendgrid-Zie
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre Erstanbieterdaten exportieren und in SendGrid für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 24%
@@ -44,7 +44,7 @@ Bevor Sie Daten für das SendGrid-Ziel aktivieren, müssen Sie über eine [schem
 
 ## Unterstützte Identitäten {#supported-identities}
 
-SendGrid unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+SendGrid unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Quell-Connector für Kundenattribute
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Kundenattribute mit Adobe Experience Platform verbinden.
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 23%
+source-wordcount: '381'
+ht-degree: 19%
 
 ---
 
@@ -25,7 +25,7 @@ Die [!DNL Customer Attributes] -Quelle erstellt automatisch den Datensatz, in de
 
 ## Identitäten
 
-Die primäre Identität eines Datensatzes ist in der ersten Spalte der CSV-Datei der Quelldaten enthalten. Die [!DNL Customer Attributes] -Quelle geht davon aus, dass die Identität immer der [`CORE` namespace](../../../identity-service/namespaces.md), ein systemgenerierter Namespace, der von [[!DNL Identity Service]](../../../identity-service/home.md).
+Die primäre Identität eines Datensatzes ist in der ersten Spalte der CSV-Datei der Quelldaten enthalten. Die [!DNL Customer Attributes] -Quelle geht davon aus, dass die Identität immer der [`CORE` namespace](../../../identity-service/features/namespaces.md), ein systemgenerierter Namespace, der von [[!DNL Identity Service]](../../../identity-service/home.md).
 
 Bei Verwendung von [!DNL Customer Attributes] -Quelle [!DNL Customer Attributes] geht davon aus, dass sich die primäre Identität für das Schema immer in der Identitätszuordnung befindet. [!DNL Customer Attributes] erstellt dann die automatisierte Zuordnung der Quell-ID zur Identitätszuordnungs-UUID.
 

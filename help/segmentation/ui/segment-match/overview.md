@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht zu Segment Match
 description: Segment Match ist ein Service zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzende Segmentdaten auf sichere, geregelte und datenschutzsensible Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1968'
 ht-degree: 98%
 
 ---
@@ -46,7 +46,7 @@ Folgende Namespaces werden unterstützt:
 | --------- | ----------- |
 | E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für vorab gehashte E-Mail-Adressen. In diesem Namespace angegebene Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Normalisierung einer E-Mail-Adresse müssen vorangestellte und nachfolgende Leerzeichen abgeschnitten werden. Diese Einstellung kann nachträglich nicht mehr geändert werden. Platform bietet zwei Methoden zur Unterstützung von Hashing bei der Datenerfassung: durch [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) und [Datenvorbereitung](../../../data-prep/functions.md#hashing). |
 | Phone (SHA256_E.164) | Ein Namespace, der unformatierte Telefonnummern darstellt, die mit dem SHA256- und E.164-Format gehasht werden müssen. |
-| ECID | Ein Namespace, der einen Experience Cloud ID (ECID)-Wert darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](../../../identity-service/ecid.md). |
+| ECID | Ein Namespace, der einen Experience Cloud ID (ECID)-Wert darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](../../../identity-service/features/ecid.md). |
 | Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weiteführende Informationen finden Sie im folgenden Dokument zu [Interessensbasierten Anzeigen](https://support.apple.com/de-de/HT202074). |
 | Google Ad-ID | Ein Namespace, der eine Google Advertising ID darstellt. Weiterführende Informationen finden Sie im folgenden Dokument zu [Google Advertising IDs](https://support.google.com/googleplay/android-developer/answer/6048248?hl=de). |
 

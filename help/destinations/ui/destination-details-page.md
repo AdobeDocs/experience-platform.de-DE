@@ -3,9 +3,9 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 12%
 
 ---
@@ -60,7 +60,7 @@ Die folgende Tabelle enthält die von der rechten Leiste bereitgestellten Steuer
 | [!UICONTROL Kategorie] | Gibt den Zieltyp an. Siehe [Zielkatalog](../catalog/overview.md) für weitere Informationen. |
 | [!UICONTROL Verbindungstyp] | Gibt das Formular an, mit dem Ihre Zielgruppen an das Ziel gesendet werden. Mögliche Werte sind [!UICONTROL Cookie] und [!UICONTROL Profilbasiert]. |
 | [!UICONTROL Häufigkeit] | Gibt an, wie oft die Zielgruppen an das Ziel gesendet werden. Mögliche Werte sind [!UICONTROL Streaming] und [!UICONTROL Batch]. |
-| [!UICONTROL Identität] | Stellt den vom Ziel akzeptierten Identitäts-Namespace dar, z. B. `GAID`, `IDFA`oder `email`. Weitere Informationen zu akzeptierten Identitäts-Namespaces finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](../../identity-service/namespaces.md). |
+| [!UICONTROL Identität] | Stellt den vom Ziel akzeptierten Identitäts-Namespace dar, z. B. `GAID`, `IDFA`oder `email`. Weitere Informationen zu akzeptierten Identitäts-Namespaces finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Erstellt von] | Gibt den Benutzer an, der dieses Ziel erstellt hat. |
 | [!UICONTROL Erstellt] | Gibt den UTC-Datum an, zu dem dieses Ziel erstellt wurde. |
 

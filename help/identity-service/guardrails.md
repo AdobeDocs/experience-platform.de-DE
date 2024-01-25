@@ -3,7 +3,7 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 43%
@@ -186,7 +186,7 @@ Schließlich liefert der Löschvorgang zwei kleinere Diagramme.
 Weitere Informationen über [!DNL Identity Service] finden Sie in der folgenden Dokumentation:
 
 * [[!DNL Identity Service] – Übersicht](home.md)
-* [Identitätsdiagramm-Viewer](ui/identity-graph-viewer.md)
+* [Identitätsdiagramm-Viewer](features/identity-graph-viewer.md)
 
 Weitere Informationen zu anderen Limits für Experience Platform-Services, End-to-End-Latenzinformationen und Lizenzinformationen aus Real-Time CDP Product Description-Dokumenten finden Sie in der folgenden Dokumentation:
 

@@ -2,10 +2,10 @@
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie in Adobe Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 20%
+source-wordcount: '1363'
+ht-degree: 18%
 
 ---
 
@@ -61,9 +61,9 @@ Dazu enthalten alle standardmäßigen B2B-Klassen &quot;key&quot;-Felder, die de
 
 >[!NOTE]
 >
->Wann [Festlegen eines XDM-Felds als Identität](../ui/fields/identity.md)müssen Sie einen Identitäts-Namespace bereitstellen, unter dem die Identität definiert wird. Dabei kann es sich um einen Standard-Namespace handeln, der von Adobe bereitgestellt wird, oder um einen benutzerdefinierten Namespace, der von Ihrem Unternehmen definiert wird. In der Praxis ist der Namespace lediglich eine kontextbezogene Zeichenfolge und kann auf einen beliebigen Wert festgelegt werden, vorausgesetzt, er ist für Ihre Organisation für die Kategorisierung des Identitätstyps sinnvoll. Siehe Übersicht unter [Identitäts-Namespaces](../../identity-service/namespaces.md) für weitere Informationen.
+>Wann [Festlegen eines XDM-Felds als Identität](../ui/fields/identity.md)müssen Sie einen Identitäts-Namespace bereitstellen, unter dem die Identität definiert wird. Dabei kann es sich um einen Standard-Namespace handeln, der von Adobe bereitgestellt wird, oder um einen benutzerdefinierten Namespace, der von Ihrem Unternehmen definiert wird. In der Praxis ist der Namespace lediglich eine kontextbezogene Zeichenfolge und kann auf einen beliebigen Wert festgelegt werden, vorausgesetzt, er ist für Ihre Organisation für die Kategorisierung des Identitätstyps sinnvoll. Siehe Übersicht unter [Identitäts-Namespaces](../../identity-service/features/namespaces.md) für weitere Informationen.
 
-Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schemas beschrieben, die in dieser Anleitung verwendet werden, bevor eine Beziehung definiert wird. Beachten Sie, wo die primären Identitäten in der Schemastruktur und in den von ihnen verwendeten benutzerdefinierten Namespaces definiert wurden.
+Zu Referenzzwecken wird in den folgenden Abschnitten die Struktur der einzelnen Schemas beschrieben, die in diesem Tutorial vor der Definition einer Beziehung verwendet werden. Beachten Sie, wo die primären Identitäten in der Schemastruktur und in den von ihnen verwendeten benutzerdefinierten Namespaces definiert wurden.
 
 ### [!DNL Opportunities] schema
 
@@ -79,7 +79,7 @@ Das Referenzschema &quot;[!DNL Accounts]&quot; basiert auf der Variablen [!UICON
 
 ![Konten-Schema](../images/tutorials/relationship-b2b/accounts.png)
 
-## Beziehungsfeld für das Quellschema definieren {#relationship-field}
+## Definieren eines Beziehungsfelds für das Quellschema {#relationship-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"

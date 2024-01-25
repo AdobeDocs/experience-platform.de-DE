@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Streaming-Aufnahme
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zur Streaming-Aufnahme in Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 100%
 
 ---
@@ -97,6 +97,6 @@ Die folgende JSON ist ein Beispielantwortobjekt für eine API-Anfrage mit zwei N
 
 Wenn [!DNL Real-Time Customer Profile] eine Nachricht ablehnt, hängt das höchstwahrscheinlich mit fehlerhaften Identitätsdaten zusammen. Der Grund dafür kann sein, dass für eine Identität ein ungültiger Wert oder Namespace angegeben wurde.
 
-Es gibt zwei Arten von Identitäts-Namespaces: standardmäßige und benutzerdefinierte. Wenn Sie benutzerdefinierte Namespaces verwenden, müssen Sie sicherstellen, dass der Namespace beim [!DNL Identity Service] registriert wurde. Weiterführende Informationen zur Verwendung von standardmäßigen und benutzerdefinierten Namespaces finden Sie in der [Übersicht zu Identitäts-Namespaces](../../identity-service/namespaces.md).
+Es gibt zwei Arten von Identitäts-Namespaces: standardmäßige und benutzerdefinierte. Wenn Sie benutzerdefinierte Namespaces verwenden, müssen Sie sicherstellen, dass der Namespace beim [!DNL Identity Service] registriert wurde. Weiterführende Informationen zur Verwendung von standardmäßigen und benutzerdefinierten Namespaces finden Sie in der [Übersicht zu Identitäts-Namespaces](../../identity-service/features/namespaces.md).
 
 Sie können die [[!DNL Experience Platform UI]](https://platform.adobe.com) nutzen, um weitere Informationen zu den Gründen anzuzeigen, warum eine Nachricht nicht aufgenommen wurde. Klicken Sie im linken Navigationsbereich auf **[!UICONTROL Monitoring]** und dann auf die Registerkarte **[!UICONTROL Streaming End-to-End]**, um die in einem bestimmten Zeitraum gestreamten Nachrichten-Batches anzuzeigen.

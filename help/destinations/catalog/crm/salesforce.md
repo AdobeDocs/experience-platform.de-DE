@@ -3,7 +3,7 @@ keywords: crm;CRM;crm-Ziele;Salesforce crm;Salesforce crm-Ziel
 title: Salesforce-CRM-Verbindung
 description: Mit dem Salesforce CRM-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce CRM für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 20%
@@ -123,7 +123,7 @@ Wenn [!DNL Salesforce] Kontoadministrator hat IP-Einschränkungen erzwungen. Sie
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Salesforce CRM] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL Salesforce CRM] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|

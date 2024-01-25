@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1554'
 ht-degree: 8%
 
 ---
@@ -32,12 +32,12 @@ Bevor Sie sich mit den Details von Identity Service befassen, lesen Sie bitte di
 | Begriff | Definition |
 | --- | --- |
 | Identität | Eine Identität sind Daten, die für eine Entität eindeutig sind. In der Regel handelt es sich hierbei um ein echtes Objekt, z. B. eine Person, ein Hardwaregerät oder einen Webbrowser (dargestellt durch ein Cookie). Eine voll qualifizierte Identität besteht aus zwei Elementen: einer **Identitäts-Namespace** und **Identitätswert**. |
-| Identity-Namespace | Ein Identitäts-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte entsprechen **julien<span>@acme.com**. Auf ähnliche Weise wird ein Namespace von `Phone` könnte entsprechen `555-555-1234`. Weitere Informationen finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](./namespaces.md) |
+| Identity-Namespace | Ein Identitäts-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte entsprechen **julien<span>@acme.com**. Auf ähnliche Weise wird ein Namespace von `Phone` könnte entsprechen `555-555-1234`. Weitere Informationen finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](./features/namespaces.md) |
 | Identitätswert | Ein Identitätswert ist eine Zeichenfolge, die eine reale Entität darstellt und innerhalb von Identity Service über einen Namespace kategorisiert wird. Beispielsweise der Identitätswert (Zeichenfolge) **julien<span>@acme.com** könnte als `Email` Namespace. |
 | Identitätstyp | Ein Identitätstyp ist eine Komponente eines Identitäts-Namespace. Der Identitätstyp gibt an, ob Identitätsdaten in einem Identitätsdiagramm verknüpft sind. |
 | Link | Ein Link oder eine Verknüpfung ist eine Methode, um festzustellen, dass zwei unterschiedliche Identitäten dieselbe Entität repräsentieren. Beispielsweise eine Verknüpfung zwischen`Email` = julien<span>@acme.com und &quot;`Phone` = 555-555-1234&quot; bedeutet, dass beide Identitäten dieselbe Entität repräsentieren. Dies deutet darauf hin, dass der Kunde, der mit Ihrer Marke sowohl mit der E-Mail-Adresse von julien interagiert hat<span>@acme.com und die Telefonnummer 555-555-1234 ist identisch. |
 | Identity Service | Identity Service ist ein Dienst innerhalb von Experience Platform, der Identitäten verknüpft (oder aufhebt), um Identitätsdiagramme zu verwalten. |
-| Identitätsdiagramm | Das Identitätsdiagramm ist eine Sammlung von Identitäten, die einen einzelnen Kunden repräsentieren. Weitere Informationen finden Sie im Handbuch unter [Verwenden des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md). |
+| Identitätsdiagramm | Das Identitätsdiagramm ist eine Sammlung von Identitäten, die einen einzelnen Kunden repräsentieren. Weitere Informationen finden Sie im Handbuch unter [Verwenden des Identitätsdiagramm-Viewers](./features/identity-graph-viewer.md). |
 | Echtzeit-Kundenprofil | Das Echtzeit-Kundenprofil ist ein Dienst in Adobe Experience Platform, der Folgendes ermöglicht: <ul><li>Führt Profilfragmente zusammen, um ein Profil zu erstellen, das auf einem Identitätsdiagramm basiert.</li><li>Segmente von Profilen, damit sie zur Aktivierung an das Ziel gesendet werden können.</li></ul> |
 | Profil | Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson. Ein Profil besteht aus vier Elementen: <ul><li>Attribute: Attribute liefern Informationen wie Name, Alter oder Geschlecht.</li><li>Verhalten: Verhalten liefert Informationen zu den Aktivitäten eines bestimmten Profils. Beispielsweise kann ein Profilverhalten erkennen, ob ein bestimmtes Profil &quot;nach Sandalen suchen&quot;oder &quot;T-Shirts bestellen&quot;war.</li><li>Identitäten: Bei einem zusammengeführten Profil werden hierdurch Informationen zu allen Identitäten bereitgestellt, die mit der Person verknüpft sind. Identitäten können in drei Kategorien unterteilt werden: Person (CRMID, E-Mail, Telefon), Gerät (IDFA, GAID) und Cookie (ECID, AAID).</li><li>Zielgruppenmitgliedschaften: Die Gruppen, zu denen das Profil gehört (treue Benutzer, in Kalifornien lebende Benutzer usw.)</li></ul> |
 
@@ -93,9 +93,11 @@ Siehe folgendes Beispiel:
 
 In Anbetracht der obigen Szenarien erstellt Identity Service eine Verknüpfung zwischen `{CRM_ID:ABC, ECID:123}`sowie `{CRM_ID:ABC, ECID:456}`. Dies führt zu einem Identitätsdiagramm, in dem Sie drei Identitäten &quot;besitzen&quot;: eine für die Personen-ID (CRM ID) und zwei für Cookie-IDs (ECIDs).
 
+Weitere Informationen finden Sie im Handbuch unter [Verknüpfen von Identitäten zwischen Identity Service](./features/identity-linking-logic.md).
+
 ## Identitätsdiagramme
 
-Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identity-Namespaces, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Tutorial lesen unter [Verwenden des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md) für weitere Informationen.
+Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identity-Namespaces, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Tutorial lesen unter [Verwenden des Identitätsdiagramm-Viewers](./features/identity-graph-viewer.md) für weitere Informationen.
 
 Das folgende Video soll Ihnen Identitäten und Identitätsdiagramme näherbringen.
 
@@ -108,7 +110,7 @@ Identity Service spielt bei der Experience Platform eine wichtige Rolle. Zu dies
 * [Schemas](../xdm/home.md): Innerhalb eines bestimmten Schemas ermöglichen die Erstellung von Identitätsdiagrammen die Schemafelder, die als Identität markiert sind.
 * [Datensätze](../catalog/datasets/overview.md): Wenn ein Datensatz für die Aufnahme in das Echtzeit-Kundenprofil aktiviert ist, werden Identitätsdiagramme aus dem Datensatz generiert, da der Datensatz mindestens zwei als Identität markierte Felder aufweist.
 * [Web SDK](../edge/home.md): Web SDK sendet Erlebnisereignisse an Adobe Experience Platform und Identity Service generiert ein Diagramm, wenn im Ereignis zwei oder mehr Identitäten vorhanden sind.
-* [Echtzeit-Kundenprofil](../profile/home.md): Bevor Attribute und Ereignisse für ein bestimmtes Profil zusammengeführt werden, kann das Echtzeit-Kundenprofil auf das Identitätsdiagramm verweisen.
+* [Echtzeit-Kundenprofil](../profile/home.md): Bevor Attribute und Ereignisse für ein bestimmtes Profil zusammengeführt werden, kann das Echtzeit-Kundenprofil auf das Identitätsdiagramm verweisen. Weitere Informationen finden Sie im Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](./identity-and-profile.md).
 * [Ziele](../destinations/home.md): Ziele können Profilinformationen basierend auf einem Identitäts-Namespace an andere Systeme senden, z. B. Hash-E-Mails.
 * [Segmentübereinstimmung](../segmentation/ui/segment-match/overview.md): Die Segmentübereinstimmung stimmt mit zwei Profilen in zwei verschiedenen Sandboxes überein, die denselben Identitäts-Namespace und denselben Identitätswert aufweisen.
 * [Privacy Service](../privacy-service/home.md): Wenn die Löschanfrage Folgendes enthält: `identity`festgelegt ist, kann die angegebene Kombination aus Namespace und Identitätswert mithilfe der Datenschutzanfrage-Verarbeitungsfunktion in Privacy Service aus dem Identity Service gelöscht werden.

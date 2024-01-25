@@ -2,7 +2,7 @@
 title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht darüber, wie Sie Berechtigungen verwalten und den Zugriff auf Datenerfassungsfunktionen in Adobe Experience Platform steuern können.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 29%
@@ -34,7 +34,7 @@ Zu den Berechtigungen unter Adobe Experience Platform gehört der Zugriff auf Da
 | Sandboxes | (Nicht angegeben) | Je nach [Sandboxes](../sandboxes/home.md) die unter Ihrer Organisation erstellt wurden, können Sie den Zugriff auf jede dieser Berechtigungskategorien in Admin Console steuern. |
 | Datenmodellierung | Verwalten von Schemas | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Experience-Datenmodell (XDM)-Schemas](../xdm/home.md). |
 | Datenmodellierung | Anzeigen von Schemas | Gewährt schreibgeschützten Zugriff auf Schemas. |
-| Identitäts-Management | Verwalten von Identitäts-Namensräumen | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Identitäts-Namespaces](../identity-service/namespaces.md). |
+| Identitäts-Management | Verwalten von Identitäts-Namensräumen | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Identitäts-Namespaces](../identity-service/features/namespaces.md). |
 | Identitäts-Management | Anzeigen von Identitäts-Namensräumen | Ermöglicht schreibgeschützten Zugriff auf Identitäts-Namespaces. |
 | Datenerfassung | Verwalten von Datenspeichern | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [datastreams](../datastreams/overview.md). |
 | Datenerfassung | Anzeigen von Datenspeichern | Ermöglicht schreibgeschützten Zugriff auf Datenspeicher. |

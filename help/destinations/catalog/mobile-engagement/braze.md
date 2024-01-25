@@ -3,7 +3,7 @@ keywords: mobil; braze; messaging;
 title: Braze-Verbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%
@@ -40,7 +40,7 @@ Marketingexperten möchten mit integrierten Zielgruppen Benutzer in einem mobile
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| external_id | Benutzerdefiniert [!DNL Braze] Kennung, die die Zuordnung einer beliebigen Identität unterstützt. | Sie können jede [identity](../../../identity-service/namespaces.md) der [!DNL Braze] Ziel, solange Sie es dem [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Benutzerdefiniert [!DNL Braze] Kennung, die die Zuordnung einer beliebigen Identität unterstützt. | Sie können jede [identity](../../../identity-service/features/namespaces.md) der [!DNL Braze] Ziel, solange Sie es dem [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

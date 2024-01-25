@@ -2,7 +2,7 @@
 title: Verbindung Snap Inc
 description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Audiences vom Experience Platform exportieren können.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 26%
@@ -37,7 +37,7 @@ Um dieses Ziel zu verwenden, müssen Sie über ein Snapchat Ads-Konto verfügen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die *Snap Inc* Das Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+Die *Snap Inc* Das Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 Alle an die *Snap Inc* Das Ziel muss im SHA-256-Format gehasht werden. Um Nur-Text-IDs zu hashen, bevor sie an das Ziel gesendet werden, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** Option bei der Zuordnung von Zielkennungen für das Ziel.
 

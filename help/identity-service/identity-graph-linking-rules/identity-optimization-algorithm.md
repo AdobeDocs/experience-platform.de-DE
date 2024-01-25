@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
 source-wordcount: '1319'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -134,5 +134,5 @@ Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finde
 
 * [Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen](./overview.md)
 * [Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen](./example-scenarios.md)
-* [Identitätsverknüpfungslogik](./identity-linking-logic.md)
-* [Identity Service und Echtzeit-Kundenprofil](identity-and-profile.md)
+* [Identitätsverknüpfungslogik](../features/identity-linking-logic.md)
+* [Identity Service und Echtzeit-Kundenprofil](../identity-and-profile.md)

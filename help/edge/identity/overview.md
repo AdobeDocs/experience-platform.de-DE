@@ -1,17 +1,17 @@
 ---
 title: Identitätsdaten in Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen und verwalten.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 2%
 
 ---
 
-
 # Identitätsdaten in Web SDK
 
-Das Adobe Experience Platform Web SDK verwendet [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/ecid.md) , um das Besucherverhalten zu verfolgen. Mithilfe von ECIDs können Sie sicherstellen, dass jedes Gerät über eine eindeutige ID verfügt, die über mehrere Sitzungen hinweg persistent sein kann, und alle Treffer, die während und über mehrere Websitzungen hinweg auftreten, an ein bestimmtes Gerät binden.
+Das Adobe Experience Platform Web SDK verwendet [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md) , um das Besucherverhalten zu verfolgen. Mithilfe von ECIDs können Sie sicherstellen, dass jedes Gerät über eine eindeutige ID verfügt, die über mehrere Sitzungen hinweg persistent sein kann, und alle Treffer, die während und über mehrere Websitzungen hinweg auftreten, an ein bestimmtes Gerät binden.
 
 Dieses Dokument bietet einen Überblick darüber, wie ECIDs mit dem Platform Web SDK verwaltet werden.
 
@@ -104,7 +104,7 @@ alloy("sendEvent", {
 >Adobe empfiehlt das Senden von Namespaces, die eine Person repräsentieren, z. B. `CRMID`, als primäre Identität.
 
 
-Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identitäts-Namespace](../../identity-service/namespaces.md). Der Eigenschaftsname sollte das Identitäts-Namespace-Symbol sein, das Sie in der Adobe Experience Platform-Benutzeroberfläche unter[!UICONTROL Identitäten]&quot;. Der Eigenschaftswert sollte ein Array von Identitäten sein, die sich auf diesen Identitäts-Namespace beziehen.
+Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identitäts-Namespace](../../identity-service/features/namespaces.md). Der Eigenschaftsname sollte das Identitäts-Namespace-Symbol sein, das Sie in der Adobe Experience Platform-Benutzeroberfläche unter[!UICONTROL Identitäten]&quot;. Der Eigenschaftswert sollte ein Array von Identitäten sein, die sich auf diesen Identitäts-Namespace beziehen.
 
 >[!IMPORTANT]
 >

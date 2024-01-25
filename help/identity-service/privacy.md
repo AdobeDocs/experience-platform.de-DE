@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen
 title: Verarbeitung von Datenschutzanfragen in Identity Service
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Identity Service behandelt.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1016'
-ht-degree: 65%
+ht-degree: 64%
 
 ---
 
@@ -36,7 +36,7 @@ Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Ku
 
 Identity Service verwaltet einen Speicher global definierter (standardmäßiger) und benutzerdefinierter Identitäts-Namespaces. Standardmäßige Namespaces (z. B. „E-Mail“ und „ECID“) stehen für alle Unternehmen zur Verfügung, während Ihr Unternehmen außerdem benutzerdefinierte Namespaces erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] finden Sie unter [Identitäts-Namespaces – Übersicht](../identity-service/namespaces.md).
+Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] finden Sie unter [Identitäts-Namespaces – Übersicht](../identity-service/features/namespaces.md).
 
 ## Übermitteln von Anfragen {#submit}
 
@@ -104,7 +104,7 @@ Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!U
 
 ## Verarbeitung von Löschanfragen
 
-Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle mit einer bestimmten Organisation verbundenen Sandboxes.
+Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Das Löschen einer einzelnen Identität basiert auf dem angegebenen Namespace- und/oder ID-Wert. Darüber hinaus erfolgt der Löschvorgang für alle Sandboxes, die mit einer bestimmten Organisation verbunden sind.
 
 Je nachdem, ob Sie auch Echtzeit-Kundenprofil eingeschlossen haben (`ProfileService`) und dem Datensee (`aepDataLake`) als Produkte in Ihrer Datenschutzanfrage für Identity Service (`identity`), werden verschiedene Datensätze, die sich auf die Identität beziehen, zu unterschiedlichen Zeitpunkten aus dem System entfernt:
 

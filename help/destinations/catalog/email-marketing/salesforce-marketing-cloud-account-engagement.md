@@ -3,7 +3,7 @@ title: Kundenkontointeraktion in Salesforce Marketing Cloud
 description: Erfahren Sie, wie Sie mit dem Salesforce Marketing Cloud Account Engagement (ehemals Pardot)-Ziel Ihre Kontodaten exportieren und innerhalb der Salesforce Marketing Cloud Account Engagement für Ihre Geschäftsanforderungen aktivieren können.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 30%
@@ -72,7 +72,7 @@ Siehe Abschnitt [!DNL Marketing Cloud Account Engagement] [Grenzwerte](https://d
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL Marketing Cloud Account Engagement] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|

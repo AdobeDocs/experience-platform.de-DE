@@ -3,7 +3,7 @@ keywords: crm;CRM;CRM-Ziele;Outreach;CRM-Ziel erreichen
 title: Outreach-Verbindung
 description: Mit dem Ziel Outreach können Sie Ihre Kontodaten exportieren und für Ihre geschäftlichen Anforderungen in Outreach aktivieren.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 43%
@@ -71,7 +71,7 @@ Siehe Abschnitt [[!DNL Outreach] Dokumentation](https://api.outreach.io/api/v2/d
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Outreach] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL Outreach] unterstützt die Aktualisierung von Identitäten, die in der folgenden Tabelle beschrieben werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Zielgruppenidentität | Beschreibung | Zu beachten |
 |---|---|---|

@@ -2,7 +2,7 @@
 title: Adobe Advertising Cloud DSP-Verbindung
 description: Adobe Advertising Cloud DSP ist ein integriertes Ziel für Adobe Real-time Customer Data Platform, mit dem Sie authentifizierte Erstanbieterzielgruppen für zugelassene Advertiser und Benutzer zur Kampagnenaktivierung freigeben können.
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 25%
@@ -41,7 +41,7 @@ Eine Medienagentur mit einem DSP-Konto führt eine Retargeting-Kampagne im Auftr
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Das Adobe Advertising Cloud DSP-Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+Das Adobe Advertising Cloud DSP-Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|

@@ -2,9 +2,9 @@
 title: CSV-Vorlage zum Schema Conversion API-Endpunkt
 description: Mit dem Endpunkt /rpc/csv2schema in der Schema Registry-API können Sie CSV-Vorlagen verwenden, um automatisch Experience-Datenmodell (XDM)-Schemas zu erstellen.
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
-source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '849'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ Um diesen Endpunkt zu nutzen, müssen Sie zunächst eine CSV-Datei mit entsprech
 
 | CSV-Kopfzeilenposition | CSV-Headername | Erforderlich/Optional | Beschreibung |
 | --- | --- | --- | --- |
-| 1 | `isIgnored` | Optional | Wenn eingeschlossen, setzen Sie auf `true`gibt an, dass das Feld nicht bereit für den API-Upload ist und ignoriert werden sollte. |
+| 1 | `isIgnored` | Optional | Wenn eingeschlossen und auf `true`gibt an, dass das Feld nicht bereit für den API-Upload ist und ignoriert werden sollte. |
 | 2 | `isCustom` | Erforderlich | Gibt an, ob das Feld ein benutzerdefiniertes Feld ist oder nicht. |
 | 3 | `fieldGroupId` | Optional | Die ID der Feldergruppe, der ein benutzerdefiniertes Feld zugeordnet werden soll. |
 | 4 | `fieldGroupName` | (Siehe Beschreibung) | Der Name der Feldergruppe, mit der dieses Feld verknüpft werden soll.<br><br>Optional für benutzerdefinierte Felder, die keine vorhandenen Standardfelder erweitern. Wenn das Feld leer gelassen wird, weist das System automatisch einen Namen zu.<br><br>Erforderlich für Standardfelder oder benutzerdefinierte Felder, die Standardfeldgruppen erweitern, die zum Abfragen der `fieldGroupId`. |
@@ -34,9 +34,9 @@ Um diesen Endpunkt zu nutzen, müssen Sie zunächst eine CSV-Datei mit entsprech
 | 7 | `fieldDescription` | Optional | Eine Beschreibung für das Feld. Kann auch ein Alias für die Beschreibung sein, sofern vorhanden. |
 | 8 | `dataType` | (Siehe Beschreibung) | Gibt die [Basistyp](../schema/field-constraints.md#basic-types) für das Feld. Erforderlich für alle benutzerdefinierten Felder.<br><br>Wenn `dataType` auf `object`, entweder `properties` oder `$ref` muss auch für dieselbe Zeile definiert werden, aber nicht für beide. |
 | 9 | `isRequired` | Optional | Gibt an, ob das Feld für die Datenerfassung erforderlich ist. |
-| 10 | `isArray` | Optional | Gibt an, ob das Feld ein Array von `dataType`. |
+| 10 | `isArray` | Optional | Gibt an, ob das Feld ein Array der angegebenen `dataType`. |
 | 11 | `isIdentity` | Optional | Gibt an, ob das Feld ein Identitätsfeld ist. |
-| 12 | `identityNamespace` | Erforderlich, wenn `isIdentity` ist wahr | Die [Identitäts-Namespace](../../identity-service/namespaces.md) für das Identitätsfeld. |
+| 12 | `identityNamespace` | Erforderlich, wenn `isIdentity` ist wahr | Die [Identitäts-Namespace](../../identity-service/features/namespaces.md) für das Identitätsfeld. |
 | 13 | `isPrimaryIdentity` | Optional | Gibt an, ob das Feld die primäre Identität für das Schema ist. |
 | 14 | `minimum` | Optional | (Nur für numerische Felder) Der Mindestwert für das Feld. |
 | 15 | `maximum` | Optional | (Nur für numerische Felder) Der Maximalwert für das Feld. |

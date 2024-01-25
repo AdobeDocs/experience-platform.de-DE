@@ -3,7 +3,7 @@ title: TikTok-Verbindung
 description: Erstellen Sie benutzerdefinierte Zielgruppen in TikTok mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 39%
@@ -36,7 +36,7 @@ Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experi
 
 ## Unterstützte Identitäten {#supported-identities}
 
-TikTok unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+TikTok unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|

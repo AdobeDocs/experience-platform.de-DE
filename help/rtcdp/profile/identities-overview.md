@@ -4,7 +4,7 @@ title: Identitäten in Real-time Customer Data Platform
 description: Mit Adobe Experience Platform Identity Service können Sie sich einen genaueren Überblick über Kundinnen und Kunden und ihr Verhalten verschaffen, indem Sie Identitäten über Geräte und Systeme hinweg zusammenführen.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 81%
@@ -19,7 +19,7 @@ Nun können Sie erkennen, dass nicht fünf verschiedene Kunden über fünf versc
 
 ## Identitäts-Namespaces
 
-Identity-Namespaces sind eine [!DNL Identity Service]-Komponente und dienen als Indikatoren, die zusätzlichen Kontext für Kundenidentitäten bereitstellen. Ein Beispiel für einen häufig verwendeten ID-Namespace wäre „E-Mail“, sodass Sie bei Verwendung derselben E-Mail-Adresse auf unterschiedlichen Websites verschiedene Identitäten miteinander verknüpfen können, die jeweils eine Unique-Customer-ID aufweisen. So können Sie erkennen, dass die verschiedenen Identitäten in Wahrheit derselben Kundin oder demselben Kunden gehören. Mit [!DNL Experience Platform] können Sie ID-Namespaces verwenden, um in der Benutzeroberfläche nach einzelnen Profilen zu suchen. Weiterführende Informationen zum Anzeigen von Profilen finden Sie in der [Übersicht zum Durchsuchen von Profilen](profile-browse.md). Weiterführende Informationen zu Identitäts-Namespaces finden Sie unter [Identitäts-Namespaces – Übersicht](../../identity-service/namespaces.md).
+Identity-Namespaces sind eine [!DNL Identity Service]-Komponente und dienen als Indikatoren, die zusätzlichen Kontext für Kundenidentitäten bereitstellen. Ein Beispiel für einen häufig verwendeten ID-Namespace wäre „E-Mail“, sodass Sie bei Verwendung derselben E-Mail-Adresse auf unterschiedlichen Websites verschiedene Identitäten miteinander verknüpfen können, die jeweils eine Unique-Customer-ID aufweisen. So können Sie erkennen, dass die verschiedenen Identitäten in Wahrheit derselben Kundin oder demselben Kunden gehören. Mit [!DNL Experience Platform] können Sie ID-Namespaces verwenden, um in der Benutzeroberfläche nach einzelnen Profilen zu suchen. Weiterführende Informationen zum Anzeigen von Profilen finden Sie in der [Übersicht zum Durchsuchen von Profilen](profile-browse.md). Weiterführende Informationen zu Identitäts-Namespaces finden Sie unter [Identitäts-Namespaces – Übersicht](../../identity-service/features/namespaces.md).
 
 ## Identitätsdiagramme
 

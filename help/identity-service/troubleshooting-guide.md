@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Identity Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2166'
 ht-degree: 100%
 
 ---
@@ -73,7 +73,7 @@ Eine schrittweise Anleitung zum Definieren eines Namespace beim Erstellen eines 
 
 ## Welche Identitäts-Namespaces stellt Experience Platform standardmäßig bereit? {#standard-namespaces}
 
-Standardmäßige Identity-Namespaces sind Namespaces, die für alle Organisationen verfügbar sind. Eine vollständige Liste der verfügbaren Standard-Namespaces finden Sie in der [Übersicht zu Identity-Namespaces](./namespaces.md).
+Standardmäßige Identity-Namespaces sind Namespaces, die für alle Organisationen verfügbar sind. Eine vollständige Liste der verfügbaren Standard-Namespaces finden Sie in der [Übersicht zu Identity-Namespaces](./features/namespaces.md).
 
 ## Wo finde ich die Liste der verfügbaren Namespaces für meine Organisation?
 

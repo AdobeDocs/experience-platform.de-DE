@@ -2,10 +2,10 @@
 title: Datensätze löschen
 description: Erfahren Sie, wie Sie Datensätze in der Benutzeroberfläche von Adobe Experience Platform löschen.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 26%
+source-wordcount: '1557'
+ht-degree: 25%
 
 ---
 
@@ -27,7 +27,7 @@ Das Löschen von Datensätzen setzt ein Verständnis der Funktionsweise von Iden
 Weitere Informationen zu Identitäten in Platform finden Sie in der folgenden Dokumentation:
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Führt Identitäten zwischen Geräten und Systemen zusammen und verknüpft Datensätze anhand der Identitätsfelder, die von den entsprechenden XDM-Schemas definiert werden.
-* [Identitäts-Namespaces](../../identity-service/namespaces.md): Identitäts-Namespaces definieren die verschiedenen Typen of Identitätsinformationen, die sich auf eine einzelne Person beziehen können und eine erforderliche Komponente für jedes Identitätsfeld sind.
+* [Identitäts-Namespaces](../../identity-service/features/namespaces.md): Identitäts-Namespaces definieren die verschiedenen Typen of Identitätsinformationen, die sich auf eine einzelne Person beziehen können und eine erforderliche Komponente für jedes Identitätsfeld sind.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Verwendet Identitätsdiagramme, um einheitliche Verbraucherprofile auf der Grundlage aggregierter Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
 * [Experience-Datenmodell (XDM)](../../xdm/home.md): Stellt Standarddefinitionen und -strukturen für Platform-Daten durch die Verwendung von Schemas bereit. Alle Platform-Datensätze entsprechen einem bestimmten XDM-Schema und das Schema definiert, welche Felder Identitäten sind.
 * [Identitätsfelder](../../xdm/ui/fields/identity.md): Erfahren Sie, wie ein Identitätsfeld in einem XDM-Schema definiert wird.
@@ -125,7 +125,7 @@ Um Identitäten manuell einzugeben, wählen Sie **[!UICONTROL Identität hinzuf�
 
 ![Der Workflow für die Anfrageerstellung mit dem [!UICONTROL Identität hinzufügen] hervorgehoben.](../images/ui/record-delete/add-identity.png)
 
-Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben können. Wählen Sie unter **[!UICONTROL Primäre Identität]** im Dropdown-Menü den Identitätstyp aus. Under **[!UICONTROL Identitätswert]**, geben Sie den primären Identitätswert für den Datensatz an.
+Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben können. under **[!UICONTROL Primäre Identität]** verwenden, wählen Sie im Dropdown-Menü den Identitätstyp aus. Under **[!UICONTROL Identitätswert]**, geben Sie den primären Identitätswert für den Datensatz an.
 
 ![Der Workflow für die Anfrageerstellung mit einem manuell hinzugefügten Identitätsfeld.](../images/ui/record-delete/identity-added.png)
 

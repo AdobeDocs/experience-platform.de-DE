@@ -4,7 +4,7 @@ title: LINE-Verbindung
 description: Mit dem LINE-Ziel können Sie Profile zu Ihrer Platform-Audience hinzufügen und personalisierte Erlebnisse für verbundene Benutzer bereitstellen.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 41%
@@ -54,7 +54,7 @@ Siehe Abschnitt [[!DNL LINE] Dokumentation](https://developers.line.biz/en/docs/
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL LINE] unterstützt die Aktualisierung und den Export von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL LINE] unterstützt die Aktualisierung und den Export von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung |
 |---|---|

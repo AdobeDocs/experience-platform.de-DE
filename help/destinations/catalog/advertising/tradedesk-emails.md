@@ -3,7 +3,7 @@ title: (Beta) Verbindung zwischen Trade Desk und CRM
 description: Aktivieren Sie Profile in Ihrem Trade Desk-Konto für Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 18%
@@ -38,11 +38,11 @@ Vor der Aktivierung von Zielgruppen in [!DNL The Trade Desk]müssen Sie Ihre [!D
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
-Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen. Bitte lesen Sie die [Übersicht über Identity Namespace](/help/identity-service/namespaces.md) für weitere Informationen.
+Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen. Bitte lesen Sie die [Übersicht über Identity Namespace](/help/identity-service/features/namespaces.md) für weitere Informationen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL The Trade Desk] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt Anforderungen für die ID-Zuordnung und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen.
 

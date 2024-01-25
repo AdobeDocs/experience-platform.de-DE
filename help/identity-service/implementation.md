@@ -1,10 +1,10 @@
 ---
 title: Implementierungshandbuch für Identity Service
 description: Erfahren Sie, wie an Adobe Experience Platform bereitgestellte Daten verarbeitet werden, bevor sie von Identity Service zum Erstellen von Identitätsdiagrammen verwendet werden.
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 66%
+source-wordcount: '581'
+ht-degree: 64%
 
 ---
 
@@ -22,7 +22,7 @@ Je nach der Strategie Ihres Unternehmens zur Datenerfassung bestimmen die Datenf
 
 ## Zusätzliche Identitäts-Namespaces erstellen
 
-Zwar bietet Experience Platform eine Vielzahl von Standard-Namespaces, doch müssen Sie möglicherweise zusätzliche Namespaces erstellen, um Ihre Identitäten korrekt zu kategorisieren. Weitere Informationen finden Sie im Handbuch unter [Erstellen benutzerdefinierter Namespaces für Ihre Organisation](./namespaces.md).
+Zwar bietet Experience Platform eine Vielzahl von Standard-Namespaces, doch müssen Sie möglicherweise zusätzliche Namespaces erstellen, um Ihre Identitäten korrekt zu kategorisieren. Weitere Informationen finden Sie im Handbuch unter [Erstellen benutzerdefinierter Namespaces für Ihre Organisation](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ Wenn Sie beispielsweise Telefonnummernfelder als Identitätsfelder kennzeichnen,
 >
 >* Felder vom Typ Array und Zuordnung werden nicht unterstützt und können nicht als Identitätsfelder markiert und gekennzeichnet werden.
 >* Der Namespace der resultierenden Identitäten wird zum Zeitpunkt der Kennzeichnung des Felds bereitgestellt.
+
+Weitere Informationen finden Sie im Handbuch unter [Identitätsfelder in der Benutzeroberfläche definieren](../xdm/ui/fields/identity.md).
 
 ## Datensatz für Identity Service konfigurieren
 

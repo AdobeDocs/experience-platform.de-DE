@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identitätsfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein Identitätsfeld definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 16%
@@ -20,7 +20,7 @@ Im Experience-Datenmodell (XDM) stellt ein Identitätsfeld ein Feld dar, das zur
 Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Identitätsdiagrammen für Kunden in Platform. Dies hat letztendlich Auswirkungen darauf, wie Echtzeit-Kundenprofil verschiedene Datenfragmente zusammenführt, um eine vollständige Ansicht des Kunden zu erhalten. Bevor Sie Identitätsfelder in Ihren Schemas definieren, lesen Sie die folgende Dokumentation, um mehr über die wichtigsten Dienste und Konzepte im Zusammenhang mit Identitätsfeldern zu erfahren:
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Führt Identitäten zwischen Geräten und Systemen zusammen und verknüpft Datensätze anhand der Identitätsfelder, die von den entsprechenden XDM-Schemas definiert werden.
-   * [Identity-Namespaces](../../../identity-service/namespaces.md): In Identity-Namespaces werden die verschiedenen Arten von Identitätsinformationen definiert, die sich auf eine einzelne Person beziehen können. Sie sind eine erforderliche Komponente für jedes Identitätsfeld.
+   * [Identity-Namespaces](../../../identity-service/features/namespaces.md): In Identity-Namespaces werden die verschiedenen Arten von Identitätsinformationen definiert, die sich auf eine einzelne Person beziehen können. Sie sind eine erforderliche Komponente für jedes Identitätsfeld.
 * [Echtzeit-Kundenprofil](../../../profile/home.md): Nutzen von Diagrammen zur Kundenidentität, um ein einheitliches Verbraucherprofil basierend auf aggregierten Daten aus mehreren Quellen bereitzustellen, die nahezu in Echtzeit aktualisiert werden.
 
 ## Definieren eines Identitätsfelds {#define-a-identity-field}
@@ -56,6 +56,6 @@ Wenn Sie eine primäre Identität für das Schema definiert haben, können Sie j
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie ein Identitätsfeld in der Benutzeroberfläche definieren. Da Daten mit diesem Schema erfasst werden, werden Ihre Identitätsdiagramme aktualisiert, um die Identitätsfelder des Schemas widerzuspiegeln. Siehe Handbuch im Abschnitt [Identitätsdiagramm-Viewer](../../../identity-service/ui/identity-graph-viewer.md) , um zu erfahren, wie Sie das private Diagramm Ihres Unternehmens in der Benutzeroberfläche untersuchen.
+In diesem Handbuch wurde beschrieben, wie Sie ein Identitätsfeld in der Benutzeroberfläche definieren. Da Daten mit diesem Schema erfasst werden, werden Ihre Identitätsdiagramme aktualisiert, um die Identitätsfelder des Schemas widerzuspiegeln. Siehe Handbuch im Abschnitt [Identitätsdiagramm-Viewer](../../../identity-service/features/identity-graph-viewer.md) , um zu erfahren, wie Sie das private Diagramm Ihres Unternehmens in der Benutzeroberfläche untersuchen.
 
 Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) Informationen zum Definieren anderer XDM-Feldtypen im [!DNL Schema Editor].

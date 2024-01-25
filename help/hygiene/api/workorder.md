@@ -2,10 +2,10 @@
 title: Work Order API Endpoint
 description: Mit dem /workorder -Endpunkt in der Data Hygiene API können Sie Löschaufgaben für Identitäten programmgesteuert verwalten.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 58%
+source-wordcount: '1281'
+ht-degree: 56%
 
 ---
 
@@ -84,10 +84,10 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `action` | Die auszuführende Aktion. Der Wert muss auf `delete_identity` zum Löschen von Datensätzen. |
-| `datasetId` | Wenn Sie Identitäten aus einem einzelnen Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie Identitäten aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss für das zugeordnete Experience-Datenmodell-Schema (XDM) des Datensatzes eine primäre Identität definiert sein. Wenn der Datensatz keine primäre Identität hat, muss er über eine Identitätszuordnung verfügen, damit er durch eine Data Lifecycle-Anfrage geändert werden kann.<br>Wenn eine Identitätszuordnung vorhanden ist, wird sie als Feld der obersten Ebene mit dem Namen `identityMap`.<br>Beachten Sie, dass eine Datensatzzeile in ihrer Identitätszuordnung zwar viele Identitäten aufweisen kann, jedoch nur eine als primär markiert werden kann. `"primary": true` muss enthalten sein, um die `id` , um eine primäre Identität zuzuordnen. |
+| `datasetId` | Wenn Sie Identitäten aus einem einzelnen Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie Identitäten aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss das zugeordnete Experience-Datenmodell (XDM)-Schema des Datensatzes über eine primäre Identität verfügen. Wenn der Datensatz keine primäre Identität hat, muss er über eine Identitätszuordnung verfügen, damit er durch eine Data Lifecycle-Anfrage geändert werden kann.<br>Wenn eine Identitätszuordnung vorhanden ist, wird sie als Feld der obersten Ebene mit dem Namen `identityMap`.<br>Beachten Sie, dass eine Datensatzzeile in ihrer Identitätszuordnung zwar viele Identitäten aufweisen kann, jedoch nur eine als primär markiert werden kann. `"primary": true` muss enthalten sein, um die `id` , um eine primäre Identität zuzuordnen. |
 | `displayName` | Der Anzeigename für die Löschanfrage zum Datensatz. |
 | `description` | Eine Beschreibung für die Anfrage zum Löschen von Datensätzen. |
-| `identities` | Ein Array mit den Identitäten von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einem [Identity-Namespace](../../identity-service/namespaces.md) und einem Wert:<ul><li>`namespace`: enthält die einzige Zeichenfolgen-Eigenschaft `code`, die den Identity-Namespace darstellt. </li><li>`id`: der Identitätswert.</ul>Wenn `datasetId` einen einzelnen Datensatz spezifiziert, muss jede Entität unter `identities` denselben Identity-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL` festgelegt ist, ist das `identities`-Array nicht auf einen einzigen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anfragen sind aber auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) spezifiziert. |
+| `identities` | Ein Array mit den Identitäten von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einem [Identity-Namespace](../../identity-service/features/namespaces.md) und einem Wert:<ul><li>`namespace`: enthält die einzige Zeichenfolgen-Eigenschaft `code`, die den Identity-Namespace darstellt. </li><li>`id`: der Identitätswert.</ul>Wenn `datasetId` einen einzelnen Datensatz spezifiziert, muss jede Entität unter `identities` denselben Identity-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL` festgelegt ist, ist das `identities`-Array nicht auf einen einzigen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anfragen sind aber auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) spezifiziert. |
 
 {style="table-layout:auto"}
 

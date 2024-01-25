@@ -3,9 +3,9 @@ title: Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-
 description: Erfahren Sie, wie Sie neue Kundinnen und Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 86%
 
 ---
@@ -65,7 +65,7 @@ Lesen Sie die folgenden Abschnitte, die Links zu weiterführender Dokumentation 
 
 Wenn Sie die Schritte zur Implementierung des Anwendungsfalls ausführen, werden Sie die folgenden Real-Time CDP-Funktionen und Benutzeroberflächenelemente nutzen (aufgelistet in der Reihenfolge, in der Sie sie verwenden werden). Vergewissern Sie sich, dass Sie über die erforderlichen attributbasierten Zugriffssteuerungsberechtigungen für alle diese Bereiche verfügen, oder bitten Sie Ihre Systemadmins, Ihnen die erforderlichen Berechtigungen zu erteilen.
 
-* [Identitäten](/help/identity-service/namespaces.md)
+* [Identitäten](/help/identity-service/features/namespaces.md)
 * [Schemata](/help/xdm/home.md)
 * [Datennutzungskennzeichnungen](/help/data-governance/labels/overview.md)
 * [Datensätze](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Erstellen Sie zunächst einen neuen Identitätstyp für die Profile, die Sie vom
 
 ![Erstellen Sie einen neuen Identity-Namespace für die Partner-ID.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](/help/identity-service/namespaces.md).
+* Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](/help/identity-service/features/namespaces.md).
 * Lesen Sie die Anweisungen zum [Definieren von Identitätsfeldern](/help/xdm/ui/fields/identity.md) in der Experience Platform-Benutzeroberfläche.
 
 #### Erstellen eines neues Schemas mit der Klasse **[!UICONTROL XDM Individual Prospect Profile]**

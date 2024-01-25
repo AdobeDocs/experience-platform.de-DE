@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 71%
@@ -206,7 +206,7 @@ Wenn Sie nicht sicher sind, ob ein bestimmtes Feld für die Aufnahme in ein Sche
 
 In Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kundinnen und Kunden aus mehreren Datenquellen zusammenzufügen. Obwohl ein Schema mehrere Felder haben kann, die als Identitäten markiert sind, muss eine einzige primäre Identität definiert werden, damit das Schema zur Verwendung in aktiviert werden kann [!DNL Real-Time Customer Profile]. Ausführlichere Informationen zum Anwendungsfall für diese Felder finden Sie im Abschnitt zu [Identitätsfeldern](./composition.md#identity) in den Grundlagen der Schemakomposition.
 
-Beim Entwerfen Ihrer Schemas sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen, Telefonnummern, Konto-IDs und [ECID](../../identity-service/ecid.md) der Kundschaft.
+Beim Entwerfen Ihrer Schemas sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen, Telefonnummern, Konto-IDs und [ECID](../../identity-service/features/ecid.md) der Kundschaft.
 
 ### Schemafeldgruppen für Adobe-Anwendungen {#adobe-application-schema-field-groups}
 

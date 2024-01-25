@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;ECID;ecid
 solution: Experience Platform
-title: Identitätsdaten für Datenschutzanfragen
+title: Identitätsdaten für Datenschutzanforderungen
 description: In diesem Dokument finden Sie allgemeine Anweisungen zur Konfiguration Ihrer Datenvorgänge und zur Nutzung der Adobe-Technologien, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 45%
+source-wordcount: '632'
+ht-degree: 40%
 
 ---
 
 # Identitätsdaten für Datenschutzanfragen
 
-In Adobe Experience Platform [!DNL Privacy Service] Um Kundenanfragen für ihre privaten Daten zu verarbeiten (einschließlich Zugriffs-, Lösch- oder Verkaufs-Opt-out-Anfragen), müssen eindeutige Kennungen bereitgestellt werden, die einen bestimmten Kunden mit seinen gespeicherten privaten Daten in Ihren Adobe Experience Cloud-fähigen Anwendungen verknüpfen. [!DNL Privacy Service] verwendet diese Kennungen dann, um alle unter der Kundenidentität in gespeicherten Daten zu erfassen und gemäß der Kundenanfrage zu verarbeiten.[!DNL Experience Cloud]
+In Adobe Experience Platform [!DNL Privacy Service] Um Kundenanfragen für ihre privaten Daten zu verarbeiten (einschließlich Zugriffs-, Lösch- oder Verkaufs-Opt-out-Anfragen), müssen eindeutige Kennungen bereitgestellt werden, die einen bestimmten Kunden mit seinen gespeicherten privaten Daten in Ihren Adobe Experience Cloud-fähigen Anwendungen verknüpfen. [!DNL Privacy Service] verwendet diese IDs dann, um alle Daten zu erfassen, die unter der Kundenidentität in [!DNL Experience Cloud]und verarbeiten Sie sie entsprechend der Kundenanfrage.
 
 In diesem Dokument finden Sie allgemeine Anweisungen zur Konfiguration Ihrer Datenvorgänge und zur Nutzung der Adobe-Technologien, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
 
 ## Identitäten und Namespaces
 
-Wenn ein Kunde mit Ihrer Marke über mehrere verschiedene Kanal interagieren kann, kann es schwierig sein, die unterschiedlichen Kennungen, die aus diesen vielen Interaktionen erfasst werden, miteinander in Einklang zu bringen. Dies wiederum kann es schwierig machen, zu bestimmen, welche Daten zu einer bestimmten Person in Ihrer [!DNL Experience Cloud] Anwendungen.
+Wenn ein Kunde mit Ihrer Marke über mehrere verschiedene Kanäle interagieren kann, kann es schwierig sein, die unterschiedlichen Kennungen, die aus diesen vielen Interaktionen erfasst werden, miteinander abzustimmen. Dies wiederum kann es schwierig machen, zu bestimmen, welche Daten zu einer bestimmten Person in Ihrer [!DNL Experience Cloud] Anwendungen.
 
-Beispielsweise bei der Verarbeitung von Kundendatenanfragen in [!DNL Privacy Service]kann eine Identität einen Cookie-Wert darstellen, der unter einer von der Adobe gesteuerten Domäne gesetzt wird, einen Cookie-Wert unter einer Drittanbieterdomäne, der für Adobe freigegeben ist, oder eine benutzerdefinierte Kennung, die Sie explizit in Ihrem Unternehmen definieren.
+Beispielsweise bei der Verarbeitung von Kundendatenanfragen in [!DNL Privacy Service]kann eine Identität einen Cookie-Wert darstellen, der unter einer von Adobe gesteuerten Domäne gesetzt wird, einen Cookie-Wert unter einer Drittanbieterdomäne, der für Adobe freigegeben ist, oder eine benutzerdefinierte Kennung, die Sie explizit in Ihrem Unternehmen definieren.
 
 Daher ist es erforderlich, dass jede Identität an [!DNL Privacy Service] wird von einem Namespace begleitet, der Kontext bietet, indem der Identitätswert mit seinem Ursprungssystem in Beziehung gesetzt wird. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
 
-Adobe Experience Platform Identity Service verwaltet einen Speicher mit global definierten und benutzerdefinierten Identitäts-Namespaces. Weitere Informationen zu Namespaces finden Sie in [Identitäts-Namespace – Übersicht](../identity-service/namespaces.md). Für eine Liste von Standard-Namespaces und Namespace-Kennzeichnungen, die häufig in [!DNL Privacy Service], siehe [Anhang](api/appendix.md) im API-Handbuch.
+Adobe Experience Platform Identity Service verwaltet einen Speicher mit global definierten und benutzerdefinierten Identitäts-Namespaces. Weitere Informationen zu Namespaces finden Sie in [Identitäts-Namespace – Übersicht](../identity-service/features/namespaces.md). Für eine Liste von Standard-Namespaces und Namespace-Kennzeichnungen, die häufig in [!DNL Privacy Service], siehe [Anhang](api/appendix.md) im API-Handbuch.
 
 ## ECID- und Opt-in-Service
 
@@ -39,7 +39,7 @@ Sobald Ihren Site-Besuchern ECIDs zugewiesen wurden, können Sie die Adobe [!DNL
 
 Die [!DNL Adobe Privacy JavaScript Library] bietet mehrere Funktionen, mit denen Sie Kundenidentitäten abrufen und entfernen können, die im Browser gespeichert sind. Die Bibliothek kann so konfiguriert werden, dass Identitätsinformationen aus verschiedenen Adobe-Anwendungen, einschließlich ECID, abgerufen werden können. Durch die Verwendung von Rückrufen oder Zusagen können Sie erfolgreich abgerufene IDs programmgesteuert verarbeiten und an die [!DNL Privacy Service] API.
 
-Weitere Informationen finden Sie unter [!DNL Privacy JS Library], einschließlich Codebeispielen für verschiedene gängige Anwendungsfälle, finden Sie im Abschnitt [Übersicht zur Privacy JS Library](js-library.md).
+Weitere Informationen finden Sie unter [!DNL Privacy JS Library], einschließlich Codebeispielen für verschiedene gängige Anwendungsfälle, siehe [Übersicht zur Privacy JS Library](js-library.md).
 
 ## Nächste Schritte
 

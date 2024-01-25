@@ -4,7 +4,7 @@ title: Qualtrics Automation
 description: Synchronisieren Sie Erlebnisse und operative Kundendaten, um die Personalisierung skaliert zu entsperren. Verwenden Sie die Aggregation mehrerer Quellen operativer Daten in Adobe Experience Platform als Input für Qualtrics Experience iD, um Ihre Kunden besser zu verstehen und zielgerichtete Kontakte zu ermöglichen, um die Lücke im Hinblick auf das Verständnis von Intent-, Emotions- und Erlebnistreibern zu schließen.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 29%
@@ -57,7 +57,7 @@ Im Folgenden finden Sie die erforderlichen Schritte zum Abrufen eines API-Tokens
 
 ## Unterstützte Identitäten {#supported-identities}
 
-*Qualtrics Automation* unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+*Qualtrics Automation* unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|

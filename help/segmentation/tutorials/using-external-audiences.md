@@ -5,10 +5,10 @@ description: In diesem Tutorial erfahren Sie, wie Sie externe Zielgruppen mit Ad
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 5%
+source-wordcount: '1724'
+ht-degree: 4%
 
 ---
 
@@ -46,7 +46,7 @@ Segmentdefinitionen umfassen Informationen wie den Namen, die Beschreibung, den 
 
 Der erste Schritt zur Verwendung externer Zielgruppen besteht in der Erstellung eines Identitäts-Namespace. Identitäts-Namespaces ermöglichen es Platform, zu verknüpfen, woher eine Zielgruppe stammt.
 
-Befolgen Sie die Anweisungen im Abschnitt [Identitäts-Namespace-Handbuch](../../identity-service/namespaces.md#manage-namespaces). Fügen Sie beim Erstellen Ihres Identitäts-Namespace die Quelldetails zum Identitäts-Namespace hinzu und markieren Sie dessen [!UICONTROL Typ] as a **[!UICONTROL Personenidentifizierung]**.
+Befolgen Sie die Anweisungen im Abschnitt [Identitäts-Namespace-Handbuch](../../identity-service/features/namespaces.md#manage-namespaces). Fügen Sie beim Erstellen Ihres Identitäts-Namespace die Quelldetails zum Identitäts-Namespace hinzu und markieren Sie dessen [!UICONTROL Typ] as a **[!UICONTROL Personenidentifizierung]**.
 
 ![Die Kennung ohne Person wird im Modal Identitäts-Namespace erstellen hervorgehoben.](../images/tutorials/external-audiences/identity-namespace-info.png)
 

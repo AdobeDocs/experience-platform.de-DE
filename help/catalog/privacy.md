@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1429'
 ht-degree: 73%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Ku
 
 [!DNL Identity Service] verwaltet einen Speicher global definierter (standardmäßiger) und benutzerdefinierter Identitäts-Namespaces. Standardmäßige Namespaces (z. B. „E-Mail“ und „ECID“) stehen für alle Unternehmen zur Verfügung, während Ihr Unternehmen außerdem benutzerdefinierte Namespaces erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
-Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] finden Sie unter [Identitäts-Namespaces – Übersicht](../identity-service/namespaces.md).
+Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] finden Sie unter [Identitäts-Namespaces – Übersicht](../identity-service/features/namespaces.md).
 
 ## Hinzufügen von Identitätsdaten zu Datensätzen
 
@@ -61,7 +61,7 @@ Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Date
 
 ### Verwenden der Benutzeroberfläche {#identity-ui}
 
-In der [!DNL Experience Platform ]-Benutzeroberfläche können Sie mit dem Arbeitsbereich **[!UICONTROL Schemata]** Ihre vorhandenen XDM-Schemata bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum [Einrichten eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im Tutorial [!DNL Schema Editor].
+In der [!DNL Experience Platform]-Benutzeroberfläche können Sie mit dem Arbeitsbereich **[!UICONTROL Schemata]** Ihre vorhandenen XDM-Schemata bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum [Einrichten eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im Tutorial [!DNL Schema Editor].
 
 Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt haben, können Sie mit dem nächsten Abschnitt zum [Senden von Datenschutzanfragen](#submit) fortfahren.
 
@@ -147,13 +147,13 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanfragen für den Da
 
 ### Verwenden der Benutzeroberfläche
 
-Stellen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche sicher, dass Sie **[!UICONTROL AEP Data Lake]** under **[!UICONTROL Produkte]** um Aufträge für Daten zu verarbeiten, die im Data Lake gespeichert sind.
+Wählen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche **[!UICONTROL AEP Data Lake]** under **[!UICONTROL Produkte]** um Aufträge für Daten zu verarbeiten, die im Data Lake gespeichert sind.
 
 ![Bild, das das im Dialogfeld zur Erstellung von Datenschutzanfragen ausgewählte Data Lake-Produkt anzeigt](./images/privacy/product-value.png)
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für den Data Lake müssen `unregistered` für `type` und einen `namespace` -Wert, der mit einem [Datenschutzbezeichnungen](#privacy-labels) die zu den entsprechenden Datensätzen hinzugefügt wurden.
+Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für den Data Lake müssen `unregistered` für ihre `type` und einen `namespace` -Wert, der mit einem [Datenschutzbezeichnungen](#privacy-labels) die zu den entsprechenden Datensätzen hinzugefügt wurden.
 
 Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Bei Anforderungen an den Data Lake muss das Array den Wert enthalten `aepDataLake`.
 

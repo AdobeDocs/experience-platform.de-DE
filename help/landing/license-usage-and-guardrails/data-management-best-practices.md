@@ -2,10 +2,10 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 72%
+source-wordcount: '2264'
+ht-degree: 73%
 
 ---
 
@@ -124,7 +124,7 @@ Der Profilspeicher besteht aus den folgenden Komponenten:
 | Profilfragmente | Jedes Kundenprofil besteht aus mehreren **Profilfragmenten**, die zu einer einzigen Ansicht dieses Kunden zusammengefügt werden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere **Profilfragmente**, die sich auf diesen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie mithilfe des Identitätsdiagramms zusammengeführt, sodass ein einziges Profil für diesen Kunden entsteht. **Profilfragmente** bestehen aus einem Identity-Namespace als Kennung sowie den zugehörigen Datensatzdaten und/oder Zeitreihedaten. |
 | Datensatzdaten (Attribute) | Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen **Attributen** besteht (auch als **Datensatzdaten** bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. **Datensatzdaten** haben normalerweise geringes/mäßiges Volumen, sind aber über einen langen Zeitraum hinweg wertvoll. |
 | Zeitreihedaten (Verhalten) | **Zeitreihedaten** liefern Informationen zum Benutzerverhalten. Zeitreihedaten werden durch die Standard-Schemaklasse Experience-Datenmodell (XDM) [!DNL ExperienceEvent] dargestellt. Sie beschreiben Ereignisse wie etwa das Hinzufügen eines Artikels zu einem Warenkorb, das Klicken auf einen Link, das Abspielen eines Videos usw. Der Wert der Verhaltensdaten kann mit der Zeit abnehmen. |
-| Identity-Namespace (Identitäten) | Wenn Kundendaten erfasst werden, werden sie mithilfe von **Identity-Namespaces** zu einem einzigen Profil zusammengeführt. Zudem besteht die Möglichkeit, solche Identitäten zu verknüpfen, sobald mehr Informationen über den jeweiligen Kunden bekannt werden. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identity-Namespaces](../../identity-service/namespaces.md). |
+| Identity-Namespace (Identitäten) | Wenn Kundendaten erfasst werden, werden sie mithilfe von **Identity-Namespaces** zu einem einzigen Profil zusammengeführt. Zudem besteht die Möglichkeit, solche Identitäten zu verknüpfen, sobald mehr Informationen über den jeweiligen Kunden bekannt werden. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identity-Namespaces](../../identity-service/features/namespaces.md). |
 
 {style="table-layout:auto"}
 
@@ -164,7 +164,7 @@ In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktion
 | Funktion | Beschreibung |
 | --- | --- |
 | [Datensätze für ein Profil aktivieren/deaktivieren](../../catalog/datasets/user-guide.md) | Aktivieren oder deaktivieren Sie die Erfassung von Datensätzen in Echtzeit-Kundenprofil. |
-| [Gültigkeitsdauern von Erlebnisereignissen](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit für alle Ereignisse an, die in einen Profil-aktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihr Adobe-Account-Team oder an die Kundenunterstützung, um diese Funktion zu aktivieren. |
+| [Ablauf von Erlebnisereignissen](../../profile/event-expirations.md) | Wenden Sie eine Ablaufzeit für alle Ereignisse an, die in einen Profil-aktivierten Datensatz aufgenommen werden. Wenden Sie sich an Ihr Adobe-Account-Team oder an die Kundenunterstützung, um diese Funktion zu aktivieren. |
 | [Adobe Analytics-Datenvorbereitungsfilter](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Anwenden von [!DNL Kafka]-Filtern zum Ausschließen unnötiger Daten von der Aufnahme |
 | [Quell-Connector-Filter von Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Anwenden von Audience Manager-Quellverbindungsfiltern, um unnötige Daten von der Aufnahme auszuschließen |
 | [Alloy-SDK-Datenfilter](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#fundamentals) | Anwenden von Alloy-Filtern, um unnötige Daten von der Aufnahme auszuschließen |

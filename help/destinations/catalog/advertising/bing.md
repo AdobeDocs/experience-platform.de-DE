@@ -3,7 +3,7 @@ keywords: Werbung; Bierwerbung;
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie im gesamten Microsoft Advertising Network gezielte digitale Kampagnen für Zielgruppen und Zielgruppen ausführen, einschließlich Display-Werbung, Suche und nativ.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 52%
@@ -26,7 +26,7 @@ Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] 
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Microsoft Bing] unterstützt die Aktivierung von Zielgruppen basierend auf den Identitäten, die in der folgenden Tabelle angezeigt werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] unterstützt die Aktivierung von Zielgruppen basierend auf den Identitäten, die in der folgenden Tabelle angezeigt werden. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Identität | Beschreibung |
 |---|---|

@@ -5,10 +5,10 @@ title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Edit
 description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 27%
+source-wordcount: '1158'
+ht-degree: 26%
 
 ---
 
@@ -73,11 +73,11 @@ Das Quellschema &quot;[!DNL Loyalty Members]&quot; basiert auf der Variablen [!D
 
 Das Referenzschema &quot;[!DNL Hotels]&quot; basiert auf einem benutzerspezifischen &quot;[!DNL Hotels]&quot; und enthält Felder, die ein Hotel beschreiben. Um an einer Beziehung teilnehmen zu können, muss das Referenzschema auch über eine primäre Identität verfügen, die definiert und für [!UICONTROL Profil]. In diesem Fall `_tenantId.hotelId`fungiert als primäre Identität für das Schema und verwendet eine benutzerdefinierte[!DNL Hotel ID]&quot;Identitäts-Namespace.
 
-![Aktivieren Sie es für das Profil](../images/tutorials/relationship/hotels.png)
+![Profil aktivieren](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->Informationen zum Erstellen benutzerdefinierter Identitäts-Namespaces finden Sie im Abschnitt [Dokumentation zu Identity Service](../../identity-service/namespaces.md#manage-namespaces).
+>Informationen zum Erstellen benutzerdefinierter Identitäts-Namespaces finden Sie im Abschnitt [Dokumentation zu Identity Service](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Erstellen einer Beziehungsfeldgruppe
 
@@ -103,7 +103,7 @@ Die aktualisierten `preferredHotel` wird auf der Arbeitsfläche unter einem `_te
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## Beziehungsfeld für das Quellschema definieren {#relationship-field}
+## Definieren eines Beziehungsfelds für das Quellschema {#relationship-field}
 
 Sobald in Ihrem Quellschema ein dediziertes Referenzfeld definiert ist, können Sie es als Beziehungsfeld festlegen.
 

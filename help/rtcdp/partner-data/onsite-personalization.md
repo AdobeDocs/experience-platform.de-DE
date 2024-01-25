@@ -3,7 +3,7 @@ title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe 
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -51,7 +51,7 @@ Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere 
    * [Tags](/help/tags/home.md)
    * [Datenströme](/help/datastreams/overview.md)
 * Datenverwaltung in Real-Time CDP
-   * [Identitäten](/help/identity-service/namespaces.md)
+   * [Identitäten](/help/identity-service/features/namespaces.md)
    * [Schemata](/help/xdm/home.md)
    * [Datennutzungskennzeichnungen](/help/data-governance/labels/overview.md)
    * [Datensätze](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ Jetzt können Sie eine Engine für Personalisierung integrieren, um Ihren Websit
 
 Beachten Sie die folgenden Einschränkungen, wenn Sie sich den auf dieser Seite beschriebenen Anwendungsfall ansehen:
 
-* Wenn Sie Partner-IDs verwenden, beachten Sie, dass diese IDs beim Erstellen Ihres [Identitätsdiagramms](/help/identity-service/ui/identity-graph-viewer.md) nicht verwendet werden.
+* Wenn Sie Partner-IDs verwenden, beachten Sie, dass diese IDs beim Erstellen Ihres [Identitätsdiagramms](/help/identity-service/features/identity-graph-viewer.md) nicht verwendet werden.
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 

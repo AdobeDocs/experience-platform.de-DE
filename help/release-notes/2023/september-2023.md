@@ -2,22 +2,22 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 32%
+source-wordcount: '2257'
+ht-degree: 31%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 28. September 2023**
+**Veröffentlichungsdatum: Freitag, 28. September 2023**
 
 Neue Funktionen in Adobe Experience Platform:
 
 - [Berechnete Attribute](#computed-attributes)
 
-Aktualisierungen vorhandener Funktionen in Experience Platform:
+Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 - [Warnhinweise](#alerts)
 - [Dashboards](#dashboards)
@@ -174,7 +174,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung der Aktualisierung |
 | --- | --- | --- |
-| Erweiterung | [!UICONTROL AJO Entity Fields] | Die [[!UICONTROL Markierung für mehrere Varianten]](https://github.com/adobe/xdm/pull/1774/files) wurde hinzugefügt [!UICONTROL AJO-Entitätsfelder] um festzustellen, ob es sich bei der Variante um eine Variante mit mehreren Varianten handelt oder nicht. |
+| Erweiterung | [!UICONTROL AJO-Entitätsfelder] | Die [[!UICONTROL Markierung für mehrere Varianten]](https://github.com/adobe/xdm/pull/1774/files) wurde hinzugefügt [!UICONTROL AJO-Entitätsfelder] um festzustellen, ob es sich bei der Variante um eine Variante mit mehreren Varianten handelt oder nicht. |
 | Datentyp | [!UICONTROL Produktlistenelement] | [[!UICONTROL Rückgabeelement]](https://github.com/adobe/xdm/pull/1773/files) wurde hinzugefügt, um die Informationen zur Autorisierung von rückkehrenden Merchandisen einzuschließen. |
 | Datentyp | Bestellung | [[!UICONTROL Rückkehrinformationen]](https://github.com/adobe/xdm/pull/1773/files) wurde hinzugefügt, um die ausgestellte RMA (Return Merchandise Authorization) einzuschließen. |
 
@@ -190,7 +190,7 @@ Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verbesserungen der Benutzeroberfläche von Identity Service | Verwenden Sie das verbesserte Tool zur Erstellung benutzerdefinierter Namespaces in der Experience Platform-Benutzeroberfläche, um Ihre benutzerdefinierten Namespaces und die zugehörigen Identitätstypen besser zu verwalten. Die erweiterte Identity Service-Benutzeroberfläche bietet Ihnen Folgendes: <ul><li>Kontextuelles Erlebnis: Visuelle Hinweise, Klarheit und Kontext zu dem, was ein Identitäts-Namespace ist und zu Identitätstypen gehören.</li><li>Genauigkeit: Besserer Umgang mit Fehlern, ohne doppelte Identitätsnamen.</li><li>Entdeckung: Zugriff auf die Dokumentation über ein in das Produkt integriertes Dialogfeld.</li></ul> Weitere Informationen finden Sie im Handbuch unter [Erstellen benutzerdefinierter Namespaces](../../identity-service/namespaces.md#create-namespaces). |
+| Verbesserungen der Benutzeroberfläche von Identity Service | Verwenden Sie das verbesserte Tool zur Erstellung benutzerdefinierter Namespaces in der Experience Platform-Benutzeroberfläche, um Ihre benutzerdefinierten Namespaces und die zugehörigen Identitätstypen besser zu verwalten. Die erweiterte Identity Service-Benutzeroberfläche bietet Ihnen Folgendes: <ul><li>Kontextuelles Erlebnis: Visuelle Hinweise, Klarheit und Kontext zu dem, was ein Identitäts-Namespace ist und zu Identitätstypen gehören.</li><li>Genauigkeit: Besserer Umgang mit Fehlern, ohne doppelte Identitätsnamen.</li><li>Entdeckung: Zugriff auf die Dokumentation über ein in das Produkt integriertes Dialogfeld.</li></ul> Weitere Informationen finden Sie im Handbuch unter [Erstellen benutzerdefinierter Namespaces](../../identity-service/features/namespaces.md#create-namespaces). |
 | Änderungen an den Identitätsdiagrammbeschränkungen | Die Grenze für Identitätsdiagramme wurde von 150 Identitäten zu 50 Identitäten geändert. Wenn eine neue Identität in ein vollständiges Diagramm aufgenommen wird, wird die älteste Identität, die auf dem Erfassungszeitstempel und Identitätstyp basiert, gelöscht. Cookie-Identitätstypen werden zum Löschen priorisiert. Wenden Sie sich an Ihr Adobe Account-Team, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält: <ul><li>einen benutzerdefinierten Namespace, bei dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.</li><li>einen benutzerdefinierten Namespace, bei dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.</li></ul> Adobe Engineering verarbeitet diese Anfragen manuell. Weitere Informationen finden Sie im Abschnitt [Limits für Identity Service-Daten](../../identity-service/guardrails.md) und Handbuch [Best Practices für die Zuweisung von Datenverwaltungslizenzen](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}

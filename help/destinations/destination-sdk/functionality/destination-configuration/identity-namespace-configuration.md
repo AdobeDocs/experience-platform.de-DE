@@ -2,9 +2,9 @@
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '842'
 ht-degree: 95%
 
 ---
@@ -17,13 +17,13 @@ Beim Erstellen eines Ziels über Destination SDK können Sie nicht nur ein [Part
 
 In diesem Fall können Benutzerinnen und Benutzer zusätzlich zu den Zielprofilattributen auch Zielidentitäten auswählen.
 
-Weitere Informationen zu Identity-Namespaces in Experience Platform finden Sie in der [Dokumentation zu Identity-Namespaces](../../../../identity-service/namespaces.md).
+Weitere Informationen zu Identity-Namespaces in Experience Platform finden Sie in der [Dokumentation zu Identity-Namespaces](../../../../identity-service/features/namespaces.md).
 
 Beim Konfigurieren von Identity-Namespaces für Ihr Ziel können Sie die von Ihrem Ziel unterstützte Zielidentitätszuordnung anpassen, z. B.:
 
 * Benutzerinnen und Benutzern ermöglichen, XDM-Attribute Identity-Namespaces zuzuordnen.
-* Benutzerinnen und Benutzern ermöglichen, [Standard-Identity-Namespaces](../../../../identity-service/namespaces.md#standard) Ihren eigenen Identity-Namespaces zuzuordnen.
-* Benutzerinnen und Benutzern ermöglichen, [benutzerdefinierte Identity-Namespaces](../../../../identity-service/namespaces.md#manage-namespaces) Ihren eigenen Identity-Namespaces zuzuordnen.
+* Benutzerinnen und Benutzern ermöglichen, [Standard-Identity-Namespaces](../../../../identity-service/features/namespaces.md#standard) Ihren eigenen Identity-Namespaces zuzuordnen.
+* Benutzerinnen und Benutzern ermöglichen, [benutzerdefinierte Identity-Namespaces](../../../../identity-service/features/namespaces.md#manage-namespaces) Ihren eigenen Identity-Namespaces zuzuordnen.
 
 Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Destination SDK zum Konfigurieren eines dateibasierten Ziels verwenden](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,7 +55,7 @@ Bei der Definition der Zielidentitäten, die Ihr Ziel unterstützt, können Sie 
 |---------|----------|---|------|
 | `acceptsAttributes` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden der Identität, die Sie konfigurieren, standardmäßige Profilattribute zuordnen können. |
 | `acceptsCustomNamespaces` | Boolesch | Optional | Gibt an, ob Kundinnen und Kunden dem Identity-Namespace, den Sie konfigurieren, benutzerdefinierte Identity-Namespaces zuordnen können. |
-| `acceptedGlobalNamespaces` | – | Optional | Gibt an, welche [Standard-Identity-Namespaces](../../../../identity-service/namespaces.md#standard) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
+| `acceptedGlobalNamespaces` | – | Optional | Gibt an, welche [Standard-Identity-Namespaces](../../../../identity-service/features/namespaces.md#standard) (z. B. [!UICONTROL IDFA]) Kundinnen und Kunden der Identität zuordnen können, die Sie konfigurieren. |
 | `transformation` | Zeichenfolge | Optional | Zeigt das Kontrollkästchen [[!UICONTROL Umwandlung anwenden]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) in der Platform-Benutzeroberfläche an, wenn das Quellfeld entweder ein XDM-Attribut oder ein benutzerdefinierter Identity-Namespace ist. Verwenden Sie diese Option, um Benutzerinnen und Benutzern die Möglichkeit zu geben, Quellattribute beim Export zu hashen. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
 | `requiredTransformation` | Zeichenfolge | Optional | Wenn Kundinnen und Kunden diesen Quell-Identity-Namespace auswählen, wird das Kontrollkästchen [[!UICONTROL Umwandlung anwenden]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) automatisch auf die Zuordnung angewendet, und Kundinnen und Kunden können sie nicht deaktivieren. Um diese Option zu aktivieren, setzen Sie den Wert auf `sha256(lower($))`. |
 
@@ -84,7 +84,7 @@ Sie müssen angeben, welche [!DNL Platform]-Identitäten Kundinnen und Kunden in
 Identity-Namespaces erfordern keine 1:1-Korrespondenz zwischen [!DNL Platform] und Ihrem Ziel.
 Kundinnen und Kunden können beispielsweise einen [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL IDFA]-Namespace Ihres Ziels zuordnen, oder sie können denselben [!DNL IDFA]-Namespace in [!DNL Platform] einem [!DNL Customer ID]-Namespace in Ihrem Ziel zuordnen.
 
-Mehr zu Identitäten erfahren Sie in der [Übersicht über Identity-Namespaces](../../../../identity-service/namespaces.md).
+Mehr zu Identitäten erfahren Sie in der [Übersicht über Identity-Namespaces](../../../../identity-service/features/namespaces.md).
 
 ## Zuordnungsüberlegungen
 

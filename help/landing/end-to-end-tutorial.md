@@ -3,46 +3,46 @@ keywords: Experience Platform;Startseite;beliebte Themen;CJA;Journey Analytics;C
 title: Adobe Experience Platform End-to-End-Beispiel-Workflow
 description: Erfahren Sie auf hoher Ebene mehr über den grundlegenden End-to-End-Workflow für Adobe Experience Platform.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 14%
+source-wordcount: '1832'
+ht-degree: 10%
 
 ---
 
 # Adobe Experience Platform-Beispiel-Workflow
 
-Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Platform können Unternehmen Kundendaten und Content aus beliebigen Systemen zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
+Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und offensten auf dem Markt verfügbaren Systeme für die Einrichtung und Verwaltung umfassender Lösungen zur Umsetzung starker Kundenerlebnisse. Mit Platform können Unternehmen Kundendaten und Inhalte aus beliebigen Systemen zentral zusammenführen und standardisieren sowie mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessern.
 
 Basierend auf RESTful-APIs stellt Platform Entwicklern die vollständige Funktionalität des Systems zur Verfügung und unterstützt so die einfache Integration von Unternehmenslösungen mit vertrauten Tools. Mit Platform können Sie eine ganzheitliche Sicht auf Ihre Kunden gewinnen, indem Sie Ihre Kundendaten erfassen, Ihre Daten auf die Zielgruppen segmentieren und diese Zielgruppen für ein externes Ziel aktivieren. Das folgende Tutorial zeigt einen durchgehenden Workflow, der alle Schritte von der Erfassung über Quellen bis zur Aktivierung der Zielgruppe über Ziele enthält.
 
-![End-to-End-Workflow der Experience Platform](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
+![Experience Platform End-to-End-Workflow](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
 
 ## Erste Schritte
 
 Dieser durchgängige Workflow verwendet mehrere Adobe Experience Platform-Dienste. Im Folgenden finden Sie eine Liste der in diesem Workflow verwendeten Dienste mit Links zu ihren Übersichten:
 
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten durch [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../xdm/schema/best-practices.md) aufgenommen werden.
-- [[!DNL Identity Service]](../identity-service/home.md): Bietet Ihnen einen umfassenden Überblick über Ihre Kunden und ihr Verhalten durch die Überbrückung von Identitäten zwischen Geräten und Systemen.
+- [[!DNL Identity Service]](../identity-service/home.md): Bietet Ihnen einen umfassenden Überblick über Ihre Kunden und ihr Verhalten, indem Sie Identitäten zwischen Geräten und Systemen überbrücken.
 - [Quellen](../sources/home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 - [[!DNL Segmentation Service]](../segmentation/home.md): [!DNL Segmentation Service] ermöglicht die Aufteilung der in [!DNL Experience Platform] gespeicherten Daten, die sich auf Einzelanwender (wie Kunden, Interessenten, Benutzer oder Organisationen) beziehen, in kleinere Gruppen.
 - [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [Datensätze](../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].
+- [Datensätze](../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für die Datenpersistenz in [!DNL Experience Platform].
 - [Ziele](../destinations/home.md): Ziele sind vordefinierte Integrationen mit häufig verwendeten Anwendungen, die die nahtlose Aktivierung von Daten aus Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
 
 ## Erstellen eines XDM-Schemas
 
 Bevor Sie Daten in Platform erfassen, müssen Sie zunächst ein XDM-Schema erstellen, um die Struktur dieser Daten zu beschreiben. Wenn Sie Ihre Daten im nächsten Schritt erfassen, ordnen Sie die eingehenden Daten diesem Schema zu. Informationen zum Erstellen eines Beispiel-XDM-Schemas finden Sie im Tutorial zu [Erstellen eines Schemas mit dem Schema Editor](../xdm/tutorials/create-schema-ui.md).
 
-Im obigen Tutorial erfahren Sie, wie Sie Identitätsfelder für Ihre Schemas festlegen. Ein Identitätsfeld stellt ein Feld dar, das zur Identifizierung einer Einzelperson verwendet werden kann, die mit einem Datensatz- oder Zeitreihenereignis verbunden ist. Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Identitätsdiagrammen für Kunden in Platform. Dies hat letztendlich Auswirkungen darauf, wie Echtzeit-Kundenprofil verschiedene Datenfragmente zusammenführt, um eine vollständige Ansicht des Kunden zu erhalten. Weitere Informationen zum Anzeigen von Identitätsdiagrammen in Platform finden Sie im Tutorial zu [Verwendung des Identitätsdiagramm-Viewers](../identity-service/ui/identity-graph-viewer.md).
+Im obigen Tutorial erfahren Sie, wie Sie Identitätsfelder für Ihre Schemas festlegen. Ein Identitätsfeld stellt ein Feld dar, das zur Identifizierung einer Einzelperson verwendet werden kann, die mit einem Datensatz- oder Zeitreihenereignis verbunden ist. Identitätsfelder sind eine entscheidende Komponente bei der Erstellung von Identitätsdiagrammen für Kunden in Platform. Dies hat letztendlich Auswirkungen darauf, wie Echtzeit-Kundenprofil verschiedene Datenfragmente zusammenführt, um eine vollständige Ansicht des Kunden zu erhalten. Weitere Informationen zum Anzeigen von Identitätsdiagrammen in Platform finden Sie im Tutorial zu [Verwendung des Identitätsdiagramm-Viewers](../identity-service/features/identity-graph-viewer.md).
 
 Sie müssen Ihr Schema für die Verwendung im Echtzeit-Kundenprofil aktivieren, damit Kundenprofile anhand der Daten basierend auf Ihrem Schema erstellt werden können. Siehe Abschnitt zu [Aktivieren eines Schemas für Profil](../xdm/ui/resources/schemas.md#profile) Weitere Informationen finden Sie im Handbuch zur Schemabenutzeroberfläche .
 
-## Aufnehmen von Daten in Platform
+## Daten in Platform erfassen
 
 Nachdem Sie ein XDM-Schema erstellt haben, können Sie damit beginnen, Ihre Daten in das System zu übertragen.
 
-Alle Daten, die in Platform eingehen, werden bei der Erfassung in einzelnen Datensätzen gespeichert. Ein Datensatz ist eine Sammlung von Datensätzen, die einem bestimmten XDM-Schema zugeordnet sind. Bevor Ihre Daten von [!DNL Real-Time Customer Profile], muss der betreffende Datensatz spezifisch konfiguriert werden. Vollständige Anweisungen zum Aktivieren eines Datensatzes für Profile finden Sie in der [Handbuch zur Benutzeroberfläche von Datensätzen](../catalog/datasets/user-guide.md#enable-profile) und [API-Tutorial zur Datensatzkonfiguration](../profile/tutorials/dataset-configuration.md). Nachdem der Datensatz konfiguriert wurde, können Sie Daten in den Datensatz eingeben.
+Alle Daten, die in Platform eingehen, werden bei der Erfassung in einzelnen Datensätzen gespeichert. Ein Datensatz ist eine Sammlung von Datensätzen, die einem bestimmten XDM-Schema zugeordnet sind. Bevor Ihre Daten von [!DNL Real-Time Customer Profile], muss der betreffende Datensatz spezifisch konfiguriert werden. Vollständige Anweisungen zum Aktivieren eines Datensatzes für Profile finden Sie in der [Handbuch zur Benutzeroberfläche von Datensätzen](../catalog/datasets/user-guide.md#enable-profile) und [API-Tutorial zur Datensatzkonfiguration](../profile/tutorials/dataset-configuration.md). Nachdem der Datensatz konfiguriert wurde, können Sie mit der Aufnahme von Daten beginnen.
 
 Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken. Sie können Ihre Daten beispielsweise mithilfe von [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). Eine vollständige Liste der verfügbaren Quellen finden Sie im [Übersicht über Quell-Connectoren](../sources/home.md).
 
@@ -84,9 +84,9 @@ Nachdem Sie entweder Ihren einmaligen Segmentauftrag oder Ihren laufenden Zeitpl
 
 Bevor Sie einen Exportauftrag erstellen, müssen Sie zunächst einen Datensatz erstellen, in den die Daten exportiert werden sollen. Informationen zum Erstellen eines Datensatzes finden Sie im Abschnitt unter [Erstellen eines Zieldatensatzes](../segmentation/tutorials/evaluate-a-segment.md#create-dataset) im Tutorial zum Auswerten eines Segments, stellen Sie sicher, dass Sie die Datensatz-ID nach der Erstellung notieren. Nachdem Sie einen Datensatz erstellt haben, können Sie einen Exportauftrag erstellen. Um zu erfahren, wie Sie einen Exportauftrag erstellen, befolgen Sie die Anweisungen im API-Handbuch im [Endpunkt der Exportaufträge](../segmentation/api/export-jobs.md).
 
-### Exportieren der ausgewerteten Daten in ein Ziel
+### Exportieren Sie Ihre ausgewerteten Daten in ein Ziel
 
-Alternativ können Sie die Ergebnisse nach der Erstellung Ihres einmaligen Segmentauftrags oder Ihres fortlaufenden Zeitplans an ein Ziel exportieren. Ein Ziel ist ein Endpunkt, z. B. eine Adobe App für einen externen Dienst, in der eine Zielgruppe aktiviert und bereitgestellt werden kann. Eine vollständige Liste der verfügbaren Ziele finden Sie im [Zielkatalog](../destinations/catalog/overview.md).
+Alternativ können Sie die Ergebnisse nach der Erstellung Ihres einmaligen Segmentauftrags oder Ihres fortlaufenden Zeitplans an ein Ziel exportieren. Ein Ziel ist ein Endpunkt, z. B. eine Adobe-Anwendung für einen externen Dienst, in der eine Zielgruppe aktiviert und bereitgestellt werden kann. Eine vollständige Liste der verfügbaren Ziele finden Sie im [Zielkatalog](../destinations/catalog/overview.md).
 
 Anweisungen zum Aktivieren von Daten für Batch- oder E-Mail-Marketing-Ziele finden Sie im Tutorial zu [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele mithilfe der Platform-Benutzeroberfläche](../destinations/ui/activate-batch-profile-destinations.md) und [Anleitung zum Herstellen einer Verbindung zu Batch-Zielen und Aktivieren von Daten mithilfe der Flow Service-API](../destinations/api/connect-activate-batch-destinations.md).
 
@@ -94,8 +94,8 @@ Anweisungen zum Aktivieren von Daten für Batch- oder E-Mail-Marketing-Ziele fin
 
 Mit Platform können Sie verfolgen, wie Daten mithilfe von Datenflüssen verarbeitet werden. Dabei handelt es sich um Darstellungen von Aufträgen, die Daten über die verschiedenen Komponenten von Platform hinweg verschieben. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-Time Customer Profile] bevor sie schließlich für Ziele aktiviert werden. Das Monitoring-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses. Informationen zum Überwachen von Datenflüssen in der Platform-Benutzeroberfläche finden Sie in den Tutorials zu [Überwachung von Datenflüssen für Quellen](../dataflows/ui/monitor-sources.md) und [Überwachen von Datenflüssen für Ziele](../dataflows/ui/monitor-destinations.md).
 
-Sie können Platform-Aktivitäten auch mithilfe statistischer Metriken und Ereignisbenachrichtigungen überwachen, indem Sie [!DNL Observability Insights]. Sie können Benachrichtigungen über die Platform-Benutzeroberfläche abonnieren oder an einen konfigurierten Webhook senden. Weitere Informationen zum Anzeigen, Aktivieren, Deaktivieren und Abonnieren von verfügbaren Warnhinweisen über die Experience Platform-Benutzeroberfläche finden Sie in der [[!UICONTROL Warnhinweise] UI-Handbuch](../observability/alerts/ui.md). Weitere Informationen zum Empfang von Warnungen über Webhooks finden Sie im Handbuch unter [Abonnieren von Adobe I/O Event-Benachrichtigungen](../observability/alerts/subscribe.md).
+Sie können Platform-Aktivitäten auch mithilfe statistischer Metriken und Ereignisbenachrichtigungen überwachen, indem Sie [!DNL Observability Insights]. Sie können Benachrichtigungen über die Platform-Benutzeroberfläche abonnieren oder an einen konfigurierten Webhook senden. Weitere Informationen zum Anzeigen, Aktivieren, Deaktivieren und Abonnieren von verfügbaren Warnhinweisen über die Experience Platform-Benutzeroberfläche finden Sie in der [[!UICONTROL Warnhinweise] UI-Handbuch](../observability/alerts/ui.md). Weitere Informationen zum Empfang von Warnungen über Webhooks finden Sie im Handbuch unter [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../observability/alerts/subscribe.md).
 
 ## Nächste Schritte
 
-Durch Lesen dieses Tutorials erhalten Sie eine grundlegende Einführung in einen einfachen End-to-End-Fluss für Platform. Um mehr über Adobe Platform zu erfahren, lesen Sie [Experience Platform – Übersicht](./home.md). Weitere Informationen zur Verwendung der Platform-Benutzeroberfläche und der Platform-API finden Sie in der [Handbuch zur Platform-Benutzeroberfläche](./ui-guide.md) und [Handbuch zur Platform-API](./api-guide.md) bzw.
+Durch Lesen dieses Tutorials erhalten Sie eine grundlegende Einführung in einen einfachen End-to-End-Fluss für Platform. Weitere Informationen zu Adobe Experience Platform finden Sie unter [Plattformübersicht](./home.md). Weitere Informationen zur Verwendung der Platform-Benutzeroberfläche und der Platform-API finden Sie in der [Handbuch zur Platform-Benutzeroberfläche](./ui-guide.md) und [Handbuch zur Platform-API](./api-guide.md) bzw.

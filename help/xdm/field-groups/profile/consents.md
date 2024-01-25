@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Einverständnis und Voreinstellungsfeldgruppe
 description: Erfahren Sie mehr über die Feldgruppe "Einverständnis und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 >* Wenn der Kunde sich auf Kanalebene abgemeldet hat, werden alle entsprechenden Zustimmungen oder Voreinstellungen unter `idSpecific` werden ignoriert.
 >* Wenn die Zustimmung oder Voreinstellung auf Kanalebene nicht festgelegt ist oder der Kunde sich angemeldet hat, werden die entsprechenden Zustimmungen oder Voreinstellungen unter `idSpecific` werden geehrt.
 
-Jeder Schlüssel im `idSpecific` -Objekt stellt einen bestimmten Identitäts-Namespace dar, der vom Adobe Experience Platform Identity Service erkannt wird. Sie können Ihre eigenen benutzerdefinierten Namespaces definieren, um verschiedene IDs zu kategorisieren. Es wird jedoch empfohlen, einen der Standard-Namespaces zu verwenden, die von Identity Service bereitgestellt werden, um die Speichergrößen für das Echtzeit-Kundenprofil zu reduzieren. Weitere Informationen zu Identitäts-Namespaces finden Sie unter [Übersicht über Identitäts-Namespace](../../../identity-service/namespaces.md) in der Dokumentation zu Identity Service .
+Jeder Schlüssel im `idSpecific` -Objekt stellt einen bestimmten Identitäts-Namespace dar, der vom Adobe Experience Platform Identity Service erkannt wird. Sie können Ihre eigenen benutzerdefinierten Namespaces definieren, um verschiedene IDs zu kategorisieren. Es wird jedoch empfohlen, einen der Standard-Namespaces zu verwenden, die von Identity Service bereitgestellt werden, um die Speichergrößen für das Echtzeit-Kundenprofil zu reduzieren. Weitere Informationen zu Identitäts-Namespaces finden Sie unter [Übersicht über Identitäts-Namespace](../../../identity-service/features/namespaces.md) in der Dokumentation zu Identity Service .
 
 Die Schlüssel für jedes Namespace-Objekt stellen die eindeutigen Identitätswerte dar, für die der Kunde Voreinstellungen festgelegt hat. Jeder Identitätswert kann einen vollständigen Satz von Einverständnissen und Voreinstellungen enthalten, der auf dieselbe Weise formatiert ist wie `consents`.
 

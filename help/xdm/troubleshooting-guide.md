@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '1947'
 ht-degree: 100%
 
 ---
@@ -136,7 +136,6 @@ Dieser Fehler wird angezeigt, wenn das System eine bestimmte Ressource nicht fin
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-
 Weiterführende Informationen zum Erstellen von Suchpfaden in der API finden Sie in den Abschnitten [Container](./api/getting-started.md#container) und [Ressourcenkennung](api/getting-started.md#resource-identification) des [!DNL Schema Registry]-Entwicklerhandbuchs.
 
 ### Titel nicht eindeutig
@@ -189,7 +188,6 @@ Für Ressourcen, die von Ihrer Organisation definiert werden, müssen ihre Felde
 >* `http://ns.adobe.com/aep/errors/XDM-1023-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
-
 Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für XDM-Ressourcen finden Sie im Handbuch zur API für die Schemaregistrierung:
 
 * [Erstellen einer benutzerdefinierter Klasse](./api/classes.md#create)
@@ -225,7 +223,6 @@ Je nach verwendetem Endpunkt gibt die `detailed-message`-Eigenschaft an, wie ein
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
-
 
 Eine Liste kompatibler Accept-Kopfzeilen für verschiedene API-Anfragen finden Sie in den entsprechenden Abschnitten im [Entwicklerhandbuch zur Schemaregistrierung](./api/overview.md).
 
@@ -277,7 +274,7 @@ Um Schemas, die Beziehungsdeskriptoren enthalten, für die Verwendung im [!DNL P
 
 Stellen Sie sicher, dass der `xdm:namespace`-Wert des Identitätsfelds des Referenzschemas mit dem der `xdm:identityNamespace`-Eigenschaft im Referenz-Identitätsdeskriptor des Quellfelds übereinstimmt, um dieses Problem zu beheben.
 
-Eine Liste der standardmäßigen Identity-Namespace-Codes finden Sie im Abschnitt zu [Standard-Namespaces](../identity-service/namespaces.md) in der Übersicht zu Identity-Namespaces.
+Eine Liste der standardmäßigen Identity-Namespace-Codes finden Sie im Abschnitt zu [Standard-Namespaces](../identity-service/features/namespaces.md) in der Übersicht zu Identity-Namespaces.
 
 #### Das Schema muss eine identityMap oder eine primäre Identität enthalten
 

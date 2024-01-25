@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
-source-git-commit: e861faf6fcd910fa5515efd94897fdf4ad067571
+source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '124'
 ht-degree: 82%
 
 ---
@@ -15,7 +15,14 @@ ht-degree: 82%
 # Adobe Experience Platform Identity Service {#identity}
 
 - [Identity Service – Übersicht](home.md)
-- [Übersicht über Identitäts-Namespaces](namespaces.md)
+- [Identity Service und Echtzeit-Kundenprofil](identity-and-profile.md)
+- Funktionen {#features}
+   - [Identity-Namespace](./features/namespaces.md)
+   - [Identitätsverknüpfungslogik](./features/identity-linking-logic.md)
+   - [Identitätsdiagramm-Viewer](./features/identity-graph-viewer.md)
+   - [Löschungen in Identity Service](./features/deletion.md)
+   - [ECID-Übersicht](./features/ecid.md)
+- [Implementierungshandbuch](implementation.md)
 - [Leitplanken für Identitätsdaten](guardrails.md)
 - Identity Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
@@ -26,20 +33,13 @@ ht-degree: 82%
    - [Verfügbare Namensräume auflisten](api/list-namespaces.md)
    - [Benutzerdefinierten Namespace erstellen](api/create-custom-namespace.md)
    - [Native Kennung für eine Identität auflisten](api/list-native-id.md)
-- Benutzeroberfläche von Identity Service {#ui}
-   - [Identitätsdiagramm-Viewer](ui/identity-graph-viewer.md)
-   - [Erkennung von gemeinsamen Geräten](ui/shared-device-detection.md)
-   - [Definieren von Identitätsfeldern in der Benutzeroberfläche](ui/label-identities.md)
+   - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service)
+- [Erkennung von gemeinsamen Geräten](shared-device-detection.md)
+- [Definieren von Identitätsfeldern in der Benutzeroberfläche](label-identities.md)
 - [Verknüpfungsregeln für Identitätsdiagramme] {#identity-graph-linking-rules}
    - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
    - [Identitätsoptimierungsalgorithmus](./identity-graph-linking-rules/identity-optimization-algorithm.md)
    - [Beispielszenarien](./identity-graph-linking-rules/example-scenarios.md)
-   - [Identity Service und Echtzeit-Kundenprofil](./identity-graph-linking-rules/identity-and-profile.md)
-   - [Identitätsverknüpfungslogik](./identity-graph-linking-rules/identity-linking-logic.md)
-- [ECID-Übersicht](ecid.md)
-- [Implementierungshandbuch](implementation.md)
-- [Löschungen in Identity Service](deletion.md)
 - [Verarbeitung von Datenschutzanfragen](privacy.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
-- [API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

@@ -5,10 +5,10 @@ feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2824'
-ht-degree: 8%
+source-wordcount: '2827'
+ht-degree: 7%
 
 ---
 
@@ -113,7 +113,7 @@ Wenn innerhalb eines Namespace mehr als eine Identität verfügbar ist, wählen 
 
 >[!NOTE]
 >
-> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und ihn mithilfe der [Schemaeditor](../../../xdm/schema/composition.md#identity). Weitere Informationen zu Namespaces und Identitäten finden Sie unter [Identity Service-Namespaces](../../../identity-service/namespaces.md) Dokumentation.
+> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und ihn mithilfe der [Schemaeditor](../../../xdm/schema/composition.md#identity). Weitere Informationen zu Namespaces und Identitäten finden Sie unter [Identity Service-Namespaces](../../../identity-service/features/namespaces.md) Dokumentation.
 
 ## Ziel definieren {#define-a-goal}
 
@@ -243,7 +243,7 @@ Wenn die Instanz erfolgreich erstellt wurde, wird sofort eine Prognose ausgefüh
 
 >[!NOTE]
 >
->Je nach Umfang der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
+>Je nach Größe der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
 
 In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine Prognose ausgeführt. Nach erfolgreichem Abschluss der Ausführung werden Profile mit Bewertungsdaten automatisch mit prognostizierten Werten ausgefüllt, wenn der Profil-Umschalter aktiviert ist. Warten Sie bis zu 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
 

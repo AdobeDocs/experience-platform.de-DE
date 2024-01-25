@@ -2,9 +2,9 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2931'
 ht-degree: 97%
 
 ---
@@ -109,7 +109,7 @@ Was die Daten betrifft, die für ein bestimmtes Profil exportiert werden, ist es
 
 | Was einen Zielexport bestimmt | Im Zielexport enthaltene Informationen |
 |---------|----------|
-| <ul><li>Zugeordnete Attribute und Zielgruppen dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport ausgelöst wird, wenn sich der Status einer zugeordneten Zielgruppe ändert (von `null` auf `realized` oder von `realized` auf `exiting`) oder wenn zugeordnete Attribute aktualisiert werden.</li><li>Eine Änderung in der Identitätszuordnung wird als eine Identität definiert, die für das [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md) des Profils hinzugefügt/entfernt wird – für Identity-Namespaces, die für den Export zugeordnet sind.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert – für Attribute, die dem Ziel zugeordnet sind.</li></ul> | <ul><li>Die Zielgruppen, die dem Ziel zugeordnet sind und sich geändert haben, werden in das Objekt `segmentMembership` eingeschlossen. In einigen Szenarien können sie mit mehreren Aufrufen exportiert werden. In einigen Szenarien können auch bestimmte Zielgruppen, die sich nicht geändert haben, in den Aufruf mit eingeschlossen werden. In jedem Fall werden nur zugeordnete Zielgruppen exportiert.</li><li>Alle Identitäten aus den Namespaces, die dem Ziel im Objekt `identityMap` zugeordnet sind, sind ebenfalls eingeschlossen.</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
+| <ul><li>Zugeordnete Attribute und Zielgruppen dienen als Hinweis für einen Zielexport. Das bedeutet, dass ein Zielexport ausgelöst wird, wenn sich der Status einer zugeordneten Zielgruppe ändert (von `null` auf `realized` oder von `realized` auf `exiting`) oder wenn zugeordnete Attribute aktualisiert werden.</li><li>Eine Änderung in der Identitätszuordnung wird als eine Identität definiert, die für das [Identitätsdiagramm](/help/identity-service/features/identity-graph-viewer.md) des Profils hinzugefügt/entfernt wird – für Identity-Namespaces, die für den Export zugeordnet sind.</li><li>Als Änderung für ein Attribut wird jede Aktualisierung des Attributs definiert – für Attribute, die dem Ziel zugeordnet sind.</li></ul> | <ul><li>Die Zielgruppen, die dem Ziel zugeordnet sind und sich geändert haben, werden in das Objekt `segmentMembership` eingeschlossen. In einigen Szenarien können sie mit mehreren Aufrufen exportiert werden. In einigen Szenarien können auch bestimmte Zielgruppen, die sich nicht geändert haben, in den Aufruf mit eingeschlossen werden. In jedem Fall werden nur zugeordnete Zielgruppen exportiert.</li><li>Alle Identitäten aus den Namespaces, die dem Ziel im Objekt `identityMap` zugeordnet sind, sind ebenfalls eingeschlossen.</li><li>Nur die zugeordneten Attribute werden in den Zielexport einbezogen.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -147,7 +147,7 @@ In allen oben genannten Exportsituationen enthalten die exportierten Dateien die
 
 Ein Profil qualifiziert sich nicht bei jeder Aktualisierung für die Aufnahme in inkrementelle Dateiexporte. Wenn beispielsweise ein Attribut einem Profil hinzugefügt oder daraus entfernt wurde, wird das Profil nicht in den Export eingeschlossen. Nur Profile, bei denen sich das Attribut `segmentMembership` geändert hat, werden in die exportierten Dateien aufgenommen. Das heißt, nur wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte einbezogen.
 
-Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm](/help/identity-service/ui/identity-graph-viewer.md) hinzugefügt wird, stellt dies ebenfalls keinen Grund dar, das Profil in einen neuen inkrementellen Dateiexport einzuschließen.
+Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm](/help/identity-service/features/identity-graph-viewer.md) hinzugefügt wird, stellt dies ebenfalls keinen Grund dar, das Profil in einen neuen inkrementellen Dateiexport einzuschließen.
 
 Wenn einer Zielzuordnung eine neue Zielgruppe hinzugefügt wird, hat dies keine Auswirkungen auf Qualifikationen und Exporte für ein anderes Segment. Exportpläne werden für jede Zielgruppe einzeln konfiguriert und Dateien werden für jedes Segment separat exportiert, selbst wenn die Zielgruppen demselben Zieldatenfluss hinzugefügt wurden.
 

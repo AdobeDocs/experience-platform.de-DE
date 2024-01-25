@@ -5,10 +5,10 @@ title: Schema-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schemas, Klassen, Schemafeldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche untersuchen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -86,7 +86,7 @@ Wenn es sich bei dem zu prüfenden Feld um ein Enum-Feld handelt, zeigt die rech
 
 Beim Prüfen von Schemas, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldergruppe aufgelistet, die sie für das Schema bereitstellt. Wählen Sie in der linken Leiste den Namen des Identitätsfelds aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist.
 
-Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol Bild](../images/ui/explore/identity-symbol.png)). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. die [Identitäts-Namespace](../../identity-service/namespaces.md) und ob das Feld die primäre Identität für das Schema ist.
+Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol Bild](../images/ui/explore/identity-symbol.png)). Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen anzeigen, z. B. die [Identitäts-Namespace](../../identity-service/features/namespaces.md) und ob das Feld die primäre Identität für das Schema ist.
 
 ![](../images/ui/explore/identity-field.png)
 

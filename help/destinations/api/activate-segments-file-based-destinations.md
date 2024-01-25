@@ -4,7 +4,7 @@ title: Aktivieren von Zielgruppen für dateibasierte Ziele mithilfe der Flow Ser
 description: Erfahren Sie, wie Sie mit der Flow Service-API Dateien mit qualifizierten Profilen in Cloud-Speicher-Ziele exportieren können.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 11%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Verfügbare Identitäten anzeigen, die im Eingabeschema verwendet werden sollen
 
-Die Antwort gibt die Identitäten zurück, die Sie beim Erstellen des Eingabeschema verwenden können. Beachten Sie, dass diese Antwort beide [standard](/help/identity-service/namespaces.md#standard) und [custom](/help/identity-service/namespaces.md#manage-namespaces) Identitäts-Namespaces, die Sie unter Experience Platform einrichten.
+Die Antwort gibt die Identitäten zurück, die Sie beim Erstellen des Eingabeschema verwenden können. Beachten Sie, dass diese Antwort beide [standard](/help/identity-service/features/namespaces.md#standard) und [custom](/help/identity-service/features/namespaces.md#manage-namespaces) Identitäts-Namespaces, die Sie unter Experience Platform einrichten.
 
 ```json
 [

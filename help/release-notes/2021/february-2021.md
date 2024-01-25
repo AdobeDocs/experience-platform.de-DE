@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 97%
+source-wordcount: '1137'
+ht-degree: 95%
 
 ---
 
@@ -32,13 +32,13 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## (Beta) Dashboard {#dashboards}
 
-Adobe Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen, basierend auf täglichen Schnappschüssen der Daten.
+Adobe Experience Platform bietet mehrere Dashboards, mit denen Sie wichtige Informationen über die Daten Ihrer Organisation sehen können, die bei täglichen Schnappschüssen erfasst werden.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Dashboards (Beta) für Profile, Segmente, Ziele und Lizenznutzung | **Anmerkung: Diese Funktion befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.**<br/><br/> Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketing-Workflow in von Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre. |
+| Dashboards (Beta) für Profile, Segmente, Ziele und Lizenznutzung | **Anmerkung: Diese Funktion befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.**<br/><br/> Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketing-Workflow in Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -102,7 +102,7 @@ Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, sich einen besser
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Identitätsdiagramm-Viewer | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, wodurch Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/ui/identity-graph-viewer.md). |
+| Identitätsdiagramm-Viewer | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, wodurch Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/features/identity-graph-viewer.md). |
 
 Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Identity Service – Übersicht](../../identity-service/home.md).
 
@@ -114,7 +114,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Berechnete Attribute (Alphaversion) | ***Hinweis: Diese Funktion befindet sich derzeit in der Alphaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.*** <br/><br/>Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Anschließend können Sie die Aggregate in der Segmentierung, Aktivierung und Personalisierung verwenden. Einige Beispiele für diese Funktionen sind Anzahl, Summe, Durchschnitt, min, max, true/false. Berechnete Attribute stehen derzeit nur per API zur Verfügung. |
+| Berechnete Attribute (Alphaversion) | ***Hinweis: Diese Funktion befindet sich derzeit in der Alphaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.*** <br/><br/>Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Anschließend können Sie die Aggregate in der Segmentierung, Aktivierung und Personalisierung verwenden. Einige Beispiele für diese Funktionen sind Anzahl, Summe, Durchschnitt, min, max, wahr/falsch. Berechnete Attribute sind derzeit nur über API verfügbar. |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] Daten, lesen Sie bitte zunächst die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 

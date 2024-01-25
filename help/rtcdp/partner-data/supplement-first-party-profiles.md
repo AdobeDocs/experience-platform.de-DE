@@ -3,9 +3,9 @@ title: Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attr
 description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 79%
 
 ---
@@ -56,7 +56,7 @@ Sehen Sie sich das Video-Tutorial unten an, um sich einen Überblick darüber zu
 1. Als **Kundin oder Kunde** lizenzieren Sie Attribute vom **Datenpartner**.
 2. Als **Kundin oder Kunde** erweitern Sie Ihre Profildaten und Ihr Governance-Modell für vom **Partner** bereitgestellte Attribute.
 3. Als **Kundin oder Kunde** integrieren Sie die Zielgruppen, die mithilfe des Datenpartners angereichert werden sollen. Im Allgemeinen handelt es sich bei diesen Zielgruppen um verschlüsselte Eingabekennungen wie Elemente personenbezogener Daten (Personally Identifiable Information, PII). Beispiele hierfür sind die E-Mail-Adresse, der Name oder die Adresse.
-4. Der **Partner** hängt lizenzierte Attribute für die Profile an, bei denen ein Abgleich möglich ist. Optional kann eine [Partner-ID](/help/identity-service/namespaces.md) in den partnerbezogenen ID-Namespace eingeschlossen und darin aufgenommen werden.
+4. Der **Partner** hängt lizenzierte Attribute für die Profile an, bei denen ein Abgleich möglich ist. Optional kann eine [Partner-ID](/help/identity-service/features/namespaces.md) in den partnerbezogenen ID-Namespace eingeschlossen und darin aufgenommen werden.
 5. Als **Kundin oder Kunde** laden Sie Attribute vom Datenpartner in Kundenprofile in Real-Time CDP.
 
 ## Erreichen des Anwendungsfalls: Schrittweise Anweisungen {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Commenting out links for now
 
 >[!TIP]
 >
->Wenn Sie Ihre Kundenprofile mit einer personenbasierten Kennung des Datenanbieters ergänzen möchten, können Sie einen neuen Identitätstyp vom Typ **[[!UICONTROL Partner-ID]](/help/identity-service/namespaces.md)** erstellen.
+>Wenn Sie Ihre Kundenprofile mit einer personenbasierten Kennung des Datenanbieters ergänzen möchten, können Sie einen neuen Identitätstyp vom Typ **[[!UICONTROL Partner-ID]](/help/identity-service/features/namespaces.md)** erstellen.
 >
->Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](/help/identity-service/namespaces.md).
+>Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](/help/identity-service/features/namespaces.md).
 >Lesen Sie die Anweisungen zum [Definieren von Identitätsfeldern](/help/xdm/ui/fields/identity.md) in der Experience Platform-Benutzeroberfläche.
 
 ### Exportieren von anzureichernden Zielgruppen bei verschlüsselten oder gehashten personenbezogenen Daten (PII) {#export-audiences}
@@ -130,7 +130,7 @@ Zu diesem Zweck werden etwa diese Quell-Connectoren empfohlen:
 
 Beachten Sie die folgenden Einschränkungen, wenn Sie sich den auf dieser Seite beschriebenen Anwendungsfall ansehen:
 
-* Wenn Sie sich für die Verwendung von Partner-IDs entscheiden, beachten Sie, dass diese IDs beim Erstellen Ihres [Identitätsdiagramms](/help/identity-service/ui/identity-graph-viewer.md) nicht verwendet werden.
+* Wenn Sie sich für die Verwendung von Partner-IDs entscheiden, beachten Sie, dass diese IDs beim Erstellen Ihres [Identitätsdiagramms](/help/identity-service/features/identity-graph-viewer.md) nicht verwendet werden.
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 

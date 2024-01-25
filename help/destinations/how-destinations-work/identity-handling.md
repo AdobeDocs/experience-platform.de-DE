@@ -2,10 +2,10 @@
 title: Umgang mit Identitäten im Aktivierungs-Workflow für Ziele
 description: Erfahren Sie, wie der Identitätsexport im Aktivierungs-Workflow je nach Zieltyp verarbeitet wird.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 98%
+source-wordcount: '1163'
+ht-degree: 99%
 
 ---
 
@@ -23,7 +23,7 @@ Jedes Ziel im [Katalog](/help/destinations/catalog/overview.md) ist ein wenig an
 
 Für [dateibasierte Ziele](/help/destinations/destination-types.md#file-based) (z. B. [!DNL Amazon S3], SFTP oder die meisten E-Mail-Marketing-Ziele wie [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]) ist die Identitätseinrichtung bei den meisten dieser Ziele offen, d. h., Sie müssen keine Identität im Schritt [Attribute auswählen](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) des Batch-Aktivierungs-Workflows auswählen.
 
-Wenn Sie Ihren Dateiexporten Identitäten hinzufügen möchten, beachten Sie, dass nur eine einzige Identität aus dem [Identity-Namespace](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) in einem Export ausgewählt werden kann. Wenn Sie eine Identität für den Export auswählen, wird sie automatisch als [obligatorisches Attribut](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) und [Deduplizierungsschlüssel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) ausgewählt.
+Wenn Sie Ihren Dateiexporten Identitäten hinzufügen möchten, beachten Sie, dass nur eine einzige Identität aus dem [Identity-Namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) in einem Export ausgewählt werden kann. Wenn Sie eine Identität für den Export auswählen, wird sie automatisch als [obligatorisches Attribut](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) und [Deduplizierungsschlüssel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) ausgewählt.
 
 ![Eine als obligatorisches Attribut und Deduplizierungsschlüssel ausgewählte Identität](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

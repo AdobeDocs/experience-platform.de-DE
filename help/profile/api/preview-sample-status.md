@@ -3,9 +3,9 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
 description: Mit dem Beispielstatusendpunkt "Vorschau"der Echtzeit-Kundenprofil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugewiesenen Profilen erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 5%
 
 ---
@@ -208,7 +208,7 @@ Die Antwort enthält eine `data` -Array, das eine Liste von Datensatzobjekten en
 
 Sie können eine GET-Anfrage an die `/previewsamplestatus/report/namespace` -Endpunkt verwenden, um die Aufschlüsselung nach Identitäts-Namespace für alle zusammengeführten Profile in Ihrem Profilspeicher anzuzeigen. Dazu gehören sowohl die von Adobe bereitgestellten Standardidentitäten als auch die von Ihrem Unternehmen definierten benutzerdefinierten Identitäten.
 
-Identitäts-Namespaces sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über Identitäts-Namespace](../../identity-service/namespaces.md).
+Identitäts-Namespaces sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über Identitäts-Namespace](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ Die Antwort enthält eine `data` -Array mit einzelnen Objekten, die die Details 
 | `fullIDsFragmentCount` | Die Gesamtzahl der Profilfragmente im Namespace. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile im Namespace. |
 | `fullIDsPercentage` | Die `fullIDsCount` als Prozentsatz der Gesamt-zusammengeführten Profile (die `totalRows` -Wert, der im [Letzter Beispielstatus](#view-last-sample-status)), ausgedrückt in Dezimalformat. |
-| `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces unter Verwendung der Variablen [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md) und wird auch als [!UICONTROL Identitätssymbol] in der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie unter [Übersicht über Identitäts-Namespace](../../identity-service/namespaces.md). |
+| `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces unter Verwendung der Variablen [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md) und wird auch als [!UICONTROL Identitätssymbol] in der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie unter [Übersicht über Identitäts-Namespace](../../identity-service/features/namespaces.md). |
 | `value` | Die `id` -Wert für den Namespace. Dies ist beim Arbeiten mit Namespaces unter Verwendung der Variablen [Identity Service-API](../../identity-service/api/list-namespaces.md). |
 
 ## Erstellen eines Berichts zur Datensatzüberschneidung
@@ -444,7 +444,7 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Iden
 | Eigenschaft | Beschreibung |
 |---|---|
 | `data` | Die `data` -Objekt enthält kommagetrennte Listen mit eindeutigen Kombinationen aus Identitäts-Namespace-Codes und deren jeweiligen Profilzahlen. |
-| Namespace-Codes | Die `code` ist ein Kurzformular für jeden Identitäts-Namespace-Namen. Eine Zuordnung zu jedem `code` zu `name` kann mit der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md). Die `code` wird auch als [!UICONTROL Identitätssymbol] in der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie unter [Übersicht über Identitäts-Namespace](../../identity-service/namespaces.md). |
+| Namespace-Codes | Die `code` ist ein Kurzformular für jeden Identitäts-Namespace-Namen. Eine Zuordnung zu jedem `code` zu `name` kann mit der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md). Die `code` wird auch als [!UICONTROL Identitätssymbol] in der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie unter [Übersicht über Identitäts-Namespace](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Der Zeitstempel des Berichts. Wenn eine `date` während der Anfrage angegeben wurde, wird der zurückgegebene Bericht für das angegebene Datum angezeigt. Wenn nicht `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
 
 ### Interpretieren des Berichts zur Identitäts-Namespace-Überschneidung
