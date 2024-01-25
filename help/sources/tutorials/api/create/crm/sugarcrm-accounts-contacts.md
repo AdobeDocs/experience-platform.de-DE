@@ -2,10 +2,10 @@
 title: Erstellen Sie eine Quellverbindung und einen Datenfluss für SugarCRM-Konten und -Kontakte mithilfe der Flow Service-API.
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit SugarCRM-Konten und -Kontakten verbinden.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
 workflow-type: tm+mt
-source-wordcount: '2160'
-ht-degree: 55%
+source-wordcount: '2104'
+ht-degree: 54%
 
 ---
 
@@ -101,7 +101,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einsch
 
 ### Durchsuchen der Quelle {#explore}
 
-Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
+Mithilfe der im vorherigen Schritt generierten Basis-Verbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
 Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die Sie in Platform einbringen möchten:
 
 **API-Format**
@@ -120,7 +120,7 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. Für diese Quelle würde der Wert `json`. |
 | `fileType=json` | Der Dateityp der Datei, die Sie in Platform laden möchten. Zurzeit `json` ist der einzige unterstützte Dateityp. |
 | `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge  in base64 kodieren. <br> [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, mit denen Ihre Organisation eine Beziehung unterhält.</li><li>`contacts` : Individuelle Personen, zu denen Ihre Organisation eine feste Beziehung unterhält.</li></ul> |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. So rufen Sie den akzeptierten Formattyp für ab: `{SOURCE_PARAMS}`müssen Sie die gesamte Zeichenfolge in base64 kodieren. <br> [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Übergeben Sie je nach dem von Ihnen verwendeten Objekttyp einen der folgenden Schritte: <ul><li>`accounts` : Unternehmen, mit denen Ihre Organisation eine Beziehung unterhält.</li><li>`contacts` : Individuelle Personen, zu denen Ihre Organisation eine feste Beziehung unterhält.</li></ul> |
 
 Die [!DNL SugarCRM Accounts & Contacts] unterstützt mehrere APIs. Je nachdem, welcher Objekttyp Sie verwenden, lautet die zu sendende Anforderung wie folgt:
 
@@ -350,6 +350,8 @@ Eine erfolgreiche Antwort gibt eine Struktur zurück, wie unten dargestellt.
 ```
 
 >[!TAB Kontakte]
+
+Eine erfolgreiche Antwort gibt eine Struktur zurück, wie unten dargestellt.
 
 ```json
 {
