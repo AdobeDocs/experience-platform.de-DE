@@ -3,14 +3,19 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Attributbasierte Zugriffssteuerung – Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1844'
 ht-degree: 87%
 
 ---
 
-# Attributbasierte Zugriffssteuerung – Übersicht
+# Attributbasierte Zugriffssteuerung – Übersicht {#attribute-based-access-control-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_accesscontrol_abac_labelusageaccesspolicy"
+>title="Zugriffsrichtlinie für Beschriftung"
+>abstract=""
 
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
@@ -103,7 +108,7 @@ Weitere Informationen zu [!DNL Destinations] finden Sie in der [[!DNL Destinatio
 
 Mit dem [!DNL Identity Service] von Adobe Experience Platform erhalten Sie einen besseren Überblick über Ihre Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend zusammenführen und so wirkungsvolle, persönliche digitale Erlebnisse in Echtzeit bereitstellen können.
 
-Im Rahmen der attributbasierten Zugriffssteuerung können Sie mit der Berechtigung `view-identity-graph` festlegen, welche Benutzenden in Ihrer Organisation über die Benutzeroberfläche oder APIs auf das Identitätsdiagramm zugreifen können. Weitere Informationen finden Sie im Handbuch zum [Verwenden des Identitätsdiagramm-Viewers](../../identity-service/ui/identity-graph-viewer.md).
+Im Rahmen der attributbasierten Zugriffssteuerung können Sie mit der Berechtigung `view-identity-graph` festlegen, welche Benutzenden in Ihrer Organisation über die Benutzeroberfläche oder APIs auf das Identitätsdiagramm zugreifen können. Weitere Informationen finden Sie im Handbuch zum [Verwenden des Identitätsdiagramm-Viewers](../../identity-service/features/identity-graph-viewer.md).
 
 Weitere Informationen zu [!DNL Identity Service] finden Sie in der [[!DNL Identity Service] Übersicht](../../identity-service/home.md).
 

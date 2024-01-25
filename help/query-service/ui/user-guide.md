@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 54%
+source-wordcount: '2313'
+ht-degree: 56%
 
 ---
 
@@ -26,13 +26,6 @@ Weitere Informationen zu den Konzepten und Funktionen von [!DNL Query Service] f
 [!DNL Query Editor] bietet flexible Ausführung von Abfragen durch Verbinden mit [!DNL Query Service], und Abfragen werden nur ausgeführt, während diese Verbindung aktiv ist.
 
 ## Zugreifen auf [!DNL Query Editor] {#accessing-query-editor}
-
->[!CONTEXTUALHELP]
->id="platform_queryservice_create_datagovernance"
->title="Data Governance-Verpflichtung"
->abstract="Bitte beachten Sie, dass es in Ihrer alleinigen Verantwortung liegt, die Data-Governance-Richtlinien Ihres Unternehmens einzuhalten und Ihre gesetzlichen Anforderungen zu erfüllen. Experience Platform bietet Data Governance-Tools, mit denen Sie Ihre Datennutzungsverpflichtungen verwalten können. Wenden Sie die entsprechenden Datennutzungsbezeichnungen an, bevor Sie Daten abfragen oder verarbeiten. Weitere Informationen zu Data Governance-Tools und -Best Practices finden Sie in der Dokumentation ."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de" text="Data Governance – Übersicht"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de" text="Übersicht über Data Governance-Beschriftungen"
 
 Wählen Sie in der Benutzeroberfläche von [!DNL Experience Platform] im linken Navigationsmenü **[!UICONTROL Abfragen]** aus, um den [!DNL Query Service]-Arbeitsbereich zu öffnen. Um als Nächstes Abfragen zu schreiben, wählen Sie **[!UICONTROL Abfrage erstellen]** oben rechts auf dem Bildschirm. Dieser Link ist auf allen Seiten des [!DNL Query Service]-Arbeitsbereichs verfügbar.
 

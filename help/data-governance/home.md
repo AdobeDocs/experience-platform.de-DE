@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Data Governance – Übersicht
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 2b16ecb840e63baa244d8061a0349a9e39e726b2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 65%
+source-wordcount: '1623'
+ht-degree: 62%
 
 ---
 
-# Data Governance – Übersicht
+# Data Governance – Übersicht {#data-governance-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_datagovernance_framework"
+>title="Data Governance-Verpflichtung"
+>abstract="Bitte beachten Sie, dass es in Ihrer alleinigen Verantwortung liegt, die Data-Governance-Richtlinien Ihres Unternehmens einzuhalten und Ihre gesetzlichen Anforderungen zu erfüllen. Experience Platform bietet Data Governance-Tools, mit denen Sie Ihre Datennutzungsverpflichtungen verwalten können. Wenden Sie die entsprechenden Datennutzungsbezeichnungen an, bevor Sie Daten abfragen oder verarbeiten. Weitere Informationen zu Data Governance-Tools und -Best Practices finden Sie in der Dokumentation ."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=de" text="Data Governance – Übersicht"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=de" text="Übersicht über Data Governance-Beschriftungen"
 
 Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Daher müssen Sie dafür sorgen, dass Ihre Datenoperationen in [!DNL Platform] mit den Datennutzungsrichtlinien konform sind.
 
