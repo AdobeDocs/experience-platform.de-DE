@@ -5,7 +5,7 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
 source-wordcount: '1859'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -69,12 +69,12 @@ Benutzerdefinierte Identitätstypen werden beim Exportieren einer Journey nicht 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Entfernen eines Objekts"
->abstract="Um ein Objekt aus dem Package zu entfernen, wählen Sie die zu entfernende Zeile aus und verwenden Sie dann die Löschoption, die bei Auswahl zur Verfügung gestellt wird. Beachten Sie, dass Sie keine Objekte aus veröffentlichten Paketen entfernen können."
+>abstract="Um ein Objekt aus dem Paket zu entfernen, wählen Sie die zu entfernende Zeile aus und verwenden Sie dann die Löschoption, die bei der Auswahl zur Verfügung gestellt wird. Beachten Sie, dass Sie keine Objekte aus veröffentlichten Paketen entfernen können."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Ablaufeinstellungen des Pakets"
->abstract="Pakete laufen nach einem Zeitraum der Inaktivität im Entwurfsstatus ab. Das Standarddatum wird ab heute auf 90 Tage festgelegt. Dieses Datum verändert sich, bis das Paket veröffentlicht wird. Wenn Sie das Paket morgen im Entwurfsstatus besuchen, wird das Datum um +1 Tag verschoben, es sei denn, Sie legen dies manuell fest."
+>abstract="Pakete laufen nach einiger Zeit der Inaktivität im Entwurfsstatus ab. Das standardmäßige Datum ist ab heute für 90 Tage festgelegt. Dieses Datum verändert sich, bis das Paket veröffentlicht wird. Wenn Sie das Paket morgen im Entwurfsstatus besuchen, wird das Datum um +1 Tag verschoben (es sei denn, Sie legen es manuell fest)."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"

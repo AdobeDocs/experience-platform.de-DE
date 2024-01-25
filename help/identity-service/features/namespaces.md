@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
 workflow-type: tm+mt
 source-wordcount: '1863'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -26,13 +26,13 @@ Identitäts-Namespaces erfordern ein Verständnis verschiedener Adobe Experience
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Identity-Namespaces"
->abstract="Ein Identitäts-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte entsprechen **name<span>@acme.com**. Auf ähnliche Weise wird ein Namespace von `Phone` könnte entsprechen `555-555-1234`."
+>abstract="Ein Identity-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte **name<span>@acme.com** entsprechen. Gleichermaßen könnte ein Namespace von `Phone` `555-555-1234` entsprechen."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="Identitätswerte"
->abstract="Ein Identitätswert ist eine Kennung, die für eine eindeutige Person, eine eindeutige Organisation oder ein eindeutiges Asset steht. Der Kontext oder der Typ der Identität, den der Wert darstellt, wird durch einen entsprechenden Identity-Namespace definiert. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen."
+>abstract="Ein Identitätswert ist eine Kennung, die für eine eindeutige Person, eine eindeutige Organisation oder ein eindeutiges Asset steht. Der Kontext oder der Typ der Identität, den der Wert darstellt, wird durch einen entsprechenden Identity-Namespace definiert. Bei der Zuordnung von Eintragsdaten über Profilfragmente hinweg müssen Namespace und Identitätswert übereinstimmen. Bei der Zuordnung von Eintragsdaten über Profilfragmente hinweg müssen Namespace und Identitätswert übereinstimmen."
 >text="Learn more in documentation"
 
 Eine voll qualifizierte Identität umfasst zwei Komponenten: eine **Identitätswert** und **Identitäts-Namespace**. Wenn beispielsweise der Wert einer Identität `scott@acme.com`eingeben, stellt ein Namespace einen Kontext für diesen Wert bereit, indem er ihn als E-Mail-Adresse unterscheidet. Auf ähnliche Weise kann ein Namespace `555-123-456` als Telefonnummer und `3126ABC` als CRM-ID. Grundsätzlich gilt: **Ein Namespace stellt Kontext für eine bestimmte Identität bereit**. Beim Abgleich von Datensatzdaten über Profilfragmente hinweg, wie zum Beispiel wenn [!DNL Real-Time Customer Profile] Führt Profildaten zusammen, sowohl der Identitätswert als auch der Namespace müssen übereinstimmen.
