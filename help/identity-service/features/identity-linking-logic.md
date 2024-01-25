@@ -2,9 +2,9 @@
 title: Identity Service-Verknüpfungslogik
 description: Erfahren Sie, wie Identity Service-Links Identitäten verteilen, um eine umfassende Ansicht eines Kunden zu erstellen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
+source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,17 @@ Es gibt zwei Arten von Identitäten, die verknüpft werden:
 
 * **Profildatensätze**: Diese Identitäten stammen normalerweise aus CRM-Systemen.
 * **Erlebnisereignisse**: Diese Identitäten stammen normalerweise aus der WebSDK-Implementierung oder der Adobe Analytics-Quelle.
+
+## Semantische Bedeutung der Herstellung von Verbindungen
+
+Eine Identität repräsentiert eine reale Einheit. Wenn eine Verbindung zwischen zwei Identitäten hergestellt wird, bedeutet dies, dass die beiden Identitäten miteinander verknüpft sind. Im Folgenden finden Sie einige Beispiele, die dieses Konzept illustrieren:
+
+| Aktion | Verknüpfungen | Bedeutung |
+| --- | --- | --- |
+| Ein Endbenutzer meldet sich über einen Computer an. | CRM-ID und ECID werden miteinander verknüpft. | Eine Person (CRM-ID) besitzt ein Gerät mit einem Browser (ECID). |
+| Endbenutzer navigieren anonym mit einer iPhone . | Der IDFA ist mit der ECID verknüpft. | Das Apple-Hardwaregerät (IDFA), z. B. ein iPhone, ist mit dem Browser (ECID) verknüpft. |
+| Ein Endbenutzer meldet sich mit Google Chrome und dann Firefox an. | Die CRM-ID ist mit zwei verschiedenen ECIDs verknüpft. | Eine Person (CRM-ID) ist mit zwei Webbrowsern (**Hinweis**: Jeder Browser verfügt über eine eigene ECID.) |
+| Ein Data Engineer erfasst einen CRM-Datensatz, der zwei Identitätsfelder enthält: CRM-ID und E-Mail. | CRM-ID und E-Mail sind verknüpft. | Eine Person (CRM-ID) ist mit der E-Mail-Adresse verknüpft. |
 
 ## Verstehen der Verknüpfungslogik des Identity Service
 
@@ -85,10 +96,13 @@ Sie haben auch WebSDK implementiert und einen WebSDK-Datensatz (Erlebnisereignis
 | `t=3` | ECID: 44675 | Startseite anzeigen |
 | `t=4` | ECID:44675, CRM ID: 31260XYZ | Kaufverlauf anzeigen |
 
+Die primäre Identität für jedes Ereignis wird basierend auf [Konfigurieren von Datenelementtypen](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*` - Kennzeichnet ein Feld, das als Identität markiert ist, wobei ECID als primär markiert ist.
->* Standardmäßig wird die Personen-ID (in diesem Fall die CRM-ID) als primäre Identität bezeichnet. Wenn die Personen-ID nicht vorhanden ist, wird die Cookie-ID (in diesem Fall die ECID) zur primären Identität.
+>* Wenn Sie die CRM-ID als primäre Kennung auswählen, haben authentifizierte Ereignisse (Ereignisse mit Identitätszuordnung, die die CRM-ID und ECID enthält) eine primäre Identität mit der CRM-ID. Für nicht authentifizierte Ereignisse (Ereignisse, bei denen die Identitätszuordnung nur ECID enthält) weist ECID als primäre Identität auf. Adobe empfiehlt diese Option.
+>
+>* Wenn Sie die ECID unabhängig vom Authentifizierungsstatus als primäre Identität auswählen, wird die ECID zur primären Identität.
 
 In diesem Beispiel:
 
