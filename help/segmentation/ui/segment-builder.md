@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
 workflow-type: tm+mt
-source-wordcount: '3352'
-ht-degree: 99%
+source-wordcount: '3426'
+ht-degree: 95%
 
 ---
 
@@ -265,7 +265,11 @@ Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durc
 
 >[!NOTE]
 >
->Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtzahl der Entitäten verwendet. Weiterführende Informationen zum Generieren von Schätzungen für Segmentdefinitionen finden Sie im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Tutorials zum Erstellen von Segmentdefinitionen.
+>Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Für zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet und für über 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet.
+>
+>Darüber hinaus basiert diese Schätzung auf dem Zeitpunkt, zu dem der letzte Profilstichprobenauftrag ausgeführt wurde. Wenn Sie also eine relative Datumsfunktion wie &quot;Heute&quot;oder &quot;Diese Woche&quot;verwenden, werden die Berechnungen der Schätzung von der letzten Laufzeit des Beispielauftrags für das Profil abgeleitet. Wenn heute beispielsweise der 24. Januar ist und der letzte Beispielauftrag am 22. Januar ausgeführt wurde, basiert die Funktion &quot;Gestern&quot;für das relative Datum auf dem 21. Januar und nicht auf dem 23. Januar.
+>
+>Weiterführende Informationen zum Generieren von Schätzungen für Segmentdefinitionen finden Sie im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Tutorials zum Erstellen von Segmentdefinitionen.
 
 Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Auswertungsmethode Sie verwenden möchten, können Sie die gewünschte Auswertungsmethode über die Dropdown-Liste auswählen. Wenn Sie wissen möchten, für welche Auswertungstypen diese Segmentdefinition qualifiziert ist, können Sie das Durchsuchen-Symbol ![Ordnersymbol mit Lupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) auswählen, um eine Liste der verfügbaren Auswertungsmethoden für die Segmentdefinition anzuzeigen.
 
