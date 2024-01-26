@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
 description: Ordnen Sie Adobe Analytics-Felder mithilfe des Analytics Source Connector XDM-Feldern zu.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: bb07d45df3ca585b2ca4af07cc991ac0b1e4df12
+source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
-source-wordcount: '2367'
-ht-degree: 75%
+source-wordcount: '2388'
+ht-degree: 73%
 
 ---
 
@@ -38,7 +38,7 @@ Bestimmte Felder werden von Adobe Analytics direkt zum Experience-Datenmodell (X
 | `m_keywords` | `search.keywords` | Zeichenfolge | Die in der Keyword-Dimension verwendete Variable. |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | Ganzzahl | Numerische Kennung, die das Betriebssystem des Besuchers darstellt. Dieser Wert basiert auf der Spalte „user_agent“. |
 | `m_page_url` | `web.webPageDetails.URL` | Zeichenfolge | URL des Seitenaufrufs. |
-| `m_pagename_no_url` | `web.webPageDetails.name` | Zeichenfolge | Variable, die zum Ausfüllen der Dimension „Seiten“ dient. |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | Zeichenfolge | Gleich 1 bei Treffern mit Seitenname. Dies ähnelt der Adobe Analytics-Metrik &quot;Seitenansichten&quot;. |
 | `m_referrer` | `web.webReferrer.URL` | Zeichenfolge | Seiten-URL der vorherigen Seite. |
 | `m_search_page_num` | `search.pageDepth` | Ganzzahl | Wird von der Dimension „Rangansicht aller Suchseiten“ verwendet. Gibt an, auf welcher Seite der Suchergebnisse Ihre Site angezeigt wurde, ehe der Benutzer sich zu Ihrer Site durchgeklickt hat. |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | Zeichenfolge | Statusvariable. |
@@ -152,7 +152,7 @@ Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodas
 | `m_page_event_var1` | `web.webInteraction.URL` | Zeichenfolge | Variable, die nur in Bildanforderungen zum Linktracking verwendet wird. Die Variable enthält die URL des angeklickten Downloadlinks, Exitlinks oder benutzerspezifischen Links. |
 | `m_page_event_var2` | `web.webInteraction.name` | Zeichenfolge | Variable, die nur in Bildanforderungen zum Linktracking verwendet wird. Damit wird der benutzerdefinierte Name des Links aufgeführt, sofern angegeben. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | Boolescher Wert | Variable, die zum Ausfüllen der Dimension „Seiten nicht gefunden“ dient. Diese Variable sollte entweder leer sein oder „ErrorPage“ enthalten. |
-| `m_pagename_no_url` | `web.webPageDetails.pageViews.value` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben ist, bleibt dieser Wert leer. |
+| `m_pagename_no_url` | `web.webPageDetails.name` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben ist, bleibt dieser Wert leer. |
 | `m_paid_search` | `search.isPaid` | Boolescher Wert | Markierung, die gesetzt wird, wenn der Treffer mit der Paid Search-Erkennung übereinstimmt. |
 | `m_product_list` | `productListItems[].items` | array | Produktliste, so wie sie von der Variable der Produkte übergeben wurde. | {SKU (string), quantity (integer), priceTotal (number)} |
 | `m_ref_type` | `web.webReferrer.type` | Zeichenfolge | Eine numerische ID, die den Typ des Verweises für den Treffer darstellt.<br/>`1`: Innerhalb Ihrer Site<br/>`2`: Andere Websites<br/>`3`: Suchmaschinen<br/>`4`: Festplatte<br/>`5`: USENET<br/>`6`: Eingegeben/mit Lesezeichen versehen (kein Referrer)<br/>`7`: email<br/>`8`: Kein JavaScript<br/>`9`: Soziale Netzwerke |
@@ -203,7 +203,7 @@ Weitere Informationen zum Ausführen dieser Umwandlungen mithilfe von Query Serv
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | Zeichenfolge | Variable, die in der Dimension „Ursprüngliche Entrypage“ verwendet wird. Seitenname der Entrypage des Besuchers. |
 | `post_keywords` | `search.keywords` | Zeichenfolge | Die Keywords, die für den Treffer gesammelt wurden. |
 | `post_page_url` | `web.webPageDetails.URL` | Zeichenfolge | URL des Seitenaufrufs. |
-| `post_pagename_no_url` | `web.webPageDetails.name` | Zeichenfolge | Variable, die zum Ausfüllen der Dimension „Seiten“ dient. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | Zeichenfolge | Gleich 1 bei Treffern mit Seitenname. Dies ähnelt der Adobe Analytics-Metrik &quot;Seitenansichten&quot;. |
 | `post_purchaseid` | `commerce.order.purchaseID` | Zeichenfolge | Variable, die zur eindeutigen Identifizierung von Käufen dient. |
 | `post_referrer` | `web.webReferrer.URL` | Zeichenfolge | URL der vorherigen Seite. |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | Zeichenfolge | Statusvariable. |
@@ -233,11 +233,11 @@ Weitere Informationen zum Ausführen dieser Umwandlungen mithilfe von Query Serv
 | `post_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | Zeichenfolge | Die Art des in der Bildanforderung gesendeten Treffers (Standardtreffer, angeklickter Downloadlink, Exitlink oder benutzerspezifischer Link). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Die Art des in der Bildanforderung gesendeten Treffers (Standardtreffer, angeklickter Downloadlink, Exitlink oder benutzerspezifischer Link). |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Gleich 1, wenn es sich bei dem Treffer um einen Link-Klick handelt. Dies ähnelt der Metrik Seitenereignisse in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | Zeichenfolge | Diese Variable wird nur bei Bildanforderungen zum Linktracking verwendet. Dies ist die URL des angeklickten Downloadlinks, Exitlinks oder benutzerspezifischen Links. |
 | `post_page_event_var2` | `web.webInteraction.name` | Zeichenfolge | Diese Variable wird nur bei Bildanforderungen zum Linktracking verwendet. Dies ist der benutzerdefinierte Name des Links. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | Boolescher Wert | Damit wird die Dimension „Seiten nicht gefunden“ ausgefüllt. Diese Variable sollte entweder leer sein oder „ErrorPage“ enthalten. |
-| `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben ist, bleibt dieser Wert leer. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben ist, bleibt dieser Wert leer. |
 | `post_product_list` | `productListItems[].items` | array | Produktliste, so wie sie von der Variable der Produkte übergeben wurde. | {SKU (string), quantity (integer), priceTotal (number)} |
 | `post_search_engine` | `search.searchEngine` | Zeichenfolge | Numerische Kennung, die die Suchmaschine darstellt, die den Besucher auf Ihre Site verwiesen hat. |
 | `mvvar1_instances` | `.list.items[]` | Objekt | Liste mit Variablenwerten. Enthält eine durch Trennzeichen getrennte Liste benutzerdefinierter Werte (je nach Implementierung). |
