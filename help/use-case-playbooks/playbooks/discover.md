@@ -4,10 +4,10 @@ title: Finden des richtigen Playbooks
 description: Erfahren Sie, wie Sie das richtige Playbook für Ihren Anwendungsfall finden.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 96%
+source-wordcount: '776'
+ht-degree: 91%
 
 ---
 
@@ -51,6 +51,11 @@ Die Mindmap beginnt mit einer Definition, wer in der User Journey erreicht wird.
 
 
 ### Zusammenfassung  {#summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_assets"
+>title="Assets"
+>abstract="Dies sind die Assets, die von diesem Playbook generiert werden. Nachdem Sie eine Instanz des Playbooks erstellt haben, können Sie die Assets in der inspirierenden Sandbox anzeigen und sie nach Bedarf in andere Sandboxes weiterleiten."
 
 Vollziehen Sie anhand des Zusammenfassungsabschnitts nach, welche Assets generiert werden, wenn Sie Instanzen aus dem Playbook erstellen. Die für jedes Playbook generierten Assets sind auf den Anwendungsfall aus dem Playbook zugeschnitten. Nachfolgend finden Sie weitere Informationen zu allen Elementen im Zusammenfassungsabschnitt.
 

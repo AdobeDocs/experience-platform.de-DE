@@ -4,10 +4,10 @@ title: Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen
 description: Erfahren Sie, wie Sie für Ihren Marketing-Anwendungsfall Playbook-Instanzen erstellen, freigeben und wiederverwenden können.
 badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 100%
+source-wordcount: '745'
+ht-degree: 97%
 
 ---
 
@@ -20,6 +20,11 @@ ht-degree: 100%
 Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anwendungsfälle] > [!UICONTROL Playbooks]**. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
 
 ## Erstellen einer Playbook-Instanz {#create-playbook-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_create"
+>title="Instanz erstellen"
+>abstract="Erstellen Sie eine Liste von Assets wie Journey, Audiences, Schemas oder Zielen, die für Journey oder Aktivierungsszenarien verwendet werden können."
 
 Bevor Sie eine Playbook-Instanz erstellen, sollten Sie die verfügbaren Playbooks erkunden, um das [richtige Playbook für sich zu finden](/help/use-case-playbooks/playbooks/discover.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
 
