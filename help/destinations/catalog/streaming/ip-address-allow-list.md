@@ -4,7 +4,7 @@ title: IP-Adressen-Zulassungsliste für Streaming-Ziele
 type: Documentation
 description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform an Ihren HTTP REST API-Endpunkt, Amazon Kinesis oder Azure Event Hub-Instanz zu exportieren.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ca3c9ed87f2365cc1d9e4ef5e4a6145266a11bba
+source-git-commit: d4833821105433518ee30415fe08f281effa5616
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 9%
@@ -83,6 +83,7 @@ Adobe empfiehlt, dass Sie die folgenden IP-Bereiche zu einer Zulassungsliste hin
 `40.74.7.192/28`
 `51.105.144.81`
 `51.124.70.4`
+`20.101.233.128`
 
 ## AUS5: APAC-Kunden {#apac}
 
