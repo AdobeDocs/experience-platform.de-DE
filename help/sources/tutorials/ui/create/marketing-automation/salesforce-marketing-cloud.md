@@ -2,7 +2,7 @@
 title: Verbinden Ihres Salesforce-Marketing Cloud-Kontos mit dem Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie über die Benutzeroberfläche Ihr Salesforce-Marketing Cloud-Konto mit Experience Platform verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
+source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 27%
@@ -34,7 +34,7 @@ Um auf Ihr [!DNL Salesforce Marketing Cloud]-Konto in Platform zugreifen zu kön
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Host | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie die `{subdomain}.rest.marketingcloudapis.com`. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`eingeben, müssen Sie nur `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` als Hostwert. |
+| Host | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie die `{subdomain}.rest.marketingcloudapis.com`. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`eingeben, müssen Sie nur `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als Hostwert. |
 | Client-ID | Die mit Ihrer [!DNL Salesforce Marketing Cloud] Anwendung. |
 | Client-Geheimnis | Das Client-Geheimnis, das mit Ihrem [!DNL Salesforce Marketing Cloud] Anwendung. |
 
