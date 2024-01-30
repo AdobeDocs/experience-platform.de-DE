@@ -14,7 +14,7 @@ ht-degree: 87%
 
 >[!CONTEXTUALHELP]
 >id="platform_accesscontrol_abac_labelusageaccesspolicy"
->title="Zugriffsrichtlinie für Beschriftung"
+>title="Zugriffsrichtlinie für die Verwendung von Kennzeichnungen"
 >abstract=""
 
 Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.

@@ -7,7 +7,7 @@ exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 7%
+ht-degree: 11%
 
 ---
 
@@ -32,13 +32,13 @@ Die [!UICONTROL Erste Schritte mit dem Echtzeit-Kundenprofil] Widget ist in vier
 
 ![Startseite der Platform-Benutzeroberfläche mit dem Widget &quot;Erste Schritte&quot;](assets/platform-home/getting-started-widget.png)
 
-## Dashboard &quot;Metriken&quot; {#metrics-dashboard}
+## Metriken-Dashboard {#metrics-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
->title="Gesamtzahl der Profile"
->abstract="Die Gesamtzahl der Profile, die Ihr Unternehmen innerhalb von Experience Platform hat. Diese Anzahl basiert auf der Zusammenführungsrichtlinie Ihres Unternehmens und umfasst keine Profilfragmente. Die Zahl der Profile wird alle 24 Stunden aktualisiert."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Weitere Informationen finden Sie in der Dokumentation"
+>title="Gesamtanzahl der Profile"
+>abstract="Die Gesamtanzahl der Profile, die Ihr Unternehmen innerhalb von Experience Platform hat. Diese Anzahl basiert auf der Zusammenführungsrichtlinie Ihres Unternehmens und umfasst keine Profilfragmente. Die Zahl der Profile wird alle 24 Stunden aktualisiert."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=de#profile-count" text="Weitere Informationen finden Sie in der Dokumentation"
 
 Das Metriken-Dashboard zeigt aktuelle Informationen zu Ihren Experience Platform-Daten an. Das Dashboard ist in zwei Bereiche unterteilt:
 
@@ -70,7 +70,7 @@ Schließlich bietet Ihnen das Ressourcen-Widget zusätzliche Dokumentationsresso
 
 ![Der Abschnitt &quot;Ressourcen&quot;auf der Startseite der Platform-Benutzeroberfläche.](assets/platform-home/resources.png)
 
-* [Verstehen von Schemas](../xdm/schema/composition.md)
+* [Verstehen von Schemata](../xdm/schema/composition.md)
 * [Quellen verbinden](../sources/home.md)
 * [So füllen Sie Ihr Echtzeit-Kundenprofil aus](../profile/home.md)
 * [Ziele verbinden](../destinations/home.md)
