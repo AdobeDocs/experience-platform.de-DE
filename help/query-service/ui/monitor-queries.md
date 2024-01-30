@@ -2,10 +2,10 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 39%
+ht-degree: 37%
 
 ---
 
@@ -32,11 +32,11 @@ In der folgenden Tabelle werden die einzelnen verfügbaren Spalten beschrieben.
 | **[!UICONTROL Name]** | Das Namensfeld enthält entweder den Namen der Vorlage oder die ersten Zeichen Ihrer SQL-Abfrage. Jede Abfrage, die über die Benutzeroberfläche mit dem Abfrage-Editor erstellt wurde, wird zu Beginn benannt. Wenn die Abfrage über die API erstellt wurde, wird ihr Name zu einem Snippet der ursprünglichen SQL, die zur Erstellung der Abfrage verwendet wurde. Um eine Liste aller mit der Abfrage verknüpften Ausführungen anzuzeigen, wählen Sie ein Element aus der [!UICONTROL Name] Spalte. Weitere Informationen finden Sie unter [Abfragenausführungen Planungsdetails](#query-runs) Abschnitt. |
 | **[!UICONTROL Vorlage]** | Der Name der Abfragevorlage. Klicken Sie auf einen Vorlagennamen, um zum Abfrage-Editor zu navigieren. Die Abfragevorlage wird aus praktischen Gründen im Abfrage-Editor angezeigt. Wenn kein Vorlagenname vorhanden ist, wird die Zeile mit einem Bindestrich markiert und es ist nicht möglich, zum Abfrage-Editor umzuleiten, um die Abfrage anzuzeigen. |
 | **[!UICONTROL SQL]** | Ein Ausschnitt der SQL-Abfrage. |
-| **[!UICONTROL Ausführungshäufigkeit]** | Die Häufigkeit, mit der Ihre Abfrage ausgeführt werden soll. Die unterstützten Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungshäufigkeit gefiltert werden. |
+| **[!UICONTROL Ausführungsfrequenz]** | Die Häufigkeit, mit der Ihre Abfrage ausgeführt werden soll. Die unterstützten Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungshäufigkeit gefiltert werden. |
 | **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
 | **[!UICONTROL Erstellt]** | Der Zeitstempel der Erstellung der Abfrage im UTC-Format. |
 | **[!UICONTROL Zeitstempel der letzten Ausführung]** | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
-| **[!UICONTROL Status der letzten Ausführung]** | Der Status der letzten Abfrageausführung. Die Statuswerte sind: `Success`, `Failed`, `In progress`, und `No runs`. |
+| **[!UICONTROL Letzter Ausführungsstatus]** | Der Status der letzten Abfrageausführung. Die Statuswerte sind: `Success`, `Failed`, `In progress`, und `No runs`. |
 | **[!UICONTROL Planstatus]** | Der aktuelle Status der geplanten Abfrage. Es gibt fünf potenzielle Werte. [!UICONTROL Registrieren], [!UICONTROL Aktiv], [!UICONTROL Inaaktiv], [!UICONTROL Gelöscht]und einen Bindestrich. <ul><li>Der Bindestrich zeigt an, dass es sich bei der geplanten Abfrage um eine einmalige, nicht wiederkehrende Abfrage handelt.</li><li>Die [!UICONTROL Registrieren] Der Status gibt an, dass das System die Erstellung des neuen Zeitplans für die Abfrage noch verarbeitet. Beachten Sie, dass Sie eine geplante Abfrage während der Registrierung nicht deaktivieren oder löschen können.</li><li>Die [!UICONTROL Aktiv] Der Status zeigt an, dass die geplante Abfrage **noch nicht bestanden** Datum und Uhrzeit der Fertigstellung.</li><li>Die [!UICONTROL Inaaktiv] Der Status zeigt an, dass die geplante Abfrage **sent** Datum und Uhrzeit der Fertigstellung.</li><li>Die [!UICONTROL Gelöscht] status gibt an, dass der Abfrageplan gelöscht wurde.</li></ul> |
 
 >[!TIP]
@@ -87,7 +87,7 @@ Wenn Sie die Ausführung dieser Abfragevorlage planen möchten, wählen Sie den 
 
 Um Warnhinweise für geplante Abfrageausführungen zu abonnieren, wählen Sie die Auslassungspunkte einer geplanten Abfrage aus, die Sie verwalten möchten, und wählen Sie dann **[!UICONTROL Abonnieren]** aus den Optionen im Popup-Menü.
 
-Die [!UICONTROL Warnhinweise] wird geöffnet. Die [!UICONTROL Warnhinweise] -Dialogfeld abonniert sowohl Benachrichtigungen über die Benutzeroberfläche als auch E-Mail-Warnungen. Warnhinweise basieren auf dem Status der Abfrage. Dabei stehen drei Optionen zur Verfügung: `start`, `success` und `failure`. Aktivieren Sie die entsprechenden Kontrollkästchen und klicken Sie auf **[!UICONTROL Speichern]**, um zu abonnieren. Sie können Warnhinweise abonnieren, solange sie keine [!UICONTROL Zeitstempel der letzten Ausführung] -Wert.
+Die [!UICONTROL Warnhinweise] wird geöffnet. Die [!UICONTROL Warnhinweise] -Dialogfeld abonniert sowohl Benachrichtigungen über die Benutzeroberfläche als auch E-Mail-Warnungen. Warnhinweise basieren auf dem Status der Abfrage. Dabei stehen drei Optionen zur Verfügung: `start`, `success` und `failure`. Markieren Sie die entsprechenden Kontrollkästchen und wählen Sie **[!UICONTROL Speichern]** abonnieren. Sie können Warnhinweise abonnieren, solange sie keine [!UICONTROL Zeitstempel der letzten Ausführung] -Wert.
 
 ![Der Dialog zu Warnhinweis-Abonnements.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
@@ -125,9 +125,9 @@ Diese Informationen werden in einer fünfspaltigen Tabelle bereitgestellt. Jede 
 
 | Spaltenname | Beschreibung |
 |---|---|
-| **[!UICONTROL ID der Abfrageausführung]** | Die ID der Abfrageausführung für die tägliche Ausführung. Wählen Sie die **[!UICONTROL Kennung der Abfrageausführung]** , um zur [!UICONTROL Übersicht über die Ausführung von Abfragen]. |
-| **[!UICONTROL Start der Abfrageausführung]** | Der Zeitstempel, wann die Abfrage ausgeführt wurde. Der Zeitstempel hat das UTC-Format. |
-| **[!UICONTROL Abfrageausführung abgeschlossen]** | Der Zeitstempel, wann die Abfrage abgeschlossen wurde. Der Zeitstempel hat das UTC-Format. |
+| **[!UICONTROL Kennung der Abfrageausführung]** | Die Kennung der täglichen Ausführung der Abfrage. Wählen Sie die **[!UICONTROL Kennung der Abfrageausführung]** , um zur [!UICONTROL Übersicht über die Ausführung von Abfragen]. |
+| **[!UICONTROL Start der Abfrage]** | Der Zeitstempel, wann die Abfrage ausgeführt wurde. Der Zeitstempel hat das UTC-Format. |
+| **[!UICONTROL Abschluss der Abfrage]** | Der Zeitstempel, wann die Abfrage abgeschlossen wurde. Der Zeitstempel hat das UTC-Format. |
 | **[!UICONTROL Status]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
 | **[!UICONTROL Datensatz]** | Der an der Ausführung beteiligte Datensatz. |
 
@@ -174,9 +174,3 @@ Wenn eine anonyme Blockabfrage fehlschlägt, können Sie über diese Benutzerobe
 Wählen Sie **[!UICONTROL Abfrage]** aus, um zum Bildschirm mit den Zeitplandetails zurückzukehren, oder wählen Sie **[!UICONTROL Geplante Abfragen]** aus, um zur Registerkarte [!UICONTROL Geplante Abfragen] zurückzukehren.
 
 ![Der Bildschirm mit den Ausführungsdetails mit hervorgehobener Abfrage.](../images/ui/monitor-queries/return-navigation.png)
-
-<!-- Details required to complete this section below:
-### Run details for queries with parameterized queries {#parameterized-queries}
-
-Queries that use parameterized values to make up the SQL statement are ... 
--->

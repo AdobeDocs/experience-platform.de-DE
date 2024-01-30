@@ -2,9 +2,9 @@
 title: Abfrageprotokolle
 description: Abfrageprotokolle werden automatisch bei jeder Ausführung einer Abfrage generiert und stehen über die Benutzeroberfläche zur Verfügung, um die Fehlerbehebung zu unterstützen. In diesem Dokument wird beschrieben, wie Sie den Abschnitt "Query Service Logs"der Benutzeroberfläche verwenden und darin navigieren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '931'
 ht-degree: 3%
 
 ---
@@ -41,9 +41,13 @@ Jede Zeile stellt Protokolldaten für eine Abfrageausführung dar, die mit einer
 
 ![Der Arbeitsbereich &quot;Abfrage-Protokoll&quot;mit einer ausgewählten Zeile und die Protokolldaten in der rechten Seitenleiste wurden hervorgehoben.](../images/ui/query-log/log-details.png)
 
-Im Bereich &quot;Protokolldetails&quot;können Sie einen neuen Ausgabedatensatz auswählen und die vollständige SQL-Abfrage, die in der Ausführung verwendet wurde, anzeigen oder kopieren.
+Im Bereich &quot;Protokolldetails&quot;können Sie verschiedene Aktionen durchführen. Sie können die Abfrage als CTAS ausführen, das einen neuen Ausgabedatensatz erstellt, die vollständige SQL-Abfrage, die in der Ausführung verwendet wurde, anzeigen oder kopieren oder die Abfrage löschen.
 
-![Der Arbeitsbereich &quot;Abfrage-Protokoll&quot;mit einer ausgewählten Zeile und der Ausgabedatensatz und die SQL-Abfrage hervorgehoben.](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>Die Option [!UICONTROL Als CTAS ausführen] ist nur für eine SELECT-Abfrage verfügbar.
+
+![Der Arbeitsbereich &quot;Abfrage-Protokoll&quot;mit einer ausgewählten Zeile, &quot;Als CTAS ausführen&quot;, &quot;Abfrage löschen&quot;und das Symbol &quot;SQL kopieren&quot;hervorgehoben.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >

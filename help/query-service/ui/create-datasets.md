@@ -5,10 +5,10 @@ title: Generieren von Ausgabedatensätzen aus Abfrageergebnissen
 type: Tutorial
 description: Der Abfrage-Service von Adobe Experience Platform ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 94%
+source-wordcount: '497'
+ht-degree: 84%
 
 ---
 
@@ -24,15 +24,15 @@ Gehen Sie wie folgt vor, um Datensätze über die Adobe Experience Platform-Benu
 
 2. Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Abfragen]** und wählen Sie auf der Registerkarte **[!UICONTROL Vorlagen]** die erstellte Abfrage aus. Weitere Informationen zum Anzeigen von Abfragen, die für Ihre Organisation in der Platform-Benutzeroberfläche erstellt und gespeichert wurden, finden Sie in der [[!DNL Query Service] Übersicht](./overview.md#browse).
 
-3. Wählen Sie im Bedienfeld „Abfragedetails“ die Option **[!UICONTROL Ausgabedatensatz]** aus.
+3. Wählen Sie im Bereich &quot;Query details&quot;die Option **[!UICONTROL Als CTAS ausführen]**.
 
-   ![Die Registerkarte „Vorlagen“ des Arbeitsbereichs „Abfragen“ mit hervorgehobener Option zum Auswählen eines Ausgabedatensatzes](../images/ui/create-datasets/output-dataset.png)
+   ![Der Arbeitsbereich &quot;Abfragen&quot; [!UICONTROL Vorlagen] Registerkarte mit Auswahl [!UICONTROL Als CTAS ausführen] hervorgehoben.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. Geben Sie im angezeigten Dialogfeld einen Datensatznamen ein, dem Ihre LDAP-ID vorangestellt ist. Der Datensatzname muss nicht eindeutig oder SQL-sicher sein. Beachten Sie, dass der Tabellenname für Ihren Datensatz basierend auf dem hier erstellten Datensatznamen generiert wird.
 
-5. Geben Sie als Nächstes eine Beschreibung für Ihren Datensatz in das Feld [!UICONTROL Beschreibung] ein und klicken Sie auf **[!UICONTROL Abfrage ausführen]**.
+5. Geben Sie als Nächstes eine Beschreibung für Ihren Datensatz in die [!UICONTROL Beschreibung] Feld und wählen Sie **[!UICONTROL Als CTAS ausführen]**.
 
-   ![Das Dialogfeld „Ausgabedatensatz“ mit Hervorhebung der Datensatzdetails und der Ausführungsabfrage](../images/ui/create-datasets/run-query.png)
+   ![Das Dialogfeld Ausgabedatensatz mit den Datensatzdetails und [!UICONTROL Als CTAS ausführen] hervorgehoben](../images/ui/create-datasets/run-query.png)
 
 6. Nachdem die Abfrage ausgeführt wurde, navigieren Sie zu **[!UICONTROL Datensätze]**, um den von Ihnen erstellten Datensatz anzuzeigen. Weitere Informationen zum Ausführen allgemeiner Aktionen beim Arbeiten mit Datensätzen in der Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche von Datensätzen](../../catalog/datasets/user-guide.md).
 

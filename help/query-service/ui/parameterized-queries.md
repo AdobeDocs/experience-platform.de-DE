@@ -2,10 +2,10 @@
 title: Parameterisierte Abfragen
 description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experience Platform-Benutzeroberfläche verwenden.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 12%
+source-wordcount: '690'
+ht-degree: 13%
 
 ---
 
@@ -47,21 +47,17 @@ SELECT
 
 Um Ihre parametrisierte Abfrage in der Benutzeroberfläche zu erstellen, navigieren Sie zum Abfrage-Editor. Siehe Abschnitt zu [Zugriff auf den Abfrage-Editor](./user-guide.md#accessing-query-editor) für weitere Anweisungen.
 
-Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Fügen Sie als Nächstes den fehlenden Wert für den Schlüssel im [!UICONTROL Abfrageparameter] Abschnitt unterhalb des Editors. Die Abfrage kann nicht ausgeführt werden, wenn Sie keinem der erforderlichen Schlüssel einen Wert hinzufügen. Ein Warnsymbol (![Ein Warnsymbol.](../images/ui/parameterized-queries/alert-icon.png)) im Abschnitt &quot;Abfrageparameter&quot;neben allen leeren [!UICONTROL Wert] Eingabefelder.
+Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Wählen Sie als Nächstes die **[!UICONTROL Abfrageparameter]** Registerkarte neben dem [!UICONTROL Konsole] den fehlenden Wert für den Schlüssel hinzufügen. Die Abfrage kann nicht ausgeführt werden, wenn Sie keinem der erforderlichen Schlüssel einen Wert hinzufügen. Ein Warnsymbol (![Ein Warnsymbol.](../images/ui/parameterized-queries/alert-icon.png)) im Abschnitt &quot;Abfrageparameter&quot;neben allen leeren [!UICONTROL Wert] Eingabefelder.
+
+>[!NOTE]
+>
+>Wenn für Ihre Abfrage keine Parameter verwendet werden, können Sie im Abfrage-Editor weiterhin unnötige Parameter eingeben. Der Abfrage-Editor ignoriert alle unnötigen Schlüssel-Wert-Paare und hat keine Auswirkungen auf die Ausführung oder die Ergebnisse der Abfrage.
 
 ![Der Abfrage-Editor mit einer parametrisierten Abfrage und der Abschnitt Abfrageparameter wurden hervorgehoben.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >Ändern von Registerkarten aus [!UICONTROL Abfrageparameter] nach [!UICONTROL Konsole] , um die Konsolenausgabe der Abfrage anzuzeigen.
-
-Wenn Sie einen Parameter entfernen und versuchen, die Abfrage erneut auszuführen, nachdem sie bereits ausgeführt wurde, wird im [!UICONTROL Abfrageparameter] -Bereich, um Sie zu warnen.
-
->[!NOTE]
->
->Wenn für Ihre Abfrage keine Parameter verwendet werden, können Sie im Abfrage-Editor weiterhin unnötige Parameter eingeben. Der Abfrage-Editor ignoriert alle unnötigen Schlüssel-Wert-Paare und hat keine Auswirkungen auf die Ausführung oder die Ergebnisse der Abfrage.
-
-![Der Abfrage-Editor mit einem leeren Wertefeld und der Abfrageparameter-Fehler hervorgehoben.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Verwenden Sie die Details der Abfrageprotokolle, um Parameterwerte zu überprüfen. {#check-parameter-values}
 
