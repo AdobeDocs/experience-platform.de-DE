@@ -2,18 +2,19 @@
 solution: Experience Platform
 title: Übersicht über das Datenbewusstsein in "Anwendungsfallbüchern"
 description: Erfahren Sie, wie Sie die Wertschöpfungszeit beschleunigen können, indem Sie die in der zugrunde liegenden inspirierenden Sandbox erstellten Assets in andere Sandboxes kopieren.
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
+exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
+source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht über das Datenbewusstsein in &quot;Anwendungsfallbüchern&quot;
 
-Anwendungsbeispiele sind Marketing-Vorlagen, mit denen Assets wie Zielgruppen, Schemata oder Journey für gängige Marketing-Anwendungsfälle generiert werden. In Adobe Experience Platform verweisen diese Vorlagen auf verschiedene Standardfelder und Feldgruppen. In bestimmten Fällen haben Sie jedoch möglicherweise bereits eigene Schemata, Felder und Feldergruppen eingerichtet. Dadurch können einige der von den Anwendungsfallvorlagen generierten Assets, z. B. Journey, mit Ihren Daten inkompatibel werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Datenerfassungsfunktion die generierten Assets besser an Ihre vorhandenen Assets anpassen und ergänzen können.
+Anwendungsbeispiele sind Marketing-Vorlagen, mit denen Assets wie Zielgruppen, Schemata oder Journey für gängige Marketing-Anwendungsfälle generiert werden. Sie können die von Playbooks erstellten Assets in der inspirierenden Sandbox testen. Sobald Sie bereit sind, können Sie die Assets in andere Entwicklungs-Sandboxes importieren, um sie mit den in diesen Sandboxes verfügbaren Daten weiter zu testen. Wenn Sie mit dem Test zufrieden sind, können Sie die Assets dann aus Entwicklungs-Sandboxes in Produktions-Sandboxes verschieben.
+
+In bestimmten Fällen haben Sie jedoch möglicherweise bereits Ihre eigenen Schemas, Felder und Feldergruppen in anderen Entwicklungs-Sandboxes eingerichtet. Dadurch können einige der von den Anwendungsfallvorlagen generierten Assets, z. B. Journey, mit Ihren Daten inkompatibel werden. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Datenerfassungsfunktion die generierten Assets besser an Ihre vorhandenen Assets anpassen und ergänzen können.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -22,6 +23,10 @@ Bevor Sie dieses Tutorial lesen, durchsuchen Sie die [Verfügbare Anwendungsfall
 Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Schemata und Nachrichten in der inspirierenden Sandbox generiert. Lesen Sie weiter, um zu erfahren, wie Sie diese Assets in andere Sandboxes kopieren können.
 
 ### Erstellen und Veröffentlichen eines Pakets {#create-publish-package}
+
+>[!NOTE]
+>
+> Sie können Pakete nur in andere Entwicklungs-Sandboxes importieren. Sobald Sie alle erforderlichen Änderungen oder Aktualisierungen vorgenommen haben, können Sie die Assets oder Pakete aus diesen Entwicklungs-Sandboxes in die Produktion importieren. Sie können nicht direkt aus den Sandboxes &quot;Anwendungsfall-Playbooks&quot;in die Produktion importieren.
 
 1. Um Objekte aus der inspirierenden Sandbox in eine andere Sandbox zu importieren, navigieren Sie zu einer gewünschten Instanz eines Anwendungsfallbuchs und wählen Sie **[!UICONTROL In einer anderen Sandbox veröffentlichen]** um die Artefakte als Paket zu exportieren.
 
@@ -48,10 +53,6 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
 5. Wählen Sie die **+** den Workflow steuern und starten, um die durch die Fallwiedergabe generierten Assets in die **[!UICONTROL Target-Sandbox]**. Wählen Sie eine Ziel-Sandbox aus und bestätigen Sie mithilfe des Dropdown-Menüs den Paketnamen, den Sie importieren möchten. Fügen Sie die Auftragsdetails wie Auftragsname und Auftragsbeschreibung hinzu, bevor Sie mit dem nächsten Schritt fortfahren.
 
    ![Import-Workflow starten, Ziel auswählen, Paket bestätigen, Auftragsdetails hinzufügen.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
-
-   >[!NOTE]
-   >
-   > Sie können Pakete nur in andere Entwicklungs-Sandboxes importieren. Die Produktions-Sandbox ist für solche Importe deaktiviert.
 
 6. Im **[!UICONTROL Anzeigen von Abhängigkeiten]** Schritt, können Sie Schemas zuordnen und andere Assets aus der inspirierenden Sandbox in die Ziel-Sandbox kopieren. Die **[!UICONTROL Beenden]** -Schaltfläche deaktiviert ist, bis Sie jedes Schema zuordnen.
 
@@ -96,3 +97,7 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
 ## Nächste Schritte
 
 Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis dafür, wie Sie Anwendungsfallbücher zusammen mit [Sandbox-Tools](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) , um ausführbare Journey zu erstellen, die auf Ihre Schemas verweisen. Erfahren Sie mehr über die gemeinsame [Anwendungsfälle für Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+
+### Weitere Hilfe zu diesem Thema
+
+[Sandbox-Werkzeuge](/help/sandboxes/ui/sandbox-tooling.md)

@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Finden des richtigen Playbooks
 description: Erfahren Sie, wie Sie das richtige Playbook für Ihren Anwendungsfall finden.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# (Beta) Finden des richtigen Playbooks
-
->[!AVAILABILITY]
->
->Diese Funktion befinden sich derzeit in der Betaphase und steht nicht allen Benutzenden zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
+# Finden des richtigen Playbooks
 
 Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anwendungsfälle] > [!UICONTROL Playbooks]**. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
 
@@ -48,7 +43,6 @@ Verwenden Sie den Mindmap-Abschnitt in einem Playbook, um sich über die Schritt
 Die Mindmap beginnt mit einer Definition, wer in der User Journey erreicht wird. Sie beschreibt bei jedem Schritt, ob etwas von Adobe bereitgestellt wird, z. B. eine neue Nachricht oder eine Erinnerung, oder ob die nächste Nachricht oder das nächste Ereignis durch eine Handlung der Zielpersona ausgelöst wird.
 
 ![Hervorgehobene Playbook-Mindmap.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### Zusammenfassung  {#summary}
 

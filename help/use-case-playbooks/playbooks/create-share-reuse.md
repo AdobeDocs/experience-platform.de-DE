@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen
 description: Erfahren Sie, wie Sie für Ihren Marketing-Anwendungsfall Playbook-Instanzen erstellen, freigeben und wiederverwenden können.
-badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 97%
+source-wordcount: '740'
+ht-degree: 86%
 
 ---
 
-# (Beta) Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen
-
->[!AVAILABILITY]
->
->Diese Funktion befinden sich derzeit in der Betaphase und steht nicht allen Benutzenden zur Verfügung. Dokumentation und Funktionalitäten können sich ändern.
+# Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen
 
 Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anwendungsfälle] > [!UICONTROL Playbooks]**. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
 
@@ -48,7 +43,7 @@ Nachdem Sie eine Instanz basierend auf einem Playbook erstellt haben, können Si
 
 Es ist wichtig zu verstehen, dass die generierten Assets je nach aktiviertem Anwendungsfall unterschiedlich sind:
 
-* Für verschiedene Arten von Playbooks werden verschiedene Assets generiert. Diese Assets werden speziell für den auf dem Playbook basierenden Anwendungsfall erstellt. Ein Playbook generiert beispielsweise ein Schema, ein Segment, eine Journey und Nachrichten. Ein anderes Playbook generiert ein Schema, ein Segment und ein Ziel, für das Daten aktiviert werden sollen.
+* Für verschiedene Arten von Playbooks werden verschiedene Assets generiert. Diese Assets werden speziell für den auf dem Playbook basierenden Anwendungsfall erstellt. Ein Playbook generiert beispielsweise ein Schema, eine Zielgruppe, eine Journey und Nachrichten. Ein anderes Playbook generiert ein Schema, eine Zielgruppe und ein Ziel, für das Daten aktiviert werden sollen.
 * Die Assets selbst unterscheiden sich zwischen den Playbooks. Für das Playbook **[!UICONTROL Geburtstagsnachricht an Gäste senden]** gilt für die erstellte Zielgruppe etwa die Regel `birthday=today AND year=any`.
 
 Beispiel: Für das Playbook **[!UICONTROL Abgebrochener Warenkorb: Artikel]** können Sie sehen, dass eine bestimmte Journey erstellt wurde, die die für diesen Anwendungsfall erstellten Nachrichten enthält.
@@ -67,7 +62,7 @@ Das oben beschriebene Verhalten gilt für alle Assets, die erstellt werden, mit 
 >
 >Testen Sie in der Entwicklungs-Sandbox und wechseln Sie zur Produktion, wenn Sie dazu bereit sind.
 >
->Nachdem Objekte generiert wurden, können Sie sie in den Entwicklungs-Sandboxes weiter testen, indem Sie Daten hinzufügen. Sie können die Assets so lange Sie möchten in der Entwicklungs-Sandbox testen, und Sie können die Asset-Logik (Segmentdefinitionen, Journeys, Schemata) in der Produktions-Sandbox replizieren, wenn Sie dazu bereit sind.
+>Nachdem Objekte generiert wurden, können Sie sie in den Entwicklungs-Sandboxes weiter testen, indem Sie Daten hinzufügen. Sie können die Assets so lange testen, wie Sie es in der Entwicklungs-Sandbox wünschen, und die Asset-Logik (Zielgruppendefinitionen, Journey, Schemas usw.) in der Produktions-Sandbox replizieren, wenn Sie bereit sind. Sie können zur Entwicklungs-Sandbox und dann zur Produktions-Sandbox wechseln, indem Sie die [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Wiederverwenden von Playbooks {#reuse-playbooks}
 
