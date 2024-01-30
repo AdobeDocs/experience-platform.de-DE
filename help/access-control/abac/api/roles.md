@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Rollen-API-Endpunkt
 description: Mit dem Endpunkt /roles in der API für die attributbasierte Zugriffssteuerung können Sie Rollen in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 28%
+source-wordcount: '1665'
+ht-degree: 27%
 
 ---
 
@@ -253,7 +253,7 @@ Bei einer erfolgreichen Antwort werden die mit der abgefragten Rollen-ID verknü
 | `subjectType` | Der Typ des abgefragten Betreffs. |
 | `subjectId` | Die Kennung, die dem abgefragten Betreff entspricht. |
 
-## Rollen erstellen {#create}
+## Erstellen einer Rolle {#create}
 
 Um eine neue Rolle zu erstellen, stellen Sie eine POST-Anfrage an die `/roles` -Endpunkt hinzugefügt, während Werte für den Namen, die Beschreibung und den Rollentyp Ihrer Rolle angegeben werden.
 
@@ -440,13 +440,13 @@ curl -X PUT \
 
 **Antwort**
 
-Bei erfolgreicher Ausführung wird Ihre aktualisierte Rolle zurückgegeben, einschließlich neuer Werte für Name, Beschreibung und Rollentyp.
+Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, einschließlich neuer Werte für Name, Beschreibung und Rollentyp.
 
 ```json
 {
   "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
-  "name": "Administrator Role",
-  "description": "Role with permission sets for admin type of access",
+  "name": "Administrator role for ACME",
+  "description": "New administrator role for ACME",
   "roleType": "user-defined",
   "permissionSets": [
     "manage-datasets",
@@ -486,7 +486,7 @@ Um die mit einer Rolle verknüpften Themen zu aktualisieren, stellen Sie eine PA
 **API-Format**
 
 ```http
-PATCH /roles/{ROLE_ID}
+PATCH /roles/{ROLE_ID}/subjects
 ```
 
 | Parameter | Beschreibung |
@@ -520,9 +520,36 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
+Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, einschließlich neuer Werte für die Betreffs.
 
-## Rollen löschen {#delete}
+```json
+{
+  "subjects": [
+    [
+      {
+        "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID",
+        "subjectType": "user"
+      }
+    ]
+  ],
+  "_page": {
+    "limit": 1,
+    "count": 1
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects",
+      "templated": true
+    },
+    "page": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+      "templated": true
+    }
+  }
+}
+```
+
+## Löschen einer Rolle {#delete}
 
 Um eine Rolle zu löschen, stellen Sie eine DELETE-Anfrage an die `/roles` -Endpunkt beim Angeben der ID der Rolle, die Sie löschen möchten.
 

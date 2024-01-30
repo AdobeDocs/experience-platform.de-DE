@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 95%
+source-wordcount: '984'
+ht-degree: 93%
 
 ---
 
@@ -155,9 +155,9 @@ Der Dialog **[!UICONTROL Benutzergruppe entfernen]** wird angezeigt, in dem Sie 
 
 Sie werden zur Registerkarte **[!UICONTROL Benutzergruppen]** zurückgeleitet.
 
-## Hinzufügen von Benutzenden zur Experience Platform über ein Produktprofil
+## Hinzufügen von Benutzern zum Experience Platform über eine Rolle
 
-Um einen Benutzer zu einem Produktprofil hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
+Um einen Benutzer zu einer Rolle hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
