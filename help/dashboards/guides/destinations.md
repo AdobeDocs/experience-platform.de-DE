@@ -4,10 +4,10 @@ title: Handbuch zum Ziele-Dashboard
 description: Adobe Experience Platform verfügt über ein Dashboard, in dem Sie wichtige Informationen über die aktiven Ziele Ihrer Organisation anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3171'
-ht-degree: 63%
+source-wordcount: '3244'
+ht-degree: 61%
 
 ---
 
@@ -51,6 +51,10 @@ Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um zur Widget-Bibliothek zu
 
 In der Widget-Bibliothek können Sie die Auswahl von Standard- und benutzerdefinierten Zielgruppen-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Widget-Bibliothek-Dokumentation zum [Hinzufügen eines Widget](../customize/widget-library.md#add-widgets).
 
+### SQL anzeigen {#view-sql}
+
+Sie können die SQL, die die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im [!UICONTROL Übersicht] Arbeitsbereich. Sie können sich die SQL Ihrer vorhandenen Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen eindeutige Einblicke aus Platform-Daten gewinnen. Weitere Informationen zu dieser Funktion finden Sie unter [Handbuch zur SQL-Benutzeroberfläche](../view-sql.md).
+
 ## Standard-Widgets {#default-widgets}
 
 Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßiges Widget-Load-out bereitgestellt, in dem die neuesten verfügbaren Einblicke aus Ihren Daten hervorgehoben werden. Die folgenden Widgets werden von Anfang an in Ihrer Segmentansicht vorkonfiguriert. Ausführliche Informationen zum Zweck und zur Funktion der Widgets finden Sie unten.
@@ -84,7 +88,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Kürzlich erstellte Ziele]](#recently-created-destinations)
 * [[!UICONTROL Zuletzt aktivierte Zielgruppen]](#recently-activated-audiences)
 * [[!UICONTROL Zuletzt aktivierte Zielgruppen nach Ziel]](#recently-activated-audiences-by-destination)
-* [[!UICONTROL Trend der Audience-Größe]](#audience-size-trend)
+* [[!UICONTROL Trend der Zielgruppen-Größe]](#audience-size-trend)
 * [[!UICONTROL Nicht zugeordnete Zielgruppen nach Identität]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Zugeordnete Zielgruppen nach Identität]](#mapped-audiences-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
@@ -93,7 +97,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Anzahl von Zielen]](#destinations-count)
 * [[!UICONTROL Zielstatus]](#destination-status)
 * [[!UICONTROL Aktive Ziele nach Zielplattform]](#active-destinations-by-destination-platform)
-* [[!UICONTROL Aktivierte Audiences für alle Ziele]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Aktivierte Zielgruppen für alle Ziele]](#activated-audiences-across-all-destinations)
 * [[!UICONTROL Aktivierte Zielgruppen]](#activated-audiences)
 
 ### [!UICONTROL Am häufigsten verwendete Ziele] {#most-used-destinations}
@@ -164,11 +168,11 @@ Sie können die Details einer Audience anzeigen, indem Sie den Namen der Audienc
 
 Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
 
-### [!UICONTROL Trend der Audience-Größe] {#audience-size-trend}
+### [!UICONTROL Trend der Zielgruppen-Größe] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="Trend der Audience-Größe"
+>title="Trend der Zielgruppen-Größe"
 >abstract="Dieses Widget veranschaulicht die Anzahl der in der Zielgruppe enthaltenen Profile, die täglich an das Zielkonto gesendet werden. Mit dem ersten Dropdown-Menü wird der Zeitraum für die Entwicklung der Zielgruppe angepasst. Im zweiten Dropdown-Menü des Widgets wird die Zielgruppe für die Analyse ausgewählt. Das Ziel wird im Dropdown-Menü „Übersicht“ ausgewählt."
 
 Die **[!UICONTROL Zielgruppengrößentrend]** Widget zeigt die Beziehung der Profilanzahl über einen bestimmten Zeitraum für eine Zielgruppe an, die diesem Zielkonto zugeordnet wurde. Das Widget verwendet ein Liniendiagramm, um die Anzahl der in der Zielgruppe enthaltenen Profile zu veranschaulichen, die täglich an das Zielkonto gesendet werden.
@@ -284,13 +288,13 @@ Das Widget bietet eine zweispaltige Tabelle, um eine Liste der aktiven Zielplatt
 
 ![Das Widget „Aktive Ziele nach Zielplattform“.](../images/destinations/active-destinations-by-destination-platform.png)
 
-### [!UICONTROL Aktivierte Audiences für alle Ziele] {#activated-audiences-across-all-destinations}
+### [!UICONTROL Aktivierte Zielgruppen für alle Ziele] {#activated-audiences-across-all-destinations}
 
 Das Widget [!UICONTROL Aktivierte Zielgruppen für alle Ziele] stellt die Gesamtzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind. Diese Zahl entspricht der Anzahl beim aktuellen Schnappschuss.
 
 ![Das Widget „Aktivierte Zielgruppen für alle Ziele“.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Wählen Sie **[!UICONTROL Zielgruppen]** aus, um zur Registerkarte [!UICONTROL Durchsuchen] der Ziele zu navigieren. Diese Seite enthält eine Liste aller aktivierten Ziele und zahlreiche relevante Metriken. Weitere Informationen finden Sie in der Dokumentation über die Registerkarte [[!UICONTROL Durchsuchen]](../../destinations/ui/destinations-workspace.md#browse).
+Wählen Sie **[!UICONTROL Zielgruppen]** aus, um zur Registerkarte [!UICONTROL Durchsuchen] der Ziele zu navigieren. Diese Seite enthält eine Liste aller aktivierten Ziele und zahlreiche relevante Metriken. Weitere Informationen zu finden Sie in der Dokumentation . [[!UICONTROL Durchsuchen] tab](../../destinations/ui/destinations-workspace.md#browse).
 
 Weitere Informationen finden Sie im Abschnitt Voraussetzungen für das [verwendete Begriffsdefinitionen](#prerequisites) in dieser Beschreibung.
 

@@ -4,16 +4,16 @@ title: Dashboard-Anleitung für Zielgruppen
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Zielgruppen anzeigen können, die Ihre Organisation erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3053'
-ht-degree: 40%
+source-wordcount: '3133'
+ht-degree: 38%
 
 ---
 
 # [!UICONTROL Zielgruppen]-Dashboard {#audiences-dashboard}
 
-Die Adobe Experience Platform-Benutzeroberfläche (UI) verfügt über ein Dashboard, über das Sie wichtige Informationen zu Ihren Zielgruppen anzeigen können. Diese Informationen werden in Form einer täglichen Momentaufnahme erfasst. In diesem Handbuch wird beschrieben, wie Sie auf die [!UICONTROL Zielgruppen] Dashboard in der Benutzeroberfläche und bietet weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Zielgruppen anzeigen können, die in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf die [!UICONTROL Zielgruppen] Dashboard in der Benutzeroberfläche und bietet weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
 Einen Überblick über alle Funktionen des Segmentierungs-Services von Adobe Experience Platform in der Platform-Benutzeroberfläche erhalten Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](../../segmentation/ui/overview.md).
 
@@ -51,6 +51,10 @@ Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um zur Widget-Bibliothek zu
 
 In der Widget-Bibliothek können Sie die Auswahl von Standard- und benutzerdefinierten Zielgruppen-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Widget-Bibliothek-Dokumentation zum [Hinzufügen eines Widget](../customize/widget-library.md#add-widgets).
 
+### SQL anzeigen {#view-sql}
+
+Sie können die SQL, die die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im [!UICONTROL Übersicht] Arbeitsbereich. Sie können sich die SQL Ihrer vorhandenen Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen eindeutige Einblicke aus Platform-Daten gewinnen. Weitere Informationen zu dieser Funktion finden Sie unter [Handbuch zur SQL-Benutzeroberfläche](../view-sql.md).
+
 ## Auswählen einer Zielgruppe {#select-audience}
 
 Im Dashboard wird automatisch eine Zielgruppe ausgewählt, die angezeigt werden soll. Sie können die Zielgruppe jedoch über das Dropdown-Menü oder die Zielgruppenauswahl ändern.
@@ -77,8 +81,8 @@ Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersic
 
 Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßiges Widget-Load-out bereitgestellt, in dem die neuesten verfügbaren Einblicke aus Ihren Daten hervorgehoben werden. Die folgenden Widgets werden von Anfang an in Ihrer Segmentansicht vorkonfiguriert. Ausführliche Informationen zum Zweck und zur Funktion der Widgets finden Sie in den jeweiligen Abschnitten.
 
-* [[!UICONTROL Audience-Größe]](#audience-size)
-* [[!UICONTROL Trend bei der Änderung der Audience-Größe]](#audience-size-change-trend)
+* [[!UICONTROL Zielgruppen-Größe]](#audience-size)
+* [[!UICONTROL Trend bei der Änderung der Zielgruppen-Größe]](#audience-size-change-trend)
 * [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
 * [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 
@@ -152,22 +156,22 @@ Adobe bietet mehrere standardmäßige Widgets, mit denen Sie verschiedene Metrik
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
-* [[!UICONTROL Audience-Größe]](#audience-size)
-* [[!UICONTROL Reihenfolge der Audience-Aktivierung]](#audience-activation-order)
-* [[!UICONTROL Trend der Audience-Größe]](#audience-size-trend)
-* [[!UICONTROL Trend bei der Änderung der Audience-Größe]](#audience-size-change-trend)
-* [[!UICONTROL Trend der Audience-Größe nach Identität]](#audience-size-trend-by-identity)
+* [[!UICONTROL Zielgruppen-Größe]](#audience-size)
+* [[!UICONTROL Reihenfolge der Zielgruppen-Aktivierung]](#audience-activation-order)
+* [[!UICONTROL Trend der Zielgruppen-Größe]](#audience-size-trend)
+* [[!UICONTROL Trend bei der Änderung der Zielgruppen-Größe]](#audience-size-change-trend)
+* [[!UICONTROL Trend der Zielgruppen-Größe nach Identität]](#audience-size-trend-by-identity)
 * [[!UICONTROL Zielgruppenüberschneidung]](#audience-overlap)
 * [[!UICONTROL Bericht zur Zielgruppenüberschneidung]](#audience-overlap-report)
 * [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
 * [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 * [[!UICONTROL Geplante Aktivierungen]](#scheduled-activations)
 
-### [!UICONTROL Audience-Größe] {#audience-size}
+### [!UICONTROL Zielgruppen-Größe] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="Audience-Größe"
+>title="Zielgruppen-Größe"
 >abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe an. Diese Zahl hängt von der auf Ihre Daten angewendeten Zusammenführungsrichtlinie ab und ist zum Zeitpunkt der letzten Momentaufnahme korrekt."
 
 Die **[!UICONTROL Zielgruppengröße]** Widget zeigt die Gesamtzahl der zusammengeführten Profile in der ausgewählten Zielgruppe zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Zielgruppen-Zusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zusammenzuführen und für jede Einzelperson in der Zielgruppe ein Profil zu erstellen.
@@ -176,11 +180,11 @@ Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie i
 
 ![Die [!UICONTROL Zielgruppen] Dashboard-Übersicht mit [!UICONTROL Zielgruppengröße] Widget hervorgehoben.](../images/audiences/audience-size.png)
 
-### [!UICONTROL Trend der Audience-Größe] {#audience-size-trend}
+### [!UICONTROL Trend der Zielgruppen-Größe] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="Trend der Audience-Größe"
+>title="Trend der Zielgruppen-Größe"
 >abstract="Dieses Widget liefert Informationen zur Gesamtanzahl der Profile, die den Kriterien **einer beliebigen** Segmentdefinition entsprechen und die während des täglichen Snapshots in den letzten 30 Tagen, 90 Tagen oder 12 Monate erfasst wurden."
 
 Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die sich für **any** Zielgruppe über einen bestimmten Zeitraum. Die Entwicklung der Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
@@ -195,21 +199,21 @@ Das Dialogfeld für automatische Beschriftungen wird geöffnet und bietet Einbli
 
 Weiterführende Informationen zur Auswertung von Audiences und zur Qualifizierung und Ausstieg von Profilen finden Sie im Abschnitt [Dokumentation zum Segmentierungsdienst](../../segmentation/home.md).
 
-### [!UICONTROL Trend bei der Änderung der Audience-Größe] {#audience-size-change-trend}
+### [!UICONTROL Trend bei der Änderung der Zielgruppen-Größe] {#audience-size-change-trend}
 
 Dieses Widget bietet eine Liniendiagramm, die die Differenz zwischen der Gesamtanzahl der Profile, die sich für eine bestimmte Zielgruppe qualifiziert haben, und den letzten täglichen Momentaufnahmen veranschaulicht. Die für die Analyse ausgewählte Audience wird im Dropdown-Menü Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 
 ![Das Widget „Entwicklung der Veränderung der Zielgruppengröße“](../images/audiences/audience-size-change-trend.png)
 
-### [!UICONTROL Trend der Audience-Größe nach Identität] {#audience-size-trend-by-identity}
+### [!UICONTROL Trend der Zielgruppen-Größe nach Identität] {#audience-size-trend-by-identity}
 
 Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für eine bestimmte Zielgruppe basierend auf dem Identitätstyp, der im Widget-Dropdown-Menü ausgewählt wird. Die für die Analyse verwendete Audience wird aus der Dropdown-Liste Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt.
 
 ![Das Widget „Entwicklung der Zielgruppengröße nach Identität“](../images/audiences/audience-size-trend-by-identity.png)
 
-### [!UICONTROL Reihenfolge der Audience-Aktivierung] {#audience-activation-order}
+### [!UICONTROL Reihenfolge der Zielgruppen-Aktivierung] {#audience-activation-order}
 
-Das Widget [!UICONTROL Reihenfolge der Zielgruppenaktivierung] bietet eine dreispaltige Tabelle, in der der Zielname, die Plattform und das Aktivierungsdatum der Zielgruppe aufgelistet sind. Die Liste ist entsprechend der Aktualität von oben nach unten geordnet und kann bis zu 10 Zeilen enthalten.
+Die [!UICONTROL Aktivierungsreihenfolge für Zielgruppen] -Widget bietet eine dreiseitige Tabelle, in der der Zielname, die Plattform und das Aktivierungsdatum der Zielgruppe aufgelistet sind. Die Liste ist entsprechend der Aktualität von oben nach unten geordnet und kann bis zu 10 Zeilen enthalten.
 
 ![Das Widget „Reihenfolge der Zielgruppenaktivierung“](../images/audiences/audience-activation-order.png)
 
