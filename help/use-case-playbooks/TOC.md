@@ -4,8 +4,7 @@ user-guide-title: Adobe Experience Platform – Playbooks für Anwendungsfälle
 breadcrumb-title: Adobe Experience Platform – Playbooks für Anwendungsfälle
 user-guide-description: Verwenden Sie die Playbooks in Adobe Experience Platform, um Assets zu generieren und erste Schritte mit verschiedenen Marketing-Anwendungsfällen auszuführen.
 feature: Playbooks
-hide: true
-source-git-commit: 3db5a24f970d6778ec737857ab5d06beaabfc18a
+source-git-commit: 93b28a2cf89cac811d17bb990fc78fa87ee86969
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 81%

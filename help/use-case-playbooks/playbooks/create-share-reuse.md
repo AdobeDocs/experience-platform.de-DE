@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen
 description: Erfahren Sie, wie Sie für Ihren Marketing-Anwendungsfall Playbook-Instanzen erstellen, freigeben und wiederverwenden können.
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 81%
 
 ---
 
@@ -73,6 +74,12 @@ Wenn Sie mehrere Instanzen desselben Playbooks erstellen, können Sie denselben 
 Sie können die generierte Instanz und erstellten Assets für andere Team-Mitglieder freigeben. Kopieren Sie dazu den URL-Link aus dem Browser und geben Sie ihn an Ihr Team weiter, damit es einen Überblick über die generierten Assets erhält.
 
 ![In einer Ansicht „Playbooks für Anwendungsfälle“ hervorgehobene URL.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## Videoeinführung des End-to-End-Playbook-Prozesses
+
+In diesem Video erfahren Sie, wie Sie von Anfang bis Ende Instanzen eines Nutzungsszenarios-Playbooks entdecken, erstellen, veröffentlichen und beheben können und wie Sie die vom Playbook generierten Assets in andere Sandboxes kopieren, die in Ihrer Organisation eingerichtet sind.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## Nächste Schritte {#next-steps}
 

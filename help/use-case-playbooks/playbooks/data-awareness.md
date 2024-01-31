@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: Übersicht über das Datenbewusstsein in "Anwendungsfallbüchern"
 description: Erfahren Sie, wie Sie die Wertschöpfungszeit beschleunigen können, indem Sie die in der zugrunde liegenden inspirierenden Sandbox erstellten Assets in andere Sandboxes kopieren.
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Übersicht über das Datenbewusstsein in &quot;Anwendungsfallbüchern&quot;
+# Veröffentlichen von von Playbook generierten Assets in anderen Sandboxes {#publish-to-other-sandboxes}
 
 Anwendungsbeispiele sind Marketing-Vorlagen, mit denen Assets wie Zielgruppen, Schemata oder Journey für gängige Marketing-Anwendungsfälle generiert werden. Sie können die von Playbooks erstellten Assets in der inspirierenden Sandbox testen. Sobald Sie bereit sind, können Sie die Assets in andere Entwicklungs-Sandboxes importieren, um sie mit den in diesen Sandboxes verfügbaren Daten weiter zu testen. Wenn Sie mit dem Test zufrieden sind, können Sie die Assets dann aus Entwicklungs-Sandboxes in Produktions-Sandboxes verschieben.
 
@@ -97,7 +98,3 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
 ## Nächste Schritte
 
 Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis dafür, wie Sie Anwendungsfallbücher zusammen mit [Sandbox-Tools](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) , um ausführbare Journey zu erstellen, die auf Ihre Schemas verweisen. Erfahren Sie mehr über die gemeinsame [Anwendungsfälle für Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### Weitere Hilfe zu diesem Thema
-
-[Sandbox-Werkzeuge](/help/sandboxes/ui/sandbox-tooling.md)

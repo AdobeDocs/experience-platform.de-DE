@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Erste Schritte
 description: Erfahren Sie, wie Sie die ersten Schritte mit der Funktion „Playbooks für Anwendungsfälle“ ausführen.
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 15%
 
 ---
@@ -65,7 +66,7 @@ Verwenden Sie zum Erstellen und Verwalten von Schemas die Datenmodellierungsbere
 
 **Berechtigungen für Ziele**
 
-Verwenden Sie zum Erstellen und Verwalten von Zielen die Berechtigungen Ziele . **[!UICONTROL Verwalten]**, **[!UICONTROL Ziele]**, **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL DataSet-Ziel verwalten und aktivieren]**, UICONTROL Destination Authoring*.
+Verwenden Sie zum Erstellen und Verwalten von Zielen die Berechtigungen Ziele . **[!UICONTROL Verwalten]**, **[!UICONTROL Ziele]**, **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Segment ohne Zuordnung aktivieren]**, **[!UICONTROL DataSet-Ziel verwalten und aktivieren]**, **[!UICONTROL Destination Authoring]**.
 
 **Berechtigungen für Journey**
 

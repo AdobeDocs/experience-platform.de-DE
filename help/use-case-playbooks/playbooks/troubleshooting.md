@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Bekannte Einschränkungen und Fehlerbehebung bei Problemen mit Playbooks
 description: Erfahren Sie mehr über bekannte Probleme und häufige Probleme mit Playbooks und wie Sie diese beheben können.
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # Fehlerbehebung und bekannte Einschränkungen {#troubleshooting-known-limitations}
 
+Erfahren Sie, wie Sie Fehler beim Arbeiten mit &quot;Anwendungsfall-Playbooks&quot;beheben können, und lernen Sie die bekannten Einschränkungen der allgemeinen Verfügbarkeit kennen.
+
 ## Fehlerbehebung {#troubleshooting}
+
+Anzeigen von Empfehlungen zur Fehlerbehebung bei häufigen Fehlern beim Arbeiten mit Anwendungsfallbüchern
 
 ### Nicht konfigurierte Adobe Journey Optimizer-Oberflächen
 
@@ -35,7 +40,7 @@ Beim Erstellen einer Instanz eines Playbooks und Generieren von Assets werden ei
 
 * Bei Verwendung von [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md) Um das Schema von der inspirierenden Sandbox in die Entwicklungs-Sandbox zu leiten, treten möglicherweise einige Fehler auf, die in etwa wie folgt aussehen:
 
-![schema-errors](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![Im Workflow für die Schemazuordnung angezeigte Fehler.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Dies liegt daran, dass einige der aus Ihrem Schema generierten Felder nicht im Schema in der Entwicklungs-Sandbox vorhanden sind, in die Sie kopieren. Suchen Sie nach diesen Feldern. Gehen Sie dann zurück zur Entwicklungs-Sandbox, in der Sie Folgendes ausführen können:
 

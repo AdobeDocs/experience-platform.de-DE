@@ -2,9 +2,10 @@
 solution: Experience Platform
 title: Verfügbare Anwendungsbeispiele für Real-time Customer Data Platform und Adobe Journey Optimizer.
 description: Eine Liste aller Bücher in Real-time Customer Data Platform und Adobe Journey Optimizer.
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+role: User
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -55,17 +56,17 @@ Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu 
 | Playbook-Name | Beschreibung |
 | ------------- | ----------- |
 | Warenkorb abgebrochen: Waren - zur Aktivierung | Retargeting von Fans, nachdem sie Ihre Website oder App verlassen haben, nachdem sie die Ware zum Warenkorb hinzugefügt haben. |
-| Warenkorb abgebrochen: Produkt - zur Aktivierung | Retargeting von Käufern, nachdem sie Ihre Website oder App verlassen haben, nachdem sie Produkte zum Warenkorb hinzugefügt haben |
+| Warenkorb abgebrochen: Produkt—zur Aktivierung | Retargeting von Käufern, nachdem sie Ihre Website oder App verlassen haben, nachdem sie Produkte zum Warenkorb hinzugefügt haben |
 | Abgebrochener Warenkorb: Reservierung - zur Aktivierung | Retargeting von Gästen, nachdem sie Ihre Website oder App verlassen haben, nachdem sie eine neue Reservierung zum Warenkorb hinzugefügt haben. |
 | Zielwerbung - zur Aktivierung | Reisen Sie Ihre Gäste auf eine Reservierung während einer laufenden Reiseziel-Promotion an. |
 | Game Promotion - zur Aktivierung | Targeting von Fans für Tickets für ein bevorstehendes Spiel. |
 | Erhöhung des Kaufs von Waren während des Spiels - zur Aktivierung | Targeting von Fans, um Waren zu kaufen, während sie sich in der Nähe der Spiel-Site befinden. |
 | Erhöhen Sie den Produktkauf während des Store-Besuchs - zur Aktivierung | Reichen Sie die Käufer dazu an, Waren zu kaufen, während sie sich in der Nähe des Stores befinden. |
-| Erhöhen Sie den Kauf von Produkten und Dienstleistungen während des Aufenthalts - zur Aktivierung | Greifen Sie darauf zu, dass Gäste Produkte und Dienstleistungen kaufen, während sie sich im Besitz befinden. |
+| Erhöhen Sie den Kauf von Produkten und Dienstleistungen während des Aufenthalts - zur Aktivierung. | Greifen Sie darauf zu, dass Gäste Produkte und Dienstleistungen kaufen, während sie sich im Besitz befinden. |
 | Produktwerbung - zur Aktivierung | Wählen Sie Kunden während einer laufenden Produktpromo-Kampagne zum Kauf von Produkten aus. |
-| Nachricht zum Geburtstag an Fans senden - zur Aktivierung | Geben Sie Fans zum Geburtstag mit einer &quot;Happy Birthday&quot;-Nachricht und einem exklusiven Angebot ein. |
-| Geburtstagsnachricht an Gäste senden - zur Aktivierung | Nehmen Sie an Ihrem Geburtstag eine &quot;Happy Birthday&quot;-Nachricht und ein exklusives Angebot teil. |
-| Geburtstagsnachricht an Käufer senden - zur Aktivierung | Geben Sie den Käufern zum Geburtstag eine &quot;Alles Gute zum Geburtstag&quot;-Nachricht und ein exklusives Angebot. |
+| Senden einer Geburtstagsnachricht an Fans zur Aktivierung | Geben Sie Fans zum Geburtstag mit einer &quot;Happy Birthday&quot;-Nachricht und einem exklusiven Angebot ein. |
+| Versand einer Geburtstagsnachricht an Gäste zur Aktivierung | Nehmen Sie an Ihrem Geburtstag eine &quot;Happy Birthday&quot;-Nachricht und ein exklusives Angebot teil. |
+| Geburtstagsnachricht an Käufer zur Aktivierung senden | Geben Sie den Käufern zum Geburtstag eine &quot;Alles Gute zum Geburtstag&quot;-Nachricht und ein exklusives Angebot. |
 
 {style="table-layout:auto"}
 
