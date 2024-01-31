@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2746'
 ht-degree: 34%
 
 ---
@@ -29,7 +29,7 @@ Ja, extern generierte, vordefinierte Zielgruppen werden in Audience Portal unter
 
 ### Welche Berechtigungen benötige ich, um extern generierte Zielgruppen hochzuladen?
 
-Um extern generierte Zielgruppen hochladen zu können, benötigen Sie sowohl die Berechtigungen &quot;Zielgruppen/Segmente verwalten&quot;als auch &quot;Datensätze verwalten&quot;. Zum Hochladen extern generierter Zielgruppen sind keine bestimmten rollenbasierten Steuerelemente erforderlich.
+Um extern generierte Zielgruppen hochzuladen, benötigen Sie die Berechtigungen &quot;Zielgruppen/Segmente anzeigen&quot;, &quot;Zielgruppen/Segmente verwalten&quot;, &quot;Datensätze anzeigen&quot;, &quot;Datensätze verwalten&quot;, &quot;Quellen anzeigen&quot;und &quot;Quellen verwalten&quot;. Zum Hochladen extern generierter Zielgruppen sind keine bestimmten rollenbasierten Steuerelemente erforderlich.
 
 ### Was passiert, wenn ich eine extern generierte Zielgruppe hochlade?
 
