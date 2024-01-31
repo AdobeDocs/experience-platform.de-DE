@@ -3,10 +3,10 @@ title: Offsite-Retargeting nicht authentifizierter Besucher
 description: Erfahren Sie, wie Sie nicht authentifizierte Benutzer erneut ansprechen können, indem Sie mithilfe von Interessenten-IDs ein berechnetes Attribut erstellen, mit dem eine Zielgruppe nicht authentifizierter Benutzer erstellt werden kann.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 3%
+source-wordcount: '1462'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ Die **[!UICONTROL Berechnetes Attribut erstellen]** angezeigt. Auf dieser Seite 
 
 Für diesen Anwendungsfall können Sie ein berechnetes Attribut erstellen, das, wenn die Partner-ID vorhanden ist, den neuesten Wert der Partner-ID innerhalb der letzten 24 Stunden erhält.
 
-Mithilfe der Suchleiste können Sie das Ereignis &quot;Partner-ID&quot;suchen und der Arbeitsfläche für berechnete Attribute hinzufügen.
+Mithilfe der Suchleiste können Sie das Ereignis &quot;Partner-ID&quot;suchen und hinzufügen, das [, die Sie während des Anwendungsfalls der Personalisierung vor Ort erstellt haben](#get-data-in) in die Arbeitsfläche des berechneten Attributs.
 
 ![Die [!UICONTROL Veranstaltungen] und die Suchleiste hervorgehoben werden.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -89,7 +89,7 @@ Um eine Zielgruppe zu erstellen, wählen Sie **[!UICONTROL Zielgruppen]**, gefol
 
 Ein Dialogfeld wird angezeigt, in dem Sie aufgefordert werden, zwischen [!UICONTROL Erstellen einer Zielgruppe] und [!UICONTROL Regel erstellen]. Auswählen **[!UICONTROL Regel erstellen]** gefolgt von **[!UICONTROL Erstellen]**.
 
-![Die Schaltfläche „Regel erstellen“ ist hervorgehoben.](../assets/offsite-retargeting/select-build-rule.png)
+![Die [!UICONTROL Regel erstellen] -Schaltfläche markiert ist.](../assets/offsite-retargeting/select-build-rule.png)
 
 Die Seite Segment Builder wird angezeigt. Auf dieser Seite können Sie die Komponenten zum Erstellen Ihrer Audience verwenden.
 
@@ -109,7 +109,7 @@ Wählen Sie die neu hinzugefügte **[!UICONTROL Seitenansicht]** -Ereignis. Änd
 
 Nachdem Sie Ihr Ereignis hinzugefügt haben, müssen Sie ein Attribut hinzufügen. Da Sie mit nicht authentifizierten Besuchern arbeiten, können Sie das soeben erstellte berechnete Attribut hinzufügen. Mit diesem neu erstellten berechneten Attribut können Sie Partner-IDs mit einer Zielgruppe verknüpfen.
 
-So fügen Sie das berechnete Attribut hinzu: unter **[!UICONTROL Attribute]** auswählen **[!UICONTROL Individuelles XDM-Profil]**, gefolgt von **[!UICONTROL _atag]**, **[!UICONTROL SystemComputedAttributes]**, und **[!UICONTROL PartnerID]**. Fügen Sie nun die **[!UICONTROL Wert]** des berechneten Attributs zum Abschnitt &quot;Attribute&quot;der Arbeitsfläche.
+So fügen Sie das berechnete Attribut hinzu: unter **[!UICONTROL Attribute]** auswählen **[!UICONTROL Individuelles XDM-Profil]**, gefolgt von **[Mandantenkennung Ihres Unternehmens](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, und **[!UICONTROL PartnerID]**. Fügen Sie nun die **[!UICONTROL Wert]** des berechneten Attributs zum Abschnitt &quot;Attribute&quot;der Arbeitsfläche.
 
 ![Die Ordnerpfade für den Zugriff auf das berechnete Attribut wird angezeigt.](../assets/offsite-retargeting/access-computed-attribute.png)
 
@@ -129,7 +129,7 @@ Sie haben jetzt erfolgreich eine Zielgruppe erstellt, die nach Besuchern mit hoh
 
 Nach erfolgreicher Erstellung Ihrer Audience können Sie diese Audience jetzt für nachgelagerte Ziele aktivieren. Auswählen **[!UICONTROL Zielgruppen]** Suchen Sie in der linken Navigationsleiste nach der neu erstellten Zielgruppe, wählen Sie das Auslassungssymbol aus und wählen Sie **[!UICONTROL Auf Ziel aktivieren]**.
 
-![Die Schaltfläche „Für Ziel aktivieren“ ist hervorgehoben.](../assets/offsite-retargeting/activate-to-destination.png)
+![Die [!UICONTROL Auf Ziel aktivieren] -Schaltfläche markiert ist.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
