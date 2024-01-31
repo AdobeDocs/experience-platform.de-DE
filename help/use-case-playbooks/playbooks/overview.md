@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Playbooks für Anwendungsfälle – Übersicht
 description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion „Playbooks für Anwendungsfälle – Übersicht“ erste Schritte mit verschiedenen Marketing-Anwendungsfällen ausführen können
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 32%
@@ -34,7 +34,6 @@ Inhalt dieses Dokumentationshandbuchs:
 * Erstellen verschiedener Assets, die Sie verwenden, testen und für die Produktion weiterleiten können, sobald sie fertig sind.
 
 ![Ansicht aller Playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 Jedes Playbook enthält Informationen zum jeweiligen Anwendungsfall, der damit gelöst wird.
 
