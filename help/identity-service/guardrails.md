@@ -3,10 +3,10 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
 workflow-type: tm+mt
-source-wordcount: '1507'
-ht-degree: 43%
+source-wordcount: '1526'
+ht-degree: 41%
 
 ---
 
@@ -31,7 +31,7 @@ In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten au
 
 | Leitplanke | Limit | Anmerkungen |
 | --- | --- | --- |
-| Anzahl der Identitäten in einem Diagramm | 50 | Wenn ein Diagramm mit 50 verknüpften Identitäten aktualisiert wird, wendet Identity Service einen „First-in-First-out“-Mechanismus an und löscht die älteste Identität, um Platz für die neueste Identität zu schaffen. Das Löschen basiert auf Identitätstyp und Zeitstempel. Die Beschränkung wird auf Sandbox-Ebene angewendet. Weitere Informationen finden Sie im Abschnitt unter [die Löschlogik verstehen](#deletion-logic). |
+| Anzahl der Identitäten in einem Diagramm | 50 | Wenn ein Diagramm mit 50 verknüpften Identitäten aktualisiert wird, wendet Identity Service einen &quot;First-in-First-out&quot;-Mechanismus an und löscht die älteste Identität, um Platz für die neueste Identität für dieses Diagramm zu schaffen (**Hinweis**: Echtzeit-Kundenprofil ist nicht betroffen). Das Löschen basiert auf Identitätstyp und Zeitstempel. Die Beschränkung wird auf Sandbox-Ebene angewendet. Weitere Informationen finden Sie im Abschnitt unter [die Löschlogik verstehen](#deletion-logic). |
 | Anzahl der Links zu einer Identität für eine Batch-Erfassung | 50 | Ein einzelner Batch kann anomale Identitäten enthalten, die unerwünschte Zusammenführungen von Diagrammen verursachen. Um dies zu verhindern, erfasst Identity Service keine Identitäten, die bereits mit 50 oder mehr Identitäten verknüpft sind. |
 | Anzahl der Identitäten in einem XDM-Eintrag | 20 | Die erforderliche Mindestanzahl von XDM-Einträgen beträgt zwei. |
 | Anzahl der benutzerdefinierten Namespaces | Keine | Die Anzahl der benutzerdefinierten Namespaces, die Sie erstellen können, ist unbegrenzt. |
@@ -135,7 +135,7 @@ In diesem Beispiel wird ECID:32110 erfasst und mit einem großen Diagramm unter 
 
 >[!TAB Löschvorgang]
 
-Daher löscht Identity Service die älteste Identität basierend auf Zeitstempel und Identitätstyp. In diesem Fall wird ECID:35577 gelöscht.
+Daher löscht Identity Service die älteste Identität basierend auf Zeitstempel und Identitätstyp. In diesem Fall wird ECID:35577 nur aus dem Identitätsdiagramm gelöscht.
 
 ![](./images/guardrails/during-split.png)
 
@@ -166,7 +166,7 @@ Im folgenden Beispiel wird ECID:21011 erfasst und mit dem Diagramm unter `timest
 
 >[!TAB Löschvorgang]
 
-Daher löscht Identity Service die älteste Identität, in diesem Fall ECID:35577. Durch das Löschen von ECID:35577 wird auch Folgendes gelöscht:
+Daher löscht Identity Service die älteste Identität nur aus dem Identitätsdiagramm, in diesem Fall ECID:35577. Durch das Löschen von ECID:35577 wird auch Folgendes gelöscht:
 
 * Die Verknüpfung zwischen CRM-ID 60013 und der inzwischen gelöschten ECID:35577, was zu einem Diagrammaufspaltungsszenario führte.
 * IDFA: 32110, IDFA: 02383 und die verbleibenden Identitäten, vertreten durch `(...)`. Diese Identitäten werden gelöscht, da sie einzeln nicht mit anderen Identitäten verknüpft sind und daher nicht in einem Diagramm dargestellt werden können.
