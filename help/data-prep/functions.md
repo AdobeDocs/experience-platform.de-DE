@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
+source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
 workflow-type: tm+mt
-source-wordcount: '5080'
+source-wordcount: '5459'
 ht-degree: 3%
 
 ---
@@ -151,6 +151,9 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | map_get_values | Nimmt eine Zuordnung und eine Schlüsseleingabe. Wenn die Eingabe ein einzelner Schlüssel ist, gibt die Funktion den mit diesem Schlüssel verknüpften Wert zurück. Wenn die Eingabe ein Zeichenfolgen-Array ist, gibt die Funktion alle Werte zurück, die den bereitgestellten Schlüsseln entsprechen. Wenn die eingehende Zuordnung doppelte Schlüssel enthält, muss der Rückgabewert die Schlüssel deduplizieren und eindeutige Werte zurückgeben. | <ul><li>MAP: **Erforderlich** Die Eingabemaps.</li><li>SCHLÜSSEL:  **Erforderlich** Der Schlüssel kann eine einzelne Zeichenfolge oder ein Zeichenfolgen-Array sein. Wenn ein anderer primitiver Typ (Daten/Zahl) angegeben wird, wird er als Zeichenfolge behandelt.</li></ul> | get_values(MAP, KEY) | Lesen Sie hierzu die [Anhang](#map_get_values) für ein Codebeispiel. | |
 | map_has_keys | Wenn ein oder mehrere Eingabeschlüssel angegeben sind, gibt die Funktion &quot;true&quot;zurück. Wenn ein Zeichenfolgen-Array als Eingabe bereitgestellt wird, gibt die Funktion beim ersten gefundenen Schlüssel &quot;true&quot;zurück. | <ul><li>MAP:  **Erforderlich** Die Eingabemap-Daten</li><li>SCHLÜSSEL:  **Erforderlich** Der Schlüssel kann eine einzelne Zeichenfolge oder ein Zeichenfolgen-Array sein. Wenn ein anderer primitiver Typ (Daten/Zahl) angegeben wird, wird er als Zeichenfolge behandelt.</li></ul> | map_has_keys(MAP, KEY) | Lesen Sie hierzu die [Anhang](#map_has_keys) für ein Codebeispiel. | |
 | add_to_map | akzeptiert mindestens zwei Eingaben. Eine beliebige Anzahl von Karten kann als Eingaben bereitgestellt werden. Data Prep gibt eine einzelne Zuordnung zurück, die alle Schlüssel-Wert-Paare aus allen Eingaben enthält. Wenn ein oder mehrere Schlüssel wiederholt werden (in derselben Zuordnung oder über mehrere Maps hinweg), dedupliziert Data Prep die Schlüssel so, dass das erste Schlüssel-Wert-Paar in der Reihenfolge beibehalten wird, in der sie in der Eingabe übergeben wurden. | MAP: **Erforderlich** Die Eingabemaps. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Lesen Sie hierzu die [Anhang](#add_to_map) für ein Codebeispiel. | |
+| object_to_map (Syntax 1) | Verwenden Sie diese Funktion, um Map -Datentypen zu erstellen. | <ul><li>SCHLÜSSEL: **Erforderlich** Schlüssel müssen eine Zeichenfolge sein. Wenn andere Primitive-Werte wie Ganzzahlen oder Datumswerte angegeben werden, werden sie automatisch in Zeichenfolgen konvertiert und als Zeichenfolgen behandelt.</li><li>ANY_TYPE: **Erforderlich** Bezieht sich auf jeden unterstützten XDM-Datentyp mit Ausnahme von Maps.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... ) | Lesen Sie hierzu die [Anhang](#object_to_map) für ein Codebeispiel. | |
+| object_to_map (Syntax 2) | Verwenden Sie diese Funktion, um Map -Datentypen zu erstellen. | <ul><li>OBJEKT: **Erforderlich** Sie können ein eingehendes Objekt oder Objekt-Array angeben und als Schlüssel auf ein Attribut innerhalb des Objekts verweisen.</li></ul> | object_to_map(OBJECT) | Lesen Sie hierzu die [Anhang](#object_to_map) für ein Codebeispiel. |
+| object_to_map (Syntax 3) | Verwenden Sie diese Funktion, um Map -Datentypen zu erstellen. | <ul><li>OBJEKT: **Erforderlich** Sie können ein eingehendes Objekt oder Objekt-Array angeben und als Schlüssel auf ein Attribut innerhalb des Objekts verweisen.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Lesen Sie hierzu die [Anhang](#object_to_map) für ein Codebeispiel. |
 
 {style="table-layout:auto"}
 
@@ -173,6 +176,20 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | size_of | Gibt die Größe der Eingabe zurück. | <ul><li>EINGABE: **Erforderlich** Das Objekt, dessen Größe Sie ermitteln möchten.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Mit dieser Funktion werden alle Elemente im gesamten Eingabe-Array an das Ende des Arrays in Profil angehängt. Diese Funktion ist **only** anwendbar während Aktualisierungen. Wenn diese Funktion im Kontext von Einfügen verwendet wird, gibt sie die Eingabe unverändert zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, an das das Array im Profil angehängt werden soll.</li></ul> | update_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123.456] |
 | upsert_array_replace | Diese Funktion wird verwendet, um Elemente in einem Array zu ersetzen. Diese Funktion ist **only** anwendbar während Aktualisierungen. Wenn diese Funktion im Kontext von Einfügen verwendet wird, gibt sie die Eingabe unverändert zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, das das Array im Profil ersetzen soll.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123.456] |
+
+{style="table-layout:auto"}
+
+### Hierarchien - Zuordnung {#map}
+
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
+| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | Diese Funktion akzeptiert ein Objekt-Array und einen Schlüssel als Eingabe und gibt eine Zuordnung des Schlüsselfelds mit dem Wert als Schlüssel und dem Array-Element als Wert zurück. | <ul><li>EINGABE: **Erforderlich** Das Objekt-Array, für das Sie das erste Objekt ungleich null finden möchten.</li><li>SCHLÜSSEL:  **Erforderlich** Der Schlüssel muss ein Feldname im Objekt-Array und das Objekt als Wert sein.</li></ul> | array_to_map(OBJECT[] INPUTS, KEY) | Lesen Sie die [Anhang](#object_to_map) für ein Codebeispiel. |
+| object_to_map | Diese Funktion akzeptiert ein Objekt als Argument und gibt eine Zuordnung von Schlüssel-Wert-Paaren zurück. | <ul><li>EINGABE: **Erforderlich** Das Objekt-Array, für das Sie das erste Objekt ungleich null finden möchten.</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address), wobei die Eingabe &quot; + &quot;address: {line1 : \&quot;345 park ave\&quot;,line2: \&quot;bldg 2\&quot;,City : \&quot;san jose\&quot;,State : \&quot;CA\&quot;,type: \&quot;office\&quot;}&quot; ist | Gibt eine Zuordnung mit angegebenen Feld-Name- und Wert-Paaren zurück oder null, wenn die Eingabe null ist. Beispiel: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | Diese Funktion akzeptiert eine Liste von Schlüssel-Wert-Paaren und gibt eine Zuordnung von Schlüssel-Wert-Paaren zurück. | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;, \&quot;John\&quot;, \&quot;lastName\&quot;, \&quot;Doe\&quot;)&quot; | Gibt eine Zuordnung mit angegebenen Feld-Name- und Wert-Paaren zurück oder null, wenn die Eingabe null ist. Beispiel: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -455,3 +472,150 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 ```
 
 +++
+
+#### object_to_map {#object_to_map}
+
+**Syntax 1**
+
++++Auswählen zum Anzeigen des Beispiels
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**Syntax 2**
+
++++Auswählen zum Anzeigen des Beispiels
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+```
+
++++
+
+**Syntax 3**
+
++++Auswählen zum Anzeigen des Beispiels
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++Auswählen zum Anzeigen des Beispiels
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+
