@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform-Homepage und Dashboards
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
+source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 11%
+source-wordcount: '915'
+ht-degree: 10%
 
 ---
 
@@ -25,10 +25,10 @@ Dieses Dokument bietet einen Überblick über die Real-Time CDP-Startseite und d
 
 Die [!UICONTROL Erste Schritte mit dem Echtzeit-Kundenprofil] Widget ist in vier Abschnitte unterteilt:
 
-* **Daten in Platform erfassen**: Dieses Widget leitet Sie zum Quellkatalog. Wählen Sie im Quellkatalog eine Quelle aus und erfassen Sie Ihre Daten auf Experience Platform. Weitere Informationen finden Sie im Abschnitt [Quellen - Übersicht](../sources/home.md)
-* **Modelldatenstrukturen**: Dieses Widget leitet Sie zur Übersicht über Schemata weiter. Verwenden Sie die Übersicht über Schemata , um nach vorhandenen Schemata zu suchen oder Bausteine zu erstellen, die die Struktur Ihrer Daten beschreiben. Weitere Informationen finden Sie im Abschnitt [Übersicht über Schemas](../xdm/home.md).
-* **Segmentzielgruppen**: Dieses Widget leitet Sie zum [!DNL Segment Builder] in der Benutzeroberfläche. Verwenden Sie die [!DNL Segment Builder] , um mit Profildatenelementen zu interagieren und Regeln für Ihre Segmente zu definieren. Weitere Informationen finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
-* **Senden von Daten an Ziele**: Dieses Widget leitet Sie zum Zielkatalog. Verwenden Sie den Zielkatalog, um ein Ziel auszuwählen, mit dem Sie dann eine Verbindung herstellen und Segmente senden können. Weitere Informationen finden Sie im Abschnitt [Ziele - Übersicht](../destinations/home.md)
+* **Daten in Platform erfassen**: Dieses Widget leitet Sie zum Quellkatalog. Wählen Sie im Quellkatalog eine Quelle aus und erfassen Sie Ihre Daten auf Experience Platform. Auswählen **[Konfigurieren von Quellen]** , um zum Quellkatalog zu navigieren. Weitere Informationen finden Sie im Abschnitt [Quellen - Übersicht](../sources/home.md).
+* **Modelldatenstrukturen**: Dieses Widget leitet Sie zur Übersicht über Schemata weiter. Verwenden Sie die Übersicht über Schemata , um nach vorhandenen Schemata zu suchen oder einen Entwurf zu erstellen, der die Struktur Ihrer Daten beschreibt. Auswählen **[!UICONTROL Schema erstellen]** , um zur Benutzeroberfläche für die Schemaerstellung zu navigieren. Weitere Informationen finden Sie im Abschnitt [Übersicht über Schemas](../xdm/home.md).
+* **Erstellen von Zielgruppen**: Dieses Widget leitet Sie zum Segmentaufbau in der Benutzeroberfläche. Verwenden Sie den Segmentaufbau, um mit Profildatenelementen zu interagieren und die Kriterien für Ihre Segmentdefinition zu definieren. Auswählen **[!UICONTROL Erstellen einer Zielgruppe]** , um zum Segment Builder zu navigieren. Weitere Informationen finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
+* **Senden von Daten an Ziele**: Dieses Widget leitet Sie zum Zielkatalog. Verwenden Sie den Zielkatalog, um ein Ziel auszuwählen, mit dem Sie dann eine Verbindung herstellen und Segmente senden können. Auswählen **[!UICONTROL Einrichten von Zielen]** zum Zielkatalog navigieren. Weitere Informationen finden Sie im Abschnitt [Ziele - Übersicht](../destinations/home.md).
 
 ![Startseite der Platform-Benutzeroberfläche mit dem Widget &quot;Erste Schritte&quot;](assets/platform-home/getting-started-widget.png)
 
@@ -49,9 +49,9 @@ Das Leaderboard zeigt die aktuelle Gesamtzahl der Schemas, Datensätze, Profile 
 ![Der Abschnitt &quot;Leaderboard&quot;auf der Startseite der Platform-Benutzeroberfläche.](assets/platform-home/leaderboard.png)
 
 * **Schemata insgesamt**: Die **Schemata insgesamt** Zähler zeigt die Anzahl der Schemas im System an. Dieser Zähler wird bei der Erstellung eines Schemas aktualisiert. Weitere Informationen finden Sie im Abschnitt [Übersicht über Schemas](../xdm/home.md).
-* **Datensätze insgesamt**: Die **Datensätze insgesamt** Zähler zeigt die Anzahl der Datensätze im System und die Datenmenge in [!DNL Platform]. Dieser Zähler wird bei der Erstellung eines Datensatzes aktualisiert. Weitere Informationen zu Datensätzen finden Sie im Abschnitt [Datensätze - Übersicht](../catalog/datasets/overview.md).
-* **Profile insgesamt**: Die **Profile** count zeigt die Gesamtzahl der Profile, die Ihr Unternehmen innerhalb von Experience Platform hat. Profilfragmente werden nicht einbezogen. Dies ist Ihre gesamte adressierbare Zielgruppe. Diese Anzahl verwendet die Standardeinstellung [Zusammenführungsrichtlinie](profile/merge-policies.md) wie in der Konfiguration der Zusammenführungsrichtlinien im Echtzeit-Kundenprofil festgelegt. Die Anzahl der Profile wird alle 24 Stunden aktualisiert. Weiterführende Informationen zu Profilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
-* **Segmente insgesamt**: **Segmente** zeigt die Gesamtzahl der für die Organisation erstellten Segmente an. Diese Zahl wird aktualisiert, wenn neue Segmente erstellt werden. Weitere Informationen zu Segmenten finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
+* **Datensätze insgesamt**: Die **Datensätze insgesamt** Zähler zeigt die Anzahl der Datensätze im System und die Datenmenge im Experience Platform an. Dieser Zähler wird bei der Erstellung eines Datensatzes aktualisiert. Weitere Informationen zu Datensätzen finden Sie im Abschnitt [Datensätze - Übersicht](../catalog/datasets/overview.md).
+* **Profile insgesamt**: Die **Profile** count zeigt die Gesamtzahl der Profile, die Ihr Unternehmen innerhalb von Experience Platform hat. Profilfragmente werden nicht einbezogen. Dies ist Ihre gesamte adressierbare Zielgruppe. Diese Anzahl verwendet die Standardeinstellung [Zusammenführungsrichtlinie](profile/merge-policies.md) wie in der Konfiguration der Zusammenführungsrichtlinien im Echtzeit-Kundenprofil festgelegt. Die Anzahl der Profile wird alle 24 Stunden aktualisiert. Auswählen **[!UICONTROL Profile]** , um zur Übersichtsseite Profile zu navigieren und alle Profilmetriken anzuzeigen. Weiterführende Informationen zu Profilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
+* **Zielgruppen insgesamt**: Die **Zielgruppen insgesamt** Zähler zeigt die Gesamtzahl der für Ihre Organisation erstellten Zielgruppen an. Diese Zahl wird bei der Erstellung neuer Zielgruppen aktualisiert. Weitere Informationen zu Zielgruppen finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
 
 ### Letzte Elemente
 
