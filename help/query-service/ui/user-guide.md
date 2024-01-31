@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
+source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2576'
 ht-degree: 46%
 
 ---
@@ -120,6 +120,10 @@ Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzung
 ### Text formatieren {#format-text}
 
 Die [!UICONTROL Text formatieren] -Funktion ermöglicht eine bessere Lesbarkeit Ihrer Abfrage durch das Hinzufügen standardisierter Syntaxstile. Auswählen **[!UICONTROL Text formatieren]** , um den gesamten Text im Abfrage-Editor zu standardisieren.
+
+>[!NOTE]
+>
+>Die [!UICONTROL Text formatieren] -Funktion funktioniert nicht mit anonymen Bausteinen. Informationen dazu, wie Sie eine oder mehrere SQL-Anweisungen sequenziell verketten, finden Sie unter [Anonyme Blockdokumentation](../key-concepts/anonymous-block.md).
 
 ![Der Abfrage-Editor mit [!UICONTROL Text formatieren] und die SQL-Anweisungen hervorgehoben.](../images/ui/query-editor/format-text.png)
 
