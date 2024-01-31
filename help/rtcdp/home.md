@@ -3,9 +3,9 @@ title: Real-Time CDP-Produktdokumentation
 description: Erfahren Sie, wie Sie Adobe Real-Time CDP verwenden.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1071'
 ht-degree: 4%
 
 ---
@@ -20,17 +20,17 @@ Hier erhalten Sie einen Einblick in die neuesten Verbesserungen des Real-Time CD
 
 >[!BEGINTABS]
 
+>[!TAB Anwendungsbeispiele für Playbooks]
+
+Die [!UICONTROL Anwendungsbeispiele für Playbooks] -Funktion ist jetzt allgemein für alle Kunden von Real-Time CDP und Adobe Journey Optimizer verfügbar. [!UICONTROL Anwendungsbeispiele für Playbooks] sind so konzipiert, dass Benutzer beim Einstieg in Real-time Customer Data Platform oder Adobe Journey Optimizer bei der Bewältigung von Herausforderungen unterstützt werden. Wenn Sie sich nicht sicher sind, wo Sie beginnen oder wie Sie die richtigen Assets für Ihre gewünschten Anwendungsfälle erstellen, können Sie mithilfe von &quot;Case Playbooks&quot;verschiedene Assets erstellen, damit Sie sie testen und in Produktionsumgebungen importieren können, sobald sie bereit sind.
+
+[![Bild](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Sandbox-Werkzeuge]
 
 Verwenden Sie die Sandbox-Tool-Funktion, um die Konfigurationsgenauigkeit über Sandboxes hinweg zu verbessern und Konfigurationen nahtlos zwischen Sandboxes zu exportieren und zu importieren. Sie können die Sandbox-Tool-Funktion verwenden, um verschiedene Objekte auszuwählen und sie in ein Paket zu exportieren.
 
 [![Bild](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (Eingeschränkte allgemein verfügbare Verfügbarkeit) Kontozielgruppen aktivieren]
-
-Real-Time CDP B2B-Kunden können jetzt aktivieren [Kontozielgruppen](/help/segmentation/ui/account-audiences.md) an bestimmte Zielorte.
-
-[![Bild](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB Berechnete Attribute]
 
@@ -202,4 +202,4 @@ Sehen Sie sich diese drei Einführungsvideos an, um ein tieferes Verständnis vo
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Bleiben Sie auf dem Laufenden, tragen Sie zur Community bei und verbessern Sie Ihre Adobe Real-Time CDP-Erfahrung!</b><br/>Besuchen Sie die Real-time Customer Data Platform-Community, um die Funktionalität mit anderen Fachleuten zu besprechen. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Treten Sie der Community heute bei!</a></td></tr></table>
+<b>Bleiben Sie auf dem Laufenden, tragen Sie zur Community bei und verbessern Sie Ihre Adobe Real-Time CDP-Erfahrung!</b><br/>Besuchen Sie die Real-time Customer Data Platform-Community, um die Funktionalität mit anderen Fachleuten zu besprechen. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Werden Sie noch heute Teil der Community!</a></td></tr></table>
