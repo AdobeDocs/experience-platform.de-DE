@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ee30e00bceb392b775d15ca2cad95b746698dc4
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 40%
@@ -46,7 +46,7 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Zuordnungsfunktionen | <ul><li>`object_to_map`: Verwenden Sie die `object_to_map` -Funktion zum Erstellen von Zuordnungs-Datentypen. Diese Funktion unterstützt mehrere verschiedene Syntaxen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Objekte](../../data-prep/functions.md#objects). </li><li>`to_map`: Verwenden Sie die `to_map` -Funktion verwenden, um eine Zuordnung mit den angegebenen Feldnamen- und Wertpaaren mithilfe von Objekten zu erstellen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Maps](../../data-prep/functions.md#objects). </li><li>`array_to_map`: Verwenden Sie die `array_to_map` -Funktion verwenden, um eine Zuordnung mit den angegebenen Feld-Namen- und Wertpaaren mithilfe von Objekt-Arrays zu erstellen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Maps](../../data-prep/functions.md#objects). |
+| Neue Zuordnungsfunktionen | <ul><li>`object_to_map`: Verwenden Sie die `object_to_map` -Funktion zum Erstellen von Zuordnungs-Datentypen. Diese Funktion unterstützt mehrere verschiedene Syntaxen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Objekte](../../data-prep/functions.md#objects). </li><li>`to_map`: Verwenden Sie die `to_map` -Funktion verwenden, um eine Zuordnung mit den angegebenen Feldnamen- und Wertpaaren mithilfe von Objekten zu erstellen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Maps](../../data-prep/functions.md#map). </li><li>`array_to_map`: Verwenden Sie die `array_to_map` -Funktion verwenden, um eine Zuordnung mit den angegebenen Feld-Namen- und Wertpaaren mithilfe von Objekt-Arrays zu erstellen. Weitere Informationen finden Sie im Handbuch unter [Funktionen für Hierarchien - Maps](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
