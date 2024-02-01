@@ -2,10 +2,10 @@
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem S3-Speicher in Amazon Web Services (AWS), um in regelmäßigen Abständen CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 59%
+source-wordcount: '1354'
+ht-degree: 48%
 
 ---
 
@@ -13,12 +13,17 @@ ht-degree: 59%
 
 ## Ziel-Änderungsprotokoll {#changelog}
 
-Mit der Experience Platform-Version vom Juli 2023 wird die [!DNL Amazon S3] Das Ziel bietet neue Funktionen, wie unten aufgeführt:
++++ Änderungsprotokoll anzeigen
 
-* [Unterstützung für den Datensatzexport](/help/destinations/ui/export-datasets.md).
-* Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
-* Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* [Möglichkeit zum Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
+| Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
+|---|---|---|
+| Januar 2024 | Funktions- und Dokumentationsaktualisierung | Der Amazon S3-Ziel-Connector unterstützt jetzt einen neuen Authentifizierungstyp für Rollen. Mehr darüber erfahren Sie im Abschnitt [Authentifizierungsabschnitt](#assumed-role-authentication). |
+| Juli 2023 | Funktions- und Dokumentationsaktualisierung | Mit der Experience Platform-Version vom Juli 2023 wird die [!DNL Amazon S3] Das Ziel bietet neue Funktionen, wie unten aufgeführt: <br><ul><li>[Unterstützung für den Datensatzexport](/help/destinations/ui/export-datasets.md)</li><li>Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Möglichkeit zum Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+
+{style="table-layout:auto"}
+
++++
 
 ## Verbinden Sie Ihre [!DNL Amazon S3] Speicher über API oder Benutzeroberfläche {#connect-api-or-ui}
 
@@ -64,12 +69,37 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 >title="Öffentlicher RSA-Schlüssel"
 >abstract="Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Schlüssel finden Sie im folgenden Dokumentations-Link."
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**.
+Füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Das Amazon S3-Ziel unterstützt zwei Authentifizierungsmethoden:
+
+* Zugriffsschlüssel und Authentifizierung mit geheimen Schlüsseln
+* Angenommene Rollenauthentifizierung
+
+#### Zugriffsschlüssel und Authentifizierung mit geheimen Schlüsseln
+
+Verwenden Sie diese Authentifizierungsmethode, wenn Sie Ihren Amazon S3-Zugriffsschlüssel und den geheimen Schlüssel eingeben möchten, damit Experience Platform Daten in Ihre Amazon S3-Eigenschaften exportieren kann.
+
+![Bild der erforderlichen Felder bei Auswahl der Zugriffsschlüssel- und der geheimen Schlüsselauthentifizierung.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3]-Zugriffsschlüssel** und geheimer **[!DNL Amazon S3]-Schlüssel**: Generieren Sie in [!DNL Amazon S3] ein `access key - secret access key`-Paar, um Platform Zugriff auf Ihr [!DNL Amazon S3]-Konto zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
   ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### Angenommene Rolle {#assumed-role-authentication}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_assumed_role"
+>title="Angenommene Rollenauthentifizierung"
+>abstract="Verwenden Sie diesen Authentifizierungstyp, wenn Sie es vorziehen, keine Kontoschlüssel und geheimen Schlüssel mit Adobe zu teilen. Stattdessen stellt Experience Platform über rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Standort her. Fügen Sie den ARN der Rolle ein, die Sie in AWS für den Adobe-Benutzer erstellt haben. Das Muster ähnelt dem `arn:aws:iam::800873819705:role/destinations-role-customer` "
+
+![Bild der erforderlichen Felder bei Auswahl der angenommenen Rollenauthentifizierung.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+
+Verwenden Sie diesen Authentifizierungstyp, wenn Sie es vorziehen, keine Kontoschlüssel und geheimen Schlüssel mit Adobe zu teilen. Stattdessen stellt Experience Platform über rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Standort her.
+
+Dazu müssen Sie in der AWS-Konsole einen angenommenen Benutzer für das Adobe mit der [erforderliche Berechtigungen](#required-s3-permission) , um in Ihre Amazon S3-Buckets zu schreiben. Erstellen Sie eine **[!UICONTROL Vertrauenswürdige Entität]** in AWS mit dem Adobe-Konto **[!UICONTROL 670664943635]**. Weitere Informationen finden Sie im Abschnitt [AWS-Dokumentation zum Erstellen von Rollen](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+* **[!DNL Role]**: Fügen Sie den ARN der Rolle ein, die Sie in AWS für den Adobe-Benutzer erstellt haben. Das Muster ähnelt dem `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 

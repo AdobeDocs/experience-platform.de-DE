@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2024
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 40%
+source-wordcount: '1038'
+ht-degree: 39%
 
 ---
 
@@ -74,6 +74,14 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 | Ziel | Beschreibung |
 | ----------- | ----------- |
 | [Öffentliche Verbindung](../../destinations/catalog/advertising/pubmatic.md) | Verwenden Sie dieses Ziel, um Zielgruppendaten an die [!DNL PubMatic Connect] Plattform. |
+
+{style="table-layout:auto"}
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
+
+| Funktionalität | Beschreibung |
+| ----------- | ----------- |
+| Neu **übernommene Rolle** Authentifizierungstyp für Amazon S3-Ziele | Verwenden Sie den neuen Authentifizierungstyp für Rollen, wenn Sie Experience Platform mit Ihren Amazon S3-Buckets verbinden, wenn Sie Kontoschlüssel und geheime Schlüssel nicht mit Experience Platform teilen möchten. Weitere Informationen zur neuen Authentifizierungsmethode finden Sie im Abschnitt [Authentifizierungsabschnitt](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) der Dokumentation zu Amazon S3. |
 
 {style="table-layout:auto"}
 
