@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2024
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
-source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
+source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
 workflow-type: tm+mt
-source-wordcount: '1038'
-ht-degree: 39%
+source-wordcount: '1478'
+ht-degree: 40%
 
 ---
 
@@ -18,9 +18,11 @@ Neue Funktionen in Adobe Experience Platform:
 
 Aktualisierungen vorhandener Funktionen im Experience Platform:
 
-- [Dashboards](#dashboards)
+- [Attributbasierte Zugriffssteuerung](#abac)
 - [Datenvorbereitung](#data-prep)
+- [Dashboards](#dashboards)
 - [Ziele](#destinations)
+- [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Echtzeit-Kundenprofil](#profile)
 - [Quellen](#sources)
@@ -36,6 +38,22 @@ Erste Schritte mit [!UICONTROL Anwendungsbeispiele für Playbooks], lesen Sie di
 - Informationen zu allen [erforderliche Berechtigungen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) , um die Bücher und die von den Büchern erzeugten Assets zu verwenden.
 - Verstehen Sie die [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md) , mit dem Sie generierte Assets in andere Sandbox-Umgebungen kopieren können
 - Get [Tipps zur Fehlerbehebung](/help/use-case-playbooks/playbooks/troubleshooting.md) wenn bei der Verwendung von Anwendungsfall-Playbooks Fehler oder Schwierigkeiten auftreten.
+
+## Attributbasierte Zugriffssteuerung {#abac}
+
+Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung von Benutzerzugriffen gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
+
+Mit der attributbasierten Zugriffssteuerung können Administratoren bzw. Administratorinnen Ihres Unternehmens den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+
+**Neue oder aktualisierte Dokumentation**
+
+| Aktualisierung der Dokumentation | Beschreibung |
+| --- | --- |
+| Neue API-Endpunkte für attributbasierte Zugriffskontrolle dokumentiert | Die [Referenzdokumentation zur Access Control API](https://developer.adobe.com/experience-platform-apis/references/access-control/) enthält jetzt API-Rollen, Richtlinien und Produktendpunkte für attributbasierte Zugriffskontrolle. Diese Endpunkte können zum Abrufen relevanter Rollen, Richtlinien und Produkte für einen Benutzer für bestimmte Ressourcen in einer angegebenen Sandbox verwendet werden. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im [Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/end-to-end-guide.md).
 
 ## Datenvorbereitung {#data-prep}
 
@@ -87,6 +105,20 @@ Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffs
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
+## Identity Service {#identity-service}
+
+Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kundinnen und Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen.
+
+**Neue oder aktualisierte Dokumentation**
+
+| Aktualisierung der Dokumentation | Beschreibung |
+| --- | --- |
+| Dokumentationsumstrukturierung | Die Dokumentation zum Identity Service wurde umstrukturiert, um die Präsentation und Übersichtlichkeit von Konzepten in Identity Service zu verbessern:<ul><li>Besuchen Sie die [Übersichtsseite zu Identity Service](../../identity-service/home.md) für einen erweiterten Terminologieführer, ein Anwendungsbeispiel, in dem eine typische Journey beschrieben wird, eine Aufschlüsselung der Verknüpfung von Identitäten mit Identity Service und eine Zusammenfassung der Rolle, die Identity Service innerhalb des Experience Platform-Ökosystems spielt.</li><li>Lesen Sie das Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](../../identity-service/identity-and-profile.md) für eine ausführliche Zusammenfassung der Art und Weise, wie die beiden Dienste zusammenarbeiten, sowie der Unterschiede zwischen ihren Zwecken, Prozessen, Eingaben und Ausgaben.</li><li>Siehe Abschnitt [Logik zur Verknüpfung von Identity Service](../../identity-service/features/identity-linking-logic.md) für Erklärungen und Visualisierungen dazu, wie sich das Identitätsdiagramm bei verschiedenen Szenarien und Zeitstempeln verhält.</li></ul> |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Identity Service finden Sie im Abschnitt [Identity Service - Übersicht](../../identity-service/home.md).
+
 ## Real-Time Customer Data Platform {#rtcdp}
 
 Die auf Experience Platform aufbauende Real-Time Customer Data Platform ([!DNL Real-Time CDP]) hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, sodass sich während der gesamten Customer Journey Kundenprofile mit intelligenten Entscheidungen aktivieren lassen. [!DNL Real-Time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine personalisierte Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
@@ -97,7 +129,18 @@ Die auf Experience Platform aufbauende Real-Time Customer Data Platform ([!DNL R
 | --- | --- |
 | Aktualisierungen der [Real-Time CDP-Startseite](https://experience.adobe.com) | <ul><li>**Profil-Widget**: Sie können jetzt das Profil -Widget verwenden, um zur Profilübersichtsseite zu navigieren und Profilmetriken für Ihre Organisation anzuzeigen.</li><li>**Profilmetrikkarte**: Die Karte Profilmetriken im Dashboard der Startseite zeigt jetzt die Gesamtanzahl der Profile in Ihrer Organisation an, abhängig von Ihrer jeweiligen Zusammenführungsrichtlinie.</li><li>**Schemas-Widget**: Sie können jetzt das Schemas-Widget verwenden, um zum Workflow für die Schemaerstellung in der Benutzeroberfläche zu navigieren.</li></ul> |
 
-Weitere Informationen zu Real-Time CDP finden Sie unter [Übersicht über Real-Time CDP](../../rtcdp/overview.md).
+{style="table-layout:auto"}
+
+**Neue oder aktualisierte Dokumentation**
+
+| Aktualisierung der Dokumentation | Beschreibung |
+| --- | --- |
+| Startseite der neuen Real-Time CDP-Dokumentation | Besuchen Sie die [Startseite der neuen Real-Time CDP-Dokumentation](/help/rtcdp/home.md) für einen Überblick über die ersten Schritte mit dem Produkt, Limits, Beispielanwendungsfällen und vieles mehr. |
+| Anwendungsbeispiele für Real-Time CDP - Überblick | Besuchen Sie die [neue Beispielanwendungsfälle - Seite übersehen](/help/rtcdp/use-case-guides/overview.md) für eine Sammlung von Beispielanwendungsfällen, die Ihr Unternehmen mit Real-Time CDP erreichen kann. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu Real-Time CDP finden Sie im Abschnitt [Übersicht über Real-Time CDP](../../rtcdp/overview.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
