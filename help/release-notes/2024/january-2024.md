@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2024
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 40%
+source-wordcount: '1553'
+ht-degree: 38%
 
 ---
 
@@ -77,7 +77,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| SQL anzeigen | Jetzt können Sie die SQL hinter Ihren Profilen, Audiences, Zielen und benutzerdefinierten Einblicken anzeigen und die Abfrage dann über den Abfrage-Editor nach Bedarf ausführen. Lassen Sie sich von der SQL von über 40 vorhandenen Einblicken inspirieren, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen einzigartige Einblicke aus Platform-Daten gewinnen. Weitere Informationen finden Sie im Handbuch unter [Anzeigen von Insight SQL](../../dashboards/view-sql.md). |
+| SQL anzeigen | Jetzt können Sie die SQL hinter Ihren Profilen, Audiences, Zielen und benutzerdefinierten Insights mit dem Umschalter SQL anzeigen anzeigen und die Abfrage dann über den Abfrage-Editor bei Bedarf ausführen. Der Zugriff auf die SQL-Datenbank, die Ihre Real-time Customer Data Platform-Einblicke unterstützt, hilft Ihnen, die Logik hinter der Analyse Ihres Datenmodells zu verstehen. Diese Transparenz macht Ihre Adobe-CDP-Daten in Echtzeit leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.<br>Lassen Sie sich von der SQL von über 40 vorhandenen Einblicken inspirieren, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen einzigartige Einblicke aus Platform-Daten gewinnen. Die SQL steht auch für Ihre [Profile](../../dashboards/insights/profiles.md), [Zielgruppen](../../dashboards/insights/audiences.md), und [Ziele](../../dashboards/insights/destinations.md) Einblicke in die Experience League-Dokumentation. In diesen Dokumenten werden die geschäftlichen Anwendungsfälle hervorgehoben, die mit den Standardeinblicken beantwortet werden können. Weitere Informationen finden Sie im Handbuch unter [Anzeigen von Insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
