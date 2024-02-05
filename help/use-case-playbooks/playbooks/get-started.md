@@ -4,9 +4,9 @@ title: Erste Schritte
 description: Erfahren Sie, wie Sie die ersten Schritte mit der Funktion „Playbooks für Anwendungsfälle“ ausführen.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 15%
 
 ---
@@ -29,6 +29,11 @@ In diesem Video erfahren Sie, wie Sie Ihre Sandbox erstellen, Berechtigungen kon
 ## Erstellen einer Entwicklungs-Sandbox {#create-development-sandbox}
 
 Anwendungsfall-Playbooks verwenden eine spezielle Entwicklungs-Sandbox. Zum Ausführen der ersten Schritte und Zugreifen auf die Funktion [[!UICONTROL Playbooks für Anwendungsfälle]](/help/use-case-playbooks/playbooks/overview.md) [erstellen Sie eine neue Entwicklungs-Sandbox](/help/sandboxes/ui/user-guide.md#create) (keine Produktions-Sandbox auswählen!), deren Namen (nicht deren Titel) entweder `-ucp` oder `-UCP` im Suffix enthält, wie unten dargestellt.
+
+>[!IMPORTANT]
+>
+>Wenn Sie eine neue Entwicklungs-Sandbox erstellen, stellen Sie sicher, dass der Name `-ucp` oder `-UCP` im Suffix.
+
 
 ![Erstellen einer Entwicklungs-Sandbox für Playbooks für Anwendungsfälle](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
