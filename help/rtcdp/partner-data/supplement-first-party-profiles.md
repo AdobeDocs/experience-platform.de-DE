@@ -3,7 +3,7 @@ title: Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attr
 description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 79%
@@ -30,7 +30,7 @@ Adobe versteht, dass es keinen einheitlichen Ansatz gibt und eine nahtlose Inter
 
 Führen Sie beispielsweise die in diesem Anwendungsbeispiel beschriebenen Schritte aus, wenn Sie Ihre Kundendatensätze mit demografischen und Intent-Signalen anreichern möchten.
 
-## Voraussetzungen und Planung {#prerequisites-and-planning}
+## Voraussetzungen und Planung
 
 Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergänzen möchten, sollten Sie die folgenden Details zur Dateneranreicherungsschleife mit dem Datenpartner erörtern und besprechen:
 

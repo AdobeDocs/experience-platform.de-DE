@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
 workflow-type: tm+mt
-source-wordcount: '3765'
+source-wordcount: '3797'
 ht-degree: 59%
 
 ---
@@ -142,7 +142,12 @@ Verwenden Sie die Option **[!UICONTROL Geplant]**, damit der Aktivierungsvorgang
 
 4. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
 
-### Exportieren von inkrementellen Dateien {#export-incremental-files}
+### Exportieren von inkrementellen Dateien
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Konfigurieren des Dateinamens"
+>abstract="Bei dateibasierten Zielen wird pro Zielgruppe ein eindeutiger Dateiname generiert. Verwenden Sie den Dateinamen-Editor, um einen eindeutigen Dateinamen zu erstellen und zu bearbeiten oder den Standardnamen beizubehalten."
 
 Auswählen **[!UICONTROL Inkrementelle Dateien exportieren]** um einen Export Trigger, bei dem die erste Datei eine vollständige Momentaufnahme aller Profilqualifikationen für die ausgewählte Zielgruppe ist und nachfolgende Dateien seit dem letzten Export inkrementelle Profilqualifikationen sind.
 
@@ -167,7 +172,7 @@ Auswählen **[!UICONTROL Inkrementelle Dateien exportieren]** um einen Export Tr
 
 4. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
 
-### Konfigurieren der Dateinamen {#file-names}
+### Konfigurieren der Dateinamen
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
