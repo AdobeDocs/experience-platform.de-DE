@@ -4,7 +4,7 @@ title: Abonnieren von Adobe I/O-Ereignisbenachrichtigungen
 description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Services von Adobe Experience Platform abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren  [!DNL Platform] -Service bereitgestellt.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
+source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 90%
@@ -41,7 +41,7 @@ Wechseln Sie zur [Adobe-Entwicklerkonsole](https://www.adobe.com/go/devs_console
 
 >[!NOTE]
 >
->Die Datenerfassungsbenachrichtigung wird vom Adobe IO-Abonnement entfernt. Stattdessen sollten Sie die **Informationen zum Quellenfluss** E/A-Ereignis.
+>Das Datenerfassungsbenachrichtigungsereignis wird im Adobe I/O nicht mehr unterstützt. Stattdessen sollten Sie die **Informationen zum Quellenfluss** E/A-Ereignis.
 
 Nachdem Sie ein neues Projekt erstellt haben, navigieren Sie zum Übersichtsbildschirm dieses Projekts. Wählen Sie hier **[!UICONTROL Ereignis hinzufügen]** aus.
 
