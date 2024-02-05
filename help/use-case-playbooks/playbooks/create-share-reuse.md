@@ -7,7 +7,7 @@ exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -19,8 +19,8 @@ Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anw
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
->title="Instanz erstellen"
->abstract="Erstellen Sie eine Liste von Assets wie Journey, Audiences, Schemas oder Zielen, die für Journey oder Aktivierungsszenarien verwendet werden können."
+>title="Erstellen einer Instanz"
+>abstract="Erstellen Sie eine Liste mit Assets wie Journeys, Zielgruppen, Schemata oder Zielen, die für Journeys oder Aktivierungsszenarien verwendet werden können."
 
 Bevor Sie eine Playbook-Instanz erstellen, sollten Sie die verfügbaren Playbooks erkunden, um das [richtige Playbook für sich zu finden](/help/use-case-playbooks/playbooks/discover.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
 

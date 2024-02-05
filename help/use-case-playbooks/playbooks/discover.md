@@ -7,7 +7,7 @@ exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -50,7 +50,7 @@ Die Mindmap beginnt mit einer Definition, wer in der User Journey erreicht wird.
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
 >title="Assets"
->abstract="Dies sind die Assets, die von diesem Playbook generiert werden. Nachdem Sie eine Instanz des Playbooks erstellt haben, können Sie die Assets in der inspirierenden Sandbox anzeigen und sie nach Bedarf in andere Sandboxes weiterleiten."
+>abstract="Dies sind die Assets, die von diesem Playbook generiert werden. Nachdem Sie eine Instanz des Playbooks erstellt haben, können Sie die Assets in der inspirierenden Sandbox anzeigen und nach Bedarf in andere Sandboxes weiterleiten."
 
 Vollziehen Sie anhand des Zusammenfassungsabschnitts nach, welche Assets generiert werden, wenn Sie Instanzen aus dem Playbook erstellen. Die für jedes Playbook generierten Assets sind auf den Anwendungsfall aus dem Playbook zugeschnitten. Nachfolgend finden Sie weitere Informationen zu allen Elementen im Zusammenfassungsabschnitt.
 
