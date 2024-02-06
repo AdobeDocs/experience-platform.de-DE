@@ -3,10 +3,10 @@ title: Ausführen von Adobe Experience Platform Web SDK-Befehlen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 keywords: Ausführen von Befehlen;commandName;Promises;getLibraryInfo;Antwortobjekte;Zustimmung;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
+source-git-commit: ffc60e83285188bc5b0f6eb7a20fafee16d51d4d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 71%
+source-wordcount: '405'
+ht-degree: 70%
 
 ---
 
@@ -35,7 +35,7 @@ Jedes Mal, wenn ein Befehl ausgeführt wird, wird ein Promise zurückgegeben. Da
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
@@ -78,4 +78,4 @@ alloy("getLibraryInfo")
 
 ### Einverständnis
 
-Wenn ein Benutzer seine Zustimmung zu einem bestimmten Zweck nicht gegeben hat, wird die Zusage weiterhin eingelöst. Das Antwortobjekt enthält jedoch nur die Informationen, die im Kontext dessen bereitgestellt werden können, was der Benutzer zugestimmt hat.
+Wenn ein Benutzer seine Zustimmung zu einem bestimmten Zweck nicht gegeben hat, wird das promise-Objekt dennoch aufgelöst. Das Antwortobjekt enthält jedoch nur die Informationen, die im Kontext dessen bereitgestellt werden können, was der Benutzer zugestimmt hat.
