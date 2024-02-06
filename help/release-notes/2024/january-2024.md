@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Januar 2024
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 38%
+source-wordcount: '1655'
+ht-degree: 39%
 
 ---
 
@@ -25,6 +25,7 @@ Aktualisierungen vorhandener Funktionen im Experience Platform:
 - [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Echtzeit-Kundenprofil](#profile)
+- [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
 
 ## Anwendungsbeispiele für Playbooks {#use-case-playbooks}
@@ -155,6 +156,21 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 {style="table-layout:auto"}
 
 Weitere Informationen zum Echtzeit-Kundenprofil finden Sie in der [Profilübersicht](../../profile/home.md)
+
+## Segmentierungs-Service {#segmentation}
+
+[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Extern generierte Zielgruppen-Upload | Die maximale Spaltenanzahl wurde auf **25**. |
+| Schätzungen von Segment Builder | Schätzungen und qualifizierte Profile werden jetzt im Bereich der Zielgruppeneigenschaften angezeigt. Weitere Informationen zu dieser Änderung finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Segment Builder](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen {#sources}
 

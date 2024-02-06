@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '3426'
-ht-degree: 95%
+source-wordcount: '3562'
+ht-degree: 90%
 
 ---
 
@@ -255,9 +255,17 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >abstract="Sie können die Schätzungen Ihrer Segmentdefinition aktualisieren, um sofort eine Vorschau anzuzeigen, wie viele Profile sich für die vorgeschlagene Segmentdefinition qualifizieren würden. Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=de#estimate-and-preview-an-audience" text="Schätzen und Anzeigen der Vorschau einer Zielgruppe"
 
-Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Segmenteigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe der resultierenden Segmentdefinition an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
+Beim Erstellen einer Segmentdefinition wird die **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, sodass Sie Ihre Segmentdefinition nach Bedarf anpassen können, bevor Sie die Zielgruppe selbst erstellen.
 
-Im Abschnitt **[!UICONTROL Segmenteigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich des Namens, der Beschreibung und des Auswertungstyps. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
+**[!UICONTROL Qualifizierte Profile]** gibt die **tatsächlich** Anzahl der Profile, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden aktualisiert, nachdem der Segmentbewertungsauftrag ausgeführt wurde.
+
+Der Zeitstempel für qualifizierte Profile gibt die neueste **Batch** Segmentbewertungsauftrag und ist **not** angezeigt für Segmentdefinitionen, die mithilfe von Streaming oder Kantensegmentierung ausgewertet werden. Wenn Sie die Segmentdefinition bearbeiten, bleibt die Anzahl der qualifizierten Profile gleich, bis der nächste Segmentbewertungsauftrag ausgeführt wird.
+
+**[!UICONTROL Geschätzte Profile]** zeigt an, dass **Näherungswert** Anzahl der Profile basierend auf der **Beispielauftrag**. Nach dem Hinzufügen der neuen Regeln oder Bedingungen und dem Auswählen von **[!UICONTROL Schätzung aktualisieren]**. Wenn Sie die Informationsblase auswählen, erhalten Sie den Fehlerschwellenwert und die aktuelle Beispielauftragszeit.
+
+![Qualifizierte Profile und geschätzte Profile werden im Abschnitt Zielgruppeneigenschaften hervorgehoben.](../images/ui/segment-builder/audience-estimates.png)
+
+Die **[!UICONTROL Zielgruppeneigenschaften]** können Sie auch wichtige Informationen zur Segmentdefinition angeben, einschließlich Name, Beschreibung und Auswertungstyp. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
 
 Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Zielgruppe anzeigen.
 

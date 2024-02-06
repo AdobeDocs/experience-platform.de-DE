@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfl채che des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfl채che Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3933'
 ht-degree: 87%
@@ -331,7 +331,7 @@ Der Workflow **[!UICONTROL Zielgruppen-CSV importieren]** wird angezeigt. Sie k�
 
 >[!NOTE]
 >
->Die extern generierte Zielgruppe **muss** im CSV-Format vorliegen, darf **maximal** 11 Spalten enthalten und muss kleiner als 1 GB sein.
+>Die extern generierte Zielgruppe **muss** im CSV-Format vorliegen, darf **maximal** 25 Spalten enthalten und muss kleiner als 1 GB sein.
 
 Nach Auswahl der zu importierenden CSV-Datei wird eine Liste mit Beispieldaten f체r diese extern generierte Zielgruppe angezeigt. Nachdem Sie die Richtigkeit der Beispieldaten best채tigt haben, w채hlen Sie **[!UICONTROL Weiter]** aus.
 
