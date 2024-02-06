@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services-Verbindung
 description: Adobe Campaign Managed Cloud Services bietet eine Plattform für die Konzeption kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, Interaktionsverwaltung in Echtzeit und die kanalübergreifende Ausführung.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1589'
 ht-degree: 34%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 34%
 Adobe Campaign Managed Cloud Services bietet eine Plattform für die Gestaltung kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Orchestrierung von Kampagnen, das Management von Interaktionen in Echtzeit und die kanalübergreifende Ausführung. [Erste Schritte mit Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=de)
 
 Mit Campaign haben Sie folgende Möglichkeiten:
+
 * Personalisierung und Interaktion durch eine einzige zugängliche Ansicht des Kunden fördern,
 * Integrieren von E-Mail-, Mobile-, Online- und Offline-Kanälen in die Journey des Kunden,
 * Automatisieren Sie die Bereitstellung aussagekräftiger und zeitnaher Nachrichten und Angebote.
@@ -32,6 +33,7 @@ Mit Campaign haben Sie folgende Möglichkeiten:
 >* Für jedes Segment können Sie bis zu 20 Felder zu [map](#map) nach Adobe Campaign,
 >* Datenbeibehaltung in Azure Blob Storage Data Landing Zone (DLZ) : 7 Tage,
 >* Die Aktivierungshäufigkeit beträgt mindestens 3 Stunden.
+>* Die maximale Länge des Dateinamens, die von dieser Verbindung unterstützt wird, beträgt 255 Zeichen. Wenn Sie [den exportierten Dateinamen konfigurieren](../../ui/activate-batch-profile-destinations.md#configure-file-names)darf der Dateiname nicht länger als 255 Zeichen sein. Wenn die maximale Länge des Dateinamens überschritten wird, treten Aktivierungsfehler auf.
 
 ## Anwendungsfälle {#use-cases}
 
