@@ -3,27 +3,40 @@ solution: Experience Platform
 title: Handbuch zur umgestalteten Benutzeroberfläche für Segmentierungszeitbeschränkungen
 description: Segment Builder bietet eine umfangreiche Arbeitsfläche, über die Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 100%
+source-wordcount: '354'
+ht-degree: 19%
 
 ---
 
-# Umgestaltung der Zeitbeschränkungen
+# Umgestaltung der Zeitbeschränkungen {#refactorization}
 
-In der Adobe Experience Platform-Version vom Oktober 2020 wurden Leistungsänderungen für Adobe Experience Platform Segmentation Service eingeführt, die neue Einschränkungen bei Verwendung der logischen Operatoren „OR“ und „AND“ umfassen. Diese Änderungen wirken sich auf über die Benutzeroberfläche von Segment Builder neu erstellte oder bearbeitete Segmente aus. In diesem Handbuch wird erläutert, wie Sie diesen Änderungen entgegenwirken.
+>[!CONTEXTUALHELP]
+>id="platform_audiences_segmentBuilder_constraints"
+>title="Umgestaltung der Zeitbeschränkungen"
+>abstract="Zeitbeschränkungen auf Regelebene und Gruppenebene wurden entfernt, um die Verwendung von Zeitbeschränkungen zu klären. Bitte schreiben Sie Ihre Beschränkung als Zeitbegrenzung auf Arbeitsfläche oder Kartenebene neu."
 
-Vor der Version vom Oktober 2020 bezogen sich alle Zeitbeschränkungen auf Regel-, Gruppen- und Ereignisebene redundant auf denselben Zeitstempel. Um die Verwendung von Zeitbeschränkungen klarzustellen, wurden Zeitbeschränkungen auf Regel- und Gruppenebene entfernt. Um dieser Änderung Rechnung zu tragen, müssen alle Zeitbeschränkungen neu als Zeitbeschränkungen auf Ereignisebene geschrieben werden.
+In der Version vom Januar 2024 für Adobe Experience Platform wurden Änderungen am Adobe Experience Platform Segmentation Service eingeführt, die neue Einschränkungen hinzufügen, für die Zeitbeschränkungen definiert werden können. Diese Änderungen wirken sich auf neu erstellte oder bearbeitete Segmente aus, die über die Benutzeroberfläche von Segment Builder vorgenommen werden. In diesem Handbuch wird erläutert, wie Sie diesen Änderungen entgegenwirken.
 
-Zuvor konnten einem einzelnen Ereignis mehrere Zeitbeschränkungsregeln beigefügt werden.
+Vor der Version vom Januar 2024 bezogen sich alle Zeitbeschränkungen auf Regelebene, Gruppenebene und Arbeitsfläche Redundant auf denselben Zeitstempel. Um die Verwendung von Zeitbeschränkungen klarzustellen, wurden Zeitbeschränkungen auf Regel- und Gruppenebene entfernt. Um diese Änderung zu berücksichtigen, müssen alle Zeitbeschränkungen **must** umgeschrieben werden als **Arbeitsflächenebene** oder **Kartenebene** Zeitbeschränkungen.
 
-![Der frühere Stil von Zeitbeschränkungen ist in Segment Builder hervorgehoben.](../images/ui/segment-refactoring/former-time-constraint.png)
+Zuvor konnten an ein einzelnes Ereignis mehrere Zeitbegrenzungsregeln angehängt werden. Mit dieser kürzlich erfolgten Aktualisierung führt der Versuch, einer Regel eine Zeitbeschränkung hinzuzufügen, jetzt zu einem **error**.
 
-Wie zu sehen ist, weist dieses Segment auf der Regelebene zwei Beschränkungen auf: eine für „[!UICONTROL Heute]“ und die andere für „[!UICONTROL Gestern]“.
+![Die Zeitbegrenzung auf Regelebene wird hervorgehoben. Der Fehler, der anschließend auftritt, wird ebenfalls hervorgehoben. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
-Das vorherige Segment entspricht dem folgenden Segment – beide Zeitbeschränkungen auf Ereignisebene wurden über einen AND-Operator verbunden. Die erste Zeitbeschränkung auf Ereignisebene verweist auf ein Klickereignis, dessen Name „Training“ lautet und heute stattfindet, während die zweite Zeitbeschränkung auf Ereignisebene auf ein Klickereignis verweist, dessen Name „Haustiere“ lautet und gestern stattgefunden hat.
+Zeitbeschränkungen können jetzt nur noch auf Arbeitsflächenebene oder auf Kartenebene angewendet werden.
 
-![Der neue Stil von Zeitbeschränkungen ist in Segment Builder hervorgehoben.](../images/ui/segment-refactoring/time-constraint-1.png) ![Der neue Stil von Zeitbeschränkungen ist in Segment Builder hervorgehoben.](../images/ui/segment-refactoring/time-constraint-2.png)
+Beim Anwenden einer Zeitbegrenzung auf die Arbeitsfläche können Sie weiterhin alle verfügbaren Zeitbeschränkungen auswählen.
 
-Diese Umgestaltung der Zeitbeschränkungen wirkt sich auch auf Zeitbeschränkungen aus, die über einen OR-Operator verbunden werden.
+>[!NOTE]
+>
+>Wenn nur **one** -Karte auf der Arbeitsfläche, wobei die Zeitbegrenzung auf die Karte angewendet wird **äquivalent** , um die Zeitbegrenzung auf der Arbeitsflächenebene anzuwenden.
+>
+>Wenn **multiple** -Karten auf der Arbeitsfläche anwenden, wird diese Zeitbegrenzung durch Anwendung der Zeitbegrenzung auf die Arbeitsflächenebene auf **all** Karten auf der Arbeitsfläche.
+
+![Die Zeitbegrenzung auf Arbeitsflächenebene wird hervorgehoben.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+
+Um eine Zeitbegrenzung auf Kartenebene anzuwenden, wählen Sie die spezifische Karte aus, auf die Sie die Zeitbegrenzung anwenden möchten. Die **[!UICONTROL Ereignisregeln]** Container angezeigt. Sie können jetzt die Zeitbegrenzung auswählen, die Sie auf die Karte anwenden möchten.
+
+![Die Zeitbeschränkung auf Kartenebene wird hervorgehoben.](../images/ui/segment-refactoring/card-time-constraint.png)
