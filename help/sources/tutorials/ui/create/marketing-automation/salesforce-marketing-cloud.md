@@ -2,9 +2,9 @@
 title: Verbinden Ihres Salesforce-Marketing Cloud-Kontos mit dem Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie über die Benutzeroberfläche Ihr Salesforce-Marketing Cloud-Konto mit Experience Platform verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
+source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 27%
 
 ---
@@ -22,8 +22,8 @@ In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Salesforce Marketing Cloud] 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Wenn Sie bereits über eine [!DNL Salesforce Marketing Cloud] -Konto verwenden, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Einbringen von Daten zur Marketing-Automatisierung zum Experience Platform über die Benutzeroberfläche](../../dataflow/marketing-automation.md).
@@ -34,7 +34,7 @@ Um auf Ihr [!DNL Salesforce Marketing Cloud]-Konto in Platform zugreifen zu kön
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Host | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie die `{subdomain}.rest.marketingcloudapis.com`. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`eingeben, müssen Sie nur `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als Hostwert. |
+| Host | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie die `{subdomain}.rest.marketingcloudapis.com`. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`eingeben. `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als Hostwert. |
 | Client-ID | Die mit Ihrer [!DNL Salesforce Marketing Cloud] Anwendung. |
 | Client-Geheimnis | Das Client-Geheimnis, das mit Ihrem [!DNL Salesforce Marketing Cloud] Anwendung. |
 

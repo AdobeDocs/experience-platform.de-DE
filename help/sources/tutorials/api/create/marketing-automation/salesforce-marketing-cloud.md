@@ -2,9 +2,9 @@
 title: Erstellen einer Salesforce-Marketing Cloud-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Ihr Salesforce-Marketing Cloud-Konto mithilfe der Flow Service-API gegen Experience Platform authentifizieren.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
+source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '489'
 ht-degree: 58%
 
 ---
@@ -38,7 +38,7 @@ Zur [!DNL Flow Service] zur Verbindung mit [!DNL Salesforce Marketing Cloud]müs
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie die `{subdomain}.rest.marketingcloudapis.com`. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`eingeben, müssen Sie nur `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als Hostwert. |
+| `host` | Der Host-Server Ihrer Anwendung. Dies ist häufig Ihre Subdomäne. **Hinweis:** Wenn Sie `host` -Wert, müssen Sie die `{subdomain}.rest.marketingcloudapis.com`. Wenn Ihre Host-URL beispielsweise `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`eingeben. `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als Hostwert. |
 | `clientId` | Die mit Ihrer [!DNL Salesforce Marketing Cloud] Anwendung. |
 | `clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL Salesforce Marketing Cloud] Anwendung. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce Marketing Cloud] ist: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
