@@ -4,9 +4,9 @@ title: Handbuch zur Fehlerbehebung beim Echtzeit-Kundenprofil
 type: Documentation
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Echtzeit-Kundenprofil sowie eine Anleitung zur Behebung gängiger Fehler beim Arbeiten mit Profildaten mit Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '964'
 ht-degree: 100%
 
 ---
@@ -122,18 +122,6 @@ Dieser Fehler tritt auf, wenn eine ungültige Payload für einen Löschsystemauf
 ```
 
 Dieser Fehler tritt auf, wenn beim Versuch, eine Löschanfrage für Profildaten zu erstellen, kein gültiger Batch gefunden werden konnte. Vergewissern Sie sich, dass Sie die richtige ID für einen profilaktivierten Datensatz eingegeben haben, bevor Sie es erneut versuchen.
-
-### Das Projektionsziel wurde noch nicht erstellt
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-Dieser Fehler tritt auf, wenn der `destinationId`-Wert in einer `POST /config/projections`-Anfrage ungültig ist. Vergewissern Sie sich, dass Sie eine gültige Ziel-ID angegeben haben, bevor Sie es erneut versuchen. Um ein neues Ziel zu erstellen, befolgen Sie die im [Entwicklerhandbuch für Profile](./api/edge-projections.md#create-a-destination) beschriebenen Schritte.
 
 ### Nicht unterstützter Medientyp
 

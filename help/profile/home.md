@@ -2,9 +2,9 @@
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1821'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ Das nachfolgende Diagramm zeigt die Zusammenhänge zwischen dem Echtzeit-Kundenp
 
 ### Entitätskomposition des Profils
 
-Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der sogenannten **primären Entität**, und verschiedenen unterstützenden Entitäten. Im Kontext von Experience Platform ist die primäre Entität normalerweise eine **Profilentität**, die sich aus Eigenschaften, Verhaltensweisen und Zielgruppenzugehörigkeiten einer einzelnen Person zusammensetzt. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
+Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der sogenannten **primären Entität**, und verschiedenen unterstützenden Entitäten. Im Kontext von Experience Platform ist die primäre Entität normalerweise eine **Profilentität**, die sich aus Merkmalen, Verhaltensweisen und Zielgruppenzugehörigkeiten einer einzelnen Person zusammensetzt. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
 
 - **Dimensionsentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profildatensätze hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Klassifizierungsentität bezeichnet.
 - **B2B-Entität**: Entitäten, die die Beziehung des Profils zu B2B-Konten und Opportunities beschreiben.
@@ -49,7 +49,7 @@ Der Profil-Store verwendet eine Microsoft Azure Cosmos DB-Infrastruktur und der 
 
 ### Leitplanken für Profile
 
-Experience Platform bietet eine Reihe von Schutzmaßnahmen, mit denen Sie vermeiden können, [Experience-Datenmodell(XDM)-Schemata](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundenprofil nicht unterstützt werden können. Dies umfasst weiche Beschränkungen, die zu Leistungsbeeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der Dokumentation zu [Profilleitplanken](guardrails.md).
+Experience Platform bietet eine Reihe von Schutzmaßnahmen, mit denen Sie vermeiden können, [Experience-Datenmodell(XDM)-Schemata](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundenprofil nicht unterstützt werden können. Dies umfasst weiche Beschränkungen, die zu Performance-Beeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der Dokumentation zu [Profilleitplanken](guardrails.md).
 
 ### Profil-Dashboard {#profile-dashboard}
 
@@ -65,7 +65,7 @@ Wenn die Daten aus mehreren Datensätzen in Konflikt stehen (z. B. listet ein Fr
 
 ### Daten aufzeichnen {#record-data}
 
-Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen Attributen besteht (auch als Datensatzdaten bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. Mit [!DNL Experience Platform] können Sie Profile so anpassen, dass die für Ihr Unternehmen relevanten Daten verwendet werden. Die standardmäßige Klasse, das [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], ist die bevorzugte Klasse für die Erstellung eines Schemas zur Beschreibung von Kundendatensatzdaten und liefert eine Vielzahl von für die Interaktionen zwischen Platform-Services essentiellen Daten. Lesen Sie zum Einstieg in die Arbeit mit Schemas in [!DNL Experience Platform] zunächst die [Übersicht über das XDM-System](../xdm/home.md) durch.
+Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen Attributen besteht (auch als Datensatzdaten bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. Mit [!DNL Experience Platform] können Sie Profile so anpassen, dass die für Ihr Unternehmen relevanten Daten verwendet werden. Die standardmäßige Klasse, das [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], ist die bevorzugte Klasse für die Erstellung eines Schemas zur Beschreibung von Kundendatensatzdaten und liefert eine Vielzahl von für die Interaktionen zwischen Platform-Services essentiellen Daten. Lesen Sie zum Einstieg in die Arbeit mit Schemata in [!DNL Experience Platform] zunächst die [Übersicht über das XDM-System](../xdm/home.md) durch.
 
 ### Zeitreihen-Ereignisse {#time-series-events}
 
@@ -83,11 +83,11 @@ Wenn Daten aus mehreren Datensätzen miteinander in Konflikt stehen, bestimmt di
 
 Um mehr über Zusammenführungsrichtlinien und ihre Rolle in der Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](merge-policies/overview.md).
 
-### Vereinigungsschemas {#profile-fragments-and-union-schemas}
+### Vereinigungsschemata {#profile-fragments-and-union-schemas}
 
 Eines der wichtigsten Merkmale des [!DNL Real-Time Customer Profile] ist seine Fähigkeit, Daten aus verschiedenen Kanälen zusammenzuführen. Wird über das [!DNL Real-Time Customer Profile] auf eine Entität zugegriffen, kann es eine datensatzübergreifende Sicht aller Profilfragmente für die entsprechende Entität liefern, die als „Vereinigungsansicht“ bezeichnet und über ein sogenanntes Vereinigungsschema umgesetzt wird.
 
-Weitere Informationen zu Vereinigungsschemas, einschließlich dem Zugriff auf Vereinigungsschemas in der Benutzeroberfläche, finden Sie im [Handbuch zur Benutzeroberfläche der Vereinigungsschemas](ui/union-schema.md).
+Weitere Informationen zu Vereinigungsschemata, einschließlich dem Zugriff auf Vereinigungsschemata in der Benutzeroberfläche, finden Sie im [Handbuch zur Benutzeroberfläche der Vereinigungsschemata](ui/union-schema.md).
 
 <!-- ### (Alpha) Computed attributes
 
@@ -105,10 +105,6 @@ Der [!DNL Segmentation Service] von Adobe Experience Platform liefert die Zielgr
 
 Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Erfassung bezeichnet. Bei der Aufnahme von Profil- und Zeitreihendaten entscheidet das [!DNL Real-Time Customer Profile] automatisch, ob diese Daten durch einen fortlaufenden Prozess, die sogenannte Streaming-Segmentierung, in die Zielgruppen eingeschlossen oder von ihnen ausgeschlossen werden, bevor sie mit den vorhandenen Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen. Im Verlauf der Datenaufnahme wird außerdem validiert, ob die Daten ordnungsgemäß erfasst werden und dem Schema entsprechen, auf dem der Datensatz basiert. Weitere Informationen dazu, welche Validierungen bei der Datenaufnahme vorgenommen werden, finden Sie in der Übersicht über die Datenaufnahme unter [Datenqualität](../ingestion/quality/overview.md).
 
-## Edge-Projektionen
-
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanäle hinweg in Echtzeit bieten zu können, müssen die richtigen Daten jederzeit verfügbar sein und bei Änderungen kontinuierlich aktualisiert werden. Adobe Experience Platform ermöglicht diesen Echtzeitzugriff auf Daten mithilfe sogenannter Edges. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Adobe-Programme wie etwa Adobe Target und Adobe Campaign nutzen beispielsweise Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden. Weitere Informationen und die Arbeit mit Projektionen mithilfe der [!DNL Real-Time Customer Profile]-API finden Sie im [Handbuch zu den Endpunkten für die Edge-Projektion](api/edge-projections.md).
-
 ## Aufnehmen von Daten in [!DNL Profile]
 
 [!DNL Platform] kann so konfiguriert werden, dass Ihre Datensatz- und Zeitreihendaten an das [!DNL Profile] gesendet werden, und unterstützt die Aufnahme im Echtzeit-Streaming sowie per Batch. Weiterführende Informationen dazu, wie Sie [dem Echtzeit-Kundenprofil Daten hinzufügen](tutorials/add-profile-data.md), finden Sie im entsprechenden Tutorial.
@@ -119,7 +115,7 @@ Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden üb
 
 ### Metriken zur Aufnahme von Profilen
 
-Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. Zusätzlich zu den in verfügbaren Nutzungsstatistiken und Leistungsindikatoren von [!DNL Experience Platform] für verschiedene [!DNL Platform]-Funktionalitäten können Sie verschiedene auf das Profil bezogene Metriken ermitteln, die Ihnen Aufschluss über die Rate eingehender Anfragen, erfolgreicher Datenaufnahmen, Größen der aufgenommenen Datensätze und mehr geben. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Observability Insights-API](../observability/api/overview.md). Eine vollständige Liste der Echtzeit-Kundenprofil-Metriken finden Sie in der Dokumentation zu [verfügbaren Metriken](../observability/api/metrics.md#available-metrics).
+Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. Zusätzlich zu den in verfügbaren Nutzungsstatistiken und Performance-Indikatoren von [!DNL Experience Platform] für verschiedene [!DNL Platform]-Funktionalitäten können Sie verschiedene auf das Profil bezogene Metriken ermitteln, die Ihnen Aufschluss über die Rate eingehender Anfragen, erfolgreicher Datenaufnahmen, Größen der aufgenommenen Datensätze und mehr geben. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Observability Insights-API](../observability/api/overview.md). Eine vollständige Liste der Echtzeit-Kundenprofil-Metriken finden Sie in der Dokumentation zu [verfügbaren Metriken](../observability/api/metrics.md#available-metrics).
 
 ## Aktualisieren von Profilspeicherdaten
 

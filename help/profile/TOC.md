@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Handbuch zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profiles
-source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 98%
+source-wordcount: '129'
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,6 @@ ht-degree: 98%
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
-   * [Edge-Projektionen](api/edge-projections.md)
    * [Entitäten ([!DNL Profile]-Zugriff)](api/entities.md)
    * [Exportaufträge ([!DNL Profile]-Export)](api/export-jobs.md)
    * [Musterstatus der Vorschau ([!DNL Profile]-Vorschau)](api/preview-sample-status.md)
@@ -34,7 +33,7 @@ ht-degree: 98%
    * [Interessentenprofile](ui/prospect-profile.md)
 * Berechnete Attribute {#computed-attributes}
    * [Übersicht](computed-attributes/overview.md)
-   * [API für berechnete Attribute Handbuch](computed-attributes/api.md)
+   * [API-Handbuch für berechnete Attribute](computed-attributes/api.md)
    * [Handbuch zur Benutzeroberfläche für berechnete Attribute](computed-attributes/ui.md)
    * [Häufig gestellte Fragen](computed-attributes/faq.md)
 * Zusammenführungsrichtlinien {#merge-policies}
@@ -42,7 +41,7 @@ ht-degree: 98%
    * [Zusammenführungsrichtlinien-API](api/merge-policies.md)
    * [Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien](merge-policies/ui-guide.md)
    * [Erstellen von Zusammenführungsrichtlinien (Video)](video/create-merge-policies.md)
-* Vereinigungsschemas {#union-schemas}
+* Vereinigungsschemata {#union-schemas}
    * [Handbuch zur Vereinigungsschema-Benutzeroberfläche](ui/union-schema.md)
    * [Übersicht zum Vereinigungsschema (Video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}

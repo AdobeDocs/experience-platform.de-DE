@@ -2,10 +2,10 @@
 title: Edge-Profile
 description: Erfahren Sie mehr über Edge-Profile sowie die zugehörige Terminologie, verfügbare Regionen für Edge-Profile sowie verfügbare Dienste für Edge-Profile.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 5%
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 In Adobe Experience Platform ist das Echtzeit-Kundenprofil die einzige &quot;Source of Truth&quot; für Entitätsdaten. Diese Profildaten befinden sich in einem zentralen Hub und ermöglichen die Verwendung von Fällen, die auf die Vollständigkeit und Vollständigkeit Ihrer Daten angewiesen sind. In Echtzeit-Anwendungsfällen, bei denen die Zeitempfindlichkeit wichtiger ist, sind jedoch Kantenprofile die bevorzugte Option. Edge-Profile sind einfache Profile, die an Edges sitzen und bei der Echtzeit-Personalisierung helfen.
 
-Adobe-Anwendungen wie Adobe Target, Custom Personalization Destination und Adobe Campaign verwenden beispielsweise Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden.
+Adobe-Anwendungen wie Adobe Target, Custom Personalization Destination und Adobe Campaign verwenden beispielsweise Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an einen Edge geleitet, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die am Edge bereitgestellt werden.
 
 ## Terminologie {#terminology}
 
@@ -61,7 +61,7 @@ Der Express Profile Service (XPS) ruft die Profile an den verschiedenen Edges ab
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs sollten Sie über grundlegende Kenntnisse zu Kantenprofilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Diensten für Kantenprofile. Weitere Informationen zu Edge-Projektionen finden Sie im [Endpunktleitfaden für Edge-Projektionen](./api/edge-projections.md). Weitere Informationen zum Adobe Experience Edge finden Sie im Abschnitt [Edge-Übersicht](../edge/home.md).
+Nach dem Lesen dieses Handbuchs sollten Sie über grundlegende Kenntnisse zu Kantenprofilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Diensten für Kantenprofile. Weitere Informationen zum Adobe Experience Edge finden Sie im Abschnitt [Edge-Übersicht](../edge/home.md).
 
 ## Anhang
 
@@ -77,6 +77,4 @@ Darüber hinaus verfügt jedes Kantenprofil über ein Schemaattribut namens User
 
 ### Wie funktionieren Datenabläufe mit Kantenprofilen?
 
-Bei Kantenprofilen bestimmt der Datenablauf, wie lange das Profil auf der Kante bleibt, bevor es entfernt wird. Datengültigkeit **rollierend**: Jedes Mal, wenn auf das Profil an der Kante zugegriffen wird, wird die Datenablaufzeit zurückgesetzt.
-
-Sie können Ihren Kantenprofilen einen Datenablauf hinzufügen, indem Sie ihn zum [Kantenprojektion](./api/edge-projections.md). Standardmäßig läuft die Datengültigkeit 14 Tage an, kann jedoch auf eine Mindestdauer von 1 Stunde und eine Höchstdauer von 90 Tagen eingestellt werden.
+Bei Kantenprofilen bestimmt der Datenablauf, wie lange das Profil auf der Kante bleibt, bevor es entfernt wird. Datengültigkeit **rollierend**: Jedes Mal, wenn auf das Profil an der Kante zugegriffen wird, wird die Datenablaufzeit zurückgesetzt. Standardmäßig ist die Datengültigkeit auf 14 Tage begrenzt.
