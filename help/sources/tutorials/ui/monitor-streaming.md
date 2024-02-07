@@ -5,7 +5,7 @@ title: Überwachen von Datenflüssen für Streaming-Quellen in der Benutzeroberf
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1037'
 ht-degree: 24%
 
 ---

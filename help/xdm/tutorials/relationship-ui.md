@@ -48,12 +48,12 @@ Dieses Dokument enthält eine Anleitung zum Definieren einer Beziehung zwischen 
 Dieses Tutorial setzt ein grundlegendes Verständnis von [!DNL XDM System] und dem Schema-Editor im [!DNL Experience Platform] Benutzeroberfläche. Bevor Sie mit dem Tutorial beginnen, lesen Sie die folgenden Dokumente:
 
 * [XDM-System in Experience Platform](../home.md): Eine Übersicht über XDM und dessen Implementierung in [!DNL Experience Platform].
-* [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemas.
+* [Grundlagen der Schemakomposition](../schema/composition.md): Eine Einführung in die Bausteine von XDM-Schemata.
 * [Erstellen Sie ein Schema mit dem [!DNL Schema Editor]](create-schema-ui.md): Ein Tutorial zu den Grundlagen der Arbeit mit dem [!DNL Schema Editor].
 
 ## Quell- und Referenzschema definieren
 
-Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert werden sollen, bereits erstellt haben. Zu Demonstrationszwecken erstellt dieses Tutorial eine Beziehung zwischen Mitgliedern des Treueprogramms einer Organisation (definiert in einem[!DNL Loyalty Members]&quot; schema) und deren Lieblingshotel (definiert in einem &quot;[!DNL Hotels]&quot; schema).
+Wir gehen davon aus, dass Sie die beiden Schemata, die in der Beziehung definiert werden sollen, bereits erstellt haben. Zu Demonstrationszwecken erstellt dieses Tutorial eine Beziehung zwischen Mitgliedern des Treueprogramms einer Organisation (definiert in einem[!DNL Loyalty Members]&quot; schema) und deren Lieblingshotel (definiert in einem &quot;[!DNL Hotels]&quot; schema).
 
 >[!IMPORTANT]
 >

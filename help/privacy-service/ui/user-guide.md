@@ -6,8 +6,8 @@ description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche D
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 24%
+source-wordcount: '1456'
+ht-degree: 23%
 
 ---
 
@@ -22,7 +22,7 @@ In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschu
 
 >[!IMPORTANT]
 >
->Privacy Service ist nur für Anfragen der betroffenen Person und für Verbraucherrechtsanfragen vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt und ist nicht zulässig. Adobe ist gesetzlich verpflichtet, diese rechtzeitig zu erfüllen. Daher sind Lasttests auf Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und ein unnötiger Rückstau gültiger Datenschutzanfragen erzeugt wird.
+>Privacy Service ist nur für Anfragen der betroffenen Person und für Verbraucherrechtsanfragen vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt und ist nicht zulässig. Adobe ist gesetzlich verpflichtet, diese rechtzeitig zu erfüllen. Daher sind Lasttests auf Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und ein unnötiger Rückstand gültiger Datenschutzanfragen erzeugt wird.
 >
 >Es gibt jetzt eine feste tägliche Upload-Grenze, um einen Missbrauch des Dienstes zu verhindern. Für Benutzende, bei denen ein Missbrauch des Systems festgestellt wurde, wird der Zugriff auf den Dienst deaktiviert. Anschließend wird mit ihnen ein Meeting abgehalten, bei dem ihr Handeln und die akzeptable Verwendung von Privacy Service erörtert wird.
 
@@ -38,18 +38,18 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 
 | UI-Bezeichnung | Verordnung |
 | --- | --- |
-| [!UICONTROL APA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | Die Menüauswahlmöglichkeiten für die [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | Die Menüauswahlmöglichkeiten für die [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | Die Menüauswahlmöglichkeiten für die [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL APA_AUS] | Die [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL CPA] | Die [!DNL Colorado Privacy Act] |
+| [!UICONTROL CCPA] | Die [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | Die [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA] | Die [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL DSGVO] | Die [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | Die Menüauswahlmöglichkeiten für die [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL HIPAA_AUS] | Die [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brasiliens [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | Neuseeland [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | Thailands [!DNL Personal Data Protection Act] |
-| [!UICONTROL UCPA] | Die Menüauswahlmöglichkeiten für die [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | Die Menüauswahlmöglichkeiten für die [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL UCPA] | Die [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA] | Die [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 
@@ -183,7 +183,7 @@ Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Adobe-D
 
 Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfenster. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können bei Bedarf weitere JSON-Dateien hinzufügen, indem Sie sie per Drag-and-Drop in das Dialogfeld ziehen.
 
-Klicken Sie abschließend auf **[!UICONTROL Erstellen]**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird im Widget Auftragsanfragen zusammen mit dem aktuellen Verarbeitungsstatus aufgeführt.
+Wählen Sie zum Abschluss **[!UICONTROL Erstellen]**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird im Widget Auftragsanfragen zusammen mit dem aktuellen Verarbeitungsstatus aufgeführt.
 
 ### Nächste Schritte
 

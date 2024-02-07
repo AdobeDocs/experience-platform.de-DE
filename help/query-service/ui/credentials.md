@@ -6,8 +6,8 @@ description: Adobe Experience Platform Query Service bietet eine Benutzeroberfl�
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1517'
-ht-degree: 4%
+source-wordcount: '1504'
+ht-degree: 3%
 
 ---
 
@@ -61,7 +61,7 @@ Sie können nicht ablaufende Anmeldedaten verwenden, um eine permanentere Verbin
 Bevor Sie nicht ablaufende Anmeldeinformationen generieren können, müssen Sie die folgenden Schritte in Adobe Admin Console ausführen:
 
 1. Anmelden [Adobe Admin Console](https://adminconsole.adobe.com/) und wählen Sie in der oberen Navigationsleiste die entsprechende Organisation aus.
-2. [Produktprofil auswählen.](../../access-control/ui/browse.md)
+2. [Wählen Sie ein Produktprofil aus.](../../access-control/ui/browse.md)
 3. [Konfigurieren Sie beide **Sandboxes** und **Integration von Query Service verwalten** Berechtigungen](../../access-control/ui/permissions.md) für das Produktprofil.
 4. [Neuen Benutzer zu einem Produktprofil hinzufügen](../../access-control/ui/users.md) so erhalten sie die konfigurierten Berechtigungen.
 5. [Benutzer als Produktprofiladministrator hinzufügen](https://helpx.adobe.com/de/enterprise/using/manage-product-profiles.html) , um die Erstellung eines Kontos für jedes aktive Produktprofil zu ermöglichen.

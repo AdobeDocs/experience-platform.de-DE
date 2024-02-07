@@ -5,7 +5,7 @@ badge1: „Beta“
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2241'
 ht-degree: 44%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 44%
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
 >title="Vorlagen für Quellen in der Platform-Benutzeroberfläche"
->abstract="Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können. Sie können automatisch generierte Assets aktualisieren, um sie an Anwendungsfälle anzupassen."
+>abstract="Zu Vorlagen gehören automatisch generierte Assets wie Schemata, Datensätze, Identitäten, Zuordnungsregeln, Identity-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können. Sie können automatisch generierte Assets aktualisieren, um sie an Anwendungsfälle anzupassen."
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ ht-degree: 44%
 >
 >Dokumentation und Funktionalität können sich ändern.
 
-Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemas, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können.
+Adobe Experience Platform stellt vorkonfigurierte Vorlagen bereit, mit denen Sie den Datenerfassungsprozess beschleunigen können. Zu Vorlagen gehören automatisch generierte Assets wie Schemata, Datensätze, Identitäten, Zuordnungsregeln, Identitäts-Namespaces und Datenflüsse, die Sie beim Einbringen von Daten aus einer Quelle in Experience Platform verwenden können.
 
 Mit Vorlagen können Sie:
 
@@ -61,10 +61,10 @@ Navigieren Sie zu [!UICONTROL Adobe-Anwendungen] -Kategorie, um die [!DNL Market
 
 ![Katalog des Quellarbeitsbereichs mit hervorgehobener Marketo Engage-Quelle.](../../images/tutorials/templates/catalog.png)
 
-Es wird ein Popup-Fenster angezeigt, in dem Sie die Möglichkeit haben, Vorlagen zu durchsuchen oder vorhandene Schemas und Datensätze zu verwenden.
+Es wird ein Popup-Fenster angezeigt, in dem Sie die Möglichkeit haben, Vorlagen zu durchsuchen oder vorhandene Schemata und Datensätze zu verwenden.
 
-* **Vorlagen durchsuchen**: Quellvorlagen erstellen automatisch Schemas, Identitäten, Datensätze und Datenflüsse mit Zuordnungsregeln für Sie. Sie können diese Assets nach Bedarf anpassen.
-* **Meine vorhandenen Assets verwenden**: Nehmen Sie Ihre Daten mit vorhandenen Datensätzen und Schemas auf, die Sie erstellt haben. Sie können bei Bedarf auch neue Datensätze und Schemas erstellen.
+* **Vorlagen durchsuchen**: Quellvorlagen erstellen automatisch Schemata, Identitäten, Datensätze und Datenflüsse mit Zuordnungsregeln für Sie. Sie können diese Assets nach Bedarf anpassen.
+* **Meine vorhandenen Assets verwenden**: Nehmen Sie Ihre Daten mit vorhandenen Datensätzen und Schemata auf, die Sie erstellt haben. Sie können bei Bedarf auch neue Datensätze und Schemata erstellen.
 
 Um automatisch generierte Assets zu verwenden, wählen Sie **[!UICONTROL Vorlagen durchsuchen]** und dann **[!UICONTROL Auswählen]** aus.
 
@@ -187,7 +187,7 @@ Wenn Sie ein oder mehrere Elemente aus der Liste der verfügbaren Vorlagen ausw�
 
 ![Die Liste der Vorlagen mit der ausgewählten Vorlage „Rolle von Opportunity-Kontakt“.](../../images/tutorials/templates/select-template.png)
 
-### Legen Sie einen Zeitplan fest
+### Festlegen eines Zeitplans
 
 Die [!DNL Microsoft Dynamics] und [!DNL Salesforce] -Quellen unterstützen beide die Planung von Datenflüssen.
 

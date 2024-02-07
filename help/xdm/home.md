@@ -2,7 +2,7 @@
 keywords: Experience Platform;Startseite;beliebte Themen;XDM;XDM-System;XDM Individual Profile;XDM ExperienceEvent;XDM Experience Event;Experience Event;Erlebnisereignis;Feldergruppen;Feldergruppen;Feldergruppe;Feldergruppe;Erlebnisereignis;XDM ExperienceEvent;experienceEvent;experienceEvent;XDM Experienceevent;Experience-Datenmodell;Experience Data Model;Datenmodell;Data Model;Schema Registry;Schema Library;Schemabibliothek;Schema;Datensatzdaten;Zeitreihen;Time Series
 solution: Experience Platform
 title: XDM-System – Übersicht
-description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemas für das Customer Experience Management.
+description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemata für das Customer Experience Management.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 74%
 
 # XDM-System – Übersicht
 
-Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemas für das Customer Experience Management.
+Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemata für das Customer Experience Management.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Dieses Modell bietet allgemeine Strukturen und Definitionen, anhand derer jede beliebige Anwendung mit Platform-Diensten kommunizieren kann. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in ein gemeinsames System integriert werden, wodurch Erkenntnisse schneller und besser integriert verfügbar werden. Sie können wertvolle Einblicke durch Kundenaktionen gewinnen, Zielgruppen mithilfe von Segmenten definieren und Kundenattribute zur Personalisierung verwenden.
 
@@ -21,19 +21,19 @@ XDM ist das zugrunde liegende System, auf Basis dessen Adobe Experience Cloud al
 
 Erfahren Sie mehr über die Rolle des XDM-Systems innerhalb von Experience Platform.
 
-## XDM-Schemas {#xdm-schemas}
+## XDM-Schemata {#xdm-schemas}
 
-Schemas dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen.
+Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen.
 
-Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend des jeweiligen Feldes einschränkt. Schemas bestehen aus einer Basisklasse und keiner oder mehreren Schema-Feldergruppen.
+Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend des jeweiligen Feldes einschränkt. Schemata bestehen aus einer Basisklasse und keiner oder mehreren Schema-Feldergruppen.
 
 Weitere Informationen zum Schema-Kompositionsmodell, einschließlich Designgrundsätzen, und Best Practices finden Sie in der [Grundlagen der Schemakomposition](schema/composition.md).
 
 ### Standardmäßige XDM-Komponenten {#Standard-xdm-components}
 
-XDM bietet eine Sammlung von standardmäßigen Feldergruppen und Datentypen, mit denen gängige Konzepte und Anwendungsfälle in verschiedenen Branchen abgedeckt werden. Sie können diese Komponenten in Experience Platform nach Branchen filtern, sodass Sie schnell und sicher Schemas erstellen können, die optimal zu Ihren speziellen Geschäftsanforderungen passen.
+XDM bietet eine Sammlung von standardmäßigen Feldergruppen und Datentypen, mit denen gängige Konzepte und Anwendungsfälle in verschiedenen Branchen abgedeckt werden. Sie können diese Komponenten in Experience Platform nach Branchen filtern, sodass Sie schnell und sicher Schemata erstellen können, die optimal zu Ihren speziellen Geschäftsanforderungen passen.
 
-Beim Erstellen von Schemas in der Experience Platform-Benutzeroberfläche werden die aufgelistete Feldergruppen mit einer Beliebtheitsmetrik angezeigt. Diese Metrik wird durch die Häufigkeit bestimmt, mit der andere Platform-Benutzer die jeweilige Feldergruppe in ihren Schemas verwenden. Je höher die Zahl ist, desto beliebter ist die Feldergruppe. Standardmäßig werden die Ergebnisse von den beliebtesten zu den am wenigsten beliebten Ergebnissen gereiht, sodass Sie über die Datenmodellierungstrends in Ihrer Branche auf dem Laufenden bleiben.
+Beim Erstellen von Schemata in der Experience Platform-Benutzeroberfläche werden die aufgelistete Feldergruppen mit einer Beliebtheitsmetrik angezeigt. Diese Metrik wird durch die Häufigkeit bestimmt, mit der andere Platform-Benutzer die jeweilige Feldergruppe in ihren Schemata verwenden. Je höher die Zahl ist, desto beliebter ist die Feldergruppe. Standardmäßig werden die Ergebnisse von den beliebtesten zu den am wenigsten beliebten Ergebnissen gereiht, sodass Sie über die Datenmodellierungstrends in Ihrer Branche auf dem Laufenden bleiben.
 
 ![Die Popularitätsspalte der [!UICONTROL Feldergruppe hinzufügen] angezeigt.](./images/overview/popularity.png)
 
@@ -43,7 +43,7 @@ Experience Platform stellt eine Benutzeroberfläche und RESTful-API bereit, übe
 
 Sie können auch neue Schemata und Ressourcen erstellen und verwalten, die für Ihre Organisation eindeutig sind, indem Sie die [!DNL Schema Registry API]oder die [!UICONTROL Schemas] Arbeitsbereich in der Platform-Benutzeroberfläche.
 
-Weitere Informationen zur Verwaltung und Interaktion mit Schemas in Platform finden Sie in der folgenden Dokumentation:
+Weitere Informationen zur Verwaltung und Interaktion mit Schemata in Platform finden Sie in der folgenden Dokumentation:
 
 * [Handbuch zur XDM-Benutzeroberfläche](./ui/overview.md)
 * [Handbuch zur Schema Registry-API](./api/overview.md)
@@ -53,15 +53,15 @@ Weitere Informationen zur Verwaltung und Interaktion mit Schemas in Platform fin
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Datenverhalten"
->abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Datensatz, Zeitreihen und Ad-hoc-Analysen. Datensatzschemas liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemas eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die Namespaces sind und von nur einem Datensatz verwendet werden können. Weitere Informationen zu Datenverhalten in Platform finden Sie in der Dokumentation."
+>abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Datensatz, Zeitreihen und Ad-hoc-Analysen. Datensatzschemas liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemata eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die Namespaces sind und von nur einem Datensatz verwendet werden können. Weitere Informationen zu Datenverhalten in Platform finden Sie in der Dokumentation."
 
 Daten, die in Experience Platform verwendet werden können, sind in drei Verhaltenstypen unterteilt:
 
 * **Datensatz**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt kann ein Unternehmen oder eine Person sein.
 * **Zeitreihen**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
-* **Ad-hoc**: Erfasst Felder, die sich in einem Namespace befinden und nur von einem einzigen Datensatz verwendet werden. Ad-hoc-Schemas werden in verschiedenen Datenaufnahme-Workflows für Experience Platform verwendet, einschließlich der Aufnahme von CSV-Dateien und der Erstellung bestimmter Arten von Quellverbindungen.
+* **Ad-hoc**: Erfasst Felder, die sich in einem Namespace befinden und nur von einem einzigen Datensatz verwendet werden. Ad-hoc-Schemata werden in verschiedenen Datenaufnahme-Workflows für Experience Platform verwendet, einschließlich der Aufnahme von CSV-Dateien und der Erstellung bestimmter Arten von Quellverbindungen.
 
-Alle XDM-Schemas beschreiben Daten, die als Datensatz oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben.
+Alle XDM-Schemata beschreiben Daten, die als Datensatz oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben.
 
 Obwohl Sie in der Lage sind, Ihre eigenen Klassen innerhalb der [!DNL Schema Registry]wird empfohlen, die Standardklassen zu verwenden. **[!UICONTROL Individuelles XDM-Profil]** und **[!UICONTROL XDM ExperienceEvent]** für Datensatz- bzw. Zeitreihendaten. Diese Klassen werden weiter unten detaillierter beschrieben.
 
@@ -91,13 +91,13 @@ Es ist zwar nicht einfach, alle Ereignisse in allen Datenquellen zu kategorisier
 
 Weitere Informationen zur Struktur und zum Anwendungsfall der Felder einer Klasse erhalten Sie im Referenzhandbuch [[!UICONTROL XDM ExperienceEvent]](./classes/experienceevent.md).
 
-## XDM-Schemas und Experience Platform-Services {#schemas-and-platform-services}
+## XDM-Schemata und Experience Platform-Services {#schemas-and-platform-services}
 
-Experience Platform ist schemaunabhängig, d. h. jedes Schema, das dem XDM-Standard entspricht, wird Platform-Services zur Verfügung gestellt. Die Verwendung von Schemas durch verschiedene Platform-Services wird weiter unten ausführlicher beschrieben.
+Experience Platform ist schemaunabhängig, d. h. jedes Schema, das dem XDM-Standard entspricht, wird Platform-Services zur Verfügung gestellt. Die Verwendung von Schemata durch verschiedene Platform-Services wird weiter unten ausführlicher beschrieben.
 
 ### Catalog Service, Data Ingestion und Data Lake {#ingestion-catalog-and-storage}
 
-Catalog Service ist das „System of Record“ für Experience Platform-Medienelemente und deren zugehörige Schemas. Catalog Service enthält nicht die eigentlichen Datendateien oder Ordner, sondern die Metadaten und Beschreibungen dieser Dateien und Ordner.
+Catalog Service ist das „System of Record“ für Experience Platform-Medienelemente und deren zugehörige Schemata. Catalog Service enthält nicht die eigentlichen Datendateien oder Ordner, sondern die Metadaten und Beschreibungen dieser Dateien und Ordner.
 
 Katalogdaten werden im Data Lake gespeichert, einem hochgradig granularen Datenspeicher, der alle von Platform verwalteten Daten enthält, unabhängig von Herkunft oder Dateiformat.
 
@@ -141,9 +141,9 @@ Weitere Informationen zur Verwendung von Experience Platform-Daten zur Bereitste
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Jetzt, da Sie die Rolle von Schemas in Experience Platform besser verstehen, können Sie beginnen, eigene Schemas zu erstellen.
+Jetzt, da Sie die Rolle von Schemata in Experience Platform besser verstehen, können Sie beginnen, eigene Schemata zu erstellen.
 
-Um mehr über die Prinzipien und Best Practices beim Erstellen von Schemas zu erfahren, die mit Experience Platform verwendet werden können, lesen Sie den Abschnitt [Grundlagen der Schemaaufbaus](schema/composition.md). Eine schrittweise Anleitung zum Erstellen eines Schemas finden Sie in den Tutorials zum Erstellen eines Schemas mithilfe [der API](tutorials/create-schema-api.md) oder [der Benutzeroberfläche](tutorials/create-schema-ui.md).
+Um mehr über die Prinzipien und Best Practices beim Erstellen von Schemata zu erfahren, die mit Experience Platform verwendet werden können, lesen Sie den Abschnitt [Grundlagen der Schemaaufbaus](schema/composition.md). Eine schrittweise Anleitung zum Erstellen eines Schemas finden Sie in den Tutorials zum Erstellen eines Schemas mithilfe [der API](tutorials/create-schema-api.md) oder [der Benutzeroberfläche](tutorials/create-schema-ui.md).
 
 Sehen Sie sich das folgende Video an, um [!DNL XDM System] in Experience Platform besser zu verstehen:
 

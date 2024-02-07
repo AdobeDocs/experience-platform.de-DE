@@ -6,8 +6,8 @@ description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfl�
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 23%
+source-wordcount: '226'
+ht-degree: 20%
 
 ---
 
@@ -24,7 +24,7 @@ Die Privacy Service-Benutzeroberfläche [!DNL Privacy Service] ermöglicht die K
 >
 >Informationen zum programmgesteuerten Verwalten von Compliance-Anfragen mithilfe der Privacy Service-API finden Sie in der [Handbuch zur Privacy Service-API](../api/overview.md). Siehe Dokument Nr. [Verwalten von Privacy Service-Berechtigungen](../permissions.md) für weitere Informationen.
 
-## Melden Sie sich bei der [!DNL Privacy Service]-Benutzeroberfläche an
+## Melden Sie sich bei [!DNL Privacy Service] Benutzeroberfläche
 
 >[!IMPORTANT]
 >

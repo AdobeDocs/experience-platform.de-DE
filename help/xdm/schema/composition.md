@@ -15,11 +15,11 @@ ht-degree: 25%
 
 Erfahren Sie mehr über Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas in Adobe Experience Platform. Allgemeine Informationen zu XDM und dessen Verwendung in [!DNL Platform], siehe [XDM-System - Übersicht](../home.md).
 
-## Verstehen von Schemas {#understanding-schemas}
+## Verstehen von Schemata {#understanding-schemas}
 
-Ein Schema ist ein Regelsatz, der die Datenstruktur und das Datenformat darstellt und überprüft. Auf hoher Ebene bieten Schemas eine abstrakte Definition eines realen Objekts (z. B. einer Person) und legen dar, welche Daten in jeder Instanz dieses Objekts enthalten sein sollen (z. B. Vorname, Nachname, Geburtsdatum usw.).
+Ein Schema ist ein Regelsatz, der die Datenstruktur und das Datenformat darstellt und überprüft. Auf hoher Ebene bieten Schemata eine abstrakte Definition eines realen Objekts (z. B. einer Person) und legen dar, welche Daten in jeder Instanz dieses Objekts enthalten sein sollen (z. B. Vorname, Nachname, Geburtsdatum usw.).
 
-Zusätzlich zur Beschreibung der Datenstruktur wenden Schemas Einschränkungen und Erwartungen an Daten an, damit diese bei ihren Bewegungen zwischen den Systemen validiert werden können. Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Daten, unabhängig von ihrer Herkunft, und machen eine anwendungsübergreifende Übersetzung überflüssig.
+Zusätzlich zur Beschreibung der Datenstruktur wenden Schemata Einschränkungen und Erwartungen an Daten an, damit diese bei ihren Bewegungen zwischen den Systemen validiert werden können. Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Daten, unabhängig von ihrer Herkunft, und machen eine anwendungsübergreifende Übersetzung überflüssig.
 
 Experience Platform behält diese semantische Normalisierung bei, indem Schemas verwendet werden. Schemata sind die Standardmethode zur Beschreibung von Daten in Experience Platform. Dadurch können alle Daten, die mit Schemata konform sind, innerhalb einer Organisation ohne Konflikte wiederverwendet oder sogar von mehreren Organisationen gemeinsam genutzt werden.
 
@@ -27,7 +27,7 @@ XDM-Schemata eignen sich ideal zum Speichern großer Mengen komplexer Daten in e
 
 ### Schema-basierte Workflows in Experience Platform {#schema-based-workflows}
 
-Die Standardisierung ist ein Schlüsselkonzept der Experience Platform. Das von Adobe unterstützte XDM-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
+Die Standardisierung ist ein Schlüsselkonzept der Experience Platform. Das von Adobe unterstützte XDM-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemata für das Customer Experience Management zu definieren.
 
 Die Infrastruktur, auf der Experience Platform gebaut wird, auch bekannt als [!DNL XDM System], erleichtert schemabasierte Workflows und schließt die [!DNL Schema Registry], [!DNL Schema Editor], Schemadaten und Dienstkonsummuster. Weitere Informationen finden Sie in der [XDM-Systemübersicht](../home.md).
 
@@ -44,9 +44,9 @@ Daten, die in Experience Platform verwendet werden sollen, sind in zwei Verhalte
 * **Aufzeichnen von Daten**: Stellt Informationen zu den Attributen eines Subjekts bereit. Ein Subjekt könnte eine Organisation oder eine Einzelperson sein.
 * **Zeitreihendaten**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt bereit, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
 
-Alle XDM-Schemas beschreiben Daten, die als Datensatz oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen werden nachstehend in diesem Dokument detailliert beschrieben.
+Alle XDM-Schemata beschreiben Daten, die als Datensatz oder Zeitreihe kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen werden nachstehend in diesem Dokument detailliert beschrieben.
 
-Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung der Identitäten (`xdm:identityMap`). Dieses Feld enthält die Identitätsdarstellung eines Subjekts, die aus den als „Identität“ markierten Feldern gezogen wird, wie im nächsten Abschnitt beschrieben.
+Sowohl Schemata der Datensätze als auch der Zeitreihen enthalten eine Zuordnung der Identitäten (`xdm:identityMap`). Dieses Feld enthält die Identitätsdarstellung eines Subjekts, die aus den als „Identität“ markierten Feldern gezogen wird, wie im nächsten Abschnitt beschrieben.
 
 ### [!UICONTROL Identität] {#identity}
 
@@ -55,7 +55,7 @@ Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung 
 >title="Identitäten in Schemata"
 >abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen ein Objekt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um für jede Person ein Identitätsdiagramm sowie Kundenprofile zu erstellen. Weitere Informationen zu Identitäten in Schemata finden Sie in der Dokumentation."
 
-Schemas werden für die Aufnahme von Daten in Experience Platform verwendet. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es beim Entwerfen von Schemas für Kundenidentitäten wichtig zu berücksichtigen, welche Felder zur Identifizierung eines Subjekts verwendet werden können, unabhängig davon, woher die Daten stammen.
+Schemata werden für die Aufnahme von Daten in Experience Platform verwendet. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es beim Entwerfen von Schemas für Kundenidentitäten wichtig zu berücksichtigen, welche Felder zur Identifizierung eines Subjekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
 Um diesen Prozess zu unterstützen, können Schlüsselfelder in Ihren Schemas als Identitäten markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in die[!UICONTROL Identitätsdiagramm]&quot;für diese Person. Auf die Diagrammdaten kann dann zugegriffen werden durch [[!DNL Real-Time Customer Profile]](../../profile/home.md) und anderen Experience Platform-Services, um eine zusammengesetzte Sicht auf jeden einzelnen Kunden zu ermöglichen.
 
@@ -117,7 +117,7 @@ Wie das obige Beispiel zeigt, enthält jeder Schlüssel im `identityMap` -Objekt
 
 ### Prinzipien der Schemaentwicklung {#evolution}
 
-In dem Maße, wie sich die Art der digitalen Erfahrungen weiterentwickelt, müssen sich auch die Schemas, die zu ihrer Darstellung verwendet werden, weiterentwickeln. Ein gut entworfenes Schema ist daher in der Lage, sich bei Bedarf anzupassen und weiterzuentwickeln, ohne destruktive Änderungen an früheren Versionen des Schemas zu verursachen.
+In dem Maße, wie sich die Art der digitalen Erfahrungen weiterentwickelt, müssen sich auch die Schemata, die zu ihrer Darstellung verwendet werden, weiterentwickeln. Ein gut entworfenes Schema ist daher in der Lage, sich bei Bedarf anzupassen und weiterzuentwickeln, ohne destruktive Änderungen an früheren Versionen des Schemas zu verursachen.
 
 Da die Aufrechterhaltung der Abwärtskompatibilität für die Schemaentwicklung von entscheidender Bedeutung ist, erzwingt Experience Platform ein rein additives Versionierungsprinzip. Dieser Grundsatz stellt sicher, dass alle Änderungen am Schema nur zu zerstörungsfreien Aktualisierungen und Änderungen führen. Mit anderen Worten: **brechende Änderungen werden nicht unterstützt.**
 
@@ -151,15 +151,15 @@ Beachten Sie beim Festlegen eines zuvor optionalen Felds nach Bedarf Folgendes:
 1. Wenn das Feld an [Echtzeit-Kundenprofil](../../profile/home.md) und wenn Sie Daten exportieren, bevor Sie sie nach Bedarf festlegen, können sie bei einigen Profilen null sein.
 1. Sie können die Schema Registry-API verwenden, um einen Änderungsvorschlag mit Zeitstempel für alle XDM-Ressourcen in Platform anzuzeigen, einschließlich neuer erforderlicher Felder. Siehe Handbuch im Abschnitt [Endpunkt des Auditprotokolls](../api/audit-log.md) für weitere Informationen.
 
-### Schemas und Datenerfassung
+### Schemata und Datenerfassung
 
-Um Daten in die Experience Platform aufnehmen zu können, muss zunächst ein Datensatz erstellt werden. Datensätze sind die Bausteine für die Datenumwandlung und -verfolgung für [[!DNL Catalog Service]](../../catalog/home.md)und stellen im Allgemeinen Tabellen oder Dateien dar, die aufgenommene Daten enthalten. Alle Datensätze basieren auf vorhandenen XDM-Schemas, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen hierzu finden Sie in der Übersicht über die [Datenerfassung in Adobe Experience Platform](../../ingestion/home.md).
+Um Daten in die Experience Platform aufnehmen zu können, muss zunächst ein Datensatz erstellt werden. Datensätze sind die Bausteine für die Datenumwandlung und -verfolgung für [[!DNL Catalog Service]](../../catalog/home.md)und stellen im Allgemeinen Tabellen oder Dateien dar, die aufgenommene Daten enthalten. Alle Datensätze basieren auf vorhandenen XDM-Schemata, die Einschränkungen dafür enthalten, was die aufgenommenen Daten enthalten und wie sie strukturiert sein sollten. Weitere Informationen hierzu finden Sie in der Übersicht über die [Datenerfassung in Adobe Experience Platform](../../ingestion/home.md).
 
 ## Bausteine eines Schemas {#schema-building-blocks}
 
-Die Experience Platform verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemas zu erstellen. Dieser Ansatz fördert die Wiederverwendbarkeit vorhandener Komponenten und sorgt für Standardisierung in der gesamten Branche, um Schemas und Komponenten von Anbietern in [!DNL Platform].
+Die Experience Platform verwendet einen Kompositionsansatz, bei dem Standardbausteine kombiniert werden, um Schemata zu erstellen. Dieser Ansatz fördert die Wiederverwendbarkeit vorhandener Komponenten und sorgt für Standardisierung in der gesamten Branche, um Schemas und Komponenten von Anbietern in [!DNL Platform].
 
-Schemas werden nach folgender Formel zusammengestellt:
+Schemata werden nach folgender Formel zusammengestellt:
 
 **Klasse + Schemafeldgruppe&amp;ast; = XDM-Schema**
 
@@ -172,7 +172,7 @@ Schemas werden nach folgender Formel zusammengestellt:
 >title="Klasse"
 >abstract="Jedes Schema basiert auf einer einzelnen Klasse. Die Klasse definiert das Verhalten des Schemas und die allgemeinen Eigenschaften, die alle Schemata enthalten müssen, die auf dieser Klasse basieren. Weitere Informationen dazu, wie Klassen bei der Schemakomposition genutzt werden, finden Sie in der Dokumentation."
 
-Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten wird (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
+Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten wird (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemata, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
 Die Klasse eines Schemas bestimmt, welche Feldergruppen für die Verwendung in diesem Schema geeignet sind. Weitere Informationen hierzu finden Sie im Abschnitt [nächster Abschnitt](#field-group).
 
@@ -277,7 +277,7 @@ Das folgende Diagramm zeigt diese Schemas und die von den einzelnen Feldergruppe
 
 ### Union {#union}
 
-Während Experience Platform es Ihnen ermöglicht, Schemas für bestimmte Anwendungsfälle zusammenzustellen, können Sie auch eine „Vereinigung“ von Schemas für einen bestimmten Klassentyp sehen. Das vorherige Diagramm zeigt zwei Schemas, die auf der XDM ExperienceEvent-Klasse basieren, und zwei Schemas, die auf [!DNL XDM Individual Profile] -Klasse. Die unten dargestellte Vereinigung aggregiert die Felder aller Schemas, die dieselbe Klasse ([!DNL XDM ExperienceEvent] und [!DNL XDM Individual Profile], bzw. ).
+Während Experience Platform es Ihnen ermöglicht, Schemata für bestimmte Anwendungsfälle zusammenzustellen, können Sie auch eine „Vereinigung“ von Schemata für einen bestimmten Klassentyp sehen. Das vorherige Diagramm zeigt zwei Schemas, die auf der XDM ExperienceEvent-Klasse basieren, und zwei Schemas, die auf [!DNL XDM Individual Profile] -Klasse. Die unten dargestellte Vereinigung aggregiert die Felder aller Schemas, die dieselbe Klasse ([!DNL XDM ExperienceEvent] und [!DNL XDM Individual Profile], bzw. ).
 
 ![Ein Flussdiagramm für Vereinigungsschemata, das die Felder darstellt, aus denen sie bestehen.](../images/schema-composition/union.png)
 
@@ -285,7 +285,7 @@ Durch Aktivierung eines Schemas zur Verwendung mit [!DNL Real-Time Customer Prof
 
 Weitere Informationen zum Arbeiten mit [!DNL Profile], siehe [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
-## Zuordnen von Datendateien zu XDM-Schemas {#mapping-datafiles}
+## Zuordnen von Datendateien zu XDM-Schemata {#mapping-datafiles}
 
 Alle Datendateien, die in Experience Platform aufgenommen werden, müssen der Struktur eines XDM-Schemas entsprechen. Weitere Informationen zum Formatieren von Datendateien mit XDM-Hierarchien (einschließlich Beispieldateien) finden Sie im Dokument zu [Beispiel-ETL-Transformationen](../../etl/transformations.md). Allgemeine Informationen zur Aufnahme von Datendateien in Experience Platform finden Sie unter [Batch-Erfassung – Übersicht](../../ingestion/batch-ingestion/overview.md).
 
@@ -321,11 +321,11 @@ Bei der Arbeit mit relationalen Datenbanken bestehen die Best Practices darin, D
 
 Durch die Verwendung eingebetteter Objekte können XDM-Schemas komplexe Daten direkt darstellen und in eigenständigen Dokumenten mit hierarchischer Struktur speichern. Einer der Hauptvorteile dieser Struktur besteht darin, dass Sie die Daten abfragen können, ohne die Entität durch teure Verbindungen zu mehreren denormalisierten Tabellen rekonstruieren zu müssen. Es gibt keine Einschränkungen dafür, wie viele Ebenen Ihre Schemahierarchie sein kann.
 
-### Schemas und Big Data {#big-data}
+### Schemata und Big Data {#big-data}
 
 Moderne digitale Systeme generieren enorme Mengen von Verhaltenssignalen (Transaktionsdaten, Weblogs, Internet der Dinge, Anzeige usw.). Diese Big-Data-Daten bieten außergewöhnliche Möglichkeiten zur Optimierung von Erlebnissen, sind aber aufgrund der Größe und Vielfalt der Daten schwierig zu nutzen. Um aus den Daten Nutzen zu ziehen, müssen Struktur, Format und Definitionen standardisiert werden, damit sie konsistent und effizient verarbeitet werden können.
 
-Schemas lösen dieses Problem, indem sie die Integration von Daten aus mehreren Quellen, die Standardisierung durch gemeinsame Strukturen und Definitionen und die lösungsübergreifende gemeinsame Nutzung ermöglichen. Dadurch können nachfolgende Prozesse und Dienste jede Art von Frage beantworten, die von den Daten gestellt wird. Es entfernt sich vom herkömmlichen Ansatz zur Datenmodellierung, bei dem alle Fragen, die an die Daten gestellt werden sollen, im Voraus bekannt sind und die Daten modelliert werden, um diesen Erwartungen zu entsprechen.
+Schemata lösen dieses Problem, indem sie die Integration von Daten aus mehreren Quellen, die Standardisierung durch gemeinsame Strukturen und Definitionen und die lösungsübergreifende gemeinsame Nutzung ermöglichen. Dadurch können nachfolgende Prozesse und Dienste jede Art von Frage beantworten, die von den Daten gestellt wird. Es entfernt sich vom herkömmlichen Ansatz zur Datenmodellierung, bei dem alle Fragen, die an die Daten gestellt werden sollen, im Voraus bekannt sind und die Daten modelliert werden, um diesen Erwartungen zu entsprechen.
 
 ### Objekte versus Freiformfelder {#objects-v-freeform}
 

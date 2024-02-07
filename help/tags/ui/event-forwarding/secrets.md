@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie Geheimnisse in der Benutzeroberfläche konfig
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2458'
-ht-degree: 76%
+source-wordcount: '2426'
+ht-degree: 75%
 
 ---
 
@@ -36,7 +36,7 @@ Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Geheimnisse f�
 
 In diesem Handbuch wird davon ausgegangen, dass Sie bereits mit der Verwaltung von Ressourcen für Tags und mit der Ereignisweiterleitung in der Benutzeroberfläche vertraut sind, einschließlich der Erstellung eines Datenelements und einer Ereignisweiterleitungsregel. Wenn Sie eine Einführung benötigen, finden Sie weitere Informationen im Handbuch unter [Verwalten von Ressourcen](../managing-resources/overview.md).
 
-Außerdem sollten Sie über ein grundlegendes Verständnis des Veröffentlichungsflusses im Hinblick auf Tags und Ereignisweiterleitung verfügen, einschließlich der Möglichkeit, Ressourcen zu einer Bibliothek hinzuzufügen und einen Build zum Testen auf Ihrer Website zu installieren. Weitere Informationen finden Sie in der [Publishing-Übersicht](../publishing/overview.md).
+Außerdem sollten Sie über ein grundlegendes Verständnis des Veröffentlichungsflusses im Hinblick auf Tags und Ereignisweiterleitung verfügen, einschließlich der Möglichkeit, Ressourcen zu einer Bibliothek hinzuzufügen und einen Build zum Testen auf Ihrer Website zu installieren. Weitere Informationen finden Sie in der [Veröffentlichungsübersicht](../publishing/overview.md).
 
 ## Erstellen geheimer Daten {#create}
 

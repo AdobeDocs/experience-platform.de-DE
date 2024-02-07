@@ -5,7 +5,7 @@ description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experi
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1627'
 ht-degree: 98%
 
 ---
@@ -20,7 +20,7 @@ Dieses Dokument bietet einen Überblick über [!DNL Segmentation Service] und di
 
 Sie sollten die folgenden Schlüsselbegriffe verstehen, die in diesem Dokument verwendet werden:
 
-- **Segmentierung**: Die Unterteilung einer großen Personengruppe (z. B. Kunden, Interessenten, Benutzer oder Unternehmen) in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
+- **Segmentierung**: Die Unterteilung einer großen Personengruppe (z. B. Kunden, Interessenten, Benutzer oder Unternehmen) in kleinere Gruppen, die ähnliche Merkmale aufweisen und ähnlich auf Marketing-Strategien reagieren.
 - **Zielgruppe**: Eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen (plattformgenerierte Zielgruppe) oder aus externen Quellen (extern generierte Zielgruppe) erstellt werden.
 - **Segmentdefinition**: Der Regelsatz, den Adobe Experience Platform verwendet, um wichtige Merkmale oder Verhaltensweisen einer Zielgruppe zu beschreiben.
 
