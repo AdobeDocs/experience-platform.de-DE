@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
+source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2383'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >Der Assistent für Adobe Experience Platform befindet sich derzeit in Alpha. Die Funktion und die Dokumentation können sich ändern.
 
-Der Assistent für Adobe Experience Platform ist eine UI-Funktion, mit der Sie in Experience Platform und Real-time Customer Data Platform navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
+Assistant ist eine UI-Funktion, mit der Sie in Adobe Experience Platform und Real-time Customer Data Platform navigieren und Informationen zu den Konzepten und Nutzungsinformationen zu Ihren Objekten erhalten.
 
 Sie können den Assistenten nach folgenden Informationen abfragen:
 
@@ -26,7 +26,7 @@ Sie können den Assistenten nach folgenden Informationen abfragen:
 * Status und Metriken der vorhandenen Datenobjekte in Ihrer Organisation.
 * Verwenden Sie Fallbeispiele und Nuancen, um Ihre Datenobjekte, einschließlich Attributen, Datensätzen, Zielen, Schemas, Segmenten und Quellen, besser zu verstehen.
 
-In diesem Dokument erfahren Sie, wie Sie mit Assistant Fragen stellen und Antworten zu Experience Platform- und Real-Time CDP-Konzepten erhalten können.
+Lesen Sie das nachstehende Handbuch, um zu erfahren, wie Sie mit Assistant die Navigation in Ihren Experience Platform- und Real-Time CDP-Workflows erleichtern und diese verstehen können.
 
 >[!BEGINSHADEBOX]
 
@@ -55,101 +55,125 @@ Es gibt zwei Arten von Fragen, die Sie vor der Abfrage des Assistenten beachten 
 
 >[!ENDSHADEBOX]
 
-## Access Assistant for Experience Platform in the UI
+## Access Assistant in the Experience Platform UI
 
-Sie können über die Kopfzeilennavigation in der Experience Platform-Benutzeroberfläche auf den Assistenten zugreifen.
+Um den Assistenten zu starten, wählen Sie die **[!UICONTROL Symbol &quot;Assistent&quot;]** aus der oberen Kopfzeile der Experience Platform-Benutzeroberfläche.
 
-Wählen Sie die **[!UICONTROL Symbol &quot;Assistent&quot;]** aus der Kopfzeile zum Fenster &quot;Assistent starten&quot;.
+![Die Experience Platform-Startseite, wobei das Symbol Assistent ausgewählt und die Assistenzoberfläche geöffnet ist.](./images/ai-assistant/ai-assistant.png)
 
-![Die Startseite der Experience Platform-Benutzeroberfläche mit ausgewähltem Assistenzsymbol.](./images/ai-assistant/ai-assistant.png)
+Die Assistant-Oberfläche wird angezeigt und gibt Ihnen sofort Informationen zu den ersten Schritten. Sie können die unter [!UICONTROL Erste Schritte] um Fragen und Befehle zu beantworten, z. B.:
 
-<!-- +++Use immersive mode
+* [!UICONTROL Welche meiner Segmente sind aktiviert?]
+* [!UICONTROL Was ist ein Schema?]
+* [!UICONTROL Erzählen Sie mir einige häufige Anwendungsfälle für Real-Time CDP]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![Abschnitt &quot;Erste Schritte - Ideen&quot; der Assistenzkraft.](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+Verwenden Sie das Eingabefeld, um Ihre Abfragen oder Befehle einzugeben, um mit Assistant zu interagieren. Sie können auch die **`+`**), um die Funktion zur automatischen Vervollständigung und das Lesezeichensymbol zu verwenden, um auf Ihre mit Lesezeichen versehenen Abfragen und Befehle zuzugreifen.
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![Das Eingabefeld Assistent wurde hervorgehoben.](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### Anwendungsbeispiel: Verwenden Sie den Assistenten, um die Erstellung Ihres Schemas zu beschleunigen {#example-use-case}
+## Anwendungsbeispiel: Verwenden Sie den Assistenten, um die Erstellung Ihres Schemas zu beschleunigen
 
 >[!NOTE]
 >
->Der folgende Beispielworkflow verwendet den Erstellungsprozess des ExperienceEvent-Schemas, um zu veranschaulichen, wie Sie Assistant bei der Verwendung der Experience Platform-Benutzeroberfläche verwenden können.
+>Der folgende Workflow ist ein Beispiel für die Erstellung eines Erlebnisereignisschemas, um zu veranschaulichen, wie Sie Assistant bei Verwendung der Experience Platform-Benutzeroberfläche verwenden können.
 
-Betrachten Sie einen Anwendungsfall, in dem Sie eine **Gerätehandel im Ereignisschema**. Während der Erstellung des ExperienceEvent-Schemas treffen Sie auf die `eventType` -Feld. An dieser Stelle können Sie Ihren Workflow verlassen und in der Dokumentation unter [Grundlagen der Schemakomposition](../xdm/schema/composition.md)oder Sie können Assistant verwenden, um sofort Antworten für Ihre Fragen abzurufen.
+Betrachten Sie einen Anwendungsfall, in dem Sie eine **Gerätehandel im Ereignisschema**. Während des Erstellungsprozesses des Erlebnisereignisschemas treffen Sie auf die `eventType` -Feld. &quot;An dieser Stelle haben Sie die Möglichkeit, Ihren Workflow zu beenden, indem Sie auf den Abschnitt [Grundlagen der Schemakomposition](../xdm/schema/composition.md) oder Sie können Assistant verwenden, um Antworten auf Ihre Fragen abzurufen und zusätzliche Ressourcen über die Dokumentationslinks zu finden, die von Assistenzkräften empfohlen werden.&quot;
 
 Geben Sie zunächst Ihre Frage in das bereitgestellte Textfeld ein. Im folgenden Beispiel wird Assistenzkraft die Frage gestellt: &quot;**Was ist das Feld eventType in einem ExperienceEvent-Schema?**&quot;
 
-![Der Assistent zum Experience Platform mit der folgenden Frage, der zur Abfrage vorbereitet wurde: &quot;Was ist das Feld eventType in einem ExperienceEvent-Schema?](./images/ai-assistant/question.png)
+![Assistent zum Experience Platform mit der folgenden Frage, die zur Abfrage vorbereitet wurde: &quot;Was ist das Feld eventType in einem ExperienceEvent-Schema?](./images/ai-assistant/question.png)
 
 Der Assistent fragt dann seine Wissensdatenbank ab und berechnet eine Antwort. Nach einigen Augenblicken gibt der Assistent eine Antwort und entsprechende Vorschläge zurück, die Sie als Aufforderung zur Weiterverfolgung verwenden können.
 
-Eine gegebene Antwort bietet Hyperlinks zu allen referenzierten Entitäten. Wählen Sie im folgenden Beispiel Folgendes aus: **[!UICONTROL Schemas]** um eine Liste der referenzierten Schemas anzuzeigen, oder **[!UICONTROL Segmente]** , um eine Liste der referenzierten Segmente anzuzeigen.
-
 ![Assistent zum Experience Platform mit einer Antwort auf die vorherige Abfrage.](./images/ai-assistant/answer.png)
 
-Assistenzkraft bietet Ihnen eine Möglichkeit, Ihre Antwort zu überprüfen, indem Sie die Quelle der Antwort anzeigen. Links zur Dokumentation werden für Konzeptfragen bereitgestellt, während Datennutzungsfragen mit einer SQL-Abfrage überprüft werden können, die zeigt, wie die Antwort berechnet wurde.
+Nach Erhalt der Antwort des Assistenten können Sie aus einer Reihe von Optionen auswählen, wie Sie vorgehen möchten.
 
-![Optionen, die vom Assistenten nach der Rückgabe einer Antwort bereitgestellt werden.](./images/ai-assistant/options.png)
+### Speichern Sie Ihre Abfrage {#save-your-query}
 
-### Folgenachfrage {#follow-up-question}
++++Auswählen , um ein Beispiel für das Speichern einer Abfrage anzuzeigen
 
-+++Auswählen , um ein Beispiel für eine Folgenachfrage anzuzeigen
+Um Ihre Abfrage zu speichern, wählen Sie das Lesezeichen-Symbol neben Ihrer Frage aus.
 
-Sie können mehr über ein bestimmtes Thema erfahren, indem Sie eine Frage stellen. Im nächsten Beispiel wird der Assistent gefragt, wie der eventType in der Segmentierung verwendet werden kann.
+![Screenshot eines ausgewählten Lesezeichens.](./images/ai-assistant/save-your-query.png)
 
-![Eine Frage und Antwort, die auf der Assistenzkraft für Experience Platform angezeigt werden.](./images/ai-assistant/follow-up-question.png)
+Um auf Ihre gespeicherten Abfragen zuzugreifen, wählen Sie das Lesezeichensymbol unter dem Eingabefeld aus und wählen Sie dann die Abfrage aus, die Sie ausführen möchten.
 
-+++
-
-### Frage zur Datennutzung {#data-usage-question}
-
-+++Auswählen , um ein Beispiel für eine Datennutzungsfrage anzuzeigen
-
-Sie können auch Fragen an den Assistenten bezüglich Ihrer Datennutzung stellen. Bei der Abfrage zur Datennutzung müssen Sie sich in einer aktiven Sandbox befinden, damit der Assistent Ihre Abfrage beantworten kann.
-
-Für Antworten, die Informationen zur Datennutzung enthalten, stellt Assistant Links zu den betreffenden Entitäten bereit. Darüber hinaus erläutert Ihnen Assistant, wie die Antwort berechnet wurde.
-
-![Eine Frage zur Datennutzung, die fragt, wie viele Segmente ein Benutzer hat.](./images/ai-assistant/data-usage-question.png)
+![Screenshot des Lesezeichensymbols und eine Liste der gespeicherten Abfragen.](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### Mehrfachumschaltung {#multi-turn}
+### Daten in der Sandbox anzeigen {#view-data-in-your-sandbox}
 
-+++Auswählen, um ein Beispiel für eine Mehrfachumstellung anzuzeigen
++++Auswählen zum Anzeigen des Beispiels
 
-Sie können die mehrspurigen Funktionen der Assistenzkraft verwenden, um während Ihres Erlebnisses ein natürlicheres Gespräch zu führen. Die Assistenzkraft kann Folgefragen beantworten, da aus einer früheren Interaktion der Kontext abgeleitet werden kann.
+Abhängig von Ihrer Abfrage stellt Assistant zusätzliche Informationen zu den Daten in Ihrer Sandbox bereit. Um anzuzeigen, wie die Antwort auf Ihre Abfrage auf Ihre Sandbox zutrifft, wählen Sie **[!UICONTROL In der Sandbox].**
 
-Im folgenden Beispiel wird Assistenzkraft gebeten, die vorhandenen Segmente in der Organisation aufzulisten, um eine frühere Abfrage über die Gesamtzahl der Segmente zu erhalten.
+Während dieses Schritts kann Assistant direkte Links zu den Benutzeroberflächen-Seiten bestimmter Objekte bereitstellen. Im folgenden Beispiel stellt Assistant direkte Links zum [!UICONTROL Schemas] und [!UICONTROL Segmente] Benutzeroberflächen-Seiten.
 
-![](./images/ai-assistant/multi-turn-one.png)
-
-Als Nächstes erhält die Assistenzkraft eine weitere Anfrage zur Nachverfolgung. Diesmal antwortet der Assistent, indem er die vorhandenen Segmente nach ihrer jeweiligen Größe auflistet.
-
-![](./images/ai-assistant/multi-turn-two.png)
+![Screenshot der Option &quot;In Ihrer Sandbox&quot;.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### Autom. Abschluss verwenden {#use-auto-complete}
+### Überprüfen der Antwort {#verify-the-response}
+
++++Auswählen , um ein Beispiel für die Anzeige von Quellen anzuzeigen
+
+Um Zitate anzuzeigen und die Antwort der Assistenzkraft zu validieren, wählen Sie **[!UICONTROL Quellen anzeigen]**. Der Assistent bietet Links zur Dokumentation, die die Antwort des Assistenten bestätigt. Sie können auch die Abfragen verwenden, die der Assistent unter [!UICONTROL Verwandte Vorschläge] , um die Themen zu Ihrer ursprünglichen Abfrage weiter zu untersuchen.
+
+![Screenshot von &quot;Quellen anzeigen&quot;.](./images/ai-assistant/show-sources.png)
+
++++
+
+### Datennutzung und -visualisierung {#data-usage-and-visualization}
+
++++Auswählen , um ein Beispiel für Fragen zur Datennutzung und Datenvisualisierung anzuzeigen
+
+Sie können sich mit Assistant über Ihre Datennutzung erkundigen. Sie müssen sich in einer aktiven Sandbox für Assistant befinden, um eine Frage zur Datennutzung bezüglich der Daten in Ihrem Unternehmen zu beantworten.
+
+![Folgen Sie der Frage zur Datennutzung.](./images/ai-assistant/data-usage-question.png)
+
+Wenn Sie mit einer Frage zur Datennutzung aufgefordert werden, erläutert Assistant auch, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt Assistant die Schritte zur Anzeige von Segmenten mit mehr als 1000 Profilen und deren Aktivierungsstatus.
+
+![Folgen Sie der Frage zu Segmenten, die veranschaulichen, wie Assistenzkraft die Antwort berechnete.](./images/ai-assistant/results-explained.png)
+
+Darüber hinaus rendert Assistant Diagramme zur Visualisierung Ihrer Daten. Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Beispielsweise können Sie den Assistenten bitten, Ihnen einen Trend der Zählersegmente in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmente mit Nullsummenprofilen zu entfernen und bei der Datenanzeige Monatsnamen anstelle von Ganzzahlen zu verwenden.
+
+![Folgenfragen zur Illustration der Datenvisualisierung.](./images/ai-assistant/data-visualization.png)
+
++++
+
+### Automatische Vervollständigung verwenden {#use-auto-complete}
 
 +++Auswählen , um ein Beispiel für die automatische Vervollständigung anzuzeigen
 
 Sie können die Funktion zum automatischen Ausfüllen verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung stehen für die folgenden Domänen zur Verfügung: Segmente, Schemas, Datensätze, Quellen und Ziele.
 
-Geben Sie zur Verwendung von &quot;autocomplete&quot;ein Pluszeichen (**`+`**) als Teil Ihrer Frage. Alternativ können Sie auch das Pluszeichen (**`+`**) im Texteingabefeld. Anschließend wird ein Fenster mit einer Liste empfohlener Datenobjekte angezeigt, die in Ihrer Sandbox vorhanden sind.
+Sie können AutoComplete verwenden, indem Sie das Pluszeichen (**`+`**) in Ihrer Abfrage. Alternativ können Sie auch das Pluszeichen (**`+`**) am unteren Rand des Texteingabefelds. Es wird ein Fenster mit einer Liste der empfohlenen Datenobjekte aus Ihrer Sandbox angezeigt.
 
-![](./images/ai-assistant/autocomplete-options.png)
+![Beispiel der automatischen Vervollständigung](./images/ai-assistant/auto-complete-one.png)
 
 Wählen Sie als Nächstes das Datenobjekt aus, das Sie abfragen möchten, um Ihre Frage abzuschließen, und senden Sie dann Ihre Frage.
 
-![](./images/ai-assistant/autocomplete-question.png)
+![Beispiel der automatischen Vervollständigung mit Frage und Antwort](./images/ai-assistant/auto-complete-two.png)
+
++++
+
+### Mehrdrehzahl verwenden {#use-multi-turn}
+
++++Auswählen, um ein Beispiel für eine Mehrfachumstellung anzuzeigen
+
+Sie können die mehrspurigen Funktionen der Assistenzkraft verwenden, um während Ihres Erlebnisses ein natürlicheres Gespräch zu führen. Die Assistenzkraft ist in der Lage, Nachfolgefragen zu beantworten, gegeben. Dieser Kontext kann aus einer früheren Interaktion abgeleitet werden.
+
+Im folgenden Beispiel wird Assistant nach der Gesamtzahl der Datenflüsse in der aktuellen Organisation gefragt.
+
+![Beispiel einer Mehrfachumstellung](./images/ai-assistant/multi-turn-one.png)
+
+Als Nächstes erhält die Assistenzkraft eine weitere Folgeanfrage. Diesmal antwortet der Assistent, indem er die Datenflüsse auflistet, die derzeit in Ihrem Unternehmen vorhanden sind.
+
+![Beispiel einer Umkehrung mit Frage und Antwort](./images/ai-assistant/multi-turn-two.png)
 
 +++
 
@@ -196,18 +220,6 @@ Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Ob
 
 +++
 
-## Überprüfen der Antwort {#verify-the-response}
-
-Sie können die Antwort, die der Assistent zurückgibt, auf verschiedene Weise überprüfen.
-
-### Zitate zur Dokumentation {#citations}
-
-Bei jeder Antwort erhalten Sie von Assistant Zitate, auf die Sie zur Überprüfung oder zu weiteren Informationen verweisen können.
-
-Auswählen **[!UICONTROL Quelle anzeigen]** für eine Liste von Links zur Dokumentation, auf die der Assistent verweist, um seine Antwort zu berechnen. Wenn Sie einen Link zur referenzierten Dokumentation auswählen, gelangen Sie zum entsprechenden Abschnitt dieser Seite, wobei die spezifischen Informationen hervorgehoben sind.
-
-![Die Links zur im Assistenten angezeigten Quelle.](./images/ai-assistant/show-sources.png)
-
 ## Feedback geben {#feedback}
 
 >[!BEGINSHADEBOX]
@@ -220,7 +232,7 @@ Um Feedback zu geben, wählen Sie entweder Daumen nach oben oder Daumen nach dem
 
 >[!ENDSHADEBOX]
 
-+++Feedback geben
++++ Feedback geben
 
 >[!BEGINTABS]
 
