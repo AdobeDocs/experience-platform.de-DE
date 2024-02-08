@@ -2,10 +2,10 @@
 title: Sandbox Tooling Packages API Endpoint
 description: Mit dem Endpunkt /packages in der Sandbox Tooling API können Sie Pakete in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 9%
+source-wordcount: '1531'
+ht-degree: 8%
 
 ---
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **Anfrage**
 
-Die folgende Anfrage ruft das Paket mit der {PACKAGE_ID} bereitgestellt. Die Payload ist eine Zuordnung von Substitutionen, bei denen der Schlüssel, falls ein Eintrag vorhanden ist, der `artifactId` vom Paket bereitgestellt wird, und die Alternative ist der Wert. Wenn die Zuordnung oder Payload **leer**, werden keine Ersetzungen durchgeführt.
+Die folgende Anfrage ruft die zu importierenden Pakete ab. Die Payload ist eine Zuordnung von Substitutionen, bei denen der Schlüssel, falls ein Eintrag vorhanden ist, der `artifactId` vom Paket bereitgestellt wird, und die Alternative ist der Wert. Wenn die Zuordnung oder Payload **leer**, werden keine Ersetzungen durchgeführt.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -775,7 +775,6 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
-| `id` | Die Kennung des Pakets. | Zeichenfolge | Ja |
 | `alternatives` | `alternatives` stellen die Zuordnung von Quell-Sandbox-Artefakten zu den vorhandenen Ziel-Sandbox-Artefakten dar. Da sie bereits vorhanden sind, verhindert der Importauftrag, dass diese Artefakte in der Ziel-Sandbox erstellt werden. | Zeichenfolge | Nein |
 
 **Antwort**
