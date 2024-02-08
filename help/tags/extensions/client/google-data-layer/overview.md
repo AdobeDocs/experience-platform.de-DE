@@ -2,22 +2,18 @@
 title: Google-Datenschichterweiterung
 description: Erfahren Sie mehr über die Google Client-Datenschicht-Tag-Erweiterung in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 15%
+source-wordcount: '937'
+ht-degree: 12%
 
 ---
 
 # Google Data Layer-Erweiterung
 
-Mit der Google Data Layer-Erweiterung können Sie eine Google-Datenschicht in Ihrer Tag-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und der Open Source von Google verwendet werden [Data Layer Helper Library](https://github.com/google/data-layer-helper).
+Mit der Google-Datenschicht-Erweiterung können Sie eine Google-Datenschicht in Ihrer Tags-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und der Open Source von Google verwendet werden [Data Layer Helper Library](https://github.com/google/data-layer-helper).
 
-Die Hilfsbibliothek bietet ähnliche ereignisgesteuerte Funktionen wie der Adobe Client Data Dayer (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschicht-Erweiterung bieten ähnliche Funktionen wie die im [ACDL-Erweiterung](../client-data-layer/overview.md).
-
-## Laufzeit
-
-Version 1.2.x ist eine Beta-Version, die in der Produktion verwendet wird.
+Die Hilfsbibliothek bietet ähnliche ereignisgesteuerte Funktionen wie die Adobe Client-Datenschicht (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschicht-Erweiterung bieten ähnliche Funktionen wie die im [ACDL-Erweiterung](../client-data-layer/overview.md).
 
 ## Installation
 
@@ -29,13 +25,13 @@ Nach der Installation erstellt oder greift die Erweiterung auf eine Datenschicht
 
 Die Erweiterungskonfiguration kann verwendet werden, um den Namen der Datenschicht zu definieren, die die Erweiterung nutzt. Wenn beim Laden von Adobe Experience Platform-Tags keine Datenschicht mit dem konfigurierten Namen vorhanden ist, erstellt die Erweiterung eine.
 
-Der Standardwert für den Datenschichtnamen ist der Google-Standardname `dataLayer`.
+Der standardmäßige Name der Datenschicht ist Google `dataLayer`.
 
 >[!NOTE]
 >
->Es spielt keine Rolle, ob Google- oder Adobe-Code zuerst geladen wird und die Datenschicht erstellt. Beide Systeme verhalten sich gleich - erstellen Sie die Datenschicht, falls sie nicht vorhanden ist, oder verwenden Sie die vorhandene Datenschicht.
+>Es spielt keine Rolle, ob Google- oder Adobe-Code zuerst geladen und die Datenschicht erstellt wird. Beide Systeme verhalten sich gleich - erstellen Sie die Datenschicht, falls sie nicht vorhanden ist, oder verwenden Sie die vorhandene Datenschicht.
 
-## Ereignisse
+## Events
 
 >[!NOTE]
 >
@@ -44,19 +40,28 @@ Der Standardwert für den Datenschichtnamen ist der Google-Standardname `dataLay
 > - JavaScript-Ereignisse.
 > - Daten, die mit der _event_ Keyword.
 
-
 Die Erweiterung bietet Ihnen die Möglichkeit, auf Änderungen auf der Datenschicht zu warten.
 
 >[!NOTE]
 >
->Es ist wichtig, die Verwendung der _event_ Keyword, wenn Daten auf eine Google-Datenschicht übertragen werden, ähnlich wie bei der Adobe Client-Datenschicht. Die _event_ -Keyword ändert das Verhalten der Google-Datenschicht und daher diese Erweiterung.\
+>Es ist wichtig, die Verwendung der _event_ Keyword, wenn Daten auf eine Google-Datenschicht übertragen werden, ähnlich wie auf die Adobe Client-Datenschicht. Die _event_ -Keyword ändert das Verhalten der Google-Datenschicht und daher diese Erweiterung.\
 > Lesen Sie die Dokumentation zu Google oder recherchieren Sie, wenn Sie sich diesbezüglich nicht sicher sind.
 
-### Suchen Sie nach allen Push-Benachrichtigungen auf der Datenschicht.
+### Google-Ereignistypen
+
+Google unterstützt zwei Methoden zum Pushen von Ereignissen: den Google Tag Manager unter Verwendung der `push()` -Methode und Google Analytics 4 unter Verwendung der `gtag()` -Methode.
+
+Google Data Layer-Erweiterungsversionen vor 1.2.1 unterstützten nur Ereignisse, die von `push()`, wie in den Codebeispielen auf dieser Seite gezeigt.
+
+Unterstützungs-Ereignisse ab Version 1.2.1, die mithilfe von `gtag()`.  Dies ist optional und kann im Dialogfeld Erweiterungskonfiguration aktiviert werden.
+
+Weitere Informationen finden Sie unter `push()` und `gtag()` Ereignisse, siehe [Google-Dokumentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Informationen finden Sie auch in den Konfigurations- und Regeldialogfeldern der Erweiterung.
+
+### Achten Sie auf alle Push-Vorgänge an die Datenschicht
 
 Wenn Sie diese Option auswählen, überwacht Ihr Ereignis-Listener alle Änderungen an der Datenschicht.
 
-### Nach Push-Benachrichtigungen zum Ausschließen von Ereignissen suchen
+### Nach Pushs suchen, um Ereignisse auszuschließen
 
 Wenn Sie diese Option auswählen, überwacht Ihr Ereignis-Listener alle Datenübertragungen an die Datenschicht, wobei Ereignisse ausgeschlossen sind.
 
@@ -113,7 +118,7 @@ dataLayer.push({"event":"myEvent2"})
 
 ### Pushen zur Datenschicht {#push-to-data-layer}
 
-Die -Erweiterung bietet zwei Aktionen, um JSON an die Datenschicht zu pushen. ein freies Textfeld zur manuellen Erstellung des zu übertragenden JSON-Codes und ab Version 1.2.0 ein Multifield-Dialogfeld mit Schlüsselwerten.
+Die Erweiterung bietet Ihnen zwei Aktionen zum Übertragen von JSON auf die Datenschicht: ein freies Textfeld zum manuellen Erstellen der JSON, die gesendet werden soll, und ab Version 1.2.0 ein Dialogfeld mit einem Mehrfeld-Schlüsselwert.
 
 #### Free text JSON
 
@@ -121,11 +126,11 @@ Die Aktion &quot;Freitext&quot;ermöglicht die direkte Verwendung von Dateneleme
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 
@@ -145,8 +150,8 @@ Mit einem Umschalter können Sie auswählen, ob das Datenelement Werte aus dem g
 
 Das Datenelement kann daher Folgendes zurückgeben:
 
-- Leeres Feld: berechneter Status der Datenschicht.
-- Feld mit Schlüssel (z. B. page.previous_url im obigen Beispiel): -Wert des Schlüssels im Ereignisobjekt oder im berechneten Status.
+- Leeres Feld: Berechneter Status der Datenschicht.
+- Feld mit Schlüssel (z. B. page.previous_url im obigen Beispiel): Wert des Schlüssels im Ereignisobjekt oder im berechneten Status.
 
 ## Zusätzliche Informationen
 

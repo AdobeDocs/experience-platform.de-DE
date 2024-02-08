@@ -2,10 +2,10 @@
 title: Versionshinweise zur Google-Datenschicht-Erweiterung
 description: Die neuesten Versionshinweise für die Google Data Layer Tag-Erweiterung in Adobe Experience Platform.
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
@@ -32,8 +32,12 @@ Eine wichtige Verbesserung- und Fehlerbehebungsversion, die aus dem Beta-Test-Fe
 
 ## Version 1.2.0
 
-* Fügt eine Aktion hinzu, um über ein Multifield-Dialogfeld mit Schlüssel-Wert an die Datenschicht zu pushen.
+* Fügt eine Aktion hinzu, um über ein Multifield-Dialogfeld mit Schlüssel-Wert auf die Datenschicht zu übertragen.
 * Behebung eines Fehlers, durch den das Laden der Erweiterung verhindert wurde, wenn Tags synchron bereitgestellt wurden.
 * Behebt einen Fehler, der beim Speichern eines Datenelements unter bestimmten Umständen einen Fehler verursachte.
 * Fügt dem Ereignisdialogfeld eine Dokumentation hinzu, in der die Verwendung des Tags-Ereignisobjekts erläutert wird.
 * Fügt eine Warnung über endlose Schleifen zum Ereignisdialogfeld hinzu.
+
+## Version 1.2.2
+
+* Fügt Unterstützung für Google Analytics-gtag()-Ereignisse hinzu.
