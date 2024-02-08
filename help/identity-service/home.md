@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 8%
+source-wordcount: '1560'
+ht-degree: 9%
 
 ---
 
@@ -32,7 +32,7 @@ Bevor Sie sich mit den Details von Identity Service befassen, lesen Sie bitte di
 | Begriff | Definition |
 | --- | --- |
 | Identität | Eine Identität sind Daten, die für eine Entität eindeutig sind. In der Regel handelt es sich hierbei um ein echtes Objekt, z. B. eine Person, ein Hardwaregerät oder einen Webbrowser (dargestellt durch ein Cookie). Eine voll qualifizierte Identität besteht aus zwei Elementen: einer **Identitäts-Namespace** und **Identitätswert**. |
-| Identity-Namespace | Ein Identitäts-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte entsprechen **julien<span>@acme.com**. Auf ähnliche Weise wird ein Namespace von `Phone` könnte entsprechen `555-555-1234`. Weitere Informationen finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](./features/namespaces.md) |
+| Identity-Namespace | Ein Identity-Namespace ist der Kontext einer bestimmten Identität. Beispiel: ein Namespace von `Email` könnte mit dem Identitätswert übereinstimmen: **julien<span>@acme.com**. Auf ähnliche Weise wird ein Namespace von `Phone` könnte mit dem Identitätswert übereinstimmen: `555-555-1234`. Weitere Informationen finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](./features/namespaces.md). |
 | Identitätswert | Ein Identitätswert ist eine Zeichenfolge, die eine reale Entität darstellt und innerhalb von Identity Service über einen Namespace kategorisiert wird. Beispielsweise der Identitätswert (Zeichenfolge) **julien<span>@acme.com** könnte als `Email` Namespace. |
 | Identitätstyp | Ein Identitätstyp ist eine Komponente eines Identitäts-Namespace. Der Identitätstyp gibt an, ob Identitätsdaten in einem Identitätsdiagramm verknüpft sind. |
 | Link | Ein Link oder eine Verknüpfung ist eine Methode, um festzustellen, dass zwei unterschiedliche Identitäten dieselbe Entität repräsentieren. Beispielsweise eine Verknüpfung zwischen`Email` = julien<span>@acme.com und &quot;`Phone` = 555-555-1234&quot; bedeutet, dass beide Identitäten dieselbe Entität repräsentieren. Dies deutet darauf hin, dass der Kunde, der mit Ihrer Marke sowohl mit der E-Mail-Adresse von julien interagiert hat<span>@acme.com und die Telefonnummer 555-555-1234 ist identisch. |
