@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 84%
+source-wordcount: '315'
+ht-degree: 83%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 84%
    - [Lizenznutzung](data-distiller/license-usage.md)
    - Abgeleitete Datensätze {#derived-datasets}
       - [Übersicht](data-distiller/derived-datasets/overview.md)
-      - [Nahtloser SQL-Fluss](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Erstellen abgeleiteter Datensätze mit SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Erstellen von dezimalbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Anpassbare Insights für erweiterte App-Berichte {#customizable-insights}
       - [Übersicht](data-distiller/customizable-insights/overview.md)

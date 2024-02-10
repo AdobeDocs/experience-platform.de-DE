@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query Service – Übersicht
 description: Erfahren Sie mehr über die Rolle von Query Service im Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 25%
+source-wordcount: '860'
+ht-degree: 20%
 
 ---
 
@@ -21,7 +21,16 @@ Sie können Query Service verwenden, um die Online- und Offline-Journey von Kund
 
 ## Verwenden von Query Service {#usage}
 
-Zur Analyse Ihrer Daten können Sie die Query Service-Benutzeroberfläche und eine RESTful-API verwenden, über die Sie SQL-Abfragen erstellen können. Über die Benutzeroberfläche können Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen, die von Benutzenden in Ihrer Organisation gespeichert wurden. Sie können den Abfrage-Editor wie eine Sandbox verwenden, um Ihre Abfragen zu testen, bevor Sie sie in Ihrem größeren Datensatz ausführen. Siehe [Benutzerhandbuch zum Query Service](ui/overview.md) für weitere Informationen zur Verwendung der Benutzeroberfläche. Die RESTful-API bietet ein ähnliches Erlebnis. Mit der Query Service-API können Sie Abfragen programmgesteuert schreiben und ausführen, Abfragen für die zukünftige Verwendung und Wiederholung planen sowie Vorlagen für Abfragen erstellen, die Sie schreiben möchten. Weitere Informationen zur Verwendung der Query Service-API finden Sie im [Entwicklerhandbuch für Query Service](api/getting-started.md).
+Um Ihre Daten zu analysieren, erstellen und führen Sie SQL-Abfragen mit der Query Service-Benutzeroberfläche oder der RESTful-API aus.
+Über die Query Service-Benutzeroberfläche können Sie Abfragen schreiben, ausführen und planen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen, die von Benutzern in Ihrer Organisation gespeichert wurden. Sie können Ihre Abfragen auch testen, bevor Sie sie mit dem Abfrage-Editor in Ihrem größeren Datensatz ausführen. Siehe [Handbuch zur Benutzeroberfläche von Query Service](ui/overview.md) für einen Überblick über die Funktionen der Benutzeroberfläche.
+
+Die RESTful-API bietet ein ähnliches Erlebnis. Mit der Query Service-API können Sie Abfragen programmgesteuert schreiben und ausführen, Vorlagen für Abfragen erstellen und speichern, die Sie anpassen möchten, oder Abfragen für die automatische Ausführung planen. Siehe [Entwicklerhandbuch für Query Service](api/getting-started.md) Weitere Informationen zur Verwendung der Query Service-API.
+
+Für einen schnellen Einstieg in die Verwendung der Funktionen von Query Service wird empfohlen, die folgenden Dokumente zu lesen:
+
+- [Allgemeine Leitlinien für die Ausführung von Abfragen](./best-practices/writing-queries.md)
+- [SQL-Syntax in Query Service](./sql/syntax.md)
+- [Erstellen abgeleiteter Datensätze mit SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## Query Service und Experience Platform-Dienste {#experience-platform-services}
 

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise Februar 2023
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2023.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
 source-wordcount: '1255'
 ht-degree: 96%
@@ -62,7 +62,7 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
-XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 **Aktualisierte Funktionen**
 
@@ -102,7 +102,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktivieren von Datensätzen für Profile mit SQL | [Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz als „profile enabled“ zu markieren](../../query-service/sql/syntax.md#create-table-as-select), oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren, damit sie für das Profil aktiviert werden. Sie können dieses erweiterte SQL-Konstrukt verwenden, um nahtlose Unterstützung für abgeleitete Datensätze für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils bereitzustellen. Siehe [Nahtloser SQL-Ablauf für abgeleitete Datensätze](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) für weitere Details. |
+| Aktivieren von Datensätzen für Profile mit SQL | [Verwenden Sie LABELs in CTAS-Abfragen, um einen Datensatz als „profile enabled“ zu markieren](../../query-service/sql/syntax.md#create-table-as-select), oder verwenden Sie ALTER, um vorhandene Datensätze zu aktualisieren, damit sie für das Profil aktiviert werden. Sie können dieses erweiterte SQL-Konstrukt verwenden, um nahtlose Unterstützung für abgeleitete Datensätze für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils bereitzustellen. Siehe [Nahtloser SQL-Ablauf für abgeleitete Datensätze](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) für weitere Details. |
 | Überwachen von geplanten Abfragen  | Verwenden Sie die [Registerkarte „Geplante Abfragen“](../../query-service/ui/monitor-queries.md), um wichtige Informationen zur Ausführung Ihrer Abfragen zu erhalten und Warnhinweise zu abonnieren. Überwachen Sie Abfragen auf Planungsdetails, Status und Fehlermeldungen/-codes, falls sie fehlschlagen. |
 | Umschalten der Funktion zur automatischen Vervollständigung | Beseitigen Sie bestimmte Metadatenbefehle und verbessern Sie die Verarbeitungszeiten durch [Umschalten der Funktion zum automatischen Vervollständigen des Abfrage-Editors](../../query-service/ui/user-guide.md#auto-complete). Diese Funktion schlägt während des Schreibens automatisch potenzielle SQL-Schlüsselwörter und Tabellendetails für die Abfrage vor. |
 | Datensatzbeispiele | Geben Sie in Ihrer Abfrage eine Sampling-Rate an und [verwenden Sie Datensatzbeispiele, um eine einheitliche Stichprobe zu erstellen](../../query-service/key-concepts/dataset-samples.md), oder erstellen Sie bedingte Beispiele basierend auf bestimmten Kriterien. |
