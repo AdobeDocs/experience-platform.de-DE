@@ -2,9 +2,9 @@
 title: Adobe Analytics Source Connector für Report Suite-Daten
 description: Dieses Dokument bietet einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1139'
 ht-degree: 10%
 
 ---
@@ -52,7 +52,11 @@ Die erwartete Latenz für Analytics-Daten in Platform ist in der folgenden Tabel
 | Neue Daten in [!DNL Real-Time Customer Profile] (A4T **not** enabled) | &lt; 2 Minuten |
 | Neue Daten in [!DNL Real-Time Customer Profile] (A4T **is** enabled) | bis zu 30 Minuten |
 | Neue Daten an Data Lake | &lt; 2,25 Stunden |
+| Neue Daten in CJA ohne [Stitching](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 Stunden |
+| Neue Daten in CJA mit Stitching | &lt; 7 Stunden |
 | Aufstockung von weniger als 10 Milliarden Ereignissen | &lt; 4 Wochen |
+
+Weitere Informationen zu CJA-Latenzen finden Sie unter: [Customer Journey Analytics Guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 Die Analytics-Aufstockung für Produktions-Sandboxes beträgt standardmäßig 13 Monate. Für Analytics-Daten in Nicht-Produktions-Sandboxes wird die Aufstockung auf drei Monate festgelegt. Die in der obigen Tabelle genannte Begrenzung von 10 Mrd. Ereignissen entspricht streng der erwarteten Latenz.
 
