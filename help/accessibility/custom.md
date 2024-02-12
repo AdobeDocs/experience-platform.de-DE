@@ -4,10 +4,10 @@ title: Benutzerdefinierte Barrierefreiheitslösungen für Experience Platform
 type: Documentation
 description: Erfahren Sie mehr über die benutzerdefinierten Barrierefreiheitslösungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 94%
+source-wordcount: '1663'
+ht-degree: 92%
 
 ---
 
@@ -142,6 +142,10 @@ Die folgenden Barrierefreiheitsfunktionen sind im Abfrage-Service-Editor verfüg
 
 * Der Farbkontrast in der Benutzeroberfläche des Abfrage-Service-Editors entspricht den Regeln der Barrierefreiheit.
 * Die Tastaturnavigation wird außerhalb der Editor-Benutzeroberfläche unterstützt. Die Editor-Benutzeroberfläche ist ein eingebetteter Code-Mirror.
+
+>[!NOTE]
+>
+>Der Abfrage-Editor verarbeitet die **Registerkarte** -Schlüssel standardmäßig aus. Aufrufen **Registerkarte** -Funktion im Editor verwenden, müssen Sie die **Escape** und drücken Sie die **Registerkarte** direkt darauf folgen. Presse **Registerkarte** erneut verwenden, um den Fokus über den Editor hinaus zu verschieben.
 
 ## Registerkarte „Systemansicht“ in „Quellen und Ziele“
 
