@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 48%
+ht-degree: 53%
 
 ---
 
@@ -72,7 +72,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 Füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]**. Das Amazon S3-Ziel unterstützt zwei Authentifizierungsmethoden:
 
 * Zugriffsschlüssel und Authentifizierung mit geheimen Schlüsseln
-* Angenommene Rollenauthentifizierung
+* Authentifizierung der übernommenen Rolle
 
 #### Zugriffsschlüssel und Authentifizierung mit geheimen Schlüsseln
 
@@ -85,16 +85,16 @@ Verwenden Sie diese Authentifizierungsmethode, wenn Sie Ihren Amazon S3-Zugriffs
 
   ![Bild, das ein Beispiel eines korrekt formatierten PGP-Schlüssels in der Benutzeroberfläche anzeigt.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Angenommene Rolle {#assumed-role-authentication}
+#### Übernommene Rolle {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
->title="Angenommene Rollenauthentifizierung"
->abstract="Verwenden Sie diesen Authentifizierungstyp, wenn Sie es vorziehen, keine Kontoschlüssel und geheimen Schlüssel mit Adobe zu teilen. Stattdessen stellt Experience Platform über rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Standort her. Fügen Sie den ARN der Rolle ein, die Sie in AWS für den Adobe-Benutzer erstellt haben. Das Muster ähnelt dem `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>title="Authentifizierung der übernommenen Rolle"
+>abstract="Verwenden Sie diese Authentifizierungstyp, wenn Sie Konto- und Geheimschlüssel nicht mit Adobe teilen möchten. Stattdessen stellt Experience Platform über einen rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Speicherort her. Fügen Sie den ARN der Rolle ein, die Sie in AWS für die Adobe-Benutzerin bzw. den -Benutzer erstellt haben. Das Muster ist vergleichbar mit `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
 ![Bild der erforderlichen Felder bei Auswahl der angenommenen Rollenauthentifizierung.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-Verwenden Sie diesen Authentifizierungstyp, wenn Sie es vorziehen, keine Kontoschlüssel und geheimen Schlüssel mit Adobe zu teilen. Stattdessen stellt Experience Platform über rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Standort her.
+Verwenden Sie diese Authentifizierungstyp, wenn Sie Konto- und Geheimschlüssel nicht mit Adobe teilen möchten. Stattdessen stellt Experience Platform über rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Standort her.
 
 Dazu müssen Sie in der AWS-Konsole einen angenommenen Benutzer für das Adobe mit der [erforderliche Berechtigungen](#required-s3-permission) , um in Ihre Amazon S3-Buckets zu schreiben. Erstellen Sie eine **[!UICONTROL Vertrauenswürdige Entität]** in AWS mit dem Adobe-Konto **[!UICONTROL 670664943635]**. Weitere Informationen finden Sie im Abschnitt [AWS-Dokumentation zum Erstellen von Rollen](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
