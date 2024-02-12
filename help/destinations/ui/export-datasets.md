@@ -3,7 +3,7 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 4d662bc8ec8729654589c8675c5e598b94957ed7
+source-git-commit: d6b3dd7de1e8b5247bf692d1654fc4506ab4a471
 workflow-type: tm+mt
 source-wordcount: '1838'
 ht-degree: 51%
@@ -56,7 +56,7 @@ Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwe
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Alle</td>
-    <td> Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden. Informationen zu den erforderlichen Berechtigungen finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics-Dokumentation</a>.  <br> <b>Hinweis zur Verfügbarkeit:</b> Die Möglichkeit, Datensätze in die Cloud zu exportieren, befindet sich in der eingeschränkten Testphase der Veröffentlichung und ist möglicherweise noch nicht in Ihrer Umgebung verfügbar. Diese Anmerkung wird entfernt, wenn die Funktion allgemein verfügbar ist. Informationen zum Customer Journey Analytics-Veröffentlichungsprozess finden Sie unter <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics-Funktionsveröffentlichungen</a>. </td>
+    <td> <p> Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden. Informationen zu den erforderlichen Berechtigungen finden Sie im Abschnitt <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics-Dokumentation</a>. </p> <p> <b>Hinweis zur Verfügbarkeit:</b> Die Möglichkeit, Datensätze in die Cloud zu exportieren, befindet sich in der eingeschränkten Testphase der Veröffentlichung und ist möglicherweise noch nicht in Ihrer Umgebung verfügbar. Diese Anmerkung wird entfernt, wenn die Funktion allgemein verfügbar ist. Informationen zum Customer Journey Analytics-Veröffentlichungsprozess finden Sie unter <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics-Funktionsveröffentlichungen</a>. </p> </td>
   </tr>
   <tr>
     <td>Data Distiller</td>
