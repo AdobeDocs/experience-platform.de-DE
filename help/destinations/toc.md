@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: ed3d672c2f6c06259c341c87451d049d00a41268
+source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1196'
 ht-degree: 91%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 91%
       * [Decibel-Erweiterung](./catalog/analytics/decibel.md)
       * [Demandbase-Erweiterung](./catalog/analytics/demandbase.md)
       * [DialogTech-Erweiterung](./catalog/analytics/dialogtech.md)
+      * [Gainsight PX](./catalog/analytics/gainsight-px.md)
       * [Google Global Site Tag-Erweiterung](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics-Erweiterung](./catalog/analytics/google-universal-analytics.md)
       * [JW Player Analytics (Beta)-Erweiterung](./catalog/analytics/jw-player-analytics.md)
