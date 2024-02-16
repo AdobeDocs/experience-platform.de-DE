@@ -3,7 +3,7 @@ description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Ben
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: „Beta“
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 44%
@@ -51,7 +51,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >id="platform_sources_templates_accounttype"
 >title="Geschäftstyp auswählen"
 >abstract="Wählen Sie den entsprechenden Geschäftstyp für Ihren Anwendungsfall aus. Ihr Zugriff variiert je nach Ihrem Real-time Customer Data Platform-Abonnementkonto."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=de" text="Real-Time CDP – Übersicht"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP – Übersicht"
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich und sehen Sie sich einen Quellkatalog an, der unter Experience Platform verfügbar ist.
 
