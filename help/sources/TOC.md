@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 97%
+source-wordcount: '1012'
+ht-degree: 96%
 
 ---
 
@@ -296,6 +296,7 @@ ht-degree: 97%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Datenpartner {#data-partner}
          - [Merkur Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+         - [Datenimport mit Acxif-Prognosen](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - E-Commerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
