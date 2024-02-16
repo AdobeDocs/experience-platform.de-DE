@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Übersicht über den SFTP-Quell-Connector
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche einen SFTP-Server mit Adobe Experience Platform verbinden.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 100%
+source-wordcount: '750'
+ht-degree: 94%
 
 ---
 
 # SFTP-Connector
+
+>[!IMPORTANT]
+>
+>Die [!DNL SFTP] -Server, mit dem Adobe Experience Platform eine Verbindung herstellt, muss in der Lage sein, Chunking zu unterstützen. Dies bedeutet, dass mehrere Verbindungen zu einer Datei vorhanden sind. Wenn [!DNL SFTP] -Server das Chunking nicht unterstützt, erhalten Sie möglicherweise einen Fehler, der die Dateiaufnahme verhindert.
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 
@@ -19,7 +23,7 @@ Mit Cloud-Speicherquellen können Sie Ihre eigenen Daten in [!DNL Platform] übe
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 
