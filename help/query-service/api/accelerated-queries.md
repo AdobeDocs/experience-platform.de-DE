@@ -2,9 +2,9 @@
 title: Endpunkt für beschleunigte Abfragen
 description: Erfahren Sie, wie Sie statuslos auf den abfragebeschleunigten Speicher zugreifen können, um schnell Ergebnisse basierend auf aggregierten Daten zurückzugeben. Dieses Dokument enthält eine beispielhafte HTTP-Anfrage und -Antwort für den Endpunkt für beschleunigte Abfragen des Abfrage-Service.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '560'
 ht-degree: 97%
 
 ---
@@ -40,7 +40,7 @@ POST /accelerated-queries
 Mit der folgenden Anfrage wird eine SQL-Abfrage im Anfragetext an den beschleunigten Speicher gesendet.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 Diese alternative Anfrage sendet eine Vorlagen-ID im Anfragetext an den beschleunigten Speicher. Die SQL aus der entsprechenden Vorlage wird zum Abfragen des beschleunigten Speichers verwendet.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
