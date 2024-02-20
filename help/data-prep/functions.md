@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
+source-git-commit: 5525e81afe0945716c510ff7a0b06cc7e4d5ee6c
 workflow-type: tm+mt
-source-wordcount: '5459'
+source-wordcount: '5908'
 ht-degree: 3%
 
 ---
@@ -282,6 +282,27 @@ Weitere Informationen zu Gerätefeldwerten finden Sie im Abschnitt [Liste der Ge
 | ua_agent_version_major | Extrahiert den Namen des Agenten und die Hauptversion aus der Zeichenfolge des Benutzeragenten. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extrahiert den Agentennamen aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrahiert die Geräteklasse aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefon |
+
+{style="table-layout:auto"}
+
+### Analytics-Funktionen {#analytics}
+
+>[!NOTE]
+>
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+
+| Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| get_event_id | Extrahiert die Ereignis-ID aus einer Analytics-Ereignis-Zeichenfolge. | <ul><li>EVENT_STRING: **Erforderlich** Die kommagetrennte Analytics-Ereigniszeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem extrahiert und die ID abgerufen werden soll.</li></ul> | get_event_id(EVENT_STRING, EVENT_NAME) | get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
+| get_event_value | Extrahiert den Ereigniswert aus einer Analytics-Ereigniszeichenfolge. Wenn der Ereigniswert nicht angegeben ist, wird 1 zurückgegeben. | <ul><li>EVENT_STRING: **Erforderlich** Die kommagetrennte Analytics-Ereigniszeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem ein Wert extrahiert werden soll.</li></ul> | get_event_value(EVENT_STRING, EVENT_NAME) | get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
+| get_product_categories | Extrahiert die Produktkategorie aus einer Analytics-Produktzeichenfolge. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li></ul> | get_product_categories(PRODUCTS_STRING) | get_product_categories(&quot;;Beispielprodukt 1;1;3.50,Beispielkategorie 2;Beispielprodukt 2;1;5.99&quot;) | [null,&quot;Beispielkategorie 2&quot;] |
+| get_product_names | Extrahiert den Produktnamen aus einer Analytics-Produktzeichenfolge. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li></ul> | get_product_names(PRODUCTS_STRING) | get_product_names(&quot;;Beispielprodukt 1;1;3.50,Beispielkategorie 2;Beispielprodukt 2;1;5.99&quot;) | [&quot;Beispiel Produkt 1&quot;,&quot;Beispiel Produkt 2&quot;] |
+| get_product_quantity | Extrahiert die Mengen aus einer Analytics-Produktzeichenfolge. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li></ul> | get_product_quantity(PRODUCTS_STRING) | get_product_quantity(&quot;;Beispielprodukt 1;1;3.50,Beispielkategorie 2;Beispielprodukt 2&quot;) | [&quot;1&quot;, null] |
+| get_product_price | Extrahiert den Preis aus einer Analytics-Produktzeichenfolge. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li></ul> | get_product_price(PRODUCTS_STRING) | get_product_price(&quot;;Beispielprodukt 1;1;3.50,Beispielkategorie 2;Beispielprodukt 2&quot;) | [&quot;3.50&quot;, null] |
+| get_product_events | Extrahiert ein benanntes Ereignis aus der Produktzeichenfolge als Array von Objekten. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem Werte extrahiert werden sollen.</li></ul> | get_product_events(PRODUCTS_STRING, EVENT_NAME) | get_product_events(&quot;;Beispielprodukt 1;1;4.20;event1=2.3\|event2=5:1,;Beispielprodukt 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| get_product_event_ids | Extrahiert die IDs für das benannte Ereignis aus der Produktzeichenfolge als Zeichenfolgen-Array. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem Werte extrahiert werden sollen.</li></ul> | get_product_events_ids(PRODUCTS_STRING, EVENT_NAME) | get_product_event_ids(&quot;;Beispielprodukt 1;1;4.20;event1=2.3\|event2=5:1,;Beispielprodukt 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [&quot;1&quot;, &quot;2&quot;] |
+| get_product_event_values | Extrahiert Werte für das benannte Ereignis aus der Produktzeichenfolge als Zeichenfolgen-Array. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li><li>EVENT_NAME: **Erforderlich** Der Ereignisname, aus dem Werte extrahiert werden sollen.</li></ul> | get_product_events_values(PRODUCTS_STRING, EVENT_NAME) | get_product_event_values(&quot;;Beispielprodukt 1;1;4.20;event1=2.3\|event2=5:1,;Beispielprodukt 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
+| get_product_evars | Extrahiert die eVar-Werte für das benannte Ereignis aus der Produktzeichenfolge als Zeichenfolgen-Array. | <ul><li>PRODUCTS_STRING: **Erforderlich** Die Analytics-Produktzeichenfolge.</li><li>EVAR_NAME: **Erforderlich** Der zu extrahierende eVar.</li></ul> | get_product_evars(PRODUCTS_STRING, EVENT_NAME) | get_product_evars(&quot;;Beispielprodukt;1;6.69;;eVar1=Merchandising-Wert&quot;, &quot;eVar1&quot;) | [&quot;Merchandising-Wert&quot;] |
 
 {style="table-layout:auto"}
 
