@@ -2,10 +2,10 @@
 title: B2B-Namespaces und -Schemata
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines B2B-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 11%
+source-wordcount: '1620'
+ht-degree: 10%
 
 ---
 
@@ -68,7 +68,7 @@ Eine erfolgreiche Anfrage erstellt die für B2B erforderlichen Namespaces und Sc
 
 ## B2B-Namespaces
 
-Identity-Namespaces sind eine Komponente von [[!DNL Identity Service]](../../../../identity-service/home.md) , die dazu dienen, den Kontext oder den Typ einer Identität zu unterscheiden. Eine vollqualifizierte Identität umfasst einen ID-Wert und einen Namespace. Siehe [Namespaces - Übersicht](../../../../identity-service/features/namespaces.md) für weitere Informationen.
+Identity-Namespaces sind eine Komponente von [[!DNL Identity Service]](../../../../identity-service/home.md) , die dazu dienen, den Kontext einer Identität zu unterscheiden. Eine voll qualifizierte Identität umfasst einen Identitätswert und einen Namespace. Lesen Sie die [Namespaces - Übersicht](../../../../identity-service/features/namespaces.md) für weitere Informationen.
 
 B2B-Namespaces werden in der primären Identität der Entität verwendet.
 
@@ -94,9 +94,9 @@ Die folgende Tabelle enthält Informationen zum zugrunde liegenden Setup für B2
 
 ## B2B-Schemata
 
-Schemas dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen.
+Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen.
 
-Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend des jeweiligen Feldes einschränkt. Schemas bestehen aus einer Basisklasse und keiner oder mehreren Schema-Feldergruppen.
+Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend des jeweiligen Feldes einschränkt. Schemata bestehen aus einer Basisklasse und keiner oder mehreren Schema-Feldergruppen.
 
 Weitere Informationen zum Schemaaufbaumodell, einschließlich Planungsgrundsätzen und Best Practices, finden Sie in den [Grundlagen des Schemaaufbaus](../../../../xdm/schema/composition.md).
 
