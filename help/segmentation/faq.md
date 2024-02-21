@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
+source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
 workflow-type: tm+mt
-source-wordcount: '2746'
-ht-degree: 34%
+source-wordcount: '3122'
+ht-degree: 30%
 
 ---
 
@@ -246,6 +246,26 @@ Weiterführende Informationen zum Block „Aufspaltung“ finden Sie im [Handbuc
 
 Ja, alle Segmenttypen ([Batch-Segmentierung, Streaming-Segmentierung und Edge-Segmentierung](./home.md#evaluate-segments)) werden im Workflow „Zielgruppenkomposition“ unterstützt. Da Kompositionen jedoch derzeit nur einmal pro Tag ausgeführt werden, basiert das Ergebnis auf der Zielgruppenzugehörigkeit zum Zeitpunkt der Komposition, selbst wenn Streaming- oder Edge-bewertete Zielgruppen enthalten sind.
 
-## Wie kann ich die Mitgliedschaft eines Profils in einer Zielgruppe bestätigen?
+## Zielgruppenmitgliedschaft
+
+Im folgenden Abschnitt finden Sie Fragen zur Zielgruppenzugehörigkeit.
+
+### Wie kann ich die Mitgliedschaft eines Profils in einer Zielgruppe bestätigen?
 
 Um die Zielgruppenmitgliedschaft eines Profils zu bestätigen, besuchen Sie die Seite mit den Profildetails des Profils, das Sie bestätigen möchten. Wählen Sie **[!UICONTROL Attribute]** gefolgt von **[!UICONTROL JSON anzeigen]** aus, und Sie können bestätigen, dass das `segmentMembership`-Objekt die ID der Zielgruppe enthält.
+
+### Wie löst die Batch-Segmentierung die Profilmitgliedschaft auf?
+
+Zielgruppen, die mithilfe der Batch-Segmentierung bewertet werden, werden täglich aufgelöst, wobei die Ergebnisse der Zielgruppenmitgliedschaft in der Profilgruppe aufgezeichnet werden. `segmentMembership` -Attribut. Die Profilsuche generieren eine neue Version des Profils zum Zeitpunkt der Suche, aber sie tut es. **not** die Ergebnisse der Batch-Segmentierung aktualisieren.
+
+Wenn also Änderungen am Profil vorgenommen werden, z. B. das Zusammenführen von zwei Profilen, ändern sich diese **will** erscheinen im Profil, wenn sie nachgeschlagen werden, aber **not** im `segmentMembership` -Attribut fest, bis der Segmentbewertungsauftrag erneut ausgeführt wurde.
+
+Angenommen, Sie haben zwei sich gegenseitig ausschließende Zielgruppen erstellt: Zielgruppe A ist für Personen bestimmt, die in Washington leben, und Zielgruppe B für Personen, die dies tun **not** leben in Washington. Es gibt zwei Profile - Profil 1 für eine Person, die in Washington lebt, und Profil 2 für eine Person, die in Oregon lebt.
+
+Wenn der Batch-Segmentierungsauswertungsauftrag ausgeführt wird, geht Profil 1 an Zielgruppe A, während Profil 2 an Zielgruppe B geht. Später, aber bevor der Batch-Segmentierungsauswertungsauftrag des nächsten Tages ausgeführt wird, wird ein Ereignis, das die beiden Profile abgleicht, in Platform eintreten. Daher wird ein einzelnes zusammengeführtes Profil erstellt, das die Profile 1 und 2 enthält.
+
+Bis der nächste Batch-Segmentbewertungsauftrag ausgeführt wird, hat das neue zusammengeführte Profil die Zielgruppenzugehörigkeit in **both** Profil 1 und Profil 2. Das bedeutet, dass es Mitglied von **both** Zielgruppe A und Zielgruppe B, obwohl diese Zielgruppen widersprüchliche Definitionen aufweisen. Für den Endbenutzer ist dies die **exakt dieselbe Situation** wie vor der Verbindung der Profile, da immer nur eine Person beteiligt war und Platform dies gerade tat **not** über genügend Informationen verfügen, um die beiden Profile miteinander zu verbinden.
+
+Wenn Sie die Profilsuche verwenden, um das neu erstellte Profil abzurufen und sich die Zielgruppenmitgliedschaft anzusehen, wird angezeigt, dass es Mitglied von **both** Zielgruppe A und Zielgruppe B, obwohl beide Zielgruppen widersprüchliche Definitionen aufweisen. Sobald der tägliche Batch-Segmentierungsbewertungsauftrag ausgeführt wird, wird die Zielgruppenzugehörigkeit aktualisiert, um diesen aktualisierten Status der Profildaten widerzuspiegeln.
+
+Wenn Sie eine höhere Auflösung der Zielgruppe in Echtzeit benötigen, verwenden Sie Streaming oder Kantensegmentierung.
