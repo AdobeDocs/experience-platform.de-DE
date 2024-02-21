@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie Zielgruppen für Konten erstellen und verwend
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 5%
+source-wordcount: '1050'
+ht-degree: 3%
 
 ---
 
@@ -74,3 +74,101 @@ Die [!UICONTROL Ziel aktivieren] angezeigt. Weitere Informationen zum Aktivierun
 ## Nächste Schritte {#next-steps}
 
 Nach dem Lesen dieses Handbuchs erhalten Sie jetzt ein besseres Verständnis dafür, wie Sie Ihre Kontozielgruppen in Adobe Experience Platform erstellen und verwenden. Informationen zur Verwendung anderer Zielgruppentypen in Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](./overview.md).
+
+## Anhang {#appendix}
+
+Im folgenden Abschnitt finden Sie weitere Informationen zu Kontozielgruppen.
+
+### Validierung der Kontosegmentierung {#validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="Maximaler Lookback-Fensterfehler"
+>abstract="Das maximale Lookback-Fenster für Erlebnisereignisse beträgt 30 Tage."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="Maximaler verschachtelter Behältertiefenfehler"
+>abstract="Die maximale Tiefe verschachtelter Container beträgt **5**. Das bedeutet, dass Sie **cannot** haben beim Erstellen Ihrer Audience mehr als fünf verschachtelte Container."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxBreadth"
+>title="Maximaler Regelzahlenfehler"
+>abstract="Die maximale Anzahl von Regeln in einem einzelnen Container beträgt **5**. Das bedeutet, dass Sie **cannot** mehr als fünf Regeln in einem Container enthalten, wenn Sie Ihre Zielgruppe erstellen."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_crossEntityMaxDepth"
+>title="Maximaler Wert der Entität"
+>abstract="Die maximale Anzahl von Entitäten, die in einer Audience verwendet werden können, beträgt **5**. Eine übergreifende Entität ist der Fall, wenn Sie zwischen verschiedenen Entitäten in Ihrer Zielgruppe wechseln. So können Sie beispielsweise von einem Konto zu einer Person zu einer Marketingliste wechseln."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowCustomEntity"
+>title="Benutzerdefinierter Entitätsfehler"
+>abstract="Benutzerdefinierte Entitäten sind **not** erlaubt."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_b2bBuiltInEntities"
+>title="Ungültiger B2B-Entitätsfehler"
+>abstract="Nur die folgenden B2B-Entitäten dürfen verwendet werden: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, und `_xdm.classes.campaign`."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_rhsMaxOptions"
+>title="Maximaler Wertefehler"
+>abstract="Die maximale Anzahl von Werten, die für ein einzelnes Feld überprüft werden können, beträgt **50**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByReference"
+>title="inSegment-Ereignisfehler"
+>abstract="inSegment -Ereignisse sind **not** erlaubt."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByValue"
+>title="inSegment-Ereignisfehler"
+>abstract="inSegment -Ereignisse sind **not** erlaubt."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowSequentialEvents"
+>title="Sequenzieller Ereignisfehler"
+>abstract="Sequenzielle Ereignisse sind **not** erlaubt."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowMaps"
+>title="Eigenschaftsfehler &quot;Map-type&quot;"
+>abstract="Eigenschaften vom Typ Zuordnung sind **not** erlaubt."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxNestedAggregationDepth"
+>title="Maximaler verschachtelter Entitätstiefenfehler"
+>abstract="Die maximale Tiefe verschachtelter Arrays beträgt **5**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxObjectNestingLevel"
+>title="Maximaler Fehler bei verschachtelter Objektmenge"
+>abstract="Die maximal zulässige Anzahl verschachtelter Objekte ist **10**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="Beschränkungsverletzung"
+>abstract="Die Zielgruppe verstößt gegen eine Einschränkung. Weitere Informationen finden Sie im entsprechenden Dokument."
+
+Bei Verwendung von Kontozielgruppen wird die Zielgruppe **must** die folgenden Einschränkungen einhalten:
+
+>[!NOTE]
+>
+>Die folgende Liste zeigt die **default** Einschränkungen für Zielgruppen. Diese Werte **kann** ändern, abhängig von den vom Administrator Ihres Unternehmens implementierten Einstellungen.
+
+- Das maximale Lookback-Fenster für Erlebnisereignisse ist **30 Tage**.
+- Die maximale Tiefe verschachtelter Container beträgt **5**.
+   - Das bedeutet, dass Sie **cannot** haben beim Erstellen Ihrer Audience mehr als fünf verschachtelte Container.
+- Die maximale Anzahl von Regeln in einem einzelnen Container beträgt **5**.
+   - Das bedeutet, dass Ihre Zielgruppe **cannot** haben mehr als fünf Regeln, aus denen sich Ihre Zielgruppe zusammensetzt.
+- Die maximale Anzahl von Entitäten, die verwendet werden können, lautet **5**.
+   - Eine übergreifende Entität ist der Fall, wenn Sie zwischen verschiedenen Entitäten in Ihrer Zielgruppe wechseln. So können Sie beispielsweise von einem Konto zu einer Person zu einer Marketingliste wechseln.
+- Benutzerdefinierte Entitäten **cannot** verwendet werden.
+- Die maximale Anzahl von Werten, die für ein einzelnes Feld überprüft werden können, beträgt **50**.
+   - Wenn Sie beispielsweise das Feld &quot;Stadt&quot;haben, können Sie diesen Wert mit 50 Stadtnamen vergleichen.
+- Kontozielgruppen **cannot** use `inSegment` -Ereignisse.
+- Kontozielgruppen **cannot** sequenzielle Ereignisse verwenden.
+- Kontozielgruppen **cannot** Verwenden Sie Maps.
+- Die maximale Tiefe verschachtelter Arrays beträgt **5**.
+- Die maximale Anzahl verschachtelter Objekte beträgt **10**.
