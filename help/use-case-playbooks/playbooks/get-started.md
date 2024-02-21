@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Erste Schritte
+title: Erste Schritte mit Anwendungsbeispiel-Playbooks
 description: Erfahren Sie, wie Sie die ersten Schritte mit der Funktion „Playbooks für Anwendungsfälle“ ausführen.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
+source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '947'
 ht-degree: 15%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 15%
 
 Erfahren Sie, wie Sie Ihr Konto für Anwendungsfall-Playbooks einrichten, die für Real-time Customer Data Platform und Adobe Journey Optimizer entwickelt wurden. Die drei Hauptkonfigurationsschritte sind:
 
-* Sandbox erstellen
-* Benutzerberechtigungen konfigurieren
+* Erstellen einer Sandbox
+* Konfigurieren von Benutzerberechtigungen
 * Konfigurieren der Journey Optimizer-Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen (falls Sie vorhaben, Journey Optimizer-Playbooks zu verwenden)
 
 ## Anwendungsbeispiele konfigurieren - Videoeinführung {#video}
