@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1202'
 ht-degree: 91%
 
 ---
@@ -139,6 +139,8 @@ ht-degree: 91%
    * Data Management Platform-Ziele {#data-management}
       * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
+   * eCommerce-Ziele {#ecommerce}
+      * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * E-Mail-Ziele {#email}
       * [Bizible-Erweiterung](./catalog/email/bizible.md)
       * [Marketo-Erweiterung](./catalog/email/marketo.md)
@@ -149,6 +151,7 @@ ht-degree: 91%
       * [Adobe Campaign-Verbindung](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services-Verbindung](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Mailchimp-Interessenkategorien](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp-Tags](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Dateien) Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys-Verbindung](./catalog/email-marketing/oracle-responsys.md)

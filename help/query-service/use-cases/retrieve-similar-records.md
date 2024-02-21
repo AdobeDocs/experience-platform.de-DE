@@ -1,19 +1,21 @@
 ---
-title: Lambda-Funktionsbeispiel - Abrufen ähnlicher Datensätze
+title: Abrufen ähnlicher Datensätze mit Funktionen mit höherer Reihenfolge
 description: Erfahren Sie, wie Sie anhand einer Ähnlichkeitsmetrik und eines Ähnlichkeitsschwellenwerts ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen identifizieren und abrufen. Dieser Workflow kann aussagekräftige Beziehungen oder Überschneidungen zwischen verschiedenen Datensätzen hervorheben.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
+source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '4031'
 ht-degree: 3%
 
 ---
 
-# Beispiel für eine Lambda-Funktion: Abrufen ähnlicher Datensätze
+# Abrufen ähnlicher Datensätze mit Funktionen höherer Reihenfolge
 
-Beheben Sie mehrere gängige Anwendungsfälle, indem Sie Data Distiller-Lambda-Funktionen verwenden, um ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen zu identifizieren und abzurufen. Sie können dieses Handbuch verwenden, um Produkte aus verschiedenen Datensätzen zu identifizieren, die sich in ihren Eigenschaften oder Attributen erheblich ähneln. Die in diesem Dokument verwendete Methodik bietet u. a. Lösungen für Datendeduplizierung, Datensatzverknüpfung, Empfehlungssysteme, Informationsabruf und Textanalyse.
+Verwenden Sie Data Distiller-Funktionen in höherer Reihenfolge, um eine Vielzahl gängiger Anwendungsfälle zu lösen. Um ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen zu identifizieren und abzurufen, verwenden Sie die Filter-, Transform- und Reduzierungsfunktionen, wie in diesem Handbuch beschrieben. Informationen dazu, wie Funktionen mit höherer Reihenfolge zur Verarbeitung komplexer Datentypen verwendet werden können, finden Sie in der Dokumentation zu [Verwalten von Array- und Zuordnungs-Datentypen](../sql/higher-order-functions.md).
 
-In diesem Dokument wird beschrieben, wie Sie einen Ähnlichkeitsjoin implementieren und dann mithilfe der Data Distiller-Lambda-Funktionen die Ähnlichkeit zwischen Datensätzen berechnen und nach ausgewählten Attributen filtern. Für jeden Schritt des Prozesses werden SQL-Code-Snippets und Erklärungen bereitgestellt. Der Workflow implementiert Ähnlichkeitsverbindungen mithilfe der Jaccard-Ähnlichkeitsmessung und -Tokenisierung mithilfe der Data Distiller-Lambda-Funktionen. Diese Methoden werden dann verwendet, um ähnliche oder verwandte Datensätze basierend auf einer Ähnlichkeitsmetrik aus einem oder mehreren Datensätzen zu identifizieren und abzurufen. Die wichtigsten Abschnitte des Prozesses sind: [Tokenisierung mithilfe von Lambda-Funktionen](#data-transformation), die [Kreuzverbindung einzelner Elemente](#cross-join-unique-elements), die [Berechnung der Jaccard-Ähnlichkeit](#compute-the-jaccard-similarity-measure)und die [schwellenbasierte Filterung](#similarity-threshold-filter).
+Verwenden Sie dieses Handbuch, um Produkte aus verschiedenen Datensätzen zu identifizieren, die eine signifikante Ähnlichkeit in ihren Eigenschaften oder Attributen aufweisen. Diese Methode bietet u. a. Lösungen für Datendeduplizierung, Datensatzverknüpfung, Empfehlungssysteme, Informationsabruf und Textanalyse.
+
+In diesem Dokument wird die Implementierung eines Ähnlichkeitsjoin beschrieben, bei dem dann die Data Distiller-Funktionen in höherer Reihenfolge verwendet werden, um die Ähnlichkeit zwischen Datensätzen zu berechnen und sie anhand ausgewählter Attribute zu filtern. Für jeden Schritt des Prozesses werden SQL-Code-Snippets und Erklärungen bereitgestellt. Der Workflow implementiert Ähnlichkeitsverbindungen mithilfe der Jaccard-Ähnlichkeitsmessung und -Tokenisierung mithilfe von Data Distiller-Funktionen höherer Reihenfolge. Diese Methoden werden dann verwendet, um ähnliche oder verwandte Datensätze basierend auf einer Ähnlichkeitsmetrik aus einem oder mehreren Datensätzen zu identifizieren und abzurufen. Die wichtigsten Abschnitte des Prozesses sind: [Tokenisierung mit Funktionen höherer Ordnung](#data-transformation), die [Kreuzverbindung einzelner Elemente](#cross-join-unique-elements), die [Berechnung der Jaccard-Ähnlichkeit](#compute-the-jaccard-similarity-measure)und die [schwellenbasierte Filterung](#similarity-threshold-filter).
 
 ## Voraussetzungen
 
@@ -24,11 +26,11 @@ Bevor Sie mit diesem Dokument fortfahren, sollten Sie mit den folgenden Konzepte
    - **Schwellenwert**: Mit einem Schwellenwert für die Ähnlichkeit wird bestimmt, wann die beiden Datensätze als ähnlich genug angesehen werden, um in das Join-Ergebnis aufgenommen zu werden. Datensätze, deren Ähnlichkeitswert über dem Schwellenwert liegt, werden als Übereinstimmungen betrachtet.
 - Die **Ähnlichkeit von Jaccard** -Index oder die Jaccard-Ähnlichkeitsmessung ist eine Statistik, mit der die Ähnlichkeit und Vielfalt von Stichprobensätzen gemessen wird. Dies ist definiert als die Größe der Schnittmenge geteilt durch die Größe der Vereinigung der Stichprobensätze. Die Jaccard-Ähnlichkeitsmessung liegt zwischen null und eins. Eine Jaccard-Ähnlichkeit von null zeigt an, dass keine Ähnlichkeit zwischen den Sets besteht, und eine Jaccard-Ähnlichkeit von eins zeigt an, dass die Sets identisch sind.
   ![Ein Venendiagramm zur Veranschaulichung der Jaccard-Ähnlichkeitsmessung.](../images/use-cases/jaccard-similarity.png)
-- **Lambda-Funktionen** in Data Distiller sind anonyme Inline-Funktionen, die in SQL-Anweisungen definiert und verwendet werden können. Sie werden häufig mit Funktionen mit höherer Reihenfolge verwendet, da sie in der Lage sind, präzise, spontane Funktionen zu erstellen, die als Daten weitergegeben werden können. Lambda-Funktionen werden häufig mit Funktionen höherer Ordnung wie `transform`, `filter`, und `array_sort`. Lambda-Funktionen sind besonders nützlich in Situationen, in denen die Definition einer vollständigen Funktion unnötig ist und eine kurze, einmalige Funktion inline verwendet werden kann.
+- **Funktionen mit höherer Reihenfolge** in Data Distiller sind dynamische Inline-Tools, die Daten direkt in SQL-Anweisungen verarbeiten und transformieren. Durch diese vielseitigen Funktionen entfällt die Notwendigkeit mehrerer Schritte bei der Datenbearbeitung, insbesondere wenn [mit komplexen Typen wie Arrays und Maps](../sql/higher-order-functions.md). Durch die Steigerung der Abfragenerffizienz und die Vereinfachung von Umwandlungen tragen Funktionen mit höherer Reihenfolge zu einer agileren Analyse und besseren Entscheidungsfindung in verschiedenen Geschäftsszenarien bei.
 
 ## Erste Schritte
 
-Die Data Distiller-SKU ist erforderlich, um die Lambda-Funktionen für Ihre Adobe Experience Platform-Daten auszuführen. Wenn Sie nicht über die Data Distiller-SKU verfügen, wenden Sie sich für weitere Informationen an Ihren Adobe-Kundenbetreuer.
+Die Data Distiller-SKU ist erforderlich, um die Funktionen mit höherer Reihenfolge für Ihre Adobe Experience Platform-Daten auszuführen. Wenn Sie nicht über die Data Distiller-SKU verfügen, wenden Sie sich für weitere Informationen an Ihren Adobe-Kundenbetreuer.
 
 ## Ähnlichkeit feststellen {#establish-similarity}
 
@@ -319,7 +321,7 @@ Die Ergebnisse sind in der folgenden Tabelle dargestellt:
 
 +++
 
-### Festlegen der Token-Länge
+### Festlegen der Token-Länge {#ensure-set-token-length}
 
 Der Anweisung können zusätzliche Bedingungen hinzugefügt werden, um sicherzustellen, dass die erzeugten Sequenzen eine bestimmte Länge aufweisen. Die folgende SQL-Anweisung erweitert die Token-Generierungslogik, indem die `transform` komplexer ist. Die -Anweisung verwendet die `filter` Funktion innerhalb `transform` um sicherzustellen, dass die erzeugten Sequenzen eine Länge von sechs Zeichen haben. Sie behandelt die Fälle, in denen dies nicht möglich ist, indem sie diesen Positionen NULL-Werte zuweist.
 
@@ -355,11 +357,11 @@ Die Ergebnisse sind in der folgenden Tabelle dargestellt:
 
 +++
 
-## Lösungen mit Data Distiller-Lambda-Funktionen durchsuchen {#lambda-function-solutions}
+## Lösungen mit Data Distiller-Funktionen in höherer Reihenfolge durchsuchen {#higher-order-function-solutions}
 
-Lambda-Funktionen sind leistungsstarke Konstrukte, mit denen Sie &quot;Programmieren&quot;wie eine Syntax in Data Distiller implementieren können. Sie können verwendet werden, um eine Funktion über mehrere Werte in einem Array zu iterieren.
+Funktionen mit höherer Reihenfolge sind leistungsstarke Konstrukte, mit denen Sie &quot;Programmierung&quot;wie Syntax in Data Distiller implementieren können. Sie können verwendet werden, um eine Funktion über mehrere Werte in einem Array zu iterieren.
 
-Im Kontext von Data Distiller eignen sich Lambda-Funktionen ideal zum Erstellen von n Gramm und zum Iterieren von Zeichensatzsequenzen.
+Im Kontext von Data Distiller eignen sich Funktionen mit höherer Reihenfolge ideal zum Erstellen von n Gramm und Iterieren von Zeichensatzsequenzen.
 
 Die `reduce` -Funktion, insbesondere bei Verwendung in Sequenzen, die von `transform`, bietet eine Möglichkeit, kumulative Werte oder Aggregate abzuleiten, die in verschiedenen Analyse- und Planungsprozessen ausschlaggebend sein können.
 
@@ -371,7 +373,7 @@ SELECT transform(
     x -> reduce(
         sequence(1, x),  
         0,  -- Initial accumulator value
-        (acc, y) -> acc + y  -- Lambda function to add numbers
+        (acc, y) -> acc + y  -- Higher-order function to add numbers
     )
 ) AS sum_result;
 ```
@@ -381,17 +383,17 @@ Im Folgenden finden Sie eine Analyse der SQL-Anweisung:
 - Zeile 1: `transform` wendet die Funktion an `x -> reduce` für jedes in der Sequenz generierte Element.
 - Zeile 2: `sequence(1, 5)` generiert eine Zahlensequenz von 1 bis 5.
 - Zeile 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` führt einen Reduzierungsvorgang für jedes Element x in der Sequenz durch (von 1 bis 5).
-   - Die `reduce` -Funktion nimmt den anfänglichen Akkumulatorwert von 0, eine Sequenz von 1 bis zum aktuellen Wert von `x`und einer Lambda-Funktion `(acc, y) -> acc + y` , um die Zahlen hinzuzufügen.
-   - Die Lambda-Funktion `acc + y` kumuliert die Summe durch Addition des aktuellen Werts `y` zum Akkumulator `acc`.
+   - Die `reduce` -Funktion nimmt den anfänglichen Akkumulatorwert von 0, eine Sequenz von 1 bis zum aktuellen Wert von `x`und einer Funktion mit höherer Reihenfolge `(acc, y) -> acc + y` , um die Zahlen hinzuzufügen.
+   - Die Funktion für höhere Reihenfolge `acc + y` kumuliert die Summe durch Addition des aktuellen Werts `y` zum Akkumulator `acc`.
 - Zeile 8: `AS sum_result` benennt die resultierende Spalte in sum_result um.
 
-Zusammenfassend lässt sich sagen, dass diese Lambda-Funktion zwei Parameter (`acc` und `y`) und definiert den auszuführenden Vorgang, der in diesem Fall hinzugefügt wird `y` zum Akkumulator `acc`. Diese Lambda-Funktion wird während des Reduzierungsprozesses für jedes Element in der Sequenz ausgeführt.
+Zusammenfassend lässt sich sagen, dass diese Funktion mit höherer Reihenfolge zwei Parameter akzeptiert (`acc` und `y`) und definiert den auszuführenden Vorgang, der in diesem Fall hinzugefügt wird `y` zum Akkumulator `acc`. Diese Funktion in höherer Reihenfolge wird für jedes Element in der Sequenz während des Reduzierungsprozesses ausgeführt.
 
 Die Ausgabe dieser Anweisung ist eine einzige Spalte (`sum_result`), die die kumulierten Summen der Zahlen von 1 bis 5 enthält.
 
-### Der Wert der Lambda-Funktionen {#value-of-lambda-functions}
+### Der Wert von Funktionen mit höherer Reihenfolge {#value-of-higher-order-functions}
 
-In diesem Abschnitt wird eine reduzierte Version einer tri-Gramm-SQL-Anweisung analysiert, um den Wert von Lambda-Funktionen in Data Distiller besser zu verstehen und so N-Gramm effizienter zu erstellen.
+In diesem Abschnitt wird eine reduzierte Version einer tri-Gramm-SQL-Anweisung analysiert, um den Wert von Funktionen mit höherer Reihenfolge in Data Distiller besser zu verstehen, um n-Gramm effizienter zu erstellen.
 
 Die folgende Anweisung funktioniert für die `ProductName` in der Spalte `featurevector1` Tabelle. Es wird ein Satz aus dreistelligen Unterzeichenfolgen erzeugt, die aus den modifizierten Produktnamen in der Tabelle abgeleitet werden, wobei Positionen aus der erzeugten Sequenz verwendet werden.
 
@@ -407,11 +409,11 @@ FROM
 
 Im Folgenden finden Sie eine Analyse der SQL-Anweisung:
 
-- Zeile 2: `transform` wendet eine Lambda-Funktion auf jede Ganzzahl in der Sequenz an.
+- Zeile 2: `transform` wendet eine Funktion mit höherer Reihenfolge auf jede Ganzzahl in der Sequenz an.
 - Zeile 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` generiert eine Folge von Ganzzahlen aus `1` auf die Länge des geänderten Produktnamens abzüglich zwei.
    - `length(lower(replace(ProductName, ' ', '')))` berechnet die Länge der `ProductName` nach dem Kleinbuchstaben und Entfernen von Leerzeichen.
    - `- 2` subtrahiert zwei von der Länge, um sicherzustellen, dass die Sequenz gültige Startpositionen für 3-stellige Unterzeichenfolgen generiert. Durch Subtraktion 2 wird sichergestellt, dass Sie an jeder Startposition genügend Zeichen haben, um eine 3-stellige Unterzeichenfolge zu extrahieren. Die Teilzeichenfolgen-Funktion funktioniert hier wie ein Suchvorgangsoperator.
-- Zeile 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` ist eine Lambda-Funktion, die auf jeder Ganzzahl ausgeführt wird `i` in der generierten Sequenz.
+- Zeile 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` ist eine Funktion mit höherer Reihenfolge, die auf jeder Ganzzahl ausgeführt wird `i` in der generierten Sequenz.
    - Die `substring(...)` -Funktion extrahiert eine 3-stellige Unterzeichenfolge aus der `ProductName` Spalte.
    - Vor dem Extrahieren der Teilzeichenfolge `lower(replace(ProductName, ' ', ''))` konvertiert die `ProductName` in Kleinbuchstaben und entfernt Leerzeichen, um Konsistenz zu gewährleisten.
 
@@ -707,6 +709,10 @@ Die Ergebnisse dieser Abfrage geben die Spalten für die Ähnlichkeitsverknüpfu
 
 ### Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie diese Logik jetzt verwenden, um aussagekräftige Beziehungen oder Überschneidungen zwischen verschiedenen Datensätzen hervorzuheben. Die Fähigkeit, Produkte aus verschiedenen Datensätzen zu identifizieren, die sich in ihren Eigenschaften oder Attributen erheblich ähneln, bietet zahlreiche reale Anwendungen. Diese Logik könnte für Szenarien wie Produktabgleich (zur Gruppierung oder Empfehlung ähnlicher Produkte für Kunden), Datenbereinigung (zur Verbesserung der Datenqualität) und Marktkorbanalyse (zur Bereitstellung von Einblicken in das Kundenverhalten, die Präferenzen und potenzielle Verkaufsmöglichkeiten) verwendet werden.
+Durch Lesen dieses Dokuments können Sie diese Logik jetzt verwenden, um aussagekräftige Beziehungen oder Überschneidungen zwischen verschiedenen Datensätzen hervorzuheben. Die Möglichkeit, Produkte aus verschiedenen Datensätzen zu identifizieren, die sich in ihren Eigenschaften oder Attributen erheblich ähneln, bietet zahlreiche reale Anwendungen. Diese Logik kann für Szenarien wie die folgenden verwendet werden:
+
+- Produktabgleich: Um ähnliche Produkte für Kunden zu gruppieren oder zu empfehlen.
+- Datenbereinigung: Verbesserung der Datenqualität.
+- Korbanalyse für den Markt: Hier erhalten Sie Einblicke in das Kundenverhalten, die Präferenzen und potenzielle Crossselling-Möglichkeiten.
 
 Wenn Sie dies noch nicht getan haben, sollten Sie die [Übersicht über die KI-/ML-Feature-Pipeline](../data-distiller/ml-feature-pipelines/overview.md). In dieser Übersicht erfahren Sie, wie Data Distiller und Ihr bevorzugtes maschinelles Lernen benutzerdefinierte Datenmodelle erstellen können, die Ihre Marketing-Anwendungsfälle mit Experience Platform-Daten unterstützen.

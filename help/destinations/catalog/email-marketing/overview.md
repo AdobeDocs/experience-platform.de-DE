@@ -2,12 +2,12 @@
 keywords: Email;e-mail;E-Mail;E-Mail-Ziele
 title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
-description: E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
+description: Mit E-Mail-Dienstanbietern (ESPs) können Sie Ihre E-Mail-Marketing-Aktivitäten verwalten, z. B. für den Versand von Werbe-E-Mail-Kampagnen. Erfahren Sie, welche ESPs als Experience Platform-Ziele unterstützt werden.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 66%
+source-wordcount: '376'
+ht-degree: 60%
 
 ---
 
@@ -24,6 +24,7 @@ Adobe Experience Platform unterstützt die folgenden E-Mail-Marketing-Ziele:
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Mailchimp-Interessenkategorien](mailchimp-interest-categories.md)
+* [Mailchimp-Tags](mailchimp-tags.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(Dateien) Oracle Eloqua](oracle-eloqua.md)

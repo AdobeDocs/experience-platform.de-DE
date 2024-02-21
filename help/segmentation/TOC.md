@@ -4,10 +4,10 @@ user-guide-title: Segmentierungs-Service von Adobe Experience Platform
 breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
-source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
+source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 94%
+source-wordcount: '183'
+ht-degree: 91%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 
 - [Übersicht über den Segmentierungs-Service](home.md)
 - [Datentypen für die Segmentierung](data-types.md)
-- [Leitplanken für die Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Limits bei der Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentierungs-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
@@ -38,8 +38,9 @@ ht-degree: 94%
    - [Look-alike-Zielgruppen](ui/lookalike-audiences.md)
    - [Potenzielle Zielgruppen](ui/prospect-audience.md)
    - [Edge-Segmentierung](ui/edge-segmentation.md)
-   - [Streaming-Segmentierung](ui/streaming-segmentation.md)
-   - [Streaming-Segmentierung  (Video)](video/streaming-segmentation-overview.md)
+   - [Streaming-Segmentierung ](ui/streaming-segmentation.md)
+   - [Streaming-Segmentierung (Video)](video/streaming-segmentation-overview.md)
+   - [Aktualisierung der Jahreszeitbegrenzung ignorieren](ui/ignore-year.md)
    - [Umgestaltung von Zeitbeschränkungen](ui/segment-refactoring.md)
    - Segment Match {#segment-match}
       - [Übersicht zu Segment Match](ui/segment-match/overview.md)

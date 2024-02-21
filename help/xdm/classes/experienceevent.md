@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
 description: Erfahren Sie mehr über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: f7d8cd295dd6aa11048c3cb0f9a54a3702b83473
 workflow-type: tm+mt
-source-wordcount: '2656'
-ht-degree: 41%
+source-wordcount: '2672'
+ht-degree: 40%
 
 ---
 
@@ -28,7 +28,7 @@ Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene F
 | `eventType` | Eine Zeichenfolge, die den Typ oder die Kategorie des Ereignisses angibt. Dieses Feld kann verwendet werden, wenn Sie innerhalb desselben Schemas und Datensatzes eine Unterscheidung zwischen verschiedenen Ereignistypen treffen möchten, z. B. eine Unterscheidung zwischen einem Produktansichtsereignis und einem Zum-Einkaufskorb-Hinzufügen-Ereignis bei einem Einzelhandelsunternehmen.<br><br>Standardwerte für diese Eigenschaft sind im [Anhang](#eventType) zusammen mit Beschreibungen des vorgesehenen Anwendungsfalls angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Ereignistyp-Zeichenfolgen verwenden, um die Ereignisse, die Sie nachverfolgen, zu kategorisieren.<br><br>`eventType` beschränkt Sie auf die Verwendung nur eines einzigen Ereignisses pro Treffer in Ihrem Programm. Daher müssen Sie berechnete Felder verwenden, um dem System mitzuteilen, welches Ereignis am wichtigsten ist. Weitere Informationen finden Sie im Abschnitt zu [Best Practices für berechnete Felder](#calculated). |
 | `producedBy` | Ein Zeichenfolge-Wert, der den Verursacher oder Ursprung des Ereignisses beschreibt. Dieses Feld kann verwendet werden, um bestimmte Ereignisverursacher bei Bedarf für Segmentierungszwecke herauszufiltern.<br><br>Einige empfohlene Werte für diese Eigenschaft sind im [Anhang](#producedBy) angegeben. Dieses Feld ist eine erweiterbare Aufzählung, d. h. Sie können auch eigene Zeichenfolgen verwenden, um verschiedene Ereignisverursacher darzustellen. |
 | `identityMap` | Ein Verknüpfungsfeld, das einen Satz von Identitäten mit Namespace für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. So nutzen Sie dieses Feld ordnungsgemäß für [Echtzeit-Kundenprofil](../../profile/home.md)versuchen Sie nicht, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
-| `timestamp`<br>**(Erforderlich)** | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß [RFC 3339 Abschnitt 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Dieser Zeitstempel muss in der Vergangenheit erfolgt sein. Best Practices zur Verwendung dieses Feldes finden Sie im nachstehenden Abschnitt [Zeitstempel](#timestamps). |
+| `timestamp`<br>**(Erforderlich)** | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß [RFC 3339 Abschnitt 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Dieser Zeitstempel **must** in der Vergangenheit auftreten, **must** ab 1970 stattfinden. Best Practices zur Verwendung dieses Feldes finden Sie im nachstehenden Abschnitt [Zeitstempel](#timestamps). |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ In den folgenden Abschnitten finden Sie Best Practices zum Entwerfen Ihrer ereig
 
 ### Zeitstempel {#timestamps}
 
-Das `timestamp`-Feld im Stamm eines Ereignisschemas kann **nur** die Beobachtung des Ereignisses an sich repräsentieren und muss in der Vergangenheit liegen. Wenn Ihre Segmentierungsanwendungsfälle die Verwendung von Zeitstempeln erfordern, die in Zukunft auftreten können, müssen diese Werte an einer anderen Stelle im Erlebnisereignis-Schema eingeschränkt werden.
+Das `timestamp`-Feld im Stamm eines Ereignisschemas kann **nur** die Beobachtung des Ereignisses an sich repräsentieren und muss in der Vergangenheit liegen. Das Ereignis **must** ab 1970 stattfinden. Wenn Ihre Segmentierungsanwendungsfälle die Verwendung von Zeitstempeln erfordern, die in Zukunft auftreten können, müssen diese Werte an einer anderen Stelle im Erlebnisereignis-Schema eingeschränkt werden.
 
 Beispiel: Wenn ein Unternehmen des Reise- und Beherbergungsgewerbes ein Flugreservierungsereignis modelliert, gibt das `timestamp`-Feld auf Klassenebene den Zeitpunkt an, zu dem das Reservierungsereignis beobachtet wurde. Andere Zeitstempel, die mit dem Ereignis in Verbindung stehen, wie z. B. das Startdatum der Reisereservierung, sollten in separaten Feldern erfasst werden, die von standardmäßigen oder benutzerdefinierten Feldergruppen bereitgestellt werden.
 

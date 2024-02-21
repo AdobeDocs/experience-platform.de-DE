@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: ad3b739f300aa51f6f12c566ab49fafedb90be23
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 83%
+source-wordcount: '317'
+ht-degree: 82%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 83%
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
    - [Besuchende nach Seitenansichten auflisten](use-cases/visitors-by-number-of-page-views.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
-   - [Beispiel für eine Lambda-Funktion: Abrufen ähnlicher Datensätze](use-cases/retrieve-similar-records.md)
+   - [Abrufen ähnlicher Datensätze mit Funktionen höherer Reihenfolge](use-cases/retrieve-similar-records.md)
    - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten ](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Anzeigen des Roll-up-Berichts für Besuchende](use-cases/roll-up-report-of-a-visitor.md)
@@ -106,6 +106,7 @@ ht-degree: 83%
    - [SQL – Übersicht](sql/overview.md)
    - [SQL-Syntax](sql/syntax.md)
    - [Adobe-definierte Funktionen](sql/adobe-defined-functions.md)
+   - [Funktionen mit höherer Reihenfolge](sql/higher-order-functions.md)
    - [Spark SQL-Funktionen](sql/spark-sql-functions.md)
    - [Metadatenbefehle](sql/metadata.md)
    - [Vorbereitete Anweisungen](sql/prepared-statements.md)

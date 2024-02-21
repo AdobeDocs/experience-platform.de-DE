@@ -2,10 +2,10 @@
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
-ht-degree: 41%
+source-wordcount: '2755'
+ht-degree: 40%
 
 ---
 
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtern nach Echtzeit-Kundenprofil {#filtering-for-profile}
+## Filtern nach Echtzeit-Kundenprofil {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten könne
 
 >[!ENDSHADEBOX]
 
-#### Filterung auf Zeilenebene
+### Filterung auf Zeilenebene
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Filterung auf Spaltenebene
+### Filterung auf Spaltenebene
 
 Auswählen **[!UICONTROL Spaltenfilter]** aus der Kopfzeile, um die Filterung auf Spaltenebene anzuwenden.
 
@@ -267,6 +267,14 @@ Standardmäßig werden alle [!DNL Analytics] gehen Sie zu [!DNL Profile] und die
 Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 ![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Sekundäre Identitäten filtern
+
+Verwenden Sie einen Spaltenfilter, um sekundäre Identitäten von der Profilaufnahme auszuschließen. Um sekundäre Identitäten zu filtern, wählen Sie **[!UICONTROL Spaltenfilter]** und wählen Sie **[!UICONTROL _identities]**.
+
+Der Filter gilt nur, wenn eine Identität als sekundär markiert ist. Wenn Identitäten ausgewählt sind, aber ein Ereignis mit einer der als primär markierten Identitäten eintritt, werden diese nicht herausgefiltert.
+
+![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Angeben von Datenflussdetails
 
