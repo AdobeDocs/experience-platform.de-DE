@@ -2,9 +2,9 @@
 title: Sandboxes-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
+source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1961'
 ht-degree: 10%
 
 ---
@@ -30,10 +30,11 @@ In der folgenden Tabelle sind die [!DNL Adobe Real-Time Customer Data Platform] 
 | Plattform | Objekt | Details |
 | --- | --- | --- |
 | Kundendatenplattform | Quellen | Die Anmeldeinformationen des Quellkontos werden aus Sicherheitsgründen nicht in der Ziel-Sandbox repliziert und müssen daher manuell aktualisiert werden. Der Quelldataflow wird standardmäßig in den Entwurfsstatus kopiert. |
-| Kundendatenplattform | Zielgruppen | Nur die **[!UICONTROL Kundenzielgruppe]** type **[!UICONTROL Segmentierungsdienst]** wird unterstützt. Vorhandene Beschriftungen für die Zustimmung und Governance werden im selben Importauftrag kopiert. |
+| Kundendatenplattform | Zielgruppen | Nur die **[!UICONTROL Kundenzielgruppe]** type **[!UICONTROL Segmentierungsdienst]** wird unterstützt. Vorhandene Beschriftungen für die Zustimmung und Governance werden im selben Importauftrag kopiert. Das System wählt automatisch die standardmäßige Zusammenführungsrichtlinie in der Ziel-Sandbox mit derselben XDM-Klasse aus, wenn die Abhängigkeiten von Zusammenführungsrichtlinien überprüft werden. |
 | Kundendatenplattform | Identitäten | Das System dedupliziert beim Erstellen in der Ziel-Sandbox automatisch Adobe-Standard-Identitäts-Namespaces. Zielgruppen können nur kopiert werden, wenn alle Attribute in Zielgruppenregeln im Vereinigungsschema aktiviert sind. Die erforderlichen Schemata müssen zunächst verschoben und für ein einheitliches Profil aktiviert werden. |
-| Kundendatenplattform | Schemata | Vorhandene Beschriftungen für die Zustimmung und Governance werden im selben Importauftrag kopiert. Der einheitliche Profilstatus des Schemas wird unverändert aus der Quell-Sandbox kopiert. Wenn das Schema in der Quell-Sandbox für ein einheitliches Profil aktiviert ist, werden alle Attribute in das Vereinigungsschema verschoben. Die Edge-Groß-/Kleinschreibung für Schemabeziehungen ist nicht im Paket enthalten. |
+| Kundendatenplattform | Schemata | Vorhandene Beschriftungen für die Zustimmung und Governance werden im selben Importauftrag kopiert. Der Benutzer hat die Flexibilität, Schemas ohne aktivierte Option Unified Profile zu importieren. Die Edge-Groß-/Kleinschreibung für Schemabeziehungen ist nicht im Paket enthalten. |
 | Kundendatenplattform | Datensätze | Datensätze werden kopiert, wobei die Einstellung für das einheitliche Profil standardmäßig deaktiviert ist. |
+| Kundendatenplattform | Einverständnis und Governance-Richtlinien | Fügen Sie benutzerdefinierte Richtlinien, die von einem Benutzer erstellt wurden, zu einem Paket hinzu und verschieben Sie sie über Sandboxes. |
 
 Die folgenden Objekte werden importiert, befinden sich jedoch im Status Entwurf oder deaktiviert :
 
@@ -52,6 +53,7 @@ In der folgenden Tabelle sind die [!DNL Adobe Journey Optimizer] -Objekte, die d
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Zielgruppe | Eine Audience kann als abhängiges Objekt des Journey-Objekts kopiert werden. Sie können eine neue Zielgruppe erstellen oder eine vorhandene in der Ziel-Sandbox wiederverwenden. |
 | [!DNL Adobe Journey Optimizer] | Schema | Die im Journey verwendeten Schemata können als abhängige Objekte kopiert werden. Sie können ein neues Schema erstellen oder ein vorhandenes Schema in der Ziel-Sandbox wiederverwenden. |
+| [!DNL Adobe Journey Optimizer] | Zusammenführungsrichtlinie | Die im Journey verwendeten Zusammenführungsrichtlinien können als abhängige Objekte kopiert werden. In der Ziel-Sandbox **cannot** eine neue Zusammenführungsrichtlinie erstellen, können Sie nur eine bereits vorhandene nutzen. |
 | [!DNL Adobe Journey Optimizer] | Journey – Details der Arbeitsfläche | Die Darstellung der Journey auf der Arbeitsfläche umfasst die Objekte in der Journey, wie z. B. Bedingungen, Aktionen, Ereignisse, Leseregistanzen usw., die kopiert werden. Die Sprungaktivität ist von der Kopie ausgeschlossen. |
 | [!DNL Adobe Journey Optimizer] | Ereignis | Die auf der Journey verwendeten Ereignisse und Ereignisdetails werden kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt. |
 | [!DNL Adobe Journey Optimizer] | Aktion | E-Mail- und Push-Nachrichten, die auf der Journey verwendet werden, können als abhängige Objekte kopiert werden. Die in den Journey-Feldern verwendeten Kanalaktionsaktivitäten, die zur Personalisierung in der Nachricht verwendet werden, werden nicht auf Vollständigkeit überprüft. Inhaltsbausteine werden nicht kopiert.<br><br>Die auf der Journey verwendete Profilaktion kann kopiert werden. Benutzerdefinierte Aktionen und Aktionsdetails, die auf der Journey verwendet werden, werden ebenfalls kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt. |
@@ -135,19 +137,23 @@ Um das Paket in eine Ziel-Sandbox zu importieren, navigieren Sie zu den Sandboxe
 
 ![Die Sandboxes **[!UICONTROL Durchsuchen]** -Tab, der die Auswahl des Importpakets markiert.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Wählen Sie im Dropdown-Menü die **[!UICONTROL Paketname]** Sie möchten in die Ziel-Sandbox importieren. Hinzufügen eines optionalen **[!UICONTROL Auftragsname]**, der für die künftige Überwachung verwendet wird, wählen Sie **[!UICONTROL Nächste]**.
+Wählen Sie im Dropdown-Menü die **[!UICONTROL Paketname]** Sie möchten in die Ziel-Sandbox importieren. Hinzufügen eines optionalen **[!UICONTROL Auftragsname]**, der für die künftige Überwachung verwendet wird. Standardmäßig wird das einheitliche Profil beim Importieren der Schemata des Pakets deaktiviert. Umschalten **Aktivieren von Schemata für Profile** Um dies zu aktivieren, wählen Sie **[!UICONTROL Nächste]**.
 
 ![Auf der Seite mit den Importdetails wird die [!UICONTROL Paketname] Dropdown-Auswahl](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-Die [!UICONTROL Paketobjekt und Abhängigkeiten] -Seite enthält eine Liste aller in diesem Paket enthaltenen Assets. Das System erkennt automatisch abhängige Objekte, die für den erfolgreichen Import ausgewählter übergeordneter Objekte erforderlich sind.
+Die [!UICONTROL Paketobjekt und Abhängigkeiten] -Seite enthält eine Liste aller in diesem Paket enthaltenen Assets. Das System erkennt automatisch abhängige Objekte, die für den erfolgreichen Import ausgewählter übergeordneter Objekte erforderlich sind. Alle fehlenden Attribute werden oben auf der Seite angezeigt. Auswählen **[!UICONTROL Details anzeigen]** für eine detailliertere Aufschlüsselung.
 
-![Die [!UICONTROL Paketobjekt und Abhängigkeiten] zeigt eine Liste der im Paket enthaltenen Assets an.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![Die [!UICONTROL Paketobjekt und Abhängigkeiten] -Seite zeigt fehlende Attribute an.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Abhängige Objekte können in der Ziel-Sandbox durch vorhandene ersetzt werden, sodass Sie vorhandene Objekte wiederverwenden können, anstatt eine neue Version zu erstellen. Wenn Sie beispielsweise ein Paket mit Schemas importieren, können Sie vorhandene benutzerdefinierte Feldergruppen und Identitäts-Namespaces in der Ziel-Sandbox wiederverwenden. Alternativ können Sie beim Importieren eines Pakets mit Journey bestehende Segmente in der Ziel-Sandbox wiederverwenden.
 
-Um ein vorhandenes Objekt zu verwenden, wählen Sie das Stiftsymbol neben dem abhängigen Objekt aus. Die Optionen zum Erstellen neuer oder Verwenden vorhandener Elemente werden angezeigt. Auswählen **[!UICONTROL Vorhandene verwenden]**.
+Um ein vorhandenes Objekt zu verwenden, wählen Sie das Stiftsymbol neben dem abhängigen Objekt aus.
+
+![Die [!UICONTROL Paketobjekt und Abhängigkeiten] zeigt eine Liste der im Paket enthaltenen Assets an.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+Die Optionen zum Erstellen neuer oder Verwenden vorhandener Elemente werden angezeigt. Auswählen **[!UICONTROL Vorhandene verwenden]**.
 
 ![Die [!UICONTROL Paketobjekt und Abhängigkeiten] Seite mit abhängigen Objektoptionen [!UICONTROL Neu erstellen] und [!UICONTROL Vorhandene verwenden].](../images/ui/sandbox-tooling/use-existing-object.png)
 
