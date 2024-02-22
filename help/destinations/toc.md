@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 05ff789d71c693854fb84d1661c2bef8aba0bff8
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1201'
 ht-degree: 91%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 91%
       * [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](./ui/activate-edge-personalization-destinations.md)
       * [Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-IDs](./ui/activate-curated-destinations.md)
       * [Aktivieren von potenziellen Zielgruppen für Ziele](./ui/activate-prospect-audiences.md)
-      * [(Eingeschränkte Verfügbarkeit) Konto-Zielgruppen für Ziele aktivieren](./ui/activate-account-audiences.md)
+      * [Kontozielgruppen für Ziele aktivieren](./ui/activate-account-audiences.md)
       * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
       * [Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)

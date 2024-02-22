@@ -2,12 +2,12 @@
 title: Kontozielgruppen für Ziele aktivieren
 type: Tutorial
 description: Erfahren Sie, wie Sie Kontozielgruppen für Ziele aktivieren.
-badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Caution"
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '810'
 ht-degree: 7%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Aktivieren von Kontozielgruppen für Ziele ist nur im Abschnitt [B2B Edition von Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Darüber hinaus befindet sich die Funktion für die Zielgruppe von Konten derzeit in **begrenzte Verfügbarkeit**. Wenden Sie sich an die Adobe-Kundenunterstützung oder Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+>Die Funktion zum Aktivieren von Kontozielgruppen für Ziele ist für Unternehmen verfügbar, die die [B2B](/help/rtcdp/overview.md#rtcdp-b2b) und [B2B](/help/rtcdp/overview.md#rtcdp-b2b) Editionen von Real-time Customer Data Platform.
 
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Kontozielgruppen](/help/segmentation/ui/account-audiences.md) von Adobe Experience Platform zu Ihrem bevorzugten Ziel.
 
@@ -79,7 +79,7 @@ Den Rest des Aktivierungs-Workflows zum Exportieren von Kontozielgruppen finden 
 
 ## Wichtige Hinweise und bekannte Einschränkungen {#important-callouts-known-limitations}
 
-Beachten Sie die folgenden wichtigen Hinweisen und bekannten Einschränkungen für die eingeschränkte Verfügbarkeit der Funktion zum Aktivieren von Kontozielgruppen.
+Beachten Sie die folgenden wichtigen Hinweisen und bekannten Einschränkungen für die allgemeine Verfügbarkeit der Funktion zum Aktivieren von Kontozielgruppen.
 
 ### Erforderliche Zuordnungspaare im Zuordnungsschritt bei der Aktivierung von Kontozielgruppen für die **[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]** Ziel {#required-mappings}
 
