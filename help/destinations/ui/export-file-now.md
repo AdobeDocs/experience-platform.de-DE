@@ -3,10 +3,10 @@ title: (Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Ex
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien bei Bedarf mithilfe der Experience Platform-Benutzeroberfläche in Batch-Ziele exportieren.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 20%
+source-wordcount: '722'
+ht-degree: 21%
 
 ---
 
@@ -48,13 +48,9 @@ Um Dateien On-Demand an Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit
 
    ![Bild, das einen gefilterten Datenfluss markiert.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Wählen Sie die **[!UICONTROL Aktivierungsdaten]** und wählen Sie die Audience aus, für die Sie eine Datei bei Bedarf exportieren möchten, und wählen Sie die **[!UICONTROL Datei jetzt exportieren]** -Steuerelement, um einen einmaligen Export Trigger, der eine Datei an Ihr Batch-Ziel sendet.
+3. Wählen Sie die **[!UICONTROL Aktivierungsdaten]** und wählen Sie die Zielgruppen aus, für die Sie Dateien bei Bedarf exportieren möchten, und wählen Sie die **[!UICONTROL Datei jetzt exportieren]** -Steuerelement, um einen einmaligen Export Trigger, der eine Datei für jede ausgewählte Zielgruppe an Ihr Batch-Ziel sendet.
 
-   >[!IMPORTANT]
-   >
-   >Die Auswahl mehrerer Zielgruppen für den Massenexport von Dateien bei Bedarf wird in der Benutzeroberfläche derzeit nicht unterstützt. Verwenden Sie die [Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md) zu diesem Zweck.
-
-   ![Bild, das die Schaltfläche Datei jetzt exportieren markiert](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![Bild, das die Schaltfläche Datei jetzt exportieren markiert](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Auswählen **[!UICONTROL Ja]** , um den Dateiexport zu bestätigen und zu Trigger zu führen.
 

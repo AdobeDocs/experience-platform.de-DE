@@ -3,10 +3,10 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
+source-git-commit: 5d9384f57765126709f6bfcc005334ba4120595a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 51%
+source-wordcount: '1857'
+ht-degree: 49%
 
 ---
 
@@ -195,9 +195,9 @@ Beachten Sie bei der Komprimierung den Unterschied im Dateiformat zwischen den b
 * Beim Exportieren komprimierter JSON-Dateien ist das exportierte Dateiformat `json.gz`
 * Beim Exportieren komprimierter Parquet-Dateien ist das exportierte Dateiformat `gz.parquet`
 
-## Entfernen eines Datensatzes aus dem Ziel {#remove-dataset}
+## Entfernen von Datensätzen aus Zielen {#remove-dataset}
 
-Gehen Sie wie folgt vor, um einen Datensatz aus einem vorhandenen Datenfluss zu entfernen:
+Gehen Sie wie folgt vor, um Datensätze aus einem vorhandenen Datenfluss zu entfernen:
 
 1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://experience.adobe.com/platform/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie **[!UICONTROL Durchsuchen]** in der oberen Kopfzeile aus, um Ihre vorhandenen Ziel-Datenflüsse anzuzeigen.
 
@@ -211,14 +211,19 @@ Gehen Sie wie folgt vor, um einen Datensatz aus einem vorhandenen Datenfluss zu 
 
    ![Die verfügbare Navigationsoption für Datensätze, die in der Spalte „Aktivieriungsdaten“ hervorgehoben ist.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. Die Seite **[!UICONTROL Aktivierungsdaten]** für dieses Ziel wird angezeigt. Wählen Sie **[!UICONTROL Datensatz entfernen]** in der rechten Leiste aus, woraufhin der Bestätigungsdialog zum Entfernen des Datensatzes erscheint.
+1. Die Seite **[!UICONTROL Aktivierungsdaten]** für dieses Ziel wird angezeigt. Wählen Sie den Datensatz aus, den Sie entfernen möchten, und wählen Sie dann **[!UICONTROL Datensatz entfernen]** in der rechten Leiste, um das Bestätigungsdialogfeld zur Entfernung des Datensatzes Trigger.
 
    ![Der Dialog „Datensatz entfernen“, der die Steuerung „Datensatz entfernen“ in der rechten Leiste anzeigt.](../assets/ui/export-datasets/remove-dataset-control.png)
+
+<!-- USE THIS FOR BULK REMOVE RELEASE
+
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
+
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
 
 1. Wählen Sie im Bestätigungsdialog die Option **[!UICONTROL Entfernen]** aus, um den Datensatz sofort aus den Exporten in das Ziel zu entfernen.
 
    ![Dialogfeld mit der Option „Löschen des Datensatzes aus dem Datenfluss bestätigen“.](../assets/ui/export-datasets/remove-dataset-confirm.png)
-
 
 ## Berechtigungen für den Datensatzexport {#licensing-entitlement}
 

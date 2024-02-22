@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 59%
+source-wordcount: '3879'
+ht-degree: 58%
 
 ---
 
@@ -73,6 +73,10 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 >
 >Auswählen von Audiences, die von **[!UICONTROL Benutzerdefinierte Uploads]** aktiviert automatisch die [Anreicherungsattribute auswählen](#select-enrichment-attributes) Schritt.
 
+>[!TIP]
+>
+>Sie können Zielgruppen aus vorhandenen Aktivierungsflüssen aus der **[!UICONTROL Aktivierungsdaten]** Seite. Siehe [dedizierte Dokumentation](../ui/destination-details-page.md#bulk-remove) für Details.
+
 ## Planen eines Zielgruppenexports {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 >title="Zeitplan"
 >abstract="Verwenden Sie das Stiftsymbol, um den Dateiexporttyp (vollständige Dateien oder inkrementelle Dateien) und die Exporthäufigkeit festzulegen."
 
-[!DNL Adobe Experience Platform] Exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele als [verschiedene Dateitypen](#supported-file-formats-export). Im **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Zielgruppe konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+[!DNL Adobe Experience Platform] Exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele als [verschiedene Dateitypen](#supported-file-formats-export). Im **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Zielgruppe konfigurieren, die Sie exportieren.
+
+Experience Platform legt automatisch einen Standardzeitplan für jeden Dateiexport fest. Sie können den Standardzeitplan nach Bedarf ändern, indem Sie neben jedem Zeitplan das Stiftsymbol auswählen und einen benutzerdefinierten Zeitplan definieren.
+
+![Bearbeiten Sie die Steuerung des Zeitplans , die im Schritt Planung hervorgehoben ist.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>Sie können die Aktivierungszeitpläne für die Zielgruppe für vorhandene Aktivierungsflüsse über die **[!UICONTROL Aktivierungsdaten]** Seite. Siehe die Dokumentation unter [Zeitpläne für die Massenbearbeitung](../ui/destination-details-page.md#bulk-edit-schedule) für Details.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] teilt die Exportdateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar.
 >
 >Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Kontrolle, die der Zielgruppe entspricht, die Sie an Ihr Ziel senden möchten.
-
-![Erstellen Sie eine Steuerung des Zeitplans , die im Schritt Planung hervorgehoben ist.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportieren von vollständigen Dateien {#export-full-files}
 
@@ -247,6 +255,14 @@ In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an 
 1. Das für den Export ausgewählte Feld wird jetzt in der Zuordnungsansicht mit dem bearbeiteten Header in der exportierten Datei angezeigt.
 
    ![Modales Fenster mit Profilattributen, die an das Ziel exportiert werden können](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+
+   ![Aufzeichnung, die die Neuanordnung der Zuordnungsfelder durch Drag &amp; Drop anzeigt.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (Optional) Sie können das exportierte Feld als [obligatorischen Schlüssel](#mandatory-keys) oder [Deduplizierungsschlüssel](#deduplication-keys) festlegen.
 
