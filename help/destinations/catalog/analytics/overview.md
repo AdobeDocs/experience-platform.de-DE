@@ -3,9 +3,9 @@ keywords: Analytics-Ziele;Analytics-Ziel
 title: Analyseziele – Übersicht
 description: Analyseziele verfolgen, wie Besucher mit Inhalten auf Ihrer Site interagieren, und erfassen Daten, um das Verhalten Ihrer Zielgruppe zu untersuchen. Diese Plattformen liefern einzigartige Einblicke in Interaktion und Konversion Ihrer wertvollsten Besucher.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '176'
 ht-degree: 84%
 
 ---
@@ -28,7 +28,7 @@ Derzeit unterstützt Adobe Experience Platform die unten aufgeführten Analysezi
 * [Decibel-Erweiterung](decibel.md)
 * [Demandbase-Erweiterung](demandbase.md)
 * [DialogTech-Erweiterung](dialogtech.md)
-* [Gainsight PX](gainsight-px.md)
+* [Gainsight PX-Verbindung](gainsight-px.md)
 * [Google Global Site Tag Analytics-Erweiterung](gtag-analytics.md)
 * [Google Universal Analytics-Erweiterung](google-universal-analytics.md)
 * [JW Player Analytics (Beta)-Erweiterung](jw-player-analytics.md)
