@@ -5,7 +5,7 @@ description: Erfahren Sie, wie Sie Kontozielgruppen für Ziele aktivieren.
 badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 7%
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Aktivieren von Kontozielgruppen für Ziele ist für Unternehmen verfügbar, die die [B2B](/help/rtcdp/overview.md#rtcdp-b2b) und [B2B](/help/rtcdp/overview.md#rtcdp-b2b) Editionen von Real-time Customer Data Platform.
+>Die Funktion zum Aktivieren von Kontozielgruppen für Ziele ist für Unternehmen verfügbar, die die [B2B](/help/rtcdp/overview.md#rtcdp-b2b) und [B2B](/help/rtcdp/overview.md#rtcdp-b2p) Editionen von Real-time Customer Data Platform.
 
 In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Kontozielgruppen](/help/segmentation/ui/account-audiences.md) von Adobe Experience Platform zu Ihrem bevorzugten Ziel.
 

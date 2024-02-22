@@ -1,13 +1,13 @@
 ---
 title: Kontozielgruppen
 description: Erfahren Sie, wie Sie Zielgruppen für Konten erstellen und verwenden, um Kontoprofile in nachgelagerten Zielen auszuwählen.
-badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 3%
+source-wordcount: '1039'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Kontozielgruppen sind nur im [B2B Edition von Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Darüber hinaus befindet sich die Funktion für die Zielgruppe von Konten derzeit in **begrenzte Verfügbarkeit**. Wenden Sie sich an die Adobe-Kundenunterstützung oder Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+>Kontozielgruppen sind nur im [B2B Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) und [B2P Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Mit der Kontosegmentierung können Sie mit Adobe Experience Platform die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen bringen.
 

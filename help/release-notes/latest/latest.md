@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 26%
@@ -17,7 +17,6 @@ Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 - [Warnhinweise](#alerts)
 - [Datenerfassung](#data-collection)
-<!-- - [Data Prep](#data-prep) -->
 - [Ziele](#destinations)
 - [Sandboxes](#sandboxes)
 - [Segmentierungs-Service](#segmentation)
@@ -79,7 +78,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Allgemeine verfügbare Kontozielgruppen aktivieren | Die Funktion zum Aktivieren von Kontozielgruppen für bestimmte Ziele ist jetzt allgemein für Unternehmen verfügbar, die die [B2B](/help/rtcdp/overview.md#rtcdp-b2b) und [B2B](/help/rtcdp/overview.md#rtcdp-b2b) Editionen von Real-time Customer Data Platform. Tutorial lesen unter [Aktivieren von Kontozielgruppen](/help/destinations/ui/activate-account-audiences.md) um vollständige Informationen zu erhalten, einschließlich unterstützter Ziele. |
+| Allgemeine verfügbare Kontozielgruppen aktivieren | Die Funktion zum Aktivieren von Kontozielgruppen für bestimmte Ziele ist jetzt allgemein für Unternehmen verfügbar, die die [B2B](/help/rtcdp/overview.md#rtcdp-b2b) und [B2B](/help/rtcdp/overview.md#rtcdp-b2p) Editionen von Real-time Customer Data Platform. Tutorial lesen unter [Aktivieren von Kontozielgruppen](/help/destinations/ui/activate-account-audiences.md) um vollständige Informationen zu erhalten, einschließlich unterstützter Ziele. |
 | Digital Markets Act - Instrumente zur Durchsetzung der Zustimmung für Google-Ziele | Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Kundenabgleich](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)und die [Display &amp; Video 360-API](https://developers.google.com/display-video/api/guides/getting-started/overview) um die Erfüllung und die Zustimmungsanforderungen zu unterstützen, die im Rahmen der [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union ([EU-Richtlinie zur Benutzereinwilligung](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Zustimmungsanforderungen wird voraussichtlich ab dem 6. März 2024 in Kraft treten. <br/><br/> Um die EU-Politik zur Einwilligung von Nutzern einzuhalten und im Europäischen Wirtschaftsraum (EWR) weiterhin Zielgruppenlisten für Benutzer zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Einwilligung der Endnutzer weitergeben. Als Google-Partner bietet Ihnen Adobe die nötigen Tools, um diese Zustimmungsanforderungen gemäß DMA in der Europäischen Union zu erfüllen.<br/><br/>Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) zum Herausfiltern von Profilen ohne Zustimmung müssen keine Maßnahmen ergriffen werden.<br/><br/>Kunden, die keine Adobe Privacy &amp; Security Shield erworben haben, müssen die [Segmentdefinition](../../segmentation/home.md#segment-definitions) Funktionen in [Segment Builder](../../segmentation/ui/segment-builder.md) , um Profile ohne Zustimmung herauszufiltern, damit die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiterhin verwendet werden. |
 | [!BADGE Beta]{type=Informative} Neuanordnen von Zuordnungsfeldern für Batch-Ziele | Sie können jetzt die Reihenfolge der Spalten in Ihren CSV-Exporten ändern, indem Sie die Zuordnungsfelder per Drag-and-Drop in die [Mapping](../../destinations/ui/activate-batch-profile-destinations.md#mapping) Schritt. Die Reihenfolge der zugeordneten Felder in der Benutzeroberfläche entspricht der Reihenfolge der Spalten in der exportierten CSV-Datei von oben nach unten, wobei die oberste Zeile die ganz links in der CSV-Datei ist. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern. |
 | [!BADGE Beta]{type=Informative} Vorgewählte standardmäßige Exportpläne für Batch-Ziele | Experience Platform legt nun automatisch einen Standardzeitplan für jeden Dateiexport fest. Siehe die Dokumentation unter [Zielgruppenexporte planen](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) , um zu erfahren, wie Sie den Standardzeitplan ändern. <br/><br/> Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern. |
