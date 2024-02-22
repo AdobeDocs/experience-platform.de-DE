@@ -3,10 +3,10 @@ title: LinkedIn Conversions API Event Forwarding-Erweiterung
 description: Mit dieser Adobe Experience Platform-Ereignisweiterleitungserweiterung können Sie die Leistung Ihrer LinkedIn-Marketingkampagne messen.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 4%
+source-wordcount: '790'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## Voraussetzungen {#prerequisites}
 
-Sie müssen eine Konversionsregel in Ihrer [!DNL LinkedIn] Kampagnenanzeigenkonto. [!DNL Adobe] empfiehlt, &quot;CAPI&quot;am Anfang des Konversationsregelnamens einzufügen, um ihn von anderen Konversionsregeltypen abzuheben, die Sie möglicherweise konfiguriert haben.
+Sie müssen [Konversionsregel erstellen](https://www.linkedin.com/help/lms/answer/a1657171) in [!DNL LinkedIn Campaign Manager] -Konto. [!DNL Adobe] empfiehlt, &quot;CAPI&quot;am Anfang des Konversationsregelnamens einzufügen, um ihn von anderen Konversionsregeltypen abzuheben, die Sie möglicherweise konfiguriert haben.
 
 ### Erstellen eines Geheimnisses und eines Datenelements
 
@@ -40,7 +40,7 @@ Geben Sie im nächsten Bildschirm den zuvor erstellten Datenelementschlüssel in
 
 Sobald alle Ihre Datenelemente eingerichtet sind, können Sie mit der Erstellung von Ereignisweiterleitungsregeln beginnen, die bestimmen, wann und wie Ihre Ereignisse an gesendet werden [!DNL LinkedIn].
 
-Neue Ereignisweiterleitung erstellen [Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. under **[!UICONTROL Aktionen]**, fügen Sie eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL LinkedIn]**. Wählen Sie als Nächstes **[!UICONTROL Web-Konversion senden]** für die **[!UICONTROL Aktionstyp]**.
+Neue Ereignisweiterleitung erstellen [Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. under **[!UICONTROL Aktionen]**, fügen Sie eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL LinkedIn]**. Wählen Sie als Nächstes **[!UICONTROL Konvertierung senden]** für die **[!UICONTROL Aktionstyp]**.
 
 ![Die Ansicht &quot;Eigenschaftsregeln für die Ereignisweiterleitung&quot;mit den Feldern, die zum Hinzufügen einer Aktionskonfiguration für Ereignisweiterleitungsregeln erforderlich sind, hervorgehoben.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu kon
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Konversion] | Die ID der Konversionsregel, die in [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171) oder [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL Konversion] | Die ID der Konversionsregel, die in [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Wählen Sie die Konversionsregel aus, um die ID abzurufen, und kopieren Sie dann die ID aus der Browser-URL (z. B. `/campaignmanager/accounts/508111232/conversions/15588877`) als `/conversions/<id>`. |
 | [!UICONTROL Konvertierungszeit] | Jeder Zeitstempel in Millisekunden, bei dem das Konversionsereignis eingetreten ist. <br><br> Hinweis: Wenn Ihre Quelle den Konvertierungszeitstempel in Sekunden aufzeichnet, fügen Sie am Ende 000 ein, um ihn in Millisekunden umzuwandeln. |
 | [!UICONTROL Währung] | Währungscode im ISO-Format. |
 | [!UICONTROL Stärke] | Wert der Konvertierung in Dezimalzeichenfolge (z. B. &quot;100.05&quot;). |
-| [!UICONTROL Ereignis-ID] | Die eindeutige ID, die von Werbetreibenden zur Angabe jedes Ereignisses generiert wurde. Dies ist ein optionales Feld, das zur Deduplizierung verwendet wird. |
+| [!UICONTROL Ereignis-ID] | Die eindeutige ID, die von Werbetreibenden zur Angabe jedes Ereignisses generiert wurde. Dies ist ein optionales Feld und wird für [Deduplizierung](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -80,10 +80,12 @@ Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu kon
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Zugriffs-Token] | Die [!DNL LinkedIn] Zugriffstoken. |
+| [!UICONTROL Zugriffstoken] | Die [!DNL LinkedIn] Zugriffstoken. |
 
 ![Die [!DNL Configuration Overrides] -Abschnitt mit Beispieldateneingaben im Feld.](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Daten an [!DNL LinkedIn] mithilfe der [!DNL LinkedIn Conversions API] Ereignisweiterleitungserweiterung. Weitere Informationen zu den Ereignisweiterleitungsfunktionen finden Sie unter [!DNL Adobe Experience Platform], siehe [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+In diesem Handbuch wurde beschrieben, wie Daten an [!DNL LinkedIn] mithilfe der [!DNL LinkedIn Conversions API] Ereignisweiterleitungserweiterung. Weitere Informationen zu den Ereignisweiterleitungsfunktionen finden Sie unter [!DNL Adobe Experience Platform], lesen Sie die [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+
+Weitere Informationen zum Debugging Ihrer Implementierung mithilfe des Experience Platform Debugger- und Ereignisweiterleitungs-Überwachungstools finden Sie in der [Übersicht über Adobe Experience Platform Debugger](../../../../debugger/home.md) und [Überwachen von Aktivitäten in der Ereignisweiterleitung](../../../ui/event-forwarding/monitoring.md).
