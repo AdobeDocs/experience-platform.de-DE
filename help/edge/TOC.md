@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 88%
+source-wordcount: '188'
+ht-degree: 86%
 
 ---
 
@@ -46,6 +46,7 @@ ht-degree: 88%
    * [Rendern von personalisierten Inhalten](personalization/rendering-personalization-content.md)
    * [Personalisierung über Hybridimplementierung](personalization/hybrid-personalization.md)
    * [Verwalten von Flackern](personalization/manage-flicker.md)
+
    * Adobe Target {#adobe-target}
       * [Übersicht](personalization/adobe-target/target-overview.md)
       * [Implementierung von Einzelseitenanwendungen](personalization/adobe-target/spa-implementation.md)
@@ -61,6 +62,7 @@ ht-degree: 88%
    * Adobe Journey Optimizer {#ajo}
       * [Übersicht](personalization/ajo/overview.md)
       * [Implementierung von Einzelseitenanwendungen](personalization/ajo/web-spa-implementation.md)
+      * [Web-In-App-Nachrichten konfigurieren](personalization/web-in-app-messaging.md)
 * Einverständnis {#consent}
    * [Unterstützen von Zustimmung](consent/supporting-consent.md)
    * IAB-Transparenz und -Einverständnis – Framework 2.0 {#iab-tcf}

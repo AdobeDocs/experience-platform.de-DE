@@ -1,20 +1,20 @@
 ---
 title: Konfigurieren einer CSP
 seo-title: Configuring a CSP for Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie eine CSP für das Experience Platform Web SDK konfigurieren.
+description: Erfahren Sie, wie Sie eine CSP für das Experience Platform Web SDK konfigurieren
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: Konfigurieren; Konfiguration; SDK; Edge; Web SDK; konfigurieren; Kontext; Web; Gerät; Umgebung; Web SDK-Einstellungen; Content Security-Richtlinie
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 099f87acded9eca31c31555e63c0ea49ae2d1719
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 0%
 
 ---
 
 # Konfigurieren einer CSP
 
-A [Inhaltssicherheitsrichtlinie](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wird verwendet, um die Ressourcen zu beschränken, die ein Browser verwenden darf. Die CSP kann auch die Funktionalität von Skript- und Stilressourcen einschränken. Das Adobe Experience Platform Web SDK benötigt keine CSP. Durch Hinzufügen einer kann die Angriffsfläche jedoch reduziert werden, um schädliche Angriffe zu verhindern.
+A [Inhaltssicherheitsrichtlinie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wird verwendet, um die Ressourcen zu beschränken, die ein Browser verwenden darf. Die CSP kann auch die Funktionalität von Skript- und Stilressourcen einschränken. Das Adobe Experience Platform Web SDK benötigt keine CSP. Durch Hinzufügen einer kann die Angriffsfläche jedoch reduziert werden, um schädliche Angriffe zu verhindern.
 
 Das CSP muss reflektieren, wie [!DNL Platform Web SDK] bereitgestellt und konfiguriert wurde. Die folgende CSP zeigt, welche Änderungen erforderlich sein können, damit das SDK ordnungsgemäß funktioniert. Abhängig von Ihrer spezifischen Umgebung sind wahrscheinlich zusätzliche CSP-Einstellungen erforderlich.
 
@@ -29,7 +29,7 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-Im obigen Beispiel `EDGE-DOMAIN` durch die Erstanbieterdomäne ersetzt werden. Die Erstanbieterdomäne ist für die [edgeDomain](configuring-the-sdk.md#edge-domain) -Einstellung. Wenn keine Erstanbieterdomäne konfiguriert wurde, wird `EDGE-DOMAIN` sollte ersetzt werden durch `*.adobedc.net`. Wenn die Besuchermigration mit [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), die `connect-src` auch `*.demdex.net`.
+Im obigen Beispiel `EDGE-DOMAIN` durch die Erstanbieterdomäne ersetzt werden. Die Erstanbieterdomäne ist für die [edgeDomain](configuring-the-sdk.md#edge-domain) -Einstellung. Wenn keine Erstanbieterdomäne konfiguriert wurde, wird `EDGE-DOMAIN` sollte ersetzt werden durch `*.adobedc.net`. Wenn die Besuchermigration mit [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), die `connect-src` -Richtlinie auch `*.demdex.net`.
 
 ### Verwenden Sie NONCE, um Inline-Skript- und Stilelemente zuzulassen
 
@@ -60,3 +60,11 @@ style-src 'unsafe-inline'
 >[!NOTE]
 >
 >Adobe tut **not** empfehlen `unsafe-inline` weil es ermöglicht, dass jedes Skript auf der Seite ausgeführt wird, wodurch die Vorteile des CSP eingeschränkt werden.
+
+## CSP für In-App-Nachrichten konfigurieren {#in-app-messaging}
+
+Bei der Konfiguration [Web-In-App-Nachrichten](../personalization/web-in-app-messaging.md)müssen Sie die folgende Anweisung in Ihre CSP aufnehmen:
+
+```
+default-src  blob:;
+```
