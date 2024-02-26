@@ -2,9 +2,9 @@
 title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln mithilfe der API
 description: Erfahren Sie, wie Sie Ihre CMK-App mit Ihrem Azure-Mandanten einrichten und Ihre Verschlüsselungsschlüssel-ID an Adobe Experience Platform senden.
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1002'
 ht-degree: 49%
 
 ---
@@ -24,7 +24,7 @@ Um CMK zu aktivieren, muss Ihre [[!DNL Azure] Key Vault muss konfiguriert werden
 * [Bereinigungsschutz aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Soft-Löschen aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Zugriff konfigurieren mit [!DNL Azure] rollenbasierte Zugriffssteuerung](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Konfigurieren eines  [!DNL Azure] -Schlüsseltresors](./azure-key-vault-config.md)
+* [Konfigurieren Sie eine [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
 ## Einrichten der CMK-App {#register-app}
 
@@ -77,6 +77,10 @@ Navigieren Sie nach Abschluss des Authentifizierungsprozesses zu Ihrem [!DNL Azu
 ![Das Microsoft Azure-Dashboard mit [!DNL Add] und [!DNL Add role assignment] hervorgehoben.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 Im nächsten Bildschirm werden Sie aufgefordert, eine Rolle für diese Zuweisung auszuwählen. Wählen Sie **[!DNL Key Vault Crypto Service Encryption User]** aus, bevor Sie auf **[!DNL Next]** klicken, um fortzufahren.
+
+>[!NOTE]
+>
+>Wenn Sie [!DNL Managed-HSM Key Vault] Ebene auswählen, müssen Sie die **[!DNL Managed HSM Crypto Service Encryption User]** Benutzerrolle.
 
 ![Das Microsoft Azure-Dashboard mit dem [!DNL Key Vault Crypto Service Encryption User] hervorgehoben.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 

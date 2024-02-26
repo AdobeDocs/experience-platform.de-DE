@@ -2,20 +2,20 @@
 title: Konfigurieren eines Azure Key Vault
 description: Erfahren Sie, wie Sie mit Azure ein neues Unternehmenskonto erstellen oder ein vorhandenes Unternehmenskonto verwenden und das Key Vault erstellen.
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 36%
+source-wordcount: '561'
+ht-degree: 24%
 
 ---
 
 # Konfigurieren eines [!DNL Azure]-Schlüsseltresors
 
-Vom Kunden verwaltete Schlüssel (CMK) unterstützen nur Schlüssel aus einem [!DNL Microsoft Azure] Key Vault. Zunächst müssen Sie mit [!DNL Azure] arbeiten, um ein neues Unternehmenskonto zu erstellen, oder Sie verwenden ein vorhandenes Unternehmenskonto und führen die folgenden Schritte aus, um den Schlüsseltresor zu erstellen.
+Vom Kunden verwaltete Schlüssel (CMK) unterstützen nur Schlüssel aus einem [!DNL Microsoft Azure] Key Vault. Zunächst müssen Sie mit [!DNL Azure] , um ein neues Unternehmenskonto zu erstellen oder ein vorhandenes Unternehmenskonto zu verwenden, und führen Sie die folgenden Schritte aus, um das Key Vault zu erstellen.
 
 >[!IMPORTANT]
 >
->Nur die Service-Stufen Premium und Standard werden für den [!DNL Azure]-Schlüsseltresor unterstützt. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] und [!DNL Azure Payments HSM] werden nicht unterstützt. Siehe die [[!DNL Azure] Dokumentation](https://learn.microsoft.com/de-de/azure/security/fundamentals/key-management#azure-key-management-services) für weitere Informationen über angebotene Schlüsselverwaltungsdienste.
+>Nur die Ebenen Standard, Premium und Managed HSM für [!DNL Azure] Key Vault wird unterstützt. [!DNL Azure Dedicated HSM] und [!DNL Azure Payments HSM] werden nicht unterstützt. Siehe die [[!DNL Azure] Dokumentation](https://learn.microsoft.com/de-de/azure/security/fundamentals/key-management#azure-key-management-services) für weitere Informationen über angebotene Schlüsselverwaltungsdienste.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Nachdem Sie ein Key Vault erstellt haben, können Sie einen neuen Schlüssel gen
 
 ![Die [!DNL Keys] Tab von [!DNL Azure] mit [!DNL Generate import] hervorgehoben.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Verwenden Sie das bereitgestellte Formular, um einen Namen für den Schlüssel anzugeben, und wählen Sie **RSA** für den Schlüsseltyp aus. Mindestens die Variable **[!DNL RSA key size]** darf nicht kleiner sein als **3072** Bits nach Bedarf von [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] ist auch mit RSA 3027 kompatibel.
+Verwenden Sie das bereitgestellte Formular, um einen Namen für den Schlüssel anzugeben, und wählen Sie entweder **RSA** oder **RSA-HSM** für den Schlüsseltyp. Mindestens die Variable **[!DNL RSA key size]** darf nicht kleiner sein als **3072** Bits nach Bedarf von [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] ist auch mit RSA 3027 kompatibel.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Verwenden Sie das bereitgestellte Formular, um einen Namen für den Schlüssel a
 
 Verwenden Sie die restlichen Steuerelemente, um den Schlüssel zu konfigurieren, den Sie erstellen oder importieren möchten. Wenn Sie fertig sind, wählen Sie **[!DNL Create]** aus.
 
-![Das Dashboard Schlüssel erstellen mit [!DNL 3072] hervorgehobene Bit.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![Die [!DNL Create a key] Dashboard mit [!DNL 3072] hervorgehobene Bit.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 Der konfigurierte Schlüssel wird in der Liste der Schlüssel für den Tresor angezeigt.
 
