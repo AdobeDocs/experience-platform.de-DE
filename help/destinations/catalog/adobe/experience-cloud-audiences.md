@@ -3,9 +3,9 @@ title: Experience Cloud-Zielgruppen
 description: Erfahren Sie, wie Sie Audiences von Real-time Customer Data Platform für verschiedene Experience Cloud-Apps freigeben können.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 16%
 
 ---
@@ -95,6 +95,7 @@ Beachten Sie die folgenden bekannten Einschränkungen und wichtigen Hinweisen be
 * Derzeit wird ein einzelnes Experience Cloud-Zielgruppen-Ziel unterstützt. Der Versuch, eine zweite Zielverbindung zu konfigurieren, führt zu einem Fehler.
 * Beim Herstellen einer Verbindung zum Ziel sehen Sie eine Option zum [Datenflusswarnungen aktivieren](../../ui/alerts.md). Die Benutzeroberfläche ist zwar sichtbar, die **Option für Warnhinweise wird derzeit nicht unterstützt**.
 * **Unterstützung für Zielgruppenaufstockung**: Der erste Export in Audience Manager oder andere Experience Cloud-Lösungen umfasst eine historische Population der Zielgruppen. Benutzer der [Integration älterer Zielgruppenfreigabe](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) Wer dieses Ziel konfiguriert, sollte mit einer Aufstockungsdifferenz von etwa sechs Stunden rechnen.
+* Audiences, die von [Zielgruppenkomposition](../../../segmentation/ui/audience-composition.md) werden nicht direkt unterstützt. Um gemischte Zielgruppen für dieses Ziel zu aktivieren, müssen Sie eine Zielgruppendefinition erstellen durch [Segment Builder](../../../segmentation/ui/segment-builder.md) die auf Ihrer gemischten Zielgruppe basieren, und aktivieren Sie die neu erstellte Zielgruppe.
 
 ### Latenz beim Aktivieren von Zielgruppen {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Zielgruppen und Eigenschaften in Audience Manager unterliegen [Rollenbasierte Zu
 
 Aus Real-Time CDP exportierte Zielgruppen werden einer bestimmten Datenquelle in Audience Manager mit dem Namen **[!UICONTROL Experience Platform von Segmenten]**.
 
-Um nur bestimmten Benutzern Zugriff auf die Zielgruppen zu gewähren, können Sie Zugriffskontrollen auf die Zielgruppen anwenden, die zur Datenquelle gehören. Legen Sie neue Zugriffssteuerungsberechtigungen in Audience Manager für diese Zielgruppen und Eigenschaften fest, die aus Real-Time CDP-Segmenten erstellt wurden.
+Verwenden Sie [Rollenbasierte Zugriffssteuerung](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) , um den Benutzerzugriff auf die in Real-Time CDP-Zielgruppen erstellten Zielgruppen und Eigenschaften zu konfigurieren.
