@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
-ht-degree: 94%
+ht-degree: 91%
 
 ---
 
@@ -220,9 +220,9 @@ Eine Liste der Profilattribute wird angezeigt. In diesem Popup können Sie den A
 
 Nach Auswahl des Attributs können Sie die Reihenfolge auswählen, nach der geordnet werden soll. Dies geschieht entweder in aufsteigender (von niedrigster zu höchster) oder in absteigender (von höchster zu niedrigster) Reihenfolge.
 
-Darüber hinaus können Sie die Anzahl der zurückgegebenen Zielgruppen einschränken, indem Sie den Umschalter **[!UICONTROL Profil-Limit hinzufügen]** aktivieren. Wenn dieser Umschalter aktiviert ist, können Sie die maximale Anzahl von Zielgruppen festlegen, die innerhalb des Felds **[!UICONTROL Enthaltene Profile]** zurückgegeben wird.
+Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränken, indem Sie die Option **[!UICONTROL Profilbegrenzung hinzufügen]** umschalten. Wenn dieser Umschalter aktiviert ist, können Sie die maximale Anzahl von Profilen festlegen, die innerhalb der Variablen **[!UICONTROL Enthaltene Profile]** -Feld.
 
-![Der Umschalter „Profil-Limit hinzufügen“ ist hervorgehoben, sodass Sie die Anzahl der zurückgegebenen Zielgruppen einschränken können.](../images/ui/audience-composition/add-profile-limit.png)
+![Der Umschalter Profilbeschränkung hinzufügen ist hervorgehoben, wodurch die Anzahl der zurückgegebenen Profile begrenzt werden kann.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Aufspaltung] {#split-block}
 
