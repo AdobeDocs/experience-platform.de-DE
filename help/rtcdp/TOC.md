@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppensegmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
+source-git-commit: eaa71bb93a08e8f0a9afe7f6b05929dae93cb670
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 71%
+source-wordcount: '293'
+ht-degree: 69%
 
 ---
 
@@ -62,8 +62,8 @@ ht-degree: 71%
    * Prädiktives Lead- und Konto-Scoring {#predictive-lead-and-account-scoring-intro}
       * [Prädiktives Lead- und Konto-Scoring – Übersicht](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Verwalten von prädiktivem Lead- und Konto-Scoring](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
-* Schemas {#schemas}
-   * [Übersicht über Schemas](schemas/overview.md)
+* Schemata {#schemas}
+   * [Übersicht über Schemata](schemas/overview.md)
    * [Schemata in der Real-time CDP B2B Edition](schemas/b2b.md)
 * Segmente {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
@@ -77,6 +77,7 @@ ht-degree: 71%
    * [Überblick über Beispielanwendungsfälle](/help/rtcdp/use-case-guides/overview.md)
    * Personalisierung, Einblicke und Interaktion {#personalization-insights-engagement}
       * [Intelligentes erneutes Ansprechen Ihrer Kunden](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [Intelligentes erneutes Engagement Ihrer Kunden: Beispiele für Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
    * Kundenakquise {#customer-acquisition}
       * [Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies](/help/rtcdp/partner-data/prospecting.md)
       * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
