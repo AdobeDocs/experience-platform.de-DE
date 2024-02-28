@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
+source-git-commit: aba148f4155ff5403e89039a9c59acd4d450539e
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2369'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Sie können den Assistenten nach folgenden Informationen abfragen:
 
 * Anleitung zur Durchführung von Aufgaben in Bezug auf Daten und Zielgruppen.
 * Status und Metriken der vorhandenen Datenobjekte in Ihrer Organisation.
-* Verwenden Sie Fallbeispiele und Nuancen, um Ihre Datenobjekte, einschließlich Attributen, Datensätzen, Zielen, Schemas, Segmenten und Quellen, besser zu verstehen.
+* Verwenden Sie Fallbeispiele und Nuancen, um Ihre Datenobjekte, einschließlich Attributen, Datenflüssen, Datensätzen, Zielen, Schemas, Segmenten und Quellen, besser zu verstehen.
 
 Lesen Sie das nachstehende Handbuch, um zu erfahren, wie Sie mit Assistant die Navigation in Ihren Experience Platform- und Real-Time CDP-Workflows erleichtern und diese verstehen können.
 
@@ -131,17 +131,25 @@ Um Zitate anzuzeigen und die Antwort der Assistenzkraft zu validieren, wählen S
 
 +++Auswählen , um ein Beispiel für Fragen zur Datennutzung und Datenvisualisierung anzuzeigen
 
-Sie können sich mit Assistant über Ihre Datennutzung erkundigen. Sie müssen sich in einer aktiven Sandbox für Assistant befinden, um eine Frage zur Datennutzung bezüglich der Daten in Ihrem Unternehmen zu beantworten.
+Damit Assistenzkräfte auf eine Abfrage zur Datennutzung in Ihrem Unternehmen reagieren können, müssen Sie sich in einer aktiven Sandbox befinden.
+
+Im folgenden Beispiel wird Assistant mit der folgenden Abfrage bereitgestellt: **&quot;Zeigen Sie mir Segmentdefinitionen mit mehr als 1000 Profilen an und fügen Sie den Aktivierungsstatus hinzu.&quot;** Der Assistent antwortet dann mit einem Diagramm, das Ihre Segment- und Profildaten visualisiert.
 
 ![Folgen Sie der Frage zur Datennutzung.](./images/ai-assistant/data-usage-question.png)
 
-Wenn Sie mit einer Frage zur Datennutzung aufgefordert werden, erläutert Assistant auch, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt Assistant die Schritte zur Anzeige von Segmenten mit mehr als 1000 Profilen und deren Aktivierungsstatus.
+Sie können den Mauszeiger über eine einzelne Leiste bewegen, um bestimmte Daten anzuzeigen. Sie können auch das Symbol zum Erweitern für eine größere Ansicht des Diagramms auswählen.
+
+![Folgenfragen zur Illustration der Datenvisualisierung.](./images/ai-assistant/data-visualization.png)
+
+Eine erweiterte Ansicht der Visualisierung wird angezeigt. Sie können das erweiterte Modal verwenden, um Ihre Daten weiter zu überprüfen. Dies ist besonders nützlich, wenn die Visualisierung mit einer großen Anzahl von Spalten zurückgegeben wird.
+
+![Erweiterte Grafik.](./images/ai-assistant/chart-expanded.png)
+
+Wenn Sie mit einer Frage zur Datennutzung aufgefordert werden, erläutert Assistant, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt Assistant die Schritte, die zur Anzeige von Segmentdefinitionen mit über 1000 Profilen und deren Aktivierungsstatus unternommen wurden.
 
 ![Folgen Sie der Frage zu Segmenten, die veranschaulichen, wie Assistenzkraft die Antwort berechnete.](./images/ai-assistant/results-explained.png)
 
-Darüber hinaus rendert Assistant Diagramme zur Visualisierung Ihrer Daten. Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Beispielsweise können Sie den Assistenten bitten, Ihnen einen Trend der Zählersegmente in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmente mit Nullsummenprofilen zu entfernen und bei der Datenanzeige Monatsnamen anstelle von Ganzzahlen zu verwenden.
-
-![Folgenfragen zur Illustration der Datenvisualisierung.](./images/ai-assistant/data-visualization.png)
+Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Beispielsweise können Sie den Assistenten bitten, Ihnen einen Trend der Definitionen der Zählersegmente in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmentdefinitionen mit Nullsummenprofilen zu entfernen und bei der Anzeige der Daten Monatsnamen anstelle von Ganzzahlen zu verwenden.
 
 +++
 
@@ -177,27 +185,18 @@ Als Nächstes erhält die Assistenzkraft eine weitere Folgeanfrage. Diesmal antw
 
 +++
 
-## Anwendungsbereich {#scope}
-
-Der Assistent kann Fragen zu Real-Time CDP- und Experience Platform-Konzepten sowie zur spezifischen Datennutzung für Ihr Benutzerkonto beantworten. Der Assistent kann auch Kontext basierend auf der Benutzeroberflächen-Seite abrufen, in der Sie sich befinden. Sie kann Folgendes identifizieren:
-
-* Das Benutzerkonto, das Sie verwenden.
-* Die Organisation, der Sie angehören.
-* Die Seite, die Sie auf Ihrem Bildschirm anzeigen.
-* Die Ressource (einschließlich Typ und ID), die Sie auf Ihrem Bildschirm anzeigen.
-* Da Sie sich in einem bestimmten Experience Platform- oder Real-Time CDP-Workflow befinden, kann der Assistent Ihre Absicht verkünden.
-
-### Dokumentation {#documentation}
+## Dokumentation {#documentation}
 
 Derzeit umfasst der Dokumentationsindex Adobe Experience Platform (Real-Time CDP und Audiences). Der Index wird regelmäßig aktualisiert.
 
 Das Modell zum Abrufen der Dokumentation wird auf Experience Platform (Real-Time CDP und Zielgruppen) trainiert. Fragen, die nicht in Adobe Experience Platform enthalten sind, wie z. B. Fragen zu anderen Adobe-Produkten wie Adobe Target und der Creative Cloud Suite, können nicht beantwortet werden.
 
-### Datennutzung {#data-usage}
+## Datennutzung {#data-usage}
 
 Sie können Assistenzfragen auch zur Datennutzung in den folgenden Domänen stellen:
 
 * Attribute
+* Datenflüsse
 * Datensätze
 * Ziele _(Fragen zu Konten und einige Fragen zum Datenfluss können derzeit nicht beantwortet werden.)_
 * Schemas _(Fragen zu Feldergruppen können derzeit nicht beantwortet werden.)_
