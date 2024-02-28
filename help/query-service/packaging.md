@@ -2,10 +2,10 @@
 title: Query Service Packaging
 description: Im folgenden Dokument wird die Verpackung der für Query Service verfügbaren Funktionen und Produkte beschrieben und die Unterschiede zwischen Ad-hoc- und Batch-Abfragen hervorgehoben.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
+source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 4%
+source-wordcount: '963'
+ht-degree: 5%
 
 ---
 
@@ -39,7 +39,7 @@ In der folgenden Tabelle werden die wichtigsten Query Service-Berechtigungen bas
 | Ausfuhrbeihilfe | Ihre gesamte Exportberechtigung hängt von Ihren plattformbasierten Anwendungslizenzen ab. Zum Beispiel Real-Time CDP, AJO, CJA usw. | Ja - Es wird eine zusätzliche Exportberechtigung bereitgestellt, um den Export von abgeleiteten Datensätzen zu ermöglichen, die mit Data Distiller erstellt wurden.<br>Ihr jährliches Datenexportlimit wird in Terabyte (TB) gemessen und hängt von der Menge der von Ihnen gekauften Compute hours ab. Weitere Informationen finden Sie in der Produktbeschreibung . |
 | Oberfläche zur Ausführung von Abfragen | <ul><li>Benutzeroberfläche von Query Service</li><li>Client-Benutzeroberfläche von Drittanbietern</li><li>[!DNL PostgresSQL] Client-Benutzeroberfläche</li></ul> | <ul><li>Benutzeroberfläche von Query Service </li><li>Client-Benutzeroberfläche von Drittanbietern</li><li>[!DNL PostgresSQL] Client-Benutzeroberfläche</li><li>REST-APIs</li></ul> |
 | Abfrageergebnisse zurückgegeben über | Client-Benutzeroberfläche | Abgeleiteter Datensatz, der im Data Lake gespeichert ist |
-| Ergebnisbegrenzung | <ul><li>Query Service-Benutzeroberfläche - Die Anzahl der Ausgabezeilen kann [mit einer UI-Einstellung konfiguriert](./ui/user-guide.md#result-count) zwischen 50 und 500 Zeilen.</li><li>Drittanbieter-Clients - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | <ul><li>Query Service-Benutzeroberfläche - Die Anzahl der Ausgabezeilen kann [mit einer UI-Einstellung konfiguriert](./ui/user-guide.md#result-count) zwischen 50 und 500 Zeilen.<br>Hinweis: CTAS- und ITAS-Abfragen generieren nur Erfolgsmeldungen, da die Abfrageausgabe in abgeleiteten Datensätzen gespeichert wird.</li><li>Drittanbieter-Clients (keine Obergrenze für Zeilen)</li><li>[!DNL PostgresSQL] client (keine Obergrenze für Zeilen)</li><li>REST-APIs (keine Obergrenze für Zeilen)</li></ul> |
+| Ergebnisbegrenzung | <ul><li>Query Service-Benutzeroberfläche - Die Anzahl der Ausgabezeilen kann [mit einer UI-Einstellung konfiguriert](./ui/user-guide.md#result-count) zwischen 50 und 500 Zeilen.</li><li>Drittanbieter-Clients - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | CTAS- und ITAS-Abfragen generieren nur Erfolgsmeldungen, da die Abfrageausgabe in abgeleiteten Datensätzen gespeichert wird. |
 | Datensatzkapazität lesen | Ja | Ja |
 | Datensatzkapazität schreiben | Nein | Ja |
 | Planungskapazität | Nein | Ja |
