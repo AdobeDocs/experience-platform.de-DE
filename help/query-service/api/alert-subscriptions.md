@@ -2,11 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Abfragedienst;Abfrage-Service;Warnhinweis;
 title: Warnungsabonnement-Endpunkt
 description: Dieses Handbuch enthält Beispiele für HTTP-Anfragen und -Antworten für die verschiedenen API-Aufrufe, die Sie mit der Abfrage-Service-API an den Endpunkt für Warnhinweis-Abonnements stellen können.
+role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2661'
-ht-degree: 88%
+source-wordcount: '2666'
+ht-degree: 87%
 
 ---
 
@@ -63,7 +64,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflist
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende und `-` in absteigender Reihenfolge. Die Standardeinstellung lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
+| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende `-` in absteigender Reihenfolge. Der Standardwert lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
 | `pagesize` | Verwenden Sie diesen Parameter, um die Anzahl der Datensätze zu steuern, die Sie vom API-Aufruf pro Seite abrufen möchten. Standardmäßig ist die maximale Anzahl von 50 Datensätzen pro Seite festgelegt. |
 | `page` | Geben Sie die Seitenzahl der zurückgegebenen Ergebnisse an, für die die Datensätze angezeigt werden sollen. |
 | `property` | Filtern Sie die Ergebnisse nach ausgewählten Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die folgenden Eigenschaften ermöglichen das Filtern: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Unterstützte Operatoren sind `==` (gleich). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt den Warnhinweis mit einer übereinstimmenden ID zurück. |
@@ -387,7 +388,7 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parameter | Beschreibung |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Eine E-Mail-Adresse, die für ein Adobe-Konto registriert ist, wird zur Identifizierung der Personen verwendet, die Warnhinweise abonniert haben. |
-| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende und `-` in absteigender Reihenfolge. Die Standardeinstellung lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
+| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende `-` in absteigender Reihenfolge. Der Standardwert lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
 | `pagesize` | Verwenden Sie diesen Parameter, um die Anzahl der Datensätze zu steuern, die Sie vom API-Aufruf pro Seite abrufen möchten. Standardmäßig ist die maximale Anzahl von 50 Datensätzen pro Seite festgelegt. |
 | `page` | Geben Sie die Seitenzahl der zurückgegebenen Ergebnisse an, für die die Datensätze angezeigt werden sollen. |
 | `property` | Filtern Sie die Ergebnisse nach ausgewählten Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die folgenden Eigenschaften ermöglichen das Filtern: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Unterstützte Operatoren sind `==` (gleich). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt den Warnhinweis mit einer übereinstimmenden ID zurück. |

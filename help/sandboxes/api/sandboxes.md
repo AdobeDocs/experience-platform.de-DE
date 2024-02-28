@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Entwicklerhandbuch
+keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Sandbox-Management-API-Endpunkt
 description: Mit dem Endpunkt /sandboxes in der Sandbox-API können Sie Sandboxes in Adobe Experience Platform programmgesteuert verwalten.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1488'
-ht-degree: 49%
+source-wordcount: '1474'
+ht-degree: 45%
 
 ---
 
 # Sandbox-Verwaltungs-Endpunkt
 
-Sandboxes in Adobe Experience Platform stellen isolierte Entwicklungsumgebungen bereit, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne Ihre Produktionsumgebung zu beeinträchtigen. Die `/sandboxes` -Endpunkt im [!DNL Sandbox] Mit der API können Sie Sandboxes in Platform programmgesteuert verwalten.
+Sandboxes in Adobe Experience Platform bieten isolierte Entwicklungsumgebungen, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionsumgebung zu beeinträchtigen. Die `/sandboxes` -Endpunkt im [!DNL Sandbox] Mit der API können Sie Sandboxes in Platform programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -46,7 +47,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die zu Ihrem Unternehmen gehören, einschließlich Details wie `name`, `title`, `state`und `type`.
+Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die zu Ihrem Unternehmen gehören, einschließlich Details wie `name`, `title`, `state`, und `type`.
 
 ```json
 {
@@ -189,7 +190,7 @@ Bei erfolgreicher Antwort werden Details zur Sandbox einschließlich `name`, `ti
 | `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die Standard-Sandbox für die Organisation ist. In der Regel ist dies die Produktions-Sandbox. |
 | `eTag` | Eine Kennung für eine bestimmte Version der Sandbox. Dieser Wert erleichtert Versionskontrolle und Caching und wird bei jeder Änderung an der Sandbox aktualisiert. |
 
-## Sandbox erstellen {#create}
+## Erstellen einer Sandbox {#create}
 
 >[!NOTE]
 >
@@ -485,7 +486,7 @@ Sie können eine Sandbox löschen, indem Sie eine DELETE-Anfrage ausführen, die
 
 >[!NOTE]
 >
-> Durch diesen API-Aufruf wird die `status`-Eigenschaft der Sandbox in „Gelöscht“ geändert und deaktiviert. GET-Anfragen können die Details der Sandbox, nachdem sie gelöscht wurde, weiter abrufen.
+>Durch diesen API-Aufruf wird die Sandbox aktualisiert. `status` auf &quot;Gelöscht&quot;gesetzt und deaktiviert. GET-Anfragen können die Details der Sandbox, nachdem sie gelöscht wurde, weiter abrufen.
 
 **API-Format**
 

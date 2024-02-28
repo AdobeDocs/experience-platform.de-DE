@@ -3,11 +3,12 @@ keywords: Experience Platform; home; beliebte Themen; Abfragedienst; geplante Ab
 solution: Experience Platform
 title: API-Endpunkt für geplante Abfragen - Ausführungen
 description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für die Ausführung geplanter Abfragen mit der Query Service-API ausführen können.
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 78%
+source-wordcount: '782'
+ht-degree: 76%
 
 ---
 
@@ -148,7 +149,7 @@ Bei einer erfolgreichen Antwort wird für die angegebene geplante Abfrage der HT
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` nutzen, um [eine Ausführung für eine bestimmte geplante Abfrage zu stoppen](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Sie können den Wert von `_links.cancel` nach [Beenden einer Ausführung für eine bestimmte geplante Abfrage](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Sofort eine Ausführung für eine bestimmte geplante Abfrage auslösen
 

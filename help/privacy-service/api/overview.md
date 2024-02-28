@@ -1,11 +1,12 @@
 ---
 title: Handbuch zur Privacy Service-API
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für unterstützte Adobe Experience Cloud-Anwendungen programmgesteuert verwalten können.
+role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
-source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 21%
+source-wordcount: '261'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +16,7 @@ Die Privacy Service-API bietet mehrere Endpunkte, mit denen Sie Datenschutzauftr
 
 >[!NOTE]
 >
->In diesem Handbuch wird die Verwendung der [!DNL Privacy Service] API. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie in der [Übersicht über die Privacy Service-Benutzeroberfläche](../ui/overview.md).
+>In diesem Handbuch wird die Verwendung der [!DNL Privacy Service] API. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie unter [Übersicht über die Privacy Service-Benutzeroberfläche](../ui/overview.md).
 
 Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [Privacy Service-API-Referenz](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 

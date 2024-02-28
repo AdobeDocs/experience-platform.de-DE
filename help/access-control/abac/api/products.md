@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; Attributbasierte Zugriffssteuerung; attributbasierte Zugriffssteuerung
+keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Control;attribute-based access control
 solution: Experience Platform
 title: Produkt-API-Endpunkt
 description: Mit dem Endpunkt /products in der API für die attributbasierte Zugriffssteuerung können Sie Produkte in Adobe Experience Platform programmgesteuert verwalten.
+role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '513'
 ht-degree: 25%
 
 ---
@@ -241,4 +242,4 @@ Bei einer erfolgreichen Antwort werden die mit der abgefragten Produkt-ID verkn�
 | `category` | Die verfügbare Berechtigungskategorie. |
 | `permissions` | Zu den Berechtigungen gehört die Möglichkeit, Adobe Campaign-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemata und die Verwaltung von Datensätzen. |
 | `permissions.resource` | Das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht. Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
-| `permissions.actions` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `view`, `read`, `create`, `edit`und `delete` |
+| `permissions.actions` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `view`, `read`, `create`, `edit`, und `delete` |

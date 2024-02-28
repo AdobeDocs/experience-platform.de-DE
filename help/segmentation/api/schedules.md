@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Zeitplan-API-Endpunkt
 description: Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können.
+role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1996'
-ht-degree: 24%
+source-wordcount: '2040'
+ht-degree: 16%
 
 ---
 
@@ -16,7 +17,7 @@ Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich 
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Abrufen einer Liste von Zeitplänen {#retrieve-list}
 
@@ -24,7 +25,7 @@ Sie können eine Liste aller Zeitpläne für Ihr Unternehmen abrufen, indem Sie 
 
 **API-Format**
 
-Der `/config/schedules`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Diese Parameter sind zwar optional, doch wird ihre Verwendung dringend empfohlen, um den teuren Verwaltungsaufwand zu reduzieren. Beim Aufruf dieses Endpunkts ohne Angabe von Parametern werden alle für Ihr Unternehmen verfügbaren Zeitpläne abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+Der `/config/schedules`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Diese Parameter sind zwar optional, doch wird ihre Verwendung dringend empfohlen, um den teuren Verwaltungsaufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zeitpläne abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /config/schedules
@@ -95,11 +96,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zeitplän
 | `_page.totalCount` | Die Gesamtzahl der zurückgegebenen Zeitpläne. |
 | `_page.pageSize` | Die Größe der Seite der Zeitpläne. |
 | `children.name` | Der Name des Zeitplans als Zeichenfolge. |
-| `children.type` |  Der Auftragstyp als Zeichenfolge. Die beiden unterstützten Typen sind &quot;batch_segmentation&quot;und &quot;export&quot;. |
-| `children.properties` | Ein Objekt, das zusätzliche dem Zeitplan zugehörige Eigenschaften enthält. |
-| `children.properties.segments` | Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
-| `children.schedule` |  Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
-| `children.state` |  Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
+| `children.type` | Der Auftragstyp als Zeichenfolge. Die beiden unterstützten Typen sind &quot;batch_segmentation&quot;und &quot;export&quot;. |
+| `children.properties` | Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
+| `children.properties.segments` | Verwenden `["*"]` stellt sicher, dass alle Segmente einbezogen werden. |
+| `children.schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
+| `children.state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
 
 ## Erstellen neuer Zeitpläne {#create}
 
@@ -183,7 +184,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id`-Wert des Zeitplans, den Sie abrufen möchten. |
+| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -226,11 +227,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegeb
 | Eigenschaft | Beschreibung |
 | -------- | ------------ |
 | `name` | Der Name des Zeitplans als Zeichenfolge. |
-| `type` |  Der Auftragstyp als Zeichenfolge. Unterstützt werden die Typen `batch_segmentation` und `export`. |
-| `properties` | Ein Objekt, das zusätzliche dem Zeitplan zugehörige Eigenschaften enthält. |
-| `properties.segments` | Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
-| `schedule` |  Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
-| `state` |  Eine Zeichenfolge, die den Status des Zeitplans enthält. Unterstützt werden die Status `active` und `inactive`. Standardmäßig lautet der Status `inactive`. |
+| `type` | Der Auftragstyp als Zeichenfolge. Unterstützt werden die Typen `batch_segmentation` und `export`. |
+| `properties` | Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
+| `properties.segments` | Verwenden `["*"]` stellt sicher, dass alle Segmente einbezogen werden. |
+| `schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
+| `state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Unterstützt werden die Status `active` und `inactive`. Standardmäßig lautet der Status `inactive`. |
 
 ## Aktualisieren von Details für einen bestimmten Zeitplan {#update}
 
@@ -250,7 +251,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id`-Wert des Zeitplans, den Sie aktualisieren möchten. |
+| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -291,7 +292,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id`-Wert des Zeitplans, den Sie aktualisieren möchten. |
+| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -332,7 +333,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id`-Wert des Zeitplans, den Sie löschen möchten. |
+| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -364,7 +365,7 @@ Ein Cron-Ausdruck ist eine Zeichenfolge aus 6 oder 7 Feldern. Der Ausdruck würd
 
 In einer Cron-Ausdruckszeichenfolge stellt das erste Feld die Sekunden, das zweite die Minuten, das dritte Feld die Stunden, das vierte Feld den Tag des Monats, das fünfte Feld den Monat und das sechste Feld den Wochentag dar. Sie können optional auch ein siebtes Feld einfügen, das das Jahr darstellt.
 
-| Feldname | Erforderlich | Mögliche Werte | Zulässige Sonderzeichen |
+| Feldname | Erforderlich | Mögliche Werte | zulässige Sonderzeichen |
 | ---------- | -------- | --------------- | -------------------------- |
 | Seconds | Ja | 0-59 | `, - * /` |
 | Minutes | Ja | 0-59 | `, - * /` |

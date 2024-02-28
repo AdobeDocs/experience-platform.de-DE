@@ -3,11 +3,12 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Privacy Jobs API Endpoint
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Apps verwalten.
+role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 62%
+source-wordcount: '1552'
+ht-degree: 57%
 
 ---
 
@@ -70,7 +71,7 @@ Um den nächsten Ergebnissatz in einer paginierten Antwort abzurufen, müssen Si
 
 >[!IMPORTANT]
 >
->Privacy Service ist nur für Anfragen der betroffenen Person und für Verbraucherrechtsanfragen vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt und ist nicht zulässig. Adobe ist gesetzlich verpflichtet, diese rechtzeitig zu erfüllen. Daher sind Lasttests auf Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und ein unnötiger Rückstau gültiger Datenschutzanfragen erzeugt wird.
+>Privacy Service ist nur für Anfragen der betroffenen Person und für Verbraucherrechtsanfragen vorgesehen. Jegliche andere Verwendung von Privacy Service für die Datenbereinigung oder -wartung wird nicht unterstützt und ist nicht zulässig. Adobe ist gesetzlich verpflichtet, diese rechtzeitig zu erfüllen. Daher sind Lasttests auf Privacy Service nicht zulässig, da es sich um eine reine Produktionsumgebung handelt und ein unnötiger Rückstand gültiger Datenschutzanfragen erzeugt wird.
 >
 >Es gibt jetzt eine feste tägliche Upload-Grenze, um einen Missbrauch des Dienstes zu verhindern. Für Benutzende, bei denen ein Missbrauch des Systems festgestellt wurde, wird der Zugriff auf den Dienst deaktiviert. Anschließend wird mit ihnen ein Meeting abgehalten, bei dem ihr Handeln und die akzeptable Verwendung von Privacy Service erörtert wird.
 
@@ -78,7 +79,7 @@ Bevor Sie eine neue Auftragsanfrage erstellen, müssen Sie zunächst identifizie
 
 >[!NOTE]
 >
-> Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von Datensubjekten. Weitere Informationen zu den erforderlichen Identifikatoren für Ihre Anwendungen finden Sie im Handbuch zu [Privacy Service und Experience Cloud-Anwendungen](../experience-cloud-apps.md). Allgemeine Hinweise zur Bestimmung der zu sendenden IDs [!DNL Privacy Service], siehe das Dokument unter [Identitätsdaten in Datenschutzanfragen](../identity-data.md).
+>Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von Datensubjekten. Siehe Handbuch unter [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md) für weitere Informationen zu den erforderlichen Kennungen für Ihre Anwendung(en). Allgemeine Hinweise zur Bestimmung der zu sendenden IDs [!DNL Privacy Service], siehe das Dokument unter [Identitätsdaten in Datenschutzanfragen](../identity-data.md).
 
 Die [!DNL Privacy Service] API unterstützt zwei Arten von Auftragsanfragen für personenbezogene Daten:
 
@@ -87,7 +88,7 @@ Die [!DNL Privacy Service] API unterstützt zwei Arten von Auftragsanfragen für
 
 >[!IMPORTANT]
 >
->Während Zugriff- und Löschanfragen zu einem einzigen API-Aufruf kombiniert werden können, müssen Opt-Out-Anfragen separat gestellt werden.
+>Während Zugriffs- und Löschanfragen als ein einziger API-Aufruf kombiniert werden können, müssen Opt-out-Anfragen separat gestellt werden.
 
 ### Erstellen/Löschen eines Auftrags {#access-delete}
 

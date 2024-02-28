@@ -5,7 +5,8 @@ user-guide-title: Datenerfassung
 breadcrumb-title: Datenerfassung
 user-guide-description: Erfahren Sie, wie Sie die Client-seitige Datenerfassung für das Adobe Experience Platform Edge Network aktivieren, und erfahren Sie mehr über die verwendeten Datenerfassungstechnologien.
 feature: Data Collection
-source-git-commit: b6230760c1e25a3ef0901d80160fb0992578c41e
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 89%

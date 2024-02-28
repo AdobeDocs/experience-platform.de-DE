@@ -2,22 +2,23 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;Automatische Durchsetzung;API-basierte Durchsetzung;Data Governance
 solution: Experience Platform
 title: API-Endpunkte für die Richtlinienauswertung
-description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API bewerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
+description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API auswerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
+role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1538'
 ht-degree: 100%
 
 ---
 
 # Endpunkte für die Richtlinienauswertung
 
-Sobald Marketing-Aktionen erstellt und Richtlinien für die Datennutzung definiert wurden, können Sie die [!DNL Policy Service]-API verwenden, um zu prüfen, ob bestimmte Aktionen gegen Richtlinien verstoßen. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
+Sobald Marketing-Aktionen erstellt und Richtlinien für die Datennutzung definiert wurden, können Sie die [!DNL Policy Service]-API verwenden, um auszuwerten, ob bestimmte Aktionen gegen Richtlinien verstoßen. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
 
-Standardmäßig werden nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, in die Bewertung einbezogen. Sie können jedoch den Abfrageparameter `?includeDraft=true` verwenden, um auch `DRAFT`-Richtlinien in die Auswertung einzubeziehen.
+Standardmäßig werden nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, in die Auswertung einbezogen. Sie können jedoch den Abfrageparameter `?includeDraft=true` verwenden, um auch `DRAFT`-Richtlinien in die Auswertung einzubeziehen.
 
-Bewertungsanfragen können auf drei Arten gestellt werden:
+Auswertungsanfragen können auf drei Arten gestellt werden:
 
 1. Verstößt die Aktion angesichts einer vorgegebenen Marketing-Aktion und einer Reihe von Datennutzungskennzeichnungen gegen Richtlinien?
 1. Verstößt die Aktion angesichts einer vorgegebenen Marketing-Aktion und eines oder mehrerer Datensätze gegen eine Richtlinie?
@@ -45,11 +46,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 **Anfrage**
 
-Die folgende Beispielanfrage bewertet eine Marketing-Aktion mit den Bezeichnungen C1 und C3.
+Die folgende Beispielanfrage wertet eine Marketing-Aktion mit den Bezeichnungen C1 und C3 aus.
 
 >[!IMPORTANT]
 >
->Achten Sie auf `AND`- und `OR`-Operatoren in Ihren Richtlinienausdrücken. In diesem Beispiel hätte die Marketing-Aktion nicht gegen diese Richtlinie verstoßen, wenn eine der Kennzeichnungen (`C1` bzw. `C3`) allein in der Anfrage erschienen wäre. Beide Kennzeichnungen (`C1` und `C3`) sind erforderlich, damit eine Verletzung der Richtlinie gemeldet wird. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig bewerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
+>Achten Sie auf `AND`- und `OR`-Operatoren in Ihren Richtlinienausdrücken. In diesem Beispiel hätte die Marketing-Aktion nicht gegen diese Richtlinie verstoßen, wenn eine der Kennzeichnungen (`C1` bzw. `C3`) allein in der Anfrage erschienen wäre. Beide Kennzeichnungen (`C1` und `C3`) sind erforderlich, damit eine Verletzung der Richtlinie gemeldet wird. Vergewissern Sie sich, dass Sie die Richtlinien sorgfältig auswerten und die Richtlinienausdrücke mit gleicher Sorgfalt definieren.
 
 ```shell
 curl -X GET \
@@ -350,7 +351,7 @@ Eine erfolgreiche Antwort enthält ein `violatedPolicies`-Array mit den Details 
 
 Sie können Richtlinienverletzungen anhand einer Teilmenge von Feldern aus einem oder mehreren Datensätzen auswerten, sodass nur die auf diese Felder angewendeten Datennutzungskennzeichnungen ausgewertet werden.
 
-Beachten Sie bei der Bewertung von Richtlinien mithilfe von Datensatzfeldern Folgendes:
+Beachten Sie bei der Auswertung von Richtlinien mithilfe von Datensatzfeldern Folgendes:
 
 * **Bei den Feldnamen wird zwischen Groß- und Kleinschreibung unterschieden**: Bei der Bereitstellung von Feldern müssen sie genau so geschrieben werden, wie sie im Datensatz erscheinen (z. B. `firstName` vs. `firstname`).
 * **Vererbung von Datensatzkennzeichnungen**: Einzelne Felder in einem Datensatz übernehmen alle Kennzeichnungen, die auf Datensatzebene angewendet wurden. Wenn Ihre Richtlinienauswertungen nicht die erwarteten Ergebnisse zurückgeben, stellen Sie sicher, dass Sie zusätzlich zu den auf Feldebene angewendeten Kennzeichnungen auch alle Kennzeichnungen überprüfen, die möglicherweise von der Datensatzebene in die Felder übernommen wurden.

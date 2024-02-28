@@ -4,8 +4,9 @@ solution: Data Collection
 user-guide-title: Dokumentation zur Edge Network Server-API
 breadcrumb-title: Dokumentation zur Edge Network Server-API
 user-guide-description: Verwenden Sie die Edge Network Server-API für Datenerfassungs-, Personalisierungs-, Werbe- und Marketing-Aktivitäten mit Experience Cloud- oder Experience Platform Edge-Services.
-feature: Data Collection
-source-git-commit: f7b6154166ccd7989c563115e99717937cfe9a5d
+feature: Server API
+role: Developer
+source-git-commit: 49adc892e19a4e781272db35d35616bf3c50b985
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 100%

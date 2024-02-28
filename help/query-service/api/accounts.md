@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Query Service; API-Handbuch; Query Service; Query Service-Konten; Konten;
+keywords: Experience Platform; home; beliebte Themen; Query Service; API-Handbuch; Query Service; Query Service-Konten; Konten;
 solution: Experience Platform
 title: Konto-API-Endpunkt
 description: Sie können ein Query Service-Konto für beständig erstellen.
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '498'
 ht-degree: 5%
 
 ---

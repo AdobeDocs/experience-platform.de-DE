@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: API-Endpunkt für Segmentaufträge
 description: Der Endpunkt für Segmentaufträge in der Segmentation Service-API von Adobe Experience Platform ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentaufträgen für Ihr Unternehmen.
+role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 23%
+source-wordcount: '1524'
+ht-degree: 17%
 
 ---
 
@@ -18,7 +19,7 @@ Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentauft
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Liste mit Segmentaufträgen abrufen {#retrieve-list}
 
@@ -555,7 +556,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum angegebenen Segmentauftrag zurück.  Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zum angegebenen Segmentauftrag zurück.  Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
 
 **Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
 
@@ -844,4 +845,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 mit folgenden Informationen z
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs verstehen Sie nun besser, wie Segmentaufträge funktionieren.
+Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon, wie Segmentaufträge funktionieren.

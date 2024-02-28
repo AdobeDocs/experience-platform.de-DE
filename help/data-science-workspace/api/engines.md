@@ -3,11 +3,12 @@ keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Worksp
 solution: Experience Platform
 title: Engines API Endpoint
 description: Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Workspace. Sie enthalten Algorithmen für maschinelles Lernen, die bestimmte Probleme lösen, Pipelines zur Funktionsentwicklung aufweisen oder beides.
+role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1165'
-ht-degree: 69%
+ht-degree: 65%
 
 ---
 
@@ -45,7 +46,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details Ihrer Docke
 
 >[!NOTE]
 >
->Ihr Docker-Passwort ändert sich jedes Mal, wenn Ihr `{ACCESS_TOKEN}` aktualisiert wird.
+>Ihr Docker-Passwort ändert sich immer dann, wenn Ihr `{ACCESS_TOKEN}` aktualisiert wird.
 
 ```json
 {
@@ -142,7 +143,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort gilt für eine Python-Engine. Alle Engine-Antworten haben folgendes Format:
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`). Die folgende Beispielantwort gilt für eine Python-Engine. Alle Engine-Antworten haben folgendes Format:
 
 ```json
 {
@@ -213,7 +214,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Der Wert kann auf Spark oder PySpark festgelegt werden. |
-| `algorithm` | Setzen Sie den verwendeten Algorithmus auf `fp` (Funktions-Pipeline). |
+| `algorithm` | Setzen Sie den verwendeten Algorithmus auf `fp` (Feature Pipeline). |
 | `name` | Der gewünschte Name für die Feature Pipeline-Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
 | `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
@@ -386,7 +387,7 @@ Sie können eine vorhandene Engine ändern und aktualisieren, indem Sie ihre Eig
 
 >[!NOTE]
 >
-> Um den Erfolg dieser PUT-Anfrage zu gewährleisten, wird empfohlen, zuerst eine GET-Anfrage zum [Abrufen der Engine nach Kennung](#retrieve-specific) auszuführen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [Abfrage der Engine nach ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen und die Beschreibung einer Engine und weist zunächst folgende Eigenschaften auf:
 

@@ -1,11 +1,12 @@
 ---
 title: Zielgruppen-API-Endpunkt
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Adobe Experience Platform Segmentation Service-API, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 9%
+ht-degree: 7%
 
 ---
 
@@ -15,7 +16,7 @@ Eine Zielgruppe ist eine Sammlung von Personen, die ähnliche Verhaltensweisen u
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Abrufen einer Zielgruppenliste {#list}
 
@@ -195,7 +196,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgrupp
 
 +++
 
-## Erstellen einer neuen Zielgruppe {#create}
+## Neue Zielgruppe erstellen {#create}
 
 Sie können eine neue Zielgruppe erstellen, indem Sie eine POST-Anfrage an die `/audiences` -Endpunkt.
 
@@ -209,7 +210,7 @@ POST /audiences
 
 >[!BEGINTABS]
 
->[!TAB Platform-generierte Zielgruppe]
+>[!TAB Plattformgenerierte Zielgruppe]
 
 +++ Beispielanfrage zum Erstellen einer Platform-generierten Zielgruppe
 
@@ -305,7 +306,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrer ne
 
 >[!BEGINTABS]
 
->[!TAB Platform-generierte Zielgruppe]
+>[!TAB Plattformgenerierte Zielgruppe]
 
 +++ Eine Beispielantwort beim Erstellen einer Platform-generierten Zielgruppe.
 
@@ -450,7 +451,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zur angegeb
 
 >[!BEGINTABS]
 
->[!TAB Platform-generierte Zielgruppe]
+>[!TAB Plattformgenerierte Zielgruppe]
 
 +++ Eine Beispielantwort beim Abrufen einer Platform-generierten Zielgruppe.
 
@@ -722,7 +723,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | Der Namespace für die Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
 | `type` | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe Platform-generiert ist oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. A `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während eine `ExternalSegment` bezieht sich auf eine Zielgruppe, die nicht in Platform generiert wurde. |
-| `lifecycleState` | Der Status der Zielgruppe. Zu den möglichen Werten gehören `draft`, `published` und `inactive`. `draft` steht für den Zeitpunkt der Erstellung der Audience; `published` Zeitpunkt der Veröffentlichung der Zielgruppe und `inactive` wenn die Zielgruppe nicht mehr aktiv ist. |
+| `lifecycleState` | Der Status der Zielgruppe. Mögliche Werte sind `draft`, `published`, und `inactive`. `draft` steht für den Zeitpunkt der Erstellung der Audience; `published` Zeitpunkt der Veröffentlichung der Zielgruppe und `inactive` wenn die Zielgruppe nicht mehr aktiv ist. |
 | `datasetId` | Die ID des Datensatzes, in dem die Zielgruppendaten gefunden werden können. |
 | `labels` | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
 

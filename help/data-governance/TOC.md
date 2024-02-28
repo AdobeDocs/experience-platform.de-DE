@@ -4,9 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Data Governance
 breadcrumb-title: Data Governance-Handbuch
 user-guide-description: Setzen Sie Datennutzungsbeschränkungen durch die Verwendung von Kennzeichnungen, Marketing-Aktionen und Governance-Richtlinien durch.
 feature: Data Governance
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+role: User,Developer,Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '90'
 ht-degree: 100%
 
 ---

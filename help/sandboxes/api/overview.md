@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Entwicklerhandbuch
+keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Sandbox-API-Anleitung
 description: Sandboxes in Adobe Experience Platform stellen isolierte Entwicklungsumgebungen bereit, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne Ihre Produktionsumgebung zu beeinträchtigen.
+role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 38%
+source-wordcount: '327'
+ht-degree: 24%
 
 ---
 
@@ -27,8 +28,8 @@ Eine Sandbox ist eine virtuelle Partition innerhalb einer einzigen Instanz von A
 
 ## Sandbox-Typen
 
-Derzeit werden in Experience Platform Produktions- und Entwicklungs-Sandboxes unterstützt. Mit einer Standardlizenz für Platform erhalten Sie insgesamt fünf Sandboxes, die Sie jeweils als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Siehe [Endpunkthandbuch zu Sandbox-Typen](./types.md) , um zu erfahren, wie Sie unterstützte Sandbox-Typen für Ihre Organisation in der API anzeigen können.
+Derzeit werden auf dem Experience Platform Produktions- und Entwicklungs-Sandboxes unterstützt. Mit einer standardmäßigen Platform-Lizenz erhalten Sie insgesamt fünf Sandboxes, die Sie als Produktion oder Entwicklung klassifizieren können. Sie können Zusatzpakete von jeweils zehn Sandboxes bis zu einem Maximum von insgesamt 75 Sandboxes hinzufügen. Siehe [Endpunkthandbuch zu Sandbox-Typen](./types.md) , um zu erfahren, wie Sie unterstützte Sandbox-Typen für Ihre Organisation in der API anzeigen können.
 
 ## Nächste Schritte
 
-Um mit Aufrufen mit der [!DNL Sandbox]-API zu beginnen, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) und wählen Sie dann eins der Endpunkthandbücher aus, um zu erfahren, wie bestimmte Endpunkte verwendet werden.
+So starten Sie Aufrufe mit dem [!DNL Sandbox] API, lesen Sie die [Erste Schritte](./getting-started.md) Wählen Sie dann eine der Endpunktleitfäden aus, um zu erfahren, wie Sie bestimmte Endpunkte verwenden.

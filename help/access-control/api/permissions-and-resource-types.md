@@ -3,8 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerungs-Bere
 solution: Experience Platform
 title: Referenz-API-Endpunkt
 description: Über den Referenz-Endpunkt in der Access Control-API können Sie die Namen der verfügbaren Berechtigungen und Ressourcentypen anzeigen, die dann verwendet werden können, um effektive Zugriffssteuerungsrichtlinien für den aktuellen Benutzer anzuzeigen.
+role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 59%
@@ -19,7 +20,7 @@ ht-degree: 59%
 
 Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den `/acl/reference`-Endpunkt stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um [Anzeigen effektiver Zugriffskontrollrichtlinien](./effective-policies.md) für den aktuellen Benutzer.
 
-Eine Berechtigung ist eine Richtlinie, die über die Adobe Admin Console verwaltet wird und keiner bzw. mehr Richtlinien vom Typ Ressource zugeordnet ist. Ein Ressourcentyp ist eine Richtlinie, die Lese-, Schreib- und/oder Löschfunktionen für einen bestimmten Typ von [!DNL Platform]-Ressourcen (z. B. Datensätze oder Schemas) ermöglicht.
+Eine Berechtigung ist eine Richtlinie, die über die Adobe Admin Console verwaltet wird und keiner bzw. mehr Richtlinien vom Typ Ressource zugeordnet ist. Ein Ressourcentyp ist eine Richtlinie, die Lese-, Schreib- und/oder Löschfunktionen für einen bestimmten Typ von [!DNL Platform]-Ressourcen (z. B. Datensätze oder Schemata) ermöglicht.
 
 **API-Format**
 

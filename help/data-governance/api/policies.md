@@ -3,10 +3,11 @@ keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung
 solution: Experience Platform
 title: API-Endpunkt für Data Governance-Richtlinien
 description: Data Governance-Richtlinien sind Regeln, die Ihr Unternehmen verabschiedet hat und die die Arten von Marketing-Aktionen beschreiben, die Sie mit den Daten in Experience Platform durchführen dürfen bzw. die Ihnen untersagt sind. Der Endpunkt /policies wird für alle API-Aufrufe im Zusammenhang mit dem Anzeigen, Erstellen, Aktualisieren oder Löschen von Data Governance-Richtlinien verwendet.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1863'
 ht-degree: 100%
 
 ---
@@ -610,7 +611,7 @@ Sie können den Löschvorgang überprüfen, indem Sie erneut versuchen, nach der
 
 ## Eine Liste von aktivierten Kernrichtlinien abrufen {#list-enabled-core}
 
-Standardmäßig sind nur aktivierte Data Governance-Richtlinien an der Bewertung beteiligt. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen.
+Standardmäßig sind nur aktivierte Data Governance-Richtlinien an der Auswertung beteiligt. Sie können eine Liste der derzeit von Ihrem Unternehmen aktivierten Kernrichtlinien abrufen, indem Sie eine GET-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen.
 
 **API-Format**
 
@@ -662,7 +663,7 @@ Eine erfolgreiche Antwort gibt die Liste der aktivierten Kernrichtlinien unter e
 
 ## Aktualisieren der Liste der aktivierten Kernrichtlinien {#update-enabled-core}
 
-Standardmäßig sind nur aktivierte Data Governance-Richtlinien an der Bewertung beteiligt. Wenn Sie eine PUT-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen, können Sie die Liste der aktivierten Kernrichtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
+Standardmäßig sind nur aktivierte Data Governance-Richtlinien an der Auswertung beteiligt. Wenn Sie eine PUT-Anfrage an den `/enabledCorePolicies`-Endpunkt stellen, können Sie die Liste der aktivierten Kernrichtlinien für Ihr Unternehmen mit einem einzigen Aufruf aktualisieren.
 
 >[!NOTE]
 >

@@ -3,11 +3,12 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Anhang zum Privacy Service-API-Handbuch
 description: Dieses Dokument enth채lt zus채tzliche Informationen zum Arbeiten mit der Privacy Service-API.
+role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -29,7 +30,7 @@ In der folgenden Tabelle sind mehrere h채ufig verwendete, vordefinierte Identit�
 | Adobe Audience Manager UUID | `CORE` | `0` |
 | Adobe Experience Cloud ID | `ECID` | `4` |
 | ADOBE TARGET ID | `TNTID` | `9` |
-| [!DNL Apple] ID f체r Advertisers | `IDFA` | `20915` |
+| [!DNL Apple] ID f체r Advertiser | `IDFA` | `20915` |
 | [!DNL Google] Anzeigen-ID | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
 

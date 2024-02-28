@@ -5,7 +5,8 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Datenströmen
 breadcrumb-title: Handbuch zu Datenströmen
 user-guide-description: Erfahren Sie, wie Sie Datenströme in Adobe Experience Platform erstellen.
 feature: Datastreams
-source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 90%

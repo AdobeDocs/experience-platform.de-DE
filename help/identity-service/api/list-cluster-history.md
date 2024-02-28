@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Identitäten; Cluster-Verlauf
+keywords: Experience Platform; home; beliebte Themen; Identitäten; Cluster-Verlauf
 solution: Experience Platform
 title: Abrufen des Cluster-Verlaufs einer Identität
 description: Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. Identity Service bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
+role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 48%
+source-wordcount: '345'
+ht-degree: 35%
 
 ---
 
@@ -69,7 +70,7 @@ Verwenden Sie die `POST` -Methode als Batch-Entsprechung der `GET` -Methode, die
 
 >[!NOTE]
 >
-> Die Anfrage darf höchstens 1.000 Identitäten zurückgeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
+>Die Anfrage sollte maximal 1.000 Identitäten angeben. Anfragen mit mehr als 1.000 Identitäten führen zu 400-Status-Codes.
 
 **API-Format**
 
@@ -213,8 +214,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Die Antwort enthält stets einen Eintrag für jede XID, die in der Anfrage angegeben ist, unabhängig davon, ob die XIDs einer Anfrage demselben Cluster angehören oder ob eine bzw. mehrere von ihnen überhaupt einem Cluster zugeordnet sind.
+>Die Antwort enthält immer einen Eintrag für jede XID, die in der Anfrage bereitgestellt wird, unabhängig davon, ob die XIDs einer Anfrage demselben Cluster angehören oder ob einer oder mehreren ein Cluster überhaupt zugeordnet ist.
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Tutorial fort, um [Auflisten von Identitätszuordnungen](./list-identity-mappings.md)
+Fahren Sie mit dem nächsten Tutorial zu [Auflisten von Identitätszuordnungen](./list-identity-mappings.md)

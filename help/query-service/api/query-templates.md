@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;query templates;
 solution: Experience Platform
 title: API-Endpunkt für Abfragevorlagen
 description: In diesem Handbuch werden die verschiedenen API-Aufrufe für Abfragevorlagen beschrieben, die Sie mit der Query Service-API ausführen können.
+role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 51%
+source-wordcount: '977'
+ht-degree: 44%
 
 ---
 
@@ -108,7 +109,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragevo
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Abfragevorlage erstellen
 
@@ -175,7 +176,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zur 
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage abrufen
 
@@ -233,7 +234,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen A
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage aktualisieren
 
@@ -253,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->Für die PUT-Anfrage müssen Sie sowohl das Feld „sql“ als auch das Feld „name“ ausfüllen. Dadurch wird der aktuelle Inhalt dieser Abfragevorlage **überschrieben**.
+>Für die PUT-Anfrage müssen sowohl das Feld &quot;sql&quot;als auch das Feld &quot;name&quot;ausgefüllt werden. **overwrite** den aktuellen Inhalt dieser Abfragevorlage.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -309,7 +310,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit den aktualis
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage löschen
 

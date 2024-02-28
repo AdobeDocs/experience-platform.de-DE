@@ -3,10 +3,11 @@ keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung
 solution: Experience Platform
 title: API-Endpunkt für Marketing-Aktionen
 description: Eine Marketing-Aktion bezeichnet im Kontext des Data Governance-Frameworks eine Aktion, die ein Datennutzer von Adobe Experience Platform ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
+role: Developer
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '734'
 ht-degree: 100%
 
 ---

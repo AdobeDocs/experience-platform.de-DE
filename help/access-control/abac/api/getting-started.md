@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Attributbasierte Zugriffssteuerung; attributbasierte Zugriffssteuerung
+keywords: Experience Platform;home;popular topics;Attribute-Based Access Control;attributbasierte Zugriffssteuerung
 title: Erste Schritte mit der attributbasierten Access Control-API
 description: Mit der Attributbasierten Access Control-API können Sie Rollen und Zugriffsrichtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '327'
 ht-degree: 69%
 
 ---

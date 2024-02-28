@@ -1,11 +1,12 @@
 ---
 title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
+role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: a954059155857e6dde7884cf413561cd5214d9bb
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1714'
-ht-degree: 78%
+source-wordcount: '1726'
+ht-degree: 76%
 
 ---
 
@@ -37,7 +38,7 @@ Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor 
 
 ## Auflisten der Datensatzgültigkeiten {#list}
 
-Sie können alle Datensatzgültigkeiten für Ihre Organisation auflisten, indem Sie eine GET-Anfrage stellen. Mithilfe von Abfrageparametern kann die Antwort nach geeigneten Ergebnissen gefiltert werden.
+Sie können alle Datensatzabläufe für Ihr Unternehmen auflisten, indem Sie eine GET-Anfrage stellen. Mithilfe von Abfrageparametern kann die Antwort nach geeigneten Ergebnissen gefiltert werden.
 
 **API-Format**
 
@@ -297,7 +298,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) zurück und das
 
 ## Gültigkeitsstatus-Verlauf eines Datensatzes abrufen {#retrieve-expiration-history}
 
-Sie können das Gültigkeitsstatus-Protokoll eines spezifischen Datensatzes mithilfe des Abfrageparameters `include=history` in einer Suchanfrage aufrufen. Das Ergebnis enthält Informationen über die Erstellung der Datensatzgültigkeit, alle Aktualisierungen sowie über ihren Abbruch oder ihre Ausführung (falls zutreffend). Sie können auch die `ttlId` des Datensatzablaufs.
+Sie können das Gültigkeitsstatus-Protokoll eines spezifischen Datensatzes mithilfe des Abfrageparameters `include=history` in einer Suchanfrage aufrufen. Das Ergebnis enthält Informationen über die Erstellung des Datensatzablaufs, alle angewendeten Aktualisierungen sowie über den Abbruch oder die Ausführung (falls zutreffend). Sie können auch die `ttlId` des Datensatzablaufs.
 
 **API-Format**
 
@@ -402,7 +403,7 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtert Ergebnisse anhand eines exakten Ausführungsdatums, eines Enddatums für die Ausführung oder eines Anfangsdatums für die Ausführung. Sie werden zum Abrufen von Daten oder Datensätzen verwendet, die mit der Ausführung eines Vorgangs an einem bestimmten Datum, vor einem bestimmten Datum oder nach einem bestimmten Datum verknüpft sind. | `executedDate=2023-02-05T19:34:40.383615Z` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der zurückzugebenden Gültigkeiten angibt. Die Standardeinstellung ist 25. | `limit=50` |
-| `orderBy` | Die `orderBy` -Abfrageparameter gibt die Sortierreihenfolge der von der API zurückgegebenen Ergebnisse an. Verwenden Sie sie, um die Daten basierend auf einem oder mehreren Feldern anzuordnen, entweder in aufsteigender (ASC) oder in absteigender (DESC) Reihenfolge. Verwenden Sie das Präfix + oder - , um ASC bzw. DESC anzugeben. Folgende Werte werden akzeptiert: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
+| `orderBy` | Die `orderBy` -Abfrageparameter gibt die Sortierreihenfolge der von der API zurückgegebenen Ergebnisse an. Verwenden Sie sie, um die Daten basierend auf einem oder mehreren Feldern anzuordnen, entweder in aufsteigender (ASC) oder in absteigender (DESC) Reihenfolge. Verwenden Sie das Präfix + oder - , um ASC bzw. DESC anzugeben. Die folgenden Werte werden akzeptiert: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | Gibt die Gültigkeiten von Datensätzen zurück, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert ist standardmäßig auf den Wert der `x-gw-ims-org-id`-Kopfzeilen festgelegt und wird ignoriert, es sei denn, die Anfrage liefert ein Service-Token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Eine Ganzzahl, die angibt, welche Seite der Gültigkeitenliste zurückgegeben werden soll. | `page=3` |
 | `sandboxName` | Gibt die Datensatzgültigkeiten wieder, deren Sandbox-Name genau mit dem Argument übereinstimmt. Die Standardeinstellung ist der Sandbox-Name in der `x-sandbox-name`-Kopfzeile der Anfrage. Verwenden Sie `sandboxName=*`, um Datensatzgültigkeiten aus allen Sandboxes einzuschließen. | `sandboxName=dev1` |

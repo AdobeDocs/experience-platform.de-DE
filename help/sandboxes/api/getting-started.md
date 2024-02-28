@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Entwicklerhandbuch
+keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Erste Schritte mit der Sandbox-API
 description: Mit der Sandbox-API können Entwickler Sandboxes in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '372'
 ht-degree: 85%
 
 ---

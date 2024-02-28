@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Listen-Sandboxes
+keywords: Experience Platform; home; beliebte Themen; Listen-Sandboxes
 solution: Experience Platform
 title: Sandbox-Typen-API-Endpunkt
 description: Sie können eine Liste der unterstützten Sandbox-Typen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt /sandboxTypes stellen.
+role: Developer
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 74%
+source-wordcount: '158'
+ht-degree: 73%
 
 ---
 

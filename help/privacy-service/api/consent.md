@@ -3,10 +3,11 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: API-Endpunkt für Zustimmung
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Anfragen zur Kundenzustimmung für Experience Cloud-Anwendungen verwalten.
+role: Developer
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '245'
 ht-degree: 4%
 
 ---

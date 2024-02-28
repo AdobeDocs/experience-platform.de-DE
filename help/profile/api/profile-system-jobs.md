@@ -3,11 +3,12 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: API-Endpunkt für Profilsystemaufträge
 type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Batch aus dem Profilspeicher löschen, um Echtzeit-Kundenprofildaten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dazu muss die Profil-API zum Erstellen eines Profilsystemauftrags oder einer Löschanfrage verwendet werden.
+role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 71%
+source-wordcount: '1313'
+ht-degree: 64%
 
 ---
 
@@ -27,7 +28,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Cus
 
 Bei einer Löschanfrage handelt es sich um einen langwierigen, asynchronen Prozess, d. h., Ihre Organisation führt möglicherweise mehrere Löschanfragen gleichzeitig aus. Um alle derzeit in Ihrer Organisation ausgeführten Löschanfragen anzuzeigen, können Sie eine GET-Anfrage an den `/system/jobs`-Endpunkt stellen.
 
-Außerdem können Sie optionale Abfrageparameter verwenden, um die Liste der in der Antwort zurückgegebenen Löschanfragen zu filtern. Wenn Sie mehrere Parameter verwenden möchten, trennen Sie die einzelnen Parameter durch ein kaufmännisches Und-Zeichen (`&`).
+Außerdem können Sie optionale Abfrageparameter verwenden, um die Liste der in der Antwort zurückgegebenen Löschanfragen zu filtern. Um mehrere Parameter zu verwenden, trennen Sie jeden Parameter durch ein kaufmännisches Und-Zeichen (`&`).
 
 **API-Format**
 
@@ -103,7 +104,7 @@ Die Initiierung einer neuen Löschanfrage erfolgt über eine POST-Anfrage an den
 
 ### Datensatz löschen
 
-Um einen Datensatz aus dem Profilspeicher zu löschen, muss die Datensatz-ID im Hauptteil der POST-Anfrage enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. [!DNL Experience Platform]Mit können Sie Datensätze basierend auf Datensatz- und Zeitreihenschemas löschen.
+Um einen Datensatz aus dem Profilspeicher zu löschen, muss die Datensatz-ID im Hauptteil der POST-Anfrage enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. [!DNL Experience Platform] ermöglicht Ihnen das Löschen von Datensätzen, die sowohl auf Datensatz- als auch auf Zeitreihenschemas basieren.
 
 **API-Format**
 
@@ -153,13 +154,13 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zur�
 
 ### Batch löschen
 
-Um einen Batch zu löschen, muss die Batch-Kennung im Text der POST-Anfrage enthalten sein. Beachten Sie, dass Sie Batches für Datensätze, die auf Datensatzschemas basieren, nicht löschen können. Nur Batches für Datensätze, die auf Zeitreihenschemas basieren, können gelöscht werden.
+Um einen Batch zu löschen, muss die Batch-Kennung im Text der POST-Anfrage enthalten sein. Beachten Sie, dass Sie Batches für Datensätze, die auf Datensatzschemata basieren, nicht löschen können. Nur Batches für Datensätze, die auf Zeitreihenschemata basieren, können gelöscht werden.
 
 >[!NOTE]
 >
-> Batches für Datensätze, die auf Datensatzschemas basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. Die einzige Möglichkeit, die Auswirkungen fehlerhafter Batches für Datensätze zu entfernen, die auf Datensatzschemas basieren, besteht darin, den Batch mit den richtigen Daten neu zu erfassen, um die falschen Datensätze zu überschreiben.
+> Batches für Datensätze, die auf Datensatzschemata basieren, lassen sich nicht löschen, weil Datensatz-Batches vom Typ Datensatz frühere Datensätze überschreiben und daher nicht „rückgängig gemacht“ oder gelöscht werden können. Die einzige Möglichkeit, die Auswirkungen fehlerhafter Batches für Datensätze zu entfernen, die auf Datensatzschemas basieren, besteht darin, den Batch mit den richtigen Daten neu zu erfassen, um die falschen Datensätze zu überschreiben.
 
-Weiterführende Informationen zum Verhalten von Datensätzen und Zeitreihen finden Sie im Abschnitt [XDM-Datenverhalten](../../xdm/home.md#data-behaviors) in der Übersicht zu [!DNL XDM System]
+Weitere Informationen zum Verhalten von Datensätzen und Zeitreihen finden Sie in der [Abschnitt zu XDM-Datenverhalten](../../xdm/home.md#data-behaviors) im [!DNL XDM System] Übersicht.
 
 **API-Format**
 
@@ -267,7 +268,7 @@ Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktual
 
 | Eigenschaften | Beschreibung |
 |---|---|
-| `jobType` | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer `"DELETE"`. |
+| `jobType` | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer zurückgegeben `"DELETE"`. |
 | `status` | Der Status der Löschanfrage. Mögliche Werte: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
 | `metrics` | Ein Array, das die Anzahl der verarbeiteten Datensätze enthält (`"recordsProcessed"`) und die Zeit in Sekunden, die die Anfrage verarbeitet wurde oder wie lange die Anfrage gedauert hat (`"timeTakenInSec"`). |
 
@@ -275,7 +276,7 @@ Sobald der Löschanfragestatus `"COMPLETED"` Sie können bestätigen, dass die D
 
 ## Löschanfrage entfernen
 
-[!DNL Experience Platform]Mit können Sie eine frühere Anfrage löschen. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Löschauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängengeblieben ist. Um eine Löschanfrage zu entfernen, können Sie eine Löschanfrage an den `/system/jobs`-Endpunkt stellen und die Kennung der Löschanfrage, die Sie entfernen möchten, in den Anfragepfad einschließen.
+[!DNL Experience Platform] ermöglicht Ihnen das Löschen einer vorherigen Anfrage. Dies kann aus verschiedenen Gründen nützlich sein, z. B. wenn der Löschauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängengeblieben ist. Um eine Löschanfrage zu entfernen, können Sie eine Löschanfrage an den `/system/jobs`-Endpunkt stellen und die Kennung der Löschanfrage, die Sie entfernen möchten, in den Anfragepfad einschließen.
 
 **API-Format**
 

@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Identitätsxid; XID
+keywords: Experience Platform;home;popular topics;identity xid;XID
 solution: Experience Platform
 title: Native ID für eine Identität abrufen
 description: Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Namespace in erfassten XDM-Daten und bei der Bereitstellung einer Identität zur Verwendung in einem API-Aufruf bereitgestellt. Wenn Identitäten im Identity Service persistiert werden, wird eine Kennung generiert und der jeweiligen Identität zugewiesen. Diese Kennung wird als native XID bezeichnet. Platform-APIs, die Identitätsdaten erfordern, unterstützen die Nutzung dieser kompakteren Form für aggregierte Kennung und Namespace. XID ist eine Base64-kodierte Zeichenfolge.
+role: Developer
 exl-id: e734f5d8-e00b-43fa-b06c-97c73e1f7c71
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '231'
-ht-degree: 69%
+ht-degree: 65%
 
 ---
 
@@ -17,7 +18,7 @@ Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Na
 
 >[!NOTE]
 >
-> Dieses Format ist vor allem für den internen Adobe-Gebrauch vorgesehen. Native XID als einzelner Wert ist platzsparender und wird intern innerhalb von verwendet [!DNL Platform] Lösungen zur Speicherung und Serialisierung. Sie ist jedoch nicht für Menschen lesbar, ist opak und erfordert einen separaten Aufruf, um sie zur Verwendung abzurufen.
+>Dieses Format ist hauptsächlich für den internen Adobe-Gebrauch vorgesehen. Native XID als einzelner Wert ist platzsparender und wird intern innerhalb von verwendet [!DNL Platform] Lösungen zur Speicherung und Serialisierung. Sie ist jedoch nicht für Menschen lesbar, ist opak und erfordert einen separaten Aufruf, um sie zur Verwendung abzurufen.
 
 Verschaffen Sie sich die XID für einen angegebenen ID-Wert und Namespace mithilfe des in diesem Abschnitt beschriebenen Diensts.
 

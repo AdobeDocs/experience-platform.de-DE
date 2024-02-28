@@ -1,10 +1,11 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Beschriftungsidentitäten
+keywords: Experience Platform; home; beliebte Themen; Beschriftungsidentitäten
 solution: Experience Platform
 title: Kennzeichnen eines Felds als Identität
 description: Felder, die persönliche identifizierbare Informationen (PII) enthalten, können als Identitätsfelder gekennzeichnet werden. Ein in einem Identitätsfeld bereitgestellter Wert wird von Identity Service als Identität interpretiert. Der Namensraum der Identität wird als Teil der Kennzeichnung des Felds angegeben.
+role: Developer
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 73%

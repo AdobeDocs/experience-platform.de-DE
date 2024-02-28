@@ -5,9 +5,10 @@ breadcrumb-title: Handbuch zum Datenwissenschafts-Arbeitsbereich
 user-guide-description: Nutzen Sie maschinelles Lernen, um Modelle und Rezepte mit Adobe Sensei- und JupyterLab-Notebooks zu entwickeln, zu trainieren und zu bewerten.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+role: User, Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '225'
 ht-degree: 100%
 
 ---
@@ -49,7 +50,7 @@ ht-degree: 100%
    * [Erstellen und Veröffentlichen eines Modells für maschinelles Lernen](models-recipes/create-publish-model.md)
    * [Erstellen der Demo-Luma-Schemata und -Datensätze](models-recipes/create-luma-data.md)
    * [Erstellen eines Einzelhandels-Schemas und -Datensatzes](models-recipes/create-retails-sales-dataset.md)
-   * [Vorschau auf Schemas und Datensätze](models-recipes/preview-schema-data.md)
+   * [Vorschau auf Schemata und Datensätze](models-recipes/preview-schema-data.md)
    * [Packen von Quelldateien in ein Rezept](models-recipes/package-source-files-recipe.md)
    * [Gepacktes Rezept importieren (Benutzeroberfläche)](models-recipes/import-packaged-recipe-ui.md)
    * [Importieren eines gepackten Rezepts (API)](models-recipes/import-packaged-recipe-api.md)

@@ -3,10 +3,11 @@ keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;
 title: API-Endpunkt "Entitäten (Profilzugriff)"
 type: Documentation
 description: Mit Adobe Experience Platform können Sie mithilfe von RESTful-APIs oder der Benutzeroberfläche auf Echtzeit-Kundenprofil-Daten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen, die häufiger als "Profile"bezeichnet werden.
+role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1734'
 ht-degree: 89%
 
 ---
@@ -768,7 +769,7 @@ Eine erfolgreiche Antwort gibt eine paginierte Liste von Zeitreihenereignissen z
 
 In dieser Beispielantwort stellt das erste aufgelistete Profil („GkouAW-yD9aoRCPhRYROJ-TetAFW“) einen Wert für `_links.next.payload` bereit; es gibt also weitere Ergebnisseiten für dieses Profil. Weiterführende Informationen zum Zugriff auf diese zusätzlichen Ergebnisse finden Sie im folgenden Abschnitt zum [Zugreifen auf weitere Ergebnisse](#access-additional-results).
 
-### Weitere Ergebnisse aufrufen {#access-additional-results}
+### Zusätzliche Ergebnisse aufrufen {#access-additional-results}
 
 Beim Abrufen von Zeitreihenereignissen werden möglicherweise viele Ergebnisse zurückgegeben; daher werden die Ergebnisse oft paginiert. Wenn für ein bestimmtes Profil nachfolgende Ergebnisseiten vorhanden sind, enthält der `_links.next.payload`-Wert für dieses Profil ein Payload-Objekt.
 
@@ -776,7 +777,7 @@ Mithilfe dieser Payload im Anfragetext können Sie eine weitere POST-Anfrage an 
 
 ## Zeitreihenereignisse in mehreren Schemaentitäten aufrufen
 
-Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [!DNL Schema Registry] API-Entwicklerhandbuch [Endpunktleitfaden für Deskriptoren](../../xdm/api/descriptors.md).
+Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemata definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [!DNL Schema Registry] API-Entwicklerhandbuch [Endpunktleitfaden für Deskriptoren](../../xdm/api/descriptors.md).
 
 Sie können in den Anfragepfad Abfrageparameter einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -788,7 +789,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine Entität abgerufen, die einen zuvor eingerichteten Beziehungsdeskriptor enthält, um in verschiedenen Schemas auf Daten zuzugreifen.
+Mit der folgenden Anfrage wird eine Entität abgerufen, die einen zuvor eingerichteten Beziehungsdeskriptor enthält, um in verschiedenen Schemata auf Daten zuzugreifen.
 
 ```shell
 curl -X GET \
