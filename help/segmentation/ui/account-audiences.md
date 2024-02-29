@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Zielgruppen für Konten erstellen und verwend
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 2%
 
 ---
@@ -41,19 +41,29 @@ Die [!UICONTROL Durchsuchen] angezeigt, auf der eine Liste aller Zielgruppen des
 
 Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Profilanzahl, Ursprung, Lebenszyklusstatus, Erstellungsdatum und Datum der letzten Aktualisierung.
 
+Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimmten Kontozielgruppen zu suchen und diese zu sortieren. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur Segmentierungsbenutzeroberfläche](./overview.md#manage-audiences).
+
 ## Zielgruppe erstellen {#create}
+
+>[!NOTE]
+>
+>Kontozielgruppen werden anhand von **Batch** und werden alle 24 Stunden ausgewertet.
 
 Um eine Konto-Audience zu erstellen, wählen Sie **[!UICONTROL Erstellen einer Zielgruppe]** auf [!UICONTROL Durchsuchen] Seite.
 
 ![Die [!UICONTROL Erstellen einer Zielgruppe] auf der Seite zum Durchsuchen der Zielgruppe des Kontos markiert ist.](../images/ui/account-audiences/select-create-audience.png)
 
-Der Segment Builder wird angezeigt. Die Kontoattribute werden in der linken Navigationsleiste angezeigt.
+Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Unter dem [!UICONTROL Attribute] -Registerkarte können Sie sowohl Platform-erstellte als auch benutzerdefinierte Attribute hinzufügen.
 
-![Der Segment Builder wird angezeigt. Beachten Sie, dass nur die Attribute angezeigt werden.](../images/ui/account-audiences/segment-builder.png)
+![Der Segment Builder wird angezeigt. Beachten Sie, dass nur die Attribute und Zielgruppen angezeigt werden.](../images/ui/account-audiences/segment-builder.png)
 
 Beachten Sie beim Erstellen von Kontozielgruppen, dass Ereignisse unter **[!UICONTROL Personen]**, anstatt ihre eigene Registerkarte zu sein, da diese Attribute mit Personen verknüpft sind.
 
 ![Der Ort, an dem Ereignisse gefunden werden sollen, der sich im [!UICONTROL Personen] -Ordner, hervorgehoben ist.](../images/ui/account-audiences/attributes.png)
+
+Unter dem [!UICONTROL Zielgruppen] können Sie zuvor erstellte benutzerspezifische Zielgruppen hinzufügen, um diese bei der Erstellung Ihrer eigenen Kontozielgruppe zu erweitern.
+
+![Die Registerkarte Zielgruppen im Segment Builder wird hervorgehoben.](../images/ui/account-audiences/audiences.png)
 
 Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md).
 
