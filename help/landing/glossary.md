@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform-Glossar
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7979'
-ht-degree: 5%
+source-wordcount: '7996'
+ht-degree: 4%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 5%
 
 **Batch-Kennung**: Eine Batch-Kennung ist eine von Adobe generierte Kennung für einen Datenstapel.
 
-**Batch-Erfassung**: Mit der Batch-Erfassung können Sie Daten als Batch-Dateien in Experience Platform aufnehmen. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden.
+**Batch-Erfassung**: Mit der Batch-Erfassung können Sie Daten als Batch-Dateien in Experience Platform aufnehmen. Batches sind Dateneinheiten, die aus einer oder mehreren Dateien bestehen, die als Einheit erfasst werden sollen.
 
 **Stapelsegmentierung**: Die Batch-Segmentierung ist eine Alternative zu einem kontinuierlichen Datenauswahlprozess und verschiebt alle Profildaten gleichzeitig durch Segmentdefinitionen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert und kann exportiert werden.
 
@@ -223,7 +223,7 @@ ht-degree: 5%
 
 **Ereignis**: Im Kontext von Tags ist ein Ereignis ein bestimmter Regeltyp, d. h. ein Trigger, der auf einem Client-Gerät auftritt, um die Ausführung einer Regel zu starten.
 
-**Ereignisentitäten**: Im Kontext der Datenmodellierung stellen Ereignis-Entitäten Konzepte dar, die sich auf Aktionen beziehen, die ein Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie Änderungen im Zeitverlauf verfolgen möchten. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der [!DNL XDM ExperienceEvent]-Klasse dargestellt werden.
+**Ereignisentitäten**: Im Kontext der Datenmodellierung stellen Ereignis-Entitäten Konzepte dar, die sich auf Aktionen beziehen, die ein Kunde ausführen kann, Systemereignisse oder andere Konzepte, bei denen Sie Änderungen im Zeitverlauf verfolgen möchten. Stellen, die unter diese Kategorie fallen, sollten anhand der [!DNL XDM ExperienceEvent] -Klasse.
 
 **Veranstaltungen**: Ereignisse sind die mit einem Profil verknüpften Verhaltensdaten.
 
@@ -345,6 +345,8 @@ ht-degree: 5%
 
 **Zusammenführungsrichtlinie**: Zusammenführungsrichtlinien sind Regeln, mit denen Experience Platform bestimmt, wie Kundendatenfragmente aus mehreren Quellen kombiniert werden, um ein einzelnes Profil zu erstellen. Wenn ein Datenkonflikt auftritt, bestimmt die Zusammenführungsrichtlinie, welche Daten für die Aufnahme in das Profil priorisiert werden sollen.
 
+**MHMDAa**: Die [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) verbessert die Datenschutzrechte für Verbraucher in Bezug auf ihre Gesundheitsdaten. Sie schreibt Offenlegungs-, Zustimmungs- und Löschungsrechte für Gesundheitsdaten vor und verbietet den Verkauf von Gesundheitsdaten ohne Genehmigung. Darüber hinaus ist es nach dem Gesetz rechtswidrig, Geofencing rund um Gesundheitseinrichtungen zu nutzen.
+
 **Mixin**: Siehe &quot;Schemafeldgruppe&quot;.
 
 **Modul**: Im Kontext von Tags ist ein Modul ein Snippet ausführbaren JavaScripts, das von einer Erweiterung bereitgestellt wird und Aktionen in einer Client-Umgebung ausführt, ohne eine Regel erstellen zu müssen.
@@ -413,7 +415,7 @@ ht-degree: 5%
 
 **Profildatenspeicher**: Der Profildatenspeicher (manchmal auch als Profilspeicher bezeichnet) ist ein vom Daten-Pool getrenntes Datenspeichersystem, das vom Echtzeit-Kundenprofil zum Erstellen und Speichern von Profilen verwendet wird.
 
-**Profilentitäten**: Profilentitäten stellen Attribute dar, die sich auf eine einzelne Person beziehen, normalerweise einen Kunden. Entitäten, die unter diese Kategorie fallen, sollten durch Schemata auf Basis der [!DNL XDM Individual Profile]-Klasse dargestellt werden. Siehe auch: Profilzugriff
+**Profilentitäten**: Profilentitäten stellen Attribute dar, die sich auf eine einzelne Person beziehen, normalerweise einen Kunden. Stellen, die unter diese Kategorie fallen, sollten anhand der [!DNL XDM Individual Profile] -Klasse. Siehe auch: Profilzugriff
 
 **Profilexport**: [!DNL Profile] export ist eine der beiden Zieltypen im Experience Platform. [!DNL Profile] export erzeugt eine Datei mit Profilen und Attributen und verwendet rohe PII-Daten mit E-Mail, um sie in Marketing- und E-Mail-Automatisierungsplattformen zu integrieren.
 

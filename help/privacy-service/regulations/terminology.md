@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
 description: Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1842'
 ht-degree: 2%
 
 ---
@@ -100,6 +100,8 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 ## M
 
 **Hauptniederlassung**: Der Ort innerhalb der Union, an dem die wichtigsten Entscheidungen über die Datenverarbeitung getroffen werden; in Bezug auf den Auftragsverarbeiter.
+
+**MHMDAa**: Die [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) verbessert die Datenschutzrechte für Verbraucher in Bezug auf ihre Gesundheitsdaten. Sie schreibt Offenlegungs-, Zustimmungs- und Löschungsrechte für Gesundheitsdaten vor und verbietet den Verkauf von Gesundheitsdaten ohne Genehmigung. Darüber hinaus ist es nach dem Gesetz rechtswidrig, Geofencing rund um Gesundheitseinrichtungen zu nutzen.
 
 ## N
 

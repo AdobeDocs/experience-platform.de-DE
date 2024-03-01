@@ -5,10 +5,10 @@ title: Privacy Jobs API Endpoint
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Apps verwalten.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 57%
+source-wordcount: '1857'
+ht-degree: 47%
 
 ---
 
@@ -26,25 +26,34 @@ Sie können eine Liste aller in Ihrem Unternehmen verfügbaren Datenschutzauftr�
 
 **API-Format**
 
-Dieses Anfrageformat verwendet eine `regulation` Abfrageparameter im `/jobs` -Endpunkt beginnt daher mit einem Fragezeichen (`?`), wie unten dargestellt. Die Antwort wird paginiert, sodass Sie andere Abfrageparameter (`page` und `size`) verwenden können, um die Antwort zu filtern. Sie können mehrere Parameter mithilfe von Ampersands (`&`) trennen.
+Dieses Anfrageformat verwendet eine `regulation` Abfrageparameter im `/jobs` -Endpunkt beginnt daher mit einem Fragezeichen (`?`), wie unten dargestellt. Bei der Auflistung von Ressourcen gibt die Privacy Service-API bis zu 1000 Aufträge zurück und paginiert die Antwort. Verwenden Sie andere Abfrageparameter (`page`, `size`, und Datumsfilter), um die Antwort zu filtern. Sie können mehrere Parameter mithilfe von Ampersands (`&`) trennen.
+
+>[!TIP]
+>
+>Verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse für bestimmte Abfragen weiter zu filtern. Sie können beispielsweise feststellen, wie viele Datenschutzaufträge über einen bestimmten Zeitraum gesendet wurden und welcher Status sie verwendet. `status`, `fromDate`, und `toDate` Abfrageparameter.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
-| `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `1` und der Maximalwert ist `100`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
+| `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `100` und der Maximalwert ist `1000`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
+| `{status}` | Das Standardverhalten besteht darin, alle Status einzuschließen. Wenn Sie einen Statustyp angeben, gibt die Anfrage nur Datenschutzaufträge zurück, die diesem Statustyp entsprechen. Die zulässigen Werte sind: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | Dieser Parameter beschränkt die Ergebnisse auf die Ergebnisse, die vor einem bestimmten Datum verarbeitet wurden. Ab dem Datum der Anfrage kann das System 45 Tage zurückblicken. Der Zeitraum darf jedoch nicht mehr als 30 Tage betragen.<br>Es akzeptiert das Format JJJJ-MM-TT. Das von Ihnen angegebene Datum wird als das in Greenwich Mean Time (GMT) ausgedrückte Enddatum interpretiert.<br>Wenn Sie diesen Parameter nicht angeben (und einen entsprechenden `fromDate`), gibt das Standardverhalten Aufträge zurück, die in den letzten sieben Tagen Daten zurückgegeben haben. Wenn Sie `toDate`, müssen Sie auch die `fromDate` Abfrageparameter. Wenn Sie nicht beide verwenden, gibt der Aufruf einen 400-Fehler zurück. |
+| `{fromDate}` | Dieser Parameter beschränkt die Ergebnisse auf die Ergebnisse, die nach einem bestimmten Datum verarbeitet wurden. Ab dem Datum der Anfrage kann das System 45 Tage zurückblicken. Der Zeitraum darf jedoch nicht mehr als 30 Tage betragen.<br>Es akzeptiert das Format JJJJ-MM-TT. Das von Ihnen angegebene Datum wird als Ursprungsdatum der Anfrage interpretiert, ausgedrückt in Greenwich Mean Time (GMT).<br>Wenn Sie diesen Parameter nicht angeben (und einen entsprechenden `toDate`), gibt das Standardverhalten Aufträge zurück, die in den letzten sieben Tagen Daten zurückgegeben haben. Wenn Sie `fromDate`, müssen Sie auch die `toDate` Abfrageparameter. Wenn Sie nicht beide verwenden, gibt der Aufruf einen 400-Fehler zurück. |
+| `{filterDate}` | Dieser Parameter begrenzt die Ergebnisse auf die Ergebnisse, die zu einem bestimmten Datum verarbeitet werden. Es akzeptiert das Format JJJJ-MM-TT. Das System kann auf die letzten 45 Tage zurückblicken. |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **Anfrage**
