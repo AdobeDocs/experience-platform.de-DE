@@ -3,10 +3,10 @@ keywords: Ziele; Fragen; häufig gestellte Fragen; FAQ; Ziele FAQ
 title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 5%
+source-wordcount: '1673'
+ht-degree: 4%
 
 ---
 
@@ -48,6 +48,15 @@ Sie aktivieren die aktualisierte Zielgruppe erneut für dasselbe Ziel, da jedoch
 Um sicherzustellen, dass alle Profile an Ihr Ziel gesendet werden, müssen Sie mit der neuen Konfiguration eine neue Zielgruppe erstellen und diese dann für Ihr Ziel aktivieren.
 
 +++
+
+### Wenn eine Zielgruppe aus einem Ziel entfernt wird: Gibt es ein Signal, das an das Ziel gesendet wird, um anzugeben, dass die Zielgruppe entfernt wurde?
+
++++Antwort
+
+Nein, es gibt keine Abhängigkeit zwischen dem Experience Platform-Ziel und der Kundeninstanz des Zielsystems. Auf der Empfangsseite ist der einzige Hinweis, den das Zielsystem sehen würde, dass es diese Zielgruppendaten nicht mehr erhält.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 

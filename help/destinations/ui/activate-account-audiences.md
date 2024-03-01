@@ -5,9 +5,9 @@ description: Erfahren Sie, wie Sie Kontozielgruppen für Ziele aktivieren.
 badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '834'
 ht-degree: 7%
 
 ---
@@ -25,6 +25,12 @@ In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich
 Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie die **[!UICONTROL Datentypen]** filtern und auswählen **[!UICONTROL Konten]** um die Ziele anzuzeigen, die die Aktivierung von Kontozielgruppen unterstützen. Derzeit ist der Export von Kontozielgruppen nur für bestimmte Cloud-Speicher-Ziele verfügbar ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), und [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) und der [(Unternehmen) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) Ziel.
 
 ![Ziele, die Kontozielgruppen unterstützen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## Videoüberblick
+
+Im folgenden Video erhalten Sie einen Überblick über das Erstellen und Aktivieren von Zielgruppen für Konten sowie über die unterstützten Anwendungsfälle beim Aktivieren von Zielgruppen für Konten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## Voraussetzungen {#prerequisites}
 
