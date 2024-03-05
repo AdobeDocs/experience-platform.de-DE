@@ -3,7 +3,7 @@ title: Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe 
 description: Erfahren Sie, wie Sie mit der partnergestützten Besuchererkennung personalisierte Onsite-Erlebnisse für Ihre Besucherinnen und Besucher bereitstellen können.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -47,7 +47,7 @@ Wenn Sie planen, von Partnern bereitgestellte Attribute zu verwenden, um Ihren a
 Um dieses Anwendungsbeispiel erfolgreich zu implementieren, müssen Sie mehrere Bereiche von Real-time Customer Data Platform und anderen Experience Cloud-Lösungen verwenden. Vergewissern Sie sich, dass Sie die notwendigen [Attribut-basierten Zugriffsrechte](/help/access-control/abac/overview.md) für alle diese Bereiche haben, oder bitten Sie Ihre Systemadmins, Ihnen die notwendigen Rechte zu erteilen.
 
 * Datenerfassung
-   * [Adobe Experience Platform Web SDK](/help/edge/home.md)
+   * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
    * [Tags](/help/tags/home.md)
    * [Datenströme](/help/datastreams/overview.md)
 * Datenverwaltung in Real-Time CDP

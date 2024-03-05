@@ -2,9 +2,9 @@
 title: Interagieren mit Adobe Analytics
 description: Erfahren Sie, wie Sie mit der Edge Network Server-API mit Adobe Analytics interagieren.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 9%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 9%
 
 ## Übersicht {#overview}
 
-Die Adobe Analytics-Datenerfassung funktioniert durch die Übersetzung von XDM-Daten in ein Format, das von Adobe Analytics verstanden werden kann. Mehrere XDM-Felder sind [automatisch zugeordnet](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) in Analytics-Variablen.
-
-Sie können auch [Manuelles Zuordnen von XDM-Werten](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) zu älteren Analytics-Variablen hinzu.
+Die Adobe Analytics-Datenerfassung funktioniert durch die Übersetzung von XDM-Daten in ein Format, das von Adobe Analytics verstanden werden kann. Mehrere XDM-Felder sind [automatisch zugeordnet](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=de) in Analytics-Variablen. Sie können XDM-Werte auch manuell Legacy-Analytics-Variablen zuordnen.
 
 Damit Adobe Analytics Daten von der Server-API empfangen kann, müssen Sie [Datenspeicher konfigurieren](../datastreams/overview.md#adobe-analytics-settings) , um Ereignisse an Adobe Analytics weiterzuleiten, indem Sie die Report Suite-ID auf der Seite mit der Datastream-Konfiguration eingeben.
 

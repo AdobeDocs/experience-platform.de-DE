@@ -2,9 +2,9 @@
 title: Web SDK-Tag-Erweiterung konfigurieren
 description: Erfahren Sie, wie Sie die Tag-Erweiterung des Experience Platform Web SDK in der Benutzeroberfläche für Tags konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1552'
 ht-degree: 6%
 
 ---
@@ -84,7 +84,7 @@ In diesem Abschnitt können Sie das Verhalten des Web SDK bezüglich der Handhab
 * **[!UICONTROL Verwenden von Drittanbieter-Cookies]**: Wenn diese Option aktiviert ist, versucht das Web SDK, eine Benutzer-ID in einem Drittanbieter-Cookie zu speichern. Bei erfolgreicher Ausführung wird der Benutzer als einzelner Benutzer identifiziert, der über mehrere Domänen navigiert, anstatt für jede Domäne als separater Benutzer identifiziert zu werden. Wenn diese Option aktiviert ist, kann das SDK die Benutzer-ID möglicherweise weiterhin nicht in einem Drittanbieter-Cookie speichern, wenn der Browser keine Drittanbieter-Cookies unterstützt oder vom Benutzer so konfiguriert wurde, dass keine Drittanbieter-Cookies zugelassen werden. In diesem Fall speichert das SDK die Kennung nur in der Erstanbieterdomäne.
 
   >[!IMPORTANT]
-  >>Drittanbieter-Cookies sind nicht mit dem [Erstanbieter-Geräte-ID](../../../../edge/identity/first-party-device-ids.md) -Funktion im Web SDK.
+  >>Drittanbieter-Cookies sind nicht mit dem [Erstanbieter-Geräte-ID](../../../../web-sdk/identity/first-party-device-ids.md) -Funktion im Web SDK.
 Sie können entweder Geräte-IDs von Erstanbietern verwenden oder Sie können Drittanbieter-Cookies verwenden, aber Sie können nicht beide Funktionen gleichzeitig verwenden.
   >
 ## Personalisierungseinstellungen konfigurieren {#personalization}
@@ -113,9 +113,9 @@ Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe die Verw
 
 ![Bild mit den Datenerfassungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Callback-Funktion]**: Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an das Edge-Netzwerk gesendet werden. Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie unter [here](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Callback-Funktion]**: Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an das Edge-Netzwerk gesendet werden.
 * **[!UICONTROL Aktivieren der Klickdatenerfassung]**: Das Web SDK kann automatisch Link-Klickinformationen für Sie erfassen. Standardmäßig ist diese Funktion aktiviert, kann jedoch über diese Option deaktiviert werden. Links werden auch als Downloadlinks bezeichnet, wenn sie einen der in der [!UICONTROL Downloadlink-Qualifizierung] Textfeld. Adobe bietet Ihnen einige standardmäßige Downloadlink-Qualifikatoren. Sie können sie nach Bedarf bearbeiten.
-* **[!UICONTROL Automatisch erfasste Kontextdaten]**: Standardmäßig erfasst das Web SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn Sie eine Liste der von Adobe erfassten Informationen sehen möchten, können Sie sie finden [here](../../../../edge/data-collection/automatic-information.md). Wenn diese Daten nicht erfasst werden sollen oder Sie nur bestimmte Datenkategorien erfassen möchten, wählen Sie **[!UICONTROL Spezifische Kontextdaten]** und wählen Sie die Daten aus, die Sie erfassen möchten.
+* **[!UICONTROL Automatisch erfasste Kontextdaten]**: Standardmäßig erfasst das Web SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn diese Daten nicht erfasst werden sollen oder Sie nur bestimmte Datenkategorien erfassen möchten, wählen Sie **[!UICONTROL Spezifische Kontextdaten]** und wählen Sie die Daten aus, die Sie erfassen möchten. Siehe [`context`](/help/web-sdk/commands/configure/context.md) für weitere Informationen.
 
 ## Konfigurieren von Datenstromüberschreibungen {#datastream-overrides}
 
@@ -125,10 +125,10 @@ Dies hilft Ihnen beim Auslösen anderer Datenstromverhaltensweisen als der stand
 
 Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
 
-1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../../../datastreams/configure.md) definieren.
+1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](/help/datastreams/configure.md) definieren.
 2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Web SDK-Tag-Erweiterung an das Edge-Netzwerk senden.
 
-Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](../../../../datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
+Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](/help/datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
 
 Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl können Sie die Überschreibungen im Bildschirm für die Tag-Erweiterung konfigurieren, der unten dargestellt wird.
 
@@ -136,10 +136,10 @@ Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl 
 >
 Datastream-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben alle separate Außerkraftsetzungen. Sie können die Einstellungen zwischen ihnen mithilfe der entsprechenden Optionen kopieren, die im folgenden Bildschirm angezeigt werden.
 
-![Bild, das die Konfiguration des Datenspeichers anzeigt, überschreibt die Seite Web SDK-Tag-Erweiterung.](assets/datastream-overrides.png)
+![Bild, das die Konfiguration des Datenspeichers anzeigt, überschreibt die Verwendung der Seite Web SDK-Tag-Erweiterung .](assets/datastream-overrides.png)
 
 ## Erweiterte Einstellungen konfigurieren
 
 Verwenden Sie die **[!UICONTROL Edge-Basispfad]** -Feld, wenn Sie den Basispfad ändern müssen, der für die Interaktion mit dem Edge-Netzwerk verwendet wird. Dies sollte keine Aktualisierung erfordern, aber falls Sie an einer Beta- oder Alpha-Phase teilnehmen, kann Adobe Sie bitten, dieses Feld zu ändern.
 
-![Bild mit den erweiterten Einstellungen auf der Seite Web SDK-Tag-Erweiterung .](assets/advanced-settings.png)
+![Bild mit den erweiterten Einstellungen unter Verwendung der Web SDK-Tag-Erweiterungsseite.](assets/advanced-settings.png)

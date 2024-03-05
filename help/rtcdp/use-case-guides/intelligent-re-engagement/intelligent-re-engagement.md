@@ -3,7 +3,7 @@ title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -147,7 +147,7 @@ Mit dieser Feldergruppe können Sie Ihre Journey vor der Veröffentlichung mithi
 
 #### Schema für digitale Transaktionen des Kunden
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Diese Daten werden normalerweise in [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) und ist erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey, zur detaillierten Online-Kundenanalyse und zu erweiterten Zielgruppenfunktionen verwendet werden.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Diese Daten werden normalerweise in [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) und ist erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey, zur detaillierten Online-Kundenanalyse und zu erweiterten Zielgruppenfunktionen verwendet werden.
 
 Das Schema für digitale Transaktionen des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse.
 
@@ -244,7 +244,7 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 >
 >Dies ist eine optionale Implementierung, wenn Sie die [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Dieses Schema ähnelt dem Schema Customer Digital Transactions , unterscheidet sich jedoch dadurch, dass es bei [Web SDK](/help/edge/home.md) ist keine Option für die Datenerfassung. Daher ist dieses Schema erforderlich, wenn Sie die Variable [!DNL Adobe Analytics Source Connector] senden Sie Ihre Online-Daten an [!DNL Adobe Experience Platform] entweder als primären oder sekundären Datastream.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Dieses Schema ähnelt dem Schema Customer Digital Transactions , unterscheidet sich jedoch dadurch, dass es bei [Web SDK](/help/web-sdk/home.md) ist keine Option für die Datenerfassung. Daher ist dieses Schema erforderlich, wenn Sie die Variable [!DNL Adobe Analytics Source Connector] senden Sie Ihre Online-Daten an [!DNL Adobe Experience Platform] entweder als primären oder sekundären Datastream.
 
 Die [!DNL Adobe] Web-Connector-Schema durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse.
 
@@ -297,7 +297,7 @@ Weitere Informationen zum Erstellen einer [Datensatz](/help/catalog/datasets/ove
 >
 >Es ist gesetzlich vorgeschrieben, Kunden die Möglichkeit zu geben, sich vom Erhalt von Nachrichten einer Marke abzumelden und sicherzustellen, dass diese Entscheidung respektiert wird. Weitere Informationen zu den geltenden Rechtsvorschriften finden Sie im Abschnitt [Übersicht über Datenschutzbestimmungen](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-#### Einverständnisrichtlinien
+#### Einverständniserklärungen
 
 Wenn Sie einen Rückgewinnungspfad erstellen, sollten Sie Folgendes hinzufügen [Einverständnisrichtlinien](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
 

@@ -2,10 +2,10 @@
 title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1349'
-ht-degree: 3%
+source-wordcount: '1311'
+ht-degree: 2%
 
 ---
 
@@ -24,15 +24,15 @@ In diesem Tutorial wird davon ausgegangen, dass Sie bereits ermittelt haben, wie
 
 Dieses Handbuch folgt dem Workflow zum Einrichten des SDK mithilfe der Tag-Erweiterung in der Benutzeroberfläche. Wenn Sie die -Erweiterung nicht verwenden möchten und die eigenständige Version des SDK lieber direkt auf Ihrer Site einbetten möchten, lesen Sie die folgenden Dokumente anstelle dieses Handbuchs:
 
-* [Konfigurieren eines Datenstroms](../../../datastreams/overview.md)
-* [Installieren des SDK](../../../edge/fundamentals/installing-the-sdk.md)
-* [Konfigurieren des SDK für Zustimmungsbefehle](../../../edge/consent/supporting-consent.md)
+* [Konfigurieren eines Datenstroms](/help/datastreams/overview.md)
+* [Installieren des SDK](/help/web-sdk/install/overview.md)
+* [SDK für Zustimmungsbefehle konfigurieren](/help/web-sdk/commands/configure/defaultconsent.md)
 
 Die Installationsschritte in diesem Handbuch erfordern ein grundlegendes Verständnis der Tag-Erweiterungen und deren Installation in Webanwendungen. Weiterführende Informationen finden Sie in der folgenden Dokumentation:
 
-* [Übersicht über Tags](../../../tags/home.md)
-* [Schnellstartanleitung](../../../tags/quick-start/quick-start.md)
-* [Veröffentlichungsübersicht](../../../tags/ui/publishing/overview.md)
+* [Übersicht über Tags](/help/tags/home.md)
+* [Schnellstartanleitung](/help/tags/quick-start/quick-start.md)
+* [Veröffentlichungsübersicht](/help/tags/ui/publishing/overview.md)
 
 ## Einrichten eines Datenstroms
 
@@ -110,14 +110,7 @@ Es gibt zwei Szenarien, in denen `setConsent` sollte auf Ihrer Site aufgerufen w
 
 ### `setConsent` Syntax
 
->[!NOTE]
->
->Eine Einführung in die allgemeine Syntax für Platform SDK-Befehle finden Sie im Dokument unter [Befehle ausführen](../../../edge/fundamentals/executing-commands.md).
-
-Die `setConsent` -Befehl erwartet zwei Argumente:
-
-1. Eine Zeichenfolge, die den Befehlstyp angibt (in diesem Fall `"setConsent"`)
-1. Ein Payload-Objekt, das eine einzelne Eigenschaft vom Typ Array enthält: `consent`. Die `consent` -Array muss mindestens ein Objekt enthalten, das die erforderlichen Einwilligungsfelder für den Adobe-Standard bereitstellt.
+Die [`setConsent`](/help/web-sdk/commands/setconsent.md) -Befehl erwartet ein Payload-Objekt, das eine einzelne Array-Typ-Eigenschaft enthält: `consent`. Die `consent` -Array muss mindestens ein Objekt enthalten, das die erforderlichen Einwilligungsfelder für den Adobe-Standard bereitstellt.
 
 Die erforderlichen Einwilligungsfelder für den Adobe-Standard sind im folgenden Beispiel dargestellt `setConsent` Aufruf:
 
@@ -139,7 +132,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -200,7 +193,7 @@ var setConsent = function () {
 
 ## Umgang mit SDK-Antworten
 
-Alle [!DNL Platform SDK] -Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Siehe Abschnitt zu [Umgang mit Erfolg oder Fehlschlagen](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) im Handbuch zum Ausführen von SDK-Befehlen für spezifische Beispiele.
+Alle [!DNL Platform SDK] -Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Siehe [Befehlsantworten](/help/web-sdk/commands/command-responses.md) für weitere Informationen.
 
 Nachdem Sie erfolgreich `setConsent` -Aufrufe mit dem SDK verwenden, können Sie den Profil-Viewer in der Platform-Benutzeroberfläche verwenden, um zu überprüfen, ob Daten im Profilspeicher landen. Siehe Abschnitt zu [Profile nach Identität durchsuchen](../../../profile/ui/user-guide.md#browse-identity) für weitere Informationen.
 
@@ -208,5 +201,5 @@ Nachdem Sie erfolgreich `setConsent` -Aufrufe mit dem SDK verwenden, können Sie
 
 In diesem Handbuch haben Sie die Platform Web SDK-Erweiterung so konfiguriert, dass Einwilligungsdaten an Experience Platform gesendet werden. Eine Anleitung zum Testen Ihrer Implementierung finden Sie in der Dokumentation zum Einverständnisstandard, den Sie implementieren:
 
-* [Adobe Standard](./adobe/overview.md#test)
+* [Adobe-Standard](./adobe/overview.md#test)
 * [TCF 2.0-Standard](./iab/overview.md#test)

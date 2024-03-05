@@ -7,9 +7,9 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1267'
 ht-degree: 7%
 
 ---
@@ -97,7 +97,7 @@ Der Konfigurationsbildschirm wird angezeigt. under **[!UICONTROL Mailchimp Serve
 
 ![Erweiterungskonfiguration](../../../images/extensions/server/mailchimp/mailchimp-domain.png)
 
-under **[!UICONTROL Mailchimp-Token]**, wählen Sie das Datenelementsymbol und wählen Sie die `Mailchimp Token` -Datenelement, das Sie zuvor erstellt haben. Auswählen **[!UICONTROL Speichern]** , um die Änderungen zu speichern.
+under **[!UICONTROL Mailchimp-Token]**, wählen Sie das Datenelementsymbol und wählen Sie die `Mailchimp Token` -Datenelement, das Sie zuvor erstellt haben. Wählen Sie **[!UICONTROL Speichern]** aus, um die Änderungen zu speichern.
 
 Die Erweiterung wird jetzt installiert und für die Verwendung in Ihrer Eigenschaft konfiguriert.
 
@@ -105,7 +105,7 @@ Die Erweiterung wird jetzt installiert und für die Verwendung in Ihrer Eigensch
 
 Wenn Sie diese Erweiterung in einer [Regel](../../../ui/managing-resources/rules.md), gibt es mehrere Datenwerte, die die Erweiterung mit jedem Ereignis an Mailchimp sendet. Für eine typische Implementierung können Sie die [Adobe Experience Platform Web SDK-Erweiterung](../../client/web-sdk/overview.md) senden Sie diese Daten an [!DNL Platform Edge Network] für die Verwendung durch die Erweiterung in der Ereignisweiterleitungseigenschaft.
 
-Die für diese Erweiterung erforderlichen Daten können vom Web SDK entweder als XDM-Daten oder als Nicht-XDM-Daten gesendet werden. Weitere Informationen finden Sie in der Dokumentation . [Senden von XDM-Daten](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+Die für diese Erweiterung erforderlichen Daten können vom Web SDK entweder als XDM-Daten gesendet werden (unter Verwendung der [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) -Objekt) oder Nicht-XDM-Daten (mithilfe der [`data`](/help/web-sdk/commands/sendevent/data.md) -Objekt).
 
 Wenn beispielsweise ein Kunde einen Kauf tätigt oder sich für ein Ereignis auf Ihrer Site registriert, können Sie eine Bestätigungs-E-Mail über Mailchimp mit dieser Erweiterung senden. Nachdem Sie die erforderlichen Informationen vom Web SDK an das Edge-Netzwerk gesendet haben, wird die E-Mail von der Erweiterung mit Mailchimp Trigger.
 
@@ -123,7 +123,7 @@ Die nachstehende Tabelle enthält für jeden möglichen Wert detailliertere Info
 | `listId` | `arc.event.xdm._tenant.listId`<br /> oder<br /> `arc.event.data._tenant.listid` | Zeichenfolge | Zielgruppen-ID | **Ja** | Muss mit einer vorhandenen Zielgruppen-ID übereinstimmen |
 | `name` | `arc.event.xdm._tenant.name`<br /> oder<br /> `arc.event.data._tenant.name` | Zeichenfolge | Der Ereignisname | **Ja** | Länge von 2-30 Zeichen |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> oder<br /> `arc.event.data._tenant.properties` | Objekt | Eine optionale Liste der Eigenschaften im JSON-Format mit Details zum Ereignis | Nein |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oder<br /> `arc.event.data._tenant.isSyncing` | boolean | Mit `is_syncing` auf `true` **nicht** Automatisierung von Triggern | Nein |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oder<br /> `arc.event.data._tenant.isSyncing` | Boolescher Wert | Mit `is_syncing` auf `true` **nicht** Automatisierung von Triggern | Nein |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> oder `arc.event.data._tenant.occuredAt` | Zeichenfolge | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses | Nein |  |
 
 {style="table-layout:auto"}

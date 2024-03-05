@@ -3,10 +3,10 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1070'
-ht-degree: 88%
+source-wordcount: '1064'
+ht-degree: 87%
 
 ---
 
@@ -30,9 +30,9 @@ Dieses Dokument bietet einen Überblick über die Ereignisweiterleitung in Platf
 >
 >Informationen dazu, wie die Ereignisweiterleitung in Platform in das Datenerfassungs-Ökosystem passt, finden Sie in der [Übersicht zur Datenerfassung](../../../collection/home.md).
 
-Die Ereignisweiterleitung in Kombination mit dem [Web SDK](../../../edge/home.md) und dem [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=de) von Adobe Experience Platform bietet die folgenden Vorteile:
+Die Ereignisweiterleitung in Kombination mit dem [Web SDK](/help/web-sdk/home.md) und dem [Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=de) von Adobe Experience Platform bietet die folgenden Vorteile:
 
-**Leistung**:
+**Performance**:
 
 * Führen Sie einen einzelnen Aufruf von einer Seite aus, die eine Payload von Daten enthält, die dann Server-seitig zusammengeführt werden, um den Client-seitigen Netzwerkverkehr zu reduzieren und so Kunden ein schnelleres Erlebnis zu bieten.
 * Verringern Sie die Ladezeit von Web-Seiten, um die Site-Performance zu verbessern.

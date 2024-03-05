@@ -3,9 +3,9 @@ keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; A
 title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2278'
 ht-degree: 1%
 
 ---
@@ -267,7 +267,7 @@ Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://w
 
 ## Handhabung von Zustimmungs- und Vorgabenänderungen
 
-Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mit der [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md). Wenn ein Kunde die Datenerfassung ablehnt, muss die Datenerfassung sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten besuchten Seite keine Personalisierung vorhanden sein.
+Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mit der [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). Wenn ein Kunde die Datenerfassung ablehnt, muss die Datenerfassung sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten besuchten Seite keine Personalisierung vorhanden sein.
 
 ## Anhang {#appendix}
 

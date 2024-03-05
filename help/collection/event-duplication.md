@@ -1,7 +1,7 @@
 ---
 title: Umgang mit Ereignisduplizierungen im Experience Platform
 description: Erfahren Sie, wie Adobe Experience Platform mit der Ereignisduplizierung umgeht
-source-git-commit: 89cdb0832009bcee31b4339f021bc5a0ce254752
+source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform ist ein hochverteiltes System, das die Zuverlässigkeit maximiert und gleichzeitig auf immer größere Datenmengen skaliert.
 
-Für die Echtzeit-Datenerfassung: [Erlebnisereignisse](../xdm/classes/experienceevent.md) werden über die [Edge Network](../edge/home.md#edge-network), aus clientseitigen Quellen, wie z. B. [Web SDK](../edge/home.md) oder [Mobile SDK](https://developer.adobe.com/client-sdks/home/)und an Experience Platform-Verarbeitungs- und Speicherschichten geliefert werden. Diese Schichten bestehen aus Lösungen wie Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de), und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de).
+Für die Echtzeit-Datenerfassung: [Erlebnisereignisse](../xdm/classes/experienceevent.md) werden über die [Edge Network](../web-sdk/home.md#edge-network), aus clientseitigen Quellen, wie z. B. [Web SDK](../web-sdk/home.md) oder [Mobile SDK](https://developer.adobe.com/client-sdks/home/)und an Experience Platform-Verarbeitungs- und Speicherschichten geliefert werden. Diese Schichten bestehen aus Lösungen wie Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de), und [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de).
 
 Um den Verlust von Erlebnisereignissen zu minimieren, erwarten Client-seitige SDKs und der interne Experience Platform-Bereitstellungsdienst eine Bestätigung, dass ein Ereignis erfolgreich erfasst wurde.
 

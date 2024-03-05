@@ -2,16 +2,16 @@
 title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mithilfe der Datenerfassungsfunktionen von Adobe Experience Platform an Adobe Experience Cloud-Lösungen senden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
-ht-degree: 95%
+source-wordcount: '2616'
+ht-degree: 93%
 
 ---
 
 # Datenerfassung End-to-End – Übersicht
 
-Adobe Experience Platform erfasst und überträgt Ihre Daten an andere Adobe-Produkte und Ziele von Drittanbietern. Um Ereignisdaten von Ihrem Programm an das Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
+Adobe Experience Platform erfasst und überträgt Ihre Daten an andere Adobe-Produkte und Ziele von Drittanbietern. Um Ereignisdaten von Ihrer Anwendung an das Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
 
 Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge-Netzwerk mithilfe der Datenerfassungsfunktionen von Platform. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
 
@@ -30,7 +30,7 @@ In diesem Tutorial wird die Datenerfassungs-Benutzeroberfläche verwendet, um ei
 
 Siehe Handbuch unter [Verwalten von Berechtigungen für die Datenerfassung](./permissions.md) , um zu erfahren, wie Sie Zugriff auf Eigenschaften und Eigentumsrechte gewähren.
 
-Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemas zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe-Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
+Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemata zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe-Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
 
 Wenn Sie bereits Zugriff auf Platform haben, müssen Sie sicherstellen, dass alle [Berechtigungen](../access-control/home.md#permissions) unter den folgenden Kategorien aktiviert sind:
 
@@ -52,7 +52,7 @@ Sobald Sie Daten an das Edge Network senden können, können Sie optional auch [
 
 ## Erstellen eines Schemas {#schema}
 
-Das [Experience-Datenmodell (XDM)](../xdm/home.md) ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen für Daten in Form von Schemas bereitstellt. Mit anderen Worten: XDM ist eine Methode, Ihre Daten so zu strukturieren und zu formatieren, dass sie vom Edge Network und anderen Adobe Experience Cloud-Programmen verarbeitet werden können.
+Das [Experience-Datenmodell (XDM)](../xdm/home.md) ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen für Daten in Form von Schemata bereitstellt. Mit anderen Worten: XDM ist eine Methode, Ihre Daten so zu strukturieren und zu formatieren, dass sie vom Edge Network und anderen Adobe Experience Cloud-Programmen verarbeitet werden können.
 
 Der erste Schritt bei der Einrichtung Ihrer Datenerfassungsvorgänge besteht darin, ein XDM-Schema zur Darstellung Ihrer Daten zu erstellen. In einem späteren Schritt in diesem Tutorial ordnen Sie die Daten, die Sie senden möchten, der Struktur dieses Schemas zu.
 
@@ -60,15 +60,15 @@ Der erste Schritt bei der Einrichtung Ihrer Datenerfassungsvorgänge besteht dar
 >
 >XDM-Schemata sind sehr anpassbar. Die unten beschriebenen Schritte konzentrieren sich nicht auf übermäßige Vorgaben, sondern auf die Schemaanforderungen für das Web SDK. Außerhalb dieser Parameter können Sie die verbleibende Struktur Ihrer Daten beliebig definieren.
 
-Wählen Sie in der Benutzeroberfläche **[!UICONTROL Schemas]** in der linken Navigation. Von hier aus können Sie eine Liste der zuvor erstellten Schemas sehen, die zu Ihrer Organisation gehören. Um fortzufahren, wählen Sie **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL XDM ExperienceEvent]** aus dem Dropdown-Menü.
+Wählen Sie in der Benutzeroberfläche **[!UICONTROL Schemas]** in der linken Navigation. Von hier aus können Sie eine Liste der zuvor erstellten Schemata sehen, die zu Ihrer Organisation gehören. Um fortzufahren, wählen Sie **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL XDM ExperienceEvent]** aus dem Dropdown-Menü.
 
-![Arbeitsbereich „Schemas“](./images/e2e/schemas.png)
+![Arbeitsbereich „Schemata“](./images/e2e/schemas.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Feldergruppen zu dem Schema hinzuzufügen. Um Ereignisse mit dem Web SDK zu senden, müssen Sie die Feldergruppe **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]** hinzufügen. Diese Feldergruppe enthält Definitionen für Datenattribute, die automatisch von der Web SDK-Bibliothek erfasst werden.
 
 Verwenden Sie die Suchleiste, um die Liste einzugrenzen und so diese Feldergruppe leichter zu finden. Nachdem Sie sie gefunden haben, wählen Sie sie aus der Liste aus, bevor Sie **[!UICONTROL Feldergruppen hinzufügen]** auswählen.
 
-![Arbeitsbereich „Schemas“](./images/e2e/add-field-group.png)
+![Arbeitsbereich „Schemata“](./images/e2e/add-field-group.png)
 
 Die Arbeitsfläche des Schemas wird angezeigt und zeigt eine Baumstruktur Ihres XDM-Schemas mit den Feldern, die von der Web SDK-Feldergruppe bereitgestellt werden.
 
@@ -114,8 +114,8 @@ Nachdem Sie ein Schema und einen Datenstrom erstellt haben, müssen Sie das Plat
 >
 >In diesem Abschnitt wird die Datenerfassungs-Benutzeroberfläche verwendet, um die Tag-Erweiterung des Web SDKs zu konfigurieren. Sie können sie jedoch auch mithilfe von Rohcode installieren und konfigurieren. Weitere Informationen finden Sie in den folgenden Handbüchern:
 >
->* [Installieren des SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Konfigurieren des SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Installieren des SDK](/help/web-sdk/install/overview.md)
+>* [Konfigurieren des SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Beachten Sie außerdem, dass Sie, auch wenn Sie nur die Ereignisweiterleitung verwenden möchten, das SDK dennoch wie beschrieben installieren und konfigurieren müssen, bevor Sie die Ereignisweiterleitung in einem [späteren Schritt](#event-forwarding) konfigurieren.
 
@@ -160,7 +160,7 @@ Wählen Sie im nächsten Bildschirm **[!UICONTROL Adobe Experience Platform Web 
 
 ![XDM-Objekttyp](./images/e2e/xdm-object.png)
 
-Das Konfigurationsdialogfeld wird für den XDM-Objekttyp angezeigt. Im Dialogfeld wird automatisch Ihre Platform-Sandbox ausgewählt. Von hier aus können Sie alle Schemas sehen, die in dieser Sandbox erstellt wurden. Wählen Sie das zuvor erstellte XDM-Schema aus der Liste aus.
+Das Konfigurationsdialogfeld wird für den XDM-Objekttyp angezeigt. Im Dialogfeld wird automatisch Ihre Platform-Sandbox ausgewählt. Von hier aus können Sie alle Schemata sehen, die in dieser Sandbox erstellt wurden. Wählen Sie das zuvor erstellte XDM-Schema aus der Liste aus.
 
 ![XDM-Objekttyp](./images/e2e/select-schema.png)
 

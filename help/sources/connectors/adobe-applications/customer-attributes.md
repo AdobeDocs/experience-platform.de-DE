@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über den Quell-Connector für Kundenattribute
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Kundenattribute mit Adobe Experience Platform verbinden.
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '380'
 ht-degree: 19%
 
 ---
@@ -31,7 +31,7 @@ Bei Verwendung von [!DNL Customer Attributes] -Quelle [!DNL Customer Attributes]
 
 Für [!DNL Customer Attributes] Daten, die mit anderen verknüpft werden [!DNL Profile] -Datensätze, ihre Daten und Identitäten müssen mit einer Experience Cloud-ID abgeglichen werden können.
 
-Sie können `CORE` Namespace durch Festlegen der Experience Cloud-ID für den Besucher mithilfe von [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=de), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)oder die [Experience Cloud ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
+Sie können `CORE` Namespace durch Festlegen der Experience Cloud-ID für den Besucher mithilfe von [Web SDK](/help/web-sdk/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)oder die [Experience Cloud ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
 
 Die [!DNL Customer Attributes] -Datei füllt keine anderen Identitätsbeziehungen weiter. Beispiel: Wenn ein [!DNL Customer Attributes] Quelldatensatz enthält einen **Email** und **Treueprogramm-ID** eingeben, müssen diese Felder im Schema als Identitätsfelder gekennzeichnet werden, damit sie in [!DNL Identity Service].
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 9%
@@ -109,7 +109,7 @@ Identity Service spielt bei der Experience Platform eine wichtige Rolle. Zu dies
 
 * [Schemas](../xdm/home.md): Innerhalb eines bestimmten Schemas ermöglichen die Erstellung von Identitätsdiagrammen die Schemafelder, die als Identität markiert sind.
 * [Datensätze](../catalog/datasets/overview.md): Wenn ein Datensatz für die Aufnahme in das Echtzeit-Kundenprofil aktiviert ist, werden Identitätsdiagramme aus dem Datensatz generiert, da der Datensatz mindestens zwei als Identität markierte Felder aufweist.
-* [Web SDK](../edge/home.md): Web SDK sendet Erlebnisereignisse an Adobe Experience Platform und Identity Service generiert ein Diagramm, wenn im Ereignis zwei oder mehr Identitäten vorhanden sind.
+* [Web SDK](../web-sdk/home.md): Web SDK sendet Erlebnisereignisse an Adobe Experience Platform und Identity Service generiert ein Diagramm, wenn im Ereignis zwei oder mehr Identitäten vorhanden sind.
 * [Echtzeit-Kundenprofil](../profile/home.md): Bevor Attribute und Ereignisse für ein bestimmtes Profil zusammengeführt werden, kann das Echtzeit-Kundenprofil auf das Identitätsdiagramm verweisen. Weitere Informationen finden Sie im Handbuch unter [Verstehen der Beziehung zwischen Identity Service und Echtzeit-Kundenprofil](./identity-and-profile.md).
 * [Ziele](../destinations/home.md): Ziele können Profilinformationen basierend auf einem Identitäts-Namespace an andere Systeme senden, z. B. Hash-E-Mails.
 * [Segmentübereinstimmung](../segmentation/ui/segment-match/overview.md): Die Segmentübereinstimmung stimmt mit zwei Profilen in zwei verschiedenen Sandboxes überein, die denselben Identitäts-Namespace und denselben Identitätswert aufweisen.

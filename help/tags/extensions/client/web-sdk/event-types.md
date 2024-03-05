@@ -3,16 +3,16 @@ title: Ereignistypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie, wie Sie Ereignistypen verwenden, die von der Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch bereitgestellt werden.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 1%
+source-wordcount: '1006'
+ht-degree: 0%
 
 ---
 
 # Ereignistypen
 
-Auf dieser Seite werden die Adobe Experience Platform-Ereignistypen beschrieben, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden. Diese werden verwendet, um [Build-Regeln](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) und sollten nicht mit der [`eventType` -Feld in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=de).
+Auf dieser Seite werden die Adobe Experience Platform-Ereignistypen beschrieben, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden. Diese werden für [Build-Regeln](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) und sollten nicht mit der `eventType` im Feld [`xdm` Objekt](/help/web-sdk/commands/sendevent/xdm.md).
 
 ## [!UICONTROL Abschluss des Ereignisses senden]
 
@@ -85,9 +85,9 @@ Die `propositions` -Array ähnelt möglicherweise diesem Beispiel:
 ]
 ```
 
-Beim Senden des Ereignisses wird die Variable [!UICONTROL Renderentscheidungen] nicht aktiviert wurde, sodass das SDK nicht versucht hat, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen zur manuellen Wiedergabe bereitgestellt, sofern dies gewünscht ist. Beachten Sie, dass jedes Vorschlagsobjekt seinen `renderAttempted` Eigenschaft auf `false`.
+Beim Senden des Ereignisses wird die Variable [!UICONTROL Renderentscheidungen] nicht aktiviert wurde, sodass das SDK nicht versucht hat, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen zur manuellen Wiedergabe bereitgestellt, sofern dies gewünscht ist. Beachten Sie, dass jedes Vorschlagsobjekt seinen `renderAttempted` Eigenschaft festgelegt auf `false`.
 
-Wenn Sie stattdessen die Option [!UICONTROL Renderentscheidungen] aktivieren, wenn das Ereignis gesendet wird, hätte das SDK versucht, alle Vorschläge wiederzugeben, die für die automatische Wiedergabe infrage kommen. Daher würde jedes der Vorschlagsobjekte seine `renderAttempted` Eigenschaft auf `true`. In diesem Fall müssen diese Vorschläge nicht manuell gerendert werden.
+Wenn Sie stattdessen die Option [!UICONTROL Renderentscheidungen] das Kontrollkästchen zum Senden des Ereignisses aktiviert hätte, hätte das SDK versucht, alle Vorschläge wiederzugeben, die für die automatische Wiedergabe infrage kommen. Daher würde jedes der Vorschlagsobjekte seine `renderAttempted` Eigenschaft festgelegt auf `true`. In diesem Fall müssen diese Vorschläge nicht manuell gerendert werden.
 
 Bisher haben Sie sich nur mit Personalisierungsinhalten befasst, die für die automatische Wiedergabe geeignet sind (z. B. mit Inhalten, die im Visual Experience Composer von Adobe Target erstellt wurden). Abrufen von Personalisierungsinhalten _not_ für das automatische Rendering infrage kommen, fordern Sie den Inhalt an, indem Sie Entscheidungsbereiche mit der [!UICONTROL Entscheidungsbereiche] im Feld [!UICONTROL Ereignis senden] Aktion. Ein Perimeter ist eine Zeichenfolge, die einen bestimmten Vorschlag identifiziert, den Sie vom Server abrufen möchten.
 
@@ -95,7 +95,7 @@ Die [!UICONTROL Ereignis senden] -Aktion würde wie folgt aussehen:
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-In diesem Beispiel, wenn Vorschläge auf dem Server gefunden werden, die dem `salutation` oder `discount` , werden sie zurückgegeben und in die `propositions` Array. Beachten Sie, dass Vorschläge, die für das automatische Rendering infrage kommen, weiterhin im Abschnitt `propositions` Array, unabhängig davon, wie Sie die [!UICONTROL Renderentscheidungen] oder [!UICONTROL Entscheidungsbereiche] -Felder in [!UICONTROL Ereignis senden] Aktion. Die `propositions` -Array würde in diesem Fall in etwa wie folgt aussehen:
+In diesem Beispiel, wenn Vorschläge auf dem Server gefunden werden, die mit dem `salutation` oder `discount` , werden sie zurückgegeben und in die `propositions` Array. Beachten Sie, dass Vorschläge, die für das automatische Rendering infrage kommen, weiterhin im Abschnitt `propositions` Array, unabhängig davon, wie Sie die [!UICONTROL Renderentscheidungen] oder [!UICONTROL Entscheidungsbereiche] -Felder in der [!UICONTROL Ereignis senden] Aktion. Die `propositions` -Array würde in diesem Fall in etwa wie im folgenden Beispiel aussehen:
 
 ```json
 [
@@ -169,7 +169,7 @@ In diesem Beispiel, wenn Vorschläge auf dem Server gefunden werden, die dem `sa
 ]
 ```
 
-An dieser Stelle können Sie den Vorschlagsinhalt nach Bedarf rendern. In diesem Beispiel entspricht der Vorschlag dem `discount` scope ist ein HTML-Vorschlag, der mit dem formularbasierten Experience Composer von Adobe Target erstellt wurde. Angenommen, Sie haben ein Element auf Ihrer Seite mit der ID von `daily-special` und den Inhalt aus der `discount` Vorschlag in die `daily-special` -Element. Gehen Sie folgendermaßen vor:
+An dieser Stelle können Sie den Vorschlagsinhalt nach Bedarf rendern. In diesem Beispiel entspricht der Vorschlag dem `discount` scope ist ein HTML-Vorschlag, der mit dem formularbasierten Experience Composer von Adobe Target erstellt wurde. Angenommen, Sie verfügen über ein Element auf Ihrer Seite mit der ID `daily-special` und den Inhalt aus der `discount` Vorschlag in `daily-special` -Element. Gehen Sie folgendermaßen vor:
 
 1. Entnehmen Sie Vorschläge aus dem `event` -Objekt.
 1. Durchlaufen Sie jeden Vorschlag und suchen Sie nach dem Vorschlag mit einem Umfang von `discount`.

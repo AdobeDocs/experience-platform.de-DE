@@ -2,10 +2,10 @@
 title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ Es gibt zwei Anwendungsfälle, in denen die Datenvorbereitung für die Datenerfa
 
 ## Vorhandene Datenschicht über WebSDK an das Edge-Netzwerk senden {#send-datalayer-via-websdk}
 
-Die vorhandene Datenschicht muss mithilfe der `data` der `sendEvent` -Befehl, wie im Abschnitt [Web SDK-Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+Die vorhandene Datenschicht muss mithilfe der [`data`](/help/web-sdk/commands/sendevent/data.md) -Objekt innerhalb der `sendEvent` Befehl.
 
-Wenn Sie Tags verwenden, müssen Sie die **[!UICONTROL Daten]** des **[!UICONTROL Ereignis senden]** Aktionstyp, wie im Abschnitt [Dokumentation zur Web SDK-Tag-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+Wenn Sie Tags verwenden, müssen Sie die **[!UICONTROL Daten]** des **[!UICONTROL Ereignis senden]** Aktionstyp, wie im Abschnitt [Dokumentation zur Web SDK-Tag-Erweiterung](/help/tags/extensions/client/web-sdk/action-types.md).
 
 Der Rest dieses Handbuchs konzentriert sich auf die Zuordnung der Datenschicht zu XDM-Standards, nachdem sie vom WebSDK gesendet wurde.
 

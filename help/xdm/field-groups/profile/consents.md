@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Einverständnis und Voreinstellungsfeldgruppe
 description: Erfahren Sie mehr über die Feldgruppe "Einverständnis und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://w
 
 ## Handhabung von Zustimmungs- und Vorgabenänderungen
 
-Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mit der [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). Wenn ein Kunde die Datenerfassung ablehnt, muss die Datenerfassung sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten besuchten Seite keine Personalisierung vorhanden sein.
+Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mit der [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). Wenn ein Kunde die Datenerfassung ablehnt, muss die Datenerfassung sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten besuchten Seite keine Personalisierung vorhanden sein.
 
 ## Nächste Schritte
 

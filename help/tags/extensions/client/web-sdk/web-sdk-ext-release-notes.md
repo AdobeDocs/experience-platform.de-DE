@@ -2,17 +2,17 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '1990'
-ht-degree: 91%
+source-wordcount: '1983'
+ht-degree: 89%
 
 ---
 
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
-In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de).
+In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
 
 ## Version 2.21.4 – Donnerstag, 10. Januar 2024
 
@@ -81,7 +81,7 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 **Neue Funktionen**
 
 * Enthält Version 2.16.0 des Adobe Experience Platform Web SDK.
-* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](../../../../datastreams/overrides.md) hinzugefügt.
+* Es wurde Unterstützung für [Überschreibungen der Datenstromkonfiguration](/help/datastreams/overrides.md) hinzugefügt.
 * Der Option `datasetId` des Befehls `sendEvent` wurde ein Hinweis hinzugefügt, dass sie veraltet ist.
 
 
@@ -98,7 +98,7 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 **Neue Funktionen**
 
 * (Beta) Aktion **[!UICONTROL Variable aktualisieren]** und Datenelement **[!UICONTROL Variable]** hinzugefügt.
-* Konfiguration hinzugefügt für Callback-Funktion [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+* Konfiguration hinzugefügt für Callback-Funktion [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md).
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -157,7 +157,7 @@ Enthält Version 2.10.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 ## Version 2.11.0 – 22. April 2022
 
-* Die Leistung der Tags-Benutzeroberfläche wurde verbessert.
+* die Performance der Tags-Benutzeroberfläche wurde verbessert.
 * Sandbox-Selektoren wurden zur Datenstrom-Erweiterungskonfiguration hinzugefügt.
 
 Enthält Version 2.10.0 der Adobe Experience Platform Web SDK-Bibliothek.
@@ -176,7 +176,7 @@ Enthält Version 2.8.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.7.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* Weitere Informationen aus dem Edge-Netzwerk sind im Ereignis &quot;Send Event Complete&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden. Weitere Informationen finden Sie unter [Tracking von Ereignissen](../../../../edge/fundamentals/tracking-events.md).
+* Weitere Informationen aus dem Edge-Netzwerk sind im Ereignis &quot;Send Event Complete&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden.
 
 ## Version 2.7.3 – 7. September 2021
 
@@ -223,10 +223,10 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* Ein Kontrollkästchen für [Dokument-Uploads](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) wurde der Benutzeroberfläche für die Aktion „Ereignis senden“ hinzugefügt.
-* Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de#default-consent) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
+* hinzugefügt [&quot;Dokument entladen&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) aktivieren, um die Benutzeroberfläche für die Aktion &quot;Ereignis senden&quot;zu aktivieren.
+* Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 * Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
-* Es wurde Unterstützung für [Adobe Consent 2.0 Standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=de#communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.
+* Unterstützung für Adobe Consent 2.0-Standard bei Verwendung des [`setConsent`](/help/web-sdk/commands/setconsent.md) Befehl.
 * In der Benutzeroberfläche für das XDM-Objekt-Datenelement wird jetzt eine passendere Fehlermeldung angezeigt, wenn das Zugriffstoken der Benutzenden ungültig ist oder nicht ordnungsgemäß bereitgestellt wurde.
 * Es wurde ein ursprungsübergreifender Fehler behoben (was sich nicht auf die Nutzung der Erweiterung auswirkt), der beim Anzeigen eines XDM-Objekt-Datenelements in der Developer Console für den Browser eingeblendet wurde.
 
@@ -235,7 +235,7 @@ Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 * Unterstützung für die Verwendung eines Datenelements beim Konfigurieren des Standardeinverständnisses hinzugefügt.
-* Es wurde die Möglichkeit hinzugefügt, mit dem XDM-Objektdatenelementtyp nach XDM-Schemas zu suchen.
+* Es wurde die Möglichkeit hinzugefügt, mit dem XDM-Objektdatenelementtyp nach XDM-Schemata zu suchen.
 * Es wurde das Klonen von XDM-Daten im Aktionstyp „Ereignis senden“ hinzugefügt, um sicherzustellen, dass spätere Änderungen am XDM-Datenobjekt nicht in der Anfrage übernommen werden.
 
 ## Version 2.2.0 – 1. Oktober 2020
@@ -251,7 +251,7 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 ## Version 2.1.0 – 5. August 2020
 
 * Grundlegende Änderung: Die Aktion `syncIdentity` wurde entfernt; die Übergabe dieser IDs erfolgt jetzt über die Aktion `sendEvent`. Deaktivieren Sie ggf. bestehende Regeln, die diese Aktion verwenden, bevor Sie ein Upgrade der Erweiterung vornehmen.
-* Aktualisierung auf Alloy Version 2.1.0 ([Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=de))
+* Aktualisierung auf Alloy Version 2.1.0 ([Versionshinweise](/help/web-sdk/release-notes.md))
 * Unterstützung für den IAB 2.0-Standard für Einwilligungen in der Aktion `setConsent`.
 * Unterstützung für das Überschreiben der Datensatz-ID in der Aktion `sendEvent`.
 * Neues Datenelement vom Typ `IdentityMap`. Über dieses kann der Eintrag `identityMap` im nun aktivierten XDM-Objektdatenelement sowie in der Aktion `setConsent` ausgefüllt werden.

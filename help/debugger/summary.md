@@ -1,15 +1,15 @@
 ---
 title: Registerkarte "Zusammenfassung"
-description: Erfahren Sie, wie Sie die Registerkarte "Zusammenfassung"im Adobe Experience Platform Debugger verwenden.
+description: Erfahren Sie, wie Sie die Registerkarte "Zusammenfassung"in Adobe Experience Platform Debugger verwenden.
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Zusammenfassung;clear;Anfragen;Zusammenfassungsbildschirm;Lösung;Informationen;Analytics;Target;DTM;Audience Manager;Launch;ID-Dienst
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 77%
+source-wordcount: '711'
+ht-degree: 83%
 
 ---
 
@@ -81,11 +81,11 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>Die Turbine-Version.</a> </p> </td> 
+   <td colname="col2"> <p>Die Turbine -Version</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Build-Datum </p> </td> 
-   <td colname="col2"> <p>Das Tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> Bibliothek</a> Build-Datum </p> </td> 
+   <td colname="col2"> <p>Das Tag <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=de" format="https" scope="external"> Bibliothek</a> Build-Datum </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Umgebung </p> </td> 
@@ -104,7 +104,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Bibliotheksversion </p> </td> 
-   <td colname="col2"> <p>Die Nummer der Adobe Experience Platform Web SDK-<a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">Bibliotheksversion</a>. </p> </td> 
+   <td colname="col2"> <p>Die Nummer der Adobe Experience Platform Web SDK-<a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">Bibliotheksversion</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Namespace</p> </td> 
@@ -185,7 +185,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
    <td colname="col2"> <p>Die ID des Target-Erlebnisses. Ist nur dann ohne Authentifizierung verfügbar, wenn Sie den Debugging-Ereignis-Listener in Ihren Code oder Tag-Manager implementieren und die erforderlichen <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> Antwort-Tokens</a> in der Target-Benutzeroberfläche aktivieren. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>Angebot Name</p> </td> 
+   <td colname="col1"> <p>Angebotsname</p> </td> 
    <td colname="col2"> <p>Name des Target-<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=de" format="html" scope="external"> Angebots</a>. Ist nur dann ohne Authentifizierung verfügbar, wenn Sie den Debugging-Ereignis-Listener in Ihren Code oder Tag-Manager implementieren und die erforderlichen <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> Antwort-Tokens</a> in der Target-Benutzeroberfläche aktivieren. </p> </td> 
   </tr> 
   <tr> 

@@ -3,10 +3,10 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Zielgruppendaten aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Zielgruppenmitgliedschaft des Benutzerprofils.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 60%
+source-wordcount: '906'
+ht-degree: 58%
 
 ---
 
@@ -35,7 +35,7 @@ Richten Sie dieses Ziel ein, damit externe Personalisierungsplattformen, Content
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](../../../edge/home.md) oder [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Sie müssen eines dieser SDKs verwenden, um dieses Ziel verwenden zu können.
+Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) oder [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Sie müssen eines dieser SDKs verwenden, um dieses Ziel verwenden zu können.
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ Hier finden Sie einen Beispielwert für die `event.destinations`-Variable:
 ]
 ```
 
-Wenn Sie [Tags](../../../tags/home.md) nicht zum Bereitstellen des Experience Platform Web SDK verwenden, nutzten Sie die Funktion [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events), um die exportierten Daten anzuzeigen.
+Wenn Sie die [Tags](/help/tags/home.md) Verwenden Sie zum Bereitstellen des Experience Platform Web SDK [Befehlsantworten](/help/web-sdk/commands/command-responses.md) um die exportierten Daten anzuzeigen.
 
 Die JSON-Antwort von Adobe Experience Platform kann analysiert werden, um den entsprechenden Integrationsalias des Programms zu finden, das Sie mit Adobe Experience Platform integrieren. Die Zielgruppen-IDs können als Targeting-Parameter in den Code der Anwendung übergeben werden. Nachfolgend finden Sie ein Beispiel dafür, wie dies spezifisch für die Zielantwort aussehen würde.
 

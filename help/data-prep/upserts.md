@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Teilweise Zeilen-Aktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 5%
 
 ---
@@ -265,7 +265,7 @@ Im Folgenden finden Sie eine Liste bekannter Einschränkungen, die beim Streamin
 
 * Die Streaming-Upsermethode sollte nur verwendet werden, wenn Teilzeilenaktualisierungen an [!DNL Real-Time Customer Profile]. Teilzeilenaktualisierungen sind **not** von Data Lake verbraucht.
 * Die Streaming-Upsert-Methode unterstützt nicht das Aktualisieren, Ersetzen und Entfernen von Identitäten. Neue Identitäten werden erstellt, wenn sie nicht vorhanden sind. Daher `identity` -Vorgang muss immer auf &quot;Erstellen&quot;eingestellt sein. Wenn bereits eine Identität vorhanden ist, ist der Vorgang ein no-op-Vorgang.
-* Die Streaming-Upsermethode unterstützt derzeit nicht [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=de) und [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* Die Streaming-Upsermethode unterstützt derzeit nicht [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) und [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Nächste Schritte
 

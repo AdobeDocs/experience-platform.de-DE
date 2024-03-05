@@ -4,9 +4,9 @@ solution: Experience Platform
 title: IAB TCF 2.0-Unterstützung für Experience Platform
 description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schemata konfigurieren, um bei der Aktivierung von Segmenten für Ziele in Adobe Experience Platform Auswahlmöglichkeiten für die Kundenzustimmung zu vermitteln.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2492'
 ht-degree: 1%
 
 ---
@@ -37,14 +37,14 @@ Um diesem Handbuch zu folgen, müssen Sie eine kommerzielle oder eigene CMP verw
 
 Dieses Handbuch setzt außerdem ein Verständnis der folgenden Platform-Dienste voraus:
 
-* [Experience-Datenmodell (XDM)](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Adobe Experience Platform Identity-Dienst](../../../../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
-* [Echtzeit-Kundenprofil](../../../../profile/home.md): Verwendet [!DNL Identity Service] , um aus Ihren Datensätzen in Echtzeit detaillierte Kundenprofile zu erstellen. [!DNL Real-Time Customer Profile] ruft Daten aus dem Data Lake ab und behält Kundenprofile in einem eigenen separaten Datenspeicher bei.
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md): Eine Client-seitige JavaScript-Bibliothek, mit der Sie verschiedene Platform-Dienste in Ihre kundenorientierte Website integrieren können.
-   * [SDK-Zustimmungsbefehle](../../../../edge/consent/supporting-consent.md): Eine Anwendungsfallübersicht der einwilligungsbezogenen SDK-Befehle, die in diesem Handbuch angezeigt werden.
-* [Adobe Experience Platform-Segmentierungsdienst](../../../../segmentation/home.md): Ermöglicht die Teilung [!DNL Real-Time Customer Profile] Daten in Gruppen von Einzelanwendern, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
+* [Experience-Datenmodell (XDM)](/help/xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
+* [Adobe Experience Platform Identity-Dienst](/help/identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [Echtzeit-Kundenprofil](/help/profile/home.md): Verwendet [!DNL Identity Service] , um aus Ihren Datensätzen in Echtzeit detaillierte Kundenprofile zu erstellen. [!DNL Real-Time Customer Profile] ruft Daten aus dem Data Lake ab und behält Kundenprofile in einem eigenen separaten Datenspeicher bei.
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Eine Client-seitige JavaScript-Bibliothek, mit der Sie verschiedene Platform-Dienste in Ihre kundenorientierte Website integrieren können.
+   * [SDK-Zustimmungsbefehle](/help/web-sdk/consent/supporting-consent.md): Eine Anwendungsfallübersicht der einwilligungsbezogenen SDK-Befehle, die in diesem Handbuch angezeigt werden.
+* [Adobe Experience Platform-Segmentierungsdienst](/help/segmentation/home.md): Ermöglicht die Teilung [!DNL Real-Time Customer Profile] Daten in Gruppen von Einzelanwendern, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
 
-Zusätzlich zu den oben aufgeführten Platform-Diensten sollten Sie auch mit [Ziele](../../../../data-governance/home.md) und ihre Rolle im Platform-Ökosystem.
+Zusätzlich zu den oben aufgeführten Platform-Diensten sollten Sie auch mit [Ziele](/help/data-governance/home.md) und ihre Rolle im Platform-Ökosystem.
 
 ## Übersicht über die Kundenzustimmungen {#summary}
 
@@ -102,7 +102,7 @@ Die Daten zur Kundenzustimmung müssen an Datensätze gesendet werden, deren Sch
 
 Nachdem Sie eine [!DNL Profile]-aktivierter Datensatz für die Erfassung von Zustimmungsdaten, müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert wurden, dass immer TCF-Einwilligungsfelder in Ihre Kundenprofile aufgenommen werden. Dazu gehört das Festlegen der Datensatzpriorität, sodass Ihr Einwilligungsdatensatz Vorrang vor anderen möglicherweise in Konflikt stehenden Datensätzen erhält.
 
-Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie im Abschnitt [Übersicht über Zusammenführungsrichtlinien](../../../../profile/merge-policies/overview.md). Beim Einrichten Ihrer Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Segmente alle erforderlichen Zustimmungsattribute enthalten, die von der [Feldergruppe des XDM-Datenschutzschemas](./dataset.md#privacy-field-group), wie im Handbuch zur Vorbereitung von Datensätzen beschrieben.
+Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie im Abschnitt [Übersicht über Zusammenführungsrichtlinien](/help/profile/merge-policies/overview.md). Beim Einrichten Ihrer Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Segmente alle erforderlichen Zustimmungsattribute enthalten, die von der [Feldergruppe des XDM-Datenschutzschemas](./dataset.md#privacy-field-group), wie im Handbuch zur Vorbereitung von Datensätzen beschrieben.
 
 ## Integrieren des Experience Platform Web SDK zur Erfassung von Kundenzustimmungsdaten {#sdk}
 
@@ -118,15 +118,15 @@ Nachdem Sie Ihre CMP zur Generierung von Zustimmungszeichenfolgen konfiguriert h
 
 ### Erstellen eines Datenspeichers
 
-Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datastream für Platform erstellen. Spezifische Schritte zum Erstellen eines Datastreams finden Sie im Abschnitt [SDK-Dokumentation](../../../../datastreams/overview.md).
+Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datastream für Platform erstellen. Spezifische Schritte zum Erstellen eines Datastreams finden Sie im Abschnitt [SDK-Dokumentation](/help/datastreams/overview.md).
 
 Nachdem Sie einen eindeutigen Namen für den Datastream angegeben haben, wählen Sie die Umschalter-Schaltfläche neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie als Nächstes die folgenden Werte, um den Rest des Formulars auszufüllen:
 
 | Datenspeicherfeld | Wert |
 | --- | --- |
-| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../../sandboxes/home.md) , die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datastreams enthält. |
-| [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung für Experience Platform. Siehe Tutorial zu [Erstellen einer Streaming-Verbindung](../../../../ingestion/tutorials/create-streaming-connection-ui.md) , wenn Sie keinen Streaming-Inlet haben. |
-| [!UICONTROL Ereignis-Datensatz] | Wählen Sie die [!DNL XDM ExperienceEvent] Datensatz, der im [vorheriger Schritt](#datasets). Wenn Sie die [[!UICONTROL IAB TCF 2.0-Zustimmung] Feldergruppe](../../../../xdm/field-groups/event/iab.md) im Schema dieses Datensatzes können Sie Zustimmungsänderungsereignisse im Laufe der Zeit mithilfe der [`sendEvent`](#sendEvent) -Befehl, der diese Daten in diesem Datensatz speichert. Beachten Sie, dass die in diesem Datensatz gespeicherten Zustimmungswerte **not** wird in automatischen Durchsetzungs-Workflows verwendet. |
+| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](/help/sandboxes/home.md) , die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datastreams enthält. |
+| [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung für Experience Platform. Siehe Tutorial zu [Erstellen einer Streaming-Verbindung](/help/ingestion/tutorials/create-streaming-connection-ui.md) , wenn Sie keinen Streaming-Inlet haben. |
+| [!UICONTROL Ereignis-Datensatz] | Wählen Sie die [!DNL XDM ExperienceEvent] Datensatz, der im [vorheriger Schritt](#datasets). Wenn Sie die [[!UICONTROL IAB TCF 2.0-Zustimmung] Feldergruppe](/help/xdm/field-groups/event/iab.md) im Schema dieses Datensatzes können Sie Zustimmungsänderungsereignisse im Laufe der Zeit mithilfe der [`sendEvent`](#sendEvent) -Befehl, der diese Daten in diesem Datensatz speichert. Beachten Sie, dass die in diesem Datensatz gespeicherten Zustimmungswerte **not** wird in automatischen Durchsetzungs-Workflows verwendet. |
 | [!UICONTROL Profildatensatz] | Wählen Sie die [!DNL XDM Individual Profile] Datensatz, der im [vorheriger Schritt](#datasets). Wenn Sie auf CMP-Zustimmungs-Change-Hooks mit dem [`setConsent`](#setConsent) -Befehl, werden die erfassten Daten in diesem Datensatz gespeichert. Da dieser Datensatz profilaktiviert ist, werden die in diesem Datensatz gespeicherten Zustimmungswerte bei automatischen Durchsetzungs-Workflows berücksichtigt. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
@@ -137,13 +137,9 @@ Wählen Sie zum Abschluss **[!UICONTROL Speichern]** unten auf dem Bildschirm un
 
 Nachdem Sie den im vorherigen Abschnitt beschriebenen Datastream erstellt haben, können Sie mit der Verwendung von SDK-Befehlen beginnen, um Zustimmungsdaten an Platform zu senden. Die folgenden Abschnitte enthalten Beispiele dafür, wie die einzelnen SDK-Befehle in verschiedenen Szenarien verwendet werden können.
 
->[!NOTE]
->
->Eine Einführung in die allgemeine Syntax für alle Platform SDK-Befehle finden Sie im Dokument unter [Befehle ausführen](../../../../edge/fundamentals/executing-commands.md).
-
 #### Verwenden von CMP-Zustimmungs-Change-Hooks {#setConsent}
 
-Viele CMPs bieten vordefinierte Hooks, die Zustimmungsänderungs-Ereignisse überwachen. Wenn diese Ereignisse eintreten, können Sie die `setConsent` -Befehl, um die Einwilligungsdaten des Kunden zu aktualisieren.
+Viele CMPs bieten vordefinierte Hooks, die Zustimmungsänderungs-Ereignisse überwachen. Wenn diese Ereignisse eintreten, können Sie die [`setConsent`](/help/web-sdk/commands/setconsent.md) -Befehl, um die Einwilligungsdaten des Kunden zu aktualisieren.
 
 Die `setConsent` -Befehl erwartet zwei Argumente:
 
@@ -226,7 +222,7 @@ alloy("sendEvent", {
 
 ### Umgang mit SDK-Antworten
 
-Alle [!DNL Platform SDK] -Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Siehe Abschnitt zu [Umgang mit Erfolg oder Fehlschlagen](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) im Handbuch zum Ausführen von SDK-Befehlen für spezifische Beispiele.
+Viele Web SDK-Befehle geben Promises zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Siehe [Befehlsantworten](/help/web-sdk/commands/command-responses.md) für weitere Informationen.
 
 ## Segmente exportieren {#export}
 

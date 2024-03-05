@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Datenerfassung – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '489'
 ht-degree: 100%
 
 ---
@@ -27,7 +27,7 @@ Die Datenerfassung konzentriert sich auf die Auffindbarkeit und Zugänglichkeit 
 * [Tags](../tags/home.md)
 * [Datenströme](../datastreams/overview.md)
 * [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md)
-* [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Adobe Experience Platform Web SDK](../web-sdk/home.md)
 * [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
 * [Edge Network Server-API](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=de)

@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Februar 2024
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2024.
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 26%
@@ -27,7 +27,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Exper
 **Neue oder aktualisierte Funktionen**
 | Funktion | Beschreibung | | — | — | | Tab Verlauf der Warnhinweise | Als Experience Platform-Administrator können Sie die Funktion zum Verwalten von Abonnenten von Warnhinweisen verwenden, um einer Adobe-Benutzer-ID, einer externen E-Mail-Adresse oder einer E-Mail-Gruppenliste einen Warnhinweis zuzuweisen. Weitere Informationen finden Sie unter [Dokumentation zur Warn-Benutzeroberfläche](../../observability/alerts/ui.md) für weitere Informationen zum Tab Verlauf. |
 
-
+{style="table-layout:auto"}
 
 Weitere Informationen zu Warnungen finden Sie im Abschnitt [[!DNL Observability Insights] Übersicht](../../observability/home.md).
 
@@ -39,7 +39,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Web-In-App-Messaging-Unterstützung im Web SDK](../../edge/personalization/web-in-app-messaging.md) | Das Adobe Experience Platform Web SDK unterstützt jetzt die Konfiguration von Web-In-App-Nachrichten für Adobe Journey Optimizer-Kampagnen. |
+| [Web-In-App-Messaging-Unterstützung im Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | Das Adobe Experience Platform Web SDK unterstützt jetzt die Konfiguration von Web-In-App-Nachrichten für Adobe Journey Optimizer-Kampagnen. |
 
 {style="table-layout:auto"}
 
