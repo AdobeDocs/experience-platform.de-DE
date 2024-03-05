@@ -25,6 +25,7 @@ Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Regeln für Warnhinweise über die [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche angezeigt werden, können Sie Warnhinweise über die Benutzeroberfläche selbst oder über E-Mail-Benachrichtigungen empfangen.
 **Neue oder aktualisierte Funktionen**
+
 | Funktion | Beschreibung | 
 | --- | --- | 
 | Tab Verlauf der Warnhinweise | Als Experience Platform-Administrator können Sie die Funktion zum Verwalten von Abonnenten von Warnhinweisen verwenden, um einer Adobe-Benutzer-ID, einer externen E-Mail-Adresse oder einer E-Mail-Gruppenliste einen Warnhinweis zuzuweisen. Weitere Informationen finden Sie unter [Dokumentation zur Warn-Benutzeroberfläche](../../observability/alerts/ui.md) für weitere Informationen zum Tab Verlauf. |
