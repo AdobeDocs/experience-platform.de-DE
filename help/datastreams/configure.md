@@ -2,9 +2,9 @@
 title: Erstellen und Konfigurieren von Datenspeichern
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2700'
+source-wordcount: '2737'
 ht-degree: 55%
 
 ---
@@ -142,6 +142,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Analytics gesendet
 | Einstellung | Beschreibung |
 | --- | --- |
 | [!UICONTROL Report Suite-ID] | **(Erforderlich)** Die ID der Analytics Report Suite, an die Sie Daten senden möchten. Diese ID finden Sie in der Adobe Analytics-Benutzeroberfläche unter [!UICONTROL Administration] > [!UICONTROL ReportSuites]. Wenn mehrere Report Suites angegeben sind, werden die Daten in jede einzelne Report Suite kopiert. |
+| [!UICONTROL Besucher-ID-Namespace] | (Optional) Der Namespace, den Sie für die Adobe Analytics verwenden möchten [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=de). Wenn Sie ein Ereignis mit einem für diesen Namespace angegebenen Wert senden, wird es automatisch als `visitorID` in Analytics. |
 | [!UICONTROL Report Suite-Überschreibungen] | In diesem Abschnitt können Sie zusätzliche Report Suite-IDs hinzufügen, die Sie verwenden können, um die Standard-ID zu überschreiben. |
 
 ### Adobe Audience Manager-Einstellungen {#audience-manager}
