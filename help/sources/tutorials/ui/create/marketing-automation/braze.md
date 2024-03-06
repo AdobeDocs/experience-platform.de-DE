@@ -3,18 +3,18 @@ title: Erstellen eines Datenflusses für Braze-Daten in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche einen Datenfluss für Ihr Braze-Konto erstellen.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 23%
 
 ---
 
-# Erstellen eines Quell-Connectors für [!DNL Braze] in der Benutzeroberfläche
+# Erstellen eines Quell-Connectors für [!DNL Braze Currents] in der Benutzeroberfläche
 
 >[!NOTE]
 >
->Die [!DNL Braze]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Braze Currents]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 [!DNL Braze] ermöglicht kundenorientierte Interaktionen zwischen Verbrauchern und Marken in Echtzeit. [!DNL Braze Currents] ist ein Echtzeit-Datenstrom von Interaktionsereignissen von der Braze-Plattform, die den robusten, aber granularsten Export aus der [!DNL Braze] Plattform.
 
@@ -44,7 +44,7 @@ Wenn Sie bereits über eine [!DNL Braze] Verbindung nutzen, können Sie den Rest
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem *Marketing-Automatisierung* category, select **[!UICONTROL Brase]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Unter dem *Marketing-Automatisierung* category, select **[!UICONTROL Blitze Ströme]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
 ![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit ausgewählter Quelle Aktuelles reduzieren .](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ Konfigurieren Sie dann die Zuordnung für Ihre Daten über die Zuordnungsschnitt
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Nachdem Ihre Verbindung erstellt wurde, müssen Sie die folgenden Anmeldewerte erfassen, die Sie dann im Dashboard &quot;Braze&quot;bereitstellen, um Daten an zu senden [!DNL Platform]. Weitere Informationen finden Sie im Abschnitt [!DNL Braze] [Handbuch zum Navigieren zu aktuellen Elementen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Nachdem die Verbindung erstellt wurde, müssen Sie die folgenden Anmeldewerte erfassen, die Sie dann im Dashboard &quot;Braze&quot;bereitstellen, um Daten an Experience Platform zu senden. Weitere Informationen finden Sie im Abschnitt [!DNL Braze] [Handbuch zum Navigieren zu aktuellen Elementen](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Feld | Beschreibung |
-| ---------- | ----------- |
-| `Client ID` | Die mit Ihrer [!DNL Platform] -Quelle. |
-| `Client Secret` | Das Client-Geheimnis, das mit Ihrem [!DNL Platform] -Quelle. |
-| `Tenant ID` | Die Ihrer [!DNL Platform] -Quelle. |
-| `Sandbox Name` | Die mit Ihrer [!DNL Platform] -Quelle. |
-| `Dataflow ID` | Die mit Ihrer [!DNL Platform] -Quelle. |
-| `Streaming Endpoint` | Der Streaming-Endpunkt, der mit Ihrer [!DNL Platform] -Quelle. Beachten Sie, dass Braze dies automatisch in den Batch-Streaming-Endpunkt konvertiert. |
+| --- | --- |
+| Client-ID | Die Client-ID, die Ihrer Experience Platform-Quelle zugeordnet ist. |
+| Client-Geheimnis | Das Client-Geheimnis, das mit Ihrer Experience Platform-Quelle verknüpft ist. |
+| Mandanten-ID | Die Mandantenkennung, die Ihrer Experience Platform-Quelle zugeordnet ist. |
+| Sandbox-Name | Die mit Ihrer Experience Platform-Quelle verknüpfte Sandbox. |
+| Dataflow-ID | Die mit Ihrer Experience Platform-Quelle verknüpfte Datenfluss-ID. |
+| Streaming-Endpunkt | Der Streaming-Endpunkt, der Ihrer Experience Platform-Quelle zugeordnet ist. **Hinweis**: [!DNL Braze] konvertiert dies automatisch in den Batch-Streaming-Endpunkt. |
 
 ### Konfigurieren [!DNL Braze Currents] , um Daten an Ihre Datenquelle zu streamen
 

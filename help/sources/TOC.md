@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 96%
+source-wordcount: '1021'
+ht-degree: 95%
 
 ---
 
@@ -92,7 +92,8 @@ ht-degree: 96%
       - [Snowflake Streaming-Connector](connectors/databases/snowflake-streaming.md)
       - [Snowflake-Connector](connectors/databases/snowflake.md)
       - [Teradata Vantage-Connector](connectors/databases/teradata-vantage.md)
-   - Datenpartner {#data-partner}
+   - Daten- und Identitätspartner {#data-partner}
+      - [Datenimport mit Acxif-Prognosen](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkur Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - E-Commerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -101,6 +102,7 @@ ht-degree: 96%
    - Lokales System {#local-system}
       - [Connector für den Upload lokaler Dateien](connectors/local-system/local-file-upload.md)
    - Marketing-Automatisierung {#marketing-automation}
+      - [Blitze Ströme](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot-Connector](connectors/marketing-automation/hubspot.md)
@@ -295,7 +297,7 @@ ht-degree: 96%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - Datenpartner {#data-partner}
+      - Daten- und Identitätspartner {#data-partner}
          - [Merkur Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
          - [Datenimport mit Acxif-Prognosen](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - E-Commerce {#ecommerce}
@@ -305,7 +307,7 @@ ht-degree: 96%
       - Lokales System {#local-system}
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing-Automatisierung {#marketing-automation}
-         - [Brase](tutorials/ui/create/marketing-automation/braze.md)
+         - [Blitze Ströme](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)

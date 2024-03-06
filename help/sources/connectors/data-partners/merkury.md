@@ -1,9 +1,9 @@
 ---
 title: Merkur Enterprise Identity Resolution Quelle Übersicht
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche die Enterprise Identity-Auflösung von Merkury mit Adobe Experience Platform verbinden.
-last-substantial-update: 2023-12=12
+last-substantial-update: 2023-12-12T00:00:00Z
 badge: Beta
-source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
+source-git-commit: 2f277e835333343ea22e52e05aa84a63f1d3d8ec
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 44%
@@ -32,7 +32,7 @@ Sie können aufgenommene Daten als Experience-Datenmodell (XDM)-JSON, XDM-Parque
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 
