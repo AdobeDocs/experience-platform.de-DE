@@ -51,7 +51,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >id="platform_sources_templates_accounttype"
 >title="Geschäftstyp auswählen"
 >abstract="Wählen Sie den entsprechenden Geschäftstyp für Ihren Anwendungsfall aus. Ihr Zugriff variiert je nach Ihrem Real-time Customer Data Platform-Abonnementkonto."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP – Übersicht"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de" text="Real-Time CDP – Übersicht"
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich und sehen Sie sich einen Quellkatalog an, der unter Experience Platform verfügbar ist.
 

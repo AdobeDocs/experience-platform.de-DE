@@ -76,7 +76,7 @@ Benutzerdefinierte Identitätstypen werden beim Exportieren einer Journey nicht 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Ablaufeinstellungen des Pakets"
->abstract="Pakete laufen nach einiger Zeit der Inaktivität im Entwurfsstatus ab. Das standardmäßige Datum ist ab heute für 90 Tage festgelegt. Dieses Datum verändert sich, bis das Paket veröffentlicht wird. Wenn Sie das Paket morgen im Entwurfsstatus besuchen, wird das Datum um +1 Tag verschoben (es sei denn, Sie legen es manuell fest)."
+>abstract="Pakete laufen nach einiger Zeit der Inaktivität im Entwurfsstatus ab. Das standardmäßige Datum ist auf 90 Tage ab heute festgelegt. Dieses Datum verändert sich, bis das Paket veröffentlicht wird. Wenn Sie das Paket morgen im Entwurfsstatus besuchen, wird das Datum um +1 Tag verschoben (es sei denn, Sie legen es manuell fest)."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
