@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossar der Datennutzungskennzeichnungen
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
+source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2254'
 ht-degree: 96%
 
 ---
@@ -37,7 +37,7 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 | [C6](#c6) | Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden. |
 | [C7](#c7) | Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden. |
 | [C8](#c8) | Daten können nicht zur Messung der Websites oder Apps Ihrer Organisation verwendet werden. |
-| [C9](#c9) | Daten können nicht in Datenwissenschafts-Workflows verwendet werden. |
+| [C9](#c9) | Daten können nicht in Datenwissenschaft-Workflows verwendet werden. |
 | [C10](#c10) | Daten können nicht für die Aktivierung einer zusammengesetzten Identität verwendet werden. |
 | [C11](#c11) | Daten können nicht mit Segment Match-Partnern freigegeben werden. |
 | [C12](#c12) | Daten können in keiner Weise exportiert werden. |
