@@ -3,10 +3,10 @@ title: Übersicht über die Hauptereignisweiterleitungserweiterung
 description: Machen Sie sich mit der Hauptereignisweiterleitungserweiterung in Adobe Experience Platform vertraut.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 100%
+source-wordcount: '1715'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ In diesem Abschnitt werden die in der Haupterweiterung verfügbaren Bedingungsty
 
 ### Benutzerspezifischer Code
 
-Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses vorhanden sein muss. Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor. Die Ereignisweiterleitung in Adobe Experience Platform unterstützt ES6.
+Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses vorhanden sein muss. Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor. Die Ereignisweiterleitung in Adobe Experience Platform unterstützt ES13.
 
 1. Wählen Sie **[!UICONTROL Editor öffnen]**.
 1. Geben Sie den benutzerspezifischen Code ein.
@@ -155,7 +155,7 @@ In diesem Abschnitt werden die in der Haupterweiterung verfügbaren Aktionstypen
 
 ### Benutzerspezifischer Code
 
-Geben Sie den Code an, der ausgeführt wird, nachdem das Ereignis ausgelöst wurde und die Bedingungen ausgewertet wurden. Die Ereignisweiterleitung in Adobe Experience Platform unterstützt ES6.
+Geben Sie den Code an, der ausgeführt wird, nachdem das Ereignis ausgelöst wurde und die Bedingungen ausgewertet wurden. Die Ereignisweiterleitung in Adobe Experience Platform unterstützt ES13.
 
 1. Benennen Sie den Aktionscode.
 1. Wählen Sie **[!UICONTROL Editor öffnen]**.
