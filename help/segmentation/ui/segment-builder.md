@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3633'
 ht-degree: 88%
 
 ---
@@ -103,7 +103,7 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 >
 >Für Zielgruppen, die in Platform erstellt werden, nur Zielgruppen mit der **same** Die Zusammenführungsrichtlinie wird angezeigt.
 
-Auf der Registerkarte **[!UICONTROL Zielgruppen]** werden alle Zielgruppen, die aus externen Quellen (wie z. B. Adobe Audience Manager) importiert wurden, sowie alle in [!DNL Experience Platform] erstellten Zielgruppen aufgelistet.
+Die **[!UICONTROL Zielgruppen]** auf der Registerkarte werden alle Zielgruppen aufgelistet, die aus externen Quellen wie Adobe Audience Manager oder Customer Journey Analytics importiert wurden, sowie Zielgruppen, die in [!DNL Experience Platform].
 
 Auf der Registerkarte **[!UICONTROL Zielgruppen]** können Sie alle verfügbaren Quellen als eine Ordnergruppe anzeigen. Wenn Sie diese Ordner auswählen, werden verfügbare Unterordner und Zielgruppen angezeigt. Außerdem können Sie das Ordnersymbol auswählen (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Auswählen eines Ordnernamens im Baum durch die Ordnerstruktur zurücknavigieren.
 
