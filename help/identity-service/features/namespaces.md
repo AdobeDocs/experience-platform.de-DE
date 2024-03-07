@@ -2,9 +2,9 @@
 title: Identity Namespace - Überblick
 description: Erfahren Sie mehr über Identitäts-Namespaces im Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1920'
 ht-degree: 22%
 
 ---
@@ -134,6 +134,10 @@ Es wird ein Verzeichnis der Namespaces in Ihrer Organisation angezeigt, in dem I
 Je nach Ihren Organisationsdaten und Anwendungsfällen benötigen Sie möglicherweise benutzerdefinierte Namespaces. Benutzerdefinierte Namespaces können mit der [[!DNL Identity Service]](../api/create-custom-namespace.md) API oder über die Benutzeroberfläche.
 
 Um einen benutzerdefinierten Namespace zu erstellen, wählen Sie **[!UICONTROL Identitäts-Namespace erstellen]**.
+
+>[!TIP]
+>
+>Integrationsidentitäten sind Namespaces, die zur Verbindung mit anderen Systemen verwendet werden. Sie werden weder in der Identitätsauflösung noch zum Zuordnen von Identitäten verwendet. Auswählen **[!UICONTROL Integrationsidentitäten anzeigen]** , um die Liste zu aktualisieren und Integrationsidentitäten einzuschließen. Integrations-Identitäten sind jedoch standardmäßig ausgeblendet, da sie schreibgeschützt sind und Sie sie nicht konfigurieren müssen.
 
 ![Die Schaltfläche Identitäts-Namespace erstellen im Identitäts-Arbeitsbereich.](../images/namespace/create-identity-namespace.png)
 
