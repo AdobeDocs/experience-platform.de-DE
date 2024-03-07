@@ -5,7 +5,7 @@ title: Erstellen und Bearbeiten von Datentypen über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie Datentypen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ Adobe Experience Platform bietet viele Standarddatentypen, mit denen eine Vielza
 
 In diesem Tutorial werden die Schritte zum Erstellen und Bearbeiten benutzerdefinierter Datentypen in der Benutzeroberfläche von Platform beschrieben.
 
-## Voraussetzungen
+## Voraussetzungen {#prerequisites}
 
 Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und [Grundlagen der Schemakomposition](../../schema/composition.md) für den Beitrag von Datentypen zu XDM-Schemas.
 
@@ -105,7 +105,7 @@ Dies zeigt, wie flexible Datentypen in Bezug auf die Beschreibung Ihrer Daten se
 
 Nachdem Sie alle Felder zum Datentyp hinzugefügt haben, wählen Sie **[!UICONTROL Speichern]** , um Ihre Änderungen zu speichern und den Datentyp zum [!DNL Schema Library].
 
-## Datentyp zu einem Schema hinzufügen
+## Datentyp zu einem Schema hinzufügen {#add-data-type}
 
 Nachdem Sie einen Datentyp erstellt haben, können Sie ihn in Ihren Schemata verwenden. Da XDM-Schemas aus einer Klasse und null oder mehr Feldgruppen bestehen, können von einem Datentyp bereitgestellte Felder nicht direkt zu einem Schema hinzugefügt werden. Stattdessen müssen sie in eine Klasse oder Feldergruppe eingeschlossen sein.
 
@@ -123,7 +123,7 @@ Die Arbeitsfläche aktualisiert den Datentyp des Felds von[!UICONTROL Objekt]&qu
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 In diesem Handbuch wurde beschrieben, wie Sie Datentypen mithilfe der Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen der [!UICONTROL Schemas] Arbeitsbereich, siehe [[!UICONTROL Schemas] Arbeitsbereich - Übersicht](../overview.md).
 

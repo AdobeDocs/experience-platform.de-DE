@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3671'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Dieses Handbuch bietet einen Überblick darüber, wie Sie Experience-Datenmodell
 >
 >Eine vollständige Übersicht über den Schema-Erstellungsprozess erhalten Sie, wenn Sie mit dem [Tutorial zur Schemaerstellung](../../tutorials/create-schema-ui.md) , um ein vollständiges Beispielschema zu erstellen und sich mit den zahlreichen Funktionen der [!DNL Schema Editor].
 
-## Voraussetzungen
+## Voraussetzungen {#prerequisites}
 
 Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und [Grundlagen der Schemakomposition](../../schema/composition.md) für einen Überblick darüber, wie Schemas erstellt werden.
 
@@ -350,7 +350,7 @@ Es wird ein neues Dialogfeld geöffnet, in dem Sie aufgefordert werden zu bestä
 
 Nach Bestätigung der Klassenänderung wird die Arbeitsfläche zurückgesetzt und der gesamte Kompositionsprozess geht verloren.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Platform-Benutzeroberfläche beschrieben. Es wird dringend empfohlen, die [Tutorial zur Schemaerstellung](../../tutorials/create-schema-ui.md) für einen umfassenden Workflow zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche, einschließlich der Erstellung benutzerdefinierter Feldergruppen und Datentypen für eindeutige Anwendungsfälle.
 

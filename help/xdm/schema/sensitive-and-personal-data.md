@@ -2,9 +2,9 @@
 title: Sensible und persönliche Informationen in XDM
 description: Erfahren Sie mehr über die wichtigsten Aspekte bezüglich sensibler personenbezogener Daten (SPI) und persönlich identifizierbarer Informationen (PII) im Experience-Datenmodell (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
+source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '567'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ Mit Platform können Sie eigene benutzerdefinierte Feldergruppen und Datentypen 
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
 -->
+
+>[!IMPORTANT]
+>
+>SPI und PII sollten nur im [Individuelles XDM-Profil](../classes/individual-profile.md) und [XDM ExperienceEvent](../classes/experienceevent.md) Klassen. Als Best Practice für das Löschen von Daten sowie Datenschutz und Governance sollten Sie SPI und PII nicht in anderen benutzerdefinierten oder standardmäßigen XDM-Klassen speichern.
 
 ## Nächste Schritte
 

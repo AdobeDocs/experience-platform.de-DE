@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
 description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Applikationen koordinieren und überwachen können.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 23%
+source-wordcount: '1511'
+ht-degree: 22%
 
 ---
 
@@ -143,6 +143,8 @@ Die **[!UICONTROL Anforderung erstellen]** wird geöffnet, in dem die verfügbar
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 Wählen Sie die **[!UICONTROL Auftragstyp]** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrerer verfügbarer Produkte aus der Liste.
+
+Privacy Service unterstützt zwei Arten von Auftragsanfragen für personenbezogene Daten: [!UICONTROL Zugriff] (lesen) und/oder [!UICONTROL Löschen]. Sie können entweder einen Antrag auf Erhalt aller Informationen stellen, die im Produkt gespeichert sind, das sich auf den Gegenstand der Anfrage bezieht, oder die Löschung aller Informationen beantragen, die sich auf den Gegenstand der Anfrage beziehen.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 

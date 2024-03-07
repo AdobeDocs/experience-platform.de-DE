@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Klassen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 8%
@@ -24,13 +24,13 @@ Adobe bietet mehrere standardmäßige (&quot;Core&quot;) Experience-Datenmodell 
 
 Dieses Dokument bietet einen Überblick darüber, wie benutzerdefinierte Klassen in der Experience Platform-Benutzeroberfläche erstellt, bearbeitet und verwaltet werden.
 
-## Voraussetzungen
+## Voraussetzungen {#prerequisites}
 
 Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und [Grundlagen der Schemakomposition](../../schema/composition.md) , um zu erfahren, wie Klassen zu XDM-Schemas beitragen.
 
 Für dieses Handbuch ist zwar nicht erforderlich, es wird jedoch empfohlen, auch das Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) sich mit den verschiedenen Funktionen des Schema-Editors vertraut zu machen.
 
-## Erste Schritte
+## Erste Schritte {#getting-started}
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Schemas]** im linken Navigationsbereich, um die [!UICONTROL Schemas] Arbeitsbereich und wählen Sie dann die **[!UICONTROL Klassen]** Registerkarte. Eine Liste der verfügbaren Klassen wird angezeigt.
 
@@ -121,7 +121,7 @@ Wenn Sie zuvor Schemas erstellt haben, die diese Klasse verwenden, werden die ne
 Sie können die Klasse des Schemas jederzeit während des anfänglichen Erstellungsprozesses ändern, bevor es gespeichert wurde. Dies sollte jedoch mit Vorsicht erfolgen, da Feldgruppen nur mit bestimmten Klassen kompatibel sind. Durch das Ändern der Klasse werden die Arbeitsfläche und alle von Ihnen hinzugefügten Felder zurückgesetzt.
 Siehe Handbuch unter [Erstellen und Bearbeiten von Schemata](./schemas.md#change-class) für weitere Informationen.
 
-## Nächste Schritte
+## Nächste Schritte {#next-steps}
 
 In diesem Dokument wurde beschrieben, wie Klassen mithilfe der Platform-Benutzeroberfläche erstellt und bearbeitet werden. Weitere Informationen zu den Funktionen der [!UICONTROL Schemas] Arbeitsbereich, siehe [[!UICONTROL Schemas] Arbeitsbereich - Übersicht](../overview.md).
 
