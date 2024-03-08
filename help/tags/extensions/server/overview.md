@@ -2,10 +2,10 @@
 title: Referenz zu Ereignisweiterleitungs-Erweiterungen
 description: Dokumentation für Erweiterungen für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 56%
+source-wordcount: '166'
+ht-degree: 32%
 
 ---
 
@@ -31,18 +31,18 @@ Im Folgenden finden Sie eine Liste der Dokumentation für Erweiterungen für die
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
-* [Cloud-Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Cloud-Connector für Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+* [Cloud Connector für Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+<!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Core](./core/overview.md)
 * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)*
-* [Erweiterte Konvertierungen von Google Ads](./google-ads-enhanced-conversions/overview.md)
+* [Google Ads Enhanced Conversions](./google-ads-enhanced-conversions/overview.md)
 * [Google Cloud Platform](./google-cloud-platform/overview.md)
 * [[!DNL LinkedIn] Konversions-API](./linkedin/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] Konversions-API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
-* [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)*
+* [Pega Customer Decisioning Hub](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [Snap Conversions API](https://exchange.adobe.com/apps/ec/108550)*
 * [Snowflake](./snowflake/overview.md)
