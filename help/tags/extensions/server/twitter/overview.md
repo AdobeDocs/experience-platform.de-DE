@@ -4,9 +4,9 @@ title: Twitter-Ereignisweiterleitungs-Erweiterung
 description: Mit dieser Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform können Sie für Ihre Geschäftsanforderungen Ereignisse in Twitter aufnehmen.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1048'
 ht-degree: 7%
 
 ---
@@ -91,17 +91,17 @@ Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu kon
 | --- | --- | --- | --- |
 | [!UICONTROL [!DNL Twitter] Klick-ID] | [!DNL Twitter] Klick-ID wie von der Clickthrough-URL analysiert. | 26l6412g5p4iyj65a2oic2ayg2 | Erforderlich, wenn keine andere Kennung hinzugefügt wird. |
 | [!UICONTROL E-Mail] | Eine mit SHA256 gehashte E-Mail-Adresse. Der Text muss in Kleinbuchstaben geschrieben werden und alle nachfolgenden oder führenden Leerzeichen müssen vor dem Hashing entfernt werden. | eventforwarding@example.com | Erforderlich, wenn keine andere Kennung hinzugefügt wird. |
-| [!UICONTROL Telefon] | Phone dient als ID zum Abgleich des Konversionsereignisses. Die Telefonnummer muss das Format E164 aufweisen [+][Ländercode].[Bereichscode][local phone number] vor dem Hashing. | +911234567875 | Erforderlich, wenn keine andere Kennung hinzugefügt wird. |
+| [!UICONTROL Phone] | Phone dient als ID zum Abgleich des Konversionsereignisses. Die Telefonnummer muss das Format E164 aufweisen [+][Ländercode].[Bereichscode][local phone number] vor dem Hashing. | +911234567875 | Erforderlich, wenn keine andere Kennung hinzugefügt wird. |
 
 **[!UICONTROL Konversionsdaten]**
 
 | Feldname | Beschreibung | Beispiel | Erforderlich |
 | --- | --- | --- | --- |
-| [!UICONTROL Konvertierungszeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in yyy-MM-dd&#39;T&#39;HH:mm:Format ss:SSSZ . | 2022-02-18T01:14:00.603 Z | Ja |
+| [!UICONTROL Konvertierungszeit] | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. | 2022-02-18T01:14:00.603 Z | Ja |
 | [!UICONTROL Ereignis-ID] | Die base-36-ID eines bestimmten Ereignisses. Diese ID sollte mit einem vorkonfigurierten Ereignis übereinstimmen, das in Ihrer [!DNL Twitter] Anzeigenkonto. Dies wird als ID für das entsprechende Ereignis im Ereignismanager bezeichnet. | o87ne oder tw-o8z6j-o87ne (tw-pixel_id-event-id) | Ja |
 | [!UICONTROL Anzahl der Elemente] | Die Anzahl der Artikel, die im Ereignis gekauft werden. Hierbei muss es sich um eine positive Zahl größer als 0 handeln. | 4 | Nein |
 | [!UICONTROL Währung] | Die Währung der Artikel, die im Ereignis gekauft werden. Dies wird in ISO-4217 ausgedrückt und falls nicht angegeben, ist der Standardwert USD. | USD | Nein |
-| [!UICONTROL Wert] | Der Preiswert der Artikel, die im Ereignis gekauft werden. | 100.00 | Nein |
+| [!UICONTROL Wert] | Der Preiswert der Artikel, die im Ereignis gekauft werden. | 100,00 | Nein |
 | [!UICONTROL Konversions-ID] | Ein Bezeichner für ein Konversionsereignis, das zur Deduplizierung zwischen Web-Pixel- und Konversions-API-Konvertierungen im selben Ereignis-Tag verwendet werden kann. | 23294827 | Nein |
 | [!UICONTROL Beschreibung] | Eine Beschreibung mit zusätzlichen Informationen zu den Konvertierungen. | Testkonversion | Nein |
 

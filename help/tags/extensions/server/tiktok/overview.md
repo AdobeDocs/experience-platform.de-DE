@@ -2,9 +2,10 @@
 title: Integration der Adobe TikTok Web Events API
 description: Mit dieser Adobe Experience Platform-Web-Events-API können Sie Website-Interaktionen direkt mit TikTok teilen.
 last-substantial-update: 2023-09-26T00:00:00Z
-source-git-commit: d8b7006ade1dc82fdd79b7ed744c021bc304bca7
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1105'
 ht-degree: 5%
 
 ---
@@ -41,7 +42,7 @@ Um die Erweiterung zu installieren, wählen Sie **[!UICONTROL Erweiterungen]** i
 Geben Sie im nächsten Bildschirm die folgenden Konfigurationswerte ein, die Sie zuvor aus [!DNL TikTok] Anzeigen-Manager:
 
 * **[!UICONTROL Pixelcode]**
-* **[!UICONTROL Zugriffs-Token]**
+* **[!UICONTROL Zugriffstoken]**
 
 Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
@@ -64,7 +65,7 @@ Web-Ereignisse und -Parameter enthalten allgemeine Informationen zum Ereignis. S
 | Eingabe | Beschreibung |
 | --- | --- |
 | Ereignisname | Der Name des Ereignisses. Dies sind Aktionen mit vordefinierten Namen, die von [!DNL TikTok] und ist ein erforderliches Feld. Siehe Abschnitt [[!DNL TikTok] Marketing-API](https://business-api.tiktok.com/portal/docs?id=1741601162187777) Dokumentation finden Sie weitere Informationen zu unterstützten Ereignissen. |
-| Ereigniszeit | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in yyy-MM-dd&#39;T&#39;HH:mm:Format ss:SSSZ . Dies ist ein erforderliches Feld. |
+| Ereigniszeit | Datum/Uhrzeit als Zeichenfolge in ISO 8601 oder in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` Format. Dies ist ein erforderliches Feld. |
 | Ereignis-ID | Die eindeutige ID, die von Advertisern zur Angabe jedes Ereignisses generiert wurde. Dies ist ein optionales Feld, das zur Deduplizierung verwendet wird. |
 
 {style="table-layout:auto"}

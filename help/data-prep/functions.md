@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: c7d6ef441f97cbc318bb2dd5c2f1daa08a6db197
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '5794'
+source-wordcount: '5789'
 ht-degree: 3%
 
 ---
@@ -119,8 +119,8 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Ruft die aktuelle Zeit ab. | | now() | now() | `2021-10-26T10:10:24Z` |
 | Zeitstempel | Ruft die aktuelle Unix-Zeit ab. | | timestamp() | timestamp() | 1571850624571 |
-| format | Formatiert das Eingabedatum in einem angegebenen Format. | <ul><li>DATUM: **Erforderlich** Das Eingabedatum als ZonedDateTime -Objekt, das Sie formatieren möchten.</li><li>FORMAT: **Erforderlich** Das Format, in das das Datum geändert werden soll.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
-| dformat | Konvertiert einen Zeitstempel in eine Datums-Zeichenfolge in einem angegebenen Format. | <ul><li>ZEITSTEMPEL: **Erforderlich** Der Zeitstempel, den Sie formatieren möchten. Dies wird in Millisekunden geschrieben.</li><li>FORMAT: **Erforderlich** Das Format, in dem der Zeitstempel verwendet werden soll.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH&quot;:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
+| format | Formatiert das Eingabedatum in einem angegebenen Format. | <ul><li>DATUM: **Erforderlich** Das Eingabedatum als ZonedDateTime -Objekt, das Sie formatieren möchten.</li><li>FORMAT: **Erforderlich** Das Format, in das das Datum geändert werden soll.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;`yyyy-MM-dd HH:mm:ss`&quot;) | `2019-10-23 11:24:35` |
+| dformat | Konvertiert einen Zeitstempel in eine Datums-Zeichenfolge in einem angegebenen Format. | <ul><li>ZEITSTEMPEL: **Erforderlich** Der Zeitstempel, den Sie formatieren möchten. Dies wird in Millisekunden geschrieben.</li><li>FORMAT: **Erforderlich** Das Format, in dem der Zeitstempel verwendet werden soll.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;`yyyy-MM-dd'T'HH:mm:ss.SSSX`&quot;) | `2019-10-23T11:24:35.000Z` |
 | date | Konvertiert eine Datums-Zeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATUM: **Erforderlich** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Quelldatums darstellt.**Hinweis:** Dies geschieht **not** das Format darstellen, in das Sie die Datums-Zeichenfolge konvertieren möchten. </li><li>DEFAULT_DATE: **Erforderlich** Das Standarddatum, das zurückgegeben wird, wenn das angegebene Datum null ist.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
 | date | Konvertiert eine Datums-Zeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATUM: **Erforderlich** Die Zeichenfolge, die das Datum darstellt.</li><li>FORMAT: **Erforderlich** Die Zeichenfolge, die das Format des Quelldatums darstellt.**Hinweis:** Dies geschieht **not** das Format darstellen, in das Sie die Datums-Zeichenfolge konvertieren möchten. </li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyy-MM-dd HH:mm&quot;) | `2019-10-23T11:24:00Z` |
 | date | Konvertiert eine Datums-Zeichenfolge in ein ZonedDateTime-Objekt (ISO 8601-Format). | <ul><li>DATUM: **Erforderlich** Die Zeichenfolge, die das Datum darstellt.</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;10.10.2011:24:00Z&quot; |
