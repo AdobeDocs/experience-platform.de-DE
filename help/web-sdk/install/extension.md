@@ -1,13 +1,13 @@
 ---
 title: Installieren des Web SDK mit der Tag-Erweiterung
 description: Referenzieren Sie die Web SDK-Bibliothek mithilfe der Adobe Experience Cloud-Datenerfassung.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # Installieren des Web SDK mit der Tag-Erweiterung
 
@@ -23,6 +23,8 @@ Sobald Sie die [Voraussetzungen](overview.md)können Sie die Web SDK-Tag-Erweite
 1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und wählen Sie dann die **[!UICONTROL Katalog]** Registerkarte.
 1. Suchen und installieren Sie die **[!UICONTROL Adobe Experience Platform Web SDK]** -Erweiterung.
 1. Wählen Sie für jede Umgebung die entsprechende Sandbox und den entsprechenden Datastream aus und klicken Sie dann auf **[!UICONTROL Speichern]**.
+
+Weitere Informationen finden Sie in der Dokumentation [Konfigurieren der Web SDK-Tag-Erweiterung](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) für weitere Informationen.
 
 ## Tag-Code in der Entwicklung veröffentlichen
 

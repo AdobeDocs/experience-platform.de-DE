@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 86%
+source-wordcount: '1725'
+ht-degree: 84%
 
 ---
 
@@ -213,8 +213,8 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.2.0 – Oktober 2020
 
-* Fehlerbehebung: Alloy wurde durch das Opt-in-Objekt daran gehindert, Aufrufe durchzuführen, wenn `idMigrationEnabled` auf `true` eingestellt gewesen ist.
-* Fehlerbehebung: Alloy wird jetzt auf Anfragen hingewiesen, die Personalisierungsangebote zurückgeben sollen, um ein sporadisches Problem zu verhindern.
+* Fehlerbehebung: Das Opt-in-Objekt hinderte das Web SDK daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` is `true`.
+* Fehlerbehebung: Sorgen Sie dafür, dass das Web SDK über Anforderungen informiert wird, die Personalisierungsangebote zurückgeben sollen, um ein flackerndes Problem zu vermeiden.
 
 ## Version 2.1.0 – August 2020
 
@@ -222,5 +222,5 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 * Es wurde Unterstützung für den IAB 2.0-Einverständnisstandard hinzugefügt.
 * Es wurde Unterstützung für die Übergabe zusätzlicher IDs im Befehl `setConsent` hinzugefügt.
 * Es wurde Unterstützung zum Außerkraftsetzen von `datasetId` im Befehl `sendEvent` hinzugefügt.
-* Es wurde Unterstützung für Alloy-Monitore hinzugefügt ([weitere Informationen](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)).
+* Überwachungshaken unterstützen ([Mehr dazu](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * `environment: browser` wird nun in den Kontextdaten der Implementierungsdetails übergeben.
