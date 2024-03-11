@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 description: Mit Adobe Experience Platform können Unternehmen Kundendaten zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 48e050718b665bc297f97bf1b90a6f4517dd3af5
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 100%
+source-wordcount: '434'
+ht-degree: 92%
 
 ---
 
@@ -34,13 +34,18 @@ Um mehr über einen bestimmten Service von [!DNL Platform] zu erfahren, kehren S
 
 ### Dokumentation für Programm-Services, die auf [!DNL Experience Platform] basieren
 
-Adobe hat mehrere Programm-Services auf Experience Platform aufgebaut. Die Dokumentation zu diesen Services finden Sie in den jeweiligen Handbüchern, die nachfolgend verlinkt sind:
+Adobe hat mehrere Programm-Services auf Experience Platform aufgebaut. Die Dokumentation für diese Anwendungen finden Sie in den eigenen Handbüchern, die Sie unten finden:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+
+Im folgenden Video werden die Anwendungsfälle der einzelnen Anwendungsdienste beschrieben, die auf Experience Platform aufbauen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
 ## Tutorials zu [!DNL Experience Platform]
 
@@ -51,16 +56,16 @@ Besuchen Sie die Landingpage zu [Experience Platform-Tutorials](https://experien
 ## Referenzen und Ressourcen
 
 * [**API-Grundlagen**](api-fundamentals.md)\
-   Lernen Sie die Grundlagen der Arbeit mit [!DNL Platform]-APIs kennen.
+  Lernen Sie die Grundlagen der Arbeit mit [!DNL Platform]-APIs kennen.
 
 * [**API-Referenzdokumente**](https://www.adobe.com/go/platform-api-reference-en)\
-   Entdecken Sie [!DNL Experience Platform]-APIs, einschließlich Kopfzeilen, Parametern, Beispielanforderungen und Antworten.<br/>*Diese Dokumente stehen auf Adobe I/O zur Verfügung.*
+  Entdecken Sie [!DNL Experience Platform]-APIs, einschließlich Kopfzeilen, Parametern, Beispielanforderungen und Antworten.<br/>*Diese Dokumente stehen auf Adobe I/O zur Verfügung.*
 
 * [**Glossar**](glossary.md)\
-   Schlagen Sie die in Adobe Experience Platform verwendeten Begriffe nach.
+  Schlagen Sie die in Adobe Experience Platform verwendeten Begriffe nach.
 
 * [**Versionshinweise**](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)\
-   Finden Sie Informationen zur aktuellen Version von [!DNL Experience Platform] und sehen Sie sich frühere Versionen an.
+  Finden Sie Informationen zur aktuellen Version von [!DNL Experience Platform] und sehen Sie sich frühere Versionen an.
 
 * [**Handbuch zur Fehlerbehebung**](troubleshooting.md)\
-   Finden Sie Lösungen für häufige Fehler und Antworten auf häufig gestellte Fragen.
+  Finden Sie Lösungen für häufige Fehler und Antworten auf häufig gestellte Fragen.
