@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3671'
+source-wordcount: '3732'
 ht-degree: 3%
 
 ---
@@ -126,6 +126,12 @@ Nachdem Sie die Feldergruppen ausgewählt haben, wählen Sie **[!UICONTROL Felde
 Die [!DNL Schema Editor] wird mit den von der Feldergruppe bereitgestellten Feldern auf der Arbeitsfläche erneut angezeigt.
 
 ![Die [!DNL Schema Editor] mit einem Beispielschema angezeigt.](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Ein Vorhängeschlosssymbol.](../../images/ui/explore/padlock-icon.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+>
+>![Der Schema Editor mit dem Vorhängeschloss-Symbol](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 Nach dem Hinzufügen einer Feldergruppe zu einem Schema können Sie optional [vorhandene Felder entfernen](#remove-fields) oder [Hinzufügen neuer benutzerdefinierter Felder](#add-fields) auf diese Gruppen, je nach Ihren Bedürfnissen.
 

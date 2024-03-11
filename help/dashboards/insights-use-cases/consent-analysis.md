@@ -2,10 +2,10 @@
 title: Einverständnisanalyse und -verfolgung
 description: Erfahren Sie, wie Sie ein Dashboard für die Einwilligungsanalyse erstellen, um zu verfolgen, wie sich die Einwilligung der Benutzer im Laufe der Zeit entwickelt hat.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '1912'
-ht-degree: 1%
+source-wordcount: '1909'
+ht-degree: 0%
 
 ---
 
@@ -22,13 +22,9 @@ Die in diesem Handbuch behandelten Anwendungsfälle sind Zustimmungstrends und Z
 - **Zustimmungstrends** verfolgt, wie sich die Benutzereinwilligung im Laufe der Zeit entwickelt hat. Die Analyse von Änderungen der Zustimmungsvoreinstellungen hilft Marketern bei der Planung und Ausführung von Kampagnen, die sich an diese Änderungen der Benutzerpräferenz anpassen. So können Sie beispielsweise zielgerichtete Bildungskampagnen, Transparenz- und Vertrauenskampagnen oder Anreizkampagnen durchführen, um die Auswahl der Zustimmung zu fördern. Sie können auch Kampagnen korrelieren, die sich negativ auf die Zustimmung ausgewirkt haben, um die Häufigkeit dieser Kampagnen proaktiv zu reduzieren.
 - **Einverständnisüberschneidung** nutzt die Überschneidung zwischen den Zustimmungskanälen, um konsistente personalisierte Nachrichten auf mehreren Kanälen für Kunden bereitzustellen, die mehreren Kanälen zugestimmt haben. Marketingexperten können Ressourcen priorisieren und bestimmten Kanälen zuweisen, in denen ein höheres Maß an Zustimmung und personalisiertem Messaging bei Kunden ankommt und höhere Antwortraten generiert.
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## Erstellen genehmigter Zielgruppen {#create-consent-audiences}
 
 Um ein Zustimmungs-Dashboard zu erstellen, müssen Sie zunächst eine Audience aller Profile erstellen, die der Kontaktaufnahme zugestimmt haben. Um zum Real-time Customer Data Platform Segment Builder zu navigieren, wählen Sie **[!UICONTROL Zielgruppen]** im linken Navigationsbereich der Platform-Benutzeroberfläche. Im [!UICONTROL Kunde] des [!UICONTROL Zielgruppen] Dashboard, auswählen **[!UICONTROL Erstellen einer Zielgruppe]** oben rechts in der Ansicht, und **[!UICONTROL Regeln erstellen]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![Die [!UICONTROL Zielgruppen] Dashboard mit [!UICONTROL Kunde], [!UICONTROL Zielgruppen], und [!UICONTROL Segment erstellen] hervorgehoben.](../images/insights-use-cases/consent-analysis/create-audience.png)
 

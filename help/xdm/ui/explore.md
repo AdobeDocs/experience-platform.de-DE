@@ -5,10 +5,10 @@ title: Schema-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schemas, Klassen, Schemafeldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche untersuchen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 1%
+source-wordcount: '1078'
+ht-degree: 0%
 
 ---
 
@@ -53,6 +53,14 @@ Nachdem Sie eine Ressource ausgewählt haben, wird ihre Struktur auf der Arbeits
 Alle Objekttypen, die Untereigenschaften enthalten, werden standardmäßig ausgeblendet, wenn sie zum ersten Mal auf der Arbeitsfläche angezeigt werden. Um die Untereigenschaften eines beliebigen Felds anzuzeigen, wählen Sie das Symbol neben seinem Namen aus.
 
 ![](../images/ui/explore/field-expand.png)
+
+### Standardklasse- und Feldergruppenanzeige {#standard-class-and-field-group-indicator}
+
+Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Ein Vorhängeschlosssymbol.](../images/ui/explore/padlock-icon.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+
+![Der Schema Editor mit dem Vorhängeschloss-Symbol](../images/ui/explore/schema-editor-padlock-icon.png)
+
+Siehe [Hinzufügen benutzerdefinierter Felder zu Standardfeldgruppen](./resources/schemas.md) Dokumentation für Anleitungen. Eine Standardklasse kann nicht bearbeitet werden.
 
 ### Systemgenerierte Felder {#system-fields}
 
