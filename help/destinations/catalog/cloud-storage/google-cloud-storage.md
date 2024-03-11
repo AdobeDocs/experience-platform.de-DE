@@ -3,10 +3,10 @@ title: Verbindung zu Google Cloud Storage
 description: Erfahren Sie, wie Sie eine Verbindung zu Google Cloud Storage herstellen und Zielgruppen aktivieren oder Datensätze exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 68%
+source-wordcount: '1199'
+ht-degree: 63%
 
 ---
 
@@ -42,6 +42,19 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
+
+## Exportieren von Datensätzen {#export-datasets}
+
+Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
+
+* Anleitung [Datensätze mithilfe der Benutzeroberfläche von Platform exportieren](/help/destinations/ui/export-datasets.md).
+* Anleitung [Datensätze programmgesteuert mit der Flow Service-API exportieren](/help/destinations/api/export-datasets.md).
+
+## Dateiformat der exportierten Daten {#file-format}
+
+Beim Exportieren *Zielgruppendaten*, erstellt Platform eine `.csv`, `parquet`oder `.json` -Datei an dem Speicherort gespeichert, den Sie bereitgestellt haben. Weitere Informationen zu den Dateien finden Sie unter [unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Aktivierung der Zielgruppe.
+
+Beim Exportieren *Datensätze*, erstellt Platform eine `.parquet` oder `.json` -Datei an dem Speicherort gespeichert, den Sie bereitgestellt haben. Weitere Informationen zu den Dateien finden Sie unter [Überprüfen des erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen .
 
 ## Vorausgesetzte Einrichtung für das Verbinden Ihres [!DNL Google Cloud Storage]-Kontos {#prerequisites}
 
@@ -119,13 +132,10 @@ Im Schritt **[!UICONTROL Planung]** können Sie für Ihr [!DNL Google Cloud Stor
 
 Im Schritt **[!UICONTROL Zuordnung]** können Sie festlegen, welche Attribute und Identitätsfelder für Ihre Profile exportiert werden sollen. Sie können auch festlegen, dass die Kopfzeilen in der exportierten Datei in einen beliebigen Anzeigenamen geändert werden. Weitere Informationen finden Sie im [Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) im Tutorial zur Benutzeroberfläche der Aktivierung von Batch-Zielen.
 
-## Exportieren von Datensätzen {#export-datasets}
-
-Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
-
-* Anleitung [Datensätze mithilfe der Benutzeroberfläche von Platform exportieren](/help/destinations/ui/export-datasets.md).
-* Anleitung [Datensätze programmgesteuert mit der Flow Service-API exportieren](/help/destinations/api/export-datasets.md).
-
 ## Überprüfen auf einen erfolgreichen Datenexport {#exported-data}
 
 Um festzustellen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie Ihren [!DNL Google Cloud Storage]-Behälter und stellen Sie sicher, dass die exportierten Dateien die erwarteten Profilpopulationen enthalten.
+
+## Zulassungsliste von IP-Adressen {#ip-address-allow-list}
+
+Siehe Abschnitt [IP-Adressen-Zulassungsliste](ip-address-allow-list.md) , wenn Sie Adobe-IPs zu einer Zulassungsliste hinzufügen müssen.

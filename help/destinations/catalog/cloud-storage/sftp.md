@@ -2,10 +2,10 @@
 title: SFTP-Verbindung
 description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig von Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 49%
+source-wordcount: '1091'
+ht-degree: 45%
 
 ---
 
@@ -56,6 +56,19 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 {style="table-layout:auto"}
 
 ![Profilbasierter SFTP-Exporttyp, der im Zielkatalog hervorgehoben ist.](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## Exportieren von Datensätzen {#export-datasets}
+
+Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
+
+* Anleitung [Datensätze mithilfe der Benutzeroberfläche von Platform exportieren](/help/destinations/ui/export-datasets.md).
+* Anleitung [Datensätze programmgesteuert mit der Flow Service-API exportieren](/help/destinations/api/export-datasets.md).
+
+## Dateiformat der exportierten Daten {#file-format}
+
+Beim Exportieren *Zielgruppendaten*, erstellt Platform eine `.csv`, `parquet`oder `.json` -Datei an dem Speicherort gespeichert, den Sie bereitgestellt haben. Weitere Informationen zu den Dateien finden Sie unter [unterstützte Dateiformate für den Export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) im Tutorial zur Aktivierung der Zielgruppe.
+
+Beim Exportieren *Datensätze*, erstellt Platform eine `.parquet` oder `.json` -Datei an dem Speicherort gespeichert, den Sie bereitgestellt haben. Weitere Informationen zu den Dateien finden Sie unter [Überprüfen des erfolgreichen Datensatzexports](../../ui/export-datasets.md#verify) im Tutorial zum Exportieren von Datensätzen .
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -129,17 +142,10 @@ Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort
 
 Siehe [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
-## Exportieren von Datensätzen {#export-datasets}
+## Überprüfen auf einen erfolgreichen Datenexport {#exported-data}
 
-Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
-
-* Anleitung [Datensätze mithilfe der Benutzeroberfläche von Platform exportieren](/help/destinations/ui/export-datasets.md).
-* Anleitung [Datensätze programmgesteuert mit der Flow Service-API exportieren](/help/destinations/api/export-datasets.md).
-
-## Exportierte Daten {#exported-data}
-
-Für [!DNL SFTP]-Ziele erstellt Platform eine `.csv`-Datei an dem von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Aktivierung der Zielgruppe.
+Um zu überprüfen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie Ihren SFTP-Speicher und stellen Sie sicher, dass die exportierten Dateien die erwarteten Profilpopulationen enthalten.
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allow-list}
 
-Siehe Abschnitt [IP-Adressen-Zulassungsliste für SFTP-Ziele](ip-address-allow-list.md) wenn Sie Adobe IPs zu einer Zulassungsliste hinzufügen müssen.
+Siehe Abschnitt [IP-Adressen-Zulassungsliste](ip-address-allow-list.md) , wenn Sie Adobe-IPs zu einer Zulassungsliste hinzufügen müssen.
