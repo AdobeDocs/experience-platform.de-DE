@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
+source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 73%
+source-wordcount: '834'
+ht-degree: 68%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 73%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## v0.20.3 (23. Januar 2024)
+
+- Auf Unterstützung aktualisiert `at.js` 2,11,4
+- Es wurde ein Fehler behoben, durch den verhindert wurde, dass ungültige Geodaten an die Versand-API gesendet werden.
 
 ## v0.20.2 (29. November 2023)
 
@@ -33,7 +38,7 @@ ht-degree: 73%
 
 ## v0.19.3 (18. September 2023)
 
-- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.3 unterstützt wird.
+- Auf Unterstützung aktualisiert `at.js` v2.10.3.
 - Es wurde ein Problem behoben, durch das fälschlicherweise das benutzerspezifische Ereignis at-content-rendering-succeeded ausgelöst wurde, wenn keine Angebote gerendert wurden. Das richtige Ereignis, at-content-rendering-no-offer, wird jetzt ausgelöst.
 - eventToken und responseTokens wurden zum Fehlerobjekt für das benutzerdefinierte Ereignis at-content-rendering-failed hinzugefügt.
 
@@ -43,19 +48,19 @@ ht-degree: 73%
 
 ## v0.19.1 (3. Februar 2023)
 
-- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.1 unterstützt wird
+- Auf Unterstützung aktualisiert `at.js` v2.10.1
 - Benutzerdefinierte Mbox-Parameter des Clients unterstützen jetzt die Punktnotation korrekt
 - In VEC nicht mehr ausgeführte Bereitstellungsaufrufe
 
 ## v0.19.0 (19. September 2022)
 
-- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.10.0 unterstützt wird
+- Auf Unterstützung aktualisiert `at.js` v2.10.0
 - Unterstützung für domänenübergreifendes Tracking wurde hinzugefügt.
 
 ## v0.18.0 (1. Juni 2022)
 
-- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.9.0 unterstützt wird
-- Unterstützung für User Agent Client Hints wurde hinzugefügt.
+- Auf Unterstützung aktualisiert `at.js` v2.9.0
+- Unterstützung für Benutzeragenten-Client-Hinweise hinzugefügt.
 
 ## v0.17.1 (28. Januar 2022)
 
@@ -66,7 +71,7 @@ ht-degree: 73%
 
 ## v0.17.0 (7. Januar 2022)
 
-- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.8.0 unterstützt und jetzt Funktionsnutzungs- und Leistungstelemetriedaten erfasst werden.  Personenbezogene Daten werden nicht erfasst. Um diese Funktion abzuwählen, setzen Sie `telemetryEnabled` in `targetGlobalSettings` auf `false`.
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.8.0 unterstützt und jetzt Funktionsnutzungs- und Performance-Telemetriedaten erfasst werden.  Personenbezogene Daten werden nicht erfasst. Um diese Funktion abzuwählen, setzen Sie `telemetryEnabled` in `targetGlobalSettings` auf `false`.
 
 ## v0.16.0 (28. Oktober 2021)
 
@@ -145,11 +150,11 @@ ht-degree: 73%
 ## v0.12.0 (10. Oktober 2019)
 
 - `at.js` wurde auf Version 2.2 aktualisiert.
-- Verbesserte Leistung bei Integrationen zwischen Experience Cloud ID Library (ECID) v4.4 und `at.js` 2.2.
-- Zuvor führte die ECID-Bibliothek zwei Sperraufrufe durch, bevor `at.js` Erlebnisse abrufen konnte. Dies wurde auf einen einzigen Aufruf reduziert, wodurch die Leistung deutlich verbessert wird.
+- Verbesserte Performance bei Integrationen zwischen Experience Cloud ID Library (ECID) v4.4 und `at.js` 2.2.
+- Zuvor führte die ECID-Bibliothek zwei Sperraufrufe durch, bevor `at.js` Erlebnisse abrufen konnte. Dies wurde auf einen einzigen Aufruf reduziert, wodurch die Performance deutlich verbessert wird.
 
 >[!NOTE]
->Aktualisieren Sie Ihre ECID-Tag-Erweiterung auf Version 4.4.1, um diese Leistungsverbesserung nutzen zu können.
+>Aktualisieren Sie Ihre ECID-Tag-Erweiterung auf Version 4.4.1, um diese Performance-Verbesserung nutzen zu können.
 
 ## v0.11.1 (31. Juli 2019)
 
