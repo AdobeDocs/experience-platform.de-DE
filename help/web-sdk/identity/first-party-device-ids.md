@@ -2,12 +2,13 @@
 title: Erstanbieter-Geräte-IDs im Web SDK
 description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) für das Adobe Experience Platform Web SDK konfigurieren.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # Erstanbieter-Geräte-IDs im Web SDK
 
@@ -47,6 +48,28 @@ Um eine FPID für einen Website-Besucher an das Platform Edge Network zu senden,
 Das Platform Edge Network akzeptiert nur IDs, die dem [Format &quot;UUIDv4&quot;](https://datatracker.ietf.org/doc/html/rfc4122). Geräte-IDs, die nicht im UUIDv4-Format vorliegen, werden abgelehnt.
 
 Die Erstellung einer UUID führt fast immer zu einer eindeutigen, zufälligen ID, wobei die Wahrscheinlichkeit eines Zusammenstoßes vernachlässigbar ist. UUIDv4 kann nicht mit IP-Adressen oder anderen personenbezogenen Daten (PII) gesendet werden. UUIDs sind allgegenwärtig und es gibt Bibliotheken für praktisch jede Programmiersprache, um sie zu generieren.
+
+## Festlegen eines Erstanbieter-ID-Cookies in der Benutzeroberfläche von Datastreams {#setting-cookie-datastreams}
+
+Sie können einen Cookie-Namen in der Benutzeroberfläche von Datastreams angeben, wobei die Variable [!DNL FPID] kann sich befinden, anstatt den Cookie-Wert lesen und die FPID in die Identitätszuordnung aufnehmen zu müssen.
+
+>[!IMPORTANT]
+>
+>Diese Funktion erfordert, dass Sie [Erstanbieter-Datenerfassung](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) aktiviert.
+
+Siehe [Dokumentation zu Datenastreams](../../datastreams/configure.md) für detaillierte Informationen zum Konfigurieren eines Datastreams.
+
+Aktivieren Sie beim Konfigurieren Ihres Datastreams die **[!UICONTROL Erstanbieter-ID-Cookie]** -Option. Diese Einstellung weist das Edge-Netzwerk an, bei der Suche nach einer Erstanbieter-Geräte-ID auf ein bestimmtes Cookie zu verweisen, anstatt nach diesem Wert in der Variablen [Identity Map](#identityMap).
+
+Siehe die Dokumentation unter [Erstanbieter-Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=de) für weitere Informationen zur Verwendung mit Adobe Experience Cloud.
+
+![Platform-UI-Bild, das die Konfiguration des Datenspeichers anzeigt und die Einstellung des Erstanbieter-ID-Cookies hervorhebt](../assets/first-party-id-datastreams.png)
+
+Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert werden soll.
+
+Wenn Sie Erstanbieter-IDs verwenden, können Sie keine ID-Synchronisierungen von Drittanbietern durchführen. Die ID-Synchronisierung von Drittanbietern beruht auf der [!DNL Visitor ID] und `UUID` von diesem Dienst generiert. Bei Verwendung der Erstanbieter-ID-Funktion wird die ECID ohne Verwendung der Funktion [!DNL Visitor ID] -Dienst, der die Synchronisierung von Drittanbieter-IDs unmöglich macht.
+
+Bei Verwendung von Erstanbieter-IDs werden Audience Manager-Funktionen, die auf die Aktivierung in Partnerplattformen ausgerichtet sind, nicht unterstützt, da die Audience Manager-Partner-ID-Synchronisationen hauptsächlich auf `UUIDs` oder `DIDs`. Die von einer Erstanbieter-ID abgeleitete ECID ist nicht mit einer `UUID`, wodurch die Adresse unadressierbar wird.
 
 ## Festlegen eines Cookies mithilfe eines eigenen Servers
 
