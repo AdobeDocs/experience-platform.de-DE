@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise Januar 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1242'
-ht-degree: 26%
+ht-degree: 29%
 
 ---
 
@@ -24,8 +24,10 @@ Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 ## Warnhinweise {#alerts}
 
-Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Regeln für Warnhinweise über die [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche angezeigt werden, können Sie Warnhinweise über die Benutzeroberfläche selbst oder über E-Mail-Benachrichtigungen empfangen.
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Sie können unterschiedliche Warnhinweisregeln über die Registerkarte [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche abonnieren. Zusätzlich können Sie auswählen, ob Warnhinweise in der Benutzeroberfläche oder über E-Mail-Benachrichtigungen angezeigt werden sollen.
+
 **Neue oder aktualisierte Funktionen**
+
 | Funktion | Beschreibung |
 | --- | --- |
 | Tab Verlauf der Warnhinweise | Als Experience Platform-Administrator können Sie die Funktion zum Verwalten von Abonnenten von Warnhinweisen verwenden, um einer Adobe-Benutzer-ID, einer externen E-Mail-Adresse oder einer E-Mail-Gruppenliste einen Warnhinweis zuzuweisen. Weitere Informationen finden Sie unter [Dokumentation zur Warn-Benutzeroberfläche](../../observability/alerts/ui.md) für weitere Informationen zum Tab Verlauf. |
