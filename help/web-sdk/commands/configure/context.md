@@ -1,10 +1,11 @@
 ---
 title: context
 description: Automatisch Geräte-, Umgebungs- oder Standortdaten erfassen.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 13%
+source-wordcount: '900'
+ht-degree: 14%
 
 ---
 
@@ -59,8 +60,34 @@ Die `"placeContext"` erfasst Informationen zum Standort des Benutzers.
 | --- | --- | --- | --- |
 | Ortszeit | Lokaler Zeitstempel für den Endbenutzer in vereinfachtem erweiterten [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) Format. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Lokaler Zeitzonenversatz | Die Anzahl der Minuten, die der Benutzer von GMT versetzt wird. | `xdm.placeContext.localTimezoneOffset` | `360` |
+| Ländercode | Der Ländercode des Endbenutzers. | `xdm.placeContext.geo.countryCode` | `US` |
+| Bundesland | Der Bundesstaat-Code des Endbenutzers. | `xdm.placeContext.geo.stateProvince` | `CA` |
+| Breitengrad | Der Breitengrad des Endbenutzerstandorts. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
+| Längengrad | Der Längengrad des Endbenutzerstandorts. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### Zeitstempel
+
+Die `timestamp` erfasst Informationen zum Zeitstempel des Ereignisses. Diese Kontextinformation kann nicht entfernt werden.
+
+| Dimension | Beschreibung | XDM-Pfad | Beispielwert |
+| --- | --- | --- | --- |
+| Zeitstempel des Ereignisses | UTC-Zeitstempel für Endbenutzer in vereinfachtem erweiterten [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) Format. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### Implementierungsdetails
+
+Die `implementationDetails` erfasst Informationen zur SDK-Version, die zur Erfassung des Ereignisses verwendet wird.
+
+| Dimension | Beschreibung | XDM-Pfad | Beispielwert |
+| --- | --- | --- | --- |
+| Name | Die Kennung des Software Development Kits (SDK). Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. | `xdm.implementationDetails.name` | Bei Verwendung der eigenständigen Bibliothek lautet der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, lautet der Wert `https://ns.adobe.com/experience/alloy+reactor`. |
+| Version | Die Version des Software Development Kits (SDK). | `xdm.implementationDetails.version` | Wenn die eigenständige Bibliothek verwendet wird, ist der Wert die Bibliotheksversion. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, ist der Wert die Bibliotheksversion und die Tag-Erweiterungsversion wurde mit einer `+`. Wenn die Bibliotheksversion beispielsweise `2.1.0` und die Tag-Erweiterungsversion `2.1.3`, würde der Wert `2.1.0+2.1.3`. |
+| Umgebung | Die Umgebung, in der die Daten erfasst wurden. Dies ist immer auf `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### Hohe Entropie-Client-Hinweise
 
