@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie die Bot-Erkennung für Datastreams konfigurie
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Diese Bot-Bewertung hilft den Lösungen, die die Anfrage erhalten, den Bot-Traff
 >[!IMPORTANT]
 >
 >Bei der Bot-Erkennung werden keine Bot-Anforderungen entfernt. Es aktualisiert nur das XDM-Schema mit dem Bot-Scoring und leitet das Ereignis an die [Datastream-Dienst](configure.md) die Sie konfiguriert haben.
+>
+>Adobe-Lösungen können Bot-Scoring auf unterschiedliche Weise handhaben. Adobe Analytics verwendet beispielsweise eine eigene [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) und verwendet nicht den vom Edge Network festgelegten Wert. Die beiden Dienste verwenden dasselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), sodass die Bot-Bewertung identisch ist.
 
 Nach der Erstellung kann es bis zu 15 Minuten dauern, bis Bot-Erkennungsregeln über das Edge-Netzwerk übertragen werden.
 
