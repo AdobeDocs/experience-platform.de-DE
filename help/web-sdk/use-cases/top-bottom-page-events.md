@@ -2,7 +2,7 @@
 title: Konfigurieren von Ereignissen am Anfang und Ende der Seite im Web SDK
 description: In diesem Artikel wird erläutert, wie Sie die Seitenereignisse oben und unten im Web SDK verwenden.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 4d0895c6ad38523f5527c9630931c3c0b8ef83c0
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 2%
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub-Beispiel {#github-sample}
 
-Die Stichprobe unter [diese Adresse](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) zeigt, wie Sie mit Experience Platform und Web SDK Personalisierung oben auf der Seite anfordern und Analytics-Metriken unten senden können. Sie können das Beispiel herunterladen und lokal ausführen, um zu verstehen, wie oben und unten von Seitenereignissen funktionieren.
+Die Stichprobe unter [diese Adresse](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) zeigt, wie Sie mit Experience Platform und Web SDK Personalisierung oben auf der Seite anfordern und Analytics-Metriken unten senden können. Sie können das Beispiel herunterladen und lokal ausführen, um zu verstehen, wie oben und unten von Seitenereignissen funktionieren.
