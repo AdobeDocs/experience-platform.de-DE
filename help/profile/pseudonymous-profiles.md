@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: b6a79952d616a6f8e6ea4b2341c24d74c482c4b8
+source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 93%
+source-wordcount: '1004'
+ht-degree: 90%
 
 ---
 
@@ -60,7 +60,7 @@ Ablauf von Erlebnisereignisdaten entfernt **nur** Ereignisse, **keine** Profilkl
 
 ### Wie kann Ablauf von Daten pseudonymer Profile in Verbindung mit Ablauf von Erlebnisereignisdaten verwendet werden?
 
-Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten können ergänzend zueinander verwendet werden.
+Ablauf von Daten pseudonymer Profile und Ablauf von Erlebnisereignisdaten können komplementär zueinander verwendet werden.
 
 Sie sollten **immer** Ablauf von Erlebnisereignisdaten in Ihren Datensätzen eingerichtet haben, je nach Ihrem Aufbewahrungsbedarf für die Daten Ihrer bekannten Kunden. Wenn Ablauf von Erlebnisereignisdaten eingerichtet ist, können Sie Ablauf von Daten pseudonymer Profile verwenden, um pseudonyme Profile automatisch zu entfernen. In der Regel ist der Datenablaufzeitraum für pseudonyme Profile kürzer als der Datenablaufzeitraum für Erlebnisereignisse.
 
@@ -77,9 +77,10 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 
 - Der Ablauf von Daten pseudonymer Profile erfolgt auf **Sandbox**-Ebene. Sie können unterschiedliche Konfigurationen für Produktions- und Entwicklungs-Sandboxes auswählen.
 - Wenn Sie diese Funktion aktiviert haben, wird das Löschen von Profilen **dauerhaft**. Es gibt **keine** Möglichkeit, die gelöschten Profile zurückzusetzen oder wiederherzustellen.
-- Dies ist **kein** einmaliger Bereinigungsvorgang. Ablauf von Daten pseudonymer Profile wird täglich einmal ausgeführt und es werden dabei Profile gelöscht, die mit der Eingabe der Kundin bzw. des Kunden übereinstimmen.
+- Dies ist **kein** einmaliger Bereinigungsvorgang. Das Ablaufdatum der pseudonymen Profildaten wird einmal täglich ausgeführt und löscht Profile, die der Eingabe des Kunden entsprechen.
 - **Alle** Profile, die als pseudonyme Profile definiert sind, sind von Ablauf von Daten pseudonymer Profile betroffen. Es kommt dabei **nicht** darauf an, ob das Profil nur ein Erlebnisereignis ist oder nur Profilattribute enthält.
 - Diese Bereinigung findet **nur** im Profil statt. Identity Service kann die gelöschten Identitäten innerhalb des Diagramms nach der Bereinigung weiterhin anzeigen, wenn das Profil zwei oder mehr pseudonyme Identitäten aufweist (z. B. `AAID` und `ECID`). Diese Diskrepanz wird in naher Zukunft angegangen.
+- Pseudonyme Profildaten laufen ab **not** sofort ausgeführt werden und die Verarbeitung kann bis zu drei Tage dauern.
 
 ### Wie interagiert der Datenablauf bei Pseudonymen Profilen mit Limits für Identity Service-Daten?
 
