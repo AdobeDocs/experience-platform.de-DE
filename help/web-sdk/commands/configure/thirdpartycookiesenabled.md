@@ -1,14 +1,23 @@
 ---
 title: thirdPartyCookiesEnabled
 description: Lassen Sie die Verwendung von Drittanbieter-Cookies zur Identifizierung von Besuchern zu.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
+
 # `thirdPartyCookiesEnabled`
+
+>[!IMPORTANT]
+>
+>Google [hat](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plant, die Chrome-Unterstützung für Drittanbieter-Cookies im zweiten Halbjahr 2024 einzustellen. Daher werden Drittanbieter-Cookies in keinem der wichtigsten Browser mehr unterstützt.
+>
+>Wenn diese Änderung implementiert ist, stellt Adobe die Unterstützung für die `demdex` -Cookie, das derzeit im Web SDK unterstützt wird.
+
 
 Die `thirdPartyCookiesEnabled` -Eigenschaft ist ein boolescher Wert, der bestimmt, ob das Web SDK Cookies in einem Drittanbieterkontext setzt. Die Aktivierung dieser Option ist nützlich, wenn Sie Besucher zwischen Subdomänen oder Domänen identifizieren möchten, deren Inhaber Ihre Organisation ist. Viele moderne Browser beschränken jedoch die Einstellung und Gültigkeit von Drittanbieter-Cookies.
 

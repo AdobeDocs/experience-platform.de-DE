@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 84%
+source-wordcount: '1777'
+ht-degree: 81%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 84%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+>[!IMPORTANT]
+>
+>Google [hat](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plant, die Chrome-Unterstützung für Drittanbieter-Cookies im zweiten Halbjahr 2024 einzustellen. Daher werden Drittanbieter-Cookies in keinem der wichtigsten Browser mehr unterstützt.
+>
+>Wenn diese Änderung implementiert ist, stellt Adobe die Unterstützung für die `demdex` -Cookie, das derzeit im Web SDK unterstützt wird.
 
 ## Version 2.19.2 – Donnerstag, 10. Januar 2024
 
