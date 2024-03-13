@@ -5,10 +5,10 @@ title: Erstellen einer Salesforce-Basisverbindung mit der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit einem Salesforce-Konto verbinden.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 63%
+source-wordcount: '511'
+ht-degree: 60%
 
 ---
 
@@ -37,7 +37,7 @@ Um [!DNL Flow Service] mit [!DNL Salesforce] zu verbinden, müssen Sie Werte fü
 | `username` | Der Benutzername für die [!DNL Salesforce] Benutzerkonto. |
 | `password` | Das Kennwort für die [!DNL Salesforce] Benutzerkonto. |
 | `securityToken` | Das Sicherheits-Token für [!DNL Salesforce] Benutzerkonto. |
-| `apiVersion` | (Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
+| `apiVersion` | Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version verwenden `52`eingeben, müssen Sie den Wert als `52.0` Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce] ist: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Salesforce-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
@@ -93,7 +93,7 @@ curl -X POST \
 | `auth.params.username` | Der mit Ihrer [!DNL Salesforce] -Konto. |
 | `auth.params.password` | Das Kennwort für Ihre [!DNL Salesforce] -Konto. |
 | `auth.params.securityToken` | Das Ihrem [!DNL Salesforce] -Konto. |
-| `connectionSpec.id` | Die [!DNL Salesforce]-Verbindungsspezifikations-ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+| `connectionSpec.id` | Die [!DNL Salesforce] Verbindungsspezifikations-ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 **Antwort**
 
