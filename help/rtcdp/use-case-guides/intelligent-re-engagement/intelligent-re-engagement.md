@@ -3,7 +3,7 @@ title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -60,7 +60,7 @@ Im Folgenden finden Sie einen allgemeinen Überblick über die drei Beispielszen
 Das Szenario zum Durchsuchen von nicht mehr unterstützten Produkten zielt sowohl auf das Website- als auch auf die mobile App auf das abgebrochene Durchsuchen von Produkten ab. Dieses Szenario wird ausgelöst, wenn ein Produkt angesehen, aber nicht gekauft oder zum Warenkorb hinzugefügt wurde. In diesem Beispiel wird die Markeninteraktion nach drei Tagen ausgelöst, wenn innerhalb der letzten 24 Stunden keine Listen hinzugefügt wurden.<p>![Kunden intelligente abgebrochene Produktdurchsuchszenario - Überblick auf hoher Ebene.](../intelligent-re-engagement/images/re-engagement-journey.png "Kunden intelligente abgebrochene Produktdurchsuchszenario - Überblick auf hoher Ebene."){width="1920" zoomable="yes"}</p>
 
 1. Sie erstellen Schemata und Datensätze und aktivieren dann für [!UICONTROL Profil].
-2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
+2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
 3. Sie erfassen zusätzliche profilaktivierte Daten, die über Identitätsdiagramme mit dem authentifizierten Web- und App-Besucher verknüpft werden können.
 4. Sie erstellen zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **customer** hat in den letzten drei Tagen eine Interaktion durchgeführt.
 5. Sie erstellen eine Journey zum Durchsuchen von aufgegebenen Produkten in [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ Das Szenario zum Durchsuchen von nicht mehr unterstützten Produkten zielt sowoh
 Das Szenario &quot;Stehen gelassener Warenkorb&quot;gilt, wenn Produkte in den Warenkorb gelegt, aber noch nicht auf der Website und in der App gekauft wurden. Darüber hinaus werden Paid Media-Kampagnen mit dieser Methode gestartet und beendet.<p>![Der Kunde hat das Szenario &quot;Warenkorb&quot;verlassen und hat eine allgemeine visuelle Übersicht.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Der Kunde hat das Szenario &quot;Warenkorb&quot;verlassen und hat eine allgemeine visuelle Übersicht."){width="1920" zoomable="yes"}</p>
 
 1. Sie erstellen Schemata und Datensätze, die für [!UICONTROL Profil].
-2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
+2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
 3. Sie erfassen zusätzliche profilaktivierte Daten, die über Identitätsdiagramme mit dem authentifizierten Web- und App-Besucher verknüpft werden können.
 4. Sie erstellen zielgerichtete Zielgruppen aus der Profilliste, um zu überprüfen, ob eine **customer** hat einen Artikel in den Warenkorb gelegt, aber den Kauf nicht abgeschlossen. Die **[!UICONTROL Zum Warenkorb hinzufügen]** -Ereignis startet einen Timer, der 30 Minuten lang wartet, und sucht dann nach dem Kauf. Wenn kein Kauf getätigt wurde, wird die **customer** wird zum **[!UICONTROL Warenkorb verlassen]** Zielgruppen.
 5. Sie erstellen eine Journey zum abgebrochenen Warenkorb in [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ Das Szenario &quot;Stehen gelassener Warenkorb&quot;gilt, wenn Produkte in den W
 Das Szenario zur Bestellbestätigung konzentriert sich auf Produktkäufe, die über die Website und die mobile App getätigt werden.<p>![Szenario zur Bestätigung der Kundenbestellung - Überblick auf hoher Ebene.](../intelligent-re-engagement/images/order-confirmation-journey.png "Szenario zur Bestätigung der Kundenbestellung - Überblick auf hoher Ebene."){width="1920" zoomable="yes"}</p>
 
 1. Sie erstellen Schemata und Datensätze und aktivieren dann für [!UICONTROL Profil].
-2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
+2. Sie erfassen Daten über Web SDK, Mobile SDK oder API in Experience Platform. Analytics Source Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
 3. Sie erfassen zusätzliche profilaktivierte Daten, die über Identitätsdiagramme mit dem authentifizierten Web- und App-Besucher verknüpft werden können.
 4. Sie erstellen eine Bestätigungs-Journey in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] sendet eine Auftragsbestätigungsnachricht über den bevorzugten Kanal.
