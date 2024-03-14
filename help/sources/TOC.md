@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 95%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 95%
       - [Snowflake-Connector](connectors/databases/snowflake.md)
       - [Teradata Vantage-Connector](connectors/databases/teradata-vantage.md)
    - Daten- und Identitätspartner {#data-partner}
+      - [Acxiom-Datenerfassung](connectors/data-partners/acxiom-data-ingestion.md)
       - [Datenimport mit Acxif-Prognosen](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkur Enterprise Identity Resolution](connectors/data-partners/merkury.md)
    - E-Commerce {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 95%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Daten- und Identitätspartner {#data-partner}
-         - [Merkur Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom-Datenerfassung](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Datenimport mit Acxif-Prognosen](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Merkur Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - E-Commerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
