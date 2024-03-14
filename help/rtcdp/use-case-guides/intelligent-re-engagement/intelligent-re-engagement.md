@@ -3,9 +3,9 @@ title: Intelligente Erneute Interaktion
 description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
+source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3894'
 ht-degree: 4%
 
 ---
@@ -147,7 +147,7 @@ Mit dieser Feldergruppe können Sie Ihre Journey vor der Veröffentlichung mithi
 
 #### Schema für digitale Transaktionen des Kunden
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Diese Daten werden normalerweise in [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) und ist erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey, zur detaillierten Online-Kundenanalyse und zu erweiterten Zielgruppenfunktionen verwendet werden.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht und die auf Ihrer Website oder den zugehörigen digitalen Plattformen auftreten. Diese Daten werden normalerweise in [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) und ist erforderlich, um auf die verschiedenen Durchsuchen- und Konversionsereignisse zu verweisen, die zum Auslösen von Journey verwendet werden, detaillierte Online-Kundenanalysen, erweiterte Zielgruppenfunktionen und personalisiertes Messaging.
 
 Das Schema für digitale Transaktionen des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse.
 
@@ -178,6 +178,25 @@ Die [Details zur Endbenutzer-ID](/help/xdm/field-groups/event/enduserids.md) -Fe
 
 +++
 
++++Commerce-Details (Feldergruppe)
+
+Die [Commerce-Details](/help/xdm/field-groups/event/commerce-details.md) -Feldergruppe wird verwendet, um Commerce-Daten wie Produktinformationen (SKU, Name, Menge) und standardmäßige Warenkorbvorgänge (Bestellung, Checkout, Abbruch) zu beschreiben.
+
+| Felder | Beschreibung |
+| --- | --- |
+| `commerce.cart.cartID` | Eine ID für den Warenkorb. |
+| `commerce.order.orderType` | Ein Objekt, das den Produktanordnungstyp beschreibt. |
+| `commerce.order.payments.paymentAmount` | Ein Objekt, das den Zahlungsbetrag der Produktbestellung beschreibt. |
+| `commerce.order.payments.paymentType` | Ein Objekt, das den Produktzahlungstyp beschreibt. |
+| `commerce.order.payments.transactionID` | Eine Transaktions-ID der Objektproduktbestellung. |
+| `commerce.order.purchaseID` | Eine Kauf-ID für Objektprodukte. |
+| `productListItems.name` | Eine Liste von Artikelnamen, die die von einem Kunden ausgewählten Produkte darstellen. |
+| `productListItems.priceTotal` | Der Gesamtpreis der Artikelliste, die die von einem Kunden ausgewählten Produkte darstellt. |
+| `productListItems.product` | Die ausgewählten Produkte. |
+| `productListItems.quantity` | Die Anzahl der Elemente, die für die von einem Kunden ausgewählten Produkte stehen. |
+
++++
+
 + + + externe Details zur Überprüfung des Quellsystems (Feldergruppe)
 
 Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
@@ -186,7 +205,7 @@ Externe Quell-System-Audit-Attribute sind ein standardmäßiger Experience-Daten
 
 #### Schema für Offline-Transaktionen des Kunden
 
-Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Plattformen außerhalb Ihrer Website auftreten. Diese Daten werden normalerweise in [!DNL Adobe Experience Platform] von einem POS (oder einem ähnlichen System) und meist über eine API-Verbindung in Platform gestreamt werden. Ihr Zweck besteht darin, auf die verschiedenen Offline-Konversionsereignisse zu verweisen, die zum Auslösen von Journey verwendet werden, sowie auf eine tiefe Online- und Offline-Kundenanalyse und erweiterte Zielgruppenfunktionen.
+Dieses Schema wird verwendet, um die Ereignisdaten zu strukturieren und zu referenzieren, aus denen Ihre Kundenaktivität besteht, die auf Plattformen außerhalb Ihrer Website auftreten. Diese Daten werden normalerweise in [!DNL Adobe Experience Platform] von einem POS (oder einem ähnlichen System) und meist über eine API-Verbindung in Platform gestreamt werden. Ihr Zweck besteht darin, auf die verschiedenen Offline-Konversionsereignisse zu verweisen, die zur Auslösung von Journey verwendet werden, eine tiefe Online- und Offline-Kundenanalyse, erweiterte Zielgruppenfunktionen und personalisiertes Messaging.
 
 Das Schema der Offline-Transaktionen des Kunden wird durch eine [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Klasse.
 
@@ -346,7 +365,7 @@ Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs
 Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
 
 * `eventType: commerce.productViews`
-* und `THEN` (sequenzielles Ereignis) ausschließen `eventType: commerce.productListAdds` oder `application.launch` oder `web.webpagedetails.pageViews` oder `commerce.purchases` (Dies umfasst sowohl online als auch offline)
+* und `THEN` (sequenzielles Ereignis) ausschließen `eventType: commerce.productListAdds` UND `application.launch` UND `web.webpagedetails.pageViews` UND `commerce.purchases` (Dies umfasst sowohl online als auch offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -359,7 +378,7 @@ Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs
 Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
 
 * `eventType: commerce.productViews`
-* und `THEN` (sequenzielles Ereignis) include `eventType: commerce.productListAdds` oder `application.launch` oder `web.webpagedetails.pageViews` oder `commerce.purchases` (Dies umfasst sowohl online als auch offline)
+* und `THEN` (sequenzielles Ereignis) include `eventType: commerce.productListAdds` ODER `application.launch` ODER `web.webpagedetails.pageViews` ODER `commerce.purchases` (Dies umfasst sowohl online als auch offline)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
@@ -370,7 +389,7 @@ Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs
 
 Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` (Streaming)
 
 +++
@@ -381,7 +400,7 @@ Das folgende Ereignis wird für das Szenario des abgebrochenen Produktdurchsuchs
 
 Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` (Batch)
 
 +++
@@ -395,7 +414,7 @@ Die folgenden Ereignisse werden für das Szenario mit einem abgebrochenen Warenk
 Die folgenden Felder und Bedingungen sind beim Einrichten dieser Audience erforderlich:
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now and <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
