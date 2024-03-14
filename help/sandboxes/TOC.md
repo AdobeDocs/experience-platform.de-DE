@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Sandboxes in Adobe Experience Platform
 breadcrumb-title: Handbuch zu Sandboxes
 user-guide-description: Erfahren Sie, wie Sandboxes funktionieren und wie Sie eine Platform-Instanz zur Entwicklung, zum Testen und zur Anwendungsbereitstellung in virtuelle Umgebungen unterteilen.
 feature: Sandboxes
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 88%
+source-wordcount: '70'
+ht-degree: 85%
 
 ---
 
@@ -34,4 +34,4 @@ ht-degree: 88%
    * [Anhang](sandbox-tooling-api/appendix.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 description: Mit Adobe Experience Platform können Unternehmen Kundendaten zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 92%
@@ -64,7 +64,7 @@ Besuchen Sie die Landingpage zu [Experience Platform-Tutorials](https://experien
 * [**Glossar**](glossary.md)\
   Schlagen Sie die in Adobe Experience Platform verwendeten Begriffe nach.
 
-* [**Versionshinweise**](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)\
+* [**Versionshinweise**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
   Finden Sie Informationen zur aktuellen Version von [!DNL Experience Platform] und sehen Sie sich frühere Versionen an.
 
 * [**Handbuch zur Fehlerbehebung**](troubleshooting.md)\

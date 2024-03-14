@@ -5,7 +5,7 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 90%
@@ -296,4 +296,4 @@ ht-degree: 90%
       * [Dokumentationsvorlage für Self-Service](./destination-sdk/docs-framework/self-service-template.md)
       * [Best Practices für die Inhaltserstellung](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Häufig gestellte Fragen](./destinations-faq.md)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -6,7 +6,7 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 98%
@@ -321,5 +321,5 @@ ht-degree: 98%
 * [FAQs](./faq.md)
 * [Aktualisierungen der Terminologie](./term-updates.md)
 * [Auslaufende Unterstützung für Internet Explorer 10 und 11](./ie-deprecation.md)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

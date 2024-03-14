@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 87%
+ht-degree: 86%
 
 ---
 
@@ -81,4 +81,4 @@ ht-degree: 87%
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Migration von Data Lake Gen2](adls2-gen2-migration.md)
 * [Glossar](glossary.md)
-* [Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
