@@ -3,7 +3,7 @@ title: Work Order API Endpoint
 description: Mit dem /workorder -Endpunkt in der Data Hygiene API können Sie Löschaufgaben für Identitäten programmgesteuert verwalten.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 56%
@@ -126,9 +126,9 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs des Datensatzes zu
 
 {style="table-layout:auto"}
 
-## Abrufen des Status eines Datensatzlöschens (#lookup)
+## Status eines Datensatzlöschens abrufen {#lookup}
 
-Nachher [Erstellen einer Löschanfrage für Datensätze](#create)können Sie den Status mit einer GET-Anfrage überprüfen.
+Nach [Löschanfrage für Datensätze erstellen](#create)können Sie den Status mit einer GET-Anfrage überprüfen.
 
 **API-Format**
 

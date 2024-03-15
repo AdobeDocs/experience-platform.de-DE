@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Privacy Service-Benutzeroberfläche
 description: Beginnen Sie mit der Verwendung der Privacy Service-Benutzeroberfläche, um Datenschutzanfragen über verschiedene Experience Cloud-Applikationen hinweg zu koordinieren und zu überwachen.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 20%
@@ -18,7 +18,7 @@ ht-degree: 20%
 >title="Anfragen durch betroffene Personen"
 >abstract="Dieses Widget zeigt die Anzahl der gesendeten und abgeschlossenen Anfragen durch betroffene Personen an, die an einem bestimmten Tag von Privacy Service verarbeitet wurden. Weitere Informationen zu Ihren Privacy Service-Prozessen finden Sie in der linken Navigationsleiste unter **Anfragen**."
 
-Die Privacy Service-Benutzeroberfläche [!DNL Privacy Service] ermöglicht die Koordinierung von Datenschutz- und Compliance-Anfragen über verschiedene Adobe Experience Cloud-Anwendungen hinweg.
+In der Benutzeroberfläche von Privacy Service können Sie Datenschutz- und Compliance-Anfragen für verschiedene Adobe Experience Cloud-Anwendungen koordinieren.
 
 >[!NOTE]
 >

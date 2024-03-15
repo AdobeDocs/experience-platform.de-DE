@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Zielgruppen für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 100%
+source-wordcount: '2012'
+ht-degree: 90%
 
 ---
 
 # Automatische Richtliniendurchsetzung
 
+Datennutzungsbezeichnungen und -richtlinien sind für alle Adobe Experience Platform-Benutzer verfügbar. Definieren Sie Datennutzungsrichtlinien und wenden Sie Datennutzungsbezeichnungen an, um sicherzustellen, dass vertrauliche, identifizierbare oder vertragliche Daten genau verarbeitet werden. Diese Maßnahmen helfen Ihnen dabei, die Data Governance-Regeln Ihres Unternehmens hinsichtlich des Zugriffs, der Verarbeitung, der Speicherung und der Freigabe von Daten durchzusetzen.
+
+Um Ihre Organisation vor potenziellen Risiken und Verbindlichkeiten zu schützen, erzwingt Platform automatisch Nutzungsrichtlinien, falls beim Aktivieren von Zielgruppen für Ziele Verstöße auftreten.
+
 >[!IMPORTANT]
 >
->Die automatische Durchsetzung von Richtlinien ist nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
+>Einverständnisrichtlinien und die automatische Durchsetzung von Einwilligungsrichtlinien sind nur für Unternehmen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield**.
 
-Sobald die Daten gekennzeichnet und die Datennutzungsrichtlinien definiert sind, können Sie die Einhaltung der Datennutzungsrichtlinien durchsetzen. Beim Aktivieren von Zielgruppen in Zielen setzt Adobe Experience Platform automatisch Nutzungsrichtlinien durch, falls Verstöße auftreten sollten.
-
->[!NOTE]
->
->Dieses Dokument konzentriert sich auf die Durchsetzung von Richtlinien zu Data Governance und Einverständnis. Informationen zu Richtlinien für die Zugriffssteuerung finden Sie in der Dokumentation zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
+Dieses Dokument konzentriert sich auf die Durchsetzung von Richtlinien zu Data Governance und Einverständnis. Informationen zu Richtlinien für die Zugriffssteuerung finden Sie in der Dokumentation zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
 ## Voraussetzungen
 
@@ -94,27 +94,31 @@ Wenn ein Richtlinienverstoß beim Versuch auftritt, eine Zielgruppe zu aktiviere
 
 Wählen Sie einen Richtlinienverstoß in der linken Spalte des Popups aus, um Details zu diesem Verstoß anzuzeigen.
 
-![](../images/enforcement/violation-policy-select.png)
+![Ein Dialogfeld, das angibt, dass eine Richtlinienverletzung aufgetreten ist und der Richtlinienname hervorgehoben wurde.](../images/enforcement/violation-policy-select.png)
 
 Die Meldung zum Verstoß enthält eine Zusammenfassung der verletzten Richtlinie. Hierzu gehören die Bedingungen, die die Richtlinie gemäß Konfiguration überprüft, die spezifische Aktion, durch die der Verstoß ausgelöst wurde, sowie eine Liste möglicher Lösungen für das Problem.
 
-![](../images/enforcement/violation-summary.png)
+![Ein Dialogfeld mit einer Richtlinienverletzung, in dem die Zusammenfassung der Verstöße hervorgehoben ist.](../images/enforcement/violation-summary.png)
 
 Unter der Zusammenfassung der Verletzung wird ein Datenherkunftsdiagramm angezeigt, das Ihnen veranschaulicht, welche Datensätze, Zusammenführungsrichtlinien, Zielgruppen und Ziele an der Richtlinienverletzung beteiligt waren. Die Entität, die Sie aktuell ändern, wird im Diagramm hervorgehoben, sodass klar ist, welcher Punkt im Fluss die Verletzung verursacht. Sie können einen Entitätsnamen im Diagramm auswählen, um die Detailseite für die jeweilige Entität zu öffnen.
 
-![](../images/enforcement/data-lineage.png)
+![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobenem Datenherstellungsdiagramm.](../images/enforcement/data-lineage.png)
 
 Sie können auch das Symbol **[!UICONTROL Filtern]** (![](../images/enforcement/filter.png)) verwenden, um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
 
-![](../images/enforcement/lineage-filter.png)
+![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobenem Filter für Datenherkunft und Dropdown-Menü.](../images/enforcement/lineage-filter.png)
 
 Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste anzuzeigen. Um zum visuellen Diagramm zurückzukehren, wählen Sie **[!UICONTROL Pfadansicht]**.
 
-![](../images/enforcement/list-view.png)
+![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobener Pfadansicht für die Datenherkunft.](../images/enforcement/list-view.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Sie [Einverständnisrichtlinien erstellt haben](../policies/user-guide.md#consent-policy) und eine Zielgruppe für ein Ziel aktivieren, können Sie sehen, wie sich Ihre Einverständnisrichtlinien auf den Prozentsatz der Profile auswirken, die in die Aktivierung eingeschlossen werden.
+Beim Aktivieren einer Zielgruppe für ein Ziel können Sie sehen, wie Ihre [Einverständnisrichtlinien](../policies/user-guide.md#consent-policy) sich auf unterschiedliche Prozentsätze der Profile auswirken, die in der Aktivierung enthalten sind.
+
+>[!NOTE]
+>
+>Einverständnisrichtlinien sind nur für Organisationen verfügbar, die Adobe Healthcare Shield oder Adobe Privacy &amp; Security Shield erworben haben.
 
 #### Verbesserung der Einverständnisrichtlinie für bezahlte Medien {#consent-policy-enhancement}
 
