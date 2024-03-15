@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
+source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 95%
+source-wordcount: '1031'
+ht-degree: 94%
 
 ---
 
@@ -115,6 +115,7 @@ ht-degree: 95%
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
       - [Square-Connector](connectors/payments/square.md)
+      - [Stripe-Connector](connectors/payments/stripe.md)
    - Protokolle {#protocols}
       - [Generic OData-Connector](connectors/protocols/odata.md)
       - [Generic REST-API-Connector](connectors/protocols/generic-rest.md)
@@ -195,6 +196,7 @@ ht-degree: 95%
       - Zahlungen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Square](tutorials/api/create/payments/square.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - Protokolle {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
          - [Generic REST-API](tutorials/api/create/protocols/generic-rest.md)
@@ -323,6 +325,7 @@ ht-degree: 95%
       - Zahlungen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [Square](tutorials/ui/create/payments/square.md)
+         - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protokolle {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
