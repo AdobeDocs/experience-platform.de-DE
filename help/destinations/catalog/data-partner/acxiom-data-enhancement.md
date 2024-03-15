@@ -1,12 +1,12 @@
 ---
 title: Acxiom-Datenverbesserung
-description: Verwenden Sie diesen Connector, um Erstanbieter-Adobe-Profile in Real-Time CDP zu Acxiom zu aktivieren, um sie über Marketingkanäle hinweg anzureichern und zu verwenden.
+description: Verwenden Sie diesen Connector, um Erstanbieter-Adobe-Profile in Real-Time CDP zu Acxiom zu aktivieren, damit Daten angereichert und über Marketingkanäle hinweg verwendet werden können. Sie können dann die Acxiom-Quelle verwenden, um die Profile mit erweiterten Daten zu importieren und in Real-Time CDP mit ihnen zu arbeiten.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: 6f272ce0ad619f835920ab9d25d0946d7709d7cb
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 27%
+source-wordcount: '1346'
+ht-degree: 28%
 
 ---
 
@@ -18,30 +18,29 @@ ht-degree: 27%
 
 ## Übersicht {#overview}
 
-Verwenden Sie den Acxiom Data Enhancement Connector, um Ihren Adobe-Profilen zusätzliche beschreibende Daten zur Verfügung zu stellen, die in Analyse-, Segmentierungs- und Targeting-Anwendungen verwendet werden können. Hunderte von verfügbaren Elementen ermöglichen es Benutzern, Daten besser zu segmentieren und zu modellieren, was zu einer präziseren Zielgruppenbestimmung und prädiktiven Modellierung führt.
+Verwenden Sie die [!DNL Acxiom Data Enhancement] Connector zur Bereitstellung zusätzlicher beschreibender Daten für Ihre Kundenprofile zur Verwendung in Analyse-, Segmentierungs- und Targeting-Anwendungen. Hunderte von Elementen sind verfügbar, sodass Sie Daten besser segmentieren und modellieren können, was zu einer präziseren Zielgruppenbestimmung und prädiktiven Modellierung führt.
 
 ![Marketingdiagramm zum Exportieren von Erstanbieterdaten in Acxiom und anschließendem Importieren angereicherter Daten zurück in Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Acxiom Data Enhancement] Zielverbindung und Datenfluss über die Adobe Experience Platform-Benutzeroberfläche.  Dieser Connector wird verwendet, um Daten mithilfe von Amazon S3 als Ablagepunkt an den Acxiom Enhancement Service zu übermitteln.
+In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Acxiom Data Enhancement] Zielverbindung und Datenfluss über die Adobe Experience Platform-Benutzeroberfläche. Dieser Connector wird verwendet, um Daten mithilfe von Amazon S3 als Ablagepunkt an den Acxiom Enhancement Service zu übermitteln.
 
 ![Der Zielkatalog mit dem ausgewählten Acxiom-Ziel.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Anwendungsfälle {#use-cases}
 
-Hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mithilfe dieses Ziels lösen können, um besser zu verstehen, wie und wann Sie das Acxiom Data Enhancement-Ziel verwenden sollten.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Acxiom Data Enhancement] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Kundendaten verbessern {#enhance-customer-data}
 
-Dieser Connector sollte von Marketingfachleuten verwendet werden, die die Effektivität ihrer Zielgruppenstrategien steigern, indem sie ausgewählte beschreibende Elemente an ihre Adobe-Profile anhängen und diese zur gezielteren Ausrichtung von-Kampagnen verwenden.
+Dieser Connector sollte von Marketing-Fachleuten verwendet werden, die die Effektivität ihrer Zielgruppenstrategien steigern, indem sie ausgewählte beschreibende Elemente an ihre Kundenprofile anhängen und diese zur gezielteren Ausrichtung von Kampagnen verwenden.
 
 Als Marketing-Experte möchten Sie beispielsweise Ihr Verständnis für Ihre bestehenden Zielgruppen vertiefen, indem Sie deren Profile mit zusätzlichen Daten anreichern. Dadurch werden Ihre Segmentierungs- und Targeting-Strategien verbessert, was zu einer Steigerung der Kampagnenpersonalisierung und -konvertierung führt.
 
 Der Anwendungsfall wird über eine Kombination aus Ziel- und Quell-Connectoren ausgeführt.
 
-
 Exportieren Sie zunächst Ihre vorhandenen Kundendatensätze zur Anreicherung mithilfe dieses Ziel-Connectors. Der Dienst von Acxiom würde nach der Datei suchen, sie abrufen, sie mit Acxiom-Daten anreichern und eine Datei generieren.
 
-Der Kunde würde dann die entsprechende Acxiom-Datenaufnahme-Quellkarte verwenden, um die hydrierten Kundenprofile wieder in Adobe Real-Time CDP aufzunehmen.
+Der Kunde würde dann die entsprechende [Acxiom-Datenerfassung](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) Quellkarte, um die hydrierten Kundenprofile wieder in Adobe Real-Time CDP aufzunehmen.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -77,7 +76,9 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
@@ -99,7 +100,7 @@ So definieren Sie einen neuen Acxiom Managed S3-Speicherort:
 
 ### Vorhandenes Konto
 
-Konten, die bereits mit der Karte &quot;Acxiom Data Enhancement&quot;definiert wurden, werden in einem Listen-Popup angezeigt und erhalten bei Auswahl Details zum Konto.  Dies wird unten im Beispiel der Benutzeroberfläche angezeigt, wenn Sie zu **Ziele** > **Konten**;
+Mit der Variablen [!DNL Acxiom Data Enhancement] Das Ziel wird in einem Listen-Popup angezeigt. Wenn diese Option aktiviert ist, werden Details zum Konto in der rechten Leiste angezeigt. Zeigen Sie das Beispiel in der Benutzeroberfläche an, wenn Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**;
 
 ![Vorhandenes Konto](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
@@ -144,14 +145,14 @@ Zuordnungsvorschläge finden Sie in der folgenden Tabelle, in der Attribute auf 
 
 | Zielfeld | Quellbeschreibung |
 |--------------|-------------------------------------------------------------|
-| name | Der Wert person.name.fullName in Experience Platform. |
-| firstName | Der Wert person.name.firstName in Experience Platform. |
-| lastName | Der Wert person.name.lastName in Experience Platform. |
-| address1 | Der Wert mailingAddress.street1 in Experience Platform. |
-| address2 | Der Wert mailingAddress.street2 in Experience Platform. |
-| city | Der Wert mailingAddress.city in Experience Platform. |
-| state | Der Wert &quot;mailingAddress.state&quot;in Experience Platform. |
-| zip | Der mailingAddress.postalCode -Wert in Experience Platform. |
+| name | Die `person.name.fullName` -Wert in Experience Platform. |
+| firstName | Die `person.name.firstName` -Wert in Experience Platform. |
+| lastName | Die `person.name.lastName` -Wert in Experience Platform. |
+| address1 | Die `mailingAddress.street1` -Wert in Experience Platform. |
+| address2 | Die `mailingAddress.street2` -Wert in Experience Platform. |
+| city | Die `mailingAddress.city` -Wert in Experience Platform. |
+| state | Die `mailingAddress.state` -Wert in Experience Platform. |
+| zip | Die `mailingAddress.postalCode` -Wert in Experience Platform. |
 
 >[!NOTE]
 >

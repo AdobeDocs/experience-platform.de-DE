@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 90%
+source-wordcount: '1218'
+ht-degree: 89%
 
 ---
 
@@ -142,6 +142,7 @@ ht-degree: 90%
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
    * Daten- und Identitätspartner {#data-partner}
       * [Acxiom Prospect-Unterdrückung](./catalog/data-partner/acxiom-prospect-suppression.md)
+      * [Acxiom-Datenverbesserung](./catalog/data-partner/acxiom-data-enhancement.md)
    * eCommerce-Ziele {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * E-Mail-Ziele {#email}

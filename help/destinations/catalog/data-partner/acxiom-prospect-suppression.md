@@ -3,9 +3,9 @@ title: Acxiom Prospect-Unterdrückung
 description: Exportieren Sie Ihre Erstanbieterzielgruppen in das Acxiom-Ziel, damit Acxiom bekannte oder konvertierte Kunden unterdrücken kann. Verwenden Sie dann den Quell-Connector von Acxiom, um Interessenslisten von Acxiom zu erfassen und zu aktivieren, wobei Ihre bekannten oder konvertierten Kunden entfernt sind.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1466'
 ht-degree: 26%
 
 ---
@@ -102,7 +102,7 @@ So definieren Sie einen neuen Acxiom Managed S3-Speicherort:
 
 ### Vorhandenes Konto
 
-Konten, die bereits mit der Karte &quot;Acxiom Prospect-Unterdrückung&quot;definiert wurden, werden in einem Listen-Popup angezeigt und geben bei Auswahl Details zum Konto an.  Dies wird unten im Beispiel der Benutzeroberfläche angezeigt, wenn Sie zu **Ziele** > **Konten**;
+Mit der Variablen [!DNL Acxiom Prospect Suppression] Das Ziel wird in einem Listen-Popup angezeigt. Wenn diese Option aktiviert ist, werden Details zum Konto in der rechten Leiste angezeigt. Zeigen Sie das Beispiel in der Benutzeroberfläche an, wenn Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**:
 
 ![Vorhandenes Konto](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ Die Verarbeitung erfordert Name- und Adresselemente, während nicht alle Element
 
 | Zielfeld | Quellbeschreibung |
 |--------------|-------------------------------------------------------------|
-| name | Der Wert person.name.fullName in Experience Platform. |
-| firstName | Der Wert person.name.firstName in Experience Platform. |
-| lastName | Der Wert person.name.lastName in Experience Platform. |
-| address1 | Der Wert mailingAddress.street1 in Experience Platform. |
-| address2 | Der Wert mailingAddress.street2 in Experience Platform. |
-| city | Der Wert mailingAddress.city in Experience Platform. |
-| state | Der Wert &quot;mailingAddress.state&quot;in Experience Platform. |
-| zip | Der mailingAddress.postalCode -Wert in Experience Platform. |
+| name | Die `person.name.fullName` -Wert in Experience Platform. |
+| firstName | Die `person.name.firstName` -Wert in Experience Platform. |
+| lastName | Die `person.name.lastName` -Wert in Experience Platform. |
+| address1 | Die `mailingAddress.street1` -Wert in Experience Platform. |
+| address2 | Die `mailingAddress.street2` -Wert in Experience Platform. |
+| city | Die `mailingAddress.city` -Wert in Experience Platform. |
+| state | Die `mailingAddress.state` -Wert in Experience Platform. |
+| zip | Die `mailingAddress.postalCode` -Wert in Experience Platform. |
 
 {style="table-layout:auto"}
 
