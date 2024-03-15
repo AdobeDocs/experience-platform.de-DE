@@ -1,23 +1,21 @@
 ---
 title: Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)
 description: Dieses Dokument bietet eine Einführung in die erforderlichen Informationen, die Sie kennen müssen, bevor Sie versuchen, eine neue Quelle mit Self-Serve-Quellen (Streaming-SDK) zu erstellen.
-hide: true
-hidefromtoc: true
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 40%
+source-wordcount: '523'
+ht-degree: 35%
 
 ---
 
 # Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)
 
-Self-Serve-Quellen (Streaming-SDK) ermöglichen Ihnen die Integration Ihrer eigenen Quelle, um Streaming-Daten an Adobe Experience Platform zu übertragen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [[!DNL Flow Service] -API durchführen](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Self-Serve-Quellen (Streaming-SDK) ermöglichen Ihnen die Integration Ihrer eigenen Quelle, um Streaming-Daten an Adobe Experience Platform zu übertragen. Dieses Dokument bietet eine Einführung in die grundlegenden Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Allgemeine Vorgehensweise
 
-Der Schritt-für-Schritt-Vorgang zum Konfigurieren der Quelle in Experience Platform ist unten beschrieben:
+Der Schritt-für-Schritt-Vorgang zum Konfigurieren der Quelle unter Experience Platform ist unten beschrieben:
 
 ### Integration
 
@@ -28,7 +26,7 @@ Der Schritt-für-Schritt-Vorgang zum Konfigurieren der Quelle in Experience Plat
 ### Dokumentation
 
 * Um mit der Dokumentation Ihrer Quelle zu beginnen, lesen Sie die [Übersicht über das Erstellen der Dokumentation für Self-Serve-Quellen](../documentation/doc-overview.md).
-* Lesen Sie das Handbuch unter [Verwenden der GitHub-Webschnittstelle](../documentation/github.md) für Schritte zum Erstellen der Dokumentation mit GitHub.
+* Lesen Sie das Handbuch unter [Verwenden der GitHub-Web-Oberfläche](../documentation/github.md) für Schritte zum Erstellen der Dokumentation mit GitHub.
 * Lesen Sie das Handbuch unter [mit einem Texteditor](../documentation/text-editor.md) Anweisungen zum Erstellen von Dokumentationen mit Ihrem lokalen Computer.
 * [Verwenden Sie die Dokumentationsvorlage zur Streaming-SDK-API, um Ihre Quelle in der API zu dokumentieren.](streaming-template-api.md).
 * [Verwenden Sie die Dokumentationsvorlage zur Streaming-SDK-Benutzeroberfläche, um Ihre Quelle in der Benutzeroberfläche zu dokumentieren.](streaming-template-ui.md).
@@ -42,7 +40,7 @@ Sie können auch die folgenden Dokumentationsvorlagen herunterladen:
 
 >[!IMPORTANT]
 >
->Die Quelle, die Sie in Experience Platform integrieren, muss in der Lage sein, einen Webhook zu unterstützen, für den ein Endpunkt angemeldet werden kann, um Updates zu senden.
+>Die Quelle, die Sie mit Experience Platform integrieren, muss in der Lage sein, einen Webhook zu unterstützen, für den ein Endpunkt angemeldet werden kann, um Updates zu senden.
 
 Um Self-Serve-Quellen (Streaming-SDK) zu verwenden, müssen Sie sicherstellen, dass Sie Zugriff auf eine Sandbox-Organisation haben, die über Adobe Experience Platform-Quellen verfügt.
 

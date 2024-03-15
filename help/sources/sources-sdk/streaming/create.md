@@ -1,17 +1,15 @@
 ---
 title: Erstellen einer neuen Verbindungsspezifikation für das Streaming-SDK mithilfe der Flow Service-API
 description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über Self-Serve-Quellen integrieren.
-hide: true
-hidefromtoc: true
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 38%
+source-wordcount: '736'
+ht-degree: 37%
 
 ---
 
-# Erstellen einer neuen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API
+# Erstellen Sie eine neue Verbindungsspezifikation mit der [!DNL Flow Service] API
 
 Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Sie enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und geprüft werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Der `/connectionSpecs`-Endpunkt in der [!DNL Flow Service]-API ermöglicht Ihnen die programmgesteuerte Verwaltung der Verbindungsspezifikationen innerhalb Ihrer Organisation.
 
@@ -23,7 +21,7 @@ Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.
 
 ## Sammeln von Artefakten
 
-Um eine neue Streaming-Quelle mithilfe von Self-Serve-Quellen zu erstellen, müssen Sie zunächst eine Koordination mit Adobe durchführen, ein privates Git-Repository anfordern und sich an der Adobe der Details bezüglich Titel, Beschreibung, Kategorie und Symbol Ihrer Quelle orientieren.
+Um eine neue Streaming-Quelle mithilfe von Self-Serve-Quellen zu erstellen, müssen Sie zunächst eine Koordination mit Adobe durchführen, ein privates Git-Repository anfordern und die Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle an Adobe ausrichten.
 
 Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukturieren:
 
@@ -39,11 +37,11 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 | Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
 | {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte enthalten, die mit Ihrer Quelle in Ihrem privaten Git-Repository zusammenhängen. | `medallia` |
-| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie der Meinung sind, dass Ihre Quelle nicht zu einer der oben genannten Kategorien passt, wenden Sie sich an Ihren Kundenbetreuer, um darüber zu diskutieren. | `medallia-category.txt` Geben Sie innerhalb der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
-| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, die Sie verwenden können, um [!DNL Medallia] Daten in die Experience Platform. |
+| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um zu besprechen. | `medallia-category.txt` Geben Sie innerhalb der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
+| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, die Sie verwenden können, um [!DNL Medallia] Daten an Experience Platform. |
 | {your_source}-icon.svg | Das Bild, das für die Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
-| {your_source}-label.txt | Der Quellname, wie er im Quellkatalog der Experience Platform angezeigt werden soll. | Medallia |
-| {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `medallia-connectionSpec.json` |
+| {your_source}-label.txt | Der Quellname, wie er im Experience Platform-Quellkatalog angezeigt werden soll. | Medallia |
+| {your_source}-connectionSpec.json | Eine JSON-Datei mit der Verbindungsspezifikation Ihrer Quelle. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `medallia-connectionSpec.json` |
 
 {style="table-layout:auto"}
 
@@ -134,7 +132,7 @@ Nachdem Sie die erforderlichen Artefakte gesammelt haben, kopieren Sie die unten
 
 Sobald Sie sich die Vorlage für die Verbindungsspezifikation besorgt haben, können Sie damit beginnen, eine neue Verbindungsspezifikation zu erstellen, indem Sie die passenden Werte eingeben, die Ihrer Quelle entsprechen.
 
-Eine Verbindungsspezifikation kann in zwei verschiedene Teile unterteilt werden: die Quellspezifikationen und die Spezifikationen für die Untersuchung.
+Eine Verbindungsspezifikation kann in zwei verschiedene Teile unterteilt werden: die Quellspezifikationen und die Erkundungsspezifikationen.
 
 Weitere Informationen zu den Abschnitten einer Verbindungsspezifikation finden Sie in den folgenden Dokumenten:
 

@@ -1,10 +1,8 @@
 ---
 title: Flussspezifikationen für das Streaming-SDK mithilfe der Flow Service-API aktualisieren
 description: Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der Flow Service-API für Self-Serve-Quellen (Streaming-SDK).
-hide: true
-hidefromtoc: true
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 14%
@@ -151,7 +149,7 @@ Sie können die Felder einer Flussspezifikation über einen PUT-Vorgang aktualis
 
 >[!IMPORTANT]
 >
->Wenn Sie eine Verbindungsspezifikation für eine neue Quelle erstellen, müssen Sie deren Spezifikations-ID der `sourceConnectionSpecIds` Array der Flussspezifikationen, die Ihrer Quelle entsprechen. Dadurch wird sichergestellt, dass Ihre neue Quelle von einer vorhandenen Flussspezifikation unterstützt wird, sodass Sie den Datenfluss-Erstellungsprozess mit Ihrer neuen Quelle abschließen können.
+>Wenn Sie eine Verbindungsspezifikation für eine neue Quelle erstellen, müssen Sie deren Spezifikations-ID der `sourceConnectionSpecIds` -Array der Flussspezifikationen, die Ihrer Quelle entsprechen. Dadurch wird sichergestellt, dass Ihre neue Quelle von einer vorhandenen Flussspezifikation unterstützt wird, sodass Sie den Datenfluss-Erstellungsprozess mit Ihrer neuen Quelle abschließen können.
 
 **API-Format**
 
@@ -161,7 +159,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die Flussspezifikation von `e77fde5a-22a8-11ed-861d-0242ac120002` , um die Verbindungsspezifikations-ID einzuschließen `bdb5b792-451b-42de-acf8-15f3195821de`.
+Die folgende Anfrage aktualisiert die Flussspezifikation von `e77fde5a-22a8-11ed-861d-0242ac120002` , um die Verbindungsspezifikations-ID einzuschließen. `bdb5b792-451b-42de-acf8-15f3195821de`.
 
 ```shell
 PUT -X GET \
