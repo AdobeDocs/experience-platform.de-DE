@@ -2,7 +2,7 @@
 title: Acxiom-Datenerfassung
 description: Erfahren Sie, wie Sie [!DNL Acxiom] Daten an Real-time Customer Data Platform übermitteln, Erstanbieterprofile anreichern, Zielgruppen verbessern und über Marketingkanäle hinweg aktivieren.
 badge: Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 42%
@@ -54,3 +54,4 @@ Die unten aufgeführten Einschränkungen müssen bei der Benennung Ihrer Cloud-S
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Acxiom] -Konto auf Experience Platform. Sie können jetzt mit dem Handbuch zu [Verbindung [!DNL Acxiom Data Ingestion] zum Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
