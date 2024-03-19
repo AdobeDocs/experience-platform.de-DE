@@ -1,10 +1,9 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise Januar 2024 für Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform – Versionshinweise März 2024
+description: Versionshinweise März 2024 für Adobe Experience Platform.
 source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1043'
 ht-degree: 33%
 
 ---
@@ -117,3 +116,4 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 {style="table-layout:auto"}
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../sources/home.md).
+
