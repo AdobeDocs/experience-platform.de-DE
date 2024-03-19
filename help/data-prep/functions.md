@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
 workflow-type: tm+mt
-source-wordcount: '5789'
+source-wordcount: '5792'
 ht-degree: 3%
 
 ---
@@ -289,7 +289,7 @@ Weitere Informationen zu Gerätefeldwerten finden Sie im Abschnitt [Liste der Ge
 
 >[!NOTE]
 >
->Sie dürfen nur die folgenden Analysefunktionen für die Streaming-Erfassung verwenden.
+>Sie dürfen nur die folgenden Analysefunktionen für WebSDK- und Adobe Analytics-Datenflüsse verwenden.
 
 | Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |

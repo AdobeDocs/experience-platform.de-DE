@@ -5,10 +5,10 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
-ht-degree: 12%
+ht-degree: 11%
 
 ---
 
@@ -45,9 +45,8 @@ Zur [!DNL Flow Service] zur Verbindung mit [!DNL Snowflake]müssen Sie die folge
 | `username` | Der Benutzername für die [!DNL Snowflake] -Konto. |
 | `password` | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
 | `role` | (Optional) Eine benutzerdefinierte Rolle, die für einen Benutzer für eine bestimmte Verbindung bereitgestellt werden kann. Wenn dieser Wert nicht angegeben wird, wird standardmäßig `public`. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Snowflake] ist `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-Weiterführende Informationen zur Authentifizierung finden Sie in diesem Abschnitt [[!DNL Snowflake] Dokument](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### Rolleneinstellungen konfigurieren {#configure-role-settings}
 
@@ -83,3 +82,4 @@ Weiterführende Informationen zur Verwaltung von Rollen und Berechtigungen finde
 Im folgenden Tutorial erfahren Sie, wie Sie Ihre [!DNL Snowflake] Streaming-Quelle an Experience Platform mithilfe der API:
 
 * [Streamen von Daten aus einem [!DNL Snowflake] Datenbank zum Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Streamen von Daten aus einem [!DNL Snowflake] Datenbank zum Experience Platform mithilfe des Arbeitsbereichs &quot;Quellen&quot;in der Experience Platform-Benutzeroberfläche](../../tutorials/ui/create/databases/snowflake-streaming.md)

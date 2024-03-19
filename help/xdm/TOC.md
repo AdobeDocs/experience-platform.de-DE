@@ -5,9 +5,9 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: a3b23c67847765692144459939afec23fd15c2a5
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 89%
 
 ---
@@ -186,12 +186,13 @@ ht-degree: 89%
       * [Datentypen](./ui/resources/data-types.md)
    * Definieren von Feldern {#fields}
       * [Übersicht](./ui/fields/overview.md)
-      * [Erforderliche Felder](./ui/fields/required.md)
-      * [Objektfelder](./ui/fields/object.md)
       * [Array-Felder](./ui/fields/array.md)
       * [Aufzählungsfelder](./ui/fields/enum.md)
       * [Identitätsfelder](./ui/fields/identity.md)
+      * [Zuordnung](./ui/fields/map.md)
+      * [Objektfelder](./ui/fields/object.md)
       * [Beziehungsfelder](./ui/fields/relationship.md)
+      * [Erforderliche Felder](./ui/fields/required.md)
    * [Feldbasierte Workflows](./ui/field-based-workflows.md)
    * [Generieren von Beispiel-XDM-Daten](./ui/sample.md)
    * [Exportieren von XDM-Schemata](./ui/export.md)

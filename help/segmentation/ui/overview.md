@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
-ht-degree: 87%
+source-wordcount: '4018'
+ht-degree: 86%
 
 ---
 
@@ -212,6 +212,18 @@ Die Liste der verfügbaren Filter wird angezeigt.
 | [!UICONTROL Änderungsdatum] | Damit können Sie nach dem letzten Änderungsdatum der Zielgruppe filtern. Sie können einen Datumsbereich auswählen, um danach zu filtern, wann die Zielgruppe zuletzt geändert wurde. |
 
 ![Die verfügbaren Filter werden auf der Seite „Zielgruppen durchsuchen“ angezeigt und hervorgehoben.](../images/ui/overview/filter-audiences.png)
+
+**Massenaktionen** {#bulk-actions}
+
+Darüber hinaus können Sie bis zu 25 verschiedene Zielgruppen auswählen und verschiedene Aktionen für diese Zielgruppen durchführen. Zu diesen Aktionen gehören [Verschieben in einen Ordner](#folders), [Bearbeiten oder Anwenden eines Tags](#tags), [Anwenden von Zugriffsbeschriftungen](../../access-control/abac/ui/labels.md), und [Löschen](#browse).
+
+![Die verfügbaren Optionen für Massenaktionen werden hervorgehoben.](../images/ui/overview/bulk-actions.png)
+
+Wenn Sie Massenaktionen auf diese Zielgruppen anwenden, gelten die folgenden Bedingungen:
+
+- You **can** Zielgruppen aus verschiedenen Seiten auswählen.
+- You **cannot** eine Zielgruppe löschen, die in einer Zielaktivierung verwendet wird.
+- Wenn Sie einen Filter auswählen, werden die ausgewählten Zielgruppen **will** zurücksetzen.
 
 ### Zielgruppendetails {#audience-details}
 
