@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise März 2024
 description: Versionshinweise März 2024 für Adobe Experience Platform.
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 34%
+source-wordcount: '1211'
+ht-degree: 33%
 
 ---
 
@@ -81,6 +81,7 @@ Weitere Informationen zur Datenvorbereitung finden Sie im Abschnitt [Datenvorber
 | [(Beta) Acxiom Data Enhancement-Verbindung](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Neu | Verwenden Sie diesen Connector, um Erstanbieterprofile von Real-Time CDP nach Acxiom zu aktivieren, um Daten anzureichern und über Marketingkanäle hinweg zu verwenden. Sie können dann die Acxiom-Quelle verwenden, um die Profile mit erweiterten Daten zu importieren und in Real-Time CDP mit ihnen zu arbeiten. |
 | [(Beta) Acxiom Prospect-Unterdrückungsverbindung](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Neu | Exportieren Sie Ihre Erstanbieterzielgruppen in das Acxiom-Ziel, damit Acxiom bekannte oder konvertierte Kunden unterdrücken kann. Verwenden Sie dann die [Acxiom Prospitation-Datenimport](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) Quell-Connector zum Erfassen und Aktivieren von Interessenslisten von Acxiom, wobei Ihre bekannten oder konvertierten Kunden entfernt werden. |
 | [Verbindung zu Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Update | Beim Export von Daten an das Amazon Ads-Ziel können Sie die Daten jetzt an die Amazon-DSP oder das Amazon-Marketing Cloud weiterleiten (neu). |
+| [LiveRamp-Onboarding-Verbindung](../../destinations/catalog/advertising/liveramp-onboarding.md) | Update | Das LiveRamp Onboarding-Ziel unterstützt jetzt Sendungen nach Europa und Australien [!DNL LiveRamp] [!DNL SFTP] Instanzen. Die maximal exportierte Dateigröße wurde ebenfalls auf 10 Millionen Zeilen erhöht (von 5 Millionen zuvor). |
 
 {style="table-layout:auto"}
 

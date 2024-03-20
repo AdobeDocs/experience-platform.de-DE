@@ -3,10 +3,10 @@ title: LiveRamp – Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
 workflow-type: tm+mt
-source-wordcount: '1759'
-ht-degree: 96%
+source-wordcount: '1941'
+ht-degree: 89%
 
 ---
 
@@ -70,6 +70,9 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 ![Beispiel-Screenshot, der zeigt, wie eine Authentifizierung beim Ziel mithilfe von SFTP mit Passwort erfolgt](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL Port]**: Der für Ihre [!DNL LiveRamp - Onboarding] Speicherort.  Verwenden Sie den Port, der Ihrem geografischen Standort entspricht, wie unten beschrieben:
+   * **[!UICONTROL NA]**: Port verwenden `22`
+   * **[!UICONTROL AU]**: Port verwenden `2222`
 * **[!UICONTROL Benutzername]**: Der Benutzername für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
 * **[!UICONTROL Passwort]**: Das Passwort für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
 * **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
@@ -80,6 +83,8 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 ![Beispiel-Screenshot, der zeigt, wie eine Authentifizierung beim Ziel mithilfe eines SSH-Schlüssels erfolgt](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL Port]**: Der für Ihre [!DNL LiveRamp - Onboarding] Speicherort.  Verwenden Sie den Port, der Ihrem geografischen Standort entspricht, wie unten beschrieben:
+   * **[!UICONTROL EU]**: Port verwenden `4222`
 * **[!UICONTROL Benutzername]**: Der Benutzername für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
 * **[!UICONTROL SSH-Schlüssel]**: Der private [!DNL SSH]-Schlüssel für die Anmeldung bei Ihrem [!DNL LiveRamp - Onboarding]-Speicherort. Der private Schlüssel muss als eine [!DNL Base64]-verschlüsselte Zeichenfolge formatiert sein und darf nicht passwortgeschützt sein.
 
@@ -99,10 +104,11 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Screenshot der Platform-Benutzeroberfläche mit Informationen zum Ausfüllen von Details für Ihr Ziel](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![Screenshot der Platform-Benutzeroberfläche mit Informationen zum Ausfüllen von Details für Ihr Ziel](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
+* **[!UICONTROL Region]**: Geografische Region für Ihre Instanz des LiveRamp-SFTP-Speichers.
 * **[!UICONTROL Ordnerpfad]**: Der Pfad zum [!DNL LiveRamp] `uploads`-Unterordner, in dem die exportierten Dateien gespeichert werden. Das Präfix `uploads` wird automatisch zum Ordnerpfad hinzugefügt. [!DNL LiveRamp] empfiehlt die Erstellung eines dedizierten Unterordners für Sendungen aus Adobe Real-Time CDP, um die Dateien von anderen vorhandenen Feeds getrennt zu halten und eine reibungslose Ausführung aller Automatisierungen zu gewährleisten.
    * Wenn Sie beispielsweise Ihre Dateien nach `uploads/my_export_folder` exportieren möchten, geben Sie `my_export_folder` in das Feld **[!UICONTROL Ordnerpfad]** ein.
 * **[!UICONTROL Komprimierungsformat]**: Wählen Sie den Komprimierungstyp aus, den Experience Platform für die exportierten Dateien verwenden soll. Verfügbare Optionen sind **[!UICONTROL GZIP]** oder **[!UICONTROL Keines]**.
@@ -179,6 +185,8 @@ Wählen Sie nach dem Hinzufügen aller gewünschten Zuordnungen die Option **[!U
 
 Ihre Daten werden an den von Ihnen konfigurierten [!DNL LiveRamp - Onboarding]-Speicherort als CSV-Dateien exportiert.
 
+Exportierte Dateien haben eine maximale Größe von 10 Millionen Zeilen. Experience Platform erzeugt mehrere Dateien pro Versand, wenn die ausgewählten Zielgruppen 10 Millionen Zeilen überschreiten. Wenn Sie erwarten, dass die Grenze für einzelne Dateien überschritten wird, wenden Sie sich an Ihren [!DNL LiveRamp] und bitten Sie sie, die Batch-Erfassung für Sie zu konfigurieren.
+
 Beim Exportieren von Dateien an das [!DNL LiveRamp - Onboarding]-Ziel generiert Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md).
 
 Betrachten wir beispielsweise folgende Zielgruppen:
@@ -238,3 +246,18 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 ## Zusätzliche Ressourcen {#additional-resources}
 
 Weitere Einzelheiten zur Konfiguration Ihres [!DNL LiveRamp - Onboarding]-Speichers finden Sie in der [offiziellen Dokumentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+
+## Änderungsprotokoll {#changelog}
+
+In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentationsänderungen für diesen Ziel-Connector erfasst.
+
++++ Änderungsprotokoll anzeigen
+
+| Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
+|---|---|---|
+| März 2024 | Funktions- und Dokumentationsaktualisierung | <ul><li>Zusätzliche Unterstützung für Sendungen nach Europa und Australien [!DNL LiveRamp] [!DNL SFTP] Instanzen.</li><li>Die Dokumentation wurde aktualisiert, um bestimmte Konfigurationen für neu unterstützte Regionen zu beschreiben.</li><li>Die maximale Dateigröße wurde von 5 Mio. Zeilen (zuvor) auf 10 Mio. erhöht.</li><li>Die Dokumentation wurde aktualisiert, um die größeren Dateien widerzuspiegeln.</li></ul> |
+| Juli 2023 | Erstmalige Veröffentlichung | Ursprüngliche Zielversion und Dokumentation veröffentlicht. |
+
+{style="table-layout:auto"}
+
++++
