@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise März 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1061'
-ht-degree: 33%
+source-wordcount: '1175'
+ht-degree: 34%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 33%
 Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 - [Katalog-Service](#catalog-service)
+- [Datenerfassung](#data-collection)
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
@@ -55,6 +56,20 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 {style="table-layout:auto"}
 
 Weitere Informationen zur Datenvorbereitung finden Sie im Abschnitt [Datenvorbereitung - Übersicht](../../data-prep/home.md).
+
+## Datenerfassung {#data-collection}
+
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
+
+**Neue Funktionen**
+
+| Typ | Funktion | Beschreibung |
+| --- | --- | --- |
+| Erweiterungen | [!DNL Merkury] Tag-Erweiterung | Die [[!DNL Merkury] Tag-Erweiterung](https://exchange.adobe.com/apps/ec/600027/merkury-tag) bietet branchenführende Übereinstimmungsraten für anonyme Website-Besucher zu einer [!DNL Merkury] Kennung. Marken können die Leistungsfähigkeit der [!DNL Merkury] Tags und Adobe verwenden, um in Echtzeit personalisierte Website-Erlebnisse bereitzustellen. Darüber hinaus wird die [!DNL Merkury] -Tag ermöglicht das Wachstum digitaler Erstanbieterdaten zusammen mit verbundenen Online- und Offline-Kundenprofilen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
 
 ## Ziele {#destinations}
 

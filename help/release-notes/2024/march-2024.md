@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise März 2024
 description: Versionshinweise März 2024 für Adobe Experience Platform.
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 33%
+source-wordcount: '1177'
+ht-degree: 34%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 33%
 Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 - [Katalog-Service](#catalog-service)
+- [Datenerfassung](#data-collection)
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
@@ -40,6 +41,20 @@ Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Da
 {style="table-layout:auto"}
 
 Weitere Informationen zum Katalog-Service finden Sie in der [Übersicht über den Katalog-Service](../../catalog/home.md).
+
+## Datenerfassung {#data-collection}
+
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
+
+**Neue Funktionen**
+
+| Typ | Funktion | Beschreibung |
+| --- | --- | --- |
+| Erweiterungen | [!DNL Merkury] Tag-Erweiterung | Die [[!DNL Merkury] Tag-Erweiterung](https://exchange.adobe.com/apps/ec/600027/merkury-tag) bietet branchenführende Übereinstimmungsraten für anonyme Website-Besucher zu einer [!DNL Merkury] Kennung. Marken können die Leistungsfähigkeit der [!DNL Merkury] Tags und Adobe verwenden, um in Echtzeit personalisierte Website-Erlebnisse bereitzustellen. Darüber hinaus wird die [!DNL Merkury] -Tag ermöglicht das Wachstum digitaler Erstanbieterdaten zusammen mit verbundenen Online- und Offline-Kundenprofilen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
 
 ## Datenvorbereitung {#data-prep}
 
