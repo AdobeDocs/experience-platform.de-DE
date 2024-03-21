@@ -2,10 +2,10 @@
 title: Tag-Erweiterungs-Referenz
 description: Suchen Sie die Dokumentation für Tag-Erweiterungen in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 32%
+source-wordcount: '472'
+ht-degree: 28%
 
 ---
 
@@ -27,7 +27,7 @@ Im Folgenden finden Sie eine Liste der Dokumentation für clientseitige Tag-Erwe
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [Adobe Analytics und Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
+* [Adobe Analytics und Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics und Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics und Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics Product String](./product-string/overview.md)
@@ -68,7 +68,7 @@ Im Folgenden finden Sie eine Liste der Dokumentation für clientseitige Tag-Erwe
 * [Allgemeine Web SDK-Plug-ins](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Cookie-Einverständnisverwaltung durch Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)
+* [Cookie-Einverständnisverwaltung durch Benutzercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
 * [Core](./core/overview.md)
 * [Benutzerdefinierter Debug-Logger](https://exchange.adobe.com/apps/ec/104698)*
 * [Kundenerkennung](https://exchange.adobe.com/apps/ec/100688)*
@@ -84,12 +84,13 @@ Im Folgenden finden Sie eine Liste der Dokumentation für clientseitige Tag-Erwe
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Prädiktive Interaktion in Genesys](https://exchange.adobe.com/apps/ec/106148)*
 * [Google-Datenschicht](./google-data-layer/overview.md)
-* [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
+* [Globales Google-Site-Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
 * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)*
-* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
+* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [Zuordnungstabelle](https://exchange.adobe.com/apps/ec/103136)*
+* [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)*
 * [Bildschirm](https://exchange.adobe.com/apps/ec/106544)*
