@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 55%
@@ -171,7 +171,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| Februar 2024 | Funktions- und Dokumentationsaktualisierung | Die Option zum Exportieren von Zielgruppen, die in verwendet werden sollen, wurde hinzugefügt. [!DNL Amazon Marketing Cloud] (AMC). |
+| März 2024 | Funktions- und Dokumentationsaktualisierung | Die Option zum Exportieren von Zielgruppen, die in verwendet werden sollen, wurde hinzugefügt. [!DNL Amazon Marketing Cloud] (AMC). |
 | Mai 2023 | Funktions- und Dokumentationsaktualisierung | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im [Zielverbindungs-Workflow](#destination-details) hinzugefügt.</li><li>Dokumentation aktualisiert, um das Hinzufügen der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zum Auswählen der richtigen Advertiser-Region finden Sie in der [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | März 2023 | Erstmalige Veröffentlichung | Ursprüngliche Zielversion und Dokumentation veröffentlicht. |
 
