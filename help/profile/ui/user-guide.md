@@ -3,9 +3,9 @@ keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; A
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2103'
 ht-degree: 7%
 
 ---
@@ -102,7 +102,7 @@ Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platfor
 
 Im **[!UICONTROL Durchsuchen]** -Registerkarte verwenden, können Sie einen Identitäts-Namespace verwenden, um ein bestimmtes Profil nach einem Identitätswert zu suchen. Für das Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identitäts-Namespace und einen Identitätswert angeben.
 
-![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
+![Die Auswahl der Zusammenführungsrichtlinien ist hervorgehoben.](../images/user-guide/browse-by-merge-policy.png)
 
 Verwenden Sie bei Bedarf die **[!UICONTROL Zusammenführungsrichtlinie]** Auswahl zum Öffnen **[!UICONTROL Zusammenführungsrichtlinie auswählen]** und wählen Sie die Zusammenführungsrichtlinie aus, die Sie verwenden möchten.
 
@@ -144,6 +144,12 @@ Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie **[!UIC
 
 ![Die Registerkarte &quot;Attribute&quot;ist hervorgehoben. Die Profilattribute werden angezeigt.](../images/user-guide/attributes.png)
 
+Um die Attribute anzuzeigen, die auf der Edge-Seite verfügbar sind, wählen Sie **[!UICONTROL Edge]** im Datenspeicherort-Selektor.
+
+![Die Auswahl des Datenspeicherorts auf der Registerkarte &quot;Attribute&quot;wird hervorgehoben.](../images/user-guide/attributes-select.png)
+
+Weitere Informationen zu Edge-Profilen finden Sie im Abschnitt [Dokumentation zu Edge-Profilen](../edge-profiles.md).
+
 ### Registerkarte „Ereignisse“
 
 Die **[!UICONTROL Veranstaltungen]** tab enthält Daten aus den 100 neuesten ExperienceEvents, die mit dem Kunden verknüpft sind. Diese Daten können E-Mail-Öffnungen, Warenkorbaktivitäten und Seitenansichten umfassen. Auswählen **[!UICONTROL Alle anzeigen]** für jedes einzelne Ereignis stellt zusätzliche Felder und Werte bereit, die als Teil des Ereignisses erfasst werden.
@@ -158,7 +164,11 @@ Die **[!UICONTROL Zielgruppenmitgliedschaft]** zeigt eine Liste mit dem Namen un
 
 Weitere Informationen zur Segmentierung in Experience Platform finden Sie im Abschnitt [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![Die Registerkarte Zielgruppenmitgliedschaft wird hervorgehoben. Die Details zur Zielgruppenmitgliedschaft des Profils werden angezeigt.](../images/user-guide/segment-membership.png)
+![Die Registerkarte Zielgruppenmitgliedschaft wird hervorgehoben. Die Details zur Zielgruppenmitgliedschaft des Profils werden angezeigt.](../images/user-guide/audience-membership.png)
+
+Um die Zielgruppenmitgliedschaft der Profile anzuzeigen, die auf Edge verfügbar sind, wählen Sie **[!UICONTROL Edge]** im Datenspeicherort-Selektor. Weitere Informationen zur Kantensegmentierung finden Sie im Abschnitt [Kantensegmentierungshandbuch](../../segmentation/ui/edge-segmentation.md).
+
+![Die Auswahl des Datenspeicherorts auf der Registerkarte &quot;Zielgruppenzugehörigkeit&quot;wird hervorgehoben.](../images/user-guide/audience-membership-select.png)
 
 ## Zusammenführungsrichtlinien
 
