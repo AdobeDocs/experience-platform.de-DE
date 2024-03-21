@@ -3,10 +3,10 @@ title: Überwachen von Aktivitäten bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Nutzung, Fehler und Berechnungszeit in Ihren Ereignisweiterleitungseigenschaften überwachen.
 feature: Event Forwarding
 exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
-source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
+source-git-commit: f8988d08e7009cc613a00f34e8151e8560c479d4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 5%
+source-wordcount: '561'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 >
 >Diese Feature befindet sich derzeit in der Beta-Phase, und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
 
-Die **[!UICONTROL Überwachung]** in der Datenerfassungs-Benutzeroberfläche können Sie Nutzungsmuster, Fehler und die Berechnungszeit Ihrer Ereignisweiterleitungseigenschaften überwachen. Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Sie die auf der Registerkarte angezeigten Berichte anzeigen und verstehen können.
+Die **[!UICONTROL Überwachung]** in der Datenerfassungs-Benutzeroberfläche können Sie Nutzungsmuster, Fehler und die Berechnungszeit Ihrer Ereignisweiterleitungseigenschaften überwachen. Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie Sie die auf der Registerkarte angezeigten Berichte anzeigen und verstehen.
 
 ![Bild mit der Registerkarte &quot;Monitoring&quot;in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/monitoring/monitoring-tab.png)
 
@@ -40,13 +40,17 @@ Um Metriken für eine einzelne Eigenschaft anzuzeigen, wählen Sie das Eigenscha
 
 ## [!UICONTROL Verwendung]
 
+>[!NOTE]
+>
+>Die Nutzungsdaten werden jeden Monat nach Ende des Vormonats aktualisiert.
+
 Die **[!UICONTROL Nutzung]** zeigt eingehende und ausgehende Aufrufe für einen bestimmten Zeitraum an. Eingehende Aufrufe stellen Daten dar, die an die Ereignisweiterleitung gesendet werden. Ausgehende Aufrufe stellen Daten dar, die von der Ereignisweiterleitung gesendet werden. Die **[!UICONTROL Ereignisse insgesamt]** number im linken Bereich ist die Summe der eingehenden und ausgehenden Aufrufe für den angegebenen Zeitraum.
 
 ## [!UICONTROL Fehlerereignisse]
 
 Die **[!UICONTROL Fehlerereignisse]** zeigt Fehler in aggregierter Form und aufgeschlüsselt nach HTTP-Antwort-Code an, wenn Sie den Cursor über das Liniendiagramm bewegen. Die angezeigten Fehler stammen aus ausgehenden Aufrufen und die Antwort-Codes stammen aus dem Endpunkt, mit dem die Ereignisweiterleitung interagiert.
 
-Die Fehler werden für einen bestimmten Zeitraum angezeigt, der über das bereitgestellte Dropdown-Menü angepasst werden kann.
+Die Fehler werden für einen bestimmten Zeitraum angezeigt, der im Dropdown-Menü angepasst werden kann.
 
 ![Bild mit dem Dropdown-Menü für den Zeitraum für den Bericht &quot;Fehlerereignisse&quot;](../../images/ui/event-forwarding/monitoring/error-time.png)
 
