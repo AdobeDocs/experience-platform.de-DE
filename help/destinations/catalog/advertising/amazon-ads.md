@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 55%
@@ -38,7 +38,7 @@ Diese Integration mit Amazon DSP ermöglicht [!DNL Amazon Ads] Advertiser verwen
 
 Diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) erlaubt [!DNL Amazon Ads] Advertiser zum Übergeben von CDP-Segmenten vom Adobe Experience Platform-Formular an AMC. Werbetreibende können dann die CDP-Eingaben mit [!DNL Amazon Ads] Signale senden und benutzerdefinierte Analysen zu Themen wie Medienauswirkungen, Zielgruppensegmente und Journey im datenschutzkonformen Format durchführen. Beispielsweise kann ein Werbetreibende eine Liste seiner bestehenden Kunden hochladen, um die Gesamtleistung der Werbekampagnen oder aggregierte Statistiken über Konversionsereignisse auf der Amazon zu verstehen, z. B. die Anzeige einer Produktdetailseite, das Hinzufügen eines Produkts zu einem Warenkorb oder den Kauf eines Produkts.
 
-### Werbeoptimierung:
+### Advertising-Optimierung
 
 Diese Integration mit [!DNL Amazon Marketing Cloud] (AMC) ermöglicht es Advertisern, eigene Kundenlisten hochzuladen und mithilfe von [!DNL Amazon Marketing Cloud] SQL-Analyse, Unterdrückung, Ergänzungen oder Optimierungen von Zielgruppen in wiederkehrenden Abständen durchführen, bevor Sie in Amazon DSP für das Targeting eine für die Aktivierung geeignete Zielgruppe erstellen.
 
