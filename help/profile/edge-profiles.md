@@ -2,9 +2,9 @@
 title: Edge-Profile
 description: Erfahren Sie mehr über Edge-Profile sowie die zugehörige Terminologie, verfügbare Regionen für Edge-Profile sowie verfügbare Dienste für Edge-Profile.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,16 @@ ht-degree: 0%
 
 In Adobe Experience Platform ist das Echtzeit-Kundenprofil die einzige &quot;Source of Truth&quot; für Entitätsdaten. Diese Profildaten befinden sich in einem zentralen Hub und ermöglichen die Verwendung von Fällen, die auf die Vollständigkeit und Vollständigkeit Ihrer Daten angewiesen sind. In Echtzeit-Anwendungsfällen, bei denen die Zeitempfindlichkeit wichtiger ist, sind jedoch Kantenprofile die bevorzugte Option. Edge-Profile sind einfache Profile, die an Edges sitzen und bei der Echtzeit-Personalisierung helfen.
 
-Adobe-Anwendungen wie Adobe Target, Custom Personalization Destination und Adobe Campaign verwenden beispielsweise Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an einen Edge geleitet, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die spezifischen Informationen definiert, die am Edge bereitgestellt werden.
+Adobe-Anwendungen wie Adobe Target, Custom Personalization Destination und Adobe Campaign verwenden beispielsweise Edges, um personalisierte Kundenerlebnisse in Echtzeit bereitzustellen. Die Daten werden durch eine Projektion an einen Edge weitergeleitet, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden.
 
 ## Terminologie {#terminology}
 
 Achten Sie beim Arbeiten mit Kanten darauf, die folgenden Konzepte zu verstehen:
 
 - **Edge**: Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht.
-- **Projektkonfiguration**: Eine Projektionskonfiguration beschreibt, wie eine bestimmte Entität für einen bestimmten Kunden an den Edges repliziert werden soll und unter welchen Bedingungen. Beispiel: Bei Luma (einem Beispielkunden) sollten sich nur die Felder age und gender aus dem Datensatz, der dem Profilschema folgt, an die Edges ausdehnen.
-- **Edge-Projektion**: Eine Edge-Projektion ist die Anwendung einer Projektionskonfiguration an einem bestimmten Edge auf ein Datenelement mit einer eindeutigen ID, die einem bestimmten Schema für einen bestimmten Kunden entspricht. Beispiel: eine Entität, die das Profilschema mit ID berücksichtigt `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, Besucher der Luma-Website, repliziert in das VA6-Rechenzentrum, mit den Feldern `age = 35` und `gender = male`.
+- **Edge-Projektion**: Eine Edge-Projektion ist die Projektionsansicht des Profils an einem bestimmten Edge, um Profildaten mit einer eindeutigen ID darzustellen, die einem bestimmten Schema für einen bestimmten Kunden entspricht. Beispiel: eine Entität, die das Profilschema mit ID berücksichtigt `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, Besucher der Luma-Website, repliziert in das VA6-Rechenzentrum, mit den Feldern `age = 35` und `gender = male`.
 
-Anders ausgedrückt: Daten werden durch eine Projektion an eine Kante weitergeleitet, wobei die **Projektionsziel** Definieren **,** Edge, an den die Daten gesendet werden, und die **Projektionskonfiguration** Definieren **what** -Daten werden an den angegebenen Edge gesendet.
+Anders ausgedrückt: Daten werden durch eine Projektion an eine Kante weitergeleitet, wobei die **Projektionsziel** Definieren **,** -Edge, an den die Daten gesendet werden.
 
 ## Verfügbare Regionen {#regions}
 
@@ -43,13 +42,8 @@ Alle diese Regionen sind gültige Optionen, in denen Profile landen können.
 
 Die folgenden Dienste sind für die Profilsuche an der Edge aktiviert:
 
-- [Edge Profile Configuration Service](#edge-profile-configuration-service)
 - [Projektor Worker-Dienst](#mepw)
 - [Express Profile Service](#xps)
-
-### Edge Profile Configuration Service {#edge-profile-configuration-service}
-
-Der Edge Profile Configuration Service stellt APIs für nachgelagerte Lösungen und Anwendungen zur Erstellung von Projektionskonfigurationen bereit. Sie können diese APIs verwenden, um die Attribute und Zielgruppen eines Profils anzugeben, das an die Edges gesendet werden soll, sowie die Edge-Regionen, an die die Projektion gesendet werden soll. Zu diesem Zeitpunkt können Sie **any** der Randbereiche für Projektionen.
 
 ### Projektor Worker-Dienst {#mepw}
 
@@ -70,8 +64,6 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zu Edge-Profilen:
 ### In welchen Regionen können Kantenprofile landen?
 
 Edge-Profile können je nach Situation in verschiedenen Regionen landen.
-
-Bei Projektionskonfigurationen werden alle Änderungen am Profil auf alle Regionen übertragen, die in der Profilkonfiguration erwähnt werden.
 
 Darüber hinaus verfügt jedes Kantenprofil über ein Schemaattribut namens User Activity Region (UAR). Alle Edges, die dieses Profil in den letzten 14 Tagen besucht hat, sind in diesem Profilattribut aufgeführt. Wenn dieses Attribut in einem Profil vorhanden ist, werden daher auch alle Änderungen am Profil an alle in der UAR-Datei aufgelisteten Regionen gesendet.
 

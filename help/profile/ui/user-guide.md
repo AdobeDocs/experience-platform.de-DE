@@ -3,9 +3,9 @@ keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; A
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2108'
 ht-degree: 7%
 
 ---
@@ -190,9 +190,9 @@ Weitere Informationen zu Vereinigungsschemas finden Sie im [UI-Handbuch für Ver
 
 Aus der Hauptrolle **[!UICONTROL Profile]** auswählen, wählen Sie die **[!UICONTROL Berechnete Attribute]** um eine Liste der berechneten Attribute anzuzeigen, die zu Ihrem Unternehmen gehören.
 
-Weitere Informationen zu berechneten Attributen finden Sie im Abschnitt [Übersicht über berechnete Attribute](../computed-attributes/overview.md). Weitere Informationen zur Verwendung berechneter Attribute in der Platform-Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch für berechnete Attribute](../computed-attributes/ui.md).
+![Die Registerkarte Berechnete Attribute ist hervorgehoben.](../images/user-guide/computed-attributes.png)
 
-BILD
+Weitere Informationen zu berechneten Attributen finden Sie im Abschnitt [Übersicht über berechnete Attribute](../computed-attributes/overview.md). Weitere Informationen zur Verwendung berechneter Attribute in der Platform-Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch für berechnete Attribute](../computed-attributes/ui.md).
 
 ## Nächste Schritte
 
