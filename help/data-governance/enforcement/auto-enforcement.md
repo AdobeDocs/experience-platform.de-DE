@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Zielgruppen für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 90%
+source-wordcount: '2109'
+ht-degree: 84%
 
 ---
 
@@ -92,7 +92,7 @@ In den folgenden Abschnitten werden die verschiedenen Meldungen zur Richtliniend
 
 Wenn ein Richtlinienverstoß beim Versuch auftritt, eine Zielgruppe zu aktivieren (oder [ein bereits aktivierte Zielgruppe zu bearbeiten](#policy-enforcement-for-activated-audiences)), wird die Aktion verhindert und in einem Pop-up angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurde. Nachdem ein Verstoß ausgelöst wurde, wird die Schaltfläche **[!UICONTROL Speichern]** für die Entität, die Sie bearbeiten, deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden und den Datennutzungsrichtlinien entsprechen.
 
-Wählen Sie einen Richtlinienverstoß in der linken Spalte des Popups aus, um Details zu diesem Verstoß anzuzeigen.
+Wählen Sie einen Richtliniennamen aus, um Details zu diesem Verstoß anzuzeigen.
 
 ![Ein Dialogfeld, das angibt, dass eine Richtlinienverletzung aufgetreten ist und der Richtlinienname hervorgehoben wurde.](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Unter der Zusammenfassung der Verletzung wird ein Datenherkunftsdiagramm angezei
 
 ![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobenem Datenherstellungsdiagramm.](../images/enforcement/data-lineage.png)
 
-Sie können auch das Symbol **[!UICONTROL Filtern]** (![](../images/enforcement/filter.png)) verwenden, um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
+Sie können auch die **[!UICONTROL Filter]** Symbol (![Ein Filtersymbol.](../images/enforcement/filter.png)), um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
 
 ![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobenem Filter für Datenherkunft und Dropdown-Menü.](../images/enforcement/lineage-filter.png)
 
 Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste anzuzeigen. Um zum visuellen Diagramm zurückzukehren, wählen Sie **[!UICONTROL Pfadansicht]**.
 
 ![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobener Pfadansicht für die Datenherkunft.](../images/enforcement/list-view.png)
+
+#### Erfolgreich angewendete Beschriftungen {#labels-successfully-applied}
+
+Wenn Sie Datennutzungsrichtlinien erstellen, bevor Sie Ihre Schemafelder beschriften, wird möglicherweise ein Dialogfeld zur Verletzung von Governance-Richtlinien angezeigt, sobald Sie Beschriftungen auf Ihr Schema anwenden. In diesem Fall können Sie einen Teil Ihres Schemas erfolgreich beschriften. Die [!UICONTROL Erfolgreich angewendete Beschriftungen] gibt an, welche Beschriftungen erfolgreich angewendet wurden, da für dieses Feld keine Richtlinienbeschränkungen bestehen.
+
+Verwenden Sie das Datenherstellungsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie die Beschriftung zum Schemafeld hinzufügen können.
+
+![Ein Dialogfeld mit einer Richtlinienverletzung mit [!UICONTROL Erfolgreich angewendete Beschriftungen] hervorgehoben.](../images/enforcement/labels-successfully-applied.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 

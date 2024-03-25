@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 100%
+source-wordcount: '1538'
+ht-degree: 93%
 
 ---
 
@@ -29,6 +29,14 @@ Weitere Informationen zum Zuweisen einer Berechtigung finden Sie im Handbuch zum
 ## Verwalten von Kennzeichnungen auf Schemaebene
 
 Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb dieses Schemas hinzufügen. Alle Felder, die auf der Schemaebene angewendet werden, werden auf alle Datensätze übertragen, die auf diesem Schema basieren.
+
+>[!NOTE]
+>
+>Wenn Ihre Datennutzungsrichtlinien vor der Kennzeichnung Ihres Felds erstellt wurden, wird möglicherweise ein Dialogfeld für die Verletzung von Governance-Richtlinien angezeigt, wenn Sie Beschriftungen auf Ihr neues Schema anwenden. Dieses Dialogfeld zeigt an, dass die Anwendung dieser Beschriftung gegen eine vorhandene Nutzungsrichtlinie verstößt. Verwenden Sie das Datenherstellungsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie die Beschriftung zum Schemafeld hinzufügen können.
+>
+>![Der Verstoß gegen die Data Governance-Richtlinie hat einen Dialog mit einer Zusammenfassung der Verstöße und einem hervorgehobenen Datenherkunftsdiagramm erkannt.](../images/labels/policy-violation-dialog.png)
+>
+>Siehe [Dokumentation zu Datennutzungsrichtlinien - Verletzung](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) für weitere Informationen zu partiellen Richtlinienverletzungen.
 
 Zum Verwalten der Datennutzungskennzeichnungen auf Schemaebene müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich **[!UICONTROL Schemata]** zu öffnen. Auf dieser Seite werden alle erstellten Schemata, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Schema angezeigt.
 
