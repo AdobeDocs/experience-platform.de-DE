@@ -3,7 +3,7 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
+source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 63%
@@ -489,3 +489,4 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Wie `createdDate` / `createdFromDate` / `createdToDate`, jedoch wird die Aktualisierungszeit einer Datensatzgültigkeit anstelle der Erstellungszeit herangezogen.<br><br>Eine Gültigkeit wird bei jeder Bearbeitung als aktualisiert erachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+
