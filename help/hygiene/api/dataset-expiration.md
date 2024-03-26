@@ -3,10 +3,10 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 76%
+source-wordcount: '2083'
+ht-degree: 63%
 
 ---
 
@@ -130,8 +130,6 @@ curl -X GET \
 
 Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit zurück.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ Die folgende JSON-Datei enthält die gekürzte Antwort für die Details eines Da
 }
 ```
 
-## Datensatzgültigkeit erstellen bzw. aktualisieren {#create-or-update}
+## Erstellen einer Datensatzgültigkeit {#create}
 
-Erstellen oder aktualisieren Sie über eine PUT-Anfrage ein Ablaufdatum für einen Datensatz. Die PUT-Anfrage verwendet entweder die `datasetId` oder `ttlId`.
+Um sicherzustellen, dass Daten nach einem bestimmten Zeitraum aus dem System entfernt werden, planen Sie einen Ablauf für einen bestimmten Datensatz, indem Sie die Datensatz-ID sowie das Ablaufdatum und die Ablaufzeit im ISO 8601-Format angeben.
+
+Um einen Datensatzablauf zu erstellen, führen Sie eine POST-Anfrage wie unten gezeigt aus und geben Sie die unten genannten Werte in der Payload an.
 
 **API-Format**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| Parameter | Beschreibung |
-| --- | --- |
-| `{DATASET_ID}` | Die ID des Datensatzes, für den Sie die Gültigkeit planen möchten. |
-| `{TTL_ID}` | Die ID der Datensatzgültigkeit. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird als Zeitpunkt für die Löschung des Datensatzes `5b020a27e7040801dedbf46e` Ende 2022 festgelegt (Greenwich Mean Time). Wenn für den Datensatz keine vorhandene Gültigkeit gefunden wird, wird eine neue erstellt. Wenn der Datensatz bereits eine ausstehende Gültigkeit aufweist, wird diese mit dem neuen `expiry`-Wert aktualisiert.
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `datasetId` | **Erforderlich** Die ID des Zieldatensatzes, für den Sie einen Ablauf planen möchten. |
+| `expiry` | **Erforderlich** Datum und Uhrzeit im ISO 8601-Format. Wenn die Zeichenfolge keinen expliziten Zeitzonenversatz hat, wird als Zeitzone UTC angenommen. Die Lebensdauer der Daten im System wird entsprechend dem angegebenen Ablaufwert festgelegt.<br>Hinweis:<ul><li>Die Anfrage schlägt fehl, wenn für den Datensatz bereits eine Gültigkeit für den Datensatz existiert.</li><li>Dieses Datum und diese Uhrzeit müssen mindestens **24 Stunden in der Zukunft**.</li></ul> |
+| `displayName` | Ein optionaler Anzeigename für die Datensatzablaufanforderung. |
+| `description` | Eine optionale Beschreibung für die Anfrage zur Gültigkeit. |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt den HTTP-201-Status (Erstellt) und den neuen Status des Datensatzablaufs zurück, wenn kein bereits vorhandener Datensatzablauf vorhanden war.
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `ttlId` | Die ID der Datensatzgültigkeit. |
+| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
+| `datasetName` | Anzeigename für den Datensatz, für den diese Gültigkeit zutrifft. |
+| `sandboxName` | Name der Sandbox, unter dem der Zieldatensatz zu finden ist. |
+| `imsOrg` | Die Kennung Ihrer Organisation. |
+| `status` | Der aktuelle Status der Datensatzgültigkeit. |
+| `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
+| `updatedAt` | Ein Zeitstempel, der angibt, wann die Gültigkeit zuletzt aktualisiert wurde. |
+| `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
+| `displayName` | Ein Anzeigename für die Anfrage zur Gültigkeit. |
+| `description` | Eine Beschreibung für die Ablaufanfrage. |
+
+Der HTTP-Status 400 (Ungültige Anfrage) tritt auf, wenn für den Datensatz bereits eine Gültigkeit für den Datensatz existiert. Bei einer fehlerhaften Antwort wird der HTTP-Status 404 (Nicht gefunden) zurückgegeben, wenn kein solcher Datensatzablauf existiert (oder Sie keinen Zugriff darauf haben).
+
+## Aktualisieren der Datensatzgültigkeit {#update}
+
+Um ein Ablaufdatum für einen Datensatz zu aktualisieren, verwenden Sie eine PUT-Anfrage und die `ttlId`. Sie können die `displayName`, `description`, und/oder `expiry` Informationen.
+
+>[!NOTE]
+>
+>Wenn Sie das Ablaufdatum und die Ablaufzeit ändern, muss dies in Zukunft mindestens 24 Stunden betragen. Diese erzwungene Verzögerung bietet Ihnen die Möglichkeit, den Ablauf zu stornieren oder neu zu planen und einen versehentlichen Datenverlust zu vermeiden.
+
+**API-Format**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{TTL_ID}` | Die ID des Datensatzablaufs, den Sie ändern möchten. |
+
+**Anfrage**
+
+Die folgende Anfrage plant einen Datensatzablauf neu. `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` Ende 2024 (Greenwich Mean Time). Wenn der vorhandene Datensatzablauf gefunden wird, wird dieser Ablauf mit dem neuen aktualisiert `expiry` -Wert.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `expiry` | Datum und Uhrzeit im ISO 8601-Format. Wenn die Zeichenfolge keinen expliziten Zeitzonenversatz hat, wird als Zeitzone UTC angenommen. Die Lebensdauer der Daten im System wird entsprechend dem angegebenen Ablaufwert festgelegt. Jeder vorherige Ablaufzeitstempel für denselben Datensatz wird durch den von Ihnen angegebenen neuen Ablaufwert ersetzt. |
+| `expiry` | **Erforderlich** Datum und Uhrzeit im ISO 8601-Format. Wenn die Zeichenfolge keinen expliziten Zeitzonenversatz hat, wird als Zeitzone UTC angenommen. Die Lebensdauer der Daten im System wird entsprechend dem angegebenen Ablaufwert festgelegt. Jeder vorherige Ablaufzeitstempel für denselben Datensatz wird durch den von Ihnen angegebenen neuen Ablaufwert ersetzt. Dieses Datum und diese Uhrzeit müssen mindestens **24 Stunden in der Zukunft**. |
 | `displayName` | Ein Anzeigename für die Anfrage zur Gültigkeit. |
 | `description` | Eine optionale Beschreibung für die Anfrage zur Gültigkeit. |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit mit dem HTTP-Status 200 (OK) zurück, wenn eine bereits vorhandene Gültigkeit aktualisiert wurde, oder 201 (Erstellt), wenn keine Gültigkeit vorhanden war.
+Eine erfolgreiche Antwort gibt den neuen Status des Datensatzablaufs und einen HTTP-Status 200 (OK) zurück, wenn ein bereits vorhandener Ablauf aktualisiert wurde.
 
 ```json
 {
@@ -258,6 +332,8 @@ Eine erfolgreiche Antwort gibt die Details der Datensatzgültigkeit mit dem HTTP
 | `updatedBy` | Die Person, der die Gültigkeit zuletzt aktualisiert hat. |
 
 {style="table-layout:auto"}
+
+Bei einer fehlerhaften Antwort wird der HTTP-Status 404 (Nicht gefunden) zurückgegeben, wenn kein solcher Datensatzablauf existiert.
 
 ## Abbrechen der Datensatzgültigkeit {#delete}
 
