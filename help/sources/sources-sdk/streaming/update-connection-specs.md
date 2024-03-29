@@ -2,14 +2,19 @@
 title: Verbindungsspezifikation für Streaming SDK mithilfe der Flow Service-API aktualisieren
 description: Im folgenden Dokument finden Sie Anweisungen zur Verwendung einer Verbindungsspezifikation mithilfe der Flow Service-API für Self-Serve-Quellen (Streaming-SDK).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '163'
 ht-degree: 4%
 
 ---
 
 # Aktualisieren einer Verbindungsspezifikation mithilfe der Flow Service-API
+
+>[!NOTE]
+>
+>Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Sie können die Eigenschaften einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich sind.
 

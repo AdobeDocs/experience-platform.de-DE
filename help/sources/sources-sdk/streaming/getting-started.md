@@ -2,14 +2,19 @@
 title: Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)
 description: Dieses Dokument bietet eine Einführung in die erforderlichen Informationen, die Sie kennen müssen, bevor Sie versuchen, eine neue Quelle mit Self-Serve-Quellen (Streaming-SDK) zu erstellen.
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 35%
+source-wordcount: '543'
+ht-degree: 34%
 
 ---
 
 # Erste Schritte mit Self-Serve-Quellen (Streaming-SDK)
+
+>[!NOTE]
+>
+>Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
 
 Self-Serve-Quellen (Streaming-SDK) ermöglichen Ihnen die Integration Ihrer eigenen Quelle, um Streaming-Daten an Adobe Experience Platform zu übertragen. Dieses Dokument bietet eine Einführung in die grundlegenden Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
