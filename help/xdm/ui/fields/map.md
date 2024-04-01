@@ -1,9 +1,10 @@
 ---
 title: Definieren von Zuordnungsfeldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein Zuordnungsfeld definieren.
-source-git-commit: 8eea73c91d0671b1ddaeb8da0dc18b3e5e306f57
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
+source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -25,6 +26,19 @@ A [!UICONTROL Map value type] -Eigenschaft angezeigt. Dieser Wert ist erforderli
 Nachdem Sie das Unterfeld konfiguriert haben, müssen Sie es einer Feldergruppe zuweisen. Verwenden Sie die **[!UICONTROL Feldergruppe]** Dropdown-Menü oder Suchfeld aus und wählen Sie **[!UICONTROL Anwenden]**. Sie können dem Objekt weiterhin Felder mit demselben Prozess hinzufügen oder **[!UICONTROL Speichern]** um Ihre Einstellungen zu bestätigen.
 
 ![Eine Aufzeichnung der Feldgruppenauswahl und der angewendeten Einstellungen.](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## Nutzungsbeschränkungen {#restrictions}
+
+XDM legt die folgenden Einschränkungen für die Verwendung dieses Datentyps fest:
+
+* Zuordnungstypen MÜSSEN vom Typ sein `object`.
+* Für Zuordnungstypen dürfen KEINE Eigenschaften definiert sein (d. h. sie definieren &quot;leere&quot;Objekte).
+* Zuordnungstypen MÜSSEN Folgendes enthalten: `additionalProperties.type` -Feld, das die Werte beschreibt, die in der Zuordnung platziert werden können, entweder `string` oder `integer`.
+
+Stellen Sie sicher, dass Sie nur Felder vom Typ Zuordnung verwenden, wenn dies unbedingt erforderlich ist, da sie die folgenden Leistungsbeeinträchtigungen aufweisen:
+
+* Reaktionszeit von [Adobe Experience Platform Query Service](../../../query-service/home.md) wird bei 100 Millionen Datensätzen von drei auf zehn Sekunden reduziert.
+* Karten mit weniger als 16 Schlüsseln müssen vorhanden sein. Andernfalls besteht die Gefahr einer weiteren Verschlechterung.
 
 >[!NOTE]
 >
