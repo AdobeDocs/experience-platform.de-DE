@@ -3,16 +3,16 @@ title: Verwenden von Adobe Journey Optimizer mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Journey Optimizer rendern
 keywords: ajo; ajo web; adobe Journey optimizer; renderDecisions; Oberflächen; Entscheidungen; Vorschläge; Umfang; Schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '390'
 ht-degree: 1%
 
 ---
 
 # Verwenden [!DNL Adobe Journey Optimizer] mit dem [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kann personalisierte Erlebnisse bereitstellen und rendern, die in verwaltet werden [!DNL Adobe Journey Optimizer] zum Webkanal hinzu. Sie können einen WYSIWYG-Editor verwenden, [!DNL Adobe Journey Optimizer] [Web-Campaign-Benutzeroberfläche](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), um Ihre [!DNL Journey Optimizer Web] Kampagnen und Personalisierungserlebnisse.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kann personalisierte Erlebnisse bereitstellen und rendern, die in verwaltet werden [!DNL Adobe Journey Optimizer] zum Webkanal hinzu. Sie können einen WYSIWYG-Editor verwenden, [!DNL Adobe Journey Optimizer] [Webkanal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)oder einer nicht visuellen Benutzeroberfläche, der [Code-basierter Erlebniskanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) , um Ihre [!DNL Journey Optimizer Web] Kampagnen und Personalisierungserlebnisse.
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## Terminologie {#terminology}
 
-**[!UICONTROL Oberfläche]**: Eine Weboberfläche ist eine Webeigenschaft, die durch eine URL identifiziert wird, wobei die Variable [!DNL Adobe Journey Optimizer] Erlebnisinhalte werden bereitgestellt.
+**[!UICONTROL Oberfläche]**: Eine Weboberfläche ist eine Webseite oder ein Ort auf einer Seite, die durch einen URI identifiziert wird, wobei die Variable [!DNL Adobe Journey Optimizer] Erlebnisinhalte werden bereitgestellt.
 
 **[!UICONTROL Vorschläge]**: In [!DNL Adobe Journey Optimizer], korrelieren Vorschläge mit dem aus einem [!DNL Journey Optimizer Campaign].
 
