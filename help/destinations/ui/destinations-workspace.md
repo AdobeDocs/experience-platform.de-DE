@@ -3,10 +3,10 @@ keywords: Plattform;Ziele;Arbeitsbereich Ziele;Arbeitsbereich;Benutzeroberfläch
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 84%
+source-wordcount: '1231'
+ht-degree: 81%
 
 ---
 
@@ -100,7 +100,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 | Element | Beschreibung |
 |---------|----------|
-| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerungen: [!UICONTROL Aktivieren] und [!UICONTROL Ziel löschen]. |
+| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerelemente: [!UICONTROL Aktivieren] und [!UICONTROL Ziel löschen]. |
 | [!UICONTROL Letzter Ausführungsstatus für Datenfluss] | Der Status der letzten Datenflussausführung. Weitere Informationen zur Ausführung von Datenflüssen finden Sie unter [Anzeigen von Zieldetails](destination-details-page.md). |
 | [!UICONTROL Letztes Ausführungsdatum für Datenfluss] | Zeit und Datum, an dem der letzte Datenfluss ausgeführt wurde. Weitere Informationen zur Ausführung von Datenflüssen finden Sie unter [Anzeigen von Zieldetails](destination-details-page.md). |
 | [!UICONTROL Ziel] | Die Zielplattform, die Sie für Ihren Aktivierungsfluss ausgewählt haben. |
@@ -110,7 +110,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 | [!UICONTROL Erstellt] | Datum und Uhrzeit (UTC) der Erstellung des Aktivierungsflusses zum Ziel. Klicken Sie auf das Symbol mit dem Pfeil nach oben/unten, um nach den neuesten oder ältesten Aktivierungsflüssen zu sortieren. |
 | [!UICONTROL Status] | `Enabled` oder `Disabled`. Gibt an, ob für dieses Ziel Daten aktiviert sind. |
 
-Klicken Sie auf eine Zielzeile, um weitere Informationen zum Ziel in der rechten Leiste anzuzeigen.
+Klicken Sie auf eine Zielzeile, um in der rechten Leiste weitere Informationen zum Ziel anzuzeigen, wie z. B. Ziel-ID, Beschreibung, Anzahl der aktivierten Zielgruppen und mehr.
 
 ![Auf Zielzeile klicken](../assets/ui/workspace/click-destination-row.png)
 
