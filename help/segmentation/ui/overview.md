@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
+source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
 workflow-type: tm+mt
-source-wordcount: '4018'
+source-wordcount: '4014'
 ht-degree: 86%
 
 ---
@@ -78,7 +78,7 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | [!UICONTROL Mit Partnern teilen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Teilt Ihre Zielgruppe mit anderen Platform-Benutzern. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht zu Segmentübereinstimmungen](./segment-match/overview.md). |
 | [!UICONTROL Tags verwalten] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet die benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
 | [!UICONTROL In Ordner verschieben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet, zu welchem Ordner die Zielgruppe gehört. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
-| [!UICONTROL Kopieren] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. |
+| [!UICONTROL Kopieren] | Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. |
 | [!UICONTROL Zugriffsbeschriftungen anwenden] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwalten der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archivieren] | Benutzerdefinierter Upload | Archiviert die ausgewählte Zielgruppe. |
 | [!UICONTROL Löschen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. |
