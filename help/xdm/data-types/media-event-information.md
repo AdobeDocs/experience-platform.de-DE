@@ -1,14 +1,15 @@
 ---
 title: Datentyp für Medienereignisinformationen
 description: Erfahren Sie mehr über den Datentyp "Experience-Datenmodell (XDM) für Medienereignisse".
-source-git-commit: 65f3dcf1cacfbc4e8a598244810d238bd88f64bd
+exl-id: 91bb7f28-b629-4044-b687-768c545ac8a2
+source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 6%
+source-wordcount: '107'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Informationen zu Medienereignissen] Datentyp
+# [!UICONTROL Medien-Ereignisinformationen] Datentyp
 
 [!UICONTROL Medien-Ereignisinformationen] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zu Mediendetails im Zusammenhang mit dem Erlebnisereignis beschreibt.
 
@@ -16,7 +17,7 @@ ht-degree: 6%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `mediaCollection` | [[!UICONTROL mediaDetails]](./media-details-information.md) | Mediendetailinformationen zum Erlebnisereignis. |
+| `mediaCollection` | [!UICONTROL mediaDetails] | Mediendetailinformationen zum Erlebnisereignis. Dieser Datentyp wird für beide [Mediensammlung](./media-collection-details.md) und [Mediendatenberichte](./media-reporting-details.md). |
 | `mediaEventTimestamp` | [!UICONTROL String] | Der Zeitpunkt, zu dem ein Medienereignis aufgetreten ist. |
 | `mediaEventType` | [!UICONTROL String] | Der Medien-Ereignistyp. |
 
