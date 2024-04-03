@@ -4,7 +4,7 @@ description: IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevo
 solution: Experience Platform
 title: IP-Adressen-Zulassungsliste für Quellverbindungen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 908cc5c4ff290efdb07cf33cdaa1577280802f9a
+source-git-commit: 4fd23af603296fb7201925029dd5acc196156420
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 98%
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 # IP-Adressen-Zulassungsliste
 
-Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie Traffic für den Datenübertragungs-Service zulassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
+Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie Traffic für den Datenübertragungs-Service zulassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen.
 
 ## VA7: Nordamerika
 
@@ -29,7 +29,7 @@ Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren.
 - `20.49.102.16/29`
 - `40.70.148.160/28`
 - `52.167.107.224/28`
-- `52.138.119.167`
+- `20.98.198.224/29`
 
 ## NLD2: Europa
 
