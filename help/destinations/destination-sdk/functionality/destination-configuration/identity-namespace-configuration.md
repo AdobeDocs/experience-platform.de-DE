@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 95%
+source-wordcount: '892'
+ht-degree: 83%
 
 ---
 
@@ -13,9 +13,11 @@ ht-degree: 95%
 
 Experience Platform verwendet Identity-Namespaces, um den Typ bestimmter Identitäten zu beschreiben. Beispiel: ein Identity-Namespace namens `Email` identifiziert einen Wert wie `name@email.com` als E-Mail-Adresse.
 
-Beim Erstellen eines Ziels über Destination SDK können Sie nicht nur ein [Partnerschema konfigurieren](schema-configuration.md), dem Benutzerinnen und Benutzer Profilattribute und Identitäten zuordnen können, sondern auch Identity-Namespaces definieren, die von Ihrer Zielplattform unterstützt werden.
+Beim Erstellen von Echtzeit-Zielen (Streaming) über die Destination SDK, zusätzlich zu [Partnerschema konfigurieren](schema-configuration.md) Damit Benutzer Profilattribute und Identitäten zuordnen können, müssen Sie auch von Ihrer Zielplattform unterstützte Identitäts-Namespaces definieren. Wenn Ihre Zielplattform beispielsweise Hash-E-Mails und [!DNL IDFA], müssen Sie diese beiden Identitäten als [weiter unten in diesem Dokument beschrieben](#supported-parameters).
 
-In diesem Fall können Benutzerinnen und Benutzer zusätzlich zu den Zielprofilattributen auch Zielidentitäten auswählen.
+Beim Aktivieren von Zielgruppen für Streaming-Ziele müssen Benutzer zusätzlich zu den Zielprofilattributen auch Zielidentitäten zuordnen. Andernfalls werden die Zielgruppen nicht für die Zielplattform aktiviert.
+
+Beim Erstellen eines dateibasierten Ziels über die Destination SDK ist die Konfiguration von Identitäts-Namespaces optional.
 
 Weitere Informationen zu Identity-Namespaces in Experience Platform finden Sie in der [Dokumentation zu Identity-Namespaces](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Die nachstehende Tabelle beschreibt ausführlich, welche Integrationstypen die a
 
 | Integrationstyp | Unterstützt Funktionen |
 |---|---|
-| Echtzeit-Integrationen (Streaming) | Ja |
-| Dateibasierte (Batch-)Integrationen | Ja |
+| Echtzeit-Integrationen (Streaming) | Ja (erforderlich) |
+| Dateibasierte (Batch-)Integrationen | Ja (optional) |
 
 ## Unterstützte Parameter {#supported-parameters}
 
