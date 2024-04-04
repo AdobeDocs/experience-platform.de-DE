@@ -4,10 +4,10 @@ title: Erstellen einer Segmentdefinition mithilfe der Segmentation Service-API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie eine Segmentdefinition mithilfe der Adobe Experience Platform Segmentation Service-API entwickeln, testen, in der Vorschau anzeigen und speichern.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 27%
+source-wordcount: '1066'
+ht-degree: 24%
 
 ---
 
@@ -33,7 +33,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) lesen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -72,7 +72,12 @@ Es gibt zwei erforderliche Schritte, um eine Vorschau Ihrer Segmentdefinition an
 
 ### Erstellung von Schätzungen
 
-Datenbeispiele werden verwendet, um Segmentdefinitionen zu bewerten und die Anzahl der qualifizierten Profile zu schätzen. Jeden Morgen werden neue Daten in den Speicher geladen (zwischen 12:00 und 2:00 Uhr PT, was 7:00 Uhr UTC entspricht) und alle Segmentierungsabfragen werden anhand der Beispieldaten dieses Tages geschätzt. Folglich werden alle neuen hinzugefügten Felder oder erfassten zusätzlichen Daten am folgenden Tag in Schätzungen übernommen.
+Da für das Echtzeit-Kundenprofil aktivierte Daten in Platform erfasst werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtzahl der Profile um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Wenn sich die Profilanzahl nicht um mehr als 5 % ändert, wird der Sampling-Auftrag wöchentlich automatisch ausgeführt.
+
+Die Art und Weise, wie das Beispiel ausgelöst wird, hängt vom verwendeten Erfassungstyp ab:
+
+- Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Wenn dieser Schwellenwert erreicht wurde, wird automatisch ein Beispielauftrag ausgelöst, um die Anzahl zu aktualisieren.
+- Bei der Batch-Erfassung wird innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht ist. Mithilfe der Profil-API können Sie eine Vorschau des neuesten erfolgreichen Beispielauftrags anzeigen sowie die Profilverteilung nach Datensatz und Identitäts-Namespace auflisten.
 
 Die Stichprobengröße hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
