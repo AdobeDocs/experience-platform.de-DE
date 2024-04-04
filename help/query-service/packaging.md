@@ -2,9 +2,9 @@
 title: Query Service Packaging
 description: Im folgenden Dokument wird die Verpackung der für Query Service verfügbaren Funktionen und Produkte beschrieben und die Unterschiede zwischen Ad-hoc- und Batch-Abfragen hervorgehoben.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
+source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '980'
 ht-degree: 5%
 
 ---
@@ -52,9 +52,11 @@ In der folgenden Tabelle werden die wichtigsten Query Service-Berechtigungen bas
 
 Die Zugriffskontrolle für Experience Platform wird über das [Adobe Admin Console](https://adminconsole.adobe.com/) wo Produktprofile Benutzer mit Berechtigungen und Sandboxes verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übersicht](../access-control/home.md).
 
-Um Query Service zu verwenden, muss die [!DNL Manage Queries] -Berechtigung muss in Admin Console aktiviert sein. Mit dieser Berechtigung können Benutzer Ad-hoc- und Batch-Abfragen ausführen. Detaillierte Anweisungen zum Anfordern des Zugriffs auf das Produktprofil [!DNL Manage Queries] -Berechtigungen wurden im Abschnitt [Berechtigungen für ein Produktprofil verwalten](../access-control/ui/permissions.md) und [Benutzer für ein Produktprofil verwalten](../access-control/ui/users.md) Dokumente.
+Siehe [Berechtigungen für ein Produktprofil verwalten](../access-control/ui/permissions.md) und [Benutzer für ein Produktprofil verwalten](../access-control/ui/users.md) Dokumente mit detaillierten Anweisungen zum Anfordern des Zugriffs auf die Produktprofilberechtigungen
 
-Nach dem Kauf der [!DNL Data Distiller] -Add-on, die [!DNL Write Dataset] muss erteilt werden. Diese Berechtigung ermöglicht [!DNL Data Distiller] -Benutzer Batch-Abfragen ausführen.
+### Relevante Query Service-Berechtigungen {#query-service-permissions}
+
+Um Query Service zu verwenden, muss die **[!DNL Manage Queries]** -Berechtigung muss in Admin Console aktiviert sein. Mit dieser Berechtigung können Benutzer Ad-hoc- und Batch-Abfragen ausführen.
 
 In der folgenden Tabelle sind die Auswirkungen der [!DNL Manage Queries] Berechtigung:
 
@@ -62,6 +64,17 @@ In der folgenden Tabelle sind die Auswirkungen der [!DNL Manage Queries] Berecht
 |---|---|
 | [!DNL Manage Queries] (ohne Schreibdatenberechtigung) | Ermöglicht Zugriff auf die Ausführung von Ad-hoc-Abfragen |
 | [!DNL Manage Queries] (mit Schreibberechtigung für Daten) | Ermöglicht Zugriff auf die Ausführung von Batch-Abfragen |
+
+{style="table-layout:auto"}
+
+### Relevante anpassbare Insights-Berechtigungen {#customizable-insights-permissions}
+
+Erstellen von Data Distiller [Anpassbare Insights](./data-distiller/customizable-insights/overview.md) in Dashboards die folgenden Berechtigungen **must** in Admin Console aktiviert werden.
+
+| Berechtigung | Funktion |
+|---|---|
+| [!DNL View Custom Dashboard] | Ermöglicht den Zugriff auf benutzerdefinierte Dashboards |
+| [!DNL Manage Custom Dashboard] | Ermöglicht die Verwaltung des Zugriffs für benutzerdefinierte Dashboards |
 
 {style="table-layout:auto"}
 
