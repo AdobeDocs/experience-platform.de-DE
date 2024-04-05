@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
+source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
 workflow-type: tm+mt
-source-wordcount: '3122'
-ht-degree: 30%
+source-wordcount: '3189'
+ht-degree: 29%
 
 ---
 
@@ -269,3 +269,10 @@ Bis der nächste Batch-Segmentbewertungsauftrag ausgeführt wird, hat das neue z
 Wenn Sie die Profilsuche verwenden, um das neu erstellte Profil abzurufen und sich die Zielgruppenmitgliedschaft anzusehen, wird angezeigt, dass es Mitglied von **both** Zielgruppe A und Zielgruppe B, obwohl beide Zielgruppen widersprüchliche Definitionen aufweisen. Sobald der tägliche Batch-Segmentierungsbewertungsauftrag ausgeführt wird, wird die Zielgruppenzugehörigkeit aktualisiert, um diesen aktualisierten Status der Profildaten widerzuspiegeln.
 
 Wenn Sie eine höhere Auflösung der Zielgruppe in Echtzeit benötigen, verwenden Sie Streaming oder Kantensegmentierung.
+
+### Wie lange dauert es, bis Streaming-Daten in Batch-Segmentierungs-Workflows verfügbar sind?
+
+Es kann bis zu drei Stunden dauern, bis Streaming-Daten in Batch-Segmentierungs-Workflows verfügbar sind.
+
+Wenn beispielsweise ein Batch-Segmentierungsauftrag um 21 Uhr ausgeführt wird, ist es garantiert, aufgenommene Streaming-Daten zu enthalten. **bis** 18 Uhr. Streaming erfasster Daten, die nach 18 Uhr, aber vor 21 Uhr erfasst wurden **kann** enthalten sein.
+

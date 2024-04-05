@@ -4,10 +4,10 @@ title: Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit
 description: Dieses Dokument enthält Beispiele für die Verwendung der Streaming-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
-ht-degree: 70%
+source-wordcount: '2038'
+ht-degree: 67%
 
 ---
 
@@ -454,3 +454,7 @@ Wenn Sie also feststellen, dass die Zahl unter &quot;Letzte X Tage&quot;null ist
 ### Wie lange dauert es, bis eine Segmentdefinition verfügbar ist?
 
 Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.
+
+### Gibt es Einschränkungen beim Streamen von Daten?
+
+Damit Streaming-Daten in der Streaming-Segmentierung verwendet werden können, gibt es **must** Zwischen den eingestreamten Ereignissen muss ein Abstand bestehen. Wenn zu viele Ereignisse innerhalb derselben Sekunde gestreamt werden, behandelt Platform diese Ereignisse als Bot-generierte Daten und sie werden verworfen. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen Ereignisdaten, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.

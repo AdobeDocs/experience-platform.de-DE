@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung
 description: Mit der Streaming-Segmentierung in Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf die Relevanz der Daten konzentrieren. Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, während Daten an Platform übermittelt werden. Das bedeutet, dass die Segmentzugehörigkeit auch ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
 workflow-type: tm+mt
-source-wordcount: '1442'
-ht-degree: 97%
+source-wordcount: '1529'
+ht-degree: 92%
 
 ---
 
@@ -44,7 +44,7 @@ Eine Abfrage wird automatisch mithilfe der Streaming-Segmentierung ausgewertet, 
 
 Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
 
-- Die Segmentdefinition umfasst Segmente oder Eigenschaften aus Adobe Audience Manager (AAM).
+- Die Segmentdefinition umfasst Segmente oder Merkmale aus Adobe Audience Manager (AAM).
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
    - Wenn die im `inSegment`-Ereignis enthaltene Segmentdefinition jedoch nur ein Profil ist, wird die Segmentdefinition für die Streaming-Segmentierung **aktiviert**.
@@ -119,3 +119,7 @@ Wenn Sie also feststellen, dass die Zahl unter „Letzte X Tage“ null ist und 
 ### Wie lange dauert es, bis eine Segmentdefinition verfügbar ist?
 
 Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.
+
+### Gibt es Einschränkungen beim Streamen von Daten?
+
+Damit Streaming-Daten in der Streaming-Segmentierung verwendet werden können, gibt es **must** Zwischen den eingestreamten Ereignissen muss ein Abstand bestehen. Wenn zu viele Ereignisse innerhalb derselben Sekunde gestreamt werden, behandelt Platform diese Ereignisse als Bot-generierte Daten und sie werden verworfen. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen Ereignisdaten, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.
