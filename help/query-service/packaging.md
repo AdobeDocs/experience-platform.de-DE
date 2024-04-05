@@ -2,7 +2,7 @@
 title: Query Service Packaging
 description: Im folgenden Dokument wird die Verpackung der für Query Service verfügbaren Funktionen und Produkte beschrieben und die Unterschiede zwischen Ad-hoc- und Batch-Abfragen hervorgehoben.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 5%
@@ -85,3 +85,4 @@ Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Exper
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments sollten Sie ein besseres Verständnis der verschiedenen in Query Service verfügbaren Packagetypen und Ausführungsfunktionen von Abfragen haben. Weitere Informationen zu Query Service, z. B. bekannten Anwendungsfällen in der Branche, finden Sie in der [Anwendungsfalldokumentation](./use-cases/abandoned-browse.md). Weitere allgemeine Informationen finden Sie unter [Query Service - Übersicht](./home.md).
+
