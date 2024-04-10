@@ -6,8 +6,8 @@ badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1481'
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 7%
 >title="(Beta) Unterstützung von Export-Arrays"
 >abstract="Verwenden Sie das Steuerelement **Berechnetes Feld hinzufügen**, um einfache Arrays aus Ganzzahlen, Zeichenfolgen oder booleschen Werten von Experience Platform in Ihr gewünschtes Cloud-Speicherziel zu exportieren. Es gelten einige Einschränkungen. In der Dokumentation finden Sie ausführliche Beispiele und unterstützte Funktionen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=de#examples" text="Beispiele"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations?lang=de" text="Bekannte Einschränkungen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=de#known-limitations" text="Bekannte Einschränkungen"
 
 >[!AVAILABILITY]
 >
@@ -84,7 +84,7 @@ Wenn Sie bereit sind, wählen Sie **[!UICONTROL Nächste]** um mit dem nächsten
 
 ![Zuordnungsschritt mit hervorgehobenem Zielfeld und ausgefülltem Zielwert.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Unterstützte -Funktionen {#supported-functions}
+## Unterstützte Funktionen {#supported-functions}
 
 Beachten Sie, dass in der Beta-Version der berechneten Felder und der Array-Unterstützung für Ziele nur die folgenden Funktionen unterstützt werden:
 

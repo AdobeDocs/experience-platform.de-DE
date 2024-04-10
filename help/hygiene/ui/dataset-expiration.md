@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experien
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 53%
+source-wordcount: '820'
+ht-degree: 52%
 
 ---
 
@@ -33,13 +33,13 @@ In diesem Dokument wird beschrieben, wie Sie die Ablaufzeit von Datensätzen in 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Anweisungen"
->abstract="<ul><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=de">Datenlebenszyklus</a> und anschließend die Option <b>Anfrage erstellen</b> aus.</li><li>Wenn Sie Datensätze löschen möchten:</li>   <li>Wählen Sie <b>Datensatz</b> aus.</li>   <li>Wählen Sie einen bestimmten Datensatz aus, aus dem Datensätze gelöscht werden sollen, oder wählen Sie die Option aus, sie aus allen Datensätzen zu löschen.</li>   <li>Geben Sie die Identitäten der Personen an, deren Datensätze gelöscht werden sollen. Wählen Sie <b>Identität hinzufügen</b> aus, um die Identitäten einzeln anzugeben, oder wählen Sie <b>Dateien auswählen</b> aus, um stattdessen eine JSON-Datei mit Identitäten hochzuladen.</li>   <li>Wählen Sie bei Bedarf <b>Vorlage</b> aus, um das erwartete Format der JSON-Datei anzuzeigen.</li><li>Anweisungen zum <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration?lang=de">Planen von Ablaufdaten für Datensätze</a> finden Sie in der Dokumentation.</li></ul>"
+>abstract="<ul><li>Wählen Sie im linken Navigationsbereich <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=de">Datenlebenszyklus</a> und anschließend die Option <b>Anfrage erstellen</b> aus.</li><li>Wenn Sie Datensätze löschen möchten:</li>   <li>Wählen Sie <b>Datensatz</b> aus.</li>   <li>Wählen Sie einen bestimmten Datensatz aus, aus dem Datensätze gelöscht werden sollen, oder wählen Sie die Option aus, sie aus allen Datensätzen zu löschen.</li>   <li>Geben Sie die Identitäten der Personen an, deren Datensätze gelöscht werden sollen. Wählen Sie <b>Identität hinzufügen</b> aus, um die Identitäten einzeln anzugeben, oder wählen Sie <b>Dateien auswählen</b> aus, um stattdessen eine JSON-Datei mit Identitäten hochzuladen.</li>   <li>Wählen Sie bei Bedarf <b>Vorlage</b> aus, um das erwartete Format der JSON-Datei anzuzeigen.</li><li>Anweisungen zum <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=de#schedule-dataset-expiration">Planen von Ablaufdaten für Datensätze</a> finden Sie in der Dokumentation.</li></ul>"
 
 Um eine Anforderung zu erstellen, wählen Sie **[!UICONTROL Anforderung erstellen]** von der Hauptseite im Arbeitsbereich aus.
 
 >[!IMPORTANT]
 >
-Real-Time CDP-, Adobe Journey Optimizer- und Customer Journey Analytics-Benutzer haben 20 ausstehende geplante Aufträge zur Ablaufzeit von Datensätzen. Gesundheitsschild- und Datenschutz- und Sicherheitsschild-Benutzer haben 50 ausstehende geplante Arbeitsaufträge zum Ablauf von Datensätzen. Das bedeutet, dass Sie planen können, 20 oder 50 Datensätze gleichzeitig zu löschen.<br>Wenn Sie beispielsweise 20 geplante Datensatzabläufe haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Abläufe festlegen, bis dieser Datensatz gelöscht wurde.
+>Real-Time CDP-, Adobe Journey Optimizer- und Customer Journey Analytics-Benutzer haben 20 ausstehende geplante Aufträge zur Ablaufzeit von Datensätzen. Gesundheitsschild- und Datenschutz- und Sicherheitsschild-Benutzer haben 50 ausstehende geplante Arbeitsaufträge zum Ablauf von Datensätzen. Das bedeutet, dass Sie planen können, 20 oder 50 Datensätze gleichzeitig zu löschen.<br>Wenn Sie beispielsweise 20 geplante Datensatzabläufe haben und ein Datensatz morgen gelöscht werden soll, können Sie keine weiteren Abläufe festlegen, bis dieser Datensatz gelöscht wurde.
 
 ![Die [!UICONTROL Lebenszyklus der Daten] Arbeitsbereich mit [!UICONTROL Anforderung erstellen] hervorgehoben.](../images/ui/ttl/create-request-button.png)
 
@@ -59,7 +59,7 @@ Weiter, unter **[!UICONTROL Datensatzdetails]** Wählen Sie das Datenbanksymbol 
 
 >[!NOTE]
 >
-Es werden nur Datensätze angezeigt, die zur aktuellen Sandbox gehören.
+>Es werden nur Datensätze angezeigt, die zur aktuellen Sandbox gehören.
 
 ### Senden der Anfrage {#submit-request}
 
@@ -73,7 +73,7 @@ Nachdem die Anfrage gesendet wurde, wird eine Arbeitsreihenfolge erstellt und au
 
 >[!NOTE]
 >
-Der Abschnitt mit der Übersicht über [Timelines und Transparenz](../home.md#dataset-expiration-transparency) enthält Details dazu, wie die Gültigkeit von Datensätzen verarbeitet wird, nachdem sie abgelaufen ist.
+>Der Abschnitt mit der Übersicht über [Timelines und Transparenz](../home.md#dataset-expiration-transparency) enthält Details dazu, wie die Gültigkeit von Datensätzen verarbeitet wird, nachdem sie abgelaufen ist.
 
 ## Bearbeiten oder Abbrechen einer Datensatzgültigkeit {#edit-or-cancel}
 
