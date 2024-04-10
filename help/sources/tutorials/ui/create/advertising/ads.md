@@ -2,14 +2,18 @@
 title: Erstellen einer Google Ads-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Google Ads-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '680'
 ht-degree: 28%
 
 ---
 
 # Erstellen einer Google Ads-Quellverbindung in der Benutzeroberfläche
+
+>[!WARNING]
+>
+>Die [!DNL Google Ads] -Quelle vorübergehend nicht verfügbar ist. Adobe arbeitet an der Lösung von Problemen mit dieser Quelle.
 
 >[!NOTE]
 >
@@ -22,8 +26,8 @@ In diesem Tutorial werden die Schritte zum Erstellen einer Google Ads-Quellverbi
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Wenn Sie bereits über eine gültige Google Ads-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zu [Datenfluss konfigurieren](../../dataflow/advertising.md)
