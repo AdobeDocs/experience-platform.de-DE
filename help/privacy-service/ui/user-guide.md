@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;export;export
+keywords: Experience Platform;Startseite;beliebte Themen;Export;Export
 solution: Experience Platform
 title: Verwalten von Datenschutzaufträgen in der Privacy Service-Benutzeroberfläche
-description: Erfahren Sie, wie Sie mit der Privacy Service-Benutzeroberfläche Datenschutzanfragen in verschiedenen Experience Cloud-Applikationen koordinieren und überwachen können.
+description: Erfahren Sie, wie Sie die Privacy Service-Benutzeroberfläche verwenden, um Datenschutzanfragen in verschiedenen Experience Cloud-Anwendungen zu koordinieren und zu überwachen.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
+source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 22%
+source-wordcount: '1722'
+ht-degree: 19%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 22%
 >title="Berücksichtigen von Datenschutzanträgen betroffener Personen"
 >abstract="<h2>Beschreibung</h2><p>Mit Adobe Experience Platform Privacy Service können Sie Datenschutzanfragen für Kundinnen und Kunden erstellen und verwalten, die ihre personenbezogenen Daten gemäß den gesetzlichen Datenschutzbestimmungen aufrufen oder löschen möchten.</p>"
 
-In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschutzanfragen mithilfe des [!DNL Privacy Service] -Benutzeroberfläche.
+In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschutzanfragen mithilfe der [!DNL Privacy Service] -Benutzeroberfläche.
 
 >[!IMPORTANT]
 >
@@ -28,13 +28,13 @@ In diesem Dokument werden die Schritte zum Erstellen und Verwalten von Datenschu
 
 ## Durchsuchen Sie die [!DNL Privacy Service] UI-Dashboard
 
-Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge anzeigen können: &quot;[!UICONTROL Statusbericht]&quot; und &quot;[!UICONTROL Auftragsanforderungen]&quot;. Im Dashboard wird auch die aktuell ausgewählte Regel für die angezeigten Aufträge angezeigt.
+Das Dashboard für die [!DNL Privacy Service] Die -Benutzeroberfläche bietet zwei Widgets, mit denen Sie den Status Ihrer Datenschutzaufträge anzeigen können: &quot;[!UICONTROL Statusbericht]&quot; und &quot;[!UICONTROL Vorgangsanfragen]„. Das Dashboard zeigt auch die aktuell ausgewählte Verordnung für die angezeigten Aufträge an.
 
 ![UI-Dashboard](../images/user-guide/dashboard.png)
 
 ### Regelungstyp
 
-[!DNL Privacy Service] unterstützt Auftragsanfragen für verschiedene Datenschutzbestimmungen. In der folgenden Tabelle sind die unterstützten Verordnungen und die entsprechende Beschriftung in der Benutzeroberfläche aufgeführt:
+[!DNL Privacy Service] unterstützt Vorgangsanfragen für mehrere Datenschutzbestimmungen. In der folgenden Tabelle sind die unterstützten Verordnungen und die entsprechende Beschriftung aufgeführt, wie sie in der Benutzeroberfläche dargestellt werden:
 
 | UI-Bezeichnung | Verordnung |
 | --- | --- |
@@ -43,7 +43,7 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 | [!UICONTROL CCPA] | Die [!DNL California Consumer Privacy Act] |
 | [!UICONTROL CPRA_USA] | Die [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | Die [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DSGVO] | Die [!DNL General Data Protection Regulation] |
+| [!UICONTROL DSGVO] | Die Europäische Union [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | Die [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brasiliens [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL MHMDA] | Die [!DNL Washington My Health My Data Act] |
@@ -60,57 +60,65 @@ Das Dashboard für die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwe
 
 >[!NOTE]
 >
->Siehe Übersicht unter [Unterstützte Datenschutzbestimmungen](../regulations/overview.md) für weitere Informationen über den rechtlichen Kontext der einzelnen Verordnungen.
+>Siehe die Übersicht zu [Unterstützte Datenschutzbestimmungen](../regulations/overview.md) Weitere Informationen zum rechtlichen Kontext jeder Verordnung.
 
-Aufträge für jeden Regulierungstyp werden separat nachverfolgt. Um zwischen Regeltypen zu wechseln, wählen Sie die **[!UICONTROL Regelungstyp]** und wählen Sie die gewünschte Regel aus der Liste aus.
+Vorgänge für jeden Regulierungstyp werden separat verfolgt. Um zwischen Regulierungstypen zu wechseln, wählen Sie die **[!UICONTROL Regelungstyp]** Dropdown-Menü auswählen und die gewünschte Regelung aus der Liste auswählen.
 
-![Die Privacy Service-Konsole mit dem Dropdown-Menü &quot;Regulierungstyp&quot;.](../images/user-guide/regulation.png)
+![Die Privacy Service-Konsole mit der Dropdown-Liste „Regulierungstyp„.](../images/user-guide/regulation.png)
 
-Nach Änderung des Regulierungstyps wird das Dashboard aktualisiert, um alle Vorgänge, Filter, Widgets und Dialogfelder zur Schaffung von Arbeitsplätzen anzuzeigen, die für die ausgewählte Verordnung gelten.
+Nach Änderung des Regulierungstyps wird das Dashboard aktualisiert und zeigt alle Vorgänge, Filter, Widgets und Dialogfelder für die Erstellung von Aufträgen an, die für die ausgewählte Verordnung gelten.
 
 ![Aktualisiertes Dashboard](../images/user-guide/dashboard-update.png)
 
 ### Statusbericht
 
-Das Diagramm auf der linken Seite des Widgets &quot;Statusbericht&quot;verfolgt gesendete Aufträge für alle Aufträge, die möglicherweise mit Fehlern gemeldet wurden. Das Diagramm auf der rechten Seite verfolgt Aufträge, die sich dem Ende des 30-Tage-Compliance-Fensters nähern.
+Das Diagramm auf der linken Seite des Widgets Statusbericht verfolgt gesendete Aufträge im Vergleich zu allen Aufträgen, die möglicherweise mit Fehlern zurückgemeldet wurden. Das Diagramm auf der rechten Seite verfolgt Aufträge, die sich dem Ende des 30-tägigen Compliance-Fensters nähern.
 
-Wählen Sie eine der beiden Umschalter-Schaltflächen über dem Diagramm aus, um die entsprechenden Metriken ein- oder auszublenden.
+Wählen Sie eine der beiden Umschalter-Schaltflächen über dem Diagramm aus, um die jeweiligen Metriken ein- oder auszublenden.
 
 ![](../images/user-guide/hide-errors.png)
 
-Sie können die genaue Anzahl der Aufträge anzeigen, die mit einem Datenpunkt in den Diagrammen verbunden sind, indem Sie den Mauszeiger über den betreffenden Datenpunkt bewegen.
+Sie können die genaue Anzahl der Aufträge anzeigen, die mit einem Datenpunkt in den Diagrammen verknüpft sind, indem Sie die Maus über den betreffenden Datenpunkt bewegen.
 
-![Überlaufdatenpunkte](../images/user-guide/mouse-over.png)
+![Mouse-over-Datenpunkte](../images/user-guide/mouse-over.png)
 
-Um weitere Details zu einem bestimmten Datenpunkt anzuzeigen, wählen Sie den betreffenden Datenpunkt aus, um die zugehörigen Aufträge im Widget Auftragsanfragen anzuzeigen. Beachten Sie den Filter, der direkt über der Auftragsliste angewendet wird.
+Um weitere Details zu einem bestimmten Datenpunkt anzuzeigen, wählen Sie den betreffenden Datenpunkt aus, um die zugehörigen Aufträge im Widget Auftragsanfragen anzuzeigen. Notieren Sie sich den Filter, der direkt über der Auftragsliste angewendet wird.
 
-![Angewandter Filter aus Widget](../images/user-guide/apply-filter.png)
-
->[!NOTE]
->
->Wenn ein Filter auf das Widget Auftragsanforderungen angewendet wurde, können Sie den Filter entfernen, indem Sie die **X** auf der Filtertablette. Auftragsanfragen kehren dann zur standardmäßigen Tracking-Liste zurück.
-
-### Auftragsanforderungen
-
-Das Widget Auftragsanfragen listet alle in Ihrem Unternehmen verfügbaren Auftragsanfragen auf, einschließlich Details zum Anfragetyp, aktuellen Status, Fälligkeitsdatum und E-Mail-Adresse des Anfragenden.
+![Angewendeter Filter aus Widget](../images/user-guide/apply-filter.png)
 
 >[!NOTE]
 >
->Auf die Daten für zuvor erstellte Aufträge kann erst 30 Tage nach dem Abschlussdatum zugegriffen werden.
+>Wenn ein Filter auf das Widget Auftragsanfragen angewendet wurde, können Sie den Filter entfernen, indem Sie die Variable auswählen. **X** Auf der Filterpille. Auftragsanfragen kehren dann zur Standard-Tracking-Liste zurück.
 
-Sie können die Liste filtern, indem Sie Suchbegriffe in die Suchleiste unter dem Titel Auftragsanfragen eingeben. Die Liste filtert automatisch bei der Eingabe und zeigt Anforderungen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Sie können auch die **[!UICONTROL Beantragen am]** Dropdown-Menü, um einen Zeitraum für die aufgelisteten Aufträge auszuwählen.
+### Vorgangsanfragen {#job-requests}
 
-![Suchoptionen für Auftragsanfragen](../images/user-guide/job-search.png)
+Die [!UICONTROL Vorgangsanfragen] Workspace listet Details zu den letzten Auftragsanfragen in Ihrer Organisation auf. Zu den Details gehören der Anfragetyp, der aktuelle Status, das Fälligkeitsdatum, die Anforderer-E-Mail usw. Es werden jeweils 100 Datensätze geladen. Standardmäßig werden die zuletzt erstellten Aufträge oben angezeigt, wobei beim Scrollen zum Durchsuchen mehr Datensätze geladen werden.
 
-Um die Details einer bestimmten Auftragsanfrage anzuzeigen, wählen Sie die Auftrags-ID der Anfrage aus der Liste aus, um die **[!UICONTROL Auftragsdetails]** Seite.
+>[!NOTE]
+>
+>Die Daten für zuvor erstellte Aufträge sind nur 30 Tage nach dem Abschlussdatum zugänglich.
+
+Sie können die Liste filtern, indem Sie Keywords in die Suchleiste unter dem Feld eingeben [!UICONTROL Vorgangsanfragen] Titel. Die Liste wird während der Eingabe automatisch gefiltert und zeigt Anfragen an, die Werte enthalten, die Ihren Suchbegriffen entsprechen. Das Suchfeld führt eine „Schnellsuche“ durch, die die Datenschutzauftrags-IDs mit den aktuell gerenderten/geladenen Aufträgen in der Benutzeroberfläche abgleicht. Es handelt sich nicht um eine umfassende Suche aller eingereichten Aufträge. Stattdessen handelt es sich um einen Filter, der auf die geladenen Ergebnisse angewendet wird. Verwenden der Privacy Service-API für Folgendes [Rückgabe von Aufträgen basierend auf einer bestimmten Verordnung, Datumsbereichen oder einem einzelnen Auftrag](../api/privacy-jobs.md#list).
+
+>[!TIP]
+>
+>Um Datensätze aus den letzten 30 Tagen in die Benutzeroberfläche zu laden, müssen Sie die Tabelle nach unten scrollen und weitere Datensatz-Batches laden.
+
+![Der Abschnitt „Auftragsanfrage“ der Privacy Console mit hervorgehobenem Suchfeld.](../images/user-guide/job-search.png)
+
+Alternativ können Sie die Suchschaltfläche verwenden, um eine Datenschutzabfrage durchzuführen, die sich über einen bestimmten Datumsbereich erstreckt. Diese Aktion gibt alle Datenschutzaufträge zurück, die von Ihrer Organisation im angegebenen Zeitraum gesendet wurden. Wählen Sie die **[!UICONTROL Angefordert am]** Dropdown-Menü, um ein Start- und Enddatum für die Abfrage auszuwählen. Zu den verfügbaren Optionen gehören [!UICONTROL Heute], [!UICONTROL Letzte 7 Tage], [!UICONTROL Letzte 2 Wochen], [!UICONTROL Letzte 30 Tage], oder [!UICONTROL Benutzerdefiniert]. Bei Verwendung mit dem [!UICONTROL Angefordert am] die Suchfunktion nur Auftragsanfragen anzeigt, die zwischen den von Ihnen ausgewählten Datumsbereichen gesendet wurden.
+
+![Der Abschnitt „Vorgangsanfrage“ mit dem Suchfeld, dem Dropdown-Menü „Angefordert“ und der hervorgehobenen Suchschaltfläche.](../images/user-guide/requested-on-dropdown-menu.png)
+
+Um die Details einer bestimmten Vorgangsanfrage anzuzeigen, wählen Sie die Vorgangskennung der Anfrage aus der Liste aus, um die Anfrage zu öffnen **[!UICONTROL Vorgangsdetails]** Seite.
 
 ![DSGVO-UI-Auftragsdetails](../images/user-guide/job-details.png)
 
-Dieses Dialogfeld enthält Statusinformationen zu jedem [!DNL Experience Cloud] Lösung und deren aktueller Status in Bezug auf den Gesamtauftrag. Da jeder Datenschutzauftrag asynchron ausgeführt wird, zeigt die Seite das aktuelle Kommunikationsdatum und die aktuelle Uhrzeit (GMT) jeder Lösung an, da einige für die Verarbeitung der Anfrage mehr Zeit als andere benötigen.
+Dieses Dialogfeld enthält Statusinformationen zu jedem [!DNL Experience Cloud] Lösung und ihr aktueller Status in Bezug auf den Gesamtauftrag. Da jeder Datenschutzauftrag asynchron ist, zeigt die Seite das Datum und die Uhrzeit der letzten Kommunikation (GMT) aus jeder Lösung an, da einige mehr Zeit benötigen als andere, um die Anfrage zu verarbeiten.
 
-Wenn eine Lösung zusätzliche Daten bereitgestellt hat, ist dies in diesem Dialogfeld sichtbar. Sie können diese Daten durch Auswahl einzelner Produktzeilen anzeigen.
+Wenn eine Lösung zusätzliche Daten bereitgestellt hat, können diese in diesem Dialogfeld angezeigt werden. Sie können diese Daten anzeigen, indem Sie einzelne Produktzeilen auswählen.
 
-Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie **[!UICONTROL Exportieren in CSV]** oben rechts im Dialogfeld.
+Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie **[!UICONTROL In CSV exportieren]** Oben rechts im Dialogfeld.
 
 ## Erstellen einer neuen Anfrage für einen Datenschutzauftrag {#create-a-new-privacy-job-request}
 
@@ -121,38 +129,38 @@ Um die vollständigen Auftragsdaten als CSV-Datei herunterzuladen, wählen Sie *
 
 >[!NOTE]
 >
->Um eine Datenschutzanfrage zu erstellen, müssen Sie Identitätsinformationen für die spezifischen Kunden bereitstellen, deren Daten aufgerufen oder gelöscht werden sollen. Lesen Sie das Dokument unter [Identitätsdaten für Datenschutzanfragen](../identity-data.md) bevor Sie mit diesem Abschnitt fortfahren.
+>Um eine Datenschutzanfrage zu erstellen, müssen Sie Identitätsinformationen für die spezifischen Kundinnen und Kunden angeben, auf deren Daten zugegriffen werden soll oder die gelöscht werden sollen. Lesen Sie das Dokument zu [Identitätsdaten für Datenschutzanfragen](../identity-data.md) Bevor Sie mit diesem Abschnitt fortfahren.
 
-Die [!DNL Privacy Service] Die Benutzeroberfläche bietet zwei Methoden zum Erstellen neuer Auftragsanfragen:
+Die [!DNL Privacy Service] Die -Benutzeroberfläche bietet zwei Methoden zum Erstellen neuer Auftragsanfragen:
 
-* [Verwenden des Anforderungs-Builders](#request-builder)
+* [Verwenden des Request Builders](#request-builder)
 * [Hochladen einer JSON-Datei](#json)
 
-Die Schritte zur Verwendung dieser Methoden finden Sie in den folgenden Abschnitten.
+Die Schritte zur Verwendung jeder dieser Methoden werden in den folgenden Abschnitten beschrieben.
 
-### Verwenden des Anforderungs-Builders {#request-builder}
+### Verwenden des Request Builders {#request-builder}
 
-Mit dem Request Builder können Sie in der Benutzeroberfläche manuell eine neue Datenschutzauftragsanforderung erstellen. Der Request Builder eignet sich am besten für einfachere und kleinere Anforderungsgruppen, da der Request Builder die Anforderungen so beschränkt, dass sie nur einen ID-Typ pro Benutzer haben. Bei komplexeren Anforderungen kann es besser sein, [JSON-Datei hochladen](#json) anstatt.
+Mit dem Anfrage-Builder können Sie in der -Benutzeroberfläche manuell eine neue Datenschutzanfrage erstellen. Der Request Builder eignet sich am besten für einfachere und kleinere Anfragesätze, da der Request Builder Anfragen so einschränkt, dass sie nur einen ID-Typ pro Benutzer haben. Bei komplizierteren Anfragen ist es möglicherweise besser, [Hochladen einer JSON-Datei](#json) Stattdessen.
 
-Um mit der Verwendung des Anforderungs-Builders zu beginnen, wählen Sie **[!UICONTROL Anforderung erstellen]** unter dem Widget Statusbericht auf der rechten Seite des Bildschirms.
+Um den Request Builder zu verwenden, wählen Sie aus. **[!UICONTROL Anfrage erstellen]** unter dem Widget Statusbericht auf der rechten Bildschirmseite.
 
-![Anforderung erstellen](../images/user-guide/create-request.png)
+![Anfrage erstellen auswählen](../images/user-guide/create-request.png)
 
-Die **[!UICONTROL Anforderung erstellen]** wird geöffnet, in dem die verfügbaren Optionen zum Senden einer Datenschutzauftragsanforderung für den derzeit ausgewählten Regulierungstyp angezeigt werden.
+Die **[!UICONTROL Anfrage erstellen]** Das Dialogfeld wird geöffnet und zeigt die verfügbaren Optionen zum Senden einer Datenschutzanfrage für den derzeit ausgewählten Regulierungstyp an.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Wählen Sie die **[!UICONTROL Auftragstyp]** der Anforderung (&quot;Löschen&quot;oder &quot;Zugriff&quot;) und eines oder mehrerer verfügbarer Produkte aus der Liste.
+Wählen Sie die **[!UICONTROL Vorgangstyp]** der Anfrage („Löschen“ oder „Zugriff„) und eines oder mehrerer verfügbarer Produkte aus der Liste.
 
-Privacy Service unterstützt zwei Arten von Auftragsanfragen für personenbezogene Daten: [!UICONTROL Zugriff] (lesen) und/oder [!UICONTROL Löschen]. Sie können entweder einen Antrag auf Erhalt aller Informationen stellen, die im Produkt gespeichert sind, das sich auf den Gegenstand der Anfrage bezieht, oder die Löschung aller Informationen beantragen, die sich auf den Gegenstand der Anfrage beziehen.
+Privacy Service unterstützt zwei Arten von Vorgangsanfragen für personenbezogene Daten: [!UICONTROL Zugriff] (Lesen) und/oder [!UICONTROL Löschen]. Sie können entweder anfordern, alle im Produkt gespeicherten Informationen zu erhalten, die sich auf den Gegenstand der Anfrage beziehen, oder anfordern, alle Informationen zu löschen, die sich auf den Gegenstand der Anfrage beziehen.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-under **[!UICONTROL Namespace-Typ]** wählen Sie den entsprechenden Namespace-Typ für die Kunden-IDs aus, die an gesendet werden. [!DNL Privacy Service].
+Unter **[!UICONTROL Namespace-Typ]** Wählen Sie anschließend den entsprechenden Namespace-Typ für die Kunden-IDs aus, an die gesendet werden sollen [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Wählen Sie bei Verwendung des Standard-Namespace-Typs einen Namespace aus dem Dropdown-Menü (E-Mail, ECID oder AAID) aus, geben Sie dann die ID-Werte in das Textfeld rechts ein und drücken Sie die Eingabetaste. **\&lt;enter>** für jede ID, um sie der Liste hinzuzufügen.
+Wenn Sie den standardmäßigen Namespace-Typ verwenden, wählen Sie einen Namespace aus dem Dropdown-Menü aus (E-Mail, ECID oder AAID) und geben Sie dann die ID-Werte in das Textfeld rechts ein, indem Sie drücken **\&lt;enter>** für jede ID, um sie der Liste hinzuzufügen.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
@@ -164,32 +172,32 @@ Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
-Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird im Widget Auftragsanfragen zusammen mit dem aktuellen Verarbeitungsstatus aufgeführt.
+Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die Aufträge) werden im Widget Auftragsanfragen zusammen mit ihrem aktuellen Verarbeitungsstatus aufgeführt.
 
 ### Hochladen einer JSON-Datei {#json}
 
-Beim Erstellen komplexerer Anforderungen, z. B. Anforderungen, die mehrere ID-Typen für jedes verarbeitete Datensubjekt verwenden, können Sie eine Anforderung erstellen, indem Sie eine JSON-Datei hochladen.
+Bei der Erstellung komplexerer Anfragen, z. B. Anfragen, die mehrere ID-Typen für jede verarbeitete betroffene Person verwenden, können Sie eine Anfrage erstellen, indem Sie eine JSON-Datei hochladen.
 
-Wählen Sie den Pfeil neben **[!UICONTROL Anforderung erstellen]**, unter dem Widget Statusbericht auf der rechten Seite des Bildschirms. Wählen Sie in der angezeigten Optionsliste die Option **[!UICONTROL JSON hochladen]**.
+Wählen Sie den Pfeil neben aus. **[!UICONTROL Anfrage erstellen]**, unterhalb des Widgets Statusbericht auf der rechten Seite des Bildschirms. Wählen Sie aus der angezeigten Liste der Optionen Folgendes aus **[!UICONTROL JSON hochladen]**.
 
-![Erstellungsoptionen von Anforderungen](../images/user-guide/create-options.png)
+![Optionen zur Anfrageerstellung](../images/user-guide/create-options.png)
 
-Die **[!UICONTROL JSON hochladen]** angezeigt. Es wird ein Fenster angezeigt, in das Sie Ihre JSON-Datei per Drag-and-Drop ziehen können.
+Die **[!UICONTROL JSON hochladen]** wird angezeigt und bietet ein Fenster, in das Sie Ihre JSON-Datei per Drag-and-Drop ziehen können.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Adobe-DSGVO-Request.json herunterladen]** , um eine Vorlage herunterzuladen, die Sie entsprechend den Werten füllen können, die Sie von Ihren Datensubjekten gesammelt haben.
+Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Adobe-GDPR-Request.json herunterladen]** So laden Sie eine Vorlage herunter, die Sie entsprechend den von Ihren betroffenen Personen erfassten Werten ausfüllen können.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
-Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfenster. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können bei Bedarf weitere JSON-Dateien hinzufügen, indem Sie sie per Drag-and-Drop in das Dialogfeld ziehen.
+Suchen Sie die JSON-Datei auf Ihrem Computer und ziehen Sie sie in das Dialogfenster. Wenn der Upload erfolgreich war, wird der Dateiname im Dialogfeld angezeigt. Sie können weitere JSON-Dateien nach Bedarf hinzufügen, indem Sie sie per Drag-and-Drop in das Dialogfeld ziehen.
 
-Wählen Sie zum Abschluss **[!UICONTROL Erstellen]**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die neuen Aufträge) wird im Widget Auftragsanfragen zusammen mit dem aktuellen Verarbeitungsstatus aufgeführt.
+Wenn Sie fertig sind, wählen Sie aus. **[!UICONTROL Erstellen]**. Das Dialogfeld wird ausgeblendet und der neue Auftrag (oder die Aufträge) werden im Widget Auftragsanfragen zusammen mit ihrem aktuellen Verarbeitungsstatus aufgeführt.
 
 ### Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie die [!DNL Privacy Service] Benutzeroberfläche zum Erstellen eines Datenschutzauftrags, zum Anzeigen der Details eines Auftrags, zum Überwachen des Verarbeitungsstatus und zum Herunterladen der Ergebnisse nach Abschluss.
+In diesem Dokument haben Sie gelernt, wie Sie die [!DNL Privacy Service] Benutzeroberfläche zum Erstellen eines Datenschutzauftrags, Anzeigen der Details eines Auftrags und Überwachen seines Verarbeitungsstatus und Herunterladen der Ergebnisse nach Abschluss.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit dem [!DNL Privacy Service] API, siehe Abschnitt [API-Handbuch](../api/overview.md).
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Privacy Service] -API, siehe [API-Handbuch](../api/overview.md).
