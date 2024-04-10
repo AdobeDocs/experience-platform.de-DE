@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise März 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
+source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1189'
 ht-degree: 33%
 
 ---
@@ -30,10 +30,6 @@ Aktualisierungen vorhandener Funktionen im Experience Platform:
 ## Katalog-Service {#catalog-service}
 
 Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Während alle Daten, die in Experience Platform aufgenommen werden, als Dateien und Ordner im Data Lake gespeichert sind, enthält der Katalog die Metadaten und Beschreibungen dieser Dateien und Ordner zu Such- und Überwachungszwecken.
-
->[!NOTE]
->
->Wir sind uns bewusst und arbeiten an der Behebung eines Anzeigeproblems, bei dem neben Bildern in Tabellen eine unnötige Syntax gerendert wird.
 
 | Funktion | Beschreibung |
 | --- | --- |
