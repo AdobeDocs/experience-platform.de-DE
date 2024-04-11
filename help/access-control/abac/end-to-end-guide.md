@@ -4,9 +4,9 @@ title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument enthält eine umfassende Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform.
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1736'
 ht-degree: 24%
 
 ---
@@ -132,6 +132,10 @@ Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, in dem Sie die Tite
 >Wenn einem Feld eine Beschriftung hinzugefügt wird, wird diese Beschriftung auf die übergeordnete Ressource dieses Felds angewendet (entweder auf eine Klasse oder eine Feldergruppe). Wenn die übergeordnete Klasse oder Feldergruppe von anderen Schemas verwendet wird, übernehmen diese Schemas dieselbe Beschriftung.
 
 ## Anwenden von Bezeichnungen auf Segmente
+
+>[!NOTE]
+>
+>Jedes Segment, das ein beschriftetes Attribut verwendet, muss ebenfalls beschriftet werden, wenn Sie möchten, dass dieselben Zugriffsbeschränkungen auf es angewendet werden.
 
 Nachdem Sie die Beschriftung Ihrer Schemafelder abgeschlossen haben, können Sie jetzt mit der Kennzeichnung Ihrer Segmente beginnen.
 
