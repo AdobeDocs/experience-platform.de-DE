@@ -2,10 +2,10 @@
 title: YouTube Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform vertraut.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 100%
+source-wordcount: '895'
+ht-degree: 83%
 
 ---
 
@@ -23,7 +23,7 @@ Für jede Tag-Eigenschaft in Adobe Experience Platform müssen die folgenden Erw
 * Experience Cloud-Besucher-ID-Service
 * Haupterweiterung
 
-Verwenden Sie das Code-Fragment [Embed a player using an &lt;iframe\> tag](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) aus den Google-Entwicklerdokumenten im HTML-Code jeder Web-Seite, auf der ein Video-Player gerendert werden soll.
+Verwenden Sie die [&quot;Einbetten eines Players mit einem \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) Codeausschnitt aus der Google-Entwicklerdokumentation auf der HTML jeder Webseite, auf der ein Videoplayer gerendert werden soll.
 
 Die Erweiterungsversion 2.0.1 unterstützt das Einbetten eines oder mehrerer YouTube-Videos auf einer einzelnen Website, indem ein `id`-Attribut mit einem eindeutigen Wert im iframe-Skript-Tag eingefügt und `enablejsapi=1` und `rel=0` an das Ende des `src`-Attributwerts angehängt werden, falls dies noch nicht der Fall ist. Beispiel:
 
@@ -75,18 +75,18 @@ Für jedes Videoereignis (die sieben oben aufgelisteten Ereignisse) kann eine Ta
 Die Regeln umfassen drei Aktionen:
 
 * **Variablen festlegen:** Festlegen der Adobe Analytics-Variablen (Zuordnen zu allen oder einigen enthaltenen Datenelementen).
-* **Beacon senden:** Senden des Adobe Analytics-Beacons als benutzerspezifischer Linktracking-Aufruf und Angeben eines Wertes „Linkname“.
+* **Signal senden:** Senden Sie das Adobe Analytics-Beacon als benutzerspezifischen Linktracking-Aufruf und geben Sie den Wert &quot;Linkname&quot;an.
 * **Variablen löschen:** Löschen der Adobe Analytics-Variablen.
 
 ## Beispiel für eine Tag-Regel für „Videostart“
 
 Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
-* **Ereignisse**: „Videostart“ (Dieses Ereignis löst die Regel aus, wenn der Besucher die Wiedergabe eines YouTube-Videos beginnt.)
+* **Veranstaltungen**: &quot;Videostart&quot;(Dieses Ereignis löst die Regel aus, wenn der Besucher mit der Wiedergabe eines YouTube-Videos beginnt.)
 
 * **Bedingung**: Keine
 
-* **Aktionen**: Verwenden Sie die **Analytics-Erweiterung** für die Aktion „Variablen festlegen“, um Folgendes zuzuordnen:
+* **Aktionen**: Verwenden Sie die **Analytics-Erweiterung** auf die Aktion &quot;Variablen festlegen&quot;, um Folgendes zuzuordnen:
 
    * Das Ereignis für Videostart,
    * Eine prop/eVar für das Datenelement „Videodauer“
@@ -94,13 +94,13 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
    * Eine prop/eVar für das Datenelement „Videoname“
    * Ein prop/eVar für das Datenelement „Video-URL“
 
-   Schließen Sie dann die Aktion „Beacon senden“ (`s.tl`) mit dem Link-Namen „Videostart“ mit ein, gefolgt von der Aktion „Variablen löschen“.
+  Schließen Sie dann die Aktion &quot;Beacon senden&quot;ein (`s.tl`) mit dem Linknamen &quot;Videostart&quot;gefolgt von der Aktion &quot;Variablen löschen&quot;.
 
 >[!TIP]
 > 
 >Bei Implementierungen, bei denen nicht mehrere eVars oder Props für jedes Videoelement verwendet werden können, können die Werte der Datenelemente innerhalb von Platform verkettet und mit dem Tool Classification Rule Builder in Klassifizierungsberichte geparst werden, wie unter [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=de) erklärt, und dann als ein Segment in Analysis Workspace angewendet werden.
 
-Um Videoinformationswerte zu verketten, erstellen Sie ein neues Datenelement mit dem Namen „Videometadaten“ und programmieren es so, dass es alle Videodatenelemente (oben aufgeführt) abruft und zusammenfügt. Beispiel:
+Um Videoinformationswerte zu verketten, erstellen Sie ein neues Datenelement mit dem Namen &quot;Videometadaten&quot;und programmieren es so, dass alle Videodatenelemente (oben aufgelistet) abgerufen und zusammengeführt werden. Beispiel:
 
 ```javascript
 var r = [];
@@ -113,3 +113,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+Weitere Informationen dazu, wie Sie Datenelemente in Platform effektiv erstellen und nutzen können, finden Sie im Abschnitt [Datenelemente](../../../ui/managing-resources/data-elements.md) Dokumentation.
