@@ -3,10 +3,11 @@ title: Work Order API Endpoint
 description: Mit dem /workorder -Endpunkt in der Data Hygiene API können Sie Löschaufgaben für Identitäten programmgesteuert verwalten.
 badgeBeta: label="Beta" type="Informative"
 role: Developer
+badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 59585ce832b10dfc28474e498c9308453da86d0c
+source-git-commit: 2259bf70e1503cf468f72a73345592ace0f58f63
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1278'
 ht-degree: 56%
 
 ---

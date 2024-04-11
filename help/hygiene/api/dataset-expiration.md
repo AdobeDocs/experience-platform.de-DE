@@ -3,10 +3,10 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 63%
+source-wordcount: '2141'
+ht-degree: 60%
 
 ---
 
@@ -22,7 +22,7 @@ Eine Datensatzgültigkeit ist nur ein zeitverzögerter Löschvorgang. Der Datens
 
 Sie können die Gültigkeit jederzeit abbrechen oder den Löschzeitpunkt ändern, solange der Datensatz-Löschvorgang noch nicht gestartet wurde. Nachdem Sie eine Datensatzgültigkeit abgebrochen haben, können Sie sie erneut starten, indem Sie ein neues Ablaufdatum festlegen.
 
-Sobald das Löschen des Datensatzes gestartet wurde, wird seine Gültigkeit als `executing` gekennzeichnet und darf nicht weiter geändert werden. Der Datensatz selbst kann bis zu sieben Tage lang wiederhergestellt werden, jedoch nur durch einen manuellen Prozess über eine Adobe-Service-Anfrage. Während die Anfrage ausgeführt wird, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Diensten zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als `executed` gekennzeichnet.
+Sobald das Löschen des Datensatzes gestartet wurde, wird seine Gültigkeit als `executing` gekennzeichnet und darf nicht weiter geändert werden. Der Datensatz selbst kann bis zu sieben Tage lang wiederhergestellt werden, jedoch nur durch einen manuellen Prozess über eine Adobe-Service-Anfrage. Während die Anfrage ausgeführt wird, beginnen der Data Lake, der Identity Service und das Echtzeit-Kundenprofil separate Prozesse, um den Inhalt des Datensatzes aus den entsprechenden Diensten zu entfernen. Sobald die Daten aus allen drei Services gelöscht wurden, wird der Ablauf als `completed` gekennzeichnet.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **Antwort**
 
 Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. Das folgende Beispiel wurde aus Platzgründen gekürzt.
+
+>[!IMPORTANT]
+>
+>Die `ttlId` in der Antwort wird auch als `{DATASET_EXPIRATION_ID}`. Beide beziehen sich auf die eindeutige Kennung für den Ablauf des Datensatzes.
 
 ```json
 {
@@ -90,26 +94,30 @@ Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `totalRecords` | Anzahl der Datensatzgültigkeiten, die den Parametern des Auflistungsaufrufs entsprechen. |
-| `ttlDetails` | Enthält die Details der zurückgegebenen Datensatzgültigkeiten. Weitere Informationen zu den Eigenschaften einer Datensatzgültigkeit finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
+| `total_count` | Anzahl der Datensatzgültigkeiten, die den Parametern des Auflistungsaufrufs entsprechen. |
+| `results` | Enthält die Details der zurückgegebenen Datensatzgültigkeiten. Weitere Informationen zu den Eigenschaften einer Datensatzgültigkeit finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
 
 {style="table-layout:auto"}
 
 ## Nachschlagen einer Datensatzgültigkeit {#lookup}
 
-Um nach dem Ablauf eines Datensatzes zu suchen, stellen Sie eine GET-Anfrage mit der `datasetId` oder `ttlId`.
+Um nach dem Ablauf eines Datensatzes zu suchen, stellen Sie eine GET-Anfrage mit der `{DATASET_ID}` oder `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>Die `{DATASET_EXPIRATION_ID}` wird als `ttlId` in der Antwort. Beide beziehen sich auf die eindeutige Kennung für den Ablauf des Datensatzes.
 
 **API-Format**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
 | `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeit Sie nachschlagen möchten. |
-| `{TTL_ID}` | Die ID der Datensatzgültigkeit. |
+| `{DATASET_EXPIRATION_ID}` | Die ID der Datensatzgültigkeit. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-201-Status (Erstellt) und den neuen Status des Datensatzablaufs zurück, wenn kein bereits vorhandener Datensatzablauf vorhanden war.
+Eine erfolgreiche Antwort gibt den HTTP-201-Status (Erstellt) und den neuen Status des Datensatzablaufs zurück.
 
 ```json
 {
@@ -254,7 +262,7 @@ Eine erfolgreiche Antwort gibt den HTTP-201-Status (Erstellt) und den neuen Stat
 | `displayName` | Ein Anzeigename für die Anfrage zur Gültigkeit. |
 | `description` | Eine Beschreibung für die Ablaufanfrage. |
 
-Der HTTP-Status 400 (Ungültige Anfrage) tritt auf, wenn für den Datensatz bereits eine Gültigkeit für den Datensatz existiert. Bei einer fehlerhaften Antwort wird der HTTP-Status 404 (Nicht gefunden) zurückgegeben, wenn kein solcher Datensatzablauf existiert (oder Sie keinen Zugriff darauf haben).
+Der HTTP-Status 400 (Ungültige Anfrage) tritt auf, wenn für den Datensatz bereits eine Gültigkeit für den Datensatz existiert. Bei einer fehlerhaften Antwort wird der HTTP-Status 404 (Nicht gefunden) zurückgegeben, wenn kein solcher Datensatzablauf existiert (oder Sie keinen Zugriff auf den Datensatz haben).
 
 ## Aktualisieren der Datensatzgültigkeit {#update}
 
@@ -267,14 +275,12 @@ Um ein Ablaufdatum für einen Datensatz zu aktualisieren, verwenden Sie eine PUT
 **API-Format**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die ID des Datensatzablaufs, den Sie ändern möchten. |
+| `{DATASET_EXPIRATION_ID}` | Die ID des Datensatzablaufs, den Sie ändern möchten. Hinweis: Dies wird als `ttlId` in der Antwort. |
 
 **Anfrage**
 
@@ -374,19 +380,19 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) zurück und das
 
 ## Gültigkeitsstatus-Verlauf eines Datensatzes abrufen {#retrieve-expiration-history}
 
-Sie können das Gültigkeitsstatus-Protokoll eines spezifischen Datensatzes mithilfe des Abfrageparameters `include=history` in einer Suchanfrage aufrufen. Das Ergebnis enthält Informationen über die Erstellung des Datensatzablaufs, alle angewendeten Aktualisierungen sowie über den Abbruch oder die Ausführung (falls zutreffend). Sie können auch die `ttlId` des Datensatzablaufs.
+Verwenden Sie zum Nachschlagen des Ablaufstatus-Verlaufs eines bestimmten Datensatzes die `{DATASET_ID}` und `include=history` Abfrageparameter in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung des Datensatzablaufs, alle angewendeten Aktualisierungen sowie über den Abbruch oder die Ausführung (falls zutreffend). Sie können auch die `{DATASET_EXPIRATION_ID}` , um den Ablaufstatus des Datensatzes abzurufen.
 
 **API-Format**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
 | `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeitsprotokoll Sie aufrufen möchten. |
-| `{TTL_ID}` | Die ID der Datensatzgültigkeit. |
+| `{DATASET_EXPIRATION_ID}` | Die ID des Datensatzablaufs. Hinweis: Dies wird als `ttlId` in der Antwort. |
 
 {style="table-layout:auto"}
 
