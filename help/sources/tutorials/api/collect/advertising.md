@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses für Werbequellen mithilfe der Flow Service-
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Werbeprogramm von Drittanbietern und deren Aufnahme in Platform mithilfe von Quell-Connectoren und der Flow Service-API beschrieben.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1347'
-ht-degree: 92%
+source-wordcount: '1340'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus dem Werbeprogra
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Werbequelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#advertising) für eine Liste von Werbequellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Werbequelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#advertising) für eine Liste von Werbequellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte
 

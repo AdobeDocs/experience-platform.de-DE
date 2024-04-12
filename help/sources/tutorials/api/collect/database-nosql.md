@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses für Datenbankquellen mit der Flow Service-A
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Aufnehmen in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 92%
+source-wordcount: '1416'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbank
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#database) für eine Liste von Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#database) für eine Liste von Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden. Der einzige für die [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) ist TIMESTAMP_NTZ mit UTC-Zeit.
 
 ## Erste Schritte
 

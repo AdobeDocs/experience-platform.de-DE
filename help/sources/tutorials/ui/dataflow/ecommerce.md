@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses mit einer E-Commerce-Quelle in der Benutzero
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine E-Commerce-Quelle erstellen.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1430'
-ht-degree: 47%
+source-wordcount: '1450'
+ht-degree: 45%
 
 ---
 
@@ -18,16 +18,17 @@ Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und 
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit einer E-Commerce-Quelle verfügen. Eine Liste der Tutorials zum Erstellen verschiedener E-Commerce-Quellkonten in der Benutzeroberfläche finden Sie im [Quellen - Übersicht](../../../home.md#ecommerce).
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit einer E-Commerce-Quelle verfügen. Eine Liste der Tutorials zum Erstellen verschiedener E-Commerce-Quellkonten in der Benutzeroberfläche finden Sie im [Quellen - Übersicht](../../../home.md#ecommerce).
+>* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platform voraus:
+Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von Platform voraus:
 
 * [Quellen](../../../home.md): Platform ermöglicht das Aufnehmen von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): Ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuwandeln und zu validieren.
 
@@ -98,7 +99,7 @@ Die [!UICONTROL Planung] angezeigt, sodass Sie einen Aufnahmezeitplan konfigurie
 >
 >Während einer einmaligen Erfassung sind Intervall und Aufstockung nicht sichtbar.
 
-![scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
+![Planung](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
 Wenn Sie die Aufnahmefrequenz auf `Minute`, `Hour`, `Day`oder `Week`, müssen Sie ein Intervall festlegen, um einen bestimmten Zeitrahmen zwischen jeder Aufnahme festzulegen. Eine Erfassungsfrequenz, die beispielsweise auf `Day` und ein Intervall festgelegt auf `15` bedeutet, dass Ihr Datenfluss alle 15 Tage Daten aufnehmen soll.
 

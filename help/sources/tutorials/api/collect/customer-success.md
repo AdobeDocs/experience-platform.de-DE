@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses für Customer-Success-Quellen mithilfe der F
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Customer-Success-System und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1264'
-ht-degree: 91%
+source-wordcount: '1257'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,8 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Customer-
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Kunden-Erfolgsquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#customer-success) für eine Liste von Kundenerfolgsquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Kunden-Erfolgsquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#customer-success) für eine Liste von Kundenerfolgsquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte
 

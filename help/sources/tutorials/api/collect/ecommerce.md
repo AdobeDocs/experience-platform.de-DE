@@ -5,10 +5,10 @@ title: Erstellen eines Datenflusses für E-Commerce-Quellen mithilfe der Flow Se
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem E-Commerce-System eines Drittanbieters und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 91%
+source-wordcount: '1304'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer E-Commerc
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer E-Commerce-Quelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#ecommerce) für eine Liste von E-Commerce-Quellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer E-Commerce-Quelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#ecommerce) für eine Liste von E-Commerce-Quellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte
 
