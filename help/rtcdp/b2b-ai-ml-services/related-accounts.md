@@ -5,10 +5,10 @@ description: Eine Übersicht und weitere Informationen über die zugehörige Kon
 feature: Get Started, Profiles, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 22%
+source-wordcount: '435'
+ht-degree: 14%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 ## Übersicht {#overview}
 
-B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jedes nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine präzise Ansicht der Unternehmenskunden zu erhalten und mindert die Effizienz und Effektivität der B2B-Marketing- und Verkaufsaktivitäten.
+B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jedes nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine genaue Ansicht der Kunden zu erhalten und so die Effizienz und Effektivität ihrer B2B-Marketing- und Verkaufsaktivitäten zu reduzieren.
 
 | ID | Name | Website | Branche | Land | Telefon | Hat eine Opportunity mit dem Wert > `$1 million` |
 |---|---|---|---|---|---|---|
@@ -32,7 +32,7 @@ mit den entsprechenden Konten, [!DNL Real-Time CDP B2B] zeigt Ihnen jetzt eine L
 
 ![Bildschirm mit verwandten Konten in der Experience Platform-Benutzeroberfläche.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Verwenden Sie diese Funktion, um verwandte Kontoprofile für ein Kontoprofil in der Experience Platform-Benutzeroberfläche anzuzeigen und dann die zugehörigen Konten in Ihre Segmentdefinitionen aufzunehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren Segmenten anzuwenden.
+Verwenden Sie diese Funktion, um verwandte Kontoprofile für ein Kontoprofil in der Experience Platform-Benutzeroberfläche anzuzeigen und dann die zugehörigen Konten in Ihre Segmentdefinitionen aufzunehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren Zielgruppen anzuwenden.
 
 ## Aktivieren des zugehörigen Kontodienstes {#enable}
 

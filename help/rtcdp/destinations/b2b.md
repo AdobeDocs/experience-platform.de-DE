@@ -4,9 +4,9 @@ description: Ein Überblick über die Rolle von Zielen in Adobe Real-time Custom
 feature: Destinations
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Experience Platform-Ziele, die vollständig von Real-Time CDP B2B Edition unters
 
 Informationen dazu, wie Ziele in Ihren B2B-Workflow integriert werden können, finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-Mit Adobe Real-time Customer Data Platform B2B Edition können Sie Ihre B2B-Daten über den Marketo Engage-Ziel-Connector exportieren. Mithilfe des Marketo Engage-Ziels können Sie in Adobe Experience Platform erstellte Segmente an Marketo senden, wo sie als statische Listen angezeigt werden.
+Mit Adobe Real-time Customer Data Platform B2B Edition können Sie Ihre B2B-Daten über den Marketo Engage-Ziel-Connector exportieren. Mithilfe des Marketo Engage-Ziels können Sie in Adobe Experience Platform erstellte Zielgruppen an Marketo senden, wo sie als statische Listen angezeigt werden.
 
 Die folgenden Dokumente enthalten weitere Informationen zur Verwendung des Marketo Engage-Ziels zum Exportieren von Daten:
 

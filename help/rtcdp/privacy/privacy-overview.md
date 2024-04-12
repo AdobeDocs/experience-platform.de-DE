@@ -4,10 +4,10 @@ title: Datenschutz in Real-time Customer Data Platform
 description: Mit Adobe Real-time Customer Data Platform können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 99%
+source-wordcount: '386'
+ht-degree: 86%
 
 ---
 
@@ -27,13 +27,13 @@ Rechtliche Datenschutzbestimmungen wie die [!DNL General Data Protection Regulat
 
 ## Opt-out-Funktionen
 
-[!DNL Real-Time CDP] ermöglicht es Kundinnen und Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die kundenseitigen Opt-out-Voreinstellungen werden von [!DNL Real-Time Customer Profile] erfasst und gespeichert und können erzwungen werden, indem Benutzende ausgeschlossen werden, die sich mit boolescher Logik („AND NOT“) im Segmentprädikat von einem Segment abgemeldet haben.
+[!DNL Real-Time CDP] ermöglicht es Kundinnen und Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die Opt-out-Voreinstellungen von Kunden werden erfasst und gespeichert von [!DNL Real-Time Customer Profile]und können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mit boolescher Logik (&quot;AND NOT&quot;) in der Segmenteigenschaft von einer Zielgruppe abgemeldet haben.
 
 Weitere Informationen finden Sie im Dokument zu [Berücksichtigung von Opt-out-Anfragen](../../segmentation/consents.md) in der Dokumentation zum Segmentierungs-Service in Adobe Experience Platform.
 
 ## IAB TCF 2.0-Unterstützung
 
-[!DNL Real-Time CDP] basiert auf Adobe Experience Platform, das Teil der registrierten [Anbieterliste](https://iabeurope.eu/vendor-list-tcf/) für den [!DNL Transparency & Consent Framework (TCF)] ist, wie vom [!DNL Interactive Advertising Bureau (IAB)] beschrieben. In Übereinstimmung mit den TCF 2.0-Anforderungen können Sie mit Platform detaillierte Kundeneinverständnisdaten erfassen und in Ihre gespeicherten Kundenprofile integrieren. Diese Einverständnisdaten können dann je nach Anwendungsfall bei der Frage berücksichtigt werden, ob bestimmte Profile in exportierte Zielgruppensegmente einbezogen werden.
+[!DNL Real-Time CDP] basiert auf Adobe Experience Platform, das Teil der registrierten [Anbieterliste](https://iabeurope.eu/vendor-list-tcf/) für den [!DNL Transparency & Consent Framework (TCF)] ist, wie vom [!DNL Interactive Advertising Bureau (IAB)] beschrieben. In Übereinstimmung mit den TCF 2.0-Anforderungen können Sie mit Platform detaillierte Kundeneinverständnisdaten erfassen und in Ihre gespeicherten Kundenprofile integrieren. Diese Einwilligungsdaten können dann je nach Anwendungsfall in exportierte Zielgruppen einbezogen werden.
 
 Weiterführende Informationen finden Sie in der Übersicht zur [IAB TCF 2.0-Unterstützung in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md).
 

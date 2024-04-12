@@ -5,10 +5,10 @@ description: Dieses Beispiel-Szenario zeigt eine mögliche Konfiguration Ihrer I
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 83%
+source-wordcount: '1151'
+ht-degree: 76%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 83%
 Real-time Customer Data Platform B2B Edition erweitert die bestehenden Real-Time CDP- und Adobe Experience Platform-Angebote, um B2B-Daten und -Workflows zu unterstützen. Dieses Dokument enthält ein Beispiel für einen Anwendungsfall, der die zusätzlichen Vorteile von B2B Edition verdeutlicht. Dazu gehören:
 
 - Kombinieren Sie Personen- und Account-Daten aus verschiedenen isolierten Datenquellen, um eine umfassende Übersicht zu erhalten, die ein besseres Verständnis der Kunden und eine genauere Segmentierung ermöglicht. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung von XDM-Schema-Beziehungen](./schemas/b2b.md) zur Verwendung mit verschiedenen B2B-Quellen.
-- Segmentieren Sie eine Zielgruppe anhand von Attributen verwandter Entitäten. Dazu gehören Accounts, Opportunities, Kampagnen und Marketing-Listen. Segmente sind nicht mehr nur auf Personenattribute und Erlebnisereignisse beschränkt. In der [Dokumentation zur B2B-Segmentierung](./segmentation/b2b.md) finden Sie weitere Beispiele für die Erstellung von B2B-spezifischen Zielgruppen.
+- Segmentieren Sie eine Zielgruppe anhand von Attributen verwandter Entitäten. Dazu gehören Accounts, Opportunities, Kampagnen und Marketing-Listen. Zielgruppen sind nicht mehr nur auf Personalattribute und Erlebnisereignisse beschränkt. In der [Dokumentation zur B2B-Segmentierung](./segmentation/b2b.md) finden Sie weitere Beispiele für die Erstellung von B2B-spezifischen Zielgruppen.
 - Native Unterstützung für den Anwendungsfall, dass eine Person mit mehreren Accounts verbunden ist.
 
 ## Anwendungsfall
@@ -50,9 +50,9 @@ Da die relevanten Townsend-Informationen in Marketo 1 als Account 1 und in Marke
 
 Dies hindert das Marketing-Team von Bodea daran, bestimmte Geschäftskontakte in diesen Unternehmen mit dieser neuen Möglichkeit effizient anzusprechen.
 
-Bis heute hat Townsend über sämtliche Accounts insgesamt mehr als eine Million Dollar für Bodea-Produkte ausgegeben. Ein mit dem alten System erstelltes Segment würde jedoch niemanden von Townsend einschließen, es sei denn, die Gesamtausgaben innerhalb eines einzigen Vertriebssystems beliefen sich auf mehr als 1 Million Dollar. Der Grund dafür ist, dass die Umsatzdaten in den Accounts der verschiedenen Vertriebssysteme getrennt sind.
+Bis heute hat Townsend über sämtliche Accounts insgesamt mehr als eine Million Dollar für Bodea-Produkte ausgegeben. Eine Zielgruppe, die mit ihrem alten System erstellt wurde, würde jedoch niemanden aus Townsend einschließen, es sei denn, die in einem einzigen Verkaufssystem insgesamt aufgewendeten Mittel beliefen sich auf mehr als 1 Million Dollar. Der Grund dafür ist, dass die Umsatzdaten in den Accounts der verschiedenen Vertriebssysteme getrennt sind.
 
-Da die Ausgaben von Townsend auf verschiedene Vertriebssysteme aufgeteilt sind und einzeln nicht mehr als eine Million betragen, würde das Segment weder in Marketo 1 noch in Marketo 2 jemanden finden, der qualifiziert ist.
+Da die Ausgaben von Townsend auf verschiedene Vertriebssysteme aufgeteilt sind und nicht einzeln mehr als eine Million umfassen, würde die Segmentdefinition niemanden finden, der in Marketo 1 oder Marketo 2 qualifiziert ist.
 
 ### Lösung des Problems durch die Real-Time CDP B2B Edition
 
@@ -77,7 +77,7 @@ Der Einfachheit halber und für den Zweck dieses Beispiels werden die Personen a
 | Opportunity 1, 200.000 Dollar |
 | Opportunity 2, 900.000 Dollar |
 
-- Erstellen Sie anhand dieser aggregierten Daten einzigartige Segmente für verschiedene Marketing-Initiativen. In diesem Beispiel findet das Segment alle Personen, die:
+- Erstellen Sie eindeutige Zielgruppen, indem Sie diese aggregierten Daten für verschiedene Marketinginitiativen verwenden. In diesem Beispiel findet die Segmentdefinition alle Personen, die:
 
    - Verbundene Opportunities (für ALLE Accounts) mit einem Wert von über 1 Million Dollar haben
    - UND

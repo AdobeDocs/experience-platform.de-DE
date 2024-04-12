@@ -3,7 +3,7 @@ title: Real-Time CDP-Schutzmechanismen
 description: Erfahren Sie mehr über die Datensicherungen in den verschiedenen Diensten und Bereichen von Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 7%
@@ -27,7 +27,6 @@ Beginnen Sie hier und folgen Sie den unten stehenden Links, um alle Limits über
 >[!TIP]
 >
 >Außerdem Besuch [digitale Erlebnispläne](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) für weitere Informationen wie [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Dienste.
-
 
 ## Schutzarten {#guardrail-types}
 

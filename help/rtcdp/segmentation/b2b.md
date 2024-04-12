@@ -4,9 +4,9 @@ description: Ein Überblick über die verschiedenen Anwendungsfälle der Adobe R
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Dieses Dokument enthält Beispiele für Segmentdefinitionen in Adobe Real-time C
 Bevor Sie die Segmentierungsattribute für B2B-Klassen verwenden können, müssen Sie die folgenden Schritte ausführen:
 
 1. Erstellen Sie Schemas, die die B2B-Klassen verwenden. Die B2B Edition-Klassen umfassen Konto, Kampagne, Chancen, Marketingliste und mehr. Informationen über [Einrichten von Schemata zur Verwendung mit B2B-Klassen](../schemas/b2b.md) finden Sie in der Schemadokumentation.
-1. Erstellen Sie Beziehungen zwischen Ihren Experience-Datenmodell (XDM) B2B-Schemas. Segmente, die auf B2B Edition-Attributen basieren, erfordern Beziehungen zwischen den Klassen, um die erweiterte Funktion zur B2B-Segmentierung vollständig zu nutzen. Siehe die Dokumentation unter [wie eine Beziehung zwischen zwei B2B-Schemas definiert wird](../../xdm/tutorials/relationship-b2b.md) für weitere Informationen.
-1. Erfassen Sie Daten mithilfe von Datensätzen, die auf Ihren B2B-Schemas basieren. Weitere Informationen finden Sie in der Quelldokumentation für [Informationen zur Datenerfassung](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. Lesen Sie die [Segment Builder-Benutzerhandbuch](../../segmentation/ui/segment-builder.md) für eine detailliertere Anleitung zum Erstellen von Zielgruppen.
+2. Erstellen Sie Beziehungen zwischen Ihren Experience-Datenmodell (XDM) B2B-Schemas. Zielgruppen, die auf B2B Edition-Attributen basieren, erfordern Beziehungen zwischen den Klassen, um die erweiterte Funktion zur B2B-Segmentierung vollständig zu nutzen. Siehe die Dokumentation unter [wie eine Beziehung zwischen zwei B2B-Schemas definiert wird](../../xdm/tutorials/relationship-b2b.md) für weitere Informationen.
+3. Erfassen Sie Daten mithilfe von Datensätzen, die auf Ihren B2B-Schemas basieren. Weitere Informationen finden Sie in der Quelldokumentation für [Informationen zur Datenerfassung](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Lesen Sie die [Segment Builder-Benutzerhandbuch](../../segmentation/ui/segment-builder.md) für eine detailliertere Anleitung zum Erstellen von Zielgruppen.
 
 Sobald diese Anforderungen erfüllt sind, können Sie diese Attribute für gängige B2B-Anwendungsfälle kombinieren.
 
@@ -54,7 +54,7 @@ Diese Beziehung wird im Segment Builder durch die Verwendung von `Key` Ordner wi
 
 Weitere Informationen finden Sie unter [Schemata in der Dokumentation zu Real-time Customer Data Platform B2B Edition](../schemas/b2b.md) für weitere Informationen zu den verfügbaren B2B-Klassen.
 
-Die folgenden Anwendungsfälle liefern Informationen darüber, welche Klassen verwendet werden, um Beziehungen zwischen den verschiedenen Schemas herzustellen, um diese Ergebnisse zu erzielen. Diese Beispiele helfen Ihnen bei der Erstellung eigener Segmente.
+Die folgenden Anwendungsfälle liefern Informationen darüber, welche Klassen verwendet werden, um Beziehungen zwischen den verschiedenen Schemas herzustellen, um diese Ergebnisse zu erzielen. Anhand dieser Beispiele können Sie Ihre eigenen Zielgruppen erstellen.
 
 ## Beispiele für verschiedene Anwendungsfälle der Segmentierung {#use-cases}
 

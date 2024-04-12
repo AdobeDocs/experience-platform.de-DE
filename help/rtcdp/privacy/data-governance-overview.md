@@ -4,10 +4,10 @@ title: Data Governance – Übersicht
 description: Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen.
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 34%
+source-wordcount: '689'
+ht-degree: 30%
 
 ---
 
@@ -37,19 +37,19 @@ Sie können Datennutzungsbeschränkungen für ein Ziel festlegen, indem Sie Mark
 >
 >Weitere Informationen zu Marketing-Aktionen und deren Verwendung in Datennutzungsrichtlinien finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md) im [!DNL Experience Platform] Dokumentation.
 
-Durch die Definition von Marketing-Aktionen für Ziele können Sie sicherstellen, dass alle an diese Ziele gesendeten Profile oder Segmente mit Datennutzungsrichtlinien konform sind. Daher sollten Sie Ihren Zielen entsprechend den Anforderungen Ihres Unternehmens, Richtlinienbeschränkungen für die Aktivierung durchzusetzen, geeignete Marketing-Aktionen hinzufügen.
+Durch die Definition von Marketing-Aktionen für Ziele können Sie sicherstellen, dass alle an diese Ziele gesendeten Profile oder Zielgruppen mit Datennutzungsrichtlinien konform sind. Daher sollten Sie Ihren Zielen entsprechend den Anforderungen Ihres Unternehmens, Richtlinienbeschränkungen für die Aktivierung durchzusetzen, geeignete Marketing-Aktionen hinzufügen.
 
 Marketing-Aktionen können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Marketing-Aktionen an verschiedenen Punkten im Setup-Workflow angezeigt. Siehe [Dokumentation zu Zielen](../destinations/overview.md) für Schritte zur Konfiguration Ihres bestimmten Ziels.
 
 ## Richtlinien zur Datennutzung verwalten {#policies}
 
-Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Real-Time CDP ausführen bzw. nicht ausführen dürfen. Weiterführende Informationen dazu finden Sie im Abschnitt „Datennutzungsrichtlinien“ unter [!DNL Experience Platform][Data Governance – Übersicht](../../data-governance/home.md) für 
+Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Real-Time CDP ausführen bzw. nicht ausführen dürfen. Siehe Abschnitt &quot;Datennutzungsrichtlinien&quot;im Abschnitt [!DNL Experience Platform] [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen.
 
-Adobe Experience Platform bietet verschiedene zentrale Richtlinien für gängige Anwendungsfälle bei Kundenerlebnissen. Diese Richtlinien können in der Benutzeroberfläche angezeigt werden, indem Sie zur **[!UICONTROL Richtlinien]** Arbeitsbereich und wählen Sie die **[!UICONTROL Durchsuchen]** Registerkarte. Siehe [Richtlinien-Benutzerhandbuch](../../data-governance/policies/user-guide.md) im [!DNL Experience Platform] Dokumentation für detailliertere Schritte zum Arbeiten mit Richtlinien in der Benutzeroberfläche, einschließlich der Erstellung eigener benutzerdefinierter Richtlinien.
+Adobe Experience Platform bietet mehrere zentrale Richtlinien für gängige Anwendungsfälle für Kundenerlebnisse. Diese Richtlinien können in der Benutzeroberfläche angezeigt werden, indem Sie zur **[!UICONTROL Richtlinien]** Arbeitsbereich und wählen Sie die **[!UICONTROL Durchsuchen]** Registerkarte. Siehe [Richtlinien-Benutzerhandbuch](../../data-governance/policies/user-guide.md) im [!DNL Experience Platform] Dokumentation für detailliertere Schritte zum Arbeiten mit Richtlinien in der Benutzeroberfläche, einschließlich der Erstellung eigener benutzerdefinierter Richtlinien.
 
 ## Einhaltung von Datennutzungsrichtlinien durchsetzen {#enforce}
 
-Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppensegmenten für Ziele in Real-Time CDP erzwingt Data Governance automatisch Nutzungsrichtlinien, falls Verstöße auftreten.
+Nachdem Sie Daten gekennzeichnet und Nutzungsrichtlinien definiert haben, können Sie die Einhaltung von Datennutzungsrichtlinien erzwingen. Beim Aktivieren von Zielgruppen für Ziele in Real-Time CDP erzwingt Data Governance automatisch Nutzungsrichtlinien, falls Verstöße auftreten sollten.
 
 Siehe Dokument unter [automatische Richtliniendurchsetzung](../../data-governance/enforcement/auto-enforcement.md) für weitere Informationen.
 

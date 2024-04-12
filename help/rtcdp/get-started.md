@@ -4,10 +4,10 @@ title: Erste Schritte mit Real-time Customer Data Platform
 description: Verwenden Sie dieses Szenario als Beispiel, wenn Sie Ihre Implementierung von Adobe Real-Time Customer Data Platform einrichten.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '2333'
-ht-degree: 68%
+source-wordcount: '2325'
+ht-degree: 62%
 
 ---
 
@@ -55,7 +55,7 @@ Dieses Tutorial umfasst folgende Schritte:
 1. [Verschiedene Datenquellen](#using-multiple-data-sources) verwenden.
 1. [Datenquelle konfigurieren](#configuring-a-data-source).
 1. [Daten erfassen](#bringing-the-data-together-for-a-specific-customer) für einen bestimmten Kunden.
-1. [Segmente](#segments) einrichten.
+1. Einrichten [Zielgruppen](#audiences).
 1. [Ziele](#destinations) einrichten.
 1. [Profil geräteübergreifend zusammenführen](#cross-device-identity-stitching).
 1. [Profil analysieren](#analyzing-the-profile).
@@ -158,7 +158,7 @@ Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog na
 
    Wählen Sie beispielsweise **[!UICONTROL Kontakte]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
 
-   Adobe Experience Platform entlastet diesen Prozess durch die automatische Zuordnung von Standardfeldern zu den [!DNL Experience Data Model] (XDM)-Profilschema.
+   Real-Time CDP entlastet diesen Prozess durch die automatische Zuordnung von Standardfeldern zum [!DNL Experience Data Model] (XDM)-Profilschema.
 
 1. Überprüfen Sie die Feldzuweisungen.
 
@@ -181,13 +181,15 @@ Luma hat viele interne Richtlinien, die die Nutzung bestimmter Arten von erfasst
 
 Sobald die Datennutzungsbezeichnungen angewendet wurden, kann Luma dann Data Governance verwenden, um Datennutzungsrichtlinien zu erstellen. Datennutzungsrichtlinien sind Regeln, die beschreiben, welche Arten von Aktionen Sie für Daten ausführen dürfen, die bestimmte Bezeichnungen enthalten. Beim Versuch, eine Aktion in Real-Time CDP durchzuführen, die eine Richtlinienverletzung darstellt, wird die Aktion verhindert und ein Warnhinweis angezeigt, der angibt, welche Richtlinie verletzt wurde und warum.
 
+Zusätzlich zu Real-Time CDP
+
 ## Zusammenführen der Daten für einen bestimmten Kunden
 
 Durchsuchen Sie in diesem Szenario Profile nach Sarah Rose. Ihr Profil erscheint mit der E-Mail-Adresse, die sie zum Anmelden verwendet hat.
 
 <!-- ![image](assets/luma-find-profile.png) -->
 
-Alle Profilinformationen, die Luma zu Sarah hat, werden angezeigt. Dazu gehören persönliche Daten wie Adresse und Telefonnummer, Kommunikationseinstellungen und die Segmente, für die sie qualifiziert ist.
+Alle Profilinformationen, die Luma zu Sarah hat, werden angezeigt. Dazu gehören ihre persönlichen Informationen wie Adresse und Telefonnummer, die Voreinstellungen für die Kommunikation und die Zielgruppen, für die sie qualifiziert ist.
 
 | Kategorie | Beschreibung |
 |---|---|
@@ -198,9 +200,9 @@ Das Real-Time CDP-Profil reduziert den Arbeitsablauf des Luma-Marketingteams von
 
 Das Marketing-Team kann diese Erweiterung verwenden. [!DNL Real-Time Customer Profile] , um Sarahs Erlebnis besser zu personalisieren und die Markentreue zu Luma zu steigern.
 
-## Segmente
+## Zielgruppen
 
-Die leistungsstarken Segmentierungsfunktionen von Adobe Experience Platform ermöglichen es Marketing-Experten, Attribute, Ereignisse und vorhandene Segmente basierend auf den in der Variablen [!DNL Real-Time Customer Profile].
+Die leistungsstarken Segmentierungsfunktionen von Adobe Experience Platform ermöglichen es Marketing-Experten, Attribute, Ereignisse und vorhandene Zielgruppen anhand der in der Variablen [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -210,9 +212,9 @@ Das Data-Science-Team von Luma hat Modelle zur Kauftendenz entwickelt. Ein Model
 
 <!-- ![image](assets/luma-gift.png) -->
 
-### Definieren eines Segments
+### Audience definieren
 
-Ändern oder erstellen Sie ein Segment, das Warenkorb-Abbrecher repräsentiert, die vermutlich gerade ein Geschenk kaufen:
+Verwenden Sie die verschiedenen Optionen für die visuelle Komposition oder den code-basierten Ausdruckseditor im Arbeitsbereich für Zielgruppen, um eine Zielgruppe zu ändern oder zu erstellen, die Warenkorbabbrecher darstellt, die offenbar gerade ein Geschenk kaufen:
 
 ```sql
 Profile: Category != Preferred Category 
@@ -231,11 +233,11 @@ Da Sarah wahrscheinlich einen Geschenkartikel in den Warenkorb gelegt und den Vo
 
 ## Ziele
 
-Wenn Sie das Segment &quot;Warenkorbabbrecher für Geschenke&quot;hinzugefügt haben, können Sie ungefähr sehen, wie viele Personen Teil dieses Segments sind. Sie können aktiv werden und es für Personalisierungszwecke kanalübergreifend bereitstellen.
+Wenn Sie die Zielgruppe &quot;Warenkorbabbrecher für Geschenkgutscheine&quot;hinzugefügt haben, können Sie ungefähr sehen, wie viele Personen Teil dieser Zielgruppe sind. Sie können aktiv werden und es für Personalisierungszwecke kanalübergreifend bereitstellen.
 
 Auswählen **[!UICONTROL An Ziele senden]**.
 
-In Real-Time CDP kann Luma zur Personalisierung nahtlos auf ihre Zielgruppensegmente reagieren.\
+In Real-Time CDP kann Luma zur Personalisierung nahtlos auf ihre Zielgruppen reagieren.\
 Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- als auch Nicht-Adobe-Lösungen:
 
 ![Bild](assets/luma-dest.png)
@@ -252,7 +254,7 @@ In diesem Szenario möchte Luma die Zielgruppe mit Personalisierung über folgen
 
 ### Planen von Zielen
 
-Außerdem können Sie planen, dass das Segment zu einer bestimmten Zeit beginnen oder enden soll. Das Segment wird an den geplanten Daten veröffentlicht und in den konfigurierten Plattformen automatisch aktualisiert.
+Sie können auch planen, dass der Zielgruppenexport zu einem bestimmten Zeitpunkt gestartet oder beendet wird. Die Zielgruppe wird veröffentlicht und in den konfigurierten Plattformen am geplanten Datum automatisch aktualisiert.
 
 >[!NOTE]
 >
@@ -266,17 +268,21 @@ Das spart dem Direktor des Medien-Teams von Luma Hunderttausende von Dollar, da 
 
 ### Durchsetzung von Datennutzungsrichtlinien für Ziele
 
-Adobe Experience Platform enthält Datenschutz- und Sicherheitskontrollen, um zu ermitteln, ob ein Segment für ein bestimmtes Ziel aktiviert werden kann. Die Aktivierung ist je nach Marketing-Zweck, der dem Ziel beim Erstellen zugewiesen wurde, sowie den von Ihrem Unternehmen festgelegten Datennutzungsrichtlinien aktiviert oder eingeschränkt.
+Adobe Experience Platform enthält Datenschutz- und Sicherheitskontrollen, mit denen festgestellt werden kann, ob eine Zielgruppe für ein bestimmtes Ziel aktiviert werden kann. Die Aktivierung ist je nach Marketing-Zweck, der dem Ziel beim Erstellen zugewiesen wurde, sowie den von Ihrem Unternehmen festgelegten Datennutzungsrichtlinien aktiviert oder eingeschränkt.
 
 Wenn Ihre Aktivität gegen eine Richtlinie verstößt, wird eine Warnmeldung angezeigt. Diese Warnmeldung enthält Informationen zur Datenherkunft, mit denen Sie erkennen können, wie gegen die Richtlinie verstoßen wurde und was Sie tun können, um den Verstoß zu beheben.
 
 Mit diesen Steuerelementen [!DNL Experience Platform] hilft Luma, Vorschriften einzuhalten und verantwortungsvoll zu vermarkten. Diese Steuerelemente sind flexibel und können an die Anforderungen der Sicherheits- und Governance-Teams von Luma angepasst werden, sodass sie sich auf regionale und organisatorische Anforderungen für die Verwaltung bekannter und unbekannter Kundendaten einstellen können.
 
-### Arbeitsfläche für Datenflüsse
+<!--
 
-Beim Speichern zeigt eine visuelle Arbeitsfläche für Datenflüsse an, dass das Segment vom einheitlichen Profil den drei ausgewählten Zielen zugeordnet ist.
+### Data flow canvas
 
-![Bild](assets/luma-flow.png)
+When you save, a visual data flow canvas shows the segment mapped from the unified profile to the three destinations you selected.
+
+![image](assets/luma-flow.png)
+
+-->
 
 ## Geräteübergreifende Identitätszuordnung
 
@@ -297,8 +303,8 @@ Dank der Funktionen für Zielgruppenunterdrückung wird Sarah nicht mehr in die 
 
 ## Analysieren des Profils
 
-Luma-Marketer verwenden Adobe Experience Platform, um sich das Segment Geschenkartikel im Real-Time CDP Dashboard anzusehen. Sie sehen die Ergebnisse dieser Initiative im Laufe der Zeit und erkennen, dass sie erfolgreich ist. Kunden reagieren auf Angebote und geben mehr Geld aus.
+Luma-Marketer verwenden Adobe Experience Platform, um sich die Geschenkgutachter-Zielgruppe im Real-Time CDP Dashboard anzusehen. Sie sehen die Ergebnisse dieser Initiative im Laufe der Zeit und erkennen, dass sie erfolgreich ist. Kunden reagieren auf Angebote und geben mehr Geld aus.
 
-Das bedeutet, dass Marketer auf das Signal reagieren können, das auf der Verfügbarkeit dieser Daten in der Kundendatenplattform und der Verknüpfung von Kunden (wie z. B. Sarah) mit dem Segment beruht.
+Diese Einblicke ermöglichen es Marketingexperten, auf dieses Signal zu reagieren, das durch die Verfügbarkeit dieser Daten in der Kundendatenplattform und die Anbindung von Kunden wie Sarah an die Zielgruppe ausgelöst wurde.
 
 Mithilfe dieser Daten gelingt es Luma, die Loyalität und Kundenzufriedenheit zu steigern.

@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
-user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppensegmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
+user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile zu erstellen, Zielgruppen aus diesen Profilen zu erstellen und diese Zielgruppen für Drittanbieterziele zu aktivieren.
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 69%
+source-wordcount: '294'
+ht-degree: 59%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 69%
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
    * [Administration – Übersicht](administration/admin-overview.md)
+* Zielgruppen und Segmentierung {#segmentation}
+   * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
+   * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
+   * [Segmentierung in der Real-time CDP B2B Edition](segmentation/b2b.md)
+   * [Kunden-KI](segmentation/customer-ai.md)
 * Datensätze {#datasets}
    * [Datensätze](datasets/dataset.md)
    * [Datenqualität in Platform](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 69%
 * Schemata {#schemas}
    * [Übersicht über Schemata](schemas/overview.md)
    * [Schemata in der Real-time CDP B2B Edition](schemas/b2b.md)
-* Segmente {#segmentation}
-   * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
-   * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
-   * [Segmentierung in der Real-time CDP B2B Edition](segmentation/b2b.md)
-   * [Kunden-KI](segmentation/customer-ai.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Quellen in der Real-time CDP B2B Edition](sources/b2b.md)
