@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: b1f2d85f5a1cf6bb38344c87496488a919800029
+source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
 workflow-type: tm+mt
-source-wordcount: '2604'
+source-wordcount: '2730'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Sie können den AI-Assistenten nach Informationen wie den folgenden abfragen:
 
 * Anleitung zur Durchführung von Aufgaben in Bezug auf Daten und Zielgruppen.
 * Status und Metriken der vorhandenen Datenobjekte in Ihrer Organisation.
-* Verwenden Sie Fallbeispiele und Nuancen, um Ihre Datenobjekte, einschließlich Attributen, Datenflüssen, Datensätzen, Zielen, Schemas, Segmenten und Quellen, besser zu verstehen.
+* Verwenden Sie Fallbeispiele und Nuancen, um Ihre Datenobjekte, einschließlich Attributen, Zielgruppen, Datenflüssen, Datensätzen, Zielen, Schemas und Quellen, besser zu verstehen.
 
 In der folgenden Anleitung erfahren Sie, wie Sie mit dem KI-Assistenten in Experience Platform- und Real-Time CDP-Workflows navigieren und diese verstehen können.
 
@@ -51,7 +51,7 @@ Vor der Abfrage des AI-Assistenten müssen zwei Frageklassen beachtet werden:
 * **Nutzungsfragen**: Nutzungsfragen beziehen sich auf die Datenobjekte in Ihrem Unternehmen. Beispiele für Nutzungsfragen sind:
    * Wie viele Datensätze habe ich?
    * Wie viele Schemaattribute wurden noch nie verwendet?
-   * Welche Segmente wurden aktiviert?
+   * Welche Zielgruppen wurden aktiviert?
 
 >[!ENDSHADEBOX]
 
@@ -59,13 +59,14 @@ Vor der Abfrage des AI-Assistenten müssen zwei Frageklassen beachtet werden:
 
 Sie können den KI-Assistenten für folgende Ziele verwenden:
 
-| Ziel | Beschreibung |
-| --- | --- |
-| Experience Platform- und Real-Time CDP-Konzepte erlernen | Sie können konzeptionelle Fragen des AI Assistant stellen, damit Sie sich selbst auf Experience Platform und Real-Time CDP integrieren können. Sie können den AI-Assistenten auch verwenden, um mehr über Objekte und Verhaltensweisen zu erfahren, mit denen Sie nicht vertraut sind. |
-| Datenbereinigung in Ihren Sandboxes sicherstellen | Sie können den AI-Assistenten verwenden, um Duplikate oder nicht verwendete Objekte zu identifizieren, damit Sie die Sauberkeit Ihrer Sandbox effizient gewährleisten können. |
-| Werteanalyse koordinieren | Sie können den KI-Assistenten verwenden, um die am häufigsten verwendeten Objekte zu identifizieren und Leistungsindikatoren zu bewerten oder die wertvollsten Daten zu finden. |
-| Analyse der Auswirkungen | Sie können den AI-Assistenten verwenden, um Objekte zu identifizieren, die in bestimmten Workflows verwendet wurden, damit Sie die Auswirkungen von Änderungen bewerten können. |
-| Daten überwachen | Sie können den AI-Assistenten verwenden, um jeden Datenfluss, jede Aufnahme oder jeden Evaluierungsvorgang zu überwachen, sodass Sie Abweichungen anzeigen oder über den Fortschritt berichten können. |
+| Ziel | Beschreibung | Beispiel |
+| --- | --- | --- |
+| Lernkonzepte und kontinuierliche Workflows | <ul><li>Als neuer Benutzer können Sie mit dem AI-Assistenten Real-Time CDP- und Adobe Journey Optimizer-Konzepte erlernen und sich mit Produkten und Funktionen vertraut machen, mit denen Sie nicht vertraut sind.</li><li>Als erfahrener Benutzer können Sie den AI-Assistenten verwenden, um einen Randfall zu lösen, der Ihren Workflow blockieren könnte. | <ul><li>Wie richte ich ein Dashboard in Journey Analytics ein?</li><li>Erfahren Sie mehr über einige Anwendungsfälle für Real-Time CDP.</li></ul> |
+| Fehlerbehebung | Verwenden Sie den KI-Assistenten, um zu erfahren, wie Sie grundlegende Fehler beheben können, die in Ihrem Workflow auftreten können. | <ul><li>Was bewirkt dieser Fehler? {ERROR_MESSAGE} gemein?</li><li>Warum kann ich die Zielgruppe mit dem Namen &quot;Luma: E-Mail-Zielgruppe&quot;nicht löschen?</li></ul> |
+| Sandbox-Hygiene | Verwenden Sie den KI-Assistenten, um Duplikate oder nicht verwendete Objekte zu identifizieren, damit Sie Ihre Sandbox effizient verwalten können. | <ul><li>Können Sie mir ähnliche Zielgruppen zeigen?</li><li>Gibt es Schemas, denen kein Datensatz zugeordnet ist?</li></ul> |
+| Werteanalyse | Verwenden Sie den KI-Assistenten, um die am häufigsten verwendeten Datenobjekte zu identifizieren und Leistungsindikatoren zu bewerten oder die wertvollsten Datenobjekte zu finden. | <ul><li>Wie viele Profile enthält unsere Segmentdefinition &quot;Luma: E-Mail-Zielgruppe&quot;?</li><li>Wann wurden Zielgruppen für das Experience Cloud Audiences-Ziel aktiviert?</li></ul> |
+| Suche | Verwenden Sie den AI-Assistenten, um unterstützte Experience Platform-Objekte wie Zielgruppen, Datensätze, Ziele, Schemas und Quellen zu finden. | <ul><li>Geben Sie die Zielgruppen mit &quot;Luma&quot;im Namen an, die im letzten Quartal erstellt wurden.</li><li>Welche Attribute sind im XDM-Schema &quot;Luma: Benutzerdefinierte Aktionen&quot; enthalten?</li></ul> |
+| Folgenabschätzung | Verwenden Sie den KI-Assistenten, um Datenobjekte zu identifizieren, die in bestimmten Workflows verwendet wurden, damit Sie die Auswirkungen von Änderungen bewerten können. | <ul><li>Welche Zielgruppen verwenden `homeAddress.city` im Schema &quot;Luma: PersonProfiles&quot;?</li><li>Welche Datensätze sind die `consents.marketing.push.val` Profilattribut gespeichert in?</li></ul> |
 
 ## Zugriff auf den KI-Assistenten in der Experience Platform-Benutzeroberfläche
 
@@ -75,7 +76,7 @@ Um den KI-Assistenten zu starten, wählen Sie die **[!UICONTROL Symbol &quot;KI-
 
 Die Benutzeroberfläche des KI-Assistenten wird angezeigt und stellt Ihnen sofort Informationen zu den ersten Schritten bereit. Sie können die unter [!UICONTROL Erste Schritte] um Fragen und Befehle zu beantworten, z. B.:
 
-* [!UICONTROL Welche meiner Segmente sind aktiviert?]
+* [!UICONTROL Welche meiner Zielgruppen sind aktiviert?]
 * [!UICONTROL Was ist ein Schema?]
 * [!UICONTROL Erzählen Sie mir einige häufige Anwendungsfälle für Real-Time CDP]
 
@@ -159,9 +160,9 @@ Eine erweiterte Ansicht der Visualisierung wird angezeigt. Sie können das erwei
 
 Wenn Sie mit einer Frage zur Datennutzung aufgefordert werden, erläutert der AI-Assistent, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt der KI-Assistent die Schritte zur Anzeige von Segmentdefinitionen mit mehr als 1000 Profilen und deren Aktivierungsstatus.
 
-![Folgen Sie der Frage zu Segmenten, die veranschaulichen, wie der KI-Assistent die Antwort berechnete.](./images/ai-assistant/results-explained.png)
+![Folgen Sie der Frage zu Segmentdefinitionen, die veranschaulichen, wie der KI-Assistent die Antwort berechnet hat.](./images/ai-assistant/results-explained.png)
 
-Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und AI Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Beispielsweise können Sie den AI-Assistenten bitten, Ihnen einen Trend der Definitionen der Zählersegmente in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmentdefinitionen mit Nullsummenprofilen zu entfernen und bei der Anzeige der Daten Monatsnamen anstelle von Ganzzahlen zu verwenden.
+Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und AI Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Sie können beispielsweise den AI-Assistenten bitten, Ihnen einen Trend der Definitionen des Zählersegments in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmentdefinitionen mit Nullsummenprofilen zu entfernen und bei der Anzeige der Daten Monatsnamen anstelle von Ganzzahlen zu verwenden.
 
 +++
 
@@ -169,7 +170,7 @@ Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und AI A
 
 +++Auswählen , um ein Beispiel für die automatische Vervollständigung anzuzeigen
 
-Sie können die Funktion zum automatischen Ausfüllen verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung stehen für die folgenden Domänen zur Verfügung: Segmente, Schemas, Datensätze, Quellen und Ziele.
+Sie können die Funktion zum automatischen Ausfüllen verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung stehen für die folgenden Domänen zur Verfügung: Zielgruppen, Schemata, Datensätze, Quellen und Ziele.
 
 Sie können AutoComplete verwenden, indem Sie das Pluszeichen (**`+`**) in Ihrer Abfrage. Alternativ können Sie auch das Pluszeichen (**`+`**) am unteren Rand des Texteingabefelds. Es wird ein Fenster mit einer Liste der empfohlenen Datenobjekte aus Ihrer Sandbox angezeigt.
 
@@ -208,16 +209,16 @@ Das Modell zum Abrufen der Dokumentation wird auf Experience Platform (Real-Time
 Sie können auch Fragen zu Ihrer Datennutzung in den folgenden Domänen stellen:
 
 * Attribute
+* Zielgruppen
 * Datenflüsse
 * Datensätze
 * Ziele _(Fragen zu Konten und einige Fragen zum Datenfluss können derzeit nicht beantwortet werden.)_
 * Schemas _(Fragen zu Feldergruppen können derzeit nicht beantwortet werden.)_
-* Segmente
 * Quellen _(Fragen zu den Rechnungsabschlüssen können derzeit nicht beantwortet werden.)_
 
-Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Möglicherweise müssen Sie Ihre Fragen wie folgt formatieren: &quot;Wann war das Segment mit dem Titel {TITLE} created?&quot; statt &quot;Wann war die {TITLE} Segment erstellt?&quot;
+Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Möglicherweise müssen Sie Ihre Fragen wie folgt formatieren: &quot;Wann war die Zielgruppe mit dem Titel {TITLE} created?&quot; statt &quot;Wann war die {TITLE} Zielgruppe erstellt?&quot;
 
-Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten wie Schemas, Datensätzen, Attributen, Zielen und Segmenten zu informieren.
+Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten wie Zielgruppen, Schemata, Datensätzen, Attributen und Zielen zu informieren.
 
 ### Beispielhafte Fragen zur Datennutzung {#example-data-usage-questions}
 
@@ -225,9 +226,9 @@ Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Ob
 
 | Fragetyp | Beschreibung | Beispiele |
 | --- | --- | --- | 
-| Datenherkunft | Verwendung eines oder mehrerer Objekte über andere Experience Platform-Objekte hinweg verfolgen | <ul><li>Welche Datensätze werden verwendet? {SCHEMA_NAME} schema?</li><li>Wie viele Datensätze wurden mit demselben Schema erfasst?</li><li>Welche Datensätze wurden in aktivierten Segmenten verwendet?</li><li>Listen Sie die Schemas auf, deren Attribute in aktivierten Segmenten verwendet werden.</li><li>Anzeigen der Segmente, für die aktiviert ist {DESTINATION_ACCOUNT_NAME} und haben mehr als 1000 Profile.</li><li>Zeigen Sie mir die Attribute, die in den aktivierten Segmenten verwendet werden, die nach Januar 2023 geändert wurden.</li><li>Über welche Datensätze werden erfasst? {SOURCE_NAME}?</li><li>Welche Datenflüsse sind mit {DATAFLOW_NAME}</li><li>Listen Sie die Schemas auf, die sich auf aktivierte Segmente beziehen und im letzten 1 Jahr erstellt wurden.</li></ul> |
-| Verteilung und Aggregationen | Zusammenfassende Fragen zur Verwendung von Experience Platform-Objekten | <ul><li>Wie viel Prozent der aktivierten Segmente sind?</li><li>Wie viele Felder werden in der Segmentierung verwendet?</li><li>Welche Segmente sind für die meisten Ziele aktiviert?</li><li>Listen Sie doppelte Segmente auf.</li><li>Anzeigen der aktivierten Segmente für {DESTINATION_ACCOUNT_NAME} und ordnen Sie sie nach Profilgröße an.</li><li>Wie hoch ist der Prozentsatz der Segmente, die nicht aktiviert wurden, aber mehr als 100 Profile aufweisen. Zeigen Sie mir ihre Namen.</li><li>Geben Sie die 3 Quell-Connectoren an, die Daten in meine Datensätze aufnehmen.</li><li>Geben Sie mir die fünf wichtigsten Attribute an, die in aktivierten Segmenten basierend auf ihrem Vorkommen verwendet werden.</li></ul> |
-| Objektsuche | Rufen Sie ein Experience Platform-Objekt oder dessen Eigenschaften ab oder greifen Sie darauf zu. | <ul><li>Welche Datensätze sind mit keinem Schema verknüpft?</li><li>Auflisten der Attribute, die für {SEGMENT_NAME}?</li><li>Geben Sie mir die Liste der Schemas an, für die Profil aktiviert, aber seit ihrer Erstellung nicht geändert wurde.</li><li>Welche Segmente wurden in der letzten Woche geändert?</li><li>Geben Sie mir die Segmente an, die über dieselben Segmentdefinitionen und deren Erstellungsdatum verfügen.</li><li>Welche Datensätze sind profilaktiviert und enthalten auch, wie viele Segmente aus jedem Datensatz erstellt wurden.</li><li>Welche Quellkonten sind mit dem Datensatz XYZ verknüpft?</li><li>Anzeigen der Segmentdefinition und des Änderungsdatums von {SEGMENT_NAME}.</li></ul> |
+| Datenherkunft | Verwendung eines oder mehrerer Objekte über andere Experience Platform-Objekte hinweg verfolgen | <ul><li>Welche Datensätze werden verwendet? {SCHEMA_NAME} schema?</li><li>Wie viele Datensätze wurden mit demselben Schema erfasst?</li><li>Welche Datensätze wurden in aktivierten Zielgruppen verwendet?</li><li>Listen Sie die Schemas auf, deren Attribute in aktivierten Zielgruppen verwendet werden.</li><li>Anzeigen der Zielgruppen, für die aktiviert sind {DESTINATION_ACCOUNT_NAME} und haben mehr als 1000 Profile.</li><li>Zeigen Sie mir die Attribute an, die in den aktivierten Zielgruppen verwendet werden, die nach Januar 2023 geändert wurden.</li><li>Über welche Datensätze werden erfasst? {SOURCE_NAME}?</li><li>Welche Datenflüsse sind mit {DATAFLOW_NAME}</li><li>Listen Sie die Schemata auf, die für aktivierte Zielgruppen erstellt wurden und im letzten 1 Jahr erstellt wurden.</li></ul> |
+| Verteilung und Aggregationen | Zusammenfassende Fragen zur Verwendung von Experience Platform-Objekten | <ul><li>Wie hoch ist der Prozentsatz der aktivierten Zielgruppen?</li><li>Wie viele Felder werden in der Segmentierung verwendet?</li><li>Welche Zielgruppen werden für die meisten Ziele aktiviert?</li><li>Listen Sie doppelte Zielgruppen auf.</li><li>Anzeigen der aktivierten Zielgruppen für {DESTINATION_ACCOUNT_NAME} und ordnen Sie sie nach Profilgröße an.</li><li>Wie hoch ist der Prozentsatz der Zielgruppen, die nicht aktiviert wurden, aber über mehr als 100 Profile verfügen. Zeigen Sie mir ihre Namen.</li><li>Geben Sie die 3 Quell-Connectoren an, die Daten in meine Datensätze aufnehmen.</li><li>Geben Sie die fünf wichtigsten Attribute an, die in aktivierten Zielgruppen basierend auf ihrem Vorkommen verwendet werden.</li></ul> |
+| Objektsuche | Rufen Sie ein Experience Platform-Objekt oder dessen Eigenschaften ab oder greifen Sie darauf zu. | <ul><li>Welche Datensätze sind mit keinem Schema verknüpft?</li><li>Auflisten der Attribute, die für {AUDIENCE_NAME}?</li><li>Geben Sie mir die Liste der Schemas an, für die Profil aktiviert, aber seit ihrer Erstellung nicht geändert wurde.</li><li>Welche Zielgruppen wurden in der letzten Woche geändert?</li><li>Geben Sie die Zielgruppen an, die über dieselben Segmentdefinitionen und deren Erstellungsdatum verfügen.</li><li>Welche Datensätze sind profilaktiviert und enthalten auch die Anzahl der Zielgruppen, die aus jedem Datensatz erstellt wurden.</li><li>Welche Quellkonten sind mit dem Datensatz XYZ verknüpft?</li><li>Anzeigen der Segmentdefinition und des Änderungsdatums von {AUDIENCE_NAME}.</li></ul> |
 
 +++
 
@@ -276,56 +277,6 @@ Weitere Informationen zum KI-Assistenten für Experience Platform finden Sie in 
 ### Einschränkungen {#caveats-and-limitations}
 
 Im folgenden Abschnitt werden die aktuellen Einschränkungen und Einschränkungen bei der Verwendung des AI-Assistenten beschrieben.
-<!-- 
-#### Conversational experience
-
-You must consider several nuances regarding the conversational experience when querying the AI Assistant.
-
->[!NOTE]
->
->These limitations are temporary and are being improved upon throughout the course of the alpha.
-
->[!BEGINTABS]
-
->[!TAB Unable to infer context from prior discussion]
-
-The AI Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The AI Assistant cannot infer what "them" means. |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The AI Assistant cannot intelligently reference documentation based on "more". |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The AI Assistant cannot infer what you want an example of.|
-| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The AI Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
-| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The AI Assistant is cannot infer what "them" is referring to. |
-
-{style="table-layout:auto"}
-
->[!TAB Unable to infer context from a page]
-
-When asking the AI Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "What does this do?" | "What does {PAGE_NAME} do? | The AI Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
-| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The AI Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
-
-{style="table-layout:auto"}
-
-Furthermore, the AI Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
-
->[!TAB Ambiguity]
-
-You must phrase your questions clearly and scope them within a product, application, or domain, as the AI Assistant currently cannot disambiguate questions.
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
-| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
-
-{style="table-layout:auto"}
-
->[!ENDTABS] -->
 
 #### Geringfügiger kleiner Vortrag
 
@@ -356,6 +307,6 @@ Beispiele finden Sie in der folgenden Tabelle:
 
 | Ungültige Frage | Gute Frage | Anmerkungen |
 | --- | --- | --- |
-| Was ist mein größtes Segment? | Was ist mein größtes Segment? Verwendung von Daten. | Teilen Sie dem KI-Assistenten explizit mit, dass die Antwort auf Daten basieren soll. |
-| Was ist mein größtes Segment? | Geben Sie mein größtes Segment an. | Es gibt Fälle, in denen eine &quot;Was...&quot;-Frage mit einer dokumentationsbasierten Frage verwechselt werden kann. Die Verwendung eines Befehls wie &quot;list&quot;ist ein stärkerer Indikator dafür, dass Sie eine Frage mit Daten im Kontext stellen. |
-| Wie viele Datensätze habe ich? | Zählen Sie meine Datensätze. | Die ursprüngliche Frage funktioniert für Segmente, funktioniert jedoch möglicherweise nicht mit Datensätzen. |
+| Was ist mein größtes Publikum? | Was ist mein größtes Publikum? Verwendung von Daten. | Teilen Sie dem KI-Assistenten explizit mit, dass die Antwort auf Daten basieren soll. |
+| Was ist mein größtes Publikum? | Geben Sie meine größte Zielgruppe an. | Es gibt Fälle, in denen eine &quot;Was...&quot;-Frage mit einer dokumentationsbasierten Frage verwechselt werden kann. Die Verwendung eines Befehls wie &quot;list&quot;ist ein stärkerer Indikator dafür, dass Sie eine Frage mit Daten im Kontext stellen. |
+| Wie viele Datensätze habe ich? | Zählen Sie meine Datensätze. | Die ursprüngliche Frage funktioniert für Zielgruppen, funktioniert jedoch möglicherweise nicht mit Datensätzen. |
