@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2263'
 ht-degree: 31%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
 | Datenströme | Unterstützung der Gerätesuche | Beim Konfigurieren eines Datastreams können Sie jetzt die Ebene der zu erfassenden Gerätesuchinformationen auswählen. Informationen zur Gerätesuche umfassen Daten zum Gerät, zur Hardware, zum Betriebssystem und zum Browser, die für die Interaktion mit Ihrer Seite verwendet werden. <br>  Informationen zur Gerätesuche können nicht zusammen mit Benutzeragent und Client-Hinweisen erfasst werden. Wenn Sie auswählen, Geräteinformationen zu erfassen, wird die Erfassung von Benutzeragenten- und Client-Hinweisen deaktiviert und umgekehrt. Alle Gerätesucherinformationen werden im `xdm:device` Feldergruppe. Weitere Informationen finden Sie in der Dokumentation unter [Konfigurieren von Datenspeichern](../../datastreams/configure.md#geolocation-device-lookup). |
-| Erweiterungen | [!DNL TikTok] Web Events API-Erweiterung | Die [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) -Erweiterung ermöglicht es Ihnen, die im Adobe Experience Platform Edge Network erfassten Daten zu nutzen und an [!DNL TikTok] in Form von serverseitigen Ereignissen, bei denen die [!DNL TikTok] Web Events-API. |
+| Erweiterungen | [!DNL TikTok] Web Events API-Erweiterung | Die [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) -Erweiterung ermöglicht es Ihnen, die im Adobe Experience Platform-Edge Network erfassten Daten zu nutzen und an [!DNL TikTok] in Form von serverseitigen Ereignissen, bei denen die [!DNL TikTok] Web Events-API. |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Experience Platform bietet eine Reihe von Funktionen zur Datenhygiene, mit denen
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} | Verwalten Sie Ihren Datenlebenszyklus in allen Datenspeichern, um Kundenverpflichtungen und Lizenzvereinbarungen mit erweiterten Funktionen für die Datenlebenszyklusverwaltung in Adobe Experience Platform zu erfüllen: automatisierter Datensatzablauf und Löschung von Datensätzen.<br>Mit automatisiertem Datensatzablauf können Sie komplette Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen.<br>Das Löschen von Datensätzen ermöglicht es Ihnen, einzelne Verbraucherprofile durch Zielgruppenbestimmung ihrer primären Identitäten zu löschen. Sie können die primären Identitäten einzeln über die Benutzeroberfläche oder per CSV/JSON-Datei-Upload bereitstellen. Siehe [Dokumentation zum Löschen von Datensätzen](../../hygiene/ui/record-delete.md) für weitere Informationen |
+| [!BADGE Beta]{type=Informative} Löschen von Datensätzen (begrenzte Version) | Verwalten Sie Ihren Datenlebenszyklus in allen Datenspeichern, um Kundenverpflichtungen und Lizenzvereinbarungen mit erweiterten Funktionen für das Data Lifecycle Management in Adobe Experience Platform zu erfüllen: Automatisierter Ablauf von Datensätzen und Löschen von Datensätzen.<br>Mit automatisiertem Datensatzablauf können Sie komplette Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen.<br>Das Löschen von Datensätzen ermöglicht es Ihnen, einzelne Verbraucherprofile durch Zielgruppenbestimmung ihrer primären Identitäten zu löschen. Sie können die primären Identitäten einzeln über die Benutzeroberfläche oder per CSV/JSON-Datei-Upload bereitstellen. Siehe [Dokumentation zum Löschen von Datensätzen](../../hygiene/ui/record-delete.md) für weitere Informationen |
 | Datensatzgültigkeiten | Minimieren Sie Ihre Daten und behalten Sie die Kontrolle über Ihre Lizenzvereinbarungen mit automatisiertem Datensatzablauf. Reduzieren Sie das Datenvolumen, indem Sie ganze Datensätze löschen und ein Datum und eine Uhrzeit für das Löschen des Datensatzes festlegen. Siehe [Dokumentation zu Datensatzabläufen](../../hygiene/ui/dataset-expiration.md) für weitere Informationen. |
 
 {style="table-layout:auto"}
@@ -146,7 +146,7 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
-XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 **Neue Funktionen**
 

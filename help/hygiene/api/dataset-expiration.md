@@ -3,10 +3,10 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 60%
+source-wordcount: '2166'
+ht-degree: 59%
 
 ---
 
@@ -197,6 +197,10 @@ Die folgende JSON-Datei enthält die gekürzte Antwort für die Details eines Da
 Um sicherzustellen, dass Daten nach einem bestimmten Zeitraum aus dem System entfernt werden, planen Sie einen Ablauf für einen bestimmten Datensatz, indem Sie die Datensatz-ID sowie das Ablaufdatum und die Ablaufzeit im ISO 8601-Format angeben.
 
 Um einen Datensatzablauf zu erstellen, führen Sie eine POST-Anfrage wie unten gezeigt aus und geben Sie die unten genannten Werte in der Payload an.
+
+>[!NOTE]
+>
+>Wenn Sie einen 404-Fehler erhalten, stellen Sie sicher, dass die Anfrage keine weiteren Schrägstriche aufweist. Ein nachfolgender Schrägstrich kann dazu führen, dass eine POST-Anfrage fehlschlägt.
 
 **API-Format**
 

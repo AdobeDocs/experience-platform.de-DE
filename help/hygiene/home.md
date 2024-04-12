@@ -2,10 +2,10 @@
 title: Überblick über die erweiterte Lebenszyklusverwaltung
 description: Mit der erweiterten Lebenszyklusverwaltung können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder ungenaue Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 62%
+source-wordcount: '583'
+ht-degree: 58%
 
 ---
 
@@ -36,7 +36,7 @@ Die [!UICONTROL Lebenszyklus der Daten] Die Benutzeroberfläche basiert auf der 
 
 ## Timelines und Transparenz
 
-[Anfragen zum Löschen von Datensätzen und zum Ablauf von Datensätzen haben jeweils ihre eigenen Bearbeitungsfristen und bieten Transparenzaktualisierungen an wichtigen Punkten in ihren jeweiligen Workflows.](./ui/record-delete.md)
+[Löschung von Datensätzen](./ui/record-delete.md) und Datensatzablaufanfragen verfügen jeweils über eigene Verarbeitungszeitpläne und stellen an den zentralen Punkten in ihren jeweiligen Workflows Transparenzaktualisierungen bereit.
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die Datenlebenszyklusfunktionen von Platform. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](./ui/overview.md) Informationen zum programmgesteuerten Erstellen von Datenlebenszyklusaufträgen finden Sie im Abschnitt [Data Hygiene API-Handbuch](./api/overview.md)
+Dieses Dokument bietet einen Überblick über die Funktionen von Platform für den Datenlebenszyklus. Informationen zu den ersten Schritten bei Datenhygiene-Anfragen in der Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](./ui/overview.md) Informationen zum programmgesteuerten Erstellen von Data Lifecycle-Aufträgen finden Sie im Abschnitt [Data Hygiene API-Handbuch](./api/overview.md)
