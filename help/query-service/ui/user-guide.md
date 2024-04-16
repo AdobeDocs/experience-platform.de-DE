@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ab2ebc5e2ba63d415ef39feba0392d08026050ba
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2661'
 ht-degree: 44%
 
 ---
@@ -49,7 +49,7 @@ Mit [!DNL Query Editor] können Sie Abfragen für Kundenerlebnisdaten schreiben,
 
 >[!IMPORTANT]
 >
->Der alte Editor wird am 30. April 2024 eingestellt und ist nicht mehr verfügbar.
+>Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor der Standardeditor für alle Benutzer. Der alte Editor wird vom 30. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar.
 
 ## Erweiterter Umschalter des Abfrage-Editors {#enhanced-editor-toggle}
 
