@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3161'
 ht-degree: 29%
 
 ---
@@ -86,7 +86,7 @@ Wenn sie für ein Batch-Ziel aktiviert wird, werden die Daten aus der extern gen
 
 ### Kann ich eine extern generierte Zielgruppe löschen?
 
-Zu diesem Zeitpunkt können Sie nur eine extern generierte Zielgruppe deaktivieren. In diesem Zustand werden Profile für nachgelagerte Anwendungen **weiterhin aktiv** bleiben. Die Unterstützung für das Löschen extern generierter Zielgruppen wird in einer nachfolgenden Version hinzugefügt.
+Ja! Extern generierte Zielgruppen können in Audience Portal gelöscht werden.
 
 ### Was sollte ich tun, wenn ich versehentlich eine extern generierte Zielgruppe hochgeladen habe?
 
