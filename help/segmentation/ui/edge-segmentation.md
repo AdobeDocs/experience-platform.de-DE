@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für Edge-Segmentierung
 description: Erfahren Sie, wie Sie die Edge-Segmentierung nutzen können, um Segmentdefinitionen in Platform direkt auszuwerten und so Anwendungsfälle für die Personalisierung auf derselben und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 95%
+source-wordcount: '970'
+ht-degree: 94%
 
 ---
 
@@ -55,6 +55,7 @@ Im folgenden Szenario wird eine Segmentdefinition **nicht** für die Edge-Segmen
 
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
    - Wenn die im Ereignis `inSegment` enthaltene Segmentdefinition jedoch nur ein Profil ist, **wird** die Segmentdefinition für die Edge-Segmentierung aktiviert.
+- Die Segmentdefinition verwendet &quot;Jahr ignorieren&quot;als Teil ihrer Zeitbeschränkungen.
 
 ## Nächste Schritte
 

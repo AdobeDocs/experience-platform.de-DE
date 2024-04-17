@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Aktualisierung der Zeitbegrenzung für das Jahr ignorieren
 description: Erfahren Sie, wie Sie ein Problem mit der Zeitbegrenzung für das Jahr ignorieren können.
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
+source-git-commit: 006950092f69d378b064c795b117166343e5d8f2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 9%
+source-wordcount: '246'
+ht-degree: 8%
 
 ---
-
 
 # Aktualisierung der Jahreszeitbegrenzung ignorieren {#ignore-year}
 
@@ -16,6 +16,10 @@ ht-degree: 9%
 >id="platform_audiences_segmentBuilder_ignoreYear"
 >title="Jahresaktualisierung ignorieren"
 >abstract="Das Ignorieren der Aktualisierung der Jahreszeitbegrenzung wurde aktualisiert. Speichern Sie Ihre Zielgruppe erneut."
+
+>[!IMPORTANT]
+>
+>Sie können die Zeitbegrenzung &quot;Jahr ignorieren&quot;nur in einer Segmentdefinition verwenden, die mit **Stapelsegmentierung**. Durch Hinzufügen der Zeitbegrenzung &quot;Jahr ignorieren&quot;zur Segmentdefinition wird die resultierende Zielgruppe erstellt **nicht förderfähig** für Streaming oder Kantensegmentierung.
 
 In der Version vom Februar 2024 für Adobe Experience Platform wurden Änderungen am Adobe Experience Platform-Segmentierungsdienst eingeführt, die ein Problem mit der Option &quot;Jahr ignorieren&quot;bei der Erstellung und Auswertung von Zielgruppen beheben.
 
