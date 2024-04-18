@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 92238ee94149b3cb4293d726d08dc4927e2dedb5
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 47%
+source-wordcount: '1182'
+ht-degree: 45%
 
 ---
 
@@ -106,6 +106,11 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **Name**: Geben Sie den gewünschten Namen für das Ziel ein.
 * **Beschreibung**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
 * **Datenspeicher-ID**: Dadurch wird bestimmt, in welchem Datenerfassungsdatenstrom die Zielgruppen einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target- und Adobe Experience Platform-Dienste aktiviert sind. Siehe [Konfigurieren eines Datenspeichers](../../../datastreams/configure.md#aep) für detaillierte Informationen zum Konfigurieren eines Datastreams für Adobe Experience Platform und Adobe Target.
+
+  >[!IMPORTANT]
+  >
+  >Die Datastream-ID ist für jede Adobe Target-Zielverbindung eindeutig. Wenn Sie die gleichen Zielgruppen mehreren Datastreams zuordnen müssen, müssen Sie [Erstellen einer neuen Zielverbindung](../../ui/connect-destination.md) für jede Datastream-ID und durchlaufen Sie die [Zielgruppenaktivierungsfluss](#activate).
+
    * **[!UICONTROL Keines]**: Wählen Sie diese Option aus, wenn Sie die Adobe Target-Personalisierung konfigurieren möchten, die Implementierung der [Experience Platform Web SDK](/help/web-sdk/home.md). Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Weitere Informationen finden Sie in der unten stehenden Tabelle.
 
   | Adobe Target-Implementierung (ohne Web SDK) | Web SDK-Implementierung |
@@ -136,7 +141,7 @@ Lesen [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](../../ui/act
 
 ## Exportierte Daten {#exported-data}
 
-Adobe Target *reads* Profildaten aus dem Adobe Experience Platform Edge Network, sodass keine Daten exportiert werden.
+Adobe Target *reads* Profildaten aus dem Adobe Experience Platform-Edge Network, sodass keine Daten exportiert werden.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
