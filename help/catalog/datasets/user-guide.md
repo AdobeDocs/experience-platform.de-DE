@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: aee82356f1f519398f381e161be14789532561f1
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2943'
 ht-degree: 14%
 
 ---
@@ -273,9 +273,9 @@ Ein Bestätigungsdialog wird angezeigt. Auswählen **[!UICONTROL Löschen]** , u
 
 ## Profil-aktivierten Datensatz löschen
 
-Wenn ein Datensatz für Profil aktiviert ist, wird er durch Löschen dieses Datensatzes über die Benutzeroberfläche aus dem Data Lake, Identity Service und dem Profilspeicher in Platform gelöscht.
+Wenn ein Datensatz für Profil aktiviert ist, wird er beim Löschen dieses Datensatzes über die Benutzeroberfläche aus dem Data Lake, Identity Service und auch aus allen mit diesem Datensatz verknüpften Profildaten im Profilspeicher gelöscht.
 
-Sie können einen Datensatz aus der [!DNL Profile] nur speichern (die Daten im Data Lake belassen) mithilfe der Echtzeit-Kundenprofil-API. Weitere Informationen finden Sie im [Handbuch zum Vorgangs-API-Endpunkt von Profile System](../../profile/api/profile-system-jobs.md).
+Sie können mit einem Datensatz verknüpfte Profildaten aus der [!DNL Profile] speichern (die Daten im Data Lake belassen) mithilfe der Echtzeit-Kundenprofil-API. Weitere Informationen finden Sie im [Handbuch zum Vorgangs-API-Endpunkt von Profile System](../../profile/api/profile-system-jobs.md).
 
 ## Überwachen der Datenaufnahme
 

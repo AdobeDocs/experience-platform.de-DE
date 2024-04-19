@@ -5,16 +5,16 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Batch aus dem Profilspeicher löschen, um Echtzeit-Kundenprofildaten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dazu muss die Profil-API zum Erstellen eines Profilsystemauftrags oder einer Löschanfrage verwendet werden.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
-ht-degree: 64%
+source-wordcount: '1327'
+ht-degree: 61%
 
 ---
 
 # Endpunkt für Profilsystemaufträge (Löschanfragen)
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in erfasst werden [!DNL Platform] wird im [!DNL Data Lake]und wenn die Datensätze für Profil aktiviert wurden, werden diese Daten im [!DNL Real-Time Customer Profile] auch Datenspeicher. Gelegentlich kann es erforderlich sein, Datensätze oder Batches aus dem Profilspeicher zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder irrtümlich hinzugefügt wurden. Dazu muss die [!DNL Real-Time Customer Profile] API zum Erstellen einer [!DNL Profile] Systemauftrag oder `delete request`, die bei Bedarf auch geändert, überwacht oder entfernt werden können.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in erfasst werden [!DNL Platform] wird im [!DNL Data Lake]und wenn die Datensätze für Profil aktiviert wurden, werden diese Daten im [!DNL Real-Time Customer Profile] auch Datenspeicher. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder fehlerhaft hinzugefügte Daten zu entfernen. Dazu muss die [!DNL Real-Time Customer Profile] API zum Erstellen einer [!DNL Profile] Systemauftrag oder `delete request`, die bei Bedarf auch geändert, überwacht oder entfernt werden können.
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ Die Antwort enthält ein „untergeordnetes“ Array mit einem Objekt für jede 
 
 Die Initiierung einer neuen Löschanfrage erfolgt über eine POST-Anfrage an den `/systems/jobs`-Endpunkt, wobei die Kennung des zu löschenden Datensatzes oder Batches im Text der Anfrage angegeben wird.
 
-### Datensatz löschen
+### Datensatz und zugehörige Profildaten löschen
 
-Um einen Datensatz aus dem Profilspeicher zu löschen, muss die Datensatz-ID im Hauptteil der POST-Anfrage enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. [!DNL Experience Platform] ermöglicht Ihnen das Löschen von Datensätzen, die sowohl auf Datensatz- als auch auf Zeitreihenschemas basieren.
+Um einen Datensatz und alle mit dem Datensatz verknüpften Profildaten aus dem Profilspeicher zu löschen, muss die Datensatz-ID im Hauptteil der POST-Anfrage enthalten sein. Durch diese Aktion werden ALLE Daten für einen bestimmten Datensatz gelöscht. [!DNL Experience Platform] ermöglicht Ihnen das Löschen von Datensätzen, die sowohl auf Datensatz- als auch auf Zeitreihenschemas basieren.
 
 **API-Format**
 

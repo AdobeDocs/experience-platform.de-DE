@@ -4,9 +4,9 @@ title: Handbuch zur Echtzeit-Kundenprofil-API
 description: Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und mit ihnen zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Beispielprofildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 20%
 
 ---
@@ -53,7 +53,7 @@ Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um di
 
 ## Profilsystemaufträge {#profile-system-jobs}
 
-Profilaktivierte Daten, die in [!DNL Platform] wird im [!DNL Data Lake] sowie [!DNL Real-Time Customer Profile] Datenspeicher. Gelegentlich kann es erforderlich sein, einen Datensatz oder Batch aus der [!DNL Profile] speichern, um Daten zu entfernen, die Sie nicht mehr benötigen oder die fehlerhaft hinzugefügt wurden. Dies erfordert die Verwendung der API zum Erstellen einer [!DNL Profile System Job], auch als bezeichnet[!DNL delete request]&quot;, die bei Bedarf geändert, überwacht oder gelöscht werden können. Erfahren Sie, wie Sie Löschanfragen mit der `/system/jobs` -Endpunkt im [!DNL Real-Time Customer Profile] API ausführen, folgen Sie den Schritten, die im Abschnitt [Endleitfaden für Profilsystemaufträge](profile-system-jobs.md).
+Profilaktivierte Daten, die in [!DNL Platform] wird im [!DNL Data Lake] sowie [!DNL Real-Time Customer Profile] Datenspeicher. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder fehlerhaft hinzugefügte Daten zu entfernen. Dies erfordert die Verwendung der API zum Erstellen einer [!DNL Profile System Job], auch als bezeichnet[!DNL delete request]&quot;, die bei Bedarf geändert, überwacht oder gelöscht werden können. Erfahren Sie, wie Sie Löschanfragen mit der `/system/jobs` -Endpunkt im [!DNL Real-Time Customer Profile] API ausführen, folgen Sie den Schritten, die im Abschnitt [Endleitfaden für Profilsystemaufträge](profile-system-jobs.md).
 
 ## Profilattribute aktualisieren {#update-profile}
 
