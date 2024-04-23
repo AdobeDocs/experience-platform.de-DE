@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie die Bot-Erkennung für Datastreams konfigurie
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
+source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Traffic, der von unmenschlichen Entitäten stammt, wie z. B. automatisierten Programmen, Webcrapers, Spider, Skriptscannern, kann es erschweren, Ereignisse von Besuchern zu identifizieren. Dieser Traffic-Typ kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen.
 
-Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die von der[Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../server-api/overview.md) als von bekannten Spiders und Bots generiert wurde.
+Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die von der [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../server-api/overview.md) als von bekannten Spiders und Bots generiert wurde.
 
 Durch die Konfiguration der Bot-Erkennung für Ihre Datenspeicher können Sie bestimmte IP-Adressen, IP-Bereiche und Anforderungsheader identifizieren, die Sie als Bot-Ereignisse klassifizieren möchten.
 
 Die Identifizierung des Bot-Traffics kann Ihnen eine präzisere Messung der Benutzeraktivität auf Ihrer Site oder in Ihrer mobilen Anwendung ermöglichen.
 
-Wenn eine Anforderung an das Edge-Netzwerk mit einer der Bot-Erkennungsregeln übereinstimmt, wird das XDM-Schema mit einem Bot-Scoring aktualisiert (immer auf 1 gesetzt), wie unten dargestellt.
+Wenn eine Anfrage an das Edge Network mit einer der Bot-Erkennungsregeln übereinstimmt, wird das XDM-Schema mit einer Bot-Auswertung aktualisiert (immer auf 1 gesetzt), wie unten dargestellt.
 
 ```json
 {
@@ -39,7 +39,7 @@ Diese Bot-Bewertung hilft den Lösungen, die die Anfrage erhalten, den Bot-Traff
 >
 >Adobe-Lösungen können Bot-Scoring auf unterschiedliche Weise handhaben. Adobe Analytics verwendet beispielsweise eine eigene [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) und verwendet nicht den vom Edge Network festgelegten Wert. Die beiden Dienste verwenden dasselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), sodass die Bot-Bewertung identisch ist.
 
-Nach der Erstellung kann es bis zu 15 Minuten dauern, bis Bot-Erkennungsregeln über das Edge-Netzwerk übertragen werden.
+Es kann bis zu 15 Minuten dauern, bis Bot-Erkennungsregeln nach der Erstellung über das Edge Network übertragen werden.
 
 ## Voraussetzungen {#prerequisites}
 
