@@ -3,7 +3,7 @@ title: Datensätze löschen
 description: Erfahren Sie, wie Sie Datensätze in der Benutzeroberfläche von Adobe Experience Platform löschen.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 86cf250b2915a49d994fee0ab9d9ddbf65f6f836
+source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 34%
@@ -140,7 +140,7 @@ Nachdem Sie unter **[!UICONTROL Anfrageeinstellungen]** die Identitäten zur Anf
 
 >[!IMPORTANT]
 > 
->Es gibt unterschiedliche Beschränkungen für die Gesamtzahl der eindeutigen Identitätsdatensätze, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrem Lizenzvertrag. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform und Adobe Journey Optimizer erworben haben, können jeden Monat bis zu 100.000 Identitätsdatensätze löschen. Organisationen, die gekauft haben **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** kann jeden Monat bis zu 600.000 Identitätsdatensätze löschen.<br>Mit einer einzelnen Anfrage zum Löschen von Datensätzen über die Benutzeroberfläche können Sie 10.000 IDs gleichzeitig senden. Die [API-Methode zum Löschen von Datensätzen](../api/workorder.md#create) ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, bis zu Ihrer ID-Grenze so viele IDs pro Anfrage wie möglich zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollte vermieden werden, ein geringes Volumen oder eine einzelne ID pro Datensatz-Löschanfrage zu senden.
+>Es gibt unterschiedliche Beschränkungen für die Gesamtzahl der eindeutigen Identitätsdatensätze, die jeden Monat gesendet werden können. Diese Beschränkungen basieren auf Ihrem Lizenzvertrag. Organisationen, die alle Editionen von Adobe Real-time Customer Data Platform oder Adobe Journey Optimizer erworben haben, können jeden Monat bis zu 100.000 Identitätsdatensätze löschen. Organisationen, die gekauft haben **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** kann jeden Monat bis zu 600.000 Identitätsdatensätze löschen.<br>Mit einer einzelnen Anfrage zum Löschen von Datensätzen über die Benutzeroberfläche können Sie 10.000 IDs gleichzeitig senden. Die [API-Methode zum Löschen von Datensätzen](../api/workorder.md#create) ermöglicht die gleichzeitige Übermittlung von 100.000 IDs.<br>Es empfiehlt sich, bis zu Ihrer ID-Grenze so viele IDs pro Anfrage wie möglich zu senden. Wenn Sie eine große Anzahl von IDs löschen möchten, sollte vermieden werden, ein geringes Volumen oder eine einzelne ID pro Datensatz-Löschanfrage zu senden.
 
 ![Die Anfrageeinstellung [!UICONTROL Name] und [!UICONTROL Beschreibung] Felder mit [!UICONTROL Einsenden] hervorgehoben.](../images/ui/record-delete/submit.png)
 
