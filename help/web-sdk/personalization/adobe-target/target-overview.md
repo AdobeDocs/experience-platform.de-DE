@@ -2,9 +2,9 @@
 title: Adobe Target mit Web SDK für Personalisierung verwenden
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1173'
 ht-degree: 5%
 
 ---
@@ -35,17 +35,18 @@ Die folgenden Funktionen wurden getestet und werden derzeit in [!DNL Target]:
 
 Das folgende Diagramm hilft Ihnen, den Workflow von [!DNL Target] und [!DNL Web SDK] Edge-Entscheidung.
 
-![Abbildung der Adobe Target-Edge-Entscheidung mit dem Platform Web SDK](./assets/target-platform-web-sdk.png)
+![Abbildung der Adobe Target-Edge-Entscheidung mit dem Platform Web SDK](assets/target-platform-web-sdk-new.png)
 
 | Aufruf | Details |
 | --- | --- |
-| 1 | Das Gerät lädt die [!DNL Web SDK]. Die [!DNL Web SDK] sendet eine Anfrage mit XDM-Daten, der ID der Datastreams-Umgebung, übergebenen Parametern und der Kunden-ID (optional) an das Edge-Netzwerk. Seite (oder Container) ist vorab ausgeblendet. |
-| 2 | Das Edge-Netzwerk sendet die Anfrage an die Edge-Dienste, um sie mit der Besucher-ID, der Zustimmung und anderen Besucherkontextinformationen wie Geolocation und gerätefreundlichen Namen anzureichern. |
-| 3 | Das Edge-Netzwerk sendet die angereicherte Personalisierungsanforderung an die [!DNL Target] -Edge mit der Besucher-ID und den übergebenen Parametern. |
+| 1 | Das Gerät lädt die [!DNL Web SDK]. Die [!DNL Web SDK] sendet eine Anfrage mit XDM-Daten, der ID der Datastreams-Umgebung, übergebenen Parametern und der Kunden-ID (optional) an das Edge Network. Seite (oder Container) ist vorab ausgeblendet. |
+| 2 | Das Edge Network sendet die Anfrage an die Edge-Dienste, um sie mit der Besucher-ID, der Zustimmung und anderen Besucherkontextinformationen wie Geolocation und gerätefreundlichen Namen anzureichern. |
+| 3 | Das Edge Network sendet die angereicherte Personalisierungsanforderung an die [!DNL Target] -Edge mit der Besucher-ID und den übergebenen Parametern. |
 | 4 | Profilskripte werden ausgeführt und anschließend in [!DNL Target] Profilspeicherung. Der Profilspeicher ruft Segmente aus der [!UICONTROL Zielgruppenbibliothek] (z. B. Segmente, die von [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], die [!DNL Adobe Experience Platform]). |
-| 5 | Basierend auf URL-Anforderungsparametern und Profildaten, [!DNL Target] bestimmt, welche Aktivitäten und Erlebnisse dem Besucher für die aktuelle Seitenansicht und für künftige vorab abgerufene Ansichten angezeigt werden. [!DNL Target] sendet diese dann zurück an das Edge-Netzwerk. |
-| 6 | a. Das Edge-Netzwerk sendet die Personalisierungsantwort zurück an die Seite, optional einschließlich der Profilwerte für eine zusätzliche Personalisierung. Personalisierte Inhalte auf der aktuellen Seite werden so schnell wie möglich bereitgestellt, ohne dass Standardinhalte aufflackern.<br>b. Personalisierte Inhalte für Ansichten, die als Ergebnis von Benutzeraktionen in einer Einzelseiten-App (SPA) angezeigt werden, werden zwischengespeichert und können sofort ohne zusätzlichen Server-Aufruf angewendet werden, wenn die Ansichten ausgelöst werden. <br>. Das Edge-Netzwerk sendet die Besucher-ID und andere Werte in Cookies, z. B. Zustimmung, Sitzungs-ID, Identität, Cookie-Prüfung, Personalisierung. |
-| 7 | Das Edge-Netzwerk nach vorne [!UICONTROL Analytics for Target] (A4T) Details (Aktivitäts-, Erlebnis- und Konversionsmetadaten) in die [!DNL Analytics] -Kante. |
+| 5 | Basierend auf URL-Anforderungsparametern und Profildaten, [!DNL Target] bestimmt, welche Aktivitäten und Erlebnisse dem Besucher für die aktuelle Seitenansicht und für künftige vorab abgerufene Ansichten angezeigt werden. [!DNL Target] sendet diesen dann zurück an das Edge Network. |
+| 6 | a. Das Edge Network sendet die Personalisierungsantwort zurück an die Seite, optional einschließlich der Profilwerte für eine zusätzliche Personalisierung. Personalisierte Inhalte auf der aktuellen Seite werden so schnell wie möglich bereitgestellt, ohne dass Standardinhalte aufflackern.<br>b. Personalisierte Inhalte für Ansichten, die als Ergebnis von Benutzeraktionen in einer Einzelseiten-App (SPA) angezeigt werden, werden zwischengespeichert und können sofort ohne zusätzlichen Server-Aufruf angewendet werden, wenn die Ansichten ausgelöst werden. <br>c. Das Edge Network sendet die Besucher-ID und andere Werte in Cookies, z. B. Zustimmung, Sitzungs-ID, Identität, Cookie-Prüfung, Personalisierung. |
+| 7 | Das Web SDK sendet die Benachrichtigung vom Gerät an das Edge Network. |
+| 8 | Das Edge Network geht voran [!UICONTROL Analytics for Target] (A4T) Details (Aktivitäts-, Erlebnis- und Konversionsmetadaten) in die [!DNL Analytics] -Kante. |
 
 ## Aktivieren [!DNL Adobe Target]
 
