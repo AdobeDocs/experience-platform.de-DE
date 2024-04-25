@@ -1,11 +1,11 @@
 ---
 title: KI-Assistent für Adobe Experience Platform
 description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform- und Real-time Customer Data Platform-Konzepten navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
-badge: Alpha
+badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
+source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> Der KI-Assistent für Adobe Experience Platform befindet sich derzeit in Alpha. Die Funktion und die Dokumentation können sich ändern.
+> Der KI-Assistent für Adobe Experience Platform ist derzeit als Betaversion verfügbar. Die Funktion und die Dokumentation können sich ändern.
 
 Der AI-Assistent ist eine UI-Funktion, mit der Sie in Adobe Experience Platform und Real-time Customer Data Platform navigieren und deren Konzepte und Nutzungsinformationen zu Ihren Objekten verstehen können.
 
