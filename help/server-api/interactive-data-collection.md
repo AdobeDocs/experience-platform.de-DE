@@ -2,10 +2,10 @@
 title: Interaktive Datenerfassung
 description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API die interaktive Datenerfassung durchführt.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 19%
+source-wordcount: '179'
+ht-degree: 15%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 19%
 
 ## Übersicht {#overview}
 
-Endpunkte zur interaktiven Datenerfassung erhalten ein einzelnes Ereignis und werden verwendet, wenn der Client erwartet, dass eine Antwort vom Adobe Experience Platform Edge Network-Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Diensten zurückgeben.
+Endpunkte zur interaktiven Datenerfassung erhalten ein einzelnes Ereignis und werden verwendet, wenn der Client erwartet, dass eine Antwort vom Adobe Experience Platform-Edge Network-Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Diensten zurückgeben.
+
+>[!IMPORTANT]
+>
+>Die `/interact` Endpunkt ist hauptsächlich für die Verwendung durch Experience Platform SDKs vorgesehen. Dieser Endpunkt unterliegt zusätzlichen Änderungen, und sein Verhalten kann sich ohne Vorankündigung weiterentwickeln. Beispielsweise können der Antwort-Payload in Zukunft neue Elemente hinzugefügt werden.
 
 Die Serverantwort umfasst eine oder mehrere `Handle` -Objekte, wie unten dargestellt.
 
