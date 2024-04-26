@@ -1,0 +1,20 @@
+---
+title: Adobe Experience Platform – Versionshinweise April 2024
+description: Versionshinweise April 2024 für Adobe Experience Platform.
+source-git-commit: a82b2fd39601cd53397959aa3fbfada37b732c24
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 30%
+
+---
+
+# Adobe Experience Platform – Versionshinweise
+
+**Veröffentlichungsdatum: Mittwoch, 30. April 2024**
+
+>[!TIP]
+>
+>Verwenden Sie die [Glossar zu Adobe Experience Platform](/help/landing/glossary.md) , um sich mit der in Real-time Customer Data Platform und Adobe Experience Platform verwendeten Terminologie vertraut zu machen. Wenn Sie einen bestimmten Begriff, den Sie suchen, nicht finden können, verwenden Sie die Feedback-Optionen auf der Seite, um die Hinzufügung neuer Begriffe zum Glossar anzufordern.
+
+Aktualisierungen vorhandener Funktionen im Experience Platform:
+
