@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
+source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1036'
 ht-degree: 94%
 
 ---
@@ -111,6 +111,7 @@ ht-degree: 94%
       - [Oracle Eloqua-Connector](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Oracle Responsys-Connector](connectors/marketing-automation/oracle-responsys.md)
+      - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
@@ -192,6 +193,7 @@ ht-degree: 94%
          - [Oracle NetSuite-Aktivitäten](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite-Entitäten](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -322,6 +324,7 @@ ht-degree: 94%
          - [Oracle NetSuite-Aktivitäten](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite-Entitäten](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
