@@ -3,10 +3,10 @@ keywords: Experience Platform; home; beliebte Themen; Data Landing Zone; Data La
 title: Data Landing Zone über die Benutzeroberfläche mit Platform verbinden
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform einen Quell-Connector für die Data Landing Zone erstellen.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
+source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
 workflow-type: tm+mt
-source-wordcount: '672'
-ht-degree: 20%
+source-wordcount: '747'
+ht-degree: 18%
 
 ---
 
@@ -60,23 +60,41 @@ Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
 Eine ausführliche, schrittweise Anleitung zum Erstellen eines Datenflusses für eine Cloud-Speicherquelle finden Sie im Tutorial unter [Erstellen eines Cloud-Speicher-Datenflusses zum Übertragen von Daten an Platform](../../dataflow/batch/cloud-storage.md).
 
-## Abrufen und Aktualisieren Ihrer [!DNL Data Landing Zone] Anmeldeinformationen
+## Abrufen Ihrer [!DNL Data Landing Zone] Anmeldeinformationen
 
-[!DNL Data Landing Zone] ist eine native Quelle, die im Lieferumfang Ihrer Adobe Experience Platform Sources-Lizenz enthalten ist. [!DNL Data Landing Zone] verwendet eine SAS-URI- und SAS-Token-basierte Authentifizierung. Sie können Ihre Authentifizierungsberechtigungen über die [!UICONTROL Quellen-Katalog] Seite.
+[!DNL Data Landing Zone] ist eine Quelle, die mit Ihrer Adobe Experience Platform Sources-Lizenz geliefert wird. [!DNL Data Landing Zone] verwendet eine SAS-URI- und SAS-Token-basierte Authentifizierung. Sie können Ihre Authentifizierungsberechtigungen von der [!UICONTROL Quellen-Katalog] Seite.
 
-Im [!UICONTROL Quellen-Katalog]unter der [!UICONTROL Cloud-Speicher] -Kategorie, wählen Sie die Auslassungszeichen (**...**) aus dem **[!UICONTROL Data Landing Zone]** Karte. Wählen Sie im angezeigten Dropdown-Menü die Option **[!UICONTROL Anmeldedaten anzeigen]**.
+Um Ihre Anmeldedaten abzurufen, wählen Sie die **[!UICONTROL Data Landing Zone]** und kopieren Sie dann Ihre Anmeldedaten aus der rechten Leiste, die angezeigt wird.
 
-![Eine Liste der Ansichtsoptionen für die Dateneinstiegszone.](../../../../images/tutorials/create/dlz/options.png)
+![Eine Liste der Ansichtsoptionen für die Dateneinstiegszone.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 Es wird ein Popup angezeigt, in dem Ihr Containername, Ihr SAS-Token, der Name des Speicherkontos, der SAS-URI und das Ablaufdatum angezeigt werden.
 
-Auswählen **[!UICONTROL Anmeldeinformationen aktualisieren]** und einige Sekunden Zeit in Anspruch nehmen, damit Ihre aktualisierten Anmeldedaten verarbeitet werden.
+## Aktualisieren Sie Ihre [!DNL Data Landing Zone] Anmeldeinformationen
 
->[!TIP]
->
->Ihre [!DNL Data Landing Zone] Die Anmeldedaten laufen nach 90 Tagen automatisch ab und Sie müssen neue Anmeldedaten verwenden, um eine erneute Verbindung zu [!DNL Data Landing Zone] nach Ablauf. Ihre Datenflüsse in Platform sind nicht durch das Ablaufen von Anmeldeinformationen betroffen. Sie können weiterhin mit neuen und vorhandenen Datenflüssen mit Ihren neuen Anmeldedaten arbeiten.
+Ihre [!DNL Data Landing Zone] Die Anmeldedaten laufen nach 90 Tagen automatisch ab und Sie müssen neue Anmeldedaten verwenden, um eine erneute Verbindung zu [!DNL Data Landing Zone] nach Ablauf. Ihre Datenflüsse in Experience Platform sind nicht von ablaufenden Anmeldedaten betroffen und Sie können weiterhin mit neuen und vorhandenen Datenflüssen mit Ihren neuen Anmeldedaten arbeiten.
 
-![Die Anmeldeinformationen, die mit einem bestimmten Data Landing Zone-Konto verknüpft sind.](../../../../images/tutorials/create/dlz/view-credentials.png)
+Es gibt zwei Möglichkeiten, Ihre [!DNL Data Landing Zone] Anmeldeinformationen:
+
+>[!BEGINTABS]
+
+>[!TAB Quellkarte verwenden]
+
+Um Ihre Anmeldedaten auf der Quellkatalogseite zu aktualisieren, wählen Sie die Auslassungszeichen (**`...`**) in der [!DNL Data Landing Zone] und wählen Sie **[!UICONTROL Anmeldeinformationen aktualisieren]**.
+
+![Aktualisieren Sie die Anmeldeinformationen mithilfe der Quellkarte.](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+
+Es wird ein Popup-Fenster mit einer Aufforderung zur Bestätigung angezeigt, bevor Sie fortfahren können. Wenn Sie bereit sind, wählen Sie **[!UICONTROL Anmeldeinformationen aktualisieren]**.
+
+![Das Bestätigungsfenster für Anmeldedaten aktualisieren.](../../../../images/tutorials/create/dlz/confirm.png)
+
+>[!TAB Verwenden der rechten Leiste]
+
+Um Ihre Anmeldedaten in der rechten Leiste zu aktualisieren, wählen Sie die **[!UICONTROL Data Landing Zone]** Quellkarte und wählen Sie **[!UICONTROL Mehr Aktionen]**. Wählen Sie als Nächstes **[!UICONTROL Anmeldeinformationen aktualisieren]** und bestätigen Sie dann mit dem sich öffnenden Popup-Fenster.
+
+![Aktualisieren Sie die Anmeldeinformationen in der rechten Leiste.](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
+
+>[!ENDTABS]
 
 ## Nächste Schritte
 
