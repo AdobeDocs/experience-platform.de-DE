@@ -4,10 +4,10 @@ user-guide-title: Handbuch zu Datenflüssen
 user-guide-description: Erfahren Sie mehr über Datenflüsse und wie Sie sie in verschiedenen Services konfigurieren.
 feature: Dataflows
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 68%
+source-wordcount: '60'
+ht-degree: 65%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 68%
    - [Überwachen von Datenflüssen](./api/monitor.md)
    - [Sortieren und Filtern von API-Antworten](./api/sort-and-filter.md)
 - UI-Handbücher {#ui}
+   - [Übersicht über das Monitoring-Dashboard](./ui/monitor.md)
    - [Überwachen von Datenflüssen in Quellen](./ui/monitor-sources.md)
    - [Überwachen von Datenflüssen in Identitäten](./ui/monitor-identities.md)
    - [Überwachen von Datenflüssen in Profilen](./ui/monitor-profiles.md)
