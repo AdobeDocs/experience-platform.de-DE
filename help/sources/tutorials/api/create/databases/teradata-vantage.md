@@ -3,18 +3,14 @@ keywords: Experience Platform;home;popular topics;Teradata Vantage
 title: Erstellen einer Teradata Vantage-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit Teradata Vantage verbinden.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 56%
+source-wordcount: '450'
+ht-degree: 57%
 
 ---
 
-# (Beta) Erstellen Sie eine [!DNL Teradata Vantage] Basisverbindung mit [!DNL Flow Service] API
-
->[!NOTE]
->
->Die [!DNL Teradata Vantage]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+# Erstellen einer [!DNL Teradata Vantage]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -87,7 +83,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `auth.params.connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Teradata Vantage] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL Teradata Vantage]-Verbindungsspezifikations-ID: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
+| `connectionSpec.id` | Die [!DNL Teradata Vantage] Verbindungsspezifikations-ID: `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
 
 **Antwort**
 
