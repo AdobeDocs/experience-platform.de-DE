@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 90%
+source-wordcount: '1742'
+ht-degree: 80%
 
 ---
 
@@ -340,6 +340,56 @@ Um einen dynamischen Dropdown-Selektor zu erstellen, müssen Sie zwei Komponente
 
 Legen Sie die `destinationServerId` -Parameter an die ID des Zielservers an, den Sie in Schritt 1 erstellt haben. Sie können die Ziel-Server-ID in der Antwort der [Zielserverkonfiguration abrufen](../../authoring-api/destination-server/retrieve-destination-server.md) API-Aufruf.
 
+## Erstellen verschachtelter Kundendatenfelder {#nested-fields}
+
+Sie können verschachtelte Kundendatenfelder für komplexe Integrationsmuster erstellen. Auf diese Weise können Sie eine Reihe von Auswahlen für den Kunden ketten.
+
+Sie können beispielsweise verschachtelte Kundendatenfelder hinzufügen, um von Kunden zu verlangen, einen Integrationstyp mit Ihrem Ziel auszuwählen, gefolgt von einer weiteren Auswahl. Die zweite Auswahl ist ein verschachteltes Feld innerhalb des Integrationstyps.
+
+Um ein verschachteltes Feld hinzuzufügen, verwenden Sie die `properties` -Parameter wie unten dargestellt. Im folgenden Konfigurationsbeispiel sehen Sie drei separate verschachtelte Felder innerhalb der **Ihr Ziel - Integrationsspezifische Einstellungen** Kundendatenfeld.
+
+>[!TIP]
+>
+>Ab der Version April 2024 können Sie eine `isRequired` auf verschachtelten Feldern. Im folgenden Konfigurationsfragment werden beispielsweise die ersten beiden verschachtelten Felder als erforderlich markiert (hervorgehobene Zeile xxx) und Kunden können den Vorgang nur fortsetzen, wenn sie einen Wert für das Feld auswählen. Weitere Informationen zu den erforderlichen Feldern finden Sie in der [unterstützte Parameter](#supported-parameters) Abschnitt.
+
+```json {line-numbers="true" highlight="10,19"}
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+```
+
 ## Erstellen von bedingten Kundendatenfeldern {#conditional-options}
 
 Sie können bedingte Kundendatenfelder erstellen, die im Aktivierungs-Workflow nur angezeigt werden, wenn Benutzerinnen und Benutzer eine bestimmte Option auswählen.
@@ -358,7 +408,7 @@ Um ein Feld als bedingt festzulegen, verwenden Sie den Parameter `conditional` w
 }
 ```
 
-In einem größeren Kontext können Sie das Feld `conditional`, das in der folgenden Zielkonfiguration verwendet wird, neben der Zeichenfolge `fileType` und dem `csvOptions`-Objekt sehen, in dem es definiert ist.
+In einem größeren Kontext können Sie die `conditional` -Feld, das in der folgenden Zielkonfiguration verwendet wird, neben dem `fileType` und die `csvOptions` -Objekt, in dem es definiert ist. Die bedingten Felder werden im `properties` -Parameter.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
