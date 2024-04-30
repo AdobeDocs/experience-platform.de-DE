@@ -2,10 +2,10 @@
 title: Regeln
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 100%
+source-wordcount: '2028'
+ht-degree: 93%
 
 ---
 
@@ -45,21 +45,25 @@ Die verfügbaren Ereignisse hängen davon ab, welche Erweiterungen installiert w
 
 ### Aktionen (then)
 
-Aktionen sind der *Then*-Teil einer Regel. Sie definieren, was beim Ausführen der Regel passieren soll. Wenn ein Ereignis ausgelöst wird und hierbei die Bedingungen erfüllt sowie die Ausnahmen nicht erfüllt werden, werden die Aktionen ausgeführt. Sie können Aktionen beliebig per Drag-and-Drop sortieren.
+Aktionen sind der *Then*-Teil einer Regel. Sie definieren, was beim Ausführen der Regel passieren soll. Wenn ein Ereignis ausgelöst wird und hierbei die Bedingungen als „true“ ausgewertet sowie die Ausnahmen nicht erfüllt werden, werden die Aktionen ausgeführt. Sie können Aktionen beliebig per Drag-and-Drop sortieren.
 
 ## Erstellen einer Regel
 
 Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden sollen, wenn eine Bedingung erfüllt wird.
 
+>[!TIP]
+>
+>Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) aus dem rechten Bereich.
+
 1. Öffnen Sie die Registerkarte [!UICONTROL Regeln] und wählen Sie **[!UICONTROL Neue Regel erstellen]** aus.
 
-   ![](../../images/launch-rule-builder.jpg)
+   ![Registerkarte Regeln , die das Namensfeld hervorhebt.](../../images/launch-rule-builder.png)
 
 1. Geben Sie einen Namen für die Regel ein.
 1. Klicken Sie unter „Ereignisse“ auf das Symbol **[!UICONTROL Hinzufügen]**.
-1. Wählen Sie Ihre Erweiterung und einen der für diese Erweiterung verfügbaren Ereignistyp aus und konfigurieren Sie dann die Einstellungen für das Ereignis.
+1. Wählen Sie Ihre Erweiterung und einen der für diese Erweiterung verfügbaren Ereignistypen aus und konfigurieren Sie dann die Einstellungen für das Ereignis.
 
-   ![](../../images/rule-event-config.png)
+   ![Seite zur Regelereigniskonfiguration.](../../images/rule-event-config.png)
 
    Die verfügbaren Ereignistypen hängen von der ausgewählten Erweiterung ab. Die Ereigniseinstellungen unterscheiden sich je nach Ereignistyp. Einige Ereignisse verfügen nicht über Eigenschaften, die konfiguriert werden müssen.
 
@@ -85,11 +89,11 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
    * Regeln mit derselben Priorität werden ohne bestimmte Reihenfolge ausgeführt.
    * Regeln werden in der angegebenen Reihenfolge ausgelöst, enden jedoch nicht unbedingt in dieser Reihenfolge. Wenn die Regeln A und B sich ein Ereignis teilen, Sie die Reihenfolge so zuweisen, dass Regel A zuerst eintritt, und Regel A asynchron ausgeführt wird, gibt es keine Garantie, dass Regel A abgeschlossen ist, bevor Regel B beginnt.
 
-      Wenn sie später ausgeführt werden soll, geben Sie eine Zahl über 50 an. Weitere Informationen zur Reihenfolge finden Sie unter [Regelreihenfolge](rules.md#rule-ordering).
+     Wenn sie später ausgeführt werden soll, geben Sie eine Zahl über 50 an. Weitere Informationen zur Reihenfolge finden Sie unter [Regelreihenfolge](rules.md#rule-ordering).
 
-1. Klicken Sie auf das Symbol **[!UICONTROL Hinzufügen]** für Bedingungen, wählen Sie dann einen Logiktyp, eine Erweiterung sowie einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Änderungen beibehalten]** aus.
+1. Bedingungen auswählen **[!UICONTROL Hinzufügen]** und wählen Sie einen Logiktyp, eine Erweiterung, einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Änderungen beibehalten]** aus.
 
-   ![](../../images/condition-settings.png)
+   ![Konfigurationsseite für Regelbedingungen .](../../images/condition-settings.png)
 
    Die verfügbaren Bedingungstypen hängen von der ausgewählten Erweiterung ab. Die Bedingungseinstellungen unterscheiden sich je nach Bedingungstyp.
 
@@ -102,9 +106,9 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
    Sie können beliebig viele Bedingungen hinzufügen. Mehrere Bedingungen innerhalb derselben Regel werden durch AND verknüpft.
 
-1. Klicken Sie auf das Symbol **[!UICONTROL Hinzufügen]** für Aktionen, wählen Sie dann Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und klicken Sie auf **[!UICONTROL Änderungen beibehalten]**.
+1. Auswählen der Aktionen **[!UICONTROL Hinzufügen]** -Symbol, wählen Sie Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und wählen Sie **[!UICONTROL Änderungen beibehalten]**.
 
-   ![](../../images/action-settings.png)
+   ![Seite zur Konfiguration der Regelaktion .](../../images/action-settings.png)
 
    Die verfügbaren Aktionstypen hängen von der ausgewählten Erweiterung ab. Die Aktionseinstellungen unterscheiden sich je nach Aktionstyp.
 
@@ -148,7 +152,7 @@ Regelereignisse und -bedingungen werden immer in der Haupt-Tag-Bibliothek gebün
 
 ### Regeln mit Ereignissen vom Typ „Core - Bibliothek geladen“ oder „Core - Seitenanfang“
 
-Diese Ereignisse müssen fast immer ausgeführt werden (es sei denn, die Bedingungen werden nicht erfüllt). Aus Effizienzgründen werden sie in der Hauptbibliothek (der Datei, auf die Ihr Einbettungscode verweist.) gebündelt.
+Diese Ereignisse müssen fast immer ausgeführt werden (es sei denn, die Bedingungen werden als „false“ ausgewertet). Aus Effizienzgründen werden sie in der Hauptbibliothek (der Datei, auf die Ihr Einbettungs-Code verweist) gebündelt.
 
 * **JavaScript:** Das JavaScript ist in die Haupt-Tag-Bibliothek eingebettet. Das benutzerdefinierte Skript wird in ein Skript-Tag eingeschlossen und über `document.write` in das Dokument geschrieben. Wenn die Regel mehrere benutzerdefinierte Skripte enthält, werden sie der Reihe nach geschrieben.
 
@@ -175,9 +179,9 @@ Das Verhalten der Laufzeitumgebung hängt davon ab, ob die Option **[!UICONTROL 
 
 Wenn die Einstellung aktiviert ist, wenn ein Ereignis zur Laufzeit ausgelöst wird, werden die Bedingungen und Aktionen der Regel einer Verarbeitungswarteschlange hinzugefügt (basierend auf der von Ihnen definierten Reihenfolge) und nacheinander nach dem Prinzip „first in, first out“ (FIFO) verarbeitet. Die Regel wartet auf den Abschluss der Komponente, bevor sie zur nächsten Komponente übergeht.
 
-Wenn eine Bedingung nicht erfüllt wird oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Bedingungen und Aktionen dieser Regel aus der Warteschlange entfernt.
+Wenn eine Bedingung als „false“ ausgewertet wird oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Bedingungen und Aktionen dieser Regel aus der Warteschlange entfernt.
 
-Wenn eine Aktion fehlschlägt oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Aktionen dieser Regel aus der Warteschlange entfernt.
+Wenn eine Aktion fehlschlägt oder ihren definierten Timeout erreicht, werden die nachfolgenden Aktionen dieser Regel aus der Warteschlange entfernt.
 
 ### Deaktiviert
 

@@ -2,10 +2,10 @@
 title: Erweiterungen
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '523'
+ht-degree: 94%
 
 ---
 
@@ -43,13 +43,13 @@ Die Seite „Erweiterungen“ bietet drei Ansichten:
 
 * Installierte
 
-   Zeigt alle installierten Erweiterungen an.
+  Zeigt alle installierten Erweiterungen an.
 
 * Katalog
 * Zeigt alle verfügbaren Erweiterungen an.
 * Updates
 
-   Zeigt Updates für installierte Erweiterungen an.
+  Zeigt Updates für installierte Erweiterungen an.
 
 Klicken Sie auf **[!UICONTROL Erweiterungen]**, um alle installierten Erweiterungen anzuzeigen. Sie können den Katalog auch verwenden, um eine Liste aller verfügbaren Erweiterungen anzuzeigen und zu ermitteln, welche Erweiterungen verfügbar sind.
 
@@ -59,10 +59,14 @@ Ausführliche Informationen zu Adobe-eigenen Erweiterungen finden Sie in der [Er
 
 Tags sind extrem erweiterbar. Erweiterungen fügen Tags Kernfunktionen hinzu. Erweiterungen werden häufig verwendet, um Integrationen in andere Anwendungen zu schaffen.
 
+>[!TIP]
+>
+>Verwenden Sie die Produkthilfe in der rechten Leiste, um mehr über Erweiterungen zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
+
 1. Öffnen Sie auf der Übersichtsseite einer Eigenschaft die Registerkarte **[!UICONTROL Erweiterungen]**.
 1. Wählen Sie eine Erweiterung aus.
 
-   ![Haupterweiterung](../../../images/extensions.png)
+   ![Registerkarte &quot;Katalog&quot;mit Core-Erweiterungen auf der Registerkarte &quot;Erweiterungen&quot;.](../../../images/extensions.png)
 
    * Wenn die Erweiterung vorhanden ist, wählen Sie sie aus dem Erweiterungskatalog aus.
    * Bewegen Sie den Mauszeiger über eine Erweiterung in Ihrer Liste, um sie zu konfigurieren oder zu deaktivieren.

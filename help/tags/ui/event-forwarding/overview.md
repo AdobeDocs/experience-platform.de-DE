@@ -3,10 +3,10 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 87%
+source-wordcount: '1160'
+ht-degree: 76%
 
 ---
 
@@ -24,7 +24,7 @@ Mit der Ereignisweiterleitung in Adobe Experience Platform können Sie erfasste 
 
 Dieses Dokument bietet einen Überblick über die Ereignisweiterleitung in Platform.
 
-![Ereignisweiterleitung im Datenerfassungs-Ökosystem](../../../collection/images/home/event-forwarding.png)
+![Ereignisweiterleitung im Datensammlungs-Ökosystem.](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
@@ -55,7 +55,11 @@ Während Tags Ereignisdaten mithilfe der Platform Web- und Mobile-SDKs direkt au
 
 Die Ereignisweiterleitung pflegt einen eigenen Speicher mit Eigenschaften, die von Tags getrennt sind. Diese können Sie in der Benutzeroberfläche von Experience Platform oder in der Benutzeroberfläche für die Datenerfassung anzeigen, indem Sie **[!UICONTROL Ereignisweiterleitung]** in der linken Navigation.
 
-![Properties der Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/overview/properties.png)
+>[!TIP]
+>
+>Verwenden Sie die Hilfe zum Produkt in der rechten Leiste, um mehr über die Ereignisweiterleitung zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
+
+![Eigenschaften für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/properties.png)
 
 Alle Properties der Ereignisweiterleitung führen **[!UICONTROL Edge]** als ihre Plattform auf. Sie unterscheiden nicht zwischen Web oder Mobile, da sie nur Daten verarbeiten, die vom Platform Edge Network empfangen werden, das selbst Ereignisdaten sowohl von Web- als auch von mobilen Plattformen empfangen kann.
 
@@ -63,7 +67,9 @@ Alle Properties der Ereignisweiterleitung führen **[!UICONTROL Edge]** als ihre
 
 Die Ereignisweiterleitung verfügt über einen eigenen Katalog kompatibler Erweiterungen, z. B. die [Core](../../extensions/server/core/overview.md)-Erweiterung und die [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md)-Erweiterung. Sie können die verfügbaren Erweiterungen für Properties der Ereignisweiterleitung in der Benutzeroberfläche anzeigen, indem Sie im linken Navigationsbereich auf **[!UICONTROL Erweiterungen]** und dann auf **[!UICONTROL Katalog]** klicken.
 
-![Erweiterungen für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/overview/extensions.png)
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) aus dem rechten Bereich.
+
+![Erweiterungen für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Datenelemente {#data-elements}
 
@@ -77,7 +83,9 @@ Um Daten im Platform Edge Network zu referenzieren, müssen Sie ein Datenelement
 
 Der Wert **[!UICONTROL Pfad]** für das Datenelement muss dem Muster `arc.event.{ELEMENT}` entsprechen (z. B.: `arc.event.xdm.web.webPageDetails.URL`). Dieser Pfad muss korrekt angegeben werden, damit Daten gesendet werden können.
 
-![Beispiel eines Datenelements vom Typ Pfad für die Ereignisweiterleitung](../../images/ui/event-forwarding/overview/data-reference.png)
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) aus dem rechten Bereich.
+
+![Beispiel eines Datenelements vom Typ Pfad für die Ereignisweiterleitung.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Regeln {#rules}
 
@@ -85,13 +93,17 @@ Das Erstellen von Regeln in den Properties der Ereignisweiterleitung funktionier
 
 Darüber hinaus gilt ein 30-Sekunden-Timeout für ein einzelnes Ereignis, da es über alle Regeln (und damit alle Aktionen) innerhalb einer Ereignisweiterleitungseigenschaft verarbeitet wird. Das bedeutet, dass alle Regeln und Aktionen für ein einzelnes Ereignis in diesem Zeitraum abgeschlossen sein müssen.
 
-![Regeln für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/overview/rules.png)
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) aus dem rechten Bereich.
+
+![Regeln für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche.](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Tokenisierung von Datenelementen {#tokenization}
 
 In Tag-Regeln werden Datenelemente am Anfang und am Ende des Datenelementnamens mit einem `%`-Token versehen (zum Beispiel: `%viewportHeight%`). In Ereignisweiterleitungsregeln dagegen werden Datenelemente mit einem `{{`-Token am Anfang und einem `}}`-Token am Ende des Datenelementnamens versehen (zum Beispiel: `{{viewportHeight}}`).
 
-![Beispiel eines Datenelements vom Typ Pfad für die Ereignisweiterleitung](../../images/ui/event-forwarding/overview/tokenization.png)
+Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) aus dem rechten Bereich.
+
+![Beispiel eines Datenelements vom Typ Pfad für die Ereignisweiterleitung.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Sequenz von Regelaktionen {#action-sequencing}
 
