@@ -2,10 +2,10 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
+source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
 workflow-type: tm+mt
-source-wordcount: '1818'
-ht-degree: 37%
+source-wordcount: '2030'
+ht-degree: 32%
 
 ---
 
@@ -32,12 +32,12 @@ In der folgenden Tabelle werden die einzelnen verfügbaren Spalten beschrieben.
 | **[!UICONTROL Name]** | Das Namensfeld enthält entweder den Namen der Vorlage oder die ersten Zeichen Ihrer SQL-Abfrage. Jede Abfrage, die über die Benutzeroberfläche mit dem Abfrage-Editor erstellt wurde, wird zu Beginn benannt. Wenn die Abfrage über die API erstellt wurde, wird ihr Name zu einem Snippet der ursprünglichen SQL, die zur Erstellung der Abfrage verwendet wurde. Um eine Liste aller mit der Abfrage verknüpften Ausführungen anzuzeigen, wählen Sie ein Element aus der [!UICONTROL Name] Spalte. Weitere Informationen finden Sie unter [Abfragenausführungen Planungsdetails](#query-runs) Abschnitt. |
 | **[!UICONTROL Vorlage]** | Der Name der Abfragevorlage. Klicken Sie auf einen Vorlagennamen, um zum Abfrage-Editor zu navigieren. Die Abfragevorlage wird aus praktischen Gründen im Abfrage-Editor angezeigt. Wenn kein Vorlagenname vorhanden ist, wird die Zeile mit einem Bindestrich markiert und es ist nicht möglich, zum Abfrage-Editor umzuleiten, um die Abfrage anzuzeigen. |
 | **[!UICONTROL SQL]** | Ein Ausschnitt der SQL-Abfrage. |
-| **[!UICONTROL Ausführungsfrequenz]** | Die Häufigkeit, mit der Ihre Abfrage ausgeführt werden soll. Die unterstützten Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungshäufigkeit gefiltert werden. |
+| **[!UICONTROL Ausführungsfrequenz]** | Die Häufigkeit, mit der Ihre Abfrage ausgeführt werden soll. Die verfügbaren Werte sind `Run once` und `Scheduled`. |
 | **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
 | **[!UICONTROL Erstellt]** | Der Zeitstempel der Erstellung der Abfrage im UTC-Format. |
 | **[!UICONTROL Zeitstempel der letzten Ausführung]** | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
 | **[!UICONTROL Letzter Ausführungsstatus]** | Der Status der letzten Abfrageausführung. Die Statuswerte sind: `Success`, `Failed`, `In progress`, und `No runs`. |
-| **[!UICONTROL Planstatus]** | Der aktuelle Status der geplanten Abfrage. Es gibt fünf potenzielle Werte. [!UICONTROL Registrieren], [!UICONTROL Aktiv], [!UICONTROL Inaaktiv], [!UICONTROL Gelöscht]und einen Bindestrich. <ul><li>Der Bindestrich zeigt an, dass es sich bei der geplanten Abfrage um eine einmalige, nicht wiederkehrende Abfrage handelt.</li><li>Die [!UICONTROL Registrieren] Der Status gibt an, dass das System die Erstellung des neuen Zeitplans für die Abfrage noch verarbeitet. Beachten Sie, dass Sie eine geplante Abfrage während der Registrierung nicht deaktivieren oder löschen können.</li><li>Die [!UICONTROL Aktiv] Der Status zeigt an, dass die geplante Abfrage **noch nicht bestanden** Datum und Uhrzeit der Fertigstellung.</li><li>Die [!UICONTROL Inaaktiv] Der Status zeigt an, dass die geplante Abfrage **sent** Datum und Uhrzeit der Fertigstellung.</li><li>Die [!UICONTROL Gelöscht] status gibt an, dass der Abfrageplan gelöscht wurde.</li></ul> |
+| **[!UICONTROL Planstatus]** | Der aktuelle Status der geplanten Abfrage. Es gibt sechs potenzielle Werte. [!UICONTROL Registrieren], [!UICONTROL Aktiv], [!UICONTROL Inaaktiv], [!UICONTROL Gelöscht], einen Bindestrich und [!UICONTROL In Quarantäne].<ul><li>Die **[!UICONTROL Registrieren]** Der Status gibt an, dass das System die Erstellung des neuen Zeitplans für die Abfrage noch verarbeitet. Beachten Sie, dass Sie eine geplante Abfrage während der Registrierung nicht deaktivieren oder löschen können.</li><li>Die **[!UICONTROL Aktiv]** Der Status zeigt an, dass die geplante Abfrage **noch nicht bestanden** Datum und Uhrzeit der Fertigstellung.</li><li>Die **[!UICONTROL Inaaktiv]** Der Status zeigt an, dass die geplante Abfrage **sent** Datum und Uhrzeit der Fertigstellung oder wurde von einem Benutzer als inaktiv markiert.</li><li>Die **[!UICONTROL Gelöscht]** status gibt an, dass der Abfrageplan gelöscht wurde.</li><li>Der Bindestrich zeigt an, dass es sich bei der geplanten Abfrage um eine einmalige, nicht wiederkehrende Abfrage handelt.</li><li>Die **[!UICONTROL In Quarantäne]** Der Status gibt an, dass die Abfrage zehn aufeinander folgende Ausführungen fehlgeschlagen ist, und erfordert Ihre Intervention, bevor weitere Ausführungen durchgeführt werden können.</li></ul> |
 
 >[!TIP]
 >
@@ -63,15 +63,19 @@ Aktivieren bzw. deaktivieren Sie die entsprechenden Kontrollkästchen, um eine T
 
 ## Geplante Abfragen mit Inline-Aktionen verwalten {#inline-actions}
 
-Die [!UICONTROL Geplante Abfragen] -Ansicht bietet verschiedene Inline-Aktionen zur Verwaltung aller Ihrer geplanten Abfragen von einem Ort aus. Inline-Aktionen werden in jeder Zeile mit Auslassungspunkten angezeigt. Wählen Sie die Auslassungspunkte einer geplanten Abfrage aus, die Sie verwalten möchten, um die verfügbaren Optionen in einem Popup-Menü anzuzeigen. Zu den verfügbaren Optionen gehören [[!UICONTROL Zeitplan deaktivieren]](#disable) oder [!UICONTROL Zeitplan aktivieren], [[!UICONTROL Zeitplan löschen]](#delete), und [[!UICONTROL Abonnieren]](#alert-subscription) , um Warnhinweise abzufragen.
+Die [!UICONTROL Geplante Abfragen] -Ansicht bietet verschiedene Inline-Aktionen zur Verwaltung aller Ihrer geplanten Abfragen von einem Ort aus. Inline-Aktionen werden in jeder Zeile mit Auslassungspunkten angezeigt. Wählen Sie die Auslassungspunkte einer geplanten Abfrage aus, die Sie verwalten möchten, um die verfügbaren Optionen in einem Popup-Menü anzuzeigen. Zu den verfügbaren Optionen gehören [[!UICONTROL Zeitplan deaktivieren]](#disable) oder [!UICONTROL Zeitplan aktivieren], [[!UICONTROL Zeitplan löschen]](#delete), [[!UICONTROL Abonnieren]](#alert-subscription) Warnhinweise abfragen und [Aktivieren oder [!UICONTROL Quarantäne deaktivieren]](#quarantined-queries).
 
-![Die Registerkarte Geplante Abfragen mit den Auslassungszeichen für die Inline-Aktion und dem Popup-Menü sind hervorgehoben.](../images/ui/monitor-queries/disable-inline.png)
+![Die Registerkarte Geplante Abfragen mit den Auslassungszeichen für die Inline-Aktion und dem Popup-Menü sind hervorgehoben.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Geplante Abfrage deaktivieren oder aktivieren {#disable}
 
 Um eine geplante Abfrage zu deaktivieren, wählen Sie die Auslassungspunkte einer geplanten Abfrage aus, die Sie verwalten möchten, und wählen Sie dann **[!UICONTROL Zeitplan deaktivieren]** aus den Optionen im Popup-Menü. Es wird ein Dialogfeld angezeigt, in dem Sie Ihre Aktion bestätigen können. Auswählen **[!UICONTROL Deaktivieren]** , um Ihre Einstellung zu bestätigen.
 
 Nachdem eine geplante Abfrage deaktiviert wurde, können Sie den Zeitplan über denselben Prozess aktivieren. Wählen Sie die Auslassungspunkte aus und wählen Sie **[!UICONTROL Zeitplan aktivieren]** aus den verfügbaren Optionen.
+
+>[!NOTE]
+>
+>Wenn eine Abfrage in Quarantäne gestellt wurde, sollten Sie die SQL-Anweisung der Vorlage lesen, bevor Sie deren Planung aktivieren. Dadurch wird verhindert, dass Rechenzeiten verschwendet werden, wenn die Vorlagenabfrage weiterhin Probleme hat.
 
 ### Geplante Abfrage löschen {#delete}
 
@@ -91,6 +95,10 @@ Die [!UICONTROL Warnhinweise] wird geöffnet. Die [!UICONTROL Warnhinweise] -Dia
 
 ![Der Dialog zu Warnhinweis-Abonnements.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
+>[!NOTE]
+>
+>Um darüber informiert zu werden, dass Abfragen unter Quarantäne gestellt werden, müssen Sie zunächst die geplanten Abfragen in der [Quarantänefunktion](#quarantined-queries).
+
 Siehe [Dokumentation zur API für Warnhinweise](../api/alert-subscriptions.md) für weitere Informationen.
 
 ### Anzeigen der Abfragedetails {#query-details}
@@ -98,6 +106,16 @@ Siehe [Dokumentation zur API für Warnhinweise](../api/alert-subscriptions.md) f
 Wählen Sie das Informationssymbol (![Ein Informationssymbol.](../images/ui/monitor-queries/information-icon.png)), um das Detailbedienfeld für die Abfrage anzuzeigen. Das Bedienfeld &quot;Details&quot;enthält alle relevanten Informationen über die Abfrage, die über die in der Tabelle der geplanten Abfragen enthaltenen Informationen hinausgehen. Zu den zusätzlichen Informationen gehören die Abfrage-ID, das Datum der letzten Änderung, die SQL der Abfrage, die Zeitplan-ID und der aktuelle Zeitplan.
 
 ![Registerkarte Geplante Abfragen mit dem Informationssymbol und dem Detailbereich hervorgehoben.](../images/ui/monitor-queries/details-panel.png)
+
+### Quarantäne-Abfragen {#quarantined-queries}
+
+Bei der Registrierung für die Quarantänefunktion wird jede geplante Abfrage, die zehn aufeinander folgende Ausführungen fehlschlägt, automatisch in eine [!UICONTROL In Quarantäne] -Status. Eine Abfrage mit diesem Status wird inaktiv und wird nicht in der geplanten Häufigkeit ausgeführt. Danach müssen Sie eingreifen, bevor weitere Ausführungen erfolgen können. Dadurch werden Systemressourcen geschützt, da Sie die Probleme mit Ihrer SQL vor weiteren Ausführungen überprüfen und korrigieren müssen.
+
+Um eine geplante Abfrage für die Quarantänefunktion zu aktivieren, wählen Sie die Auslassungszeichen (`...`) gefolgt von [!UICONTROL Quarantäne aktivieren] aus dem angezeigten Dropdown-Menü.
+
+![Die Registerkarte für geplante Abfragen mit den Auslassungspunkten und Quarantäne aktivieren , die im Dropdown-Menü für Inline-Aktionen hervorgehoben sind.](../images/ui/monitor-queries/inline-enable.png)
+
+Abfragen können während der Erstellung eines Zeitplans auch in die Quarantänefunktion aufgenommen werden. Siehe [Dokumentation zu Abfrageplänen](./query-schedules.md#quarantine) für weitere Informationen.
 
 ## Filtern von Abfragen {#filter}
 
@@ -128,7 +146,7 @@ Diese Informationen werden in einer fünfspaltigen Tabelle bereitgestellt. Jede 
 | **[!UICONTROL Kennung der Abfrageausführung]** | Die Kennung der täglichen Ausführung der Abfrage. Wählen Sie die **[!UICONTROL Kennung der Abfrageausführung]** , um zur [!UICONTROL Übersicht über die Ausführung von Abfragen]. |
 | **[!UICONTROL Start der Abfrage]** | Der Zeitstempel, wann die Abfrage ausgeführt wurde. Der Zeitstempel hat das UTC-Format. |
 | **[!UICONTROL Abschluss der Abfrage]** | Der Zeitstempel, wann die Abfrage abgeschlossen wurde. Der Zeitstempel hat das UTC-Format. |
-| **[!UICONTROL Status]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
+| **[!UICONTROL Status]** | Der Status der letzten Abfrageausführung. Die Statuswerte sind: `Success`, `Failed`, `In progress`oder `Quarantined`. |
 | **[!UICONTROL Datensatz]** | Der an der Ausführung beteiligte Datensatz. |
 
 Details zur geplanten Abfrage finden Sie im Bedienfeld [!UICONTROL Eigenschaften]. Dieses Bedienfeld enthält die anfängliche Abfrage-ID, den Client-Typ, den Vorlagennamen, die Abfrage-SQL und die Kadenz des Zeitplans.

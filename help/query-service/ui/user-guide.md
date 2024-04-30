@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2661'
-ht-degree: 44%
+source-wordcount: '2794'
+ht-degree: 42%
 
 ---
 
@@ -88,6 +88,16 @@ Wenn Sie mehrere Abfragen geschrieben haben, aber nur eine Abfrage ausführen m�
 [!UICONTROL Ausgewählte Abfrage ausführen] Symbol. Dieses Symbol ist standardmäßig deaktiviert, bis Sie im Editor die Abfragesyntax auswählen.
 
 ![Der Abfrage-Editor mit dem [!UICONTROL Ausgewählte Abfrage ausführen] hervorgehoben.](../images/ui/query-editor/run-selected-query.png)
+
+### Sitzung des Abfrage-Editors abbrechen {#cancel-query}
+
+Übernehmen Sie die Kontrolle über die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. Durch diese Aktion wird der Abfrage-Editor während einer Abfrageausführung gelöscht. Beachten Sie, dass die Abfrage weiterhin im Hintergrund ausgeführt wird. Wenn es sich um eine CTAS-Abfrage handelt, wird weiterhin ein Ausgabedatensatz generiert. Um die Ausführung im Editor abzubrechen und mit dem Erstellen einer SQL-Anweisung fortzufahren, wählen Sie **[!UICONTROL Abfrage abbrechen]** nach der Ausführung einer Abfrage.
+
+![Der Abfrage-Editor mit [!UICONTROL Abfrage abbrechen] hervorgehoben.](../images/ui/query-editor/cancel-query-run.png)
+
+Ein Bestätigungsdialogfeld wird angezeigt. Auswählen **[!UICONTROL Bestätigen]** , um die Ausführung der Abfrage abzubrechen.
+
+![Das Dialogfeld Abbrechen der Abfragebestätigung mit hervorgehobener Bestätigung.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Ergebnisanzahl {#result-count}
 
@@ -219,7 +229,11 @@ Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldun
 
 Abfragen, die als Vorlage gespeichert wurden, können im Abfrage-Editor geplant werden. Mit der Planung von Abfragen können Sie die Ausführung von Abfragen in einem benutzerdefinierten Ordner automatisieren. Sie können Abfragen basierend auf Häufigkeit, Datum und Uhrzeit planen und bei Bedarf auch einen Ausgabedatensatz für Ihre Ergebnisse auswählen. Abfragezeitpläne können auch über die Benutzeroberfläche deaktiviert oder gelöscht werden.
 
-Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Editors können Sie einer bereits erstellten, gespeicherten und ausgeführten Abfrage nur einen Zeitplan hinzufügen. Dieselbe Einschränkung gilt nicht für [!DNL Query Service] API:
+Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Editors können Sie einer bereits erstellten, gespeicherten und ausgeführten Abfrage nur einen Zeitplan hinzufügen. Dieselbe Einschränkung gilt nicht für [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Geplante Abfragen, die zehn aufeinander folgende Ausführungen fehlschlagen, werden automatisch in eine [!UICONTROL In Quarantäne] -Status. Eine Abfrage mit diesem Status erfordert Ihre Intervention, bevor weitere Ausführungen durchgeführt werden können. Siehe [Quarantäne-Abfragen](./monitor-queries.md#quarantined-queries) Dokumentation für weitere Details.
 
 Weitere Informationen finden Sie in der Dokumentation zu Abfragezeitplänen . [Erstellen von Abfrageplänen in der Benutzeroberfläche](./query-schedules.md). Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im Abschnitt [Endpunktleitfaden für geplante Abfragen](../api/scheduled-queries.md).
 
