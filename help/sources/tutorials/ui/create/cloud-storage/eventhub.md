@@ -3,10 +3,10 @@ title: Erstellen einer Azure Event Hub-Quellverbindung in der Benutzeroberfläch
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Azure Event Hub erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1680cc4e1d5c1576767053a74e560bc2eb8c24cb
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 25%
+source-wordcount: '1094'
+ht-degree: 17%
 
 ---
 
@@ -23,8 +23,8 @@ In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Azure Event Hubs] -
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Wenn Sie bereits über eine gültige [!DNL Event Hubs]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/streaming/cloud-storage-streaming.md) fortfahren.
@@ -52,9 +52,32 @@ Um Ihre [!DNL Event Hubs] Quell-Connector müssen Sie Werte für die folgenden V
 | Namespace | Der Namespace des [!DNL Event Hubs] auf die Sie zugreifen. Ein [!DNL Event Hubs] Der Namespace stellt einen eindeutigen Scoping-Container bereit, in dem Sie einen oder mehrere [!DNL Event Hubs]. |
 | Ereignis-Hub-Name | Der Name für Ihre [!DNL Event Hubs] -Quelle. |
 
->[!ENDTABS]
+Weitere Informationen zur Authentifizierung für freigegebene Zugriffssignaturen (SAS) [!DNL Event Hubs], lesen Sie die [[!DNL Azure] Handbuch zur Verwendung von SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-Weitere Informationen zu diesen Werten finden Sie unter [Dieses Ereignis-Hubs-Dokument](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+>[!TAB Ereignis-Hub Azure Active Directory Auth]
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
+| Mandanten-ID | Die Mandantenkennung, von der Sie die Berechtigung anfordern möchten. Ihre Mandantenkennung kann als GUID oder als benutzerfreundlicher Name formatiert werden. **Hinweis**: Die Mandanten-ID wird im [!DNL Microsoft Azure] -Schnittstelle. |
+| Client-ID | Die Ihrer App zugewiesene Anwendungs-ID. Sie können diese ID aus der [!DNL Microsoft Entra ID] Portal, in dem Sie Ihre [!DNL Azure Active Directory]. |
+| Geheimer Client-Wert | Das Client-Geheimnis, das zusammen mit der Client-ID zur Authentifizierung Ihrer App verwendet wird. Sie können Ihr Client-Geheimnis aus dem [!DNL Microsoft Entra ID] Portal, in dem Sie Ihre [!DNL Azure Active Directory]. |
+| Namespace | Der Namespace des [!DNL Event Hubs] auf die Sie zugreifen. Ein [!DNL Event Hubs] Der Namespace stellt einen eindeutigen Scoping-Container bereit, in dem Sie einen oder mehrere [!DNL Event Hubs]. |
+
+Weitere Informationen unter [!DNL Azure Active Directory], lesen Sie die [Azure-Leitfaden zur Verwendung der Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB Ereignis-Hub Scoped Azure Active Directory Auth]
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
+| Mandanten-ID | Die Mandantenkennung, von der Sie die Berechtigung anfordern möchten. Ihre Mandantenkennung kann als GUID oder als benutzerfreundlicher Name formatiert werden. **Hinweis**: Die Mandanten-ID wird im [!DNL Microsoft Azure] -Schnittstelle. |
+| Client-ID | Die Ihrer App zugewiesene Anwendungs-ID. Sie können diese ID aus der [!DNL Microsoft Entra ID] Portal, in dem Sie Ihre [!DNL Azure Active Directory]. |
+| Geheimer Client-Wert | Das Client-Geheimnis, das zusammen mit der Client-ID zur Authentifizierung Ihrer App verwendet wird. Sie können Ihr Client-Geheimnis aus dem [!DNL Microsoft Entra ID] Portal, in dem Sie Ihre [!DNL Azure Active Directory]. |
+| Namespace | Der Namespace des [!DNL Event Hubs] auf die Sie zugreifen. Ein [!DNL Event Hubs] Der Namespace stellt einen eindeutigen Scoping-Container bereit, in dem Sie einen oder mehrere [!DNL Event Hubs]. |
+| Ereignis-Hub-Name | Der Name für Ihre [!DNL Event Hubs] -Quelle. |
+
+Weitere Informationen unter [!DNL Azure Active Directory], lesen Sie die [Azure-Leitfaden zur Verwendung der Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!ENDTABS]
 
 Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Event Hubs] -Konto auf Experience Platform.
 
@@ -90,7 +113,7 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und ge
 
 >[!TAB Standardauthentifizierung]
 
-So erstellen Sie eine [!DNL Event Hubs] Konto mit Standardauthentifizierung auswählen **[!UICONTROL Standardauthentifizierung]** und dann Werte für Ihre [!UICONTROL SAS-Schlüsselname], [!UICONTROL SAS-Schlüssel], und [!UICONTROL Namespace].
+So erstellen Sie eine [!DNL Event Hubs] -Konto mit Standardauthentifizierung verwenden, verwenden Sie die [!UICONTROL Kontoauthentifizierung] Dropdown-Menü und wählen Sie **[!UICONTROL Standardauthentifizierung]**. Geben Sie als Nächstes Werte für Ihre [!UICONTROL SAS-Schlüsselname], [!UICONTROL SAS-Schlüssel], und [!UICONTROL Namespace].
 
 Nachdem Sie Ihre Authentifizierungsberechtigungen eingegeben haben, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]**.
 
@@ -98,11 +121,23 @@ Nachdem Sie Ihre Authentifizierungsberechtigungen eingegeben haben, wählen Sie 
 
 >[!TAB SAS-Authentifizierung]
 
-So erstellen Sie eine [!DNL Event Hubs] Konto mit SAS-Authentifizierung auswählen **[!UICONTROL SAS-Authentifizierung]** und dann Werte für Ihre [!UICONTROL SAS-Schlüsselname], [!UICONTROL SAS-Schlüssel], [!UICONTROL Namespace], und [!UICONTROL Name der Ereignis-Hubs].
+So erstellen Sie eine [!DNL Event Hubs] Konto mit SAS-Authentifizierung verwenden, verwenden Sie die [!UICONTROL Kontoauthentifizierung] Dropdown-Menü und wählen Sie **[!UICONTROL SAS-Authentifizierung]**. Geben Sie als Nächstes Werte für Ihre [!UICONTROL SAS-Schlüsselname], [!UICONTROL SAS-Schlüssel], [!UICONTROL Namespace], und [!UICONTROL Name der Ereignis-Hubs].
 
 Nachdem Sie Ihre Authentifizierungsberechtigungen eingegeben haben, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]**.
 
 ![Die SAS-Authentifizierungsschnittstelle für Azure Event Hubs.](../../../../images/tutorials/create/eventhub/sas.png)
+
+>[!TAB Ereignis-Hub Azure Active Directory Auth]
+
+So erstellen Sie eine [!DNL Event Hubs] Konto mit Event Hub Azure Active Directory-Authentifizierung verwenden Sie die [!UICONTROL Kontoauthentifizierung] Dropdown-Menü und wählen Sie **[!UICONTROL Azure Active Directory für Event Hub]**. Geben Sie als Nächstes Werte für Ihre [!UICONTROL Mandanten-ID], [!UICONTROL Client-ID], [!UICONTROL Geheimer Client-Wert], und [!UICONTROL Namespace].
+
+![Azure Event Hub Azure Active Directory-Authentifizierung](../../../../images/tutorials/create/eventhub/active-directory.png)
+
+>[!TAB Ereignis-Hub Scoped Azure Active Directory Auth]
+
+So erstellen Sie eine [!DNL Event Hubs] Konto mit Event Hub Scoped Azure Active Directory-Authentifizierung verwenden Sie die [!UICONTROL Kontoauthentifizierung] Dropdown-Menü und wählen Sie **[!UICONTROL Azure Active Directory für Event Hub-Scoping]**. Geben Sie als Nächstes Werte für Ihre [!UICONTROL Mandanten-ID], [!UICONTROL Client-ID], [!UICONTROL Geheimer Client-Wert], [!UICONTROL Namespace], und [!UICONTROL Ereignis-Hub-Name].
+
+![Azure Event Hub Scoped Azure Activity Directory-Authentifizierung](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 
