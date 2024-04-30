@@ -1,8 +1,10 @@
 ---
 title: Filtern von Quellobjekten in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche durch Ihre Quellobjekte wie Konten und Datenflüsse navigieren.
-last-substantial-update: 2024-04-30T00:00:00Z
-source-git-commit: 244f0734cf19694b15ecd10cfa76fb96d07b9489
+hide: true
+hidefromtoc: true
+exl-id: 59c200cc-1be7-45a8-9d7a-55e6f11dbcf2
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 1%
