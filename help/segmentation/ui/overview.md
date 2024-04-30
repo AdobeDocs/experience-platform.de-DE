@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '4014'
-ht-degree: 86%
+source-wordcount: '4105'
+ht-degree: 83%
 
 ---
 
@@ -80,7 +80,8 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | [!UICONTROL In Ordner verschieben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet, zu welchem Ordner die Zielgruppe gehört. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
 | [!UICONTROL Kopieren] | Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. |
 | [!UICONTROL Zugriffsbeschriftungen anwenden] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwalten der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Archivieren] | Benutzerdefinierter Upload | Archiviert die ausgewählte Zielgruppe. |
+| [!UICONTROL Veröffentlichen] | Benutzerdefinierter Upload, Segmentierungsdienst | Veröffentlicht die ausgewählte Zielgruppe. Weitere Informationen zur Lebenszyklusstatusverwaltung finden Sie im Abschnitt [Lebenszyklusstatus in den häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
+| [!UICONTROL Deaktivieren] | Benutzerdefinierter Upload, Segmentierungsdienst | Deaktiviert die ausgewählte Zielgruppe. Weitere Informationen zur Lebenszyklusstatusverwaltung finden Sie im Abschnitt [Lebenszyklusstatus in den häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
 | [!UICONTROL Löschen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. |
 | [!UICONTROL Zu Paket hinzufügen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verschiebt die Zielgruppe zwischen Sandboxes. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Sandbox-Werkzeugleitfaden](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ Sie können **[!UICONTROL Zusammenfassung der Aktualisierungshäufigkeit]** um e
 
 ![Die Schaltfläche Update frequency summary ist hervorgehoben.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-Das Tortendiagramm wird mit einer Aufschlüsselung der Zielgruppen nach Aktualisierungshäufigkeit angezeigt. Das Diagramm zeigt die Gesamtzahl der Zielgruppen in der Mitte an. Wenn Sie den Mauszeiger über die verschiedenen Teile der Audience bewegen, wird die Anzahl der Zielgruppen angezeigt, die zu den verschiedenen Aktualisierungshäufigkeit gehören.
+Das Tortendiagramm wird mit einer Aufschlüsselung der Zielgruppen nach Aktualisierungshäufigkeit angezeigt. Das Diagramm zeigt die Gesamtzahl der Zielgruppen in der Mitte und die tägliche Batch-Auswertungszeit in UTC am unteren Rand. Wenn Sie den Mauszeiger über die verschiedenen Teile der Audience bewegen, wird die Anzahl der Zielgruppen angezeigt, die zu den verschiedenen Aktualisierungshäufigkeit gehören.
 
-![Das Diagramm zum Aktualisierungshäufigkeit wird angezeigt.](../images/ui/overview/update-frequency-chart.png)
+![Das Diagramm für Aktualisierungshäufigkeit wird hervorgehoben, wobei auch die Auswertungszeit für die Batch-Segmentierung angezeigt wird.](../images/ui/overview/update-frequency-chart.png)
 
 ### Anpassen {#customize}
 
@@ -115,7 +116,7 @@ Sie können zusätzliche Felder zum [!UICONTROL Durchsuchen] Seite durch Auswahl
 | [!UICONTROL Name] | Der Name der Zielgruppe. |
 | [!UICONTROL Anzahl der Profile] | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
 | [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind: Segmentierungsdienst, Benutzerdefinierter Upload, Zielgruppenzusammensetzung und Audience Manager. |
-| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Published` und `Archived`. |
+| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive`, `Published`, und `Archived`. Weitere Informationen zum Lebenszyklusstatus, einschließlich der Bedeutung der verschiedenen Status und der Möglichkeit, Zielgruppen in verschiedene Lebenszyklusstatus zu verschieben, finden Sie im Abschnitt [Lebenszyklusstatus in den häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-status). |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], und [!UICONTROL Nicht geplant]. |
 | [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Zielgruppe in UTC. |
@@ -205,7 +206,7 @@ Die Liste der verfügbaren Filter wird angezeigt.
 | ------ | ----------- |
 | [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Zielgruppe. Zu den verfügbaren Optionen gehören: Segmentierungs-Service, Benutzerdefinierter Upload, Zielgruppenkomposition und Audience Manager. |
 | [!UICONTROL Hat ein beliebiges Tag] | Filtert nach Tags. Sie können zwischen **[!UICONTROL Hat ein beliebiges Tag]** und **[!UICONTROL Hat alle Tags]** wählen. Wenn **[!UICONTROL Hat ein beliebiges Tag]** ausgewählt ist, enthalten die gefilterten Zielgruppen **jedes** der Tags, die Sie hinzugefügt haben. Wenn **[!UICONTROL Hat alle Tags]** ausgewählt ist, müssen die gefilterten Zielgruppen **alle** der von Ihnen hinzugefügten Tags enthalten. |
-| [!UICONTROL Lebenszyklusstatus] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Verfügbare Optionen umfassen [!UICONTROL Aktiv], [!UICONTROL Archiviert], [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaktiv] und [!UICONTROL Veröffentlicht]. |
+| [!UICONTROL Lebenszyklusstatus] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Verfügbare Optionen umfassen [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaaktiv], und [!UICONTROL Veröffentlicht]. |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht die Filterung nach der Aktualisierungshäufigkeit der Zielgruppe. Verfügbare Optionen umfassen [!UICONTROL Geplant], [!UICONTROL Kontinuierlich] und [!UICONTROL Nach Bedarf]. |
 | [!UICONTROL Erstellt von] | Ermöglicht die Filterung nach der Person, die die Zielgruppe erstellt hat. |
 | [!UICONTROL Erstellungsdatum] | Ermöglicht die Filterung nach dem Erstellungsdatum der Zielgruppe. Sie können einen Datumsbereich auswählen, um danach zu filtern, wann die Zielgruppe erstellt wurde. |
@@ -408,7 +409,7 @@ Es wird ein Popup mit allen Feldern angezeigt, die in der Tabelle angezeigt werd
 | Feld | Beschreibung |
 | ----- | ----------- | 
 | [!UICONTROL Name] | Der Name der Zielgruppe. |
-| [!UICONTROL Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Published` und `Archived`. |
+| [!UICONTROL Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive`, `Published`, und `Archived`. |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Zielgruppe. |
 | [!UICONTROL Erstellt von] | Der Name der Person, die die Zielgruppe erstellt hat. |
 | [!UICONTROL Aktualisiert] | Datum und Uhrzeit der letzten Aktualisierung der Zielgruppe. |

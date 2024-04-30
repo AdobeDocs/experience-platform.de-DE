@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
+source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
 workflow-type: tm+mt
-source-wordcount: '3161'
-ht-degree: 29%
+source-wordcount: '3976'
+ht-degree: 23%
 
 ---
 
@@ -98,18 +98,6 @@ Der aktuelle Datenablauf für extern generierte Zielgruppen lautet **30 Tage**. 
 
 Nach Ablauf des Datenablaufzeitraums ist der zugehörige Datensatz weiterhin im Datensatzbestand sichtbar, Sie werden dies jedoch tun. **not** die Audience aktivieren können und die Profilanzahl als Null angezeigt wird.
 
-### Was stellen die verschiedenen Lebenszyklusstatus dar?
-
-In der folgenden Tabelle werden die verschiedenen Lebenszyklusstatus, ihre Darstellung, wo Zielgruppen mit diesem Status verwendet werden können, sowie die Auswirkungen auf die Limits bei der Segmentierung erläutert.
-
-| Land | Definition | In Audience Portal sichtbar? | In Zielen sichtbar? | Betrifft Segmentierungsbeschränkungen? | Auswirkungen auf dateibasierte Zielgruppen | Auswirkungen auf die Zielgruppenbewertung | In anderen Zielgruppen verwenden? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Entwurf | Eine Zielgruppe im **Entwurf** state ist eine Zielgruppe, die sich noch in der Entwicklung befindet und noch nicht für andere Dienste verwendet werden kann. | Ja, aber kann ausgeblendet werden. | Nein | Ja | Kann während des Verfeinerungsprozesses importiert oder aktualisiert werden. | Kann ausgewertet werden, um genaue Veröffentlichungszahlen zu erhalten. | Ja, jedoch nicht empfohlen, verwendet zu werden. |
-| Veröffentlicht | Eine Zielgruppe im **Veröffentlicht** state ist eine Zielgruppe, die für alle nachgelagerten Dienste verwendet werden kann. | Ja | Ja | Ja | Kann importiert oder aktualisiert werden. | Wird mit Batch-, Streaming- oder Edge-Segmentierung ausgewertet. | Ja |
-| Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Wird nicht mehr aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Ja |
-| Gelöscht | Eine Zielgruppe im **Gelöscht** state ist eine Zielgruppe, die gelöscht wurde. Das tatsächliche Löschen der Daten kann bis zu einigen Minuten dauern. | Nein | Nein | Nein | Zugrunde liegende Daten werden gelöscht. | Nach Abschluss des Löschvorgangs erfolgt keine Datenauswertung oder -ausführung. | Nein |
-| Aktiv | Dieser Status wurde **veraltet** und wird durch die **Veröffentlicht** -Status. | K. A. | K. A. | K. A. | K. A. | K. A. | K. A. |
-
 ### Wie interagieren Audience Portal und die Zielgruppenkomposition mit der Veröffentlichung von Real-Time CDP-Partnerdaten?
 
 Audience Portal und die Zielgruppenkomposition interagieren auf zwei Arten mit Partnerdaten:
@@ -130,9 +118,108 @@ Anreicherungsattribute sind Attribute, die aus einem Datensatz stammen und in de
 | Real-Time CDP-Ziele | Sowohl die Payload-Attribute als auch die Zielgruppen können aktiviert werden. | Nur die Audience kann aktiviert werden. Anreicherungsattribute **cannot** aktiviert werden. |
 | Adobe Journey Optimizer-Kampagnen | Weder die Audience noch die Payload-Attribute können aktiviert werden. | Sowohl die Zielgruppe als auch die Anreicherungsattribute können aktiviert werden. |
 
+## Lebenszyklusstatus {#lifecycle-states}
+
+Im folgenden Abschnitt finden Sie Fragen zu Lebenszyklusstatus und Lebenszyklusstatusverwaltung in Audience Portal.
+
+### Was stellen die verschiedenen Lebenszyklusstatus dar?
+
+In der folgenden Tabelle werden die verschiedenen Lebenszyklusstatus, ihre Darstellung, wo Zielgruppen mit diesem Status verwendet werden können, sowie die Auswirkungen auf die Limits bei der Segmentierung erläutert.
+
+| Land | Definition | In Audience Portal sichtbar? | In Zielen sichtbar? | Betrifft Segmentierungsbeschränkungen? | Auswirkungen auf dateibasierte Zielgruppen | Auswirkungen auf die Zielgruppenbewertung | In anderen Zielgruppen verwenden? | Bearbeitbar |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Entwurf | Eine Zielgruppe im **Entwurf** state ist eine Zielgruppe, die sich noch in der Entwicklung befindet und noch nicht für andere Dienste verwendet werden kann. | Ja, aber kann ausgeblendet werden. | Nein | Ja | Kann während des Verfeinerungsprozesses importiert oder aktualisiert werden. | Kann ausgewertet werden, um genaue Veröffentlichungszahlen zu erhalten. | Ja, jedoch nicht empfohlen, verwendet zu werden. | Ja |
+| Veröffentlicht | Eine Zielgruppe im **Veröffentlicht** state ist eine Zielgruppe, die für alle nachgelagerten Dienste verwendet werden kann. | Ja | Ja | Ja | Kann importiert oder aktualisiert werden. | Wird mit Batch-, Streaming- oder Edge-Segmentierung ausgewertet. | Ja | Ja |
+| Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Wird nicht mehr aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Ja | Ja |
+| Gelöscht | Eine Zielgruppe im **Gelöscht** state ist eine Zielgruppe, die gelöscht wurde. Das tatsächliche Löschen der Daten kann bis zu einigen Minuten dauern. | Nein | Nein | Nein | Zugrunde liegende Daten werden gelöscht. | Nach Abschluss des Löschvorgangs erfolgt keine Datenauswertung oder -ausführung. | Nein | Nein |
+
+### In welchen Status kann ich meine Zielgruppen bearbeiten?
+
+Zielgruppen können in den folgenden Lebenszyklusstatus bearbeitet werden:
+
+- **Entwurf**: Wenn eine Zielgruppe im Entwurfsstatus bearbeitet wird, bleibt sie im Entwurfsstatus, es sei denn, sie wird explizit veröffentlicht.
+- **Veröffentlicht**: Wenn eine Zielgruppe im Veröffentlichungsstatus bearbeitet wird, bleibt sie veröffentlicht und die Zielgruppe wird automatisch aktualisiert.
+- **Inaaktiv**: Wenn eine Zielgruppe im inaktiven Status bearbeitet wird, bleibt sie inaktiv. Dies bedeutet, dass sie weder bewertet noch aktualisiert wird. Wenn Sie die Audience aktualisieren müssen, müssen Sie die Audience veröffentlichen.
+
+Nachdem eine Zielgruppe gelöscht wurde, **cannot** bearbeitet werden.
+
+### In welchen Lebenszyklusstatus kann ich eine Zielgruppe verschieben?
+
+Der mögliche Lebenszyklus gibt an, dass eine Zielgruppe je nach dem aktuellen Status der Zielgruppe verschoben werden kann.
+
+![Ein Diagramm mit den möglichen Übergängen des Lebenszyklusstatus, die für Zielgruppen verfügbar sind.](./images/faq/lifecycle-state-transition.png)
+
+Wenn Ihre Zielgruppe im Entwurfsstatus ist, können Sie sie entweder veröffentlichen oder löschen, wenn die Zielgruppe keine abhängigen Elemente aufweist.
+
+Wenn sich Ihre Zielgruppe im Veröffentlichungsstatus befindet, können Sie sie deaktivieren oder löschen, wenn die Zielgruppe keine abhängigen Elemente aufweist.
+
+Wenn Ihre Zielgruppe im inaktiven Status ist, können Sie sie entweder erneut veröffentlichen oder löschen, wenn die Zielgruppe keine abhängigen Elemente aufweist.
+
+### Gibt es Einschränkungen für Zielgruppen in bestimmten Lebenszyklusstatus?
+
+Zielgruppen im Veröffentlichungsstatus können nur dann in einen anderen Status verschoben werden, wenn die Zielgruppe **not** haben Abhängigkeiten. Wenn Ihre Zielgruppe also in einem nachgelagerten Dienst verwendet wird, kann sie nicht deaktiviert oder gelöscht werden.
+
+Wenn eine Zielgruppe, die mithilfe der Batch-Segmentierung ausgewertet wird, erneut veröffentlicht wird, d. h. wenn eine Zielgruppe von inaktiv zu publiziert wechselt, wird die Zielgruppe aktualisiert **after** den täglichen Batch-Auftrag. Bei der ersten erneuten Veröffentlichung werden die Profile und Daten als **same** als die Zielgruppe inaktiv gemacht wurde.
+
+### Wie setze ich eine Zielgruppe in den Entwurfsstatus?
+
+Die Methode zum Einfügen einer Zielgruppe in den Entwurfsstatus hängt von der Herkunft der Zielgruppe ab.
+
+Für Zielgruppen, die mit Segment Builder erstellt wurden, können Sie die Zielgruppe auf den Entwurfsstatus setzen, indem Sie &quot;[!UICONTROL Als Entwurf speichern]&quot;in Segment Builder.
+
+Für in Zielgruppenkomposition erstellte Zielgruppen werden Zielgruppen bis zur Veröffentlichung automatisch als Entwurf gespeichert.
+
+Zielgruppen, die extern erstellt werden, werden automatisch veröffentlicht.
+
+Sobald sich eine Zielgruppe im Veröffentlichungsstatus befindet, **cannot** ändern Sie die ursprüngliche Zielgruppe wieder in den Entwurfsstatus. Wenn Sie die Zielgruppe jedoch kopieren, befindet sich die neu kopierte Zielgruppe im Entwurfsstatus.
+
+### Wie platziere ich eine Zielgruppe in den Veröffentlichungsstatus?
+
+Für Zielgruppen, die mit Segment Builder oder Zielgruppenkomposition erstellt wurden, können Sie die Zielgruppe auf den Veröffentlichungsstatus setzen, indem Sie &quot;[!UICONTROL Veröffentlichen]&quot; in den jeweiligen Benutzeroberflächen angezeigt.
+
+Von außen erstellte Zielgruppen werden automatisch auf &quot;Publizieren&quot;gesetzt.
+
+### Wie stelle ich eine Zielgruppe in den inaktiven Status?
+
+Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und auf &quot;[!UICONTROL Deaktivieren]&quot;.
+
+### Wie kann ich eine Zielgruppe erneut veröffentlichen?
+
+>[!NOTE]
+>
+>Der Status &quot;Neu veröffentlicht&quot;entspricht dem Veröffentlichungsstatus für das Zielgruppenverhalten.
+
+Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe mit inaktivem Status auswählen, das Schnellaktionsmenü in Audience Portal öffnen und auswählen [!UICONTROL Veröffentlichen].
+
+### Wie setze ich eine Zielgruppe in den gelöschten Status?
+
+>[!IMPORTANT]
+>
+>Sie können nur Zielgruppen löschen, die **not** bei jeder nachgelagerten Aktivierung verwendet werden. Darüber hinaus können Sie keine Zielgruppe löschen, auf die in einer anderen Zielgruppe verwiesen wird. Wenn Sie Ihre Audience nicht löschen können, stellen Sie bitte sicher, dass Sie **not** Verwendung in nachfolgenden Diensten oder als Baustein einer anderen Zielgruppe.
+
+Sie können eine Zielgruppe in den Löschstatus versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und [!UICONTROL Löschen].
+
+### Beeinflusst die Verwendung einer Zielgruppe als untergeordnete Zielgruppe die Transitionen des Lebenszyklusstatus?
+
+>[!NOTE]
+>
+>Eine übergeordnete Zielgruppe ist eine Zielgruppe, die **uses** eine andere Zielgruppe als Abhängigkeit für die Zielgruppe.
+>
+>Eine untergeordnete Zielgruppe ist eine Zielgruppe, die **verwendet als** eine Abhängigkeit für die Zielgruppe.
+
+Ja, die Verwendung einer Zielgruppe als untergeordnete Zielgruppe wirkt sich darauf aus, welche Lebenszyklusstatus von der untergeordneten und übergeordneten Zielgruppe übernommen werden können.
+
+Damit eine untergeordnete Zielgruppe in den Veröffentlichungsstatus verschoben werden kann, muss die gesamte übergeordnete Zielgruppe **must** sich im Veröffentlichungsstatus befinden. Übergeordnete Zielgruppen können entweder veröffentlicht werden, bevor die untergeordnete Zielgruppe veröffentlicht wird, oder, falls der Benutzer dies bestätigt, automatisch veröffentlicht werden, wenn die untergeordnete Zielgruppe veröffentlicht wird.
+
+Damit die übergeordnete Zielgruppe in den Status &quot;Inaktiv&quot;oder &quot;Gelöscht&quot;versetzt wird, müssen alle untergeordneten Zielgruppen **must** deaktiviert oder gelöscht werden.
+
+### Kann ich auf eine Zielgruppe verweisen, die sich in einem anderen Lebenszyklusstatus befindet?
+
+Ja! Wenn Ihre Zielgruppe sich derzeit im Entwurfsstatus befindet, können Sie auf Zielgruppen im Veröffentlichungsstatus oder im inaktiven Status verweisen. Um diese Audience jedoch zu veröffentlichen, müssen Sie **must** die anderen übergeordneten Zielgruppen veröffentlichen.
+
 ## Zielgruppeninventar
 
-In den folgenden Abschnitten werden Fragen im Zusammenhang mit dem Zielgruppeninventar im Audience Portal aufgeführt.
+Im folgenden Abschnitt werden Fragen im Zusammenhang mit dem Zielgruppeninventar im Audience Portal aufgeführt.
 
 ### Benötige ich zusätzliche Berechtigungen, um die Funktionen des Zielgruppeninventars zu verwenden?
 
