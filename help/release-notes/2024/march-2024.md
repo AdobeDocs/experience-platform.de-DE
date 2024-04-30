@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise März 2024
 description: Versionshinweise März 2024 für Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
+source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 33%
@@ -39,20 +39,6 @@ Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Da
 
 Weitere Informationen zum Katalog-Service finden Sie in der [Übersicht über den Katalog-Service](../../catalog/home.md).
 
-## Datenerfassung {#data-collection}
-
-Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
-
-**Neue Funktionen**
-
-| Typ | Funktion | Beschreibung |
-| --- | --- | --- |
-| Erweiterungen | [!DNL Merkury] Tag-Erweiterung | Die [[!DNL Merkury] Tag-Erweiterung](https://exchange.adobe.com/apps/ec/600027/merkury-tag) bietet branchenführende Übereinstimmungsraten für anonyme Website-Besucher zu einer [!DNL Merkury] Kennung. Marken können die Leistungsfähigkeit der [!DNL Merkury] Tags und Adobe verwenden, um in Echtzeit personalisierte Website-Erlebnisse bereitzustellen. Darüber hinaus wird die [!DNL Merkury] -Tag ermöglicht das Wachstum digitaler Erstanbieterdaten zusammen mit verbundenen Online- und Offline-Kundenprofilen. |
-
-{style="table-layout:auto"}
-
-Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
-
 ## Datenvorbereitung {#data-prep}
 
 Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren.
@@ -66,6 +52,20 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 {style="table-layout:auto"}
 
 Weitere Informationen zur Datenvorbereitung finden Sie im Abschnitt [Datenvorbereitung - Übersicht](../../data-prep/home.md).
+
+## Datenerfassung {#data-collection}
+
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
+
+**Neue Funktionen**
+
+| Typ | Funktion | Beschreibung |
+| --- | --- | --- |
+| Erweiterungen | [!DNL Merkury] Tag-Erweiterung | Die [[!DNL Merkury] Tag-Erweiterung](https://exchange.adobe.com/apps/ec/600027/merkury-tag) bietet branchenführende Übereinstimmungsraten für anonyme Website-Besucher zu einer [!DNL Merkury] Kennung. Marken können die Leistungsfähigkeit der [!DNL Merkury] Tags und Adobe verwenden, um in Echtzeit personalisierte Website-Erlebnisse bereitzustellen. Darüber hinaus wird die [!DNL Merkury] -Tag ermöglicht das Wachstum digitaler Erstanbieterdaten zusammen mit verbundenen Online- und Offline-Kundenprofilen. |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
 
 ## Ziele {#destinations}
 
