@@ -2,9 +2,9 @@
 title: Definieren von Zuordnungsfeldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein Zuordnungsfeld definieren.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
+source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Mit Adobe Experience Platform können Sie die Struktur Ihrer benutzerdefinierten Experience-Datenmodell (XDM)-Klassen, Schemafeldgruppen und Datentypen vollständig anpassen.
 
-Sie können auch Zuordnungsfelder im Schema Editor definieren, um flexible und dynamische Datenstrukturen zu modellieren oder eine Sammlung von Schlüssel-Wert-Paaren zu speichern. Die Struktur der Zuordnungsdaten ermöglicht effiziente und schnelle Suchen, Einfügen und Löschen, wo Informationen basierend auf eindeutigen Kennungen organisiert und aufgerufen werden.
+Sie können auch Zuordnungsfelder im Schema Editor definieren, um flexible und dynamische Datenstrukturen zu modellieren oder eine Sammlung von Schlüssel-Wert-Paaren zu speichern.
 
 Verwenden Sie beim Definieren eines neuen Felds in der Benutzeroberfläche von Platform die **[!UICONTROL Typ]** Dropdown-Liste auswählen **[!UICONTROL Zuordnung]**&quot; aus der Liste.
 
@@ -34,6 +34,8 @@ XDM legt die folgenden Einschränkungen für die Verwendung dieses Datentyps fes
 * Zuordnungstypen MÜSSEN vom Typ sein `object`.
 * Für Zuordnungstypen dürfen KEINE Eigenschaften definiert sein (d. h. sie definieren &quot;leere&quot;Objekte).
 * Zuordnungstypen MÜSSEN Folgendes enthalten: `additionalProperties.type` -Feld, das die Werte beschreibt, die in der Zuordnung platziert werden können, entweder `string` oder `integer`.
+* Die Segmentierung mit mehreren Entitäten kann nur anhand der Zuordnungsschlüssel und nicht anhand der Werte definiert werden.
+* Karten werden für Kontozielgruppen nicht unterstützt.
 
 Stellen Sie sicher, dass Sie nur Felder vom Typ Zuordnung verwenden, wenn dies unbedingt erforderlich ist, da sie die folgenden Leistungsbeeinträchtigungen aufweisen:
 
