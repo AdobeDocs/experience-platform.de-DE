@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Data Landing Zone; Data Landing Zone
 title: Data Landing Zone über die Benutzeroberfläche mit Platform verbinden
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform einen Quell-Connector für die Data Landing Zone erstellen.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 18%
+source-wordcount: '736'
+ht-degree: 19%
 
 ---
 
