@@ -2,7 +2,7 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
+source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
 workflow-type: tm+mt
 source-wordcount: '3976'
 ht-degree: 23%
@@ -127,7 +127,7 @@ Im folgenden Abschnitt finden Sie Fragen zu Lebenszyklusstatus und Lebenszykluss
 In der folgenden Tabelle werden die verschiedenen Lebenszyklusstatus, ihre Darstellung, wo Zielgruppen mit diesem Status verwendet werden können, sowie die Auswirkungen auf die Limits bei der Segmentierung erläutert.
 
 | Land | Definition | In Audience Portal sichtbar? | In Zielen sichtbar? | Betrifft Segmentierungsbeschränkungen? | Auswirkungen auf dateibasierte Zielgruppen | Auswirkungen auf die Zielgruppenbewertung | In anderen Zielgruppen verwenden? | Bearbeitbar |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Entwurf | Eine Zielgruppe im **Entwurf** state ist eine Zielgruppe, die sich noch in der Entwicklung befindet und noch nicht für andere Dienste verwendet werden kann. | Ja, aber kann ausgeblendet werden. | Nein | Ja | Kann während des Verfeinerungsprozesses importiert oder aktualisiert werden. | Kann ausgewertet werden, um genaue Veröffentlichungszahlen zu erhalten. | Ja, jedoch nicht empfohlen, verwendet zu werden. | Ja |
 | Veröffentlicht | Eine Zielgruppe im **Veröffentlicht** state ist eine Zielgruppe, die für alle nachgelagerten Dienste verwendet werden kann. | Ja | Ja | Ja | Kann importiert oder aktualisiert werden. | Wird mit Batch-, Streaming- oder Edge-Segmentierung ausgewertet. | Ja | Ja |
 | Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Wird nicht mehr aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Ja | Ja |
