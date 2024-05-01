@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie Eingabefelder in der Experience Platform-Benutzeroberfläche erstellen, mit denen Ihre Benutzerinnen und Benutzer verschiedene Informationen angeben können, die für die Verbindung und den Export von Daten zu Ihrem Ziel relevant sind.
 title: Benutzerdefinierte Datenfelder
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 80%
@@ -352,7 +352,7 @@ Um ein verschachteltes Feld hinzuzufügen, verwenden Sie die `properties` -Param
 >
 >Ab der Version April 2024 können Sie eine `isRequired` auf verschachtelten Feldern. Im folgenden Konfigurationsfragment werden beispielsweise die ersten beiden verschachtelten Felder als erforderlich markiert (hervorgehobene Zeile xxx) und Kunden können den Vorgang nur fortsetzen, wenn sie einen Wert für das Feld auswählen. Weitere Informationen zu den erforderlichen Feldern finden Sie in der [unterstützte Parameter](#supported-parameters) Abschnitt.
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",

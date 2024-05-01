@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen aus diesen Profilen zu erstellen und diese Zielgruppen für Drittanbieterziele bereitzustellen.
 role: Admin
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 68%
@@ -82,7 +82,7 @@ ht-degree: 68%
       * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/offsite-retargeting.md)
    * Profilanreicherung {#profile-enrichment}
       * [Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Personalisierung, Einblicke und Interaktion {#personalization-insights-engagement}
+   * Personalisierte Einblicke und Interaktion {#personalization-insights-engagement}
       * [Intelligentes erneutes Ansprechen Ihrer Kunden](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Intelligentes erneutes Engagement Ihrer Kunden: Beispiele für Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

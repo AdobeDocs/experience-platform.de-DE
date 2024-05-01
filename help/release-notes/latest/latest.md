@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise März 2024 für Adobe Experience Platform.
+description: Versionshinweise April 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 24%
+source-wordcount: '1849'
+ht-degree: 22%
 
 ---
 
@@ -74,12 +74,12 @@ Weitere Informationen zu Datenerfassungen finden Sie im Abschnitt [Datenerfassun
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
 | `isRequired` -Parameter jetzt für verschachtelte Kundendatenfelder in Destination SDK verfügbar | Beim Konfigurieren eines Ziels in Destination SDK können Sie jetzt [stellen Sie verschachtelte Kundendatenfelder nach Bedarf ein.](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Auf diese Weise können Benutzer, die Ihr Ziel einrichten, ihren Aktivierungsfluss erst fortsetzen, wenn sie einen Wert für dieses Feld auswählen. |
+| Die Edge-Segmentierung ist bei der Einrichtung eines Adobe Target-Ziels mit dem Web SDK nicht mehr erforderlich. | Bisher wurde beim Konfigurieren von [Adobe Target-Ziel](/help/destinations/catalog/personalization/adobe-target-connection.md) mit Web SDK musste der Datastream für die Personalisierung und Kantensegmentierung aktiviert werden. Die Anforderung, dass der Datastream für die Kantensegmentierung aktiviert werden muss [wurde entfernt](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Beachten Sie, dass dieses Integrationsmuster nur Ihnen ermöglicht, bei der Verwendung von Adobe Target mit Real-Time CDP von einer Untergruppe von Anwendungsfällen zur Personalisierung zu profitieren. Mehr über [Anwendungsfälle, die vom Integrationstyp aktiviert wurden](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Entfernen Sie mehrere Zielgruppen und Datensätze aus Aktivierungsabläufen | Sie können jetzt mehrere Zielgruppen und Datensätze auswählen und aus den Zielaktivierungsflüssen entfernen. Siehe [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-remove) und [Datensatzexport](../../destinations/ui/export-datasets.md) Dokumentation für weitere Details. |
 
 {style="table-layout:auto"}
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## Identity Service {#identity-service}
 
