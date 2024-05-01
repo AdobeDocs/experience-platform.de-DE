@@ -3,10 +3,10 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 10%
+source-wordcount: '1154'
+ht-degree: 9%
 
 ---
 
@@ -115,11 +115,15 @@ Die [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Zielgruppen an, die dem 
 
 ![Streaming-Ziel für Aktivierungsdaten-Ansicht](../assets/ui/details-page/activation-data-streaming.png)
 
-<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+### [!BADGE Beta]{type=Informative} Entfernen mehrerer Zielgruppen aus Aktivierungsflüssen {#bulk-remove}
 
-To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+>[!NOTE]
+>
+Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
 
-![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+Um mehrere Zielgruppen aus vorhandenen Aktivierungsabläufen zu entfernen, wählen Sie die Zielgruppen aus und klicken Sie auf **[!UICONTROL Entfernen von Zielgruppen]**.
+
+![Bildschirm mit den Aktivierungsdaten, der die Option Zielgruppen entfernen hervorhebt.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### [!BADGE Beta]{type=Informative} Export mehrerer Dateien On-Demand an Batch-Ziele {#bulk-export}
 
