@@ -2,9 +2,9 @@
 title: Sandboxes-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '2241'
+source-wordcount: '2314'
 ht-degree: 8%
 
 ---
@@ -137,7 +137,7 @@ Um das Paket in eine Ziel-Sandbox zu importieren, navigieren Sie zu den Sandboxe
 
 ![Die Sandboxes **[!UICONTROL Durchsuchen]** -Tab, der die Auswahl des Importpakets markiert.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Wählen Sie im Dropdown-Menü die **[!UICONTROL Paketname]** Sie möchten in die Ziel-Sandbox importieren. Hinzufügen eines optionalen **[!UICONTROL Auftragsname]**, der für die künftige Überwachung verwendet wird. Standardmäßig wird das einheitliche Profil beim Importieren der Schemata des Pakets deaktiviert. Umschalten **Aktivieren von Schemata für Profile** Um dies zu aktivieren, wählen Sie **[!UICONTROL Nächste]**.
+Wählen Sie im Dropdown-Menü die **[!UICONTROL Paketname]** Sie möchten in die Ziel-Sandbox importieren. Hinzufügen einer **[!UICONTROL Auftragsname]**, der für die künftige Überwachung verwendet wird. Standardmäßig wird das einheitliche Profil beim Importieren der Schemata des Pakets deaktiviert. Umschalten **Aktivieren von Schemata für Profile** Um dies zu aktivieren, wählen Sie **[!UICONTROL Nächste]**.
 
 ![Auf der Seite mit den Importdetails wird die [!UICONTROL Paketname] Dropdown-Auswahl](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
@@ -169,7 +169,12 @@ Sie kehren zum [!UICONTROL Paketobjekt und Abhängigkeiten] Seite. Wählen Sie v
 
 >[!NOTE]
 >
->Für einen vollständigen Sandbox-Export/-Import werden nur Echtzeit-Kundendatenplattformobjekte unterstützt. Journey-Objekte werden nicht einbezogen.
+>Derzeit werden beim Exportieren oder Importieren einer gesamten Sandbox nur Real-time Customer Data Platform-Objekte unterstützt. Adobe Journey Optimizer-Objekte wie Journey werden derzeit nicht unterstützt.
+
+Sie können alle unterstützten Objekttypen in ein vollständiges Sandbox-Paket exportieren und dann das Paket über verschiedene Sandboxes importieren, um Objektkonfigurationen zu replizieren. Diese Funktion ermöglicht beispielsweise Folgendes:
+
+- Importieren Sie eine Sandbox erneut, um alle Objektkonfigurationen zu reproduzieren, wenn Sie die Sandbox zurücksetzen müssen.
+- Importieren Sie das Paket in andere Sandboxes und nutzen Sie es als Blueprint-Sandbox, um den Entwicklungsprozess zu beschleunigen.
 
 ### Gesamte Sandbox exportieren {#export-entire-sandbox}
 
@@ -210,48 +215,6 @@ Sie werden zum [!UICONTROL Paketobjekt und Abhängigkeiten] -Seite, auf der Sie 
 ![Die [!UICONTROL Paketobjekt und Abhängigkeiten] Seite zeigt die Inline-Meldung der nicht unterstützten Objekttypen an, Hervorhebung [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
 Warten Sie etwas, bis der Import abgeschlossen ist. Die Zeit zum Abschließen kann je nach der Anzahl der Objekte im Paket variieren. Sie können den Importauftrag über die [!UICONTROL Sandboxes] **[!UICONTROL Aufträge]** Registerkarte.
-
-<!--
-## Export and import an entire sandbox 
-
->[!NOTE]
->
->All export and import actions are recorded in the audit logs.
-
-### Export an entire sandbox {#export-entire-sandbox}
-
-To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
-
-![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
-
-Select **[!UICONTROL Entire sandbox]** for the Type of package in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
-
-![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
-
-The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
-
-![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
-
-You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
-
-### Import the entire sandbox package {#import-entire-sandbox-package}
-
-To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
-
-![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
-
-Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
-
-![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
-
->[!NOTE]
->
->All objects are created as new from the package when importing an entire sandbox. The objects are not listed in the [!UICONTROL Package object and dependencies] page, as there can be multiples. An inline message is displayed, advising of object types that are not supported.
-
-You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
-
- ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
--->
 
 ## Importdetails überwachen {#view-import-details}
 
