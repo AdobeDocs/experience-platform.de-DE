@@ -1,9 +1,10 @@
 ---
 title: Profileinblicke
 description: Entdecken Sie die SQL, die Ihre Profileinblicke nutzt, um benutzerdefinierte Einblicke zu generieren, mit denen Sie Ihre Kunden und deren Kundenerlebnisse weiter untersuchen können.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -14,12 +15,9 @@ Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe
 
 Machen Sie sich mit Ihren Profileinblicken vertraut, indem Sie auf die SQL zugreifen, über die diese Benutzer verfügen, und dann Ihre eigenen Einblicke generieren, um Ihre Kunden und deren Kundenerlebnisse, aus denen sich Ihre Profile zusammensetzen, weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen zur direkten Anpassung der SQL-Daten Ihrer Einblicke über die Platform-Benutzeroberfläche.
 
 Die folgenden Einblicke stehen Ihnen als Teil der [Profil-Dashboard](../guides/profiles.md) oder benutzerdefiniert [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md). Siehe [Anpassungsübersicht](../customize/overview.md) Anweisungen zum Anpassen Ihres Dashboards erhalten Sie oder [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md#create-widget).
-
-Die folgenden Einblicke stehen Ihnen als Teil der [Profil-Dashboard](../guides/profiles.md) oder ein benutzerdefiniertes Dashboard.
 
 ## Zielgruppenüberschneidung nach Zusammenführungsrichtlinie {#audience-overlap-by-merge-policy}
 
@@ -781,7 +779,6 @@ Siehe [Dokumentation zum Widget zu nicht segmentierten Profilen](../guides/profi
 
 Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL-Datenbank, die Dashboard-Einblicke generiert, und welche häufig gestellten Fragen diese Analyse löst. Jetzt können Sie die SQL bearbeiten und iterieren, um Ihre eigenen Einblicke zu generieren.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
 
-Sie können auch die SQL lesen und verstehen, die Einblicke für die [Zielgruppen](./audiences.md) und [Ziele](./destinations.md) Dashboards.
+Sie können auch die SQL lesen und verstehen, die Einblicke für die [Zielgruppen](./audiences.md), [Kontoprofile](./account-profiles.md), und [Ziele](./destinations.md) Dashboards.

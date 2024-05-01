@@ -2,7 +2,7 @@
 title: Einverständnisanalyse und -verfolgung
 description: Erfahren Sie, wie Sie ein Dashboard für die Einwilligungsanalyse erstellen, um zu verfolgen, wie sich die Einwilligung der Benutzer im Laufe der Zeit entwickelt hat.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -143,7 +143,7 @@ Nachdem der Widget Composer mit Daten aus Ihrer ausgewählten Tabelle gefüllt w
 >Sie können nun das Widget in der gewünschten Größe und Position ändern, bevor Sie es speichern.
 
 
-Die folgende Abbildung zeigt, wie Ihr fertig gestelltes Widget und andere potenzielle benutzerdefinierte Einblicke angezeigt werden. Weitere Informationen zu den Typen von Widgets, die erstellt werden können, finden Sie im Abschnitt [Datenmodelldokumentation](../cdp-insights-data-model.md).
+Die folgende Abbildung zeigt, wie Ihr fertig gestelltes Widget und andere potenzielle benutzerdefinierte Einblicke angezeigt werden. Weitere Informationen zu den Typen von Widgets, die erstellt werden können, finden Sie im Abschnitt [Datenmodelldokumentation](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 

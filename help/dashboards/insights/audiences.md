@@ -1,9 +1,10 @@
 ---
 title: Audiences Insights
 description: Entdecken Sie die SQL, die Ihre Zielgruppeneinblicke ermöglicht und nutzen Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren und Zielgruppendaten aus Adobe Experience Platform weiter zu untersuchen.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1124'
 ht-degree: 1%
 
 ---
@@ -14,8 +15,7 @@ Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe
 
 Machen Sie sich mit den Einblicken Ihrer Zielgruppe vertraut, indem Sie auf die SQL zugreifen, über die diese Benutzer verfügen, und dann Ihre eigenen Einblicke generieren, um die Identitäten und Profile Ihrer Zielgruppen weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
 
 Die folgenden Einblicke stehen Ihnen als Teil der [Zielgruppen-Dashboard](../guides/audiences.md) oder benutzerdefiniert [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md). Siehe [Anpassungsübersicht](../customize/overview.md) Anweisungen zum Anpassen Ihres Dashboards erhalten Sie oder [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md#create-widget).
 
@@ -583,7 +583,6 @@ Siehe [Dokumentation zum Widget zu geplanten Aktivierungen](../guides/audiences.
 
 Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL-Datenbank, die Dashboard-Einblicke generiert, und welche häufig gestellten Fragen diese Analyse löst. Jetzt können Sie die SQL bearbeiten und iterieren, um Ihre eigenen Einblicke zu generieren.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
 
-Sie können auch die SQL lesen und verstehen, die Einblicke für die [Profile](./profiles.md) und [Ziele](./destinations.md) Dashboards.
+Sie können auch die SQL lesen und verstehen, die Einblicke für die [Profile](./profiles.md), [Kontoprofile](./account-profiles.md) und [Ziele](./destinations.md) Dashboards.

@@ -1,7 +1,8 @@
 ---
 title: Insight SQL anzeigen
 description: Zeigen Sie die SQL hinter Ihrem Profil, Ihrer Zielgruppe, Ihrem Ziel und Ihren benutzerdefinierten Einblicken an und führen Sie die Abfrage bei Bedarf über den Abfrage-Editor aus.
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -58,4 +59,4 @@ Der Abfrage-Editor wird angezeigt. Sie können jetzt die Anweisung bearbeiten un
 
 ## Nächste Schritte
 
-Nach der Lektüre dieses Dokuments wissen Sie jetzt, wie Sie auf die SQL-Datenbank zugreifen können, um Einblicke in die Standard-Dashboards oder in ein benutzerdefiniertes Dashboard zu erhalten. Wenn Sie dies noch nicht getan haben, sollten Sie die [Real-time Customer Data Platform Insights-Datenmodelldokument](./cdp-insights-data-model.md). Dieses Dokument enthält Einblicke in die Anpassung von SQL-Vorlagen für Real-Time CDP-Berichte, die auf Ihre Marketing- und KPI-Anforderungen zugeschnitten sind.
+Nach der Lektüre dieses Dokuments wissen Sie jetzt, wie Sie auf die SQL-Datenbank zugreifen können, um Einblicke in die Standard-Dashboards oder in ein benutzerdefiniertes Dashboard zu erhalten. Wenn Sie dies noch nicht getan haben, sollten Sie die [Real-time Customer Data Platform Insights-Datenmodelldokument](./data-models/cdp-insights-data-model-b2c.md). Dieses Dokument enthält Einblicke in die Anpassung von SQL-Vorlagen für Real-Time CDP-Berichte, die auf Ihre Marketing- und KPI-Anforderungen zugeschnitten sind.

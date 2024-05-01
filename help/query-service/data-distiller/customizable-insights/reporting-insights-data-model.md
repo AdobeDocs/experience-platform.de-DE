@@ -2,7 +2,7 @@
 title: Anleitung zu Query Accelerated Store Reporting Insights
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 82%
@@ -11,9 +11,9 @@ ht-degree: 82%
 
 # Leitfaden zu Query Accelerated Store Reporting Insights
 
-Mit dem abfragebeschleunigten Speicher können Sie die Zeit und die Verarbeitungsleistung reduzieren, die erforderlich sind, um entscheidende Erkenntnisse aus Ihren Daten zu gewinnen. Normalerweise werden die Daten in regelmäßigen Abständen (beipielsweise stündlich oder täglich) verarbeitet, wobei aggregierte Ansichten erstellt und in Berichten wiedergegeben werden. Die Analyse dieser aus den aggregierten Daten erstellten Berichte führt zu Insights, die zur Verbesserung der Unternehmensleistung beitragen sollen. Der abfragebeschleunigte Speicher bietet einen Cache-Service, Gleichzeitigkeit, Interaktivität und eine zustandslose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Abfrage von Rohdaten.
+Mit dem abfragebeschleunigten Speicher können Sie die Zeit und die Verarbeitungsleistung reduzieren, die erforderlich sind, um entscheidende Erkenntnisse aus Ihren Daten zu gewinnen. Normalerweise werden die Daten in regelmäßigen Abständen (beipielsweise stündlich oder täglich) verarbeitet, wobei aggregierte Ansichten erstellt und in Berichten wiedergegeben werden. Die Analyse dieser aus den aggregierten Daten erstellten Berichte führt zu Insights, die zur Verbesserung der Unternehmens-Performance beitragen sollen. Der abfragebeschleunigte Speicher bietet einen Cache-Service, Gleichzeitigkeit, Interaktivität und eine zustandslose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Abfrage von Rohdaten.
 
-Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder ein vorhandenes Adobe Real-time Customer Data Platform-Datenmodell erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Real-time Customer Data Platform Insights-Datenmodell, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../../dashboards/cdp-insights-data-model.md).
+Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder ein vorhandenes Adobe Real-time Customer Data Platform-Datenmodell erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Insights-Datenmodell von Real-Time Customer Data Platform, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Zielgruppen und Ziele und ermöglicht die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
 

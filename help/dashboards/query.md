@@ -4,9 +4,9 @@ title: Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfe
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Zielgruppen- und Ziel-Dashboards in Experience Platform unterstützen.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '944'
 ht-degree: 37%
 
 ---
@@ -86,7 +86,7 @@ Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie ei
 
 Die Funktion CDP Insights Data Models legt die SQL offen, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglicht. Sie können diese SQl-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.
 
-Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Zielgruppen und Zielen. Detaillierte Informationen dazu finden Sie in der Dokumentation zum CDP Insights-Datenmodell . [die CDP Insights-Datenmodelle auf Ihre jeweiligen KPI-Anwendungsfälle anwenden](./cdp-insights-data-model.md).
+Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Zielgruppen und Zielen. Detaillierte Informationen dazu finden Sie in der Dokumentation zum CDP Insights-Datenmodell . [die CDP Insights-Datenmodelle auf Ihre jeweiligen KPI-Anwendungsfälle anwenden](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Beispielabfragen
 
