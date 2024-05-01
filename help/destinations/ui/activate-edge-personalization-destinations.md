@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen von Adobe Experience Platform aus für Edge-Personalisierungsziele aktivieren können, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu nutzen.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1957'
 ht-degree: 15%
 
 ---
@@ -78,6 +78,10 @@ Ein häusliches Verleih- und Vertriebsunternehmen möchte seine Homepage mit ein
 Der erste Schritt bei der Einrichtung Ihres Personalisierungsziels besteht darin, einen Datenstrom für das Experience Platform Web SDK zu konfigurieren. Dies erfolgt in der Benutzeroberfläche für die Datenerfassung.
 
 Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experience Platform]** sicher, dass sowohl **[!UICONTROL Edge-Segmentierung]** als auch **[!UICONTROL Personalisierungsziele]** ausgewählt sind.
+
+>[!TIP]
+>
+>Ab der Version vom April 2024 müssen Sie das Kontrollkästchen Edge-Segmentierung nicht aktivieren, wenn [Konfigurieren der Verbindung zu Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall [Personalisierung nächste Sitzung](#next-session) ist der einzige verfügbare Anwendungsfall für die Personalisierung.
 
 ![Datastream-Konfiguration mit hervorgehobenen Edge-Segmentierungs- und Personalisierungszielen!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
