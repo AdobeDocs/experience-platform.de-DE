@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise April 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1895'
 ht-degree: 22%
 
 ---
@@ -31,15 +31,15 @@ Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen, basierend auf täglichen Schnappschüssen der Daten.
+Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einblicke zu den Daten Ihres Unternehmens erhalten, die in täglichen Schnappschüssen erfasst werden.
 
 **Neue oder aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Real-time Customer Data Platform B2B-Einblicke | Erfahren Sie mehr über vorkonfigurierte Real-Time CDP B2B-Dateneinblicke zu Konten und Möglichkeiten, Ihnen beim Verständnis Ihrer Daten und bei der Information Ihrer Geschäftsentscheidungen zu helfen. Sie können auch mithilfe des B2B-Datenmodells von Real-Time CDP eigene Einblicke erstellen, um Ihre Daten zu visualisieren und zu untersuchen und Ihre benutzerdefinierten Visualisierungen in Ihrem Dashboard zu speichern. |
+| Real-time Customer Data Platform B2B-Einblicke | Vorkonfigurierte Ergebnisse durchsuchen [Real-Time CDP B2B-Dateneinblicke über Konten und Chancen](../../dashboards/insights/account-profiles.md) um Ihnen dabei zu helfen, Ihre Daten zu verstehen und Ihre Geschäftsentscheidungen zu treffen. Sie können auch [Erstellen eigener Einblicke mithilfe des Real-Time CDP B2B-Datenmodells](../../dashboards/data-models/cdp-insights-data-model-b2c.md) um Ihre Daten zu visualisieren und zu untersuchen und Ihre benutzerdefinierten Visualisierungen in Ihrem Dashboard zu speichern. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffsberechtigungen und der Erstellung benutzerdefinierter Widgets, erhalten Sie in der [Übersicht über Dashboards](../../dashboards/home.md).
 
@@ -117,14 +117,14 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Abfrage-Quarantäne | Automatische Isolierung fehlgeschlagener Abfrageausführungen, um Unterbrechungen zu vermeiden und eine konsistente Leistung zu gewährleisten. |
-| Abfrage abbrechen | Übernehmen Sie die Kontrolle über die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. |
-| Warnhinweise zu geplanten Abfragen | Halten Sie sich während der Planung von Abfragen über proaktive Benachrichtigungen auf dem Laufenden, um eine effiziente und zeitnahe Aufgabenverwaltung zu gewährleisten. Sie können Warnhinweise entweder bei der Erstellung einer Abfrage oder bei der Verwendung der Inline-Aktionen für bestehende geplante Abfragen abonnieren. |
-| Verbesserte geplante Abfragennavigation | Für eine höhere Produktivität können Sie einfach zwischen Abfragevorlagen und geplanten Ausführungen navigieren. |
-| Erweiterte Abfrageausgabe | Greifen Sie in der Konsole auf bis zu 500 Zeilen mit Abfrageergebnissen zu, um Ihre Daten eingehender zu analysieren. |
-| Veraltete Abmeldung des Abfrage-Editors | Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor für alle Benutzer zum Standardeditor geworden. Der alte Editor wird vom 30. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar. |
+| Abfrage-Quarantäne | Automatische Isolierung fehlgeschlagener Abfrageausführungen, um Unterbrechungen zu vermeiden und eine konsistente Leistung zu gewährleisten. Siehe [Quarantäne der Abfrage](../../query-service/ui/query-schedules.md#quarantine) Dokumentation finden Sie weitere Informationen. |
+| Abfrage abbrechen | Kontrollieren Sie die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. Lesen Sie hierzu den Abschnitt . [Abbrechen der Abfrage](../../query-service/ui/user-guide.md#cancel-query) Dokumentation finden Sie weitere Informationen. |
+| Warnhinweise zu geplanten Abfragen | Halten Sie sich während der Planung von Abfragen über proaktive Benachrichtigungen auf dem Laufenden, um eine effiziente und zeitnahe Aufgabenverwaltung zu gewährleisten. Sie können [Warnhinweise entweder bei der Erstellung einer Abfrage abonnieren](../../query-service/ui/query-schedules.md#alerts-for-query-status) oder die Inline-Aktionen für bestehende geplante Abfragen verwenden. Siehe [Warnhinweise mit Inline-Aktionen abonnieren](../../query-service/ui/monitor-queries.md#alert-subscription) Dokumentation finden Sie weitere Informationen. |
+| Verbesserte geplante Abfragennavigation | Für eine höhere Produktivität können Sie einfach zwischen Abfragevorlagen und geplanten Ausführungen navigieren. Siehe die Dokumentation unter [Anzeigen geplanter Abfrageausführungen](../../query-service/ui/query-schedules.md#scheduled-query-runs) für weitere Informationen. |
+| Erweiterte Abfrageausgabe | Greifen Sie in der Konsole auf bis zu 500 Zeilen mit Abfrageergebnissen zu, um eine tiefere Analyse Ihrer Daten zu erhalten. Weitere Informationen finden Sie unter [Ergebnisanzahl](../../query-service/ui/user-guide.md#result-count) Dokumentation finden Sie weitere Informationen. |
+| Veraltete Abmeldung des Abfrage-Editors | Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor für alle Benutzer zum Standardeditor geworden. Der alte Editor wird vom 30. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar. Siehe [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md) für weitere Informationen. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
 

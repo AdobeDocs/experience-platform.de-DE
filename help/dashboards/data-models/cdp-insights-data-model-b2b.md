@@ -3,9 +3,10 @@ title: Real-time Customer Data Platform Insights-Datenmodell B2B Edition
 description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insights-Datenmodellen (B2B Edition) SQL-Abfragen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 3%
 
 ---
@@ -49,15 +50,15 @@ Das folgende Diagramm zeigt die relevanten Datenfelder in jedem Datensatz, ihren
 
 ![Das relationale Entitätsdiagramm für das Kontoprofilmodell.](../images/data-models/account-profile-model.png)
 
-#### Anwendungsfall: Konten nach Branche {#accounts-by-industry}
+#### Die neuen Konten nach Anwendungsfall der Industrie {#accounts-by-industry}
 
-Die für die [!UICONTROL Konten nach Branche] Insight gibt die fünf wichtigsten Branchen in Abhängigkeit von ihrer Anzahl an Kontoprofilen und ihrer relativen Größe zueinander zurück. Siehe [[!UICONTROL Konten nach Branche] Widget-Dokumentation](../guides/account-profiles.md#accounts-by-industry) für weitere Informationen.
+Die für die [!UICONTROL Neue Abschlüsse nach Wirtschaftszweigen] Insight gibt die fünf wichtigsten Branchen in Abhängigkeit von ihrer Anzahl an Kontoprofilen und ihrer relativen Größe zueinander zurück. Siehe [[!UICONTROL Konten nach Branche] Widget-Dokumentation](../guides/account-profiles.md#accounts-by-industry) für weitere Informationen.
 
 >[!TIP]
 >
 >Sie können diese SQL-Abfrage so anpassen, dass mehr oder weniger als die fünf wichtigsten Branchen zurückgegeben werden.
 
-Die SQL, die die [!UICONTROL Konten nach Branche] Einblicke finden Sie im Abschnitt unten, der reduziert werden kann.
+Die SQL, die die [!UICONTROL Neue Abschlüsse nach Wirtschaftszweigen] Einblicke finden Sie im Abschnitt unten, der reduziert werden kann.
 
 +++SQL-Abfrage
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### Anwendungsfall Konten nach Typ {#accounts-by-type}
+#### Anwendungsfall Neue Konten nach Typ {#accounts-by-type}
 
-Die für die [!UICONTROL Konten nach Typ] insight gibt die numerische Aufschlüsselung der Konten nach Typ zurück. Diese Einblicke können dabei helfen, die Geschäftsstrategie und den Betrieb zu steuern, einschließlich Ressourcenzuteilung oder Marketing-Strategien. Siehe [[!UICONTROL Konten nach Typ] Widget-Dokumentation](../guides/account-profiles.md#accounts-by-type) für weitere Informationen.
+Die für die [!UICONTROL Neue Konten nach Typ] insight gibt die numerische Aufschlüsselung der Konten nach Typ zurück. Diese Einblicke können dabei helfen, die Geschäftsstrategie und den Betrieb zu steuern, einschließlich Ressourcenzuteilung oder Marketing-Strategien. Siehe [[!UICONTROL Neue Konten nach Typ] Widget-Dokumentation](../guides/account-profiles.md#accounts-by-type) für weitere Informationen.
 
-Die SQL, die die [!UICONTROL Konten nach Typ] Einblicke finden Sie im Abschnitt unten, der reduziert werden kann.
+Die SQL, die die [!UICONTROL Neue Konten nach Typ] Einblicke finden Sie im Abschnitt unten, der reduziert werden kann.
 
 +++SQL-Abfrage
 

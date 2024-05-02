@@ -3,9 +3,10 @@ title: Kontoprofileinblicke
 description: Entdecken Sie die SQL, mit der Sie Ihre Kontoprofil-Einblicke gewinnen und diese Abfragen nutzen können, um benutzerdefinierte Einblicke zu generieren, mit denen Sie Ihre Kunden und deren Kundenerlebnisse weiter untersuchen können.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## Rechnungslegung nach Wirtschaftszweigen {#accounts-by-industry}
+## Neue Abschlüsse nach Wirtschaftszweigen {#accounts-by-industry}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Konten nach Typ {#accounts-by-type}
+## Neue Konten nach Typ {#accounts-by-type}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## Möglichkeiten nach Rolle der Person {#opportunities-by-person-role}
+## Neue Möglichkeiten für die Rolle der Person {#opportunities-by-person-role}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## Möglichkeiten nach Einnahmen {#opportunities-by-revenue}
+## Neue Einnahmenmöglichkeiten {#opportunities-by-revenue}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Chancen nach Status und Staging {#opportunities-by-status-and-stage}
+## Neue Möglichkeiten nach Status und Phase {#opportunities-by-status-and-stage}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Chancen gewonnen {#opportunities-won}
+## Neue Chancen gewonnen {#opportunities-won}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 

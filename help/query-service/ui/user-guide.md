@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2825'
 ht-degree: 42%
 
 ---
 
 # Handbuch für die [!DNL Query Editor]-Benutzeroberfläche
+
+>[!NOTE]
+>
+>Ab dem 30. April 2024 gilt Folgendes: [Verbesserter Abfrage-Editor](#enhanced-editor-toggle) wurde zum Standardeditor für alle Benutzer. Der alte Editor wird vom 30. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar.
 
 [!DNL Query Editor] ist ein interaktives Tool von Adobe Experience Platform [!DNL Query Service], mit dem Sie Abfragen für Kundenerlebnisdaten in der [!DNL Experience Platform]-Benutzeroberfläche schreiben, validieren und ausführen können. [!DNL Query Editor] unterstützt die Erstellung von Abfragen für die Analyse und Datenexploration und ermöglicht das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Befüllen von Datensätzen in [!DNL Experience Platform].
 
@@ -229,7 +233,7 @@ Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldun
 
 Abfragen, die als Vorlage gespeichert wurden, können im Abfrage-Editor geplant werden. Mit der Planung von Abfragen können Sie die Ausführung von Abfragen in einem benutzerdefinierten Ordner automatisieren. Sie können Abfragen basierend auf Häufigkeit, Datum und Uhrzeit planen und bei Bedarf auch einen Ausgabedatensatz für Ihre Ergebnisse auswählen. Abfragezeitpläne können auch über die Benutzeroberfläche deaktiviert oder gelöscht werden.
 
-Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Editors können Sie einer bereits erstellten, gespeicherten und ausgeführten Abfrage nur einen Zeitplan hinzufügen. Dieselbe Einschränkung gilt nicht für [!DNL Query Service] API.
+Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Editors können Sie einer bereits erstellten und gespeicherten Abfrage nur einen Zeitplan hinzufügen. Dieselbe Einschränkung gilt nicht für [!DNL Query Service] API.
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
+source-wordcount: '4425'
 ht-degree: 96%
 
 ---
@@ -25,7 +25,7 @@ Die folgende Liste von Antworten auf häufig gestellte Fragen ist in folgende Ka
 
 ## Allgemeine Fragen zum Abfrage-Service {#general}
 
-Dieser Abschnitt enthält Informationen zu Leistung, Beschränkungen und Prozessen.
+Dieser Abschnitt enthält Informationen zu Performance, Beschränkungen und Prozessen.
 
 ### Kann ich die Funktion zur automatischen Vervollständigung im Editor des Abfrage-Service deaktivieren?
 
@@ -86,10 +86,10 @@ Es werden eine oder mehrere der folgenden Lösungen empfohlen, wenn bei Abfragen
 - Konvertieren Sie die Abfrage in eine vereinfachte Form und führen Sie sie mithilfe von [vorbereiteten Anweisungen](./sql/prepared-statements.md) erneut aus.
 +++
 
-### Gibt es Probleme oder Auswirkungen auf die Leistung des Abfrage-Service, wenn mehrere Abfragen gleichzeitig ausgeführt werden?
+### Gibt es Probleme oder Auswirkungen auf die Performance des Abfrage-Service, wenn mehrere Abfragen gleichzeitig ausgeführt werden?
 
 +++Antwort 
-Nr. Der Abfrage-Service verfügt über eine Funktion zur automatischen Skalierung, die sicherstellt, dass gleichzeitige Abfragen keine merklichen Auswirkungen auf die Leistung des Service haben.
+Nr. Der Abfrage-Service verfügt über eine Funktion zur automatischen Skalierung, die sicherstellt, dass gleichzeitige Abfragen keine merklichen Auswirkungen auf die Performance des Service haben.
 +++
 
 ### Kann ich reservierte Keywords als Spaltennamen verwenden?
@@ -122,7 +122,7 @@ Die vollständige Anleitung finden Sie in der Dokumentation zum [Arbeiten mit ve
 ### Wie beschleunige ich eine Abfrage für einen Datensatz, der Arrays enthält?
 
 +++Antwort
-Um die Leistung von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select)[auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
+Um die Performance von Abfragen von Datensätzen mit Arrays zu verbessern, sollten Sie das Array zunächst während der Laufzeit als [CTAS-Abfrage](./sql/syntax.md#create-table-as-select)[auflösen](https://spark.apache.org/docs/latest/api/sql/index.html#explode). Danach können Sie es weiter auf Möglichkeiten zur Verbesserung der Verarbeitungszeit untersuchen.
 +++
 
 ### Warum wird meine CTAS-Abfrage für eine geringe Anzahl von Zeilen nach vielen Stunden immer noch bearbeitet?
@@ -171,7 +171,7 @@ Es gibt zwei Möglichkeiten, benutzerdefinierte Attributionen zu implementieren:
 ### Kann ich meine Abfragen als Vorlage speichern, damit ich sie einfach wiederverwenden kann?
 
 +++Antwort
-Ja, Sie können Abfragen mithilfe von vorbereiteten Anweisungen als Vorlage verwenden. Vorbereitete Anweisungen können die Leistung optimieren und das wiederholte Parsen derselben Abfrage vermeiden. Weitere Informationen finden Sie in der [Dokumentation zu vorbereiteten Anweisungen](./sql/prepared-statements.md).
+Ja, Sie können Abfragen mithilfe von vorbereiteten Anweisungen als Vorlage verwenden. Vorbereitete Anweisungen können die Performance optimieren und das wiederholte Parsen derselben Abfrage vermeiden. Weitere Informationen finden Sie in der [Dokumentation zu vorbereiteten Anweisungen](./sql/prepared-statements.md).
 +++
 
 ### Wie erhalte ich Fehlerprotokolle für eine Abfrage? {#error-logs}
@@ -303,7 +303,7 @@ Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitte
 
 Sie sollten auch in der Dokumentation nachlesen, wie Sie [geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und über [die API](./api/scheduled-queries.md) durchführen können.
 
-Wenn Sie den [!DNL Query Editor] verwenden, können Sie einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde. Dies gilt nicht für die [!DNL Query Service]-API.
+Beachten Sie bei der Verwendung von [!DNL Query Editor] Sie können einen Zeitplan nur zu einer bereits erstellten und gespeicherten Abfrage hinzufügen. Dies gilt nicht für die [!DNL Query Service]-API.
 +++
 
 ### Was bedeutet die Fehlermeldung „Sitzungs-Limit erreicht“?
@@ -458,7 +458,7 @@ Sie können keine Platzhalter verwenden, um alle Daten aus Ihren Zeilen abzurufe
 ### Sollte ich `NOT IN` in meiner SQL-Abfrage verwenden?
 
 +++Antwort
-Der `NOT IN`-Operator wird häufig zum Abrufen von Zeilen verwendet, die nicht in einer anderen Tabelle oder SQL-Anweisung gefunden werden. Dieser Operator kann die Leistung verlangsamen und unerwartete Ergebnisse liefern, wenn die zu vergleichenden Spalten `NOT NULL` akzeptieren oder wenn Sie eine große Anzahl von Datensätzen haben.
+Der `NOT IN`-Operator wird häufig zum Abrufen von Zeilen verwendet, die nicht in einer anderen Tabelle oder SQL-Anweisung gefunden werden. Dieser Operator kann die Performance verlangsamen und unerwartete Ergebnisse liefern, wenn die zu vergleichenden Spalten `NOT NULL` akzeptieren oder wenn Sie eine große Anzahl von Datensätzen haben.
 
 Anstatt `NOT IN` zu verwenden, können Sie entweder `NOT EXISTS` oder `LEFT OUTER JOIN` verwenden.
 

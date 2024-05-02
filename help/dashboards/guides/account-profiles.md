@@ -2,9 +2,9 @@
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 3%
 
 ---
@@ -67,16 +67,20 @@ Die Kontoprofilinformationen werden auf der Seite [!UICONTROL Details] wurde aus
 
 Adobe stellt standardmäßige Widgets bereit, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Kontoprofilen visualisieren können.
 
+>[!IMPORTANT]
+>
+>Wenn Sie keinen Datumsfilter bereitstellen, analysiert das Standardverhalten von Insights Daten, die aus dem Vorjahr bis heute hinzugefügt wurden.
+
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
 * [Kontoprofile hinzugefügt](#account-profiles-added)
-* [Rechnungslegung nach Wirtschaftszweigen](#accounts-by-industry)
-* [Konten nach Typ](#accounts-by-type)
+* [Neue Abschlüsse nach Wirtschaftszweigen](#accounts-by-industry)
+* [Neue Konten nach Typ](#accounts-by-type)
 * [Hinzugefügte Möglichkeiten](#opportunities-added)
-* [Möglichkeiten nach Rolle der Person](#opportunities-by-person-role)
-* [Möglichkeiten nach Einnahmen](#opportunities-by-revenue)
-* [Chancen nach Status und Staging](#opportunities-by-status-&-stage)
-* [Chancen gewonnen](#opportunities-won)
+* [Neue Möglichkeiten für die Rolle der Person](#opportunities-by-person-role)
+* [Neue Einnahmenmöglichkeiten](#opportunities-by-revenue)
+* [Neue Möglichkeiten nach Status und Phase](#opportunities-by-status-&-stage)
+* [Neue Chancen gewonnen](#opportunities-won)
 * [Prädiktive Scoring-Verteilung](#predictive-scoring-distribution)
 * [Einflussfaktoren für prädiktive Scoring](#predictive-scoring-top-influential-factors)
 * [Rechnungsabschlüsse nach Wirtschaftszweigen insgesamt](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ Die [!UICONTROL Kontoprofile hinzugefügt] Widget verwendet ein Liniendiagramm, 
 
 ![Das Widget Kontoprofile hinzugefügt.](../images/account-profiles/account-profiles-added.png)
 
-### Rechnungslegung nach Wirtschaftszweigen {#accounts-by-industry}
+### Neue Abschlüsse nach Wirtschaftszweigen {#accounts-by-industry}
 
-Die [!UICONTROL Rechnungslegung nach Wirtschaftszweigen] -Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik innerhalb eines Ringdiagramms an. Das Ringdiagramm zeigt die relative Zusammensetzung der verschiedenen Branchen, aus denen diese Summe besteht. Ein farbkodierter Schlüssel bietet eine Aufschlüsselung aller eingeschlossenen Branchen. Einzelne Zahlen für jede Branche werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+Die [!UICONTROL Neue Abschlüsse nach Wirtschaftszweigen] -Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik innerhalb eines Ringdiagramms an. Das Ringdiagramm zeigt die relative Zusammensetzung der verschiedenen Branchen, aus denen diese Summe besteht. Ein farbkodierter Schlüssel bietet eine Aufschlüsselung aller eingeschlossenen Branchen. Einzelne Zahlen für jede Branche werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
-![Das Widget Konten nach Branche .](../images/account-profiles/accounts-by-industry.png)
+![Das Widget Neue Konten nach Branche .](../images/account-profiles/new-accounts-by-industry.png)
 
-### Konten nach Typ {#accounts-by-type}
+### Neue Konten nach Typ {#accounts-by-type}
 
-Die [!UICONTROL Konten nach Typ] -Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik innerhalb eines Ringdiagramms an. Das Ringdiagramm zeigt die relative Zusammensetzung der verschiedenen Kontotypen, aus denen diese Summe besteht. Ein farbcodierter Schlüssel bietet eine Aufschlüsselung aller enthaltenen Kontotypen. Einzelne Zählungen für jeden Kontotyp werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+Die [!UICONTROL Neue Konten nach Typ] -Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik innerhalb eines Ringdiagramms an. Das Ringdiagramm zeigt die relative Zusammensetzung der verschiedenen Kontotypen, aus denen diese Summe besteht. Ein farbcodierter Schlüssel bietet eine Aufschlüsselung aller enthaltenen Kontotypen. Einzelne Zählungen für jeden Kontotyp werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
-![Das Widget Konten nach Typ .](../images/account-profiles/accounts-by-type.png)
+![Das Widget Neue Konten nach Typ .](../images/account-profiles/new-accounts-by-type.png)
 
 ### Hinzugefügte Möglichkeiten {#opportunities-added}
 
@@ -107,35 +111,35 @@ Die [!UICONTROL Hinzugefügte Möglichkeiten] Widget verwendet ein Liniendiagram
 
 ![Das Widget Chancen hinzugefügt.](../images/account-profiles/opportunities-added.png)
 
-### Möglichkeiten nach Rolle der Person {#opportunities-by-person-role}
+### Neue Möglichkeiten für die Rolle der Person {#opportunities-by-person-role}
 
-Die [!UICONTROL Möglichkeiten nach Rolle der Person] Widget zeigt die Gesamtanzahl Ihrer Möglichkeiten in einer einzelnen Metrik innerhalb eines Ringdiagramms an. Das Ringdiagramm zeigt die relative Zusammensetzung der Rollen, die diese Gesamtzahl von Möglichkeiten ausmachen. Ein farbkodierter Schlüssel bietet eine Aufschlüsselung aller enthaltenen Rollen. Einzelne Zahlen für jede Rolle werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+Die [!UICONTROL Neue Möglichkeiten für die Rolle der Person] Widget zeigt die Gesamtanzahl Ihrer Möglichkeiten in einer einzelnen Metrik innerhalb eines Ringdiagramms an. Das Ringdiagramm zeigt die relative Zusammensetzung der Rollen, die diese Gesamtzahl von Möglichkeiten ausmachen. Ein farbkodierter Schlüssel bietet eine Aufschlüsselung aller enthaltenen Rollen. Einzelne Zahlen für jede Rolle werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
 >[!NOTE]
 >
 >Die [!UICONTROL Keine Daten gefunden] oder [!UICONTROL Ladevorgang nicht möglich] -Fehler wird verursacht, wenn die Bridge-Tabelle &quot;Opportunity-Person&quot;in Ihrem Schema nicht verwendet wird. Wenn in Ihrem Insight einer dieser Fehler angezeigt wird, überprüfen Sie Ihr Vereinigungsschema und stellen Sie sicher, dass die Feldergruppe &quot;Chancen - Person&quot;Daten erfasst.
 
-![Das Widget Chancen nach Rollen für Personen .](../images/account-profiles/opportunities-by-person-role.png)
+![Das Widget Neue Möglichkeiten nach Rollen für Personen .](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### Möglichkeiten nach Einnahmen {#opportunities-by-revenue}
+### Neue Einnahmenmöglichkeiten {#opportunities-by-revenue}
 
-Die [!UICONTROL Möglichkeiten nach Einnahmen] Widget verwendet ein Balkendiagramm, um die geschätzte Gesamtumsätze zu veranschaulichen, die durch Ihre Chancen generiert wurden. Das Widget unterstützt bis zu sechs Möglichkeiten.
+Die [!UICONTROL Neue Einnahmenmöglichkeiten] Widget verwendet ein Balkendiagramm, um die geschätzte Gesamtumsätze zu veranschaulichen, die durch Ihre Chancen generiert wurden. Das Widget unterstützt bis zu sechs Möglichkeiten.
 
 Um ein Dialogfeld zu sehen, das die spezifische Umsatzsumme für eine Gelegenheit enthält, verwenden Sie den Cursor, um den Mauszeiger über einzelne Balken zu bewegen.
 
-![Das Widget Chancen nach Umsatz .](../images/account-profiles/opportunities-by-revenue.png)
+![Das Widget Neue Möglichkeiten nach Umsatz .](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Chancen nach Status und Staging {#opportunities-by-status-&-stage}
+### Neue Möglichkeiten nach Status und Phase {#opportunities-by-status-&-stage}
 
 Dieses Widget verwendet ein Balkendiagramm, um die Anzahl der Möglichkeiten zu veranschaulichen, die in allen Phasen des Marketing-/Verkaufstrichter geöffnet oder geschlossen sind. Das Widget verwendet Farben, um die Stufe der Möglichkeiten zu differenzieren. Ein farbkodierter Schlüssel zeigt die verfügbaren Phasen für Gelegenheiten an.
 
-![Das Widget Chancen nach Status und Bühne .](../images/account-profiles/opportunities-by-status-&-stage.png)
+![Das Widget Neue Möglichkeiten nach Status und Bühne .](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### Chancen gewonnen {#opportunities-won}
+### Neue Chancen gewonnen {#opportunities-won}
 
-Die [!UICONTROL Chancen gewonnen] Widget zeigt die Gesamtzahl Ihrer Möglichkeiten an, die erfolgreich in einer einzelnen Metrik innerhalb eines Ringdiagramms abgeschlossen wurden. Das Ringdiagramm veranschaulicht die relative Zusammensetzung der Chancen, die entweder gewonnen werden oder nicht. Ein farbkodierter Schlüssel unterscheidet zwischen erfolgreichen und nicht erfolgreichen Möglichkeiten. Einzelne Zahlen für jede Rolle werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+Die [!UICONTROL Neue Chancen gewonnen] Widget zeigt die Gesamtzahl Ihrer Möglichkeiten an, die erfolgreich in einer einzelnen Metrik innerhalb eines Ringdiagramms abgeschlossen wurden. Das Ringdiagramm veranschaulicht die relative Zusammensetzung der Chancen, die entweder gewonnen werden oder nicht. Ein farbkodierter Schlüssel unterscheidet zwischen erfolgreichen und nicht erfolgreichen Möglichkeiten. Einzelne Zahlen für jede Rolle werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
-![Die Chancen gewannen Widget.](../images/account-profiles/opportunities-won.png)
+![Das Widget Neue Möglichkeiten gewinnt.](../images/account-profiles/new-opportunities-won.png)
 
 ### Prädiktive Scoring-Verteilung {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ Dieses Widget zeigt die wichtigsten Einflussfaktoren für die einzelnen Bereiche
 ### Rechnungsabschlüsse nach Wirtschaftszweigen insgesamt {#total-accounts-by-industry}
 
 Dieses Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik und verwendet ein Ringdiagramm, um die proportionalen Zählergrößen für die Branchen zu veranschaulichen, aus denen die Gesamtanzahl besteht. Der Schlüssel bietet Informationen zur Farbcodierung für die verschiedenen Branchen, aus denen das Ringdiagramm besteht.
+
+>[!NOTE]
+>
+>Die in diesem Einblick angezeigten Informationen hängen vom von Ihnen festgelegten Datumsbereich ab. Wenn Sie keinen Datumsfilter angeben, analysiert das Standardverhalten des Insight Daten, die aus dem Vorjahr bis heute hinzugefügt wurden.
 
 Einzelne Zahlen für die verschiedenen Branchen werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
