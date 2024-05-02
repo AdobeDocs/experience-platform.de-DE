@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
+source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
 workflow-type: tm+mt
-source-wordcount: '1844'
-ht-degree: 91%
+source-wordcount: '1889'
+ht-degree: 89%
 
 ---
 
@@ -55,6 +55,8 @@ So fügen Sie Zielgruppen zum Zielgruppenblock hinzu. Wählen Sie **[!UICONTROL 
 >[!IMPORTANT]
 >
 >Bitte beachten Sie, dass **only** Zielgruppen, die mithilfe der standardmäßigen Zusammenführungsrichtlinie definiert wurden, werden angezeigt.
+>
+>Darüber hinaus gilt nur **veröffentlicht** Mit Segment Builder erstellte Zielgruppen können verwendet werden. Zielgruppen, die mit der Zielgruppenzusammensetzung und extern generierten Zielgruppen erstellt wurden, sind **not** verfügbar.
 
 Eine Liste von Zielgruppen wird angezeigt. Wählen Sie die Zielgruppe aus, die Sie einbeziehen möchten, und dann **[!UICONTROL Hinzufügen]**, um sie an Ihren Zielgruppen-Block anzuhängen.
 
@@ -101,6 +103,10 @@ Der Block **[!UICONTROL Ausschließen]** wird hinzugefügt. Wenn dieser Block au
 Wenn Sie nach Zielgruppe ausschließen, können Sie durch Auswahl von **[!UICONTROL Zielgruppe hinzufügen]** auswählen, welche Zielgruppen ausgeschlossen werden sollen.
 
 ![Die Schaltfläche [!UICONTROL Zielgruppe hinzufügen] ist ausgewählt, über die Sie wählen können, welche Zielgruppe Sie ausschließen möchten.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>Nur **veröffentlicht** Mit Segment Builder erstellte Zielgruppen können verwendet werden. Zielgruppen, die mit der Zielgruppenzusammensetzung und extern generierten Zielgruppen erstellt wurden, sind **not** verfügbar.
 
 Eine Liste von Zielgruppen wird angezeigt. Wählen Sie **[!UICONTROL Hinzufügen]** aus, um die Zielgruppen, die ausgeschlossen werden sollen, Ihrem Ausschlussblock hinzuzufügen.
 
