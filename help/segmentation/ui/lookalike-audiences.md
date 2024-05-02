@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Look-alike-Zielgruppen
 description: Erfahren Sie, wie Sie neue hochwertige Zielgruppen in Adobe Experience Platform mit Look-alike-Zielgruppen ansprechen.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2193'
 ht-degree: 10%
 
 ---
@@ -197,7 +197,7 @@ Look-alike-Zielgruppen können so konfiguriert werden, dass Datenfelder ausgesch
 
 Die standardmäßige Bezeichnung &quot;C9&quot;kann verwendet werden, um Daten zu beschriften, die nicht für die Datenwissenschaft verwendet werden sollten, und kann durch Aktivierung der standardmäßigen Richtlinie &quot;Datenwissenschaft beschränken&quot;durchgesetzt werden. Sie können auch zusätzliche Richtlinien erstellen, um Daten mit anderen Bezeichnungen, einschließlich sensibler Bezeichnungen, aus der Nutzung für die Datenwissenschaft zu beschränken. Weitere Informationen zur Verwaltung von Datennutzungsrichtlinien finden Sie im Abschnitt [Benutzeroberflächenleitfaden für Datennutzungsrichtlinien](../../data-governance/policies/user-guide.md). Weitere Informationen zur Verwaltung von Datennutzungsbezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu den Datennutzungsbezeichnungen](../../data-governance/labels/user-guide.md).
 
-Standardmäßig wird der Modellierungsprozess für Look-alike-Zielgruppen ausgeschlossen **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen. Wenn die Basiszielgruppe keine Vertragsbezeichnungen hat, wird der Modellierungsprozess **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen.
+Wenn eine Basiszielgruppe keine Vertragsbezeichnungen hat, wird der Modellierungsprozess für Look-alike-Zielgruppen standardmäßig ausgeschlossen **any** -Feld, Datensatz oder Zielgruppe basierend auf der aktivierten Datenschutzrichtlinie für Ihr Unternehmen.
 
 ## Nächste Schritte
 
