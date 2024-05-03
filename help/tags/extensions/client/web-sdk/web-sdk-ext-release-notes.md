@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1983'
-ht-degree: 89%
+source-wordcount: '2024'
+ht-degree: 87%
 
 ---
 
@@ -13,6 +13,15 @@ ht-degree: 89%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.22.0 – Samstag, 3. Mai 2024
+
+**Neue Funktionen**
+
+* Erweitern Sie das variable Datenelement, um Datenobjekte zu unterstützen.
+* Die Aktion &quot;Variable aktualisieren&quot;unterstützt jetzt die Änderung der Übergabe-Through-Adobe Analytics-, Adobe Audience Manager- und Adobe Target-Daten.
+
+Enthält Version 2.19.2 des Adobe Experience Platform Web SDK.
 
 ## Version 2.21.4 – Donnerstag, 10. Januar 2024
 
@@ -176,7 +185,7 @@ Enthält Version 2.8.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.7.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* Weitere Informationen aus dem Edge-Netzwerk sind im Ereignis &quot;Send Event Complete&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden.
+* Weitere Informationen aus dem Edge Network sind im Ereignis &quot;Ereignis abschließen senden&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden.
 
 ## Version 2.7.3 – 7. September 2021
 
