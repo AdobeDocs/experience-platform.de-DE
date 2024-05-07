@@ -2,10 +2,10 @@
 title: Konfigurieren von Datenstromüberschreibungen
 description: Erfahren Sie, wie Sie Datenstromüberschreibungen in der Datenstrom-Benutzeroberfläche konfigurieren und sie über das Web SDK aktivieren.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 90493d179e620604337bda96cb3b7f5401ca4a81
+source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 61%
+source-wordcount: '1067'
+ht-degree: 68%
 
 ---
 
@@ -18,10 +18,10 @@ Auf diese Weise können Sie andere Verhaltensweisen von Datastreams als die Stan
 Die Außerkraftsetzung der Datastream-Konfiguration erfolgt in zwei Schritten:
 
 1. Zunächst müssen Sie Ihre Datastream-Konfigurationsüberschreibungen im [Datastream-Konfigurationsseite](configure.md).
-2. Anschließend müssen Sie die Überschreibungen auf eine der folgenden Arten an das Edge-Netzwerk senden:
-   * Durch die `sendEvent` oder `configure` [Web SDK](#send-overrides-web-sdk) Befehle.
+2. Anschließend müssen Sie die Außerkraftsetzungen auf eine der folgenden Arten an das Edge Network senden:
+   * Durch die `sendEvent` oder `configure` [Web SDK](#send-overrides) Befehle.
    * Über das Web SDK [Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * Über das Mobile SDK [sendEvent](#send-overrides-mobile-sdk) Befehl.
+   * Über das Mobile SDK [sendEvent](#send-overrides) API oder mithilfe von [Regeln](#send-overrides).
 
 In diesem Artikel wird der Prozess zur Überschreibung der End-to-End-Datenstromkonfiguration für jeden unterstützten Überschreibungstyp erläutert.
 
@@ -114,157 +114,12 @@ Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie
 
 Sie sollten jetzt die Überschreibungen des ID-Synchronisierungs-Containers konfiguriert haben. Jetzt können Sie [die Überschreibungen über das Web SDK an das Edge-Netzwerk senden](#send-overrides).
 
-## Senden der Überschreibungen an das Edge-Netzwerk über das Web SDK {#send-overrides-web-sdk}
+## Senden der Überschreibungen an das Edge-Netzwerk über das Web SDK {#send-overrides}
 
-Nachdem Sie in der Datenerfassungs-Benutzeroberfläche Datastream-Überschreibungen konfiguriert haben, können Sie die Überschreibungen über das Web SDK oder Mobile SDK an das Edge-Netzwerk senden.
+Nachdem Sie in der Datenerfassungs-Benutzeroberfläche Datastream-Überschreibungen konfiguriert haben, können Sie die Überschreibungen über das Web SDK oder das Mobile SDK an das Edge Network senden.
 
 * **Web SDK**: Siehe [Überschreibungen der Datenspeicherkonfiguration](../web-sdk/commands/datastream-overrides.md#library) für Anweisungen zur Tag-Erweiterung und Codebeispiele für JavaScript-Bibliotheken.
-* **Mobile SDK**: Siehe unten.
-
-### Überschreiben der Datastream-ID über das Mobile SDK {#id-override-mobile}
-
-Die folgenden Beispiele zeigen, wie eine Datastream-ID-Überschreibung bei einer Mobile SDK-Integration aussehen könnte. Wählen Sie die folgenden Registerkarten aus, um die [!DNL iOS] und [!DNL Android] Beispiele.
-
->[!BEGINTABS]
-
->[!TAB iOS (Swift)]
-
-Dieses Beispiel zeigt, wie eine Datastream-ID-Überschreibung in einem Mobile SDK aussieht. [!DNL iOS] Integration.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android™ (Kotlin)]
-
-Dieses Beispiel zeigt, wie eine Datastream-ID-Überschreibung in einem Mobile SDK aussieht. [!DNL Android] Integration.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamIdOverride("SampleDatastreamId")
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
-
-### Überschreiben der Datastream-Konfiguration über das Mobile SDK {#config-override-mobile}
-
-Die folgenden Beispiele zeigen, wie eine Außerkraftsetzung der Datastream-Konfiguration bei einer Mobile SDK-Integration aussehen könnte. Wählen Sie die folgenden Registerkarten aus, um die [!DNL iOS] und [!DNL Android] Beispiele.
-
->[!BEGINTABS]
-
->[!TAB iOS (Swift)]
-
-Dieses Beispiel zeigt, wie eine Außerkraftsetzung einer Datastream-Konfiguration in einem Mobile SDK aussieht [!DNL iOS] Integration.
-
-```swift
-// Create Experience event from dictionary
-var xdmData: [String: Any] = [
-  "eventType": "SampleXDMEvent",
-  "sample": "data",
-]
-
-let configOverrides: [String: Any] = [
-  "com_adobe_experience_platform": [
-    "datasets": [
-      "event": [
-        "datasetId": "SampleEventDatasetIdOverride"
-      ]
-    ]
-  ],
-  "com_adobe_analytics": [
-  "reportSuites": [
-        "MyFirstOverrideReportSuite",
-          "MySecondOverrideReportSuite",
-          "MyThirdOverrideReportSuite"
-      ]
-  ],
-  "com_adobe_identity": [
-    "idSyncContainerId": "1234567"
-  ],
-  "com_adobe_target": [
-    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
- ],
-]
-
-let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
-
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-  // Handle the Edge Network response
-}
-```
-
->[!TAB Android (Kotlin)]
-
-Dieses Beispiel zeigt, wie eine Außerkraftsetzung einer Datastream-Konfiguration in einem Mobile SDK aussieht [!DNL Android] Integration.
-
-```kotlin
-// Create experience event from Map
-val xdmData = mutableMapOf < String, Any > ()
-xdmData["eventType"] = "SampleXDMEvent"
-xdmData["sample"] = "data"
-
-val configOverrides = mapOf(
-    "com_adobe_experience_platform"
-    to mapOf(
-        "datasets"
-        to mapOf(
-            "event"
-            to mapOf("datasetId"
-                to "SampleEventDatasetIdOverride")
-        )
-    ),
-    "com_adobe_analytics"
-    to mapOf(
-        "reportSuites"
-        to listOf(
-            "MyFirstOverrideReportSuite",
-            "MySecondOverrideReportSuite",
-            "MyThirdOverrideReportSuite"
-        )
-    ),
-    "com_adobe_identity"
-    to mapOf(
-        "idSyncContainerId"
-        to "1234567"
-    ),
-    "com_adobe_target"
-    to mapOf(
-        "propertyToken"
-        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    )
-)
-
-val experienceEvent = ExperienceEvent.Builder()
-    .setXdmSchema(xdmData)
-    .setDatastreamConfigOverride(configOverrides)
-    .build()
-
-Edge.sendEvent(experienceEvent) {
-    // Handle the Edge Network response
-}
-```
-
->[!ENDTABS]
+* **Mobile SDK**: Sie können Datenspeicher-ID-Überschreibungen entweder mit der [sendEvent-API](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) oder mithilfe von [Regeln](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Payload-Beispiel {#payload-example}
 
