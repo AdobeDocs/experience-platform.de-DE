@@ -1,17 +1,17 @@
 ---
 title: Konfigurieren von Datenstromüberschreibungen
-description: Erfahren Sie, wie Sie Datenstromüberschreibungen in der Datenstrom-Benutzeroberfläche konfigurieren und sie über das Web SDK aktivieren.
+description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Datastreams Außerkraftsetzungen von Datastreams konfigurieren und über das Web SDK oder Mobile SDK aktivieren.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 68%
+source-wordcount: '1081'
+ht-degree: 57%
 
 ---
 
 # Konfigurieren von Datenstromüberschreibungen
 
-Mit Datenstromüberschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenströme definieren, die über das Web SDK an das Edge-Netzwerk übergeben werden.
+Mit Datastream-Überschreibungen können Sie zusätzliche Konfigurationen für Ihre Datenspeicher definieren, die über das Web SDK oder Mobile SDK an das Edge Network übergeben werden.
 
 Auf diese Weise können Sie andere Verhaltensweisen von Datastreams als die Standardeinstellungen Trigger haben, ohne einen Datastream zu erstellen oder Ihre vorhandenen Einstellungen zu ändern.
 
@@ -68,7 +68,7 @@ Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Target](con
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Ihre Adobe Target-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [die Überschreibungen über das Web SDK an das Edge-Netzwerk senden](#send-overrides).
+Ihre Adobe Target-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [Senden der Überschreibungen an das Edge Network über das Web SDK oder Mobile SDK](#send-overrides).
 
 ### Datenstromüberschreibungen für Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Wählen Sie **[!UICONTROL Batch-Modus anzeigen]** aus, um die Stapelbearbeitung 
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Ihre Adobe Analytics-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [die Überschreibungen über das Web SDK an das Edge-Netzwerk senden](#send-overrides).
+Ihre Adobe Analytics-Datenstromüberschreibungen sollten jetzt konfiguriert sein. Jetzt können Sie [Senden der Überschreibungen an das Edge Network über das Web SDK oder Mobile SDK](#send-overrides).
 
 ### Datenstromüberschreibungen für Experience Platform-Ereignisdatensätze {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Nachdem Sie den Datastream erstellt haben, bearbeiten Sie die [Adobe Experience 
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Sie sollten jetzt die Adobe Experience Platform-Datenstromüberschreibungen konfiguriert haben. Jetzt können Sie [die Überschreibungen über das Web SDK an das Edge-Netzwerk senden](#send-overrides).
+Sie sollten jetzt die Adobe Experience Platform-Datenstromüberschreibungen konfiguriert haben. Jetzt können Sie [Senden der Überschreibungen an das Edge Network über das Web SDK oder Mobile SDK](#send-overrides).
 
 ### Datenstromüberschreibungen für ID-Synchronisierungs-Container von Drittanbietern {#container-overrides}
 
@@ -112,9 +112,9 @@ Verwenden Sie dann den Abschnitt **[!UICONTROL Container-ID-Überschreibungen]**
 
 Nachdem Sie die gewünschten Überschreibungen hinzugefügt haben, speichern Sie Ihre Datenstromeinstellungen.
 
-Sie sollten jetzt die Überschreibungen des ID-Synchronisierungs-Containers konfiguriert haben. Jetzt können Sie [die Überschreibungen über das Web SDK an das Edge-Netzwerk senden](#send-overrides).
+Sie sollten jetzt die Überschreibungen des ID-Synchronisierungs-Containers konfiguriert haben. Jetzt können Sie [Senden der Überschreibungen an das Edge Network über das Web SDK oder Mobile SDK](#send-overrides).
 
-## Senden der Überschreibungen an das Edge-Netzwerk über das Web SDK {#send-overrides}
+## Überschreibungen an das Edge Network senden {#send-overrides}
 
 Nachdem Sie in der Datenerfassungs-Benutzeroberfläche Datastream-Überschreibungen konfiguriert haben, können Sie die Überschreibungen über das Web SDK oder das Mobile SDK an das Edge Network senden.
 
