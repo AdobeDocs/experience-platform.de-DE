@@ -2,16 +2,16 @@
 title: Verschlüsselte Datenaufnahme
 description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen mithilfe der API aufnehmen.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 89%
+source-wordcount: '1736'
+ht-degree: 76%
 
 ---
 
 # Verschlüsselte Datenaufnahme
 
-Mit Adobe Experience Platform können Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen aufnehmen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Derzeit werden die asymmetrischen Verschlüsselungsmechanismen PGP und GPG unterstützt.
+Sie können verschlüsselte Datendateien mit Batch-Quellen für den Cloud-Speicher in Adobe Experience Platform erfassen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Derzeit werden die asymmetrischen Verschlüsselungsmechanismen PGP und GPG unterstützt.
 
 Die verschlüsselte Datenaufnahme läuft wie folgt ab:
 
@@ -27,7 +27,7 @@ Die verschlüsselte Datenaufnahme läuft wie folgt ab:
 
 In diesem Dokument wird beschrieben, wie Sie ein Verschlüsselungsschlüsselpaar zum Verschlüsseln Ihrer Daten generieren und diese verschlüsselten Daten mithilfe von Cloud-Speicherquellen in Experience Platform aufnehmen.
 
-## Erste Schritte
+## Erste Schritte {#get-started}
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -39,9 +39,9 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
 
-### Unterstützte Dateierweiterungen für verschlüsselte Dateien
+### Unterstützte Dateierweiterungen für verschlüsselte Dateien {#supported-file-extensions-for-encrypted-files}
 
-Folgende Dateierweiterungen werden für verschlüsselte Dateien unterstützt:
+Die Liste der unterstützten Dateierweiterungen für verschlüsselte Dateien ist:
 
 * .csv 
 * .tsv
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **Anfrage**
 
++++ Beispielanfrage anzeigen
+
 Die folgende Anfrage generiert mithilfe des PGP-Verschlüsselungsalgorithmus ein Verschlüsselungsschlüsselpaar.
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Der Typ des von Ihnen verwendeten Verschlüsselungsalgorithmus. Die unterstützten Verschlüsselungstypen sind `PGP` und `GPG`. |
 | `params.passPhrase` | Die Passphrase bietet eine zusätzliche Schutzschicht für Ihre Verschlüsselungsschlüssel. Bei der Erstellung speichert Experience Platform die Passphrase in einem anderen sicheren Tresor als den öffentlichen Schlüssel. Sie müssen eine nicht leere Zeichenfolge als Passphrase angeben. |
 
++++
+
 **Antwort**
+
++++ Beispielantwort anzeigen
 
 Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter Schlüssel, die ID des öffentlichen Schlüssels und die Ablaufzeit Ihrer Schlüssel zurückgegeben. Die Ablaufzeit wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung eingestellt. Die Ablaufzeit kann derzeit nicht konfiguriert werden.
 
@@ -115,9 +121,93 @@ Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter 
 | `publicKeyId` | Die öffentliche Schlüssel-ID wird verwendet, um einen Datenfluss zu erstellen und Ihre verschlüsselten Cloud-Speicherdaten in Experience Platform zu erfassen. |
 | `expiryTime` | Die Ablaufzeit definiert das Ablaufdatum Ihres Verschlüsselungsschlüsselpaars. Dieses Datum wird automatisch auf 180 Tage nach dem Datum der Schlüsselgenerierung gesetzt und im Unix-Zeitstempelformat angezeigt. |
 
-+++(Optional) Erstellen eines Schlüsselpaars für die Signaturverifizierung von signierten Daten
++++
 
-### Erstellen eines kundenverwalteten Schlüsselpaars
+### Abrufen von Verschlüsselungsschlüsseln {#retrieve-encryption-keys}
+
+Um alle Verschlüsselungsschlüssel in Ihrem Unternehmen abzurufen, stellen Sie eine GET-Anfrage an die `/encryption/keys` endpoit=nt.
+
+**API-Format**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**Anfrage**
+
++++ Beispielanfrage anzeigen
+
+Die folgende Anfrage ruft alle Verschlüsselungsschlüssel in Ihrem Unternehmen ab.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwort**
+
++++ Beispielantwort anzeigen
+
+Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Abrufen von Verschlüsselungsschlüsseln nach ID {#retrieve-encryption-keys-by-id}
+
+Um einen bestimmten Satz von Verschlüsselungsschlüsseln abzurufen, stellen Sie eine GET-Anfrage an die `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüssel-ID als Kopfzeilenparameter an.
+
+**API-Format**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Anfrage**
+
++++ Beispielanfrage anzeigen
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwort**
+
++++ Beispielantwort anzeigen
+
+Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Erstellen eines kundenverwalteten Schlüsselpaars {#create-customer-managed-key-pair}
 
 Sie können optional ein Schlüsselpaar für die Signaturverifizierung erstellen, um Ihre verschlüsselten Daten zu signieren und aufzunehmen.
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **Anfrage**
+
++++ Beispielanfrage anzeigen
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Der Typ des von Ihnen verwendeten Verschlüsselungsalgorithmus. Die unterstützten Verschlüsselungstypen sind `PGP` und `GPG`. |
 | `publicKey` | Der öffentliche Schlüssel, der Ihren kundenverwalteten Schlüsseln entspricht, die zum Signieren Ihrer verschlüsselten Daten verwendet werden. Dieser Schlüssel muss Base64-codiert sein. |
 
++++
+
 **Antwort**
+
++++ Beispielantwort anzeigen
 
 ```json
 {    
@@ -206,11 +302,13 @@ Um einen Datenfluss zu erstellen, stellen Sie eine POST-Anfrage an den `/flows`-
 POST /flows
 ```
 
-**Anfrage**
-
 >[!BEGINTABS]
 
 >[!TAB Erstellen eines Datenflusses für die Aufnahme verschlüsselter Daten]
+
+**Anfrage**
+
++++ Beispielanfrage anzeigen
 
 Die folgende Anfrage erstellt einen Datenfluss zum Aufnehmen verschlüsselter Daten für eine Cloud-Speicherquelle.
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
 | `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
 
++++
+
+**Antwort**
+
++++ Beispielantwort anzeigen
+
+Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses für Ihre verschlüsselten Daten zurückgegeben.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB Erstellen eines Datenflusses für die Aufnahme verschlüsselter und signierter Daten]
+
+**Anfrage**
+
++++ Beispielanfrage anzeigen
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | Die ID des Signaturverifizierungsschlüssels entspricht der ID des öffentlichen Schlüssels, die nach der Freigabe Ihres Base64-codierten öffentlichen Schlüssels für Experience Platform abgerufen wurde. |
 
->[!ENDTABS]
++++
 
 **Antwort**
+
++++ Beispielantwort anzeigen
 
 Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses für Ihre verschlüsselten Daten zurückgegeben.
 
@@ -331,10 +451,92 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**Einschränkungen bei der wiederkehrenden Erfassung**
+### Schlüssel löschen {#delete-encryption-keys}
+
+Um Ihre Verschlüsselungsschlüssel zu löschen, stellen Sie eine DELETE-Anfrage an die `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüssel-ID als Kopfzeilenparameter an.
+
+**API-Format**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Anfrage**
+
++++ Beispielanfrage anzeigen
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
+
+### Überprüfen von Verschlüsselungsschlüsseln {#validate-encryption-keys}
+
+Um Ihre Verschlüsselungsschlüssel zu validieren, stellen Sie eine GET-Anfrage an die `/encryption/keys/validate/` -Endpunkt und geben Sie die öffentliche Schlüssel-ID an, die Sie als Kopfzeilenparameter überprüfen möchten.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**Anfrage**
+
++++ Beispielanfrage anzeigen
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt entweder eine Bestätigung zurück, dass Ihre IDs gültig oder ungültig sind.
+
+>[!BEGINTABS]
+
+>[!TAB Gültig]
+
+Eine gültige öffentliche Schlüssel-ID gibt den Status `Active` zusammen mit Ihrer öffentlichen Schlüssel-ID.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB Ungültig]
+
+Eine ungültige Kennung des öffentlichen Schlüssels gibt den Status `Expired` zusammen mit Ihrer öffentlichen Schlüssel-ID.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## Einschränkungen bei der wiederkehrenden Erfassung {#restrictions-on-recurring-ingestion}
 
 Die verschlüsselte Datenerfassung unterstützt nicht die Erfassung wiederkehrender oder mehrstufiger Ordner in Quellen. Alle verschlüsselten Dateien müssen in einem einzigen Ordner enthalten sein. Platzhalter mit mehreren Ordnern in einem einzelnen Quellpfad werden ebenfalls nicht unterstützt.
 
@@ -356,14 +558,13 @@ In diesem Szenario schlägt die Flussausführung fehl und gibt eine Fehlermeldun
 * ACME-Kunden
    * File1.csv.gpg
    * File2.json.gpg
-   * Subfolder1
+   * Unterordner1
       * File3.csv.gpg
       * File4.json.gpg
       * File5.csv.gpg
 * ACME-Loyalität
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## Nächste Schritte
 
