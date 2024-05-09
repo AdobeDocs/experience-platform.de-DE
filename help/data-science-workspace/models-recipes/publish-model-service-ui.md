@@ -5,14 +5,19 @@ title: Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von 
 type: Tutorial
 description: Mit Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und ausgewertetes Modell als Service veröffentlichen, sodass Benutzer in Ihrem Unternehmen Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 74dd4cb786cb96c04d15005fe869ff861093edc3
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 36%
+source-wordcount: '505'
+ht-degree: 33%
 
 ---
 
-# Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von Data Science Workspace
+# Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von Data Science Workspace {#publish-a-model-as-a-service}
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_publishmodel"
+>title="Veröffentlichen eines Modells als Dienst"
+>abstract=""
 
 Mit Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und ausgewertetes Modell als Service veröffentlichen, sodass Benutzer in Ihrem Unternehmen Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 
@@ -20,7 +25,7 @@ Mit Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes
 
 Um dieses Tutorial abzuschließen, benötigen Sie Zugriff auf [!DNL Experience Platform]. Wenn Sie keinen Zugriff auf eine Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
-Diese Anleitung setzt ein vorhandenes Modell mit einem erfolgreichen Trainings-Lauf voraus. Wenn Sie über kein veröffentlichungsfähiges Modell verfügen, führen Sie die Anleitung [Modell in der Benutzeroberfläche trainieren und bewerten](./train-evaluate-model-ui.md) aus, bevor Sie fortfahren.
+Diese Anleitung setzt ein vorhandenes Modell mit einem erfolgreichen Trainings-Lauf voraus. Wenn Sie über kein veröffentlichungsfähiges Modell verfügen, führen Sie die Anleitung [Modell in der Benutzeroberfläche trainieren und auswerten](./train-evaluate-model-ui.md) aus, bevor Sie fortfahren.
 
 Wenn Sie ein Modell lieber mithilfe von Sensei Machine Learning-APIs veröffentlichen möchten, lesen Sie die [API-Anleitung](./publish-model-service-api.md).
 
@@ -56,7 +61,7 @@ Wählen Sie auf der Dienstübersichtsseite die Option **[!UICONTROL Ergebnis]**.
 
 ![](../images/models-recipes/publish-model/score_service.png)
 
-Wählen Sie einen entsprechenden Eingabedatensatz für den Scoring-Lauf und dann **[!UICONTROL Nächste]**. Sie werden aufgefordert, denselben Schritt für den Scoring-Datensatz durchzuführen. Nachdem Sie den Eingabe- und Ausgabedatensatz ausgewählt haben, können Sie die Konfigurationen aktualisieren.
+Wählen Sie einen entsprechenden Eingabedatensatz für den Scoring-Lauf aus und wählen Sie dann **[!UICONTROL Nächste]**. Sie werden aufgefordert, denselben Schritt für den Scoring-Datensatz durchzuführen. Nachdem Sie den Eingabe- und Ausgabedatensatz ausgewählt haben, können Sie die Konfigurationen aktualisieren.
 
 ![](../images/models-recipes/publish-model/select_datasets.png)
 
@@ -64,7 +69,7 @@ Wenn ein Service erstellt wird, übernimmt er die standardmäßigen Scoring-Konf
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-Auf der Seite **Übersicht** des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Sobald der Auftrag abgeschlossen ist, wird die **[!UICONTROL Zuletzt verwendet]** -Kopfzeile innerhalb der **[!UICONTROL Scoring]** -Container aktualisiert wird.
+Auf der Seite **Übersicht** des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Sobald der Auftrag abgeschlossen ist, wird die **[!UICONTROL Zuletzt verwendet]** -Kopfzeile innerhalb der **[!UICONTROL Bewertung]** -Container aktualisiert wird.
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 
