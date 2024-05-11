@@ -2,16 +2,17 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1624'
+ht-degree: 3%
 
 ---
 
 # Benutzerdefinierte Dashboards
 
-Adobe Experience Platform-Dashboards helfen Ihnen, Einblicke zu beschleunigen und die Visualisierung über die benutzerdefinierte Dashboards-Funktion anzupassen. Mit dieser Funktion können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie benutzerspezifische Widgets erstellen, hinzufügen und bearbeiten können, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren.
+Verwenden Sie Adobe Experience Platform-Dashboards, um Einblicke zu beschleunigen und die Visualisierung über die Dashboards-Funktion anzupassen. Mit dieser Funktion können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie benutzerspezifische Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken für Ihr Unternehmen zu visualisieren.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum 
 
 ![Das Dashboard-Inventar mit Dashboards im linken Navigationsbereich und &quot;Dashboard erstellen&quot;hervorgehoben.](./images/user-defined-dashboards/create-dashboard.png)
 
-Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist der Dashboards-Bestand leer und zeigt &quot;Keine Dashboards gefunden&quot;an. angezeigt. Nach der Erstellung werden alle benutzerdefinierten Dashboards im Dashboard-Inventar aufgelistet.
+Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist der Dashboards-Bestand leer und zeigt &quot;Keine Dashboards gefunden&quot;an. Nachricht. Nach der Erstellung werden all Ihre Dashboards im Dashboard-Inventar aufgelistet.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Um ein vorhandenes Dashboard zu bearbeiten, wählen Sie den Dashboard-Namen aus der Liste der Bestände und danach das Stiftsymbol (![Ein Bleistiftsymbol.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 Die [!UICONTROL Dashboard erstellen] angezeigt. Geben Sie einen benutzerfreundlichen, beschreibenden Namen für die Sammlung von Widgets ein, die Sie erstellen möchten, und wählen Sie **[!UICONTROL Speichern]**.
 
 ![Das Dialogfeld Dashboard erstellen .](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Benutzer, die die Data Distiller-SKU erworben haben, können benutzerdefinierte SQL-Abfragen verwenden, um ihre Einblicke zu erstellen. Siehe [Handbuch zur benutzerdefinierten Insight-Erstellung](./data-distiller/customizable-insights/overview.md) für Anweisungen zu diesem Workflow.
 
 Das neu erstellte leere Dashboard wird mit Ihrem Namen in der oberen linken Ecke der Ansicht angezeigt.
 
@@ -42,13 +46,13 @@ Das neu erstellte leere Dashboard wird mit Ihrem Namen in der oberen linken Ecke
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Maximale Anzahl an Widgets"
->abstract="Benutzerdefinierte Dashboards unterstützen bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die Option [!UICONTROL Neues Widget hinzufügen] deaktiviert und ausgegraut."
+>abstract="Der Dashboard-Dienst unterstützt bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die Option [!UICONTROL Neues Widget hinzufügen] deaktiviert und ausgegraut."
 
 Wählen Sie in der neuen Dashboard-Ansicht **[!UICONTROL Neues Widget hinzufügen]** , um den Erstellungsprozess für das Widget zu starten.
 
 >[!IMPORTANT]
 >
->Benutzerdefinierte Dashboards unterstützen bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die Option [!UICONTROL Neues Widget hinzufügen] deaktiviert und ausgegraut.
+>Jedes Dashboard unterstützt bis zu zehn Widgets. Nachdem Sie zehn Widgets zu Ihrem Dashboard hinzugefügt haben, wird die Option [!UICONTROL Neues Widget hinzufügen] deaktiviert und ausgegraut.
 
 ![Das neue leere Dashboard mit hervorgehobenem Add new widget .](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -73,7 +77,7 @@ Die Vorschauliste enthält Details zu den im Datenmodell enthaltenen Tabellen. D
 | Spaltenfeld | Beschreibung |
 |---|---|
 | [!UICONTROL Titel] | Der Name der Tabelle. |
-| [!UICONTROL Tabellentyp] | Der Typ der Tabelle. Mögliche Typen sind: `fact`, `dimension`, und `none`. |
+| [!UICONTROL Tabellenart] | Der Typ der Tabelle. Mögliche Typen sind: `fact`, `dimension`, und `none`. |
 | [!UICONTROL Datensätze] | Die Anzahl der der ausgewählten Tabelle zugeordneten Datensätze. |
 | [!UICONTROL Suchen] | Die Anzahl der Tabellen, die mit der ausgewählten Tabelle verbunden sind. |
 | [!UICONTROL Attribute] | Die Anzahl der Attribute für die ausgewählte Tabelle. |
@@ -150,21 +154,25 @@ Widgets können in diesem Arbeitsbereich neu angeordnet und in der Größe angep
 
 Um sicherzustellen, dass jede Abfrage für ein Adobe Real-time Customer Data Platform Insights-Dashboard über genügend Ressourcen verfügt, um effizient auszuführen, verfolgt die API die Ressourcennutzung, indem sie jeder Abfrage Gleichzeitigkeitsfenster zuweist. Das System kann bis zu vier gleichzeitige Abfragen verarbeiten. Daher stehen vier gleichzeitige Abfrageplätze jederzeit zur Verfügung. Abfragen werden basierend auf gleichzeitigen Slots in eine Warteschlange gestellt und dann in der Warteschlange gewartet, bis genügend gleichzeitige Slots verfügbar sind.
 
-### Widget duplizieren
+### Widget bearbeiten, duplizieren oder löschen {#duplicate}
 
-Nachdem Sie ein Widget erstellt haben, können Sie das gesamte Widget duplizieren und seine Attribute anpassen, um ein eindeutiges Widget zu erstellen, ohne von Grund auf neu beginnen zu müssen. Um ein Widget zu duplizieren, navigieren Sie zunächst zum Dashboard-Inventar. Wählen Sie dann den Dashboard-Namen aus der Inventarliste aus. Ihr angepasstes Dashboard wird angezeigt.
+Nachdem Sie ein Widget erstellt haben, können Sie ganze Widgets bearbeiten, duplizieren oder aus Ihrem benutzerdefinierten Dashboard löschen.
 
-![Die Platform-Benutzeroberfläche mit Dashboards und einem benutzerdefinierten Dashboard-Namen wird hervorgehoben.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>Um zwischen vorhandenen benutzerdefinierten Dashboards zu wechseln, wählen Sie in der linken Navigationsleiste Dashboards aus und wählen Sie dann den Dashboard-Namen aus der Inventarliste aus.
 
 Wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](./images/user-defined-dashboards/edit-icon.png)) oben rechts im Dashboard, um in den Bearbeitungsmodus zu wechseln.
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Stiftsymbol.](./images/user-defined-dashboards/edit-mode.png)
 
-Wählen Sie dann die Auslassungspunkte oben rechts im Widget aus, das Sie kopieren möchten, gefolgt von **[!UICONTROL Duplizieren]** aus der Liste der verfügbaren Optionen.
+Wählen Sie dann die Auslassungszeichen oben rechts im Widget aus, das Sie bearbeiten, kopieren oder löschen möchten. Wählen Sie die entsprechende Aktion aus dem Dropdown-Menü aus.
 
 ![Ein Widget in einem benutzerdefinierten Dashboard mit markierten Ellipsen und dupliziertem Widget.](./images/user-defined-dashboards/duplicate.png)
 
-Ein dupliziertes Widget wird in Ihrem benutzerdefinierten Dashboard angezeigt. Wählen Sie die Auslassungszeichen Ihres neuen Widgets aus, gefolgt von **[!UICONTROL Bearbeiten]**, um Ihr neues Widget anzupassen.
+>[!NOTE]
+>
+>Mit der Duplizierung können Sie die Attribute eines Insight anpassen, um ein eindeutiges Widget zu erstellen, ohne von Grund auf neu beginnen zu müssen. Wenn Sie ein Widget duplizieren, wird es in Ihrem benutzerdefinierten Dashboard angezeigt. Sie können dann die Auslassungspunkte Ihres neuen Widgets auswählen, gefolgt von **[!UICONTROL Bearbeiten]**, um Ihre Einblicke anzupassen.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
@@ -172,6 +180,6 @@ Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie ein benutzerd
 
 So ermitteln Sie die verfügbaren vorkonfigurierten Metriken und Visualisierungen für die [profiles](./guides/profiles.md#standard-widgets), [Segmente](./guides/audiences.md#standard-widgets), und [Ziele](./guides/destinations.md#standard-widgets) -Dashboards finden Sie in der entsprechenden Dokumentation eine Liste der Standard-Widgets.
 
-Sehen Sie sich das folgende Video an, um Ihr Verständnis für benutzerdefinierte Dashboards im Experience Platform zu verbessern:
+Sehen Sie sich das folgende Video an, um Ihr Verständnis von Dashboards im Experience Platform zu verbessern:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

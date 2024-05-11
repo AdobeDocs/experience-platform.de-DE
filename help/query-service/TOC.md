@@ -5,9 +5,9 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '321'
 ht-degree: 82%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 82%
       - [Erstellen von dezimalbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Anpassbare Insights für erweiterte App-Berichte {#customizable-insights}
       - [Übersicht](data-distiller/customizable-insights/overview.md)
+      - [Abfragepro-Modus](data-distiller/customizable-insights/query-pro-mode.md)
       - [Beschleunigte Abfragen senden](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI-/ML-Funktions-Pipelines {#ml-feature-pipelines}
@@ -115,4 +116,4 @@ ht-degree: 82%
 - [Häufig gestellte Fragen](troubleshooting-guide.md)
 - [Zulassungsliste von IP-Adressen](ip-address-allowlist.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

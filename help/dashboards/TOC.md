@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Dashboards
 user-guide-description: Erfahren Sie, wie Sie Daten in Experience Platform über anpassbare Dashboards visualisieren können.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
+source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 70%
+source-wordcount: '132'
+ht-degree: 61%
 
 ---
 
@@ -18,8 +18,19 @@ ht-degree: 70%
 * [Dashboards – Übersicht](home.md)
 * [Dashboard-Zugriffsberechtigungen](permissions.md)
 * [Dashboards-Inventar](inventory.md)
-* [Benutzerdefinierte Dashboards](user-defined-dashboards.md)
+* [Dashboards](user-defined-dashboards.md)
 * [Herunterladen von Dashboards als PDF](download.md)
+* Data Distiller {#data-distiller}
+   * [Übersicht](data-distiller/overview.md)
+   * Anpassbare Insights für erweiterte App-Berichte {#customizable-insights}
+      * [Übersicht](data-distiller/customizable-insights/overview.md)
+      * [Query pro mode (SQL-Diagramm-Erstellung)](data-distiller/customizable-insights/query-pro-mode.md)
+      * Filter {#filters}
+         * [Datumsfilter](data-distiller/customizable-insights/filters/date-filter.md)
+         * [Globaler Filter](data-distiller/customizable-insights/filters/global-filter.md)
+      * [Mehr anzeigen](data-distiller/customizable-insights/view-more.md)
+      * [SQL anzeigen](data-distiller/customizable-insights/view-sql.md)
+      * [Als CSV herunterladen](data-distiller/customizable-insights/download-csv.md)
 * Verfügbare Dashboards {#guides}
    * [Profile](guides/profiles.md)
    * [Kontoprofile](guides/account-profiles.md)

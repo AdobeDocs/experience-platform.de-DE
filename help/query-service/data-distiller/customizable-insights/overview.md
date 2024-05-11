@@ -1,9 +1,10 @@
 ---
 title: Anpassbare Insights
 description: Erfahren Sie mehr über die Anwendungsfälle, wichtigen Funktionen und erforderlichen Schritte zur Entwicklung eines anpassbaren Einblicke-Dashboards mit Data Distiller. Erfahren Sie, wie die anpassbare Insights-Funktion in Data Distiller die Transparenz verbessert und betriebliche Einblicke in verschiedene Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen erhält.
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 5%
 
 ---
@@ -11,6 +12,8 @@ ht-degree: 5%
 # Anpassbare Insights
 
 Erstellen Sie maßgeschneiderte Berichtsdatenmodelle, um tiefere Einblicke zu gewinnen, Strategien zu optimieren und Analysen an bestimmte Geschäftsanforderungen anzupassen. Dazu nutzen Sie die anpassbaren Einblicke von Data Distiller. Verwenden Sie die Funktion &quot;Anpassbare Einblicke&quot;, um die Transparenz zu erhöhen und operative Einblicke aus Ihren Adobe Experience Platform-Daten über Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen hinweg zu gewinnen. Diese Funktion bietet eine vielseitige, adaptive Lösung, um die Berichtsdatenmodelle Ihres Unternehmens an Ihre spezifischen Geschäftsanforderungen anzupassen.
+
+nach [Visualisieren Ihrer anpassbaren Einblicke](../../../dashboards/data-distiller/overview.md) Sie können [Abfragepro-Modus](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) um komplexe Analysen mit benutzerdefinierten SQL-Abfragen durchzuführen und Ihre Daten in leicht verständliche Diagramme umzuwandeln. Verwenden Sie den Abfragepro-Modus, um individuelle Einblicke und Visualisierungen in Ihren Dashboards zu erstellen und sowohl technische als auch nicht technische Zielgruppen zu berücksichtigen, indem Sie Ihre Einblicke als CSV-Dateien herunterladen.
 
 In diesem Dokument werden die Anwendungsfälle, grundlegenden Funktionen und erforderlichen Schritte zum Entwickeln eines anpassbaren Einblicke-Dashboards mit Data Distiller beschrieben.
 
