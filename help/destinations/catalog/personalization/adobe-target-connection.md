@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 41%
+source-wordcount: '1459'
+ht-degree: 37%
 
 ---
 
@@ -139,6 +139,16 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 >Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Lesen [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](../../ui/activate-edge-personalization-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
+
+## Entfernen von Zielgruppen aus einem Target-Ziel {#remove}
+
+Es sind zusätzliche Schritte erforderlich, um eine Zielgruppe aus einer bestehenden Adobe Target-Verbindung zu entfernen, wenn diese Zielgruppe bereits in einer Adobe Target verwendet wird [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Wenn Sie versuchen, eine Zielgruppe aus einer Adobe Target-Verbindung zu entfernen, wird ein Fehler ausgegeben, wenn die Zielgruppe von einer Adobe Target-Aktivität verwendet wird.
+
+![Platform-UI-Bild, das einen Fehler anzeigt, der durch den Versuch verursacht wird, eine Zielgruppe zu entfernen, die von einer Target-Aktivität verwendet wird.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+Um eine Zielgruppe aus einem Target-Ziel zu entfernen, wenn die Zielgruppe in einer Aktivität verwendet wird, müssen Sie zunächst die Zielgruppe entweder aus der Target-Aktivität entfernen, die sie verwendet, oder die Aktivität ganz löschen. Anschließend können Sie die Zielgruppe aus Ihrer Target-Verbindung entfernen.
+
+Wenn die Audience nicht in einer Aktivität verwendet wird, gehen Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** > **[!UICONTROL Zieldatenfluss auswählen]** > **[!UICONTROL Aktivierungsdaten]**, wählen Sie die Zielgruppen aus, die Sie entfernen möchten, und klicken Sie dann auf **[!UICONTROL Entfernen von Zielgruppen]**.
 
 ## Exportierte Daten {#exported-data}
 
