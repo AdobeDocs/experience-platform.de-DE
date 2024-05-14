@@ -6,14 +6,14 @@ type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 17%
+source-wordcount: '1076'
+ht-degree: 16%
 
 ---
 
 # Überwachen von Datenflüssen auf Profile in der Benutzeroberfläche
 
-Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden anzeigen, indem Sie Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Kanälen, kombinieren. Mit dem Profil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
+Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden anzeigen, indem Sie Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Kanälen, kombinieren. Mit dem Echtzeit-Kundenprofil können Sie Ihre Kundendaten in einer zentralen Ansicht zusammenführen, in der jede Kundeninteraktion mit Zeitstempel dargestellt wird.
 
 Das Monitoring-Dashboard bietet eine visuelle Darstellung der Datenaktivität innerhalb des Profils, einschließlich des Status Ihrer Datenprofile. In diesem Tutorial erfahren Sie, wie Sie mithilfe des Monitoring-Dashboards die Profile Ihrer Daten mithilfe der Experience Platform-Benutzeroberfläche überwachen können. So können Sie den Status der Profilverarbeitung verfolgen.
 
@@ -36,7 +36,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
->title="Datenflussausführungs-Details"
+>title="Details zur Datenflussausführung"
 >abstract="Auf der Seite mit den Datenflussausführungs-Details werden weitere Informationen zur Ausführung des Profil-Datenflusses angezeigt, einschließlich der Organisations-ID und der Datenflussausführungs-ID."
 
 So greifen Sie auf die **[!UICONTROL Profile]** Dashboard, auswählen **[!UICONTROL Überwachung]** in der linken Navigation. Einmal im **[!UICONTROL Überwachung]** Seite, wählen Sie die **[!UICONTROL Profile]** Karte.
@@ -55,9 +55,9 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
 | Metrik | Beschreibung |
 | -------| ----------- |
-| **[!UICONTROL Name der Quelle]** | Der Name der Quelle. |
-| **[!UICONTROL Empfangene Einträge]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Fehlgeschlagene Einträge]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
+| **[!UICONTROL Quellname]** | Der Name der Quelle. |
+| **[!UICONTROL Erhaltene Aufzeichnungen]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
+| **[!UICONTROL Fehlgeschlagene Datensätze]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
 | **[!UICONTROL Erstellen von Profilfragmenten]** | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
 | **[!UICONTROL Profilfragmente aktualisiert]** | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert. |
 | **[!UICONTROL Profilfragmente insgesamt]** | Die Gesamtzahl der in [!DNL Profile], einschließlich aller vorhandenen [!DNL Profile] Fragmente aktualisiert und neu [!DNL Profile] erstellte Fragmente. |
@@ -77,9 +77,9 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | -------| ----------- |
 | **[!UICONTROL Datenfluss]** | Der Name des Datenflusses. |
 | **[!UICONTROL Datensatz]** | Der Name des Datensatzes, in den der Datenfluss eingefügt wird. |
-| **[!UICONTROL Name der Quelle]** | Der Name der Quelle, zu der der Datenfluss gehört. |
-| **[!UICONTROL Empfangene Einträge**] | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Fehlgeschlagene Einträge]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
+| **[!UICONTROL Quellname]** | Der Name der Quelle, zu der der Datenfluss gehört. |
+| **[!UICONTROL Erhaltene Datensätze**] | Die Anzahl der vom Data Lake empfangenen Datensätze. |
+| **[!UICONTROL Fehlgeschlagene Datensätze]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
 | **[!UICONTROL Erstellen von Profilfragmenten]** | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
 | **[!UICONTROL Profilfragmente aktualisiert]** | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert |
 | **[!UICONTROL Profilfragmente insgesamt]** | Die Gesamtzahl der in [!DNL Profile], einschließlich aller vorhandenen [!DNL Profile] Fragmente aktualisiert und neu [!DNL Profile] erstellte Fragmente. |
@@ -98,8 +98,8 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 
 | Metrik | Beschreibung |
 | -------| ----------- |
-| **[!UICONTROL Empfangene Einträge]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
-| **[!UICONTROL Fehlgeschlagene Einträge]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
+| **[!UICONTROL Erhaltene Aufzeichnungen]** | Die Anzahl der vom Data Lake empfangenen Datensätze. |
+| **[!UICONTROL Fehlgeschlagene Datensätze]** | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
 | **[!UICONTROL Erstellen von Profilfragmenten]** | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
 | **[!UICONTROL Profilfragmente aktualisiert]** | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert. |
 | **[!UICONTROL Status]** | Definiert den Gesamtstatus eines Datenflusses. Mögliche Statuswerte sind: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |

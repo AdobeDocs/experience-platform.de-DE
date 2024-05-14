@@ -5,7 +5,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -38,7 +38,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
->title="Datenflussausführungs-Details"
+>title="Details zur Datenflussausführung"
 >abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data-Lake-Dienst, einschließlich der aufgenommenen und fehlgeschlagenen Datensätze. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition."
 >text="Learn more in documentation"
 
@@ -105,7 +105,7 @@ Verwenden Sie die Seite mit Details zur Ausführung des Datenflusses , um Metrik
 
 ![Die Seite mit den Ausführungsdetails des Datenflusses.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-| Datenflussausführungs-Details | Beschreibung |
+| Details zur Datenflussausführung | Beschreibung |
 | --- | --- |
 | Aufgenommene Einträge | Die Gesamtzahl der Datensätze, die aus der Ausführung des Datenflusses erfasst wurden. |
 | Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern in der Ausführung des Datenflusses nicht erfasst wurden. |
