@@ -1,9 +1,10 @@
 ---
 title: xdm
-description: Das schemaorientierte Objekt, das an Adobe gesendet wird.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Erfahren Sie, wie Sie Daten über das schemaorientierte XDM-Objekt an Adobe senden.
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ Die `xdm` -Objekt enthält die an Adobe gesendete Daten-Payload. Die in diesem O
 
 Adobe Experience Platform verwendet Schemas, um die Datenstruktur konsistent und wiederverwendbar zu beschreiben. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, die Bedeutung beizubehalten und somit aus Daten Nutzen zu ziehen.
 
-Dieses Feld hat eine maximale Größe von 32 KB.
+Dieses Objekt hat eine maximale Größe von 32 KB.
 
 ## Konfigurieren des XDM-Objekts mithilfe der Web SDK-Erweiterung
 
-Legen Sie die **[!UICONTROL XDM]** in den Aktionen einer Tag-Regel. Die [XDM-Objekt](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) bietet eine intuitive Oberfläche, um andere Datenelemente ihren jeweiligen XDM-Feldern zuzuordnen.
+Legen Sie die **[!UICONTROL XDM]** -Objekt innerhalb der Aktionen einer Tag-Regel. Die [XDM-Objekt](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) bietet eine intuitive Oberfläche, um andere Datenelemente ihren jeweiligen XDM-Feldern zuzuordnen.
 
 1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
@@ -39,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-Im folgenden Beispiel wird die [Feldergruppe &quot;Commerce-Details&quot;](/help/xdm/field-groups/event/commerce-details.md):
+Im folgenden Beispiel wird die [Feldergruppe Commerce-Details](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{

@@ -1,27 +1,29 @@
 ---
 title: data
-description: Erfahren Sie, wie Sie Nicht-XDM-Daten an Adobe senden.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Erfahren Sie, wie Sie Nicht-XDM-Daten über das Datenobjekt an Adobe senden.
+exl-id: 537fc34e-3cda-4aa7-ae0d-0d3ef4b89848
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '372'
+ht-degree: 0%
 
 ---
 
-# data
 
-Die `data` -Eigenschaft können Sie Daten an Adobe senden, die nicht mit einem XDM-Schema übereinstimmen. Dies ist in Nicht-XDM-Szenarien nützlich, z. B. beim Aktualisieren einer [Adobe Target-Profil](/help/web-sdk/personalization/adobe-target/target-overview.md). Wenn Daten bei Adobe eingehen, können Sie mit dem Datastream-Mapping-Tool XDM-Felder jedem Feld im `data` -Eigenschaft.
+# `data`
+
+Die `data` -Objekt können Sie eine Payload an Adobe senden, die nicht mit einem XDM-Schema übereinstimmt. Dies ist in Nicht-XDM-Szenarien nützlich, z. B. beim direkten Senden von Daten an Adobe Analytics, Adobe Target oder Adobe Audience Manager. Wenn Daten in den Datastream eingehen, können Sie [Datenvorbereitung](/help/data-prep/ui/mapping.md) , um jedem Feld im `data` -Objekt.
 
 >[!IMPORTANT]
 >
->Daten innerhalb dieser Eigenschaft müssen mindestens eine der folgenden Aktionen aufweisen:
+>Die Daten in diesem Objekt müssen mindestens eine der folgenden Aktionen aufweisen:
 >
->* Ein Dienst im Datastream muss konfiguriert werden, um Daten aus einer bestimmten Eigenschaft in der `data` Objekt
->* Jede Eigenschaft muss einem XDM-Feld zugeordnet sein.
+>* Ein Dienst im Datastream muss konfiguriert werden, um Daten aus einer bestimmten Eigenschaft in der `data` -Objekt.
+>* Die angegebene Eigenschaft muss mithilfe von data prep einem XDM-Feld zugeordnet werden.
 >
->Wenn ein bestimmtes Feld nicht einem XDM-Feld zugeordnet oder von einem konfigurierten Dienst verwendet wird, gehen diese Daten dauerhaft verloren.
+>Wenn eine bestimmte Eigenschaft keinem XDM-Feld zugeordnet oder von einem konfigurierten Dienst verwendet wird, gehen diese Daten dauerhaft verloren.
 
-## Verwenden der Dateneigenschaft mithilfe der Web SDK-Tag-Erweiterung
+## Verwenden Sie die `data` -Objekt über die Web SDK-Tag-Erweiterung {#tag-extension}
 
 Stellen Sie ein Datenelement im **[!UICONTROL Daten]** in den Aktionen einer Tag-Regel.
 
@@ -34,12 +36,16 @@ Stellen Sie ein Datenelement im **[!UICONTROL Daten]** in den Aktionen einer Tag
 1. Stellen Sie das Datenelement bereit, das das gewünschte Objekt im **[!UICONTROL Daten]** -Feld.
 1. Klicks **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
 
-## Verwenden der Dateneigenschaft mit der JavaScript-Bibliothek des Web SDK
+## Verwenden Sie die `data` -Objekt über die JavaScript-Bibliothek des Web SDK {#library}
 
-Legen Sie die `data` -Eigenschaft als Teil des JSON-Objekts innerhalb des -Parameters der `sendEvent` Befehl. Für Daten, die Sie im Datastream zuordnen möchten, können Sie diese Eigenschaft beliebig strukturieren. Stellen Sie bei Daten, die von bestimmten Diensten verwendet werden, sicher, dass die Objekthierarchie mit den Erwartungen des Dienstes übereinstimmt. Sie können beide `data` und dem [`xdm`](xdm.md) -Objekt im selben `sendEvent` Befehl.
+Legen Sie die `data` -Objekt als Teil des JSON-Objekts innerhalb des -Parameters der `sendEvent` Befehl. Für Daten, die Sie im Datastream zuordnen möchten, können Sie dieses Objekt beliebig strukturieren. Stellen Sie bei Daten, die von bestimmten Diensten verwendet werden, sicher, dass die Objekthierarchie mit den Erwartungen des Dienstes übereinstimmt. Sie können beide `data` und dem [`xdm`](xdm.md) -Objekt im selben `sendEvent` Befehl.
 
 ```javascript
 alloy("sendEvent", {
   "data": dataObject
 });
 ```
+
+## Verwenden Sie die `data` Objekt mit Adobe Analytics {#analytics}
+
+Sie können die `data` -Objekt mit Adobe Analytics verwenden, um Daten an eine Report Suite ohne XDM-Schema zu senden. Variablen sind so konfiguriert, dass sie dieselbe Syntax wie [!DNL AppMeasurement] Variablen, wodurch der Aktualisierungsprozess auf das Web SDK vereinfacht wird. Siehe [Zuordnung von Datenobjektvariablen zu Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) Weitere Informationen finden Sie im Adobe Analytics-Implementierungshandbuch.

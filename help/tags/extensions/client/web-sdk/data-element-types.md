@@ -2,9 +2,9 @@
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '599'
 ht-degree: 6%
 
 ---
@@ -52,11 +52,14 @@ Beachten Sie Folgendes, wenn Sie bestimmte Felder Ihres Schemas öffnen, z. B. `
 
 ## Variable {#variable}
 
-Eine andere Möglichkeit zum Erstellen von XDM-Objekten besteht in der Verwendung der **[!UICONTROL Variable]** Datenelement. Während das XDM-Objektdatenelement erstellt wird, wenn darauf verwiesen wird, z. B. in einem `sendEvent` -Befehl, **[!UICONTROL Variable]** Datenelement kann aktualisiert werden über [!UICONTROL Variable aktualisieren] Aktionen. Um das Datenelement zu verwenden, wählen Sie die richtige Adobe Experience Platform-Sandbox und das richtige Schema aus.
+Sie können Payload-Objekte mithilfe der Variablen **[!UICONTROL Variable]** Datenelement. Beide [!UICONTROL XDM] und [!UICONTROL Daten] -Objekte werden unterstützt.
 
-![Benutzeroberflächenbild mit dem Bildschirm Datenelement erstellen .](assets/variable-data-element.png)
+* Wenn Sie [!UICONTROL XDM], wählen Sie die gewünschte [!UICONTROL Sandbox] und [!UICONTROL Schema].
+* Wenn Sie [!UICONTROL Daten]wählen Sie die gewünschten Lösungen aus. Verfügbare Lösungen umfassen [!UICONTROL Adobe Analytics] und [!UICONTROL Adobe Target].
 
-Nachdem Sie dieses Datenelement erstellt haben, können Sie [Variable aktualisieren](./action-types.md#update-variable) Aktionen zum Ändern des Datenelements. Verwenden Sie dann innerhalb der Sendeereignisaktionen das variable Datenelement für die XDM-Option.
+![Bild der Tags-Benutzeroberfläche mit den Datenelementoptionen.](assets/variable-data-element.png)
+
+Nach Erstellung dieses Datenelements können Sie die [Variable aktualisieren](./action-types.md#update-variable) -Aktion, um sie zu ändern. Wenn Sie bereit sind, können Sie dieses Datenelement in die [Ereignis senden](./action-types.md#send-event) Aktion zum Senden von Daten an einen Datastream.
 
 ## Nächste Schritte {#next-steps}
 
