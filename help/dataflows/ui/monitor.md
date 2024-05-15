@@ -1,7 +1,8 @@
 ---
 title: Übersicht über das Monitoring-Dashboard
 description: Erfahren Sie, wie Sie das Monitoring-Dashboard in der Benutzeroberfläche von Adobe Experience Platform verwenden.
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 4%
@@ -100,7 +101,7 @@ Auswählen **[!UICONTROL Profile]** , um die Erfolgsrate der Verarbeitung Ihrer 
 
 >[!TAB Zielgruppen]
 
-Auswählen **[!UICONTROL Zielgruppen]** , um Metriken zu Ihren Zielgruppen und Segmentierungsaufträgen anzuzeigen. Lesen Sie das Handbuch unter [Überwachen von Zielgruppendaten](monitor-segments.md) für weitere Informationen.
+Auswählen **[!UICONTROL Zielgruppen]** , um Metriken zu Ihren Zielgruppen und Segmentierungsaufträgen anzuzeigen. Lesen Sie das Handbuch unter [Überwachen von Zielgruppendaten](monitor-audiences.md) für weitere Informationen.
 
 ![Das Monitoring-Dashboard in der Benutzeroberfläche mit ausgewählter Zielgruppenkarte.](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ Durch Lesen dieses Dokuments können Sie jetzt in der Benutzeroberfläche durch 
 * [Überwachen von Quelldaten](monitor-sources.md).
 * [Identitätsdaten überwachen](monitor-identities.md).
 * [Profildaten überwachen](monitor-profiles.md).
-* [Überwachen von Zielgruppendaten](monitor-segments.md).
+* [Überwachen von Zielgruppendaten](monitor-audiences.md).
 * [Zieldaten überwachen](monitor-destinations.md).

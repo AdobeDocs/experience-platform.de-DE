@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise April 2022
 description: Versionshinweise April 2022 für Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2670'
 ht-degree: 100%
 
 ---
@@ -69,7 +69,7 @@ Datenflüsse sind eine Darstellung von Aufträgen, die Daten innerhalb von Platf
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Segment-Dashboard | Sie können jetzt das Monitoring-Dashboard verwenden, um Datenflüsse für Segmente zu überwachen. Weitere Informationen finden Sie in der Anleitung zur [Überwachung von Segmenten in der Benutzeroberfläche](../../dataflows/ui/monitor-segments.md) |
+| Segment-Dashboard | Sie können jetzt das Monitoring-Dashboard verwenden, um Datenflüsse für Segmente zu überwachen. Weitere Informationen finden Sie in der Anleitung zur [Überwachung von Segmenten in der Benutzeroberfläche](../../dataflows/ui/monitor-audiences.md) |
 
 Weitere allgemeine Informationen zu Datenflüssen finden Sie in der [Übersicht zu Datenflüssen](../../dataflows/home.md). Weitere Informationen zur Segmentierung finden Sie unter [Segmentierung – Übersicht](../../segmentation/home.md).
 
@@ -118,13 +118,13 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
-XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Hinzufügen oder Entfernen einzelner Standardfelder für ein Schema | Mit der Benutzeroberfläche des Schema-Editors können Sie nun Teile von Standardfeldergruppen zu Ihren Schemas hinzufügen und haben so mehr Flexibilität bei der Auswahl der Felder, die Sie einbeziehen möchten, ohne dass Sie benutzerdefinierte Ressourcen von Grund auf neu erstellen müssen.<br><br>Sie können jetzt auch benutzerdefinierte Ad-hoc-Felder direkt in der Schemastruktur definieren und sie einer neuen oder vorhandenen benutzerdefinierten Feldergruppe zuweisen, ohne die Feldergruppe zuvor erstellen oder bearbeiten zu müssen.<br><br>Weitere Informationen zu diesen neuen Workflows finden Sie in der Anleitung zum [Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche](../../xdm/ui/resources/schemas.md). |
+| Hinzufügen oder Entfernen einzelner Standardfelder für ein Schema | Mit der Benutzeroberfläche des Schema-Editors können Sie nun Teile von Standardfeldergruppen zu Ihren Schemata hinzufügen und haben so mehr Flexibilität bei der Auswahl der Felder, die Sie einbeziehen möchten, ohne dass Sie benutzerdefinierte Ressourcen von Grund auf neu erstellen müssen.<br><br>Sie können jetzt auch benutzerdefinierte Ad-hoc-Felder direkt in der Schemastruktur definieren und sie einer neuen oder vorhandenen benutzerdefinierten Feldergruppe zuweisen, ohne die Feldergruppe zuvor erstellen oder bearbeiten zu müssen.<br><br>Weitere Informationen zu diesen neuen Workflows finden Sie in der Anleitung zum [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../xdm/ui/resources/schemas.md). |
 
 {style="table-layout:auto"}
 
@@ -183,7 +183,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Attributions-KI unterstützt die folgenden Schemas: Adobe Analytics, Experience Event, Consumer Experience Event. Weitere Informationen zur Unterstützung für mehrere Datensätze in Attributions-KI finden Sie im [Benutzerhandbuch für Attributions-KI](../../intelligent-services/attribution-ai/user-guide.md). |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Attributions-KI unterstützt die folgenden Schemata: Adobe Analytics, Experience Event, Consumer Experience Event. Weitere Informationen zur Unterstützung für mehrere Datensätze in Attributions-KI finden Sie im [Benutzerhandbuch für Attributions-KI](../../intelligent-services/attribution-ai/user-guide.md). |
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
 
