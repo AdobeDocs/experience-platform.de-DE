@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verbinden von Power BI mit dem Abfrage-Service
 description: In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Abfrage-Service von Adobe Experience Platform beschrieben.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 100%
+source-wordcount: '1073'
+ht-degree: 96%
 
 ---
 
@@ -42,6 +42,10 @@ Um [!DNL Power BI] mit dem Abfrage-Service zu verbinden, öffnen Sie [!DNL Power
 Das [!DNL PostgreSQL]-Datenbankdialogfeld wird angezeigt, über das Werte für Ihren Server und Ihre Datenbank angefordert werden. Zusätzliche Anweisungen zum [Verbinden mit einer PostgreSQL-Datenbank über Power Query Desktop](https://learn.microsoft.com/de-de/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) finden Sie in der offiziellen [!DNL PowerBI]-Dokumentation.
 
 Diese erforderlichen Werte werden aus Ihren Adobe Experience Platform-Anmeldeinformationen übernommen. Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Abfragen]** und dann **[!UICONTROL Anmeldeinformationen]** aus. Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, stehen im [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
+
+>[!IMPORTANT]
+>
+>Als Power BI- oder Tableau-Benutzer können Sie über die Registerkarte Query Service-Anmeldedaten eine Verbindung zu Ihren BI-Tools herstellen. Anweisungen dazu finden Sie in der Dokumentation zu Anmeldeinformationen . [BI-Tools mit Customer Journey Analytics verbinden](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![Der Experience Platform-Arbeitsbereich „Abfragen“, auf dem die Registerkarte „Anmeldeinformationen“ und Anmeldeinformationen mit ihrem Ablaufdatum hervorgehoben sind.](../images/clients/power-bi/query-service-credentials-page.png)
 
@@ -93,7 +97,7 @@ Die Visualisierungen können jetzt über die [!DNL Power BI] Desktop-App bearbei
 
 ## Abfragen von Datensätzen ohne Datenimport {#direct-query}
 
-Der **[!DNL DirectQuery]** [!DNL Data Connectivity mode] fragt die Datenquelle direkt ab, ohne Daten nach [!DNL Power BI] Desktop zu importieren oder zu kopieren. Mit diesem Verbindungsmodus können Sie alle Visualisierungen mit aktuellen Daten über die Benutzeroberfläche aktualisieren. Die zum Erstellen oder Aktualisieren der Visualisierung erforderliche Zeit hängt jedoch von der Leistung der zugrunde liegenden Datenquelle ab.
+Der **[!DNL DirectQuery]** [!DNL Data Connectivity mode] fragt die Datenquelle direkt ab, ohne Daten nach [!DNL Power BI] Desktop zu importieren oder zu kopieren. Mit diesem Verbindungsmodus können Sie alle Visualisierungen mit aktuellen Daten über die Benutzeroberfläche aktualisieren. Die zum Erstellen oder Aktualisieren der Visualisierung erforderliche Zeit hängt jedoch von der Performance der zugrunde liegenden Datenquelle ab.
 
 Weitere Informationen über [die Verwendung von [!DNL DirectQuery]](https://learn.microsoft.com/de-de/power-bi/connect-data/desktop-use-directquery) sowie eine umfassende Erörterung der zugehörigen [Konnektivitätsoptionen, Anwendungsfälle und Einschränkungen](https://learn.microsoft.com/de-de/power-bi/connect-data/desktop-directquery-about) finden Sie in der offiziellen [!DNL PowerBI]-Dokumentation.
 

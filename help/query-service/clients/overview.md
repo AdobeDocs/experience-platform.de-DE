@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Clients mit Query Service verbinden
 description: In diesem Dokument wird beschrieben, wie Sie über verschiedene Desktop-Client-Anwendungen eine Verbindung zu Query Service herstellen und diese Verbindungen überprüfen können.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 778c65c6310ed4a627be0fd3ae076784cfc8495b
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '269'
 ht-degree: 3%
 
 ---
@@ -29,3 +29,7 @@ Anweisungen werden für folgende Clients bereitgestellt:
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
+
+>[!IMPORTANT]
+>
+>Als Power BI- und Tableau-Benutzer können Sie über die Registerkarte Query Service-Anmeldedaten eine Verbindung zu Ihren BI-Tools herstellen. Anweisungen dazu finden Sie in der Dokumentation zu Anmeldeinformationen . [BI-Tools mit Customer Journey Analytics verbinden](../ui/credentials.md#connect-to-customer-journey-analytics).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Anleitung zu Query Service-Anmeldedaten
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
+source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1807'
 ht-degree: 3%
 
 ---
@@ -47,6 +47,28 @@ Die **[!UICONTROL Ablaufberechtigungen]** enthält die folgenden Informationen:
 >![Registerkarte &quot;Einstellungen für Admin Console&quot;mit den Einstellungen für Datenschutz und Sicherheit, Authentifizierungseinstellungen und Max. Sitzungsdauer hervorgehoben.](../images/ui/credentials/max-session-life.png)
 >
 >Weitere Informationen zu finden Sie in der Adobe-Hilfedokumentation [Erweiterte Einstellungen](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) von Admin Console angeboten.
+
+### Verbindung zu Customer Journey Analytics-Daten in Abfragesitzungen herstellen {#connect-to-customer-journey-analytics}
+
+Verwenden Sie die Customer Journey Analytics BI-Erweiterung mit Power BI oder Tableau, um auf Ihre Customer Journey Analytics zuzugreifen [Datenansichten](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) mit SQL. Durch die Integration von Query Service mit der BI-Erweiterung können Sie direkt in Query Service-Sitzungen auf Ihre Datenansichten zugreifen. Diese Integration optimiert die Funktionalität für BI-Tools, die Query Service als PostgreSQL-Schnittstelle verwenden. Dadurch entfällt die Notwendigkeit, Datenansichten in BI-Tools zu duplizieren, sorgt für eine plattformübergreifende konsistente Berichterstellung und vereinfacht die Integration von Customer Journey Analytics-Daten mit anderen Quellen in BI-Plattformen.
+
+Weitere Informationen finden Sie in der Dokumentation . [Query Service mit einer Vielzahl von Desktop-Client-Anwendungen verbinden](../clients/overview.md) wie [Power BI](../clients/power-bi.md) oder [Tableau](../clients/tableau.md)
+
+>[!IMPORTANT]
+>
+>Für die Verwendung dieser Funktion sind ein Customer Journey Analytics Workspace-Projekt und eine Datenansicht erforderlich.
+
+Um auf Ihre Customer Journey Analytics-Daten in Power BI oder Tableau zuzugreifen, wählen Sie die [!UICONTROL Datenbank] Dropdown-Menü aus und wählen Sie `prod:cja` aus den verfügbaren Optionen. Kopieren Sie als Nächstes Ihre [!DNL Postgres] Berechtigungsparameter (Host, Port, Datenbank, Benutzername und andere) zur Verwendung in Ihrer Power BI- oder Tableau-Konfiguration.
+
+![Die Registerkarte &quot;Anmeldeinformationen von Query Service&quot;mit dem Dropdown-Menü &quot;Datenbank&quot;.](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>Wenn Sie Power BI oder Tableau mit Customer Journey Analytics verbinden, wird die Berechtigung &quot;Gleichzeitige Sitzungen&quot;des Abfragedienstes genutzt. Wenn zusätzliche Sitzungen und Abfragen erforderlich sind, kann ein zusätzliches Ad-hoc-Abfragebenutzer-Pack-Add-on erworben werden, um fünf weitere gleichzeitige Sitzungen und eine zusätzliche gleichzeitige Abfrage zu erhalten.
+
+Sie können auch direkt über den Abfrage-Editor oder die Postgres-CLI auf Ihre Customer Journey Analytics-Daten zugreifen. Referenzieren Sie dazu die `cja` Datenbank beim Schreiben Ihrer Abfrage. Siehe Abfrage-Editor . [Handbuch zur Abfragebearbeitung](./user-guide.md#query-authoring) für weitere Informationen zum Schreiben, Ausführen und Speichern von Abfragen.
+
+Siehe [Handbuch zur BI-Erweiterung](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) für vollständige Anweisungen zum Zugriff auf Ihre Customer Journey Analytics-Datenansichten mit SQL.
 
 ## Nicht ablaufende Anmeldeinformationen {#non-expiring-credentials}
 
