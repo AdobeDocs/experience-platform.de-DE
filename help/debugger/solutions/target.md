@@ -2,10 +2,10 @@
 title: Testen einer Adobe Target-Implementierung mit Adobe Experience Platform Debugger
 description: Erfahren Sie, wie Sie mit Adobe Experience Platform Debugger eine Website testen und debuggen können, die für Adobe Target aktiviert ist.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 98%
+source-wordcount: '1035'
+ht-degree: 99%
 
 ---
 
@@ -109,7 +109,7 @@ Wählen Sie **[!DNL Configuration]** aus, um eine Auswahl zusätzlicher Debuggin
 | Debugging-Tool | Beschreibung |
 | --- | --- |
 | [!DNL Target Console Logging] | Wenn diese Option aktiviert ist, können Sie auf der Registerkarte „Konsole“ des Browsers auf die at.js-Protokolle zugreifen. Diese Funktion kann auch durch Hinzufügen eines `mboxDebug`-Abfrageparameters (mit beliebigem Wert) zur Browser-URL aktiviert werden. |
-| [!DNL Target Diable] | Wenn diese Option aktiviert ist, sind alle Target-Funktionen auf der Seite deaktiviert. Auf diese Weise können Sie bestimmen, ob ein Target-spezifisches Angebot das Problem auf der Seite verursacht. |
+| [!DNL Target Disable] | Wenn diese Option aktiviert ist, sind alle Target-Funktionen auf der Seite deaktiviert. Auf diese Weise können Sie bestimmen, ob ein Target-spezifisches Angebot das Problem auf der Seite verursacht. |
 | [!DNL Target Trace] | **Hinweis**: Sie müssen angemeldet sein, um diese Funktion zu aktivieren.<br><br>Wenn diese Option aktiviert ist, werden mit jeder Anfrage Tracking-Token gesendet und in jeder Antwort wird ein Trace-Objekt zurückgegeben. `at.js` analysiert die Antwort `window.__targetTraces`. Jedes Trace-Objekt enthält dieselben Informationen wie die [Registerkarte [!DNL Network Requests]] mit den folgenden Ergänzungen:<ul><li>Eine Momentaufnahme des Profils, in der Attribute vor und nach Anfragen angezeigt werden.</li><li>Übereinstimmende und nicht übereinstimmende [Aktivitäten](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=de), die zeigen, warum das aktuelle Profil für bestimmte Aktivitäten qualifiziert war oder nicht.<ul><li>Auf diese Weise lässt sich feststellen, für welche Zielgruppen sich ein Profil zu einem bestimmten Zeitpunkt qualifiziert und warum.</li><li>Zieldokumente enthalten mehr Informationen zu verschiedenen Aktivitätstypen</li></ul></li></ul> |
 
 {style="table-layout:auto"}
