@@ -5,10 +5,10 @@ description: Durch die Verwendung von Kontoprofilen ermöglicht Ihnen Adobe Real
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 57%
+source-wordcount: '1664'
+ht-degree: 56%
 
 ---
 
@@ -28,7 +28,7 @@ Auswählen **[!UICONTROL Profile]** under [!UICONTROL Konten] im linken Navigati
 
 ![Registerkarte &quot;Übersicht&quot;mit Widgets](images/b2b-account-profile-overview.png)
 
-Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontoprofile]](../../dashboards/guides/account-profiles.md) Dashboard , um mehr zu erfahren.
+Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontoprofile]](../../dashboards/guides/account-profiles.md) Dashboard , um mehr zu erfahren. Siehe die Dokumentation unter [Real-time Customer Data Platform Insights-Datenmodell B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) Weitere Informationen dazu, wie Sie mit Ihren Insight-Datenmodellen benutzerdefinierte Diagramme für Ihre Dashboards erstellen können.
 
 ## Konfigurieren des Leads zur Kontozuordnung {#configure-lead-to-account-matching}
 
@@ -108,7 +108,7 @@ Die Standardfelder können auch auf Organisationsebene geändert werden, um die 
 >
 >Ähnliche Funktionen sind für Kundenprofile verfügbar und es gibt eine schrittweise Anleitung zum Hinzufügen und Entfernen von Attributen, zum Ändern der Größe von Panels usw. Weitere Informationen finden Sie im [Handbuch zur Anpassung von Profildetails](../../profile/ui/profile-customization.md).
 
-![Anzeigen von Details zum Account-Profil](images/b2b-account-details.png)
+![Kontoprofildetails anzeigen](images/b2b-account-details.png)
 
 Sie können zusätzliche Details zum Konto anzeigen, indem Sie eine andere der verfügbaren Registerkarten auswählen. Diese Registerkarten umfassen Attribute, Personen und die Registerkarte „Opportunitys“, auf der die offenen und geschlossenen Chancen für das Konto in Ihren Unternehmenssystemen angezeigt werden. Weitere Informationen zu den einzelnen Registerkarten finden Sie in den folgenden Abschnitten.
 
@@ -118,7 +118,7 @@ Auf der Registerkarte **[!UICONTROL Attribute]** werden alle Datensatzinformatio
 
 Sie können die Daten nicht nur in einer Liste anzeigen, sondern auch in der Suchleiste nach bestimmten Attributen suchen oder die Datensatzdaten als JSON anzeigen.
 
-![Registerkarte „Attribute“](images/b2b-account-attributes.png)
+![Registerkarte &quot;Attribute&quot;](images/b2b-account-attributes.png)
 
 ## Registerkarte „Personen“ {#people-tab}
 
@@ -130,7 +130,7 @@ Die Registerkarte **[!UICONTROL Personen]** enthält eine Liste der einzelnen Pe
 
 Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profil-ID]**: ein anklickbarer Link, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Kundenprofile in Bezug auf Ihre Konten finden Sie im Handbuch für [Durchsuchen von Profilen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
 
-![Registerkarte „Personen“](images/b2b-account-people.png)
+![Personenregisterkarte](images/b2b-account-people.png)
 
 ## Registerkarte „Opportunitys“ {#opportunities-tab}
 
