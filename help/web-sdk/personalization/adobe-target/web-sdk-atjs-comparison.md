@@ -3,9 +3,9 @@ title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2175'
 ht-degree: 6%
 
 ---
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [Weitere Informationen](../rendering-personalization-content.md#manually-rendering-content)
 
+**Beispiel 3: Verfolgen eines Ereignisses, das nach der Ausführung einer Aktion ausgelöst wurde**
+
+In diesem Beispiel wird ein Ereignis verfolgt, das nach Ausführung einer bestimmten Aktion ausgelöst wurde, z. B. durch Klicken auf eine Schaltfläche.
+Sie können alle zusätzlichen benutzerdefinierten Parameter über die `__adobe.target` Datenobjekt.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## Trigger einer Ansichtsänderung in einer Einzelseiten-App
 
 ### Verwenden von at.js
@@ -893,7 +914,7 @@ Die serverseitige Protokollierung in Analytics ist aktiviert, wenn Analytics fü
 
 ![Benutzeroberfläche von Datastreams mit den Analytics-Einstellungen.](assets/analytics-enabled-datastream-config.png)
 
-Wenn die serverseitige Analytics-Protokollierung aktiviert ist, muss die A4T-Payload für Analytics freigegeben werden, damit die Analytics-Berichterstellung zeigt, dass korrekte Impressionen und Konversionen auf Edge Network-Ebene freigegeben werden, sodass der Kunde keine zusätzliche Verarbeitung durchführen muss.
+Wenn die serverseitige Analytics-Protokollierung aktiviert ist, muss die A4T-Payload für Analytics freigegeben werden, damit die Analytics-Berichte korrekte Impressionen und Konversionen zeigen und auf der Edge Network-Ebene freigegeben werden, sodass der Kunde keine zusätzliche Verarbeitung durchführen muss.
 
 So fließen Daten in unsere Systeme, wenn die serverseitige Analytics-Protokollierung aktiviert ist:
 
