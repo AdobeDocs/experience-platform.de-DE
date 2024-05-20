@@ -3,7 +3,7 @@ title: einmaligen Kundenwert auf Lebenszeitwert erhöhen
 description: Erfahren Sie, wie Sie personalisierte Kampagnen erstellen, um basierend auf den Attributen, dem Verhalten und früheren Käufen eines bestimmten Kunden die besten ergänzenden Produkte oder Dienste anzubieten.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Betrachten Sie diese Kunden, die Ihre Eigenschaften besuchen und sporadisch die 
 * Erstellen von Zielgruppen
 * Erstellen Sie Journey, um diese Zielgruppen in Adobe Journey Optimizer anzusprechen und in Real-Time CDP zu aktivieren.
 
-![Schritt für Schritt Einmalige Wertentwicklung für Lebenszeitwert - Überblick auf hoher Ebene.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
+![Schritt für Schritt Einmalige Wertentwicklung für Lebenszeitwert - Überblick auf hoher Ebene.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## Voraussetzungen und Planung {#prerequisites-and-planning}
 
@@ -54,7 +54,7 @@ Dazu besteht die erforderliche Technologie aus den beiden Experience Platform-Ap
 
 Nachstehend finden Sie eine allgemeine Architekturansicht der verschiedenen Komponenten von Real-Time CDP und Journey Optimizer. Dieses Diagramm zeigt, wie Daten durch die beiden Experience Platform-Apps von der Datenerfassung bis zu dem Punkt fließen, an dem sie durch Journey oder Kampagnen aktiviert werden, zu Zielen, um den auf dieser Seite beschriebenen Anwendungsfall zu erreichen.
 
-![Überblick über die Architektur auf hoher Ebene.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
+![Überblick über die Architektur auf hoher Ebene.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## Erreichen des Anwendungsfalls: Allgemeine Übersicht {#achieve-the-use-case-high-level}
 
@@ -70,7 +70,7 @@ Sie beginnen damit, Ihrer Audience von Kunden mit hohem und niedrigem Wert eine 
 
 >[!BEGINSHADEBOX]
 
-![Schritt für Schritt Einmalige Wertentwicklung für Lebenszeitwert - Überblick auf hoher Ebene.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
+![Schritt für Schritt Einmalige Wertentwicklung für Lebenszeitwert - Überblick auf hoher Ebene.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. Sie erstellen Schemata und Datensätze und markieren diese dann für [!UICONTROL Profil].
 2. Daten werden über das Web SDK, das Mobile Edge SDK oder die API erfasst und in Experience Platform integriert. Analytics Data Connector kann ebenfalls verwendet werden, kann jedoch zu einer Journey-Latenz führen.
@@ -304,7 +304,7 @@ Für diesen Anwendungsfall müssen Sie zwei Zielgruppen erstellen, um bestimmte 
 
 Insbesondere müssen Sie zwei Zielgruppen in verschiedenen Schritten des Anwendungsbeispiels erstellen und verwenden, wie in der Abbildung unten dargestellt.
 
-![Zielgruppen hervorgehoben.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Zielgruppen hervorgehoben.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -351,7 +351,7 @@ Um dieses Anwendungsbeispiel zu erstellen, müssen Sie zwei separate Journey ers
 * Die Journey zur Lebensdauer, die die Nachricht enthält, die Sie an Ihre Kunden mit hoher und niedriger Häufigkeit senden
 * Die Journey zur Bestellbestätigung für die Benutzer, die auf Ihren Anruf antworten und ein Abonnement erwerben.
 
-![Journey hervorgehoben.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Journey hervorgehoben.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 Im Folgenden finden Sie die genauen Daten, die für jede Journey-Verzweigung benötigt werden.
 
@@ -361,7 +361,7 @@ Im Folgenden finden Sie die genauen Daten, die für jede Journey-Verzweigung ben
 
 Die Journey zur Lebensdauer richtet sich an die Zielgruppe von Kunden mit hoher und niedriger Häufigkeit, die in den letzten 30 Tagen nicht angesprochen wurden. Diesen Kunden wird eine Nachricht angezeigt. Wenn sie nach 7 Tagen immer noch nicht kaufen, können Sie die Nicht-Käufer in eine Zielgruppe aufnehmen, der Sie Paid-Media-Anzeigen zeigen können. Wenn der Käufer einen Kauf tätigt, können Sie die Käufer auf eine Journey zur Bestellbestätigung setzen, die im separaten Tab beschrieben wird.
 
-![Journey - Überblick über die Lebensdauer](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Einmaliger Wert für das Journey auf Lebensdauer - Überblick auf hoher Ebene."){width="600" zoomable="yes"}
+![Journey - Überblick über die Lebensdauer](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Einmaliger Wert für das Journey auf Lebensdauer - Überblick auf hoher Ebene."){zoomable="yes"}
 
 +++Detaillierte Journey-Logik
 
@@ -383,7 +383,7 @@ Die oben dargestellte Journey folgt der folgenden Logik.
 
 Die Journey zur Bestellbestätigung konzentriert sich darauf, ob ein Kauf über die Website oder mobile App getätigt wurde. Nachdem ein Kunde beispielsweise den Kauf eines Abonnements bei Ihrem Unternehmen erfolgreich abgeschlossen hat, können Sie ihn auf einer Journey zur Bestellbestätigung festlegen.
 
-![Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht."){width="600" zoomable="yes"}
+![Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Kundenauftragsbestätigung Journey - Allgemeine visuelle Übersicht."){zoomable="yes"}
 
 ++ + Journey-Logik
 
