@@ -2,10 +2,10 @@
 title: Salesforce-Konto über die Experience Platform-Benutzeroberfläche verbinden
 description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche an die Experience Platform übertragen können.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
+source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 23%
+source-wordcount: '737'
+ht-degree: 18%
 
 ---
 
@@ -26,17 +26,38 @@ Wenn Sie bereits über eine authentifizierte [!DNL Salesforce] -Konto verwenden,
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
 
-Um Ihre [!DNL Salesforce] -Konto gegen Experience Platform verwenden, müssen Sie Werte angeben, die dem Folgenden entsprechen [!DNL Salesforce] Anmeldeinformationen:
+Die [!DNL Salesforce] -Quelle unterstützt grundlegende Authentifizierung und OAuth2 Client Credential.
+
+>[!BEGINTABS]
+
+>[!TAB Standardauthentifizierung]
+
+Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihre [!DNL Salesforce] Konto mit einfacher Authentifizierung.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `environmentUrl` | Die URL der [!DNL Salesforce] Quellinstanz. |
-| `username` | Der Benutzername für die [!DNL Salesforce] Benutzerkonto. |
-| `password` | Das Kennwort für die [!DNL Salesforce] Benutzerkonto. |
-| `securityToken` | Das Sicherheits-Token für [!DNL Salesforce] Benutzerkonto. |
-| `apiVersion` | (Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version verwenden `52`eingeben, müssen Sie den Wert als `52.0` Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
+| Umgebungs-URL | Die URL der [!DNL Salesforce] Quellinstanz. |
+| Benutzername | Der Benutzername für die [!DNL Salesforce] Benutzerkonto. |
+| Kennwort | Das Kennwort für die [!DNL Salesforce] Benutzerkonto. |
+| Sicherheits-Token | Das Sicherheits-Token für [!DNL Salesforce] Benutzerkonto. |
+| API-Version | (Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version verwenden `52`eingeben, müssen Sie den Wert als `52.0` Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
 
 Weitere Informationen zur Authentifizierung finden Sie unter [this [!DNL Salesforce] Authentifizierungshandbuch](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB OAuth2 Client Credential]
+
+Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihre [!DNL Salesforce] -Konto mit OAuth2-Client-Anmeldedaten verwenden.
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
+| Umgebungs-URL | Die URL der [!DNL Salesforce] Quellinstanz. |
+| Client-ID | Die Client-ID wird zusammen mit dem Client-Geheimnis als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglicht die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung identifizieren auf [!DNL Salesforce]. |
+| Client-Geheimnis | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglicht die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung identifizieren auf [!DNL Salesforce]. |
+| API-Version | (Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version verwenden `52`eingeben, müssen Sie den Wert als `52.0` Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
+
+Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce], lesen Sie die [[!DNL Salesforce] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folgenden Schritte ausführen, um Ihre [!DNL Salesforce] -Konto auf Experience Platform.
 

@@ -2,10 +2,10 @@
 title: Erstellen einer Marketo Engage-Quellverbindung und eines Datenflusses in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Marketo Engage-Quellverbindung und einen Datenfluss erstellen, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
 workflow-type: tm+mt
-source-wordcount: '1675'
-ht-degree: 76%
+source-wordcount: '1831'
+ht-degree: 46%
 
 ---
 
@@ -31,10 +31,10 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um auf Ihr [!DNL Marketo]-Konto in Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
+Um auf Ihre [!DNL Marketo] -Konto auf Experience Platform angegeben haben, müssen Sie die folgenden Werte angeben:
 
 | Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
+| ---- | ---- |
 | `munchkinId` | Die Munchkin-ID ist die eindeutige Kennung für eine bestimmte [!DNL Marketo]-Instanz. |
 | `clientId` | Die eindeutige Client-ID Ihrer [!DNL Marketo]-Instanz. |
 | `clientSecret` | Das eindeutige Client-Geheimnis Ihrer [!DNL Marketo]-Instanz. |
@@ -45,27 +45,37 @@ Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie
 
 ## Verbinden Ihres [!DNL Marketo]-Kontos
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
+Unter dem *Adobe-Anwendungen* category, select **[!UICONTROL Marketo Engage]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
-Wählen Sie unter der Kategorie [!UICONTROL Adobe-Programme] die Option **[!UICONTROL Marketo Engage]**. Wählen Sie dann **[!UICONTROL Daten hinzufügen]**, um einen neuen [!DNL Marketo]-Datenfluss zu erstellen.
+>[!TIP]
+>
+>Quellen im Quellkatalog zeigen die **[!UICONTROL Einrichten]** -Option, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto existiert, wird diese Option in **[!UICONTROL Daten hinzufügen]**.
 
-![Katalog](../../../../images/tutorials/create/marketo/catalog.png)
+![Der Quellkatalog mit der ausgewählten Marketo Engage-Quelle.](../../../../images/tutorials/create/marketo/catalog.png)
 
 Die Seite **[!UICONTROL Marketo Engage-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder ein neues Konto verwenden oder auf ein vorhandenes Konto zugreifen.
 
-### Vorhandenes Konto
+>[!BEGINTABS]
 
-Um einen Datenfluss mit einem bestehenden Konto zu erstellen, klicken Sie auf **[!UICONTROL Bestehendes Konto]** und wählen Sie dann das [!DNL Marketo]-Konto aus, das Sie verwenden möchten. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+>[!TAB Neues Konto erstellen]
 
-![vorhanden](../../../../images/tutorials/create/marketo/existing.png)
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie einen Namen, eine optionale Beschreibung und Ihre Anmeldeinformationen ein.
 
-### Neues Konto
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Eingabeformular einen Kontonamen, eine optionale Beschreibung und Ihre [!DNL Marketo]-Authentifizierungsdaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+![Die neue Kontoschnittstelle für die Authentifizierung eines neuen Marketo-Kontos.](../../../../images/tutorials/create/marketo/new.png)
 
-![neu](../../../../images/tutorials/create/marketo/new.png)
+>[!TAB Vorhandenes Konto verwenden]
+
+Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie dann das Konto aus, das Sie verwenden möchten, aus dem vorhandenen Kontokatalog.
+
+Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+
+![Die vorhandene Kontoschnittstelle, in der Sie ein vorhandenes Marketo-Konto auswählen können.](../../../../images/tutorials/create/marketo/existing.png)
+
+>[!ENDTABS]
 
 ## Auswählen eines Datensatzes
 
@@ -77,59 +87,65 @@ Die linke Hälfte der Schnittstelle ist ein Verzeichnis-Browser, der die zehn [!
 >
 >Der Kürze halber wird im folgenden Tutorial [!UICONTROL Opportunities] als Beispiel verwendet, aber die unten beschriebenen Schritte gelten für jeden der zehn [!DNL Marketo]-Datensätze.
 
-Wählen Sie den Datensatz aus, den Sie als Erstes aufnehmen möchten, und wählen Sie dann **[!UICONTROL Weiter]**.
+Wählen Sie den Datensatz aus, den Sie erfassen möchten. Dadurch wird die Benutzeroberfläche aktualisiert, um eine Vorschau Ihres Datensatzes anzuzeigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
-![select-data](../../../../images/tutorials/create/marketo/select-data.png)
+![Vorschau-Benutzeroberfläche](../../../../images/tutorials/create/marketo/preview.png)
 
-## Angeben von Datenflussdetails {#provide-dataflow-details}
+## Bereitstellen von Datensatz- und Datenflussdetails {#provide-dataset-and-dataflow-details}
 
-Auf der Seite [!UICONTROL Datenflussdetails] können Sie auswählen, ob Sie einen vorhandenen Datensatz oder einen neuen Datensatz verwenden möchten. Während dieses Vorgangs können Sie auch Einstellungen für [!UICONTROL Profildatensatz], [!UICONTROL Fehlerdiagnose], [!UICONTROL Partielle Aufnahme] und [!UICONTROL Warnhinweise] vornehmen.
+Als Nächstes müssen Sie Informationen zu Ihrem Datensatz und Ihrem Datenfluss angeben.
 
-![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
+### Datensatzdetails {#dataset-details}
+
+Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Daten, die erfolgreich in Experience Platform aufgenommen wurden, werden im Data Lake als Datensätze gespeichert. In diesem Schritt können Sie einen neuen Datensatz erstellen oder einen vorhandenen Datensatz verwenden.
 
 >[!BEGINTABS]
 
->[!TAB Verwenden eines vorhandenen Datensatzes]
-
-Um Daten in einen vorhandenen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen. Nachdem Sie einen Datensatz ausgewählt haben, geben Sie einen Namen und eine Beschreibung für Ihren Datenfluss ein.
-
-![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
-
 >[!TAB Verwenden eines neuen Datensatzes]
 
-Für ein Aufnehmen in einen neuen Datensatz wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus. Nachdem Sie ein Schema ausgewählt haben, geben Sie einen Namen und eine Beschreibung für Ihren Datenfluss ein.
+Um einen neuen Datensatz zu verwenden, wählen Sie **[!UICONTROL Neuer Datensatz]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihren Datensatz an. Sie müssen auch ein Experience-Datenmodell (XDM)-Schema auswählen, dem Ihr Datensatz entspricht.
 
-![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
+![Die neue Benutzeroberfläche zur Datensatzauswahl.](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!TAB Verwenden eines vorhandenen Datensatzes]
+
+Wenn Sie bereits über einen vorhandenen Datensatz verfügen, wählen Sie **[!UICONTROL Vorhandener Datensatz]** und verwenden Sie dann **[!UICONTROL Erweiterte Suche]** -Option, um ein Fenster aller Datensätze in Ihrer Organisation anzuzeigen, einschließlich der entsprechenden Details, z. B. ob sie für die Erfassung in Echtzeit-Kundenprofil aktiviert sind oder nicht.
+
+![Die vorhandene Oberfläche zur Datensatzauswahl.](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 >[!ENDTABS]
 
-### Aktivieren von [!DNL Profile] und Fehlerdiagnose
-
-Wählen Sie als Nächstes den **[!UICONTROL Profildatensatz]**-Umschalter aus, um Ihren Datensatz für [!DNL Profile] zu aktivieren. Auf diese Weise können Sie eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität erstellen. Daten aus allen [!DNL Profile]-aktivierten Datensätzen werden in [!DNL Profile] eingeschlossen und Änderungen werden wirksam, wenn Sie Ihren Datenfluss speichern.
-
-[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../../ingestion/batch-ingestion/partial.md).
+### Datenflusskonfigurationen {#dataflow-configurations}
 
 >[!IMPORTANT]
 >
 >Die [!DNL Marketo] -Quelle verwendet die Batch-Erfassung, um alle historischen Datensätze zu erfassen, und verwendet die Streaming-Erfassung für Echtzeit-Aktualisierungen. Dadurch kann die Quelle das Streaming fortsetzen, während fehlerhafte Datensätze erfasst werden. Aktivieren Sie den Umschalter **[!UICONTROL Teilweise Aufnahme]** und setzen Sie dann [!UICONTROL Fehler-Schwellenwert %] auf Maximum, um ein Fehlschlagen des Datenflusses zu verhindern.
 
-![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+Wenn Ihr Datensatz für das Echtzeit-Kundenprofil aktiviert ist, können Sie während dieses Schritts **[!UICONTROL Profildatensatz]** , um Ihre Daten für die Profilaufnahme zu aktivieren. Sie können diesen Schritt auch verwenden, um **[!UICONTROL Fehlerdiagnose]** und **[!UICONTROL Partielle Erfassung]**.
 
-### Aktivieren von Warnhinweisen
+* **[!UICONTROL Fehlerdiagnose]**: Auswählen **[!UICONTROL Fehlerdiagnose]** , um die Quelle anzuweisen, eine Fehlerdiagnose zu erstellen, die Sie später bei der Überwachung Ihrer Datensatzaktivität und des Datenflussstatus referenzieren können.
+* **[!UICONTROL Partielle Erfassung]**: [Partielle Batch-Erfassung](../../../../../ingestion/batch-ingestion/partial.md) ist die Möglichkeit, Daten mit Fehlern bis zu einem bestimmten konfigurierbaren Schwellenwert zu erfassen. Mit dieser Funktion können Sie alle Ihre präzisen Daten erfolgreich in Experience Platform erfassen, während all Ihre falschen Daten separat mit Informationen darüber gestapelt werden, warum sie ungültig sind.
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status Ihres Datenflusses zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Quellen über die Benutzeroberfläche](../../alerts.md).
+Während dieses Schritts können Sie **[!UICONTROL Beispiel-Datenfluss]** , um die Datenerfassung zu begrenzen und zusätzliche Kosten zu vermeiden, die durch die Erfassung aller historischen Daten, einschließlich Personen-Identitäten, entstehen.
 
-Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+>[!BEGINSHADEBOX]
 
-![alerts](../../../../images/tutorials/create/marketo/alerts.png)
+**Kurzanleitung zur Verwendung des Beispiel-Datenflusses**
 
-### Nicht beanspruchte Konten bei der Erfassung von Unternehmensdaten überspringen
+Beispiel-Datenfluss ist eine Konfiguration, die Sie für Ihre [!DNL Marketo] dataflow , um die Aufnahmerate zu begrenzen und dann Experience Platform-Funktionen auszuprobieren, ohne große Datenmengen aufnehmen zu müssen.
 
-Beim Erstellen eines Datenflusses zur Aufnahme von Daten aus dem Datensatz &quot;Unternehmen&quot;können Sie Folgendes konfigurieren: [!UICONTROL Nicht beanspruchte Konten ausschließen] nicht beanspruchte Konten von der Erfassung auszuschließen oder einzubeziehen.
+* Aktivieren Sie den Beispiel-Datenfluss, um historische Daten durch Aufnahme von bis zu 100.000 Datensätzen (aus der größten Datensatz-ID) oder bis zu den letzten 10 Tagen Aktivität während des Aufstockungsvorgangs zu begrenzen.
+* Bei der Verwendung der Beispiel-Datenfluss-Konfiguration für alle B2B-Entitäten müssen Sie beachten, dass möglicherweise einige verwandte Datensätze fehlen, da der gesamte Verlauf der Quelldaten nicht erfasst wird.
+
+>[!ENDSHADEBOX]
+
+![Der Abschnitt &quot;Datenfluss-Konfigurationen&quot;der Datenflug-Detailseite.](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
+
+Wenn Sie außerdem Daten aus dem Datensatz &quot;Unternehmen&quot;erfassen, können Sie **[!UICONTROL Nicht beanspruchte Konten ausschließen]** nicht beanspruchte Konten von der Erfassung auszuschließen.
 
 Wenn Einzelpersonen ein Formular ausfüllen, [!DNL Marketo] erstellt einen Phantom-Kontodatensatz basierend auf dem Unternehmensnamen, der keine anderen Daten enthält. Bei neuen Datenflüssen ist die Umschaltung zum Ausschließen nicht beanspruchter Konten standardmäßig aktiviert. Für vorhandene Datenflüsse können Sie die Funktion aktivieren oder deaktivieren, wobei Änderungen auf neu aufgenommene Daten und nicht auf vorhandene Daten angewendet werden.
 
-![nicht beanspruchte Konten](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
+![Nicht beanspruchte Konten ausschließen](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Zuordnen Ihrer [!DNL Marketo]-Datensatz-Quellfelder zu XDM-Zielfeldern
 
@@ -150,7 +166,7 @@ Für jeden Datensatz des Typs [!DNL Marketo] gibt es eigene spezifische Zuordnun
 
 Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
-![mapping](../../../../images/tutorials/create/marketo/mapping.png)
+![Die Zuordnungsschnittstelle für Marketo-Daten.](../../../../images/tutorials/create/marketo/mapping.png)
 
 Wenn Ihre Mapping-Sets fertig sind, klicken Sie auf **[!UICONTROL Weiter]** und warten Sie einige Augenblicke, während der neue Datenfluss hergestellt wird.
 
@@ -163,7 +179,7 @@ Der Schritt **[!UICONTROL Überprüfung]** wird angezeigt, sodass Sie Ihren neue
 
 Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Speichern und Aufnehmen]** und gewähren Sie etwas Zeit für die Herstellung des Datenflusses.
 
-![review](../../../../images/tutorials/create/marketo/review.png)
+![Die Überprüfungsseite, auf der Sie Details Ihres Datenflusses vor der Erfassung bestätigen können.](../../../../images/tutorials/create/marketo/review.png)
 
 ## Überwachen Ihres Datenflusses
 
@@ -179,10 +195,7 @@ Datenflüsse, die nicht mehr erforderlich sind oder nicht korrekt erstellt wurde
 
 ## Nächste Schritte
 
-Nach dem Vorbild dieses Tutorials haben Sie erfolgreich einen Datenfluss erstellt, um [!DNL Marketo]-Daten einzubringen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-Time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
-
-* [[!DNL Real-Time Customer Profile] – Übersicht](/help/profile/home.md)
-* [[!DNL Data Science Workspace] – Übersicht](/help/data-science-workspace/home.md)
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um B2B-Daten aus Ihrer [!DNL Marketo Engage] -Quelle zu Experience Platform.
 
 ## Anhang {#appendix}
 
