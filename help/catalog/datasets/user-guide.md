@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '3080'
 ht-degree: 14%
 
 ---
@@ -74,9 +74,66 @@ Sie können auch einen Datensatz löschen oder einen Datensatz zur Verwendung mi
 
 ## Inline-Datensatzaktionen {#inline-actions}
 
-Die Benutzeroberfläche für Datensätze bietet jetzt eine Sammlung von Inline-Aktionen für jeden verfügbaren Datensatz. Wählen Sie die Auslassungspunkte (...) eines Datensatzes aus, den Sie verwalten möchten, um die verfügbaren Optionen in einem Popup-Menü anzuzeigen. Zu den verfügbaren Maßnahmen gehören: [[!UICONTROL Datensatz-Vorschau]](#preview), [[!UICONTROL Daten verwalten und Zugriffsbeschriftungen]](#manage-and-enforce-data-governance), [[!UICONTROL Einheitliches Profil aktivieren]](#enable-profile), [[!UICONTROL Tags verwalten]](#add-tags), [[!UICONTROL In Ordner verschieben]](#move-to-folders), und [[!UICONTROL Löschen]](#delete). Weitere Informationen zu diesen verfügbaren Aktionen finden Sie in den jeweiligen Abschnitten.
+Die Benutzeroberfläche für Datensätze bietet jetzt eine Sammlung von Inline-Aktionen für jeden verfügbaren Datensatz. Wählen Sie die Auslassungspunkte (...) eines Datensatzes aus, den Sie verwalten möchten, um die verfügbaren Optionen in einem Popup-Menü anzuzeigen. Zu den verfügbaren Maßnahmen gehören:
 
-### Hinzufügen von Datensatz-Tags {#add-tags}
+* [[!UICONTROL Datensatz-Vorschau]](#preview),
+* [[!UICONTROL Daten verwalten und Zugriffsbeschriftungen]](#manage-and-enforce-data-governance)
+* [[!UICONTROL Einheitliches Profil aktivieren]](#enable-profile)
+* [[!UICONTROL Tags verwalten]](#manage-tags)
+* [[!UICONTROL In Ordner verschieben]](#move-to-folders)
+* [[!UICONTROL Löschen]](#delete).
+
+Weitere Informationen zu diesen verfügbaren Aktionen finden Sie in den jeweiligen Abschnitten. Informationen zum gleichzeitigen Verwalten einer großen Anzahl von Datensätzen finden Sie im Abschnitt [Massenaktionen](#bulk-actions) Abschnitt.
+
+### Vorschau für Datensatz anzeigen {#preview}
+
+Sie können eine Vorschau der Datensatzstichprobe aus beiden Inline-Optionen der [!UICONTROL Durchsuchen] und auch [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] die Auslassungszeichen (...) neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Datensatz-Vorschau]** aus der Liste der verfügbaren Optionen. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die Vorschau nicht verfügbar ist.
+
+![Die Registerkarte Durchsuchen des Arbeitsbereichs Datensätze mit den Auslassungszeichen und der Option Datensatz-Vorschau für den ausgewählten Datensatz hervorgehoben.](../images/datasets/user-guide/preview-dataset-option.png)
+
+Dadurch wird das Vorschaufenster geöffnet, in dem rechts die hierarchische Ansicht des Schemas für den Datensatz angezeigt wird.
+
+![Das Dialogfeld für die Datensatzvorschau mit Informationen zur Struktur sowie Beispielwerten für den Datensatz werden angezeigt.](../images/datasets/user-guide/preview-dataset.png)
+
+Alternativ können Sie über die **[!UICONTROL Datensatzaktivität]** Bildschirm, auswählen **[!UICONTROL Datensatz-Vorschau]** in der oberen rechten Ecke des Bildschirms eine Vorschau von bis zu 100 Datenzeilen anzeigen.
+
+![Die Schaltfläche Datensatz-Vorschau ist hervorgehoben.](../images/datasets/user-guide/select-preview.png)
+
+Für zuverlässigere Methoden zum Zugriff auf Ihre Daten: [!DNL Experience Platform] bietet nachgelagerte Dienste wie [!DNL Query Service] und [!DNL JupyterLab] zur Datenanalyse und -analyse. Weiterführende Informationen finden Sie in folgenden Dokumenten:
+
+* [Query Service – Übersicht](../../query-service/home.md)
+* [JupyterLab-Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md)
+
+### Data Governance in einem Datensatz verwalten und durchsetzen {#manage-and-enforce-data-governance}
+
+Sie können die Data Governance-Beschriftungen für einen Datensatz verwalten, indem Sie die Inline-Optionen des [!UICONTROL Durchsuchen] Registerkarte. Wählen Sie die Auslassungspunkte (...) neben dem Datensatz, den Sie verwalten möchten, gefolgt von **[!UICONTROL Daten verwalten und Zugriffsbeschriftungen]** aus dem Dropdown-Menü aus.
+
+Mit Datennutzungsbezeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Siehe [Data Governance - Übersicht](../../data-governance/home.md) Weitere Informationen zu Bezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Anweisungen zum Anwenden von Bezeichnungen auf Schemas zur Weitergabe an Datensätze.
+
+## Datensatz für Echtzeit-Kundenprofil aktivieren {#enable-profile}
+
+Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten anzureichern. Dazu muss das Schema, dem der Datensatz entspricht, für die Verwendung in [!DNL Real-Time Customer Profile]. Ein kompatibles Schema erfüllt folgende Anforderungen:
+
+* Das Schema weist mindestens ein Attribut auf, das als Identitätseigenschaft definiert wurde.
+* Das Schema verfügt über eine Identitätseigenschaft, die als primäre Identität definiert wurde.
+
+Weitere Informationen zum Aktivieren eines Schemas für [!DNL Profile], siehe [Benutzerhandbuch zum Schema Editor](../../xdm/tutorials/create-schema-ui.md).
+
+Sie können einen Datensatz für Profil über beide Inline-Optionen der [!UICONTROL Durchsuchen] und auch [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] des [!UICONTROL Datensätze] Arbeitsbereich die Auslassungspunkte eines Datensatzes auswählen, den Sie für Profil aktivieren möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Einheitliches Profil aktivieren]** aus der Liste der verfügbaren Optionen.
+
+![Auf der Registerkarte Durchsuchen des Arbeitsbereichs Datensätze werden die Auslassungspunkte und Einheitliches Profil aktivieren hervorgehoben.](../images/datasets/user-guide/enable-for-profile.png)
+
+Alternativ dazu kann die **[!UICONTROL Datensatzaktivität]** Bildschirm, wählen Sie **[!UICONTROL Profil]** innerhalb der **[!UICONTROL Eigenschaften]** Spalte. Nach der Aktivierung werden Daten, die in den Datensatz aufgenommen werden, auch zum Ausfüllen von Kundenprofilen verwendet.
+
+>[!NOTE]
+>
+>Wenn ein Datensatz bereits Daten enthält und dann für [!DNL Profile], werden die vorhandenen Daten nicht automatisch von [!DNL Profile]. Nachdem ein Datensatz für [!DNL Profile]sollten Sie alle vorhandenen Daten neu erfassen, damit sie zu Kundenprofilen beitragen.
+
+![Der Umschalter Profil wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/enable-dataset-profiles.png)
+
+Datensätze, die für Profile aktiviert wurden, können ebenfalls anhand dieser Kriterien gefiltert werden. Siehe den Abschnitt zum [Für das Profil aktivierte Datensätze filtern](#filter-profile-enabled-datasets) für weitere Informationen.
+
+### Verwalten von Datensatz-Tags {#manage-tags}
 
 Fügen Sie benutzerdefinierte erstellte Tags hinzu, um Datensätze zu organisieren und die Such-, Filter- und Sortierfunktionen zu verbessern. Aus dem [!UICONTROL Durchsuchen] des [!UICONTROL Datensätze] Arbeitsbereich die Auslassungspunkte eines zu verwaltenden Datensatzes auswählen, gefolgt von **[!UICONTROL Tags verwalten]** aus dem Dropdown-Menü aus.
 
@@ -91,6 +148,52 @@ Die [!UICONTROL Tags verwalten] -Dialogfeld kann auch vorhandene Tags aus einem 
 Nachdem einem Datensatz ein Tag hinzugefügt wurde, können die Datensätze anhand des entsprechenden Tags gefiltert werden. Siehe den Abschnitt zum [Filtern von Datensätzen nach Tags](#enable-profile) für weitere Informationen.
 
 Weitere Informationen zum Klassifizieren von Geschäftsobjekten für eine einfachere Erkennung und Kategorisierung finden Sie im Handbuch unter [Verwalten von Metadaten-Taxonomien](../../administrative-tags/ui/managing-tags.md). In diesem Handbuch wird beschrieben, wie Benutzer mit entsprechenden Berechtigungen vordefinierte Tags erstellen, Tags Kategorien zuweisen und alle zugehörigen CRUD-Vorgänge für Tags und Tag-Kategorien in der Platform-Benutzeroberfläche durchführen können.
+
+### In Ordner verschieben {#move-to-folders}
+
+Sie können Datensätze in Ordnern platzieren, um die Datensatzverwaltung zu verbessern. Um einen Datensatz in einen Ordner zu verschieben, wählen Sie die Auslassungszeichen (..) neben dem Datensatz-Namen aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL In Ordner verschieben]** aus dem Dropdown-Menü aus.
+
+![Die [!UICONTROL Datensätze] Dashboard mit den Auslassungspunkten und [!UICONTROL In Ordner verschieben] hervorgehoben.](../images/datasets/user-guide/move-to-folder.png)
+
+Die [!UICONTROL Verschieben] Das Dialogfeld Datensatz in Ordner wird angezeigt. Wählen Sie den Ordner aus, in den Sie die Zielgruppe verschieben möchten, und wählen Sie dann **[!UICONTROL Verschieben]**. Eine Popup-Benachrichtigung informiert Sie darüber, dass die Verschiebung des Datensatzes erfolgreich war.
+
+![Die [!UICONTROL Verschieben] Datensatz-Dialogfeld mit [!UICONTROL Verschieben] hervorgehoben.](../images/datasets/user-guide/move-dialog.png)
+
+>[!TIP]
+>
+>Sie können Ordner auch direkt im Dialogfeld Datensatz verschieben erstellen. Um einen Ordner zu erstellen, wählen Sie das Symbol Ordner erstellen (![Das Symbol Ordner erstellen .](../images/datasets/user-guide/create-folder-icon.png)) oben rechts im Dialogfeld.
+>
+>![Die [!UICONTROL Verschieben] Datensatz-Dialogfeld mit dem Symbol Ordner erstellen hervorgehoben.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Sobald sich der Datensatz in einem Ordner befindet, können Sie festlegen, dass nur Datensätze angezeigt werden, die zu einem bestimmten Ordner gehören. Um Ihre Ordnerstruktur zu öffnen, wählen Sie das Symbol Ordner anzeigen (![Symbol &quot;Ordner anzeigen&quot;](../images/datasets/user-guide/show-folders-icon.png)). Wählen Sie als Nächstes den ausgewählten Ordner aus, um alle zugehörigen Datensätze anzuzeigen.
+
+![Die [!UICONTROL Datensätze] Dashboards, in denen die Ordnerstruktur des Datensatzes angezeigt wird, das Symbol &quot;Ordner anzeigen&quot;und ein ausgewählter Ordner hervorgehoben sind.](../images/datasets/user-guide/folder-structure.png)
+
+### Datensatz löschen {#delete}
+
+Sie können einen Datensatz aus den Inline-Aktionen des Datensatzes löschen. [!UICONTROL Durchsuchen] oder oben rechts im [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] -Ansicht die Auslassungszeichen (...) neben dem Datensatznamen, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Löschen]** aus dem Dropdown-Menü aus.
+
+![Die Registerkarte Durchsuchen des Arbeitsbereichs Datensätze mit den Auslassungszeichen und der Option Löschen für den ausgewählten Datensatz.](../images/datasets/user-guide/inline-delete-dataset.png)
+
+Ein Bestätigungsdialogfeld wird angezeigt. Klicken Sie zur Bestätigung auf **[!UICONTROL Löschen]**.
+
+Wählen Sie alternativ **[!UICONTROL Datensatz löschen]** aus dem **[!UICONTROL Datensatzaktivität]** angezeigt.
+
+>[!NOTE]
+>
+>Datensätze, die von Adobe-Anwendungen und -Diensten erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder [!DNL Offer Decisioning]) kann nicht gelöscht werden.
+
+![Die Schaltfläche Datensatz löschen wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/delete-dataset.png)
+
+Ein Bestätigungsdialog wird angezeigt. Auswählen **[!UICONTROL Löschen]** , um das Löschen des Datensatzes zu bestätigen.
+
+![Das Bestätigungs-Modal zum Löschen wird angezeigt, wobei die Schaltfläche Löschen hervorgehoben ist.](../images/datasets/user-guide/confirm-delete.png)
+
+### Profil-aktivierten Datensatz löschen
+
+Wenn ein Datensatz für Profil aktiviert ist, wird er beim Löschen dieses Datensatzes über die Benutzeroberfläche aus dem Data Lake, Identity Service und auch aus allen mit diesem Datensatz verknüpften Profildaten im Profilspeicher gelöscht.
+
+Sie können mit einem Datensatz verknüpfte Profildaten aus der [!DNL Profile] speichern (die Daten im Data Lake belassen) mithilfe der Echtzeit-Kundenprofil-API. Weitere Informationen finden Sie im [Handbuch zum Vorgangs-API-Endpunkt von Profile System](../../profile/api/profile-system-jobs.md).
 
 ## Datensätze suchen und filtern {#search-and-filter}
 
@@ -132,30 +235,24 @@ Datensätze können nach Erstellungsdatum über einen benutzerdefinierten Zeitra
 
 Sie können Datensätze nach dem Schema filtern, das ihre Struktur definiert. Wählen Sie entweder das Dropdown-Symbol aus oder geben Sie den Schemanamen in das Textfeld ein. Eine Liste der potenziellen Übereinstimmungen wird angezeigt. Wählen Sie das entsprechende Schema aus der Liste aus.
 
+## Massenaktionen {#bulk-actions}
+
+Verwenden Sie Massenaktionen, um Ihre betriebliche Effizienz zu steigern und mehrere Aktionen für zahlreiche Datensätze gleichzeitig durchzuführen. Sie können Zeit sparen und eine organisierte Datenstruktur mit Massenaktionen wie [In Ordner verschieben](#move-to-folders), [Tags bearbeiten](#manage-tags), und [Löschen](#delete) Datensätze.
+
+Um mehrere Datensätze gleichzeitig zu bearbeiten, wählen Sie einzelne Datensätze mit dem Kontrollkästchen für jede Zeile aus oder wählen Sie eine ganze Seite mit dem Kontrollkästchen Spaltenüberschrift aus. Nach der Auswahl wird die Aktionsleiste für den Massenversand angezeigt.
+
+![Auf der Registerkarte &quot;Durchsuchen von Datensätzen&quot;wurden zahlreiche Datensätze ausgewählt und die Aktionsleiste für Massenvorgänge hervorgehoben.](../images/datasets/user-guide/bulk-actions.png)
+
+Wenn Sie Massenaktionen auf Datensätze anwenden, gelten die folgenden Bedingungen:
+
+* Sie können Datensätze aus verschiedenen Seiten der Benutzeroberfläche auswählen.
+* Wenn Sie einen Filter auswählen, werden die ausgewählten Datensätze zurückgesetzt.
+
 ## Sortieren von Datensätzen nach dem erstellten Datum {#sort}
 
 Datensätze in der [!UICONTROL Durchsuchen] kann nach auf- oder absteigenden Datumsangaben sortiert werden. Wählen Sie die [!UICONTROL Erstellt] oder [!UICONTROL Letzte Aktualisierung] Spaltenüberschriften, die zwischen auf- und absteigender Reihenfolge zu wechseln sind. Nach der Auswahl zeigt die Spalte dies entweder mit einem Nach-oben- oder Nach-unten-Pfeil neben der Spaltenüberschrift an.
 
 ![Auf der Registerkarte Durchsuchen des Arbeitsbereichs Datensätze wird die Spalte Erstellt und Letzte Aktualisierung hervorgehoben.](../images/datasets/user-guide/ascending-descending-columns.png)
-
-## Vorschau für Datensatz anzeigen {#preview}
-
-Sie können eine Vorschau der Datensatzstichprobe aus beiden Inline-Optionen der [!UICONTROL Durchsuchen] und auch [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] die Auslassungszeichen (...) neben dem Datensatznamen, den Sie in der Vorschau anzeigen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Datensatz-Vorschau]** aus der Liste der verfügbaren Optionen. Wenn der Datensatz leer ist, wird der Vorschau-Link deaktiviert und stattdessen darauf hingewiesen, dass die Vorschau nicht verfügbar ist.
-
-![Die Registerkarte Durchsuchen des Arbeitsbereichs Datensätze mit den Auslassungszeichen und der Option Datensatz-Vorschau für den ausgewählten Datensatz hervorgehoben.](../images/datasets/user-guide/preview-dataset-option.png)
-
-Dadurch wird das Vorschaufenster geöffnet, in dem rechts die hierarchische Ansicht des Schemas für den Datensatz angezeigt wird.
-
-![Das Dialogfeld für die Datensatzvorschau mit Informationen zur Struktur sowie Beispielwerten für den Datensatz werden angezeigt.](../images/datasets/user-guide/preview-dataset.png)
-
-Alternativ können Sie über die **[!UICONTROL Datensatzaktivität]** Bildschirm, auswählen **[!UICONTROL Datensatz-Vorschau]** in der oberen rechten Ecke des Bildschirms eine Vorschau von bis zu 100 Datenzeilen anzeigen.
-
-![Die Schaltfläche Datensatz-Vorschau ist hervorgehoben.](../images/datasets/user-guide/select-preview.png)
-
-Für zuverlässigere Methoden zum Zugriff auf Ihre Daten: [!DNL Experience Platform] bietet nachgelagerte Dienste wie [!DNL Query Service] und [!DNL JupyterLab] zur Datenanalyse und -analyse. Weiterführende Informationen finden Sie in folgenden Dokumenten:
-
-* [Query Service – Übersicht](../../query-service/home.md)
-* [JupyterLab-Benutzerhandbuch](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Erstellen eines Datensatzes {#create}
 
@@ -201,81 +298,6 @@ Der Schritt **[!UICONTROL Daten hinzufügen]** wird angezeigt. Laden Sie die CSV
 >CSV-Spaltennamen müssen mit alphanumerischen Zeichen beginnen und dürfen nur Buchstaben, Zahlen und Unterstriche enthalten.
 
 ![Der Bildschirm Daten hinzufügen wird angezeigt. Der Speicherort, an den Sie die CSV-Datei für den Datensatz hochladen können, ist hervorgehoben.](../images/datasets/user-guide/add-csv-data.png)
-
-## Datensatz für Echtzeit-Kundenprofil aktivieren {#enable-profile}
-
-Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten anzureichern. Dazu muss das Schema, dem der Datensatz entspricht, für die Verwendung in [!DNL Real-Time Customer Profile]. Ein kompatibles Schema erfüllt folgende Anforderungen:
-
-* Das Schema weist mindestens ein Attribut auf, das als Identitätseigenschaft definiert wurde.
-* Das Schema verfügt über eine Identitätseigenschaft, die als primäre Identität definiert wurde.
-
-Weitere Informationen zum Aktivieren eines Schemas für [!DNL Profile], siehe [Benutzerhandbuch zum Schema Editor](../../xdm/tutorials/create-schema-ui.md).
-
-Sie können einen Datensatz für Profil über beide Inline-Optionen der [!UICONTROL Durchsuchen] und auch [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] des [!UICONTROL Datensätze] Arbeitsbereich die Auslassungspunkte eines Datensatzes auswählen, den Sie für Profil aktivieren möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Einheitliches Profil aktivieren]** aus der Liste der verfügbaren Optionen.
-
-![Auf der Registerkarte Durchsuchen des Arbeitsbereichs Datensätze werden die Auslassungspunkte und Einheitliches Profil aktivieren hervorgehoben.](../images/datasets/user-guide/enable-for-profile.png)
-
-Alternativ dazu kann die **[!UICONTROL Datensatzaktivität]** Bildschirm, wählen Sie **[!UICONTROL Profil]** innerhalb der **[!UICONTROL Eigenschaften]** Spalte. Nach der Aktivierung werden Daten, die in den Datensatz aufgenommen werden, auch zum Ausfüllen von Kundenprofilen verwendet.
-
->[!NOTE]
->
->Wenn ein Datensatz bereits Daten enthält und dann für [!DNL Profile], werden die vorhandenen Daten nicht automatisch von [!DNL Profile]. Nachdem ein Datensatz für [!DNL Profile]sollten Sie alle vorhandenen Daten neu erfassen, damit sie zu Kundenprofilen beitragen.
-
-![Der Umschalter Profil wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/enable-dataset-profiles.png)
-
-Datensätze, die für Profile aktiviert wurden, können ebenfalls anhand dieser Kriterien gefiltert werden. Siehe den Abschnitt zum [Für das Profil aktivierte Datensätze filtern](#filter-profile-enabled-datasets) für weitere Informationen.
-
-## Data Governance in einem Datensatz verwalten und durchsetzen {#manage-and-enforce-data-governance}
-
-Sie können die Data Governance-Beschriftungen für einen Datensatz verwalten, indem Sie die Inline-Optionen des [!UICONTROL Durchsuchen] Registerkarte. Wählen Sie die Auslassungspunkte (...) neben dem Datensatz, den Sie verwalten möchten, gefolgt von **[!UICONTROL Daten verwalten und Zugriffsbeschriftungen]** aus dem Dropdown-Menü aus.
-
-Mit Datennutzungsbezeichnungen, die auf Schemaebene angewendet werden, können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Siehe [Data Governance - Übersicht](../../data-governance/home.md) Weitere Informationen zu Bezeichnungen finden Sie im Abschnitt [Benutzerhandbuch zu Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Anweisungen zum Anwenden von Bezeichnungen auf Schemas zur Weitergabe an Datensätze.
-
-## In Ordner verschieben {#move-to-folders}
-
-Sie können Datensätze in Ordnern platzieren, um die Datensatzverwaltung zu verbessern. Um einen Datensatz in einen Ordner zu verschieben, wählen Sie die Auslassungszeichen (..) neben dem Datensatz-Namen aus, den Sie verwalten möchten, gefolgt von **[!UICONTROL In Ordner verschieben]** aus dem Dropdown-Menü aus.
-
-![Die [!UICONTROL Datensätze] Dashboard mit den Auslassungspunkten und [!UICONTROL In Ordner verschieben] hervorgehoben.](../images/datasets/user-guide/move-to-folder.png)
-
-Die [!UICONTROL Verschieben] Das Dialogfeld Datensatz in Ordner wird angezeigt. Wählen Sie den Ordner aus, in den Sie die Zielgruppe verschieben möchten, und wählen Sie dann **[!UICONTROL Verschieben]**. Eine Popup-Benachrichtigung informiert Sie darüber, dass die Verschiebung des Datensatzes erfolgreich war.
-
-![Die [!UICONTROL Verschieben] Datensatz-Dialogfeld mit [!UICONTROL Verschieben] hervorgehoben.](../images/datasets/user-guide/move-dialog.png)
-
->[!TIP]
->
->Sie können Ordner auch direkt im Dialogfeld Datensatz verschieben erstellen. Um einen Ordner zu erstellen, wählen Sie das Symbol Ordner erstellen (![Das Symbol Ordner erstellen .](../images/datasets/user-guide/create-folder-icon.png)) oben rechts im Dialogfeld.
->
->![Die [!UICONTROL Verschieben] Datensatz-Dialogfeld mit dem Symbol Ordner erstellen hervorgehoben.](/help/catalog/images/datasets/user-guide/create-folder.png)
-
-Sobald sich der Datensatz in einem Ordner befindet, können Sie festlegen, dass nur Datensätze angezeigt werden, die zu einem bestimmten Ordner gehören. Um Ihre Ordnerstruktur zu öffnen, wählen Sie das Symbol Ordner anzeigen (![Symbol &quot;Ordner anzeigen&quot;](../images/datasets/user-guide/show-folders-icon.png)). Wählen Sie als Nächstes den ausgewählten Ordner aus, um alle zugehörigen Datensätze anzuzeigen.
-
-![Die [!UICONTROL Datensätze] Dashboards, in denen die Ordnerstruktur des Datensatzes angezeigt wird, das Symbol &quot;Ordner anzeigen&quot;und ein ausgewählter Ordner hervorgehoben sind.](../images/datasets/user-guide/folder-structure.png)
-
-## Datensatz löschen {#delete}
-
-Sie können einen Datensatz aus den Inline-Aktionen des Datensatzes löschen. [!UICONTROL Durchsuchen] oder oben rechts im [!UICONTROL Datensatzaktivität] anzeigen. Aus dem [!UICONTROL Durchsuchen] -Ansicht die Auslassungszeichen (...) neben dem Datensatznamen, den Sie löschen möchten. Eine Menüliste mit Optionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Löschen]** aus dem Dropdown-Menü aus.
-
-![Die Registerkarte Durchsuchen des Arbeitsbereichs Datensätze mit den Auslassungszeichen und der Option Löschen für den ausgewählten Datensatz.](../images/datasets/user-guide/inline-delete-dataset.png)
-
-Ein Bestätigungsdialogfeld wird angezeigt. Klicken Sie zur Bestätigung auf **[!UICONTROL Löschen]**.
-
-Wählen Sie alternativ **[!UICONTROL Datensatz löschen]** aus dem **[!UICONTROL Datensatzaktivität]** angezeigt.
-
->[!NOTE]
->
->Datensätze, die von Adobe-Anwendungen und -Diensten erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder [!DNL Offer Decisioning]) kann nicht gelöscht werden.
-
-![Die Schaltfläche Datensatz löschen wird auf der Seite mit den Datensatzdetails hervorgehoben.](../images/datasets/user-guide/delete-dataset.png)
-
-Ein Bestätigungsdialog wird angezeigt. Auswählen **[!UICONTROL Löschen]** , um das Löschen des Datensatzes zu bestätigen.
-
-![Das Bestätigungs-Modal zum Löschen wird angezeigt, wobei die Schaltfläche Löschen hervorgehoben ist.](../images/datasets/user-guide/confirm-delete.png)
-
-## Profil-aktivierten Datensatz löschen
-
-Wenn ein Datensatz für Profil aktiviert ist, wird er beim Löschen dieses Datensatzes über die Benutzeroberfläche aus dem Data Lake, Identity Service und auch aus allen mit diesem Datensatz verknüpften Profildaten im Profilspeicher gelöscht.
-
-Sie können mit einem Datensatz verknüpfte Profildaten aus der [!DNL Profile] speichern (die Daten im Data Lake belassen) mithilfe der Echtzeit-Kundenprofil-API. Weitere Informationen finden Sie im [Handbuch zum Vorgangs-API-Endpunkt von Profile System](../../profile/api/profile-system-jobs.md).
 
 ## Überwachen der Datenaufnahme
 
