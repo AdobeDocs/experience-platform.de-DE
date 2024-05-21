@@ -2,9 +2,9 @@
 title: Abfrageprotokolle
 description: Abfrageprotokolle werden automatisch bei jeder Ausführung einer Abfrage generiert und stehen über die Benutzeroberfläche zur Verfügung, um die Fehlerbehebung zu unterstützen. In diesem Dokument wird beschrieben, wie Sie den Abschnitt "Query Service Logs"der Benutzeroberfläche verwenden und darin navigieren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '1012'
 ht-degree: 3%
 
 ---
@@ -19,9 +19,13 @@ Adobe Experience Platform verwaltet ein Protokoll aller Abfrageereignisse, die s
 
 Die Protokolldateien werden automatisch von jedem Abfrageereignis generiert und enthalten Informationen wie die verwendete SQL-Datei, den Status der Abfrage, die Dauer und die letzte Laufzeit. Sie können Abfrageprotokolldaten als leistungsstarkes Tool zur Fehlerbehebung bei ineffizienten oder problematischen Abfragen verwenden. Umfassendere Protokollinformationen werden im Rahmen der Funktion zum Auditprotokoll gespeichert und sind im Abschnitt [Auditprotokolldokumentation](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Abfrage-Logs überprüfen
+## Abfrage-Logs überprüfen {#check-query-logs}
 
 Um die Abfrageprotokolle zu überprüfen, wählen Sie [!UICONTROL Abfragen] Navigieren Sie zum Arbeitsbereich &quot;Query Service&quot;und wählen Sie [!UICONTROL Protokoll] aus den verfügbaren Optionen.
+
+>[!NOTE]
+>
+>Sowohl Systemabfragen als auch Dashboard-Abfragen sind standardmäßig ausgeschlossen. Siehe [Filter](#filter-logs) Informationen dazu, wie Sie die angezeigten Protokolle anhand Ihrer Einstellungen verfeinern können.
 
 ![Die Platform-Benutzeroberfläche mit hervorgehobenen Abfragen und Protokollen.](../images/ui/query-log/logs.png)
 
@@ -82,6 +86,7 @@ Die folgende Tabelle enthält eine Beschreibung der einzelnen Filter.
 | Filter | Beschreibung |
 | ------ | ----------- |
 | [!UICONTROL Dashboard-Abfragen ausschließen] | Dieses Kontrollkästchen ist standardmäßig aktiviert und schließt Protokolle aus, die von den Abfragen generiert wurden, mit denen Einblicke generiert wurden. Diese Abfragen werden systemgeneriert und verschleiern die Datensätze von benutzergenerierten Protokollen, die zur Überwachung, Verwaltung und Fehlerbehebung erforderlich sind. Um vom System generierte Protokolle anzuzeigen, deaktivieren Sie das Kontrollkästchen. |
+| [!UICONTROL Systemabfragen ausschließen] | Dieses Kontrollkästchen ist standardmäßig aktiviert und schließt vom System erstellte Protokolle aus. Systemgenerierte Abfragen umfassen häufig Hintergrundaufgaben oder Wartungsaufgaben, die für die Benutzerüberwachung, Verwaltung oder Fehlerbehebung möglicherweise nicht relevant sind. Wenn Sie systemgenerierte Protokolle überprüfen müssen, deaktivieren Sie dieses Kontrollkästchen, um sie in Ihre Protokollansicht aufzunehmen. |
 | [!UICONTROL Startdatum] | Um die Protokolle nach Abfragen zu filtern, die in einem bestimmten Zeitraum erstellt wurden, legen Sie die [!UICONTROL Starten] und [!UICONTROL Ende] Daten in [!UICONTROL Startdatum] Abschnitt. |
 | [!UICONTROL Abgeschlossenes Datum] | Um die Protokolle nach Abfragen zu filtern, die in einem bestimmten Zeitraum abgeschlossen wurden, legen Sie die [!UICONTROL Starten] und [!UICONTROL Ende] Daten in [!UICONTROL Abgeschlossenes Datum] Abschnitt. |
 | [!UICONTROL Status] | So filtern Sie die Protokolle nach [!UICONTROL Status] Wählen Sie das entsprechende Optionsfeld aus. Zu den verfügbaren Optionen gehören [!UICONTROL Gesendet], [!UICONTROL Gestartet], [!UICONTROL Erfolg], und [!UICONTROL Fehlgeschlagen]. Sie können Protokolle nur nach einer Statusbedingung filtern. |

@@ -2,10 +2,10 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '1572'
-ht-degree: 18%
+source-wordcount: '1822'
+ht-degree: 15%
 
 ---
 
@@ -93,9 +93,23 @@ Sie können auch eine geplante Abfrage über die Inline-Aktionen der Funktion [!
 
 ### Warnhinweise für den Status einer geplanten Abfrage festlegen {#alerts-for-query-status}
 
-Sie können im Rahmen Ihrer geplanten Abfrageeinstellungen auch Abfragewarnungen abonnieren. Das bedeutet, dass Sie Benachrichtigungen über eine Statusänderung Ihrer Abfrage erhalten. Warnhinweise können entweder als Popup-Benachrichtigungen oder als E-Mails empfangen werden. Zu den verfügbaren Warnungsoptionen für den Abfragestatus gehören Start, Erfolg und Fehler. Aktivieren Sie das Kontrollkästchen, um Warnhinweise für diesen Status der geplanten Abfrage zu abonnieren.
+Sie können im Rahmen Ihrer geplanten Abfrageeinstellungen auch Abfragewarnungen abonnieren. Sie können Ihre Einstellungen so konfigurieren, dass Benachrichtigungen für eine Vielzahl von Situationen empfangen werden. Warnhinweise können für einen Quarantänestatus, Verzögerungen bei der Abfrageverarbeitung oder eine Statusänderung Ihrer Abfrage festgelegt werden. Zu den verfügbaren Warnungsoptionen für den Abfragestatus gehören Start, Erfolg und Fehler. Warnhinweise können entweder als Popup-Benachrichtigungen oder E-Mails empfangen werden. Aktivieren Sie das Kontrollkästchen, um Warnhinweise für diesen Status der geplanten Abfrage zu abonnieren.
 
 ![Das Bedienfeld Zeitplandetails mit hervorgehobenen Warnhinweisoptionen.](../images/ui/query-editor/alerts.png)
+
+In der folgenden Tabelle werden die unterstützten Abfragewarnungstypen erläutert:
+
+| Warnungstyp | Beschreibung |
+|---|---|
+| `start` | Dieser Warnhinweis benachrichtigt Sie, wenn eine geplante Abfrage gestartet wird oder mit der Verarbeitung beginnt. |
+| `success` | Dieser Warnhinweis informiert Sie darüber, wenn eine geplante Abfrage erfolgreich ausgeführt wurde, und zeigt an, dass die Abfrage fehlerfrei ausgeführt wurde. |
+| `failed` | Dieser Warnhinweis wird Trigger, wenn eine geplante Abfrage einen Fehler auftritt oder nicht erfolgreich ausgeführt werden kann. Dies hilft Ihnen, Probleme schnell zu identifizieren und zu beheben. |
+| `quarantine` | Dieser Warnhinweis wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird. Sobald eine Abfrage [Eingeschrieben in die Quarantänefunktion](#quarantine), werden alle geplanten Abfragen, bei denen zehn aufeinander folgende Ausführungen fehlschlagen, automatisch in [!UICONTROL In Quarantäne] state. Eine in Quarantäne befindliche Abfrage erfordert Ihre Intervention, bevor weitere Ausführungen durchgeführt werden können. Hinweis: Für die Quarantänefunktion müssen Abfragen registriert werden, damit Sie Benachrichtigungen unter Quarantäne stellen können. |
+| `delay` | Dieser Warnhinweis benachrichtigt Sie, wenn ein [Verzögerung im Ergebnis einer geplanten Abfrageausführung](./monitor-queries.md#query-run-delay) über einen bestimmten Schwellenwert hinaus. Sie können einen benutzerdefinierten Zeitpunkt festlegen, zu dem die Warnung Trigger wird, wenn die Abfrage für diesen Zeitraum ausgeführt wird, ohne dass ein Abschluss oder ein Fehler auftritt. Das Standardverhalten setzt einen Warnhinweis für 150 Minuten, nachdem die Verarbeitung der Abfrage begonnen hat. |
+
+>[!NOTE]
+>
+>Wenn Sie eine [!UICONTROL Verzögerung bei Abfrage-Ausführung] Warnhinweis hinweisen, müssen Sie die gewünschte Verzögerungszeit in Minuten in der Platform-Benutzeroberfläche festlegen. Geben Sie die Dauer in Minuten ein. Die maximale Verzögerung beträgt 24 Stunden (1440 Minuten).
 
 Einen Überblick über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnregeln, finden Sie im Abschnitt [Warnungen - Übersicht](../../observability/alerts/overview.md). Eine Anleitung zum Verwalten von Warnhinweisen und Warnregeln in der Adobe Experience Platform-Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Warnhinweis-Benutzeroberfläche](../../observability/alerts/ui.md).
 

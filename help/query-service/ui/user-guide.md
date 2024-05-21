@@ -4,83 +4,76 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 42%
+source-wordcount: '2432'
+ht-degree: 31%
 
 ---
 
-# Handbuch für die [!DNL Query Editor]-Benutzeroberfläche
+# Anleitung zur Benutzeroberfläche des Abfrage-Editors
 
 >[!NOTE]
 >
->Ab dem 30. April 2024 gilt Folgendes: [Verbesserter Abfrage-Editor](#enhanced-editor-toggle) wurde zum Standardeditor für alle Benutzer. Der alte Editor wird vom 30. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar.
+>Der alte Editor wurde am 30. Mai 2024 eingestellt. Es ist nicht mehr verfügbar. Sie können jetzt die [Verbesserter Abfrage-Editor](#enhanced-editor-toggle) zum Schreiben, Validieren und Ausführen von Abfragen
 
-[!DNL Query Editor] ist ein interaktives Tool von Adobe Experience Platform [!DNL Query Service], mit dem Sie Abfragen für Kundenerlebnisdaten in der [!DNL Experience Platform]-Benutzeroberfläche schreiben, validieren und ausführen können. [!DNL Query Editor] unterstützt die Erstellung von Abfragen für die Analyse und Datenexploration und ermöglicht das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Befüllen von Datensätzen in [!DNL Experience Platform].
+Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten im [!DNL Experience Platform] -Benutzeroberfläche. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen zu Entwicklungszwecken sowie nicht-interaktiver Abfragen zum Ausfüllen von Datensätzen in [!DNL Experience Platform].
 
-Weitere Informationen zu den Konzepten und Funktionen von [!DNL Query Service] finden Sie in der [Query Service – Übersicht](../home.md). Weitere Informationen zum Navigieren in der Benutzeroberfläche von Query Service von [!DNL Platform] finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
-
->[!NOTE]
->
->Bestimmte Query Service-Funktionen werden in der älteren Version des Abfrage-Editors nicht bereitgestellt. Die in diesem Dokument verwendeten Screenshots werden mit der verbesserten Version des Abfrage-Editors erstellt, sofern nicht anders angegeben. Siehe Abschnitt im Abschnitt [verbesserter Abfrage-Editor](#enhanced-editor-toggle) für weitere Details.
+Weitere Informationen zu Konzepten und Funktionen von Query Service finden Sie in der [Query Service – Übersicht](../home.md). Weitere Informationen zum Navigieren in der Benutzeroberfläche von Query Service von [!DNL Platform] finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
 
 ## Erste Schritte {#getting-started}
 
-[!DNL Query Editor] bietet flexible Ausführung von Abfragen durch Verbinden mit [!DNL Query Service], und Abfragen werden nur ausgeführt, während diese Verbindung aktiv ist.
+Der Abfrage-Editor bietet eine flexible Ausführung von Abfragen durch Herstellen einer Verbindung zu Query Service. Abfragen werden nur ausgeführt, wenn diese Verbindung aktiv ist.
 
-## Zugreifen auf [!DNL Query Editor] {#accessing-query-editor}
+## Aufrufen des Abfrage-Editors {#accessing-query-editor}
 
-Wählen Sie in der Benutzeroberfläche von [!DNL Experience Platform] im linken Navigationsmenü **[!UICONTROL Abfragen]** aus, um den [!DNL Query Service]-Arbeitsbereich zu öffnen. Um als Nächstes Abfragen zu schreiben, wählen Sie **[!UICONTROL Abfrage erstellen]** oben rechts auf dem Bildschirm. Dieser Link ist auf allen Seiten des [!DNL Query Service]-Arbeitsbereichs verfügbar.
+Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Abfragen]** im linken Navigationsmenü, um den Arbeitsbereich Query Service zu öffnen. Um als Nächstes Abfragen zu schreiben, wählen Sie **[!UICONTROL Abfrage erstellen]** oben rechts auf dem Bildschirm. Dieser Link ist auf allen Seiten des Arbeitsbereichs „Query Service“ verfügbar.
 
 ![Die Registerkarte „Übersicht“ für den Abfragearbeitsbereich mit hervorgehobener Option „Abfrage erstellen“.](../images/ui/query-editor/create-query.png)
 
-### Herstellen einer Verbindung mit [!DNL Query Service] {#connecting-to-query-service}
+### Herstellen einer Verbindung zu Query Service {#connecting-to-query-service}
 
 Der Abfrage-Editor benötigt beim Öffnen einige Sekunden, um Query Service zu initialisieren und eine Verbindung herzustellen. Die Konsole gibt an, ob eine Verbindung besteht (siehe unten). Wenn Sie versuchen, eine Abfrage auszuführen, bevor der Editor eine Verbindung hergestellt hat, wird die Ausführung verzögert, bis die Verbindung hergestellt ist.
 
 ![Die Konsolenausgabe des Abfrage-Editors bei der ersten Verbindung.](../images/ui/query-editor/connect.png)
 
-### Ausführen von Abfragen über [!DNL Query Editor] {#run-a-query}
+### Ausführen von Abfragen im Abfrage-Editor {#run-a-query}
 
-Von ausgeführten Abfragen [!DNL Query Editor] interaktiv ausführen, was bedeutet, dass die Abfrage abgebrochen wird, wenn Sie den Browser schließen oder wegnavigieren. Dasselbe gilt für Abfragen, die zum Generieren von Datensätzen aus Abfrageausgaben durchgeführt werden.
+Im Abfrage-Editor ausgeführte Abfragen werden interaktiv ausgeführt. Das bedeutet, dass die Abfrage abgebrochen wird, wenn Sie den Browser schließen oder wegnavigieren. Dasselbe gilt für Abfragen, die zum Generieren von Datensätzen aus Abfrageausgaben durchgeführt werden.
 
-Mit der erweiterten Bearbeitung des Abfrage-Editors können Sie mehr als eine Abfrage im Abfrage-Editor schreiben und alle Abfragen sequenziell ausführen. Siehe Abschnitt zu [Ausführen mehrerer sequenzieller Abfragen](#execute-multiple-sequential-queries) für weitere Informationen.
+## Abfragebearbeitung mit dem erweiterten Abfrage-Editor {#query-authoring}
 
-## Abfragenerstellung mit [!DNL Query Editor] {#query-authoring}
-
-Mit [!DNL Query Editor] können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle in [!DNL Query Editor] ausgeführten oder gespeicherten Abfragen stehen allen Benutzenden in Ihrem Unternehmen mit Zugriff auf [!DNL Query Service] zur Verfügung.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor der Standardeditor für alle Benutzer. Der alte Editor wird vom 30. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar.
+>Der alte Editor wurde am 30. Mai 2024 eingestellt. Es ist nicht mehr verfügbar. Sie können jetzt den erweiterten Abfrage-Editor verwenden, um Ihre Abfragen zu schreiben, zu validieren und auszuführen.
 
-## Erweiterter Umschalter des Abfrage-Editors {#enhanced-editor-toggle}
+Mit dem Abfrage-Editor können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle Abfragen, die ausgeführt oder im Abfrage-Editor gespeichert werden, stehen allen Benutzern in Ihrer Organisation mit Zugriff auf Query Service zur Verfügung.
 
->[!CONTEXTUALHELP]
->id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="Erweiterter Editor-Umschalter"
->abstract="Wechsel Sie zwischen der alten und der erweiterten Version des Abfrage-Editors. Die ältere Version ist standardmäßig aktiviert, obwohl die verbesserte Version bessere Zugänglichkeit und Unterstützung für mehrere Designs bietet. Weitere Informationen zu diesen Änderungen finden Sie in der Dokumentation."
+### Einstellungen {#settings}
 
-Mit einem UI-Umschalter können Sie zwischen der alten und der erweiterten Version des Abfrage-Editors wechseln. Die ältere Version ist standardmäßig aktiviert, obwohl die verbesserte Version bessere Zugänglichkeit und Unterstützung für mehrere Designs bietet. Aktivieren Sie die erweiterte Version, um auf die Einstellungen des Abfrage-Editors zuzugreifen.
-
-![Der Abfrage-Editor mit dem erweiterten Abfrage-Editor wurde hervorgehoben.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
-
-Durch Aktivierung des Umschalters wird der Editor zu einem helleren Design geändert und die Lesbarkeit der Syntax verbessert. Darüber hinaus wird über dem Eingabefeld Abfrage-Editor ein Einstellungssymbol angezeigt, das den Umschalter für die automatische Vervollständigung enthält. Über das Einstellungssymbol können Sie das Dunkle Design aktivieren oder die automatische Vervollständigung deaktivieren/aktivieren.
+Ein Einstellungssymbol über dem Eingabefeld Abfrage-Editor enthält Optionen zum Aktivieren/Deaktivieren des Dunklen Designs oder Deaktivieren/Aktivieren der automatischen Vervollständigung.
 
 >[!TIP]
 >
->Mit dem erweiterten Abfrage-Editor können Sie [!UICONTROL Automatische Syntaxvervollständigung deaktivieren] beim Verfassen einer Abfrage, ohne den Fortschritt zu verlieren. Wenn Sie die Funktion zum automatischen Vervollständigen während der Bearbeitung deaktivieren, gehen in der Regel alle Änderungen an der Abfrage verloren.
+>Sie können [!UICONTROL Automatische Syntaxvervollständigung deaktivieren] beim Verfassen einer Abfrage, ohne den Fortschritt zu verlieren.
 
 Um dunkle oder helle Themen zu aktivieren, wählen Sie das Einstellungssymbol (![Ein Einstellungssymbol.](../images/ui/query-editor/settings-icon.png)) gefolgt von der Option im angezeigten Dropdown-Menü.
 
 ![Die Optionen Abfrage-Editor mit dem Einstellungssymbol und Dropdown-Menü Dunkles Design aktivieren wurden hervorgehoben.](../images/ui/query-editor/query-editor-settings.png)
 
+#### Automatische Vervollständigung {#auto-complete}
+
+Der Abfrage-Editor schlägt bei der Erstellung der Abfrage automatisch potenzielle SQL-Schlüsselwörter zusammen mit Tabellen- oder Spaltendetails vor. Die Funktion zur automatischen Vervollständigung ist standardmäßig aktiviert und kann jederzeit über die Einstellungen des Abfrage-Editors deaktiviert oder aktiviert werden.
+
+Die Konfigurationseinstellung für die automatische Vervollständigung erfolgt pro Benutzer und wird für die aufeinander folgenden Anmeldungen für diesen Benutzer gespeichert. Die Deaktivierung dieser Funktion verhindert, dass mehrere Metadatenbefehle verarbeitet werden, und bietet Empfehlungen, die in der Regel die Bearbeitung von Abfragen durch den Autor beschleunigt.
+
+<!-- Currently editing the auto complete setting info. -->
+
+
+
 ### Mehrere sequenzielle Abfragen ausführen {#execute-multiple-sequential-queries}
 
-Mit der erweiterten Bearbeitung des Abfrage-Editors können Sie mehr als eine Abfrage im Abfrage-Editor schreiben und alle Abfragen sequenziell ausführen.
-
-Die Ausführung mehrerer Abfragen in einer Sequenz generiert jeweils einen Protokolleintrag. In der Konsole &quot;Abfrage-Editor&quot;werden jedoch nur die Ergebnisse der ersten Abfrage angezeigt. Überprüfen Sie das Abfrageprotokoll, ob Sie eine Fehlerbehebung durchführen oder die ausgeführten Abfragen bestätigen müssen. Siehe [Dokumentation zu Abfrageprotokollen](./query-logs.md) für weitere Informationen.
+Verwenden Sie den erweiterten Abfrage-Editor, um mehr als eine Abfrage zu schreiben und alle Abfragen sequenziell auszuführen. Die Ausführung mehrerer Abfragen in einer Sequenz generiert jeweils einen Protokolleintrag. In der Konsole &quot;Abfrage-Editor&quot;werden jedoch nur die Ergebnisse der ersten Abfrage angezeigt. Überprüfen Sie das Abfrageprotokoll, ob Sie eine Fehlerbehebung durchführen oder die ausgeführten Abfragen bestätigen müssen. Siehe [Dokumentation zu Abfrageprotokollen](./query-logs.md) für weitere Informationen.
 
 >[!NOTE]
 > 
@@ -103,7 +96,7 @@ Ein Bestätigungsdialogfeld wird angezeigt. Auswählen **[!UICONTROL Bestätigen
 
 ![Das Dialogfeld Abbrechen der Abfragebestätigung mit hervorgehobener Bestätigung.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
-### Ergebnisanzahl {#result-count}
+### Ergebniszähler {#result-count}
 
 Der Abfrage-Editor verfügt über eine Ausgabe von maximal 50.000 Zeilen. Sie können die Anzahl der Zeilen auswählen, die gleichzeitig in der Konsole &quot;Abfrage-Editor&quot;angezeigt werden. Um die Anzahl der in der Konsole angezeigten Zeilen zu ändern, wählen Sie die **[!UICONTROL Ergebnisanzahl]** und wählen Sie aus den Optionen 50, 100, 150, 300 und 500 aus.
 
@@ -117,7 +110,7 @@ Der [!UICONTROL Abfrage-Editor] ist so organisiert, dass das Schreiben von Abfra
 
 Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzungen für die Anzahl der zurückgegebenen Zeilen entwickeln. Beispiel: `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Nachdem Sie überprüft haben, ob Ihre Abfrage die erwartete Ausgabe erzeugt, entfernen Sie die Begrenzungen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren.
 
-## Schreib-Tools in [!DNL Query Editor] {#writing-tools}
+## Schreibwerkzeuge im Abfrage-Editor {#writing-tools}
 
 - **Automatische Syntaxhervorhebung**: Erleichtert das Lesen und Organisieren von SQL.
 
@@ -153,50 +146,6 @@ Wählen Sie das Kopiersymbol aus, um SQL aus dem Abfrage-Editor in die Zwischena
 
 ![Der Arbeitsbereich Abfragen mit einer Beispielabfragevorlage mit hervorgehobenem Kopiersymbol.](../images/ui/query-editor/copy-sql.png)
 
-### Umschalter für die Konfiguration der Benutzeroberfläche für die automatische Vervollständigung {#auto-complete}
-
-[!DNL Query Editor] schlägt automatisch potenzielle SQL-Schlüsselwörter zusammen mit Tabellen- oder Spaltendetails für die Abfrage vor, während Sie sie schreiben. Die Funktion zur automatischen Vervollständigung ist standardmäßig aktiviert und kann jederzeit deaktiviert oder aktiviert werden, indem Sie den Umschalter [!UICONTROL Automatische Syntaxvervollständigung] oben rechts im Abfrage-Editor auswählen.
-
-Die Konfigurationseinstellung für die automatische Vervollständigung erfolgt pro Benutzer bzw. Benutzerin und wird für die späteren Anmeldungen dieser Person gespeichert.
-
->[!NOTE]
->
->Der Umschalter für die automatische Vervollständigung der Syntax ist nur für die ältere Version des Abfrage-Editors verfügbar.
-
-![Abfrage-Editor mit hervorgehobenem Umschalter für die automatische Syntaxvervollständigung.](../images/ui/query-editor/auto-complete-toggle.png)
-
-Die Deaktivierung dieser Funktion verhindert, dass mehrere Metadatenbefehle verarbeitet werden, und bietet Empfehlungen, die in der Regel die Bearbeitung von Abfragen durch den Autor beschleunigt.
-
-Wenn Sie den Umschalter verwenden, um die Funktion für die automatische Vervollständigung zu aktivieren, sind nach einer kurzen Pause empfohlene Vorschläge für Tabellen- und Spaltennamen sowie SQL-Schlüsselwörter verfügbar. Eine Erfolgsmeldung in der Konsole unter dem Abfrage-Editor zeigt an, dass die Funktion aktiv ist.
-
-Wenn Sie die Funktion zur automatischen Vervollständigung deaktivieren, ist eine Seitenaktualisierung erforderlich, damit die Funktion wirksam wird. Wenn Sie den Umschalter [!UICONTROL Automatische Syntaxvervollständigung] deaktivieren, wird ein Bestätigungsdialogfeld mit drei Optionen angezeigt:
-
-- [!UICONTROL Abbrechen]
-- [!UICONTROL Änderungen speichern und aktualisieren]
-- [!UICONTROL Ohne Speichern von Änderungen aktualisieren]
-
->[!IMPORTANT]
->
->Wenn Sie eine Abfrage schreiben oder bearbeiten, während Sie diese Funktion deaktivieren, müssen Sie alle Änderungen an Ihrer Abfrage speichern, bevor Sie die Seite aktualisieren. Andernfalls geht der gesamte Fortschritt verloren.
-
-![Das Bestätigungsdialogfeld zum Deaktivieren der Funktion für die automatische Vervollständigung.](../images/ui/query-editor/confirmation-dialog.png)
-
-Um die Funktion zur automatischen Vervollständigung zu deaktivieren, wählen Sie die entsprechende Bestätigungsoption aus.
-
-### Fehlererkennung {#error-detection}
-
-[!DNL Query Editor] validiert eine Abfrage automatisch, während Sie sie schreiben, und bietet dabei eine allgemeine SQL-Validierung und eine spezifische Ausführungsvalidierung. Wenn die Abfrage rot unterstrichen ist (wie in der Abbildung unten), liegt ein Fehler in der Abfrage vor.
-
-<!-- ... Image below needs updating couldn't replicate the effect -->
-
-![Die Eingabe in den Abfrage-Editor, in der SQL rot unterstrichen ist, um einen Fehler anzugeben.](../images/ui/query-editor/syntax-error-highlight.png)
-
-Wenn Fehler erkannt werden, können Sie die spezifischen Fehlermeldungen anzeigen, indem Sie den Mauszeiger über den SQL-Code bewegen.
-
-<!-- ... Image below needs updating couldn't replicate the effect -->
-
-![Ein Dialogfeld mit einer Fehlermeldung.](../images/ui/query-editor/linting-error.png)
-
 ### Details zur Abfrage {#query-details}
 
 Um eine Abfrage im Abfrage-Editor anzuzeigen, wählen Sie eine beliebige gespeicherte Vorlage aus dem [!UICONTROL Vorlagen] Registerkarte. Das Bedienfeld &quot;Abfragedetails&quot;enthält weitere Informationen und Tools zur Verwaltung der ausgewählten Abfrage. Außerdem werden nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie gegebenenfalls geändert hat.
@@ -221,7 +170,7 @@ Nachdem Sie die **[!UICONTROL Als CTAS ausführen]** -Aktion, wird eine Bestäti
 
 ### Speichern von Abfragen {#saving-queries}
 
-Der [!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. Um eine Abfrage zu speichern, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke von [!DNL Query Editor]. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
+Der Abfrage-Editor bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. Um eine Abfrage zu speichern, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke des Abfrage-Editors. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
 
 >[!NOTE]
 >
@@ -233,7 +182,7 @@ Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldun
 
 Abfragen, die als Vorlage gespeichert wurden, können im Abfrage-Editor geplant werden. Mit der Planung von Abfragen können Sie die Ausführung von Abfragen in einem benutzerdefinierten Ordner automatisieren. Sie können Abfragen basierend auf Häufigkeit, Datum und Uhrzeit planen und bei Bedarf auch einen Ausgabedatensatz für Ihre Ergebnisse auswählen. Abfragezeitpläne können auch über die Benutzeroberfläche deaktiviert oder gelöscht werden.
 
-Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Editors können Sie einer bereits erstellten und gespeicherten Abfrage nur einen Zeitplan hinzufügen. Dieselbe Einschränkung gilt nicht für [!DNL Query Service] API.
+Zeitpläne werden im Abfrage-Editor festgelegt. Bei Verwendung des Abfrage-Editors können Sie einer bereits erstellten und gespeicherten Abfrage nur einen Zeitplan hinzufügen. Dasselbe gilt nicht für die Query Service-API.
 
 >[!NOTE]
 >
@@ -246,21 +195,21 @@ Alle geplanten Abfragen werden der Liste im [!UICONTROL Geplante Abfragen] Regis
 
 ### Auffinden früherer Abfragen {#previous-queries}
 
-Alle vom [!DNL Query Editor] ausgeführten Abfragen werden in der Protokolltabelle erfasst. Sie können die Suchfunktion auf der Registerkarte **[!UICONTROL Protokoll]** verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden auf der Registerkarte **[!UICONTROL Vorlagen]** angezeigt.
+Alle vom Abfrage-Editor ausgeführten Abfragen werden in der Tabelle „Protokoll“ erfasst. Sie können die Suchfunktion auf der Registerkarte **[!UICONTROL Protokoll]** verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden auf der Registerkarte **[!UICONTROL Vorlagen]** angezeigt.
 
 Wenn eine Abfrage geplant wurde, bietet die Registerkarte [!UICONTROL Geplante Abfragen] über die Benutzeroberfläche eine verbesserte Sichtbarkeit für diese Abfrageaufträge. Weitere Informationen finden Sie in der [Dokumention zur Abfrageüberwachung](./monitor-queries.md).
 
 >[!NOTE]
 >
->Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage in [!DNL Query Service] verfügbar ist, muss sie im [!DNL Query Editor] ausgeführt oder gespeichert werden.
+>Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage in Query Service verfügbar ist, muss sie im Abfrage-Editor ausgeführt oder gespeichert werden.
 
 ## Ausführen von Abfragen mit dem Abfrage-Editor {#executing-queries}
 
-Um eine Abfrage im [!DNL Query Editor] auszuführen, können Sie SQL im Editor eingeben oder eine frühere Abfrage über die Registerkarte **[!UICONTROL Protokoll]** oder **[!UICONTROL Vorlagen]** laden und auf **Abspielen** klicken. Der Ausführungsstatus der Abfrage wird auf der Registerkarte **[!UICONTROL Konsole]** angezeigt und die Ausgabedaten werden auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt.
+Um eine Abfrage im Abfrage-Editor auszuführen, können Sie SQL im Editor eingeben oder eine frühere Abfrage aus dem **[!UICONTROL Protokoll]** oder **[!UICONTROL Vorlagen]** und wählen Sie **Play**. Der Ausführungsstatus der Abfrage wird auf der Registerkarte **[!UICONTROL Konsole]** angezeigt und die Ausgabedaten werden auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt.
 
 ### Konsole {#console}
 
-Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Service]. Die Konsole zeigt den Verbindungsstatus zum [!DNL Query Service], die ausgeführten Abfragen und alle Fehlermeldungen an, die aus diesen Abfragen resultieren.
+Die Konsole bietet Informationen zum Status und zum Betrieb von Query Service. Die Konsole zeigt den Verbindungsstatus zu Query Service, die ausgeführten Abfragen und alle Fehlermeldungen an, die sich aus diesen Abfragen ergeben.
 
 ![Die Registerkarte „Konsole“ der Abfrage-Editor-Konsole.](../images/ui/query-editor/console.png)
 
@@ -270,7 +219,7 @@ Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Serv
 
 ### Abfrageergebnisse {#query-results}
 
-Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage, die je nach ausgewähltem Ergebnis zwischen 50 und 500 Zeilen der Ergebnisse anzeigt [Ergebnisanzahl](#result-count). Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfragen im [!DNL Query Editor] finden Sie im [Tutorial zum Generieren von Datensätzen](./create-datasets.md).
+Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage, die je nach ausgewähltem Ergebnis zwischen 50 und 500 Zeilen der Ergebnisse anzeigt [Ergebnisanzahl](#result-count). Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfragen im Abfrage-Editor finden Sie im [Tutorial zum Generieren von Datensätzen](./create-datasets.md).
 
 ![Auf der Registerkarte „Ergebnisse“ der Abfrage-Editor-Konsole werden die Ergebnisse einer Abfrageausführung angezeigt.](../images/ui/query-editor/query-results.png)
 
@@ -278,12 +227,18 @@ Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UIC
 
 Query Service bietet Lösungen für eine Vielzahl von Anwendungsfällen in verschiedenen Branchen und Geschäftsszenarien. Diese praktischen Beispiele belegen die Flexibilität und die Wirkung des Dienstes bei der Bewältigung verschiedener Bedürfnisse. nach [Erfahren Sie, wie Query Service für Ihre spezifischen Geschäftsanforderungen von Nutzen sein kann.](../use-cases/overview.md), lesen Sie die umfassende Sammlung von Anwendungsfalldokumenten. Erfahren Sie, wie Sie mithilfe von Query Service Einblicke und Lösungen für eine verbesserte betriebliche Effizienz und Geschäftserfolg erhalten.
 
-## Tutorial-Video zum Ausführen von Abfragen mit [!DNL Query Service] {#query-tutorial-video}
+<!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
+
+## Tutorial zum Ausführen von Abfragen mit Query Service {#query-tutorial-video}
 
 Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Das Video zeigt außerdem die Verwendung einzelner Eigenschaften in einem XDM-Objekt, Adobe-definierte Funktionen und die Verwendung von CREATE TABLE AS SELECT (CTAS)-Abfragen.
+
+>[!NOTE]
+>
+>Die im Video dargestellte Benutzeroberfläche ist veraltet, die im Workflow verwendete Logik bleibt jedoch unverändert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, welche Funktionen im [!DNL Query Editor] verfügbar sind und wie Sie in der Anwendung navigieren, können Sie damit beginnen, Ihre eigenen Abfragen direkt im [!DNL Platform] zu erstellen. Weitere Informationen zum Ausführen von SQL-Abfragen für Datensätze im [!DNL Data Lake] finden Sie im Handbuch zum [Ausführen von Abfragen](../best-practices/writing-queries.md).
+Nachdem Sie wissen, welche Funktionen im Abfrage-Editor verfügbar sind und wie Sie in der Anwendung navigieren, können Sie Ihre eigenen Abfragen direkt in [!DNL Platform]. Weitere Informationen zum Ausführen von SQL-Abfragen für Datensätze im [!DNL Data Lake] finden Sie im Handbuch zum [Ausführen von Abfragen](../best-practices/writing-queries.md).

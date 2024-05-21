@@ -2,10 +2,10 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2030'
-ht-degree: 32%
+source-wordcount: '2454'
+ht-degree: 26%
 
 ---
 
@@ -25,7 +25,7 @@ In der folgenden Tabelle werden die einzelnen verfügbaren Spalten beschrieben.
 
 >[!NOTE]
 >
->Das Symbol für Abonnements von Warnhinweisen befindet sich in jeder Zeile in einer unbenannten Spalte. Weitere Informationen finden Sie im Abschnitt [Abonnements von Warnhinweisen](#alert-subscription).
+>Über das Symbol Abonnements für Warnhinweise (![Ein Symbol für Warnungen-Abonnements.](../images/ui/monitor-queries/alert-subscription-icon.png)) ist in jeder Zeile einer unbenannten Spalte enthalten. Weitere Informationen finden Sie im Abschnitt [Abonnements von Warnhinweisen](#alert-subscription).
 
 | Spalte | Beschreibung |
 |---|---|
@@ -69,7 +69,7 @@ Die [!UICONTROL Geplante Abfragen] -Ansicht bietet verschiedene Inline-Aktionen 
 
 ### Geplante Abfrage deaktivieren oder aktivieren {#disable}
 
-Um eine geplante Abfrage zu deaktivieren, wählen Sie die Auslassungspunkte einer geplanten Abfrage aus, die Sie verwalten möchten, und wählen Sie dann **[!UICONTROL Zeitplan deaktivieren]** aus den Optionen im Popup-Menü. Es wird ein Dialogfeld angezeigt, in dem Sie Ihre Aktion bestätigen können. Auswählen **[!UICONTROL Deaktivieren]** , um Ihre Einstellung zu bestätigen.
+Um eine geplante Abfrage zu deaktivieren, wählen Sie die Auslassungszeichen für die geplante Abfrage aus, die Sie verwalten möchten, und klicken Sie dann auf **[!UICONTROL Zeitplan deaktivieren]** aus den Optionen im Popup-Menü. Es wird ein Dialogfeld angezeigt, in dem Sie Ihre Aktion bestätigen können. Auswählen **[!UICONTROL Deaktivieren]** , um Ihre Einstellung zu bestätigen.
 
 Nachdem eine geplante Abfrage deaktiviert wurde, können Sie den Zeitplan über denselben Prozess aktivieren. Wählen Sie die Auslassungspunkte aus und wählen Sie **[!UICONTROL Zeitplan aktivieren]** aus den verfügbaren Optionen.
 
@@ -79,21 +79,33 @@ Nachdem eine geplante Abfrage deaktiviert wurde, können Sie den Zeitplan über 
 
 ### Geplante Abfrage löschen {#delete}
 
-Um eine geplante Abfrage zu löschen, wählen Sie die Auslassungspunkte einer geplanten Abfrage aus, die Sie verwalten möchten, und klicken Sie dann auf **[!UICONTROL Zeitplan löschen]** aus den Optionen im Popup-Menü. Es wird ein Dialogfeld angezeigt, in dem Sie Ihre Aktion bestätigen können. Auswählen **[!UICONTROL Löschen]** , um Ihre Einstellung zu bestätigen.
+Um eine geplante Abfrage zu löschen, wählen Sie die Auslassungszeichen für die geplante Abfrage aus, die Sie verwalten möchten, und klicken Sie dann auf **[!UICONTROL Zeitplan löschen]** aus den Optionen im Popup-Menü. Es wird ein Dialogfeld angezeigt, in dem Sie Ihre Aktion bestätigen können. Auswählen **[!UICONTROL Löschen]** , um Ihre Einstellung zu bestätigen.
 
-Nachdem eine geplante Abfrage gelöscht wurde, wird sie **not** aus der Liste der geplanten Abfragen entfernt. Die von den Ellipsen bereitgestellten Inline-Aktionen werden entfernt und durch das grau ausgeblendete Symbol Warnhinweis hinzufügen ersetzt. Sie können keine Warnungen für den gelöschten Zeitplan abonnieren. Die Zeile verbleibt in der Benutzeroberfläche, um Informationen über die im Rahmen der geplanten Abfrage durchgeführten Ausführungen bereitzustellen.
+Nachdem eine geplante Abfrage gelöscht wurde, wird sie **not** aus der Liste der geplanten Abfragen entfernt. Die von den Ellipsen bereitgestellten Inline-Aktionen werden entfernt und durch das ausgegraute Symbol Warnhinweis-Abonnement hinzufügen ersetzt. Sie können keine Warnungen für den gelöschten Zeitplan abonnieren. Die Zeile verbleibt in der Benutzeroberfläche, um Informationen über die im Rahmen der geplanten Abfrage durchgeführten Ausführungen bereitzustellen.
 
-![Die Registerkarte Geplante Abfragen mit einer gelöschten geplanten Abfrage und einem ausgegrauten Warnsymbol wurden hervorgehoben.](../images/ui/monitor-queries/post-delete.png)
+![Die Registerkarte Geplante Abfragen mit einer gelöschten geplanten Abfrage und einem ausgegrauten Warnhinweissymbol wurde hervorgehoben.](../images/ui/monitor-queries/post-delete.png)
 
 Wenn Sie die Ausführung dieser Abfragevorlage planen möchten, wählen Sie den Vorlagennamen aus der entsprechenden Zeile aus, um zum Abfrage-Editor zu navigieren, und folgen Sie dann dem [Anweisungen zum Hinzufügen eines Zeitplans zu einer Abfrage](./query-schedules.md#create-schedule) wie in der Dokumentation beschrieben.
 
 ### Warnhinweise abonnieren {#alert-subscription}
 
-Um Warnhinweise für geplante Abfrageausführungen zu abonnieren, wählen Sie die Auslassungspunkte einer geplanten Abfrage aus, die Sie verwalten möchten, und wählen Sie dann **[!UICONTROL Abonnieren]** aus den Optionen im Popup-Menü.
+Um Warnhinweise für geplante Abfrageausführungen zu abonnieren, wählen Sie entweder die `...` (Auslassungszeichen) oder Warnhinweissymbol (![Ein Warnungsabonnementsymbol.](../images/ui/monitor-queries/alert-subscription-icon.png)) für die geplante Abfrage, die Sie verwalten möchten. Das Dropdown-Menü für Inline-Aktionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Abonnieren]** aus den verfügbaren Optionen.
 
-Die [!UICONTROL Warnhinweise] wird geöffnet. Die [!UICONTROL Warnhinweise] -Dialogfeld abonniert sowohl Benachrichtigungen über die Benutzeroberfläche als auch E-Mail-Warnungen. Warnhinweise basieren auf dem Status der Abfrage. Dabei stehen drei Optionen zur Verfügung: `start`, `success` und `failure`. Markieren Sie die entsprechenden Kontrollkästchen und wählen Sie **[!UICONTROL Speichern]** abonnieren. Sie können Warnhinweise abonnieren, solange sie keine [!UICONTROL Zeitstempel der letzten Ausführung] -Wert.
+![Der Arbeitsbereich für geplante Abfragen mit Auslassungspunkten, das Symbol für die Anmeldung und das Dropdown-Menü für Inline-Aktionen werden hervorgehoben.](../images/ui/monitor-queries/subscribe.png)
+
+Die [!UICONTROL Warnhinweise] wird geöffnet. Die [!UICONTROL Warnhinweise] -Dialogfeld abonniert sowohl Benachrichtigungen über die Benutzeroberfläche als auch E-Mail-Warnungen. Es stehen mehrere Optionen für die Anmeldung von Warnhinweisen zur Verfügung: `start`, `success`, `failure`, `quarantine`, und `delay`. Aktivieren Sie die entsprechenden Kontrollkästchen und klicken Sie auf **[!UICONTROL Speichern]**, um zu abonnieren.
 
 ![Der Dialog zu Warnhinweis-Abonnements.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+In der folgenden Tabelle werden die unterstützten Abfragewarnungstypen erläutert:
+
+| Warnungstyp | Beschreibung |
+|---|---|
+| `start` | Dieser Warnhinweis benachrichtigt Sie, wenn eine geplante Abfrage gestartet wird oder mit der Verarbeitung beginnt. |
+| `success` | Dieser Warnhinweis informiert Sie darüber, wenn eine geplante Abfrage erfolgreich ausgeführt wurde, und zeigt an, dass die Abfrage fehlerfrei ausgeführt wurde. |
+| `failed` | Dieser Warnhinweis wird Trigger, wenn eine geplante Abfrage einen Fehler auftritt oder nicht erfolgreich ausgeführt werden kann. Dies hilft Ihnen, Probleme schnell zu identifizieren und zu beheben. |
+| `quarantine` | Dieser Warnhinweis wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird. Wenn Abfragen in die [Quarantänefunktion](#quarantined-queries), werden alle geplanten Abfragen, bei denen zehn aufeinander folgende Ausführungen fehlschlagen, automatisch in [!UICONTROL In Quarantäne] state. Danach müssen Sie eingreifen, bevor weitere Ausführungen erfolgen können. |
+| `delay` | Dieser Warnhinweis benachrichtigt Sie, wenn ein [Verzögerung im Ergebnis einer Abfrageausführung](#query-run-delay) über einen bestimmten Schwellenwert hinaus. Sie können einen benutzerdefinierten Zeitpunkt festlegen, zu dem der Warnhinweis Trigger wird, wenn die Abfrage für diesen Zeitraum ausgeführt wird, ohne dass ein Abschluss oder ein Fehler auftritt. |
 
 >[!NOTE]
 >
@@ -107,7 +119,11 @@ Wählen Sie das Informationssymbol (![Ein Informationssymbol.](../images/ui/moni
 
 ![Registerkarte Geplante Abfragen mit dem Informationssymbol und dem Detailbereich hervorgehoben.](../images/ui/monitor-queries/details-panel.png)
 
-### Quarantäne-Abfragen {#quarantined-queries}
+## Quarantäne-Abfragen {#quarantined-queries}
+
+>[!NOTE]
+>
+>Der Quarantäne-Warnhinweis ist nicht für Ad-hoc-Abfragen zur einmaligen Ausführung verfügbar. Der Quarantäne-Warnhinweis gilt nur für geplante Batch-Abfragen (CTAS und ITAS).
 
 Bei der Registrierung für die Quarantänefunktion wird jede geplante Abfrage, die zehn aufeinander folgende Ausführungen fehlschlägt, automatisch in eine [!UICONTROL In Quarantäne] -Status. Eine Abfrage mit diesem Status wird inaktiv und wird nicht in der geplanten Häufigkeit ausgeführt. Danach müssen Sie eingreifen, bevor weitere Ausführungen erfolgen können. Dadurch werden Systemressourcen geschützt, da Sie die Probleme mit Ihrer SQL vor weiteren Ausführungen überprüfen und korrigieren müssen.
 
@@ -116,6 +132,22 @@ Um eine geplante Abfrage für die Quarantänefunktion zu aktivieren, wählen Sie
 ![Die Registerkarte für geplante Abfragen mit den Auslassungspunkten und Quarantäne aktivieren , die im Dropdown-Menü für Inline-Aktionen hervorgehoben sind.](../images/ui/monitor-queries/inline-enable.png)
 
 Abfragen können während der Erstellung eines Zeitplans auch in die Quarantänefunktion aufgenommen werden. Siehe [Dokumentation zu Abfrageplänen](./query-schedules.md#quarantine) für weitere Informationen.
+
+## Verzögerung bei Abfrage-Ausführung {#query-run-delay}
+
+Halten Sie die Kontrolle über Ihre Berechnungszeiten, indem Sie Warnhinweise für Abfrageverzögerungen einrichten. Sie können die Abfrageleistung überwachen und Benachrichtigungen empfangen, wenn der Status einer Abfrage nach einem bestimmten Zeitraum unverändert bleibt. Verwenden Sie den[!UICONTROL Verzögerung bei Abfrage-Ausführung]&#39; Warnhinweis, der benachrichtigt wird, wenn eine Abfrage nach einem bestimmten Zeitraum weiter verarbeitet wird, ohne abgeschlossen zu sein.
+
+Wenn Sie [Warnhinweise abonnieren](#alert-subscription) Bei geplanten Abfrageausführungen ist einer der verfügbaren Warnhinweise der [!UICONTROL Verzögerung bei Abfrage-Ausführung]. Für diesen Warnhinweis müssen Sie einen Schwellenwert für die auszuführende Zeit festlegen. An diesem Punkt werden Sie über die Verzögerung bei der Verarbeitung informiert.
+
+Um eine Schwellendauer festzulegen, für die die Benachrichtigung Trigger wird, geben Sie entweder eine Zahl in das Texteingabefeld ein oder erhöhen Sie mithilfe der Nach-oben- und Nach-unten-Pfeile um eine Minute. Da der Schwellenwert in Minuten festgelegt wird, beträgt die maximale Dauer für die Beobachtung einer Ausführungsverzögerung einer Abfrage 1440 Minuten (24 Stunden). Der Standardzeitraum für eine Laufzeitverzögerung beträgt 150 Minuten.
+
+>[!NOTE]
+>
+>Eine Abfrage kann nur eine einzige Laufzeitverzögerung aufweisen. Wenn Sie die Verzögerungsschwelle ändern, wird sie für Benutzer, die sich für den Warnhinweis angemeldet haben, und für Ihre gesamte Organisation geändert.
+
+![Das Dialogfeld Warnhinweise auf der Registerkarte für geplante Abfragen mit dem Eingabefeld für die Abfrageausführungsverzögerung wurde hervorgehoben.](../images/ui/monitor-queries/query-run-delay-input.png)
+
+Weitere Informationen finden Sie im Abschnitt Warnhinweise abonnieren . [abonnieren von [!UICONTROL Verzögerung bei Abfrage-Ausführung] Warnungen](#alert-subscription).
 
 ## Filtern von Abfragen {#filter}
 
@@ -157,7 +189,7 @@ Wählen Sie eine ID für die Abfrageausführung aus, um zur Seite mit den Ausfü
 
 ![Der Bildschirm mit den Zeitplandetails mit einer hervorgehobenen Ausführungs-ID.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-## Übersicht über die Ausführung von Abfragen {#query-run-overview}
+## Übersicht der Abfrageausführung {#query-run-overview}
 
 Die [!UICONTROL Übersicht über die Ausführung von Abfragen] enthält Informationen zu einzelnen Ausführungen für diese geplante Abfrage und eine detailliertere Aufschlüsselung des Ausführungsstatus. Auf dieser Seite finden Sie außerdem die Client-Informationen und Details zu Fehlern, die dazu geführt haben, dass die Abfrage fehlschlägt.
 

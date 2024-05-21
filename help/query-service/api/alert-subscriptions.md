@@ -4,27 +4,39 @@ title: Warnungsabonnement-Endpunkt
 description: Dieses Handbuch enthält Beispiele für HTTP-Anfragen und -Antworten für die verschiedenen API-Aufrufe, die Sie mit der Abfrage-Service-API an den Endpunkt für Warnhinweis-Abonnements stellen können.
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2666'
-ht-degree: 87%
+source-wordcount: '3204'
+ht-degree: 69%
 
 ---
 
 # Endpunkt &quot;Warnungsanmeldungen&quot;
 
-Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder über beide empfangen werden. Der Benachrichtigungsinhalt ist für Warnhinweise in Platform und für E-Mail-Warnungen identisch. Derzeit können Abfragewarnungen nur über die [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Mit dem Adobe Experience Platform-Abfrage-Service können Sie Warnhinweise für ungeplante und geplante Abfragen abonnieren. Warnhinweise können per E-Mail, über die Platform-Benutzeroberfläche oder über beide empfangen werden. Der Benachrichtigungsinhalt ist für Warnhinweise in der Plattform und für E-Mail-Warnungen identisch.
+
+## Erste Schritte
+
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der Adobe Experience Platform [Query Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/). Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 >[!IMPORTANT]
 >
 >Um E-Mail-Warnungen zu erhalten, müssen Sie diese Einstellung zunächst in der Benutzeroberfläche aktivieren. Weitere Informationen finden Sie in der Dokumentation zu [Anweisungen zum Aktivieren von E-Mail-Warnhinweisen](../../observability/alerts/ui.md#enable-email-alerts).
 
-In der folgenden Tabelle werden die unterstützten Warnhinweistypen für verschiedene Arten von Abfragen erläutert:
+## Warnungstypen {#alert-types}
 
-| Abfragetyp | Unterstützte Warnhinweistypen |
+In der folgenden Tabelle werden die unterstützten Abfragewarnungstypen erläutert:
+
+>[!IMPORTANT]
+>
+>Die `delay` oder [!UICONTROL Verzögerung bei Abfrage-Ausführung] Der Warnungstyp wird derzeit nicht von der Query Service-API unterstützt. Dieser Warnhinweis benachrichtigt Sie, wenn das Ergebnis einer geplanten Abfrageausführung über einen festgelegten Schwellenwert hinaus verzögert wird. Um diesen Warnhinweis zu verwenden, müssen Sie eine benutzerdefinierte Zeit festlegen, zu der ein Warnhinweis Trigger wird, wenn die Abfrage für diese Dauer ausgeführt wird, ohne dass ein Abschluss oder ein Fehler auftritt. Informationen zum Festlegen dieses Warnhinweises in der Benutzeroberfläche finden Sie im Abschnitt [Abfragepläne](../ui/query-schedules.md#alerts-for-query-status) oder [Anleitung zu Inline-Abfrageaktionen](../ui/monitor-queries.md#query-run-delay).
+
+| Warnungstyp | Beschreibung |
 |---|---|
-| Ad-hoc-Abfragen | `success` oder `failed` Ausführungen. |
-| Geplante Abfragen | `start`, `success` oder `failed` Ausführungen. |
+| `start` | Dieser Warnhinweis benachrichtigt Sie, wenn eine geplante Abfrage gestartet wird oder mit der Verarbeitung beginnt. |
+| `success` | Dieser Warnhinweis informiert Sie darüber, wenn eine geplante Abfrage erfolgreich ausgeführt wurde, und zeigt an, dass die Abfrage fehlerfrei ausgeführt wurde. |
+| `failed` | Dieser Warnhinweis wird Trigger, wenn eine geplante Abfrage einen Fehler auftritt oder nicht erfolgreich ausgeführt werden kann. Dies hilft Ihnen, Probleme schnell zu identifizieren und zu beheben. |
+| `quarantine` | Dieser Warnhinweis wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird. Wenn Abfragen in die Quarantänefunktion aufgenommen werden, wird jede geplante Abfrage, bei der zehn aufeinander folgende Ausführungen fehlschlagen, automatisch in eine [!UICONTROL In Quarantäne] state. Danach müssen Sie eingreifen, bevor weitere Ausführungen erfolgen können. |
 
 >[!NOTE]
 >
@@ -64,7 +76,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflist
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende `-` in absteigender Reihenfolge. Der Standardwert lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
+| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende `-` in absteigender Reihenfolge. Der Standardwert ist `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
 | `pagesize` | Verwenden Sie diesen Parameter, um die Anzahl der Datensätze zu steuern, die Sie vom API-Aufruf pro Seite abrufen möchten. Standardmäßig ist die maximale Anzahl von 50 Datensätzen pro Seite festgelegt. |
 | `page` | Geben Sie die Seitenzahl der zurückgegebenen Ergebnisse an, für die die Datensätze angezeigt werden sollen. |
 | `property` | Filtern Sie die Ergebnisse nach ausgewählten Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die folgenden Eigenschaften ermöglichen das Filtern: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Unterstützte Operatoren sind `==` (gleich). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt den Warnhinweis mit einer übereinstimmenden ID zurück. |
@@ -155,7 +167,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 sowie das `alerts`-Arra
 | `alerts.assetId` | Die Abfrage-ID, die den Warnhinweis mit einer bestimmten Abfrage verknüpft hat. |
 | `alerts.id` | Der Name des Warnhinweises. Dieser Name wird vom Warnhinweis-Service generiert und im Warnhinweis-Dashboard verwendet. Der Name des Warnhinweises besteht aus dem Ordner, in dem der Warnhinweis gespeichert wird, dem `alertType` und der Fluss-ID. Informationen zu den verfügbaren Warnhinweisen finden Sie in der [Dokumentation zum Warnhinweis-Dashboard von Platform](../../observability/alerts/ui.md). |
 | `alerts.status` | Der Warnhinweis weist vier Statuswerte auf: `enabled`, `enabling`, `disabled` und `disabling`. Ein Warnhinweis wartet entweder aktiv auf die Ereignisse, wird für die zukünftige Verwendung angehalten, wobei alle relevanten Abonnenten und Einstellungen beibehalten werden, oder wechselt zwischen diesen Zuständen. |
-| `alerts.alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `alerts.alertType` | Der Typ des Warnhinweises. Für geplante Abfragen stehen fünf Warnhinweisstatus zur Verfügung, obwohl nur vier Warnhinweisstatus für Ad-hoc-Abfragen verfügbar sind. Die `quarantine` Warnhinweis ist nur für geplante Abfragen verfügbar. Außerdem können Sie nur die `delay` Warnhinweis über die Platform-Benutzeroberfläche. Aus diesem Grund `delay` wird hier nicht beschrieben. Die verfügbaren Warnhinweise sind: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li><li>`quarantine`: Wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird.</li></ul> |
 | `alerts._links` | Enthält Informationen zu den verfügbaren Methoden und Endpunkten, mit denen Informationen zu dieser Warnhinweis-ID abgerufen, aktualisiert, bearbeitet oder gelöscht werden können. |
 | `_page` | Das Objekt enthält Eigenschaften zum Beschreiben der Reihenfolge, Größe, Gesamtanzahl der Seiten und der aktuellen Seite. |
 | `_links` | Das Objekt enthält URI-Verweise, die zum Abrufen der nächsten oder vorherigen Seite von Ressourcen verwendet werden können. |
@@ -370,7 +382,7 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 200 sowie alle Warnhinwei
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `assetId` | Die Abfrage-ID, die den Warnhinweis mit einer bestimmten Abfrage verknüpft hat. |
-| `alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `alertType` | Der Typ des Warnhinweises. Für geplante Abfragen stehen fünf Warnhinweisstatus zur Verfügung, obwohl nur vier Warnhinweisstatus für Ad-hoc-Abfragen verfügbar sind. Die `quarantine` Warnhinweis ist nur für geplante Abfragen verfügbar. Außerdem können Sie nur die `delay` Warnhinweis über die Platform-Benutzeroberfläche. Aus diesem Grund `delay` wird hier nicht beschrieben. Die verfügbaren Warnhinweise sind: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li><li>`quarantine`: Wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird.</li></ul> |
 | `subscriptions` | Ein Objekt, das verwendet wird, um die mit den Warnhinweisen verknüpften registrierten E-Mail-IDs von Adobe sowie die Kanäle zu übergeben, in denen die Benutzenden die Warnhinweise erhalten. |
 | `subscriptions.inContextNotifications` | Ein Array von Adobe-registrierten E-Mail-Adressen für Benutzende, die Benachrichtigungen der Benutzeroberfläche für den Warnhinweis abonniert haben. |
 | `subscriptions.emailNotifications` | Eine Reihe von bei Adobe registrierten E-Mail-Adressen von Benutzenden, die sich für den Erhalt von E-Mails für den Warnhinweis angemeldet haben. |
@@ -388,7 +400,7 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Parameter | Beschreibung |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Eine E-Mail-Adresse, die für ein Adobe-Konto registriert ist, wird zur Identifizierung der Personen verwendet, die Warnhinweise abonniert haben. |
-| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende `-` in absteigender Reihenfolge. Der Standardwert lautet `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
+| `orderby` | Das Feld, das die Reihenfolge der Ergebnisse angibt. Die unterstützten Felder sind `created` und `updated`. Hängen Sie dem Eigenschaftsnamen voran mit `+` für aufsteigende `-` in absteigender Reihenfolge. Der Standardwert ist `-created`. Beachten Sie, dass das Pluszeichen (`+`) muss mit `%2B`. Beispiel `%2Bcreated` ist der Wert für eine aufsteigende erstellte Bestellung. |
 | `pagesize` | Verwenden Sie diesen Parameter, um die Anzahl der Datensätze zu steuern, die Sie vom API-Aufruf pro Seite abrufen möchten. Standardmäßig ist die maximale Anzahl von 50 Datensätzen pro Seite festgelegt. |
 | `page` | Geben Sie die Seitenzahl der zurückgegebenen Ergebnisse an, für die die Datensätze angezeigt werden sollen. |
 | `property` | Filtern Sie die Ergebnisse nach ausgewählten Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die folgenden Eigenschaften ermöglichen das Filtern: <ul><li>id</li><li>assetId</li><li>status</li><li>alertType</li></ul> Unterstützte Operatoren sind `==` (gleich). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt den Warnhinweis mit einer übereinstimmenden ID zurück. |
@@ -503,7 +515,7 @@ Bei einer erfolgreichen Antwort wird der HTTP-Status 200 sowie das Array `items`
 | `name` | Der Name des Warnhinweises. Dieser Name wird vom Warnhinweis-Service generiert und im Warnhinweis-Dashboard verwendet. Der Name des Warnhinweises besteht aus dem Ordner, in dem der Warnhinweis gespeichert wird, dem `alertType` und der Fluss-ID. Informationen zu den verfügbaren Warnhinweisen finden Sie in der [Dokumentation zum Warnhinweis-Dashboard von Platform](../../observability/alerts/ui.md). |
 | `assetId` | Die Abfrage-ID, die den Warnhinweis mit einer bestimmten Abfrage verknüpft hat. |
 | `status` | Der Warnhinweis weist vier Statuswerte auf: `enabled`, `enabling`, `disabled` und `disabling`. Ein Warnhinweis wartet entweder aktiv auf die Ereignisse, wird für die zukünftige Verwendung angehalten, wobei alle relevanten Abonnenten und Einstellungen beibehalten werden, oder wechselt zwischen diesen Zuständen. |
-| `alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `alertType` | Der Typ des Warnhinweises. Für geplante Abfragen stehen fünf Warnhinweisstatus zur Verfügung, obwohl nur vier Warnhinweisstatus für Ad-hoc-Abfragen verfügbar sind. Die `quarantine` Warnhinweis ist nur für geplante Abfragen verfügbar. Außerdem können Sie nur die `delay` Warnhinweis über die Platform-Benutzeroberfläche. Aus diesem Grund `delay` wird hier nicht beschrieben. Die verfügbaren Warnhinweise sind: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li><li>`quarantine`: Wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird.</li></ul> |
 | `subscriptions` | Ein Objekt, das verwendet wird, um die mit den Warnhinweisen verknüpften registrierten E-Mail-IDs von Adobe sowie die Kanäle zu übergeben, in denen die Benutzenden die Warnhinweise erhalten. |
 | `subscriptions.inContextNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise über die Benutzeroberfläche bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass die Benutzenden nicht über diesen Kanal benachrichtigt werden. |
 | `subscriptions.emailNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise per E-Mail bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass Benutzende nicht über diesen Kanal benachrichtigt werden. |
@@ -548,7 +560,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `assetId` | Der Warnhinweis ist mit dieser ID verknüpft. Die ID kann entweder eine Abfrage- oder Zeitplan-ID sein. |
-| `alertType` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> |
+| `alertType` | Der Typ des Warnhinweises. Für geplante Abfragen stehen fünf Warnhinweisstatus zur Verfügung, obwohl nur vier Warnhinweisstatus für Ad-hoc-Abfragen verfügbar sind. Die `quarantine` Warnhinweis ist nur für geplante Abfragen verfügbar. Außerdem können Sie nur die `delay` Warnhinweis über die Platform-Benutzeroberfläche. Aus diesem Grund `delay` wird hier nicht beschrieben. Die verfügbaren Warnhinweise sind: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li><li>`quarantine`: Wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird.</li></ul> |
 | `subscriptions` | Ein Objekt, das verwendet wird, um die mit den Warnhinweisen verknüpften registrierten E-Mail-IDs von Adobe sowie die Kanäle zu übergeben, in denen die Benutzenden die Warnhinweise erhalten. |
 | `subscriptions.emailIds` | Ein Array von E-Mail-Adressen zur Identifizierung der Benutzenden, die die Warnhinweise erhalten sollen. Die E-Mail-Adressen **müssen** bei einem Adobe-Konto registriert sein. |
 | `subscriptions.inContextNotifications` | Ein boolescher Wert, der bestimmt, wie Benutzende Benachrichtigungen zu Warnhinweisen erhalten. Der Wert `true` bestätigt, dass Warnhinweise über die Benutzeroberfläche bereitgestellt werden sollten. Der Wert `false` stellt sicher, dass die Benutzenden nicht über diesen Kanal benachrichtigt werden. |
@@ -617,7 +629,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `ALERT_TYPE` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul>Sie müssen den aktuellen Warnhinweistyp im Endpunkt-Namespace angeben, um ihn zu ändern. |
+| `ALERT_TYPE` | Der Typ des Warnhinweises. Für geplante Abfragen stehen fünf Warnhinweisstatus zur Verfügung, obwohl nur vier Warnhinweisstatus für Ad-hoc-Abfragen verfügbar sind. Die `quarantine` Warnhinweis ist nur für geplante Abfragen verfügbar. Außerdem können Sie nur die `delay` Warnhinweis über die Platform-Benutzeroberfläche. Aus diesem Grund `delay` wird hier nicht beschrieben. Die verfügbaren Warnhinweise sind: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li><li>`quarantine`: Wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird.</li></ul>Sie müssen den aktuellen Warnhinweistyp im Endpunkt-Namespace angeben, um ihn zu ändern. |
 | `QUERY_ID` | Die eindeutige Kennung der zu aktualisierenden Abfrage. |
 | `SCHEDULE_ID` | Die eindeutige Kennung der geplanten Abfrage, die aktualisiert werden soll. |
 
@@ -677,7 +689,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `ALERT_TYPE` | Der Typ des Warnhinweises. Es gibt die folgenden drei möglichen Werte für einen Warnhinweis: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li></ul> Die DELETE-Anfrage gilt nur für den jeweils angegebenen Warnhinweistyp. |
+| `ALERT_TYPE` | Der Typ des Warnhinweises. Für geplante Abfragen stehen fünf Warnhinweisstatus zur Verfügung, obwohl nur vier Warnhinweisstatus für Ad-hoc-Abfragen verfügbar sind. Die `quarantine` Warnhinweis ist nur für geplante Abfragen verfügbar. Außerdem können Sie nur die `delay` Warnhinweis über die Platform-Benutzeroberfläche. Aus diesem Grund `delay` wird hier nicht beschrieben. Die verfügbaren Warnhinweise sind: <ul><li>`start`: Benachrichtigt Benutzende, wenn die Ausführung der Abfrage begonnen hat.</li><li>`success`: Benachrichtigt Benutzende, wenn die Abfrage abgeschlossen ist.</li><li>`failure`: Benachrichtigt Benutzende, wenn die Abfrage fehlschlägt.</li><li>`quarantine`: Wird aktiviert, wenn eine geplante Abfrage unter Quarantäne gestellt wird.</li></ul> Die DELETE-Anfrage gilt nur für den jeweils angegebenen Warnhinweistyp. |
 | `QUERY_ID` | Die eindeutige Kennung der zu aktualisierenden Abfrage. |
 | `SCHEDULE_ID` | Die eindeutige Kennung der geplanten Abfrage, die aktualisiert werden soll. |
 
