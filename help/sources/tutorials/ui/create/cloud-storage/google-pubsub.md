@@ -1,12 +1,12 @@
 ---
-title: Erstellen eines Quell-Connectors für Google PubSub in der Benutzeroberfläche
+title: Erstellen einer Google PubSub-Source-Verbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector in der Platform-Benutzeroberfläche erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1099'
-ht-degree: 39%
+source-wordcount: '1098'
+ht-degree: 36%
 
 ---
 
@@ -29,7 +29,8 @@ Wenn Sie bereits über eine gültige [!DNL PubSub]-Verbindung verfügen, können
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um eine Verbindung von [!DNL PubSub] mit Platform herzustellen, müssen Sie einen gültigen Wert für die folgenden Anmeldeinformationen angeben:
+Sie müssen Werte für die unten beschriebenen Verbindungseigenschaften angeben, um Ihre [!DNL PubSub] -Konto auf Experience Platform. Weitere Informationen zur Authentifizierung und zur Einrichtung der Voraussetzungen finden Sie im Abschnitt [[!DNL PubSub source] Übersicht](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 

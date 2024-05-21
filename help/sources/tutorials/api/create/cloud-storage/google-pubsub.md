@@ -3,10 +3,10 @@ title: Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google PubSub-Konto verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 59%
+source-wordcount: '1147'
+ht-degree: 54%
 
 ---
 
@@ -29,7 +29,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um [!DNL Flow Service] mit [!DNL PubSub] zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Sie müssen Werte für die unten beschriebenen Verbindungseigenschaften angeben, um Ihre [!DNL PubSub] -Konto [!DNL Flow Service]. Weitere Informationen zur Authentifizierung und zur Einrichtung der Voraussetzungen finden Sie im Abschnitt [[!DNL PubSub source] Übersicht](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ Um [!DNL Flow Service] mit [!DNL PubSub] zu verbinden, müssen Sie Werte für di
 
 >[!ENDTABS]
 
-Weitere Informationen zu diesen Werten finden Sie in diesem Dokument zur [[!DNL PubSub] Authentifizierung](https://cloud.google.com/pubsub/docs/authentication). Informationen zur Verwendung der auf Service-Konten basierenden Authentifizierung finden Sie in diesem [[!DNL PubSub] Handbuch zum Erstellen von Service-Konten](https://cloud.google.com/docs/authentication/production#create_service_account) in den Schritten zum Erstellen von Anmeldedaten.
+Weitere Informationen zu diesen Werten finden Sie in diesem [[!DNL PubSub] Authentifizierung](https://cloud.google.com/pubsub/docs/authentication) Dokument. Informationen zur Verwendung der kontobasierten Dienstauthentifizierung finden Sie in diesem Abschnitt [[!DNL PubSub] Handbuch zum Erstellen von Dienstkonten](https://cloud.google.com/docs/authentication/production#create_service_account) für Schritte zum Generieren Ihrer Anmeldedaten.
 
 >[!TIP]
 >
