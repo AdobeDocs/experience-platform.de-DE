@@ -1,21 +1,17 @@
 ---
-title: Feldbasierte Workflows im Schema Editor (Beta)
+title: Feldbasierte Workflows im Schema Editor
 description: Erfahren Sie, wie Sie Ihren Experience-Datenmodell (XDM)-Schemas einzeln Felder aus vorhandenen Feldergruppen hinzufügen können.
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
+source-git-commit: b224783922c3b6c5e2045134be2512748ca2575b
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
-# Feldbasierte Workflows im Schema Editor (Beta)
-
->[!IMPORTANT]
->
->Die in diesem Beta-Dokument beschriebenen Workflows sind jetzt allgemein in Adobe Experience Platform verfügbar. Die neuesten Anleitungen zu feldbasierten Workflows im Schema Editor finden Sie im Abschnitt [Handbuch zur Schemabenutzeroberfläche](./resources/schemas.md) anstatt. Dieses Handbuch wird bald entfernt.
+# Feldbasierte Workflows im Schema Editor
 
 Adobe Experience Platform bietet einen robusten Satz standardisierter [Feldergruppen](../schema/composition.md#field-group) zur Verwendung in Experience-Datenmodell (XDM)-Schemas. Die Struktur und die Semantik hinter diesen Feldergruppen sind sorgfältig darauf zugeschnitten, eine Vielzahl von Segmentierungsanwendungsfällen und anderen nachgelagerten Anwendungen in Platform zu erfüllen. Sie können auch eigene benutzerdefinierte Feldergruppen definieren, um individuelle Geschäftsanforderungen zu erfüllen.
 
@@ -35,7 +31,7 @@ Nachdem Sie einem Schema eine Standardfeldgruppe hinzugefügt haben, können Sie
 >
 >Das Entfernen von Feldern aus einer Standardfeldgruppe wirkt sich nur auf das bearbeitete Schema aus und hat keine Auswirkungen auf die Feldergruppe selbst. Wenn Sie Standardfelder in einem Schema entfernen, sind diese Felder weiterhin in allen anderen Schemas verfügbar, die dieselbe Feldergruppe verwenden.
 
-Im folgenden Beispiel wird die Standardfeldgruppe **[!UICONTROL Demografische Details]** wurde einem Schema hinzugefügt. So entfernen Sie ein einzelnes Feld, z. B. `taxId`, wählen Sie das Feld auf der Arbeitsfläche aus und klicken Sie auf **[!UICONTROL Entfernen]** in der rechten Leiste.
+Im folgenden Beispiel wird die Standardfeldgruppe **[!UICONTROL Demografische Details]** wurde zu einem Schema hinzugefügt. So entfernen Sie ein einzelnes Feld wie `taxId`, wählen Sie das Feld auf der Arbeitsfläche aus und klicken Sie auf **[!UICONTROL Entfernen]** in der rechten Leiste.
 
 ![Einzelnes Feld entfernen](../images/ui/field-based-workflows/remove-single-field.png)
 
@@ -61,7 +57,7 @@ under **[!UICONTROL Feldname]**, geben Sie den Namen des Felds ein, das Sie hinz
 
 ![Empfohlene Standardfelder](../images/ui/field-based-workflows/standard-field-search.png)
 
-Einige Standardfelder weisen denselben Namen auf, ihre Struktur kann jedoch je nach der Feldergruppe, aus der sie stammen, variieren. Wenn ein Standardfeld innerhalb eines übergeordneten Objekts in der Feldergruppenstruktur verschachtelt ist, wird das übergeordnete Feld auch im Schema enthalten sein, wenn das untergeordnete Feld hinzugefügt wird.
+Einige Standardfelder weisen denselben Namen auf, ihre Struktur kann jedoch von der Feldergruppe abhängen, aus der sie stammen. Wenn ein Standardfeld innerhalb eines übergeordneten Objekts in der Feldergruppenstruktur verschachtelt ist, wird das übergeordnete Feld auch im Schema enthalten sein, wenn das untergeordnete Feld hinzugefügt wird.
 
 Wählen Sie das Vorschausymbol (![Vorschausymbol](../images/ui/field-based-workflows/preview-icon.png)) neben einem Standardfeld klicken, um die Struktur seiner Feldergruppe anzuzeigen und besser zu verstehen, wie sie verschachtelt sein könnte. Um das Standardfeld zum Schema hinzuzufügen, wählen Sie das Pluszeichen (![Plus-Symbol](../images/ui/field-based-workflows/add-icon.png)).
 

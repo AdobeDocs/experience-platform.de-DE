@@ -2,16 +2,20 @@
 title: XDM Individual Prospect Profile Class
 description: Erfahren Sie mehr über die Klasse "XDM Individual Prospect Profile"im Experience-Datenmodell (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f4ddcf14de7a5cec42b5ebc521203cfdd1498a9f
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 15%
+source-wordcount: '390'
+ht-degree: 16%
 
 ---
 
 # [!UICONTROL XDM Individual Prospect Profile] class
 
 Im Experience-Datenmodell (XDM) wird die [!UICONTROL XDM Individual Prospect Profile] -Klasse erfasst Interessenten-Profile, die normalerweise von Datenpartnern für die wichtigsten Anwendungsfälle der Kundenakquise bezogen werden.
+
+>[!NOTE]
+>
+>Um ein Feld im individuellen XDM-Prospect-Profil als Entität festzulegen, müssen Sie zunächst mindestens einen Partner-ID-Namespace erstellen. Weitere Informationen zur Partner-ID finden Sie im Abschnitt [Identitätstypen](../../identity-service/features/namespaces.md).
 
 ![Das Schemadiagramm der XDM Prospect-Klasse.](../images/classes/individual-prospect-profile.png)
 

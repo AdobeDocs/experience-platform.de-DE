@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Deskriptoren-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
+source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1919'
 ht-degree: 40%
 
 ---
@@ -288,6 +288,10 @@ Um zu bestätigen, dass der Deskriptor gelöscht wurde, können Sie eine [Suchan
 Im folgenden Abschnitt finden Sie zusätzliche Informationen zum Arbeiten mit Deskriptoren im [!DNL Schema Registry] API.
 
 ### Deskriptoren definieren {#defining-descriptors}
+
+>[!NOTE]
+>
+>Die maximale Anzahl von Deskriptoren, die auf ein Schema angewendet werden können, beträgt 4000.
 
 Die folgenden Abschnitte bieten eine Übersicht über die verfügbaren Deskriptortypen, einschließlich der erforderlichen Felder zum Definieren eines Deskriptors für die einzelnen Typen.
 
