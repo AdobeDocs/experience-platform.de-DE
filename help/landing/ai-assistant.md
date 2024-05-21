@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '3122'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Vor der Abfrage des AI-Assistenten müssen zwei Frageklassen beachtet werden:
 
 >[!ENDSHADEBOX]
 
-## Ziele, die Sie mit dem KI-Assistenten erreichen können
+## Ziele, die Sie mit dem KI-Assistenten erreichen können {#objectives}
 
 Sie können den KI-Assistenten für folgende Ziele verwenden:
 
@@ -140,15 +140,15 @@ Um Zitate anzuzeigen und die Antwort der KI-Assistenzkraft zu validieren, wähle
 
 +++
 
-### Datennutzung und -visualisierung {#data-usage-and-visualization}
+### Nutzungsdaten und Visualisierung {#usage-data-and-visualization}
 
-+++Auswählen , um ein Beispiel für Fragen zur Datennutzung und Datenvisualisierung anzuzeigen
++++Auswählen , um ein Beispiel für Nutzungsdatenfragen und Datenvisualisierung anzuzeigen
 
-Damit der KI-Assistent auf eine Abfrage zur Datennutzung in Ihrem Unternehmen antworten kann, müssen Sie sich in einer aktiven Sandbox befinden.
+Damit der KI-Assistent auf eine Abfrage zu Nutzungsdaten in Ihrem Unternehmen antworten kann, müssen Sie sich in einer aktiven Sandbox befinden.
 
 Im folgenden Beispiel wird der AI-Assistent mit der folgenden Abfrage bereitgestellt: **&quot;Zeigen Sie mir Segmentdefinitionen mit mehr als 1000 Profilen an und fügen Sie den Aktivierungsstatus hinzu.&quot;** Der KI-Assistent antwortet dann mit einem Diagramm, das Ihre Segment- und Profildaten visualisiert.
 
-![Folgen Sie der Frage zur Datennutzung.](./images/ai-assistant/data-usage-question.png)
+![Folgen Sie der Frage zu Nutzungsdaten.](./images/ai-assistant/data-usage-question.png)
 
 Sie können den Mauszeiger über eine einzelne Leiste bewegen, um bestimmte Daten anzuzeigen. Sie können auch das Symbol zum Erweitern für eine größere Ansicht des Diagramms auswählen.
 
@@ -158,7 +158,7 @@ Eine erweiterte Ansicht der Visualisierung wird angezeigt. Sie können das erwei
 
 ![Erweiterte Grafik.](./images/ai-assistant/chart-expanded.png)
 
-Wenn Sie mit einer Frage zur Datennutzung aufgefordert werden, erläutert der AI-Assistent, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt der KI-Assistent die Schritte zur Anzeige von Segmentdefinitionen mit mehr als 1000 Profilen und deren Aktivierungsstatus.
+Wenn Sie mit einer Frage zu Nutzungsdaten aufgefordert werden, erläutert der AI-Assistent, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt der KI-Assistent die Schritte zur Anzeige von Segmentdefinitionen mit mehr als 1000 Profilen und deren Aktivierungsstatus.
 
 ![Folgen Sie der Frage zu Segmentdefinitionen, die veranschaulichen, wie der KI-Assistent die Antwort berechnet hat.](./images/ai-assistant/results-explained.png)
 
@@ -204,9 +204,9 @@ Derzeit umfasst der Dokumentationsindex Adobe Experience Platform (Real-Time CDP
 
 Das Modell zum Abrufen der Dokumentation wird auf Experience Platform (Real-Time CDP und Zielgruppen) trainiert. Fragen, die nicht in Adobe Experience Platform enthalten sind, wie z. B. Fragen zu anderen Adobe-Produkten wie Adobe Target und der Creative Cloud Suite, können nicht beantwortet werden.
 
-## Datennutzung {#data-usage}
+## Nutzungsdaten {#usage-date}
 
-Sie können auch Fragen zu Ihrer Datennutzung in den folgenden Domänen stellen:
+Sie können auch Fragen zu Ihren Nutzungsdaten in den folgenden Domänen an den KI-Assistenten stellen:
 
 * Attribute
 * Zielgruppen
@@ -216,21 +216,50 @@ Sie können auch Fragen zu Ihrer Datennutzung in den folgenden Domänen stellen:
 * Schemas _(Fragen zu Feldergruppen können derzeit nicht beantwortet werden.)_
 * Quellen _(Fragen zu den Rechnungsabschlüssen können derzeit nicht beantwortet werden.)_
 
-Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Möglicherweise müssen Sie Ihre Fragen wie folgt formatieren: &quot;Wann war die Zielgruppe mit dem Titel {TITLE} created?&quot; statt &quot;Wann war die {TITLE} Zielgruppe erstellt?&quot;
+Bei Nutzungsdatenabfragen spiegeln Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Darüber hinaus müssen Sie sich bei einer Sandbox anmelden, um spezifische Daten zu Objekten wie Zielgruppen, Schemata, Datensätzen, Attributen und Zielen zu erhalten.
 
-Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten wie Zielgruppen, Schemata, Datensätzen, Attributen und Zielen zu informieren.
+### Beispielhafte Fragen zu Nutzungsdaten {#example-usage-data-questions}
 
-### Beispielhafte Fragen zur Datennutzung {#example-data-usage-questions}
++++Auswählen, um eine Liste mit Beispieldatenfragen zu sehen
 
-+++Auswählen, um eine Liste mit Beispieldatenverwendungsfragen anzuzeigen
+In der folgenden Tabelle finden Sie Beispiele für Nutzungsdatenfragen und die entsprechenden Anwendungsfälle:
 
-| Fragetyp | Beschreibung | Beispiele |
+| Fragetyp | Anwendungsfall | Beispiele |
 | --- | --- | --- | 
-| Datenherkunft | Verwendung eines oder mehrerer Objekte über andere Experience Platform-Objekte hinweg verfolgen | <ul><li>Welche Datensätze werden verwendet? {SCHEMA_NAME} schema?</li><li>Wie viele Datensätze wurden mit demselben Schema erfasst?</li><li>Welche Datensätze wurden in aktivierten Zielgruppen verwendet?</li><li>Listen Sie die Schemas auf, deren Attribute in aktivierten Zielgruppen verwendet werden.</li><li>Anzeigen der Zielgruppen, für die aktiviert sind {DESTINATION_ACCOUNT_NAME} und haben mehr als 1000 Profile.</li><li>Zeigen Sie mir die Attribute an, die in den aktivierten Zielgruppen verwendet werden, die nach Januar 2023 geändert wurden.</li><li>Über welche Datensätze werden erfasst? {SOURCE_NAME}?</li><li>Welche Datenflüsse sind mit {DATAFLOW_NAME}</li><li>Listen Sie die Schemata auf, die für aktivierte Zielgruppen erstellt wurden und im letzten 1 Jahr erstellt wurden.</li></ul> |
-| Verteilung und Aggregationen | Zusammenfassende Fragen zur Verwendung von Experience Platform-Objekten | <ul><li>Wie hoch ist der Prozentsatz der aktivierten Zielgruppen?</li><li>Wie viele Felder werden in der Segmentierung verwendet?</li><li>Welche Zielgruppen werden für die meisten Ziele aktiviert?</li><li>Listen Sie doppelte Zielgruppen auf.</li><li>Anzeigen der aktivierten Zielgruppen für {DESTINATION_ACCOUNT_NAME} und ordnen Sie sie nach Profilgröße an.</li><li>Wie hoch ist der Prozentsatz der Zielgruppen, die nicht aktiviert wurden, aber über mehr als 100 Profile verfügen. Zeigen Sie mir ihre Namen.</li><li>Geben Sie die 3 Quell-Connectoren an, die Daten in meine Datensätze aufnehmen.</li><li>Geben Sie die fünf wichtigsten Attribute an, die in aktivierten Zielgruppen basierend auf ihrem Vorkommen verwendet werden.</li></ul> |
-| Objektsuche | Rufen Sie ein Experience Platform-Objekt oder dessen Eigenschaften ab oder greifen Sie darauf zu. | <ul><li>Welche Datensätze sind mit keinem Schema verknüpft?</li><li>Auflisten der Attribute, die für {AUDIENCE_NAME}?</li><li>Geben Sie mir die Liste der Schemas an, für die Profil aktiviert, aber seit ihrer Erstellung nicht geändert wurde.</li><li>Welche Zielgruppen wurden in der letzten Woche geändert?</li><li>Geben Sie die Zielgruppen an, die über dieselben Segmentdefinitionen und deren Erstellungsdatum verfügen.</li><li>Welche Datensätze sind profilaktiviert und enthalten auch die Anzahl der Zielgruppen, die aus jedem Datensatz erstellt wurden.</li><li>Welche Quellkonten sind mit dem Datensatz XYZ verknüpft?</li><li>Anzeigen der Segmentdefinition und des Änderungsdatums von {AUDIENCE_NAME}.</li></ul> |
+| Datenherkunft | Verwendung eines oder mehrerer Objekte über andere Experience Platform-Objekte hinweg verfolgen | <ul><li>Welche Datensätze verwenden das Schema &quot;ACME schema&quot;?</li><li>Wie viele Datensätze wurden mit demselben Schema erfasst?</li><li>Welche Datensätze wurden in aktivierten Zielgruppen verwendet?</li><li>Listen Sie die Schemas auf, deren Attribute in aktivierten Zielgruppen verwendet werden.</li><li>Zeigen Sie die Zielgruppen an, die für &quot;ACME Destinations&quot;aktiviert sind und mehr als 1000 Profile haben.</li><li>Zeigen Sie mir die Attribute an, die in den aktivierten Zielgruppen verwendet werden, die nach Januar 2023 geändert wurden.</li><li>Welche Datensätze werden über die Quelle &quot;ACME Amazon S3&quot;erfasst?</li><li>Welche Datenflüsse sind mit &quot;ACME Loyalty Dataflow&quot;verknüpft?</li><li>Listen Sie die Schemata auf, die für aktivierte Zielgruppen erstellt wurden und im letzten 1 Jahr erstellt wurden.</li></ul> |
+| Verteilung und Aggregationen | Zusammenfassende Fragen zur Verwendung von Experience Platform-Objekten | <ul><li>Wie hoch ist der Prozentsatz der aktivierten Zielgruppen?</li><li>Wie viele Felder werden in der Segmentierung verwendet?</li><li>Welche Zielgruppen werden für die meisten Ziele aktiviert?</li><li>Listen Sie doppelte Zielgruppen auf.</li><li>Zeigen Sie mir die für &quot;ACME Destinations&quot;aktivierten Zielgruppen an und ordnen Sie sie nach Profilgröße an.</li><li>Wie hoch ist der Prozentsatz der Zielgruppen, die nicht aktiviert wurden, aber über mehr als 100 Profile verfügen. Zeigen Sie mir ihre Namen.</li><li>Geben Sie die 3 Quell-Connectoren an, die Daten in meine Datensätze aufnehmen.</li><li>Geben Sie die fünf wichtigsten Attribute an, die in aktivierten Zielgruppen basierend auf ihrem Vorkommen verwendet werden.</li></ul> |
+| Objektsuche | Rufen Sie ein Experience Platform-Objekt oder dessen Eigenschaften ab oder greifen Sie darauf zu. | <ul><li>Welche Datensätze sind mit keinem Schema verknüpft?</li><li>Geben Sie die Attribute an, die für &quot;ACME Audience&quot;verwendet werden?</li><li>Geben Sie mir die Liste der Schemas an, für die Profil aktiviert, aber seit ihrer Erstellung nicht geändert wurde.</li><li>Welche Zielgruppen wurden in der letzten Woche geändert?</li><li>Geben Sie die Zielgruppen an, die über dieselben Segmentdefinitionen und deren Erstellungsdatum verfügen.</li><li>Welche Datensätze sind profilaktiviert und enthalten auch die Anzahl der Zielgruppen, die aus jedem Datensatz erstellt wurden.</li><li>Welche Quellkonten sind mit dem Datensatz XYZ verknüpft?</li><li>Zeigen Sie mir die Segmentdefinition und das Änderungsdatum von &quot;ACME Audience&quot;an.</li></ul> |
+| Objektvergleich | Identifizierung doppelter Zielgruppen. | <ul><li>Führen Sie basierend auf der Segmentdefinition die Zielgruppen auf, die Dubletten sind.</li><li>Welche doppelten Zielgruppen werden für &quot;ACME Destinations&quot;aktiviert.</li></ul> |
 
 +++
+
+## Formulieren Ihrer Fragen {#phrasing-your-questions}
+
+Sie müssen Ihre Fragen an den KI-Assistenten mit Klarheit und Kontext formulieren, um eine möglichst genaue Antwort zu erhalten. In der folgenden Liste finden Sie Hinweise dazu, wie Sie eine klare Frage mit Kontext stellen:
+
+* Geben Sie Ihre Aufgabe und/oder Frage kurz an.
+* Vermeiden Sie mehrdeutige oder zu komplexe Syntax, um das Verständnis zu erleichtern.
+* Stellen Sie relevanten Kontext zu Ihrer Aufgabe und/oder Frage bereit, da der Kontext AI Assistant bei der Generierung relevanterer Antworten unterstützen kann.
+
+In der folgenden Tabelle finden Sie weitere Anleitungen zu Best Practices, die Sie bei Fragen an den KI-Assistenten beachten sollten:
+
+| Do | Beispiel |
+| --- | --- |
+| <ul><li>Seien Sie spezifisch hinsichtlich des Objekts oder der Informationen, die Sie abrufen oder analysieren möchten.</li><li>Versuchen Sie, Ihre Datenobjektnamen in Anführungszeichen zu setzen. Wenn Sie nur einen Teil des Objektnamens kennen, können Sie dies auch in der Frage angeben.</li><li>Verwendung [Objekt automatisch vervollständigen](./ui-guide.md#use-auto-complete) um AI Assistant dabei zu unterstützen, den Kontext Ihrer Abfrage besser zu verstehen.</li></ul> | <ul><li>Welche Datensätze verwenden das Schema &quot;Luma - Loyalität&quot;?</li><li>Zeigen Sie mir die aktivierten Segmente, deren Namen &quot;Luma&quot;enthalten. Ordnen Sie sie nach Anzahl der Profile.</li></ul> |
+| <ul><li>Vermeiden Sie Mehrdeutigkeit und verwenden Sie klare Sprache</li><li>Verwenden Sie präzise Terminologie, um eine bessere Übersichtlichkeit in Ihrer Abfrage sicherzustellen.</li><li>Versuchen Sie bei Fragen zu Adobe Experience Platform, die Experience Platform-spezifische Terminologie zu verwenden, um die Relevanz der Antworten zu verbessern.</li></ul> | <ul><li>Wie viele Profile habe ich in &quot;ACME Audience&quot;.</li><li>Zeigen Sie mir die fünf wichtigsten XDM-Attribute, die in aktivierten Zielgruppen verwendet werden.</li></ul> |
+| <ul><li>Geben Sie einen Kontext oder ein Kriterium zum Filtern Ihrer Ergebnisse an.</li><li>Verwenden Sie ein Filterkriterium in den Fragen, um das Datenvolumen in der Antwort zu begrenzen.</li></ul> | <ul><li>Zeigen Sie Zielgruppen an, die nicht aktiviert wurden und vor mehr als 6 Monaten erstellt wurden und noch nie geändert wurden.</li><li>Zeigen Sie mir Zielgruppen an, die für &quot;ACME Destination&quot;aktiviert sind und mehr als 10000 Profile aufweisen.</li></ul> |
+
+{style="table-layout:auto"}
+
+| Don&#39;t | Beispiel |
+| --- | --- |
+| Verwenden Sie eine vage oder mehrdeutige Sprache. | <ul><li>Geben Sie mir Informationen zu Datensätzen.</li><li>Wie viele Benutzer habe ich in &quot;ACME Audience&quot;?</li><li>Segmente anzeigen.</li><li>Listenattribute.</li></ul> |
+| Unvollständige Anforderungen stellen. | &quot;Luma - Loyalitätsdatensatz&quot; |
+| Vermutlich Wissen ohne Kontext. | <ul><li>Zielgruppen in den letzten 6 Monaten.</li><li>Erstellen Sie eine Abfrage für mich.</li></ul> |
+| Formulieren Sie zu komplexe Abfragen. | Stellen Sie eine umfassende Analyse der Datenherkunft über alle Objekte und deren Abhängigkeiten hinweg bereit. |
+| Kriterien oder Parameter auslassen. | Zeigen Sie mir Datensätze an. |
+
+{style="table-layout:auto"}
 
 ## Feedback geben {#feedback}
 
