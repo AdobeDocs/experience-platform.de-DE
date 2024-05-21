@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4274'
-ht-degree: 80%
+source-wordcount: '4334'
+ht-degree: 78%
 
 ---
 
@@ -85,7 +85,11 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | [!UICONTROL Löschen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängig sind **cannot** gelöscht werden. Weitere Informationen zum Löschen von Zielgruppen finden Sie im [Segmentierungs-FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Zu Paket hinzufügen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verschiebt die Zielgruppe zwischen Sandboxes. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Sandbox-Werkzeugleitfaden](../../sandboxes/ui/sandbox-tooling.md). |
 
-Oben auf der Seite finden Sie Optionen zum Hinzufügen aller Zielgruppen zu einem Zeitplan, zum Importieren einer Zielgruppe, zum Erstellen einer neuen Zielgruppe und zum Anzeigen einer Aufschlüsselung der Aktualisierungshäufigkeit.
+>[!IMPORTANT]
+>
+>Stellen Sie vor dem Löschen Ihrer Audience sicher, dass die Audience **not** wird als Komponente in einer kontobasierten Zielgruppe verwendet oder in Adobe Journey Optimizer verwendet.
+
+Oben auf der Seite finden Sie Optionen zum Hinzufügen aller Zielgruppen zu einem Zeitplan, zum Importieren einer Zielgruppe, zum Erstellen einer neuen Zielgruppe und zum Anzeigen einer Zusammenfassung der Zielgruppenbewertung.
 
 Durch Umschalten auf **[!UICONTROL Alle Zielgruppen planen]** wird die geplante Segmentierung aktiviert. Weitere Informationen zur geplanten Segmentierung finden Sie im [Abschnitt „Geplante Segmentierung“ in diesem Benutzerhandbuch](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ Durch Auswahl von **[!UICONTROL Zielgruppe erstellen]** können Sie eine Zielgru
 
 ![Die obere Navigationsleiste auf der Seite zum Durchsuchen von Zielgruppen ist hervorgehoben. Diese Leiste enthält eine Schaltfläche zum Erstellen einer Zielgruppe und eine Schaltfläche zum Importieren einer Zielgruppe.](../images/ui/overview/browse-audiences-top.png)
 
-Sie können **[!UICONTROL Zusammenfassung der Aktualisierungshäufigkeit]** um ein Kreisdiagramm mit der Aktualisierungshäufigkeit anzuzeigen.
+Sie können **[!UICONTROL Auswertungszusammenfassung]** , um ein Tortendiagramm mit einer Zusammenfassung der Zielgruppenbewertungen anzuzeigen.
 
-![Die Schaltfläche Update frequency summary ist hervorgehoben.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![Die Schaltfläche Bewertungszusammenfassung ist hervorgehoben.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-Das Tortendiagramm wird mit einer Aufschlüsselung der Zielgruppen nach Aktualisierungshäufigkeit angezeigt. Das Diagramm zeigt die Gesamtzahl der Zielgruppen in der Mitte und die tägliche Batch-Auswertungszeit in UTC am unteren Rand. Wenn Sie den Mauszeiger über die verschiedenen Teile der Audience bewegen, wird die Anzahl der Zielgruppen angezeigt, die zu den verschiedenen Aktualisierungshäufigkeit gehören.
+Das Tortendiagramm wird mit einer Aufschlüsselung der Zielgruppen nach Zielgruppenevaluierung angezeigt. Das Diagramm zeigt die Gesamtzahl der Zielgruppen in der Mitte und die tägliche Batch-Auswertungszeit in UTC am unteren Rand. Wenn Sie den Mauszeiger über die verschiedenen Teile der Audience bewegen, wird die Anzahl der Zielgruppen angezeigt, die zu den verschiedenen Aktualisierungshäufigkeit gehören.
 
-![Das Diagramm für Aktualisierungshäufigkeit wird hervorgehoben, wobei auch die Auswertungszeit für die Batch-Segmentierung angezeigt wird.](../images/ui/overview/update-frequency-chart.png)
+![Das Kreisdiagramm zur Zielgruppenauswertung wird hervorgehoben, wobei auch die Auswertungszeit für die Batch-Segmentierung angezeigt wird.](../images/ui/overview/evaluation-summary.png)
 
 ### Anpassen {#customize}
 
@@ -203,7 +207,7 @@ Die Liste der verfügbaren Filter wird angezeigt.
 | [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Zielgruppe. Zu den verfügbaren Optionen gehören: Segmentierungs-Service, Benutzerdefinierter Upload, Zielgruppenkomposition und Audience Manager. |
 | [!UICONTROL Hat ein beliebiges Tag] | Filtert nach Tags. Sie können zwischen **[!UICONTROL Hat ein beliebiges Tag]** und **[!UICONTROL Hat alle Tags]** wählen. Wenn **[!UICONTROL Hat ein beliebiges Tag]** ausgewählt ist, enthalten die gefilterten Zielgruppen **jedes** der Tags, die Sie hinzugefügt haben. Wenn **[!UICONTROL Hat alle Tags]** ausgewählt ist, müssen die gefilterten Zielgruppen **alle** der von Ihnen hinzugefügten Tags enthalten. |
 | [!UICONTROL Lebenszyklusstatus] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Verfügbare Optionen umfassen [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaaktiv], und [!UICONTROL Veröffentlicht]. |
-| [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht die Filterung nach der Aktualisierungshäufigkeit der Zielgruppe. Verfügbare Optionen umfassen [!UICONTROL Geplant], [!UICONTROL Kontinuierlich] und [!UICONTROL Nach Bedarf]. |
+| [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht die Filterung nach der Aktualisierungshäufigkeit der Zielgruppe (Auswertungsmethode). Verfügbare Optionen umfassen [!UICONTROL Geplant], [!UICONTROL Kontinuierlich] und [!UICONTROL Nach Bedarf]. |
 | [!UICONTROL Erstellt von] | Ermöglicht die Filterung nach der Person, die die Zielgruppe erstellt hat. |
 | [!UICONTROL Erstellungsdatum] | Ermöglicht die Filterung nach dem Erstellungsdatum der Zielgruppe. Sie können einen Datumsbereich auswählen, um danach zu filtern, wann die Zielgruppe erstellt wurde. |
 | [!UICONTROL Änderungsdatum] | Damit können Sie nach dem letzten Änderungsdatum der Zielgruppe filtern. Sie können einen Datumsbereich auswählen, um danach zu filtern, wann die Zielgruppe zuletzt geändert wurde. |
@@ -329,6 +333,10 @@ Wenn Sie **[!UICONTROL Regel erstellen]** auswählen, gelangen Sie zum Segment B
 ![Der Segment Builder-Arbeitsbereich wird angezeigt.](../images/ui/overview/segment-builder.png)
 
 ### Importieren einer Zielgruppe {#import-audience}
+
+>[!IMPORTANT]
+>
+>Um eine extern generierte Zielgruppe zu importieren, müssen Sie **must** über die folgenden Berechtigungen verfügen: [!UICONTROL Segmente anzeigen], [!UICONTROL Segmente verwalten], und [!UICONTROL Audience importieren]. Weitere Informationen zu diesen Berechtigungen finden Sie im Abschnitt [Zugriffskontrolle - Übersicht](../../access-control/home.md#permissions).
 
 Sie können **[!UICONTROL Zielgruppe importieren]** auswählen, um eine extern generierte Zielgruppe zu importieren.
 

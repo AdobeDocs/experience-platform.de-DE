@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
+source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
 workflow-type: tm+mt
-source-wordcount: '3976'
-ht-degree: 23%
+source-wordcount: '4056'
+ht-degree: 22%
 
 ---
 
@@ -29,7 +29,7 @@ Ja, extern generierte, vordefinierte Zielgruppen werden in Audience Portal unter
 
 ### Welche Berechtigungen benötige ich, um extern generierte Zielgruppen hochzuladen?
 
-Um extern generierte Zielgruppen hochzuladen, benötigen Sie die Berechtigungen &quot;Zielgruppen/Segmente anzeigen&quot;, &quot;Zielgruppen/Segmente verwalten&quot;, &quot;Datensätze anzeigen&quot;, &quot;Datensätze verwalten&quot;, &quot;Quellen anzeigen&quot;und &quot;Quellen verwalten&quot;. Zum Hochladen extern generierter Zielgruppen sind keine bestimmten rollenbasierten Steuerelemente erforderlich.
+Um extern generierte Zielgruppen hochladen zu können, benötigen Sie die Berechtigungen &quot;Segmente anzeigen&quot;, &quot;Segmente verwalten&quot;und &quot;Zielgruppen importieren&quot;. Zum Hochladen extern generierter Zielgruppen sind keine bestimmten rollenbasierten Steuerelemente erforderlich.
 
 ### Was passiert, wenn ich eine extern generierte Zielgruppe hochlade?
 
@@ -198,6 +198,14 @@ Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe m
 >Sie können nur Zielgruppen löschen, die **not** bei jeder nachgelagerten Aktivierung verwendet werden. Darüber hinaus können Sie keine Zielgruppe löschen, auf die in einer anderen Zielgruppe verwiesen wird. Wenn Sie Ihre Audience nicht löschen können, stellen Sie bitte sicher, dass Sie **not** Verwendung in nachfolgenden Diensten oder als Baustein einer anderen Zielgruppe.
 
 Sie können eine Zielgruppe in den Löschstatus versetzen, indem Sie das Schnellaktionsmenü in Audience Portal öffnen und [!UICONTROL Löschen].
+
+### Gibt es Einschränkungen bei Übergängen vom Lebenszyklusstatus?
+
+Ja, es gibt Einschränkungen, die Sie beachten müssen, wenn Sie Zielgruppen in nachgelagerten Diensten wie Adobe Journey Optimizer oder nicht kundenbasierten Zielgruppen wie kontobasierten Zielgruppen verwenden.
+
+Zu diesem Zeitpunkt **must** manuell überprüfen, ob die Audience in Adobe Journey Optimizer nachgelagert verwendet wird, da dieser Status derzeit nicht automatisch überprüft wird.
+
+Darüber hinaus haben Sie **must** manuell überprüfen, ob die Audience als Komponente einer kontobasierten Audience verwendet wird, da dieser Status derzeit ebenfalls nicht automatisch überprüft wird.
 
 ### Beeinflusst die Verwendung einer Zielgruppe als untergeordnete Zielgruppe die Transitionen des Lebenszyklusstatus?
 
