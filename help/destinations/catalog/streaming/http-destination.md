@@ -4,10 +4,10 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 78%
+source-wordcount: '2639'
+ht-degree: 71%
 
 ---
 
@@ -62,6 +62,20 @@ Um Daten aus Experience Platform mithilfe des HTTP-API-Ziels zu exportieren, mü
 >[!TIP]
 >
 > Sie können auch das [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) verwenden, um eine Integration einzurichten und Profildaten von Experience Platform an einen HTTP-Endpunkt zu senden.
+
+## mTLS-Protokollunterstützung und -Zertifikat {#mtls-protocol-support}
+
+Sie können [!DNL Mutual Transport Layer Security] ([!DNL mTLS]), um eine verbesserte Sicherheit bei ausgehenden Verbindungen zu Ihren HTTP-API-Zielverbindungen zu gewährleisten.
+
+[!DNL mTLS] ist eine durchgängige Sicherheitsmethode für die gegenseitige Authentifizierung, die sicherstellt, dass beide Parteien, die Informationen teilen, diejenigen sind, die sie vorgeben, vor der Datenweitergabe zu sein. [!DNL mTLS] umfasst einen zusätzlichen Schritt im Vergleich zu [!DNL TLS], in dem der Server auch das Zertifikat des Kunden anfordert und es auf dessen Ende überprüft.
+
+Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] Ziele, die Server-Adresse, die Sie in die [Zieldetails](#destination-details) muss die Seite [!DNL TLS] Protokolle deaktiviert und nur [!DNL mTLS] aktiviert. Wenn die Variable [!DNL TLS] Das 1.2-Protokoll ist weiterhin am -Endpunkt aktiviert, kein Zertifikat wird für die Client-Authentifizierung gesendet. Das bedeutet, dass [!DNL mTLS] mit [!DNL HTTP API] Ziel, muss Ihr &quot;Empfangs-Server-Endpunkt&quot;ein [!DNL mTLS]-Nur aktivierter Verbindungsendpunkt.
+
+### Zertifikat herunterladen {#certificate}
+
+Wenn Sie die Variable [!DNL Common Name] (KN) und [!DNL Subject Alternative Names] (SAN) Um eine zusätzliche Validierung von Drittanbietern durchzuführen, können Sie das folgende Zertifikat herunterladen:
+
+* [Öffentliches HTTP-API-mTLS-Zertifikat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 
@@ -165,12 +179,12 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen fü
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Segmentnamen einschließen"
->abstract="Schalten Sie diese Option ein, wenn der Datenexport die Namen der zu exportierenden Zielgruppen enthalten soll. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
+>abstract="Schalten Sie ein, wenn der Datenexport die Namen der Zielgruppen enthalten soll, die exportiert werden sollen. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Zeitstempel für Segmente einschließen"
->abstract="Schalten Sie diese Option ein, wenn der Datenexport den UNIX-Zeitstempel enthalten soll, an dem die Zielgruppen erstellt und aktualisiert wurden, sowie den UNIX-Zeitstempel, an dem die Zielgruppen dem Ziel für die Aktivierung zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
+>abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Zielgruppen den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Zielgruppen zur Aktivierung dem Ziel zugeordnet wurden. In der Dokumentation finden Sie ein Beispiel für einen Datenexport mit dieser Option."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
