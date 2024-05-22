@@ -3,9 +3,9 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1106'
 ht-degree: 9%
 
 ---
@@ -125,21 +125,13 @@ Um mehrere Zielgruppen aus vorhandenen Aktivierungsabläufen zu entfernen, wähl
 
 ![Bildschirm mit den Aktivierungsdaten, der die Option Zielgruppen entfernen hervorhebt.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Export mehrerer Dateien On-Demand an Batch-Ziele {#bulk-export}
-
->[!NOTE]
->
-Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+### Mehrere Dateien On-Demand an Batch-Ziele exportieren {#bulk-export}
 
 Sie können [mehrere Dateien On-Demand exportieren](../ui/export-file-now.md) aus dem **[!UICONTROL Aktivierungsdaten]** Seite. Wählen Sie dazu die Zielgruppen aus, für die Sie Dateien bei Bedarf exportieren möchten, und wählen Sie die **[!UICONTROL Datei jetzt exportieren]** -Steuerelement, um einen einmaligen Export Trigger, der eine Datei für jede ausgewählte Zielgruppe an Ihr Batch-Ziel sendet.
 
 ![Bild, das die Schaltfläche Datei jetzt exportieren markiert](../assets/ui/details-page/bulk-export-file-now.png)
 
-### [!BADGE Beta]{type=Informative} Bearbeiten Sie die Aktivierungszeitpläne für mehrere Zielgruppen, die an Batch-Ziele exportiert werden {#bulk-edit-schedule}
-
->[!NOTE]
->
-Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+### Bearbeiten von Aktivierungszeitplänen für mehrere Zielgruppen, die an Batch-Ziele exportiert werden {#bulk-edit-schedule}
 
 Um den vorhandenen Aktivierungszeitplan für mehrere Zielgruppen gleichzeitig zu bearbeiten, wählen Sie die gewünschten Zielgruppen aus und klicken Sie auf **[!UICONTROL Zeitplan bearbeiten]**. Ausführliche Informationen zum Definieren oder Bearbeiten eines Exportzeitplans finden Sie im Abschnitt [Zielgruppenexport planen](../ui/activate-batch-profile-destinations.md#scheduling) Abschnitt.
 

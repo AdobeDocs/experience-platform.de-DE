@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '3879'
-ht-degree: 58%
+source-wordcount: '3937'
+ht-degree: 51%
 
 ---
 
@@ -77,7 +77,7 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 >
 >Sie können Zielgruppen aus vorhandenen Aktivierungsflüssen aus der **[!UICONTROL Aktivierungsdaten]** Seite. Siehe [dedizierte Dokumentation](../ui/destination-details-page.md#bulk-remove) für Details.
 
-## Planen eines Zielgruppenexports {#scheduling}
+## Zielgruppenexport planen {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -105,12 +105,12 @@ Experience Platform legt automatisch einen Standardzeitplan für jeden Dateiexpo
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Dateiexportoptionen"
->abstract="Wählen Sie **Vollständige Dateien exportieren**, um einen vollständigen Schnappschuss aller Profile zu exportieren, die für die Zielgruppe qualifiziert sind. Wählen Sie **Inkrementelle Dateien exportieren**, um nur die Profile zu exportieren, die sich seit dem letzten Export für die Zielgruppe qualifiziert haben. <br> Der erste inkrementelle Dateiexport umfasst alle Profile, die für die Zielgruppe qualifiziert sind und als Aufstockung fungieren. Die folgenden inkrementellen Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für die Zielgruppe qualifiziert haben."
+>abstract="Auswählen **Exportieren von vollständigen Dateien** um eine vollständige Momentaufnahme aller Profile zu exportieren, die für die Zielgruppe qualifiziert sind. Auswählen **Inkrementelle Dateien exportieren** um nur die Profile zu exportieren, die sich seit dem letzten Export für die Audience qualifiziert haben. <br> Der erste inkrementelle Dateiexport umfasst alle Profile, die sich für die Zielgruppe qualifizieren und als Aufstockung fungieren. Zukünftige inkrementelle Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für die Zielgruppe qualifiziert haben."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de#export-incremental-files" text="Exportieren von inkrementellen Dateien"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Aktivieren nach der Zielgruppenauswertung"
+>title="Aktivieren nach Zielgruppenbewertung"
 >abstract="Die Aktivierung erfolgt unmittelbar nach Abschluss des täglichen Segmentierungsvorgangs. Dadurch wird sichergestellt, dass die aktuellen Profile exportiert werden."
 
 >[!CONTEXTUALHELP]
@@ -256,7 +256,7 @@ In diesem Schritt müssen Sie die Profilattribute auswählen, die Sie zu den an 
 
    ![Modales Fenster mit Profilattributen, die an das Ziel exportiert werden können](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative}
+1. (Optional) Die Reihenfolge der zugeordneten Felder in der Benutzeroberfläche spiegelt sich in der Reihenfolge der Spalten in der exportierten CSV-Datei wider, von oben nach unten, wobei die oberste Zeile die ganz links in der CSV-Datei liegende Spalte ist. Sie können die zugeordneten Felder beliebig neu anordnen, indem Sie die Zuordnungszeilen wie unten dargestellt per Drag-and-Drop verschieben.
 
    >[!NOTE]
    >
@@ -500,13 +500,13 @@ Dateiexporte variieren je nach dem, ob `segmentMembership.status` ausgewählt is
 * Wenn das Feld `segmentMembership.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
 * Wenn die Variable `segmentMembership.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur die **[!UICONTROL aktiven]** Mitglieder.
 
-## Auswählen von Anreicherungsattributen {#select-enrichment-attributes}
+## Anreicherungsattribute auswählen {#select-enrichment-attributes}
 
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
-title="Ausschließen von Anreicherungsattributen"
+title="Anreicherungsattribute ausschließen"
 abstract="Aktivieren Sie diese Option, um die Profile aus den ausgewählten benutzerdefinierten, hochgeladenen Zielgruppen zu exportieren und dabei alle zugehörigen Attribute auszuschließen."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de#select-enrichment-attributes" text="Weitere Informationen finden Sie in der Dokumentation"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Weitere Informationen finden Sie in der Dokumentation"
 
 >[!IMPORTANT]
 >
@@ -543,10 +543,10 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Aktuelle Einverständnisrichtlinien anzeigen"
-abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Diese Option ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten Produkte hat."
+title="Geltende Einverständnisrichtlinien anzeigen"
+abstract="Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Dieses Steuerelement ist deaktiviert, wenn Ihr Unternehmen keinen Zugriff auf die oben genannten SKUs hat."
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
 ### Prüfungen von Datennutzungsrichtlinien {#data-usage-policy-checks}
 
