@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Mai 2024
 description: Versionshinweise Mai 2024 für Adobe Experience Platform.
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 24%
+source-wordcount: '1596'
+ht-degree: 23%
 
 ---
 
@@ -71,9 +71,9 @@ Adobe Experience Platform Data Governance besteht aus einer Reihe von Strategien
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| Neuanordnen von Zuordnungsfeldern für Batch-Ziele | Sie können jetzt die Reihenfolge der Spalten in Ihren CSV-Exporten ändern, indem Sie die Zuordnungsfelder per Drag-and-Drop in die [Zuordnungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Die Reihenfolge der zugeordneten Felder in der Benutzeroberfläche entspricht der Reihenfolge der Spalten in der exportierten CSV-Datei von oben nach unten, wobei die oberste Zeile die ganz links in der CSV-Datei ist. |
+| Neuanordnen von Zuordnungsfeldern für Batch-Ziele | Sie können jetzt die Reihenfolge der Spalten in Ihren CSV-Exporten ändern, indem Sie die Zuordnungsfelder per Drag-and-Drop in die [Zuordnungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#mapping). Die Reihenfolge der zugeordneten Felder in der Benutzeroberfläche entspricht der Reihenfolge der Spalten in der exportierten CSV-Datei von oben nach unten, wobei die oberste Zeile die ganz links in der CSV-Datei ist. <br> ![Erfahren Sie, wie Zuordnungen neu angeordnet werden können.](../2024/assets/may/reorder-mappings.gif "Erfahren Sie, wie Zuordnungen neu angeordnet werden können."){width="100" zoomable="yes"} |
 | Vorgewählte standardmäßige Exportzeitpläne für Batch-Ziele | Experience Platform legt nun automatisch einen Standardzeitplan für jeden Dateiexport fest. Siehe die Dokumentation unter [Zielgruppenexporte planen](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) , um zu erfahren, wie Sie den Standardzeitplan ändern. |
-| Mehrere Zielgruppenaktivierungszeitpläne für Batch-Ziele bearbeiten | Sie können jetzt den Aktivierungsplan für mehrere Zielgruppen über die [Zieldetailseite](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| Mehrere Zielgruppenaktivierungszeitpläne für Batch-Ziele bearbeiten | Sie können jetzt den Aktivierungsplan für mehrere Zielgruppen bearbeiten, die aus dem **[!UICONTROL Aktivierungsdaten]** des [Zieldetailseite](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![Hier erfahren Sie, wie Sie mehrere Zielgruppen auswählen und den Zeitplan für den Dateiexport bearbeiten.](../2024/assets/may/bulk-edit-schedule.gif "Hier erfahren Sie, wie Sie mehrere Zielgruppen auswählen und den Zeitplan für den Dateiexport bearbeiten."){width="100" zoomable="yes"} |
 | Mehrere Zielgruppen On-Demand an Batch-Ziele exportieren | Sie können jetzt mehrere Zielgruppen über die [Exportieren von Dateien On-Demand](../../destinations/ui/export-file-now.md) Funktionalität. |
 
 {style="table-layout:auto"}
