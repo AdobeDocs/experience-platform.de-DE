@@ -2,10 +2,10 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
+source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 87%
+source-wordcount: '1438'
+ht-degree: 74%
 
 ---
 
@@ -17,7 +17,15 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 >
 >Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen des [AppMeasurement JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Siehe Abschnitt [AppMeasurement-Versionshinweise](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) für Details zu den spezifischen Versionen, die unten erwähnt werden.
 
-## 15. September 2023
+## 4. März 2024
+
+**Adobe Analytics-Erweiterung 1.9.4**
+
+**Funktionen**:
+
+* Aktualisiert auf [AppMeasurement auf v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+
+## 15. September 2023
 
 **Adobe Analytics-Erweiterung 1.9.3**
 
@@ -35,11 +43,12 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Aktualisiert auf [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Eine optionale Konfiguration wurde hinzugefügt (`decodeLinkParameters` default `false`), die Link-URLs dekodieren, die doppelt byte-kodierte Zeichen enthalten.
 
-**Fehlerkorrekturen**:
-* Zusätzliche Fehlerbehebung für Browser mit defekter hochentropischer Auflösung [Benutzeragenten-Clienthinweise](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=de) APIs.
+**Fehlerbehebungen**:
+
+* Zusätzliche Fehlerbehebung für Browser mit defekter hochentropischer Auflösung [Benutzeragenten-Clienthinweise](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) APIs.
 * Geändert [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Zu verwendender Content-Type-Header `x-www-form-urlencoded` Standardmäßig.
 
-## 23. September 2022
+## 23. September 2022
 
 **Adobe Analytics-Erweiterung 1.9.1**
 
@@ -52,23 +61,23 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.9.0**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Es wurden einige Debug-Anweisungen im AppMeasurement entfernt.
 
-## 29. November 2021
+## Dienstag, 29. November 2021
 
 **Adobe Analytics-Erweiterung 1.8.8**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
-* AppMeasurement wurde auf Version 2.22.3 aktualisiert.
+* AppMeasurement auf Version 2.2.3 aktualisiert.
 
 ## 16. September 2021
 
 **Adobe Analytics-Erweiterung 1.8.7**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * AppMeasurement wurde auf Version 2.22.2 aktualisiert.
 * Nicht mehr unterstützte Umgebung „buildInfo.environment“ entfernt
@@ -77,7 +86,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.8.6**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * [AppMeasurement wurde auf Version 2.22.1 aktualisiert](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de).
 * Der Fallback-linkName wurde aktualisiert und spiegelt nun die Activity Map-Logik statt der Verwendung von innerHTML wider.
@@ -86,7 +95,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.8.5**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * In den Einstellungen für das AAM-Modul wurde der falsche Cookie-Name festgelegt, wenn das entsprechende Feld leer gelassen wurde. Dieser Fehler wurde nun behoben.
 
@@ -99,7 +108,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.8.4**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Es wurde ein Fehler behoben, durch den die Warenkorbereignisse (prodView, scAdd, scView usw.) nicht im Ereignis-Dropdown-Menü angezeigt wurden. All diese Optionen sollten jetzt aus der Dropdown-Liste ausgewählt werden können.
 
@@ -113,7 +122,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.8.3**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Es wurde ein Fehler behoben, der sich auf die Regelkonfiguration auswirkte und einen Fehler auslöste, wenn Sie versuchten, Variablen festzulegen, während Sie eine benutzerdefinierte Bibliothek verwendeten und Ihre Report Suites nicht in Analytics konfiguriert worden waren.
 * Beim Erstellen einer eVar trat ein Fehler auf, durch den nicht die Option zum „Duplizieren von“ einer Prop oder umgekehrt angezeigt wurde. Dieses Problem wurde nun behoben, sodass das Verhalten dem in früheren Versionen entspricht.
@@ -126,7 +135,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.8.2**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Es wurde ein Problem behoben, bei dem eine falsche Syntax für numerische Ereignisse und serialisierte Währung verwendet wurde.
 
@@ -143,7 +152,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.8.1**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Es wurde ein Fehler behoben, durch den Premium-eVar und -Props nicht gespeichert wurden.
 
@@ -151,7 +160,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.8.0**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Es wurde ein Fehler behoben, durch den manche Kunden keine Report Suite-Optionen in der Dropdown-Liste sehen konnten
 * Es wurde ein Fehler behoben, durch den manche Variablen bei der Verwendung von ECID nicht korrekt eingestellt wurden
@@ -165,7 +174,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.7.8**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Ein Fehler wurde behoben, durch den Benutzer in der Dropdown-Liste keine Report Suite-Optionen sehen konnten
 * Ein Fehler wurde behoben, durch den Ereignisse nicht korrekt ausgelöst wurden
@@ -180,7 +189,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Zielgruppen-Management-Modul wurde aktualisiert, sodass es jetzt DIL 9.3 unterstützt.
 * Feldbreiten wurden aktualisiert, um mehr Platz zur Verfügung zu stellen
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Ein Fehler wurde beim Festlegen der Opt-in-/Opt-out-Option behoben
 * Ein Fehler wurde behoben, durch den Variablen bei der Verwendung von ECID nicht richtig festgelegt wurden
@@ -193,7 +202,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 * Aktualisierung der Adobe Analytics-Erweiterung für die Unterstützung von DIL 9.2 für Audience Manager
 
-* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.15.0)
+* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
 * Das folgende Kontrollkästchen wurde entfernt, da es nicht mehr unterstützt wird: &quot;Do not attach the destination publishing IFRAME to the DOM or fire destinations&quot;
 
 ## 4. Juni 2019
@@ -205,7 +214,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Aktualisierung der Adobe Analytics-Erweiterung auf [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0), die unter anderem ein bekanntes clearVars-Problem behebt
 * Hinzufügung eines Exchange-Links zur Erweiterung. Der Exchange-Listeneintrag kann über die Option „Erweiterungsinfo“ im Dropdown-Menü aufgerufen werden.
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Behebung eines Fehlers in der Benutzeroberfläche, durch den die falsche eVar aus einer Liste gelöscht wurde
 * Behebung eines Fehlers, durch den bei dem Versuch, mehrere Report Suites hinzuzufügen, ein SSL-Tracking-Server erforderlich war. Wenn mehrere Report Suites hinzugefügt werden, ist ein Tracking-Server erforderlich, das SSL-Tracking-Serverfeld ist jedoch optional.
@@ -214,7 +223,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.7.4**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Zurücksetzung der Erweiterung, nachdem ein Fehler in AppMeasurement 2.13.0 gefunden wurde. Die Version verursachte ein Problem, bei dem die ECID nicht gesendet wurde. Wenn Sie also 1.7.3 installiert haben, empfehlen wir ein Upgrade auf 1.7.4, um dieses Problem zu vermeiden. Beachten Sie, dass clearVars fortgesetzt wird, bis eine aktualisierte Version von AppMeasurement veröffentlicht wird
 
@@ -222,7 +231,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.7.3**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Aktualisierung der Adobe Analytics-Erweiterung auf AppMeasurement 2.13.0, die unter anderem ein bekanntes clearVars-Problem behebt.
 
@@ -241,7 +250,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.7.1**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Zurücksetzung der Erweiterung auf Version 1.6, nachdem ein Fehler in Version 1.7 gefunden wurde.
 
@@ -254,7 +263,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Aktualisierung der Adobe Analytics-Erweiterung auf DIL 9.0. Diese Version unterstützt die Anmeldung.
 * Aktualisierung der Adobe Analytics-Erweiterung auf AppMeasurement 2.11, um Opt-in zu unterstützen.
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Behebung eines Konflikts mit dem Prototyp-JS. Die Analytics-Erweiterung unterstützt jetzt standardmäßige prototype.js-Bibliotheken.
 
@@ -262,7 +271,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Adobe Analytics-Erweiterung 1.5.1**
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Herabstufung des DIL-Moduls auf Version 7.0, um ein Problem zu beheben, bei dem Analysesignale nicht ausgelöst wurden.
 
@@ -276,7 +285,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Unterteilung des Felds „Serialisieren von Wert“ in zwei Felder: „Ereignis-ID“ und „Ereigniswert“. Dadurch wird das Problem behoben, durch das statt der Serialisierung eines Ereignisses ein Wert zugewiesen wird
    * Bitte beachten: Wenn Sie das aktuelle Feld verwenden, um eine ID mithilfe einer Zeichenfolge hinzuzufügen (z. B. Event7=3:abc123), müssen Sie Ihre Eingabe aktualisieren, um die ID im Feld „Ereignis-ID“ wiederzugeben
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Behebung eines Fehlers, durch den der Währungscode nicht ordnungsgemäß ausgefüllt werden konnte
 
@@ -288,7 +297,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 * Migration des Tracking-Cookie-Namens in die Erweiterungskonfiguration.
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Behebung eines Fehlers, sodass festgelegte Variablen nicht abstürzen, wenn kein trackerProperties-Objekt verfügbar ist.
 
@@ -301,7 +310,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Aktualisierung der Adobe Analytics-Erweiterung zur Unterstützung von AppMeasurement 2.9.
 * Hinzufügung der Funktion „Tracker global zugänglich machen“ in der Adobe Analytics-Erweiterung, wodurch der Tracker unter `windows.s` global geladen werden kann.
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Behebung eines Fehlers, durch den die Listenansicht beim Zurückkehren aus der Detailansicht zurückgesetzt wurde
 * Behebung einiger Fehler, um das Laden von Ressourcen in der Revisionsauswahl zu verbessern
@@ -325,6 +334,6 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 * Aktualisierung von AppMeasurement auf Version 2.6.
 * Der initialisierte Analytics-Tracker wird jetzt über ein freigegebenes Modul in der Adobe Experience Platform-Tag-Erweiterung offengelegt, sodass andere Erweiterungen Code zur Interaktion mir ihr enthalten können.
 
-**Fehlerkorrekturen**:
+**Fehlerbehebungen**:
 
 * Behebung eines Fehlers in der Adobe Analytics-Erweiterung, durch den die Meldung „Fehler: fehlende Report Suite-ID bei AppMeasurement-Initialisierung“ in der Browserkonsole angezeigt wurde.
