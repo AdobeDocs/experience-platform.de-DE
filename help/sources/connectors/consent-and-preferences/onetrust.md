@@ -5,10 +5,10 @@ title: Übersicht über den Connector für OneTrust-Integrationsquellen
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine OneTrust-Integration mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 71b64894f6a08941b62bf8c6990d6bf0295afdd0
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 55%
+source-wordcount: '186'
+ht-degree: 51%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Die [!DNL OneTrust Integration] -Quelle unterstützt nur die Erfassung von Einwilligungs- und Voreinstellungsdaten und keine Cookies.
+>Die [!DNL OneTrust Integration] -Quelle unterstützt nur die Erfassung von Einwilligungs- und Voreinstellungsdaten und keine Cookies. Wenden Sie sich bei Problemen mit dem Quell-Connector an den OneTrust-Support unter https://support.onetrust.com
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
