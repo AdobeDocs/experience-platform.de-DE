@@ -1,10 +1,9 @@
 ---
-title: Adobe Experience Platform – Versionshinweise April 2024
+title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise April 2024 für Adobe Experience Platform.
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 22%
 
 ---
@@ -117,7 +116,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Abfrage-Quarantäne | Automatische Isolierung fehlgeschlagener Abfrageausführungen, um Unterbrechungen zu vermeiden und eine konsistente Leistung zu gewährleisten. Siehe [Quarantäne der Abfrage](../../query-service/ui/query-schedules.md#quarantine) Dokumentation finden Sie weitere Informationen. |
+| Abfragequarantäne | Automatische Isolierung fehlgeschlagener Abfrageausführungen, um Unterbrechungen zu vermeiden und eine konsistente Leistung zu gewährleisten. Siehe [Quarantäne der Abfrage](../../query-service/ui/query-schedules.md#quarantine) Dokumentation finden Sie weitere Informationen. |
 | Abfrage abbrechen | Kontrollieren Sie die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. Lesen Sie hierzu den Abschnitt . [Abbrechen der Abfrage](../../query-service/ui/user-guide.md#cancel-query) Dokumentation finden Sie weitere Informationen. |
 | Warnhinweise zu geplanten Abfragen | Halten Sie sich während der Planung von Abfragen über proaktive Benachrichtigungen auf dem Laufenden, um eine effiziente und zeitnahe Aufgabenverwaltung zu gewährleisten. Sie können [Warnhinweise entweder bei der Erstellung einer Abfrage abonnieren](../../query-service/ui/query-schedules.md#alerts-for-query-status) oder die Inline-Aktionen für bestehende geplante Abfragen verwenden. Siehe [Warnhinweise mit Inline-Aktionen abonnieren](../../query-service/ui/monitor-queries.md#alert-subscription) Dokumentation finden Sie weitere Informationen. |
 | Verbesserte geplante Abfragennavigation | Für eine höhere Produktivität können Sie einfach zwischen Abfragevorlagen und geplanten Ausführungen navigieren. Siehe die Dokumentation unter [Anzeigen geplanter Abfrageausführungen](../../query-service/ui/query-schedules.md#scheduled-query-runs) für weitere Informationen. |
