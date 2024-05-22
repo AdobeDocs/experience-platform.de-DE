@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
+source-git-commit: 65714e2b18dc787abe074e8448aa1d640c867338
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3042'
 ht-degree: 1%
 
 ---
@@ -80,13 +80,7 @@ Die Benutzeroberfläche des KI-Assistenten wird angezeigt und stellt Ihnen sofor
 * [!UICONTROL Was ist ein Schema?]
 * [!UICONTROL Erzählen Sie mir einige häufige Anwendungsfälle für Real-Time CDP]
 
-![Abschnitt &quot;Erste Schritte&quot;der KI-Assistenzkraft.](./images/ai-assistant/ideas-to-get-started.png)
-
-Verwenden Sie das Eingabefeld, um Ihre Abfragen oder Befehle einzugeben, um mit dem AI-Assistenten zu interagieren. Sie können auch die **`+`**), um die Funktion zur automatischen Vervollständigung und das Lesezeichensymbol zu verwenden, um auf Ihre mit Lesezeichen versehenen Abfragen und Befehle zuzugreifen.
-
-![Das Eingabefeld des KI-Assistenten wurde hervorgehoben.](./images/ai-assistant/interact.png)
-
-## Anwendungsbeispiel: Verwenden des AI-Assistenten, um den Erstellungsprozess für Schemas zu beschleunigen
+## Handbuch zur Benutzeroberfläche des AI-Assistenten
 
 >[!NOTE]
 >
@@ -104,97 +98,137 @@ AI Assistant fragt dann seine Wissensdatenbank ab und berechnet eine Antwort. Na
 
 Nach Erhalt einer Antwort des KI-Assistenten können Sie aus einer Reihe von Optionen auswählen, um zu entscheiden, wie Sie vorgehen möchten.
 
-### Speichern Sie Ihre Abfrage {#save-your-query}
+### Funktionen des KI-Assistenten {#features}
 
-+++Auswählen , um ein Beispiel für das Speichern einer Abfrage anzuzeigen
+In diesem Abschnitt werden die verschiedenen Funktionen des KI-Assistenten beschrieben, die Sie während Ihrer Workflows auf dem Experience Platform verwenden können.
 
-Um Ihre Abfrage zu speichern, wählen Sie das Lesezeichen-Symbol neben Ihrer Frage aus.
+<!-- 
+### Save your query {#save-your-query}
 
-![Screenshot eines ausgewählten Lesezeichens.](./images/ai-assistant/save-your-query.png)
++++Select to view an example of how to save a query
 
-Um auf Ihre gespeicherten Abfragen zuzugreifen, wählen Sie das Lesezeichensymbol unter dem Eingabefeld aus und wählen Sie dann die Abfrage aus, die Sie ausführen möchten.
+To save your query, select the bookmark icon beside your question.
 
-![Screenshot des Lesezeichensymbols und eine Liste der gespeicherten Abfragen.](./images/ai-assistant/bookmarks.png)
+![Screenshot of a selected bookmark.](./images/ai-assistant/save-your-query.png)
 
-+++
+To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
+
+![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
+
++++ -->
 
 ### Daten in der Sandbox anzeigen {#view-data-in-your-sandbox}
 
+Je nach Abfrage stellt der KI-Assistent zusätzliche Informationen zu den Daten in Ihrer Sandbox bereit. Um anzuzeigen, wie die Antwort auf Ihre Abfrage auf Ihre jeweilige Sandbox zutrifft, wählen Sie **[!UICONTROL In der Sandbox].**
+
+Beim Anzeigen von Daten zu Ihrer Sandbox kann der KI-Assistent direkte Links zu bestimmten Benutzeroberflächen-Seiten bereitstellen, auf denen Ihre abgefragten Daten angezeigt werden.
+
 +++Auswählen zum Anzeigen des Beispiels
 
-Je nach Abfrage stellt der KI-Assistent zusätzliche Informationen zu den Daten in Ihrer Sandbox bereit. Um anzuzeigen, wie die Antwort auf Ihre Abfrage auf Ihre Sandbox zutrifft, wählen Sie **[!UICONTROL In der Sandbox].**
+In diesem Beispiel gibt der KI-Assistent zusätzliche Informationen zu den vorhandenen XDM-Schemas in Ihrer Sandbox zurück, einschließlich der Gesamtzahl der Schemas und der fünf am häufigsten verwendeten Felder.
 
-Während dieses Schritts kann der AI-Assistent direkte Links zu den Benutzeroberflächen-Seiten bestimmter Objekte bereitstellen. Im folgenden Beispiel stellt der KI-Assistent direkte Links zur [!UICONTROL Schemas] und [!UICONTROL Segmente] Benutzeroberflächen-Seiten.
-
-![Screenshot der Option &quot;In Ihrer Sandbox&quot;.](./images/ai-assistant/in-your-sandbox.png)
+![Das Dropdown-Fenster &quot;in Ihrer Sandbox&quot;mit zusätzlichen Informationen zu Ihren Schemas wird geöffnet.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### Überprüfen der Antwort {#verify-the-response}
+### Zitate anzeigen {#view-citations}
+
+Sie können die von AI Assistant an Sie zurückgegebenen Antworten überprüfen, indem Sie die mit jeder Antwort verfügbaren Zitate überprüfen.
 
 +++Auswählen , um ein Beispiel für die Anzeige von Quellen anzuzeigen
 
-Um Zitate anzuzeigen und die Antwort der KI-Assistenzkraft zu validieren, wählen Sie **[!UICONTROL Quellen anzeigen]**. Der AI-Assistent bietet Links zur Dokumentation, die seine Antwort bestätigt. Sie können auch die Abfragen verwenden, die der AI-Assistent unter [!UICONTROL Verwandte Vorschläge] , um die Themen zu Ihrer ursprünglichen Abfrage weiter zu untersuchen.
+Um Zitate anzuzeigen und die Antwort der KI-Assistenzkraft zu validieren, wählen Sie **[!UICONTROL Quellen anzeigen]**.
 
-![Screenshot von &quot;Quellen anzeigen&quot;.](./images/ai-assistant/show-sources.png)
+![Die Antwort des AI-Assistenten mit ausgewählter Option &quot;Quellen anzeigen&quot;.](./images/ai-assistant/show-sources.png)
+
+Der AI-Assistent aktualisiert die Benutzeroberfläche und bietet Ihnen Links zur Dokumentation, die die ursprüngliche Antwort bestätigen. Wenn Zitate aktiviert sind, aktualisiert der KI-Assistent die Antwort dahingehend, dass er Fußnoten enthält, die die spezifischen Teile der Antwort angeben, die auf die bereitgestellte Dokumentation verweisen.
+
+![Ein Dropdown-Menü mit den von AI Assistant für Konzeptfragen bereitgestellten Zitaten.](./images/ai-assistant/citations.png)
+
+Sie können auch die Abfragen verwenden, die der AI-Assistent unter **[!UICONTROL Verwandte Vorschläge]** , um die Themen zu Ihrer ursprünglichen Abfrage weiter zu untersuchen.
+
+![Eine Liste von Abfragen, die vom KI-Assistenten als zugehörige Vorschläge bereitgestellt werden.](./images/ai-assistant/related-suggestions.png)
 
 +++
 
 ### Nutzungsdaten und Visualisierung {#usage-data-and-visualization}
 
+Sie müssen sich in einer aktiven Sandbox befinden, damit der KI-Assistent ausreichend auf eine Frage zu Ihren Nutzungsdaten antworten kann.
+
 +++Auswählen , um ein Beispiel für Nutzungsdatenfragen und Datenvisualisierung anzuzeigen
 
-Damit der KI-Assistent auf eine Abfrage zu Nutzungsdaten in Ihrem Unternehmen antworten kann, müssen Sie sich in einer aktiven Sandbox befinden.
+Im folgenden Beispiel wird der KI-Assistent mit der folgenden Abfrage gefragt: **&quot;Anzeigen von Datenflüssen, die mit der Amazon S3-Quelle erstellt wurden&quot;**, antwortet der AI-Assistent dann mit einer Tabelle, die Ihre Datenflüsse und die zugehörigen IDs auflistet. Um die gesamte Datentabelle anzuzeigen, wählen Sie oben rechts das Symbol zum Erweitern aus.
 
-Im folgenden Beispiel wird der AI-Assistent mit der folgenden Abfrage bereitgestellt: **&quot;Zeigen Sie mir Segmentdefinitionen mit mehr als 1000 Profilen an und fügen Sie den Aktivierungsstatus hinzu.&quot;** Der KI-Assistent antwortet dann mit einem Diagramm, das Ihre Segment- und Profildaten visualisiert.
+![Folgen Sie der Frage zu Nutzungsdaten.](./images/ai-assistant/usage-data-question.png)
 
-![Folgen Sie der Frage zu Nutzungsdaten.](./images/ai-assistant/data-usage-question.png)
+Eine erweiterte Ansicht der Tabelle mit einer umfassenderen Liste von Datenflüssen, die auf den Parametern Ihrer Abfrage basieren, wird angezeigt.
 
-Sie können den Mauszeiger über eine einzelne Leiste bewegen, um bestimmte Daten anzuzeigen. Sie können auch das Symbol zum Erweitern für eine größere Ansicht des Diagramms auswählen.
+![Eine Ansicht der erweiterten Tabelle.](./images/ai-assistant/table.png)
 
-![Folgenfragen zur Illustration der Datenvisualisierung.](./images/ai-assistant/data-visualization.png)
+Wenn Sie mit einer Frage zu Nutzungsdaten aufgefordert werden, erläutert der AI-Assistent, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt der AI-Assistent die Schritte, die zur Identifizierung der Datenflüsse unternommen wurden, die mithilfe des [!DNL Amazon S3] -Quelle.
 
-Eine erweiterte Ansicht der Visualisierung wird angezeigt. Sie können das erweiterte Modal verwenden, um Ihre Daten weiter zu überprüfen. Dies ist besonders nützlich, wenn die Visualisierung mit einer großen Anzahl von Spalten zurückgegeben wird.
+![Folgen Sie der Frage zu Segmentdefinitionen, die veranschaulichen, wie der KI-Assistent die Antwort berechnet hat.](./images/ai-assistant/answer-explained.png)
 
-![Erweiterte Grafik.](./images/ai-assistant/chart-expanded.png)
-
-Wenn Sie mit einer Frage zu Nutzungsdaten aufgefordert werden, erläutert der AI-Assistent, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt der KI-Assistent die Schritte zur Anzeige von Segmentdefinitionen mit mehr als 1000 Profilen und deren Aktivierungsstatus.
-
-![Folgen Sie der Frage zu Segmentdefinitionen, die veranschaulichen, wie der KI-Assistent die Antwort berechnet hat.](./images/ai-assistant/results-explained.png)
-
-Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und AI Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Sie können beispielsweise den AI-Assistenten bitten, Ihnen einen Trend der Definitionen des Zählersegments in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmentdefinitionen mit Nullsummenprofilen zu entfernen und bei der Anzeige der Daten Monatsnamen anstelle von Ganzzahlen zu verwenden.
+Sie können auch Filter und Änderungen an Ihren Abfragen bereitstellen und AI Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Beispielsweise können Sie den AI-Assistenten bitten, Ihnen einen Trend zur Anzahl der Segmentdefinitionen in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmentdefinitionen mit null Gesamtprofilen zu entfernen und bei der Anzeige der Daten Monatsnamen anstelle von Ganzzahlen zu verwenden.
 
 +++
 
 ### Automatische Vervollständigung verwenden {#use-auto-complete}
 
-+++Auswählen , um ein Beispiel für die automatische Vervollständigung anzuzeigen
-
 Sie können die Funktion zum automatischen Ausfüllen verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung stehen für die folgenden Domänen zur Verfügung: Zielgruppen, Schemata, Datensätze, Quellen und Ziele.
+
++++Auswählen , um ein Beispiel für die automatische Vervollständigung anzuzeigen
 
 Sie können AutoComplete verwenden, indem Sie das Pluszeichen (**`+`**) in Ihrer Abfrage. Alternativ können Sie auch das Pluszeichen (**`+`**) am unteren Rand des Texteingabefelds. Es wird ein Fenster mit einer Liste der empfohlenen Datenobjekte aus Ihrer Sandbox angezeigt.
 
-![Beispiel der automatischen Vervollständigung](./images/ai-assistant/auto-complete-one.png)
-
-Wählen Sie als Nächstes das Datenobjekt aus, das Sie abfragen möchten, um Ihre Frage abzuschließen, und senden Sie dann Ihre Frage.
-
-![Beispiel der automatischen Vervollständigung mit Frage und Antwort](./images/ai-assistant/auto-complete-two.png)
+![Beispiel der automatischen Vervollständigung](./images/ai-assistant/autocomplete.png)
 
 +++
 
 ### Mehrdrehzahl verwenden {#use-multi-turn}
 
-+++Auswählen, um ein Beispiel für eine Mehrfachumstellung anzuzeigen
-
 Sie können die mehrgleisigen Funktionen des KI-Assistenten verwenden, um während Ihres Erlebnisses ein natürlicheres Gespräch zu führen. Die KI-Assistenzkraft ist in der Lage, die gegebenen Folgefragen zu beantworten. Dieser Kontext kann aus einer früheren Interaktion abgeleitet werden.
 
-Im folgenden Beispiel wird der KI-Assistent nach der Gesamtzahl der Datenflüsse in der aktuellen Organisation gefragt.
++++Auswählen, um ein Beispiel für eine Mehrfachumstellung anzuzeigen
 
-![Beispiel einer Mehrfachumstellung](./images/ai-assistant/multi-turn-one.png)
+Im folgenden Beispiel wird der KI-Assistent zunächst nach der Gesamtzahl der Datenflüsse gefragt und dann aufgefordert, die 10 neuesten Datenflüsse aufzulisten.
 
-Als Nächstes erhält der KI-Assistent eine weitere Folgeanfrage. Diesmal antwortet der KI-Assistent, indem er die Datenflüsse auflistet, die derzeit in Ihrem Unternehmen vorhanden sind.
+![Beispiel einer Mehrfachumstellung](./images/ai-assistant/multi-turn.png)
 
-![Beispiel einer Umkehrung mit Frage und Antwort](./images/ai-assistant/multi-turn-two.png)
++++
+
+## Feedback geben {#feedback}
+
+Sie können mithilfe der Antwortmöglichkeiten Feedback zu Ihrer Erfahrung mit dem KI-Assistenten geben.
+
+Um Feedback zu geben, wählen Sie entweder Daumen nach oben, Daumen nach unten oder eine Markierung aus, nachdem Sie eine Antwort vom AI-Assistenten erhalten haben, und geben Sie dann Ihr Feedback in das bereitgestellte Textfeld ein.
+
+![Die Feedback-Option im AI-Assistenten.](./images/ai-assistant/provide-feedback.png)
+
+
++++Auswählen , um weitere Beispiele anzuzeigen
+
+>[!BEGINTABS]
+
+>[!TAB Wirbel nach oben]
+
+Wählen Sie das Daumen-nach-oben-Symbol aus, um Feedback dazu zu geben, was mit Ihrem Erlebnis mit dem KI-Assistenten gut gelaufen ist.
+
+![Das positive Feedback-Fenster.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB Daumen nach unten]
+
+Wählen Sie das Daumendown-Symbol aus, um Feedback dazu zu geben, was basierend auf Ihrem Erlebnis mit dem KI-Assistenten verbessert werden könnte. Während dieses Schritts können Sie auch spezifische Kommentare zu Ihrem Erlebnis angeben. Das in den Kommentaren enthaltene Feedback wird täglich überprüft.
+
+![Das negative Feedback-Fenster.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB Markierung]
+
+Wählen Sie das Flag-Symbol aus, um weitere Berichte zu Ihrem Erlebnis mit dem KI-Assistenten bereitzustellen.
+
+![Das Fenster mit den Berichtsergebnissen.](./images/ai-assistant/flag.png)
+
+>[!ENDTABS]
 
 +++
 
@@ -261,44 +295,6 @@ In der folgenden Tabelle finden Sie weitere Anleitungen zu Best Practices, die S
 
 {style="table-layout:auto"}
 
-## Feedback geben {#feedback}
-
->[!BEGINSHADEBOX]
-
-**Ihr Feedback wird angefordert**
-
-Im Verlauf dieses Alphas werden Sie eingeladen, Feedback zu den Antworten zu geben, die Sie vom KI-Assistenten erhalten. Alle Antworten und eingereichten Feedback werden geprüft, um das KI-Assistenzerlebnis weiter zu verbessern.
-
-Um Feedback zu geben, wählen Sie entweder Daumen nach oben oder Daumen nach dem Erhalt einer Antwort vom AI-Assistenten aus und geben Sie dann Ihr Feedback in das bereitgestellte Textfeld ein. Wählen Sie als Nächstes **[!UICONTROL Feedback senden]** zu senden.
-
->[!ENDSHADEBOX]
-
-+++ Feedback geben
-
->[!BEGINTABS]
-
->[!TAB Wirbel nach oben]
-
-Wählen Sie das Daumen-nach-oben-Symbol aus, um Feedback dazu zu geben, was mit Ihrem Erlebnis mit dem KI-Assistenten gut gelaufen ist.
-
-![Das positive Feedback-Fenster.](./images/ai-assistant/thumbs-up.png)
-
->[!TAB Daumen nach unten]
-
-Wählen Sie das Daumendown-Symbol aus, um Feedback dazu zu geben, was basierend auf Ihrem Erlebnis mit dem KI-Assistenten verbessert werden könnte. Während dieses Schritts können Sie auch spezifische Kommentare zu Ihrem Erlebnis angeben. Das in den Kommentaren enthaltene Feedback wird täglich überprüft.
-
-![Das negative Feedback-Fenster.](./images/ai-assistant/thumbs-down.png)
-
->[!TAB Markierung]
-
-Wählen Sie das Flag-Symbol aus, um weitere Berichte zu Ihrem Erlebnis mit dem KI-Assistenten bereitzustellen.
-
-![Das Fenster mit den Berichtsergebnissen.](./images/ai-assistant/flag.png)
-
->[!ENDTABS]
-
-+++
-
 ## Weitere Informationen {#additional-information}
 
 Weitere Informationen zum KI-Assistenten für Experience Platform finden Sie in diesem Abschnitt .
@@ -321,21 +317,26 @@ Der KI-Assistent vermittelt möglicherweise einen ungenauen Eindruck davon, was 
 | &quot;Weißt du das? **x** Sprache?&quot; | Der KI-Assistent unterstützt derzeit nur Englisch, kann aber &quot;Ja&quot;beantworten, da das zugrunde liegende Modell es unterstützen kann. |
 | &quot;Können Sie...?&quot; | Der KI-Assistent kann ja antworten, auch wenn dies nicht möglich ist. |
 
-### Tipps {#tips}
+## Häufig gestellte Fragen {#faq}
 
-Im folgenden Abschnitt finden Sie einige Tipps und Problemumgehungen, die bei der Verwendung des AI-Assistenten beachtet werden müssen.
+Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu AI Assistant.
 
-#### Fragen können mit der falschen Informationsquelle beantwortet werden
+### Werden die Informationen der KI-Assistenzkraft in Echtzeit bereitgestellt?
 
-Es gibt Fälle, in denen Ihre Frage zu Ihren Nutzungsdaten zu einer Antwort führen kann, die auf der Dokumentation basiert. Der Grund dafür ist, dass der KI-Assistent Ihre Frage fälschlicherweise an die falsche Informationsquelle weiterleiten kann. Sie können dies verhindern, indem Sie:
+Die in den KI-Assistenten-Antworten dargestellten Daten werden täglich aktualisiert. Das bedeutet, dass Daten in Antworten bis zu 24 Stunden älter sein können als die Daten, die zum Zeitpunkt der Antwort auf der Experience Platform-Benutzeroberfläche angezeigt werden.
 
-* Umkehren Ihrer Frage zur Verwendung SQL-ähnlicher Sprachen
-* Explizites Aufrufen der zu verwendenden Informationsquelle.
+### Welche Adobe-Applikationen unterstützt der AI Assistant?
 
-Beispiele finden Sie in der folgenden Tabelle:
+Der AI-Assistent unterstützt Fragen zum Konzept von Adobe Experience Platform, Real-time Customer Data Platform und Adobe Journey Optimizer. Bei Fragen zur Datennutzung unterstützt der AI-Assistent derzeit nur Real-Time CDP-Datenobjekte.
 
-| Ungültige Frage | Gute Frage | Anmerkungen |
-| --- | --- | --- |
-| Was ist mein größtes Publikum? | Was ist mein größtes Publikum? Verwendung von Daten. | Teilen Sie dem KI-Assistenten explizit mit, dass die Antwort auf Daten basieren soll. |
-| Was ist mein größtes Publikum? | Geben Sie meine größte Zielgruppe an. | Es gibt Fälle, in denen eine &quot;Was...&quot;-Frage mit einer dokumentationsbasierten Frage verwechselt werden kann. Die Verwendung eines Befehls wie &quot;list&quot;ist ein stärkerer Indikator dafür, dass Sie eine Frage mit Daten im Kontext stellen. |
-| Wie viele Datensätze habe ich? | Zählen Sie meine Datensätze. | Die ursprüngliche Frage funktioniert für Zielgruppen, funktioniert jedoch möglicherweise nicht mit Datensätzen. |
+### Welche Funktionen hat die KI-Assistenzkraft?
+
+AI Assistant kann Adobe-Konzeptabfragen beantworten und Fragen zur Verwendung von Experience Platform-Objekten beantworten. (Zum Beispiel &quot;Wie viele Zielgruppen sind aktiviert?&quot;).
+
+### Kann der KI-Assistent Informationen zu Profildaten bereitstellen?
+
+Nein. Der AI-Assistent hat keinen Zugriff auf Daten auf Profilebene.
+
+### Werden meine personenbezogenen Daten in den Ausbildungsdaten der KI-Assistenzkraft verwendet?
+
+Die KI-Assistenzkraft verwendet personenbezogene Daten nicht für Schulungszwecke. Bitte geben Sie keine persönlichen Informationen über Sie selbst (einschließlich Ihres Namens oder Ihrer Kontaktdaten) oder andere Parteien des KI-Assistenten an.
