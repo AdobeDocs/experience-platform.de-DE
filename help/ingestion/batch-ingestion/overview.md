@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Batch Ingestion-API - Übersicht
 description: Mit der Adobe Experience Platform Batch Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 65%
@@ -56,7 +56,7 @@ Bei der Erfassung von Daten ist es wichtig zu verstehen, wie [!DNL Experience Da
 
 Bei der Datenaufnahme gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Zielschema übereinstimmt, werden die Daten in den ausgedrückten Zieltyp konvertiert. Wenn das nicht möglich ist, schlägt der Batch mit einer `TypeCompatibilityException` fehl.
 
-Beispielsweise verfügt weder JSON noch CSV über eine `date` oder `date-time` Typ. Daher werden diese Werte mithilfe von [Formatierte Zeichenfolgen im ISO 8061-Format](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix-Zeit formatiert in Millisekunden (1531263959000) und werden bei der Aufnahme in den Ziel-XDM-Typ konvertiert.
+Beispielsweise verfügt weder JSON noch CSV über eine `date` oder `date-time` Typ. Daher werden diese Werte mithilfe von [Formatierte Zeichenfolgen im ISO 8601-Format](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix-Zeit formatiert in Millisekunden (1531263959000) und werden bei der Aufnahme in den Ziel-XDM-Typ konvertiert.
 
 Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterstützt werden.
 

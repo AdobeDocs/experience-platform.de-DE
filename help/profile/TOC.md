@@ -4,10 +4,10 @@ user-guide-title: Handbuch zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profiles
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 93%
+source-wordcount: '132'
+ht-degree: 91%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 93%
 * [Edge-Profile](edge-profiles.md)
 * [Gültigkeitsdauern von Erlebnisereignissen](event-expirations.md)
 * [Ablauf von pseudonymen Profilen](pseudonymous-profiles.md)
+* [Bestellung von Kundenzeitstempeln](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
@@ -53,4 +54,4 @@ ht-degree: 93%
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Profil-API-Referenz](https://www.adobe.com/go/profile-apis-en)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
