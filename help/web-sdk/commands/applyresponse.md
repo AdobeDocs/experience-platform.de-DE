@@ -1,7 +1,8 @@
 ---
 title: applyResponse
-description: Verwenden Sie eine Antwort des Edge-Netzwerks, um das Web-SDK zu initialisieren.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Verwenden Sie eine Antwort des Edge Networks, um das Web SDK zu initialisieren.
+exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
+source-git-commit: 74725546163f0807d3188aff5b5ffda9b8d6350b
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # `applyResponse`
 
-Die `applyResponse` -Befehl können Sie basierend auf einer Antwort des Edge-Netzwerks verschiedene Aktionen durchführen. Sie wird normalerweise in Hybridbereitstellungen verwendet, bei denen der Server einen ersten Aufruf an das Edge-Netzwerk durchführt. Dieser Befehl nimmt die Antwort aus diesem Aufruf und initialisiert das Web SDK im Browser.
+Die `applyResponse` -Befehl können Sie basierend auf einer Antwort des Edge Networks verschiedene Aktionen ausführen. Sie wird normalerweise in Hybridbereitstellungen verwendet, bei denen der Server einen ersten Aufruf an das Edge Network durchführt. Dieser Befehl nimmt die Antwort aus diesem Aufruf und initialisiert das Web SDK im Browser.
 
 ## Anwenden der Antwort mithilfe der Web SDK-Tag-Erweiterung
 
@@ -31,11 +32,11 @@ Führen Sie die `applyResponse` beim Aufruf Ihrer konfigurierten Instanz des Web
 
 * **`renderDecisions`**: Ein boolescher Wert, der das Web SDK zwingt, personalisierte Inhalte wiederzugeben, die für die automatische Wiedergabe geeignet sind. Identisch mit [`renderDecisions`](sendevent/renderdecisions.md) im [`sendEvent`](sendevent/overview.md) Befehl.
 * **`responseHeaders`**: Eine Zuordnung von Zeichenfolgen-Kopfzeilennamen zu Zeichenfolgen-Kopfzeilenwerten.
-* **`responseBody`**: Erforderlich. Ein JSON-Antworttext vom Server-Aufruf an das Edge-Netzwerk.
+* **`responseBody`**: Erforderlich. Ein JSON-Antworttext vom Server-Aufruf an das Edge Network.
 * **`personalization.sendDisplayEvent`**: Ein boolescher Wert, der identisch mit [`personalization.sendDisplayEvent`](sendevent/personalization.md) im `sendEvent` Befehl.
 
 ```js
-allow("applyResponse",{
+alloy("applyResponse",{
   "renderDecisions": true,
   "responseHeaders": {},
   "responseBody": {},
