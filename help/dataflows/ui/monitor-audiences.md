@@ -6,7 +6,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
 workflow-type: tm+mt
 source-wordcount: '1862'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -169,7 +169,7 @@ Für [!UICONTROL Zielgruppen] -Abschnitt, sind die folgenden Metriken verfügbar
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
->title="Segmentierungsaufträge"
+>title="Segmentierungsvorgänge"
 >abstract="Die Ansicht für Segmentierungsaufträge enthält Informationen zu den Evaluierungs- und Exportvorgängen für alle Ihre Zielgruppen."
 
 So greifen Sie auf die **[!UICONTROL Segmentierungsaufträge]** Dashboard, auswählen **[!UICONTROL Segmentierungsaufträge]** im [!UICONTROL Zielgruppen] Dashboard. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den Evaluierungs- und Exportvorgängen.
