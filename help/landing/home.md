@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Überblick über Adobe Experience Platform
 description: Mit Adobe Experience Platform können Unternehmen Kundendaten zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 92%
+source-wordcount: '431'
+ht-degree: 86%
 
 ---
 
@@ -28,13 +28,13 @@ Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und of
 
 ## [!DNL Experience Platform] Dokumentation
 
-[!DNL Experience Platform] Die Dokumentation zu wird für eine Vielzahl von Funktionen und Services in verschiedenen Formaten zur Verfügung gestellt. Weitere Informationen zu den verfügbaren Dokumentationstypen finden Sie unter [Platform-Dokumentation – Übersicht](documentation/overview.md).
+[!DNL Experience Platform] Die Dokumentation wird für eine Vielzahl von Funktionen und Anwendungen in verschiedenen Formaten bereitgestellt. Weitere Informationen zu den verfügbaren Dokumentationstypen finden Sie unter [Platform-Dokumentation – Übersicht](documentation/overview.md).
 
 Um mehr über einen bestimmten Service von [!DNL Platform] zu erfahren, kehren Sie zur [Dokumentations-Landingpage](https://experienceleague.adobe.com/docs/experience-platform.html?lang=de) zurück und wählen Sie das entsprechende Handbuch aus.
 
-### Dokumentation für Programm-Services, die auf [!DNL Experience Platform] basieren
+### Dokumentation für Anwendungen, die auf [!DNL Experience Platform]
 
-Adobe hat mehrere Programm-Services auf Experience Platform aufgebaut. Die Dokumentation für diese Anwendungen finden Sie in den eigenen Handbüchern, die Sie unten finden:
+Adobe hat mehrere Anwendungen auf dem Experience Platform erstellt. Die Dokumentation für diese Anwendungen finden Sie in den eigenen Handbüchern, die Sie unten finden:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,7 +43,7 @@ Adobe hat mehrere Programm-Services auf Experience Platform aufgebaut. Die Dokum
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-Im folgenden Video werden die Anwendungsfälle der einzelnen Anwendungsdienste beschrieben, die auf Experience Platform aufbauen.
+Im folgenden Video werden die Anwendungsfälle jeder Anwendung beschrieben, die auf Experience Platform aufbaut.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
@@ -64,7 +64,7 @@ Besuchen Sie die Landingpage zu [Experience Platform-Tutorials](https://experien
 * [**Glossar**](glossary.md)\
   Schlagen Sie die in Adobe Experience Platform verwendeten Begriffe nach.
 
-* [**Versionshinweise**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
+* [**Versionshinweise**](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)\
   Finden Sie Informationen zur aktuellen Version von [!DNL Experience Platform] und sehen Sie sich frühere Versionen an.
 
 * [**Handbuch zur Fehlerbehebung**](troubleshooting.md)\

@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
-user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+user-guide-description: Erfahren Sie, wie Experience Platform es ermöglicht, Ihren Kunden mit Handbüchern, Dokumentationen und Tutorials in Echtzeit personalisierte Erlebnisse bereitzustellen.
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 86%
+source-wordcount: '281'
+ht-degree: 78%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 86%
 * Dokumentation zu Platform {#documentation}
    * [Übersicht](documentation/overview.md)
    * [Sprachunterstützung](documentation/language-support.md)
-* Auf Platform aufbauende Anwendungs-Services {#ecosystem}
+* Auf Platform aufbauende Anwendungen {#ecosystem}
    * [Übersicht](application-services.md)
    * [Adobe Real-Time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
    * [Programme und Intelligent Services (Video)](video/application-intelligent-services.md)
@@ -81,4 +81,4 @@ ht-degree: 86%
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Migration von Data Lake Gen2](adls2-gen2-migration.md)
 * [Glossar](glossary.md)
-* [Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
