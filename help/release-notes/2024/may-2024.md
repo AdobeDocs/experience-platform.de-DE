@@ -47,6 +47,7 @@ Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Da
 Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einblicke zu den Daten Ihres Unternehmens erhalten, die in täglichen Schnappschüssen erfasst werden.
 
 **Neue oder aktualisierte Funktionen**
+
 | Funktion | Beschreibung | | — | — | | Anpassbare Insights für erweiterte App-Berichte | Nahtlos [die Ausgabe der SQL-Analyse in verständliche, unternehmensfreundliche visuelle Formate überführen](../../dashboards/data-distiller/customizable-insights/overview.md). Verwenden Sie benutzerdefinierte SQL-Abfragen zur präzisen Datenbearbeitung und zur Erstellung dynamischer Diagramme aus diversen strukturierten Datensätzen. Sie können den Abfragepro-Modus verwenden, um eine komplexe Analyse mit SQL durchzuführen und diese Analyse dann über Diagramme in Ihrem benutzerdefinierten Dashboard für nicht technische Benutzer freizugeben oder in CSV-Dateien zu exportieren. |
 
 {style="table-layout:auto"}
