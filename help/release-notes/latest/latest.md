@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise Mai 2024
 description: Versionshinweise Mai 2024 für Adobe Experience Platform.
-source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
+source-git-commit: e02892a2cbf5f65a1b9a0eec49722896bd061084
 workflow-type: tm+mt
 source-wordcount: '1596'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 **Neue oder aktualisierte Funktionen**
 
-| Funktion | Beschreibung | 
+| Funktion | Beschreibung |
 | --- | --- |
 | Anpassbare Insights für erweiterte App-Berichte | Nahtlos [die Ausgabe der SQL-Analyse in verständliche, unternehmensfreundliche visuelle Formate überführen](../../dashboards/data-distiller/customizable-insights/overview.md). Verwenden Sie benutzerdefinierte SQL-Abfragen zur präzisen Datenbearbeitung und zur Erstellung dynamischer Diagramme aus diversen strukturierten Datensätzen. Sie können den Abfragepro-Modus verwenden, um eine komplexe Analyse mit SQL durchzuführen und diese Analyse dann über Diagramme in Ihrem benutzerdefinierten Dashboard für nicht technische Benutzer freizugeben oder in CSV-Dateien zu exportieren. |
 
