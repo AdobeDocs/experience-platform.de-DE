@@ -1,9 +1,10 @@
 ---
 title: renderDecisions
 description: Rendern Sie personalisierte Inhalte, die für das automatische Rendering geeignet sind.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,10 @@ Wählen Sie die **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]*
 ## Rendern von personalisiertem Inhalt mit der JavaScript-Bibliothek des Web SDK
 
 Legen Sie die `renderDecisions` boolean beim Ausführen der `sendEvent` Befehl. Wenn diese Eigenschaft weggelassen wird, wird standardmäßig `false`. Legen Sie diese Eigenschaft auf `true` , wenn Sie personalisierte Inhalte automatisch rendern möchten.
+
+>[!IMPORTANT]
+>
+>Die `renderDecisions` -Eigenschaft ist mit der [`documentUnloading`](documentunloading.md) -Eigenschaft. Sie sollten nicht beide Eigenschaften auf `true` gleichzeitig.
 
 ```js
 alloy("sendEvent", {

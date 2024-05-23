@@ -1,10 +1,11 @@
 ---
 title: documentUnloading
 description: Verwenden Sie die JavaScript-API sendBeacon , um Daten an Adobe zu senden.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 2%
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +31,10 @@ Aktivieren Sie die **[!UICONTROL Dokument wird entladen]** innerhalb der Aktione
 ## Konfigurieren des Entladens von Dokumenten mithilfe der JavaScript-Bibliothek des Web SDK
 
 Legen Sie die `documentUnloading` boolean beim Ausführen der `sendEvent` Befehl. Der Standardwert lautet `false`. Legen Sie diese Eigenschaft auf `true` , wenn Sie die `sendBeacon` -Methode, um Daten an Adobe zu senden.
+
+>[!IMPORTANT]
+>
+>Die `documentUnloading` -Eigenschaft ist mit der [`renderDecisions`](renderdecisions.md) -Eigenschaft. Sie sollten nicht beide Eigenschaften auf `true` gleichzeitig.
 
 ```js
 alloy("sendEvent", {

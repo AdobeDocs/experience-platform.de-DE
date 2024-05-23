@@ -1,13 +1,13 @@
 ---
 title: sendEvent
-description: Senden Sie Daten an das Adobe Experience Platform Edge Network.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Senden Sie Daten an das Adobe Experience Platform-Edge Network.
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
+source-git-commit: 9ea7b678f5cfa19c7fd1e3ba6633cdeed4084b18
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # `sendEvent`
 
@@ -32,7 +32,7 @@ Führen Sie die `sendEvent` beim Aufruf Ihrer konfigurierten Instanz des Web SDK
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
