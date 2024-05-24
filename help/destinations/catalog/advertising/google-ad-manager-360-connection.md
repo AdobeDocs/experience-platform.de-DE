@@ -2,10 +2,10 @@
 title: (Beta)  [!DNL Google Ad Manager 360] -Verbindung
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, die Publishern die Möglichkeit gibt, das Anzeigen von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
+source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 61%
+source-wordcount: '1206'
+ht-degree: 59%
 
 ---
 
@@ -105,7 +105,7 @@ Weitere Informationen zu diesen Werten finden Sie im Handbuch [HMAC-Schlüssel f
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
 >title="Zielgruppen-ID an Zielgruppennamen anhängen"
->abstract="Wählen Sie diese Option aus, damit der Zielgruppenname in Google Ad Manager 360 die Zielgruppen-ID aus Experience Platform wie folgt enthält: `Audience Name (Audience ID)`"
+>abstract="Wählen Sie diese Option aus, damit der Zielgruppenname in diesem Ziel die Zielgruppen-ID von Experience Platform wie folgt enthält: `Audience Name (Audience ID)`"
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 

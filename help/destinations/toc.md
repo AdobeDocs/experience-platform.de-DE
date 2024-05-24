@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 89%
+source-wordcount: '1224'
+ht-degree: 88%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 89%
    * [Aktualisieren von Ziel-Datenflüssen](./api/update-destination-dataflows.md)
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
-   * [Exportieren von Datensätzen](/help/destinations/api/export-datasets.md)
+   * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
    * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
@@ -48,7 +48,7 @@ ht-degree: 89%
       * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
       * [Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
-      * [(Beta) Verwenden von berechneten Feldern, um Arrays in flache Schemadateien zu exportieren](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta) Verwenden Sie berechnete Felder, um Arrays in flachen Schemadateien zu exportieren](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
    * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
    * [Löschen von Zielkonten](./ui/delete-destination-account.md)
@@ -83,6 +83,7 @@ ht-degree: 89%
       * [Google Ad Manager-Verbindung](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-Verbindung](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match-Verbindung](./catalog/advertising/google-customer-match.md)
+      * [(Beta) Google-Kundenabgleich und DV360-Verbindung](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
@@ -297,4 +298,4 @@ ht-degree: 89%
       * [Dokumentationsvorlage für Self-Service](./destination-sdk/docs-framework/self-service-template.md)
       * [Best Practices für die Inhaltserstellung](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Häufig gestellte Fragen](./destinations-faq.md)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
