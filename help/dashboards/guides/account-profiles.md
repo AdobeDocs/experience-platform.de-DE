@@ -2,10 +2,10 @@
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 3%
+source-wordcount: '1675'
+ht-degree: 4%
 
 ---
 
@@ -73,19 +73,18 @@ Adobe stellt standardmäßige Widgets bereit, mit denen Sie verschiedene Metrike
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
-* [Kontoprofile hinzugefügt](#account-profiles-added)
+* [Hinzugefügte Kontoprofile](#account-profiles-added)
 * [Neue Abschlüsse nach Wirtschaftszweigen](#accounts-by-industry)
 * [Neue Konten nach Typ](#accounts-by-type)
-* [Hinzugefügte Möglichkeiten](#opportunities-added)
 * [Neue Möglichkeiten für die Rolle der Person](#opportunities-by-person-role)
 * [Neue Einnahmenmöglichkeiten](#opportunities-by-revenue)
 * [Neue Möglichkeiten nach Status und Phase](#opportunities-by-status-&-stage)
 * [Neue Chancen gewonnen](#opportunities-won)
-* [Prädiktive Scoring-Verteilung](#predictive-scoring-distribution)
-* [Einflussfaktoren für prädiktive Scoring](#predictive-scoring-top-influential-factors)
-* [Rechnungsabschlüsse nach Wirtschaftszweigen insgesamt](#total-accounts-by-industry)
+* [Hinzugefügte Opportunities](#opportunities-added)
+* [Verteilung der prädiktiven Bewertung](#predictive-scoring-distribution)
+* [Prädiktive Bewertung - wichtigste Einflussfaktoren](#predictive-scoring-top-influential-factors)
 
-### Kontoprofile hinzugefügt {#account-profiles-added}
+### Hinzugefügte Kontoprofile {#account-profiles-added}
 
 Die [!UICONTROL Kontoprofile hinzugefügt] Widget verwendet ein Liniendiagramm, um die Anzahl der Kontoprofile anzuzeigen, die jeden Tag über einen bestimmten Zeitraum hinzugefügt werden. Verwenden Sie den globalen Datumsfilter oben im Dashboard, um den Analysezeitraum zu bestimmen. Wenn kein Datumsfilter angegeben wird, werden im Standardverhalten die Kontoprofile aufgelistet, die für das Jahr vor dem aktuellen Datum hinzugefügt wurden. Die Ergebnisse können verwendet werden, um einen Trend bei der Anzahl der hinzugefügten Kontoprofile zu erkennen.
 
@@ -102,14 +101,6 @@ Die [!UICONTROL Neue Abschlüsse nach Wirtschaftszweigen] -Widget zeigt die Gesa
 Die [!UICONTROL Neue Konten nach Typ] -Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik innerhalb eines Ringdiagramms an. Das Ringdiagramm zeigt die relative Zusammensetzung der verschiedenen Kontotypen, aus denen diese Summe besteht. Ein farbcodierter Schlüssel bietet eine Aufschlüsselung aller enthaltenen Kontotypen. Einzelne Zählungen für jeden Kontotyp werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
 ![Das Widget Neue Konten nach Typ .](../images/account-profiles/new-accounts-by-type.png)
-
-### Hinzugefügte Möglichkeiten {#opportunities-added}
-
-Die [!UICONTROL Hinzugefügte Möglichkeiten] Widget verwendet ein Liniendiagramm, um die Anzahl der Möglichkeiten anzuzeigen, die jeden Tag über einen bestimmten Zeitraum hinzugefügt werden. Verwenden Sie den globalen Datumsfilter oben im Dashboard, um den Analysezeitraum zu bestimmen. Wenn kein Datumsfilter angegeben wird, werden im Standardverhalten die Chancen aufgeführt, die für das Jahr vor dem heutigen hinzugefügt wurden. Die Ergebnisse können dazu dienen, einen Trend bei der Anzahl der hinzugefügten Chancen zu erkennen.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![Das Widget Chancen hinzugefügt.](../images/account-profiles/opportunities-added.png)
 
 ### Neue Möglichkeiten für die Rolle der Person {#opportunities-by-person-role}
 
@@ -141,7 +132,15 @@ Die [!UICONTROL Neue Chancen gewonnen] Widget zeigt die Gesamtzahl Ihrer Möglic
 
 ![Das Widget Neue Möglichkeiten gewinnt.](../images/account-profiles/new-opportunities-won.png)
 
-### Prädiktive Scoring-Verteilung {#predictive-scoring-distribution}
+### Hinzugefügte Opportunities {#opportunities-added}
+
+Die [!UICONTROL Hinzugefügte Möglichkeiten] Widget verwendet ein Liniendiagramm, um die Anzahl der Möglichkeiten anzuzeigen, die jeden Tag über einen bestimmten Zeitraum hinzugefügt werden. Verwenden Sie den globalen Datumsfilter oben im Dashboard, um den Analysezeitraum zu bestimmen. Wenn kein Datumsfilter angegeben wird, werden im Standardverhalten die Chancen aufgeführt, die für das Jahr vor dem heutigen hinzugefügt wurden. Die Ergebnisse können dazu dienen, einen Trend bei der Anzahl der hinzugefügten Chancen zu erkennen.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![Das Widget Chancen hinzugefügt.](../images/account-profiles/opportunities-added.png)
+
+### Verteilung der prädiktiven Bewertung {#predictive-scoring-distribution}
 
 Die [!UICONTROL Prädiktive Scoring-Verteilung] -Widget zeigt die Verteilung der Bewertungen aller Kontoprofile an, damit Sie den Zustand Ihrer Verkaufspipelines auf einen Blick verstehen können. Die Scoring-Daten werden über ein Ringdiagramm und ein Spaltendiagramm übermittelt.
 
@@ -157,7 +156,7 @@ Das Spaltendiagramm bietet eine detailliertere Scoring-Aufschlüsselung. Jede Sp
 
 ![Das Widget zur prädiktiven Scoring-Verteilung .](../images/account-profiles/predictive-scoring-distribution.png)
 
-### Einflussfaktoren für prädiktive Scoring {#predictive-scoring-top-influential-factors}
+### Prädiktive Bewertung - wichtigste Einflussfaktoren {#predictive-scoring-top-influential-factors}
 
 Die [!UICONTROL Einflussfaktoren für prädiktive Scoring] -Widget hilft Ihnen, die wichtigsten Faktoren zu verstehen, die die Ergebnisse für jeden Tendenzbehälter steuern.
 
@@ -170,18 +169,6 @@ Dieses Widget zeigt die wichtigsten Einflussfaktoren für die einzelnen Bereiche
 >Globale Datumsbereichsfilter gelten nicht für prädiktive Scoring-Einblicke. Prädiktive Scoring-Widgets analysieren Daten basierend auf dem im Dropdown-Menü ausgewählten Konto-Scoring-Modell.
 
 ![Das Widget mit den wichtigsten Einflussfaktoren für die prädiktive Bewertung.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### Rechnungsabschlüsse nach Wirtschaftszweigen insgesamt {#total-accounts-by-industry}
-
-Dieses Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik und verwendet ein Ringdiagramm, um die proportionalen Zählergrößen für die Branchen zu veranschaulichen, aus denen die Gesamtanzahl besteht. Der Schlüssel bietet Informationen zur Farbcodierung für die verschiedenen Branchen, aus denen das Ringdiagramm besteht.
-
->[!NOTE]
->
->Die in diesem Einblick angezeigten Informationen hängen vom von Ihnen festgelegten Datumsbereich ab. Wenn Sie keinen Datumsfilter angeben, analysiert das Standardverhalten des Insight Daten, die aus dem Vorjahr bis heute hinzugefügt wurden.
-
-Einzelne Zahlen für die verschiedenen Branchen werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
-
-![Die Gesamtkonten nach Branchen-Widget.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Nächste Schritte
 

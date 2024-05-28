@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 31%
@@ -15,7 +15,7 @@ ht-degree: 31%
 
 >[!NOTE]
 >
->Der alte Editor wurde am 30. Mai 2024 eingestellt. Es ist nicht mehr verfügbar. Sie können jetzt die [Verbesserter Abfrage-Editor](#enhanced-editor-toggle) zum Schreiben, Validieren und Ausführen von Abfragen
+>Der alte Editor wurde am 24. Mai 2024 eingestellt. Es ist nicht mehr verfügbar. Sie können jetzt die [Verbesserter Abfrage-Editor](#enhanced-editor-toggle) zum Schreiben, Validieren und Ausführen von Abfragen
 
 Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten im [!DNL Experience Platform] -Benutzeroberfläche. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen zu Entwicklungszwecken sowie nicht-interaktiver Abfragen zum Ausfüllen von Datensätzen in [!DNL Experience Platform].
 
@@ -45,7 +45,7 @@ Im Abfrage-Editor ausgeführte Abfragen werden interaktiv ausgeführt. Das bedeu
 
 >[!NOTE]
 >
->Der alte Editor wurde am 30. Mai 2024 eingestellt. Es ist nicht mehr verfügbar. Sie können jetzt den erweiterten Abfrage-Editor verwenden, um Ihre Abfragen zu schreiben, zu validieren und auszuführen.
+>Der alte Editor wurde am 24. Mai 2024 eingestellt. Es ist nicht mehr verfügbar. Sie können jetzt den erweiterten Abfrage-Editor verwenden, um Ihre Abfragen zu schreiben, zu validieren und auszuführen.
 
 Mit dem Abfrage-Editor können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle Abfragen, die ausgeführt oder im Abfrage-Editor gespeichert werden, stehen allen Benutzern in Ihrer Organisation mit Zugriff auf Query Service zur Verfügung.
 

@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise April 2024 für Adobe Experience Platform.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 22%
@@ -121,7 +121,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 | Warnhinweise zu geplanten Abfragen | Halten Sie sich während der Planung von Abfragen über proaktive Benachrichtigungen auf dem Laufenden, um eine effiziente und zeitnahe Aufgabenverwaltung zu gewährleisten. Sie können [Warnhinweise entweder bei der Erstellung einer Abfrage abonnieren](../../query-service/ui/query-schedules.md#alerts-for-query-status) oder die Inline-Aktionen für bestehende geplante Abfragen verwenden. Siehe [Warnhinweise mit Inline-Aktionen abonnieren](../../query-service/ui/monitor-queries.md#alert-subscription) Dokumentation finden Sie weitere Informationen. |
 | Verbesserte geplante Abfragennavigation | Für eine höhere Produktivität können Sie einfach zwischen Abfragevorlagen und geplanten Ausführungen navigieren. Siehe die Dokumentation unter [Anzeigen geplanter Abfrageausführungen](../../query-service/ui/query-schedules.md#scheduled-query-runs) für weitere Informationen. |
 | Erweiterte Abfrageausgabe | Greifen Sie in der Konsole auf bis zu 500 Zeilen mit Abfrageergebnissen zu, um eine tiefere Analyse Ihrer Daten zu erhalten. Weitere Informationen finden Sie unter [Ergebnisanzahl](../../query-service/ui/user-guide.md#result-count) Dokumentation finden Sie weitere Informationen. |
-| Veraltete Abmeldung des Abfrage-Editors | Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor für alle Benutzer zum Standardeditor geworden. Der alte Editor wird vom 30. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar. Siehe [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md) für weitere Informationen. |
+| Veraltete Abmeldung des Abfrage-Editors | Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor für alle Benutzer zum Standardeditor geworden. Der alte Editor wird vom 24. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar. Siehe [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md) für weitere Informationen. |
 
 {style="table-layout:auto"}
 

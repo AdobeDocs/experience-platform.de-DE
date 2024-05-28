@@ -2,9 +2,9 @@
 title: Datenverschlüsselung in Adobe Experience Platform
 description: Erfahren Sie, wie Daten im Transit und im Ruhezustand in Adobe Experience Platform verschlüsselt werden.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: fd31d54339b8d87b80799a9c0fa167cc9a07a33f
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -34,21 +34,21 @@ Nach dem Einbringen der Daten in das System und [im Ruhezustand verschlüsselt](
 
 ### Unterstützung des mTLS-Protokolls {#mtls-protocol-support}
 
-Sie können jetzt &quot;Mutual Transport Layer Security (mTLS)&quot;verwenden, um eine verbesserte Sicherheit bei ausgehenden Verbindungen zu HTTP-API-Zielen und benutzerdefinierten Aktionen in Adobe Journey Optimizer sicherzustellen. mTLS ist eine durchgängige Sicherheitsmethode für die gegenseitige Authentifizierung, mit der sichergestellt wird, dass beide Parteien, die Informationen teilen, diejenigen sind, die sie angeblich sind, bevor Daten freigegeben werden. mTLS umfasst einen zusätzlichen Schritt im Vergleich zu TLS, bei dem der Server auch das Zertifikat des Kunden anfordert und es auf dessen Ende überprüft.
+Sie können jetzt &quot;Mutual Transport Layer Security (mTLS)&quot;verwenden, um eine verbesserte Sicherheit bei ausgehenden Verbindungen mit dem [HTTP-API-Ziel](../../destinations/catalog/streaming/http-destination.md) und Adobe Journey Optimizer [benutzerdefinierte Aktionen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS ist eine durchgängige Sicherheitsmethode für die gegenseitige Authentifizierung, mit der sichergestellt wird, dass beide Parteien, die Informationen teilen, diejenigen sind, die sie angeblich sind, bevor Daten freigegeben werden. mTLS umfasst einen zusätzlichen Schritt im Vergleich zu TLS, bei dem der Server auch das Zertifikat des Kunden anfordert und es auf dessen Ende überprüft.
 
-#### mTLS in Adobe Journey Optimizer {#mtls-in-adobe-journey-optimizer}
-
-In Adobe Journey Optimizer wird mTLS zusammen mit [benutzerdefinierte Aktionen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). Keine weiteren [Konfiguration für benutzerdefinierte Adobe Journey Optimizer-Aktionen](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) ist von Ihrer Seite erforderlich, um mTLS zu aktivieren. Wenn der Endpunkt für eine benutzerdefinierte Aktion mTLS-fähig ist, ruft das System das Zertifikat aus dem Adobe Experience Platform-Keystore ab und stellt es automatisch an den -Endpunkt bereit (wie für mTLS-Verbindungen erforderlich).
-
-Wenn Sie mTLS mit diesen Adobe Journey Optimizer- und Experience Platform-HTTP-API-Ziel-Workflows verwenden möchten, muss für die Serveradresse, die Sie in die Adobe Journey Optimizer-Benutzeroberfläche für Kundenaktionen oder die Benutzeroberfläche &quot;Ziele&quot;einfügen, die TLS-Protokolle deaktiviert und nur mTLS aktiviert sein. Wenn das TLS 1.2-Protokoll an diesem Endpunkt noch aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Um mTLS mit diesen Workflows verwenden zu können, muss der &quot;Empfangs&quot;-Server-Endpunkt ein mTLS sein. **only** aktivierter Verbindungsendpunkt.
+Wenn Sie möchten [Verwenden von mTLS mit benutzerdefinierten Adobe Journey Optimizer-Aktionen](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) und Experience Platform HTTP-API-Ziel-Workflows, muss die Server-Adresse, die Sie in die Adobe Journey Optimizer-Benutzeroberfläche für Kundenaktionen oder in der Benutzeroberfläche &quot;Ziele&quot;eingegeben haben, TLS-Protokolle deaktiviert und nur mTLS aktiviert haben. Wenn das TLS 1.2-Protokoll an diesem Endpunkt noch aktiviert ist, wird kein Zertifikat für die Client-Authentifizierung gesendet. Um mTLS mit diesen Workflows verwenden zu können, muss der &quot;Empfangs&quot;-Server-Endpunkt ein mTLS sein. **only** aktivierter Verbindungsendpunkt.
 
 >[!IMPORTANT]
 >
->In Ihrer benutzerdefinierten Aktion oder Ihrem Journey für Adobe Journey Optimizer ist keine zusätzliche Konfiguration erforderlich, um mTLS zu aktivieren. Dieser Vorgang erfolgt automatisch, wenn ein mTLS-fähiger Endpunkt erkannt wird. Die gebräuchlichen Namen (CN) und alternativen Namen des Betreffs (SAN) für jedes Zertifikat sind in der Dokumentation als Teil des Zertifikats verfügbar und können bei Bedarf als zusätzliche Ebene der Eigentümervalidierung verwendet werden.
+>In Ihrer benutzerdefinierten Aktion für Adobe Journey Optimizer oder Ihrem HTTP-API-Ziel ist keine zusätzliche Konfiguration erforderlich, um mTLS zu aktivieren. Dieser Prozess erfolgt automatisch, wenn ein mTLS-fähiger Endpunkt erkannt wird. Die gebräuchlichen Namen (CN) und alternativen Namen des Betreffs (SAN) für jedes Zertifikat sind in der Dokumentation als Teil des Zertifikats verfügbar und können bei Bedarf als zusätzliche Ebene der Eigentümervalidierung verwendet werden.
 >
 >RFC 2818, veröffentlicht im Mai 2000, stellt die Verwendung des Felds &quot;Common Name&quot;(CN) in HTTPS-Zertifikaten zur Verifizierung des Subjektnamens ein. Stattdessen wird empfohlen, die Erweiterung &quot;Subject Alternative Name&quot;(SAN) des Typs &quot;DNS-Name&quot;zu verwenden.
 
 ### Zertifikate herunterladen {#download-certificates}
+
+>[!NOTE]
+>
+>Es liegt in Ihrer Verantwortung, das öffentliche Zertifikat auf dem neuesten Stand zu halten. Achten Sie darauf, dass Sie das Zertifikat regelmäßig überprüfen, zumal sein Ablaufdatum näher rückt. Sie sollten diese Seite mit einem Lesezeichen versehen, um die neueste Kopie in Ihrer Umgebung zu erhalten.
 
 Wenn Sie die CN oder das SAN überprüfen möchten, um eine zusätzliche Validierung von Drittanbietern durchzuführen, können Sie die entsprechenden Zertifikate hier herunterladen:
 
