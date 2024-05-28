@@ -2,7 +2,7 @@
 title: Salesforce-Konto über die Experience Platform-Benutzeroberfläche verbinden
 description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche an die Experience Platform übertragen können.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 21%
@@ -30,7 +30,7 @@ Die [!DNL Salesforce] -Quelle unterstützt grundlegende Authentifizierung und OA
 
 >[!BEGINTABS]
 
->[!TAB Standardauthentifizierung]
+>[!TAB Grundlegende Authentifizierung]
 
 Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihre [!DNL Salesforce] Konto mit einfacher Authentifizierung.
 
@@ -39,7 +39,7 @@ Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihre [!DNL
 | Umgebungs-URL | Die URL der [!DNL Salesforce] Quellinstanz. |
 | Benutzername | Der Benutzername für die [!DNL Salesforce] Benutzerkonto. |
 | Kennwort | Das Kennwort für die [!DNL Salesforce] Benutzerkonto. |
-| Sicherheits-Token | Das Sicherheits-Token für [!DNL Salesforce] Benutzerkonto. |
+| Sicherheitstoken | Das Sicherheits-Token für [!DNL Salesforce] Benutzerkonto. |
 | API-Version | (Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version verwenden `52`eingeben, müssen Sie den Wert als `52.0`. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
 
 Weitere Informationen zur Authentifizierung finden Sie unter [this [!DNL Salesforce] Authentifizierungshandbuch](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
@@ -65,7 +65,7 @@ Nachdem Sie die erforderlichen Anmeldedaten erfasst haben, können Sie die folge
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem *CRM* category, select **[!DNL Salesforce]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Auswählen **[!DNL Salesforce]** unter *[!UICONTROL CRM]* und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
 >[!TIP]
 >
@@ -91,7 +91,7 @@ Wählen Sie anschließend den Authentifizierungstyp aus, den Sie für Ihr neues 
 
 >[!BEGINTABS]
 
->[!TAB Standardauthentifizierung]
+>[!TAB Grundlegende Authentifizierung]
 
 Wählen Sie zur einfachen Authentifizierung **[!UICONTROL Grundlegende Authentifizierung]** und geben Sie dann Werte für die folgenden Anmeldedaten an:
 

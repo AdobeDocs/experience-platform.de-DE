@@ -2,10 +2,10 @@
 title: Erstellen einer Salesforce-Basisverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit einem Salesforce-Konto verbinden.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 40%
+source-wordcount: '774'
+ht-degree: 37%
 
 ---
 
@@ -30,7 +30,7 @@ Die [!DNL Salesforce] -Quelle unterstützt grundlegende Authentifizierung und OA
 
 >[!BEGINTABS]
 
->[!TAB Standardauthentifizierung]
+>[!TAB Grundlegende Authentifizierung]
 
 Um eine Verbindung herzustellen [!DNL Salesforce] -Konto [!DNL Flow Service] Geben Sie mithilfe der einfachen Authentifizierung Werte für die folgenden Anmeldeinformationen an:
 
@@ -81,7 +81,7 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB Standardauthentifizierung]
+>[!TAB Grundlegende Authentifizierung]
 
 Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] einfache Authentifizierung verwenden:
 
@@ -99,11 +99,11 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params":
-              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-              "username": "acme-salesforce",
-              "password": "xxxx",
-              "securityToken": "xxxx"
-          }
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "username": "acme-salesforce",
+            "password": "xxxx",
+            "securityToken": "xxxx"
+        }
       },
       "connectionSpec": {
           "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -163,7 +163,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einschließlich ihrer eindeutigen Kennung (`id`). Diese ID ist erforderlich, um im nächsten Schritt Ihr CRM-System zu untersuchen.
+Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen mit der eindeutigen ID zurückgegeben.
 
 ```json
 {
