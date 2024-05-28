@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Hilfe zum Adobe Experience Platform Privacy Service
 breadcrumb-title: Privacy Service-Anleitung
-user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie DSGVO und CCPA einzuhalten.
+user-guide-description: Verwalten Sie Kundendatenanfragen zur Einhaltung gesetzlicher Datenschutzbestimmungen wie DSGVO und CCPA.
 feature: Privacy
 role: User,Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 100%
+source-wordcount: '92'
+ht-degree: 81%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 100%
    * [Authentifizierung und Zugriff auf die Privacy Service-API](./api/getting-started.md)
    * [Datenschutzaufträge](./api/privacy-jobs.md)
    * [Einverständnis](./api/consent.md)
+   * [Inhalt](./api/content.md)
    * [Anhang](./api/appendix.md)
 * Benutzeroberfläche von Privacy Service {#ui}
    * [Übersicht](./ui/overview.md)
