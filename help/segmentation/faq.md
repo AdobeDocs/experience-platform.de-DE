@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4064'
 ht-degree: 22%
 
 ---
@@ -333,7 +333,11 @@ Durch die Zielgruppenteilung können Sie Ihre Zielgruppe weiter in kleinere Grup
 
 Bei der Aufteilung nach Attribut besteht eine gegenseitige Exklusivität zwischen den Gruppen. Wenn also ein Eintrag die Kriterien für mehrere Aufspaltungspfade erfüllt, wird ihm der **erste** Pfad von links und **keiner** der anderen Pfade zugewiesen.
 
-Beim Aufteilen nach Prozentsatz werden Aufspaltungen **zufällig** getan. Dies bedeutet, dass die Profile zufällig jedem Pfad zugewiesen werden. Die Aufteilung ist **not** persistent sein, sodass sich das Profil bei jeder Auswertung in einer anderen Unterzielgruppe befinden könnte.
+Beim Aufteilen nach Prozentsatz werden Aufspaltungen **zufällig** getan. Dies bedeutet, dass die Profile zufällig jedem Pfad zugewiesen werden. Die Aufteilung **is** persistent ist, d. h. das Profil befindet sich bei jeder Auswertung in derselben Unter-Audience.
+
+>[!NOTE]
+>
+>Zuvor waren Aufspaltungen in der Zielgruppenkomposition **not** beständig.
 
 Weiterführende Informationen zum Block „Aufspaltung“ finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./ui/audience-composition.md#split).
 

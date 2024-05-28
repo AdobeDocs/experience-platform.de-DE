@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '1889'
-ht-degree: 89%
+source-wordcount: '1913'
+ht-degree: 87%
 
 ---
 
@@ -232,7 +232,7 @@ Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränke
 
 ## [!UICONTROL Aufspaltung] {#split-block}
 
-Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder nach einem Attribut aufteilen.
+Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder Attribut aufteilen. Bei der Unterteilung Ihrer Audience in Unterzielgruppen erfolgt diese Aufteilung **persistent**. Das bedeutet, dass sich das Profil bei jeder Auswertung in derselben Unter-Audience befindet.
 
 Um einen Block **[!UICONTROL Aufspaltung]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Aufspaltung]** aus.
 
