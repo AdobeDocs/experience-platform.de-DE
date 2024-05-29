@@ -2,9 +2,9 @@
 title: Identitätsdaten in Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen und verwalten.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1481'
 ht-degree: 2%
 
 ---
@@ -19,11 +19,11 @@ Dieses Dokument bietet einen Überblick darüber, wie ECIDs mit dem Platform Web
 
 Das Platform Web SDK weist ECIDs mithilfe von Cookies zu und verfolgt sie. Es stehen verschiedene Methoden zur Konfiguration der Erstellung dieser Cookies zur Verfügung.
 
-Wenn ein neuer Benutzer auf Ihre Website gelangt, versucht Adobe Experience Cloud Identity Service, ein Cookie zur Identifizierung des Geräts für diesen Benutzer zu setzen. Bei erstmaligen Besuchern wird eine ECID generiert und in der ersten Antwort vom Adobe Experience Platform Edge Network zurückgegeben. Bei wiederkehrenden Besuchern wird die ECID aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie und vom Edge Network zur Payload hinzugefügt.
+Wenn ein neuer Benutzer auf Ihre Website gelangt, versucht Adobe Experience Cloud Identity Service, ein Cookie zur Identifizierung des Geräts für diesen Benutzer zu setzen. Bei Erstbesuchern wird eine ECID generiert und in der ersten Antwort vom Adobe Experience Platform-Edge Network zurückgegeben. Bei wiederkehrenden Besuchern wird die ECID aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie und vom Edge Network zur Payload hinzugefügt.
 
 Sobald das Cookie, das die ECID enthält, gesetzt wurde, enthält jede nachfolgende vom Web SDK generierte Anfrage eine codierte ECID in der `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie.
 
-Bei der Verwendung von Cookies zur Geräteerkennung haben Sie zwei Möglichkeiten, mit dem Edge Network zu interagieren:
+Bei der Verwendung von Cookies zur Geräteidentifizierung haben Sie zwei Möglichkeiten, mit dem Edge Network zu interagieren:
 
 1. Daten direkt an die Edge Network-Domäne senden `adobedc.net`. Diese Methode wird als [Datenerfassung von Drittanbietern](#third-party).
 1. Erstellen Sie einen CNAME für Ihre eigene Domäne, der auf `adobedc.net`. Diese Methode wird als [Erstanbieter-Datenerfassung](#first-party).
@@ -56,9 +56,36 @@ Wenn ein Endbenutzer die Site dreimal in einer Woche besucht und dann sieben Tag
 
 Um die oben beschriebenen Auswirkungen von Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Weitere Informationen finden Sie im Leitfaden zu [IDs von Erstanbieter-Geräten](./first-party-device-ids.md).
 
-## Abrufen der ECID und der Region für den aktuellen Benutzer
+## Abrufen der ECID und der Region für den aktuellen Benutzer {#retrieve-ecid}
 
-Verwenden Sie zum Abrufen der eindeutigen ECID für den aktuellen Besucher die `getIdentity` Befehl. Für erstmalige Besucher, die noch keine ECID haben, generiert dieser Befehl eine neue ECID. `getIdentity` gibt auch die Regions-ID für den Besucher zurück.
+Je nach Anwendungsfall gibt es zwei Möglichkeiten, auf die [!DNL ECID]:
+
+* [Rufen Sie die [!DNL ECID] durch Datenvorbereitung für die Datenerfassung](#retrieve-ecid-data-prep): Dies ist die empfohlene Methode.
+* [Rufen Sie die [!DNL ECID] durch die `getIdentity()` command](#retrieve-ecid-getidentity): Verwenden Sie diese Methode nur, wenn Sie die [!DNL ECID] Informationen Client-seitig.
+
+### Rufen Sie die [!DNL ECID] durch Datenvorbereitung für die Datenerfassung {#retrieve-ecid-data-prep}
+
+Verwendung [Datenvorbereitung für die Datenerfassung](../../datastreams/data-prep.md) zum Zuordnen des [!DNL ECID] zu [!DNL XDM] -Feld. Dies ist die empfohlene Methode für den Zugriff auf [!DNL ECID].
+
+Setzen Sie dazu das Quellfeld auf den folgenden Pfad:
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+Legen Sie dann das Zielfeld auf einen XDM-Pfad fest, bei dem das Feld vom Typ ist `string`.
+
+![](../../tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+
+
+### Rufen Sie die [!DNL ECID] durch die `getIdentity()` command {#retrieve-ecid-getidentity}
+
+
+>[!IMPORTANT]
+>
+>Sie sollten die ECID nur über die `getIdentity()` , wenn Sie [!DNL ECID] Client-seitig. Wenn Sie die ECID nur einem XDM-Feld zuordnen möchten, verwenden Sie [Datenvorbereitung für die Datenerfassung](#retrieve-ecid-data-prep) anstatt.
+
+Verwenden Sie zum Abrufen der eindeutigen ECID für den aktuellen Besucher die `getIdentity` Befehl. Für erstmalige Besucher ohne [!DNL ECID] Dieser Befehl generiert jedoch eine neue [!DNL ECID]. `getIdentity` gibt auch die Regions-ID für den Besucher zurück.
 
 >[!NOTE]
 >
@@ -118,7 +145,7 @@ Jedes Identitätsobjekt im Identitäten-Array enthält die folgenden Eigenschaft
 | `authenticationState` | Zeichenfolge | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
 | `primary` | Boolesch | Bestimmt, ob diese Identität als primäres Fragment im Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt. Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 
-Verwenden der `identityMap` -Feld zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie bei Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=de) -Methode aus [!DNL ID Service API]. Siehe [Dokumentation zur ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) für weitere Details.
+Verwenden der `identityMap` -Feld zur Identifizierung von Geräten oder Benutzern führt zum gleichen Ergebnis wie bei Verwendung der [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) -Methode aus [!DNL ID Service API]. Siehe [Dokumentation zur ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) für weitere Details.
 
 ## Migration von der Besucher-API zur ECID
 
