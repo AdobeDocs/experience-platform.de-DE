@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
+source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
 workflow-type: tm+mt
-source-wordcount: '1777'
-ht-degree: 81%
+source-wordcount: '1811'
+ht-degree: 80%
 
 ---
 
@@ -21,6 +21,16 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 >Google [hat](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plant, die Chrome-Unterstützung für Drittanbieter-Cookies im zweiten Halbjahr 2024 einzustellen. Daher werden Drittanbieter-Cookies in keinem der wichtigsten Browser mehr unterstützt.
 >
 >Wenn diese Änderung implementiert ist, stellt Adobe die Unterstützung für die `demdex` -Cookie, das derzeit im Web SDK unterstützt wird.
+
+## Version 2.20.0 – Mittwoch, 21. Mai 2024
+
+**Neue Funktionen**
+
+* Hinzugefügte Unterstützung für [Streaming-Mediensammlung](../web-sdk/commands/configure/streamingmedia.md).
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Es wurde ein Fehler behoben, durch den der Standardinhalt vom Codeausschnitt zur Vorab-Ausblendung ausgeblendet wurde, wenn die Zustimmung abgelehnt wurde.
 
 ## Version 2.19.2 – Donnerstag, 10. Januar 2024
 
@@ -164,7 +174,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.7.0 – 26. Oktober 2021
 
-* Stellen Sie zusätzliche Informationen aus dem Edge-Netzwerk im Rückgabewert von bereit. `sendEvent`, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden.
+* Zusätzliche Informationen aus dem Edge Network im Rückgabewert von verfügbar machen `sendEvent`, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden.
 
 ## Version 2.6.4 – 7. September 2021
 
