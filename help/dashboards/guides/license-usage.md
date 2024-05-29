@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
 workflow-type: tm+mt
-source-wordcount: '2107'
-ht-degree: 10%
+source-wordcount: '2069'
+ht-degree: 3%
 
 ---
 
@@ -16,14 +16,14 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Lizenznutzungs-Dashboard"
->abstract="Das Lizenznutzungs-Dashboard bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken, sowie Ihr vertraglich vereinbarter Lizenzbetrag. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
+>abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken und Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich &quot;Details&quot;wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Lizenznutzungs-Dashboard"
->abstract="Das Lizenznutzungs-Dashboard bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken, sowie Ihr vertraglich vereinbarter Lizenzbetrag. Im Arbeitsbereich „Details“ wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt.<br><br>Die Nutzungsprognosen werden am Ende jeden Monats aktualisiert und prognostizieren Ihre Nutzung für das kommende halbe Jahr. Um die Nutzung zu reduzieren, konfigurieren Sie die Datenlaufzeit für Datensätze oder Pseudonym-Profile für die Sandboxes und Datensätze."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Datensatzgültigkeiten"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Datenablaufzeiten von Pseudonym-Profilen"
+>abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken und Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich &quot;Details&quot;wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Datensatzgültigkeiten"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Datenabläufe für Pseudonyme Profile"
 
 Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über die Adobe Experience Platform anzeigen [!UICONTROL Lizenzverwendung] Dashboard. Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
 
