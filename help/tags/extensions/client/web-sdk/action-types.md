@@ -3,10 +3,10 @@ title: Aktionstypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 2%
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -48,6 +48,33 @@ Das für den Editor verwendete XDM-Schema ist das Schema, das auf der [!UICONTRO
 ![](assets/update-variable-set-property.png)
 
 Es gibt einige Unterschiede zwischen dem Editor in der Aktion &quot;Variable aktualisieren&quot;und dem Editor im XDM-Objektdatenelement. Zunächst enthält die Aktion für die Variable &quot;update&quot;ein Element auf der Stammebene mit der Bezeichnung &quot;xdm&quot;. Wenn Sie auf dieses Element klicken, können Sie ein Datenelement angeben, das zum Festlegen des gesamten Objekts verwendet werden soll. Zweitens verfügt die Aktion für die Variable &quot;update&quot;über Kontrollkästchen, um die Daten aus dem xdm-Objekt zu löschen. Klicken Sie links auf eine der Eigenschaften und aktivieren Sie dann das Kontrollkästchen rechts, um den Wert zu löschen. Dadurch wird der aktuelle Wert gelöscht, bevor Werte für die Variable festgelegt werden.
+
+## Medienereignis senden {#send-media-event}
+
+Sendet ein Medienereignis an Adobe Experience Platform und/oder Adobe Analytics. Diese Aktion ist nützlich, wenn Sie Medienereignisse auf Ihrer Website verfolgen. Wählen Sie eine Instanz aus (wenn mehrere Instanzen vorhanden sind). Die Aktion erfordert eine `playerId` , der eine eindeutige Kennung für eine verfolgte Mediensitzung darstellt. Dazu ist auch eine **[!UICONTROL Erlebnisqualität]** und `playhead` -Datenelement beim Starten einer Mediensitzung.
+
+![Platform-UI-Bild, das den Bildschirm für das Sendemedienereignis anzeigt.](assets/send-media-event.png)
+
+Die **[!UICONTROL Medienereignis senden]** Der Aktionstyp unterstützt die folgenden Eigenschaften:
+
+- **[!UICONTROL Instanz]**: Die verwendete Web SDK-Instanz.
+- **[!UICONTROL Medien-Ereignistyp]**: Der Typ des zu verfolgenden Medienereignisses.
+- **[!UICONTROL Player-ID]**: Die eindeutige Kennung der Mediensitzung.
+- **[!UICONTROL Abspielleiste]**: Die aktuelle Position der Medienwiedergabe in Sekunden.
+- **[!UICONTROL Details zur Mediensitzung]**: Beim Senden eines Medienstartereignisses sollten die erforderlichen Details zur Mediensitzung angegeben werden.
+- **[!UICONTROL Kapiteldetails]**: In diesem Abschnitt können Sie die Kapiteldetails beim Senden eines Kapitelstart-Medienereignisses angeben.
+- **[!UICONTROL Werbedetails]**: Beim Senden einer `AdBreakStart` -Ereignis verwenden, müssen Sie die erforderlichen Werbedetails angeben.
+- **[!UICONTROL Details zum Anzeigen-Pod]**: Details zum Anzeigen-Pod beim Senden einer `AdStart` -Ereignis.
+- **[!UICONTROL Fehlerdetails]**: Details zum Wiedergabefehler, der verfolgt wird.
+- **[!UICONTROL Statusaktualisierungsdetails]**: Der Player-Status, der aktualisiert wird.
+- **[!UICONTROL Benutzerdefinierte Metadaten]**: Die benutzerdefinierten Metadaten zum Medienereignis, das verfolgt wird.
+- **[!UICONTROL Erlebnisqualität]**: Die Medienqualität der getrackten Erlebnisdaten.
+
+## Media Analytics-Tracker abrufen {#get-media-analytics-tracker}
+
+Mit dieser Aktion wird die veraltete Media Analytics-API abgerufen. Wenn die Aktion konfiguriert und ein Objektname angegeben wird, wird die veraltete Media Analytics-API in dieses Fensterobjekt exportiert. Wenn keines angegeben ist, wird er nach `window.Media` , wie es die aktuelle Media JS-Bibliothek tut.
+
+![Platform-UI-Bild, das den Aktionstyp &quot;Get Media Analytics Tracker&quot;anzeigt.](assets/get-media-analytics-tracker.png)
 
 ## Nächste Schritte {#next-steps}
 

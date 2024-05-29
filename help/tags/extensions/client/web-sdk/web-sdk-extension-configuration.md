@@ -2,16 +2,16 @@
 title: Web SDK-Tag-Erweiterung konfigurieren
 description: Erfahren Sie, wie Sie die Tag-Erweiterung des Experience Platform Web SDK in der Benutzeroberfläche für Tags konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1734'
 ht-degree: 6%
 
 ---
 
 # Konfigurieren der Web SDK-Tag-Erweiterung
 
-Die [!DNL Web SDK] Tag-Erweiterung sendet Daten aus Webeigenschaften über das Experience Platform Edge Network an Adobe Experience Cloud.
+Die [!DNL Web SDK] Tag-Erweiterung sendet Daten von Web-Eigenschaften über das Experience Platform-Edge Network an Adobe Experience Cloud.
 
 Mit der Erweiterung können Sie Daten in Platform streamen, Identitäten synchronisieren, Zustimmungssignale von Kunden verarbeiten und automatisch Kontextdaten erfassen.
 
@@ -47,7 +47,7 @@ Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an
 
 In diesem Abschnitt können Sie die Datenspeicher auswählen, die für jede der drei verfügbaren Umgebungen (Produktion, Staging und Entwicklung) verwendet werden sollen.
 
-Wenn eine Anforderung an das Edge-Netzwerk gesendet wird, wird eine Datastream-ID verwendet, um auf die serverseitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
+Wenn eine Anforderung an das Edge Network gesendet wird, wird eine Datastream-ID verwendet, um auf die serverseitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
 Siehe Handbuch unter [datastreams](../../../../datastreams/overview.md) , um zu erfahren, wie Sie einen Datastream konfigurieren.
 
@@ -113,9 +113,24 @@ Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe die Verw
 
 ![Bild mit den Datenerfassungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Callback-Funktion]**: Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an das Edge-Netzwerk gesendet werden.
+* **[!UICONTROL Callback-Funktion]**: Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an das Edge Network gesendet werden.
 * **[!UICONTROL Aktivieren der Klickdatenerfassung]**: Das Web SDK kann automatisch Link-Klickinformationen für Sie erfassen. Standardmäßig ist diese Funktion aktiviert, kann jedoch über diese Option deaktiviert werden. Links werden auch als Downloadlinks bezeichnet, wenn sie einen der in der [!UICONTROL Downloadlink-Qualifizierung] Textfeld. Adobe bietet Ihnen einige standardmäßige Downloadlink-Qualifikatoren. Sie können sie nach Bedarf bearbeiten.
 * **[!UICONTROL Automatisch erfasste Kontextdaten]**: Standardmäßig erfasst das Web SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn diese Daten nicht erfasst werden sollen oder Sie nur bestimmte Datenkategorien erfassen möchten, wählen Sie **[!UICONTROL Spezifische Kontextdaten]** und wählen Sie die Daten aus, die Sie erfassen möchten. Siehe [`context`](/help/web-sdk/commands/configure/context.md) für weitere Informationen.
+
+## Einstellungen für die Medienerfassung konfigurieren {#media-collection}
+
+Mit der Medienerfassungsfunktion können Sie Daten im Zusammenhang mit Mediensitzungen auf Ihrer Website erfassen.
+
+Die erfassten Daten können Informationen zu Medienwiedergaben, Pausen, Beendigungen und anderen damit zusammenhängenden Ereignissen enthalten. Nach der Erfassung können Sie diese Daten an Adobe Experience Platform und/oder Adobe Analytics senden, um Berichte zu erstellen. Diese Funktion bietet eine umfassende Lösung zum Verfolgen und Verstehen des Verhaltens der Mediennutzung auf Ihrer Website.
+
+![Bild, das die Mediensammlungs-Einstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/media-collection.png)
+
+
+* **[!UICONTROL Kanal]**: Der Name des Kanals, in dem die Mediensammlung erfolgt. Beispiel: `Video channel`.
+* **[!UICONTROL Player-Name]**: Der Name des Medienplayers.
+* **[!UICONTROL Anwendungsversion]**: Die Version der Medienplayer-Anwendung.
+* **[!UICONTROL Haupt-Ping-Intervall]**: Häufigkeit der Pings für den Hauptinhalt in Sekunden. Der Standardwert lautet `10`. Die Werte können einen Bereich von `10` nach `50` Sekunden.  Wenn kein Wert angegeben ist, wird der Standardwert bei Verwendung von [automatisch verfolgte Sitzungen](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Anzeigen-Ping-Intervall]**: Häufigkeit der Pings für Anzeigeninhalte in Sekunden. Der Standardwert lautet `10`. Die Werte können einen Bereich von `1` nach `10` Sekunden. Wenn kein Wert angegeben ist, wird der Standardwert bei Verwendung von [automatisch verfolgte Sitzungen](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Konfigurieren von Datenstromüberschreibungen {#datastream-overrides}
 
@@ -126,7 +141,7 @@ Dies hilft Ihnen beim Auslösen anderer Datenstromverhaltensweisen als der stand
 Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
 
 1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](/help/datastreams/configure.md) definieren.
-2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Web SDK-Tag-Erweiterung an das Edge-Netzwerk senden.
+2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Web SDK-Tag-Erweiterung an das Edge Network senden.
 
 Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](/help/datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
 
@@ -140,6 +155,6 @@ Datastream-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwi
 
 ## Erweiterte Einstellungen konfigurieren
 
-Verwenden Sie die **[!UICONTROL Edge-Basispfad]** -Feld, wenn Sie den Basispfad ändern müssen, der für die Interaktion mit dem Edge-Netzwerk verwendet wird. Dies sollte keine Aktualisierung erfordern, aber falls Sie an einer Beta- oder Alpha-Phase teilnehmen, kann Adobe Sie bitten, dieses Feld zu ändern.
+Verwenden Sie die **[!UICONTROL Edge-Basispfad]** -Feld, wenn Sie den Basispfad ändern müssen, der für die Interaktion mit dem Edge Network verwendet wird. Dies sollte keine Aktualisierung erfordern, aber falls Sie an einer Beta- oder Alpha-Phase teilnehmen, kann Adobe Sie bitten, dieses Feld zu ändern.
 
 ![Bild mit den erweiterten Einstellungen unter Verwendung der Web SDK-Tag-Erweiterungsseite.](assets/advanced-settings.png)

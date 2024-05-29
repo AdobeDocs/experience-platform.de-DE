@@ -2,10 +2,10 @@
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 6%
+source-wordcount: '653'
+ht-degree: 5%
 
 ---
 
@@ -60,6 +60,12 @@ Sie können Payload-Objekte mithilfe der Variablen **[!UICONTROL Variable]** Dat
 ![Bild der Tags-Benutzeroberfläche mit den Datenelementoptionen.](assets/variable-data-element.png)
 
 Nach Erstellung dieses Datenelements können Sie die [Variable aktualisieren](./action-types.md#update-variable) -Aktion, um sie zu ändern. Wenn Sie bereit sind, können Sie dieses Datenelement in die [Ereignis senden](./action-types.md#send-event) Aktion zum Senden von Daten an einen Datastream.
+
+## Medien: Erlebnisqualität {#quality-experience}
+
+A **[!UICONTROL Erlebnisqualität]** -Datenelement ist beim Senden von Streaming-Medienereignissen an Adobe Experience Platform hilfreich. Sie können dieses Element beim Erstellen einer Mediensitzung hinzufügen. Die folgenden Medienereignisse enthalten aktualisierte Daten zur Erlebnisqualität.
+
+![UI-Bild mit dem Bildschirm &quot;Qualität des Experience-Datenelements erstellen&quot;.](assets/qoe-data-element.png)
 
 ## Nächste Schritte {#next-steps}
 
