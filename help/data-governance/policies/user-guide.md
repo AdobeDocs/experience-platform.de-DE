@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich „Richtlinien“ der Experience Platform-Benutzeroberfläche durchführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1768'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -151,7 +151,7 @@ Wählen Sie beim Auswählen des Einverständnisattributs die Attributwerte aus, 
 
 ![](../images/policies/select-schema-field.png)
 
-Nachdem Sie mindestens ein Einverständnisattribut ausgewählt haben, wird der Bereich **[!UICONTROL Richtlinieneigenschaften]** aktualisiert, um die geschätzte Anzahl von Profilen anzuzeigen, die im Rahmen dieser Richtlinie zulässig wären, einschließlich des Prozentsatzes am gesamten Profilspeicher. Diese Schätzung wird automatisch aktualisiert, wenn Sie die Richtlinienkonfiguration anpassen.
+Nachdem Sie mindestens ein Zustimmungsattribut ausgewählt haben, wird die **[!UICONTROL Richtlinieneigenschaften]** -Bedienfeldaktualisierungen, um die geschätzte Anzahl von Profilen anzuzeigen, die im Rahmen dieser Richtlinie zulässig wären, einschließlich des Prozentsatzes des gesamten Profilspeichers. Diese Schätzung wird automatisch aktualisiert, wenn Sie die Richtlinienkonfiguration anpassen.
 
 ![](../images/policies/audience-preview.png)
 

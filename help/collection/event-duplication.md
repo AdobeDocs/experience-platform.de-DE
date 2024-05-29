@@ -1,13 +1,13 @@
 ---
 title: Umgang mit Ereignisduplizierungen im Experience Platform
 description: Erfahren Sie, wie Adobe Experience Platform mit der Ereignisduplizierung umgeht
-source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
+exl-id: ac8c3ee8-52cf-459c-b283-16ed32d2976d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
 
 ---
-
 
 # Umgang mit Ereignisduplizierungen in Adobe Experience Platform
 
@@ -27,7 +27,7 @@ Informationen zu Best Practices für die Behandlung von Verlaufsfehlern finden S
 
 Eine Ereignisduplizierung kann in verschiedenen Szenarien auftreten, z. B. aber nicht ausschließlich:
 
-* Netzwerkbezogene Probleme zwischen Client-seitigen SDKs und der [!DNL Edge Network]. Diese Probleme können aus Fehlern des Internet Service Providers, dem Verlust mobiler Signale oder anderen Netzwerkfehlern resultieren, da die Verbindung zwischen dem Kunden und dem Edge-Netzwerk über das öffentliche Internet hergestellt wird.
+* Netzwerkbezogene Probleme zwischen Client-seitigen SDKs und der [!DNL Edge Network]. Diese Probleme können aus Fehlern des Internet Service Providers, dem Verlust mobiler Signale oder anderen Netzwerkfehlern resultieren, da die Verbindung zwischen dem Kunden und dem Edge Network über das öffentliche Internet hergestellt wird.
 * Interne Experience Platform: Automatische Skalierung von Ereignissen. Gelegentlich können Daten aufgrund der Volatilität der Cloud-Infrastruktur neu ausgeglichen werden.
 
 Die Adobe Experience Platform-Datenerfassungsschicht unterstützt die Verarbeitung mindestens einmal. Dementsprechend kann es in begrenzten, seltenen Fällen zu einer Duplizierung von Ereignissen kommen.
@@ -38,7 +38,7 @@ Weitere Informationen zur Verarbeitung &quot;mindestens einmal&quot;finden Sie i
 
 Für Geschäftsszenarios, die auf doppelte Ereignisse reagieren, verwendet Experience Platform mehrere Deduplizierungsmethoden für Ereignisse in seinen nachgelagerten Speichersystemen, wie die unten beschriebenen.
 
-* Real-Time CDP-Profilspeicher legen Ereignisse ab, wenn ein Ereignis mit demselben `_id` bereits in der [!DNL Profile Store]. Siehe die Dokumentation unter [XDM ExperienceEvent-Klasse](../xdm/classes/experienceevent.md) für weitere Details.
+* Real-Time CDP-Profilspeicher legt Ereignisse ab, wenn ein Ereignis mit demselben `_id` bereits in der [!DNL Profile store]. Siehe die Dokumentation unter [XDM ExperienceEvent-Klasse](../xdm/classes/experienceevent.md) für weitere Details.
 * Mit Customer Journey Analytics können Benutzer eine Metrik so konfigurieren, dass nur Werte nicht wiederholt gezählt werden. Weitere Informationen hierzu finden Sie in der Dokumentation unter [Komponenteneinstellungen für Metrik-Deduplizierung](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=de).
 * Experience Platform Query Service unterstützt die Deduplizierung von Daten, wenn eine ganze Zeile aus einer Berechnung entfernt oder ein bestimmter Feldsatz ignoriert werden muss, da nur ein Teil der Daten in der Zeile doppelte Informationen enthält. Die Dokumentation finden Sie hier: [Datendeduplizierung in Query Service](../query-service/key-concepts/deduplication.md) für weitere Informationen.
 

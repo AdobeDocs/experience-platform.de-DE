@@ -1,12 +1,12 @@
 ---
 title: Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies
-description: Erfahren Sie, wie Sie neue Kundinnen und Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
+description: Erfahren Sie, wie Sie neue Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -110,7 +110,7 @@ Die Klasse **[!UICONTROL XDM Individual Prospect Profile]** ist mit den unten au
 
 ![Vorkonfigurierte Felder für die Klasse „XDM Individual Prospect Profile“.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Als Nächstes müssen Sie die zuvor erstellte Partner-ID-Identität als primäre Identität für das Schema auswählen. Profildatensätze müssen eine primäre Kennung aufweisen. Dieser Schritt ist erforderlich, um sicherzustellen, dass Interessentendaten in den Profilspeicher geladen und für die Segmentierung und Aktivierung verfügbar gemacht werden können.
+Als Nächstes müssen Sie die zuvor erstellte Partner-ID-Identität als primäre Identität für das Schema auswählen. Profildatensätze müssen eine primäre Kennung aufweisen. Dieser Schritt ist erforderlich, um sicherzustellen, dass Interessensdaten in den Profilspeicher geladen und für die Segmentierung und Aktivierung verfügbar gemacht werden können.
 
 >[!AVAILABILITY]
 >

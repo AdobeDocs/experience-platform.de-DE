@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise März 2022
 description: Versionshinweise März 2022 für Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 100%
+source-wordcount: '1172'
+ht-degree: 98%
 
 ---
 
@@ -77,7 +77,7 @@ Adobe Experience Platform bietet mehrere [!DNL dashboards], in denen basierend a
 
 ### Profil-Dashboards
 
-Im Dashboard „Profile“ wird eine Momentaufnahme der Attributdaten (Datensatzdaten) wiedergegeben, die sich in Ihrem Unternehmen im Profilspeicher in Experience Platform befinden.
+Das Dashboard &quot;Profile&quot;zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher unter Experience Platform hat.
 
 **Aktualisierte Funktionen**
 

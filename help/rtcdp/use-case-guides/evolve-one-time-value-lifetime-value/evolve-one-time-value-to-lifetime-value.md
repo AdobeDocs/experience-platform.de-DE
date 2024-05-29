@@ -3,7 +3,7 @@ title: einmaligen Kundenwert auf Lebenszeitwert erhöhen
 description: Erfahren Sie, wie Sie personalisierte Kampagnen erstellen, um basierend auf den Attributen, dem Verhalten und früheren Käufen eines bestimmten Kunden die besten ergänzenden Produkte oder Dienste anzubieten.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -21,7 +21,7 @@ Implementieren Sie den einmaligen Kundenwert in das Nutzungsszenario für den Le
 
 Die Personen, die Sie als Ziel auswählen, sind die seltenen Besucher Ihrer Eigenschaften, die in den letzten drei Monaten einige Käufe getätigt haben.
 
-Betrachten Sie diese Kunden, die Ihre Eigenschaften besuchen und sporadisch die von Ihnen angebotenen Produkte oder Services erwerben. Sie können personalisierte Kampagnen erstellen, um diese Kunden anzusprechen, sodass Ihre Marke ihnen anstelle eines einmaligen Wertes einen längeren Wert anbieten kann. Erfahren Sie mehr über:
+Betrachten Sie diese Kunden, die Ihre Eigenschaften besuchen und sporadisch die von Ihnen angebotenen Produkte oder Services erwerben. Sie können personalisierte Kampagnen erstellen, um diese Kunden anzusprechen, sodass Ihre Marke ihnen anstelle eines einmaligen Wertes einen längeren Wert anbieten kann. Erfahren Sie, wie Sie:
 
 * Datenerfassung und -verwaltung
 * Erstellen von Zielgruppen
@@ -46,7 +46,7 @@ Dazu besteht die erforderliche Technologie aus den beiden Experience Platform-Ap
    * [Zielgruppen](/help/segmentation/home.md)
    * [Ziele](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Entwerfen Sie Journey, richten Sie Trigger ein und erstellen Sie die richtige Nachricht, um Ihre Besucher anzusprechen.
-   * [Ereignis- oder Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=de)
+   * [Ereignis- oder Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Zielgruppen und Ereignisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=de)
    * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 

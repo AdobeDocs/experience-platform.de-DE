@@ -2,7 +2,7 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 73%

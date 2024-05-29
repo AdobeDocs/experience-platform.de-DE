@@ -1,12 +1,12 @@
 ---
 title: Intelligente Erneute Interaktion
-description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kundinnen und Kunden auf intelligente Weise erneut anzusprechen.
+description: Stellen Sie während der wichtigsten Konversionsmomente überzeugende und vernetzte Erlebnisse bereit, um unregelmäßige Kunden intelligent erneut anzusprechen.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -178,7 +178,7 @@ Die [Details zur Endbenutzer-ID](/help/xdm/field-groups/event/enduserids.md) -Fe
 
 +++
 
-+++Commerce-Details (Feldergruppe)
++ + + Commerce Details (Feldergruppe)
 
 Die [Commerce-Details](/help/xdm/field-groups/event/commerce-details.md) -Feldergruppe wird verwendet, um Commerce-Daten wie Produktinformationen (SKU, Name, Menge) und standardmäßige Warenkorbvorgänge (Bestellung, Checkout, Abbruch) zu beschreiben.
 
@@ -221,7 +221,7 @@ Die [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -Kl
 
 +++
 
-+++Commerce-Details (Feldergruppe)
++ + + Commerce Details (Feldergruppe)
 
 Die [Commerce-Details](/help/xdm/field-groups/event/commerce-details.md) -Feldergruppe wird verwendet, um Commerce-Daten wie Produktinformationen (SKU, Name, Menge) und standardmäßige Warenkorbvorgänge (Bestellung, Checkout, Abbruch) zu beschreiben.
 

@@ -5,7 +5,7 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Batch aus dem Profilspeicher löschen, um Echtzeit-Kundenprofildaten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dazu muss die Profil-API zum Erstellen eines Profilsystemauftrags oder einer Löschanfrage verwendet werden.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 61%
@@ -305,4 +305,4 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Jetzt wissen Sie, welche Schritte beim Löschen von Datensätzen und Batches aus der [!DNL Profile Store] Innerhalb [!DNL Experience Platform]können Sie Daten löschen, die irrtümlich hinzugefügt wurden oder die Ihre Organisation nicht mehr benötigt. Beachten Sie, dass Löschanfragen nicht rückgängig gemacht werden können. Daher sollten Sie Daten nur dann löschen, wenn Sie sicher sind, dass Sie sie jetzt und in Zukunft nicht mehr benötigen werden.
+Jetzt wissen Sie, welche Schritte beim Löschen von Datensätzen und Batches aus der [!DNL Profile store] Innerhalb [!DNL Experience Platform]können Sie Daten löschen, die irrtümlich hinzugefügt wurden oder die Ihre Organisation nicht mehr benötigt. Beachten Sie, dass Löschanfragen nicht rückgängig gemacht werden können. Daher sollten Sie Daten nur dann löschen, wenn Sie sicher sind, dass Sie sie jetzt und in Zukunft nicht mehr benötigen werden.

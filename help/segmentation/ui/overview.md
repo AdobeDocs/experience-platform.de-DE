@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4334'
-ht-degree: 78%
+ht-degree: 73%
 
 ---
 
@@ -50,7 +50,7 @@ Weitere Informationen finden Sie im [Handbuch zum Zielgruppen-Dashboard](../../d
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Abwanderung"
->abstract="Die Fluktuation stellt den Prozentsatz der Profile dar, die sich innerhalb einer Zielgruppendefinition ändern, verglichen mit der letzten Ausführung des Zielgruppenvorgangs."
+>abstract="Die Abwanderung stellt den Prozentsatz der Profile dar, die sich in einer Zielgruppe im Vergleich zum letzten Ausführen des Segmentauftrags ändern."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
@@ -59,8 +59,8 @@ Weitere Informationen finden Sie im [Handbuch zum Zielgruppen-Dashboard](../../d
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Alle Zielgruppen zum Zeitplan hinzufügen"
->abstract="Aktivieren Sie diese Option, um alle Zielgruppen einzubeziehen, die mit der Batch-Segmentierung in der täglich geplanten Aktualisierung ausgewertet wurden. Deaktivieren Sie sie, um alle Zielgruppen aus der geplanten Aktualisierung zu entfernen."
+>title="Alle Zielgruppen zur Planung hinzufügen"
+>abstract="Aktivieren Sie diese Option, um alle Zielgruppen einzubeziehen, die mit der Batch-Segmentierung in der täglich geplanten Aktualisierung ausgewertet wurden. Deaktivieren Sie alle Zielgruppen aus der geplanten Aktualisierung."
 
 Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Zielgruppen für Ihre Organisation anzuzeigen. Diese Ansicht listet Informationen zu den Zielgruppen auf, einschließlich Profilanzahl, Ursprung, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
 
@@ -278,7 +278,7 @@ Wenn Sie **[!UICONTROL Eigenschaften bearbeiten]** auswählen, können Sie die g
 
 Im Abschnitt **[!UICONTROL Zielgruppe insgesamt]** wird die Gesamtzahl der Profile angezeigt, die für die Zielgruppe qualifiziert sind.
 
-Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweiligen Tages generiert. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet; bei mehr als 20 Millionen Entitäten werden 5 % der Gesamtentitäten genutzt. Weiterführende Informationen zum Generieren von Schätzungen finden Sie im Tutorial zur Zielgruppenerstellung im Abschnitt [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
+Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweiligen Tages generiert. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Für zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet und für über 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet. Weiterführende Informationen zum Generieren von Schätzungen finden Sie im Tutorial zur Zielgruppenerstellung im Abschnitt [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
 
 **Aktivierte Ziele** {#activated-destinations}
 
@@ -294,11 +294,11 @@ Unten finden Sie eine Auswahl von Profilen, die für das Segment qualifiziert si
 
 Die Methode, mit der das Daten-Sampling ausgelöst wird, hängt von der Art der Aufnahme ab.
 
-Bei der Batch-Aufnahme wird der Profilspeicher automatisch alle fünfzehn Minuten gescannt, um festzustellen, ob seit dem letzten Sampling-Auftrag ein neuer Batch erfolgreich aufgenommen wurde. Wenn dies der Fall ist, wird der Profilspeicher anschließend daraufhin überprüft, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingungen erfüllt sind, wird ein neuer Sampling-Auftrag ausgelöst.
+Für die Batch-Erfassung wird der Profilspeicher automatisch alle fünfzehn Minuten überprüft, um festzustellen, ob ein neuer Batch seit der letzten Sampling-Ausführung erfolgreich erfasst wurde. Ist dies der Fall, wird der Profilspeicher daraufhin überprüft, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingungen erfüllt sind, wird ein neuer Sampling-Auftrag ausgelöst.
 
-Bei der Streaming-Aufnahme wird der Profilspeicher automatisch jede Stunde überprüft, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingung erfüllt ist, wird ein neuer Sampling-Auftrag ausgelöst.
+Für die Streaming-Erfassung wird der Profilspeicher automatisch stündlich gescannt, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingung erfüllt ist, wird ein neuer Sampling-Auftrag ausgelöst.
 
-Die Stichprobengröße der Überprüfung hängt von der Gesamtzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
+Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
 | Entitäten im Profilspeicher | Stichprobengröße |
 | ------------------------- | ----------- |

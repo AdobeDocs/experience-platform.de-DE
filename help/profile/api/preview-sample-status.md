@@ -4,7 +4,7 @@ title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
 description: Mit dem Beispielstatusendpunkt "Vorschau"der Echtzeit-Kundenprofil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und nicht zugewiesenen Profilen erstellen.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 5%
@@ -40,7 +40,7 @@ Um mehr über Profile und ihre Rolle innerhalb von Experience Platform zu erfahr
 Da Daten, die für das Echtzeit-Kundenprofil aktiviert sind, in erfasst werden [!DNL Platform], wird sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtzahl der Profile um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie das Beispiel ausgelöst wird, hängt vom verwendeten Erfassungstyp ab:
 
 * Für **Streaming-Daten-Workflows** wird stündlich überprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Beispielauftrag ausgelöst, um die Anzahl zu aktualisieren.
-* Für **Batch-Erfassung** innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher wird ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht ist. Mithilfe der Profil-API können Sie eine Vorschau des neuesten erfolgreichen Beispielauftrags anzeigen sowie die Profilverteilung nach Datensatz und Identitäts-Namespace auflisten.
+* Für **Batch-Erfassung** innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher wird ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert für eine Erhöhung oder Verringerung um 5 % erreicht wird. Mithilfe der Profil-API können Sie eine Vorschau des neuesten erfolgreichen Beispielauftrags anzeigen sowie die Profilverteilung nach Datensatz und Identitäts-Namespace auflisten.
 
 Die Profilanzahl und die Profile nach Namespace-Metriken sind auch in der Variablen [!UICONTROL Profile] -Abschnitt der Experience Platform-Benutzeroberfläche. Informationen zum Zugriff auf Profildaten über die Benutzeroberfläche finden Sie unter [[!DNL Profile] UI-Handbuch](../ui/user-guide.md).
 
@@ -304,7 +304,7 @@ Die Antwort enthält eine `data` -Array mit einzelnen Objekten, die die Details 
 
 ## Erstellen eines Berichts zur Datensatzüberschneidung
 
-Der Bericht zur Datensatzüberschneidung bietet einen Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dieser Bericht bietet Ihnen nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung von Ablauffristen für bestimmte Datensätze.
+Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dieser Bericht bietet Ihnen nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung von Ablauffristen für bestimmte Datensätze.
 
 Sie können den Bericht zur Datensatzüberschneidung generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/dataset/overlap` -Endpunkt.
 
@@ -559,7 +559,7 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu nicht
 
 ### Interpretieren des Berichts über nicht zuordenbare Profile
 
-Die Ergebnisse des Berichts können Aufschluss darüber geben, wie viele nicht zugewiesene und inaktive Profile Ihr Unternehmen im Profilspeicher hat.
+Die Ergebnisse des Berichts können Aufschluss darüber geben, wie viele nicht zugewiesene und inaktive Profile Ihr Unternehmen in seinem Profilspeicher hat.
 
 Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
 

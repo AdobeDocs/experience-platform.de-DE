@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
 description: Erfahren Sie mehr über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2672'
 ht-degree: 40%
@@ -164,7 +164,7 @@ In der folgenden Tabelle sind die akzeptierten Werte für `eventType` zusammen m
 | `media.sessionComplete` | Dieses Ereignis verfolgt, wenn ein `sessionComplete` -Ereignis aufgetreten ist. Dieses Ereignis markiert das Ende einer Medienwiedergabesitzung. |
 | `media.sessionEnd` | Dieses Ereignis verfolgt, wenn ein `sessionEnd` -Ereignis aufgetreten ist. Dieses Ereignis gibt den Abschluss einer Mediensitzung an. Zu diesem Schluss kann das Schließen des Medienplayers oder das Beenden der Wiedergabe gehören. |
 | `media.sessionStart` | Dieses Ereignis verfolgt, wenn ein `sessionStart` -Ereignis aufgetreten ist. Dieses Ereignis markiert den Anfang einer Medienwiedergabesitzung. Sie wird ausgelöst, wenn ein Benutzer mit der Wiedergabe einer Mediendatei beginnt. |
-| `media.statesUpdate` | Dieses Ereignis verfolgt, wenn ein `statesUpdate` -Ereignis aufgetreten ist. Die Funktionen für das Player-Status-Tracking können an einen Audio- oder Videostream angehängt werden. Die Standardstatus sind: Vollbild, Stumm, Untertitel, BildinBild und InFokus. |
+| `media.statesUpdate` | Dieses Ereignis verfolgt, wenn ein `statesUpdate` -Ereignis aufgetreten ist. Die Player-Status-Tracking-Funktionen können an einen Audio- oder Video-Stream angehängt werden. Die Standardstatus sind: Vollbild, Stummschaltung, closedCaptioning, pictureInPicture und inFocus. |
 | `opportunityEvent.addToOpportunity` | Diese Veranstaltung verfolgt, wann eine Person zu einer Gelegenheit hinzugefügt wurde. |
 | `opportunityEvent.opportunityUpdated` | Dieses Ereignis verfolgt, wann eine Gelegenheit aktualisiert wurde. |
 | `opportunityEvent.removeFromOpportunity` | Dieses Ereignis verfolgt, wann eine Person aus einer Gelegenheit entfernt wurde. |

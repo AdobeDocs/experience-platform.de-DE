@@ -2,7 +2,7 @@
 title: Edge-Profile
 description: Erfahren Sie mehr über Edge-Profile sowie die zugehörige Terminologie, verfügbare Regionen für Edge-Profile sowie verfügbare Dienste für Edge-Profile.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Der Express Profile Service (XPS) ruft die Profile an den verschiedenen Edges ab
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs sollten Sie über grundlegende Kenntnisse zu Kantenprofilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Diensten für Kantenprofile. Weitere Informationen zum Adobe Experience Edge finden Sie im Abschnitt [Übersicht über Edge Network](../web-sdk/home.md#edge-network).
+Nach dem Lesen dieses Handbuchs sollten Sie über grundlegende Kenntnisse zu Kantenprofilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Diensten für Kantenprofile. Weitere Informationen zum Adobe Experience Edge finden Sie im Abschnitt [Edge Network - Übersicht](../web-sdk/home.md#edge-network).
 
 ## Anhang
 
@@ -73,4 +73,4 @@ Bei Kantenprofilen bestimmt der Datenablauf, wie lange das Profil auf der Kante 
 
 ### Welche Daten werden im Edge-Profil gespeichert?
 
-Das Edge-Profil speichert die Profilattribute, Profil-IDs und qualifizierten Zielgruppen-IDs. Standardmäßig ist die Datengültigkeit auf 14 Tage begrenzt.
+Edge Profile speichert die Profilattribute, Profil-IDs sowie qualifizierte Zielgruppen-IDs. Standardmäßig ist die Datengültigkeit auf 14 Tage begrenzt.

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Teilweise Zeilen-Aktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 5%
@@ -130,7 +130,7 @@ Die folgenden Vorgänge werden von [!DNL Real-Time Customer Profile]:
 | --- | --- | 
 | `create` | Der Standardvorgang. Dadurch wird eine XDM-Entitätserstellungsmethode für [!DNL Real-Time Customer Profile]. |
 | `merge` | Dadurch wird eine Aktualisierungsmethode für XDM-Entitäten für [!DNL Real-Time Customer Profile]. |
-| `delete` | Dadurch wird eine Löschmethode zum Löschen von XDM-Entitäten für [!DNL Real-Time Customer Profile] und entfernt die Daten dauerhaft aus der [!DNL Profile Store]. |
+| `delete` | Dadurch wird eine Löschmethode zum Löschen von XDM-Entitäten für [!DNL Real-Time Customer Profile] und entfernt die Daten dauerhaft aus der [!DNL Profile store]. |
 
 Die folgenden Vorgänge werden von [!DNL Identity Service]:
 

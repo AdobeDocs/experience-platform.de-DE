@@ -4,15 +4,15 @@ title: Hinzufügen von Daten zum Echtzeit-Kundenprofil
 type: Tutorial
 description: In diesem Tutorial werden die Schritte beschrieben, die zum Hinzufügen von Daten zum Echtzeit-Kundenprofil erforderlich sind.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '452'
-ht-degree: 63%
+ht-degree: 59%
 
 ---
 
 
-# Hinzufügen von Daten zu [!DNL Real-Time Customer Profile]
+# Daten hinzufügen zu [!DNL Real-Time Customer Profile]
 
 In diesem Tutorial werden die Schritte beschrieben, die zum Hinzufügen von Daten zu [!DNL Real-Time Customer Profile].
 
@@ -38,8 +38,8 @@ Beim erstmaligen Hochladen von Daten in einen neuen Datensatz oder im Rahmen ein
 
 Mit der Zugriffs-API des [!DNL Real-Time Customer Profile] können Sie Batch-Daten abrufen, sobald sie in einen Datensatz geladen werden. Wenn Sie keine der erwarteten Entitäten abrufen können, ist Ihr Datensatz möglicherweise nicht für [!DNL Profile] aktiviert. Nachdem Sie bestätigt haben, dass Ihr Datensatz aktiviert wurde, stellen Sie sicher, dass Ihr Quelldatenformat und Ihre Identifikatoren Ihre Erwartungen unterstützen.
 
-Detaillierte Anweisungen zum Zugriff auf Entitäten mithilfe des [!DNL Real-Time Customer Profile] API, siehe [Endpunktleitfaden für Entitäten](../api/entities.md), auch als bezeichnet[!DNL Profile Access] API&quot;.
+Detaillierte Anweisungen zum Zugriff auf Entitäten mithilfe des [!DNL Real-Time Customer Profile] API, siehe Abschnitt [Endpunktleitfaden für Entitäten](../api/entities.md), auch als bezeichnet[!DNL Profile Access] API&quot;.
 
-## Aktualisieren von Profilspeicherdaten
+## Profilspeicherdaten aktualisieren
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../../catalog/datasets/enable-upsert.md).

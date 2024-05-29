@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1743'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -52,7 +52,7 @@ In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für 
 >
 >Privacy Service kann nur verarbeitet werden [!DNL Profile] Daten mit einer Zusammenführungsrichtlinie verwenden, die keine Identitätszuordnung durchführt. Siehe Abschnitt zu [Einschränkungen bei Zusammenführungsrichtlinien](#merge-policy-limitations) für weitere Informationen.
 >
->Beachten Sie, dass Datenschutzanfragen asynchron innerhalb der regulatorischen Anforderungen verarbeitet werden. Die Zeit, die diese für die Durchführung benötigen, kann variieren. Wenn Änderungen in Ihrer [!DNL Profile] -Daten, während eine Anforderung noch verarbeitet wird, kann nicht garantiert werden, dass diese eingehenden Datensätze auch in dieser Anfrage verarbeitet werden. Es wird garantiert, dass nur Profile gelöscht werden, die zum Zeitpunkt der Anforderung des Datenschutzauftrags im Data Lake oder im Profilspeicher gespeichert sind. Wenn Sie während des Löschvorgangs Profildaten zum Betreff einer Löschanfrage erfassen, ist nicht garantiert, dass alle Profilfragmente gelöscht werden.
+>Beachten Sie, dass Datenschutzanfragen asynchron innerhalb der regulatorischen Anforderungen verarbeitet werden. Die Zeit, die diese für die Durchführung benötigen, kann variieren. Wenn Änderungen in Ihrer [!DNL Profile] -Daten, während eine Anforderung noch verarbeitet wird, kann nicht garantiert werden, dass diese eingehenden Datensätze auch in dieser Anfrage verarbeitet werden. Es wird garantiert, dass nur Profile gelöscht werden, die zum Zeitpunkt der Anforderung des Datenschutzauftrags im Data Lake oder Profilspeicher gespeichert sind. Wenn Sie während des Löschvorgangs Profildaten zum Betreff einer Löschanfrage erfassen, ist nicht garantiert, dass alle Profilfragmente gelöscht werden.
 >Es liegt in Ihrer Verantwortung, zum Zeitpunkt einer Löschanfrage alle in Platform oder Profile Service eingehenden Daten zu kennen, da diese Daten in Ihre Datensatzspeicher eingefügt werden. Sie müssen bei der Erfassung von Daten, die gelöscht wurden oder werden, vorsichtig sein.
 
 ### Verwenden der API
@@ -178,7 +178,7 @@ Im [!DNL Profile] Datenspeicher, bestehen die personenbezogenen Daten eines einz
 
 Angenommen, Sie speichern Kundenattributdaten in drei separaten Datensätzen, die verschiedene Kennungen verwenden, um diese Daten einzelnen Kunden zuzuordnen:
 
-| Datensatzname | Primäres Identitätsfeld | Gespeicherte Attribute |
+| Datensatzname | Feld „Primäre Identität“ | Gespeicherte Attribute |
 | --- | --- | --- |
 | Datensatz 1 | `customer_id` | `address` |
 | Datensatz 2 | `email_id` | `firstName`, `lastName` |

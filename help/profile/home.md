@@ -2,10 +2,10 @@
 title: Übersicht zum Echtzeit-Kundenprofil
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1821'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -117,9 +117,9 @@ Der Prozess, Daten in Echtzeit zu erfassen, wird als Streaming-Erfassung bezeich
 
 Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. Zusätzlich zu den in verfügbaren Nutzungsstatistiken und Performance-Indikatoren von [!DNL Experience Platform] für verschiedene [!DNL Platform]-Funktionalitäten können Sie verschiedene auf das Profil bezogene Metriken ermitteln, die Ihnen Aufschluss über die Rate eingehender Anfragen, erfolgreicher Datenaufnahmen, Größen der aufgenommenen Datensätze und mehr geben. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Observability Insights-API](../observability/api/overview.md). Eine vollständige Liste der Echtzeit-Kundenprofil-Metriken finden Sie in der Dokumentation zu [verfügbaren Metriken](../observability/api/metrics.md#available-metrics).
 
-## Aktualisieren von Profilspeicherdaten
+## Profilspeicherdaten aktualisieren
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../catalog/datasets/enable-upsert.md).
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../catalog/datasets/enable-upsert.md).
 
 ## Data Governance und [!DNL Privacy]
 

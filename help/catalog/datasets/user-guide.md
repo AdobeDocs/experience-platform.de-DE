@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -31,13 +31,13 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
 >title="Negative Zahlen in der Datensatzaktivität"
->abstract="Negative Zahlen in aufgenommenen Datensätzen bedeuten, dass ein Benutzer oder eine Benutzerin bestimmte Batches im ausgewählten Zeitraum gelöscht hat."
+>abstract="Negative Zahlen in aufgenommenen Datensätzen bedeuten, dass ein Benutzer bestimmte Batches in einem ausgewählten Zeitraum gelöscht hat."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
->title="Ablaufdatum des Datensatzes"
->abstract="Diese Spalte gibt die Anzahl der Tage an, die verbleiben, bis der Zieldatensatz automatisch abläuft."
+>title="Datensatzablauf"
+>abstract="Diese Spalte gibt die Anzahl der Tage an, die der Zieldatensatz vor seinem automatischen Ablauf vergangen ist."
 
 Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Datensätze]** im linken Navigationsbereich, um die **[!UICONTROL Datensätze]** Dashboard. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
 
@@ -203,7 +203,7 @@ Die Liste der angewendeten Filter wird oberhalb der gefilterten Ergebnisse angez
 
 ![Auf der Registerkarte Durchsuchen des Arbeitsbereichs Datensätze wird die Liste der angewendeten Filter hervorgehoben.](../images/datasets/user-guide/applied-filters.png)
 
-### Anzeigen von Systemdatensätzen {#show-system-datasets}
+### Systemdatensätze anzeigen {#show-system-datasets}
 
 Standardmäßig werden nur Datensätze angezeigt, in die Sie Daten aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, wählen Sie die **[!UICONTROL Ja]** im [!UICONTROL Anzeigen von Systemdatensätzen] Abschnitt. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexport-Datensatz zur Verarbeitung des Profil-Dashboards verwendet.
 

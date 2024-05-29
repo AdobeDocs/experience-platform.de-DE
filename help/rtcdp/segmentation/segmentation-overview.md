@@ -4,10 +4,10 @@ title: Segmentierungs-Service in Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform basiert auf Adobe Experience Platform und nutzt viele Experience Platform-Dienste und Funktionen. Mit dem Segmentierungs-Service können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kundinnen und Kunden in kleinere Gruppen mit ähnlichen Merkmalen aufteilen.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 83%
+ht-degree: 78%
 
 ---
 
@@ -19,7 +19,7 @@ Real-Time CDP basiert auf Adobe Experience Platform und nutzt viele Services und
 
 ## Segmentierung
 
-Bei Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen in Ihrem Profilspeicher geteilt werden, sodass Sie eine vermarktbare Gruppe von Personen aus Ihrem Kundenstamm ermitteln können. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben. Mithilfe verschiedener Segmentdefinitionen können Sie sich auf Ihre verschiedenen Zielgruppen konzentrieren und so ein benutzerspezifischeres Marketing-Erlebnis bieten.
+Bei der Segmentierung werden bestimmte Attribute oder Verhaltensweisen definiert, die von einer Untergruppe von Profilen aus Ihrem Profilspeicher gemeinsam genutzt werden, um eine vermarktbare Gruppe von Personen aus Ihrem Kundenstamm zu unterscheiden. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben. Mithilfe verschiedener Segmentdefinitionen können Sie sich auf Ihre verschiedenen Zielgruppen konzentrieren und so ein benutzerspezifischeres Marketing-Erlebnis bieten.
 
 ## [!DNL Segment Builder]
 

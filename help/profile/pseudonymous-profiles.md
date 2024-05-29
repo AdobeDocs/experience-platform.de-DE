@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Ablauf von Daten pseudonymer Profile
 description: Dieses Dokument enthält allgemeine Anleitungen zum Konfigurieren des Ablaufs von Daten pseudonymer Profile in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1004'
-ht-degree: 90%
+ht-degree: 86%
 
 ---
 
 # Ablauf von Daten pseudonymer Profile
 
-In Adobe Experience Platform können Sie Ablaufzeiten für pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen lassen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
+In Adobe Experience Platform können Sie Ablaufzeiten für Pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
 ## Pseudonymes Profil {#pseudonymous-profile}
 

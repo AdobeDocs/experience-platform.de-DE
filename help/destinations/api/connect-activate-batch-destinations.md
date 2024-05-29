@@ -5,10 +5,10 @@ title: Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-
 description: Schrittweise Anleitungen zur Verwendung der Flow Service-API zum Erstellen eines Batch-Cloud-Speichers oder E-Mail-Marketing-Ziels in Experience Platform und zum Aktivieren von Daten
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3411'
-ht-degree: 74%
+ht-degree: 73%
 
 ---
 
@@ -65,7 +65,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln der Werte für erforderliche und optionale Kopfzeilen {#gather-values-headers}
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Aufrufe an [!DNL Platform] APIs verwenden, müssen Sie zunächst die [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufe, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -173,9 +173,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `name` | Geben Sie einen Namen für die Basisverbindung zum [!DNL Profile Store] von Experience Platform an. |
+| `name` | Geben Sie einen Namen für die Basisverbindung zum [!DNL Profile store] von Experience Platform an. |
 | `description` | Optional können Sie eine Beschreibung für die Basisverbindung angeben. |
-| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für den [Profile Store von Experience Platform](/help/profile/home.md#profile-data-store) – `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für die [Experience Platform-Profilspeicher](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
 {style="table-layout:auto"}
 
@@ -207,7 +207,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -224,9 +224,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `name` | Geben Sie einen Namen für die Quellverbindung zum [!DNL Profile Store] von Experience Platform an. |
+| `name` | Geben Sie einen Namen für die Quellverbindung zum [!DNL Profile store] von Experience Platform an. |
 | `description` | Optional können Sie eine Beschreibung für die Quellverbindung angeben. |
-| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für den [Profile Store von Experience Platform](/help/profile/home.md#profile-data-store) – `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für die [Experience Platform-Profilspeicher](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | Verwenden Sie die Basisverbindungs-ID, die Sie im vorherigen Schritt erhalten haben. |
 | `data.format` | `CSV` ist derzeit das einzige unterstützte Dateiexportformat. |
 
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird der eindeutige Bezeichner (`id`) für die neu erstellte Quellverbindung zum [!DNL Profile Store] zurückgegeben. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren [!DNL Experience Platform]-Daten hergestellt haben. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
+Bei einer erfolgreichen Antwort wird der eindeutige Bezeichner (`id`) für die neu erstellte Quellverbindung zum [!DNL Profile store] zurückgegeben. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren [!DNL Experience Platform]-Daten hergestellt haben. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
 
 ```json
 {

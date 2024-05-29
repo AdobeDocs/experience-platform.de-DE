@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insi
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1155'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -98,7 +98,7 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Profile nach Identitätsanwendungsfall {#profiles-by-identity}
 
-Das Widget [!UICONTROL Profile nach Identität] zeigt die Aufschlüsselung der Identitäten in allen zusammengeführten Profile in Ihrem Profile Store an. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](../guides/profiles.md#profiles-by-identity) für weitere Informationen.
+Die [!UICONTROL Profile nach Identität] -Widget zeigt die Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher an. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](../guides/profiles.md#profiles-by-identity) für weitere Informationen.
 
 Die SQL, die die [!UICONTROL Profile nach Identität] Widget wird im ausblendbaren Abschnitt unten angezeigt.
 

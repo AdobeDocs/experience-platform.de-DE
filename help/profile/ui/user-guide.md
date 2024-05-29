@@ -3,7 +3,7 @@ keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; A
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 7%

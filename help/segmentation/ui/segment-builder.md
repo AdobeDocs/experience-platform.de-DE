@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3633'
-ht-degree: 88%
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 88%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Felder"
->abstract="Eine Segmentdefinition besteht aus drei Feldtypen: Attributen, Ereignissen und Zielgruppen. Mit Attributen können Sie Profilattribute verwenden, die zur Klasse „XDM-Kontaktprofil“ gehören. Mit Ereignissen können Sie mithilfe von XDM ExperienceEvent-Datenelementen eine Zielgruppe basierend auf Aktionen oder stattfindenden Ereignissen erstellen, und mit Zielgruppen können Sie importierte Zielgruppen aus externen Quellen verwenden."
+>abstract="Die drei Feldtypen, aus denen eine Segmentdefinition besteht, sind Attribute, Ereignisse und Zielgruppen. Mit Attributen können Sie Profilattribute verwenden, die zur Klasse „XDM-Kontaktprofil“ gehören. Mit Ereignissen können Sie mithilfe von XDM ExperienceEvent-Datenelementen eine Zielgruppe basierend auf Aktionen oder stattfindenden Ereignissen erstellen, und mit Zielgruppen können Sie importierte Zielgruppen aus externen Quellen verwenden."
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse als Komponenten für neue Definitionen verwendet werden.
 
@@ -232,7 +232,7 @@ Wenn Sie **[!UICONTROL Container entpacken]** auswählen, wird der untergeordnet
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Zusammenführungsrichtlinien"
->abstract="Eine Zusammenführungsrichtlinie ermöglicht das Zusammenführen verschiedener Datensätze, um das Profil zu bilden. Platform bietet eine standardmäßige Zusammenführungsrichtlinie, oder Sie können eine neue standardmäßige Zusammenführungsrichtlinie in Profile erstellen. Wählen Sie eine Zusammenführungsrichtlinie aus, die dem Marketing-Zweck für diese Zielgruppe entspricht."
+>abstract="Eine Zusammenführungsrichtlinie ermöglicht das Zusammenführen verschiedener Datensätze, um Ihr Profil zu bilden. Platform hat eine standardmäßige Zusammenführungsrichtlinie bereitgestellt, oder Sie können eine neue standardmäßige Zusammenführungsrichtlinie in Profilen erstellen. Wählen Sie eine Zusammenführungsrichtlinie aus, die Ihrem Marketing-Zweck für diese Zielgruppe entspricht."
 
 Mit [!DNL Experience Platform] können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kundinnen und Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert und welche Daten kombiniert werden sollen, um ein Profil zu erstellen.
 
@@ -247,13 +247,13 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Eigenschaften der Segmentdefinition"
->abstract="Im Abschnitt „Eigenschaften“ der Segmentdefinition wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt. Darin wird die Anzahl der qualifizierten Profile im Vergleich zur Gesamtzahl der Profile angezeigt. Auf diese Weise können Sie Ihre Segmentdefinition nach Bedarf anpassen, bevor Sie die Zielgruppe selbst erstellen."
+>abstract="Im Abschnitt Eigenschaften der Segmentdefinition wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, die die Anzahl der qualifizierten Profile im Vergleich zur Gesamtanzahl der Profile anzeigt. Auf diese Weise können Sie Ihre Segmentdefinition nach Bedarf anpassen, bevor Sie die Zielgruppe selbst erstellen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Aktualieren von Schätzungen"
->abstract="Sie können die Schätzungen Ihrer Segmentdefinition aktualisieren, um sofort eine Vorschau anzuzeigen, wie viele Profile sich für die vorgeschlagene Segmentdefinition qualifizieren würden. Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=de#estimate-and-preview-an-audience" text="Schätzen und Anzeigen der Vorschau einer Zielgruppe"
+>abstract="Sie können die Schätzungen Ihrer Segmentdefinition aktualisieren, um sofort eine Vorschau der Anzahl der Profile anzuzeigen, die für die vorgeschlagene Segmentdefinition qualifiziert sind. Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Schätzen und Anzeigen der Vorschau einer Zielgruppe"
 
 Beim Erstellen einer Segmentdefinition wird die **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, sodass Sie Ihre Segmentdefinition nach Bedarf anpassen können, bevor Sie die Zielgruppe selbst erstellen.
 

@@ -4,10 +4,10 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4995'
-ht-degree: 47%
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ Siehe Abschnitt [Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](..
 
 ## Daten des Profile-Dashboards
 
-Im Dashboard „Profile“ wird eine Momentaufnahme der Attributdaten (Datensatzdaten) wiedergegeben, die sich für Ihre Organisation im Profilspeicher in Experience Platform befinden. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
+Das Dashboard &quot;Profile&quot;zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher unter Experience Platform hat. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
 
 Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum Zeitpunkt der Momentaufnahme vorgefunden werden. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Profile-Dashboard wird nicht in Echtzeit aktualisiert.
 
@@ -73,7 +73,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 Mit der Registerkarte [!UICONTROL Durchsuchen] können Sie die schreibgeschützten Profile Ihrer Organisation durchsuchen und anzeigen. Von hier aus können Sie wichtige Informationen aus dem Profil zu ihren Voreinstellungen, vergangenen Ereignissen, Interaktionen und Zielgruppen sehen.
 
-## Profildetails {#profile-details}
+## Details zum Profil {#profile-details}
 
 So öffnen Sie die [!UICONTROL Profile] [!UICONTROL Detail] Arbeitsbereich auswählen [!UICONTROL Profil-ID] aus der Liste.
 
@@ -93,7 +93,7 @@ Die [!UICONTROL Kundenprofil] Widget zeigt den Vor- und Nachnamen des mit dem Pr
 
 ![Das Widget Kundenprofil .](../images/profiles/customer-profile.png)
 
-#### Grundlegende Attribute {#basic-attributes}
+#### Einfache Attribute {#basic-attributes}
 
 Die [!UICONTROL Grundlegende Attribute] Widget zeigt die am häufigsten verwendeten Attribute an, die zum Definieren eines einzelnen Profils verwendet werden.
 
@@ -107,7 +107,7 @@ So zeigen Sie die Identitätsdetails des Profils tiefer an und navigieren zur [!
 
 ![Das Widget Verknüpfte Identitäten .](../images/profiles/linked-identities.png)
 
-#### Kanaleinstellungen {#channel-preferences}
+#### Kanalvoreinstellungen {#channel-preferences}
 
 Die [!UICONTROL Kanaleinstellungen] Widget zeigt die Kommunikationskanäle an, von denen der Benutzer dem Empfang von Nachrichten zugestimmt hat. Ein Häkchen kennzeichnet jeden Kanal, von dem der Benutzer dem Empfang von Nachrichten zugestimmt hat.
 
@@ -197,15 +197,15 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 
 Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Customer AI analysiert dazu vorhandene Erlebnisereignisdaten von Verbrauchern, um sie vorherzusagen **Tendenzwerte für Abwanderung oder Konversion**. Diese hochpräzisen kundenspezifischen Tendenzmodelle ermöglichen eine präzisere Segmentierung und Targeting. Die [Verteilung der Punktzahl](#customer-ai-distribution-of-scores) und [Bewertungszusammenfassung](#customer-ai-scoring-summary) Einblicke zeigen die Aufteilung in Ihrer Zielgruppe. Sie heben hervor, welche Profile die hohe/niedrige/mittlere Tendenz aufweisen und wie sie über Ihre Profilzahlen verteilt sind.
 
-* [[!UICONTROL Kunden-KI – Bewertungszusammenfassung]](#customer-ai-scoring-summary)
-* [[!UICONTROL Kunden-KI – Verteilung von Bewertungen]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Customer AI-Bewertungszusammenfassung]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI-Verteilung von Bewertungen]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL Kunden-KI – Verteilung von Bewertungen] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Customer AI-Verteilung von Bewertungen] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
->title="Verteilung der Scores"
->abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in Schritten von fünf Prozent. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
+>title="Verteilung der Punktzahl"
+>abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in fünfprozentigen Schritten. Die Verteilung der Profilanzahl wird durch das AI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
 
 Die [!UICONTROL Customer AI-Verteilung von Bewertungen] Widget kategorisiert die Gesamtanzahl der Profile nach ihren Tendenzwerten. Die Verteilung der Profilanzahl wird durch das AI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in fünfprozentigen Schritten visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse angegeben und die Tendenzwerte werden entlang der X-Achse angegeben.
 
@@ -229,12 +229,12 @@ Die Seite mit detaillierten Modelleinblicken wird angezeigt.
 
 Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfläche für Einblicke](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Kunden-KI – Bewertungszusammenfassung] {#customer-ai-scoring-summary}
+### [!UICONTROL Customer AI-Bewertungszusammenfassung] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
 >title="Bewertungszusammenfassung"
->abstract="Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in hohe, mittlere und niedrige Tendenz. Das Ringdiagramm zeigt die proportionale Zusammensetzung der Gesamtprofile über eine hohe, mittlere und niedrige Tendenz hinweg."
+>abstract="Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in Behälter mit hoher, mittlerer und niedriger Neigung. Das Ringdiagramm zeigt die proportionale Zusammensetzung der Gesamtprofile über eine hohe, mittlere und niedrige Tendenz hinweg."
 
 Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in Behälter mit hoher, mittlerer und niedriger Neigung als grün, gelb und rot. Ein Ringdiagramm veranschaulicht die proportionale Zusammensetzung von Profilen zwischen hohen, mittleren und niedrigen Tendenzen. Ein Profil ist qualifiziert für eine hohe Tendenz bei über 75, eine mittlere Neigung zwischen 25 und 74 und eine niedrige Tendenz unter 24. Eine Legende zeigt den Farbcode und die Schwellen der Eigenschaften an. Profilzahlen für die Eigenschaften &quot;Hoch&quot;, &quot;Mittel&quot;und &quot;Niedrig&quot;werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
 
@@ -268,7 +268,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Einzelidentitätsprofile]](#single-identity-profiles)
 * [[!UICONTROL Einzelne Identitätsprofile nach Identität]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Nicht segmentierte Profile]](#unsegmented-profiles)
-* [[!UICONTROL Änderungs-Trend bei nicht segmentierten Profilen]](#unsegmented-profiles-change-trend)
+* [[!UICONTROL Trendänderung von nicht segmentierten Profilen]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Nicht segmentierte Profile nach Identität]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Zielgruppen]](#audiences)
 * [[!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind]](#audiences-mapped-to-destination-status)
@@ -281,9 +281,9 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Anzahl der Profile"
->abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses an. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
+>abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme an. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
 
-Das Widget **[!UICONTROL Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt des Schnappschusses an. Diese Zahl ist das Ergebnis der Anwendung der ausgewählten Zusammenführungsrichtlinie auf Ihre Profildaten, um für jede Person Profilfragmente zu einem einzigen Profil zusammenzuführen.
+Die **[!UICONTROL Profilanzahl]** Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der ausgewählten Zusammenführungsrichtlinie auf Ihre Profildaten, um für jede Person Profilfragmente zu einem einzigen Profil zusammenzuführen.
 
 Weitere Informationen finden Sie im [Abschnitt über Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies).
 
@@ -306,13 +306,13 @@ Das Widget [!UICONTROL Trend der Profilanzahl] verwendet ein Liniendiagramm, um 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Änderung der Profilanzahl"
->abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile an, die zum Profilspeicher zum Zeitpunkt des letzten Schnappschusses **hinzugefügt** wurden. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
+>abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile an **hinzugefügt** zum Profilspeicher zum Zeitpunkt der letzten Momentaufnahme. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
 
-Das Widget **[!UICONTROL Änderung der Profilanzahl]** zeigt die Anzahl der zusammengeführten Profile an, die seit dem vorherigen Schnappschuss zum Profilspeicher hinzugefügt wurden. Diese Zahl ist das Ergebnis der Anwendung der ausgewählten Zusammenführungsrichtlinie auf Ihre Profildaten, um für jede Person Profilfragmente zu einem einzigen Profil zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Anzahl der Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
+Die **[!UICONTROL Änderung der Profilanzahl]** -Widget zeigt die Anzahl der zusammengeführten Profile an, die seit der vorherigen Momentaufnahme zum Profilspeicher hinzugefügt wurden. Diese Zahl ist das Ergebnis der Anwendung der ausgewählten Zusammenführungsrichtlinie auf Ihre Profildaten, um für jede Person Profilfragmente zu einem einzigen Profil zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Anzahl der Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
 
 >[!NOTE]
 >
->Das Widget [!UICONTROL Änderung der Profilanzahl] enthält die Anzahl der hinzugefügten Profile, die **nach** der ersten Profilaufnahme und der Einrichtung des Profilspeichers hinzugefügt wurden. Mit anderen Worten: Wenn Ihre Organisation den Profilspeicher einrichtet und am ersten Tag 4.000.000 aufnimmt, ist das Dashboard innerhalb von 24 Stunden verfügbar, jedoch wird im Widget [!UICONTROL Änderung der Profilanzahl] 0 angezeigt. Diese Zählmethode wird durchgeführt, um eine Spitze zu vermeiden, die mit der anfänglichen Aufnahme von Profilen in das System verbunden ist. In den nächsten 30 Tagen nimmt Ihre Organisation weitere 1.000.000 Profile in den Profilspeicher auf. Wenn der nächste Schnappschuss erstellt wird, zeigt das Widget [!UICONTROL Änderung der Profilanzahl] insgesamt 1.000.000 hinzugefügte Profile an, während das Widget [!UICONTROL Profilanzahl] insgesamt 5.000.000 Profile anzeigt.
+>Die [!UICONTROL Änderung der Profilanzahl] Widget spiegelt die Anzahl der hinzugefügten Profile wider **after** die anfängliche Profilaufnahme und die Einrichtung des Profilspeichers. Mit anderen Worten: Wenn Ihr Unternehmen den Profilspeicher eingerichtet hat und 4.000.000 an Tag 1 aufgenommen hat, wäre das Dashboard innerhalb von 24 Stunden verfügbar, jedoch würde die [!UICONTROL Änderung der Profilanzahl] -Widget auf 0 gesetzt. Diese Zählmethode wird durchgeführt, um eine Spitze zu vermeiden, die mit der anfänglichen Aufnahme von Profilen in das System verbunden ist. In den nächsten 30 Tagen nimmt Ihr Unternehmen weitere 1.000.000 Profile in den Profilspeicher auf. Wenn der nächste Schnappschuss erstellt wird, zeigt das Widget [!UICONTROL Änderung der Profilanzahl] insgesamt 1.000.000 hinzugefügte Profile an, während das Widget [!UICONTROL Profilanzahl] insgesamt 5.000.000 Profile anzeigt.
 
 ![Das Profile-Dashboard der Platform-Benutzeroberfläche mit dem hervorgehobenen Widget „Änderung der Profilanzahl“.](../images/profiles/profile-count-change.png)
 
@@ -321,9 +321,9 @@ Das Widget **[!UICONTROL Änderung der Profilanzahl]** zeigt die Anzahl der zusa
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Trend der Änderung der Profilanzahl"
->abstract="Dieses Widget zeigt die Zahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Die Zahl hängt auch von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
+>abstract="Dieses Widget zeigt die Anzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Die Zahl hängt auch von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
 
-Das Widget **[!UICONTROL Trend der Änderung der Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn der Schnappschuss erstellt wird. Wenn Sie also Profile in Platform aufnehmen, wird die Anzahl der Profile erst beim nächsten Schnappschuss angezeigt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
+Die **[!UICONTROL Trend zur Änderung der Anzahl der Profile]** Widget zeigt die Gesamtanzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn der Schnappschuss erstellt wird. Wenn Sie also Profile in Platform aufnehmen, wird die Anzahl der Profile erst beim nächsten Schnappschuss angezeigt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
 
 Weitere Informationen finden Sie im Abschnitt [Abschnitt zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies).
 
@@ -350,9 +350,9 @@ Dieses Widget hilft Ihnen bei der Verwaltung Ihrer Zielaktivierung, indem es das
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profile nach Identität"
->abstract="Dieses Widget zeigt die Aufschlüsselung aller zusammengeführten Profile im Profil Store nach Identitäten an."
+>abstract="Dieses Widget zeigt die Aufschlüsselung aller zusammengeführten Profile in Ihrem Profilspeicher nach Identitäten an."
 
-Das Widget **[!UICONTROL Profile nach Identität]** zeigt die Aufschlüsselung der Identitäten in allen zusammengeführten Profile in Ihrem Profile Store an. Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, würden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
+Die **[!UICONTROL Profile nach Identität]** -Widget zeigt die Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher an. Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, würden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
 
 Weitere Informationen finden Sie im Abschnitt [Abschnitt zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies).
 
@@ -371,9 +371,9 @@ Weitere Informationen zu Identitäten finden Sie im Abschnitt [Dokumentation zu 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Identitätsüberschneidung"
->abstract="Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung von Profilen in Ihrem Profile Store anzuzeigen, die die beiden ausgewählten Identitäten enthalten."
+>abstract="Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung von Profilen in Ihrem Profilspeicher anzuzeigen, die die beiden ausgewählten Identitäten enthalten."
 
-Das Widget **[!UICONTROL Identitätsüberschneidung]** verwendet ein Venn-Diagramm, oder Mengendiagramm, um die Überschneidung von Profilen in Ihrem Profile Store anzuzeigen, die die beiden ausgewählten Identitäten enthalten.
+Die **[!UICONTROL Identitätsüberschneidung]** -Widget verwendet ein Venn-Diagramm oder ein Set-Diagramm, um die Überschneidung von Profilen in Ihrem Profilspeicher anzuzeigen, die die beiden ausgewählten Identitäten enthalten.
 
 Verwenden Sie die Widget-Dropdown-Menüs, um die Identitäten auszuwählen, die Sie vergleichen möchten. Kreise zeigen die relative Gesamtzahl der Profile an, in denen jede Identität enthalten ist. Die Anzahl der Profile, in denen beide Identitäten enthalten sind, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt. Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, würden diesem einzelnen Kunden mehrere Identitäten zugeordnet. In diesem Fall ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehreren Identitäten enthalten.
 
@@ -407,18 +407,18 @@ Um ein Dialogfeld mit der Gesamtanzahl der Profile für eine Identität anzuzeig
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Nicht segmentierte Profile"
->abstract="Dieses Widget stellt die Gesamtanzahl aller Profile bereit, die keiner Zielgruppe zugeordnet sind, und bietet die Möglichkeit zur Profilaktivierung in Ihrer gesamten Organisation."
+>abstract="Dieses Widget stellt die Gesamtanzahl aller Profile bereit, die keiner Zielgruppe zugeordnet sind, und bietet die Möglichkeit zur Profilaktivierung in Ihrer Organisation."
 
 Die [!UICONTROL Nicht segmentierte Profile] -Widget stellt die Gesamtanzahl aller Profile bereit, die keiner Zielgruppe zugeordnet sind. Der generierte Wert gibt die zum Zeitpunkt der letzten Momentaufnahme korrekte Anzahl an und zeigt, wie viele Profile in Ihrer gesamten Organisation aktiviert werden können. Es zeigt auch die Möglichkeit an, Profile auszuschließen, die keinen angemessenen ROI liefern.
 
 ![Das Widget „Nicht segmentierte Profile“.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Änderungs-Trend bei nicht segmentierten Profilen] {#unsegmented-profiles-change-trend}
+### [!UICONTROL Trendänderung von nicht segmentierten Profilen] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Trend von nicht segmentierten Profilen"
->abstract="Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht mit einer Zielgruppe verbunden sind. Der Trend der Profile, die keiner Zielgruppe zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden."
+>abstract="Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die über einen bestimmten Zeitraum an keine Zielgruppe angehängt sind. Der Trend von Profilen, die keiner Zielgruppe zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden."
 
 Die [!UICONTROL Trendänderung von nicht segmentierten Profilen] Widget verwendet ein Liniendiagramm, um die Anzahl der Profile zu veranschaulichen, die seit dem letzten täglichen Schnappschuss hinzugefügt wurden und an keine Zielgruppe angehängt sind. Der Änderungstrend von Profilen, die keiner Zielgruppe zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Anzahl der Profile wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 

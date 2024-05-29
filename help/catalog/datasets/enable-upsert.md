@@ -4,10 +4,10 @@ title: Aktivieren eines Datensatzes für Profilaktualisierungen mithilfe von API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an den Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1067'
-ht-degree: 92%
+ht-degree: 87%
 
 ---
 
@@ -36,7 +36,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Aufrufe an [!DNL Platform] APIs verwenden, müssen Sie zunächst die [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufe, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -183,7 +183,7 @@ Um einen Profil-aktivierten Datensatz für Aktualisierungen zu konfigurieren, m�
 
 >[!WARNING]
 >
->Daten, die in einen deaktivierten Datensatz aufgenommen werden, werden nicht in den Profilspeicher aufgenommen. Sie sollten die Aufnahme von Daten in den Datensatz vermeiden, bis er erneut für Profil aktiviert wurde.
+>Daten, die während der Deaktivierung in den Datensatz aufgenommen werden, werden nicht in den Profilspeicher aufgenommen. Sie sollten die Aufnahme von Daten in den Datensatz vermeiden, bis er erneut für Profil aktiviert wurde.
 
 **API-Format**
 
