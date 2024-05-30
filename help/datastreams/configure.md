@@ -2,10 +2,10 @@
 title: Erstellen und Konfigurieren von Datenspeichern
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 370ab0b2a575cc2b5d17f3ae2b3b0b6a6999c462
+source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 54%
+source-wordcount: '2753'
+ht-degree: 53%
 
 ---
 
@@ -175,7 +175,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Experience Platfor
 | [!UICONTROL Ereignis-Datensatz] | **(Erforderlich)** Wählen Sie den Platform-Datensatz aus, an den Kundenereignisdaten gestreamt werden. Dieses Schema muss die [XDM ExperienceEvent-Klasse](../xdm/classes/experienceevent.md) verwenden. Um weitere Datensätze hinzuzufügen, wählen Sie **[!UICONTROL Ereignis-Datensatz hinzufügen]** aus. |
 | [!UICONTROL Profildatensatz] | Wählen Sie den Platform-Datensatz aus, an den Kundenattributdaten gesendet werden. Dieses Schema muss die [Klasse „XDM Individual Profile“](../xdm/classes/individual-profile.md) verwenden. |
 | [!UICONTROL Offer Decisioning] | Aktiviert Offer decisioning für Web SDK-Implementierungen. Siehe Handbuch unter [Verwenden von Offer decisioning mit Web SDK](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) für weitere Implementierungsdetails.<br><br>Weitere Informationen zu Offer Decisioning-Funktionen finden Sie in der [Adobe Journey Optimizer-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=de). |
-| [!UICONTROL Edge-Segmentierung] | Aktiviert [Kantensegmentierung](../segmentation/ui/edge-segmentation.md) für diesen Datastream. Wenn das SDK Daten über einen Datenstrom sendet, für den die Edge-Segmentierung aktiviert ist, werden alle aktualisierten Segmentzugehörigkeiten für das betreffende Profil in der Antwort zurückgesendet.<br><br>Diese Option kann in Kombination mit [!UICONTROL Personalisierungszielen] für [Anwendungsfälle für die Personalisierung der nächsten Seite](../destinations/ui/activate-edge-personalization-destinations.md) verwendet werden. |
+| [!UICONTROL Edge-Segmentierung] | Aktiviert [Kantensegmentierung](../segmentation/ui/edge-segmentation.md) für diesen Datastream. Wenn die Variable [Web SDK](../web-sdk/home.md) oder [Edge Network Server-API](../server-api/overview.md) sendet Daten über einen Datastream mit aktivierter Kantensegmentierung. Alle aktualisierten Zielgruppenmitgliedschaften für das betreffende Profil werden in der Antwort zurückgesendet.<br><br>Sie können diese Option in Kombination mit **[!UICONTROL Personalisierungsziele]** für die Personalisierungsfälle der gleichen Seite und der nächsten Seite durch [Edge-Ziele](../destinations/ui/activate-edge-personalization-destinations.md) oder [!DNL Offer Decisioning]. |
 | [!UICONTROL Personalisierungsziele] | Wenn diese Option nach dem Aktivieren des Kontrollkästchens [!UICONTROL Edge-Segmentierung] aktiviert wird, kann der Datenstrom mit Personalisierungszielen, wie etwa [benutzerdefinierte Personalisierung](../destinations/catalog/personalization/custom-personalization.md), verbunden werden.<br><br>Die genauen Schritte zum [Konfigurieren von Personalisierungszielen](../destinations/ui/activate-edge-personalization-destinations.md) finden Sie in der Dokumentation zu Zielen. |
 | [!UICONTROL Adobe Journey Optimizer] | Aktiviert [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) für diesen Datastream. <br><br> Wenn diese Option aktiviert ist, kann der Datenstrom personalisierte Inhalte aus Web- und App-basierten Inbound-Kampagnen in [!DNL Adobe Journey Optimizer] zurückgeben. [!UICONTROL Edge-Segmentierung] muss aktiv sein. Wenn [!UICONTROL Edge-Segmentierung] deaktiviert ist, ist diese Option ausgegraut. |
 
