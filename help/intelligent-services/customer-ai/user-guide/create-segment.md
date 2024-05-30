@@ -3,12 +3,12 @@ keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen;
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Kundensegmente mit prognostizierten Werten erstellen
-description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben.
+description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit dem Segment Builder beschrieben.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 78%
+ht-degree: 75%
 
 ---
 
@@ -22,21 +22,21 @@ Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profi
 
 Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **[!UICONTROL Segmente]** und dann auf **[!UICONTROL Segment erstellen]**.
 
-![](../images/user-guide/segments.png)
+![](../images/user-guide/segments_new.png)
 
 **Segment Builder** wird angezeigt. Klicken Sie in der linken Spalte **[!UICONTROL Felder]** und auf der Registerkarte **[!UICONTROL Attribute]** auf den Ordner **[!UICONTROL XDM Individual Profile]** und dann auf den Ordner mit dem Namespace Ihres Unternehmens. Der Ordner **[!UICONTROL Customer AI]** enthält die Ergebnisse von Prognoseausführungen und wird nach der Instanz benannt, zu der die Werte gehören. Klicken Sie auf einen Instanzordner, um auf die Ergebnisse der gewünschten Instanz zuzugreifen.
 
-![](../images/user-guide/results.png)
+![](../images/user-guide/results_new.png)
 
 Ziehen Sie das Attribut **[!UICONTROL Wert]**, das sich in der Mitte von Segment Builder befindet, in die *Arbeitsfläche zum Erstellen von Regeln*, um eine Regel zu definieren.
 
 Geben Sie in der rechten Spalte *Segmenteigenschaften* einen Namen für das Segment ein.
 
-![](../images/user-guide/properties.png)
+![](../images/user-guide/properties_new.png)
 
 Über der linken Seite *Felder* klicken Sie auf die **Zahnrad** Symbol und wählen Sie eine *Zusammenführungsrichtlinie* aus der Dropdown-Liste aus. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
 
-![](../images/user-guide/merge_policy.png)
+![](../images/user-guide/merge_policy_new.png)
 
 ## Nächste Schritte
 
