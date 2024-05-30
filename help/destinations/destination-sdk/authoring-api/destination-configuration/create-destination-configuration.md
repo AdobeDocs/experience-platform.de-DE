@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie einen API-Aufruf strukturieren, um eine Zielkonfiguration über Adobe Experience Platform Destination SDK zu erstellen.
 title: Erstellen einer Zielkonfiguration
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 99%
@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | Boolesch | Steuert, ob die Zielgruppenzuordnungs-ID im Zielaktivierungs-Workflow von der Benutzerin bzw. dem Benutzer eingegeben wird. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolesch | Steuert, ob die Zielgruppenzuordnungs-ID im Zielaktivierungs-Workflow die Experience Platform-Zielgruppen-ID ist. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolesch | Steuert, ob die Zielgruppenzuordnungs-ID im Zielaktivierungs-Workflow der Zielgruppenname von Experience Platform ist. |
-| `segmentMappingConfig.audienceTemplateId` | Boolesch | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für dieses Ziel verwendet wird. |
+| `segmentMappingConfig.audienceTemplateId` | Zeichenfolge | Die `instanceId` der [Zielgruppen-Metadatenvorlage](../../metadata-api/create-audience-template.md), die für dieses Ziel verwendet wird. |
 | `schemaConfig.profileFields` | Array | Beim Hinzufügen vordefinierter `profileFields` wie in der obigen Konfiguration können Benutzerinnen und Benutzer die Attribute von Experience Platform den vordefinierten Attributen Ihres Ziels zuordnen. |
 | `schemaConfig.profileRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzerinnen und Benutzer die Zuordnung von Profilattributen aus Experience Platform zu benutzerdefinierten Attributen des Ziels vornehmen dürfen, wie in der obigen Beispielkonfiguration dargestellt. |
 | `schemaConfig.segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
