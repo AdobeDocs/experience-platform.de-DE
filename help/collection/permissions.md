@@ -2,10 +2,10 @@
 title: Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 description: Eine allgemeine Übersicht darüber, wie Sie Berechtigungen verwalten und den Zugriff auf Datenerfassungsfunktionen in Adobe Experience Platform steuern können.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 60590a77859320891717244eec58b556935354b5
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 29%
+source-wordcount: '1338'
+ht-degree: 28%
 
 ---
 
@@ -32,10 +32,10 @@ Zu den Berechtigungen unter Adobe Experience Platform gehört der Zugriff auf Da
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
 | Sandboxes | (Nicht angegeben) | Je nach [Sandboxes](../sandboxes/home.md) die unter Ihrer Organisation erstellt wurden, können Sie den Zugriff auf jede dieser Berechtigungskategorien in Admin Console steuern. |
-| Datenmodellierung | Verwalten von Schemas | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Experience-Datenmodell (XDM)-Schemas](../xdm/home.md). |
-| Datenmodellierung | Anzeigen von Schemas | Gewährt schreibgeschützten Zugriff auf Schemas. |
-| Identitäts-Management | Verwalten von Identitäts-Namensräumen | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Identitäts-Namespaces](../identity-service/features/namespaces.md). |
-| Identitäts-Management | Anzeigen von Identitäts-Namensräumen | Ermöglicht schreibgeschützten Zugriff auf Identitäts-Namespaces. |
+| Datenmodellierung | Verwalten von Schemata | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Experience-Datenmodell (XDM)-Schemas](../xdm/home.md). |
+| Datenmodellierung | Anzeigen von Schemata | Gewährt schreibgeschützten Zugriff auf Schemas. |
+| Identity Management | Verwalten von Identitäts-Namensräumen | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Identitäts-Namespaces](../identity-service/features/namespaces.md). |
+| Identity Management | Anzeigen von Identitäts-Namensräumen | Ermöglicht schreibgeschützten Zugriff auf Identitäts-Namespaces. |
 | Datenerfassung | Verwalten von Datenspeichern | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [datastreams](../datastreams/overview.md). |
 | Datenerfassung | Anzeigen von Datenspeichern | Ermöglicht schreibgeschützten Zugriff auf Datenspeicher. |
 
@@ -78,7 +78,15 @@ In den folgenden Unterabschnitten erfahren Sie, wie Sie die entsprechenden Berec
 
 ### Verwalten von Berechtigungen unter Adobe Experience Platform {#manage-platform}
 
-Aus dem **[!UICONTROL Berechtigungen]** Wählen Sie in Adobe Experience Platform die Rolle aus, die Sie bearbeiten möchten.
+>[!NOTE]
+>
+>Zum Verwalten von Berechtigungen für eine Rolle benötigen Sie Administratorrechte. Wenn Sie keine Administratorberechtigungen haben, wenden Sie sich an Ihren Systemadministrator.
+
+Experience Cloud **[!UICONTROL Berechtigungen]** können Sie Benutzerrollen und Richtlinien definieren, um den Zugriff auf Funktionen und Objekte in einer Produktanwendung zu verwalten.
+
+bis [!UICONTROL Berechtigungen]können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen.
+
+![Adobe Experience Cloud, das das Berechtigungsprodukt hervorhebt.](./images/permissions/permissions-product.png)
 
 Um auf Datenerfassungsfunktionen zugreifen zu können, müssen Sie alle Berechtigungen in der **[!UICONTROL Sandboxes]**, **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Identity Management]**, und **[!UICONTROL Datenerfassung]** Kategorien.
 
