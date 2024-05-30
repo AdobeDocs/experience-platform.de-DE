@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 88%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 88%
    * [Aktivieren von Daten für dateibasierte Ziele mithilfe der Flow Service-API](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API](./api/streaming-destinations.md)
    * [Verbindung zu dateibasierten E-Mail-Marketing-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren](./api/connect-activate-batch-destinations.md)
-   * [(Beta) Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs-API](./api/ad-hoc-activation-api.md)
+   * [Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs-API](./api/ad-hoc-activation-api.md)
    * [Bearbeiten des Ziels](./api/edit-destination.md)
    * [Aktualisieren von Ziel-Datenflüssen](./api/update-destination-dataflows.md)
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
