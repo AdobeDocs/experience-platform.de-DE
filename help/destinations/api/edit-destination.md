@@ -4,10 +4,10 @@ title: Bearbeiten von Zielverbindungen mit der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie verschiedene Komponenten einer Zielverbindung mit der Flow Service-API bearbeiten.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 33%
+source-wordcount: '1605'
+ht-degree: 29%
 
 ---
 
@@ -29,7 +29,7 @@ Für dieses Tutorial benötigen Sie eine gültige Datenfluss-ID. Wenn Sie keine 
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. ](../home.md)[!DNL Destinations] Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+* [Ziele](../home.md): [!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mit der [!DNL Flow Service] API.
@@ -54,7 +54,7 @@ Alle Experience Platform-Ressourcen, einschließlich derjenigen, die zu [!DNL Fl
 >
 >Wenn die Variable `x-sandbox-name` -Kopfzeile nicht angegeben ist, werden Anfragen unter der `prod` Sandbox.
 
-Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
+Alle Anfragen, die eine Payload enthalten (`POST`, `PUT`, `PATCH`) erfordert eine zusätzliche Kopfzeile vom Medientyp:
 
 * `Content-Type: application/json`
 
@@ -177,17 +177,19 @@ Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück,
 
 Die Komponenten einer Zielverbindung unterscheiden sich je nach Ziel. Beispiel: für [!DNL Amazon S3] -Ziele festzulegen, können Sie den Behälter und Pfad aktualisieren, in den Dateien exportiert werden. Für [!DNL Pinterest] Ziele, können Sie Ihre [!DNL Pinterest Advertiser ID] und [!DNL Google Customer Match] Sie können [!DNL Pinterest Account ID].
 
-Um Komponenten einer Zielverbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die `/targetConnections/{TARGET_CONNECTION_ID}` -Endpunkt unter Angabe Ihrer Ziel-Verbindungs-ID, -Version und der neuen Werte, die Sie verwenden möchten. Denken Sie daran, dass Sie Ihre Ziel-Verbindungs-ID im vorherigen Schritt erhalten haben, als Sie einen vorhandenen Datenfluss zu Ihrem gewünschten Ziel überprüft haben.
+Um Komponenten einer Zielverbindung zu aktualisieren, führen Sie einen `PATCH` Anfrage an die `/targetConnections/{TARGET_CONNECTION_ID}` -Endpunkt unter Angabe Ihrer Ziel-Verbindungs-ID, -Version und der neuen Werte, die Sie verwenden möchten. Denken Sie daran, dass Sie Ihre Ziel-Verbindungs-ID im vorherigen Schritt erhalten haben, als Sie einen vorhandenen Datenfluss zu Ihrem gewünschten Ziel überprüft haben.
 
 >[!IMPORTANT]
 >
->Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Zielverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
+>Die `If-Match` -Kopfzeile ist erforderlich, wenn Sie eine `PATCH` -Anfrage. Der Wert für diesen Header ist die eindeutige Version der Zielverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
 >
 > Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an die `/targetConnections/{TARGET_CONNECTION_ID}` Endpunkt, wobei `{TARGET_CONNECTION_ID}` ist die Ziel-Verbindungs-ID, die Sie aktualisieren möchten.
+>
+> Stellen Sie sicher, dass Sie den Wert der `If-Match` -Kopfzeile in doppelten Anführungszeichen wie in den Beispielen unten beim Erstellen von `PATCH` -Anfragen.
 
 Im Folgenden finden Sie einige Beispiele für die Aktualisierung von Parametern in der Zielverbindungsspezifikation für verschiedene Zieltypen. Die allgemeine Regel zum Aktualisieren von Parametern für ein Ziel lautet jedoch wie folgt:
 
-Rufen Sie die Datenflug-ID der Verbindung ab, rufen Sie die Zielverbindungs-ID ab und PATCH Sie die Zielverbindung mit aktualisierten Werten für die gewünschten Parameter.
+Datenfluss-ID der Verbindung abrufen > Zielverbindungs-ID abrufen > `PATCH` die Zielverbindung mit aktualisierten Werten für die gewünschten Parameter.
 
 >[!BEGINSHADEBOX]
 
@@ -332,19 +334,21 @@ Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualis
 
 Bearbeiten Sie die Basisverbindung, wenn Sie die Anmeldeinformationen eines Ziels aktualisieren möchten. Die Komponenten einer Basisverbindung unterscheiden sich je nach Ziel. Beispiel: für [!DNL Amazon S3] Ziele, können Sie den Zugriffsschlüssel und den geheimen Schlüssel für Ihre [!DNL Amazon S3] Standort.
 
-Um Komponenten einer Basisverbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die `/connections` -Endpunkt unter Angabe Ihrer Basis-Verbindungs-ID, -Version und der neuen Werte, die Sie verwenden möchten.
+Um Komponenten einer Basisverbindung zu aktualisieren, führen Sie einen `PATCH` Anfrage an die `/connections` -Endpunkt unter Angabe Ihrer Basis-Verbindungs-ID, -Version und der neuen Werte, die Sie verwenden möchten.
 
 Beachten Sie, dass Sie Ihre Basis-Verbindungs-ID in einer [vorheriger Schritt](#look-up-dataflow-details), wenn Sie einen vorhandenen Datenfluss zum gewünschten Ziel für den Parameter inspiziert haben `baseConnection`.
 
 >[!IMPORTANT]
 >
->Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Basisverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Basisverbindung usw. aktualisiert.
+>Die `If-Match` -Kopfzeile ist erforderlich, wenn Sie eine `PATCH` -Anfrage. Der Wert für diesen Header ist die eindeutige Version der Basisverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Basisverbindung usw. aktualisiert.
 >
 > Um die neueste Version des Etag-Werts zu erhalten, stellen Sie eine GET-Anfrage an die `/connections/{BASE_CONNECTION_ID}` Endpunkt, wobei `{BASE_CONNECTION_ID}` ist die Basisverbindungs-ID, die Sie aktualisieren möchten.
+>
+> Stellen Sie sicher, dass Sie den Wert der `If-Match` -Kopfzeile in doppelten Anführungszeichen wie in den Beispielen unten beim Erstellen von `PATCH` -Anfragen.
 
 Im Folgenden finden Sie einige Beispiele für die Aktualisierung von Parametern in der Basisverbindungsspezifikation für verschiedene Typen von Zielen. Die allgemeine Regel zum Aktualisieren von Parametern für ein Ziel lautet jedoch wie folgt:
 
-Rufen Sie die Datenfluss-ID der Verbindung ab, rufen Sie die Basisverbindungs-ID ab und PATCH Sie die Basisverbindung mit aktualisierten Werten für die gewünschten Parameter.
+Datenfluss-ID der Verbindung abrufen > Kennung der Basisverbindung abrufen > `PATCH` die Basisverbindung mit aktualisierten Werten für die gewünschten Parameter.
 
 >[!BEGINSHADEBOX]
 
