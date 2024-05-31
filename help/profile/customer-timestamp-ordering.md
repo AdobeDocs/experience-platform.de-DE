@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Ihren Datensätzen eine Sortierung nach Kunde
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
+source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform ist die Datenreihenfolge bei der Aufnahme von Daten durch Streaming-Erfassung in den Profilspeicher nicht standardmäßig garantiert. Bei der Sortierung von Kundenzeitstempeln können Sie sicherstellen, dass die neueste Nachricht gemäß dem bereitgestellten Kundenzeitstempel im Profilspeicher beibehalten wird. Alle veralteten Nachrichten werden dann abgelegt und **not** für die Verwendung in nachgelagerten Diensten verfügbar sein, die Profildaten wie Segmentierung und Ziele verwenden. Dadurch können Ihre Profildaten konsistent sein und Ihre Profildaten mit Ihren Quellsystemen synchronisieren.
 
-Um die Sortierung von Kundenzeitstempeln zu aktivieren, verwenden Sie die `extSourceSystemAudit.lastUpdatedDate` -Feld innerhalb der [Datentyp &quot;Externe Quell-System-Auditattribute&quot;](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) und wenden Sie sich mit Ihren Sandbox- und Datensatzinformationen an Ihren Adobe Technical Account Manager oder an die Adobe-Kundenunterstützung.
+Um die Sortierung von Kundenzeitstempeln zu aktivieren, verwenden Sie die `extSourceSystemAudit.lastUpdatedDate` -Feld innerhalb der [Feldergruppe &quot;Externe Quellsystem-Audit-Attribute&quot;](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) und wenden Sie sich mit Ihren Sandbox- und Datensatzinformationen an Ihren Adobe Technical Account Manager oder an die Adobe-Kundenunterstützung.
 
 ## Begrenzungen
 
