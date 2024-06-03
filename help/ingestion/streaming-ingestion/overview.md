@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform; home; beliebte Themen; Datenerfassung; erfasste Daten; Streaming; Übersicht; Streaming-Erfassung; Latenz; Streaming-Latenz; Streaming-Latenz;
 solution: Experience Platform
-title: Streaming-Erfassung - Überblick
+title: Überblick über den Import von Streamingdaten
 description: Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Methode, Daten von Client- und Server-seitigen Geräten in Echtzeit an Experience Platform zu senden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 16%
+source-wordcount: '424'
+ht-degree: 14%
 
 ---
 
@@ -35,7 +35,11 @@ Sobald Sie sicher sind, dass Ihre Daten sauber sind, können Sie Ihre Datensätz
 
 Weitere Informationen zum Aktivieren eines Datensatzes für [!DNL Profile] und [!DNL Identity Service], lesen Sie bitte die [Datensatz-Handbuch konfigurieren](../../profile/tutorials/dataset-configuration.md).
 
-## Wie hoch ist die erwartete Latenz für die Streaming-Erfassung in [!DNL Platform]?
+## Wie hoch ist die erwartete Latenz für die Streaming-Erfassung auf Experience Platform?
+
+>[!IMPORTANT]
+>
+>Limits für die Streaming-Erfassung werden auf Organisationsebene und nicht auf Sandbox-Ebene berechnet. Das bedeutet, dass Ihre Datennutzung pro Sandbox an die gesamte Berechtigung zur Lizenznutzung gebunden ist, die Ihrer gesamten Organisation entspricht. Darüber hinaus ist die Datennutzung in Entwicklungs-Sandboxes auf 10 % Ihrer Gesamtprofile beschränkt. Weitere Informationen zur Lizenzverwendungsberechtigung finden Sie im Abschnitt [Best Practices für das Datenmanagement - Handbuch](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Ziel | Erwartete Latenz |
 | --------- | ---------------- |
