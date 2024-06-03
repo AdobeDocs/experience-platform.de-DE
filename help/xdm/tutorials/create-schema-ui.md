@@ -5,10 +5,10 @@ title: Erstellen eines Schemas mit dem Schema-Editor.
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
 workflow-type: tm+mt
-source-wordcount: '4695'
-ht-degree: 80%
+source-wordcount: '4813'
+ht-degree: 78%
 
 ---
 
@@ -353,11 +353,36 @@ Wählen Sie **[!UICONTROL Aktivieren]** aus, um Ihre Wahl zu bestätigen. Sie k�
 
 ## Mehr Aktionen {#more}
 
-Im Schema Editor können Sie auch Schnellaktionen durchführen, um die JSON-Struktur des Schemas zu kopieren oder das Schema zu löschen, wenn es nicht für das Echtzeit-Kundenprofil aktiviert wurde oder über verknüpfte Datensätze verfügt. Auswählen [!UICONTROL Mehr] oben in der Ansicht ein Dropdown-Menü mit Schnellaktionen anzeigen.
-
-Mit der Funktion JSON-Struktur kopieren können Sie sehen, wie eine Beispiel-Payload aussehen würde, während Sie das Schema und Ihre Daten-Pipelines noch erstellen. Dies ist besonders hilfreich in Situationen, in denen komplexe Objektzuordnungsstrukturen im Schema vorhanden sind, z. B. bei einer Identitätszuordnung.
+Im Schema Editor können Sie auch Schnellaktionen durchführen, um die JSON-Struktur des Schemas zu kopieren oder das Schema zu löschen. Auswählen [!UICONTROL Mehr] oben in der Ansicht ein Dropdown-Menü mit Schnellaktionen anzeigen.
 
 ![Der Schema-Editor mit hervorgehobener Schaltfläche Mehr und angezeigten Dropdown-Optionen.](../images/tutorials/create-schema/more-actions.png)
+
+### Löschen eines Schemas {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Schema löschen"
+>abstract="Das Schema kann nicht gelöscht werden, da es für Profil aktiviert wurde und über zugehörige Datensätze verfügt."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Schema löschen"
+>abstract="Das Schema kann nicht gelöscht werden, da es für Profil aktiviert wurde."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Schema löschen"
+>abstract="Das Schema kann nicht gelöscht werden, da ihm Datensätze zugeordnet sind."
+
+Ein Schema kann in der Benutzeroberfläche mithilfe von [!UICONTROL Mehr] Aktionen und auch aus den Schemadetails im [!UICONTROL Durchsuchen] Registerkarte. Es gibt bestimmte Bedingungen, die das Löschen eines Schemas verhindern. Ein Schema kann nicht gelöscht werden, wenn:
+
+* Das Schema ist für Profil aktiviert.
+* Das Schema ist für Profil aktiviert und verfügt über verknüpfte Datensätze.
+* Das Schema hat verknüpfte Datensätze, ist aber nicht für Profil aktiviert.
+
+### JSON-Struktur kopieren {#copy-json-structure}
+
+Auswählen **[!UICONTROL JSON-Struktur kopieren]** , um eine Export-Payload für ein beliebiges Schema in der Schema Library zu generieren. Mit dieser Aktion wird die JSON-Struktur in die Zwischenablage kopiert. Ihre exportierte JSON-Datei kann dann zum Importieren des Schemas und der zugehörigen Ressourcen in eine andere Sandbox oder Organisation verwendet werden. Dadurch wird die Freigabe und Wiederverwendung von Schemas zwischen verschiedenen Umgebungen einfach und effizient.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
