@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 100%
+source-wordcount: '890'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 
 Die [!DNL Marketo]-Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Um Standardaktivitäten zu verwenden, müssen Sie Ihr Schema mithilfe des [Dienstprogramms zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) aktualisieren, denn wenn Sie einen neuen `activities`-Datenfluss erstellen, ohne Ihr Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder nicht in Ihrem Schema vorhanden sind. Wenn Sie sich dafür entscheiden, Ihr Schema nicht zu aktualisieren, können Sie trotzdem einen neuen Datenfluss erstellen und etwaige Fehler ignorieren. Neue oder aktualisierte Felder werden jedoch nicht in Platform aufgenommen.
 
-Weitere Informationen zu den XDM-Klassen und XDM-Feldergruppen finden Sie in der Dokumentation zur [XDM Experience Event-Klasse](../../../../xdm/classes/experienceevent.md).
+Lesen Sie die Dokumentation unter [XDM-Erlebnisereignisklasse](../../../../xdm/classes/experienceevent.md) für weitere Informationen zu den XDM-Klassen und XDM-Feldergruppen.
+
+>[!NOTE]
+>
+>Die `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` Das Quellfeld ist ein berechnetes Feld, das mithilfe des **[!UICONTROL Berechnetes Feld hinzufügen]** in der Experience Platform-Benutzeroberfläche. Tutorial lesen unter [Hinzufügung berechneter Felder](../../../../data-prep/ui/mapping.md#calculated-fields) für weitere Informationen.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -127,6 +131,7 @@ Weitere Informationen zu den XDM-Klassen und XDM-Feldergruppen finden Sie in der
 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
+| `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` | Dies ist ein berechnetes Feld. |
 
 {style="table-layout:auto"}
 
@@ -402,16 +407,11 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [XDM Individual Profile-�
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Dies ist ein berechnetes Feld. |
 | `marketoIsDeleted` | `isDeleted` |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Dies ist ein berechnetes Feld. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Dies ist ein berechnetes Feld. |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->Das `to_object('ECID',arrays_to_objects('id',explode(ecids)))`-Quellfeld ist ein berechnetes Feld, das mithilfe der Option [!UICONTROL Berechnetes Feld hinzufügen] in der Platform-Benutzeroberfläche hinzugefügt werden muss. Weitere Informationen finden Sie im Tutorial [Hinzufügen berechneter Felder](../../../../data-prep/ui/mapping.md#calculated-fields).
 
 ## Nächste Schritte
 

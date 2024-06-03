@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
-breadcrumb-title: Anleitung zu Quell-Connectoren
-user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
+breadcrumb-title: Anleitung für Quell-Connectoren
+user-guide-description: Daten aus verschiedenen Quellen erfassen. Erfahren Sie, wie Sie bereits erfasste Daten strukturieren, beschriften und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 94%
+source-wordcount: '1043'
+ht-degree: 95%
 
 ---
 
@@ -36,7 +36,8 @@ ht-degree: 94%
          - [Marketo Engage-Connector](connectors/adobe-applications/marketo/marketo.md)
          - [Handbuch zur Marketo Engage-Authentifizierung](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-Namespaces und -Schemata](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Adobe Advertising {#advertising}
+         - [Migrationshandbuch zur ECID-Zuordnung](connectors/adobe-applications/marketo/migration.md)
+   - Advertising {#advertising}
       - [Google Ads-Connector](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -93,9 +94,9 @@ ht-degree: 94%
       - [Snowflake-Connector](connectors/databases/snowflake.md)
       - [Teradata Vantage-Connector](connectors/databases/teradata-vantage.md)
    - Daten- und Identitätspartner {#data-partner}
-      - [Acxiom-Datenerfassung](connectors/data-partners/acxiom-data-ingestion.md)
-      - [Datenimport mit Acxif-Prognosen](connectors/data-partners/acxiom-prospecting-data-import.md)
-      - [Merkur Enterprise Identity Resolution](connectors/data-partners/merkury.md)
+      - [Acxiom-Datenaufnahme](connectors/data-partners/acxiom-data-ingestion.md)
+      - [Datenimport aus Acxiom Prospecting](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Identitätsauflösung für Unternehmen von Merkury](connectors/data-partners/merkury.md)
    - E-Commerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -103,7 +104,7 @@ ht-degree: 94%
    - Lokales System {#local-system}
       - [Connector für den Upload lokaler Dateien](connectors/local-system/local-file-upload.md)
    - Marketing-Automatisierung {#marketing-automation}
-      - [Blitze Ströme](connectors/marketing-automation/braze.md)
+      - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot-Connector](connectors/marketing-automation/hubspot.md)
@@ -175,7 +176,7 @@ ht-degree: 94%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
-         - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
+         - [Snowflake-Streaming](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -301,12 +302,12 @@ ht-degree: 94%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
-         - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
+         - [Snowflake-Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Daten- und Identitätspartner {#data-partner}
-         - [Acxiom-Datenerfassung](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
-         - [Datenimport mit Acxif-Prognosen](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
-         - [Merkur Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom-Datenaufnahme](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
+         - [Datenimport aus Acxiom Prospecting](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Identitätsauflösung für Unternehmen von Merkury](tutorials/ui/create/data-partners/merkury.md)
       - E-Commerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -314,7 +315,7 @@ ht-degree: 94%
       - Lokales System {#local-system}
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing-Automatisierung {#marketing-automation}
-         - [Blitze Ströme](tutorials/ui/create/marketing-automation/braze.md)
+         - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
