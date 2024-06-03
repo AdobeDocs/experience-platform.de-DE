@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
+source-git-commit: e96477882beceb6e370d53df3cc65e8dfb28745f
 workflow-type: tm+mt
-source-wordcount: '2096'
-ht-degree: 85%
+source-wordcount: '2158'
+ht-degree: 82%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 85%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.23.2 – Dienstag, 3. Juni 2024
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Fehlerkorrektur - bei der Definition von Konfigurationsüberschreibungen tritt kein Fehler mehr auf, wenn die Erweiterungskonfiguration geändert wird.
+* Setzen leerer Werte für Ping-Intervalle für die Medienerfassung zulassen.
+* Fehlerkorrektur - bei der Änderung einer Update-Variablenaktion tritt kein Fehler mehr auf.
+* Zurücksetzen des ID-Synchronisierungs-Containers in Konfigurationsüberschreibungen zulassen.
+
+Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
 ## Version 2.23.1 – Mittwoch, 28. Mai 2024
 
