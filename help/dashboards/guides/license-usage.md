@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
+source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2101'
 ht-degree: 3%
 
 ---
@@ -24,6 +24,13 @@ ht-degree: 3%
 >abstract="Das Dashboard zur Lizenznutzung bietet Einblicke in die von Ihnen erworbenen Adobe Experience Platform-Produkte. In der Dashboard-Übersicht werden die primären Metriken für Ihre Produkte angezeigt, einschließlich Ihrer Nutzung für jede der primären Metriken und Ihres vertraglich vereinbarten Lizenzbetrags. Im Arbeitsbereich &quot;Details&quot;wird eine Aufschlüsselung Ihrer Metriken für jedes Produkt innerhalb bestimmter Sandboxes angezeigt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Datensatzgültigkeiten"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Datenabläufe für Pseudonyme Profile"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_reduction"
+>title="So reduzieren Sie die Nutzung"
+>abstract="Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder Pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/de/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="Video Pseudonyme Profildaten - Ablauf"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Dokumentation zum Ablauf der Daten von Pseudonymen Profilen"
 
 Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über die Adobe Experience Platform anzeigen [!UICONTROL Lizenzverwendung] Dashboard. Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
 
