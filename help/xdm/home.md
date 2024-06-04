@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-System – Übersicht
 description: Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ermöglicht die Standardisierung von Kundenerlebnisdaten und die Definition von Schemata für das Customer Experience Management.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2101'
 ht-degree: 74%
 
 ---
@@ -53,7 +53,7 @@ Weitere Informationen zur Verwaltung und Interaktion mit Schemata in Platform fi
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Datenverhalten"
->abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Datensatz, Zeitreihen und Ad-hoc-Analysen. Datensatzschemas liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemata eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die Namespaces sind und von nur einem Datensatz verwendet werden können. Weitere Informationen zu Datenverhalten in Platform finden Sie in der Dokumentation."
+>abstract="Die zur Verwendung in Experience Platform bestimmten Daten sind in drei Verhaltenstypen unterteilt: Datensatz, Zeitreihen und Ad-hoc-Analysen. Datensatzschemas liefern Informationen über die Attribute eines Subjekts, während Zeitreihenschemata eine Momentaufnahme des Systems zum Zeitpunkt der Durchführung einer Aktion erfassen. Ad-hoc-Schemata erfassen Felder, die für die Verwendung durch einen einzigen Datensatz benannt sind. Weitere Informationen zu Datenverhalten in Platform finden Sie in der Dokumentation."
 
 Daten, die in Experience Platform verwendet werden können, sind in drei Verhaltenstypen unterteilt:
 
@@ -118,10 +118,6 @@ Weitere Informationen zu diesem Service finden Sie unter [Query Service – Übe
 Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die über alle Systeme hinweg aggregiert werden und verwertbare Zeitstempelkonten für Ereignisse enthalten, die den Profilsubjekt betreffen. Diese Ereignisse können in allen Systemen, die Sie mit Experience Platform verwenden, stattgefunden haben.
 
 Das Echtzeit-Kundenprofil nutzt schemaformatierte Daten basierend auf dem [!UICONTROL Individuelles XDM-Profil] und [!UICONTROL XDM ExperienceEvent] und antwortet auf Abfragen, die auf diesen Daten basieren.
-
->[!NOTE]
->
->Das Echtzeit-Kundenprofil funktioniert **not** unterstützen Schemas, die auf anderen Klassen als der [!UICONTROL XDM ExperienceEvent] -Klasse.
 
 Das System bildet für jedes Kundenprofil eine Instanz und vereint Daten einer Person zu einer „Single Source of Truth“. Diese zusammengeführten Daten werden mithilfe eines so genannten „Vereinigungsschemas“ dargestellt (auch als „Vereinigungsansicht“ bezeichnet). Ein Vereinigungsschema aggregiert die Felder aller Schemas, die dieselbe Klasse implementieren, in einem Schema. Wenn Sie ein Schema mithilfe der Benutzeroberfläche oder API erstellen, können Sie es aktivieren, damit es mit dem Echtzeit-Kundenprofil verwendet werden kann, und es zur Aufnahme in die Vereinigung mit einem Tag versehen. Das mit einem Tag versehene Schema wird dann Teil der Schemadefinition, die an das Profil übergeben wird.
 
