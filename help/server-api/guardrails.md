@@ -1,16 +1,16 @@
 ---
-title: Leitlinien für die Leistung der Edge Network Server-API
+title: Leitlinien für die Performance der Edge Network Server-API
 description: Erfahren Sie, wie Sie die Server-API in optimalen Leistungsgarantien verwenden.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 5%
 
 ---
 
 
-# Leitlinien für die Leistung der Edge Network Server-API
+# Leitlinien für die Performance der Edge Network Server-API
 
 ## Übersicht {#overview}
 
@@ -18,14 +18,18 @@ Leistungsgarantien definieren Nutzungsbeschränkungen im Zusammenhang mit Anwend
 
 Adobe ist nicht für Leistungsbeeinträchtigungen verantwortlich, die durch überschrittene Nutzungsbeschränkungen verursacht werden. Kunden, die die Leistungsgarantien konsequent überschreiten, können zusätzliche Verarbeitungskapazität anfordern, um eine Leistungsbeeinträchtigung zu vermeiden.
 
+>[!IMPORTANT]
+>
+>Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und den entsprechenden [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) über die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+
 ## Definitionen
 
-* **Verfügbarkeit** wird für jedes fünfminütige Intervall als Prozentsatz der vom Experience Platform Edge Network verarbeiteten Anforderungen berechnet, die nicht fehlschlagen und sich ausschließlich auf die bereitgestellten Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünfminüterintervall keine Anforderungen gestellt hat, gilt dieses Intervall als zu 100 % verfügbar.
+* **Verfügbarkeit** wird für jedes fünfminütige Intervall als Prozentsatz der vom Experience Platform-Edge Network verarbeiteten Anforderungen berechnet, die nicht fehlschlagen und sich ausschließlich auf die bereitgestellten Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünfminüterintervall keine Anforderungen gestellt hat, gilt dieses Intervall als zu 100 % verfügbar.
 * **Monatlicher Uptime-Prozentsatz** für eine bestimmte Region wird als Durchschnitt der Verfügbarkeit für alle 5-minütigen Intervalle in einem Monat berechnet.
 * Ein **Upstream** ist ein Dienst hinter dem Edge Network, der für einen bestimmten Datastream aktiviert ist, z. B. Adobe Server Side Forwarding, Adobe Edge Segmentation oder Adobe Target.
 * A **Anfrageeinheit** entspricht einem 8-KB-Fragment einer Anforderung und einem vorgelagerten für einen Datastream konfigurierten.
 * A **Anfrage** ist eine einzige Nachricht, die von einer kundeneigenen Anwendung an die [!DNL Server API]. Eine Anforderung kann eine oder mehrere Anfrageeinheiten enthalten.
-* Ein **error** ist eine Anforderung, die aufgrund eines Edge-Netzwerks fehlschlägt [Interner Dienstfehler](error-handling.md).
+* Ein **error** ist eine Anforderung, die aufgrund eines Edge Networks fehlschlägt [Interner Dienstfehler](error-handling.md).
 
 ## Dienstbeschränkungen
 
@@ -51,7 +55,7 @@ Die folgende Tabelle zeigt die Standardgrenzwerte. Wenden Sie sich an Ihren Kund
 | Endpunkt | Anforderungen von Einheiten pro Sekunde |
 | --- | --- |
 | `/v2/interact` | 4.000 |
-| `/v2/collect` | 6.000 |
+| `/v2/collect` | 6000 |
 
 
 ### HTTP-Anfragegrößenbeschränkung

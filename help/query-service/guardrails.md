@@ -3,18 +3,21 @@ keywords: Experience Platform; Abfrage; Query Service; Fehlerbehebung; Limits; R
 title: Limits für Query Service
 description: Dieses Dokument enthält Informationen zu Nutzungsbeschränkungen für Query Service-Daten, die Ihnen bei der Optimierung Ihrer Abfrageverwendung helfen.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 6%
+source-wordcount: '1181'
+ht-degree: 4%
 
 ---
 
 # Limits für Query Service
 
 Limits sind Schwellenwerte, die die Datennutzung und Systemnutzung, Leistungsoptimierung und Vermeidung von Fehlern oder unerwarteten Ergebnissen in Adobe Experience Platform lenken.
-
 Dieses Dokument enthält standardmäßige Nutzungsbeschränkungen für Query Service-Daten, mit denen Sie die Systemleistung bei der Abfrage von Daten im Zusammenhang mit Ihren Lizenzberechtigungen optimieren können.
+
+>[!IMPORTANT]
+>
+>Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und den entsprechenden [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) über die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
 
 ## Voraussetzungen
 
@@ -67,7 +70,7 @@ Die folgenden Tabellen enthalten die empfohlenen Limits und Beschreibungen für 
 
 **Batch-Abfragen**
 
-| **Leitplanke** | **Limit** | **Begrenzungstyp** | **Beschreibung** |
+| **Guardrail** | **Limit** | **Begrenzungstyp** | **Beschreibung** |
 |---|---|---|---|
 | Maximale Ausführungsdauer | 24 Stunden | Systemerzwungene Limits | Dies definiert die maximale Ausführungszeit für eine Batch-SQL-Abfrage.<br>Die Verarbeitungszeit einer Abfrage hängt von der Menge der zu verarbeitenden Daten und der Komplexität der Abfrage ab. |
 | Gleichzeitige Query Service-Benutzer für nicht geplanten Batch | <ul><li>Wie in der Produktbeschreibung der Anwendung angegeben.</li><li>+5 (mit jedem zusätzlichen Ad-hoc-Abfrage-Benutzer-Add-On-Paket gekauft)</li></ul> | Systemerzwungene Limits | Bei ungeplanten Batch-Abfragen (z. B. CTAS/ITAS-Abfragen im interaktiven Modus) wird dadurch definiert, wie viele Benutzer Sitzungen für eine bestimmte Organisation gleichzeitig erstellen können. Wenn die gleichzeitige Beschränkung überschritten wird, erhält der Benutzer eine `Session Limit Reached` Fehler. |
@@ -79,7 +82,7 @@ Die folgenden Tabellen enthalten die empfohlenen Limits und Beschreibungen für 
 
 {style="table-layout:auto"}
 
-## Abfrage-beschleunigte Speicherung {#query-accelerated-store}
+## Abfrage-beschleunigter Speicher {#query-accelerated-store}
 
 Die folgende Tabelle enthält die empfohlenen Limits und eine Beschreibung für den Abfrage-beschleunigten Speicher.
 

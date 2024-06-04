@@ -3,10 +3,10 @@ keywords: Experience Platform;Fehlerbehebung;Leitplanken;Richtlinien;
 title: Schutzmaßnahmen bei der Datenaufnahme
 description: Erfahren Sie mehr über Limits für die Datenerfassung in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
+source-git-commit: 7a2463e1bb09180ae7e02674d0c0040c8c874ad5
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 52%
+source-wordcount: '669'
+ht-degree: 50%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 52%
 >Limits für die Batch- und Streaming-Erfassung werden auf Organisationsebene und nicht auf Sandbox-Ebene berechnet. Das bedeutet, dass Ihre Datennutzung pro Sandbox an die gesamte Berechtigung zur Lizenznutzung gebunden ist, die Ihrer gesamten Organisation entspricht. Darüber hinaus ist die Datennutzung in Entwicklungs-Sandboxes auf 10 % Ihrer Gesamtprofile beschränkt. Weitere Informationen zur Lizenzverwendungsberechtigung finden Sie im Abschnitt [Best Practices für das Datenmanagement - Handbuch](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 Leitplanken sind Schwellenwerte, die Anhaltspunkte für die Daten- und Systemnutzung, die Performance-Optimierung und die Vermeidung von Fehlern oder unerwarteten Ergebnissen in Adobe Experience Platform bieten. Leitplanken können sich auf Ihre Nutzung oder Verwendung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzierungsberechtigungen beziehen.
+
+>[!IMPORTANT]
+>
+>Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und den entsprechenden [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) über die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
 
 Dieses Dokument enthält Anleitungen zu Schutzmaßnahmen bei der Datenaufnahme in Adobe Experience Platform.
 
