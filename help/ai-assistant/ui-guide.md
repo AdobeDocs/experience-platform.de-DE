@@ -1,9 +1,7 @@
 ---
 title: KI-Assistent in Adobe Experience Platform
 description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform- und Real-time Customer Data Platform-Konzepten navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
-hide: true
-hidefromtoc: true
-source-git-commit: 723638fcd580c81a84ffe6bf38c197c62fabc1f3
+source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%

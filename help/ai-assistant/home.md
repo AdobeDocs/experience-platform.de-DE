@@ -1,11 +1,9 @@
 ---
 title: KI-Assistent in Adobe Experience Platform - Überblick
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 1%
 
 ---
@@ -72,6 +70,13 @@ Sie können in den folgenden Bereichen Fragen zu Ihren operativen Einblicken an 
 * Quellen _(Fragen zu den Rechnungsabschlüssen können derzeit nicht beantwortet werden.)_
 
 Bei Fragen zu operativen Einblicken spiegeln die Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten zu informieren.
+
+### Funktionsumfang {#feature-scope}
+
+Derzeit ist der Umfang des AI-Assistenten wie folgt:
+
+* [Produktwissen](./home.md#product-knowledge): AI Assistant kann Fragen zu Produktwissen für Experience Platform, Real-time Customer Data Platform und Adobe Journey Optimizer beantworten. Sie können sich auch über die Customer Journey Analytics-Benutzeroberfläche mit Produktwissensthemen für Customer Journey Analytics befassen.
+* [Operative Einblicke](./home.md#operational-insights): Sie können den KI-Assistenten mit Fragen zu betrieblichen Einblicken in die folgenden Datenobjekte befassen: Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen.
 
 ## Funktionszugriff {#feature-access}
 
