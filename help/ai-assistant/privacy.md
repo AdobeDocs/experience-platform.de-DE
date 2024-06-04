@@ -1,9 +1,10 @@
 ---
 title: Datenschutz, Sicherheit und Governance im KI-Assistenten
 description: Erfahren Sie mehr über die Datenschutz-, Sicherheits- und Governance-Verfahren für AI Assistant.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
+source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,6 @@ Lesen Sie dieses Dokument, um mehr über die vertrauensorientierten Funktionen v
 * Derzeit werden keine personenbezogenen Daten von AI Assistant verwendet, auch nicht zu Trainingszwecken.
 * Der KI-Assistent kennt keine Verbraucherdaten.
 * Alle vorhandenen [Zugriffskontrolle](../access-control/home.md) Richtlinien werden von der KI-Assistenzkraft berücksichtigt.
-   * Die Zugriffskontrolle auf Objektebene wird für Objekte unterstützt. Die Unterstützung der Zugriffskontrolle auf Objektebene für Attribute wird in Kürze bereitgestellt.
    * Alle neuen attributbasierten Zugriffssteuerungsrichtlinien werden nach maximal 24 Stunden im AI-Assistenten angezeigt.*
 * Sie müssen über eine explizite Berechtigung zur Interaktion mit dem AI-Assistenten verfügen.
    * Sie können Berechtigungen für Experience Platform und Journey Optimizer mithilfe der Variablen [Berechtigungs-Benutzeroberfläche](../access-control/abac/ui/permissions.md) und Sie können die [Admin Console](../access-control/ui/browse.md) , um Berechtigungen für Customer Journey Analytics zuzuweisen.
