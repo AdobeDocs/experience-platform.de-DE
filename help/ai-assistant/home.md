@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform - Überblick
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '679'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ AI Assistant in Adobe Experience Platform ist eine Dialogerfahrung, mit der Sie 
 
 >[!IMPORTANT]
 >
->Sie müssen einer Benutzervereinbarung zustimmen, bevor Sie den KI-Assistenten verwenden können. Die Nutzervereinbarung enthält auch die öffentliche Betavereinbarung. Dies ist erforderlich, damit Sie zusätzliche Funktionen des KI-Assistenten verwenden können, wenn sie als Beta-Version eingeführt werden.
+>Sie müssen einer [Nutzervereinbarung](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) bevor Sie den KI-Assistenten verwenden können. Die Nutzervereinbarung enthält auch die öffentliche Betavereinbarung. Dies ist erforderlich, damit Sie zusätzliche Funktionen des KI-Assistenten verwenden können, wenn sie als Beta-Version eingeführt werden.
 
 +++Auswählen zum Anzeigen der Benutzeroberfläche für Benutzervereinbarungen
 
