@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
+source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2135'
 ht-degree: 3%
 
 ---
@@ -158,6 +158,10 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 | [!UICONTROL Anzahl der Pakete für Streaming-Segmentierung] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungsdienst gelangen. Die Segmentzugehörigkeit wird auf der Grundlage der aktuellen Personenprofilattribute und des Werts des aktuellen Ereignisses ausgewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsame Funktion. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>Sie können Ihre Lizenzberechtigungen in Ihrem Kundenauftrag überprüfen, um Metriken wie Ihre &quot;Speicherzulage&quot;zu berechnen.<br>Beispiel:<ul><li>Speicherzulage = Die Anzahl der &quot;autorisierten Profile&quot;in Ihrem Vertrag X Durchschnittliche Profilreichweite</li></ul>
 
 Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
 
