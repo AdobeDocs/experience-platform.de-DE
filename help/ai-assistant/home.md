@@ -2,7 +2,7 @@
 title: KI-Assistent in Adobe Experience Platform - Überblick
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
+source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 2%
@@ -15,7 +15,7 @@ Lesen Sie dieses Dokument, um mehr über AI Assistant in Adobe Experience Platfo
 
 AI Assistant in Adobe Experience Platform ist eine Dialogerfahrung, mit der Sie Ihre Workflows in Adobe-Applikationen beschleunigen können. Sie können den AI-Assistenten verwenden, um Produktwissen besser zu verstehen, Probleme zu beheben oder Informationen zu durchsuchen und operative Einblicke zu erhalten. Der AI-Assistent unterstützt Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
-![Die Benutzeroberfläche des AI-Assistenten mit dem ersten ausgelösten Benutzererlebnis.](./images/blank.png)
+![Die Benutzeroberfläche des AI-Assistenten mit dem ersten ausgelösten Benutzererlebnis.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >

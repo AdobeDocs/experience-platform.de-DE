@@ -1,9 +1,10 @@
 ---
 title: KI-Assistent in Adobe Experience Platform
 description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform- und Real-time Customer Data Platform-Konzepten navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
+source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ In diesem Handbuch erfahren Sie, wie Sie den KI-Assistenten in der Adobe Experie
 
 Um den KI-Assistenten zu starten, wählen Sie die **[!UICONTROL Symbol &quot;KI-Assistent&quot;]** aus der oberen Kopfzeile der Experience Platform-Benutzeroberfläche.
 
-![Die Experience Platform-Startseite mit dem ausgewählten Symbol für den AI-Assistenten und der geöffneten Benutzeroberfläche des AI-Assistenten.](./images/ai-assistant.png)
+![Die Experience Platform-Startseite mit dem ausgewählten Symbol für den AI-Assistenten und der geöffneten Benutzeroberfläche des AI-Assistenten.](./images/ai-assistant-full-icon.png)
 
 Die Benutzeroberfläche des KI-Assistenten wird angezeigt und stellt Ihnen sofort Informationen zu den ersten Schritten bereit. Sie können die unter [!UICONTROL Erste Schritte] um Fragen und Befehle zu beantworten, z. B.:
 
@@ -86,9 +87,13 @@ Sie müssen sich in einer aktiven Sandbox befinden, damit der KI-Assistent ausre
 
 +++Auswählen , um ein Beispiel für eine operative Insights-Frage anzuzeigen
 
-Im folgenden Beispiel wird der KI-Assistent mit der folgenden Abfrage gefragt: **&quot;Anzeigen von Datenflüssen, die mit der Amazon S3-Quelle erstellt wurden&quot;**, antwortet der AI-Assistent dann mit einer Tabelle, die Ihre Datenflüsse und die zugehörigen IDs auflistet. Um die gesamte Datentabelle anzuzeigen, wählen Sie oben rechts das Symbol zum Erweitern aus.
+Im folgenden Beispiel wird der KI-Assistent mit der folgenden Abfrage gefragt: **&quot;Anzeigen von Datenflüssen, die mit der Amazon S3-Quelle erstellt wurden&quot;**.
 
-![Folgenfragen zu operativen Einblicken.](./images/usage-data-question.png)
+![Eine Frage zu operativen Einblicken.](./images/op-insights-question.png)
+
+Der AI-Assistent antwortet dann mit einer Tabelle, in der Ihre Datenflüsse und die zugehörigen IDs aufgelistet sind. Um die gesamte Datentabelle anzuzeigen, wählen Sie oben rechts das Symbol zum Erweitern aus.
+
+![Eine Antwort auf operative Erkenntnisse](./images/op-insights-answer.png)
 
 Eine erweiterte Ansicht der Tabelle mit einer umfassenderen Liste von Datenflüssen, die auf den Parametern Ihrer Abfrage basieren, wird angezeigt.
 
@@ -96,9 +101,13 @@ Eine erweiterte Ansicht der Tabelle mit einer umfassenderen Liste von Datenflüs
 
 Wenn eine Frage zu operativen Einblicken gestellt wird, erläutert der KI-Assistent, wie die Antwort berechnet wurde. Im folgenden Beispiel beschreibt der AI-Assistent die Schritte, die zur Identifizierung der Datenflüsse unternommen wurden, die mithilfe des [!DNL Amazon S3] -Quelle.
 
-![Folgen Sie der Frage zu Segmentdefinitionen, die veranschaulichen, wie der KI-Assistent die Antwort berechnet hat.](./images/answer-explained.png)
+![KI-Assistent, der eine Erläuterung der Art und Weise der Berechnung der Antwort liefert](./images/answer-explained.png)
 
 Sie können auch Filter bereitstellen und Änderungen an Ihren Fragen vornehmen und AI Assistant anweisen, seine Ergebnisse anhand der von Ihnen eingeschlossenen Filter zu rendern. Beispielsweise können Sie den AI-Assistenten bitten, Ihnen einen Trend zur Anzahl der Segmentdefinitionen in der Reihenfolge ihres Erstellungsdatums anzuzeigen, Segmentdefinitionen mit null Gesamtprofilen zu entfernen und bei der Anzeige der Daten Monatsnamen anstelle von Ganzzahlen zu verwenden.
+
+**Hinweis:** Antworten auf operative Einblicke befinden sich derzeit in der Beta-Phase. Wählen Sie das QuickInfo-Symbol in der Benutzeroberfläche des AI-Assistenten aus, um den Beta-Hinweis und einen Link zur Dokumentation anzuzeigen.
+
+![Symbol für QuickInfo des AI-Assistenten ausgewählt.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -122,7 +131,27 @@ Sie können die mehrgleisigen Funktionen des KI-Assistenten verwenden, um währe
 
 Im folgenden Beispiel wird der KI-Assistent zunächst nach der Gesamtzahl der Datenflüsse gefragt und dann aufgefordert, die 10 neuesten Datenflüsse aufzulisten.
 
-![Beispiel einer Mehrfachumstellung](./images/multi-turn.png)
+![Beispiel einer Mehrfachumstellung](./images/multiturn.png)
+
+Um das Zurücksetzen vorzunehmen, wählen Sie die Auslassungszeichen (**`...`**) auf der Benutzeroberfläche des AI-Assistenten und wählen Sie **[!UICONTROL Neue Unterhaltung beginnen]**. Dies informiert den AI-Assistenten darüber, dass Sie beabsichtigen, Themen zu ändern. Dies kann besonders bei der Fehlerbehebung von Abfragen hilfreich sein, die entweder fehlschlagen oder auf falsche Informationen verweisen.
+
+![Die ausgewählten Ellipsen und die ausgewählte Option Neue Konversation starten .](./images/reset.png)
+
++++
+
+### Erkennung verwenden {#use-discoverability}
+
+Sie können die Funktion zur Auffindbarkeit von AI-Assistenten verwenden, um eine Liste der allgemeinen Themen anzuzeigen, die von AI Assistant unterstützt werden und in Entitäten gruppiert sind.
+
++++Auswählen, um ein Beispiel für Entdeckbarkeit anzuzeigen
+
+Um die Entdeckung anzuzeigen, wählen Sie das Glühbirnensymbol in der oberen Kopfzeile der Benutzeroberfläche des AI-Assistenten aus.
+
+![Die Funktion &quot;AI Assistant Discover&quot;.](./images/lightbulb.png)
+
+Wählen Sie als Nächstes eine Kategorie aus und wählen Sie dann eine Eingabeaufforderung aus der bereitgestellten Liste aus. Sie können diese Funktion verwenden, um eine bessere Vorstellung davon zu erhalten, welche Arten von Fragen der KI-Assistent beantworten kann. Sie können die bereits vorhandenen Eingabeaufforderungen auch mit spezifischen Details aktualisieren, die sich auf Ihre Sandbox beziehen, indem Sie freien Text verwenden oder [autocomplete](#use-auto-complete).
+
+![Der KI-Assistent fordert Sie zur Erkennung von Personen auf.](./images/prompt.png)
 
 +++
 
@@ -133,8 +162,6 @@ Sie können mithilfe der Antwortmöglichkeiten Feedback zu Ihrer Erfahrung mit d
 Um Feedback zu geben, wählen Sie entweder Daumen nach oben, Daumen nach unten oder eine Markierung aus, nachdem Sie eine Antwort vom AI-Assistenten erhalten haben, und geben Sie dann Ihr Feedback in das bereitgestellte Textfeld ein.
 
 ![Die Feedback-Option im AI-Assistenten.](./images/provide-feedback.png)
-
-Um das Zurücksetzen vorzunehmen, wählen Sie die Auslassungszeichen (**`...`**) auf der Benutzeroberfläche des AI-Assistenten und wählen Sie **[!UICONTROL Neue Unterhaltung beginnen]**. Dies informiert den AI-Assistenten darüber, dass Sie beabsichtigen, Themen zu ändern. Dies kann besonders bei der Fehlerbehebung von Abfragen hilfreich sein, die entweder fehlschlagen oder auf falsche Informationen verweisen.
 
 +++Auswählen , um weitere Beispiele anzuzeigen
 
