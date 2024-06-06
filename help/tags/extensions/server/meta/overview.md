@@ -2,10 +2,10 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2578'
-ht-degree: 1%
+source-wordcount: '2583'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Die [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) ermöglicht es Ihnen, Ihre Server-seitigen Marketing-Daten mit [!DNL Meta] Technologien zur Optimierung Ihres Anzeigen-Targeting, Senkung der Kosten pro Aktion und Messung der Ergebnisse. Ereignisse sind mit einer [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID und werden ähnlich wie clientseitige Ereignisse verarbeitet.
 
-Verwenden der [!DNL Meta Conversions API] -Erweiterung verwenden, können Sie die API-Funktionen in Ihrer [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) Regeln zum Senden von Daten an [!DNL Meta] vom Adobe Experience Platform Edge Network aus. In diesem Dokument wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in der Ereignisweiterleitung verwenden. [Regel](../../../ui/managing-resources/rules.md).
+Verwenden der [!DNL Meta Conversions API] -Erweiterung verwenden, können Sie die API-Funktionen in Ihrer [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) Regeln zum Senden von Daten an [!DNL Meta] vom Adobe Experience Platform-Edge Network aus. In diesem Dokument wird beschrieben, wie Sie die Erweiterung installieren und ihre Funktionen in der Ereignisweiterleitung verwenden. [Regel](../../../ui/managing-resources/rules.md).
 
 ## Demo
 
@@ -53,15 +53,15 @@ Wählen Sie zum Abschluss **[!UICONTROL Speichern]**
 
 Die -Erweiterung ist installiert und Sie können jetzt ihre Funktionen in Ihren Ereignisweiterleitungsregeln verwenden.
 
-## Integration mit der Meta Business Extension (MBE) {#mbe}
+## Integration mit der Facebook- und Instagram-Erweiterung {#facebook}
 
-Dank der Integration mit Meta Business Extensions (MBE) können Sie sich schnell bei Ihrem Meta Business Account authentifizieren. Dadurch wird Ihre [!UICONTROL Pixel-ID] und die Meta Conversions-API [!UICONTROL Zugriffstoken], wodurch die Installation und Konfiguration der Meta Conversions-API vereinfacht werden.
+Durch die Integration mit der Facebook- und Instagram-Erweiterung können Sie sich schnell bei Ihrem Meta Business-Konto authentifizieren. Dadurch wird Ihre [!UICONTROL Pixel-ID] und die Meta Conversions-API [!UICONTROL Zugriffstoken], wodurch die Installation und Konfiguration der Meta Conversions-API vereinfacht werden.
 
 Bei der Installation der [!UICONTROL Meta Conversions-API] -Erweiterung.
 
 ![Die [!UICONTROL API-Erweiterung für Meta Conversions] Hervorhebung der Installationsseite [!UICONTROL Mit Meta verbinden].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-Eine Dialogaufforderung zur Authentifizierung in MBE wird auch in der Schnellstart-Workflow-Benutzeroberfläche bei der Ereignisweiterleitung angezeigt.
+Eine Dialogaufforderung zur Authentifizierung in Facebook und Instagram wird auch in der Schnellstart-Workflow-Benutzeroberfläche bei der Ereignisweiterleitung angezeigt.
 
 ![Die Schnellstart-Workflow-Benutzeroberfläche - Hervorhebung [!UICONTROL Mit Meta verbinden].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -106,7 +106,7 @@ Wählen Sie zum Abschluss **[!UICONTROL Änderungen beibehalten]** , um die Akti
 
 Wenn Sie mit der Regel zufrieden sind, wählen Sie **[!UICONTROL In Bibliothek speichern]**. Veröffentlichen Sie schließlich eine neue Ereignisweiterleitung [build](../../../ui/publishing/builds.md) um die Änderungen zu aktivieren, die an der Bibliothek vorgenommen wurden.
 
-## Ereignis-Deduplizierung {#deduplication}
+## Ereignisdeduplizierung {#deduplication}
 
 Wie in [Abschnitt mit Voraussetzungen](#prerequisites), wird empfohlen, beide [!DNL Meta Pixel] Tag-Erweiterung und [!DNL Conversions API] Ereignisweiterleitungs-Erweiterung, um dieselben Ereignisse vom Client und Server in einer redundanten Einrichtung zu senden. Dies kann dazu beitragen, Ereignisse wiederherzustellen, die nicht von der einen oder anderen Erweiterung erfasst wurden.
 
@@ -129,7 +129,7 @@ Stellen Sie beim Senden von freigegebenen Ereignissen sicher, dass Sie eine Erei
 
 Mit der Schnellstartfunktion können Sie mit der Meta-Konversions-API und den Meta-Pixel-Erweiterungen einfach und effizient einrichten. Dieses Tool automatisiert mehrere Schritte, die in Adobe-Tags und Ereignisweiterleitung ausgeführt werden, wodurch die Einrichtungszeit erheblich verkürzt wird.
 
-Diese Funktion installiert und konfiguriert automatisch sowohl die Meta Conversions-API als auch die Meta-Pixel-Erweiterungen für neu automatisch generierte Tags und die Ereignisweiterleitungs-Eigenschaft mit den erforderlichen Regeln und Datenelementen. Außerdem werden das Experience Platform Web SDK und Datastream automatisch installiert und konfiguriert. Schließlich veröffentlicht die Schnellstartfunktion die Bibliothek automatisch in der angegebenen URL in einer Entwicklungsumgebung, was die clientseitige Datenerfassung und die serverseitige Ereignisweiterleitung über die Ereignisweiterleitung und das Experience Platform Edge Network in Echtzeit ermöglicht.
+Diese Funktion installiert und konfiguriert automatisch sowohl die Meta Conversions-API als auch die Meta-Pixel-Erweiterungen für neu automatisch generierte Tags und die Ereignisweiterleitungs-Eigenschaft mit den erforderlichen Regeln und Datenelementen. Außerdem werden das Experience Platform Web SDK und Datastream automatisch installiert und konfiguriert. Schließlich veröffentlicht die Schnellstartfunktion die Bibliothek automatisch in der angegebenen URL in einer Entwicklungsumgebung, was die clientseitige Datenerfassung und die serverseitige Ereignisweiterleitung über die Ereignisweiterleitung und das Experience Platform-Edge Network in Echtzeit ermöglicht.
 
 Das folgende Video bietet eine Einführung in die Schnellstarterfunktion.
 
