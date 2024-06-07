@@ -3,10 +3,10 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 76%
+source-wordcount: '1178'
+ht-degree: 75%
 
 ---
 
@@ -112,6 +112,12 @@ Der Abschnitt [!UICONTROL Aktionen] einer Ereignisweiterleitungsregel wird immer
 ## Geheimnisse {#secrets}
 
 Bei der Ereignisweiterleitung können Sie Geheimnisse erstellen, verwalten und speichern, die für die Authentifizierung bei den Servern verwendet werden können, an die Sie Daten senden. Siehe das Handbuch zu [Geheimnissen](./secrets.md), um zu erfahren, welche Geheimnistypen es gibt und wie sie in der Benutzeroberfläche implementiert sind.
+
+## Videoüberblick {#video}
+
+Das folgende Video soll Ihnen dabei helfen, die Ereignisweiterleitung und die Real-Time CDP-Verbindungen besser zu verstehen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
 ## Nächste Schritte
 
