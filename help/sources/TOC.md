@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung für Quell-Connectoren
 user-guide-description: Daten aus verschiedenen Quellen erfassen. Erfahren Sie, wie Sie bereits erfasste Daten strukturieren, beschriften und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 95%
 
 ---
@@ -350,6 +350,7 @@ ht-degree: 95%
       - [Datenfluss der Protokollverbindung](tutorials/ui/dataflow/protocols.md)
    - [Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche](tutorials/ui/templates.md)
    - [Quellenobjekte filtern](tutorials/ui/filter.md)
+   - [Aufnehmen verschlüsselter Daten](tutorials/ui/encryped-ingestion.md)
    - [On-Demand-Aufnahme](tutorials/ui/on-demand-ingestion.md)
    - [Überwachen von Batch-Datenflüssen](tutorials/ui/monitor.md)
    - [Überwachen von Streaming-Datenflüssen](tutorials/ui/monitor-streaming.md)
