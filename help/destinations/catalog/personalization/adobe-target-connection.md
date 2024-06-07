@@ -3,9 +3,9 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 29%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| April 2024 | Funktions- und Dokumentationsaktualisierung | Beim Herstellen einer Verbindung zum Target-Ziel mit einer Datastraam-ID müssen Sie jetzt *nicht benötigen* , um den Datastream für die Kantensegmentierung zu aktivieren. Das bedeutet, dass das Target-Ziel mit Batch- und Streaming-Zielgruppen funktioniert, obwohl die Anwendungsfälle, die Sie ausführen können, unterschiedlich sind. Die Tabelle im [Verbindungsparameter](#parameters) für weitere Informationen. |
+| April 2024 | Funktions- und Dokumentationsaktualisierung | Beim Herstellen einer Verbindung zum Target-Ziel und Verwenden einer Datastraam-ID müssen Sie jetzt *nicht benötigen* , um den Datastream für die Kantensegmentierung zu aktivieren. Das bedeutet, dass das Target-Ziel mit Batch- und Streaming-Zielgruppen funktioniert, obwohl die Anwendungsfälle, die Sie ausführen können, unterschiedlich sind. Die Tabelle im [Verbindungsparameter](#parameters) für weitere Informationen. |
 | Januar 2024 | Funktions- und Dokumentationsaktualisierung | Sie können jetzt Zielgruppen und Profilattribute für die Adobe Target-Verbindung für die standardmäßige Produktions-Sandbox und andere nicht standardmäßige Sandboxes freigeben. |
 | Juni 2023 | Funktions- und Dokumentationsaktualisierung | Ab Juni 2023 können Sie beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Weitere Informationen finden Sie im Abschnitt [Verbindungsparameter](#parameters). Weitere Informationen über Arbeitsbereiche finden Sie im Tutorial zum [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target. |
 | Mai 2023 | Funktions- und Dokumentationsaktualisierung | Ab Mai 2023 wird die **[!UICONTROL Adobe Target]** Verbindungsunterstützung [attributbasierte Personalisierung](../../ui/activate-edge-personalization-destinations.md#map-attributes) und ist allgemein für alle Kunden verfügbar. |
@@ -62,9 +62,9 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 >[!IMPORTANT]
 >
->Zielgruppen, die Sie für dieses Ziel aktivieren, müssen die [Richtlinie zur aktiven Zusammenführung auf Edge](../../../segmentation/ui/segment-builder.md#merge-policies). Die [!DNL Active-On-Edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen kontinuierlich ausgewertet werden [am Rand](../../../segmentation/ui/edge-segmentation.md) und sind für den Anwendungsfall der Personalisierung in Echtzeit und auf der nächsten Seite verfügbar.
-> Wenn Sie Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Edge-Zielen zuordnen, werden diese Zielgruppen nicht ausgewertet.
-> Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
+>Beim Aktivieren *Edge-Zielgruppen für Anwendungsfälle der Personalisierung von derselben Seite und nächsten Seiten*, die Zielgruppen *must* verwenden Sie eine [aktive Zusammenführungsrichtlinie](../../../segmentation/ui/segment-builder.md#merge-policies). Die [!DNL active-on-edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen kontinuierlich ausgewertet werden [am Rand](../../../segmentation/ui/edge-segmentation.md) und sind für Anwendungsfälle zur Personalisierung von Echtzeit- und nächsten Seiten verfügbar.  Informationen [alle verfügbaren Anwendungsfälle](#parameter), basierend auf dem Implementierungstyp.
+>Wenn Sie Edge-Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Adobe Target-Zielen zuordnen, werden diese Zielgruppen nicht für Anwendungsfälle in Echtzeit und auf der nächsten Seite ausgewertet.
+>Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
 
 
 | Audience Origin | Unterstützt | Beschreibung |
