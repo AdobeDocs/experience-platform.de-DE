@@ -3,10 +3,10 @@ title: Datensätze löschen
 description: Erfahren Sie, wie Sie Datensätze in der Benutzeroberfläche von Adobe Experience Platform löschen.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
+source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 34%
+source-wordcount: '1567'
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,7 @@ Verwenden Sie die [[!UICONTROL Lebenszyklus der Daten] Arbeitsbereich](./overvie
 
 ## Voraussetzungen {#prerequisites}
 
-Das Löschen von Datensätzen setzt ein Verständnis der Funktionsweise von Identitätsfeldern in Experience Platform voraus. Insbesondere müssen Sie die primären Identitätswerte der Entitäten kennen, deren Datensätze Sie löschen möchten, je nach Datensatz (oder Datensätzen), aus dem Sie sie löschen.
+Das Löschen von Datensätzen setzt ein Verständnis der Funktionsweise von Identitätsfeldern in Experience Platform voraus. Insbesondere müssen Sie die Identitäts-Namespace-Werte der Entitäten kennen, deren Datensätze Sie löschen möchten, je nach Datensatz (oder Datensätzen), aus dem Sie sie löschen.
 
 Weitere Informationen zu Identitäten in Platform finden Sie in der folgenden Dokumentation:
 
@@ -43,7 +43,7 @@ Der Workflow für die Anforderungserstellung wird angezeigt. Standardmäßig wir
 
 >[!IMPORTANT]
 > 
->Im Rahmen laufender Änderungen zur Verbesserung der Effizienz und zur Senkung der Kosten für Datensatzvorgänge können Organisationen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als Delta-migriert bezeichnet. Benutzer von Organisationen, die Delta-migriert wurden, können entweder Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen. Benutzer von Organisationen, die nicht Delta-migriert wurden, können keine Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem [Identitäten bereitstellen](#provide-identities) Abschnitt des Handbuchs.
+>Um die Effizienz zu verbessern und die Arbeit mit Datensätzen zu vereinfachen, können Organisationen, die in das Delta-Format verschoben wurden, Daten aus dem Identity Service, dem Echtzeit-Kundenprofil und dem Data Lake löschen. Dieser Benutzertyp wird als Delta-migriert bezeichnet. Benutzer von Organisationen, die Delta-migriert wurden, können entweder Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen. Benutzer von Organisationen, die keiner Delta-Migration unterzogen wurden, können keine Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen selektiv löschen, wie in der Abbildung unten dargestellt. Fahren Sie in diesem Fall mit dem [Identitäten bereitstellen](#provide-identities) Abschnitt des Handbuchs.
 
 ![Der Workflow für die Anfrageerstellung mit dem [!UICONTROL Datensatz löschen] ausgewählt und hervorgehoben.](../images/ui/record-delete/delete-record.png)
 
@@ -63,34 +63,34 @@ Wenn Sie Datensätze aus allen Datensätzen löschen möchten, wählen Sie **[!U
 >
 >Wenn Sie die Option **[!UICONTROL Alle Datensätze]** auswählen, kann es sein, dass der Löschvorgang länger dauert und möglicherweise nicht zu einer korrekten Löschung der Datensätze führt.
 
-## Angeben von Identitäten {#provide-identities}
+## Identitäten bereitstellen {#provide-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Primäre Identität"
->abstract="Eine primäre Identität ist ein Attribut, das einen Datensatz mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das Feld für die primäre Identität für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) der primären Identität des Datensatzes angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud IDs. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
+>title="Identity-Namespace"
+>abstract="Ein Identitäts-Namespace ist ein Attribut, das einen Datensatz mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das Identitäts-Namespace-Feld für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) für den Identitäts-Namespace des Datensatzes angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud-IDs. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus ."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Identitätswert"
->abstract="In dieser Spalte müssen Sie den Wert für die primäre Identität des Datensatzes angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der primäre Identitätstyp `email` ist, sollte der Wert die E-Mail-Adresse des Datensatzes sein. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
+>title="Primärer Identitätswert"
+>abstract="In dieser Spalte müssen Sie den Wert für den Identitäts-Namespace des Datensatzes angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der Identitäts-Namespace-Typ `email`, sollte der Wert die E-Mail-Adresse des Datensatzes sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
 
-Beim Löschen von Datensätzen müssen Sie Identitätsdaten angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Platform werden Daten basierend auf dem Feld **primäre Identität** gelöscht, das durch das Schema des Datensatzes definiert wird.
+Beim Löschen von Datensätzen müssen Sie Identitätsdaten angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Platform werden Datensätze basierend auf der Variablen **Identitäts-Namespace** -Feld, das durch das Schema des Datensatzes definiert wird.
 
-Wie alle Identitätsfelder in Platform besteht eine primäre Identität aus zwei Elementen: einem **Typ** (manchmal auch als Identity-Namespace bezeichnet) und einem **Wert**. Der Identitätstyp liefert Kontext dazu, wie das Feld einen Datensatz identifiziert (z. B. eine E-Mail-Adresse), und der Wert stellt die spezifische Identität eines Datensatzes für diesen Typ dar (z. B. `jdoe@example.com` für die `email` Identitätstyp). Felder, die häufig als Identitäten verwendet werden, sind Kontoinformationen, Geräte-IDs und Cookie-IDs.
+Wie alle Identitätsfelder in Platform besteht ein Identitäts-Namespace aus zwei Elementen: einem **type** (manchmal auch als Identitäts-Namespace bezeichnet) und ein **value**. Der Identitätstyp liefert Kontext dazu, wie das Feld einen Datensatz identifiziert (z. B. eine E-Mail-Adresse). Der Wert stellt die spezifische Identität eines Datensatzes für diesen Typ dar (z. B. `jdoe@example.com` für die `email` Identitätstyp). Felder, die häufig als Identitäten verwendet werden, sind Kontoinformationen, Geräte-IDs und Cookie-IDs.
 
 >[!TIP]
 >
->Wenn Sie die primäre Identität für einen bestimmten Datensatz nicht kennen, können Sie sie in der Platform-Benutzeroberfläche ermitteln. Wählen Sie dazu im Arbeitsbereich **[!UICONTROL Datensätze]** den betreffenden Datensatz aus der Liste aus. Bewegen Sie auf der Detailseite für den Datensatz den Mauszeiger in der rechten Leiste über den Namen des Datensatzschemas. Die primäre Identität wird zusammen mit dem Schemanamen und der Beschreibung angezeigt.
+>Wenn Sie den Identitäts-Namespace für einen bestimmten Datensatz nicht kennen, können Sie ihn in der Platform-Benutzeroberfläche finden. Wählen Sie dazu im Arbeitsbereich **[!UICONTROL Datensätze]** den betreffenden Datensatz aus der Liste aus. Bewegen Sie auf der Detailseite für den Datensatz den Mauszeiger in der rechten Leiste über den Namen des Datensatzschemas. Der Identitäts-Namespace wird zusammen mit dem Schemanamen und der Beschreibung angezeigt.
 >
 >![Das Dashboard &quot;Datensätze&quot;mit einem ausgewählten Datensatz und einem Dialogfeld &quot;Schema&quot;im Bereich &quot;Datensatzdetails&quot;. Die primäre ID des Datensatzes wird hervorgehoben.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Wenn Sie Datensätze aus einem Datensatz löschen, müssen alle von Ihnen angegebenen Identitäten denselben Typ aufweisen, da ein Datensatz nur eine primäre Identität aufweisen kann. Wenn Sie sie aus allen Datensätzen löschen, können Sie mehrere Identitätstypen einbeziehen, da verschiedene Datensätze unterschiedliche primäre Identitäten haben können.
+Wenn Sie Datensätze aus einem Datensatz löschen, müssen alle von Ihnen angegebenen Identitäten denselben Typ aufweisen, da ein Datensatz nur einen Identitäts-Namespace haben kann. Wenn Sie sie aus allen Datensätzen löschen, können Sie mehrere Identitätstypen einbeziehen, da verschiedene Datensätze unterschiedliche primäre Identitäten haben können.
 
 Beim Löschen von Datensätzen stehen zwei Optionen zur Verfügung:
 
 * [Hochladen einer JSON-Datei](#upload-json)
-* [Manuelle Eingabe von Identitätswerten](#manual-identity)
+* [Manuelles Eingeben der primären Identitätswerte](#manual-identity)
 
 ### Hochladen einer JSON-Datei {#upload-json}
 
@@ -116,7 +116,7 @@ Die JSON-Datei muss als Array von Objekten formatiert sein, wobei jedes Objekt e
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `namespaceCode` | Der Identitätstyp. |
-| `value` | Der Identitätswert, wie durch den Typ gekennzeichnet. |
+| `value` | Der primäre Identitätswert, wie durch den Typ gekennzeichnet. |
 
 Nach dem Hochladen der Datei können Sie mit dem [Senden der Anfrage](#submit) fortfahren.
 
@@ -126,7 +126,7 @@ Um Identitäten manuell einzugeben, wählen Sie **[!UICONTROL Identität hinzuf�
 
 ![Der Workflow für die Anfrageerstellung mit dem [!UICONTROL Identität hinzufügen] hervorgehoben.](../images/ui/record-delete/add-identity.png)
 
-Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben können. Wählen Sie unter **[!UICONTROL Primäre Identität]** im Dropdown-Menü den Identitätstyp aus. under **[!UICONTROL Identitätswert]**, geben Sie den primären Identitätswert für den Datensatz an.
+Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben können. under **[!UICONTROL Identitäts-Namespace]** verwenden, wählen Sie im Dropdown-Menü den Identitätstyp aus. under **[!UICONTROL Primärer Identitätswert]**, geben Sie den Identitäts-Namespace-Wert für den Datensatz an.
 
 ![Der Workflow für die Anfrageerstellung mit einem manuell hinzugefügten Identitätsfeld.](../images/ui/record-delete/identity-added.png)
 
