@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Zuordnungsfunktionen für Datenvorbereitung
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
+source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
 workflow-type: tm+mt
-source-wordcount: '5792'
+source-wordcount: '5805'
 ht-degree: 3%
 
 ---
@@ -25,11 +25,13 @@ Wenn ein Feldname dieser Konvention nicht entspricht, muss der Feldname mit `${}
 >
 >Wenn Sie mit Hierarchien arbeiten und ein untergeordnetes Attribut einen Punkt (`.`) enthält, müssen Sie einen Backslash (`\`) verwenden, um Sonderzeichen zu umgehen. Weitere Informationen finden Sie im Handbuch unter [Maskieren von Sonderzeichen](home.md#escape-special-characters).
 
-Wenn ein Feldname **any** der folgenden reservierten Schlüsselwörter, muss sie mit `${}`:
+Wenn der Feldname **any** der folgenden reservierten Schlüsselwörter, muss sie mit `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
+
+Darüber hinaus enthalten reservierte Schlüsselwörter auch eine der auf dieser Seite aufgelisteten Zuordnungsfunktionen.
 
 Auf Daten in Unterfeldern kann mithilfe der Punktnotation zugegriffen werden. Wenn beispielsweise eine `name` -Objekt, um auf die `firstName` Feld, verwenden `name.firstName`.
 
@@ -61,7 +63,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 | ltrim | Entfernt den Leerraum am Anfang des Strings. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, aus der Sie den Leerraum entfernen möchten.</li></ul> | ltrim(STRING) | ltrim(&quot; hello&quot;) | &quot;hello&quot; |
 | rtrim | Entfernt den Leerraum am Ende des Strings. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, aus der Sie den Leerraum entfernen möchten.</li></ul> | rtrim(STRING) | rtrim(&quot;hello &quot;) | &quot;hello&quot; |
 | trim | Entfernt den Leerraum vom Anfang und vom Ende der Zeichenfolge. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, aus der Sie den Leerraum entfernen möchten.</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;hello&quot; |
-| gleich | Vergleicht zwei Zeichenketten, um sicherzustellen, dass sie gleich sind. Diese Funktion unterscheidet zwischen Groß- und Kleinschreibung. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten.</li></ul> | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;equals &#x200B;(&quot;STRING1&quot;) | false (falsch) |
+| ist gleich | Vergleicht zwei Zeichenketten, um sicherzustellen, dass sie gleich sind. Diese Funktion unterscheidet zwischen Groß- und Kleinschreibung. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten.</li></ul> | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;equals &#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Vergleicht zwei Zeichenketten, um sicherzustellen, dass sie gleich sind. Diese Funktion ist **not** Groß-/Kleinschreibung beachten. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten.</li></ul> | STRING1. &#x200B;equalsIgnoreCase &#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase &#x200B;(&quot;STRING1) | wahr |
 
 {style="table-layout:auto"}
@@ -140,7 +142,7 @@ In den folgenden Tabellen sind alle unterstützten Zuordnungsfunktionen aufgefü
 
 | Funktion | Beschreibung | Parameter | Aufbau | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Prüft, ob ein Objekt leer ist. | <ul><li>EINGABE: **Erforderlich** Das Objekt, das Sie überprüfen möchten, ist leer.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false (falsch) |
+| is_empty | Prüft, ob ein Objekt leer ist. | <ul><li>EINGABE: **Erforderlich** Das Objekt, das Sie überprüfen möchten, ist leer.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | arrays_to_object | Erstellt eine Liste von Objekten. | <ul><li>EINGABE: **Erforderlich** Eine Gruppierung von Schlüssel- und Array-Paaren.</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Erstellt ein Objekt basierend auf den angegebenen flachen Schlüssel/Wert-Paaren. | <ul><li>EINGABE: **Erforderlich** Eine flache Liste von Schlüssel/Wert-Paaren.</li></ul> | to_object(INPUT) | to_object &#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Erstellt ein Objekt aus der Eingabezeichenfolge. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die zum Erstellen eines Objekts analysiert wird.</li><li>VALUE_DELIMITER: *Optional* Das Trennzeichen, das ein Feld vom Wert trennt. Das Standardtrennzeichen ist `:`.</li><li>FIELD_DELIMITER: *Optional* Das Trennzeichen, das Feldwertpaare trennt. Das Standardtrennzeichen ist `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Hinweis**: Sie können die `get()` -Funktion zusammen mit `str_to_object()` , um Werte für die Schlüssel in der Zeichenfolge abzurufen. | <ul><li>Beispiel 1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Beispiel 2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Beispiel 1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Beispiel 2: &quot;John&quot;</li></ul> |
@@ -362,7 +364,7 @@ Die nachstehende Tabelle enthält eine Liste der reservierten Zeichen und der zu
 | --- | --- |
 | space | %20 |
 | ! | %21 |
-| “ | %22 |
+| &quot; | %22 |
 | # | %23 |
 | $ | %24 |
 | % | %25 |
@@ -385,7 +387,7 @@ Die nachstehende Tabelle enthält eine Liste der reservierten Zeichen und der zu
 | | | %5C |
 | ] | %5D |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
@@ -400,7 +402,7 @@ Die nachstehende Tabelle enthält eine Liste der Gerätefeldwerte und der zugeh�
 | Anonymisiert | Ein anonymes Gerät. In einigen Fällen sind dies `useragents` die von einer Anonymisierungssoftware geändert wurden. |
 | Unbekannt | Ein unbekanntes Gerät. Diese sind normalerweise `useragents` die keine Informationen über das Gerät enthalten. |
 | Mobile | Ein Mobilgerät, das noch nicht identifiziert wurde. Bei diesem Mobilgerät kann es sich um einen eReader, ein Tablet, ein Telefon, eine Uhr usw. handeln. |
-| Tablet | Ein Mobilgerät mit einem großen Bildschirm (normalerweise > 7&quot;). |
+| Tablette | Ein Mobilgerät mit einem großen Bildschirm (normalerweise > 7&quot;). |
 | Telefon | Ein Mobilgerät mit kleinem Bildschirm (normalerweise &lt; 7&quot;). |
 | Watch | Ein Mobilgerät mit einem winzigen Bildschirm (normalerweise &lt; 2&quot;). Diese Geräte dienen normalerweise als zusätzlicher Bildschirm für Geräte vom Typ Telefon/Tablet. |
 | Erweiterte Realität | Ein Mobilgerät mit AR-Funktionen. |
