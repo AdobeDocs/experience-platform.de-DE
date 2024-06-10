@@ -2,9 +2,9 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
 title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1032'
 ht-degree: 36%
 
 ---
@@ -15,13 +15,15 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->* Der hier dokumentierte Prozess ist nur für Partner erforderlich, die produktierte (öffentliche) Ziele übermitteln. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie diese Materialien nicht produzieren und mit Adobe teilen.
+>* Der hier dokumentierte Prozess ist nur für Partner erforderlich, die produktierte (öffentliche) Ziele übermitteln. Wenn Sie ein privates Ziel für Ihren eigenen Gebrauch erstellen, müssen Sie diese Materialien nicht herstellen und mit Adobe teilen.
 >
->* Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Ziel-Veröffentlichungsanforderungen beträgt fünf Werktage.
+>* Die standardmäßige Antwortzeit von Adobe zur Überprüfung des Ziels beträgt fünf Werktage.
 >
 >* Wenn das Adobe-Team nach der ersten Übermittlung darum bittet, Ihre Konfigurationen zu aktualisieren, müssen Sie nach der Aktualisierung eine weitere Ziel-Veröffentlichungsanforderung senden.
 >
->* Selbst wenn Ihr Ziel im Experience Platform-Katalog aktiv ist, müssen Sie, wenn Sie Ihre Konfigurationen aktualisieren müssen, eine neue Ziel-Veröffentlichungsanforderung senden, damit die Aktualisierungen in den Konfigurationen angezeigt werden.
+>* Selbst wenn Ihr Ziel im Experience Platform-Katalog live ist, müssen Sie, wenn Sie Ihre Konfigurationen aktualisieren müssen, eine neue Ziel-Veröffentlichungsanforderung senden, damit die Aktualisierungen in den Konfigurationen angezeigt werden.
+>
+>* Die Zeitleiste der Überprüfung und die erforderlichen Artefakte sind für neue Ziele und vorhandene Ziele, die Sie aktualisieren, identisch.
 
 Bevor Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) veröffentlicht werden kann, müssen Sie Adobe bestimmte Informationen über das Ziel und die von Ihnen durchgeführten Tests zukommen lassen, um sicherzustellen, dass die Anwender beim Aktivieren von Daten auf Ihrer Plattform die bestmöglichen Ergebnisse erzielen.
 
@@ -29,7 +31,7 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
 
 * Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nur erforderlich, wenn Sie eine neue Zielkonfiguration übermitteln.
 * Eine Beschreibung des Grundes für die Zielübermittlung. Dies ist nur erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
-* Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Geben Sie an Adobe einen API-Aufruf für Ihren Ziel-Endpunkt und die API-Antwort weiter, die Sie von Ihrem Ziel-Endpunkt erhalten haben.
+* Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Geben Sie an die Adobe einen API-Aufruf für Ihren Ziel-Endpunkt und die API-Antwort weiter, die Sie von Ihrem Ziel-Endpunkt erhalten haben.
 * Zusätzliche Anforderungen für dateibasierte Ziele:
    * Geben Sie nach Verwendung der Test-API eine Anfrage und ein Antwort-Beispiel für [Testen Ihres dateibasierten Ziels mit Beispielprofilen](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Fügen Sie eine Beispieldatei an, die von Ihrem Ziel generiert und an Ihren Speicherort exportiert wurde.
@@ -243,7 +245,7 @@ Schließlich müssen Sie eine Form des Nachweises vorlegen, dass die Daten nach 
 
 * Screenshots oder ein kurzes Screenshot-Video, in dem Sie die Datei manuell vom Speicherort abrufen und in Ihr System aufnehmen.
 * Screenshots oder ein kurzes Screenshot-Video, in dem die Benutzeroberfläche Ihres Systems bestätigt, dass der von Experience Platform generierte Dateiname erfolgreich in Ihr System aufgenommen wurde.
-* Loggen Sie Zeilen aus Ihrem System ein, die die Adobe entweder mit dem Dateinamen oder mit den von der Experience Platform generierten Daten korrelieren kann.
+* Loggen Sie Zeilen aus Ihrem System ein, die Adobe entweder mit dem Dateinamen oder mit den von Experience Platform generierten Daten korrelieren kann.
 
 ## Nachweis, dass Sie eine Zielveröffentlichungsanfrage übermittelt haben {#destination-publishing-request-proof}
 
