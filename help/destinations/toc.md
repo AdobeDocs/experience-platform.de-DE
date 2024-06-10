@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
+source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1224'
 ht-degree: 88%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 88%
    * [Übersicht](./destination-sdk/overview.md)
    * [Voraussetzungen für die Integration](./destination-sdk/integration-prerequisites.md)
    * [Erste Schritte mit dem Destination SDK](./destination-sdk/getting-started.md)
+   * [Glossar](/help/destinations/destination-sdk/glossary.md)
    * Funktionalität {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/functionality/configuration-options.md)
       * Ziel-Server-Komponenten {#destination-server}

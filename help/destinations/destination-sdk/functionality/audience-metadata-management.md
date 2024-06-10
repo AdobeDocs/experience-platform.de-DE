@@ -2,9 +2,9 @@
 description: Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 title: Verwaltung von Zielgruppen-Metadaten
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 100%
 
 ---
@@ -523,7 +523,7 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 
 Beschreibungen aller Parameter in der Vorlage finden Sie in der API-Referenz zum [Erstellen einer Zielgruppenvorlage](../metadata-api/create-audience-template.md).
 
-## Verwendete Makros in Vorlagen für Zielgruppen-Metadaten
+## Verwendete Makros in Vorlagen für Zielgruppen-Metadaten {#macros}
 
 Um Informationen wie Zielgruppen-IDs, Zugriffs-Token, Fehlermeldungen und mehr zwischen Experience Platform und Ihrer API zu übermitteln, enthalten die Vorlagen für Zielgruppen Makros. Im Folgenden finden Sie eine Beschreibung der Makros, die in den drei Konfigurationsbeispielen auf dieser Seite verwendet werden:
 
