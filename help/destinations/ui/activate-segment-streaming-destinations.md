@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppendaten für Streaming-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren, indem Sie sie Streaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 20%
+source-wordcount: '1164'
+ht-degree: 16%
 
 ---
 
@@ -62,6 +62,10 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 >[!IMPORTANT]
 >
 >Dieser Schritt gilt nur für einige Zielgruppen-Streaming-Ziele. Wenn Ihr Ziel keine **[!UICONTROL Zuordnung]** Schritt, zum [Zielgruppenplanung](#scheduling).
+>
+>Beim Aktivieren von Zielgruppen für Streaming-Ziele müssen Sie auch Zuordnungen *mindestens einen Zielidentitäts-Namespace*, zusätzlich zu den Zielprofilattributen. Andernfalls werden die Zielgruppen nicht für die Zielplattform aktiviert.
+> ![Abbildung des Zuordnungsschritts mit einer obligatorischen Namespace-Zuordnung für Identitäts-Namespaces.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identitäts-Namespaces auswählen, um sie als Zielidentitäten im Ziel zuzuordnen.
 
@@ -87,23 +91,23 @@ Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identit
 
 1. Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die Schritte 1 bis 5.
 
-### Transformation anwenden {#apply-transformation}
+### Umwandlung anwenden {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="Transformation anwenden"
+>title="Umwandlung anwenden"
 >abstract="Aktivieren Sie diese Option, wenn Sie nicht gehashte Quellfelder verwenden, damit diese automatisch von Adobe Experience Platform bei der Aktivierung gehasht werden."
 
 Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
 
 ![Wenden Sie die Transformationssteuerung an, die im Schritt Identitätszuordnung hervorgehoben ist.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Planen eines Zielgruppenexports {#scheduling}
+## Zielgruppenexport planen {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Enddatum"
->abstract="Dem Zielgruppenzeitplan kann kein Enddatum hinzugefügt werden."
+>abstract="Das Hinzufügen eines Enddatums zum Zielgruppen-Zeitplan ist nicht verfügbar."
 
 Standardmäßig wird die Variable **[!UICONTROL Zielgruppenplanung]** zeigt nur die neu ausgewählten Zielgruppen an, die Sie im aktuellen Aktivierungsablauf ausgewählt haben.
 
@@ -137,7 +141,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
 ### Prüfungen von Datennutzungsrichtlinien {#data-usage-policy-checks}
 

@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie die unterstützten Zielidentitäten für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration von Identity-Namespaces
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 83%
+source-wordcount: '918'
+ht-degree: 81%
 
 ---
 
@@ -13,11 +13,15 @@ ht-degree: 83%
 
 Experience Platform verwendet Identity-Namespaces, um den Typ bestimmter Identitäten zu beschreiben. Beispiel: ein Identity-Namespace namens `Email` identifiziert einen Wert wie `name@email.com` als E-Mail-Adresse.
 
-Beim Erstellen von Echtzeit-Zielen (Streaming) über die Destination SDK, zusätzlich zu [Partnerschema konfigurieren](schema-configuration.md) Damit Benutzer Profilattribute und Identitäten zuordnen können, müssen Sie auch von Ihrer Zielplattform unterstützte Identitäts-Namespaces definieren. Wenn Ihre Zielplattform beispielsweise Hash-E-Mails und [!DNL IDFA], müssen Sie diese beiden Identitäten als [weiter unten in diesem Dokument beschrieben](#supported-parameters).
+Beachten Sie je nach dem von Ihnen erstellten Zieltyp (Streaming oder dateibasiert) die folgenden Anforderungen an den Identitäts-Namespace:
 
-Beim Aktivieren von Zielgruppen für Streaming-Ziele müssen Benutzer zusätzlich zu den Zielprofilattributen auch Zielidentitäten zuordnen. Andernfalls werden die Zielgruppen nicht für die Zielplattform aktiviert.
+* Beim Erstellen von Echtzeit-Zielen (Streaming) über die Destination SDK, zusätzlich zu [Partnerschema konfigurieren](schema-configuration.md) für die Benutzer Profilattribute und Identitäten zuordnen können, müssen Sie außerdem *mindestens ein* von Ihrer Zielplattform unterstützte Identitäts-Namespaces. Wenn Ihre Zielplattform beispielsweise Hash-E-Mails und [!DNL IDFA], müssen Sie diese beiden Identitäten als [in diesem Dokument beschrieben](#supported-parameters).
 
-Beim Erstellen eines dateibasierten Ziels über die Destination SDK ist die Konfiguration von Identitäts-Namespaces optional.
+  >[!IMPORTANT]
+  >
+  >Beim Aktivieren von Zielgruppen für Streaming-Ziele müssen Benutzer auch Zuordnungen _mindestens eine Zielidentität_, zusätzlich zu den Zielprofilattributen. Andernfalls werden die Zielgruppen nicht für die Zielplattform aktiviert.
+
+* Beim Erstellen dateibasierter Ziele durch Destination SDK lautet die Konfiguration von Identitäts-Namespaces _optional_.
 
 Weitere Informationen zu Identity-Namespaces in Experience Platform finden Sie in der [Dokumentation zu Identity-Namespaces](../../../../identity-service/features/namespaces.md).
 
