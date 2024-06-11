@@ -1,9 +1,10 @@
 ---
 title: Fragenleitfaden für den AI-Assistenten
 description: Lesen Sie dieses Dokument, um Beispielfragen zu erfahren, die Sie bei der Abfrage von AI Assistant verwenden können.
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
+source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -33,20 +34,56 @@ Die folgenden Beispielfragen sind nach Zielen gruppiert, die Sie bei der Verwend
 
 Die folgenden Fragen werden nach Datenobjekten gruppiert und entweder als [operative Erkenntnisse](./home.md#operational-insights) oder [Produktkenntnis](./home.md#product-knowledge).
 
-| Objekt | Beschreibung |
-| --- | --- |
-| Zielgruppen - operative Einblicke | <ul><li>Welche Zielgruppen verwenden andere Zielgruppen?</li><li>Wie verteilt sich die Anzahl der Profile auf die Zielgruppen?</li><li>Anzeigen der Zielgruppen, die zuletzt geändert wurden, bevor {RELATIVE_DATE}.</li><li>Welche Zielgruppen haben 0 Profile?</li><li>Is {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} in einer anderen Zielgruppe verwendet werden?</li></ul> |
-| Attribute - operative Einblicke | <ul><li>Welche Zielgruppen haben ein XDM-Attribut {ATTRIBUTE_PATH} in ihrer Segmentdefinition?</li><li>Wie viele XDM-Schemaattribute werden in keiner Zielgruppe verwendet?</li><li>Welche Schemas haben ein XDM-Attribut {ATTRIBUTE_PATH} in ihnen?</li><li>Welche XDM-Attribute werden aktiviert?</li><li>Welche XDM-Attribute werden in Zielgruppen mit mehr als 10 Profilen verwendet?</li></ul> |
-| Datenflüsse - operative Einblicke | <ul><li>Welche Datenflüsse tragen zu {DATASET_NAME} Datensatz?</li><li>Welche Quell-Datenflüsse werden nicht verwendet oder haben keine Daten mehr, die eingehen?</li><li> |
-| Datensätze - operative Einblicke | <ul><li>Wie viele Datensätze wurden mit demselben Schema erfasst?</li><li>Welcher Quell-Connector ist mit {DATASET_NAME} Datensatz></li><li>Welche Datensätze werden in den einzelnen Zielgruppen verwendet?</li><li>Welche Schemas werden in keinem Datensatz verwendet?</li><li>Wie viele Datensätze habe ich?</li></ul> |
-| Ziele - operative Einblicke | <ul><li>Welche Ziele sind aktiv?</li><li>Für welche Zielkonten sind 0 Zielgruppen aktiviert?</li><li> |
-| Journey - operative Einblicke | <ul><li>Wie viele Journey habe ich?</li><li>Welche Journey wurden in erstellt {RELATIVE_DATE} (z. B. letzte Woche) oder {RELATIVE_DATE} (z. B. vor/nach/an einem bestimmten Datum)?</li><li>Zeigen Sie mir die Liste der Journey an, die in {RELATIVE_DATE} (z. B. letzte Woche) oder {RELATIVE_DATE} (z. B. vor/nach/an einem bestimmten Datum)?</li><li>Listet die Journey auf, die ich habe.</li><li>Auflisten der Zielgruppen, die in Live-Journey verwendet werden.</li></ul> |
-| Schemas - operative Einblicke | <ul><li>Welche Schemafelder haben zu den meisten Zielgruppen beigetragen?</li><li>Wie viele Schemas sind Profil aktiviert?</li><li>Liste aller in der letzten Woche geänderten Schemata.</li><li>Welche Schemas werden in keinem Datensatz verwendet?</li><li>Liste aller in der letzten Woche erstellten Schemata.</li></ul> |
-| Quellen - operative Einblicke | <ul><li>Welche Quellen sind aktiv?</li><li>Welcher Quell-Connector mit Datensatz verknüpft ist {DATASET_NAME}?</li><li>Welcher Quell-Connector weist die höchste Anzahl verknüpfter Konten auf?</li><li>Zeigen Sie mir die Datenflüsse und die zugehörigen Quell-Connectoren.</li></ul> |
-| Zielgerichtetes Lernen - Produktwissen (Real-Time CDP und Journey Optimizer) | <ul><li>Worin kann die KI-Assistenzkraft bestehen?</li><li>Was sind Lookalike-Zielgruppen?</li><li>Wie sind Benutzergruppen mit Rollen verbunden?</li><li>Wann sollte ich einen Datentyp oder eine Feldergruppe verwenden?</li><li>Was ist der Unterschied zwischen einer Identität und einem Primärschlüssel oder Fremdschlüssel?</li><li>Wie wird der Reichtum des Profils berechnet?</li></ul> |
-| Fehlerbehebung - Produktwissen (Real-Time CDP und Journey Optimizer) | <ul><li>Worin kann die KI-Assistenzkraft bestehen?</li><li>Kann ich ein profilaktiviertes Schema löschen, nachdem Daten erfasst wurden?</li><li>Warum kann ich eine Zielgruppe nicht löschen?</li><li>Wie lange dauert es, bis Zielgruppen ausgewertet und Ergebnisse für die Zielgruppenbestimmung verfügbar sind?</li></ul> |
-
-{style="table-layout:auto"}
+* **Zielgruppen - operative Einblicke**
+   * Welche Zielgruppen verwenden andere Zielgruppen?
+   * Wie verteilt sich die Anzahl der Profile auf die Zielgruppen?
+   * Anzeigen von Zielgruppen, die zuletzt geändert wurden, bevor {RELATIVE_DATE}.
+   * Welche Zielgruppen haben 0 Profile?
+   * Is {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} in einer anderen Zielgruppe verwendet werden?
+* **Attribute - operative Einblicke**
+   * Welche Zielgruppen haben das XDM-Attribut? {ATTRIBUTE_PATH} in ihrer Segmentdefinition?
+   * Wie viele XDM-Schemaattribute werden in keiner Zielgruppe verwendet?
+   * Welche Schemas haben das xdm-Attribut {ATTRIBUTE_PATH} in ihnen?
+   * Welche XDM-Attribute werden aktiviert?
+   * Welche XDM-Attribute werden in Zielgruppen mit mehr als 10 Profilen verwendet?
+* **Datenflüsse - operative Einblicke**
+   * Welche Datenflüsse tragen zu {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} Datensatz?
+   * Welche Quell-Datenflüsse werden nicht verwendet oder haben keine Daten mehr, die eingehen?
+   * Geben Sie die Quell-Datenflüsse an, die ich habe.
+   * Welche Datenflüsse sind für jeden Quell-Connector konfiguriert?
+* **Datensätze - operative Einblicke**
+   * Wie viele Datensätze wurden mit demselben Schema erfasst?
+   * Welcher Quell-Connector ist mit {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} Datensatz?
+   * Welche Datensätze werden in den einzelnen Zielgruppen verwendet?
+   * Welche Schemas werden in keinem Datensatz verwendet?
+   * Wie viele Datensätze habe ich?
+* **Ziele - operative Einblicke**
+   * Welche Ziele sind aktiv?
+   * Für welche Zielkonten sind 0 Zielgruppen aktiviert?
+   * Wie viele Zielgruppen werden für jedes Ziel aktiviert?
+   * Welche Ziele haben die höchste Anzahl an aktivierten Zielgruppen?
+* **Journey - operative Einblicke**
+   * Wie viele Journey habe ich?
+   * Welche Journey wurden in erstellt {RELATIVE_DATE} (z. B. die letzte Woche) oder {RELATIVE_DATE} (z. B. vor/nach/an einem bestimmten Datum)?
+   * Zeigen Sie mir die Liste der Journey an, die in {RELATIVE_DATE} (z. B. die letzte Woche) oder {RELATIVE_DATE} (z. B. vor/nach/an einem bestimmten Datum)?
+   * Listet die Live-Journey auf, die ich habe.
+   * Auflisten der Zielgruppen, die in Live-Journey verwendet werden.
+* **Quellen - operative Einblicke**
+   * Welche Quellen sind aktiv?
+   * Welcher Quell-Connector mit Datensatz verknüpft ist {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * Welcher Quell-Connector weist die höchste Anzahl verknüpfter Konten auf?
+   * Zeigen Sie mir die Datenflüsse und die zugehörigen Quell-Connectoren.
+* **Zielgerichtetes Lernen - Produktwissen (Real-Time CDP und Journey Optimizer)**
+   * Was sind Lookalike-Zielgruppen?
+   * Wie sind Benutzergruppen mit Rollen verbunden?
+   * Wann sollte ich einen Datentyp oder eine Feldergruppe verwenden?
+   * Was ist der Unterschied zwischen einer Identität und einem Primärschlüssel oder Fremdschlüssel?
+   * Wie wird der Reichtum des Profils berechnet?
+* **Fehlerbehebung - Produktwissen (Real-Time CDP und Journey Optimizer)**
+   * Worin kann die KI-Assistenzkraft bestehen?
+   * Kann ich ein Profil-aktiviertes Schema löschen, nachdem Daten erfasst wurden?
+   * Warum kann ich eine Zielgruppe nicht löschen?
+   * Wie lange dauert es, bis Zielgruppen ausgewertet und Ergebnisse für die Zielgruppenbestimmung verfügbar sind?
 
 ## Formulieren Ihrer Fragen {#phrasing-your-questions}
 
