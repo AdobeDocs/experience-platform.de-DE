@@ -1,22 +1,20 @@
 ---
 title: Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen
 description: Erfahren Sie mehr über die Regeln für die Verknüpfung von Identitätsdiagrammen im Identity-Dienst.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
+source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1114'
 ht-degree: 1%
 
 ---
 
 # Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme befinden sich derzeit im Alpha. Die Funktion und die Dokumentation können sich ändern.
+>Diese Funktion ist noch nicht verfügbar. Das Betaprogramm für Regeln zur Identitätsdiagrammverlinkung wird voraussichtlich im Juli für Entwicklungs-Sandboxes beginnen. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten.
 
 ## Inhaltsverzeichnis 
 
@@ -24,9 +22,9 @@ ht-degree: 1%
 * [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
 * [Beispielszenarien](./example-scenarios.md)
 
-Mit Adobe Experience Platform Identity Service und Echtzeit-Kundenprofil ist es einfach, davon auszugehen, dass Ihre Daten perfekt erfasst werden und dass alle zusammengeführten Profile eine einzelne Person über eine Personen-ID repräsentieren, z. B. eine CRM-ID. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen (&quot;Profil-Kollaps&quot;). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über Identitätsdiagramm-Verknüpfungsregeln bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen.
+Mit Adobe Experience Platform Identity Service und Echtzeit-Kundenprofil ist es einfach, davon auszugehen, dass Ihre Daten perfekt erfasst werden und dass alle zusammengeführten Profile eine einzelne Person über eine Personen-ID repräsentieren, z. B. eine CRM-ID. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen (&quot;Diagrammreduzierung&quot;). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über Identitätsdiagramm-Verknüpfungsregeln bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen.
 
-## Beispielszenarien, in denen ein Profil-Kollaps auftreten kann
+## Beispielszenarien, in denen eine Diagrammreduzierung möglich ist
 
 * **Freigegebenes Gerät**: Freigegebenes Gerät bezieht sich auf Geräte, die von mehr als einer Person verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks.
 * **Schlechte E-Mail- und Telefonnummern**: Schlechte E-Mail- und Telefonnummern beziehen sich auf Endbenutzer, die ungültige Kontaktinformationen wie &quot;test&quot;registrieren.<span>@test.com&quot; für E-Mail und &quot;+1-111-111-1111&quot; für Telefonnummer.
@@ -34,81 +32,67 @@ Mit Adobe Experience Platform Identity Service und Echtzeit-Kundenprofil ist es 
 
 Weitere Informationen zu Anwendungsszenarios für Identitätsdiagramm-Verknüpfungsregeln finden Sie im Dokument unter [Beispielszenarien](./example-scenarios.md).
 
-## Ziele für die Verknüpfung von Identitätsdiagrammen
+## Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
 
 Mit den Regeln zur Verknüpfung von Identitätsdiagrammen können Sie:
 
-* Erstellen Sie ein einzelnes Identitätsdiagramm/zusammengeführtes Profil für jeden Benutzer, indem Sie eindeutige Namespaces (Beschränkungen) konfigurieren. Dadurch wird verhindert, dass zwei unterschiedliche Personen-IDs zu einem Identitätsdiagramm zusammengeführt werden.
+* Erstellen Sie ein einzelnes Identitätsdiagramm/zusammengeführtes Profil für jeden Benutzer, indem Sie eindeutige Namespaces konfigurieren, was verhindert, dass zwei unterschiedliche Personen-IDs zu einem Identitätsdiagramm zusammengeführt werden.
 * Verknüpfen Sie Online-authentifizierte Ereignisse mit der Person, indem Sie Prioritäten konfigurieren.
 
-### Beschränkungen
+### Terminologie {#terminology}
 
-Ein eindeutiger Namespace ist eine Kennung, die eine Person darstellt, z. B. CRM-ID, Anmelde-ID und Hash-E-Mail. Wenn ein Namespace als eindeutig gekennzeichnet ist, darf ein Diagramm nur eine Identität mit diesem Namespace (`limit=1`). Dadurch wird verhindert, dass zwei unterschiedliche Personen-IDs innerhalb desselben Diagramms zusammengeführt werden.
+| Terminologie | Beschreibung |
+| --- | --- |
+| Eindeutiger Namespace | Ein eindeutiger Namespace ist ein Identitäts-Namespace, der eingerichtet wurde, um im Kontext eines Identitätsdiagramms getrennt zu sein. Sie können einen Namespace über die Benutzeroberfläche so konfigurieren, dass er eindeutig ist. Sobald ein Namespace als eindeutig definiert wurde, darf ein Diagramm nur eine Identität enthalten, die diesen Namespace enthält. |
+| Namespace-Priorität | Namespace-Priorität bezieht sich auf die relative Bedeutung von Namespaces im Vergleich zueinander. Die Namespace-Priorität kann über die Benutzeroberfläche konfiguriert werden. Sie können Namespaces in einem bestimmten Identitätsdiagramm nach Rang ordnen. Nach der Aktivierung wird die Priorität der Namen in verschiedenen Szenarien verwendet, z. B. in der Eingabe für den Identitätsoptimierungsalgorithmus und zur Bestimmung der primären Identität für Erlebnisereignisfragmente. |
+| Identitätsoptimierungsalgorithmus | Der Identitätsoptimierungsalgorithmus stellt sicher, dass Richtlinien, die durch die Konfiguration eines eindeutigen Namespace und Namespace-Prioritäten erstellt werden, in einem bestimmten Identitätsdiagramm durchgesetzt werden. |
 
-* Wenn keine Begrenzung konfiguriert ist, kann dies zu unerwünschten Diagrammzusammenführungen führen, z. B. zu zwei Identitäten mit einem CRM-ID-Namespace in einem Diagramm.
-* Wenn keine Begrenzung konfiguriert ist, kann das Diagramm so viele Namespaces wie nötig hinzufügen, solange sich das Diagramm innerhalb der Limits befindet (50 Identitäten/Diagramm).
-* Wenn ein Limit konfiguriert ist, stellt der Identitätsoptimierungsalgorithmus sicher, dass die Begrenzung erzwungen wird.
+### Eindeutiger Namespace {#unique-namespace}
 
-### Identitätsoptimierungsalgorithmus
+Sie können einen Namespace mithilfe des Arbeitsbereichs für die Benutzeroberfläche der Identitätseinstellungen so konfigurieren, dass er eindeutig ist. Informiert den Identitätsoptimierungsalgorithmus dazu, dass ein bestimmtes Diagramm möglicherweise nur eine Identität mit diesem eindeutigen Namespace enthält. Dies verhindert die Zusammenführung zweier unterschiedlicher Personen-IDs innerhalb desselben Diagramms.
 
-Der Identitätsoptimierungsalgorithmus ist eine Regel, die sicherstellt, dass die Beschränkungen durchgesetzt werden. Der Algorithmus berücksichtigt die neuesten Links und entfernt die ältesten Links, um sicherzustellen, dass ein bestimmtes Diagramm innerhalb der von Ihnen definierten Grenzen bleibt.
+Betrachten Sie das folgende Szenario:
 
-Im Folgenden finden Sie eine Liste der Auswirkungen des Algorithmus auf die Zuordnung anonymer Ereignisse zu bekannten Kennungen:
+* Scott verwendet ein Tablet und öffnet seinen Google Chrome-Browser, um zu nike zu wechseln.<span>.com, wo er sich anmeldet und nach neuen Basketballschuhen sucht.
+   * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
+      * Ein ECID-Namespace und -Wert für die Verwendung des Browsers
+      * Ein CRM-ID-Namespace und -Wert für den authentifizierten Benutzer (Scott hat sich mit seiner Kombination aus Benutzername und Kennwort angemeldet).
+* Sein Sohn Peter verwendet dann dasselbe Tablet und verwendet auch Google Chrome, um zu nike<span>.com, wo er sich mit seinem eigenen Konto anmeldet, um nach Fußballausrüstung zu suchen.
+   * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
+      * Derselbe ECID-Namespace und -Wert für den Browser.
+      * Ein neuer CRM-ID-Namespace und -Wert, der den authentifizierten Benutzer darstellt.
 
-* Die ECID wird dem zuletzt authentifizierten Benutzer zugeordnet, wenn die folgenden Bedingungen erfüllt sind:
-   * Wenn CRM-IDs durch ECID (freigegebenes Gerät) zusammengeführt werden.
-   * Wenn Begrenzungen auf nur eine CRM-ID konfiguriert sind.
+Wenn die CRM-ID als eindeutiger Namespace konfiguriert wurde, teilt der Identitätsoptimierungsalgorithmus die CRM-IDs in zwei separate Identitätsdiagramme auf, anstatt sie zusammenzuführen.
 
-Weitere Informationen finden Sie im Dokument unter [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md).
+Wenn Sie keinen eindeutigen Namespace konfigurieren, können unerwünschte Diagrammzusammenführungen auftreten, z. B. zwei Identitäten mit demselben CRM-ID-Namespace, aber unterschiedliche Identitätswerte (Szenarien wie diese stellen häufig zwei verschiedene Personen-Entitäten im selben Diagramm dar).
 
-### Priorität
+Sie müssen einen eindeutigen Namespace konfigurieren, um den Identitätsoptimierungsalgorithmus darüber zu informieren, dass Einschränkungen bei den Identitätsdaten erzwungen werden, die in ein bestimmtes Identitätsdiagramm aufgenommen werden.
 
->[!IMPORTANT]
->
->Namespace-Prioritäten sind derzeit nicht für Alpha verfügbar.
+### Namespace-Priorität {#namespace-priority}
 
-Sie können die Namespace-Priorität verwenden, um zu definieren, welche Namespaces wichtiger sind als andere. Die Priorität, die Sie für Ihre Namespaces festlegen, wird dann zur Definition von primären Identitäten verwendet. Dies ist die Identität, die Profilfragmente (Attribut- und Ereignisdaten) im Echtzeit-Kundenprofil speichert. Wenn Prioritätseinstellungen konfiguriert sind, wird die primäre Identitätseinstellung im Web SDK nicht mehr verwendet, um zu bestimmen, welche Profilfragmente gespeichert werden.
+Namespace-Priorität bezieht sich auf die relative Bedeutung von Namespaces im Vergleich zueinander. Die Namespace-Priorität kann über die Benutzeroberfläche konfiguriert werden und Sie können Namespaces in einem bestimmten Identitätsdiagramm einordnen.
 
-* Einschränkungen und Priorität sind unabhängige Konfigurationen und tun **not** beeinflussen sich gegenseitig:
-   * Beschränkungen sind eine Identitätsdiagrammkonfiguration im Identity Service.
-   * Die Priorität ist eine Profilfragmentkonfiguration im Echtzeit-Kundenprofil.
-   * Priorität **not** die Limits des Identitätsdiagramms beeinflussen.
+Eine Methode, bei der Namespace-Priorität verwendet wird, ist die Bestimmung der primären Identität von Erlebnisereignisfragmenten (Benutzerverhalten) im Echtzeit-Kundenprofil. Wenn Prioritätseinstellungen konfiguriert sind, wird die primäre Identitätseinstellung im Web SDK nicht mehr verwendet, um zu bestimmen, welche Profilfragmente gespeichert werden.
+
+Eindeutige Namespaces und Namespace-Prioritäten können im UI-Arbeitsbereich für Identitätseinstellungen konfiguriert werden. Die Auswirkungen ihrer Konfigurationen sind jedoch unterschiedlich:
+
+| | Identity Service | Echtzeit-Kundenprofil |
+| --- | --- | --- |
+| Eindeutiger Namespace | In Identity Service bezieht sich der Identitätsoptimierungsalgorithmus auf eindeutige Namespaces, um die Identitätsdaten zu bestimmen, die in ein bestimmtes Identitätsdiagramm aufgenommen werden. | Eindeutige Namespaces wirken sich nicht auf das Echtzeit-Kundenprofil aus. |
+| Namespace-Priorität | In Identity Service wird bei Diagrammen mit mehreren Ebenen mit Namespace-Priorität bestimmt, dass die entsprechenden Links entfernt werden. | Wenn ein Erlebnisereignis in Profil aufgenommen wird, wird der Namespace mit der höchsten Priorität zur primären Identität des Profilfragments. |
+
+* Die Namespace-Priorität wirkt sich nicht auf das Diagrammverhalten aus, wenn die Grenze von 50 Identitäten pro Diagramm erreicht ist.
 * **Namespace-Priorität ist ein numerischer Wert** einem Namespace zugewiesen ist, der seine relative Bedeutung angibt. Dies ist eine Eigenschaft eines Namespace.
 * **Primäre Identität ist die Identität, mit der ein Profilfragment gespeichert wird.**. Ein Profilfragment ist ein Datensatz mit Daten, in dem Informationen über einen bestimmten Benutzer gespeichert werden: Attribute (in der Regel über CRM-Datensätze erfasst) oder Ereignisse (in der Regel aus Erlebnisereignissen oder Online-Daten erfasst).
-* Die Namespace-Priorität bestimmt die primäre Identität für Erlebnisereignisse.
+* Die Namespace-Priorität bestimmt die primäre Identität für Experience Event Fragments.
    * Für Profildatensätze können Sie den Arbeitsbereich &quot;Schemas&quot;in der Experience Platform-Benutzeroberfläche verwenden, um Identitätsfelder, einschließlich der primären Identität, zu definieren. Lesen Sie das Handbuch unter [Identitätsfelder in der Benutzeroberfläche definieren](../../xdm/ui/fields/identity.md) für weitere Informationen.
 
->[!BEGINSHADEBOX]
-
-**Beispiel für Namespace-Priorität**
-
-Angenommen, Sie haben die folgende Priorität für Ihre Namespaces konfiguriert:
-
-1. CRM-ID: Stellt einen Benutzer dar.
-2. IDFA: Stellt ein Apple-Hardwaregerät dar, z. B. eine iPhone und iPad.
-3. GAID: Stellt ein Google-Hardwaregerät dar, z. B. Google Pixel.
-4. ECID: Stellt einen Webbrowser dar, z. B. Firefox, Safari und Chrome.
-5. AAID: Stellt einen Webbrowser dar.
-Wenn ECID und AAID gleichzeitig gesendet werden, stellen beide Identitäten denselben Webbrowser (Duplikat) dar.
-
-Wenn die folgenden Erlebnisereignisse in Experience Platform aufgenommen werden, werden die Profilfragmente dann mit der höheren Priorität im Namespace gespeichert.
-
-**Authentifizierte Ereignisse:**
-
-* Wenn die Identitätszuordnung eine ECID, eine GAID und eine CRM-ID enthält, werden die Ereignisinformationen anhand der CRM-ID (primäre Identität) gespeichert.
-   * GAID steht für ein Google-Hardwaregerät (z. B. Google Pixel), ECID für einen Webbrowser (z. B. Google Chrome) und CRM-ID für einen authentifizierten Benutzer.
-   * Wenn die Identitätszuordnung eine CRM-ID, eine ECID und eine AAID enthält, werden die Ereignisinformationen anhand der CRM-ID (primäre Identität) gespeichert.
-
-**Nicht authentifizierte Ereignisse:**
-
-* Wenn die Identitätszuordnung eine ECID, IDFA und AAID enthält, werden die Ereignisinformationen gegen den IDFA (primäre Identität) gespeichert.
-   * IDFA stellt ein Apple-Hardwaregerät (z. B. iPhone) dar, ECID und AAID stellen beide einen Webbrowser (Safari) dar.
-
->[!ENDSHADEBOX]
+Weitere Informationen finden Sie im Handbuch unter [Namespace-Priorität](./namespace-priority.md).
 
 ## Nächste Schritte
 
 Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finden Sie in der folgenden Dokumentation:
 
-* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
-* [Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen](./example-scenarios.md)
+* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md).
+* [Namespace-Priorität](./namespace-priority.md).
+* [Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen](./example-scenarios.md).

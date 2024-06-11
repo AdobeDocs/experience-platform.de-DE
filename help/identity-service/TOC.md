@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Anleitung zum Platform Identity Service
+breadcrumb-title: Handbuch zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 81%
+source-wordcount: '126'
+ht-degree: 68%
 
 ---
 
@@ -40,7 +40,8 @@ ht-degree: 81%
 - [Verknüpfungsregeln für Identitätsdiagramme] {#identity-graph-linking-rules}
    - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
    - [Identitätsoptimierungsalgorithmus](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+   - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
    - [Beispielszenarien](./identity-graph-linking-rules/example-scenarios.md)
 - [Verarbeitung von Datenschutzanfragen](privacy.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
-- [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
