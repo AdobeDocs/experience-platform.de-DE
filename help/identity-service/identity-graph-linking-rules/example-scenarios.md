@@ -1,22 +1,20 @@
 ---
 title: Beispielszenarios für die Konfiguration von Identitätseinstellungen
 description: Erfahren Sie mehr über Beispielszenarien zum Konfigurieren von Identitätseinstellungen.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 3%
+source-wordcount: '455'
+ht-degree: 1%
 
 ---
 
 # Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Verknüpfungsregeln für Identitätsdiagramme befinden sich derzeit im Alpha. Die Funktion und die Dokumentation können sich ändern.
+>Diese Funktion ist noch nicht verfügbar. Das Betaprogramm für Regeln zur Identitätsdiagrammverlinkung wird voraussichtlich im Juli für Entwicklungs-Sandboxes beginnen. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten.
 
 In diesem Dokument werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen in Betracht ziehen können.
 
