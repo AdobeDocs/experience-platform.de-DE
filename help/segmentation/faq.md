@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: b41a60942460e22556714699975f9eb281d76335
 workflow-type: tm+mt
-source-wordcount: '4064'
+source-wordcount: '4060'
 ht-degree: 22%
 
 ---
@@ -128,9 +128,9 @@ In der folgenden Tabelle werden die verschiedenen Lebenszyklusstatus, ihre Darst
 
 | Land | Definition | In Audience Portal sichtbar? | In Zielen sichtbar? | Betrifft Segmentierungsbeschränkungen? | Auswirkungen auf dateibasierte Zielgruppen | Auswirkungen auf die Zielgruppenbewertung | In anderen Zielgruppen verwenden? | Bearbeitbar |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Entwurf | Eine Zielgruppe im **Entwurf** state ist eine Zielgruppe, die sich noch in der Entwicklung befindet und noch nicht für andere Dienste verwendet werden kann. | Ja, aber kann ausgeblendet werden. | Nein | Ja | Kann während des Verfeinerungsprozesses importiert oder aktualisiert werden. | Kann ausgewertet werden, um genaue Veröffentlichungszahlen zu erhalten. | Ja, jedoch nicht empfohlen, verwendet zu werden. | Ja |
+| Entwurf | Eine Zielgruppe im **Entwurf** state ist eine Zielgruppe, die sich noch in der Entwicklung befindet und noch nicht für andere Dienste verwendet werden kann. | Ja, aber kann ausgeblendet werden. | Nein | Ja | Kann während des Verfeinerungsprozesses importiert oder aktualisiert werden. | Wird ausgewertet, um präzise Veröffentlichungszahlen zu erhalten. | Ja, jedoch nicht empfohlen, verwendet zu werden. | Ja |
 | Veröffentlicht | Eine Zielgruppe im **Veröffentlicht** state ist eine Zielgruppe, die für alle nachgelagerten Dienste verwendet werden kann. | Ja | Ja | Ja | Kann importiert oder aktualisiert werden. | Wird mit Batch-, Streaming- oder Edge-Segmentierung ausgewertet. | Ja | Ja |
-| Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Wird nicht mehr aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Ja | Ja |
+| Inaktiv | Eine Zielgruppe im **Inaaktiv** state ist eine Zielgruppe, die derzeit nicht verwendet wird. Sie existiert weiterhin in Platform, wird aber **not** verwendet werden, bis es als Entwurf oder veröffentlicht markiert ist. | Nein, aber kann angezeigt werden. | Nein | Nein | Wird nicht mehr aktualisiert. | Wird von Platform nicht mehr bewertet oder aktualisiert. | Nein | Ja |
 | Gelöscht | Eine Zielgruppe im **Gelöscht** state ist eine Zielgruppe, die gelöscht wurde. Das tatsächliche Löschen der Daten kann bis zu einigen Minuten dauern. | Nein | Nein | Nein | Zugrunde liegende Daten werden gelöscht. | Nach Abschluss des Löschvorgangs erfolgt keine Datenauswertung oder -ausführung. | Nein | Nein |
 
 ### In welchen Status kann ich meine Zielgruppen bearbeiten?
@@ -223,7 +223,7 @@ Damit die übergeordnete Zielgruppe in den Status &quot;Inaktiv&quot;oder &quot;
 
 ### Kann ich auf eine Zielgruppe verweisen, die sich in einem anderen Lebenszyklusstatus befindet?
 
-Ja! Wenn Ihre Zielgruppe sich derzeit im Entwurfsstatus befindet, können Sie auf Zielgruppen im Veröffentlichungsstatus oder im inaktiven Status verweisen. Um diese Audience jedoch zu veröffentlichen, müssen Sie **must** die anderen übergeordneten Zielgruppen veröffentlichen.
+Ja! Wenn Ihre Zielgruppe sich derzeit im Entwurfsstatus befindet, können Sie auf Zielgruppen im Entwurfsstatus oder im Veröffentlichungsstatus verweisen. Um diese Audience jedoch zu veröffentlichen, müssen Sie **must** die anderen übergeordneten Zielgruppen veröffentlichen.
 
 ## Zielgruppeninventar
 
