@@ -1,21 +1,19 @@
 ---
-title: AI-/ML-Funktions-Pipelines
+title: KI/ML-Funktions-Pipelines
 description: Erfahren Sie, wie Sie mit Data Distiller Ihre Pipelines für maschinelles Lernen mit Funktionen anreichern können, die aus Adobe Experience Platform-Daten abgeleitet wurden. Transformieren Sie Rohdaten in Funktionen und stellen Sie die Funktionsdaten bereit, um ein Modell zu trainieren oder zu bewerten, das Ihre Marketing-Anwendungsfälle unterstützt.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
-# AI-/ML-Funktions-Pipelines
+# KI/ML-Funktions-Pipelines
 
 <!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
-
-<!--  -->
 
 Mit Data Distiller können Datenwissenschaftler und -ingenieure ihre Pipelines für maschinelles Lernen mit hochwertigen Kundenerlebnisdaten anreichern, die in Adobe Experience Platform erfasst und kuratiert wurden. Von einem [!DNL Python] -Notebook in jeder Umgebung können Sie Kundendaten interaktiv im Experience Platform untersuchen, Funktionen aus den Daten definieren und berechnen und die berechneten Funktionen in Ihre maschinelle Lernumgebung zur Modellierung lesen.
 

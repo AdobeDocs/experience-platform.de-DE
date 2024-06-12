@@ -2,9 +2,9 @@
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1763'
 ht-degree: 4%
 
 ---
@@ -169,6 +169,14 @@ Dieses Widget zeigt die wichtigsten Einflussfaktoren für die einzelnen Bereiche
 >Globale Datumsbereichsfilter gelten nicht für prädiktive Scoring-Einblicke. Prädiktive Scoring-Widgets analysieren Daten basierend auf dem im Dropdown-Menü ausgewählten Konto-Scoring-Modell.
 
 ![Das Widget mit den wichtigsten Einflussfaktoren für die prädiktive Bewertung.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### Datenfehler kann nicht geladen werden {#errors}
+
+Anzeigen eines Widgets *[!UICONTROL Das Laden ist nicht möglich. Versuchen Sie es erneut.]* Dies liegt daran, dass für die B2B-Einheit keine Daten verfügbar sind. Beispielsweise wird das Widget unten angezeigt [!UICONTROL Neue Möglichkeiten für die Rolle der Person]zeigt die Meldung an.[!UICONTROL Das Laden ist nicht möglich. Versuchen Sie es erneut.]&quot;, da diese Sandbox keine Opportunitätsdaten enthält.
+
+![Der Fehler Insight kann nicht geladen werden.](../images/account-profiles/unable-to-load.png)
+
+Um das Problem zu beheben, müssen Sie B2B-Entitätsdaten erfassen, z. B. *Opportunity* Daten in die Sandbox. Nach 48 Stunden werden die Daten in den Widgets angezeigt.
 
 ## Nächste Schritte
 

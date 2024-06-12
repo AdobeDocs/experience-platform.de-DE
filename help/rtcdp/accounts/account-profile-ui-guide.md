@@ -5,10 +5,10 @@ description: Durch die Verwendung von Kontoprofilen ermöglicht Ihnen Adobe Real
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 56%
+source-wordcount: '1680'
+ht-degree: 55%
 
 ---
 
@@ -26,7 +26,7 @@ Weitere Informationen zur Erstellung von Account-Profilen im Rahmen des B2B-Work
 
 Auswählen **[!UICONTROL Profile]** under [!UICONTROL Konten] im linken Navigationsbereich, um die Übersicht der Kontoprofile anzuzeigen. Unter dem [!UICONTROL Übersicht] -Registerkarte, zeigt das Dashboard eine Grafik oder ein Diagramm an, die bzw. das Widgets in einem einzelnen Einstiegspunkt anzeigt.
 
-![Registerkarte &quot;Übersicht&quot;mit Widgets](images/b2b-account-profile-overview.png)
+![Die Registerkarte Übersicht über Kontoprofile mit Profilen im linken Navigationsbereich und hervorgehoben Übersicht .](images/b2b-account-profile-overview.png)
 
 Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontoprofile]](../../dashboards/guides/account-profiles.md) Dashboard , um mehr zu erfahren. Siehe die Dokumentation unter [Real-time Customer Data Platform Insights-Datenmodell B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) Weitere Informationen dazu, wie Sie mit Ihren Insight-Datenmodellen benutzerdefinierte Diagramme für Ihre Dashboards erstellen können.
 
@@ -38,7 +38,7 @@ Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontopr
 
 Wählen Sie zum Konfigurieren des Interessenten-Kontoabgleichs **[!UICONTROL Profile]** under [!UICONTROL Konten] in der linken Navigation. Im **[!UICONTROL Übersicht]** Registerkarte auswählen **[!UICONTROL Einstellungen]** oben rechts.
 
-![Einstellungen auswählen](images/b2b-configuring-accounts-profile.png)
+![Registerkarte Übersicht über Kontoprofile mit hervorgehobener Einstellung.](images/b2b-configuring-accounts-profile.png)
 
 Die **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier die **[!UICONTROL Lead-zu-Konto-Abgleich aktivieren]** aktivieren, um die Funktion zu aktivieren. Wählen Sie über das Dropdown-Menü **[!UICONTROL Täglich]** für die **[!UICONTROL Übereinstimmende Cadence]** -Einstellung. Wählen Sie abschließend die entsprechende **[!UICONTROL Übereinstimmende Kriterien]** Optionen gefolgt von **[!UICONTROL Speichern]** , um Ihre Einstellungen zu bestätigen und zur **[!UICONTROL Kontoprofile]** angezeigt.
 

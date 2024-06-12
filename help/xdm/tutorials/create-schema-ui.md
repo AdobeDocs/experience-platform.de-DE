@@ -5,7 +5,7 @@ title: Erstellen eines Schemas mit dem Schema-Editor.
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 78%
@@ -49,10 +49,6 @@ Um mit der Erstellung eines Schemas zu beginnen, wählen Sie **[!UICONTROL Schem
 Die [!UICONTROL Schema erstellen] Workflow angezeigt. Wählen Sie anschließend eine Basisklasse für das Schema aus. Sie können zwischen den Hauptklassen von [!UICONTROL Individuelles XDM-Profil] und [!UICONTROL XDM ExperienceEvent]oder [!UICONTROL Sonstiges] , wenn diese Klassen nicht Ihren Zwecken entsprechen. Die [!UICONTROL Sonstiges] Mit der Option Klassen können Sie entweder [eine neue Klasse erstellen](#create-new-class) oder wählen Sie aus anderen bereits vorhandenen Klassen.
 
 Siehe [XDM-individuelles Profil](../classes/individual-profile.md) und [XDM ExperienceEvent](../classes/experienceevent.md) Dokumentation finden Sie weitere Informationen zu diesen Klassen. Wählen Sie für diese Anleitung **[!UICONTROL Individuelles XDM-Profil]** gefolgt von **[!UICONTROL Nächste]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
