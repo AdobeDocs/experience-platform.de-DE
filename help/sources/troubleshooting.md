@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fehlerbehebung bei Quellen
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zu Quellen in Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 100%
@@ -47,7 +47,7 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie für Dateien in
 - Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punktzeichen (.) und zwei Punktzeichen (..).
 - Die maximale Anzahl von Dateien pro Batch beträgt 1500, wobei die maximale Batch-Größe 100 GB beträgt.
 - Die maximale Anzahl von Eigenschaften oder Feldern pro Zeile beträgt 10.000.
-- Die maximale Anzahl von Batches, die pro Benutzer und Minute gesendet werden können, beträgt 138.
+- Die maximale Anzahl von Batches, die pro Benutzer und Minute gesendet werden können, beträgt 2000.
 
 ### Welche Datentypen werden unterstützt?
 

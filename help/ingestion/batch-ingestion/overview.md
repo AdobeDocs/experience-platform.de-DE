@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Batch Ingestion-API - Übersicht
 description: Mit der Adobe Experience Platform Batch Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 65%
@@ -44,7 +44,7 @@ Die Erfassung von Batch-Daten unterliegt verschiedenen Einschränkungen:
 - Maximale Anzahl von Dateien pro Batch: 1.500
 - Maximale Batch-Größe: 100 GB
 - Maximale Anzahl von Eigenschaften oder Feldern pro Zeile: 10.000
-- Maximale Anzahl der Batches auf Data Lake pro Minute pro Benutzer: 138
+- Maximale Anzahl der Batches auf Data Lake pro Minute pro Benutzer: 2000
 
 >[!NOTE]
 >
