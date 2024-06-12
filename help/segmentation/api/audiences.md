@@ -3,10 +3,10 @@ title: Zielgruppen-API-Endpunkt
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Adobe Experience Platform Segmentation Service-API, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 7%
+ht-degree: 5%
 
 ---
 
@@ -49,7 +49,7 @@ Mit der folgenden Anfrage werden die letzten beiden Zielgruppen abgerufen, die i
 ++ + Eine Beispielanfrage zum Abrufen einer Liste von Zielgruppen.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
