@@ -5,7 +5,7 @@ breadcrumb-title: Handbuch zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
+source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 68%
@@ -22,6 +22,11 @@ ht-degree: 68%
    - [Identitätsverknüpfungslogik](./features/identity-linking-logic.md)
    - [Identitätsdiagramm-Viewer](./features/identity-graph-viewer.md)
    - [Löschungen in Identity Service](./features/deletion.md)
+   - Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
+      - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
+      - [Identitätsoptimierungsalgorithmus](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
+      - [Beispielszenarien](./identity-graph-linking-rules/example-scenarios.md)
    - [ECID-Übersicht](./features/ecid.md)
 - [Implementierungshandbuch](implementation.md)
 - [Leitplanken für Identitätsdaten](guardrails.md)
@@ -37,11 +42,6 @@ ht-degree: 68%
    - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Erkennung von gemeinsamen Geräten](shared-device-detection.md)
 - [Definieren von Identitätsfeldern in der Benutzeroberfläche](label-identities.md)
-- [Verknüpfungsregeln für Identitätsdiagramme] {#identity-graph-linking-rules}
-   - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
-   - [Identitätsoptimierungsalgorithmus](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-   - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
-   - [Beispielszenarien](./identity-graph-linking-rules/example-scenarios.md)
 - [Verarbeitung von Datenschutzanfragen](privacy.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 - [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
