@@ -2,9 +2,10 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 badge: Beta
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1519'
 ht-degree: 2%
 
 ---
@@ -50,9 +51,9 @@ Personen-Namespaces sind im Vergleich zu Hardwaregeräten (wie IDFA, GAID), die 
 
 Eine andere Möglichkeit, dieses Thema anzugehen, ist die Kardinalität. Wie viele Identitäten werden für eine bestimmte Entität erstellt? In den meisten Fällen verfügt eine Person über eine CRM-ID, eine Handvoll Hardware-Geräte-IDs (IDFA/GAID-Resets sollten nicht oft auftreten) und sogar über mehr Cookies (eine Person könnte möglicherweise mehrere Geräte durchsuchen, den Inkognito-Modus verwenden oder Cookies jederzeit zurücksetzen). Im Allgemeinen **Eine niedrigere Kardinalität zeigt einen Namespace mit einem höheren Wert an**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## Validieren der Namespace-Prioritätseinstellungen
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+Sobald Sie eine Vorstellung davon haben, wie Sie Ihre Namespaces priorisieren, können Sie das Tool zur Diagrammsimulation verwenden, um verschiedene Szenarien für die Diagrammreduzierung zu testen und sicherzustellen, dass Ihre Prioritätskonfigurationen die erwarteten Diagrammergebnisse zurückgeben. Weitere Informationen finden Sie im Handbuch zur Verwendung der [Tool zur Diagrammsimulation](./graph-simulation.md).
 
 ## Namespace-Priorität konfigurieren
 
