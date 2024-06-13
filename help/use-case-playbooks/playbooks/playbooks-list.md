@@ -3,19 +3,24 @@ solution: Experience Platform
 title: Verfügbare Anwendungsbeispiele für Real-time Customer Data Platform und Adobe Journey Optimizer.
 description: Eine Liste aller Bücher in Real-time Customer Data Platform und Adobe Journey Optimizer.
 role: User
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
-
 
 # Verfügbare Anwendungsfälle Playbooks
 
 Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu erhalten, die Sie in Real-time Customer Data Platform und Adobe Journey Optimizer entdecken und verwenden können.
 
 ## Anwendungsbeispiele für Playbooks in Journey Optimizer {#optimizer-playbooks}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="Verfügbare Playbooks"
+>abstract="Eine Liste aller Bücher in Real-time Customer Data Platform und Adobe Journey Optimizer."
 
 | Playbook-Name | Beschreibung |
 | ------------- |  ----------- |
