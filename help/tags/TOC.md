@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 98%
 
 ---
@@ -251,6 +251,8 @@ ht-degree: 98%
          * [Übersicht](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] Web Events API {#tiktok}
          * [Übersicht](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [Übersicht](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] Ereignis-API {#zendesk}
          * [Übersicht](./extensions/server/zendesk/overview.md)
 * Entwickeln von Erweiterungen {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 98%
 * [FAQs](./faq.md)
 * [Aktualisierungen der Terminologie](./term-updates.md)
 * [Auslaufende Unterstützung für Internet Explorer 10 und 11](./ie-deprecation.md)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
 
