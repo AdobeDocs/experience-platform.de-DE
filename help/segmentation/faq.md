@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b41a60942460e22556714699975f9eb281d76335
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4060'
+source-wordcount: '4096'
 ht-degree: 22%
 
 ---
@@ -206,6 +206,10 @@ Ja, es gibt Einschränkungen, die Sie beachten müssen, wenn Sie Zielgruppen in 
 Zu diesem Zeitpunkt **must** manuell überprüfen, ob die Audience in Adobe Journey Optimizer nachgelagert verwendet wird, da dieser Status derzeit nicht automatisch überprüft wird.
 
 Darüber hinaus haben Sie **must** manuell überprüfen, ob die Audience als Komponente einer kontobasierten Audience verwendet wird, da dieser Status derzeit ebenfalls nicht automatisch überprüft wird.
+
+### Was passiert, wenn ich eine Zielgruppe kopiere? {#copy}
+
+Beim Kopieren einer Zielgruppe befindet sich die neue Zielgruppe im Entwurfsstatus und behält die Ordner, Tags und Beschriftungen bei, die auf die ursprüngliche Zielgruppe angewendet wurden.
 
 ### Beeinflusst die Verwendung einer Zielgruppe als untergeordnete Zielgruppe die Transitionen des Lebenszyklusstatus?
 
