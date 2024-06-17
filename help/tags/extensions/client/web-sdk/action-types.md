@@ -3,9 +3,9 @@ title: Aktionstypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
+source-git-commit: e5fd8a53cfd612034d12a761ac4779ed930557d4
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1264'
 ht-degree: 1%
 
 ---
@@ -17,17 +17,33 @@ Nachdem Sie die [Adobe Experience Platform Web SDK-Tag-Erweiterung](web-sdk-exte
 
 Auf dieser Seite werden die von der Variablen [Adobe Experience Platform Web SDK-Tag-Erweiterung](web-sdk-extension-configuration.md).
 
+
+## Antwort anwenden {#apply-response}
+
+Verwenden Sie die **[!UICONTROL Antwort anwenden]** Aktionstyp, wenn Sie basierend auf einer Antwort des Edge Networks verschiedene Aktionen durchführen möchten. Dieser Aktionstyp wird normalerweise in Hybridbereitstellungen verwendet, bei denen der Server einen ersten Aufruf an das Edge Network durchführt. Anschließend nimmt dieser Aktionstyp die Antwort aus diesem Aufruf und initialisiert das Web SDK im Browser.
+
+Die Verwendung dieses Aktionstyps kann die Client-Ladezeiten für hybride Personalisierungsfälle verkürzen.
+
+![Bild der Experience Platform-Benutzeroberfläche mit dem Aktionstyp Antwort anwenden.](assets/apply-response.png)
+
+Dieser Aktionstyp unterstützt die folgenden Konfigurationsoptionen:
+
+* **[!UICONTROL Instanz]**: Wählen Sie die verwendete Web SDK-Instanz aus.
+* **[!UICONTROL Antwortheader]**: Wählen Sie das Datenelement aus, das ein Objekt zurückgibt, das die Header-Schlüssel und die vom Edge Network-Server-Aufruf zurückgegebenen Werte enthält.
+* **[!UICONTROL Antworttext]**: Wählen Sie das Datenelement aus, das das Objekt zurückgibt, das die von der Edge Network-Antwort bereitgestellte JSON-Payload enthält.
+* **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]**: Aktivieren Sie diese Option, um den vom Edge Network bereitgestellten Personalisierungsinhalt automatisch zu rendern und den Inhalt vorab auszublenden, um Flackern zu vermeiden.
+
 ## Ereignis senden {#send-event}
 
 Sendet ein Ereignis an Adobe [!DNL Experience Platform] damit Adobe Experience Platform die von Ihnen gesendeten Daten erfassen und entsprechend handeln kann. Wählen Sie eine Instanz aus (wenn mehrere Instanzen vorhanden sind). Alle Daten, die Sie senden möchten, können im **[!UICONTROL XDM-Daten]** -Feld. Verwenden Sie ein JSON-Objekt, das der Struktur Ihres XDM-Schemas entspricht. Dieses Objekt kann entweder auf Ihrer Seite oder über eine **[!UICONTROL Benutzerspezifischer Code]** **[!UICONTROL Datenelement]**.
 
 Es gibt einige weitere Felder im Aktionstyp Ereignis senden , die je nach Implementierung ebenfalls nützlich sein können. Bitte beachten Sie, dass alle diese Felder optional sind.
 
-- **Typ:** In diesem Feld können Sie einen Ereignistyp angeben, der in Ihrem XDM-Schema aufgezeichnet wird. Siehe [`type`](/help/web-sdk/commands/sendevent/type.md) im `sendEvent` für weitere Informationen.
-- **Daten:** Daten, die nicht mit einem XDM-Schema übereinstimmen, können mit diesem Feld gesendet werden. Dieses Feld ist nützlich, wenn Sie versuchen, ein Adobe Target-Profil zu aktualisieren oder Target Recommendations-Attribute zu senden. Siehe [`data`](/help/web-sdk/commands/sendevent/data.md) im `sendEvent` für weitere Informationen.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
-- **Datensatz-ID:** Wenn Sie Daten an einen Datensatz senden müssen, der nicht in Ihrem Datensatz angegeben wurde, können Sie diese Datensatz-ID hier angeben.
-- **Dokument wird entladen:** Wenn Sie sicherstellen möchten, dass die Ereignisse den Server erreichen, auch wenn der Benutzer von der Seite weg navigiert, überprüfen Sie die **[!UICONTROL Dokument wird entladen]** aktivieren. Dadurch können Ereignisse den Server erreichen, Antworten werden jedoch ignoriert.
-- **Entscheidungen zur visuellen Personalisierung rendern:** Wenn Sie personalisierte Inhalte auf Ihrer Seite rendern möchten, überprüfen Sie die **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]** aktivieren. Sie können bei Bedarf auch Entscheidungsbereiche und/oder Oberflächen angeben. Siehe [Personalisierungsdokumentation](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) für weitere Informationen zum Rendern personalisierter Inhalte.
+* **Typ:** In diesem Feld können Sie einen Ereignistyp angeben, der in Ihrem XDM-Schema aufgezeichnet wird. Siehe [`type`](/help/web-sdk/commands/sendevent/type.md) im `sendEvent` für weitere Informationen.
+* **Daten:** Daten, die nicht mit einem XDM-Schema übereinstimmen, können mit diesem Feld gesendet werden. Dieses Feld ist nützlich, wenn Sie versuchen, ein Adobe Target-Profil zu aktualisieren oder Target Recommendations-Attribute zu senden. Siehe [`data`](/help/web-sdk/commands/sendevent/data.md) im `sendEvent` für weitere Informationen.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+* **Datensatz-ID:** Wenn Sie Daten an einen Datensatz senden müssen, der nicht in Ihrem Datensatz angegeben wurde, können Sie diese Datensatz-ID hier angeben.
+* **Dokument wird entladen:** Wenn Sie sicherstellen möchten, dass die Ereignisse den Server erreichen, auch wenn der Benutzer von der Seite weg navigiert, überprüfen Sie die **[!UICONTROL Dokument wird entladen]** aktivieren. Dadurch können Ereignisse den Server erreichen, Antworten werden jedoch ignoriert.
+* **Entscheidungen zur visuellen Personalisierung rendern:** Wenn Sie personalisierte Inhalte auf Ihrer Seite rendern möchten, überprüfen Sie die **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]** aktivieren. Sie können bei Bedarf auch Entscheidungsbereiche und/oder Oberflächen angeben. Siehe [Personalisierungsdokumentation](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) für weitere Informationen zum Rendern personalisierter Inhalte.
 
 ## Einverständnis festlegen {#set-consent}
 
@@ -57,24 +73,28 @@ Sendet ein Medienereignis an Adobe Experience Platform und/oder Adobe Analytics.
 
 Die **[!UICONTROL Medienereignis senden]** Der Aktionstyp unterstützt die folgenden Eigenschaften:
 
-- **[!UICONTROL Instanz]**: Die verwendete Web SDK-Instanz.
-- **[!UICONTROL Medien-Ereignistyp]**: Der Typ des zu verfolgenden Medienereignisses.
-- **[!UICONTROL Player-ID]**: Die eindeutige Kennung der Mediensitzung.
-- **[!UICONTROL Abspielleiste]**: Die aktuelle Position der Medienwiedergabe in Sekunden.
-- **[!UICONTROL Details zur Mediensitzung]**: Beim Senden eines Medienstartereignisses sollten die erforderlichen Details zur Mediensitzung angegeben werden.
-- **[!UICONTROL Kapiteldetails]**: In diesem Abschnitt können Sie die Kapiteldetails beim Senden eines Kapitelstart-Medienereignisses angeben.
-- **[!UICONTROL Werbedetails]**: Beim Senden einer `AdBreakStart` -Ereignis verwenden, müssen Sie die erforderlichen Werbedetails angeben.
-- **[!UICONTROL Details zum Anzeigen-Pod]**: Details zum Anzeigen-Pod beim Senden einer `AdStart` -Ereignis.
-- **[!UICONTROL Fehlerdetails]**: Details zum Wiedergabefehler, der verfolgt wird.
-- **[!UICONTROL Statusaktualisierungsdetails]**: Der Player-Status, der aktualisiert wird.
-- **[!UICONTROL Benutzerdefinierte Metadaten]**: Die benutzerdefinierten Metadaten zum Medienereignis, das verfolgt wird.
-- **[!UICONTROL Erlebnisqualität]**: Die Medienqualität der getrackten Erlebnisdaten.
+* **[!UICONTROL Instanz]**: Die verwendete Web SDK-Instanz.
+* **[!UICONTROL Medien-Ereignistyp]**: Der Typ des zu verfolgenden Medienereignisses.
+* **[!UICONTROL Player-ID]**: Die eindeutige Kennung der Mediensitzung.
+* **[!UICONTROL Abspielleiste]**: Die aktuelle Position der Medienwiedergabe in Sekunden.
+* **[!UICONTROL Details zur Mediensitzung]**: Beim Senden eines Medienstartereignisses sollten die erforderlichen Details zur Mediensitzung angegeben werden.
+* **[!UICONTROL Kapiteldetails]**: In diesem Abschnitt können Sie die Kapiteldetails beim Senden eines Kapitelstart-Medienereignisses angeben.
+* **[!UICONTROL Werbedetails]**: Beim Senden einer `AdBreakStart` -Ereignis verwenden, müssen Sie die erforderlichen Werbedetails angeben.
+* **[!UICONTROL Details zum Anzeigen-Pod]**: Details zum Anzeigen-Pod beim Senden einer `AdStart` -Ereignis.
+* **[!UICONTROL Fehlerdetails]**: Details zum Wiedergabefehler, der verfolgt wird.
+* **[!UICONTROL Statusaktualisierungsdetails]**: Der Player-Status, der aktualisiert wird.
+* **[!UICONTROL Benutzerdefinierte Metadaten]**: Die benutzerdefinierten Metadaten zum Medienereignis, das verfolgt wird.
+* **[!UICONTROL Erlebnisqualität]**: Die Medienqualität der getrackten Erlebnisdaten.
 
 ## Media Analytics-Tracker abrufen {#get-media-analytics-tracker}
 
 Mit dieser Aktion wird die veraltete Media Analytics-API abgerufen. Wenn die Aktion konfiguriert und ein Objektname angegeben wird, wird die veraltete Media Analytics-API in dieses Fensterobjekt exportiert. Wenn keines angegeben ist, wird er nach `window.Media` , wie es die aktuelle Media JS-Bibliothek tut.
 
 ![Platform-UI-Bild, das den Aktionstyp &quot;Get Media Analytics Tracker&quot;anzeigt.](assets/get-media-analytics-tracker.png)
+
+## Umleiten mit Identität {#redirect-with-identity}
+
+Verwenden Sie diesen Aktionstyp, um Identitäten von der aktuellen Seite für andere Domänen freizugeben. Diese Aktion ist für die Verwendung mit einer **[!UICONTROL click]** Ereignistyp und eine Wertvergleichsbedingung. Siehe [Anhängen der Identität an URL mithilfe der Web SDK-Erweiterung](../../../../web-sdk/commands/appendidentitytourl.md#extension) für weitere Informationen zur Verwendung dieses Aktionstyps.
 
 ## Nächste Schritte {#next-steps}
 

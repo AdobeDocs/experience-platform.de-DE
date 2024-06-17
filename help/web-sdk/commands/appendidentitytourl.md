@@ -1,10 +1,11 @@
 ---
 title: appendIdentityToUrl
 description: Sie können personalisierte Erlebnisse zwischen Apps, Web und domänenübergreifend genauer bereitstellen.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
+source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +19,7 @@ Die generierte und an die URL angehängte Abfragezeichenfolge lautet `adobe_mc`.
 >
 >Wenn keine Zustimmung erteilt wurde, wird die URL aus dieser Methode unverändert zurückgegeben. Dieser Befehl wird sofort ausgeführt. Er wartet nicht auf eine Aktualisierung der Zustimmung.
 
-## Anhängen der Identität an URL mithilfe der Web SDK-Erweiterung
+## Anhängen der Identität an URL mithilfe der Web SDK-Erweiterung {#extension}
 
 Das Anhängen einer Identität an eine URL erfolgt als Aktion innerhalb einer Regel in der Adobe Experience Platform-Oberfläche für Datenerfassungs-Tags.
 
