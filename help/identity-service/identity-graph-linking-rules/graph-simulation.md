@@ -2,14 +2,19 @@
 title: Anleitung zur Diagrammsimulation in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Benutzeroberfläche des Identity Service verwenden.
 badge: Beta
-source-git-commit: 21436bc051510729fa14b759f562b0bca7a5abba
+exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
+source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1438'
 ht-degree: 1%
 
 ---
 
 # Handbuch für die [!DNL Graph Simulation]-Benutzeroberfläche
+
+>[!AVAILABILITY]
+>
+>Diese Funktion ist noch nicht verfügbar. Das Betaprogramm für Regeln zur Identitätsdiagrammverlinkung wird voraussichtlich im Juli für Entwicklungs-Sandboxes beginnen. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten.
 
 [!DNL Graph Simulation] ist ein Tool in der Identity Service-Benutzeroberfläche, mit dem Sie simulieren können, wie sich ein Identitätsdiagramm bei einer bestimmten Kombination von Identitäten verhält und wie Sie die [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md).
 
