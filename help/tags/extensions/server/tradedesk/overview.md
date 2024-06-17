@@ -3,18 +3,16 @@ title: Übersicht über die Trade Desk Real-Time Conversions API-Erweiterung
 description: Erfahren Sie mehr über die Trade Desk Real-Time Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 4%
+source-wordcount: '930'
+ht-degree: 3%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] Erweiterungsübersicht
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) ermöglicht Ihnen das Senden von Ereignissen an [!DNL The Trade Desk] , um Retargeting und Attribution zu nutzen.
-
-Sie können die [!DNL The Trade Desk Real-Time Conversions API] Erweiterung zum Senden von Daten vom Adobe Experience Platform-Edge Network an [!DNL The Trade Desk] durch Nutzung der API-Funktionen in Ihren [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) Regeln.
+Sie können die [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) Erweiterung zum Senden von Daten vom Adobe Experience Platform-Edge Network an [!DNL The Trade Desk] durch Nutzung der API-Funktionen in Ihren [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) Regeln.
 
 Verwenden [!DNL The Trade Desk Real-Time Conversions API] -Erweiterung verwenden, können Sie die API-Funktionen in Ihrer [Ereignisweiterleitung](../../../ui/event-forwarding/overview.md) Regeln zum Senden von Daten an [!DNL The Trade Desk] vom Adobe Experience Platform-Edge Network aus.
 
@@ -91,7 +89,8 @@ Siehe Abschnitt [!DNL The Trade Desk] Entwicklerdokumentation für weitere Infor
 
 **[!UICONTROL Objektanforderungsparameter]**
 
-Im folgenden Abschnitt erfahren Sie mehr über die JSON-formatierten Anforderungsparameter wie Elemente, Datenschutz und Datenverarbeitung.
+Ein JSON-Objekt mit weiteren Informationen. Sie haben die Möglichkeit, einen reduzierten Satz von Schlüsselwerteingaben zu verwenden oder rohe JSON-Daten bereitzustellen. Darüber hinaus können Sie dynamische Daten aus einem Datenelement abrufen, indem Sie die Festplatten (![Diskettensymbol](../../../images/extensions/server/tradedesk/disk-icon.png)) rechts.
+
 
 ![Die [!DNL Object Request Parameters] Abschnitt mit verfügbaren Feldern.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ Siehe Abschnitt [Echtzeit-Konversionsereignis](https://partner.thetradedesk.com/
 
 **[!UICONTROL Konfigurationsüberschreibungen]**
 
->NOTE
+>[!NOTE]
 >
 >Die [!UICONTROL Konfigurationsüberschreibungen] -Felder können Sie eine andere [!DNL Advertiser ID] und/oder [!DNL Merchant ID] auf jeder Regel.
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| Advertiser-ID | Die Advertiser-ID, die Sie die Advertiser-ID überschreiben möchten, die in der Erweiterungskonfiguration angegeben ist. |
-| Merchant-ID | Die Merchant-ID, die Sie die in der Erweiterungskonfiguration angegebene Merchant-ID überschreiben möchten. |
+| Advertiser-ID | Eindeutige Kennung für den Advertiser, mit dem dieses Ereignis verknüpft ist. Es kann eine andere Advertiser-ID bereitgestellt werden, um die in der Erweiterungskonfiguration angegebene ID zu überschreiben. |
+| Merchant-ID | Die eindeutige Kennung, die jeder Händler von [!DNL The Trade Desk] während des gesamten Onboarding-Verfahrens. Es kann eine andere Merchant-ID bereitgestellt werden, um die in der Erweiterungskonfiguration angegebene ID zu überschreiben. |
 
 ![Die [!DNL Configuration Overrides] Abschnitt mit verfügbaren Feldern.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
