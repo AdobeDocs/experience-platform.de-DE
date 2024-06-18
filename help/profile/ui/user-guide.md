@@ -3,9 +3,9 @@ keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; A
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2155'
 ht-degree: 7%
 
 ---
@@ -132,9 +132,13 @@ Nach Auswahl einer **[!UICONTROL Profil-ID]**, die **[!UICONTROL Detail]** -Regi
 
 Die angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten Profilattribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich einer schrittweisen Anleitung zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie in der [Handbuch zur Profildetailanpassung](profile-customization.md).
 
-![Die Registerkarte Details wird hervorgehoben. Die Profildetails werden angezeigt.](../images/user-guide/profile-detail.png)
+![Die Registerkarte Details wird hervorgehoben. Die Profildetails werden angezeigt.](../images/user-guide/profile-detail-row-name.png)
 
-Sie können zusätzliche Informationen zum individuellen Kundenprofil anzeigen, indem Sie auf eine andere der verfügbaren Registerkarten klicken. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte &quot;Zielgruppenmitgliedschaft&quot;, auf der die Zielgruppen angezeigt werden, für die das Profil derzeit qualifiziert ist.
+Sie können auch zwischen der Anzeige der Attributnamen als Anzeigenamen und den Feldpfadnamen umschalten. Um zwischen diesen beiden Anzeigen zu wechseln, wählen Sie die **[!UICONTROL Anzeigenamen anzeigen]** umschalten.
+
+![Der Umschalter Anzeigenamen anzeigen wird hervorgehoben und die Anzeigenamen werden unter den Attributen angezeigt.](../images/user-guide/profile-detail.png)
+
+Um weitere Informationen zum individuellen Kundenprofil anzuzeigen, wählen Sie eine der anderen verfügbaren Registerkarten aus. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte &quot;Zielgruppenmitgliedschaft&quot;, auf der die Zielgruppen angezeigt werden, für die das Profil derzeit qualifiziert ist.
 
 ### Registerkarte „Attribute“
 

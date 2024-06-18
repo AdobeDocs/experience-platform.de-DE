@@ -3,9 +3,9 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Benutzeroberfläch
 title: Anpassung der Profildetails in der Benutzeroberfläche
 description: Dieses Handbuch enthält schrittweise Anweisungen zum Anpassen der Art und Weise, wie Echtzeit-Kundenprofildaten in der Benutzeroberfläche von Adobe Experience Platform angezeigt werden.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ Die ausgewählte Karte passt sich der gewünschten Größe an und die umliegende
 
 ## Bearbeiten und Entfernen von Karten
 
-Neben der Größenanpassung und Neuordnung von Karten können Sie den Inhalt bestimmter Karten bearbeiten und einige Karten vollständig aus dem Dashboard entfernen. Wählen Sie die Auslassungszeichen (`...`) in der oberen rechten Ecke der Karte, um sie zu bearbeiten oder zu entfernen. Dadurch wird ein Dropdown-Menü mit Optionen zum Bearbeiten oder Entfernen der Karte geöffnet, je nach den Eigenschaften der ausgewählten Karte.
+Neben der Größenanpassung und Neuordnung von Karten können Sie den Inhalt bestimmter Karten bearbeiten und einige Karten vollständig aus dem Dashboard entfernen. Wählen Sie die Auslassungszeichen (`...`) in der oberen rechten Ecke der Karte klicken, um sie zu bearbeiten oder zu entfernen. Dadurch wird ein Dropdown-Menü mit Optionen zum Bearbeiten oder Entfernen der Karte geöffnet, je nach den Eigenschaften der ausgewählten Karte.
 
 >[!NOTE]
 >
->Nicht alle Karten können bearbeitet oder entfernt werden. Dies liegt daran, dass einige Karten schreibgeschützte oder erforderliche Informationen enthalten. Wenn eine Karte keine Auslassungspunkte in der oberen rechten Ecke aufweist, enthält sie schreibgeschützte UND erforderliche Informationen und kann weder bearbeitet noch entfernt werden. Wenn eine Karte in der Ecke Ellipsen aufweist und nur eine Option zum Entfernen der Karte angezeigt wird, sind die Karteninformationen schreibgeschützt und können nicht bearbeitet werden.
+>Nicht alle Karten können bearbeitet oder entfernt werden. Dies liegt daran, dass einige Karten schreibgeschützte oder erforderliche Informationen enthalten. Wenn eine Karte keine Auslassungspunkte in der oberen rechten Ecke aufweist, enthält sie schreibgeschützte UND erforderliche Informationen und kann weder bearbeitet noch entfernt werden. Wenn eine Karte in der Ecke Ellipsen enthält und bei Auswahl nur eine Option zum Entfernen der Karte angezeigt wird, sind die Karteninformationen schreibgeschützt und können nicht bearbeitet werden.
 
 ![Das Dropdown-Menü Bearbeitungskarte wird hervorgehoben. Dazu gehören Optionen zum Bearbeiten oder Entfernen der Karte.](../images/profile-customization/edit-card.png)
 
@@ -44,23 +44,27 @@ Auswählen **[!UICONTROL Bearbeiten]** in der Dropdown-Liste, um die **[!UICONTR
 
 ![Die Karte Grundlegende Attribute wird angezeigt.](../images/profile-customization/basic-attributes.png)
 
-## Hinzufügen von Attributen {#add-attributes}
+## Attribute hinzufügen {#add-attributes}
 
-Aus dem **[!UICONTROL Widget bearbeiten]** Bildschirm, wählen Sie **[!UICONTROL Hinzufügen von Attributen]** in der oberen rechten Ecke der Karte, um mit dem Hinzufügen von Attributen zu dieser Karte zu beginnen.
+Aus dem **[!UICONTROL Widget bearbeiten]** Bildschirm, auswählen **[!UICONTROL Hinzufügen von Attributen]** in der oberen rechten Ecke der Karte, um mit dem Hinzufügen von Attributen zu dieser Karte zu beginnen.
 
 ![Die Schaltfläche Attribute hinzufügen auf der Karte Grundlegende Attribute ist hervorgehoben.](../images/profile-customization/add-attributes.png)
 
-Wenn die **[!UICONTROL Feld Vereinigungsschema auswählen]** wird geöffnet. Auf der linken Seite des Dialogfelds wird die vollständige [!UICONTROL XDM Individual Profile] Vereinigungsschema mit darunter verschachtelten Feldern. Weiterführende Informationen zu Vereinigungsschemata finden Sie im Abschnitt [Vereinigungsschemas -Abschnitt der [!DNL Profile] Benutzerhandbuch](user-guide.md#union-schema).
+Wenn die Variable **[!UICONTROL Feld Vereinigungsschema auswählen]** wird geöffnet. Auf der linken Seite des Dialogfelds wird die vollständige [!UICONTROL Individuelles XDM-Profil] Vereinigungsschema mit darunter verschachtelten Feldern. Weiterführende Informationen zu Vereinigungsschemata finden Sie im Abschnitt [Vereinigungsschemas -Abschnitt der [!DNL Profile] Benutzerhandbuch](user-guide.md#union-schema).
 
 Die **[!UICONTROL Ausgewählte Attribute]** auf der rechten Seite des Dialogfelds werden die Attribute angezeigt, die derzeit in der Karte enthalten sind, die Sie bearbeiten. Sie können Attribute auch hier entfernen und neu anordnen. Es werden die Gesamtzahl der ausgewählten Attribute sowie die maximale Anzahl der Attribute (20) angezeigt, die einer einzelnen Karte hinzugefügt werden können.
 
 ![Die Attribute, aus denen sich derzeit die Attribute auf der Karte zusammensetzen, werden hervorgehoben.](../images/profile-customization/select-before.png)
 
-Sie können eines der verfügbaren Vereinigungsschemafelder auswählen, um die Attribute auf der Karte anzupassen, die Sie bearbeiten. Ausgewählte Felder werden mit einem Häkchen neben ihnen angezeigt und automatisch zur Liste der ausgewählten Attribute hinzugefügt. Nachdem Sie alle Attribute hinzugefügt haben, die Sie auf der Karte angezeigt haben möchten, wählen Sie **[!UICONTROL Auswählen]** , um zur **[!UICONTROL Widget bearbeiten]** angezeigt.
+Sie können eines der verfügbaren Vereinigungsschemafelder auswählen, um die Attribute auf der Karte anzupassen, die Sie bearbeiten. Bei der Auswahl der Felder können Sie entweder den Dateinamen oder den Anzeigenamen anzeigen. Um zwischen diesen beiden Anzeigen zu wechseln, wählen Sie die **[!UICONTROL Anzeigenamen anzeigen]** umschalten.
+
+![Die [!UICONTROL Anzeigenamen anzeigen] Umschalter wird auf der Seite mit den Profildetails markiert.](../images/profile-customization/show-display-names.png)
+
+Ausgewählte Felder werden mit einem Häkchen neben ihnen angezeigt und automatisch zur Liste der ausgewählten Attribute hinzugefügt. Nachdem Sie alle Attribute hinzugefügt haben, die Sie auf der Karte angezeigt haben möchten, wählen Sie **[!UICONTROL Auswählen]** , um zu **[!UICONTROL Widget bearbeiten]** angezeigt.
 
 ![Die neu hinzugefügten Attribute werden hervorgehoben.](../images/profile-customization/select-after.png)
 
-Wenn Sie zum **[!UICONTROL Widget bearbeiten]** angezeigt, sollte die Liste der Attribute auf der Karte jetzt aktualisiert werden, um Ihre Auswahl widerzuspiegeln. Sie können die Kartenattribute dennoch entfernen oder neu anordnen oder den Kartentitel nach Bedarf bearbeiten. Nachdem Sie die Änderungen abgeschlossen haben, wählen Sie **[!UICONTROL Speichern]** , um Ihre Änderungen zu speichern.
+Wenn Sie zum **[!UICONTROL Widget bearbeiten]** angezeigt, sollte die Liste der Attribute auf der Karte jetzt aktualisiert werden, um Ihre Auswahl widerzuspiegeln. Sie können die Kartenattribute dennoch entfernen oder neu anordnen oder den Kartentitel nach Bedarf bearbeiten. Wählen Sie nach Abschluss der Bearbeitung **[!UICONTROL Speichern]** , um Ihre Änderungen zu speichern.
 
 ![Die neu hinzugefügten Attribute werden auf der bearbeiteten Karte angezeigt.](../images/profile-customization/new-attributes.png)
 
@@ -82,9 +86,9 @@ Wenn Sie eine neue Karte hinzufügen möchten, wird die **[!UICONTROL Widget bea
 
 ![Im Bildschirm Widget bearbeiten wird eine leere neue Widget-Karte angezeigt.](../images/profile-customization/edit-widget.png)
 
-Wenn die **[!UICONTROL Feld Vereinigungsschema auswählen]** wird geöffnet. Auf der linken Seite des Dialogfelds wird die vollständige [!UICONTROL XDM Individual Profile] Vereinigungsschema und **[!UICONTROL Ausgewählte Attribute]** auf der rechten Seite des Dialogfelds werden die Attribute angezeigt, die Sie für Ihre Karte auswählen. Weitere Informationen zum Hinzufügen von Attributen finden Sie unter [Abschnitt zum Hinzufügen von Attributen](#add-attributes) , die zuvor in diesem Dokument angezeigt wird.
+Wenn die Variable **[!UICONTROL Feld Vereinigungsschema auswählen]** wird geöffnet. Auf der linken Seite des Dialogfelds wird die vollständige [!UICONTROL Individuelles XDM-Profil] Vereinigungsschema und **[!UICONTROL Ausgewählte Attribute]** auf der rechten Seite des Dialogfelds werden die Attribute angezeigt, die Sie für Ihre Karte auswählen. Weitere Informationen zum Hinzufügen von Attributen finden Sie unter [Abschnitt zum Hinzufügen von Attributen](#add-attributes) , die zuvor in diesem Dokument angezeigt wird.
 
-Es werden die Gesamtzahl der ausgewählten Attribute sowie die maximale Anzahl der Attribute (20) angezeigt, die einer einzelnen Karte hinzugefügt werden können. Sie können die ausgewählten Attribute auch aus diesem Bildschirm entfernen und neu anordnen. Nachdem Sie alle Attribute hinzugefügt haben, die auf der Karte angezeigt werden sollen, wählen Sie **[!UICONTROL Auswählen]** , um zur **[!UICONTROL Widget bearbeiten]** angezeigt.
+Es werden die Gesamtzahl der ausgewählten Attribute sowie die maximale Anzahl der Attribute (20) angezeigt, die einer einzelnen Karte hinzugefügt werden können. Sie können die ausgewählten Attribute auch aus diesem Bildschirm entfernen und neu anordnen. Nachdem Sie alle Attribute hinzugefügt haben, die auf der Karte angezeigt werden sollen, wählen Sie **[!UICONTROL Auswählen]** , um zu **[!UICONTROL Widget bearbeiten]** angezeigt.
 
 ![Die Felder, die Sie der Karte hinzufügen, werden hervorgehoben.](../images/profile-customization/add-widget-attributes.png)
 
