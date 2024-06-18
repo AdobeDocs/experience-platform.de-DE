@@ -4,9 +4,9 @@ type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden können, um Arrays in flachen Schemadateien aus Real-Time CDP in Cloud-Speicher-Ziele zu exportieren.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1477'
 ht-degree: 5%
 
 ---
@@ -31,9 +31,13 @@ Erhalten Sie umfassende Informationen zu berechneten Feldern - was diese sind un
 * [Benutzerhandbuch und Übersicht](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funktionen zur Datenvorbereitung](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->Nicht alle oben aufgeführten Funktionen werden unterstützt *beim Exportieren von Feldern in Cloud-Speicher-Ziele* unter Verwendung der Funktion für berechnete Felder. Siehe [Abschnitt zu unterstützten Funktionen](#supported-functions) Weitere Informationen finden Sie weiter unten.
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Arrays und andere Objekttypen in Platform {#arrays-strings-other-objects}
 
@@ -86,7 +90,9 @@ Wenn Sie bereit sind, wählen Sie **[!UICONTROL Nächste]** um mit dem nächsten
 
 ## Unterstützte Funktionen {#supported-functions}
 
-Beachten Sie, dass in der Beta-Version der berechneten Felder und der Array-Unterstützung für Ziele nur die folgenden Funktionen unterstützt werden:
+Alle dokumentierten [Funktionen zur Datenvorbereitung](/help/data-prep/functions.md) werden beim Aktivieren von Daten für dateibasierte Ziele unterstützt.
+
+Beachten Sie jedoch, dass umfassende Anwendungsfallbeschreibungen und Beispielausgabeinformationen derzeit nur in der Beta-Version der berechneten Felder und Array-Unterstützung für Ziele für die folgenden Funktionen bereitgestellt werden:
 
 * `join`
 * `coalesce`
