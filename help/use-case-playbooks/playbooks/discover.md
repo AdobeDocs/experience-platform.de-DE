@@ -1,85 +1,74 @@
 ---
 solution: Experience Platform
-title: Finden des richtigen Playbooks
-description: Erfahren Sie, wie Sie das richtige Playbook für Ihren Anwendungsfall finden.
+title: Spielbücher kennenlernen
+description: Erfahren Sie, wie Sie eine Galerie mit Büchern entdecken und mit einer inspirierenden Sandbox anfangen können.
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: ad3f746580f85e77cba390208d147b35b6854e10
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 96%
+source-wordcount: '711'
+ht-degree: 2%
 
 ---
 
-# Finden des richtigen Playbooks
+# Spielbücher kennenlernen
 
-Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anwendungsfälle] > [!UICONTROL Playbooks]**. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
+Anwendungsfall-Playbooks sind für alle Adobe Experience Platform-Kunden kostenlos verfügbar. Um auf eine Rich-Galerie mit Anwendungsfallbüchern in der Experience Platform-Benutzeroberfläche zuzugreifen, wählen Sie **[!UICONTROL Playbooks]** über die linke Navigation.
 
-## Suchen und filtern {#search-and-filter}
+![Anwendungsbeispiel für eine Playbook-Galerie.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-Verwenden Sie das Suchfenster und die Filter auf der Seite, um das richtige Playbook für Ihren Anwendungsfall zu finden.
+![Direkter Zugriff auf Fallbücher in der linken Navigationsleiste.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-Sie können beispielsweise Playbooks filtern, die Sie basierend auf der gewünschten Phase im Marketing-Trichter (Konversion, Interaktion oder Bindung) verwenden können. Sie können die angezeigten Playbooks auch nach der Branche filtern, in der Sie sich befinden, oder nach der Produktberechtigungen, auf die Sie Zugriff haben - Adobe Journey Optimizer oder Real-Time CDP.
+Wählen Sie ein beliebiges Playbook aus, um zur Detailseite zu gelangen, und wählen Sie dann **[!UICONTROL Navigieren zu einer inspirierenden Sandbox]**. Ein Bestätigungsmodal wird angezeigt. Auswählen **Bestätigen** , um zur inspirierenden Sandbox zu gelangen, in der Sie die verschiedenen Anwendungsfälle untersuchen und testen können.
 
-![Filtern von Playbooks nach Marketing-Trichter, Branche oder Produkt](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+Wenn Sie nicht über die Berechtigung zum Erstellen von Sandboxes verfügen, wenden Sie sich an Ihren Administrator, um Unterstützung beim Erstellen einer inspirierenden Sandbox zu erhalten.
 
-Sie können das richtige Playbook auch mithilfe der Suchfunktion finden. Unten steht ein Beispiel dafür, wie Sie ein Playbook finden, mit dem Sie mit Benutzenden interagieren können, die möglicherweise ihren Warenkorb verlassen haben.
+>[!TIP]
+>
+>Eine inspirierende Sandbox ist eine Entwicklungs-Sandbox in Adobe Experience Platform, in der Sie verschiedene Anwendungsfälle erstellen, testen und testen können, bevor Sie sie in eine Live-Produktionsumgebung implementieren.
 
-![Interagieren mit Benutzenden, die möglicherweise ihren Warenkorb verlassen haben.](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+![Gehen Sie zur inspirierenden Sandbox.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-Sie können auch die verfügbaren Playbooks nach den Kanälen filtern, über die Sie Ihre Kundinnen und Kunden erreichen möchten, wie unten dargestellt:
+Wenn Sie noch keine inspirierenden Sandboxes eingerichtet haben, wählen Sie **[!UICONTROL Erstellen einer inspirierenden Sandbox]**. Ein Modal wird angezeigt. Geben Sie die **Name** und **Titel** in die erforderlichen Felder ein und wählen Sie **Erstellen**. Nachdem Sie die inspirierende Sandbox erstellt haben, stellen Sie sicher, dass [Berechtigungen definieren](/help/access-control/home.md) bevor Sie zurück zur Seite mit Details zu Anwendungsfällen für Playbooks navigieren, um eine Instanz zu erstellen.
 
-![Filtern nach Kanal](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![Erstellen Sie eine inspirierende Sandbox.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-Experimentieren Sie mit den Filtern und der Suchoption, um das richtige Playbook für sich zu finden.
+![Geben Sie den Namen und den Titel ein, um eine inspirierende Sandbox zu erstellen.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-## Anzeigen von Playbooks und Generieren von Assets {#view-playbook-generate-assets}
+Wenn Sie ein Anwendungsfallbuch außerhalb einer inspirierenden Sandbox auswählen, können Sie keine Instanz erstellen. Wählen Sie auf der Detailseite **Navigieren zur inspirierenden Sandbox** , um zu einer vorhandenen inspirierenden Sandbox zu wechseln, und wählen Sie dann **[!UICONTROL Instanz erstellen]**.
 
-Bevor Sie sich für ein Playbook entscheiden und Instanzen davon erstellen, sollten Sie es überprüfen, um sicherzustellen, dass es Ihren Anforderungen entspricht. Um besser zu verstehen, welche Anwendungsfälle abgedeckt sind, enthalten alle Playbooks die nachfolgend genannten Abschnitte. Wenn Sie bereit sind, fortzufahren und Assets zu generieren, wählen Sie **[!UICONTROL Instanz erstellen]** aus.
+Wenn Sie nicht über die Berechtigung zum Erstellen von Sandboxes verfügen, wenden Sie sich an Ihren Administrator, um Unterstützung beim Erstellen einer inspirierenden Sandbox zu erhalten.
 
-### Mindmap {#mindmap}
+![Keine Berechtigungen zum Erstellen einer Sandbox.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-Verwenden Sie den Mindmap-Abschnitt in einem Playbook, um sich über die Schritte des Workflows zu informieren, bei denen Sie sich vom Playbook unterstützt lassen können. Visualisieren Sie den Fluss, wie alle generierten Objekte dazu beitragen können, den Anwendungsfall zu erreichen – und zwar aus Perspektive der Zielpersona des Anwendungsfalls.
+Wenn Sie die Grenze für die Anzahl der Ihnen zugewiesenen Sandboxes erreicht haben, werden Sie in einer Meldung aufgefordert, Ihren Organisationsadministrator zu kontaktieren, um die Beschränkung zu erhöhen oder einige aktive Sandboxes zu deaktivieren oder zu entfernen. Nachdem Sie die Sandbox-Beschränkung angepasst oder die Anzahl der aktiven Sandboxes reduziert haben, können Sie mit der Erstellung der inspirierenden Sandbox fortfahren.
 
-Die Mindmap beginnt mit einer Definition, wer in der User Journey erreicht wird. Sie beschreibt bei jedem Schritt, ob etwas von Adobe bereitgestellt wird, z. B. eine neue Nachricht oder eine Erinnerung, oder ob die nächste Nachricht oder das nächste Ereignis durch eine Handlung der Zielpersona ausgelöst wird.
+![Sandbox-Grenze erreicht.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-![Hervorgehobene Playbook-Mindmap.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+Beachten Sie, dass bei der Erstellung einer inspirierenden Sandbox Kanalflächen für E-Mail-, Push- und SMS-Benachrichtigungen nicht automatisch eingerichtet werden. Wenden Sie sich an Ihren IT-Administrator, um sie manuell zu konfigurieren. Andernfalls kann die Instanzerstellung fehlschlagen.
 
-### Zusammenfassung  {#summary}
+![Konfigurieren von Kanalvorgaben.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="Assets"
->abstract="Dies sind die Assets, die von diesem Playbook generiert werden. Nachdem Sie eine Instanz des Playbooks erstellt haben, können Sie die Assets in der inspirierenden Sandbox anzeigen und nach Bedarf in andere Sandboxes weiterleiten."
+## Konfigurieren von Sandbox- und Kanaloberflächen in Journey Optimizer {#configure-channel-surfaces}
 
-Vollziehen Sie anhand des Zusammenfassungsabschnitts nach, welche Assets generiert werden, wenn Sie Instanzen aus dem Playbook erstellen. Die für jedes Playbook generierten Assets sind auf den Anwendungsfall aus dem Playbook zugeschnitten. Nachfolgend finden Sie weitere Informationen zu allen Elementen im Zusammenfassungsabschnitt.
+Wenn Ihr Unternehmen für [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de)und Sie die für Journey Optimizer entworfenen Playbooks verwenden möchten, müssen Sie die Kanalvorgaben in Ihrer Sandbox konfigurieren, die die für Ihre Nachrichten erforderlichen technischen Parameter definieren. [Erfahren Sie, wie Sie in Adobe Journey Optimizer Kanaloberflächen einrichten.](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=de).
 
-| Element | Beschreibung |
----------|----------|
-| **[!UICONTROL Zielgruppe]** | Beschreibt die Personas, die über dieses Anwendungsfall-Playbook erreicht werden sollen. |
-| **[!UICONTROL Marketing-Kanäle]** | Beschreibt die Kanäle, die zum Erreichen der Zielpersonas aus dem Playbook verwendet werden. |
-| **[!UICONTROL Technische Assets]** | Eine Liste der technischen Assets, die generiert werden, nachdem Sie Instanzen des Playbooks erstellt haben. Die generierten Assets unterscheiden sich nach Playbook abhängig vom Anwendungsfall. Einige Playbooks können Schemata, Segmente und Journeys generieren und andere Ziele. Weitere Informationen zum Verwenden und Wiederverwenden der generierten Assets finden Sie im Abschnitt [Grundlegendes zu den generierten Assets](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) des Handbuchs zum Erstellen und Wiederverwenden von Instanzen. |
+Um in Journey Optimizer Playbooks zu erstellen, müssen Sie Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen konfigurieren.
 
-{style="table-layout:auto"}
+### E-Mail-Kanaloberfläche
 
-![Hervorgehobene Playbook-Zusammenfassung](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+Navigieren Sie zu `Channels` in der Journey Optimizer-Benutzeroberfläche. Konfigurieren Sie separate Subdomains und IP-Pools für Marketing-E-Mails und Transaktionsnachrichten, falls noch nicht konfiguriert. Dies sind Best Practices, um sicherzustellen, dass Transaktionsnachrichten wie Auftragsbestätigungs-E-Mails an Ihre Kunden weitergeleitet werden. Geben Sie Namen, E-Mail-Adressen und zusätzliche Einstellungen ein. Auswählen **Einsenden** oben rechts auf der Seite, um die Oberfläche des Marketing-Kanals zu erstellen. Lesen Sie die Dokumentation unter [Einrichten von E-Mail-Kanal-Oberflächen](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-### Instanzen {#instances}
+### SMS-Kanaloberfläche
 
-Scrollen Sie nach unten zum Abschnitt mit den Instanzen, um einen Überblick über die Instanzen dieses Playbooks zu erhalten, die Sie oder Mitglieder Ihres Teams bereits erstellt haben. Sie können verschiedene Steuerelemente verwenden, um die angezeigten Instanzen zu sortieren und zu filtern und beispielsweise nur die von Ihnen erstellten Instanzen anzuzeigen. Sie können auch verschiedene Informationen zu den einzelnen Instanzen sehen, wie unten aufgeführt.
+Um eine SMS-Kanaloberfläche zu erstellen, erstellen Sie zunächst eine SMS-API-Berechtigung und wählen Sie den gewünschten Anbieter aus (z. B. Sinch). Benennen Sie die SMS-Kanaloberfläche (z. B. SMS Marketing), wählen Sie die Konfiguration aus und geben Sie eine Absendernummer ein. Auswählen **Einsenden** oben rechts auf der Seite, um die Oberfläche des SMS-Kanals zu speichern. Lesen Sie die Dokumentation unter [Einrichten der Oberflächen von SMS-Kanälen](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=de#message-preset-sms).
 
-| Element | Beschreibung |
-|---------|----------|
-| **[!UICONTROL Name]** | Der Name der Instanz basierend auf dem Playbook. Sie können den Namen und die Beschreibung einer Instanz anpassen. Weitere Informationen finden Sie im Abschnitt zum [Bearbeiten von Instanzmetadaten](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata). |
-| **[!UICONTROL Status]** | Gibt den Status der Instanz an. Eine Instanz mit dem Status **[!UICONTROL Gesendet]** kann verwendet werden. |
-| **[!UICONTROL Erstellt]** | Gibt an, wann die Instanz erstellt wurde. |
-| **[!UICONTROL Erstellt von]** | Gibt an, wer die Instanz erstellt hat. |
-| **[!UICONTROL Zuletzt geändert]** | Gibt an, wann die Instanz zuletzt geändert wurde. |
+Konfigurieren Sie außerdem Kanäle für Playbooks, die Transaktionsnachrichten wie Bestellbestätigungen enthalten.
 
-{style="table-layout:auto"}
+### Push-Kanaloberfläche
 
-![Hervorgehobene Playbook-Instanz.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+Vergewissern Sie sich, dass die App über die Experience Platform- oder Datenerfassungs-Benutzeroberfläche konfiguriert ist. So sehen App-Oberflächen in der Umgebung &quot;Datenerfassungen&quot;aus.
 
-## Nächste Schritte – Erstellen einer Playbook-Instanz {#next-steps-create-instance}
+## Nächste Schritte {#next-steps}
 
-Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren. Weitere Informationen finden Sie im Handbuch zum [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Nachdem Sie dieses Dokument gelesen haben, sollten Sie wissen, wie Sie eine inspirierende Sandbox einrichten und mit verschiedenen Möglichkeiten zum Zugriff auf Anwendungsfallbücher in Platform vertraut sein können. Lesen Sie als nächsten Schritt, wie Sie [find](/help/use-case-playbooks/playbooks/find.md) das richtige Playbook.
+
