@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
 workflow-type: tm+mt
-source-wordcount: '3633'
-ht-degree: 88%
+source-wordcount: '3743'
+ht-degree: 85%
 
 ---
 
@@ -114,6 +114,14 @@ Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können
 Sie können auch über die Suchleiste nach Zielgruppen suchen; dabei wird die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) verwendet. Wenn Sie auf der Registerkarte **[!UICONTROL Zielgruppen]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. Wenn Sie beispielsweise eine Zielgruppen mit dem Namen `Online Shoppers` suchen, geben Sie in der Suchleiste „Online“ ein. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
 
 ## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
+
+>[!IMPORTANT]
+>
+>Ab der Version vom Juni 2024 stellen die Zeitbeschränkungen &quot;Dieser Monat&quot;und &quot;Dieses Jahr&quot;jeweils &quot;Aktueller Monat&quot;bzw. &quot;Aktuelles Jahr&quot;dar. Wenn Sie beispielsweise am 18. Juli eine Zielgruppe erstellt haben, die nach &quot;all Customers, deren Geburtstag diesen Monat auftritt&quot;sucht, erhält die Zielgruppe alle Kunden, deren Geburtstag vom 1. Juli bis 31. Juli stattgefunden hat. Am 1. August erhält diese Zielgruppe alle Kunden, deren Geburtstag vom 1. August bis zum 31. August auftritt.
+>
+>Zuvor waren &quot;Dieser Monat&quot;und &quot;dieses Jahr&quot;30 Tage bzw. 365 Tage, die Monate mit 31 Tagen und Schaltjahren nicht berücksichtigten.
+>
+>Um die Logik Ihrer Zielgruppen zu aktualisieren, speichern Sie Ihre zuvor erstellten Zielgruppen erneut.
 
 Eine Segmentdefinition ist eine Kollektion von Regeln, die zur Beschreibung der Hauptmerkmale oder Verhaltensweisen einer Zielgruppe dienen. Diese Regeln werden mithilfe der Arbeitsfläche des Regel-Builders in der Mitte von [!DNL Segment Builder] erstellt.
 
