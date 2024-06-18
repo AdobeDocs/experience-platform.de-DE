@@ -4,17 +4,17 @@ title: Experience Platform-APIs authentifizieren und aufrufen
 type: Tutorial
 description: Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 13%
+source-wordcount: '2149'
+ht-degree: 7%
 
 ---
 
 
 # Authentifizieren und Zugreifen auf Experience Platform-APIs
 
-Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können. Am Ende dieses Tutorials haben Sie die folgenden Anmeldeinformationen generiert oder erfasst, die als Kopfzeilen in allen Platform-API-Aufrufen erforderlich sind:
+Dieses Dokument bietet eine schrittweise Anleitung zum Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, um Experience Platform-APIs aufrufen zu können. Am Ende dieses Tutorials haben Sie die folgenden Anmeldeinformationen generiert oder erfasst, die als Kopfzeilen in allen Platform-API-Aufrufen erforderlich sind:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -50,7 +50,7 @@ Vor der Erstellung von Integrationen in der Adobe Developer Console muss Ihr Kon
 
 ### Entwicklerzugriff erlangen {#gain-developer-access}
 
-Kontakt [!DNL Admin Console] Administrator in Ihrer Organisation, um Sie als Entwickler zu einem Experience Platform-Produktprofil hinzuzufügen, indem Sie [[!DNL Admin Console]](https://adminconsole.adobe.com/). Siehe [!DNL Admin Console] Dokumentation für spezifische Anweisungen zum [Verwalten des Entwicklerzugriffs für Produktprofile](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+Kontakt [!DNL Admin Console] Administrator in Ihrer Organisation, um Sie als Entwickler zu einem Experience Platform-Produktprofil hinzuzufügen, indem Sie [[!DNL Admin Console]](https://adminconsole.adobe.com/). Siehe [!DNL Admin Console] Dokumentation für spezifische Anweisungen zum [Verwalten des Entwicklerzugriffs für Produktprofile](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 Nachdem Sie als Entwickler zugewiesen wurden, können Sie mit der Erstellung von Integrationen in [Adobe Developer-Konsole](https://www.adobe.com/go/devs_console_ui). Bei diesen Integrationen handelt es sich um eine Pipeline von externen Apps und Diensten zu Adobe-APIs.
 
@@ -88,15 +88,15 @@ Der Bildschirm **[!UICONTROL API hinzufügen]** wird angezeigt. Wählen Sie das 
 >
 >Wählen Sie die **[!UICONTROL Dokumente anzeigen]** -Option, um in einem separaten Browserfenster zum Abschluss zu navigieren [Experience Platform-API-Referenzdokumentation](https://developer.adobe.com/experience-platform-apis/).
 
-### Wählen Sie den Authentifizierungstyp OAuth Server-zu-Server aus. {#select-oauth-server-to-server}
+### Wählen Sie die [!UICONTROL OAuth Server-zu-Server] Authentifizierungstyp {#select-oauth-server-to-server}
 
-Wählen Sie anschließend den Authentifizierungstyp aus, um Zugriffstoken zu generieren und auf die Experience Platform-API zuzugreifen.
+Wählen Sie als Nächstes die [!UICONTROL OAuth Server-zu-Server] Authentifizierungstyp , um Zugriffstoken zu generieren und auf die Experience Platform-API zuzugreifen.
 
 >[!IMPORTANT]
 >
->Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]** -Methode, da dies künftig die einzige unterstützte Methode sein wird. Die **[!UICONTROL Dienstkonto (JWT)]** -Methode veraltet ist. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum auf die neue OAuth Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt . [!BADGE Veraltet]{type=negative}[JSON-Web-Token (JWT) generieren](#jwt).
+>Die **[!UICONTROL OAuth Server-zu-Server]** -Methode ist die einzige Token-Generierungsmethode, die in Zukunft unterstützt wird. Die zuvor unterstützte **[!UICONTROL Dienstkonto (JWT)]** -Methode ist veraltet und kann nicht für neue Integrationen ausgewählt werden. Auch wenn vorhandene Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen in die neue zu migrieren [!UICONTROL OAuth Server-zu-Server] -Methode vor diesem Datum. Weitere Informationen finden Sie im Abschnitt . [!BADGE Veraltet]{type=negative}[JSON-Web-Token (JWT) generieren](#jwt).
 
-![Wählen Sie Experience Platform-API.](./images/api-authentication/oauth-authentication-method.png)
+![Wählen Sie die OAuth-Server-zu-Server-Authentifizierungsmethode für die Experience Platform-API aus.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Produktprofile für Ihre Integration auswählen {#select-product-profiles}
 
@@ -119,7 +119,7 @@ Eine exemplarische Vorgehensweise zum Einrichten einer Integration mit der Exper
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
-### Sammeln von -Anmeldeinformationen {#gather-credentials}
+### Sammeln von Anmeldeinformationen {#gather-credentials}
 
 Nachdem die API zum Projekt hinzugefügt wurde, wird die **[!UICONTROL Experience Platform-API]** -Seite für das Projekt zeigt die folgenden Anmeldeinformationen an, die für alle Aufrufe von Experience Platform-APIs erforderlich sind:
 
@@ -154,11 +154,11 @@ Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffstoken
 
 >[!WARNING]
 >
-Die JWT-Methode zum Generieren von Zugriffs-Token wird nicht mehr unterstützt. Alle neuen Integrationen müssen mit der [Authentifizierungsmethode OAuth-Server-zu-Server](#select-oauth-server-to-server) erstellt werden. Adobe empfiehlt auch, Ihre vorhandenen Integrationen zur OAuth-Methode zu migrieren. Lesen Sie die folgende wichtige Dokumentation:
+Die JWT-Methode zum Generieren von Zugriffs-Token wird nicht mehr unterstützt. Alle neuen Integrationen müssen mit der [Authentifizierungsmethode OAuth-Server-zu-Server](#select-oauth-server-to-server) erstellt werden. Für Adobe müssen Sie Ihre vorhandenen Integrationen bis zum 1. Januar 2025 zur OAuth-Methode migrieren, damit Ihre Integrationen weiterhin funktionieren. Lesen Sie die folgende wichtige Dokumentation:
 > 
-* [Handbuch für die Migration Ihrer Anwendungen von JWT zu OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+* [Migrationshandbuch für Ihre Anwendungen von JWT zu OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Implementierungshandbuch für neue und alte Programme mit OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [Vorteile der Verwendung der Anmeldemethode OAuth-Server-zu-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+* [Vorteile der Verwendung der OAuth-Server-zu-Server-Anmeldemethode](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Eingestellte Informationen anzeigen
 
@@ -313,7 +313,7 @@ Vor der Erstellung von Integrationen in der Adobe Developer Console muss Ihr Kon
 
 ### Hinzufügen von Entwicklern zum Produktprofil {#add-developers-to-product-profile}
 
-Gehen Sie zu [[!DNL Admin Console]](https://adminconsole.adobe.com/) und melden Sie sich mit Ihrer Adobe ID an.
+Navigieren Sie zu [[!DNL Admin Console]](https://adminconsole.adobe.com/) und melden Sie sich mit Ihrer Adobe ID an.
 
 Auswählen **[!UICONTROL Produkte]**, wählen Sie **[!UICONTROL Adobe Experience Platform]** aus der Liste der Erzeugnisse.
 
