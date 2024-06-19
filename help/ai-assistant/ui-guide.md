@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform
 description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform- und Real-time Customer Data Platform-Konzepten navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Handbuch zur Benutzeroberfläche des AI-Assistenten
 
 In diesem Handbuch erfahren Sie, wie Sie den KI-Assistenten in der Adobe Experience Platform-Benutzeroberfläche verwenden können.
+
+Das folgende Video soll Ihr Verständnis von AI Assistant unterstützen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Zugriff auf den KI-Assistenten in der Experience Platform-Benutzeroberfläche
 
@@ -81,7 +85,7 @@ Sie können auch die Vorschläge verwenden, die der KI-Assistent unter **[!UICON
 
 +++
 
-### Operative Einblicke {#operational-insights}
+### Betriebliche Erkenntnisse {#operational-insights}
 
 Sie müssen sich in einer aktiven Sandbox befinden, damit der KI-Assistent ausreichend auf eine Frage zu Ihren operativen Einblicken antworten kann.
 
@@ -111,6 +115,22 @@ Sie können auch Filter bereitstellen und Änderungen an Ihren Fragen vornehmen 
 
 +++
 
+### Überprüfen der betrieblichen Insights-Antworten {#verify-responses}
+
+Sie können jede Antwort im Zusammenhang mit betrieblichen Insights-Fragen mithilfe einer SQL-Abfrage überprüfen, die von AI Assistant bereitgestellt wird.
+
++++Auswählen zum Anzeigen eines Beispiels für die Überprüfung operativer Insights-Antworten
+
+Nachdem Sie eine Antwort auf eine operative Insights-Frage erhalten haben, wählen Sie **[!UICONTROL Quellen anzeigen]** und wählen Sie **[!UICONTROL Quellabfrage anzeigen]**.
+
+![Quellabfrage anzeigen](./images/view-source-query.png)
+
+Bei Fragen zu operativen Einblicken stellt der AI-Assistent eine SQL-Abfrage bereit, mit der Sie den Prozess zur Berechnung der Antwort überprüfen können. Diese Quellabfrage dient nur zu Überprüfungszwecken und wird von Query Service nicht unterstützt.
+
+![Beispiel einer Quellabfrage](./images/source-query.png)
+
++++
+
 ### Automatische Vervollständigung verwenden {#use-auto-complete}
 
 Sie können die Funktion zum automatischen Ausfüllen verwenden, um eine Liste von Datenobjekten zu erhalten, die in Ihrer Sandbox vorhanden sind. Empfehlungen zur automatischen Vervollständigung stehen für die folgenden Domänen zur Verfügung: Zielgruppen, Schemata, Datensätze, Quellen und Ziele.
@@ -132,6 +152,14 @@ Sie können die mehrgleisigen Funktionen des KI-Assistenten verwenden, um währe
 Im folgenden Beispiel wird der KI-Assistent zunächst nach der Gesamtzahl der Datenflüsse gefragt und dann aufgefordert, die 10 neuesten Datenflüsse aufzulisten.
 
 ![Beispiel einer Mehrfachumstellung](./images/multiturn.png)
+
++++
+
+### Neue Unterhaltung beginnen
+
+Sie können Themen mit dem KI-Assistenten ändern, indem Sie eine neue Unterhaltung zurücksetzen und starten.
+
++++Auswählen , um ein Beispiel für das Zurücksetzen der Konversation anzuzeigen
 
 Um das Zurücksetzen vorzunehmen, wählen Sie die Auslassungszeichen (**`...`**) auf der Benutzeroberfläche des AI-Assistenten und wählen Sie **[!UICONTROL Neue Unterhaltung beginnen]**. Dies informiert den AI-Assistenten darüber, dass Sie beabsichtigen, Themen zu ändern. Dies kann besonders bei der Fehlerbehebung von Abfragen hilfreich sein, die entweder fehlschlagen oder auf falsche Informationen verweisen.
 

@@ -2,10 +2,10 @@
 title: KI-Assistent in Adobe Experience Platform - Überblick
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 2%
+source-wordcount: '820'
+ht-degree: 7%
 
 ---
 
@@ -55,7 +55,7 @@ Produktkenntnis bezieht sich auf Konzepte und Themen, die auf der Experience Lea
 
 {style="table-layout:auto"}
 
-### Operative Einblicke {#operational-insights}
+### Betriebliche Erkenntnisse {#operational-insights}
 
 >[!IMPORTANT]
 >
@@ -69,14 +69,18 @@ Operative Einblicke beziehen sich auf Antworten, die der KI-Assistent über Ihre
 
 Sie können in den folgenden Bereichen Fragen zu Ihren operativen Einblicken an den KI-Assistenten stellen:
 
-* Attribute
-* Zielgruppen
-* Datenflüsse
-* Datensätze
-* Ziele _(Fragen zu Konten und einige Fragen zum Datenfluss können derzeit nicht beantwortet werden.)_
-* Journeys
-* Schemas _(Fragen zu Feldergruppen können derzeit nicht beantwortet werden.)_
-* Quellen _(Fragen zu den Rechnungsabschlüssen können derzeit nicht beantwortet werden.)_
+| Domain | Unterstützte Metadaten |
+| --- | --- |
+| Attribute | <ul><li>Nachschlagen von Attributnamen</li><li>Attribut - Schemabeziehung</li><li>Attribut - Datensatzbeziehung</li><li>Attribut - Zielgruppenbeziehung</li><li>Attribut - Zielbeziehung</li><li>Nicht verwendete Attribute</li></ul> |
+| Zielgruppen | <ul><li>Zielgruppengröße</li><li>Zielgruppentyp (Streaming oder Batch)</li><li>Erstellungs-/Änderungsdatum</li><li>Aktivierungsstatus</li><li>Anzahl der Profile</li><li>Zielgruppen duplizieren</li><li>Suchen nach Zielgruppendefinitionen</li><li>Zielgruppe - Attributbeziehung</li><li>Zielgruppe - Datensatzbeziehung</li><li>Zielgruppe - Zielbeziehung</li><li>InSegment-Regeln</li><li>Nachschlagen von Namen</li><li>Name und ID-Suche |
+| Datenflüsse | <ul><li>Dataflow-Anzahl</li><li>Datenflussstatus</li><li>Datenfluss - Datensatzbeziehung</li><li>Datenfluss - Quellbeziehung</li></ul> |
+| Datensätze | <ul><li>Datensatzanzahl</li><li>Profil - Aktivierungsstatus</li><li>Erstellungs-/Änderungsdatum</li><li>Datensatz - Schemabeziehung</li><li>Datensatz - Zielgruppenbeziehung</li><li>Datensatz - Attributbeziehung</li><li>Datensatz - Datenfluss-Beziehung</li><li>Nachschlagen von Namen </li><li>Name und ID-Suche</li></ul> |
+| Ziele | <ul><li>Konfigurierte Zielzahlen</li><li>Ziel - Zielgruppenbeziehung</li><li>Zielattribut-Beziehung</li></ul> |
+| Journeys | <ul><li>Zählungen</li><li>Nachschlagen von Namen</li><li>Name und ID-Suche</li><li>Journey-Status</li><li>Ausgelöster Status (Zielgruppe vs. Ereignisse)</li><li>Erstellungs-/Änderungsdatum</li><li>Häufigkeit</li></ul> |
+| Schemata | <ul><li>Schemaanzahl</li><li>Erstellungs-/Änderungsdatum</li><li>Schema-Klassentyp</li><li>Schema - Attributbeziehung</li><li>Schema - Datensatzbeziehung</li><li>Schema - Zielgruppenbeziehung</li><li>Profil - Aktivierungsstatus</li><li>Nachschlagen von Namen</li><li>Name und ID-Suche</li></ul> |
+| Quellen | <ul><li>Kontonumzählungen</li><li>Kontostatus</li><li>Aktive/inaktive Datenflüsse für jedes Konto</li><li>Quell-Connector - Datenfluss-Beziehung</li><li>Quellkonto - Datenfluss-Beziehung</li></ul> |
+
+{style="table-layout:auto"}
 
 Bei Fragen zu operativen Einblicken spiegeln die Antworten möglicherweise nicht den aktuellen Status der Benutzeroberfläche wider. Die Daten, die diese Fragen unterstützen, werden alle 24 Stunden aktualisiert. Beispielsweise werden Änderungen, die Benutzer tagsüber in Real-Time CDP vornehmen, mit den Datenspeichern nachts synchronisiert und stehen dann morgens für Benutzerfragen zur Verfügung. Sie müssen sich bei einer Sandbox anmelden, um sich über bestimmte Daten zu Objekten zu informieren.
 
