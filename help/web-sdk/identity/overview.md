@@ -2,7 +2,7 @@
 title: Identitätsdaten in Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen und verwalten.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 2%
@@ -104,7 +104,7 @@ alloy("getIdentity")
   });
 ```
 
-## Verwenden `identityMap`
+## Verwenden `identityMap` {#using-identitymap}
 
 Verwenden eines XDM [`identityMap` field](../../xdm/schema/composition.md#identityMap)können Sie ein Gerät/einen Benutzer anhand mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre ID gilt. Wenn keine Kennung als `primary`, ist standardmäßig die `ECID`.
 

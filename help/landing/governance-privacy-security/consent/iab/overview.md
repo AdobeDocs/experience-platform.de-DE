@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IAB TCF 2.0-Unterstützung für Experience Platform
 description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schemata konfigurieren, um bei der Aktivierung von Segmenten für Ziele in Adobe Experience Platform Auswahlmöglichkeiten für die Kundenzustimmung zu vermitteln.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Dieses Handbuch setzt außerdem ein Verständnis der folgenden Platform-Dienste 
 * [Adobe Experience Platform Identity-Dienst](/help/identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 * [Echtzeit-Kundenprofil](/help/profile/home.md): Verwendet [!DNL Identity Service] , um aus Ihren Datensätzen in Echtzeit detaillierte Kundenprofile zu erstellen. [!DNL Real-Time Customer Profile] ruft Daten aus dem Data Lake ab und behält Kundenprofile in einem eigenen separaten Datenspeicher bei.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Eine Client-seitige JavaScript-Bibliothek, mit der Sie verschiedene Platform-Dienste in Ihre kundenorientierte Website integrieren können.
-   * [SDK-Zustimmungsbefehle](/help/web-sdk/consent/supporting-consent.md): Eine Anwendungsfallübersicht der einwilligungsbezogenen SDK-Befehle, die in diesem Handbuch angezeigt werden.
+   * [SDK-Zustimmungsbefehle](../../../../web-sdk/commands/setconsent.md): Eine Anwendungsfallübersicht der einwilligungsbezogenen SDK-Befehle, die in diesem Handbuch angezeigt werden.
 * [Adobe Experience Platform-Segmentierungsdienst](/help/segmentation/home.md): Ermöglicht die Teilung [!DNL Real-Time Customer Profile] Daten in Gruppen von Einzelanwendern, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
 
 Zusätzlich zu den oben aufgeführten Platform-Diensten sollten Sie auch mit [Ziele](/help/data-governance/home.md) und ihre Rolle im Platform-Ökosystem.

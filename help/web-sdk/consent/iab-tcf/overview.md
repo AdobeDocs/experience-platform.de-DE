@@ -3,9 +3,9 @@ title: IAB TCF 2.0-Unterstützung im Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie IAB TCF 2.0-Zustimmungsvoreinstellungen mithilfe des Adobe Experience Platform Web SDK unterstützen.
 keywords: consent; setConsent; Profildatenschutzfeldgruppe; Experience Event Privacy Field-Gruppe; Datenschutzfeldgruppe; IAB TCF 2.0; Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -69,16 +69,16 @@ Wenn Sie beispielsweise einen Kunden haben, der nicht in den Zuständigkeitsbere
 
 ### Festlegen der Zustimmung bei Änderungen
 
-Das Adobe Experience Platform Web SDK verfügt über eine `setConsent` -Befehl, der die Zustimmungsvoreinstellungen Ihres Kunden an alle Adobe-Dienste übermittelt, die IAB TCF 2.0 verwenden. Wenn Sie mit Real-Time CDP integrieren, wird dadurch das Kundenprofil aktualisiert. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden künftiger Seiten wird das Cookie für die Zustimmung des Edge-Netzwerks gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
+Das Adobe Experience Platform Web SDK verfügt über eine `setConsent` -Befehl, der die Zustimmungsvoreinstellungen Ihres Kunden an alle Adobe-Dienste übermittelt, die IAB TCF 2.0 verwenden. Wenn Sie mit Real-Time CDP integrieren, wird dadurch das Kundenprofil aktualisiert. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden einer zukünftigen Edge Network-Seite wird das Cookie zur Zustimmung gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
 
-Ähnlich wie bei der IAB TCF 2.0-Integration von Audience Manager erteilt das Edge Network eine Zustimmung, wenn ein Kunde seine ausdrückliche Zustimmung zu folgenden Zwecken erteilt hat:
+Ähnlich wie bei der IAB TCF 2.0-Integration des Audience Managers erteilt das Edge Network eine Zustimmung, wenn ein Kunde seine ausdrückliche Zustimmung zu folgenden Zwecken erteilt hat:
 
 - **Zweck 1:** Informationen auf einem Gerät speichern und/oder aufrufen
 - **Zweck 10:** Produkte entwickeln und verbessern
 - **Zweckbestimmung 1:** Sicherheit, Vermeidung von Betrug und Fehlerbehebung. (Gemäß den IAB-TCF-Vorschriften wird dies immer zugestimmt.)
 - **Adobe Vendor-Berechtigung:** Zustimmung für Adobe (Hersteller 565)
 
-Weitere Informationen über `setConsent` -Befehl, lesen Sie die Dokumentation unter [Unterstützende Zustimmung](../../consent/supporting-consent.md).
+Weitere Informationen über `setConsent` -Befehl, lesen Sie die dedizierte Web SDK-Dokumentation unter [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Hinzufügen der Zustimmung zu Erlebnisereignissen
 

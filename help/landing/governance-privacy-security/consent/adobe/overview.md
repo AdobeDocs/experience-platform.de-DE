@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zustimmungsverarbeitung in Adobe Experience Platform
 description: Erfahren Sie, wie Sie in Adobe Experience Platform mithilfe des Adobe 2.0-Standards Zustimmungssignale von Kunden verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Dieses Handbuch setzt ein Verständnis der verschiedenen Experience Platform-Die
 * [Adobe Experience Platform Identity-Dienst](/help/identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 * [Echtzeit-Kundenprofil](/help/profile/home.md): Verwendet [!DNL Identity Service] Funktionen zum Erstellen detaillierter Kundenprofile aus Ihren Datensätzen in Echtzeit. Das Echtzeit-Kundenprofil ruft Daten aus dem Data Lake ab und behält Kundenprofile in seinem eigenen Datenspeicher bei.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): Eine Client-seitige JavaScript-Bibliothek, mit der Sie verschiedene Platform-Dienste in Ihre kundenorientierte Website integrieren können.
-   * [SDK-Zustimmungsbefehle](/help/web-sdk/consent/supporting-consent.md): Eine Anwendungsfallübersicht der einwilligungsbezogenen SDK-Befehle, die in diesem Handbuch angezeigt werden.
+   * [SDK-Zustimmungsbefehle](../../../../web-sdk/commands/setconsent.md): Eine Anwendungsfallübersicht der einwilligungsbezogenen SDK-Befehle, die in diesem Handbuch angezeigt werden.
 * [Adobe Experience Platform-Segmentierungsdienst](/help/segmentation/home.md): Ermöglicht es Ihnen, Echtzeit-Kundenprofildaten in Gruppen von Einzelanwendern zu unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
 
 ## Zusammenfassung des Zustimmungsverarbeitungsflusses {#summary}
@@ -51,7 +51,7 @@ In der aktuellen Version der Unterstützung für die Verarbeitung der Einwilligu
 >
 >Weitere Informationen zur Struktur der oben erwähnten XDM-Einwilligungsfelder finden Sie im Handbuch zum [[!UICONTROL Einverständnis und Voreinstellungen] Datentyp](/help/xdm/data-types/consents.md).
 
-Sobald das System konfiguriert wurde, interpretiert das Platform Web SDK den Wert für die Datenerfassungs-Einwilligung für den aktuellen Benutzer, um festzustellen, ob die Daten an das Adobe Experience Platform Edge Network gesendet, vom Client abgelegt oder beibehalten werden sollen, bis die Datenerfassungsberechtigung auf &quot;Ja&quot;oder &quot;Nein&quot;festgelegt ist.
+Sobald das System konfiguriert wurde, interpretiert das Platform Web SDK den Wert für die Datenerfassungs-Einwilligung für den aktuellen Benutzer, um festzustellen, ob die Daten an das Adobe Experience Platform-Edge Network gesendet, vom Client abgelegt oder beibehalten werden sollen, bis die Datenerfassungsberechtigung auf &quot;Ja&quot;oder &quot;Nein&quot;festgelegt ist.
 
 ## Ermitteln, wie Sie in Ihrem CMP Kundenzustimmungsdaten generieren {#consent-data}
 
