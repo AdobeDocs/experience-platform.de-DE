@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, Juni 2024
 description: Versionshinweise vom Juni 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e1b56c6150274748c35fedfc1e1b6bbbf66d1bfb
+source-git-commit: b9707c40beec3000456510a8a384a0af58d6d9fa
 workflow-type: tm+mt
-source-wordcount: '1195'
-ht-degree: 21%
+source-wordcount: '1357'
+ht-degree: 20%
 
 ---
 
@@ -23,6 +23,7 @@ Neue Funktionen in Adobe Experience Platform:
 - [Authentifizierung bei Experience Platform-APIs](#authentication-platform-apis)
 - [Datenvorbereitung](#data-prep)
 - [Ziele](#destinations)
+- [Identity Service](#identity-service)
 - [Privacy Service](#privacy)
 - [Segmentierungs-Service](#segmentation)
 - [Anwendungsfall-Playbooks](#use-case-playbooks)
@@ -48,7 +49,7 @@ Die JWT-Methode zum Abrufen von Zugriffstoken wird jetzt für neue Integrationen
 
 Während bestehende API-Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu dieser neuen OAuth-Server-zu-Server-Methode zu migrieren. Lesen Sie das Handbuch unter [Migration von JWT-Anmeldedaten (Service Account) zu OAuth-Server-zu-Server-Anmeldedaten](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
-## Datenvorbereitung (#data-prep)
+## Datenvorbereitung {#data-prep}
 
 Verwenden Sie die Datenvorbereitung zum Zuordnen, Transformieren und Überprüfen von Daten zum Experience-Datenmodell (XDM) und aus ihm.
 
@@ -56,7 +57,7 @@ Verwenden Sie die Datenvorbereitung zum Zuordnen, Transformieren und Überprüfe
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Hinzufügung der Liste reservierter Suchbegriffe | Die folgenden Wörter wurden zur Liste der vorkonfigurierten reservierten Suchbegriffe hinzugefügt:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul>. Weitere Informationen finden Sie im Abschnitt [Funktionsleitfaden für Datenvorbereitung](../../data-prep/functions.md). |
+| Hinzufügung der Liste reservierter Suchbegriffe | Die folgenden Wörter wurden zur Liste der vorkonfigurierten reservierten Suchbegriffe hinzugefügt:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> Weitere Informationen finden Sie im Abschnitt [Funktionsleitfaden für Datenvorbereitung](../../data-prep/functions.md). |
 
 {style="table-layout:auto"}
 
@@ -77,6 +78,20 @@ Weitere Informationen zur Datenvorbereitung finden Sie im Abschnitt [Datenvorber
 {style="table-layout:auto"}
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
+## Identity Service {#identity-service}
+
+Verwenden Sie Adobe Experience Platform Identity Service, um eine umfassende Übersicht über Ihre Kunden und deren Verhalten zu erstellen, indem Sie Identitäten geräteübergreifend zusammenführen und so effektive, persönliche digitale Erlebnisse in Echtzeit bereitstellen.
+
+**Künftige Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Regeln zur Verknüpfung von Identitätsdiagrammen | Teilnehmer des Betaprogramms können mithilfe von Identitätsdiagramm-Verknüpfungsregeln sicherstellen, dass Personen-Entitäten im System dargestellt werden, indem &quot;freigegebene Geräte&quot;und andere Szenarien zum Reduzieren von Diagrammen verhindert werden. Um dieses Ziel zu erreichen, haben Teilnehmer des Betaprogramms Zugriff auf drei Funktionen in einer Entwicklungs-Sandbox-Umgebung: <ul><li>Das Tool zur Diagrammsimulation , um zu verstehen, wie der Diagrammalgorithmus funktioniert.</li><li>Auf dem Bildschirm &quot;Identitätseinstellungen&quot;können Sie eindeutige Namespaces und Namespace-Prioritäten konfigurieren.</li><li>Ein Identitäts-Dashboard, um Einblicke in aufgenommene Diagramme zu erhalten.</li></ul> Darüber hinaus wird das Betaprogramm Verbesserungen der Stabilität des Profilverhaltens enthalten. Weitere Informationen finden Sie im Abschnitt [Verknüpfungsregeln für Identitätsdiagramme](../../identity-service/identity-graph-linking-rules/overview.md) Dokumentation. |
+
+{style="table-layout:auto"}
+
+Weiterführende Informationen zu Identity Service finden Sie in der [Übersicht zu Identity Service](../../identity-service/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
