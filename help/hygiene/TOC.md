@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zur erweiterten Verwaltung des Datenlebenszyklus
 user-guide-description: Löschen Sie einzelne Datensätze und planen Sie die Ablauffristen von Datensätzen in Experience Platform für die Datenbereinigung, das Entfernen anonymer Daten und die Datenminimierung.
 feature: Data Hygiene
 role: User, Developer, Admin
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 9885c0d75ac28cfd73179b63b3d54da9b0ccf967
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 72%
+source-wordcount: '67'
+ht-degree: 73%
 
 ---
 
@@ -27,3 +27,4 @@ ht-degree: 72%
    * [Löschen von Datensätzen](./api/jobs.md)
    * [(Beta) Löschen von Datensätzen](./api/workorder.md)
    * [Kontingent](./api/quota.md)
+* [Best Practices](./best-practices.md)
