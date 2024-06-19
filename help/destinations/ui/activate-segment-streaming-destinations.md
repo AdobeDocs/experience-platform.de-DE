@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppendaten für Streaming-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren, indem Sie sie Streaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 16%
+source-wordcount: '1188'
+ht-degree: 19%
 
 ---
 
@@ -79,7 +79,9 @@ Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identit
 
 1. Im **[!UICONTROL Quellfeld auswählen]** Seite, verwenden Sie die **[!UICONTROL Attribute auswählen]** oder **[!UICONTROL Identitäts-Namespace auswählen]** Optionen, um zwischen den beiden Kategorien der verfügbaren Quellfelder zu wechseln. In der [!DNL XDM] Profilattribute und Identitäts-Namespaces, die Sie dem Ziel zuordnen möchten, auswählen und dann **[!UICONTROL Auswählen]**.
 
-   ![Wählen Sie die Quellfeldseite aus, die mehrere verfügbare Quellfelder anzeigt.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   Verwenden Sie die **[!UICONTROL Nur Felder mit Daten anzeigen]** umschalten, um nur Schemafelder anzuzeigen, die mit Werten gefüllt sind. Standardmäßig werden nur ausgefüllte Schemafelder angezeigt.
+
+   ![Wählen Sie die Quellfeldseite aus, die mehrere verfügbare Quellfelder anzeigt.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. Wählen Sie die Schaltfläche rechts neben dem **[!UICONTROL Zielfeld]** eingeben.
 
@@ -91,23 +93,23 @@ Bei einigen Zielgruppen-Streaming-Zielen müssen Sie Quellattribute oder Identit
 
 1. Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die Schritte 1 bis 5.
 
-### Umwandlung anwenden {#apply-transformation}
+### Transformation anwenden {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="Umwandlung anwenden"
+>title="Transformation anwenden"
 >abstract="Aktivieren Sie diese Option, wenn Sie nicht gehashte Quellfelder verwenden, damit diese automatisch von Adobe Experience Platform bei der Aktivierung gehasht werden."
 
 Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
 
 ![Wenden Sie die Transformationssteuerung an, die im Schritt Identitätszuordnung hervorgehoben ist.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Zielgruppenexport planen {#scheduling}
+## Planen eines Zielgruppenexports {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Enddatum"
->abstract="Das Hinzufügen eines Enddatums zum Zielgruppen-Zeitplan ist nicht verfügbar."
+>abstract="Dem Zielgruppenzeitplan kann kein Enddatum hinzugefügt werden."
 
 Standardmäßig wird die Variable **[!UICONTROL Zielgruppenplanung]** zeigt nur die neu ausgewählten Zielgruppen an, die Sie im aktuellen Aktivierungsablauf ausgewählt haben.
 
@@ -141,7 +143,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** auswählen **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]** , um zu sehen, welche Zustimmungsrichtlinien angewendet werden und wie viele Profile infolge dieser Aktivierung in die Aktivierung einbezogen werden. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
+Wenn Ihr Unternehmen **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben hat, wählen Sie **[!UICONTROL Aktuelle Einverständnisrichtlinien anzeigen]** aus, um zu sehen, welche Einverständnisrichtlinien angewendet werden und wie viele Profile in der Aktivierung enthalten sind. Informationen [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
 ### Prüfungen von Datennutzungsrichtlinien {#data-usage-policy-checks}
 
