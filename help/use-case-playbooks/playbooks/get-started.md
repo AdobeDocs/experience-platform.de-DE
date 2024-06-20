@@ -4,7 +4,7 @@ title: Erste Schritte mit Anwendungsbeispiel-Playbooks
 description: Erfahren Sie, wie Sie die ersten Schritte mit der Funktion „Playbooks für Anwendungsfälle“ ausführen.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 15%
@@ -113,4 +113,4 @@ Lesen Sie die Dokumentation unter [Einrichten von Push-Kanal-Oberflächen](https
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit &quot;Anwendungsfall-Playbooks&quot;erstellt haben, die im linken Navigationsbereich verfügbar sind. Sie wissen jetzt auch, wie Sie Ihren Teammitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie Sie [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md) für Sie und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Nachdem Sie alle Schritte in diesem Dokument ausgeführt haben, sollten Sie eine Entwicklungs-Sandbox mit &quot;Anwendungsfall-Playbooks&quot;erstellt haben, die im linken Navigationsbereich verfügbar sind. Sie wissen jetzt auch, wie Sie Ihren Teammitgliedern die erforderlichen Berechtigungen zum Anzeigen und Verwalten von Playbooks und zum Generieren von Assets gewähren. Lesen Sie als nächsten Schritt, wie Sie [das richtige Playbook auswählen](/help/use-case-playbooks/playbooks/choose.md) für Sie und dann [Instanzen daraus erstellen](/help/use-case-playbooks/playbooks/create-share-reuse.md).

@@ -4,14 +4,14 @@ title: Übersicht über das Datenbewusstsein in "Anwendungsfallbüchern"
 description: Erfahren Sie, wie Sie die Wertschöpfungszeit beschleunigen können, indem Sie die in der zugrunde liegenden inspirierenden Sandbox erstellten Assets in andere Sandboxes kopieren.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Veröffentlichen von von Playbook generierten Assets in anderen Sandboxes {#publish-to-other-sandboxes}
+# Publish-Playbook-generierte Assets in andere Sandboxes {#publish-to-other-sandboxes}
 
 Anwendungsbeispiele sind Marketing-Vorlagen, mit denen Assets wie Zielgruppen, Schemata oder Journey für gängige Marketing-Anwendungsfälle generiert werden. Sie können die von Playbooks erstellten Assets in der inspirierenden Sandbox testen. Sobald Sie bereit sind, können Sie die Assets in andere Entwicklungs-Sandboxes importieren, um sie mit den in diesen Sandboxes verfügbaren Daten weiter zu testen. Wenn Sie mit dem Test zufrieden sind, können Sie die Assets dann aus Entwicklungs-Sandboxes in Produktions-Sandboxes verschieben.
 
@@ -19,7 +19,7 @@ In bestimmten Fällen haben Sie jedoch möglicherweise bereits Ihre eigenen Sche
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie dieses Tutorial lesen, durchsuchen Sie die [Verfügbare Anwendungsfall-Playbook-Vorlagen](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) und [Erstellen einer Instanz](/help/use-case-playbooks/playbooks/create-share-reuse.md) eines bevorzugten Playbooks.
+Bevor Sie dieses Tutorial lesen, durchsuchen Sie die [Verfügbare Anwendungsfall-Playbook-Vorlagen](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) und [Erstellen einer Instanz](/help/use-case-playbooks/playbooks/create-share-reuse.md) eines bevorzugten Playbooks.
 
 Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Schemata und Nachrichten in der inspirierenden Sandbox generiert. Lesen Sie weiter, um zu erfahren, wie Sie diese Assets in andere Sandboxes kopieren können.
 
@@ -29,11 +29,11 @@ Beim Erstellen einer Instanz wird ein Satz von Assets wie Journey, Segmenten, Sc
 >
 > Sie können Pakete nur in andere Entwicklungs-Sandboxes importieren. Sobald Sie alle erforderlichen Änderungen oder Aktualisierungen vorgenommen haben, können Sie die Assets oder Pakete aus diesen Entwicklungs-Sandboxes in die Produktion importieren. Sie können nicht direkt aus den Sandboxes &quot;Anwendungsfall-Playbooks&quot;in die Produktion importieren.
 
-1. Um Objekte aus der inspirierenden Sandbox in eine andere Sandbox zu importieren, navigieren Sie zu einer gewünschten Instanz eines Anwendungsfallbuchs und wählen Sie **[!UICONTROL In einer anderen Sandbox veröffentlichen]** um die Artefakte als Paket zu exportieren.
+1. Um Objekte aus der inspirierenden Sandbox in eine andere Sandbox zu importieren, navigieren Sie zu einer gewünschten Instanz eines Anwendungsfallbuchs und wählen Sie **[!UICONTROL Publish in eine andere Sandbox]** um die Artefakte als Paket zu exportieren.
 
    ![GIF mit den verschiedenen Anwendungsfallinstanzen](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Nachdem Sie die **[!UICONTROL In einer anderen Sandbox veröffentlichen]** -Schaltfläche, wird ein Modal angezeigt. Geben Sie den Namen und die optionale Beschreibung ein und wählen Sie **[!UICONTROL Erstellen]**. In diesem Schritt werden die generierten Assets in einem Paket gebündelt, das in eine andere Sandbox importiert werden kann.
+2. Nachdem Sie die **[!UICONTROL Publish in eine andere Sandbox]** -Schaltfläche, wird ein Modal angezeigt. Geben Sie den Namen und die optionale Beschreibung ein und wählen Sie **[!UICONTROL Erstellen]**. In diesem Schritt werden die generierten Assets in einem Paket gebündelt, das in eine andere Sandbox importiert werden kann.
 
    ![Ein Modal zum Erstellen eines Pakets](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 

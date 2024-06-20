@@ -4,9 +4,9 @@ title: Verfügbare Anwendungsbeispiele für Real-time Customer Data Platform und
 description: Eine Liste aller Bücher in Real-time Customer Data Platform und Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -77,4 +77,4 @@ Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu 
 
 ## Nächste Schritte
 
-Nachdem Sie die verfügbaren Bücher kennen, lesen Sie die [Leitfaden für Entdeckungen](/help/use-case-playbooks/playbooks/discover.md) , um zu erfahren, wie Sie mit den Playbooks in der Benutzeroberfläche beginnen.
+Nachdem Sie die verfügbaren Bücher kennen, lesen Sie das hier [Handbuch](/help/use-case-playbooks/playbooks/choose.md) um zu verstehen, wie man mit den Büchern beginnt und das richtige in der Benutzeroberfläche auswählt.

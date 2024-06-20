@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise, Juni 2024
 description: Versionshinweise vom Juni 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9707c40beec3000456510a8a384a0af58d6d9fa
+source-git-commit: b2b38c1b540d074998e96712465ff52c68371004
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1358'
 ht-degree: 20%
 
 ---
@@ -127,7 +127,7 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersic
 
 Lesen Sie zunächst den Abschnitt [Anwendungsbeispiele - Übersicht](/help/use-case-playbooks/playbooks/overview.md), der einen Überblick über die Funktionen der Playbooks, ihren Zweck und eine umfassende Demonstration bietet, einschließlich der Erstellung von Instanzen und des Imports von generierten Assets in andere Sandbox-Umgebungen.
 
-Informationen dazu, wie Sie eine inspirierende Sandbox aufrufen und einrichten können, um verschiedene Anwendungsfallbücher zu experimentieren und zu untersuchen, finden Sie in den [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md) Dokument.
+Informationen dazu, wie Sie eine inspirierende Sandbox aufrufen und einrichten können, um verschiedene Anwendungsfallbücher zu experimentieren und zu untersuchen, finden Sie in den [Navigieren Sie zu &quot;Anwendungsfall-Playbooks&quot;.](/help/use-case-playbooks/playbooks/navigate.md) Dokument.
 
 Weitere Informationen zu [!DNL Use Case Playbooks], lesen Sie die folgenden Dokumentationsseiten:
 

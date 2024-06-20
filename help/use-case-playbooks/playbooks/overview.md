@@ -4,10 +4,10 @@ title: Playbooks für Anwendungsfälle – Übersicht
 description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion „Playbooks für Anwendungsfälle – Übersicht“ erste Schritte mit verschiedenen Marketing-Anwendungsfällen ausführen können
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 31%
+source-wordcount: '533'
+ht-degree: 30%
 
 ---
 
@@ -20,7 +20,7 @@ Inhalt dieses Dokumentationshandbuchs:
 * **[Übersicht über die Funktion „Playbooks für Anwendungsfälle“](#overview)**
 * [Erste Schritte mit den erforderlichen Konfigurationen und Berechtigungen](/help/use-case-playbooks/playbooks/get-started.md)
 * [Verfügbare Anwendungsfälle Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [Finden des richtigen Playbooks](/help/use-case-playbooks/playbooks/discover.md)
+* [Auswahl aus einer Auswahl an Büchern](/help/use-case-playbooks/playbooks/choose.md)
 * [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Kopieren Sie von Playbook generierte Assets in andere Umgebungen mithilfe der Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [Fehlerbehebung und bekannte Einschränkungen](troubleshooting.md)
@@ -54,7 +54,7 @@ Einige [!UICONTROL Anwendungsbeispiele für Playbooks] sind auf Real-Time CDP-An
 
 ## Handbücher zur Benutzeroberfläche {#ui-guides}
 
-Nachdem Sie sich für das gewünschte Playbook entschieden haben, wählen Sie es in der Benutzeroberfläche aus und führen Sie die ersten Schritte durch. Benutzerhandbücher lesen unter [Entdecken Sie das richtige Playbook](/help/use-case-playbooks/playbooks/discover.md) für Sie [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md) für vollständige Informationen zum Erstellen von Instanzen und zum Optimum aus einem Playbook. Informationen zum Weiterleiten verschiedener Assets von der inspirierenden Sandbox zu anderen Entwicklungs-Sandboxes und dann zur Produktion finden Sie in der Dokumentation unter [Datenbewusstsein](/help/use-case-playbooks/playbooks/data-awareness.md).
+Nachdem Sie sich für das gewünschte Playbook entschieden haben, wählen Sie es in der Benutzeroberfläche aus und führen Sie die ersten Schritte durch. Benutzerhandbücher lesen unter [wie Sie das richtige Playbook aus einer Auswahl auswählen](/help/use-case-playbooks/playbooks/choose.md) für Sie [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md) für vollständige Informationen zum Erstellen von Instanzen und zum Optimum aus einem Playbook. Informationen zum Weiterleiten verschiedener Assets von der inspirierenden Sandbox zu anderen Entwicklungs-Sandboxes und dann zur Produktion finden Sie in der Dokumentation unter [Datenbewusstsein](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Fehlerbehebung und bekannte Einschränkungen {#trouble-shooting-known-limitations}
 
