@@ -2,16 +2,16 @@
 title: Adobe Experience Platform – Versionshinweise, Juni 2024
 description: Versionshinweise vom Juni 2024 für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b2b38c1b540d074998e96712465ff52c68371004
+source-git-commit: af27ca20b7d611bb6f6b13b57dfc2df1f643a0b6
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1357'
 ht-degree: 20%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: Juni 2024**
+**Veröffentlichungsdatum: Mittwoch, 18. Juni 2024**
 
 >[!TIP]
 >
