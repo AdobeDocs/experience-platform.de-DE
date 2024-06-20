@@ -5,10 +5,10 @@ title: Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs
 description: Dieser Artikel veranschaulicht den durchgängigen Arbeitsablauf zum Aktivieren von Zielgruppen über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 13%
+source-wordcount: '1612'
+ht-degree: 12%
 
 ---
 
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppen aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Dokumentation zum Zielarbeitsbereich](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppen, die Sie für das ausgewählte Ziel aktivieren möchten. Sie können die Ad-hoc-API verwenden, um Platform-generierte Zielgruppen sowie externe (benutzerdefinierte Upload-Zielgruppen) zu exportieren. Verwenden Sie beim Aktivieren externer Zielgruppen die systemgenerierte ID anstelle der Zielgruppen-ID. Die systemgenerierte ID finden Sie in der Übersichtsansicht der Zielgruppe in der Benutzeroberfläche für Zielgruppen. <br> ![Ansicht der Zielgruppen-ID, die nicht ausgewählt werden sollte.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Ansicht der Zielgruppen-ID, die nicht ausgewählt werden sollte."){width="100" zoomable="yes"} <br> ![Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Ansicht der systemgenerierten Zielgruppen-ID, die verwendet werden soll."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Anfrage mit Export-IDs (nicht mehr unterstützt) {#request-deprecated}
+### Anfrage mit Export-IDs {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**Veralteter Anfragetyp**. Dieser Beispieltyp beschreibt den Anfragetyp für die API-Version 1. In v2 der Ad-hoc-Aktivierungs-API müssen Sie nicht die neueste ID des Zielgruppenexportauftrags angeben.
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
