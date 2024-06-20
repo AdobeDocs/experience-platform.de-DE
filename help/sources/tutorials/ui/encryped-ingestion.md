@@ -3,10 +3,11 @@ title: Verschlüsselte Daten in der Quellen-Benutzeroberfläche in Workspace erf
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quellenbenutzeroberfläche erfassen.
 hide: true
 hidefromtoc: true
-source-git-commit: f2a0a9b84dfd3c1d32c8049148d38ef4d2ec822e
+exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
+source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 9%
+ht-degree: 54%
 
 ---
 
@@ -23,15 +24,15 @@ In diesem Handbuch erfahren Sie, wie Sie verschlüsselte Daten mithilfe von Clou
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_isFileEncrypted"
 >title="Ist die Datei verschlüsselt?"
->abstract="Aktivieren Sie diese Option, wenn Sie bereits verschlüsselte Dateien aufnehmen."
+>abstract="Aktivieren Sie diese Option, wenn Sie eine bereits verschlüsselte Datei aufnehmen."
 
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_sampleFile"
->title="Beispieldatei auswählen"
->abstract="Sie müssen beim Erfassen verschlüsselter Daten eine Beispieldatei erfassen, um eine Zuordnung zu erstellen."
+>title="Auswählen einer Beispieldatei"
+>abstract="Sie müssen bei der Aufnahme verschlüsselter Daten eine Beispieldatei aufnehmen, um eine Zuordnung zu erstellen."
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_createCustomKey"
->title="Benutzerdefinierten Schlüssel erstellen"
->abstract="Sie können optional ein Schlüsselpaar für die Signierüberprüfung erstellen und einen benutzerdefinierten Schlüssel für Ihre verschlüsselten Daten erstellen."
+>title="Erstellen eines öffentlichen Schlüssels"
+>abstract="Sie können optional ein Schlüsselpaar für die Signaturverifizierung erstellen und einen benutzerdefinierten Schlüssel für Ihre verschlüsselten Daten zu erstellen."

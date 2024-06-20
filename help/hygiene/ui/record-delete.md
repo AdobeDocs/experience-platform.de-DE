@@ -6,7 +6,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
 source-wordcount: '1567'
-ht-degree: 20%
+ht-degree: 28%
 
 ---
 
@@ -63,17 +63,17 @@ Wenn Sie Datensätze aus allen Datensätzen löschen möchten, wählen Sie **[!U
 >
 >Wenn Sie die Option **[!UICONTROL Alle Datensätze]** auswählen, kann es sein, dass der Löschvorgang länger dauert und möglicherweise nicht zu einer korrekten Löschung der Datensätze führt.
 
-## Identitäten bereitstellen {#provide-identities}
+## Angeben von Identitäten {#provide-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Identity-Namespace"
->abstract="Ein Identitäts-Namespace ist ein Attribut, das einen Datensatz mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das Identitäts-Namespace-Feld für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) für den Identitäts-Namespace des Datensatzes angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud-IDs. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus ."
+>abstract="Ein Identity-Namespace ist ein Attribut, das einen Eintrag mit dem Profil einer Verbraucherin bzw. eines Verbrauchers in Experience Platform verknüpft. Das Feld für den Identity-Namespace für einen Eintrag wird durch das Schema definiert, auf dem der Eintrag basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) des Identity-Namespace des Eintrags angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud IDs. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Primärer Identitätswert"
->abstract="In dieser Spalte müssen Sie den Wert für den Identitäts-Namespace des Datensatzes angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der Identitäts-Namespace-Typ `email`, sollte der Wert die E-Mail-Adresse des Datensatzes sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für den Datenlebenszyklus."
+>abstract="In dieser Spalte müssen Sie den Wert für den Identity-Namespace des Eintrags angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der Typ des Identity-Namespace `email` ist, sollte der Wert die E-Mail-Adresse des Eintrags sein. Weitere Informationen finden Sie im Handbuch zur Datenlebenszyklus-Benutzeroberfläche."
 
 Beim Löschen von Datensätzen müssen Sie Identitätsdaten angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Platform werden Datensätze basierend auf der Variablen **Identitäts-Namespace** -Feld, das durch das Schema des Datensatzes definiert wird.
 

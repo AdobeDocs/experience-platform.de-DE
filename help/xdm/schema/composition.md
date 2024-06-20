@@ -7,7 +7,7 @@ exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
 source-wordcount: '4293'
-ht-degree: 21%
+ht-degree: 26%
 
 ---
 
@@ -53,7 +53,7 @@ Sowohl Schemata der Datensätze als auch der Zeitreihen enthalten eine Zuordnung
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identitäten in Schemata"
->abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen ein Betreff identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um das Identitätsdiagramm für jede Person zu erstellen und Kundenprofile zu erstellen. Weitere Informationen zu Identitäten in Schemas finden Sie in der Dokumentation ."
+>abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen ein Objekt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um für jede Person ein Identitätsdiagramm sowie Kundenprofile zu erstellen. Weitere Informationen zu Identitäten in Schemata finden Sie in der Dokumentation."
 
 Schemata werden für die Aufnahme von Daten in Experience Platform verwendet. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es beim Entwerfen von Schemas für Kundenidentitäten wichtig zu berücksichtigen, welche Felder zur Identifizierung eines Subjekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
@@ -170,12 +170,12 @@ Schemata werden nach folgender Formel zusammengestellt:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Klasse"
->abstract="Jedes Schema basiert auf einer einzelnen Klasse. Die Klasse definiert das Verhalten des Schemas und die allgemeinen Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, enthalten müssen. Weitere Informationen dazu, wie Klassen in die Schemakomposition eingebunden sind, finden Sie in der Dokumentation ."
+>abstract="Jedes Schema basiert auf einer einzelnen Klasse. Die Klasse definiert das Verhalten des Schemas und die allgemeinen Eigenschaften, die alle Schemata enthalten müssen, die auf dieser Klasse basieren. Weitere Informationen dazu, wie Klassen bei der Schemakomposition genutzt werden, finden Sie in der Dokumentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_industries"
 >title="Branchentyp"
->abstract="Wenn Sie eine für Ihr Unternehmen relevante Branche auswählen, kann das Modell für maschinelles Lernen eine bessere Organisation der Daten ermöglichen, indem die Quellfelder genauer mit Standardfeldgruppen abgeglichen werden, die den Branchenstandards entsprechen. Dadurch wird sichergestellt, dass die Datenintegration auf Ihre branchenspezifischen Anforderungen zugeschnitten ist und zu präziseren und relevanteren Dateneinblicken führt."
+>abstract="Wenn Sie eine für Ihr Unternehmen relevante Branche auswählen, kann das Modell für maschinelles Lernen eine bessere Organisation der Daten ermöglichen, indem die Quellfelder genauer den Standardfeldgruppen zugeordnet werden, die den Branchenstandards entsprechen. Dadurch wird sichergestellt, dass die Datenintegration auf Ihre branchenspezifischen Anforderungen zugeschnitten ist, was zu präziseren und relevanteren Datenerkenntnissen führt."
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten wird (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemata, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
@@ -194,12 +194,12 @@ Die aktuellste Liste der verfügbaren Standard-XDM-Klassen finden Sie im Abschni
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Feldergruppe"
->abstract="Feldergruppen sind wiederverwendbare Komponenten, mit denen Sie Schemas mit zusätzlichen Attributen erweitern können. Die meisten Feldergruppen sind nur mit bestimmten Klassen kompatibel. Sie können Standardfeldgruppen verwenden, die durch Adobe definiert werden, oder Sie können manuell eigene benutzerdefinierte Feldgruppen definieren. Weitere Informationen zur Beteiligung von Feldergruppen an der Schemakomposition finden Sie in der Dokumentation ."
+>abstract="Feldergruppen sind wiederverwendbare Komponenten, mit denen Sie Schemata durch zusätzliche Attribute erweitern können. Die meisten Feldergruppen sind nur mit bestimmten Klassen kompatibel. Sie können die von Adobe definierten Standardfeldergruppen verwenden oder eigene benutzerdefinierte Feldergruppen manuell erstellen. Weitere Informationen zur Verwendung von Feldergruppen bei der Schemakomposition finden Sie in der Dokumentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Erforderliche Feldergruppe"
->abstract="Diese Feldergruppe ist für die verwendete Quelle erforderlich. Aus diesem Grund können Sie ihn nicht aus Ihrem Schema löschen."
+>abstract="Diese Feldergruppe ist für die verwendete Quelle erforderlich. Aus diesem Grund können Sie sie nicht aus Ihrem Schema löschen."
 
 Eine Feldergruppe ist eine wiederverwendbare Komponente, die ein oder mehrere Felder definiert, die bestimmte Funktionen wie persönliche Details, Hotelpräferenzen oder Adressen implementieren. Feldergruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert.
 
@@ -280,7 +280,7 @@ Das folgende Diagramm zeigt diese Schemas und die von den einzelnen Feldergruppe
 
 ![Ein Flussdiagramm mit vier Schemas und den Feldergruppen, die zu ihnen beitragen.](../images/schema-composition/composition.png)
 
-### Vereinigung {#union}
+### Union {#union}
 
 Während Experience Platform es Ihnen ermöglicht, Schemata für bestimmte Anwendungsfälle zusammenzustellen, können Sie auch eine „Vereinigung“ von Schemata für einen bestimmten Klassentyp sehen. Das vorherige Diagramm zeigt zwei Schemas, die auf der XDM ExperienceEvent-Klasse basieren, und zwei Schemas, die auf [!DNL XDM Individual Profile] -Klasse. Die unten dargestellte Vereinigung aggregiert die Felder aller Schemas, die dieselbe Klasse ([!DNL XDM ExperienceEvent] und [!DNL XDM Individual Profile], bzw. ).
 
