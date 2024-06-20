@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die von Adobe Experience Platform Query Service unterstützte SQL-Syntax erläutert.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
+source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
 workflow-type: tm+mt
-source-wordcount: '4111'
+source-wordcount: '4256'
 ht-degree: 5%
 
 ---
@@ -104,20 +104,34 @@ Diese Klausel kann verwendet werden, um Daten auf einer Tabelle basierend auf Mo
 #### Beispiel
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+(SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
+  INNER JOIN 
+(SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
+  ON a.id = b.id;
 ```
+
+In der folgenden Tabelle wird die Bedeutung jeder Syntaxoption innerhalb der SNAPSHOT-Klausel erläutert.
+
+| Aufbau | Bedeutung |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id` | Liest Daten, die mit der angegebenen Snapshot-ID beginnen (exklusiv). |
+| `AS OF end_snapshot_id` | Liest Daten so, wie sie sich bei der angegebenen Snapshot-ID (einschließlich) befanden. |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Liest Daten zwischen den angegebenen Start- und End-Snapshot-IDs. Es schließt die `start_snapshot_id` und einschließlich der `end_snapshot_id`. |
+| `BETWEEN HEAD AND start_snapshot_id` | Liest Daten vom Anfang (vor der ersten Momentaufnahme) bis zur angegebenen Start-Snapshot-ID (einschließlich). Beachten Sie, dass nur Zeilen in `start_snapshot_id`. |
+| `BETWEEN end_snapshot_id AND TAIL` | Liest Daten aus direkt nach dem angegebenen `end-snapshot_id` am Ende des Datensatzes (ausschließlich der Snapshot-ID). Dies bedeutet, dass `end_snapshot_id` der letzte Schnappschuss im Datensatz ist, gibt die Abfrage null Zeilen zurück, da über diesen letzten Schnappschuss hinaus keine Momentaufnahmen vorhanden sind. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Liest Daten aus der angegebenen Snapshot-ID aus `table_to_be_queried` und fügt sie mit den Daten von `table_to_be_joined` wie in `your_chosen_snapshot_id`. Der Join basiert auf übereinstimmenden IDs aus den ID-Spalten der beiden Tabellen, die verbunden werden. |
 
 A `SNAPSHOT` -Klausel funktioniert mit einem Tabellen- oder Tabellenalias, jedoch nicht über einer Unterabfrage oder Ansicht. A `SNAPSHOT` -Klausel funktioniert überall `SELECT` -Abfrage auf eine Tabelle angewendet werden.
 
@@ -128,8 +142,6 @@ Außerdem können Sie `HEAD` und `TAIL` als spezielle Offset-Werte für Momentau
 >Wenn Sie zwischen zwei Snapshot-IDs abfragen, können die beiden folgenden Szenarien eintreten, wenn der Start-Snapshot abgelaufen ist, und die optionale Ausweichverhaltenskennzeichnung (`resolve_fallback_snapshot_on_failure`) festgelegt ist:
 >
 >- Wenn das optionale Fallback-Verhalten-Flag gesetzt ist, wählt Query Service den frühesten verfügbaren Snapshot aus, legt ihn als Start-Snapshot fest und gibt die Daten zwischen dem frühesten verfügbaren Snapshot und dem angegebenen End-Snapshot zurück. Diese Daten sind **inklusive** der frühesten verfügbaren Momentaufnahme.
->
->- Wenn das optionale Fallback-Verhalten-Flag nicht gesetzt ist, wird ein Fehler zurückgegeben.
 
 ### WHERE-Klausel
 
