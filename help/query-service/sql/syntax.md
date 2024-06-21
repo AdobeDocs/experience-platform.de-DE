@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die von Adobe Experience Platform Query Service unterstützte SQL-Syntax erläutert.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
+source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4305'
 ht-degree: 5%
 
 ---
@@ -312,7 +312,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | Der Standardwert für den Modus. Wenn angegeben, wird das Schema nur abgelegt, wenn dies der Fall ist **not** enthält alle Tabellen. |
 | `CASCADE` | Wenn angegeben, wird das Schema zusammen mit allen im Schema vorhandenen Tabellen abgelegt. |
 
-## CREATE VIEW
+## CREATE VIEW {#create-view}
+
+Eine SQL-Ansicht ist eine virtuelle Tabelle, die auf der Ergebnismenge einer SQL-Anweisung basiert. Erstellen Sie eine Ansicht mit der `CREATE VIEW` -Anweisung und geben Sie ihm einen Namen. Mit diesem Namen können Sie dann auf die Ergebnisse der Abfrage zurückverweisen. Dies erleichtert die Wiederverwendung komplexer Abfragen.
 
 Die folgende Syntax definiert eine `CREATE VIEW` -Abfrage für einen Datensatz. Dieser Datensatz kann ein ADLS- oder beschleunigter Store-Datensatz sein.
 

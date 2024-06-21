@@ -2,7 +2,7 @@
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 4%
@@ -170,7 +170,7 @@ Dieses Widget zeigt die wichtigsten Einflussfaktoren für die einzelnen Bereiche
 
 ![Das Widget mit den wichtigsten Einflussfaktoren für die prädiktive Bewertung.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-### Datenfehler kann nicht geladen werden {#errors}
+## Datenfehler kann nicht geladen werden {#errors}
 
 Anzeigen eines Widgets *[!UICONTROL Das Laden ist nicht möglich. Versuchen Sie es erneut.]* Dies liegt daran, dass für die B2B-Einheit keine Daten verfügbar sind. Beispielsweise wird das Widget unten angezeigt [!UICONTROL Neue Möglichkeiten für die Rolle der Person]zeigt die Meldung an.[!UICONTROL Das Laden ist nicht möglich. Versuchen Sie es erneut.]&quot;, da diese Sandbox keine Opportunitätsdaten enthält.
 
