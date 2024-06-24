@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
+source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1227'
 ht-degree: 88%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 88%
       * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
       * [Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
-      * [(Beta) Verwenden Sie berechnete Felder, um Arrays in flachen Schemadateien zu exportieren](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta) Verwenden von berechneten Feldern, um Arrays in flache Schemadateien zu exportieren](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
    * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
    * [Löschen von Zielkonten](./ui/delete-destination-account.md)
@@ -141,6 +141,7 @@ ht-degree: 88%
    * Data Management Platform-Ziele {#data-management}
       * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
+      * [Zeta-Marketing-Plattform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Daten- und Identitätspartner {#data-partner}
       * [Acxiom Prospect-Unterdrückung](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom-Datenverbesserung](./catalog/data-partner/acxiom-data-enhancement.md)
