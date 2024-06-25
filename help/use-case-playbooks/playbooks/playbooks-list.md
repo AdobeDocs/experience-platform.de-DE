@@ -7,7 +7,7 @@ exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu erhalten, die Sie in Real-time Customer Data Platform und Adobe Journey Optimizer entdecken und verwenden können.
 
-## Anwendungsbeispiele für Playbooks in Journey Optimizer {#optimizer-playbooks}
+## Verwenden von Playbooks für Anwendungsfälle in Journey Optimizer {#optimizer-playbooks}
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_list"
 >title="Verfügbare Playbooks"
->abstract="Eine Liste aller Bücher in Real-time Customer Data Platform und Adobe Journey Optimizer."
+>abstract="Eine Liste aller Playbooks in Real-time Customer Data Platform und Adobe Journey Optimizer."
 
 | Playbook-Name | Beschreibung |
 | ------------- |  ----------- |
