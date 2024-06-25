@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Auftragsdatentyp
 description: Erfahren Sie mehr über den Datentyp Order Experience Data Model (XDM) .
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 09ca510da0819ab38687edadbcc632ccbbe8ef83
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 19%
+source-wordcount: '364'
+ht-degree: 13%
 
 ---
 
@@ -15,15 +15,24 @@ ht-degree: 19%
 
 [!UICONTROL Bestellung] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die für eine Produktliste platzierte Reihenfolge beschreibt.
 
-<img src="../images/data-types/order.PNG" width="400" /><br />
+![Ein Diagramm des [!UICONTROL Bestellung] Datentyp.](../images/data-types/order.png)
 
-| Eigenschaft | Datentyp | Beschreibung |
-| --- | --- | --- |
-| `payments` | Array von [[!UICONTROL Zahlungselemente]](./payment-item.md) | Die Liste der Zahlungen für diese Bestellung. |
-| `currencyCode` | Zeichenfolge | Der für die Bestellsummen verwendete Währungscode nach ISO 4217. Alle Instanzen müssen dem regulären Ausdruck entsprechen `^[A-Z]{3}$`. Beispiele sind `USD` und `EUR`. |
-| `priceTotal` | Double | Der Gesamtpreis für diese Bestellung, nachdem alle Rabatte und Steuern berücksichtigt wurden. |
-| `purchaseID` | Zeichenfolge | Eine eindeutige Kennung, die vom Verkäufer für diesen Kauf oder Vertrag zugewiesen wird. Da dies vom Verkäufer definiert wird, gibt es keine Garantie, dass die ID eindeutig ist. |
-| `purchaseOrderNumber` | Zeichenfolge | Die eindeutige Kennung, die der Käufer diesem Kauf oder Vertrag zugewiesen hat. |
+| Anzeigename | Eigenschaft | Datentyp | Beschreibung |
+|-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
+| Kauf-ID | `purchaseID` | Zeichenfolge | Eine eindeutige Kennung, die vom Verkäufer für diesen Kauf oder Vertrag zugewiesen wird. Es gibt keine Garantie dafür, dass die ID eindeutig ist, da die ID vom Verkäufer definiert wird. |
+| Bestellnummer | `purchaseOrderNumber` | Zeichenfolge | Eine eindeutige Kennung, die vom Käufer für diesen Kauf oder Vertrag zugewiesen wird. |
+| Zahlungsliste | `payments` | Array von [[!UICONTROL Zahlungselemente]](./payment-item.md) | Die Liste der Zahlungen für diese Bestellung. Die Zahlungen sind im Abschnitt [!UICONTROL Zahlungselemente] Spezifikation. |
+| Erstattungsliste | `refunds` | Array von [[!UICONTROL Erstattungsbeträge]](./refund-item.md) | Die Liste der Erstattungen für diese Bestellung. Die Erstattungen sind im Abschnitt [!UICONTROL Erstattungsbeträge] Spezifikation. |
+| Rückkehrinformationen | `returns` | [[!UICONTROL Rückkehrinformationen]](./return.md) | RMA (Return Merchandise Authorization) ausgestellt. Die Rückgaben werden im Abschnitt [!UICONTROL Rückkehrinformationen] Spezifikation. |
+| Währung | `currencyCode` | Zeichenfolge | Der für die Bestellsummen verwendete Währungscode nach ISO 4217. Beispiele sind `USD` und `EUR`. Alle Instanzen müssen dem Muster entsprechen `^[A-Z]{3}$`. |
+| Steuerbetrag | `taxAmount` | Zahl | Der vom Käufer im Rahmen der Abschlusszahlung entrichtete Steuerbetrag. |
+| Rabattbetrag | `discountAmount` | Zahl | Der Unterschied zwischen dem regulären Preis und dem Sonderpreis, der auf die gesamte Bestellung und nicht auf einzelne Produkte angewandt wird. |
+| Gesamtpreis | `priceTotal` | Zahl | Der Gesamtpreis für diese Bestellung, nachdem alle Rabatte und Steuern berücksichtigt wurden. |
+| Auftragstyp | `orderType` | Zeichenfolge | Die Art der Reihenfolge, die platziert wurde. Mögliche Werte sind `checkout` und `instant_purchase`. |
+| Datum der letzten Aktualisierung | `lastUpdatedDate` | Zeichenfolge | Der Zeitpunkt, zu dem ein bestimmter Bestelldatensatz zuletzt im Commerce-System aktualisiert wird. Format: Datum/Uhrzeit. |
+| Datum erstellen | `createdDate` | Zeichenfolge | Der Zeitpunkt/das Datum, an dem eine neue Bestellung im Commerce-System erstellt wird. Format: Datum/Uhrzeit. |
+| Datum abbrechen | `cancelDate` | Zeichenfolge | Datum/Uhrzeit, zu der die Stornierung einer Bestellung durch den Käufer eingeleitet wird. Format: Datum/Uhrzeit. |
+| Erstatteter Gesamtbetrag | `refundTotal` | Zahl | Der Gesamtbetrag, der in dieser Erstattung für die Bestellung angegeben wird, wobei alle erstatteten Artikel und nach etwaigen Rabatten usw. zusammengefasst werden. angewendet wurden. |
 
 {style="table-layout:auto"}
 

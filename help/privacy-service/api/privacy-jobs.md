@@ -5,10 +5,10 @@ title: Privacy Jobs API Endpoint
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Apps verwalten.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
+source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
 workflow-type: tm+mt
-source-wordcount: '1857'
-ht-degree: 47%
+source-wordcount: '1821'
+ht-degree: 45%
 
 ---
 
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Hinweis: Dies wird auch für Anfragen verwendet, die sich auf Folgendes beziehen: **ccpa** Vorschriften.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `100` und der Maximalwert ist `1000`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 | `{status}` | Das Standardverhalten besteht darin, alle Status einzuschließen. Wenn Sie einen Statustyp angeben, gibt die Anfrage nur Datenschutzaufträge zurück, die diesem Statustyp entsprechen. Die zulässigen Werte sind: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -165,7 +165,6 @@ curl -X POST \
     "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
@@ -178,7 +177,6 @@ curl -X POST \
 | `include` **(Erforderlich)** | Eine Reihe von Adobe-Produkten, die in Ihre Verarbeitung einbezogen werden sollen. Wenn dieser Wert fehlt oder auf andere Weise leer ist, wird die Anfrage zurückgewiesen. Schließen Sie nur Produkte ein, mit denen Ihr Unternehmen eine Integration hat. Weitere Informationen finden Sie im Abschnitt zu den [anerkannten Produktwerten](appendix.md) im Anhang. |
 | `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true`stellt eine Optimierung für die Verarbeitung der IDs in den Anwendungen dar (derzeit nur unterstützt von [!DNL Analytics]). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anfragen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn keine `priority` angegeben wird, lautet das Standardverhalten `normal`. |
-| `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` ausgelassen wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
 | `mergePolicyId` | Bei Datenschutzanfragen für Echtzeit-Kundenprofil (`profileService`), können Sie optional die ID der spezifischen [Zusammenführungsrichtlinie](../../profile/merge-policies/overview.md) die Sie für die ID-Zuordnung verwenden möchten. Durch Angabe einer Zusammenführungsrichtlinie können Datenschutzanfragen bei der Rückgabe von Daten an einen Kunden Zielgruppeninformationen enthalten. Pro Anfrage kann nur eine Zusammenführungsrichtlinie angegeben werden. Wenn keine Zusammenführungsrichtlinie angegeben wird, werden Segmentierungsinformationen nicht in die Antwort aufgenommen. |
 | `regulation` **(Erforderlich)** | Die Verordnung für den Datenschutzauftrag. Folgende Werte werden akzeptiert: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Siehe Übersicht unter [unterstützte Verordnungen](../regulations/overview.md) für weitere Informationen zu den Datenschutzbestimmungen, die die obigen Werte darstellen. |
 
