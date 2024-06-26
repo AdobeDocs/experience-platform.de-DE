@@ -25,7 +25,7 @@ ht-degree: 85%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Felder"
->abstract="Eine Segmentdefinition besteht aus drei Feldtypen: Attributen, Ereignissen und Zielgruppen. Mit Attributen kann man Profilattribute verwenden, die zur Klasse „XDM-Kontaktprofil“ gehören. Mit Ereignissen kann man mithilfe von XDM ExperienceEvent-Datenelementen eine Zielgruppe basierend auf Aktionen oder stattfindenden Ereignissen erstellen, und mit Zielgruppen kann man importierte Zielgruppen aus externen Quellen verwenden."
+>abstract="Die drei Feldtypen, aus denen eine Segmentdefinition besteht, sind Attribute, Ereignisse und Zielgruppen. Mit Attributen kann man Profilattribute verwenden, die zur Klasse „XDM-Kontaktprofil“ gehören. Mit Ereignissen kann man mithilfe von XDM ExperienceEvent-Datenelementen eine Zielgruppe basierend auf Aktionen oder stattfindenden Ereignissen erstellen, und mit Zielgruppen kann man importierte Zielgruppen aus externen Quellen verwenden."
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse als Komponenten für neue Definitionen verwendet werden.
 
@@ -255,7 +255,7 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Eigenschaften der Segmentdefinition"
->abstract="Im Abschnitt „Eigenschaften“ der Segmentdefinition wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt. Darin wird die Anzahl der qualifizierten Profile im Vergleich zur Gesamtzahl der Profile angezeigt. Auf diese Weise kann die Segmentdefinition nach Bedarf angepasst werden, bevor die Zielgruppe selbst erstellt wird."
+>abstract="Im Abschnitt Eigenschaften der Segmentdefinition wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, die die Anzahl der qualifizierten Profile im Vergleich zur Gesamtanzahl der Profile anzeigt. Auf diese Weise kann die Segmentdefinition nach Bedarf angepasst werden, bevor die Zielgruppe selbst erstellt wird."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -291,7 +291,7 @@ Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Aus
 
 Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](./streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](./edge-segmentation.md#query-types).
 
-Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie die Erstellung abgeschlossen haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, **not** können sie zurück zu Edge oder Streaming ändern. Die Änderung der Bewertungsmethode **only** wirksam werden, sobald Sie **[!UICONTROL Speichern]** im Popover. Wird das Dialogfeld abgebrochen **keep** die ursprüngliche Bewertungsmethode.
+Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie die Erstellung abgeschlossen haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, **not** Sie können sie zurück in Edge oder Streaming ändern. Die Änderung der Bewertungsmethode **only** wirksam werden, sobald Sie **[!UICONTROL Speichern]** im Popover. Wird das Dialogfeld abgebrochen **keep** die ursprüngliche Bewertungsmethode.
 
 ![Das Popup-Fenster „Berechtigung der Auswertungsmethode“ wird angezeigt. Dieses gibt Aufschluss darüber, welche Methoden zur Auswertung für die Segmentdefinition infrage kommen und welche nicht.](../images/ui/segment-builder/select-evaluation-method.png)
 
