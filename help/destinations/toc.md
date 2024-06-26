@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
+source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1233'
 ht-degree: 88%
 
 ---
@@ -145,6 +145,8 @@ ht-degree: 88%
    * Daten- und Identitätspartner {#data-partner}
       * [Acxiom Prospect-Unterdrückung](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom-Datenverbesserung](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Merkury Enterprise-Verbindungen](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+      * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * eCommerce-Ziele {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * E-Mail-Ziele {#email}
