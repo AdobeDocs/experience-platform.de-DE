@@ -5,9 +5,9 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '633'
 ht-degree: 81%
 
 ---
@@ -106,20 +106,22 @@ ht-degree: 81%
       * [Produktkategorie](./field-groups/product/product-category.md)
    * Anbieter {#provider}
       * [Gesundheitsdienstleister](./field-groups/provider/healthcare-provider.md)
+   * Freigegeben {#shared}
+      * [Audit-Details des externen Quellsystems](./field-groups/shared/external-source-system-audit-details.md)
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}
    * [Kontodetails](./data-types/account-details.md)
    * [Anzeigenunterbrechung](./data-types/ad-break.md)
    * [Adresse](./data-types/address.md)
-   * [Sammlung mit Werbedetails](./data-types/advertising-details-collection.md)
-   * [Berichterstellung zu Werbedetails](./data-types/advertising-details-reporting.md)
-   * [Sammlung von Details zu Werbeunterbrechungen](./data-types/advertising-pod-details-collection.md)
-   * [Reporting zu Details der Werbeunterbrechung](./data-types/advertising-pod-details-reporting.md)
+   * [Advertising-Detailsammlung](./data-types/advertising-details-collection.md)
+   * [Advertising Details Reporting](./data-types/advertising-details-reporting.md)
+   * [Sammlung mit Advertising-Pod-Details](./data-types/advertising-pod-details-collection.md)
+   * [Berichterstellung zu Advertising-Pod-Details](./data-types/advertising-pod-details-reporting.md)
    * [Anwendung](./data-types/application.md)
    * [B2B-Quelle](./data-types/b2b-source.md)
    * [Beacon](./data-types/beacon.md)
    * [Browser-Details](./data-types/browser-details.md)
-   * [Korb](./data-types/cart.md)
+   * [Warenkorb](./data-types/cart.md)
    * [Kategoriedaten](./data-types/category-data.md)
    * [Kapiteldetails-Sammlung](./data-types/chapter-details-collection.md)
    * [Berichte zu Kapiteldetails](./data-types/chapter-details-reporting.md)
@@ -147,7 +149,7 @@ ht-degree: 81%
    * [Details zur Geo-Interaktion](./data-types/geo-interaction-details.md)
    * [Geo](./data-types/geo.md)
    * [Identität](./data-types/identity.md)
-   * [Implementierungsdetails](./data-types/implementation-details.md)
+   * [Details zur Implementierung](./data-types/implementation-details.md)
    * [Impressions](./data-types/impressions.md)
    * [Interne Site-Suche](./data-types/internal-site-search.md)
    * [Schlüssel-Wert-Paar](./data-types/key-value-pair.md)
@@ -174,11 +176,11 @@ ht-degree: 81%
    * [Erstattungsbetrag](./data-types/refund-item.md)
    * [Anforderungsliste](./data-types/requisition-list.md)
    * [Rückgabeelement](./data-types/return-item.md)
-   * [Zurückgeben](./data-types/return.md)
+   * [Rückgabe](./data-types/return.md)
    * [Suche](./data-types/search.md)
    * [Sammlung von Sitzungsdetails](./data-types/session-details-collection.md)
    * [Sitzungsdetails-Reporting](./data-types/session-details-reporting.md)
-   * [Versand](./data-types/shipping.md)
+   * [Lieferung](./data-types/shipping.md)
    * [Abonnement](./data-types/subscription.md)
    * [Telekom-Abonnement](./data-types/telecom-subscription.md)
    * [Transaktion](./data-types/transaction.md)
@@ -238,4 +240,4 @@ ht-degree: 81%
    * [Erstellen eines Ad-hoc-Schemas](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
