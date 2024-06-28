@@ -6,10 +6,10 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 98%
+source-wordcount: '769'
+ht-degree: 97%
 
 ---
 
@@ -299,6 +299,7 @@ ht-degree: 98%
       * [Regeln](./api/endpoints/rules.md)
       * [Regelkomponenten](./api/endpoints/rule-components.md)
       * [Erweiterungspakete](./api/endpoints/extension-packages.md)
+      * [Nutzungsberechtigungen für Erweiterungspakete](./api/endpoints/extension-package-usage-authorizations.md)
       * [Erweiterungen](./api/endpoints/extensions.md)
       * [Bibliotheken](./api/endpoints/libraries.md)
       * [Builds](./api/endpoints/builds.md)
