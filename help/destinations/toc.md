@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1237'
 ht-degree: 88%
 
 ---
@@ -89,6 +89,7 @@ ht-degree: 88%
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
       * [LiveRamp – Onboarding-Verbindung](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Verteilungsverbindung](./catalog/advertising/liveramp-distribution.md)
+      * [Magnite-Streaming-Echtzeit-Verbindung](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
