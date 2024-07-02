@@ -2,10 +2,10 @@
 title: Adobe Campaign Managed Cloud Services-Verbindung
 description: Adobe Campaign Managed Cloud Services bietet eine Plattform für die Konzeption kanalübergreifender Kundenerlebnisse und eine Umgebung für die visuelle Kampagnenorchestrierung, Interaktionsverwaltung in Echtzeit und die kanalübergreifende Ausführung.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
+source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 34%
+source-wordcount: '1633'
+ht-degree: 31%
 
 ---
 
@@ -25,15 +25,21 @@ Mit Campaign haben Sie folgende Möglichkeiten:
 * Integrieren von E-Mail-, Mobile-, Online- und Offline-Kanälen in die Journey des Kunden,
 * Automatisieren Sie die Bereitstellung aussagekräftiger und zeitnaher Nachrichten und Angebote.
 
->[!IMPORTANT]
->
->Beachten Sie bei der Verwendung der Adobe Campaign Managed Cloud Services-Verbindung die folgenden Limits:
->
->* Maximal 50 Segmente können [enabled](#activate) für das Ziel,
->* Für jedes Segment können Sie bis zu 20 Felder zu [map](#map) nach Adobe Campaign,
->* Datenbeibehaltung in Azure Blob Storage Data Landing Zone (DLZ) : 7 Tage,
->* Die Aktivierungshäufigkeit beträgt mindestens 3 Stunden.
->* Die maximale Länge des Dateinamens, die von dieser Verbindung unterstützt wird, beträgt 255 Zeichen. Wenn Sie [den exportierten Dateinamen konfigurieren](../../ui/activate-batch-profile-destinations.md#configure-file-names)darf der Dateiname nicht länger als 255 Zeichen sein. Wenn die maximale Länge des Dateinamens überschritten wird, treten Aktivierungsfehler auf.
+## Leitplanken {#guardrails}
+
+Beachten Sie bei der Verwendung der Adobe Campaign Managed Cloud Services-Verbindung die folgenden Limits:
+
+* Sie können [Aktivieren](#activate) maximal 25 Zielgruppen zu diesem Ziel hinzu.
+
+  Sie können diese Grenze ändern, indem Sie den Wert der **nmsCdp_aep_audience_list_limit** in der **[!UICONTROL Administration]** > **[!UICONTROL Plattform]** > **[!UICONTROL Optionen]** Ordner des Campaign-Explorers.
+
+* Für jede Zielgruppe können bis zu 20 Felder hinzugefügt werden. [map](#map) nach Adobe Campaign.
+
+  Sie können diese Grenze ändern, indem Sie den Wert der **nmsCdp_aep_destinations_max_columns** in der **[!UICONTROL Administration]** > **[!UICONTROL Plattform]** > **[!UICONTROL Optionen]** Ordner des Campaign-Explorers.
+
+* Datenbeibehaltung in Azure Blob Storage Data Landing Zone (DLZ) : 7 Tage.
+* Die Aktivierungshäufigkeit beträgt mindestens 3 Stunden.
+* Die maximale Länge des Dateinamens, die von dieser Verbindung unterstützt wird, beträgt 255 Zeichen. Wenn Sie [den exportierten Dateinamen konfigurieren](../../ui/activate-batch-profile-destinations.md#configure-file-names)darf der Dateiname nicht länger als 255 Zeichen sein. Wenn die maximale Länge des Dateinamens überschritten wird, treten Aktivierungsfehler auf.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -41,12 +47,12 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Adobe Campaign-Ver
 
 * Adobe Experience Platform erstellt ein Kundenprofil, das Informationen wie das Identitätsdiagramm, Verhaltensdaten aus Analysen, das Zusammenführen von Offline- und Online-Daten usw. enthält. Durch diese Integration können Sie die Segmentierungsfunktionen, die bereits in Adobe Campaign vorhanden sind, mit den Adobe Experience Platform-basierten Zielgruppen erweitern und diese Daten in Campaign aktivieren.
 
-  Ein Sportartikelunternehmen möchte beispielsweise die Adobe Experience Platform-gestützten Smart-Segmente nutzen und sie mithilfe von Adobe Campaign aktivieren, um über die verschiedenen von Adobe Campaign unterstützten Kanäle zu seinem Kundenstamm zu gelangen. Nachdem die Nachrichten gesendet wurden, sollen sie das Kundenprofil in der Adobe Experience Platform mit Erlebnisdaten aus Adobe Campaign wie Sendungen, Öffnungen und Klicks verbessern.
+  Ein Sportartikelunternehmen möchte beispielsweise die Adobe Experience Platform-gestützten Zielgruppen nutzen und sie mithilfe von Adobe Campaign aktivieren, um über die verschiedenen von Adobe Campaign unterstützten Kanäle Kontakt zu seinem Kundenstamm aufzunehmen. Nachdem die Nachrichten gesendet wurden, sollen sie das Kundenprofil in der Adobe Experience Platform mit Erlebnisdaten aus Adobe Campaign wie Sendungen, Öffnungen und Klicks verbessern.
 
   Das Ergebnis sind kanalübergreifende Kampagnen, die im gesamten Adobe Experience Cloud-Ökosystem konsistenter sind, und ein umfangreiches Kundenprofil, das sich schnell anpasst und lernt.
 
 
-* Zusätzlich zur Segmentaktivierung in Campaign können Sie das Adobe Campaign Managed Services-Ziel nutzen, um zusätzliche Profilattribute einzubringen, die mit einem Profil in Adobe Experience Platform verknüpft sind und einen Synchronisierungsprozess durchführen, damit sie in der Adobe Campaign-Datenbank aktualisiert werden.
+* Zusätzlich zur Zielgruppenaktivierung in Campaign können Sie das Adobe Campaign Managed Services-Ziel nutzen, um zusätzliche Profilattribute einzubringen, die mit einem Profil in Adobe Experience Platform verknüpft sind und einen Synchronisierungsprozess durchführen, damit sie in der Adobe Campaign-Datenbank aktualisiert werden.
 
   Nehmen wir beispielsweise an, Sie erfassen Opt-in- und Opt-out-Werte in Adobe Experience Platform. Mit dieser Verbindung können Sie diese Werte in Adobe Campaign übernehmen und einen Synchronisierungsprozess einrichten, damit sie regelmäßig aktualisiert werden.
 
@@ -66,7 +72,7 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Adobe Campaign-Ver
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/features/ecid.md) für weitere Informationen. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 
 {style="table-layout:auto"}
@@ -77,7 +83,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm „Auswählen der Profilattribute“ im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) festgelegt. |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute auswählen der [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -117,7 +123,7 @@ Wählen Sie die Marketing-Aktionen aus, die für die Daten gelten, die Sie an da
 
 Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Datennutzungsrichtlinien – Übersicht](/help/data-governance/policies/overview.md).
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
@@ -172,7 +178,7 @@ Für **[!UICONTROL Zielgruppensynchronisierung]** können Sie die exportierte Zi
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-Für **[!UICONTROL Profilsynchronisierung (nur Aktualisierung)]** werden die Daten für jedes Profil, das in das im Ziel aktivierte Segment aufgenommen wird, automatisch in die Campaign-Datenbank aktualisiert.
+Für **[!UICONTROL Profilsynchronisierung (nur Aktualisierung)]** werden die Daten für jedes Profil, das in der Zielgruppe aktiviert ist, automatisch in die Campaign-Datenbank aktualisiert.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
