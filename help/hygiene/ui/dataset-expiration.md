@@ -2,10 +2,10 @@
 title: Automatisierte Datensatzabläufe
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 52%
+source-wordcount: '871'
+ht-degree: 49%
 
 ---
 
@@ -26,7 +26,13 @@ In diesem Dokument wird beschrieben, wie Sie die Ablaufzeit von Datensätzen in 
 
 >[!NOTE]
 >
->Der Datensatzablauf löscht derzeit keine Daten aus dem Adobe Experience Platform Edge Network. Es besteht jedoch keine Möglichkeit, dass Daten innerhalb des Edge-Netzwerks verbleiben, nachdem der Datensatz auf abläuft. Dies liegt daran, dass sich die 15-Tage-Service-Lizenzvereinbarung für den Ablauf von Datensätzen mit dem 14-Tage-Zeitraum überschneidet, in dem Daten im Edge-Netzwerk vorhanden sind, bevor sie verworfen werden.
+>Der Datensatzablauf löscht derzeit keine Daten aus dem Adobe Experience Platform-Edge Network. Es besteht jedoch keine Möglichkeit, dass Daten innerhalb des Edge Networks verbleiben, nachdem der Datensatz auf abläuft. Dies liegt daran, dass sich die 15-tägige Service-Lizenzvereinbarung für den Ablauf von Datensätzen mit dem 14-tägigen Zeitraum überschneidet, in dem Daten innerhalb des Edge Networks vorhanden sind, bevor sie verworfen werden.
+
+Das erweiterte Data Lifecycle Management unterstützt das Löschen von Datensätzen über die [Endpunkt des Datensatzablaufs](../api/dataset-expiration.md) und ID-Löschungen (Daten auf Zeilenebene) mithilfe von primären Identitäten über die [Workorder-Endpunkt](../api/workorder.md). Sie können auch die Ablaufdaten von Datensätzen verwalten und [Löschung von Datensätzen](./record-delete.md) über die Platform-Benutzeroberfläche. Weitere Informationen finden Sie in der verknüpften Dokumentation .
+
+>[!NOTE]
+>
+>Der Datenlebenszyklus unterstützt keine Batch-Löschung.
 
 ## Planen einer Datensatzgültigkeit {#schedule-dataset-expiration}
 

@@ -3,10 +3,10 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 59%
+source-wordcount: '2217'
+ht-degree: 58%
 
 ---
 
@@ -27,6 +27,12 @@ Sobald das Löschen des Datensatzes gestartet wurde, wird seine Gültigkeit als 
 >[!WARNING]
 >
 >Wenn ein Datensatz ausläuft, müssen alle Datenflüsse, die Daten in diesen Datensatz einspeisen, manuell geändert werden, damit Ihre nachgeschalteten Workflows nicht beeinträchtigt werden.
+
+Das erweiterte Data Lifecycle Management unterstützt das Löschen von Datensätzen über den Ablaufendpunkt des Datensatzes und das Löschen von IDs (Daten auf Zeilenebene) mithilfe von primären Identitäten über die [Workorder-Endpunkt](./workorder.md). Sie können auch [Datensatzabläufe](../ui/dataset-expiration.md) und [Löschung von Datensätzen](../ui/record-delete.md) über die Platform-Benutzeroberfläche. Weitere Informationen finden Sie in der verknüpften Dokumentation .
+
+>[!NOTE]
+>
+>Der Datenlebenszyklus unterstützt keine Batch-Löschung.
 
 ## Erste Schritte
 
@@ -493,7 +499,7 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | `orgId` | Gibt die Gültigkeiten von Datensätzen zurück, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert ist standardmäßig auf den Wert der `x-gw-ims-org-id`-Kopfzeilen festgelegt und wird ignoriert, es sei denn, die Anfrage liefert ein Service-Token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Eine Ganzzahl, die angibt, welche Seite der Gültigkeitenliste zurückgegeben werden soll. | `page=3` |
 | `sandboxName` | Gibt die Datensatzgültigkeiten wieder, deren Sandbox-Name genau mit dem Argument übereinstimmt. Die Standardeinstellung ist der Sandbox-Name in der `x-sandbox-name`-Kopfzeile der Anfrage. Verwenden Sie `sandboxName=*`, um Datensatzgültigkeiten aus allen Sandboxes einzuschließen. | `sandboxName=dev1` |
-| `search` | Sucht nach Abläufen, bei denen die angegebene Zeichenfolge eine exakte Übereinstimmung mit der Ablaufüberkennung ist oder **enthalten** in einem dieser Felder:<br><ul><li>author</li><li>Anzeigename</li><li>Beschreibung</li><li>Anzeigename</li><li>Datensatzname</li></ul> | `search=TESTING` |
+| `search` | Sucht nach Abläufen, bei denen die angegebene Zeichenfolge eine exakte Übereinstimmung mit der Ablaufüberkennung ist oder **enthalten** in einem dieser Felder:<br><ul><li>Autor</li><li>Anzeigename</li><li>Beschreibung</li><li>Anzeigename</li><li>Datensatzname</li></ul> | `search=TESTING` |
 | `status` | Eine durch Kommas getrennte Liste von Status. Wenn diese Liste enthalten ist, entspricht die Antwort den Datensatzgültigkeiten, deren aktueller Status in der Liste enthalten ist. | `status=pending,cancelled` |
 | `ttlId` | Entspricht der Ablaufanfrage der angegebenen ID. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Wie `createdDate` / `createdFromDate` / `createdToDate`, jedoch wird die Aktualisierungszeit einer Datensatzgültigkeit anstelle der Erstellungszeit herangezogen.<br><br>Eine Gültigkeit wird bei jeder Bearbeitung als aktualisiert erachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |

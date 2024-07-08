@@ -1,9 +1,10 @@
 ---
 title: Best Practices für erweitertes Data Lifecycle Management
 description: Erfahren Sie, wie Sie mit der erweiterten Benutzeroberfläche für Data Lifecycle Management und der Data Hygiene-API Datenanforderungen in Adobe Experience Platform effizient verwalten können. In diesem Handbuch werden Best Practices beschrieben, wie das Maximieren von Identitäten pro Anfrage, das Festlegen einzelner Datensätze und die Berücksichtigung von API-Einschränkungen zur Vermeidung von Verlangsamungen. Das Dokument enthält Richtlinien zum Einrichten der automatischen Datensatzbereinigung, zum Überwachen des Status der Arbeitsaufträge und detaillierte Methoden zum Abrufen von Antworten. Befolgen Sie diese Verfahren, um die Anforderungsverarbeitung zu optimieren und die Antwortzeiten zu optimieren.
-source-git-commit: 92667fd4da093e56dcf06ae1696484671d9fdd38
+exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
+source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -26,10 +27,9 @@ Sie können die `/workorder` -Endpunkt in der Data Hygiene-API zur programmatisc
 
 Befolgen Sie diese Richtlinien, um Ihre Datenbereinigungsanforderungen zu optimieren:
 
-1. **Identitäten pro Anforderung maximieren:** Binden Sie bis zu 100.000 Identitäten pro Bereinigungsanfrage ein, um die Effizienz zu steigern. Wenn Sie mehrere Identitäten in eine einzige Anfrage stapeln, können Sie die Häufigkeit von API-Aufrufen reduzieren und das Risiko von Leistungsproblemen aufgrund übermäßiger Einzelidentitätsanfragen minimieren.
+1. **Identitäten pro Anforderung maximieren:** Binden Sie bis zu 100.000 Identitäten pro Bereinigungsanfrage ein, um die Effizienz zu steigern. Wenn Sie mehrere Identitäten in eine einzige Anfrage stapeln, können Sie die Häufigkeit von API-Aufrufen reduzieren und das Risiko von Leistungsproblemen aufgrund übermäßiger Einzelidentitätsanfragen minimieren. Senden Sie Anfragen mit maximalen Identitätszahlen, um eine schnellere Verarbeitung zu erzielen, da Arbeitsaufträge aus Effizienzgründen stapelt werden.
 2. **Festlegen einzelner Datensätze:** Geben Sie für maximale Effizienz den zu verarbeitenden Datensatz an.
-3. **Senden mehrerer Anforderungen:** Senden Sie mehrere Anfragen mit maximalen Identitätszahlen, um eine schnellere Verarbeitung zu erzielen, da Arbeitsaufträge aus Effizienzgründen stapelweise verarbeitet werden.
-4. **Überlegungen zur API-Drosselung:** Achten Sie auf API-Einschränkungen, um langsame Downloads zu verhindern. Kleinere Anforderungen (&lt; 100 IDs) mit höheren Frequenzen können zu 429 Antworten führen und erfordern eine erneute Übermittlung zu akzeptablen Raten.
+3. **Überlegungen zur API-Drosselung:** Achten Sie auf API-Einschränkungen, um langsame Downloads zu verhindern. Kleinere Anforderungen (&lt; 100 IDs) mit höheren Frequenzen können zu 429 Antworten führen und erfordern eine erneute Übermittlung zu akzeptablen Raten.
 
 ### 429-Fehler verwalten {#manage-429-errors}
 
@@ -41,13 +41,13 @@ Wenn der Fehler 429 angezeigt wird, bedeutet dies, dass Sie die zulässige Anzah
 
 ## Ablaufdatum des Datensatzes {#dataset-expiration}
 
-Richten Sie die automatische Bereinigung von Datensätzen für kurzlebige Daten ein. Verwenden Sie die `/ttl` -Endpunkt der Data Hygiene-API verwenden, um Ablaufdaten für Datensätze zu planen. Verwenden Sie die `/ttl` -Endpunkt zum Trigger einer Datensatzbereinigung basierend auf einer bestimmten Uhrzeit oder einem bestimmten Datum. Weitere Informationen finden Sie im Handbuch zum Ablauf von Datensätzen . [Erstellen eines Datensatzablaufs](./api/dataset-expiration.md) und [akzeptierte Abfrageparameter](./api/dataset-expiration.md#query-params).
+Richten Sie die automatische Bereinigung von Datensätzen für kurzlebige Daten ein. Verwenden Sie die `/ttl` -Endpunkt der Data Hygiene-API verwenden, um Ablaufdaten für Datensätze zu planen, die basierend auf einem bestimmten Zeitpunkt oder Datum für die Bereinigung verwendet werden sollen. Weitere Informationen finden Sie im Handbuch zum Ablauf von Datensätzen . [Erstellen eines Datensatzablaufs](./api/dataset-expiration.md) und [akzeptierte Abfrageparameter](./api/dataset-expiration.md#query-params).
 
 ## Überwachen der Arbeitsreihenfolge und des Datensatzablaufstatus {#monitor}
 
 Sie können den Fortschritt Ihrer Datenlebenszyklusverwaltung effizient überwachen, indem Sie **E/A-Ereignisse**. Ein I/O-Ereignis ist ein Mechanismus zum Empfang von Echtzeit-Benachrichtigungen über Änderungen oder Aktualisierungen in verschiedenen Diensten innerhalb von Platform.
 
-E/A-Ereignis-Warnungen können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über Webhook zu erhalten, müssen Sie Ihren Webhook für Platform-Warnhinweise in der Adobe Developer-Konsole registrieren. Siehe Handbuch unter [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../observability/alerts/subscribe.md) für die detaillierten Anweisungen.
+E/A-Ereignis-Warnungen können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über Webhook zu erhalten, müssen Sie Ihren Webhook für Platform-Warnhinweise in der Adobe Developer Console registrieren. Siehe Handbuch unter [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../observability/alerts/subscribe.md) für die detaillierten Anweisungen.
 
 Verwenden Sie die folgenden Lebenszyklusmethoden und -richtlinien, um den Auftragsstatus effektiv abzurufen und zu überwachen:
 
@@ -63,7 +63,7 @@ Um den Fortschritt Ihrer Datenlebenszyklusaufgaben effizient zu überwachen, ric
 
 Ausführliche Informationen zu einzelnen Arbeitsaufträgen erhalten Sie bei folgendem Ansatz:
 
-- Stellen Sie eine GET-Anfrage an die `/workorder{work_order_id}` Endpunkt für detaillierte Antwortdaten.
+- Stellen Sie eine GET-Anfrage an die `/workorder/{work_order_id}` Endpunkt für detaillierte Antwortdaten.
 - Abrufen produktspezifischer Antworten und Erfolgsmeldungen.
 - Vermeiden Sie die Verwendung dieser Methode für reguläre Abruftätigkeiten.
 

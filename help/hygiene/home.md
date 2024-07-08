@@ -2,10 +2,10 @@
 title: Überblick über die erweiterte Lebenszyklusverwaltung
 description: Mit der erweiterten Lebenszyklusverwaltung können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder ungenaue Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 58%
+source-wordcount: '636'
+ht-degree: 53%
 
 ---
 
@@ -23,6 +23,10 @@ Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, k
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 Diese Aktivitäten können mithilfe der Variablen [[!UICONTROL Lebenszyklus der Daten] Benutzeroberfläche](#ui) oder [Data Hygiene API](#api). Wenn ein Datenlebenszyklusauftrag ausgeführt wird, stellt das System bei jedem Prozessschritt Transparenzaktualisierungen bereit. Weitere Informationen darüber, wie die einzelnen Vorgangstypen im System dargestellt werden, finden Sie im Abschnitt zu [Timelines und Transparenz](#timelines-and-transparency).
+
+>[!NOTE]
+>
+>Das erweiterte Data Lifecycle Management unterstützt das Löschen von Datensätzen über die [Endpunkt des Datensatzablaufs](./api/dataset-expiration.md) und ID-Löschungen (Daten auf Zeilenebene) mithilfe von primären Identitäten über die [Workorder-Endpunkt](./api/workorder.md). Sie können auch [Datensatzabläufe](./ui/dataset-expiration.md) und [Löschung von Datensätzen](./ui/record-delete.md) über die Platform-Benutzeroberfläche. Weitere Informationen finden Sie in der verknüpften Dokumentation . Beachten Sie, dass der Datenlebenszyklus das Löschen von Batches nicht unterstützt.
 
 ## [!UICONTROL Lebenszyklus der Daten] Benutzeroberfläche {#ui}
 
