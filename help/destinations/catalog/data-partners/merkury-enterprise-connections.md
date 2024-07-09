@@ -1,39 +1,38 @@
 ---
 title: Merkury Enterprise Connections Destination
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Enterprise Connections-Zielverbindung für Merkury erstellen.
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1375'
 ht-degree: 20%
 
 ---
+
 
 # Merkury Enterprise Connections Destination
 
 >[!NOTE]
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom Merkury-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihren Merkury-Kundenbetreuer.
+>Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL Merkury] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihre [!DNL Merkury] Kundenbetreuer.
 
 ## Übersicht
 
-Verwenden Sie das Ziel Enterprise Connections von Merkury, um Merkury sichere Zielgruppen bereitzustellen. Merkury bietet Marketing-Experten eine einfache Abstimmung und Bereitstellung personalbasierter Zielgruppen zu Merkurys über 80 adressierbaren TV-/CTV-, Herausgeber- und Ad-Tech-Verbindungen. Merkury basiert auf einem umfassenden US-Diagramm zur Identität erwachsener Verbraucher mit über 268 Millionen Menschen.
+Verwenden Sie die [!DNL Merkury Enterprise Connections] Ziel zur sicheren Bereitstellung von Zielgruppen für [!DNL Merkury]. [!DNL Merkury] ermöglicht es Marketing-Experten, personalisierte Zielgruppen einfach zuzuordnen und bereitzustellen. [!DNL Merkury]80+ adressierbare TV-/CTV-, Herausgeber- und Ad-Tech-Verbindungen. [!DNL Merkury] basiert auf einem umfassenden US-Diagramm zur Identität erwachsener Verbraucher von mehr als 268 Millionen Menschen.
 
 ![Ein Diagramm, das die Verbindung zwischen Merkury und Experience Platform zeigt, einschließlich Aufnahme und Aktivierung](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
-Führen Sie die Schritte auf dieser Dokumentationsseite aus, um eine Zielverbindung für Merkury-Verbindungen zu erstellen und Zielgruppen über die Adobe Experience Platform-Benutzeroberfläche zu aktivieren.
+Führen Sie die Schritte auf dieser Dokumentationsseite aus, um eine [!DNL Merkury Connections] Zielverbindung erstellen und Zielgruppen über die Adobe Experience Platform-Benutzeroberfläche aktivieren.
 
 >[!NOTE]
 >
->Wenn Sie mit Ihrem Merkury Connect-Konto Zielgruppen für Medienziele aktivieren möchten, verwenden Sie stattdessen unser Ziel für Merkury-Verbindungen .
+>Wenn Sie Zielgruppen für Medienziele mit Ihrer [!DNL Merkury Connect] -Konto, verwenden Sie die [!DNL Merkury Connections] Ziel.
 
 ![Die Zielkarte Merkury Enterprise Conections , die im Experience Platform-Zielkatalog hervorgehoben ist.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## Anwendungsfälle
 
-* **Aktivierung für digitale Medien**: Einfache Zuordnung und Bereitstellung Ihrer Zielgruppenprofile zu den mehr als 50 adressierbaren Herausgebern von Merkury und Ad-Tech-Verbindungen.
-* **Effizienzsteigerung**: Erhöhen Sie Ihre Cookie-lose, adressierbare Medienreichweite, verbessern Sie die Targeting-Effizienz und die ROAS-Kosten (Return on Advertising Spend).
+* **Aktivierung für digitale Medien**: Einfache Zuordnung und Bereitstellung Ihrer Zielgruppenprofile an [!DNL Merkury]Mehr als 50 adressierbare Herausgeber und Ad-Tech-Verbindungen.
+* **Effizienzsteigerung**: Erhöhen Sie Ihre cookie-lose, adressierbare Medienreichweite, verbessern Sie die Targeting-Effizienz und steigern Sie die ROAS (Return on Advertising Spend).
 
 ## Voraussetzungen
 
@@ -46,7 +45,7 @@ Führen Sie die Schritte auf dieser Dokumentationsseite aus, um eine Zielverbind
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/features/ecid.md) für weitere Informationen. |
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
@@ -116,15 +115,15 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 >[!NOTE]
 >
->Bei Auswahl der CSV-Option werden die Optionen Trennzeichen, Anführungszeichen, Escape-Zeichen, Leerwert, Null-Wert, Komprimierungsformat und Manifestdatei einschließen angezeigt. Wenden Sie sich an Ihr Merkury-Team, um die entsprechenden Einstellungen für Ihr Konto zu erhalten.
+>Bei der Auswahl der CSV-Option werden die Optionen Trennzeichen, Anführungszeichen, Escape-Zeichen, Leerwert, Null-Wert, Komprimierungsformat und Manifestdatei einschließen angezeigt. Wenden Sie sich an Ihr Merkury-Team, um die entsprechenden Einstellungen für Ihr Konto zu erhalten.
 
 ![Bild der CSV-Optionen](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
 ### Vorhandenes Konto
 
-Konten, die bereits mit dem Ziel &quot;Enterprise Connections&quot;von Merkury definiert wurden, werden in einem Listen-Popup angezeigt. Wenn diese Option aktiviert ist, werden Details zum Konto in der rechten Leiste angezeigt. Zeigen Sie das Beispiel in der Benutzeroberfläche an, wenn Sie zu **Ziele** > **Konten**;
+Konten, die bereits mit dem Ziel &quot;Enterprise Connections&quot;von Merkury definiert wurden, werden in einem Listen-Popup angezeigt. Wenn diese Option aktiviert ist, werden Details zum Konto in der rechten Leiste angezeigt. Zeigen Sie das Beispiel in der Benutzeroberfläche an, wenn Sie zu **Ziele** > **Konten**:
 
-![Screenshot des Zielkontos auf der Seite der Zielkonten](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![Ein Screenshot des Zielkontos auf der Seite der Zielkonten.](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
 ## Aktivieren von Warnhinweisen
 
@@ -136,21 +135,21 @@ Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **N
 
 >[!IMPORTANT]
 >
->* Zum Aktivieren von Daten benötigen Sie die Zugriffssteuerungsberechtigungen Ziele anzeigen, Ziele aktivieren, Profile anzeigen und Segmente anzeigen . Lesen Sie die Übersicht zur Zugriffskontrolle oder kontaktieren Sie Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
->* Um Identitäten zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung für Identitätsdiagramme anzeigen .
+>* Um Daten zu aktivieren, benötigen Sie die **Ziele anzeigen**, **Ziele aktivieren**, **Anzeigen von Profilen**, und **Segmente anzeigen** Zugriffssteuerungsberechtigungen. Lesen Sie die Übersicht zur Zugriffskontrolle oder kontaktieren Sie Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>* Um Identitäten zu exportieren, benötigen Sie die **Identitätsdiagramm anzeigen** Zugriffssteuerungsberechtigung.
 
 
 Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
 
 ## Vorschläge zuordnen
 
-Die korrekte Verarbeitung von Dateien auf der Merkurseite erfordert Name- und Adresselemente. Auch wenn nicht alle Elemente erforderlich sind, hilft eine möglichst umfassende Bereitstellung bei der erfolgreichen Zuordnung.
+Die korrekte Verarbeitung von Dateien auf der [!DNL Merkury] -Seite erfordert Namen- und Adresselemente. Auch wenn nicht alle Elemente erforderlich sind, hilft eine möglichst umfassende Bereitstellung bei der erfolgreichen Zuordnung.
 
-Zuordnungsvorschläge finden Sie in der folgenden Tabelle, in der Attribute auf Ihrer Zielseite aufgelistet werden, die von der Merkury-Verarbeitung verwendet werden und denen Kunden Profilattribute zuordnen können. Behandeln Sie diese Elemente als Vorschläge, da nicht alle Elemente erforderlich sind und die Quellwerte von den Anforderungen des Kontos abhängen.
+Zuordnungsvorschläge werden in der folgenden Tabelle bereitgestellt und enthalten Attribute auf Ihrer Zielseite, die von [!DNL Merkury] -Verarbeitung, der Kunden Profilattribute zuordnen können. Behandeln Sie diese Elemente als Vorschläge, da nicht alle Elemente erforderlich sind und die Quellwerte von den Anforderungen des Kontos abhängen.
 
-| Zielfeld | Quellbeschreibung |
+| Zielfeld | Source-Beschreibung |
 |---|---|
-| id | Identitätsfeld, das verwendet wird, um Daten aus der Metrik über den Quell-Connector für die Enterprise Identity-Lösung von Merkury an die Experience Platform zuzuordnen |
+| id | Identitätsfeld für die Zuordnung [!DNL Merkury] Daten, die über die [!DNL Merkury Enterprise Identity] Source-Connector |
 | input_first_name | Die `person.name.firstName` -Wert in Experience Platform. |
 | input_last_name | Die `person.name.lastName` -Wert in Experience Platform. |
 | Input_Address_Line_1 | Die `mailingAddress.street` -Wert in Experience Platform. |
@@ -173,4 +172,4 @@ Alle Adobe Experience Platform-Ziele sind bei der Verarbeitung Ihrer Daten mit D
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Profildaten von Experience Platform an Ihren von Merkury verwalteten S3-Speicherort zu exportieren. Als Nächstes müssen Sie sich an Ihren Merkury-Kundenbetreuer mit dem Namen des Kontos, den Dateinamen und dem Behälterpfad wenden, damit die Verarbeitung eingerichtet werden kann.
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Profildaten von Experience Platform in Ihre [!DNL Merkury] verwalteter S3-Speicherort. Als Nächstes müssen Sie Ihre [!DNL Merkury] mit dem Namen des Kontos, den Dateinamen und dem Behälterpfad übereinstimmen, damit die Verarbeitung eingerichtet werden kann.
