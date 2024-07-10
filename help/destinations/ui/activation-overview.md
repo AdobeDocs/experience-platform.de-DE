@@ -4,7 +4,7 @@ title: Aktivierungsübersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen für verschiedene Zieltypen aktivieren.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 25%
@@ -52,7 +52,7 @@ Führen Sie die folgenden Schritte aus, um Daten für Ihre Ziele über die **[!U
 
 ### Aktivieren von Zielgruppen über die Seite mit den Zielgruppendetails {#activate-audience-details}
 
-Auf der Seite mit den Zielgruppendetails können Sie Zielgruppen für Ziele aktivieren. Siehe [Zielgruppendetails](../../segmentation/ui/overview.md#audience-details) für weitere Informationen.
+Auf der Seite mit den Zielgruppendetails können Sie Zielgruppen für Ziele aktivieren. Siehe [Zielgruppendetails](../../segmentation/ui/audience-portal.md#audience-details) für weitere Informationen.
 
 Führen Sie je nach ausgewähltem Ziel die in den folgenden Artikeln beschriebenen Schritte aus, um den Aktivierungs-Workflow abzuschließen:
 

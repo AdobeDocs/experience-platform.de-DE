@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 93%
+source-wordcount: '185'
+ht-degree: 95%
 
 ---
 
@@ -33,10 +33,11 @@ ht-degree: 93%
 - Segmentierungsbenutzeroberfläche {#ui}
    - [Übersicht](ui/overview.md)
    - [Zielgruppen-Dashboard](ui/audience-dashboard.md)
+   - [Audience Portal](ui/audience-portal.md)
    - [Zielgruppenkomposition](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
-   - [Kontozielgruppen](ui/account-audiences.md)
-   - [Look-alike-Zielgruppen](ui/lookalike-audiences.md)
+   - [Konto-Zielgruppen](ui/account-audiences.md)
+   - [Lookalike-Zielgruppen](ui/lookalike-audiences.md)
    - [Potenzielle Zielgruppen](ui/prospect-audience.md)
    - [Edge-Segmentierung](ui/edge-segmentation.md)
    - [Streaming-Segmentierung ](ui/streaming-segmentation.md)
@@ -73,4 +74,4 @@ ht-degree: 93%
    - [Erzwingen der Datennutzungs-Compliance für Segmente](tutorials/governance.md)
 - [Häufig gestellte Fragen](./faq.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

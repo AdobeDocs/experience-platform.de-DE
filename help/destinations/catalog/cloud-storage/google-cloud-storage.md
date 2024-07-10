@@ -3,7 +3,7 @@ title: Verbindung zu Google Cloud Storage
 description: Erfahren Sie, wie Sie eine Verbindung zu Google Cloud Storage herstellen und Zielgruppen aktivieren oder Datensätze exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 63%
@@ -26,9 +26,9 @@ Erstellen Sie eine ausgehende Live-Verbindung zu [!DNL Google Cloud Storage], um
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -43,7 +43,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 {style="table-layout:auto"}
 
-## Exportieren von Datensätzen {#export-datasets}
+## Datensätze exportieren {#export-datasets}
 
 Dieses Ziel unterstützt Datensatzexporte. Vollständige Informationen zum Einrichten von Datensatzexporten finden Sie in den Tutorials:
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Look-alike-Zielgruppen
 description: Erfahren Sie, wie Sie neue hochwertige Zielgruppen in Adobe Experience Platform mit Look-alike-Zielgruppen ansprechen.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2192'
 ht-degree: 10%
 
 ---
@@ -106,7 +106,7 @@ Beachten Sie, dass das Diagramm **kumulativ** von rechts nach links. Das bedeute
 
 Sie können den Mauszeiger über einen bestimmten Punkt im Diagramm bewegen, um den Prozentsatz der Ähnlichkeit und die erwartete Profilanzahl für den aktuell hervorgehobenen Punkt anzuzeigen.
 
-### Look-alike-Zielgruppen {#list}
+### Lookalike-Zielgruppen {#list}
 
 Im Abschnitt Look-alike-Zielgruppen wird eine Liste aller Look-alike-Zielgruppen angezeigt, die zuvor für die ausgewählte Basiszielgruppe erstellt wurden.
 
@@ -179,7 +179,7 @@ Um Details einer Look-alike-Zielgruppe anzuzeigen, wählen Sie die Look-alike-Zi
 
 ![Der Abschnitt &quot;Look-alike-Zielgruppen&quot;wird hervorgehoben.](../images/ui/lookalike-audiences/select-laa.png)
 
-Die Seite mit den Details zur Zielgruppe wird angezeigt. Weitere Informationen auf dieser Seite finden Sie im [Abschnitt mit Zielgruppendetails des UI-Handbuchs für den Segmentation Service](./overview.md#audience-details).
+Die Seite mit den Details zur Zielgruppe wird angezeigt. Weitere Informationen auf dieser Seite finden Sie im [Zielgruppendetails in der Audience Portal-Übersicht](./audience-portal.md#audience-details).
 
 ![Details der Look-alike-Zielgruppe werden angezeigt.](../images/ui/lookalike-audiences/laa-details.png)
 

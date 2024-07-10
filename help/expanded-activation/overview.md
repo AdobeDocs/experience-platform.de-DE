@@ -1,15 +1,15 @@
 ---
-title: Erweiterte Aktivierung des Audience Managers
+title: Erweiterte Aktivierung für Audience Manager
 description: Erfahren Sie, wie Sie Audience Manager-Zielgruppen über Audience Manager Extended Activation für Social- und Werbeziele aktivieren.
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-
-# Erweiterte Aktivierung des Audience Managers
+# Erweiterte Aktivierung für Audience Manager
 
 Auf Adobe Experience Platform aufbauend hilft die erweiterte Aktivierung von Audience Managern vorhandenen [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) Benutzer aktivieren ihre Zielgruppen für [social](../destinations/catalog/social/overview.md) und [Werbung](../destinations/catalog/advertising/overview.md) Zielplattformen aus Real-Time CDP, wie z. B. [Facebook](../destinations/catalog/social/facebook.md), [Google Ads](../destinations/catalog/advertising/google-ads-destination.md)und mehr.
 
@@ -21,8 +21,8 @@ Auf Adobe Experience Platform aufbauend hilft die erweiterte Aktivierung von Aud
 
 Audience Manager Extended Activation verwendet Konzepte und Komponenten aus Adobe Experience Platform. Um den Workflow &quot;Erweiterte Aktivierung&quot;und die von Ihnen verwendeten Komponenten besser zu verstehen, sollten Sie über grundlegende Kenntnisse der folgenden Konzepte verfügen:
 
-* [Zielgruppen](../segmentation/ui/overview.md): Zielgruppen sind Gruppen von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen oder der Zielgruppenzusammensetzung (plattformgenerierte Zielgruppe) oder aus externen Quellen wie benutzerdefinierten Uploads (extern generierte Zielgruppe) erstellt werden. Unter Erweiterte Aktivierung werden Ihre Audience Manager-Segmente (Zielgruppen) als [benutzerspezifische Uploads](../segmentation/ui/overview.md#import-audience).
-* [Quell-Connectoren](../sources/home.md): Mithilfe von Quell-Connectoren (auch als Quellen bezeichnet) können Experience Platform-Benutzer Daten aus mehreren Quellen einfach erfassen und so die Strukturierung, Kennzeichnung und Verbesserung von Daten mithilfe von Experience Platform-Services ermöglichen. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Cloud-basiertem Speicher, Software von Drittanbietern und CRM-Systemen.
+* [Zielgruppen](../segmentation/ui/overview.md): Zielgruppen sind Gruppen von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen oder der Zielgruppenzusammensetzung (plattformgenerierte Zielgruppe) oder aus externen Quellen wie benutzerdefinierten Uploads (extern generierte Zielgruppe) erstellt werden. Unter Erweiterte Aktivierung werden Ihre Audience Manager-Segmente (Zielgruppen) als [benutzerspezifische Uploads](../segmentation/ui/audience-portal.md#import-audience).
+* [Source-Connectoren](../sources/home.md): Source-Connectoren (auch als Quellen bezeichnet) helfen Experience Platform-Anwendern bei der einfachen Erfassung von Daten aus mehreren Quellen und ermöglichen so die Strukturierung, Kennzeichnung und Verbesserung von Daten mithilfe von Experience Platform-Diensten. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Cloud-basiertem Speicher, Software von Drittanbietern und CRM-Systemen.
 * [Ziel-Connectoren](../destinations/home.md): Ziele beschreiben jeden Endpunkt, z. B. eine Adobe-Anwendung, eine Werbeplattform, einen Cloud-Speicher-Dienst oder einen Marketing-Dienst, bei dem eine Zielgruppe aktiviert und bereitgestellt wird. [!DNL Expanded Activation] unterstützt die Aktivierung von Zielgruppen in [Werbung](../destinations/catalog/advertising/overview.md) und [social](../destinations/catalog/social/overview.md) Ziel-Connectoren.
 
 ## Voraussetzungen {#prerequisites}
@@ -43,4 +43,3 @@ So aktivieren Sie Zielgruppen durch [!DNL Expanded Activation], stellen Sie sich
 ## Nächste Schritte {#next-steps}
 
 Jetzt, da Sie ein besseres Verständnis der Anwendungsfälle und Vorteile der Verwendung von [!DNL Expanded Activation], start [Konto konfigurieren](administration.md) und dann [Zielgruppen aktivieren](activate-audiences.md).
-

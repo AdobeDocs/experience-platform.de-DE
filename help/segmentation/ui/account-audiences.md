@@ -4,14 +4,14 @@ description: Erfahren Sie, wie Sie Zielgruppen für Konten erstellen und verwend
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 7d630c3673304060ad26375955602440a495f354
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
-# Kontozielgruppen
+# Konto-Zielgruppen
 
 >[!AVAILABILITY]
 >
@@ -29,7 +29,7 @@ Bevor Sie mit Kontozielgruppen beginnen, sollten Sie sich die Unterschiede zwisc
 - **Zielgruppen**: Eine Zielgruppe ist eine Zielgruppe, die mit **customer** Profildaten. Kundenprofildaten können verwendet werden, um Zielgruppen zu erstellen, die auf die Kundengruppe Ihres Unternehmens ausgerichtet sind. Weiterführende Informationen zu Kundenprofilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 - **Interessensgruppen**: Eine Interessenten-Zielgruppe ist eine Zielgruppe, die mithilfe von **Interessent** Profildaten. Mit potenziellen Profildaten können Sie Zielgruppen von nicht authentifizierten Benutzern erstellen. Weitere Informationen zu potenziellen Profilen finden Sie im Abschnitt [Interessenten-Profil - Übersicht](../../profile/ui/prospect-profile.md).
 
-## Zugriff auf {#access}
+## Zugriff {#access}
 
 Um auf Kontozielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** im **[!UICONTROL Konten]** Abschnitt.
 
@@ -41,7 +41,7 @@ Die [!UICONTROL Durchsuchen] angezeigt, auf der eine Liste aller Zielgruppen des
 
 Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Profilanzahl, Ursprung, Lebenszyklusstatus, Erstellungsdatum und Datum der letzten Aktualisierung.
 
-Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimmten Kontozielgruppen zu suchen und diese zu sortieren. Weitere Informationen zu dieser Funktion finden Sie im [Handbuch zur Segmentierungsbenutzeroberfläche](./overview.md#manage-audiences).
+Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimmten Kontozielgruppen zu suchen und diese zu sortieren. Weitere Informationen zu dieser Funktion finden Sie im [Übersicht über Audience Portal](./audience-portal.md#manage-audiences).
 
 ## Zielgruppe erstellen {#create}
 
@@ -67,7 +67,7 @@ Unter dem [!UICONTROL Zielgruppen] können Sie zuvor erstellte benutzerspezifisc
 
 Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md).
 
-## Aktivieren der Zielgruppe {#activate}
+## Zielgruppe aktivieren {#activate}
 
 >[!NOTE]
 >

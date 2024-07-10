@@ -3,7 +3,7 @@ title: Experience Cloud-Zielgruppen
 description: Erfahren Sie, wie Sie Audiences von Real-time Customer Data Platform für verschiedene Experience Cloud-Apps freigeben können.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 16%
@@ -19,7 +19,7 @@ ht-degree: 16%
 
 Verwenden Sie dieses Ziel, um Zielgruppen von Real-Time CDP zu Audience Manager und Adobe Analytics zu aktivieren.
 
-Zum Senden von Zielgruppen an Adobe Analytics benötigen Sie eine Audience Manager-Lizenz. Weitere Informationen finden Sie unter [Audience Analytics - Übersicht](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=de).
+Zum Senden von Zielgruppen an Adobe Analytics benötigen Sie eine Audience Manager-Lizenz. Weitere Informationen finden Sie unter [Audience Analytics - Übersicht](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 Um Zielgruppen an andere Adobe-Lösungen zu senden, verwenden Sie die Direktverbindungen von Real-Time CDP zu [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) und [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -112,7 +112,7 @@ Die Profile, die in die [!UICONTROL Experience Cloud Audiences] Ziel werden den 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/features/ecid.md) für weitere Informationen. |
-| GAID | Google Advertising ID | In Real-Time CDP erfasste Profile mit der primären Kennung Google Advertising ID (GAID) können an dieses Ziel exportiert werden. |
+| GAID | GOOGLE ADVERTISING ID | In Real-Time CDP erfasste Profile mit der primären Kennung Google Advertising ID (GAID) können an dieses Ziel exportiert werden. |
 | IDFA | Apple ID für Advertiser | In Real-Time CDP erfasste Profile mit der Hauptidentität Apple ID for Advertisers (IDFA) können an dieses Ziel exportiert werden. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | In Real-Time CDP erfasste Profile mit einer primären Identität von Hash-E-Mail-Adressen können an dieses Ziel exportiert werden. |
 
@@ -123,9 +123,9 @@ Die Profile, die in die [!UICONTROL Experience Cloud Audiences] Ziel werden den 
 In diesem Abschnitt wird beschrieben, welcher Audience-Typ Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+| ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 

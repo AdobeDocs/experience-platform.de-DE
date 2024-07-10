@@ -3,10 +3,10 @@ title: Potenzielle Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von potenziellen Zielgruppen unbekannte Kundinnen und Kunden mithilfe von Drittanbieterinformationen ansprechen können.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 100%
+source-wordcount: '395'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Pro
 
 Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filterattribut-Symbol](../images/ui/prospect-audience/filter-attribute.png) auswählen. Diese zusätzlichen Felder umfassen die Aktualisierungshäufigkeit und „Zuletzt aktualisiert von“.
 
-Weitere Informationen über die Durchsuchen-Seite, einschließlich detaillierter Informationen über die aufgelisteten Felder, finden Sie im Abschnitt [Durchsuchen](./overview.md#browse) des Handbuchs zur Segmentierungs-Benutzeroberfläche.
+Weitere Informationen zur Durchsuchen-Seite, einschließlich detaillierter Informationen zu den aufgelisteten Feldern, finden Sie im [Übersicht über Audience Portal](./audience-portal.md#list).
 
 ## Zielgruppendetails {#details}
 
@@ -40,7 +40,7 @@ Die Seite mit Details zur potenziellen Zielgruppe wird angezeigt. Es werden Info
 
 ![Die Seite mit Details zur potenziellen Zielgruppe wird angezeigt.](../images/ui/prospect-audience/audience-details.png)
 
-Weitere Informationen zur Seite mit den Zielgruppendetails finden Sie im [Abschnitt zu Zielgruppendetails des Handbuchs zur Segmentierungs-Benutzeroberfläche](./overview.md).
+Weitere Informationen zur Seite mit den Zielgruppendetails finden Sie im [Zielgruppendetails in der Audience Portal-Übersicht](./audience-portal.md#audience-details).
 
 ## Zielgruppe erstellen {#create}
 

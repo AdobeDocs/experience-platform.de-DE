@@ -4,10 +4,10 @@ title: Segmentergebnisse auswerten und aufrufen
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie Segmentdefinitionen auswerten und mithilfe der Adobe Experience Platform Segmentation Service-API auf Segmentierungsergebnisse zugreifen können.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 17%
+source-wordcount: '1594'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +21,7 @@ Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience 
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] Daten.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ### Erforderliche Kopfzeilen
@@ -50,7 +50,7 @@ Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, k
 
 [Geplante Auswertung](#scheduled-evaluation) (auch als &quot;geplante Segmentierung&quot;bezeichnet) können Sie einen Zeitplan für die Ausführung eines Exportauftrags zu einem bestimmten Zeitpunkt erstellen, während [On-Demand-Evaluierung](#on-demand-evaluation) umfasst die Erstellung eines Segmentauftrags, um die Zielgruppe sofort zu erstellen. Die Schritte für die einzelnen Schritte sind unten beschrieben.
 
-Wenn Sie die [Erstellen einer Segmentdefinition mithilfe der Segmentation-API](./create-a-segment.md) Tutorial oder Erstellen einer Segmentdefinition mithilfe von [Segment Builder](../ui/overview.md)sollten Sie dies tun, bevor Sie mit diesem Tutorial fortfahren.
+Wenn Sie die [Erstellen einer Segmentdefinition mithilfe der Segmentation-API](./create-a-segment.md) Tutorial oder Erstellen einer Segmentdefinition mithilfe von [Segment Builder](../ui/segment-builder.md)sollten Sie dies tun, bevor Sie mit diesem Tutorial fortfahren.
 
 ## Geplante Auswertung {#scheduled-evaluation}
 
@@ -146,7 +146,7 @@ Wenn Sie das spezifische Profil kennen, auf das Sie zugreifen möchten, können 
 
 ## Segment exportieren {#export}
 
-Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der Wert des `status`-Attributs lautet „SUCCEEDED“ (GELUNGEN)), können Sie Ihre Zielgruppe in einen Datensatz exportieren. In diesem Datensatz ist die Zielgruppe zugänglich und bearbeitbar.
+Nach erfolgreichem Abschluss eines Segmentierungsauftrags (der Wert des `status` -Attribut &quot;SUCCEEDED&quot;(GELUNGEN) festgelegt ist, können Sie Ihre Zielgruppe in einen Datensatz exportieren, in dem sie aufgerufen und bearbeitet werden kann.
 
 Die folgenden Schritte sind erforderlich, um Ihre Audience zu exportieren:
 

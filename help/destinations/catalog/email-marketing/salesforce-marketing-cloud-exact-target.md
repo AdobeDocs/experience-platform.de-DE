@@ -2,7 +2,7 @@
 title: (API) Salesforce Marketing Cloud-Verbindung
 description: Mit dem Salesforce-Marketing Cloud (ehemals ExactTarget)-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce-Marketing Cloud für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 22%
@@ -37,7 +37,7 @@ Die Vertriebsabteilung einer Heimmiet-Plattform möchte eine Marketing-E-Mail an
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Vor der Aktivierung der Daten für das [!DNL (API) Salesforce Marketing Cloud]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) verfügen, die in [!DNL Experience Platform] erstellt wurden.
+Vor der Aktivierung der Daten für das [!DNL (API) Salesforce Marketing Cloud]-Ziel müssen Sie über ein [Schema](/help/xdm/schema/composition.md), einen [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) und [Segmente](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) verfügen, die in [!DNL Experience Platform] erstellt wurden.
 
 ### Voraussetzungen in [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -136,9 +136,9 @@ Beachten Sie die folgenden Elemente, bevor Sie sich bei der [!DNL (API) Salesfor
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -170,8 +170,8 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unt
 | [!DNL (API) Salesforce Marketing Cloud] Ziel | [!DNL Salesforce Marketing Cloud] |
 | --- | --- |
 | **[!UICONTROL Subdomain]** | Ihre [!DNL Salesforce Marketing Cloud] Domänen-Präfix. <br>Beispiel: Ihre Domäne <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> Sie müssen `mcq4jrssqdlyc4lph19nnqgzzs84` als Wert. |
-| **[!UICONTROL Client ID]** (Client-ID) | Ihre [!DNL Salesforce Marketing Cloud] `Client ID`. |
-| **[!UICONTROL Client-Geheimnis]** | Ihre [!DNL Salesforce Marketing Cloud] `Client Secret`. |
+| **[!UICONTROL Client-ID]** | Ihre [!DNL Salesforce Marketing Cloud] `Client ID`. |
+| **[!UICONTROL Client Secret]** (Client-Geheimnis) | Ihre [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
 ![Screenshot der Platform-Benutzeroberfläche, in dem gezeigt wird, wie die Authentifizierung für das Salesforce-Marketing Cloud erfolgt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 

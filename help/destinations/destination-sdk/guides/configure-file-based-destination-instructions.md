@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe des Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 55%
@@ -420,7 +420,7 @@ Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritte
 
 Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche verwenden, um Zielgruppen zu erstellen, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden unten stehenden Ressourcen:
 
-* [Erstellen einer Zielgruppe - Dokumentationsseite](/help/segmentation/ui/overview.md#create-segment)
+* [Erstellen einer Zielgruppe - Dokumentationsseite](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Erstellen einer Zielgruppe - Videoeinführung](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Schritt 6: Veröffentlichen des Ziels {#publish-destination}

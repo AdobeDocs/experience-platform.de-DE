@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 94%
+source-wordcount: '1607'
+ht-degree: 96%
 
 ---
 
@@ -20,9 +20,9 @@ Dieses Dokument bietet einen Überblick über [!DNL Segmentation Service] und di
 
 Sie sollten die folgenden Schlüsselbegriffe verstehen, die in diesem Dokument verwendet werden:
 
-- **Segmentierung**: Die Unterteilung einer großen Personengruppe (z. B. Kunden, Interessenten, Benutzer oder Unternehmen) in kleinere Gruppen, die ähnliche Merkmale aufweisen und ähnlich auf Marketing-Strategien reagieren.
 - **Zielgruppe**: Eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlung kann entweder von Adobe Experience Platform mithilfe von Segmentdefinitionen (plattformgenerierte Zielgruppe) oder aus externen Quellen (extern generierte Zielgruppe) erstellt werden.
 - **Segmentdefinition**: Der Regelsatz, den Adobe Experience Platform verwendet, um wichtige Merkmale oder Verhaltensweisen einer Zielgruppe zu beschreiben.
+- **Segmentieren**: Der Vorgang der Aufteilung von Profilen in Zielgruppen.
 
 ## Funktionsweise der Segmentierung
 
@@ -42,7 +42,7 @@ Beim direkten Erstellen einer Zielgruppe in Platform können Sie die Zielgruppen
 
 Unabhängig davon, ob sie über die API oder über [!DNL Segment Builder] erstellt werden, werden Segmentdefinitionen letztendlich über [!DNL Profile Query Language] (PQL) definiert. Dabei wird die konzeptionelle Segmentdefinition in der Sprache beschrieben, mit der die Profile, die den Kriterien entsprechen, abgerufen werden. Weiterführende Informationen finden Sie in der [Übersicht zur PQL](./pql/overview.md).
 
-Informationen zum Erstellen und Verwenden von Segmenten in [!DNL Segment Builder] (die Benutzeroberflächen-Implementierung von [!DNL Segmentation Service]) finden Sie im [Segment Builder-Handbuch](./ui/overview.md).
+Informationen zum Erstellen und Verwenden von Segmenten in [!DNL Segment Builder] (die Benutzeroberflächen-Implementierung von [!DNL Segmentation Service]) finden Sie im [Segment Builder-Handbuch](./ui/segment-builder.md).
 
 Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie im Tutorial [Erstellen von Segmentdefinitionen mithilfe der API](./tutorials/create-a-segment.md).
 
@@ -78,7 +78,7 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentati
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Batch-Auswertung"
->abstract="Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird die Audience gespeichert und zur Verwendung exportiert."
+>abstract="Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung einer Zielgruppe wird sie gespeichert, sodass Sie sie exportieren und weiterverwenden können."
 
 Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird die resultierende Zielgruppe gespeichert, sodass Sie sie zur Verwendung exportieren können.
 
@@ -89,10 +89,10 @@ Batch-Zielgruppen werden automatisch alle 24 Stunden ausgewertet. Wenn Sie eine 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Edge-Auswertung"
->abstract="Bei der Edge-Segmentierung können Segmente in Platform sofort im Edge Network ausgewertet werden, was Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten ermöglicht."
+>abstract="Bei der Edge-Segmentierung werden Segmente in Platform sofort im Edge-Netzwerk ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und auf der nächsten Seite ermöglicht."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=de" text="Handbuch zur Benutzeroberfläche für Edge-Segmentierung"
 
-Mit der Edge-Segmentierung können Segmente in Platform sofort ausgewertet werden. [zum Edge Network](../web-sdk/home.md), wodurch Anwendungsfälle für die Personalisierung von derselben Seite und der nächsten Seite aktiviert werden.
+Die Segmentierung von Edge ermöglicht die sofortige Auswertung von Segmenten in Platform [zum Edge Network](../web-sdk/home.md), wodurch Anwendungsfälle für die Personalisierung von derselben Seite und der nächsten Seite aktiviert werden.
 
 Weitere Informationen zur Edge-Segmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder [Benutzeroberflächendokumentation](./ui/edge-segmentation.md).
 

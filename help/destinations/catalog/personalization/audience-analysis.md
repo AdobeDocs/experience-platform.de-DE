@@ -2,7 +2,8 @@
 title: Zielgruppenanalyse-Ziel
 description: Sehen Sie sich Zielgruppen an, für die sich Kunden im Customer Journey Analytics qualifizieren.
 badgeLimitedAvailability: label="Eingeschränkte Verfügbarkeit" type="Informative"
-source-git-commit: 83b3d40e17f444555769020526bb723265a09eb9
+exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 37%
@@ -31,7 +32,7 @@ Die Zielgruppenanalyse unterstützt die Aktivierung von Identitäten, die in der
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/features/ecid.md) für weitere Informationen. |
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
@@ -45,9 +46,9 @@ Die Zielgruppenanalyse unterstützt die Aktivierung von Identitäten, die in der
 Bei Verwendung dieses Ziels werden die folgenden Arten von Zielgruppen unterstützt:
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 

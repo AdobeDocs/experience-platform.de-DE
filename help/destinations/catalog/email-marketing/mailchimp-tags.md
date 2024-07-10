@@ -2,7 +2,8 @@
 title: Mailchimp-Tags
 description: Mit dem Ziel Mailchimp Tags können Sie Ihre Kontodaten exportieren und in Mailchimp aktivieren, um Kontakte zu gewinnen.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 27%
@@ -86,9 +87,9 @@ Siehe Abschnitt [!DNL Mailchimp] [Grenzwerte](https://mailchimp.com/developer/ma
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -167,13 +168,13 @@ So ordnen Sie Ihre XDM-Felder korrekt der [!DNL Mailchimp Tags] Gehen Sie wie fo
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
 1. Im **[!UICONTROL Quellfeld auswählen]** auswählen **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie die `Email` Identitäts-Namespace.
 
-   ![Screenshot der Platform-Benutzeroberfläche mit dem Quellfeld als E-Mail aus dem Identitäts-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Screenshot der Platform-Benutzeroberfläche mit Source-Feld als E-Mail aus dem Identitäts-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. Im **[!UICONTROL Zielgruppenfeld auswählen]** auswählen **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie die `Email` Identitäts-Namespace.
 
    ![Screenshot der Platform-Benutzeroberfläche mit Target-Feld als E-Mail aus dem Identitäts-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   Die Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Tags] wie folgt aussehen: | Quellfeld | Zielfeld | Obligatorisch | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Ja |
+   Die Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Tags] wie folgt aussehen: | Source Field | Zielfeld | Obligatorisch | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Ja |
 
    Nachfolgend finden Sie ein Beispiel mit den abgeschlossenen Zuordnungen:
    ![Screenshot der Platform-Benutzeroberfläche mit Feldzuordnungen.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
@@ -200,6 +201,6 @@ Siehe Abschnitt [[!DNL Mailchimp] Fehlerseite](https://mailchimp.com/developer/m
 Zusätzliche nützliche Informationen aus dem [!DNL Mailchimp] Die Dokumentation finden Sie unten:
 * [Erste Schritte mit [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Erste Schritte mit Zielgruppen](https://mailchimp.com/help/getting-started-audience/)
-* [Erstellen von Zielgruppen](https://mailchimp.com/help/create-audience/)
+* [Erstellen einer Zielgruppe](https://mailchimp.com/help/create-audience/)
 * [Erste Schritte mit Tags](https://mailchimp.com/help/getting-started-tags/)
 * [Marketing-API](https://mailchimp.com/developer/marketing/api/)

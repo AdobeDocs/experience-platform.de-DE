@@ -1,12 +1,13 @@
 ---
-title: Acxiom Prospect-Unterdrückung
+title: Acxiom Prospect-Suppression
 description: Exportieren Sie Ihre Erstanbieterzielgruppen in das Acxiom-Ziel, damit Acxiom bekannte oder konvertierte Kunden unterdrücken kann. Verwenden Sie dann den Quell-Connector von Acxiom, um Interessenslisten von Acxiom zu erfassen und zu aktivieren, wobei Ihre bekannten oder konvertierten Kunden entfernt sind.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1466'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -58,7 +59,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 | Audience Origin | Unterstützt | Beschreibung |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | x | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | x | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Die Verarbeitung erfordert Name- und Adresselemente, während nicht alle Elemente erforderlich sind. Wenn Sie so viel wie möglich bereitstellen, wird eine erfolgreiche Zuordnung erleichtert.  Zuordnungsvorschläge finden Sie in der folgenden Tabelle, in der Attribute auf Ihrer Zielseite aufgelistet werden, die von der Acxiom-Verarbeitung verwendet werden und denen Kunden Profilattribute zuordnen können.  Dies sollte als Vorschläge behandelt werden, da nicht alle Elemente erforderlich sind und die Quellwerte von den Anforderungen des Kontos abhängen.
 
-| Zielfeld | Quellbeschreibung |
+| Zielfeld | Source-Beschreibung |
 |--------------|-------------------------------------------------------------|
 | name | Die `person.name.fullName` -Wert in Experience Platform. |
 | firstName | Die `person.name.firstName` -Wert in Experience Platform. |

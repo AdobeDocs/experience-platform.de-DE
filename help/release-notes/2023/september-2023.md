@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise September 2023 zu Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 31%
@@ -220,7 +220,7 @@ Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service �
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Anpassbare Spalten | Sie können jetzt das Layout von Audience Portal mit neu skalierbaren Spalten anpassen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Handbuch zur Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#customize). |
+| Anpassbare Spalten | Sie können jetzt das Layout von Audience Portal mit neu skalierbaren Spalten anpassen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#customize). |
 | Aufschlüsselung der Aktualisierungsfrequenz | Sie können jetzt eine Aufschlüsselung der Aktualisierungshäufigkeit der Zielgruppen in Ihrer Organisation anzeigen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Handbuch zur Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#browse). |
 
 Weitere Informationen zum Segmentierungsdienst finden Sie in der [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).

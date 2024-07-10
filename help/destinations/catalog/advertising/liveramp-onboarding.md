@@ -3,7 +3,7 @@ title: LiveRamp – Onboarding-Verbindung
 description: Erfahren Sie, wie Sie mit dem LiveRamp-Connector Zielgruppen von Adobe Real-time Customer Data Platform in LiveRamp Connect integrieren können.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 89%
@@ -37,9 +37,9 @@ Im [Zuordnungsschritt](#map) des Aktivierungs-Workflows müssen Sie die Zielzuor
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -211,7 +211,7 @@ Die in den exportierten Dateien enthaltenen Profile können mit einem der folgen
 * `Expired`: Das Profil ist nicht mehr für die Zielgruppe qualifiziert, war jedoch in der Vergangenheit qualifiziert.
 * `""`(leere Zeichenfolge): Das Profil war nie für die Zielgruppe qualifiziert.
 
-Eine exportierte CSV-Datei mit einem `email`-Attribut, zwei Zielgruppen, die vom [Segmentierungs-Service](../../../segmentation/home.md) von Experience Platform stammen, und einer [importierten](../../../segmentation/ui/overview.md#importing-an-audience) externen Zielgruppe könnte zum Beispiel so aussehen:
+Eine exportierte CSV-Datei mit einem `email`-Attribut, zwei Zielgruppen, die vom [Segmentierungs-Service](../../../segmentation/home.md) von Experience Platform stammen, und einer [importierten](../../../segmentation/ui/audience-portal.md#import-audience) externen Zielgruppe könnte zum Beispiel so aussehen:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Im obigen Beispiel beschreiben die Abschnitte `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` und `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Zielgruppen, die vom Segmentierungs-Service stammen, während `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` eine Zielgruppe beschreibt, die als [benutzerdefinierter Upload in die Plattform importiert wurde](../../../segmentation/ui/overview.md#importing-an-audience).
+Im obigen Beispiel beschreiben die Abschnitte `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` und `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` Zielgruppen, die vom Segmentierungs-Service stammen, während `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` eine Zielgruppe beschreibt, die als [benutzerdefinierter Upload in die Plattform importiert wurde](../../../segmentation/ui/audience-portal.md#import-audience).
 
 Da Platform für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md) eine CSV-Datei generiert, wird auch eine separate Datenflussausführung für jede Zusammenführungsrichtlinien-ID erzeugt.
 

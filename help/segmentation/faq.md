@@ -2,7 +2,7 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '4096'
 ht-degree: 22%
@@ -175,7 +175,7 @@ Sobald sich eine Zielgruppe im Veröffentlichungsstatus befindet, **cannot** än
 
 ### Wie platziere ich eine Zielgruppe in den Veröffentlichungsstatus?
 
-Für Zielgruppen, die mit Segment Builder oder Zielgruppenkomposition erstellt wurden, können Sie die Zielgruppe auf den Veröffentlichungsstatus setzen, indem Sie &quot;[!UICONTROL Veröffentlichen]&quot; in den jeweiligen Benutzeroberflächen angezeigt.
+Für Zielgruppen, die mit Segment Builder oder Zielgruppenkomposition erstellt wurden, können Sie die Zielgruppe auf den Veröffentlichungsstatus setzen, indem Sie &quot;[!UICONTROL Publish]&quot; in den jeweiligen Benutzeroberflächen angezeigt.
 
 Von außen erstellte Zielgruppen werden automatisch auf &quot;Publizieren&quot;gesetzt.
 
@@ -189,7 +189,7 @@ Sie können eine veröffentlichte Zielgruppe in den inaktiven Status versetzen, 
 >
 >Der Status &quot;Neu veröffentlicht&quot;entspricht dem Veröffentlichungsstatus für das Zielgruppenverhalten.
 
-Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe mit inaktivem Status auswählen, das Schnellaktionsmenü in Audience Portal öffnen und auswählen [!UICONTROL Veröffentlichen].
+Sie können eine Zielgruppe erneut veröffentlichen, indem Sie eine Zielgruppe mit inaktivem Status auswählen, das Schnellaktionsmenü in Audience Portal öffnen und auswählen [!UICONTROL Publish].
 
 ### Wie setze ich eine Zielgruppe in den gelöschten Status?
 
@@ -239,11 +239,11 @@ Nein, nicht. Solange Sie über Bearbeitungsberechtigungen für Zielgruppen verf�
 
 ### Gibt es eine Begrenzung für die Anzahl der Ordner, die ich erstellen kann?
 
-Nein, die Anzahl der Ordner, die Sie erstellen können, ist nicht beschränkt. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventarbereich](./ui/overview.md#folders) der Segmentation Service-Benutzeroberfläche - Übersicht.
+Nein, die Anzahl der Ordner, die Sie erstellen können, ist nicht beschränkt. Weitere Informationen zu Ordnern finden Sie im Abschnitt [Zielgruppeninventarbereich](./ui/audience-portal.md#folders) der Segmentation Service-Benutzeroberfläche - Übersicht.
 
 ### Gibt es eine Begrenzung für die Anzahl der Tags, die einer Zielgruppe hinzugefügt werden können?
 
-Nein, die Anzahl der Tags, die einer Audience hinzugefügt werden können, ist unbegrenzt. Weitere Informationen zu Tags finden Sie im Abschnitt [Zielgruppeninventarbereich](./ui/overview.md#tags) der Segmentation Service-Benutzeroberfläche - Übersicht.
+Nein, die Anzahl der Tags, die einer Audience hinzugefügt werden können, ist unbegrenzt. Weitere Informationen zu Tags finden Sie im Abschnitt [Zielgruppeninventarbereich](./ui/audience-portal.md#tags) der Segmentation Service-Benutzeroberfläche - Übersicht.
 
 ### Gibt es eine Begrenzung für die Anzahl der Tags, die ich erstellen kann?
 
@@ -251,7 +251,7 @@ Nein, die Anzahl der Tags, die Sie erstellen können, ist unbegrenzt. Sie könne
 
 ### Kann ich beim Suchen nach einer Zielgruppe nach Name oder Tag in einem übergeordneten Ordner auch die zugehörigen untergeordneten Ordner durchsuchen?
 
-Nein, dieses Verhalten wird nicht unterstützt. Sie können die Ansicht des Zielgruppeninventars jedoch ändern, um sie anzuzeigen **Alle Zielgruppen** und durchsuchen dann alle Ordner. Weitere Informationen zur Verwendung der Suche im Zielgruppen-Inventar finden Sie in der [Suchabschnitt](./ui/overview.md#search) der Segmentation Service-Benutzeroberfläche - Übersicht.
+Nein, dieses Verhalten wird nicht unterstützt. Sie können die Ansicht des Zielgruppeninventars jedoch ändern, um sie anzuzeigen **Alle Zielgruppen** und durchsuchen dann alle Ordner. Weitere Informationen zur Verwendung der Suche im Zielgruppen-Inventar finden Sie in der [Suchabschnitt](./ui/audience-portal.md#search) der Segmentation Service-Benutzeroberfläche - Übersicht.
 
 ### Kann ich zum Zeitpunkt der Erstellung automatisch eine Zielgruppe einem Ordner zuweisen?
 

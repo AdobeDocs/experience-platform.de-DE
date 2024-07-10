@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Experience Platform-Benutzeroberfläche
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 3%
@@ -51,7 +51,7 @@ Die **[!UICONTROL Letzte Segmente]** enthält die fünf zuletzt erstellten Segme
 
 Die **[!UICONTROL Letzte Ziele]** enthält die fünf Ziele, die Sie in Ihrem Unternehmen zuletzt erstellt haben. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen über das angegebene Ziel anzuzeigen, oder **[!UICONTROL Alle anzeigen]** um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie im [Ziele - Übersicht](../destinations/home.md).
 
-### Empfohlenes Lernen
+### Empfohlene Lektüre
 
 Die **[!UICONTROL Empfohlenes Lernen]** enthält Links zur nützlichen Dokumentation für die ersten Schritte mit Adobe Experience Platform.
 
@@ -83,7 +83,7 @@ Rechts neben dem Anwendungsschalter befindet sich der **Hilfe- und Support-Menü
 
 ![](images/user-guide/homepage-help-clicked.png)
 
-### Benachrichtigungen und Ankündigungen
+### Benachrichtigungen und Mitteilungen
 
 Im **Benachrichtigungsabschnitt**, der durch die ![Glocken/Benachrichtigungen und Mitteilungen](images/user-guide/notification-icon.png) Symbol. Die **[!UICONTROL Benachrichtigungen]** -Tab wichtige Informationen zum Produkt und andere relevante Aktualisierungen anzeigen, während die **[!UICONTROL Mitteilungen]** enthält Informationen zur Serviceverwaltung.
 
@@ -129,7 +129,7 @@ Die **[!UICONTROL Ziele]** -Bereich können Sie Ziele erstellen, aktualisieren u
 
 Die **[!UICONTROL Profile]** können Sie Kundenprofile durchsuchen, Profilmetriken anzeigen, Zusammenführungsrichtlinien erstellen und verwalten und Vereinigungsschemata anzeigen. Weitere Informationen zur Verwendung des [!UICONTROL Profile] lesen Sie bitte die [[!DNL Profile] Benutzerhandbuch](../profile/ui/user-guide.md). Weitere Informationen zum Echtzeit-Kundenprofil finden Sie im [Übersicht über das Echtzeit-Kundenprofil](../profile/home.md).
 
-Die **[!UICONTROL Segmente]** -Bereich können Sie Segmentdefinitionen erstellen und verwalten. Weitere Informationen zur Verwendung des [!UICONTROL Segmente] lesen Sie bitte die [Benutzerhandbuch zur Segmentierung](../segmentation/ui/overview.md). Weitere Informationen zum Segmentierungsdienst finden Sie im [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
+Die **[!UICONTROL Zielgruppen]** -Bereich können Sie Segmentdefinitionen erstellen und verwalten. Weitere Informationen zur Verwendung des [!UICONTROL Zielgruppen] lesen Sie bitte die [Benutzerhandbuch zur Segmentierung](../segmentation/ui/overview.md). Weitere Informationen zum Segmentierungsdienst finden Sie im [Übersicht über den Segmentierungsdienst](../segmentation/home.md).
 
 Die **[!UICONTROL Identitäten]** können Sie Identitäts-Namespaces erstellen und verwalten. Weitere Informationen zum [!UICONTROL Identitäten] , einschließlich Informationen zu Identitäts-Namespaces und zur Verwendung von Identitäten in der Platform-Benutzeroberfläche, finden Sie im Abschnitt [Übersicht über Identitäts-Namespace](../identity-service/features/namespaces.md).
 

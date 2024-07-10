@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Destination SDK aufgeführt und beschrieben.
 title: Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 58%
@@ -279,7 +279,7 @@ Nachdem Sie das Ziel mit den Konfigurationsendpunkten in den vorherigen Schritte
 
 Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche zum Erstellen von Segmenten verwenden, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Zielgruppen in Experience Platform finden Sie in den beiden unten stehenden Ressourcen:
 
-* [Erstellen einer Dokumentationsseite für Zielgruppen](/help/segmentation/ui/overview.md#create-segment)
+* [Erstellen einer Dokumentationsseite für Zielgruppen](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Videoeinführung zum Erstellen einer Zielgruppe](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Schritt 7: Veröffentlichen des Ziels {#publish-destination}

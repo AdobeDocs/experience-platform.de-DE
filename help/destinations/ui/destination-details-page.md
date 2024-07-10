@@ -3,7 +3,7 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 9%
@@ -139,4 +139,4 @@ Um den vorhandenen Aktivierungszeitplan für mehrere Zielgruppen gleichzeitig zu
 
 >[!NOTE]
 >
-Weitere Informationen zum Erkunden der Detailseite einer Audience finden Sie im Abschnitt [Übersicht über die Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md#segment-details).
+Weitere Informationen zum Erkunden der Detailseite einer Audience finden Sie im Abschnitt [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).

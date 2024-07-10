@@ -3,7 +3,8 @@ title: Acxiom-Datenverbesserung
 description: Verwenden Sie diesen Connector, um Erstanbieter-Adobe-Profile in Real-Time CDP zu Acxiom zu aktivieren, damit Daten angereichert und über Marketingkanäle hinweg verwendet werden können. Sie können dann die Acxiom-Quelle verwenden, um die Profile mit erweiterten Daten zu importieren und in Real-Time CDP mit ihnen zu arbeiten.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 28%
@@ -56,7 +57,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 | Audience Origin | Unterstützt | Beschreibung |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | x | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | x | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ Für die korrekte Verarbeitung von Dateien auf der Seite &quot;Acxiom&quot;sind 
 
 Zuordnungsvorschläge finden Sie in der folgenden Tabelle, in der Attribute auf Ihrer Zielseite aufgelistet werden, die von der Acxiom-Verarbeitung verwendet werden und denen Kunden Profilattribute zuordnen können. Behandeln Sie diese Elemente als Vorschläge, da nicht alle Elemente erforderlich sind und die Quellwerte von den Anforderungen des Kontos abhängen.
 
-| Zielfeld | Quellbeschreibung |
+| Zielfeld | Source-Beschreibung |
 |--------------|-------------------------------------------------------------|
 | name | Die `person.name.fullName` -Wert in Experience Platform. |
 | firstName | Die `person.name.firstName` -Wert in Experience Platform. |

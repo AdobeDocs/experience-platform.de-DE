@@ -2,13 +2,13 @@
 title: Google-Kundenabgleich + Display & Video 360-Verbindung
 description: Mit dem Ziel-Connector Google-Kundenabgleich + Display & Video 360 können Sie Ihre Online- und Offline-Daten von Experience Platform verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 7a9312a3722e205de3d11e17f6f079709b20237c
+exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 18%
 
 ---
-
 
 # [!DNL Google Customer Match + Display & Video 360]-Verbindung
 
@@ -82,9 +82,9 @@ Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Da
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 

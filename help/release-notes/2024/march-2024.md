@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise März 2024
 description: Versionshinweise März 2024 für Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1190'
 ht-degree: 33%
 
 ---
@@ -112,7 +112,7 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Massenaktionen | Das Zielgruppeninventar unterstützt jetzt Massenaktionen. Mithilfe von Massenaktionen können Sie schnell mehrere Zielgruppen auswählen, um sie in einen Ordner zu verschieben, Tags anzuwenden, Zugriffsbeschriftungen anzuwenden oder zu löschen. <br> ![Massenaktionen in der Benutzeroberfläche &quot;Zielgruppen&quot;.](../2024/assets/march/bulk-actions.png "Massenaktionen in der Benutzeroberfläche &quot;Zielgruppen&quot;."){width="100" zoomable="yes"} <br>Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md#bulk-actions). |
+| Massenaktionen | Das Zielgruppeninventar unterstützt jetzt Massenaktionen. Mithilfe von Massenaktionen können Sie schnell mehrere Zielgruppen auswählen, um sie in einen Ordner zu verschieben, Tags anzuwenden, Zugriffsbeschriftungen anzuwenden oder zu löschen. <br> ![Massenaktionen in der Benutzeroberfläche &quot;Zielgruppen&quot;.](../2024/assets/march/bulk-actions.png "Massenaktionen in der Benutzeroberfläche &quot;Zielgruppen&quot;."){width="100" zoomable="yes"} <br>Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 

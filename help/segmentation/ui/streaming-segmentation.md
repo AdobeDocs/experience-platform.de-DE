@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung
 description: Mit der Streaming-Segmentierung in Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf die Relevanz der Daten konzentrieren. Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, während Daten an Platform übermittelt werden. Das bedeutet, dass die Segmentzugehörigkeit auch ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '1541'
-ht-degree: 91%
+source-wordcount: '1537'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Mit der Streaming-Segmentierung in [!DNL Adobe Experience Platform] können Kund
 
 >[!NOTE]
 >
->Damit die Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weiterführende Informationen zur Aktivierung der geplanten Segmentierung finden Sie im [Abschnitt zur Streaming-Segmentierung im Segmentierungs-Benutzerhandbuch](./overview.md#scheduled-segmentation).
+>Damit die Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie unter [Übersicht über Audience Portal](./audience-portal.md#scheduled-segmentation).
 
 Eine Abfrage wird automatisch mithilfe der Streaming-Segmentierung ausgewertet, wenn sie eines der folgenden Kriterien erfüllt:
 
@@ -75,7 +75,7 @@ Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen 
 >
 >Eine Segmentdefinition gilt als qualifiziert, wenn es von der Statuslosigkeit oder vom Status „beendet“ zum Status „realisiert“ wechselt. Eine Segmentdefinition gilt als nicht qualifiziert, wenn es von realisiert zu beendet wechselt.
 >
->Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Segmentierungsübersicht](./overview.md#browse).
+>Weitere Informationen zu diesen Status finden Sie in der Statustabelle im Abschnitt [Übersicht über Audience Portal](./audience-portal.md#customize).
 
 ![Die Karte für Profile im Zeitverlauf wird hervorgehoben und zeigt ein Liniendiagramm der Profile im Zeitverlauf an.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

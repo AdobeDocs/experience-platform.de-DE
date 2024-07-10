@@ -2,13 +2,13 @@
 title: PubMatic Connect
 description: PubMatic maximiert den Kundenwert durch die Bereitstellung der programmatischen Digital-Marketing-Lieferkette der Zukunft. PubMatic Connect kombiniert Plattformtechnologie mit dediziertem Service, um Inventar und Daten zu verpacken und zu verarbeiten.
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 42%
 
 ---
-
 
 # PubMatic Connect-Ziel {#pubmatic-connect}
 
@@ -40,7 +40,7 @@ Sprechen Sie mit Ihrem [!DNL PubMatic] Kundenbetreuer , um sicherzustellen, dass
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 | --------------- | ------ | --- |
-| GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
@@ -53,7 +53,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 | Audience Origin | Unterstützt | Beschreibung |
 | --- | --------- | ------ |
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 

@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle;attri
 title: Attributbasierte Zugriffssteuerung – Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffssteuerung in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
-ht-degree: 84%
+source-wordcount: '1864'
+ht-degree: 82%
 
 ---
 
@@ -98,7 +98,7 @@ Als Admin können Sie attributbasierte Zugriffssteuerungsfunktionen für Folgend
 >
 >Beachten Sie daher bei der Arbeit mit Zielen und attributbasierter Zugriffssteuerung die folgenden Auswirkungen:
 >
->* Sie können nur Segmente, für die Sie über die Berechtigung zum Zugriff und zur Anzeige verfügen, in der [Ansicht zum Durchsuchen von Segmenten](/help/segmentation/ui/overview.md#browse) und im [Schritt zum Auswählen von Segmenten](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) des Aktivierungs-Workflows aktivieren.
+>* Sie können Zielgruppen nur aktivieren, die Sie aufrufen und in der [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) und [Segmentschritt auswählen](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) des Aktivierungs-Workflows.
 >* Im [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) können Sie nur die Felder anzeigen und zur Aktivierung auswählen, für die Sie über Zugriffsberechtigungen verfügen.
 >* Wenn Sie zusätzliche Segmente für ein vorhandenes Ziel aktivieren möchten, bei dem Sie nicht auf alle Felder zugreifen können, die für den Export zugeordnet sind, wird der Aktivierungs-Workflow für Sie blockiert.
 

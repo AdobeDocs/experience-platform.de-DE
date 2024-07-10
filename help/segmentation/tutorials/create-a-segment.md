@@ -4,7 +4,7 @@ title: Erstellen einer Segmentdefinition mithilfe der Segmentation Service-API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie eine Segmentdefinition mithilfe der Adobe Experience Platform Segmentation Service-API entwickeln, testen, in der Vorschau anzeigen und speichern.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 24%
@@ -15,7 +15,7 @@ ht-degree: 24%
 
 Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Vorschau und Speichern einer Segmentdefinition mithilfe der [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Informationen zum Erstellen von Segmentdefinitionen mithilfe der Benutzeroberfläche finden Sie in der [Segment Builder-Handbuch](../ui/overview.md).
+Informationen zum Erstellen von Segmentdefinitionen mithilfe der Benutzeroberfläche finden Sie in der [Segment Builder-Handbuch](../ui/segment-builder.md).
 
 ## Erste Schritte
 
@@ -53,7 +53,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Entwickeln einer Segmentdefinition
 
-Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Prädikat bezeichnet. PQL-Eigenschaften definieren die Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
+Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Eigenschaft bezeichnet. PQL prädiktiert die Definition der Regeln für die Segmentdefinition anhand von Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
 
 Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an die `/segment/definitions` -Endpunkt im [!DNL Segmentation] API. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die erforderlich sind, damit eine Segmentdefinition erfolgreich definiert werden kann.
 
@@ -63,7 +63,7 @@ Eine ausführliche Erläuterung zur Definition einer Segmentdefinition finden Si
 
 Bei der Entwicklung Ihrer Segmentdefinition können Sie die Tools für die Schätzung und Vorschau in [!DNL Real-Time Customer Profile] um Informationen auf Zusammenfassungsebene anzuzeigen, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Schätzungen liefern statistische Informationen über eine Segmentdefinition, z. B. die prognostizierte Zielgruppengröße und das Konfidenzintervall. Vorschau bietet paginierte Listen mit qualifizierten Profilen für eine Segmentdefinition, sodass Sie die Ergebnisse mit dem, was Sie erwarten, vergleichen können.
 
-Durch Schätzung und Vorschau Ihrer Zielgruppe können Sie Ihre PQL-Eigenschaften testen und optimieren, bis sie ein gewünschtes Ergebnis liefern, in dem sie dann in einer aktualisierten Segmentdefinition verwendet werden können.
+Durch Schätzung und Vorschau Ihrer Zielgruppe können Sie Ihre PQL-Prädikate testen und optimieren, bis sie ein gewünschtes Ergebnis erzielen und dort in einer aktualisierten Segmentdefinition verwendet werden können.
 
 Es gibt zwei erforderliche Schritte, um eine Vorschau Ihrer Segmentdefinition anzuzeigen oder eine Schätzung davon zu erhalten:
 

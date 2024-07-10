@@ -3,7 +3,7 @@ title: Aktivieren von Zielgruppendaten für Streaming-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren, indem Sie sie Streaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 19%
@@ -52,7 +52,7 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 
 * **[!UICONTROL Segmentierungsdienst]**: Vom Segmentation-Dienst innerhalb von Experience Platform generierte Zielgruppen. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
 ![Mehrere im Schritt Zielgruppen auswählen hervorgehobene Zielgruppen.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)

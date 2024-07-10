@@ -3,7 +3,7 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen von Adobe Experience Platform aus für Edge-Personalisierungsziele aktivieren können, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu nutzen.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -47,13 +47,13 @@ Eine kurze Übersicht darüber, wie Sie Zielgruppen und Profilattribute für Ado
 
 ## Anwendungsfälle {#use-cases}
 
-Verwenden Sie Adobe-Personalisierungslösungen wie Adobe Target oder Ihre eigenen Personalisierungspartner-Plattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietären Systemen (z. B. internem CMS), um eine tiefere Kundenpersonalisierung über die [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Ziel. Dies alles nutzt gleichzeitig auch Experience Platform Edge Network-Datenerfassungs- und Segmentierungsfunktionen.
+Verwenden Sie Adobe-Personalisierungslösungen wie Adobe Target oder Ihre eigenen Personalisierungspartner-Plattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietären Systemen (z. B. internem CMS), um eine tiefere Kundenpersonalisierung über die [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) Ziel. Dies alles nutzt gleichzeitig auch Experience Platform Edge Network-Datenerfassungs- und Segmentierungsfunktionen.
 
 Die unten beschriebenen Anwendungsfälle umfassen sowohl die Personalisierung der Site als auch zielgruppengerechte On-site-Werbung.
 
-Um diese Anwendungsfälle zu aktivieren, benötigen Kunden eine schnelle, optimierte Methode, um sowohl Zielgruppen- als auch Profilattributinformationen von Experience Platform abzurufen und diese Informationen an die [Adobe Target](../catalog/personalization/adobe-target-connection.md) oder [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Verbindungen in der Experience Platform-Benutzeroberfläche.
+Um diese Anwendungsfälle zu aktivieren, benötigen Kunden eine schnelle, optimierte Methode, um sowohl Zielgruppen- als auch Profilattributinformationen von Experience Platform abzurufen und diese Informationen an die [Adobe Target](../catalog/personalization/adobe-target-connection.md) oder [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) Verbindungen in der Experience Platform-Benutzeroberfläche.
 
-### Personalisierung derselben Seite {#same-page}
+### Personalisierung auf derselben Seite {#same-page}
 
 Ein Benutzer besucht eine Seite Ihrer Website. Sie können die aktuellen Seitenbesuchsinformationen (z. B. verweisende URL, Browsersprache, eingebettete Produktinformationen) verwenden, um die nächste Aktion oder Entscheidung (z. B. Personalisierung) mithilfe der [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Verbindung für Nicht-Adobe-Plattformen (z. B. [!DNL Pega], [!DNL Optimizely] oder andere.).
 
@@ -83,7 +83,7 @@ Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experie
 >
 >Ab der Version vom April 2024 müssen Sie das Kontrollkästchen Edge-Segmentierung nicht aktivieren, wenn [Konfigurieren der Verbindung zu Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In diesem Fall [Personalisierung nächste Sitzung](#next-session) ist der einzige verfügbare Anwendungsfall für die Personalisierung.
 
-![Datastream-Konfiguration mit hervorgehobenen Edge-Segmentierungs- und Personalisierungszielen!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Datenspeicherkonfiguration mit Edge-Segmentierung und Personalization-Zielen hervorgehoben!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Weitere Informationen zum Einrichten eines Datenstroms finden Sie in den Anweisungen in der [Dokumentation zum Platform Web SDK](../../datastreams/configure.md#aep).
 
@@ -93,7 +93,7 @@ Nachdem Sie Ihre Zielverbindung erstellt haben, müssen Sie eine [!DNL Active-On
 
 >[!IMPORTANT]
 >
->Derzeit unterstützen Edge-Ziele nur die Aktivierung von Zielgruppen, die die [Richtlinie zur aktiven Zusammenführung auf Edge](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festlegen. Wenn Sie Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Edge-Zielen zuordnen, werden diese Zielgruppen nicht ausgewertet.
+>Derzeit unterstützen Edge-Ziele nur die Aktivierung von Zielgruppen, die die [Richtlinie zur aktiven Zusammenführung in Edge](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festlegen. Wenn Sie Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Edge-Zielen zuordnen, werden diese Zielgruppen nicht ausgewertet.
 
 Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
 
@@ -141,7 +141,7 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 
 * **[!UICONTROL Segmentierungsdienst]**: Vom Segmentation-Dienst innerhalb von Experience Platform generierte Zielgruppen. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
 ![Wählen Sie im Aktivierungs-Workflow den Schritt Zielgruppen aus, wobei mehrere Zielgruppen hervorgehoben sind.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, muss die Variable **[!UICONTROL Benutzerdefinierte Personalisierung]** Für das Ziel müssen Sie die [Edge Network Server-API](../../server-api/overview.md) beim Konfigurieren des Ziels für eine attributbasierte Personalisierung. Alle Server-API-Aufrufe müssen in einem [authentifizierter Kontext](../../server-api/authentication.md).
+>Profilattribute können vertrauliche Daten enthalten. Um diese Daten zu schützen, muss die Variable **[!UICONTROL Benutzerdefinierte Personalization]** Für das Ziel müssen Sie die [Edge Network Server-API](../../server-api/overview.md) beim Konfigurieren des Ziels für eine attributbasierte Personalisierung. Alle Server-API-Aufrufe müssen in einem [authentifizierter Kontext](../../server-api/authentication.md).
 >
 ><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >
@@ -164,7 +164,7 @@ Das Hinzufügen von Attributen ist optional. Sie können weiterhin mit dem näch
 
 ### Quellattribute auswählen {#select-source-attributes}
 
-Um Quellattribute hinzuzufügen, wählen Sie die **[!UICONTROL Neues Feld hinzufügen]** Kontrolle über **[!UICONTROL Quellfeld]** und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
+Um Quellattribute hinzuzufügen, wählen Sie die **[!UICONTROL Neues Feld hinzufügen]** Kontrolle über **[!UICONTROL Source-Feld]** und suchen oder navigieren Sie zum gewünschten XDM-Attributfeld, wie unten dargestellt.
 
 ![Bildschirmaufzeichnung, die zeigt, wie ein Zielattribut im Zuordnungsschritt ausgewählt wird.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
@@ -174,7 +174,7 @@ Um Zielattribute hinzuzufügen, wählen Sie die **[!UICONTROL Neues Feld hinzuf�
 
 >[!NOTE]
 >
->Die Auswahl der Zielattribute gilt nur für die [Benutzerdefinierte Personalisierung](../catalog/personalization/custom-personalization.md) Aktivierungs-Workflow, um die Zuordnung von Anzeigenamenfeldern in der Zielplattform zu unterstützen.
+>Die Auswahl der Zielattribute gilt nur für die [Benutzerdefinierte Personalization](../catalog/personalization/custom-personalization.md) Aktivierungs-Workflow, um die Zuordnung von Anzeigenamenfeldern in der Zielplattform zu unterstützen.
 
 ![Bildschirmaufzeichnung, die zeigt, wie ein XDM-Attribut im Zuordnungsschritt ausgewählt wird](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 

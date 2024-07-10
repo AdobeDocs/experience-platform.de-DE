@@ -1,9 +1,9 @@
 ---
 keywords: Werbung; Bierwerbung;
 title: Microsoft Bing-Verbindung
-description: Mit dem Microsoft Bing-Verbindungsziel können Sie im gesamten Microsoft Advertising Network gezielte digitale Kampagnen für Zielgruppen und Zielgruppen ausführen, einschließlich Display-Werbung, Suche und nativ.
+description: Mit dem Microsoft Bing-Verbindungsziel können Sie im gesamten Microsoft Advertising-Netzwerk, einschließlich Display-Werbung, Suche und nativ, zielgruppenorientierte digitale Kampagnen durchführen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 52%
@@ -16,7 +16,7 @@ ht-degree: 52%
 
 Verwenden Sie die [!DNL Microsoft Bing] Ziel zum Senden von Profildaten an die gesamte [!DNL Microsoft Advertising Network], einschließlich [!DNL Display Advertising], [!DNL Search], und [!DNL Native].
 
-Die [!DNL Microsoft Bing] Ziel erstellt *[!DNL Custom Audiences]* in Microsoft. Diese sind sowohl im [!DNL Microsoft Search Network] und [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), wie im Abschnitt [Microsoft-Werbedokumentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+Die [!DNL Microsoft Bing] Ziel erstellt *[!DNL Custom Audiences]* in Microsoft. Diese sind sowohl im [!DNL Microsoft Search Network] und [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]), wie im Abschnitt [Dokumentation zu Microsoft Advertising](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 So senden Sie Profildaten an [!DNL Microsoft Bing], müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
@@ -30,7 +30,7 @@ Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] 
 
 | Identität | Beschreibung |
 |---|---|
-| MAID | Microsoft Advertising ID |
+| MAID | MICROSOFT ADVERTISING ID |
 
 {style="table-layout:auto"}
 
@@ -39,9 +39,9 @@ Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] 
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] und nicht aktiviert haben, [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) Wenden Sie sich in der Vergangenheit (mit Adobe Audience Manager oder anderen Anwendungen) an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon [!DNL Microsoft Bing]-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
+>Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] und nicht aktiviert haben, [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) Wenden Sie sich in der Vergangenheit (mit Adobe Audience Manager oder anderen Anwendungen) an die Adobe Consulting- oder Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon [!DNL Microsoft Bing]-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
 
 Beim Konfigurieren des Ziels müssen Sie die folgenden Informationen angeben:
 

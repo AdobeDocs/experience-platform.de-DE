@@ -1,11 +1,12 @@
 ---
 title: SAP Commerce-Verbindung
-description: Verwenden Sie den SAP Commerce-Ziel-Connector, um Kundendatensätze in Ihrem SAP-Konto zu aktualisieren.
+description: Verwenden Sie den SAP Commerce Destination Connector, um Kundendatensätze in Ihrem SAP-Konto zu aktualisieren.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 25%
+source-wordcount: '2246'
+ht-degree: 26%
 
 ---
 
@@ -29,7 +30,7 @@ In den folgenden Abschnitten finden Sie alle Voraussetzungen, die Sie unter Expe
 
 ### Voraussetzungen für Experience Platform {#prerequisites-in-experience-platform}
 
-Vor der Aktivierung der Daten für [!DNL SAP Commerce] Ziel, müssen Sie über eine [schema](/help/xdm/schema/composition.md), a [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=de), und [Zielgruppen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) erstellt in [!DNL Experience Platform].
+Vor der Aktivierung der Daten für [!DNL SAP Commerce] Ziel, müssen Sie über eine [schema](/help/xdm/schema/composition.md), a [Datensatz](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), und [Zielgruppen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) erstellt in [!DNL Experience Platform].
 
 Weitere Informationen finden Sie in der Experience Platform-Dokumentation für [Feldergruppe Zielgruppenzugehörigkeitsdetails](/help/xdm/field-groups/profile/segmentation.md) wenn Sie Anleitungen zum Zielgruppenstatus benötigen.
 
@@ -118,10 +119,10 @@ Dieses Ziel unterstützt die Aktivierung aller durch die Experience Platform gen
 
 Dieses Ziel unterstützt auch die Aktivierung der in der folgenden Tabelle beschriebenen Zielgruppen.
 
-| Zielgruppentyp | Beschreibung |
----------|----------|
+| Zielgruppentyp | Unterstützt | Beschreibung |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -152,8 +153,8 @@ Füllen Sie die erforderlichen Felder aus. Siehe Abschnitt [Generieren eines Die
 
 | Feld | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Client ID]** (Client-ID) | Der Wert von `clientId` aus dem Dienstschlüssel. |
-| **[!UICONTROL Client-Geheimschlüssel]** | Der Wert von `clientSecret` aus dem Dienstschlüssel. |
+| **[!UICONTROL Client-ID]** | Der Wert von `clientId` aus dem Dienstschlüssel. |
+| **[!UICONTROL Client-Geheimnis]** | Der Wert von `clientSecret` aus dem Dienstschlüssel. |
 | **[!UICONTROL Endpunkt]** | Der Wert von `url` aus dem Dienstschlüssel ist er ähnlich wie `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
 | **[!UICONTROL Region]** | Ihr Rechenzentrumsstandort. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Beispiel: `url` is `https://eu10.revenue.cloud.sap/api` benötigen `eu10`. |
 

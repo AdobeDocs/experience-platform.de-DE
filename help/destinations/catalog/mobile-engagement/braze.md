@@ -3,7 +3,7 @@ keywords: mobil; braze; messaging;
 title: Braze-Verbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%
@@ -49,9 +49,9 @@ Marketingexperten möchten mit integrierten Zielgruppen Benutzer in einem mobile
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -115,18 +115,18 @@ Im [!UICONTROL Zuordnung] Schritt, klicken Sie **[!UICONTROL Neues Mapping hinzu
 
 ![Zielzuordnung löschen](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-Im [!UICONTROL Quellfeld] klicken Sie auf die Pfeilschaltfläche neben dem leeren Feld.
+Im [!UICONTROL Source Field] klicken Sie auf die Pfeilschaltfläche neben dem leeren Feld.
 
-![Zielquellenzuordnung löschen](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Source-Zielzuordnung löschen](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 Im [!UICONTROL Quellfeld auswählen] -Fenster können Sie zwischen zwei Kategorien von XDM-Feldern wählen:
 * [!UICONTROL Attribute auswählen]: Verwenden Sie diese Option, um ein bestimmtes Feld aus Ihrem XDM-Schema einem [!DNL Braze] -Attribut.
 
-![Quell-Attribut für Zielzuordnung ausblenden](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Source-Attribut für Zielzuordnung definieren](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Identitäts-Namespace auswählen]: Verwenden Sie diese Option, um eine [!DNL Platform] Identitäts-Namespace in eine [!DNL Braze] Namespace.
 
-![Braze Destination Mapping Source Namespace](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![Source-Namespace-Zielzuordnung löschen](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 Wählen Sie das Quellfeld aus und klicken Sie auf **[!UICONTROL Auswählen]**.
 

@@ -2,13 +2,13 @@
 title: Gainsight PX-Verbindung
 description: Verwenden Sie das Gainsight PX-Ziel, um Segmentierungsinformationen an die Gainsight PX-Plattform zu senden.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 37%
 
 ---
-
 
 # Gainsight PX-Verbindung {#gainsight-px}
 
@@ -51,7 +51,7 @@ In diesem Abschnitt wird beschrieben, welcher Audience-Typ Sie an dieses Ziel ex
 | Audience Origin | Unterstützt | Beschreibung |
 |---|---|---|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 

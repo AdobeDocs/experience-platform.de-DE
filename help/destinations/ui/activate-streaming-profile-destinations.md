@@ -4,9 +4,9 @@ type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren können, indem Sie Zielgruppen an profilbasierte Ziele senden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 23%
 
 ---
@@ -57,8 +57,8 @@ Um die Zielgruppen auszuwählen, die Sie für das Ziel aktivieren möchten, akti
 
 Je nach Herkunft können Sie aus mehreren Zielgruppentypen auswählen:
 
-* **[!UICONTROL Segmentierungsdienst]**: Vom Segmentation-Dienst innerhalb von Experience Platform generierte Zielgruppen. Siehe [Segmentierungsdokumentation](../../segmentation/ui/overview.md) für weitere Details.
-* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Segmentierungsdienst]**: Vom Segmentation-Dienst innerhalb von Experience Platform generierte Zielgruppen. Siehe [Audience Portal-Dokumentation](../../segmentation/ui/audience-portal.md) für weitere Details.
+* **[!UICONTROL Benutzerdefinierter Upload]**: Zielgruppen, die außerhalb von Experience Platform generiert und als CSV-Dateien in Platform hochgeladen wurden. Weitere Informationen zu externen Zielgruppen finden Sie in der Dokumentation unter [Audience importieren](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere Zielgruppentypen, die von anderen Adobe-Lösungen stammen, z. B. [!DNL Audience Manager].
 
 ![Bild, das die Kontrollkästchen im Schritt Zielgruppen auswählen des Aktivierungs-Workflows markiert.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)

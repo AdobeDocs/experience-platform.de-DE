@@ -3,7 +3,7 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Zielgruppendaten aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Zielgruppenmitgliedschaft des Benutzerprofils.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 58%
@@ -23,7 +23,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->Profilattribute können vertrauliche Daten enthalten. Zum Schutz dieser Daten müssen Sie die Variable [Edge Network Server-API](/help/server-api/overview.md) bei der Konfiguration der **[!UICONTROL Benutzerdefinierte Personalisierung]** Ziel für attributbasierte Personalisierung. Alle Server-API-Aufrufe müssen in einem [authentifizierter Kontext](../../../server-api/authentication.md).
+>Profilattribute können vertrauliche Daten enthalten. Zum Schutz dieser Daten müssen Sie die Variable [Edge Network Server-API](/help/server-api/overview.md) bei der Konfiguration der **[!UICONTROL Benutzerdefinierte Personalization]** Ziel für attributbasierte Personalisierung. Alle Server-API-Aufrufe müssen in einem [authentifizierter Kontext](../../../server-api/authentication.md).
 >
 ><br>Wenn Sie bereits Web SDK oder Mobile SDK für Ihre Integration verwenden, können Sie Attribute über die Server-API abrufen, indem Sie eine serverseitige Integration hinzufügen.
 >
@@ -46,9 +46,9 @@ Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](/help/web-
 In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel exportieren können.
 
 | Audience Origin | Unterstützt | Beschreibung |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
-| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/overview.md#import-audience) werden. |
+| Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
 
@@ -156,11 +156,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Beispielantwort für [!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]
+### Beispielantwort für [!UICONTROL Benutzerdefinierte Personalization mit Attributen]
 
-Bei Verwendung von **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]**, sieht die API-Antwort ähnlich wie im folgenden Beispiel aus.
+Bei Verwendung von **[!UICONTROL Benutzerdefinierte Personalization mit Attributen]**, sieht die API-Antwort ähnlich wie im folgenden Beispiel aus.
 
-Der Unterschied zwischen **[!UICONTROL Benutzerdefinierte Personalisierung mit Attributen]** und **[!UICONTROL Benutzerdefinierte Personalisierung]** ist die Aufnahme der `attributes` in der API-Antwort.
+Der Unterschied zwischen **[!UICONTROL Benutzerdefinierte Personalization mit Attributen]** und **[!UICONTROL Benutzerdefinierte Personalization]** ist die Aufnahme der `attributes` in der API-Antwort.
 
 ```json
 [
