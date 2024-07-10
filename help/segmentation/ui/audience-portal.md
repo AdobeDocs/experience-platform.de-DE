@@ -1,9 +1,9 @@
 ---
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 531bee643c14ad407a1207cca9093e210e5227a5
 workflow-type: tm+mt
-source-wordcount: '3646'
+source-wordcount: '3674'
 ht-degree: 66%
 
 ---
@@ -387,7 +387,7 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 >
 >Standardmäßig haben extern erstellte Zielgruppen einen Datenablauf von 30 Tagen. Die Datengültigkeit wird zurückgesetzt, wenn die Audience aktualisiert oder geändert wird.
 >
->Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie außerdem **must** wenden Sie die erforderlichen Datennutzungsbezeichnungen an, bevor Sie sie für ein beliebiges Ziel aktivieren. Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation unter [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md).
+>Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie außerdem **must** wenden Sie die erforderlichen Datennutzungsbezeichnungen an, bevor Sie sie für ein beliebiges Ziel aktivieren. Da Variablen aus extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten Sie **not** Einwilligungsdaten in Ihre CSV-Datei aufnehmen. Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation unter [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md).
 
 ## Nächste Schritte
 
