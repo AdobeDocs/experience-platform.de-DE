@@ -75,9 +75,11 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 ## Exporttyp und -häufigkeit
 
 Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
-|**Zielgruppe**|**Unterstützt**|**Ursprung der Beschreibung**|\
-|—|—|—|\
-|Segmentation Service|✓|Über die Experience Platform generierte Zielgruppen [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| Benutzerdefinierte Uploads|X|Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform aus CSV-Dateien.
+
+|**Zielgruppe**|**Unterstützt**|**Ursprung der Beschreibung**|
+|---|---|---|
+|Segmentation Service|✓|Über die Experience Platform generierte Zielgruppen [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+|Benutzerdefinierte Uploads|X|Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform aus CSV-Dateien.|
 
 {style="table-layout:auto"}
 
