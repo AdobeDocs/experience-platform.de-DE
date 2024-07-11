@@ -2,10 +2,10 @@
 title: Web SDK-Tag-Erweiterung konfigurieren
 description: Erfahren Sie, wie Sie die Tag-Erweiterung des Experience Platform Web SDK in der Benutzeroberfläche für Tags konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 6%
+source-wordcount: '2012'
+ht-degree: 5%
 
 ---
 
@@ -41,7 +41,7 @@ Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an
 
 * **[!UICONTROL Name]**: Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer Tag-Konfiguration an mehrere Organisationen zu senden. Der Instanzname wird standardmäßig auf `alloy`. Sie können den Instanznamen jedoch in einen beliebigen gültigen JavaScript-Objektnamen ändern.
 * **[!UICONTROL Kennung der IMS-Organisation]**: Die ID der Organisation, an die die Daten bei der Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
-* **[!UICONTROL Edge-Domäne]**: Die Domäne, von der die Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieterdomäne (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
+* **[!UICONTROL Edge-Domain]**: Die Domäne, von der die Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieterdomäne (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
 
 ## Konfigurieren von Datenspeichereinstellungen {#datastreams}
 
@@ -111,11 +111,29 @@ Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe die Verw
 
 ## Datenerfassungseinstellungen konfigurieren {#data-collection}
 
-![Bild mit den Datenerfassungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-collection.png)
+Verwalten Sie die Konfigurationseinstellungen für die Datenerfassung. Ähnliche Einstellungen in der JavaScript-Bibliothek sind über die [`configure`](/help/web-sdk/commands/configure/overview.md) Befehl.
 
-* **[!UICONTROL Callback-Funktion]**: Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an das Edge Network gesendet werden.
-* **[!UICONTROL Aktivieren der Klickdatenerfassung]**: Das Web SDK kann automatisch Link-Klickinformationen für Sie erfassen. Standardmäßig ist diese Funktion aktiviert, kann jedoch über diese Option deaktiviert werden. Links werden auch als Downloadlinks bezeichnet, wenn sie einen der in der [!UICONTROL Downloadlink-Qualifizierung] Textfeld. Adobe bietet Ihnen einige standardmäßige Downloadlink-Qualifikatoren. Sie können sie nach Bedarf bearbeiten.
-* **[!UICONTROL Automatisch erfasste Kontextdaten]**: Standardmäßig erfasst das Web SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn diese Daten nicht erfasst werden sollen oder Sie nur bestimmte Datenkategorien erfassen möchten, wählen Sie **[!UICONTROL Spezifische Kontextdaten]** und wählen Sie die Daten aus, die Sie erfassen möchten. Siehe [`context`](/help/web-sdk/commands/configure/context.md) für weitere Informationen.
+![Bild, das die Datenerfassungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL Ein vor Ereignis - Rückruf senden]**: Eine Rückruffunktion zum Auswerten und Ändern der an Adobe gesendeten Payload. Verwenden Sie die `content` innerhalb der Callback-Funktion, um die Payload zu ändern. Dieser Rückruf entspricht dem Tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der JavaScript-Bibliothek.
+* **[!UICONTROL Interne Link-Klicks abrufen]**: Ein Kontrollkästchen, das die Erfassung von Linktracking-Daten für Ihre Site oder Eigenschaft aktiviert. Wenn Sie dieses Kontrollkästchen aktivieren, werden die Optionen für die Ereignisgruppierung angezeigt:
+   * **[!UICONTROL Keine Ereignisgruppierung]**: Linktracking-Daten werden in separaten Ereignissen an Adobe gesendet. Klicks auf Links, die in separaten Ereignissen gesendet werden, können die vertragliche Nutzung von an Adobe Experience Platform gesendeten Daten erhöhen.
+   * **[!UICONTROL Ereignisgruppierung mithilfe der Sitzungsspeicherung]**: Speichern Sie Linktracking-Daten im Sitzungsspeicher bis zum nächsten Seitenereignis. Auf der folgenden Seite werden die gespeicherten Linktracking-Daten und Seitenansichtsdaten gleichzeitig an Adobe gesendet. Adobe empfiehlt, diese Einstellung beim Tracking interner Links zu aktivieren.
+   * **[!UICONTROL Ereignisgruppierung mit lokalem Objekt]**: Speichern Sie die Linktracking-Daten bis zum nächsten Seitenereignis in einem lokalen Objekt. Wenn ein Besucher zu einer neuen Seite navigiert, gehen die Linktracking-Daten verloren. Diese Einstellung ist im Kontext von Einzelseitenanwendungen am nützlichsten.
+* **[!UICONTROL Externe Link-Klicks erfassen]**: Ein Kontrollkästchen, mit dem externe Links erfasst werden können.
+* **[!UICONTROL Download-Link-Klicks abrufen]**: Ein Kontrollkästchen, mit dem die Sammlung von Downloadlinks aktiviert wird.
+* **[!UICONTROL Downloadlink-Qualifizierer]**: Ein regulärer Ausdruck, der eine Link-URL als Downloadlink qualifiziert.
+* **[!UICONTROL Klickeigenschaften filtern]**: Eine Rückruffunktion zum Auswerten und Ändern klickbezogener Eigenschaften vor der Erfassung. Diese Funktion wird vor dem [!UICONTROL Ein vor Ereignis - Rückruf senden].
+* **Kontexteinstellungen**: Erfassen Sie automatisch Besucherinformationen, mit denen bestimmte XDM-Felder für Sie gefüllt werden. Sie können **[!UICONTROL Alle standardmäßigen Kontextinformationen]** oder **[!UICONTROL Spezifische Kontextdaten]**. Dies entspricht dem Tag [`context`](/help/web-sdk/commands/configure/context.md) in der JavaScript-Bibliothek.
+   * **[!UICONTROL Web]**: Erfasst Informationen zur aktuellen Seite.
+   * **[!UICONTROL Gerät]**: Erfasst Informationen zum Gerät des Benutzers.
+   * **[!UICONTROL Umgebung]**: Erfasst Informationen zum Browser des Benutzers.
+   * **[!UICONTROL Ortskontext]**: Erfasst Informationen zum Standort des Benutzers.
+   * **[!UICONTROL High entropy user-agent hints]**: Erfasst detailliertere Informationen zum Gerät des Benutzers.
+
+>[!TIP]
+>
+Die **[!UICONTROL Vor dem Link klicken auf Senden]** -Feld ist ein veralteter Rückruf, der nur für Eigenschaften sichtbar ist, für die er bereits konfiguriert ist. Dies entspricht dem Tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in der JavaScript-Bibliothek. Verwenden Sie die **[!UICONTROL Klickeigenschaften filtern]** Rückruf zum Filtern oder Anpassen von Klickdaten oder zur Verwendung der **[!UICONTROL Ein vor Ereignis - Rückruf senden]** , um die an Adobe gesendete Payload zu filtern oder anzupassen. Wenn beide **[!UICONTROL Klickeigenschaften filtern]** und **[!UICONTROL Vor dem Link klicken auf Senden]** Callback festgelegt wird, wird nur die **[!UICONTROL Klickeigenschaften filtern]** Callback wird ausgeführt.
 
 ## Einstellungen für die Medienerfassung konfigurieren {#media-collection}
 

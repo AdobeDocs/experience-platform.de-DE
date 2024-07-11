@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 14f9c2240d1a650cc267bd997ea35d7923f71b2b
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '225'
 ht-degree: 52%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 52%
    * konfigurieren {#configure}
       * [Übersicht](commands/configure/overview.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
+      * [clickCollection](commands/configure/clickcollection.md)
       * [context](commands/configure/context.md)
       * [debugEnabled](commands/configure/debugenabled.md)
       * [defaultConsent](commands/configure/defaultconsent.md)
@@ -56,12 +57,12 @@ ht-degree: 52%
    * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [Überschreibungen des Datastreams konfigurieren](commands/datastream-overrides.md)
    * [Befehlsantworten](commands/command-responses.md)
-   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identität {#identity}
    * [Übersicht](identity/overview.md)

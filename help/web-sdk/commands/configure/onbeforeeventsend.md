@@ -1,22 +1,23 @@
 ---
 title: onBeforeEventSend
-description: Callback, der kurz vor dem Senden von Daten ausgeführt wird.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: Erfahren Sie, wie Sie das Web SDK so konfigurieren, dass eine JavaScript-Funktion registriert wird, die die Daten ändern kann, die Sie unmittelbar vor dem Senden dieser Daten an Adobe senden.
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
 
+
 # `onBeforeEventSend`
 
-Die `onBeforeEventSend` callback ermöglicht die Registrierung einer JavaScript-Funktion, die die Daten, die Sie senden, unmittelbar vor dem Senden dieser Daten an Adobe ändern kann. Mit diesem Rückruf können Sie die `xdm` oder `data` -Objekt, einschließlich der Möglichkeit, Elemente hinzuzufügen, zu bearbeiten oder zu entfernen. Sie können das Senden von Daten auch bedingt abbrechen, z. B. mit erkanntem clientseitigem Bot-Traffic.
+Die `onBeforeEventSend` callback ermöglicht die Registrierung einer JavaScript-Funktion, die die Daten, die Sie senden, verändern kann, bevor diese Daten an Adobe gesendet werden. Mit diesem Rückruf können Sie die `xdm` oder `data` -Objekt, einschließlich der Möglichkeit, Elemente hinzuzufügen, zu bearbeiten oder zu entfernen. Sie können das Senden von Daten auch bedingt abbrechen, z. B. mit erkanntem clientseitigem Bot-Traffic.
 
 >[!WARNING]
 >
 >Dieser Rückruf ermöglicht die Verwendung von benutzerdefiniertem Code. Wenn Code, den Sie in den Rückruf einschließen, eine nicht abgefangene Ausnahme ausgibt, wird die Verarbeitung für das Ereignis angehalten. Daten werden nicht an Adobe gesendet.
 
-## Vor dem Senden des Rückrufs mit der Web SDK-Tag-Erweiterung
+## Vor dem Ereignis-Rückruf konfigurieren mit der Web SDK-Tag-Erweiterung {#tag-extension}
 
 Wählen Sie die **[!UICONTROL Bereitstellung vor dem Senden des Rückruffods durch das Ereignis]** Schaltflächen beim [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Diese Schaltfläche öffnet ein modales Fenster, in das Sie den gewünschten Code einfügen können.
 
@@ -28,21 +29,14 @@ Wählen Sie die **[!UICONTROL Bereitstellung vor dem Senden des Rückruffods dur
 1. Diese Schaltfläche öffnet ein modales Fenster mit einem Code-Editor. Fügen Sie den gewünschten Code ein und klicken Sie dann auf **[!UICONTROL Speichern]** , um das modale Fenster zu schließen.
 1. Klicks **[!UICONTROL Speichern]** unter den Erweiterungsparametern und veröffentlichen Sie dann Ihre Änderungen.
 
-Im Code-Editor können Sie Elemente innerhalb der `content` -Objekt. Dieses Objekt enthält die Payload, die an Adobe gesendet wird. Sie müssen die `content` -Objekt oder einen beliebigen Code innerhalb einer Funktion einschließen. Alle Variablen, die außerhalb von `content` kann verwendet werden, sind aber nicht in der Payload enthalten, die an Adobe gesendet wird.
+Im Code-Editor haben Sie Zugriff auf die folgenden Variablen:
 
->[!TIP]
->
->Die Objekte `content.xdm` und `content.data` in diesem Kontext immer definiert sind, sodass Sie nicht überprüfen müssen, ob sie vorhanden sind. Einige Variablen in diesen Objekten hängen von Ihrer Implementierung und Datenschicht ab. Adobe empfiehlt, in diesen Objekten nach nicht definierten Werten zu suchen, um JavaScript-Fehler zu vermeiden.
+* **`content.xdm`**: Die [XDM](../sendevent/xdm.md) Nutzlast für das Ereignis.
+* **`content.data`**: Die [data](../sendevent/data.md) Objekt-Payload für das Ereignis.
+* **`return true`**: Beenden Sie sofort den Rückruf und senden Sie Daten an Adobe mit den aktuellen Werten im `content` -Objekt.
+* **`return false`**: Beenden Sie den Callback sofort und brechen Sie das Senden von Daten an Adobe ab.
 
-Beispiel:
-
-* Hinzufügen des XDM-Elements `xdm.commerce.order.purchaseID`
-* Alle Zeichen in erzwingen `xdm.marketing.trackingCode` Kleinbuchstaben
-* `xdm.environment.operatingSystemVersion` löschen
-* Wenn es sich bei einem Ereignistyp um einen Link-Klick handelt, senden Sie sofort Daten, unabhängig vom Code darunter
-* Senden von Daten an Adobe abbrechen, wenn ein Bot erkannt wird
-
-Der entsprechende Code innerhalb des modalen Fensters lautet wie folgt:
+Alle Variablen, die außerhalb von `content` kann verwendet werden, sind aber nicht in der Payload enthalten, die an Adobe gesendet wird.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -69,19 +63,18 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >Rückgabe vermeiden `false` beim ersten Ereignis auf einer Seite. Returning `false` beim ersten Ereignis die Personalisierung negativ beeinflussen.
 
-## Vor dem Senden des Rückrufs mit der Web SDK-JavaScript-Bibliothek durch das Ereignis
+## Vor dem Ereignis-Rückruf konfigurieren mit der Web SDK JavaScript-Bibliothek {#library}
 
 Registrieren `onBeforeEventSend` Callback beim Ausführen von `configure` Befehl. Sie können die `content` Variablennamen zu einem beliebigen Wert hinzufügen, indem Sie die Parametervariable innerhalb der Inline-Funktion ändern.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
     content.xdm._experience ??= {};
     content.xdm._experience.analytics ??= {};
@@ -121,8 +114,8 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": lastChanceLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: lastChanceLogic
 });    
 ```
