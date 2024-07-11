@@ -174,7 +174,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.7.0 – 26. Oktober 2021
 
-* Zusätzliche Informationen aus dem Edge Network im Rückgabewert von verfügbar machen `sendEvent`, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden.
+* Zusätzliche Informationen aus dem Edge Network im Rückgabewert von verfügbar machen `sendEvent`, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit im Rahmen einer Beta bereitgestellt werden.
 
 ## Version 2.6.4 – 7. September 2021
 
