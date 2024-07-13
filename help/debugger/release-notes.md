@@ -4,21 +4,34 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
+source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 69%
+source-wordcount: '758'
+ht-degree: 65%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
+
+## Version 1.6.0 – Freitag, 11. Juli 2024
+
+### Neue Funktionen
+
+* Erlauben für Benutzer, die technische und persönliche Datenerfassung zu aktivieren/deaktivieren.
+
+### Fehlerbehebungen und Verbesserungen
+
+* Korrigieren Sie den Link zur Skriptinjektion und Datenschutzrichtlinie für Firefox.
+* Erfassen fehlender Analytics-Anforderungen.
+* Korrektur von Abstürzen auf Seiten mit vielen komplexen Konsolenmeldungen.
+* Aktualisieren Sie den Adobe Experience Platform Debugger auf eine Manifest v3-Erweiterung.
 
 ## Version 1.5.4 – Mittwoch, 19. Dezember 2023
 
 ### Fehlerbehebungen und Verbesserungen
 
 * Es wurde ein Problem behoben, bei dem Einstellungen nicht beibehalten wurden.
-* Es wurde ein Fehler behoben, der dazu führte, dass der Debugger abstürzte, während die Analytics-Treffer nach der Verarbeitung angezeigt wurden.
+* Es wurde ein Fehler behoben, der dazu führte, dass der Debugger abstürzte, während Analytics Post-verarbeitete Treffer angezeigt wurden.
 
 ## Version 1.5.3 – Donnerstag, 6. Dezember 2023
 
@@ -47,7 +60,7 @@ ht-degree: 69%
 
 * Es wurden Probleme behoben, bei denen Analytics-Ereignisse ignoriert oder dupliziert wurden.
 * Es wurde ein Problem behoben, bei dem die maximale Speichergröße für den Status überschritten wurde.
-* Es wurde ein Problem behoben, bei dem die Suche nach Edge-Protokollen keine Ereignisse filtert.
+* Es wurde ein Problem behoben, bei dem die Edge Logs-Suche keine Ereignisse filtert.
 
 ## Version 1.5.0 – Freitag, 19. Oktober 2023
 
