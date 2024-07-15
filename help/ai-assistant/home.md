@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform - Überblick
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
+source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '925'
 ht-degree: 9%
 
 ---
@@ -77,7 +77,7 @@ Sie können in den folgenden Bereichen Fragen zu Ihren operativen Einblicken an 
 | Datensätze | <ul><li>Datensatzanzahl</li><li>Profil - Aktivierungsstatus</li><li>Erstellungs-/Änderungsdatum</li><li>Datensatz - Schemabeziehung</li><li>Datensatz - Zielgruppenbeziehung</li><li>Datensatz - Attributbeziehung</li><li>Datensatz - Datenfluss-Beziehung</li><li>Nachschlagen von Namen </li><li>Name und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellt von</li><li>Datensatz - Batch-Beziehung</li><li>Erstellung/Änderung von Datensätzen</li><li>Datensatzgröße</li><li>Anzahl Profile</li><li>Zeilenanzahl</li><li>Wertsuchvorgänge</li></ul> |
 | Ziele | <ul><li>Konfigurierte Zielzahlen</li><li>Ziel - Zielgruppenbeziehung</li><li>Zielattribut-Beziehung</li></ul> | <ul><li>Kontoeinrichtung</li><li>Kontoanmeldeinformationen</li><li>Individuelle Profile aktiviert</li></ul> |
 | Journeys | <ul><li>Zählungen</li><li>Nachschlagen von Namen</li><li>Name und ID-Suche</li><li>Journey-Status</li><li>Ausgelöster Status (Zielgruppe vs. Ereignisse)</li><li>Erstellungs-/Änderungsdatum</li><li>Häufigkeit</li></ul> | <ul><li>Attribute - Journey-Beziehungen</li><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Events</li><li>Journey - Datensatz</li><li>Journey - schema</li><li>Angebote</li><li>Trends bei der Profilqualifizierung</li><li>Schrittereignisse</li></ul> |
-| Schemata | <ul><li>Schemaanzahl</li><li>Erstellungs-/Änderungsdatum</li><li>Schema-Klassentyp</li><li>Schema - Attributbeziehung</li><li>Schema - Datensatzbeziehung</li><li>Schema - Zielgruppenbeziehung</li><li>Profil - Aktivierungsstatus</li><li>Nachschlagen von Namen</li><li>Name und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Feldergruppen</li><li>Identitäten</li><li>Identity-Namespaces</li><li>Beschriftungen</li><li>Anzahl Profile</li></ul> |
+| Schemata | <ul><li>Schemaanzahl</li><li>Erstellungs-/Änderungsdatum</li><li>Schema - Attributbeziehung</li><li>Schema - Datensatzbeziehung</li><li>Schema - Zielgruppenbeziehung</li><li>Profil - Aktivierungsstatus</li><li>Nachschlagen von Namen</li><li>Name und ID-Suche</li></ul> | <ul><li>Verfolgung</li><li>Erstellung/Änderung</li><li>Erstellt von</li><li>Feldergruppen</li><li>Identitäten</li><li>Identity-Namespaces</li><li>Beschriftungen</li><li>Anzahl Profile</li></ul> |
 | Quellen | <ul><li>Kontonumzählungen</li><li>Kontostatus</li><li>Aktive/inaktive Datenflüsse für jedes Konto</li><li>Source-Connector - Datenfluss-Beziehung</li><li>Source-Konto - Datenfluss-Beziehung</li></ul> | <ul><li>Informationen zu Kontoanmeldeinformationen</li><li>Kontoeinrichtung</li><li>Datenerfassungsmetriken</li><li>Anzahl Profile</li><li>Source - Batch-Beziehungen</li></ul> |
 
 {style="table-layout:auto"}

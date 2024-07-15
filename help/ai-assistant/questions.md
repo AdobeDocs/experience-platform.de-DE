@@ -2,9 +2,9 @@
 title: Fragenleitfaden für den AI-Assistenten
 description: Lesen Sie dieses Dokument, um Beispielfragen zu erfahren, die Sie bei der Abfrage von AI Assistant verwenden können.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
+source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -85,30 +85,6 @@ Die folgenden Fragen werden nach Datenobjekten gruppiert und entweder als [opera
    * Warum kann ich eine Zielgruppe nicht löschen?
    * Wie lange dauert es, bis Zielgruppen ausgewertet und Ergebnisse für die Zielgruppenbestimmung verfügbar sind?
 
-+++Auswählen, um eine zusätzliche Liste der vorgeschlagenen Eingabeaufforderungen anzuzeigen
-
-* Kann ich ein Profil-aktiviertes Schema löschen, nachdem Daten erfasst wurden?
-* Wie sind Benutzergruppen mit Rollen verbunden?
-* Wann sollte ich einen Datentyp oder eine Feldergruppe verwenden?&quot;
-* Was ist der Unterschied zwischen einer Identität und einem Primärschlüssel oder Fremdschlüssel?&quot;
-* Wie lange dauert es, bis Segmente ausgewertet und Ergebnisse für das Targeting verfügbar sind?
-* Wie wird der Reichtum des Profils berechnet?&quot;
-* Erfahren Sie mehr über häufige Anwendungsfälle für Real-Time CDP.
-* Warum kann ich ein Segment nicht löschen?
-* Welche Art von Änderungen kann ich vornehmen, nachdem ein Schema für ein Profil aktiviert wurde?
-* Warum kann ich nicht auf Dashboards in AEP zugreifen?
-* Wie viele Segmente das xdm-Attribut {FIELD_PATH} verwenden
-* Gibt es Segmente, die in anderen Segmenten verwendet werden?
-* Welche Felder im Schema {SCHEMA_NAME} enthalten {STRING}?
-* Welche Zielgruppen haben in ihrer Segmentdefinition das XDM-Attribut {FULL_ATTRIBUTE_PATH}?
-* Welche Schemas enthalten das xdm-Attribut {FULL_ATTRIBUTE_PATH}?
-* Welche Quell-Datenflüsse werden nicht verwendet oder haben keine Daten mehr, die eingehen?
-* Listet die Live-Journey auf, die ich habe.
-* Auflisten der Zielgruppen, die in Live-Journey verwendet werden.
-* Welche Quellen sind aktiv?
-
-+++
-
 ## Formulieren Ihrer Fragen {#phrasing-your-questions}
 
 Sie müssen Ihre Fragen an den KI-Assistenten mit Klarheit und Kontext formulieren, um eine möglichst genaue Antwort zu erhalten. In der folgenden Liste finden Sie Hinweise dazu, wie Sie eine klare Frage mit Kontext stellen:
@@ -147,7 +123,7 @@ Im Folgenden finden Sie eine Liste von Beispielen für Fragen, die derzeit nicht
 
 ### Betriebliche Erkenntnisse
 
-* Wie viele Profile in dieser Sandbox [erfüllen bestimmte Kriterien, z. B. &quot;Live in Kalifornien&quot;]?
+* Wie viele Profile in dieser Sandbox leben in Kalifornien? (**Hinweis**: Für ähnliche Fragen müssen Sie ein bestimmtes Kriterium angeben, um genügend Kontext für Ihre Anfrage bereitzustellen. In diesem Fall lautet das spezifische Kriterium &quot;Live in Kalifornien&quot;).
 * In welchen Segmenten befindet sich dieses Profil {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * Wie viele Profile im Datensatz haben eine E-Mail?
 * Welcher Datensatz stellt eine maximale Anzahl von Profilen in dieser Sandbox dar?
