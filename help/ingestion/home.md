@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Datenerfassung – Übersicht
 description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 100%
+source-wordcount: '521'
+ht-degree: 73%
 
 ---
 
 # Datenerfassung – Übersicht
 
-Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Die Datenaufnahme in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen [!DNL Platform] Daten aus den Quellen erfasst, sowie die Art und Weise, wie die Daten im Data Lake zur Verwendung durch nachgelagerte [!DNL Platform]-Services persistiert werden.
+Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen Experience Platform Daten aus diesen Quellen erfasst, sowie die Art und Weise, wie diese Daten im Data Lake zur Verwendung durch nachgelagerte Experience Platform-Dienste persistiert werden.
 
-In diesem Dokument werden die drei Hauptwege für die Aufnahme von Daten in [!DNL Platform] mit Links zu den jeweiligen Übersichtsdokumenten vorgestellt, in denen Sie weitere Informationen finden.
+In diesem Dokument werden die drei Hauptarten für die Aufnahme von Daten in Experience Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten für detailliertere Informationen.
 
 ## Batch-Erfassung
 
@@ -25,9 +25,13 @@ Manuell hochgeladene Datendateien wie CSV-Flatfiles (die XDM-Schemata zugeordnet
 
 Weitere Informationen finden Sie in der [Übersicht zur Batch-Aufnahme](./batch-ingestion/overview.md).
 
+>[!TIP]
+>
+>Verwenden Sie einzeilige JSON anstelle mehrzeiliger JSON als Eingabe für die Batch-Erfassung. Eine einzeilige JSON-Datei ermöglicht eine bessere Leistung, da das System eine Eingabedatei in mehrere Blöcke unterteilen und sie parallel verarbeiten kann, während mehrzeilige JSON-Dateien nicht aufgeteilt werden können. Dies kann die Datenverarbeitungskosten erheblich senken und die Latenz bei der Batch-Verarbeitung verbessern.
+
 ## Streaming-Erfassung
 
-Mit der Streaming-Aufnahme können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an [!DNL Experience Platform] senden. [!DNL Platform] unterstützt die Verwendung von Daten-Inlets zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake beibehalten werden. Daten-Inlets können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
+Mit der Streaming-Aufnahme können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an [!DNL Experience Platform] senden. Experience Platform unterstützt die Verwendung von Daten-Inlets zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake persistiert werden. Daten-Inlets können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
 
 Weiterführende Informationen dazu finden Sie in unter [Streaming-Aufnahme – Übersicht](./streaming-ingestion/overview.md).
 
