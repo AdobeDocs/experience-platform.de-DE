@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie das Partnerschema für Ziele konfigurieren, die mit Destination SDK erstellt wurden.
 title: Konfiguration des Partnerschemas
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f502631a3e97f3c90c13f188f3a4bb081f6db112
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 97%
+source-wordcount: '1939'
+ht-degree: 95%
 
 ---
 
@@ -21,7 +21,7 @@ Beim Konfigurieren des Partnerschemas für Ihr Ziel können Sie die von Ihrer Zi
 * Dynamische Partnerschemata erstellen, die von Experience Platform dynamisch aufgerufen werden können, um eine Liste aller unterstützten Attribute in Ihrem Ziel abzurufen.
 * Erforderliche Feldzuordnungen definieren, die für Ihre Zielplattform erforderlich sind.
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Destination SDK zum Konfigurieren eines dateibasierten Ziels verwenden](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch dazu, wie Sie mit der Destination SDK [ein dateibasiertes Ziel konfigurieren](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Die Schemaeinstellungen können über den Endpunkt `/authoring/destinations` konfiguriert werden. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 
@@ -238,6 +238,19 @@ Daher wird das **[!UICONTROL Zielfeld]** in der Platform-Benutzeroberfläche aus
 ![Bild der erforderlichen Zuordnungen im UI-Aktivierungsfluss.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
+
+## Konfigurieren der Unterstützung für externe Zielgruppen {#external-audiences}
+
+Um Ihr Ziel so zu konfigurieren, dass die Aktivierung von [extern generierten Zielgruppen](../../../../segmentation/ui/audience-portal.md#import-audience) unterstützt wird, fügen Sie das unten stehende Codefragment in den Abschnitt `schemaConfig` ein.
+
+```json
+"schemaConfig": {
+  "segmentNamespaceDenyList": [],
+  ...
+}
+```
+
+Weitere Informationen zur Funktion `segmentNamespaceDenyList` finden Sie in den Eigenschaftsbeschreibungen in der weiter oben stehenden Tabelle [1} auf dieser Seite.](#attributes-schema)
 
 ## Nächste Schritte {#next-steps}
 
