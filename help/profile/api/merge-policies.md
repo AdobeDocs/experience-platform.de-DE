@@ -20,7 +20,7 @@ Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert,
 
 Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten. In diesem Handbuch werden die Schritte zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API beschrieben.
 
-Informationen zum Arbeiten mit Zusammenführungsrichtlinien über die Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch zu Zusammenführungsrichtlinien](../merge-policies/ui-guide.md). Um mehr über Zusammenführungsrichtlinien im Allgemeinen und ihre Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Benutzeroberfläche finden Sie im Benutzerhandbuch zu [Zusammenführungsrichtlinien-Benutzeroberfläche](../merge-policies/ui-guide.md). Um mehr über Zusammenführungsrichtlinien im Allgemeinen und ihre Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 ## Erste Schritte
 
@@ -28,7 +28,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-Time Cus
 
 ## Komponenten von Zusammenführungsrichtlinien {#components-of-merge-policies}
 
-Zusammenführungsrichtlinien sind für Ihre Organisation privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Alle API-Zugriffe [!DNL Profile] -Daten erfordert eine Zusammenführungsrichtlinie. Es wird jedoch eine Standardeinstellung verwendet, wenn keine explizite Angabe erfolgt. [!DNL Platform] stellt Unternehmen eine standardmäßige Zusammenführungsrichtlinie zur Verfügung. Alternativ können Sie eine Zusammenführungsrichtlinie für eine bestimmte Experience-Datenmodell (XDM)-Schemaklasse erstellen und sie als Standard für Ihre Organisation markieren.
+Zusammenführungsrichtlinien sind für Ihre Organisation privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Für alle APIs, die auf [!DNL Profile] -Daten zugreifen, ist eine Zusammenführungsrichtlinie erforderlich. Es wird jedoch eine Standardrichtlinie verwendet, wenn keine explizite Angabe erfolgt. [!DNL Platform] bietet Unternehmen eine standardmäßige Zusammenführungsrichtlinie oder Sie können eine Zusammenführungsrichtlinie für eine bestimmte Experience-Datenmodell (XDM)-Schemaklasse erstellen und diese als Standard für Ihre Organisation markieren.
 
 Während jede Organisation potenziell über mehrere Zusammenführungsrichtlinien pro Schemaklasse verfügen kann, kann jede Klasse nur eine standardmäßige Zusammenführungsrichtlinie haben. Alle als Standard festgelegten Zusammenführungsrichtlinien werden verwendet, wenn der Name der Schemaklasse angegeben und eine Zusammenführungsrichtlinie erforderlich, jedoch nicht angegeben ist.
 
@@ -36,9 +36,9 @@ Während jede Organisation potenziell über mehrere Zusammenführungsrichtlinien
 >
 >Wenn Sie eine neue Zusammenführungsrichtlinie als Standard festlegen, werden alle vorhandenen Zusammenführungsrichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert und nicht mehr als Standard verwendet.
 
-Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit eine Zielgruppe an der Kante aktiviert werden kann (als Edge-Zielgruppe markiert), muss sie an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante als aktiv markiert ist. Wenn eine Zielgruppe **not** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am Rand markiert ist, wird die Zielgruppe nicht als aktiv am Rand markiert und als Streaming-Zielgruppe markiert.
+Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit eine Zielgruppe an der Kante aktiviert werden kann (als Edge-Zielgruppe markiert), muss sie an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante als aktiv markiert ist. Wenn eine Zielgruppe **nicht** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am Rand markiert ist, wird die Zielgruppe nicht als aktiv am Rand markiert und als Streaming-Zielgruppe markiert.
 
-Darüber hinaus kann jede Organisation **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist. Wenn eine Zusammenführungsrichtlinie am Edge aktiv ist, kann sie für andere Systeme am Edge-Rand wie Edge Profile, Edge Segmentation und Ziele an Edge verwendet werden.
+Darüber hinaus kann jede Organisation nur über eine **1} Zusammenführungsrichtlinie verfügen, die an der Kante aktiv ist.** Wenn eine Zusammenführungsrichtlinie auf Edge aktiv ist, kann sie für andere Systeme auf Edge verwendet werden, z. B. Edge-Profil, Edge-Segmentierung und Ziele auf Edge.
 
 ### Komplettes Zusammenführungsrichtlinienobjekt
 
@@ -72,11 +72,11 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 | `id` | Die vom System erzeugte eindeutige Kennung, die zur Erstellungszeit zugewiesen wurde |
 | `name` | Anzeigename, anhand dessen die Zusammenführungsrichtlinie in Listenansichten identifiziert werden kann. |
 | `imsOrgId` | Organisationskennung, zu der diese Zusammenführungsrichtlinie gehört |
-| `schema.name` | Teil der [`schema`](#schema) -Objekt, das `name` -Feld enthält die XDM-Schemaklasse, auf die sich die Zusammenführungsrichtlinie bezieht. Weitere Informationen zu Schemata und Klassen finden Sie im Abschnitt [XDM-Dokumentation](../../xdm/home.md). |
-| `version` | [!DNL Platform] gepflegte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
+| `schema.name` | Im Rahmen des Objekts [`schema`](#schema) enthält das Feld `name` die XDM-Schemaklasse, auf die sich die Zusammenführungsrichtlinie bezieht. Weitere Informationen zu Schemas und Klassen finden Sie in der [XDM-Dokumentation](../../xdm/home.md). |
+| `version` | [!DNL Platform] unterstützte Version der Zusammenführungsrichtlinie. Dieser schreibgeschützte Wert wird beim Aktualisieren einer Zusammenführungsrichtlinie inkrementiert. |
 | `identityGraph` | [Identitätsdiagramm](#identity-graph)-Objekt, das das Identitätsdiagramm angibt, aus dem verwandte Identitäten abgerufen werden. Profilfragmente, die für alle verwandten Identitäten gefunden wurden, werden zusammengeführt. |
 | `attributeMerge` | [Attributzusammenführung](#attribute-merge) -Objekt, das angibt, wie die Zusammenführungsrichtlinie Profilattribute bei Datenkonflikten priorisiert. |
-| `isActiveOnEdge` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie auf Edge verwendet werden kann. Standardmäßig lautet dieser Wert `false`. |
+| `isActiveOnEdge` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie auf Edge verwendet werden kann. Standardmäßig ist dieser Wert `false`. |
 | `default` | Boolescher Wert, der angibt, ob diese Zusammenführungsrichtlinie für das angegebene Schema standardmäßig verwendet wird. |
 | `updateEpoch` | Datum der letzten Aktualisierung der Zusammenführungsrichtlinie. |
 
@@ -105,7 +105,7 @@ Ein komplettes Zusammenführungsrichtlinienobjekt stellt einen Satz von Voreinst
 
 ### Identitätsdiagramm {#identity-graph}
 
-[Adobe Experience Platform Identity-Dienst](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jede Organisation in verwendet werden. [!DNL Experience Platform]. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) verwaltet die Identitätsdiagramme, die global und für jede Organisation auf [!DNL Experience Platform] verwendet werden. Das `identityGraph`-Attribut der Zusammenführungsrichtlinie definiert, wie die verwandten Identitäten für einen Anwender bestimmt werden.
 
 **identityGraph-Objekt**
 
@@ -128,9 +128,9 @@ Wobei `{IDENTITY_GRAPH_TYPE}` einer der folgenden Werte ist:
     }
 ```
 
-### Attributzusammenführung {#attribute-merge}
+### Zusammenführung von Attributen {#attribute-merge}
 
-Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der Liste an Identitäten, die für einen bestimmten Anwender vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit, Profilattribute in Konflikt zu bringen, und es muss eine Priorität angegeben werden. Verwenden `attributeMerge`können Sie festlegen, welche Profilattribute bei einem Zusammenführungskonflikt zwischen Datensätzen vom Typ Schlüsselwert (Datensatzdaten) priorisiert werden sollen.
+Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der Liste an Identitäten, die für einen bestimmten Anwender vorhanden sind. Wenn der verwendete Identitätsdiagrammtyp zu mehr als einer Identität führt, besteht die Möglichkeit, Profilattribute in Konflikt zu bringen, und es muss eine Priorität angegeben werden. Mit `attributeMerge` können Sie festlegen, welche Profilattribute bei einem Zusammenführungskonflikt zwischen Datensätzen vom Typ Schlüsselwert (Datensatzdaten) priorisiert werden sollen.
 
 **attributeMerge-Objekt**
 
@@ -143,10 +143,10 @@ Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der List
 Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
 * **`timestampOrdered`**: (Standard) Räumt dem zuletzt aktualisierten Profil Priorität ein. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich.
-* **`dataSetPrecedence`**: Räumt Profilfragmenten je nach dem Datensatz, aus dem sie stammen, Priorität ein. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
-   * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, wird ein `order` -Array muss mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
+* **`dataSetPrecedence`**: Profilfragmente erhalten je nach dem Datensatz, aus dem sie stammen, Priorität. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
+   * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein `order` -Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
-#### Beispiel `attributeMerge` -Objekt verwenden `dataSetPrecedence` type
+#### Beispiel für ein `attributeMerge` -Objekt mit `dataSetPrecedence`-Typ
 
 ```json
     "attributeMerge": {
@@ -160,7 +160,7 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
     }
 ```
 
-#### Beispiel `attributeMerge` -Objekt verwenden `timestampOrdered` type
+#### Beispiel für ein `attributeMerge` -Objekt mit `timestampOrdered`-Typ
 
 ```json
     "attributeMerge": {
@@ -190,11 +190,11 @@ Wobei der Wert `name` der Name der XDM-Klasse ist, auf der das der Zusammenführ
     }
 ```
 
-Um mehr über XDM zu erfahren und mit Schemas im Experience Platform zu arbeiten, lesen Sie zunächst das [XDM-System - Übersicht](../../xdm/home.md).
+Um mehr über XDM zu erfahren und mit Schemas im Experience Platform zu arbeiten, lesen Sie zunächst die [XDM-Systemübersicht](../../xdm/home.md).
 
 ## Zusammenführungsrichtlinien aufrufen {#access-merge-policies}
 
-Verwenden der [!DNL Real-Time Customer Profile] API, die `/config/mergePolicies` Mit dem -Endpunkt können Sie eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen oder auf alle Zusammenführungsrichtlinien in Ihrer Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können auch die `/config/mergePolicies/bulk-get` Endpunkt zum Abrufen mehrerer Zusammenführungsrichtlinien anhand ihrer IDs. Die Schritte zum Ausführen dieser Aufrufe werden in den folgenden Abschnitten beschrieben.
+Mithilfe der API [!DNL Real-Time Customer Profile] können Sie mit dem Endpunkt `/config/mergePolicies` eine Suchanfrage ausführen, um eine bestimmte Zusammenführungsrichtlinie anhand ihrer Kennung anzuzeigen oder auf alle Zusammenführungsrichtlinien in Ihrer Organisation zuzugreifen, gefiltert nach bestimmten Kriterien. Sie können auch den Endpunkt `/config/mergePolicies/bulk-get` verwenden, um mehrere Zusammenführungsrichtlinien anhand ihrer IDs abzurufen. Die Schritte zum Ausführen dieser Aufrufe werden in den folgenden Abschnitten beschrieben.
 
 ### Auf eine einzelne Zusammenführungsrichtlinie anhand der Kennung zugreifen
 
@@ -249,7 +249,7 @@ Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtli
 
 ### Abrufen mehrerer Zusammenführungsrichtlinien anhand ihrer IDs
 
-Sie können mehrere Zusammenführungsrichtlinien abrufen, indem Sie eine POST-Anfrage an die `/config/mergePolicies/bulk-get` -Endpunkt und einschließlich der IDs der Zusammenführungsrichtlinien, die Sie im Anfragetext abrufen möchten.
+Sie können mehrere Zusammenführungsrichtlinien abrufen, indem Sie eine POST-Anfrage an den `/config/mergePolicies/bulk-get` -Endpunkt senden und die IDs der Zusammenführungsrichtlinien einschließen, die Sie im Anfragetext abrufen möchten.
 
 **API-Format**
 
@@ -348,7 +348,7 @@ Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtli
 
 ### Mehrere Zusammenführungsrichtlinien anhand von Kriterien auflisten
 
-Sie können mehrere Zusammenführungsrichtlinien innerhalb Ihres Unternehmens auflisten, indem Sie eine GET-Anfrage an die `/config/mergePolicies` -Endpunkt und Verwendung optionaler Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
+Sie können mehrere Zusammenführungsrichtlinien innerhalb Ihres Unternehmens auflisten, indem Sie eine GET-Anfrage an den `/config/mergePolicies` -Endpunkt senden und optionale Abfrageparameter zum Filtern, Sortieren und Paginieren der Antwort verwenden. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (&amp;) voneinander getrennt werden. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Zusammenführungsrichtlinien abgerufen.
 
 **API-Format**
 
@@ -730,7 +730,7 @@ Sie können eine Zusammenführungsrichtlinie löschen, indem Sie eine DELETE-Anf
 
 >[!NOTE]
 >
->Wenn die Zusammenführungsrichtlinie `isActiveOnEdge` auf &quot;true&quot;festgelegt ist, wird die Zusammenführungsrichtlinie **cannot** gelöscht werden. Verwenden Sie entweder [PATCH](#edit-individual-merge-policy-fields) oder [PUT](#overwrite-a-merge-policy) -Endpunkte , um die Zusammenführungsrichtlinie zu aktualisieren, bevor sie gelöscht wird.
+>Wenn für die Zusammenführungsrichtlinie `isActiveOnEdge` auf &quot;true&quot;gesetzt ist, kann die Zusammenführungsrichtlinie **nicht** gelöscht werden. Verwenden Sie entweder die Endpunkte [PATCH](#edit-individual-merge-policy-fields) oder [PUT](#overwrite-a-merge-policy) , um die Zusammenführungsrichtlinie zu aktualisieren, bevor Sie sie löschen.
 
 **API-Format**
 
@@ -761,6 +761,6 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Nachdem Sie wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Kundenprofilen innerhalb von Platform anzupassen und Zielgruppen aus Ihrem Unternehmen zu erstellen [!DNL Real-Time Customer Profile] Daten.
+Nachdem Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppen aus Ihren [!DNL Real-Time Customer Profile] -Daten zu erstellen.
 
-Lesen Sie hierzu die [Dokumentation zu Adobe Experience Platform Segmentation Service](../../segmentation/home.md) , um mit der Definition und Verwendung von Zielgruppen zu beginnen.
+Informationen zum Definieren und Verwenden von Zielgruppen finden Sie in der Dokumentation zum Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md) .[

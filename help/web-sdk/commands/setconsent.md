@@ -12,21 +12,21 @@ ht-degree: 3%
 
 # `setConsent`
 
-Die `setConsent` gibt dem Web SDK an, ob es Daten senden (Opt-in), Daten verwerfen (Opt-out) oder verwenden soll [`defaultConsent`](configure/defaultconsent.md) (Einverständnis unbekannt).
+Der Befehl `setConsent` teilt dem Web SDK mit, ob es Daten senden (Opt-in), Daten verwerfen (Opt-out) oder [`defaultConsent`](configure/defaultconsent.md) verwenden soll (Einverständnis unbekannt).
 
 Das Web SDK unterstützt die folgenden Standards:
 
-* **[Adobe-Standard](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: Sowohl 1.0- als auch 2.0-Standards werden unterstützt.
-* **[IAB Transparency &amp; Consent Framework](/help/landing/governance-privacy-security/consent/iab/overview.md)**: Wenn Sie diesen Standard verwenden, wird das Echtzeit-Kundenprofil des Besuchers mit den Zustimmungsinformationen aktualisiert, wenn Ihre Implementierung richtig konfiguriert ist:
-   1. Das individuelle XDM-Profilschema enthält die [IAB TCF 2.0-Feldergruppe &quot;Einwilligung&quot;](/help/xdm/field-groups/profile/iab.md).
-   1. Das Schema Erlebnisereignis enthält die [IAB TCF 2.0-Feldergruppe &quot;Einwilligung&quot;](/help/xdm/field-groups/event/iab.md).
-   1. Sie fügen die IAB-Zustimmungsinformationen in das Ereignis ein. [XDM-Objekt](sendevent/xdm.md). Das Web SDK enthält beim Senden von Ereignisdaten nicht automatisch die Zustimmungsinformationen.
+* **[Adobe standard](/help/landing/governance-privacy-security/consent/adobe/overview.md)**: Sowohl 1.0- als auch 2.0-Standards werden unterstützt.
+* **[IAB Transparency &amp; Consent Framework](/help/landing/governance-privacy-security/consent/iab/overview.md)**: Wenn Sie diesen Standard verwenden, wird das Echtzeit-Kundenprofil des Besuchers mit den Zustimmungsinformationen aktualisiert, wenn Ihre Implementierung korrekt konfiguriert ist:
+   1. Das individuelle XDM-Profilschema enthält die Feldergruppe [IAB TCF 2.0 Consent field group](/help/xdm/field-groups/profile/iab.md).
+   1. Das Erlebnisereignis-Schema enthält die Feldergruppe [IAB TCF 2.0 Consent field group](/help/xdm/field-groups/event/iab.md).
+   1. Sie beziehen die IAB-Zustimmungsinformationen in das Ereignis [XDM-Objekt](sendevent/xdm.md) ein. Das Web SDK enthält beim Senden von Ereignisdaten nicht automatisch die Zustimmungsinformationen.
 
 Nach Verwendung dieses Befehls schreibt das Web SDK die Voreinstellungen des Benutzers in ein Cookie. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft das SDK diese beibehaltenen Voreinstellungen ab, um zu bestimmen, ob Ereignisse an Adobe gesendet werden können.
 
-Adobe empfiehlt, dass Sie alle Voreinstellungen für das Einwilligungsdialogfeld getrennt von der Web SDK-Zustimmung speichern. Das Web SDK bietet keine Möglichkeit, die Zustimmung abzurufen. Sie können die `setConsent` -Befehl bei jedem Laden der Seite. Das Web SDK führt nur dann einen Server-Aufruf durch, wenn sich die Zustimmung ändert.
+Adobe empfiehlt, dass Sie alle Voreinstellungen für das Einwilligungsdialogfeld getrennt von der Web SDK-Zustimmung speichern. Das Web SDK bietet keine Möglichkeit, die Zustimmung abzurufen. Um sicherzustellen, dass die Benutzereinstellungen mit dem SDK synchronisiert bleiben, können Sie bei jedem Laden der Seite den Befehl `setConsent` aufrufen. Das Web SDK führt nur dann einen Server-Aufruf durch, wenn sich die Zustimmung ändert.
 
-## Verwenden `defaultConsent` zusammen mit `setConsent` {#using-consent}
+## Verwenden von `defaultConsent` zusammen mit `setConsent` {#using-consent}
 
 Das Web SDK bietet zwei komplementäre Konfigurationsbefehle für die Zustimmung:
 
@@ -53,7 +53,7 @@ Die folgenden Cookies werden gesetzt, wenn die Konfiguration der Zustimmung Folg
 
 | Name | Max. Alter | Beschreibung |
 |---|---|---|
-| **AMCV_###@AdobeOrg** | 34128000 (395 Tage) | Vorhanden, wenn [`idMigrationEnabled`](configure/idmigrationenabled.md) aktiviert ist. Dies ist beim Übergang zum Web SDK hilfreich, während einige Teile der Site weiterhin verwenden `visitor.js`. |
+| **AMCV_###@AdobeOrg** | 34128000 (395 Tage) | Vorhanden, wenn [`idMigrationEnabled`](configure/idmigrationenabled.md) aktiviert ist. Dies ist beim Übergang zum Web SDK hilfreich, während einige Teile der Site weiterhin `visitor.js` verwenden. |
 | **Demdex-Cookie** | 15552000 (180 Tage) | Vorhanden bei aktivierter ID-Synchronisierung. Audience Manager setzt dieses Cookie, um Site-Besuchern eine eindeutige ID zuzuweisen. Das demdex-Cookie hilft Audience Manager bei der Ausführung grundlegender Funktionen wie Besucheridentifizierung, ID-Synchronisierung, Segmentierung, Modellierung, Berichterstellung usw. |
 | **kndctr_orgid_cluster** | 1800 (30 Minuten) | Speichert den Edge Network-Bereich, der den Anforderungen des aktuellen Benutzers entspricht. Der Bereich wird im URL-Pfad verwendet, damit das Edge Network die Anfrage an den richtigen Bereich weiterleiten kann. Wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse oder in einer anderen Sitzung herstellt, wird die Anforderung erneut an den nächsten Bereich weitergeleitet. |
 | **kndct_orgid_identity** | 34128000 (395 Tage) | Speichert die ECID sowie andere Informationen zur ECID. |
@@ -64,37 +64,37 @@ Die folgenden Cookies werden gesetzt, wenn die Konfiguration der Zustimmung Folg
 
 Das Festlegen der Zustimmung wird als Aktion innerhalb einer Regel in der Adobe Experience Platform-Oberfläche für Datenerfassungs-Tags durchgeführt.
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. under [!UICONTROL Aktionen], wählen Sie eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie die [!UICONTROL Erweiterung] Dropdown-Feld zu **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie die [!UICONTROL Aktionstyp] nach **[!UICONTROL Einverständnis festlegen]**.
-1. Legen Sie die gewünschten Felder rechts fest, einschließlich **[!UICONTROL Standard]** und **[!UICONTROL Allgemeine Zustimmung]**.
-1. Klicks **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
+1. Wählen Sie unter [!UICONTROL Aktionen] eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und setzen Sie den [!UICONTROL Aktionstyp] auf **[!UICONTROL Einverständnis festlegen]**.
+1. Legen Sie die gewünschten Felder auf der rechten Seite fest, einschließlich **[!UICONTROL Standard]** und **[!UICONTROL Allgemeines Einverständnis]**.
+1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
 
 Sie können in diese Aktion mehrere Zustimmungsobjekte einfügen.
 
-## Festlegen der Zustimmung mithilfe der Web SDK-JavaScript-Bibliothek
+## Festlegen der Zustimmung mithilfe der Web SDK JavaScript-Bibliothek
 
-Führen Sie die `setConsent` beim Aufruf Ihrer konfigurierten Instanz des Web SDK. Sie können die folgenden Objekte in diesen Befehl einfügen:
+Führen Sie den Befehl `setConsent` aus, wenn Sie Ihre konfigurierte Instanz des Web SDK aufrufen. Sie können die folgenden Objekte in diesen Befehl einfügen:
 
-* **`consent[]`**: Ein Array von `consent` Objekte. Das Objekt für die Zustimmung wird je nach gewähltem Standard und Version unterschiedlich formatiert. Auf den folgenden Registerkarten finden Sie Beispiele für jedes Einverständnisobjekt, je nach Zustimmungsstandard.
-* **`identityMap`**: Ein Objekt, das steuert, wie eine ECID generiert wird und an welche IDs die Einwilligungsinformationen gebunden sind. Adobe empfiehlt, dieses Objekt einzuschließen, wenn `setConsent` vor anderen Befehlen ausgeführt wird, z. B. [`sendEvent`](sendevent/overview.md).
-* **`edgeConfigOverrides`**: Ein Objekt, das [Überschreibungen der Datenspeicherkonfiguration](datastream-overrides.md).
+* **`consent[]`**: Ein Array von `consent` -Objekten. Das Objekt für die Zustimmung wird je nach gewähltem Standard und Version unterschiedlich formatiert. Auf den folgenden Registerkarten finden Sie Beispiele für jedes Einverständnisobjekt, je nach Zustimmungsstandard.
+* **`identityMap`**: Ein Objekt, das steuert, wie eine ECID generiert wird und mit welchen IDs die Einwilligungsinformationen verknüpft sind. Adobe empfiehlt, dieses Objekt einzuschließen, wenn `setConsent` vor anderen Befehlen ausgeführt wird, z. B. [`sendEvent`](sendevent/overview.md).
+* **`edgeConfigOverrides`**: Ein Objekt, das [datastream-Konfigurationen enthält, überschreibt ](datastream-overrides.md).
 
 >[!BEGINTABS]
 
 >[!TAB Adobe 2.0]
 
-### Adobe 2.0-Standard `consent` Objekt
+### Adobe 2.0-Standard-`consent`-Objekt
 
-Wenn Sie Adobe Experience Platform verwenden, müssen Sie eine Datenschutzschema-Feldergruppe in Ihr Profilschema aufnehmen. Siehe [Governance, Datenschutz und Sicherheit in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) für weitere Informationen zum Adobe 2.0-Standard. Sie können Daten innerhalb des Wertobjekts hinzufügen, die dem Schema des `consents` des [!UICONTROL Einverständnis und Voreinstellungen] Profilfeldgruppe.
+Wenn Sie Adobe Experience Platform verwenden, müssen Sie eine Datenschutzschema-Feldergruppe in Ihr Profilschema aufnehmen. Weitere Informationen zum Adobe 2.0-Standard finden Sie unter [Governance, Datenschutz und Sicherheit in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) . Sie können Daten innerhalb des Wertobjekts hinzufügen, die dem Schema des Felds `consents` der Feldergruppe [!UICONTROL Einverständnis und Voreinstellungen] entsprechen.
 
-* **`standard`**: Der von Ihnen ausgewählte Zustimmungsstandard. Legen Sie diese Eigenschaft auf `"Adobe"` für den Adobe 2.0-Standard.
-* **`version`**: Eine Zeichenfolge, die die Version des Zustimmungsstandards darstellt. Legen Sie diese Eigenschaft auf `"2.0"` für den Adobe 2.0-Standard.
-* **`value`**: Ein Objekt, das Zustimmungswerte enthält.
-   * **`value.collect.val`**: Der Zustimmungswert. Legen Sie hier fest `"y"` , wenn sich Benutzer anmelden und `"n"` , wenn Benutzer sich abmelden.
+* **`standard`**: Der von Ihnen ausgewählte Zustimmungsstandard. Legen Sie diese Eigenschaft für den Adobe 2.0-Standard auf `"Adobe"` fest.
+* **`version`**: Eine Zeichenfolge, die die Version des Zustimmungsstandards darstellt. Legen Sie diese Eigenschaft für den Adobe 2.0-Standard auf `"2.0"` fest.
+* 0: Ein Objekt, das Zustimmungswerte enthält.**`value`**
+   * **`value.collect.val`**: Der Zustimmungswert. Setzen Sie dies auf `"y"` , wenn sich Benutzer anmelden, und auf `"n"` , wenn sich Benutzer abmelden.
    * **`value.metadata.time`**: Der Zeitstempel, mit dem Benutzer ihre Zustimmungseinstellungen zuletzt aktualisiert haben.
 
 ```js
@@ -117,19 +117,19 @@ alloy("setConsent", {
 
 >[!TAB IAB TCF 2.0]
 
-### IAB TCF 2.0-Standard `consent` Objekt
+### IAB TCF 2.0-Standardobjekt `consent`
 
-Legen Sie die Zustimmungszeichenfolge wie unten dargestellt fest, um die über den IAB Transparency and Consent Framework (TCF)-Standard (Interactive Advertising Bureau Europe) bereitgestellten Zustimmungsvoreinstellungen der Benutzer aufzuzeichnen.
+Legen Sie die Zustimmungszeichenfolge wie unten dargestellt fest, um die über den IAB-Standard (Interactive Advertising Bureau Europe) Transparency and Consent Framework (TCF) bereitgestellten Zustimmungsvoreinstellungen der Benutzer aufzuzeichnen.
 
-Wenn die Zustimmung auf diese Weise festgelegt wird, wird das Echtzeit-Kundenprofil mit den Zustimmungsinformationen aktualisiert. Dazu muss das Profil-XDM-Schema die [Feldergruppe zum Profildatenschutzschema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Beim Senden von Ereignissen müssen die IAB-Zustimmungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das Web SDK nimmt die Zustimmungsinformationen nicht automatisch in die Ereignisse auf.
+Wenn die Zustimmung auf diese Weise festgelegt wird, wird das Echtzeit-Kundenprofil mit den Zustimmungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil-XDM-Schema die [Feldergruppe des Profildatenschutzschemas](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) enthalten. Beim Senden von Ereignissen müssen die IAB-Zustimmungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das Web SDK nimmt die Zustimmungsinformationen nicht automatisch in die Ereignisse auf.
 
-Um die Einwilligungsinformationen in Ereignissen zu senden, müssen Sie die Feldergruppe &quot;Erlebnisereignis-Datenschutz&quot;zu Ihrer [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] Schema. Siehe Abschnitt zu [Aktualisieren des ExperienceEvent-Schemas](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) Anweisungen zur Konfiguration finden Sie im Leitfaden zur Datensatzvorbereitung .
+Um die Einwilligungsinformationen in Ereignissen zu senden, müssen Sie die Feldergruppe &quot;Erlebnisereignis-Datenschutz&quot;Ihrem [!DNL Profile]-aktivierten [!DNL XDM ExperienceEvent]-Schema hinzufügen. Anweisungen zum Konfigurieren finden Sie im Abschnitt zum Aktualisieren des ExperienceEvent-Schemas ](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) im Handbuch zur Datensatzvorbereitung.[
 
-* **`standard`**: Der von Ihnen ausgewählte Zustimmungsstandard. Legen Sie diese Eigenschaft auf `"IAB TCF"` für den IAB TCF 2.0-Standard.
-* **`version`**: Eine Zeichenfolge, die die Version des Zustimmungsstandards darstellt. Legen Sie diese Eigenschaft auf `"2.0"` für den IAB TCF 2.0-Standard.
+* **`standard`**: Der von Ihnen ausgewählte Zustimmungsstandard. Legen Sie diese Eigenschaft für den IAB TCF 2.0-Standard auf `"IAB TCF"` fest.
+* **`version`**: Eine Zeichenfolge, die die Version des Zustimmungsstandards darstellt. Legen Sie diese Eigenschaft für den IAB TCF 2.0-Standard auf `"2.0"` fest.
 * **`value`**: Eine Zeichenfolge, die den Zustimmungswert enthält.
-* **`gdprApplies`**: Ein boolescher Wert, der bestimmt, ob die DSGVO für diesen Zustimmungswert gilt. Der Standardwert lautet `true`.
-* **`gdprContainsPersonalData`**: Ein boolescher Wert, der bestimmt, ob die mit diesem Benutzer verknüpften Ereignisdaten personenbezogene Daten enthalten. Der Standardwert lautet `false`.
+* **`gdprApplies`**: Ein boolescher Wert, der bestimmt, ob die DSGVO für diesen Zustimmungswert gilt. Der Standardwert ist `true`.
+* **`gdprContainsPersonalData`**: Ein boolescher Wert, der bestimmt, ob die mit diesem Benutzer verknüpften Ereignisdaten personenbezogene Daten enthalten. Der Standardwert ist `false`.
 
 ```js
 // Set consent using the IAB TCF 2.0 standard
@@ -146,11 +146,11 @@ alloy("setConsent", {
 
 >[!TAB Adobe 1.0]
 
-### Adobe 1.0-Standard `consent` Objekt
+### Adobe 1.0 standard `consent` -Objekt
 
-* **`standard`**: Der von Ihnen ausgewählte Zustimmungsstandard. Legen Sie diese Eigenschaft auf `"Adobe"` für den Adobe 1.0-Standard.
-* **`version`**: Eine Zeichenfolge, die die Version des Zustimmungsstandards darstellt. Legen Sie diese Eigenschaft auf `"1.0"` für den Adobe 1.0-Standard.
-* **`value.general`**: Der Zustimmungswert. Legen Sie hier fest `"in"` , wenn sich Benutzer anmelden und `"out"` , wenn Benutzer sich abmelden.
+* **`standard`**: Der von Ihnen ausgewählte Zustimmungsstandard. Legen Sie diese Eigenschaft für den Adobe 1.0-Standard auf `"Adobe"` fest.
+* **`version`**: Eine Zeichenfolge, die die Version des Zustimmungsstandards darstellt. Legen Sie diese Eigenschaft für den Adobe 1.0-Standard auf `"1.0"` fest.
+* **`value.general`**: Der Zustimmungswert. Setzen Sie dies auf `"in"` , wenn sich Benutzer anmelden, und auf `"out"` , wenn sich Benutzer abmelden.
 
 ```js
 // Set consent using the Adobe 1.0 standard
@@ -196,10 +196,10 @@ alloy("setConsent", {
 
 ## Beständigkeit der Zustimmungseinstellungen {#persistence}
 
-Nachdem Sie die Benutzereinstellungen mithilfe der `setConsent` festgelegt ist, behält das SDK Benutzereinstellungen in einem Cookie bei. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft das Web SDK diese beibehaltenen Voreinstellungen ab und verwendet sie, um zu bestimmen, ob Ereignisse an Adobe gesendet werden können oder nicht.
+Nachdem Sie dem Web SDK mithilfe des Befehls `setConsent` Benutzereinstellungen mitgeteilt haben, behält das SDK Benutzereinstellungen in einem Cookie bei. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft das Web SDK diese beibehaltenen Voreinstellungen ab und verwendet sie, um zu bestimmen, ob Ereignisse an Adobe gesendet werden können oder nicht.
 
-Sie müssen die Benutzereinstellungen unabhängig speichern, um das Dialogfeld &quot;Einverständnis&quot;mit den aktuellen Voreinstellungen anzeigen zu können. Es gibt keine Möglichkeit, die Benutzereinstellungen vom Web SDK abzurufen. Sie können die `setConsent` -Befehl bei jedem Laden der Seite. Das Web SDK führt nur dann einen Server-Aufruf durch, wenn sich die Voreinstellungen geändert haben.
+Sie müssen die Benutzereinstellungen unabhängig speichern, um das Dialogfeld &quot;Einverständnis&quot;mit den aktuellen Voreinstellungen anzeigen zu können. Es gibt keine Möglichkeit, die Benutzereinstellungen vom Web SDK abzurufen. Um sicherzustellen, dass die Benutzereinstellungen mit dem SDK synchronisiert bleiben, können Sie bei jedem Laden der Seite den Befehl `setConsent` aufrufen. Das Web SDK führt nur dann einen Server-Aufruf durch, wenn sich die Voreinstellungen geändert haben.
 
 ## Synchronisieren von Identitäten beim Festlegen der Zustimmung {#sync-identities}
 
-Wenn die Standardzustimmung (festgelegt über die [defaultConsent](configure/defaultconsent.md) Parameter) auf `pending` oder `out`, die `setConsent` -Einstellung kann die erste Anfrage sein, die gesendet wird und die Identität festlegt. Daher kann es wichtig sein, Identitäten bei der ersten Anfrage zu synchronisieren. Sie können die Identitätszuordnung zum `setConsent` -Befehl wie auf der `sendEvent` Befehl. Siehe [Verwenden von identityMap](../identity/overview.md#using-identitymap) ein Beispiel dafür, wie Sie die Identitätszuordnung in Ihren Befehl einbeziehen.
+Wenn die Standardzustimmung (festgelegt durch den Parameter [defaultConsent](configure/defaultconsent.md) ) auf `pending` oder `out` festgelegt ist, kann die Einstellung `setConsent` die erste ausgehende Anfrage sein, die zur Identitätsfeststellung führt. Daher kann es wichtig sein, Identitäten bei der ersten Anfrage zu synchronisieren. Sie können die Identitätszuordnung dem Befehl `setConsent` hinzufügen, genau wie beim Befehl `sendEvent` . Unter [Verwenden von identityMap](../identity/overview.md#using-identitymap) finden Sie ein Beispiel dafür, wie Sie die Identitätszuordnung in Ihren Befehl einbeziehen.

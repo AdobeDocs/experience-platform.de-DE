@@ -6,7 +6,7 @@ description: Erfahren Sie, wie Sie über die Platform-Benutzeroberfläche eine V
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '684'
 ht-degree: 93%
 
 ---
@@ -73,13 +73,13 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 
 #### Authentifizieren mit OAuth 2
 
-Um OAuth 2 zu verwenden, wählen Sie [!UICONTROL OAuth 2-Aktualisierungscode], geben Sie Werte für Ihre Domäne, die URL für den Autorisierungstest und das Zugriffstoken an und wählen Sie dann **[!UICONTROL Verbindung mit Quelle herstellen]**. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
+Um OAuth 2 zu verwenden, wählen Sie [!UICONTROL OAuth 2 Refresh Code], geben Sie Werte für Ihre Domäne, die Autorisierungstest-URL und das Zugriffstoken an und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]** aus. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-members/oauth.png)
 
 #### Authentifizieren mit Standardauthentifizierung
 
-Um die einfache Authentifizierung zu verwenden, wählen Sie [!UICONTROL Grundlegende Authentifizierung], geben Sie Werte für Ihre Domäne, Ihren Benutzernamen und Ihr Kennwort ein und wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]**. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
+Um eine einfache Authentifizierung zu verwenden, wählen Sie [!UICONTROL Grundlegende Authentifizierung], geben Sie Werte für Ihre Domäne, Ihren Benutzernamen und Ihr Kennwort ein und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]** aus. Warten Sie einige Augenblicke, bis Ihre Anmeldeinformationen validiert wurden, und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![De base](../../../../images/tutorials/create/mailchimp-members/basic.png)
 

@@ -15,7 +15,7 @@ ht-degree: 5%
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
-Mit Data Distiller können Datenwissenschaftler und -ingenieure ihre Pipelines für maschinelles Lernen mit hochwertigen Kundenerlebnisdaten anreichern, die in Adobe Experience Platform erfasst und kuratiert wurden. Von einem [!DNL Python] -Notebook in jeder Umgebung können Sie Kundendaten interaktiv im Experience Platform untersuchen, Funktionen aus den Daten definieren und berechnen und die berechneten Funktionen in Ihre maschinelle Lernumgebung zur Modellierung lesen.
+Mit Data Distiller können Datenwissenschaftler und -ingenieure ihre Pipelines für maschinelles Lernen mit hochwertigen Kundenerlebnisdaten anreichern, die in Adobe Experience Platform erfasst und kuratiert wurden. Mit einem [!DNL Python] -Notebook in einer beliebigen Umgebung können Sie Kundendaten interaktiv im Experience Platform untersuchen, Funktionen aus den Daten definieren und berechnen und die berechneten Funktionen in Ihre maschinelle Lernumgebung zur Modellierung lesen.
 
 >[!IMPORTANT]
 >
@@ -31,27 +31,27 @@ Mit Data Distiller können Datenwissenschaftler und -ingenieure ihre Pipelines f
 
 Dieser Workflow setzt ein Verständnis der verschiedenen Aspekte von Adobe Experience Platform voraus. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die Dokumentation für die folgenden Konzepte:
 
-- Anleitung [Experience Platform-APIs authentifizieren und aufrufen](../../../landing/api-authentication.md).
-- Sandboxes: [Attributbasierte Zugriffssteuerungsberechtigungen](../../../access-control/abac/overview.md) und wie Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen.
-- Data Governance: Anleitung [Anwenden von Datennutzungsbezeichnungen auf Datensätze und Felder und Kategorisierung der einzelnen](../../../data-governance/labels/overview.md) entsprechend den entsprechenden Data Governance-Richtlinien und Zugriffskontrollrichtlinien.
+- Authentifizieren und Zugreifen auf Experience Platform-APIs ](../../../landing/api-authentication.md) durch [.
+- Sandboxes: [Attributbasierte Zugriffssteuerungsberechtigungen](../../../access-control/abac/overview.md) und Informationen zum Erstellen und Verwalten von Rollen sowie zum Zuweisen der gewünschten Ressourcenberechtigungen für diese Rollen.
+- Data Governance: Anleitung zum [Anwenden von Datennutzungsbezeichnungen auf Datensätze und Felder, wobei jeder ](../../../data-governance/labels/overview.md) entsprechend den entsprechenden Data Governance-Richtlinien und Zugriffssteuerungsrichtlinien kategorisiert wird.
 
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments haben Sie sich mit den wichtigen Konzepten vertraut gemacht, die hinter der Verwendung Ihrer bevorzugten maschinellen Lernwerkzeuge zum Erstellen benutzerdefinierter Modelle zur Unterstützung Ihrer Marketing-Anwendungsfälle stehen.
 
-In den in dieser Reihe von Handbüchern enthaltenen Dokumenten werden die grundlegenden Schritte zum Erstellen von Feature Pipelines von Experience Platform beschrieben, um benutzerdefinierte Modelle in Ihrer Umgebung für maschinelles Lernen zu erstellen. Sie können jetzt eine Verbindung zwischen Data Distiller und Ihrer [!DNL Jupyter Notebook].
+In den in dieser Reihe von Handbüchern enthaltenen Dokumenten werden die grundlegenden Schritte zum Erstellen von Feature Pipelines von Experience Platform beschrieben, um benutzerdefinierte Modelle in Ihrer Umgebung für maschinelles Lernen zu erstellen. Sie können jetzt eine Verbindung zwischen Data Distiller und Ihrem [!DNL Jupyter Notebook] herstellen.
 
-- **Einrichten**: [Verbindung zu Data Distiller über eine [!DNL Python] Notebook](./establish-connection.md)
+- **Richten Sie** ein: [Verbinden von einem [!DNL Python] Notebook](./establish-connection.md) mit Data Distiller
 
 Die nachstehende Dokumentation entspricht den Schritten, die in der obigen Infografik angegeben sind.
 
 - **Schritt 1**: [Datensätze untersuchen und analysieren](./exploratory-analysis.md)
-- **Schritt 2**: [Technische Funktionen für maschinelles Lernen](./feature-engineering.md)
-- **Schritt 3**: [Exportieren von Funktionsdatensätzen](./export-data.md)
+- **Schritt 2**: [Ingenieurfunktionen für maschinelles Lernen](./feature-engineering.md)
+- **Schritt 3**: [Export von Funktionsdatensätzen](./export-data.md)
 
 ## Zusätzliche Ressourcen
 
-- [aepp](https://github.com/adobe/aepp): eine von Adobe verwaltete Open-Source-Software [!DNL Python] Bibliothek für Anfragen an Data Distiller und andere Experience Platform-Dienste von [!DNL Python] Code.
+- [aepp](https://github.com/adobe/aepp): eine von Adobe verwaltete Open-Source-Bibliothek [!DNL Python] für Anfragen an Data Distiller und andere Experience Platform-Dienste aus dem Code [!DNL Python].
 
 <!-- Old content below -->
 

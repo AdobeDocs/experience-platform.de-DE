@@ -5,7 +5,7 @@ exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
 source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
 source-wordcount: '949'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -71,7 +71,7 @@ Die MA-Erweiterung exportiert die MediaHeartbeat-APIs im globalen Fensterobjekt,
 
    | Methode |  Beschreibung   |
    | :--- | :--- |
-   | `getQoSObject()` | Gibt die `theMediaObject`-Instanz zurück, die aktuelle Informationen zur Servicequalität enthält. Diese Methode wird mehrmals während einer Wiedergabesitzung aufgerufen. Die Player-Implementierung muss stets die aktuellsten verfügbaren Servicequalitätsdaten zurückgeben. |
+   | `getQoSObject()` | Gibt die `theMediaObject`-Instanz zurück, die aktuelle Informationen zur Servicequalität enthält. Diese Methode wird mehrmals während einer Wiedergabesitzung aufgerufen. Die Player-Implementierung muss immer die aktuellsten verfügbaren QoS-Daten zurückgeben. |
    | `getCurrentPlaybackTime()` | Gibt die aktuelle Position der Abspielleiste zurück. Bei VOD-Tracking wird der Wert in Sekunden ab Beginn des Medienelements angegeben. Beim Tracking von LIVE-Assets wird der Wert in Sekunden ab Beginn des Programms angegeben. |
 
    **Wert zurückgeben:** Eine Zusage, die entweder mit einer `MediaHeartbeat`-Instanz aufgelöst oder mit einer Fehlermeldung zurückgewiesen wird.

@@ -12,80 +12,80 @@ ht-degree: 3%
 
 # [!DNL LinkedIn]-Konversions-API-Erweiterung
 
-[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) ist ein Konversions-Tracking-Tool, das eine direkte Verbindung zwischen Marketingdaten von einem Advertiser-Server und [!DNL LinkedIn]. Dadurch können Advertiser die Effektivität ihrer [!DNL LinkedIn] Marketing-Kampagnen unabhängig vom Ort der Konversion verwenden und diese Informationen nutzen, um die Kampagnenoptimierung zu fördern. Die [!DNL LinkedIn Conversions API] Die -Erweiterung kann die Leistung steigern und die Kosten pro Aktion senken, indem sie die Attribution vollständig, die Datenzuverlässigkeit verbessert und die Bereitstellung optimiert.
+[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) ist ein Konversions-Tracking-Tool, das eine direkte Verbindung zwischen den Marketingdaten eines Advertiser-Servers und [!DNL LinkedIn] herstellt. Dadurch können Werbetreibende die Effektivität ihrer [!DNL LinkedIn]-Marketing-Kampagnen unabhängig vom Ort der Konversion bewerten und diese Informationen nutzen, um die Kampagnenoptimierung zu fördern. Die [!DNL LinkedIn Conversions API] -Erweiterung kann die Leistung steigern und die Kosten pro Aktion senken, indem sie die Attribution vollständig, die Datenzuverlässigkeit verbessert und die Bereitstellung optimiert.
 
 ## Voraussetzungen {#prerequisites}
 
-Sie müssen [Konversionsregel erstellen](https://www.linkedin.com/help/lms/answer/a1657171) in [!DNL LinkedIn Campaign Manager] -Konto. [!DNL Adobe] empfiehlt, &quot;CAPI&quot;am Anfang des Konversationsregelnamens einzufügen, um ihn von anderen Konversionsregeltypen abzuheben, die Sie möglicherweise konfiguriert haben.
+Sie müssen [eine Konversionsregel ](https://www.linkedin.com/help/lms/answer/a1657171) in Ihrem [!DNL LinkedIn Campaign Manager]-Konto erstellen. [!DNL Adobe] empfiehlt, &quot;CAPI&quot;am Anfang des Namens der Konversationsregel einzubeziehen, um sie von anderen Konversionsregeltypen abzuheben, die Sie möglicherweise konfiguriert haben.
 
 ### Erstellen eines Geheimnisses und eines Datenelements
 
-Erstellen Sie eine neue [!DNL LinkedIn] [Ereignisweiterleitungsgeheimnis](../../../ui/event-forwarding/secrets.md) und geben Sie ihm einen eindeutigen Namen, der das authentifizierende Mitglied angibt. Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren, während der Wert sicher bleibt.
+Erstellen Sie ein neues [!DNL LinkedIn] [Ereignisweiterleitungsgeheimnis](../../../ui/event-forwarding/secrets.md) und geben Sie ihm einen eindeutigen Namen, der das authentifizierende Mitglied angibt. Dies wird verwendet, um die Verbindung zu Ihrem Konto zu authentifizieren, während der Wert sicher bleibt.
 
-Als Nächstes [Datenelement erstellen](../../../ui/managing-resources/data-elements.md#create-a-data-element) mithilfe der [!UICONTROL Core] Erweiterung und [!UICONTROL Geheimnis] Datenelementtyp zum Referenzieren der `LinkedIn` geheim, das Sie gerade erstellt haben.
+Als Nächstes erstellen Sie mit der Erweiterung [!UICONTROL Core] ein Datenelement](../../../ui/managing-resources/data-elements.md#create-a-data-element) und mit dem Datenelementtyp [!UICONTROL Secret] , um auf das soeben erstellte Geheimnis `LinkedIn` zu verweisen.[
 
-## Installieren und konfigurieren Sie die [!DNL LinkedIn] Erweiterung {#install}
+## Installieren und Konfigurieren der [!DNL LinkedIn] -Erweiterung {#install}
 
-So installieren Sie die Erweiterung: [Erstellen einer Ereignisweiterleitungs-Eigenschaft](../../../ui/event-forwarding/overview.md#properties) oder wählen Sie eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
+Um die Erweiterung zu installieren, erstellen Sie [eine Ereignisweiterleitungs-Eigenschaft](../../../ui/event-forwarding/overview.md#properties) oder wählen Sie eine vorhandene Eigenschaft aus, die bearbeitet werden soll.
 
-Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Im **[!UICONTROL Katalog]** auswählen, wählen Sie die **[!UICONTROL LinkedIn]** Erweiterung und wählen Sie **[!UICONTROL Installieren]**.
+Wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation aus. Wählen Sie auf der Registerkarte **[!UICONTROL Katalog]** die Erweiterung **[!UICONTROL LinkedIn]** und dann **[!UICONTROL Installieren]** aus.
 
-![Der Erweiterungskatalog, der die [!DNL LinkedIn] Erweiterungskartenmarkierung.](../../../images/extensions/server/linkedin/install-extension.png)
+![Der Erweiterungskatalog, der die Installation der Erweiterungskarte [!DNL LinkedIn] hervorhebt.](../../../images/extensions/server/linkedin/install-extension.png)
 
-Geben Sie im nächsten Bildschirm den zuvor erstellten Datenelementschlüssel in das Feld `Access Token` -Feld. Das Datenelement-Geheimnis enthält Ihre [!DNL LinkedIn] OAuth 2-Token. Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
+Geben Sie im nächsten Bildschirm im Feld `Access Token` den zuvor erstellten Datenelementschlüssel ein. Das Datenelement-Geheimnis enthält Ihr [!DNL LinkedIn] OAuth 2-Token. Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
 
-![Die [!DNL LinkedIn] Erweiterungskonfigurationsseite mit [!UICONTROL Zugriffstoken] und [!UICONTROL Speichern] hervorgehoben.](../../../images/extensions/server/linkedin/configure-extension.png)
+![Die Konfigurationsseite der Erweiterung [!DNL LinkedIn] mit dem Feld [!UICONTROL Zugriffstoken] und dem Feld [!UICONTROL Speichern], hervorgehoben.](../../../images/extensions/server/linkedin/configure-extension.png)
 
-## Erstellen Sie eine [!DNL Send Conversion] Regel {#tracking-rule}
+## Erstellen einer [!DNL Send Conversion] -Regel {#tracking-rule}
 
-Sobald alle Ihre Datenelemente eingerichtet sind, können Sie mit der Erstellung von Ereignisweiterleitungsregeln beginnen, die bestimmen, wann und wie Ihre Ereignisse an gesendet werden [!DNL LinkedIn].
+Sobald alle Ihre Datenelemente eingerichtet sind, können Sie mit der Erstellung von Ereignisweiterleitungsregeln beginnen, die bestimmen, wann und wie Ihre Ereignisse an [!DNL LinkedIn] gesendet werden.
 
-Neue Ereignisweiterleitung erstellen [Regel](../../../ui/managing-resources/rules.md) in Ihrer Ereignisweiterleitungseigenschaft. under **[!UICONTROL Aktionen]**, fügen Sie eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL LinkedIn]**. Wählen Sie als Nächstes **[!UICONTROL Konvertierung senden]** für die **[!UICONTROL Aktionstyp]**.
+Erstellen Sie in Ihrer Ereignisweiterleitungseigenschaft eine neue Ereignisweiterleitungsregel [Regel](../../../ui/managing-resources/rules.md). Fügen Sie unter **[!UICONTROL Aktionen]** eine neue Aktion hinzu und legen Sie die Erweiterung auf **[!UICONTROL LinkedIn]** fest. Wählen Sie als Nächstes **[!UICONTROL Konversion senden]** für den **[!UICONTROL Aktionstyp]** aus.
 
-![Die Ansicht &quot;Eigenschaftsregeln für die Ereignisweiterleitung&quot;mit den Feldern, die zum Hinzufügen einer Aktionskonfiguration für Ereignisweiterleitungsregeln erforderlich sind, hervorgehoben.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
+![Die Ansicht &quot;Eigenschaftsregeln für die Ereignisweiterleitung&quot;mit den Feldern, die zum Hinzufügen einer Aktionskonfiguration für die Ereignisweiterleitung erforderlich sind, hervorgehoben.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
-Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu konfigurieren. Auswählen **[!UICONTROL Änderungen beibehalten]** , um die Regel zu speichern.
+Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu konfigurieren. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus, um die Regel zu speichern.
 
 **[!UICONTROL Benutzerdaten]**
 
 | Eingabe | Beschreibung |
 | --- | --- |
 | [!UICONTROL E-Mail] | E-Mail-Adresse des Kontakts, der mit dem Konversionsereignis verbunden ist. Der E-Mail-Wert wird durch den Erweiterungscode in SHA256 kodiert, es sei denn, der angegebene Wert ist bereits eine SHA256-Zeichenfolge. |
-| [!UICONTROL LinkedIn-UUID zur Verfolgung von Erstanbieteranzeigen] | Dies ist eine Erstanbieter-Cookie-ID. Werbetreibende müssen das erweiterte Konversions-Tracking aktivieren von [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) , um Erstanbieter-Cookies zu aktivieren, die einen Klick-ID-Parameter anhängen `li_fat_id` zu den Klick-URLs. |
-| [!UICONTROL Kundeninformationsdaten] | Dieses Feld enthält ein JSON-Objekt mit zusätzlichen Attributen, die zusammen mit der Nachricht gesendet werden.<br><br>Unter dem **[!UICONTROL Roh]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen oder das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)), um aus einer Liste vorhandener Datenelemente zur Darstellung der Daten auszuwählen.<br><br>Sie können auch die **[!UICONTROL JSON-Schlüssel-Wert-Paare-Editor]** Option zum manuellen Hinzufügen jedes Schlüssel-Wert-Paares über einen UI-Editor. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. Die zulässigen Schlüsselwerte sind: `firstName`, `lastName`, `companyName`, `title` und `country`. |
+| [!UICONTROL LinkedIn First Party Ads Tracking UUID] | Dies ist eine Erstanbieter-Cookie-ID. Werbetreibende müssen das erweiterte Konversions-Tracking von [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) aktivieren, um Erstanbieter-Cookies zu aktivieren, die einen Klick-ID-Parameter `li_fat_id` an die Klick-URLs anhängen. |
+| [!UICONTROL Daten zu Kundeninformationen] | Dieses Feld enthält ein JSON-Objekt mit zusätzlichen Attributen, die zusammen mit der Nachricht gesendet werden.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Daten darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. Die zulässigen Schlüsselwerte sind: `firstName`, `lastName`, `companyName`, `title` und `country`. |
 
 {style="table-layout:auto"}
 
-![Die [!DNL User Data] -Abschnitt mit Beispieldaten in die Felder.](../../../images/extensions/server/linkedin/configure-extension-user-data.png)
+![Der Abschnitt [!DNL User Data], der Beispieldaten in die Felder eingibt.](../../../images/extensions/server/linkedin/configure-extension-user-data.png)
 
 **[!UICONTROL Konversionsdaten]**
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Konversion] | Die ID der Konversionsregel, die in [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Wählen Sie die Konversionsregel aus, um die ID abzurufen, und kopieren Sie dann die ID aus der Browser-URL (z. B. `/campaignmanager/accounts/508111232/conversions/15588877`) als `/conversions/<id>`. |
-| [!UICONTROL Konvertierungszeit] | Jeder Zeitstempel in Millisekunden, bei dem das Konversionsereignis eingetreten ist. <br><br> Hinweis: Wenn Ihre Quelle den Konvertierungszeitstempel in Sekunden aufzeichnet, fügen Sie am Ende 000 ein, um ihn in Millisekunden umzuwandeln. |
+| [!UICONTROL Konversion] | Die Kennung der Konversionsregel, die im [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171) erstellt wurde. Wählen Sie die Konversionsregel aus, um die ID abzurufen, und kopieren Sie dann die ID aus der Browser-URL (z. B. `/campaignmanager/accounts/508111232/conversions/15588877`) in den Wert `/conversions/<id>`. |
+| [!UICONTROL Konvertierungszeit] | Jeder Zeitstempel in Millisekunden, bei dem das Konversionsereignis eingetreten ist. <br><br> Hinweis: Wenn Ihre Quelle den Konvertierungszeitstempel in Sekunden aufzeichnet, fügen Sie am Ende bitte 000 ein, um ihn in Millisekunden umzuwandeln. |
 | [!UICONTROL Währung] | Währungscode im ISO-Format. |
-| [!UICONTROL Stärke] | Wert der Konvertierung in Dezimalzeichenfolge (z. B. &quot;100.05&quot;). |
-| [!UICONTROL Ereignis-ID] | Die eindeutige ID, die von Werbetreibenden zur Angabe jedes Ereignisses generiert wurde. Dies ist ein optionales Feld und wird für [Deduplizierung](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
+| [!UICONTROL Betrag] | Wert der Konvertierung in Dezimalzeichenfolge (z. B. &quot;100.05&quot;). |
+| [!UICONTROL Ereignis-ID] | Die eindeutige ID, die von Werbetreibenden zur Angabe jedes Ereignisses generiert wurde. Dies ist ein optionales Feld und wird für die [Deduplizierung](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02) verwendet. |
 
 {style="table-layout:auto"}
 
-![Die [!DNL Conversion Data] -Abschnitt mit Beispieldaten in den Feldern.](../../../images/extensions/server/linkedin/configure-extension-conversions-data.png)
+![Der Abschnitt [!DNL Conversion Data], der Beispieldaten in den Feldern anzeigt.](../../../images/extensions/server/linkedin/configure-extension-conversions-data.png)
 
 **[!UICONTROL Konfigurationsüberschreibungen]**
 
->HINWEIS
+>NOTE
 >
->Die [!UICONTROL Konfigurationsüberschreibungen] kann ein Benutzer eine andere [!DNL LinkedIn] Zugriffstoken für jede Regel, sodass jede Regel ein Zugriffstoken verwendet, das Zugriff auf verschiedene [!DNL LinkedIn] Anzeigenkonten.
+>Das Feld [!UICONTROL Konfigurationsüberschreibungen] ermöglicht es einem Benutzer, für jede Regel ein anderes [!DNL LinkedIn] -Zugriffstoken festzulegen, sodass jede Regel ein Zugriffstoken verwendet, das Zugriff auf verschiedene [!DNL LinkedIn] -Anzeigenkonten haben kann.
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Zugriffstoken] | Die [!DNL LinkedIn] Zugriffstoken. |
+| [!UICONTROL Zugriffs-Token] | Das Zugriffs-Token [!DNL LinkedIn]. |
 
-![Die [!DNL Configuration Overrides] -Abschnitt mit Beispieldateneingaben im Feld.](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
+![Der Abschnitt [!DNL Configuration Overrides], der Beispieldateneingaben im Feld anzeigt.](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Daten an [!DNL LinkedIn] mithilfe der [!DNL LinkedIn Conversions API] Ereignisweiterleitungserweiterung. Weitere Informationen zu den Ereignisweiterleitungsfunktionen finden Sie unter [!DNL Adobe Experience Platform], lesen Sie die [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
+In diesem Handbuch wurde beschrieben, wie Daten mit der Ereignisweiterleitungs-Erweiterung [!DNL LinkedIn Conversions API] an [!DNL LinkedIn] gesendet werden. Weitere Informationen zu den Ereignisweiterleitungsfunktionen in [!DNL Adobe Experience Platform] finden Sie in der [Übersicht über die Ereignisweiterleitung](../../../ui/event-forwarding/overview.md).
 
-Weitere Informationen zum Debugging Ihrer Implementierung mithilfe des Experience Platform Debugger- und Ereignisweiterleitungs-Überwachungstools finden Sie in der [Übersicht über Adobe Experience Platform Debugger](../../../../debugger/home.md) und [Überwachen von Aktivitäten in der Ereignisweiterleitung](../../../ui/event-forwarding/monitoring.md).
+Weitere Informationen zum Debugging Ihrer Implementierung mithilfe des Experience Platform Debugger- und Ereignisweiterleitungs-Überwachungstools finden Sie in der [Adobe Experience Platform Debugger-Übersicht](../../../../debugger/home.md) und in der [Überwachung der Aktivitäten in der Ereignisweiterleitung](../../../ui/event-forwarding/monitoring.md).

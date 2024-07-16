@@ -10,11 +10,11 @@ ht-degree: 61%
 
 ---
 
-# Erstellen Sie eine [!DNL Microsoft] SQL Server-Basisverbindung mit [!DNL Flow Service] API
+# Erstellen einer SQL Server-Basisverbindung mit [!DNL Flow Service] API[!DNL Microsoft]
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-In diesem Tutorial erfahren Sie, wie Sie eine Basisverbindung für [!DNL Microsoft SQL Server] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial erfahren Sie, wie Sie mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) eine Basisverbindung für [!DNL Microsoft SQL Server] erstellen.
 
 ## Erste Schritte
 
@@ -23,16 +23,16 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Microsoft SQL Server] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Microsoft SQL Server] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
 
-Um eine Verbindung zu [!DNL Microsoft SQL Server]müssen Sie die folgende Verbindungseigenschaft angeben:
+Um eine Verbindung zu [!DNL Microsoft SQL Server] herzustellen, müssen Sie die folgende Verbindungseigenschaft angeben:
 
 | Anmeldedaten | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `connectionString` | Die Verbindungszeichenfolge, die Ihrer [!DNL Microsoft SQL Server] -Konto. Ihr Verbindungszeichenfolgen-Muster hängt davon ab, ob Sie den Servernamen oder Instanznamen für Ihre Datenquelle verwenden:<ul><li>Verbindungszeichenfolge mit dem Servernamen: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Verbindungszeichenfolge mit Instanzname:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL Microsoft SQL Server]-Konto zugeordnet ist. Ihr Verbindungszeichenfolgen-Muster hängt davon ab, ob Sie den Servernamen oder Instanznamen für Ihre Datenquelle verwenden:<ul><li>Verbindungszeichenfolge mit Servername: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Verbindungszeichenfolge mit Instanzname:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Microsoft SQL Server] ist `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in diesem [[!DNL Microsoft SQL Server] Dokument](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
@@ -81,7 +81,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrer [!DNL Microsoft SQL Server] -Konto. Lesen Sie den Abschnitt unter [Erfassen erforderlicher Anmeldeinformationen](#gather-required-credentials) für weitere Informationen. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL Microsoft SQL Server]-Konto zugeordnet ist. Weitere Informationen finden Sie im Abschnitt [ Erfassen erforderlicher Anmeldedaten](#gather-required-credentials) . |
 | `connectionSpec.id` | Die Spezifikations-ID der [!DNL Microsoft SQL Server]-Verbindung lautet: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Antwort**
@@ -100,4 +100,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL Microsoft SQL Server]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)

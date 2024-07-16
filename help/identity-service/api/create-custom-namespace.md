@@ -14,9 +14,9 @@ ht-degree: 5%
 
 # Erstellen eines benutzerdefinierten Namespace in der Identity Service-API
 
-Verwenden der [!DNL Identity Namespace] API können Sie einen benutzerdefinierten Identitäts-Namespace erstellen, der nur für Ihr Unternehmen verfügbar ist.
+Mit der API [!DNL Identity Namespace] können Sie einen benutzerdefinierten Identitäts-Namespace erstellen, der nur für Ihr Unternehmen verfügbar ist.
 
-Empfehlungen zum Erstellen benutzerdefinierter Namespaces finden Sie unter [Dokumentation zu den häufig gestellten Fragen zu Identity Service](../troubleshooting-guide.md).
+Empfehlungen zum Erstellen benutzerdefinierter Namespaces finden Sie in der Dokumentation zu den häufig gestellten Fragen zum Identity Service ](../troubleshooting-guide.md).[
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Tutorial zu [die native ID einer Identität auflisten](./list-native-id.md)
+Fahren Sie mit dem nächsten Tutorial fort, um die native ID einer Identität ](./list-native-id.md) aufzulisten.[

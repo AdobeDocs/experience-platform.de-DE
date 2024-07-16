@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform; Veröffentlichen eines Modells; Data Science Workspace; beliebte Themen; Sensei-API für maschinelles Lernen
+keywords: Experience Platform; Veröffentlichen eines Modells; Data Science Workspace; beliebte Themen; Sensei Machine Learning API
 solution: Experience Platform
-title: Veröffentlichen eines Modells als Dienst mithilfe der Sensei Machine Learning API
+title: Publish a Model as a Service mithilfe der Sensei Machine Learning API
 type: Tutorial
 description: In diesem Tutorial wird der Prozess der Veröffentlichung eines Modells als Dienst mit der Sensei Machine Learning-API behandelt.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1516'
-ht-degree: 49%
+source-wordcount: '1518'
+ht-degree: 44%
 
 ---
 
-# Veröffentlichen eines Modells als Dienst mithilfe der [!DNL Sensei Machine Learning API]
+# Publish ein Modell als Dienst mit dem [!DNL Sensei Machine Learning API]
 
-In diesem Tutorial wird der Prozess zum Veröffentlichen eines Modells als Dienst mit dem [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+In diesem Tutorial wird der Prozess zum Veröffentlichen eines Modells als Dienst mit dem Wert [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) beschrieben.
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein grundlegendes Verständnis von Adobe Experience Platform Data Science Workspace voraus. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Data Science Workspace - Übersicht](../home.md) für eine allgemeine Einführung in den Dienst.
+Dieses Tutorial setzt ein Verständnis von Adobe Experience Platform Data Science Workspace voraus. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die [Übersicht über Data Science Workspace](../home.md) , um eine allgemeine Einführung in den Dienst zu erhalten.
 
-Um diesem Tutorial zu folgen, müssen Sie über eine vorhandene ML-Engine, MLInstance und ein vorhandenes Experiment verfügen. Anweisungen zum Erstellen dieser Komponenten in der API finden Sie im Tutorial zu [Importieren eines gepackten Rezepts](./import-packaged-recipe-api.md).
+Um diesem Tutorial zu folgen, benötigen Sie eine vorhandene ML-Engine, MLInstance und ein vorhandenes Experiment. Anweisungen zum Erstellen dieser Rezepte in der API finden Sie im Tutorial zum [Importieren eines gepackten Rezepts](./import-packaged-recipe-api.md).
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie abschließend die [Erste Schritte](../api/getting-started.md) im Entwicklerhandbuch wichtige Informationen erhalten, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Sensei Machine Learning] API, einschließlich der erforderlichen Kopfzeilen, die in diesem Tutorial verwendet werden:
+Bevor Sie mit diesem Tutorial beginnen, lesen Sie abschließend den Abschnitt [Erste Schritte](../api/getting-started.md) des Entwicklerhandbuchs, um wichtige Informationen zu erhalten, die Sie benötigen, um die [!DNL Sensei Machine Learning]-API erfolgreich aufrufen zu können, einschließlich der in diesem Tutorial verwendeten erforderlichen Kopfzeilen:
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
@@ -38,7 +38,7 @@ In der folgenden Tabelle sind einige häufig verwendete Begriffe in diesem Tutor
 
 | Begriff | Definition |
 | --- | --- |
-| **Machine Learning Instance (MLInstance)** | Eine Instanz eines [!DNL Sensei] Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei] Code. |
+| **Machine Learning Instance (MLInstance)** | Eine Instanz einer [!DNL Sensei] -Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei] -Code enthält. |
 | **Experiment** | Eine Dachentität für Schulungs-Experimentabläufe, Auswertungs-Experimentabläufe, oder beides. |
 | **Geplantes Experiment** | Ein Begriff, der die Automatisierung von Schulungen oder Auswertungen von Experimentabläufen beschreibt und von einem benutzerdefinierten Zeitplan bestimmt wird. |
 | **Experimentablauf** | Eine bestimmte Instanz von Experimenten-Schulungen oder -Auswertungen. Mehrere Experimentabläufe eines bestimmten Experiments können sich von den für die Schulung oder Auswertung verwendeten Datensatzwerten unterscheiden. |
@@ -94,7 +94,7 @@ curl -X POST
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück, einschließlich der eindeutigen `id` und `scoringExperimentId` für das entsprechende Scoring-Experiment.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück, einschließlich des eindeutigen `id` und des `scoringExperimentId` für das entsprechende Scoring-Experiment.
 
 
 ```JSON
@@ -122,7 +122,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Dienstes mit einer MLInstance hinsichtlich der Planung von Schulungs- und Auswertungs-Experimentabläufen flexibel. In diesem Tutorial werden die spezifischen Fälle behandelt, in denen:
 
-- [Sie keine geplante Schulung benötigen, sondern eine geplante Auswertung.](#ml-service-with-scheduled-experiment-for-scoring)
+- [Sie benötigen keine geplante Schulung, sondern eine geplante Auswertung.](#ml-service-with-scheduled-experiment-for-scoring)
 - [Sie geplante Experimentabläufe sowohl für Schulungen als auch für Auswertungen benötigen.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
 
 Beachten Sie, dass ein ML-Dienst mit einer MLInstance erstellt werden kann, ohne Schulungs- oder Auswertungs-Experimente zu planen. Solche ML-Dienste erstellen normale Experiment-Entitäten und einen einzelnen Experimentablauf für Schulung und Auswertung.
@@ -176,7 +176,7 @@ curl -X POST
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dies umfasst die eindeutige `id`sowie `trainingExperimentId` und `scoringExperimentId` für die entsprechenden Schulungs- bzw. Auswertungs-Experimente.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dazu gehören die eindeutige `id` des Dienstes sowie die `trainingExperimentId` und `scoringExperimentId` für die entsprechenden Schulungs- und Auswertungsexperimente.
 
 ```JSON
 {
@@ -254,7 +254,7 @@ curl -X POST 'https://platform.adobe.io/data/sensei/mlServices'
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dies umfasst die eindeutige `id`sowie `trainingExperimentId` und `scoringExperimentId` der entsprechenden Schulungs- und Auswertungsexperimente. In der folgenden Beispielantwort wird das Vorhandensein von `trainingSchedule` und `scoringSchedule` legt nahe, dass die Experiment-Entitäten für Schulung und Auswertung geplante Experimente sind.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dazu gehören die eindeutige `id` des Dienstes sowie die `trainingExperimentId` und `scoringExperimentId` der zugehörigen Schulungs- und Auswertungsexperimente. In der folgenden Beispielantwort deutet das Vorhandensein von `trainingSchedule` und `scoringSchedule` darauf hin, dass die Experiment-Entitäten für Schulung und Auswertung geplante Experimente sind.
 
 ```JSON
 {
@@ -285,7 +285,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 ## Suchen nach einem ML-Dienst {#retrieving-ml-services}
 
-Sie können einen vorhandenen ML-Dienst nachschlagen, indem Sie einen `GET` Anfrage an `/mlServices` und die eindeutige `id` des ML-Dienstes im Pfad.
+Sie können einen vorhandenen ML-Dienst nachschlagen, indem Sie eine `GET` -Anfrage an `/mlServices` senden und im Pfad die eindeutige `id` des ML-Dienstes angeben.
 
 **API-Format**
 
@@ -295,7 +295,7 @@ GET /mlServices/{SERVICE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SERVICE_ID}` | Die eindeutige `id` des ML-Dienstes, den Sie nachschlagen. |
+| `{SERVICE_ID}` | Die eindeutige `id` des ML-Dienstes, den Sie suchen. |
 
 **Anfrage**
 
@@ -345,7 +345,7 @@ Eine erfolgreiche Antwort gibt die Details des ML-Dienstes zurück.
 
 ## Planen von Schulungen oder Auswertungen
 
-Wenn Sie die Auswertung und Schulung für einen bereits veröffentlichten ML-Dienst planen möchten, können Sie dies tun, indem Sie den vorhandenen ML-Dienst mit einer `PUT` Anfrage an `/mlServices`.
+Wenn Sie die Auswertung und Schulung für einen bereits veröffentlichten ML-Dienst planen möchten, können Sie dies tun, indem Sie den vorhandenen ML-Dienst mit einer `PUT` -Anfrage für `/mlServices` aktualisieren.
 
 **API-Format**
 
@@ -359,7 +359,7 @@ PUT /mlServices/{SERVICE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage plant das Training und Scoring für einen vorhandenen ML-Dienst, indem die `trainingSchedule` und `scoringSchedule` Schlüssel mit den entsprechenden `startTime`, `endTime`und `cron` Schlüssel.
+Die folgende Anfrage plant das Trainieren und Scoring für einen vorhandenen ML-Dienst, indem die Tasten `trainingSchedule` und `scoringSchedule` mit ihren jeweiligen Tasten `startTime`, `endTime` und `cron` hinzugefügt werden.
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -392,7 +392,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Versuchen Sie nicht, die `startTime` für bestehende geplante Trainings- und Scoring-Aufträge. Wenn die `startTime` geändert werden muss, sollten Sie erwägen, dasselbe Modell zu veröffentlichen und die Schulungs- und Auswertungsaufträge umzuplanen.
+>Versuchen Sie nicht, die `startTime` für bestehende geplante Trainings- und Scoring-Aufträge zu ändern. Wenn die `startTime` geändert werden muss, sollten Sie erwägen, dasselbe Modell zu veröffentlichen und die Schulungs- und Auswertungsaufträge umzuplanen.
 
 **Antwort**
 

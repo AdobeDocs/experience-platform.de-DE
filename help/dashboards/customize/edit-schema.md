@@ -5,7 +5,7 @@ description: Dieses Handbuch enthält schrittweise Anweisungen zum Auswählen vo
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '499'
 ht-degree: 74%
 
 ---
@@ -57,7 +57,7 @@ Nachdem Sie die Attribute ausgewählt haben, die Sie hinzufügen möchten, wähl
 >[!WARNING]
 >Neu ausgewählte Attribute werden nach dem nächsten täglichen Schnappschuss verfügbar, wenn die Daten aktualisiert werden.
 
-![Das Dialogfeld zum Auswählen von Schemaattributen mit Attributen und hervorgehobenem Speichern.](../images/customization/select-attribute.png)
+![Das Dialogfeld zur Auswahl von Schemaattributen mit hervorgehobenen Attributen und Speichern](../images/customization/select-attribute.png).
 
 ## Nächste Schritte
 

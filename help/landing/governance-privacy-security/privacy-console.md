@@ -3,26 +3,26 @@ title: Übersicht über die Datenschutzkonsole
 description: Erfahren Sie, wie Sie Ihre datenschutzbezogenen Workflows in der Benutzeroberfläche von Adobe Experience Platform überwachen.
 source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 3%
+source-wordcount: '412'
+ht-degree: 4%
 
 ---
 
 # Übersicht über die Datenschutzkonsole
 
-Die [!UICONTROL Datenschutzkonsole] -Registerkarte bietet die Adobe Experience Platform-Benutzeroberfläche eine Dashboard-Ansicht Ihrer datenschutzbezogenen Vorgänge in Platform, einschließlich Arbeitsaufträgen zur Datenhygiene, Anfragen von Datensubjekten von Privacy Service und Prüfprotokollen für Platform-Benutzeraktivitäten.
+Die Registerkarte [!UICONTROL Datenschutzkonsole] in der Benutzeroberfläche von Adobe Experience Platform bietet eine Dashboard-Ansicht Ihrer datenschutzbezogenen Vorgänge in Platform, einschließlich Arbeitsaufträgen zur Datenhygiene, Anfragen von Datensubjekten von Privacy Service und Prüfprotokollen für Platform-Benutzeraktivitäten.
 
-Um auf das Dashboard zuzugreifen, wählen Sie **[!UICONTROL Datenschutzkonsole]** in der linken Navigation.
+Um auf das Dashboard zuzugreifen, wählen Sie im linken Navigationsbereich **[!UICONTROL Datenschutzkonsole]** aus.
 
-![Bild anzeigen [!UICONTROL Datenschutzkonsole] im linken Navigationsbereich in der Platform-Benutzeroberfläche ausgewählt werden.](../images/governance-privacy-security/privacy-console/left-nav.png)
+![Bild mit der Auswahl von [!UICONTROL Datenschutzkonsole] im linken Navigationsbereich der Platform-Benutzeroberfläche](../images/governance-privacy-security/privacy-console/left-nav.png)
 
-Hier können Sie die verfügbaren [Überwachungs-Widgets](#widgets) von der Konsole bereitgestellt werden, oder Sie können eine von mehreren [Anwendungsfallhandbücher](#use-case-guides) auf den Datenschutzfunktionen von Platform.
+Von hier aus können Sie die verfügbaren [Monitoring-Widgets](#widgets) der Konsole lesen oder eine von mehreren [Anwendungsfallhandbüchern](#use-case-guides) der Datenschutzfunktionen von Platform durchsuchen.
 
 ## Widgets
 
-[!UICONTROL Datenschutzkonsole] stellt verschiedene Widgets zur Verfügung, mit denen Sie Ihre Datenschutzvorgänge überwachen können.
+[!UICONTROL Datenschutzkonsole] bietet mehrere Widgets zur Überwachung Ihrer Datenschutzvorgänge.
 
-![Bild anzeigen [!UICONTROL Datenschutzkonsole] im linken Navigationsbereich in der Platform-Benutzeroberfläche ausgewählt werden.](../images/governance-privacy-security/privacy-console/widgets.png)
+![Bild mit der Auswahl von [!UICONTROL Datenschutzkonsole] im linken Navigationsbereich der Platform-Benutzeroberfläche](../images/governance-privacy-security/privacy-console/widgets.png)
 
 >[!NOTE]
 >
@@ -32,11 +32,11 @@ Die Funktion der einzelnen Widgets wird nachfolgend beschrieben:
 
 | Widget-Name | Beschreibung |
 | --- | --- |
-| Auftragsstatus der Datenhygiene | Zeigt den Status der Löschvorgänge von Datensätzen unter [Datenhygiene](../../hygiene/home.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
-| Aktuelle Bestellungen zur Datenhygiene | Zeigt die neueste [Datenhygiene](../../hygiene/home.md) Arbeitsaufträge, die vom System verarbeitet werden. Verwenden Sie das Dropdown-Menü, um zwischen kürzlich erstellten Arbeitsaufträgen und kürzlich aktualisierten Arbeitsaufträgen zu wechseln. |
-| Die häufigsten Aktionen | Zeigt die häufigsten Aktionen auf Platform an, die von [Auditprotokolle](./audit-logs/overview.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
-| Die aktivsten Benutzer | Zeigt die aktivsten Platform-Benutzer in Ihrer Organisation an, die von [Auditprotokolle](./audit-logs/overview.md) für den ausgewählten Zeitraum. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
-| Anfragen von Datensubjekten | Zeigt die Anzahl der von [Privacy Service](../../privacy-service/home.md) für einen bestimmten Tag. |
+| Auftragsstatus der Datenhygiene | Zeigt den Status von Löschvorgängen von Datensätzen unter [Datenhygiene](../../hygiene/home.md) für den ausgewählten Zeitraum an. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
+| Aktuelle Bestellungen zur Datenhygiene | Zeigt die neuesten [Data Hygiene](../../hygiene/home.md) Arbeitsaufträge an, die vom System verarbeitet werden. Verwenden Sie das Dropdown-Menü, um zwischen kürzlich erstellten Arbeitsaufträgen und kürzlich aktualisierten Arbeitsaufträgen zu wechseln. |
+| Häufigste Aktionen | Zeigt die häufigsten Aktionen auf Platform an, die von [Prüfprotokollen](./audit-logs/overview.md) für den ausgewählten Zeitraum erfasst wurden. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
+| Aktivste Benutzer | Zeigt die aktivsten Platform-Benutzer in Ihrer Organisation an, die von [Audit-Protokollen](./audit-logs/overview.md) für den ausgewählten Zeitraum erfasst wurden. Verwenden Sie das Dropdown-Menü, um den Zeitrahmen zwischen den letzten 7 Tagen, 14 Tagen und 30 Tagen zu ändern. |
+| Anfragen von Datensubjekten | Zeigt die Anzahl der Anfragen von Datensubjekten an, die an einem bestimmten Tag von [Privacy Service](../../privacy-service/home.md) gesendet und abgeschlossen wurden. |
 
 {style="table-layout:auto"}
 
@@ -44,7 +44,7 @@ Die Funktion der einzelnen Widgets wird nachfolgend beschrieben:
 
 Die Konsole enthält mehrere produktinterne Anleitungen, die Sie mit allgemeinen Datenschutz-Workflows in Platform vertraut machen, einschließlich kurzer Anweisungen zur Einrichtung einer grundlegenden Implementierung.
 
-![Bild anzeigen [!UICONTROL Datenschutzkonsole] im linken Navigationsbereich in der Platform-Benutzeroberfläche ausgewählt werden.](../images/governance-privacy-security/privacy-console/use-case-guide.png)
+![Bild mit der Auswahl von [!UICONTROL Datenschutzkonsole] im linken Navigationsbereich der Platform-Benutzeroberfläche](../images/governance-privacy-security/privacy-console/use-case-guide.png)
 
 ## Nächste Schritte
 

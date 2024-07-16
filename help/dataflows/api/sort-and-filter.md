@@ -4,55 +4,55 @@ description: In diesem Tutorial wird die Syntax für das Sortieren und Filtern m
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 3%
+source-wordcount: '829'
+ht-degree: 2%
 
 ---
 
 # Sortieren und Filtern von Antworten in der Flow Service-API
 
-Beim Ausführen von Auflistungsanforderungen (GET) im [Flussdienst-API](https://www.adobe.io/experience-platform-apis/references/flow-service/)können Sie Abfrageparameter verwenden, um Antworten zu sortieren und zu filtern. Dieses Handbuch enthält eine Referenz zur Verwendung dieser Parameter für verschiedene Anwendungsfälle.
+Bei der Ausführung von Auflistungsanforderungen (GET) in der [Flussdienst-API](https://www.adobe.io/experience-platform-apis/references/flow-service/) können Sie Abfrageparameter zum Sortieren und Filtern von Antworten verwenden. Dieses Handbuch enthält eine Referenz zur Verwendung dieser Parameter für verschiedene Anwendungsfälle.
 
 ## Sortieren
 
-Sie können Antworten mithilfe einer `orderby` Abfrageparameter. Die folgenden Ressourcen können in der API sortiert werden:
+Sie können Antworten mithilfe eines `orderby` -Abfrageparameters sortieren. Die folgenden Ressourcen können in der API sortiert werden:
 
 * [Verbindungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Connections)
-* [Quellverbindungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
-* [Zielverbindungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
-* [Flüsse](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
+* [Source-Verbindungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Source-connections)
+* [Target-Verbindungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Target-connections)
+* [Fluss](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Flows)
 * [Ausführungen](https://www.adobe.io/experience-platform-apis/references/flow-service/#tag/Runs)
 
-Um den Parameter zu verwenden, müssen Sie seinen Wert auf die spezifische Eigenschaft festlegen, nach der Sie sortieren möchten (z. B. `?orderby=name`). Sie können dem Wert ein Pluszeichen (`+`) für aufsteigende Reihenfolge oder Minuszeichen (`-`) in absteigender Reihenfolge. Wenn kein Bestellpräfix angegeben wird, wird die Liste standardmäßig in aufsteigender Reihenfolge sortiert.
+Um den Parameter zu verwenden, müssen Sie seinen Wert auf die spezifische Eigenschaft festlegen, nach der Sie sortieren möchten (z. B. `?orderby=name`). Sie können dem Wert ein Pluszeichen (`+`) für aufsteigende Reihenfolge oder ein Minuszeichen (`-`) für absteigende Reihenfolge voranstellen. Wenn kein Bestellpräfix angegeben wird, wird die Liste standardmäßig in aufsteigender Reihenfolge sortiert.
 
 ```http
 GET /flows?orderby=name
 GET /flows?orderby=-name
 ```
 
-Sie können einen Sortierparameter auch mit einem Filterparameter kombinieren, indem Sie ein &quot;Und&quot;-Symbol (`&`).
+Sie können einen Sortierparameter auch mit einem Filterparameter kombinieren, indem Sie ein &quot;und&quot;-Symbol (`&`) verwenden.
 
 ```http
 GET /flows?property=state==enabled&orderby=createdAt
 ```
 
-## Filtern
+## Filter
 
-Sie können Antworten mithilfe eines `property` -Parameter mit einem Schlüssel-Wert-Ausdruck. Beispiel: `?property=id==12345` gibt nur Ressourcen zurück, die `id` Eigenschaft genau gleich `12345`.
+Sie können Antworten filtern, indem Sie einen `property` -Parameter mit einem Schlüssel-Wert-Ausdruck verwenden. Beispielsweise gibt `?property=id==12345` nur Ressourcen zurück, deren `id`-Eigenschaft genau `12345` entspricht.
 
 Die Filterung kann im Allgemeinen auf jede Eigenschaft in einer Entität angewendet werden, solange der gültige Pfad zu dieser Eigenschaft bekannt ist.
 
 >[!NOTE]
 >
->Wenn eine Eigenschaft in einem Array-Element verschachtelt ist, müssen Sie eckige Klammern (`[]`) zum Array im Pfad hinzu. Siehe Abschnitt zu [Filtern nach Array-Eigenschaften](#arrays) für Beispiele.
+>Wenn eine Eigenschaft in einem Array-Element verschachtelt ist, müssen Sie eckige Klammern (`[]`) an das Array im Pfad anhängen. Beispiele finden Sie im Abschnitt zum Filtern von [nach Array-Eigenschaften](#arrays) .
 
-**Gibt alle Quellverbindungen zurück, bei denen der Name der Quelltabelle lautet `lead`:**
+**Gibt alle Quellverbindungen zurück, bei denen der Name der Quelltabelle `lead`:** ist
 
 ```http
 GET /sourceConnections?property=params.tableName==lead
 ```
 
-**Gibt alle Flüsse für eine bestimmte Segment-ID zurück:**
+**Alle Flüsse für eine bestimmte Segment-ID zurückgeben:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
@@ -60,9 +60,9 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filter kombinieren
 
-Mehrere `property` Filter können in eine Abfrage einbezogen werden, sofern sie durch &quot;und&quot;-Zeichen (`&`). Beim Kombinieren von Filtern wird von einer UND-Beziehung ausgegangen. Das bedeutet, dass eine Entität alle Filter erfüllen muss, damit sie in die Antwort aufgenommen wird.
+Mehrere `property` -Filter können in eine Abfrage einbezogen werden, vorausgesetzt, sie werden durch die Zeichen &quot;und&quot;(`&`) getrennt. Beim Kombinieren von Filtern wird von einer UND-Beziehung ausgegangen. Das bedeutet, dass eine Entität alle Filter erfüllen muss, damit sie in die Antwort aufgenommen wird.
 
-**Gibt alle aktivierten Flüsse für eine Segment-ID zurück:**
+**Alle aktivierten Flüsse für eine Segment-ID zurückgeben:**
 
 ```http
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a&property=state==enabled
@@ -70,7 +70,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Filtern nach Array-Eigenschaften {#arrays}
 
-Sie können nach den Eigenschaften von Elementen in Arrays filtern, indem Sie `[]` zum Namen der Array-Eigenschaft.
+Sie können anhand der Eigenschaften von Elementen in Arrays filtern, indem Sie `[]` an den Namen der Array-Eigenschaft anhängen.
 
 **Rückkehrflüsse, die bestimmten Quellverbindungen zugeordnet sind:**
 
@@ -84,7 +84,7 @@ GET /flows?property=sourceConnectionIds[]==9874984,6980696
 GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.id==5722a16f-5e1f-4732-91b6-3b03943f759a
 ```
 
-**Quellverbindungen zurückgeben, die eine Spalte mit einer bestimmten `name` Wert:**
+**Quellverbindungen zurückgeben, die eine Spalte mit einem bestimmten `name` -Wert aufweisen:**
 
 ```http
 GET /sourceConnections?property=params.columns[].name==firstName
@@ -98,7 +98,7 @@ GET /runs?property=metrics.recordSummary.targetSummaries[].entitySummaries[].id=
 
 ### `count`
 
-Jede Filterabfrage kann mit `count` Abfrageparameter mit dem Wert `true` , um die Anzahl der Ergebnisse zurückzugeben. Die API-Antwort enthält eine `count` -Eigenschaft, deren Wert die Anzahl der insgesamt gefilterten Elemente darstellt. Die tatsächlichen gefilterten Elemente werden in diesem Aufruf nicht zurückgegeben.
+Jede Filterabfrage kann mit dem Abfrageparameter `count` mit dem Wert `true` angehängt werden, um die Anzahl der Ergebnisse zurückzugeben. Die API-Antwort enthält eine `count` -Eigenschaft, deren Wert die Anzahl der insgesamt gefilterten Elemente darstellt. Die tatsächlichen gefilterten Elemente werden in diesem Aufruf nicht zurückgegeben.
 
 **Gibt die Anzahl der aktivierten Flüsse im System zurück:**
 
@@ -197,17 +197,17 @@ Je nachdem, welche Flow Service-Entität Sie abrufen, können für die Filterung
 
 ## Anwendungsfälle {#use-cases}
 
-In diesem Abschnitt finden Sie einige spezifische Beispiele dafür, wie Sie mit Filtern und Sortieren Informationen zu bestimmten Connectoren zurückgeben oder Probleme beheben können. Wenn Sie weitere Anwendungsfälle zum Adobe hinzufügen möchten, verwenden Sie bitte die **[!UICONTROL Detaillierte Feedback-Optionen]** auf der Seite, um eine Anfrage zu senden.
+In diesem Abschnitt finden Sie einige spezifische Beispiele dafür, wie Sie mit Filtern und Sortieren Informationen zu bestimmten Connectoren zurückgeben oder Probleme beheben können. Wenn Sie weitere Anwendungsfälle hinzufügen möchten, verwenden Sie die **[!UICONTROL Optionen für detailliertes Feedback]** auf der Seite, um eine Anfrage zu senden.
 
 **Filtern, um nur Verbindungen zu einem bestimmten Ziel zurückzugeben**
 
-Sie können Filter verwenden, um nur Verbindungen zu bestimmten Zielen zurückzugeben. Abfragen der `connectionSpecs` Endpunkt wie unten:
+Sie können Filter verwenden, um nur Verbindungen zu bestimmten Zielen zurückzugeben. Abfragen des Endpunkts `connectionSpecs` wie unten gezeigt:
 
 ```http
 GET /connectionSpecs
 ```
 
-Suchen Sie dann nach Ihrer gewünschten `connectionSpec` durch Kontrolle der `name` -Parameter. Suchen Sie beispielsweise nach Amazon Ads, Pega oder SFTP usw. im `name` -Parameter. Die entsprechende `id` ist die `connectionSpec` , nach dem Sie im nächsten API-Aufruf suchen können.
+Suchen Sie dann nach Ihrem gewünschten `connectionSpec` , indem Sie den Parameter `name` überprüfen. Suchen Sie beispielsweise im Parameter `name` nach Amazon Ads, Pega oder SFTP usw. Die entsprechende `id` ist die `connectionSpec`, nach der Sie im nächsten API-Aufruf suchen können.
 
 Filtern Sie beispielsweise Ihre Ziele so, dass nur vorhandene Verbindungen zu Amazon S3-Verbindungen zurückgegeben werden:
 
@@ -217,13 +217,13 @@ GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f8
 
 **Filtern, um nur Datenflüsse an Ziele zurückzugeben**
 
-Bei der Abfrage des `/flows` -Endpunkt verwenden, können Sie einen Filter verwenden, um nicht alle Datenflüsse für Quellen und Ziele zurückzugeben, sondern nur Datenflüsse an Ziele. Verwenden Sie dazu `isDestinationFlow` als Abfrageparameter wie folgt:
+Bei der Abfrage des `/flows` -Endpunkts können Sie anstelle der Rückgabe aller Datenflüsse für Quellen und Ziele einen Filter verwenden, um nur Datenflüsse an Ziele zurückzugeben. Verwenden Sie dazu `isDestinationFlow` als Abfrageparameter wie folgt:
 
 ```http
 GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
 ```
 
-**Filter zum Zurückgeben von Datenflüssen an eine bestimmte Quelle oder ein bestimmtes Ziel**
+**Filtern, um nur Datenflüsse an eine bestimmte Quelle oder ein bestimmtes Ziel zurückzugeben**
 
 Sie können Datenflüsse filtern, um Datenflüsse nur an ein bestimmtes Ziel oder aus einer bestimmten Quelle zurückzugeben. Filtern Sie beispielsweise Ihre Ziele so, dass nur vorhandene Verbindungen zu Amazon S3-Verbindungen zurückgegeben werden:
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung der `orderby` und `property` Abfrageparameter zum Sortieren und Filtern von Antworten in der Flow Service-API. Eine schrittweise Anleitung zur Verwendung der API für allgemeine Workflows in Platform finden Sie in den API-Tutorials im Abschnitt [sources](../../sources/home.md) und [Ziele](../../destinations/home.md) Dokumentation.
+In diesem Handbuch wurde die Verwendung der Abfrageparameter `orderby` und `property` zum Sortieren und Filtern von Antworten in der Flow Service-API beschrieben. Eine schrittweise Anleitung zur Verwendung der API für allgemeine Workflows in Platform finden Sie in den API-Tutorials in der Dokumentation zu [Quellen](../../sources/home.md) und [Zielen](../../destinations/home.md) .

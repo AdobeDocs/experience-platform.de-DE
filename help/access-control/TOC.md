@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -47,4 +47,4 @@ ht-degree: 85%
    * [Anzeigen effektiver Richtlinien](api/effective-policies.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

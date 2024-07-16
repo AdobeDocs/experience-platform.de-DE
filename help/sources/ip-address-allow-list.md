@@ -69,7 +69,7 @@ Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren.
 
 ## IP-Adressen-Zulassungsliste für Streaming-Quellen {#streaming}
 
-Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um Traffic für den Datenübertragungsdienst für Streaming-Quellen wie [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), und [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um Traffic für den Datenübertragungsdienst für Streaming-Quellen wie [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) und [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) zu ermöglichen.
 
 >[!BEGINTABS]
 

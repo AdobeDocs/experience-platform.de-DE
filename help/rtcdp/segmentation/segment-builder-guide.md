@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Segmentaufbau in Real-time Customer Data Platform
 
-Basiert auf Adobe Experience Platform, [!DNL Adobe Real-Time Customer Data Platform] kann die vollständigen Funktionen von Segment Builder nutzen, die Teil von sind [!DNL Experience Platform]. In der Benutzeroberfläche von Segment Builder können Sie neue Zielgruppen erstellen, auf vorhandene Zielgruppen zugreifen und vorhandene Zielgruppen ändern.
+Auf der Grundlage von Adobe Experience Platform kann [!DNL Adobe Real-Time Customer Data Platform] die vollständigen Segmentaufbau-Funktionen nutzen, die Teil von [!DNL Experience Platform] sind. In der Benutzeroberfläche von Segment Builder können Sie neue Zielgruppen erstellen, auf vorhandene Zielgruppen zugreifen und vorhandene Zielgruppen ändern.
 
-Eine ausführlichere Anleitung zum Segment Builder finden Sie im Abschnitt [Segment Builder-Benutzerhandbuch](../../segmentation/ui/segment-builder.md).
+Eine ausführlichere Anleitung zum Segment Builder finden Sie im [Segment Builder-Benutzerhandbuch](../../segmentation/ui/segment-builder.md).

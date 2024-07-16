@@ -18,10 +18,10 @@ ht-degree: 18%
 
 # Übersicht zum Echtzeit-Kundenprofil
 
-In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und erfahren, wie Daten aus mehreren Quellen zusammengeführt werden, um ein zentralisiertes Profil für jeden Ihrer Kunden zu erstellen. Um mehr über die Funktionen und Funktionen des Echtzeit-Kundenprofils zu erfahren, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../home.md).
+In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und erfahren, wie Daten aus mehreren Quellen zusammengeführt werden, um ein zentralisiertes Profil für jeden Ihrer Kunden zu erstellen. Um mehr über die Funktionen und Funktionen des Echtzeit-Kundenprofils zu erfahren, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../home.md).
 
 >[!NOTE]
 >
->Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Aktuelle Informationen finden Sie im Abschnitt [Handbuch zur Profil-UI](../ui/user-guide.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Handbuch zur Profil-Benutzeroberfläche](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

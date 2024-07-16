@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen Überblick darüber, wie Sie Query Ser
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 6%
+source-wordcount: '909'
+ht-degree: 5%
 
 ---
 
@@ -23,18 +23,18 @@ Dieses Dokument bietet einen Überblick und detaillierte Beispiele für die SQL-
 
 Im Rahmen dieses Prozesses müssen Sie ein Modell für maschinelles Lernen trainieren. In diesem Dokument wird davon ausgegangen, dass Sie über Kenntnisse in einer oder mehreren Umgebungen für maschinelles Lernen verfügen.
 
-Dieses Beispiel verwendet [!DNL Jupyter Notebook] als Entwicklungsumgebung. Es stehen zwar viele Optionen zur Verfügung, [!DNL Jupyter Notebook] wird empfohlen, da es sich um eine Open-Source-Webanwendung mit niedrigen Rechenanforderungen handelt. Es kann [von der offiziellen Website heruntergeladen](https://jupyter.org/).
+In diesem Beispiel wird [!DNL Jupyter Notebook] als Entwicklungsumgebung verwendet. Obwohl viele Optionen verfügbar sind, wird [!DNL Jupyter Notebook] empfohlen, da es sich um eine Open-Source-Webanwendung mit niedrigen Rechenanforderungen handelt. Sie kann [ von der offiziellen Site heruntergeladen werden](https://jupyter.org/).
 
-## Verwendung [!DNL Query Service] Definieren eines Schwellenwerts für die Bot-Aktivität
+## Verwenden Sie [!DNL Query Service] , um einen Schwellenwert für Bot-Aktivitäten zu definieren.
 
 Die beiden Attribute, die zum Extrahieren von Daten für die Bot-Erkennung verwendet werden, sind:
 
-* Experience Cloud Visitor ID (ECID, auch als MCID bezeichnet): Dies bietet eine universelle, beständige ID zum Identifizieren Ihrer Besucher über alle Adobe-Lösungen hinweg.
-* Zeitstempel: Dadurch werden Uhrzeit und Datum im UTC-Format bereitgestellt, zu dem eine Aktivität auf der Website erfolgte.
+* Experience Cloud-Besucher-ID (ECID, auch als MCID bezeichnet): Dies bietet eine universelle, beständige ID zum Identifizieren Ihrer Besucher über alle Adobe-Lösungen hinweg.
+* Zeitstempel: Stellt die Uhrzeit und das Datum im UTC-Format bereit, zu der eine Aktivität auf der Website erfolgte.
 
 >[!NOTE]
 >
->Die Verwendung von `mcid` weiterhin in Namespace-Verweisen auf die Experience Cloud-Besucher-ID gefunden werden, wie im folgenden Beispiel gezeigt.
+>Die Verwendung von `mcid` ist weiterhin in Namespace-Verweisen auf die Experience Cloud-Besucher-ID zu finden, wie im Beispiel unten dargestellt.
 
 Die folgende SQL-Anweisung bietet ein erstes Beispiel zur Identifizierung von Bot-Aktivitäten. In der Anweisung wird davon ausgegangen, dass der Benutzer ein Bot ist, wenn ein Besucher innerhalb einer Minute 50 Klicks durchführt.
 
@@ -49,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-Der Ausdruck filtert die ECIDs (`mcid`) aller Besucher, die den Schwellenwert erreichen, jedoch keine Traffic-Spitzen aus anderen Intervallen ansprechen.
+Der Ausdruck filtert die ECIDs (`mcid`) aller Besucher, die den Schwellenwert erreichen, aber keine Traffic-Spitzen aus anderen Intervallen ansprechen.
 
 ## Verbessern der Bot-Erkennung mit maschinellem Lernen
 
@@ -116,11 +116,11 @@ Das Ergebnis dieses Ausdrucks ähnelt möglicherweise der unten angegebenen Tabe
 
 ## Identifizieren neuer Spitzenschwellen mithilfe des maschinellen Lernens
 
-Exportieren Sie dann den resultierenden Abfragedatensatz in das CSV-Format und importieren Sie ihn in [!DNL Jupyter Notebook]. Aus dieser Umgebung können Sie ein Modell für maschinelles Lernen mithilfe aktueller Bibliotheken für maschinelles Lernen trainieren. Weitere Informationen finden Sie im Handbuch zur Fehlerbehebung . [Exportieren von Daten aus [!DNL Query Service] im CSV-Format](../troubleshooting-guide.md#export-csv)
+Exportieren Sie dann den resultierenden Abfragedatensatz in das CSV-Format und importieren Sie ihn in [!DNL Jupyter Notebook]. Aus dieser Umgebung können Sie ein Modell für maschinelles Lernen mithilfe aktueller Bibliotheken für maschinelles Lernen trainieren. Weitere Informationen zum Exportieren von Daten aus  [!DNL Query Service] im CSV-Format](../troubleshooting-guide.md#export-csv) finden Sie im Handbuch zur Fehlerbehebung .[
 
-Die anfänglich festgelegten Ad-hoc-Spitzenschwellen sind nicht datengesteuert und daher ungenau. Modelle für maschinelles Lernen können verwendet werden, um Parameter als Schwellenwerte zu trainieren. Daher können Sie die Abfrageeffizienz steigern, indem Sie die Anzahl der `GROUP BY` Suchbegriffe verwenden, indem nicht benötigte Funktionen entfernt werden.
+Die anfänglich festgelegten Ad-hoc-Spitzenschwellen sind nicht datengesteuert und daher ungenau. Modelle für maschinelles Lernen können verwendet werden, um Parameter als Schwellenwerte zu trainieren. Infolgedessen können Sie die Abfrageeffizienz steigern, indem Sie die Anzahl der `GROUP BY` Keywords reduzieren, indem Sie nicht benötigte Funktionen entfernen.
 
-In diesem Beispiel wird die Maschinenlernbibliothek Scikit-Learn verwendet, die standardmäßig mit [!DNL Jupyter Notebook]. Die Python-Bibliothek &quot;pandas&quot;wird ebenfalls zur Verwendung hier importiert. Die folgenden Befehle werden in [!DNL Jupyter Notebook].
+In diesem Beispiel wird die Maschinenlernbibliothek Scikit-Learn verwendet, die standardmäßig mit [!DNL Jupyter Notebook] installiert ist. Die Python-Bibliothek &quot;pandas&quot;wird ebenfalls zur Verwendung hier importiert. Die folgenden Befehle werden in [!DNL Jupyter Notebook] eingegeben.
 
 ```shell
 import pandas as ps
@@ -153,22 +153,22 @@ tree.plot_tree(clf,feature_names=X.columns)
 plt.show()
 ```
 
-Die von [!DNL Jupyter Notebook] für dieses Beispiel wie folgt aussehen.
+Die von [!DNL Jupyter Notebook] für dieses Beispiel zurückgegebenen Werte lauten wie folgt.
 
 ```text
 Model Accuracy: 0.99935
 ```
 
-![Statistische Ausgabe aus [!DNL Jupyter Notebook] Modell für maschinelles Lernen.](../images/use-cases/jupiter-notebook-output.png)
+![Statistische Ausgabe aus dem Modell für maschinelles Lernen [!DNL Jupyter Notebook].](../images/use-cases/jupiter-notebook-output.png)
 
-Die Ergebnisse für das im obigen Beispiel dargestellte Modell sind zu über 99 % korrekt.
+Die Ergebnisse für das im obigen Beispiel dargestellte Modell sind zu mehr als 99 % korrekt.
 
-Da der Entscheidungsbaum-Klassifizierer mithilfe von Daten aus [!DNL Query Service] bei regelmäßiger Kadenz mithilfe geplanter Abfragen die Datenintegrität sicherstellen, indem Sie Bot-Aktivitäten mit hoher Genauigkeit filtern. Mithilfe der vom maschinellen Lernmodell abgeleiteten Parameter können die ursprünglichen Abfragen mit den hochpräzisen Parametern aktualisiert werden, die vom Modell erstellt wurden.
+Da der Entscheidungsbaum-Klassifizierer mithilfe von Daten aus [!DNL Query Service] in einem regulären Cadence mithilfe geplanter Abfragen trainiert werden kann, können Sie die Datenintegrität sicherstellen, indem Sie Bot-Aktivitäten mit hoher Genauigkeit filtern. Mithilfe der vom maschinellen Lernmodell abgeleiteten Parameter können die ursprünglichen Abfragen mit den hochpräzisen Parametern aktualisiert werden, die vom Modell erstellt wurden.
 
 Das Beispielmodell, das mit einer hohen Genauigkeit bestimmt wird, dass alle Besucher mit mehr als 130 Interaktionen in fünf Minuten Bots sind. Diese Informationen können jetzt verwendet werden, um Ihre SQL-Abfragen zum Filtern von Bots zu verfeinern.
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments können Sie die Verwendung von [!DNL Query Service] und maschinelles Lernen zum Ermitteln und Filtern von Bot-Aktivitäten.
+Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie mit [!DNL Query Service] und maschinellem Lernen Bot-Aktivitäten bestimmen und filtern können.
 
-Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen geschäftlichen Einblicken Ihres Unternehmens sind die [Anwendungsfall für abgebrochenes Durchsuchen](./abandoned-browse.md) Beispiel.
+Andere Dokumente, die die Vorteile von [!DNL Query Service] für die strategischen geschäftlichen Einblicke Ihres Unternehmens demonstrieren, sind das Beispiel für den [abgebrochenen Durchsuchen-Anwendungsfall](./abandoned-browse.md).

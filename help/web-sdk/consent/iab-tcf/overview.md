@@ -23,16 +23,16 @@ Darüber hinaus stehen die folgenden Handbücher zur Verfügung, mit denen Sie l
 
 Um das Web SDK mit IAB TCF 2.0 zu implementieren, benötigen Sie ein Verständnis des Experience-Datenmodells (XDM) und der Experience-Ereignisse. Bevor Sie beginnen, lesen Sie bitte das folgende Dokument:
 
-- [Übersicht über das Experience-Datenmodell (XDM)-System](../../../xdm/home.md): Standardisierung und Interoperabilität sind Schlüsselkonzepte von Adobe Experience Platform. [!DNL Experience Data Model (XDM)], unterstützt von Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
+- [Übersicht über das Experience-Datenmodell (XDM)-System](../../../xdm/home.md): Standardisierung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [!DNL Experience Data Model (XDM)], das von Adobe gesteuert wird, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
 
 ## Experience Platform-Integration
 
 Um Einwilligungsdaten mit dem SDK an Adobe Experience Platform zu senden, ist Folgendes erforderlich:
 
-- Ein Datensatz, dessen Schema auf der Variablen [!DNL XDM Individual Profile] -Klasse und enthält TCF 2.0-Zustimmungsfelder, die für die Verwendung in aktiviert sind [!DNL Real-Time Customer Profile].
+- Ein Datensatz, dessen Schema auf der [!DNL XDM Individual Profile] -Klasse basiert und die TCF 2.0-Einverständnisfelder enthält, die für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert sind.
 - Ein mit Platform und dem oben erwähnten profilaktivierten Datensatz eingerichteter Datastream.
 
-Weitere Informationen finden Sie im Handbuch unter [Einhaltung von TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md) für Anweisungen zum Erstellen der erforderlichen Datensätze und Datastreams.
+Anweisungen zum Erstellen der erforderlichen Datensätze und Datastreams finden Sie im Handbuch zur [TCF 2.0-Compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) .
 
 ## Audience Manager-Integration
 
@@ -48,8 +48,8 @@ Während die Zielgruppen von Real-Time CDP und Audience Manager die aktuellen Zu
 
 Um Einwilligungsinformationen zu Ereignissen zu erfassen, ist Folgendes erforderlich:
 
-- Ein Datensatz, der auf der [!DNL XDM Experience Event] -Klasse, mit der [!DNL Experience Event] Datenschutzschema-Feldergruppe.
-- Ein mit der Variablen [!DNL XDM Experience Event] Datensatz weiter oben.
+- Ein Datensatz, der auf der [!DNL XDM Experience Event] -Klasse mit der [!DNL Experience Event]-Feldergruppe für Datenschutzschemas basiert.
+- Ein mit dem obigen [!DNL XDM Experience Event] -Datensatz eingerichteter Datastream.
 
 Weitere Informationen zum Konvertieren eines XDM-Erlebnisereignisses in einen Analytics-Treffer finden Sie unter [Senden von Daten an Adobe Analytics mithilfe des Web SDK](/help/web-sdk/use-cases/adobe-analytics.md).
 
@@ -65,25 +65,25 @@ In den folgenden Abschnitten werden die wichtigsten Integrationspunkte zwischen 
 
 Die Standardzustimmung wird verwendet, wenn für einen Kunden noch keine Zustimmungsvoreinstellung gespeichert ist. Das bedeutet, dass die standardmäßigen Zustimmungsoptionen das Verhalten des Adobe Experience Platform Web SDK steuern und sich je nach Region des Kunden ändern können.
 
-Wenn Sie beispielsweise einen Kunden haben, der nicht in den Zuständigkeitsbereich der Datenschutz-Grundverordnung (DSGVO) fällt, kann die Standardzustimmung auf `in`, aber innerhalb der Gerichtsbarkeit der DSGVO kann die standardmäßige Zustimmung auf `pending`. Ihre Consent Management Platform (CMP) erkennt möglicherweise die Region des Kunden und stellt die Kennzeichnung bereit `gdprApplies` nach IAB TCF 2.0. Mit diesem Flag können Sie die Standardzustimmung festlegen. Siehe [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) für weitere Informationen.
+Wenn Sie beispielsweise einen Kunden haben, der nicht in den Zuständigkeitsbereich der Datenschutz-Grundverordnung (DSGVO) fällt, kann die Standardzustimmung auf `in` gesetzt werden, aber innerhalb der Gerichtsbarkeit der DSGVO kann die Standardzustimmung auf `pending` gesetzt werden. Ihre Consent Management Platform (CMP) erkennt möglicherweise die Region des Kunden und stellt das Flag `gdprApplies` für IAB TCF 2.0 bereit. Mit diesem Flag können Sie die Standardzustimmung festlegen. Weitere Informationen finden Sie unter [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) .
 
 ### Festlegen der Zustimmung bei Änderungen
 
-Das Adobe Experience Platform Web SDK verfügt über eine `setConsent` -Befehl, der die Zustimmungsvoreinstellungen Ihres Kunden an alle Adobe-Dienste übermittelt, die IAB TCF 2.0 verwenden. Wenn Sie mit Real-Time CDP integrieren, wird dadurch das Kundenprofil aktualisiert. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden einer zukünftigen Edge Network-Seite wird das Cookie zur Zustimmung gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
+Das Adobe Experience Platform Web SDK verfügt über den Befehl &quot;`setConsent`&quot;, mit dem die Zustimmungsvoreinstellungen Ihres Kunden an alle Adobe-Dienste mit IAB TCF 2.0 weitergeleitet werden. Wenn Sie mit Real-Time CDP integrieren, wird dadurch das Kundenprofil aktualisiert. Wenn Sie mit Audience Manager integrieren, werden dadurch die Kundeninformationen aktualisiert. Durch diesen Aufruf wird auch ein Cookie mit der Zustimmungsvoreinstellung &quot;alles oder nichts&quot;gesetzt, das steuert, ob zukünftige Erlebnisereignisse gesendet werden dürfen. Diese Aktion soll immer dann aufgerufen werden, wenn sich die Zustimmung ändert. Beim Laden einer zukünftigen Edge Network-Seite wird das Cookie zur Zustimmung gelesen, um zu bestimmen, ob Erlebnisereignisse gesendet werden können und ob ein Identitäts-Cookie gesetzt werden kann.
 
 Ähnlich wie bei der IAB TCF 2.0-Integration des Audience Managers erteilt das Edge Network eine Zustimmung, wenn ein Kunde seine ausdrückliche Zustimmung zu folgenden Zwecken erteilt hat:
 
-- **Zweck 1:** Informationen auf einem Gerät speichern und/oder aufrufen
+- **Zweck 1:** Informationen auf einem Gerät speichern und/oder darauf zugreifen
 - **Zweck 10:** Produkte entwickeln und verbessern
-- **Zweckbestimmung 1:** Sicherheit, Vermeidung von Betrug und Fehlerbehebung. (Gemäß den IAB-TCF-Vorschriften wird dies immer zugestimmt.)
-- **Adobe Vendor-Berechtigung:** Zustimmung für Adobe (Hersteller 565)
+- **Sonderzweck 1:** Gewährleistung von Sicherheit, Vermeidung von Betrug und Fehlerbehebung. (Gemäß den IAB-TCF-Vorschriften wird dies immer zugestimmt.)
+- **Adobe-Anbieterberechtigung:** Einverständnis für Adobe (Anbieter 565)
 
-Weitere Informationen über `setConsent` -Befehl, lesen Sie die dedizierte Web SDK-Dokumentation unter [setConsent](../../../web-sdk/commands/setconsent.md).
+Weitere Informationen zum Befehl `setConsent` finden Sie in der entsprechenden Web SDK-Dokumentation unter [setConsent](../../../web-sdk/commands/setconsent.md) .
 
 ### Hinzufügen der Zustimmung zu Erlebnisereignissen
 
-Das Adobe Experience Platform Web SDK verfügt über eine [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) -Befehl, der ein Erlebnisereignis erfasst. Wenn Sie in Experience Events oder Adobe Analytics integrieren und die Zustimmungsvoreinstellungen für jedes Erlebnisereignis nutzen möchten, fügen Sie jedem `sendEvent` Befehl.
+Das Adobe Experience Platform Web SDK verfügt über den Befehl &quot;[`sendEvent`](/help/web-sdk/commands/sendevent/overview.md)&quot;, mit dem ein Erlebnisereignis erfasst wird. Wenn Sie in Experience Events oder Adobe Analytics integrieren und die Zustimmungsvoreinstellungen für jedes Erlebnisereignis nutzen möchten, fügen Sie jedem Befehl `sendEvent` Einwilligungsinformationen hinzu.
 
 ## Nächste Schritte
 
-Nachdem Sie jetzt über grundlegende Kenntnisse des IAB Transparency &amp; Consent Framework 2.0 verfügen, lesen Sie bitte eines der Handbücher zur Verwendung von IAB TCF 2.0. [mit Tags](./with-tags.md) oder [ohne Tags](./without-tags.md).
+Nachdem Sie jetzt ein grundlegendes Verständnis des IAB Transparency &amp; Consent Framework 2.0 haben, lesen Sie eines der Leitfäden zur Verwendung von IAB TCF 2.0 [mit Tags](./with-tags.md) oder [ohne Tags](./without-tags.md).

@@ -16,7 +16,7 @@ ht-degree: 9%
 
 Ein MLService ist ein veröffentlichtes Schulungsmodell, das Ihrem Unternehmen die Möglichkeit gibt, auf zuvor entwickelte Modelle zuzugreifen und diese wiederzuverwenden. Eine wichtige Funktion von MLServices ist die Möglichkeit, Schulungen und Auswertungen planmäßig zu automatisieren. Geplante Trainings-Läufe können dazu beitragen, die Effizienz und Genauigkeit eines Modells zu erhalten, während geplante Scoring-Läufe sicherstellen können, dass neue Einblicke konsistent generiert werden.
 
-Automatisierte Trainings- und Scoring-Zeitpläne werden mit einem Startzeitstempel, einem Endzeitstempel und einer Häufigkeit definiert, die als [Cron-Ausdruck](https://en.wikipedia.org/wiki/Cron). Zeitpläne können definiert werden, wenn [Erstellen eines MLService](#create-an-mlservice) oder [Aktualisieren eines vorhandenen MLService](#update-an-mlservice).
+Automatisierte Trainings- und Scoring-Zeitpläne werden mit einem Startzeitstempel, einem Endzeitstempel und einer Häufigkeit definiert, die als [Cron-Ausdruck](https://en.wikipedia.org/wiki/Cron) dargestellt wird. Zeitpläne können beim [ Erstellen eines MLService](#create-an-mlservice) definiert oder durch [Aktualisieren eines vorhandenen MLService](#update-an-mlservice) angewendet werden.
 
 ## Erstellen eines MLService {#create-an-mlservice}
 
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten MLService einschließlich der eindeutigen Kennung (`id`), Experiment-ID für die Schulung (`trainingExperimentId`), Experiment-ID für die Auswertung (`scoringExperimentId`) und die Eingabe-Trainings-Datensatz-ID (`trainingDataSetId`).
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten MLService einschließlich der eindeutigen Kennung (`id`), der Experiment-ID für die Schulung (`trainingExperimentId`), der Experiment-ID für die Auswertung (`scoringExperimentId`) und der Eingabe-Trainings-Datensatz-ID (`trainingDataSetId`) enthält.
 
 ```json
 {
@@ -120,12 +120,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Eines der [Verfügbare Abfrageparameter](./appendix.md#query) verwendet, um Ergebnisse zu filtern. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
 | `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
 
-Die folgende Anfrage enthält eine Abfrage und ruft eine Liste von MLServices ab, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`).
+Die folgende Anfrage enthält eine Abfrage und ruft eine Liste von MLServices ab, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`) aufweisen.
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste der MLServices und deren Details einschließlich ihrer MLService-ID (`{MLSERVICE_ID}`), Experiment-ID für die Schulung (`{TRAINING_ID}`), Experiment-ID für die Auswertung (`{SCORING_ID}`) und die Eingabe-Trainings-Datensatz-ID (`{DATASET_ID}`).
+Eine erfolgreiche Antwort gibt eine Liste von MLServices und deren Details zurück, einschließlich ihrer MLService ID (`{MLSERVICE_ID}`), Experiment-ID für Schulung (`{TRAINING_ID}`), Experiment-ID für Scoring (`{SCORING_ID}`) und der Eingabe-Trainings-Datensatz-ID (`{DATASET_ID}`).
 
 ```json
 {
@@ -215,7 +215,7 @@ Sie können einen vorhandenen MLService aktualisieren, indem Sie seine Eigenscha
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [Abrufen des MLService nach ID](#retrieve-a-specific-mlservice). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, zunächst eine GET-Anfrage an [den MLService mit ID](#retrieve-a-specific-mlservice) abzurufen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 **API-Format**
 

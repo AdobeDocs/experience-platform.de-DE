@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `xdm`
 
-Die `xdm` -Objekt enthält die an Adobe gesendete Daten-Payload. Die in diesem Objekt festgelegten Felder werden direkt den Elementen zugeordnet, die im Schema des Datensatzes definiert sind.
+Das Objekt `xdm` enthält die an Adobe gesendete Daten-Payload. Die in diesem Objekt festgelegten Felder werden direkt den Elementen zugeordnet, die im Schema des Datensatzes definiert sind.
 
 Adobe Experience Platform verwendet Schemas, um die Datenstruktur konsistent und wiederverwendbar zu beschreiben. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, die Bedeutung beizubehalten und somit aus Daten Nutzen zu ziehen.
 
@@ -19,20 +19,20 @@ Dieses Objekt hat eine maximale Größe von 32 KB.
 
 ## Konfigurieren des XDM-Objekts mithilfe der Web SDK-Erweiterung
 
-Legen Sie die **[!UICONTROL XDM]** -Objekt innerhalb der Aktionen einer Tag-Regel. Die [XDM-Objekt](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) bietet eine intuitive Oberfläche, um andere Datenelemente ihren jeweiligen XDM-Feldern zuzuordnen.
+Legen Sie das Objekt **[!UICONTROL XDM]** innerhalb der Aktionen einer Tag-Regel fest. Das [XDM-Objekt](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) bietet eine intuitive Benutzeroberfläche zum Zuordnen anderer Datenelemente zu ihren jeweiligen XDM-Feldern.
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. under [!UICONTROL Aktionen], wählen Sie eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie die [!UICONTROL Erweiterung] Dropdown-Feld zu **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie die [!UICONTROL Aktionstyp] nach **[!UICONTROL Ereignis senden]**.
-1. Stellen Sie das Datenelement bereit, das das gewünschte Objekt im **[!UICONTROL XDM]** -Feld.
-1. Klicks **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
+1. Wählen Sie unter [!UICONTROL Aktionen] eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie den Aktionstyp ] auf **[!UICONTROL Ereignis senden]** fest.[!UICONTROL 
+1. Stellen Sie das Datenelement bereit, das das gewünschte Objekt im Feld **[!UICONTROL XDM]** enthält.
+1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
 
-## XDM-Objekt mithilfe der Web SDK-JavaScript-Bibliothek konfigurieren
+## Konfigurieren des XDM-Objekts mithilfe der Web SDK JavaScript-Bibliothek
 
-Legen Sie die `xdm` -Objekt beim Ausführen der `sendEvent` Befehl. Stellen Sie sicher, dass die Hierarchie in diesem Objekt mit dem Schema für den konfigurierten Datensatz übereinstimmt. Sie können beide `xdm` und dem [`data`](data.md) -Objekt im selben `sendEvent` Befehl.
+Legen Sie das Objekt `xdm` beim Ausführen des Befehls `sendEvent` fest. Stellen Sie sicher, dass die Hierarchie in diesem Objekt mit dem Schema für den konfigurierten Datensatz übereinstimmt. Sie können sowohl das Objekt `xdm` als auch das Objekt [`data`](data.md) im selben Befehl `sendEvent` einbeziehen.
 
 ```js
 alloy("sendEvent", {
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-Im folgenden Beispiel wird die [Feldergruppe Commerce-Details](/help/xdm/field-groups/event/commerce-details.md):
+Im folgenden Beispiel wird die Schemafeldergruppe [Commerce Details ](/help/xdm/field-groups/event/commerce-details.md) verwendet:
 
 ```javascript
 alloy("sendEvent",{

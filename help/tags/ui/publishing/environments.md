@@ -4,7 +4,7 @@ description: Hier erfahren Sie mehr über das Konzept von Tag-Umgebungen und wie
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1462'
 ht-degree: 98%
 
 ---
@@ -33,15 +33,15 @@ Tags unterstützen drei verschiedene Umgebungstypen, die jeweils einem anderen S
 
 | Umgebungstyp | Beschreibung |
 | --- | --- |
-| Entwicklung | Diese Umgebung entspricht der Spalte **Entwicklung** im Publishing-Workflow. |
-| Staging | Diese Umgebung entspricht den Spalten **Gesendet** und **Genehmigt** im Publishing-Workflow. |
+| Entwicklung | Diese Umgebung entspricht der Spalte **Entwicklung** im Veröffentlichungs-Workflow. |
+| Staging | Diese Umgebung entspricht den Spalten **Gesendet** und **Genehmigt** im Veröffentlichungs-Workflow. |
 | Produktion | Diese Umgebung entspricht der Spalte **Veröffentlicht** im Publishing-Workflow. |
 
-In den einzelnen Umgebungen können verschiedene Artefakte vorhanden sein. Dadurch können Sie verschiedene Bibliotheken in verschiedenen Umgebungen testen, während Sie den Publishing-Workflow durchlaufen.
+In den einzelnen Umgebungen können verschiedene Artefakte vorhanden sein. Dadurch können Sie verschiedene Bibliotheken in verschiedenen Umgebungen testen, während Sie den Veröffentlichungs-Workflow durchlaufen.
 
 >[!NOTE]
 >
->Jeder Umgebung kann jeweils nur ein Bibliotheks-Build zugewiesen werden. Es ist jedoch zu erwarten, dass eine Umgebung im Laufe der Zeit viele verschiedene Builds enthält, während Sie sie durch den Publishing-Workflow bewegen und Builds Umgebungen bei Bedarf neu zuordnen.
+>Jeder Umgebung kann jeweils nur ein Bibliotheks-Build zugewiesen werden. Es ist jedoch zu erwarten, dass eine Umgebung im Laufe der Zeit viele verschiedene Builds enthält, während Sie sie durch den Veröffentlichungs-Workflow bewegen und Builds Umgebungen bei Bedarf neu zuordnen.
 
 ## Installation {#installation}
 
@@ -91,7 +91,7 @@ Klicken Sie auf **[!UICONTROL Host]**, um einen vorkonfigurierten Host für die 
 
 ![](./images/environments/select-host.png)
 
-Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Tag-Hosts finden Sie im Abschnitt [hosts overview](./hosts/hosts-overview.md).
+Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Tag-Hosts finden Sie in der [Übersicht über Hosts](./hosts/hosts-overview.md).
 
 ### Archivierungseinstellungen {#archive}
 
@@ -147,7 +147,7 @@ Da Einbettungs-Codes basierend auf Ihren Umgebungskonfigurationen generiert werd
 
 ## Erstellen einer Umgebung
 
-Bei der ersten Erstellung einer Eigenschaft werden dieser Eigenschaft automatisch drei Umgebungen zugewiesen: Entwicklung, Staging und Produktion. Dies reicht aus, um den Publishing-Workflow auszuführen. Sie können jedoch bei Bedarf zusätzliche Entwicklungs-Umgebungen hinzufügen, da dies für größere Teams nützlich sein kann, bei denen mehrere Entwickler gleichzeitig an verschiedenen Projekten arbeiten.
+Bei der ersten Erstellung einer Eigenschaft werden dieser Eigenschaft automatisch drei Umgebungen zugewiesen: Entwicklung, Staging und Produktion. Dies reicht aus, um den Veröffentlichungs-Workflow auszuführen. Sie können jedoch bei Bedarf zusätzliche Entwicklungs-Umgebungen hinzufügen, da dies für größere Teams nützlich sein kann, bei denen mehrere Entwickler gleichzeitig an verschiedenen Projekten arbeiten.
 
 Wählen Sie auf der Registerkarte [!UICONTROL Umgebungen] für Ihre Eigenschaft **[!UICONTROL Umgebung hinzufügen]** aus.
 

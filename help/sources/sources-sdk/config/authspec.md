@@ -5,7 +5,7 @@ description: Dieses Dokument bietet einen Überblick über die Konfigurationen, 
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 Authentifizierungsspezifikationen definieren, wie Adobe Experience Platform-Benutzer eine Verbindung zu Ihrer Quelle herstellen können.
 
-Die `authSpec` -Array enthält Informationen zu den Authentifizierungsparametern, die zum Verbinden einer Quelle mit Platform erforderlich sind. Jede Quelle kann mehrere verschiedene Authentifizierungstypen unterstützen.
+Das Array `authSpec` enthält Informationen zu den Authentifizierungsparametern, die zum Verbinden einer Quelle mit Platform erforderlich sind. Jede Quelle kann mehrere verschiedene Authentifizierungstypen unterstützen.
 
 ## Authentifizierungsspezifikationen
 
@@ -237,4 +237,4 @@ Im Folgenden finden Sie ein Beispiel für eine abgeschlossene Authentifizierungs
 
 ## Nächste Schritte
 
-Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Siehe Dokument unter [Quellspezifikationen konfigurieren](./sourcespec.md) für weitere Informationen.
+Wenn Ihre Authentifizierungsspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Quellspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Weitere Informationen finden Sie im Dokument unter [Konfigurieren von Quellspezifikationen](./sourcespec.md) .

@@ -6,7 +6,7 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Privac
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '552'
 ht-degree: 100%
 
 ---
@@ -70,7 +70,7 @@ In diesem Dokument finden Sie Informationen zu neuen Funktionen von Adobe Experi
 
 * Der Standardbereich für die Statustabelle in der [!DNL Privacy Service]-Benutzeroberfläche wurde auf einen Zeitraum von 7 Tagen geändert.
 * Bessere interne Ausnahmebehandlung.
-* Verbesserte Leistung durch die Einführung von Caching für allgemeine interne Aufrufe mit niedrigen Datenänderungsraten.
+* Verbesserte Performance durch die Einführung von Caching für allgemeine interne Aufrufe mit niedrigen Datenänderungsraten.
 
 ### Fehlerkorrekturen
 

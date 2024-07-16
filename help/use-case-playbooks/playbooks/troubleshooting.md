@@ -22,11 +22,11 @@ Beim Erstellen einer Instanz eines Playbooks wird möglicherweise die folgende M
 
 ![Fehlerbehebung](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-Dies liegt daran, dass Journey Optimizer-Playbooks Nachrichten für E-Mail-, Push- und SMS-Kanäle erstellen. Lesen Sie die [Erste Schritte](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) Anleitung zur Konfiguration der verschiedenen Oberflächen.
+Dies liegt daran, dass Journey Optimizer-Playbooks Nachrichten für E-Mail-, Push- und SMS-Kanäle erstellen. Lesen Sie die Anleitung [Erste Schritte](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) , um die verschiedenen Oberflächen zu konfigurieren.
 
 ## Status *failed* beim Erstellen einer neuen Instanz {#status-failed}
 
-Wenn beim Erstellen einer Instanz eine Fehlermeldung angezeigt wird, liegt dies möglicherweise daran, dass Ihnen Ihr Administrator nicht die erforderlichen Benutzerberechtigungen erteilt hat. Ein Playbook enthält viele verschiedene Assets und Ihr Benutzer benötigt Berechtigungen, um diese Assets zu erstellen, damit er die Instanz des Playbooks erfolgreich erstellen kann. Siehe [Berechtigungen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) Abschnitt dieses Handbuchs zum Einrichten von Berechtigungen.
+Wenn beim Erstellen einer Instanz eine Fehlermeldung angezeigt wird, liegt dies möglicherweise daran, dass Ihnen Ihr Administrator nicht die erforderlichen Benutzerberechtigungen erteilt hat. Ein Playbook enthält viele verschiedene Assets und Ihr Benutzer benötigt Berechtigungen, um diese Assets zu erstellen, damit er die Instanz des Playbooks erfolgreich erstellen kann. Informationen zum Einrichten von Berechtigungen finden Sie im Abschnitt [Berechtigungen](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) dieses Handbuchs.
 
 ## Import-Fehler {#import-failure}
 

@@ -15,16 +15,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Wenn Sie Adobe Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Übersicht über Ziele](../../destinations/home.md) anstatt.
+>Wenn Sie Adobe Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie stattdessen die [Übersicht der Ziele](../../destinations/home.md) .
 
 Experience Platform-Ziele, die vollständig von Real-Time CDP B2B Edition unterstützt werden, sind Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager.
 
-Informationen dazu, wie Ziele in Ihren B2B-Workflow integriert werden können, finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
+Informationen dazu, wie Ziele in Ihren B2B-Workflow passen, finden Sie im [End-to-End-Tutorial](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
 Mit Adobe Real-time Customer Data Platform B2B Edition können Sie Ihre B2B-Daten über den Marketo Engage-Ziel-Connector exportieren. Mithilfe des Marketo Engage-Ziels können Sie in Adobe Experience Platform erstellte Zielgruppen an Marketo senden, wo sie als statische Listen angezeigt werden.
 
 Die folgenden Dokumente enthalten weitere Informationen zur Verwendung des Marketo Engage-Ziels zum Exportieren von Daten:
 
 - Informationen zu den für Real-time Customer Data Platform B2B Edition verfügbaren Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md).
-- Informationen zu den Identitäten, die nach Marketo Engage exportiert werden können, finden Sie im Abschnitt [Dokumentation zu Marketo Engage Destination](../../destinations/catalog/adobe/marketo-engage.md).
-- Informationen zum Herstellen einer Verbindung zum Marketo Engage-Ziel in der Experience Platform-Benutzeroberfläche und zum Exportieren von Daten finden Sie unter [&quot;Push an Adobe Experience Platform Segment to a Marketo Static List&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).
+- Informationen zu den Identitäten, die nach Marketo Engage exportiert werden können, finden Sie in der Dokumentation zum [Marketo Engage-Ziel](../../destinations/catalog/adobe/marketo-engage.md) .
+- Informationen dazu, wie Sie in der Experience Platform-Benutzeroberfläche eine Verbindung zum Marketo Engage-Ziel herstellen und Daten exportieren, finden Sie unter [&#39;Push an Adobe Experience Platform Segment to a Marketo Static List&#39;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

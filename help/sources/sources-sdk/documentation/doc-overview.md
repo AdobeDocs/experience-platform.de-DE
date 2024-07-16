@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
-title: Quelle dokumentieren
+title: Source dokumentieren
 description: Der letzte Schritt, bevor Ihre neue Quelle in Adobe Experience Platform live geschaltet werden kann, besteht darin, Ihre neue Quelle zu dokumentieren.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '392'
 ht-degree: 4%
 
 ---
@@ -19,15 +19,15 @@ Dieses Dokumentationshandbuch enthält:
 
 * Ein Tutorial, dem Sie folgen können, um eine Dokumentationsseite für Ihre neue Quelle zu erstellen.
 * eine Dokumentationsvorlage, die Sie für Ihre neue Quelle ausfüllen können;
-* [Anweisungen zur Verwendung von Markdown zum Schreiben technischer Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [Anleitung zum Verständnis von Adobe Markdown-Geschmack](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [Anweisungen zur Verwendung von Markdown zum Schreiben der technischen Dokumentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Anweisungen zum Verständnis von Adobe Markdown-Geschmack](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Voraussetzungen
 
 Die folgenden Elemente sind erforderlich, bevor Sie mit der Dokumentation Ihrer neuen Quelle beginnen können:
 
-* **Ein gültiges GitHub-Benutzerkonto**: Wenn Sie kein GitHub-Konto haben, müssen Sie eines über das [GitHub-Anmeldeseite](https://github.com/);
-* **Zugriff auf GitHub Desktop**: Sie müssen die [GitHub Desktop App](https://desktop.github.com/) um die Quelldokumentation in Ihrer lokalen Umgebung zu erstellen;
+* **Ein gültiges GitHub-Benutzerkonto**: Wenn Sie kein GitHub-Konto haben, müssen Sie eines über die [GitHub-Anmeldeseite](https://github.com/) erstellen.
+* **Zugriff auf GitHub Desktop**: Sie müssen die [GitHub Desktop App](https://desktop.github.com/) verwenden, um Ihre Quelldokumentation in Ihrer lokalen Umgebung zu erstellen.
 * Ihre Integration mit Adobe muss sich in einer Testphase befinden, während Ihre Quelle in einer Staging-Umgebung in Platform bereitgestellt wird.
 
 ## Allgemeine Anweisungen zum Erstellen der Dokumentation für Ihre Quelle in Platform
@@ -36,7 +36,7 @@ Um eine Dokumentation für Ihre Quelle zu erstellen, müssen Sie auf hoher Ebene
 
 ## Dokumentationsvorlage
 
-Sie können eine [Dokumentationsvorlage](./template.md) , um die Erstellung der Dokumentation für Ihre Quelle zu unterstützen. Weiter unten finden Sie Anweisungen zum Bearbeiten der Vorlage und Öffnen einer Pull-Anforderung. Die eingesendete Dokumentation für Ihre neue Quelle wird vom Adobe-Dokumentationsteam geprüft und veröffentlicht.
+Sie können eine vorausgefüllte [Dokumentationsvorlage](./template.md) verwenden, um die Erstellung der Dokumentation für Ihre Quelle zu unterstützen. Weiter unten finden Sie Anweisungen zum Bearbeiten der Vorlage und Öffnen einer Pull-Anforderung. Die eingesendete Dokumentation für Ihre neue Quelle wird vom Adobe-Dokumentationsteam geprüft und veröffentlicht.
 
 Sie können auch die folgenden Dokumentationsvorlagen herunterladen:
 

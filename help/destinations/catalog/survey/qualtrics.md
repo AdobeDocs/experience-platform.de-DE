@@ -5,16 +5,16 @@ description: Die Qualtrics Website Feedback-Erweiterung ist ein Umfrageziel in A
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 89%
+source-wordcount: '516'
+ht-degree: 87%
 
 ---
 
-# [!DNL Qualtrics Website Feedback]-Erweiterung  {#qualtrics-extension}
+# [!DNL Qualtrics Website Feedback]-Erweiterung {#qualtrics-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Qualtrics Website Feedback] ermöglicht es Ihnen, zur richtigen Zeit mit der richtigen Nachricht mit Ihren Website-Besuchern zu interagieren. Ob Sie das Besuchererlebnis mit Website-Feedback-Umfragen verbessern oder die Konversion steigern möchten, [!DNL Qualtrics Website Feedback] hat dich bedeckt.
+Mit [!DNL Qualtrics Website Feedback] können Sie Ihre Website-Besucher zur richtigen Zeit mit der richtigen Nachricht ansprechen. Unabhängig davon, ob Sie das Besuchererlebnis mit Website-Feedback-Umfragen verbessern oder die Konversion steigern möchten, wurde [!DNL Qualtrics Website Feedback] erläutert.
 
 Mit einer intuitiven Point-and-Click-Oberfläche können Sie innerhalb weniger Minuten gezielt Web-Nachrichten mit Branding erstellen und bereitstellen. Die Daten und Einblicke, die Sie über Ihre Website erfassen, werden zusammen mit den Kunden-Feedback-Daten aus allen Kanälen angezeigt und bieten eine umfassende Sicht auf Ihr Kundenerlebnis – alles auf einer Plattform.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Qualtrics Website Feedback] Erweiterung:
+So installieren Sie die [!DNL Qualtrics Website Feedback]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

@@ -14,7 +14,7 @@ ht-degree: 45%
 
 # Sandbox-Verwaltungs-Endpunkt
 
-Sandboxes in Adobe Experience Platform bieten isolierte Entwicklungsumgebungen, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionsumgebung zu beeinträchtigen. Die `/sandboxes` -Endpunkt im [!DNL Sandbox] Mit der API können Sie Sandboxes in Platform programmgesteuert verwalten.
+Sandboxes in Adobe Experience Platform bieten isolierte Entwicklungsumgebungen, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne die Produktionsumgebung zu beeinträchtigen. Mit dem Endpunkt `/sandboxes` in der API [!DNL Sandbox] können Sie Sandboxes in Platform programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -22,7 +22,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Sandbox] API]
 
 ## Liste von Sandboxes abrufen {#list}
 
-Sie können alle Sandboxes auflisten, die zu Ihrer Organisation gehören (aktiv oder anderweitig), indem Sie eine GET-Anfrage an die `/sandboxes` -Endpunkt.
+Sie können alle Sandboxes auflisten, die zu Ihrer Organisation gehören (aktiv oder anderweitig), indem Sie eine GET-Anfrage an den Endpunkt `/sandboxes` senden.
 
 **API-Format**
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe Abschnitt zu [Abfrageparameter](./appendix.md#query) für weitere Informationen. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md#query) . |
 
 **Anfrage**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die zu Ihrem Unternehmen gehören, einschließlich Details wie `name`, `title`, `state`, und `type`.
+Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die zu Ihrer Organisation gehören, einschließlich Details wie `name`, `title`, `state` und `type`.
 
 ```json
 {
@@ -130,8 +130,8 @@ Eine erfolgreiche Antwort gibt eine Liste von Sandboxes zurück, die zu Ihrem Un
 | --- | --- |
 | `name` | Der Name der Sandbox. Diese Eigenschaft wird für Suchzwecke in API-Aufrufen verwendet. |
 | `title` | Der Anzeigename für die Sandbox. |
-| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann wie folgt lauten: <br/><ul><li>`creating`: Die Sandbox wurde erstellt, wird jedoch weiterhin vom System bereitgestellt.</li><li>`active`: Die Sandbox wird erstellt und aktiv.</li><li>`failed`: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>`deleted`: Die Sandbox wurde manuell deaktiviert.</li></ul> |
-| `type` | Der Sandbox-Typ. Zu den derzeit unterstützten Sandbox-Typen gehören `development` und `production`. |
+| `state` | Der aktuelle Verarbeitungsstatus der Sandbox. Der Status einer Sandbox kann wie folgt lauten: <br/><ul><li>`creating`: Die Sandbox wurde erstellt, wird jedoch weiterhin vom System bereitgestellt.</li><li>`active`: Die Sandbox wird erstellt und aktiv.</li><li>`failed`: Aufgrund eines Fehlers konnte die Sandbox nicht vom System bereitgestellt werden und ist deaktiviert.</li><li>0: Die Sandbox wurde manuell deaktiviert.`deleted`</li></ul> |
+| `type` | Der Sandbox-Typ. Die derzeit unterstützten Sandbox-Typen sind `development` und `production`. |
 | `isDefault` | Eine boolesche Eigenschaft, die angibt, ob diese Sandbox die standardmäßige Produktions-Sandbox für die Organisation ist. |
 | `eTag` | Eine Kennung für eine bestimmte Version der Sandbox. Dieser Wert erleichtert Versionskontrolle und Caching und wird bei jeder Änderung an der Sandbox aktualisiert. |
 
@@ -196,11 +196,11 @@ Bei erfolgreicher Antwort werden Details zur Sandbox einschließlich `name`, `ti
 >
 >Wenn eine neue Sandbox erstellt wird, müssen Sie diese neue Sandbox zunächst Ihrem Produktprofil in [Adobe Admin Console](https://adminconsole.adobe.com/) hinzufügen, bevor Sie sie verwenden können. Weitere Informationen zur Bereitstellung einer Sandbox für ein Produktprofil finden Sie in der Dokumentation unter [Verwalten von Berechtigungen für ein Produktprofil](../../access-control/ui/permissions.md).
 
-Sie können eine neue Entwicklungs- oder Produktions-Sandbox erstellen, indem Sie eine POST-Anfrage an die `/sandboxes` -Endpunkt.
+Sie können eine neue Entwicklungs- oder Produktions-Sandbox erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/sandboxes` senden.
 
 ### Erstellen einer Entwicklungs-Sandbox
 
-Um eine Entwicklungs-Sandbox zu erstellen, müssen Sie eine `type` -Attribut mit dem Wert `development` in der Anfrage-Payload.
+Um eine Entwicklungs-Sandbox zu erstellen, müssen Sie in der Anfrage-Payload das Attribut `type` mit dem Wert `development` angeben.
 
 **API-Format**
 
@@ -230,7 +230,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Die Kennung, die in zukünftigen Anfragen für den Zugriff auf die Sandbox verwendet wird. Dieser Wert muss eindeutig sein; Best Practice ist, ihn so beschreibend wie möglich zu gestalten. Dieser Wert darf keine Leerzeichen oder Sonderzeichen enthalten. |
 | `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Platform-Benutzeroberfläche verwendet wird. |
-| `type` | Der Typ der zu erstellenden Sandbox. Bei einer Nicht-Produktions-Sandbox muss dieser Wert `development`. |
+| `type` | Der Typ der zu erstellenden Sandbox. Bei einer Nicht-Produktions-Sandbox muss dieser Wert `development` sein. |
 
 **Antwort**
 
@@ -248,11 +248,11 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Sandbox zurück un
 
 >[!NOTE]
 >
->Die Bereitstellung von Sandboxes durch das System dauert etwa 30 Sekunden, danach wird ihre `state` wird zu &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
+>Die Bereitstellung von Sandboxes durch das System dauert etwa 30 Sekunden, danach wird ihr `state` &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
 
 ### Produktions-Sandbox erstellen
 
-Um eine Produktions-Sandbox zu erstellen, müssen Sie eine `type` -Attribut mit dem Wert `production` in der Anfrage-Payload.
+Um eine Produktions-Sandbox zu erstellen, müssen Sie in der Anfrage-Payload das Attribut `type` mit dem Wert `production` angeben.
 
 **API-Format**
 
@@ -283,7 +283,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Die Kennung, die in zukünftigen Anfragen für den Zugriff auf die Sandbox verwendet wird. Dieser Wert muss eindeutig sein; Best Practice ist, ihn so beschreibend wie möglich zu gestalten. Dieser Wert darf keine Leerzeichen oder Sonderzeichen enthalten. |
 | `title` | Ein für Menschen lesbarer Name, der für Anzeigezwecke in der Platform-Benutzeroberfläche verwendet wird. |
-| `type` | Der Typ der zu erstellenden Sandbox. Für eine Produktions-Sandbox muss dieser Wert `production`. |
+| `type` | Der Typ der zu erstellenden Sandbox. Für eine Produktions-Sandbox muss dieser Wert `production` sein. |
 
 **Antwort**
 
@@ -301,15 +301,15 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Sandbox zurück un
 
 >[!NOTE]
 >
->Die Bereitstellung von Sandboxes durch das System dauert etwa 30 Sekunden, danach wird ihre `state` wird zu &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
+>Die Bereitstellung von Sandboxes durch das System dauert etwa 30 Sekunden, danach wird ihr `state` &quot;aktiv&quot;oder &quot;fehlgeschlagen&quot;.
 
 ## Sandbox aktualisieren {#put}
 
-Sie können ein oder mehrere Felder in einer Sandbox aktualisieren, indem Sie eine PATCH-Anfrage stellen, die die `name` im Anfragepfad und der Eigenschaft, die in der Anfrage-Payload aktualisiert werden soll.
+Sie können ein oder mehrere Felder in einer Sandbox aktualisieren, indem Sie eine PATCH-Anfrage ausführen, die im Anfragepfad den Wert &quot;`name`&quot; der Sandbox und in der Anfrage-Payload die Eigenschaft enthält, die aktualisiert werden soll.
 
 >[!NOTE]
 >
->Derzeit ist nur der `title` -Eigenschaft aktualisiert werden.
+>Derzeit kann nur die `title` -Eigenschaft einer Sandbox aktualisiert werden.
 
 **API-Format**
 
@@ -319,11 +319,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SANDBOX_NAME}` | Die `name` -Eigenschaft der Sandbox, die Sie aktualisieren möchten. |
+| `{SANDBOX_NAME}` | Die Eigenschaft `name` der Sandbox, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `title` -Eigenschaft der Sandbox mit dem Namen &quot;acme&quot;.
+Die folgende Anfrage aktualisiert die Eigenschaft `title` der Sandbox mit dem Namen &quot;acme&quot;.
 
 ```shell
 curl -X PATCH \
@@ -364,7 +364,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{SANDBOX_NAME}` | Die `name`-Eigenschaft der Sandbox, die Sie zurücksetzen möchten. |
-| `validationOnly` | Ein optionaler Parameter, mit dem Sie eine Preflight-Prüfung für den Sandbox-Reset-Vorgang durchführen können, ohne die eigentliche Anfrage zu stellen. Legen Sie diesen Parameter auf `validationOnly=true` , um zu überprüfen, ob die Sandbox, die Sie zurücksetzen möchten, Daten zu Adobe Analytics, Adobe Audience Manager oder zur Segmentfreigabe enthält. |
+| `validationOnly` | Ein optionaler Parameter, mit dem Sie eine Preflight-Prüfung für den Sandbox-Reset-Vorgang durchführen können, ohne die eigentliche Anfrage zu stellen. Setzen Sie diesen Parameter auf &quot;`validationOnly=true`&quot;, um zu überprüfen, ob die Sandbox, die Sie zurücksetzen möchten, Daten zu Adobe Analytics, Adobe Audience Manager oder zur Segmentfreigabe enthält. |
 
 **Anfrage**
 
@@ -405,7 +405,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück un
 }
 ```
 
-Die standardmäßige Produktions-Sandbox und alle benutzerdefinierten Produktions-Sandboxes können nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die [Geräteübergreifende Analyse (Cross Device Analytics, CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) oder wenn das innerhalb dieser Funktion gehostete Identitätsdiagramm auch von Adobe Audience Manager für die [Benutzerbasierte Ziele (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) Funktion.
+Die standardmäßige Produktions-Sandbox und alle benutzerdefinierten Produktions-Sandboxes können nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) verwendet wird.
 
 Im Folgenden finden Sie eine Liste möglicher Ausnahmen, die das Zurücksetzen einer Sandbox verhindern könnten:
 
@@ -432,7 +432,7 @@ Im Folgenden finden Sie eine Liste möglicher Ausnahmen, die das Zurücksetzen e
 }
 ```
 
-Sie können mit dem Zurücksetzen einer Produktions-Sandbox fortfahren, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] durch Hinzufügen des `ignoreWarnings` -Parameter zu Ihrer Anforderung hinzufügen.
+Sie können mit dem Zurücksetzen einer Produktions-Sandbox fortfahren, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird, indem Sie Ihrer Anforderung den Parameter `ignoreWarnings` hinzufügen.
 
 **API-Format**
 
@@ -443,7 +443,7 @@ PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 | Parameter | Beschreibung |
 | --- | --- |
 | `{SANDBOX_NAME}` | Die `name`-Eigenschaft der Sandbox, die Sie zurücksetzen möchten. |
-| `ignoreWarnings` | Ein optionaler Parameter, mit dem Sie die Validierungsprüfung überspringen und das Zurücksetzen einer Produktions-Sandbox erzwingen können, die für die bidirektionale Segmentfreigabe mit verwendet wird [!DNL Audience Manager] oder [!DNL Audience Core Service]. Dieser Parameter kann nicht auf eine standardmäßige Produktions-Sandbox angewendet werden. |
+| `ignoreWarnings` | Ein optionaler Parameter, mit dem Sie die Validierungsprüfung überspringen und das Zurücksetzen einer Produktions-Sandbox erzwingen können, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird. Dieser Parameter kann nicht auf eine standardmäßige Produktions-Sandbox angewendet werden. |
 
 **Anfrage**
 
@@ -480,13 +480,13 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück un
 
 >[!IMPORTANT]
 >
->Die standardmäßige Produktions-Sandbox kann nicht gelöscht werden.
+>Die Standard-Produktions-Sandbox kann nicht gelöscht werden.
 
 Sie können eine Sandbox löschen, indem Sie eine DELETE-Anfrage ausführen, die den `name` der Sandbox im Anfragepfad enthält.
 
 >[!NOTE]
 >
->Durch diesen API-Aufruf wird die Sandbox aktualisiert. `status` auf &quot;Gelöscht&quot;gesetzt und deaktiviert. GET-Anfragen können die Details der Sandbox, nachdem sie gelöscht wurde, weiter abrufen.
+>Durch diesen API-Aufruf wird die Eigenschaft `status` der Sandbox auf &quot;Gelöscht&quot;aktualisiert und deaktiviert. GET-Anfragen können die Details der Sandbox, nachdem sie gelöscht wurde, weiter abrufen.
 
 **API-Format**
 
@@ -497,8 +497,8 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{SANDBOX_NAME}` | Der `name` der Sandbox, die Sie löschen möchten. |
-| `validationOnly` | Ein optionaler Parameter, mit dem Sie eine Preflight-Prüfung für den Sandbox-Löschvorgang durchführen können, ohne die eigentliche Anfrage zu stellen. Legen Sie diesen Parameter auf `validationOnly=true` , um zu überprüfen, ob die Sandbox, die Sie zurücksetzen möchten, Daten zu Adobe Analytics, Adobe Audience Manager oder zur Segmentfreigabe enthält. |
-| `ignoreWarnings` | Ein optionaler Parameter, mit dem Sie die Validierungsprüfung überspringen und das Löschen einer benutzerdefinierten Produktions-Sandbox erzwingen können, die für die bidirektionale Segmentfreigabe mit verwendet wird [!DNL Audience Manager] oder [!DNL Audience Core Service]. Dieser Parameter kann nicht auf eine standardmäßige Produktions-Sandbox angewendet werden. |
+| `validationOnly` | Ein optionaler Parameter, mit dem Sie eine Preflight-Prüfung für den Sandbox-Löschvorgang durchführen können, ohne die eigentliche Anfrage zu stellen. Setzen Sie diesen Parameter auf &quot;`validationOnly=true`&quot;, um zu überprüfen, ob die Sandbox, die Sie zurücksetzen möchten, Daten zu Adobe Analytics, Adobe Audience Manager oder zur Segmentfreigabe enthält. |
+| `ignoreWarnings` | Ein optionaler Parameter, mit dem Sie die Validierungsprüfung überspringen und das Löschen einer benutzerdefinierten Produktions-Sandbox erzwingen können, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird. Dieser Parameter kann nicht auf eine standardmäßige Produktions-Sandbox angewendet werden. |
 
 **Anfrage**
 

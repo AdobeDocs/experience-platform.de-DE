@@ -4,16 +4,16 @@ description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 38%
+source-wordcount: '1052'
+ht-degree: 37%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 25. Oktober 2023**
+**Veröffentlichungsdatum: Donnerstag, 25. Oktober 2023**
 
-Aktualisierungen vorhandener Funktionen in Experience Platform:
+Aktualisierungen vorhandener Funktionen im Experience Platform:
 
 - [Dashboards](#dashboards)
 - [Datenerfassung](#data-collection)
@@ -30,7 +30,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verwendungsmetriken für Ziele | Dem Dashboard zur Lizenznutzung wurden neue Messmetriken hinzugefügt. Die **[!UICONTROL Audience Activation-Größe]** und **[!UICONTROL Datenexportgröße]** Metriken bieten eine praktische Möglichkeit, um zu verfolgen, wie viele Daten Sie aus Platform im Vergleich zu Ihren Lizenznutzungsberechtigungen exportiert haben. Siehe [verfügbare Metriken](../../dashboards/guides/license-usage.md#available-metrics) Dokumentation für Beschreibungen dieser und anderer Lizenzverwendungsmetriken. |
+| Verwendungsmetriken für Ziele | Dem Dashboard zur Lizenznutzung wurden neue Messmetriken hinzugefügt. Die Metriken **[!UICONTROL Audience Activation-Größe]** und **[!UICONTROL Datenexportgröße]** bieten eine praktische Möglichkeit, um nachzuverfolgen, wie viele Daten Sie aus Platform in Bezug auf Ihre Lizenznutzungsberechtigungen exportiert haben. Beschreibungen dieser und anderer Lizenzverwendungsmetriken finden Sie in der Dokumentation zu [verfügbaren Metriken](../../dashboards/guides/license-usage.md#available-metrics) . |
 
 {style="table-layout:auto"}
 
@@ -44,11 +44,11 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Erweiterungen | [!DNL Meta] Verbesserung der Konversions-API | Die [Meta Conversions-API](/help/tags/extensions/server/meta/overview.md) -Erweiterung: <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Erstellt eine nahtlose Anmeldung, indem Sie Ihre pixelID und das Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben können.</li><li>Integration mit [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht die Bereitstellung von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen und die Aktion mit den gelieferten Anzeigen verknüpfen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Weitergabe der RampID von LiveRamp im Feld CIP, sodass personenbezogene Daten nicht direkt an Partner oder Meta weitergegeben werden müssen. </li></ul> |
-| Erweiterungen | [!DNL LinkedIn] Konversions-API | Die [[!DNL LinkedIn] Konversions-API](../../tags/extensions/server/linkedin/overview.md) -Erweiterung ermöglicht es Ihnen, die Effektivität Ihrer LinkedIn-Marketingkampagnen zu bewerten, indem Sie Experience Platform-Ereignisdaten an LinkedIn weiterleiten. |
-| Geheimnis | [!DNL LinkedIn] OAuth 2 Secret | Die [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) ermöglicht Ihnen das Senden von Server-Server-Interaktionen an [!DNL LinkedIn] in der Ereignisweiterleitung. |
-| Ereignisweiterleitung | Aktualisierung auf Tags und Ereignisweiterleitung | Zum Beibehalten [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) -Leistung in Platform beibehalten werden nur die neuesten erfolgreichen und nicht erfolgreichen Entwicklungs- und Staging-Builds. Alle nicht mehr verwendeten Builds werden entfernt. Darüber hinaus wurden Drosselung und Ratenbegrenzung implementiert, um sicherzustellen, dass die API-Leistung bei einigen umfangreichen API-Verwendungen nicht durch andere beeinträchtigt wird. |
-| Erweiterungen | Elemente, Regeln und Erweiterungen | [Elemente, Regeln und Erweiterungen](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=de) werden nun in der Bibliotheksausgabe sortiert, um eine größere Konsistenz zwischen mehreren Builds und Bereitstellungen derselben Bibliothek sicherzustellen. |
+| Erweiterungen | [!DNL Meta] API-Erweiterung für Konversionen | Die Erweiterung [Meta Conversions API](/help/tags/extensions/server/meta/overview.md) wurde um drei Verbesserungen erweitert: <ul><li>Integration mit [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Erstellt eine nahtlose Anmeldung, indem Sie Ihre pixelID und das Zugriffstoken für die Conversions-API-Integration mit Adobe freigeben können.</li><li>Integration in [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Ermöglicht die Bereitstellung von Werbung für Personen, die mit höherer Wahrscheinlichkeit eine gewünschte Aktion durchführen und die Aktion mit den gelieferten Anzeigen verknüpfen.</li><li>Integration mit [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Ermöglicht die Weitergabe der RampID von LiveRamp im Feld CIP, sodass personenbezogene Daten nicht direkt an Partner oder Meta weitergegeben werden müssen. </li></ul> |
+| Erweiterungen | [!DNL LinkedIn] Konversions-API | Mit der Erweiterung [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md) können Sie die Effektivität Ihrer LinkedIn-Marketingkampagnen bewerten, indem Sie Experience Platform-Ereignisdaten an LinkedIn weiterleiten. |
+| Geheimnis | [!DNL LinkedIn] OAuth 2 Secret | Mit dem [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) können Sie Server-Server-Interaktionen an [!DNL LinkedIn] in der Ereignisweiterleitung senden. |
+| Ereignisweiterleitung | Aktualisierung auf Tags und Ereignisweiterleitung | Damit die Leistung von [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Ereignisweiterleitung](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) in Platform erhalten bleibt, werden nur die neuesten, erfolgreichen und nicht erfolgreichen Entwicklungs- und Staging-Builds beibehalten. Alle nicht mehr verwendeten Builds werden entfernt. Darüber hinaus wurden Drosselung und Ratenbegrenzung implementiert, um sicherzustellen, dass die API-Leistung bei einigen umfangreichen API-Verwendungen nicht durch andere beeinträchtigt wird. |
+| Erweiterungen | Elemente, Regeln und Erweiterungen | [Elemente, Regeln und Erweiterungen](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) werden jetzt in der Bibliotheksausgabe sortiert, um eine größere Konsistenz zwischen mehreren Builds und Implementierungen derselben Bibliothek sicherzustellen. |
 
 Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Datenerfassungen](../../tags/home.md).
 
@@ -69,8 +69,8 @@ Weitere Informationen zur Datenerfassung finden Sie in der [Übersicht der Daten
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| (Beta) Unterstützung für Hashing-Funktionen in berechneten Feldern | Zusätzlich zu den spezifischen Funktionen für [Exportieren von Arrays](../../destinations/ui/export-arrays-calculated-fields.md) Für Elemente aus einem Array können Sie jetzt zusätzliche [Hashing-Funktionen](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) , um Attribute in den exportierten Dateien zu hash. Folgende Hashing-Funktionen werden unterstützt: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (Eingeschränkte allgemeine Verfügbarkeit) Konto-Zielgruppen für bestimmte Ziele aktivieren | Real-Time CDP B2B-Kunden können jetzt aktivieren [Kontozielgruppen](../../segmentation/ui/account-audiences.md) an bestimmte Zielorte. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Tutorial zum Aktivieren von Kontozielgruppen](/help/destinations/ui/activate-account-audiences.md). |
+| (Beta) Unterstützung für Hashing-Funktionen in berechneten Feldern | Zusätzlich zu den Funktionen, die für den [Export von Arrays](../../destinations/ui/export-arrays-calculated-fields.md) oder Elementen aus einem Array spezifisch sind, können Sie jetzt zusätzliche [Hashing-Funktionen](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) verwenden, um Attribute in den exportierten Dateien zu hash. Folgende Hashing-Funktionen werden unterstützt: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Eingeschränkte allgemeine Verfügbarkeit) Konto-Zielgruppen für bestimmte Ziele aktivieren | Real-Time CDP-B2B-Kunden können jetzt [Kontozielgruppen](../../segmentation/ui/account-audiences.md) für bestimmte Ziele aktivieren. Weitere Informationen zu dieser Funktion finden Sie im Tutorial [Kontozielgruppen aktivieren](/help/destinations/ui/activate-account-audiences.md) . |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Sandbox-Werkzeuge | Mit der Sandbox-Tool-Funktion können Sie die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen nahtlos zwischen Sandboxes exportieren und importieren. Sie können die Sandbox-Tool-Funktion verwenden, um verschiedene Objekte auszuwählen und sie in ein Paket zu exportieren. Weitere Informationen finden Sie unter [Handbuch zur Sandbox-Tools-Benutzeroberfläche](../../sandboxes/ui/sandbox-tooling.md). |
+| Sandbox-Werkzeuge | Mit der Sandbox-Tool-Funktion können Sie die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen nahtlos zwischen Sandboxes exportieren und importieren. Sie können die Sandbox-Tool-Funktion verwenden, um verschiedene Objekte auszuwählen und sie in ein Paket zu exportieren. Weitere Informationen finden Sie im Leitfaden für die Sandbox-Tools-Benutzeroberfläche ](../../sandboxes/ui/sandbox-tooling.md).[ |
 
 Weiterführende Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
 
@@ -98,9 +98,9 @@ Weiterführende Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Kontozielgruppen (beschränkte allgemeine Verfügbarkeit) | In Real-time Customer Data Platform B2B Edition können Sie jetzt die Kontosegmentierung verwenden, um die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen zu erzielen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Kontozielgruppen](../../segmentation/ui/account-audiences.md). |
+| Kontozielgruppen (beschränkte allgemeine Verfügbarkeit) | In Real-time Customer Data Platform B2B Edition können Sie jetzt die Kontosegmentierung verwenden, um die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen zu erzielen. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht über Kontozielgruppen](../../segmentation/ui/account-audiences.md) . |
 
-Weitere Informationen zum Segmentierungsdienst finden Sie in der [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
+Weiterführende Informationen zu Segmentation Service finden Sie in der [Segmentation Service - Übersicht](../../segmentation/home.md) .
 
 ## Quellen {#sources}
 
@@ -110,8 +110,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierte Authentifizierung für Data Landing Zone | Sie können jetzt das vorgesehene Ablaufdatum Ihrer Dateneinstiegszone sehen, wenn Sie Ihre Anmeldedaten anzeigen. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, damit Sie es weiterhin in Ihrer Anwendung verwenden können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und beim nächsten Abrufen Ihrer Anmeldeinformationen ein neues Token bereitgestellt. Weitere Informationen finden Sie in der Dokumentation unter [Verwenden der Dateneinstiegszone](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
+| Aktualisierte Authentifizierung für Data Landing Zone | Sie können jetzt das vorgesehene Ablaufdatum Ihrer Dateneinstiegszone sehen, wenn Sie Ihre Anmeldedaten anzeigen. Sie müssen Ihr Token vor dem Ablaufdatum aktualisieren, damit Sie es weiterhin in Ihrer Anwendung verwenden können. Wenn Sie Ihr Token nicht vor dem angegebenen Ablaufdatum manuell aktualisieren, wird es automatisch aktualisiert und beim nächsten Abrufen Ihrer Anmeldeinformationen ein neues Token bereitgestellt. Weitere Informationen finden Sie in der Dokumentation zu [Verwendung der Dateneinstiegszone](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Quellen finden Sie unter [Quellen - Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).

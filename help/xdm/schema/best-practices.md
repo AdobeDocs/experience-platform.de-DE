@@ -19,9 +19,9 @@ Da XDM sehr vielseitig und designanpassbar ist, ist es wichtig, bei der Erstellu
 
 ## Erste Schritte
 
-Lesen Sie vor dem Lesen dieses Handbuchs die [XDM-System - Übersicht](../home.md) für eine allgemeine Einführung in XDM und seine Rolle innerhalb von Experience Platform.
+Bevor Sie dieses Handbuch lesen, lesen Sie die [XDM-Systemübersicht](../home.md) , um eine allgemeine Einführung in XDM und dessen Rolle innerhalb von Experience Platform zu erhalten.
 
-Da sich dieses Handbuch ausschließlich auf wichtige Aspekte im Zusammenhang mit der Schemagestaltung konzentriert, wird dringend empfohlen, die [Grundlagen der Schemakomposition](./composition.md) für detaillierte Erläuterungen der einzelnen Schemaelemente, die in diesem Handbuch erwähnt werden.
+Da sich dieses Handbuch ausschließlich auf wichtige Aspekte bezüglich des Schemadesigns konzentriert, wird dringend empfohlen, die [Grundlagen der Schemakomposition](./composition.md) zu lesen, um detaillierte Erklärungen zu den einzelnen Schemaelementen zu erhalten, die in diesem Handbuch erwähnt werden.
 
 ## Zusammenfassung der Best Practices {#summary}
 
@@ -37,7 +37,7 @@ Die Schritte zur Identifizierung der für Ihre geschäftlichen Anwendungsfälle 
 
 ## Erstellen eines allgemeinen ERD {#create-an-erd}
 
-Nachdem Sie die Datenquellen ermittelt haben, die Sie in [!DNL Platform]erstellen Sie eine allgemeine ERD, die Ihnen dabei hilft, Ihre Daten XDM-Schemas zuzuordnen.
+Nachdem Sie die Datenquellen ermittelt haben, die Sie in [!DNL Platform] integrieren möchten, erstellen Sie eine allgemeine ERD, die Ihnen hilft, den Prozess der Zuordnung Ihrer Daten zu XDM-Schemas zu steuern.
 
 Das folgende Beispiel stellt ein vereinfachtes ERD für eine Firma dar, die Daten in [!DNL Platform] integrieren möchte. Das Diagramm zeigt die wesentlichen Entitäten, die in XDM-Klassen unterteilt werden sollten, darunter Kundenkonten, Hotels, Adressen und mehrere häufige E-Commerce-Ereignisse.
 
@@ -109,7 +109,7 @@ Zum Beispiel hat ein Unternehmen eine Zielgruppe basierend auf der Regel `countr
 
 Basierend auf dem Anwendungsfall und der Granularität Ihrer Daten sollten Sie entscheiden, ob bestimmte Werte vorab aggregiert werden müssen, bevor sie in eine Profil- oder Ereignisentität aufgenommen werden.
 
-Beispielsweise möchte ein Unternehmen eine Zielgruppe basierend auf der Anzahl der Warenkorbkäufe erstellen. Sie können festlegen, dass diese Daten mit der niedrigsten Granularität integriert werden, indem Sie jedes Kaufereignis mit Zeitstempel als eigene Entität hinzufügen. Dadurch kann sich jedoch manchmal die Anzahl der aufgezeichneten Ereignisse exponentiell erhöhen. Um die Anzahl der erfassten Ereignisse zu reduzieren, können Sie einen Aggregatwert erstellen `numberOfPurchases` über einen langen oder monatigen Zeitraum. Andere Aggregatfunktionen wie MIN und MAX können ebenfalls auf diese Situationen angewendet werden.
+Beispielsweise möchte ein Unternehmen eine Zielgruppe basierend auf der Anzahl der Warenkorbkäufe erstellen. Sie können festlegen, dass diese Daten mit der niedrigsten Granularität integriert werden, indem Sie jedes Kaufereignis mit Zeitstempel als eigene Entität hinzufügen. Dadurch kann sich jedoch manchmal die Anzahl der aufgezeichneten Ereignisse exponentiell erhöhen. Um die Anzahl der erfassten Ereignisse zu reduzieren, können Sie einen aggregierten Wert `numberOfPurchases` über einen langen oder monatlichen Zeitraum erstellen. Andere Aggregatfunktionen wie MIN und MAX können ebenfalls auf diese Situationen angewendet werden.
 
 >[!CAUTION]
 >
@@ -148,7 +148,7 @@ In diesem Szenario hat das Unternehmen zwei Möglichkeiten, die Abonnements eine
 
 Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die Profilentität für Kundinnen und Kunden aufzunehmen. Objekte in diesem Array enthalten Felder für `category`, `status`, `planName`, `startDate` und `endDate`.
 
-![Das Schema Customers im Schema-Editor mit hervorgehobener Klasse und Struktur](../images/best-practices/profile-schema.png)
+![Das Schema Customers im Schema-Editor mit der Klasse und der Struktur hervorgehoben](../images/best-practices/profile-schema.png)
 
 **Vorteile**
 
@@ -204,7 +204,7 @@ Wenn Sie nicht sicher sind, ob ein bestimmtes Feld für die Aufnahme in ein Sche
 
 ### Identitätsfelder {#identity-fields}
 
-In Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kundinnen und Kunden aus mehreren Datenquellen zusammenzufügen. Obwohl ein Schema mehrere Felder haben kann, die als Identitäten markiert sind, muss eine einzige primäre Identität definiert werden, damit das Schema zur Verwendung in aktiviert werden kann [!DNL Real-Time Customer Profile]. Ausführlichere Informationen zum Anwendungsfall für diese Felder finden Sie im Abschnitt zu [Identitätsfeldern](./composition.md#identity) in den Grundlagen der Schemakomposition.
+In Experience Platform werden als Identitäten markierte XDM-Felder verwendet, um Informationen über einzelne Kundinnen und Kunden aus mehreren Datenquellen zusammenzufügen. Obwohl ein Schema mehrere Felder enthalten kann, die als Identitäten markiert sind, muss eine einzige primäre Identität definiert werden, damit das Schema für die Verwendung in [!DNL Real-Time Customer Profile] aktiviert werden kann. Ausführlichere Informationen zum Anwendungsfall für diese Felder finden Sie im Abschnitt zu [Identitätsfeldern](./composition.md#identity) in den Grundlagen der Schemakomposition.
 
 Beim Entwerfen Ihrer Schemas sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen, Telefonnummern, Konto-IDs und [ECID](../../identity-service/features/ecid.md) der Kundschaft.
 
@@ -217,7 +217,7 @@ Experience Platform bietet mehrere vordefinierte XDM-Schemafeldgruppen zur Erfas
 * Adobe Campaign
 * Adobe Target
 
-Sie können beispielsweise die [[!UICONTROL Adobe Analytics ExperienceEvent-Vorlage] Feldergruppe](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) Zuordnen [!DNL Analytics]-spezifische Felder für Ihre XDM-Schemas. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
+Beispielsweise können Sie die Feldergruppe [[!UICONTROL Adobe Analytics ExperienceEvent Template] ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) verwenden, um Ihren XDM-Schemas [!DNL Analytics] spezifische Felder zuzuordnen. Je nach den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese von Adobe bereitgestellten Feldergruppen in Ihren Schemata verwenden.
 
 ![Ein Schemadiagramm der [!UICONTROL Adobe Analytics ExperienceEvent-Vorlage].](../images/best-practices/analytics-field-group.png)
 
@@ -237,21 +237,21 @@ Wenn Sie Daten in den Daten-Pool erfassen, wird die Datenvalidierung nur für ei
 >
 >Die Validierung gilt nicht für verschachtelte Spalten. Wenn sich das Feldformat in einer Array-Spalte befindet, werden die Daten nicht validiert.
 
-Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld im Schema-Editor aus, um die **[!UICONTROL Feldeigenschaften]** Seitenleiste. Siehe die Dokumentation unter [Typspezifische Feldeigenschaften](../ui/fields/overview.md#type-specific-properties) für genaue Beschreibungen der verfügbaren Felder.
+Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld im Schema Editor aus, um die Seitenleiste **[!UICONTROL Feldeigenschaften]** zu öffnen. Genaue Beschreibungen der verfügbaren Felder finden Sie in der Dokumentation zu [typspezifischen Feldeigenschaften](../ui/fields/overview.md#type-specific-properties) .
 
-![Der Schema Editor mit den Einschränkungsfeldern, die im [!UICONTROL Feldeigenschaften] Seitenleiste.](../images/best-practices/data-validation-fields.png)
+![Der Schema-Editor mit den Einschränkungsfeldern, die in der Seitenleiste [!UICONTROL Feldeigenschaften] hervorgehoben sind.](../images/best-practices/data-validation-fields.png)
 
 ### Tipps zur Gewährleistung der Datenintegrität {#data-integrity-tips}
 
 Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Gewährleistung der Datenintegrität bei der Erstellung eines Schemas.
 
-* **Primäre Identitäten berücksichtigen**: Bei Adobe-Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer wird die `identityMap` -Feld dient oft als primäre Identität. Vermeiden Sie die Benennung zusätzlicher Felder als primäre Identitäten für dieses Schema.
-* **Vermeiden von `_id` als Identität**: Vermeiden Sie die Verwendung der `_id` -Feld in Experience Event-Schemas als Identität. Sie ist für die Eindeutigkeit von Datensätzen und nicht zur Verwendung als Identität gedacht.
-* **Festlegen von Längenbeschränkungen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten gekennzeichnet sind. Ein Warnhinweis-Trigger, wenn Sie versuchen, einem Identitätsfeld einen benutzerdefinierten Namespace zuzuweisen, ohne die Mindest- und Höchstlängenbeschränkungen zu erfüllen. Diese Einschränkungen helfen bei der Gewährleistung von Konsistenz und Datenqualität.
-* **Anwenden von Mustern für konsistente Werte**: Wenn Ihre Identitätswerte einem bestimmten Muster entsprechen, sollten Sie die **[!UICONTROL Muster]** -Einstellung, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
-* **eVars in Analytics-Schemata begrenzen**: In der Regel sollte für ein Analytics-Schema nur ein eVar als Identität benannt sein. Wenn Sie mehr als eine eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
-* **Eindeutigkeit eines ausgewählten Felds gewährleisten**: Ihr ausgewähltes Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie es nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identitäts-Namespaces wie Telefonnummern.
-* **Beschränkt Trigger-Warnungen für benutzerdefinierte Namespace-Felder**: Legen Sie Begrenzungen fest, um eine Warnung Trigger, wenn ein Schemafeld mit einem benutzerdefinierten Namespace markiert ist, ohne die Mindest- und Höchstlänge anzugeben. Die Warnung dient als wichtige Vorsichtsmaßnahme zur Wahrung der Datenintegrität. Siehe [Typspezifische Feldeigenschaften](../ui/fields/overview.md#type-specific-properties) Dokumentation für Informationen zum Festlegen von Einschränkungen für ein bestimmtes Feld.
+* **Primäre Identitäten betrachten**: Bei Adobe-Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer dient das Feld `identityMap` häufig als primäre Identität. Vermeiden Sie die Benennung zusätzlicher Felder als primäre Identitäten für dieses Schema.
+* **Vermeiden Sie die Verwendung von `_id` als Identität**: Vermeiden Sie die Verwendung des Felds `_id` in Experience Event-Schemas als Identität. Sie ist für die Eindeutigkeit von Datensätzen und nicht zur Verwendung als Identität gedacht.
+* **Längenbegrenzungen festlegen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten markiert sind. Ein Warnhinweis-Trigger, wenn Sie versuchen, einem Identitätsfeld einen benutzerdefinierten Namespace zuzuweisen, ohne die Mindest- und Höchstlängenbeschränkungen zu erfüllen. Diese Einschränkungen helfen bei der Gewährleistung von Konsistenz und Datenqualität.
+* **Muster für konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster entsprechen, sollten Sie die Einstellung **[!UICONTROL Muster]** verwenden, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
+* **eVars in Analytics-Schemata begrenzen**: In der Regel sollte für ein Analytics-Schema nur ein eVar als Identität gekennzeichnet sein. Wenn Sie mehr als eine eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
+* **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Ihr ausgewähltes Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie es nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identitäts-Namespaces wie Telefonnummern.
+* **Beschränkt Warnungen bezüglich Triggern für benutzerdefinierte Namespace-Felder**: Setzen Sie Einschränkungen so, dass eine Warnung Trigger wird, wenn ein Schemafeld mit einem benutzerdefinierten Namespace markiert ist, ohne die Mindest- und Höchstlänge anzugeben. Die Warnung dient als wichtige Vorsichtsmaßnahme zur Wahrung der Datenintegrität. Informationen zum Festlegen von Einschränkungen für ein bestimmtes Feld finden Sie in der Dokumentation zu [typspezifischen Feldeigenschaften](../ui/fields/overview.md#type-specific-properties) .
 
 ## Nächste Schritte
 

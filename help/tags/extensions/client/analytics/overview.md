@@ -4,8 +4,8 @@ description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Ad
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '2275'
-ht-degree: 96%
+source-wordcount: '2105'
+ht-degree: 93%
 
 ---
 
@@ -115,8 +115,8 @@ Wenn Sie das Kontrollkästchen „EU-Konformität“ aktivieren, wird das Feld [
 
 Wenn eine Seite geladen wird, überprüft das System, ob ein Cookie mit dem Namen „sat\_track“ festgelegt ist (oder das benutzerdefinierte Cookie mit dem Namen, der auf der Seite „Eigenschaft bearbeiten“ angegeben wurde). Die folgenden Informationen sind zu berücksichtigen:
 
-* Wenn das Cookie nicht vorhanden ist oder wenn das Cookie vorhanden und auf einen anderen Wert als  „true“ festgelegt ist, wird das Laden des Tools übersprungen, wenn diese Einstellung aktiviert ist. Das bedeutet, dass der Teil der Regel, der sich auf das Tool stützt, keine Anwendung findet. Wenn eine Regel Analysen mit EU-Konformität für Drittanbietercode umfasst und das Cookie auf „false“ festgelegt wird, wird der Drittanbietercode dennoch ausgeführt. Die Analysevariablen werden jedoch nicht festgelegt.
-* Wenn das Cookie vorhanden ist, jedoch auf  „true“ festgelegt ist, wird das Tool normal geladen.
+* Wenn das Cookie nicht vorhanden ist oder das Cookie vorhanden ist und auf etwas Anderes als &quot;true&quot;festgelegt ist, wird das Laden des Tools bei Aktivierung dieser Einstellung übersprungen. Das bedeutet, dass der Teil der Regel, der sich auf das Tool stützt, keine Anwendung findet. Wenn eine Regel Analysen mit EU-Konformität für Drittanbietercode umfasst und das Cookie auf „false“ festgelegt wird, wird der Drittanbietercode dennoch ausgeführt. Die Analysevariablen werden jedoch nicht festgelegt.
+* Wenn das Cookie vorhanden ist, aber auf &quot;true&quot;gesetzt ist, wird das Tool normal geladen.
 
 Sie sind dafür verantwortlich, das Cookie „sat\_track“ (oder das Cookie mit benutzerdefiniertem Namen) auf „false“ festzulegen, wenn ein Besucher eine Abwahl trifft. Dazu können Sie den folgenden benutzerdefinierten Code verwenden:
 
@@ -124,7 +124,7 @@ Sie sind dafür verantwortlich, das Cookie „sat\_track“ (oder das Cookie mit
 _satellite.cookie.set("sat_track", "false");
 ```
 
-Sie müssen außerdem über einen Mechanismus verfügen, mit dem dieses Cookie auf  „true“ festgelegt wird, wenn ein Benutzer es später aktivieren können soll:
+Sie müssen außerdem über einen Mechanismus verfügen, mit dem dieses Cookie auf &quot;true&quot;gesetzt wird, wenn ein Besucher die Möglichkeit haben soll, sich später anzumelden:
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
@@ -196,7 +196,7 @@ Siehe [s.trackExternalLinks](https://experienceleague.adobe.com/docs/analytics/i
 
 Sie können eine der folgenden Methoden zur Verfolgung ausgehender Links über SPA-Sites verwenden:
 
-* Sollten Sie über Ihre SPA keinesfalls ausgehende Links verfolgen wollen, machen Sie unter „Niemals verfolgen“ einen entsprechenden Eintrag. Beispiel: `http://testsite.com/spa/\#` Alle \#-Links zu diesem Host werden ignoriert. Alle ausgehenden Links zu anderen Hosts wie [https://www.google.com](https://www.google.com) werden verfolgt.
+* Sollten Sie über Ihre SPA keinesfalls ausgehende Links verfolgen wollen, machen Sie unter „Niemals verfolgen“ einen entsprechenden Eintrag. Beispiel: `http://testsite.com/spa/\#`. Alle \#-Links zu diesem Host werden ignoriert. Alle ausgehenden Links zu anderen Hosts wie [https://www.google.com](https://www.google.com) werden verfolgt.
 * Gibt es einige Links, die Sie in Ihrer SPA immer verfolgen möchten, verwenden Sie den Abschnitt „Immer verfolgen“.
 
 Wenn Sie beispielsweise über die Seite spa/\#/about verfügen, könnten Sie unter „Immer verfolgen“ den Abschnitt „about“ eintragen.
@@ -329,13 +329,13 @@ Konfigurieren Sie bei Bedarf weitere Hierarchien.
 
 #### Seitenname
 
-Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht dem [`pageName` Variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
+Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht der [`pageName` -Variablen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
 
 >[!IMPORTANT]
 >
 >In Adobe Experience Manager-Implementierungen teilt diese Variable AEM mit, wo der abgerufene Analytics-Bericht gespeichert werden soll. Um sicherzustellen, dass Berichte ordnungsgemäß persistiert werden, muss die Seitenname-Zeichenfolge als durch Doppelpunkte getrennte Pfad zur Site formatiert werden.
 >
->Beispielsweise eine Webseite unter `content/we-retail/language-masters/en/men.html` sollte den Wert des Seitennamen haben von `content:we-retail:language-masters:en:men`.
+>Beispielsweise sollte für eine Webseite unter `content/we-retail/language-masters/en/men.html` der Wert für den Seitennamen `content:we-retail:language-masters:en:men` angegeben werden.
 
 #### Weitere Informationen
 
@@ -350,7 +350,7 @@ Zu diesen Einstellungen gehören folgende:
 * Kampagne
 * Kauf-ID
 
-   Geben Sie entweder einen Wert oder einen Abfrageparameter an
+  Geben Sie entweder einen Wert oder einen Abfrageparameter an
 
 * Land
 * PLZ

@@ -15,12 +15,12 @@ ht-degree: 5%
 
 # Übersicht über Adobe Experience Platform Debugger
 
-Die Adobe Experience Platform Debugger-Erweiterung für [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) überprüft Ihre Webseiten und hilft Ihnen, Probleme bei der Implementierung Ihrer Adobe Experience Cloud-Lösungen zu finden.
+Die Adobe Experience Platform Debugger-Erweiterung für [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) überprüft Ihre Webseiten und unterstützt Sie dabei, Probleme bei der Implementierung Ihrer Adobe Experience Cloud-Lösungen zu finden.
 
 Sie können Platform Debugger mit den anderen Adobe-Aktivierungslösungen verwenden, um Folgendes auszuführen:
 
-1. Verwendung [tags](../tags/home.md) zum Einfügen von Code, der aktiviert [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=de) Produkte auf Ihren Seiten.
-1. Verwenden Sie die [**[!UICONTROL Auditor ]**tab](./auditor/overview.md) in Platform Debugger , um Ihre Implementierungen zu testen.
+1. Verwenden Sie [tags](../tags/home.md) , um Code einzufügen, der [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=de)-Produkte auf Ihren Seiten aktiviert.
+1. Testen Sie Ihre Implementierungen mithilfe der Registerkarte [**[!UICONTROL Auditor ]**](./auditor/overview.md) in Platform Debugger.
 1. Verwenden Sie ereignisbasierte und lösungsspezifische Tools in Platform Debugger, um von Auditor gefundene Probleme zu beheben oder andere Informationen über Ihre Implementierungen zu untersuchen.
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Sie können Platform Debugger auf jeder Webseite ausführen und die Erweiterung 
 
 Sie können die von Platform Debugger erfassten Informationen verwenden, um besser zu verstehen, wie Ihre Experience Cloud-Lösungen implementiert sind. Beispiel:
 
-* **Tags**: Ermitteln Sie, welche Property, welche Umgebung und welcher Build auf einer Seite bereitgestellt werden.
+* **Tags**: Ermitteln Sie, welche Property, Umgebung und welcher Build auf einer Seite bereitgestellt werden.
 * **Adobe Target**: Finden Sie heraus, für welche Aktivitäten Sie sich qualifizieren und warum.
 * **Adobe Analytics**: Ermitteln Sie, welche Report Suites auf der aktuellen Seite aktiv sind.
 

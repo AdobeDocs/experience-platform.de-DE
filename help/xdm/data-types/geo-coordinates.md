@@ -11,16 +11,16 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL Geo-Koordinaten] Datentyp
+# Datentyp [!UICONTROL Geo-Koordinaten]
 
-[!UICONTROL Geo-Koordinaten] ist ein standardmäßiger XDM-Datentyp, der die geografischen Koordinaten eines Orts beschreibt. Dieser Datentyp basiert auf der öffentlichen Spezifikation, die dokumentiert ist unter [schema.org](https://schema.org/GeoCoordinates).
+[!UICONTROL Geo-Koordinaten] ist ein standardmäßiger XDM-Datentyp, der die geografischen Koordinaten eines Orts beschreibt. Dieser Datentyp basiert auf der öffentlichen Spezifikation, die in [schema.org](https://schema.org/GeoCoordinates) dokumentiert ist.
 
 <img src="../images/data-types/geo-coordinates.png" width="400" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `_schema.description` | Zeichenfolge | Eine Beschreibung dessen, was die Koordinaten identifizieren. |
-| `_schema.elevation` | Double | Die spezifische Höhe der definierten Koordinate. Der Wert muss mit der Variablen [WGS 84](https://gisgeography.com/wgs84-world-geodetic-system/) Datum und wird in Metern gemessen. |
+| `_schema.elevation` | Double | Die spezifische Höhe der definierten Koordinate. Der Wert muss dem [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) -Datum entsprechen und in Metern gemessen werden. |
 | `_schema.latitude` | Double | Die vorzeichenbehaftete vertikale Koordinate des geografischen Punkts. |
 | `_schema.longitude` | Double | Die vorzeichenbehaftete horizontale Koordinate des geografischen Punkts. |
 | `_id` | Zeichenfolge | Eine eindeutige, systemgenerierte ID für die Koordinaten. |

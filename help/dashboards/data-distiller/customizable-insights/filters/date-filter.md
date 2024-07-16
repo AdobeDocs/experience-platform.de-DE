@@ -1,7 +1,8 @@
 ---
 title: Erstellen eines Datumsfilters
 description: Erfahren Sie, wie Sie Ihre benutzerdefinierten Einblicke nach Datum filtern können.
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
+source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -10,25 +11,25 @@ ht-degree: 0%
 
 # Datumsfilter erstellen {#create-date-filter}
 
-Um Ihre Einblicke nach Datum zu filtern, müssen Sie Ihren SQL-Abfragen Parameter hinzufügen, die Datumsbeschränkungen akzeptieren können. Dies erfolgt im Rahmen des Workflows für die Erstellung von Insight-Abfragen für den Pro-Modus. Siehe [Dokumentation zum Abfragepro-Modus](#query-pro-mode) um zu erfahren, wie Sie SQL für Ihre Einblicke eingeben können.
+Um Ihre Einblicke nach Datum zu filtern, müssen Sie Ihren SQL-Abfragen Parameter hinzufügen, die Datumsbeschränkungen akzeptieren können. Dies erfolgt im Rahmen des Workflows für die Erstellung von Insight-Abfragen für den Pro-Modus. Informationen zum Einstieg in SQL für Ihre Einblicke finden Sie in der Dokumentation zu [query pro mode](#query-pro-mode) .
 
 Mithilfe von Abfrageparametern können Sie mit dynamischen Daten arbeiten, da diese als Platzhalter für die Werte fungieren, die Sie zur Ausführungszeit hinzufügen. Diese Platzhalterwerte können über die Benutzeroberfläche aktualisiert werden und es weniger technischen Benutzern ermöglichen, die Einblicke anhand von Datumsbereichen zu aktualisieren.
 
-Wenn Sie mit Abfrageparametern nicht vertraut sind, finden Sie in der Dokumentation unter [Anleitung zur Implementierung parametrisierter Abfragen](../../../../query-service/ui/parameterized-queries.md).
+Wenn Sie mit Abfrageparametern nicht vertraut sind, finden Sie in der Dokumentation [Anleitungen zur Implementierung parametrisierter Abfragen](../../../../query-service/ui/parameterized-queries.md).
 
 ## Datumsfilter auf Ihr Dashboard anwenden {#apply-date-filter}
 
-Um einen Datumsfilter anzuwenden, wählen Sie **[!UICONTROL Filter hinzufügen]**, dann **[!UICONTROL Datumsfilter]** aus dem Dropdown-Menü Ihrer Dashboard-Ansicht aus.
+Um einen Datumsfilter anzuwenden, wählen Sie **[!UICONTROL Filter hinzufügen]** und dann **[!UICONTROL Datumsfilter]** aus dem Dropdown-Menü Ihrer Dashboard-Ansicht.
 
 ![Ein benutzerdefiniertes Dashboard mit Filter hinzufügen und seinem Dropdown-Menü hervorgehoben.](../../../images/customizable-insights/add-filter.png)
 
 ## SQL bearbeiten, um Datumsabfrageparameter einzuschließen {#include-date-parameters}
 
-Stellen Sie als Nächstes sicher, dass Ihre SQL Abfrageparameter enthält, um einen Datumsbereich zuzulassen. Wenn Sie noch keine Abfrageparameter in Ihre SQL integriert haben, bearbeiten Sie Ihre Einblicke, um diese Parameter einzuschließen. Anweisungen dazu finden Sie in der Dokumentation [Bearbeiten eines Insight](../query-pro-mode.md#edit).
+Stellen Sie als Nächstes sicher, dass Ihre SQL Abfrageparameter enthält, um einen Datumsbereich zuzulassen. Wenn Sie noch keine Abfrageparameter in Ihre SQL integriert haben, bearbeiten Sie Ihre Einblicke, um diese Parameter einzuschließen. Anweisungen zum Bearbeiten eines Insight finden Sie in der Dokumentation](../query-pro-mode.md#edit) .[
 
 >[!TIP]
 >
->Es wird empfohlen `$START_DATE` und `$END_DATE` Parameter auf Ihre SQL-Anweisung in den Diagrammen, für die Sie Datumsfilter aktivieren möchten.
+>Es wird empfohlen, Ihrer SQL-Anweisung in allen Diagrammen, für die Sie Datumsfilter aktivieren möchten, die Parameter `$START_DATE` und `$END_DATE` hinzuzufügen.
 
 >[!NOTE]
 >
@@ -36,7 +37,7 @@ Stellen Sie als Nächstes sicher, dass Ihre SQL Abfrageparameter enthält, um ei
 
 Wenn das zu analysierende Datenmodell bzw. die Tabellen eine Zeitkomponente aufweisen, können Sie Ihre Daten nach Datum gruppieren und dann diese Datumsfilter anwenden.
 
-Die folgende Beispiel-SQL-Anweisung zeigt, wie Sie `$START_DATE` und `$END_DATE` Parameter und Verwendungszwecke `cast` , um die Zeitkomponente als Datum einzuordnen.
+Die folgende SQL-Beispielanweisung zeigt, wie die Parameter `$START_DATE` und `$END_DATE` integriert werden, und verwendet `cast`, um die Zeitkomponente als Datum festzulegen.
 
 ```sql
 SELECT Sum(personalization_consent_count) AS Personalization,
@@ -59,21 +60,21 @@ Im folgenden Screenshot werden die in der SQL-Anweisung enthaltenen Datumsbeschr
 >
 >Beim Erstellen Ihrer Anweisung im Abfragepro-Modus müssen Sie Beispielwerte für jeden Parameter angeben, um die SQL-Anweisung auszuführen und das Diagramm zu erstellen. Die Beispielwerte, die Sie beim Erstellen Ihrer Anweisung angeben, werden durch die tatsächlichen Werte ersetzt, die Sie zur Laufzeit für den Filter Datum (oder global) auswählen.
 
-![Die [!UICONTROL SQL eingeben] mit den in der SQL hervorgehobenen Datumsparametern.](../../../images/customizable-insights/sql-date-parameters.png)
+![Das Dialogfeld [!UICONTROL SQL eingeben] mit den in der SQL hervorgehobenen Datumsparametern.](../../../images/customizable-insights/sql-date-parameters.png)
 
 ## Datumsparameter in jedem Insight aktivieren {#enable-date-parameters}
 
-Nachdem Sie die entsprechenden Parameter in die SQL Ihrer Einblicke eingefügt haben, wird die `Start_date` und `End_date` -Variablen sind jetzt als Umschalter im Widget Composer verfügbar. Siehe [Populationsabschnitt für den pro-Modus abfragen](#populate-widget) für Informationen zum Bearbeiten eines Insight.
+Nachdem Sie die entsprechenden Parameter in die SQL Ihrer Einblicke eingefügt haben, sind die Variablen `Start_date` und `End_date` jetzt als Umschalter im Widget Composer verfügbar. Informationen zum Bearbeiten eines Insight finden Sie im Abschnitt [Abfrage pro Modus Widget population ](#populate-widget) .
 
-Wählen Sie im Widget Composer Umschalter aus, um die `Start_date` und `End_date` Parameter.
+Wählen Sie im Widget Composer Umschalter aus, um die Parameter `Start_date` und `End_date` zu aktivieren.
 
-![Der Widget-Composer mit den Umschalter Start_Datum und Ende_Datum wird hervorgehoben.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
+![Der Widget-Composer mit den Umschaltern Start_Datum und Ende_Datum ist hervorgehoben.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
 
 Wählen Sie anschließend die entsprechenden Abfrageparameter aus den Dropdown-Menüs aus.
 
-![Der Widget Composer mit dem Dropdown-Menü Start_Datum markiert.](../../../images/customizable-insights/widget-composer-date-filter-dropdown.png)
+![Der Widget Composer mit dem Dropdown-Menü Start_Datum ist hervorgehoben.](../../../images/customizable-insights/widget-composer-date-filter-dropdown.png)
 
-Wählen Sie abschließend **[!UICONTROL Speichern und schließen]** , um zu Ihrem Dashboard zurückzukehren. Datumsfilter sind nun für alle Einblicke mit Start- und Enddatumsparametern aktiviert.
+Wählen Sie abschließend **[!UICONTROL Speichern und schließen]** aus, um zu Ihrem Dashboard zurückzukehren. Datumsfilter sind nun für alle Einblicke mit Start- und Enddatumsparametern aktiviert.
 
 ## Datumsfilter verwenden
 
@@ -93,6 +94,6 @@ Nachdem Sie einen Datumsbereich aus Ihrem Dashboard ausgewählt haben, sehen Ein
 
 ## Datumsfilter löschen {#delete-date-filter}
 
-Um den Datumsfilter zu entfernen, wählen Sie das Löschfiltersymbol (![Das Symbol Filter löschen .](../../../images/customizable-insights/delete-filter-icon.png)).
+Um den Datumsfilter zu entfernen, wählen Sie das Symbol Filter löschen (![Symbol Filter löschen.](../../../images/customizable-insights/delete-filter-icon.png)).
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Symbol zum Löschen des Filters.](../../../images/customizable-insights/delete-date-filter.png)

@@ -28,11 +28,11 @@ Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und of
 
 ## [!DNL Experience Platform] Dokumentation
 
-[!DNL Experience Platform] Die Dokumentation wird für eine Vielzahl von Funktionen und Anwendungen in verschiedenen Formaten bereitgestellt. Weitere Informationen zu den verfügbaren Dokumentationstypen finden Sie unter [Platform-Dokumentation – Übersicht](documentation/overview.md).
+Die Dokumentation zu [!DNL Experience Platform] wird für eine Vielzahl von Funktionen und Anwendungen in verschiedenen Formaten bereitgestellt. Weitere Informationen zu den verfügbaren Dokumentationstypen finden Sie unter [Platform-Dokumentation – Übersicht](documentation/overview.md).
 
 Um mehr über einen bestimmten Service von [!DNL Platform] zu erfahren, kehren Sie zur [Dokumentations-Landingpage](https://experienceleague.adobe.com/docs/experience-platform.html?lang=de) zurück und wählen Sie das entsprechende Handbuch aus.
 
-### Dokumentation für Anwendungen, die auf [!DNL Experience Platform]
+### Dokumentation für Anwendungen, die auf [!DNL Experience Platform] basieren
 
 Adobe hat mehrere Anwendungen auf dem Experience Platform erstellt. Die Dokumentation für diese Anwendungen finden Sie in den eigenen Handbüchern, die Sie unten finden:
 

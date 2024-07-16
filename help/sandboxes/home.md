@@ -42,7 +42,7 @@ Die standardmäßige Produktions-Sandbox ist letztendlich die erste Produktions-
 Zusammenfassend kann man sagen, dass Sandboxes folgende Vorteile bieten:
 
 * **Application Lifecycle Management**: Richten Sie separate virtuelle Umgebungen ein, um Programme für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
-* **Projekt- und Markenmanagement**: Lassen Sie zu, dass mehrere Projekte innerhalb derselben Organisation parallel ausgeführt werden, während Isolation und Zugriffskontrolle gewährleistet sind.
+* **Projekt- und Markenverwaltung**: Lassen Sie zu, dass mehrere Projekte innerhalb derselben Organisation parallel ausgeführt werden, während Isolation und Zugriffskontrolle gewährleistet sind.
 * **Flexibles Entwicklungsökosystem**: Stellen Sie Sandboxes auf nahtlose, skalierbare und kostengünstige Weise für Erkundungs-, Unterstützungs- und Demonstrationszwecke bereit.
 
 ## Zugriffskontrolle für Sandboxes

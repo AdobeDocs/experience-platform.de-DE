@@ -22,7 +22,7 @@ Beim Herstellen einer Verbindung zu einem Werbeziel werden Ihre Zielgruppen als 
 
 Derzeit unterstützt Experience Platform die unten aufgeführten Werbeziele.
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und -kategorien .
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und -kategorien.
 
 ### Verbindungen
 
@@ -45,7 +45,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 ### Erweiterungen
 
 * [Adobe Advertising Cloud-Erweiterung](adobe-advertising-cloud.md)
-* [Advertising Conversion Tag-Erweiterung](awin-conversiontag.md)
+* [Awin Advertising Conversion Tag-Erweiterung](awin-conversiontag.md)
 * [Awin Advertising Mastertag-Erweiterung](awin-mastertag.md)
 * [Bing Ads Universal Event Tracking-Erweiterung](bing-ads.md)
 * [Branch-Erweiterung](branch.md)

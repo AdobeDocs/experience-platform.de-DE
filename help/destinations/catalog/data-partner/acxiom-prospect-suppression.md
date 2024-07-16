@@ -15,23 +15,23 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Die [!DNL Acxiom Prospect-Suppression] Das Ziel befindet sich in der Beta-Phase. Diese Ziel-Connector- und Dokumentationsseite werden vom Acxiom-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an acxiom-adobe-help@acxiom.com.
+>Das Ziel [!DNL Acxiom Prospect-Suppression] befindet sich in der Beta-Phase. Diese Ziel-Connector- und Dokumentationsseite werden vom Acxiom-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an acxiom-adobe-help@acxiom.com.
 
 ## Übersicht {#overview}
 
-Verwendung [!DNL Acxiom Prospect-Suppression] um so produktivste Interessenten wie möglich bereitzustellen. Dieser Connector exportiert Erstanbieterdaten sicher aus Real-time Customer Data Platform und führt sie durch eine preisgekrönte Hygiene- und Identitätsauflösung, die eine Datendatei zur Verwendung als Unterdrückungsliste erzeugt. Dies wird mit dem [!DNL Acxiom Global] Datenbank, die es ermöglicht, die Interessenslisten für den Import anzupassen. Verwenden Sie dann die [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) Quell-Connector zum potenziellen Kunden von Acxiom zurück in Real-Time CDP, wobei Ihre bekannten oder konvertierten Kunden entfernt sind.
+Verwenden Sie [!DNL Acxiom Prospect-Suppression], um die produktivsten potenziellen Zielgruppen bereitzustellen. Dieser Connector exportiert Erstanbieterdaten sicher aus Real-time Customer Data Platform und führt sie durch eine preisgekrönte Hygiene- und Identitätsauflösung, die eine Datendatei zur Verwendung als Unterdrückungsliste erzeugt. Dies wird mit der [!DNL Acxiom Global] -Datenbank abgeglichen, die es ermöglicht, die Interessenslisten für den Import anzupassen. Verwenden Sie dann den Quell-Connector &quot;[[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md)&quot;, um Listen von Acxiom wieder in Real-Time CDP aufzuspüren, wobei Ihre bekannten oder konvertierten Kunden entfernt sind.
 
 ![Marketingdiagramm zum Exportieren von Erstanbieterdaten in Acxiom und anschließendem Importieren von Interessensdaten zurück in Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
 Acxiom bietet die leistungsstärksten Zielgruppen der Branche mit dem größten Katalog von über 12.000 globalen Datenattributen, die speziell auf die Bereitstellung personalisierter Erlebnisse ausgerichtet sind. Tippen Sie auf unbegrenzte Kombinationen aus hochwertigen Daten, um Zielgruppen zu erstellen und zu verteilen, um spezifischen Kampagnenanforderungen gerecht zu werden.
 
-In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Acxiom Prospect-Suppression] Zielverbindung und Datenfluss über die Adobe Experience Platform-Benutzeroberfläche. Dieser Connector wird verwendet, um Daten mithilfe von Amazon S3 als Ablagepunkt an den potenziellen Acxiom-Dienst zu senden. Wenden Sie sich an Ihren Acxiom-Kundenbetreuer, sobald Sie mit dem Export von Dateien in die Amazon S3-Dropdown-Liste beginnen.
+In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Acxiom Prospect-Suppression] -Zielverbindung und eines Datenflusses mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben. Dieser Connector wird verwendet, um Daten mithilfe von Amazon S3 als Ablagepunkt an den potenziellen Acxiom-Dienst zu senden. Wenden Sie sich an Ihren Acxiom-Kundenbetreuer, sobald Sie mit dem Export von Dateien in die Amazon S3-Dropdown-Liste beginnen.
 
 ![Der Zielkatalog mit dem ausgewählten Acxiom-Ziel.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Acxiom Prospect-Suppression] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das [!DNL Acxiom Prospect-Suppression]-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Erstellen einer Unterdrückungsliste für die Anzeige von Datensätzen {#create-suppression-list}
 
@@ -43,14 +43,14 @@ Der Anwendungsfall wird über eine Kombination aus Ziel- und Quell-Connectoren a
 
 Zunächst würden Sie Ihre vorhandenen Kundenprofile mithilfe dieses Ziel-Connectors exportieren, um sie als Unterdrückungsdatei zu verwenden. Dadurch wird sichergestellt, dass keine vorhandenen Kundendatensätze einbezogen werden.
 
-Der Dienst von Acxiom sucht nach der Datei, ruft sie ab und verwendet sie zusammen mit zusätzlichen Auswahlkriterien und generiert eine Prospektdatei. Sie würden dann die entsprechende [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) Quell-Connector , um die potenziellen Profile in Adobe Real-Time CDP aufzunehmen.
+Der Dienst von Acxiom sucht nach der Datei, ruft sie ab und verwendet sie zusammen mit zusätzlichen Auswahlkriterien und generiert eine Prospektdatei. Anschließend verwenden Sie den entsprechenden Quell-Connector [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) , um die potenziellen Profile in Adobe Real-Time CDP aufzunehmen.
 
 ## Voraussetzungen {#prerequisites}
 
 >[!IMPORTANT]
 >
->* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen ](/help/access-control/home.md#permissions), **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -58,7 +58,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 | Audience Origin | Unterstützt | Beschreibung |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
-| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
 | Benutzerdefinierte Uploads | x | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -79,7 +79,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Zielkonfigurations-Workflow die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -91,9 +91,9 @@ Um auf Ihren Bucket auf dem Experience Platform zuzugreifen, müssen Sie gültig
 
 | Anmeldedaten | Beschreibung |
 |---------------|----------------------------------------------------------------------------------------------------------|
-| S3-Zugriffsschlüssel | Die Zugriffsschlüssel-ID für Ihren Behälter. Sie können diesen Wert aus dem [!DNL Acxiom] Team. |
-| S3-Geheimschlüssel | Die geheime Schlüssel-ID für Ihren Bucket. Sie können diesen Wert aus dem [!DNL Acxiom] Team. |
-| Behältername | Dies ist Ihr Bucket, in dem Dateien freigegeben werden. Sie können diesen Wert aus dem [!DNL Acxiom] Team. |
+| S3-Zugriffsschlüssel | Die Zugriffsschlüssel-ID für Ihren Behälter. Sie können diesen Wert vom [!DNL Acxiom]-Team abrufen. |
+| S3-Geheimschlüssel | Die geheime Schlüssel-ID für Ihren Bucket. Sie können diesen Wert vom [!DNL Acxiom]-Team abrufen. |
+| Behältername | Dies ist Ihr Bucket, in dem Dateien freigegeben werden. Sie können diesen Wert vom [!DNL Acxiom]-Team abrufen. |
 
 ### Neues Konto
 
@@ -103,7 +103,7 @@ So definieren Sie einen neuen Acxiom Managed S3-Speicherort:
 
 ### Vorhandenes Konto
 
-Mit der Variablen [!DNL Acxiom Prospect Suppression] Das Ziel wird in einem Listen-Popup angezeigt. Wenn diese Option aktiviert ist, werden Details zum Konto in der rechten Leiste angezeigt. Zeigen Sie das Beispiel in der Benutzeroberfläche an, wenn Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Konten]**:
+Konten, die bereits mit dem Ziel [!DNL Acxiom Prospect Suppression] definiert wurden, werden in einem Listen-Popup angezeigt. Wenn diese Option aktiviert ist, werden Details zum Konto in der rechten Leiste angezeigt. Zeigen Sie das Beispiel in der Benutzeroberfläche an, wenn Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Konten]** navigieren:
 
 ![Vorhandenes Konto](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -114,14 +114,14 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 ![Zieldetails](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
 
 * **Name (erforderlich)** - Der Name, unter dem das Ziel gespeichert wird
-* **Beschreibung** - Kurze Erläuterung des Ziels des Bestimmungsorts
-* **Behältername (erforderlich)** - Name des auf S3 eingerichteten Amazon S3-Buckets
-* **Ordnerpfad (erforderlich)** - Wenn Unterverzeichnisse in einem Behälter verwendet werden, muss ein Pfad definiert werden, oder &quot;/&quot;, um auf den Stammpfad zu verweisen.
+* **Beschreibung** - Kurze Erläuterung des Zwecks des Ziels
+* **Behältername (erforderlich)** - Name des auf S3 eingerichteten Amazon S3-Behälters
+* **Ordnerpfad (erforderlich)** - Wenn Unterverzeichnisse in einem Behälter verwendet werden, muss ein Pfad definiert sein oder &quot;/&quot;, um auf den Stammpfad zu verweisen.
 * **Dateityp** - Wählen Sie das Format aus, das Experience Platform für die exportierten Dateien verwenden soll. Derzeit erwartet die Acxiom-Verarbeitung nur den Dateityp CSV
 
 >[!IMPORTANT]
 >
->Bei Auswahl der CSV-Option *Trennzeichen*, *Anführungszeichen*, *Escape-Zeichen*, *Leerer Wert*, *Nullwert*, *Komprimierungsformat*, und *Manifestdatei einschließen* Optionen angezeigt werden, werden diese Einstellungen im folgenden Dokument ausführlicher erläutert [Formatierungsoptionen konfigurieren](../../ui/batch-destinations-file-formatting-options.md).
+>Bei Auswahl der CSV-Option werden die Optionen *Trennzeichen*, *Anführungszeichen*, *Escape-Zeichen*, *Leerwert*, *Nullwert*, *Komprimierungsformat* und *Manifestdatei einschließen* angezeigt. Im folgenden Dokument werden diese Einstellungen erläutert weitere Details [Konfigurieren der Formatierungsoptionen](../../ui/batch-destinations-file-formatting-options.md).
 
 ![CSV-Optionen](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
@@ -135,8 +135,8 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 >
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -146,14 +146,14 @@ Die Verarbeitung erfordert Name- und Adresselemente, während nicht alle Element
 
 | Zielfeld | Source-Beschreibung |
 |--------------|-------------------------------------------------------------|
-| name | Die `person.name.fullName` -Wert in Experience Platform. |
-| firstName | Die `person.name.firstName` -Wert in Experience Platform. |
-| lastName | Die `person.name.lastName` -Wert in Experience Platform. |
-| address1 | Die `mailingAddress.street1` -Wert in Experience Platform. |
-| address2 | Die `mailingAddress.street2` -Wert in Experience Platform. |
-| city | Die `mailingAddress.city` -Wert in Experience Platform. |
-| state | Die `mailingAddress.state` -Wert in Experience Platform. |
-| zip | Die `mailingAddress.postalCode` -Wert in Experience Platform. |
+| name | Der `person.name.fullName` -Wert in Experience Platform. |
+| firstName | Der `person.name.firstName` -Wert in Experience Platform. |
+| lastName | Der `person.name.lastName` -Wert in Experience Platform. |
+| address1 | Der `mailingAddress.street1` -Wert in Experience Platform. |
+| address2 | Der `mailingAddress.street2` -Wert in Experience Platform. |
+| city | Der `mailingAddress.city` -Wert in Experience Platform. |
+| state | Der `mailingAddress.state` -Wert in Experience Platform. |
+| zip | Der `mailingAddress.postalCode` -Wert in Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -173,7 +173,7 @@ Um festzustellen, ob die Daten erfolgreich exportiert wurden, überprüfen Sie I
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Batch-Daten von Experience Platform in Ihre [!DNL Acxiom] verwalteter S3-Speicherort. Wenden Sie sich an Ihren Acxiom-Support-Mitarbeiter mit dem Namen des Kontos, dem Dateinamen und dem Behälterpfad, damit die Verarbeitung eingerichtet werden kann.
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Batch-Daten von Experience Platform an Ihren von [!DNL Acxiom] verwalteten S3-Speicherort zu exportieren. Wenden Sie sich an Ihren Acxiom-Support-Mitarbeiter mit dem Namen des Kontos, dem Dateinamen und dem Behälterpfad, damit die Verarbeitung eingerichtet werden kann.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

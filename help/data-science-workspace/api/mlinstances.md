@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Instanzen; Sensei-API für maschinelles Lernen
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Instanzen; Sensei Machine Learning API
 solution: Experience Platform
 title: MLInstances API Endpoint
 description: Eine MLInstance ist eine Kopplung einer vorhandenen Engine mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
@@ -14,13 +14,13 @@ ht-degree: 19%
 
 # MLInstances-Endpunkt
 
-Eine MLInstance ist eine Kopplung eines vorhandenen [Engine](./engines.md) mit einem geeigneten Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
+Eine MLInstance ist eine Kopplung einer vorhandenen [Engine](./engines.md) mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
 
 ## Erstellen einer MLInstance {#create-an-mlinstance}
 
-Sie können eine MLInstance erstellen, indem Sie eine POST-Anfrage ausführen und dabei eine Anfrage-Payload angeben, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einen entsprechenden Satz von Standardkonfigurationen.
+Sie können eine MLInstance erstellen, indem Sie eine POST-Anfrage ausführen und dabei eine Anfrage-Payload angeben, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einem entsprechenden Satz von Standardkonfigurationen besteht.
 
-Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Anzahl der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn auf eine Python-Engine verwiesen wird, können Sie entweder eine CPU oder eine GPU zu Trainings- und Scoring-Zwecken verwenden. Weitere Informationen finden Sie im Anhang unter [PySpark- und Spark-Ressourcenkonfigurationen](./appendix.md#resource-config) und [Python-CPU- und GPU-Konfigurationen](./appendix.md#cpu-gpu-config) für weitere Informationen.
+Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Anzahl der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn auf eine Python-Engine verwiesen wird, können Sie entweder eine CPU oder eine GPU zu Trainings- und Scoring-Zwecken verwenden. Weitere Informationen finden Sie in den Anhang-Abschnitten unter [PySpark- und Spark-Ressourcenkonfigurationen](./appendix.md#resource-config) und [Python-CPU- und GPU-Konfigurationen](./appendix.md#cpu-gpu-config) .
 
 **API-Format**
 
@@ -83,7 +83,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten MLInstance einschließlich ihrer eindeutigen Kennung (`id`).
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten MLInstance einschließlich ihrer eindeutigen Kennung (`id`) enthält.
 
 ```json
 {
@@ -142,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Eines der [Verfügbare Abfrageparameter](./appendix.md#query) verwendet, um Ergebnisse zu filtern. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
 | `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
@@ -275,7 +275,7 @@ Sie können eine vorhandene MLInstance aktualisieren, indem Sie ihre Eigenschaft
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [Abrufen der MLInstance nach ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, zuerst eine GET-Anfrage zum Abrufen der MLInstance anhand von ID](#retrieve-specific) durchzuführen. [ Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Mit dem folgenden Beispiel-API-Aufruf werden die Trainings- und Scoring-Parameter einer MLInstance aktualisiert, während sie zunächst über diese Eigenschaften verfügen:
 

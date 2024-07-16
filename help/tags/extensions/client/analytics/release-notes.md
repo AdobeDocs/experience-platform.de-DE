@@ -15,7 +15,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 >[!NOTE]
 >
->Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen des [AppMeasurement JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de). Siehe Abschnitt [AppMeasurement-Versionshinweise](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) für Details zu den spezifischen Versionen, die unten erwähnt werden.
+>Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen der [AppMeasurement JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de) aktualisiert wird. Weitere Informationen zu den unten aufgeführten Versionen finden Sie in den [AppMeasurement-Versionshinweisen](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) .
 
 ## 4. März 2024
 
@@ -23,7 +23,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* Aktualisiert auf [AppMeasurement auf v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+* Aktualisierung auf [AppMeasurement auf Version 2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
 ## 15. September 2023
 
@@ -31,7 +31,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* Aktualisiert auf [AppMeasurement auf v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* Aktualisierung auf [AppMeasurement auf Version 2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
 
 
 ## 19. Juli 2023
@@ -40,13 +40,13 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 
 **Funktionen**:
 
-* Aktualisiert auf [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
-* Eine optionale Konfiguration wurde hinzugefügt (`decodeLinkParameters` default `false`), die Link-URLs dekodieren, die doppelt byte-kodierte Zeichen enthalten.
+* Aktualisierung auf [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
+* Es wurde eine optionale Konfiguration (`decodeLinkParameters` default `false`) hinzugefügt, die Link-URLs dekodiert, die doppelt byte-kodierte Zeichen enthalten.
 
 **Fehlerbehebungen**:
 
-* Zusätzliche Fehlerbehebung für Browser mit defekter hochentropischer Auflösung [Benutzeragenten-Clienthinweise](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) APIs.
-* Geändert [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Zu verwendender Content-Type-Header `x-www-form-urlencoded` Standardmäßig.
+* Zusätzliche Fehlerbehandlung für Browser mit defekten High-Entropy-APIs [Benutzeragent-Client-Hinweise](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) hinzugefügt.
+* Die Kopfzeile [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Content-Type wurde so geändert, dass standardmäßig `x-www-form-urlencoded` verwendet wird.
 
 ## 23. September 2022
 
@@ -55,7 +55,7 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 **Funktionen**:
 
 * Auf AppMeasurement v2.23.0 aktualisiert.
-* Die Erweiterung kann jetzt hochentropy erfassen [Benutzeragenten-Clienthinweise](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) wie von der neuesten Version von AppMeasurement unterstützt.
+* Die Erweiterung kann jetzt Client-Hinweise mit hoher Entropie [user-agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) erfassen, wie dies von der neuesten Version von AppMeasurement unterstützt wird.
 
 ## 28. Februar 2022
 

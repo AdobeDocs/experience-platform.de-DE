@@ -8,7 +8,7 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -55,4 +55,4 @@ ht-degree: 99%
       - [Kundenseitig verwaltete Schlüssel](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Data Governance](customer-ai/cai-data-governance/data-governance.md)
       - [Governance-Richtlinien](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

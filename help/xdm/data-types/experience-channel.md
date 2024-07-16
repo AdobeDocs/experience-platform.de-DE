@@ -7,13 +7,13 @@ exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 20%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL Experience-Kanal] Datentyp
+# [!UICONTROL Erlebniskanal]-Datentyp
 
-[!UICONTROL Experience-Kanal] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der einen Erlebniskanal beschreibt. Ein Erlebniskanal stellt eine Methode oder einen Pfad für die Nutzung digitaler Erlebnisse dar.
+[!UICONTROL Erlebniskanal] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der einen Erlebniskanal beschreibt. Ein Erlebniskanal stellt eine Methode oder einen Pfad für die Nutzung digitaler Erlebnisse dar.
 
 Es gibt mehrere Erlebniskanäle mit jeweils unterschiedlichen Einschränkungen hinsichtlich der Bereitstellung von Inhalten, der Art und Weise, wie Kundeninteraktionen beobachtet werden können und wie Daten erfasst werden. Innerhalb eines Kanals können Erlebnisse an bestimmte Orte bereitgestellt werden. Die Standorte und Standorte in einem Kanal unterscheiden sich von Kanal zu Kanal.
 
@@ -26,7 +26,7 @@ Es gibt mehrere Erlebniskanäle mit jeweils unterschiedlichen Einschränkungen h
 | `contentTypes` | Zeichenfolgen-Array | Die Content-Typen, die dieser Kanal bereitstellen kann. |
 | `locationTypes` | Zeichenfolgen-Array | Die Arten von Orten (virtuellen Orten), aus denen dieser Kanal besteht und an die Inhalte geliefert werden können. |
 | `mediaAction` | Zeichenfolge | Beschreibt ggf. eine Medienaktion &quot;Erlebnisereignis&quot;. |
-| `mediaType` | Zeichenfolge | Beschreibt, ob der Medientyp gebührenpflichtig, besessen oder verdient ist. |
+| `mediaType` | Zeichenfolge | Beschreibt, ob der Medientyp bezahlt, in Besitz oder verdient ist. |
 | `metricTypes` | Zeichenfolgen-Array | Die Metriken, die in diesem Kanal erfasst werden können. |
 | `mode` | Zeichenfolge | Art und Weise, wie Erlebnisse in diesem Kanal bereitgestellt werden. |
 | `typeAtSource` | Zeichenfolge | Ein benutzerdefinierter Name für den Kanal. |

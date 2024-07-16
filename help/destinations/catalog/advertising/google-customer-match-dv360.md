@@ -12,11 +12,11 @@ ht-degree: 18%
 
 # [!DNL Google Customer Match + Display & Video 360]-Verbindung
 
-Verwenden Sie dieses Ziel, um Ihre Erstanbieter-PII-basierten [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) führt direkt Listen auf [!DNL Google Display & Video 360] Eigenschaften wie [!DNL Search], [!DNL YouTube], [!DNL Gmail]und die [!DNL Google Display Network].
+Verwenden Sie dieses Ziel, um Ihre Erstanbieter-PII-basierten [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) Listen direkt in [!DNL Google Display & Video 360] Eigenschaften wie [!DNL Search], [!DNL YouTube], [!DNL Gmail] und die [!DNL Google Display Network] zu aktivieren.
 
-Bestimmte in Google integrierte Drittanbieter, wie Adobe Real-Time CDP, können die [!DNL Google Audience Partner API] erstellen [!DNL Customer Match] Zielgruppen direkt in der [!DNL Display & Video 360] -Konto.
+Bestimmte in Google integrierte Drittanbieter, wie Adobe Real-Time CDP, können mit dem [!DNL Google Audience Partner API] Zielgruppen vom Typ [!DNL Customer Match] direkt im [!DNL Display & Video 360] -Konto des Kunden erstellen.
 
-Mit der neu eingeführten Fähigkeit, [!DNL Customer Matched] Zielgruppen über [!DNL Display & Video 360], können Sie nun Zielgruppen in einem erweiterten Inventarverzeichnis ansprechen.
+Mit der neu eingeführten Funktion zur Nutzung von [!DNL Customer Matched] -Zielgruppen über [!DNL Display & Video 360] hinweg können Sie jetzt Zielgruppen über eine erweiterte Liste von Inventarquellen hinweg ansprechen.
 
 >[!IMPORTANT]
 >
@@ -28,13 +28,13 @@ Mit der neu eingeführten Fähigkeit, [!DNL Customer Matched] Zielgruppen über 
 
 >[!IMPORTANT]
 >
-> Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Kundenabgleich](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)und die [Display &amp; Video 360-API](https://developers.google.com/display-video/api/guides/getting-started/overview) um die Erfüllung und die Zustimmungsanforderungen zu unterstützen, die im Rahmen der [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union ([EU-Richtlinie zur Benutzereinwilligung](https://www.google.com/about/company/user-consent-policy/)). Die Durchsetzung dieser Änderungen an den Zustimmungsanforderungen ist ab 6. März 2024 verfügbar.
+> Google veröffentlicht Änderungen an der [Google Ads API](https://developers.google.com/google-ads/api/docs/start), der [Kundenabgleich](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) und der [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview), um die Compliance- und Zustimmungsanforderungen zu unterstützen, die im [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in der Europäischen Union ([EU-Benutzerzustimmungsrichtlinie](https://www.google.com/about/company/user-consent-policy/)) definiert sind. Die Durchsetzung dieser Änderungen an den Zustimmungsanforderungen ist ab 6. März 2024 verfügbar.
 ><br/>
 >Um die EU-Politik zur Einwilligung von Nutzern einzuhalten und im Europäischen Wirtschaftsraum (EWR) weiterhin Zielgruppenlisten für Benutzer zu erstellen, müssen Werbetreibende und Partner sicherstellen, dass sie beim Hochladen von Zielgruppendaten die Einwilligung der Endnutzer weitergeben. Als Google-Partner bietet Ihnen Adobe die nötigen Tools, um diese Zustimmungsanforderungen gemäß DMA in der Europäischen Union zu erfüllen.
 ><br/>
->Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Einverständnisrichtlinie](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) zum Herausfiltern von Profilen ohne Zustimmung müssen keine Maßnahmen ergriffen werden.
+>Kunden, die Adobe Privacy &amp; Security Shield erworben und eine [Zustimmungsrichtlinie](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) konfiguriert haben, um Profile ohne Zustimmung herauszufiltern, müssen keine Maßnahmen ergreifen.
 ><br/>
->Kunden, die keine Adobe Privacy &amp; Security Shield erworben haben, müssen die [Segmentdefinition](../../../segmentation/home.md#segment-definitions) Funktionen in [Segment Builder](../../../segmentation/ui/segment-builder.md) , um Profile ohne Zustimmung herauszufiltern, damit die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiterhin verwendet werden.
+>Kunden, die keine Adobe Privacy &amp; Security Shield erworben haben, müssen die Funktion [Segmentdefinition](../../../segmentation/home.md#segment-definitions) in [Segment Builder](../../../segmentation/ui/segment-builder.md) verwenden, um Profile ohne Zustimmung herauszufiltern, damit sie die bestehenden Real-Time CDP Google-Ziele ohne Unterbrechung weiterhin verwenden können.
 
 ## Verwendung dieses Ziels
 
@@ -42,7 +42,7 @@ Im Zielkatalog sind verschiedene Integrationen mit Google verfügbar. Es kann sc
 
 | [Google-Kundenabgleich](/help/destinations/catalog/advertising/google-customer-match.md) | [Google Display &amp; Video 360](/help/destinations/catalog/advertising/google-dv360.md) | [!DNL Google Customer Match] + [!DNL Display & Video 360] (dieser Connector) |
 |---------|----------|---------|
-| Exportieren Sie Ihre PII-basierten Zielgruppen und erreichen Sie sie anhand des in verfügbaren Bestands. [!DNL Google Customer Match]. | Erreichen Sie Cookie-basierte Zielgruppen im gesamten Inventar, das über verfügbar ist. [!DNL Google Display & Video 360], auf von Google betriebenen Eigenschaften wie YouTube und [!DNL Search]und darüber hinaus. | PII-basierte Zielgruppen erstellen in [!DNL Google Customer Match] und sie auf dem in [!DNL Google Display & Video 360], nur bei von Google verwalteten und betriebenen Eigenschaften. |
+| Exportieren Sie Ihre PII-basierten Zielgruppen und erreichen Sie sie über den in [!DNL Google Customer Match] verfügbaren Bestand. | Erreichen Sie Cookie-basierte Zielgruppen über das Inventar, das über [!DNL Google Display & Video 360], über Google-eigene und betriebene Eigenschaften wie YouTube und [!DNL Search] und darüber hinaus verfügbar ist. | Erstellen Sie auf PII basierende Zielgruppen in [!DNL Google Customer Match] und erreichen Sie sie im in [!DNL Google Display & Video 360] verfügbaren Inventar, nur bei von Google verwalteten und betriebenen Eigenschaften. |
 
 ## Anwendungsfälle {#use-cases}
 
@@ -50,22 +50,22 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann dieses Ziel verwendet werd
 
 ### Anwendungsfall 1
 
-Eine Sportbekleidungsmarke möchte bestehende Kunden über erreichen [!DNL Google Search] und [!DNL Google Shopping] , um Angebote und Artikel basierend auf ihren bisherigen Käufen und dem Browser-Verlauf zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System auf Experience Platform erfassen und Zielgruppen aus eigenen Offline-Daten erstellen. Anschließend können sie diese Zielgruppen an die [!DNL Google Customer Match + Display & Video 360] Ziel, das überall verwendet werden soll [!DNL Google Display & Video 360] Eigenschaften wie [!DNL Search], [!DNL YouTube], [!DNL Gmail]und die [!DNL Google Display Network].
+Eine Marke für Sportbekleidung möchte Bestandskunden über [!DNL Google Search] und [!DNL Google Shopping] erreichen, um Angebote und Artikel auf der Grundlage ihrer früheren Käufe und des Browserverlaufs zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System auf Experience Platform erfassen und Zielgruppen aus eigenen Offline-Daten erstellen. Anschließend können sie diese Zielgruppen an das [!DNL Google Customer Match + Display & Video 360]-Ziel senden, das über [!DNL Google Display & Video 360]-Eigenschaften wie [!DNL Search], [!DNL YouTube], [!DNL Gmail] und die [!DNL Google Display Network] hinweg verwendet werden soll.
 
 ### Anwendungsfall 2
 
 Ein renommiertes Technologieunternehmen hat ein neues Telefon gestartet. Um dieses neue Telefonmodell zu bewerben, möchten sie Kunden, die Inhaber früherer Modelle ihrer Telefone sind, für die neuen Funktionen des Telefons sensibilisieren.
 
-Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank unter Verwendung der E-Mail-Adressen als Kennungen in Experience Platform hoch. Zielgruppen werden basierend auf Kunden erstellt, die Inhaber älterer Telefonmodelle sind. Anschließend werden Zielgruppen an gesendet [!DNL Google Customer Match], damit das Unternehmen aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden in ansprechen kann [!DNL Google Display & Video 360] Eigenschaften wie [!DNL Search], [!DNL YouTube], [!DNL Gmail]und die [!DNL Google Display Network].
+Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank unter Verwendung der E-Mail-Adressen als Kennungen in Experience Platform hoch. Zielgruppen werden basierend auf Kunden erstellt, die Inhaber älterer Telefonmodelle sind. Anschließend werden Zielgruppen an [!DNL Google Customer Match] gesendet, sodass das Unternehmen aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden mit [!DNL Google Display & Video 360] Eigenschaften wie [!DNL Search], [!DNL YouTube], [!DNL Gmail] und dem [!DNL Google Display Network] ansprechen kann.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Google Customer Match] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+[!DNL Google Customer Match] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| phone_sha256_e.164 | Telefonnummern im E164-Format, gehasht mit dem SHA256-Algorithmus | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Übereinstimmung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Klartext- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Übereinstimmung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| phone_sha256_e.164 | Telefonnummern im E164-Format, gehasht mit dem SHA256-Algorithmus | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-Abgleich-Anforderungen](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Klartext- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [ID-Übereinstimmungsanforderungen](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 | Audience Origin | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -94,26 +94,26 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer und andere), die im [!DNL Google Customer Match] Ziel. |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer und andere), die im [!DNL Google Customer Match]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## [!DNL Google Customer Match] Kontovoraussetzungen {#google-account-prerequisites}
 
-Vor der Einrichtung einer [!DNL Google Customer Match] Ziel in Experience Platform lesen und beachten Sie die Google-Richtlinie zur Verwendung von [!DNL Customer Match], die im Abschnitt [Dokumentation zur Google-Unterstützung](https://support.google.com/google-ads/answer/6299717).
+Bevor Sie ein [!DNL Google Customer Match] -Ziel in Experience Platform einrichten, sollten Sie die Google-Richtlinie zur Verwendung von [!DNL Customer Match] lesen und einhalten, wie in der [Google-Support-Dokumentation](https://support.google.com/google-ads/answer/6299717) beschrieben.
 
-Stellen Sie als Nächstes sicher, dass Ihre [!DNL Google] -Konto für eine [!DNL Standard] oder einer höheren Berechtigungsebene. Siehe [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) für Details.
+Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine Berechtigungsebene von [!DNL Standard] oder höher konfiguriert ist. Weitere Informationen finden Sie in der Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .[
 
 ### Zulassungsliste {#allowlist}
 
-Vor der Erstellung [!DNL Google Customer Match] Ziel in Experience Platform, stellen Sie sicher, dass Ihre [!DNL Google Ads] das Konto erfüllt die [[!DNL Google Customer Match] policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
+Bevor Sie das Ziel [!DNL Google Customer Match] in Experience Platform erstellen, stellen Sie sicher, dass Ihr [!DNL Google Ads]-Konto die [[!DNL Google Customer Match] Richtlinie](https://support.google.com/google-ads/answer/6299717/customer-match-policy) erfüllt.
 
 Kunden mit kompatiblen Konten werden automatisch von Google auf die Zulassungsliste gesetzt.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
-[!DNL Google] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher werden die Zielgruppen für [!DNL Google Customer Match] muss deaktiviert sein *Hash* Kennungen, z. B. Hash-E-Mail-Adressen oder Telefonnummern.
+[!DNL Google] erfordert, dass keine personenbezogenen Daten (PII) klar gesendet werden. Daher müssen die für [!DNL Google Customer Match] aktivierten Zielgruppen aus *Hash*-Identifikatoren wie Hash-E-Mail-Adressen oder Telefonnummern abgeleitet werden.
 
 Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen.
 
@@ -121,26 +121,26 @@ Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müsse
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer Match]:
 
-* **Rohe Telefonnummern erfassen**: Sie können rohe Telefonnummern in der [!DNL E.164] in [!DNL Platform]und sie werden bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in die `Phone_E.164` Namespace.
-* **Hash-Telefonnummern erfassen**: Sie können Ihre Telefonnummern vor der Erfassung in [!DNL Platform]. Wenn Sie diese Option wählen, achten Sie darauf, Ihre Hash-Telefonnummern immer in die `PHONE_SHA256_E.164` Namespace.
+* **Aufnahme von rohen Telefonnummern**: Sie können rohe Telefonnummern im Format [!DNL E.164] in [!DNL Platform] aufnehmen und sie werden bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den Namespace `Phone_E.164` aufzunehmen.
+* **Hash-Telefonnummern erfassen**: Sie können Ihre Telefonnummern vorab hash, bevor Sie sie in [!DNL Platform] aufnehmen. Wenn Sie diese Option wählen, achten Sie darauf, Ihre Hash-Telefonnummern immer in den Namespace `PHONE_SHA256_E.164` aufzunehmen.
 
 >[!NOTE]
 >
->Telefonnummern, die in die `Phone` Der Namespace kann nicht für die [!DNL Google Customer Match + DV360] Ziel.
+>Telefonnummern, die in den Namespace `Phone` aufgenommen werden, können nicht für das Ziel [!DNL Google Customer Match + DV360] aktiviert werden.
 
 ### Anforderungen an das E-Mail-Hashing {#hashing-requirements}
 
-Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder eindeutige E-Mail-Adressen in Experience Platform verwenden und [!DNL Platform] Hash sie bei Aktivierung.
+Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder eindeutige E-Mail-Adressen in Experience Platform verwenden und diese bei der Aktivierung mit [!DNL Platform] hash lassen.
 
 Weitere Informationen zu den Hash-Anforderungen von Google und anderen Aktivierungsbeschränkungen finden Sie in den folgenden Abschnitten der Google-Dokumentation:
 
-* [[!DNL Customer Match] mit E-Mail-Adresse, -Adresse oder Benutzer-ID](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match]  mit E-Mail-Adresse, -Adresse oder Benutzer-ID](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] considerations](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_considerations)
 * [[!DNL Customer Match] mit Telefonnummer](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
 * [[!DNL Customer Match] mit Mobilgeräte-IDs](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
-Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie in der [Batch-Erfassung - Übersicht](../../../ingestion/batch-ingestion/overview.md) und [Streaming-Erfassung - Übersicht](../../../ingestion/streaming-ingestion/overview.md).
+Weiterführende Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie in der [Batch-Erfassungsübersicht](../../../ingestion/batch-ingestion/overview.md) und der [Streaming-Erfassungsübersicht](../../../ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Sie sicher, dass Sie die Anforderungen von Google erfüllen, wie in den obigen Links beschrieben.
 
@@ -163,7 +163,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
@@ -171,9 +171,9 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 
 Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL Name]**: Geben Sie einen Namen für diese Zielverbindung an.
+* **[!UICONTROL Name]**: Geben Sie einen Namen für diese Zielverbindung an
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für diese Zielverbindung ein.
-* **[!UICONTROL Konto-ID]**: your [Google Ads-Kunden-ID](https://support.google.com/google-ads/answer/1704344?hl=en). Das Format der ID ist xxx-xxx-xxxx. Wenn Sie die [!DNL Google Ads Manager Account (My Client Center)]verwenden Sie nicht Ihre Manager-Konto-ID. Verwenden Sie die [Google Ads-Kunden-ID](https://support.google.com/google-ads/answer/1704344?hl=en) anstatt.
+* **[!UICONTROL Konto-ID]**: Ihre [Google Ads-Kunden-ID](https://support.google.com/google-ads/answer/1704344?hl=en). Das Format der ID ist xxx-xxx-xxxx. Verwenden Sie bei Verwendung von [!DNL Google Ads Manager Account (My Client Center)] nicht Ihre Manager-Konto-ID. Verwenden Sie stattdessen die Google Ads-Kunden-ID](https://support.google.com/google-ads/answer/1704344?hl=en).[
 * **[!UICONTROL Kontotyp]**: Ihr Google-Kontotyp. Wählen Sie je nach Typ Ihres Werbekontos mit Google eine Option aus:
    * **[!UICONTROL Videopartner anzeigen]**
    * **[!UICONTROL Display Video Advertiser]**
@@ -188,8 +188,8 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities* zu Zielen hinzufügen, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](../../assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *Identitäten* in Ziele zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions) <br>. ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](../../assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
@@ -205,31 +205,31 @@ Dies ist ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung
 
 Quellfelder auswählen:
 
-* Wählen Sie die `Email` Namespace als Quellidentität verwenden, wenn die von Ihnen verwendeten E-Mail-Adressen nicht gehasht sind.
-* Wählen Sie die `Email_LC_SHA256` Namespace als Quellidentität verwenden, wenn Sie bei der Datenerfassung in einen Hash-Wert für E-Mail-Adressen von Kunden [!DNL Platform], gemäß [!DNL Google Customer Match] [Anforderungen an das E-Mail-Hashing](#hashing-requirements).
-* Wählen Sie die `PHONE_E.164` Namespace als Quellkennung verwenden, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] Hash die Telefonnummern, um die [!DNL Google Customer Match] Anforderungen.
-* Wählen Sie die `Phone_SHA256_E.164` Namespace als Quellidentität, wenn Sie bei der Datenerfassung in [!DNL Platform], gemäß [!DNL Facebook] [Hash-Anforderungen für Telefonnummern](#phone-number-hashing-requirements).
+* Wählen Sie den Namespace `Email` als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht gehasht werden.
+* Wählen Sie den Namespace `Email_LC_SHA256` als Quellidentität aus, wenn Sie Kunden-E-Mail-Adressen bei der Datenerfassung gemäß den Anforderungen für den E-Mail-Hashing [!DNL Google Customer Match] [E-Mail-Hashing](#hashing-requirements) in [!DNL Platform] gehasht haben.
+* Wählen Sie den Namespace `PHONE_E.164` als Quellkennung aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] hasst die Telefonnummern, um die [!DNL Google Customer Match]-Anforderungen zu erfüllen.
+* Wählen Sie den Namespace `Phone_SHA256_E.164` als Quellidentität aus, wenn Sie bei der Datenerfassung Telefonnummern gemäß den Anforderungen für das Hashing der Telefonnummer [!DNL Facebook] [4 bei der Erfassung der Daten in [!DNL Platform] gehasht haben.](#phone-number-hashing-requirements)
 
 Zielgruppenfelder auswählen:
 
-* Wählen Sie die `Email_LC_SHA256` Namespace als Zielidentität verwenden, wenn Ihre Quell-Namespaces `Email` oder `Email_LC_SHA256`.
-* Wählen Sie die `Phone_SHA256_E.164` Namespace als Zielidentität verwenden, wenn Ihre Quell-Namespaces `PHONE_E.164` oder `Phone_SHA256_E.164`.
+* Wählen Sie den Namespace `Email_LC_SHA256` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `Email` oder `Email_LC_SHA256` sind.
+* Wählen Sie den Namespace `Phone_SHA256_E.164` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `PHONE_E.164` oder `Phone_SHA256_E.164` sind.
 
-![Identitätszuordnung zwischen Quell- und Zielfeldern, die im Schritt &quot;Zuordnung&quot;des Aktivierungs-Workflows angezeigt werden](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png)
+![Identitätszuordnung zwischen Quell- und Zielfeldern, die im Schritt &quot;Zuordnung&quot;des Aktivierungs-Workflows angezeigt werden.](../../assets/catalog/advertising/google-customer-match-dv360/identity-mapping-gcm-dv360.png)
 
-Daten aus nicht gehashten Namespaces werden automatisch von [!DNL Platform] bei Aktivierung.
+Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DNL Platform] gehasht.
 
 Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
 
-![Wenden Sie die Transformationssteuerung an, die im Schritt Zuordnung des Aktivierungs-Workflows hervorgehoben ist.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+![Wenden Sie die Transformationssteuerung an, die im Schritt &quot;Zuordnung&quot;des Aktivierungs-Workflows hervorgehoben ist.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
 ## Überprüfen, ob die Zielgruppenaktivierung erfolgreich war {#verify-activation}
 
-Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrer **[!UICONTROL Google Ads]** -Konto. Die aktivierten Zielgruppen werden in Ihrem Google-Konto als Kundenlisten angezeigt. Abhängig von der Größe Ihrer Zielgruppe füllen sich einige Zielgruppen nur aus, wenn mehr als 1000 aktive Benutzer zur Verfügung stehen. Weitere Informationen finden Sie unter [Dokumentation zu Google Audience Partner](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). Beachten Sie, dass Sie Google um Zugriff auf die Dokumentation im Link bitten müssen.
+Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrem Konto für **[!UICONTROL Google Ads]**. Die aktivierten Zielgruppen werden in Ihrem Google-Konto als Kundenlisten angezeigt. Abhängig von der Größe Ihrer Zielgruppe füllen sich einige Zielgruppen nur aus, wenn mehr als 1000 aktive Benutzer zur Verfügung stehen. Weitere Informationen finden Sie in der Dokumentation zu Google Audience Partner](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). [ Beachten Sie, dass Sie Google um Zugriff auf die Dokumentation im Link bitten müssen.
 
 ## Data Governance
 
-Einige Ziele in Experience Platform haben bestimmte Regeln und Pflichten für Daten, die an die Zielplattform gesendet oder von ihr empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Data Governance-Tools, mit denen Sie einige dieser Datennutzungsverpflichtungen verwalten können. [Weitere Infos](../../../data-governance/labels/overview.md) über Data Governance-Tools und -Richtlinien.
+Einige Ziele in Experience Platform haben bestimmte Regeln und Pflichten für Daten, die an die Zielplattform gesendet oder von ihr empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Data Governance-Tools, mit denen Sie einige dieser Datennutzungsverpflichtungen verwalten können. [Erfahren Sie mehr ](../../../data-governance/labels/overview.md) über Data Governance-Tools und -Richtlinien.
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -239,4 +239,4 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kundenkonten die Variable [Voraussetzungen](#google-account-prerequisites). Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder einer höheren Berechtigungsebene. Siehe [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) für Details.
+Dieser Fehler tritt auf, wenn Kundenkonten nicht den [Voraussetzungen](#google-account-prerequisites) entsprechen. Um dieses Problem zu beheben, wenden Sie sich an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder eine höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .[

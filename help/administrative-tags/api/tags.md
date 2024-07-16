@@ -2,19 +2,19 @@
 title: Unified Tags Endpoint
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-APIs Tag-Kategorien und Tags erstellen, aktualisieren, verwalten und löschen.
 role: Developer
-source-git-commit: ede314d0cbe50514090915fccf7ef3c2a5254b7a
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
 
 ---
 
-
 # Unified-Tags-Endpunkt
 
 >[!IMPORTANT]
 >
->Die Endpunkt-URL für diesen Satz von Endpunkten lautet `https://experience.adobe.io`.
+>Die Endpunkt-URL für diesen Satz von Endpunkten ist `https://experience.adobe.io`.
 
 Tags sind eine Funktion, mit der Sie Metadaten-Taxonomien verwalten können, um Geschäftsobjekte zu klassifizieren und so die Erkennung und Kategorisierung zu erleichtern. Anschließend können Sie diese Tags in weiteren Gruppen organisieren, indem Sie sie zu Tag-Kategorien hinzufügen.
 
@@ -22,19 +22,19 @@ Dieses Handbuch enthält Informationen zum besseren Verständnis von Tags und Ta
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der Adobe Experience Platform-APIs. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der Adobe Experience Platform-APIs. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen
 
 ### Glossar
 
-Im folgenden Glossar wird der Unterschied zwischen einem **Tag** und **Tag-Kategorie**.
+Im folgenden Glossar wird der Unterschied zwischen einem **Tag** und einer **Tag-Kategorie** erläutert.
 
-- **Tag**: Mit einem -Tag können Sie die Metadaten-Taxonomie für Geschäftsobjekte verwalten, sodass Sie diese Objekte klassifizieren können, um eine einfachere Erkennung und Kategorisierung zu ermöglichen.
-   - **Nicht kategorisiertes Tag**: Ein nicht kategorisiertes Tag ist ein Tag, das nicht zu einer Tag-Kategorie gehört. Standardmäßig werden erstellte Tags nicht kategorisiert.
-- **Tag-Kategorie**: Mit einer Tag-Kategorie können Sie Ihre Tags in aussagekräftige Sets gruppieren, sodass Sie mehr Kontext für den Zweck des Tags bereitstellen können.
+- **Tag**: Mit einem Tag können Sie die Metadaten-Taxonomie für Geschäftsobjekte verwalten, sodass Sie diese Objekte klassifizieren können, um eine einfachere Erkennung und Kategorisierung zu ermöglichen.
+   - **Nicht kategorisiertes Tag**: Ein nicht kategorisiertes Tag ist ein Tag, das keiner Tag-Kategorie angehört. Standardmäßig werden erstellte Tags nicht kategorisiert.
+- **Tag-Kategorie**: Mit einer Tag-Kategorie können Sie Ihre Tags in aussagekräftigen Sätzen gruppieren, sodass Sie dem Zweck des Tags mehr Kontext bieten können.
 
 ## Abrufen einer Liste von Tag-Kategorien {#get-tag-categories}
 
-Sie können eine Liste von Tag-Kategorien abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an die `/tagCategory` -Endpunkt.
+Sie können eine Liste von Tag-Kategorien abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an den Endpunkt `/tagCategory` stellen.
 
 **API-Format**
 
@@ -49,8 +49,8 @@ Die folgenden optionalen Abfrageparameter können beim Abrufen von Tag-Kategorie
 | --------------- | ----------- | ------- |
 | `start` | Der Ort, an dem die Liste der Ergebnisse beginnt. Sie können dies verwenden, um den Startindex für die Paginierung der Ergebnisse anzugeben. | `start=a` |
 | `limit` | Die maximale Anzahl von Tag-Kategorien, die pro Seite abgerufen werden sollen. | `limit=20` |
-| `property` | Das Attribut, nach dem Sie beim Abrufen von Tag-Kategorien filtern möchten. Zu den unterstützten Werten gehören: &lt;ul><li>`name`: Der Name der Tag-Kategorie.</li></ul> | `property=name==category` |
-| `sortBy` | Die Reihenfolge, in der die Tag-Kategorien sortiert werden. Zu den unterstützten Werten gehören `name`, `createdAt`, und `modifiedAt`. | `sortBy=name` |
+| `property` | Das Attribut, nach dem Sie beim Abrufen von Tag-Kategorien filtern möchten. Zu den unterstützten Werten gehören: &lt;ul≥<li>`name`: Der Name der Tag-Kategorie.</li></ul> | `property=name==category` |
+| `sortBy` | Die Reihenfolge, in der die Tag-Kategorien sortiert werden. Zu den unterstützten Werten gehören `name`, `createdAt` und `modifiedAt`. | `sortBy=name` |
 | `sortOrder` | Die Richtung, nach der die Tag-Kategorien sortiert werden. Zu den unterstützten Werten gehören `asc` und `desc`. | `sortOrder=asc` |
 
 **Anfrage**
@@ -104,7 +104,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste aller Tag-Kat
 >
 >Nur der Systemadministrator und der Produkt-Administrator können diesen API-Aufruf verwenden.
 
-Sie können eine neue Tag-Kategorie erstellen, indem Sie eine POST-Anfrage an die `/tagCategory` -Endpunkt.
+Sie können eine neue Tag-Kategorie erstellen, indem Sie eine POST-Anfrage an den `/tagCategory` -Endpunkt senden.
 
 **API-Format**
 
@@ -159,7 +159,7 @@ Eine Beispielantwort gibt den HTTP-Status 200 mit Details zur neu erstellten Tag
 
 ## Bestimmte Tag-Kategorie abrufen {#get-tag-category}
 
-Sie können eine bestimmte Tag-Kategorie abrufen, die zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an die `/tagCategory` -Endpunkt und die ID der Tag-Kategorie angeben.
+Sie können eine bestimmte Tag-Kategorie abrufen, die zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an den `/tagCategory` -Endpunkt senden und die ID der Tag-Kategorie angeben.
 
 **API-Format**
 
@@ -224,7 +224,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen T
 >
 >Nur der Systemadministrator und der Produkt-Administrator können diesen API-Aufruf verwenden.
 
-Sie können Details einer bestimmten Tag-Kategorie, die zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an die `/tagCategory` -Endpunkt und die ID der Tag-Kategorie angeben.
+Sie können Details einer bestimmten Tag-Kategorie, die zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an den `/tagCategory` -Endpunkt senden und die ID der Tag-Kategorie angeben.
 
 **API-Format**
 
@@ -291,7 +291,7 @@ Eine erfolgreiche Antwort HTTP-Status 200 mit Informationen zu Ihrer neu aktuali
 >
 >Nur der Systemadministrator und der Produkt-Administrator können diesen API-Aufruf verwenden.
 
-Sie können eine bestimmte Tag-Kategorie, die zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an die `/tagCategory` -Endpunkt und die ID der Tag-Kategorie angeben.
+Sie können eine bestimmte Tag-Kategorie, die zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/tagCategory` senden und die ID der Tag-Kategorie angeben.
 
 **API-Format**
 
@@ -323,7 +323,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren Ant
 
 ## Liste von Tags abrufen {#get-tags}
 
-Sie können eine Liste von Tags abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an die `/tags` -Endpunkt und die ID der Tag-Kategorie.
+Sie können eine Liste von Tags abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an den Endpunkt `/tags` und die ID der Tag-Kategorie richten.
 
 **API-Format**
 
@@ -338,8 +338,8 @@ Beim Abrufen von Tags können die folgenden optionalen Abfrageparameter verwende
 | --------------- | ----------- | ------- |
 | `start` | Der Ort, an dem die Liste der Ergebnisse beginnt. Sie können dies verwenden, um den Startindex für die Paginierung der Ergebnisse anzugeben. | `start=a` |
 | `limit` | Die maximale Anzahl von Tags, die pro Seite abgerufen werden sollen. | `limit=20` |
-| `property` | Das Attribut, nach dem Sie beim Abrufen von Tags filtern möchten. Zu den unterstützten Werten gehören:<ul><li>`name`: Der Name des Tags.</li><li>`archived`: Gibt an, ob die Tags archiviert oder nicht archiviert werden. Sie können diesen Wert auf Folgendes festlegen: `true` oder `false`.</li><li>`tagCategoryId`: Die ID der Tag-Kategorie, zu der das Tag gehört.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | Die Reihenfolge, in der die Tags sortiert werden. Zu den unterstützten Werten gehören `name`, `createdAt`, und `modifiedAt`. | `sortBy=name` |
+| `property` | Das Attribut, nach dem Sie beim Abrufen von Tags filtern möchten. Zu den unterstützten Werten gehören:<ul><li>`name`: Der Name des Tags.</li><li>`archived`: Gibt an, ob die Tags archiviert oder nicht archiviert werden. Sie können diesen Wert entweder auf `true` oder auf `false` setzen.</li><li>`tagCategoryId`: Die ID der Tag-Kategorie, zu der das Tag gehört.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | Die Reihenfolge, in der die Tags sortiert werden. Zu den unterstützten Werten gehören `name`, `createdAt` und `modifiedAt`. | `sortBy=name` |
 | `sortOrder` | Die Richtung, nach der die Tag-Kategorien sortiert werden. Zu den unterstützten Werten gehören `asc` und `desc`. | `sortOrder=asc` |
 
 
@@ -506,9 +506,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den Tags zurü
 >
 >Nur der Systemadministrator und der Produkt-Administrator können diesen API-Aufruf verwenden, um ein neues Tag in einer bestimmten Tag-Kategorie zu erstellen.
 >
->Wenn Sie ein nicht kategorisiertes Tag erstellen, tun Sie dies **not** benötigen Administratorberechtigungen.
+>Wenn Sie ein nicht kategorisiertes Tag erstellen, benötigen Sie für **nicht** Administratorberechtigungen.
 
-Sie können ein neues Tag erstellen, indem Sie eine POST-Anfrage an die `/tags` -Endpunkt.
+Sie können ein neues Tag erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/tags` senden.
 
 **API-Format**
 
@@ -575,7 +575,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zu Ihrem neu erst
 
 ## Abrufen eines bestimmten Tags {#get-tag}
 
-Sie können ein bestimmtes Tag abrufen, das zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an die `/tags` -Endpunkt und geben Sie die ID des Tags an, das Sie abrufen möchten.
+Sie können ein bestimmtes Tag abrufen, das zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an den `/tags` -Endpunkt senden und die Kennung des Tags angeben, das Sie abrufen möchten.
 
 **API-Format**
 
@@ -633,13 +633,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum angegebenen T
 | `modifiedBy` | Die ID des Benutzers, der das Tag zuletzt aktualisiert hat. |
 | `tagCategoryId` | Die ID der Tag-Kategorie, zu der das Tag gehört. |
 | `tagCategoryName` | Der Name der Tag-Kategorie, zu der das Tag gehört. |
-| `archived` | Der Archivierungsstatus des Tags. Wenn auf `true`bedeutet dies, dass das Tag archiviert wird. |
+| `archived` | Der Archivierungsstatus des Tags. Wenn der Wert auf `true` gesetzt ist, bedeutet dies, dass das Tag archiviert wird. |
 
 +++
 
 ## Tags überprüfen {#validate-tags}
 
-Sie können überprüfen, ob Tags vorhanden sind, indem Sie eine POST-Anfrage an die `/tags/validate` -Endpunkt.
+Sie können überprüfen, ob Tags vorhanden sind, indem Sie eine POST-Anfrage an den Endpunkt `/tags/validate` senden.
 
 **API-Format**
 
@@ -668,7 +668,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `ids` | Ein Array, das eine Liste von Tag-IDs enthält, die Sie überprüfen möchten. |
-| `entity` | Die Entität, die die Validierung anfordert. Sie können die `{API_KEY}` -Wert für diesen Parameter. |
+| `entity` | Die Entität, die die Validierung anfordert. Sie können den `{API_KEY}` -Wert für diesen Parameter verwenden. |
 
 +++
 
@@ -705,7 +705,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen dazu zurüc
 
 ## Aktualisieren eines bestimmten Tags {#update-tag}
 
-Sie können ein bestimmtes Tag aktualisieren, indem Sie eine PATCH-Anfrage an die `/tags` -Endpunkt und geben die ID des Tags an, das Sie aktualisieren möchten.
+Sie können ein bestimmtes Tag aktualisieren, indem Sie eine PATCH-Anfrage an den `/tags` -Endpunkt senden und die ID des Tags angeben, das Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -737,8 +737,8 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Der Vorgang, der durchgeführt werden muss. In diesem Anwendungsfall wird er immer auf `replace`. |
-| `path` | Der Pfad des zu aktualisierenden Felds. Zu den unterstützten Werten gehören `name`, `archived`, und `tagCategoryId`. |
+| `op` | Der Vorgang, der durchgeführt werden muss. In diesem Anwendungsfall wird er immer auf `replace` gesetzt. |
+| `path` | Der Pfad des zu aktualisierenden Felds. Zu den unterstützten Werten gehören `name`, `archived` und `tagCategoryId`. |
 | `value` | Der aktualisierte Wert des Felds, das Sie aktualisieren möchten. |
 | `from` | Der ursprüngliche Wert des Felds, das Sie aktualisieren möchten. |
 
@@ -773,9 +773,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu aktualisi
 >
 >Nur der Systemadministrator und der Produkt-Administrator können diesen API-Aufruf verwenden.
 >
->Zusätzlich wird das Tag **cannot** mit allen Geschäftsobjekten verknüpft werden und **must** vor dem Löschen des Tags archiviert werden. Sie können das Tag mit dem [Tag-Endpunkt aktualisieren](#update-tag).
+>Darüber hinaus kann das Tag **kann** keinem Geschäftsobjekt zugeordnet werden und **muss** muss archiviert werden, bevor Sie das Tag löschen können. Sie können das Tag mithilfe des [Tag-Endpunkts aktualisieren](#update-tag) archivieren.
 
-Sie können ein bestimmtes Tag löschen, indem Sie ein DELETE-Tag in die `/tags` -Endpunkt und geben Sie die ID des Tags an, das Sie löschen möchten.
+Sie können ein bestimmtes Tag löschen, indem Sie ein DELETE-Tag an den `/tags` -Endpunkt senden und die Kennung des Tags angeben, das Sie löschen möchten.
 
 **API-Format**
 
@@ -807,4 +807,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren Ant
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs erfahren Sie mehr darüber, wie Sie mithilfe der Adobe Experience Platform-APIs Tags und Tag-Kategorien erstellen, verwalten und löschen. Weitere Informationen zum Verwalten von Tags über die Benutzeroberfläche finden Sie im Abschnitt [Verwalten von Tags-Handbuch](../ui/managing-tags.md). Weitere Informationen zum Verwalten von Tag-Kategorien mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Tag-Kategorien-Handbuch](../ui/tags-categories.md).
+Nach dem Lesen dieses Handbuchs erfahren Sie mehr darüber, wie Sie mithilfe der Adobe Experience Platform-APIs Tags und Tag-Kategorien erstellen, verwalten und löschen. Weitere Informationen zum Verwalten von Tags mithilfe der Benutzeroberfläche finden Sie im Leitfaden [Verwalten von Tags](../ui/managing-tags.md). Weitere Informationen zum Verwalten von Tag-Kategorien mithilfe der Benutzeroberfläche finden Sie im Leitfaden [Tag-Kategorien](../ui/tags-categories.md) .

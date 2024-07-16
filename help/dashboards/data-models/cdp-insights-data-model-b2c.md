@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Real-time Customer Data Platform Insights-Datenmodell B2C Edition
 
-Das Real-time Customer Data Platform Insights-Datenmodell für die [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets optimieren. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu Query Accelerated Store Reporting Insights . [Erstellen eines Berichtseinblicke-Datenmodells über Query Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+Das Real-time Customer Data Platform Insights-Datenmodell für die [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungswidgets nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Informationen zum Erstellen eines Berichtseinblicks-Datenmodells mit Berichtseinblicken über Query Service für die Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards finden Sie in der Dokumentation zu Query Accelerated Store Reporting Insights](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) .[
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Das Real-time Customer Data Platform Insights-Datenmodell für die [B2C Edition]
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Verständnis der [Benutzerdefinierte Dashboards-Funktion](../user-defined-dashboards.md). Lesen Sie die Dokumentation , bevor Sie mit diesem Handbuch fortfahren.
+Dieses Handbuch setzt ein Verständnis der [benutzerdefinierten Dashboards-Funktion](../user-defined-dashboards.md) voraus. Lesen Sie die Dokumentation , bevor Sie mit diesem Handbuch fortfahren.
 
 ## Real-Time CDP Insight-Berichte und Anwendungsfälle
 
@@ -45,9 +45,9 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Anwendungsfall für die Profilanzahl {#profile-count}
 
-Die für die [!UICONTROL Profilanzahl] Widget gibt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme zurück. Siehe [[!UICONTROL Profilanzahl] Widget-Dokumentation](../guides/profiles.md#profile-count) für weitere Informationen.
+Die für das Widget [!UICONTROL Profilanzahl] verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme zurück. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Profilanzahl]](../guides/profiles.md#profile-count) .
 
-Die SQL, die die [!UICONTROL Profilanzahl] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Profilanzahl] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
 +++SQL-Abfrage
 
@@ -65,9 +65,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### Anwendungsfall für einzelne Identitätsprofile {#single-identity-profiles}
 
-Die für die [!UICONTROL Einzelne Identitätsprofile] -Widget stellt die Anzahl der Profile Ihres Unternehmens bereit, die nur über einen ID-Typ verfügen, der ihre Identität erstellt. Siehe [[!UICONTROL Einzelne Identitätsprofile] Widget-Dokumentation](../guides/profiles.md#single-identity-profiles) für weitere Informationen.
+Die für das Widget [!UICONTROL Einzelne Identitätsprofile] verwendete Logik liefert die Anzahl der Profile Ihres Unternehmens, die nur über einen ID-Typ verfügen, der ihre Identität erstellt. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Einzelne Identitätsprofile]](../guides/profiles.md#single-identity-profiles) .
 
-Die SQL, die die [!UICONTROL Einzelne Identitätsprofile] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Single identity profiles] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -94,13 +94,13 @@ Das Namespace-Modell besteht aus den folgenden Datensätzen:
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Namespace-Modells.](../images/cdp-insights/namespace-model.png)
+![Ein ERD des Namespace-Modells.](../images/cdp-insights/namespace-model.png)
 
 #### Profile nach Identitätsanwendungsfall {#profiles-by-identity}
 
-Die [!UICONTROL Profile nach Identität] -Widget zeigt die Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher an. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](../guides/profiles.md#profiles-by-identity) für weitere Informationen.
+Das Widget [!UICONTROL Profile nach Identität] zeigt die Aufschlüsselung der Identitäten für alle zusammengeführten Profile in Ihrem Profilspeicher an. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Profile nach Identität]](../guides/profiles.md#profiles-by-identity) .
 
-Die SQL, die die [!UICONTROL Profile nach Identität] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Profile nach Identität] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -122,9 +122,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Einzelne Identitätsprofile nach Identitätsanwendungsfall {#single-identity-profiles-by-identity}
 
-Die für die [!UICONTROL Einzelne Identitätsprofile nach Identität] -Widget zeigt die Gesamtzahl der Profile, die mit nur einer eindeutigen Kennung identifiziert werden. Siehe [Dokumentation zu einzelnen Identitätsprofilen nach Identitäts-Widgets](../guides/profiles.md#single-identity-profiles-by-identity) für weitere Informationen.
+Die Logik, die für das Widget [!UICONTROL Einzelne Identitätsprofile nach Identität] verwendet wird, zeigt die Gesamtanzahl der Profile, die mit nur einer eindeutigen Kennung identifiziert werden. Weitere Informationen finden Sie in der Dokumentation zu [Einzelne Identitätsprofile nach Identitäts-Widget](../guides/profiles.md#single-identity-profiles-by-identity) .
 
-Die SQL, die die [!UICONTROL Einzelne Identitätsprofile nach Identität] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Einzelne Identitätsprofile nach Identität] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -161,9 +161,9 @@ Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
 #### Anwendungsfall: Zielgruppengröße {#audience-size}
 
-Die für die [!UICONTROL Zielgruppengröße] Widget gibt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt der letzten Momentaufnahme zurück. Siehe [[!UICONTROL Zielgruppengröße] Widget-Dokumentation](../guides/audiences.md#audience-size) für weitere Informationen.
+Die für das Widget [!UICONTROL Zielgruppengröße] verwendete Logik gibt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt der letzten Momentaufnahme zurück. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Zielgruppengröße]](../guides/audiences.md#audience-size) .
 
-Die SQL, die die [!UICONTROL Zielgruppengröße] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Zielgruppengröße] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -185,9 +185,9 @@ WHERE
 
 #### Anwendungsfall zur Änderung der Zielgruppengröße {#audience-size-change-trend}
 
-Die für die [!UICONTROL Trend zur Änderung der Zielgruppengröße] -Widget bietet eine Kantengraph-Darstellung der Differenz in der Gesamtzahl der Profile, die sich für eine bestimmte Zielgruppe qualifiziert haben, zwischen den letzten täglichen Momentaufnahmen. Siehe [[!UICONTROL Trend zur Änderung der Zielgruppengröße] Widget-Dokumentation](../guides/audiences.md#audience-size-change-trend) für weitere Informationen.
+Die Logik, die für das Widget [!UICONTROL Trend zur Änderung der Zielgruppengröße] verwendet wird, liefert eine Kantengrafik, die den Unterschied zwischen der Gesamtanzahl der Profile veranschaulicht, die sich für eine bestimmte Zielgruppe zwischen den letzten täglichen Momentaufnahmen qualifizieren. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Trend zur Änderung der Zielgruppengröße]](../guides/audiences.md#audience-size-change-trend) .
 
-Die SQL, die die [!UICONTROL Trend zur Änderung der Zielgruppengröße] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Trend zur Änderung der Zielgruppengröße] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -222,9 +222,9 @@ SELECT date_key,
 
 #### Anwendungsfall für die am häufigsten verwendeten Ziele {#most-used-destinations}
 
-Die in der [!UICONTROL Am häufigsten verwendete Ziele] -Widget listet die am häufigsten verwendeten Ziele Ihrer Organisation entsprechend der Anzahl der ihnen zugeordneten Zielgruppen auf. Dieses Ranking bietet Einblicke, welche Ziele verwendet werden, und zeigt möglicherweise auch diejenigen, die möglicherweise nicht genutzt werden. Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Am häufigsten verwendete Ziele] Widget](../guides/destinations.md#most-used-destinations) für weitere Informationen.
+Die im Widget [!UICONTROL Bevorzugte Ziele] verwendete Logik listet die am häufigsten verwendeten Ziele Ihrer Organisation entsprechend der Anzahl der ihnen zugeordneten Zielgruppen auf. Dieses Ranking bietet Einblicke, welche Ziele verwendet werden, und zeigt möglicherweise auch diejenigen, die möglicherweise nicht genutzt werden. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Am häufigsten verwendete Ziele] .](../guides/destinations.md#most-used-destinations)
 
-Die SQL, die die [!UICONTROL Am häufigsten verwendete Ziele] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Bevorzugte Ziele] generiert, wird im ausblendbaren Abschnitt unten angezeigt.
 
 +++SQL-Abfrage
 
@@ -247,9 +247,9 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### Anwendungsfall für kürzlich aktivierte Zielgruppen {#recently-activated-audiences}
 
-Die Logik für die [!UICONTROL Kürzlich aktivierte Zielgruppen] -Widget stellt eine Liste der Zielgruppen bereit, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen. Siehe [[!UICONTROL Kürzlich aktivierte Zielgruppen] Widget-Dokumentation](../guides/destinations.md#recently-activated-audiences) für weitere Informationen.
+Die Logik für das Widget [!UICONTROL Zuletzt aktivierte Zielgruppen] enthält eine Liste der Zielgruppen, die zuletzt einem Ziel zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Zielgruppen und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Zuletzt aktivierte Zielgruppen] .](../guides/destinations.md#recently-activated-audiences)
 
-Die SQL, die die [!UICONTROL Kürzlich aktivierte Zielgruppen] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Zuletzt aktivierte Zielgruppen] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -287,13 +287,13 @@ Das Modell namespace-audience besteht aus den folgenden Datensätzen:
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Namespace-Zielgruppenmodells.](../images/cdp-insights/namespace-audience-model.png)
+![Ein ERD des Namespace-Audience-Modells.](../images/cdp-insights/namespace-audience-model.png)
 
 #### Profile nach Identität für einen Zielgruppen-Anwendungsfall {#audience-profiles-by-identity}
 
-Die in der [!UICONTROL Profile nach Identität] -Widget bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher für eine bestimmte Zielgruppe. Siehe [[!UICONTROL Profile nach Identität] Widget-Dokumentation](../guides/audiences.md#profiles-by-identity) für weitere Informationen.
+Die im Widget [!UICONTROL Profile nach Identität] verwendete Logik bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher für eine bestimmte Zielgruppe hinweg. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Profile nach Identität]](../guides/audiences.md#profiles-by-identity) .
 
-Die SQL, die die [!UICONTROL Profile nach Identität] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Profile nach Identität] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -323,13 +323,13 @@ Das Überschneidungs-Namespace-Modell besteht aus den folgenden Datensätzen:
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Namespace-Überlappungsmodells.](../images/cdp-insights/overlap-namespace-model.png)
+![Ein ERD des Überschneidungs-Namespace-Modells.](../images/cdp-insights/overlap-namespace-model.png)
 
 #### Anwendungsfall: Identitätsüberschneidung (Profile) {#profiles-identity-overlap}
 
-Die in der [!UICONTROL Identitätsüberschneidung] Widget zeigt die Profilüberschneidung in Ihren **Profilspeicher** die die beiden ausgewählten Identitäten enthalten. Weitere Informationen finden Sie unter [[!UICONTROL Identitätsüberschneidung] Widget-Abschnitt des [!UICONTROL Profile] Dashboard-Dokumentation](../guides/profiles.md#identity-overlap).
+Die im Widget [!UICONTROL Identitätsüberschneidung] verwendete Logik zeigt die Überschneidung von Profilen in Ihrem **Profilspeicher** an, die die beiden ausgewählten Identitäten enthalten. Weitere Informationen finden Sie im Abschnitt [[!UICONTROL Identitätsüberschneidung] des Widgets [!UICONTROL Profile] Dashboard-Dokumentation](../guides/profiles.md#identity-overlap) .
 
-Die SQL, die die [!UICONTROL Identitätsüberschneidung] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Identitätsüberschneidung] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 
@@ -392,13 +392,13 @@ Der Überschneidungs-Namespace nach Zielgruppenmodell besteht aus den folgenden 
 
 Die folgende Abbildung enthält die relevanten Datenfelder in jedem Datensatz.
 
-![Eine ERD des Überlappungs-Namespace nach Zielgruppenmodell.](../images/cdp-insights/overlap-namespace-by-audience-model.png)
+![Ein ERD des Überschneidungs-Namespace nach Zielgruppenmodell.](../images/cdp-insights/overlap-namespace-by-audience-model.png)
 
 #### Anwendungsfall: Identitätsüberschneidung (Zielgruppen) {#audiences-identity-overlap}
 
-Die in der [!UICONTROL Zielgruppen] Dashboard [!UICONTROL Identitätsüberschneidung] -Widget veranschaulicht die Überschneidung von Profilen, die die beiden ausgewählten Identitäten für eine bestimmte Zielgruppe enthalten. Weitere Informationen finden Sie unter [[!UICONTROL Identitätsüberschneidung] Widget-Abschnitt des [!UICONTROL Zielgruppen] Dashboard-Dokumentation](../guides/audiences.md#identity-overlap).
+Die im Widget [!UICONTROL Zielgruppen] Dashboard [!UICONTROL Identitätsüberschneidung] verwendete Logik zeigt die Überschneidung von Profilen, die die beiden ausgewählten Identitäten für eine bestimmte Zielgruppe enthalten. Weitere Informationen finden Sie im Abschnitt [[!UICONTROL Identitätsüberschneidung] des Widgets [!UICONTROL Zielgruppen] Dashboard-Dokumentation](../guides/audiences.md#identity-overlap) .
 
-Die SQL, die die [!UICONTROL Identitätsüberschneidung] Widget wird im ausblendbaren Abschnitt unten angezeigt.
+Die SQL, die das Widget [!UICONTROL Identitätsüberschneidung] generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 

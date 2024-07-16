@@ -60,7 +60,7 @@ $$;
 
 Bestimmte Drittanbieter-Clients benötigen möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil des Skripts als einzelne Anweisung verarbeitet werden soll. Wenn Sie eine Fehlermeldung erhalten, wenn Sie Query Service mit einem Drittanbieter-Client verwenden, sollten Sie die Dokumentation des Drittanbieter-Clients zur Verwendung eines SQL-Blocks lesen.
 
-Beispiel: **DbVisualizer** erfordert, dass das Trennzeichen der einzige Text in der Zeile sein muss. In DbVisualizer lautet der Standardwert für die Begin-ID . `--/` und für die End-ID ist es `/`. Nachfolgend finden Sie ein Beispiel für einen anonymen Block in DbVisualizer:
+Beispielsweise erfordert **DbVisualizer**, dass das Trennzeichen der einzige Text in der Zeile sein muss. In DbVisualizer ist der Standardwert für die Begin-ID `--/` und für die End-ID `/`. Nachfolgend finden Sie ein Beispiel für einen anonymen Block in DbVisualizer:
 
 ```SQL
 --/
@@ -74,10 +74,10 @@ $$;
 /
 ```
 
-Insbesondere für DbVisualizer gibt es in der Benutzeroberfläche auch die Option &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Siehe [Dokumentation zu DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) für weitere Informationen.
+Insbesondere für DbVisualizer gibt es in der Benutzeroberfläche auch die Option &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Weitere Informationen finden Sie in der Dokumentation zu [DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) .
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. Bitte lesen Sie die [Handbuch zur Abfrageausführung](../best-practices/writing-queries.md) für weitere Informationen zum Schreiben von Abfragen.
+Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. Weitere Informationen zum Schreiben von Abfragen finden Sie im [Handbuch zur Ausführung von Abfragen](../best-practices/writing-queries.md) .
 
-Sie sollten auch [Verwendung anonymer Bausteine mit dem Design-Muster für die inkrementelle Belastung](./incremental-load.md) , um die Abfrageeffizienz zu erhöhen.
+Außerdem sollten Sie mehr über [die Verwendung anonymer Bausteine mit dem Muster für das inkrementelle Laden](./incremental-load.md) erfahren, um die Abfrageleistung zu erhöhen.

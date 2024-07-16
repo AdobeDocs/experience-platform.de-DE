@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie einen vorbereiteten Trainings-Datensatz, der 
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 5%
+source-wordcount: '457'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 In diesem Dokument wird gezeigt, wie Sie einen vorbereiteten Trainings-Datensatz, der mit Data Distiller erstellt wurde, an einem Cloud-Speicher freigeben können, den Ihre ML-Umgebung zum Trainieren und Scoring Ihres Modells lesen kann. Das Beispiel hier exportiert den Trainings-Datensatz in die [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Sie können das Speicherziel nach Bedarf ändern, um mit Ihrer Umgebung für maschinelles Lernen zu arbeiten.
 
-Die [Flussdienst für Ziele](https://developer.adobe.com/experience-platform-apis/references/destinations/) wird verwendet, um die Funktions-Pipeline abzuschließen, indem ein Datensatz mit berechneten Funktionen an einen geeigneten Cloud-Speicher-Speicherort gelandet wird.
+Der [Flussdienst für Ziele](https://developer.adobe.com/experience-platform-apis/references/destinations/) wird verwendet, um die Funktions-Pipeline abzuschließen, indem ein Datensatz mit berechneten Funktionen an einen geeigneten Cloud-Speicher gelandet wird.
 
 ## Erstellen der Quellverbindung {#create-source-connection}
 
@@ -39,10 +39,10 @@ Die Zielverbindung ist für die Verbindung mit dem Zieldateisystem verantwortlic
 
 Die verfügbaren Cloud-Speicher-Ziele werden jeweils anhand einer Verbindungsspezifikations-ID identifiziert:
 
-| Cloud-Speichertyp | Verbindungs-Spec ID |
+| Cloud-Speichertyp | Verbindungsspezifikations-ID |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 4fce964d-3f37-408f-9778-e597338a21ee |
-| Azure-Blobspeicher | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
+| Azur Blob-Speicherung | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 | Azure Data Lake | be2c3209-53bc-47e7-ab25-145db8b873e1 |
 | Data Landing Zone | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
 | Google Cloud Storage | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
@@ -88,7 +88,7 @@ Jeder verfügbare Cloud-Speichertyp wird durch eine Flussspezifikations-ID ident
 | Cloud-Speichertyp | Flow Spec ID |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 269ba276-16fc-47db-92b0-c1049a3c131f |
-| Azure-Blobspeicher | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Azur Blob-Speicherung | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Azure Data Lake | 17be2013-2549-41ce-96e7-a70363bec293 |
 | Data Landing Zone | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
 | Google Cloud Storage | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
@@ -170,7 +170,7 @@ activation_res
 
 ## Optimierte Freigabe für Data Landing Zone
 
-Um einen Datensatz für die Data Landing Zone freizugeben, muss die `aepp` -Bibliothek bietet `exportDatasetToDataLandingZone` -Funktion, die die oben genannten Schritte in einem einzelnen Funktionsaufruf ausführt:
+Um einen Datensatz einfacher für die Data Landing Zone freizugeben, stellt die Bibliothek `aepp` eine Funktion `exportDatasetToDataLandingZone` bereit, mit der die oben genannten Schritte in einem einzelnen Funktionsaufruf ausgeführt werden:
 
 ```python
 from aepp import exportDatasetToDataLandingZone

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: PQL-Filterfunktionen
-description: Filterfunktionen dienen zum Filtern von Daten innerhalb von Arrays in Profil Query Language (PQL).
+description: Filterfunktionen dienen zum Filtern von Daten in Arrays in Profile Query Language (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 87%
+ht-degree: 80%
 
 ---
 
 # Filterfunktionen
 
-Filterfunktionen dienen zum Filtern von Daten in Arrays in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
+Filterfunktionen dienen zum Filtern von Daten in Arrays in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
 
 ## Filter
 

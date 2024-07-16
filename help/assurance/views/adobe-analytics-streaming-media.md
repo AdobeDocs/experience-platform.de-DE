@@ -5,7 +5,7 @@ exl-id: 9a9c2c64-e9ed-4d58-b936-d802f1c3b7d3
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -28,30 +28,30 @@ Bevor Sie fortfahren, stellen Sie bitte sicher, dass Sie über die folgenden Die
 - Die [Adobe Experience Platform-Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/)
 - [Adobe Experience Platform Assurance](https://experience.adobe.com/assurance)
 
-Informationen zum Installieren von Assurance in Ihrer Anwendung finden Sie unter [Implementieren des Zuverlässigkeitshandbuchs](../tutorials/implement-assurance.md).
+Weiterführende Informationen zur Installation von Assurance in Ihrer Anwendung finden Sie im [Implementierungshandbuch für Assurance](../tutorials/implement-assurance.md).
 
 ## Verwenden von Assurance mit Adobe Analytics für Streaming-Medien
 
-Nachdem Sie eine Verbindung hergestellt und Ihre App für Adobe Analytics eingerichtet haben, können Sie sie für Streaming Media Analytics konfigurieren. Wählen Sie unten im linken Bedienfeld die Option **[!UICONTROL Konfigurieren]** Hinzufügen der Media Analytics-Ereignisansicht und **Speichern** es.
+Nachdem Sie eine Verbindung hergestellt und Ihre App für Adobe Analytics eingerichtet haben, können Sie sie für Streaming Media Analytics konfigurieren. Wählen Sie unten im linken Bereich **[!UICONTROL Konfigurieren]** aus, um die Ansicht &quot;Media Analytics Events&quot;hinzuzufügen, und **Speichern** Sie sie.
 
 ![Konfigurieren](./images/adobe-analytics-streaming-media/configure.png)
 
-Wählen Sie nach dem Hinzufügen die **[!UICONTROL Media Analytics-Ereignisse]** Ansicht in der **[!UICONTROL Adobe Analytics]** -Abschnitt zur Validierung Ihres Sitzungs-Trackings.
+Wählen Sie nach dem Hinzufügen die Ansicht **[!UICONTROL Media Analytics-Ereignisse]** im Abschnitt **[!UICONTROL Adobe Analytics]** aus, um das Sitzungs-Tracking zu überprüfen.
 
-![Auswählen](./images/adobe-analytics-streaming-media/select.png)
+![Select](./images/adobe-analytics-streaming-media/select.png)
 
-Im **[!UICONTROL Media Analytics-Ereignisse]** anzeigen, können Sie nach Sitzungs-ID (VSID) suchen und filtern, um eine bestimmte Mediensitzung anzuzeigen. Um weitere Ereignisdetails anzuzeigen, wählen Sie ein bestimmtes Ereignis aus.
+In der Ansicht **[!UICONTROL Media Analytics-Ereignisse]** können Sie nach Sitzungs-ID (VSID) suchen und filtern, um eine bestimmte Mediensitzung anzuzeigen. Um weitere Ereignisdetails anzuzeigen, wählen Sie ein bestimmtes Ereignis aus.
 
-![Media-Ereignisse](./images/adobe-analytics-streaming-media/media-events.png)
+![Medienereignisse](./images/adobe-analytics-streaming-media/media-events.png)
 
-Für eine genauere Anzeige von API-Aufrufen können Sie auch die Abspielleistenaktualisierungsereignisse ausblenden, indem Sie die Option **[!UICONTROL Ereignisse zum Aktualisieren der Abspielleiste ausblenden]** Filter.
+Für eine präzisere Ansicht von API-Aufrufen können Sie auch die Aktualisierungsereignisse der Abspielleiste ausblenden, indem Sie den Filter **[!UICONTROL Ereignisse der Abspielleistenaktualisierung ausblenden]** auswählen.
 
 ![Abspielleiste ausblenden](./images/adobe-analytics-streaming-media/hide-playhead.png)
 
 >[!INFO]
 >
->Für die Anzeige von nach der Verarbeitung verarbeiteten Medienanalysedaten ist die Verwendung von SDK-Versionen erforderlich: Android Media 2.1.2 und iOS AGPedia 3.0.1 (oder höher)
+>Für die Anzeige von nachbearbeiteten Medienanalysedaten müssen SDK-Versionen verwendet werden: Android Media 2.1.2 und iOS AGPedia 3.0.1 (oder höher).
 
 Um nachverarbeitete Daten anzuzeigen, suchen Sie das Sitzungsstartereignis und überprüfen Sie in der Statusspalte, in der die Sitzung abgeschlossen wurde. Wenn Sie fertig sind, klicken Sie auf das Ereignis, um eine Zusammenfassung der Mediensitzung in der Detailansicht des Ereignisses anzuzeigen. Für weitere Details scrollen Sie nach unten, um die Details nach der Verarbeitung zu finden.
 
-![Ansicht nach Verarbeitung](./images/adobe-analytics-streaming-media/post-processed-view.png)
+![Ansicht mit Post-Verarbeitung](./images/adobe-analytics-streaming-media/post-processed-view.png)

@@ -1,34 +1,34 @@
 ---
 title: Feldergruppe "Profilpartner-Anreicherung"(Beispiel)
 description: Erfahren Sie mehr über die Schemafeldgruppe Profilpartner-Anreicherung (Beispiel) .
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: 02f7c358-3cf9-45cb-a5c5-e2cb1f140d93
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 14%
 
 ---
 
+# [!UICONTROL Profil-Partner-Anreicherung (Beispiel)] Schemafeldgruppe
 
-# [!UICONTROL Profilpartner-Anreicherung (Beispiel)] Schemafeldgruppe
+[!UICONTROL Profil-Partner-Anreicherung (Beispiel)] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Verwenden Sie diese Feldergruppe, um zusätzliche Daten im Zusammenhang mit Partner-gesteuerten Anreicherungen für Kundenprofile bereitzustellen.
 
-[!UICONTROL Profilpartner-Anreicherung (Beispiel)] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Verwenden Sie diese Feldergruppe, um zusätzliche Daten im Zusammenhang mit Partner-gesteuerten Anreicherungen für Kundenprofile bereitzustellen.
-
-![Ein Diagramm des [!UICONTROL Profilpartner-Anreicherung (Beispiel)] Feldergruppe.](../../images/field-groups/profile-partner-enrichment-sample.png)
+![Ein Diagramm der Feldergruppe [!UICONTROL Profil-Partner-Anreicherung (Beispiel)].](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |-----------------------------|------------------------|-----------|----------------------------------|
 | [!UICONTROL ageRangeInHousbudget] | `ageRangeInHousehold` | Zeichenfolge | Die Altersgruppe im Haushalt. |
-| [!UICONTROL apparelZubehör] | `apparelAccessories` | Zeichenfolge | Daten zu Bekleidung und Zubehör. |
-| [!UICONTROL Radfahren] | `bicycling` | Zeichenfolge | Fahrradbezogene Informationen. |
+| [!UICONTROL apparelAccessoires] | `apparelAccessories` | Zeichenfolge | Daten zu Bekleidung und Zubehör. |
+| [!UICONTROL Fahrrad] | `bicycling` | Zeichenfolge | Fahrradbezogene Informationen. |
 | [!UICONTROL kabelTv] | `cableTv` | Zeichenfolge | Informationen zum Kabelfernsehen. |
-| [!UICONTROL Domänen] | `domestics` | Zeichenfolge | Interne Daten. |
-| [!UICONTROL Elektronik] | `electronics` | Zeichenfolge | Elektronische Informationen. |
+| [!UICONTROL domestics] | `domestics` | Zeichenfolge | Interne Daten. |
+| [!UICONTROL electronics] | `electronics` | Zeichenfolge | Elektronische Informationen. |
 | [!UICONTROL foodAndBeverage] | `foodAndBeverage` | Zeichenfolge | Daten zu Lebensmitteln und Getränken. |
 | [!UICONTROL Schuhe] | `footwear` | Zeichenfolge | Informationen zu Schuhen. |
 | [!UICONTROL healthFoods] | `healthFoods` | Zeichenfolge | Daten zu gesundheitlichen Lebensmitteln. |
-| [!UICONTROL Wandern] | `hiking` | Zeichenfolge | Informationen zum Wandern. |
+| [!UICONTROL wandern] | `hiking` | Zeichenfolge | Informationen zum Wandern. |
 | [!UICONTROL budgetId] | `householdId` | Zeichenfolge | Die eindeutige ID für einen Haushalt. |
-| [!UICONTROL uniqueId] | `individualId` | Zeichenfolge | Die eindeutige ID für eine Person. |
+| [!UICONTROL einzelnId] | `individualId` | Zeichenfolge | Die eindeutige ID für eine Person. |
 | [!UICONTROL inferredCardHolder] | `inferredCardHolder` | Zeichenfolge | Abgeleitete Angaben zum Karteninhaber. |
 | [!UICONTROL inferredPremiumCardholder] | `inferredPremiumCardholder` | Zeichenfolge | Angaben zu den Inhabern der Prämienbescheinigung. |
 | [!UICONTROL matchLevelFlag] | `matchLevelFlag` | Zeichenfolge | Kennzeichnungs-Daten der Übereinstimmungsebene. |
@@ -40,12 +40,12 @@ ht-degree: 14%
 | [!UICONTROL SpendingVolume] | `spendingVolume` | Zeichenfolge | Ausgabenvolumeninformationen. |
 | [!UICONTROL recordId] | `recordId` | Zeichenfolge | Eindeutige Datensatz-ID. |
 | [!UICONTROL residenceId] | `residenceId` | Zeichenfolge | Eindeutige Kennung für den Aufenthalt. |
-| [!UICONTROL Segeln] | `sailing` | Zeichenfolge | Sailing-bezogene Daten. |
+| [!UICONTROL sailing] | `sailing` | Zeichenfolge | Sailing-bezogene Daten. |
 | [!UICONTROL seasonHolidayProducts] | `seasonalHolidayProducts` | Zeichenfolge | Produktinformationen zu saisonalen Feiertagen. |
-| [!UICONTROL Skifahren] | `skiing` | Zeichenfolge | Skiing-bezogene Daten. |
-| [!UICONTROL Tennis] | `tennis` | Zeichenfolge | Tennisbezogene Informationen. |
+| [!UICONTROL  skiing] | `skiing` | Zeichenfolge | Skiing-bezogene Daten. |
+| [!UICONTROL tennis] | `tennis` | Zeichenfolge | Tennisbezogene Informationen. |
 | [!UICONTROL tvShoppers] | `tvShoppers` | Zeichenfolge | Informationen der Fernsehkäufer. |
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) im öffentlichen XDM-Repository.
+Weitere Informationen zur Feldergruppe finden Sie im [vollständigen Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) des öffentlichen XDM-Repositorys.

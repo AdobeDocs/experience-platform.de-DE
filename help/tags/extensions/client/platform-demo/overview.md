@@ -95,7 +95,7 @@ Datensatz-Datenschemata und Zeitserien-Datenschemata können ein oder mehrere Id
 
 Identitätsfelder können innerhalb des Schemas auf zwei Arten definiert werden:
 
-1. Aufzeichnungs- und Zeitreihen-Schemas enthalten jeweils ein spezielles Feld namens `xdm:identityMap`, das eine Zuordnung von Identitäten enthalten kann.
+1. Aufzeichnungs- und Zeitreihen-Schemata enthalten jeweils ein spezielles Feld namens `xdm:identityMap`, das eine Zuordnung von Identitäten enthalten kann.
 1. Schlüsselfelder können als „Identitäts“-Felder innerhalb des Schemas markiert werden.
 
 ### Identitätsfelder in der Adobe Experience Platform-Erweiterung

@@ -15,8 +15,8 @@ ht-degree: 1%
 
 # Installieren von Platform Debugger
 
-Adobe Experience Platform Debugger kann im Chrome-Browser von Google installiert werden. Folgen Sie dem unten stehenden Link, um die Erweiterung in Ihrem Browser zu installieren:
+Adobe Experience Platform Debugger kann im Google Chrome-Browser installiert werden. Folgen Sie dem unten stehenden Link, um die Erweiterung in Ihrem Browser zu installieren:
 
 * [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-Nach der Installation der Chrome-Erweiterung wird ein Symbol (![](images/start-icon.jpg)) wird der Erweiterungsleiste hinzugefügt. Wählen Sie dieses Symbol aus, um die Erweiterung zu öffnen.
+Nach der Installation der Chrome-Erweiterung wird der Erweiterungsleiste ein Symbol (![](images/start-icon.jpg)) hinzugefügt. Wählen Sie dieses Symbol aus, um die Erweiterung zu öffnen.

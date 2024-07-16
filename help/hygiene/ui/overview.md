@@ -21,13 +21,13 @@ ht-degree: 53%
 >title="Aktuelle Arbeitsaufträge zum Datenlebenszyklus"
 >abstract="Dieses Widget zeigt die fünf zuletzt erstellten oder aktualisierten Arbeitsaufträge zum Datenlebenszyklus, je nach der oben rechts gewählten Option. Weitere Informationen zu Ihren Datenlebenszyklus-Prozessen finden Sie unter **Datenlebenszyklus** in der linken Navigation."
 
-Die **[!UICONTROL Lebenszyklus der Daten]** Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie verschiedene Data Lifecycle Management-Aufgaben erstellen und überwachen, einschließlich Löschen von Datensätzen und Planen der Ablaufzeit von Datensätzen.
+Der Arbeitsbereich **[!UICONTROL Datenlebenszyklus]** in der Adobe Experience Platform-Benutzeroberfläche ermöglicht Ihnen das Erstellen und Überwachen verschiedener Datenlebenszyklusverwaltungsaufgaben, einschließlich des Löschens von Datensätzen und der Planung von Datensatzabläufen.
 
 In diesem Handbuch wird beschrieben, wie Sie Datenlebenszyklusaufgaben in der Platform-Benutzeroberfläche verwalten. Informationen zur Durchführung dieser Aufgaben mithilfe von API-Aufrufen finden Sie im [Data Hygiene API-Handbuch](../api/overview.md).
 
-Um auf den Arbeitsbereich zuzugreifen, wählen Sie **Lebenszyklus der Daten** in der linken Navigation.
+Um auf den Arbeitsbereich zuzugreifen, wählen Sie im linken Navigationsbereich **Datenlebenszyklus** aus.
 
-![Die [!UICONTROL Lebenszyklus der Daten] Arbeitsbereich in der Platform-Benutzeroberfläche mit [!UICONTROL Lebenszyklus der Daten] im linken Navigationsbereich hervorgehoben.](../images/ui/overview/home.png)
+![Der Arbeitsbereich [!UICONTROL Datenlebenszyklus] in der Platform-Benutzeroberfläche, wobei [!UICONTROL Datenlebenszyklus] im linken Navigationsbereich hervorgehoben ist.](../images/ui/overview/home.png)
 
 Von hier aus können Sie bestehende Arbeitsaufträge durchsuchen und neue Datenlebenszyklusvorgänge konfigurieren. Weitere Informationen finden Sie in den folgenden Abschnitten dieses Handbuchs:
 

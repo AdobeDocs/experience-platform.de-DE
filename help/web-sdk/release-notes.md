@@ -18,15 +18,15 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 >[!IMPORTANT]
 >
->Google [hat](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plant, die Chrome-Unterstützung für Drittanbieter-Cookies im zweiten Halbjahr 2024 einzustellen. Daher werden Drittanbieter-Cookies in keinem der wichtigsten Browser mehr unterstützt.
+>Google [hat angekündigt,](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) werde die Chrome-Unterstützung für Drittanbieter-Cookies in der zweiten Jahreshälfte 2024 einstellen. Daher werden Drittanbieter-Cookies in keinem der wichtigsten Browser mehr unterstützt.
 >
->Wenn diese Änderung implementiert ist, stellt Adobe die Unterstützung für die `demdex` -Cookie, das derzeit im Web SDK unterstützt wird.
+>Wenn diese Änderung implementiert ist, stellt Adobe die Unterstützung für das `demdex` -Cookie ein, das derzeit im Web SDK unterstützt wird.
 
 ## Version 2.20.0 – Mittwoch, 21. Mai 2024
 
 **Neue Funktionen**
 
-* Hinzugefügte Unterstützung für [Streaming-Mediensammlung](../web-sdk/commands/configure/streamingmedia.md).
+* Unterstützung für [Streaming-Mediensammlung](../web-sdk/commands/configure/streamingmedia.md) hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -37,22 +37,22 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 **Fehlerbehebungen und Verbesserungen**
 
 * Es wurde ein Problem behoben, durch das Identitätsfehler andere Fehler maskierten und Identitätsfehler in Warnungen geändert wurden.
-* Es wurde ein Problem behoben, bei dem Seitenaufrufe am Ende nicht gesendet wurden, wenn ein Seitenaufruf am Anfang mit `renderDecisions` auf `false`.
-* Es wurde ein Problem behoben, bei dem das Web SDK keine domänenübergreifenden Identitäten lesen konnte, wenn mehrere `adobe_mc` Abfragezeichenfolgenparameter.
+* Es wurde ein Problem behoben, durch das Seitenaufrufe am Ende nicht gesendet wurden, wenn der Seitenaufruf am Anfang war und `renderDecisions` auf `false` festgelegt war.
+* Es wurde ein Problem behoben, bei dem das Web SDK domänenübergreifende Identitäten nicht gelesen hat, wenn mehrere `adobe_mc` Abfragezeichenfolgenparameter vorhanden waren.
 
 ## Version 2.19.1 – Samstag, 10. November 2023
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Es wurde ein Problem behoben, bei dem das Array Vorschläge zurückgegeben wurde von `sendEvent` -Aufrufe waren immer leer.
+* Es wurde ein Problem behoben, bei dem das von `sendEvent` -Aufrufen zurückgegebene Vorschlagsarray immer leer war.
 
 ## Version 2.19.0 – Donnerstag, 1. November 2023
 
 **Neue Funktionen**
 
 * Unterstützung für das Rendern von In-App-Nachrichten aus Adobe Journey Optimizer hinzugefügt.
-* Hinzugefügte Unterstützung für [Seitenereignisse am oberen und unteren Rand](use-cases/top-bottom-page-events.md).
-* hinzugefügt [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) -Option `sendEvent` -Befehl, um die Anforderung des seitenweiten Umfangs und der Standardoberfläche zu steuern.
+* Zusätzliche Unterstützung für [oben und unten von Seitenereignissen](use-cases/top-bottom-page-events.md).
+* Dem Befehl `sendEvent` wurde die Option [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) hinzugefügt, um die Anforderung des seitenweiten Umfangs und der Standardoberfläche zu steuern.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -117,7 +117,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 * Es wurde Unterstützung für [seitenweise vollständige Migration](home.md#migrating-to-web-sdk) hinzugefügt. Das Adobe Target-Profil wird jetzt beibehalten, wenn Besuchende zwischen at.js- und Web SDK-Seiten wechseln.
 * Es wurde konfigurierbare Unterstützung für [hohe Entropie bei Client-Hinweisen für Benutzeragenten](/help/web-sdk/use-cases/client-hints.md) hinzugefügt.
-* Unterstützung für die [`applyResponse`](/help/web-sdk/commands/applyresponse.md) Befehl. Dies ermöglicht die hybride Personalisierung über die [Edge Network Server-API](../server-api/overview.md).
+* Unterstützung für den Befehl [`applyResponse`](/help/web-sdk/commands/applyresponse.md) hinzugefügt. Dies ermöglicht die hybride Personalisierung über die [Edge Network Server-API](../server-api/overview.md).
 * QA-Modus-Links funktionieren jetzt über mehrere Seiten.
 
 **Fehlerbehebungen und Verbesserungen**
@@ -174,7 +174,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.7.0 – 26. Oktober 2021
 
-* Zusätzliche Informationen aus dem Edge Network im Rückgabewert von verfügbar machen `sendEvent`, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit im Rahmen einer Beta bereitgestellt werden.
+* Stellen Sie zusätzliche Informationen aus dem Edge Network im Rückgabewert von `sendEvent` bereit, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit im Rahmen einer Beta bereitgestellt werden.
 
 ## Version 2.6.4 – 7. September 2021
 
@@ -205,13 +205,13 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.4.0 – März 2021 
 
-* Das SDK kann jetzt als [NPM-Paket](/help/web-sdk/install/npm.md).
+* Das SDK kann jetzt als [NPM-Paket](/help/web-sdk/install/npm.md) installiert werden.
 * Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
-* Die [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) Callback kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
+* Der Rückruf [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 * Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.
-* Die [`getIdentity`](/help/web-sdk/commands/getidentity.md) -Befehl gibt jetzt die ID der Edge-Region neben der Identität zurück.
+* Der Befehl [`getIdentity`](/help/web-sdk/commands/getidentity.md) gibt jetzt die ID des Edge-Bereichs neben der Identität zurück.
 * Die vom Server empfangenen Warnungen und Fehler wurden verbessert und werden nun auf besser geeignete Weise gehandhabt.
-* Unterstützung für Adobe Consent 2.0-Standard für die [`setConsent`](/help/web-sdk/commands/setconsent.md) Befehl.
+* Adobe Consent 2.0-Standard für den Befehl [`setConsent`](/help/web-sdk/commands/setconsent.md) wird nun unterstützt.
 * Die Einverständisvoreinstellungen werden bei Erhalt gehasht und im lokalen Speicher gespeichert, um eine optimierte Integration zwischen CMPs, dem Platform Web SDK und dem Platform Edge Network zu ermöglichen. Wenn Sie Einverständnisvoreinstellungen erfassen, empfehlen wir Ihnen jetzt, `setConsent` bei jedem Laden der Seite aufzurufen.
 * Es wurden zwei [Überwachungs-Hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` und `onCommandRejected`, hinzugefügt.
 * Fehlerbehebung: Die Benachrichtigungsereignisse für Personalisierungsinteraktionen enthielten doppelte Informationen über dieselbe Aktivität, wenn Benutzende zu einer neuen Singe-Page-App-Ansicht navigiert haben, zur ursprünglichen Ansicht zurückgekehrt sind und dann auf ein für die Konversion qualifiziertes Element geklickt haben.
@@ -229,7 +229,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.2.0 – Oktober 2020
 
-* Fehlerbehebung: Das Opt-in-Objekt hinderte das Web SDK daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` is `true`.
+* Fehlerbehebung: Das Opt-in-Objekt hinderte das Web SDK daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` `true` ist.
 * Fehlerbehebung: Sorgen Sie dafür, dass das Web SDK über Anforderungen informiert wird, die Personalisierungsangebote zurückgeben sollen, um ein flackerndes Problem zu vermeiden.
 
 ## Version 2.1.0 – August 2020
@@ -238,5 +238,5 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 * Es wurde Unterstützung für den IAB 2.0-Einverständnisstandard hinzugefügt.
 * Es wurde Unterstützung für die Übergabe zusätzlicher IDs im Befehl `setConsent` hinzugefügt.
 * Es wurde Unterstützung zum Außerkraftsetzen von `datasetId` im Befehl `sendEvent` hinzugefügt.
-* Überwachungshaken unterstützen ([Mehr dazu](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Support-Überwachungs-Hooks ([mehr dazu](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * `environment: browser` wird nun in den Kontextdaten der Implementierungsdetails übergeben.

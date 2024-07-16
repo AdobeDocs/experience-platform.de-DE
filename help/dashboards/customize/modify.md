@@ -24,13 +24,13 @@ Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Anpassen der Anzei
 
 In jedem Dashboard (z. B. im Dashboard für [!UICONTROL Profile]) können Sie **[!UICONTROL Dashboard ändern]** auswählen, um die Größe vorhandener Widgets zu ändern und neu anzuordnen.
 
-![Das Dashboard Profile mit Dashboard Ändern wurde hervorgehoben.](../images/customization/modify-dashboard.png)
+![Das Dashboard &quot;Profile&quot;mit hervorgehobenem Dashboard &quot;Ändern&quot;.](../images/customization/modify-dashboard.png)
 
 ## Widgets neu anordnen
 
 Nachdem Sie sich entschieden haben, das Dashboard zu ändern, können Sie die Widgets neu anordnen, indem Sie den Widget-Titel auswählen und die Widgets in die gewünschte Reihenfolge ziehen. In diesem Beispiel wird das Widget **[!UICONTROL Trend der Profilanzahl]** in die oberste Zeile verschoben, und das Widget **[!UICONTROL Profilanzahl]** wird jetzt in der zweiten Zeile angezeigt.
 
-![Das Dashboard Profile mit zwei neu sortierten Widgets wird hervorgehoben.](../images/customization/move-widget.png)
+![Das Dashboard &quot;Profile&quot;mit zwei neu sortierten Widgets wurde hervorgehoben.](../images/customization/move-widget.png)
 
 ## Größe von Widgets anpassen
 
@@ -40,13 +40,13 @@ Sie können die Größe eines Widgets auch anpassen, indem Sie das Winkelsymbol 
 >
 >Wenn Widgets in der Größe angepasst werden, werden umliegende Widgets dynamisch neu positioniert. Dies kann dazu führen, dass einige Widgets in zusätzliche Zeilen verschoben werden, sodass Sie zum Anzeigen aller Widgets scrollen müssen.
 
-![Das Dashboard Profile mit einem Widget zur Größenanpassung wird hervorgehoben.](../images/customization/resize-widget.png)
+![Das Dashboard &quot;Profile&quot;mit einem Widget in der Größe &quot;Größe ändern&quot;, hervorgehoben.](../images/customization/resize-widget.png)
 
 ## Dashboard-Aktualisierungen speichern
 
 Wenn Sie mit dem Anpassen und Verschieben von Widgets fertig sind, klicken Sie auf **[!UICONTROL Speichern und beenden]**, um Ihre Änderungen zu speichern und zur Hauptansicht des Dashboards zurückzukehren. Wenn Sie Ihre Änderungen nicht beibehalten möchten, wählen Sie **[!UICONTROL Abbrechen]** aus, um das Dashboard zurückzusetzen und zur Haupt-Dashboard-Ansicht zurückzukehren.
 
-![Das Dashboard Profile , in dem sowohl Abbrechen als auch Speichern und Beenden hervorgehoben sind.](../images/customization/save-changes.png)
+![Das Profil-Dashboard mit hervorgehobenem Abbrechen und Speichern sowie Beenden.](../images/customization/save-changes.png)
 
 ## Widget-Bibliothek
 
@@ -54,7 +54,7 @@ Zusätzlich zur Größenanpassung und Neuanordnung von Widgets können Sie durch
 
 Schritt-für-Schritt-Anweisungen für den Zugriff auf und zum Arbeiten mit der [!UICONTROL Widget-Bibliothek] finden Sie im [Handbuch zur Widget-Bibliothek](widget-library.md).
 
-![Der Arbeitsbereich der Widget-Bibliothek mit hervorgehobenen Standardeinstellungen und benutzerdefinierten Eigenschaften.](../images/customization/widget-library.png)
+![Der Widget-Bibliotheksarbeitsbereich mit hervorgehobenen Standardeinstellungen und benutzerdefinierten Elementen.](../images/customization/widget-library.png)
 
 ## Nächste Schritte
 

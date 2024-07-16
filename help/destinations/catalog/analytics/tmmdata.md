@@ -5,18 +5,18 @@ description: Die TMMData-Erweiterung ist ein Analyseziel in Adobe Experience Pla
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 78%
+source-wordcount: '474'
+ht-degree: 81%
 
 ---
 
-# [!DNL TMMData]-Erweiterung  {#tmmdata-extension}
+# [!DNL TMMData]-Erweiterung {#tmmdata-extension}
 
 ## Übersicht {#overview}
 
-[!DNL TMMData's] Die Foundation-Plattform für Adobe Marketing Cloud bietet Marketing-Teams die Tools, um auf alle wichtigen Datenquellen - einschließlich interner/externer und Online-/Offline-Daten - zuzugreifen und diese miteinander zu kombinieren, um eine sichere, umfassende kanalübergreifende Analyse mit automatisierter Kampagneneinrichtung und direktem Import in Adobe und andere Analyse- und BI-Tools zu ermöglichen.
+[!DNL TMMData's] Die Foundation-Plattform für Adobe Marketing Cloud bietet Marketingteams die Werkzeuge, um auf all ihre wichtigen Datenquellen - einschließlich interner/externer und Online-/Offline-Daten - zuzugreifen und sie miteinander zu kombinieren, um eine sichere, umfassende kanalübergreifende Analyse mit automatisierter Kampagneneinrichtung und direktem Import in Adobe und andere Analyse- und BI-Tools zu ermöglichen.
 
-[!DNL TMMData] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL TMMData] Erweiterung:
+So installieren Sie die [!DNL TMMData]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [TMMData-Seite auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [TMMData auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

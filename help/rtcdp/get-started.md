@@ -18,7 +18,7 @@ Diese ersten Schritte führen Sie durch eine Beispielimplementierung von Real-ti
 Dieses Beispiel zeigt die Leistungsfähigkeit von Real-time Customer Data Platform mit Adobe Experience Platform:
 
 * Daten aus verschiedenen Quellen erfassen
-* Zusammenführen in einer [!DNL real-time customer profile]
+* Zusammenführen in einer einzelnen [!DNL real-time customer profile]
 * Ein konsistentes, relevantes und personalisiertes Erlebnis auf allen Geräten ermöglichen
 
 ## Anwendungsfall
@@ -55,7 +55,7 @@ Dieses Tutorial umfasst folgende Schritte:
 1. [Verschiedene Datenquellen](#using-multiple-data-sources) verwenden.
 1. [Datenquelle konfigurieren](#configuring-a-data-source).
 1. [Daten erfassen](#bringing-the-data-together-for-a-specific-customer) für einen bestimmten Kunden.
-1. Einrichten [Zielgruppen](#audiences).
+1. Einrichten von [Zielgruppen](#audiences).
 1. [Ziele](#destinations) einrichten.
 1. [Profil geräteübergreifend zusammenführen](#cross-device-identity-stitching).
 1. [Profil analysieren](#analyzing-the-profile).
@@ -66,7 +66,7 @@ Wenn Kunden Ihre Site zum ersten Mal besuchen, wissen Sie gar nichts über sie.
 
 ![Bild](assets/luma-site.png)
 
-Während der Navigation werden Daten in Echtzeit erfasst und nicht nur an eine Report Suite in Adobe Analytics gesendet, sondern auch direkt an Adobe Experience Platform. Wenn Daten erfasst werden, beginnen Sie, anhand von Verhaltensdaten in [!DNL Experience Platform's real-time customer profile].
+Während der Navigation werden Daten in Echtzeit erfasst und nicht nur an eine Report Suite in Adobe Analytics gesendet, sondern auch direkt an Adobe Experience Platform. Bei der Erfassung von Daten beginnen Sie, anhand von Verhaltensdaten in [!DNL Experience Platform's real-time customer profile] eine einzelne Ansicht des Verbrauchers zu erstellen.
 
 Bei vielen Besuchern der Website handelt es sich wahrscheinlich um wiederkehrende Kunden, die zuvor bereits bei Luma gekauft haben.  Es ist wichtig, dass Luma Botschaften und Angebote personalisieren kann, um sowohl neue und wiederkehrende Besucher als auch bekannte Kunden anzusprechen.
 
@@ -76,7 +76,7 @@ Beispielsweise navigiert ein nicht identifizierter Besucher auf der Site &quot;L
 
 ![Bild](assets/luma-sweatshirts.png)
 
-Wenn der Kunde zu weiteren Informationen über diese Produkte navigiert, werden diese Produktansichten in Adobe Analytics erfasst und an gesendet [!DNL Experience Platform].
+Wenn der Kunde navigiert, um mehr über diese Produkte zu erfahren, werden diese Produktansichten in Adobe Analytics erfasst und an [!DNL Experience Platform] gesendet.
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -95,9 +95,9 @@ Zwei Identitäten werden zusammengeführt:
 * die anonymen Browsing-Daten
 * die vorhandenen Daten, die mit dem Konto von Sarah Rose verknüpft sind.
 
-Beide Identitäten werden in einem einzigen Profil kombiniert [!DNL Experience Platform]. Luma verfügt nun über eine zentrale Ansicht dieses Kunden.
+Beide Identitäten werden in [!DNL Experience Platform] zu einem einzigen Profil zusammengefasst. Luma verfügt nun über eine zentrale Ansicht dieses Kunden.
 
-Wenn man das Browsing-Verhalten des anonymen Besuchers im Herrenbereich der Site betrachtet, hätte man erwarten können, dass der Kunde männlich ist. Nachdem sie angemeldet ist, erkennt Luma Sarah Rose. Luma nutzt die Kraft des [!DNL Real-Time Customer Profile] um die Botschaften zu verfeinern, die ihr kanalübergreifend übermittelt werden.
+Wenn man das Browsing-Verhalten des anonymen Besuchers im Herrenbereich der Site betrachtet, hätte man erwarten können, dass der Kunde männlich ist. Nachdem sie angemeldet ist, erkennt Luma Sarah Rose. Luma nutzt die Stärke von [!DNL Real-Time Customer Profile], um die Nachrichten, die ihr über verschiedene Kanäle hinweg zugestellt werden, zu verfeinern.
 
 ## Personalisierung des Kundenerlebnisses
 
@@ -107,7 +107,7 @@ Sie navigiert zur Startseite, um weitere zu durchsuchen.
 
 ![Bild](assets/luma-personal.png)
 
-Sarah erhält ein personalisiertes Startseiten-Erlebnis, das dynamisch bereitgestellt wird und auf ihrer [!DNL Real-Time Customer Profile] in Adobe Experience Platform.
+Sarah erhält ein personalisiertes Startseitenerlebnis, das dynamisch bereitgestellt wird und auf ihrem &quot;[!DNL Real-Time Customer Profile]&quot;-Wert in Adobe Experience Platform basiert.
 
 Dank der Adobe Sensei-basierten Personalisierung in Adobe Target, bei der ihre bisherigen Käufe sowie ihre Affinität für Laufbekleidung und -ausrüstung berücksichtigt werden, werden ihr relevante Inhalte angezeigt. Außerdem passt Luma den Inhalt des Herrenkatalogs basierend auf ihrem letzten Durchsuchen an Laufausrüstung für Männer an.
 
@@ -142,11 +142,11 @@ Alle diese Daten aus unterschiedlichen Quellen werden in einem einheitlichen Kun
 
 ## Konfigurieren einer Datenquelle
 
-Verwendung [!DNL Real-Time Customer Data Platform] , um neue Datenquellen in Platform zu integrieren. Real-Time CDP enthält einen Datenquellenkatalog, der schnell und einfach zum Profil hinzugefügt werden kann.
+Verwenden Sie [!DNL Real-Time Customer Data Platform] , um neue Datenquellen in Platform zu importieren. Real-Time CDP enthält einen Datenquellenkatalog, der schnell und einfach zum Profil hinzugefügt werden kann.
 
 ![Bild](assets/luma-source-cat.png)
 
-Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog nach *CRM* und allen nativen Connectoren, die *CRM* aufgelistet sind. Hinzufügen von [!DNL Microsoft Dynamics CRM] data:
+Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog nach *CRM* und alle nativen Connectoren mit *CRM* werden aufgelistet. Hinzufügen von [!DNL Microsoft Dynamics CRM] -Daten:
 
 1. Lassen Sie die Verbindung zu.
 
@@ -158,7 +158,7 @@ Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog na
 
    Wählen Sie beispielsweise **[!UICONTROL Kontakte]**. Eine Vorschau der Kontaktdaten wird automatisch geladen, damit Sie überprüfen können, ob alles wie erwartet aussieht.
 
-   Real-Time CDP entlastet diesen Prozess durch die automatische Zuordnung von Standardfeldern zum [!DNL Experience Data Model] (XDM)-Profilschema.
+   Real-Time CDP übernimmt einen Großteil der manuellen Arbeit aus diesem Prozess, indem Standardfelder automatisch dem Profilschema [!DNL Experience Data Model] (XDM) zugeordnet werden.
 
 1. Überprüfen Sie die Feldzuweisungen.
 
@@ -171,7 +171,7 @@ Um beispielsweise die CRM-Daten von Luma zu erfassen, filtern Sie den Katalog na
 
    ![Bild](assets/luma-source-sched.png)
 
-Damit ist der Vorgang abgeschlossen. Sie haben gerade hinzugefügt [!DNL Microsoft CRM] als Datenquelle in [!DNL Experience Platform].
+Damit ist der Vorgang abgeschlossen. Sie haben gerade [!DNL Microsoft CRM] als Datenquelle zu [!DNL Experience Platform] hinzugefügt.
 
 ### Bezeichnen von erfassten Daten für Nutzungsrichtlinien
 
@@ -193,16 +193,16 @@ Alle Profilinformationen, die Luma zu Sarah hat, werden angezeigt. Dazu gehören
 
 | Kategorie | Beschreibung |
 |---|---|
-| Identitäten | Zeigt die Identitäten an, die in [!DNL Platform] von Sarahs Interaktionen mit Luma über Kanäle und Geräte hinweg. Ihre ECID von der Website wird angezeigt. Zu ihrer Identität gehören auch die ECID aus ihrer mobilen App, ihre E-Mail-ID und eine CRM-ID aus dem kürzlich hinzugefügten . [!DNL Microsoft Dynamics] Datensatz und eine Treueprogramm-ID, die vom Treuesystem von Luma an Adobe Experience Platform übergeben wird. |
+| Identitäten | Zeigt die Identitäten an, die in [!DNL Platform] aus Sarahs Interaktionen mit Luma über Kanäle und Geräte hinweg verknüpft wurden. Ihre ECID von der Website wird angezeigt. Zu ihrer Identität gehören auch die ECID aus ihrer mobilen App, ihre E-Mail-ID, eine CRM-ID aus dem kürzlich hinzugefügten [!DNL Microsoft Dynamics] -Datensatz und eine Treueprogramm-ID, die vom Treuesystem Luma an Adobe Experience Platform übergeben wird. |
 | Ereignisse | Zeigt alle Interaktionsdaten von Sarah mit der Marke Luma an. Dazu gehören der Artikel, den sie gerade angesehen hat, alles, was Sarah in der Vergangenheit angesehen hat, die E-Mails, die sie erhalten hat, ihre Interaktionen mit dem Callcenter sowie Daten darüber, auf welchem Kanal und welchem Gerät die einzelnen Interaktionen stattgefunden haben. |
 
 Das Real-Time CDP-Profil reduziert den Arbeitsablauf des Luma-Marketingteams von Wochen auf Minuten und bietet auf Grundlage dieser 360-Grad-Kundenansicht Möglichkeiten zur Personalisierung. Das Profil fasst die Verhaltensdaten, die erfasst wurden, als sie die Site vor dem Anmelden durchsucht hat, mit ihrem bestehenden Kundenprofil zusammen und erlaubt so einen genauen Überblick über Sarah.
 
-Das Marketing-Team kann diese Erweiterung verwenden. [!DNL Real-Time Customer Profile] , um Sarahs Erlebnis besser zu personalisieren und die Markentreue zu Luma zu steigern.
+Das Marketing-Team kann diese verbesserte [!DNL Real-Time Customer Profile] verwenden, um Sarahs Erlebnis besser zu personalisieren und die Markentreue zu Luma zu erhöhen.
 
 ## Zielgruppen
 
-Die leistungsstarken Segmentierungsfunktionen von Adobe Experience Platform ermöglichen es Marketing-Experten, Attribute, Ereignisse und vorhandene Zielgruppen anhand der in der Variablen [!DNL Real-Time Customer Profile].
+Die leistungsstarken Segmentierungsfunktionen von Adobe Experience Platform ermöglichen es Marketing-Experten, Attribute, Ereignisse und vorhandene Zielgruppen basierend auf den in [!DNL Real-Time Customer Profile] erfassten Daten zu kombinieren.
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -235,7 +235,7 @@ Da Sarah wahrscheinlich einen Geschenkartikel in den Warenkorb gelegt und den Vo
 
 Wenn Sie die Zielgruppe &quot;Warenkorbabbrecher für Geschenkgutscheine&quot;hinzugefügt haben, können Sie ungefähr sehen, wie viele Personen Teil dieser Zielgruppe sind. Sie können aktiv werden und es für Personalisierungszwecke kanalübergreifend bereitstellen.
 
-Auswählen **[!UICONTROL An Ziele senden]**.
+Wählen Sie **[!UICONTROL An Ziele senden]** aus.
 
 In Real-Time CDP kann Luma zur Personalisierung nahtlos auf ihre Zielgruppen reagieren.\
 Hier sehen Sie alle Ziele, an die Luma dieses Ziel senden kann, sowohl Adobe- als auch Nicht-Adobe-Lösungen:
@@ -260,7 +260,7 @@ Sie können auch planen, dass der Zielgruppenexport zu einem bestimmten Zeitpunk
 >
 >Wenn Sie optional das Datumsfeld auswählen, wird automatisch eine Zeitdauer von 90 Tagen festgelegt.
 
-Auswählen **[!UICONTROL Speichern]** , um zur nächsten Seite zu gelangen.
+Wählen Sie **[!UICONTROL Speichern]** aus, um zur nächsten Seite zu wechseln.
 
 Wenn ein Kunde in dieser Zielgruppe einen Kauf tätigt, wird seine Mitgliedschaft in dieser Zielgruppe in Echtzeit unterdrückt. Sie qualifizieren sich nicht mehr, weil sich ihr Status geändert hat.
 
@@ -272,7 +272,7 @@ Adobe Experience Platform enthält Datenschutz- und Sicherheitskontrollen, mit d
 
 Wenn Ihre Aktivität gegen eine Richtlinie verstößt, wird eine Warnmeldung angezeigt. Diese Warnmeldung enthält Informationen zur Datenherkunft, mit denen Sie erkennen können, wie gegen die Richtlinie verstoßen wurde und was Sie tun können, um den Verstoß zu beheben.
 
-Mit diesen Steuerelementen [!DNL Experience Platform] hilft Luma, Vorschriften einzuhalten und verantwortungsvoll zu vermarkten. Diese Steuerelemente sind flexibel und können an die Anforderungen der Sicherheits- und Governance-Teams von Luma angepasst werden, sodass sie sich auf regionale und organisatorische Anforderungen für die Verwaltung bekannter und unbekannter Kundendaten einstellen können.
+Mit diesen Steuerelementen hilft [!DNL Experience Platform] Luma bei der Einhaltung von Vorschriften und beim verantwortungsvollen Marketing. Diese Steuerelemente sind flexibel und können an die Anforderungen der Sicherheits- und Governance-Teams von Luma angepasst werden, sodass sie sich auf regionale und organisatorische Anforderungen für die Verwaltung bekannter und unbekannter Kundendaten einstellen können.
 
 <!--
 

@@ -1,23 +1,23 @@
 ---
-title: Erste Schritte mit der Audit Query API
+title: Erste Schritte mit der Auditabfrage-API
 description: Mit der Auditabfrage-API können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Audit-Abfrage-API durchführen.
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
 source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 54%
+source-wordcount: '389'
+ht-degree: 40%
 
 ---
 
-# Erste Schritte mit der Audit Query API
+# Erste Schritte mit der Auditabfrage-API
 
-Mit Adobe Experience Platform können Sie Benutzeraktivitäten auf verschiedene Dienste und Funktionen in Form von Audit-Ereignisprotokollen überprüfen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben.
+Mit Adobe Experience Platform können Sie Benutzeraktivitäten auf verschiedene Dienste und Funktionen in Form von Audit-Ereignisprotokollen überprüfen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute für den Aktionstyp angeben.
 
 Mit der Auditabfrage-API können Sie die Benutzeraktivität auf verschiedene Dienste und Funktionen in Form von Audit-Ereignisprotokollen überprüfen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Audit-Abfrage-API durchführen.
 
 ## Voraussetzungen
 
-Um Prüfereignisse verwalten zu können, müssen Sie über die **[!UICONTROL Protokoll zu Benutzeraktivitäten anzeigen]** Zugriffskontrollberechtigung erteilt (zu finden unter [!UICONTROL Data Governance] Kategorie). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../../../access-control/home.md).
+Um Prüfereignisse verwalten zu können, müssen Sie über die Zugriffssteuerungsberechtigung **[!UICONTROL Protokoll zur Benutzeraktivität anzeigen]** verfügen (zu finden unter der Kategorie [!UICONTROL Data Governance] ). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie in der Dokumentation zur [Zugriffskontrolle](../../../../access-control/home.md) .
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -31,7 +31,7 @@ Für diese Anleitung müssen Sie das [Authentifizierungs-Tutorial](https://exper
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Für alle Anfragen an [!DNL Platform] -APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../../../sandboxes/home.md).
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -41,4 +41,4 @@ Für alle Anfragen mit einer Payload (POST, PUT, PATCH) wird eine zusätzliche K
 
 ## Nächste Schritte
 
-So starten Sie Aufrufe mit dem [!DNL Audit Query] API, siehe [Handbuch zum Ereignisendpunkt](./events.md) und [Export-Endpunkthandbuch](./export.md).
+Informationen zum Starten von Aufrufen mit der [!DNL Audit Query]-API finden Sie im [Ereignis-Endpunkthandbuch](./events.md) und im [Export-Endpunkthandbuch](./export.md).

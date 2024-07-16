@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Hotspot; Hubspot
+keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Erstellen einer HubSpot-Basisverbindung mit der Flow Service-API
 type: Tutorial
@@ -7,8 +7,8 @@ description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow S
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 64%
+source-wordcount: '479'
+ht-degree: 63%
 
 ---
 
@@ -25,21 +25,21 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL HubSpot] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL HubSpot] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Zur [!DNL Flow Service] zur Verbindung mit [!DNL HubSpot]müssen Sie die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung zu [!DNL HubSpot] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `clientId` | Die mit Ihrer [!DNL HubSpot] Anwendung. |
-| `clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL HubSpot] Anwendung. |
+| `clientId` | Die mit Ihrer [!DNL HubSpot] -Anwendung verknüpfte Client-ID. |
+| `clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL HubSpot]-Anwendung zugeordnet ist. |
 | `accessToken` | Das Zugriffstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
 | `refreshToken` | Das Aktualisierungstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL HubSpot] ist: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
-Weiterführende Informationen zu den ersten Schritten finden Sie in diesem Abschnitt [HubSpot-Dokument](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
+Weitere Informationen zu den ersten Schritten finden Sie in diesem [HubSpot-Dokument](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
 ### Verwenden von Platform-APIs
 
@@ -90,11 +90,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.clientId` | Die mit Ihrer [!DNL HubSpot] Anwendung. |
-| `auth.params.clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL HubSpot] Anwendung. |
+| `auth.params.clientId` | Die mit Ihrer [!DNL HubSpot] -Anwendung verknüpfte Client-ID. |
+| `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL HubSpot]-Anwendung zugeordnet ist. |
 | `auth.params.accessToken` | Das Zugriffstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
 | `auth.params.refreshToken` | Das Aktualisierungstoken, das beim erstmaligen Authentifizieren Ihrer OAuth-Integration erhalten wurde. |
-| `connectionSpec.id` | Die [!DNL HubSpot]-Verbindungsspezifikations-ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `connectionSpec.id` | Die [!DNL HubSpot] Verbindungsspezifikations-ID: `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **Antwort**
 

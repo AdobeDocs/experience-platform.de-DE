@@ -13,15 +13,15 @@ ht-degree: 16%
 
 # Endpunkt &quot;Zeitpläne&quot;
 
-Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können. Sie können die `/config/schedules` Endpunkt zum Abrufen einer Liste von Zeitplänen, Erstellen eines neuen Zeitplans, Abrufen von Details eines bestimmten Zeitplans, Aktualisieren eines bestimmten Zeitplans oder Löschen eines bestimmten Zeitplans.
+Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können. Sie können den Endpunkt `/config/schedules` verwenden, um eine Liste von Zeitplänen abzurufen, einen neuen Zeitplan zu erstellen, Details eines bestimmten Zeitplans abzurufen, einen bestimmten Zeitplan zu aktualisieren oder einen bestimmten Zeitplan zu löschen.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] -API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Abrufen einer Liste von Zeitplänen {#retrieve-list}
 
-Sie können eine Liste aller Zeitpläne für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/config/schedules` -Endpunkt.
+Sie können eine Liste aller Zeitpläne für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/config/schedules` senden.
 
 **API-Format**
 
@@ -98,8 +98,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zeitplän
 | `children.name` | Der Name des Zeitplans als Zeichenfolge. |
 | `children.type` | Der Auftragstyp als Zeichenfolge. Die beiden unterstützten Typen sind &quot;batch_segmentation&quot;und &quot;export&quot;. |
 | `children.properties` | Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
-| `children.properties.segments` | Verwenden `["*"]` stellt sicher, dass alle Segmente einbezogen werden. |
-| `children.schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
+| `children.properties.segments` | Durch Verwendung von `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
+| `children.schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
 | `children.state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
 
 ## Erstellen neuer Zeitpläne {#create}
@@ -140,8 +140,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Erforderlich.** Der Name des Zeitplans als Zeichenfolge. |
 | `type` | **Erforderlich.** Der Auftragstyp als Zeichenfolge. Die beiden unterstützten Typen sind &quot;batch_segmentation&quot;und &quot;export&quot;. |
 | `properties` | **Erforderlich.** Ein Objekt, das zusätzliche dem Zeitplan zugehörige Eigenschaften enthält. |
-| `properties.segments` | **Erforderlich, wenn `type` entspricht &quot;batch_segmentation&quot;.** Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
-| `schedule` | *Optional.* Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. <br><br>Wenn diese Zeichenfolge nicht angegeben wird, wird automatisch ein systemgenerierter Zeitplan generiert. |
+| `properties.segments` | **Erforderlich, wenn `type` gleich &quot;batch_segmentation&quot;ist.** Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
+| `schedule` | *Optional.* Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. <br><br>Wenn diese Zeichenfolge nicht angegeben wird, wird automatisch ein vom System generierter Zeitplan generiert. |
 | `state` | *Optional.* Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
 
 **Antwort**
@@ -174,7 +174,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum von Ihn
 
 ## Abrufen einzelner Zeitpläne {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten Zeitplan abrufen, indem Sie eine GET-Anfrage an die `/config/schedules` -Endpunkt und geben Sie die Kennung des Zeitplans an, den Sie im Anfragepfad abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten Zeitplan abrufen, indem Sie eine GET-Anfrage an den `/config/schedules` -Endpunkt senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie abrufen möchten.
 
 **API-Format**
 
@@ -184,7 +184,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie abrufen möchten. |
+| `{SCHEDULE_ID}` | Der `id` -Wert des Zeitplans, den Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -229,19 +229,19 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegeb
 | `name` | Der Name des Zeitplans als Zeichenfolge. |
 | `type` | Der Auftragstyp als Zeichenfolge. Unterstützt werden die Typen `batch_segmentation` und `export`. |
 | `properties` | Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
-| `properties.segments` | Verwenden `["*"]` stellt sicher, dass alle Segmente einbezogen werden. |
-| `schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
+| `properties.segments` | Durch Verwendung von `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
+| `schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
 | `state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Unterstützt werden die Status `active` und `inactive`. Standardmäßig lautet der Status `inactive`. |
 
 ## Aktualisieren von Details für einen bestimmten Zeitplan {#update}
 
-Sie können einen bestimmten Zeitplan aktualisieren, indem Sie eine PATCH-Anfrage an die `/config/schedules` -Endpunkt und geben Sie die Kennung des Zeitplans an, den Sie im Anfragepfad aktualisieren möchten.
+Sie können einen bestimmten Zeitplan aktualisieren, indem Sie eine PATCH-Anfrage an den `/config/schedules` -Endpunkt senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie aktualisieren möchten.
 
-Mit der PATCH-Anfrage können Sie entweder die [state](#update-state) oder [Cron-Zeitplan](#update-schedule) für einen individuellen Zeitplan.
+Mit der PATCH-Anfrage können Sie entweder den [Status](#update-state) oder den [Cron-Zeitplan](#update-schedule) für einen einzelnen Zeitplan aktualisieren.
 
 ### Aktualisieren des Status eines Zeitplans {#update-state}
 
-Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie `path` Eigenschaft als `/state` und legen Sie die `value` entweder `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie im [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) Dokumentation.
+Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie die `path` -Eigenschaft als `/state` und setzen die `value` auf entweder `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie in der Dokumentation zum [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) .
 
 **API-Format**
 
@@ -251,7 +251,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie aktualisieren möchten. |
+| `{SCHEDULE_ID}` | Der `id` -Wert des Zeitplans, den Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -273,8 +273,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status des Zeitplans aktualisieren, müssen Sie den Wert von `path` auf &quot;/state&quot;. |
-| `value` | Der aktualisierte Wert des Status des Zeitplans. Dieser Wert kann entweder als &quot;aktiv&quot;oder &quot;inaktiv&quot;festgelegt werden, um den Zeitplan zu aktivieren oder zu deaktivieren. Bitte beachten Sie: **cannot** einen Zeitplan deaktivieren, wenn die Organisation für Streaming aktiviert wurde. |
+| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status des Zeitplans aktualisieren, müssen Sie den Wert von `path` auf &quot;/state&quot;setzen. |
+| `value` | Der aktualisierte Wert des Status des Zeitplans. Dieser Wert kann entweder als &quot;aktiv&quot;oder &quot;inaktiv&quot;festgelegt werden, um den Zeitplan zu aktivieren oder zu deaktivieren. Beachten Sie, dass Sie einen Zeitplan **nicht deaktivieren können, wenn die Organisation für Streaming aktiviert wurde.** |
 
 **Antwort**
 
@@ -282,7 +282,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 204 (kein Inhalt) zurückge
 
 ### Cron-Zeitplan aktualisieren {#update-schedule}
 
-Sie können einen JSON Patch-Vorgang verwenden, um den Cron-Zeitplan zu aktualisieren. Um den Zeitplan zu aktualisieren, deklarieren Sie die `path` Eigenschaft als `/schedule` und legen Sie die `value` zu einem gültigen Cron-Zeitplan. Weitere Informationen zum JSON Patch finden Sie im [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) Dokumentation. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang im [Cron-Ausdrucksformat](#appendix).
+Sie können einen JSON Patch-Vorgang verwenden, um den Cron-Zeitplan zu aktualisieren. Um den Zeitplan zu aktualisieren, deklarieren Sie die `path` -Eigenschaft als `/schedule` und setzen die `value` auf einen gültigen Cron-Zeitplan. Weitere Informationen zum JSON Patch finden Sie in der Dokumentation zum [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) . Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix).
 
 **API-Format**
 
@@ -292,7 +292,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie aktualisieren möchten. |
+| `{SCHEDULE_ID}` | Der `id` -Wert des Zeitplans, den Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -314,7 +314,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `path` | Der Pfad des Werts, den Sie aktualisieren möchten. Da Sie in diesem Fall den Cron-Zeitplan aktualisieren, müssen Sie den Wert von `path` nach `/schedule`. |
+| `path` | Der Pfad des Werts, den Sie aktualisieren möchten. Da Sie in diesem Fall den Cron-Zeitplan aktualisieren, müssen Sie den Wert von `path` auf `/schedule` setzen. |
 | `value` | Der aktualisierte Wert des Cron-Zeitplans. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird der Zeitplan am zweiten Tag jedes Monats ausgeführt. |
 
 **Antwort**
@@ -323,7 +323,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 204 (kein Inhalt) zurückge
 
 ## Löschen einzelner Zeitpläne
 
-Sie können das Löschen eines bestimmten Zeitplans anfordern, indem Sie eine DELETE-Anfrage an die `/config/schedules` -Endpunkt und geben Sie die Kennung des Zeitplans an, den Sie im Anfragepfad löschen möchten.
+Sie können das Löschen eines bestimmten Zeitplans anfordern, indem Sie eine DELETE-Anfrage an den `/config/schedules` -Endpunkt senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie löschen möchten.
 
 **API-Format**
 
@@ -333,7 +333,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Die `id` des Zeitplans, den Sie löschen möchten. |
+| `{SCHEDULE_ID}` | Der `id` -Wert des Zeitplans, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -365,32 +365,32 @@ Ein Cron-Ausdruck ist eine Zeichenfolge aus 6 oder 7 Feldern. Der Ausdruck würd
 
 In einer Cron-Ausdruckszeichenfolge stellt das erste Feld die Sekunden, das zweite die Minuten, das dritte Feld die Stunden, das vierte Feld den Tag des Monats, das fünfte Feld den Monat und das sechste Feld den Wochentag dar. Sie können optional auch ein siebtes Feld einfügen, das das Jahr darstellt.
 
-| Feldname | Erforderlich | Mögliche Werte | zulässige Sonderzeichen |
+| Feldname | Erforderlich | Mögliche Werte | Zulässige Sonderzeichen |
 | ---------- | -------- | --------------- | -------------------------- |
 | Seconds | Ja | 0-59 | `, - * /` |
 | Minutes | Ja | 0-59 | `, - * /` |
-| Stunden | Ja | 0–23 | `, - * /` |
-| Tag des Monats | Ja | 1–31 | `, - * ? / L W` |
+| Stunden | Ja | 0-23 | `, - * /` |
+| Tag des Monats | Ja | 1-31 | `, - * ? / L W` |
 | Monat | Ja | 1-12, JAN-DEC | `, - * /` |
 | Wochentag | Ja | 1-7, SUN-SAT | `, - * ? / L #` |
 | Jahr | Nein | Empty, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
->Die Namen der Monate und der Wochentage sind **not** Groß-/Kleinschreibung beachten. Daher `SUN` entspricht der Verwendung `sun`.
+>Bei den Namen der Monate und den Namen der Wochentage wird zwischen **und nicht** Groß- und Kleinschreibung unterschieden. Daher entspricht `SUN` der Verwendung von `sun`.
 
 Die zulässigen Sonderzeichen stehen für die folgende Bedeutung:
 
 | Sonderzeichen | Beschreibung |
 | ----------------- | ----------- |
-| `*` | Dieser Wert wird zur Auswahl von **all** Werte in einem Feld. Beispiel: `*` im Stundenfeld würde **each** Stunde. |
-| `?` | Dieser Wert bedeutet, dass kein spezifischer Wert erforderlich ist. Dies wird in der Regel verwendet, um etwas in einem Feld anzugeben, in dem das Zeichen zulässig ist, in dem anderen jedoch nicht. Wenn Sie z. B. möchten, dass alle drei Monate ein Ereignis ausgelöst wird, sich aber nicht darum kümmert, welcher Wochentag der Veranstaltung ist, würden Sie `3` im Tag des Monats und `?` im Feld Wochentag ein. |
-| `-` | Dieser Wert wird verwendet, um **inklusive** Bereiche für das Feld. Wenn Sie beispielsweise `9-15` im Feld Stunden würde dies bedeuten, dass die Stunden 9, 10, 11, 12, 13, 14 und 15 umfassen würden. |
-| `,` | Dieser Wert wird verwendet, um zusätzliche Werte anzugeben. Wenn Sie beispielsweise `MON, FRI, SAT` im Feld Wochentag würde dies bedeuten, dass die Wochentage Montag, Freitag und Samstag umfassen würden. |
-| `/` | Dieser Wert wird zum Angeben von Inkrementen verwendet. Der vor dem `/` bestimmt, von wo er inkrementiert, während der Wert nach der `/` bestimmt, um wie viel er erhöht wird. Wenn Sie beispielsweise `1/7` würde dies bedeuten, dass die Minuten 1, 8, 15, 22, 29, 36, 43, 50 und 57 umfassen würden. |
-| `L` | Dieser Wert wird verwendet, um `Last`und hat je nach Feld, für das sie verwendet wird, eine andere Bedeutung. Wenn es mit dem Tag des Monats-Felds verwendet wird, stellt es den letzten Tag des Monats dar. Wenn es allein mit dem Wochentag verwendet wird, stellt es den letzten Wochentag dar, nämlich Samstag (`SAT`). Wenn es zusammen mit dem Wochentag in Verbindung mit einem anderen Wert verwendet wird, stellt es den letzten Tag dieses Typs für den Monat dar. Wenn Sie beispielsweise `5L` im Feld Wochentag **only** den letzten Freitag des Monats einschließen. |
-| `W` | Dieser Wert wird verwendet, um den Wochentag anzugeben, der dem angegebenen Tag am nächsten ist. Wenn Sie beispielsweise `18W` im Monatsfeld, und der 18. des Monats ein Samstag war, war es am Freitag, den 17., der nächstgelegene Wochentag, Trigger. Wenn der 18. des Monats ein Sonntag wäre, würde er am Montag am 19., dem nächstgelegenen Wochentag, Trigger haben. Bitte beachten Sie, dass wenn Sie `1W` im Feld Tag des Monats angegeben ist und der nächstgelegene Wochentag im Vormonat liegt, wird das Ereignis noch am nächsten Wochentag des **current** Monat.</br></br>Darüber hinaus können Sie `L` und `W` um `LW`, der den letzten Wochentag des Monats angibt. |
-| `#` | Dieser Wert wird verwendet, um den n-ten Tag der Woche in einem Monat anzugeben. Der vor dem `#` stellt den Wochentag dar, während der Wert nach der `#` gibt an, welches Vorkommen im Monat es ist. Wenn Sie beispielsweise `1#3`, wird das Ereignis am dritten Sonntag des Monats Trigger. Bitte beachten Sie, dass wenn Sie `X#5` und es in diesem Monat keinen fünften Tag der Woche gibt, wird das Ereignis **not** ausgelöst werden. Wenn Sie beispielsweise `1#5`, und es gibt keinen fünften Sonntag in diesem Monat wird das Ereignis **not** ausgelöst werden. |
+| `*` | Dieser Wert wird verwendet, um **alle** -Werte in einem Feld auszuwählen. Wenn Sie beispielsweise `*` in das Feld &quot;Stunden&quot;eingeben, bedeutet dies **jede** Stunde. |
+| `?` | Dieser Wert bedeutet, dass kein spezifischer Wert erforderlich ist. Dies wird in der Regel verwendet, um etwas in einem Feld anzugeben, in dem das Zeichen zulässig ist, in dem anderen jedoch nicht. Wenn Sie beispielsweise möchten, dass alle drei Monate ein Ereignis ausgelöst werden, sich jedoch nicht um den Wochentag kümmern, setzen Sie `3` in das Monatsfeld und `?` in das Wochentag-Feld. |
+| `-` | Dieser Wert wird verwendet, um **einschließlich** Bereiche für das Feld anzugeben. Wenn Sie beispielsweise `9-15` in das Feld Stunden eingeben, würden die Stunden 9, 10, 11, 12, 13, 14 und 15 umfassen. |
+| `,` | Dieser Wert wird verwendet, um zusätzliche Werte anzugeben. Wenn Sie beispielsweise `MON, FRI, SAT` in das Feld Wochentag setzen, würden die Wochentage Montag, Freitag und Samstag umfassen. |
+| `/` | Dieser Wert wird zum Angeben von Inkrementen verwendet. Der vor dem `/` platzierte Wert bestimmt, von wo er erhöht wird, während der nach dem `/` platzierte Wert bestimmt, um wie viel er erhöht wird. Wenn Sie beispielsweise &quot;`1/7`&quot;in das Feld &quot;Minuten&quot;setzen, würden die Minuten 1, 8, 15, 22, 29, 36, 43, 50 und 57 umfassen. |
+| `L` | Dieser Wert wird verwendet, um `Last` anzugeben, und hat je nachdem, von welchem Feld er verwendet wird, eine andere Bedeutung. Wenn es mit dem Tag des Monats-Felds verwendet wird, stellt es den letzten Tag des Monats dar. Wenn es allein mit dem Wochentag verwendet wird, stellt es den letzten Wochentag dar, nämlich Samstag (`SAT`). Wenn es zusammen mit dem Wochentag in Verbindung mit einem anderen Wert verwendet wird, stellt es den letzten Tag dieses Typs für den Monat dar. Wenn Sie beispielsweise `5L` in das Wochentag-Feld eintragen, würde dies **nur** den letzten Freitag des Monats einschließen. |
+| `W` | Dieser Wert wird verwendet, um den Wochentag anzugeben, der dem angegebenen Tag am nächsten ist. Wenn Sie beispielsweise &quot;`18W`&quot;in das Monatsfeld setzen und der 18. dieses Monats einen Samstag war, würde dieser am Freitag, dem 17., der nächstgelegenen Wochentag, Trigger haben. Wenn der 18. des Monats ein Sonntag wäre, würde er am Montag am 19., dem nächstgelegenen Wochentag, Trigger haben. Wenn Sie `1W` in das Monatsfeld eintragen und der nächstgelegene Wochentag im Vormonat liegt, wird das Ereignis weiterhin am nächsten Wochentag des **aktuellen** Monats Trigger.</br></br>Außerdem können Sie `L` und `W` zu `LW` kombinieren, was den letzten Wochentag des Monats angibt. |
+| `#` | Dieser Wert wird verwendet, um den n-ten Tag der Woche in einem Monat anzugeben. Der vor dem `#` platzierte Wert stellt den Wochentag dar, während der Wert, der nach dem `#` platziert wird, für welches Vorkommen im Monat es sich handelt. Wenn Sie beispielsweise `1#3` setzen, wird das Ereignis am dritten Sonntag des Monats Trigger. Wenn Sie `X#5` setzen und dieser Wochentag nicht zum fünften Mal vorkommt, wird das Ereignis **nicht** ausgelöst. Wenn Sie beispielsweise `1#5` setzen und es keinen fünften Sonntag in diesem Monat gibt, wird das Ereignis **nicht** ausgelöst. |
 
 ### Beispiele
 

@@ -80,7 +80,7 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-Standardisierung und Interoperabilität sind Schlüsselkonzepte von [!DNL Experience Platform]. Das von Adobe unterstützte [!DNL Experience Data Model] (XDM)-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Kundenerlebnis-Management zu definieren.
+Standardisierung und Interoperabilität sind Schlüsselkonzepte von [!DNL Experience Platform]. Das von Adobe unterstützte [!DNL Experience Data Model] (XDM)-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemata für das Kundenerlebnis-Management zu definieren.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
@@ -88,7 +88,7 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierte Suchoberfläche | Verbesserte Suchfunktionen sind jetzt auf dem Tab [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schemas] und im Dialogfeld für die Schemafeldgruppe von [!DNL Schema Editor] verfügbar.<br><br>Beim Suchen nach einem Begriff wurden bisher nur XDM-Ressourcen berücksichtigt, deren Name mit der Suchanfrage übereinstimmten. Nun werden zusätzlich zu diesen Ressourcen, deren Name mit der Suchanfrage übereinstimmt, auch die Ressourcen mit einbezogen, bei denen einzelne Attribute mit dem Begriff übereinstimmen. Auf diese Weise können Sie basierend auf den enthaltenen Attributen und nicht nur basierend auf dem Namen der Ressource nach XDM-Ressourcen suchen.<br><br>Weitere Informationen finden Sie in den Dokumenten zum [Kennenlernen von XDM-Ressourcen](../../xdm/ui/explore.md) und zum [Verwalten von Schemas](../../xdm/ui/resources/schemas.md) in der Benutzeroberfläche. |
+| Aktualisierte Suchoberfläche | Verbesserte Suchfunktionen sind jetzt auf dem Tab [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schemata] und im Dialogfeld für die Schemafeldgruppe von [!DNL Schema Editor] verfügbar.<br><br>Beim Suchen nach einem Begriff wurden bisher nur XDM-Ressourcen berücksichtigt, deren Name mit der Suchanfrage übereinstimmten. Nun werden zusätzlich zu diesen Ressourcen, deren Name mit der Suchanfrage übereinstimmt, auch die Ressourcen mit einbezogen, bei denen einzelne Attribute mit dem Begriff übereinstimmen. Auf diese Weise können Sie basierend auf den enthaltenen Attributen und nicht nur basierend auf dem Namen der Ressource nach XDM-Ressourcen suchen.<br><br>Weitere Informationen finden Sie in den Dokumenten zum [Kennenlernen von XDM-Ressourcen](../../xdm/ui/explore.md) und zum [Verwalten von Schemata](../../xdm/ui/resources/schemas.md) in der Benutzeroberfläche. |
 
 Weitere allgemeine Informationen zu XDM finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
@@ -116,7 +116,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | ------- | ----------- |
 | Berechnete Attribute (Alphaversion) | ***Hinweis: Diese Funktion befindet sich derzeit in der Alphaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.*** <br/><br/>Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Anschließend können Sie die Aggregate in der Segmentierung, Aktivierung und Personalisierung verwenden. Einige Beispiele für diese Funktionen sind Anzahl, Summe, Durchschnitt, min, max, wahr/falsch. Berechnete Attribute sind derzeit nur über API verfügbar. |
 
-Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] Daten, lesen Sie bitte zunächst die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] -Daten, erhalten Sie in der [Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md) .
 
 ## [!DNL Sources] {#sources}
 

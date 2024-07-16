@@ -27,13 +27,13 @@ Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für dies
 
 >[!NOTE]
 >
->Es gibt eine einzige Liste von Bezeichnungen für eine ganze Organisation. Um eine benutzerdefinierte Bezeichnung zu erstellen, benötigen Sie **[!UICONTROL Nutzungsbezeichnungen verwalten]** -Berechtigungen für die Produktions-Sandbox. Das Löschen von Bezeichnungen wird derzeit nicht unterstützt.
+>Es gibt eine einzige Liste von Bezeichnungen für eine ganze Organisation. Um eine benutzerdefinierte Beschriftung zu erstellen, benötigen Sie die Berechtigung **[!UICONTROL Nutzungsbezeichnungen verwalten]** für die Produktions-Sandbox. Das Löschen von Bezeichnungen wird derzeit nicht unterstützt.
 
-Um eine neue Bezeichnung zu erstellen, wählen Sie die **[!UICONTROL Bezeichnungen]** Registerkarte in der Seitenleiste und wählen Sie **[!UICONTROL Titel erstellen]**.
+Um eine neue Beschriftung zu erstellen, wählen Sie in der Seitenleiste die Registerkarte **[!UICONTROL Beschriftungen]** und danach **[!UICONTROL Beschriftung erstellen]** aus.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-Die **[!UICONTROL Neue Bezeichnung erstellen]** angezeigt, in dem Sie aufgefordert werden, einen Namen, einen optionalen Anzeigenamen und eine optionale Beschreibung einzugeben.
+Das Dialogfeld **[!UICONTROL Neue Beschriftung erstellen]** wird angezeigt und fordert Sie zur Eingabe eines Namens, eines optionalen Anzeigenamens und einer optionalen Beschreibung auf.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 

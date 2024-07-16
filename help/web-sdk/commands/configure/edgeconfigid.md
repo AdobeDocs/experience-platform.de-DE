@@ -1,7 +1,8 @@
 ---
 title: edgeConfigId
 description: Bestimmen Sie die Datastream-ID, an die Sie Daten senden möchten.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 2d709f70-c014-4868-b2f5-17e8b88343d1
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
@@ -10,34 +11,34 @@ ht-degree: 0%
 
 # `edgeConfigId`
 
-Die `edgeConfigId` -Eigenschaft ist eine Zeichenfolge, die bestimmt, [datastream](../../../datastreams/overview.md) in Adobe Experience Platform, an die Sie Daten senden möchten. Diese Eigenschaft ist beim Senden von Daten an Adobe erforderlich.
+Die `edgeConfigId` -Eigenschaft ist eine Zeichenfolge, die bestimmt, an welchen [Datastraam](../../../datastreams/overview.md) in Adobe Experience Platform Daten gesendet werden sollen. Diese Eigenschaft ist beim Senden von Daten an Adobe erforderlich.
 
 So suchen Sie eine Datastream-ID:
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Datenspeicher]**.
-1. Suchen Sie mithilfe des Suchfelds nach dem gewünschten Datastream und wählen Sie **[!UICONTROL Kopieren]** ![Kopieren](../../assets/copy.png) neben der Datastream-ID.
+1. Verwenden Sie das Suchfeld, um den gewünschten Datastream zu suchen, und wählen Sie dann neben der Datastream-ID **[!UICONTROL Copy]** ![Copy](../../assets/copy.png) aus.
 
 Sie können auch den gewünschten Datastream-Namen auswählen und die Datastream-ID wird in der rechten Spalte angezeigt, die Sie kopieren können.
 
 ## Wählen Sie die Datastraam-ID mithilfe der Web SDK-Tag-Erweiterung aus.
 
-Wählen Sie aus einer Liste verfügbarer Datenspeicher oder geben Sie eine Datastraam-ID ein, wenn Sie [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Wählen Sie aus einer Liste der verfügbaren Datenspeicher aus oder geben Sie eine Datastraam-ID direkt ein, wenn [die Tag-Erweiterung konfigurieren](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** Klicken Sie auf **[!UICONTROL Konfigurieren]** auf [!UICONTROL Adobe Experience Platform Web SDK] Karte.
-1. Suchen Sie die [!UICONTROL Datenspeicher] und wählen Sie dann die gewünschte Methode zur Bestimmung des Datastreams aus.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
+1. Suchen Sie den Abschnitt [!UICONTROL Datastreams] und wählen Sie dann die gewünschte Methode zur Bestimmung des Datastreams aus.
    * Wenn Sie aus einer Liste auswählen, wählen Sie die Sandbox und den Datastream aus den jeweiligen Dropdown-Listen aus.
    * Geben Sie bei der Eingabe von Werten die gewünschte Datastream-ID ein.
-1. Klicks **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Klicken Sie auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
 
 Sie können Daten für Produktions-, Staging- und Entwicklungs-Tag-Umgebungen an verschiedene Datastreams senden.
 
-## Wählen Sie die Datastraam-ID mithilfe der Web SDK JavaScript-Bibliothek aus.
+## Auswählen der Datastraam-ID mithilfe der Web SDK JavaScript-Bibliothek
 
-Legen Sie die `edgeConfigId` Zeichenfolgeneigenschaft beim Ausführen der `configure` Befehl. Diese Eigenschaft ist für alle Web SDK-Implementierungen erforderlich. Wenn Sie diese Eigenschaft weglassen, weiß das Web SDK nicht, an welchen Datenspeicher Daten gesendet werden sollen, was dazu führt, dass diese Daten dauerhaft verloren gehen.
+Legen Sie die String-Eigenschaft `edgeConfigId` fest, wenn Sie den Befehl `configure` ausführen. Diese Eigenschaft ist für alle Web SDK-Implementierungen erforderlich. Wenn Sie diese Eigenschaft weglassen, weiß das Web SDK nicht, an welchen Datenspeicher Daten gesendet werden sollen, was dazu führt, dass diese Daten dauerhaft verloren gehen.
 
 ```js
 alloy("configure", {
@@ -46,4 +47,4 @@ alloy("configure", {
 });
 ```
 
-Wenn Sie mehrere Instanzen des Web SDK auf einer Seite konfigurieren, müssen Sie eine andere `edgeConfigId` für jede Instanz.
+Wenn Sie mehrere Instanzen des Web SDK auf einer einzelnen Seite konfigurieren, müssen Sie für jede Instanz ein anderes `edgeConfigId` konfigurieren.

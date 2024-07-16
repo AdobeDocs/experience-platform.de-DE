@@ -15,11 +15,11 @@ Verwenden Sie die Advanced Data Lifecycle Management-Benutzeroberfläche und die
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt ein Verständnis des Arbeitsbereichs &quot;Datenlebenszyklus&quot;und der [Data Hygiene API](./api/overview.md). Machen Sie sich mit den Handbüchern vertraut, bevor Sie mit diesem Dokument fortfahren [Advanced Data Lifecycle Management](./home.md) und [Erstellen von Löschanfragen für Datensätze](./ui/record-delete.md) oder [Datensatzabläufe in der Benutzeroberfläche](./ui/dataset-expiration.md)oder über die API.
+Dieses Handbuch setzt ein Verständnis des Arbeitsbereichs &quot;Datenlebenszyklus&quot;und der [Data Hygiene API](./api/overview.md) voraus. Machen Sie sich vor dem Fortfahren dieses Dokuments mit den Handbüchern zu [Erweitertes Data Lifecycle Management](./home.md) und [ Erstellen von Löschanfragen für Datensätze](./ui/record-delete.md) oder [Datensatzabläufen in der Benutzeroberfläche](./ui/dataset-expiration.md) oder über die API vertraut.
 
 ## Richtlinien zur Erstellung von Arbeitsbestellungen {#work-order-creation-guidelines}
 
-Sie können die `/workorder` -Endpunkt in der Data Hygiene-API zur programmatischen Verwaltung von Löschanfragen von Datensätzen in Experience Platform. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anforderung aktualisieren. Siehe [Arbeitserstellungsendpunkt-Dokument](./api/workorder.md) , um zu erfahren, wie Sie diese Aktionen mit der API durchführen.
+Sie können den Endpunkt `/workorder` in der Data Hygiene API verwenden, um Löschanfragen von Datensätzen in Experience Platform programmgesteuert zu verwalten. Mit diesem Endpunkt können Sie eine Löschanfrage erstellen, ihren Status überprüfen oder eine vorhandene Anforderung aktualisieren. Weitere Informationen zum Ausführen dieser Aktionen mit der API finden Sie im Dokument [Workflow-Bestellendpunkt](./api/workorder.md) .
 
 >[!TIP]
 >
@@ -27,27 +27,27 @@ Sie können die `/workorder` -Endpunkt in der Data Hygiene-API zur programmatisc
 
 Befolgen Sie diese Richtlinien, um Ihre Datenbereinigungsanforderungen zu optimieren:
 
-1. **Identitäten pro Anforderung maximieren:** Binden Sie bis zu 100.000 Identitäten pro Bereinigungsanfrage ein, um die Effizienz zu steigern. Wenn Sie mehrere Identitäten in eine einzige Anfrage stapeln, können Sie die Häufigkeit von API-Aufrufen reduzieren und das Risiko von Leistungsproblemen aufgrund übermäßiger Einzelidentitätsanfragen minimieren. Senden Sie Anfragen mit maximalen Identitätszahlen, um eine schnellere Verarbeitung zu erzielen, da Arbeitsaufträge aus Effizienzgründen stapelt werden.
-2. **Festlegen einzelner Datensätze:** Geben Sie für maximale Effizienz den zu verarbeitenden Datensatz an.
+1. **Identitäten pro Anforderung maximieren:** Pro Bereinigungsanfrage bis zu 100.000 Identitäten einschließen, um die Effizienz zu steigern. Wenn Sie mehrere Identitäten in eine einzige Anfrage stapeln, können Sie die Häufigkeit von API-Aufrufen reduzieren und das Risiko von Leistungsproblemen aufgrund übermäßiger Einzelidentitätsanfragen minimieren. Senden Sie Anfragen mit maximalen Identitätszahlen, um eine schnellere Verarbeitung zu erzielen, da Arbeitsaufträge aus Effizienzgründen stapelt werden.
+2. **Geben Sie einzelne Datensätze an:** Geben Sie zur maximalen Effizienz den zu verarbeitenden Datensatz an.
 3. **Überlegungen zur API-Drosselung:** Achten Sie auf API-Einschränkungen, um langsame Downloads zu verhindern. Kleinere Anforderungen (&lt; 100 IDs) mit höheren Frequenzen können zu 429 Antworten führen und erfordern eine erneute Übermittlung zu akzeptablen Raten.
 
 ### 429-Fehler verwalten {#manage-429-errors}
 
 Wenn der Fehler 429 angezeigt wird, bedeutet dies, dass Sie die zulässige Anzahl von Anfragen innerhalb eines bestimmten Zeitraums überschritten haben. Befolgen Sie diese Best Practices, um 429-Fehler effektiv zu verwalten:
 
-- **Lesen Sie die Kopfzeile &quot;Retry-After&quot;.**: Wenn ein 429-Fehler zurückgegeben wird, überprüfen Sie die Antwortheader &quot;Retry-After&quot;. Dieser Header gibt die Wartezeit vor einem erneuten Versuch der Anfrage an.
-- **Implementieren der Wiederholungslogik**: Verwenden Sie den Wert &quot;Retry-After&quot;, um die Wiederholungslogik in Ihre Anwendung zu implementieren und sicherzustellen, dass nach der angegebenen Zeit versucht wird, weitere Versuche durchzuführen, um nachfolgende 429 Fehler zu vermeiden.
-- **Batch von Anforderungen**: Vermeiden Sie das schnelle Senden zahlreicher kleiner Anfragen. Stapeln Sie stattdessen mehrere Identitäten in einer einzelnen Anfrage, um die Häufigkeit von Aufrufen zu reduzieren und das Risiko zu minimieren, dass Quotenbeschränkungen erreicht werden.
+- **Lesen Sie die Kopfzeile &quot;Retry-After&quot;**: Wenn ein 429-Fehler zurückgegeben wird, überprüfen Sie die Antwortheader &quot;Retry-After&quot;. Dieser Header gibt die Wartezeit vor einem erneuten Versuch der Anfrage an.
+- **Implementieren Sie die Wiederholungslogik**: Verwenden Sie den Wert &quot;Retry-After&quot;, um die Wiederholungslogik in Ihre Anwendung zu implementieren, und stellen Sie sicher, dass nach der angegebenen Zeit versucht wird, weitere Versuche durchzuführen, um nachfolgende 429-Fehler zu vermeiden.
+- **Batch your requests**: Vermeiden Sie das schnelle Senden zahlreicher kleiner Anfragen. Stapeln Sie stattdessen mehrere Identitäten in einer einzelnen Anfrage, um die Häufigkeit von Aufrufen zu reduzieren und das Risiko zu minimieren, dass Quotenbeschränkungen erreicht werden.
 
 ## Ablaufdatum des Datensatzes {#dataset-expiration}
 
-Richten Sie die automatische Bereinigung von Datensätzen für kurzlebige Daten ein. Verwenden Sie die `/ttl` -Endpunkt der Data Hygiene-API verwenden, um Ablaufdaten für Datensätze zu planen, die basierend auf einem bestimmten Zeitpunkt oder Datum für die Bereinigung verwendet werden sollen. Weitere Informationen finden Sie im Handbuch zum Ablauf von Datensätzen . [Erstellen eines Datensatzablaufs](./api/dataset-expiration.md) und [akzeptierte Abfrageparameter](./api/dataset-expiration.md#query-params).
+Richten Sie die automatische Bereinigung von Datensätzen für kurzlebige Daten ein. Verwenden Sie den Endpunkt `/ttl` in der Data Hygiene API, um Ablaufdaten für Datensätze zu planen, die basierend auf einem bestimmten Zeitpunkt oder Datum für die Bereinigung verwendet werden sollen. Weitere Informationen zum Erstellen eines Datensatzablaufs [und der [akzeptierten Abfrageparameter](./api/dataset-expiration.md#query-params) finden Sie im Handbuch zum Ablauf von Datensätzen ](./api/dataset-expiration.md) .
 
 ## Überwachen der Arbeitsreihenfolge und des Datensatzablaufstatus {#monitor}
 
-Sie können den Fortschritt Ihrer Datenlebenszyklusverwaltung effizient überwachen, indem Sie **E/A-Ereignisse**. Ein I/O-Ereignis ist ein Mechanismus zum Empfang von Echtzeit-Benachrichtigungen über Änderungen oder Aktualisierungen in verschiedenen Diensten innerhalb von Platform.
+Sie können den Fortschritt Ihres Daten-Lebenszyklusmanagements mithilfe von **I/O-Ereignissen** effizient überwachen. Ein I/O-Ereignis ist ein Mechanismus zum Empfang von Echtzeit-Benachrichtigungen über Änderungen oder Aktualisierungen in verschiedenen Diensten innerhalb von Platform.
 
-E/A-Ereignis-Warnungen können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über Webhook zu erhalten, müssen Sie Ihren Webhook für Platform-Warnhinweise in der Adobe Developer Console registrieren. Siehe Handbuch unter [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../observability/alerts/subscribe.md) für die detaillierten Anweisungen.
+E/A-Ereignis-Warnungen können an einen konfigurierten Webhook gesendet werden, um die Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über Webhook zu erhalten, müssen Sie Ihren Webhook für Platform-Warnhinweise in der Adobe Developer Console registrieren. Detaillierte Anweisungen finden Sie im Handbuch zum [Abonnieren von Adobe I/O-Ereignisbenachrichtigungen](../observability/alerts/subscribe.md) .
 
 Verwenden Sie die folgenden Lebenszyklusmethoden und -richtlinien, um den Auftragsstatus effektiv abzurufen und zu überwachen:
 
@@ -63,7 +63,7 @@ Um den Fortschritt Ihrer Datenlebenszyklusaufgaben effizient zu überwachen, ric
 
 Ausführliche Informationen zu einzelnen Arbeitsaufträgen erhalten Sie bei folgendem Ansatz:
 
-- Stellen Sie eine GET-Anfrage an die `/workorder/{work_order_id}` Endpunkt für detaillierte Antwortdaten.
+- Stellen Sie eine GET-Anfrage an den `/workorder/{work_order_id}` -Endpunkt, um detaillierte Antwortdaten zu erhalten.
 - Abrufen produktspezifischer Antworten und Erfolgsmeldungen.
 - Vermeiden Sie die Verwendung dieser Methode für reguläre Abruftätigkeiten.
 

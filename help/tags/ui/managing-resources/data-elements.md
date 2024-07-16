@@ -95,7 +95,7 @@ Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibli
 >
 >Datenelementtypen werden durch die Erweiterung bestimmt. Die erstellbaren Typen sind nicht beschränkt.
 
-In den folgenden Abschnitten werden die in der Variablen **Haupterweiterung**. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
+In den folgenden Abschnitten werden die in der **Haupterweiterung** verfügbaren Datenelementtypen beschrieben. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
 
 ### Cookie
 
@@ -139,7 +139,7 @@ Mithilfe der `_satellite`-Objektsyntax können Sie dies dann in benutzerdefinier
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Bei Verwendung von Prozent (`%`), müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
+Bei Verwendung der Prozentsyntax (`%`) müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
 
 ```text
 %data element name%
@@ -176,7 +176,7 @@ Nehmen wir beispielsweise an, das Markup enthält eine JavaScript-Variable namen
 
 Sie müssen den Pfad zu dieser Variablen angeben, wenn Sie das Datenelement erstellen.
 
-Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie im Pfad Punktnotation zur Referenzierung des Objekts und der Eigenschaft, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName`oder `digitalData.pageName`, usw.
+Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie im Pfad Punktnotation zur Referenzierung des Objekts und der Eigenschaft, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName` oder `digitalData.pageName` usw.
 
 #### Beispiel:
 

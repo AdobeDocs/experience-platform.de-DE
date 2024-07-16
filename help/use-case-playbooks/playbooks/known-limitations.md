@@ -20,11 +20,11 @@ Erfahren Sie, wie Sie Fehler beim Arbeiten mit &quot;Anwendungsfall-Playbooks&qu
 
 Beim Erstellen einer Instanz eines Playbooks und Generieren von Assets werden einige bekannte Einschränkungen angezeigt.
 
-* Wenn bei generierten Schemata ein Schema in einer Instanz eines Playbooks generiert und Sie es bearbeiten, dann ein anderes Schema *nicht* generiert werden, wenn Sie eine andere Instanz des Playbooks aktivieren. Verwenden Sie stattdessen weiterhin das Schema, das Sie in der Instanz bearbeitet haben.
+* Wenn bei generierten Schemata ein Schema in einer Instanz eines Playbooks generiert und Sie es bearbeiten, wird kein weiteres Schema *1} generiert, wenn Sie eine andere Instanz des Playbooks aktivieren.* Verwenden Sie stattdessen weiterhin das Schema, das Sie in der Instanz bearbeitet haben.
 
-* Bei Verwendung von [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md) Um das Schema von der inspirierenden Sandbox in die Entwicklungs-Sandbox zu leiten, treten möglicherweise einige Fehler auf, die in etwa wie folgt aussehen:
+* Wenn Sie die [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md) verwenden, um das Schema von der inspirierenden Sandbox in die Entwicklungs-Sandbox zu leiten, treten möglicherweise einige Fehler auf, die in etwa wie folgt aussehen:
 
-![Im Workflow für die Schemazuordnung angezeigte Fehler.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
+![ Fehler, die im Workflow für die Schemazuordnung angezeigt werden.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Dies liegt daran, dass einige der aus Ihrem Schema generierten Felder nicht im Schema in der Entwicklungs-Sandbox vorhanden sind, in die Sie kopieren. Suchen Sie nach diesen Feldern. Gehen Sie dann zurück zur Entwicklungs-Sandbox, in der Sie Folgendes ausführen können:
 

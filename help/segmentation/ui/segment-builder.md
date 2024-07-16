@@ -101,9 +101,9 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 
 >[!NOTE]
 >
->Für Zielgruppen, die in Platform erstellt werden, nur Zielgruppen mit der **same** Die Zusammenführungsrichtlinie wird angezeigt.
+>Für in Platform erstellte Zielgruppen werden nur Zielgruppen mit der Zusammenführungsrichtlinie **Dasselbe** angezeigt.
 
-Die **[!UICONTROL Zielgruppen]** auf der Registerkarte werden alle Zielgruppen aufgelistet, die aus externen Quellen wie Adobe Audience Manager oder Customer Journey Analytics importiert wurden, sowie Zielgruppen, die in [!DNL Experience Platform].
+Auf der Registerkarte **[!UICONTROL Zielgruppen]** werden alle Zielgruppen aufgelistet, die aus externen Quellen wie Adobe Audience Manager oder Customer Journey Analytics importiert wurden, sowie alle in [!DNL Experience Platform] erstellten Zielgruppen.
 
 Auf der Registerkarte **[!UICONTROL Zielgruppen]** können Sie alle verfügbaren Quellen als eine Ordnergruppe anzeigen. Wenn Sie diese Ordner auswählen, werden verfügbare Unterordner und Zielgruppen angezeigt. Außerdem können Sie das Ordnersymbol auswählen (wie im Bild ganz rechts), um die Ordnerstruktur anzuzeigen (ein Häkchen gibt den Ordner an, in dem Sie sich befinden), und durch einfaches Auswählen eines Ordnernamens im Baum durch die Ordnerstruktur zurücknavigieren.
 
@@ -263,17 +263,17 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 >abstract="Die Schätzungen der Segmentdefinition können aktualisiert werden, um sofort eine Vorschau der Anzahl der Profile anzuzeigen, die für die vorgeschlagene Segmentdefinition qualifiziert sind. Zielgruppenschätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=de#estimate-and-preview-an-audience" text="Schätzen und Anzeigen der Vorschau einer Zielgruppe"
 
-Beim Erstellen einer Segmentdefinition wird die **[!UICONTROL Zielgruppeneigenschaften]** auf der rechten Seite des Arbeitsbereichs wird eine Schätzung der Größe der resultierenden Segmentdefinition angezeigt, sodass Sie Ihre Segmentdefinition nach Bedarf anpassen können, bevor Sie die Zielgruppe selbst erstellen.
+Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** rechts im Arbeitsbereich eine Schätzung der Größe der resultierenden Segmentdefinition an, sodass Sie Ihre Segmentdefinition nach Bedarf anpassen können, bevor Sie die Zielgruppe selbst erstellen.
 
-**[!UICONTROL Qualifizierte Profile]** gibt die **tatsächlich** Anzahl der Profile, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden aktualisiert, nachdem der Segmentbewertungsauftrag ausgeführt wurde.
+**[!UICONTROL Qualifizierte Profile]** gibt die Anzahl der **tatsächlichen** Profile an, die den Regeln der Segmentdefinition entsprechen. Diese Zahl wird alle 24 Stunden aktualisiert, nachdem der Segmentbewertungsauftrag ausgeführt wurde.
 
-Der Zeitstempel für qualifizierte Profile gibt die neueste **Batch** Segmentbewertungsauftrag und ist **not** angezeigt für Segmentdefinitionen, die mithilfe von Streaming oder Kantensegmentierung ausgewertet werden. Wenn Sie die Segmentdefinition bearbeiten, bleibt die Anzahl der qualifizierten Profile gleich, bis der nächste Segmentbewertungsauftrag ausgeführt wird.
+Der Zeitstempel für qualifizierte Profile gibt den neuesten **Batch**-Segmentbewertungsauftrag an und wird für Segmentdefinitionen, die mithilfe von Streaming oder Kantensegmentierung ausgewertet werden, **nicht** angezeigt. Wenn Sie die Segmentdefinition bearbeiten, bleibt die Anzahl der qualifizierten Profile gleich, bis der nächste Segmentbewertungsauftrag ausgeführt wird.
 
-**[!UICONTROL Geschätzte Profile]** zeigt an, dass **Näherungswert** Anzahl der Profile basierend auf der **Beispielauftrag**. Nach dem Hinzufügen der neuen Regeln oder Bedingungen und dem Auswählen von **[!UICONTROL Schätzung aktualisieren]**. Wenn Sie die Informationsblase auswählen, erhalten Sie den Fehlerschwellenwert und die aktuelle Beispielauftragszeit.
+**[!UICONTROL Geschätzte Profile]** gibt eine **ungefähre** Anzahl von Profilen basierend auf dem **Beispielauftrag** an. Sie können eine aktualisierte Version dieses Werts sehen, nachdem Sie die neuen Regeln oder Bedingungen hinzugefügt und **[!UICONTROL Schätzung aktualisieren]** ausgewählt haben. Wenn Sie die Informationsblase auswählen, erhalten Sie den Fehlerschwellenwert und die aktuelle Beispielauftragszeit.
 
-![Qualifizierte Profile und geschätzte Profile werden im Abschnitt Zielgruppeneigenschaften hervorgehoben.](../images/ui/segment-builder/audience-estimates.png)
+![Qualifizierte Profile und geschätzte Profile werden im Abschnitt &quot;Zielgruppeneigenschaften&quot;hervorgehoben.](../images/ui/segment-builder/audience-estimates.png)
 
-Die **[!UICONTROL Zielgruppeneigenschaften]** können Sie auch wichtige Informationen zur Segmentdefinition angeben, einschließlich Name, Beschreibung und Auswertungstyp. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
+Im Abschnitt **[!UICONTROL Zielgruppeneigenschaften]** können Sie außerdem wichtige Informationen zur Segmentdefinition angeben, einschließlich Name, Beschreibung und Auswertungstyp. Namen von Segmentdefinitionen dienen dazu, Ihr Segment unter den von Ihrer Organisation definierten Segmentdefinitionen zu identifizieren. Sie sollten daher beschreibend, knapp und eindeutig sein.
 
 Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durch Auswahl von **[!UICONTROL Profile anzeigen]** eine paginierte Vorschau der Zielgruppe anzeigen.
 
@@ -291,7 +291,7 @@ Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Aus
 
 Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](./streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](./edge-segmentation.md#query-types).
 
-Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie die Erstellung abgeschlossen haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, **not** Sie können sie zurück in Edge oder Streaming ändern. Die Änderung der Bewertungsmethode **only** wirksam werden, sobald Sie **[!UICONTROL Speichern]** im Popover. Wird das Dialogfeld abgebrochen **keep** die ursprüngliche Bewertungsmethode.
+Sie können auch die Auswertungsmethode der Segmentdefinition ändern, nachdem Sie die Erstellung abgeschlossen haben. Wenn Sie die Auswertungsmethode von Edge oder Streaming in Batch ändern, können Sie sie **nicht** wieder in Edge oder Streaming ändern. Die Änderung an der Auswertungsmethode wird **nur** wirksam, sobald Sie im Popup-Fenster **[!UICONTROL Speichern]** auswählen. Durch das Abbrechen des Dialogfelds wird die ursprüngliche Auswertungsmethode **beibehalten**.
 
 ![Das Popup-Fenster „Berechtigung der Auswertungsmethode“ wird angezeigt. Dieses gibt Aufschluss darüber, welche Methoden zur Auswertung für die Segmentdefinition infrage kommen und welche nicht.](../images/ui/segment-builder/select-evaluation-method.png)
 

@@ -66,7 +66,7 @@ Tags sind extrem erweiterbar. Erweiterungen fügen Tags Kernfunktionen hinzu. Er
 1. Öffnen Sie auf der Übersichtsseite einer Eigenschaft die Registerkarte **[!UICONTROL Erweiterungen]**.
 1. Wählen Sie eine Erweiterung aus.
 
-   ![Registerkarte &quot;Katalog&quot;mit Core-Erweiterungen auf der Registerkarte &quot;Erweiterungen&quot;.](../../../images/extensions.png)
+   ![Registerkarte &quot;Katalog&quot;mit den Haupterweiterungen auf der Registerkarte &quot;Erweiterungen&quot;.](../../../images/extensions.png)
 
    * Wenn die Erweiterung vorhanden ist, wählen Sie sie aus dem Erweiterungskatalog aus.
    * Bewegen Sie den Mauszeiger über eine Erweiterung in Ihrer Liste, um sie zu konfigurieren oder zu deaktivieren.

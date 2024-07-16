@@ -34,9 +34,9 @@ Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb die
 >
 >Wenn Ihre Datennutzungsrichtlinien vor der Kennzeichnung Ihres Felds erstellt wurden, wird möglicherweise ein Dialogfeld für die Verletzung von Governance-Richtlinien angezeigt, wenn Sie Beschriftungen auf Ihr neues Schema anwenden. Dieses Dialogfeld zeigt an, dass die Anwendung dieser Beschriftung gegen eine vorhandene Nutzungsrichtlinie verstößt. Verwenden Sie das Datenherstellungsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie die Beschriftung zum Schemafeld hinzufügen können.
 >
->![Der Verstoß gegen die Data Governance-Richtlinie hat einen Dialog mit einer Zusammenfassung der Verstöße und einem hervorgehobenen Datenherkunftsdiagramm erkannt.](../images/labels/policy-violation-dialog.png)
+>![Der Verstoß gegen die Data Governance-Richtlinie hat ein Dialogfeld mit einer Zusammenfassung der Verstöße und einem hervorgehobenen Datenherstellungsdiagramm erkannt.](../images/labels/policy-violation-dialog.png)
 >
->Siehe [Dokumentation zu Datennutzungsrichtlinien - Verletzung](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) für weitere Informationen zu partiellen Richtlinienverletzungen.
+>Weitere Informationen zu partiellen Richtlinienverletzungen finden Sie in der Dokumentation zu [Verstößen gegen Datennutzungsrichtlinien](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) .
 
 Zum Verwalten der Datennutzungskennzeichnungen auf Schemaebene müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich **[!UICONTROL Schemata]** zu öffnen. Auf dieser Seite werden alle erstellten Schemata, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Schema angezeigt.
 

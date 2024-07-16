@@ -12,7 +12,7 @@ ht-degree: 32%
 
 # Erstellen eines Quell-Connectors für [!DNL Teradata Vantage] in der Benutzeroberfläche
 
-In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Teradata Vantage] Quell-Connector über die Adobe Experience Platform-Benutzeroberfläche.
+In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für [!DNL Teradata Vantage] mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -23,37 +23,37 @@ Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von Platform vo
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um auf Ihre [!DNL Teradata Vantage] -Konto auf Platform angeben, müssen Sie den folgenden Authentifizierungswert angeben:
+Um auf Ihr [!DNL Teradata Vantage] -Konto in Platform zugreifen zu können, müssen Sie den folgenden Authentifizierungswert angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Verbindungszeichenfolge | Eine Verbindungszeichenfolge ist eine Zeichenfolge, die Informationen über eine Datenquelle und darüber bereitstellt, wie Sie eine Verbindung mit ihr herstellen können. Das Verbindungszeichenfolgenmuster für [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| Verbindungszeichenfolge | Eine Verbindungszeichenfolge ist eine Zeichenfolge, die Informationen über eine Datenquelle und darüber bereitstellt, wie Sie eine Verbindung mit ihr herstellen können. Das Verbindungszeichenfolgenmuster für [!DNL Teradata Vantage] ist `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 
-Weiterführende Informationen zu den ersten Schritten finden Sie in diesem Abschnitt [[!DNL Teradata Vantage] Dokument](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
+Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Teradata Vantage] Dokument](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
 ## Verbinden Ihres [!DNL Teradata Vantage]-Kontos
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem [!UICONTROL Datenbanken] category, select **[!UICONTROL Teradata Vantage]** und wählen Sie **[!UICONTROL Einrichten]**.
+Wählen Sie unter der Kategorie [!UICONTROL Datenbanken] die Option **[!UICONTROL Teradata Vantage]** und dann **[!UICONTROL Einrichten]** aus.
 
 >[!TIP]
 >
->Quellen im Quellkatalog zeigen die **[!UICONTROL Einrichten]** -Option, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto existiert, wird diese Option in **[!UICONTROL Daten hinzufügen]**.
+>Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, wird diese Option in **[!UICONTROL Daten hinzufügen]** geändert.
 
 ![Der Quellkatalog mit der ausgewählten Teradata Vantage-Quelle.](../../../../images/tutorials/create/teradata/catalog.png)
 
-Die **[!UICONTROL Mit Teradata Vantage verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Mit Teradata Vantage verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verbinden, wählen Sie die [!DNL Teradata Vantage] Konto, mit dem Sie eine Verbindung herstellen möchten, wählen Sie **[!UICONTROL Nächste]** um fortzufahren.
+Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Teradata Vantage]-Konto aus, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]** , um fortzufahren.
 
-![Die Seite der vorhandenen Konten im Arbeitsbereich &quot;Quellen&quot;.](../../../../images/tutorials/create/teradata/existing.png)
+![Die Seite &quot;Vorhandene Konten&quot;im Arbeitsbereich &quot;Quellen&quot;.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Teradata Vantage] Anmeldedaten. Wählen Sie zum Abschluss **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Teradata Vantage]-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
 
 ![Die neue Benutzeroberfläche zur Kontoerstellung im Arbeitsbereich &quot;Quellen&quot;.](../../../../images/tutorials/create/teradata/new.png)
 

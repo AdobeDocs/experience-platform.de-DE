@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: PQL Boolesche Funktionen
-description: Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene Elemente in der Profile Query Language (PQL) durchzuführen.
+title: Boolesche PQL-Funktionen
+description: Boolesche Funktionen werden verwendet, um boolesche Logik für verschiedene Elemente in Profile Query Language (PQL) durchzuführen.
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '239'
 ht-degree: 74%
 
 ---
 
 # Boolesche Funktionen
 
-Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene Elemente in [!DNL Profile Query Language] (PQL).  Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
+Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene Elemente in [!DNL Profile Query Language] (PQL) durchzuführen.  Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
 
 ## Und
 

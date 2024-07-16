@@ -25,12 +25,12 @@ Die folgenden Schlüsselkonzepte werden veranschaulicht:
 
 ## Erste Schritte
 
-Dieses Handbuch setzt ein Verständnis der [Abfrageausführung in Query Service](../best-practices/writing-queries.md) und die folgenden Komponenten von Adobe Experience Platform:
+Dieses Handbuch setzt ein Verständnis der Ausführung von [Abfragen in Query Service](../best-practices/writing-queries.md) und der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas.
 * [Aktivieren eines Schemas für das Echtzeit-Kundenprofil](../../profile/tutorials/add-profile-data.md): In diesem Tutorial werden die Schritte beschrieben, die zum Hinzufügen von Daten zum Echtzeit-Kundenprofil erforderlich sind.
-* [So definieren Sie einen benutzerdefinierten Datentyp](../../xdm/api/data-types.md): Datentypen werden als Referenzfeld in Klassen oder Schemafeldgruppen verwendet und ermöglichen die konsistente Verwendung einer Mehrfeld-Struktur, die an einer beliebigen Stelle im Schema enthalten sein kann.
+* [So definieren Sie einen benutzerdefinierten Datentyp](../../xdm/api/data-types.md): Datentypen werden als Referenztyp-Felder in Klassen oder Schemafeldgruppen verwendet und ermöglichen die konsistente Verwendung einer Struktur mit mehreren Feldern, die an einer beliebigen Stelle im Schema enthalten sein kann.
 
 ## Ziele
 
@@ -46,21 +46,21 @@ In diesem Handbuch wird mithilfe eines Datensatzes zur Treueprogramm von Flugges
 
 Mithilfe von Query Service können Sie einen Datensatz erstellen, der kategorische Dezimalzahlen enthält, die dann segmentiert werden können, um Zielgruppen basierend auf der Attributranking zu erstellen. Die in den folgenden Beispielen angezeigten Konzepte können angewendet werden, um andere Dezimalgruppen-Datensätze zu erstellen, sofern eine Kategorie definiert und eine Metrik verfügbar ist.
 
-Die Beispieldaten zur Treue von Fluglinien verwenden eine [XDM ExperienceEvents-Klasse](../../xdm/classes/experienceevent.md). Jedes Ereignis ist ein Datensatz über eine geschäftliche Transaktion für Meilen, entweder gutgeschrieben oder belastet, und der Status der Mitgliedschaftsloyalität von &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot;oder &quot;Gold&quot;. Das primäre Identitätsfeld lautet `membershipNumber`.
+Die Beispieldaten zur Treue von Fluggesellschaften verwenden eine [XDM ExperienceEvents-Klasse](../../xdm/classes/experienceevent.md). Jedes Ereignis ist ein Datensatz über eine geschäftliche Transaktion für Meilen, entweder gutgeschrieben oder belastet, und der Status der Mitgliedschaftsloyalität von &quot;Flyer&quot;, &quot;Frequent&quot;, &quot;Silver&quot;oder &quot;Gold&quot;. Das primäre Identitätsfeld ist `membershipNumber`.
 
 ### Beispieldatensätze
 
-Der ursprüngliche Datensatz zur Treueprogramm von Fluggesellschaften für dieses Beispiel ist &quot;Daten zum Treueprogramm für Fluglinien&quot;und weist das folgende Schema auf. Beachten Sie, dass die primäre Identität für das Schema lautet. `_profilefoundationreportingstg.membershipNumber`.
+Der ursprüngliche Datensatz zur Treueprogramm von Fluggesellschaften für dieses Beispiel ist &quot;Daten zum Treueprogramm für Fluglinien&quot;und weist das folgende Schema auf. Beachten Sie, dass die primäre Identität für das Schema `_profilefoundationreportingstg.membershipNumber` ist.
 
 ![Ein Diagramm des &quot;Airline Loyalty Data&quot;-Schemas.](../images/use-cases/airline-loyalty-data.png)
 
 **Beispieldaten**
 
-Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg` -Objekt, das für dieses Beispiel verwendet wird. Es bietet Kontext für die Verwendung von Dezimalbuckets zum Erstellen komplexer abgeleiteter Datensätze.
+Die folgende Tabelle zeigt die Beispieldaten, die im für dieses Beispiel verwendeten Objekt `_profilefoundationreportingstg` enthalten sind. Es bietet Kontext für die Verwendung von Dezimalbuckets zum Erstellen komplexer abgeleiteter Datensätze.
 
 >[!NOTE]
 >
->Für Kürze wird die Mandanten-ID `_profilefoundationreportingstg` wurde am Anfang des Namespace in den Spaltentiteln und nachfolgenden Erwähnungen im gesamten Dokument weggelassen.
+>Aus Gründen der Kürze wurde die Mandanten-ID `_profilefoundationreportingstg` am Anfang des Namespace in den Spaltentiteln und nachfolgenden Erwähnungen im gesamten Dokument weggelassen.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -74,31 +74,31 @@ Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg`
 
 ## Dezimaldatensätze generieren
 
-In den oben aufgeführten Daten zur Treueprogramm der Fluggesellschaft wird die Variable `.mileage` Der Wert enthält die Anzahl der Meilen, die ein Mitglied für jeden einzelnen Flug zurücklegt. Diese Daten werden verwendet, um Dezimalstellen für die Anzahl der Meilen zu erstellen, die über Lebenszeit-Lookbacks und verschiedene Lookback-Zeiträume geflogen sind. Zu diesem Zweck wird ein Datensatz erstellt, der Dezimalstellen in einem Zuordnungs-Datentyp für jeden Lookback-Zeitraum und eine entsprechende Dezimalzahl für jeden Lookback-Zeitraum enthält, der unter `membershipNumber`.
+In den oben abgebildeten Daten zur Treueprogramm der Fluggesellschaft enthält der Wert `.mileage` die Anzahl der Meilen, die ein Mitglied für jeden einzelnen getätigten Flug zurücklegt. Diese Daten werden verwendet, um Dezimalstellen für die Anzahl der Meilen zu erstellen, die über Lebenszeit-Lookbacks und verschiedene Lookback-Zeiträume geflogen sind. Zu diesem Zweck wird ein Datensatz erstellt, der Dezimalstellen in einem Zuordnungs-Datentyp für jeden Lookback-Zeitraum und eine entsprechende Dezimalzahl für jeden Lookback-Zeitraum enthält, der unter `membershipNumber` zugewiesen ist.
 
 Erstellen Sie ein &quot;Airline Loyalty Decile Schema&quot;, um mithilfe von Query Service einen Dezimaldatensatz zu erstellen.
 
-![Ein Diagramm des &quot;Airline Loyalty Decile Schemas&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
+![Ein Diagramm des &quot;Loyalitäts-Treueschlüssel-Schemas für Fluglinien&quot;.](../images/use-cases/airline-loyalty-decile-schema.png)
 
 ### Aktivieren des Schemas für das Echtzeit-Kundenprofil
 
-Daten, die zur Verwendung durch das Echtzeit-Kundenprofil in Experience Platform aufgenommen werden, müssen [ein Experience-Datenmodell (XDM)-Schema, das für Profil aktiviert ist](../../xdm/ui/resources/schemas.md). Damit ein Schema für Profile aktiviert werden kann, muss es entweder die XDM Individual Profile- oder die XDM ExperienceEvent-Klasse implementieren.
+Daten, die zur Verwendung durch das Echtzeit-Kundenprofil in Experience Platform aufgenommen werden, müssen [einem Experience-Datenmodell (XDM)-Schema entsprechen, das für Profil](../../xdm/ui/resources/schemas.md) aktiviert ist. Damit ein Schema für Profile aktiviert werden kann, muss es entweder die XDM Individual Profile- oder die XDM ExperienceEvent-Klasse implementieren.
 
-[Aktivieren Sie Ihr Schema zur Verwendung im Echtzeit-Kundenprofil mithilfe der Schema Registry-API.](../../xdm/tutorials/create-schema-api.md) oder [Benutzeroberfläche des Schema-Editors](../../xdm/tutorials/create-schema-ui.md).  Detaillierte Anweisungen zum Aktivieren eines Schemas für Profile finden Sie in der entsprechenden Dokumentation.
+[Aktivieren Sie Ihr Schema für die Verwendung im Echtzeit-Kundenprofil mithilfe der Schema Registry-API](../../xdm/tutorials/create-schema-api.md) oder der Benutzeroberfläche des Schema-Editors [.  ](../../xdm/tutorials/create-schema-ui.md)  Detaillierte Anweisungen zum Aktivieren eines Schemas für Profile finden Sie in der entsprechenden Dokumentation.
 
 Erstellen Sie anschließend einen Datentyp, der für alle dezimalbezogenen Feldergruppen wiederverwendet werden soll. Die Erstellung der Dezimalfeldgruppe ist ein einmaliger Schritt pro Sandbox. Sie kann auch für alle dezimalbezogenen Schemas wiederverwendet werden.
 
 ### Erstellen Sie einen Identitäts-Namespace und markieren Sie ihn als primäre Kennung. {#identity-namespace}
 
-Jedem Schema, das für die Verwendung mit Dezimalstellen erstellt wurde, muss eine primäre Identität zugewiesen sein. Sie können [Identitätsfeld in der Benutzeroberfläche von Adobe Experience Platform-Schemas definieren](../../xdm/ui/fields/identity.md#define-an-identity-field)oder durch die [Schema Registry-API](../../xdm/api/descriptors.md#create).
+Jedem Schema, das für die Verwendung mit Dezimalstellen erstellt wurde, muss eine primäre Identität zugewiesen sein. Sie können [ ein Identitätsfeld in der Benutzeroberfläche von Adobe Experience Platform-Schemas definieren](../../xdm/ui/fields/identity.md#define-an-identity-field) oder über die [Schema Registry-API](../../xdm/api/descriptors.md#create).
 
-Mit Query Service können Sie auch direkt über SQL eine Identität oder eine primäre Identität für Ad-hoc-Schema-Datensatzfelder festlegen. Siehe die Dokumentation unter [Festlegen einer sekundären Identität und primären Identität in Ad-hoc-Schemaidentitäten](../data-governance/ad-hoc-schema-identities.md) für weitere Informationen.
+Mit Query Service können Sie auch direkt über SQL eine Identität oder eine primäre Identität für Ad-hoc-Schema-Datensatzfelder festlegen. Weitere Informationen finden Sie in der Dokumentation zu [Einrichten einer sekundären Identität und primären Identität in Ad-hoc-Schemaidentitäten](../data-governance/ad-hoc-schema-identities.md) .
 
 ### Erstellen einer Abfrage zur Berechnung von Dezimalzahlen über einen Lookback-Zeitraum {#create-a-query}
 
 Das folgende Beispiel zeigt die SQL-Abfrage zur Berechnung einer Dezimalzahl über einen Lookback-Zeitraum.
 
-Eine Vorlage kann entweder mit dem Abfrage-Editor in der Benutzeroberfläche oder über die [Query Service-API](../api/query-templates.md#create-a-query-template).
+Eine Vorlage kann entweder mit dem Abfrage-Editor in der Benutzeroberfläche oder über die [Query Service-API](../api/query-templates.md#create-a-query-template) erstellt werden.
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -193,7 +193,7 @@ Der Dezimaldatentyp enthält einen Behälter für 1, 3, 6, 9, 12 und Lebenszeit-
 
 >[!NOTE]
 >
->Wenn die Quelldaten nicht über eine Spalte verfügen, die zur Bestimmung eines Lookback-Zeitraums verwendet werden kann, werden alle Rangfolgen der Dezimalklasse unter `decileMonthAll`.
+>Wenn die Quelldaten nicht über eine Spalte verfügen, die zur Bestimmung eines Lookback-Zeitraums verwendet werden kann, werden alle Rangfolgen der Dezimalklasse unter `decileMonthAll` durchgeführt.
 
 #### Aggregation
 
@@ -210,13 +210,13 @@ summed_miles_1 AS (
 )
 ```
 
-Der Block wird in der Vorlage zweimal wiederholt (`summed_miles_3` und `summed_miles_6`), um die Daten für die anderen Lookback-Zeiträume zu generieren.
+Der Block wird in der Vorlage (`summed_miles_3` und `summed_miles_6`) zweimal mit einer Änderung in der Datumsberechnung wiederholt, um die Daten für die anderen Lookback-Zeiträume zu generieren.
 
-Es ist wichtig, die Identitäts-, Dimensions- und Metrikspalten für die Abfrage (`membershipNumber`, `loyaltyStatus` und `totalMiles` ).
+Beachten Sie dabei die Identitäts-, Dimensions- und Metrikspalten für die Abfrage (`membershipNumber`, `loyaltyStatus` bzw. `totalMiles`).
 
-#### Ranking
+#### Rangfolge
 
-Dekore ermöglichen kategorische Bucketings. Um die Rangnummer zu erstellen, muss die `NTILE` -Funktion mit einem Parameter von `10` innerhalb eines FENSTERS, gruppiert nach `loyaltyStatus` -Feld. Dies führt zu einer Rangfolge von 1 bis 10. Legen Sie die `ORDER BY` -Klausel `WINDOW` nach `DESC` sicherstellen, dass der Rangwert von `1` wird dem **größte** Metrik innerhalb der Dimension.
+Dekore ermöglichen kategorische Bucketings. Um die Rangnummer zu erstellen, wird die Funktion `NTILE` mit dem Parameter `10` in einem durch das Feld `loyaltyStatus` gruppierten FENSTER verwendet. Dies führt zu einer Rangfolge von 1 bis 10. Setzen Sie die `ORDER BY` -Klausel der `WINDOW` auf `DESC`, um sicherzustellen, dass der **größten** Metrik innerhalb der Dimension ein Rangwert von `1` zugewiesen wird.
 
 ```sql
 rankings_1 AS (
@@ -230,7 +230,7 @@ rankings_1 AS (
 
 #### Zuordnungsaggregation
 
-Bei mehreren Lookback-Zeiträumen müssen Sie die dezimalen Behälterzuordnungen im Voraus mithilfe der `MAP_FROM_ARRAYS` und `COLLECT_LIST` Funktionen. Im Beispielausschnitt `MAP_FROM_ARRAYS` erstellt eine Zuordnung mit einem Schlüsselpaar (`loyaltyStatus`) und -Werten (`decileBucket`) Arrays. `COLLECT_LIST` gibt ein Array mit allen Werten in der angegebenen Spalte zurück.
+Bei mehreren Lookback-Zeiträumen müssen Sie die dezimalen Bucket-Maps mithilfe der Funktionen `MAP_FROM_ARRAYS` und `COLLECT_LIST` im Voraus erstellen. Im Beispielausschnitt erstellt `MAP_FROM_ARRAYS` eine Zuordnung mit einem Schlüsselpaar (`loyaltyStatus`) und Werten (`decileBucket`). `COLLECT_LIST` gibt ein Array mit allen Werten in der angegebenen Spalte zurück.
 
 ```sql
 map_1 AS (
@@ -257,7 +257,7 @@ all_memberships AS (
 
 >[!NOTE]
 >
->Wenn die Dezimaltrennung nur für einen Lebenszeitzeitraum erforderlich ist, kann dieser Schritt weggelassen und die Aggregation nach `membershipNumber` kann im letzten Schritt durchgeführt werden.
+>Wenn die Dezimaltrennung nur für einen Lebenszeitzeitraum erforderlich ist, kann dieser Schritt weggelassen und die Aggregation durch `membershipNumber` im letzten Schritt durchgeführt werden.
 
 #### Alle temporären Daten zusammenführen
 
@@ -295,8 +295,8 @@ Eine Korrelation zwischen der Rangnummer und dem Perzentil ist in den Abfrageerg
 
 ### Ausführen der Abfragevorlage
 
-Führen Sie die Abfrage aus, um den Dezimaldatensatz zu füllen. Sie können die Abfrage auch als Vorlage speichern und planen, dass sie in einem Cadence ausgeführt wird. Wenn die Abfrage als Vorlage gespeichert wird, kann sie auch aktualisiert werden, um das Muster zum Erstellen und Einfügen zu verwenden, das auf die `table_exists` Befehl. Weitere Informationen zur Verwendung der `table_exists`-Befehl finden Sie im [SQL-Syntaxhandbuch](../sql/syntax.md#table-exists).
+Führen Sie die Abfrage aus, um den Dezimaldatensatz zu füllen. Sie können die Abfrage auch als Vorlage speichern und planen, dass sie in einem Cadence ausgeführt wird. Wenn die Abfrage als Vorlage gespeichert wird, kann sie auch aktualisiert werden, um das Muster zum Erstellen und Einfügen zu verwenden, das auf den Befehl `table_exists` verweist. Weitere Informationen zur Verwendung des Befehls `table_exists`finden Sie im [SQL-Syntaxhandbuch](../sql/syntax.md#table-exists).
 
 ## Nächste Schritte
 
-Im oben genannten Anwendungsbeispiel werden die Schritte erläutert, die dazu dienen, dezimalbasierte abgeleitete Datensätze im Echtzeit-Kundenprofil verfügbar zu machen. Dadurch kann Segmentation Service über eine Benutzeroberfläche oder eine RESTful-API Zielgruppen basierend auf diesen Dezimalgruppen generieren. Siehe [Übersicht über den Segmentierungsdienst](../../segmentation/home.md) für Informationen zum Erstellen, Auswerten und Zugreifen auf Segmente.
+Im oben genannten Anwendungsbeispiel werden die Schritte erläutert, die dazu dienen, dezimalbasierte abgeleitete Datensätze im Echtzeit-Kundenprofil verfügbar zu machen. Dadurch kann Segmentation Service über eine Benutzeroberfläche oder eine RESTful-API Zielgruppen basierend auf diesen Dezimalgruppen generieren. Informationen zum Erstellen, Auswerten und Aufrufen von Segmenten finden Sie in der [Übersicht über den Segmentierungsdienst](../../segmentation/home.md) .

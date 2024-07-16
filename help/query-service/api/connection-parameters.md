@@ -16,11 +16,11 @@ ht-degree: 29%
 
 ## Beispiel-API-Aufruf
 
-Im folgenden Abschnitt werden Sie durch den API-Aufruf geführt, den Sie mithilfe der [!DNL Query Service] API. Der Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Im folgenden Abschnitt werden Sie durch den API-Aufruf geführt, den Sie mit der [!DNL Query Service] -API ausführen können. Der Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Verbindungsparameter anfordern
 
-Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an die `/connection_parameters` -Endpunkt. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Service herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
+Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an den `/connection_parameters` -Endpunkt senden. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Service herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
 
 **API-Format**
 

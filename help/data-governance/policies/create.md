@@ -24,7 +24,7 @@ Dieses Dokument enthält eine Schritt-für-Schritt-Anleitung zur Erstellung eine
 
 ## Erste Schritte
 
-Diese Anleitung setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Erstellen und Evaluieren von Datennutzungsrichtlinien zum Einsatz kommen:
+Diese Anleitung setzt ein Verständnis der folgenden Schlüsselkonzepte voraus, die beim Erstellen und Auswerten von Datennutzungsrichtlinien zum Einsatz kommen:
 
 * [Adobe Experience Platform-Daten-Governance](../home.md): Der Rahmen, mit dem durch [!DNL Platform] die korrekte Datenverwendung erzwungen wird.
    * [Datennutzungsbezeichnungen](../labels/overview.md): Datennutzungsbezeichnungen werden auf XDM-Datenfelder angewendet und geben Einschränkungen für den Zugriff auf diese Daten an.
@@ -37,14 +37,14 @@ Bevor Sie mit dieser Anleitung beginnen, lesen Sie das [Entwicklerhandbuch](../a
 
 Im Data Governance-Framework ist eine Marketing-Aktion eine Aktion, die ein [!DNL Experience Platform]-Datennutzer durchführt und bei der überprüft werden muss, ob Datennutzungsrichtlinien verletzt wurden.
 
-Der erste Schritt bei der Erstellung einer Datennutzungsrichtlinie besteht darin, zu bestimmen, welche Marketing-Aktion durch die Richtlinie bewertet werden soll. Dies kann mit einer der folgenden Optionen erledigt werden:
+Der erste Schritt bei der Erstellung einer Datennutzungsrichtlinie besteht darin, zu bestimmen, welche Marketing-Aktion durch die Richtlinie ausgewertet werden soll. Dies kann mit einer der folgenden Optionen erledigt werden:
 
 * [Vorhandene Marketing-Aktion nachschlagen](#look-up)
 * [Neue Marketing-Aktion erstellen](#create-new)
 
 ### Vorhandene Marketing-Aktion nachschlagen {#look-up}
 
-Sie können vorhandene Marketing-Aktionen nachschlagen, die von Ihrer Datennutzungsrichtlinie bewertet werden sollen, indem Sie eine GET-Anfrage an einen der `/marketingActions`-Endpunkte senden.
+Sie können vorhandene Marketing-Aktionen nachschlagen, die von Ihrer Datennutzungsrichtlinie ausgewertet werden sollen, indem Sie eine GET-Anfrage an einen der `/marketingActions`-Endpunkte senden.
 
 **API-Format**
 
@@ -332,7 +332,7 @@ Notieren Sie sich die URI-ID der neu erstellten Richtlinie, da Sie sie im nächs
 >
 >Dieser Schritt ist optional, wenn Sie Ihre Richtlinie im Status `DRAFT` belassen möchten; beachten Sie jedoch, dass für eine Richtlinie der Status standardmäßig auf `ENABLED` festgelegt sein muss, damit sie in die Auswertung einbezogen wird. Informationen zur Verwendung von Ausnahmen für Richtlinien mit dem Status `DRAFT` finden Sie im Handbuch zum [Durchsetzen von Richtlinien](../enforcement/api-enforcement.md).
 
-Standardmäßig werden Richtlinien, deren `status`-Eigenschaft auf `DRAFT` gesetzt ist, nicht in die Auswertung einbezogen. Sie können Ihre Richtlinie für die Bewertung aktivieren, indem Sie eine PATCH-Anfrage an den `/policies/custom/`-Endpunkt senden und am Ende des Anfragepfads die eindeutige Kennung für die Richtlinie angeben.
+Standardmäßig werden Richtlinien, deren `status`-Eigenschaft auf `DRAFT` gesetzt ist, nicht in die Auswertung einbezogen. Sie können Ihre Richtlinie für die Auswertung aktivieren, indem Sie eine PATCH-Anfrage an den `/policies/custom/`-Endpunkt senden und am Ende des Anfragepfads die eindeutige Kennung für die Richtlinie angeben.
 
 **API-Format**
 

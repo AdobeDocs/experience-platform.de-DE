@@ -16,7 +16,7 @@ ht-degree: 9%
 >[!IMPORTANT]
 >
 > * Adobe empfiehlt, diese Seite mit einem Lesezeichen zu versehen und alle drei Monate erneut zu besuchen, um nach den neuesten IP-Adressen zu suchen. Adobe stellt keine Benachrichtigung über neue IP-Bereiche bereit.
-> * Die hier dokumentierte Liste der IPs *nicht* gelten für alle Ziele, die Sie mithilfe von [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * Die Liste der hier dokumentierten IPs *gilt nicht* für Ziele, die Sie mit [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) erstellen.
 
 ## Übersicht {#overview}
 
@@ -28,7 +28,7 @@ Die hier dokumentierten IP-Bereiche gelten für die folgenden Ziele:
 
 Ausgehender Traffic von Experience Platform zu diesen Zielen durchläuft immer die auf dieser Seite aufgelisteten IPs.
 
-Diese Seite enthält IP-Bereiche, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform an Ihren HTTP-Endpunkt zu exportieren. [!DNL Amazon Kinesis]oder [!DNL Azure Event Hubs] -Instanz. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Unternehmens-Sicherheits- und Compliance-Standards eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
+Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform in Ihren HTTP-Endpunkt, Ihre [!DNL Amazon Kinesis]- oder [!DNL Azure Event Hubs]-Instanz zu exportieren. Diese Funktion ist besonders nützlich, wenn sich Ihr HTTP-Endpunkt hinter einer Unternehmens-Firewall befindet oder wenn Ihre Unternehmens-Sicherheits- und Compliance-Standards eine Liste von IP-Bereichen erfordern, die auf die Zulassungsliste gesetzt werden müssen.
 
 Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen.
 

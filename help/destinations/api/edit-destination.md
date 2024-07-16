@@ -13,7 +13,7 @@ ht-degree: 29%
 
 # Bearbeiten von Zielverbindungen mit der Flow Service-API
 
-In diesem Tutorial werden die Schritte zum Bearbeiten verschiedener Komponenten einer Zielverbindung beschrieben. Erfahren Sie, wie Sie mithilfe des [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial werden die Schritte zum Bearbeiten verschiedener Komponenten einer Zielverbindung beschrieben. Erfahren Sie, wie Sie mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) Authentifizierungsberechtigungen, den Exportspeicherort und mehr aktualisieren können.
 
 >[!NOTE]
 >
@@ -21,18 +21,18 @@ In diesem Tutorial werden die Schritte zum Bearbeiten verschiedener Komponenten 
 
 ## Erste Schritte {#get-started}
 
-Für dieses Tutorial benötigen Sie eine gültige Datenfluss-ID. Wenn Sie keine gültige Datenfluss-ID haben, wählen Sie Ihr Ziel aus der [Zielkatalog](../catalog/overview.md) und führen Sie die Schritte aus, die beschrieben wurden, um [Verbindung zum Ziel herstellen](../ui/connect-destination.md) und [Daten aktivieren](../ui/activation-overview.md) vor dem Versuch dieses Tutorials.
+Für dieses Tutorial benötigen Sie eine gültige Datenfluss-ID. Wenn Sie keine gültige Datenfluss-ID haben, wählen Sie Ihr Ziel aus dem [Zielkatalog](../catalog/overview.md) aus und führen Sie die Schritte aus, die unter [Verbindung zum Ziel herstellen](../ui/connect-destination.md) und [Daten aktivieren](../ui/activation-overview.md) beschrieben sind, bevor Sie dieses Tutorial ausführen.
 
 >[!NOTE]
 >
-> Die Begriffe *Fluss* und *dataflow* werden in diesem Tutorial synonym verwendet. Im Kontext dieses Tutorials haben sie dieselbe Bedeutung.
+> Die Begriffe *flow* und *dataflow* werden in diesem Tutorial synonym verwendet. Im Kontext dieses Tutorials haben sie dieselbe Bedeutung.
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Ziele](../home.md): [!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+* [Ziele](../home.md): [!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mit der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mithilfe der [!DNL Flow Service] -API erfolgreich aktualisieren zu können.
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
@@ -46,15 +46,15 @@ Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizieru
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Experience Platform-Ressourcen, einschließlich derjenigen, die zu [!DNL Flow Service], werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in Experience Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Wenn die Variable `x-sandbox-name` -Kopfzeile nicht angegeben ist, werden Anfragen unter der `prod` Sandbox.
+>Wenn die Kopfzeile `x-sandbox-name` nicht angegeben ist, werden Anforderungen unter der Sandbox `prod` aufgelöst.
 
-Alle Anfragen, die eine Payload enthalten (`POST`, `PUT`, `PATCH`) erfordert eine zusätzliche Kopfzeile vom Medientyp:
+Für alle Anfragen, die eine Payload enthalten (`POST`, `PUT`, `PATCH`), ist eine zusätzliche Kopfzeile vom Medientyp erforderlich:
 
 * `Content-Type: application/json`
 
@@ -78,7 +78,7 @@ GET /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Die eindeutige `id` für den Ziel-Datenfluss, den Sie abrufen möchten. |
+| `{FLOW_ID}` | Der eindeutige `id` -Wert für den Ziel-Datenfluss, den Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -95,7 +95,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück, einschließlich der Version, der eindeutigen Kennung (`id`) und anderen relevanten Informationen. Am relevantesten für dieses Tutorial sind die in der Antwort unten hervorgehobenen Ziel- und Basis-Verbindungs-IDs. Sie verwenden diese IDs in den nächsten Abschnitten, um verschiedene Komponenten der Zielverbindung zu aktualisieren.
+Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück, einschließlich der Version, der eindeutigen Kennung (`id`) und anderer relevanter Informationen. Am relevantesten für dieses Tutorial sind die in der Antwort unten hervorgehobenen Ziel- und Basis-Verbindungs-IDs. Sie verwenden diese IDs in den nächsten Abschnitten, um verschiedene Komponenten der Zielverbindung zu aktualisieren.
 
 ```json {line-numbers="true" start-line="1" highlight="27,38"}
 {
@@ -175,21 +175,21 @@ Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück,
 
 ## Bearbeiten von Zielverbindungskomponenten (Speicherort und andere Komponenten) {#patch-target-connection}
 
-Die Komponenten einer Zielverbindung unterscheiden sich je nach Ziel. Beispiel: für [!DNL Amazon S3] -Ziele festzulegen, können Sie den Behälter und Pfad aktualisieren, in den Dateien exportiert werden. Für [!DNL Pinterest] Ziele, können Sie Ihre [!DNL Pinterest Advertiser ID] und [!DNL Google Customer Match] Sie können [!DNL Pinterest Account ID].
+Die Komponenten einer Zielverbindung unterscheiden sich je nach Ziel. Beispielsweise können Sie bei [!DNL Amazon S3] -Zielen den Behälter und den Pfad aktualisieren, in den Dateien exportiert werden. Für [!DNL Pinterest] -Ziele können Sie Ihre [!DNL Pinterest Advertiser ID] aktualisieren und für [!DNL Google Customer Match] Ihre [!DNL Pinterest Account ID].
 
-Um Komponenten einer Zielverbindung zu aktualisieren, führen Sie einen `PATCH` Anfrage an die `/targetConnections/{TARGET_CONNECTION_ID}` -Endpunkt unter Angabe Ihrer Ziel-Verbindungs-ID, -Version und der neuen Werte, die Sie verwenden möchten. Denken Sie daran, dass Sie Ihre Ziel-Verbindungs-ID im vorherigen Schritt erhalten haben, als Sie einen vorhandenen Datenfluss zu Ihrem gewünschten Ziel überprüft haben.
+Um Komponenten einer Zielverbindung zu aktualisieren, führen Sie eine `PATCH` -Anfrage an den `/targetConnections/{TARGET_CONNECTION_ID}` -Endpunkt aus und geben Sie dabei Ihre Ziel-Verbindungs-ID, -Version und die neuen Werte ein, die Sie verwenden möchten. Denken Sie daran, dass Sie Ihre Ziel-Verbindungs-ID im vorherigen Schritt erhalten haben, als Sie einen vorhandenen Datenfluss zu Ihrem gewünschten Ziel überprüft haben.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist erforderlich, wenn Sie eine `PATCH` -Anfrage. Der Wert für diesen Header ist die eindeutige Version der Zielverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
+>Die Kopfzeile `If-Match` ist bei einer `PATCH` -Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Zielverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
 >
-> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an die `/targetConnections/{TARGET_CONNECTION_ID}` Endpunkt, wobei `{TARGET_CONNECTION_ID}` ist die Ziel-Verbindungs-ID, die Sie aktualisieren möchten.
+> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an den `/targetConnections/{TARGET_CONNECTION_ID}` -Endpunkt, wobei `{TARGET_CONNECTION_ID}` die Ziel-Verbindungs-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie den Wert der `If-Match` -Kopfzeile in doppelten Anführungszeichen wie in den Beispielen unten beim Erstellen von `PATCH` -Anfragen.
+> Stellen Sie sicher, dass Sie den Wert der Kopfzeile `If-Match` in doppelte Anführungszeichen setzen, wie in den Beispielen unten bei der Durchführung von `PATCH` -Anfragen.
 
 Im Folgenden finden Sie einige Beispiele für die Aktualisierung von Parametern in der Zielverbindungsspezifikation für verschiedene Zieltypen. Die allgemeine Regel zum Aktualisieren von Parametern für ein Ziel lautet jedoch wie folgt:
 
-Datenfluss-ID der Verbindung abrufen > Zielverbindungs-ID abrufen > `PATCH` die Zielverbindung mit aktualisierten Werten für die gewünschten Parameter.
+Rufen Sie die Datenfluss-ID der Verbindung ab > rufen Sie die Zielverbindungs-ID ab > `PATCH` die Zielverbindung mit aktualisierten Werten für die gewünschten Parameter.
 
 >[!BEGINSHADEBOX]
 
@@ -205,7 +205,7 @@ PATCH /targetConnections/{TARGET_CONNECTION_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `bucketName` und `path` Parameter eines [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) Zielverbindung.
+Die folgende Anfrage aktualisiert die Parameter `bucketName` und `path` einer [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) -Zielverbindung.
 
 ```shell
 curl -X PATCH \
@@ -235,7 +235,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualisiertes Etag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API verwenden und dabei Ihre Ziel-Verbindungs-ID angeben.
+Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualisiertes Etag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Ziel-Verbindungs-ID angeben.
 
 ```json
 {
@@ -248,7 +248,7 @@ Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualis
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die Parameter einer [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) oder [[!DNL Google Ad Manager 360] Ziel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) Verbindung zum Hinzufügen der neuen [**[!UICONTROL Zielgruppen-ID an Zielgruppennamen anhängen]**](/help/release-notes/2023/april-2023.md#destinations) -Feld.
+Die folgende Anfrage aktualisiert die Parameter einer [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) - oder [[!DNL Google Ad Manager 360] Ziel](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) -Verbindung, um das neue Feld [**[!UICONTROL Zielgruppen-ID an Zielgruppenname anhängen]**](/help/release-notes/2023/april-2023.md#destinations) hinzuzufügen.
 
 ```shell
 curl -X PATCH \
@@ -275,7 +275,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API verwenden und dabei Ihre Ziel-Verbindungs-ID angeben.
+Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Ziel-Verbindungs-ID angeben.
 
 ```json
 {
@@ -288,7 +288,7 @@ Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualis
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `advertiserId` Parameter eines [[!DNL Pinterest] Zielverbindung](/help/destinations/catalog/advertising/pinterest.md#parameters).
+Die folgende Anfrage aktualisiert den Parameter `advertiserId` einer [[!DNL Pinterest] Zielverbindung](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \
@@ -317,7 +317,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API verwenden und dabei Ihre Ziel-Verbindungs-ID angeben.
+Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Ziel-Verbindungs-ID angeben.
 
 ```json
 {
@@ -332,23 +332,23 @@ Bei einer erfolgreichen Antwort werden Ihre Ziel-Verbindungs-ID und ein aktualis
 
 ## Bearbeiten von Basisverbindungskomponenten (Authentifizierungsparameter und andere Komponenten) {#patch-base-connection}
 
-Bearbeiten Sie die Basisverbindung, wenn Sie die Anmeldeinformationen eines Ziels aktualisieren möchten. Die Komponenten einer Basisverbindung unterscheiden sich je nach Ziel. Beispiel: für [!DNL Amazon S3] Ziele, können Sie den Zugriffsschlüssel und den geheimen Schlüssel für Ihre [!DNL Amazon S3] Standort.
+Bearbeiten Sie die Basisverbindung, wenn Sie die Anmeldeinformationen eines Ziels aktualisieren möchten. Die Komponenten einer Basisverbindung unterscheiden sich je nach Ziel. Beispielsweise können Sie bei [!DNL Amazon S3] -Zielen den Zugriffsschlüssel und den geheimen Schlüssel auf Ihren [!DNL Amazon S3] -Speicherort aktualisieren.
 
-Um Komponenten einer Basisverbindung zu aktualisieren, führen Sie einen `PATCH` Anfrage an die `/connections` -Endpunkt unter Angabe Ihrer Basis-Verbindungs-ID, -Version und der neuen Werte, die Sie verwenden möchten.
+Um Komponenten einer Basisverbindung zu aktualisieren, führen Sie eine `PATCH` -Anfrage an den `/connections` -Endpunkt aus und geben Sie dabei Ihre Basis-Verbindungs-ID, -Version und die neuen Werte ein, die Sie verwenden möchten.
 
-Beachten Sie, dass Sie Ihre Basis-Verbindungs-ID in einer [vorheriger Schritt](#look-up-dataflow-details), wenn Sie einen vorhandenen Datenfluss zum gewünschten Ziel für den Parameter inspiziert haben `baseConnection`.
+Denken Sie daran, dass Sie Ihre Basis-Verbindungs-ID in einem [vorherigen Schritt](#look-up-dataflow-details) erhalten haben, als Sie einen vorhandenen Datenfluss zum gewünschten Ziel für den Parameter `baseConnection` überprüft haben.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist erforderlich, wenn Sie eine `PATCH` -Anfrage. Der Wert für diesen Header ist die eindeutige Version der Basisverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Basisverbindung usw. aktualisiert.
+>Die Kopfzeile `If-Match` ist bei einer `PATCH` -Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Basisverbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Basisverbindung usw. aktualisiert.
 >
-> Um die neueste Version des Etag-Werts zu erhalten, stellen Sie eine GET-Anfrage an die `/connections/{BASE_CONNECTION_ID}` Endpunkt, wobei `{BASE_CONNECTION_ID}` ist die Basisverbindungs-ID, die Sie aktualisieren möchten.
+> Um die neueste Version des Etag-Werts zu erhalten, stellen Sie eine GET-Anfrage an den `/connections/{BASE_CONNECTION_ID}` -Endpunkt, wobei `{BASE_CONNECTION_ID}` die Basisverbindungs-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie den Wert der `If-Match` -Kopfzeile in doppelten Anführungszeichen wie in den Beispielen unten beim Erstellen von `PATCH` -Anfragen.
+> Stellen Sie sicher, dass Sie den Wert der Kopfzeile `If-Match` in doppelte Anführungszeichen setzen, wie in den Beispielen unten bei der Durchführung von `PATCH` -Anfragen.
 
 Im Folgenden finden Sie einige Beispiele für die Aktualisierung von Parametern in der Basisverbindungsspezifikation für verschiedene Typen von Zielen. Die allgemeine Regel zum Aktualisieren von Parametern für ein Ziel lautet jedoch wie folgt:
 
-Datenfluss-ID der Verbindung abrufen > Kennung der Basisverbindung abrufen > `PATCH` die Basisverbindung mit aktualisierten Werten für die gewünschten Parameter.
+Rufen Sie die Datenfluss-ID der Verbindung ab > rufen Sie die Basisverbindungs-ID ab > `PATCH` die Basisverbindung mit aktualisierten Werten für die gewünschten Parameter.
 
 >[!BEGINSHADEBOX]
 
@@ -364,7 +364,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `accessId` und `secretKey` Parameter eines [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) Zielverbindung.
+Die folgende Anfrage aktualisiert die Parameter `accessId` und `secretKey` einer [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) -Zielverbindung.
 
 ```shell
 curl -X PATCH \
@@ -394,7 +394,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Basis-Verbindungs-ID.
+Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basis-Verbindungs-ID angeben.
 
 ```json
 {
@@ -407,7 +407,7 @@ Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualis
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die Parameter eines [[!DNL Azure Blob] Ziel](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) Verbindung zum Aktualisieren der Verbindungszeichenfolge, die für die Verbindung mit einer Azure Blob-Instanz erforderlich ist.
+Die folgende Anfrage aktualisiert die Parameter einer [[!DNL Azure Blob] Ziel](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) -Verbindung, um die Verbindungszeichenfolge zu aktualisieren, die für die Verbindung mit einer Azure Blob-Instanz erforderlich ist.
 
 ```shell
 curl -X PATCH \
@@ -436,7 +436,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Basis-Verbindungs-ID.
+Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API richten und dabei Ihre Basis-Verbindungs-ID angeben.
 
 ```json
 {
@@ -451,8 +451,8 @@ Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualis
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Siehe Abschnitt [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Weitere Informationen zur Interpretation von Fehlerantworten finden Sie unter [API-Status-Codes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anforderungsheader](/help/landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfahren, wie Sie verschiedene Komponenten einer Zielverbindung mit dem [!DNL Flow Service] API. Weitere Informationen zu Zielen finden Sie im Abschnitt [Ziele - Übersicht](../home.md).
+In diesem Tutorial haben Sie erfahren, wie Sie verschiedene Komponenten einer Zielverbindung mit der [!DNL Flow Service] -API aktualisieren. Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../home.md).

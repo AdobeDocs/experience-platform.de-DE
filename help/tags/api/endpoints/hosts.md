@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /hosts-Endpunkt in der Reactor-API aufruf
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 91%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Dieses Dokument beschreibt, wie Hosts in der Reactor-API verwaltet werden. Weitere allgemeine Informationen zu Hosts für Tags finden Sie im Handbuch [Hosts – Übersicht](../../ui/publishing/hosts/hosts-overview.md) in der Publishing-Dokumentation.
+>Dieses Dokument beschreibt, wie Hosts in der Reactor-API verwaltet werden. Weitere allgemeine Informationen zu Hosts für Tags finden Sie im Handbuch [Hosts – Übersicht](../../ui/publishing/hosts/hosts-overview.md) in der Veröffentlichungsdokumentation.
 
 In der Reactor-API definiert ein Host ein Ziel, an dem ein [Build](./builds.md) bereitgestellt werden kann.
 
@@ -228,7 +228,7 @@ curl -X POST \
 | `attributes.path` | Der Pfad, der an die URL `server` angehängt werden soll. |
 | `attributes.port` | Eine Ganzzahl, die den zu verwendenden Serverport angibt. |
 | `attributes.server` | Die Host-URL für den Server. |
-| `attributes.skip_symlinks`<br><br>(Nur für SFTP-Hosts) | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf Bibliotheks-Builds zu verweisen, die auf dem Server gespeichert werden. Allerdings unterstützen nicht alle Server die Verwendung von Symlinks. Wenn dieses Attribut enthalten ist und auf `true`verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
+| `attributes.skip_symlinks`<br><br>(Nur für SFTP-Hosts) | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf Bibliotheks-Builds zu verweisen, die auf dem Server gespeichert werden. Allerdings unterstützen nicht alle Server die Verwendung von Symlinks. Wenn dieses Attribut enthalten ist und auf &quot;`true`&quot;festgelegt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
 | `attributes.username` | Ein optionaler Benutzername für die Authentifizierung. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `hosts` lauten. |
 

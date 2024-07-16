@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie, wie Sie die Registerkarte Ereignisse im Adobe Experience Platform Debugger verwenden.
+description: Erfahren Sie, wie Sie die Registerkarte Ereignisse in Adobe Experience Platform Debugger verwenden.
 keywords: debugger;experience platform debugger extension;chrome;extension;events;dtm;target
 seo-description: Experience Platform Debugger Events Screen
 seo-title: Events
@@ -14,7 +14,7 @@ ht-degree: 43%
 
 # Registerkarte „Ereignisse“
 
-Die **Veranstaltungen** bietet eine grafische Ansicht der Ereignisse, die auf einer Timeline angezeigt werden.
+Die Registerkarte **Ereignisse** bietet eine grafische Ansicht der Ereignisse, die auf einer Timeline angezeigt werden.
 
 ![](images/events.jpg)
 
@@ -37,8 +37,8 @@ So aktivieren Sie das Verfolgen von Datenschichtänderungen auf der Timeline:
 
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 
-In den Details zu Datenschichtänderungen werden alle gelöschten oder hinzugefügten Elemente angezeigt. Sie können **{}** , um einen tieferen Einblick in die Datenschicht zu erhalten.
+In den Details zu Datenschichtänderungen werden alle gelöschten oder hinzugefügten Elemente angezeigt. Sie können **{}** auswählen, um tiefer in die Datenschicht zu schauen.
 
 ## Ereignisinformationen herunterladen
 
-Auswählen **[!UICONTROL Download]** , um eine Excel-Datei mit Informationen zu Ihren Seitenaufrufen herunterzuladen.
+Wählen Sie **[!UICONTROL Download]** aus, um eine Excel-Datei mit Informationen zu Ihren Seitenaufrufen herunterzuladen.

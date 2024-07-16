@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;Flow Service API;sources;Sources
-title: Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der Flow Service-API
+title: Filtern von Daten auf Zeilenebene für eine Source mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben.
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 17%
+source-wordcount: '778'
+ht-degree: 14%
 
 ---
 
-# Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [!DNL Flow Service] API
+# Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [!DNL Flow Service]-API
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ ht-degree: 17%
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
-Dieses Tutorial enthält Schritte zum Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial erfahren Sie, wie Sie Daten auf Zeilenebene mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) für eine Quelle filtern.
 
 ## Erste Schritte
 
@@ -42,7 +42,7 @@ Im Folgenden werden die Schritte beschrieben, die zum Filtern von Daten auf Zeil
 
 Bevor Sie die API zum Filtern von Daten auf Zeilenebene für eine Quelle verwenden können, müssen Sie zunächst die Verbindungsspezifikationsdetails Ihrer Quelle abrufen, um die von einer bestimmten Quelle unterstützten Operatoren und Sprachen zu bestimmen.
 
-Um die Verbindungsspezifikation einer bestimmten Quelle abzurufen, stellen Sie eine GET-Anfrage an die `/connectionSpecs` Endpunkt der [!DNL Flow Service] API bei Angabe des Eigenschaftsnamens Ihrer Quelle als Teil Ihrer Abfrageparameter.
+Um die Verbindungsspezifikation einer bestimmten Quelle abzurufen, stellen Sie eine GET-Anfrage an den `/connectionSpecs` -Endpunkt der [!DNL Flow Service] -API und geben Sie dabei den Eigenschaftsnamen Ihrer Quelle als Teil Ihrer Abfrageparameter an.
 
 **API-Format**
 
@@ -52,11 +52,11 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMS}` | Die optionalen Abfrageparameter, nach denen Ergebnisse gefiltert werden sollen. Sie können die [!DNL Google BigQuery] Verbindungsspezifikation durch Anwendung der `name` Eigenschaft und Festlegen `"google-big-query"` in Ihrer Suche. |
+| `{QUERY_PARAMS}` | Die optionalen Abfrageparameter, nach denen Ergebnisse gefiltert werden sollen. Sie können die Verbindungsspezifikation [!DNL Google BigQuery] abrufen, indem Sie die Eigenschaft `name` anwenden und in Ihrer Suche `"google-big-query"` angeben. |
 
 **Anfrage**
 
-Die folgende Anfrage ruft Verbindungsspezifikationen für ab. [!DNL Google BigQuery].
+Die folgende Anfrage ruft Verbindungsspezifikationen für [!DNL Google BigQuery] ab.
 
 ```shell
 curl -X GET \
@@ -69,7 +69,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für [!DNL Google BigQuery], einschließlich Informationen zur unterstützten Abfragesprache und logischen Operatoren.
+Bei einer erfolgreichen Antwort werden die Verbindungsspezifikationen für [!DNL Google BigQuery] zurückgegeben, einschließlich Informationen zur unterstützten Abfragesprache und zu den logischen Operatoren.
 
 >[!NOTE]
 >
@@ -121,14 +121,14 @@ Eine erfolgreiche Antwort gibt die Verbindungsspezifikationen für [!DNL Google 
 | `>` | Filtert danach, ob die Eigenschaft größer als der angegebene Wert ist. |
 | `<=` | Filtert danach, ob die Eigenschaft kleiner oder gleich dem angegebenen Wert ist. |
 | `>=` | Filtert danach, ob die Eigenschaft größer oder gleich dem angegebenen Wert ist. |
-| `like` | Filter durch Verwendung in einer `WHERE` -Klausel, um nach einem angegebenen Muster zu suchen. |
+| `like` | Filtert, indem in einer `WHERE` -Klausel verwendet wird, um nach einem bestimmten Muster zu suchen. |
 | `in` | Filtert nach, ob sich die Eigenschaft innerhalb eines angegebenen Bereichs befindet. |
 
 {style="table-layout:auto"}
 
 ### Filterbedingungen für die Aufnahme festlegen
 
-Nachdem Sie die von Ihrer Quelle unterstützten logischen Operatoren und Abfragesprachen identifiziert haben, können Sie mithilfe der Profile Query Language (PQL) die Filterbedingungen festlegen, die auf Ihre Quelldaten angewendet werden sollen.
+Nachdem Sie die von Ihrer Quelle unterstützten logischen Operatoren und Abfragesprachen identifiziert haben, können Sie mit Profile Query Language (PQL) die Filterbedingungen festlegen, die auf Ihre Quelldaten angewendet werden sollen.
 
 Im folgenden Beispiel werden Bedingungen nur auf ausgewählte Daten angewendet, die den bereitgestellten Werten für die Knotentypen entsprechen, die als Parameter aufgeführt sind.
 
@@ -155,7 +155,7 @@ Im folgenden Beispiel werden Bedingungen nur auf ausgewählte Daten angewendet, 
 
 ### Datenvorschau
 
-Sie können eine Vorschau Ihrer Daten anzeigen, indem Sie eine GET an die `/explore` Endpunkt der [!DNL Flow Service] API bei Bereitstellung `filters` als Teil Ihrer Abfrageparameter verwenden und Ihre PQL-Eingabebedingungen in [!DNL Base64].
+Sie können eine Vorschau Ihrer Daten anzeigen, indem Sie eine GET-Anfrage an den `/explore` -Endpunkt der [!DNL Flow Service] -API richten, dabei `filters` als Teil Ihrer Abfrageparameter angeben und Ihre PQL-Eingabebedingungen in [!DNL Base64] angeben.
 
 **API-Format**
 
@@ -167,7 +167,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | Die Kennung der Basisverbindung Ihrer Quelle. |
 | `{TABLE_PATH}` | Die Pfadeigenschaft der Tabelle, die Sie überprüfen möchten. |
-| `{FILTERS}` | Ihre PQL-Filterbedingungen, die in [!DNL Base64]. |
+| `{FILTERS}` | Ihre in [!DNL Base64] kodierten PQL-Filterbedingungen. |
 
 **Anfrage**
 
@@ -330,7 +330,7 @@ Eine erfolgreiche Anfrage gibt die folgende Antwort zurück.
 
 ### Quellverbindung für gefilterte Daten erstellen
 
-Um eine Quellverbindung zu erstellen und gefilterte Daten zu erfassen, stellen Sie eine POST-Anfrage an die `/sourceConnections` -Endpunkt hinzugefügt werden, während Sie Ihre Filterbedingungen als Teil Ihrer Hauptteilparameter angeben.
+Um eine Quellverbindung zu erstellen und gefilterte Daten zu erfassen, stellen Sie eine POST-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie dabei Ihre Filterbedingungen als Teil Ihrer Textparameter an.
 
 **API-Format**
 
@@ -340,7 +340,7 @@ POST /sourceConnections
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine Quellverbindung zum Erfassen von Daten aus `test1.fasTestTable` where `city` = `DDN`.
+Die folgende Anfrage erstellt eine Quellverbindung zum Erfassen von Daten von `test1.fasTestTable`, wobei `city` = `DDN` ist.
 
 ```shell
 curl -X POST \
@@ -402,7 +402,7 @@ Dieser Abschnitt enthält weitere Beispiele für verschiedene Payloads zum Filte
 
 ### Besondere Bedingungen
 
-Sie können die anfängliche `fnApply` für Szenarien, die nur eine Bedingung erfordern.
+Sie können die anfängliche `fnApply` für Szenarien auslassen, für die nur eine Bedingung erforderlich ist.
 
 ```json
 {
@@ -425,9 +425,9 @@ Sie können die anfängliche `fnApply` für Szenarien, die nur eine Bedingung er
 }
 ```
 
-### Verwenden der `in` operator
+### Verwenden des `in` -Operators
 
-Ein Beispiel für den Operator finden Sie unten in der Beispiel-Payload . `in`.
+In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `in`.
 
 ```json
 {
@@ -459,9 +459,9 @@ Ein Beispiel für den Operator finden Sie unten in der Beispiel-Payload . `in`.
 }
 ```
 
-### Verwenden der `isNull` operator
+### Verwenden des `isNull` -Operators
 
-Ein Beispiel für den Operator finden Sie unten in der Beispiel-Payload . `isNull`.
+In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `isNull`.
 
 ```json
 {
@@ -480,9 +480,9 @@ Ein Beispiel für den Operator finden Sie unten in der Beispiel-Payload . `isNul
 }
 ```
 
-### Verwenden der `NOT` operator
+### Verwenden des `NOT` -Operators
 
-Ein Beispiel für den Operator finden Sie unten in der Beispiel-Payload . `NOT`.
+In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `NOT`.
 
 ```json
 {

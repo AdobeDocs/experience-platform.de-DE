@@ -3,7 +3,7 @@ description: Auf dieser Seite wird erläutert, wie Sie mit dem Endpunkt /authori
 title: Überprüfen von vorlagenbasierten Kundenfeldern
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
 source-git-commit: 6bd169075cd3826ae2a0907e6e624fd901076a4a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 100%
 

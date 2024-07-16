@@ -15,11 +15,11 @@ ht-degree: 5%
 
 Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um ein robustes, einheitliches Profil für jeden Ihrer Kunden zu erstellen. Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um die Profilanzahl und andere datenbezogene Metriken des Echtzeit-Kundenprofils zu aktualisieren.
 
-Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus` -Endpunkt, Teil der Echtzeit-Kundenprofil-API. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen nach Datensatz und Identitäts-Namespace aufzulisten und mehrere Berichte zu generieren, um Einblicke in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten. In diesem Handbuch werden die Schritte erläutert, die zur Ansicht dieser Metriken mithilfe der Variablen `/previewsamplestatus` API-Endpunkt.
+Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus` -Endpunkt angezeigt werden, der Teil der Echtzeit-Kundenprofil-API ist. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen nach Datensatz und Identitäts-Namespace aufzulisten und mehrere Berichte zu generieren, um Einblicke in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten. In diesem Handbuch werden die Schritte erläutert, die zur Ansicht dieser Metriken mithilfe des API-Endpunkts `/previewsamplestatus` erforderlich sind.
 
 >[!NOTE]
 >
->Es gibt Schätzungs- und Vorschau-Endpunkte, die als Teil der Adobe Experience Platform Segmentation Service-API verfügbar sind und mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Detaillierte Schritte zum Arbeiten mit Vorschau- und Schätzendpunkten finden Sie im Abschnitt [Handbuch zu Vorschau- und Schätzendpunkten](../../segmentation/api/previews-and-estimates.md), Teil der [!DNL Segmentation] API-Entwicklerhandbuch.
+>Es gibt Schätzungs- und Vorschau-Endpunkte, die als Teil der Adobe Experience Platform Segmentation Service-API verfügbar sind und mit denen Sie Informationen auf Zusammenfassungsebene zu Segmentdefinitionen anzeigen können, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Ausführliche Anweisungen zum Arbeiten mit Vorschau- und Schätzendpunkten finden Sie im [Handbuch zu Vorschau- und Schätzendpunkten](../../segmentation/api/previews-and-estimates.md), das Teil des [!DNL Segmentation] -API-Entwicklerhandbuchs ist.
 
 ## Erste Schritte
 
@@ -33,20 +33,20 @@ Jedes einzelne Kundenprofil besteht aus mehreren Profilfragmenten, die zu einer 
 
 Wenn Profilfragmente in Platform erfasst werden, werden sie zusammengeführt (basierend auf einer Zusammenführungsrichtlinie), um ein einzelnes Profil für diesen Kunden zu erstellen. Daher ist die Gesamtanzahl der Profilfragmente wahrscheinlich immer höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
 
-Um mehr über Profile und ihre Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../home.md).
+Um mehr über Profile und ihre Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../home.md).
 
 ## Auslösen des Beispielauftrags
 
-Da Daten, die für das Echtzeit-Kundenprofil aktiviert sind, in erfasst werden [!DNL Platform], wird sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtzahl der Profile um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie das Beispiel ausgelöst wird, hängt vom verwendeten Erfassungstyp ab:
+Da für das Echtzeit-Kundenprofil aktivierte Daten in [!DNL Platform] erfasst werden, werden sie im Profildatenspeicher gespeichert. Wenn die Aufnahme von Datensätzen in den Profilspeicher die Gesamtzahl der Profile um mehr als 5 % erhöht oder verringert, wird ein Sampling-Auftrag ausgelöst, um die Anzahl zu aktualisieren. Die Art und Weise, wie das Beispiel ausgelöst wird, hängt vom verwendeten Erfassungstyp ab:
 
-* Für **Streaming-Daten-Workflows** wird stündlich überprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Beispielauftrag ausgelöst, um die Anzahl zu aktualisieren.
-* Für **Batch-Erfassung** innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher wird ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert für eine Erhöhung oder Verringerung um 5 % erreicht wird. Mithilfe der Profil-API können Sie eine Vorschau des neuesten erfolgreichen Beispielauftrags anzeigen sowie die Profilverteilung nach Datensatz und Identitäts-Namespace auflisten.
+* Für **Streaming-Daten-Workflows** wird stündlich geprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Beispielauftrag ausgelöst, um die Anzahl zu aktualisieren.
+* Bei der **Batch-Erfassung** wird innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Anzahl zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht ist. Mithilfe der Profil-API können Sie eine Vorschau des neuesten erfolgreichen Beispielauftrags anzeigen sowie die Profilverteilung nach Datensatz und Identitäts-Namespace auflisten.
 
-Die Profilanzahl und die Profile nach Namespace-Metriken sind auch in der Variablen [!UICONTROL Profile] -Abschnitt der Experience Platform-Benutzeroberfläche. Informationen zum Zugriff auf Profildaten über die Benutzeroberfläche finden Sie unter [[!DNL Profile] UI-Handbuch](../ui/user-guide.md).
+Die Profilanzahl und die Profile nach Namespace-Metriken sind auch im Abschnitt [!UICONTROL Profile] der Experience Platform-Benutzeroberfläche verfügbar. Informationen zum Zugriff auf Profildaten über die Benutzeroberfläche finden Sie im [[!DNL Profile] UI-Handbuch](../ui/user-guide.md).
 
 ## Letzten Beispielstatus anzeigen {#view-last-sample-status}
 
-Sie können eine GET-Anfrage an die `/previewsamplestatus` -Endpunkt, um die Details für den letzten erfolgreichen Beispielauftrag anzuzeigen, der für Ihr Unternehmen ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile im Beispiel sowie die Profilzählung oder die Gesamtanzahl der Profile, die Ihr Unternehmen im Rahmen von Experience Platform hat.
+Sie können eine GET-Anfrage an den `/previewsamplestatus` -Endpunkt senden, um die Details für den letzten erfolgreichen Beispielauftrag anzuzeigen, der für Ihr Unternehmen ausgeführt wurde. Dazu gehören die Gesamtzahl der Profile im Beispiel sowie die Profilzählung oder die Gesamtanzahl der Profile, die Ihr Unternehmen im Rahmen von Experience Platform hat.
 
 Die Profilanzahl wird nach dem Zusammenführen von Profilfragmenten generiert, um für jeden einzelnen Kunden ein einzelnes Profil zu erstellen. Mit anderen Worten: Wenn Profilfragmente zusammengeführt werden, geben sie die Anzahl der Profile &quot;1&quot;zurück, da sie alle mit derselben Person verbunden sind.
 
@@ -75,7 +75,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Beispielauftrag, der 
 
 >[!NOTE]
 >
->In dieser Beispielantwort `numRowsToRead` und `totalRows` sind gleich einander. Abhängig von der Anzahl der Profile, die Ihr Unternehmen im Experience Platform hat, kann dies der Fall sein. Im Allgemeinen unterscheiden sich diese beiden Zahlen jedoch, wobei `numRowsToRead` ist die kleinere Zahl, da sie die Stichprobe als Teilmenge der Gesamtzahl der Profile darstellt (`totalRows`).
+>In dieser Beispielantwort sind `numRowsToRead` und `totalRows` gleich. Abhängig von der Anzahl der Profile, die Ihr Unternehmen im Experience Platform hat, kann dies der Fall sein. Im Allgemeinen unterscheiden sich diese beiden Zahlen jedoch, wobei `numRowsToRead` die kleinere Zahl ist, da es die Stichprobe als Teilmenge der Gesamtanzahl der Profile (`totalRows`) darstellt.
 
 ```json
 {
@@ -100,7 +100,7 @@ Die Antwort enthält die Details zum letzten erfolgreichen Beispielauftrag, der 
 | Eigenschaft | Beschreibung |
 |---|---|
 | `numRowsToRead` | Die Gesamtzahl der zusammengeführten Profile in der Stichprobe. |
-| `sampleJobRunning` | Ein boolescher Wert, der `true` wenn ein Beispielauftrag ausgeführt wird. Bietet Transparenz in Bezug auf die Latenz, die auftritt, wenn eine Batch-Datei in hochgeladen wird, wenn sie tatsächlich zum Profilspeicher hinzugefügt wird. |
+| `sampleJobRunning` | Ein boolean -Wert, der `true` zurückgibt, wenn ein Beispielauftrag ausgeführt wird. Bietet Transparenz in Bezug auf die Latenz, die auftritt, wenn eine Batch-Datei in hochgeladen wird, wenn sie tatsächlich zum Profilspeicher hinzugefügt wird. |
 | `cosmosDocCount` | Gesamtanzahl der Dokumente in Cosmos. |
 | `totalFragmentCount` | Gesamtzahl der Profilfragmente im Profilspeicher. |
 | `lastSuccessfulBatchTimestamp` | Letzter erfolgreicher Zeitstempel der Batch-Erfassung. |
@@ -108,13 +108,13 @@ Die Antwort enthält die Details zum letzten erfolgreichen Beispielauftrag, der 
 | `totalRows` | Gesamtzahl der zusammengeführten Profile in Experience Platform, auch als &quot;Profilanzahl&quot;bezeichnet. |
 | `lastBatchId` | Letzte Batch-Aufnahme-ID. |
 | `status` | Status des letzten Beispiels. |
-| `samplingRatio` | Verhältnis der gesampelten zusammengeführten Profile (`numRowsToRead`) auf die Gesamtzahl der zusammengeführten Profile (`totalRows`), ausgedrückt als Prozentsatz im Dezimalformat. |
+| `samplingRatio` | Verhältnis der gesampelten zusammengeführten Profile (`numRowsToRead`) zur Gesamtzahl der zusammengeführten Profile (`totalRows`), ausgedrückt als Prozentsatz im Dezimalformat. |
 | `mergeStrategy` | In der Stichprobe verwendete Zusammenführungsstrategie. |
 | `lastSampledTimestamp` | Letzter erfolgreicher Beispiel-Zeitstempel. |
 
 ## Profilverteilung nach Datensatz auflisten
 
-Um die Verteilung der Profile nach Datensatz anzuzeigen, können Sie eine GET-Anfrage an die `/previewsamplestatus/report/dataset` -Endpunkt.
+Um die Profilverteilung nach Datensatz anzuzeigen, können Sie eine GET-Anfrage an den `/previewsamplestatus/report/dataset` -Endpunkt senden.
 
 **API-Format**
 
@@ -129,7 +129,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anfrage verwendet die `date` -Parameter, um den neuesten Bericht für das angegebene Datum zurückzugeben.
+Die folgende Anfrage verwendet den Parameter `date` , um den letzten Bericht für das angegebene Datum zurückzugeben.
 
 ```shell
 curl -X GET \
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält eine `data` -Array, das eine Liste von Datensatzobjekten enthält. Die angezeigte Antwort wurde gekürzt, um drei Datensätze anzuzeigen.
+Die Antwort enthält ein `data` -Array, das eine Liste von Datensatzobjekten enthält. Die angezeigte Antwort wurde gekürzt, um drei Datensätze anzuzeigen.
 
 >[!NOTE]
 >
@@ -195,21 +195,21 @@ Die Antwort enthält eine `data` -Array, das eine Liste von Datensatzobjekten en
 | Eigenschaft | Beschreibung |
 |---|---|
 | `sampleCount` | Die Gesamtzahl der gesampelten zusammengeführten Profile mit dieser Datensatz-ID. |
-| `samplePercentage` | Die `sampleCount` als Prozentsatz der Gesamtzahl der gesampelten zusammengeführten Profile (die `numRowsToRead` -Wert, der im [Letzter Beispielstatus](#view-last-sample-status)), ausgedrückt in Dezimalformat. |
+| `samplePercentage` | Der `sampleCount` als Prozentsatz der Gesamtzahl der gesampelten zusammengeführten Profile (der `numRowsToRead` -Wert, der im [letzten Beispielstatus](#view-last-sample-status) zurückgegeben wurde), ausgedrückt in Dezimalformat. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile mit dieser Datensatz-ID. |
-| `fullIDsPercentage` | Die `fullIDsCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profile (die `totalRows` -Wert, der im [Letzter Beispielstatus](#view-last-sample-status)), ausgedrückt in Dezimalformat. |
+| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der Gesamtzahl der zusammengeführten Profile (der `totalRows` -Wert, der im [letzten Beispielstatus](#view-last-sample-status) zurückgegeben wurde), ausgedrückt in Dezimalformat. |
 | `name` | Der Name des Datensatzes, wie er bei der Erstellung des Datensatzes angegeben wurde. |
 | `description` | Die Beschreibung des Datensatzes, wie bei der Erstellung des Datensatzes angegeben. |
 | `value` | Die Kennung des Datensatzes. |
 | `streamingIngestionEnabled` | Gibt an, ob der Datensatz für die Streaming-Erfassung aktiviert ist. |
 | `createdUser` | Die Benutzer-ID des Benutzers, der den Datensatz erstellt hat. |
-| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn eine `date` während der Anfrage angegeben wurde, wird der zurückgegebene Bericht für das angegebene Datum angezeigt. Wenn nicht `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` -Parameter angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` -Parameter angegeben wird, wird der neueste Bericht zurückgegeben. |
 
 ## Profilverteilung nach Identitäts-Namespace auflisten
 
-Sie können eine GET-Anfrage an die `/previewsamplestatus/report/namespace` -Endpunkt verwenden, um die Aufschlüsselung nach Identitäts-Namespace für alle zusammengeführten Profile in Ihrem Profilspeicher anzuzeigen. Dazu gehören sowohl die von Adobe bereitgestellten Standardidentitäten als auch die von Ihrem Unternehmen definierten benutzerdefinierten Identitäten.
+Sie können eine GET-Anfrage an den Endpunkt `/previewsamplestatus/report/namespace` senden, um die Aufschlüsselung nach Identitäts-Namespace für alle zusammengeführten Profile in Ihrem Profilspeicher anzuzeigen. Dazu gehören sowohl die von Adobe bereitgestellten Standardidentitäten als auch die von Ihrem Unternehmen definierten benutzerdefinierten Identitäten.
 
-Identitäts-Namespaces sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über Identitäts-Namespace](../../identity-service/features/namespaces.md).
+Identitäts-Namespaces sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht zum Identitäts-Namespace](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -228,7 +228,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anfrage enthält keine `date` und gibt daher den neuesten Bericht zurück.
+Die folgende Anfrage gibt keinen `date` -Parameter an und gibt daher den neuesten Bericht zurück.
 
 ```shell
 curl -X GET \
@@ -241,7 +241,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält eine `data` -Array mit einzelnen Objekten, die die Details für jeden Namespace enthalten. Die angezeigte Antwort wurde abgeschnitten und zeigt vier Namespaces.
+Die Antwort enthält ein `data` -Array mit einzelnen Objekten, die die Details für jeden Namespace enthalten. Die angezeigte Antwort wurde abgeschnitten und zeigt vier Namespaces.
 
 ```json
 {
@@ -294,21 +294,21 @@ Die Antwort enthält eine `data` -Array mit einzelnen Objekten, die die Details 
 | Eigenschaft | Beschreibung |
 |---|---|
 | `sampleCount` | Die Gesamtzahl der gesampelten zusammengeführten Profile im Namespace. |
-| `samplePercentage` | Die `sampleCount` als Prozentsatz der gesampelten zusammengeführten Profile (die `numRowsToRead` -Wert, der im [Letzter Beispielstatus](#view-last-sample-status)), ausgedrückt in Dezimalformat. |
-| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn eine `date` während der Anfrage angegeben wurde, wird der zurückgegebene Bericht für das angegebene Datum angezeigt. Wenn nicht `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
+| `samplePercentage` | Der `sampleCount` als Prozentsatz der gesampelten zusammengeführten Profile (der `numRowsToRead` -Wert, der im [letzten Beispielstatus](#view-last-sample-status) zurückgegeben wurde), ausgedrückt in Dezimalformat. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` -Parameter angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` -Parameter angegeben wird, wird der neueste Bericht zurückgegeben. |
 | `fullIDsFragmentCount` | Die Gesamtzahl der Profilfragmente im Namespace. |
 | `fullIDsCount` | Die Gesamtzahl der zusammengeführten Profile im Namespace. |
-| `fullIDsPercentage` | Die `fullIDsCount` als Prozentsatz der Gesamt-zusammengeführten Profile (die `totalRows` -Wert, der im [Letzter Beispielstatus](#view-last-sample-status)), ausgedrückt in Dezimalformat. |
-| `code` | Die `code` für den Namespace. Dies ist beim Arbeiten mit Namespaces unter Verwendung der Variablen [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md) und wird auch als [!UICONTROL Identitätssymbol] in der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie unter [Übersicht über Identitäts-Namespace](../../identity-service/features/namespaces.md). |
-| `value` | Die `id` -Wert für den Namespace. Dies ist beim Arbeiten mit Namespaces unter Verwendung der Variablen [Identity Service-API](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | Der `fullIDsCount` als Prozentsatz der Gesamt-zusammengeführten Profile (der `totalRows` -Wert, der im [letzten Beispielstatus](#view-last-sample-status) zurückgegeben wurde), ausgedrückt in Dezimalformat. |
+| `code` | Die `code` für den Namespace. Dies wird beim Arbeiten mit Namespaces mit der Adobe Experience Platform Identity Service-API ](../../identity-service/api/list-namespaces.md) ermittelt und in der Experience Platform-Benutzeroberfläche auch als [!UICONTROL Identitätssymbol] bezeichnet. [ Weitere Informationen finden Sie unter [Übersicht über den Identitäts-Namespace](../../identity-service/features/namespaces.md). |
+| `value` | Der `id` -Wert für den Namespace. Dies ist beim Arbeiten mit Namespaces mit der [Identity Service-API](../../identity-service/api/list-namespaces.md) zu finden. |
 
 ## Erstellen eines Berichts zur Datensatzüberschneidung
 
 Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dieser Bericht bietet Ihnen nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung von Ablauffristen für bestimmte Datensätze.
 
-Sie können den Bericht zur Datensatzüberschneidung generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/dataset/overlap` -Endpunkt.
+Sie können den Bericht zur Datensatzüberschneidung generieren, indem Sie eine GET-Anfrage an den `/previewsamplestatus/report/dataset/overlap` -Endpunkt senden.
 
-Eine schrittweise Anleitung zum Generieren des Berichts zur Datensatzüberlappung mithilfe der Befehlszeile oder der Postman-Benutzeroberfläche finden Sie im Abschnitt [Tutorial zum Generieren der Berichtüberschneidung von Datensätzen](../tutorials/dataset-overlap-report.md).
+Eine schrittweise Anleitung zum Generieren des Berichts zur Datensatzüberschneidung mithilfe der Befehlszeile oder der Postman-Benutzeroberfläche finden Sie im Tutorial zum Generieren der Datensatzüberschneidung [.](../tutorials/dataset-overlap-report.md)
 
 **API-Format**
 
@@ -323,7 +323,7 @@ GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anfrage verwendet die `date` -Parameter, um den neuesten Bericht für das angegebene Datum zurückzugeben.
+Die folgende Anfrage verwendet den Parameter `date` , um den letzten Bericht für das angegebene Datum zurückzugeben.
 
 ```shell
 curl -X GET \
@@ -350,12 +350,12 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Date
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `data` | Die `data` -Objekt enthält kommagetrennte Listen mit Datensätzen und den entsprechenden Profilzahlen. |
-| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn eine `date` während der Anfrage angegeben wurde, wird der zurückgegebene Bericht für das angegebene Datum angezeigt. Wenn nicht `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
+| `data` | Das Objekt `data` enthält kommagetrennte Listen mit Datensätzen und deren jeweiligen Profilzahlen. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` -Parameter angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` -Parameter angegeben wird, wird der neueste Bericht zurückgegeben. |
 
 ### Interpretieren des Berichts zur Datensatzüberlappung
 
-Die Ergebnisse des Berichts können aus den Datensätzen und Profilzahlen in der Antwort interpretiert werden. Betrachten Sie den folgenden Beispielbericht `data` -Objekt:
+Die Ergebnisse des Berichts können aus den Datensätzen und Profilzahlen in der Antwort interpretiert werden. Betrachten Sie das folgende Beispiel für ein Objekt vom Typ report `data` :
 
 ```json
   "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
@@ -365,16 +365,16 @@ Die Ergebnisse des Berichts können aus den Datensätzen und Profilzahlen in der
 
 Dieser Bericht enthält die folgenden Informationen:
 
-* Es gibt 123 Profile, die aus Daten aus den folgenden Datensätzen bestehen: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
+* Es gibt 123 Profile, die aus Daten der folgenden Datensätze bestehen: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Es gibt 454.412 Profile, die aus Daten aus diesen beiden Datensätzen bestehen: `5d92921872831c163452edc8` und `5eb2cdc6fa3f9a18a7592a98`.
-* Es gibt 107 Profile, die nur aus Daten aus einem Datensatz bestehen `5eeda0032af7bb19162172a7`.
+* Es gibt 107 Profile, die nur aus Daten aus dem Datensatz `5eeda0032af7bb19162172a7` bestehen.
 * Insgesamt gibt es 454.642 Profile in der Organisation.
 
 ## Bericht zur Identitäts-Namespace-Überschneidung erstellen {#identity-overlap-report}
 
 Der Bericht zur Überschneidung von Identitäts-Namespaces bietet Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Identitäts-Namespaces offenlegt, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dazu gehören sowohl die von Adobe bereitgestellten standardmäßigen Identitäts-Namespaces als auch die von Ihrem Unternehmen definierten benutzerdefinierten Identitäts-Namespaces.
 
-Sie können den Bericht zur Überschneidung von Identitäts-Namespaces generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/namespace/overlap` -Endpunkt.
+Sie können den Bericht zur Überschneidung von Identitäts-Namespaces generieren, indem Sie eine GET-Anfrage an den `/previewsamplestatus/report/namespace/overlap` -Endpunkt senden.
 
 **API-Format**
 
@@ -389,7 +389,7 @@ GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 
 **Anfrage**
 
-Die folgende Anfrage verwendet die `date` -Parameter, um den neuesten Bericht für das angegebene Datum zurückzugeben.
+Die folgende Anfrage verwendet den Parameter `date` , um den letzten Bericht für das angegebene Datum zurückzugeben.
 
 ```shell
 curl -X GET \
@@ -444,15 +444,15 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Iden
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `data` | Die `data` -Objekt enthält kommagetrennte Listen mit eindeutigen Kombinationen aus Identitäts-Namespace-Codes und deren jeweiligen Profilzahlen. |
-| Namespace-Codes | Die `code` ist ein Kurzformular für jeden Identitäts-Namespace-Namen. Eine Zuordnung zu jedem `code` zu `name` kann mit der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md). Die `code` wird auch als [!UICONTROL Identitätssymbol] in der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie unter [Übersicht über Identitäts-Namespace](../../identity-service/features/namespaces.md). |
-| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn eine `date` während der Anfrage angegeben wurde, wird der zurückgegebene Bericht für das angegebene Datum angezeigt. Wenn nicht `date` angegeben wird, wird der neueste Bericht zurückgegeben. |
+| `data` | Das Objekt `data` enthält kommagetrennte Listen mit eindeutigen Kombinationen aus Identitäts-Namespace-Codes und deren jeweiligen Profilzahlen. |
+| Namespace-Codes | Der `code` ist ein kurzer Formular für jeden Identitäts-Namespace-Namen. Eine Zuordnung der einzelnen `code` zu ihren `name` finden Sie unter Verwendung der [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) . Der `code` wird in der Experience Platform-Benutzeroberfläche auch als [!UICONTROL Identitätssymbol] bezeichnet. Weitere Informationen finden Sie unter [Übersicht über den Identitäts-Namespace](../../identity-service/features/namespaces.md). |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein `date` -Parameter angegeben wurde, wird der Bericht für das angegebene Datum zurückgegeben. Wenn kein `date` -Parameter angegeben wird, wird der neueste Bericht zurückgegeben. |
 
 ### Interpretieren des Berichts zur Identitäts-Namespace-Überschneidung
 
 Die Ergebnisse des Berichts können aus den Identitäten und Profilzahlen in der Antwort interpretiert werden. Der numerische Wert jeder Zeile gibt an, wie viele Profile aus dieser exakten Kombination aus standardmäßigen und benutzerdefinierten Identitäts-Namespaces bestehen.
 
-Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
+Betrachten Sie den folgenden Auszug aus dem Objekt `data` :
 
 ```json
   "AAID,ECID,Email,crmid": 142,
@@ -462,15 +462,15 @@ Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
 
 Dieser Bericht enthält die folgenden Informationen:
 
-* Es gibt 142 Profile, die aus `AAID`, `ECID`, und `Email` Standardidentitäten sowie benutzerdefinierte `crmid` Identitäts-Namespace.
-* Es gibt 24 Profile, die aus `AAID` und `ECID` Identitäts-Namespaces.
-* Es gibt 6.565 Profile, die nur eine `ECID` Identität.
+* Es gibt 142 Profile, die aus den Standardidentitäten `AAID`, `ECID` und `Email` sowie aus einem benutzerdefinierten Identitäts-Namespace `crmid` bestehen.
+* Es gibt 24 Profile, die aus Identitäts-Namespaces `AAID` und `ECID` bestehen.
+* Es gibt 6.565 Profile, die nur eine `ECID` -Identität enthalten.
 
 ## Bericht zu nicht zugeordneten Profilen erstellen
 
-Über den Bericht zu nicht zugewiesenen Profilen können Sie die Zusammensetzung des Profilspeichers Ihres Unternehmens besser einsehen. Ein Profil, das nur ein Profilfragment enthält, ist ein Profil, das die Zuordnung aufgehoben hat. Ein &quot;unbekanntes&quot;Profil ist ein Profil, das mit pseudonymen Identitäts-Namespaces wie `ECID` und `AAID`. Unbekannte Profile sind inaktiv, d. h. sie haben für den angegebenen Zeitraum keine neuen Ereignisse hinzugefügt. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
+Über den Bericht zu nicht zugewiesenen Profilen können Sie die Zusammensetzung des Profilspeichers Ihres Unternehmens besser einsehen. Ein Profil, das nur ein Profilfragment enthält, ist ein Profil, das die Zuordnung aufgehoben hat. Ein &quot;unbekanntes&quot;Profil ist ein Profil, das mit pseudonymen Identitäts-Namespaces wie `ECID` und `AAID` verknüpft ist. Unbekannte Profile sind inaktiv, d. h. sie haben für den angegebenen Zeitraum keine neuen Ereignisse hinzugefügt. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
 
-Sie können den Bericht zu nicht zugewiesenen Profilen generieren, indem Sie eine GET-Anfrage an die `/previewsamplestatus/report/unstitchedProfiles` -Endpunkt.
+Sie können den Bericht zu nicht zugeordneten Profilen generieren, indem Sie eine GET-Anfrage an den Endpunkt `/previewsamplestatus/report/unstitchedProfiles` senden.
 
 **API-Format**
 
@@ -496,7 +496,7 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu nicht
 
 >[!NOTE]
 >
->Für die Zwecke dieses Handbuchs wurde der Bericht abgeschnitten und enthält nur `"120days"` und &quot;`7days`&quot;Zeiträume. Der vollständige Bericht zu nicht zugestellten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
+>Für die Zwecke dieses Handbuchs wurde der Bericht so abgeschnitten, dass nur `"120days"` - und &quot;`7days`&quot; -Zeiträume enthalten sind. Der vollständige Bericht zu nicht zugestellten Profilen bietet eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
 
 ```json
 {
@@ -548,20 +548,20 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu nicht
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `data` | Die `data` -Objekt enthält die Informationen, die für den Bericht zu nicht zugeordneten Profilen zurückgegeben werden. |
+| `data` | Das Objekt `data` enthält die für den Bericht zu nicht zugeordneten Profilen zurückgegebenen Informationen. |
 | `totalNumberOfProfiles` | Die Gesamtzahl der eindeutigen Profile im Profilspeicher. Dies entspricht der Anzahl der adressierbaren Zielgruppen. Es enthält sowohl bekannte als auch nicht zugewiesene Profile. |
 | `totalNumberOfEvents` | Die Gesamtzahl der ExperienceEvents im Profilspeicher. |
 | `unstitchedProfiles` | Ein Objekt, das eine Aufschlüsselung der nicht zugeordneten Profile nach Zeiträumen enthält. Der Bericht zu nicht zugeordneten Profilen bietet eine Aufschlüsselung der Profile für Zeiträume von 7, 30, 60, 90 und 120 Tagen. |
 | `countOfProfiles` | Die Anzahl der nicht zugeordneten Profile für den Zeitraum oder die Anzahl der nicht zugeordneten Profile für den Namespace. |
 | `eventsAssociated` | Die Anzahl der ExperienceEvents für den Zeitraum oder die Anzahl der Ereignisse für den Namespace. |
-| `nsDistribution` | Ein Objekt, das einzelne Identitäts-Namespaces mit der Verteilung nicht zugewiesener Profile und Ereignisse für jeden Namespace enthält. Hinweis: Addieren Sie die Summe `countOfProfiles` für jeden Identitäts-Namespace im `nsDistribution` -Objekt entspricht dem `countOfProfiles` für den Zeitraum. Dasselbe gilt für `eventsAssociated` pro Namespace und der Gesamtwert `eventsAssociated` nach Zeiträumen. |
+| `nsDistribution` | Ein Objekt, das einzelne Identitäts-Namespaces mit der Verteilung nicht zugewiesener Profile und Ereignisse für jeden Namespace enthält. Hinweis: Wenn Sie die Gesamtsumme `countOfProfiles` für jeden Identitäts-Namespace im Objekt `nsDistribution` addieren, entspricht dies dem Wert `countOfProfiles` für den Zeitraum. Dasselbe gilt für `eventsAssociated` pro Namespace und die Summe von `eventsAssociated` pro Zeitraum. |
 | `reportTimestamp` | Der Zeitstempel des Berichts. |
 
 ### Interpretieren des Berichts über nicht zuordenbare Profile
 
 Die Ergebnisse des Berichts können Aufschluss darüber geben, wie viele nicht zugewiesene und inaktive Profile Ihr Unternehmen in seinem Profilspeicher hat.
 
-Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
+Betrachten Sie den folgenden Auszug aus dem Objekt `data` :
 
 ```json
   "7days": {
@@ -593,5 +593,5 @@ Dieser Bericht enthält die folgenden Informationen:
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Beispieldaten im Profilspeicher in der Vorschau anzeigen und mehrere Berichte zu den Daten ausführen, können Sie auch die Schätzungs- und Vorschau-Endpunkte der Segmentation Service-API verwenden, um Informationen auf Zusammenfassungsebene zu Ihren Segmentdefinitionen anzuzeigen. Diese Informationen helfen Ihnen dabei sicherzustellen, dass Sie Ihre erwartete Zielgruppe isolieren. Weitere Informationen zum Arbeiten mit Vorschau und Schätzungen mithilfe der Segmentation-API finden Sie unter [Handbuch zur Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md).
+Nachdem Sie nun wissen, wie Sie Beispieldaten im Profilspeicher in der Vorschau anzeigen und mehrere Berichte zu den Daten ausführen, können Sie auch die Schätzungs- und Vorschau-Endpunkte der Segmentation Service-API verwenden, um Informationen auf Zusammenfassungsebene zu Ihren Segmentdefinitionen anzuzeigen. Diese Informationen helfen Ihnen dabei sicherzustellen, dass Sie Ihre erwartete Zielgruppe isolieren. Weitere Informationen zum Arbeiten mit Vorschauen und Schätzungen mithilfe der Segmentation-API finden Sie im Handbuch [Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md) .
 

@@ -7,11 +7,11 @@ exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '187'
-ht-degree: 10%
+ht-degree: 18%
 
 ---
 
-# [!UICONTROL Telefonnummer] Datentyp
+# Datentyp [!UICONTROL Telefonnummer]
 
 [!UICONTROL Telefonnummer] ist ein standardmäßiger XDM-Datentyp, der die Details einer Telefonnummer beschreibt.
 
@@ -19,9 +19,9 @@ ht-degree: 10%
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `extension` | Die interne Wählnummer, die zum Anrufen von einer privaten Börse, einem Betreiber oder einer Telefonzentrale verwendet wird. |
-| `number` | Die Telefonnummer. Beachten Sie, dass die Telefonnummer eine Zeichenfolge ist und aussagekräftige Zeichen wie Klammern enthalten kann. `()`, Bindestriche `-`, oder Zeichen, um IDs für Unterwählungen wie Erweiterungen anzugeben `x` Beispiel: `1-353(0)18391111` oder `+613 9403600x1234`. |
-| `primary` | Ein boolescher Wert, der anzeigt, ob dies die primäre Telefonnummer des Kontakts ist. Im Gegensatz zu Adresse oder E-Mail-Adresse kann es mehrere primäre Telefonnummern geben, eine pro Kommunikationskanal. Der Kommunikationskanal wird durch den Typ definiert (durch den Namen der übergeordneten Eigenschaft angegeben): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown`, und `fax`. |
+| `extension` | Die interne Wählnummer, die für Anrufe von einer privaten Vermittlungsstelle, einem Operator oder einer Telefonzentrale verwendet wird. |
+| `number` | Die Telefonnummer. Beachten Sie, dass die Telefonnummer eine Zeichenfolge ist und aussagekräftige Zeichen wie Klammern `()`, Bindestriche `-` oder Zeichen enthalten kann, die auf IDs für Unterwählungen wie Erweiterungen `x` (z. B. `1-353(0)18391111` oder `+613 9403600x1234` verweisen. |
+| `primary` | Ein boolescher Wert, der anzeigt, ob dies die primäre Telefonnummer des Kontakts ist. Im Gegensatz zu Adresse oder E-Mail-Adresse kann es mehrere primäre Telefonnummern geben, eine pro Kommunikationskanal. Der Kommunikationskanal wird durch den Typ definiert (der durch den Namen der übergeordneten Eigenschaft angegeben wird): `textMessaging`, `mobile`, `phone`, `home`, `work`, `unknown` und `fax`. |
 | `status` | Gibt an, ob die Telefonnummer derzeit verwendet werden kann. |
 | `statusReason` | Eine Beschreibung des aktuellen Status. |
 | `validity` | Ein Grad der technischen Korrektheit der Telefonnummer. |

@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie den /properties-Endpunkt in der Reactor-API a
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 99%
+source-wordcount: '1100'
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ In der Ressourcenhierarchie ist eine Eigenschaft der Eigentümer der folgenden E
 * [Erweiterungen](./extensions.md)
 * [Hosts](./properties.md)
 * [Bibliotheken](./libraries.md)
-* [Regel  Komponenten](./rule-components.md)
+* [Regelkomponenten](./rule-components.md)
 * [Regeln](./rules.md)
 
 Eine Eigenschaft gehört zu genau einem [Unternehmen](./companies.md). Ein Unternehmen kann über viele Eigenschaften verfügen.

@@ -26,4 +26,4 @@ Ausführliche Informationen zu den einzelnen Host-Typen finden Sie unter den obi
 
 Derselbe Host kann für mehrere Umgebungen innerhalb einer Eigenschaft verwendet werden.
 
-Weitere Informationen, die Sie bei der Entscheidung zwischen Self-Hosting und der Verwaltung des Hosting durch die Adobe unterstützen, finden Sie im Abschnitt [Handbuch zum selbstständigen Hosting](./self-hosting-libraries.md).
+Weitere Informationen, die Sie bei der Entscheidung zwischen Self-Hosting und der Verwaltung des Hosting durch Adobe unterstützen, finden Sie im Leitfaden [Self-Hosting](./self-hosting-libraries.md) .

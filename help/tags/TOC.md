@@ -180,7 +180,7 @@ ht-degree: 97%
          * [Übersicht](./extensions/client/marketo/overview.md)
          * [Versionshinweise](./extensions/client/marketo/release-notes.md)
       * [Übergeordneter Eigenschaften-Manager](https://exchange.adobe.com/apps/ec/102992)
-      * [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+      * [Merkury-Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
       * [!DNL Meta Pixel] {#meta}
          * [Übersicht](./extensions/client/meta/overview.md)
       * [Monita](https://exchange.adobe.com/apps/ec/106544)

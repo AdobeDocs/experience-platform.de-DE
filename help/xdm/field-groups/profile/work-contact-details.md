@@ -7,18 +7,18 @@ exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '167'
-ht-degree: 15%
+ht-degree: 14%
 
 ---
 
 
-# [!UICONTROL Kontaktangaben für Arbeitskontakte] Schemafeldgruppe
+# [!UICONTROL Arbeitskontaktdetails] Schemafeldgruppe
 
 >[!NOTE]
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Kontaktangaben für Arbeitskontakte] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe bietet mehrere Felder, die berufsbezogene Informationen über eine Person erfassen, z. B. Arbeitsadresse, Arbeits-E-Mail, Berufs-Telefonnummer und Organisationen, zu denen die Person gehört.
+[!UICONTROL Arbeits-Kontaktdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Die Feldergruppe bietet mehrere Felder, die berufsbezogene Informationen über eine Person erfassen, z. B. Arbeitsadresse, Arbeits-E-Mail, Berufs-Telefonnummer und Organisationen, zu denen die Person gehört.
 
 ![](../../images/field-groups/work-contact-details.png)
 

@@ -9,9 +9,9 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL Details zum Gesundheitsplan] Schemafeldgruppe
+# [!UICONTROL Schemafeldgruppe &quot;Details zum Gesundheitsplan&quot;]
 
-[!UICONTROL Details zum Gesundheitsplan] ist eine Standardschemafeldgruppe für die [[!UICONTROL Plan] class](../../classes/plan.md). Es wird ein einzelnes Feld vom Typ Objekt bereitgestellt `healthcarePlanDetails` erfasst Eigenschaften im Zusammenhang mit einem medizinischen Plan.
+[!UICONTROL Details zum Gesundheitsvorsorgeplan] ist eine Standardschemafeldgruppe für die [[!UICONTROL Plan] -Klasse](../../classes/plan.md). Es stellt ein einzelnes Objektfeld `healthcarePlanDetails` bereit, das Eigenschaften erfasst, die mit einem medizinischen Plan zusammenhängen.
 
 ![](../../images/field-groups/plan/healthcare-plan-details.png)
 
@@ -29,4 +29,4 @@ ht-degree: 9%
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).
+Weitere Informationen zur Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/plan/healthcare-plan-details.schema.json).

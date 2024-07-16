@@ -11,7 +11,7 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Interaktion mit Zielpunkten] Datentyp
+# Datentyp [!UICONTROL POI-Interaktion]
 
 [!UICONTROL Interaktion mit Zielpunkten] ist ein standardmäßiger XDM-Datentyp, der das drahtlose Gerät beschreibt, das Identitätsinformationen an mobile Anwendungen weitergibt, wenn mobile Geräte in Reichweite sind.
 

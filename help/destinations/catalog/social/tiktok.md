@@ -14,7 +14,7 @@ ht-degree: 39%
 
 ## Übersicht {#overview}
 
-Erstellen Sie benutzerdefinierte Zielgruppen in TikTok mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen. Besuch [TikTok Business-Hilfesystem](https://ads.tiktok.com/help/article/audiences) für weitere Informationen.
+Erstellen Sie benutzerdefinierte Zielgruppen in TikTok mit Ihren Daten für das Targeting mit Ihren Werbekampagnen. Diese Zielgruppen können von Personen sein, die Ihre Website besucht oder mit Ihrem Inhalt interagiert haben. Durch die Echtzeit-Integration von Adobe mit TikTok Ads Manager können Sie die gewünschte Zielgruppe schnell und sicher von Adobe Experience Platform an TikTok übertragen. Weitere Informationen finden Sie im geschäftlichen Hilfezentrum von TikTok ](https://ads.tiktok.com/help/article/audiences).[
 
 >[!IMPORTANT]
 >
@@ -30,9 +30,9 @@ Eine Marke für Sportbekleidung möchte bestehende Kunden über ihre Social-Medi
 
 ## Voraussetzungen {#prerequisites}
 
-Sie müssen [!DNL Admin] oder [!DNL Operator] Zugriff auf das TikTok Ads Manager-Konto, an das Sie Zielgruppen senden möchten. Weitere Informationen finden Sie unter [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
+Sie benötigen [!DNL Admin] oder [!DNL Operator] Zugriff auf das TikTok Ads Manager-Konto, an das Sie Zielgruppen senden möchten. Weitere Anweisungen finden Sie im [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
-Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experience Platform die Berechtigung erteilen, auf Ihr Anzeigenkonto zuzugreifen für `Audience Management`. Diese Berechtigung kann bereitgestellt werden durch [Eingabe Ihrer Anzeigen-Manager-ID](#authenticate) in der Experience Platform-Benutzeroberfläche und Erteilung der Berechtigung, nachdem Sie zu Ihrem TikTok Ads Manager-Konto weitergeleitet wurden.
+Bevor Sie Daten an Ihr TikTok Ads Manager-Konto senden, müssen Sie Adobe Experience Platform die Berechtigung erteilen, für `Audience Management` auf Ihr Anzeigenkonto zuzugreifen. Diese Berechtigung kann erteilt werden, indem [Ihre Anzeigen-Manager-ID](#authenticate) in der Experience Platform-Benutzeroberfläche eingeben und die Berechtigung erteilt wird, nachdem sie an Ihr TikTok Ads Manager-Konto weitergeleitet wurde.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -40,7 +40,7 @@ TikTok unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
 | Telefonnummer | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt und müssen im E.164-Format vorliegen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | E-Mail | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
@@ -62,27 +62,27 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, werden Sie zum Anmelden bei Ihrem [!DNL TikTok Ads Manager] -Konto zu erstellen und Adobe zu autorisieren, Zielgruppen in Ihrem Namen zu verwalten.
+Um sich beim Ziel zu authentifizieren, werden Sie weitergeleitet, um sich bei Ihrem [!DNL TikTok Ads Manager] -Konto anzumelden und Adobe zu autorisieren, Zielgruppen in Ihrem Namen zu verwalten.
 
-![TikTok-Berechtigungsauswahl](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Bild der TikTok-Benutzeroberfläche zum Auswählen von Berechtigungen")
+![TikTok-Berechtigungsauswahl](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Bild der TikTok-Benutzeroberfläche für die Auswahl von Berechtigungen")
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
 Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
-![Details zur Zielverbindung](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Bild der Platform-Benutzeroberfläche mit Details zur Zielverbindung, die ausgefüllt werden sollen")
+![Details zur Zielverbindung](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Bild der Platform-Benutzeroberfläche, in dem Details zur Zielverbindung angezeigt werden, die ausgefüllt werden sollen")
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL TikTok Ads Manager-ID]**: Ihr [!DNL TikTok Ads Manager ID]. Sie können dies in der [!DNL TikTok Ads manager] -Konto.
+* **[!UICONTROL TikTok Ads Manager ID]**: Ihre [!DNL TikTok Ads Manager ID]. Sie finden dies in Ihrem [!DNL TikTok Ads manager] -Konto.
 
-![TikTok Ads Manager-ID](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Bild der TikTok Ads Manager-Benutzeroberfläche, in dem gezeigt wird, wie die TikTok Ads Manager-ID abgerufen wird")
+![TikTok Ads Manager-ID](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Bild der TikTok Ads Manager-Benutzeroberfläche, das zeigt, wie die TikTok Ads Manager-ID abgerufen wird")
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -94,8 +94,8 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -105,17 +105,17 @@ Im Folgenden finden Sie ein Beispiel für die korrekte Identitätszuordnung beim
 
 Quellfelder auswählen:
 
-* Wählen Sie eine Kennung aus (z. B.:` Email_LC_SHA256`) als Quellidentität, die ein Profil in Adobe Experience Platform eindeutig identifiziert und [!DNL TikTok Ads Manager].
+* Wählen Sie eine Kennung (z. B. ` Email_LC_SHA256`) als Quellidentität aus, die ein Profil in Adobe Experience Platform eindeutig identifiziert und [!DNL TikTok Ads Manager].
 
 Zielgruppenfelder auswählen:
 
 * Wählen Sie den E-Mail-Namespace als Zielidentität aus.
 
-![Identitätszuordnung](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Bild der Platform-Benutzeroberfläche, Zuordnung von Identitäten")
+![Identitätszuordnung](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png "Bild der Platform-Benutzeroberfläche, Zuordnung der Identitäten")
 
 ## Exportierte Daten {#exported-data}
 
-Überprüfen Sie Ihre [!DNL TikTok Ads Manager] Konto (unter **Assets > Zielgruppen**), um zu überprüfen, ob Ihre Experience Platform-Audience erfolgreich exportiert wurde. Die Audience wird als Audience-Typ ausgefüllt: `Partner Audience`.
+Überprüfen Sie Ihr [!DNL TikTok Ads Manager]-Konto (unter **Assets > Zielgruppen**), um zu überprüfen, ob Ihre Experience Platform-Zielgruppe erfolgreich exportiert wurde. Die Audience wird als Audience-Typ ausgefüllt: `Partner Audience`.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
@@ -123,4 +123,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere Informationen finden Sie unter [TikTok-Hilfeseite](https://ads.tiktok.com/help/article/audiences) für weitere Informationen.
+Weitere Informationen finden Sie auf der Seite [TikTok Help Center page](https://ads.tiktok.com/help/article/audiences) .

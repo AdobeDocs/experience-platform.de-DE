@@ -15,7 +15,7 @@ ht-degree: 83%
 
 # Registerkarte „Zusammenfassung“
 
-Um Adobe Experience Platform Debugger auszuführen, öffnen Sie die Seite, die Sie im Browser untersuchen möchten, und wählen Sie dann das Symbol (![](images/start-icon.jpg)) in Ihrer Browser-Leiste. Die Erweiterung wird im **Zusammenfassung** Registerkarte.
+Um Adobe Experience Platform Debugger auszuführen, öffnen Sie die Seite, die Sie im Browser untersuchen möchten, und wählen Sie dann das Symbol (![](images/start-icon.jpg)) in Ihrer Browserleiste aus. Die Erweiterung wird auf der Registerkarte **Zusammenfassung** geöffnet.
 
 ![](images/summary.jpg)
 
@@ -81,7 +81,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>Die Turbine -Version</a> </p> </td> 
+   <td colname="col2"> <p>Die Turbine</a> -Version </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Build-Datum </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Umgebung </p> </td> 
-   <td colname="col2"> <p>Die <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" format="https" scope="external"> Umgebung</a> von der Tag-Bibliothek verwendet </p> </td> 
+   <td colname="col2"> <p>Die von der Tag-Bibliothek verwendete <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de" format="https" scope="external">-Umgebung</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Erweiterungen </p> </td> 
@@ -162,7 +162,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ereignis zum Laden der Seite </p> </td> 
-   <td colname="col2"> <p>Der Typ des <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=de" format="html" scope="external">Ereignisses</a>, das beim Laden der Seite ausgelöst wird. </p> </td> 
+   <td colname="col2"> <p>Der Typ des <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external">Ereignisses</a>, das beim Laden der Seite ausgelöst wird. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Name einer Anfrage </p> </td> 
@@ -186,7 +186,7 @@ Experience Platform Debugger zeigt die folgenden Informationen zu den verschiede
   </tr> 
   <tr> 
    <td colname="col1"> <p>Angebotsname</p> </td> 
-   <td colname="col2"> <p>Name des Target-<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=de" format="html" scope="external"> Angebots</a>. Ist nur dann ohne Authentifizierung verfügbar, wenn Sie den Debugging-Ereignis-Listener in Ihren Code oder Tag-Manager implementieren und die erforderlichen <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> Antwort-Tokens</a> in der Target-Benutzeroberfläche aktivieren. </p> </td> 
+   <td colname="col2"> <p>Name des Target-<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> Angebots</a>. Ist nur dann ohne Authentifizierung verfügbar, wenn Sie den Debugging-Ereignis-Listener in Ihren Code oder Tag-Manager implementieren und die erforderlichen <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> Antwort-Tokens</a> in der Target-Benutzeroberfläche aktivieren. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Offer ID </p> </td> 

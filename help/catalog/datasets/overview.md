@@ -7,8 +7,8 @@ user-guide-description: Verschaffen Sie sich mit diesem Handbuch einen Überblic
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 91%
+source-wordcount: '871'
+ht-degree: 89%
 
 ---
 
@@ -40,7 +40,7 @@ Weitere Informationen finden Sie in der [Übersicht zur Datenaufnahme](../../ing
 
 ## Auf Datensätze aus Schemata angewendete Beschriftungen
 
-Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten, um sicherzustellen, dass die für die Verwendung von Daten geltenden Vorschriften, Einschränkungen und Richtlinien eingehalten werden. Mit dem Data Governance-Framework können Sie Nutzungskennzeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können auf einzelne Schemata, Felder innerhalb dieser Schemas und ganze einzelne Datensätze angewendet werden. Wenn Beschriftungen direkt auf ein Schema angewendet werden, werden diese Beschriftungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
+Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten, um sicherzustellen, dass die für die Verwendung von Daten geltenden Vorschriften, Einschränkungen und Richtlinien eingehalten werden. Mit dem Data Governance-Framework können Sie Nutzungsbezeichnungen anwenden, um Daten entsprechend den für diese Daten geltenden Nutzungsrichtlinien zu kategorisieren. Beschriftungen können auf einzelne Schemata, Felder innerhalb dieser Schemas und ganze einzelne Datensätze angewendet werden. Wenn Beschriftungen direkt auf ein Schema angewendet werden, werden diese Beschriftungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
 
 >[!IMPORTANT]
 >

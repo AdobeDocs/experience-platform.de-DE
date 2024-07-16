@@ -1,17 +1,17 @@
 ---
 title: Export-API-Endpunkt für Audit-Ereignisse
-description: Erfahren Sie, wie Sie Prüfereignisse in Experience Platform mithilfe der Auditabfrage-API exportieren.
+description: Erfahren Sie, wie Sie Prüfereignisse in Experience Platform mithilfe der Audit Query API exportieren.
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
 source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 6%
+source-wordcount: '158'
+ht-degree: 4%
 
 ---
 
 # Liste von Prüfereignissen exportieren
 
-Sie können Ereignisdaten abrufen, indem Sie eine GET-Anfrage an die `/audit/export` -Endpunkt, der die Ereignisse angibt, die Sie in der Payload abrufen möchten.
+Sie können Ereignisdaten abrufen, indem Sie eine GET-Anfrage an den `/audit/export` -Endpunkt senden und die Ereignisse angeben, die Sie in der Payload abrufen möchten.
 
 **API-Format**
 
@@ -41,4 +41,4 @@ curl -X POST \
 
 **Antwort**
 
-Die Ergebnisse werden in einer CSV-Datei für den Export generiert. Eine erfolgreiche Antwort gibt HTTP 307 ohne Antworttext zurück. Ein Link zur Exportdatei wird im Abschnitt `Location` Antwortheader.
+Die Ergebnisse werden in einer CSV-Datei für den Export generiert. Eine erfolgreiche Antwort gibt HTTP 307 ohne Antworttext zurück. Ein Link zur Exportdatei wird im Antwortheader `Location` bereitgestellt.

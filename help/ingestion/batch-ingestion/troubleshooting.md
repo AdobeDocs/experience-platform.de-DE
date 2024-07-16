@@ -6,7 +6,7 @@ description: Diese Dokumentation hilft bei der Beantwortung häufig gestellter F
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1418'
 ht-degree: 100%
 
 ---
@@ -124,7 +124,7 @@ Standardmäßig verwendet [!DNL Batch Data Ingestion] ein einzeiliges JSON-Forma
 
 ### Wird CSV-Erfassung unterstützt?
 
-CSV-Erfassung wird nur bei flachen Schemas unterstützt. Derzeit wird das Einfügen hierarchischer Daten in CSV nicht unterstützt.
+CSV-Erfassung wird nur bei flachen Schemata unterstützt. Derzeit wird das Einfügen hierarchischer Daten in CSV nicht unterstützt.
 
 Um alle Datenerfassungsfunktionen zu erhalten, müssen JSON- oder Parquet-Formate verwendet werden.
 
@@ -181,18 +181,18 @@ Ein Batch kann in seinem Lebenszyklus die folgenden Status durchlaufen:
 
 | Status | In Master geschriebene Daten | Beschreibung |
 | ------ | ---------------------- | ----------- |
-| Vorzeitig beendet |  | Der Client hat den Batch im erwarteten Zeitrahmen nicht abgeschlossen. |
-| Abgebrochen |  | Der Client hat über die [!DNL Batch Data Ingestion]-APIs explizit einen Abbruchvorgang für den angegebenen Batch aufgerufen. Sobald sich ein Batch im Status „Geladen“ befindet, kann der Batch nicht mehr abgebrochen werden. |
+| Vorzeitig beendet | | Der Client hat den Batch im erwarteten Zeitrahmen nicht abgeschlossen. |
+| Abgebrochen | | Der Client hat über die [!DNL Batch Data Ingestion]-APIs explizit einen Abbruchvorgang für den angegebenen Batch aufgerufen. Sobald sich ein Batch im Status „Geladen“ befindet, kann der Batch nicht mehr abgebrochen werden. |
 | Aktiv/Erfolg | x | Der Batch wurde erfolgreich von „Staging“ zu „Master“ höher gestuft und steht nun für den nachgelagerten Gebrauch zur Verfügung. **Hinweis:** „Aktiv“ und „Erfolg“ werden synonym verwendet. |
-| Archiviert |  | Der Batch wurde in Cold Storage archiviert. |
-| Fehlgeschlagen/Fehler |  | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Zusammen mit dem Batch wird ein eine Aktion erfordernder Fehler aufgezeichnet, um es Clients zu erlauben, die Daten zu korrigieren und erneut zu übermitteln. **Hinweis:** „Fehlgeschlagen“ und „Fehler“ werden synonym verwendet. |
+| Archiviert | | Der Batch wurde in Cold Storage archiviert. |
+| Fehlgeschlagen/Fehler | | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Zusammen mit dem Batch wird ein eine Aktion erfordernder Fehler aufgezeichnet, um es Clients zu erlauben, die Daten zu korrigieren und erneut zu übermitteln. **Hinweis:** „Fehlgeschlagen“ und „Fehler“ werden synonym verwendet. |
 | Inaktiv | x | Der Batch wurde erfolgreich höher gestuft, wurde dann jedoch entweder zurückgesetzt oder ist abgelaufen. Der Batch ist nicht mehr für den nachgelagerten Gebrauch verfügbar, die zugrunde liegenden Daten aber bleiben im Master erhalten, bis sie aufbewahrt, archiviert oder anderweitig gelöscht werden. |
-| Wird geladen |  | Der Client schreibt derzeit Daten für den Batch. Der Batch ist zu diesem Zeitpunkt **nicht** bereit zur Promotion. |
-| Geladen |  | Der Client hat das Schreiben von Daten für den Batch abgeschlossen. Der Batch kann jetzt höher gestuft werden. |
-| Beibehalten |  | Die Daten wurden dem Master entnommen und in einem dafür vorgesehenen Archiv im Adobe Data Lake platziert. |
-| Staging |  | Der Client hat den Batch erfolgreich für die Promotion signalisiert, und die Daten werden für den nachgelagerten Gebrauch bereitgestellt. |
-| Wird wiederholt |  | Der Client hat den Batch zur Promotion signalisiert. Aufgrund eines Fehlers versucht es ein Batch-Überwachungsdienst für den Batch jedoch erneut. Dieser Status kann dazu dienen, Clients darauf hinzuweisen, dass sich die Datenerfassung verzögern kann. |
-| Angehalten |  | Der Client hat den Stapel für die Promotion signalisiert. Nach `n` weiteren Versuchen durch einen Batch-Überwachungsdienst wurde die Batch-Promotion jedoch angehalten. |
+| Wird geladen | | Der Client schreibt derzeit Daten für den Batch. Der Batch ist zu diesem Zeitpunkt **nicht** bereit zur Promotion. |
+| Geladen | | Der Client hat das Schreiben von Daten für den Batch abgeschlossen. Der Batch kann jetzt höher gestuft werden. |
+| Beibehalten | | Die Daten wurden dem Master entnommen und in einem dafür vorgesehenen Archiv im Adobe Data Lake platziert. |
+| Staging | | Der Client hat den Batch erfolgreich für die Promotion signalisiert, und die Daten werden für den nachgelagerten Gebrauch bereitgestellt. |
+| Wird wiederholt | | Der Client hat den Batch zur Promotion signalisiert. Aufgrund eines Fehlers versucht es ein Batch-Überwachungsdienst für den Batch jedoch erneut. Dieser Status kann dazu dienen, Clients darauf hinzuweisen, dass sich die Datenerfassung verzögern kann. |
+| Angehalten | | Der Client hat den Stapel für die Promotion signalisiert. Nach `n` weiteren Versuchen durch einen Batch-Überwachungsdienst wurde die Batch-Promotion jedoch angehalten. |
 
 ### Was bedeutet „Staging“ für Batches?
 

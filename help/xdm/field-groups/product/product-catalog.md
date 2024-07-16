@@ -9,9 +9,9 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Produktkatalog] Schemafeldgruppe
+# [!UICONTROL Schemafeldgruppe &quot;Produktkatalog]&quot;
 
-[!UICONTROL Produktkatalog] ist eine Standardschemafeldgruppe für die [[!UICONTROL Produkt] class](../../classes/product.md) , das Eigenschaften erfasst, die mit einem Produktkatalog zusammenhängen.
+[!UICONTROL Produktkatalog] ist eine Standardschemafeldgruppe für die [[!UICONTROL Produktklasse]](../../classes/product.md), die Eigenschaften erfasst, die mit einem Produktkatalog zusammenhängen.
 
 ![](../../images/field-groups/product/product-catalog.png)
 
@@ -22,4 +22,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).
+Weitere Informationen zur Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

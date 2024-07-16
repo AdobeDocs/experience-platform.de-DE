@@ -12,30 +12,30 @@ ht-degree: 3%
 
 # Zugreifen auf die ECID
 
-Die [!DNL Experience Cloud Identity (ECID)] ist eine persistente Kennung, die einem Benutzer beim Besuch Ihrer Website zugewiesen wird. Unter bestimmten Umständen bevorzugen Sie möglicherweise den Zugriff auf die [!DNL ECID] (um sie beispielsweise an einen Dritten zu senden). Ein weiterer Anwendungsfall ist das Festlegen der [!DNL ECID] in ein benutzerdefiniertes XDM-Feld ein, zusätzlich zu dessen Verwendung in der Identitätszuordnung.
+Die [!DNL Experience Cloud Identity (ECID)] ist eine beständige Kennung, die einem Benutzer beim Besuch Ihrer Website zugewiesen wird. Unter bestimmten Umständen bevorzugen Sie möglicherweise den Zugriff auf den [!DNL ECID] (um ihn beispielsweise an einen Drittanbieter zu senden). Ein weiterer Anwendungsfall ist das Festlegen von [!DNL ECID] in einem benutzerdefinierten XDM-Feld, zusätzlich zu dessen Verwendung in der Identitätszuordnung.
 
-Der Zugriff auf die ECID erfolgt über [Datenvorbereitung für die Datenerfassung](../../../../datastreams/data-prep.md) (empfohlen) oder über Tags.
+Sie können auf die ECID entweder über [Datenvorbereitung für die Datenerfassung](../../../../datastreams/data-prep.md) (empfohlen) oder über Tags zugreifen.
 
 ## Zugriff auf die ECID über Data Prep (bevorzugte Methode) {#accessing-ecid-data-prep}
 
-Wenn Sie die ECID in einem benutzerdefinierten XDM-Feld festlegen möchten, können Sie dies nicht nur in der Identitätszuordnung tun, sondern auch durch Festlegen der `source` zum folgenden Pfad:
+Wenn Sie die ECID in einem benutzerdefinierten XDM-Feld festlegen möchten, müssen Sie sie nicht nur in der Identitätszuordnung enthalten, sondern können dies auch tun, indem Sie die `source` auf den folgenden Pfad setzen:
 
 ```js
 xdm.identityMap.ECID[0].id
 ```
 
-Legen Sie dann das Ziel auf einen XDM-Pfad fest, bei dem das Feld vom Typ ist `string`.
+Legen Sie dann das Ziel auf einen XDM-Pfad fest, bei dem das Feld vom Typ `string` ist.
 
 ![](./assets/access-ecid-data-prep.png)
 
 ## Tags
 
-Wenn Sie auf die [!DNL ECID] Client-seitig verwenden Sie den Tags-Ansatz wie unten beschrieben.
+Wenn Sie clientseitig auf den [!DNL ECID] zugreifen müssen, verwenden Sie den Tagansatz wie unten beschrieben.
 
-1. Stellen Sie sicher, dass Ihre Eigenschaft mit [Sequenzierung von Regelkomponenten](../../../ui/managing-resources/rules.md#sequencing) aktiviert.
-1. Erstellen Sie eine neue Regel. Diese Regel sollte ausschließlich zur Erfassung der [!DNL ECID] ohne sonstige wichtige Maßnahmen.
-1. Hinzufügen einer [!UICONTROL Bibliothek geladen] -Ereignis der Regel hinzufügen.
-1. Hinzufügen einer [!UICONTROL Benutzerspezifischer Code] -Aktion mit dem folgenden Code auf die Regel anwenden (vorausgesetzt, der für die SDK-Instanz konfigurierte Name lautet `alloy` und noch kein Datenelement mit demselben Namen vorhanden ist):
+1. Stellen Sie sicher, dass Ihre Eigenschaft mit aktivierter [Sequenzierung der Regelkomponenten](../../../ui/managing-resources/rules.md#sequencing) konfiguriert ist.
+1. Erstellen Sie eine neue Regel. Diese Regel sollte ausschließlich zur Erfassung der [!DNL ECID] ohne andere wichtige Aktionen verwendet werden.
+1. Fügen Sie der Regel das Ereignis [!UICONTROL Bibliothek geladen] hinzu.
+1. Fügen Sie der Regel eine Aktion vom Typ [!UICONTROL Benutzerdefinierter Code] mit folgendem Code hinzu (vorausgesetzt, der für die SDK-Instanz konfigurierte Name ist `alloy` und es gibt noch kein Datenelement mit demselben Namen):
 
    ```js
     return alloy("getIdentity")
@@ -46,4 +46,4 @@ Wenn Sie auf die [!DNL ECID] Client-seitig verwenden Sie den Tags-Ansatz wie unt
 
 1. Speichern Sie die Regel.
 
-Sie sollten dann auf die [!DNL ECID] in nachfolgenden Regeln mit `%ECID%` oder `_satellite.getVar("ECID")`, wie Sie auf jedes andere Datenelement zugreifen würden.
+Sie sollten dann in den nachfolgenden Regeln mit `%ECID%` oder `_satellite.getVar("ECID")` auf die [!DNL ECID] zugreifen können, wie Sie auf jedes andere Datenelement zugreifen würden.

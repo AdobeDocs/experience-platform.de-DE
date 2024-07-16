@@ -5,16 +5,16 @@ description: Die Medallia-Erweiterung ist eine Stimme des Kundenziels in Adobe E
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 79%
+source-wordcount: '469'
+ht-degree: 81%
 
 ---
 
-# [!DNL Medallia]-Erweiterung  {#medallia-extension}
+# [!DNL Medallia]-Erweiterung {#medallia-extension}
 
 ## Übersicht {#overview}
 
-Bereitstellen [!DNL Medallia] schnell und nahtlos in Ihren Web-Eigenschaften. Mit der Erweiterung können Sie auch Umfrageereignisse erkennen, Kundenfeedback in Echtzeit über Datenelemente erfassen, es in Regeln verwenden, um das Kundenerlebnis zu personalisieren und Daten mit Adobe Analytics zu teilen.
+Stellen Sie [!DNL Medallia] schnell und nahtlos in Ihren Web-Eigenschaften bereit. Die Erweiterung ermöglicht Ihnen auch, Umfrageereignisse zu erkennen, Kundenfeedback in Echtzeit über Datenelemente zu erfassen, es in Regeln zu verwenden, um das Kundenerlebnis zu personalisieren und Daten mit Adobe Analytics zu teilen.
 
 [!DNL Medallia] ist eine Stimme der Kundenerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Medallia] Erweiterung:
+So installieren Sie die [!DNL Medallia]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Medallia-Seite auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Medallia auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

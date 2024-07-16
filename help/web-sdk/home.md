@@ -16,26 +16,26 @@ ht-degree: 28%
 >
 >Ende April 2024 wird das Adobe Experience Platform Web SDK alle Versionen von Internet Explorer nicht mehr unterstützen.
 
-Das Adobe Experience Platform Web Software Development Kit (SDK) ist eine Client-seitige JavaScript-Bibliothek, die es Kunden von Adobe Experience Cloud ermöglicht, über das Adobe Experience Platform Edge Network mit ihren Diensten zu interagieren.
+Das Adobe Experience Platform Web Software Development Kit (SDK) ist eine Client-seitige JavaScript-Bibliothek, mit der Kunden von Adobe Experience Cloud über das Adobe Experience Platform-Edge Network mit ihren Diensten interagieren können.
 
 Adobe bietet zwei Methoden zur Implementierung des Web SDK:
 
-* Die [Web SDK-Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Anleitung zum [Adobe Experience Cloud mit Web SDK implementieren](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de) für weitere Informationen.
-* Manuelle Implementierung mithilfe der Web SDK-JavaScript-Bibliothek.
+* Die [Web SDK-Tag-Erweiterung](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Weitere Informationen finden Sie im Tutorial zum [Implementieren von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de) .
+* Manuelle Implementierung mithilfe der Web SDK JavaScript-Bibliothek.
 
-Dieses Benutzerhandbuch enthält Anweisungen zur Interaktion mit den Experience Cloud-Lösungen sowohl über die Web SDK-JavaScript-Bibliothek als auch über die Tag-Erweiterung, sofern zutreffend.
+Dieses Benutzerhandbuch enthält Anweisungen zur Interaktion mit den Experience Cloud-Lösungen, gegebenenfalls sowohl über die Web SDK JavaScript-Bibliothek als auch über die Tag-Erweiterung.
 
 ## Experience Platform Edge Network {#edge-network}
 
-Das Experience Platform Web SDK ist Teil einer Sammlung von Tools, aus denen das Adobe Experience Platform Edge Network besteht.
+Das Experience Platform Web SDK ist Teil einer Sammlung von Tools, aus denen das Adobe Experience Platform-Edge Network besteht.
 
-Das Edge-Netzwerk besteht aus den folgenden Komponenten:
+Das Edge Network besteht aus den folgenden Komponenten:
 
-* **[Experience Platform Web SDK](#overview):** Eine JavaScript-Bibliothek und eine Tag-Erweiterung, mit deren Hilfe Sie die Bereitstellung von Adobe-Technologien vereinfachen können.
-* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/):** Eine Erweiterung des mobilen SDK v5 , mit dem Sie die neue Bereitstellungsmethode verwenden können.
-* **[Edge Network Server-API](../server-api/overview.md):** Eine serverseitige API, die Sie für verschiedene Anwendungsfälle der Datenerfassung, Personalisierung, Werbung und Marketing verwenden können. Die Server-API kann auf Servern, IoT-Geräten, Set-Top-Boxen und verschiedenen anderen Geräten verwendet werden.
+* **[Experience Platform Web SDK](#overview):** Eine JavaScript-Bibliothek und eine Tag-Erweiterung, die Ihnen bei der Vereinfachung der Bereitstellung von Adobe-Technologien hilft.
+* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/):** Eine Erweiterung des mobilen SDK v5, mit der Sie die neue Bereitstellungsmethode verwenden können.
+* **[Edge Network-Server-API](../server-api/overview.md):** Eine serverseitige API, die Sie für verschiedene Anwendungsfälle für Datenerfassung, Personalisierung, Werbung und Marketing verwenden können. Die Server-API kann auf Servern, IoT-Geräten, Set-Top-Boxen und verschiedenen anderen Geräten verwendet werden.
 
-Das Edge-Netzwerk ist ein Framework für die Erfassung von Daten mit geringer Latenz, Pluggable Computing und die schnelle Aktivierung von Daten über alle adressierbaren Kanäle hinweg. Es bietet ein einziges konsolidiertes SDK für jeden Kanal (Web, Mobile, Server-seitig), der Daten an eine gemeinsame Adobe-Domäne (`adobedc.net`) und erhält eine einzige Payload zurück für die Daten- und Erlebnisbereitstellung.
+Das Edge Network ist ein Framework für die Erfassung von Daten mit geringer Latenz, Pluggable Computing und die schnelle Aktivierung von Daten über alle adressierbaren Kanäle hinweg. Es bietet ein einziges konsolidiertes SDK für jeden Kanal (Web, Mobile, Server-seitig), das Daten an eine gemeinsame Adobe-Domäne (`adobedc.net`) sendet und eine einzige Payload für die Daten- und Erlebnisbereitstellung erhält.
 
 Auf der Server-Seite erleichtern ein einheitliches Edge-Gateway und ein gemeinsames Plattform-Service-Framework die Bereitstellung neuer Funktionen in dieser Echtzeit-Computerumgebung. Diese Architektur:
 
@@ -50,7 +50,7 @@ Mit einem einzigen konsolidierten Edge-System können Sie Ihre Werbe-, Marketing
 
 ## Videoüberblick {#video}
 
-Im folgenden Video erhalten Sie einen Überblick über die Adobe Experience Platform [!DNL Web SDK] und [!DNL Edge Network].
+Sehen Sie sich das folgende Video an, um einen Überblick über die Adobe Experience Platform [!DNL Web SDK] und die [!DNL Edge Network] zu erhalten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -65,7 +65,7 @@ Platform Web SDK ersetzt die folgenden SDKs:
 * `AT.js`
 * `DIL.js`
 
-Neben einer neuen Bibliothek gibt es einen neuen Endpunkt, der die HTTP-Abfragen an Adobe-Lösungen optimiert. Vorher `Visitor.js` einen Blockierungsaufruf an den Besucher-ID-Dienst gesendet und dann `AT.js` einen Aufruf an Adobe Target gesendet hat, `DIL.js` einen Aufruf an Adobe Audience Manager gesendet und schließlich `AppMeasurement.js` einen Aufruf an Adobe Analytics gesendet hat. Diese neue Bibliothek und dieser Endpunkt können in einem einzigen Aufruf eine ID abrufen, ein [!DNL Target]-Erlebnis abrufen, Daten an [!DNL Audience Manager] senden und die Daten an Adobe Experience Platform übergeben.
+Neben einer neuen Bibliothek gibt es einen neuen Endpunkt, der die HTTP-Abfragen an Adobe-Lösungen optimiert. Zuvor sendete `Visitor.js` einen Sperraufruf an den Besucher-ID-Dienst, dann schickte `AT.js` einen Aufruf an Adobe Target, `DIL.js` einen Aufruf an Adobe Audience Manager und schließlich schickte `AppMeasurement.js` einen Aufruf an Adobe Analytics. Diese neue Bibliothek und dieser Endpunkt können in einem einzigen Aufruf eine ID abrufen, ein [!DNL Target]-Erlebnis abrufen, Daten an [!DNL Audience Manager] senden und die Daten an Adobe Experience Platform übergeben.
 
 Das folgende Video zeigt das Adobe Experience Platform [!DNL Web SDK] und Adobe Experience Platform [!DNL Edge Network] in Aktion. Im Videobeispiel werden über einen einzigen Aufruf an Adobe Daten an [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] und [!DNL Target] gesendet.
 
@@ -73,11 +73,11 @@ Das folgende Video zeigt das Adobe Experience Platform [!DNL Web SDK] und Adobe 
 
 ## Migration von vorhandenen Bibliotheken zu Web SDK {#migrating-to-web-sdk}
 
-So vereinfachen Sie die Migration von [vorhandene Bibliotheken](#sdks) zum Web SDK bietet Adobe einen optimierten Aktualisierungspfad. Mit diesem Pfad können Sie jede einzelne Seite Ihrer Website zum Web SDK migrieren, ohne die gesamte Website gleichzeitig migrieren zu müssen. Sie können das Web SDK auf einer bestimmten Seite verwenden, während sich vorhandene Bibliotheken auf anderen Seiten befinden. Sobald Sie fertig sind, können Sie auch diese anderen Seiten migrieren.
+Um die Migration von einer der [vorhandenen Bibliotheken](#sdks) zum Web SDK zu vereinfachen, bietet Adobe einen optimierten Aktualisierungspfad. Mit diesem Pfad können Sie jede einzelne Seite Ihrer Website zum Web SDK migrieren, ohne die gesamte Website gleichzeitig migrieren zu müssen. Sie können das Web SDK auf einer bestimmten Seite verwenden, während sich vorhandene Bibliotheken auf anderen Seiten befinden. Sobald Sie fertig sind, können Sie auch diese anderen Seiten migrieren.
 
-### Migration `AT.js` Überlegungen zum Web SDK {#considerations}
+### Überlegungen zur Migration von `AT.js` zum Web SDK {#considerations}
 
-Bevor Sie Seiten, die `AT.js` verwenden, zu Web SDK migrieren, müssen Sie die folgenden Web SDK-Konfigurationsoptionen aktivieren. Diese Optionen stellen sicher, dass das Besucherprofil beim Navigieren von Seiten mit `AT.js` auf Seiten, die das Web SDK verwenden.
+Bevor Sie Seiten, die `AT.js` verwenden, zu Web SDK migrieren, müssen Sie die folgenden Web SDK-Konfigurationsoptionen aktivieren. Diese Optionen stellen sicher, dass das Besucherprofil beibehalten wird, während von Seiten mit `AT.js` zu Seiten mit dem Web SDK navigiert wird.
 
 * [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md)
 * [`targetMigrationEnabled`](/help/web-sdk/commands/configure/targetmigrationenabled.md)
@@ -90,4 +90,4 @@ Bevor Sie Seiten, die `AT.js` verwenden, zu Web SDK migrieren, müssen Sie die f
 >* [Umleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=de)
 >* [CNAME- und domänenübergreifende Unterstützung](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)
 
-Nach der Migration von `AT.js` im Web SDK entfernen `targetMigrationEnabled` -Option aus Ihrer Konfiguration.
+Entfernen Sie nach der Migration von `AT.js` zum Web SDK die Option `targetMigrationEnabled` aus Ihrer Konfiguration.

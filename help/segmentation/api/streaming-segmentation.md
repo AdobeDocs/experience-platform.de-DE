@@ -32,7 +32,7 @@ Mit der Streaming-Segmentierung in [!DNL Adobe Experience Platform] können Kund
 Dieses Entwicklerhandbuch setzt Grundkenntnisse der verschiedenen [!DNL Adobe Experience Platform]-Services voraus, die mit Streaming-Segmentierungen zusammenhängen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
-- [[!DNL Segmentation]](../home.md): Ermöglicht das Erstellen von Zielgruppen mithilfe von Segmentdefinitionen und anderen externen Quellen aus Ihrer [!DNL Real-Time Customer Profile] Daten.
+- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Zielgruppen mithilfe von Segmentdefinitionen und anderen externen Quellen aus Ihren [!DNL Real-Time Customer Profile] -Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
@@ -102,11 +102,11 @@ Darüber hinaus erfolgt die Aufhebung der Segmentqualifikation, ähnlich wie die
 
 ## Abrufen aller für Streaming-Segmentierung aktivierten Segmentdefinitionen
 
-Sie können eine Liste aller Segmentdefinitionen abrufen, die für die Streaming-Segmentierung innerhalb Ihres Unternehmens aktiviert sind, indem Sie eine GET-Anfrage an die `/segment/definitions` -Endpunkt.
+Sie können eine Liste aller Segmentdefinitionen abrufen, die für die Streaming-Segmentierung innerhalb Ihres Unternehmens aktiviert sind, indem Sie eine GET-Anfrage an den Endpunkt `/segment/definitions` senden.
 
 **API-Format**
 
-Um Streaming-fähige Segmentdefinitionen abzurufen, müssen Sie den Abfrageparameter einbeziehen `evaluationInfo.continuous.enabled=true` im Anfragepfad.
+Um Streaming-fähige Segmentdefinitionen abzurufen, müssen Sie den Abfrageparameter `evaluationInfo.continuous.enabled=true` in den Anfragepfad einbeziehen.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -215,7 +215,7 @@ Eine erfolgreiche Antwort gibt eine Reihe von Segmentdefinitionen in Ihrer Organ
 
 ## Erstellen einer Streaming-fähigen Segmentdefinition
 
-Eine Segmentdefinition wird automatisch für Streaming aktiviert, wenn sie mit einer der [oben aufgeführte Streaming-Segmentierungstypen](#query-types).
+Eine Segmentdefinition wird automatisch für Streaming aktiviert, wenn sie mit einem der oben aufgeführten [Streaming-Segmentierungstypen](#query-types) übereinstimmt.
 
 **API-Format**
 
@@ -261,7 +261,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Dies ist eine Standardanfrage zum Erstellen einer Segmentdefinition. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zu [Erstellen einer Segmentdefinition](../tutorials/create-a-segment.md).
+>Dies ist eine Standardanfrage zum Erstellen einer Segmentdefinition. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zum Erstellen einer Segmentdefinition [.](../tutorials/create-a-segment.md)
 
 **Antwort**
 
@@ -351,7 +351,7 @@ curl -X POST \
 | `name` | **(Erforderlich)** Der Name des Zeitplans. Muss eine Zeichenfolge sein. |
 | `type` | **(Erforderlich)** Der Auftragstyp im Zeichenfolgenformat. Die unterstützten Typen sind `batch_segmentation` und `export`. |
 | `properties` | **(Erforderlich)** Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
-| `properties.segments` | **(Erforderlich, wenn `type` gleich `batch_segmentation`)** Verwenden `["*"]` stellt sicher, dass alle Segmentdefinitionen einbezogen werden. |
+| `properties.segments` | **(Erforderlich, wenn `type` gleich `batch_segmentation` ist)** Die Verwendung von `["*"]` stellt sicher, dass alle Segmentdefinitionen einbezogen werden. |
 | `schedule` | **(Erforderlich)** Eine Zeichenfolge, die den Auftragszeitplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Das folgende Beispiel (`0 0 1 * * ?`) bedeutet, dass der Auftrag jeden Tag um 1:00:00 Uhr (UTC) ausgelöst wird. Weitere Informationen finden Sie im Anhang zum [Cron-Ausdrucksformat](./schedules.md#appendix) in der Dokumentation zu Zeitplänen innerhalb der Segmentierung. |
 | `state` | *(Optional)* Zeichenfolge, die den Zeitplanstatus enthält. Verfügbare Werte: `active` und `inactive`. Der Standardwert ist `inactive`. Eine Organisation kann nur einen Zeitplan erstellen. Schritte zum Aktualisieren des Zeitplans finden Sie weiter unten in dieser Anleitung. |
 
@@ -424,7 +424,7 @@ Derselbe Vorgang kann zum Deaktivieren eines Zeitplans verwendet werden, indem d
 
 Nachdem Sie sowohl neue als auch vorhandene Segmentdefinitionen für Streaming-Segmentierung aktiviert und die geplante Segmentierung aktiviert haben, um eine Grundlinie zu entwickeln und wiederkehrende Auswertungen durchzuführen, können Sie mit der Erstellung von Streaming-fähigen Segmentdefinitionen für Ihre Organisation beginnen.
 
-Weitere Informationen zum Ausführen ähnlicher Aktionen und zum Arbeiten mit Segmentdefinitionen mithilfe der Adobe Experience Platform-Benutzeroberfläche finden Sie unter [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).
+Weitere Informationen zum Ausführen ähnlicher Aktionen und zum Arbeiten mit Segmentdefinitionen mithilfe der Adobe Experience Platform-Benutzeroberfläche finden Sie im [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).
 
 ## Anhang
 
@@ -432,7 +432,7 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Streaming-Segment
 
 ### Tritt die „Nicht-Qualifizierung“ der Streaming-Segmentierung auch in Echtzeit auf?
 
-In den meisten Fällen geschieht die Aufhebung der Qualifizierung von Streaming-Segmentierungen in Echtzeit. Streaming-Segmentdefinitionen, die Segmente von Segmenten verwenden, tun dies jedoch **not** in Echtzeit nicht qualifizieren, anstatt die Qualifizierung nach 24 Stunden aufzuheben.
+In den meisten Fällen geschieht die Aufhebung der Qualifizierung von Streaming-Segmentierungen in Echtzeit. Streaming-Segmentdefinitionen, die Segmente von Segmenten verwenden, machen die Qualifizierung in Echtzeit jedoch **nicht** ungültig, anstatt die Qualifizierung nach 24 Stunden aufzuheben.
 
 ### Mit welchen Daten arbeitet die Streaming-Segmentierung?
 
@@ -440,7 +440,7 @@ Die Streaming-Segmentierung funktioniert bei allen Daten, die über eine Streami
 
 ### Wie werden Segmentdefinitionen als Batch- oder Streaming-Segmentierung definiert?
 
-Eine Segmentdefinition wird entweder als Batch- oder Streaming-Segmentierung basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer definiert. Eine Liste der Segmentdefinitionen, die als Streaming-Segment ausgewertet werden, finden Sie im Abschnitt [Abschnitt zu Streaming-Segmentierungs-Abfragetypen](#query-types).
+Eine Segmentdefinition wird entweder als Batch- oder Streaming-Segmentierung basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer definiert. Eine Liste der Segmentdefinitionen, die als Streaming-Segment ausgewertet werden, finden Sie im Abschnitt [Streaming-Segmentierungs-Abfragetypen](#query-types).
 
 Bitte beachten Sie, dass ein Segment, das **sowohl** einen `inSegment`-Ausdruck als auch eine direkte Einzelereigniskette enthält, nicht für die Streaming-Segmentierung in Frage kommt. Wenn Sie möchten, dass diese Segmentdefinition für Streaming-Segmentierung qualifiziert ist, sollten Sie die direkte Single-Event-Kette zur eigenen Segmentdefinition machen.
 
@@ -448,9 +448,9 @@ Bitte beachten Sie, dass ein Segment, das **sowohl** einen `inSegment`-Ausdruck 
 
 Die Anzahl der insgesamt qualifizierten Segmentdefinitionen wird aus dem täglichen Segmentierungsauftrag gezogen, der Zielgruppen enthält, die sich sowohl für Batch- als auch für Streaming-Segmentdefinitionen qualifizieren. Dieser Wert wird sowohl für Batch- als auch für Streaming-Segmentdefinitionen angezeigt.
 
-Die Zahl unter „Letzte X Tage“ umfasst **nur** Zielgruppen, die für Streaming-Segmentierung qualifiziert sind. Sie erhöht sich **nur** dann, wenn Sie Daten in das System gestreamt haben, und zählt dann für diese Streaming-Definition. Dieser Wert ist **only** wird für Streaming-Segmentdefinitionen angezeigt. Daher wird dieser Wert **kann** als 0 für Batch-Segmentdefinitionen anzeigen.
+Die Zahl unter „Letzte X Tage“ umfasst **nur** Zielgruppen, die für Streaming-Segmentierung qualifiziert sind. Sie erhöht sich **nur** dann, wenn Sie Daten in das System gestreamt haben, und zählt dann für diese Streaming-Definition. Dieser Wert ist **nur**, der für Streaming-Segmentdefinitionen angezeigt wird. Daher wird dieser Wert **may** für Batch-Segmentdefinitionen als 0 angezeigt.
 
-Wenn Sie also feststellen, dass die Zahl unter &quot;Letzte X Tage&quot;null ist und das Liniendiagramm ebenfalls null meldet, haben Sie **not** alle Profile in das System gestreamt, die für diese Segmentdefinition qualifiziert wären.
+Wenn Sie also feststellen, dass die Zahl unter &quot;Letzte X Tage&quot;null ist und das Liniendiagramm ebenfalls null meldet, haben Sie **nicht** alle Profile in das System gestreamt, die für diese Segmentdefinition qualifiziert wären.
 
 ### Wie lange dauert es, bis eine Segmentdefinition verfügbar ist?
 
@@ -458,4 +458,4 @@ Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.
 
 ### Gibt es Einschränkungen beim Streamen von Daten?
 
-Damit Streaming-Daten in der Streaming-Segmentierung verwendet werden können, gibt es **must** Zwischen den eingestreamten Ereignissen muss ein Abstand bestehen. Wenn zu viele Ereignisse innerhalb derselben Sekunde gestreamt werden, behandelt Platform diese Ereignisse als Bot-generierte Daten und sie werden verworfen. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen Ereignisdaten, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.
+Damit Streaming-Daten in der Streaming-Segmentierung verwendet werden können, muss zwischen den eingetretenen Ereignissen **1} ein Abstand vorhanden sein.** Wenn zu viele Ereignisse innerhalb derselben Sekunde gestreamt werden, behandelt Platform diese Ereignisse als Bot-generierte Daten und sie werden verworfen. Es hat sich bewährt, **mindestens** fünf Sekunden zwischen den Ereignisdaten zu verwenden, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.

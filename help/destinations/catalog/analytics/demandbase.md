@@ -5,18 +5,18 @@ description: Die Demandbase-Erweiterung ist ein Analyseziel in Adobe Experience 
 exl-id: 112a9575-4527-4a32-9610-a9d18ffd84f1
 source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 86%
+source-wordcount: '464'
+ht-degree: 88%
 
 ---
 
-# [!DNL Demandbase]-Erweiterung  {#demandbase-extension}
+# [!DNL Demandbase]-Erweiterung {#demandbase-extension}
 
 ## Übersicht {#overview}
 
-Get [!DNL Demandbase] B2B-Kontoeinblicke direkt in Adobe Analytics, wo Sie Traffic und -verhalten nach Branche, Umsatz und Zielkonten segmentieren können. Diese kundenbasierte Ansicht liefert einzigartige Einblicke in Interaktion und Konversion und dient als Quelle für Ihre wertvollsten Besucher.
+Erhalten Sie [!DNL Demandbase] B2B-Kontoeinblicke direkt in Adobe Analytics, wo Sie Traffic und Verhalten nach Branche, Umsatz und Zielkonten segmentieren können. Diese kundenbasierte Ansicht liefert einzigartige Einblicke in Interaktion und Konversion und dient als Quelle für Ihre wertvollsten Besucher.
 
-[!DNL Demandbase] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
+[!DNL Demandbase] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Demandbase] Erweiterung:
+So installieren Sie die [!DNL Demandbase]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

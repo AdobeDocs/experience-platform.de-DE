@@ -5,22 +5,22 @@ description: Die Nielsen VideoJS Player Handler-Erweiterung ist ein Analyseziel 
 exl-id: d640bf40-c6af-4aff-8303-933fe71f4a7e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 89%
+source-wordcount: '540'
+ht-degree: 91%
 
 ---
 
-# [!DNL Nielsen VideoJS Player Handler]-Erweiterung  {#nielsen-vjs-extension}
+# [!DNL Nielsen VideoJS Player Handler]-Erweiterung {#nielsen-vjs-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Nielsen Digital SDK] Tag-Erweiterung bietet Zielgruppenmessungen über die folgenden digitalen Messprodukte:
+Die Tag-Erweiterung [!DNL Nielsen Digital SDK] bietet Zielgruppenmessungen über die folgenden digitalen Messprodukte:
 
 DCR: Eine Messlösung, die eine tägliche Messung von nicht-linearen digitalen Inhalten einschließlich Inhalten mit Anzeigen ermöglicht; erlaubt eine umfassende Ansicht des Verbrauchs an digitalen Inhalten von Desktop-, Mobil-, Tablet- und vernetzten Geräten in Zielgruppen.
 
 DTVR: Dies ermöglicht teilnehmenden Programmierquellen eine lineare Fernsehwiedergabe auf Desktop- und Mobilgeräten. Das ist die erste Lösung, die eine Akkreditierung des MRC für ihren Beitrag zur Messung der Zuschauerzahlen von auf Computern und Mobilgeräten angesehenen Programmen erhalten hat.
 
-[!DNL Nielsen VideoJS Player Handler] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
+[!DNL Nielsen VideoJS Player Handler] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -34,7 +34,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Nielsen VideoJS Player Handler] Erweiterung:
+So installieren Sie die [!DNL Nielsen VideoJS Player Handler]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

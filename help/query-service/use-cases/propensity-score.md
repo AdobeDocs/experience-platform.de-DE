@@ -4,14 +4,14 @@ description: Erfahren Sie, wie Sie mit Query Service Ihr prädiktives Modell auf
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
 
 # Bestimmen eines Tendenzwerts mithilfe eines vom maschinellen Lernen generierten Prognosemodells
 
-Mithilfe von Query Service können Sie prädiktive Modelle wie Tendenzwerte nutzen, die auf Ihrer maschinellen Lernplattform zur Analyse von Daten zur Experience Platform aufbauen.
+Mithilfe von Query Service können Sie prädiktive Modelle wie Tendenzwerte nutzen, die auf Ihrer maschinellen Lernplattform zur Analyse von Experience Platform-Daten aufbauen.
 
 In diesem Handbuch wird erläutert, wie Sie mithilfe von Query Service Daten an Ihre Plattform für maschinelles Lernen senden können, um ein Modell in ein rechnergestütztes Notebook zu trainieren. Das trainierte Modell kann mithilfe von SQL auf Daten angewendet werden, um die Kaufneigung eines Kunden bei jedem Besuch vorherzusagen.
 
@@ -19,9 +19,9 @@ In diesem Handbuch wird erläutert, wie Sie mithilfe von Query Service Daten an 
 
 Im Rahmen dieses Prozesses müssen Sie ein Modell für maschinelles Lernen trainieren. In diesem Dokument wird davon ausgegangen, dass Sie über Kenntnisse in einer oder mehreren Umgebungen für maschinelles Lernen verfügen.
 
-Dieses Beispiel verwendet [!DNL Jupyter Notebook] als Entwicklungsumgebung. Es stehen zwar viele Optionen zur Verfügung, [!DNL Jupyter Notebook] wird empfohlen, da es sich um eine Open-Source-Webanwendung mit niedrigen Rechenanforderungen handelt. Es kann [von der offiziellen Website heruntergeladen](https://jupyter.org/).
+In diesem Beispiel wird [!DNL Jupyter Notebook] als Entwicklungsumgebung verwendet. Obwohl viele Optionen verfügbar sind, wird [!DNL Jupyter Notebook] empfohlen, da es sich um eine Open-Source-Webanwendung mit niedrigen Rechenanforderungen handelt. Sie kann [ von der offiziellen Site heruntergeladen werden](https://jupyter.org/).
 
-Wenn Sie dies noch nicht getan haben, führen Sie die Schritte aus, um [connect [!DNL Jupyter Notebook] mit Adobe Experience Platform Query Service](../clients/jupyter-notebook.md) bevor Sie mit diesem Handbuch fortfahren.
+Wenn Sie dies noch nicht getan haben, führen Sie die Schritte zu [connect [!DNL Jupyter Notebook] with Adobe Experience Platform Query Service](../clients/jupyter-notebook.md) aus, bevor Sie mit diesem Handbuch fortfahren.
 
 Die in diesem Beispiel verwendeten Bibliotheken umfassen:
 
@@ -37,17 +37,17 @@ tqdm
 
 ## Importieren von Analysetabellen aus Platform in [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Um ein Tendenzwertmodell zu generieren, muss eine Projektion der in Platform gespeicherten Analysedaten in [!DNL Jupyter Notebook]. Von einem [!DNL Python] 3 [!DNL Jupyter Notebook] mit Query Service verbunden sind, importieren die folgenden Befehle einen Datensatz zum Kundenverhalten aus Luma, einem fiktiven Bekleidungsspeicher. Da Platform-Daten im XDM-Format (Experience-Datenmodell) gespeichert werden, muss ein JSON-Beispielobjekt generiert werden, das der Struktur des Schemas entspricht. Anweisungen dazu finden Sie in der Dokumentation . [JSON-Beispielobjekt generieren](../../xdm/ui/sample.md).
+Um ein Tendenzwertmodell zu generieren, muss eine Projektion der in Platform gespeicherten Analysedaten in [!DNL Jupyter Notebook] importiert werden. Von einem mit Query Service verbundenen [!DNL Python] 3 [!DNL Jupyter Notebook] aus importieren die folgenden Befehle einen Datensatz zum Kundenverhalten aus Luma, einem fiktiven Bekleidungsspeicher. Da Platform-Daten im XDM-Format (Experience-Datenmodell) gespeichert werden, muss ein JSON-Beispielobjekt generiert werden, das der Struktur des Schemas entspricht. Anweisungen zum Generieren des JSON-Beispielobjekts ](../../xdm/ui/sample.md) finden Sie in der Dokumentation .[
 
-![Die [!DNL Jupyter Notebook] Dashboard mit mehreren hervorgehobenen Befehlen.](../images/use-cases/jupyter-commands.png)
+![ Das Dashboard [!DNL Jupyter Notebook] mit mehreren hervorgehobenen Befehlen.](../images/use-cases/jupyter-commands.png)
 
-Die Ausgabe zeigt eine tabellarische Ansicht aller Spalten aus dem Verhaltensdatensatz von Luma innerhalb der Variablen [!DNL Jupyter Notebook] Dashboard.
+Die Ausgabe zeigt eine tabellarische Ansicht aller Spalten aus dem Verhaltensdatensatz von Luma im Dashboard [!DNL Jupyter Notebook] an.
 
-![Die tabularisierte Ausgabe des importierten Datasets zum Kundenverhalten von Luma in [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
+![Die tabularisierte Ausgabe des importierten Datensatzes zum Kundenverhalten von Luma innerhalb von [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
 
 ## Daten für maschinelles Lernen vorbereiten {#prepare-data-for-machine-learning}
 
-Eine Zielspalte muss identifiziert werden, um ein Modell für maschinelles Lernen zu trainieren. Da die Kaufneigung das Ziel für diesen Anwendungsfall ist, wird die `analytic_action` wird als Zielspalte aus den Luma-Ergebnissen ausgewählt. Der Wert `productPurchase` ist der Indikator für einen Kundenkauf. Die `purchase_value` und `purchase_num` -Spalten werden ebenfalls entfernt, da sie direkt mit der Aktion &quot;Produktkauf&quot;verbunden sind.
+Eine Zielspalte muss zum Trainieren eines Modells für maschinelles Lernen identifiziert werden. Da die Kaufneigung das Ziel für diesen Anwendungsfall ist, wird die Spalte `analytic_action` als Zielspalte aus den Luma-Ergebnissen ausgewählt. Der Wert `productPurchase` ist der Indikator eines Kundenkaufs. Die Spalten `purchase_value` und `purchase_num` werden ebenfalls entfernt, da sie direkt mit der Kaufaktion des Produkts verbunden sind.
 
 Die Befehle zum Ausführen dieser Aktionen lauten wie folgt:
 
@@ -60,7 +60,7 @@ df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
 
 Anschließend müssen die Daten aus dem Datensatz &quot;Luma&quot;in geeignete Darstellungen umgewandelt werden. Zwei Schritte sind erforderlich:
 
-1. Wandeln Sie die Zahlenspalten in numerische Spalten um. Konvertieren Sie dazu explizit den Datentyp im `dataframe`.
+1. Wandeln Sie die Zahlenspalten in numerische Spalten um. Konvertieren Sie dazu explizit den Datentyp in `dataframe`.
 1. Kategorische Spalten können auch in numerische Spalten umgewandelt werden.
 
 ```python
@@ -69,7 +69,7 @@ num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
-Eine Technik namens *eine Hot-Kodierung* wird verwendet, um die kategorischen Datenvariablen für die Verwendung mit maschinellen und tiefen Lernalgorithmen zu konvertieren. Dies verbessert wiederum die Vorhersagen sowie die Klassifizierungsgenauigkeit eines Modells. Verwenden Sie die `Sklearn` -Bibliothek, um jeden kategorischen Wert in einer separaten Spalte darzustellen.
+Eine Technik namens *eine Hotcodierung* wird verwendet, um die kategorischen Datenvariablen für die Verwendung mit maschinellen und tiefen Lernalgorithmen zu konvertieren. Dies verbessert wiederum die Vorhersagen sowie die Klassifizierungsgenauigkeit eines Modells. Verwenden Sie die Bibliothek &quot;`Sklearn`&quot;, um jeden kategorischen Wert in einer separaten Spalte darzustellen.
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -98,14 +98,14 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-Die als `X` ist tabellarisch und wird wie folgt angezeigt:
+Die als `X` definierten Daten sind tabellarisch und wie folgt dargestellt:
 
-![Die tabularisierte Ausgabe von X innerhalb [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
+![Die tabularisierte Ausgabe von X innerhalb von [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
 
-Nachdem die erforderlichen Daten für maschinelles Lernen verfügbar sind, können sie an die vorkonfigurierten Modelle für maschinelles Lernen in [!DNL Python]s `sklearn` -Bibliothek. [!DNL Logistics Regression] wird verwendet, um das Tendenzmodell zu trainieren, und ermöglicht Ihnen, die Genauigkeit von Testdaten zu sehen. In diesem Fall liegt er bei etwa 85 %.
+Nachdem die erforderlichen Daten für maschinelles Lernen verfügbar sind, können sie an die vorkonfigurierten Modelle für maschinelles Lernen in die `sklearn` -Bibliothek von [!DNL Python] angepasst werden. [!DNL Logistics Regression] wird zum Trainieren des Tendenzmodells verwendet, mit dem Sie die Genauigkeit der Testdaten sehen können. In diesem Fall liegt er bei etwa 85 %.
 
-Die [!DNL Logistic Regression] -Algorithmus und die Zugtest-Aufspaltungsmethode, mit der die Leistung von Algorithmen für maschinelles Lernen geschätzt wird, werden in den folgenden Codeblock importiert:
+Der [!DNL Logistic Regression]-Algorithmus und die Aufspaltungsmethode für Trainings-Tests, mit der die Leistung von Algorithmen für maschinelles Lernen geschätzt wird, werden in den folgenden Codeblock importiert:
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -155,17 +155,17 @@ plt.show()
 
 Unten finden Sie eine Darstellung der Ergebnisse in einem vertikalen Balkendiagramm:
 
-![Die Visualisierung der 10 wichtigsten Funktionen, die eine Kaufneigung definieren oder nicht kaufen.](../images/use-cases/visualized-results.png)
+![Die Visualisierung der 10 wichtigsten Funktionen, die eine Tendenz zum Kauf oder Nichtkauf definieren.](../images/use-cases/visualized-results.png)
 
-Im Balkendiagramm können mehrere Muster angezeigt werden. Die Themen Point of Sale (POS) und Call as Kostenerstattung sind die wichtigsten Faktoren für das Kaufverhalten des Kanals. Während die Themen Aufruf als Beschwerden und Rechnungen wichtige Rollen sind, um das nicht Kaufverhalten zu definieren. Hierbei handelt es sich um quantifizierbare, umsetzbare Einblicke, die Marketing-Experten nutzen können, um Marketingkampagnen durchzuführen, um die Kaufneigung dieser Kunden zu bekämpfen.
+Im Balkendiagramm können mehrere Muster erkennbar sein. Die Themen Point of Sale (POS) und Call as Kostenerstattung sind die wichtigsten Faktoren für das Kaufverhalten des Kanals. Während die Themen Aufruf als Beschwerden und Rechnungen wichtige Rollen sind, um das nicht Kaufverhalten zu definieren. Hierbei handelt es sich um quantifizierbare, umsetzbare Einblicke, die Marketing-Experten nutzen können, um Marketingkampagnen durchzuführen, um die Kaufneigung dieser Kunden zu bekämpfen.
 
 ## Verwenden Sie Query Service , um das trainierte Modell anzuwenden {#use-query-service-to-apply-trained-model}
 
 Nachdem das trainierte Modell erstellt wurde, muss es auf die in Experience Platform gespeicherten Daten angewendet werden. Dazu muss die Logik der Pipeline für maschinelles Lernen in SQL konvertiert werden. Die beiden wichtigsten Komponenten dieser Transition sind:
 
-- Zunächst muss SQL die [!DNL Logistics Regression] -Modul, um die Wahrscheinlichkeit einer Prognosebeschriftung zu erhalten. Das von der Logistik-Regression erstellte Modell erzeugte Regressionsmodell `y = wX + c`  wobei Gewichte `w` und abfangen `c` sind die Ausgabe des Modells. SQL-Funktionen können verwendet werden, um die Gewichtungen zu multiplizieren, um eine Wahrscheinlichkeit zu erhalten.
+- Zunächst muss SQL das Modul [!DNL Logistics Regression] ersetzen, um die Wahrscheinlichkeit einer Prognosebeschriftung zu erhalten. Das von der Logistik-Regression erstellte Modell erzeugte das Regressionsmodell `y = wX + c`, wobei die Gewichtungen `w` und Konstante `c` die Ausgabe des Modells sind. SQL-Funktionen können verwendet werden, um die Gewichtungen zu multiplizieren, um eine Wahrscheinlichkeit zu erhalten.
 
-- Zweitens: der in [!DNL Python] mit einer heißen Kodierung muss auch in SQL integriert werden. In der ursprünglichen Datenbank haben wir beispielsweise `geo_county` -Spalte, um den Kreis zu speichern, aber die Spalte in `geo_county=Bexar`, `geo_county=Dallas`, `geo_county=DeKalb`. Die folgende SQL-Anweisung führt dieselbe Transformation durch, wobei `w1`, `w2`und `w3` könnte durch die aus dem Modell in gelernten Gewichtungen ersetzt werden. [!DNL Python]:
+- Zweitens muss der in [!DNL Python] mit einer heißen Kodierung erreichte Engineering-Prozess ebenfalls in SQL integriert werden. In der ursprünglichen Datenbank speichern wir beispielsweise die Spalte &quot;`geo_county`&quot;, die Spalte wird jedoch in &quot;`geo_county=Bexar`&quot;, &quot;`geo_county=Dallas`&quot;, &quot;`geo_county=DeKalb`&quot; umgewandelt. Die folgende SQL-Anweisung führt dieselbe Transformation durch, bei der `w1`, `w2` und `w3` durch die aus dem Modell in [!DNL Python] gelernten Gewichtungen ersetzt werden konnten:
 
 ```sql
 SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
@@ -179,7 +179,7 @@ Bei numerischen Funktionen können Sie die Spalten direkt mit den Gewichtungen m
 SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```
 
-Nachdem die Zahlen erhalten wurden, können sie auf eine Sigmoid-Funktion portiert werden, bei der der Logistics Regression-Algorithmus die endgültigen Prognosen erzeugt. In der nachstehenden Erklärung: `intercept` ist die Nummer der Konstante in der Regression.
+Nachdem die Zahlen erhalten wurden, können sie auf eine Sigmoid-Funktion portiert werden, bei der der Logistics Regression-Algorithmus die endgültigen Prognosen erzeugt. In der unten stehenden Anweisung ist `intercept` die Nummer der Konstante in der Regression.
         
 
 ```sql
@@ -188,7 +188,7 @@ SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 T
  
 ### Ein Beispiel von Ende zu Ende
 
-In einer Situation, in der Sie über zwei Spalten verfügen (`c1` und `c2`), wenn `c1` hat zwei Kategorien, die [!DNL Logistic Regression] Algorithmus wird mit der folgenden Funktion trainiert:
+Wenn in einer Situation, in der Sie zwei Spalten (`c1` und `c2`) haben, `c1` zwei Kategorien aufweist, wird der Algorithmus [!DNL Logistic Regression] mit der folgenden Funktion trainiert:
  
 
 ```python
@@ -210,7 +210,7 @@ FROM
   )
 ```
  
-Die [!DNL Python] Code zur Automatisierung des Übersetzungsprozesses lautet wie folgt:
+Der [!DNL Python]-Code zur Automatisierung des Übersetzungsprozesses lautet wie folgt:
 
 ```python
 def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
@@ -245,7 +245,7 @@ colnames = [desc[0] for desc in cur.description]
 pd.DataFrame(samples,columns=colnames)
 ```
 
-Die tabellarisierten Ergebnisse zeigen die Kaufneigung für jede Kundensitzung mit `0` bedeutet keine Kaufneigung und `1` bedeutet eine bestätigte Kaufneigung.
+Die tabularisierten Ergebnisse zeigen die Kaufneigung für jede Kundensitzung mit `0`, was keine Kaufneigung bedeutet, und `1` bedeutet eine bestätigte Kaufneigung.
 
 ![Die tabularisierten Ergebnisse der Datenbankeinleitung mit SQL.](../images/use-cases/inference-results.png)
 
@@ -324,4 +324,4 @@ Die Genauigkeit des Bootstrapping-Modells wird dann sortiert. Danach werden die 
 
 ![Der Druckbefehl zum Anzeigen des Konfidenzintervalls des Tendenzwerts.](../images/use-cases/confidence-interval.png)
 
-In der obigen Abbildung wird angegeben, dass Sie bei nur 1.000 Zeilen für das Trainieren Ihrer Modelle mit einer Genauigkeit zwischen etwa 84 % und 88 % rechnen können. Sie können die `LIMIT` -Klausel in Query Service-Abfragen auf Grundlage Ihrer Anforderungen verwenden, um die Leistung der Modelle sicherzustellen.
+In der obigen Abbildung wird angegeben, dass Sie bei nur 1.000 Zeilen für das Trainieren Ihrer Modelle mit einer Genauigkeit zwischen etwa 84 % und 88 % rechnen können. Sie können die `LIMIT` -Klausel in Query Service-Abfragen an Ihre Anforderungen anpassen, um die Leistung der Modelle sicherzustellen.

@@ -16,10 +16,10 @@ ht-degree: 36%
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| April 2024 | Funktions- und Dokumentationsaktualisierung | Beim Herstellen einer Verbindung zum Target-Ziel und Verwenden einer Datastraam-ID müssen Sie jetzt *nicht benötigen* , um den Datastream für die Kantensegmentierung zu aktivieren. Das bedeutet, dass das Target-Ziel mit Batch- und Streaming-Zielgruppen funktioniert, obwohl die Anwendungsfälle, die Sie ausführen können, unterschiedlich sind. Die Tabelle im [Verbindungsparameter](#parameters) für weitere Informationen. |
+| April 2024 | Funktions- und Dokumentationsaktualisierung | Wenn Sie eine Verbindung zum Target-Ziel herstellen und eine Datastraam-ID verwenden, benötigen Sie jetzt *nicht*, um den Datastream für die Kantensegmentierung notwendigerweise zu aktivieren. Das bedeutet, dass das Target-Ziel mit Batch- und Streaming-Zielgruppen funktioniert, obwohl die Anwendungsfälle, die Sie ausführen können, unterschiedlich sind. Weitere Informationen finden Sie in der Tabelle im Abschnitt [Verbindungsparameter](#parameters) . |
 | Januar 2024 | Funktions- und Dokumentationsaktualisierung | Sie können jetzt Zielgruppen und Profilattribute für die Adobe Target-Verbindung für die standardmäßige Produktions-Sandbox und andere nicht standardmäßige Sandboxes freigeben. |
 | Juni 2023 | Funktions- und Dokumentationsaktualisierung | Ab Juni 2023 können Sie beim Konfigurieren einer neuen Adobe Target-Zielverbindung den Adobe Target-Arbeitsbereich auswählen, für den Sie Zielgruppen freigeben möchten. Weitere Informationen finden Sie im Abschnitt [Verbindungsparameter](#parameters). Weitere Informationen über Arbeitsbereiche finden Sie im Tutorial zum [Konfigurieren von Arbeitsbereichen](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) in Adobe Target. |
-| Mai 2023 | Funktions- und Dokumentationsaktualisierung | Ab Mai 2023 wird die **[!UICONTROL Adobe Target]** Verbindungsunterstützung [attributbasierte Personalisierung](../../ui/activate-edge-personalization-destinations.md#map-attributes) und ist allgemein für alle Kunden verfügbar. |
+| Mai 2023 | Funktions- und Dokumentationsaktualisierung | Ab Mai 2023 unterstützt die Verbindung **[!UICONTROL Adobe Target]** die [attributbasierte Personalisierung](../../ui/activate-edge-personalization-destinations.md#map-attributes) und steht allen Kunden allgemein zur Verfügung. |
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ Eine kurze Übersicht über die Konfiguration der Adobe Target-Verbindung unter 
 
 ### Datastream-ID {#datastream-id}
 
-Beim Konfigurieren der Adobe Target-Verbindung zu [Verwenden einer Datensatz-ID](#parameters), müssen Sie über die [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) implementiert.
+Beim Konfigurieren der Adobe Target-Verbindung zu [verwenden Sie eine Datastraam-ID](#parameters), muss das [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) implementiert sein.
 
 Zum Konfigurieren der Adobe Target-Verbindung ohne Verwendung einer Datastraam-ID müssen Sie das Web SDK nicht implementieren.
 
@@ -51,10 +51,10 @@ Zum Konfigurieren der Adobe Target-Verbindung ohne Verwendung einer Datastraam-I
 
 Stellen Sie in Adobe Target sicher, dass Ihr Benutzer über Folgendes verfügt:
 
-* Zugriff auf [Standardarbeitsbereich](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
+* Zugriff auf den [Standard-Arbeitsbereich](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
 * Die **Genehmiger** [Rolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-Weitere Informationen zum Gewähren von Berechtigungen für [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) und [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
+Weitere Informationen zum Gewähren von Berechtigungen für [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) und für [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -62,14 +62,14 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 >[!IMPORTANT]
 >
->Beim Aktivieren *Edge-Zielgruppen für Anwendungsfälle der Personalisierung von derselben Seite und nächsten Seiten*, die Zielgruppen *must* verwenden Sie eine [aktive Zusammenführungsrichtlinie](../../../segmentation/ui/segment-builder.md#merge-policies). Die [!DNL active-on-edge] Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen kontinuierlich ausgewertet werden [am Rand](../../../segmentation/ui/edge-segmentation.md) und sind für Anwendungsfälle zur Personalisierung von Echtzeit- und nächsten Seiten verfügbar.  Informationen [alle verfügbaren Anwendungsfälle](#parameter), basierend auf dem Implementierungstyp.
+>Beim Aktivieren von *Edge-Zielgruppen für die Personalisierungsfälle für die gleiche Seite und die nächste Seite* müssen die Zielgruppen ** eine [aktive Zusammenführungsrichtlinie für Edge verwenden](../../../segmentation/ui/segment-builder.md#merge-policies). Die [!DNL active-on-edge]-Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [am Rand](../../../segmentation/ui/edge-segmentation.md) ausgewertet werden und für Anwendungsfälle zur Personalisierung von Echtzeit- und nächsten Seiten verfügbar sind.  Lesen Sie mehr über [alle verfügbaren Anwendungsfälle](#parameter), basierend auf dem Implementierungstyp.
 >Wenn Sie Edge-Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Adobe Target-Zielen zuordnen, werden diese Zielgruppen nicht für Anwendungsfälle in Echtzeit und auf der nächsten Seite ausgewertet.
 >Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
 
 
 | Audience Origin | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
 | Benutzerdefinierte Uploads | X | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -95,7 +95,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
@@ -113,23 +113,23 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 * **Name**: Geben Sie den gewünschten Namen für das Ziel ein.
 * **Beschreibung**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
-* **Datenspeicher-ID**: Dadurch wird bestimmt, in welchem Datenerfassungsdatenstrom die Zielgruppen einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target- und Adobe Experience Platform-Dienste aktiviert sind. Siehe [Konfigurieren eines Datenspeichers](../../../datastreams/configure.md#aep) für detaillierte Informationen zum Konfigurieren eines Datastreams für Adobe Experience Platform und Adobe Target.
+* **Datastraam-ID**: Damit wird festgelegt, in welchem Datenerfassungsdatenstrom die Zielgruppen enthalten sein sollen. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target- und Adobe Experience Platform-Dienste aktiviert sind. Detaillierte Informationen zum Konfigurieren eines Datenspeichers für Adobe Experience Platform und Adobe Target finden Sie unter [Konfigurieren eines Datenspeichers](../../../datastreams/configure.md#aep) .
 
   >[!IMPORTANT]
   >
-  >Die Datastream-ID ist für jede Adobe Target-Zielverbindung eindeutig. Wenn Sie die gleichen Zielgruppen mehreren Datastreams zuordnen müssen, müssen Sie [Erstellen einer neuen Zielverbindung](../../ui/connect-destination.md) für jede Datastream-ID und durchlaufen Sie die [Zielgruppenaktivierungsfluss](#activate).
+  >Die Datastream-ID ist für jede Adobe Target-Zielverbindung eindeutig. Wenn Sie dieselben Zielgruppen mehreren Datastreams zuordnen müssen, müssen Sie [für jede Datastream-ID eine neue Zielverbindung erstellen](../../ui/connect-destination.md) und den [Aktivierungsfluss für die Zielgruppe](#activate) durchlaufen.
 
-   * **[!UICONTROL Keines]**: Wählen Sie diese Option aus, wenn Sie die Adobe Target-Personalisierung konfigurieren möchten, die Implementierung der [Experience Platform Web SDK](/help/web-sdk/home.md). Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. In der unten stehenden Tabelle finden Sie einen Vergleich der verfügbaren Anwendungsfälle pro Implementierungstyp.
+   * **[!UICONTROL None]**: Wählen Sie diese Option, wenn Sie die Adobe Target-Personalisierung konfigurieren müssen, das [Experience Platform Web SDK](/help/web-sdk/home.md) jedoch nicht implementieren können. Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. In der unten stehenden Tabelle finden Sie einen Vergleich der verfügbaren Anwendungsfälle pro Implementierungstyp.
 
-  | Adobe Target-Implementierung *without* Web SDK | Adobe Target-Implementierung *mit* Web SDK | Adobe Target-Implementierung *mit* Web SDK *und* Kantensegmentierung deaktiviert |
+  | Adobe Target-Implementierung *ohne* Web-SDK | Adobe Target-Implementierung *mit* Web SDK | Adobe Target-Implementierung *mit* Web SDK *und* Kantensegmentierung von |
   |---|---|---|
-  | <ul><li>Ein Datastream ist nicht erforderlich. Adobe Target kann über bereitgestellt werden [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [serverseitig](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation)oder [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) Implementierungsmethoden.</li><li>[Edge-Segmentierung](../../../segmentation/ui/edge-segmentation.md) wird nicht unterstützt.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) werden nicht unterstützt.</li><li>Sie können Zielgruppen und Profilattribute für die Adobe Target-Verbindung freigeben. *Standard-Produktions-Sandbox* und nicht standardmäßigen Sandboxes.</li><li>Verwenden Sie zum Konfigurieren der Personalisierung der nächsten Sitzung ohne Verwendung einer Datastraam-ID die [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Ein Datastream mit Adobe Target und Experience Platform ist als Dienste konfiguriert.</li><li>Die Edge-Segmentierung funktioniert wie erwartet.</li><li>[Personalisierung auf derselben Seite und auf der nächsten Seite](../../ui/activate-edge-personalization-destinations.md#use-cases) werden unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> | <ul><li>Ein Datastream mit Adobe Target und Experience Platform ist als Dienste konfiguriert.</li><li>Wann [Konfigurieren des Datenspeichers](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), wählen Sie nicht die **Edge-Segmentierung** aktivieren.</li><li>[Personalisierung der nächsten Sitzung](../../ui/activate-edge-personalization-destinations.md#next-session) wird unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> |
+  | <ul><li>Ein Datastream ist nicht erforderlich. Adobe Target kann über die Implementierungsmethoden [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [serverseitig](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) oder [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) bereitgestellt werden.</li><li>[Edge-Segmentierung](../../../segmentation/ui/edge-segmentation.md) wird nicht unterstützt.</li><li>[ Die Personalisierung derselben Seite und der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) wird nicht unterstützt.</li><li>Sie können Zielgruppen und Profilattribute für die Adobe Target-Verbindung für die standardmäßige Produktions-Sandbox *und nicht standardmäßige Sandboxes verwenden.*</li><li>Verwenden Sie [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html), um die Personalisierung der nächsten Sitzung ohne Verwendung einer Datastream-ID zu konfigurieren.</li></ul> | <ul><li>Ein Datastream mit Adobe Target und Experience Platform ist als Dienste konfiguriert.</li><li>Die Edge-Segmentierung funktioniert wie erwartet.</li><li>[ Die Personalisierung derselben Seite und der nächsten Seite](../../ui/activate-edge-personalization-destinations.md#use-cases) wird unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> | <ul><li>Ein Datastream mit Adobe Target und Experience Platform ist als Dienste konfiguriert.</li><li>Aktivieren Sie beim [Konfigurieren des Datastreams](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream) nicht das Kontrollkästchen **Edge-Segmentierung** .</li><li>[Die Personalisierung der nächsten Sitzung](../../ui/activate-edge-personalization-destinations.md#next-session) wird unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> |
 
-* **Workspace**: Wählen Sie die Adobe Target aus. [Arbeitsbereich](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) für die Zielgruppen freigegeben werden. Für jede Adobe Target-Verbindung kann ein Arbeitsbereich ausgewählt werden. Bei Aktivierung werden die Zielgruppen zum ausgewählten Arbeitsbereich weitergeleitet, während die entsprechenden [Experience Platform-Datennutzungsbezeichnungen](../../../data-governance/labels/overview.md).
+* **Workspace**: Wählen Sie den Adobe Target [Arbeitsbereich](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=de) aus, für den Zielgruppen freigegeben werden sollen. Für jede Adobe Target-Verbindung kann ein Arbeitsbereich ausgewählt werden. Nach der Aktivierung werden die Zielgruppen zum ausgewählten Arbeitsbereich weitergeleitet, während die entsprechenden [Experience Platform-Datennutzungsbezeichnungen](../../../data-governance/labels/overview.md) befolgt werden.
 
 >[!NOTE]
 >
->Bei Verwendung eines benutzerdefinierten Target-Arbeitsbereichs für [Personalisierung von derselben Seite und nächster Seite mit Attributen](../../ui/activate-edge-personalization-destinations.md), wobei nur die [ausgewählte Zielgruppen](../../ui/activate-edge-personalization-destinations.md#select-audiences) werden an den ausgewählten Target-Arbeitsbereich gesendet. Die [Zugeordnete Attribute](../../ui/activate-edge-personalization-destinations.md#mapping) werden an den standardmäßigen Target-Arbeitsbereich gesendet.
+>Bei Verwendung eines benutzerdefinierten Target-Arbeitsbereichs für die Personalisierung von [derselben Seite und der nächsten Seite mit Attributen](../../ui/activate-edge-personalization-destinations.md) werden nur die [ausgewählten Zielgruppen](../../ui/activate-edge-personalization-destinations.md#select-audiences) an den ausgewählten Target-Arbeitsbereich gesendet. Die [zugeordneten Attribute](../../ui/activate-edge-personalization-destinations.md#mapping) werden an den standardmäßigen Target-Arbeitsbereich gesendet.
 ><br>
 >Dieses Verhalten wird sich in einer zukünftigen Aktualisierung ändern.
 
@@ -143,23 +143,23 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](../../ui/activate-edge-personalization-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](../../ui/activate-edge-personalization-destinations.md) .
 
 ## Entfernen von Zielgruppen aus einem Target-Ziel {#remove}
 
-Es sind zusätzliche Schritte erforderlich, um eine Zielgruppe aus einer bestehenden Adobe Target-Verbindung zu entfernen, wenn diese Zielgruppe bereits in einer Adobe Target verwendet wird [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Wenn Sie versuchen, eine Zielgruppe aus einer Adobe Target-Verbindung zu entfernen, wird ein Fehler ausgegeben, wenn die Zielgruppe von einer Adobe Target-Aktivität verwendet wird.
+Es sind zusätzliche Schritte erforderlich, um eine Zielgruppe aus einer bestehenden Adobe Target-Verbindung zu entfernen, wenn diese Zielgruppe bereits in einer Adobe Target [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities) verwendet wird. Wenn Sie versuchen, eine Zielgruppe aus einer Adobe Target-Verbindung zu entfernen, wird ein Fehler ausgegeben, wenn die Zielgruppe von einer Adobe Target-Aktivität verwendet wird.
 
-![Platform-UI-Bild, das einen Fehler anzeigt, der durch den Versuch verursacht wird, eine Zielgruppe zu entfernen, die von einer Target-Aktivität verwendet wird.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Bild der Platform-Benutzeroberfläche, das einen Fehler anzeigt, der durch den Versuch verursacht wird, eine Zielgruppe zu entfernen, die von einer Target-Aktivität verwendet wird.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
 Um eine Zielgruppe aus einem Target-Ziel zu entfernen, wenn die Zielgruppe in einer Aktivität verwendet wird, müssen Sie zunächst die Zielgruppe entweder aus der Target-Aktivität entfernen, die sie verwendet, oder die Aktivität ganz löschen. Anschließend können Sie die Zielgruppe aus Ihrer Target-Verbindung entfernen.
 
-Wenn die Audience nicht in einer Aktivität verwendet wird, gehen Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** > **[!UICONTROL Zieldatenfluss auswählen]** > **[!UICONTROL Aktivierungsdaten]**, wählen Sie die Zielgruppen aus, die Sie entfernen möchten, und klicken Sie dann auf **[!UICONTROL Entfernen von Zielgruppen]**.
+Wenn die Zielgruppe nicht in einer Aktivität verwendet wird, gehen Sie zu &quot;**[!UICONTROL Ziele]**&quot;> &quot;**[!UICONTROL Durchsuchen]**&quot;> &quot;**[!UICONTROL Ziel-Datenfluss auswählen]**&quot;> &quot;**[!UICONTROL Aktivierungsdaten]**&quot;, wählen Sie die Zielgruppen aus, die Sie entfernen möchten, und wählen Sie dann &quot;**[!UICONTROL Zielgruppen entfernen]**&quot;.
 
 ## Exportierte Daten {#exported-data}
 
-Adobe Target *reads* Profildaten aus dem Adobe Experience Platform-Edge Network, sodass keine Daten exportiert werden.
+Adobe Target *liest* Profildaten aus dem Adobe Experience Platform-Edge Network, sodass keine Daten exportiert werden.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,13 @@ Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe
 
 Machen Sie sich mit den Einblicken Ihrer Zielgruppe vertraut, indem Sie auf die SQL zugreifen, über die diese Benutzer verfügen, und dann Ihre eigenen Einblicke generieren, um die Identitäten und Profile Ihrer Zielgruppen weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
-Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
+Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Die folgenden Einblicke stehen Ihnen als Teil der [Zielgruppen-Dashboard](../guides/audiences.md) oder benutzerdefiniert [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md). Siehe [Anpassungsübersicht](../customize/overview.md) Anweisungen zum Anpassen Ihres Dashboards erhalten Sie oder [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten [benutzerdefinierten benutzerdefinierten Dashboards](../user-defined-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../user-defined-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
 
-Die folgenden Einblicke stehen Ihnen als Teil der [Zielgruppen-Dashboard](../guides/audiences.md) oder ein benutzerdefiniertes Dashboard.
+Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten Dashboards zur Verfügung.
 
-## Bericht &quot;Zielgruppenüberschneidung&quot; {#audience-overlap-report}
+## Bericht zur Zielgruppenüberschneidung {#audience-overlap-report}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -86,7 +86,7 @@ SELECT source_segment_name,
 
 +++
 
-Siehe [Dokumentation zum Bericht-Widget &quot;Zielgruppenüberschneidung&quot;](../guides/audiences.md#audience-overlap-report) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Bericht &quot;Zielgruppenüberschneidung&quot;](../guides/audiences.md#audience-overlap-report) .[
 
 ## Zielgruppenüberschneidung {#audience-overlap}
 
@@ -133,9 +133,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Siehe [Dokumentation zum Widget &quot;Zielgruppenüberschneidung&quot;](../guides/audiences.md#audience-overlap) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Zielgruppenüberschneidung](../guides/audiences.md#audience-overlap) .
 
-## Trend zur Änderung der Zielgruppengröße {#audience-size-change-trend}
+## Entwicklung der Zielgruppengröße {#audience-size-change-trend}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -174,9 +174,9 @@ SELECT date_key,
 
 +++
 
-Siehe [Dokumentation zum Trend-Widget zur Änderung der Zielgruppengröße](../guides/audiences.md#audience-size-change-trend) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget zur Trendänderung der Zielgruppengröße ](../guides/audiences.md#audience-size-change-trend) .[
 
-## Trend zur Zielgruppengröße nach Identität {#audience-size-trend-by-identity}
+## Entwicklung der Zielgruppengröße nach Identität {#audience-size-trend-by-identity}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Siehe [Trend zur Zielgruppengröße nach Dokumentation des Identitäts-Widgets](../guides/audiences.md#audience-size-trend-by-identity) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Identitäts-Widget ](../guides/audiences.md#audience-size-trend-by-identity) im Abschnitt zum Trend der Zielgruppengröße nach .[
 
 ## Trend der Zielgruppen-Größe {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-Siehe [Dokumentation zum Widget zum Trend der Zielgruppengröße](../guides/audiences.md#audience-size-trend) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget zum Trend der Zielgruppengröße [ .](../guides/audiences.md#audience-size-trend)
 
 ## Zielgruppengröße {#audience-size}
 
@@ -266,9 +266,9 @@ WHERE
 
 +++
 
-Siehe [Dokumentation zum Widget &quot;Zielgruppengröße&quot;](../guides/audiences.md#audience-size) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Zielgruppengröße](../guides/audiences.md#audience-size) .
 
-## Customer AI-Verteilung von Bewertungen {#customer-ai-distribution-of-scores}
+## Kunden-KI – Verteilung der Scores {#customer-ai-distribution-of-scores}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-Siehe [Dokumentation zum Widget zur Verteilung von Bewertungen für Customer AI](../guides/audiences.md#customer-ai-distribution-of-scores) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zur [Verteilung von Bewertungen-Widgets durch Kunden-KI](../guides/audiences.md#customer-ai-distribution-of-scores) .
 
-## Customer AI-Bewertungszusammenfassung {#customer-ai-scoring-summary}
+## Zusammenfassung der KI-Kundenbewertung {#customer-ai-scoring-summary}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-Siehe [Dokumentation zum Widget zum Customer AI-Scoring](../guides/audiences.md#customer-ai-scoring-summary) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Weitere Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Customer AI Scoring summary](../guides/audiences.md#customer-ai-scoring-summary) .
 
 ## Identitätsüberschneidung {#identity-overlap}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
-- Was ist die gemeinsame Schnittmenge zwischen [!UICONTROL Identitätstyp A] und [!UICONTROL Identitätstyp B] für eine gefilterte Zielgruppe?
+- Was ist die übliche Schnittmenge zwischen [!UICONTROL Identitätstyp A] und [!UICONTROL Identitätstyp B] für eine gefilterte Zielgruppe?
 - Wie kann ich Kundenzielgruppen auf der Grundlage der Überschneidung bestimmter Identitätstypen einschränken, um die zielgerichteten Marketing-Strategien zu verbessern?
 - Welche Erkenntnisse lassen sich aus der Bewertung der Kampagnenleistung in den sich überschneidenden Bereichen gewinnen?
 - Wie können zukünftige Marketing-Maßnahmen anhand dieser Einblicke optimiert werden?
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Siehe [Dokumentation zum Widget zur Identitätsüberschneidung](../guides/audiences.md#identity-overlap) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Identitätsüberschneidung](../guides/audiences.md#identity-overlap) .
 
 ## Profile nach Identität {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Siehe [Dokumentation zu Profilen nach Identitäts-Widgets](../guides/audiences.md#profiles-by-identity) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum [Profile nach Identitäts-Widget](../guides/audiences.md#profiles-by-identity) .
 
 ## Geplante Aktivierungen {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Siehe [Dokumentation zum Widget zu geplanten Aktivierungen](../guides/audiences.md#scheduled-activations) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Geplante Aktivierungen](../guides/audiences.md#scheduled-activations) .
 
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL-Datenbank, die Dashboard-Einblicke generiert, und welche häufig gestellten Fragen diese Analyse löst. Jetzt können Sie die SQL bearbeiten und iterieren, um Ihre eigenen Einblicke zu generieren.
 
-Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
+Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Sie können auch die SQL lesen und verstehen, die Einblicke für die [Profile](./profiles.md), [Kontoprofile](./account-profiles.md) und [Ziele](./destinations.md) Dashboards.
+Sie können auch die SQL lesen und verstehen, die Einblicke in die Dashboards [Profile](./profiles.md), [Kontoprofile](./account-profiles.md) und [Ziele](./destinations.md) generiert.

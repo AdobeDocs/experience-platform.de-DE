@@ -15,7 +15,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->Die [!DNL SFTP] -Server, mit dem Adobe Experience Platform eine Verbindung herstellt, muss in der Lage sein, Chunking zu unterstützen. Dies bedeutet, dass mehrere Verbindungen zu einer Datei vorhanden sind. Wenn [!DNL SFTP] -Server das Chunking nicht unterstützt, erhalten Sie möglicherweise einen Fehler, der die Dateiaufnahme verhindert.
+>Der [!DNL SFTP]-Server, mit dem Adobe Experience Platform eine Verbindung herstellt, muss in der Lage sein, das Blockieren zu unterstützen. Dies bedeutet, dass mehrere Verbindungen zu einer Datei vorhanden sind. Wenn Ihr [!DNL SFTP] -Server das Blockieren nicht unterstützt, erhalten Sie möglicherweise einen Fehler, der die Dateiaufnahme verhindert.
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 

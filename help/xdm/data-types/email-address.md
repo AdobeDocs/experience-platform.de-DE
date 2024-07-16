@@ -11,20 +11,20 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL Email-Adresse] Datentyp
+# Datentyp [!UICONTROL E-Mail-Adresse]
 
-[!UICONTROL Email-Adresse] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die Details einer E-Mail-Adresse beschreibt.
+[!UICONTROL E-Mail-Adresse] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der die Details einer E-Mail-Adresse beschreibt.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `address` | Die technische Adresse der E-Mail, wie sie üblicherweise in RFC2822 und nachfolgenden Standards definiert ist (z. B. `name@domain.com`).<br><br>In XDM müssen E-Mail-Adressen eine gültige Domäne der obersten Ebene enthalten, um die Validierung zu bestehen. Siehe Folgendes [Dokument](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) für eine vollständige Liste der gültigen Top-Level-Domains, wie von der Internet Assigned Numbers Authority (IANA) definiert. |
-| `label` | Zusätzliche verfügbare Anzeigeinformationen. Wenn beispielsweise eine E-Mail eine Rich-Adresse in Microsoft Outlook aufweist, wird Folgendes angezeigt: `John Smith smithjr@company.uk`, `John Smith` in dieses Feld eingefügt werden. |
-| `primary` | Gibt an, ob dies die primäre E-Mail-Adresse des Kontakts ist. Ein Profil kann nur eine `primary` E-Mail-Adresse zu einem bestimmten Zeitpunkt. |
+| `address` | Die technische Adresse der E-Mail, wie sie üblicherweise in RFC2822 und nachfolgenden Standards definiert ist (z. B. `name@domain.com`).<br><br>In XDM müssen E-Mail-Adressen eine gültige Domäne der obersten Ebene enthalten, damit die Validierung besteht. Eine vollständige Liste der gültigen Top-Level-Domänen, wie von der Internet Assigned Numbers Authority (IANA) definiert, finden Sie im folgenden [Dokument](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) . |
+| `label` | Zusätzliche verfügbare Anzeigeinformationen. Wenn eine E-Mail beispielsweise über eine Rich-Adresse in Microsoft Outlook mit dem Wert `John Smith smithjr@company.uk` verfügt, wird in dieses Feld der Wert `John Smith` eingefügt. |
+| `primary` | Gibt an, ob dies die primäre E-Mail-Adresse des Kontakts ist. Ein Profil kann zu einem bestimmten Zeitpunkt nur eine `primary` E-Mail-Adresse haben. |
 | `status` | Gibt an, ob die E-Mail-Adresse derzeit verwendet werden kann |
-| `statusReason` | Eine Beschreibung der aktuellen `status`. |
-| `type` | Die Art und Weise, wie das Konto die Person betrifft (z. B. `work` oder `personal`). |
+| `statusReason` | Eine Beschreibung des aktuellen `status`. |
+| `type` | Die Art, wie das Konto mit der Person in Beziehung steht (z. B. `work` oder `personal`). |
 
 {style="table-layout:auto"}
 

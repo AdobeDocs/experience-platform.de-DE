@@ -5,7 +5,7 @@ exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
 workflow-type: tm+mt
 source-wordcount: '722'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -21,20 +21,20 @@ Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besuch
 
 ## Voraussetzungen {#prerequisites}
 
-* Der Benutzer muss sich mit einem Pinterest-Konto authentifizieren, das Zugriff auf das Advertiser-Konto hat, dem er eine Zielgruppe hinzufügen möchte. Details zur Freigabe von Advertiser-Konten finden Sie [here](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Insbesondere benötigt der Benutzer die Zugriffsebene &quot;Zielgruppe&quot;.
-* Details zu Identitätsformaten der Kundenliste finden Sie hier . [here](https://help.pinterest.com/en/business/article/audience-targeting).
+* Der Benutzer muss sich mit einem Pinterest-Konto authentifizieren, das Zugriff auf das Advertiser-Konto hat, dem er eine Zielgruppe hinzufügen möchte. Details zur Freigabe von Advertiser-Konten finden Sie [hier](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Insbesondere benötigt der Benutzer die Zugriffsebene &quot;Zielgruppe&quot;.
+* Details zu Identitätsformaten der Kundenliste finden Sie [hier](https://help.pinterest.com/en/business/article/audience-targeting).
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die [!DNL Pinterest Customer List] Das Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+Das Ziel [!DNL Pinterest Customer List] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
-Im [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) Ordnen Sie die gewünschten Identitäten des Zielaktivierungs-Workflows dem Zielfeld zu. *pinterest_audience*. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst.
+Ordnen Sie im Schritt [Zuordnen](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) des Zielaktivierungs-Workflows die gewünschten Identitäten dem Zielfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst.
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Ordnen Sie die *GAID* Quell-Identitäts-Namespace zum Zielidentitätsfeld *pinterest_audience*. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
-| IDFA | [!DNL Apple ID for Advertisers] | Ordnen Sie die *IDFA* Quell-Identitäts-Namespace zum Zielidentitätsfeld *pinterest_audience*. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
-| E-MAIL | E-Mail-Adressen (Klartext oder Hash mit dem SHA256-Algorithmus) | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. <br> Ordnen Sie die *Email* oder *Email_LC_SHA256* Quell-Identitäts-Namespace zum Zielidentitätsfeld *pinterest_audience*. |
+| GAID | [!DNL Google Advertising ID] | Ordnen Sie den Quell-Identitäts-Namespace *GAID* dem Zielidentitätsfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
+| IDFA | [!DNL Apple ID for Advertisers] | Ordnen Sie den Quell-Identitäts-Namespace *IDFA* dem Zielidentitätsfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
+| E-MAIL | E-Mail-Adressen (Klartext oder Hash mit dem SHA256-Algorithmus) | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. <br> Ordnen Sie den Quell-Identitäts-Namespace *E-Mail* oder *E-Mail_LC_SHA256* dem Zielidentitätsfeld *pinterest_audience* zu. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Pinterest Customer List] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das [!DNL Pinterest Customer List]-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Anwendungsfall 1
 
@@ -61,7 +61,7 @@ Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besuch
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
@@ -83,8 +83,8 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -94,7 +94,7 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere Informationen finden Sie unter [Pinterest-Hilfeseite](https://help.pinterest.com/en/business/article/audience-targeting) für weitere Informationen.
+Weitere Informationen finden Sie auf der Seite [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) .
 
 +++ Änderungsprotokoll anzeigen
 

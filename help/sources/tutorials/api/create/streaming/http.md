@@ -11,20 +11,20 @@ ht-degree: 33%
 ---
 
 
-# Erstellen Sie eine HTTP-API-Streaming-Verbindung mithilfe der [!DNL Flow Service] API
+# Erstellen einer HTTP-API-Streaming-Verbindung mit der [!DNL Flow Service]-API
 
 Mit Flow Service können Kundendaten aus verschiedenen Quellen in Adobe Experience Platform erfasst und zentralisiert werden. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) um Sie durch die Schritte zum Erstellen einer Streaming-Verbindung mit dem [!DNL Flow Service] API.
+In diesem Tutorial werden die Schritte zum Erstellen einer Streaming-Verbindung mithilfe der [!DNL Flow Service] -API mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) erläutert.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] organisiert Erlebnisdaten.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Erlebnisdaten organisiert.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Zum Erstellen einer Streaming-Verbindung müssen Sie außerdem über ein Ziel-XDM-Schema und einen Datensatz verfügen. Um zu erfahren, wie Sie diese erstellen, lesen Sie bitte das Tutorial zu [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md) oder das Tutorial zu [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+Zum Erstellen einer Streaming-Verbindung müssen Sie außerdem über ein Ziel-XDM-Schema und einen Datensatz verfügen. Weiterführende Informationen zur Erstellung finden Sie im Tutorial zum [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md) oder im Tutorial zum [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 ### Verwenden von Platform-APIs
 
@@ -38,7 +38,7 @@ Eine Basisverbindung gibt die Quelle an und enthält die Informationen, die erfo
 
 Nicht authentifizierte Verbindungen sind die Standard-Streaming-Verbindung, die Sie erstellen können, wenn Sie Daten an Platform streamen möchten.
 
-Um eine nicht authentifizierte Basisverbindung zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` -Endpunkt hinzugefügt, während Sie einen Namen für Ihre Verbindung, den Datentyp und die HTTP-API-Verbindungsspezifikations-ID angeben. Diese ID lautet `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Um eine nicht authentifizierte Basisverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei einen Namen für Ihre Verbindung, den Datentyp und die ID der HTTP-API-Verbindungsspezifikation an. Diese ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **API-Format**
 
@@ -108,7 +108,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | --- | --- |
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die der HTTP-API entspricht. Diese ID lautet `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die der HTTP-API entspricht. Diese ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
 | `auth.params.dataType` | Der Datentyp für die Streaming-Verbindung. Zu den unterstützten Werten gehören: `xdm` und `raw`. |
 | `auth.params.name` | Der Name der Streaming-Verbindung, die Sie erstellen möchten. |
 
@@ -132,7 +132,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zur neu erstellte
 
 Authentifizierte Verbindungen sollten verwendet werden, wenn Sie zwischen Datensätzen aus vertrauenswürdigen und nicht vertrauenswürdigen Quellen unterscheiden müssen. Benutzer, die Informationen mit personenbezogenen Daten (PII) senden möchten, sollten beim Streaming von Informationen an Platform eine authentifizierte Verbindung erstellen.
 
-Um eine authentifizierte Basisverbindung zu erstellen, müssen Sie die `authenticationRequired` -Parameter in Ihrer Anforderung ein und geben Sie seinen Wert als `true`. In diesem Schritt können Sie auch eine Quell-ID für Ihre authentifizierte Basisverbindung angeben. Dieser Parameter ist optional und verwendet denselben Wert wie die `name` -Attribut, wenn es nicht angegeben wird.
+Um eine authentifizierte Basisverbindung zu erstellen, müssen Sie den Parameter `authenticationRequired` in Ihre Anfrage aufnehmen und den Wert als `true` angeben. In diesem Schritt können Sie auch eine Quell-ID für Ihre authentifizierte Basisverbindung angeben. Dieser Parameter ist optional und verwendet denselben Wert wie das Attribut `name` , sofern er nicht angegeben wird.
 
 
 **API-Format**
@@ -207,8 +207,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.sourceId` | Eine zusätzliche Kennung, die beim Erstellen einer authentifizierten Basisverbindung verwendet werden kann. Dieser Parameter ist optional und verwendet denselben Wert wie die `name` -Attribut, wenn es nicht angegeben wird. |
-| `auth.params.authenticationRequired` | Dieser Parameter gibt an, ob für die Streaming-Verbindung Authentifizierung erforderlich ist. Wenn `authenticationRequired` auf `true` muss die Authentifizierung für die Streaming-Verbindung bereitgestellt werden. Wenn `authenticationRequired` auf `false` ist keine Authentifizierung erforderlich. |
+| `auth.params.sourceId` | Eine zusätzliche Kennung, die beim Erstellen einer authentifizierten Basisverbindung verwendet werden kann. Dieser Parameter ist optional und verwendet denselben Wert wie das Attribut `name` , sofern er nicht angegeben wird. |
+| `auth.params.authenticationRequired` | Dieser Parameter gibt an, ob für die Streaming-Verbindung Authentifizierung erforderlich ist. Wenn `authenticationRequired` auf `true` gesetzt ist, muss die Authentifizierung für die Streaming-Verbindung bereitgestellt werden. Wenn `authenticationRequired` auf `false` gesetzt ist, ist keine Authentifizierung erforderlich. |
 
 **Antwort**
 
@@ -247,7 +247,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zur angeforderten Verbindung zurück. Die Streaming-Endpunkt-URL wird automatisch mit der Verbindung erstellt und kann mithilfe der `inletUrl` -Wert.
+Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zur angeforderten Verbindung zurück. Die Streaming-Endpunkt-URL wird automatisch mit der Verbindung erstellt und kann mit dem Wert `inletUrl` abgerufen werden.
 
 ```json
 {
@@ -290,7 +290,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 ## Erstellen einer Quellverbindung {#source}
 
-Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an die `/sourceConnections` -Endpunkt bei der Bereitstellung Ihrer Basis-Verbindungs-ID.
+Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie dabei Ihre Basis-Verbindungs-ID an.
 
 **API-Format**
 
@@ -346,7 +346,7 @@ Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tuto
 
 ## Erstellen einer Zielverbindung {#target}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, in das die aufgenommenen Daten übernommen werden. Um eine Zielverbindung zu erstellen, stellen Sie eine POST-Anfrage an `/targetConnections` , während Sie IDs für Ihren Zieldatensatz und Ihr Ziel-XDM-Schema angeben. In diesem Schritt müssen Sie auch die Spezifikations-ID für die Verbindung mit Data Lake angeben. Diese ID lautet `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, in das die aufgenommenen Daten übernommen werden. Um eine Zielverbindung zu erstellen, stellen Sie eine POST-Anfrage an `/targetConnections`, während Sie IDs für Ihren Zieldatensatz und Ihr Ziel-XDM-Schema angeben. In diesem Schritt müssen Sie auch die Spezifikations-ID für die Verbindung mit Data Lake angeben. Diese ID ist `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API-Format**
 
@@ -458,7 +458,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 
 ## Erstellen eines Datenflusses
 
-Nachdem Sie Ihre Quell- und Zielverbindungen erstellt haben, können Sie jetzt einen Datenfluss erstellen. Der Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage an die `/flows` -Endpunkt.
+Nachdem Sie Ihre Quell- und Zielverbindungen erstellt haben, können Sie jetzt einen Datenfluss erstellen. Der Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage an den `/flows` -Endpunkt senden.
 
 **API-Format**
 
@@ -498,11 +498,11 @@ curl -X POST \
     }'
 ```
 
->[!TAB Mit Umwandlungen]
+>[!TAB Mit Transformationen]
 
 Die folgenden Anfragen erstellen einen Streaming-Datenfluss für die HTTP-API mit auf Ihre Daten angewendeten Zuordnungs-Transformationen.
 
-Wenn Sie einen Datenfluss mit Transformationen erstellen, wird die `name` kann nicht geändert werden. Dieser Wert muss immer auf `Mapping`.
+Beim Erstellen eines Datenflusses mit Transformationen kann der Parameter `name` nicht geändert werden. Dieser Wert muss immer auf `Mapping` gesetzt werden.
 
 ```shell
 curl -X POST \
@@ -543,7 +543,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einfügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
-| `flowSpec.id` | Die Flussspezifikations-ID für [!DNL HTTP API]. Um einen Datenfluss mit Transformationen zu erstellen, müssen Sie  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. Um einen Datenfluss ohne Transformationen zu erstellen, verwenden Sie `d8a6f005-7eaf-4153-983e-e8574508b877`. |
+| `flowSpec.id` | Die Flussspezifikations-ID für [!DNL HTTP API]. Um einen Datenfluss mit Transformationen zu erstellen, müssen Sie `c1a19761-d2c7-4702-b9fa-fe91f0613e81` verwenden. Verwenden Sie `d8a6f005-7eaf-4153-983e-e8574508b877`, um einen Datenfluss ohne Transformationen zu erstellen. |
 | `sourceConnectionIds` | Die [Quellverbindungs-ID](#source), die in einem früheren Schritt abgerufen wurde. |
 | `targetConnectionIds` | Die [Zielverbindungs-ID](#target), die in einem früheren Schritt abgerufen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt abgerufen wurde. |
@@ -559,7 +559,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zum neu erstellte
 }
 ```
 
-## Beitragsdaten, die in Platform erfasst werden sollen {#ingest-data}
+## Post-Daten, die in Platform erfasst werden sollen {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,14 +575,14 @@ POST /collection/{INLET_URL}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{INLET_URL}` | Ihre Streaming-Endpunkt-URL. Sie können diese URL abrufen, indem Sie eine GET-Anfrage an die `/connections` -Endpunkt bei der Bereitstellung Ihrer Basis-Verbindungs-ID. |
+| `{INLET_URL}` | Ihre Streaming-Endpunkt-URL. Sie können diese URL abrufen, indem Sie eine GET-Anfrage an den `/connections` -Endpunkt senden und dabei Ihre Basis-Verbindungs-ID angeben. |
 | `{FLOW_ID}` | Die ID Ihres HTTP-API-Streaming-Datenflusses. Diese ID ist sowohl für XDM- als auch für RAW-Daten erforderlich. |
 
 **Anfrage**
 
 >[!BEGINTABS]
 
->[!TAB Senden von XDM-Daten]
+>[!TAB XDM-Daten senden]
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
@@ -692,9 +692,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den neu erfass
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie den Streaming-Endpunkt verwenden können, um Daten in Platform aufzunehmen. Anweisungen zum Erstellen einer Streaming-Verbindung in der Benutzeroberfläche finden Sie in der [Tutorial zum Erstellen einer Streaming-Verbindung](../../../ui/create/streaming/http.md).
+In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie den Streaming-Endpunkt verwenden können, um Daten in Platform aufzunehmen. Anweisungen zum Erstellen einer Streaming-Verbindung in der Benutzeroberfläche finden Sie im Tutorial zum Erstellen einer Streaming-Verbindung ](../../../ui/create/streaming/http.md).[
 
-Informationen zum Streamen von Daten an Platform finden Sie im Tutorial zu [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder das Tutorial zu [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).
+Informationen zum Streamen von Daten an Platform finden Sie entweder im Tutorial zum Streaming von Zeitreihendaten ](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder im Tutorial zum Streaming von Datensatzdaten mit [ .[](../../../../../ingestion/tutorials/streaming-record-data.md)
 
 ## Anhang
 

@@ -9,18 +9,18 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Medien-Ereignisinformationen] Datentyp
+# Datentyp [!UICONTROL Medien-Ereignisinformationen]
 
-[!UICONTROL Medien-Ereignisinformationen] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zu Mediendetails im Zusammenhang mit dem Erlebnisereignis beschreibt.
+[!UICONTROL Medien-Ereignisinformationen] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Mediendetails im Zusammenhang mit dem Erlebnisereignis beschreibt.
 
-![Ein Diagramm des Datentyps Media Event Information .](../images/data-types/media-event-information.png)
+![Ein Diagramm des Datentyps &quot;Media Event Information&quot;.](../images/data-types/media-event-information.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `mediaCollection` | [!UICONTROL mediaDetails] | Mediendetailinformationen zum Erlebnisereignis. Dieser Datentyp wird für beide [Mediensammlung](./media-collection-details.md) und [Mediendatenberichte](./media-reporting-details.md). |
+| `mediaCollection` | [!UICONTROL mediaDetails] | Mediendetailinformationen zum Erlebnisereignis. Dieser Datentyp wird sowohl für die [Mediensammlung](./media-collection-details.md) als auch für die [Mediendatenberichterstellung](./media-reporting-details.md) verwendet. |
 | `mediaEventTimestamp` | [!UICONTROL String] | Der Zeitpunkt, zu dem ein Medienereignis aufgetreten ist. |
 | `mediaEventType` | [!UICONTROL String] | Der Medien-Ereignistyp. |
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json)
+Weitere Informationen zur Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json)

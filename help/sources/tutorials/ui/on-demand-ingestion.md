@@ -37,34 +37,34 @@ Dieses Dokument setzt ein Verständnis der folgenden Komponenten von Experience 
 
 ## Erstellen eines Datenflusses bei Bedarf {#create-a-dataflow-on-demand}
 
-Navigieren Sie zum *[!UICONTROL Datenflüsse]* im Arbeitsbereich &quot;Quellen&quot;angezeigt. Suchen Sie hier den Datenfluss, den Sie bei Bedarf ausführen möchten, und wählen Sie dann die Auslassungspunkte (**`...`**) neben Ihrem Dataflow-Namen.
+Navigieren Sie zur Registerkarte *[!UICONTROL Datenflüsse]* im Arbeitsbereich &quot;Quellen&quot;. Suchen Sie von hier aus den Datenfluss, den Sie bei Bedarf ausführen möchten, und wählen Sie dann die Auslassungszeichen (**`...`**) neben dem Namen Ihres Datenflusses aus.
 
 ![Eine Liste der Datenflüsse im Arbeitsbereich &quot;Quellen&quot;.](../../images/tutorials/on-demand/select-dataflow.png)
 
-Wählen Sie als Nächstes **[!UICONTROL On-Demand ausführen]** aus dem angezeigten Dropdown-Menü.
+Wählen Sie als Nächstes **[!UICONTROL On-Demand ausführen]** aus dem Dropdown-Menü, das angezeigt wird.
 
-![Ein Dropdown-Menü mit der ausgewählten Option Auf Anfrage ausführen .](../../images/tutorials/on-demand/run-on-demand.png)
+![Ein Dropdown-Menü mit der ausgewählten Option &quot;On-Demand ausführen&quot;.](../../images/tutorials/on-demand/run-on-demand.png)
 
-Konfigurieren Sie den Zeitplan Ihrer On-Demand-Erfassung. Wählen Sie die **[!UICONTROL Startzeit der Aufnahme]**, die **[!UICONTROL Startzeit des Datumsbereichs]** und die **[!UICONTROL Endzeit des Datumsbereichs]**.
+Konfigurieren Sie den Zeitplan Ihrer On-Demand-Erfassung. Wählen Sie die **[!UICONTROL Startzeit der Aufnahme]**, die **[!UICONTROL Startzeit des Datumsbereichs]** und die **[!UICONTROL Endzeit des Datumsbereichs]** aus.
 
 | Planungskonfiguration | Beschreibung |
 | --- | --- |
 | [!UICONTROL Startzeit der Aufnahme] | Die geplante Zeit, zu der der On-Demand-Fluss beginnt. |
-| [!UICONTROL Startzeit des Datumsbereichs] | Das früheste Datum und die früheste Uhrzeit, aus der Daten abgerufen werden. |
+| [!UICONTROL Anfangszeit des Datumsbereichs] | Das früheste Datum und die früheste Uhrzeit, aus der Daten abgerufen werden. |
 | [!UICONTROL Endzeit des Datumsbereichs] | Datum und Uhrzeit des Abrufs der Daten. |
 
-Auswählen **[!UICONTROL Zeitplan]** und lassen Sie einige Augenblicke für Ihren On-Demand-Datenfluss zu Trigger zu.
+Wählen Sie **[!UICONTROL Planen]** aus und lassen Sie den Trigger Ihres On-Demand-Datenflusses ein paar Augenblicke zu.
 
 ![Das Planungskonfigurationsfenster für die On-Demand-Erfassung.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Wählen Sie den Namen Ihres Datenflusses aus, um Ihre Datenfluss-Aktivität anzuzeigen. Hier sehen Sie eine Liste Ihrer Datenflug-Ausführungen, die verarbeitet wurden. Wählen Sie einen Datenfluss aus und wählen Sie dann **[!UICONTROL Wiederholen]** über die rechte Leiste aus, um die Aufnahme für eine ausgewählte DataFlow-Run-Iteration erneut auszuführen.
+Wählen Sie den Namen Ihres Datenflusses aus, um Ihre Datenfluss-Aktivität anzuzeigen. Hier sehen Sie eine Liste Ihrer Datenflug-Ausführungen, die verarbeitet wurden. Wählen Sie einen Datenfluss aus und wählen Sie dann in der rechten Leiste die Option **[!UICONTROL Wiederholen]** aus, um die Aufnahme für eine ausgewählte Datenfluss-Ausführung erneut auszuführen.
 
 ![Eine Liste des verarbeiteten Flusses wird für einen ausgewählten Datenfluss ausgeführt.](../../images/tutorials/on-demand/processed.png)
 
-Auswählen **[!UICONTROL Geplant]** , um eine Liste der Datenfluss-Ausführungen anzuzeigen, die für die zukünftige Erfassung geplant sind.
+Wählen Sie **[!UICONTROL Geplant]** aus, um eine Liste der Datenfluss-Ausführungen anzuzeigen, die für die zukünftige Erfassung geplant sind.
 
 ![Eine Liste des geplanten Flusses wird für einen ausgewählten Datenfluss ausgeführt.](../../images/tutorials/on-demand/scheduled.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Fluss-Läufe bei Bedarf für vorhandene Datenflüsse aus Quellen erstellen können. Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../home.md)
+Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Fluss-Läufe bei Bedarf für vorhandene Datenflüsse aus Quellen erstellen können. Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../home.md)

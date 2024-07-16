@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „action-type�
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '377'
 ht-degree: 94%
 
 ---
@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Aktionstypen für eine Browser-Erwe
 
 Aktionstypen bestehen in der Regel aus dem Folgenden:
 
-1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Aktionseinstellungen zu ändern.
+1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Aktion zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
 
 Ein Modul zum Weiterleiten einiger Daten an einen Drittanbieter-Endpunkt könnte beispielsweise wie folgt aussehen:

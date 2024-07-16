@@ -11,7 +11,7 @@ ht-degree: 28%
 
 # Berechtigungsverwaltung für die Datenerfassung in Experience Platform
 
-[Datenerfassung in Adobe Experience Platform](./home.md) besteht aus mehreren verschiedenen Technologien, die zusammenarbeiten, um Ihre Daten zu sammeln und zu übertragen. Der Zugriff auf diese Technologien wird über granulare rollenbasierte Berechtigungen in Adobe Admin Console gesteuert.
+[Die Datenerfassung in Adobe Experience Platform](./home.md) besteht aus mehreren verschiedenen Technologien, die zusammenarbeiten, um Ihre Daten zu erfassen und zu übertragen. Der Zugriff auf diese Technologien wird über granulare rollenbasierte Berechtigungen in Adobe Admin Console gesteuert.
 
 In diesem Handbuch erfahren Sie, wie Sie Berechtigungen für Datenerfassungsfunktionen verwalten.
 
@@ -27,36 +27,36 @@ Die entsprechenden Berechtigungen für die Datenerfassung werden über zwei Prod
 
 ### Adobe Experience Platform-Berechtigungen
 
-Zu den Berechtigungen unter Adobe Experience Platform gehört der Zugriff auf Datenspeicher, Identitäten, Schemas und Sandboxes. Anweisungen zum Konfigurieren von Adobe Experience Platform-Berechtigungen finden Sie unter [Benutzerhandbuch zur Zugriffskontrolle](../access-control/ui/overview.md).
+Zu den Berechtigungen unter Adobe Experience Platform gehört der Zugriff auf Datenspeicher, Identitäten, Schemas und Sandboxes. Anweisungen zum Konfigurieren von Adobe Experience Platform-Berechtigungen finden Sie im Benutzerhandbuch zur Zugriffskontrolle [.](../access-control/ui/overview.md)
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
-| Sandboxes | (Nicht angegeben) | Je nach [Sandboxes](../sandboxes/home.md) die unter Ihrer Organisation erstellt wurden, können Sie den Zugriff auf jede dieser Berechtigungskategorien in Admin Console steuern. |
-| Datenmodellierung | Verwalten von Schemata | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Experience-Datenmodell (XDM)-Schemas](../xdm/home.md). |
+| Sandboxes | (Nicht angegeben) | Abhängig von den unter Ihrem Unternehmen erstellten [Sandboxes](../sandboxes/home.md) können Sie den Zugriff auf alle Sandboxes über diese Berechtigungskategorie in Admin Console steuern. |
+| Datenmodellierung | Verwalten von Schemata | Ermöglicht das Anzeigen, Erstellen und Bearbeiten von [Experience-Datenmodell (XDM)-Schemas](../xdm/home.md). |
 | Datenmodellierung | Anzeigen von Schemata | Gewährt schreibgeschützten Zugriff auf Schemas. |
-| Identity Management | Verwalten von Identitäts-Namensräumen | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [Identitäts-Namespaces](../identity-service/features/namespaces.md). |
+| Identity Management | Verwalten von Identitäts-Namensräumen | Ermöglicht das Anzeigen, Erstellen und Bearbeiten von [Identitäts-Namespaces](../identity-service/features/namespaces.md). |
 | Identity Management | Anzeigen von Identitäts-Namensräumen | Ermöglicht schreibgeschützten Zugriff auf Identitäts-Namespaces. |
-| Datenerfassung | Verwalten von Datenspeichern | Ermöglicht die Anzeige, Erstellung und Bearbeitung von [datastreams](../datastreams/overview.md). |
+| Datenerfassung | Verwalten von Datenspeichern | Ermöglicht das Anzeigen, Erstellen und Bearbeiten von [Datastreams](../datastreams/overview.md). |
 | Datenerfassung | Anzeigen von Datenspeichern | Ermöglicht schreibgeschützten Zugriff auf Datenspeicher. |
 
 {style="table-layout:auto"}
 
 ### Adobe Experience Platform-Datenerfassungsberechtigungen
 
-Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern den Zugriff auf Tags und Funktionen zur Ereignisweiterleitung, einschließlich Eigenschaften, Erweiterungen und Umgebungen. Anweisungen zum Konfigurieren von Adobe Experience Platform-Datenerfassungsberechtigungen finden Sie in der [Abschnitt unten](#manage).
+Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern den Zugriff auf Tags und Funktionen zur Ereignisweiterleitung, einschließlich Eigenschaften, Erweiterungen und Umgebungen. Anweisungen zum Konfigurieren von Adobe Experience Platform-Datenerfassungsberechtigungen finden Sie im Abschnitt [unter ](#manage).
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
-| Plattformen | Web | Gewährt Zugriff auf [Webeigenschaften](../tags/ui/administration/companies-and-properties.md) in Kombination mit anderen Eigentumsrechten. |
-| Plattformen | Mobile | Gewährt Zugriff auf [mobile Eigenschaften](../tags/ui/administration/companies-and-properties.md) in Kombination mit anderen Eigentumsrechten. |
-| Plattformen | Edge | Gewährt Zugriff auf [Edge-Eigenschaften für die Ereignisweiterleitung](../tags/ui/event-forwarding/getting-started.md) in Kombination mit anderen Eigentumsrechten. |
+| Plattformen | Web | Gewährt Zugriff auf [Web-Eigenschaften](../tags/ui/administration/companies-and-properties.md), wenn diese mit anderen Eigenschaftsrechten kombiniert werden. |
+| Plattformen | Mobile | Gewährt Zugriff auf [mobile Eigenschaften](../tags/ui/administration/companies-and-properties.md), wenn diese mit anderen Eigenschaftsrechten kombiniert werden. |
+| Plattformen | Edge | Gewährt Zugriff auf die [Ereignisweiterleitung für Edge-Eigenschaften](../tags/ui/event-forwarding/getting-started.md) in Kombination mit anderen Eigenschaftsrechten. |
 | Properties | (Nicht angegeben) | Je nach den Eigenschaften, die unter Ihrer Organisation erstellt wurden, können Sie den Zugriff auf jede dieser Eigenschaften über diese Berechtigungskategorie in Admin Console steuern.<br><br>Die zugewiesenen Eigenschaftsrechte eines Benutzers gelten nur für die Eigenschaften, auf die ihm über diese Berechtigungskategorie Zugriff gewährt wurde. |
-| Eigenschaftsrechte | Genehmigen | Ermöglicht die Genehmigung eines Bibliotheks-Builds als Teil der [Veröffentlichungsfluss](../tags/ui/publishing/publishing-flow.md). |
-| Eigenschaftsrechte | Entwickeln | Ermöglicht die Entwicklung eines Bibliotheks-Builds als Teil der [Veröffentlichungsfluss](../tags/ui/publishing/publishing-flow.md). |
+| Eigenschaftsrechte | Genehmigen | Ermöglicht die Genehmigung eines Bibliotheks-Builds als Teil des [Veröffentlichungsflusses](../tags/ui/publishing/publishing-flow.md). |
+| Eigenschaftsrechte | Entwickeln | Ermöglicht die Entwicklung eines Bibliotheks-Builds als Teil des [Veröffentlichungsflusses](../tags/ui/publishing/publishing-flow.md). |
 | Eigenschaftsrechte | Eigenschaft bearbeiten | Ermöglicht die Bearbeitung der grundlegenden Konfiguration für die Eigenschaften, auf die ein Benutzer Zugriff hat. |
 | Eigenschaftsrechte | Umgebungen verwalten | Ermöglicht die Verwaltung der [Umgebungen](../tags/ui/publishing/environments.md) für die Eigenschaften, auf die ein Benutzer Zugriff hat. |
 | Eigenschaftsrechte | Erweiterungen verwalten | Ermöglicht die Verwaltung der [Erweiterungen](../tags/ui/managing-resources/extensions/overview.md) für die Eigenschaften, auf die ein Benutzer Zugriff hat. |
-| Eigenschaftsrechte | Veröffentlichen Sie | Ermöglicht die Veröffentlichung eines Bibliotheks-Builds als Teil der [Veröffentlichungsfluss](../tags/ui/publishing/publishing-flow.md). |
+| Eigenschaftsrechte | Veröffentlichen Sie | Ermöglicht die Veröffentlichung eines Bibliotheks-Builds als Teil des [Veröffentlichungsflusses](../tags/ui/publishing/publishing-flow.md). |
 | Unternehmensrechte | Entwickeln von Erweiterungen | Ermöglicht das Erstellen und Ändern von Erweiterungspaketen, die Ihrem Unternehmen gehören, einschließlich privater Versionen und Anforderungen zur öffentlichen Veröffentlichung. |
 | Unternehmensrechte | Mobile-App-Konfigurationen verwalten | Diese Berechtigung gilt nur, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt. Auf diese Weise können Sie Apps verwalten, von denen Adobe Experience Cloud weiß, sowie die erforderlichen Push-Anmeldeinformationen, die für die Kommunikation mit dem Firebase Cloud Messaging-Dienst und dem Apple-Push-Benachrichtigungsdienst erforderlich sind. |
 | Unternehmensrechte | Eigenschaften verwalten | Ermöglicht Ihnen die Erstellung und Verwaltung von Tags (Webeigenschaft), Ereignisweiterleitung (Edge-Eigenschaft) und mobilen Eigenschaften. |
@@ -65,7 +65,7 @@ Berechtigungen unter der Datenerfassung von Adobe Experience Platform steuern de
 
 >[!NOTE]
 >
->Weitere Informationen dazu, wie sich diese Berechtigungen auf Funktionen in Tags auswirken, einschließlich Verwaltungsstrategien für gängige Szenarien, finden Sie in der Tag-Dokumentation unter [Benutzerberechtigungen](../tags/ui/administration/user-permissions.md).
+>Weitere Informationen dazu, wie sich diese Berechtigungen auf Funktionen in Tags auswirken, einschließlich Verwaltungsstrategien für gängige Szenarien, finden Sie in der Tag-Dokumentation zu [Benutzerberechtigungen](../tags/ui/administration/user-permissions.md).
 
 ## Verwalten von Berechtigungen {#manage}
 
@@ -82,17 +82,17 @@ In den folgenden Unterabschnitten erfahren Sie, wie Sie die entsprechenden Berec
 >
 >Zum Verwalten von Berechtigungen für eine Rolle benötigen Sie Administratorrechte. Wenn Sie keine Administratorberechtigungen haben, wenden Sie sich an Ihren Systemadministrator.
 
-Experience Cloud **[!UICONTROL Berechtigungen]** können Sie Benutzerrollen und Richtlinien definieren, um den Zugriff auf Funktionen und Objekte in einer Produktanwendung zu verwalten.
+Im Abschnitt &quot;Berechtigungen&quot;]**können Sie Benutzerrollen und Richtlinien definieren, um den Zugriff auf Funktionen und Objekte in einer Produktanwendung zu verwalten.**[!UICONTROL 
 
-bis [!UICONTROL Berechtigungen]können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen.
+Über [!UICONTROL Berechtigungen] können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen.
 
 ![Adobe Experience Cloud, das das Berechtigungsprodukt hervorhebt.](./images/permissions/permissions-product.png)
 
-Um auf Datenerfassungsfunktionen zugreifen zu können, müssen Sie alle Berechtigungen in der **[!UICONTROL Sandboxes]**, **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Identity Management]**, und **[!UICONTROL Datenerfassung]** Kategorien.
+Um auf Datenerfassungsfunktionen zugreifen zu können, müssen Sie alle Berechtigungen in den Kategorien **[!UICONTROL Sandboxes]**, **[!UICONTROL Datenmodellierung]**, **[!UICONTROL Identity Management]** und **[!UICONTROL Datenerfassung]** aktivieren.
 
-![Bild mit der Datenerfassungs-Produktkarte in Admin Console](./images/permissions/platform-permission-card.png)
+![Bild, das die Datenerfassungs-Produktkarte in Admin Console anzeigt](./images/permissions/platform-permission-card.png)
 
-Siehe [UI-Handbuch zur Zugriffskontrolle](../access-control/ui/overview.md) für detaillierte Anweisungen zum Verwalten von Platform-Berechtigungen.
+Detaillierte Anweisungen zum Verwalten von Plattformberechtigungen finden Sie im Leitfaden zur Benutzeroberfläche für die Zugriffskontrolle ](../access-control/ui/overview.md).[
 
 >[!NOTE]
 >
@@ -100,17 +100,17 @@ Siehe [UI-Handbuch zur Zugriffskontrolle](../access-control/ui/overview.md) für
 
 ### Verwalten von Berechtigungen unter Adobe Experience Platform-Datenerfassung {#manage-collection}
 
-Um diese Berechtigungen zu verwalten, melden Sie sich bei Admin Console an und wählen Sie **[!UICONTROL Produkte]** Wählen Sie in der oberen Navigation und dann **[!UICONTROL Adobe Experience Platform-Datenerfassung]**.
+Um diese Berechtigungen zu verwalten, melden Sie sich bei Admin Console an und wählen Sie in der oberen Navigationsleiste **[!UICONTROL Artikel]** aus. Wählen Sie dann **[!UICONTROL Adobe Experience Platform-Datenerfassung]** aus.
 
-![Bild mit der Datenerfassungs-Produktkarte in Admin Console](./images/permissions/data-collection-card.png)
+![Bild, das die Datenerfassungs-Produktkarte in Admin Console anzeigt](./images/permissions/data-collection-card.png)
 
 #### Auswählen oder Erstellen eines Produktprofils
 
-Im nächsten Bildschirm wird eine Liste der verfügbaren Produktprofile für die Datenerfassung unter Ihrer Organisation angezeigt, wobei das Standardprofil **[!DNL Default Data Collection All Access]**. Sie können bei Bedarf das Standard-Produktprofil bearbeiten oder **[!UICONTROL Neues Profil]** , um eine zu erstellen. Wenn Sie in Ihrer Organisation mehrere Rollen oder Benutzergruppen haben, die unterschiedliche Zugriffsrechte benötigen, sollten Sie für jede dieser Gruppen ein eigenes Produktprofil erstellen.
+Der nächste Bildschirm zeigt eine Liste der verfügbaren Produktprofile für die Datenerfassung unter Ihrer Organisation, wobei das Standardprofil **[!DNL Default Data Collection All Access]** ist. Sie können bei Bedarf das standardmäßige Produktprofil bearbeiten oder **[!UICONTROL Neues Profil]** auswählen, um ein Profil zu erstellen. Wenn Sie in Ihrer Organisation mehrere Rollen oder Benutzergruppen haben, die unterschiedliche Zugriffsrechte benötigen, sollten Sie für jede dieser Gruppen ein eigenes Produktprofil erstellen.
 
-![Bild mit den Produktprofilen für die Datenerfassung in Admin Console](./images/permissions/new-profile.png)
+![Bild, das die Produktprofile für die Datenerfassung in Admin Console anzeigt](./images/permissions/new-profile.png)
 
-Nachdem Sie ein Produktprofil ausgewählt oder erstellt haben, können Sie die **[!UICONTROL Bearbeiten]** Symbole zum Starten [Berechtigungen bearbeiten](#edit-permissions) oder wählen Sie die **[!UICONTROL Benutzer]** Registerkarte zum Start [Zuweisen von Benutzern](#assign-users) zum Profil.
+Nachdem Sie ein Produktprofil ausgewählt oder erstellt haben, können Sie die Symbole **[!UICONTROL Bearbeiten]** verwenden, um [Berechtigungen zu bearbeiten](#edit-permissions) für das Profil zu starten, oder Sie können die Registerkarte **[!UICONTROL Benutzer]** auswählen, um [Benutzer](#assign-users) dem Profil zuzuweisen.
 
 ![Abbildung der Registerkarte „Berechtigungen“ für ein Produktprofil in Admin Console](./images/permissions/edit-permission-categories.png)
 
@@ -118,11 +118,11 @@ Nachdem Sie ein Produktprofil ausgewählt oder erstellt haben, können Sie die *
 
 Wenn Sie die Berechtigungen für ein Profil bearbeiten, werden die verfügbaren Berechtigungen in der linken Spalte aufgelistet, während diejenigen, die im Profil enthalten sind, in der rechten Spalte aufgeführt werden. Wählen Sie die aufgelisteten Berechtigungen aus, um sie zwischen den beiden Spalten zu verschieben.
 
-![Bild mit Berechtigungen, die unter der Spalte &quot;Eingeschlossen&quot;hinzugefügt wurden](./images/permissions/added-permissions.png)
+![Bild mit Berechtigungen, die unter der eingeschlossenen Spalte hinzugefügt wurden](./images/permissions/added-permissions.png)
 
 Berechtigungen sind in Kategorien unterteilt. Um zwischen Kategorien zu wechseln, wählen Sie die gewünschte Kategorie in der linken Navigationsleiste.
 
-![Bild mit dem Abschnitt &quot;Unternehmensberechtigungen&quot;unter &quot;Berechtigungen&quot;](./images/permissions/switch-category.png)
+![Bild, das den Abschnitt &quot;Unternehmensrechte&quot;unter &quot;Berechtigungen&quot;anzeigt](./images/permissions/switch-category.png)
 
 Wählen Sie **[!UICONTROL Speichern]**, sobald Sie die Konfiguration der Berechtigungen abgeschlossen haben.
 

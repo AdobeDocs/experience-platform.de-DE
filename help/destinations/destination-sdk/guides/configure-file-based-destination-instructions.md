@@ -25,7 +25,7 @@ Bevor Sie mit den unten dargestellten Schritten fortfahren, informieren Sie sich
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Beginnen bei [Erstellen einer Server- und Dateikonfiguration](../authoring-api/destination-server/create-destination-server.md) mithilfe der `/destinations-server` -Endpunkt.
+Erstellen Sie zunächst [ einen Server und eine Dateikonfiguration](../authoring-api/destination-server/create-destination-server.md) mithilfe des `/destinations-server` -Endpunkts.
 
 Nachfolgend finden Sie eine Beispielkonfiguration für ein [!DNL Amazon S3]-Ziel. Weitere Informationen zu den in der Konfiguration verwendeten Feldern und zum Konfigurieren anderer Typen dateibasierter Ziele finden Sie in den entsprechenden [Serverkonfigurationen](../functionality/destination-server/server-specs.md).
 
@@ -114,9 +114,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Schritt 2: Erstellen einer Zielkonfiguration {#create-destination-configuration}
 
-Nachfolgend finden Sie ein Beispiel für eine Zielkonfiguration, die mithilfe der `/destinations` API-Endpunkt.
+Im Folgenden finden Sie ein Beispiel für eine Zielkonfiguration, die mithilfe des API-Endpunkts `/destinations` erstellt wurde.
 
-Um die Server- und Dateikonfiguration von Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die `instance ID` der Server- und Dateikonfiguration als `destinationServerId` hier.
+Um die Server- und Dateikonfiguration von Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie hier die `instance ID` des Servers und die Dateikonfiguration als `destinationServerId` hinzu.
 
 **API-Format**
 
@@ -400,7 +400,7 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` ist der häufigere der beiden Authentifizierungsregeln und der zu verwendende, wenn Sie von Benutzern verlangen, dass sie für Ihr Ziel eine bestimmte Form der Authentifizierung bereitstellen, bevor sie eine Verbindung einrichten und Daten exportieren können.
+>`CUSTOMER_AUTHENTICATION` ist die gängigere der beiden Authentifizierungsregeln und die zu verwendende, wenn Sie von Benutzern verlangen, dass sie für Ihr Ziel eine bestimmte Form der Authentifizierung bereitstellen, bevor sie eine Verbindung herstellen und Daten exportieren können.
 
 * Wenn Sie in der Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ausgewählt haben, finden Sie in den folgenden Abschnitten Informationen zu den Authentifizierungstypen, die vom Destination SDK für dateibasierte Ziele unterstützt werden:
 
@@ -411,7 +411,7 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
    * [SFTP-Authentifizierung mit SSH-Schlüssel](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [SFTP-Authentifizierung mit Passwort](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"`, siehe [Dokumentation zur API für die Anmeldekonfiguration](../credentials-api/create-credential-configuration.md#when-to-use).
+* Wenn Sie &quot;`"authenticationRule": "PLATFORM_AUTHENTICATION"`&quot;ausgewählt haben, lesen Sie die Dokumentation zur API für die Konfiguration von Anmeldedaten [.](../credentials-api/create-credential-configuration.md#when-to-use)
 
 
 ## Schritt 5: Testen des Ziels {#test-destination}
@@ -445,4 +445,4 @@ Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) si
 >
 >Dieser Schritt ist nicht erforderlich, wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen und es nicht im Zielkatalog veröffentlichen möchten, damit andere Kunden ihn verwenden können.
 
-Bevor das Ziel im Experience Platform-Katalog veröffentlicht und für alle Experience Platform-Kunden sichtbar ist, müssen Sie das Ziel offiziell zur Adobe-Überprüfung einreichen. Vollständige Informationen zum [zur Überprüfung eines in der Destination SDK erstellten produktiven Ziels einreichen](../guides/submit-destination.md).
+Bevor das Ziel im Experience Platform-Katalog veröffentlicht und für alle Experience Platform-Kunden sichtbar ist, müssen Sie das Ziel offiziell zur Adobe-Überprüfung einreichen. Finden Sie vollständige Informationen darüber, wie Sie [ein in Destination SDK](../guides/submit-destination.md) erstelltes produktionalisiertes Ziel zur Überprüfung einreichen können.

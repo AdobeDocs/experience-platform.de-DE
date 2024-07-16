@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /search-Endpunkt in der Reactor-API aufru
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 100%
 
 ---
@@ -36,7 +36,6 @@ Alle Abfragen sind auf Ihre aktuelle Firma und die zugänglichen Eigenschaften b
 >* Meta ist nicht durchsuchbar und wird nicht in den Suchergebnissen zurückgegeben.
 >* Schemafelder für Delegaten von Erweiterungspaketen (Aktionen, Bedingungen usw.) sind als Text durchsuchbar, nicht als verschachtelte Datenstruktur.
 >* Bereichsabfragen unterstützen derzeit nur Ganzzahlen.
-
 
 Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie im [Suchleitfaden](../guides/search.md).
 

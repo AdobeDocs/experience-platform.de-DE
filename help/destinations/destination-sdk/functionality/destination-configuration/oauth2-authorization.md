@@ -12,7 +12,7 @@ ht-degree: 78%
 
 # OAuth 2-Autorisierung
 
-Destination SDK unterstützt mehrere Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Möglichkeit, sich mithilfe der [OAuth 2-Autorisierungs-Framework](https://tools.ietf.org/html/rfc6749).
+Destination SDK unterstützt mehrere Autorisierungsmethoden für Ihr Ziel. Dazu gehört die Möglichkeit, sich mithilfe des [OAuth 2 Autorisierungs-Frameworks](https://tools.ietf.org/html/rfc6749) bei Ihrem Ziel zu authentifizieren.
 
 Auf dieser Seite werden die verschiedenen OAuth 2-Autorisierungsflüsse beschrieben, die von Destination SDK unterstützt werden, und Sie erhalten Anweisungen zum Einrichten der OAuth 2-Autorisierung für Ihr Ziel.
 
@@ -55,7 +55,7 @@ Am Ende dieses Schritts sollten Sie über Folgendes verfügen:
 
 ### Was Sie in Destination SDK tun müssen {#to-do-in-destination-sdk}
 
-Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details zum [Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md)unter der `customerAuthenticationConfigurations` -Parameter. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach OAuth 2-Autorisierungstyp zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
+Um die OAuth 2-Autorisierung für Ihr Ziel in Experience Platform einzurichten, müssen Sie Ihre OAuth 2-Details zur [Zielkonfiguration](../../authoring-api/destination-configuration/create-destination-configuration.md) unter dem Parameter `customerAuthenticationConfigurations` hinzufügen. Siehe [Kundenauthentifizierung](../../functionality/destination-configuration/customer-authentication.md) für ausführliche Beispiele. Spezifische Anweisungen dazu, welche Felder Sie je nach OAuth 2-Autorisierungstyp zu Ihrer Konfigurationsvorlage hinzufügen müssen, finden Sie weiter unten auf dieser Seite.
 
 ## Unterstützte OAuth 2-Gewährungstypen {#oauth2-grant-types}
 
@@ -93,7 +93,7 @@ Wenn Ihr Ziel einen standardmäßigen OAuth 2.0-Autorisierungs-Code-Fluss (lesen
 
 {style="table-layout:auto"}
 
-Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konfiguration die folgenden Zeilen hinzu, wenn Sie [Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ```json
 {
@@ -119,7 +119,7 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 | `authType` | Zeichenfolge | Verwenden Sie „OAUTH2“. |
 | `grant` | Zeichenfolge | Verwenden Sie „OAUTH2_AUTHORIZATION_CODE“. |
 | `accessTokenUrl` | Zeichenfolge | Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und optional Token aktualisiert. |
-| `authorizationUrl` | Zeichenfolge | Die URL Ihres Autorisierungs-Servers, über die Sie die Benutzerin bzw. den Benutzer zur Anmeldung bei Ihrer Anwendung weiterleiten. |
+| `authorizationUrl` | Zeichenfolge | Die URL Ihres Autorisierungs-Servers, über die Sie die Benutzerin bzw. den Benutzer zur Anmeldung bei Ihrer Anwendung umleiten. |
 | `refreshTokenUrl` | Zeichenfolge | *Optional.* Die URL auf Ihrer Seite, die Aktualisierungs-Token ausgibt. Häufig ist die `refreshTokenUrl` identisch mit der `accessTokenUrl`. |
 | `clientId` | Zeichenfolge | Die Client-ID, die Ihr System Adobe Experience Platform zuweist. |
 | `clientSecret` | Zeichenfolge | Das Client-Geheimnis, das Ihr System Adobe Experience Platform zuweist. |
@@ -142,7 +142,7 @@ Adobe verwendet die folgenden Standardeingaben, um die Zielkonfiguration zu vere
 >
 > Sie müssen in der unten stehenden Konfiguration keine Parameter für `username` und `password` hinzufügen. Wenn Sie `"grant": "OAUTH2_PASSWORD"` in der Zielkonfiguration hinzufügen, fordert das System die Benutzenden auf, in der Experience Platform-Benutzeroberfläche einen Benutzernamen und ein Passwort anzugeben, wenn sie sich bei Ihrem Ziel authentifizieren.
 
-Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konfiguration die folgenden Zeilen hinzu, wenn Sie [Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ```json
 {
@@ -180,7 +180,7 @@ Sie können ein Ziel für OAuth 2 Client-Anmeldeinformationen konfigurieren (les
 
 {style="table-layout:auto"}
 
-Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konfiguration die folgenden Zeilen hinzu, wenn Sie [Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie die folgenden Zeilen zu Ihrer Konfiguration hinzu, wenn Sie [eine Zielkonfiguration erstellen](../../authoring-api/destination-configuration/create-destination-configuration.md):
 
 ```json
 {
@@ -216,7 +216,7 @@ Um diese Autorisierungsmethode für Ihr Ziel einzurichten, fügen Sie Ihrer Konf
 
 Die in den obigen Abschnitten beschriebenen Konfigurationen beschreiben standardmäßige OAuth 2-Gewährungen. Das von Adobe entworfene System bietet jedoch eine Flexibilität, sodass Sie für alle Variationen der OAuth 2-Gewährungen auch benutzerdefinierte Parameter verwenden können. Um die standardmäßigen OAuth 2-Einstellungen anzupassen, verwenden Sie die Parameter `authenticationDataFields`, wie in den Beispielen unten dargestellt.
 
-### Beispiel 1: Verwendung von `authenticationDataFields` zur Erfassung von Informationen aus der Zulassungsantwort {#example-1}
+### Beispiel 1: Verwenden von `authenticationDataFields` zum Erfassen von Informationen aus der Autorisierungsantwort {#example-1}
 
 In diesem Beispiel verfügt eine Zielplattform über Aktualisierungstoken, die nach einer bestimmten Zeitdauer ablaufen. In diesem Fall richtet der Partner das benutzerdefinierte Feld `refreshTokenExpiration` ein, um das Ablaufdatum des Aktualisierungstokens aus dem Feld `refresh_token_expires_in` in der API-Antwort abzurufen.
 
@@ -365,7 +365,7 @@ Sie können die folgenden Parameter in `authenticationDataFields` zum Anpassen I
 | `authenticationDataFields.description` | Zeichenfolge | Eine Beschreibung des von Ihnen eingerichteten benutzerdefinierten Datenfelds. |
 | `authenticationDataFields.type` | Zeichenfolge | Definiert den Typ des benutzerdefinierten Datenfelds. <br> Akzeptierte Werte: `string`, `boolean`, `integer` |
 | `authenticationDataFields.isRequired` | Boolesch | Gibt an, ob das benutzerdefinierte Datenfeld im Autorisierungsfluss erforderlich ist. |
-| `authenticationDataFields.format` | Zeichenfolge | Wenn Sie `"format":"password"`, verschlüsselt Adobe den Wert des Autorisierungsdatenfelds. Bei Verwendung mit `"fieldType": "CUSTOMER"` ist außerdem die Eingabe in der Benutzeroberfläche unsichtbar, wenn Benutzende etwas in das Feld eingeben. |
+| `authenticationDataFields.format` | Zeichenfolge | Wenn Sie `"format":"password"` auswählen, verschlüsselt Adobe den Wert des Autorisierungsdatenfelds. Bei Verwendung mit `"fieldType": "CUSTOMER"` ist außerdem die Eingabe in der Benutzeroberfläche unsichtbar, wenn Benutzende etwas in das Feld eingeben. |
 | `authenticationDataFields.fieldType` | Zeichenfolge | Gibt an, ob die Eingabe vom Partner (d. h. Ihnen) oder von den Benutzenden stammt, wenn sie Ihr Ziel in Experience Platform einrichten. |
 | `authenticationDataFields.value` | Zeichenfolge. Boolesch. Ganzzahl | Der Wert des benutzerdefinierten Datenfelds. Der Wert entspricht dem ausgewählten Typ aus `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | Zeichenfolge | Gibt an, auf welches Feld aus dem API-Antwortpfad verwiesen wird. |

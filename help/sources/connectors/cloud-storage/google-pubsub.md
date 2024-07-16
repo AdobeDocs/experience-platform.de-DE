@@ -14,7 +14,7 @@ ht-degree: 19%
 
 >[!IMPORTANT]
 >
->Die [!DNL Google PubSub] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die Quelle &quot;[!DNL Google PubSub]&quot; steht Benutzern, die Real-time Customer Data Platform Ultimate erworben haben, im Quellkatalog zur Verfügung.
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie [!DNL AWS], [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Daten aus diesen Systemen zur Verwendung in nachgelagerten Services und Zielen in Platform importieren können.
 
@@ -22,66 +22,66 @@ Cloud-Speicher sind eine Quelle, von der Sie Ihre Daten in Platform übertragen 
 
 ## Voraussetzungen {#prerequisites}
 
-In diesem Abschnitt werden die erforderlichen Einstellungen beschrieben, die Sie vor dem Verbinden Ihrer [!DNL Google PubSub] -Konto auf Experience Platform.
+In diesem Abschnitt werden die erforderlichen Einrichtungsschritte beschrieben, die Sie ausführen müssen, bevor Sie Ihr [!DNL Google PubSub]-Konto mit Experience Platform verbinden.
 
 ### Dienstkonto erstellen {#create-service-account}
 
-A **Dienstkonto** ist eine Art Konto, das häufig von einer Anwendung oder einem Compute-Workflow verwendet wird, anstatt von einer Person. Ein Dienstkonto wird durch seine E-Mail-Adresse identifiziert, die für das Konto eindeutig ist.
+Ein **Dienstkonto** ist ein Kontotyp, der häufig von einer Anwendung verwendet wird oder den Arbeitsaufwand berechnet, anstatt von einer Person verwendet zu werden. Ein Dienstkonto wird durch seine E-Mail-Adresse identifiziert, die für das Konto eindeutig ist.
 
-* Zum einen sind Dienstkonten **Prinzipale** - Sie können Dienstkonten Zugriff gewähren auf [!DNL Google Cloud] Ressourcen. Sie können beispielsweise einem Dienstkonto die Rolle &quot;Compute Admin&quot;zuweisen `(roles/compute.admin)` für ein bestimmtes Projekt. Dadurch kann das Dienstkonto dann die Ressourcen des Compute Engine in diesem bestimmten Projekt verwalten.
-* Andererseits sind Dienstkonten auch Ressourcen. Sie können anderen Prinzipalen Zugriff auf das Dienstkonto gewähren. Sie können beispielsweise einem Benutzer die Benutzerrolle &quot;Dienstkonto-Benutzer&quot;zuweisen `(roles/iam.serviceAccountUser)` in einem Dienstkonto, damit der Benutzer dieses Dienstkonto an Ressourcen anhängen kann. Alternativ können Sie einem Benutzer die Rolle &quot;Dienstkontoadministrator&quot;zuweisen `(roles/iam.serviceAccountAdmin)` , damit der Benutzer Aufgaben wie das Anzeigen, Bearbeiten, Deaktivieren und Löschen des Dienstkontos erledigen kann.
+* Zum einen sind Dienstkonten **Prinzipale** - Sie können Dienstkonten Zugriff auf [!DNL Google Cloud] -Ressourcen gewähren. Sie können beispielsweise einem Dienstkonto die Rolle &quot;Administrator berechnen&quot;`(roles/compute.admin)` für ein bestimmtes Projekt zuweisen. Dadurch kann das Dienstkonto dann die Ressourcen des Compute Engine in diesem bestimmten Projekt verwalten.
+* Andererseits sind Dienstkonten auch Ressourcen. Sie können anderen Prinzipalen Zugriff auf das Dienstkonto gewähren. Sie können einem Benutzer beispielsweise die Benutzerrolle &quot;Dienstkonto-Benutzer&quot;`(roles/iam.serviceAccountUser)` für ein Dienstkonto zuweisen, damit der Benutzer dieses Dienstkonto an Ressourcen anhängen kann. Alternativ können Sie einem Benutzer die Rolle &quot;Dienstkonto-Admin&quot;`(roles/iam.serviceAccountAdmin)` zuweisen, damit der Benutzer Aufgaben wie das Anzeigen, Bearbeiten, Deaktivieren und Löschen des Dienstkontos erledigen kann.
 
-Weiterführende Informationen zur Bestimmung des richtigen Authentifizierungstyps für Ihren Anwendungsfall finden Sie im Abschnitt [[!DNL Google] Handbuch zu Authentifizierungsmethoden](https://cloud.google.com/docs/authentication).
+Weitere Informationen zum Bestimmen des richtigen Authentifizierungstyps für Ihren Anwendungsfall finden Sie im [[!DNL Google] Handbuch zu Authentifizierungsmethoden](https://cloud.google.com/docs/authentication).
 
 Gehen Sie wie folgt vor, um ein Dienstkonto zu erstellen:
 
-Navigieren Sie zunächst zum [!DNL IAM] der [!DNL Google Developer Console] und wählen Sie **[!DNL Create Service Account]**.
+Navigieren Sie zuerst zur Seite &quot;[!DNL IAM]&quot; des Felds &quot;[!DNL Google Developer Console]&quot; und wählen Sie dann &quot;**[!DNL Create Service Account]**&quot;.
 
 ![Das Fenster zum Erstellen eines Dienstkontos in der Google Developer Console](../../images/tutorials/create/google-pubsub/create-service-account.png)
 
-Geben Sie als Nächstes einen Anzeigenamen und eine ID für Ihr Dienstkonto ein und wählen Sie **[!DNL Create and Continue]**.
+Geben Sie als Nächstes einen Anzeigenamen und eine ID für Ihr Dienstkonto ein und wählen Sie dann **[!DNL Create and Continue]** aus.
 
 ![Die Details des Dienstkontos in der Google Developer Console](../../images/tutorials/create/google-pubsub/service-account-details.png)
 
 ### Generieren von Dienstkontoschlüsseln {#generate-service-account-keys}
 
-Um Schlüssel für Ihr Dienstkonto zu generieren, wählen Sie auf der Seite Dienstkonten die Kopfzeile Schlüssel aus. Wählen Sie dort die Option **[!DNL Add key]** und wählen Sie **[!DNL Create new key]** aus dem Dropdown-Menü aus. Sie können dieses Bedienfeld auch verwenden, um einen vorhandenen Schlüssel hochzuladen.
+Um Schlüssel für Ihr Dienstkonto zu generieren, wählen Sie auf der Seite Dienstkonten die Kopfzeile Schlüssel aus. Wählen Sie dort **[!DNL Add key]** und dann **[!DNL Create new key]** aus dem Dropdown-Menü aus. Sie können dieses Bedienfeld auch verwenden, um einen vorhandenen Schlüssel hochzuladen.
 
-![Das Fenster &quot;Schlüssel hinzufügen&quot;in der Google Developer Console](../../images/tutorials/create/google-pubsub/add-key.png)
+![Das Fenster &quot;Schlüssel hinzufügen&quot;im Google Developer Console](../../images/tutorials/create/google-pubsub/add-key.png)
 
-Bei erfolgreicher Ausführung erhalten Sie eine Nachricht, die angibt, dass der private Schlüssel auf Ihrem Computer gespeichert wurde und eine Datei heruntergeladen wird. Sie können dann den Inhalt dieser Datei als Anmeldeinformationen verwenden, wenn Sie Ihre [!DNL Google PubSub] -Konto auf Experience Platform.
+Bei erfolgreicher Ausführung erhalten Sie eine Nachricht, die angibt, dass der private Schlüssel auf Ihrem Computer gespeichert wurde und eine Datei heruntergeladen wird. Anschließend können Sie den Inhalt dieser Datei als Anmeldeinformationen verwenden, wenn Sie Ihr [!DNL Google PubSub]-Konto auf dem Experience Platform erstellen.
 
 ### Gewähren von Berechtigungen auf Themen- und Abonnementebene {#grant-permissions}
 
-Um Berechtigungen auf Themen- und Abonnementebene zu erteilen, navigieren Sie zur Seite &quot;Themenkonsole&quot;und wählen Sie dann **[!DNL Show info panel]**. Als Nächstes wird unter dem [!DNL Permissions] Registerkarte auswählen [!DNL Add Principal] und fügen Sie dann den Prinzipal des Dienstkontos zusammen mit den Berechtigungen hinzu.
+Um Berechtigungen auf Themen- und Abonnementebene zu erteilen, navigieren Sie zur Seite &quot;Themenkonsole&quot;und wählen Sie dann **[!DNL Show info panel]** aus. Wählen Sie anschließend auf der Registerkarte [!DNL Permissions] die Option [!DNL Add Principal] aus und fügen Sie dann den Prinzipal des Dienstkontos zusammen mit den Berechtigungen hinzu.
 
 ![Das Popup-Fenster in der Google Developer Console, in dem Sie Berechtigungen auf Themen- und Abonnementebene gewähren können](../../images/tutorials/create/google-pubsub/add-principal.png)
 
 ## Konfigurationen für optimale [!DNL Google PubSub usage] {#optimal-configurations}
 
-In diesem Abschnitt werden die Konfigurationen beschrieben, die Sie vornehmen sollten, um Ihre Nutzung der [!DNL Google PubSub] -Quelle auf Experience Platform.
+In diesem Abschnitt werden die Konfigurationen beschrieben, die Sie vornehmen sollten, um die Verwendung der [!DNL Google PubSub] -Quelle auf dem Experience Platform zu optimieren.
 
 ### Abonnementeigenschaften {#subscription-properties}
 
-Verwenden Sie die [!DNL Google Developer Console] nach **Anhebung der Frist für die Bestätigung**. Dies ermöglicht die [!DNL Google Publisher] , um entsprechend der von Ihnen konfigurierten Zeit zu warten, bevor Sie die Nachricht erneut senden. Diese Verzögerung trägt dazu bei, unnötige Auslastung auf Abonnentenebene zu verringern.
+Verwenden Sie die [!DNL Google Developer Console] zu **Erhöhen Sie Ihren Bestätigungszeitraum**. Dadurch kann [!DNL Google Publisher] entsprechend der von Ihnen konfigurierten Zeit warten, bevor die Nachricht erneut gesendet wird. Diese Verzögerung trägt dazu bei, unnötige Auslastung auf Abonnentenebene zu verringern.
 
 ![Die Benutzeroberfläche für die Bestätigung der Frist in der Google Developer Console.](../../images/tutorials/create/google-pubsub/acknowledgement-deadline.png)
 
-Aktivieren **[!DNL exactly one delivery]**. Diese Konfiguration informiert die [!DNL Google Publisher] , um sicherzustellen, dass Nachrichten, die an das Abonnement gesendet werden, nicht vor Ablauf der Bestätigungsfrist erneut gesendet werden. Sie können diese Einstellung verwenden, um sicherzustellen, dass Bestätigungsnachrichten nicht an das Abonnement zurückgesendet werden.
+Aktivieren Sie **[!DNL exactly one delivery]**. Diese Konfiguration informiert die [!DNL Google Publisher] darüber, dass sichergestellt wird, dass an das Abonnement gesendete Nachrichten nicht vor Ablauf der Bestätigung erneut gesendet werden. Sie können diese Einstellung verwenden, um sicherzustellen, dass Bestätigungsnachrichten nicht an das Abonnement zurückgesendet werden.
 
 ![Die genau eine Bereitstellungskonfigurationsseite in der Google Developer Console.](../../images/tutorials/create/google-pubsub/exactly-one-delivery.png)
 
-Sie können **[!DNL Retry after exponential backoff delay]** , um das Risiko einer weiteren Überlastung des Servers zu verringern. Sie können diese Konfiguration im [!DNL Google Developer Console] , um vorübergehende Fehler (temporäre Fehler, die sich normalerweise selbst beheben) besser zu beheben, indem dem System mehr Zeit für die Wiederherstellung zur Verfügung gestellt wird, bevor eine andere Verbindung hergestellt wird.
+Sie können **[!DNL Retry after exponential backoff delay]** aktivieren, um das Risiko einer weiteren Überlastung des Servers zu verringern. Sie können diese Konfiguration in der [!DNL Google Developer Console] aktivieren, um vorübergehende Fehler (temporäre Fehler, die normalerweise selbst aufgelöst werden) besser zu beheben, indem Sie dem System mehr Zeit zur Wiederherstellung geben, bevor Sie eine andere Verbindung versuchen.
 
-![Das Fenster Richtlinie erneut versuchen in der Google Developer Console.](../../images/tutorials/create/google-pubsub/retry-policy.png)
+![Das Fenster Richtlinie erneut versuchen in der Google Developer Console](../../images/tutorials/create/google-pubsub/retry-policy.png)
 
-Sie müssen **Legen Sie die Aufbewahrungsdauer Ihrer Abonnementnachricht auf mindestens 24 Stunden fest.** um sicherzustellen, dass nicht bestätigte Daten bei Spitzenbelastungen nicht verloren gehen. Zusätzlich **Dead-Brief-Thema aktivieren** um sicherzustellen, dass Datenverluste auch in seltenen Edge-Fällen nicht auftreten.
+Sie müssen **die Aufbewahrungsdauer der Abonnementnachricht auf 24 Stunden oder mehr festlegen**, um sicherzustellen, dass nicht bestätigte Daten bei Spitzenladevorgängen nicht verloren gehen. Außerdem aktivieren Sie **ein Dead-Letter-Thema**, um sicherzustellen, dass Datenverlust auch in seltenen Edge-Fällen nicht eintritt.
 
 >[!IMPORTANT]
 >
->Pro Quelldatensatz kann nur ein Datenfluss erstellt werden. [!DNL Google PubSub] Abonnement. Die Wiederverwendung eines Abonnements, auch über Sandboxes hinweg, führt zum Datenverlust.
+>Pro [!DNL Google PubSub] Abonnement kann nur ein Datenfluss erstellt werden. Die Wiederverwendung eines Abonnements, auch über Sandboxes hinweg, führt zum Datenverlust.
 
-## Verbinden [!DNL Google PubSub] auf Experience Platform
+## [!DNL Google PubSub] mit Experience Platform verbinden
 
 Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Google PubSub] mithilfe von APIs oder der Benutzeroberfläche mit Platform verbinden können:
 

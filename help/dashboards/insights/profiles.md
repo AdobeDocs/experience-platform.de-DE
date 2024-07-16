@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe
 
 Machen Sie sich mit Ihren Profileinblicken vertraut, indem Sie auf die SQL zugreifen, über die diese Benutzer verfügen, und dann Ihre eigenen Einblicke generieren, um Ihre Kunden und deren Kundenerlebnisse, aus denen sich Ihre Profile zusammensetzen, weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
-Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen zur direkten Anpassung der SQL-Daten Ihrer Einblicke über die Platform-Benutzeroberfläche.
+Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die Platform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Die folgenden Einblicke stehen Ihnen als Teil der [Profil-Dashboard](../guides/profiles.md) oder benutzerdefiniert [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md). Siehe [Anpassungsübersicht](../customize/overview.md) Anweisungen zum Anpassen Ihres Dashboards erhalten Sie oder [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen als Teil des [Profil-Dashboards](../guides/profiles.md) oder eines benutzerdefinierten [benutzerdefinierten benutzerdefinierten Dashboards](../user-defined-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../user-defined-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
 
-## Zielgruppenüberschneidung nach Zusammenführungsrichtlinie {#audience-overlap-by-merge-policy}
+## Zielgruppenüberschneidung durch Zusammenführungsrichtlinie {#audience-overlap-by-merge-policy}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -64,9 +64,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Siehe [Dokumentation zur Zielgruppenüberschneidung nach Zusammenführungsrichtlinien-Widgets](../guides/profiles.md#audience-overlap-by-merge-policy) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Zielgruppenüberschneidung nach Zusammenführungsrichtlinie](../guides/profiles.md#audience-overlap-by-merge-policy) .
 
-## Bericht &quot;Zielgruppenüberschneidung&quot; {#audience-overlap-report}
+## Bericht zur Zielgruppenüberschneidung {#audience-overlap-report}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-Siehe [Dokumentation zum Bericht-Widget &quot;Zielgruppenüberschneidung&quot;](../guides/profiles.md#audience-overlap-report) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Bericht &quot;Zielgruppenüberschneidung&quot;](../guides/profiles.md#audience-overlap-report) .[
 
 ## Zielgruppen (Anzahl) {#audiences}
 
@@ -159,7 +159,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Siehe [Dokumentation zum Zielgruppen-Widget](../guides/profiles.md#audiences) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum [Zielgruppen-Widget](../guides/profiles.md#audiences) .
 
 ## Zielgruppen, die dem Zielstatus zugeordnet sind {#audiences-mapped-to-destination-status}
 
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Siehe [Dokumentation zum Ziel-Status-Widget zu Zielgruppen](../guides/profiles.md#audiences-mapped-to-destination-status) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum Widget [Zielgruppen, die dem Zielstatus-Widget zugeordnet sind](../guides/profiles.md#audiences-mapped-to-destination-status) .
 
 ## Zielgruppengröße {#audiences-size}
 
@@ -224,9 +224,9 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Siehe [Dokumentation zum Größe des Widgets &quot;Zielgruppen&quot;](../guides/profiles.md#audiences-size) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Größe von Zielgruppen](../guides/profiles.md#audiences-size) .
 
-## Customer AI-Verteilung von Bewertungen {#customer-ai-distribution-of-scores}
+## Kunden-KI – Verteilung der Scores {#customer-ai-distribution-of-scores}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -361,9 +361,9 @@ SELECT b.model_name,
 
 +++
 
-Siehe [Dokumentation zum Widget zur Verteilung von Bewertungen für Customer AI](../guides/profiles.md#customer-ai-distribution-of-scores) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zur [Verteilung von Bewertungen-Widgets durch Kunden-KI](../guides/profiles.md#customer-ai-distribution-of-scores) .
 
-## Customer AI-Bewertungszusammenfassung {#customer-ai-scoring-summary}
+## Zusammenfassung der KI-Kundenbewertung {#customer-ai-scoring-summary}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -402,7 +402,7 @@ SELECT model_name,
 
 +++
 
-Siehe [Dokumentation zum Widget zum Customer AI-Scoring](../guides/profiles.md#customer-ai-scoring-summary) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Weitere Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Customer AI Scoring summary](../guides/profiles.md#customer-ai-scoring-summary) .
 
 ## Identitätsüberschneidung {#identity-overlap}
 
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Siehe [Dokumentation zum Widget zur Identitätsüberschneidung](../guides/profiles.md#identity-overlap) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Identitätsüberschneidung](../guides/profiles.md#identity-overlap) .
 
 ## Anzahl der Profile {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Umfassende Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks finden Sie im Abschnitt [Widget-Handbuch zur Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Vollständige Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie im Widget [Profilanzahl](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count) .
 
-Siehe [Dokumentation zum Widget zur Profilanzahl](../guides/profiles.md#profile-count) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Profilanzahl .](../guides/profiles.md#profile-count)
 
 ## Änderung der Profilanzahl {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Siehe [Dokumentation zum Widget zur Änderung der Profilanzahl](../guides/profiles.md#profile-count-change) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Änderung der Profilanzahl](../guides/profiles.md#profile-count-change) .
 
 ## Trend zur Änderung der Profilanzahl {#profile-count-change-trend}
 
@@ -562,9 +562,9 @@ SELECT date_key,
 
 +++
 
-Siehe [Dokumentation zum Trend-Widget zum Ändern der Profilanzahl](../guides/profiles.md#profile-count-change-trend) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum Widget [Trends bei Profilzählung ändern](../guides/profiles.md#profile-count-change-trend) .
 
-## Profil-Zähler-Trend {#profile-count-trend}
+## Entwicklung der Profilanzahl {#profile-count-trend}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-Siehe [Dokumentation zum Trend-Widget &quot;Profilanzahl&quot;](../guides/profiles.md#profile-count-trend) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget zum Trend der Profilanzahl [Profil-Anzahl .](../guides/profiles.md#profile-count-trend)
 
 ## Profile nach Identität {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Siehe [Dokumentation zu Profilen nach Identitäts-Widgets](../guides/profiles.md#profiles-by-identity) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum [Profile nach Identitäts-Widget](../guides/profiles.md#profiles-by-identity) .
 
 ## Trend der Änderung der Profilanzahl {#profiles-count-change-trend}
 
@@ -656,9 +656,9 @@ SELECT date_key,
 
 +++
 
-Siehe [Dokumentation zum Profil-Zähler-Trend-Widget](../guides/profiles.md#profiles-count-change-trend) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum Trend-Widget ](../guides/profiles.md#profiles-count-change-trend) zur Änderung der Profilanzahl.[
 
-## Änderung der Anzahl der Profile nach Identität {#profiles-count-change-trend-by-identity}
+## Trend zur Änderung der Profilanzahl nach Identität {#profiles-count-change-trend-by-identity}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-Siehe [Der Trend zur Profilanzahl ändert sich nach der Dokumentation zum Identitäts-Widget](../guides/profiles.md#profiles-count-change-trend-by-identity) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum Thema [Trends zur Änderung der Profilanzahl nach Identitäts-Widget](../guides/profiles.md#profiles-count-change-trend-by-identity) .
 
 ## Einzelne Identitätsprofile {#single-identity-profiles}
 
@@ -722,7 +722,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Siehe [Dokumentation zum Widget zu einzelnen Identitätsprofilen](../guides/profiles.md#single-identity-profiles) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Einzelidentitätsprofile](../guides/profiles.md#single-identity-profiles) .
 
 ## Einzelne Identitätsprofile nach Identität {#single-identity-profiles-by-identity}
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Siehe [Dokumentation zu einzelnen Identitätsprofilen nach Identitäts-Widgets](../guides/profiles.md#single-identity-profiles-by-identity) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zu [Einzelne Identitätsprofile nach Identitäts-Widget](../guides/profiles.md#single-identity-profiles-by-identity) .
 
 ## Nicht segmentierte Profile {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Siehe [Dokumentation zum Widget zu nicht segmentierten Profilen](../guides/profiles.md#unsegmented-profiles) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Nicht segmentierte Profile](../guides/profiles.md#unsegmented-profiles) .
 
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL-Datenbank, die Dashboard-Einblicke generiert, und welche häufig gestellten Fragen diese Analyse löst. Jetzt können Sie die SQL bearbeiten und iterieren, um Ihre eigenen Einblicke zu generieren.
 
-Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
+Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Sie können auch die SQL lesen und verstehen, die Einblicke für die [Zielgruppen](./audiences.md), [Kontoprofile](./account-profiles.md), und [Ziele](./destinations.md) Dashboards.
+Sie können auch die SQL lesen und verstehen, die Einblicke in die Dashboards [Zielgruppen](./audiences.md), [Kontoprofile](./account-profiles.md) und [Ziele](./destinations.md) generiert.

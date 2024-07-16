@@ -18,7 +18,7 @@ ht-degree: 100%
 Aktualisierungen einer Tag-Erweiterung in Adobe Experience Platform müssen abwärtskompatibel mit früheren Versionen der Erweiterung sein. Das bedeutet:
 
 * Änderungen an den Primärkomponenten der Erweiterungen müssen mit früheren Versionen kompatibel sein. Dazu gehören Erweiterungskonfiguration, Ereignistypen, Bedingungstypen, Aktionstypen, Datenelementtypen und gemeinsame Module.
-* Komponenten, die ein User mit der älteren Erweiterungsversion erstellt hat, müssen die Tauglichkeitsprüfung für die Schemas bestehen können, die von der neueren Version erstellt werden.
+* Komponenten, die ein User mit der älteren Erweiterungsversion erstellt hat, müssen die Tauglichkeitsprüfung für die Schemata bestehen können, die von der neueren Version erstellt werden.
 * Wenn ein Benutzer von Adobe Experience Platform eine aktualisierte Version Ihrer Erweiterung installiert, sollten alle bisherigen Funktionen unverändert bleiben, bis er absichtlich Änderungen vornimmt.
 
 ## Zulässige Änderungen

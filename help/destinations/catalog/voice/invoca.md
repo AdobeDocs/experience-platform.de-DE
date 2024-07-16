@@ -5,16 +5,16 @@ description: Die Invoca Tags-Erweiterung ist eine Stimme des Kundenziels in Adob
 exl-id: f66a2e74-8d94-4b3a-9627-083ca875fad7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 88%
+source-wordcount: '462'
+ht-degree: 86%
 
 ---
 
-# [!DNL Invoca Tags]-Erweiterung  {#invoca-extension}
+# [!DNL Invoca Tags]-Erweiterung {#invoca-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Invoca] sorgt für die Einbeziehung von Anrufdaten und Spracheinblicken in die digitale Customer Journey. Mit [!DNL Invoca’s] Call-Intelligence-Plattform haben Marketing-Experten endlich Analysen, um die Anrufergebnisse zu messen und Offline-Konversionen wieder mit digitalen Ausgaben zu verbinden.
+[!DNL Invoca] bringt Aufrufdaten und Spracheinblicke in die Journey für digitale Kunden. Mit der [!DNL Invoca’s]-Aufrufintelligenzplattform verfügen Marketing-Experten endlich über Analysen, um die Ergebnisse der Aufrufe zu messen und Offline-Konversionen mit digitalen Ausgaben zu verbinden.
 
 [!DNL Invoca Tags] ist eine Stimme der Kundenerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Invoca Tags] Erweiterung:
+So installieren Sie die [!DNL Invoca Tags]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

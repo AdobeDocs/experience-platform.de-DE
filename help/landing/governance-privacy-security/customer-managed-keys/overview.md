@@ -21,19 +21,19 @@ Dieses Dokument bietet einen allgemeinen Überblick über den Prozess zur Aktivi
 
 >[!NOTE]
 >
->Für Customer Journey Analytics-Kunden folgen Sie bitte den Anweisungen im Abschnitt [Customer Journey Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=de).
+>Für Customer Journey Analytics-Kunden folgen Sie den Anweisungen in der [Customer Journey Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=de).
 
 ## Voraussetzungen
 
-So zeigen Sie die [!UICONTROL Verschlüsselung] in Adobe Experience Platform müssen Sie eine Rolle erstellt und der [!UICONTROL Verwalten des kundenverwalteten Schlüssels] Berechtigung für diese Rolle. Jeder Benutzer, der über [!UICONTROL Verwalten des kundenverwalteten Schlüssels] -Berechtigung kann CMK für ihre Organisation aktivieren.
+Um den Abschnitt [!UICONTROL Verschlüsselung] in Adobe Experience Platform anzuzeigen und aufzurufen, müssen Sie eine Rolle erstellt und dieser Rolle die Berechtigung [!UICONTROL Kundenverwalteten Schlüssel verwalten] zugewiesen haben. Jeder Benutzer mit der Berechtigung [!UICONTROL Kunden-verwalteten Schlüssel verwalten] kann CMK für seine Organisation aktivieren.
 
-Weiterführende Informationen zum Zuweisen von Rollen und Berechtigungen in Experience Platform finden Sie im Abschnitt [Berechtigungsdokumentation konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de).
+Weiterführende Informationen zum Zuweisen von Rollen und Berechtigungen in Experience Platform finden Sie in der Dokumentation [Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de) .
 
-Um CMK zu aktivieren, muss die [!DNL Azure] Key Vault muss mit den folgenden Einstellungen konfiguriert werden:
+Um CMK zu aktivieren, muss Ihr [!DNL Azure] Key Vault mit den folgenden Einstellungen konfiguriert werden:
 
 * [Bereinigungsschutz aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
-* [Soft-Löschen aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Zugriff konfigurieren mit [!DNL Azure] rollenbasierte Zugriffssteuerung](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [Soft-Delete aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Konfigurieren des Zugriffs mithilfe der rollenbasierten Zugriffskontrolle [!DNL Azure] 2}](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
 Lesen Sie die verknüpfte Dokumentation, um den Prozess besser zu verstehen.
 
@@ -48,9 +48,9 @@ CMK ist Teil des Healthcare Shield- und des Privacy and Security Shield-Angebots
 Der Prozess sieht folgendermaßen aus:
 
 1. [Konfigurieren Sie einen  [!DNL Azure] Schlüsseltresor](./azure-key-vault-config.md) auf der Grundlage der Richtlinien Ihrer Organisation und generieren Sie dann [einen Verschlüsselungsschlüssel](./azure-key-vault-config.md#generate-a-key), der letztendlich an Adobe weitergegeben wird.
-1. Richten Sie die CMK-App mit Ihrer [!DNL Azure] Mandanten über [API-Aufrufe](./api-set-up.md#register-app) oder [Benutzeroberfläche](./ui-set-up.md#register-app).
-1. Senden Sie Ihre Verschlüsselungsschlüssel-ID an Adobe und starten Sie den Aktivierungsprozess für die Funktion entweder [in der Benutzeroberfläche](./ui-set-up.md#send-to-adobe) oder mit [API-Aufruf](./api-set-up.md#send-to-adobe).
-1. Überprüfen Sie den Status der Konfiguration, um zu überprüfen, ob CMK aktiviert wurde. [in der Benutzeroberfläche](./ui-set-up.md#check-status) oder mit [API-Aufruf](./api-set-up.md#check-status).
+1. Richten Sie die CMK-App mit Ihrem [!DNL Azure] -Mandanten entweder über [API-Aufrufe](./api-set-up.md#register-app) oder die [UI](./ui-set-up.md#register-app) ein.
+1. Senden Sie Ihre Verschlüsselungsschlüssel-ID an Adobe und starten Sie den Aktivierungsprozess für die Funktion entweder [in der Benutzeroberfläche](./ui-set-up.md#send-to-adobe) oder mit einem [API-Aufruf](./api-set-up.md#send-to-adobe).
+1. Überprüfen Sie den Status der Konfiguration, um zu überprüfen, ob CMK entweder [in der Benutzeroberfläche](./ui-set-up.md#check-status) oder mit einem [API-Aufruf](./api-set-up.md#check-status) aktiviert wurde.
 
 Sobald der Einrichtungsprozess abgeschlossen ist, werden alle Daten aus allen Sandboxes, die in Platform integriert sind, mit Ihrer [!DNL Azure]-Schlüsseleinrichtung verschlüsselt. Zur Verwendung von CMK nutzen Sie die [!DNL Microsoft Azure]-Funktionen, die Teil des [öffentlichen Vorschauprogramms](https://azure.microsoft.com/de-de/support/legal/preview-supplemental-terms/) sein können.
 
@@ -62,7 +62,7 @@ Wenn Sie den Platform-Zugriff auf Ihre Daten sperren möchten, können Sie die m
 >
 >Das Deaktivieren der Schlüssel-Vault-, Schlüssel- oder CMK-App kann zu einer brechenden Änderung führen. Sobald die Schlüssel-Vault-, Schlüssel- oder CMK-App deaktiviert ist und die Daten in Platform nicht mehr verfügbar sind, sind alle nachgelagerten Vorgänge im Zusammenhang mit diesen Daten nicht mehr möglich. Stellen Sie sicher, dass Sie die nachgelagerten Auswirkungen der Sperrung des Platform-Zugriffs auf Ihren Schlüssel verstehen, bevor Sie Änderungen an Ihrer Konfiguration vornehmen.
 
-Nachdem Sie den Schlüsselzugriff entfernt oder den Schlüssel deaktiviert/gelöscht haben [!DNL Azure] -Schlüsselwertgewölbe kann es zwischen einigen Minuten und 24 Stunden dauern, bis diese Konfiguration in die primären Datenspeicher übertragen wird. Platform-Workflows umfassen auch zwischengespeicherte und vorübergehende Datenspeicher, die für die Leistung und die Kernfunktionen der Anwendung erforderlich sind. Die Übertragung der CMK-Sperrung durch diese zwischengespeicherten und vorübergehenden Speicher kann bis zu sieben Tage dauern, wie von ihren Datenverarbeitungs-Workflows bestimmt. Dies bedeutet beispielsweise, dass das Profil-Dashboard Daten aus seinem Cache-Datenspeicher aufbewahrt und anzeigt und es sieben Tage dauert, bis die im Cache-Datenspeicher gespeicherten Daten im Rahmen des Aktualisierungszyklus ablaufen. Die gleiche Zeitverzögerung gilt für Daten, die erneut verfügbar werden, wenn der Zugriff auf das Programm erneut aktiviert wird.
+Nach dem Entfernen des Schlüsselzugriffs oder dem Deaktivieren/Löschen des Schlüssels aus Ihrem [!DNL Azure]-Schlüsselvault kann es einige Minuten bis zu 24 Stunden dauern, bis diese Konfiguration in die primären Datenspeicher übertragen wird. Platform-Workflows umfassen auch zwischengespeicherte und vorübergehende Datenspeicher, die für die Leistung und die Kernfunktionen der Anwendung erforderlich sind. Die Übertragung der CMK-Sperrung durch diese zwischengespeicherten und vorübergehenden Speicher kann bis zu sieben Tage dauern, wie von ihren Datenverarbeitungs-Workflows bestimmt. Dies bedeutet beispielsweise, dass das Profil-Dashboard Daten aus seinem Cache-Datenspeicher aufbewahrt und anzeigt und es sieben Tage dauert, bis die im Cache-Datenspeicher gespeicherten Daten im Rahmen des Aktualisierungszyklus ablaufen. Die gleiche Zeitverzögerung gilt für Daten, die erneut verfügbar werden, wenn der Zugriff auf das Programm erneut aktiviert wird.
 
 >[!NOTE]
 >
@@ -70,4 +70,4 @@ Nachdem Sie den Schlüsselzugriff entfernt oder den Schlüssel deaktiviert/gelö
 
 ## Nächste Schritte
 
-Beginnen Sie zum Starten des Prozesses mit [Konfiguration einer [!DNL Azure] Key Vault](./azure-key-vault-config.md) und [einen Verschlüsselungsschlüssel generieren](./azure-key-vault-config.md#generate-a-key) für Adobe freigeben.
+Beginnen Sie zum Starten des Prozesses mit der [Konfiguration eines  [!DNL Azure] Key Vault](./azure-key-vault-config.md) und [Generierung eines Verschlüsselungsschlüssels](./azure-key-vault-config.md#generate-a-key), der für Adobe freigegeben werden soll.

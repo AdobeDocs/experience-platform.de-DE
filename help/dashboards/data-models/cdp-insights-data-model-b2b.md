@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Real-time Customer Data Platform Insights-Datenmodell B2B Edition
 
-Das Real-time Customer Data Platform Insights-Datenmodell für die B2B Edition stellt die Datenmodelle und SQL bereit, die die Einblicke für [Kontoprofile](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle von B2B-Marketing und Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
+Das Real-time Customer Data Platform Insights-Datenmodell für die B2B Edition stellt die Datenmodelle und SQL bereit, die die Einblicke für [Kontoprofile](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle von B2B-Marketing und Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Weitere Informationen finden Sie in der Dokumentation unter [Real-Time CDP-Editionen](../../rtcdp/overview.md#rtcdp-editions) für weitere Informationen oder wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
+>Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Weitere Informationen finden Sie in der Dokumentation zu verfügbaren [Real-Time CDP-Editionen](../../rtcdp/overview.md#rtcdp-editions) oder wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Verständnis benutzerdefinierter Dashboards voraus. Lesen Sie die Dokumentation unter [Erstellen eines benutzerdefinierten Dashboards](../user-defined-dashboards.md) bevor Sie mit diesem Handbuch fortfahren.
+Dieses Handbuch setzt ein Verständnis benutzerdefinierter Dashboards voraus. Lesen Sie die Dokumentation zu [Erstellen eines benutzerdefinierten Dashboards](../user-defined-dashboards.md) , bevor Sie mit diesem Handbuch fortfahren.
 
 ## Real-Time CDP B2B Insight-Berichte und Anwendungsfälle {#B2B-insight-reports-and-use-cases}
 
@@ -52,13 +52,13 @@ Das folgende Diagramm zeigt die relevanten Datenfelder in jedem Datensatz, ihren
 
 #### Die neuen Konten nach Anwendungsfall der Industrie {#accounts-by-industry}
 
-Die für die [!UICONTROL Neue Abschlüsse nach Wirtschaftszweigen] Insight gibt die fünf wichtigsten Branchen in Abhängigkeit von ihrer Anzahl an Kontoprofilen und ihrer relativen Größe zueinander zurück. Siehe [[!UICONTROL Neue Konten nach Branchen] Widget-Dokumentation](../guides/account-profiles.md#accounts-by-industry) für weitere Informationen.
+Die Logik, die für den Einblick in [!UICONTROL Neue Konten nach Branche] verwendet wird, gibt die fünf wichtigsten Branchen in Abhängigkeit von ihrer Anzahl der Kontoprofile und ihrer relativen Größe zueinander zurück. Weitere Informationen finden Sie in der Dokumentation zum Widget [[!UICONTROL Neue Konten nach Branche]](../guides/account-profiles.md#accounts-by-industry) .
 
 >[!TIP]
 >
 >Sie können diese SQL-Abfrage so anpassen, dass mehr oder weniger als die fünf wichtigsten Branchen zurückgegeben werden.
 
-Die SQL, die die [!UICONTROL Neue Abschlüsse nach Wirtschaftszweigen] Einblicke finden Sie im Abschnitt unten, der reduziert werden kann.
+Die SQL, die den Einblick in die [!UICONTROL neuen Konten nach Branche] generiert, ist im unten stehenden ausblendbaren Abschnitt dargestellt.
 
 +++SQL-Abfrage
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### Anwendungsfall Neue Konten nach Typ {#accounts-by-type}
 
-Die für die [!UICONTROL Neue Konten nach Typ] insight gibt die numerische Aufschlüsselung der Konten nach Typ zurück. Diese Einblicke können dabei helfen, die Geschäftsstrategie und den Betrieb zu steuern, einschließlich Ressourcenzuteilung oder Marketing-Strategien. Siehe [[!UICONTROL Neue Konten nach Typ] Widget-Dokumentation](../guides/account-profiles.md#accounts-by-type) für weitere Informationen.
+Die Logik, die für den Einblick in [!UICONTROL Neue Konten nach Typ] verwendet wird, gibt die numerische Aufschlüsselung der Konten nach Typ zurück. Diese Einblicke können dabei helfen, die Geschäftsstrategie und den Betrieb zu steuern, einschließlich Ressourcenzuteilung oder Marketing-Strategien. Weitere Informationen finden Sie in der Dokumentation zu [[!UICONTROL neuen Konten nach Typ] Widget](../guides/account-profiles.md#accounts-by-type) .
 
-Die SQL, die die [!UICONTROL Neue Konten nach Typ] Einblicke finden Sie im Abschnitt unten, der reduziert werden kann.
+Die SQL, die die [!UICONTROL neuen Konten nach Typ] Insight generiert, wird im unten stehenden ausblendbaren Abschnitt angezeigt.
 
 +++SQL-Abfrage
 

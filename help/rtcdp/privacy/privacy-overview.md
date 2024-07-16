@@ -27,7 +27,7 @@ Rechtliche Datenschutzbestimmungen wie die [!DNL General Data Protection Regulat
 
 ## Opt-out-Funktionen
 
-[!DNL Real-Time CDP] ermöglicht es Kundinnen und Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die Opt-out-Voreinstellungen von Kunden werden erfasst und gespeichert von [!DNL Real-Time Customer Profile]und können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mit boolescher Logik (&quot;AND NOT&quot;) in der Segmenteigenschaft von einer Zielgruppe abgemeldet haben.
+[!DNL Real-Time CDP] ermöglicht es Kundinnen und Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die Opt-out-Voreinstellungen von Kunden werden von [!DNL Real-Time Customer Profile] erfasst und gespeichert und können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mithilfe der booleschen Logik (&quot;AND NOT&quot;) in der Segmenteigenschaft von einer Zielgruppe abgemeldet haben.
 
 Weitere Informationen finden Sie im Dokument zu [Berücksichtigung von Opt-out-Anfragen](../../segmentation/consents.md) in der Dokumentation zum Segmentierungs-Service in Adobe Experience Platform.
 

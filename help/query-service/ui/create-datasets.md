@@ -14,7 +14,7 @@ ht-degree: 84%
 
 # Generieren von Ausgabedatensätzen aus Abfrageergebnissen
 
-[!DNL Query Service] ermöglicht Ihnen die Verwendung von Abfragen zum Generieren von Datensätzen im [!DNL Data Lake]. Diese Datensätze können dann als Eingabe für weitere Abfragen oder in anderen Diensten wie [!DNL Data Science Workspace], Echtzeit-Kundenprofil oder [!DNL Analysis Workspace].
+[!DNL Query Service] ermöglicht Ihnen die Verwendung von Abfragen zum Generieren von Datensätzen im [!DNL Data Lake]. Diese Datensätze können dann als Eingabe für weitere Abfragen oder in anderen Diensten wie [!DNL Data Science Workspace], Echtzeit-Kundenprofil oder [!DNL Analysis Workspace] verwendet werden.
 
 ## Generieren von Datensätzen über die Benutzeroberfläche von Adobe Experience Platform
 
@@ -24,13 +24,13 @@ Gehen Sie wie folgt vor, um Datensätze über die Adobe Experience Platform-Benu
 
 2. Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Abfragen]** und wählen Sie auf der Registerkarte **[!UICONTROL Vorlagen]** die erstellte Abfrage aus. Weitere Informationen zum Anzeigen von Abfragen, die für Ihre Organisation in der Platform-Benutzeroberfläche erstellt und gespeichert wurden, finden Sie in der [[!DNL Query Service] Übersicht](./overview.md#browse).
 
-3. Wählen Sie im Bereich &quot;Query details&quot;die Option **[!UICONTROL Als CTAS ausführen]**.
+3. Wählen Sie im Bereich &quot;Query details&quot;die Option **[!UICONTROL Run as CTAS]**.
 
-   ![Der Arbeitsbereich &quot;Abfragen&quot; [!UICONTROL Vorlagen] Registerkarte mit Auswahl [!UICONTROL Als CTAS ausführen] hervorgehoben.](../images/ui/create-datasets/run-as-ctas.png)
+   ![Die Registerkarte &quot;Abfragen&quot;-Arbeitsbereich [!UICONTROL Vorlagen] mit der Markierung &quot;[!UICONTROL Als CTAS ausführen]&quot;](../images/ui/create-datasets/run-as-ctas.png)&quot;.
 
 4. Geben Sie im angezeigten Dialogfeld einen Datensatznamen ein, dem Ihre LDAP-ID vorangestellt ist. Der Datensatzname muss nicht eindeutig oder SQL-sicher sein. Beachten Sie, dass der Tabellenname für Ihren Datensatz basierend auf dem hier erstellten Datensatznamen generiert wird.
 
-5. Geben Sie als Nächstes eine Beschreibung für Ihren Datensatz in die [!UICONTROL Beschreibung] Feld und wählen Sie **[!UICONTROL Als CTAS ausführen]**.
+5. Geben Sie als Nächstes eine Beschreibung für Ihren Datensatz in das Feld [!UICONTROL Beschreibung] ein und wählen Sie **[!UICONTROL Als CTAS ausführen]**.
 
    ![Das Dialogfeld Ausgabedatensatz mit den Datensatzdetails und [!UICONTROL Als CTAS ausführen] hervorgehoben](../images/ui/create-datasets/run-query.png)
 

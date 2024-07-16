@@ -1,11 +1,11 @@
 ---
 title: Referenz zu Tag-Konsistenztests
-description: Erfahren Sie, wie die Auditor-Funktion im Adobe Experience Platform Debugger Tests zur Tag-Konsistenz durchführt.
+description: Erfahren Sie, wie die Auditor-Funktion in Adobe Experience Platform Debugger Tests zur Tag-Konsistenz durchführt.
 exl-id: 642b0c49-a7c7-4142-8189-67f00ed50015
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 43%
+source-wordcount: '118'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ Diese Referenz enthält weitere Informationen dazu, wie die Auditor-Funktion in 
 
 >[!NOTE]
 >
->Weitere Informationen zu Auditor-Tests in Platform Debugger finden Sie in der [Übersicht über Auditor-Funktionen](./overview.md).
+>Weitere Informationen zu Auditor-Tests in Platform Debugger finden Sie in der Übersicht über die Auditor-Funktion [1}.](./overview.md)
 
 Tag-Konsistenztests suchen Inkonsistenzen auf allen geprüften Seiten. Dies sind Werte oder Konfigurationen, die auf allen Seiten der Site gleich sein sollten, um die genaue Datenerfassung sicherzustellen.
 

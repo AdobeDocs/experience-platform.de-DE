@@ -1,13 +1,13 @@
 ---
 title: Erweiterte Verwaltung von Aktivierungskonten
 description: Erfahren Sie, wie Sie Verwaltungsaufgaben für Ihr erweitertes Aktivierungskonto ausführen, z. B. die Lizenznutzung überwachen und die richtigen Berechtigungen zuweisen.
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: ee0ec4b9-a083-447b-b7a7-e1307e90c646
+source-git-commit: 2222e9fbf75f3082d331868f820247e0c0ce3ba2
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
 
 ---
-
 
 # Kontoverwaltung
 
@@ -17,51 +17,51 @@ Auf dieser Seite wird beschrieben, wie Sie ein Benutzerkonto in der Admin Consol
 
 ## Benutzerkonten erstellen {#create-users}
 
-Bevor Sie [!DNL Audience Manager Expanded Activation], müssen Sie ein Benutzerkonto erstellen.
+Bevor Sie [!DNL Audience Manager Expanded Activation] verwenden können, müssen Sie ein Benutzerkonto erstellen.
 
-So erstellen Sie ein Benutzerkonto für [!DNL Expanded Activation]Befolgen Sie die Anweisungen zum Verwalten von Benutzern über die [Adobe Admin Console](https://helpx.adobe.com/de/enterprise/using/manage-users-individually.html) Dokumentation.
+Um ein Benutzerkonto für [!DNL Expanded Activation] zu erstellen, befolgen Sie die Anweisungen zum Verwalten von Benutzern in der Dokumentation zu [Adobe Admin Console](https://helpx.adobe.com/de/enterprise/using/manage-users-individually.html) .
 
 ## Benutzer zur Berechtigungsrolle hinzufügen {#permissions}
 
-Nachdem Sie ein Benutzerkonto erstellt haben, müssen Sie es zum [!DNL Expanded Activation] Berechtigungsrolle in der [!DNL Expanded Activation] -Benutzeroberfläche.
+Nachdem Sie ein Benutzerkonto erstellt haben, müssen Sie es der Berechtigungsrolle [!DNL Expanded Activation] in der Benutzeroberfläche von [!DNL Expanded Activation] hinzufügen.
 
-Navigieren Sie zu **[!UICONTROL Administration]** -> **[!UICONTROL Berechtigungen]** -> **[!UICONTROL Rollen]** und wählen Sie die **[!UICONTROL Erweiterte Aktivierungsstandardrolle]**.
+Wechseln Sie zu **[!UICONTROL Administration]** -> **[!UICONTROL Berechtigungen]** -> **[!UICONTROL Rollen]** und wählen Sie die erweiterte Aktivierungsstandardrolle **[!UICONTROL 7 aus.]**
 
-![Erweitertes Bild der Benutzeroberfläche &quot;Aktivierung&quot;mit der Seite &quot;Rollen&quot;.](assets/expanded-activation-role.png)
+![ Erweitertes Bild der Aktivierungsbenutzeroberfläche, das die Seite &quot;Benutzerrollen&quot;anzeigt.](assets/expanded-activation-role.png)
 
-Navigieren Sie zu **[!UICONTROL Benutzer]** Registerkarte und wählen Sie **[!UICONTROL Benutzer hinzufügen]**.
+Gehen Sie zur Registerkarte **[!UICONTROL Benutzer]** und wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
 
-![Erweitertes Bild der Aktivierungsbenutzeroberfläche, das die Seite Benutzer anzeigt.](assets/add-users.png)
+![ Erweitertes Bild der Aktivierungsbenutzeroberfläche, das die Seite &quot;Benutzer&quot;anzeigt.](assets/add-users.png)
 
-Wählen Sie den neu erstellten Benutzer aus der verfügbaren Liste aus und wählen Sie **[!UICONTROL Speichern]**.
+Wählen Sie den neu erstellten Benutzer aus der verfügbaren Liste und danach **[!UICONTROL Speichern]** aus.
 
-![Erweitertes Bild der Aktivierungsbenutzeroberfläche mit der Seite Benutzer hinzufügen .](assets/add-user.png)
+![ Erweitertes Bild der Aktivierungsbenutzeroberfläche, das die Seite &quot;Benutzer hinzufügen&quot;anzeigt.](assets/add-user.png)
 
-Das Benutzerkonto wird jetzt erstellt und der richtigen Rolle zugewiesen. Sie kann jetzt auf die **[!UICONTROL Erweiterte Aktivierung]** -Benutzeroberfläche.
+Das Benutzerkonto wird jetzt erstellt und der richtigen Rolle zugewiesen. Jetzt kann sie auf die Benutzeroberfläche **[!UICONTROL Erweiterte Aktivierung]** zugreifen.
 
 ## Lizenznutzung überwachen {#license-usage}
 
-Ihre [!DNL Audience Manager Expanded Activation] Der Vertrag gibt die maximale Anzahl von Hash-E-Mails an, die Sie in Ihr Konto aufnehmen können.
+Ihr [!DNL Audience Manager Expanded Activation] -Vertrag gibt die maximale Anzahl von Hash-E-Mails an, die Sie in Ihr Konto aufnehmen können.
 
-Diese Informationen finden Sie unter **[!UICONTROL Administration]** -> **[!UICONTROL Lizenzverwendung]** Seite.
+Sie finden diese Informationen auf der Seite **[!UICONTROL Administration]** -> **[!UICONTROL Lizenzverwendung]** .
 
-![Erweitertes Bild der Aktivierungsbenutzeroberfläche, das den Bildschirm zur Lizenznutzung anzeigt.](assets/license-usage.png)
+![ Erweitertes Bild der Aktivierungsbenutzeroberfläche, das den Bildschirm zur Lizenznutzung anzeigt.](assets/license-usage.png)
 
 Auf dieser Seite finden Sie die folgenden Informationen:
 
-* **[!UICONTROL Produkt]**: Das Adobe-Produkt, für das Sie lizenziert sind. Dies wird immer **[!UICONTROL Erweiterte Aktivierung des Audience Managers]**.
-* **[!UICONTROL Primäre Metrik]**: Der Name der Metrik, die zur Verwendung verfolgt wird. Dies wird immer **[!UICONTROL Ansprechbare Zielgruppe]**.
-* **[!UICONTROL Lizenzbetrag]**: Die maximale Anzahl von Hash-E-Mails, die lizenziert sind zu erfassen.
+* **[!UICONTROL Produkt]**: Das Adobe-Produkt, für das Sie lizenziert sind. Dies ist immer **[!UICONTROL erweiterte Aktivierung des Audience Managers]**.
+* **[!UICONTROL Primäre Metrik]**: Der Name der Metrik, die zur Verwendung verfolgt wird. Dabei handelt es sich immer um **[!UICONTROL adressierbare Zielgruppe]**.
+* **[!UICONTROL Lizenzbetrag]**: Die maximale Anzahl von Hash-E-Mails, für die Sie eine Lizenz besitzen.
 
   >[!TIP]
   >
-  >Sie erfassen Hash-E-Mails über die [Quell-Connector für Audience Manager](../sources/connectors/adobe-applications/audience-manager.md). Siehe die Dokumentation unter [So aktivieren Sie Zielgruppen](activate-audiences.md) für weitere Details.
+  >Sie erfassen gehashte E-Mails über den Quell-Connector [Audience Manager ](../sources/connectors/adobe-applications/audience-manager.md). Weitere Informationen finden Sie in der Dokumentation zu [Aktivierung von Zielgruppen](activate-audiences.md) .
 
-* **[!UICONTROL Nutzung]**: die Anzahl der erfassten gehashten E-Mails.
+* **[!UICONTROL Nutzung]**: die Anzahl der gehashten E-Mails, die Sie erfasst haben.
 * **[!UICONTROL Nutzung %]**: der Prozentsatz Ihres Lizenzbetrags, den Sie verwendet haben.
 
-Weitere Informationen zur Lizenzverwendung im Experience Platform finden Sie unter [Dokumentation zur Lizenzverwendung](../dashboards/guides/license-usage.md).
+Weitere Informationen zur Lizenzverwendung im Experience Platform finden Sie in der [Dokumentation zur Lizenzverwendung](../dashboards/guides/license-usage.md).
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie mindestens ein Benutzerkonto mit dem richtigen Zugriff auf &quot;Erweiterte Aktivierung&quot;konfiguriert haben, können Sie mit der Verwendung des Kontos beginnen, um [Zielgruppen aktivieren](activate-audiences.md).
+Nachdem Sie jetzt mindestens ein Benutzerkonto mit dem richtigen Zugriff auf &quot;Erweiterte Aktivierung&quot;konfiguriert haben, können Sie mit der Verwendung des Kontos beginnen, um [Zielgruppen aktivieren](activate-audiences.md).

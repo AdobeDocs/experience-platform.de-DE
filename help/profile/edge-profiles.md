@@ -20,9 +20,9 @@ Adobe-Anwendungen wie Adobe Target, Custom Personalization Destination und Adobe
 Achten Sie beim Arbeiten mit Kanten darauf, die folgenden Konzepte zu verstehen:
 
 - **Edge**: Ein Edge ist ein geografisch platzierter Server, der Daten speichert und für Anwendungen leicht zugänglich macht.
-- **Edge-Projektion**: Eine Edge-Projektion ist die Projektionsansicht des Profils an einem bestimmten Edge, um Profildaten mit einer eindeutigen ID darzustellen, die einem bestimmten Schema für einen bestimmten Kunden entspricht. Beispiel: eine Entität, die das Profilschema mit ID berücksichtigt `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, Besucher der Luma-Website, repliziert in das VA6-Rechenzentrum, mit den Feldern `age = 35` und `gender = male`.
+- **Edge-Projektion**: Eine Edge-Projektion ist die Systemprojektionsansicht des Profils an einem bestimmten Edge, um Profildaten mit einer eindeutigen ID darzustellen, die einem bestimmten Schema für einen bestimmten Kunden entspricht. Beispiel: eine Entität, die das Profilschema mit der ID `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8` berücksichtigt, dem Besucher der Luma-Website, der an das VA6-Rechenzentrum repliziert wurde und die Felder `age = 35` und `gender = male` enthält.
 
-Anders ausgedrückt: Daten werden durch eine Projektion an eine Kante weitergeleitet, wobei die **Projektionsziel** Definieren **,** -Edge, an den die Daten gesendet werden.
+Anders ausgedrückt: Daten werden durch eine Projektion an einen Edge weitergeleitet, wobei das **Projektionsziel** **definiert, an welchen** Edge die Daten gesendet werden.
 
 ## Verfügbare Regionen {#regions}
 
@@ -51,11 +51,11 @@ Der Projection Worker Service (MEPW) überwacht Änderungen, die am Hub in Profi
 
 ### Express Profile Service {#xps}
 
-Der Express Profile Service (XPS) ruft die Profile an den verschiedenen Edges ab. Dieser Dienst empfängt Anforderungen von nachgelagerten Lösungen wie Adobe Target- oder Custom Personalization-Zielen, sucht die Profile aus den Datenbanken an den Edges und sendet das angeforderte Profil an die anfragende Lösung. Wenn das Profil nicht gefunden wird, wird eine Aktualisierungsanforderung an den zugehörigen Hub gesendet.
+Der Express Profile Service (XPS) ruft die Profile an den verschiedenen Edges ab. Dieser Dienst empfängt Anforderungen von nachgelagerten Lösungen wie Adobe Target- oder benutzerdefinierten Personalization-Zielen, sucht die Profile aus den Datenbanken an den Edges und sendet das angeforderte Profil an die anfragende Lösung. Wenn das Profil nicht gefunden wird, wird eine Aktualisierungsanforderung an den zugehörigen Hub gesendet.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs sollten Sie über grundlegende Kenntnisse zu Kantenprofilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Diensten für Kantenprofile. Weitere Informationen zum Adobe Experience Edge finden Sie im Abschnitt [Edge Network - Übersicht](../web-sdk/home.md#edge-network).
+Nach dem Lesen dieses Handbuchs sollten Sie über grundlegende Kenntnisse zu Kantenprofilen verfügen, einschließlich Informationen zu den verfügbaren Regionen und Diensten für Kantenprofile. Weitere Informationen zum Adobe Experience Edge finden Sie in der [Edge Network - Übersicht](../web-sdk/home.md#edge-network).
 
 ## Anhang
 
@@ -69,8 +69,8 @@ Darüber hinaus verfügt jedes Kantenprofil über ein Schemaattribut namens User
 
 ### Wie funktionieren Datenabläufe mit Kantenprofilen?
 
-Bei Kantenprofilen bestimmt der Datenablauf, wie lange das Profil auf der Kante bleibt, bevor es entfernt wird. Datengültigkeit **rollierend**: Jedes Mal, wenn auf das Profil an der Kante zugegriffen wird, wird die Datenablaufzeit zurückgesetzt. Standardmäßig ist die Datengültigkeit auf 14 Tage begrenzt.
+Bei Kantenprofilen bestimmt der Datenablauf, wie lange das Profil auf der Kante bleibt, bevor es entfernt wird. Der Datenablauf ist **rollierend**. Das bedeutet, dass die Datenablaufzeit jedes Mal zurückgesetzt wird, wenn auf das Profil an der Kante zugegriffen wird. Standardmäßig ist die Datengültigkeit auf 14 Tage begrenzt.
 
 ### Welche Daten werden im Edge-Profil gespeichert?
 
-Edge Profile speichert die Profilattribute, Profil-IDs sowie qualifizierte Zielgruppen-IDs. Standardmäßig ist die Datengültigkeit auf 14 Tage begrenzt.
+Edge Profile speichert die Profilattribute, Profil-IDs sowie die qualifizierten Zielgruppen-IDs. Standardmäßig ist die Datengültigkeit auf 14 Tage begrenzt.

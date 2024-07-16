@@ -257,11 +257,11 @@ Verwenden Sie dazu das `namedEnum`-Objekt wie unten gezeigt und konfigurieren Si
 
 In Situationen, in denen Sie eine API dynamisch aufrufen und die Antwort verwenden möchten, um die Optionen in einem Dropdown-Menü dynamisch auszufüllen, können Sie einen dynamischen Dropdown-Selektor verwenden.
 
-Die dynamischen Dropdown-Selektoren sehen genauso aus wie die [reguläre Dropdown-Selektoren](#dropdown-selectors) in der Benutzeroberfläche. Der einzige Unterschied besteht darin, dass die Werte dynamisch von einer API abgerufen werden.
+Die dynamischen Dropdown-Selektoren sehen in der Benutzeroberfläche genauso aus wie die [regulären Dropdown-Selektoren](#dropdown-selectors). Der einzige Unterschied besteht darin, dass die Werte dynamisch von einer API abgerufen werden.
 
 Um einen dynamischen Dropdown-Selektor zu erstellen, müssen Sie zwei Komponenten konfigurieren:
 
-**Schritt 1.** [Erstellen eines Zielservers](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit `responseFields` -Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
+**Schritt 1.** [Erstellen Sie einen Zielserver ](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) mit einer `responseFields` -Vorlage für den dynamischen API-Aufruf, wie unten dargestellt.
 
 ```json
 {
@@ -309,7 +309,7 @@ Um einen dynamischen Dropdown-Selektor zu erstellen, müssen Sie zwei Komponente
 }
 ```
 
-**Schritt 2.** Verwenden Sie die `dynamicEnum` -Objekt, wie unten dargestellt. Im folgenden Beispiel wird die Variable `User` -Dropdown-Liste wird mit dem dynamischen Server abgerufen.
+**Schritt 2.** Verwenden Sie das Objekt `dynamicEnum` wie unten dargestellt. Im folgenden Beispiel wird das Dropdown-Menü `User` mit dem dynamischen Server abgerufen.
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -338,7 +338,7 @@ Um einen dynamischen Dropdown-Selektor zu erstellen, müssen Sie zwei Komponente
 ]
 ```
 
-Legen Sie die `destinationServerId` -Parameter an die ID des Zielservers an, den Sie in Schritt 1 erstellt haben. Sie können die Ziel-Server-ID in der Antwort der [Zielserverkonfiguration abrufen](../../authoring-api/destination-server/retrieve-destination-server.md) API-Aufruf.
+Legen Sie den Parameter `destinationServerId` auf die ID des Zielservers fest, den Sie in Schritt 1 erstellt haben. Sie können die Ziel-Server-ID in der Antwort des API-Aufrufs [Abrufen einer Zielserverkonfiguration](../../authoring-api/destination-server/retrieve-destination-server.md) sehen.
 
 ## Erstellen verschachtelter Kundendatenfelder {#nested-fields}
 
@@ -346,11 +346,11 @@ Sie können verschachtelte Kundendatenfelder für komplexe Integrationsmuster er
 
 Sie können beispielsweise verschachtelte Kundendatenfelder hinzufügen, um von Kunden zu verlangen, einen Integrationstyp mit Ihrem Ziel auszuwählen, gefolgt von einer weiteren Auswahl. Die zweite Auswahl ist ein verschachteltes Feld innerhalb des Integrationstyps.
 
-Um ein verschachteltes Feld hinzuzufügen, verwenden Sie die `properties` -Parameter wie unten dargestellt. Im folgenden Konfigurationsbeispiel sehen Sie drei separate verschachtelte Felder innerhalb der **Ihr Ziel - Integrationsspezifische Einstellungen** Kundendatenfeld.
+Verwenden Sie zum Hinzufügen eines verschachtelten Felds den Parameter `properties` , wie unten dargestellt. Im folgenden Konfigurationsbeispiel sehen Sie drei separate verschachtelte Felder im Kundendatenfeld **Ihr Ziel - Integrationsspezifische Einstellungen** .
 
 >[!TIP]
 >
->Ab der Version April 2024 können Sie eine `isRequired` auf verschachtelten Feldern. Im folgenden Konfigurationsfragment werden beispielsweise die ersten beiden verschachtelten Felder als erforderlich markiert (hervorgehobene Zeile xxx) und Kunden können den Vorgang nur fortsetzen, wenn sie einen Wert für das Feld auswählen. Weitere Informationen zu den erforderlichen Feldern finden Sie in der [unterstützte Parameter](#supported-parameters) Abschnitt.
+>Ab der Version April 2024 können Sie einen `isRequired` -Parameter für verschachtelte Felder festlegen. Im folgenden Konfigurationsfragment werden beispielsweise die ersten beiden verschachtelten Felder als erforderlich markiert (hervorgehobene Zeile xxx) und Kunden können den Vorgang nur fortsetzen, wenn sie einen Wert für das Feld auswählen. Weitere Informationen zu erforderlichen Feldern finden Sie im Abschnitt [unterstützte Parameter](#supported-parameters) .
 
 ```json {line-numbers="true" highlight="11,20"}
     {
@@ -408,7 +408,7 @@ Um ein Feld als bedingt festzulegen, verwenden Sie den Parameter `conditional` w
 }
 ```
 
-In einem größeren Kontext können Sie die `conditional` -Feld, das in der folgenden Zielkonfiguration verwendet wird, neben dem `fileType` und die `csvOptions` -Objekt, in dem es definiert ist. Die bedingten Felder werden im `properties` -Parameter.
+In einem größeren Kontext können Sie sehen, wie das Feld `conditional` in der unten stehenden Zielkonfiguration neben der Zeichenfolge `fileType` und dem Objekt `csvOptions` verwendet wird, in dem es definiert ist. Die bedingten Felder werden im Parameter `properties` definiert.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[

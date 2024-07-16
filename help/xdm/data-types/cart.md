@@ -1,23 +1,24 @@
 ---
 title: Warenkorbdatentyp
 description: Erfahren Sie mehr über den Datentyp des Experience-Datenmodells für Warenkorb (XDM).
-source-git-commit: c3590dc2cfe47eb634136eeb88578f965598760d
+exl-id: 24ae3882-60f3-4962-b0b5-7dba48170da8
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
-# [!UICONTROL Warenkorb] Datentyp
+# Datentyp [!UICONTROL Warenkorb]
 
-[!UICONTROL Warenkorb] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Eigenschaften für einen Warenkorb bereitstellt. Verwenden Sie diesen Datentyp, um die vom Verkäufer zugewiesene eindeutige Kennung zu erfassen (`Cart ID`) und der Quelle (`Cart Source`), wobei ein oder mehrere Produkte dem Warenkorb hinzugefügt wurden.
+[!UICONTROL Warenkorb] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Eigenschaften für einen Warenkorb bereitstellt. Verwenden Sie diesen Datentyp, um die eindeutige Kennung zu erfassen, die vom Verkäufer (`Cart ID`) zugewiesen wurde, und die Quelle (`Cart Source`), in der ein oder mehrere Produkte zum Warenkorb hinzugefügt wurden.
 
-![Ein Diagramm des [!UICONTROL Warenkorb] Datentyp.](../images/data-types/cart.png)
+![Ein Diagramm des Datentyps [!UICONTROL Warenkorb].](../images/data-types/cart.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |----------------|-------------------|-----------|------------------------------------------------------------|
-| [!UICONTROL Warenkorb-ID] | `cartID` | Zeichenfolge | Vom Verkäufer für den Warenkorb zugewiesene eindeutige Kennung. |
-| [!UICONTROL Warenkorbquelle] | `cartSource` | Zeichenfolge | wenn ein oder mehrere Erzeugnisse aus dem Warenkorb hinzugefügt wurden. |
+| [!UICONTROL Warenkorb-ID] | `cartID` | Zeichenfolge | Vom Verkäufer dem Warenkorb zugewiesene eindeutige Kennung. |
+| [!UICONTROL Warenkorb Source] | `cartSource` | Zeichenfolge | wenn ein oder mehrere Erzeugnisse aus dem Warenkorb hinzugefügt wurden. |
 
 {style="table-layout:auto"}
 

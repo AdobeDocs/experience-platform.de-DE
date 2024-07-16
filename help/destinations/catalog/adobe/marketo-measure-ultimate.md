@@ -40,8 +40,8 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Datensatzexport]** | Sie exportieren Rohdatensätze, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Mehr dazu [Datensatzexporte](/help/destinations/destination-types.md#dataset-export-destinations). |
-| Exporthäufigkeit | **[!UICONTROL Batch]** | Dieses Batch-Ziel exportiert alle zwei Stunden Dateien in die Marketo Measure-Plattform. Mehr dazu [Planen von Datensatzexporten](/help/destinations/ui/export-datasets.md#scheduling). |
+| Exporttyp | **[!UICONTROL Datensatzexport]** | Sie exportieren Rohdatensätze, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Weitere Informationen zu [Datensatzexporten](/help/destinations/destination-types.md#dataset-export-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Batch]** | Dieses Batch-Ziel exportiert alle zwei Stunden Dateien in die Marketo Measure-Plattform. Erfahren Sie mehr über [Planen von Datensatzexporten](/help/destinations/ui/export-datasets.md#scheduling). |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung mit dem Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele in Datensätzen verwalten und aktivieren]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die im folgenden Abschnitt aufgelisteten Felder aus.
 
@@ -72,13 +72,13 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen Sie die [Exportieren von Datensätzen](/help/destinations/ui/export-datasets.md) Tutorial für ausführliche Anweisungen zum Exportieren von Datensätzen in dieses Ziel.
+Ausführliche Anweisungen zum Exportieren von Datensätzen in dieses Ziel finden Sie im Tutorial [Datensätze exportieren](/help/destinations/ui/export-datasets.md) .
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Um einen erfolgreichen Datensatz-Export zu überprüfen, können Sie überprüfen, ob Ihr Datensatz ihn erfolgreich an Ihre [Snowflake Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
+Um einen erfolgreichen Datensatzexport zu überprüfen, können Sie überprüfen, ob Ihr Datensatz erfolgreich zu Ihrem [Snowflake-Data Warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html) gelangt ist.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

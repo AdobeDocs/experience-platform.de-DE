@@ -6,7 +6,7 @@ description: Mit dem Rezept "Einzelhandelsumsätze"können Sie eine Prognose fü
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 21%
 
 ---
@@ -36,7 +36,7 @@ In diesem Tutorial erfahren Sie, wie Sie das Rezept &quot;Einzelhandelsumsätze&
 
 ## Datenschema
 
-Dieses Rezept verwendet [XDM-Schemata](../../xdm/schema/field-dictionary.md) , um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
+Dieses Rezept verwendet [XDM-Schemas](../../xdm/schema/field-dictionary.md), um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
 | Feldname | Typ |
 | --- | --- |
@@ -55,9 +55,9 @@ Dieses Rezept verwendet [XDM-Schemata](../../xdm/schema/field-dictionary.md) , u
 
 ## Algorithmus
 
-Zunächst der Trainings-Datensatz im *DSWRetailSales* -Schema geladen wird. Von hier aus wird das Modell mit einem [Gradientenverstärkungs-Regressor-Algorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die mindestens etwas besser sind als eine zufällige Chance) eine Abfolge von Lernenden bilden können, die sich auf die Verbesserung der Schwächen früherer Lernender konzentrieren. Gemeinsam können sie genutzt werden, um ein leistungsfähiges Vorhersagemodell zu schaffen.
+Zunächst wird der Trainings-Datensatz im Schema *DSWRetailSales* geladen. Von hier aus wird das Modell mit einem [Gradient Boosting Regressor Algorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) trainiert. Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die mindestens etwas besser sind als eine zufällige Chance) eine Abfolge von Lernenden bilden können, die sich auf die Verbesserung der Schwächen früherer Lernender konzentrieren. Gemeinsam können sie genutzt werden, um ein leistungsfähiges Vorhersagemodell zu erstellen.
 
-Der Prozess umfasst drei Elemente: eine Verlustfunktion, einen schwachen Lerner und ein additives Modell.
+Der Prozess umfasst drei Elemente: eine Verlustfunktion, einen schwachen Lerner und ein additive Modell.
 
 Die Verlustfunktion bezieht sich auf einen Messwert, wie gut ein Prognosemodell in Bezug auf die Fähigkeit, das erwartete Ergebnis vorherzusagen, funktioniert. In diesem Rezept wird die Regression der kleinsten Quadrate verwendet.
 

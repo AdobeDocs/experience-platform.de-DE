@@ -11,9 +11,9 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Anwendung] Datentyp
+# [!UICONTROL Application]-Datentyp
 
-[!UICONTROL Anwendung] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Details zu von einer Anwendung generierten Interaktionen beschreibt. Eine Anwendung bezieht sich auf ein Softwareerlebnis, z. B. eine mobile oder Desktop-Anwendung, die von einem Endbenutzer installiert, ausgeführt, geschlossen oder deinstalliert werden kann. Die Eigenschaften für diesen Datentyp sind nicht zur Beschreibung von Agenten wie Chatbots, browserbasierten Plugins oder anderen Erlebnissen gedacht, die nicht für Anwendungen gelten.
+[!UICONTROL Anwendung] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der Details zu von einer Anwendung generierten Interaktionen beschreibt. Eine Anwendung bezieht sich auf ein Softwareerlebnis, z. B. eine mobile oder Desktop-Anwendung, die von einem Endbenutzer installiert, ausgeführt, geschlossen oder deinstalliert werden kann. Die Eigenschaften für diesen Datentyp sind nicht zur Beschreibung von Agenten wie Chatbots, browserbasierten Plugins oder anderen Erlebnissen gedacht, die nicht für Anwendungen gelten.
 
 <img src="../images/data-types/application.PNG" width="500" /><br />
 
@@ -28,7 +28,7 @@ ht-degree: 3%
 | `upgrades` | [[!UICONTROL Maßnahme]](./measure.md) | Enthält Daten zum Upgrade einer bereits installierten Anwendung. Diese wird beim ersten Start nach einem Upgrade ausgelöst. |
 | `id` | Zeichenfolge | Eine eindeutige Kennung für die Anwendung. |
 | `name` | Zeichenfolge | Der Name der Anwendung. |
-| `userPerspective` | Zeichenfolge | Die Perspektive oder physische Beziehung zwischen dem Benutzer und der App oder Marke zum Zeitpunkt des Ereignisses. Das Verständnis der Perspektive des Benutzers in Bezug auf die App hilft beim präzisen Generieren von Sitzungen, da der Großteil der Zeit, die Sie nicht einbeziehen möchten `background` und `detached` -Ereignisse als Teil einer &quot;aktiven&quot;Sitzung bezeichnet. Der Wert dieser Eigenschaft muss mit einem der unten aufgeführten Enum-Werte übereinstimmen. <li> `foreground`: Benutzer und App interagieren direkt miteinander. </li> <li> `background`: Die App und der Benutzer interagieren indirekt. Beispielsweise kann das Programm einen Wert messen und aktualisieren, während der Bildschirm gesperrt ist oder eine andere App im Vordergrund verwendet wird.  </li> <li> `detached`: Abgelöst bedeutet, dass das Ereignis mit der App in Verbindung stand, aber nicht direkt aus der App kam, z. B. das Senden einer E-Mail oder einer Push-Benachrichtigung von einem externen System. |
+| `userPerspective` | Zeichenfolge | Die Perspektive oder physische Beziehung zwischen dem Benutzer und der App oder Marke zum Zeitpunkt des Ereignisses. Das Verständnis der Perspektive des Benutzers im Verhältnis zur App hilft bei der präzisen Generierung von Sitzungen, da Sie in der Mehrzahl der Fälle keine `background` - und `detached` -Ereignisse als Teil einer &quot;aktiven&quot;Sitzung einbeziehen möchten. Der Wert dieser Eigenschaft muss mit einem der unten aufgeführten Enum-Werte übereinstimmen. <li> `foreground`: Benutzer und App interagieren direkt miteinander. </li> <li> `background`: Die App und der Benutzer interagieren indirekt. Beispielsweise kann das Programm einen Wert messen und aktualisieren, während der Bildschirm gesperrt ist oder eine andere App im Vordergrund verwendet wird.  </li> <li> `detached`: Getrennt bedeutet, dass das Ereignis mit der App in Verbindung stand, aber nicht direkt von der App kam, z. B. das Senden einer E-Mail oder einer Push-Benachrichtigung von einem externen System. |
 | `version` | Zeichenfolge | Die Version der Anwendung. |
 
 {style="table-layout:auto"}

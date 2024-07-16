@@ -18,7 +18,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer CRM-Quell
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer CRM-Quelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#customer-relationship-management) für eine Liste von CRM-Quellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer CRM-Quelle verfügen. Wenn Sie nicht über diese ID verfügen, finden Sie in der [Quellenübersicht](../../../home.md#customer-relationship-management) eine Liste der CRM-Quellen, mit denen Sie eine Basisverbindung erstellen können.
 >* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte

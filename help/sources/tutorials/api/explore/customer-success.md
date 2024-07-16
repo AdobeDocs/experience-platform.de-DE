@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; cs; CS; Customer Success System
+keywords: Experience Platform;home;popular topics;cs;CS;Customer Success System
 solution: Experience Platform
 title: Erkunden eines Customer Success Systems mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um Customer Success (CS)-Systeme zu untersuchen.
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '593'
 ht-degree: 39%
 
 ---
 
-# Erkunden Sie ein Customer Success System mithilfe des [!DNL Flow Service] API
+# Kundenerfolgssystem mit der [!DNL Flow Service]-API durchsuchen
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service] API zur Erforschung von CS-Systemen (Customer Success).
+In diesem Tutorial wird die [!DNL Flow Service] -API verwendet, um Customer Success (CS)-Systeme zu untersuchen.
 
 ## Erste Schritte
 
@@ -24,11 +24,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einem CS-System herstellen zu können.
 
 ### Grundverbindung abrufen
 
-So erkunden Sie Ihr CS-System mit [!DNL Platform] APIs verwenden, müssen Sie über eine gültige Basis-Verbindungs-ID verfügen. Wenn Sie noch keine Basisverbindung für das CS-System haben, mit dem Sie arbeiten möchten, können Sie eine über die folgenden Tutorials erstellen:
+Um Ihr CS-System mithilfe von [!DNL Platform] -APIs zu untersuchen, müssen Sie über eine gültige Basis-Verbindungs-ID verfügen. Wenn Sie noch keine Basisverbindung für das CS-System haben, mit dem Sie arbeiten möchten, können Sie eine über die folgenden Tutorials erstellen:
 
 * [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
@@ -55,7 +55,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Datentabellen durchsuchen
 
-Mithilfe der Basisverbindung für Ihr CS-System können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in die Sie aufnehmen möchten [!DNL Platform].
+Mithilfe der Basisverbindung für Ihr CS-System können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrem CS-System zurück. Finden Sie den Tisch, den Sie mitbringen möchten [!DNL Platform] und nimmt Kenntnis von `path` -Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrem CS-System zurück. Suchen Sie die Tabelle, die Sie in [!DNL Platform] aufnehmen möchten, und notieren Sie sich ihre Eigenschaft `path`, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -141,7 +141,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen der `columns` Array.
+Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
 
 ```json
 {
@@ -176,4 +176,4 @@ Eine erfolgreiche Antwort gibt die Struktur der angegebenen Tabelle zurück. Det
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr CS-System durchsucht und den Pfad der Tabelle gefunden, in die Sie aufgenommen werden möchten [!DNL Platform]und Informationen über seine Struktur erhalten. Sie können diese Informationen im nächsten Tutorial zu [Daten aus Ihrem CS-System erfassen und in Platform einbringen](../collect/customer-success.md).
+In diesem Tutorial haben Sie Ihr CS-System durchsucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] aufnehmen möchten, und Informationen zu seiner Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [Daten aus Ihrem CS-System zu erfassen und in Platform](../collect/customer-success.md) zu importieren.

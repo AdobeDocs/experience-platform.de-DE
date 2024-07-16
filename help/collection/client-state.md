@@ -6,7 +6,7 @@ keywords: Client;Status;Management;Edge;Network;Gateway;API
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '825'
 ht-degree: 98%
 
 ---
@@ -128,7 +128,7 @@ Die Aufrufenden müssen die Unterstützung für die Speicherung von Client-Statu
 | Attribut | Typ | Beschreibung |
 | --- | --- | --- |
 | `cookiesEnabled` | Boolesch | Wenn festgelegt, ermöglicht es die Unterstützung von Cookies. Der Standardwert ist `false`. |
-| `domain` | Zeichenfolge | Erforderlich, wenn `cookiesEnabled: true`. Die Domain auf oberster Ebene, in die die Cookies geschrieben werden sollen. Das Edge Network verwendet diesen Wert, um zu entscheiden, ob der Status als Cookies beibehalten werden kann. |
+| `domain` | Zeichenfolge | Erforderlich bei `cookiesEnabled: true`. Die Domain auf oberster Ebene, in die die Cookies geschrieben werden sollen. Das Edge Network verwendet diesen Wert, um zu entscheiden, ob der Status als Cookies beibehalten werden kann. |
 
 Selbst wenn die Cookie-Unterstützung über das Flag `cookiesEnabled` aktiviert ist, schreibt das Adobe Experience Platform Edge Network die Statuseinträge nur, wenn die Top-Level-Domain der Anforderung mit der von den Aufrufenden angegebenen `domain` übereinstimmt. Bei Nichtübereinstimmung werden die Einträge in einem `state:store`-Handle zurückgegeben.
 

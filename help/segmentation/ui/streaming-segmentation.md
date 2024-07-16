@@ -28,7 +28,7 @@ Mit der Streaming-Segmentierung in [!DNL Adobe Experience Platform] können Kund
 
 >[!NOTE]
 >
->Damit die Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie unter [Übersicht über Audience Portal](./audience-portal.md#scheduled-segmentation).
+>Damit die Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weitere Informationen zum Aktivieren der geplanten Segmentierung finden Sie in der [Audience Portal-Übersicht](./audience-portal.md#scheduled-segmentation) .
 
 Eine Abfrage wird automatisch mithilfe der Streaming-Segmentierung ausgewertet, wenn sie eines der folgenden Kriterien erfüllt:
 
@@ -75,7 +75,7 @@ Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen 
 >
 >Eine Segmentdefinition gilt als qualifiziert, wenn es von der Statuslosigkeit oder vom Status „beendet“ zum Status „realisiert“ wechselt. Eine Segmentdefinition gilt als nicht qualifiziert, wenn es von realisiert zu beendet wechselt.
 >
->Weitere Informationen zu diesen Status finden Sie in der Statustabelle im Abschnitt [Übersicht über Audience Portal](./audience-portal.md#customize).
+>Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Übersicht über Audience Portal](./audience-portal.md#customize).
 
 ![Die Karte für Profile im Zeitverlauf wird hervorgehoben und zeigt ein Liniendiagramm der Profile im Zeitverlauf an.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
@@ -123,4 +123,4 @@ Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.
 
 ### Gibt es Einschränkungen beim Streamen von Daten?
 
-Damit Streaming-Daten in der Streaming-Segmentierung verwendet werden können, gibt es **must** Zwischen den eingestreamten Ereignissen muss ein Abstand bestehen. Wenn zu viele Ereignisse innerhalb derselben Sekunde gestreamt werden, behandelt Platform diese Ereignisse als Bot-generierte Daten und sie werden verworfen. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen Ereignisdaten, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.
+Damit Streaming-Daten in der Streaming-Segmentierung verwendet werden können, muss zwischen den eingetretenen Ereignissen **1} ein Abstand vorhanden sein.** Wenn zu viele Ereignisse innerhalb derselben Sekunde gestreamt werden, behandelt Platform diese Ereignisse als Bot-generierte Daten und sie werden verworfen. Es hat sich bewährt, **mindestens** fünf Sekunden zwischen den Ereignisdaten zu verwenden, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.

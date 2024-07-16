@@ -5,16 +5,16 @@ description: Die Parse.ly Analytics-Erweiterung ist ein Analyseziel in Adobe Exp
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 92%
+source-wordcount: '434'
+ht-degree: 91%
 
 ---
 
-# [!DNL Parse.ly Analytics]-Erweiterung  {#parsely-analytics-extension}
+# [!DNL Parse.ly Analytics]-Erweiterung {#parsely-analytics-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Parse.ly Analytics]Unter Verwendung von nutzen mehr als 2.500 Unternehmen Daten, um ihre Online-Zielgruppen besser zu verstehen. Mit dieser Erweiterung wird ein JavaScript-Snippet installiert, das verfolgt, wie Besucher mit Inhalten auf Ihrer Site interagieren.
+[!DNL Parse.ly Analytics] hilft mehr als 2.500 Unternehmen, Daten zu verwenden, um ihre Online-Zielgruppe zu verstehen. Mit dieser Erweiterung wird ein JavaScript-Snippet installiert, das verfolgt, wie Besucher mit Inhalten auf Ihrer Site interagieren.
 
 Parse.ly ist eine Analyseerweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie unter [Parse.ly Analytics](https://www.parse.ly/).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Parse.ly] Erweiterung:
+So installieren Sie die [!DNL Parse.ly]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

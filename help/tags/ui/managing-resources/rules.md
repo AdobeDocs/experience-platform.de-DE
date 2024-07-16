@@ -53,11 +53,11 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
 >[!TIP]
 >
->Sie können zusätzliche verfügbare Ressourcen anzeigen, um mehr über diese Funktion zu erfahren, indem Sie ![about](../../images/ui/event-forwarding/overview/about.png) aus dem rechten Bereich.
+>Sie können zusätzliche Ressourcen anzeigen, die verfügbar sind, um mehr über diese Funktion zu erfahren, indem Sie im rechten Bereich ![about](../../images/ui/event-forwarding/overview/about.png) auswählen.
 
 1. Öffnen Sie die Registerkarte [!UICONTROL Regeln] und wählen Sie **[!UICONTROL Neue Regel erstellen]** aus.
 
-   ![Registerkarte Regeln , die das Namensfeld hervorhebt.](../../images/launch-rule-builder.png)
+   ![Registerkarte Regeln , auf der das Namensfeld hervorgehoben wird.](../../images/launch-rule-builder.png)
 
 1. Geben Sie einen Namen für die Regel ein.
 1. Klicken Sie unter „Ereignisse“ auf das Symbol **[!UICONTROL Hinzufügen]**.
@@ -91,9 +91,9 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
      Wenn sie später ausgeführt werden soll, geben Sie eine Zahl über 50 an. Weitere Informationen zur Reihenfolge finden Sie unter [Regelreihenfolge](rules.md#rule-ordering).
 
-1. Bedingungen auswählen **[!UICONTROL Hinzufügen]** und wählen Sie einen Logiktyp, eine Erweiterung, einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Änderungen beibehalten]** aus.
+1. Wählen Sie das Symbol Bedingungen **[!UICONTROL Hinzufügen]** aus, wählen Sie dann einen Logiktyp, eine Erweiterung und einen Bedingungstyp aus und konfigurieren Sie die Einstellungen für Ihre Bedingung. Wählen Sie als Nächstes **[!UICONTROL Änderungen beibehalten]** aus.
 
-   ![Konfigurationsseite für Regelbedingungen .](../../images/condition-settings.png)
+   ![Konfigurationsseite der Regelbedingungen.](../../images/condition-settings.png)
 
    Die verfügbaren Bedingungstypen hängen von der ausgewählten Erweiterung ab. Die Bedingungseinstellungen unterscheiden sich je nach Bedingungstyp.
 
@@ -106,9 +106,9 @@ Erstellen Sie eine Regel, indem Sie angeben, welche Aktionen ausgeführt werden 
 
    Sie können beliebig viele Bedingungen hinzufügen. Mehrere Bedingungen innerhalb derselben Regel werden durch AND verknüpft.
 
-1. Auswählen der Aktionen **[!UICONTROL Hinzufügen]** -Symbol, wählen Sie Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und wählen Sie **[!UICONTROL Änderungen beibehalten]**.
+1. Wählen Sie das Symbol Aktionen **[!UICONTROL Hinzufügen]** aus, wählen Sie dann Ihre Erweiterung und einen für diese Erweiterung verfügbaren Aktionstyp aus, konfigurieren Sie die Einstellungen für die Aktion und wählen Sie dann **[!UICONTROL Änderungen beibehalten]** aus.
 
-   ![Seite zur Konfiguration der Regelaktion .](../../images/action-settings.png)
+   ![Seite mit der Aktionskonfiguration für Regeln.](../../images/action-settings.png)
 
    Die verfügbaren Aktionstypen hängen von der ausgewählten Erweiterung ab. Die Aktionseinstellungen unterscheiden sich je nach Aktionstyp.
 

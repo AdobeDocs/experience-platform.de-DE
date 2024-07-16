@@ -13,24 +13,24 @@ ht-degree: 37%
 
 Wenn Ihr Unternehmen Produkte oder Dienstleistungen verkauft, können Sie diese Seite als Leitfaden zur Verfolgung dieser Produkte und Dienste verwenden.
 
-Diese Seite verwendet das XDM [Commerce-Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) Feldergruppe.
+Auf dieser Seite wird die Feldergruppe XDM [Commerce-Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) verwendet.
 
 Diese Feldergruppe besteht aus zwei Hauptteilen:
 
-* Die `commerce` -Objekt. Mit diesem Objekt können Sie angeben, welche Aktionen bei der `productListItems` Array.
-* Die `productListItems` Array.
+* Das `commerce` -Objekt. Mit diesem Objekt können Sie angeben, welche Aktionen auf das `productListItems` -Array angewendet werden.
+* Das `productListItems` -Array.
 
 >[!TIP]
 >
->Wenn Sie mit Adobe Analytics vertraut sind, wird die Variable `commerce` -Objekt enthält Daten, die Commerce-Ereignissen in der Variablen `events` -Variable. Die `productListItems` Objekt-Array enthält Daten, die dem `products` -Variable.
+>Wenn Sie mit Adobe Analytics vertraut sind, enthält das `commerce` -Objekt Daten, die den Commerce-Ereignissen in der `events` -Variablen ähneln. Das Objekt-Array `productListItems` enthält Daten, die der Variablen `products` ähneln.
 
-## Die `commerce` Objekt {#commerce-object}
+## Das Objekt `commerce` {#commerce-object}
 
-In diesem Abschnitt werden die in der Variablen `commerce` -Objekt.
+In diesem Abschnitt werden die im Objekt `commerce` verfügbaren Felder beschrieben.
 
 >[!TIP]
 >
->Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. Meistens verwenden Sie nur die `value` -Feld (z. B. `'value':1`). Die `id` -Feld können Sie eine eindeutige Kennung für das Tracking zum Zeitpunkt des Versands der Kennzahl festlegen. Siehe XDM-Dokumentation für [Maßnahme](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) für weitere Informationen.
+>Eine Maßnahme umfasst zwei Bereiche: `id` und `value`. Meistens verwenden Sie nur das Feld `value` (z. B. `'value':1`). Im Feld `id` können Sie eine eindeutige Kennung für das Tracking zum Zeitpunkt des Versands der Kennzahl festlegen. Weitere Informationen finden Sie in der XDM-Dokumentation für [Maßnahme](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) .
 
 | Maßnahme | Empfehlung | Beschreibung |
 |---|---|---|
@@ -49,11 +49,11 @@ In diesem Abschnitt werden die in der Variablen `commerce` -Objekt.
 
 ### `Commerce` Objektbeispiele
 
-Erweitern Sie den folgenden Abschnitt, um ein Beispiel für einen Web SDK-Befehl mit einem Feld aus dem `commerce` -Objekt.
+Erweitern Sie den folgenden Abschnitt, um ein Beispiel für einen Web SDK-Befehl mit einem Feld aus dem `commerce` -Objekt anzuzeigen.
 
 +++`productViews`
 
-Grundlegendes Web-SDK `sendEvent` Aufrufeinstellung `productViews` -Feld zu `1`:
+Ein einfacher Web SDK `sendEvent` -Aufruf, durch den das `productViews` -Feld auf `1` gesetzt wird:
 
 ```javascript
 alloy("sendEvent", {
@@ -69,11 +69,11 @@ alloy("sendEvent", {
 
 +++
 
-## Die `order` Objekt {#order-object}
+## Das Objekt `order` {#order-object}
 
-Die `commerce` -Objekt enthält ein dediziertes Objekt zum Erfassen von Bestelldetails. Dies wird als `order` -Objekt.
+Das Objekt `commerce` enthält ein dediziertes Objekt zum Erfassen der Bestelldetails. Dies wird als `order` -Objekt bezeichnet.
 
-In diesem Abschnitt werden alle Felder beschrieben, die von der `order` -Objekt.
+In diesem Abschnitt werden alle Felder beschrieben, die vom Objekt `order` unterstützt werden.
 
 | Feld | Option | Empfehlung | Beschreibung |
 |---|---|---|---|
@@ -89,11 +89,11 @@ In diesem Abschnitt werden alle Felder beschrieben, die von der `order` -Objekt.
 
 ### Objektbeispiele sortieren
 
-Erweitern Sie den folgenden Abschnitt, um ein Beispiel für einen Web SDK-Befehl mit dem `commerce` -Objekt.
+Erweitern Sie den folgenden Abschnitt, um ein Beispiel für einen Web SDK-Befehl mit dem Objekt `commerce` anzuzeigen.
 
-+++`Order` Objektbeispiel
++++Beispiel für `Order`-Objekt
 
-Ein Web-SDK `sendEvent` Aufrufeinstellung `order` -Objekt, das für mehrere Produkte im `productListItems` array:
+Ein Web SDK `sendEvent` -Aufruf, mit dem das `order` -Objekt festgelegt wird, das für mehrere Produkte im `productListItems` -Array gilt:
 
 ```javascript
 alloy("sendEvent",{
@@ -139,21 +139,21 @@ Die Produktliste gibt an, welche Produkte mit der entsprechenden Aktion in Verbi
 
 | Feld | Empfehlung | Beschreibung |
 |---|---|---|
-| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | Optional | Die [ISO 4217](https://de.wikipedia.org/wiki/ISO_4217) Währung für das Produkt. Dieses Feld gilt normalerweise nur, wenn die Produktliste mehrere Produkte mit unterschiedlichen Währungs-Codes enthält. |
-| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | Dringend empfohlen | Legen Sie dieses Feld nur fest, wenn zutreffend. So ist es beispielsweise möglicherweise nicht möglich, `productView` -Ereignis eintreten, da unterschiedliche Produktvarianten unterschiedliche Preise haben können, jedoch auf einer `productListAdds` -Ereignis. |
+| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | Optional | Die [ISO 4217](https://de.wikipedia.org/wiki/ISO_4217) -Währung für das Produkt. Dieses Feld gilt normalerweise nur, wenn die Produktliste mehrere Produkte mit unterschiedlichen Währungs-Codes enthält. |
+| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | Dringend empfohlen | Legen Sie dieses Feld nur fest, wenn zutreffend. So ist es beispielsweise u. U. nicht möglich, ein `productView` -Ereignis festzulegen, da unterschiedliche Varianten des Produkts unterschiedliche Preise haben können, jedoch nicht für ein `productListAdds` -Ereignis. |
 | [`product`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproduct) | Dringend empfohlen | Die XDM-ID für das Produkt. |
-| [`productAddMethod`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod) | Dringend empfohlen | Die Methode, mit der der Besucher der Liste ein Produktelement hinzufügen konnte. Festlegen mit `productListAdds` Kennzahlen und nur verwendet, wenn ein Produkt der Liste hinzugefügt wird. Beispiele sind `add to cart button`, `quick add` und `upsell`. |
+| [`productAddMethod`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod) | Dringend empfohlen | Die Methode, mit der der Besucher der Liste ein Produktelement hinzufügen konnte. Wird mit `productListAdds` -Messungen eingestellt und wird nur verwendet, wenn ein Produkt zur Liste hinzugefügt wird. Beispiele sind `add to cart button`, `quick add` und `upsell`. |
 | [`productName`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmname) | Dringend empfohlen | Der Anzeigename oder der für Menschen lesbare Name des Produkts. |
 | [`quantity`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmquantity) | Dringend empfohlen | Die Anzahl der Einheiten, die der Kunde vom Produkt benötigt. Sollte auf `productListAdds`, `productListRemoves`, `purchases`, `saveForLaters` usw. eingestellt werden. |
 | [`SKU`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmsku) | Dringend empfohlen | Bestandseinheit. Dies ist die eindeutige Kennung für das Produkt. |
 
 ### Beispiele für Produktlisten
 
-Erweitern Sie die folgenden Abschnitte, um Beispiele für Web SDK-Befehle mithilfe der `productListItems` -Objekt.
+Erweitern Sie die folgenden Abschnitte, um Beispiele für Web SDK-Befehle mit dem Objekt `productListItems` anzuzeigen.
 
-+++`productListItems` example
++++Beispiel für `productListItems`
 
-Ein Web-SDK `sendEvent` Aufrufeinstellung `productViews` für mehrere Produkte in `productListItems` array:
+Ein Web SDK `sendEvent` -Aufruf, mit dem der Wert `productViews` für mehrere Produkte im Array `productListItems` festgelegt wird:
 
 ```javascript
 alloy("sendEvent",{
@@ -179,9 +179,9 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` examplae
++++`productListAdds` Beispiel
 
-Ein Web-SDK `sendEvent` Aufrufeinstellung `productListAdds` -Ereignis für mehrere Produkte im `productListItems` array:
+Ein Web SDK `sendEvent` -Aufruf, mit dem das `productListAdds` -Ereignis für mehrere Produkte im `productListItems` -Array festgelegt wird:
 
 ```javascript
 alloy("sendEvent",{
@@ -213,9 +213,9 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` example
++++Beispiel für `checkouts`
 
-Ein Web-SDK `sendEvent` Aufrufeinstellung `checkouts` -Ereignis für mehrere Produkte im `productListItems` array:
+Ein Web SDK `sendEvent` -Aufruf, mit dem das `checkouts` -Ereignis für mehrere Produkte im `productListItems` -Array festgelegt wird:
 
 ```javascript
 alloy("sendEvent",{

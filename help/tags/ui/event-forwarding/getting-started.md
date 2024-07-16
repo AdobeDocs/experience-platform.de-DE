@@ -5,7 +5,7 @@ feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '864'
 ht-degree: 84%
 
 ---
@@ -31,18 +31,18 @@ Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lö
 
 * Adobe Real-Time CDP Connections, Prime oder Ultimate (Informationen zu Preisen erhalten Sie von Ihrem Adobe-Account-Team)
 * Ereignisweiterleitung in Adobe Experience Platform
-* Adobe Experience Platform Web SDK, Mobile SDK oder Edge Network Server-API zum Senden von Daten an Edge Network konfiguriert
+* Adobe Experience Platform Web SDK, Mobile SDK oder Edge Network Server API, die zum Senden von Daten an Edge Network konfiguriert ist
 * Zuordnen von Daten zum Experience-Datenmodell (XDM) (diese Zuordnung kann über Tags erfolgen)
 
 ## Erstellen eines XDM-Schemas
 
 Erstellen Sie in Adobe Experience Platform Ihr Schema.
 
-1. Erstellen Sie ein Schema, indem Sie auf **[!UICONTROL Schemas]** > **[!UICONTROL Schema erstellen]** klicken und die Option **[!UICONTROL XDM ExperienceEvent]** auswählen.
+1. Erstellen Sie ein Schema, indem Sie auf **[!UICONTROL Schemata]** > **[!UICONTROL Schema erstellen]** klicken und die Option **[!UICONTROL XDM ExperienceEvent]** auswählen.
 
 1. Versehen Sie das Schema mit einem Namen und einer Kurzbeschreibung.
 
-1. Sie können die Feldergruppe &quot;ExperienceEvent web details&quot;hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldergruppen]**.
+1. Sie können die Feldergruppe &quot;ExperienceEvent web details&quot;hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldergruppen]** auswählen.
 
    >[!NOTE]
    >
@@ -54,7 +54,7 @@ Weitere Informationen zu Schemata finden Sie unter [Experience-Datenmodell (XDM)
 
 ## Erstellen einer Ereignisweiterleitungseigenschaft
 
-Im **[!UICONTROL Tags]** Arbeitsbereich erstellen Sie eine Eigenschaft vom Typ **[!UICONTROL Edge]**.
+Erstellen Sie im Arbeitsbereich **[!UICONTROL Tags]** eine Eigenschaft vom Typ **[!UICONTROL Edge]**.
 
 1. Wählen Sie **[!UICONTROL Neue Eigenschaft]** aus.
 
@@ -71,7 +71,7 @@ notieren Sie sich die Umgebungs-IDs. Wenn sich die im Daten-Stream verwendete Ad
 
 Verwenden Sie zum Erstellen Ihres Daten-Streams in Adobe Experience Platform die Umgebungs-ID, die beim Erstellen der Ereignisweiterleitungseigenschaft generiert wurde.
 
-1. Auswählen **[!UICONTROL Datenspeicher]** in der linken Navigation.
+1. Wählen Sie im linken Navigationsbereich **[!UICONTROL Datastreams]** aus.
 
 1. Benennen Sie die Konfiguration und geben Sie eine optionale Beschreibung ein.
 Die Beschreibung hilft, Konfigurationen in einer Liste mehrerer Konfigurationen zu identifizieren.
@@ -82,7 +82,7 @@ Die Beschreibung hilft, Konfigurationen in einer Liste mehrerer Konfigurationen 
 
 Konfigurieren Sie als Nächstes Edge Network, um Daten an die Ereignisweiterleitung und andere Adobe-Produkte zu senden.
 
-1. Im **[!UICONTROL Datenspeicher]** Arbeitsbereich die von Ihnen erstellte Eigenschaft aus.
+1. Wählen Sie im Arbeitsbereich **[!UICONTROL Datenspeicher]** die von Ihnen erstellte Eigenschaft aus.
 
 1. Wählen Sie die Entwicklungs-, Betreibungs- oder Staging-Umgebung.
 
@@ -98,9 +98,9 @@ Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigensc
 
 ## Konfigurieren der Platform Web SDK-Erweiterung, um Daten an den zuvor erstellten Daten-Stream zu senden
 
-Erstellen Sie Ihre Eigenschaft im **[!UICONTROL Tags]** Arbeitsbereich und navigieren Sie dann zu **[!UICONTROL Erweiterungen]** und wählen Sie die Experience Platform Web SDK-Erweiterung aus dem Katalog aus, um sie zu konfigurieren und zu installieren.
+Erstellen Sie Ihre Eigenschaft im Arbeitsbereich **[!UICONTROL Tags]** , navigieren Sie zu **[!UICONTROL Erweiterungen]** und wählen Sie die Experience Platform Web SDK-Erweiterung aus dem Katalog aus, um sie zu konfigurieren und zu installieren.
 
-Siehe [Dokumentation zur Web SDK-Erweiterung](../../extensions/client/web-sdk/overview.md) für Details zu Konfigurationsoptionen.
+Weitere Informationen zu Konfigurationsoptionen finden Sie in der Dokumentation zur [Web SDK-Erweiterung](../../extensions/client/web-sdk/overview.md) .
 
 ## Erstellen einer Tag-Regel zum Senden von Daten an das Platform Web SDK
 

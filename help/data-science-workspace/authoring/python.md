@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Datenzugriff; Python-SDK; Datenzugriffs-API; Python lesen; Python schreiben
+keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
 solution: Experience Platform
-title: Zugreifen auf Daten mithilfe von Python in Data Science Workspace
+title: Zugriff auf Daten mithilfe von Python in Data Science Workspace
 type: Tutorial
 description: Das folgende Dokument enthält Beispiele für den Zugriff auf Daten in Python zur Verwendung in Data Science Workspace.
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 2%
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
 # Zugriff auf Daten mit Python in Data Science Workspace
 
-Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Python zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie im [Datenzugriff auf JupyterLab Notebooks](../jupyterlab/access-notebook-data.md) Dokumentation.
+Das folgende Dokument enthält Beispiele für den Zugriff auf Daten mit Python zur Verwendung in Data Science Workspace. Informationen zum Zugriff auf Daten mit JupyterLab-Notebooks finden Sie in der Dokumentation zum Datenzugriff auf JupyterLab-Notebooks ](../jupyterlab/access-notebook-data.md).[
 
 ## Datensatz lesen
 
@@ -53,7 +53,7 @@ partitions = dataset.get_partitions_info()
 
 Mit der DISTINCT-Klausel können Sie alle eindeutigen Werte auf Zeilen-/Spaltenebene abrufen und alle doppelten Werte aus der Antwort entfernen.
 
-Ein Beispiel für die Verwendung der `distinct()` -Funktion finden Sie unten:
+Nachfolgend finden Sie ein Beispiel für die Verwendung der Funktion `distinct()` :
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -65,7 +65,7 @@ Sie können bestimmte Operatoren in Python verwenden, um Ihren Datensatz zu filt
 
 >[!NOTE]
 >
->Bei den für die Filterung verwendeten Funktionen wird zwischen Groß- und Kleinschreibung unterschieden.
+>Bei den Filterfunktionen wird zwischen Groß- und Kleinschreibung unterschieden.
 
 ```python
 eq() = '='
@@ -85,9 +85,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY-Klausel
 
-Die &quot;ORDER BY&quot;-Klausel ermöglicht die Sortierung der empfangenen Ergebnisse nach einer bestimmten Spalte in einer bestimmten Reihenfolge (aufsteigend oder absteigend). Dies geschieht mithilfe der `sort()` -Funktion.
+Die &quot;ORDER BY&quot;-Klausel ermöglicht die Sortierung der empfangenen Ergebnisse nach einer bestimmten Spalte in einer bestimmten Reihenfolge (aufsteigend oder absteigend). Dies geschieht mithilfe der Funktion `sort()` .
 
-Ein Beispiel für die Verwendung der `sort()` -Funktion finden Sie unten:
+Nachfolgend finden Sie ein Beispiel für die Verwendung der Funktion `sort()` :
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -97,7 +97,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 Die LIMIT-Klausel ermöglicht es Ihnen, die Anzahl der vom Datensatz empfangenen Datensätze zu begrenzen.
 
-Ein Beispiel für die Verwendung der `limit()` -Funktion finden Sie unten:
+Nachfolgend finden Sie ein Beispiel für die Verwendung der Funktion `limit()` :
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -107,7 +107,7 @@ df = dataset_reader.limit(100).read()
 
 Mit der OFFSET-Klausel können Sie Zeilen von Anfang an überspringen, um Zeilen von einem späteren Zeitpunkt an zurückzugeben. In Kombination mit LIMIT kann dies zum Iterieren von Zeilen in Blöcken verwendet werden.
 
-Ein Beispiel für die Verwendung der `offset()` -Funktion finden Sie unten:
+Nachfolgend finden Sie ein Beispiel für die Verwendung der Funktion `offset()` :
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -136,7 +136,7 @@ Für Aufträge, die länger ausgeführt werden, müssen Sie möglicherweise Zwis
 
 >[!NOTE]
 >
->Pfade zu den Daten sind **not** gespeichert. Sie müssen den entsprechenden Pfad zu den entsprechenden Daten speichern.
+>Pfade zu den Daten werden **nicht** gespeichert. Sie müssen den entsprechenden Pfad zu den entsprechenden Daten speichern.
 
 ### Schreiben in den Benutzerbereich
 
@@ -158,4 +158,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Nächste Schritte
 
-Adobe Experience Platform Data Science Workspace bietet ein Rezept-Beispiel, das die oben genannten Codebeispiele zum Lesen und Schreiben von Daten verwendet. Wenn Sie mehr darüber erfahren möchten, wie Sie mit Python auf Ihre Daten zugreifen können, lesen Sie bitte den Abschnitt [Data Science Workspace Python GitHub-Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
+Adobe Experience Platform Data Science Workspace bietet ein Rezept-Beispiel, in dem die oben genannten Codebeispiele zum Lesen und Schreiben von Daten verwendet werden. Wenn Sie mehr darüber erfahren möchten, wie Sie mit Python auf Ihre Daten zugreifen können, lesen Sie bitte das [Data Science Workspace Python GitHub-Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

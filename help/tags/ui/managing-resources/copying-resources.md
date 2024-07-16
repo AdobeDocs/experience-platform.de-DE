@@ -54,7 +54,7 @@ Wenn Sie eine Kopie einer vollständigen Eigenschaft erstellen, sollten Sie eini
 Wenn Sie eine Erweiterung in eine andere Eigenschaft kopieren, müssen Sie Folgendes beachten.
 
 * Wenn die Erweiterung nicht in der Ziel-Eigenschaft installiert ist, wird sie mit denselben Einstellungen wie die Ursprungs-Eigenschaft installiert.
-* Wenn die Ziel-Eigenschaft bereits installiert ist, werden nur die Einstellungen kopiert.
+* Wenn die Erweiterung auf der Zieleigenschaft bereits installiert ist, werden nur die Einstellungen kopiert.
 * Wenn die Ziel-Eigenschaft eine niedrigere Version der installierten Erweiterung aufweist, erhalten Sie einen Hinweis, dass Sie die Erweiterung in der Ziel-Eigenschaft aktualisieren müssen, bevor Sie die Kopie durchführen können. Erweiterungsentwickler können ihren Erweiterungen im Laufe der Zeit Einstellungen hinzufügen. Daher können Einstellungen aus einer neueren Erweiterung nicht zuverlässig auf ältere Versionen angewendet werden.
 * Wenn die Ziel-Eigenschaft eine höhere Version der installierten Erweiterung aufweist, werden die Einstellungen kopiert, es wird aber kein Downgrade durchgeführt. Die Ziel-Eigenschaft behält weiterhin die aktuelle Versionsnummer bei.
 

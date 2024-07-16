@@ -6,8 +6,8 @@ description: Sie können den Endpunkt „/mappingSets“ in der Adobe Experience
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 90%
+source-wordcount: '859'
+ht-degree: 88%
 
 ---
 
@@ -17,7 +17,7 @@ Mit Zuordnungssätzen lässt sich definieren, wie Daten in einem Quellschema den
 
 ## Auflisten von Zuordnungssätzen
 
-Sie können eine Liste aller Zuordnungssätze für Ihre Organisation abrufen, indem Sie eine GET-Anfrage an die `/mappingSets` -Endpunkt.
+Sie können eine Liste aller Zuordnungssätze für Ihre Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/mappingSets` senden.
 
 **API-Format**
 
@@ -218,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | Die Kennung des XDM-Schemas, auf das Sie verweisen. |
 | `outputSchema.schemaRef.contentType` | Bestimmt über das Antwortformat des referenzierten Schemas. Weitere Informationen zu diesem Feld finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Der Quelltyp beschreibt, wie der Wert aus der Quelle an das Ziel extrahiert wird. Der Quelltyp unterstützt zwei mögliche Werte: <ul><li>`ATTRIBUTE`: Der Quelltyp `ATTRIBUTE` wird verwendet, wenn das Eingabeattribut aus einem Quellschema stammt.</li><li>`EXPRESSION`: Der Quelltyp `EXPRESSION` wird verwendet, wenn die Zuordnung mithilfe eines berechneten Felds abgeschlossen wird.</li></ul> **WARNUNG**: Wenn Sie die Quelltypwerte falsch festlegen, können Ihre Zuordnungssätze nicht mehr bearbeitet werden können. |
+| `mappings.sourceType` | Der Quelltyp beschreibt, wie der Wert aus der Quelle an das Ziel extrahiert wird. Der Quelltyp unterstützt zwei mögliche Werte: <ul><li>`ATTRIBUTE`: Der Quelltyp `ATTRIBUTE` wird verwendet, wenn das Eingabeattribut aus einem Quellschema stammt.</li><li>`EXPRESSION`: Der Quelltyp `EXPRESSION` wird verwendet, wenn die Zuordnung mithilfe eines berechneten Felds abgeschlossen wird.</li></ul> **WARNUNG**: Wenn Sie die Quelltypwerte falsch festlegen, können Ihre Zuordnungssätze nicht bearbeitet werden. |
 | `mappings.source` | Der Speicherort, von dem aus die Daten zugeordnet werden sollen. |
 | `mappings.destination` | Der Speicherort, an dem die Daten zugeordnet werden sollen. |
 

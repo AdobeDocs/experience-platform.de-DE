@@ -4,8 +4,8 @@ description: Erfahren Sie, welche Regeln und Tipps Sie beim Verfassen Ihrer Ziel
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 89%
+source-wordcount: '499'
+ht-degree: 98%
 
 ---
 

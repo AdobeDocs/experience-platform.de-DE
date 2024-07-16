@@ -22,42 +22,42 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung herzustellen [!DNL Platform] zu [!DNL Salesforce] -Konto, das [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Platform] mithilfe der [!DNL Flow Service] -API erfolgreich mit einem [!DNL Salesforce] -Konto zu verbinden.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Die [!DNL Salesforce] -Quelle unterstützt grundlegende Authentifizierung und OAuth2 Client Credential.
+Die Quelle [!DNL Salesforce] unterstützt grundlegende Authentifizierung und OAuth2 Client Credential.
 
 >[!BEGINTABS]
 
 >[!TAB Grundlegende Authentifizierung]
 
-Um eine Verbindung herzustellen [!DNL Salesforce] -Konto [!DNL Flow Service] Geben Sie mithilfe der einfachen Authentifizierung Werte für die folgenden Anmeldeinformationen an:
+Um Ihr [!DNL Salesforce]-Konto mit [!DNL Flow Service] mittels einfacher Authentifizierung zu verbinden, geben Sie Werte für die folgenden Anmeldedaten an:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `environmentUrl` | Die URL der [!DNL Salesforce] Quellinstanz. |
-| `username` | Der Benutzername für die [!DNL Salesforce] Benutzerkonto. |
-| `password` | Das Kennwort für die [!DNL Salesforce] Benutzerkonto. |
-| `securityToken` | Das Sicherheits-Token für [!DNL Salesforce] Benutzerkonto. |
-| `apiVersion` | Optional) Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version verwenden `52`eingeben, müssen Sie den Wert als `52.0`. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
+| `environmentUrl` | Die URL der Quellinstanz [!DNL Salesforce]. |
+| `username` | Der Benutzername für das [!DNL Salesforce] -Benutzerkonto. |
+| `password` | Das Kennwort für das [!DNL Salesforce] -Benutzerkonto. |
+| `securityToken` | Das Sicherheits-Token für das [!DNL Salesforce] -Benutzerkonto. |
+| `apiVersion` | (Optional) Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]-Instanz. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version `52` verwenden, müssen Sie den Wert als `52.0` eingeben. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce] ist: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
-Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Salesforce-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem Salesforce-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
 >[!TAB OAuth 2 Client Credential]
 
-Um eine Verbindung herzustellen [!DNL Salesforce] -Konto [!DNL Flow Service] Geben Sie mithilfe von OAuth 2 Client Credential Werte für die folgenden Anmeldedaten an:
+Geben Sie Werte für die folgenden Anmeldedaten an, um Ihr [!DNL Salesforce]-Konto mithilfe der OAuth 2-Client-Anmeldedaten mit [!DNL Flow Service] zu verbinden:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `environmentUrl` | Die URL der [!DNL Salesforce] Quellinstanz. |
-| `clientId` | Die Client-ID wird zusammen mit dem Client-Geheimnis als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglichen es die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung identifizieren auf [!DNL Salesforce]. |
-| `clientSecret` | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglichen es die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung identifizieren auf [!DNL Salesforce]. |
-| `apiVersion` | Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version verwenden `52`eingeben, müssen Sie den Wert als `52.0`. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. Dieser Wert ist für die Authentifizierung von OAuth2-Client-Anmeldedaten obligatorisch. |
+| `environmentUrl` | Die URL der Quellinstanz [!DNL Salesforce]. |
+| `clientId` | Die Client-ID wird zusammen mit dem Client-Geheimnis als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglichen es die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung mit [!DNL Salesforce] identifizieren. |
+| `clientSecret` | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglichen es die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung mit [!DNL Salesforce] identifizieren. |
+| `apiVersion` | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]-Instanz. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version `52` verwenden, müssen Sie den Wert als `52.0` eingeben. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. Dieser Wert ist für die Authentifizierung von OAuth2-Client-Anmeldedaten obligatorisch. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Salesforce] ist: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
-Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce], lesen Sie die [[!DNL Salesforce] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Weitere Informationen zur Verwendung von OAuth für [!DNL Salesforce] finden Sie im [[!DNL Salesforce] Handbuch zu OAuth-Autorisierungsflüssen](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
 
 >[!ENDTABS]
 
@@ -69,7 +69,7 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` -Endpunkt und geben Sie Ihre [!DNL Salesforce] Authentifizierungsberechtigungen im Anfragetext.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt und geben Sie Ihre [!DNL Salesforce]-Authentifizierungsdaten im Anfrageinhalt an.
 
 **API-Format**
 
@@ -83,7 +83,7 @@ POST /connections
 
 >[!TAB Grundlegende Authentifizierung]
 
-Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] einfache Authentifizierung verwenden:
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] mithilfe der einfachen Authentifizierung:
 
 ```shell
 curl -X POST \
@@ -115,14 +115,14 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `auth.params.environmentUrl` | Die URL Ihrer [!DNL Salesforce] -Instanz. |
-| `auth.params.username` | Der mit Ihrer [!DNL Salesforce] -Konto. |
-| `auth.params.password` | Das Kennwort für Ihre [!DNL Salesforce] -Konto. |
-| `auth.params.securityToken` | Das Ihrem [!DNL Salesforce] -Konto. |
+| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Salesforce] -Konto zugeordnet ist. |
+| `auth.params.password` | Das Ihrem [!DNL Salesforce]-Konto zugeordnete Kennwort. |
+| `auth.params.securityToken` | Das Ihrem [!DNL Salesforce]-Konto zugeordnete Sicherheits-Token. |
 | `connectionSpec.id` | Die [!DNL Salesforce] Verbindungsspezifikations-ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 >[!TAB OAuth 2 Client Credential]
 
-Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] Verwendung von OAuth 2 Client Credential:
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce] mithilfe von OAuth 2 Client Credential:
 
 ```shell
 curl -X POST \
@@ -154,9 +154,9 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `auth.params.environmentUrl` | Die URL Ihrer [!DNL Salesforce] -Instanz. |
-| `auth.params.clientId` | Die mit Ihrer [!DNL Salesforce] -Konto. |
-| `auth.params.clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL Salesforce] -Konto. |
-| `auth.params.apiVersion` | Die REST-API-Version der [!DNL Salesforce] -Instanz, die Sie verwenden. |
+| `auth.params.clientId` | Die mit Ihrem [!DNL Salesforce]-Konto verknüpfte Client-ID. |
+| `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrem [!DNL Salesforce]-Konto zugeordnet ist. |
+| `auth.params.apiVersion` | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]-Instanz. |
 | `connectionSpec.id` | Die [!DNL Salesforce] Verbindungsspezifikations-ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 >[!ENDTABS]
@@ -177,4 +177,4 @@ Bei einer erfolgreichen Antwort wird Ihre neu erstellte Basisverbindung zusammen
 In diesem Tutorial haben Sie eine [!DNL Salesforce]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe des [!DNL Flow Service] API](../../collect/crm.md)
+* [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/crm.md)

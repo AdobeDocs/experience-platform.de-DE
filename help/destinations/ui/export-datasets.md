@@ -16,9 +16,9 @@ ht-degree: 47%
 >
 >* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- oder Ultimate-Package, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Wenden Sie sich für weitere Informationen an Ihren Adobe-Support-Mitarbeiter.
 
-In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Datensätze](/help/catalog/datasets/overview.md) von Adobe Experience Platform zu Ihrem bevorzugten Cloud-Speicher, z. B. [!DNL Amazon S3], SFTP-Speicherorten oder [!DNL Google Cloud Storage] durch Verwendung der Experience Platform-Benutzeroberfläche.
+In diesem Artikel wird der Workflow erläutert, der zum Exportieren von [Datensätzen](/help/catalog/datasets/overview.md) aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher wie [!DNL Amazon S3], SFTP-Speicherorte oder [!DNL Google Cloud Storage] mithilfe der Experience Platform-Benutzeroberfläche erforderlich ist.
 
-Sie können auch die Experience Platform-APIs verwenden, um Datensätze zu exportieren. Lesen Sie die [API-Tutorial zum Exportieren von Datensätzen](/help/destinations/api/export-datasets.md) für weitere Informationen.
+Sie können auch die Experience Platform-APIs verwenden, um Datensätze zu exportieren. Weitere Informationen finden Sie im Tutorial zur [Export-Datensatz-API ](/help/destinations/api/export-datasets.md) .
 
 ## Für den Export verfügbare Datensätze {#datasets-to-export}
 
@@ -30,7 +30,7 @@ Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwe
 <thead>
   <tr>
     <th>Anwendung/Add-on</th>
-    <th>Ebene</th>
+    <th>Stufe</th>
     <th>Für den Export verfügbare Datensätze</th>
   </tr>
 </thead>
@@ -42,21 +42,21 @@ Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwe
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
+    <td><ul><li>Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">systemgenerierter Profil-Snapshot-Datensatz</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> Dokumentation.</td>
+    <td>Weitere Informationen finden Sie in der Dokumentation zu <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Siehe Abschnitt <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> Dokumentation.</td>
+    <td>Weitere Informationen finden Sie in der Dokumentation zu <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Alle</td>
-    <td> Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.  <br> <p> <b>Hinweis zur Verfügbarkeit:</b> Die Möglichkeit, Datensätze in die Cloud zu exportieren, befindet sich in der eingeschränkten Testphase der Veröffentlichung und ist möglicherweise noch nicht in Ihrer Umgebung verfügbar. Diese Anmerkung wird entfernt, wenn die Funktion allgemein verfügbar ist. Informationen zum Customer Journey Analytics-Veröffentlichungsprozess finden Sie unter <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics-Funktionsveröffentlichungen</a>. </p> </td>
+    <td> Profil- und Erlebnisereignis-Datensätze, die in der Experience Platform-Benutzeroberfläche erstellt wurden, nachdem Daten über Quellen, Web SDK, Mobile SDK, Analytics Data Connector und Audience Manager erfasst oder erfasst wurden.  <br> <p> <b>Hinweis zur Verfügbarkeit:</b> Die Möglichkeit, Datensätze in die Cloud zu exportieren, befindet sich in der eingeschränkten Testphase der Veröffentlichung und ist möglicherweise noch nicht in Ihrer Umgebung verfügbar. Diese Anmerkung wird entfernt, wenn die Funktion allgemein verfügbar ist. Informationen zum Customer Journey Analytics-Veröffentlichungsprozess finden Sie unter <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics-Feature Releases</a>. </p> </td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -92,7 +92,7 @@ Einige dateibasierte Ziele im Experience Platform-Katalog unterstützen sowohl d
 * Ziehen Sie die Aktivierung von Zielgruppen in Erwägung, wenn Ihre Daten in Profile strukturiert sein sollen, die nach Zielgruppeninteressen oder Qualifikationen gruppiert sind.
 * Alternativ können Sie Datensatzexporte in Betracht ziehen, wenn Sie Rohdatensätze exportieren möchten, die nicht nach Zielgruppeninteressen oder Qualifikationen gruppiert oder strukturiert sind. Sie können diese Daten für Berichte, Datenwissenschaft-Workflows und viele andere Anwendungsfälle verwenden. Als Administrator, Data Engineer oder Analyst können Sie beispielsweise Daten von Experience Platform exportieren, um sie mit Ihrem Data Warehouse zu synchronisieren, in BI-Analyse-Tools oder externen Cloud ML-Tools verwenden oder in Ihrem System speichern, um langfristige Speicheranforderungen zu erfüllen.
 
-Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie *Zielgruppen* zu Cloud-Speicher- oder E-Mail-Marketing-Zielen lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md).
+Dieses Dokument enthält alle Informationen, die zum Exportieren von Datensätzen erforderlich sind. Wenn Sie *Audiences* aktivieren möchten, um Cloud-Speicher- oder E-Mail-Marketing-Ziele zu nutzen, lesen Sie den Abschnitt [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Voraussetzungen {#prerequisites}
 
@@ -100,7 +100,7 @@ Um Datensätze in Cloud-Speicher-Ziele zu exportieren, müssen Sie erfolgreich [
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Zum Exportieren von Datensätzen benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Anzeigen von Datensätzen]**, und **[!UICONTROL Verwalten und Aktivieren von Datensatzzielen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Datensätzen benötigen Sie die Berechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Datensätze anzeigen]** und **[!UICONTROL Datensatzziele verwalten und aktivieren]** [Zugriffskontrolle](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Exportieren von Datensätzen verfügen und dass das Ziel den Export von Datensätzen unterstützt, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über die Steuerung **[!UICONTROL Aktivieren]** oder **[!UICONTROL Datensätze exportieren]** verfügt, dann haben Sie die entsprechenden Berechtigungen.
 
@@ -139,7 +139,7 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 >title="Dateiexportoptionen für Datensätze"
 >abstract="Wählen Sie **Inkrementelle Dateien exportieren** aus, um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, sodass eine Aufstockung durchgeführt wird. Weitere inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden."
 
-Im **[!UICONTROL Planung]** Schritt, können Sie ein Startdatum und eine Exportkadenz für Ihre Datensatzexporte festlegen.
+Im Schritt **[!UICONTROL Planung]** können Sie ein Startdatum und eine Exportkadenz für Ihre Datensatzexporte festlegen.
 
 Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist automatisch ausgewählt. Dies Trigger den Export einer oder mehrerer Dateien, die eine vollständige Momentaufnahme des Datensatzes darstellen. Nachfolgende Dateien werden seit dem vorherigen Export inkrementell zum Datensatz hinzugefügt.
 
@@ -172,7 +172,7 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 ## Überprüfen eines erfolgreichen Datensatzexports {#verify}
 
-Beim Exportieren von Datensätzen erstellt Experience Platform eine oder mehrere `.json` oder `.parquet` -Dateien in dem von Ihnen angegebenen Speicherort. Erwarten Sie, dass neue Dateien entsprechend dem von Ihnen angegebenen Exportplan an Ihrem Speicherort abgelegt werden.
+Beim Exportieren von Datensätzen erstellt Experience Platform eine oder mehrere `.json` - oder `.parquet` -Dateien am von Ihnen angegebenen Speicherort. Erwarten Sie, dass neue Dateien entsprechend dem von Ihnen angegebenen Exportplan an Ihrem Speicherort abgelegt werden.
 
 Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in der die exportierten Datensatzdateien abgelegt werden. Für jeden Exportzeitpunkt wird ein neuer Ordner erstellt, wobei das folgende Muster befolgt wird:
 
@@ -186,7 +186,7 @@ Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt einen erfolgrei
 
 #### Komprimierte Datensatzdateien {#compressed-dataset-files}
 
-Im [Zielgruppen-Workflow verbinden](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)können Sie die zu komprimierenden exportierten Datensatzdateien auswählen, wie unten dargestellt:
+Im Workflow [Verbindung mit Ziel herstellen](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) können Sie die zu komprimierenden exportierten Datensatzdateien auswählen, wie unten dargestellt:
 
 ![Dateityp und Auswahl der Komprimierung beim Herstellen einer Verbindung zu einem Ziel zum Exportieren von Datensätzen.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
 
@@ -211,11 +211,11 @@ Gehen Sie wie folgt vor, um Datensätze aus einem vorhandenen Datenfluss zu entf
 
    ![Die verfügbare Navigationsoption für Datensätze, die in der Spalte „Aktivieriungsdaten“ hervorgehoben ist.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. [!BADGE Beta] Die **[!UICONTROL Aktivierungsdaten]** Seite für das Ziel angezeigt. Aktivieren Sie die Kontrollkästchen auf der linken Seite der Datensatzliste, um die Datensätze auszuwählen, die Sie entfernen möchten, und wählen Sie dann **[!UICONTROL Entfernen von Datensätzen]** in der rechten Leiste, um das Dialogfeld zum Entfernen von Datensatzbestätigungen Trigger.
+1. [!BADGE Beta] Die Seite **[!UICONTROL Aktivierungsdaten]** für das Ziel wird angezeigt. Verwenden Sie die Kontrollkästchen auf der linken Seite der Datensatzliste, um die Datensätze auszuwählen, die Sie entfernen möchten, und wählen Sie dann **[!UICONTROL Datensätze entfernen]** in der rechten Leiste aus, um das Dialogfeld zum Entfernen von Datensätzen Trigger.
 
    >[!NOTE]
    >
-   >Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
 
    ![Der Dialog „Datensatz entfernen“, der die Steuerung „Datensatz entfernen“ in der rechten Leiste anzeigt.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
@@ -225,7 +225,7 @@ Gehen Sie wie folgt vor, um Datensätze aus einem vorhandenen Datenfluss zu entf
 
 ## Berechtigungen für den Datensatzexport {#licensing-entitlement}
 
-In den Produktbeschreibungsdokumenten erfahren Sie, wie viele Daten Sie pro Experience Platform-Anwendung exportieren können. Sie können beispielsweise die Real-Time CDP-Produktbeschreibung anzeigen [here](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+In den Produktbeschreibungsdokumenten erfahren Sie, wie viele Daten Sie pro Experience Platform-Anwendung exportieren können. Sie können beispielsweise die Real-Time CDP-Produktbeschreibung [hier](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) anzeigen.
 
 Beachten Sie, dass die Berechtigungen für Datenexporte für verschiedene Anwendungen nicht additiv sind. Wenn Sie beispielsweise Real-Time CDP Ultimate und Adobe Journey Optimizer Ultimate erwerben, ist die Profilexportberechtigung gemäß den Produktbeschreibungen die größere der beiden Berechtigungen. Ihre Volumenberechtigungen werden berechnet, indem Sie die Gesamtzahl der lizenzierten Profile mit 500 KB für Real-Time CDP Prime oder 700 KB für Real-Time CDP Ultimate multiplizieren, um festzustellen, zu welchem Datenvolumen Sie berechtigt sind.
 
@@ -242,4 +242,4 @@ Beachten Sie die folgenden Einschränkungen für die allgemeine Verfügbarkeit v
 * Über API erstellte Datensätze können derzeit nicht exportiert werden.
 * Die Benutzeroberfläche hindert Sie derzeit nicht daran, einen Datensatz zu löschen, während er an ein Ziel exportiert wird. Löschen Sie keine Datensätze, während sie an Ziele exportiert werden. [Entfernen Sie den Datensatz](#remove-dataset) aus einem Ziel-Datenfluss, bevor Sie ihn löschen.
 * Überwachungsmetriken für Datensatzexporte werden derzeit mit Zahlen für Profilexporte gemischt, sodass sie nicht die tatsächlichen Exportzahlen widerspiegeln.
-* Daten mit einem Zeitstempel, der älter als 365 Tage ist, sind von den Datensatzexporten ausgeschlossen. Weitere Informationen finden Sie unter [Limits für geplante Datensatzexporte](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+* Daten mit einem Zeitstempel, der älter als 365 Tage ist, sind von den Datensatzexporten ausgeschlossen. Weitere Informationen finden Sie in den [Limits für geplante Datensatzexporte](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)

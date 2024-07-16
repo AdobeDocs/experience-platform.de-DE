@@ -9,9 +9,9 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Implementierungsdetails] Datentyp
+# [!UICONTROL Implementierungsdetails]-Datentyp
 
-[!UICONTROL Implementierungsdetails] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine Technologieimplementierung wie eine API oder ein SDK beschreibt.
+[!UICONTROL Implementierungsdetails] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der eine Technologieimplementierung beschreibt, z. B. eine API oder ein SDK.
 
 ![Datentypstruktur](../images/data-types/implementation-details.png)
 

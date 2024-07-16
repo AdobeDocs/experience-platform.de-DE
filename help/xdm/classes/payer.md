@@ -11,13 +11,13 @@ ht-degree: 5%
 
 # [!UICONTROL Player] class
 
-Im Experience-Datenmodell (XDM) wird die [!UICONTROL Player] -Klasse erfasst den Mindestsatz von Eigenschaften, die eine Zahler-Geschäftsentität definieren, die Daten über Versicherungsunternehmen erfasst (z. B. Krankenversicherungen).
+Im Experience-Datenmodell (XDM) erfasst die [!UICONTROL Payer]-Klasse den Mindestsatz von Eigenschaften, die eine Zahler-Geschäftsentität definieren, die Daten zu Versicherungsunternehmen erfasst (z. B. Krankenversicherung).
 
 ![Klassenstruktur](../images/classes/payer.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `_id` | [!UICONTROL String] | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemgeneriert ist, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten. |
+| `_id` | [!UICONTROL String] | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemseitig generiert wird, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten. |
 | `payerId` | [!UICONTROL String] | Eine eindeutige ID für den Player. |
 | `payerName` | [!UICONTROL String] | Der Name des Zahlers. |
 

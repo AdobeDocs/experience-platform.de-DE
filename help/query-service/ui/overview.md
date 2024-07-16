@@ -6,14 +6,14 @@ description: Adobe Experience Platform Query Service bietet eine Benutzeroberfl�
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 72%
+source-wordcount: '1132'
+ht-degree: 71%
 
 ---
 
 # Handbuch für die [!DNL Query Service]-Benutzeroberfläche
 
-Die Adobe Experience Platform [!DNL Query Service] bietet eine Benutzeroberfläche, die zum Schreiben und Ausführen von Abfragen, zum Anzeigen zuvor ausgeführter Abfragen und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzern in Ihrer Organisation gespeichert wurden. Um auf die Benutzeroberfläche in [Adobe Experience Platform](https://platform.adobe.com) zuzugreifen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Abfragen]** aus.
+Adobe Experience Platform [!DNL Query Service] bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrem Unternehmen gespeichert wurden. Um auf die Benutzeroberfläche in [Adobe Experience Platform](https://platform.adobe.com) zuzugreifen, wählen Sie in der linken Navigationsleiste **[!UICONTROL Abfragen]** aus.
 
 ## [!DNL Query Editor]
 
@@ -27,26 +27,26 @@ Der [!DNL Query Editor] ermöglicht Ihnen, Abfragen ohne Verwendung eines extern
 
 ## Geplante Abfragen {#scheduled-queries}
 
-Abfragen, die bereits als Vorlage gespeichert wurden, können so geplant werden, dass sie regelmäßig ausgeführt werden. Bei der Planung einer Abfrage können Sie die Ausführungsfrequenz, das Start- und Enddatum, den Wochentag, an dem die geplante Abfrage ausgeführt wird, sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll. Abfragezeitpläne werden mit dem Abfrage-Editor festgelegt.
+Abfragen, die bereits als Vorlage gespeichert wurden, können so geplant werden, dass sie regelmäßig ausgeführt werden. Bei der Planung einer Abfrage können Sie die Ausführungsfrequenz, das Start- und Enddatum, den Wochentag der geplanten Abfrage sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll. Abfragezeitpläne werden mit dem Abfrage-Editor festgelegt.
 
-Informationen zum Planen einer Abfrage über die Benutzeroberfläche finden Sie unter [Handbuch zu geplanten Abfragen](./user-guide.md#scheduled-queries). Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im [Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
+Informationen zum Planen einer Abfrage über die Benutzeroberfläche finden Sie im [Handbuch zu geplanten Abfragen](./user-guide.md#scheduled-queries). Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im [Handbuch zu Endpunkten für geplante Abfragen](../api/scheduled-queries.md).
 
-Sobald eine Abfrage geplant wurde, wird sie in der Liste der geplanten Abfragen auf der [!UICONTROL Geplante Abfragen] Registerkarte. Umfassende Informationen zu Abfrage, Ausführungen, Ersteller und Timings finden Sie durch Auswahl einer geplanten Abfrage aus der Liste.
+Nachdem eine Abfrage geplant wurde, wird sie auf der Registerkarte [!UICONTROL Geplante Abfragen] in der Liste der geplanten Abfragen angezeigt. Umfassende Informationen zu Abfrage, Ausführungen, Ersteller und Timings finden Sie, indem Sie eine geplante Abfrage aus der Liste auswählen.
 
-![Der Arbeitsbereich Abfragen mit der Registerkarte Geplante Abfragen wurde hervorgehoben und zeigt Zeilen der Abfragezeitpläne an.](../images/ui/overview/scheduled-queries.png)
+![Der Arbeitsbereich &quot;Abfragen&quot;mit der Registerkarte &quot;Geplante Abfragen&quot;wurde hervorgehoben und zeigt Zeilen der Abfragezeitpläne an.](../images/ui/overview/scheduled-queries.png)
 
 | Spalte | Beschreibung |
 | --- | --- |
 | **[!UICONTROL Name]** | Das Namensfeld enthält entweder den Namen der Vorlage oder die ersten Zeichen Ihrer SQL-Abfrage. Jede Abfrage, die über die Benutzeroberfläche mit dem Abfrage-Editor erstellt wurde, wird zu Beginn benannt. Wenn die Abfrage über die API erstellt wurde, ist der Name der Abfrage ein Ausschnitt des ursprünglichen SQL-Codes, der zum Erstellen der Abfrage verwendet wurde. |
 | **[!UICONTROL Vorlage]** | Der Name der Abfragevorlage. Klicken Sie auf einen Vorlagennamen, um zum Abfrage-Editor zu navigieren. Die Abfragevorlage wird aus praktischen Gründen im Abfrage-Editor angezeigt. Wenn kein Vorlagenname vorhanden ist, wird die Zeile mit einem Bindestrich markiert und es ist nicht möglich, zum Abfrage-Editor umzuleiten, um die Abfrage anzuzeigen. |
 | **[!UICONTROL SQL]** | Ein Ausschnitt der SQL-Abfrage. |
-| **[!UICONTROL Ausführungshäufigkeit]** | Dies ist die Kadenz, in der Ihre Abfrage ausgeführt werden soll. Die unterstützten Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungshäufigkeit gefiltert werden. |
+| **[!UICONTROL Ausführungsfrequenz]** | Dies ist die Kadenz, in der Ihre Abfrage ausgeführt werden soll. Die unterstützten Werte sind `Run once` und `Scheduled`. Abfragen können entsprechend ihrer Ausführungshäufigkeit gefiltert werden. |
 | **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
 | **[!UICONTROL Erstellt]** | Der Zeitstempel der Erstellung der Abfrage im UTC-Format. |
 | **[!UICONTROL Zeitstempel der letzten Ausführung]** | Der Zeitstempel der letzten Ausführung der Abfrage. Diese Spalte zeigt, ob eine Abfrage gemäß ihrem aktuellen Zeitplan ausgeführt wurde. |
-| **[!UICONTROL Status der letzten Ausführung]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
+| **[!UICONTROL Letzter Ausführungsstatus]** | Der Status der letzten Abfrageausführung. Die drei Statuswerte sind `successful`, `failed` oder `in progress`. |
 
-Weitere Informationen zum [Abfragen über die Query Service-Benutzeroberfläche überwachen](./monitor-queries.md).
+Weitere Informationen zum Überwachen von Abfragen über die Query Service-Benutzeroberfläche finden Sie in der Dokumentation[.](./monitor-queries.md)
 
 ## Vorlagen {#browse}
 
@@ -61,7 +61,7 @@ Die Registerkarte **[!UICONTROL Vorlagen]** enthält Abfragen, die von Benutzend
 | **[!UICONTROL Geändert von]** | Der letzte Benutzer, der die Abfrage geändert hat. Jeder Benutzer in Ihrer Organisation, der Zugriff auf [!DNL Query Service] hat, kann Abfragen ändern. |
 | **[!UICONTROL Zuletzt geändert]** | Datum und Uhrzeit der letzten Änderung der Abfrage in der Zeitzone des Browsers. |
 
-Siehe [Abfragevorlagen](./query-templates.md) Dokumentation finden Sie weitere Informationen zu Vorlagen in der Platform-Benutzeroberfläche.
+Weitere Informationen zu Vorlagen in der Platform-Benutzeroberfläche finden Sie in der Dokumentation zu [Abfragevorlagen](./query-templates.md) .
 
 ## Protokoll {#log}
 
@@ -71,18 +71,19 @@ Die Registerkarte **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, d
 
 | Spalte | Beschreibung |
 | --- | --- |
-| **[!UICONTROL Name]** | Der Abfragename, der aus den ersten Zeichen der SQL-Abfrage besteht. Wählen Sie den Vorlagennamen aus, um den [!UICONTROL Details zum Abfrage-Protokoll] anzeigen. Sie können die Suchleiste verwenden, um nach dem Namen einer Abfrage zu suchen. Bei Suchen wird zwischen Groß- und Kleinschreibung unterschieden. |
-| **[!UICONTROL Startzeit]** | Der Zeitpunkt, zu dem die Abfrage ausgeführt wurde. |
+| **[!UICONTROL Name]** | Der Abfragename, der aus den ersten Zeichen der SQL-Abfrage besteht. Wählen Sie den Vorlagennamen aus, um die Ansicht [!UICONTROL Details des Abfrageprotokolls] für diesen Lauf zu öffnen. Sie können die Suchleiste verwenden, um nach dem Namen einer Abfrage zu suchen. Bei Suchen wird zwischen Groß- und Kleinschreibung unterschieden. |
+| **[!UICONTROL Startzeit]** | Der Zeitpunkt der Ausführung der Abfrage. |
 | **[!UICONTROL Abschlusszeit]** | Die Zeit, zu der die Abfrage ausgeführt wurde. |
 | **[!UICONTROL Status]** | Der aktuelle Status der Abfrage. |
 | **[!UICONTROL Datensatz]** | Der von der Abfrage verwendete Eingabedatensatz. Wählen Sie den Datensatz aus, um zum Bildschirm mit den Details des Eingabedatensatzes zu gelangen. |
 | **[!UICONTROL Client]** | Der für die Abfrage verwendete Client. |
 | **[!UICONTROL Erstellt von]** | Der Name der Person, die die Abfrage erstellt hat. |
 
->!![Note]
-Wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](../images/ui/overview/edit-icon.png)) aus einer beliebigen Zeile des Abfrageprotokolls, um zur [!DNL Query Editor]. Die Abfrage wird vorab ausgefüllt, um die Bearbeitung zu erleichtern.
+>
+>
+>Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](../images/ui/overview/edit-icon.png)) aus einer beliebigen Zeile des Abfrageprotokolls, um zum [!DNL Query Editor] zu navigieren. Die Abfrage wird vorab ausgefüllt, um die Bearbeitung zu erleichtern.
 
-Siehe [Dokumentation zu Abfrageprotokollen](./query-logs.md) für weitere Informationen zu den Protokolldateien, die automatisch von einem Abfrageereignis generiert werden.
+Weitere Informationen zu den Protokolldateien, die automatisch von einem Abfrageereignis generiert werden, finden Sie in der Dokumentation zu [Abfrageprotokollen](./query-logs.md) .
 
 ## Anmeldeinformationen
 

@@ -1,7 +1,8 @@
 ---
 title: targetMigrationEnabled
 description: Erlauben Sie dem Web SDK, Adobe Target-Cookies zu lesen und zu schreiben.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 4b9203c6-31b7-45af-a6a6-a206d7edac3f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -14,18 +15,18 @@ Die `targetMigrationEnabled` -Eigenschaft ist ein boolescher Wert, der es dem We
 
 ## Aktivieren der Target-Migration von at.js mithilfe der Web SDK-Tag-Erweiterung
 
-Wählen Sie die **[!UICONTROL Migrieren von Target von at.js zum Web SDK]** Kontrollkästchen, wenn [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Aktivieren Sie das Kontrollkästchen **[!UICONTROL Target von at.js in das Web SDK migrieren]** , wenn [ die Tag-Erweiterung konfiguriert.](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** Klicken Sie auf **[!UICONTROL Konfigurieren]** auf [!UICONTROL Adobe Experience Platform Web SDK] Karte.
-1. Scrollen Sie nach unten zum [!UICONTROL Personalisierung] und wählen Sie das Kontrollkästchen aus. **[!UICONTROL Migrieren von Target von at.js zum Web SDK]**.
-1. Klicks **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
+1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Personalization] und aktivieren Sie dann das Kontrollkästchen **[!UICONTROL Target von at.js zum Web SDK migrieren]** .
+1. Klicken Sie auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
 
-## Aktivieren der Target-Migration von at.js mithilfe der Web SDK-JavaScript-Bibliothek
+## Aktivieren der Target-Migration von at.js mithilfe der Web SDK JavaScript-Bibliothek
 
-Legen Sie die `targetMigrationEnabled` boolean beim Ausführen der `configure` Befehl. Wenn Sie diese Eigenschaft beim Konfigurieren des Web SDK weglassen, wird standardmäßig `false`. Setzen Sie diesen Wert auf `true` wenn Sie einige Seiten haben, die weiterhin die Adobe Target 1.x- oder 2.x-Bibliotheken verwenden.
+Legen Sie den booleschen Wert `targetMigrationEnabled` fest, wenn Sie den Befehl `configure` ausführen. Wenn Sie diese Eigenschaft beim Konfigurieren des Web SDK weglassen, wird standardmäßig `false` verwendet. Setzen Sie diesen Wert auf `true` , wenn Sie einige Seiten haben, die noch die Adobe Target 1.x- oder 2.x-Bibliotheken verwenden.
 
 ```js
 alloy("configure", {

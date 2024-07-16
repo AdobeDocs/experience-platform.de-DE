@@ -51,9 +51,9 @@ Wenn ein Datenelement mit dem entsprechenden Namen vorhanden ist, wird der Wert 
 
 >[!NOTE]
 >
->Sie können Prozentwerte (`%`) Syntax, um Variablen für viele Formularfelder in Ihrer Tag-Implementierung zu referenzieren, wodurch der Aufruf von `_satellite.getVar()`. Verwenden Sie beispielsweise `%product%` greift auf den Wert des Produktdatenelements oder der benutzerdefinierten Variablen zu.
+>Sie können die Prozentsyntax (`%`) verwenden, um Variablen für viele Formularfelder in Ihrer Tag-Implementierung zu referenzieren, wodurch der Aufruf von `_satellite.getVar()` weniger erforderlich ist. Beispielsweise greift die Verwendung von `%product%` auf den Wert des Produktdatenelements oder der benutzerdefinierten Variablen zu.
 
-Wenn ein Ereignis eine Regel Trigger, können Sie die entsprechende Regel übergeben `event` Objekt in `_satellite.getVar()` wie folgt:
+Wenn ein Ereignis eine Regel Trigger, können Sie das entsprechende `event` -Objekt der Regel wie folgt an `_satellite.getVar()` übergeben:
 
 ```javascript
 // event refers to the calling rule's event
@@ -64,7 +64,7 @@ var rule = _satellite.getVar('return event rule', event);
 
 >[!NOTE]
 >
->Die `setVar` -Code ist vollständig von einem in Tags angegebenen Datenelement getrennt.
+>Der Code `setVar` ist vollständig von einem in Tags angegebenen Datenelement getrennt.
 
 **Code**
 
@@ -160,7 +160,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Im alten [`setCookie`](#setCookie) -Methode zum Festlegen von Cookies war das dritte (optionale) Argument für diesen Funktionsaufruf eine Ganzzahl, die die Ablaufzeit des Cookies in Tagen angibt. In dieser neuen Methode wird stattdessen ein Objekt „attributes“ als drittes Argument akzeptiert. Um mithilfe der neuen Methode einen Ablauf für ein Cookie festzulegen, müssen Sie eine `expires` -Eigenschaft im Attributobjekt und legen Sie es auf den gewünschten Wert fest. Dies wird im folgenden Beispiel demonstriert.
+>Bei der alten [`setCookie`](#setCookie) -Methode zum Setzen von Cookies war das dritte (optionale) Argument für diesen Funktionsaufruf eine Ganzzahl, die die Ablaufzeit des Cookies in Tagen angibt. In dieser neuen Methode wird stattdessen ein Objekt „attributes“ als drittes Argument akzeptiert. Um mit der neuen Methode einen Ablauf für ein Cookie festzulegen, müssen Sie eine `expires` -Eigenschaft im Attributobjekt angeben und sie auf den gewünschten Wert setzen. Dies wird im folgenden Beispiel demonstriert.
 
 **Beispiel**
 

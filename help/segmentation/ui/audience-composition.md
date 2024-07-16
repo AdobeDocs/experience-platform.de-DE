@@ -28,7 +28,7 @@ Das Popup-Fenster **[!UICONTROL Kompositionseigenschaften]** erscheint. Sie kön
 
 >[!NOTE]
 >
->Wenn Sie **not** Geben Sie Ihrer Komposition einen Titel, sie hat einen Titel &quot;Komposition&quot;, gefolgt von dem Erstellungsdatum und der Erstellungszeit standardmäßig. Zusätzlich wird jede Komposition **must** einen eigenen eindeutigen Namen haben.
+>Wenn Sie **nicht** Ihren Kompositionen einen Titel geben, erhält er den Titel &quot;Komposition&quot;, gefolgt von dem Erstellungsdatum und der Erstellungszeit standardmäßig. Darüber hinaus hat jede Komposition **must** ihren eigenen eindeutigen Namen.
 
 Nachdem Sie die Details Ihrer Komposition aktualisiert haben, wählen Sie **[!UICONTROL Speichern]**, um diese Aktualisierungen zu bestätigen. Die Arbeitsfläche für die Zielgruppenkomposition wird erneut angezeigt.
 
@@ -54,9 +54,9 @@ So fügen Sie Zielgruppen zum Zielgruppenblock hinzu. Wählen Sie **[!UICONTROL 
 
 >[!IMPORTANT]
 >
->Bitte beachten Sie, dass **only** Zielgruppen, die mithilfe der standardmäßigen Zusammenführungsrichtlinie definiert wurden, werden angezeigt.
+>Beachten Sie, dass nur **1} Zielgruppen angezeigt werden, die mithilfe der standardmäßigen Zusammenführungsrichtlinie definiert wurden.**
 >
->Darüber hinaus gilt nur **veröffentlicht** Mit Segment Builder erstellte Zielgruppen können verwendet werden. Zielgruppen, die mit der Zielgruppenzusammensetzung und extern generierten Zielgruppen erstellt wurden, sind **not** verfügbar.
+>Darüber hinaus können nur mit Segment Builder erstellte **veröffentlichte** Zielgruppen verwendet werden. Zielgruppen, die mit Zielgruppenzusammensetzung und extern generierten Zielgruppen erstellt wurden, sind **nicht** verfügbar.
 
 Eine Liste von Zielgruppen wird angezeigt. Wählen Sie die Zielgruppe aus, die Sie einbeziehen möchten, und dann **[!UICONTROL Hinzufügen]**, um sie an Ihren Zielgruppen-Block anzuhängen.
 
@@ -106,7 +106,7 @@ Wenn Sie nach Zielgruppe ausschließen, können Sie durch Auswahl von **[!UICONT
 
 >[!IMPORTANT]
 >
->Nur **veröffentlicht** Mit Segment Builder erstellte Zielgruppen können verwendet werden. Zielgruppen, die mit der Zielgruppenzusammensetzung und extern generierten Zielgruppen erstellt wurden, sind **not** verfügbar.
+>Es können nur mit Segment Builder erstellte **veröffentlichte** Zielgruppen verwendet werden. Zielgruppen, die mit Zielgruppenzusammensetzung und extern generierten Zielgruppen erstellt wurden, sind **nicht** verfügbar.
 
 Eine Liste von Zielgruppen wird angezeigt. Wählen Sie **[!UICONTROL Hinzufügen]** aus, um die Zielgruppen, die ausgeschlossen werden sollen, Ihrem Ausschlussblock hinzuzufügen.
 
@@ -124,7 +124,7 @@ Eine Liste der Profilattribute wird angezeigt. Wählen Sie den Attributtyp aus, 
 
 >[!IMPORTANT]
 >
->Beim Ausschließen nach Attribut können Sie nur Folgendes festlegen: **one** -Wert auszuschließen. Die Verwendung einer beliebigen Trennlinie, wie Kommas oder Semikolons, führt nur dazu, dass dieser genaue Wert ausgeschlossen wird. Setzen Sie den Wert beispielsweise auf `red, blue` führt dazu, dass der Begriff ausgeschlossen wird `red, blue` aus dem -Attribut, aber wird **not** Ergebnis: Ausschluss eines Begriffs `red` oder `blue`.
+>Beim Ausschließen durch -Attribut können Sie nur den auszuschließenden **1** -Wert angeben. Die Verwendung einer beliebigen Trennlinie, wie Kommas oder Semikolons, führt nur dazu, dass dieser genaue Wert ausgeschlossen wird. Wenn Sie beispielsweise den Wert auf `red, blue` setzen, wird der Begriff `red, blue` aus dem Attribut ausgeschlossen, aber **nicht** führt dazu, dass der Begriff `red` oder `blue` ausgeschlossen wird.
 
 ## [!UICONTROL Anreichern] {#enrich-block}
 
@@ -226,13 +226,13 @@ Eine Liste der Profilattribute wird angezeigt. In diesem Popup können Sie den A
 
 Nach Auswahl des Attributs können Sie die Reihenfolge auswählen, nach der geordnet werden soll. Dies geschieht entweder in aufsteigender (von niedrigster zu höchster) oder in absteigender (von höchster zu niedrigster) Reihenfolge.
 
-Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränken, indem Sie die Option **[!UICONTROL Profilbegrenzung hinzufügen]** umschalten. Wenn dieser Umschalter aktiviert ist, können Sie die maximale Anzahl von Profilen festlegen, die innerhalb der Variablen **[!UICONTROL Enthaltene Profile]** -Feld.
+Darüber hinaus können Sie die Anzahl der zurückgegebenen Profile einschränken, indem Sie den Umschalter **[!UICONTROL Profillimit hinzufügen]** aktivieren. Wenn dieser Umschalter aktiviert ist, können Sie die maximale Anzahl von Profilen festlegen, die im Feld **[!UICONTROL Eingeschlossene Profile]** zurückgegeben werden.
 
-![Der Umschalter Profilbeschränkung hinzufügen ist hervorgehoben, wodurch die Anzahl der zurückgegebenen Profile begrenzt werden kann.](../images/ui/audience-composition/add-profile-limit.png)
+![Der Umschalter Profilbeschränkung hinzufügen ist hervorgehoben, wodurch Sie die Anzahl der zurückgegebenen Profile einschränken können.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Aufspaltung] {#split-block}
 
-Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder Attribut aufteilen. Bei der Unterteilung Ihrer Audience in Unterzielgruppen erfolgt diese Aufteilung **persistent**. Das bedeutet, dass sich das Profil bei jeder Auswertung in derselben Unter-Audience befindet.
+Mit dem Blocktyp **[!UICONTROL Aufspaltung]** können Sie Ihre neue Zielgruppe in verschiedene Unterzielgruppen unterteilen. Sie können diese Zielgruppe entweder nach Prozentsatz oder Attribut aufteilen. Wenn Sie Ihre Zielgruppe in Unterzielgruppen unterteilen, ist diese Aufteilung **persistent**. Das bedeutet, dass sich das Profil bei jeder Auswertung in derselben Unter-Audience befindet.
 
 Um einen Block **[!UICONTROL Aufspaltung]** hinzuzufügen, wählen Sie das Symbol **+** und dann **[!UICONTROL Aufspaltung]** aus.
 

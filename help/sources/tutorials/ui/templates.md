@@ -53,11 +53,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 >abstract="Wählen Sie den entsprechenden Geschäftstyp für Ihren Anwendungsfall aus. Ihr Zugriff variiert je nach Ihrem Real-time Customer Data Platform-Abonnementkonto."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de" text="Real-Time CDP – Übersicht"
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich und sehen Sie sich einen Quellkatalog an, der unter Experience Platform verfügbar ist.
+Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich die Option **[!UICONTROL Quellen]** aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen und einen Quellkatalog anzuzeigen, der unter Experience Platform verfügbar ist.
 
-Verwenden Sie die *[!UICONTROL Kategorien]* Menü zum Filtern von Quellen nach Kategorie. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
+Verwenden Sie das Menü *[!UICONTROL Kategorien]* , um Quellen nach Kategorie zu filtern. Geben Sie alternativ einen Quellnamen in die Suchleiste ein, um eine bestimmte Quelle aus dem Katalog zu finden.
 
-Navigieren Sie zu [!UICONTROL Adobe-Anwendungen] -Kategorie, um die [!DNL Marketo Engage] Quellkarte und wählen Sie dann [!UICONTROL Daten hinzufügen] um zu beginnen.
+Navigieren Sie zur Kategorie [!UICONTROL Adobe Applications] , um die Quellkarte [!DNL Marketo Engage] anzuzeigen, und wählen Sie dann [!UICONTROL Daten hinzufügen] aus, um zu beginnen.
 
 ![Katalog des Quellarbeitsbereichs mit hervorgehobener Marketo Engage-Quelle.](../../images/tutorials/templates/catalog.png)
 
@@ -94,9 +94,10 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus un
 
 Nachdem Ihr Konto authentifiziert wurde, können Sie jetzt die Vorlage auswählen, die Sie für Ihren Datenfluss verwenden möchten.
 
-+++[!DNL Marketo Engage] Vorlagen In der folgenden Tabelle sind die für die [!DNL Marketo Engage] -Quelle.
++++[!DNL Marketo Engage] Vorlagen
+In der folgenden Tabelle sind die für die Quelle [!DNL Marketo Engage] verfügbaren Vorlagen aufgeführt.
 
-| [!DNL Marketo Engage] templates | Beschreibung |
+| [!DNL Marketo Engage] Vorlagen | Beschreibung |
 | --- | --- |
 | Aktivitäten | Die Aktivitätsvorlage erfasst ereignisbasierte Momentaufnahmen von Aktivitäten wie E-Mail-Interaktionen, Website-Interaktionen und Verkaufsaufrufen. |
 | Firmen | Die Unternehmensvorlage erfasst Geschäftskontodetails wie firmografische Informationen, Standort und Rechnungsinformationen des Unternehmens. |
@@ -113,13 +114,14 @@ Nachdem Ihr Konto authentifiziert wurde, können Sie jetzt die Vorlage auswähle
 
 +++
 
-+++[!DNL Salesforce] B2B-Vorlagen In der folgenden Tabelle sind die für die Variablen [!DNL Salesforce] -Quelle.
++++[!DNL Salesforce] B2B-Vorlagen
+In der folgenden Tabelle sind die für die Quelle [!DNL Salesforce] verfügbaren B2B-Vorlagen aufgeführt.
 
 | [!DNL Salesforce] B2B-Vorlagen | Beschreibung |
 | --- | --- |
 | Kontokontaktrelation | Die Vorlage für die Kontokontaktbeziehung erfasst die Beziehung zwischen einem Kontakt und einem oder mehreren Konten. |
 | Konten | Die Kontovorlage erfasst Geschäftskontodetails wie firmografische Informationen, Ort und Rechnungsinformationen des Unternehmens. |
-| Campaign-Mitglieder | Die Vorlage &quot;Campaign Members&quot;erfasst die Beziehung zwischen einem einzelnen Lead oder Kontakt und einem bestimmten [!DNL Salesforce] Kampagne. |
+| Campaign-Mitglieder | Die Vorlage &quot;Campaign Members&quot;erfasst die Beziehung zwischen einem einzelnen Lead oder Kontakt und einer bestimmten [!DNL Salesforce]-Kampagne. |
 | Kampagnen | Die Kampagnenvorlage erfasst Geschäftskontodetails wie firmografische Informationen, Ort und Rechnungsinformationen des Unternehmens. |
 | Kontakte | Die Kontaktvorlage erfasst Attribute für Kontakte wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
 | Leads | Die Leads-Vorlage erfasst Attribute für Leads wie demografische Details, Kontaktinformationen und verwandte Geschäftseinheiten. |
@@ -130,7 +132,8 @@ Nachdem Ihr Konto authentifiziert wurde, können Sie jetzt die Vorlage auswähle
 
 +++
 
-+++[!DNL Salesforce] B2C-Vorlagen In der folgenden Tabelle sind die für die [!DNL Salesforce] -Quelle.
++++[!DNL Salesforce] B2C-Vorlagen
+In der folgenden Tabelle sind die für die Quelle [!DNL Salesforce] verfügbaren B2C-Vorlagen aufgeführt.
 
 | [!DNL Salesforce] B2C-Vorlagen | Beschreibung |
 | --- | --- |
@@ -141,7 +144,8 @@ Nachdem Ihr Konto authentifiziert wurde, können Sie jetzt die Vorlage auswähle
 
 +++
 
-+++[!DNL Microsoft Dynamics] B2B-Vorlagen In der folgenden Tabelle sind die für die Variablen [!DNL Microsoft Dynamics] -Quelle.
++++[!DNL Microsoft Dynamics] B2B-Vorlagen
+In der folgenden Tabelle sind die für die Quelle [!DNL Microsoft Dynamics] verfügbaren B2B-Vorlagen aufgeführt.
 
 | [!DNL Microsoft Dynamics] B2B-Vorlagen | Beschreibung |
 | --- | --- |
@@ -158,7 +162,8 @@ Nachdem Ihr Konto authentifiziert wurde, können Sie jetzt die Vorlage auswähle
 
 +++
 
-+++[!DNL Microsoft Dynamics] B2C-Vorlagen In der folgenden Tabelle sind die für die [!DNL Microsoft Dynamics] -Quelle.
++++[!DNL Microsoft Dynamics] B2C-Vorlagen
+In der folgenden Tabelle sind die für die Quelle [!DNL Microsoft Dynamics] verfügbaren B2C-Vorlagen aufgeführt.
 
 | [!DNL Microsoft Dynamics] B2C-Vorlagen | Beschreibung |
 | --- | --- |
@@ -169,7 +174,7 @@ Nachdem Ihr Konto authentifiziert wurde, können Sie jetzt die Vorlage auswähle
 
 +++
 
-Je nach ausgewähltem Geschäftstyp wird eine Liste mit Vorlagen angezeigt. Vorschausymbol auswählen ![Vorschausymbol](../../images/tutorials/templates/preview-icon.png) neben einem Vorlagennamen, um eine Vorschau der Beispieldaten aus der Vorlage anzuzeigen.
+Je nach ausgewähltem Geschäftstyp wird eine Liste mit Vorlagen angezeigt. Wählen Sie das Vorschausymbol ![Vorschausymbol](../../images/tutorials/templates/preview-icon.png) neben dem Vorlagennamen aus, um eine Vorschau der Beispieldaten aus der Vorlage anzuzeigen.
 
 ![Liste von Vorlagen mit hervorgehobenem Vorschausymbol.](../../images/tutorials/templates/templates.png)
 
@@ -187,19 +192,19 @@ Wenn Sie ein oder mehrere Elemente aus der Liste der verfügbaren Vorlagen ausw�
 
 ![Die Liste der Vorlagen mit der ausgewählten Vorlage „Rolle von Opportunity-Kontakt“.](../../images/tutorials/templates/select-template.png)
 
-### Festlegen eines Zeitplans
+### Zeitplan festlegen
 
-Die [!DNL Microsoft Dynamics] und [!DNL Salesforce] -Quellen unterstützen beide die Planung von Datenflüssen.
+Die Quellen [!DNL Microsoft Dynamics] und [!DNL Salesforce] unterstützen beide die Planung von Datenflüssen.
 
-Verwenden Sie die Planungsschnittstelle, um einen Aufnahmezeitplan für Ihre Datenflüsse zu konfigurieren. Legen Sie die Aufnahmefrequenz auf **Einmal** , um eine einmalige Erfassung zu erstellen.
+Verwenden Sie die Planungsschnittstelle, um einen Aufnahmezeitplan für Ihre Datenflüsse zu konfigurieren. Setzen Sie Ihre Aufnahmefrequenz auf **einmal** , um eine einmalige Erfassung zu erstellen.
 
 ![Die Planungsschnittstelle für Dynamics- und Salesforce-Vorlagen.](../../images/tutorials/templates/schedule.png)
 
-Alternativ können Sie die Aufnahmefrequenz auf **Minute**, **Stunde**, **Tag** oder **Woche**. Wenn Sie Ihren Datenfluss für mehrere Erfassungsvorgänge planen, müssen Sie ein Intervall festlegen, um einen Zeitrahmen zwischen jeder Aufnahme festzulegen. Eine Erfassungsfrequenz, die beispielsweise auf **Stunde** und ein Intervall festgelegt auf **15** bedeutet, dass Ihr Datenfluss Daten alle **15 Stunden**.
+Alternativ können Sie die Aufnahmefrequenz auf **Minute**, **Stunde**, **Tag** oder **Woche** festlegen. Wenn Sie Ihren Datenfluss für mehrere Erfassungsvorgänge planen, müssen Sie ein Intervall festlegen, um einen Zeitrahmen zwischen jeder Aufnahme festzulegen. Beispielsweise bedeutet eine Erfassungsfrequenz, die auf **Stunde** und ein Intervall auf **15** eingestellt ist, dass Ihr Datenfluss alle **15 Stunden** Daten aufnehmen soll.
 
-Während dieses Schritts können Sie auch **Aufstockung** und definieren eine Spalte für die inkrementelle Datenaufnahme. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
+Während dieses Schritts können Sie auch **Aufstockung** aktivieren und eine Spalte für die inkrementelle Aufnahme von Daten definieren. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
 
-Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, wählen Sie **[!UICONTROL Beenden]**.
+Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, wählen Sie **[!UICONTROL Beenden]** aus.
 
 ![Die Planungsschnittstelle für Dynamics- und Salesforce-Vorlagen mit aktivierter Aufstockung.](../../images/tutorials/templates/backfill.png)
 
@@ -212,7 +217,7 @@ Nachdem Sie die Konfiguration Ihres Aufnahmezeitplans abgeschlossen haben, wähl
 
 Die Seite [!UICONTROL Vorlagen-Assets überprüfen] zeigt die Assets an, die automatisch als Teil Ihrer Vorlage generiert wurden. Auf dieser Seite können Sie die automatisch generierten Schemata, Datensätze, Identitäts-Namespaces und Datenflüsse anzeigen, die mit Ihrer Quellverbindung verknüpft sind. Die Generierung aller Assets kann bis zu fünf Minuten dauern. Wenn Sie die Seite verlassen möchten, erhalten Sie die Benachrichtigung zum Zurückkehren, wenn die Assets abgeschlossen sind. Sie können die Assets überprüfen, sobald sie generiert wurden, und jederzeit zusätzliche Konfigurationen an Ihrem Datenfluss vornehmen.
 
-Standardmäßig werden automatisch generierte Datenflüsse auf den Entwurfsstatus gesetzt, um eine weitere Anpassung von Konfigurationen zu ermöglichen, z. B. Zuordnungsregeln oder geplante Frequenzen. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Zuordnungen in der Vorschau anzeigen]** , um die für Ihren Datenfluss erstellten Zuordnungssätze anzuzeigen.
+Standardmäßig werden automatisch generierte Datenflüsse auf den Entwurfsstatus gesetzt, um eine weitere Anpassung von Konfigurationen zu ermöglichen, z. B. Zuordnungsregeln oder geplante Frequenzen. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Datenflusses aus und wählen Sie dann **[!UICONTROL Zuordnungen in der Vorschau anzeigen]** aus, um die für Ihren Datenfluss erstellten Zuordnungssätze anzuzeigen.
 
 ![Ein Dropdown-Fenster mit ausgewählter Option für die Zuordnungsvorschau.](../../images/tutorials/templates/preview.png)
 
@@ -228,31 +233,31 @@ Sie können die Ansicht des Schema-Editors verwenden, um am automatisch erstellt
 
 >[!TIP]
 >
->Sie können auf Ihren Datenfluss zu Entwürfen über die [!UICONTROL Datenflüsse] Katalogseite im Arbeitsbereich &quot;Quellen&quot;. Auswählen **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile und wählen Sie dann den Datenfluss aus, den Sie in der Liste aktualisieren möchten.
+>Sie können auf den Datenfluss für den Entwurf über die Katalogseite [!UICONTROL Datenflüsse] im Arbeitsbereich &quot;Quellen&quot;zugreifen. Wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile und wählen Sie dann den Datenfluss aus, den Sie in der Liste aktualisieren möchten.
 >
->![Eine Liste der vorhandenen Datenflüsse im Datenflusskatalog des Arbeitsbereichs &quot;Quellen&quot;.](../../images/tutorials/templates/dataflows.png)
+>![Eine Liste der vorhandenen Datenflüsse im Datenflüsse-Katalog des Arbeitsbereichs &quot;Quellen&quot;.](../../images/tutorials/templates/dataflows.png)
 
-### Datenfluss veröffentlichen
+### Publish Ihres Datenflusses
 
-Starten Sie den Veröffentlichungsprozess, indem Sie den Quellen-Workflow durchlaufen. Nachdem Sie [!UICONTROL Aktualisieren des Datenflusses], werden Sie zum *[!UICONTROL Daten hinzufügen]* Schritt des Workflows. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Starten Sie den Veröffentlichungsprozess, indem Sie den Quellen-Workflow durchlaufen. Nachdem Sie [!UICONTROL Datenfluss aktualisieren] ausgewählt haben, gelangen Sie zum Schritt *[!UICONTROL Daten hinzufügen]* des Workflows. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Schritt zum Hinzufügen von Daten für einen Entwurfs-Datenfluss](../../images/tutorials/templates/continue-draft.png)
+![Der Schritt zum Hinzufügen von Daten für einen Entwurf-Datenfluss](../../images/tutorials/templates/continue-draft.png)
 
 Bestätigen Sie anschließend Ihre Datenflussdetails und konfigurieren Sie die Einstellungen für Fehlerdiagnosen, partielle Erfassung und Warnhinweise. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
-![Der Schritt zum Datenfluss-Detail für einen Datenfluss zum Entwurf.](../../images/tutorials/templates/dataflow-detail.png)
+![Der Schritt zum Datenfluss-Detail für einen Datenfluss im Entwurf.](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->Sie können **[!UICONTROL Als Entwurf speichern]** jederzeit beenden und speichern Sie die Änderungen, die Sie an Ihrem Datenfluss vorgenommen haben.
+>Sie können jederzeit **[!UICONTROL Als Entwurf speichern]** auswählen, um die Änderungen zu stoppen und zu speichern, die Sie an Ihrem Datenfluss vorgenommen haben.
 
-Der Zuordnungsschritt wird angezeigt. In diesem Schritt können Sie die Zuordnungskonfigurationen Ihres Datenflusses neu konfigurieren. Eine umfassende Anleitung zu den für die Zuordnung verwendeten Datenvorbereitungsfunktionen finden Sie im [Benutzerhandbuch zur Datenvorbereitung](../../../data-prep/ui/mapping.md).
+Der Zuordnungsschritt wird angezeigt. In diesem Schritt können Sie die Zuordnungskonfigurationen Ihres Datenflusses neu konfigurieren. Eine umfassende Anleitung zu den für die Zuordnung verwendeten Datenvorbereitungsfunktionen finden Sie im [Benutzeroberflächen-Handbuch zur Datenvorbereitung](../../../data-prep/ui/mapping.md) .
 
 ![Der Zuordnungsschritt für einen Datenfluss im Entwurf.](../../images/tutorials/templates/mapping.png)
 
-Überprüfen Sie abschließend die Details Ihres Datenflusses und wählen Sie **[!UICONTROL Speichern und aufnehmen]** , um Ihren Entwurf zu veröffentlichen.
+Überprüfen Sie abschließend die Details Ihres Datenflusses und wählen Sie dann **[!UICONTROL Speichern und aufnehmen]** aus, um Ihren Entwurf zu veröffentlichen.
 
-![Der Überprüfungsschritt für einen Datenfluss-Entwurf.](../../images/tutorials/templates/review.png)
+![Der Überprüfungsschritt für einen Datenfluss im Entwurf.](../../images/tutorials/templates/review.png)
 
 ## Nächste Schritte
 
@@ -266,4 +271,4 @@ Klicken Sie auf das Benachrichtigungssymbol in der oberen Kopfzeile der Platform
 
 ![Der Benachrichtigungsbereich in der Platform-Benutzeroberfläche mit einer hervorgehobenen Benachrichtigung, die einen fehlgeschlagenen Datenfluss meldet.](../../images/tutorials/templates/notifications.png)
 
-Sie können die Warnhinweiseinstellungen Ihrer Vorlagen aktualisieren, um sowohl E-Mail- als auch In-Platform-Benachrichtigungen zum Status Ihrer Datenflüsse zu erhalten. Weitere Informationen zum Konfigurieren von Warnhinweisen finden Sie im Handbuch unter [Abonnieren von Warnhinweisen für Datenflüsse zu Quellen](../ui/alerts.md).
+Sie können die Warnhinweiseinstellungen Ihrer Vorlagen aktualisieren, um sowohl E-Mail- als auch In-Platform-Benachrichtigungen zum Status Ihrer Datenflüsse zu erhalten. Weitere Informationen zum Konfigurieren von Warnhinweisen finden Sie im Handbuch [wie Sie Warnhinweise für Datenflüsse zu Quellen abonnieren](../ui/alerts.md).

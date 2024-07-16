@@ -7,8 +7,8 @@ description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus ei
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1765'
-ht-degree: 72%
+source-wordcount: '1741'
+ht-degree: 71%
 
 ---
 
@@ -18,7 +18,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Spe
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Cloud-Speicherquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#cloud-storage) für eine Liste der Cloud-Speicher-Quellen, mit denen Sie eine Basisverbindung erstellen können.
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Cloud-Speicherquelle verfügen. Wenn Sie nicht über diese ID verfügen, finden Sie in der [Quellenübersicht](../../../home.md#cloud-storage) eine Liste der Cloud-Speicher-Quellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 
@@ -37,7 +37,7 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## Erstellen einer Quellverbindung {#source}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die `sourceConnections` Endpunkt von [!DNL Flow Service] API bei Angabe Ihrer Basis-Verbindungs-ID, des Pfads zur Quelldatei, die Sie aufnehmen möchten, und der entsprechenden Verbindungsspezifikations-ID Ihrer Quelle.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an den `sourceConnections` -Endpunkt der [!DNL Flow Service] -API richten und dabei Ihre Basisverbindungs-ID, den Pfad zur Quelldatei, die Sie erfassen möchten, und die entsprechende Verbindungsspezifikations-ID Ihrer Quelle angeben.
 
 Beim Erstellen einer Quellverbindung müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
 
@@ -93,13 +93,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `baseConnectionId` | Die Kennung der Basisverbindung Ihrer Cloud-Speicherquelle. |
-| `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. Folgende Werte werden unterstützt: `delimited`, `JSON`, und `parquet`. |
+| `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. Folgende Werte werden unterstützt: `delimited`, `JSON` und `parquet`. |
 | `data.properties` | (Optional) Eine Reihe von Eigenschaften, die Sie beim Erstellen einer Quellverbindung auf Ihre Daten anwenden können. |
-| `data.properties.columnDelimiter` | (Optional) Ein einstelliges Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Komma angegeben wurde, wird ein`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter` -Eigenschaft kann nur bei der Aufnahme von durch Trennzeichen getrennten Dateien verwendet werden. |
-| `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Die `encoding` -Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung erfasst. `UTF-8`. |
-| `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Erfassung definiert. Folgende komprimierte Dateitypen werden unterstützt: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, und `tar`. **Hinweis**: Die `compressionType` -Eigenschaft kann nur bei der Aufnahme von getrennten oder JSON-Dateien verwendet werden. |
-| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen ganzen Ordner.  **Hinweis**: Sie können anstelle des Dateinamens ein Sternchen verwenden, um die Aufnahme eines ganzen Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` wird die gesamte `/acme/summerCampaign/` Ordner. |
-| `params.type` | Der Dateityp der Quelldatendatei, die Sie aufnehmen. Use type `file` , um eine einzelne Datei zu erfassen und den Typ `folder` , um einen ganzen Ordner aufzunehmen. |
+| `data.properties.columnDelimiter` | (Optional) Ein einstelliges Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Wert angegeben wird, wird ein Komma (`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter` -Eigenschaft kann nur bei der Aufnahme von getrennten Dateien verwendet werden. |
+| `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Der Parameter `encoding` ist nur verfügbar, wenn CSV-Dateien mit Trennzeichen aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung `UTF-8` erfasst. |
+| `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Erfassung definiert. Folgende komprimierte Dateitypen werden unterstützt: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` und `tar`. **Hinweis**: Die Eigenschaft `compressionType` kann nur bei der Erfassung von getrennten oder JSON-Dateien verwendet werden. |
+| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen ganzen Ordner.  **Hinweis**: Sie können anstelle des Dateinamens ein Sternchen verwenden, um die Aufnahme eines ganzen Ordners anzugeben. Beispiel: `/acme/summerCampaign/*.csv` nimmt den gesamten Ordner `/acme/summerCampaign/` auf. |
+| `params.type` | Der Dateityp der Quelldatendatei, die Sie aufnehmen. Verwenden Sie den Typ &quot;`file`&quot;, um eine einzelne Datei zu erfassen, und verwenden Sie den Typ &quot;`folder`&quot;, um einen ganzen Ordner aufzunehmen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer spezifischen Cloud-Speicherquelle zugeordnet ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**
@@ -125,7 +125,7 @@ POST /sourceConnections
 
 **Anfrage**
 
-Im folgenden Beispiel wird der reguläre Ausdruck im Dateipfad verwendet, um die Aufnahme aller CSV-Dateien anzugeben, die `premium` in ihren Namen ein.
+Im folgenden Beispiel wird der reguläre Ausdruck im Dateipfad verwendet, um die Aufnahme aller CSV-Dateien anzugeben, deren Name `premium` enthält.
 
 ```shell
 curl -X POST \
@@ -155,7 +155,7 @@ curl -X POST \
 
 ### Quellverbindung zur rekursiven Erfassung von Daten konfigurieren
 
-Beim Erstellen einer Quellverbindung können Sie die `recursive` Parameter zum Erfassen von Daten aus tief verschachtelten Ordnern.
+Beim Erstellen einer Quellverbindung können Sie den Parameter `recursive` verwenden, um Daten aus tief verschachtelten Ordnern zu erfassen.
 
 **API-Format**
 
@@ -165,7 +165,7 @@ POST /sourceConnections
 
 **Anfrage**
 
-Im folgenden Beispiel wird die Variable `recursive: true` Parameterinformationen [!DNL Flow Service] , um während des Aufnahmevorgangs alle Unterordner rekursiv zu lesen.
+Im folgenden Beispiel informiert der Parameter `recursive: true` [!DNL Flow Service] darüber, dass während des Aufnahmevorgangs alle Unterordner rekursiv gelesen werden sollen.
 
 ```shell
 curl -X POST \

@@ -1,15 +1,15 @@
 ---
 description: Erfahren Sie, wie Sie beim Aktivieren von Daten für dateibasierte Ziele Dateiformatierungsoptionen konfigurieren
-title: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
+title: Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 52%
+source-wordcount: '1193'
+ht-degree: 50%
 
 ---
 
-# Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
+# Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
 
 >[!IMPORTANT]
 > 
@@ -24,15 +24,15 @@ Mithilfe der Experience Platform-Benutzeroberfläche können Sie verschiedene Da
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## Konfiguration der Dateiformatierung für CSV-Dateien {#file-configuration}
+## Dateiformatierungskonfiguration für CSV-Dateien {#file-configuration}
 
-Starten Sie die [Verbindung zum Ziel](/help/destinations/ui/connect-destination.md) Arbeitsablauf. Auswählen **Datentyp: Segmente** und **Dateityp: CSV** , um die für die exportierte Datei verfügbaren Dateiformatierungseinstellungen anzuzeigen `CSV` -Dateien.
+Um die Dateiformatierungsoptionen anzuzeigen, starten Sie den Workflow [Verbindung zum Ziel herstellen](/help/destinations/ui/connect-destination.md) . Wählen Sie **Datentyp: Segmente** und **Dateityp: CSV** aus, um die für die exportierten `CSV` -Dateien verfügbaren Dateiformatierungseinstellungen anzuzeigen.
 
 >[!IMPORTANT]
 >
 >Für das Ziel, mit dem Sie eine Verbindung herstellen, stehen möglicherweise nicht alle diese Optionen zur Verfügung. Der Zielentwickler kann bestimmen, welche Dateiformatierungsoptionen am Ziel unterstützt werden sollen. Der Zielentwickler kann bestimmen, welche Optionen beim Herstellen einer Verbindung mit dem Ziel verfügbar sind. Erforderliche Optionen sind in der Experience Platform-Benutzeroberfläche mit einem Sternchen gekennzeichnet.
 > 
->Die von Adobe erstellten Cloud-Speicher-Ziele - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützt derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
+>Die von Adobe erstellten Cloud-Speicher-Ziele - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - unterstützen derzeit nur die sechs unten hervorgehobenen CSV-Optionen.
 
 ![Abbildung mit einigen der verfügbaren Dateiformatierungsoptionen.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -47,19 +47,19 @@ Verwenden Sie dieses Steuerelement, um ein Trennzeichen für jedes Feld und jede
 
 * Doppelpunkt `(:)`
 * Komma `(,)`
-* Verkettungszeichen `(|)`
+* Pipe `(|)`
 * Semikolon `(;)`
-* Tabulatortaste `(\t)`
+* Tab `(\t)`
 
 #### Beispiele
 
 Zeigen Sie die folgenden Beispiele des Inhalts in den exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL Doppelpunkt`(:)`]** selected: `male:John:Doe`
-* Beispielausgabe mit **[!UICONTROL Komma`(,)`]** selected: `male,John,Doe`
-* Beispielausgabe mit **[!UICONTROL Pipe`(|)`]** selected: `male|John|Doe`
-* Beispielausgabe mit **[!UICONTROL Semikolon`(;)`]** selected: `male;John;Doe`
-* Beispielausgabe mit **[!UICONTROL Registerkarte`(\t)`]** selected: `male \t John \t Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Doppelpunkt`(:)`]**: `male:John:Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Komma`(,)`]**: `male,John,Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Pipeline`(|)`]**: `male|John|Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Semikolon`(;)`]**: `male;John;Doe`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Tab`(\t)`]**: `male \t John \t Doe`
 
 ### Anführungszeichen {#quote-character}
 
@@ -77,8 +77,8 @@ Verwenden Sie diese Option, wenn Sie doppelte Anführungszeichen aus exportierte
 
 Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL Null-Zeichen (\0000)]** selected: `Test,John,LastName`
-* Beispielausgabe mit **[!UICONTROL Doppelte Anführungszeichen (&quot;)]** selected: `"Test","John","LastName"`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Null-Zeichen (\0000)]**: `Test,John,LastName`
+* Beispielausgabe mit ausgewählten **[!UICONTROL Doppelzitaten (&quot;)]**: `"Test","John","LastName"`
 
 ### Escape-Zeichen {#escape-character}
 
@@ -89,15 +89,15 @@ Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit 
 
 Verwenden Sie diese Option, um ein einzelnes Zeichen zum Maskieren von Anführungszeichen in einem bereits zitierten Wert festzulegen. Diese Option ist beispielsweise nützlich, wenn Sie eine Zeichenfolge in doppelten Anführungszeichen setzen, wobei ein Teil der Zeichenfolge bereits in doppelten Anführungszeichen gesetzt ist. Diese Option bestimmt, durch welches Zeichen die inneren doppelten Anführungszeichen ersetzt werden sollen. Verfügbare Optionen sind:
 
-* Abseitiger Schrägstrich `(\)`
+* Rücker Schrägstrich `(\)`
 * Einfaches Anführungszeichen `(')`
 
 #### Beispiele
 
 Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL Abseitiger Schrägstrich`(\)`]** selected: `"Test,\"John\",LastName"`
-* Beispielausgabe mit **[!UICONTROL Einfaches Anführungszeichen`(')`]** selected: `"Test,'"John'",LastName"`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL umgekehrten Schrägstrich`(\)`]**: `"Test,\"John\",LastName"`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL einfachen Anführungszeichen`(')`]**: `"Test,'"John'",LastName"`
 
 ### Ausgabe leerer Werte {#empty-value-output}
 
@@ -116,9 +116,9 @@ Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines leeren
 
 Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in einen Nullwert um.
-* Beispielausgabe mit **&quot;&quot;** selected: `male,"",TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in doppelte Anführungszeichen um.
-* Beispielausgabe mit **[!UICONTROL Leere Zeichenfolge]** selected: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn so, wie er ist (ohne doppelte Anführungszeichen).
+* Beispielausgabe mit ausgewähltem **[!UICONTROL null]**: `male,NULL,TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in einen Nullwert um.
+* Beispielausgabe mit ausgewähltem **&quot;**: `male,"",TestLastName`. In diesem Fall wandelt Experience Platform den leeren Wert in doppelte Anführungszeichen um.
+* Beispielausgabe mit ausgewähltem **[!UICONTROL leeren String]**: `male,,TestLastName`. In diesem Fall behält die Experience Platform den leeren Wert bei und exportiert ihn so, wie er ist (ohne doppelte Anführungszeichen).
 
 >[!TIP]
 >
@@ -141,9 +141,9 @@ Verwenden Sie dieses Steuerelement, um die Zeichenfolgendarstellung eines Nullwe
 
 Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit **[!UICONTROL null]** selected: `male,NULL,TestLastName`. In diesem Fall erfolgt keine Transformation und die CSV-Datei enthält den Nullwert.
-* Beispielausgabe mit **&quot;&quot;** selected: `male,"",TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch doppelte Anführungszeichen um eine leere Zeichenfolge.
-* Beispielausgabe mit **[!UICONTROL Leere Zeichenfolge]** selected: `male,,TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch eine leere Zeichenfolge (ohne doppelte Anführungszeichen).
+* Beispielausgabe mit ausgewähltem **[!UICONTROL null]**: `male,NULL,TestLastName`. In diesem Fall erfolgt keine Transformation und die CSV-Datei enthält den Nullwert.
+* Beispielausgabe mit ausgewähltem **&quot;**: `male,"",TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch doppelte Anführungszeichen um eine leere Zeichenfolge.
+* Beispielausgabe mit ausgewähltem **[!UICONTROL leeren String]**: `male,,TestLastName`. In diesem Fall ersetzt Experience Platform den Nullwert durch eine leere Zeichenfolge (ohne doppelte Anführungszeichen).
 
 ### Komprimierungsformat {#compression-format}
 

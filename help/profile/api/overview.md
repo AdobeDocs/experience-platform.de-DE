@@ -13,13 +13,13 @@ ht-degree: 19%
 
 # [!DNL Real-Time Customer Profile]-API-Handbuch
 
-[!DNL Real-Time Customer Profile] ermöglicht es Ihnen, eine ganzheitliche Sicht auf Ihre einzelnen Kunden in Adobe Experience Platform zu erhalten. [!DNL Profile] ermöglicht es Ihnen, verschiedene Kundendaten aus verschiedenen Kanälen wie Online-, Offline-, CRM- und Drittanbieterdaten in einer einheitlichen Ansicht zu bündeln, die eine ausführbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+[!DNL Real-Time Customer Profile] ermöglicht es Ihnen, eine ganzheitliche Sicht Ihrer einzelnen Kunden in Adobe Experience Platform zu erhalten. Mit [!DNL Profile] können Sie unterschiedliche Kundendaten aus verschiedenen Kanälen, z. B. Online-, Offline-, CRM- und Drittanbieter-Daten, in einer einheitlichen Ansicht zusammenfassen, die ein umsetzbares, mit Zeitstempel versehenes Konto für jede Kundeninteraktion bietet.
 
-Die [!DNL Real-Time Customer Profile] Die API enthält mehrere Endpunkte, wie unten beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](getting-started.md).
+Die [!DNL Real-Time Customer Profile] -API enthält mehrere Endpunkte, wie unten dargestellt. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](getting-started.md).
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [Referenz-Swagger zur Echtzeit-Kundenprofil-API](https://www.adobe.com/go/profile-apis-en).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie den [Real-Time Customer Profile API Reference Swagger](https://www.adobe.com/go/profile-apis-en).
 
-Eine Anleitung zum Arbeiten mit [!DNL Real-Time Customer Profile] Daten in der [!DNL Experience Platform] Benutzeroberfläche, siehe [Profil-Benutzerhandbuch](../ui/user-guide.md).
+Eine Anleitung zum Arbeiten mit [!DNL Real-Time Customer Profile] -Daten in der Benutzeroberfläche von [!DNL Experience Platform] finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
 ## [!BADGE Beta]{type=informative} Berechnete Attribute {#computed-attributes}
 
@@ -31,29 +31,29 @@ Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attri
 
 Jedes berechnete Attribut enthält einen Ausdruck oder eine &quot;Regel&quot;, der/die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Diese berechneten Attributwerte können dann in einem Profil angezeigt, zum Erstellen einer Zielgruppe verwendet oder über verschiedene Zugriffsmuster aufgerufen werden.
 
-Sie können berechnete Attribute mithilfe der Variablen `ca/attributes/` -Endpunkt. Informationen zur Verwendung berechneter Attribute finden Sie im Abschnitt [Übersicht über berechnete Attribute](../computed-attributes/overview.md). Besuchen Sie für API-Vorgänge den Abschnitt [Handbuch zum API-Endpunkt für berechnete Attribute](../computed-attributes/api.md).
+Sie können berechnete Attribute mit dem `ca/attributes/` -Endpunkt erstellen, anzeigen, bearbeiten und löschen. Informationen zur Verwendung berechneter Attribute finden Sie in der [Übersicht über berechnete Attribute](../computed-attributes/overview.md). Besuchen Sie für API-Vorgänge das Handbuch [API-Endpunkt für berechnete Attribute](../computed-attributes/api.md).
 
 ## Entitäten ([!DNL Profile]-Zugriff) {#entities}
 
-Über Adobe Experience Platform können Sie auf [!DNL Real-Time Customer Profile] Daten mithilfe von RESTful-APIs oder der Benutzeroberfläche. Um zu erfahren, wie Sie mithilfe der API auf Entitäten zugreifen, die allgemein als &quot;Profile&quot;bezeichnet werden, führen Sie die Schritte aus, die im Abschnitt [Endpunktleitfaden für Entitäten](entities.md). So greifen Sie auf Profile zu, die [!DNL Platform] Benutzeroberfläche, siehe [Profil-Benutzerhandbuch](../ui/user-guide.md).
+Über Adobe Experience Platform können Sie mithilfe von RESTful-APIs oder der Benutzeroberfläche auf [!DNL Real-Time Customer Profile] -Daten zugreifen. Um zu erfahren, wie Sie mithilfe der API auf Entitäten zugreifen können, die allgemein als &quot;Profile&quot;bezeichnet werden, führen Sie die Schritte aus, die im [Endpunkthandbuch für Entitäten](entities.md) beschrieben sind. Informationen zum Zugriff auf Profile über die Benutzeroberfläche von [!DNL Platform] finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
 ## Exportaufträge ([!DNL Profile]-Export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] -Daten können zur weiteren Verarbeitung in einen Datensatz exportiert werden, z. B. zum Exportieren von Zielgruppen zur Aktivierung oder zum Reporting von Profilattributen. Exportaufträge für Zielgruppen sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API, lesen Sie bitte die [Endpunktleitfaden für Segmentierungs-Exportaufträge](../../profile/api/export-jobs.md) , um mehr zu erfahren. Eine schrittweise Anleitung zum Erstellen und Verwalten von Exportaufträgen für Profilattribute finden Sie unter [Endpunktleitfaden für Exportaufträge](export-jobs.md).
+[!DNL Real-Time Customer Profile] -Daten können zur weiteren Verarbeitung in einen Datensatz exportiert werden, z. B. zum Exportieren von Zielgruppen zur Aktivierung oder zum Exportieren von Profilattributen für die Berichterstellung. Exportaufträge für Zielgruppen sind Teil der [!DNL Adobe Experience Platform Segmentation Service] -API. Weiterführende Informationen dazu finden Sie im Endpunktleitfaden [Segmentierungsexport-Aufträge . ](../../profile/api/export-jobs.md) Eine schrittweise Anleitung zum Erstellen und Verwalten von Exportaufträgen für Profilattribute finden Sie im [Endpunkthandbuch zu Exportaufträgen](export-jobs.md).
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 
-Beim Zusammenführen von Daten aus mehreren Quellen in [!DNL Experience Platform], sind Zusammenführungsrichtlinien Regeln, die [!DNL Platform] verwendet , um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um individuelle Kundenprofile zu erstellen. Verwenden der [!DNL Real-Time Customer Profile] API können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen. Um mit Zusammenführungsrichtlinien mithilfe der API zu arbeiten, besuchen Sie die [Endleitfaden für Zusammenführungsrichtlinien](merge-policies.md).
+Beim Zusammenführen von Daten aus mehreren Quellen in [!DNL Experience Platform] dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um individuelle Kundenprofile zu erstellen. Mit der API [!DNL Real-Time Customer Profile] können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API finden Sie im [Endpunkthandbuch zu Zusammenführungsrichtlinien](merge-policies.md).
 
-Um mehr über Zusammenführungsrichtlinien und ihre Rolle innerhalb von Platform zu erfahren, lesen Sie zunächst das [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+Um mehr über Zusammenführungsrichtlinien und ihre Rolle in Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 ## Musterstatus der Vorschau ([!DNL Profile]-Vorschau) {#profile-preview}
 
-Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um die Profilanzahl und andere datenbezogene Metriken des Echtzeit-Kundenprofils zu aktualisieren. Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus` -Endpunkt, Teil der Echtzeit-Kundenprofil-API. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen nach Datensatz und Identitäts-Namespace aufzulisten und mehrere Berichte zu generieren, um Einblicke in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten.  Erste Schritte mit der Verwendung von `/profilepreviewstatus` -Endpunkt, siehe [Beispiel-Status-Endpunktleitfaden für die Vorschau](preview-sample-status.md).
+Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um die Profilanzahl und andere datenbezogene Metriken des Echtzeit-Kundenprofils zu aktualisieren. Die Ergebnisse dieses Beispielauftrags können mit dem `/previewsamplestatus` -Endpunkt angezeigt werden, der Teil der Echtzeit-Kundenprofil-API ist. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen nach Datensatz und Identitäts-Namespace aufzulisten und mehrere Berichte zu generieren, um Einblicke in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten.  Informationen zum Einstieg in die Verwendung des Endpunkts `/profilepreviewstatus` finden Sie im Handbuch [Vorschaustatus-Endpunkt-Handbuch](preview-sample-status.md) .
 
 ## Profilsystemaufträge {#profile-system-jobs}
 
-Profilaktivierte Daten, die in [!DNL Platform] wird im [!DNL Data Lake] sowie [!DNL Real-Time Customer Profile] Datenspeicher. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder fehlerhaft hinzugefügte Daten zu entfernen. Dies erfordert die Verwendung der API zum Erstellen einer [!DNL Profile System Job], auch als bezeichnet[!DNL delete request]&quot;, die bei Bedarf geändert, überwacht oder gelöscht werden können. Erfahren Sie, wie Sie Löschanfragen mit der `/system/jobs` -Endpunkt im [!DNL Real-Time Customer Profile] API ausführen, folgen Sie den Schritten, die im Abschnitt [Endleitfaden für Profilsystemaufträge](profile-system-jobs.md).
+Profilaktivierte Daten, die in [!DNL Platform] erfasst werden, werden sowohl im [!DNL Data Lake] als auch im [!DNL Real-Time Customer Profile] -Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, mit einem Datensatz verknüpfte Profildaten aus dem Profilspeicher zu löschen, um nicht mehr benötigte oder fehlerhaft hinzugefügte Daten zu entfernen. Dazu muss die API zum Erstellen eines [!DNL Profile System Job] (auch als &quot;[!DNL delete request]&quot; bezeichnet) verwendet werden, der bei Bedarf geändert, überwacht oder gelöscht werden kann. Um zu erfahren, wie Sie mit Löschanfragen mithilfe des Endpunkts `/system/jobs` in der API [!DNL Real-Time Customer Profile] arbeiten, führen Sie die Schritte aus, die im Endpunkthandbuch für Profilsystemaufträge](profile-system-jobs.md) beschrieben sind.[
 
 ## Profilattribute aktualisieren {#update-profile}
 
@@ -61,4 +61,4 @@ Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehme
 
 ## Nächste Schritte {#next-steps}
 
-So starten Sie Aufrufe mit dem [!DNL Real-Time Customer Profile] API, lesen Sie die [Erste Schritte](getting-started.md) Wählen Sie dann eine der Endpunktleitfäden aus, um zu erfahren, wie Sie bestimmte [!DNL Profile]-zugehörige Endpunkte. Arbeiten mit [!DNL Profile] Daten, die [!DNL Experience Platform] Benutzeroberfläche, siehe [Benutzerhandbuch zum Echtzeit-Kundenprofil](../ui/user-guide.md).
+Um Aufrufe mit der API [!DNL Real-Time Customer Profile] durchzuführen, lesen Sie das Handbuch [Erste Schritte](getting-started.md) und wählen Sie dann eine der Endpunkthandbücher aus, um zu erfahren, wie Sie bestimmte Endpunkte mit [!DNL Profile] verwenden. Informationen zum Arbeiten mit [!DNL Profile] -Daten mithilfe der [!DNL Experience Platform] -Benutzeroberfläche finden Sie im [Benutzerhandbuch zum Echtzeit-Kundenprofil](../ui/user-guide.md).

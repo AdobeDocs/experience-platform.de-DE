@@ -13,11 +13,11 @@ ht-degree: 10%
 
 # Catalog-Objekt ersetzen
 
-Sie können den Inhalt eines [!DNL Catalog] -Objekt, das eine PUT-Anfrage verwendet, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
+Sie können den Inhalt eines [!DNL Catalog] -Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 
 >[!NOTE]
 >
->Wenn Sie nur einige bestimmte Felder in einer [!DNL Catalog] -Objekt, kann die Verwendung einer PATCH-Anfrage effizienter sein.
+>Wenn Sie nur einige bestimmte Felder innerhalb eines [!DNL Catalog] -Objekts aktualisieren müssen, kann die Verwendung einer PATCH-Anfrage effizienter sein.
 
 **API-Format**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu ersetzen. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu ersetzenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**

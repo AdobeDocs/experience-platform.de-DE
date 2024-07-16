@@ -5,22 +5,22 @@ description: Die Yext Conversion Tracking-Erweiterung ist ein Analyseziel in Ado
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 82%
+source-wordcount: '453'
+ht-degree: 86%
 
 ---
 
-# [!DNL Yext Conversion Tracking]-Erweiterung  {#yext-extension}
+# [!DNL Yext Conversion Tracking]-Erweiterung {#yext-extension}
 
 ## Übersicht {#overview}
 
-Die [!DNL Yext Conversion Tracking] Mit der Erweiterung können Sie Konversionen messen, die Ihrer Verwendung von Yext-Produkten zugeordnet werden können.
+Mit der Erweiterung [!DNL Yext Conversion Tracking] können Sie Konversionen messen, die Ihrer Verwendung von Yext-Produkten zugeordnet werden können.
 
-[!DNL Yext Conversion Tracking] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
+[!DNL Yext Conversion Tracking] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
-![Yext Conversion Tracking-Erweiterung](../../assets/catalog/analytics/yext/catalog.png)
+![Yext Conversion Tracking Extension](../../assets/catalog/analytics/yext/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Yext Conversion Tracking] Erweiterung:
+So installieren Sie die [!DNL Yext Conversion Tracking]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Yext Conversion Tracking-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Yext Conversion Tracking page auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html) .
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

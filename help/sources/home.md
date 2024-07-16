@@ -28,7 +28,7 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 
 ## Von Adobe erstellte und von Partnern erstellte Quellen {#adobe-and-partner-built-sources}
 
-Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe von [Quellen-SDK](/help/sources/sources-sdk/overview.md). Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector ruft ab, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispiel: die [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt wird, während die Variable [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) wird vom RainFocus-Team erstellt und gepflegt.
+Einige der Connectoren im Experience Platform-Quellkatalog werden von Adobe erstellt und gepflegt, während andere von Partnerunternehmen mithilfe des [Quellen-SDK](/help/sources/sources-sdk/overview.md) erstellt und gepflegt werden. Ein Hinweis oben auf der Dokumentationsseite für jeden von Partnern erstellten Connector ruft ab, ob eine Quelle vom Partner erstellt und gepflegt wird. Beispielsweise wird der [Amazon S3-Connector](/help/sources/connectors/cloud-storage/s3.md) von Adobe erstellt, während der [RainFocus-Connector](/help/sources/connectors/analytics/rainfocus.md) vom RainFocus-Team erstellt und gepflegt wird.
 
 Bei von Partnern erstellten und gepflegten Connectoren bedeutet dies, dass Probleme mit dem Connector möglicherweise vom Partner-Team behoben werden müssen (die Kontaktmethode ist jeweils im Hinweis auf der Dokumentationsseite angegeben). Wenden Sie sich bei Problemen mit von Adobe erstellten und gepflegten Connectoren an den Support oder den Kundendienst von Adobe.
 
@@ -53,7 +53,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Program
    - [Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [Übersicht über [!DNL Marketo Engage]-Quellen](connectors/adobe-applications/marketo/marketo.md)
    - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
-   - [Erstellen Sie eine [!DNL Marketo Engage] Quellverbindung und Datenfluss für benutzerdefinierte Aktivitätsdaten](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   - [Erstellen einer  [!DNL Marketo Engage] Quellverbindung und eines Datenflusses für benutzerdefinierte Aktivitätsdaten](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
 ### Werbung {#advertising}
 
@@ -221,7 +221,7 @@ Mit der attributbasierten Zugriffssteuerung können Sie Zuordnungskonfiguratione
 
 >[!TIP]
 >
->Die attributbasierte Zugriffssteuerung funktioniert wie folgt: **Rollen** werden erstellt, um die Arten von Benutzern zu kategorisieren, die mit Ihrer Platform-Instanz interagieren. **Bezeichnungen** angewendet werden auf **Rollen** , um den Zugriff auf diese bestimmte Rolle zu bestimmen. **Bezeichnungen** werden auch auf Ressourcen wie Schemafelder und Segmente angewendet. Damit ein Benutzer Zugriff auf bestimmte Schemafelder und Segmente haben kann, müssen diese *Rolle mit der gleichen Beschriftung, die der abgefragten Ressource zugewiesen ist*. Weitere Informationen finden Sie im Abschnitt [Handbuch zur attributbasierten Zugriffskontrolle - End-to-End](../access-control/abac/end-to-end-guide.md).
+>Die attributbasierte Zugriffssteuerung funktioniert wie folgt: **Benutzerrollen** werden erstellt, um die Benutzertypen zu kategorisieren, die mit Ihrer Platform-Instanz interagieren. **Beschriftungen** werden auf **Benutzerrollen** angewendet, um den Zugriff auf diese Rolle zu bestimmen. **Beschriftungen** werden auch auf Ressourcen wie Schemafelder und Segmente angewendet. Damit ein Benutzer Zugriff auf bestimmte Schemafelder und Segmente haben kann, muss er *einer Rolle mit derselben Bezeichnung hinzugefügt werden, die der abgefragten Ressource zugewiesen ist*. Weitere Informationen finden Sie im Leitfaden [Attributbasierte Zugriffssteuerung End-to-End-Handbuch](../access-control/abac/end-to-end-guide.md).
 
 - Wenden Sie Beschriftungen auf Schemafelder an, um den Zugriff auf bestimmte Schemafelder in Ihrer Organisation zu definieren. Sobald der Zugriff auf bestimmte Schemafelder hergestellt wurde, können Benutzer nur Zuordnungen für die Felder erstellen, auf die sie Zugriff haben.
 - Benutzer ohne die entsprechenden Rollen können keine Datenflüsse mit Zuordnungen erstellen oder aktualisieren, die nicht zugängliche Schemafelder beinhalten. Darüber hinaus können nicht autorisierte Benutzer vorhandene Datenflüsse mit nicht zugänglichen Schemafeldern nicht aktualisieren, löschen, aktivieren oder deaktivieren.
@@ -233,7 +233,7 @@ Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [
 
 Durch Verwendung einer der als Beta („Beta“) gekennzeichneten Quellen erkennen Sie hiermit an, dass die Beta-Version ***ohne Mängelgewähr und ohne Gewährleistung jeglicher Art*** bereitgestellt wird.
 
-Adobe ist nicht verpflichtet, die Beta-Version zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, Informativ zu verwenden und sich nicht auf die korrekte Funktionsweise oder Leistung solcher Beta- und/oder Begleitmaterialien zu verlassen. Die Beta-Version wird als vertrauliche Information von Adobe betrachtet.
+Adobe ist nicht verpflichtet, die Beta-Version zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen. Es wird empfohlen, Informativ zu verwenden und sich nicht auf die ordnungsgemäße Funktionsweise oder Leistung der Beta und/oder der Begleitmaterialien zu verlassen. Die Beta-Version wird als vertrauliche Information von Adobe betrachtet.
 
 Jedes „Feedback“ (Informationen zur Beta-Version, einschließlich, aber nicht beschränkt auf Probleme oder Mängel, auf die Sie bei der Verwendung der Beta-Version stoßen, Vorschläge, Verbesserungen und Empfehlungen), das Sie Adobe übermitteln, wird hiermit an Adobe übertragen, einschließlich aller Rechte, Titel und Interessen an diesem Feedback.
 

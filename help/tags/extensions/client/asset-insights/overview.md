@@ -4,7 +4,7 @@ description: Machen Sie sich mit der Tag-Erweiterung „AEM Asset Insights“ in
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1062'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Diese Erweiterung sollte zusammen mit [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) verwendet werden. Genauer gesagt ersetzt es den „pageTracker“-Prozess und den Einbettungscode. Wenn diese Erweiterung konfiguriert ist, sendet sie Metriken bezüglich *Impressionen* und *Klicks* auf Kreativelemente an Adobe Analytics. Danach werden diese in AEM Asset Insights-Berichte importiert. Die Asset-Metriken können dann entweder über AEM Asset Insights oder Adobe Analytics Project Workspaces in Berichten dargestellt werden.
+Diese Erweiterung sollte zusammen mit [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) verwendet werden. Genauer gesagt ersetzt es den „pageTracker“-Prozess und den Einbettungscode. Wenn diese Erweiterung konfiguriert ist, sendet sie Metriken bezüglich *Impressions* und *Klicks* auf Kreativelemente an Adobe Analytics. Danach werden diese in AEM Asset Insights-Berichte importiert. Die Asset-Metriken können dann entweder über AEM Asset Insights oder Adobe Analytics Project Workspaces in Berichten dargestellt werden.
 
 ## Voraussetzungen für die Erweiterung
 
@@ -28,7 +28,7 @@ Die AEM Asset-Berichte in Analytics enthalten drei AEM-Dimensionen:
 * Angeklicktes Kreativelement
 
 Es gibt auch zwei Metriken:
-* Kreativelement-Impressionen
+* Kreativelement-Impressions
 * Kreativelement-Klicks.
 
 Diese Berichte müssen unter Verwendung von Analytics Administrator aktiviert werden (klicken Sie auf **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Einstellungen bearbeiten] > [!UICONTROL AEM] > [!UICONTROL AEM Assets-Berichte]**). Danach können sie über diese Erweiterung befüllt werden.
@@ -85,7 +85,7 @@ Diese Erweiterung umfasst zwei Ereignisse und eine Aktion.
 
 * **AA-Variablen festlegen:** Eine _Aktion_, mit der die für AEM Assets reservierten Analytics-Variablen (Kontextdatenvariablen `a.assets.source`, `a.assets.idlist` und `a.asset.clickedid`) je nach verwendetem Ereignis und Konfiguration des Ereignisses und der Aktion festgelegt werden. Diese Erweiterung verwendet keine Analytics-Ereignisse, -Props oder -eVars.
 
-### Kreativelement-Impressionen
+### Kreativelement-Impressions
 
 Fügen Sie die Aktion „Set AA Variables“ einer neuen oder vorhandenen Tag-Regel hinzu, die auf jeder Seite ausgelöst wird und eine Analytics-Bildanforderung sendet. Die Aktion „Set AA Variables“ muss **vor** der Aktion „Adobe Analytics - Send Beacon“ angezeigt werden. Bei Bedarf können weitere Aktionen hinzugefügt werden.
 
@@ -93,9 +93,9 @@ Wählen Sie auf der Konfigurationsseite **[Set AA Variables]** die Option **[Vie
 
 >[!NOTE]
 >
->Obwohl dies nicht empfohlen wird, unterstützt die Aktion „Set AA Variables“ auch die Option „loaded“, mit der Kreativelement-Impressionen für jedes Kreativelement auf der Seite gesendet werden, unabhängig davon, ob der Besucher sie gesehen hat oder nicht.
+>Obwohl dies nicht empfohlen wird, unterstützt die Aktion „Set AA Variables“ auch die Option „loaded“, mit der Kreativelement-Impressions für jedes Kreativelement auf der Seite gesendet werden, unabhängig davon, ob der Besucher sie gesehen hat oder nicht.
 
-![Impressionen](images/sendImpressions.jpg)
+![Impressions](images/sendImpressions.jpg)
 
 
 ### Kreativelement-Klicks
@@ -114,11 +114,11 @@ Konfigurieren Sie eine dritte Regel, die ausgelöst wird, wenn sich Kreativeleme
 
 Konfigurieren Sie wie oben beschrieben drei Regeln:
 
-* Kreativelement-Impressionen
+* Kreativelement-Impressions
 * Kreativelement-Klicks
 * Kreativelement-Klicks ohne Ziel
 
-**Impressionen**
+**Impressions**
 
 1. Navigieren Sie zu einer Seite, die AEM-Kreativelemente enthält.
 

@@ -16,22 +16,22 @@ ht-degree: 32%
 
 ## Übersicht {#overview}
 
-Die [!DNL Magnite Streaming: Real-Time] und das Magnite-Streaming: Batch-Ziele in Adobe Experience Platform helfen Ihnen beim Zuordnen und Exportieren von Zielgruppen für Targeting und Aktivierung auf der Magnite-Streaming-Plattform.
+Die Batch-Ziele [!DNL Magnite Streaming: Real-Time] und Magnite Streaming: Batch in Adobe Experience Platform helfen Ihnen bei der Zuordnung und beim Export von Zielgruppen für Targeting und Aktivierung auf der Magnite-Streaming-Plattform.
 
-Aktivieren von Zielgruppen für [!DNL Magnite Streaming] Plattform ist ein zweistufiger Prozess, bei dem Sie sowohl das Magnite-Streaming verwenden müssen: Echtzeit- als auch das Magnite-Streaming: Batch-Ziele.
+Die Aktivierung von Zielgruppen für die Plattform [!DNL Magnite Streaming] ist ein zweistufiger Prozess, für den Sie sowohl das Magnite-Streaming verwenden müssen: Echtzeit- als auch das Magnite-Streaming: Batch-Ziele.
 
-So aktivieren Sie Ihre Zielgruppen in [!DNL Magnite Streaming]müssen Sie:
+Um Ihre Zielgruppen für [!DNL Magnite Streaming] zu aktivieren, müssen Sie:
 
-* Aktivieren Sie die Zielgruppen für die [!DNL Magnite Streaming: Real-Time] Ziel, wie auf dieser Seite gezeigt.
-* Aktivieren Sie dieselbe Zielgruppe im Magnite-Streaming: Batch-Ziel. Die [!DNL Magnite Streaming: Batch] Ziel ist eine obligatorische Komponente. Aktivierung der Zielgruppe auf der [!DNL Magnite Streaming] Das Batch-Ziel führt zu einer fehlgeschlagenen Integration und Ihre Zielgruppen werden nicht aktiviert.
+* Aktivieren Sie die Zielgruppen für das Ziel [!DNL Magnite Streaming: Real-Time] , wie auf dieser Seite dargestellt.
+* Aktivieren Sie dieselbe Zielgruppe im Magnite-Streaming: Batch-Ziel. Das Ziel [!DNL Magnite Streaming: Batch] ist eine obligatorische Komponente. Wenn Sie die Zielgruppe nicht am Batch-Ziel [!DNL Magnite Streaming] aktivieren, wird die Integration fehlgeschlagen und Ihre Zielgruppen werden nicht aktiviert.
 
-Hinweis: Bei Verwendung des Echtzeit-Ziels gilt Folgendes: [!DNL Magnite: Streaming] Zielgruppen werden in Echtzeit empfangen, aber wir können Echtzeit-Zielgruppen nur vorübergehend in unserer Plattform speichern und sie werden innerhalb weniger Tage aus unserem System entfernt. Wenn Sie daher das Ziel Magnite: Streaming in Echtzeit verwenden möchten, werden Sie *auch* Sie müssen das Magnite-Streaming: Batch-Ziel verwenden - jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
+Hinweis: Bei Verwendung des Echtzeit-Ziels erhält [!DNL Magnite: Streaming] Zielgruppen in Echtzeit, aber wir können nur Echtzeitzielgruppen temporär in unserer Plattform speichern und sie werden innerhalb weniger Tage aus unserem System entfernt. Wenn Sie daher das Ziel Magnite: Streaming in Echtzeit verwenden möchten, müssen Sie *auch* das Ziel Magnite Streaming: Batch verwenden. Jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
 
 >[!IMPORTANT]
 >
 >Dieser Ziel-Connector befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff anzufordern.
 >
->Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL Magnite] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an `adobe-tech@magnite.com`.
+>Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL Magnite]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen kontaktieren Sie diese bitte direkt unter `adobe-tech@magnite.com`.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -43,12 +43,12 @@ Durch diese Integration mit Magnite können Kunden ihre CDP-Zielgruppen von Adob
 
 ## Voraussetzungen {#prerequisites}
 
-So verwenden Sie die [!DNL Magnite] Ziele in Adobe Experience Platform müssen Sie zunächst über eine [!DNL Magnite Streaming] -Konto. Wenn Sie [!DNL Magnite Streaming] -Konto, wenden Sie sich bitte an Ihre [!DNL Magnite] Kundenbetreuer, um Anmeldeinformationen für den Zugriff bereitzustellen [!DNL Magnite's] Ziele.
-Wenn Sie keine [!DNL Magnite Streaming] -Konto, wenden Sie sich bitte an adobe-tech@magnite.com
+Um die [!DNL Magnite] -Ziele in Adobe Experience Platform zu verwenden, müssen Sie zunächst über ein [!DNL Magnite Streaming] -Konto verfügen. Wenn Sie über ein [!DNL Magnite Streaming] -Konto verfügen, wenden Sie sich an Ihren [!DNL Magnite] -Kundenbetreuer, um Anmeldeinformationen für den Zugriff auf [!DNL Magnite's] -Ziele zu erhalten.
+Wenn Sie kein [!DNL Magnite Streaming] -Konto haben, wenden Sie sich an adobe-tech@magnite.com
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die [!DNL Magnite Streaming: Real-Time] Das Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+Das Ziel [!DNL Magnite Streaming: Real-Time] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 | Audience Origin | Unterstützt | Beschreibung |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -82,7 +82,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -90,10 +90,10 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-![Zielkonfigurationsautorfelder nicht ausgefüllt](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
+![Nicht ausgefüllte Zielkonfigurationsauth-Felder](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-* **[!UICONTROL Benutzername]**: Der Benutzername, den Sie von [!DNL Magnite].
-* **[!UICONTROL Passwort]**: Das von [!DNL Magnite].
+* **[!UICONTROL Benutzername]**: Der Benutzername, den Sie von [!DNL Magnite] erhalten haben.
+* **[!UICONTROL Passwort]**: Das Passwort, das Ihnen von [!DNL Magnite] bereitgestellt wird.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -101,13 +101,13 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Name Ihres Quell-Partners]**: Name Ihres Kunden/Unternehmens. Nur unterstützt [!DNL Magnite Streaming] -Clients stehen zur Auswahl zur Verfügung.
+* **[!UICONTROL Name Ihres Quell-Partners]**: Ihr Name des Kunden/Unternehmens. Es stehen nur unterstützte [!DNL Magnite Streaming] -Clients zur Auswahl zur Verfügung.
 
-![Felder für Zielkonfiguration ausgefüllt](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
+![ Felder für die Zielkonfigurationsauth ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-Wählen Sie anschließend die **[!UICONTROL Erstellen]** Schaltfläche.
+Wählen Sie danach die Schaltfläche **[!UICONTROL Erstellen]** aus.
 
-![Optionale Governance-Politik und Durchsetzungsmaßnahmen](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
+![Optionale Governance-Richtlinie und Durchsetzungsaktionen](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -119,8 +119,8 @@ Wenn Sie mit dem Eingeben der Details für Ihre Zielverbindung fertig sind, klic
 
 >[!IMPORTANT]
 >
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
@@ -130,27 +130,27 @@ Nachdem die Zielverbindung erstellt wurde, können Sie mit dem Aktivierungsfluss
 
 Der nächste Schritt besteht in der Zuordnung der Quell-IDs zur Magnite-Geräte-ID.
 
-* Sie können so viele Zuordnungen wie nötig hinzufügen, indem Sie **[!UICONTROL Neues Mapping hinzufügen]**.
+* Sie können so viele Zuordnungen wie nötig hinzufügen, indem Sie **[!UICONTROL Neue Zuordnung hinzufügen]** auswählen.
 
-In diesem Beispiel, das das Echtzeit-Ziel verwendet, wird eine Zeile angezeigt, die eine generische deviceId-Quellkennung enthält, die dem Zielfeld Magnite device_id zugeordnet ist. Wenn Sie mit den Zuordnungen arbeiten, wählen Sie [!UICONTROL Nächste].
+In diesem Beispiel, das das Echtzeit-Ziel verwendet, wird eine Zeile angezeigt, die eine generische deviceId-Quellkennung enthält, die dem Zielfeld Magnite device_id zugeordnet ist. Wenn Sie mit den Zuordnungen arbeiten, wählen Sie [!UICONTROL Weiter] aus.
 
-![Ordnen Sie die gewünschten Datenfelder dem Feld device_ID zu.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![Ordnen Sie die gewünschten Datenfelder dem Feld device_ID zu](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
 Stellen Sie sicher, dass die Zuordnungs-IDs für alle aktivierten Zielgruppen festgelegt sind, oder legen Sie KEINE fest, wenn keine Zuordnungs-ID vorhanden ist.
 
-![Stellen Sie sicher, dass die Zuordnungs-IDs für alle aktivierten Zielgruppen festgelegt sind, oder legen Sie KEINE fest, wenn keine Zuordnungs-ID vorhanden ist.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+![Stellen Sie sicher, dass die Zuordnungs-IDs für alle aktivierten Zielgruppen festgelegt sind, oder legen Sie KEINE fest, wenn keine Zuordnungs-ID vorhanden ist](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
 
 Jetzt müssen Sie für jede Zielgruppe ein Startdatum (obligatorisch), ein Enddatum (optional) und eine Zuordnungs-ID konfigurieren.
 
 **Zuordnungs-ID**
 
-* Verwenden Sie die **[!UICONTROL Zuordnungs-ID]** -Feld, wenn eine Zielgruppe über eine bereits vorhandene Segment-ID verfügt, die Magnite zuvor bekannt war.
+* Verwenden Sie das Feld **[!UICONTROL Zuordnungs-ID]** , wenn eine Zielgruppe über eine bereits vorhandene Segment-ID verfügt, die Magnite zuvor bekannt war.
 
-* So fügen Sie eine **[!UICONTROL Zuordnungs-ID]** für eine Zielgruppe festzulegen, wählen Sie jede einzelne Zielgruppenzeile aus und geben Sie Daten in die rechte Spalte ein (siehe Bild oben). Wenn Sie keine Zuordnungs-ID hinzufügen möchten, geben Sie KEINE in das Feld Zuordnungs-ID ein.
+* Um einer Zielgruppe eine **[!UICONTROL Zuordnungs-ID]** hinzuzufügen, wählen Sie jede einzelne Zielgruppenzeile aus und geben Sie Daten in die rechte Spalte ein (siehe Abbildung oben). Wenn Sie keine Zuordnungs-ID hinzufügen möchten, geben Sie KEINE in das Feld Zuordnungs-ID ein.
 
-Auswählen **[!UICONTROL Nächste]** und den Aktivierungsfluss abschließen.
+Wählen Sie **[!UICONTROL Weiter]** aus und schließen Sie den Aktivierungsfluss ab.
 
-![Wählen Sie Weiter aus und schließen Sie den Aktivierungsfluss ab.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
+![Wählen Sie den nächsten aus und schließen Sie den Aktivierungsfluss ab.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
 
@@ -162,11 +162,11 @@ Nach dem Hochladen Ihrer Zielgruppen können Sie mit den folgenden Schritten üb
 
 -->
 
-* Post-Erfassung werden Zielgruppen voraussichtlich in [!DNL Magnite Streaming] innerhalb weniger Minuten und kann auf einen Deal angewendet werden. Sie können dies bestätigen, indem Sie nach der Segment-ID suchen, die während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
+* Post-Erfassung werden Zielgruppen voraussichtlich innerhalb weniger Minuten in [!DNL Magnite Streaming] angezeigt und können auf einen Deal angewendet werden. Sie können dies bestätigen, indem Sie nach der Segment-ID suchen, die während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
 
-## Aktivieren Sie dieselben Zielgruppen über die [!DNL Magnite Streaming: Batch]Ziel
+## Dieselben Zielgruppen über das [!DNL Magnite Streaming: Batch]Ziel aktivieren
 
-Für freigegebene Zielgruppen [!DNL Magnite Streaming] Die Verwendung des Echtzeit-Ziels muss auch über das Magnite Streaming: Batch-Ziel freigegeben werden. Wenn die Segmentnamen richtig konfiguriert sind, finden Sie im [!DNL Magnite Streaming] Die Benutzeroberfläche wird aktualisiert, um die in der täglichen Adobe Experience Platform-Aktualisierung verwendeten zu widerspiegeln.
+Zielgruppen, die mit [!DNL Magnite Streaming] über das Echtzeit-Ziel freigegeben werden, müssen auch über das Magnite-Streaming: Batch-Ziel freigegeben werden. Wenn die Segmentnamen in der Benutzeroberfläche von [!DNL Magnite Streaming] korrekt konfiguriert sind, werden sie entsprechend den Segmentnamen aktualisiert, die nach der täglichen Aktualisierung in Adobe Experience Platform verwendet werden.
 
 Wenn für Ihre Integration kein Batch-Ziel konfiguriert wurde, richten Sie es jetzt über das Dokument Magnite Streaming: Batch-Ziel ein.
 
@@ -176,4 +176,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere Hilfedokumentation finden Sie im Abschnitt [Magnite Help Center](https://help.magnite.com/help).
+Weitere Hilfedokumentation finden Sie im [Magnite Help Center](https://help.magnite.com/help).

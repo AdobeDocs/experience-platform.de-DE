@@ -6,14 +6,14 @@ description: Der Color Tagging-Dienst kann, wenn ihm ein Bild gegeben wird, das 
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '662'
 ht-degree: 6%
 
 ---
 
 # Farb-Tagging
 
-Der Farb-Tagging-Dienst kann, wenn ein Bild vorhanden ist, ein Histogramm von Pixelfarben berechnen und diese anhand dominanter Farben in Behälter sortieren. Die Farben der Bildpixel werden in 40 vorherrschende Farben zusammengefasst, die für das Farbspektrum repräsentativ sind. Ein Histogramm mit Farbwerten wird dann unter diesen 40 Farben berechnet. Der Dienst weist zwei Varianten auf:
+Der Farb-Tagging-Dienst kann, wenn er ein Bild erhält, ein Histogramm von Pixelfarben berechnen und diese anhand dominanter Farben in Behälter sortieren. Die Farben der Bildpixel werden in 40 vorherrschende Farben zusammengefasst, die für das Farbspektrum repräsentativ sind. Ein Histogramm mit Farbwerten wird dann unter diesen 40 Farben berechnet. Der Dienst weist zwei Varianten auf:
 
 **Farb-Tagging (Vollbild)**
 
@@ -21,7 +21,7 @@ Diese Methode extrahiert ein Farbhistogramm über das gesamte Bild.
 
 **Farb-Tagging (mit Maske)**
 
-Diese Methode verwendet einen auf tiefem Lernen basierenden Vordergrundextraktor, um Objekte im Vordergrund zu identifizieren. Sobald die Vordergrundobjekte extrahiert wurden, wird ein Histogramm über die dominanten Farben für die Vordergrund- und Hintergrundbereiche sowie das gesamte Bild berechnet.
+Diese Methode verwendet einen auf tiefem Lernen basierenden Vordergrundextraktor zur Identifizierung von Objekten im Vordergrund. Sobald die Vordergrundobjekte extrahiert wurden, wird ein Histogramm über die dominanten Farben für die Vordergrund- und Hintergrundbereiche sowie das gesamte Bild berechnet.
 
 **Tonextraktion**
 
@@ -83,10 +83,10 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Antwort - vollständige Bildvariante**
 
-Eine erfolgreiche Antwort gibt die Details der extrahierten Farben zurück. Jede Farbe wird durch eine `feature_value` -Schlüssel, der die folgenden Informationen enthält:
+Eine erfolgreiche Antwort gibt die Details der extrahierten Farben zurück. Jede Farbe wird durch einen `feature_value` -Schlüssel dargestellt, der die folgenden Informationen enthält:
 
 - Ein Farbname
-- Der Prozentsatz, in dem diese Farbe im Verhältnis zum Bild angezeigt wird
+- Der Prozentwert dieser Farbe im Verhältnis zum Bild
 - Der RGB-Wert der Farbe
 
 `"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`bedeutet, dass die gefundenen Farben weiß sind, was in 58,34 % des Bildes zu finden ist und einen durchschnittlichen RGB-Wert von 254, 254, 243 aufweist.
@@ -161,7 +161,7 @@ Beachten Sie, dass das Ergebnis hier eine Farbe für den Bildbereich &quot;insge
 
 **Anfrage - maskierte Bildvariante**
 
-Die folgende Beispielanfrage verwendet die Maskierungsmethode für das Farb-Tagging. Dies wird aktiviert, indem Sie die `enable_mask` Parameter auf `true` in der Anfrage.
+Die folgende Beispielanfrage verwendet die Maskierungsmethode für das Farb-Tagging. Dies wird aktiviert, indem der Parameter `enable_mask` in der Anfrage auf `true` gesetzt wird.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -204,7 +204,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 >[!NOTE]
 >
->Darüber hinaus wird die `retrieve_tone` -Parameter auch auf `true` in der obigen Anfrage. Dies ermöglicht es uns, ein Tonverteilungs-Histogramm über warme, neutrale und kühle Töne in den gesamten, Vordergrund- und Hintergrundbereichen des Bildes abzurufen.
+>Darüber hinaus ist der Parameter `retrieve_tone` in der obigen Anfrage ebenfalls auf `true` gesetzt. Dies ermöglicht es uns, ein Tonverteilungs-Histogramm über warme, neutrale und kühle Töne in den gesamten, Vordergrund- und Hintergrundbereichen des Bildes abzurufen.
 
 **Antwort - maskierte Bildvariante**
 
@@ -362,8 +362,8 @@ Zusätzlich zu den Farben des Gesamtbilds können Sie jetzt auch Farben aus den 
 | --- | --- | --- | --- | --- | --- |
 | `documents` | array (Document-Object) | Ja | – | Siehe unten | Liste der JSON-Elemente mit jedem Element in der Liste, das ein Dokument darstellt. |
 | `top_n` | number | Nein | 0 | Nicht negative Ganzzahl | Anzahl der zurückzugebenden Ergebnisse. 0, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit einem Schwellenwert ist die Anzahl der zurückgegebenen Ergebnisse kleiner als die beiden Begrenzungen. |
-| `min_coverage` | number | Nein | 0.05 | Real number | Deckungsschwellenwert, über den die Ergebnisse zurückgegeben werden müssen. Parameter ausschließen , um alle Ergebnisse zurückzugeben. |
-| `resize_image` | number | Nein | True | True/False | Gibt an, ob die Größe des Eingabebilds geändert werden soll oder nicht. Standardmäßig wird die Größe der Bilder auf 320 x 320 Pixel geändert, bevor die Farbextrahierung durchgeführt wird. Zu Debugging-Zwecken können wir zulassen, dass der Code auch auf Vollbild ausgeführt wird, indem wir `False`. |
+| `min_coverage` | number | Nein | 0,05 | Real number | Deckungsschwellenwert, über den die Ergebnisse zurückgegeben werden müssen. Parameter ausschließen , um alle Ergebnisse zurückzugeben. |
+| `resize_image` | number | Nein | True | True/False | Gibt an, ob die Größe des Eingabebilds geändert werden soll oder nicht. Standardmäßig wird die Größe der Bilder auf 320 x 320 Pixel geändert, bevor die Farbextrahierung durchgeführt wird. Zu Debugging-Zwecken können wir auch zulassen, dass der Code auf Vollbild ausgeführt wird, indem wir dies auf `False` setzen. |
 | `enable_mask` | number | Nein | False | True/False | Aktiviert/Deaktiviert die Farbextraktion |
 | `retrieve_tone` | number | Nein | False | True/False | Aktiviert/Deaktiviert die Tonextraktion |
 

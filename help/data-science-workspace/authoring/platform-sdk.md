@@ -6,12 +6,12 @@ description: In diesem Tutorial erhalten Sie Informationen zum Konvertieren von 
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 69%
+source-wordcount: '486'
+ht-degree: 60%
 
 ---
 
-# Modellbearbeitung mit Adobe Experience Platform [!DNL Platform] SDK
+# Modellerstellung mit dem Adobe Experience Platform [!DNL Platform] SDK
 
 Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk_python` in das neue Python `platform_sdk` in sowohl Python als auch R. Diese Anleitung enthält Informationen zu den folgenden Vorgängen:
 
@@ -21,7 +21,7 @@ Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk
 
 ## Authentifizierung erstellen {#build-authentication}
 
-Authentifizierung ist erforderlich, um Aufrufe an [!DNL Adobe Experience Platform]und besteht aus API-Schlüssel, Organisations-ID, einem Benutzer-Token und einem Service-Token.
+Authentifizierung ist erforderlich, um [!DNL Adobe Experience Platform] aufzurufen. Sie umfasst API-Schlüssel, Organisations-ID, ein Benutzer-Token und ein Service-Token.
 
 ### Python
 
@@ -68,7 +68,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Grundlegendes Datenlesen {#basic-reading-of-data}
 
-Mit dem neuen [!DNL Platform] SDK beträgt die maximale Lesegröße 32 GB mit einer maximalen Lesedauer von 10 Minuten.
+Mit dem neuen SDK [!DNL Platform] beträgt die maximale Lesegröße 32 GB mit einer maximalen Lesedauer von 10 Minuten.
 
 Wenn das Lesen zu lange dauert, können Sie eine der folgenden Filteroptionen verwenden:
 
@@ -79,7 +79,7 @@ Wenn das Lesen zu lange dauert, können Sie eine der folgenden Filteroptionen ve
 
 >[!NOTE]
 >
->Die Organisation wird innerhalb der `client_context`.
+>Die Organisation wird innerhalb von `client_context` festgelegt.
 
 ### Python
 
@@ -145,7 +145,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Die neue [!DNL Platform] SDK unterstützt die folgenden Vorgänge:
+Das neue [!DNL Platform] SDK unterstützt die folgenden Vorgänge:
 
 | Vorgang | Funktion |
 | --------- | -------- |
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->Die Organisation wird innerhalb der `client_context`.
+>Die Organisation wird innerhalb von `client_context` festgelegt.
 
 Um Daten in Python und R zu schreiben, verwenden Sie eines der folgenden Beispiele:
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Nächste Schritte
 
-Nachdem Sie den `platform_sdk`-Data-Loader konfiguriert haben, werden die Daten vorbereitet und auf die Datensätze `train` und `val` aufgeteilt. Informationen zur Datenvorbereitung und Funktionsentwicklung finden Sie im Abschnitt zur [Datenvorbereitung und Funktionsentwicklung](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in der Anleitung zum Erstellen eines Rezepts mit Notebooks.[!DNL JupyterLab]
+Nachdem Sie den `platform_sdk`-Data-Loader konfiguriert haben, werden die Daten vorbereitet und auf die Datensätze `train` und `val` aufgeteilt. Informationen zur Datenvorbereitung und Funktionsentwicklung finden Sie im Abschnitt zur [Datenvorbereitung und Funktionsentwicklung](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) im Tutorial zum Erstellen eines Rezepts mit [!DNL JupyterLab] Notebooks.

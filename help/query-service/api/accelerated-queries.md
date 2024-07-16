@@ -18,7 +18,7 @@ Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie das [Hand
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um den abfragebeschleunigten Speicher zu verwenden. Lesen Sie hierzu die [Verpackung](../packaging.md) und [Limits](../guardrails.md#query-accelerated-store), und [Lizenz](../data-distiller/license-usage.md) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um den abfragebeschleunigten Speicher zu verwenden. Weitere Informationen finden Sie in der Dokumentation zu [packaging](../packaging.md) und [guardrails](../guardrails.md#query-accelerated-store) sowie zur [licensing](../data-distiller/license-usage.md) -Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 In den folgenden Abschnitten werden die API-Aufrufe beschrieben, die für den statuslosen Zugriff auf den abfragebeschleunigten Speicher über die Abfrage-Service-API erforderlich sind. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 

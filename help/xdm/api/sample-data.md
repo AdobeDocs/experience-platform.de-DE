@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Beispieldaten; Beispieldaten; rpc
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Beispieldaten; Beispieldaten; rpc
 solution: Experience Platform
 title: API-Endpunkt für Beispieldaten
 description: Mit dem Endpunkt /sampledata in der Schema Registry-API können Sie Beispieldaten generieren, die der Struktur eines vorhandenen XDM-Schemas zugeordnet sind.
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 19%
+source-wordcount: '311'
+ht-degree: 18%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 19%
 
 Um Daten in Adobe Experience Platform zu erfassen, müssen Format und Datenstruktur einem vorhandenen Experience-Datenmodell (XDM)-Schema entsprechen. Je nach Komplexität des Schemas für einen bestimmten Datensatz kann es schwierig sein, die genaue Form der Daten zu bestimmen, die der Datensatz bei der Erfassung erwartet.
 
-Verwenden der `/sampledata` -Endpunkt im [!DNL Schema Registry] API können Sie ein Beispielaufnahme-Objekt für ein zuvor erstelltes Schema generieren.
+Mithilfe des Endpunkts `/sampledata` in der API [!DNL Schema Registry] können Sie ein Beispielaufnahme-Objekt für ein zuvor erstelltes Schema generieren.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-Der Beispieldaten-Endpunkt ist Teil der Remote-Prozeduraufrufe (RPCs), die von der [!DNL Schema Registry]. Im Gegensatz zu anderen Endpunkten im [!DNL Schema Registry] API-, RPC-Endpunkte erfordern keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type`und verwenden Sie keine `CONTAINER_ID`. Stattdessen müssen sie die `/rpc` -Namespace, wie im API-Aufruf unten dargestellt.
+Der Beispieldaten-Endpunkt ist Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API erfordern RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den Namespace `/rpc` verwenden, wie im API-Aufruf unten dargestellt.
 
 ## Beispieldaten für ein Schema abrufen
 
@@ -35,7 +35,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Schemas, für das Sie Beispieldaten generieren möchten. |
+| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, für das Sie Beispieldaten generieren möchten. |
 
 {style="table-layout:auto"}
 

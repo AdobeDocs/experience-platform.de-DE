@@ -13,11 +13,11 @@ ht-degree: 26%
 
 ## Übersicht {#overview}
 
-[Snapchat-Anzeigen](https://forbusiness.snapchat.com/) werden für jedes Geschäft gemacht, unabhängig von Größe oder Industrie. Werden Sie Teil der alltäglichen Gespräche von Snapchattern mit digitalen Vollbild-Anzeigen, die von den Menschen, die für Ihr Unternehmen am wichtigsten sind, zum Handeln inspirieren.
+[Snapchat-Anzeigen](https://forbusiness.snapchat.com/) werden für jedes Unternehmen unabhängig von Größe oder Branche erstellt. Werden Sie Teil der alltäglichen Gespräche von Snapchattern mit digitalen Vollbild-Anzeigen, die von den Menschen, die für Ihr Unternehmen am wichtigsten sind, zum Handeln inspirieren.
 
 >[!IMPORTANT]
 >
->Diese Ziel-Connector- und Dokumentationsseite wird von der *Snap Inc* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *dev-support@snap.com*
+>Diese Ziel-Connector- und Dokumentationsseite werden vom Team von *Snap Inc* erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *dev-support@snap.com*
 
 ## Anwendungsfälle {#use-cases}
 
@@ -27,7 +27,7 @@ Mit diesem Ziel können Marketingexperten in Experience Platform erstellte Benut
 
 Um dieses Ziel zu verwenden, müssen Sie über ein Snapchat Ads-Konto verfügen. Informationen zum Erstellen einer solchen Dokumentation finden Sie in dieser Dokumentation:
 
-[Erste Schritte mit Snapchat-Werbung](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+[Erste Schritte mit Snapchat Advertising](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
 ## Einschränkungen {#limitations}
 
@@ -37,9 +37,9 @@ Um dieses Ziel zu verwenden, müssen Sie über ein Snapchat Ads-Konto verfügen.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Die *Snap Inc* Das Ziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+Das Ziel *Snap Inc* unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
-Alle an die *Snap Inc* Das Ziel muss im SHA-256-Format gehasht werden. Um Nur-Text-IDs zu hashen, bevor sie an das Ziel gesendet werden, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** Option bei der Zuordnung von Zielkennungen für das Ziel.
+Alle an das Ziel *Snap Inc* gesendeten Kennungen müssen im SHA-256-Format gehasht werden. Um Klartext-IDs zu hash, bevor sie an das Ziel gesendet werden, aktivieren Sie die Option **[!UICONTROL Transformation anwenden]** , wenn Sie Zielkennungen für das Ziel zuordnen.
 
 >[!WARNING]
 > 
@@ -52,10 +52,10 @@ Alle an die *Snap Inc* Das Ziel muss im SHA-256-Format gehasht werden. Um Nur-Te
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| E-Mail-Adresse | SHA-256-Hashemail-Adresse | E-Mail-Adressen in das Zielidentitätsfeld zuordnen *emailAddress*. |
-| Telefonnummer | SHA-256 Hash-Telefonnummer | E-Mail-Adressen in das Zielidentitätsfeld zuordnen *phoneNumber*. |
-| GAID | SHA-256-Hash-Google Advertising ID | Zuordnen von Google Advertising-IDs zum Zielidentitätsfeld *gaid*. |
-| IDFA | SHA-256-Hash-Apple Advertising ID | Zuordnen von Apple Advertising-IDs zum Zielidentitätsfeld *idfa*. |
+| E-Mail-Adresse | SHA-256-Hashemail-Adresse | Ordnen Sie E-Mail-Adressen dem Zielidentitätsfeld *emailAddress* zu. |
+| Telefonnummer | SHA-256 Hash-Telefonnummer | Ordnen Sie E-Mail-Adressen dem Zielidentitätsfeld *phoneNumber* zu. |
+| GAID | SHA-256-Hash Google Advertising ID | Ordnen Sie Google Advertising IDs dem Zielidentitätsfeld *gaid* zu. |
+| IDFA | SHA-256-Hash Apple Advertising ID | Ordnen Sie Apple Advertising IDs dem Zielidentitätsfeld *idfa* zu. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im *YOURDESTINATION* Ziel. |
+| Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im Ziel *YOURDESTINATION* verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -74,17 +74,17 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 ### Beim Ziel authentifizieren {#authenticate}
 
 Gehen Sie wie folgt vor, um sich beim Ziel zu authentifizieren:
 
-1. Suchen Sie die *Snap Inc* Ziel aus dem Adobe Experience Platform-Zielkatalog auswählen **Einrichten**.
-2. Auswählen **[!UICONTROL Mit Ziel verbinden]**. Sie werden zum folgenden Bildschirm weitergeleitet:
+1. Suchen Sie das Ziel *Snap Inc* aus dem Zielkatalog von Adobe Experience Platform und wählen Sie **Einrichten** aus.
+2. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Sie werden zum folgenden Bildschirm weitergeleitet:
    ![Authentifizierungsbildschirm 1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
-3. Geben Sie Ihre Snapchat-Anmeldedaten ein und wählen Sie **Anmelden**.
-4. Ihnen werden die Snapchat-Daten angezeigt, auf die Adobe Experience Platform zugreifen kann. Auswählen **Weiter** , um mit dem Verbindungsprozess fortzufahren.
+3. Geben Sie Ihre Snapchat-Anmeldedaten ein und wählen Sie **Anmelden** aus.
+4. Ihnen werden die Snapchat-Daten angezeigt, auf die Adobe Experience Platform zugreifen kann. Wählen Sie **Weiter** aus, um mit dem Verbindungsprozess fortzufahren.
 
 ![Authentifizierungsbildschirm 2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
@@ -94,11 +94,11 @@ Nachdem Sie &quot;Weiter&quot;ausgewählt haben, warten Sie, bis Sie zu Adobe Ex
 
 ![Zieldetails](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
-Füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Nächste]**.
+Um Details für das Ziel zu konfigurieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Weiter]** aus.
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Die ID des Anzeigenkontos, das mit dem Anzeigenkonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen hierzu finden Sie unter [Diese Dokumentation zum Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Konto-ID]**: Die ID des Anzeigenkontos, die mit dem Anzeigenkonto verknüpft ist, in das Sie Ihre Zielgruppen importieren möchten. Weitere Informationen dazu, wie Sie dies finden, finden Sie in [dieser Dokumentation im Snapchat Business Help Center](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
@@ -114,21 +114,21 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ## Überprüfen des Datenexports {#exported-data}
 
-Nach der Aktivierung von Zielgruppen für die *Snap Inc* Ziel, können Sie die Zielgruppen im Anzeigenmanager der [**Zielgruppen** Abschnitt](https://businesshelp.snapchat.com/s/article/audience-sharing). Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
+Nachdem Sie Zielgruppen für das Ziel *Snap Inc* aktiviert haben, können Sie die Zielgruppen im Abschnitt [**Zielgruppen** des Snap Ads Manager](https://businesshelp.snapchat.com/s/article/audience-sharing) sehen. Gehen Sie wie folgt vor, um zu diesem Abschnitt zu navigieren:
 
-1. Anmelden bei der [Anzeigen-Manager ausrichten](https://ads.snapchat.com/)
-2. Auswählen **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms. Sie sehen die Zielgruppen, die Sie in Adobe Experience Platform in der Zielgruppenbibliothek aktiviert haben:
+1. Melden Sie sich beim [Anzeigen-Manager ausrichten](https://ads.snapchat.com/) an
+2. Wählen Sie **Zielgruppen** aus dem Pulldown-Menü in der oberen linken Ecke des Bildschirms aus. Sie sehen die Zielgruppen, die Sie in Adobe Experience Platform in der Zielgruppenbibliothek aktiviert haben:
 
 ![Zielgruppen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Beachten Sie bitte, dass eine Adobe-Audience, die zum ersten Mal für Snap Inc aktiviert wird, zunächst als leere Audience betrachtet wird. Dies liegt daran, dass Adobe Experience Platform keine Mitgliedsdaten an Snap Inc exportiert, bis die Audience ausgewertet wird. Weiterführende Informationen zur Auswertung von Audiences in Experience Platform finden Sie im Abschnitt [Übersicht über den Segmentierungsdienst](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Beachten Sie bitte, dass eine Adobe-Audience, die zum ersten Mal für Snap Inc aktiviert wird, zunächst als leere Audience betrachtet wird. Dies liegt daran, dass Adobe Experience Platform keine Mitgliedsdaten an Snap Inc exportiert, bis die Audience ausgewertet wird. Weitere Informationen dazu, wie Zielgruppen in Experience Platform ausgewertet werden, finden Sie in der [Segmentation Service - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments) .
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

@@ -12,15 +12,15 @@ ht-degree: 5%
 
 # Zielgruppen-Endpunkt
 
-Eine Zielgruppe ist eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlungen können entweder mit Adobe Experience Platform oder aus externen Quellen erstellt werden. Sie können die `/audiences` -Endpunkt in der Segmentation-API, mit dem Sie Zielgruppen programmgesteuert abrufen, erstellen, aktualisieren und löschen können.
+Eine Zielgruppe ist eine Sammlung von Personen, die ähnliche Verhaltensweisen und/oder Merkmale aufweisen. Diese Personensammlungen können entweder mit Adobe Experience Platform oder aus externen Quellen erstellt werden. Sie können den Endpunkt `/audiences` in der Segmentation-API verwenden, mit dem Sie Zielgruppen programmgesteuert abrufen, erstellen, aktualisieren und löschen können.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] -API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Abrufen einer Zielgruppenliste {#list}
 
-Sie können eine Liste aller Zielgruppen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/audiences` -Endpunkt.
+Sie können eine Liste aller Zielgruppen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/audiences` senden.
 
 **API-Format**
 
@@ -37,10 +37,10 @@ Beim Abrufen einer Zielgruppenliste können die folgenden Abfrageparameter verwe
 | --------------- | ----------- | ------- |
 | `start` | Gibt den Startversatz für die zurückgegebenen Zielgruppen an. | `start=5` |
 | `limit` | Gibt die maximale Anzahl von Zielgruppen an, die pro Seite zurückgegeben werden. | `limit=10` |
-| `sort` | Gibt die Reihenfolge an, nach der die Ergebnisse sortiert werden sollen. Dies wird im Format `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
-| `property` | Ein Filter, mit dem Sie Zielgruppen angeben können, die **just** mit dem Wert eines Attributs übereinstimmen. Dies wird im Format `property=` | `property=audienceId==test-audience-id` |
-| `name` | Ein Filter, mit dem Sie Zielgruppen angeben können, deren Namen **contain** den bereitgestellten Wert. Bei diesem Wert wird nicht zwischen Groß- und Kleinschreibung unterschieden. | `name=Sample` |
-| `description` | Ein Filter, mit dem Sie Zielgruppen angeben können, deren Beschreibungen **contain** den bereitgestellten Wert. Bei diesem Wert wird nicht zwischen Groß- und Kleinschreibung unterschieden. | `description=Test Description` |
+| `sort` | Gibt die Reihenfolge an, nach der die Ergebnisse sortiert werden sollen. Dies wird im Format `attributeName:[desc/asc]` geschrieben. | `sort=updateTime:desc` |
+| `property` | Ein Filter, mit dem Sie Zielgruppen angeben können, die **genau** mit dem Wert eines Attributs übereinstimmen. Dies wird im Format `property=` geschrieben. | `property=audienceId==test-audience-id` |
+| `name` | Ein Filter, mit dem Sie Zielgruppen angeben können, deren Namen **den angegebenen Wert enthalten**. Bei diesem Wert wird nicht zwischen Groß- und Kleinschreibung unterschieden. | `name=Sample` |
+| `description` | Ein Filter, mit dem Sie Zielgruppen angeben können, deren Beschreibungen **den angegebenen Wert enthalten**. Bei diesem Wert wird nicht zwischen Groß- und Kleinschreibung unterschieden. | `description=Test Description` |
 
 **Anfrage**
 
@@ -176,29 +176,29 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgrupp
 | Eigenschaft | Zielgruppentyp | Beschreibung |
 | -------- | ------------- | ----------- | 
 | `id` | Beide | Eine systemgenerierte schreibgeschützte Kennung für die Zielgruppe. |
-| `audienceId` | Beide | Wenn es sich bei der Audience um eine Platform-generierte Audience handelt, ist dies derselbe Wert wie der `id`. Wenn die Audience extern generiert wird, wird dieser Wert vom Client bereitgestellt. |
+| `audienceId` | Beide | Wenn es sich bei der Zielgruppe um eine Platform-generierte Zielgruppe handelt, ist dies derselbe Wert wie der `id`. Wenn die Audience extern generiert wird, wird dieser Wert vom Client bereitgestellt. |
 | `schema` | Beide | Das Experience-Datenmodell (XDM)-Schema der Zielgruppe. |
 | `imsOrgId` | Beide | Die ID der Organisation, zu der die Zielgruppe gehört. |
-| `sandbox` | Beide | Informationen zur Sandbox, zu der die Zielgruppe gehört. Weitere Informationen zu Sandboxes finden Sie im [Sandbox-Übersicht](../../sandboxes/home.md). |
+| `sandbox` | Beide | Informationen zur Sandbox, zu der die Zielgruppe gehört. Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md). |
 | `name` | Beide | Der Name der Zielgruppe. |
 | `description` | Beide | Eine Beschreibung der Zielgruppe. |
-| `expression` | Plattformgenerierte | Der PQL-Ausdruck (Profile Query Language) der Audience. Weitere Informationen zu PQL-Ausdrücken finden Sie im [Handbuch zu PQL-Ausdrücken](../pql/overview.md). |
+| `expression` | Plattformgenerierte | Der Profile Query Language (PQL)-Ausdruck der Zielgruppe. Weitere Informationen zu PQL-Ausdrücken finden Sie im [Handbuch zu PQL-Ausdrücken](../pql/overview.md). |
 | `mergePolicyId` | Plattformgenerierte | Die Kennung der Zusammenführungsrichtlinie, mit der die Zielgruppe verknüpft ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Handbuch zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Plattformgenerierte | Zeigt an, wie die Zielgruppe bewertet wird. Mögliche Auswertungsmethoden sind Batch, synchron (Streaming) oder kontinuierlich (Edge). Weitere Informationen zu den Bewertungsmethoden finden Sie im [Segmentierungsübersicht](../home.md) |
+| `evaluationInfo` | Plattformgenerierte | Zeigt an, wie die Zielgruppe bewertet wird. Mögliche Auswertungsmethoden sind Batch, synchron (Streaming) oder kontinuierlich (Edge). Weitere Informationen zu den Auswertungsmethoden finden Sie in der [Segmentierungsübersicht](../home.md) . |
 | `dependents` | Beide | Ein Array von Zielgruppen-IDs, die von der aktuellen Zielgruppe abhängen. Dies wird verwendet, wenn Sie eine Zielgruppe erstellen, die ein Segment eines Segments ist. |
 | `dependencies` | Beide | Ein Array von Zielgruppen-IDs, von denen die Zielgruppe abhängig ist. Dies wird verwendet, wenn Sie eine Zielgruppe erstellen, die ein Segment eines Segments ist. |
-| `type` | Beide | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe Platform-generiert ist oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. A `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während eine `ExternalSegment` bezieht sich auf eine Zielgruppe, die nicht in Platform generiert wurde. |
-| `originName` | Beide | Ein Feld, das auf den Namen der Herkunft der Zielgruppe verweist. Für plattformgenerierte Zielgruppen wird dieser Wert `REAL_TIME_CUSTOMER_PROFILE`. Für in Audience Orchestration generierte Zielgruppen lautet dieser Wert `AUDIENCE_ORCHESTRATION`. Für in Adobe Audience Manager generierte Zielgruppen wird dieser Wert `AUDIENCE_MANAGER`. Für andere extern generierte Zielgruppen wird dieser Wert `CUSTOM_UPLOAD`. |
+| `type` | Beide | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe Platform-generiert ist oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Platform generiert wurde. |
+| `originName` | Beide | Ein Feld, das auf den Namen der Herkunft der Zielgruppe verweist. Für Platform-generierte Zielgruppen ist dieser Wert `REAL_TIME_CUSTOMER_PROFILE`. Für in Audience Orchestration generierte Zielgruppen ist dieser Wert `AUDIENCE_ORCHESTRATION`. Für in Adobe Audience Manager generierte Zielgruppen ist dieser Wert `AUDIENCE_MANAGER`. Für andere extern generierte Zielgruppen ist dieser Wert `CUSTOM_UPLOAD`. |
 | `createdBy` | Beide | Die ID des Benutzers, der die Zielgruppe erstellt hat. |
 | `labels` | Beide | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
-| `namespace` | Beide | Der Namespace, zu dem die Zielgruppe gehört. Mögliche Werte sind `AAM`, `AAMSegments`, `AAMTraits`, und `AEPSegments`. |
+| `namespace` | Beide | Der Namespace, zu dem die Zielgruppe gehört. Mögliche Werte sind `AAM`, `AAMSegments`, `AAMTraits` und `AEPSegments`. |
 | `linkedAudienceRef` | Beide | Ein Objekt, das IDs für andere Zielgruppen-bezogene Systeme enthält. |
 
 +++
 
 ## Neue Zielgruppe erstellen {#create}
 
-Sie können eine neue Zielgruppe erstellen, indem Sie eine POST-Anfrage an die `/audiences` -Endpunkt.
+Sie können eine neue Zielgruppe erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/audiences` senden.
 
 **API-Format**
 
@@ -210,7 +210,7 @@ POST /audiences
 
 >[!BEGINTABS]
 
->[!TAB Plattformgenerierte Zielgruppe]
+>[!TAB  Von der Plattform generierte Audience]
 
 +++ Beispielanfrage zum Erstellen einer Platform-generierten Zielgruppe
 
@@ -245,15 +245,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | -------- | ----------- | 
 | `name` | Der Name der Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
-| `type` | Ein Feld, das anzeigt, ob die Zielgruppe Platform-generiert oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. A `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während eine `ExternalSegment` bezieht sich auf eine Zielgruppe, die nicht in Platform generiert wurde. |
-| `expression` | Der PQL-Ausdruck (Profile Query Language) der Audience. Weitere Informationen zu PQL-Ausdrücken finden Sie im [Handbuch zu PQL-Ausdrücken](../pql/overview.md). |
+| `type` | Ein Feld, das anzeigt, ob die Zielgruppe Platform-generiert oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Platform generiert wurde. |
+| `expression` | Der Profile Query Language (PQL)-Ausdruck der Zielgruppe. Weitere Informationen zu PQL-Ausdrücken finden Sie im [Handbuch zu PQL-Ausdrücken](../pql/overview.md). |
 | `schema` | Das Experience-Datenmodell (XDM)-Schema der Zielgruppe. |
 | `labels` | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
 | `ttlInDays` | Stellt den Datenablaufwert für die Zielgruppe in Tagen dar. |
 
 +++
 
->[!TAB Extern generierte Zielgruppe]
+>[!TAB External generierte Zielgruppe]
 
 +++ Beispielanfrage zum Erstellen einer extern generierten Zielgruppe
 
@@ -288,13 +288,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `name` | Der Name der Zielgruppe. |
 | `namespace` | Der Namespace für die Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
-| `type` | Ein Feld, das anzeigt, ob die Zielgruppe Platform-generiert oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. A `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während eine `ExternalSegment` bezieht sich auf eine Zielgruppe, die nicht in Platform generiert wurde. |
-| `originName` | Der Name der Audience-Herkunft. Für extern generierte Zielgruppen lautet der Standardwert `CUSTOM_UPLOAD`. Andere unterstützte Werte sind `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`, und `AUDIENCE_MATCH`. |
-| `lifecycleState` | Ein optionales Feld, das den Anfangsstatus der Zielgruppe bestimmt, die Sie erstellen möchten. Zu den unterstützten Werten gehören `draft`, `published`, und `inactive`. |
+| `type` | Ein Feld, das anzeigt, ob die Zielgruppe Platform-generiert oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Platform generiert wurde. |
+| `originName` | Der Name der Audience-Herkunft. Für extern generierte Zielgruppen ist der Standardwert dieses Werts `CUSTOM_UPLOAD`. Weitere unterstützte Werte sind `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION` und `AUDIENCE_MATCH`. |
+| `lifecycleState` | Ein optionales Feld, das den Anfangsstatus der Zielgruppe bestimmt, die Sie erstellen möchten. Zu den unterstützten Werten gehören `draft`, `published` und `inactive`. |
 | `datasetId` | Die ID des Datensatzes, in dem die Daten, die die Zielgruppe enthalten, gefunden werden können. |
 | `labels` | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
 | `audienceMeta` | Metadaten, die zur extern generierten Zielgruppe gehören. |
-| `linkedAudienceRef` | Ein Objekt, das IDs für andere Zielgruppen-bezogene Systeme enthält. Dies kann Folgendes umfassen: <ul><li>`flowId`: Diese ID wird verwendet, um die Zielgruppe mit dem Datenfluss zu verbinden, der zum Einbringen der Zielgruppendaten verwendet wurde. Weitere Informationen zu den erforderlichen IDs finden Sie im Abschnitt [Erstellen eines Datenfluss-Handbuchs](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: Diese ID wird verwendet, um die Zielgruppe mit einer zugehörigen Audience Orchestration-Komposition zu verbinden.&lt;/li/> <li>`payloadFieldGroupRef`: Diese ID wird verwendet, um auf das XDM-Feldergruppen-Schema zu verweisen, das die Struktur der Zielgruppe beschreibt. Weitere Informationen zum Wert dieses Felds finden Sie im [Handbuch zum Endpunkt der XDM-Feldergruppe](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: Diese ID wird verwendet, um auf die Ordner-ID in Adobe Audience Manager für die Zielgruppe zu verweisen. Weitere Informationen zu dieser API finden Sie im Abschnitt [Handbuch zur Adobe Audience Manager API](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
+| `linkedAudienceRef` | Ein Objekt, das IDs für andere Zielgruppen-bezogene Systeme enthält. Dies kann Folgendes umfassen: <ul><li>`flowId`: Diese ID wird verwendet, um die Zielgruppe mit dem Datenfluss zu verbinden, der zum Einbringen der Zielgruppendaten verwendet wurde. Weitere Informationen zu den erforderlichen IDs finden Sie im Leitfaden [Erstellen eines Datenflusses](../../sources/tutorials/api/collect/cloud-storage.md) .</li><li>`aoWorkflowId`: Diese ID wird verwendet, um die Zielgruppe mit einer zugehörigen Audience Orchestration-Komposition zu verbinden.&lt;/li/> <li>`payloadFieldGroupRef`: Diese ID wird verwendet, um auf das XDM-Feldergruppen-Schema zu verweisen, das die Struktur der Zielgruppe beschreibt. Weitere Informationen zum Wert dieses Felds finden Sie im [XDM Field Group endpoint guide](../../xdm/api/field-groups.md) .</li><li>`audienceFolderId`: Diese ID wird verwendet, um auf die Ordner-ID in Adobe Audience Manager für die Zielgruppe zu verweisen. Weitere Informationen zu dieser API finden Sie im [Adobe Audience Manager API-Handbuch](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
 
 +++
 
@@ -306,7 +306,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrer ne
 
 >[!BEGINTABS]
 
->[!TAB Plattformgenerierte Zielgruppe]
+>[!TAB  Von der Plattform generierte Audience]
 
 +++ Eine Beispielantwort beim Erstellen einer Platform-generierten Zielgruppe.
 
@@ -377,7 +377,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrer ne
 
 +++
 
->[!TAB Extern generierte Zielgruppe]
+>[!TAB External generierte Zielgruppe]
 
 +++ Eine Beispielantwort beim Erstellen einer extern generierten Zielgruppe.
 
@@ -419,7 +419,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrer ne
 
 ## Bestimmte Zielgruppe nachschlagen {#get}
 
-Sie können detaillierte Informationen zu einer bestimmten Zielgruppe nachschlagen, indem Sie eine GET-Anfrage an die `/audiences` -Endpunkt und geben Sie die Kennung der Zielgruppe an, die Sie im Anfragepfad abrufen möchten.
+Sie können detaillierte Informationen zu einer bestimmten Zielgruppe nachschlagen, indem Sie eine GET-Anfrage an den `/audiences` -Endpunkt senden und im Anfragepfad die Kennung der Zielgruppe angeben, die Sie abrufen möchten.
 
 **API-Format**
 
@@ -429,7 +429,7 @@ GET /audiences/{AUDIENCE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | Die Kennung der Zielgruppe, die Sie abrufen möchten. Bitte beachten Sie, dass dies der `id` und **not** die `audienceId` -Feld. |
+| `{AUDIENCE_ID}` | Die Kennung der Zielgruppe, die Sie abrufen möchten. Beachten Sie, dass dies das Feld `id` und **nicht** das Feld `audienceId` ist. |
 
 **Anfrage**
 
@@ -451,7 +451,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zur angegeb
 
 >[!BEGINTABS]
 
->[!TAB Plattformgenerierte Zielgruppe]
+>[!TAB  Von der Plattform generierte Audience]
 
 +++ Eine Beispielantwort beim Abrufen einer Platform-generierten Zielgruppe.
 
@@ -521,7 +521,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zur angegeb
 
 +++
 
->[!TAB Extern generierte Zielgruppe]
+>[!TAB External generierte Zielgruppe]
 
 +++ Eine Beispielantwort beim Abrufen einer extern generierten Zielgruppe.
 
@@ -561,7 +561,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zur angegeb
 
 ## Aktualisieren eines Felds in einer Audience {#update-field}
 
-Sie können die Felder einer bestimmten Zielgruppe aktualisieren, indem Sie eine PATCH-Anfrage an die `/audiences` -Endpunkt und die Kennung der Zielgruppe angeben, die Sie im Anfragepfad aktualisieren möchten.
+Sie können die Felder einer bestimmten Zielgruppe aktualisieren, indem Sie eine PATCH-Anfrage an den `/audiences` -Endpunkt senden und im Anfragepfad die Kennung der Zielgruppe angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -571,7 +571,7 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie aktualisieren möchten. Bitte beachten Sie, dass dies der `id` und **not** die `audienceId` -Feld. |
+| `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie aktualisieren möchten. Beachten Sie, dass dies das Feld `id` und **nicht** das Feld `audienceId` ist. |
 
 **Anfrage**
 
@@ -679,7 +679,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrer ne
 
 ## Audience aktualisieren {#put}
 
-Sie können eine bestimmte Zielgruppe aktualisieren (überschreiben), indem Sie eine PUT-Anfrage an die `/audiences` -Endpunkt und die Kennung der Zielgruppe angeben, die Sie im Anfragepfad aktualisieren möchten.
+Sie können eine bestimmte Zielgruppe aktualisieren (überschreiben), indem Sie eine PUT-Anfrage an den `/audiences` -Endpunkt senden und im Anfragepfad die Kennung der Zielgruppe angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -689,7 +689,7 @@ PUT /audiences/{AUDIENCE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie aktualisieren möchten. Bitte beachten Sie, dass dies der `id` und **not** die `audienceId` -Feld. |
+| `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie aktualisieren möchten. Beachten Sie, dass dies das Feld `id` und **nicht** das Feld `audienceId` ist. |
 
 **Anfrage**
 
@@ -722,8 +722,8 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | Der Name der Zielgruppe. |
 | `namespace` | Der Namespace für die Zielgruppe. |
 | `description` | Eine Beschreibung der Zielgruppe. |
-| `type` | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe Platform-generiert ist oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. A `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während eine `ExternalSegment` bezieht sich auf eine Zielgruppe, die nicht in Platform generiert wurde. |
-| `lifecycleState` | Der Status der Zielgruppe. Mögliche Werte sind `draft`, `published`, und `inactive`. `draft` steht für den Zeitpunkt der Erstellung der Audience; `published` Zeitpunkt der Veröffentlichung der Zielgruppe und `inactive` wenn die Zielgruppe nicht mehr aktiv ist. |
+| `type` | Ein systemgeneriertes Feld, das anzeigt, ob die Zielgruppe Platform-generiert ist oder eine extern generierte Zielgruppe ist. Mögliche Werte sind `SegmentDefinition` und `ExternalSegment`. Ein `SegmentDefinition` bezieht sich auf eine Zielgruppe, die in Platform generiert wurde, während ein `ExternalSegment` auf eine Zielgruppe verweist, die nicht in Platform generiert wurde. |
+| `lifecycleState` | Der Status der Zielgruppe. Mögliche Werte sind `draft`, `published` und `inactive`. `draft` steht für den Zeitpunkt, zu dem die Zielgruppe erstellt wird, `published` für den Zeitpunkt der Veröffentlichung der Zielgruppe und `inactive` für den Zeitpunkt, zu dem die Zielgruppe nicht mehr aktiv ist. |
 | `datasetId` | Die ID des Datensatzes, in dem die Zielgruppendaten gefunden werden können. |
 | `labels` | Datennutzung auf Objektebene und attributbasierte Zugriffssteuerungsbeschriftungen, die für die Zielgruppe relevant sind. |
 
@@ -765,7 +765,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu aktu
 
 ## Löschen einer Zielgruppe {#delete}
 
-Sie können eine bestimmte Zielgruppe löschen, indem Sie eine DELETE-Anfrage an die `/audiences` -Endpunkt und die Kennung der Zielgruppe angeben, die Sie im Anfragepfad löschen möchten.
+Sie können eine bestimmte Zielgruppe löschen, indem Sie eine DELETE-Anfrage an den `/audiences` -Endpunkt senden und im Anfragepfad die Kennung der Zielgruppe angeben, die Sie löschen möchten.
 
 **API-Format**
 
@@ -775,7 +775,7 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie löschen möchten. Bitte beachten Sie, dass dies der `id` und **not** die `audienceId` -Feld. |
+| `{AUDIENCE_ID}` | Die ID der Zielgruppe, die Sie löschen möchten. Beachten Sie, dass dies das Feld `id` und **nicht** das Feld `audienceId` ist. |
 
 **Anfrage**
 
@@ -797,7 +797,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 ohne Meldung zurück.
 
 ## Abrufen mehrerer Zielgruppen {#bulk-get}
 
-Sie können mehrere Zielgruppen abrufen, indem Sie eine POST-Anfrage an die `/audiences/bulk-get` -Endpunkt und geben die IDs der Zielgruppen an, die Sie abrufen möchten.
+Sie können mehrere Zielgruppen abrufen, indem Sie eine POST-Anfrage an den `/audiences/bulk-get` -Endpunkt senden und die IDs der Zielgruppen angeben, die Sie abrufen möchten.
 
 **API-Format**
 
@@ -937,4 +937,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit Informationen zu Ihren an
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs erfahren Sie jetzt mehr über das Erstellen, Verwalten und Löschen von Zielgruppen mithilfe der Adobe Experience Platform-API. Weitere Informationen zum Zielgruppen-Management mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Segmentierungsbenutzeroberfläche](../ui/overview.md).
+Nach dem Lesen dieses Handbuchs erfahren Sie jetzt mehr über das Erstellen, Verwalten und Löschen von Zielgruppen mithilfe der Adobe Experience Platform-API. Weiterführende Informationen zum Zielgruppen-Management mithilfe der Benutzeroberfläche finden Sie im Handbuch zur [Segmentation UI-Anleitung](../ui/overview.md).

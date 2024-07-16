@@ -5,8 +5,8 @@ description: Adobe Experience Platform ist eines der leistungsfähigsten, flexib
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 35%
+source-wordcount: '251'
+ht-degree: 33%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 35%
 
 Die Benutzeroberfläche von Adobe Experience Platform unterstützt mehrere Browser und Sprachen.
 
-## Browser-Unterstützung
+## Browserunterstützung
 
-Die Platform-Benutzeroberfläche wurde für eine optimale Funktionsweise in der **aktuelle Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge. Möglicherweise haben Sie bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern Probleme.
+Die Platform-Benutzeroberfläche wurde für die optimale Verwendung in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge entwickelt. Möglicherweise haben Sie bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern Probleme.
 
 | Betriebssystem | Unterstützte Browser |
 |---|---|
@@ -52,10 +52,10 @@ Die Standardsprache der Benutzeroberfläche wird durch die in Ihrem Benutzerprof
 Gehen Sie wie folgt vor, um Ihre Sprache zu ändern:
 
 1. Melden Sie sich bei Ihrem Experience Platform-Konto an.
-1. Presse `Ctrl + i` , um das Menü Kontoinformationen aufzurufen.
+1. Drücken Sie `Ctrl + i` , um das Menü mit den Kontoinformationen aufzurufen.
 1. Navigieren Sie zu **[!UICONTROL Bevorzugte Sprachen]**.
 1. Wählen Sie Ihre Voreinstellungen für die erste und zweite Sprache aus.
-1. Auswählen **[!UICONTROL Speichern]** und schließen Sie das Fenster.
+1. Wählen Sie **[!UICONTROL Speichern]** aus und schließen Sie das Fenster.
 
 >[!NOTE]
 >

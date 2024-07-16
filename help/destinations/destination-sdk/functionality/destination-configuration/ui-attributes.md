@@ -110,9 +110,9 @@ Zu diesem Zweck können Sie den Parameter `isBeta: "true"` im Abschnitt „Benut
 
 Sie können ein Logo-Symbol zu Ihrem Ziel hinzufügen, wie in der Abbildung unten dargestellt.
 
-![Benutzeroberflächenbild mit der Symbolposition.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+![UI-Bild, das die Symbolposition anzeigt.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Um Ihrer Zielkarte ein Logo hinzuzufügen, müssen Sie das gewünschte Bild beim Adobe-Team freigeben [Ziel zur Überprüfung übermitteln](../../guides/submit-destination.md#logo).
+Um Ihrer Zielkarte ein Logo hinzuzufügen, müssen Sie das gewünschte Bild für das Adobe-Team freigeben, wenn Sie [das Ziel zur Überprüfung senden](../../guides/submit-destination.md#logo).
 
 ## Nächste Schritte {#next-steps}
 

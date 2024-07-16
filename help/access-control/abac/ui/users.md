@@ -12,19 +12,19 @@ ht-degree: 5%
 
 # Benutzer verwalten
 
-Wenn Sie Benutzerdetails und Rollen anzeigen möchten, denen sie zugewiesen sind, wählen Sie die **[!UICONTROL Benutzer]** Registerkarte.
+Wenn Sie Benutzerdetails und Rollen anzeigen möchten, denen sie zugewiesen sind, wählen Sie die Registerkarte **[!UICONTROL Benutzer]** aus.
 
-![Die Seite &quot;Benutzer&quot;wird mit dem [!UICONTROL Benutzer] hervorgehobener Tab.](../../images/flac-ui/flac-users-tab.png)
+![Seite &quot;Benutzer&quot;mit hervorgehobener Registerkarte [!UICONTROL Benutzer]](../../images/flac-ui/flac-users-tab.png) angezeigt.
 
 Eine Liste der Benutzer wird angezeigt. Wählen Sie in der Liste den Benutzer aus, den Sie anzeigen möchten. Alternativ können Sie in der Suchleiste nach dem Benutzer suchen, indem Sie dessen Namen oder E-Mail-Adresse eingeben.
 
 Die Registerkarte &quot;Details&quot;bietet einen Überblick über den Benutzer. In der Übersicht werden der Benutzername, der Kontotyp, die E-Mail-Adresse, die Authentifizierungs-ID, Kontaktinformationen und Standortdetails angezeigt.
 
-![Seite mit Benutzerdetails mit [!UICONTROL Details] und das Benutzerprofil hervorgehoben.](../../images/flac-ui/flac-users-details.png)
+![Seite &quot;Benutzerdetails&quot;mit der Registerkarte [!UICONTROL Details] und dem hervorgehobenen Benutzerprofil.](../../images/flac-ui/flac-users-details.png)
 
-Wählen Sie die **[!UICONTROL Rollen]** um die Rollen anzuzeigen, denen der Benutzer zugewiesen ist.
+Wählen Sie die Registerkarte **[!UICONTROL Rollen]** aus, um die Rollen anzuzeigen, denen der Benutzer zugewiesen ist.
 
-![Benutzerrollen , die zusammen mit der [!UICONTROL Rollen] Registerkarte und Rolle hervorgehoben.](../../images/flac-ui/flac-users-roles.png)
+![Roles-Seite angezeigt, auf der die Registerkarte [!UICONTROL Roles] und die Rolle hervorgehoben sind.](../../images/flac-ui/flac-users-roles.png)
 
 ## Entwickler- und API-Zugriffskontrolle mit Experience Platform-Berechtigungen
 
@@ -32,7 +32,7 @@ Wählen Sie die **[!UICONTROL Rollen]** um die Rollen anzuzeigen, denen der Benu
 >
 >Nur Systemadministratoren können API-Anmeldeinformationen in den Berechtigungen anzeigen und verwalten.
 
-Der Übergang zu Adobe Experience Platform-Berechtigungen umfasst zusätzliche Schritte, die für den Entwickler-API-Workflow durchgeführt werden müssen, der zuvor auf Rollen angewiesen war. Siehe Handbuch unter [API-Authentifizierung](../../../landing/api-authentication.md) für weitere Informationen.
+Der Übergang zu Adobe Experience Platform-Berechtigungen umfasst zusätzliche Schritte, die für den Entwickler-API-Workflow durchgeführt werden müssen, der zuvor auf Rollen angewiesen war. Weitere Informationen finden Sie im Handbuch zur [API-Authentifizierung](../../../landing/api-authentication.md) .
 
 Das folgende Video unterstützt Sie dabei, die Anmeldeinformationen von Entwicklern und APIs zu verstehen.
 
@@ -40,4 +40,4 @@ Das folgende Video unterstützt Sie dabei, die Anmeldeinformationen von Entwickl
 
 ## Nächste Schritte
 
-Sie haben jetzt erfahren, wie Sie Benutzerdetails und die Rollen anzeigen können, denen sie derzeit hinzugefügt werden. Weitere Informationen zur attributbasierten Zugriffskontrolle finden Sie unter [Attributbasierte Zugriffskontrolle - Übersicht](../overview.md).
+Sie haben jetzt erfahren, wie Sie Benutzerdetails und die Rollen anzeigen können, denen sie derzeit hinzugefügt werden. Weitere Informationen zur attributbasierten Zugriffskontrolle finden Sie in der [Übersicht über die attributbasierte Zugriffssteuerung](../overview.md).

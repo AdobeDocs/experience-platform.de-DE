@@ -125,9 +125,9 @@ Befolgen Sie die Anweisungen zum Erstellen einer Mobile-Eigenschaft.
    * **Name:** Der Name Ihrer Eigenschaft.
    * **Datenschutz:** Standardmäßig ist die Datenschutzeinstellung aktiviert, d. h., das SDK soll Daten erfassen und an Lösungen senden. Wenn Sie sie deaktivieren, sendet das SDK standardmäßig KEINE Daten an Lösungen. Wenn Sie als Einstellung „Unbekannt“ auswählen, verlangt das SDK, dass das Programm zunächst die Einwilligung des Benutzers zur Datenerfassung und -freigabe einholt.
 
-      >[!NOTE]
-      >
-      >In der Mobile App können Sie mittels API zusätzliche Steuerungen für diese Einstellungen einrichten.
+     >[!NOTE]
+     >
+     >In der Mobile App können Sie mittels API zusätzliche Steuerungen für diese Einstellungen einrichten.
 
    * **HTTPS verwenden:** Wählen Sie aus, ob die gesamte Datenkommunikation über HTTP oder HTTPS gesendet werden soll.
 

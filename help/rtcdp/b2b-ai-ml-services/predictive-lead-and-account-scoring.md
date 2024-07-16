@@ -7,8 +7,8 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 14%
+source-wordcount: '859'
+ht-degree: 11%
 
 ---
 
@@ -20,7 +20,7 @@ Konten, sind die ultimativen Einheiten, die B2B-Produkte und -Dienstleistungen e
 
 Kontenbasiertes Marketing, insbesondere die strategische Ausrichtung von Konten als Marketingziele. Die Neigung zum Kauf von Konten hilft den B2B-Marketingexperten bei der Priorisierung der Konten, um ihre Rendite zu maximieren.
 
-Der prädiktive Lead- und Kontoauswertungsdienst behebt die oben genannten Herausforderungen, indem er aus den Konversion-Ereignissen der Opportunitätsstufe lernt und diese vorhersagt und Personenaktivitäten auf Kontoebene aggregiert, um die Kontobewertungen zu erhalten. Die Punktzahlen stehen in benutzerdefinierten Feldern zu Personenprofilen und Kontoprofilen zur Verfügung und können einfach als Segmentkriterien eingefügt werden, um Ihre Zielgruppe zu verfeinern. Wichtigste Einflussfaktoren sind sowohl auf der Aggregat- als auch auf der Einheitenebene verfügbar, damit B2B-Marketing-Fachleute besser verstehen können, welche Elemente zu den Bewertungen geführt haben.
+Der prädiktive Lead- und Kontoauswertungsdienst behebt die oben genannten Herausforderungen, indem er aus den Konversion-Ereignissen der Opportunitätsstufe lernt und diese vorhersagt und Personenaktivitäten auf Kontoebene aggregiert, um die Kontobewertungen zu erhalten. Die Punktzahlen stehen in benutzerdefinierten Feldern zu Personenprofilen und Kontoprofilen zur Verfügung und können einfach als Segmentkriterien eingefügt werden, um Ihre Zielgruppe zu verfeinern. Wichtigste Einflussfaktoren sind sowohl auf der Aggregat- als auch auf der Einheitenebene verfügbar, damit B2B-Marketer besser verstehen können, welche Elemente zu den Werten geführt haben.
 
 ## Prädiktive Lead- und Kontobewertung verstehen {#how-it-works}
 
@@ -52,7 +52,7 @@ Der Algorithmus berücksichtigt die folgenden Attribute und Eingabedaten:
 
 >[!NOTE]
 > 
->Der Algorithmus prüft nur `sourceAccountKey.sourceKey` in der Feldergruppe Person:personComponents.
+>Der Algorithmus prüft nur das Feld `sourceAccountKey.sourceKey` in der Feldergruppe Person:personComponents .
 
 * Kontoprofil
 
@@ -86,31 +86,31 @@ Die Datenqualitätsanforderungen lauten wie folgt:
 
 Scoring-Aufträge werden täglich ausgeführt und die Ergebnisse werden als Profilattribute und Kontoattribute gespeichert, die dann in Segmentdefinitionen und in der Personalisierung verwendet werden können. Native Analytics-Einblicke sind auch im Dashboard für die Kontoübersicht verfügbar.
 
-Weitere Informationen zum [prädiktive Lead- und Kontobewertung verwalten](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) -Dienst.
+Weitere Informationen zum Verwalten des prädiktiven Lead- und Kontoauswertungsdienstes ](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) finden Sie in der Dokumentation .[
 
 ## Prognoseergebnisse für Lead- und Kontoauswertung anzeigen {#how-to-view}
 
-Nach Ausführung des Auftrags werden die Ergebnisse in einem neuen Systemdatensatz für jedes Modell unter dem Namen gespeichert `LeadsAI.Scores` - ***den Namen der Punktzahl***. Jede Feldergruppe für Bewertungen kann sich unter `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Nach Ausführung des Auftrags werden die Ergebnisse in einem neuen Systemdatensatz für jedes Modell unter dem Namen `LeadsAI.Scores` - ***Bewertungsname*** gespeichert. Jede Feldergruppe mit Punktzahl kann sich unter `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name` befinden.
 
 | Attribut | Beschreibung |
 | --- | --- |
 | Ergebnis | Die relative Wahrscheinlichkeit, mit der ein Profil das prognostizierte Ziel innerhalb des definierten Zeitraums erreicht. Dieser Wert ist nicht als Prozentsatz der Wahrscheinlichkeit zu behandeln, sondern vielmehr als die Wahrscheinlichkeit eines Profils im Vergleich zur Gesamtpopulation. Dieser Wert liegt im Bereich von 0 bis 100. |
-| Perzentil | Dieser Wert enthält Informationen zur Leistung eines Profils im Vergleich zu anderen Profilen mit ähnlichen Werten. Die Perzentile liegen zwischen 1 und 100. |
+| Perzentil | Dieser Wert enthält Informationen zur Performance eines Profils im Vergleich zu anderen Profilen mit ähnlichen Werten. Die Perzentile liegen zwischen 1 und 100. |
 | Modelltyp | Der ausgewählte Modelltyp gibt an, ob es sich um eine Person oder ein Kontoergebnis handelt. |
 | Datum der Auswertung | Das Datum, an dem die Auswertung erfolgte. |
 | Einflussfaktoren | Prognostizierte Gründe, warum ein Profil wahrscheinlich konvertiert wird. Die Faktoren bestehen aus den folgenden Attributen:<ul><li>Code: Das Profil- oder Verhaltensattribut, das das prognostizierte Ergebnis eines Profils positiv beeinflusst.</li><li>Wert: Der Wert des Profil- oder Verhaltensattributs.</li><li>Wichtigkeit: Gibt die Gewichtung an, die das Profil- oder Verhaltensattribut auf das prognostizierte Ergebnis hat (niedrig, mittel, hoch).</li></ul> |
 
 ### Anzeigen von Kundenprofilbewertungen
 
-Um die Prognosewerte für ein Personenprofil anzuzeigen, wählen Sie **[!UICONTROL Profile]** im Abschnitt &quot;Kunde&quot;im linken Bedienfeld und geben Sie dann den Identitäts-Namespace und den Identitätswert ein. Wählen Sie nach Abschluss **[!UICONTROL Ansicht]**.
+Um die Prognosewerte für ein Personenprofil anzuzeigen, wählen Sie im linken Bereich im Abschnitt &quot;Kunde&quot;die Option **[!UICONTROL Profile]** aus und geben Sie dann den Identitäts-Namespace und den Identitätswert ein. Wählen Sie danach **[!UICONTROL Ansicht]** aus.
 
 Wählen Sie anschließend das Profil aus der Liste aus.
 
 ![Kundenprofil](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-Die **[!UICONTROL Detail]** -Seite enthält jetzt die Prognosewerte. Klicken Sie auf das Diagrammsymbol neben dem Prädiktivwert.
+Die Seite **[!UICONTROL Detail]** enthält jetzt die Prognosewerte. Klicken Sie auf das Diagrammsymbol neben dem Prädiktivwert.
 
-![Prognosewert für Kundenprofil](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![Vorhersagewert des Kundenprofils](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 Ein Popup-Dialogfeld zeigt die Punktzahl, die Verteilung des Gesamtergebnisses, die wichtigsten Einflussfaktoren für dieses Ergebnis und die Definition des Punktziels an.
 
@@ -124,4 +124,4 @@ Ein Popup-Dialogfeld zeigt die Punktzahl, die Verteilung des Gesamtergebnisses, 
 * Nächster Scoring-Auftrag (Datum)
 * Nächster Ausbildungsauftrag (Datum)
 
-Weitere Informationen finden Sie in der Dokumentation unter [Überwachungsaufträge für prädiktive Lead- und Kontobewertung](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Weitere Informationen finden Sie in der Dokumentation zu [Überwachungsaufträgen für prädiktive Lead- und Kontobewertungen](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Data Science Workspace; Datenwissenschaft
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Datenwissenschaftsarbeitsbereich; Datenwissenschaft
 solution: Experience Platform
 title: Handbuch zur Sensei Machine Learning API
 description: Mit der Sensei Machine Learning API können Entwickler CRUD-Vorgänge für verschiedene Data Science Workspace-Ressourcen durchführen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
@@ -14,13 +14,13 @@ ht-degree: 37%
 
 # [!DNL Sensei Machine Learning]-API-Handbuch
 
-Die [!DNL Sensei Machine Learning] Die API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von maschinellen Lerndiensten, von der Onboarding von Algorithmen über Experimente bis hin zur Bereitstellung von Diensten.
+Die [!DNL Sensei Machine Learning] -API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von Diensten für maschinelles Lernen, von der Onboarding von Algorithmen über Experimente bis hin zur Bereitstellung von Diensten.
 
-Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der [Sensei Machine Learning-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)und zeigt API-Aufrufe zur Durchführung von CRUD-Vorgängen für verschiedene Data Science Workspace-Ressourcen.
+Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) unterstützen, und zeigt API-Aufrufe zur Ausführung von CRUD-Vorgängen für verschiedene Data Science Workspace-Ressourcen.
 
 ## Erste Schritte
 
-Sie müssen die [Authentifizierung](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) Tutorial, um Zugriff auf die folgenden Anforderungsheader zu erhalten, um Aufrufe an [!DNL Adobe Experience Platform] APIs:
+Sie müssen das Tutorial [Authentifizierung](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, um Zugriff auf die folgenden Anforderungsheader zu erhalten, um Aufrufe an [!DNL Adobe Experience Platform] -APIs durchführen zu können:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

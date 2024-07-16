@@ -10,13 +10,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL Generisches Einverständnisfeld] Datentyp
+# Datentyp [!UICONTROL Generisches Einverständnisfeld]
 
 [!UICONTROL Generisches Einverständnisfeld] ist ein standardmäßiger XDM-Datentyp, der die Auswahl eines Kunden für eine bestimmte Zustimmungsvoreinstellung beschreibt.
 
 >[!NOTE]
 >
->Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Variablen [[!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe](../field-groups/profile/consents.md) als Grundlinie.
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen]](../field-groups/profile/consents.md) als Grundlage anzupassen.
 
 ![](../images/data-types/consent-field.png)
 
@@ -26,13 +26,13 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-In der folgenden Tabelle sind die für `val`:
+In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
 
 | Wert | Titel | Beschreibung |
 | --- | --- | --- |
-| `y` | Ja (Opt-in) | Der Kunde hat sich für die Zustimmung entschieden. Mit anderen Worten, sie **do** Zustimmung zur Verwendung ihrer Daten, wie in der betreffenden Einwilligung angegeben. |
-| `n` | Nein (Opt-out) | Der Kunde hat sich von der Zustimmung abgemeldet. Mit anderen Worten, sie **nicht** Zustimmung zur Verwendung ihrer Daten, wie in der betreffenden Einwilligung angegeben. |
-| `p` | Ausstehende Überprüfung | Das System hat noch keinen Wert für die endgültige Zustimmung erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat; an diesem Punkt würde die Zustimmung auf `y`.<br><br>Wenn diese Zustimmung keinen zweistufigen Überprüfungsprozess verwendet, wird die `p` choice kann stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einverständnisaufforderung reagiert hat. Sie können beispielsweise den Wert automatisch auf `p` auf der ersten Seite einer Website, bevor der Kunde auf die Einwilligungsaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
+| `y` | Ja (Opt-in) | Der Kunde hat sich für die Zustimmung entschieden. Mit anderen Worten, sie stimmen **do** der Verwendung ihrer Daten zu, wie durch die betreffende Einwilligung angegeben. |
+| `n` | Nein (Opt-out) | Der Kunde hat sich von der Zustimmung abgemeldet. Mit anderen Worten, sie stimmen **nicht** der Verwendung ihrer Daten zu, wie durch die betreffende Einwilligung angegeben. |
+| `p` | Ausstehende Überprüfung | Das System hat noch keinen Wert für die endgültige Zustimmung erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf &quot;`p`&quot;gesetzt, bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf &quot;`y`&quot;aktualisiert.<br><br>Wenn diese Einwilligung keinen zweistufigen Überprüfungsprozess verwendet, kann stattdessen die Option `p` verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einwilligungsaufforderung reagiert hat. Sie können beispielsweise den Wert auf der ersten Seite einer Website automatisch auf &quot;`p`&quot;setzen, bevor der Kunde auf die Einwilligungsaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
 | `u` | Unbekannt | Die Einwilligungsinformationen des Kunden sind unbekannt. |
 | `dy` | Standardwert Ja (Opt-in) | Der Kunde hat selbst keinen Zustimmungswert angegeben und wird standardmäßig als Opt-in (&quot;Ja&quot;) behandelt. Mit anderen Worten, die Zustimmung wird angenommen, bis der Kunde etwas Anderes angibt.<br><br>Beachten Sie, dass Sie alle Profile, die Standardwerte enthalten, manuell aktualisieren müssen, wenn die Datenschutzrichtlinien Ihres Unternehmens Änderungen an den Standardeinstellungen einiger oder aller Benutzer zur Folge haben. |
 | `dn` | Standardwert Nein (Opt-out) | Der Kunde hat selbst keinen Zustimmungswert angegeben und wird standardmäßig als Opt-out (&quot;Nein&quot;) behandelt. Mit anderen Worten, es wird angenommen, dass der Kunde die Zustimmung verweigert hat, bis er etwas Anderes angibt.<br><br>Beachten Sie, dass Sie alle Profile, die Standardwerte enthalten, manuell aktualisieren müssen, wenn die Datenschutzrichtlinien Ihres Unternehmens Änderungen an den Standardeinstellungen einiger oder aller Benutzer zur Folge haben. |

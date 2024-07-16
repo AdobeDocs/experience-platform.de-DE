@@ -20,11 +20,11 @@ In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen 
 
 Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für alle im Zielkatalog enthaltenen Organisationen verfügbar sind, und privaten Zielen, die von Real-Time CDP Ultimate-Kunden erstellt werden können, um ihre spezifischen Anwendungsfälle für den Export zu erfüllen, unterschieden werden.
 
-![Zieltypen.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Typen von Zielen - Diagramm.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profilexport]**, **[!UICONTROL Export von Streaming-Zielgruppen]**, und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Zielgruppen und qualifizierte Profile in Ziele.
+**[!UICONTROL Profilexport]**, **[!UICONTROL Zielgruppenexport streamen]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das [Echtzeit-Kundenprofil](../profile/home.md) zu bilden, wenden die Segmentierung an und exportieren Zielgruppen und qualifizierte Profile in Ziele.
 
 ## Profilexportziele {#profile-export}
 
@@ -74,14 +74,14 @@ Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen gef�
 Sie können drei Zielgruppentypen vom Experience Platform an verschiedene Ziele exportieren:
 
 * Zielgruppen
-* Kontozielgruppen
+* Konto-Zielgruppen
 * Potenzielle Zielgruppen
 
-Weitere Informationen zum [Verschiedene Zielgruppentypen](/help/segmentation/ui/account-audiences.md#terminology).
+Erfahren Sie mehr über die [verschiedenen Zielgruppentypen](/help/segmentation/ui/account-audiences.md#terminology).
 
 Ein Symbol auf der Zielkarte zeigt an, welche Zielgruppentypen Sie zu jedem Ziel exportieren können.
 
-![Beispielzielkarte mit Symbolen, die zeigen, welche Zielgruppentypen exportiert werden können.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppen exportiert werden können.](/help/destinations/assets/destination-types/types-of-audiences.png)
 
 
 ## Datensatzexport-Ziele {#dataset-export-destinations}

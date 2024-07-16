@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie in Adobe Experience Platform ein Bibliotheksm
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '403'
 ht-degree: 83%
 
 ---
@@ -32,7 +32,7 @@ Bedingungstypen bestehen in der Regel aus Folgendem:
 1. Eine Ansicht, die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Bedingungseinstellungen zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Bedingung auszuwerten.
 
-Wenn Sie z. B. prüfen möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen.
+Wenn Sie z. B. auswerten möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen.
 
 ```js
 module.exports = (context) => {

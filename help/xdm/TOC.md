@@ -106,7 +106,7 @@ ht-degree: 81%
       * [Produktkategorie](./field-groups/product/product-category.md)
    * Anbieter {#provider}
       * [Gesundheitsdienstleister](./field-groups/provider/healthcare-provider.md)
-   * Freigegeben {#shared}
+   * Shared {#shared}
       * [Audit-Details des externen Quellsystems](./field-groups/shared/external-source-system-audit-details.md)
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}

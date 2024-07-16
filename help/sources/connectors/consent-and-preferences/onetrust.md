@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform; home; beliebte Themen; OneTrust; onetrust; Einverständnis; Einverständnis und Voreinstellungen; Einhaltung
 solution: Experience Platform
-title: Übersicht über den Connector für OneTrust-Integrationsquellen
+title: Übersicht über den OneTrust Integration Source Connector
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine OneTrust-Integration mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
@@ -16,17 +16,17 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->Die [!DNL OneTrust Integration] -Quelle unterstützt nur die Erfassung von Einwilligungs- und Voreinstellungsdaten und keine Cookies. Wenden Sie sich bei Problemen mit dem Quell-Connector an den OneTrust-Support unter https://support.onetrust.com
+>Die [!DNL OneTrust Integration]-Quelle unterstützt nur die Erfassung von Zustimmungs- und Voreinstellungsdaten und keine Cookies. Wenden Sie sich bei Problemen mit dem Quell-Connector an den OneTrust-Support unter https://support.onetrust.com
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Einverständnis- und Voreinstellungs-Verwaltungsplattform von Dritten. Die Unterstützung von Einverständnisanbietern und Präferenzanbietern umfasst [!DNL OneTrust Integration].
+Experience Platform unterstützt die Aufnahme von Daten aus einer Einverständnis- und Voreinstellungs-Verwaltungsplattform von Dritten. Unterstützung für Einverständnisanbieter und Voreinstellungsanbieter ist [!DNL OneTrust Integration].
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL OneTrust Integration] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ## Verbinden von [!DNL OneTrust Integration] mit Platform mithilfe von APIs
 
-- [Erstellen Sie eine [!DNL OneTrust Integration] Quellverbindung und Datenfluss mithilfe der Flow Service-API](../../tutorials/api/create/consent-and-preferences/onetrust.md)
+- [Erstellen einer [!DNL OneTrust Integration] Quellverbindung und eines Datenflusses mithilfe der Flow Service-API](../../tutorials/api/create/consent-and-preferences/onetrust.md)
 
 ## Verbinden von [!DNL OneTrust Integration] mit Platform über die Benutzeroberfläche
 

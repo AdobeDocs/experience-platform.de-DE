@@ -14,33 +14,33 @@ ht-degree: 9%
 
 # Endpunkt der Profilexport-Aufträge
 
-[!DNL Real-Time Customer Profile] ermöglicht Ihnen, eine zentrale Ansicht einzelner Kunden zu erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispiel: [!DNL Profile] -Daten können zur Aktivierung exportiert werden, indem Zielgruppen erstellt werden, und Profilattribute können zur Berichterstellung exportiert werden.
+Mit [!DNL Real-Time Customer Profile] können Sie eine einzige Ansicht einzelner Kunden erstellen, indem Sie Daten aus mehreren Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispielsweise können [!DNL Profile] -Daten zur Aktivierung exportiert werden, indem Zielgruppen erstellt werden, und Profilattribute können zur Berichterstellung exportiert werden.
 
-Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen und Verwalten von Exportvorgängen mit dem [Profil-API](https://www.adobe.com/go/profile-apis-en).
+Dieses Dokument enthält schrittweise Anweisungen zum Erstellen und Verwalten von Exportaufträgen mit der [Profil-API](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
->In diesem Handbuch wird die Verwendung von Exportvorgängen im [!DNL Profile API]. Informationen zum Verwalten von Exportaufträgen für den Segmentierungsdienst von Adobe Experience Platform finden Sie im Handbuch zu [Exportaufträge in der Segmentation-API](../../profile/api/export-jobs.md).
+>In diesem Handbuch wird die Verwendung von Exportvorgängen im [!DNL Profile API] behandelt. Informationen zum Verwalten von Exportaufträgen für den Segmentierungsdienst von Adobe Experience Platform finden Sie im Handbuch zu [Exportaufträgen in der Segmentation-API](../../profile/api/export-jobs.md).
 
-Zusätzlich zur Erstellung eines Exportauftrags können Sie auch auf [!DNL Profile] Daten, die `/entities` -Endpunkt, auch als &quot;[!DNL Profile Access]&quot;. Siehe [Endpunktleitfaden für Entitäten](./entities.md) für weitere Informationen. Anweisungen zum Zugriff auf [!DNL Profile] Daten über die Benutzeroberfläche, siehe [Benutzerhandbuch](../ui/user-guide.md).
+Sie können nicht nur einen Exportauftrag erstellen, sondern auch mit dem `/entities` -Endpunkt, der auch als &quot;[!DNL Profile Access]&quot; bezeichnet wird, auf [!DNL Profile] -Daten zugreifen. Weitere Informationen finden Sie im [Endpunkthandbuch zu Entitäten](./entities.md) . Anweisungen zum Zugriff auf [!DNL Profile] -Daten über die Benutzeroberfläche finden Sie im [Benutzerhandbuch](../ui/user-guide.md).
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Real-Time Customer Profile] API. Bevor Sie fortfahren, werfen Sie im Handbuch [Erste Schritte](getting-started.md) einen Blick auf die Informationen zu Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Real-Time Customer Profile]-API. Bevor Sie fortfahren, werfen Sie im Handbuch [Erste Schritte](getting-started.md) einen Blick auf die Informationen zu Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Erstellen eines Exportvorgangs
 
-Exportieren [!DNL Profile] -Daten erfordert zunächst die Erstellung eines Datensatzes, in den die Daten exportiert werden, und dann die Initiierung eines neuen Exportvorgangs. Beide Schritte können mit Experience Platform-APIs durchgeführt werden, wobei erstere die Catalog Service-API und letztere die Echtzeit-Kundenprofil-API verwenden. Detaillierte Anweisungen zum Abschließen der einzelnen Schritte finden Sie in den folgenden Abschnitten.
+Für das Exportieren von [!DNL Profile] -Daten muss zunächst ein Datensatz erstellt werden, in den die Daten exportiert werden, und dann ein neuer Exportauftrag initiiert werden. Beide Schritte können mit Experience Platform-APIs durchgeführt werden, wobei erstere die Catalog Service-API und letztere die Echtzeit-Kundenprofil-API verwenden. Detaillierte Anweisungen zum Abschließen der einzelnen Schritte finden Sie in den folgenden Abschnitten.
 
 ### Erstellen eines Zieldatensatzes
 
-Beim Exportieren [!DNL Profile] -Daten, muss zunächst ein Zieldatensatz erstellt werden. Es ist wichtig, dass der Datensatz korrekt konfiguriert ist, um sicherzustellen, dass der Export erfolgreich ist.
+Beim Exportieren von [!DNL Profile] -Daten muss zunächst ein Zieldatensatz erstellt werden. Es ist wichtig, dass der Datensatz korrekt konfiguriert ist, um sicherzustellen, dass der Export erfolgreich ist.
 
-Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der API-Beispielanfrage unten). Um Profildaten zu exportieren, muss der Datensatz auf der [!DNL XDM Individual Profile] Vereinigungsschema (`https://ns.adobe.com/xdm/context/profile__union`). Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas aggregiert, die dieselbe Klasse aufweisen. In diesem Fall ist dies die [!DNL XDM Individual Profile] -Klasse. Weitere Informationen zu Vereinigungsansichtsschemas finden Sie im [Vereinigungsabschnitt im Handbuch zu den Grundlagen der Schemakomposition](../../xdm/schema/composition.md#union).
+Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der unten stehenden API-Beispielanfrage). Um Profildaten zu exportieren, muss der Datensatz auf dem [!DNL XDM Individual Profile] Vereinigungsschema (`https://ns.adobe.com/xdm/context/profile__union`) basieren. Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas aggregiert, die dieselbe Klasse aufweisen. In diesem Fall ist dies die Klasse [!DNL XDM Individual Profile] . Weitere Informationen zu Vereinigungsansichtsschemas finden Sie im Abschnitt [Vereinigung in den Grundlagen des Leitfadens zur Schemakomposition](../../xdm/schema/composition.md#union).
 
-In den in diesem Tutorial beschriebenen Schritten wird beschrieben, wie Sie einen Datensatz erstellen, der auf die [!DNL XDM Individual Profile] Vereinigungsschema mit [!DNL Catalog] API. Sie können auch die [!DNL Platform] -Benutzeroberfläche zum Erstellen eines Datensatzes, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden im Abschnitt [Dieses UI-Tutorial zum Exportieren von Zielgruppen](../../segmentation/tutorials/create-dataset-export-segment.md) aber auch hier anwendbar sind. Nach Abschluss können Sie zu diesem Tutorial zurückkehren, um mit den Schritten für [Starten eines neuen Exportvorgangs](#initiate).
+In den in diesem Tutorial beschriebenen Schritten wird beschrieben, wie Sie einen Datensatz erstellen, der auf das [!DNL XDM Individual Profile]-Vereinigungsschema mit der [!DNL Catalog] -API verweist. Sie können auch die [!DNL Platform] -Benutzeroberfläche verwenden, um einen Datensatz zu erstellen, der auf das Vereinigungsschema verweist. Die Schritte zur Verwendung der Benutzeroberfläche werden in [diesem UI-Tutorial zum Exportieren von Zielgruppen](../../segmentation/tutorials/create-dataset-export-segment.md) beschrieben, gelten aber auch hier. Nach Abschluss des Tutorials können Sie zu diesem Tutorial zurückkehren, um mit den Schritten zum Starten eines neuen Exportauftrags fortzufahren [.](#initiate)
 
-Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen Kennung kennen, können Sie direkt mit dem Schritt für [Starten eines neuen Exportvorgangs](#initiate).
+Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen Kennung kennen, können Sie direkt mit dem Schritt zum Initiieren eines neuen Exportauftrags [ fortfahren.](#initiate)
 
 **API-Format**
 
@@ -85,7 +85,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die schreibgeschützte, sy
 
 ### Exportauftrag initiieren {#initiate}
 
-Sobald Sie über einen Datensatz mit Vereinigungspersistenz verfügen, können Sie einen Exportauftrag erstellen, um die Profildaten in dem Datensatz zu speichern, indem Sie eine POST-Anfrage an die `/export/jobs` -Endpunkt in der Echtzeit-Kundenprofil-API verwenden und die Details der Daten angeben, die Sie im Text der Anfrage exportieren möchten.
+Sobald Sie über einen Datensatz verfügen, der Vereinigungspersistenz enthält, können Sie einen Exportauftrag erstellen, um die Profildaten in dem Datensatz zu speichern, indem Sie eine POST-Anfrage an den Endpunkt `/export/jobs` in der Echtzeit-Kundenprofil-API richten und die Details der Daten angeben, die Sie im Hauptteil der Anfrage exportieren möchten.
 
 **API-Format**
 
@@ -130,12 +130,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `fields` | *(Optional)* Beschränkt die im Export einzuschließenden Datenfelder auf die in diesem Parameter angegebenen Felder. Wird dieser Wert nicht angegeben, werden alle Felder in die exportierten Daten aufgenommen. |
+| `fields` | *(Optional)* Beschränkt die im Export einzuschließenden Datenfelder auf die in diesem Parameter angegebenen. Wird dieser Wert nicht angegeben, werden alle Felder in die exportierten Daten aufgenommen. |
 | `mergePolicy` | *(Optional)* Gibt die Zusammenführungsrichtlinie an, die für die exportierten Daten gelten soll. Schließen Sie diesen Parameter ein, wenn mehrere Zielgruppen exportiert werden. |
 | `mergePolicy.id` | Die Kennung der Zusammenführungsrichtlinie. |
 | `mergePolicy.version` | Die spezifische Version der zu verwendenden Zusammenführungsrichtlinie. Wird dieser Wert nicht angegeben, wird standardmäßig die neueste Version verwendet. |
-| `additionalFields.eventList` | *(Optional)* Steuert die Zeitreihen-Ereignisfelder, die für untergeordnete oder verknüpfte Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`eventList.fields`: Kontrollieren Sie die zu exportierenden Felder.</li><li>`eventList.filter`: Gibt Kriterien an, die die Ergebnisse begrenzen, die aus den verknüpften Objekten enthalten sind. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`eventList.filter.fromIngestTimestamp`: Filtert Zeitreihenereignisse nach denjenigen, die nach dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li></ul> |
-| `destination` | **(Erforderlich)** Zielinformationen für die exportierten Daten:<ul><li>`destination.datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`destination.segmentPerBatch`: *(Optional)* Ein boolescher Wert, der standardmäßig auf `false`. Ein Wert von `false` exportiert alle Segmentdefinitions-IDs in eine Batch-Kennung. Ein Wert von `true` exportiert eine Segmentdefinitions-ID in eine Batch-Kennung. Beachten Sie, dass die Einstellung von `true` kann sich auf die Batch-Exportleistung auswirken.</li></ul> |
+| `additionalFields.eventList` | *(Optional)* Steuert die Zeitreihenereignisfelder, die für untergeordnete oder verknüpfte Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`eventList.fields`: Kontrollieren Sie die zu exportierenden Felder.</li><li>`eventList.filter`: Gibt Kriterien an, die die Ergebnisse aus den verknüpften Objekten einschränken. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`eventList.filter.fromIngestTimestamp`: Filtert Zeitreihenereignisse nach jenen, die nach dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li></ul> |
+| `destination` | **(Erforderlich)** Zielinformationen für die exportierten Daten:<ul><li>`destination.datasetId`: **(Erforderlich)** Die Kennung des Datensatzes, in den Daten exportiert werden sollen.</li><li>`destination.segmentPerBatch`: *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig `false` beträgt. Der Wert `false` exportiert alle Segmentdefinitions-IDs in eine Batch-Kennung. Der Wert `true` exportiert eine Segmentdefinitions-ID in eine Batch-Kennung. Beachten Sie, dass sich die Festlegung des Werts auf `true` auf die Batch-Exportleistung auswirken kann.</li></ul> |
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
 
 >[!NOTE]
@@ -179,7 +179,7 @@ Eine erfolgreiche Antwort gibt einen Datensatz zurück, der mit Profildaten gef�
 
 ## Alle Exportaufträge auflisten
 
-Sie können eine Liste aller Exportaufträge für eine bestimmte Organisation zurückgeben, indem Sie eine GET-Anfrage an die `export/jobs` -Endpunkt. Die Anfrage unterstützt auch die Abfrageparameter `limit` und `offset`, wie unten dargestellt.
+Sie können eine Liste aller Exportaufträge für eine bestimmte Organisation zurückgeben, indem Sie eine GET-Anfrage an den Endpunkt `export/jobs` senden. Die Anfrage unterstützt auch die Abfrageparameter `limit` und `offset`, wie unten dargestellt.
 
 **API-Format**
 
@@ -193,7 +193,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 | `start` | Versatz der Seite mit den zurückgegebenen Ergebnissen, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: `start=4` |
 | `limit` | Schränkt die Anzahl der zurückgegebenen Ergebnisse ein. Beispiel: `limit=10` |
 | `page` | Gibt eine bestimmte Seite mit Ergebnissen zurück, unter Berücksichtigung der Erstellungszeit der Anfrage. Beispiel: `page=2` |
-| `sort` | Sortieren Sie die Ergebnisse nach einem bestimmten Feld in aufsteigender Reihenfolge ( **`asc`** ) oder absteigend ( **`desc`** ). Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. Beispiel: `sort=updateTime:asc` |
+| `sort` | Sortieren Sie die Ergebnisse nach einem bestimmten Feld in aufsteigender ( **`asc`** ) oder absteigender ( **`desc`** ) Reihenfolge. Der Sortierparameter funktioniert nicht, wenn mehrere Ergebnisseiten zurückgegeben werden. Beispiel: `sort=updateTime:asc` |
 
 **Anfrage**
 
@@ -207,7 +207,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
 
 **Antwort**
 
-Die Antwort enthält eine `records` -Objekt, das die von Ihrem Unternehmen erstellten Exportaufträge enthält.
+Die Antwort enthält ein `records` -Objekt, das die von Ihrem Unternehmen erstellten Exportaufträge enthält.
 
 ```json
 {
@@ -324,7 +324,7 @@ Die Antwort enthält eine `records` -Objekt, das die von Ihrem Unternehmen erste
 
 ## Fortschritt des Exports überwachen
 
-Um die Details eines bestimmten Exportauftrags anzuzeigen oder dessen Status bei der Verarbeitung zu überwachen, können Sie eine GET-Anfrage an die `/export/jobs` -Endpunkt und schließen Sie die `id` des Exportauftrags im Pfad. Der Exportvorgang ist abgeschlossen, sobald die `status` gibt den Wert &quot;SUCCEEDED&quot;zurück.
+Um die Details eines bestimmten Exportauftrags anzuzeigen oder dessen Status bei der Verarbeitung zu überwachen, können Sie eine GET-Anfrage an den `/export/jobs` -Endpunkt senden und den `id` des Exportauftrags in den Pfad einschließen. Der Exportauftrag ist abgeschlossen, sobald das Feld `status` den Wert &quot;SUCCEEDED&quot;zurückgibt.
 
 **API-Format**
 
@@ -334,7 +334,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | Die `id` des Exportauftrags, auf den Sie zugreifen möchten. |
+| `{EXPORT_JOB_ID}` | Der `id` des Exportauftrags, auf den Sie zugreifen möchten. |
 
 **Anfrage**
 
@@ -400,7 +400,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
 
 ## Abbrechen eines Exportvorgangs
 
-Mit Experience Platform können Sie einen vorhandenen Exportauftrag abbrechen, was aus verschiedenen Gründen nützlich sein kann, z. B. wenn der Exportauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängengeblieben ist. Um einen Exportauftrag abzubrechen, können Sie eine DELETE-Anfrage an die `/export/jobs` -Endpunkt und schließen Sie die `id` des Exportauftrags, den Sie zum Anfragepfad abbrechen möchten.
+Mit Experience Platform können Sie einen vorhandenen Exportauftrag abbrechen, was aus verschiedenen Gründen nützlich sein kann, z. B. wenn der Exportauftrag nicht abgeschlossen wurde oder in der Verarbeitungsstufe hängengeblieben ist. Um einen Exportauftrag abzubrechen, können Sie eine DELETE-Anfrage an den `/export/jobs` -Endpunkt senden und die `id` des Exportauftrags, den Sie abbrechen möchten, in den Anfragepfad einschließen.
 
 **API-Format**
 
@@ -410,7 +410,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | Die `id` des Exportauftrags, auf den Sie zugreifen möchten. |
+| `{EXPORT_JOB_ID}` | Der `id` des Exportauftrags, auf den Sie zugreifen möchten. |
 
 **Anfrage**
 
@@ -428,13 +428,13 @@ Eine erfolgreiche Löschanfrage gibt den HTTP-Status 204 (Kein Inhalt) und einen
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake im Experience Platform verfügbar. Anschließend können Sie die [Data Access API](https://www.adobe.io/experience-platform-apis/references/data-access/) , um auf die Daten mithilfe der `batchId` mit dem Export verknüpft ist. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
+Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake im Experience Platform verfügbar. Anschließend können Sie mit der [Data Access API](https://www.adobe.io/experience-platform-apis/references/data-access/) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` verwenden. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
 
-Eine schrittweise Anleitung zum Verwenden der Data Access-API für den Zugriff auf und den Download von Batch-Dateien finden Sie im Abschnitt [Tutorial zum Datenzugriff](../../data-access/tutorials/dataset-data.md).
+Eine schrittweise Anleitung zum Verwenden der Data Access API für den Zugriff auf und den Download von Batch-Dateien finden Sie im Tutorial [Datenzugriff](../../data-access/tutorials/dataset-data.md) .
 
 Sie können auch mithilfe von Adobe Experience Platform Query Service auf erfolgreich exportierte Echtzeit-Kundenprofildaten zugreifen. Mithilfe der Benutzeroberfläche oder der RESTful-API können Sie mit Query Service Abfragen zu Daten im Data Lake schreiben, validieren und ausführen.
 
-Weiterführende Informationen zur Abfrage von Zielgruppendaten finden Sie im Abschnitt [Dokumentation zu Query Service](../../query-service/home.md).
+Weitere Informationen zum Abfragen von Zielgruppendaten finden Sie in der [Dokumentation zum Query Service](../../query-service/home.md) .
 
 ## Anhang
 
@@ -442,7 +442,7 @@ Der folgende Abschnitt enthält zusätzliche Informationen zu Exportvorgängen i
 
 ### Beispiele für zusätzliche Exportnutzdaten
 
-Der Beispiel-API-Aufruf, der im Abschnitt [Initiieren eines Exportvorgangs](#initiate) erstellt einen Auftrag, der sowohl Profil- (Datensatz-) als auch Ereignis- (Zeitreihendaten) enthält. In diesem Abschnitt finden Sie zusätzliche Beispiele für Anfrage-Payload, mit denen Sie Ihren Export auf einen Datentyp beschränken können.
+Der Beispiel-API-Aufruf, der im Abschnitt [ zum Initiieren eines Exportauftrags](#initiate) angezeigt wird, erstellt einen Auftrag, der sowohl Profil- (Datensatz-) als auch Ereignis- (Zeitreihendaten) enthält. In diesem Abschnitt finden Sie zusätzliche Beispiele für Anfrage-Payload, mit denen Sie Ihren Export auf einen Datentyp beschränken können.
 
 Die folgende Payload erstellt einen Exportauftrag, der nur Profildaten (keine Ereignisse) enthält:
 
@@ -492,4 +492,4 @@ Um einen Exportauftrag zu erstellen, der nur Ereignisdaten (keine Profilattribut
 
 ### Audiences exportieren
 
-Sie können auch den Endpunkt &quot;Exportaufträge&quot;verwenden, um Zielgruppen anstelle von zu exportieren [!DNL Profile] Daten. Siehe Handbuch unter [Exportaufträge in der Segmentation-API](../../segmentation/api/export-jobs.md) für weitere Informationen.
+Sie können auch den Endpunkt &quot;Exportaufträge&quot;verwenden, um Zielgruppen anstelle von [!DNL Profile] -Daten zu exportieren. Weitere Informationen finden Sie im Handbuch zu [Exportvorgängen in der Segmentation-API](../../segmentation/api/export-jobs.md) .

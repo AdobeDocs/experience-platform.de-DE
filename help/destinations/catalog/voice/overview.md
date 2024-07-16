@@ -1,7 +1,7 @@
 ---
 keywords: Sprachziele; Sprachziele
 title: Sprache der Kundenziele – Übersicht
-description: Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chat-Konversationen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website so optimieren können, dass sie ihren Anforderungen entsprechen.
+description: Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chat-Konversationen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website so optimieren können, dass sie ihren Anforderungen gerecht werden.
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
 source-git-commit: be2d4e5d1f204feefc7acb7cb4518044ab3f153a
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 31%
 
 ## Übersicht
 
-Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chat-Konversationen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website so optimieren können, dass sie ihren Anforderungen entsprechen.
+Sprachplattformen sammeln und sammeln Daten aus verschiedenen Quellen, einschließlich Sprachnachrichten, Anrufdaten und Chat-Konversationen. Die gesammelten Informationen können gefiltert und analysiert werden, damit Unternehmen ihre Website so optimieren können, dass sie ihren Anforderungen gerecht werden.
 
 ## Unterstützte Sprache der Kundenziele {#supported-destinations}
 

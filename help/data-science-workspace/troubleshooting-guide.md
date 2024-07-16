@@ -6,7 +6,7 @@ description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1474'
 ht-degree: 100%
 
 ---
@@ -129,7 +129,7 @@ Weitere Informationen zum Konfigurieren von [!DNL Spark]-Cluster-Ressourcen, ein
 
 Wenn Sie einen Fehler aus einem Grund wie `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` erhalten, bedeutet dies normalerweise, dass dem Treiber oder einem Executor nicht mehr genügend Speicher zur Verfügung steht. Weiterführende Informationen zu Datenbeschränkungen und zur Ausführung von Aufgaben für große Datensätze finden Sie in der JupyterLab-Notebooks-Dokumentation zu [Datenzugriff](./jupyterlab/access-notebook-data.md). Normalerweise lässt sich dieser Fehler beheben, indem `mode` von `interactive` zu `batch` geändert wird.
 
-Außerdem sollten Sie beim Schreiben großer Spark-/PySpark-Datensätze Ihre Daten zwischenspeichern (`df.cache()`), bevor Sie den Schreib-Code ausführen. Dies kann nämlich die Leistung erheblich verbessern.
+Außerdem sollten Sie beim Schreiben großer Spark-/PySpark-Datensätze Ihre Daten zwischenspeichern (`df.cache()`), bevor Sie den Schreib-Code ausführen. Dies kann nämlich die Performance erheblich verbessern.
 
 <!-- remove this paragraph at a later date once the sdk is updated -->
 
@@ -137,7 +137,7 @@ Wenn beim Lesen von Daten Probleme auftreten und Sie Umwandlungen auf die Daten 
 
 ## Warum brauchen meine Spark-/PySpark-Notebooks so lange, um Daten zu lesen und zu schreiben?
 
-Wenn Sie Umwandlungen an Daten durchführen, wie beispielsweise mithilfe von `fit()`, werden die Umwandlungen möglicherweise mehrfach ausgeführt. Um die Leistung zu steigern, speichern Sie Ihre Daten mit `df.cache()` vor dem Ausführen von `fit()` zwischen. Dadurch wird sichergestellt, dass die Umwandlungen nur ein einziges Mal ausgeführt werden und ein mehrfaches Lesen über das Netzwerk vermieden wird.
+Wenn Sie Umwandlungen an Daten durchführen, wie beispielsweise mithilfe von `fit()`, werden die Umwandlungen möglicherweise mehrfach ausgeführt. Um die Performance zu steigern, speichern Sie Ihre Daten mit `df.cache()` vor dem Ausführen von `fit()` zwischen. Dadurch wird sichergestellt, dass die Umwandlungen nur ein einziges Mal ausgeführt werden und ein mehrfaches Lesen über das Netzwerk vermieden wird.
 
 **Empfohlene Reihenfolge:** Lesen Sie zunächst die Daten. Führen Sie anschließend Umwandlungen durch und speichern Sie die Daten zwischen (`df.cache()`). Führen Sie abschließend `fit()` aus.
 
@@ -147,9 +147,9 @@ Möglicherweise erhalten Sie Fehler mit folgendem Inhalt:
 
 - Auftrag aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
 - Remote RPC-Client getrennt und andere Speicherfehler.
-- Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
+- Schlechte Performance beim Lesen und Schreiben von Datensätzen.
 
-Stellen Sie in diesem Fall sicher, dass Sie die Daten zwischenspeichern (`df.cache()`), bevor Sie die Daten schreiben. Beim Ausführen von Code in Notebooks kann durch Verwendung von `df.cache()` vor einer Aktion wie `fit()` die Notebook-Leistung erheblich verbessert werden. Durch die Verwendung von `df.cache()` vor dem Schreiben eines Datensatzes wird sichergestellt, dass die Umwandlungen nur ein einziges Mal und nicht mehrfach ausgeführt werden.
+Stellen Sie in diesem Fall sicher, dass Sie die Daten zwischenspeichern (`df.cache()`), bevor Sie die Daten schreiben. Beim Ausführen von Code in Notebooks kann durch Verwendung von `df.cache()` vor einer Aktion wie `fit()` die Notebook-Performance erheblich verbessert werden. Durch die Verwendung von `df.cache()` vor dem Schreiben eines Datensatzes wird sichergestellt, dass die Umwandlungen nur ein einziges Mal und nicht mehrfach ausgeführt werden.
 
 ## [!DNL Docker Hub]-Beschränkungen im Datenwissenschafts-Arbeitsbereich
 

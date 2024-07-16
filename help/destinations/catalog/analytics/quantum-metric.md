@@ -5,22 +5,22 @@ description: Die Quantum Metric-Erweiterung ist ein Analyseziel in Adobe Experie
 exl-id: b88df05f-0559-4568-9251-2d00f9223edb
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 81%
+source-wordcount: '460'
+ht-degree: 84%
 
 ---
 
-# [!DNL Quantum Metric]-Erweiterung  {#quantum-metric-extension}
+# [!DNL Quantum Metric]-Erweiterung {#quantum-metric-extension}
 
 ## Übersicht {#overview}
 
-Die [!DNL Quantum Metric] Tag-Erweiterung vereinfacht die kodellose Implementierung von [!DNL Quantum Metric's] Datenerfassungsfunktionen. Darüber hinaus bietet diese Erweiterung die Möglichkeit, Datenelemente zu erfassen, die nützliche Informationen aus dem [!DNL Quantum Metric] API.
+Die Tag-Erweiterung [!DNL Quantum Metric] erleichtert die kodellose Implementierung der Datenerfassungsfunktionen von [!DNL Quantum Metric's]. Darüber hinaus bietet diese Erweiterung die Möglichkeit, Datenelemente zu erfassen, die nützliche Informationen aus der [!DNL Quantum Metric] -API enthalten.
 
-[!DNL Quantum Metric] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
+[!DNL Quantum Metric] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
-![Quantum Metric-Erweiterung](../../assets/catalog/analytics/quantum-metric/catalog.png)
+![Quantum-Metrikerweiterung](../../assets/catalog/analytics/quantum-metric/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Quantum Metric] Erweiterung:
+So installieren Sie die [!DNL Quantum Metric]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Quantum Metric-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Quantenmetrik auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html) .
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

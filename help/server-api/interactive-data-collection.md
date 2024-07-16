@@ -17,9 +17,9 @@ Endpunkte zur interaktiven Datenerfassung erhalten ein einzelnes Ereignis und we
 
 >[!IMPORTANT]
 >
->Die `/interact` Endpunkt ist hauptsächlich für die Verwendung durch Experience Platform SDKs vorgesehen. Dieser Endpunkt unterliegt zusätzlichen Änderungen, und sein Verhalten kann sich ohne Vorankündigung weiterentwickeln. Beispielsweise können der Antwort-Payload in Zukunft neue Elemente hinzugefügt werden.
+>Der Endpunkt `/interact` ist in erster Linie für die Verwendung durch die Experience Platform SDKs vorgesehen. Dieser Endpunkt unterliegt zusätzlichen Änderungen, und sein Verhalten kann sich ohne Vorankündigung weiterentwickeln. Beispielsweise können der Antwort-Payload in Zukunft neue Elemente hinzugefügt werden.
 
-Die Serverantwort umfasst eine oder mehrere `Handle` -Objekte, wie unten dargestellt.
+Die Serverantwort enthält ein oder mehrere `Handle` -Objekte, wie unten dargestellt.
 
 ## Beispiel für API-Aufruf
 
@@ -71,7 +71,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Antwort {#response}
 
-Eine erfolgreiche Antwort gibt den HTTP-Status zurück `200 OK`, mit einer oder mehreren `Handle` -Objekte, abhängig von den in der Datastream-Konfiguration aktivierten Echtzeit-Edge-Diensten.
+Eine erfolgreiche Antwort gibt den HTTP-Status `200 OK` mit einem oder mehreren `Handle` -Objekten zurück, je nachdem, welche Echtzeit-Edge-Dienste in der Datastream-Konfiguration aktiviert sind.
 
 ```json
 {

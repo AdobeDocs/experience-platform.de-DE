@@ -18,7 +18,7 @@ ht-degree: 59%
 >
 >Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über die Rolle &quot;org admin&quot;für die angeforderte Organisation verfügen.
 
-Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den `/acl/reference`-Endpunkt stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um [Anzeigen effektiver Zugriffskontrollrichtlinien](./effective-policies.md) für den aktuellen Benutzer.
+Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den `/acl/reference`-Endpunkt stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um [effektive Zugriffssteuerungsrichtlinien anzeigen](./effective-policies.md) für den aktuellen Benutzer anzuzeigen.
 
 Eine Berechtigung ist eine Richtlinie, die über die Adobe Admin Console verwaltet wird und keiner bzw. mehr Richtlinien vom Typ Ressource zugeordnet ist. Ein Ressourcentyp ist eine Richtlinie, die Lese-, Schreib- und/oder Löschfunktionen für einen bestimmten Typ von [!DNL Platform]-Ressourcen (z. B. Datensätze oder Schemata) ermöglicht.
 

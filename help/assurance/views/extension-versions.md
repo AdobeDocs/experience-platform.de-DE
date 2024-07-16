@@ -15,7 +15,7 @@ Mit der Ansicht &quot;Erweiterungsversion&quot;können Sie schnell anordnen und 
 
 ## Erste Schritte mit den Ansichten von Erweiterungsversionen
 
-Nachher [Einrichten der Sicherheit](../tutorials/implement-assurance.md)in der **Startseite** Ansicht, wählen Sie **[!UICONTROL Erweiterungsversionen]**
+Wählen Sie nach [Einrichten von Assurance](../tutorials/implement-assurance.md) in der Ansicht **Home** die Option **[!UICONTROL Erweiterungsversionen]**.
 
 ![Erweiterungsversionen](./images/versions/versions-extension.png)
 
@@ -27,6 +27,6 @@ In dieser Ansicht werden in einer Tabelle sowohl die neueste Version jedes Mobil
 
 ## Versionen exportieren
 
-Oben rechts in der Ansicht können Sie **[!UICONTROL Versionen exportieren]** , wodurch Sie eine JSON-Payload mit allen Erweiterungsinformationen sowie der vom Client verwendeten Plattform erhalten. Sie können diese Daten in eine JSON-Datei exportieren oder in die Zwischenablage kopieren.
+Oben rechts in der Ansicht können Sie **[!UICONTROL Versionen exportieren]** auswählen, wodurch eine JSON-Payload mit allen Erweiterungsinformationen sowie der vom Client verwendeten Plattform bereitgestellt wird. Sie können diese Daten in eine JSON-Datei exportieren oder in die Zwischenablage kopieren.
 
 ![Export von Erweiterungsversionen](./images/versions/versions-extension-export.png)

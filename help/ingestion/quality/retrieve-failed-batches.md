@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Abrufen fehlgeschlagener Batches; fehlgeschlagene Batches; Batch-Erfassung; Batch-Erfassung; fehlgeschlagene Batches; Abrufen fehlgeschlagener Batches; Abrufen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches;
+keywords: Experience Platform; home; beliebte Themen; Abrufen fehlgeschlagener Batches; fehlgeschlagene Batches; Batch-Erfassung; Batch-Erfassung; fehlgeschlagene Batches; Abrufen fehlgeschlagener Batches; Abrufen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches;
 solution: Experience Platform
 title: Abrufen fehlgeschlagener Batches mit der Data Access API
 type: Tutorial
@@ -7,16 +7,16 @@ description: In diesem Tutorial wird erläutert, wie Sie mithilfe von APIs für 
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 80%
+source-wordcount: '643'
+ht-degree: 79%
 
 ---
 
 # Abrufen fehlgeschlagener Batches mit der Data Access API
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, um ihre Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie ihre Daten in [!DNL Platform] Verwendung von Streaming-Endpunkten in Echtzeit.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, um ihre Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
 
-In diesem Tutorial werden die Schritte zum Abrufen von Informationen zu einem fehlgeschlagenen Batch mithilfe von [!DNL Data Ingestion] APIs.
+In diesem Tutorial werden die Schritte zum Abrufen von Informationen zu einem fehlgeschlagenen Batch mithilfe von [!DNL Data Ingestion] -APIs beschrieben.
 
 ## Erste Schritte
 
@@ -37,7 +37,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die [!DNL Schema Registry], werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Schema Registry] gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 

@@ -18,7 +18,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Protokoll
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Protokollquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#protocols) für eine Liste von Protokollquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Protokollquelle verfügen. Wenn Sie nicht über diese ID verfügen, finden Sie in der [Quellenübersicht](../../../home.md#protocols) eine Liste der Protokollquellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 

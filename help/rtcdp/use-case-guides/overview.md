@@ -2,7 +2,8 @@
 title: Anwendungsbeispiele in Real-Time CDP
 description: Sehen Sie sich Beispielanwendungsfälle für alle Dienste an, um Ihre Real-Time CDP-Implementierung optimal zu nutzen.
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -39,7 +40,7 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     </div>
     <p>
-    <em>Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies</em>
+    <em>Engage and acquisition new Customers without dependency on third-party cookies</em>
     <p>
   </td>
   <td>
@@ -65,7 +66,7 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     </div>
     <p>
-    <em>Erfahren Sie, wie Sie eine Zielgruppe nicht authentifizierter Besucher erstellen und diese mithilfe von durch Partner bereitgestellten dauerhaften IDs erneut ansprechen.</em>
+    <em>Erfahren Sie, wie Sie eine Zielgruppe nicht authentifizierter Besucher erstellen und diese mithilfe von vom Partner bereitgestellten dauerhaften IDs erneut ansprechen.</em>
     <p>
   </td>
   </tr>
@@ -81,17 +82,17 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong>Hinzufügen von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen</strong>
+    <strong> Ergänzung von Erstanbieterprofilen mit von Partnern bereitgestellten Attributen</strong>
     </a>
     </div>
     <p>
-    <em>Ergänzung von Erstanbieterprofilen mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datenbasis zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.</em>
+    <em> Ergänzung von Erstanbieterprofilen durch Attribute vertrauenswürdiger Datenpartner, um Ihre Datenbasis zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.</em>
     <p>
   </td>
   </tr>
   </table>
 
-## Personalisierung, Einblicke, Interaktion {#personalization-insights-engagement}
+## Personalization, Einblicke, Interaktion {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -101,11 +102,11 @@ Die Beispielanwendungsfälle können in Kundenakquise- und Profilanreicherungsf�
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>Intelligente Rückgewinnung</strong>
+    <strong>Intelligente erneute Interaktion</strong>
     </a>
     </div>
     <p>
-    <em>Kontaktieren Sie Kunden, die eine Konversion auf intelligente und verantwortungsvolle Weise abgebrochen haben. Engagieren Sie Kunden mit veralteten Erlebnissen, um die Konversion zu steigern und den Kundenlebenszeitwert zu erhöhen.</em>
+    <em>Kontaktieren Sie Kunden erneut, die eine Konversion auf intelligente und verantwortungsvolle Weise abgebrochen haben. Engagieren Sie Kunden mit veralteten Erlebnissen, um die Konversion zu steigern und den Kundenlebenszeitwert zu erhöhen.</em>
     <p>
   </td>
   </tr>

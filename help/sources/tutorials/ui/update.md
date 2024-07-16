@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Konten aktualisieren
+keywords: Experience Platform; Homepage; beliebte Themen; Konten aktualisieren
 description: Unter bestimmten Umständen kann es erforderlich sein, die Details eines vorhandenen Quellenkontos zu aktualisieren. Der Arbeitsbereich "Quellen"bietet Ihnen die Möglichkeit, Details zu einem vorhandenen Batch oder einer Streaming-Verbindung hinzuzufügen, zu bearbeiten und zu löschen, einschließlich Name, Beschreibung und Anmeldeinformationen.
 solution: Experience Platform
-title: Aktualisieren der Kontodetails der Quellverbindung in der Benutzeroberfläche
+title: Aktualisieren der Source-Verbindungskontodetails in der Benutzeroberfläche
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '452'
 ht-degree: 16%
 
 ---
 
 # Aktualisieren der Kontodetails in der Benutzeroberfläche
 
-Unter bestimmten Umständen kann es erforderlich sein, die Details eines vorhandenen Quellenkontos zu aktualisieren. Die [!UICONTROL Quellen] Workspace bietet Ihnen die Möglichkeit, Details einer vorhandenen Batch- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
+Unter bestimmten Umständen kann es erforderlich sein, die Details eines vorhandenen Quellenkontos zu aktualisieren. Der Arbeitsbereich [!UICONTROL Quellen] bietet Ihnen die Möglichkeit, Details zu einem vorhandenen Batch oder einer Streaming-Verbindung hinzuzufügen, zu bearbeiten und zu löschen, einschließlich Name, Beschreibung und Anmeldeinformationen.
 
-Dieses Tutorial enthält Schritte zum Aktualisieren der Details und Anmeldedaten eines vorhandenen Kontos über die [!UICONTROL Quellen] Arbeitsbereich.
+In diesem Tutorial werden Schritte zum Aktualisieren der Details und Anmeldeinformationen eines vorhandenen Kontos im Arbeitsbereich [!UICONTROL Quellen] beschrieben.
 
 ## Erste Schritte
 
@@ -27,27 +27,27 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 ## Aktualisieren von Konten
 
-Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com) und wählen Sie **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich. Auswählen **[!UICONTROL Konten]** aus der oberen Kopfzeile, um vorhandene Konten anzuzeigen.
+Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com) an und wählen Sie dann im linken Navigationsbereich **[!UICONTROL Quellen]** aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Wählen Sie in der oberen Kopfzeile **[!UICONTROL Konten]** aus, um vorhandene Konten anzuzeigen.
 
 ![Katalog](../../images/tutorials/update/catalog.png)
 
-Die **[!UICONTROL Konten]** angezeigt. Auf dieser Seite finden Sie eine Liste sichtbarer Konten, einschließlich Informationen zu ihrer Quelle, Benutzername, Anzahl der Datenflüsse und Erstellungsdatum.
+Die Seite **[!UICONTROL Konten]** wird angezeigt. Auf dieser Seite finden Sie eine Liste sichtbarer Konten, einschließlich Informationen zu ihrer Quelle, Benutzername, Anzahl der Datenflüsse und Erstellungsdatum.
 
-Filtersymbol auswählen ![filter](../../images/tutorials/update/filter.png) oben links, um das Sortierungsfenster zu öffnen.
+Wählen Sie oben links das Filtersymbol ![filter](../../images/tutorials/update/filter.png) aus, um das Sortierfeld zu starten.
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 
 Das Sortierungsfenster bietet eine Liste aller Quellen. Sie können mehrere Quellen aus der Liste auswählen, um auf eine gefilterte Auswahl von Konten zuzugreifen, die verschiedenen Quellen zugeordnet sind.
 
-Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, um eine Liste der vorhandenen Konten anzuzeigen. Nachdem Sie das Konto identifiziert haben, das Sie aktualisieren möchten, wählen Sie die Auslassungszeichen (`...`) neben dem Kontonamen.
+Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, um eine Liste der vorhandenen Konten anzuzeigen. Nachdem Sie das Konto identifiziert haben, das Sie aktualisieren möchten, wählen Sie die Auslassungszeichen (`...`) neben dem Kontonamen aus.
 
 ![accounts-sort](../../images/tutorials/update/accounts-sort.png)
 
-Ein Dropdown-Menü wird angezeigt, in dem Sie Optionen zum **[!UICONTROL Daten hinzufügen]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]**. Auswählen **[!UICONTROL Details bearbeiten]** aus dem Menü, um Ihr Konto zu aktualisieren.
+Es wird ein Dropdown-Menü angezeigt, in dem Sie Optionen zu **[!UICONTROL Daten hinzufügen]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** auswählen können. Wählen Sie **[!UICONTROL Details bearbeiten]** aus dem Menü aus, um Ihr Konto zu aktualisieren.
 
-![Aktualisieren](../../images/tutorials/update/update.png)
+![-Aktualisierung](../../images/tutorials/update/update.png)
 
-Die **[!UICONTROL Kontodetails bearbeiten]** können Sie den Namen, die Beschreibung und die Authentifizierungsdaten eines Kontos aktualisieren. Nachdem Sie die gewünschten Informationen aktualisiert haben, wählen Sie **[!UICONTROL Speichern]**.
+Im Dialogfeld **[!UICONTROL Kontodetails bearbeiten]** können Sie den Namen, die Beschreibung und die Authentifizierungsdaten eines Kontos aktualisieren. Nachdem Sie die gewünschten Informationen aktualisiert haben, wählen Sie **[!UICONTROL Speichern]** aus.
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
@@ -57,6 +57,6 @@ Nach einigen Augenblicken wird unten im Bildschirm ein Bestätigungsfeld angezei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich die [!UICONTROL Quellen] Arbeitsbereich zum Aktualisieren der Informationen eines vorhandenen Quellkontos.
+In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich [!UICONTROL Quellen] verwendet, um die Informationen eines vorhandenen Quellkontos zu aktualisieren.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit dem [!DNL Flow Service] API, siehe Tutorial zu [Aktualisieren von Verbindungsinformationen mithilfe der Flow Service-API](../../tutorials/api/update.md).
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service] -API finden Sie im Tutorial zum Aktualisieren der Verbindungsinformationen mithilfe der Flow Service-API](../../tutorials/api/update.md).[

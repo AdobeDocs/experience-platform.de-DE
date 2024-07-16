@@ -8,7 +8,7 @@ role: Admin,User
 source-git-commit: 2ca2558d2bfdae9f5ba58489c8161c83909a8e27
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 62%
+ht-degree: 66%
 
 ---
 
@@ -17,5 +17,5 @@ ht-degree: 62%
 
 * [Übersicht](./overview.md)
 * [Kontoverwaltung](./administration.md)
-* [Aktivieren von Zielgruppen](./activate-audiences.md)
+* [Zielgruppen aktivieren](./activate-audiences.md)
 * [Häufig gestellte Fragen](./faq.md)

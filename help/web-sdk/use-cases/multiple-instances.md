@@ -32,7 +32,7 @@ Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, i
 
 Daher erstellt das Skript zwei Instanzen des SDK. Die globale Funktion für die Interaktion mit der ersten Instanz heißt `titanium` und die globale Funktion für die Interaktion mit der zweiten Instanz heißt `copper`.
 
-Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jede Kommunikations- oder Datenpersistenz, die durch die Interaktion mit `titanium` wird isoliert von `copper`.
+Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jede Kommunikations- oder Datenpersistenz, die durch die Interaktion mit `titanium` auftritt, wird von `copper` isoliert gehalten.
 
 Im obigen Beispiel können Sie Befehle mit jeder Instanz ausführen:
 
@@ -64,4 +64,4 @@ Achten Sie darauf, den `configure`-Befehl für jede Instanz auszuführen, bevor 
 
 >[!IMPORTANT]
 >
->Um Konflikte mit Cookies zu vermeiden, muss jede Web SDK-Instanz über eine eigene eindeutige `edgeConfigId` und ihre eigenen `orgId`.
+>Um Konflikte mit Cookies zu vermeiden, muss jede Web SDK-Instanz über eine eigene eindeutige `edgeConfigId` und eine eigene eindeutige `orgId` verfügen.

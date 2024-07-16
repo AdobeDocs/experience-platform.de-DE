@@ -13,26 +13,26 @@ ht-degree: 15%
 
 # Segmentdefinitionsergebnisse auswerten und aufrufen
 
-Dieses Dokument bietet eine Anleitung zum Auswerten von Segmentdefinitionen und zum Zugriff auf diese Ergebnisse mithilfe der [[!DNL Segmentation API]](../api/getting-started.md).
+Dieses Dokument bietet ein Tutorial zum Auswerten von Segmentdefinitionen und zum Zugriff auf diese Ergebnisse mithilfe von [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die an der Erstellung von Zielgruppen beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
+Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Dienste voraus, die am Erstellen von Zielgruppen beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] Daten.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] -Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ### Erforderliche Kopfzeilen
 
-Für dieses Tutorial müssen Sie außerdem die [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) , um erfolgreich Aufrufe an [!DNL Platform] APIs. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Für dieses Tutorial müssen Sie außerdem das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, damit Sie erfolgreich Aufrufe an [!DNL Platform] -APIs durchführen können. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Anforderungen an [!DNL Platform] APIs erfordern eine Kopfzeile, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Für Anfragen an [!DNL Platform] -APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -48,9 +48,9 @@ Für alle POST-, PUT- und PATCH-Anfragen ist eine zusätzliche Kopfzeile erforde
 
 Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, können Sie die Segmentdefinition entweder durch eine geplante Auswertung oder eine On-Demand-Auswertung bewerten.
 
-[Geplante Auswertung](#scheduled-evaluation) (auch als &quot;geplante Segmentierung&quot;bezeichnet) können Sie einen Zeitplan für die Ausführung eines Exportauftrags zu einem bestimmten Zeitpunkt erstellen, während [On-Demand-Evaluierung](#on-demand-evaluation) umfasst die Erstellung eines Segmentauftrags, um die Zielgruppe sofort zu erstellen. Die Schritte für die einzelnen Schritte sind unten beschrieben.
+Mit der Funktion [Geplante Auswertung](#scheduled-evaluation) (auch als &quot;geplante Segmentierung&quot;bezeichnet) können Sie einen wiederkehrenden Zeitplan für die Ausführung eines Exportauftrags zu einem bestimmten Zeitpunkt erstellen, während bei der [On-Demand-Auswertung](#on-demand-evaluation) ein Segmentauftrag erstellt werden muss, um die Zielgruppe sofort zu erstellen. Die Schritte für die einzelnen Schritte sind unten beschrieben.
 
-Wenn Sie die [Erstellen einer Segmentdefinition mithilfe der Segmentation-API](./create-a-segment.md) Tutorial oder Erstellen einer Segmentdefinition mithilfe von [Segment Builder](../ui/segment-builder.md)sollten Sie dies tun, bevor Sie mit diesem Tutorial fortfahren.
+Wenn Sie das Tutorial [Erstellen einer Segmentdefinition mithilfe der Segmentation API](./create-a-segment.md) noch nicht abgeschlossen haben oder eine Segmentdefinition mithilfe von [Segment Builder](../ui/segment-builder.md) erstellt haben, führen Sie dies vor dem Fortfahren mit diesem Tutorial durch.
 
 ## Geplante Auswertung {#scheduled-evaluation}
 
@@ -64,19 +64,19 @@ Durch die geplante Auswertung kann Ihr Unternehmen einen Zeitplan für die autom
 
 Wenn Sie eine POST-Anfrage an den `/config/schedules`-Endpunkt senden, können Sie einen Zeitplan erstellen und die genaue Zeit einschließen, zu der der Zeitplan ausgelöst werden soll.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Zeitpläne](../api/schedules.md#create)
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunktleitfaden für Zeitpläne](../api/schedules.md#create) .
 
 ### Zeitplan aktivieren
 
 Standardmäßig ist ein Zeitplan bei der Erstellung inaktiv, es sei denn, die `state`-Eigenschaft ist im Text der POST-Anfrage (Erstellen) auf `active` gesetzt. Sie können einen Zeitplan aktivieren (setzen Sie `state` auf `active`), indem Sie eine PATCH-Anfrage an den `/config/schedules`-Endpunkt senden und die Kennung des Zeitplans in den Pfad einschließen.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Zeitpläne](../api/schedules.md#update-state)
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunktleitfaden für Zeitpläne](../api/schedules.md#update-state) .
 
 ### Zeitplanaktualisierung
 
-Der Zeitplan kann aktualisiert werden, indem eine PATCH-Anfrage an die `/config/schedules` -Endpunkt und die Kennung des Zeitplans in den Pfad einschließen.
+Der Zeitplan-Timing kann aktualisiert werden, indem eine PATCH-Anfrage an den `/config/schedules` -Endpunkt gesendet wird und die Kennung des Zeitplans in den Pfad aufgenommen wird.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Zeitpläne](../api/schedules.md#update-schedule)
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunktleitfaden für Zeitpläne](../api/schedules.md#update-schedule) .
 
 ## On-Demand-Evaluierung
 
@@ -84,23 +84,23 @@ Mit der On-Demand-Auswertung können Sie einen Segmentauftrag erstellen, um bei 
 
 ### Erstellen eines Segmentauftrags
 
-Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Er verweist auf eine Segmentdefinition sowie auf alle Zusammenführungsrichtlinien, die steuern, wie [!DNL Real-Time Customer Profile] Führt überlappende Attribute über Ihre Profilfragmente hinweg zusammen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen zur Segmentdefinition sammeln, z. B. Fehler, die während der Verarbeitung aufgetreten sind, und die endgültige Größe Ihrer Zielgruppe. Ein Segmentauftrag muss jedes Mal ausgeführt werden, wenn Sie die Zielgruppe aktualisieren möchten, für die sich die Segmentdefinition derzeit qualifiziert.
+Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Er verweist auf eine Segmentdefinition sowie auf alle Zusammenführungsrichtlinien, die steuern, wie [!DNL Real-Time Customer Profile] überlappende Attribute über Ihre Profilfragmente hinweg zusammenführt. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen zur Segmentdefinition sammeln, z. B. Fehler, die während der Verarbeitung aufgetreten sind, und die endgültige Größe Ihrer Zielgruppe. Ein Segmentauftrag muss jedes Mal ausgeführt werden, wenn Sie die Zielgruppe aktualisieren möchten, für die sich die Segmentdefinition derzeit qualifiziert.
 
-Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an die `/segment/jobs` -Endpunkt im [!DNL Real-Time Customer Profile] API.
+Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an den `/segment/jobs` -Endpunkt in der [!DNL Real-Time Customer Profile] -API richten.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Segmentaufträge](../api/segment-jobs.md#create)
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunktleitfaden für Segmentaufträge](../api/segment-jobs.md#create) .
 
 ### Status des Segmentauftrags nachschlagen
 
-Sie können die `id` für einen bestimmten Segmentauftrag, um eine Nachschlageanfrage (GET) auszuführen, um den aktuellen Status des Auftrags anzuzeigen.
+Sie können die `id` für einen bestimmten Segmentauftrag verwenden, um eine Suchanfrage (GET) auszuführen, um den aktuellen Status des Auftrags anzuzeigen.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Segmentaufträge](../api/segment-jobs.md#get)
+Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunktleitfaden für Segmentaufträge](../api/segment-jobs.md#get) .
 
 ## Interpretieren von Segmentauftragsergebnissen
 
-Wenn Segmentaufträge erfolgreich ausgeführt werden, wird die `segmentMembership` map wird für jedes Profil aktualisiert, das in der Segmentdefinition enthalten ist. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in [!DNL Platform], wodurch eine Integration mit anderen Lösungen wie [!DNL Adobe Audience Manager].
+Wenn Segmentaufträge erfolgreich ausgeführt werden, wird die `segmentMembership`-Zuordnung für jedes Profil aktualisiert, das in der Segmentdefinition enthalten ist. `segmentMembership` speichert auch alle vorab ausgewerteten Zielgruppen, die in [!DNL Platform] erfasst werden, sodass sie mit anderen Lösungen wie [!DNL Adobe Audience Manager] integriert werden können.
 
-Das folgende Beispiel zeigt, was die `segmentMembership` -Attribut für jeden einzelnen Profildatensatz aussieht:
+Das folgende Beispiel zeigt, wie das Attribut `segmentMembership` für jeden einzelnen Profildatensatz aussieht:
 
 ```json
 {
@@ -128,11 +128,11 @@ Das folgende Beispiel zeigt, was die `segmentMembership` -Attribut für jeden ei
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `lastQualificationTime` | Der Zeitstempel, zu dem die Bestätigung der Segmentzugehörigkeit erfolgte und das Profil die Segmentdefinition ein- oder ausstieg. |
-| `status` | Der Teilnahmestatus der Segmentdefinition als Teil der aktuellen Anfrage. Muss einem der folgenden bekannten Werte entsprechen: <ul><li>`realized`: Entität qualifiziert sich für die Segmentdefinition.</li><li>`exited`: Entität beendet die Segmentdefinition.</li></ul> |
+| `status` | Der Teilnahmestatus der Segmentdefinition als Teil der aktuellen Anfrage. Muss einem der folgenden bekannten Werte entsprechen: <ul><li>`realized`: Die Entität ist für die Segmentdefinition qualifiziert.</li><li>`exited`: Die Entität beendet die Segmentdefinition.</li></ul> |
 
 >[!NOTE]
 >
->Jede Segmentzugehörigkeit, die sich im `exited` Status für mehr als 30 Tage, basierend auf der Variablen `lastQualificationTime`, kann gelöscht werden.
+>Jede Segmentzugehörigkeit, die sich basierend auf dem `lastQualificationTime` länger als 30 Tage im Status `exited` befindet, kann gelöscht werden.
 
 ## Auf Segmentauftragsergebnisse zugreifen
 
@@ -142,31 +142,31 @@ In den folgenden Abschnitten werden diese Optionen ausführlicher beschrieben.
 
 ## Profil nachschlagen
 
-Wenn Sie das spezifische Profil kennen, auf das Sie zugreifen möchten, können Sie dies mit der [!DNL Real-Time Customer Profile] API. Die vollständigen Schritte für den Zugriff auf einzelne Profile finden Sie im Abschnitt [Zugriff auf Echtzeit-Kundenprofil-Daten mithilfe der Profil-API](../../profile/api/entities.md) Tutorial.
+Wenn Sie das spezifische Profil kennen, auf das Sie zugreifen möchten, können Sie dies mit der [!DNL Real-Time Customer Profile] -API tun. Die vollständigen Schritte zum Zugriff auf einzelne Profile finden Sie im Tutorial [Zugriff auf Echtzeit-Kundenprofil-Daten mithilfe der Profil-API](../../profile/api/entities.md) .
 
 ## Segment exportieren {#export}
 
-Nach erfolgreichem Abschluss eines Segmentierungsauftrags (der Wert des `status` -Attribut &quot;SUCCEEDED&quot;(GELUNGEN) festgelegt ist, können Sie Ihre Zielgruppe in einen Datensatz exportieren, in dem sie aufgerufen und bearbeitet werden kann.
+Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der Wert des Attributs `status` lautet &quot;SUCCEEDED&quot;(GELUNGEN)), können Sie Ihre Zielgruppe in einen Datensatz exportieren, in dem sie aufgerufen und bearbeitet werden kann.
 
 Die folgenden Schritte sind erforderlich, um Ihre Audience zu exportieren:
 
-- [Erstellen eines Zieldatensatzes](#create-a-target-dataset) - Erstellen Sie den Datensatz, um Mitglieder der Zielgruppe aufzunehmen.
+- [Erstellen eines Zieldatensatzes](#create-a-target-dataset) - Erstellen Sie den Datensatz, in dem Zielgruppenmitglieder gespeichert werden sollen.
 - [Generieren von Zielgruppenprofilen im Datensatz](#generate-profiles) - Füllen Sie den Datensatz mit individuellen XDM-Profilen basierend auf den Ergebnissen eines Segmentauftrags.
-- [Fortschritt des Exports überwachen](#monitor-export-progress) - Überprüfen Sie den aktuellen Fortschritt des Exportvorgangs.
-- [Audience-Daten lesen](#next-steps) - Rufen Sie die resultierenden individuellen XDM-Profile ab, die die Mitglieder Ihrer Audience darstellen.
+- [Überwachen des Exportfortschritts](#monitor-export-progress) - Überprüfen Sie den aktuellen Fortschritt des Exportvorgangs.
+- [Lesen von Zielgruppendaten](#next-steps) - Rufen Sie die resultierenden individuellen XDM-Profile ab, die die Mitglieder Ihrer Zielgruppe darstellen.
 
 ### Erstellen eines Zieldatensatzes {#create-dataset}
 
 Beim Exportieren einer Zielgruppe muss zunächst ein Zieldatensatz erstellt werden. Es ist wichtig, dass der Datensatz korrekt konfiguriert ist, um sicherzustellen, dass der Export erfolgreich ist.
 
-Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der API-Beispielanfrage unten). Um eine Segmentdefinition zu exportieren, muss der Datensatz auf der [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas aggregiert, die dieselbe Klasse teilen, in diesem Fall die Klasse &quot;XDM Individual Profile&quot;. Weitere Informationen zu Vereinigungsansichtsschemas finden Sie im [Abschnitt &quot;Echtzeit-Kundenprofil&quot;des Entwicklerhandbuchs zur Schema Registry](../../xdm/api/getting-started.md).
+Eine der wichtigsten Überlegungen ist das Schema, auf dem der Datensatz basiert (`schemaRef.id` in der unten stehenden API-Beispielanfrage). Um eine Segmentdefinition zu exportieren, muss der Datensatz auf dem [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`) basieren. Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder von Schemas aggregiert, die dieselbe Klasse teilen, in diesem Fall die Klasse &quot;XDM Individual Profile&quot;. Weitere Informationen zu Vereinigungsansichtsschemas finden Sie im Abschnitt [Echtzeit-Kundenprofil des Entwicklerhandbuchs zur Schema Registry](../../xdm/api/getting-started.md).
 
 Es gibt zwei Möglichkeiten, den erforderlichen Datensatz zu erstellen:
 
-- **Verwenden von APIs:** In den in diesem Tutorial beschriebenen Schritten wird beschrieben, wie Sie einen Datensatz erstellen, der auf die [!DNL XDM Individual Profile Union Schema] mithilfe der [!DNL Catalog] API.
-- **Verwenden der Benutzeroberfläche:** So verwenden Sie die [!DNL Adobe Experience Platform] -Benutzeroberfläche zum Erstellen eines Datensatzes, der auf das Vereinigungsschema verweist, führen Sie die Schritte im Abschnitt [UI-Tutorial](../ui/overview.md) und dann zu diesem Tutorial zurückkehren, um mit den Schritten für [Erstellen von Zielgruppenprofilen](#generate-profiles).
+- **Verwenden von APIs:** In den in diesem Tutorial beschriebenen Schritten wird beschrieben, wie Sie einen Datensatz erstellen, der mithilfe der [!DNL Catalog] -API auf [!DNL XDM Individual Profile Union Schema] verweist.
+- **Verwenden der Benutzeroberfläche:** Um mithilfe der Benutzeroberfläche von [!DNL Adobe Experience Platform] einen Datensatz zu erstellen, der auf das Vereinigungsschema verweist, führen Sie die Schritte im Tutorial [UI-Tutorial](../ui/overview.md) aus und kehren Sie dann zu diesem Tutorial zurück, um mit den Schritten zum Generieren von Zielgruppenprofilen [fortzufahren.](#generate-profiles)
 
-Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen Kennung kennen, können Sie direkt mit dem Schritt für [Erstellen von Zielgruppenprofilen](#generate-profiles).
+Wenn Sie bereits über einen kompatiblen Datensatz verfügen und dessen Kennung kennen, können Sie direkt mit dem Schritt zum Generieren von [Zielgruppenprofilen](#generate-profiles) fortfahren.
 
 **API-Format**
 
@@ -212,22 +212,22 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die schreibgeschützte, sy
 
 ### Generieren von Profilen für Zielgruppenmitglieder {#generate-profiles}
 
-Sobald Sie über einen Datensatz verfügen, der die Vereinigung beibehält, können Sie einen Exportauftrag erstellen, um die Mitglieder der Zielgruppe im Datensatz zu erhalten, indem Sie eine POST-Anfrage an die `/export/jobs` -Endpunkt im [!DNL Real-Time Customer Profile] API und Bereitstellung der Datensatz-ID und der Segmentdefinitionsinformationen für die Segmentdefinitionen, die Sie exportieren möchten.
+Sobald Sie über einen Datensatz verfügen, der Vereinigungspersistenz speichert, können Sie einen Exportauftrag erstellen, um die Zielgruppenmitglieder im Datensatz zu behalten, indem Sie eine POST-Anfrage an den `/export/jobs` -Endpunkt in der [!DNL Real-Time Customer Profile] -API richten und die Datensatz-ID sowie die Segmentdefinitionsinformationen für die Segmentdefinitionen angeben, die Sie exportieren möchten.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Exportaufträge](../api/export-jobs.md#create)
+Ausführlichere Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunkthandbuch zu Exportvorgängen](../api/export-jobs.md#create) .
 
 ### Fortschritt des Exports überwachen
 
-Bei Exportvorgängen können Sie den Status überwachen, indem Sie eine GET-Anfrage an die `/export/jobs` -Endpunkt und einschließlich `id` des Exportauftrags im Pfad. Der Exportvorgang ist abgeschlossen, sobald die `status` gibt den Wert &quot;SUCCEEDED&quot;zurück.
+Bei der Verarbeitung eines Exportauftrags können Sie dessen Status überwachen, indem Sie eine GET-Anfrage an den `/export/jobs` -Endpunkt senden und die `id` des Exportauftrags in den Pfad einschließen. Der Exportauftrag ist abgeschlossen, sobald das Feld `status` den Wert &quot;SUCCEEDED&quot;zurückgibt.
 
-Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Exportaufträge](../api/export-jobs.md#get)
+Ausführlichere Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunkthandbuch zu Exportvorgängen](../api/export-jobs.md#get) .
 
 ## Nächste Schritte
 
-Sobald der Export erfolgreich abgeschlossen wurde, stehen Ihre Daten im [!DNL Data Lake] in [!DNL Experience Platform]. Anschließend können Sie die [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) , um auf die Daten mithilfe der `batchId` mit dem Export verknüpft ist. Je nach Größe der Segmentdefinition können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
+Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Bereich [!DNL Data Lake] in [!DNL Experience Platform] verfügbar. Anschließend können Sie mit dem [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) auf die Daten zugreifen, indem Sie den mit dem Export verknüpften `batchId` verwenden. Je nach Größe der Segmentdefinition können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
 
-Eine schrittweise Anleitung zur Verwendung der [!DNL Data Access] API zum Zugreifen auf und Herunterladen von Batch-Dateien, folgen Sie dem [Tutorial zum Datenzugriff](../../data-access/tutorials/dataset-data.md).
+Eine schrittweise Anleitung zum Verwenden der [!DNL Data Access]-API für den Zugriff auf und den Download von Batch-Dateien finden Sie im [Tutorial zum Datenzugriff](../../data-access/tutorials/dataset-data.md) .
 
-Sie können auch auf erfolgreich exportierte Segmentdefinitionsdaten zugreifen mit [!DNL Adobe Experience Platform Query Service]. Verwenden der Benutzeroberfläche oder der RESTful-API, [!DNL Query Service] ermöglicht Ihnen das Schreiben, Validieren und Ausführen von Abfragen zu Daten im [!DNL Data Lake].
+Sie können auch mit [!DNL Adobe Experience Platform Query Service] auf erfolgreich exportierte Segmentdefinitionsdaten zugreifen. Mithilfe der Benutzeroberfläche oder der RESTful-API können Sie mit [!DNL Query Service] Abfragen zu Daten innerhalb des [!DNL Data Lake] schreiben, validieren und ausführen.
 
-Weiterführende Informationen zur Abfrage von Zielgruppendaten finden Sie in der Dokumentation unter [[!DNL Query Service]](../../query-service/home.md).
+Weitere Informationen zum Abfragen von Zielgruppendaten finden Sie in der Dokumentation zu [[!DNL Query Service]](../../query-service/home.md).

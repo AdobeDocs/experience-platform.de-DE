@@ -13,11 +13,11 @@ ht-degree: 44%
 
 # Nachschlagen eines Katalogobjekts
 
-Wenn Sie die eindeutige Kennung für eine bestimmte [!DNL Catalog] -Objekt, können Sie eine GET-Anfrage ausführen, um die Details dieses Objekts anzuzeigen.
+Wenn Sie die eindeutige Kennung für ein bestimmtes [!DNL Catalog] -Objekt kennen, können Sie eine GET-Anfrage ausführen, um die Details dieses Objekts anzuzeigen.
 
 >[!NOTE]
 >
->Beim Anzeigen bestimmter Objekte empfiehlt es sich weiterhin, [nach Eigenschaften filtern](filter-data.md) und geben nur die Eigenschaften zurück, die Sie interessieren.
+>Beim Anzeigen bestimmter Objekte empfiehlt es sich weiterhin, [nach Eigenschaften](filter-data.md) zu filtern und nur die Eigenschaften zurückzugeben, die Sie interessieren.
 
 **API-Format**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt abgerufen werden. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie abrufen möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage ruft einen Datensatz anhand seiner Kennung ab und gibt dessen `name`, `description`, `tags`, und `files` Eigenschaften.
+Die folgende Anfrage ruft einen Datensatz anhand seiner Kennung ab und gibt die zugehörigen Eigenschaften `name`, `description`, `tags` und `files` zurück.
 
 ```shell
 curl -X GET \
@@ -65,4 +65,4 @@ Bei einer erfolgreichen Antwort wird der angegebene Datensatz nur mit den angefo
 
 >[!NOTE]
 >
->Eigenschaften, deren Werte mit dem Präfix `@` stellen miteinander verknüpfte Objekte dar. Anweisungen zum Anzeigen dieser Objekte finden Sie im Anhangsbereich zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects).
+>Eigenschaften, deren Werte mit dem Präfix `@` versehen sind, stellen miteinander verknüpfte Objekte dar. Anweisungen zum Anzeigen dieser Objekte finden Sie im Anhangsbereich zum [Anzeigen von miteinander verknüpften Objekten](appendix.md#view-interrelated-objects).

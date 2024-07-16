@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Greenplum; GreenPlum
+keywords: Experience Platform; home; beliebte Themen; Greenplum; GreenPlum
 solution: Experience Platform
 title: GreenPlum Source Connector - Überblick
 description: Erfahren Sie, wie Sie GreenPlum über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
@@ -7,21 +7,21 @@ exl-id: 41757062-9ac8-42d3-91f6-a00866195882
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 44%
+ht-degree: 36%
 
 ---
 
 # [!DNL GreenPlum]-Connector
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
 
-Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter umfasst [!DNL GreenPlum].
+Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter beinhaltet [!DNL GreenPlum].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL GreenPlum] mit mithilfe von APIs oder der Benutzeroberfläche:[!DNL Platform]
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche [!DNL GreenPlum] mit [!DNL Platform] verbinden:
 
 ## Verbinden von [!DNL GreenPlum] mit [!DNL Platform] mithilfe von APIs
 

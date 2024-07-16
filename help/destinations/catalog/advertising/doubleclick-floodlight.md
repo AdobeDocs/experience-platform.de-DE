@@ -5,7 +5,7 @@ description: Die DoubleClick Floodlight (Beta)-Erweiterung ist ein Werbeziel in 
 exl-id: 64e1f964-a58e-43d2-8b1a-3baa6104ab3a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '444'
 ht-degree: 81%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 81%
 
 ## Übersicht {#overview}
 
-Diese Erweiterung ermöglicht die schnelle und einfache Bereitstellung von [!DNL DoubleClick Floodlight] Tags im herkömmlichen Floodlight-Format (nicht &quot;Global Site Tag&quot;). Hinweis: Diese Erweiterung befindet sich in der Beta-Phase.
+Diese Erweiterung ermöglicht eine schnelle und einfache Implementierung von [!DNL DoubleClick Floodlight] -Tags mithilfe des herkömmlichen Floodlight-Formats (nicht des globalen Site-Tags). Hinweis: Diese Erweiterung befindet sich in der Beta-Phase.
 
-[!DNL DoubleClick Floodlight] (Beta) ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie unter [!DNL Google] Support-Dokumentation für [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
+[!DNL DoubleClick Floodlight] (Beta) ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie in der Dokumentation zur [!DNL Google]-Unterstützung für [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en) .
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 

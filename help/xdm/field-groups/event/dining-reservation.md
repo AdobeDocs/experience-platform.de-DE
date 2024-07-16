@@ -6,29 +6,29 @@ exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 6%
+ht-degree: 13%
 
 ---
 
-# [!UICONTROL Speisereservierung] Schemafeldgruppe
+# [!UICONTROL Definieren der Reservierung] Schemafeldgruppe
 
-[!UICONTROL Speisereservierung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) dient zur Erfassung von Informationen zu einer Speisekarte.
+[!UICONTROL Die Speisung Reservierung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die zum Erfassen von Informationen zu einer Essensreservierung verwendet wird.
 
-Die Feldergruppe ist eine Erweiterung der [!UICONTROL Buchungsdetails] Feldergruppe und enthält alle gleichen Felder unter einem Feld vom Typ &quot;Objekt&quot;, `reservations`. Zusätzlich zu diesen allgemeinen Feldern [!UICONTROL Speisereservierung] auch `diningReservations` Array. Dieses Objekt-Array wird verwendet, um eine oder mehrere Reservierungen mit Restaurant-spezifischen Eigenschaften zu beschreiben.
+Die Feldergruppe ist eine Erweiterung der Feldergruppe [!UICONTROL Reservierungsdetails] und enthält alle gleichen Felder unter einem einzigen Feld vom Typ &quot;Objekt&quot;, `reservations`. Zusätzlich zu diesen generischen Feldern enthält [!UICONTROL Dining Reservation] auch das Array `diningReservations` . Dieses Objekt-Array wird verwendet, um eine oder mehrere Reservierungen mit Restaurant-spezifischen Eigenschaften zu beschreiben.
 
 >[!NOTE]
 >
->In diesem Dokument werden die Details der `diningReservations` Array. Für Informationen über die anderen Felder, die im `reservations` -Objekt, siehe [[!UICONTROL Buchungsdetails] Feldergruppenreferenz](./reservation-details.md).
+>In diesem Dokument werden die Details des `diningReservations` -Arrays behandelt. Informationen zu den anderen Feldern, die unter dem Objekt `reservations` bereitgestellt werden, finden Sie in der Feldgruppenreferenz [[!UICONTROL Reservierungsdetails] ](./reservation-details.md).
 
-![Präparationsstruktur](../../images/field-groups/dining-reservation/structure.png)
+![Dining Reservation structure](../../images/field-groups/dining-reservation/structure.png)
 
 ## `diningReservations`
 
-`diningReservations` ist eine Gruppe von Objekten, die eine Liste von Essensreservierungen darstellen. Wenn ein Reservierungsereignis Reservierungen in verschiedenen Restaurants zu unterschiedlichen Tageszeiten beinhaltet, können diese Reservierungen beispielsweise als einzelne Objekte unter `diningReservations` für ein einzelnes Ereignis.
+`diningReservations` ist ein Array von Objekten, die eine Liste von Essensreservierungen darstellen. Wenn ein Reservierungsereignis Reservierungen in mehreren verschiedenen Restaurants zu unterschiedlichen Tageszeiten beinhaltet, können diese Reservierungen beispielsweise als einzelne Objekte unter `diningReservations` für eine einzelne Veranstaltung aufgeführt werden.
 
-Die Struktur der einzelnen Objekte, die unter `diningReservations` ist unten angegeben.
+Die Struktur der einzelnen Objekte, die unter &quot;`diningReservations`&quot;bereitgestellt werden, ist unten aufgeführt.
 
-![EssReservierungsstruktur](../../images/field-groups/dining-reservation/diningReservations.png)
+![EssReservations-Struktur](../../images/field-groups/dining-reservation/diningReservations.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
@@ -38,8 +38,8 @@ Die Struktur der einzelnen Objekte, die unter `diningReservations` ist unten ang
 | `created` | Ganzzahl | Dieser Wert wird erfasst, wenn eine Reservierung erstellt wurde. |
 | `cuisine` | Ganzzahl | Die Art der Restaurantküche. |
 | `currencyCode` | Zeichenfolge | Der Währungscode nach ISO 4217, der für den Kauf verwendet wird. |
-| `deliveryPartners` | Zeichenfolge | Im Restaurant stehen Ihnen Versandpartner zur Verfügung. |
-| `diningOptions` | Zeichenfolge | Im Restaurant stehen Ihnen Versand- und Speiseoptionen zur Verfügung. |
+| `deliveryPartners` | Zeichenfolge | Im Restaurant verfügbare Lieferpartner. |
+| `diningOptions` | Zeichenfolge | Liefer- und Speiseoptionen, die im Restaurant verfügbar sind. |
 | `groupReservation` | Boolesch | Gibt an, ob die Reservierung für eine Gruppe vorgenommen wird. |
 | `length` | Ganzzahl | Die Gesamtanzahl der Tage für die Reservierung. |
 | `loyaltyID` | Zeichenfolge | Die Kennung des Treueprogramms für den in der Reservierung aufgelisteten Gast. |
@@ -51,11 +51,11 @@ Die Struktur der einzelnen Objekte, die unter `diningReservations` ist unten ang
 | `partySize` | Ganzzahl | Die Anzahl der Personen auf der Essparty. |
 | `priceCategory` | Zeichenfolge | Die Preiskategorie für die Buchung. |
 | `purpose` | Zeichenfolge | Der Zweck der Reservierung, in der Regel geschäftlich oder persönlich. |
-| `reservationTime` | DateTime | Der Zeitpunkt, zu dem die Speisekarte gebucht wird. |
+| `reservationTime` | DateTime | Die Zeit, für die die Restaurantreservierung gebucht ist. |
 | `restaurantID` | Zeichenfolge | Eine Kennung für das Restaurant oder den Essort. |
 | `reservationStatus` | Zeichenfolge | Der Status der Reservierung. |
 | `specialOccasion` | Boolesch | Gibt an, ob die Reservierung für einen besonderen Anlass erfolgt. |
-| `status` | Ganzzahl | Der Status der Speisekarte. |
+| `status` | Ganzzahl | Der Status der Restaurantreservierung. |
 
 {style="table-layout:auto"}
 

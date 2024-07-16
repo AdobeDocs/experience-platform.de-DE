@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; vorbereitete Anweisungen; vorbereitet; sql
+keywords: Experience Platform;home;popular topics;query service;Query service;prepared statement;prepared;sql
 solution: Experience Platform
 title: Vorbereitete Anweisungen in Query Service
-description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen als Vorlage zu verwenden. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen durch Einsatz einer parametrisierten Abfrage.
+description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen als Vorlage zu verwenden. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 85%
+source-wordcount: '364'
+ht-degree: 78%
 
 ---
 
@@ -23,7 +23,7 @@ Bei Verwendung vorbereiteter Anweisungen werden die folgenden Syntaxen unterstü
 - [EXECUTE](#execute)
 - [DEALLOCATE](#deallocate)
 
-### Eine vorbereitete Anweisung vorbereiten {#prepare}
+### Vorbereiten einer vorbereiteten Anweisung {#prepare}
 
 Diese SQL-Abfrage speichert die geschriebene SELECT-Abfrage mit dem Namen `PLAN_NAME`. Sie können Variablen, z. B. `$1`, anstelle von tatsächlichen Werten nutzen. Diese vorbereitete Erklärung wird während der aktuellen Sitzung gespeichert. Beachten Sie, dass bei den Plannamen **nicht** zwischen Groß- und Kleinschreibung unterschieden wird.
 

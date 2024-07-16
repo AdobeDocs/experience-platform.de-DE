@@ -4,7 +4,7 @@ description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Experie
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '688'
 ht-degree: 78%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 78%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung des Adobe Experience Cloud Identity Service beschrieben. Versionshinweise zum Experience Cloud Identity-Dienst selbst finden Sie im Abschnitt [Dokumentation zu Identity Service](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de).
+In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung des Adobe Experience Cloud Identity Service beschrieben. Versionshinweise zum Experience Cloud Identity-Dienst selbst finden Sie in der Dokumentation zum [Identity-Dienst](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de) .
 
 ## 17. Oktober 2022
 
 ### Experience Cloud ID-Erweiterung 5.5.0
 
-* Die Erweiterung unterstützt jetzt Version 5.5.0 der [Besucher-JS-Client](https://github.com/Adobe-Marketing-Cloud/id-service). Siehe Abschnitt [Versionshinweise zu Besuchern](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) für spezifische Aktualisierungen.
+* Die Erweiterung unterstützt jetzt Version 5.5.0 des [Besucher-JS-Clients](https://github.com/Adobe-Marketing-Cloud/id-service). Spezifische Aktualisierungen finden Sie in den [Versionshinweisen zu Besuchern](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) .
 
 ## 9. März 2022
 
@@ -29,8 +29,8 @@ In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung des Adob
 
 * Diese Version enthält die neueste Version von Visitor 5.4.0, die folgende Aktualisierungen aufweist:
 
-   * Möglichkeit, die Lebensdauer der `s_ecid` Cookie mit cookieLifetime config
-   * Aktualisierung eines Firefox-Browserproblems, das auftritt, wenn eine Seite in einen untergeordneten iFrame geladen wird
+   * Möglichkeit, die Lebensdauer des `s_ecid` -Cookies mithilfe der cookieLifetime-Konfiguration zu konfigurieren
+   * Aktualisierung auf ein Firefox-Browserproblem, das auftritt, wenn eine Seite in einen untergeordneten iFrame geladen wird
 
 ## 10. Oktober 2021
 
@@ -38,8 +38,8 @@ In diesem Dokument werden die Versionshinweise für die Tag-Erweiterung des Adob
 
 * Diese Version enthält die neueste Version von Visitor 5.3.0, die die folgenden neuen Aktualisierungen aufweist:
 
-   * Der Algorithmus wurde aktualisiert, um eine lokale ECID zu generieren
-   * Neueste Opt-in-Funktion mit `Secure` und `SameSite` Flags für das Datenschutz-Cookie
+   * Aktualisierter Algorithmus zum Generieren einer lokalen ECID
+   * Letztes Opt-in mit den Flags `Secure` und `SameSite` für das Datenschutz-Cookie
    * Korrektur eines Firefox-Browserproblems, das auftrat, wenn eine Seite in einen untergeordneten iFrame geladen wurde
 
 ## 12. Januar 2021
@@ -86,7 +86,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 
 * Markierung `loadSSL` standardmäßig aktiviert. Alle Aufrufe von Identity Service sind standardmäßig auf `https` gesetzt. Kunden können den Wert auf „false“ setzen, wenn sie Identity Services auf HTTP von ihren Nicht-SSL-Seiten aufrufen möchten.
 * Die Funktion zur Erkennung der Internet Explorer-Version (IE) wurde aktualisiert, um ein von ESLint gemeldetes Problem zu beheben.
-* Fehlerbehebung für ein Leistungsproblem in Internet Explorer (IE) 11, wenn die ECID mit der OptIn-Vorabgenehmigung versehen und später aktualisiert wird.
+* Fehlerbehebung für ein Performance-Problem in Internet Explorer (IE) 11, wenn die ECID mit der OptIn-Vorabgenehmigung versehen und später aktualisiert wird.
 
 ## 22. Januar 2020
 
@@ -112,7 +112,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 * Ein Fehler für Eingabe von „get Opt-In preApprovals“ wurde behoben
 * VIDEO_ANALYTICS in MEDIA_ANALYTICS in preOptInApprovals umbenannt
 
-   ![](../../../images/ecid-media-analytics.png)
+  ![](../../../images/ecid-media-analytics.png)
 
 ## 17. Juli 2019
 
@@ -121,7 +121,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 * „visitor.js“ in 4.4.0 aktualisiert
 * SHA256-Hashing-Unterstützung für setCustomerIDs hinzugefügt
 
-   ![](../../../images/ecid-setCustomerIDs-hash.png)
+  ![](../../../images/ecid-setCustomerIDs-hash.png)
 
 ## 13. Mai 2019
 
@@ -130,7 +130,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 * „visitor.js“ in 4.3 aktualisiert
 * Datenelementtyp für ECID als Teil der Tag-Erweiterung hinzugefügt
 
-   ![](../../../images/ecid-data-element.png)
+  ![](../../../images/ecid-data-element.png)
 
 ## 9. April 2019
 
@@ -151,7 +151,7 @@ Details zu diesen Attributwerten finden Sie unter [web.dev](https://web.dev/same
 * „visitor.js“ in 4.0 aktualisiert
 * Hinzufügung von Konfigurationsoptionen für das neue integrierte Opt-in-Objekt. Opt-in-Einstellungen können verwendet werden, um Cookie- und Signalaufrufe von Adobe Solutions zu unterdrücken und so bessere Supportregeln wie DSGVO zu erhalten.
 
-   ![](../../../images/ext-mcid-opt-in.png)
+  ![](../../../images/ext-mcid-opt-in.png)
 
 ## 20. März 2018
 

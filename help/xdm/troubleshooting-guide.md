@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum [!DNL Experience Data Model] (XDM) und XDM-System in Adobe Experience Platform, einschließlich einer Anleitung zur Behebung gängiger Fehler. Fragen und Fehlerbehebungen für andere Platform-Dienste finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
-Das **[!DNL Experience Data Model] (XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schemas für das Customer Experience Management definiert. Die Methodologie, auf der [!DNL Experience Platform] basiert, das **XDM-System**, nutzt [!DNL Experience Data Model]-Schemas, die für [!DNL Platform]-Services zur Verwendung bereitstehen. Die **[!DNL Schema Registry]** bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **[!DNL Schema Library]** innerhalb von [!DNL Experience Platform]. Weitere Informationen finden Sie in der [XDM-Dokumentation](home.md).
+Das **[!DNL Experience Data Model] (XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schemata für das Customer Experience Management definiert. Die Methodologie, auf der [!DNL Experience Platform] basiert, das **XDM-System**, nutzt [!DNL Experience Data Model]-Schemata, die für [!DNL Platform]-Services zur Verwendung bereitstehen. Die **[!DNL Schema Registry]** bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf die **[!DNL Schema Library]** innerhalb von [!DNL Experience Platform]. Weitere Informationen finden Sie in der [XDM-Dokumentation](home.md).
 
 ## Häufig gestellte Fragen
 
@@ -31,11 +31,11 @@ Details zum Erstellen von Feldgruppen in der [!DNL Schema Registry]-API finden S
 
 [Feldgruppen](./schema/composition.md#field-group) sind Komponenten, die ein oder mehrere Felder in einem Schema definieren. Feldgruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema, in dem sie enthalten sind, dieselbe Struktur auf. Feldgruppen sind nur mit bestimmten Klassen kompatibel, angegeben durch ihr `meta:intendedToExtend`-Attribut.
 
-[Datentypen](./schema/composition.md#data-type) können ebenfalls ein oder mehrere Felder für ein Schema bereitstellen. Im Gegensatz zu Feldgruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch stellen Datentypen eine flexiblere Möglichkeit dar, um allgemeine Datenstrukturen zu beschreiben, die über mehrere Schemas mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können.
+[Datentypen](./schema/composition.md#data-type) können ebenfalls ein oder mehrere Felder für ein Schema bereitstellen. Im Gegensatz zu Feldgruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch stellen Datentypen eine flexiblere Möglichkeit dar, um allgemeine Datenstrukturen zu beschreiben, die über mehrere Schemata mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können.
 
 ### Was ist die eindeutige ID für ein Schema?
 
-Alle [!DNL Schema Registry]-Ressourcen (Schemas, Feldgruppen, Datentypen, Klassen) verfügen über einen URI, der zu Referenz- und Suchzwecken als eindeutige ID dient. Wenn Sie ein Schema in der API anzeigen, finden Sie es in den `$id`- und `meta:altId`-Attributen der obersten Ebene.
+Alle [!DNL Schema Registry]-Ressourcen (Schemata, Feldgruppen, Datentypen, Klassen) verfügen über einen URI, der zu Referenz- und Suchzwecken als eindeutige ID dient. Wenn Sie ein Schema in der API anzeigen, finden Sie es in den `$id`- und `meta:altId`-Attributen der obersten Ebene.
 
 Weiterführende Informationen finden Sie im Abschnitt [Ressourcenkennung](api/getting-started.md#resource-identification) des [!DNL Schema Registry]-API-Handbuchs.
 
@@ -51,7 +51,7 @@ Weiterführende Informationen zu Feldtypen finden Sie im Dokument zu [Begrenzung
 
 ### Wie kann ich Identitäten für mein Schema definieren?
 
-In [!DNL Experience Platform] werden Identitäten verwendet, um ein Subjekt (normalerweise eine einzelne Person) unabhängig von den Datenquellen, die interpretiert werden, zu identifizieren. Sie werden in Schemas definiert, indem Schlüsselfelder als „Identität“ markiert werden. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID und andere eindeutige ID-Felder.
+In [!DNL Experience Platform] werden Identitäten verwendet, um ein Subjekt (normalerweise eine einzelne Person) unabhängig von den Datenquellen, die interpretiert werden, zu identifizieren. Sie werden in Schemata definiert, indem Schlüsselfelder als „Identität“ markiert werden. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID und andere eindeutige ID-Felder.
 
 Felder können entweder über die API oder die Benutzeroberfläche als Identitäten markiert werden.
 
@@ -71,11 +71,11 @@ Weitere Details zum Verwalten von Identitäten in der Benutzeroberfläche finden
 
 ### Benötigt mein Schema eine primäre Identität?
 
-Primäre Identitäten sind optional, da Schemas entweder keine oder eine davon aufweisen können. Ein Schema muss jedoch über eine primäre Identität verfügen, damit das Schema zur Verwendung im [!DNL Real-Time Customer Profile] aktiviert werden kann. Weiterführende Informationen finden Sie im Abschnitt [Identität](./tutorials/create-schema-ui.md#identity-field) des Tutorials für den Schema-Editor.
+Primäre Identitäten sind optional, da Schemata entweder keine oder eine davon aufweisen können. Ein Schema muss jedoch über eine primäre Identität verfügen, damit das Schema zur Verwendung im [!DNL Real-Time Customer Profile] aktiviert werden kann. Weiterführende Informationen finden Sie im Abschnitt [Identität](./tutorials/create-schema-ui.md#identity-field) des Tutorials für den Schema-Editor.
 
 ### Wie aktiviere ich ein Schema zur Verwendung im [!DNL Real-Time Customer Profile]?
 
-Schemas werden zur Verwendung im [[!DNL Real-Time Customer Profile]](../profile/home.md) aktiviert, indem das Tag „union“ (Vereinigung) innerhalb des `meta:immutableTags`-Attributs des Schemas hinzugefügt wird. Eine Aktivierung eines Schemas zur Verwendung mit dem [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
+Schemata werden zur Verwendung im [[!DNL Real-Time Customer Profile]](../profile/home.md) aktiviert, indem das Tag „union“ (Vereinigung) innerhalb des `meta:immutableTags`-Attributs des Schemas hinzugefügt wird. Eine Aktivierung eines Schemas zur Verwendung mit dem [!DNL Profile] kann über die API oder die Benutzeroberfläche erfolgen.
 
 #### Aktivieren eines vorhandenen Schemas für das [!DNL Profile] über die API
 
@@ -85,14 +85,14 @@ Weiterführende Informationen zur Verwendung der API zum Aktivieren eines Schema
 
 #### Aktivieren eines vorhandenen Schemas für das [!DNL Profile] über die Benutzeroberfläche
 
-Wählen Sie in [!DNL Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Schemas]** und dann den Namen des Schemas aus der Liste der Schemas aus, das Sie aktivieren möchten. Aktivieren Sie anschließend rechts im Editor unter **[!UICONTROL Schemaeigenschaften]** die Option **[!UICONTROL Profil]**.
+Wählen Sie in [!DNL Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Schemata]** und dann den Namen des Schemas aus der Liste der Schemata aus, das Sie aktivieren möchten. Aktivieren Sie anschließend rechts im Editor unter **[!UICONTROL Schemaeigenschaften]** die Option **[!UICONTROL Profil]**.
 
 
 Weiterführende Informationen finden Sie im Abschnitt zur [Verwendung im Echtzeit-Kundenprofil](./tutorials/create-schema-ui.md#profile) im Tutorial [!UICONTROL Schema-Editor].
 
 ### Kann ich ein Vereinigungsschema direkt bearbeiten?
 
-Vereinigungsschemas sind schreibgeschützt und werden automatisch vom System generiert. Sie können nicht direkt bearbeitet werden. Vereinigungsschemas werden für eine bestimmte Klasse erstellt, wenn einem Schema, das diese Klasse implementiert, das Tag „union“ (Vereinigung) hinzugefügt wird.
+Vereinigungsschemata sind schreibgeschützt und werden automatisch vom System generiert. Sie können nicht direkt bearbeitet werden. Vereinigungsschemata werden für eine bestimmte Klasse erstellt, wenn einem Schema, das diese Klasse implementiert, das Tag „union“ (Vereinigung) hinzugefügt wird.
 
 Weiterführende Informationen zu Vereinigungen in XDM finden Sie im Abschnitt [Vereinigungen](./api/unions.md) des [!DNL Schema Registry]-API-Handbuchs.
 
@@ -228,7 +228,7 @@ Eine Liste kompatibler Accept-Kopfzeilen für verschiedene API-Anfragen finden S
 
 ### [!DNL Real-Time Customer Profile]-Fehler
 
-Die folgenden Fehlermeldungen sind mit Vorgängen verknüpft, die mit der Aktivierung von Schemas für das [!DNL Real-Time Customer Profile] im Zusammenhang stehen. Weiterführende Informationen finden Sie im Abschnitt [Vereinigungen](./api/unions.md) des [!DNL Schema Registry]-API-Handbuchs.
+Die folgenden Fehlermeldungen sind mit Vorgängen verknüpft, die mit der Aktivierung von Schemata für das [!DNL Real-Time Customer Profile] im Zusammenhang stehen. Weiterführende Informationen finden Sie im Abschnitt [Vereinigungen](./api/unions.md) des [!DNL Schema Registry]-API-Handbuchs.
 
 #### Referenz-Identitätsdeskriptor erforderlich
 
@@ -270,7 +270,7 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema für das [!DN
 >
 >Bei diesem Fehler bezieht sich das „Zielschema“ auf das Referenzschema in der Beziehung.
 
-Um Schemas, die Beziehungsdeskriptoren enthalten, für die Verwendung im [!DNL Profile] zu aktivieren, müssen der Namespace des Quellfelds und der primäre Namespace des Referenzfelds identisch sein. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema zu aktivieren, das einen nicht übereinstimmenden Namespace für den zugehörigen Referenz-Identitätsdeskriptor enthält.
+Um Schemata, die Beziehungsdeskriptoren enthalten, für die Verwendung im [!DNL Profile] zu aktivieren, müssen der Namespace des Quellfelds und der primäre Namespace des Referenzfelds identisch sein. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, ein Schema zu aktivieren, das einen nicht übereinstimmenden Namespace für den zugehörigen Referenz-Identitätsdeskriptor enthält.
 
 Stellen Sie sicher, dass der `xdm:namespace`-Wert des Identitätsfelds des Referenzschemas mit dem der `xdm:identityNamespace`-Eigenschaft im Referenz-Identitätsdeskriptor des Quellfelds übereinstimmt, um dieses Problem zu beheben.
 
@@ -312,6 +312,6 @@ Bevor Sie ein Schema für das Profil aktivieren, müssen Sie zunächst für das 
 }
 ```
 
-Alle profilaktivierten Schemas, die zur gleichen Klasse gehören, müssen zusammengeführt werden können, um das Vereinigungsschema für diese Klasse zu erstellen. Dieser Fehler wird angezeigt, wenn Sie versuchen, ein Feld zu einem Schema hinzuzufügen, dessen Pfad ebenfalls von einem anderen profilaktivierten Schema genutzt wird und dessen Datentyp sich vom ursprünglichen unterscheidet. Da die Schemas profilaktiviert sind und denselben Feldpfad enthalten, versucht das Profil, diese beiden Felder beim Erstellen des Vereinigungsschemas zusammenzuführen. Da verschiedene Datentypen nicht zusammengeführt werden können, wird dies als Zusammenführungskonflikt betrachtet und der Vorgang ist unzulässig.
+Alle profilaktivierten Schemata, die zur gleichen Klasse gehören, müssen zusammengeführt werden können, um das Vereinigungsschema für diese Klasse zu erstellen. Dieser Fehler wird angezeigt, wenn Sie versuchen, ein Feld zu einem Schema hinzuzufügen, dessen Pfad ebenfalls von einem anderen profilaktivierten Schema genutzt wird und dessen Datentyp sich vom ursprünglichen unterscheidet. Da die Schemata profilaktiviert sind und denselben Feldpfad enthalten, versucht das Profil, diese beiden Felder beim Erstellen des Vereinigungsschemas zusammenzuführen. Da verschiedene Datentypen nicht zusammengeführt werden können, wird dies als Zusammenführungskonflikt betrachtet und der Vorgang ist unzulässig.
 
-Um das Problem zu beheben, wählen Sie einen anderen Namen für das Feld aus oder verschachteln Sie es unter einem Objekt mit eindeutigem Namespace, um Zusammenführungskonflikte mit anderen profilaktivierten Schemas unter derselben Klasse mit ähnlichen Feldern zu vermeiden.
+Um das Problem zu beheben, wählen Sie einen anderen Namen für das Feld aus oder verschachteln Sie es unter einem Objekt mit eindeutigem Namespace, um Zusammenführungskonflikte mit anderen profilaktivierten Schemata unter derselben Klasse mit ähnlichen Feldern zu vermeiden.

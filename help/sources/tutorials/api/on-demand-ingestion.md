@@ -5,18 +5,18 @@ description: Erfahren Sie, wie Sie mithilfe der Flow Service-API einen Flusslauf
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 14%
+source-wordcount: '797'
+ht-degree: 13%
 
 ---
 
-# Erstellen Sie einen Workflow für die On-Demand-Erfassung mit dem [!DNL Flow Service] API
+# Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der [!DNL Flow Service]-API
 
 Flussläufe stellen eine Instanz der Flussausführung dar. Wenn beispielsweise ein Fluss planmäßig um 9:00 Uhr, 10:00 Uhr und 11:00 Uhr ausgeführt wird, haben Sie drei Instanzen eines Flusslaufs. Flussläufe sind spezifisch für Ihre jeweilige Organisation.
 
 Die On-Demand-Erfassung bietet Ihnen die Möglichkeit, einen Fluss zu erstellen, der für einen bestimmten Datenfluss ausgeführt wird. Auf diese Weise können Ihre Benutzer einen Flusslauf erstellen, der auf den angegebenen Parametern basiert, und einen Erfassungszyklus ohne Service-Token erstellen. Die On-Demand-Erfassung wird nur für Batch-Quellen unterstützt.
 
-In diesem Tutorial werden die Schritte zum Verwenden der On-Demand-Erfassung und zum Erstellen eines Flusslaufs mit dem [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial werden die Schritte zum Verwenden der On-Demand-Erfassung und zum Erstellen eines Flusslaufs mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 
@@ -35,7 +35,7 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## Erstellen eines Flusslaufs für eine tabellenbasierte Quelle
 
-Um einen Fluss für eine tabellenbasierte Quelle zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] API bei Angabe der Kennung des Flusses, für den Sie die Ausführung erstellen möchten, sowie der Werte für Start-, Endzeit- und Delta-Spalte.
+Um einen Fluss für eine tabellenbasierte Quelle zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] -API und geben Sie dabei die Kennung des Flusses an, für den Sie die Ausführung erstellen möchten, sowie Werte für Start-, Endzeit- und Delta-Spalte.
 
 >[!TIP]
 >
@@ -49,11 +49,11 @@ POST /runs/
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen Flusslauf für Fluss-ID `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+Die folgende Anfrage erstellt einen Flusslauf für die Fluss-ID `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
 >[!NOTE]
 >
->Sie müssen nur die Variable `deltaColumn` beim Erstellen des ersten Flusslaufs. Danach `deltaColumn` wird als Teil von `copy` Transformation im Fluss und wird als Quelle der Wahrheit behandelt. Alle Versuche, die `deltaColumn` -Wert durch die Flusslaufparameter führt zu einem Fehler.
+>Sie müssen nur den Wert `deltaColumn` angeben, wenn Sie den ersten Flusslauf erstellen. Danach wird `deltaColumn` als Teil der `copy`-Transformation im Fluss gepatcht und als &quot;Source of Truth&quot;behandelt. Alle Versuche, den Wert `deltaColumn` durch die Ausführungsparameter des Flusses zu ändern, führen zu einem Fehler.
 
 ```shell
 curl -X POST \
@@ -82,7 +82,7 @@ curl -X POST \
 | `params.startTime` | Die geplante Zeit, zu der der On-Demand-Fluss beginnt. Dieser Wert wird in Unix-Zeit dargestellt. |
 | `params.windowStartTime` | Das früheste Datum und die früheste Uhrzeit, aus der Daten abgerufen werden. Dieser Wert wird in Unix-Zeit dargestellt. |
 | `params.windowEndTime` | Datum und Uhrzeit des Abrufs der Daten. Dieser Wert wird in Unix-Zeit dargestellt. |
-| `params.deltaColumn` | Die Delta-Spalte ist erforderlich, um die Daten zu partitionieren und neu aufgenommene Daten von historischen Daten zu trennen. **Hinweis**: Die `deltaColumn` wird nur bei der Erstellung des ersten Durchlaufs benötigt. |
+| `params.deltaColumn` | Die Delta-Spalte ist erforderlich, um die Daten zu partitionieren und neu aufgenommene Daten von historischen Daten zu trennen. **Hinweis**: Der `deltaColumn` ist nur erforderlich, wenn Sie Ihren ersten Flusslauf erstellen. |
 | `params.deltaColumn.name` | Der Name der Delta-Spalte. |
 
 **Antwort**
@@ -102,7 +102,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Flusslaufs zurück
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID des neu erstellten Flusslaufs. Siehe Handbuch unter [Abruf-Flussspezifikationen](../api/collect/database-nosql.md#specs) für weitere Informationen zu tabellenbasierten Ausführungsspezifikationen. |
+| `id` | Die ID des neu erstellten Flusslaufs. Weitere Informationen zu tabellenbasierten Ausführungsspezifikationen finden Sie im Handbuch zum [Abrufen von Flussspezifikationen](../api/collect/database-nosql.md#specs) . |
 | `etag` | Die Ressourcenversion des Flusslaufs. |
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
@@ -124,7 +124,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Flusslaufs zurück
 
 ## Erstellen eines Flusslaufs für eine dateibasierte Quelle
 
-Um einen Fluss für eine dateibasierte Quelle zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] API bei Angabe der Kennung des Workflows, für den Sie die Ausführung erstellen möchten, und der Werte für Start- und Endzeit.
+Um einen Fluss für eine dateibasierte Quelle zu erstellen, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] -API und geben Sie dabei die ID des Flusses an, für den Sie die Ausführung erstellen möchten, sowie die Werte für Start- und Endzeit.
 
 >[!TIP]
 >
@@ -138,7 +138,7 @@ POST /runs/
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen Flusslauf für Fluss-ID `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+Die folgende Anfrage erstellt einen Flusslauf für die Fluss-ID `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
 
 ```shell
 curl -X POST \
@@ -183,9 +183,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Flusslaufs zurück
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die ID des neu erstellten Flusslaufs. Siehe Handbuch unter [Abruf-Flussspezifikationen](../api/collect/database-nosql.md#specs) für weitere Informationen zu tabellenbasierten Ausführungsspezifikationen. |
+| `id` | Die ID des neu erstellten Flusslaufs. Weitere Informationen zu tabellenbasierten Ausführungsspezifikationen finden Sie im Handbuch zum [Abrufen von Flussspezifikationen](../api/collect/database-nosql.md#specs) . |
 | `etag` | Die Ressourcenversion des Flusslaufs. |
 
 ## Überwachen der Durchsatzabläufe
 
-Nach der Erstellung des Flusslaufs können Sie die erfassten Daten überwachen, um Informationen über die Durchlaufvorgänge, den Abschlussstatus und Fehler anzuzeigen. Informationen zum Überwachen Ihrer Flussläufe mithilfe der API finden Sie im Tutorial zu [Überwachen von Datenflüssen in der API](./monitor.md). Informationen zum Überwachen Ihrer Flussläufe mithilfe der Platform-Benutzeroberfläche finden Sie im Handbuch unter [Datenflüsse von Quellen mithilfe des Monitoring-Dashboards überwachen](../../../dataflows/ui/monitor-sources.md).
+Nach der Erstellung des Flusslaufs können Sie die erfassten Daten überwachen, um Informationen über die Durchlaufvorgänge, den Abschlussstatus und Fehler anzuzeigen. Informationen zum Überwachen Ihrer Flussläufe mithilfe der API finden Sie im Tutorial zum [Überwachen von Datenflüssen in der API](./monitor.md). Informationen zum Überwachen Ihrer Flussläufe mithilfe der Platform-Benutzeroberfläche finden Sie im Handbuch zum [Überwachen von Datenflüssen für Quellen mithilfe des Monitoring-Dashboards](../../../dataflows/ui/monitor-sources.md).

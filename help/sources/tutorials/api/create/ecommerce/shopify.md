@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Shopify; Shopify; E-Commerce
+keywords: Experience Platform; home; beliebte Themen; Shopify; shopify; E-Commerce
 solution: Experience Platform
 title: Erstellen einer Basisverbindung des Shopify-Connectors mit der Flow Service-API
 type: Tutorial
@@ -7,8 +7,8 @@ description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Shopify mit Ado
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 62%
+source-wordcount: '442'
+ht-degree: 61%
 
 ---
 
@@ -16,16 +16,16 @@ ht-degree: 62%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Shopify] (nachstehend &quot;genannt)[!DNL Shopify]&quot;) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Shopify] (nachfolgend als &quot;[!DNL Shopify]&quot; bezeichnet) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
+* [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] -Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Shopify] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Shopify] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -33,11 +33,11 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Shopify] herstellen kann, m�
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Der Endpunkt Ihrer [!DNL Shopify] Server. |
-| `accessToken` | Das Zugriffstoken für Ihre [!DNL Shopify] Benutzerkonto. |
+| `host` | Der Endpunkt Ihres [!DNL Shopify] -Servers. |
+| `accessToken` | Das Zugriffstoken für Ihr [!DNL Shopify] -Benutzerkonto. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Shopify] ist: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
-Weiterführende Informationen zu den ersten Schritten finden Sie in diesem Abschnitt [Authentifizierungsdokument speichern](https://shopify.dev/concepts/about-apis/authentication).
+Weitere Informationen zu den ersten Schritten finden Sie in diesem [Dokument zur Authentifizierung beim Shopify](https://shopify.dev/concepts/about-apis/authentication).
 
 ### Verwenden von Platform-APIs
 
@@ -87,8 +87,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `auth.params.host` | Der Endpunkt des [!DNL Shopify]-Servers. |
-| `auth.params.accessToken` | Das Zugriffstoken für Ihre [!DNL Shopify] Benutzerkonto. |
-| `connectionSpec.id` | Die [!DNL Shopify]-Verbindungsspezifikations-ID: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
+| `auth.params.accessToken` | Das Zugriffstoken für Ihr [!DNL Shopify] -Benutzerkonto. |
+| `connectionSpec.id` | Die [!DNL Shopify] Verbindungsspezifikations-ID: `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
 **Antwort**
 
@@ -106,4 +106,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 In diesem Tutorial haben Sie eine [!DNL Shopify]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um E-Commerce-Daten mithilfe der [!DNL Flow Service] API](../../collect/ecommerce.md)
+* [Erstellen Sie einen Datenfluss, um E-Commerce-Daten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/ecommerce.md)

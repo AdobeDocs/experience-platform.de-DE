@@ -74,7 +74,7 @@ Einige E-Mail-Marketing-Ziele in den Katalogprofilen werden streaming über eine
 
 Andere Ziele exportieren Dateien an einen Cloud-Speicher-Speicherort. Nach Abschluss des Exports müssen Sie Daten vom Cloud-Speicher in Ihr E-Mail-Marketing-Ziel importieren.
 
-Befolgen Sie die Links im [unterstützte E-Mail-Marketing-Ziele](#supported-destinations) Informationen zum Aktivieren von Zielgruppen für jedes E-Mail-Marketing-Ziel.
+Folgen Sie den Links im Abschnitt [unterstützte E-Mail-Marketing-Ziele](#supported-destinations) , um zu erfahren, wie Sie Zielgruppen für jedes E-Mail-Marketing-Ziel aktivieren.
 
 ## Weitere Ressourcen {#additional-resources}
 

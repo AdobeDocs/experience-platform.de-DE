@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; API; Erkunden; Flussdienst
-title: Eine Tabellenquelle mithilfe der Flow Service-API durchsuchen
+keywords: Experience Platform; home; beliebte Themen; sources; API; erkunden; Flussdienst
+title: Eine tabellarische Source mithilfe der Flow Service-API durchsuchen
 description: In diesem Tutorial wird die Flow Service-API verwendet, um den Inhalt und die Struktur einer tabellenbasierten Quelle zu untersuchen.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
 source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 23%
+source-wordcount: '465'
+ht-degree: 21%
 
 ---
 
-# Datentabellen mithilfe der [!DNL Flow Service] API
+# Datentabellen mit der [!DNL Flow Service]-API durchsuchen
 
-In diesem Tutorial erfahren Sie, wie Sie die Struktur und den Inhalt Ihrer Datentabellen mithilfe des [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API.
+In diesem Tutorial erfahren Sie, wie Sie die Struktur und den Inhalt Ihrer Datentabellen mithilfe der [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) -API untersuchen und in der Vorschau anzeigen.
 
 >[!NOTE]
 >
-> Um Ihre Datentabellen zu untersuchen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID für eine tabellarische Quelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in den folgenden Tutorials Schritte zum Erstellen einer Basis-Verbindungs-ID für eine tabellarische Quelle: <ul><li>[Werbung](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[Customer Success](../../../home.md#customer-success)</li><li>[Datenbank](../../../home.md#database)</li><li>[E-Commerce](../../../home.md#ecommerce)</li><li>[Marketing-Automatisierung](../../../home.md#marketing-automation)</li><li>[Zahlungen](../../../home.md#payments)</li><li>[Protokolle](../../../home.md#protocols)</li></ul>
+> Um Ihre Datentabellen zu untersuchen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID für eine tabellarische Quelle verfügen. Wenn Sie diese ID nicht haben, finden Sie in den folgenden Tutorials Schritte zum Erstellen einer Basis-Verbindungs-ID für eine tabellarische Quelle: <ul><li>[Werbung](../../../home.md#advertising)</li><li>[CRM](../../../home.md#customer-relationship-management)</li><li>[Kundenerfolg](../../../home.md#customer-success)</li><li>[Datenbank](../../../home.md#database)</li><li>[E-Commerce](../../../home.md#ecommerce)</li><li>[Marketing-Automatisierung](../../../home.md#marketing-automation)</li><li>[Zahlungen](../../../home.md#payments)</li><li>[Protokolle](../../../home.md#protocols)</li></ul>
 
 ## Erste Schritte
 
@@ -31,7 +31,7 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## Datentabellen durchsuchen
 
-Sie können Informationen zur Struktur Ihrer Datentabellen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe der grundlegenden Verbindungs-ID Ihrer Quelle.
+Sie können Informationen über die Struktur Ihrer Datentabellen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] -API richten und dabei die Basis-Verbindungs-ID Ihrer Quelle angeben.
 
 **API-Format**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrer Quelle zurück. Suchen Sie die Tabelle, die Sie in Platform einführen möchten, und notieren Sie sich deren `path` -Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrer Quelle zurück. Suchen Sie die Tabelle, die Sie in Platform einbringen möchten, und notieren Sie sich deren `path` -Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -79,7 +79,7 @@ Eine erfolgreiche Antwort gibt eine Reihe von Tabellen aus Ihrer Quelle zurück.
 
 ## Tabellenstruktur Inspect
 
-Um den Inhalt Ihrer Datentabellen zu überprüfen, stellen Sie eine GET-Anfrage an die [!DNL Flow Service] API beim Angeben des Pfads einer Tabelle als Abfrageparameter.
+Um den Inhalt Ihrer Datentabellen zu überprüfen, stellen Sie eine GET-Anfrage an die [!DNL Flow Service] -API und geben Sie dabei den Pfad einer Tabelle als Abfrageparameter an.
 
 **API-Format**
 
@@ -105,7 +105,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Informationen zu Inhalt und Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen der `columns` Array.
+Eine erfolgreiche Antwort gibt Informationen zu Inhalt und Struktur der angegebenen Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
 
 ```json
 {
@@ -188,9 +188,9 @@ Eine erfolgreiche Antwort gibt Informationen zu Inhalt und Struktur der angegebe
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Informationen zur Struktur und zum Inhalt Ihrer Datentabellen gesammelt. Außerdem haben Sie den Pfad zur Tabelle abgerufen, die Sie in Platform erfassen möchten. Sie können diese Informationen verwenden, um eine Quellverbindung und einen Datenfluss zu erstellen und Ihre Daten an Platform zu übertragen. Spezifische Schritte zum Erstellen einer Quellverbindung und eines Datenflusses mithilfe der [!DNL Flow Service] API:
+In diesem Tutorial haben Sie Informationen zur Struktur und zum Inhalt Ihrer Datentabellen gesammelt. Außerdem haben Sie den Pfad zur Tabelle abgerufen, die Sie in Platform erfassen möchten. Sie können diese Informationen verwenden, um eine Quellverbindung und einen Datenfluss zu erstellen und Ihre Daten an Platform zu übertragen. In den folgenden Tutorials finden Sie spezifische Schritte zum Erstellen einer Quellverbindung und eines Datenflusses mithilfe der [!DNL Flow Service] -API:
 
-* [Werbequellen](../collect/advertising.md)
+* [Advertising-Quellen](../collect/advertising.md)
 * [CRM-Quellen](../collect/crm.md)
 * [Kundenerfolgsquellen](../collect/customer-success.md)
 * [Datenbankquellen](../collect/database-nosql.md)

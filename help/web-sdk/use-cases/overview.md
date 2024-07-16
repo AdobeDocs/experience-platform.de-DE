@@ -14,4 +14,4 @@ ht-degree: 3%
 
 Das Adobe Experience Platform Web SDK bietet eine Vielzahl von Anwendungsfällen zur Personalisierung mit anderen Adobe-Lösungen wie Adobe Analytics, Audience Manager, Target und Experience Platform.
 
-Detaillierte Informationen zur Implementierung unterstützter Anwendungsfälle finden Sie in der entsprechenden Dokumentation im Abschnitt [Web SDK-Anwendungsfallseite](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=).
+Detaillierte Informationen zur Implementierung unterstützter Anwendungsfälle finden Sie in der entsprechenden Dokumentation auf der Seite [Anwendungsbeispiele für das Web SDK-Projekt](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=).

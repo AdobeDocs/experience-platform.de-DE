@@ -11,28 +11,28 @@ ht-degree: 0%
 
 # `renderDecisions`
 
-Die `renderDecisions` -Eigenschaft können Sie erzwingen, dass das Web SDK personalisierte Inhalte rendert, die für die automatische Wiedergabe geeignet sind.
+Mit der Eigenschaft `renderDecisions` können Sie das Web SDK zwingen, personalisierte Inhalte wiederzugeben, die für die automatische Wiedergabe geeignet sind.
 
 ## Rendern von personalisiertem Inhalt mit der Web SDK-Tag-Erweiterung
 
-Wählen Sie die **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]** innerhalb der Aktionen einer Tag-Regel.
+Aktivieren Sie das Kontrollkästchen **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]** innerhalb der Aktionen einer Tag-Regel.
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. under [!UICONTROL Aktionen], wählen Sie eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie die [!UICONTROL Erweiterung] Dropdown-Feld zu **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie die [!UICONTROL Aktionstyp] nach **[!UICONTROL Ereignis senden]**.
-1. Scrollen Sie nach unten zum [!UICONTROL Personalisierung] und wählen Sie dann die **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]** aktivieren.
-1. Klicks **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
+1. Wählen Sie unter [!UICONTROL Aktionen] eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie den Aktionstyp ] auf **[!UICONTROL Ereignis senden]** fest.[!UICONTROL 
+1. Scrollen Sie nach unten zum Bereich [!UICONTROL Personalization] und aktivieren Sie dann das Kontrollkästchen **[!UICONTROL visuelle Personalisierungsentscheidungen rendern]** .
+1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
 
-## Rendern von personalisiertem Inhalt mit der JavaScript-Bibliothek des Web SDK
+## Rendern von personalisierten Inhalten mit der Web SDK JavaScript-Bibliothek
 
-Legen Sie die `renderDecisions` boolean beim Ausführen der `sendEvent` Befehl. Wenn diese Eigenschaft weggelassen wird, wird standardmäßig `false`. Legen Sie diese Eigenschaft auf `true` , wenn Sie personalisierte Inhalte automatisch rendern möchten.
+Legen Sie den booleschen Wert `renderDecisions` fest, wenn Sie den Befehl `sendEvent` ausführen. Wenn diese Eigenschaft weggelassen wird, wird standardmäßig `false` verwendet. Setzen Sie diese Eigenschaft auf `true` , wenn Sie personalisierte Inhalte automatisch rendern möchten.
 
 >[!IMPORTANT]
 >
->Die `renderDecisions` -Eigenschaft ist mit der [`documentUnloading`](documentunloading.md) -Eigenschaft. Sie sollten nicht beide Eigenschaften auf `true` gleichzeitig.
+>Die Eigenschaft `renderDecisions` ist nicht mit der Eigenschaft [`documentUnloading`](documentunloading.md) kompatibel. Sie sollten nicht beide Eigenschaften gleichzeitig auf `true` setzen.
 
 ```js
 alloy("sendEvent", {

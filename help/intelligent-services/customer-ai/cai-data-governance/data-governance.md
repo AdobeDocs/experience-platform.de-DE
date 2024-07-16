@@ -7,12 +7,12 @@ description: Adobe Experience Platform bietet verschiedene Services und Tools, m
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 99%
+source-wordcount: '278'
+ht-degree: 97%
 
 ---
 
-# Kunden-KI und Data Governance in Customer AI
+# Customer AI und Data Governance in Customer AI
 
 Alle Einstellungen in Bezug auf die Data Governance in Kunden-KI werden von Adobe Experience Platform übernommen.
 

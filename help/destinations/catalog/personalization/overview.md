@@ -5,7 +5,7 @@ description: Personalisierungsplattformen erfassen Daten und Insights aus indivi
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '150'
 ht-degree: 62%
 
 ---

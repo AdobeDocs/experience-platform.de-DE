@@ -9,15 +9,15 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Medizin] Schemafeldgruppe
+# [!UICONTROL Schemafeldgruppe &quot;Gesundheitsmedikation&quot;]
 
-[!UICONTROL Medizin] ist eine Standardschemafeldgruppe für die [[!UICONTROL Medizin] class](../../classes/medication.md). Es wird ein einzelnes Feld vom Typ Objekt bereitgestellt `medication` erfasst Details wie Markenname, Losnummer und Menge.
+[!UICONTROL Gesundheitsmedikation] ist eine Standardschemafeldgruppe für die [[!UICONTROL Medikation] -Klasse](../../classes/medication.md). Es wird ein einzelnes Objektfeld `medication` bereitgestellt, das Details wie Markenname, Nummer und Menge erfasst.
 
 ![](../../images/field-groups/healthcare-medication.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `ingredients` | Array von Objekten | Listet die im Arzneimittel vorhandenen Bestandteile auf. Jedes Objekt enthält die folgenden Eigenschaften: <ul><li>`isActive`: (Boolesch) Gibt an, ob dieser Wirkstoff noch aktiv in dieser Medikation verwendet wird.</li><li>`name`: (String) Der Name der Zutat.</li><li>`quantity`: (String) Die Menge des Inhaltsstoffes, der in der Medikation vorhanden ist.</li></ul> |
+| `ingredients` | Array von Objekten | Listet die im Arzneimittel vorhandenen Bestandteile auf. Jedes Objekt enthält die folgenden Eigenschaften: <ul><li>`isActive`: (Boolesch) Gibt an, ob dieser Wirkstoff noch aktiv in dieser Medikation verwendet wird.</li><li>`name`: (String) Der Name der Zutat.</li><li>`quantity`: (String) Die Menge des Inhaltsstoffs, der in der Medikation vorhanden ist.</li></ul> |
 | `brandName` | Zeichenfolge | Der Markenname des Medikaments. |
 | `codes` | Zeichenfolgen-Array | Eine Liste von Codes, die dieses Medikament identifizieren. |
 | `dosageUnitNumber` | Double | Die Nummer der Dosiereinheit für das Arzneimittel. |
@@ -32,4 +32,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).
+Weitere Informationen zur Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Paypal;paypal;PayPal
 solution: Experience Platform
-title: PayPal Source Connector - Übersicht
+title: Übersicht über PayPal Source Connector
 description: Erfahren Sie, wie Sie PayPal über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
 source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
@@ -15,11 +15,11 @@ ht-degree: 61%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einem Zahlungsantrag eines Drittanbieters. Die Unterstützung für Zahlungsdienstleister umfasst [!DNL PayPal].
+Experience Platform unterstützt die Aufnahme von Daten aus einer Zahlungsanwendung eines Drittanbieters. Unterstützung für Zahlungsdienstleister ist [!DNL PayPal].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL PayPal] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 

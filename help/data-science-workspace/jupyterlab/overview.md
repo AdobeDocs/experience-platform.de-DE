@@ -6,7 +6,7 @@ description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project J
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1812'
 ht-degree: 100%
 
 ---
@@ -88,7 +88,7 @@ Die Menüleiste oben in der Benutzeroberfläche verfügt über Menüs auf oberst
 Die linke Seitenleiste enthält klickbare Registerkarten, die Zugriff auf folgende Funktionen bieten:
 
 * **Datei-Browser:** Eine Liste gespeicherter Notebook-Dokumente und -Verzeichnisse
-* **Data Explorer:** Durchsuchen, Aufrufen und Erforschen von Datensätzen und Schemas
+* **Data Explorer:** Durchsuchen, Aufrufen und Erforschen von Datensätzen und Schemata
 * **Laufende Kernel und Terminals:** Eine Liste von aktiven Kernel- und Terminal-Sitzungen mit der Möglichkeit zum Beenden
 * **Befehle:** Eine Liste mit hilfreichen Befehlen
 * **Zellinspektor:** Ein Zelleneditor, der Zugriff auf Tools und Metadaten bietet, die für die Einrichtung eines Notebooks zu Präsentationszwecken nützlich sind

@@ -9,9 +9,9 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Finanzkonto] Datentyp
+# Datentyp [!UICONTROL Finanzkonto]
 
-[!UICONTROL Finanzkonto] ist ein standardmäßiger XDM-Datentyp, der die Details eines Finanzkontos einschließlich Typ, Eigentümer und aktueller Saldo beschreibt.
+[!UICONTROL Finanzkonto] ist ein standardmäßiger XDM-Datentyp, der die Details eines Finanzkontos einschließlich Typ, Eigentümer und aktueller Restbetrag beschreibt.
 
 ![](../images/data-types/financial-account.png)
 
@@ -24,4 +24,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-Weitere Informationen zum Datentyp finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+Weitere Informationen zum Datentyp finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).

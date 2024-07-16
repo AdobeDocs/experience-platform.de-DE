@@ -4,7 +4,7 @@ description: Mit den Beispieldatensätzen des Abfrage-Service können Sie explor
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 100%
 
 ---

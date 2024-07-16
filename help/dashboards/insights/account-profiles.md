@@ -7,21 +7,21 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Einblicke in Kontoprofile
 
-[Kontoprofile](../../rtcdp/accounts/account-profile-overview.md) werden verwendet, um Kontoinformationen aus verschiedenen Quellen zu konsolidieren, einschließlich verschiedener Marketing-Kanäle und Unternehmenssysteme. Diese einheitliche Ansicht ermöglicht ein umfassendes Verständnis der Kundenkonten und verbessert so die B2B-Marketingkampagnen. Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-time Customer Data Platform B2B-Daten leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.
+[Kontoprofile](../../rtcdp/accounts/account-profile-overview.md) werden verwendet, um Kontoinformationen aus verschiedenen Quellen zu konsolidieren, einschließlich mehrerer Marketing-Kanäle und Unternehmenssysteme. Diese einheitliche Ansicht ermöglicht ein umfassendes Verständnis der Kundenkonten und verbessert so die B2B-Marketingkampagnen. Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-time Customer Data Platform B2B-Daten leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.
 
 Mit dem Zugriff auf die SQL-Datenbank, die Ihre Einblicke ermöglicht, können Sie Ihre B2B-Daten besser verstehen und Ihre eigenen, hochgradig benutzerdefinierten wiederverwendbaren Einblicke generieren, um Ihre Kundenkontoinformationen weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Die folgenden Einblicke stehen Ihnen als Teil der [Dashboard &quot;Kontoprofile&quot;](../guides/account-profiles.md) oder [benutzerdefiniertes Dashboard](../user-defined-dashboards.md). Siehe [Anpassungsübersicht](../customize/overview.md) Anweisungen zum Anpassen Ihres Dashboards erhalten Sie oder [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen im Dashboard [Kontoprofile](../guides/account-profiles.md) oder im benutzerdefinierten Dashboard [Dashboard](../user-defined-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../user-defined-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
 
-## Kontoprofile hinzugefügt {#account-profiles-added}
+## Hinzugefügte Kontoprofile {#account-profiles-added}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -106,7 +106,7 @@ LIMIT  5000;
 
 +++
 
-## Hinzugefügte Möglichkeiten {#opportunities-added}
+## Hinzugefügte Opportunities {#opportunities-added}
 
 Fragen, die durch diesen Einblick beantwortet werden:
 
@@ -287,4 +287,4 @@ Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL, die Einblicke in das K
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-Sie können auch die SQL lesen und verstehen, die Einblicke für die [Profile](./profiles.md), [Zielgruppen](./audiences.md), und [Ziele](./destinations.md) Dashboards.
+Sie können auch die SQL lesen und verstehen, die Einblicke in die Dashboards [Profile](./profiles.md), [Zielgruppen](./audiences.md) und [Ziele](./destinations.md) generiert.

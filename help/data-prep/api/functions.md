@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemas;
+keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemata;
 title: Functions API Endpoint
 description: Sie können den Endpunkt "/features"in der Data Prep-API verwenden, um Ihre Zuordnungsausdrücke zu validieren und die verfügbaren Zuordnungssatzfunktionen aufzulisten.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 88%
+source-wordcount: '213'
+ht-degree: 87%
 
 ---
 
 # Endpunkte für Funktionen
 
-Mit Zuordnungssatzfunktionen können Sie Ihre Daten zwischen Quell- und Zielschemas konvertieren. Sie können den `/languages/el`-Endpunkt verwenden, um Ihre Ausdrücke zu validieren und eine Liste aller verfügbaren Zuordnungssatzfunktionen aufzurufen.
+Mit Zuordnungssatzfunktionen können Sie Ihre Daten zwischen Quell- und Zielschemata konvertieren. Sie können den `/languages/el`-Endpunkt verwenden, um Ihre Ausdrücke zu validieren und eine Liste aller verfügbaren Zuordnungssatzfunktionen aufzurufen.
 
 ## Validieren von Ausdrücken
 

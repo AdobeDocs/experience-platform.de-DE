@@ -29,7 +29,7 @@ In diesem Dokument wird beschrieben, wie Sie Aktionstypen für eine Web-Erweiter
 
 Aktionstypen bestehen in der Regel aus dem Folgenden:
 
-1. A [Ansicht](./views.md) wird in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt, über die Benutzer die Aktionseinstellungen ändern können.
+1. Eine [Ansicht](./views.md), die in der Experience Platform-Benutzeroberfläche und in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Aktion zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
 
 ```js

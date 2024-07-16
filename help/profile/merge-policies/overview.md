@@ -7,7 +7,7 @@ exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1265'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
@@ -22,7 +22,7 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusamm
 Dieses Handbuch setzt ein Grundverständnis für mehrere wichtige [!DNL Experience Platform]-Funktionen voraus. Bevor Sie dieses Handbuch befolgen und mit Zusammenführungsrichtlinien arbeiten, überprüfen Sie bitte die Dokumentation für die folgendenen Services:
 
 * [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform Identity-Dienst](../../identity-service/home.md): Ermöglicht das Echtzeit-Kundenprofil durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die erfasst wird [!DNL Platform].
+* [Adobe Experience Platform Identity-Dienst](../../identity-service/home.md): Ermöglicht das Echtzeit-Kundenprofil durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in [!DNL Platform] erfasst werden.
 * [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Zusammenführungsrichtlinien verstehen
@@ -33,7 +33,7 @@ Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert,
 
 Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die Zusammenführungsrichtlinie, welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen.
 
-Zusammenführungsrichtlinien sind für Ihre Organisation privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Sie können auch eine standardmäßige Zusammenführungsrichtlinie angeben, die verwendet wird, wenn keine explizite Angabe erfolgt. Weitere Informationen finden Sie im Abschnitt [Standardmäßige Zusammenführungsrichtlinien](#default-merge-policy) weiter unten in diesem Dokument. Bitte beachten Sie, dass pro Organisation maximal fünf Zusammenführungsrichtlinien zulässig sind.
+Zusammenführungsrichtlinien sind für Ihre Organisation privat, sodass Sie verschiedene Richtlinien erstellen können, um Schemas auf die gewünschte Weise zusammenzuführen. Sie können auch eine standardmäßige Zusammenführungsrichtlinie angeben, die verwendet wird, wenn keine explizite Angabe erfolgt. Weitere Informationen finden Sie im Abschnitt zu den [standardmäßigen Zusammenführungsrichtlinien](#default-merge-policy) weiter unten in diesem Dokument. Bitte beachten Sie, dass pro Organisation maximal fünf Zusammenführungsrichtlinien zulässig sind.
 
 ## Zusammenführungsmethoden {#merge-methods}
 
@@ -63,7 +63,7 @@ Identitätszuordnung ([!UICONTROL ID-Zuordnung]) ist der Prozess der Identifikat
 * **[!UICONTROL Keine]:** Wenn diese Option ausgewählt ist, werden IDs nicht zugeordnet. Wenn die Segmentierung erfolgt, werden Identitäten, die zu derselben Person gehören können, nicht zugeordnet. Bei der Segmentierung werden nur die mit jeder einzelnen ID verknüpften Attribute berücksichtigt, wenn festgestellt wird, ob ein Kunde für die Zielgruppenzugehörigkeit qualifiziert ist. Dies könnte dazu führen, dass ein einzelner Kunde über mehrere Profile verfügt und jedes Profil für verschiedene Zielgruppen qualifiziert ist, sodass mehrere Marketing-Nachrichten an denselben Kunden gesendet werden.
 * **[!UICONTROL Privates Diagramm]:** Wenn das private Diagramm ausgewählt ist, werden mehrere Identitäten, die sich auf dieselbe Person beziehen, zugeordnet. Dies führt dazu, dass der Kunde über ein einzelnes Profil verfügt, und ermöglicht der Segmentierung, bei der Bestimmung der Segmentqualifizierung mehrere Attribute aus mehreren verwandten Identitäten zu berücksichtigen. In diesem Szenario weist der Kunde wahrscheinlich ein einzelnes Profil auf, qualifiziert sich für eine Zielgruppe, basierend auf der Kombination von Attributen über Identitäten hinweg, und erhält nur eine Marketing-Nachricht.
 
-Um mehr über Identitäten und ihre Rolle beim Generieren von Profilen und Zielgruppen zu erfahren, lesen Sie zunächst das [Identity Service - Übersicht](../../identity-service/home.md).
+Um mehr über Identitäten und ihre Rolle beim Generieren von Profilen und Zielgruppen zu erfahren, lesen Sie zunächst die [Übersicht über den Identitätsdienst](../../identity-service/home.md) .
 
 ## Standardmäßige Zusammenführungsrichtlinie {#default-merge-policy}
 

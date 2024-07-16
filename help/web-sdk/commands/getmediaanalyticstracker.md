@@ -1,19 +1,19 @@
 ---
 title: getMediaAnalyticsTracker
 description: Erfahren Sie, wie Sie ein Media Analytics-Tracker-Objekt erstellen und es zur Verfolgung von Medienereignissen verwenden.
-source-git-commit: 9384c1cc15441199e898d6cc0850e5422253f106
+exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 3%
 
 ---
 
-
 # `getMediaAnalyticsTracker`
 
-Mit diesem Web SDK-Befehl wird ein Media Analytics-Tracker abgerufen. Mit diesem Befehl können Sie eine Objektinstanz erstellen und dann dieselben APIs wie die von der [Media JS-Bibliothek](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), verfolgen Sie Medienereignisse.
+Mit diesem Web SDK-Befehl wird ein Media Analytics-Tracker abgerufen. Mit diesem Befehl können Sie eine Objektinstanz erstellen und dann mithilfe derselben APIs, die von der [Medien-JS-Bibliothek](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) bereitgestellt werden, Medienereignisse verfolgen.
 
-Die `getMediaAnalyticsTracker` gibt die Legacy Media Analytics-API zurück.
+Der Befehl `getMediaAnalyticsTracker` gibt die Legacy Media Analytics-API zurück.
 
 
 | Name der Methode | Beschreibung | Aufbau |

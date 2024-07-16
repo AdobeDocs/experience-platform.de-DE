@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Experimente; Sensei-API für maschinelles Lernen
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Experimente; Sensei Machine Learning API
 solution: Experience Platform
 title: Experiment-API-Endpunkt
 description: Modellentwicklung und -schulung finden auf Experimentebene statt, bei der ein Experiment aus einer MLInstance, Trainings-Läufen und Scoring-Läufen besteht.
@@ -53,7 +53,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`).
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält.
 
 ```json
 {
@@ -100,11 +100,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `{TASK}` | Gibt die Aufgabe der Ausführung an. Setzen Sie diesen Wert auf `train` für die Ausbildung, `score` für Scoring oder `featurePipeline` für die Funktions-Pipeline. |
+| `{TASK}` | Gibt die Aufgabe der Ausführung an. Legen Sie diesen Wert entweder auf `train` für die Schulung, auf `score` für die Auswertung oder auf `featurePipeline` für die Feature Pipeline fest. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload mit den Details der neu erstellten Ausführung zurück, einschließlich der geerbten standardmäßigen Trainings- oder Scoring-Parameter und der eindeutigen Kennung der Ausführung (`{RUN_ID}`).
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Ausführung einschließlich der geerbten standardmäßigen Trainings- oder Scoring-Parameter und der eindeutigen Kennung der Ausführung (`{RUN_ID}`) enthält.
 
 ```json
 {
@@ -160,7 +160,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Experimenten zurück, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`).
+Eine erfolgreiche Antwort gibt eine Liste von Experimenten zurück, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`) aufweisen.
 
 ```json
 {
@@ -259,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Beschreibung |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Eine gültige Experiment-ID. |
-| `{QUERY_PARAMETER}` | Eines der [Verfügbare Abfrageparameter](./appendix.md#query) verwendet, um Ergebnisse zu filtern. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
 | `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
@@ -277,7 +277,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die eine Liste der Ausführungen und deren Details einschließlich ihrer Experimentablauf-ID (`{RUN_ID}`).
+Eine erfolgreiche Antwort gibt eine Payload zurück, die eine Liste von Ausführungen und deren Details einschließlich ihrer Experimentablauf-ID (`{RUN_ID}`) enthält.
 
 ```json
 {
@@ -307,7 +307,7 @@ Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaf
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [Abrufen des Experiments nach ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, zunächst eine GET-Anfrage zum Abrufen des Experiments nach ID](#retrieve-specific) durchzuführen. [ Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen eines Experiments und weist zunächst diese Eigenschaften auf:
 

@@ -5,16 +5,16 @@ description: Die Gainsight-Erweiterung ist ein Personalisierungsziel in Adobe Ex
 exl-id: f73042e0-e540-4373-86c2-60be3749c049
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 93%
+source-wordcount: '443'
+ht-degree: 90%
 
 ---
 
-# [!DNL Gainsight]-Erweiterung  {#gainsight-extension}
+# [!DNL Gainsight]-Erweiterung {#gainsight-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Gainsight]Mit den Tools von können Produktverantwortliche das Benutzerverhalten verstehen, die Produktakzeptanz steigern und Feedback von Benutzern erfassen.
+Mit [!DNL Gainsight] erhalten Produkteigentümer die Tools, um das Benutzerverhalten zu verstehen, die Produktakzeptanz zu steigern und Benutzerfeedback zu erfassen.
 
 [!DNL Gainsight] ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Gainsight] Erweiterung:
+So installieren Sie die [!DNL Gainsight]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

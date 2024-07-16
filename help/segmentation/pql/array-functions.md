@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: Array-, List- und Set PQL-Funktionen
-description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen erleichtern.
+title: Array-, List- und Set PQL Functions
+description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen vereinfachen.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 97%
+source-wordcount: '753'
+ht-degree: 94%
 
 ---
 
 # Funktionen für Arrays, Listen und Sets
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen erleichtern. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
 
 ## Enthalten
 

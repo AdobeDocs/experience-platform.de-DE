@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `name` des [!DNL MailChimp] -Quelle, die im vorherigen Schritt erstellt wurde.
+Die folgende Anfrage aktualisiert die `name` der im vorherigen Schritt erstellten [!DNL MailChimp] Quelle.
 
 ```shell
 PUT -X GET \

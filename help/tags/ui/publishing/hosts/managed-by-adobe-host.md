@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Standard-Hosting-Option für die Bereit
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 89%
 
 ---
@@ -76,7 +76,7 @@ Diese gestaffelten Cache-Invalidierungen geben den Quell-Server-Gruppen Zeit, di
 
 Bibliotheks-Builds werden auch über den `cache-control`-HTTP-Header im Browser zwischengespeichert. Bei der Verwendung von Hosts, die von Adobe verwaltet werden, haben Sie keine Kontrolle über die Header, die in API-Antworten zurückgegeben werden. Daher wird die Adobe-Standardeinstellung für die Zwischenspeicherung verwendet. Mit anderen Worten können Sie keine benutzerdefinierten Header für von Adobe verwaltete Hosts verwenden. Wenn Sie einen benutzerdefinierten `cache-control`-Header benötigen, sollten Sie das Hosting stattdessen [selbst übernehmen](self-hosting-libraries.md).
 
-Die Ablaufzeit für Ihren im Browser zwischengespeicherten Bibliotheks-Build (bestimmt durch die Variable `cache-control` -Kopfzeile) hängt von der verwendeten Tag-Umgebung ab:
+Die Ablaufzeit für Ihren im Browser zwischengespeicherten Bibliotheks-Build (der durch die Kopfzeile `cache-control` bestimmt wird) hängt von der verwendeten Tag-Umgebung ab:
 
 | Umgebung | Wert `cache-control` |
 | --- | --- |
@@ -90,7 +90,7 @@ Cache-Steuerungs-Header werden nur für den Hauptbibliotheks-Build angewendet. A
 
 ## Verwenden von Adobe-verwaltetem Hosting in der Benutzeroberfläche
 
-Wenn Sie zum ersten Mal eine Eigenschaft in der Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche erstellen, wird automatisch ein von der Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
+Wenn Sie zum ersten Mal eine Eigenschaft in der Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche erstellen, wird automatisch ein von Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen, die sofort nutzbare Eigenschaften haben, werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
 
 >[!NOTE]
 >
@@ -98,7 +98,6 @@ Wenn Sie zum ersten Mal eine Eigenschaft in der Platform-Benutzeroberfläche ode
 >
 >1. Wählen Sie die Registerkarte **[!UICONTROL Hosts]** in Ihrer Eigenschaft aus und wählen Sie dann **[!UICONTROL Host hinzufügen]** aus.
 >1. Geben Sie einen Namen für den Host ein, wählen Sie als Host-Typ **[!UICONTROL Verwaltet von Adobe]** aus und wählen Sie dann **[!UICONTROL Speichern]**.
-
 >
 >Anschließend können Sie Ihre Umgebung nach Bedarf dem von Adobe verwalteten Host erneut zuweisen.
 

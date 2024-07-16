@@ -11,13 +11,13 @@ ht-degree: 6%
 
 # CSV-Vorlage zum Schema-Konversions-API-Endpunkt
 
-Die `/rpc/csv2schema` -Endpunkt im [!DNL Schema Registry] Mit der API können Sie automatisch ein Experience-Datenmodell (XDM)-Schema mithilfe einer CSV-Datei als Vorlage erstellen. Mithilfe dieses Endpunkts können Sie Vorlagen erstellen, um Schemafelder per Massenimport zu importieren und die manuelle API- oder UI-Arbeit zu reduzieren.
+Mit dem Endpunkt `/rpc/csv2schema` in der API [!DNL Schema Registry] können Sie automatisch ein XDM-Schema (Experience-Datenmodell) erstellen, indem Sie eine CSV-Datei als Vorlage verwenden. Mithilfe dieses Endpunkts können Sie Vorlagen erstellen, um Schemafelder per Massenimport zu importieren und die manuelle API- oder UI-Arbeit zu reduzieren.
 
 ## Erste Schritte
 
-Die `/rpc/csv2schema` Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Adobe Experience Platform-APIs benötigt werden.
+Der Endpunkt `/rpc/csv2schema` ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie bitte das [Erste Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Adobe Experience Platform-APIs benötigt werden.
 
-Die `/rpc/csv2schema` Endpunkt ist Teil der Remote-Prozeduraufrufe (RPCs), die von der [!DNL Schema Registry]. Im Gegensatz zu anderen Endpunkten im [!DNL Schema Registry] API-, RPC-Endpunkte erfordern keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type`und verwenden Sie keine `CONTAINER_ID`. Stattdessen müssen sie die `/rpc` -Namespace, wie in den API-Aufrufen unten dargestellt.
+Der Endpunkt `/rpc/csv2schema` ist Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API erfordern RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den Namespace `/rpc` verwenden, wie in den API-Aufrufen unten dargestellt.
 
 ## CSV-Dateianforderungen
 
@@ -25,37 +25,37 @@ Um diesen Endpunkt zu nutzen, müssen Sie zunächst eine CSV-Datei mit entsprech
 
 | CSV-Kopfzeilenposition | CSV-Headername | Erforderlich/Optional | Beschreibung |
 | --- | --- | --- | --- |
-| 1 | `isIgnored` | Optional | Wenn eingeschlossen und auf `true`gibt an, dass das Feld nicht bereit für den API-Upload ist und ignoriert werden sollte. |
+| 1 | `isIgnored` | Optional | Wenn eingeschlossen und auf `true` gesetzt, zeigt an, dass das Feld nicht bereit zum API-Upload ist und ignoriert werden sollte. |
 | 2 | `isCustom` | Erforderlich | Gibt an, ob das Feld ein benutzerdefiniertes Feld ist oder nicht. |
 | 3 | `fieldGroupId` | Optional | Die ID der Feldergruppe, der ein benutzerdefiniertes Feld zugeordnet werden soll. |
-| 4 | `fieldGroupName` | (Siehe Beschreibung) | Der Name der Feldergruppe, mit der dieses Feld verknüpft werden soll.<br><br>Optional für benutzerdefinierte Felder, die keine vorhandenen Standardfelder erweitern. Wenn das Feld leer gelassen wird, weist das System automatisch einen Namen zu.<br><br>Erforderlich für Standardfelder oder benutzerdefinierte Felder, die Standardfeldgruppen erweitern, die zum Abfragen der `fieldGroupId`. |
-| 5 | `fieldPath` | Erforderlich | Der vollständige Pfad für die XED-Punktnotation für das Feld. So schließen Sie alle Felder aus einer Standardfeldgruppe ein (wie unter `fieldGroupName`), setzen Sie den Wert auf `ALL`. |
+| 4 | `fieldGroupName` | (Siehe Beschreibung) | Der Name der Feldergruppe, mit der dieses Feld verknüpft werden soll.<br><br>Optional für benutzerdefinierte Felder, die keine vorhandenen Standardfelder erweitern. Wenn das Feld leer gelassen wird, weist das System automatisch einen Namen zu.<br><br>Erforderlich für Standardfelder oder benutzerdefinierte Felder, die Standardfeldgruppen erweitern, was zur Abfrage von `fieldGroupId` verwendet wird. |
+| 5 | `fieldPath` | Erforderlich | Der vollständige Pfad für die XED-Punktnotation für das Feld. Um alle Felder aus einer Standardfeldgruppe (wie unter `fieldGroupName` angegeben) einzuschließen, setzen Sie den Wert auf `ALL`. |
 | 6 | `displayName` | Optional | Der Titel oder Anzeigename für das Feld. Kann auch ein Alias für den Titel sein, sofern vorhanden. |
 | 7 | `fieldDescription` | Optional | Eine Beschreibung für das Feld. Kann auch ein Alias für die Beschreibung sein, sofern vorhanden. |
-| 8 | `dataType` | (Siehe Beschreibung) | Gibt die [Basistyp](../schema/field-constraints.md#basic-types) für das Feld. Erforderlich für alle benutzerdefinierten Felder.<br><br>Wenn `dataType` auf `object`, entweder `properties` oder `$ref` muss auch für dieselbe Zeile definiert werden, aber nicht für beide. |
+| 8 | `dataType` | (Siehe Beschreibung) | Gibt den [grundlegenden Datentyp](../schema/field-constraints.md#basic-types) für das Feld an. Erforderlich für alle benutzerdefinierten Felder.<br><br>Wenn `dataType` auf `object` gesetzt ist, müssen entweder `properties` oder `$ref` auch für dieselbe Zeile definiert werden, aber nicht für beide. |
 | 9 | `isRequired` | Optional | Gibt an, ob das Feld für die Datenerfassung erforderlich ist. |
-| 10 | `isArray` | Optional | Gibt an, ob das Feld ein Array der angegebenen `dataType`. |
+| 10 | `isArray` | Optional | Gibt an, ob das Feld ein Array des angegebenen `dataType` ist. |
 | 11 | `isIdentity` | Optional | Gibt an, ob das Feld ein Identitätsfeld ist. |
-| 12 | `identityNamespace` | Erforderlich, wenn `isIdentity` ist wahr | Die [Identitäts-Namespace](../../identity-service/features/namespaces.md) für das Identitätsfeld. |
+| 12 | `identityNamespace` | Erforderlich, wenn `isIdentity` wahr ist | Der [Identitäts-Namespace](../../identity-service/features/namespaces.md) für das Identitätsfeld. |
 | 13 | `isPrimaryIdentity` | Optional | Gibt an, ob das Feld die primäre Identität für das Schema ist. |
 | 14 | `minimum` | Optional | (Nur für numerische Felder) Der Mindestwert für das Feld. |
 | 15 | `maximum` | Optional | (Nur für numerische Felder) Der Maximalwert für das Feld. |
-| 16 | `enum` | Optional | Eine Liste von Enum-Werten für das Feld, ausgedrückt als Array (z. B. `[value1,value2,value3]`). |
+| 16 | `enum` | Optional | Eine Liste der Enum-Werte für das Feld, ausgedrückt als Array (z. B. `[value1,value2,value3]`). |
 | 17 | `stringPattern` | Optional | (Nur für Zeichenfolgenfelder) Ein Regex-Muster, mit dem der Zeichenfolgenwert übereinstimmen muss, um die Validierung während der Datenerfassung zu bestehen. |
 | 18 | `format` | Optional | (Nur für Zeichenfolgenfelder) Das Format für das Zeichenfolgenfeld. |
 | 19 | `minLength` | Optional | (Nur für Zeichenfolgenfelder) Die Mindestlänge des Zeichenfolgenfelds. |
 | 20 | `maxLength` | Optional | (Nur für Zeichenfolgenfelder) Die maximale Länge des Zeichenfolgenfelds. |
 | 21 | `properties` | (Siehe Beschreibung) | Erforderlich, wenn `dataType` auf `object` und `$ref` nicht definiert ist. Dadurch wird der Objekttext als JSON-Zeichenfolge definiert (z. B. `{"myField": {"type": "string"}}`). |
-| 22 | `$ref` | (Siehe Beschreibung) | Erforderlich, wenn `dataType` auf `object` und `properties` nicht definiert ist. Dadurch wird die `$id` des referenzierten Objekts für den Objekttyp (z. B. `https://ns.adobe.com/xdm/context/person`). |
-| 23 | `comment` | Optional | Wann `isIgnored` auf `true`, wird diese Spalte verwendet, um die Kopfzeileninformationen des Schemas anzugeben. |
+| 22 | `$ref` | (Siehe Beschreibung) | Erforderlich, wenn `dataType` auf `object` und `properties` nicht definiert ist. Dadurch wird der `$id` des referenzierten Objekts für den Objekttyp (z. B. `https://ns.adobe.com/xdm/context/person`) definiert. |
+| 23 | `comment` | Optional | Wenn `isIgnored` auf `true` gesetzt ist, wird diese Spalte verwendet, um die Kopfzeileninformationen des Schemas bereitzustellen. |
 
 {style="table-layout:auto"}
 
-Siehe Folgendes [CSV-Vorlage](../assets/sample-csv-template.csv) , um zu bestimmen, wie Ihre CSV-Datei formatiert werden soll.
+In der folgenden [CSV-Vorlage](../assets/sample-csv-template.csv) erfahren Sie, wie Ihre CSV-Datei formatiert werden soll.
 
 ## Export-Payload aus einer CSV-Datei erstellen
 
-Nachdem Sie Ihre CSV-Vorlage eingerichtet haben, können Sie die Datei an die `/rpc/csv2schema` -Endpunkt und konvertieren Sie ihn in eine Export-Payload.
+Nachdem Sie Ihre CSV-Vorlage eingerichtet haben, können Sie die Datei an den `/rpc/csv2schema` -Endpunkt senden und in eine Export-Payload konvertieren.
 
 **API-Format**
 
@@ -83,7 +83,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `csv-file` | Der Pfad zur CSV-Vorlage, die auf Ihrem lokalen Computer gespeichert ist. |
-| `schema-class-id` | Die `$id` des XDM [class](../schema/composition.md#class) dass dieses Schema verwendet. |
+| `schema-class-id` | Die `$id` der XDM [class](../schema/composition.md#class) , die dieses Schema verwendet. |
 | `schema-name` | Ein Anzeigename für das Schema. |
 | `schema-description` | Eine Beschreibung für das Schema. |
 
@@ -360,6 +360,6 @@ Eine erfolgreiche Antwort gibt eine Export-Payload zurück, die aus der CSV-Date
 
 ## Importieren der Schema-Payload
 
-Nachdem Sie die Export-Payload aus der CSV-Datei generiert haben, können Sie diese Payload an die `/rpc/import` -Endpunkt zum Generieren des Schemas.
+Nachdem Sie die Export-Payload aus der CSV-Datei generiert haben, können Sie diese Payload an den `/rpc/import` -Endpunkt senden, um das Schema zu generieren.
 
-Siehe [Import-Endpunkthandbuch](./import.md) für Details zum Generieren von Schemas aus Export-Payloads.
+Weitere Informationen zum Generieren von Schemas aus Export-Payloads finden Sie im [Import-Endpunkthandbuch](./import.md) .

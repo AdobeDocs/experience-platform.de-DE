@@ -5,16 +5,16 @@ description: Die Google Ads-Erweiterung ist ein Werbeziel in Adobe Experience Pl
 exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 83%
+source-wordcount: '464'
+ht-degree: 84%
 
 ---
 
-# [!DNL Google Ads]-Erweiterung 
+# [!DNL Google Ads]-Erweiterung
 
 ## Übersicht {#overview}
 
-Diese Erweiterung verfolgt Konversionen von Benutzern, die auf Ihre [!DNL Google Ads]. Sie müssen auch die gtag.js-Erweiterung installieren und sie Ihrer Bibliothek hinzufügen, wie [!DNL Google Ads] hängt davon ab.
+Diese Erweiterung verfolgt Konversionen von Benutzern, die auf Ihr [!DNL Google Ads] klicken. Sie müssen auch die gtag.js-Erweiterung installieren und sie Ihrer Bibliothek hinzufügen, da [!DNL Google Ads] davon abhängig ist.
 
 [!DNL Google Ads] ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Google Ads] Erweiterung:
+So installieren Sie die [!DNL Google Ads]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

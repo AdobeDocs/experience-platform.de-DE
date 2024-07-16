@@ -4,22 +4,22 @@ description: In diesem Dokument wird erläutert, wie Sie mithilfe von Query Serv
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 # Analytics-Einblicke für Web- und mobile Interaktionen
 
-Mit Adobe Experience Platform können Sie Daten aus Adobe Analytics Report Suites mithilfe von XDM-Feldern (Experience-Datenmodell) erfassen, um Datensätze zu füllen. Diese Analysedaten werden entsprechend dem [!DNL XDM ExperienceEvent] -Klasse. Query Service kann diese Daten dann nutzen, indem SQL-Abfragen ausgeführt werden, um wertvolle Einblicke aus dem Verhalten eines Benutzers gegenüber den digitalen Plattformen zu erhalten.
+Mit Adobe Experience Platform können Sie Daten aus Adobe Analytics Report Suites mithilfe von XDM-Feldern (Experience-Datenmodell) erfassen, um Datensätze zu füllen. Diese Analysedaten werden entsprechend der [!DNL XDM ExperienceEvent] -Klasse geändert. Query Service kann diese Daten dann nutzen, indem SQL-Abfragen ausgeführt werden, um wertvolle Einblicke aus dem Verhalten eines Benutzers gegenüber den digitalen Plattformen zu erhalten.
 
 Dieses Dokument bietet eine Vielzahl von SQL-Beispielabfragen, die gängige Anwendungsfälle beim Erstellen von Einblicken aus Web- und mobilen Analytics-Daten veranschaulichen.
 
-Siehe [Dokumentation zu Analytics-Feldzuordnungen](../../sources/connectors/adobe-applications/mapping/analytics.md) für weitere Informationen zur Erfassung und Zuordnung von Analysedaten.
+Weitere Informationen zur Erfassung und Zuordnung von Analysedaten finden Sie in der Dokumentation zu Analytics-Feldzuordnungen ](../../sources/connectors/adobe-applications/mapping/analytics.md) .[
 
 ## Erste Schritte
 
-Für jeden der folgenden Anwendungsfälle wird ein parametrisiertes SQL-Abfragebeispiel als Vorlage bereitgestellt, die Sie anpassen können. Stellen Sie Parameter überall dort bereit, wo Sie sie sehen `{ }` in den SQL-Beispielen für den Datensatz, die eVar, das Ereignis oder den Zeitrahmen, den Sie bewerten möchten.
+Für jeden der folgenden Anwendungsfälle wird ein parametrisiertes SQL-Abfragebeispiel als Vorlage bereitgestellt, die Sie anpassen können. Geben Sie Parameter an, wo immer Sie in den SQL-Beispielen `{ }` für den Datensatz, das eVar, das Ereignis oder den Zeitrahmen sehen, den Sie bewerten möchten.
 
 ## Ziele
 

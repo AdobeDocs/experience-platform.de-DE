@@ -28,9 +28,9 @@ Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitste
 
 Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und zusätzliche Begriffe finden Sie im [Offer decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
-* **Entscheidungsbereiche:** Für Offer decisioning sind Entscheidungsbereiche die Base64-kodierten Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten, die der offer decisioning-Dienst verwenden soll, um Angebote vorzuschlagen.
+* **Entscheidungsbereiche:** Für Offer decisioning sind Entscheidungsbereiche die Base64-kodierten Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten, die der offer decisioning-Dienst zum Anbieten von Angeboten verwenden soll.
 
-  *Entscheidungsbereich JSON:*
+  *Entscheidungsbereich-JSON:*
 
   ```json
   {
@@ -39,7 +39,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
   }
   ```
 
-  *Entscheidungsbereich Base64-kodierte Zeichenfolge:*
+  *Entscheidungsumfang Base64-kodierte Zeichenfolge:*
 
   ```json
   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
@@ -47,28 +47,28 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
   >[!TIP]
   >
-  >Sie können den Entscheidungsbereichswert aus dem **Aktivitätsübersicht** in der Benutzeroberfläche.
+  >Sie können den Wert für den Entscheidungsbereich von der Seite **Aktivitätsübersicht** in der Benutzeroberfläche kopieren.
 
-  ![Einstellungen für Entscheidungskopien.](assets/decision-scope-copy.png)
+  ![Einstellungen zum Kopieren von Entscheidungen.](assets/decision-scope-copy.png)
 
-* **Datenspeicher:** Weitere Informationen finden Sie im [datastreams](/help/datastreams/overview.md) Dokumentation.
+* **Datenspeicher:** Weitere Informationen finden Sie in der Dokumentation zu [datastreams](/help/datastreams/overview.md) .
 
-* **Identität**: Weitere Informationen finden Sie in dieser Dokumentation , in der beschrieben wird, wie [Platform Web SDK verwendet Identity Service](../../identity/overview.md).
+* **Identität**: Weitere Informationen dazu, wie [Platform Web SDK Identity Service verwendet](../../identity/overview.md), finden Sie in dieser Dokumentation.
 
 ## Aktivieren von Offer decisioning
 
 Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
-1. Aktivierte Adobe Experience Platform in Ihrem [datastream](/help/datastreams/overview.md) und aktivieren Sie die Option &quot;Offer decisioning&quot;
+1. Adobe Experience Platform in Ihrem [Datastream](/help/datastreams/overview.md) aktiviert und das Kontrollkästchen &quot;Offer decisioning&quot;aktiviert
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Befolgen Sie die Anweisungen unter [SDK installieren](/help/web-sdk/install/overview.md) (Das SDK kann eigenständig oder über die Benutzeroberfläche installiert werden. Siehe [Schnellstartanleitung für Tags](/help/tags/quick-start/quick-start.md)) für weitere Informationen.
-1. SDK für Offer decisioning konfigurieren mit `personalization.decisionScopes`. Weitere Offer decisioning-spezifische Schritte finden Sie unten.
+1. Befolgen Sie die Anweisungen unter [Installieren des SDK](/help/web-sdk/install/overview.md) (Das SDK kann eigenständig oder über die Benutzeroberfläche installiert werden. Weitere Informationen finden Sie in der Schnellstartanleitung ](/help/tags/quick-start/quick-start.md) für [Tags .
+1. Konfigurieren Sie das SDK für die Offer decisioning mit `personalization.decisionScopes`. Weitere Offer decisioning-spezifische Schritte finden Sie unten.
 
    * Installieren des eigenständigen SDK
 
-      1. Konfigurieren Sie die Aktion &quot;sendEvent&quot; mit `personalization.decisionScopes`
+      1. Konfigurieren der Aktion &quot;sendEvent&quot;mit `personalization.decisionScopes`
 
      ```javascript
      alloy("sendEvent", {
@@ -100,15 +100,15 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
       1. Erstellen Sie Ihre [Regeln](/help/tags/ui/managing-resources/rules.md).
 
-         * Fügen Sie die Aktion &quot;Ereignis senden&quot;für das Platform Web SDK hinzu und fügen Sie die entsprechende hinzu `decisionScopes` zur Konfiguration dieser Aktion
+         * Fügen Sie die Aktion &quot;Ereignis senden&quot;des Platform Web SDK hinzu und fügen Sie die relevante `decisionScopes` zur Konfiguration dieser Aktion hinzu.
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. [Erstellen und Veröffentlichen einer Bibliothek](/help/tags/ui/publishing/libraries.md) mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
+      1. [Erstellen und veröffentlichen Sie eine Bibliothek](/help/tags/ui/publishing/libraries.md), die alle von Ihnen konfigurierten relevanten Regeln, Datenelemente und Erweiterungen enthält.
 
 ## Beispielanfragen und -antworten
 
-### One `decisionScopes` value
+### Ein `decisionScopes` -Wert
 
 **Anfrage**
 
@@ -139,8 +139,8 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
 | Eigenschaft | Erforderlich | Beschreibung | Beschränkungen | Beispiel |
 |---|---|---|---|---|
-| `identityMap` | Ja | Siehe hierzu [Dokumentation zu Identity Service](../../identity/overview.md). | Eine Identität pro Anfrage. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Hinweis: Benutzer müssen die `ECID` -Parameter im API-Aufruf. Dieser Parameter wird bei Bedarf automatisch zum -Aufruf hinzugefügt. |
-| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximum 30 `decisionScopes` pro Anfrage. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `identityMap` | Ja | Weitere Informationen finden Sie in der Dokumentation zum [Identitätsdienst](../../identity/overview.md) . | Eine Identität pro Anfrage. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Hinweis: Benutzer müssen den Parameter `ECID` nicht in den API-Aufruf einbeziehen. Dieser Parameter wird bei Bedarf automatisch zum -Aufruf hinzugefügt. |
+| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximal 30 `decisionScopes` pro Anfrage. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **Antwort**
 
@@ -203,7 +203,7 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 | `deliveryUrl` | Bildinhalt, der mit dem vorgeschlagenen Angebot verknüpft ist, im Format einer URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Mit dem vorgeschlagenen Angebot verknüpfte Eigenschaften im Format eines JSON-Objekts. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
-### Mehrere `decisionScopes` values
+### Mehrere `decisionScopes` Werte
 
 **Anfrage**
 
@@ -236,8 +236,8 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
 | Eigenschaft | Erforderlich | Beschreibung | Beschränkungen | Beispiel |
 |---|---|---|---|---|
-| `identityMap` | Ja | Siehe hierzu [Dokumentation zu Identity Service](../../identity/overview.md). | Eine Identität pro Anfrage. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Hinweis: Benutzer müssen die `ECID` -Parameter im API-Aufruf. Dieser Parameter wird bei Bedarf automatisch zum -Aufruf hinzugefügt. |
-| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximum 30 `decisionScopes` pro Anfrage. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `identityMap` | Ja | Weitere Informationen finden Sie in der Dokumentation zum [Identitätsdienst](../../identity/overview.md) . | Eine Identität pro Anfrage. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`. <br><br> Hinweis: Benutzer müssen den Parameter `ECID` nicht in den API-Aufruf einbeziehen. Dieser Parameter wird bei Bedarf automatisch zum -Aufruf hinzugefügt. |
+| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximal 30 `decisionScopes` pro Anfrage. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **Antwort**
 
@@ -332,4 +332,4 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
 ## Einschränkungen
 
-Einige Angebotsbegrenzungen werden derzeit nicht von den mobilen Edge-Netzwerk-Workflows unterstützt, z. B. Capping. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Einige Angebotsbegrenzungen werden derzeit nicht von den mobilen Edge Network-Workflows unterstützt, z. B. Begrenzungen. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

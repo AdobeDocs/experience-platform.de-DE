@@ -17,12 +17,12 @@ Das Senden von Anzeigeereignissen verbessert die Genauigkeit von Personalisierun
 
 Mit dem Web SDK können Sie Anzeigeereignisse auf zwei Arten senden:
 
-* [Automatisch](#send-automatically), unmittelbar nachdem der personalisierte Inhalt auf der Seite wiedergegeben wurde. Weitere Informationen finden Sie in der Dokumentation [Rendern von personalisiertem Inhalt](rendering-personalization-content.md) für weitere Informationen.
-* [Manuell](#send-sendEvent-calls)durch nachfolgende `sendEvent` -Aufrufe.
+* [Automatisch](#send-automatically), unmittelbar nachdem der personalisierte Inhalt auf der Seite wiedergegeben wurde. Weitere Informationen finden Sie in der Dokumentation zum Rendern personalisierter Inhalte durch [1}.](rendering-personalization-content.md)
+* [Manuell](#send-sendEvent-calls) durch nachfolgende `sendEvent` -Aufrufe.
 
 >[!NOTE]
 >
->Anzeigeereignisse werden beim Aufruf der `applyPropositions` -Funktion.
+>Anzeigeereignisse werden beim Aufruf der Funktion `applyPropositions` nicht automatisch gesendet.
 
 ## Automatische Übermittlung von Anzeigeereignissen {#send-automatically}
 
@@ -31,31 +31,31 @@ Das Senden von Anzeigeereignissen liefert automatisch genauere Analytics-Metrike
 Um Anzeigeereignisse automatisch nach der Wiedergabe des personalisierten Inhalts auf der Seite zu senden, müssen Sie die folgenden Parameter konfigurieren:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` oder nicht spezifiziert
+* `personalization.sendDisplayNotifications: true` oder nicht angegeben
 
-Das Web SDK sendet die Anzeigeereignisse unmittelbar nach der Wiedergabe einer Personalisierung als Ergebnis einer `sendEvent` aufrufen.
+Das Web SDK sendet die Anzeigeereignisse unmittelbar nach der Wiedergabe einer Personalisierung als Ergebnis eines `sendEvent` -Aufrufs.
 
 ## Senden von Anzeigeereignissen in nachfolgenden sendEvent-Aufrufen {#send-sendEvent-calls}
 
-Im Vergleich zu [automatisch](#send-automatically) Senden von Anzeigeereignissen, wenn Sie sie in nachfolgende `sendEvent` -Aufrufe haben Sie auch die Möglichkeit, weitere Informationen über das Laden der Seite in den -Aufruf aufzunehmen. Hierbei kann es sich um zusätzliche Informationen handeln, die bei der Anforderung des personalisierten Inhalts nicht verfügbar waren.
+Im Vergleich zum Versand von [automatischen](#send-automatically) Anzeigeereignissen haben Sie beim Einbeziehen dieser Ereignisse in nachfolgende `sendEvent` -Aufrufe auch die Möglichkeit, weitere Informationen über das Laden der Seite in den Aufruf aufzunehmen. Hierbei kann es sich um zusätzliche Informationen handeln, die bei der Anforderung des personalisierten Inhalts nicht verfügbar waren.
 
-Senden von Anzeigeereignissen in `sendEvent` -Aufrufe minimieren Fehler bei der Absprungrate bei der Verwendung von Adobe Analytics.
+Darüber hinaus werden durch das Senden von Anzeigeereignissen in `sendEvent` -Aufrufen Fehler bei der Absprungrate bei der Verwendung von Adobe Analytics minimiert.
 
 >[!IMPORTANT]
 >
->Bei der Verwendung manuell gerenderter Vorschläge werden Anzeigeereignisse nur über `sendEvent` -Aufrufe. In diesem Fall können keine Anzeigeereignisse automatisch gesendet werden.
+>Bei der Verwendung manuell gerenderter Vorschläge werden Anzeigeereignisse nur über `sendEvent` -Aufrufe unterstützt. In diesem Fall können keine Anzeigeereignisse automatisch gesendet werden.
 
 ### Senden von Anzeigeereignissen für automatisch gerenderte Vorschläge {#auto-rendered-propositions}
 
-Um Anzeigeereignisse für automatisch gerenderte Vorschläge zu senden, müssen Sie die folgenden Parameter im `sendEvent` Aufruf:
+Um Anzeigeereignisse für automatisch gerenderte Vorschläge zu senden, müssen Sie die folgenden Parameter im `sendEvent` -Aufruf konfigurieren:
 
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: false` für den oberen Seitenaufruf
 
-Um die Anzeigeereignisse zu senden, rufen Sie `sendEvent` mit `personalization.includePendingDisplayNotifications: true`
+Um die Anzeigeereignisse zu senden, rufen Sie `sendEvent` mit `personalization.includePendingDisplayNotifications: true` auf
 
 ### Senden von Anzeigeereignissen für manuell gerenderte Vorschläge {#manually-rendered-propositions}
 
-Um Anzeigeereignisse für manuell gerenderte Vorschläge zu senden, müssen Sie sie in die `_experience.decisioning.propositions` XDM-Feld, einschließlich `id`, `scope`, und `scopeDetails` aus den Vorschlägen.
+Um Anzeigeereignisse für manuell gerenderte Vorschläge zu senden, müssen Sie diese in das XDM-Feld `_experience.decisioning.propositions` einschließen, einschließlich der Felder `id`, `scope` und `scopeDetails` aus den Vorschlägen.
 
-Legen Sie außerdem die `include _experience.decisioning.propositionEventType.display` -Feld zu `1`.
+Setzen Sie außerdem das Feld `include _experience.decisioning.propositionEventType.display` auf `1`.

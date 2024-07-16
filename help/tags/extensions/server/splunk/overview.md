@@ -4,8 +4,8 @@ description: Erfahren Sie mehr über die Splunk-Erweiterung für die Ereigniswei
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 100%
+source-wordcount: '976'
+ht-degree: 98%
 
 ---
 
@@ -38,9 +38,9 @@ Sie müssen außerdem über die folgenden technischen Werte verfügen, um die Er
 
 * Ein [Event Collector-Token](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). Token haben in der Regel das UUIDv4-Format wie folgt: `12345678-1234-1234-1234-1234567890AB`.
 * Die Adresse und der Port der Splunk-Plattforminstanz für Ihr Unternehmen. Die Adresse und der Port einer Plattforminstanz haben in der Regel das folgende Format: `mysplunkserver.example.com:443`.
-   >[!IMPORTANT]
-   >
-   > Splunk-Endpunkte, auf die in der Ereignisweiterleitung verwiesen wird, sollten nur Port `443` verwenden. Nicht standardmäßige Ports werden derzeit in Implementierungen der Ereignisweiterleitung nicht unterstützt.
+  >[!IMPORTANT]
+  >
+  > Splunk-Endpunkte, auf die in der Ereignisweiterleitung verwiesen wird, sollten nur Port `443` verwenden. Nicht standardmäßige Ports werden derzeit in Implementierungen der Ereignisweiterleitung nicht unterstützt.
 
 ## Installieren der Splunk-Erweiterung {#install}
 
@@ -92,6 +92,6 @@ Der nächste Schritt besteht darin, die Eigenschaften des Splunk-Ereignisses Dat
 
 In diesem Dokument wurde beschrieben, wie die Splunk-Ereignisweiterleitungs-Erweiterung in der Benutzeroberfläche installiert und konfiguriert wird. Weitere Informationen zur Erfassung von Ereignisdaten in Splunk finden Sie in der offiziellen Dokumentation:
 
-* [Einrichten und Verwenden von HTTP Event Collector in Splunk Web ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
+* [Einrichten und Verwenden der HTTP-Ereigniserfassung im Splunk-Web](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [Einrichten der Authentifizierung mit Token](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
 * [Fehlerbehebung im HTTP Event Collector](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector) (listet auch ein Kompendium von [möglichen Fehler-Codes](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes) auf)

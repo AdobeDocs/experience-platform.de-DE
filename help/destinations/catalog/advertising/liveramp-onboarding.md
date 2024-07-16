@@ -38,7 +38,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 | Audience Origin | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -58,7 +58,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -70,9 +70,9 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 ![Beispiel-Screenshot, der zeigt, wie eine Authentifizierung beim Ziel mithilfe von SFTP mit Passwort erfolgt](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL Port]**: Der für Ihre [!DNL LiveRamp - Onboarding] Speicherort.  Verwenden Sie den Port, der Ihrem geografischen Standort entspricht, wie unten beschrieben:
-   * **[!UICONTROL NA]**: Port verwenden `22`
-   * **[!UICONTROL AU]**: Port verwenden `2222`
+* **[!UICONTROL Port]**: Der für Ihren [!DNL LiveRamp - Onboarding]-Speicherort verwendete Port.  Verwenden Sie den Port, der Ihrem geografischen Standort entspricht, wie unten beschrieben:
+   * **[!UICONTROL NA]**: Port `22` verwenden
+   * **[!UICONTROL AU]**: Port `2222` verwenden
 * **[!UICONTROL Benutzername]**: Der Benutzername für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
 * **[!UICONTROL Passwort]**: Das Passwort für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
 * **[!UICONTROL PGP/GPG-Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihre exportierten Dateien zu verschlüsseln. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
@@ -83,8 +83,8 @@ Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus
 
 ![Beispiel-Screenshot, der zeigt, wie eine Authentifizierung beim Ziel mithilfe eines SSH-Schlüssels erfolgt](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL Port]**: Der für Ihre [!DNL LiveRamp - Onboarding] Speicherort.  Verwenden Sie den Port, der Ihrem geografischen Standort entspricht, wie unten beschrieben:
-   * **[!UICONTROL EU]**: Port verwenden `4222`
+* **[!UICONTROL Port]**: Der für Ihren [!DNL LiveRamp - Onboarding]-Speicherort verwendete Port.  Verwenden Sie den Port, der Ihrem geografischen Standort entspricht, wie unten beschrieben:
+   * **[!UICONTROL EU]**: Port `4222` verwenden
 * **[!UICONTROL Benutzername]**: Der Benutzername für Ihren [!DNL LiveRamp - Onboarding]-Speicherort.
 * **[!UICONTROL SSH-Schlüssel]**: Der private [!DNL SSH]-Schlüssel für die Anmeldung bei Ihrem [!DNL LiveRamp - Onboarding]-Speicherort. Der private Schlüssel muss als eine [!DNL Base64]-verschlüsselte Zeichenfolge formatiert sein und darf nicht passwortgeschützt sein.
 
@@ -123,7 +123,7 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -185,7 +185,7 @@ Wählen Sie nach dem Hinzufügen aller gewünschten Zuordnungen die Option **[!U
 
 Ihre Daten werden an den von Ihnen konfigurierten [!DNL LiveRamp - Onboarding]-Speicherort als CSV-Dateien exportiert.
 
-Exportierte Dateien haben eine maximale Größe von 10 Millionen Zeilen. Experience Platform erzeugt mehrere Dateien pro Versand, wenn die ausgewählten Zielgruppen 10 Millionen Zeilen überschreiten. Wenn Sie erwarten, dass die Grenze für einzelne Dateien überschritten wird, wenden Sie sich an Ihren [!DNL LiveRamp] und bitten Sie sie, die Batch-Erfassung für Sie zu konfigurieren.
+Exportierte Dateien haben eine maximale Größe von 10 Millionen Zeilen. Experience Platform erzeugt mehrere Dateien pro Versand, wenn die ausgewählten Zielgruppen 10 Millionen Zeilen überschreiten. Wenn Sie erwarten, dass die Grenze für einzelne Dateien überschritten wird, wenden Sie sich an Ihren [!DNL LiveRamp] -Support-Mitarbeiter und bitten Sie ihn, die Batch-Erfassung für Sie zu konfigurieren.
 
 Beim Exportieren von Dateien an das [!DNL LiveRamp - Onboarding]-Ziel generiert Platform eine CSV-Datei für jede [Zusammenführungsrichtlinien-ID](../../../profile/merge-policies/overview.md).
 
@@ -255,7 +255,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
-| März 2024 | Funktions- und Dokumentationsaktualisierung | <ul><li>Zusätzliche Unterstützung für Sendungen nach Europa und Australien [!DNL LiveRamp] [!DNL SFTP] Instanzen.</li><li>Die Dokumentation wurde aktualisiert, um bestimmte Konfigurationen für neu unterstützte Regionen zu beschreiben.</li><li>Die maximale Dateigröße wurde von 5 Mio. Zeilen (zuvor) auf 10 Mio. erhöht.</li><li>Die Dokumentation wurde aktualisiert, um die größeren Dateien widerzuspiegeln.</li></ul> |
+| März 2024 | Funktions- und Dokumentationsaktualisierung | <ul><li>Unterstützung für Sendungen in Europa und Australien [!DNL LiveRamp] [!DNL SFTP] -Instanzen hinzugefügt.</li><li>Die Dokumentation wurde aktualisiert, um bestimmte Konfigurationen für neu unterstützte Regionen zu beschreiben.</li><li>Die maximale Dateigröße wurde von 5 Mio. Zeilen (zuvor) auf 10 Mio. erhöht.</li><li>Die Dokumentation wurde aktualisiert, um die größeren Dateien widerzuspiegeln.</li></ul> |
 | Juli 2023 | Erstmalige Veröffentlichung | Ursprüngliche Zielversion und Dokumentation veröffentlicht. |
 
 {style="table-layout:auto"}

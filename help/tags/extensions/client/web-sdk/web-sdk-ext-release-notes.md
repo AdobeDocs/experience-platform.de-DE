@@ -29,16 +29,16 @@ Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
 **Neue Funktionen**
 
-* Unterstützung für die [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) -Komponente in der Erweiterungskonfiguration.
-* Der [`Send Media Event`](action-types.md#send-media-event) Aktion für [!DNL Streaming Media Collection] Funktionalität.
-* Der [`Media: Quality of Experience`](data-element-types.md#quality-experience) Datenelement für [!DNL Streaming Media Collection] Funktionalität.
+* Unterstützung für die Komponente [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) in der Erweiterungskonfiguration hinzugefügt.
+* Die Aktion [`Send Media Event`](action-types.md#send-media-event) für die Funktion [!DNL Streaming Media Collection] wurde hinzugefügt.
+* Das Datenelement [`Media: Quality of Experience`](data-element-types.md#quality-experience) für die Funktion [!DNL Streaming Media Collection] wurde hinzugefügt.
 
 Enthält Version 2.20.0 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Fehlerkorrektur - bei der Suche nach Datenelementen in der [Variable aktualisieren](action-types.md#update-variable) Aktion.
-* Entfernt [!UICONTROL Medien] Ereignistypen aus den Ereignistypen, die in der `sendEvent` Aktion.
+* Fehlerkorrektur - bei der Suche nach Datenelementen in der Aktion [Variable aktualisieren](action-types.md#update-variable) tritt kein Fehler mehr auf.
+* Die Ereignistypen [!UICONTROL Medien] wurden aus den Ereignistypen entfernt, die in der Aktion `sendEvent` verwendet werden sollen.
 
 ## Version 2.22.0 – Samstag, 3. Mai 2024
 
@@ -64,17 +64,17 @@ Enthält Version 2.19.1 des Adobe Experience Platform Web SDK.
 
 **Fehlerbehebungen und Verbesserungen**
 
-* Es wurde ein Problem behoben, bei dem das Array Vorschläge in `Send event complete` -Ereignisse war immer leer.
+* Es wurde ein Problem behoben, bei dem das in `Send event complete` -Ereignissen verfügbare Vorschlagsarray immer leer war.
 
 ## Version 2.21.2 – Donnerstag, 1. November 2023
 
 **Neue Funktionen**
 
-* hinzugefügt `Request default personalization` Option zum Senden der Ereignisaktion.
+* Die Option `Request default personalization` wurde hinzugefügt, um die Ereignisaktion zu senden.
 * Zusätzliche Unterstützung für Seitenereignisse am oberen und unteren Rand in der Sendeereignisaktion.
-* hinzugefügt `Apply propositions` Aktion.
-* hinzugefügt `Evaluate rulesets` Maßnahmen und `Subscribe ruleset items` -Ereignis für In-App-Nachrichten.
-* hinzugefügt `Decision context` , um die Ereignisaktion zu senden.
+* Die Aktion `Apply propositions` wurde hinzugefügt.
+* Die Aktionen `Evaluate rulesets` und `Subscribe ruleset items` wurden für In-App-Nachrichten hinzugefügt.
+* `Decision context` wurde hinzugefügt, um die Ereignisaktion zu senden.
 
 **Fehlerbehebungen und Verbesserungen**
 
@@ -211,7 +211,7 @@ Enthält Version 2.8.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.7.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* Weitere Informationen aus dem Edge Network sind im Ereignis &quot;Ereignis abschließen senden&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit als Teil einer Beta-Version eingeführt werden.
+* Weitere Informationen aus dem Edge Network sind im Ereignis &quot;Event Complete senden&quot;verfügbar, einschließlich `inferences` und `destinations`. Das Format dieser Eigenschaften kann sich ändern, da diese Funktionen derzeit im Rahmen einer Beta bereitgestellt werden.
 
 ## Version 2.7.3 – 7. September 2021
 
@@ -258,10 +258,10 @@ Enthält Version 2.5.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* hinzugefügt [&quot;Dokument entladen&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) aktivieren, um die Benutzeroberfläche für die Aktion &quot;Ereignis senden&quot;zu aktivieren.
+* Das Kontrollkästchen [&quot;Dokumentenentladung&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) wurde zur Benutzeroberfläche der Aktion &quot;Ereignis senden&quot;hinzugefügt.
 * Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 * Dem Feld für das Standardeinverständnis wurde eine QuickInfo hinzugefügt.
-* Unterstützung für Adobe Consent 2.0-Standard bei Verwendung des [`setConsent`](/help/web-sdk/commands/setconsent.md) Befehl.
+* Zusätzliche Unterstützung für den Standard Adobe Consent 2.0 bei Verwendung des Befehls [`setConsent`](/help/web-sdk/commands/setconsent.md) .
 * In der Benutzeroberfläche für das XDM-Objekt-Datenelement wird jetzt eine passendere Fehlermeldung angezeigt, wenn das Zugriffstoken der Benutzenden ungültig ist oder nicht ordnungsgemäß bereitgestellt wurde.
 * Es wurde ein ursprungsübergreifender Fehler behoben (was sich nicht auf die Nutzung der Erweiterung auswirkt), der beim Anzeigen eines XDM-Objekt-Datenelements in der Developer Console für den Browser eingeblendet wurde.
 

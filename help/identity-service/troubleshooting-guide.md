@@ -43,7 +43,7 @@ Wenn in Daten, die von einem Streaming-Endpunkt aufgenommen oder an einen für [
 
 ## Wie erstelle ich in einem XDM-Schema mehrere Identitätsfelder?
 
-[Experience-Datenmodell (XDM)](../xdm/home.md)-Schemas unterstützen die Verwendung mehrerer Identitätsfelder. Jedes Datenfeld vom Typ `string` in einem Schema, das das individuelle XDM-Profil oder die XDM ExperienceEvent-Klasse implementiert, kann als Identitätsfeld gekennzeichnet werden. Nach der Kennzeichnung werden alle in diesen Feldern enthaltenen Daten der Identitätszuordnung des Profils hinzugefügt.
+[Experience-Datenmodell (XDM)](../xdm/home.md)-Schemata unterstützen die Verwendung mehrerer Identitätsfelder. Jedes Datenfeld vom Typ `string` in einem Schema, das das individuelle XDM-Profil oder die XDM ExperienceEvent-Klasse implementiert, kann als Identitätsfeld gekennzeichnet werden. Nach der Kennzeichnung werden alle in diesen Feldern enthaltenen Daten der Identitätszuordnung des Profils hinzugefügt.
 
 Anweisungen zum Kennzeichnen eines XDM-Felds als Identitätsfeld mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Identität](../xdm/tutorials/create-schema-ui.md) im Tutorial zum Schema-Editor. Wenn Sie stattdessen die API nutzen, finden Sie weiterführende Informationen im Abschnitt [Identitätsdeskriptor](../xdm/tutorials/create-schema-api.md) im Tutorial zur Schema Registry-API.
 

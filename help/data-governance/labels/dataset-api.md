@@ -6,7 +6,7 @@ description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen fü
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1314'
 ht-degree: 93%
 
 ---
@@ -103,7 +103,7 @@ Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines
 
 >[!NOTE]
 >
->Wenn für den betreffenden Datensatz derzeit Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem einem Datensatz Beschriftungen hinzugefügt wurden, wird die neueste `etag` -Wert erforderlich, um die Beschriftungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzbezeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die für Änderungen in der Anfrage vorgesehen sind, wobei der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass beim PUT-Aufruf dieselben übergeordneten Entitäten wie beim GET-Aufruf beibehalten werden. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
+>Wenn für den betreffenden Datensatz derzeit Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine PUT-Anfrage hinzugefügt werden, wofür ein `If-Match`-Header erforderlich ist. Nachdem einem Datensatz Bezeichnungen hinzugefügt wurden, ist der neueste `etag` -Wert erforderlich, um die Bezeichnungen zu einem späteren Zeitpunkt zu aktualisieren oder zu entfernen<br>Bevor Sie die PUT-Methode ausführen, müssen Sie eine GET-Anfrage für die Datensatzbezeichnungen ausführen. Stellen Sie sicher, dass Sie nur die spezifischen Felder aktualisieren, die für Änderungen in der Anfrage vorgesehen sind, wobei der Rest unverändert bleibt. Stellen Sie außerdem sicher, dass beim PUT-Aufruf dieselben übergeordneten Entitäten wie beim GET-Aufruf beibehalten werden. Jede Diskrepanz würde zu einem Fehler für den Kunden führen.
 
 Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzkennzeichnungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT-Anfrage verwenden.
 

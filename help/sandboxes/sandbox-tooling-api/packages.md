@@ -13,11 +13,11 @@ ht-degree: 8%
 
 Mit Sandbox-Tools können Sie verschiedene Artefakte auswählen (auch als Objekte bezeichnet) und sie in ein Paket exportieren. Ein Paket kann aus einem einzelnen Artefakt oder mehreren Artefakten bestehen (z. B. Datensätzen oder Schemas). Alle Artefakte, die in einem Paket enthalten sind, müssen aus derselben Sandbox stammen.
 
-Die `/packages` -Endpunkt in der Sandbox-Tool-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Paketen in Ihrer Organisation, einschließlich der Veröffentlichung eines Pakets und des Imports eines Pakets in eine Sandbox.
+Mit dem Endpunkt `/packages` in der Sandbox-Tool-API können Sie Pakete in Ihrer Organisation programmgesteuert verwalten, einschließlich der Veröffentlichung eines Pakets und des Imports eines Pakets in eine Sandbox.
 
-## Erstellen Sie ein Paket: {#create}
+## Package erstellen {#create}
 
-Sie können ein Artefaktpaket mit mehreren Artefakten erstellen, indem Sie eine POST-Anfrage an die `/packages` -Endpunkt hinzugefügt, während Werte für den Namen und den Pakettyp Ihres Pakets angegeben werden.
+Sie können ein Multiartifact-Paket erstellen, indem Sie eine POST-Anfrage an den `/packages` -Endpunkt senden und dabei Werte für den Paketnamen und den Pakettyp angeben.
 
 **API-Format**
 
@@ -57,10 +57,10 @@ curl -X POST \
 | --- | --- | --- | --- |
 | `name` | Der Name Ihres Pakets. | Zeichenfolge | Ja |
 | `description` | Eine Beschreibung, die weitere Informationen zu Ihrem Paket enthält. | Zeichenfolge | Nein |
-| `packageType` | Der Pakettyp lautet **PARTIAL** , um anzugeben, dass Sie bestimmte Artefakte in ein Paket einschließen. | Zeichenfolge | JA |
+| `packageType` | Der Pakettyp ist **PARTIAL** , um anzugeben, dass Sie bestimmte Artefakte in ein Paket einschließen. | Zeichenfolge | JA |
 | `sourceSandbox` | Die Quell-Sandbox des Pakets. | Zeichenfolge | Nein |
 | `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert beträgt 90 Tage ab dem Erstellungsdatum. Das Feld für das Ablaufdatum der Antwort ist Epoch-UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
-| `artifacts` | Eine Liste von Artefakten, die in das Paket exportiert werden sollen. Die `artifacts` Wert sollte **null** oder **leer**, wenn die `packageType` is `FULL`. | Array | Nein |
+| `artifacts` | Eine Liste von Artefakten, die in das Paket exportiert werden sollen. Der `artifacts` -Wert sollte **null** oder **leer** sein, wenn der `packageType` den Wert `FULL` aufweist. | Array | Nein |
 
 **Antwort**
 
@@ -100,11 +100,11 @@ Eine erfolgreiche Antwort gibt Ihr neu erstelltes Paket zurück. Die Antwort ent
 
 ## Aktualisieren eines Pakets {#update}
 
-Sie können ein Paket aktualisieren, indem Sie eine PUT-Anfrage an die `/packages` -Endpunkt.
+Sie können ein Paket aktualisieren, indem Sie eine PUT-Anfrage an den Endpunkt `/packages` senden.
 
 ### Hinzufügen von Artefakten zu einem Paket {#add-artifacts}
 
-Um Artefakte zu einem Paket hinzuzufügen, müssen Sie eine `id` und einschließen **HINZUFÜGEN** für die `action`.
+Um Artefakte zu einem Paket hinzuzufügen, müssen Sie `id` angeben und **ADD** für die `action` einschließen.
 
 **API-Format**
 
@@ -137,8 +137,8 @@ curl -X PUT \
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
-| `action` | Um Artefakte zum Paket hinzuzufügen, sollte der Aktionswert **HINZUFÜGEN**. Diese Aktion wird nur für **PARTIAL** Pakettypen. | Zeichenfolge | Ja |
-| `artifacts` | Eine Liste von Artefakten, die dem Paket hinzugefügt werden sollen. Wenn die Liste **null** oder **leer**. Artefakte werden dedupliziert, bevor sie zum Paket hinzugefügt werden. | Array | Nein |
+| `action` | Um Artefakte zum Paket hinzuzufügen, sollte der Aktionswert **ADD** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
+| `artifacts` | Eine Liste von Artefakten, die dem Paket hinzugefügt werden sollen. Es gibt keine Änderung am Paket, wenn die Liste **null** oder **leer** ist. Artefakte werden dedupliziert, bevor sie zum Paket hinzugefügt werden. | Array | Nein |
 | `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert beträgt 90 Tage ab dem Zeitpunkt, zu dem die PUT-API aufgerufen wird, wenn in der Payload kein Ablaufdatum angegeben ist. Das Feld für das Ablaufdatum der Antwort ist Epoch-UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
 
 **Antwort**
@@ -183,7 +183,7 @@ Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort ent
 
 ### Löschen von Artefakten aus einem Paket {#delete-artifacts}
 
-Um Artefakte aus einem Paket zu löschen, müssen Sie eine `id` und einschließen **DELETE** für die `action`.
+Um Artefakte aus einem Package zu löschen, müssen Sie `id` angeben und **DELETE** für die `action` einschließen.
 
 
 **API-Format**
@@ -216,8 +216,8 @@ curl -X PUT \
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
-| `action` | Um Artefakte aus einem Paket zu löschen, sollte der Aktionswert **DELETE**. Diese Aktion wird nur für **PARTIAL** Pakettypen. | Zeichenfolge | Ja |
-| `artifacts` | Eine Liste von Artefakten, die aus dem Paket gelöscht werden sollen. Wenn die Liste **null** oder **leer**. | Array | Nein |
+| `action` | Um Artefakte aus einem Package zu löschen, sollte der Aktionswert **DELETE** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
+| `artifacts` | Eine Liste von Artefakten, die aus dem Paket gelöscht werden sollen. Es gibt keine Änderung am Paket, wenn die Liste **null** oder **leer** ist. | Array | Nein |
 
 **Antwort**
 
@@ -257,9 +257,9 @@ Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort ent
 
 >[!NOTE]
 >
->Die **AKTUALISIEREN** -Aktion verwendet wird, um die Package-Metadatenfelder des Pakets zu aktualisieren und **cannot** werden verwendet, um einem Paket Artefakte hinzuzufügen/zu löschen.
+>Mit der Aktion **UPDATE** werden die Paketmetadatenfelder des Pakets aktualisiert und **kann** nicht zum Hinzufügen/Löschen von Artefakten zu einem Paket verwendet werden.
 
-Um die Metadatenfelder in einem Paket zu aktualisieren, müssen Sie eine `id` und einschließen **AKTUALISIEREN** für die `action`.
+Um die Metadatenfelder in einem Paket zu aktualisieren, müssen Sie einen `id` angeben und **UPDATE** für den `action` einschließen.
 
 **API-Format**
 
@@ -291,9 +291,9 @@ curl -X PUT \
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
-| `action` | Um die Metadatenfelder in einem Paket zu aktualisieren, sollte der Aktionswert **AKTUALISIEREN**. Diese Aktion wird nur für **PARTIAL** Pakettypen. | Zeichenfolge | Ja |
+| `action` | Um die Metadatenfelder in einem Paket zu aktualisieren, sollte der Aktionswert **UPDATE** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
 | `name` | Der aktualisierte Name des Pakets. Doppelte Paketnamen sind nicht zulässig. | Array | Ja |
-| `sourceSandbox` | Die Quell-Sandbox sollte derselben Organisation angehören, die in der Kopfzeile der Anfrage angegeben ist. | Zeichenfolge | Ja |
+| `sourceSandbox` | Die Source-Sandbox sollte derselben Organisation angehören, die in der Kopfzeile der Anfrage angegeben ist. | Zeichenfolge | Ja |
 
 **Antwort**
 
@@ -331,7 +331,7 @@ Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort ent
 
 ## Löschen eines Pakets {#delete}
 
-Um ein DELETE zu löschen, stellen Sie eine Anfrage an die `/packages` -Endpunkt und geben Sie die Kennung des Pakets an, das Sie löschen möchten.
+Um ein DELETE zu löschen, senden Sie eine Paketanfrage an den Endpunkt `/packages` und geben Sie die Kennung des Pakets an, das Sie löschen möchten.
 
 **API-Format**
 
@@ -345,7 +345,7 @@ DELETE /packages/{PACKAGE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage löscht das Paket mit der Kennung {PACKAGE_ID}.
+Mit der folgenden Anfrage wird das Paket mit der Kennung {PACKAGE_ID} gelöscht.
 
 ```shell
 curl -X DELETE \
@@ -365,9 +365,9 @@ Eine erfolgreiche Antwort gibt einen Grund zurück, der anzeigt, dass die Paket-
 }
 ```
 
-## Paket veröffentlichen {#publish}
+## Publish a package {#publish}
 
-Um den Import eines Packages in eine Sandbox zu ermöglichen, müssen Sie es veröffentlichen. Stellen Sie eine GET-Anfrage an die `/packages` -Endpunkt beim Angeben der ID des Pakets, das Sie veröffentlichen möchten.
+Um den Import eines Packages in eine Sandbox zu ermöglichen, müssen Sie es veröffentlichen. Stellen Sie eine GET-Anfrage an den `/packages` -Endpunkt, während Sie die Kennung des Pakets angeben, das Sie veröffentlichen möchten.
 
 **API-Format**
 
@@ -381,7 +381,7 @@ GET /packages/{PACKAGE_ID}/export
 
 **Anfrage**
 
-Die folgende Anfrage veröffentlicht das Paket mit der ID von {PACKAGE_ID}.
+Mit der folgenden Anfrage wird das Paket mit der ID {PACKAGE_ID} veröffentlicht.
 
 ```shell
 curl -X GET \
@@ -416,7 +416,7 @@ Eine erfolgreiche Antwort gibt das veröffentlichte Paket zurück.
 
 ## Paket nachschlagen {#look-up-package}
 
-Sie können ein einzelnes Paket nachschlagen, indem Sie eine GET-Anfrage an die `/packages` -Endpunkt, der die entsprechende Kennung des Pakets im Anfragepfad enthält.
+Sie können nach einem einzelnen GET suchen, indem Sie eine Anfrage an den `/packages` -Endpunkt senden, der die entsprechende Paketkennung im Anfragepfad enthält.
 
 **API-Format**
 
@@ -430,7 +430,7 @@ GET /packages/{PACKAGE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen für {PACKAGE_ID}.
+Die folgende Anfrage ruft Informationen für {PACKAGE_ID} ab.
 
 ```shell
 curl -X GET \
@@ -483,7 +483,7 @@ Eine erfolgreiche Antwort gibt Details für die abgefragte Paket-ID zurück. Die
 
 ## Auflisten von Packages {#list-packages}
 
-Sie können alle Pakete in Ihrem Unternehmen auflisten, indem Sie eine GET-Anfrage an die `/packages` -Endpunkt.
+Sie können alle Pakete in Ihrer Organisation auflisten, indem Sie eine GET-Anfrage an den Endpunkt `/packages` senden.
 
 **API-Format**
 
@@ -493,11 +493,11 @@ GET /packages/?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {QUERY_PARAMS} | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe Abschnitt zu [Abfrageparameter](./appendix.md) für weitere Informationen. |
+| {QUERY_PARAMS} | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen der Pakete basierend auf der {QUERY_PARAMS}.
+Die folgende Anfrage ruft Informationen der Pakete basierend auf dem {QUERY_PARAMS} ab.
 
 ```shell
 curl -X GET \
@@ -615,7 +615,7 @@ curl -X GET \
 
 **Antwort**
 
-In der Antwort werden Konflikte zurückgegeben. Die Antwort zeigt das Originalpaket sowie die `alternatives` als Array, das nach Rang geordnet ist.
+In der Antwort werden Konflikte zurückgegeben. Die Antwort zeigt das Originalpaket sowie das `alternatives` -Fragment als Array an, das nach Rang geordnet ist.
 
 Antwort anzeigen+++
 
@@ -735,7 +735,7 @@ Antwort anzeigen+++
 >
 >Mit der Konfliktbeilegung ist es inhärent, dass das alternative Artefakt bereits in der Ziel-Sandbox vorhanden ist.
 
-Sie können einen Import für ein Package senden, sobald Sie Konflikte überprüft und Ersatzteile bereitgestellt haben, indem Sie eine POST-Anfrage an die `/packages` -Endpunkt. Das Ergebnis wird als Payload bereitgestellt, die den Importauftrag für die Ziel-Sandbox startet, wie in der Payload angegeben.
+Sie können einen Package-Import senden, sobald Sie Konflikte überprüft und Ersatzteile bereitgestellt haben, indem Sie eine POST-Anfrage an den Endpunkt `/packages` stellen. Das Ergebnis wird als Payload bereitgestellt, die den Importauftrag für die Ziel-Sandbox startet, wie in der Payload angegeben.
 
 Die Nutzlast akzeptiert auch den vom Benutzer angegebenen Auftragsnamen und die Beschreibung für den Importauftrag. Wenn der vom Benutzer angegebene Name und die Beschreibung nicht verfügbar sind, werden der Paketname und die Beschreibung für den Auftragsnamen und die Beschreibung verwendet.
 
@@ -747,7 +747,7 @@ POST /packages/import
 
 **Anfrage**
 
-Die folgende Anfrage ruft die zu importierenden Pakete ab. Die Payload ist eine Zuordnung von Substitutionen, bei denen der Schlüssel, falls ein Eintrag vorhanden ist, der `artifactId` vom Paket bereitgestellt wird, und die Alternative ist der Wert. Wenn die Zuordnung oder Payload **leer**, werden keine Ersetzungen durchgeführt.
+Die folgende Anfrage ruft die zu importierenden Pakete ab. Die Payload ist eine Zuordnung von Substitutionen, bei der, wenn ein Eintrag vorhanden ist, der Schlüssel der vom Paket bereitgestellte `artifactId` und die Alternative der Wert ist. Wenn die Zuordnung oder Payload **leer** ist, werden keine Ersetzungen durchgeführt.
 
 ```shell
 curl -X POST \
@@ -775,7 +775,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
 | --- | --- | --- | --- |
-| `alternatives` | `alternatives` stellen die Zuordnung von Quell-Sandbox-Artefakten zu den vorhandenen Ziel-Sandbox-Artefakten dar. Da sie bereits vorhanden sind, verhindert der Importauftrag, dass diese Artefakte in der Ziel-Sandbox erstellt werden. | Zeichenfolge | Nein |
+| `alternatives` | `alternatives` stellt die Zuordnung von Quell-Sandbox-Artefakten zu den vorhandenen Ziel-Sandbox-Artefakten dar. Da sie bereits vorhanden sind, verhindert der Importauftrag, dass diese Artefakte in der Ziel-Sandbox erstellt werden. | Zeichenfolge | Nein |
 
 **Antwort**
 
@@ -801,7 +801,7 @@ curl -X POST \
 
 ## Alle abhängigen Objekte auflisten {#dependent-objects}
 
-Auflisten aller abhängigen Objekte für die exportierten Objekte in einem Package durch eine POST-Anfrage an die `/packages` -Endpunkt beim Angeben der Kennung des Pakets.
+Auflisten aller abhängigen Objekte für die exportierten Objekte in einem Package durch eine POST-Anfrage an den Endpunkt `/packages` bei Angabe der Paketkennung.
 
 **API-Format**
 
@@ -815,7 +815,7 @@ POST /packages/{PACKAGE_ID}/children
 
 **Anfrage**
 
-Die folgende Anfrage listet alle abhängigen Objekte für die {PACKAGE_ID}.
+Die folgende Anfrage listet alle abhängigen Objekte für den {PACKAGE_ID} auf.
 
 ```shell
 curl -X POST \
@@ -880,7 +880,7 @@ Eine erfolgreiche Antwort gibt eine Liste von untergeordneten Elementen für die
 
 ## Überprüfen rollenbasierter Berechtigungen zum Importieren aller Paketartefakte {#role-based-permissions}
 
-Sie können überprüfen, ob Sie berechtigt sind, Paketartefakte zu importieren, indem Sie eine GET-Anfrage an die `/packages` -Endpunkt beim Angeben der Kennung des Pakets und des Ziel-Sandbox-Namens.
+Sie können überprüfen, ob Sie berechtigt sind, Paketartefakte zu importieren, indem Sie eine GET-Anfrage an den `/packages` -Endpunkt senden und dabei die Paketkennung und den Ziel-Sandbox-Namen angeben.
 
 **API-Format**
 
@@ -894,7 +894,7 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 **Anfrage**
 
-Die folgende Anfrage überprüft Ihre Berechtigungen auf die {PACKAGE_ID} und Sandbox.
+Die folgende Anfrage überprüft Ihre Berechtigungen auf {PACKAGE_ID} und die Sandbox.
 
 ```shell
 curl -X GET \
@@ -1028,7 +1028,7 @@ Antwort anzeigen+++
 
 ## Listen von Export-/Importvorgängen {#list-jobs}
 
-Sie können die aktuellen Export-/Importvorgänge auflisten, indem Sie eine GET-Anfrage an die `/packages` -Endpunkt.
+Sie können die aktuellen Export-/Importvorgänge auflisten, indem Sie eine GET-Anfrage an den `/packages` -Endpunkt senden.
 
 **API-Format**
 
@@ -1038,7 +1038,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {QUERY_PARAMS} | Optionale Abfrageparameter zum Filtern der Ergebnisse. Siehe Abschnitt zu [Abfrageparameter](./appendix.md) für weitere Informationen. |
+| {QUERY_PARAMS} | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
 
 **Anfrage**
 

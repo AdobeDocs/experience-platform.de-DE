@@ -27,7 +27,7 @@ ht-degree: 95%
    - [Partielle Batch-Erfassung](batch-ingestion/partial.md)
    - [Fehlerbehebung](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}
-   - Zuordnen einer CSV-Datei zu XDM {#map-csv}
+   - CSV-Datei XDM {#map-csv} zuordnen
       - [Übersicht](./tutorials/map-csv/overview.md)
       - [Zuordnen einer CSV-Datei zu einem vorhandenen Schema](./tutorials/map-csv/existing-schema.md)
       - [Zuordnen einer CSV-Datei unter Verwendung von KI-generierten Empfehlungen](./tutorials/map-csv/recommendations.md)
@@ -49,4 +49,4 @@ ht-degree: 95%
 - [Quell-Connectoren](source-connectors.md)
 - [Referenz zur Batch-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Referenz zur Streaming-Aufnahme-API](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

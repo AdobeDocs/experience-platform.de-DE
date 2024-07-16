@@ -1,12 +1,12 @@
 ---
 title: Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies
-description: Erfahren Sie, wie Sie neue Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
+description: Erfahren Sie, wie Sie neue Kundinnen und Kunden erreichen und gewinnen können, indem Sie Nutzungsszenarios prüfen, ohne auf Drittanbieter-Cookies angewiesen zu sein.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -124,7 +124,7 @@ Beachten Sie, dass das Schema noch nicht für das Profil aktiviert ist. Schalten
 
 #### Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern im Schema
 
-Erwägen Sie das Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern, aus denen das Schema besteht. Dies ist wichtig, um eine verantwortungsvolle Nutzung von Drittanbieterdaten zu gewährleisten und das Risiko von Datenlecks zu minimieren. Weitere Informationen finden Sie [Data Governance-Beschriftungen von Drittanbietern](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+Erwägen Sie das Hinzufügen der Data Governance-Beschriftung „Drittanbieter“ zu allen Feldern, aus denen das Schema besteht. Dies ist wichtig, um eine verantwortungsvolle Nutzung von Drittanbieterdaten zu gewährleisten und das Risiko von Datenlecks zu minimieren. Erfahren Sie mehr über [Beschriftungen für Data Governance von Drittanbietern](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 Gehen Sie dazu wie folgt vor:
 
@@ -197,7 +197,7 @@ Sie können auch ein Interessentenprofil für eine weitere Inspektion auswählen
 
 ![Ansicht, wie Interessentenprofile inspiziert werden können.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-Mehr dazu [Interessenten-Profile](/help/profile/ui/prospect-profile.md).
+Weitere Informationen zu [Interessenten-Profilen](/help/profile/ui/prospect-profile.md).
 
 ### Erstellen von Interessentenzielgruppen {#create-prospect-audiences}
 
@@ -213,15 +213,15 @@ Beachten Sie, dass sich das Erlebnis des Erstellens von Zielgruppen für Interes
 * Nur Batch-Profilauswertung.
 * Das Erstellen von Zielgruppen basierend auf Zeitreihenereignissen wird nicht unterstützt.
 
-Mehr dazu [Interessenten-Zielgruppen](/help/segmentation/ui/prospect-audience.md).
+Lesen Sie mehr über [Interessenten-Zielgruppen](/help/segmentation/ui/prospect-audience.md).
 
 ### Aktivieren von Interessentenprofilen für Ziele {#activate-to-destinations}
 
 Nutzen Sie die Interessentenzielgruppen, indem Sie sie zu Zielen exportieren. Derzeit unterstützen nur bestimmte Cloud-Speicher-Ziele die Aktivierung von potenziellen Profilen.
 
-![Ziele, die potenzielle Zielgruppen unterstützen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Ziele, die Interessenten-Zielgruppen unterstützen.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[Mehr dazu](/help/destinations/ui/activate-prospect-audiences.md) über die Aktivierung von Perspektiven für Cloud-Speicher-Ziele.
+[Mehr dazu](/help/destinations/ui/activate-prospect-audiences.md) über das Aktivieren von Perspektiven für Cloud-Speicher-Ziele.
 
 ## Andere durch Partnerdatenunterstützung ermöglichte Anwendungsfälle {#other-use-cases}
 
@@ -229,4 +229,4 @@ Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerd
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md) während des Besuchs, ohne dass sich der Benutzer authentifiziert oder über einen früheren Verlauf mit Ihrer Marke verfügt.
-* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) , um Ziele auszuwählen.
+* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

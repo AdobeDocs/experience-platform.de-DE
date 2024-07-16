@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Serverseitige Protokollierung für A4T-Daten im Platform Web SDK
 
-Mit dem Adobe Experience Platform Web SDK können Sie die A4T-Funktionalität (Adobe Analytics for Target) im Platform Edge Network implementieren. Wenn die serverseitige Protokollierung aktiviert ist, werden alle Analytics-Treffer, die über das Edge Network gesendet werden, mit Target-Details auf der Server-Seite erweitert, ohne dass der Trefferzuordnungsprozess durchlaufen werden muss.
+Mit dem Adobe Experience Platform Web SDK können Sie die A4T-Funktion (Adobe Analytics for Target) in Platform Edge Network implementieren. Wenn die serverseitige Protokollierung aktiviert ist, werden alle über das Edge Network gesendeten Analytics-Treffer mit Target-Details auf der Serverseite erweitert, ohne dass der Trefferzuordnungsprozess durchlaufen werden muss.
 
 Die serverseitige Protokollierung für Analytics ist aktiviert, wenn Analytics in der Datastream-Konfiguration aktiviert ist:
 
-![Aktivierung der Analytics-Datastream-Konfiguration](../assets/enable-analytics-datastream.png)
+![ Analytics-Datenspeicherkonfiguration aktiviert](../assets/enable-analytics-datastream.png)
 
 Das folgende Diagramm zeigt, wie Daten durch das System fließen, wenn die serverseitige Analytics-Protokollierung aktiviert ist:
 
@@ -26,4 +26,4 @@ Das folgende Diagramm zeigt, wie Daten durch das System fließen, wenn die serve
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die serverseitige Protokollierung für A4T-Daten im Web SDK behandelt. Siehe Handbuch unter [Clientseitige Protokollierung](./client-side.md) für weitere Informationen zur Verarbeitung von A4T-Daten auf Clientseite.
+In diesem Handbuch wurde die serverseitige Protokollierung für A4T-Daten im Web SDK behandelt. Weitere Informationen zur Verarbeitung von A4T-Daten auf Client-Seite finden Sie im Handbuch zur [clientseitigen Protokollierung](./client-side.md) .

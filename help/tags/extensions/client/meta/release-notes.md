@@ -3,7 +3,7 @@ title: Versionshinweise für die Meta-Pixel-Erweiterung
 description: Die aktuellen Versionshinweise für die Meta Pixel-Erweiterung in Adobe Experience Platform.
 source-git-commit: 8e447324e324c9770dcfa348df92c429454b06d6
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '121'
 ht-degree: 37%
 
 ---

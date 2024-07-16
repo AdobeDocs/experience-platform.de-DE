@@ -8,15 +8,15 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Prüfdetails für das externe Source-System] Feldergruppe
+# Feldergruppe &quot;[!UICONTROL External Source System Audit Details]&quot;
 
-[!UICONTROL Prüfdetails für das externe Source-System] ist eine standardmäßige Experience-Datenmodell (XDM)-Feldergruppe, die den Kerndatentyp &quot;External Source System Audit Attributes&quot;erweitert, indem sie auf seine Eigenschaften verweist und kontextbezogene Metadaten hinzufügt. Dies ermöglicht ein detailliertes Audit-Tracking und eine flexible Datenintegration aus externen Quellen.
+[!UICONTROL External Source System Audit Details] ist eine standardmäßige Experience-Datenmodell (XDM)-Feldergruppe, die den Kerndatentyp &quot;External Source System Audit Attributes&quot;erweitert, indem auf seine Eigenschaften verwiesen und kontextbezogene Metadaten hinzugefügt werden. Dies ermöglicht ein detailliertes Audit-Tracking und eine flexible Datenintegration aus externen Quellen.
 
-![Ein Schemadiagramm der Feldergruppe &quot;Externe Source-Systemprüfungsdetails&quot;.](../../images/field-groups/shared/external-source-system-audit-details.png)
+![Ein Schemadiagramm der Feldergruppe &quot;Audit-Details des externen Source-Systems&quot;.](../../images/field-groups/shared/external-source-system-audit-details.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
-| [!UICONTROL Prüfdetails für das externe Source-System] | `external-source-system-audit-details` | [[!UICONTROL Externe Source-Systemprüfungsattribute]](../../data-types/external-source-system-audit-attributes.md) | Der[!UICONTROL Prüfdetails für das externe Source-System]Die Feldergruppe erweitert den Kerndatentyp &quot;External Source System Audit Attributes&quot;, indem sie auf ihre Eigenschaften verweist und kontextbezogene Metadaten hinzufügt. Dies erleichtert das detaillierte Audit-Tracking und die flexible Datenintegration für externe Quellen und ermöglicht so die asynchrone Erfassung von Profilen. |
+| [!UICONTROL Prüfdetails für externe Source-Systeme] | `external-source-system-audit-details` | [[!UICONTROL Externe Source-Systemprüfungsattribute]](../../data-types/external-source-system-audit-attributes.md) | Die Feldergruppe &quot;[!UICONTROL External Source System Audit Details]&quot; erweitert den Kerndatentyp &quot;External Source System Audit Attributes&quot;, indem sie auf seine Eigenschaften verweist und kontextbezogene Metadaten hinzufügt. Dies erleichtert das detaillierte Audit-Tracking und die flexible Datenintegration für externe Quellen und ermöglicht so die asynchrone Erfassung von Profilen. |
 
 {style="table-layout:auto"}
 

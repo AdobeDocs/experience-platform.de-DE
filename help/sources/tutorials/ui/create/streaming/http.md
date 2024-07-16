@@ -10,17 +10,17 @@ ht-degree: 28%
 ---
 
 
-# Erstellen Sie eine [!DNL HTTP API] Streaming-Verbindung über die Benutzeroberfläche
+# Erstellen einer [!DNL HTTP API]-Streaming-Verbindung über die Benutzeroberfläche
 
-In diesem Tutorial werden Schritte zum Erstellen einer Streaming-Quell-Verbindung mit dem [!UICONTROL Quellen] Arbeitsbereich.
+In diesem Tutorial werden Schritte zum Erstellen einer Streaming-Quellverbindung mithilfe des Arbeitsbereichs [!UICONTROL Quellen] beschrieben.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-   - [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   - [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   - [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   - [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Aufbauen einer Streaming-Verbindung
@@ -29,17 +29,17 @@ Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste 
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem **[!UICONTROL Streaming]** category, select **[!UICONTROL HTTP-API]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter der Kategorie **[!UICONTROL Streaming]** die Option **[!UICONTROL HTTP-API]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Katalog](../../../../images/tutorials/create/http/catalog.png)
 
-Die **[!UICONTROL HTTP-API-Konto verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL HTTP-API-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie das HTTP-API-Konto aus, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Nächste]** um fortzufahren.
+Um ein vorhandenes Konto zu verwenden, wählen Sie das HTTP-API-Konto, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]** , um fortzufahren.
 
-![vorhandenes Konto](../../../../images/tutorials/create/http/existing.png)
+![existing-account](../../../../images/tutorials/create/http/existing.png)
 
 ### Neues Konto
 
@@ -48,15 +48,15 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]**. Ge
 - **[!UICONTROL Authentifizierung]:** Diese Eigenschaft bestimmt, ob für die Streaming-Verbindung eine Authentifizierung erforderlich ist. Authentifizierung stellt sicher, dass Daten aus vertrauenswürdigen Quellen erfasst werden. Wenn Sie es mit persönlich identifizierbaren Informationen (PII) zu tun haben, sollte diese Eigenschaft aktiviert sein. Standardmäßig ist diese Eigenschaft deaktiviert.
 - **[!UICONTROL XDM-kompatibel]:** Diese Eigenschaft gibt an, ob diese Streaming-Verbindung Ereignisse sendet, die mit XDM-Schemas kompatibel sind. Standardmäßig ist diese Eigenschaft deaktiviert.
 
-Wählen Sie zum Abschluss **[!UICONTROL Verbindung mit Quelle herstellen]** und wählen Sie **[!UICONTROL Nächste]** um fortzufahren.
+Wählen Sie abschließend **[!UICONTROL Mit Quelle verbinden]** und dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![new-account](../../../../images/tutorials/create/http/new.png)
 
 ## Daten auswählen
 
-Nach der Erstellung der HTTP-API-Verbindung muss die **[!UICONTROL Daten auswählen]** angezeigt, und erhalten Sie eine Oberfläche zum Hochladen und Anzeigen einer Vorschau Ihrer Daten.
+Nach Erstellung der HTTP-API-Verbindung wird der Schritt **[!UICONTROL Daten auswählen]** angezeigt, der Ihnen eine Benutzeroberfläche zum Hochladen und Anzeigen einer Vorschau Ihrer Daten bereitstellt.
 
-Auswählen **[!UICONTROL Dateien hochladen]** , um Ihre Daten hochzuladen. Alternativ können Sie Ihre Daten per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] -Abschnitt der -Oberfläche.
+Wählen Sie **[!UICONTROL Dateien hochladen]** aus, um Ihre Daten hochzuladen. Alternativ können Sie Ihre Daten per Drag-and-Drop in den Abschnitt [!UICONTROL Dateien ziehen und ablegen] der Benutzeroberfläche ziehen.
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
@@ -66,37 +66,37 @@ Nach dem Hochladen Ihrer Daten können Sie die rechte Seite der Benutzeroberflä
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Die [!UICONTROL Zuordnung] -Schritt angezeigt und stellt eine Schnittstelle zum Zuordnen der Quelldaten zu einem Platform-Datensatz bereit.
+Der Schritt [!UICONTROL Zuordnung] wird angezeigt und bietet eine Schnittstelle zum Zuordnen der Quelldaten zu einem Platform-Datensatz.
 
-Die [!DNL HTTP API] -Quelle unterstützt die Erfassung von JSON-Dateien. JSON-Dateien erfordern keine manuelle Konfiguration, wenn sie als XDM-Beschwerde gekennzeichnet sind. Andernfalls müssen Sie die Zuordnung explizit konfigurieren.
+Die Quelle [!DNL HTTP API] unterstützt die Erfassung von JSON-Dateien. JSON-Dateien erfordern keine manuelle Konfiguration, wenn sie als XDM-Beschwerde gekennzeichnet sind. Andernfalls müssen Sie die Zuordnung explizit konfigurieren.
 
 Wählen Sie einen Datensatz aus, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen erstellen.
 
 ### Erstellen eines neuen Datensatzes
 
-Um einen neuen Datensatz zu erstellen, wählen Sie **[!UICONTROL Neuer Datensatz]**. Geben Sie im angezeigten Formular den Namen, eine optionale Beschreibung sowie das Zielschema für den Datensatz an. Wenn Sie eine [!DNL Profile]-aktiviertes Schema können Sie festlegen, ob der Datensatz auch [!DNL Profile]-enabled.
+Um einen neuen Datensatz zu erstellen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus. Geben Sie im angezeigten Formular den Namen, eine optionale Beschreibung sowie das Zielschema für den Datensatz an. Wenn Sie ein für [!DNL Profile] aktiviertes Schema auswählen, können Sie festlegen, ob der Datensatz auch für [!DNL Profile] aktiviert sein soll.
 
 ![new-dataset](../../../../images/tutorials/create/http/new-dataset.png)
 
 ### Verwenden eines vorhandenen Datensatzes
 
-Um einen vorhandenen Datensatz zu verwenden, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Wählen Sie im angezeigten Formular den Datensatz aus, den Sie verwenden möchten. Nachdem Sie einen Datensatz ausgewählt haben, können Sie auswählen, ob der Datensatz [!DNL Profile]-enabled.
+Um einen vorhandenen Datensatz zu verwenden, wählen Sie **[!UICONTROL Vorhandenen Datensatz]** aus. Wählen Sie im angezeigten Formular den Datensatz aus, den Sie verwenden möchten. Nachdem Sie einen Datensatz ausgewählt haben, können Sie auswählen, ob der Datensatz [!DNL Profile]-fähig sein soll.
 
 ![existing-dataset](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Standardfelder zuordnen
 
-Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Zuordnungsoberfläche und der berechneten Felder finden Sie im Handbuch [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
-Um ein neues Quellfeld hinzuzufügen, wählen Sie **[!UICONTROL Neues Mapping hinzufügen]**.
+Um ein neues Quellfeld hinzuzufügen, wählen Sie **[!UICONTROL Neue Zuordnung hinzufügen]**.
 
 ![add-new-mapping](../../../../images/tutorials/create/http/add-new-mapping.png)
 
-Eine neue Quell- und Zielfeldpaarung wird angezeigt. Um ein neues Quellfeld hinzuzufügen, wählen Sie das Pfeilsymbol neben dem [!UICONTROL Quellfeld auswählen] Eingabefelder.
+Eine neue Quell- und Zielfeldpaarung wird angezeigt. Um ein neues Quellfeld hinzuzufügen, wählen Sie das Pfeilsymbol neben der EingabebLeiste [!UICONTROL Quellfeld auswählen] aus.
 
 ![select-source-field](../../../../images/tutorials/create/http/select-source-field.png)
 
-Die [!UICONTROL Attribute auswählen] können Sie Ihre Dateihierarchie untersuchen und ein bestimmtes Quellfeld auswählen, das einem Ziel-XDM-Feld zugeordnet werden soll. Nachdem Sie das Quellfeld ausgewählt haben, das Sie zuordnen möchten, wählen Sie **[!UICONTROL Auswählen]** um fortzufahren.
+Im Bedienfeld [!UICONTROL Attribute auswählen] können Sie Ihre Dateihierarchie untersuchen und ein bestimmtes Quellfeld auswählen, das einem Ziel-XDM-Feld zugeordnet werden soll. Nachdem Sie das Quellfeld ausgewählt haben, das Sie zuordnen möchten, wählen Sie **[!UICONTROL Auswählen]** aus, um fortzufahren.
 
 ![select-attributes](../../../../images/tutorials/create/http/select-attributes.png)
 
@@ -104,30 +104,30 @@ Wenn ein Quellfeld ausgewählt ist, können Sie jetzt das entsprechende Ziel-XDM
 
 ![select-target-field](../../../../images/tutorials/create/http/select-target-field.png)
 
-Die [!UICONTROL Zuordnen des Quellfelds zum Zielfeld] -Fenster angezeigt, in dem Sie eine Benutzeroberfläche zum Erkunden des Schemas Ihres Zieldatensatzes erhalten. Wählen Sie das Zielfeld aus, das Ihrem Quellfeld entspricht, und wählen Sie dann **[!UICONTROL Auswählen]** um fortzufahren.
+Das Fenster [!UICONTROL Quellfeld dem Zielfeld zuordnen] wird angezeigt und bietet eine Benutzeroberfläche zum Erkunden des Schemas Ihres Zieldatensatzes. Wählen Sie das Zielfeld aus, das Ihrem Quellfeld entspricht, und wählen Sie dann **[!UICONTROL Auswählen]** aus, um fortzufahren.
 
 ![map-to-target-field](../../../../images/tutorials/create/http/map-to-target-field.png)
 
-Sobald Ihre Quellfelder allen entsprechenden Ziel-XDM-Feldern zugeordnet sind, wählen Sie **[!UICONTROL Nächste]**
+Nachdem alle Quellfelder den entsprechenden XDM-Zielfeldern zugeordnet sind, wählen Sie **[!UICONTROL Weiter]** aus.
 
 ![data-prep-complete](../../../../images/tutorials/create/http/data-prep-complete.png)
 
 ## Datenflussdetails
 
-Die **[!UICONTROL Datenflussdetails]** wird angezeigt. Auf dieser Seite können Sie Details zum erstellten Datenfluss angeben, indem Sie einen Namen und eine optionale Beschreibung angeben.
+Der Schritt **[!UICONTROL Datenfluss-Detail]** wird angezeigt. Auf dieser Seite können Sie Details zum erstellten Datenfluss angeben, indem Sie einen Namen und eine optionale Beschreibung angeben.
 
-Nachdem Sie Details für den Datenfluss angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
+Nachdem Sie Details für den Datenfluss angegeben haben, wählen Sie **[!UICONTROL Weiter]** aus.
 
 ![dataflow-detail](../../../../images/tutorials/create/http/dataflow-detail.png)
 
 ## Überprüfung
 
-Die **[!UICONTROL Überprüfen]** angezeigt, sodass Sie die Details Ihres Datenflusses vor der Erstellung überprüfen können. Details sind in den folgenden Kategorien gruppiert:
+Der Schritt **[!UICONTROL Überprüfen]** wird angezeigt, mit dem Sie die Details Ihres Datenflusses überprüfen können, bevor er erstellt wird. Details sind in den folgenden Kategorien gruppiert:
 
 - **[!UICONTROL Verbindung]**: Zeigt den Kontonamen, die Quellplattform und den Quellnamen an.
 - **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt den Zieldatensatz und das Schema an, dem der Datensatz entspricht.
 
-Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UICONTROL Beenden]**.
+Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UICONTROL Beenden]** aus.
 
 ![überprüfen](../../../../images/tutorials/create/http/review.png)
 
@@ -135,10 +135,10 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 
 Nach der Erstellung der Verbindung wird die Detailseite der Quellen angezeigt. Auf dieser Seite finden Sie Details zu Ihrer neu erstellten Verbindung, einschließlich zuvor ausgeführter Datenflüsse, ID und Streaming-Endpunkt-URL.
 
-![Endpunkt](../../../../images/tutorials/create/http/endpoint.png)
+![endpoint](../../../../images/tutorials/create/http/endpoint.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie mithilfe des Streaming-Endpunkts auf eine Vielzahl von [!DNL Data Ingestion] APIs. Anweisungen zum Erstellen einer Streaming-Verbindung in der API finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../../../api/create/streaming/http.md).
+In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie über den Streaming-Endpunkt auf verschiedene [!DNL Data Ingestion] -APIs zugreifen können. Anweisungen zum Erstellen einer Streaming-Verbindung in der API finden Sie in der [Anleitung zum Erstellen einer Streaming-Verbindung](../../../api/create/streaming/http.md).
 
-Informationen zum Streamen von Daten an Platform finden Sie im Tutorial zu [Streaming von Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder das Tutorial zu [Streaming von Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).
+Informationen zum Streamen von Daten an Platform finden Sie entweder im Tutorial zum Streaming von Zeitreihendaten ](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder im Tutorial zum Streaming von Datensatzdaten mit [ .[](../../../../../ingestion/tutorials/streaming-record-data.md)

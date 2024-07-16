@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,9 @@ Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe
 
 Machen Sie sich mit Ihren Zieleinblicken vertraut, indem Sie auf die SQL-Datenbank zugreifen, über die diese Benutzer verfügen, und generieren Sie dann Ihre eigenen Einblicke, um die Aktivierung von Daten von Adobe Experience Platform zu Ihren Zielplattformen weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 
-Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
+Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Die folgenden Einblicke stehen Ihnen als Teil der [Dashboard &quot;Ziele&quot;](../guides/destinations.md) oder benutzerdefiniert [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md). Siehe [Anpassungsübersicht](../customize/overview.md) Anweisungen zum Anpassen Ihres Dashboards erhalten Sie oder [Erstellen und Bearbeiten neuer Widgets](../customize/custom-widgets.md) in der Widget-Bibliothek und [Benutzerdefiniertes Dashboard](../user-defined-dashboards.md#create-widget).
+Die folgenden Einblicke stehen Ihnen im [Ziel-Dashboard](../guides/destinations.md) oder einem benutzerdefinierten [benutzerdefinierten Dashboard](../user-defined-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../user-defined-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
 
 ## Aktivierte Zielgruppen {#activated-audiences}
 
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-Siehe [Dokumentation zum Widget &quot;Aktivierte Zielgruppen&quot;](../guides/destinations.md#activated-audiences) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Aktivierte Zielgruppen](../guides/destinations.md#activated-audiences) .
 
 ## Aktivierte Zielgruppen für alle Ziele {#activated-audiences-across-all-destinations}
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-Siehe [Dokumentation zu aktivierten Zielgruppen für alle Ziele](../guides/destinations.md#activated-audiences-across-all-destinations) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum Widget [Aktivierte Zielgruppen für alle Ziele](../guides/destinations.md#activated-audiences-across-all-destinations) .
 
 ## Aktive Ziele nach Zielplattform {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Siehe [Dokumentation zu aktiven Zielen nach Zielplattform-Widgets](../guides/destinations.md#active-destinations-by-destination-platform) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Aktive Ziele nach Zielplattform](../guides/destinations.md#active-destinations-by-destination-platform) .
 
 ## Trend der Zielgruppen-Größe {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-Siehe [Dokumentation zum Widget zum Trend der Zielgruppengröße](../guides/destinations.md#audience-size-trend) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget zum Trend der Zielgruppengröße [ .](../guides/destinations.md#audience-size-trend)
 
 ## Häufige Zielgruppen {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-Siehe [Dokumentation zum Widget &quot;Allgemeine Zielgruppen&quot;](../guides/destinations.md#common-audiences) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Allgemeine Zielgruppen ](../guides/destinations.md#common-audiences) .
 
 ## Zielstatus {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Siehe [Dokumentation zum Zielstatus-Widget](../guides/destinations.md#destination-status) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget zum Zielstatus [ .](../guides/destinations.md#destination-status)
 
 ## Anzahl der Ziele {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Siehe [Dokumentation zum Widget &quot;Ziele zählen&quot;](../guides/destinations.md#destinations-count) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Ziele zählen .](../guides/destinations.md#destinations-count)
 
 ## Zustand der zugeordneten Zielgruppe {#mapped-audience-health}
 
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-Siehe [Dokumentation zum zugeordneten Zielgruppen-Health-Widget](../guides/destinations.md#mapped-audience-health) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum [Zugewiesenen Zielgruppen-Konsistenzwidget](../guides/destinations.md#mapped-audience-health) .
 
 ## Zugeordnete Zielgruppen {#mapped-audiences}
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Siehe [Dokumentation zum Widget &quot;Zugeordnete Zielgruppen&quot;](../guides/destinations.md#mapped-audiences) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktion dieses Einblicks finden Sie in der Dokumentation zum Widget [Zugeordnete Zielgruppen](../guides/destinations.md#mapped-audiences) .
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Siehe [Dokumentation zum am häufigsten verwendeten Ziel-Widget](../guides/destinations.md#most-used-destinations) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum Widget [Bevorzugte Ziele ](../guides/destinations.md#most-used-destinations) .
 
 ## Zuletzt aktivierte Zielgruppen {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-Siehe [Dokumentation zum kürzlich aktivierten Zielgruppen-Widget](../guides/destinations.md#recently-activated-audiences) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum [Kürzlich aktivierten Zielgruppen-Widget](../guides/destinations.md#recently-activated-audiences) .
 
 ## Zuletzt aktivierte Zielgruppen nach Ziel {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-Siehe [Kürzlich aktivierte Zielgruppen nach Ziel-Widget-Dokumentation](../guides/destinations.md#recently-activated-audiences-by-destination) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum [Zuletzt aktivierte Zielgruppen nach Ziel-Widget](../guides/destinations.md#recently-activated-audiences-by-destination) .
 
 ## Kürzlich erstellte Ziele {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-Siehe [Dokumentation zum kürzlich erstellten Ziel-Widget](../guides/destinations.md#recently-created-destinations) für Informationen über das Erscheinungsbild und die Funktionalität dieses Einblicks.
+Informationen zum Erscheinungsbild und zur Funktionalität dieses Einblicks finden Sie in der Dokumentation zum [kürzlich erstellten Ziel-Widget](../guides/destinations.md#recently-created-destinations) .
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL-Datenbank, die Dashboard-Einblicke generiert, und welche häufig gestellten Fragen diese Analyse löst. Sie können diese SQL-Abfragen jetzt bearbeiten und iterieren, um eigene Einblicke zu erhalten.
 
-Siehe [SQL-Dokumentation anzeigen](../view-sql.md) für weitere Informationen, wie Sie die SQL Ihrer Einblicke direkt über die PLatform-Benutzeroberfläche anpassen können.
+Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Sie können auch die SQL lesen und verstehen, die Einblicke für die [Profile](./profiles.md), [Kontoprofile](./account-profiles.md) und [Zielgruppen](./audiences.md) Dashboards.
+Sie können auch die SQL lesen und verstehen, die Einblicke in die Dashboards [Profile](./profiles.md), [Kontoprofile](./account-profiles.md) und [Zielgruppen](./audiences.md) generiert.

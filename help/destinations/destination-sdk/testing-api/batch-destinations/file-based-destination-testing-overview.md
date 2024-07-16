@@ -3,7 +3,7 @@ description: Erfahren Sie, wie Sie mit der dateibasierten Zieltest-API die Konfi
 title: Dateibasierte Zieltest-API
 exl-id: 2733fd00-af08-4763-a30e-a53ee56c0a19
 source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 100%
 

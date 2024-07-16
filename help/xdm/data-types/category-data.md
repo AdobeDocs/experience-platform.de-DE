@@ -1,7 +1,8 @@
 ---
 title: Datentyp Kategorie
 description: Erfahren Sie mehr über den Datentyp "Category data Experience Data Model (XDM)".
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: f8d52f2d-5fb0-4999-8b31-ddc14225b0ab
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 9%
@@ -10,9 +11,9 @@ ht-degree: 9%
 
 # [!UICONTROL Kategoriedaten] Datentyp
 
-[!UICONTROL Kategoriedaten] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zu einer Produktkategorie beschreibt.
+[!UICONTROL Kategoriedaten] ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der Informationen zu einer Produktkategorie beschreibt.
 
-![Ein Diagramm des Datentyps Kategorie .](../images/data-types/category-data.png)
+![Ein Diagramm des Kategoriedatentyps.](../images/data-types/category-data.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |-----------------|--------------------|-----------|------------------------------------------|

@@ -10,11 +10,11 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Buchungsdetails] Schemafeldgruppe
+# [!UICONTROL Reservierungsdetails] Schemafeldgruppe
 
-[!UICONTROL Buchungsdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) dient zur Erfassung von Informationen über eine Reservierung, einschließlich der Länge, Änderung, erstattungsfähigen Status und der Anzahl der Zimmer.
+[!UICONTROL Reservierungsdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die zum Erfassen von Informationen zu einer Reservierung verwendet wird, einschließlich der Länge, Änderung, des erstattbaren Status und der Anzahl der Zimmer.
 
-Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `reservations`. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
+Die Feldergruppe stellt ein einzelnes Objekt-Feld bereit, `reservations`. Die in diesem Objekt enthaltenen Eigenschaften werden nachfolgend erläutert.
 
 ![Struktur der Buchungsdetails](../../images/field-groups/reservation-details.png)
 
@@ -46,7 +46,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## Branchenspezifische Reservierungsfeldgruppen
 
-Es gibt mehrere weitere Standardfeldgruppen, die die [!UICONTROL Buchungsdetails] Schema für branchenspezifische Anwendungsfälle. Weitere Informationen finden Sie in der folgenden Dokumentation:
+Es gibt mehrere weitere Standardfeldgruppen, die das Schema [!UICONTROL Reservierungsdetails] für branchenspezifische Anwendungsfälle erweitern. Weitere Informationen finden Sie in der folgenden Dokumentation:
 
 * [[!UICONTROL Restaurantreservierung]](./dining-reservation.md)
 * [[!UICONTROL Flugreservierung]](./flight-reservation.md)

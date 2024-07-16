@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Protokollierung von Adobe Analytics for Target (A4T) im Platform Web SDK
 
-Bei der Verwendung von Adobe Target zur Personalisierung können Sie auswählen, welches System für die Leistungsmessung verwendet werden soll. Jeder [Target-Aktivität](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=de) ermöglicht Ihnen die Auswahl zwischen Target-Berichterstellung und Adobe Analytics-Berichterstellung.
+Bei der Verwendung von Adobe Target zur Personalisierung können Sie auswählen, welches System für die Leistungsmessung verwendet werden soll. Mit jeder [Target-Aktivität](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=de) können Sie zwischen Target-Berichten und Adobe Analytics-Berichten auswählen.
 
 Wenn Sie Analytics-Berichte verwenden, muss Adobe Target Analytics Folgendes mitteilen:
 
@@ -26,10 +26,10 @@ Das Adobe Experience Platform Web SDK unterstützt zwei Arten von Analytics-Prot
 
 | Protokollierungsmethode | Beschreibung |
 | --- | --- |
-| Serverseitige Analytics-Protokollierung | Alle Analytics-Treffer, die über das Edge-Netzwerk gesendet werden, werden mit Target-Details auf der Server-Seite erweitert, ohne den Trefferzuordnungsprozess durchlaufen zu müssen. |
-| Clientseitige Analytics-Protokollierung | Target-Daten werden Client-seitig zurückgegeben, sodass Sie Daten mithilfe der [Dateneinfüge-API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Serverseitige Analytics-Protokollierung | Alle Analytics-Treffer, die über das Edge Network gesendet werden, werden serverseitig mit Target-Details erweitert, ohne dass der Trefferzuordnungsprozess durchlaufen werden muss. |
+| Clientseitige Analytics-Protokollierung | Target-Daten werden Client-seitig zurückgegeben, sodass Sie Daten mithilfe der [Dateneinfüge-API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) manuell erweitern und an Analytics senden können. |
 
-Die Protokollierungsmethode hängt davon ab, ob Adobe Analytics in Ihrer Konfiguration aktiviert ist [datastream](../../../../datastreams/overview.md):
+Die Protokollierungsmethode hängt davon ab, ob Adobe Analytics für Ihren konfigurierten [Datastream](../../../../datastreams/overview.md) aktiviert ist:
 
 ![Entscheidungsfluss der Protokollierungsmethode](../assets/analytics-logging.png)
 

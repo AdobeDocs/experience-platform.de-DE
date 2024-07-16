@@ -1,15 +1,15 @@
 ---
-title: Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der KI-generierten Empfehlungen
+title: Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der AI-generierten Recommendations
 description: In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe von KI-generierten Empfehlungen einem XDM-Schema zuordnen.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 92%
+source-wordcount: '1100'
+ht-degree: 82%
 
 ---
 
-# Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der KI-generierten Empfehlungen
+# Weisen Sie mithilfe von AI-generierten Empfehlungen eine CSV-Datei einem XDM-Schema zu.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL 
 
 Klicken Sie in der Benutzeroberfläche von Experience Platform im linken Navigationsbereich auf **[!UICONTROL Quellen]**. Navigieren Sie in der **[!UICONTROL Katalog]**-Ansicht zur Kategorie **[!UICONTROL Lokales System]**. Wählen Sie unter **[!UICONTROL Lokaler Datei-Upload]** die Option **[!UICONTROL Daten hinzufügen]** aus.
 
-![Der [!UICONTROL Quellen]-Katalog in der Platform-Benutzeroberfläche, mit der Auswahl von [!UICONTROL Daten hinzufügen] unter [!UICONTROL Lokaler Datei-Upload.]](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![Der Katalog [!UICONTROL Quellen] in der Platform-Benutzeroberfläche, wobei [!UICONTROL Daten hinzufügen] unter [!UICONTROL Lokaler Datei-Upload] ausgewählt ist.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 Der Workflow **[!UICONTROL CSV-XDM-Schema zuordnen]** wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Datenflussdetails]**.
 
@@ -54,13 +54,13 @@ Bevor Sie fortfahren, können Sie optional die folgenden zusätzlichen Funktione
 
 Wenn Sie mit der Konfiguration des Datenflusses fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
-![Der Abschnitt [!UICONTROL Datenflussdetails] ist abgeschlossen.](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![ Der Abschnitt [!UICONTROL Datenfluss-Detail] ist abgeschlossen.](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## Daten auswählen
 
 Verwenden Sie im Schritt **[!UICONTROL Daten auswählen]** die linke Spalte, um Ihre CSV-Datei hochzuladen. Sie können auf **[!UICONTROL Dateien auswählen]** klicken, um ein Dateiexplorer-Dialogfeld zur Auswahl der Datei zu öffnen, oder Sie können die Datei direkt in die Spalte ziehen und dort ablegen.
 
-![Die Schaltfläche [!UICONTROL Dateien auswählen] und der Drag-and-Drop-Bereich, die beide hervorgehoben sind, im Schritt [!UICONTROL Daten auswählen.]](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![Die Schaltfläche [!UICONTROL Dateien auswählen] und der Drag-and-Drop-Bereich, der im Schritt [!UICONTROL Daten auswählen] hervorgehoben ist.](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 Nach dem Hochladen der Datei wird ein Abschnitt mit Beispieldaten angezeigt, in dem die ersten zehn Zeilen der empfangenen Daten angezeigt werden, sodass Sie überprüfen können, ob die Daten korrekt hochgeladen wurden. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
@@ -70,15 +70,15 @@ Nach dem Hochladen der Datei wird ein Abschnitt mit Beispieldaten angezeigt, in 
 
 Die ML-Modelle werden ausgeführt, um basierend auf Ihrer Datenfluss-Konfiguration und Ihrer hochgeladenen CSV-Datei ein neues Schema zu generieren. Wenn der Prozess abgeschlossen ist, werden im Schritt [!UICONTROL Zuordnung] Felder gefüllt, um die Zuordnungen für jedes einzelne Feld neben der vollständig navigierbaren Ansicht der generierten Schemastruktur anzuzeigen.
 
-![Der Schritt [!UICONTROL Zuordnung] in der Benutzeroberfläche mit allen zugeordneten CSV-Feldern und der daraus resultierenden Schemastruktur.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![Der Schritt [!UICONTROL Zuordnung] in der Benutzeroberfläche, der alle zugeordneten CSV-Felder und die daraus resultierende Schemastruktur anzeigt.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
 >[!NOTE]
 >
->Sie können alle Felder in Ihrem Schema anhand verschiedener Kriterien filtern, während der Workflow für die Zuordnung von Quell-zu-Zielfeld-Feldern ausgeführt wird. Standardmäßig werden alle zugeordneten Felder angezeigt. Um die angezeigten Felder zu ändern, wählen Sie das Filtersymbol neben dem Sucheingabefeld und dann aus den Dropdown-Optionen aus.<br> ![Die Zuordnungsphase des Arbeitsablaufs für die Erstellung von CSV- und XDM-Schemas mit dem Filtersymbol und dem Dropdown-Menü wurde hervorgehoben.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "Die Zuordnungsphase des Arbeitsablaufs für die Erstellung von CSV- und XDM-Schemas mit dem Filtersymbol und dem Dropdown-Menü wurde hervorgehoben."){width="100" zoomable="yes"}
+>Sie können alle Felder in Ihrem Schema anhand verschiedener Kriterien filtern, während der Workflow für die Zuordnung von Quell-zu-Zielfeld-Feldern ausgeführt wird. Standardmäßig werden alle zugeordneten Felder angezeigt. Um die angezeigten Felder zu ändern, wählen Sie das Filtersymbol neben dem Sucheingabefeld und dann aus den Dropdown-Optionen.<br> ![Die Zuordnungsphase des Arbeitsablaufs für die Erstellung von XDM-Schemas im CSV-Format mit dem Filtersymbol und dem Dropdown-Menü wurde hervorgehoben.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "Die Zuordnungsphase des Arbeitsablaufs für die Erstellung von XDM-Schemas mit dem Filtersymbol und dem Dropdown-Menü wurde hervorgehoben."){width="100" zoomable="yes"}
 
 Von hier aus können Sie optional [die Feldzuordnungen bearbeiten](#edit-mappings) oder [die Feldergruppen ändern, denen sie zugeordnet sind](#edit-schema), je nach ihrem Bedarf. Wenn Sie zufrieden sind, klicken Sie auf **[!UICONTROL Beenden]**, um die Zuordnung abzuschließen und den zuvor konfigurierten Datenfluss zu starten. Die CSV-Daten werden in das System aufgenommen und basierend auf der generierten Schemastruktur in einen Datensatz eingefügt, der für nachgelagerte Platform-Services nutzbar ist.
 
-![Die ausgewählte Schaltfläche [!UICONTROL Beenden], was den CSV-Zuordnungsvorgang abschließt.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![Die ausgewählte Schaltfläche [!UICONTROL Beenden], die den CSV-Zuordnungsprozess abschließt.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### Bearbeiten von Feldzuordnungen {#edit-mappings}
 
@@ -88,7 +88,7 @@ Verwenden Sie die Vorschau für die Feldzuordnung, um vorhandene Zuordnungen zu 
 
 Die CSV-Felder werden mithilfe von ML-Modellen automatisch vorhandenen XDM-Feldergruppen zugeordnet. Wenn Sie die Feldergruppe für ein bestimmtes CSV-Feld ändern möchten, wählen Sie **[!UICONTROL Bearbeiten]** neben der Schemastruktur aus.
 
-![Die ausgewählte Schaltfläche [!UICONTROL Bearbeiten] neben der Schemastruktur.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![Die Schaltfläche [!UICONTROL Bearbeiten], die neben der Schemastruktur ausgewählt wird.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
 Ein Dialogfeld wird angezeigt, in dem Sie den Anzeigenamen, den Datentyp und die Feldergruppe für jedes Feld in der Zuordnung bearbeiten können. Klicken Sie auf das Bearbeitungssymbol (![Bearbeiten-Symbol](../../images/tutorials/map-csv-recommendations/edit-icon.png)) neben einem Quellfeld, um dessen Details in der rechten Spalte zu bearbeiten, bevor Sie **[!UICONTROL Anwenden]** auswählen.
 

@@ -16,7 +16,7 @@ ht-degree: 35%
 
 Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. [!DNL Identity Service] bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
 
-Use optional `graph-type` -Parameter, um den Ausgabetyp anzugeben, von dem der Cluster abgerufen werden soll. Die Optionen sind:
+Verwenden Sie den optionalen Parameter `graph-type` , um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
 
 - `None` - Keine Identitätszusammenfügung durchführen.
 - `Private Graph` - Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
@@ -66,7 +66,7 @@ curl -X GET \
 
 ## Abrufen des Cluster-Verlaufs mehrerer Identitäten
 
-Verwenden Sie die `POST` -Methode als Batch-Entsprechung der `GET` -Methode, die oben beschrieben wurde, um die Cluster-Verläufe mehrerer Identitäten zurückzugeben.
+Verwenden Sie die Methode `POST` als Batch-Entsprechung der oben beschriebenen Methode `GET`, um die Cluster-Verläufe mehrerer Identitäten zurückzugeben.
 
 >[!NOTE]
 >
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Tutorial zu [Auflisten von Identitätszuordnungen](./list-identity-mappings.md)
+Fahren Sie mit dem nächsten Tutorial zu [Listen-Identitätszuordnungen](./list-identity-mappings.md) fort.

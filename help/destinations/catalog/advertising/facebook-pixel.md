@@ -5,16 +5,16 @@ description: Die Facebook Pixel-Erweiterung ist ein Werbeziel in Adobe Experienc
 exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 86%
+source-wordcount: '438'
+ht-degree: 87%
 
 ---
 
-# [!DNL Facebook Pixel]-Erweiterung  {#facebook-pixel-extension}
+# [!DNL Facebook Pixel]-Erweiterung {#facebook-pixel-extension}
 
 ## Übersicht {#overview}
 
-Die [!DNL Facebook Pixel] ist ein Analysetool, mit dem Sie die Effektivität Ihrer Werbung messen können, indem Sie die Aktionen verstehen, die Besucher auf Ihrer Website ausführen.
+Der [!DNL Facebook Pixel] ist ein Analysetool, mit dem Sie die Effektivität Ihrer Werbung messen können, indem Sie die Aktionen verstehen, die Besucher auf Ihrer Website ausführen.
 
 [!DNL Facebook Pixel] ist eine Werbeerweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie auf der [Facebook-Pixel-Website](https://developers.facebook.com/docs/facebook-pixel/).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Facebook Pixel] Erweiterung:
+So installieren Sie die [!DNL Facebook Pixel]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

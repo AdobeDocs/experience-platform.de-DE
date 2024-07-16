@@ -14,16 +14,16 @@ ht-degree: 62%
 
 # Erste Schritte mit der Segmentation Service-API {#getting-started}
 
-Adobe Experience Platform [!DNL Segmentation Service] ermöglicht Ihnen das Erstellen von Zielgruppen über Segmentdefinitionen oder andere Quellen in Adobe Experience Platform aus Ihrer [!DNL Real-Time Customer Profile] Daten.
+Mit Adobe Experience Platform [!DNL Segmentation Service] können Sie Zielgruppen mithilfe von Segmentdefinitionen oder anderen Quellen in Adobe Experience Platform aus Ihren [!DNL Real-Time Customer Profile] -Daten erstellen.
 
-Das Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die mit der Nutzung von [!DNL Segmentation Service].
+Das Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste voraus, die mit der Verwendung von [!DNL Segmentation Service] verbunden sind.
 
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] Daten.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] -Daten.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten durch [!DNL Experience Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich mit der [!DNL Segmentation] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Segmentation] -API erfolgreich arbeiten zu können.
 
 ## Lesen von Beispiel-API-Aufrufen
 
@@ -47,4 +47,4 @@ Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandb
 
 ## Nächste Schritte
 
-So führen Sie Aufrufe mit dem [!DNL Segmentation Service] -API eine der verfügbaren Endpunktleitfäden entweder über die linke Navigation oder innerhalb der [Übersicht über das Entwicklerhandbuch](./overview.md)
+Um Aufrufe mit der [!DNL Segmentation Service] -API durchzuführen, wählen Sie eine der verfügbaren Endpunkthandbücher entweder mithilfe der linken Navigation oder in der [Übersicht über das Entwicklerhandbuch](./overview.md) aus

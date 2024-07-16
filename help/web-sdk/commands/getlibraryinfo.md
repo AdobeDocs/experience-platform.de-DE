@@ -1,7 +1,8 @@
 ---
 title: getLibraryInfo
 description: Rufen Sie Informationen zur aktuellen Web SDK-Bibliotheksversion ab.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: f2bc0185-71c9-4d77-b9d2-b777a41a20e5
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -10,17 +11,17 @@ ht-degree: 0%
 
 # `getLibraryInfo`
 
-Die `getLibraryInfo` liefert Informationen zur aktuell verwendeten Version der Web SDK-Bibliothek. Mit diesem Befehl können Sie verfolgen, welche Versionen des Web SDK Sie für verschiedene Webeigenschaften bereitstellen.
+Der Befehl `getLibraryInfo` enthält Informationen zur aktuell verwendeten Version der Web SDK-Bibliothek. Mit diesem Befehl können Sie verfolgen, welche Versionen des Web SDK Sie für verschiedene Webeigenschaften bereitstellen.
 
 ## Bibliotheksinformationen mit der Web SDK-Tag-Erweiterung
 
 Die Tag-Erweiterung bietet keine Schnittstelle zum Senden dieses Befehls. Verwenden Sie den Editor für benutzerdefinierten Code entsprechend der JavaScript-Bibliothekssyntax.
 
-Wenn Sie diesen Befehl mit der Tag-Erweiterung ausführen, sind sowohl die Tag-Erweiterungsversion als auch die Bibliotheksversion enthalten, verkettet mit einer `+` Symbol. Die Web SDK-Bibliotheksversion wird zuerst aufgelistet, gefolgt von der Tag-Erweiterungsversion.
+Wenn Sie diesen Befehl mit der Tag-Erweiterung ausführen, sind sowohl die Tag-Erweiterungsversion als auch die Bibliotheksversion mit einem `+` -Symbol verkettet. Die Web SDK-Bibliotheksversion wird zuerst aufgelistet, gefolgt von der Tag-Erweiterungsversion.
 
-## Bibliotheksinformationen mit der JavaScript-Bibliothek des Web SDK
+## Bibliotheksinformationen mithilfe der Web SDK JavaScript-Bibliothek
 
-Führen Sie die `getLibraryInfo` beim Aufruf Ihrer konfigurierten Instanz des Web SDK. Dieser Befehl wird in der Regel mit einem JavaScript-Versprechen gepaart, mit dem Sie die Objekte abrufen können, die er füllt.
+Führen Sie den Befehl `getLibraryInfo` aus, wenn Sie Ihre konfigurierte Instanz des Web SDK aufrufen. Dieser Befehl wird normalerweise mit einem JavaScript-Versprechen gepaart, mit dem Sie die Objekte abrufen können, die er füllt.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -32,7 +33,7 @@ alloy("getLibraryInfo").then(function(result) {
 
 ## Antwortobjekt
 
-Wenn Sie sich für [Antworten verarbeiten](command-responses.md) Mit diesem Befehl sind die folgenden Eigenschaften im Antwortobjekt verfügbar:
+Wenn Sie mit diesem Befehl die [Handhabung von Antworten](command-responses.md) festlegen, sind die folgenden Eigenschaften im Antwortobjekt verfügbar:
 
 * **`libraryInfo.commands`**: Ein Array von Befehlen, die diese Version des Web SDK unterstützt.
 * **`libraryInfo.configs`**: Ein Array von Konfigurationseinstellungen, die von dieser Version des Web SDK unterstützt werden.

@@ -12,11 +12,11 @@ ht-degree: 28%
 
 # Verwalten von Sandboxes
 
-Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../../sandboxes/home.md).
+Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../../sandboxes/home.md).
 
 ## Sandboxes konfigurieren
 
-Um Details und Rollen anzuzeigen, die einer Sandbox zugewiesen sind, wählen Sie die **[!UICONTROL Sandboxes]** Registerkarte.
+Um Details und Rollen anzuzeigen, die einer Sandbox zugewiesen sind, wählen Sie die Registerkarte **[!UICONTROL Sandboxes]** aus.
 
 ![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
@@ -26,10 +26,10 @@ Die Registerkarte &quot;Details&quot;bietet einen Überblick über die Sandbox. 
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-Wählen Sie die **[!UICONTROL Rollen]** -Tab, um die Rollen anzuzeigen, denen die Sandbox zugewiesen ist.
+Wählen Sie die Registerkarte **[!UICONTROL Rollen]** aus, um die Rollen anzuzeigen, denen die Sandbox zugewiesen ist.
 
 ![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 
 ## Nächste Schritte
 
-Sie haben jetzt erfahren, wie Sie Sandbox-Details und die Rollen anzeigen können, denen sie derzeit zugewiesen ist. Eine allgemeine Übersicht über Sandboxes in Experience Platform finden Sie im Abschnitt [Sandbox-Übersichtsdokumentation](../../sanboxes/../ui/overview.md).
+Sie haben jetzt erfahren, wie Sie Sandbox-Details und die Rollen anzeigen können, denen sie derzeit zugewiesen ist. Eine allgemeine Übersicht über Sandboxes im Experience Platform finden Sie in der [Sandbox-Übersichtsdokumentation](../../sanboxes/../ui/overview.md).

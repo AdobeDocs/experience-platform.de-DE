@@ -4,21 +4,21 @@ description: Erfahren Sie, wie Sie XDM-Felder und Beispielabfragen bereitstellen
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 14%
+source-wordcount: '1089'
+ht-degree: 12%
 
 ---
 
 # Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten 
 
-Verwenden Sie Query Service , um die Daten zu verwalten, die von Adobe Analytics als Datensätze in Adobe Experience Platform erfasst werden. Die folgenden Abschnitte enthalten Beispielabfragen, mit denen Sie auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zugreifen können. Weitere Informationen finden Sie in der Dokumentation zu [Erfassen und Zuordnen von Adobe Analytics-Daten](../../sources/connectors/adobe-applications/mapping/analytics.md) über die Analytics-Quelle
+Verwenden Sie Query Service , um die Daten zu verwalten, die von Adobe Analytics als Datensätze in Adobe Experience Platform erfasst werden. Die folgenden Abschnitte enthalten Beispielabfragen, mit denen Sie auf die Merchandising-Variablen in Ihren Analytics-Datensätzen zugreifen können. Weitere Informationen zum Erfassen und Zuordnen von Adobe Analytics-Daten ](../../sources/connectors/adobe-applications/mapping/analytics.md) über die Analytics-Quelle finden Sie in der Dokumentation .[
 
 ## Merchandising-Variablen {#merchandising-variables}
 
-Merchandisingvariablen können einer oder zwei Syntaxen folgen:
+Merchandising-Variablen können einer von zwei Syntaxen folgen:
 
 * **Produktsyntax**: Verbindet den eVar mit einem Produkt. 
-* **Syntax der Konversionsvariablen**: Verbindet den eVar nur dann mit einem Produkt, wenn ein Binding-Ereignis auftritt. Sie können die Ereignisse auswählen, die als Binding-Ereignisse dienen.
+* **Konversionsvariablensyntax**: Verbindet das eVar nur dann mit einem Produkt, wenn ein Binding-Ereignis auftritt. Sie können die Ereignisse auswählen, die als Binding-Ereignisse dienen.
 
 ## Produktsyntax {#product-syntax}
 
@@ -26,9 +26,9 @@ In Adobe Analytics können benutzerdefinierte Daten auf Produktebene über spezi
 
 Diese Variablen werden als Merchandising-Variablen mit Produktsyntax bezeichnet. Dies ermöglicht die Erfassung von Informationen, z. B. einen pro Produkt ausgegebenen &quot;Rabattbetrag&quot;oder Informationen über die &quot;Position des Produkts auf der Seite&quot;in den Suchergebnissen des Kunden.
 
-Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mit Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementierung von eVars mit Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
 
-In den folgenden Abschnitten werden die XDM-Felder beschrieben, die für den Zugriff auf die Merchandising-Variablen in Ihren [!DNL Analytics] Datensatz:
+Die folgenden Abschnitte beschreiben die XDM-Felder, die für den Zugriff auf die Merchandising-Variablen in Ihrem [!DNL Analytics] -Datensatz erforderlich sind:
 
 ### eVars
 
@@ -50,11 +50,11 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 
 ## Anwendungsfälle für die Produktsyntax {#product-use-cases}
 
-Die folgenden Anwendungsbeispiele konzentrieren sich auf die Rückgabe eines Merchandising-eVar aus dem `productListItems` -Array mit SQL.
+Die folgenden Anwendungsbeispiele konzentrieren sich auf die Rückgabe eines Merchandising-eVar aus dem `productListItems` -Array mithilfe von SQL.
 
 ### Merchandising-eVar und -Ereignis zurückgeben
 
-Die nachstehende Abfrage gibt ein Merchandising-eVar und -Ereignis für das erste Produkt zurück, das im `productListItems` Array.
+Die nachstehende Abfrage gibt ein Merchandising-eVar und -Ereignis für das erste Produkt zurück, das im Array `productListItems` gefunden wurde.
 
 ```sql
 SELECT
@@ -70,7 +70,7 @@ LIMIT 10
 
 ### Explodieren Sie das productListItems-Array und geben Sie das Merchandising-eVar und -Ereignis für jedes Produkt zurück.
 
-Diese nächste Abfrage explodiert die `productListItems` und gibt jedes Merchandising-eVar und -Ereignis pro Produkt zurück. Das `_id`-Feld ist enthalten, um die Beziehung zum ursprünglichen Treffer anzuzeigen. Die `_id` -Wert ist ein eindeutiger Primärschlüssel für den Datensatz.
+Diese nächste Abfrage explodiert das `productListItems` -Array und gibt jedes Merchandising-eVar und jedes Ereignis pro Produkt zurück. Das `_id`-Feld ist enthalten, um die Beziehung zum ursprünglichen Treffer anzuzeigen. Der Wert `_id` ist ein eindeutiger Primärschlüssel für den Datensatz.
 
 >[!NOTE]
 >
@@ -104,19 +104,19 @@ LIMIT 20
 
 ### Syntax der Konversionsvariablen {#conversion-variable-syntax}
 
-Ein weiterer in Adobe Analytics zu findender Merchandising-Variablentyp ist die Syntax der Konversionsvariablen. Die Syntax der Konversionsvariablen wird verwendet, wenn der eVar nicht für die Variable &quot;products&quot;verfügbar ist. Dieses Szenario bedeutet in der Regel, dass Ihre Seite keinen Kontext für den Merchandising-Kanal oder die Suchmethode hat. In diesen Fällen sollten Sie die Merchandising-Variable festlegen, bevor der Benutzer zur Produktseite gelangt, und der Wert bleibt bestehen, bis das Binding-Ereignis eintritt.
+Ein weiterer in Adobe Analytics zu findender Merchandising-Variablentyp ist die Syntax der Konversionsvariablen. Die Syntax der Konversionsvariablen wird verwendet, wenn der eVar nicht für die Variable &quot;products&quot;verfügbar ist. Dieses Szenario bedeutet normalerweise, dass Ihre Seite keinen Kontext des Merchandising-Kanals oder der Suchmethode hat. In diesen Fällen sollten Sie die Merchandising-Variable festlegen, bevor der Benutzer zur Produktseite gelangt, und der Wert bleibt bestehen, bis das Binding-Ereignis eintritt.
 
 Das folgende Produktergebnis zeigt beispielsweise, wie die erforderlichen Daten auf einer Seite vorhanden sein können, bevor die mit dem Produkt in Verbindung stehende Konversion oder das Ereignis eintritt.
 
 1. Ein Benutzer führt eine interne Suche nach &quot;Wintermütze&quot;durch, wodurch die für die Konversionssyntax aktivierte Merchandising-eVar6 auf &quot;Interne Suche:Wintermütze&quot;gesetzt wird.
 2. Der Benutzer klickt auf „Waffelmütze“ und wird zur Produktdetailseite weitergeleitet.\
    a. Mit dem Öffnen der Seite wird ein `Product View`-Ereignis für die „Waffelmütze“ für $12,99 ausgelöst.\
-   b. Seit `Product View` als Binding-Ereignis konfiguriert ist, ist das Produkt &quot;Waffelmütze&quot;jetzt an den eVar6-Wert von &quot;Interne Suche:Wintermütze&quot;gebunden. Jedes Mal, wenn das Produkt &quot;Waffelmütze&quot;erfasst wird, wird es mit &quot;Interne Suche:Wintermütze&quot;verknüpft. Dies geschieht, bis entweder die Ablaufeinstellung der eVar erreicht ist oder ein neuer eVar6-Wert festgelegt und das Binding-Ereignis mit diesem Produkt erneut auftritt.
+   b. Da `Product View` als Binding-Ereignis konfiguriert ist, ist das Produkt &quot;Waffelmütze&quot;jetzt an den eVar6-Wert von &quot;Interne Suche:Wintermütze&quot;gebunden. Jedes Mal, wenn das Produkt &quot;Waffelmütze&quot;erfasst wird, wird es mit &quot;Interne Suche:Wintermütze&quot;verknüpft. Dies geschieht, bis entweder die Ablaufeinstellung der eVar erreicht ist oder ein neuer eVar6-Wert festgelegt und das Binding-Ereignis mit diesem Produkt erneut auftritt.
 3. Der Benutzer fügt das Produkt zum Warenkorb hinzu und löst das `Cart Add`-Ereignis aus.
 4. Der Benutzer führt eine weitere interne Suche nach &quot;Sommerhemd&quot;durch, wodurch die Konversionssyntax für Merchandising eVar6 auf &quot;Interne Suche:Sommerhemd&quot;gesetzt wird.
 5. Der Benutzer wählt &quot;Sportliches T-Shirt&quot;aus und landet auf der Produktdetailseite.\
    a. Mit dem Öffnen der Seite wird ein `Product View`-Ereignis für das „Sportliche T-Shirt“ für $19,99 ausgelöst.\
-   b. Als `Product View` -Ereignis das Binding-Ereignis ist, ist das Produkt &quot;Sportliches T-Shirt&quot;jetzt an den eVar 6-Wert von &quot;Interne Suche:Sommerhemd&quot;gebunden. Das frühere Produkt &quot;Waffelmütze&quot;ist weiterhin an den Wert von eVar 6 &quot;Interne Suche:Waffelmütze&quot;gebunden.
+   b. Da das `Product View` -Ereignis das Binding-Ereignis ist, ist das Produkt &quot;Sportliches T-Shirt&quot;jetzt an den eVar 6-Wert von &quot;Interne Suche:Sommerhemd&quot;gebunden. Das frühere Produkt &quot;Waffelmütze&quot;ist weiterhin an den Wert von eVar 6 &quot;Interne Suche:Waffelmütze&quot;gebunden.
 6. Der Benutzer fügt das Produkt zum Warenkorb hinzu und löst das `Cart Add`-Ereignis aus.
 7. Der Benutzer checkt mit beiden Produkten aus.
 
@@ -127,9 +127,9 @@ In Berichten sind die Bestellungen, der Umsatz, die Produktansichten und die Hin
 | Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 1 |
 | Interne Suche:Wintermütze | 12,99 | 1 | 1 | 1 |
 
-Weitere Informationen zur Verwendung der Konversionsvariablensyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mit der Syntax von Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Weitere Informationen zur Verwendung der Konversionsvariablensyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementierung von eVars mit Konversionsvariablensyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
 
-Im Folgenden werden die XDM-Felder angezeigt, um die Konversionsvariablensyntax in Ihrer [!DNL Analytics] Datensatz:
+Im Folgenden werden die XDM-Felder angezeigt, um die Syntax der Konversionsvariablen in Ihrem [!DNL Analytics] -Datensatz zu erzeugen:
 
 #### eVars
 
@@ -220,4 +220,4 @@ LIMIT 100
 
 Durch Lesen dieses Dokuments sollten Sie besser verstehen, wie Sie eine Merchandising-eVar mithilfe der Produktsyntax zurückgeben und einen Wert mit der Konversionsvariablensyntax an ein bestimmtes Produkt binden können.
 
-Wenn Sie dies noch nicht getan haben, sollten Sie die [Dokumentation zu Analytics-Einblicken für Web- und mobile Interaktionen](./analytics-insights.md) als Nächstes. Sie bietet gängige Anwendungsfälle und zeigt, wie Sie mit Query Service praktische Einblicke aus Web- und mobilen Adobe Analytics-Daten erstellen können.
+Wenn Sie dies noch nicht getan haben, sollten Sie als Nächstes die Dokumentation [Analytics-Einblicke für Web- und mobile Interaktionen](./analytics-insights.md) lesen. Sie bietet gängige Anwendungsfälle und zeigt, wie Sie mit Query Service praktische Einblicke aus Web- und mobilen Adobe Analytics-Daten erstellen können.

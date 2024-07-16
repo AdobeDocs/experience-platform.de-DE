@@ -20,15 +20,15 @@ Sie können bestimmte Aspekte der Funktionsweise von Adobe Experience Platform D
 
 ## Heller oder dunkler Modus
 
-Nach dem Öffnen von Platform Debugger können Sie das von Ihnen bevorzugte Erscheinungsbild auswählen, indem Sie **[!UICONTROL Einstellungen]** und wählen Sie entweder **Dunkelmodus** (Standard) oder **Leuchtmodus**.
+Nach dem Öffnen von Platform Debugger können Sie das von Ihnen bevorzugte Erscheinungsbild auswählen, indem Sie **[!UICONTROL Einstellungen]** aufrufen und entweder **Dunkler Modus** (Standard) oder **Heller Modus** auswählen.
 
 ## Zurücksetzen
 
-Auswählen **[!UICONTROL Alle Daten und Einstellungen zurücksetzen]** zurück, um alle Daten zu löschen und zu den Standardeinstellungen zurückzukehren.
+Wählen Sie **[!UICONTROL Alle Daten und Einstellungen zurücksetzen]** aus, um alle Daten zu löschen und zu den Standardeinstellungen zurückzukehren.
 
 ## Experience Platform Debugger auf einer Seite fixieren
 
-Wenn Sie Seiten Ihrer Site ändern, wird das Experience Platform Debugger-Fenster mit Informationen zu diesen Seiten aktualisiert. Der Name der Seite, mit der Sie gerade verbunden sind, wird unten im Bildschirm angezeigt. Um Experience Platform Debugger auf einer Seite zu fixieren, wählen Sie **[!UICONTROL Sperren]** in der rechten unteren Ecke des Fensters &quot;Platform Debugger&quot;.
+Wenn Sie Seiten Ihrer Site ändern, wird das Experience Platform Debugger-Fenster mit Informationen zu diesen Seiten aktualisiert. Der Name der Seite, mit der Sie gerade verbunden sind, wird unten im Bildschirm angezeigt. Um Experience Platform Debugger auf einer Seite zu fixieren, wählen Sie rechts unten im Fenster von Platform Debugger die Option **[!UICONTROL Sperren]** aus.
 
 ![](images/lock.jpg)
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Datenquellenverbindung
+keywords: Experience Platform; Homepage; beliebte Themen; Datenquellenverbindung
 solution: Experience Platform
 title: Aufnehmen von Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem mithilfe der Flow Service-API
 type: Tutorial
@@ -7,16 +7,16 @@ description: In diesem Tutorial werden die Flow Service-API verwendet, um Sie du
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 47%
+source-wordcount: '1088'
+ht-degree: 44%
 
 ---
 
-# Aufnehmen von Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem mithilfe des [!DNL Flow Service] API
+# Aufnehmen von Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem mithilfe der [!DNL Flow Service]-API
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service] API, die Sie durch die Schritte führt, mit denen Sie Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem erfassen können.
+In diesem Tutorial wird die [!DNL Flow Service] -API verwendet, um Sie durch die Schritte zum Erfassen von Parquet-Daten aus einem Drittanbieter-Cloud-Speicher-System zu führen.
 
 ## Erste Schritte
 
@@ -25,7 +25,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 - [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 - [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Parquet-Daten erfolgreich aus einem Drittanbieter-Cloud-Speicher mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Parquet-Daten erfolgreich aus einem Cloud-Speicher von Drittanbietern mithilfe der [!DNL Flow Service] -API erfassen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -49,7 +49,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Verbindung erstellen
 
-So erfassen Sie Parquet-Daten mit [!DNL Platform] APIs verwenden, müssen Sie über eine gültige Verbindung für die Cloud-Speicherquelle von Drittanbietern verfügen, auf die Sie zugreifen. Wenn Sie noch keine Verbindung für den Speicher haben, mit dem Sie arbeiten möchten, können Sie eine durch die folgenden Tutorials erstellen:
+Um Parquet-Daten mithilfe von [!DNL Platform] -APIs zu erfassen, müssen Sie über eine gültige Verbindung für die Cloud-Speicherquelle von Drittanbietern verfügen, auf die Sie zugreifen. Wenn Sie noch keine Verbindung für den Speicher haben, mit dem Sie arbeiten möchten, können Sie eine durch die folgenden Tutorials erstellen:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -57,13 +57,13 @@ So erfassen Sie Parquet-Daten mit [!DNL Platform] APIs verwenden, müssen Sie ü
 - [Google Cloud Store](./create/cloud-storage/google.md)
 - [SFTP](./create/cloud-storage/sftp.md)
 
-Die eindeutige Kennung (`$id`) der Verbindung herunter und fahren Sie dann mit dem nächsten Schritt dieses Tutorials fort.
+Rufen Sie die eindeutige Kennung (`$id`) der Verbindung ab und speichern Sie sie. Fahren Sie dann mit dem nächsten Schritt dieses Tutorials fort.
 
 ## Zielschema erstellen
 
-Damit die Quelldaten in [!DNL Platform], muss auch ein Zielschema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Das Zielschema wird dann zum Erstellen einer [!DNL Platform] Datensatz, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in [!DNL Platform] verwendet werden können, muss auch ein Zielschema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Das Zielschema wird dann verwendet, um einen [!DNL Platform] -Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
-Wenn Sie die Benutzeroberfläche in [!DNL Experience Platform], die [Tutorial zum Schema Editor](../../../xdm/tutorials/create-schema-ui.md) enthält schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema-Editor.
+Wenn Sie die Benutzeroberfläche in [!DNL Experience Platform] lieber verwenden möchten, enthält das Tutorial [Schema Editor](../../../xdm/tutorials/create-schema-ui.md) schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema Editor.
 
 **API-Format**
 
@@ -73,7 +73,7 @@ POST /schemaregistry/tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanfrage erstellt ein XDM-Schema, das das XDM-Schema erweitert [!DNL Individual Profile] -Klasse.
+Die folgende Beispielanfrage erstellt ein XDM-Schema, das die XDM [!DNL Individual Profile] -Klasse erweitert.
 
 ```shell
 curl -X POST \
@@ -116,7 +116,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich der eindeutigen Kennung (`$id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einschließlich der eindeutigen Kennung (`$id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
 
 ```json
 {
@@ -198,7 +198,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
 
 ## Erstellen einer Quellverbindung {#source}
 
-Mit einem erstellten Ziel-XDM-Schema kann jetzt eine Quellverbindung mit einer POST-Anfrage an die [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindung für die API, einem Quelldatenformat und einem Verweis auf das im vorherigen Schritt abgerufene Ziel-XDM-Schema.
+Nachdem ein Ziel-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anfrage an die [!DNL Flow Service] -API erstellt werden. Eine Quellverbindung besteht aus einer Verbindung für die API, einem Quelldatenformat und einem Verweis auf das im vorherigen Schritt abgerufene Ziel-XDM-Schema.
 
 **API-Format**
 
@@ -241,7 +241,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `baseConnectionId` | Die Verbindung für die API, die Ihren Cloud-Speicher darstellt. |
-| `data.schema.id` | Die (`$id`), wenn das Ziel-XDM-Schema im vorherigen Schritt abgerufen wurde. |
+| `data.schema.id` | Der (`$id`), wenn das Ziel-XDM-Schema, das im vorherigen Schritt abgerufen wurde. |
 | `params.path` | Der Pfad der Quelldatei. |
 
 **Antwort**
@@ -255,13 +255,13 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-## Erstellen einer Datensatzbase-Verbindung
+## Erstellen einer Datensatzbasisverbindung
 
-So erfassen Sie externe Daten in [!DNL Platform], und [!DNL Experience Platform] Zunächst muss eine Datensatzbase-Verbindung erworben werden.
+Um externe Daten in [!DNL Platform] zu erfassen, muss zunächst eine [!DNL Experience Platform] Datensatz-Basisverbindung erworben werden.
 
-Gehen Sie wie im Abschnitt [Tutorial zur Datenbankverbindung zu Datensätzen](./create-dataset-base-connection.md).
+Um eine Datensatzbase-Verbindung zu erstellen, führen Sie die im Tutorial [Datenbankverbindung zum Datensatz](./create-dataset-base-connection.md) beschriebenen Schritte aus.
 
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine Basisverbindung für den Datensatz erstellt haben. Die eindeutige Kennung (`$id`) und fahren Sie mit der Verwendung als Basis-Verbindungs-ID im nächsten Schritt fort, um eine Zielverbindung zu erstellen.
+Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine Basisverbindung für den Datensatz erstellt haben. Rufen Sie die eindeutige Kennung (`$id`) ab und speichern Sie sie, um im nächsten Schritt eine Zielverbindung zu erstellen, und fahren Sie mit der Verwendung als Basis-Verbindungs-ID fort.
 
 ## Erstellen eines Zieldatensatzes
 
@@ -298,7 +298,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Ziel-Datensatz-ID so, wie es in späteren Schritten erforderlich ist, um eine Zielverbindung und einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, systemgenerierte Zeichenfolge, die in API-Aufrufen zum Verweisen auf den Datensatz verwendet wird. Speichern Sie die Ziel-Datensatz-ID so, wie es in späteren Schritten erforderlich ist, um eine Zielverbindung und einen Datenfluss zu erstellen.
 
 ```json
 [
@@ -411,8 +411,8 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sourceConnectionIds` | Die Quellverbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
-| `targetConnectionIds` | Die Zielverbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die Kennung der Quellverbindung, die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die in einem früheren Schritt abgerufene Zielverbindungs-ID. |
 
 **Antwort**
 

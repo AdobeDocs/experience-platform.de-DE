@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;Datenvorbereitung;Datenvorbereitungs-API;Fehlerbehebung;API
 title: Datenvorbereitungs-API – Übersicht
-description: Mit der Datenvorbereitungs-API können Sie programmatisch Zuordnungssätze und -funktionen erstellen, um Ihre Daten zwischen Quell- und Zielschemas zu konvertieren.
+description: Mit der Datenvorbereitungs-API können Sie programmatisch Zuordnungssätze und -funktionen erstellen, um Ihre Daten zwischen Quell- und Zielschemata zu konvertieren.
 exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ Die Mapping Service-API, auch als Datenvorbereitungs-API bezeichnet, enthält ve
 
 ## Funktionen
 
-Mit Zuordnungssatzfunktionen können Sie Ihre Daten zwischen Quell- und Zielschemas konvertieren. Sie können den `/languages/el`-Endpunkt verwenden, um Ihre Ausdrücke zu validieren und eine Liste aller verfügbaren Zuordnungssatzfunktionen und -vorgänge abzurufen.
+Mit Zuordnungssatzfunktionen können Sie Ihre Daten zwischen Quell- und Zielschemata konvertieren. Sie können den `/languages/el`-Endpunkt verwenden, um Ihre Ausdrücke zu validieren und eine Liste aller verfügbaren Zuordnungssatzfunktionen und -vorgänge abzurufen.
 
 Ausführliche Informationen zur Verwendung von Zuordnungssatzfunktionen finden Sie im [Endpunkthandbuch zu Funktionen](./functions.md).
 

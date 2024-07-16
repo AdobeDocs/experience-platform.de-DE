@@ -25,17 +25,17 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=de" text="Datensatzgültigkeiten"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=de" text="Datenablaufzeiten von Pseudonym-Profilen"
 
-Sie können wichtige Informationen zur Lizenznutzung Ihres Unternehmens über die Adobe Experience Platform anzeigen [!UICONTROL Lizenzverwendung] Dashboard. Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
+Wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen finden Sie im Dashboard für die Adobe Experience Platform [!UICONTROL Lizenznutzung] . Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
 
 Lizenzverwendungsberichte bieten eine hohe Granularität im Vergleich zu Ihren Lizenzverwendungsmetriken. Das Dashboard bietet Nutzungsmetriken für jedes gekaufte Produkt, die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Anwendungen können mit Nutzungsmetriken verfolgt werden: Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 In diesem Handbuch wird beschrieben, wie Sie auf das Dashboard zur Lizenzverwendung in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Eine allgemeine Übersicht über die Platform-Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Experience Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Eine allgemeine Übersicht über die Platform-Benutzeroberfläche finden Sie im [Experience Platform UI-Handbuch](../../landing/ui-guide.md).
 
-## [!UICONTROL Lizenzverwendung] Dashboard-Daten
+## [!UICONTROL Nutzung der Lizenz] Dashboard-Daten
 
-Die [!UICONTROL Lizenzverwendung] Dashboard zeigt eine Liste aller von Ihnen erworbenen Experience Platform-Produkte an. Aus dieser Liste können Sie eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens zum Experience Platform in allen zugehörigen Sandboxes finden.
+Im Dashboard [!UICONTROL Lizenznutzung] wird eine Liste aller von Ihnen erworbenen Experience Platform-Produkte angezeigt. Aus dieser Liste können Sie eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens zum Experience Platform in allen zugehörigen Sandboxes finden.
 
 Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunkt angezeigt werden, zu dem der Schnappschuss erstellt wurde. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Dashboard wird nicht in Echtzeit aktualisiert.
 
@@ -45,15 +45,15 @@ Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunk
 
 ## Dashboard zur Lizenznutzung {#explore}
 
-Um in der Platform-Benutzeroberfläche zum Dashboard zur Lizenzverwendung zu navigieren, wählen Sie **[!UICONTROL Lizenzverwendung]** in der linken Leiste. Die [!UICONTROL Übersicht] -Tab mit einer Liste der verfügbaren Produkte öffnen.
+Um in der Platform-Benutzeroberfläche zum Dashboard für die Lizenzverwendung zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Lizenzverwendung]** aus. Die Registerkarte [!UICONTROL Übersicht] wird geöffnet und enthält eine Liste der verfügbaren Produkte.
 
 >[!NOTE]
 >
->Das Dashboard zur Lizenznutzung ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung &quot;Dashboard zur Lizenznutzung anzeigen&quot;gewährt werden, damit sie das Dashboard anzeigen können. Anweisungen zum Gewähren von Zugriffsberechtigungen für die Anzeige des Dashboards zur Lizenznutzung finden Sie im Abschnitt [Dashboard-Berechtigungshandbuch](../permissions.md).
+>Das Dashboard zur Lizenznutzung ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung &quot;Dashboard zur Lizenznutzung anzeigen&quot;gewährt werden, damit sie das Dashboard anzeigen können. Anweisungen zum Gewähren von Zugriffsberechtigungen für die Anzeige des Dashboards zur Lizenznutzung finden Sie im [Dashboard-Berechtigungshandbuch](../permissions.md).
 
-![Die Registerkarte Übersicht über die Lizenznutzung des Dashboards mit der Lizenznutzung, wobei die Lizenznutzung in der linken Navigationsleiste hervorgehoben ist.](../images/license-usage/dashboard-overview.png)
+![Die Registerkarte Übersicht über das Dashboard zur Lizenzverwendung, wobei die Lizenznutzung in der linken Navigationsleiste hervorgehoben ist.](../images/license-usage/dashboard-overview.png)
 
-## [!UICONTROL Übersicht] tab {#overview-tab}
+## Registerkarte [!UICONTROL Übersicht] {#overview-tab}
 
 In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte, einschließlich Add-ons, in Tabellenformat angezeigt. Die Tabelle enthält wichtige Informationen zur Nutzung Ihrer Lizenz für alle verfügbaren Profile.
 
@@ -67,23 +67,23 @@ In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte,
 
 >[!NOTE]
 >
->Hinzufügungen zum [!UICONTROL Lizenzbetrag] als Ergebnis von Add-ons werden über dem [!UICONTROL Lizenzbetrag] für Basisprodukte wie Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics. Die Verwendung dieses lizenzierten Betrags (nach den Add-ons) wird durch die Basisprodukte verfolgt. Wenn Sie beispielsweise eine Packung mit fünf Sandboxes kaufen, wird die Menge von fünf weiteren Sandboxes der Menge des Basisprodukts hinzugefügt. In diesem Fall zeigt das Add-on eine [!UICONTROL Lizenzbetrag] und die Verwendung für dieses Add-on &quot;leer&quot;ist, da die Verwendung durch das Basisprodukt verfolgt wird.
+>Ergänzungen zum [!UICONTROL Lizenzbetrag] infolge von Add-ons werden zusätzlich zum [!UICONTROL Lizenzbetrag] für Basisprodukte wie Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics hinzugefügt. Die Verwendung dieses lizenzierten Betrags (nach den Add-ons) wird durch die Basisprodukte verfolgt. Wenn Sie beispielsweise eine Packung mit fünf Sandboxes kaufen, wird die Menge von fünf weiteren Sandboxes der Menge des Basisprodukts hinzugefügt. In diesem Fall zeigt das Add-on den [!UICONTROL Lizenzbetrag] von einem an und die Verwendung für dieses Add-on ist &quot;leer&quot;, da die Verwendung durch das Basisprodukt verfolgt wird.
 
 Die Tabelle zeigt die primäre Metrik für jedes Produkt an, da jedes Produkt zahlreiche Metriken verfolgen kann.
 
-## [!UICONTROL Zusammenfassung] tab {#summary-tab}
+## Registerkarte [!UICONTROL Zusammenfassung] {#summary-tab}
 
-Um weitere Metriken und detaillierte Einblicke in die Nutzung Ihrer Produktlizenz anzuzeigen, wählen Sie einen Produktnamen aus der Liste aus. Die [!UICONTROL Zusammenfassung] -Ansicht für dieses Produkt angezeigt. Alle verfügbaren Metriken werden auf der Seite [!UICONTROL Zusammenfassung] Registerkarte. Die verfügbaren Metriken hängen vom lizenzierten Produkt ab. Diese Ansicht bietet **eine konsolidierte Ansicht aller Metriken in allen Produktions- oder Entwicklungs-Sandboxes**. Die gleiche Analyseebene wird sowohl für Produktions- als auch für Entwicklungs-Sandboxes bereitgestellt.
+Um weitere Metriken und detaillierte Einblicke in die Nutzung Ihrer Produktlizenz anzuzeigen, wählen Sie einen Produktnamen aus der Liste aus. Die Ansicht [!UICONTROL Zusammenfassung] für dieses Produkt wird angezeigt. Alle verfügbaren Metriken werden auf der Registerkarte [!UICONTROL Zusammenfassung] angezeigt. Die verfügbaren Metriken hängen vom lizenzierten Produkt ab. Diese Ansicht bietet **eine konsolidierte Ansicht aller Metriken in allen Produktions- oder Entwicklungs-Sandboxes**. Die gleiche Analyseebene wird sowohl für Produktions- als auch für Entwicklungs-Sandboxes bereitgestellt.
 
-![Die Zusammenfassungsansicht eines Platform-Produkts, in der alle für dieses Produkt verfügbaren Metriken angezeigt werden.](../images/license-usage/summary-tab.png)
+![Die Zusammenfassungsansicht eines Platform-Produkts, die alle für dieses Produkt verfügbaren Metriken anzeigt.](../images/license-usage/summary-tab.png)
 
-Im Tab Zusammenfassung enthält die Tabelle die [!UICONTROL Metrik] Spalte. Diese für Menschen lesbaren Beschreibungen zeigen alle Metriken an, die für diesen Sandbox-Typ verwendet werden.
+Auf der Registerkarte &quot;Zusammenfassung&quot;enthält die Tabelle die Spalte [!UICONTROL Metrik] . Diese für Menschen lesbaren Beschreibungen zeigen alle Metriken an, die für diesen Sandbox-Typ verwendet werden.
 
 ### Sandbox auswählen {#select-sandbox}
 
-Um die Ansicht zwischen Produktions- und Entwicklungs-Sandbox-Typen zu ändern, wählen Sie entweder [!UICONTROL Produktions-Sandboxes] oder [!UICONTROL Entwicklungs-Sandboxes]. Der ausgewählte Sandbox-Typ wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
+Um die Ansicht zwischen Produktions- und Entwicklungs-Sandbox-Typen zu ändern, wählen Sie entweder [!UICONTROL Produktions-Sandboxes] oder [!UICONTROL Entwicklungs-Sandboxes] aus. Der ausgewählte Sandbox-Typ wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
 
-Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Anders ausgedrückt: durch Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] stellt Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereit.
+Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Mit anderen Worten: Durch die Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] werden Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereitgestellt.
 
 ![Die Zusammenfassungsansicht eines Platform-Produkts mit Produktions-Sandboxes und Entwicklungs-Sandboxes hervorgehoben.](../images/license-usage/summary-tab-sandboxes.png)
 
@@ -95,13 +95,13 @@ Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselb
 >2. Fügen Sie unter Berechtigungen in der Kategorie Sandbox alle Sandboxes hinzu, die Sie im Dashboard zur Lizenznutzung anzeigen möchten.
 >3. Fügen Sie unter der Kategorie Berechtigungen für Benutzer-Dashboard die Berechtigung &quot;Dashboard zur Nutzung der Lizenz anzeigen&quot;hinzu.
 
-## Die [!UICONTROL Details] tab {#details-tab}
+## Registerkarte [!UICONTROL Details] {#details-tab}
 
-Zum Anzeigen **eine bestimmte Nutzungsmetrik aus einer bestimmten Sandbox**, navigieren Sie zum [!UICONTROL Details] Registerkarte. Die [!UICONTROL Details] -Registerkarte zeigt alle verfügbaren Sandboxes entweder in den Produktions- oder Entwicklungs-Sandboxes an.
+Um **eine bestimmte Nutzungsmetrik aus einer bestimmten Sandbox anzuzeigen, navigieren Sie zur Registerkarte [!UICONTROL Details] .** Auf der Registerkarte [!UICONTROL Details] werden alle verfügbaren Sandboxes entweder in den Produktions- oder Entwicklungs-Sandboxes angezeigt.
 
-![Registerkarte Details des Dashboards zur Lizenzverwendung.](../images/license-usage/details-tab.png)
+![Die Registerkarte Details des Dashboards zur Lizenzverwendung.](../images/license-usage/details-tab.png)
 
-In dieser Ansicht können Sie ![Das Inspektionssymbol.](../images/license-usage/inspect-icon.png) neben einem Sandbox-Namen, um die Visualisierung für diese Metrik anzuzeigen. Ein Dialogfeld mit einer Visualisierung für diese Metrik wird geöffnet.
+In dieser Ansicht können Sie das Symbol &quot;![Überprüfen&quot;auswählen.](../images/license-usage/inspect-icon.png) neben einem Sandbox-Namen klicken, um die Visualisierung für diese Metrik anzuzeigen. Ein Dialogfeld mit einer Visualisierung für diese Metrik wird geöffnet.
 
 ### Visualisierungen {#visualizations}
 
@@ -120,11 +120,11 @@ Der Lookback-Zeitraum der Analyse kann über das Dropdown-Menü angepasst werden
 
 Um einen Datumsbereich auszuwählen, können Sie über das Dropdown-Menü Datumsbereich den Zeitraum auswählen, der im Dashboard angezeigt werden soll. Es stehen mehrere Optionen zur Verfügung, darunter der Standardwert der letzten 30 Tage.
 
-![Das Visualisierungsdialogfeld mit der Dropdown-Liste Datumsbereich wurde hervorgehoben.](../images/license-usage/date-range.png)
+![Das Visualisierungsdialogfeld mit dem Dropdown-Menü für den Datumsbereich wurde hervorgehoben.](../images/license-usage/date-range.png)
 
-Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** , um den angezeigten Zeitraum auszuwählen.
+Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** auswählen, um den angezeigten Zeitraum auszuwählen.
 
-![Im Dashboard Übersicht zur Lizenznutzung werden die benutzerdefinierten Datumsbereichsoptionen hervorgehoben.](../images/license-usage/custom-date-range.png)
+![Die Registerkarte Übersicht über die Lizenznutzung des Dashboards mit den benutzerdefinierten Datumsbereichsoptionen hervorgehoben.](../images/license-usage/custom-date-range.png)
 
 ## Verfügbare Metriken {#available-metrics}
 
@@ -132,23 +132,23 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 
 | Metrik | Beschreibung |
 |---|---|
-| [!UICONTROL Audience Activation-Größe] | Die Gesamtgröße der Profile, die in einem Jahr für ein dateibasiertes Ziel aktiviert wurden. Hinweis: Dies umfasst keine Profile, die über Streaming-Ziele gesendet werden. |
+| [!UICONTROL Audience Activation Size] | Die Gesamtgröße der Profile, die in einem Jahr für ein dateibasiertes Ziel aktiviert wurden. Hinweis: Dies umfasst keine Profile, die über Streaming-Ziele gesendet werden. |
 | [!UICONTROL Addressable Audience] | Die Summe der Berechtigungen Ihrer geschäftlichen Zielgruppe und der Berechtigung für die Verbraucher-Zielgruppe. Eine Audience vom Verbraucher wird definiert als die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe des Verbrauchers&quot;identifiziert werden. Eine Business-Audience ist definiert als die Anzahl der Geschäftspersonenprofile, die in der Bestellung als &quot;Business Audience&quot;identifiziert werden. |
-| [!UICONTROL Adhoc Query Service-Benutzer-Packs] | Ein Add-on zur Erhöhung der Berechtigung für gleichzeitige Query Service-Benutzer um fünf zusätzliche gleichzeitige Query Service-Benutzer und eine zusätzliche gleichzeitige Ausführung von Ad-hoc-Abfragen pro Pack. Es können mehrere zusätzliche Ad Hoc Query User Packs lizenziert sein. |
-| [!UICONTROL Durchschnittliche Profiltiefe] | Die Summe aller im Hub-Profil-Service gespeicherten Produktionsdaten zu einem beliebigen Zeitpunkt, dividiert durch die fünffache Anzahl autorisierter Geschäftspersonenprofile. [!UICONTROL Durchschnittliche Profiltiefe] ist eine freigegebene Funktion. |
+| [!UICONTROL  Adhoc Query Service Users Packs] | Ein Add-on zur Erhöhung der Berechtigung für gleichzeitige Query Service-Benutzer um fünf zusätzliche gleichzeitige Query Service-Benutzer und eine zusätzliche gleichzeitige Ausführung von Ad-hoc-Abfragen pro Pack. Es können mehrere zusätzliche Ad Hoc Query User Packs lizenziert sein. |
+| [!UICONTROL Durchschnittliche Profilreichweite] | Die Summe aller im Hub-Profil-Service gespeicherten Produktionsdaten zu einem beliebigen Zeitpunkt, dividiert durch die fünffache Anzahl autorisierter Geschäftspersonenprofile. [!UICONTROL Durchschnittliche Profilreichweite] ist eine gemeinsam genutzte Funktion. |
 | [!UICONTROL Verfügbare CJA-Zeilen] | Die täglichen durchschnittlichen Datenzeilen, die in Customer Journey Analytics zur Analyse verfügbar sind. |
 | [!UICONTROL Berechnete Attribute] | Die Gesamtanzahl der aggregierten Profilverhaltensdaten. Aggregierte Profilverhaltensdaten basieren auf Erlebnisereignissen, die in ein Profilattribut konvertiert werden und in ein Personenprofil oder ein Geschäftsprofil aufgenommen werden können. |
-| [!UICONTROL Verbraucherzielgruppe] | Die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe für Verbraucher&quot;identifiziert wurden. |
+| [!UICONTROL Consumer Audience] | Die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe für Verbraucher&quot;identifiziert wurden. |
 | [!UICONTROL Datenexportgröße] | Die Menge der Daten, die durch Datensatzaktivierungen in einem Jahr gesendet werden. |
 | [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die in einem Jahr (direkt oder indirekt) in eine Nicht-Adobe-Lösung exportiert werden können. |
-| [!UICONTROL Data Lake Storage] | Die Menge, die für den Analysedatenspeicher in Adobe Experience Platform verwendet wird. |
+| [!UICONTROL  Data Lake Storage] | Die Menge, die für den Analysedatenspeicher in Adobe Experience Platform verwendet wird. |
 | [!UICONTROL Interagierbare Zielgruppe] | Diese Metrik bezieht sich auf die Zielgruppe von interagierbaren Profilen. Ein interagierbares Profil ist ein Datensatz mit Informationen, die eine Person repräsentieren und im Profil-Dienst dargestellt werden. Diese Datensätze sind Profile, mit denen Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Versand-, Experimentierungs- oder Orchestrierungsfunktionen von Journey Optimizer interagiert haben. |
 | [!UICONTROL Look-alike-Zielgruppen] | Zählung der Zielgruppen, die durch Modellierung einer bestehenden Verbraucherzielgruppe generiert werden, um Personenprofile zu identifizieren, die der vorhandenen Verbraucherzielgruppe ähnlich sind. |
 | [!UICONTROL Anzahl der AMM-Modelle] | Zählung des maschinellen Lernmodells (integrierter Adobe Mix Modeler), mit dem ein bestimmtes, auf Ihren Investitionen basierendes Ergebnis gemessen und/oder vorhergesagt werden kann. |
 | [!UICONTROL Anzahl der Sandboxes] | Zählung der logischen Trennungen innerhalb Ihrer Instanz eines Adobe On-Demand-Dienstes, der auf Adobe Experience Platform-Isolationsdaten und -Vorgänge zugreift. |
-| [!UICONTROL Profil - Richtigkeit Anzahl der Pakete] | Eine Steigerung der zulässigen durchschnittlichen Profilreichweite pro Profil um 25 KB pro Profil für jedes zusätzliche Profil-Rich-ness-Paket. |
-| [!UICONTROL Berechnungszeiten für Query Service] | Eine Maßeinheit für die Zeit, die die Query Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird. |
-| [!UICONTROL Anzahl der Pakete für Streaming-Segmentierung] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungsdienst gelangen. Die Segmentzugehörigkeit wird auf der Grundlage der aktuellen Personenprofilattribute und des Werts des aktuellen Ereignisses ausgewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsame Funktion. |
+| [!UICONTROL Profilreichhaltigkeitsnummer der Pakete] | Eine Steigerung der zulässigen durchschnittlichen Profilreichweite pro Profil um 25 KB pro Profil für jedes zusätzliche Profil-Rich-ness-Paket. |
+| [!UICONTROL Berechnungsstunden des Query Service] | Eine Maßeinheit für die Zeit, die die Query Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird. |
+| [!UICONTROL Streaming-Segmentierungsnummer der Pakete] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungsdienst gelangen. Die Segmentzugehörigkeit wird auf der Grundlage der aktuellen Personenprofilattribute und des Werts des aktuellen Ereignisses ausgewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsame Funktion. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
@@ -175,4 +175,4 @@ Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metrike
 
 Nach dem Lesen dieses Dokuments können Sie das Dashboard zur Lizenznutzung finden und Nutzungsmetriken für jedes gekaufte Produkt, für alle Produktions- oder Entwicklungs-Sandboxes sowie für eine bestimmte Sandbox anzeigen. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen finden Sie auf der Grundlage der von Ihrem Unternehmen erworbenen Lizenzierung.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Abschnitt [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).

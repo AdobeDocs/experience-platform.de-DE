@@ -5,16 +5,16 @@ description: Die DialogTech-Erweiterung ist ein Analyseziel in Adobe Experience 
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 88%
+source-wordcount: '408'
+ht-degree: 91%
 
 ---
 
-# [!DNL DialogTech]-Erweiterung  {#dialogtech-extension}
+# [!DNL DialogTech]-Erweiterung {#dialogtech-extension}
 
 ## Übersicht {#overview}
 
-[!DNL DialogTech] ist eine Analyseerweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie auf der [DialogTech-Website](https://www.dialogtech.com/).
+[!DNL DialogTech] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weiterführende Informationen zur Erweiterungsfunktion finden Sie auf der [DialogTech-Website](https://www.dialogtech.com/).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -28,7 +28,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL DialogTech] Erweiterung:
+So installieren Sie die [!DNL DialogTech]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

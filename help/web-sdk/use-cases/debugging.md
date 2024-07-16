@@ -16,9 +16,9 @@ Wenn das Debugging aktiviert ist, gibt das Web SDK Meldungen an die Browser-Kons
 
 Das Debugging ist standardmäßig deaktiviert, kann jedoch auf vier verschiedene Arten aktiviert werden. Sie können eine beliebige Kombination dieser Methoden verwenden, um das Debugging zu aktivieren oder zu deaktivieren, das für Ihren Entwicklungs-Workflow am bequemsten ist.
 
-## Verwendung `debugEnabled` im `configure` command
+## Verwenden Sie `debugEnabled` im Befehl `configure` .
 
-Legen Sie die `debugEnabled` boolesch auf &quot;true&quot;fest, wenn die Erweiterung konfiguriert wird. Diese Option wird normalerweise für Entwicklungsumgebungen verwendet, da sie das Debugging für alle Besucher einer beliebigen Seite Ihrer Site ermöglicht:
+Setzen Sie den booleschen Wert `debugEnabled` beim Konfigurieren der Erweiterung auf &quot;true&quot;. Diese Option wird normalerweise für Entwicklungsumgebungen verwendet, da sie das Debugging für alle Besucher einer beliebigen Seite Ihrer Site ermöglicht:
 
 ```js
 alloy("configure", {
@@ -28,9 +28,9 @@ alloy("configure", {
 });
 ```
 
-Siehe [`debugEnabled`](../commands/configure/debugenabled.md) für weitere Informationen.
+Weitere Informationen finden Sie unter [`debugEnabled`](../commands/configure/debugenabled.md) .
 
-## Verwenden Sie die `setDebug` command
+## Verwenden Sie den Befehl `setDebug` .
 
 Ähnlich wie der obige boolesche Befehl ermöglicht dieser Befehl das Debugging über alle Besucher der Seite hinweg.
 
@@ -38,11 +38,11 @@ Siehe [`debugEnabled`](../commands/configure/debugenabled.md) für weitere Infor
 alloy("setDebug", {"enabled": true});
 ```
 
-Siehe [`setDebug`](../commands/setdebug.md) für weitere Informationen.
+Weitere Informationen finden Sie unter dem Befehl [`setDebug`](../commands/setdebug.md) .
 
 ## Abfragezeichenfolgenparameter festlegen
 
-Sie können das Debugging aktivieren, indem Sie die Abfragezeichenfolge hinzufügen `?alloy_debug=true` an das Ende einer beliebigen URL. Beispiel:
+Sie können das Debugging aktivieren, indem Sie die Abfragezeichenfolge `?alloy_debug=true` am Ende einer beliebigen URL hinzufügen. Beispiel:
 
 `http://example.com/?alloy_debug=true`
 
@@ -52,6 +52,6 @@ Diese Methode gilt nur für Ihren lokalen Computer, sodass Sie Produktions-Websi
 
 Der Adobe Experience Platform Debugger ist ein leistungsstarkes Tool, das Ihre Webseiten überprüft und Ihnen dabei hilft, Ihre Implementierung von Experience Cloud-Produkten zu debuggen. Sie können das Debugging auf der Registerkarte &quot;Konfiguration&quot;des AEP Web SDK-Abschnitts aktivieren.
 
-![Aktivieren des Debuggers](../assets/enable-debugging.png)
+![Debugger aktivieren](../assets/enable-debugging.png)
 
-Siehe [Übersicht über Adobe Experience Platform Debugger](/help/debugger/home.md) für weitere Informationen.
+Weitere Informationen finden Sie unter [Adobe Experience Platform Debugger - Übersicht](/help/debugger/home.md) .

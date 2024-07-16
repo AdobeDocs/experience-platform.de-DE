@@ -1,18 +1,19 @@
 ---
 title: Liste der Status Ende der Sammlungsdatentyp
 description: Erfahren Sie mehr über den Datentyp "List of States End Collection Data Type Experience Data Model (XDM)".
-source-git-commit: e9107092b60361216744e154752f48546b5bad73
+exl-id: e59d12e0-2f18-4637-8a51-41b7b5b59b57
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL Liste der Statusenden] Datentyp
+# [!UICONTROL Liste der Statusenddaten ]
 
-Der Datentyp Liste der Daten vom Typ &quot;State End Collection&quot;ist ein Experience-Datenmodell (XDM)-Datentyp, der Informationen zum Endstatus verschiedener Player-Attribute darstellt. Er enthält die [!UICONTROL Player-Statusname] -Eigenschaften, die den jeweiligen Attributstatus angeben (z. B. &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;). Dieser Datentyp wird zum Erfassen und Beschreiben der anfänglichen Bedingungen verschiedener Player-Status verwendet.
+Der Datentyp Liste der Daten vom Typ &quot;State End Collection&quot;ist ein Experience-Datenmodell (XDM)-Datentyp, der Informationen zum Endstatus verschiedener Player-Attribute darstellt. Sie enthält die Eigenschaften [!UICONTROL Player-Statusname] , die den jeweiligen Attributstatus angeben (z. B. &quot;fullscreen&quot;, &quot;mute&quot;, &quot;closedCaptioning&quot;). Dieser Datentyp wird zum Erfassen und Beschreiben der anfänglichen Bedingungen verschiedener Player-Status verwendet.
 
-![Ein Diagramm des Datentyps Liste der Status Ende-Sammlung .](../images/data-types/list-of-states-end-collection.png)
+![Ein Diagramm des Datentyps Liste der Status Ende der Sammlung.](../images/data-types/list-of-states-end-collection.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Erforderlich | Beschreibung |
 |--------------------------------|--------------|-----------|-----------|-------------------------------------------------|

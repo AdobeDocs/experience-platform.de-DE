@@ -6,8 +6,8 @@ description: In diesem Dokument werden die grundlegenden Schritte für die Erste
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 82%
+source-wordcount: '1302'
+ht-degree: 80%
 
 ---
 
@@ -23,7 +23,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Platform] APIs.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform] -APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -31,7 +31,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) lesen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -45,21 +45,21 @@ Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandb
 >
 >Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
-Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type: application/json`-Kopfzeile erforderlich. Bei JSON+PATCH-Anforderungen wird die `Content-Type` sollte `application/json-patch+json`.
+Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche `Content-Type: application/json`-Kopfzeile erforderlich. Bei JSON+PATCH-Anfragen sollte der `Content-Type` `application/json-patch+json` sein.
 
 ## Tutorial
 
-Um einen Datensatz zu erstellen, muss zunächst ein Schema definiert werden. Ein Schema ist ein Satz von Regeln für die Darstellung von Daten. Schemas dienen zur Beschreibung der Datenstruktur. Über sie können zugleich auch Einschränkungen und Erwartungen angewendet werden, um Daten bei ihrem Austausch zwischen Systemen zu validieren.
+Um einen Datensatz zu erstellen, muss zunächst ein Schema definiert werden. Ein Schema ist ein Satz von Regeln für die Darstellung von Daten. Schemata dienen zur Beschreibung der Datenstruktur. Über sie können zugleich auch Einschränkungen und Erwartungen angewendet werden, um Daten bei ihrem Austausch zwischen Systemen zu validieren.
 
-Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Daten, unabhängig von ihrer Herkunft, und machen eine anwendungsübergreifende Übersetzung überflüssig. Weitere Informationen zur Erstellung von Schemas finden Sie unter [Grundlagen zum Aufbau von Schemas](../../xdm/schema/composition.md)
+Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Daten, unabhängig von ihrer Herkunft, und machen eine anwendungsübergreifende Übersetzung überflüssig. Weitere Informationen zur Erstellung von Schemata finden Sie unter [Grundlagen zum Aufbau von Schemata](../../xdm/schema/composition.md)
 
 ## Nachschlagen eines Datensatzschemas
 
 Dieses Tutorial setzt das im [Tutorial zur Schema Registry-API](../../xdm/tutorials/create-schema-api.md) Gelernte fort und greift dazu das darin erstellte „Loyalty Members“-Schema auf.
 
-Wenn Sie die [!DNL Schema Registry] Tutorial, beginnen Sie dort und fahren Sie mit diesem Tutorial nur fort, wenn Sie das erforderliche Schema erstellt haben.
+Wenn Sie das Tutorial [!DNL Schema Registry] nicht abgeschlossen haben, beginnen Sie dort und fahren Sie mit diesem Tutorial nur fort, nachdem Sie das erforderliche Schema erstellt haben.
 
-Der folgende Aufruf kann verwendet werden, um das &quot;Loyalty Members&quot;-Schema anzuzeigen, das Sie während der [!DNL Schema Registry] API-Tutorial:
+Mit dem folgenden Aufruf können Sie das &quot;Loyalty Members&quot;-Schema anzeigen, das Sie im Tutorial zur [!DNL Schema Registry] -API erstellt haben:
 
 **API-Format**
 
@@ -211,7 +211,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->In diesem Tutorial wird die [Apache Parquet](https://parquet.apache.org/docs/) Dateiformat für alle Beispiele. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Tutorial wird für alle Beispiele das Dateiformat [Apache Parquet](https://parquet.apache.org/docs/) verwendet. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
@@ -252,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück. Das Antwortobjekt besteht aus einem Array, das die Kennung des neu erstellten Batches im Format enthält `"@/batches/{BATCH_ID}"`. Die Batch-Kennung ist eine schreibgeschützte, systemgenerierte Zeichenfolge, die in API-Aufrufen zum Verweisen auf den Batch verwendet wird.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und ein Antwortobjekt zurück. Das Antwortobjekt besteht aus einem Array, das die Kennung des neu erstellten Batches im Format `"@/batches/{BATCH_ID}"` enthält. Die Batch-Kennung ist eine schreibgeschützte, systemgenerierte Zeichenfolge, die in API-Aufrufen zum Verweisen auf den Batch verwendet wird.
 
 ```JSON
 {
@@ -295,7 +295,7 @@ Nachdem der Batch für den Upload erfolgreich erstellt wurde, können Sie Dateie
 
 >[!NOTE]
 >
-> Die maximal unterstützte Dateigröße für den Daten-Upload beträgt 512 MB. Wenn Ihre Datendatei diese Größe übersteigt, muss sie in Blöcke von maximal 512 MB unterteilt werden, die nacheinander hochgeladen werden. Um die einzelnen Dateien in den Batch hochzuladen, wiederholen Sie diesen Schritt für jede Datei unter Verwendung derselben Batch-ID. Für die Anzahl der für den Upload in einem Batch enthaltenen Dateien bestehen keine Beschränkungen.
+>Die maximal unterstützte Datenupload-Datei ist 512 MB. Wenn Ihre Datendatei diese Größe übersteigt, muss sie in Blöcke von maximal 512 MB unterteilt werden, die nacheinander hochgeladen werden. Um die einzelnen Dateien in den Batch hochzuladen, wiederholen Sie diesen Schritt für jede Datei unter Verwendung derselben Batch-ID. Für die Anzahl der für den Upload in einem Batch enthaltenen Dateien bestehen keine Beschränkungen.
 
 **API-Format**
 
@@ -326,7 +326,7 @@ Bei erfolgreichem Upload einer Datei wird für diese ein leerer Antworttext und 
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Die Fertigstellung der Signatur bewirkt, dass der Dienst [!DNL Catalog] `DataSetFile` -Einträge für die hochgeladenen Dateien und verknüpfen sie mit dem zuvor generierten Batch. Die [!DNL Catalog] Batch wurde als erfolgreich markiert, wodurch alle nachgelagerten Flüsse Trigger werden, die dann mit den jetzt verfügbaren Daten arbeiten können.
+Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Die Kennzeichnung der Fertigstellung bewirkt, dass der Dienst [!DNL Catalog] `DataSetFile` Einträge für die hochgeladenen Dateien erstellt und sie mit dem zuvor generierten Batch verknüpft. Der Batch [!DNL Catalog] wird als erfolgreich markiert, wodurch alle nachgelagerten Flüsse Trigger werden, die dann mit den jetzt verfügbaren Daten arbeiten können.
 
 **API-Format**
 
@@ -353,7 +353,7 @@ Bei erfolgreicher Fertigstellung eines Batches wird für diesen ein leerer Antwo
 
 ## Überwachen der Datenaufnahme
 
-Abhängig vom jeweiligen Datenvolumen beansprucht die Batch-Aufnahme unterschiedlich viel Zeit. Sie können den Status eines Batches überwachen, indem Sie die Kennung eines Batches an eine `GET /batches` -Anfrage.
+Abhängig vom jeweiligen Datenvolumen beansprucht die Batch-Aufnahme unterschiedlich viel Zeit. Sie können den Status eines Batches überwachen, indem Sie die Kennung eines Batches an eine `GET /batches` -Anfrage anhängen.
 
 **API-Format**
 
@@ -454,7 +454,7 @@ Eine negative Antwort gibt ein Objekt mit dem Wert `"failed"` im Attribut `"stat
 
 >[!NOTE]
 >
->Als Abrufintervall werden zwei Minuten empfohlen.
+>Ein empfohlenes Abrufintervall beträgt zwei Minuten.
 
 ## Einlesen von Daten aus dem Datensatz
 
@@ -468,7 +468,7 @@ Einzelheiten zur Arbeit mit der Data Access API finden Sie im [Entwicklerhandbuc
 
 Sie können Felder hinzufügen und zusätzliche Daten in von Ihnen erstellten Datensätzen aufnehmen. Dazu müssen Sie zunächst das Schema aktualisieren, indem Sie zusätzliche Eigenschaften hinzufügen, die die neuen Daten definieren. Die Aktualisierung eines vorhandenen Schemas erfolgt mittels PATCH- und/oder PUT-Operationen.
 
-Weitere Informationen zur Aktualisierung von Schemas finden Sie im [Schema Registry-API-Entwicklerhandbuch](../../xdm/api/getting-started.md).
+Weitere Informationen zur Aktualisierung von Schemata finden Sie im [Schema Registry-API-Entwicklerhandbuch](../../xdm/api/getting-started.md).
 
 Nach Aktualisierung des Schemas können Sie neue, mit dem überarbeiteten Schema übereinstimmende Daten aufnehmen, indem Sie die in diesem Tutorial erläuterten Schritte wiederholen.
 

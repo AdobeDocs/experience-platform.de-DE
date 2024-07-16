@@ -11,7 +11,7 @@ ht-degree: 18%
 
 ---
 
-# [!UICONTROL Suche] Datentyp
+# [!UICONTROL Search]-Datentyp
 
 [!UICONTROL Suche] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zur Web-Suchaktivität enthält.
 
@@ -25,7 +25,7 @@ ht-degree: 18%
 | `position` | Ganzzahl | Die Position oder der Rang der Auflistung auf der Suchergebnisseite. |
 | `searchEngine` | Zeichenfolge | Die von der Suche verwendete Suchmaschine. |
 | `searchEngineID` | Zeichenfolge | Die anwendungsspezifische Kennung, die zur Identifizierung der Suchmaschine verwendet wird. |
-| `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss einem der bekannten Enum-Werte entsprechen, die Sie definieren, z. B. `top`, `side`oder `bottom`. |
+| `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss mit einem der bekannten Enum-Werte übereinstimmen, die Sie definieren, z. B. `top`, `side` oder `bottom`. |
 
 {style="table-layout:auto"}
 

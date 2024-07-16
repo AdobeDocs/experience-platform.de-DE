@@ -4,8 +4,8 @@ description: In diesem Handbuch wird erläutert, wie Sie den Benutzerzugriff auf
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 100%
+source-wordcount: '199'
+ht-degree: 91%
 
 ---
 
@@ -21,7 +21,7 @@ Um einen unterbrechungsfreien Zugriff auf Assurance zu erhalten oder zu verwalte
 
 ## Hinzufügen von Benutzenden zur Experience Platform über ein Produktprofil
 
-Um einen Benutzer zu einem Produktprofil hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **Benutzer hinzufügen** aus..
+Um einen Benutzer zu einem Produktprofil hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **Benutzer hinzufügen** aus.
 
 ![Hervorgehobene Schaltfläche „Benutzer hinzufügen“.](./images/get-access/product-profile-add-users.png)
 

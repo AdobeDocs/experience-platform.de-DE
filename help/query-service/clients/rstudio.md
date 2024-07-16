@@ -1,43 +1,43 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; RStudio; Studio; Verbindung mit Query Service;
+keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; RStudio; Studio; Verbindung mit Query Service;
 solution: Experience Platform
 title: RStudio mit Query Service verbinden
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 15%
+source-wordcount: '439'
+ht-degree: 11%
 
 ---
 
 # Verbinden von [!DNL RStudio] mit dem Abfrage-Service
 
-In diesem Dokument werden die Schritte zum Verbinden von [!DNL RStudio] mit Adobe Experience Platform [!DNL Query Service].
+In diesem Dokument werden die Schritte zum Verbinden von [!DNL RStudio] mit Adobe Experience Platform [!DNL Query Service] erläutert.
 
 >[!NOTE]
 >
-> [!DNL RStudio] wurde jetzt umbenannt als [!DNL Posit]. [!DNL RStudio] -Produkte wurden in [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud]und [!DNL Posit Academy].
+> [!DNL RStudio] wurde jetzt als [!DNL Posit] umbenannt. [!DNL RStudio] -Produkte wurden in [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud] und [!DNL Posit Academy] umbenannt.
 >
-> In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL RStudio] und sind mit der Verwendung vertraut. Weitere Informationen [!DNL RStudio] finden Sie im Abschnitt [offiziell [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
+> In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL RStudio] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL RStudio] finden Sie in der [offiziellen [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
 > 
-> Zusätzlich zur Verwendung von [!DNL RStudio] Mit Query Service müssen Sie die [!DNL PostgreSQL] JDBC 4.2-Treiber. Sie können den JDBC-Treiber von der [[!DNL PostgreSQL] offizielle Site](https://jdbc.postgresql.org/download/).
+> Um [!DNL RStudio] mit Query Service zu verwenden, müssen Sie außerdem den Treiber für [!DNL PostgreSQL] JDBC 4.2 installieren. Sie können den JDBC-Treiber von der [[!DNL PostgreSQL] offiziellen Website](https://jdbc.postgresql.org/download/) herunterladen.
 
-## Erstellen Sie eine [!DNL Query Service] Verbindung in [!DNL RStudio] Benutzeroberfläche
+## Erstellen einer [!DNL Query Service]-Verbindung in der [!DNL RStudio]-Oberfläche
 
-Nach der Installation [!DNL RStudio]müssen Sie das RJDBC-Paket installieren. Anleitung zum [Datenbank über die Befehlszeile verbinden](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) finden Sie in der offiziellen Posit-Dokumentation.
+Nach der Installation von [!DNL RStudio] müssen Sie das RJDBC-Paket installieren. Anweisungen zum Verbinden einer Datenbank über die Befehlszeile ](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) finden Sie in der offiziellen Posit-Dokumentation.[
 
-Bei Verwendung von Mac OS können Sie **[!UICONTROL Instrumente]** aus der Menüleiste, gefolgt von **[!UICONTROL Pakete installieren]** aus dem Dropdown-Menü aus. Alternativ können Sie die **[!DNL Packages]** in der RStudio-Benutzeroberfläche ein und wählen Sie **[!DNL Install]**.
+Bei Verwendung eines Mac-Betriebssystems können Sie **[!UICONTROL Tools]** aus der Menüleiste und danach **[!UICONTROL Pakete installieren]** aus dem Dropdown-Menü auswählen. Alternativ können Sie die Registerkarte &quot;**[!DNL Packages]**&quot;in der RStudio-Benutzeroberfläche auswählen und &quot;**[!DNL Install]**&quot;auswählen.
 
-Ein Popup wird angezeigt, in dem die **[!DNL Install Packages]** angezeigt. Stellen Sie sicher, dass **[!DNL Repository (CRAN)]** für die **[!DNL Install from]** Abschnitt. Der Wert für **[!DNL Packages]** sollte `RJDBC`. Sichern **[!DNL Install dependencies]** ausgewählt ist. Nachdem Sie bestätigt haben, dass alle Werte korrekt sind, wählen Sie **[!DNL Install]** um die Pakete zu installieren. Nachdem das RJDBC-Paket installiert wurde, starten Sie es neu. [!DNL RStudio] , um den Installationsprozess abzuschließen.
+Es wird ein Popup mit dem Bildschirm &quot;**[!DNL Install Packages]**&quot;angezeigt. Stellen Sie sicher, dass **[!DNL Repository (CRAN)]** für den Abschnitt **[!DNL Install from]** ausgewählt ist. Der Wert für **[!DNL Packages]** sollte `RJDBC` sein. Stellen Sie sicher, dass **[!DNL Install dependencies]** ausgewählt ist. Nachdem Sie bestätigt haben, dass alle Werte korrekt sind, wählen Sie **[!DNL Install]** aus, um die Pakete zu installieren. Nachdem das RJDBC-Paket installiert wurde, starten Sie [!DNL RStudio] neu, um den Installationsprozess abzuschließen.
 
-Nachher [!DNL RStudio] neu gestartet wurde, können Sie jetzt eine Verbindung zu Query Service herstellen. Wählen Sie die **[!DNL RJDBC]** -Paket im **[!DNL Packages]** und geben Sie den folgenden Befehl in die Konsole ein:
+Nachdem [!DNL RStudio] neu gestartet wurde, können Sie jetzt eine Verbindung zu Query Service herstellen. Wählen Sie das Paket **[!DNL RJDBC]** im Bereich **[!DNL Packages]** aus und geben Sie den folgenden Befehl in die Konsole ein:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Wo `{PATH TO THE POSTGRESQL JDBC JAR}` stellt den Pfad zum [!DNL PostgreSQL] JDBC JAR, das auf Ihrem Computer installiert wurde.
+Wobei `{PATH TO THE POSTGRESQL JDBC JAR}` den Pfad zur JDBC-JAR für [!DNL PostgreSQL] darstellt, die auf Ihrem Computer installiert wurde.
 
 Jetzt können Sie Ihre Verbindung zu Query Service erstellen. Geben Sie den folgenden Befehl in die Konsole ein:
 
@@ -47,17 +47,17 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->Siehe [[!DNL Query Service] SSL-Dokumentation](./ssl-modes.md) Erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zu Adobe Experience Platform Query Service und über die Verbindung mit `verify-full` SSL-Modus.
+>In der [[!DNL Query Service] SSL-Dokumentation](./ssl-modes.md) erfahren Sie mehr über die SSL-Unterstützung für Verbindungen von Drittanbietern mit dem Adobe Experience Platform Query Service und über die Verbindung mit dem `verify-full` SSL-Modus.
 
-Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, stehen im [Handbuch zu Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform], wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
+Weitere Informationen zum Auffinden Ihrer Datenbanknamen, Host-, Port- und Anmeldedaten finden Sie im [Handbuch zu Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, wählen Sie dann **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 Eine Meldung in der Konsolenausgabe bestätigt die Verbindung zu Query Service.
 
 ## Schreiben von Abfragen
 
-Nachdem Sie sich mit [!DNL Query Service], können Sie Abfragen schreiben, um SQL-Anweisungen auszuführen und zu bearbeiten. Beispielsweise können Sie `dbGetQuery(con, sql)` zum Durchführen von Abfragen verwenden, bei denen `sql` die SQL-Abfrage ist, die Sie ausführen möchten.
+Nachdem Sie eine Verbindung zu [!DNL Query Service] hergestellt haben, können Sie Abfragen schreiben, um SQL-Anweisungen auszuführen und zu bearbeiten. Beispielsweise können Sie `dbGetQuery(con, sql)` zum Durchführen von Abfragen verwenden, bei denen `sql` die SQL-Abfrage ist, die Sie ausführen möchten.
 
-Die folgende Abfrage verwendet einen Datensatz mit [Erlebnisereignisse](../../xdm/classes/experienceevent.md) und erstellt ein Histogramm mit Seitenansichten einer Website, je nach Bildschirmhöhe des Geräts.
+Die folgende Abfrage verwendet einen Datensatz, der [Erlebnisereignisse](../../xdm/classes/experienceevent.md) enthält, und erstellt ein Histogramm mit Seitenansichten einer Website, je nach Bildschirmhöhe des Geräts.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -94,4 +94,4 @@ df_pageviews
 
 ## Nächste Schritte
 
-Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Handbuch unter [Ausführen von Abfragen](../best-practices/writing-queries.md).
+Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Handbuch zu [ausgeführten Abfragen](../best-practices/writing-queries.md).

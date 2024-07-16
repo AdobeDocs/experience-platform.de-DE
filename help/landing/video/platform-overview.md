@@ -16,8 +16,8 @@ ht-degree: 7%
 
 # Überblick über Adobe Experience Platform
 
-Dieses Video bietet eine kurze Einführung in die Experience Platform und beschreibt einige der damit gelösten geschäftlichen Herausforderungen.
+Dieses Video bietet eine kurze Einführung in das Experience Platform und beschreibt einige der damit gelösten geschäftlichen Herausforderungen.
 
-Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Experience Platform](../home.md).
+Um mehr zu erfahren, lesen Sie zunächst die [Experience Platform-Übersicht](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

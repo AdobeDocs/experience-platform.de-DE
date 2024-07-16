@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Ku
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 12%
+source-wordcount: '1664'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 >
 >Der Zugriff auf die API ist eingeschränkt. Informationen zum Zugriff auf die API für berechnete Attribute erhalten Sie beim Adobe-Support.
 
-Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Dieses Handbuch enthält Beispiel-API-Aufrufe zum Ausführen grundlegender CRUD-Vorgänge mithilfe des `/attributes` -Endpunkt.
+Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Dieses Handbuch enthält Beispiel-API-Aufrufe zum Ausführen grundlegender CRUD-Vorgänge mithilfe des `/attributes` -Endpunkts.
 
 Um mehr über berechnete Attribute zu erfahren, lesen Sie zunächst die [Übersicht über berechnete Attribute](overview.md).
 
@@ -23,16 +23,16 @@ Um mehr über berechnete Attribute zu erfahren, lesen Sie zunächst die [Übersi
 
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Kundenprofil-API](https://www.adobe.com/go/profile-apis-en).
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte mit der Profil-API](../api/getting-started.md) für Links zur empfohlenen Dokumentation, eine Anleitung zum Lesen der in diesem Dokument angezeigten Beispiel-API-Aufrufe und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs erforderlich sind.
+Bevor Sie fortfahren, lesen Sie zunächst das Erste-Schritte-Handbuch zur [Profil-API}, das Links zur empfohlenen Dokumentation enthält, eine Anleitung zum Lesen der in diesem Dokument angezeigten Beispiel-API-Aufrufe sowie wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.](../api/getting-started.md)
 
 Lesen Sie außerdem die Dokumentation für den folgenden Dienst:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-   - [Erste Schritte mit der Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id): Informationen zu Ihrer `{TENANT_ID}`, die in den Antworten in diesem Handbuch angezeigt wird, bereitgestellt wird.
+   - [Erste Schritte mit der Schemaregistrierung](../../xdm/api/getting-started.md#know-your-tenant_id): Informationen zu Ihrem `{TENANT_ID}`, der in den Antworten in diesem Handbuch angezeigt wird, werden bereitgestellt.
 
 ## Liste berechneter Attribute abrufen {#list}
 
-Sie können eine Liste aller berechneten Attribute für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/attributes` -Endpunkt.
+Sie können eine Liste aller berechneten Attribute für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/attributes` senden.
 
 **API-Format**
 
@@ -49,8 +49,8 @@ Beim Abrufen einer Liste berechneter Attribute können die folgenden Abfragepara
 | --------------- | ----------- | ------- |
 | `limit` | Ein Parameter, der die maximale Anzahl von Elementen angibt, die als Teil der Antwort zurückgegeben werden. Der Mindestwert dieses Parameters ist 1 und der Höchstwert 40. Wenn dieser Parameter nicht enthalten ist, werden standardmäßig 20 Elemente zurückgegeben. | `limit=20` |
 | `offset` | Ein Parameter, der die Anzahl der Elemente angibt, die vor der Rückgabe der Elemente übersprungen werden sollen. | `offset=5` |
-| `sortBy` | Ein Parameter, der die Reihenfolge angibt, in der die zurückgegebenen Elemente sortiert werden. Verfügbare Optionen umfassen `name`, `status`, `updateEpoch`, und `createEpoch`. Sie können auch auswählen, ob eine Sortierung in aufsteigender oder absteigender Reihenfolge erfolgen soll, indem Sie eine `-` vor der Sortieroption. Standardmäßig werden die Elemente nach `updateEpoch` in absteigender Reihenfolge. | `sortBy=name` |
-| `property` | Ein Parameter, mit dem Sie nach verschiedenen berechneten Attributfeldern filtern können. Zu den unterstützten Eigenschaften gehören `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, und `status`. Die unterstützten Vorgänge hängen von der aufgeführten Eigenschaft ab. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `sortBy` | Ein Parameter, der die Reihenfolge angibt, in der die zurückgegebenen Elemente sortiert werden. Zu den verfügbaren Optionen gehören `name`, `status`, `updateEpoch` und `createEpoch`. Sie können auch auswählen, ob eine Sortierung in aufsteigender oder absteigender Reihenfolge erfolgen soll, indem Sie vor der Sortieroption kein &quot;`-`&quot; angeben oder einfügen. Standardmäßig werden die Elemente in absteigender Reihenfolge nach `updateEpoch` sortiert. | `sortBy=name` |
+| `property` | Ein Parameter, mit dem Sie nach verschiedenen berechneten Attributfeldern filtern können. Zu den unterstützten Eigenschaften gehören `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch` und `status`. Die unterstützten Vorgänge hängen von der aufgeführten Eigenschaft ab. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Anfrage**
 
@@ -211,14 +211,14 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der letzten 3
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `_links` | Ein Objekt, das die Paginierungsinformationen enthält, die für den Zugriff auf die letzte Ergebnisseite, die nächste Ergebnisseite, die vorherige Ergebnisseite oder die aktuelle Ergebnisseite erforderlich sind. |
-| `computedAttributes` | Ein Array, das die berechneten Attribute basierend auf Ihren Abfrageparametern enthält. Weitere Informationen zum berechneten Attribut-Array finden Sie im Abschnitt [Abrufen eines bestimmten berechneten Attributabschnitts](#get). |
+| `computedAttributes` | Ein Array, das die berechneten Attribute basierend auf Ihren Abfrageparametern enthält. Weitere Informationen zum berechneten Attribut-Array finden Sie im Abschnitt [Abrufen eines bestimmten berechneten Attributs ](#get). |
 | `_page` | Ein Objekt, das Metadaten zu den zurückgegebenen Ergebnissen enthält. Dazu gehören Informationen zum aktuellen Versatz, zur Anzahl der zurückgegebenen berechneten Attribute, zur Gesamtanzahl der berechneten Attribute sowie zur Beschränkung der zurückgegebenen berechneten Attribute. |
 
 +++
 
 ## Berechnetes Attribut erstellen {#create}
 
-Um ein berechnetes Attribut zu erstellen, stellen Sie zunächst eine POST-Anfrage an die `/attributes` -Endpunkt mit einem Anfragetext, der die Details des berechneten Attributs enthält, das Sie erstellen möchten.
+Um ein berechnetes Attribut zu erstellen, stellen Sie zunächst eine POST-Anfrage an den `/attributes` -Endpunkt mit einem Anfragetext, der die Details des berechneten Attributs enthält, das Sie erstellen möchten.
 
 **API-Format**
 
@@ -257,17 +257,17 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `name` | Name des berechneten Attributfelds als Zeichenfolge. Der Name des berechneten Attributs darf nur aus alphanumerischen Zeichen ohne Leerzeichen oder Unterstriche bestehen. Dieser Wert **must** unter allen berechneten Attributen eindeutig sein. Als Best Practice sollte dieser Name eine camelCase-Version der `displayName`. |
+| `name` | Der Name des berechneten Attributfelds als Zeichenfolge. Der Name des berechneten Attributs darf nur aus alphanumerischen Zeichen ohne Leerzeichen oder Unterstriche bestehen. Dieser Wert **muss** unter allen berechneten Attributen eindeutig sein. Als Best Practice sollte dieser Name eine camelCase-Version von `displayName` sein. |
 | `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation dabei hilft, das richtige berechnete Attribut zu bestimmen, das verwendet werden soll. |
 | `displayName` | Der Anzeigename für das berechnete Attribut. Dies ist der Name, der angezeigt wird, wenn Sie Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche auflisten. |
 | `expression` | Ein Objekt, das den Abfrageausdruck des berechneten Attributs darstellt, das Sie erstellen möchten. |
 | `expression.type` | Der Typ des Ausdrucks. Derzeit wird nur PQL unterstützt. |
 | `expression.format` | Das Format des Ausdrucks. Derzeit wird nur `pql/text` unterstützt. |
 | `expression.value` | Der -Wert des Ausdrucks. |
-| `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs mithilfe einer schnellen Aktualisierung auf dem neuesten Stand gehalten wird. Derzeit sollte dieser Wert auf `false`. |
+| `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs mithilfe einer schnellen Aktualisierung auf dem neuesten Stand gehalten wird. Derzeit sollte dieser Wert auf `false` gesetzt werden. |
 | `duration` | Ein Objekt, das den Lookback-Zeitraum für das berechnete Attribut darstellt. Der Lookback-Zeitraum gibt an, wie weit zurück zum Berechnen des berechneten Attributs geguckt werden kann. |
-| `duration.count` | Ein number -Wert, der die Dauer des Lookback-Zeitraums darstellt. Die möglichen Werte hängen vom Wert der `duration.unit` -Feld. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
-| `duration.unit` | Eine Zeichenfolge, die die Zeiteinheit darstellt, die für den Lookback-Zeitraum verwendet wird. Mögliche Werte sind: `HOURS`, `DAYS`, `WEEKS`, und `MONTHS`. |
+| `duration.count` | Ein number -Wert, der die Dauer des Lookback-Zeitraums darstellt. Die möglichen Werte hängen vom Wert des Felds `duration.unit` ab. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
+| `duration.unit` | Eine Zeichenfolge, die die Zeiteinheit darstellt, die für den Lookback-Zeitraum verwendet wird. Mögliche Werte sind: `HOURS`, `DAYS`, `WEEKS` und `MONTHS`. |
 | `status` | Der Status des berechneten Attributs. Mögliche Werte sind `DRAFT` und `NEW`. |
 
 +++
@@ -316,7 +316,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `id` | Die systemgenerierte ID Ihres neu erstellten berechneten Attributs. |
-| `status` | Der Status des berechneten Attributs. Dies kann entweder `DRAFT` oder `NEW`. |
+| `status` | Der Status des berechneten Attributs. Dies kann entweder `DRAFT` oder `NEW` sein. |
 | `createEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut erstellt wurde, in Sekunden. |
 | `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut zuletzt aktualisiert wurde (in Sekunden). |
 | `createdBy` | Die ID des Benutzers, der das berechnete Attribut erstellt hat. |
@@ -325,7 +325,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Abrufen eines bestimmten berechneten Attributs {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten berechneten Attribut abrufen, indem Sie eine GET-Anfrage an die `/attributes` -Endpunkt und die Kennung des berechneten Attributs angeben, das Sie im Anfragepfad abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten berechneten Attribut abrufen, indem Sie eine GET-Anfrage an den `/attributes` -Endpunkt senden und im Anfragepfad die Kennung des berechneten Attributs angeben, das Sie abrufen möchten.
 
 **API-Format**
 
@@ -397,11 +397,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 | `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation dabei hilft, das richtige berechnete Attribut zu bestimmen, das verwendet werden soll. |
 | `imsOrgId` | Die ID der Organisation, zu der das berechnete Attribut gehört. |
 | `sandbox` | Das Sandbox-Objekt enthält Details zur Sandbox, in der das berechnete Attribut konfiguriert wurde. Diese Daten werden aus der in der Anfrage gesendeten Sandbox-Kopfzeile extrahiert. Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md). |
-| `path` | Die `path` zum berechneten Attribut hinzu. |
+| `path` | Der `path` zum berechneten Attribut. |
 | `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs mithilfe einer schnellen Aktualisierung auf dem neuesten Stand gehalten wird. |
 | `expression` | Ein Objekt, das den Ausdruck des berechneten Attributs enthält. |
-| `mergeFunction` | Ein Objekt, das die Zusammenführungsfunktion für das berechnete Attribut enthält. Dieser Wert basiert auf dem entsprechenden Aggregationsparameter innerhalb des Ausdrucks des berechneten Attributs. Mögliche Werte sind `SUM`, `MIN`, `MAX`, und `MOST_RECENT`. |
-| `status` | Der Status des berechneten Attributs. Dies kann einer der folgenden Werte sein: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`oder `DISABLED`. |
+| `mergeFunction` | Ein Objekt, das die Zusammenführungsfunktion für das berechnete Attribut enthält. Dieser Wert basiert auf dem entsprechenden Aggregationsparameter innerhalb des Ausdrucks des berechneten Attributs. Mögliche Werte sind `SUM`, `MIN`, `MAX` und `MOST_RECENT`. |
+| `status` | Der Status des berechneten Attributs. Dies kann einer der folgenden Werte sein: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED` oder `DISABLED`. |
 | `schema` | Ein Objekt, das Informationen zum Schema enthält, in dem der Ausdruck ausgewertet wird. Derzeit wird nur `_xdm.context.profile` unterstützt. |
 | `lastEvaluationTs` | Ein Zeitstempel, der angibt, wann das berechnete Attribut zuletzt ausgewertet wurde. |
 | `createEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut erstellt wurde, in Sekunden. |
@@ -412,11 +412,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 ## Löschen eines bestimmten berechneten Attributs {#delete}
 
-Sie können ein bestimmtes berechnetes Attribut löschen, indem Sie eine DELETE-Anfrage an die `/attributes` -Endpunkt und die Kennung des berechneten Attributs angeben, das Sie im Anfragepfad löschen möchten.
+Sie können ein bestimmtes berechnetes Attribut löschen, indem Sie eine DELETE-Anfrage an den `/attributes` -Endpunkt senden und im Anfragepfad die Kennung des berechneten Attributs angeben, das Sie löschen möchten.
 
 >[!IMPORTANT]
 >
->Die Löschanfrage kann nur zum Löschen berechneter Attribute mit dem Status **Entwurf** (`DRAFT`). Dieser Endpunkt **cannot** verwendet werden, um berechnete Attribute in einem anderen Status zu löschen.
+>Die Löschanfrage kann nur zum Löschen berechneter Attribute mit dem Status **draft** (`DRAFT`) verwendet werden. Dieser Endpunkt **kann nicht** zum Löschen berechneter Attribute in einem anderen Status verwendet werden.
 
 **API-Format**
 
@@ -426,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Die `id` des berechneten Attributs, das Sie löschen möchten. |
+| `{ATTRIBUTE_ID}` | Der `id` -Wert des berechneten Attributs, das Sie löschen möchten. |
 
 **Anfrage**
 
@@ -487,15 +487,15 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 mit Details zum gelöschten b
 
 ## Aktualisieren eines bestimmten berechneten Attributs
 
-Sie können ein bestimmtes berechnetes Attribut aktualisieren, indem Sie eine PATCH-Anfrage an die `/attributes` -Endpunkt und die Kennung des berechneten Attributs angeben, das Sie im Anfragepfad aktualisieren möchten.
+Sie können ein bestimmtes berechnetes Attribut aktualisieren, indem Sie eine PATCH-Anfrage an den `/attributes` -Endpunkt senden und im Anfragepfad die Kennung des berechneten Attributs angeben, das Sie aktualisieren möchten.
 
 >[!IMPORTANT]
 >
 >Beim Aktualisieren eines berechneten Attributs können nur die folgenden Felder aktualisiert werden:
 >
->- Wenn der aktuelle Status `NEW`, kann der Status nur in `DISABLED`.
->- Wenn der aktuelle Status `DRAFT`können Sie die Werte der folgenden Felder ändern: `name`, `description`, `keepCurrent`, `expression`, und `duration`. Sie können den Status auch von `DRAFT` nach `NEW`. Alle Änderungen an systemgenerierten Feldern, z. B. `mergeFunction` oder `path` gibt einen Fehler zurück.
->- Wenn der aktuelle Status `PROCESSING` oder `PROCESSED`, kann der Status nur in `DISABLED`.
+>- Wenn der aktuelle Status `NEW` lautet, kann der Status nur in `DISABLED` geändert werden.
+>- Wenn der aktuelle Status `DRAFT` lautet, können Sie die Werte der folgenden Felder ändern: `name`, `description`, `keepCurrent`, `expression` und `duration`. Sie können auch den Status von `DRAFT` in `NEW` ändern. Änderungen an systemgenerierten Feldern wie `mergeFunction` oder `path` geben einen Fehler zurück.
+>- Wenn der aktuelle Status entweder `PROCESSING` oder `PROCESSED` ist, kann der Status nur in `DISABLED` geändert werden.
 
 **API-Format**
 
@@ -505,11 +505,11 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Die `id` des berechneten Attributs, das Sie aktualisieren möchten. |
+| `{ATTRIBUTE_ID}` | Der `id` -Wert des berechneten Attributs, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert den Status des berechneten Attributs von `DRAFT` nach `NEW`.
+Mit der folgenden Anfrage wird der Status des berechneten Attributs von `DRAFT` auf `NEW` aktualisiert.
 
 +++ Eine Beispielanfrage zum Aktualisieren eines berechneten Attributs.
 
@@ -579,4 +579,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Nächste Schritte
 
-Nachdem Sie sich mit den Grundlagen berechneter Attribute vertraut gemacht haben, können Sie nun mit der Definition berechneter Attribute für Ihre Organisation beginnen. Informationen zur Verwendung berechneter Attribute in der Experience Platform-Benutzeroberfläche finden Sie in der [UI-Handbuch für berechnete Attribute](./ui.md).
+Nachdem Sie die Grundlagen berechneter Attribute kennen gelernt haben, können Sie mit der Definition dieser Attribute für Ihre Organisation beginnen. Um zu erfahren, wie Sie berechnete Attribute in der Experience Platform-Benutzeroberfläche verwenden, lesen Sie das Handbuch [über die Benutzeroberfläche für berechnete Attribute](./ui.md).

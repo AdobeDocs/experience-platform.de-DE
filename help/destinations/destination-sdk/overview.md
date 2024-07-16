@@ -30,7 +30,7 @@ Lesen Sie die Dokumentation unter den unten stehenden Links, um schnell mit der 
             <p><b>Konfigurationsseiten</b></p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Alle Konfigurationsoptionen erklärt</a></li>
-                <li> Konfiguration des Zielservers - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">Serverspezifikationen</a> und <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">Vorlagentypen</a></li>
+                <li> Zielserverkonfiguration - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">Serverspezifikationen</a> und <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">Vorlagenspezifikationen</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Kundendatenfelder und andere Zielkonfigurationskomponenten</a></li>
                 <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Vorlagen und Makros</a></li>
             </ul>
@@ -66,7 +66,7 @@ Lesen Sie die Dokumentation unter den unten stehenden Links, um schnell mit der 
             <p><b>Streaming-Ziel konfigurieren - Spickzettel</b></p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">End-to-End-Handbuch für Streaming-Ziele konfigurieren</a></li>
-                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Grundlegendes zur Datenumwandlung mithilfe von Kieselstein-Vorlagen</a> und <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">Anzeigen unterstützter Vorlagenfunktionen</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Grundlegendes zur Datenumwandlung durch Kieselvorlagen</a> und <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">unterstützte Vorlagenfunktionen anzeigen</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Grundlagen zu Datenerfassungsrichtlinien</a></li>
                 <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Beispiel für eine Live-Konfiguration</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Streaming-Ziel testen</a></li>
@@ -78,7 +78,7 @@ Lesen Sie die Dokumentation unter den unten stehenden Links, um schnell mit der 
                 <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Konfigurieren eines dateibasierten Ziel-End-to-End-Handbuchs</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">Dateiformate für die exportierten Dateien konfigurieren</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md">Beispiel für eine Live-Konfiguration für ein Amazon S3-Ziel</a></li>
-                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Batch-Konfiguration</a> für den Dateiexportplan und die Dateibenennung</li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Batch-Konfiguration</a> für den Zeitplan für den Dateiexport und die Dateinamenbenennung</li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md">Testen des dateibasierten Ziels</a></li>
             </ul>
         </td>
@@ -103,7 +103,7 @@ Lesen Sie die Dokumentation unter den unten stehenden Links, um schnell mit der 
 
 >[!IMPORTANT]
 >
-> Diese Funktion zum Erstellen privater benutzerdefinierter Ziele ist nur für verfügbar. [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
+> Diese Funktion zum Erstellen privater benutzerdefinierter Ziele ist nur für Kunden von [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) verfügbar.
 
 Als Destination SDK-Partner können Sie von der Hinzufügung Ihres produktspezifischen Ziels zum [Experience Platform-Katalog](../catalog/overview.md) profitieren:
 
@@ -134,7 +134,7 @@ Durch Destination SDK unterstützt Adobe Experience Platform Echtzeit-Integratio
 * Dateiexport in verschiedenen unterstützten Formaten (CSV, Parquet, JSON)
 * Konfigurierbare Dateiformatierungsoptionen, mit denen Sie das Format der exportierten Dateien entsprechend Ihren nachgelagerten Anforderungen strukturieren können.
 
-Informationen zu den technischen Anforderungen auf der Zielseite finden Sie im Abschnitt [Integrationsvoraussetzungen](integration-prerequisites.md) Artikel und lesen Sie mehr über alle unterstützten Konfigurationen in [Konfigurationsoptionen](functionality/configuration-options.md) Artikel
+Lesen Sie die technischen Anforderungen auf der Seite der Ziele im Artikel [Integrationsanforderungen](integration-prerequisites.md) und lesen Sie alle unterstützten Konfigurationen im Artikel [Konfigurationsoptionen](functionality/configuration-options.md) .
 
 ## Zugriff auf das Destination SDK {#get-access}
 
@@ -142,9 +142,9 @@ Der Zugriff auf die Destination SDK variiert je nach Ihrem Status als Partner od
 
 | Art des Partners oder Kunden | Zugriff auf das Destination SDK |
 ---------|----------|
-| Unabhängiger Software-Anbieter (ISV) | Mitglied werden [Adobe Technology Partner Program](https://partners.adobe.com/technologyprogram/experiencecloud.html) und fordern Sie die Bereitstellung einer Experience Platform-Sandbox für den Zugriff auf die Destination SDK an. |
-| Systemintegrator (SI) | Sie müssen entweder auf Gold- oder auf Platinebene im [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) , um eine Experience Platform-Sandbox bereitzustellen und Zugriff auf die Destination SDK zu erhalten. |
-| Experience Platform-Kunde auf dem [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Destination SDK, sodass Sie private Ziele für Ihr Unternehmen erstellen können. |
+| Unabhängiger Software-Anbieter (ISV) | Treten Sie dem [Adobe Technology Partner Program](https://partners.adobe.com/technologyprogram/experiencecloud.html) bei und fordern Sie die Bereitstellung einer Experience Platform-Sandbox für den Zugriff auf die Destination SDK an. |
+| Systemintegrator (SI) | Sie müssen entweder Gold- oder Platinebene im [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) sein, um eine Experience Platform-Sandbox bereitzustellen und Zugriff auf Destination SDK zu erhalten. |
+| Experience Platform-Kunde im [Real-Time CDP Ultimate-Paket](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Destination SDK, sodass Sie private Ziele für Ihr Unternehmen erstellen können. |
 
 {style="table-layout:auto"}
 
@@ -152,13 +152,13 @@ Der Zugriff auf die Destination SDK variiert je nach Ihrem Status als Partner od
 
 Der Prozess zum Konfigurieren Ihres Ziels in Experience Platform ist unten beschrieben:
 
-1. Wenn Sie ISV oder SI sind, lesen Sie den Abschnitt [Zugriff erhalten](#get-access) Informationen im obigen Abschnitt. [Real-Time CDP Ultimate-Package](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden können diesen Schritt überspringen.
+1. Wenn Sie ISV oder SI sind, lesen Sie die Informationen unter &quot;[Zugriff erhalten](#get-access)&quot;im Abschnitt oben. Kunden von [Real-Time CDP Ultimate Package](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) können diesen Schritt überspringen.
 2. [Fordern Sie die Bereitstellung einer Experience Platform-Sandbox an](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) und aktivieren Sie die Authoring-Berechtigung für das Ziel.
-3. Erstellen Sie Ihre Integration. Befolgen Sie die Anweisungen in der Produktdokumentation, um [Streaming-Ziele](guides/configure-destination-instructions.md) oder [dateibasierte Ziele](guides/configure-file-based-destination-instructions.md).
-4. Testen Sie Ihre Integration. Befolgen Sie zum Testen die Anweisungen in der Produktdokumentation [Streaming-Ziele](testing-api/streaming-destinations/streaming-destination-testing-overview.md) oder [dateibasierte Ziele](testing-api/batch-destinations/file-based-destination-testing-overview.md).
-5. Wenn Sie eine ISV oder SI sind, erstellen Sie eine [produktive Integration](./overview.md#productized-custom-integrations), [Integration übermitteln](guides/submit-destination.md) Für Adobe-Überprüfung (die standardmäßige Antwortzeit beträgt fünf Werktage).
-6. Wenn Sie ein ISV oder SI sind und eine produktionserwartete Integration erstellen, verwenden Sie die [Self-Service-Dokumentationsprozess](docs-framework/documentation-instructions.md) , um eine Produktdokumentationsseite auf dem Experience League für Ihr Ziel zu erstellen.
-7. Bei produktionierten Integrationen wird nach der Genehmigung durch Adobe Ihre Integration im [Experience Platform-Katalog](../catalog/overview.md).
+3. Erstellen Sie Ihre Integration. Befolgen Sie die Anweisungen in der Produktdokumentation, um [Streaming-Ziele](guides/configure-destination-instructions.md) oder [dateibasierte Ziele](guides/configure-file-based-destination-instructions.md) zu konfigurieren.
+4. Testen Sie Ihre Integration. Befolgen Sie die Anweisungen in der Produktdokumentation, um [Streaming-Ziele](testing-api/streaming-destinations/streaming-destination-testing-overview.md) oder [dateibasierte Ziele](testing-api/batch-destinations/file-based-destination-testing-overview.md) zu testen.
+5. Wenn Sie eine ISV oder SI sind, die eine [produktionierte Integration](./overview.md#productized-custom-integrations) erstellen, [ist Ihre Integration](guides/submit-destination.md) für die Überprüfung der Adobe (die standardmäßige Antwortzeit beträgt fünf Werktage).
+6. Wenn Sie eine ISV oder SI sind, die eine produktierte Integration erstellen, verwenden Sie den [Self-Service-Dokumentationsprozess](docs-framework/documentation-instructions.md) , um auf dem Experience League eine Produktdokumentationsseite für Ihr Ziel zu erstellen.
+7. Bei produktionierten Integrationen wird Ihre Integration nach Genehmigung durch Adobe im [Experience Platform-Katalog](../catalog/overview.md) angezeigt.
 8. Wenn Sie Ihre Integration aktualisieren möchten, gehen Sie genauso vor.
 
 ## Referenz {#reference}

@@ -5,12 +5,12 @@ description: Die Talk URL Inbox-Erweiterung ist eine Sprachausgabe des Kundenzie
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '475'
 ht-degree: 81%
 
 ---
 
-# [!DNL Talk URL Inbox]-Erweiterung  {#talk-url-extension}
+# [!DNL Talk URL Inbox]-Erweiterung {#talk-url-extension}
 
 Erhalten Sie Sprachnachrichten von den Besuchern Ihrer Webseite. Enthält gehostete Benutzeroberfläche und Cloud-basiertes maschinelles Lernen, um Ihre Sprachnachrichten sofort in Textinsights zu transkribieren.
 
@@ -28,7 +28,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Talk URL Inbox] Erweiterung:
+So installieren Sie die [!DNL Talk URL Inbox]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -40,7 +40,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Talk URL Inbox-Seite auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Talk URL Inbox auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

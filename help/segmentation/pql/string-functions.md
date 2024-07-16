@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: PQL-Zeichenfolgen-Funktionen
+title: PQL String-Funktionen
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '815'
 ht-degree: 65%
 
 ---
 
 # Zeichenfolgen-Funktionen
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
 
 ## Ist wie
 
@@ -55,7 +55,7 @@ Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer ange
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt mit Groß-/Kleinschreibung, ob der Name der Person mit &quot;Joe&quot;beginnt.
+Die folgende PQL-Abfrage bestimmt bei Berücksichtigung der Groß-/Kleinschreibung, ob der Name der Person mit &quot;Joe&quot;beginnt.
 
 ```sql
 person.name.startsWith("Joe")
@@ -103,7 +103,7 @@ Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angege
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person auf &quot;.com&quot;endet.
+Mit der folgenden PQL-Abfrage wird unter Berücksichtigung der Groß-/Kleinschreibung bestimmt, ob die E-Mail-Adresse der Person auf &quot;.com&quot;endet.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -198,7 +198,7 @@ Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge gleich der angegeb
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt mit Groß-/Kleinschreibung, ob der Name der Person &quot;John&quot; lautet.
+Die folgende PQL-Abfrage bestimmt unter Berücksichtigung der Groß-/Kleinschreibung, ob der Name der Person &quot;John&quot; lautet.
 
 ```sql
 person.name.equals("John")
@@ -221,7 +221,7 @@ Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht gleich d
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob der Name der Person nicht &quot;John&quot;lautet.
+Die folgende PQL-Abfrage bestimmt unter Berücksichtigung der Groß-/Kleinschreibung, ob der Name der Person nicht &quot;John&quot;lautet.
 
 ```sql
 person.name.notEqualTo("John")
@@ -239,7 +239,7 @@ Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimm
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt, ohne die Groß-/Kleinschreibung zu beachten, ob der Name der Person mit &quot;John&quot;beginnt.
+Die folgende PQL-Abfrage ermittelt, ohne dass zwischen Groß- und Kleinschreibung unterschieden wird, ob der Name der Person mit &quot;John&quot;beginnt.
 
 ```sql
 person.name.matches("(?i)^John")
@@ -247,7 +247,7 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, wenn **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
+>Wenn Sie reguläre Ausdrucksfunktionen wie `\w` verwenden, müssen Sie **2} den umgekehrten Schrägstrich als Escape-Zeichen verwenden.** Anstatt also nur `\w` zu schreiben, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einschließen und `\\w` schreiben.
 
 ## Gruppe regelmäßiger Ausdrücke
 
@@ -269,7 +269,7 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Wenn Sie reguläre Ausdrucksfunktionen wie `\w`, wenn **must** Escapezeichen für den umgekehrten Schrägstrich. Anstatt nur zu schreiben `\w`, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einfügen und schreiben `\\w`.
+>Wenn Sie reguläre Ausdrucksfunktionen wie `\w` verwenden, müssen Sie **2} den umgekehrten Schrägstrich als Escape-Zeichen verwenden.** Anstatt also nur `\w` zu schreiben, müssen Sie einen zusätzlichen umgekehrten Schrägstrich einschließen und `\\w` schreiben.
 
 ## Nächste Schritte
 

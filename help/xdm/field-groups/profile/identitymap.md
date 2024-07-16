@@ -18,7 +18,7 @@ ht-degree: 76%
 
 [!UICONTROL IdentityMap] ist eine standardmäßige Schemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Die Feldergruppe stellt ein einzelnes Zuordnungsfeld bereit, das eine Reihe von Benutzeridentitäten enthält, die vom Namespace angegeben wurden.
 
-![Ein Diagramm des [!UICONTROL IdentityMap] Schemafeldgruppe](../../images/field-groups/identitymap.png)
+![Ein Diagramm der Schemafeldgruppe [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
 
 Siehe den Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakomposition](../../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall, einschließlich der Vor- und Nachteile.
 
@@ -38,4 +38,4 @@ Siehe den Abschnitt zu Identitätszuordnungen in [Grundlagen der Schemakompositi
 }
 ```
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) im öffentlichen XDM-Repository.
+Weitere Informationen zur Feldergruppe finden Sie im Abschnitt [full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) im öffentlichen XDM-Repository.

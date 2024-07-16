@@ -4,7 +4,7 @@ description: Die Versionshinweise von November 2022 für Adobe Experience Platfo
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
 source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '453'
 ht-degree: 100%
 
 ---
@@ -35,7 +35,7 @@ Weitere Informationen zu den Datenerfassungsfunktionen von Platform finden Sie u
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
-XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 **Neue oder aktualisierte Funktionen**
 

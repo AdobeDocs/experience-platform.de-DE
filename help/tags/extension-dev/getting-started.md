@@ -4,7 +4,7 @@ description: So beginnen Sie mit der Entwicklung Ihrer eigenen Tag-Erweiterungen
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '448'
 ht-degree: 95%
 
 ---
@@ -48,7 +48,7 @@ Das scaffold-Tool stellt anschließend Optionen zum Erstellen der Erweiterungsst
 
 * [Erweiterungskonfigurationsansicht](./configuration.md): Die Ansicht, HTML-Datei, über die eine Erweiterung globale Einstellungen eines Benutzers erfasst.
 * [Ereignistypen](./web/event-types.md): Definiert eine zu überwachende Aktivität. Sie erfahren beispielsweise, wenn ein Benutzer schnell scrollt oder mit einem Seitenelement interagiert. Ereignisse können in Regeln zum Ausführen von Aktionen verwendet werden.
-* [Bedingungstypen](./web/condition-types.md): Bedingungstypen bewerten, ob etwas wahr oder falsch ist.
+* [Bedingungstypen](./web/condition-types.md): Bedingungstypen auswerten, ob etwas wahr oder falsch ist.
 So kann beispielsweise ermittelt werden, ob der Benutzer den Browser Chrome verwendet, ob er ein iPad benutzt oder ob er sich in einer bestimmten Domain befindet.
 * [Aktionstypen](./web/action-types.md): Die Aktion, die ausgeführt werden soll, wenn ein Ereignis eintritt. So können Sie beispielsweise einen Analytics-Beacon senden, ein Angebot anzeigen, ein Cookie speichern oder einen Support-Chat öffnen.
 * [Datenelementtypen](./web/data-element-types.md): Datenelementtypen rufen Daten ab. Diese Daten können sich in einem lokalen Datenspeicher, in einem Cookie, in einem DOM-Element oder an einem benutzerdefinierten Speicherort befinden.
@@ -61,7 +61,6 @@ So kann beispielsweise ermittelt werden, ob der Benutzer den Browser Chrome verw
 >* Es können mehrere Ereignisse, Bedingungen und Aktionen hinzugefügt werden.
 >* Es darf nur eine Konfigurationsansicht vorhanden sein.
 
-
 ## Nächste Schritte
 
-* Befolgen Sie die [Übersicht über den Übermittlungsprozess](./submit/overview.md) und Vorbereitung [validate](./submit/upload-and-test.md#validate) und [hochladen](./submit/upload-and-test.md#integration) Ihre Erweiterung zum Testen im Tag-Ökosystem.
+* Befolgen Sie die Übersicht über den Übermittlungsprozess ](./submit/overview.md) und bereiten Sie die Erweiterung [validate](./submit/upload-and-test.md#validate) und [upload](./submit/upload-and-test.md#integration) für Tests im Tag-Ökosystem vor.[

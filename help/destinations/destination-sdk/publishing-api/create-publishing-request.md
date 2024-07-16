@@ -4,7 +4,7 @@ title: Erstellen einer Zielveröffentlichungsanfrage
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '448'
 ht-degree: 100%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Sie müssen diesen API-Endpunkt nur verwenden, wenn Sie ein produktbezogenes (öffentliches) Ziel einreichen, das von anderen Experience Platform-Kundinnen und -Kunden verwendet werden soll. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie das Ziel nicht formell mit der Publishing-API übermitteln.
+>Sie müssen diesen API-Endpunkt nur verwenden, wenn Sie ein produktbezogenes (öffentliches) Ziel einreichen, das von anderen Experience Platform-Kundinnen und -Kunden verwendet werden soll. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie das Ziel nicht formell mit der Veröffentlichungs-API übermitteln.
 
 >[!IMPORTANT]
 >

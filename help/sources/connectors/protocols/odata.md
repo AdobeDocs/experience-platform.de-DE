@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; OData; Daten; oData; generische OData; generische Daten
+keywords: Experience Platform;home;popular topics;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
 title: Generic OData Source Overview
 description: Erfahren Sie, wie Sie generische OData über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
@@ -7,7 +7,7 @@ exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 59%
+ht-degree: 51%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 59%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einer Anwendung für Drittanbieterprotokolle. Die Unterstützung für Protokollanbieter umfasst [!DNL Generic OData].
+[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einer Anwendung für Drittanbieterprotokolle. Unterstützung für Protokollanbieter ist [!DNL Generic OData].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Generic OData] mit mithilfe von APIs oder der Benutzeroberfläche:[!DNL Platform]
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche [!DNL Generic OData] mit [!DNL Platform] verbinden:
 
 ## Verbinden von [!DNL Generic OData] mit [!DNL Platform] mithilfe von APIs
 

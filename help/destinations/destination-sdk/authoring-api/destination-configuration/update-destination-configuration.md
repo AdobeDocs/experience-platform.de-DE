@@ -4,7 +4,7 @@ title: Aktualisieren einer Zielkonfiguration
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '370'
 ht-degree: 99%
 
 ---
@@ -15,7 +15,7 @@ Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verw
 
 >[!TIP]
 >
->Jeder Aktualisierungsvorgang für produktbezogene/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Publishing-API](../../publishing-api/create-publishing-request.md) verwendet und die Aktualisierung zur Überprüfung durch Adobe eingereicht haben.
+>Jeder Aktualisierungsvorgang für produktbezogene/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Veröffentlichungs-API](../../publishing-api/create-publishing-request.md) verwendet und die Aktualisierung zur Überprüfung durch Adobe eingereicht haben.
 
 Eine ausführliche Beschreibung der Funktionen einer Zielkonfiguration finden Sie in den folgenden Artikeln:
 

@@ -6,8 +6,8 @@ description: Content Tagging ist eine Reihe von KI-Diensten, mit denen Sie intel
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 2%
+source-wordcount: '322'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ Inhalt ist eine wesentliche Komponente dieser Erlebnisse. Um Marketing-Fragen be
 | Content-Typ | Funktionen | Übersicht über die Funktionen |
 | --- | --- | --- |
 | Text | - Keyword-Tagging <br> | - Automatische Extraktion von Suchbegriffen und Tags aus Unternehmensdokumenten und Webseiten mithilfe eines vordefinierten KI-Dienstes. <br> |
-| Bilder | - Farb-Tagging <br> - Optische Zeichenerkennung (OCR) | - Extrahieren Sie exakt dominante Farben (Etiketten und hexadezimale Werte) und deren Gewichtung aus einem Produktbild. <br> - Extrahieren Sie genau jeden vorhandenen Text aus einem Produktbild. |
+| Bilder | - Farbmarkierung <br> - Optische Zeichenerkennung (OCR) | - Extrahieren Sie exakt dominante Farben (Etiketten und hexadezimale Werte) und deren Gewichtung aus einem Produktbild. <br> - Extrahieren Sie genau jeden vorhandenen Text aus einem Produktbild. |
 
 ## Grundlegendes zum Content-Tagging
 
@@ -35,7 +35,7 @@ Die Gesamtvision von Content Tagging ist in drei Schritte unterteilt, um eine op
 - Organisieren Sie Inhalte (Tag, Kategorisierung, Gruppe, Deduplizierung).
 - Verknüpfen Sie Inhaltsdaten mit Assets.
 
-**Schritt 2: Verständnis des Kunden**
+**Schritt 2: Grundlegendes zum Kunden**
 - Verknüpfen von Kundenaktionen mit Inhaltsfunktionen.
 - Erhalten Sie die Präferenzen und Affinitäten des Kunden aus Inhalten und Aktionen.
 - Fügen Sie dem Kundenprofil Voreinstellungen hinzu.

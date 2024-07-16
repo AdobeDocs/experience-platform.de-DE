@@ -19,7 +19,7 @@ Mit dieser Funktion können Sie Schemafelder, Segmente usw. mit Bezeichnungen ka
 
 >[!NOTE]
 >
->Dieses Dokument konzentriert sich auf den Anwendungsfall von Zugriffskontrollrichtlinien. Wenn Sie versuchen, Richtlinien zur Steuerung der **use** Informationen zu Daten und nicht dazu, auf welche Platform-Benutzer Zugriff haben, finden Sie im End-to-End-Handbuch unter [Data Governance](../../data-governance/e2e.md) anstatt.
+>Dieses Dokument konzentriert sich auf den Anwendungsfall von Zugriffskontrollrichtlinien. Wenn Sie versuchen, Richtlinien für die **Verwendung** von Daten festzulegen, anstatt welche Platform-Benutzer Zugriff darauf haben, lesen Sie stattdessen das End-to-End-Handbuch zu [Data Governance](../../data-governance/e2e.md) .
 
 ## Erste Schritte
 
@@ -36,31 +36,31 @@ Im Folgenden wird ein Beispiel für einen attribut-basierten Zugriffssteuerungs-
 
 Sie sind Gesundheitsdienstleister und möchten den Zugriff auf Ressourcen in Ihrem Unternehmen konfigurieren.
 
-* Ihr internes Marketing-Team sollte auf **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Daten.
-* Ihre externe Agentur sollte keinen Zugriff haben **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Daten.
+* Ihr internes Marketing-Team sollte auf **[!UICONTROL PHI/ Regulated Health Data]** zugreifen können.
+* Ihre externe Agentur sollte nicht auf **[!UICONTROL PHI/ Regulated Health Data]** zugreifen können.
 
 Dazu müssen Sie Rollen, Ressourcen und Richtlinien konfigurieren.
 
 Sie werden:
 
 * [Rollen für Ihre Benutzer beschriften](#label-roles): Verwenden Sie das Beispiel eines Gesundheitsdienstleisters (ACME Business Group), dessen Marketinggruppe mit externen Agenturen zusammenarbeitet.
-* [Ressourcen beschriften (Schemafelder und Segmente)](#label-resources): Weisen Sie die **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** -Beschriftung für Schemaressourcen und -segmente.
+* [Beschriften Ihrer Ressourcen (Schemafelder und Segmente)](#label-resources): Weisen Sie den Schemaressourcen und -segmenten die Beschriftung **[!UICONTROL PHI/ Regulated Health Data]** zu.
 * 
-   * [Aktivieren Sie die Richtlinie, die sie miteinander verknüpft:](#policy): Aktivieren Sie die Standardrichtlinie, um den Zugriff auf Schemafelder und Segmente zu verhindern, indem Sie die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle verbinden. Benutzer mit übereinstimmenden Bezeichnungen erhalten dann Zugriff auf das Schemafeld und das Segment für alle Sandboxes.
+   * [Aktivieren Sie die Richtlinie, die sie miteinander verknüpft:](#policy): Aktivieren Sie die Standardrichtlinie, um den Zugriff auf Schemafelder und Segmente zu verhindern, indem Sie die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle verknüpfen. Benutzer mit übereinstimmenden Bezeichnungen erhalten dann Zugriff auf das Schemafeld und das Segment für alle Sandboxes.
 
 ## Berechtigungen
 
 [!UICONTROL Berechtigungen] ist der Bereich des Experience Cloud, in dem Administratoren Benutzerrollen und Richtlinien definieren können, um Berechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
 
-bis [!UICONTROL Berechtigungen]können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. [!UICONTROL Berechtigungen] können Sie auch die Bezeichnungen, Sandboxes und Benutzer verwalten, die einer bestimmten Rolle zugeordnet sind.
+Über [!UICONTROL Berechtigungen] können Sie Rollen erstellen und verwalten und die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. [!UICONTROL Berechtigungen] ermöglichen Ihnen auch die Verwaltung von Bezeichnungen, Sandboxes und Benutzern, die mit einer bestimmten Rolle verknüpft sind.
 
 Wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten, wenn Sie nicht über Administratorberechtigungen verfügen.
 
-Sobald Sie über Administratorberechtigungen verfügen, wechseln Sie zu [Adobe Experience Cloud](https://experience.adobe.com/) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung muss die **[!UICONTROL Übersicht]** für Ihre Organisation angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, für die sich Ihr Unternehmen angemeldet hat, sowie weitere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation. Auswählen **[!UICONTROL Berechtigungen]** , um den Arbeitsbereich für Ihre Platform-Integration zu öffnen.
+Sobald Sie über Administratorberechtigungen verfügen, wechseln Sie zu [Adobe Experience Cloud](https://experience.adobe.com/) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die Seite **[!UICONTROL Übersicht]** für Ihr Unternehmen angezeigt, für das Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, für die sich Ihr Unternehmen angemeldet hat, sowie weitere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation. Wählen Sie **[!UICONTROL Berechtigungen]** aus, um den Arbeitsbereich für Ihre Platform-Integration zu öffnen.
 
-![Bild mit dem ausgewählten Berechtigungsprodukt in Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
+![Bild, das das in Adobe Experience Cloud ausgewählte Berechtigungsprodukt anzeigt](../images/flac-ui/flac-select-product.png)
 
-Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläche wird angezeigt und öffnet sich im **[!UICONTROL Rollen]** Seite.
+Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläche wird angezeigt und auf der Seite **[!UICONTROL Rollen]** geöffnet.
 
 ## Anwenden von Kennzeichnungen auf eine Rolle {#label-roles}
 
@@ -95,17 +95,17 @@ Der Arbeitsbereich &quot;Berechtigungen&quot;für die Platform-Benutzeroberfläc
 
 Rollen dienen der Kategorisierung der Arten von Benutzern, die mit Ihrer Platform-Instanz interagieren, und bilden Bausteine von Richtlinien zur Zugriffssteuerung. Eine Rolle verfügt über bestimmte Berechtigungen und Mitglieder Ihrer Organisation können je nach Umfang des benötigten Zugriffs einer oder mehreren Rollen zugewiesen werden.
 
-Wählen Sie zunächst **[!UICONTROL ACME Business Group]** aus dem **[!UICONTROL Rollen]** Seite.
+Wählen Sie zunächst **[!UICONTROL ACME Business Group]** aus der Seite **[!UICONTROL Rollen]** aus.
 
 ![Bild, das die in Rollen ausgewählte ACME-Geschäftsrolle anzeigt](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-Wählen Sie als Nächstes **[!UICONTROL Bezeichnungen]** und wählen Sie **[!UICONTROL Hinzufügen von Bezeichnungen]**.
+Wählen Sie als Nächstes **[!UICONTROL Beschriftungen]** und dann **[!UICONTROL Beschriftungen hinzufügen]** aus.
 
-![Bild mit Auswahl von Beschriftungen hinzufügen auf der Registerkarte &quot;Beschriftungen&quot;](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Bild mit Anzeige der Auswahl von Bezeichnungen hinzufügen auf der Registerkarte &quot;Bezeichnungen&quot;](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Eine Liste aller Beschriftungen in Ihrer Organisation wird angezeigt. Auswählen **[!UICONTROL RHD]** , um die Bezeichnung für **[!UICONTROL PHI/Reglementierte Gesundheitsdaten]**. Lassen Sie einige Augenblicke zu, bis ein blaues Häkchen neben der Beschriftung angezeigt wird, und wählen Sie dann **[!UICONTROL Speichern]**.
+Eine Liste aller Beschriftungen in Ihrer Organisation wird angezeigt. Wählen Sie **[!UICONTROL RHD]** aus, um die Beschriftung für **[!UICONTROL PHI/Regulated Health Data]** hinzuzufügen. Lassen Sie einige Augenblicke zu, bis neben der Beschriftung ein blaues Häkchen angezeigt wird, und wählen Sie dann **[!UICONTROL Speichern]** aus.
 
-![Bild mit der ausgewählten und gespeicherten RHD-Beschriftung](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+![Bild, das die ausgewählte und gespeicherte RHD-Bezeichnung anzeigt](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 >[!NOTE]
 >
@@ -113,19 +113,19 @@ Eine Liste aller Beschriftungen in Ihrer Organisation wird angezeigt. Auswählen
 
 ## Anwenden von Bezeichnungen auf Schemafelder {#label-resources}
 
-Sie haben jetzt eine Benutzerrolle mit der [!UICONTROL RHD] -Beschriftung verwenden, besteht der nächste Schritt darin, denselben Titel zu den Ressourcen hinzuzufügen, die Sie für diese Rolle steuern möchten.
+Nachdem Sie jetzt eine Benutzerrolle mit der Bezeichnung [!UICONTROL RHD] konfiguriert haben, müssen Sie als nächsten Schritt denselben Titel zu den Ressourcen hinzufügen, die Sie für diese Rolle steuern möchten.
 
-Auswählen **[!UICONTROL Schemas]** aus der linken Navigation und wählen Sie dann **[!UICONTROL ACME Gesundheitsfürsorge]** aus der Liste der angezeigten Schemas.
+Wählen Sie **[!UICONTROL Schemas]** aus der linken Navigation und dann **[!UICONTROL ACME Healthcare]** aus der Liste der angezeigten Schemas.
 
-![Bild, das das im Tab Schemas ausgewählte ACME-Schema für die Gesundheitsfürsorge anzeigt](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![Bild, das das auf der Registerkarte &quot;Schemas&quot;ausgewählte ACME-Schema für die Gesundheitsfürsorge anzeigt](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Wählen Sie als Nächstes **[!UICONTROL Bezeichnungen]** um eine Liste anzuzeigen, die die mit Ihrem Schema verknüpften Felder anzeigt. Von hier aus können Sie einem oder mehreren Feldern gleichzeitig Beschriftungen zuweisen. Wählen Sie die **[!UICONTROL BloodGlucose]** und **[!UICONTROL InsulinLevel]** und wählen Sie **[!UICONTROL Anwenden von Zugriffs- und Data Governance-Beschriftungen]**.
+Wählen Sie als Nächstes **[!UICONTROL Beschriftungen]** aus, um eine Liste mit den Feldern anzuzeigen, die mit Ihrem Schema verknüpft sind. Von hier aus können Sie einem oder mehreren Feldern gleichzeitig Beschriftungen zuweisen. Wählen Sie die Felder **[!UICONTROL BloodGlucose]** und **[!UICONTROL InsulinLevel]** aus und wählen Sie dann **[!UICONTROL Zugriffs- und Data Governance-Beschriftungen anwenden]**.
 
-![Bild, das die ausgewählten Blutzuckerbezeichnungen und InsulinLevel anzeigt und die ausgewählten Zugriffs- und Data Governance-Bezeichnungen anwendet](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Bild, das die ausgewählte BloodGlucose und InsulinLevel anzeigt und die ausgewählten Beschriftungen für Zugriff und Data Governance anwendet](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, in dem Sie die Titel auswählen können, die Sie auf die Schemafelder anwenden möchten. Wählen Sie für diesen Anwendungsfall die **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Beschriftung und wählen Sie **[!UICONTROL Speichern]**.
+Das Dialogfeld **[!UICONTROL Beschriftungen bearbeiten]** wird angezeigt, in dem Sie die Beschriftungen auswählen können, die Sie auf die Schemafelder anwenden möchten. Wählen Sie für diesen Anwendungsfall die Bezeichnung **[!UICONTROL PHI/ Regulated Health Data]** und dann **[!UICONTROL Save]**.
 
-![Bild mit der ausgewählten und gespeicherten RHD-Beschriftung](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
+![Bild, das die ausgewählte und gespeicherte RHD-Bezeichnung anzeigt](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE]
 >
@@ -139,22 +139,22 @@ Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, in dem Sie die Tite
 
 Nachdem Sie die Beschriftung Ihrer Schemafelder abgeschlossen haben, können Sie jetzt mit der Kennzeichnung Ihrer Segmente beginnen.
 
-Auswählen **[!UICONTROL Segmente]** über die linke Navigation. Eine Liste der in Ihrem Unternehmen verfügbaren Segmente wird angezeigt. In diesem Beispiel sind die folgenden beiden Segmente zu kennzeichnen, da sie sensible Gesundheitsdaten enthalten:
+Wählen Sie im linken Navigationsbereich **[!UICONTROL Segmente]** aus. Eine Liste der in Ihrem Unternehmen verfügbaren Segmente wird angezeigt. In diesem Beispiel sind die folgenden beiden Segmente zu kennzeichnen, da sie sensible Gesundheitsdaten enthalten:
 
 * Blutzucker > 100
 * Insulin &lt;50
 
-Auswählen **[!UICONTROL Blutzucker > 100]** , um das Segment zu kennzeichnen.
+Wählen Sie **[!UICONTROL Blutzucker >100]** aus, um das Segment zu kennzeichnen.
 
-![Bild, das die im Tab Segmente ausgewählte Blutglukose > 100 anzeigt](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![Bild, das den Blutzucker >100 anzeigt, der auf der Registerkarte &quot;Segmente&quot;ausgewählt wurde](../images/abac-end-to-end-user-guide/abac-select-segment.png)
 
-Das Segment **[!UICONTROL Details]** angezeigt. Auswählen **[!UICONTROL Zugriff verwalten]**.
+Der Bildschirm für das Segment **[!UICONTROL Details]** wird angezeigt. Wählen Sie **[!UICONTROL Zugriff verwalten]** aus.
 
-![Bild, das die Auswahl des Managed Access-Zugriffs anzeigt](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![Bild, das die Auswahl von Manages access anzeigt](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-Die **[!UICONTROL Bearbeiten von Bezeichnungen]** angezeigt, sodass Sie die Beschriftungen auswählen können, die Sie auf das Segment anwenden möchten. Wählen Sie für diesen Anwendungsfall die **[!UICONTROL PHI/Reguläre Gesundheitsdaten]** Beschriftung und wählen Sie **[!UICONTROL Speichern]**.
+Das Dialogfeld **[!UICONTROL Bezeichnungen bearbeiten]** wird angezeigt, in dem Sie die Bezeichnungen auswählen können, die auf das Segment angewendet werden sollen. Wählen Sie für diesen Anwendungsfall die Bezeichnung **[!UICONTROL PHI/ Regulated Health Data]** und dann **[!UICONTROL Save]**.
 
-![Bild, das die Auswahl des ausgewählten RHD-Titels und des ausgewählten Speichervorgangs anzeigt](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![Bild, das die Auswahl der RHD-Beschriftung und des ausgewählten Speichervorgangs anzeigt](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 
@@ -162,19 +162,19 @@ Wiederholen Sie die obigen Schritte mit **[!UICONTROL Insulin &lt;50]**.
 
 Die standardmäßige Zugriffssteuerungsrichtlinie nutzt Beschriftungen, um zu definieren, welche Benutzerrollen Zugriff auf bestimmte Platform-Ressourcen haben. In diesem Beispiel wird der Zugriff auf Schemafelder und -segmente in allen Sandboxes Benutzern verweigert, die sich nicht in einer Rolle befinden, die über die entsprechenden Beschriftungen im Schemafeld verfügt.
 
-Um die Zugriffskontrollrichtlinie zu aktivieren, wählen Sie [!UICONTROL Berechtigungen] aus der linken Navigation und wählen Sie dann **[!UICONTROL Richtlinien]**.
+Um die Zugriffssteuerungsrichtlinie zu aktivieren, wählen Sie im linken Navigationsbereich [!UICONTROL Berechtigungen] und dann **[!UICONTROL Richtlinien]** aus.
 
 ![Liste der angezeigten Richtlinien](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Wählen Sie als Nächstes die Auslassungszeichen (`...`) neben dem Richtliniennamen und in einem Dropdown-Menü werden Steuerelemente zum Bearbeiten, Aktivieren, Löschen oder Duplizieren der Rolle angezeigt. Auswählen **[!UICONTROL Aktivieren]** aus dem Dropdown-Menü aus.
+Wählen Sie als Nächstes das Auslassungszeichen (`...`) neben dem Richtliniennamen aus und ein Dropdown-Menü zeigt Steuerelemente zum Bearbeiten, Aktivieren, Löschen oder Duplizieren der Rolle an. Wählen Sie **[!UICONTROL Aktivieren]** aus der Dropdown-Liste aus.
 
-![Dropdown zur Aktivierung der Richtlinie](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![Dropdown zum Aktivieren der Richtlinie](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-Das Dialogfeld Richtlinie aktivieren wird angezeigt, in dem Sie zur Bestätigung der Aktivierung aufgefordert werden. Auswählen **[!UICONTROL Bestätigen]**.
+Das Dialogfeld Richtlinie aktivieren wird angezeigt, in dem Sie zur Bestätigung der Aktivierung aufgefordert werden. Wählen Sie **[!UICONTROL Bestätigen]** aus.
 
 ![Dialogfeld &quot;Richtlinie aktivieren&quot;](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-Die Aktivierung der Richtlinie wird bestätigt und Sie werden zum [!UICONTROL Richtlinien] Seite.
+Die Aktivierung der Richtlinie wird bestätigt und Sie werden zur Seite [!UICONTROL Richtlinien] zurückgeleitet.
 
 ![Richtlinienbestätigung aktivieren](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 

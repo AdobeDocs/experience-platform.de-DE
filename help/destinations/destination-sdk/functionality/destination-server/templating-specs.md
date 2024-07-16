@@ -4,8 +4,8 @@ title: Vorlagenspezifikationen für Ziele, die mit Destination SDK erstellt wurd
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 93%
+source-wordcount: '511'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ In einer Vorlagenspezifikation können Sie definieren, wie Sie Profilattributfel
 
 Vorlagenspezifikationen sind Teil der Ziel-Server-Konfiguration für Echtzeit-Ziele (Streaming).
 
-Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm im [Konfigurationsoptionen](../configuration-options.md) Dokumentation oder lesen Sie das Handbuch zu [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+Informationen dazu, wo diese Komponente in eine mit Destination SDK erstellte Integration passt, finden Sie im Diagramm in der Dokumentation zu [Konfigurationsoptionen](../configuration-options.md) oder im Handbuch dazu, wie Sie mit der Destination SDK [ein Streaming-Ziel konfigurieren](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
 Sie können die Vorlagenspezifikationen für Ihr Ziel über den `/authoring/destination-servers`-Endpunkt konfigurieren. Detaillierte Beispiele für API-Aufrufe, in denen Sie die auf dieser Seite angezeigten Komponenten konfigurieren können, finden Sie auf den folgenden API-Referenzseiten.
 

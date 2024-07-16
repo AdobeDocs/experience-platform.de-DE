@@ -1,5 +1,5 @@
 ---
-title: Verschlüsselte Daten in der Quellen-Benutzeroberfläche in Workspace erfassen
+title: Verschlüsselte Daten in der Quellenbenutzeroberfläche von Workspace erfassen
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quellenbenutzeroberfläche erfassen.
 hide: true
 hidefromtoc: true

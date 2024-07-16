@@ -11,7 +11,7 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Währung] Datentyp
+# Datentyp [!UICONTROL Währung]
 
 [!UICONTROL Währung] ist ein standardmäßiger XDM-Datentyp, der einen Währungsbetrag beschreibt, einschließlich des Währungstyps und des Konversionsdatums.
 
@@ -19,9 +19,9 @@ ht-degree: 6%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `amount` | Double | Der Währungsbetrag, der durch die Variable `currencyCode`. |
+| `amount` | Double | Der Betrag der Währung, wie durch den `currencyCode` definiert. |
 | `conversionDate` | DateTime | Ein Zeitstempel, der angibt, wann die Währungsumrechnung durchgeführt wurde. |
-| `currencyCode` | Zeichenfolge | Ein ISO 4217-Code, der den Währungstyp angibt, der `amount` darstellt. |
+| `currencyCode` | Zeichenfolge | Ein ISO 4217-Code, der den Währungstyp angibt, den `amount` darstellt. |
 
 {style="table-layout:auto"}
 

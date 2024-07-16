@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; partielle Erfassung; partielle Erfassung; Fehler abrufen; Fehler abrufen; partielle Batch-Erfassung; partielle Batch-Erfassung; Teil; Erfassung; Erfassung; Fehlerdiagnose; Fehlerdiagnose abrufen; Fehlerdiagnose erhalten; Fehler erhalten; Fehler abrufen; Fehler abrufen; Fehler abrufen; Fehler abrufen;
+keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; partielle Erfassung; partielle Erfassung; Fehler abrufen; Fehler abrufen; partielle Batch-Erfassung; partielle Batch-Erfassung; Teil; Erfassung; Erfassung; Fehlerdiagnose; Fehlerdiagnose abrufen; Fehlerdiagnose abrufen; Fehler erhalten; Fehler abrufen; Fehler abrufen; Fehler abrufen; Fehler abrufen
 solution: Experience Platform
 title: Fehlerdiagnose beim Abrufen der Datenerfassung
 description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 40%
+source-wordcount: '976'
+ht-degree: 36%
 
 ---
 
 # Fehlerdiagnose bei der Datenerfassung abrufen
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, mit der Sie Daten aus verschiedenen Dateitypen (z. B. CSV-Dateien) einfügen können, oder die Streaming-Erfassung, mit der Sie ihre Daten in [!DNL Platform] Verwendung von Streaming-Endpunkten in Echtzeit.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, um Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
 
 Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 
@@ -36,7 +36,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die [!DNL Schema Registry], werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Schema Registry] gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -46,7 +46,7 @@ Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die [
 
 ## Herunterladen der Fehlerdiagnose {#download-diagnostics}
 
-Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird in [!DNL Platform] für bis zu 30 Tage.
+Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird innerhalb von [!DNL Platform] bis zu 30 Tage aufbewahrt.
 
 ### Eingabedateien auflisten {#list-files}
 
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` Objekte, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` Objekte in [JSON-Zeilen](https://jsonlines.readthedocs.io/en/latest/) Format.
+Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` -Objekte enthalten, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` -Objekte im Format [JSON-Zeilen](https://jsonlines.readthedocs.io/en/latest/) zurück.
 
 ```json
 {"path": "F1.json"}
@@ -145,7 +145,7 @@ Wenn Batches Fehler enthalten, sollten Sie Fehlerinformationen zu diesen Fehlern
 
 ### Status prüfen {#check-status}
 
-Um den Status des erfassten Batch zu überprüfen, müssen Sie im Pfad einer GET-Anfrage die Kennung des Batch angeben. Weitere Informationen zur Verwendung dieses API-Aufrufs finden Sie im Abschnitt [Katalog-Endpunkthandbuch](../../catalog/api/list-objects.md).
+Um den Status des aufgenommenen Batches zu überprüfen, müssen Sie die Kennung des Batches im Pfad einer GET-Anfrage angeben. Weitere Informationen zur Verwendung dieses API-Aufrufs finden Sie im [Catalog-Endpunkt-Handbuch](../../catalog/api/list-objects.md).
 
 **API-Format**
 
@@ -157,7 +157,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BATCH_ID}` | Der `id`-Wert des Batch, dessen Status Sie überprüfen möchten. |
-| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weitere Informationen finden Sie im Handbuch unter [Filtern von Katalogdaten](../../catalog/api/filter-data.md). |
+| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weitere Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](../../catalog/api/filter-data.md). |
 
 **Anfrage**
 
@@ -214,9 +214,9 @@ Eine erfolgreiche Antwort gibt detaillierte Informationen zum Status des Batches
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion der Variablen `inputRecordCount` von `outputRecordCount`. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem der `inputRecordCount` vom `outputRecordCount` abgezogen wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
 
-**Fehlerbehebung**
+**Antwort mit Fehlern**
 
 Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktiviert ist, gibt die Antwort mehr Informationen über die Fehler zurück, sowohl in der Payload selbst als auch in einer herunterladbaren Fehlerdatei. Beachten Sie, dass der Status eines Batches, der Fehler enthält, weiterhin einen Erfolgsstatus aufweisen kann.
 
@@ -277,8 +277,8 @@ Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktivie
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion der Variablen `inputRecordCount` von `outputRecordCount`. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
-| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert ist **only** generiert `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem der `inputRecordCount` vom `outputRecordCount` abgezogen wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert ist **nur**, der generiert wird, wenn `errorDiagnostics` aktiviert ist. |
 
 >[!NOTE]
 >
@@ -374,7 +374,7 @@ Eine erfolgreiche Antwort gibt eine Liste der Dateien mit Fehlern zurück.
 }
 ```
 
-Sie können dann detaillierte Informationen zu Fehlern mit dem [Diagnostischer Abrufendpunkt](#retrieve-diagnostics).
+Anschließend können Sie detaillierte Informationen zu den Fehlern mit dem [Diagnostics-Abrufendpunkt](#retrieve-diagnostics) abrufen.
 
 Nachfolgend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
 

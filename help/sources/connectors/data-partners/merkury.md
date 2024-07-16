@@ -1,9 +1,10 @@
 ---
-title: Merkur Enterprise Identity Resolution Quelle Übersicht
+title: Merkur Enterprise Identity Resolution Source - Überblick
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche die Enterprise Identity-Auflösung von Merkury mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-12-12T00:00:00Z
 badge: Beta
-source-git-commit: 2f277e835333343ea22e52e05aa84a63f1d3d8ec
+exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 44%
@@ -14,13 +15,13 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Die [!DNL Merkury Enterprise Identity Resolution]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Merkury Enterprise Identity Resolution]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
 
-Adobe Experience Platform unterstützt die Aufnahme von Daten aus einer Datenpartner-Anwendung. Unterstützung für Datenpartner umfasst [!DNL Merkury Enterprise Identity Resolution].
+Adobe Experience Platform unterstützt die Aufnahme von Daten aus einer Datenpartner-Anwendung. Unterstützung für Datenpartner ist [!DNL Merkury Enterprise Identity Resolution].
 
-Sie können [!DNL Merkury] von [!DNL Merkle] um mehr digitale Besucher zu erkennen - auch ohne Cookies - und die relevanten und personalisierten Erlebnisse bereitzustellen, die Ihre Kunden benötigen.
+Sie können [!DNL Merkury] bis [!DNL Merkle] verwenden, um mehr digitale Besucher zu erkennen - auch ohne Cookies - und die relevanten und personalisierten Erlebnisse bereitzustellen, die Ihre Kunden benötigen.
 
-Sie können die **Personen-ID** als Teil der [!DNL Merkury] -Quelle, um alles, was Ihr Unternehmen über eine Person weiß, in einem einzigen umfassenden Profil zusammenzuführen. Diese Details können Folgendes umfassen:
+Sie können die **Personen-ID** als Teil der [!DNL Merkury] -Quelle verwenden, um alles, was Ihr Unternehmen über eine Person weiß, in einem einzigen umfassenden Profil zu kombinieren. Diese Details können Folgendes umfassen:
 
 - digitales Verhalten
 - Kaufpräferenzen
@@ -47,15 +48,15 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie beim Benennen I
 
 ## Voraussetzungen
 
-Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie mit der Verwendung des [!DNL Merkury] source:
+Sie müssen die folgenden Voraussetzungen erfüllen, bevor Sie mit der Verwendung der [!DNL Merkury]-Quelle beginnen können:
 
-- Sie müssen Ihre [!DNL Merkury] -Einstellungen [!DNL Merkury] Team.
-- Sie müssen Ihre Anmeldeinformationen (Zugriffsschlüssel, geheimer Schlüssel und Bucket-Name) aus Ihrem [!DNL Merkury] Team. 
+- Sie müssen Ihr [!DNL Merkury]-Setup mit Ihrem [!DNL Merkury]-Team abschließen.
+- Sie müssen Ihre Anmeldeinformationen (Zugriffsschlüssel, geheimer Schlüssel und Bucket-Name) aus Ihrem [!DNL Merkury]-Team abrufen. 
 
 >[!NOTE]
 >
->Ein Dateipfad wie `myBucket/folder/subfolder/subsubfolder/abc.csv` kann nur den Zugriff ermöglichen `subsubfolder/abc.csv`. Wenn Sie auf den Unterordner zugreifen möchten, können Sie den Behälterparameter als myBucket und den OrdnerPath als Ordner/Unterordner angeben, um sicherzustellen, dass die Dateierforschung im Unterordner beginnt, anstatt `subsubfolder/abc.csv`.
+>Ein Dateipfad wie `myBucket/folder/subfolder/subsubfolder/abc.csv` kann dazu führen, dass Sie nur auf `subsubfolder/abc.csv` zugreifen. Wenn Sie auf den Unterordner zugreifen möchten, können Sie den Behälterparameter als myBucket und den OrdnerPath als Ordner/Unterordner angeben, um sicherzustellen, dass die Dateiexploration im Unterordner anstatt in `subsubfolder/abc.csv` beginnt.
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrer [!DNL Merkury] -Konto auf Experience Platform. Sie können jetzt mit dem Handbuch zu [Verbindung [!DNL Merkury] zum Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/data-partners/merkury.md).
+Durch Lesen dieses Dokuments haben Sie die erforderliche Einrichtung abgeschlossen, um Daten von Ihrem [!DNL Merkury]-Konto an Experience Platform zu übertragen. Sie können jetzt mit dem Handbuch zum Verbinden von [1}mit dem Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/data-partners/merkury.md) fortfahren. [!DNL Merkury] 

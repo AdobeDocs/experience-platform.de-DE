@@ -7,7 +7,7 @@ exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 92%
+ht-degree: 86%
 
 ---
 
@@ -17,7 +17,7 @@ Unmittelbar nach der [Erstellung eines neuen Produktprofils](#create-a-new-produ
 
 ![Berechtigungen](../images/permissions.png)
 
-Berechtigungen werden in Kategorien unterteilt und auf dieser Seite aufgelistet. In der Liste werden der Name der Kategorie, die Anzahl der enthaltenen Berechtigungen (und die Anzahl der aktiven Berechtigungen) sowie die zugehörige Beschreibung angezeigt. Siehe Tabelle unter [Ressourcenberechtigungen](/help/access-control/home.md#permissions) für eine Aufschlüsselung der für jede Rolle verfügbaren Berechtigungen.
+Berechtigungen werden in Kategorien unterteilt und auf dieser Seite aufgelistet. In der Liste werden der Name der Kategorie, die Anzahl der darin enthaltenen Berechtigungen (und die Anzahl der aktiven Berechtigungen) sowie die Beschreibung angezeigt. Eine Aufschlüsselung der für jede Rolle verfügbaren Berechtigungen finden Sie in der Tabelle unter [Ressourcenberechtigungen](/help/access-control/home.md#permissions) .
 
 Klicken Sie auf eine Kategorie in der Liste, um die Seite **[!UICONTROL Berechtigungen bearbeiten]** zu öffnen.
 
@@ -25,7 +25,7 @@ Klicken Sie auf eine Kategorie in der Liste, um die Seite **[!UICONTROL Berechti
 
 Auf der Seite **[!UICONTROL Berechtigungen bearbeiten]** gibt es einen Arbeitsbereich zum Hinzufügen und Entfernen von Berechtigungen für das ausgewählte Produktprofil. Auf der linken Seite des Bildschirms wird eine Liste mit Berechtigungskategorien angezeigt. Durch Klicken auf eine Kategorie ändert sich, welche Berechtigungen jeweils unter **[!UICONTROL Verfügbare Berechtigungselemente]** angezeigt werden.
 
-Um beispielsweise Berechtigungen für die Datenmodellierung zu aktualisieren, wählen Sie **[!UICONTROL Datenmodellierung]**.
+Um beispielsweise die Berechtigungen für die Datenmodellierung zu aktualisieren, wählen Sie **[!UICONTROL Datenmodellierung]** aus.
 
 ![profile-management](../images/profile-management.png)
 

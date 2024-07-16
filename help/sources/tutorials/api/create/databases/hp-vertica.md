@@ -7,16 +7,16 @@ description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwis
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 69%
+source-wordcount: '466'
+ht-degree: 56%
 
 ---
 
-# Erstellen einer [!DNL HP Vertica]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Erstellen einer [!DNL HP Vertica]-Basisverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die [!DNL HP Vertica] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Der [!DNL HP Vertica] -Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -26,10 +26,10 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md)[!DNL Platform]: Experience ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md)[!DNL Platform]: Experience bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform stellt virtuelle Sandboxes bereit, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL HP Vertica] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL HP Vertica] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -37,10 +37,10 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL HP Vertica] herstellen kann,
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL HP Vertica] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL HP Vertica] ist: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
+| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL HP Vertica]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] ist `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL HP Vertica] lautet: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
-Weitere Informationen zum Akquise einer Verbindungszeichenfolge finden Sie unter [Dieses HP Vertica-Dokument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
+Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in [diesem HP Vertica-Dokument](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
 ### Verwenden von Platform-APIs
 
@@ -89,8 +89,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrer [!DNL HP Vertica] -Konto. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] ist: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL HP Vertica]-Verbindungsspezifikations-ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL HP Vertica]-Konto zugeordnet ist. Das Verbindungszeichenfolgenmuster für [!DNL HP Vertica] lautet: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die [!DNL HP Vertica] Verbindungsspezifikations-ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Antwort**
 
@@ -108,4 +108,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL HP Vertica]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)

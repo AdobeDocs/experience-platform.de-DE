@@ -2,7 +2,7 @@
 keywords: Analytics-Zuordnungsfelder;Analytics-Zuordnung
 solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
-description: Ordnen Sie Adobe Analytics-Felder mithilfe des Analytics Source Connector XDM-Feldern zu.
+description: Weisen Sie mithilfe von Analytics Source Connector Adobe Analytics-Felder XDM-Feldern zu.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
@@ -47,7 +47,7 @@ Bestimmte Felder werden von Adobe Analytics direkt zum Experience-Datenmodell (X
 | `accept_language` | `environment.browserDetails.acceptLanguage` | Zeichenfolge | Liste aller zulässigen Sprachen, wie in der HTTP-Kopfzeile „Accept-Language“ angegeben. |
 | `homepage` | `web.webPageDetails.isHomePage` | Boolescher Wert | Wird nicht mehr verwendet. Wird angezeigt, wenn die aktuelle URL die Browser-Startseite ist. |
 | `ipv6` | `environment.ipV6` | string |
-| `j_jscript` | `environment.browserDetails.javaScriptVersion` | string | Die vom Browser unterstützte JavaScript-Version. |
+| `j_jscript` | `environment.browserDetails.javaScriptVersion` | string | Die vom Browser unterstützte Version von JavaScript. |
 | `user_agent` | `environment.browserDetails.userAgent` | Zeichenfolge | Die in der HTTP-Kopfzeile gesendete Benutzeragenten-Zeichenfolge. |
 | `mobileappid` | `application.name` | Zeichenfolge | Die App-ID, die im folgenden Format gespeichert wird: `[AppName][BundleVersion]`. |
 | `mobiledevice` | `device.model` | Zeichenfolge | Der Name des Mobilgeräts. Unter iOS als kommagetrennte 2-Ziffern-Zeichenfolge gespeichert. Die erste Ziffer steht für die Gerätegeneration; die zweite weist die Version der Gerätefamilie aus. |
@@ -141,12 +141,12 @@ Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodas
 | `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Benutzerdefinierte Analytics-Listenvariablen. Enthält eine durch Trennzeichen getrennte Liste von Werten. | {value (string), key (string)} |
 | `m_color` | `device.colorDepth` | integer | Die Farbtiefen-ID, die auf dem Wert der Spalte c_color basiert. |
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | Boolescher Wert | Variable, die in der Dimension „Cookie-Unterstützung“ verwendet wird. |
-| `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
+| `m_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
 | `m_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objekt | Benutzerdefinierte Ereignisse, die beim Treffer ausgelöst werden. | {id (Object), value (Object)} |
 | `m_geo_country` | `placeContext.geo.countryCode` | Zeichenfolge | Abkürzung des Landes, aus dem der Treffer stammt, basierend auf der IP. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
-| `m_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | Eine Markierung, die angibt, ob Java™ aktiviert ist. |
+| `m_java_enabled` | `environment.browserDetails.javaEnabled` | Boolescher Wert | Eine Markierung, die angibt, ob Java™ aktiviert ist. |
 | `m_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `m_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
 | `m_page_event_var1` | `web.webInteraction.URL` | Zeichenfolge | Variable, die nur in Bildanforderungen zum Linktracking verwendet wird. Die Variable enthält die URL des angeklickten Downloadlinks, Exitlinks oder benutzerspezifischen Links. |
@@ -155,7 +155,7 @@ Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodas
 | `m_pagename_no_url` | `web.webPageDetails.name` | number | Der Name der Seite (wenn festgelegt). Wenn keine Seite angegeben ist, bleibt dieser Wert leer. |
 | `m_paid_search` | `search.isPaid` | Boolescher Wert | Markierung, die gesetzt wird, wenn der Treffer mit der Paid Search-Erkennung übereinstimmt. |
 | `m_product_list` | `productListItems[].items` | array | Produktliste, so wie sie von der Variable der Produkte übergeben wurde. | {SKU (string), quantity (integer), priceTotal (number)} |
-| `m_ref_type` | `web.webReferrer.type` | Zeichenfolge | Eine numerische ID, die den Typ des Verweises für den Treffer darstellt.<br/>`1`: Innerhalb Ihrer Site<br/>`2`: Andere Websites<br/>`3`: Suchmaschinen<br/>`4`: Festplatte<br/>`5`: USENET<br/>`6`: Eingegeben/mit Lesezeichen versehen (kein Referrer)<br/>`7`: email<br/>`8`: Kein JavaScript<br/>`9`: Soziale Netzwerke |
+| `m_ref_type` | `web.webReferrer.type` | Zeichenfolge | Eine numerische ID, die den Typ des Verweises für den Treffer darstellt.<br/>`1`: Innerhalb Ihrer Site<br/>`2`: Andere Websites<br/>`3`: Suchmaschinen<br/>`4`: Festplatte<br/>`5`: USENET<br/>`6`: Eingegeben/mit Lesezeichen versehen (kein Referrer)<br/>`7`: E-Mail<br/>`8`: Kein JavaScript<br/>`9`: Soziale Netzwerke |
 | `m_search_engine` | `search.searchEngine` | Zeichenfolge | Numerische Kennung, die die Suchmaschine darstellt, die den Besucher auf Ihre Site verwiesen hat. |
 | `post_currency` | `commerce.order.currencyCode` | Zeichenfolge | Der während der Transaktion verwendete Währungscode. |
 | `post_cust_hit_time_gmt` | `timestamp` | Zeichenfolge | Dieser Wert wird nur in für Zeitstempel aktivierten Datensätzen verwendet. Dies ist der Zeitstempel, der mit dem Treffer gesendet wird, basierend auf der UNIX®-Zeit. |
@@ -164,8 +164,8 @@ Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodas
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.namespace.code` | Zeichenfolge | Die Besucher-ID des Kunden. |
 | `post_visid_high` + `visid_low` | `identityMap` | Objekt | Eindeutige Kennung für einen Besuch. |
 | `post_visid_high` + `visid_low` | `endUserIDs._experience.aaid.id` | Zeichenfolge | Eindeutige Kennung für einen Besuch. |
-| `post_visid_high` | `endUserIDs._experience.aaid.primary` | boolean | Verwendet mit `visid_low` zur eindeutigen Identifizierung eines Besuchs. |
-| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | Zeichenfolge | Verwendet mit `visid_low` zur eindeutigen Identifizierung eines Besuchs. |
+| `post_visid_high` | `endUserIDs._experience.aaid.primary` | Boolescher Wert | Wird mit `visid_low` verwendet, um einen Besuch eindeutig zu identifizieren. |
+| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | Zeichenfolge | Wird mit `visid_low` verwendet, um einen Besuch eindeutig zu identifizieren. |
 | `post_visid_low` | `identityMap` | Objekt | Wird mit visid_high zur eindeutigen Identifizierung eines Besuchs verwendet. |
 | `hit_time_gmt` | `receivedTimestamp` | Zeichenfolge | Der Zeitstempel des Treffers basierend auf der UNIX®-Zeit. |
 | `hitid_high` + `hitid_low` | `_id` | Zeichenfolge | Eindeutige Kennung zur Identifizierung eines Treffers. |
@@ -174,7 +174,7 @@ Wählen Sie Felder aus, die von ADC stammen, müssen transformiert werden, sodas
 | `j_jscript` | `environment.browserDetails.javaScriptEnabled` | Boolescher Wert | Die verwendete JavaScript-Version. |
 | `mcvisid_high` + `mcvisid_low` | identityMap | Objekt | Die Experience Cloud-Besucher-ID. |
 | `mcvisid_high` + `mcvisid_low` | endUserIDs._experience.mcid.id | Zeichenfolge | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
-| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | boolean | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
+| `mcvisid_high` | `endUserIDs._experience.mcid.primary` | Boolescher Wert | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
 | `mcvisid_high` | `endUserIDs._experience.mcid.namespace.code` | Zeichenfolge | Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und manchmal in Namespaces verwendet. |
 | `mcvisid_low` | `identityMap` | Objekt | Die Experience Cloud-Besucher-ID. |
 | `sdid_high` + `sdid_low` | `_experience.target.supplementalDataID` | Zeichenfolge | Trefferzusammenfügungs-ID. Die Analytics-Felder sdid_high und sdid_low sind die ergänzenden Daten-IDs, mit denen zwei (oder mehr) eingehende Treffer zusammengefügt werden. |
@@ -227,9 +227,9 @@ Weitere Informationen zum Ausführen dieser Umwandlungen mithilfe von Query Serv
 | `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objekt | Wird von Hierarchievariablen verwendet und enthält eine durch Trennzeichen getrennte Liste von Werten. | {values (array), delimiter (string)} |
 | `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Eine Liste mit Variablenwerten. Enthält eine durch Trennzeichen getrennte Liste benutzerdefinierter Werte (je nach Implementierung). | {value (string), key (string)} |
 | `post_cookies` | `environment.browserDetails.cookiesEnabled` | Boolescher Wert | Die Variable, die in der Dimension „Cookie-Unterstützung“ verwendet wird. |
-| `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
+| `post_event_list` | `commerce.purchases`, <br/>`commerce.productViews`, <br/>`commerce.productListOpens`, <br/>`commerce.checkouts`, <br/>`commerce.productListAdds`, <br/>`commerce.productListRemovals`, <br/>`commerce.productListViews` | Objekt | Beim Treffer ausgelöste Standard-Verkaufsereignisse. | {id (string), value (number)} |
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Objekt | Benutzerdefinierte Ereignisse, die beim Treffer ausgelöst werden. | {id (Object), value (Object)} |
-| `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | Eine Markierung, die angibt, ob Java™ aktiviert ist. |
+| `post_java_enabled` | `environment.browserDetails.javaEnabled` | Boolescher Wert | Eine Markierung, die angibt, ob Java™ aktiviert ist. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | Zeichenfolge | Die Art des in der Bildanforderung gesendeten Treffers (Standardtreffer, angeklickter Downloadlink, Exitlink oder benutzerspezifischer Link). |

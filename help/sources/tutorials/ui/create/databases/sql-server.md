@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Microsoft SQL Server-Quellverbindung in der Benutzeroberfläche
+title: Erstellen einer Microsoft SQL Server Source-Verbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Microsoft SQL Server-Quellverbindung erstellen.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
@@ -11,7 +11,7 @@ ht-degree: 45%
 
 # Erstellen eines Quell-Connectors für [!DNL Microsoft SQL Server] in der Benutzeroberfläche
 
-In diesem Tutorial erfahren Sie, wie Sie Ihre [!DNL Microsoft SQL Server] -Konto in der -Benutzeroberfläche zu Adobe Experience Platform hinzugefügt.
+In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Microsoft SQL Server]-Konto über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
 ## Erste Schritte
 
@@ -26,33 +26,33 @@ Wenn Sie bereits über eine gültige [!DNL SQL Server]-Verbindung verfügen, kö
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um eine Verbindung zu [!DNL SQL Server] on [!DNL Platform]müssen Sie die folgende Verbindungseigenschaft angeben:
+Um eine Verbindung zu [!DNL SQL Server] auf [!DNL Platform] herzustellen, müssen Sie die folgende Verbindungseigenschaft angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Verbindungszeichenfolge | Die Verbindungszeichenfolge, die Ihrer [!DNL Microsoft SQL Server] -Konto. Ihr Verbindungszeichenfolgen-Muster hängt davon ab, ob Sie den Servernamen oder Instanznamen für Ihre Datenquelle verwenden:<ul><li>Verbindungszeichenfolge mit dem Servernamen: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Verbindungszeichenfolge mit Instanzname:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
+| Verbindungszeichenfolge | Die Verbindungszeichenfolge, die Ihrem [!DNL Microsoft SQL Server]-Konto zugeordnet ist. Ihr Verbindungszeichenfolgen-Muster hängt davon ab, ob Sie den Servernamen oder Instanznamen für Ihre Datenquelle verwenden:<ul><li>Verbindungszeichenfolge mit Servername: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Verbindungszeichenfolge mit Instanzname:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
 
-Weitere Informationen zu den ersten Schritten finden Sie unter [this [!DNL SQL Server] Dokument](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem [!DNL SQL Server] Dokument](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ## Verbinden Ihres [!DNL SQL Server]-Kontos
 
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem *Datenbanken* category, select **[!DNL Microsoft SQL Server]** und wählen Sie **[!UICONTROL Einrichten]**.
+Wählen Sie unter der Kategorie *Datenbanken* die Option **[!DNL Microsoft SQL Server]** und dann **[!UICONTROL Einrichten]** aus.
 
 >[!TIP]
 >
->Quellen im Quellkatalog zeigen die **[!UICONTROL Einrichten]** -Option, wenn eine bestimmte Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto existiert, wird diese Option in **[!UICONTROL Daten hinzufügen]**.
+>Quellen im Quellkatalog zeigen die Option **[!UICONTROL Einrichten]** an, wenn eine Quelle noch kein authentifiziertes Konto hat. Sobald ein authentifiziertes Konto vorhanden ist, wird diese Option in **[!UICONTROL Daten hinzufügen]** geändert.
 
 ![Der Quellkatalog mit der ausgewählten Microsoft SQL Server-Quelle.](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-Die **[!UICONTROL Verbindung zu Microsoft SQL Server herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Verbindung zu Microsoft SQL Server herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 >[!BEGINTABS]
 
 >[!TAB Neues Konto erstellen]
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie einen Namen, eine optionale Beschreibung und Ihre Anmeldeinformationen ein.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie einen Namen, eine optionale Beschreibung und Ihre Anmeldeinformationen ein.
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
@@ -60,14 +60,14 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und wart
 
 >[!TAB Vorhandenes Konto verwenden]
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie dann das Konto aus, das Sie verwenden möchten, aus dem vorhandenen Kontokatalog.
+Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das Konto, das Sie verwenden möchten, aus dem vorhandenen Kontokatalog aus.
 
 Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![Die vorhandene Kontoschnittstelle, in der eine Liste der vorhandenen Konten angezeigt wird.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+![Die vorhandene Kontoschnittstelle, die eine Liste der vorhandenen Konten anzeigt.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 >[!ENDTABS]
 
 ## Nächste Schritte
 
-Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SQL Server]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in [!DNL Platform]](../../dataflow/databases.md).
+Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SQL Server]-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen Datenfluss [konfigurieren, um Daten in  [!DNL Platform]](../../dataflow/databases.md) zu übertragen.

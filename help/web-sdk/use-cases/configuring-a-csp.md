@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Konfigurieren einer CSP
 
-A [Inhaltssicherheitsrichtlinie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wird verwendet, um die Ressourcen zu beschränken, die ein Browser verwenden darf. Die CSP kann auch die Funktionalität von Skript- und Stilressourcen einschränken. Das Adobe Experience Platform Web SDK benötigt keine CSP. Durch Hinzufügen einer kann die Angriffsfläche jedoch reduziert werden, um schädliche Angriffe zu verhindern.
+Eine [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) wird verwendet, um die Ressourcen zu beschränken, die ein Browser verwenden darf. Die CSP kann auch die Funktionalität von Skript- und Stilressourcen einschränken. Das Adobe Experience Platform Web SDK benötigt keine CSP. Durch Hinzufügen einer kann die Angriffsfläche jedoch reduziert werden, um schädliche Angriffe zu verhindern.
 
-Das CSP muss reflektieren, wie [!DNL Platform Web SDK] bereitgestellt und konfiguriert wurde. Die folgende CSP zeigt, welche Änderungen erforderlich sein können, damit das SDK ordnungsgemäß funktioniert. Abhängig von Ihrer spezifischen Umgebung sind wahrscheinlich zusätzliche CSP-Einstellungen erforderlich.
+Das CSP muss die Bereitstellung und Konfiguration von [!DNL Platform Web SDK] widerspiegeln. Die folgende CSP zeigt, welche Änderungen erforderlich sein können, damit das SDK ordnungsgemäß funktioniert. Abhängig von Ihrer spezifischen Umgebung sind wahrscheinlich zusätzliche CSP-Einstellungen erforderlich.
 
 ## Beispiel für eine Content-Sicherheitsrichtlinie
 
@@ -29,17 +29,17 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-Im obigen Beispiel `EDGE-DOMAIN` durch die Erstanbieterdomäne ersetzt werden. Die Erstanbieterdomäne ist für die [edgeDomain](../commands/configure/edgedomain.md) -Einstellung. Wenn keine Erstanbieterdomäne konfiguriert wurde, wird `EDGE-DOMAIN` sollte ersetzt werden durch `*.adobedc.net`. Wenn die Besuchermigration mit [idMigrationEnabled](../commands/configure/idmigrationenabled.md), die `connect-src` -Richtlinie auch `*.demdex.net`.
+Im obigen Beispiel sollte `EDGE-DOMAIN` durch die Erstanbieterdomäne ersetzt werden. Die Erstanbieterdomäne ist für die Einstellung [edgeDomain](../commands/configure/edgedomain.md) konfiguriert. Wenn keine Erstanbieterdomäne konfiguriert wurde, sollte `EDGE-DOMAIN` durch `*.adobedc.net` ersetzt werden. Wenn die Besuchermigration mit [idMigrationEnabled](../commands/configure/idmigrationenabled.md) aktiviert ist, muss die `connect-src` -Direktive auch `*.demdex.net` enthalten.
 
 ### Verwenden Sie NONCE, um Inline-Skript- und Stilelemente zuzulassen
 
-[!DNL Platform Web SDK] kann den Seiteninhalt ändern und muss genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Um dies zu erreichen, empfiehlt Adobe die Verwendung einer Nonce für die [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP-Richtlinie. Eine Nonce ist ein Server-generiertes kryptografisch starkes zufälliges Token, das einmal pro eindeutigem Seitenaufruf generiert wird.
+[!DNL Platform Web SDK] kann den Seiteninhalt ändern und muss genehmigt werden, um Inline-Skript- und Stil-Tags zu erstellen. Um dies zu erreichen, empfiehlt Adobe die Verwendung einer Nonce für die CSP-Direktive [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) . Eine Nonce ist ein Server-generiertes kryptografisch starkes zufälliges Token, das einmal pro eindeutigem Seitenaufruf generiert wird.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Darüber hinaus muss die CSP-Nonce als Attribut zum [!DNL Platform Web SDK] [Basis-Code](../install/library.md) Skript-Tag. [!DNL Platform Web SDK] verwendet diese Nonce dann, wenn Inline-Skript- oder Stil-Tags zur Seite hinzugefügt werden:
+Darüber hinaus muss die CSP-Nonce als Attribut zum Skript-Tag [!DNL Platform Web SDK] [Basis-Code](../install/library.md) hinzugefügt werden. [!DNL Platform Web SDK] verwendet diese Nonce dann beim Hinzufügen von Inline-Skript- oder Stil-Tags zur Seite:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -50,7 +50,7 @@ Darüber hinaus muss die CSP-Nonce als Attribut zum [!DNL Platform Web SDK] [Bas
 </script>
 ```
 
-Wenn keine Nonce verwendet wird, besteht die andere Option darin, `unsafe-inline` der `script-src` und `style-src` CSP-Anweisungen:
+Wenn keine Nonce verwendet wird, besteht die andere Option darin, der CSP-Direktive `script-src` und `style-src` den Wert `unsafe-inline` hinzuzufügen:
 
 ```
 script-src 'unsafe-inline'
@@ -59,11 +59,11 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe tut **not** empfehlen `unsafe-inline` weil es ermöglicht, dass jedes Skript auf der Seite ausgeführt wird, wodurch die Vorteile des CSP eingeschränkt werden.
+>Adobe empfiehlt **nicht**, `unsafe-inline` anzugeben, da es die Ausführung eines Skripts auf der Seite ermöglicht, wodurch die Vorteile des CSP eingeschränkt werden.
 
 ## CSP für In-App-Nachrichten konfigurieren {#in-app-messaging}
 
-Bei der Konfiguration [Web-In-App-Nachrichten](../personalization/web-in-app-messaging.md)müssen Sie die folgende Anweisung in Ihre CSP aufnehmen:
+Wenn Sie [Web In-App Messaging](../personalization/web-in-app-messaging.md) konfigurieren, müssen Sie die folgende Anweisung in Ihre CSP aufnehmen:
 
 ```
 default-src  blob:;

@@ -16,13 +16,13 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Die Funktion zum Aktivieren von Kontozielgruppen für Ziele ist für Unternehmen verfügbar, die die [B2B](/help/rtcdp/overview.md#rtcdp-b2b) und [B2B](/help/rtcdp/overview.md#rtcdp-b2p) Editionen von Real-time Customer Data Platform.
+>Die Funktion zum Aktivieren von Kontozielgruppen für Ziele ist für Unternehmen verfügbar, die die Editionen [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) und [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) von Real-time Customer Data Platform erwerben.
 
-In diesem Artikel wird der Workflow erläutert, der zum Exportieren erforderlich ist [Kontozielgruppen](/help/segmentation/ui/account-audiences.md) von Adobe Experience Platform zu Ihrem bevorzugten Ziel.
+In diesem Artikel wird der Workflow erläutert, der zum Exportieren von [Konto-Zielgruppen](/help/segmentation/ui/account-audiences.md) aus Adobe Experience Platform in Ihr bevorzugtes Ziel erforderlich ist.
 
 ## Unterstützte Ziele {#supported-destinations}
 
-Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie die **[!UICONTROL Datentypen]** filtern und auswählen **[!UICONTROL Konten]** um die Ziele anzuzeigen, die die Aktivierung von Kontozielgruppen unterstützen. Derzeit ist der Export von Kontozielgruppen nur für bestimmte Cloud-Speicher-Ziele verfügbar ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), und [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) und der [(Unternehmen) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) Ziel.
+Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie den Filter **[!UICONTROL Datentypen]** und wählen Sie **[!UICONTROL Konten]** aus, um die Ziele anzuzeigen, die die Aktivierung von Kontozielgruppen unterstützen. Derzeit ist der Export von Kontozielgruppen nur für bestimmte Cloud-Speicher-Ziele ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) und [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) und das Ziel [(Unternehmen) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) verfügbar.
 
 ![Ziele, die Kontozielgruppen unterstützen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,14 +34,14 @@ Im folgenden Video erhalten Sie einen Überblick über das Erstellen und Aktivie
 
 ## Voraussetzungen {#prerequisites}
 
-* Du musst zuerst aufnehmen [Kontoprofile](/help/rtcdp/accounts/account-profile-overview.md) und erstellen [Kontozielgruppen](/help/segmentation/ui/account-audiences.md) bevor Sie sie für nachgelagerte Ziele aktivieren können.
-* Um Kontozielgruppen für Ziele zu aktivieren, müssen Sie eine erfolgreiche Verbindung zu einem Ziel hergestellt haben. Wenn Sie das noch nicht getan haben, gehen Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten. Tutorial zur Benutzeroberfläche lesen [Verbindung zu Zielen](./connect-destination.md) für weitere Informationen.
+* Sie müssen zunächst [Kontoprofile](/help/rtcdp/accounts/account-profile-overview.md) erfassen und [Kontozielgruppen](/help/segmentation/ui/account-audiences.md) erstellen, bevor Sie sie für nachgelagerte Ziele aktivieren können.
+* Um Kontozielgruppen für Ziele zu aktivieren, müssen Sie eine erfolgreiche Verbindung zu einem Ziel hergestellt haben. Wenn Sie dies noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten. Weitere Informationen finden Sie im Tutorial zur Benutzeroberfläche für das [Verbinden mit Zielen](./connect-destination.md) .
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Um Kontozielgruppen zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele aktivieren]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+Um Kontozielgruppen zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele aktivieren]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Aktivieren von Kontozielgruppen verfügen, durchsuchen Sie den Zielkatalog. Wenn ein Ziel **[!UICONTROL Aktivieren]** und Sie über die entsprechenden Berechtigungen verfügen.
+Um sicherzustellen, dass Sie über die erforderlichen Berechtigungen zum Aktivieren von Kontozielgruppen verfügen, durchsuchen Sie den Zielkatalog. Wenn ein Ziel über ein Steuerelement vom Typ **[!UICONTROL Aktivieren]** verfügt, verfügen Sie über die entsprechenden Berechtigungen.
 
 ## Auswählen des Ziels {#select-destination}
 
@@ -51,57 +51,57 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 
    ![Registerkarte „Zielkatalog“ mit hervorgehobenem Katalog-Steuerelement.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. Auswählen **[!UICONTROL Aktivieren]** auf der Karte, die dem Ziel entspricht, an das Sie Datensätze exportieren möchten.
+1. Wählen Sie **[!UICONTROL Aktivieren]** auf der Karte aus, die dem Ziel entspricht, in das Sie Datensätze exportieren möchten.
 
 >[!TIP]
 >
->Die Ziele, die Zielgruppen von Konten exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, das dem unten hervorgehobenen Ziel ähnelt. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die Zielgruppen von Konten exportieren können, wie z. B. [höher auf der Seite angezeigt](#supported-destinations).
+>Die Ziele, die Zielgruppen für Konten exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, das dem unten hervorgehobenen Ziel ähnelt. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die Zielgruppen für Konten exportieren können, wie oben auf der Seite ](#supported-destinations) gezeigt.[
 
 ![Amazon S3-Zielseite, die hervorgehobene Profilzielgruppen exportieren kann.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
 
-1. Auswählen **[!UICONTROL Datentypkonten]**, gefolgt von der Zielverbindung, in die Sie Datensätze exportieren möchten, und wählen Sie **[!UICONTROL Nächste]**.
+1. Wählen Sie **[!UICONTROL Datentypkonten]**, gefolgt von der Zielverbindung, in die Sie Datensätze exportieren möchten, und wählen Sie dann **[!UICONTROL Weiter]** aus.
 
 >[!TIP]
 > 
->Wenn Sie ein neues Ziel einrichten möchten, um Kontozielgruppen zu aktivieren, wählen Sie **[!UICONTROL Neues Ziel konfigurieren]** zum Trigger [Mit Ziel verbinden](/help/destinations/ui/connect-destination.md) Arbeitsablauf und [Konten als Datentyp auswählen](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
+>Wenn Sie ein neues Ziel einrichten möchten, um Kontozielgruppen zu aktivieren, wählen Sie **[!UICONTROL Neues Ziel konfigurieren]** aus, um den Workflow [Mit Ziel verbinden](/help/destinations/ui/connect-destination.md) Trigger, und [wählen Sie Konten als Datentyp aus](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
 ![Zielaktivierungs-Workflow mit hervorgehobener Kontosteuerung.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
-1. Fahren Sie mit dem nächsten Abschnitt fort, um [Zielgruppen Ihres Kontos auswählen](#select-profile-audiences) für den Export.
+1. Fahren Sie mit dem nächsten Abschnitt [Auswählen Ihrer Kontozielgruppen](#select-profile-audiences) für den Export fort.
 
 ## Zielgruppen für Ihr Konto auswählen {#select-account-audiences}
 
-Aktivieren Sie die Kontrollkästchen links neben den Namen der Zielgruppen des Kontos, um die Zielgruppen auszuwählen, die Sie zum Ziel exportieren möchten, und wählen Sie **[!UICONTROL Nächste]**. Beachten Sie, dass nur *Kontozielgruppen* werden in dieser Ansicht angezeigt und es werden keine anderen Zielgruppentypen angezeigt.
+Verwenden Sie die Kontrollkästchen links neben den Namen der Zielgruppen des Kontos, um die Zielgruppen auszuwählen, die Sie zum Ziel exportieren möchten, und wählen Sie dann **[!UICONTROL Weiter]** aus. Beachten Sie, dass in dieser Ansicht nur *Konto-Zielgruppen* angezeigt werden und keine anderen Zielgruppentypen angezeigt werden.
 
 ![Workflow für den Datensatzexport , der den Schritt Zielgruppen auswählen zeigt, in dem Sie auswählen können, welche Zielgruppen exportiert werden sollen.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
 ## Planung und nächste Schritte
 
-Den Rest des Aktivierungs-Workflows zum Exportieren von Kontozielgruppen finden Sie im Tutorial zum Aktivieren von Daten für dateibasierte Ziele. Fahren Sie mit dem [Schritt zum Planen des Zielgruppenexports](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Wenn Sie Kontozielgruppen für die **[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]** Ziel, lesen Sie das Tutorial zum Aktivieren von Streaming-Zielen. Fahren Sie mit dem [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
+Den Rest des Aktivierungs-Workflows zum Exportieren von Kontozielgruppen finden Sie im Tutorial zum Aktivieren von Daten für dateibasierte Ziele. Fahren Sie mit dem Schritt [Zielgruppenexport planen](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) fort. Wenn Sie Kontozielgruppen für das Ziel &quot;**[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]**&quot;aktivieren, lesen Sie das Tutorial zum Aktivieren von Streaming-Zielen. Fahren Sie mit dem Schritt [Zuordnen](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) fort.
 
 >[!NOTE]
 >
->Beachten Sie, dass im Planungsschritt beim Export von Kontozielgruppen in Cloud-Speicher-Ziele der Workflow zum Aktivieren von Kontozielgruppen nur den Export von Zielgruppen ermöglicht [Vollständige Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _auf Tagesplan_. Stündliche Exporte werden nicht unterstützt. Beachten Sie auch Folgendes: **[!UICONTROL Nach Zielgruppenbewertung]** ist der einzige unterstützte Auswertungstyp.
+>Beachten Sie, dass im Planungsschritt beim Exportieren von Kontozielgruppen in Cloud-Speicher-Ziele der Workflow zum Aktivieren von Kontozielgruppen nur den Export von [vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _nach einem täglichen Zeitplan ermöglicht._ Stündliche Exporte werden nicht unterstützt. Beachten Sie außerdem, dass **[!UICONTROL Nach der Zielgruppenauswertung]** der einzige unterstützte Auswertungstyp ist.
 
 ## Wichtige Hinweise und bekannte Einschränkungen {#important-callouts-known-limitations}
 
 Beachten Sie die folgenden wichtigen Hinweisen und bekannten Einschränkungen für die allgemeine Verfügbarkeit der Funktion zum Aktivieren von Kontozielgruppen.
 
-### Erforderliche Zuordnungspaare im Zuordnungsschritt bei der Aktivierung von Kontozielgruppen für die **[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]** Ziel {#required-mappings}
+### Erforderliche Zuordnungspaare im Zuordnungsschritt bei der Aktivierung von Kontozielgruppen für das Ziel **[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]** {#required-mappings}
 
-Beim Aktivieren von Kontozielgruppen für die **[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]** Ziel angeben, beachten Sie, dass die folgenden beiden Zuordnungspaare für den erfolgreichen Export von Daten obligatorisch sind:
+Beachten Sie beim Aktivieren von Kontozielgruppen für das Ziel &quot;**[!UICONTROL (Unternehmen) LinkedIn Matched Audiences]**&quot;, dass die folgenden beiden Zuordnungspaare für den erfolgreichen Export von Daten obligatorisch sind:
 
-![Für die linkedIn-Zuordnung sind erforderliche Felder erforderlich.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![Erforderliche Felder für die LinkedIn-Zuordnung.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Quellfeld | Zielfeld |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (Wählen Sie dieses Feld im **[!UICONTROL Identitäts-Namespace auswählen]** Ansicht bei Auswahl der **[!UICONTROL Zielfeld]**). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Kontozielgruppen für Ziele zu aktivieren.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Kontozielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
+| `accountKey.sourceKey` | `primaryId` (Wählen Sie dieses Feld in der Ansicht **[!UICONTROL Identitäts-Namespace auswählen]** aus, wenn Sie das **[!UICONTROL Zielfeld]** auswählen). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Kontozielgruppen für Ziele zu aktivieren.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Kontozielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"} |
 
 ### Data Governance-Durchsetzung {#data-governance-enforcement}
 
-Die Zustimmung wird auf der Personen- oder Profilebene für *Kunden- und Interessensgruppen*. Daher  [Bewertung der Einwilligungsrichtlinie](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) wird derzeit nicht unterstützt, wenn Zielgruppen für Konten für Ziele aktiviert werden. Im Überprüfungsschritt des Aktivierungs-Workflows sehen Sie ein ausgegrautes Steuerelement für **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]**.
+Die Zustimmung wird auf Personen- oder Profilebene für *Kunden- und Interessensgruppen* erzwungen. Daher wird die Bewertung von [Einwilligungsrichtlinien](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) derzeit nicht unterstützt, wenn Kontozielgruppen für Ziele aktiviert werden. Im Überprüfungsschritt des Aktivierungs-Workflows sehen Sie ein ausgegrautes Steuerelement für **[!UICONTROL Gültige Zustimmungsrichtlinien anzeigen]**.
 
-![Überprüfen Sie den Schritt des Workflows Zielgruppen für das Konto aktivieren , wobei die Kontrolle der Einwilligungsdurchsetzung ausgegraut ist.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
+![Überprüfen Sie den Schritt des Workflows &quot;Zielgruppen des Kontos aktivieren&quot;, wobei die Kontrolle der Einwilligungsdurchsetzung ausgegraut ist.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-Andere Data-Governance-Mechanismen in Real-Time CDP, z. B. [Datennutzungsrichtlinien-Prüfungen](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) und [attributbasierte Zugriffssteuerung](/help/destinations/home.md#attribute-based-access) werden unterstützt.
+Andere Data Governance-Mechanismen in Real-Time CDP wie [Datennutzungsrichtlinien-Prüfungen](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) und [attributbasierte Zugriffskontrolle](/help/destinations/home.md#attribute-based-access) werden unterstützt.

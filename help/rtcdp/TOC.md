@@ -44,13 +44,13 @@ ht-degree: 67%
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
    * [Ziele in der Real-time CDP B2B Edition](destinations/b2b.md)
-* Schutzschilde {#guardrails}
+* Schutzstreifen {#guardrails}
    * [Übersicht über Real-Time CDP-Limits](guardrails/overview.md)
-   * [Limits für die Datenerfassung](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [Limits für die [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
-   * [Limits [!DNL Real-Time Customer Profile] Daten und Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de){target="_blank"}
-   * [Limits [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [Limits [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Schutzmechanismen für die Datenerfassung](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Schutzmechanismen für den  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Limits für [!DNL Real-Time Customer Profile] Daten und Segmentierung](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=de){target="_blank"}
+   * [Limits für  [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Schutzmechanismen für  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
    * [Limits für die Datenaktivierung über Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identitäten {#identity}
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
@@ -77,7 +77,7 @@ ht-degree: 67%
 * Anwendungsfälle {#use-cases}
    * [Überblick über Beispielanwendungsfälle](/help/rtcdp/use-case-guides/overview.md)
    * Kundenakquise {#customer-acquisition}
-      * [Engage und Akquisition neuer Kunden ohne Abhängigkeit von Drittanbieter-Cookies](/help/rtcdp/partner-data/prospecting.md)
+      * [Engage and acquisition new Customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)
       * [Personalisieren von Onsite-Erlebnissen für unbekannte Besucher mithilfe der von Partnern unterstützten Besuchererkennung](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite-Retargeting nicht authentifizierter Benutzer](./partner-data/offsite-retargeting.md)
    * Profilanreicherung {#profile-enrichment}

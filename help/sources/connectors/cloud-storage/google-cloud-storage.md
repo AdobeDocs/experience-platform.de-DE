@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Google Cloud-Speicher; Google Cloud-Speicher
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;Google Cloud Storage
 solution: Experience Platform
 title: Google Cloud Storage Source Connector - Überblick
 description: Erfahren Sie, wie Sie Google Cloud Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '565'
 ht-degree: 78%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 78%
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten aus diesen Systemen übernehmen können.
 
-Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als JSON- oder Parquet-Datei formatiert werden, die mit dem Experience-Datenmodell (XDM) konform ist, oder in einem getrennten Format. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Platform können Sie Daten aus [!DNL Google Cloud Storage] durch Batches.
+Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als JSON- oder Parquet-Datei formatiert werden, die mit dem Experience-Datenmodell (XDM) konform ist, oder in einem getrennten Format. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Platform können Sie Daten von [!DNL Google Cloud Storage] durch Batches einbringen.
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
 ## Vorausgesetzte Einrichtung für das Verbinden Ihres [!DNL Google Cloud Storage]-Kontos
 
-Um eine Verbindung zu Platform herzustellen, müssen Sie zunächst die Interoperabilität für Ihre [!DNL Google Cloud Storage] -Konto. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Einstellungen]** in der Option **[!UICONTROL Cloud-Speicher]** im Navigationsbereich aus.
+Um eine Verbindung zu Platform herzustellen, müssen Sie zunächst die Interoperabilität für Ihr [!DNL Google Cloud Storage]-Konto aktivieren. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Einstellungen]** in der Option **[!UICONTROL Cloud-Speicher]** im Navigationsbereich aus.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
@@ -37,7 +37,7 @@ Die Seite **[!UICONTROL Interoperabilität]** enthält Informationen zur Authent
 
 Sie können die neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit Platform zu verbinden.
 
-Weitere Informationen finden Sie im Handbuch unter [Erstellen und Verwalten von Dienstkontoschlüsseln](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) von [!DNL Google Cloud] Dokumentation.
+Weitere Informationen finden Sie im Handbuch zum Erstellen und Verwalten von Dienstkontoschlüsseln](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) in der Dokumentation zu [!DNL Google Cloud].[
 
 ## Namensbeschränkungen für Dateien und Verzeichnisse
 

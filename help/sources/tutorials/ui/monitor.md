@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Konten überwachen; Datenflüsse überwachen; Datenflüsse
-description: Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Anzeigen vorhandener Datenflüsse aus dem Arbeitsbereich "Quellen"beschrieben.
+keywords: Experience Platform; home; beliebte Themen; Konten überwachen; Datenflüsse überwachen; Datenflüsse
+description: Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden Schritte zum Anzeigen vorhandener Datenflüsse aus dem Arbeitsbereich "Quellen"beschrieben.
 solution: Experience Platform
 title: Überwachen von Datenflüssen in der Benutzeroberfläche
 type: Tutorial
@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Überwachen von Datenflüssen in der Benutzeroberfläche
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen.
+Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen.
 
-Weitere Informationen zum Überwachen von Datenflüssen für Quell-Connectoren finden Sie im Abschnitt [Überwachung von Datenflüssen in Quellen](../../../dataflows/ui/monitor-sources.md) Tutorial.
+Weiterführende Informationen zur Überwachung von Datenflüssen für Quell-Connectoren finden Sie im Tutorial [Überwachung von Datenflüssen in Quellen](../../../dataflows/ui/monitor-sources.md) .

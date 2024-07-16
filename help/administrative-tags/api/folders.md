@@ -2,19 +2,19 @@
 title: Ordner-Endpunkt
 description: Erfahren Sie, wie Sie Ordner mit den Adobe Experience Platform-APIs erstellen, aktualisieren, verwalten und löschen.
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
 
 ---
 
-
 # Ordner-Endpunkt
 
 >[!IMPORTANT]
 >
->Die Endpunkt-URL für diesen Satz von Endpunkten lautet `https://experience.adobe.io`.
+>Die Endpunkt-URL für diesen Satz von Endpunkten ist `https://experience.adobe.io`.
 
 Ordner sind eine Funktion, mit der Sie Ihre Geschäftsobjekte besser organisieren können, um die Navigation und Kategorisierung zu erleichtern.
 
@@ -22,11 +22,11 @@ Dieses Handbuch enthält Informationen zum besseren Verständnis von Ordnern und
 
 ## Erste Schritte
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Abrufen einer Ordnerliste {#list}
 
-Sie können eine Liste von Ordnern abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an die `/folder` -Endpunkt und geben Sie den Ordnertyp und die ID des übergeordneten Ordners an.
+Sie können eine Liste von Ordnern abrufen, die zu Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp und die ID des übergeordneten Ordners angeben.
 
 **API-Format**
 
@@ -113,7 +113,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste aller Ordner 
 
 ## Neuen Ordner erstellen {#create}
 
-Sie können einen neuen Ordner erstellen, indem Sie eine POST-Anfrage an die `/folder` -Endpunkt und geben Sie den Ordnertyp an.
+Sie können einen neuen Ordner erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp angeben.
 
 **API-Format**
 
@@ -185,7 +185,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 
 ## Bestimmten Ordner abrufen {#get}
 
-Sie können einen bestimmten Ordner abrufen, der zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an die `/folder` -Endpunkt und geben Sie den Ordnertyp und die Kennung des Ordners an.
+Sie können einen bestimmten Ordner abrufen, der zu Ihrem Unternehmen gehört, indem Sie eine GET-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp und die Kennung des Ordners angeben.
 
 **API-Format**
 
@@ -256,7 +256,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum angeforderten
 
 ## Validieren eines angegebenen Ordners {#validate}
 
-Sie können überprüfen, ob ein Ordner Objekte enthalten darf, indem Sie eine GET-Anfrage an die `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` -Endpunkt und geben Sie sowohl den Ordnertyp als auch die -ID an.
+Sie können überprüfen, ob ein Ordner Objekte enthalten darf, indem Sie eine GET-Anfrage an den Endpunkt `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` senden und sowohl den Ordnertyp als auch die -ID angeben.
 
 **API-Format**
 
@@ -316,7 +316,7 @@ Ein erfolgreicher Status gibt den HTTP-Status 200 mit Details zum Ordner zurück
 
 ## Aktualisieren eines bestimmten Ordners {#update}
 
-Sie können die Details eines bestimmten Ordners, der zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an die `/folder` -Endpunkt und geben Sie den Ordnertyp und die Kennung des Ordners an.
+Sie können die Details eines bestimmten Ordners, der zu Ihrem Unternehmen gehört, aktualisieren, indem Sie eine PATCH-Anfrage an den Endpunkt `/folder` senden und den Ordnertyp und die Kennung des Ordners angeben.
 
 **API-Format**
 
@@ -378,7 +378,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Löschen eines bestimmten Ordners {#delete}
 
-Sie können einen bestimmten Ordner, der zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an die `/folder` und geben Sie den Ordnertyp und die Kennung des Ordners an.
+Sie können einen bestimmten Ordner, der zu Ihrem Unternehmen gehört, löschen, indem Sie eine DELETE-Anfrage an den Ordner &quot;`/folder`&quot;senden und den Ordnertyp und die Kennung des Ordners angeben.
 
 ***API-Format**
 

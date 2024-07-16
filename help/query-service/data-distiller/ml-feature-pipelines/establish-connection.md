@@ -4,30 +4,30 @@ description: Erfahren Sie, wie Sie von einem Jupyter-Notebook aus eine Verbindun
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 1%
+source-wordcount: '684'
+ht-degree: 0%
 
 ---
 
 # Verbindung zu Data Distiller über ein Jupyter-Notebook herstellen
 
-Um Ihre Pipelines für maschinelles Lernen mit hochwertigen Kundenerlebnisdaten anzureichern, müssen Sie zunächst eine Verbindung zu Data Distiller über herstellen [!DNL Jupyter Notebooks]. In diesem Dokument werden die Schritte zum Herstellen einer Verbindung mit Data Distiller über eine [!DNL Python] Notebook in Ihrer Arbeitsumgebung für maschinelles Lernen.
+Um Ihre Pipelines für maschinelles Lernen mit hochwertigen Kundenerlebnisdaten anzureichern, müssen Sie zunächst von [!DNL Jupyter Notebooks] aus eine Verbindung mit Data Distiller herstellen. In diesem Dokument werden die Schritte zum Herstellen einer Verbindung mit Data Distiller über ein [!DNL Python] -Notebook in Ihrer Umgebung für maschinelles Lernen beschrieben.
 
 ## Erste Schritte
 
-In diesem Handbuch wird davon ausgegangen, dass Sie mit interaktiven [!DNL Python] Notebooks und Zugriff auf eine Notebook-Umgebung. Das Notebook kann in einer Cloud-basierten Umgebung für maschinelles Lernen oder lokal mit [[!DNL Jupyter Notebook]](https://jupyter.org/).
+In diesem Handbuch wird davon ausgegangen, dass Sie mit interaktiven [!DNL Python] Notebooks vertraut sind und Zugriff auf eine Notebook-Umgebung haben. Das Notebook kann in einer Cloud-basierten Umgebung für maschinelles Lernen oder lokal mit [[!DNL Jupyter Notebook]](https://jupyter.org/) gehostet werden.
 
 ### Verbindungsberechtigungen abrufen {#obtain-credentials}
 
-Um eine Verbindung zu Data Distiller und anderen Adobe Experience Platform-Diensten herzustellen, benötigen Sie eine Experience Platform-API-Berechtigung. API-Anmeldeinformationen können im  [Adobe Developer-Konsole](https://developer.adobe.com/console/home) durch einen Entwickler-Zugriff auf die Experience Platform. Es wird empfohlen, eine Oauth2-API-Berechtigung speziell für Datenwissenschafts-Workflows zu erstellen und einen Adobe-Systemadministrator Ihres Unternehmens zu haben, die Berechtigung einer Rolle mit entsprechenden Berechtigungen zuzuweisen.
+Um eine Verbindung zu Data Distiller und anderen Adobe Experience Platform-Diensten herzustellen, benötigen Sie eine Experience Platform-API-Berechtigung. API-Anmeldeinformationen können in der [Adobe Developer Console](https://developer.adobe.com/console/home) von einem Entwickler-Benutzer erstellt werden, der Zugriff auf die Experience Platform hat. Es wird empfohlen, eine Oauth2-API-Berechtigung speziell für Datenwissenschafts-Workflows zu erstellen und einen Adobe-Systemadministrator Ihres Unternehmens zu haben, die Berechtigung einer Rolle mit entsprechenden Berechtigungen zuzuweisen.
 
-Siehe [Experience Platform-APIs authentifizieren und aufrufen](../../../landing/api-authentication.md) für detaillierte Anweisungen zum Erstellen einer API-Berechtigung und zum Abrufen der erforderlichen Berechtigungen.
+Detaillierte Anweisungen zum Erstellen einer API-Berechtigung und zum Abrufen der erforderlichen Berechtigungen finden Sie unter [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md) .
 
 Zu den empfohlenen Berechtigungen für die Datenwissenschaft gehören:
 
 - Sandbox(s), die für die Datenwissenschaft verwendet wird (normalerweise `prod`)
-- Datenmodellierung: [!UICONTROL Verwalten von Schemas]
-- Data Management: [!UICONTROL Datensätze verwalten]
+- Datenmodellierung: [!UICONTROL Schemaverwaltung]
+- Datenverwaltung: [!UICONTROL Datensätze verwalten]
 - Datenerfassung: [!UICONTROL Quellen anzeigen]
 - Ziele: [!UICONTROL Verwalten und Aktivieren von Datensatzzielen]
 - Query Service: [!UICONTROL Abfragen verwalten]
@@ -38,7 +38,7 @@ Standardmäßig ist der Zugriff auf gekennzeichnete Daten durch eine Rolle (und 
 
 Um Ihre Anmeldedaten sicher zu halten, sollten Sie vermeiden, Anmeldeinformationen direkt in Ihren Code zu schreiben. Behalten Sie stattdessen die Anmeldeinformationen in einer separaten Konfigurationsdatei und lesen Sie die Werte, die für die Verbindung mit der Experience Platform und Data Distiller erforderlich sind.
 
-Als Beispiel können Sie eine Datei mit dem Namen `config.ini` und enthalten die folgenden Informationen (zusammen mit allen anderen Informationen, wie z. B. Datensatz-IDs, die für das Speichern zwischen Sitzungen nützlich wären):
+Sie können beispielsweise eine Datei mit dem Namen `config.ini` erstellen und die folgenden Informationen (zusammen mit allen anderen Informationen, wie z. B. Datensatz-IDs, die für das Speichern zwischen Sitzungen nützlich sind) einschließen:
 
 ```ini
 [Credential]
@@ -50,7 +50,7 @@ scopes=openid, AdobeID, read_organizations, additional_info.projectedProductCont
 tech_acct_id=<YOUR_TECHNICAL_ACCOUNT_ID>
 ```
 
-Im Notebook können Sie dann die Anmeldeinformationen mithilfe der `configParser` Paket aus dem Standard [!DNL Python] -Bibliothek:
+Im Notebook können Sie dann die Anmeldeinformationen mithilfe des `configParser` -Pakets aus der standardmäßigen [!DNL Python] -Bibliothek in den Speicher lesen:
 
 ```python
 from configparser import ConfigParser
@@ -69,16 +69,16 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## Installieren der APP-Python-Bibliothek {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) ist eine von Adobe verwaltete Open-Source-Software [!DNL Python] -Bibliothek, die Funktionen zum Herstellen einer Verbindung zu Data Distiller und zum Senden von Abfragen bereitstellt, z. B. zum Erstellen von Anforderungen an andere Experience Platform-Dienste. Die `aepp` Bibliothek wiederum basiert auf dem PostgreSQL-Datenbankadapterpaket  `psycopg2` für interaktive Data Distiller-Abfragen. Es ist möglich, eine Verbindung zu Data Distiller herzustellen und Experience Platform-Datensätze abzufragen mit `psycopg2` allein, aber `aepp` bietet mehr Komfort und zusätzliche Funktionen, um Anfragen an alle Experience Platform-API-Dienste zu stellen.
+[aepp](https://github.com/adobe/aepp/tree/main) ist eine von Adobe verwaltete Open-Source-Bibliothek [!DNL Python], die Funktionen zum Herstellen einer Verbindung zu Data Distiller und zum Senden von Abfragen sowie zum Senden von Anfragen an andere Experience Platform-Dienste bietet. Die Bibliothek &quot;`aepp`&quot; wiederum nutzt für interaktive Data Distiller-Abfragen das PostgreSQL-Datenbankadapterpaket `psycopg2` . Es ist möglich, nur mit `psycopg2` eine Verbindung zu Data Distiller herzustellen und Experience Platform-Datensätze abzufragen. `aepp` bietet jedoch mehr Komfort und zusätzliche Funktionen, um Anfragen an alle Experience Platform-API-Dienste zu senden.
 
-Installieren oder Aktualisieren `aepp` und `psycopg2` In Ihrer Umgebung können Sie die `%pip` Magie-Befehl in Ihrem Notebook:
+Um `aepp` und `psycopg2` in Ihrer Umgebung zu installieren oder zu aktualisieren, können Sie den Zauberbefehl `%pip` in Ihrem Notebook verwenden:
 
 ```python
 %pip install --upgrade aepp
 %pip install --upgrade psycopg2-binary
 ```
 
-Anschließend können Sie die `aepp` -Bibliothek mit Ihren Anmeldedaten unter Verwendung des folgenden Codes:
+Anschließend können Sie die `aepp` -Bibliothek mit Ihren Anmeldedaten konfigurieren, indem Sie den folgenden Code verwenden:
 
 ```python
 from configparser import ConfigParser
@@ -103,7 +103,7 @@ aepp.configure(
 
 ## Herstellen einer Verbindung zu Data Distiller {#create-connection}
 
-Einmal `aepp` mit Ihren Anmeldedaten konfiguriert ist, können Sie den folgenden Code verwenden, um eine Verbindung zu Data Distiller herzustellen und eine interaktive Sitzung wie folgt zu starten:
+Nachdem `aepp` mit Ihren Anmeldedaten konfiguriert wurde, können Sie wie folgt eine Verbindung zu Data Distiller herstellen und eine interaktive Sitzung starten:
 
 ```python
 from aepp import queryservice
@@ -122,7 +122,7 @@ dd_cursor.query(simple_query)
 
 ### Verbindung zu einem Datensatz herstellen, um die Abfrageleistung zu beschleunigen {#connect-to-single-dataset}
 
-Standardmäßig stellt die Data Distiller-Verbindung eine Verbindung zu allen Datensätzen in Ihrer Sandbox her. Um Abfragen zu beschleunigen und die Ressourcennutzung zu reduzieren, können Sie stattdessen eine Verbindung zu einem bestimmten Datensatz herstellen, der von Interesse ist. Dazu können Sie die Variable `dbname` im Data Distiller-Verbindungsobjekt zu `{sandbox}:{table_name}`:
+Standardmäßig stellt die Data Distiller-Verbindung eine Verbindung zu allen Datensätzen in Ihrer Sandbox her. Um Abfragen zu beschleunigen und die Ressourcennutzung zu reduzieren, können Sie stattdessen eine Verbindung zu einem bestimmten Datensatz herstellen, der von Interesse ist. Ändern Sie dazu den `dbname` im Data Distiller-Verbindungsobjekt in `{sandbox}:{table_name}`:
 
 ```python
 from aepp import queryservice
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie über eine [!DNL Python] Notebook in Ihrer Arbeitsumgebung für maschinelles Lernen. Der nächste Schritt beim Erstellen von Feature Pipelines aus dem Experience Platform, um benutzerdefinierte Modelle in Ihrer maschinellen Lernumgebung zu speisen, besteht darin, [Datensätze untersuchen und analysieren](./exploratory-analysis.md).
+Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie in Ihrer Umgebung für maschinelles Lernen von einem [!DNL Python] -Notebook aus eine Verbindung mit Data Distiller herstellen können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform, um benutzerdefinierte Modelle in Ihrer maschinellen Lernumgebung zu speisen, besteht darin, Ihre Datensätze zu untersuchen und zu analysieren](./exploratory-analysis.md).[

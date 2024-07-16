@@ -11,7 +11,7 @@ ht-degree: 20%
 
 # Audit events-Endpunkt
 
-Audit-Protokolle werden verwendet, um Details zur Benutzeraktivität für verschiedene Dienste und Funktionen bereitzustellen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben. Die `/audit/events` -Endpunkt im [!DNL Audit Query] Mit der API können Sie Ereignisdaten für die Aktivität Ihres Unternehmens in programmgesteuert abrufen. [!DNL Platform].
+Audit-Protokolle werden verwendet, um Details zur Benutzeraktivität für verschiedene Dienste und Funktionen bereitzustellen. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID der oder des Benutzenden, die oder der die Aktion durchgeführt hat, und weitere für den Aktionstyp relevante Attribute angeben. Mit dem Endpunkt `/audit/events` in der API [!DNL Audit Query] können Sie Ereignisdaten für die Aktivität Ihres Unternehmens in [!DNL Platform] programmgesteuert abrufen.
 
 ## Erste Schritte
 
@@ -19,7 +19,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Audit Query] 
 
 ## Prüfereignisse auflisten
 
-Sie können Ereignisdaten abrufen, indem Sie eine GET-Anfrage an die `/audit/events` -Endpunkt, der die Ereignisse angibt, die Sie in der Payload abrufen möchten.
+Sie können Ereignisdaten abrufen, indem Sie eine GET-Anfrage an den `/audit/events` -Endpunkt senden und die Ereignisse angeben, die Sie in der Payload abrufen möchten.
 
 **API-Format**
 
@@ -27,11 +27,11 @@ Sie können Ereignisdaten abrufen, indem Sie eine GET-Anfrage an die `/audit/eve
 GET /audit/events
 ```
 
-Die [!DNL Audit Query] API unterstützt die Verwendung von Abfrageparametern zur Seite und Filterung von Ergebnissen bei der Auflistung von Ereignissen.
+Die [!DNL Audit Query] -API unterstützt die Verwendung von Abfrageparametern zur Seite und Filterung von Ergebnissen bei der Auflistung von Ereignissen.
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `limit` | Die maximale Anzahl von Datensätzen, die in der Antwort zurückgegeben werden. Die Standardeinstellung `limit` as 50. |
+| `limit` | Die maximale Anzahl von Datensätzen, die in der Antwort zurückgegeben werden. Der Standardwert `limit` ist 50. |
 | `start` | Ein Zeiger auf das erste Element für die zurückgegebenen Suchergebnisse. Um auf die nächste Ergebnisseite zuzugreifen, sollte dieser Parameter um den durch Limit angegebenen Betrag erhöht werden. Beispiel: Um auf die nächste Ergebnisseite für eine Anfrage mit limit=50 zuzugreifen, verwenden Sie den Parameter start=50, dann start=100 für die Seite danach usw. |
 | `queryId` | Wenn Sie eine Abfrage an den Endpunkt /audit/events senden, enthält die Antwort eine queryId -Zeichenfolgeneigenschaft. Um dieselbe Abfrage in einem separaten Aufruf durchzuführen, können Sie den ID-Wert als einen einzigen Abfrageparameter einschließen, anstatt die Suchparameter erneut manuell zu konfigurieren. |
 

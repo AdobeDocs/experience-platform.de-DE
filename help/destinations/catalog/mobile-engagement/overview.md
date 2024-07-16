@@ -14,7 +14,7 @@ ht-degree: 36%
 
 ## Unterstützte Ziele für die mobile Interaktion {#supported-destinations}
 
-[!DNL Adobe Experience Platform] unterstützt derzeit die folgenden Ziele für die mobile Interaktion:
+[!DNL Adobe Experience Platform] unterstützt derzeit die folgenden Mobile-Interaktionsziele:
 
 * [Airship Attributes-Verbindung](airship-attributes.md)
 * [Airship Tags-Verbindung](airship-tags.md)

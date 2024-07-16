@@ -7,17 +7,17 @@ exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
-# [!UICONTROL Kampagnen-Marketingdetails] Schemafeldgruppe
+# [!UICONTROL Schemafeldgruppe &quot;Kampagnen-Marketingdetails]&quot;
 
 >[!NOTE]
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Kampagnen-Marketingdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md)verwendet, um Marketing-Kampagneninformationen wie Kampagnengruppe, Name und Trackingcode zu beschreiben.
+[!UICONTROL Marketingdetails der Kampagne] ist eine Standardschemafeldergruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die zur Beschreibung von Marketingkampagneninformationen wie Kampagnengruppe, Name und Trackingcode verwendet wird.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 

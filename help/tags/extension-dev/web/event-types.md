@@ -5,7 +5,7 @@ exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,7 @@ In diesem Dokument wird beschrieben, wie Sie Ereignistypen für eine Web-Erweite
 
 Ereignistypen werden durch Erweiterungen definiert und bestehen normalerweise aus folgenden Elementen:
 
-1. A [Ansicht](./views.md) wird in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt, über die Benutzer die Ereigniseinstellungen ändern können.
+1. Eine [Ansicht](./views.md), die in der Experience Platform-Benutzeroberfläche und der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Ereigniseinstellungen zu ändern.
 2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und um zu überwachen, ob eine bestimmte Aktivität eintritt.
 
 `module.exports` akzeptieren die Parameter `settings` und `trigger`. Dies ermöglicht die Anpassung des Ereignistyps.
@@ -95,7 +95,7 @@ Dies kann für Werbungtreibende nützlich sein, die auf Informationen aus dem na
 
 ### [!DNL element]
 
-Wenn eine starke Beziehung zwischen einem Element und dem aufgetretenen Ereignis besteht, wird empfohlen, die `element`-Eigenschaft auf den DOM-Knoten des Elements festzulegen. Ein Beispiel: Ihre Nebenstelle übermittelt einen `click`-Ereignistyp und Sie bieten Marketern die Möglichkeit, ihn so zu konfigurieren, dass die Regel nur ausgelöst wird, wenn ein Element mit der ID `herobanner` ausgewählt ist. Wenn der Benutzer in diesem Fall das Hero-Banner auswählt, wird empfohlen, `trigger` aufzurufen und `element` auf den DOM-Knoten des Hero-Banners festzulegen.
+Wenn eine starke Beziehung zwischen einem Element und dem aufgetretenen Ereignis besteht, wird empfohlen, die `element`-Eigenschaft auf den DOM-Knoten des Elements festzulegen. Ein Beispiel: Ihre Erweiterung übermittelt einen `click`-Ereignistyp und Sie bieten Marketern die Möglichkeit, ihn so zu konfigurieren, dass die Regel nur ausgelöst wird, wenn ein Element mit der ID `herobanner` ausgewählt ist. Wenn der Benutzer in diesem Fall das Hero-Banner auswählt, wird empfohlen, `trigger` aufzurufen und `element` auf den DOM-Knoten des Hero-Banners festzulegen.
 
 ```js
 trigger({

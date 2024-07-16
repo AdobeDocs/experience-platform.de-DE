@@ -6,7 +6,7 @@ description: Der Keyword-Tagging-Dienst extrahiert bei der Bereitstellung eines 
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '444'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 Wenn ein Textdokument angegeben wird, extrahiert der Keyword-Tagging-Dienst automatisch Suchbegriffe oder Schlüsselbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Unternehmen (NER) und unbeaufsichtigten Keyword-Tagging-Algorithmen verwendet.
 
-In der folgenden Tabelle sind die benannten Entitäten aufgeführt, die [!DNL Content Tagging] kann identifizieren:
+In der folgenden Tabelle sind die benannten Entitäten aufgeführt, die [!DNL Content Tagging] identifizieren kann:
 
 | Entitätsname | Beschreibung |
 | --- | --- |
@@ -25,7 +25,7 @@ In der folgenden Tabelle sind die benannten Entitäten aufgeführt, die [!DNL Co
 | FAC | Gebäude, Flughäfen, Autobahnen, Brücken usw. |
 | ORG | Unternehmen, Agenturen, Einrichtungen usw. |
 | PRODUKT | Objekte, Fahrzeuge, Lebensmittel usw. (Keine Dienste.) |
-| EREIGNIS | Benannte Hurrikane, Kämpfe, Kriege, Sportveranstaltungen usw. |
+| EVENT | Benannte Hurrikane, Kämpfe, Kriege, Sportveranstaltungen usw. |
 | WORK_OF_ART | Titel von Büchern, Liedern usw. |
 | GESETZ | Spezifische Dokumente, die in Gesetze umgewandelt wurden. |
 | SPRACHE | Jede benannte Sprache. |
@@ -42,7 +42,7 @@ Die folgende Anfrage extrahiert Suchbegriffe aus einem Dokument basierend auf de
 
 Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispiel-Payload .
 
-Diese [Beispiel-PDF](../pdf-files/simple-text.pdf) -Datei in dem in diesem Dokument gezeigten Beispiel verwendet wurde.
+Diese [Beispiel-PDF](../pdf-files/simple-text.pdf)-Datei wurde in dem in diesem Dokument gezeigten Beispiel verwendet.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -104,11 +104,11 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `repo:path` | string | – | – | – | Vordefinierte URL des Dokuments, aus dem Schlüsselbegriffe extrahiert werden sollen. |
 | `sensei:repoType` | Zeichenfolge | – | – | HTTPS | Typ des Repositorys, in dem das Dokument gespeichert wird. |
 | `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie das Dokument als mehrteiliges Argument übergeben, anstatt vorsignierte URLs zu verwenden. |
-| `dc:format` | Zeichenfolge | Ja | – | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | Die Dokumentkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |
+| `dc:format` | Zeichenfolge | Ja | – | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | Die Dokumentkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüsselwörter in der `response` Array.
+Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüsselwörter im `response` -Array enthält.
 
 ```json
 {

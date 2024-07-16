@@ -7,22 +7,22 @@ description: In diesem Tutorial werden die Schritte zum Überwachen von Daten in
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 62%
+source-wordcount: '711'
+ht-degree: 57%
 
 ---
 
 # Überwachen von Datenflüssen mithilfe der Flow Service-API
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken. Darüber hinaus ermöglicht Experience Platform die Aktivierung von Daten für externe Partner.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Sie können Daten aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Datenbanken und vielen anderen. Darüber hinaus ermöglicht Experience Platform die Aktivierung von Daten für externe Partner.
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen und Ziele miteinander verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen und Ziele miteinander verbunden werden können.
 
-In diesem Tutorial werden die Schritte zum Überwachen von Datenflüssen auf Vollständigkeit, Fehler und Metriken mithilfe der [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+In diesem Tutorial werden die Schritte zum Überwachen von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mit dem Wert [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie den ID-Wert eines Datenflusses. Wenn Sie keine gültige Datenfluss-ID haben, wählen Sie Ihren Connector aus der [Quellen - Übersicht](../../sources/home.md) oder [Ziele - Übersicht](../../destinations/catalog/overview.md) und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben wurden.
+Für dieses Tutorial benötigen Sie den ID-Wert eines Datenflusses. Wenn Sie keine gültige Datenfluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellenübersicht](../../sources/home.md) oder aus der [Zielübersicht](../../destinations/catalog/overview.md) aus und befolgen Sie die Schritte, die vor dem Versuch dieses Tutorials beschrieben wurden.
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -30,7 +30,7 @@ Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten 
 - [Quellen](../../sources/home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-In den folgenden Abschnitten finden Sie zusätzliche Informationen, die Sie benötigen, um die Flussläufe mithilfe des [!DNL Flow Service] API.
+In den folgenden Abschnitten finden Sie zusätzliche Informationen, die Sie benötigen, um die Flussläufe mithilfe der [!DNL Flow Service] -API erfolgreich überwachen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -54,7 +54,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Durchfluss überwachen
 
-Nachdem Sie einen Datenfluss erstellt haben, führen Sie eine GET-Anfrage an die [!DNL Flow Service] API.
+Nachdem Sie einen Datenfluss erstellt haben, führen Sie eine GET-Anfrage an die [!DNL Flow Service] -API aus.
 
 **API-Format**
 
@@ -195,9 +195,9 @@ Bei einer erfolgreichen Antwort werden Details zu Ihrem Flussvorgang angegeben, 
 | `sizeSummary` | Die Datenmenge in Byte. |
 | `recordSummary` | Die Datensatzanzahl der Daten. |
 | `fileSummary` | Die Dateianzahl der Daten. |
-| `fileSummary.extensions` | Enthält Informationen, die spezifisch für die Aktivität sind. Beispiel: `manifest` ist nur Teil der &quot;Promotion-Aktivität&quot;, daher ist sie in der `extensions` -Objekt. |
+| `fileSummary.extensions` | Enthält Informationen, die spezifisch für die Aktivität sind. Beispiel: `manifest` ist nur Teil der &quot;Promotion-Aktivität&quot;, daher ist es im `extensions` -Objekt enthalten. |
 | `statusSummary` | Zeigt an, ob es sich bei der Flussausführung um einen Erfolg oder einen Fehler handelt. |
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie mithilfe der [!DNL Flow Service]-API Metriken und Fehlerinformationen zu Ihrem Datenfluss abgerufen. Sie können jetzt Ihren Datenfluss entsprechend Ihrem Datenaufnahme-Zeitplan überwachen, um dessen Status und Aufnahmeraten zu verfolgen. Informationen zum Überwachen von Datenflüssen auf Quellen finden Sie im Abschnitt [Überwachen von Datenflüssen für Quellen mithilfe der Benutzeroberfläche](../ui/monitor-sources.md) Tutorial. Weitere Informationen zum Überwachen von Datenflüssen für Ziele finden Sie im Abschnitt [Überwachen von Datenflüssen für Ziele mithilfe der Benutzeroberfläche](../ui/monitor-destinations.md) Tutorial.
+Mit diesem Tutorial haben Sie mithilfe der [!DNL Flow Service]-API Metriken und Fehlerinformationen zu Ihrem Datenfluss abgerufen. Sie können jetzt Ihren Datenfluss entsprechend Ihrem Datenaufnahme-Zeitplan überwachen, um dessen Status und Aufnahmeraten zu verfolgen. Informationen zum Überwachen von Datenflüssen auf Quellen finden Sie im Tutorial [Überwachen von Datenflüssen für Quellen mithilfe der Benutzeroberfläche](../ui/monitor-sources.md) . Weitere Informationen zum Überwachen von Datenflüssen für Ziele finden Sie im Tutorial [Überwachen von Datenflüssen für Ziele mithilfe der Benutzeroberfläche](../ui/monitor-destinations.md) .

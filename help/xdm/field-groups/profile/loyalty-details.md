@@ -17,7 +17,7 @@ ht-degree: 11%
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Treuedetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `loyalty`, das Informationen über die Mitgliedschaft einer Person in einem Kundentreueprogramm erfasst.
+[!UICONTROL Loyalitätsdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Die Feldergruppe stellt ein einzelnes Objektfeld (`loyalty`) bereit, das Informationen über die Mitgliedschaft einer Person in einem Kundentreueprogramm erfasst.
 
 ![](../../images/field-groups/loyalty-details.png)
 
@@ -29,7 +29,7 @@ ht-degree: 11%
 | `points` | Double | Die aktuelle Bilanz der Treuepunkte oder Auszeichnungen für das Mitglied des Treueprogramms. |
 | `pointsRedeemed` | Double | Die Anzahl der Punkte, die das Mitglied des Treueprogramms auf einen Kauf angewendet oder anderweitig eingelöst hat. |
 | `program` | Zeichenfolge | Der Name des Treueprogramms, für das die Person angemeldet ist. |
-| `status` | Zeichenfolge | Der aktuelle Status der Treuemitgliedschaft der Person, z. B. `active`, `disabled`oder `suspended`. |
+| `status` | Zeichenfolge | Der aktuelle Status der Treuemitgliedschaft der Person, z. B. `active`, `disabled` oder `suspended`. |
 | `tier` | Zeichenfolge | Erfasst die Treueprogramm-Ebene, in der die Person angemeldet ist. |
 | `upgradeDate` | Zeichenfolge | Das Datum, an dem das Mitglied des Treueprogramms auf die neueste Ebene aktualisiert wurde. |
 

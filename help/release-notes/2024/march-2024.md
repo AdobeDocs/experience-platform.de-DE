@@ -15,7 +15,7 @@ ht-degree: 33%
 
 >[!TIP]
 >
->Verwenden Sie die [Glossar zu Adobe Experience Platform](/help/landing/glossary.md) , um sich mit der in Real-time Customer Data Platform und Adobe Experience Platform verwendeten Terminologie vertraut zu machen. Wenn Sie einen bestimmten Begriff, den Sie suchen, nicht finden können, verwenden Sie die Feedback-Optionen auf der Seite, um die Hinzufügung neuer Begriffe zum Glossar anzufordern.
+>Verwenden Sie das [Adobe Experience Platform-Glossar](/help/landing/glossary.md), um sich mit der in Real-time Customer Data Platform und Adobe Experience Platform verwendeten Terminologie vertraut zu machen. Wenn Sie einen bestimmten Begriff, den Sie suchen, nicht finden können, verwenden Sie die Feedback-Optionen auf der Seite, um die Hinzufügung neuer Begriffe zum Glossar anzufordern.
 
 Aktualisierungen vorhandener Funktionen im Experience Platform:
 
@@ -33,7 +33,7 @@ Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Da
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Mehr Aktionen | Um Vorgänge flexibler zu gestalten und Sie bei der Verwaltung Ihrer Daten zu unterstützen, können Sie jetzt die Funktion &quot;Mehr Aktionen&quot;in der Detailansicht verwenden, um zusätzliche Aufgaben für einen Datensatz durchzuführen. Sie können den Datensatz entweder löschen oder für die Verwendung mit dem Echtzeit-Kundenprofil aktivieren, indem Sie ihn auf der Detailseite eines ausgewählten Datensatzes auswählen.<br>**Hinweis:** Wenn Sie einen Datensatz für die Profilaufnahme aktivieren, muss das Schema des Datensatzes mit dem Echtzeit-Kundenprofil kompatibel sein.<br>![Der Arbeitsbereich &quot;Datensätze&quot;mit dem [!UICONTROL ... Mehr] Dropdown-Menü hervorgehoben.](../2024/assets/march/more-actions.png "Der Arbeitsbereich &quot;Datensätze&quot;mit dem Dropdown-Menü &quot;Mehr&quot;wurde hervorgehoben."){width="100" zoomable="yes"}.<br>Lesen Sie die [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md) Dokumentation für zusätzliche Informationen. |
+| Mehr Aktionen | Um Vorgänge flexibler zu gestalten und Sie bei der Verwaltung Ihrer Daten zu unterstützen, können Sie jetzt die Funktion &quot;Mehr Aktionen&quot;in der Detailansicht verwenden, um zusätzliche Aufgaben für einen Datensatz durchzuführen. Sie können den Datensatz entweder löschen oder für die Verwendung mit dem Echtzeit-Kundenprofil aktivieren, indem Sie ihn auf der Detailseite eines ausgewählten Datensatzes auswählen.<br>**Hinweis:** Wenn Sie einen Datensatz für die Profilaufnahme aktivieren, muss das Schema des Datensatzes mit dem Echtzeit-Kundenprofil kompatibel sein.<br>![Der Arbeitsbereich &quot;Datensätze&quot;mit dem Arbeitsbereich [!UICONTROL ... Mehr] Dropdown-Menü hervorgehoben.](../2024/assets/march/more-actions.png "Der Arbeitsbereich &quot;Datensätze&quot;mit dem Dropdown-Menü &quot;Mehr&quot;."){width="100" zoomable="yes"}.<br>Lesen Sie die Dokumentation zum [Benutzerhandbuch zu Datensätzen](../../catalog/datasets/user-guide.md) , um weitere Informationen zu erhalten. |
 
 {style="table-layout:auto"}
 
@@ -47,11 +47,11 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Zuordnungsfunktionen für Adobe Analytics | Sie können jetzt die folgenden Funktionen verwenden, um Ereignisdaten aus Adobe Analytics zu extrahieren: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> Weitere Informationen zu diesen Funktionen finden Sie im Abschnitt [Handbuch zu Datenvorbereitung-Funktionen](../../data-prep/functions.md#analytics-functions) |
+| Neue Zuordnungsfunktionen für Adobe Analytics | Sie können jetzt die folgenden Funktionen verwenden, um Ereignisdaten aus Adobe Analytics zu extrahieren: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> Weitere Informationen zu diesen Funktionen finden Sie im Leitfaden für die [Datenvorbereitung-Funktionen](../../data-prep/functions.md#analytics-functions) . |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Datenvorbereitung finden Sie im Abschnitt [Datenvorbereitung - Übersicht](../../data-prep/home.md).
+Weitere Informationen zur Datenvorbereitung finden Sie in der [Datenvorbereitung - Übersicht](../../data-prep/home.md) .
 
 ## Datenerfassung {#data-collection}
 
@@ -61,11 +61,11 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Erweiterungen | [!DNL Merkury] Tag-Erweiterung | Die [[!DNL Merkury] Tag-Erweiterung](https://exchange.adobe.com/apps/ec/600027/merkury-tag) bietet branchenführende Übereinstimmungsraten für anonyme Website-Besucher zu einer [!DNL Merkury] Kennung. Marken können die Leistungsfähigkeit der [!DNL Merkury] Tags und Adobe verwenden, um in Echtzeit personalisierte Website-Erlebnisse bereitzustellen. Darüber hinaus wird die [!DNL Merkury] -Tag ermöglicht das Wachstum digitaler Erstanbieterdaten zusammen mit verbundenen Online- und Offline-Kundenprofilen. |
+| Erweiterungen | [!DNL Merkury] Tag-Erweiterung | Die [[!DNL Merkury] Tag-Erweiterung](https://exchange.adobe.com/apps/ec/600027/merkury-tag) bietet branchenführende Übereinstimmungsraten für anonyme Website-Besucher mit einer [!DNL Merkury] -ID. Marken können die Funktionen des Tags [!DNL Merkury] und des Adobe nutzen, um in Echtzeit personalisierte Website-Erlebnisse bereitzustellen. Darüber hinaus ermöglicht das Tag [!DNL Merkury] das Wachstum digitaler Erstanbieterdaten zusammen mit verbundenen Online- und Offline-Kundenprofilen. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung - Übersicht](../../tags/home.md).
+Weiterführende Informationen zur Datenerfassung finden Sie in der [Übersicht zur Datenerfassung](../../tags/home.md).
 
 ## Ziele {#destinations}
 
@@ -76,9 +76,9 @@ Weitere Informationen zur Datenerfassung finden Sie im Abschnitt [Datenerfassung
 | Ziel | Typ | Beschreibung |
 | ----------- | --------- | ----------- |
 | [(Beta) Acxiom Data Enhancement-Verbindung](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Neu | Verwenden Sie diesen Connector, um Erstanbieterprofile von Real-Time CDP nach Acxiom zu aktivieren, um Daten anzureichern und über Marketingkanäle hinweg zu verwenden. Sie können dann die Acxiom-Quelle verwenden, um die Profile mit erweiterten Daten zu importieren und in Real-Time CDP mit ihnen zu arbeiten. |
-| [(Beta) Acxiom Prospect-Unterdrückungsverbindung](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Neu | Exportieren Sie Ihre Erstanbieterzielgruppen in das Acxiom-Ziel, damit Acxiom bekannte oder konvertierte Kunden unterdrücken kann. Verwenden Sie dann die [Acxiom Prospitation-Datenimport](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) Quell-Connector zum Erfassen und Aktivieren von Interessenslisten von Acxiom, wobei Ihre bekannten oder konvertierten Kunden entfernt werden. |
-| [Verbindung zu Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Update | Beim Export von Daten an das Amazon Ads-Ziel können Sie die Daten jetzt an die Amazon-DSP oder das Amazon-Marketing Cloud weiterleiten (neu). |
-| [LiveRamp-Onboarding-Verbindung](../../destinations/catalog/advertising/liveramp-onboarding.md) | Update | Das LiveRamp Onboarding-Ziel unterstützt jetzt Sendungen nach Europa und Australien [!DNL LiveRamp] [!DNL SFTP] Instanzen. Die maximal exportierte Dateigröße wurde ebenfalls auf 10 Millionen Zeilen erhöht (von 5 Millionen zuvor). |
+| [(Beta) Acxiom Prospect Unterdrückungsverbindung](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Neu | Exportieren Sie Ihre Erstanbieterzielgruppen in das Acxiom-Ziel, damit Acxiom bekannte oder konvertierte Kunden unterdrücken kann. Verwenden Sie dann den Quell-Connector [Acxiom Prospektion data import](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) , um Interessenten-Listen von Acxiom zu erfassen und zu aktivieren, wobei Ihre bekannten oder konvertierten Kunden entfernt werden. |
+| [Amazon Ads-Verbindung](../../destinations/catalog/advertising/amazon-ads.md) | Update | Beim Export von Daten an das Amazon Ads-Ziel können Sie die Daten jetzt an die Amazon-DSP oder das Amazon-Marketing Cloud weiterleiten (neu). |
+| [Onboarding-Verbindung für LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Update | Das LiveRamp Onboarding-Ziel unterstützt jetzt Sendungen an die Instanzen in Europa und Australien [!DNL LiveRamp] [!DNL SFTP]. Die maximal exportierte Dateigröße wurde ebenfalls auf 10 Millionen Zeilen erhöht (von 5 Millionen zuvor). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Experience Platform UI Map-Datentypunterstützung | Passen Sie die Datenstruktur Ihres Experience-Datenmodells (XDM) weiter an, indem Sie Zuordnungsfelder in der Platform-Benutzeroberfläche definieren. Sie können jetzt Zuordnungsfelder im Schema Editor erstellen, um flexible Datenstrukturen zu modellieren oder Schlüssel-Wert-Paare effizient zu speichern. Wählen Sie &quot;Zuordnung&quot;aus der Dropdown-Liste Typ aus, wenn Sie ein neues Feld definieren, um die Unterfelder zu konfigurieren und sie Feldergruppen zuzuweisen. Unterstützte Zuordnungs-Werttypen sind Zeichenfolge und Ganzzahl.<br>![Der Schemaeditor mit den Feldern Typ und Typ Zuordnungs-Wert hervorgehoben.](../2024/assets/march/maps.png "Der Schemaeditor mit den Feldern Typ und Typ Zuordnungs-Wert hervorgehoben."){width="100" zoomable="yes"}<br> Erfahren Sie mehr über [Zuordnungsfelder in der Benutzeroberfläche definieren](../../xdm/ui/fields/map.md), siehe Handbuch zur Benutzeroberfläche . |
+| Experience Platform UI Map-Datentypunterstützung | Passen Sie die Datenstruktur Ihres Experience-Datenmodells (XDM) weiter an, indem Sie Zuordnungsfelder in der Platform-Benutzeroberfläche definieren. Sie können jetzt Zuordnungsfelder im Schema Editor erstellen, um flexible Datenstrukturen zu modellieren oder Schlüssel-Wert-Paare effizient zu speichern. Wählen Sie &quot;Zuordnung&quot;aus der Dropdown-Liste Typ aus, wenn Sie ein neues Feld definieren, um die Unterfelder zu konfigurieren und sie Feldergruppen zuzuweisen. Unterstützte Zuordnungs-Werttypen sind Zeichenfolge und Ganzzahl.<br>![Der Schemaeditor mit hervorgehobenen Feldern vom Typ Typ und Typ Zuordnungs-Wert.](../2024/assets/march/maps.png "Der Schemaeditor mit hervorgehobenen Feldern vom Typ Typ und Typ Zuordnungs-Wert."){width="100" zoomable="yes"}<br> Informationen zum Definieren von Zuordnungsfeldern in der Benutzeroberfläche ](../../xdm/ui/fields/map.md) finden Sie im UI-Handbuch.[ |
 
 {style="table-layout:auto"}
 
@@ -112,11 +112,11 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Massenaktionen | Das Zielgruppeninventar unterstützt jetzt Massenaktionen. Mithilfe von Massenaktionen können Sie schnell mehrere Zielgruppen auswählen, um sie in einen Ordner zu verschieben, Tags anzuwenden, Zugriffsbeschriftungen anzuwenden oder zu löschen. <br> ![Massenaktionen in der Benutzeroberfläche &quot;Zielgruppen&quot;.](../2024/assets/march/bulk-actions.png "Massenaktionen in der Benutzeroberfläche &quot;Zielgruppen&quot;."){width="100" zoomable="yes"} <br>Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#bulk-actions). |
+| Massenaktionen | Das Zielgruppeninventar unterstützt jetzt Massenaktionen. Mithilfe von Massenaktionen können Sie schnell mehrere Zielgruppen auswählen, um sie in einen Ordner zu verschieben, Tags anzuwenden, Zugriffsbeschriftungen anzuwenden oder zu löschen. <br> ![Massenaktionen im Arbeitsbereich der Benutzeroberfläche &quot;Zielgruppen&quot;.](../2024/assets/march/bulk-actions.png "Massenaktionen im Arbeitsbereich der Benutzeroberfläche &quot;Zielgruppen&quot;."){width="100" zoomable="yes"} <br>Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#bulk-actions) . |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zum Segmentierungsdienst finden Sie in der [Übersicht über den Segmentierungsdienst](../../segmentation/home.md).
+Weitere Informationen zum Segmentation Service finden Sie in der [Segmentation Service - Übersicht](../../segmentation/home.md) .
 
 ## Quellen {#sources}
 
@@ -126,10 +126,10 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Typ | Beschreibung |
 | --- | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Neu | Verwenden Sie die [[!DNL Acxiom Data Ingestion] source](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) zu Aufnahme [!DNL Acxiom] Daten in Real-time Customer Data Platform einlesen und Erstanbieterprofile anreichern. Anschließend können Sie Ihre [!DNL Acxiom]-erweiterte Erstanbieterprofile zur Verbesserung von Zielgruppen und zur Aktivierung über Marketingkanäle hinweg. <br> ![Die Acxiom-Datenerfassungsquelle.](../2024/assets/march/acxiom-data-ingestion.png "Neue Acxiom-Datenerfassungsquelle."){width="100" zoomable="yes"} <br> Lesen Sie die [[!DNL Acxiom Data Ingestion] Übersicht](../../sources/connectors/data-partners/acxiom-data-ingestion.md) für Informationen zu den ersten Schritten. |
-| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Neu | Verwenden Sie die [[!DNL Stripe] source](../../sources/connectors/payments/stripe.md) , um Daten zu erfassen, die während des Kaufvorgangs von Ihren Kunden in Experience Platform erfasst wurden. Nach der Erfassung können Sie diese Daten verwenden, um personalisierte Angebote zu erstellen und umfassendere geschäftliche Einblicke zu gewinnen. <br> ![Die Stripe-Quelle.](../2024/assets/march/stripe.png "Neue Stripe-Quelle."){width="100" zoomable="yes"} <br> Lesen Sie die [[!DNL Stripe] Übersicht](../../sources/connectors/payments/stripe.md) für Informationen zu den ersten Schritten. |
-| Benutzeroberflächenunterstützung für [!DNL Snowflake Streaming] | Neu | Sie können jetzt die [[!DNL Snowflake Streaming] source](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) in der Experience Platform-Benutzeroberfläche, um Daten von Ihrer [!DNL Snowflake] Datenbank. <br> ![Die Snowflake-Streaming-Quelle.](../2024/assets/march/snowflake-streaming.png "Neue Snowflake Streaking-Quelle."){width="100" zoomable="yes"} <br> Lesen Sie die [[!DNL Snowflake Streaming] Übersicht](../../sources/connectors/databases/snowflake-streaming.md) für Informationen zu den ersten Schritten. |
+| [!BADGE Beta]{type=informative} [!DNL Acxiom Data Ingestion] | Neu | Verwenden Sie die [[!DNL Acxiom Data Ingestion] Quelle](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) , um [!DNL Acxiom] -Daten in Real-time Customer Data Platform aufzunehmen und Erstanbieterprofile anzureichern. Anschließend können Sie Ihre mit [!DNL Acxiom] angereicherten Erstanbieterprofile verwenden, um Zielgruppen zu verbessern und über Marketingkanäle hinweg zu aktivieren. <br> ![Die Acxiom-Datenerfassungsquelle.](../2024/assets/march/acxiom-data-ingestion.png "Neue Acxiom-Datenerfassungsquelle."){width="100" zoomable="yes"} <br> Lesen Sie die [[!DNL Acxiom Data Ingestion] Übersicht](../../sources/connectors/data-partners/acxiom-data-ingestion.md) , um Informationen zu den ersten Schritten zu erhalten. |
+| [!BADGE Beta]{type=informative} [!DNL Stripe] | Neu | Verwenden Sie die [[!DNL Stripe] Quelle](../../sources/connectors/payments/stripe.md) , um Daten zu erfassen, die während des Kaufvorgangs von Ihren Kunden in die Experience Platform erfasst wurden. Nach der Erfassung können Sie diese Daten verwenden, um personalisierte Angebote zu erstellen und umfassendere geschäftliche Einblicke zu gewinnen. <br> ![Die Stripe-Quelle.](../2024/assets/march/stripe.png "Neue Stripe-Quelle."){width="100" zoomable="yes"} <br> Lesen Sie die [[!DNL Stripe] Übersicht](../../sources/connectors/payments/stripe.md) , um Informationen zu den ersten Schritten zu erhalten. |
+| Benutzeroberflächenunterstützung für [!DNL Snowflake Streaming] | Neu | Sie können jetzt die [[!DNL Snowflake Streaming] Quelle](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) in der Experience Platform-Benutzeroberfläche verwenden, um Daten aus Ihrer [!DNL Snowflake] -Datenbank zu streamen. <br> ![Die Snowflake-Streaming-Quelle.](../2024/assets/march/snowflake-streaming.png "Neue Snowflake-Streaming-Quelle."){width="100" zoomable="yes"} <br> Lesen Sie die [[!DNL Snowflake Streaming] Übersicht](../../sources/connectors/databases/snowflake-streaming.md) , um Informationen zu den ersten Schritten zu erhalten. |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).

@@ -6,7 +6,7 @@ exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
 source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 34%
+ht-degree: 27%
 
 ---
 
@@ -29,4 +29,4 @@ Derzeit unterstützt Platform die unten aufgeführten Umfrageziele. Informatione
 * [Foresee-Erweiterung](./foresee.md)
 * [InMoment-Erweiterung](./inmoment.md)
 * [Qualtrics Website Feedback-Erweiterung](./qualtrics.md)
-* [QuestionPro Web Intercept Surveys-Erweiterung](./web-intercept-surveys.md)
+* [Web Intercept Surveys - QuestionPro-Erweiterung](./web-intercept-surveys.md)

@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche
+title: Erstellen einer Snowflake Source-Verbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Snowflake-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
@@ -15,9 +15,9 @@ ht-degree: 17%
 
 >[!IMPORTANT]
 >
->Die [!DNL Snowflake] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die Quelle &quot;[!DNL Snowflake]&quot; steht Benutzern, die Real-time Customer Data Platform Ultimate erworben haben, im Quellkatalog zur Verfügung.
 
-In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Snowflake] Quell-Connector über die Adobe Experience Platform-Benutzeroberfläche.
+In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für [!DNL Snowflake] mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -28,36 +28,36 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Sie müssen Werte für die folgenden Berechtigungseigenschaften angeben, um Ihre [!DNL Snowflake] -Quelle.
+Sie müssen Werte für die folgenden Berechtigungseigenschaften angeben, um Ihre [!DNL Snowflake] -Quelle zu authentifizieren.
 
 >[!BEGINTABS]
 
->[!TAB Kontoschlüsselauthentifizierung]
+>[!TAB Authentifizierung des Kontoschlüssels]
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Konto | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto eindeutig über verschiedene [!DNL Snowflake] Organisationen. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu den Kontonamen finden Sie im Abschnitt [!DNL Snowflake] Dokumentation zu [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| Warehouse | Die [!DNL Snowflake] Warehouse verwaltet den Prozess der Ausführung der Abfrage für die Anwendung. Jeder [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
-| Datenbank | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
-| Benutzername | Der Benutzername für die [!DNL Snowflake] -Konto. |
-| Kennwort | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
-| Rolle | Die standardmäßige Zugriffssteuerungsrolle, die in der [!DNL Snowflake] Sitzung. Die Rolle sollte eine bestehende sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle lautet `PUBLIC`. |
-| Verbindungszeichenfolge | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Snowflake] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
+| Konto | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto für verschiedene [!DNL Snowflake] -Organisationen eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu Kontonamen finden Sie in der Dokumentation [!DNL Snowflake] unter [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Warehouse | Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
+| Datenbank | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an die Plattform übermitteln möchten. |
+| Benutzername | Der Benutzername für das [!DNL Snowflake]-Konto. |
+| Kennwort | Das Kennwort für das [!DNL Snowflake] -Benutzerkonto. |
+| Rolle | Die standardmäßige Zugriffssteuerungsrolle, die in der [!DNL Snowflake] -Sitzung verwendet werden soll. Die Rolle sollte eine bestehende sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle ist `PUBLIC`. |
+| Verbindungszeichenfolge | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Snowflake]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] ist `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 >[!TAB Authentifizierung mit Schlüsselpaaren]
 
-Um die Schlüsselpaar-Authentifizierung zu verwenden, müssen Sie ein 2048-Bit-RSA-Schlüsselpaar generieren und dann beim Erstellen eines Kontos für Ihre [!DNL Snowflake] -Quelle.
+Um die Schlüsselpaar-Authentifizierung zu verwenden, müssen Sie ein 2048-Bit-RSA-Schlüsselpaar generieren und dann beim Erstellen eines Kontos für Ihre [!DNL Snowflake]-Quelle die folgenden Werte angeben.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Konto | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto eindeutig über verschiedene [!DNL Snowflake] Organisationen. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu den Kontonamen finden Sie im Abschnitt [!DNL Snowflake] Dokumentation zu [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| Benutzername | Der Benutzername Ihres [!DNL Snowflake] -Konto. |
-| Privater Schlüssel | Die [!DNL Base64-]kodierter privater Schlüssel Ihres [!DNL Snowflake] -Konto. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie bei der Authentifizierung bei Experience Platform auch eine Passphrase für den privaten Schlüssel angeben. |
+| Konto | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto für verschiedene [!DNL Snowflake] -Organisationen eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu Kontonamen finden Sie in der Dokumentation [!DNL Snowflake] unter [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Benutzername | Der Benutzername Ihres [!DNL Snowflake]-Kontos. |
+| Privater Schlüssel | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]-Kontos. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie bei der Authentifizierung bei Experience Platform auch eine Passphrase für den privaten Schlüssel angeben. |
 | Passphrase für privaten Schlüssel | Die Passphrase des privaten Schlüssels ist eine zusätzliche Sicherheitsebene, die Sie bei der Authentifizierung mit einem verschlüsselten privaten Schlüssel verwenden müssen. Sie müssen die Passphrase nicht bereitstellen, wenn Sie einen unverschlüsselten privaten Schlüssel verwenden. |
 | Datenbank | Die [!DNL Snowflake] -Datenbank, die die Daten enthält, die Sie auf Experience Platform erfassen möchten. |
-| Warehouse | Die [!DNL Snowflake] Warehouse verwaltet den Prozess der Ausführung der Abfrage für die Anwendung. Jeder [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
+| Warehouse | Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
 
-Weitere Informationen zu diesen Werten finden Sie unter [dieses Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+Weitere Informationen zu diesen Werten finden Sie in [diesem Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
 
@@ -65,48 +65,48 @@ Um auf Ihr Snowflake-Konto auf Experience Platform zugreifen zu können, müssen
 
 >[!NOTE]
 >
->Sie müssen die `PREVENT_UNLOAD_TO_INLINE_URL` Markierung auf `FALSE` , um das Entladen von Daten aus Ihrem [!DNL Snowflake] Datenbank zu Experience Platform.
+>Sie müssen die `PREVENT_UNLOAD_TO_INLINE_URL` -Markierung auf `FALSE` setzen, damit das Entladen von Daten aus Ihrer [!DNL Snowflake]-Datenbank auf Experience Platform zugelassen wird.
 
 ## Snowflake-Konto anschließen
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich.
+Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Quellen]** aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
 
-Unter dem [!UICONTROL Datenbanken] category, select **[!UICONTROL Snowflake]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter der Kategorie [!UICONTROL Datenbanken] die Option **[!UICONTROL Snowflake]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Der Quellkatalog mit [!DNL Snowflake] hervorgehoben.](../../../../images/tutorials/create/snowflake/catalog.png)
 
-Die **[!UICONTROL Verbindung zu Snowflake herstellen]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Verbindung zu Snowflake]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie die [!DNL Snowflake] Konto, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Nächste]** um fortzufahren.
+Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL Snowflake]-Konto, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]** , um fortzufahren.
 
-![Die vorhandene Kontoschnittstelle im Ursprungs-Workflow.](../../../../images/tutorials/create/snowflake/existing.png)
+![Die vorhandene Kontoschnittstelle im Quellen-Workflow.](../../../../images/tutorials/create/snowflake/existing.png)
 
 ### Neues Konto
 
-Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihre neue [!DNL Snowflake] -Konto.
+Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen und eine optionale Beschreibung für Ihr neues [!DNL Snowflake]-Konto ein.
 
 ![Die neue Kontoschnittstelle im Ursprungs-Workflow.](../../../../images/tutorials/create/snowflake/new.png)
 
 >[!BEGINTABS]
 
->[!TAB Kontoschlüsselauthentifizierung]
+>[!TAB Authentifizierung des Kontoschlüssels]
 
-Um die Authentifizierung des Kontoschlüssels zu verwenden, geben Sie Ihre Verbindungszeichenfolge in das Formular ein und wählen Sie dann **[!UICONTROL Verbindung mit Quelle herstellen]**.
+Um die Authentifizierung des Kontoschlüssels zu verwenden, geben Sie Ihre Verbindungszeichenfolge im Formular ein und wählen Sie dann **[!UICONTROL Verbindung zur Quelle herstellen]** aus.
 
-![Die Authentifizierungsschnittstelle für den Kontoschlüssel.](../../../../images/tutorials/create/snowflake/connection-string.png)
+![ Die Authentifizierungsschnittstelle für den Kontoschlüssel.](../../../../images/tutorials/create/snowflake/connection-string.png)
 
 >[!TAB Authentifizierung mit Schlüsselpaaren]
 
-Um die Authentifizierung mit Schlüsselpaaren zu verwenden, geben Sie Werte für Ihr Konto, Ihren Benutzernamen, Ihren privaten Schlüssel, Ihre Passphrase mit privatem Schlüssel, Ihre Datenbank und Ihr Warehouse an und wählen Sie dann **[!UICONTROL Verbindung mit Quelle herstellen]**.
+Um die Schlüsselpaar-Authentifizierung zu verwenden, geben Sie Werte für Ihr Konto, Ihren Benutzernamen, Ihren privaten Schlüssel, die Passphrase des privaten Schlüssels, Ihre Datenbank und Ihr Warehouse an und wählen Sie dann **[!UICONTROL Mit Quelle verbinden]** aus.
 
-![Die Authentifizierungsschnittstelle für Konto-Schlüsselpaare.](../../../../images/tutorials/create/snowflake/key-pair.png)
+![Die Authentifizierungsschnittstelle für Kontoschlüssel-Paare.](../../../../images/tutorials/create/snowflake/key-pair.png)
 
 >[!ENDTABS]
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem Snowflake-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in [!DNL Platform]](../../dataflow/databases.md).
+In diesem Tutorial haben Sie eine Verbindung zu Ihrem Snowflake-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und einen Datenfluss [konfigurieren, um Daten in  [!DNL Platform]](../../dataflow/databases.md) zu übertragen.

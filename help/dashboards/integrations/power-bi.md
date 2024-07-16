@@ -4,7 +4,7 @@ description: Verwenden Sie Berichtvorlagen, um mithilfe von Power BI Experience 
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1465'
 ht-degree: 92%
 
 ---
@@ -17,7 +17,7 @@ In diesem Dokument erfahren Sie, wie Sie Adobe Experience Platform mit der Power
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Tutorial fortfahren, sollten Sie über gute Kenntnisse zu [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform und wie Attribute im Echtzeit-Kundenprofil über das [Vereinigungsschema](../../xdm/schema/composition.md#union).
+Bevor Sie mit diesem Tutorial fortfahren, sollten Sie über ein gutes Verständnis der [Schemakomposition](../../xdm/schema/composition.md) in Experience Platform verfügen und wissen, wie Attribute über das [Vereinigungsschema](../../xdm/schema/composition.md#union) im Echtzeit-Kundenprofil enthalten sind.
 
 Um die Power BI-Anwendungsintegration installieren zu können, müssen die Benutzer zunächst die folgenden Platform-Berechtigungen erhalten haben:
 
@@ -128,7 +128,7 @@ Mithilfe benutzerdefinierter Widgets können Sie Ihrem Datenmodell benutzerdefin
 
 >[!NOTE]
 >
->Die Attribute, die Sie für benutzerdefinierte Widgets verwenden können, hängen davon ab, was im Vereinigungsschema verfügbar ist. Informationen darüber, wie Sie für Ihre benutzerdefinierten Widgets Vereinigungsschemas anzeigen und analysieren können, finden Sie im [Handbuch für die Vereinigungsschema-UI](../../profile/ui/union-schema.md).
+>Die Attribute, die Sie für benutzerdefinierte Widgets verwenden können, hängen davon ab, was im Vereinigungsschema verfügbar ist. Informationen darüber, wie Sie für Ihre benutzerdefinierten Widgets Vereinigungsschemata anzeigen und analysieren können, finden Sie im [Handbuch für die Vereinigungsschema-UI](../../profile/ui/union-schema.md).
 
 ### Erstellen eines benutzerdefinierten Widgets
 

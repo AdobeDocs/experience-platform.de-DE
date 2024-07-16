@@ -27,7 +27,7 @@ Ereignisse:
 
 Algorithmuskonfiguration:
 
-| Priorität | Anzeigename | Identitätssymbol | Identitätstyp | Nur einmal im Diagramm |
+| Priorität | Anzeigename | Identitätssymbol | Identitätstyp | Eindeutig pro Diagramm |
 | ---| --- | --- | --- | --- |
 | 1 | CRM-ID | CRM-ID | CROSS_DEVICE | Ja |
 | 2 | ECID | ECID | COOKIE | NO |
@@ -49,7 +49,7 @@ Ereignisse:
 
 Algorithmuskonfiguration:
 
-| Priorität | Anzeigename | Identitätssymbol | Identitätstyp | Nur einmal im Diagramm |
+| Priorität | Anzeigename | Identitätssymbol | Identitätstyp | Eindeutig pro Diagramm |
 | ---| --- | --- | --- | --- |
 | 1 | CRM-ID | CRM-ID | CROSS_DEVICE | Ja |
 | 2 | E-Mails (SHA256, in Kleinbuchstaben) | Email_LC_SHA256 | E-Mail | NO |
@@ -72,7 +72,7 @@ Ereignisse:
 
 Algorithmuskonfiguration:
 
-| Priorität | Anzeigename | Identitätssymbol | Identitätstyp | Nur einmal im Diagramm |
+| Priorität | Anzeigename | Identitätssymbol | Identitätstyp | Eindeutig pro Diagramm |
 | ---| --- | --- | --- | --- |
 | 1 | CRM-ID | CRM-ID | CROSS_DEVICE | Ja |
 | 2 | E-Mails (SHA256, in Kleinbuchstaben) | Email_LC_SHA256 | E-Mail | NO |

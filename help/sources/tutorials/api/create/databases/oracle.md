@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Oracle; oracle
+keywords: Experience Platform; home; beliebte Themen; Oracle; oracle
 solution: Experience Platform
 title: Erstellen einer Oracle-Basisverbindung mit der Flow Service-API
 type: Tutorial
@@ -7,12 +7,12 @@ description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwis
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 72%
+source-wordcount: '419'
+ht-degree: 69%
 
 ---
 
-# Erstellen einer [!DNL Oracle]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Oracle]-Basisverbindung mit der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -25,11 +25,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Oracle] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Oracle] herstellen zu können.
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung hergestellt wird [!DNL Oracle]. Die [!DNL Oracle] Verbindungszeichenfolgenmuster ist: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit [!DNL Oracle] verwendet wird. Das Muster der Verbindungszeichenfolge [!DNL Oracle] lautet: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Oracle] ist `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Oracle] Dokument](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
@@ -80,8 +80,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Oracle] Datenbank. Die [!DNL Oracle] Verbindungszeichenfolgenmuster ist: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL Oracle]-Verbindungsspezifikations-ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Oracle] -Datenbank verwendet wird. Das Muster der Verbindungszeichenfolge [!DNL Oracle] lautet: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | Die [!DNL Oracle] Verbindungsspezifikations-ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Antwort**
 
@@ -99,4 +99,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL Oracle]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)

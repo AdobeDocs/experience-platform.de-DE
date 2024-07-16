@@ -4,7 +4,7 @@ description: Befolgen Sie den vollständigen Prozess zur Durchsetzung von Datenn
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1882'
 ht-degree: 100%
 
 ---
@@ -62,7 +62,7 @@ Das Dialogfeld [!UICONTROL Governance-Beschriftungen bearbeiten] wird angezeigt.
 
 ### Anwenden von Kennzeichnungen auf ein Schema {#schema-labels}
 
-Wählen Sie **[!UICONTROL Schema]** in der linken Navigationsleiste und klicken Sie dann in der Liste auf das Schema, dem Sie Kennzeichnungen hinzufügen möchten.
+Wählen Sie **[!UICONTROL Schemata]** in der linken Navigationsleiste und klicken Sie dann in der Liste auf das Schema, dem Sie Kennzeichnungen hinzufügen möchten.
 
 >[!TIP]
 >

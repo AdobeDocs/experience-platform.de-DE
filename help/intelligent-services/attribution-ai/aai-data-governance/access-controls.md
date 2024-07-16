@@ -7,12 +7,12 @@ description: Dieses Dokument enthält Informationen zur attributbasierten Zugrif
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 99%
+source-wordcount: '492'
+ht-degree: 98%
 
 ---
 
-# Zugriffssteuerung in Attribution AI
+# Zugriffskontrolle in Attribution AI
 
 Die Zugriffssteuerung für Attributions-KI wird über Adobe Experience Platform in [Adobe Admin Console](https://adminconsole.adobe.com/) bereitgestellt Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 

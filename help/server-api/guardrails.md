@@ -20,16 +20,16 @@ Adobe ist nicht für Leistungsbeeinträchtigungen verantwortlich, die durch übe
 
 >[!IMPORTANT]
 >
->Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und den entsprechenden [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) über die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+>Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
 
 ## Definitionen
 
 * **Verfügbarkeit** wird für jedes fünfminütige Intervall als Prozentsatz der vom Experience Platform-Edge Network verarbeiteten Anforderungen berechnet, die nicht fehlschlagen und sich ausschließlich auf die bereitgestellten Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünfminüterintervall keine Anforderungen gestellt hat, gilt dieses Intervall als zu 100 % verfügbar.
-* **Monatlicher Uptime-Prozentsatz** für eine bestimmte Region wird als Durchschnitt der Verfügbarkeit für alle 5-minütigen Intervalle in einem Monat berechnet.
+* **Monatlicher Uptime-Prozentsatz** für eine bestimmte Region wird als Durchschnitt der Verfügbarkeit für alle 5-Minuten-Intervalle in einem Monat berechnet.
 * Ein **Upstream** ist ein Dienst hinter dem Edge Network, der für einen bestimmten Datastream aktiviert ist, z. B. Adobe Server Side Forwarding, Adobe Edge Segmentation oder Adobe Target.
-* A **Anfrageeinheit** entspricht einem 8-KB-Fragment einer Anforderung und einem vorgelagerten für einen Datastream konfigurierten.
-* A **Anfrage** ist eine einzige Nachricht, die von einer kundeneigenen Anwendung an die [!DNL Server API]. Eine Anforderung kann eine oder mehrere Anfrageeinheiten enthalten.
-* Ein **error** ist eine Anforderung, die aufgrund eines Edge Networks fehlschlägt [Interner Dienstfehler](error-handling.md).
+* Eine **Anfrageeinheit** entspricht einem 8-KB-Fragment einer Anforderung und einem für einen Datastream vorkonfigurierten vorgelagerten Fragment.
+* Eine **Anfrage** ist eine einzelne Nachricht, die von einer kundeneigenen Anwendung an die [!DNL Server API] gesendet wird. Eine Anforderung kann eine oder mehrere Anfrageeinheiten enthalten.
+* Ein **error** ist eine Anforderung, die aufgrund eines Edge Networks [internal service error](error-handling.md) fehlschlägt.
 
 ## Dienstbeschränkungen
 
@@ -37,7 +37,7 @@ Alle Datastreams erzwingen bestimmte Nutzungsbeschränkungen, die hauptsächlich
 
 ### Anfrageeinheiten
 
-Alle Beschränkungen werden angewendet und normalisiert über eine **Anfrageeinheit (EVU)**, definiert als **8 KB-Fragment** einer Anfrage an einen in einem Datastream konfigurierten Upstream-Dienst.
+Alle Beschränkungen werden über eine **Anfrageeinheit (RU)** angewendet und normalisiert, die als **8-KB-Fragment** einer Anforderung für einen in einem Datastream konfigurierten Upstream-Dienst definiert ist.
 
 #### Beispiele
 
@@ -76,5 +76,5 @@ Weitere Informationen zu anderen Limits für Experience Platform-Services, End-t
 * [Limits in Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Dienste.
 * [Real-time Customer Data Platform (B2C Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -34,85 +34,85 @@ Die Installationsschritte in diesem Handbuch erfordern ein grundlegendes Verstä
 * [Schnellstartanleitung](/help/tags/quick-start/quick-start.md)
 * [Veröffentlichungsübersicht](/help/tags/ui/publishing/overview.md)
 
-## Einrichten eines Datenstroms
+## Einrichten eines Datastreams
 
-Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datastream konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder der Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Datenspeicher]** in der linken Navigation.
+Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen Datastream konfigurieren. Wählen Sie in der Datenerfassungs-Benutzeroberfläche oder Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Datastreams]** aus.
 
-Nachdem Sie einen neuen Datensatz erstellt oder einen vorhandenen ausgewählt haben, den Sie bearbeiten möchten, wählen Sie die Umschalter-Schaltfläche neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie anschließend die unten aufgeführten Werte, um das Formular auszufüllen.
+Nachdem Sie einen neuen Datenspeicher erstellt oder einen vorhandenen zum Bearbeiten ausgewählt haben, wählen Sie die Umschalter-Schaltfläche neben **[!UICONTROL Adobe Experience Platform]** aus. Verwenden Sie anschließend die unten aufgeführten Werte, um das Formular auszufüllen.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
 | Datenspeicherfeld | Wert |
 | --- | --- |
-| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../sandboxes/home.md) , die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datastreams enthält. |
-| [!UICONTROL Ereignis-Datensatz] | Ein [!DNL XDM ExperienceEvent] Datensatz, an den Sie Ereignisdaten mit dem SDK senden möchten. Sie müssen zwar einen Ereignis-Datensatz bereitstellen, um einen Platform-Datenspeicher zu erstellen, beachten Sie jedoch, dass über Ereignisse gesendete Zustimmungsdaten in nachgelagerten Durchsetzungs-Workflows nicht berücksichtigt werden. |
-| [!UICONTROL Profildatensatz] | Die [!DNL Profile]-aktivierter Datensatz mit von Ihnen erstellten Feldern zur Kundenzustimmung [früher](#prerequisites). |
+| [!UICONTROL Sandbox] | Der Name der Platform [Sandbox](../../../sandboxes/home.md), die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datastreams enthält. |
+| [!UICONTROL Ereignis-Datensatz] | Ein [!DNL XDM ExperienceEvent] -Datensatz, an den Sie Ereignisdaten mit dem SDK senden möchten. Sie müssen zwar einen Ereignis-Datensatz bereitstellen, um einen Platform-Datenspeicher zu erstellen, beachten Sie jedoch, dass über Ereignisse gesendete Zustimmungsdaten in nachgelagerten Durchsetzungs-Workflows nicht berücksichtigt werden. |
+| [!UICONTROL Profildatensatz] | Der [!DNL Profile]-aktivierte Datensatz mit Feldern zur Kundenzustimmung, den Sie [früher](#prerequisites) erstellt haben. |
 
-Wählen Sie zum Abschluss **[!UICONTROL Speichern]** unten auf dem Bildschirm und folgen Sie weiteren Anweisungen, um die Konfiguration abzuschließen.
+Wenn Sie fertig sind, wählen Sie am unteren Bildschirmrand **[!UICONTROL Speichern]** und fahren Sie mit den weiteren Anweisungen fort, um die Konfiguration abzuschließen.
 
 ## Installieren und Konfigurieren des Platform Web SDK
 
-Nachdem Sie einen Datenspeicher erstellt haben, wie im vorherigen Abschnitt beschrieben, müssen Sie die Platform Web SDK-Erweiterung konfigurieren, die Sie letztendlich auf Ihrer Site bereitstellen werden. Wenn die SDK-Erweiterung nicht in Ihrer Tag-Eigenschaft installiert ist, wählen Sie **[!UICONTROL Erweiterungen]** im linken Navigationsbereich, gefolgt von der **[!UICONTROL Katalog]** Registerkarte. Wählen Sie anschließend **[!UICONTROL Installieren]** unter der Platform SDK-Erweiterung in der Liste der verfügbaren Erweiterungen.
+Nachdem Sie einen Datenspeicher erstellt haben, wie im vorherigen Abschnitt beschrieben, müssen Sie die Platform Web SDK-Erweiterung konfigurieren, die Sie letztendlich auf Ihrer Site bereitstellen werden. Wenn die SDK-Erweiterung nicht in Ihrer Tag-Eigenschaft installiert ist, wählen Sie im linken Navigationsbereich **[!UICONTROL Erweiterungen]** und dann die Registerkarte **[!UICONTROL Katalog]** aus. Wählen Sie dann **[!UICONTROL Installieren]** unter der Platform SDK-Erweiterung in der Liste der verfügbaren Erweiterungen aus.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Beim Konfigurieren des SDK finden Sie unter **[!UICONTROL Edge-Konfigurationen]**, wählen Sie den Datenspeicher aus, den Sie im vorherigen Schritt erstellt haben.
+Wählen Sie beim Konfigurieren des SDK unter **[!UICONTROL Edge-Konfigurationen]** den im vorherigen Schritt erstellten Datastream aus.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-Auswählen **[!UICONTROL Speichern]** , um die Erweiterung zu installieren.
+Wählen Sie **[!UICONTROL Speichern]** aus, um die Erweiterung zu installieren.
 
 ### Erstellen eines Datenelements zum Festlegen der Standardzustimmung
 
-Wenn die SDK-Erweiterung installiert ist, können Sie ein Datenelement erstellen, das den standardmäßigen Datenerfassungs-Zustimmungswert darstellt (`collect.val`) für Ihre Benutzer. Dies kann nützlich sein, wenn Sie je nach Benutzer unterschiedliche Standardwerte haben möchten, z. B. `pending` für Benutzer der Europäischen Union und `in` für nordamerikanische Benutzer.
+Wenn die SDK-Erweiterung installiert ist, können Sie ein Datenelement erstellen, das den standardmäßigen Datenerfassungs-Zustimmungswert (`collect.val`) für Ihre Benutzer darstellt. Dies kann nützlich sein, wenn Sie je nach Benutzer unterschiedliche Standardwerte haben möchten, z. B. `pending` für Benutzer der Europäischen Union und `in` für Benutzer in Nordamerika.
 
 In diesem Anwendungsfall können Sie Folgendes implementieren, um die Standardzustimmung auf Grundlage der Region des Benutzers festzulegen:
 
 1. Bestimmen Sie die Region des Benutzers auf dem Webserver.
-1. Vor `script` -Tag (Einbettungscode) auf der Web-Seite ein separates `script` -Tag, das `adobeDefaultConsent` auf Grundlage der Region des Benutzers.
-1. Einrichten eines Datenelements, das die `adobeDefaultConsent` JavaScript-Variable und verwenden Sie dieses Datenelement als standardmäßigen Zustimmungswert für den Benutzer.
+1. Rendern Sie vor dem Tag `script` (Einbettungscode) auf der Web-Seite ein separates Tag `script` , das eine `adobeDefaultConsent` -Variable basierend auf der Region des Benutzers festlegt.
+1. Richten Sie ein Datenelement ein, das die Variable &quot;`adobeDefaultConsent` JavaScript&quot;verwendet, und verwenden Sie dieses Datenelement als standardmäßigen Zustimmungswert für den Benutzer.
 
 Wenn die Region des Benutzers durch eine CMP bestimmt wird, können Sie stattdessen die folgenden Schritte verwenden:
 
 1. Behandeln Sie das Ereignis &quot;CMP geladen&quot;auf der Seite.
-1. Legen Sie im Ereignis-Handler eine `adobeDefaultConsent` auf Grundlage der Region des Benutzers und laden Sie dann das Tag-Bibliotheksskript mithilfe von JavaScript.
-1. Einrichten eines Datenelements, das die `adobeDefaultConsent` JavaScript-Variable und verwenden Sie dieses Datenelement als standardmäßigen Zustimmungswert für den Benutzer.
+1. Legen Sie im Ereignishandler eine `adobeDefaultConsent` -Variable auf Grundlage der Region des Benutzers fest und laden Sie dann das Tag-Bibliotheksskript mithilfe von JavaScript.
+1. Richten Sie ein Datenelement ein, das die Variable &quot;`adobeDefaultConsent` JavaScript&quot;verwendet, und verwenden Sie dieses Datenelement als standardmäßigen Zustimmungswert für den Benutzer.
 
-Um ein Datenelement in der Benutzeroberfläche zu erstellen, wählen Sie **[!UICONTROL Datenelemente]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datenelement hinzufügen]** , um zum Dialogfeld für die Datenelementerstellung zu navigieren.
+Um ein Datenelement in der Benutzeroberfläche zu erstellen, wählen Sie im linken Navigationsbereich **[!UICONTROL Datenelemente]** aus und klicken Sie dann auf **[!UICONTROL Datenelement hinzufügen]** , um zum Dialogfeld zur Datenelementerstellung zu navigieren.
 
-Von hier aus müssen Sie eine [!UICONTROL JavaScript-Variable] Datenelement basierend auf `adobeDefaultConsent`. Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
+Von hier aus müssen Sie ein auf `adobeDefaultConsent` basierendes Datenelement der JavaScript-Variablen [!UICONTROL 1} erstellen. ] Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfigurationsseite der Web SDK-Erweiterung . Unter dem [!UICONTROL Datenschutz] Bereich, wählen Sie **[!UICONTROL Wird vom Datenelement bereitgestellt]** und verwenden Sie das bereitgestellte Dialogfeld, um das zuvor erstellte standardmäßige Datenelement für die Einwilligung auszuwählen.
+Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfigurationsseite der Web SDK-Erweiterung . Wählen Sie im Abschnitt [!UICONTROL Datenschutz] die Option **[!UICONTROL Wird durch Datenelement bereitgestellt]** und wählen Sie im bereitgestellten Dialogfeld das zuvor erstellte standardmäßige Datenelement für die Einwilligung aus.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
 ### Bereitstellen der Erweiterung auf Ihrer Website
 
-Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Siehe Abschnitt [Publishing-Handbuch](../../../tags/ui/publishing/overview.md) in der Tag-Dokumentation finden Sie detaillierte Informationen zur Bereitstellung Ihres aktualisierten Bibliotheks-Builds.
+Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Detaillierte Informationen zum Bereitstellen des aktualisierten Bibliotheks-Builds finden Sie im [Publishing-Handbuch](../../../tags/ui/publishing/overview.md) in der Tag-Dokumentation.
 
 ## Festlegen von Befehlen zur Änderung der Zustimmung {#commands}
 
-Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mit der Verwendung des Platform Web SDK beginnen `setConsent` -Befehl zum Senden von Einwilligungsdaten an Platform.
+Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mit der Verwendung des Befehls Platform Web SDK `setConsent` beginnen, um Zustimmungsdaten an Platform zu senden.
 
-Die `setConsent` -Befehl führt zwei Aktionen aus:
+Der Befehl `setConsent` führt zwei Aktionen durch:
 
 1. Aktualisiert die Profilattribute des Benutzers direkt im Profilspeicher. Dadurch werden keine Daten an den Data Lake gesendet.
-1. Erstellt eine [Erlebnisereignis](../../../xdm/classes/experienceevent.md) , das ein Konto mit Zeitstempel des Zustimmungsänderungsereignisses aufzeichnet. Diese Daten werden direkt an den Data Lake gesendet und können verwendet werden, um Änderungen der Zustimmungsparameter im Laufe der Zeit zu verfolgen.
+1. Erstellt ein [Erlebnisereignis](../../../xdm/classes/experienceevent.md) , das ein mit Zeitstempel versehenes Konto des Zustimmungsänderungsereignisses aufzeichnet. Diese Daten werden direkt an den Data Lake gesendet und können verwendet werden, um Änderungen der Zustimmungsparameter im Laufe der Zeit zu verfolgen.
 
-### Wann wird `setConsent`
+### Wann wird `setConsent` aufgerufen?
 
-Es gibt zwei Szenarien, in denen `setConsent` sollte auf Ihrer Site aufgerufen werden:
+Es gibt zwei Szenarien, in denen `setConsent` auf Ihrer Site aufgerufen werden sollte:
 
 1. Wenn die Zustimmung auf der Seite geladen wird (d. h. bei jedem Laden der Seite)
 1. Als Teil eines CMP-Hooks oder Ereignis-Listeners, der Änderungen in den Zustimmungseinstellungen erkennt
 
-### `setConsent` Syntax
+### Syntax `setConsent`
 
-Die [`setConsent`](/help/web-sdk/commands/setconsent.md) -Befehl erwartet ein Payload-Objekt, das eine einzelne Array-Typ-Eigenschaft enthält: `consent`. Die `consent` -Array muss mindestens ein Objekt enthalten, das die erforderlichen Einwilligungsfelder für den Adobe-Standard bereitstellt.
+Der Befehl [`setConsent`](/help/web-sdk/commands/setconsent.md) erwartet ein Payload-Objekt, das eine einzelne Eigenschaft vom Typ Array enthält: `consent`. Das Array `consent` muss mindestens ein Objekt enthalten, das die erforderlichen Einwilligungsfelder für den Adobe-Standard bereitstellt.
 
-Die erforderlichen Einwilligungsfelder für den Adobe-Standard sind im folgenden Beispiel dargestellt `setConsent` Aufruf:
+Die erforderlichen Einwilligungsfelder für den Adobe-Standard sind im folgenden Beispiel-Aufruf `setConsent` aufgeführt:
 
 ```js
 alloy("setConsent", {
@@ -141,15 +141,15 @@ alloy("setConsent", {
 
 | Payload-Eigenschaft | Beschreibung |
 | --- | --- |
-| `standard` | Der verwendete Zustimmungsstandard. Für den Adobe-Standard muss dieser Wert auf `Adobe`. |
-| `version` | Die Versionsnummer des Zustimmungsstandards gemäß `standard`. Dieser Wert muss auf `2.0` für die Verarbeitung von Adobe-Standardzustimmungen. |
+| `standard` | Der verwendete Zustimmungsstandard. Für den Adobe-Standard muss dieser Wert auf `Adobe` gesetzt werden. |
+| `version` | Die Versionsnummer des Zustimmungsstandards, angegeben unter `standard`. Dieser Wert muss auf `2.0` gesetzt werden, damit die Einwilligungsverarbeitung auf dem Adobe-Standard erfolgt. |
 | `value` | Die aktualisierten Zustimmungsinformationen des Kunden, die als XDM-Objekt bereitgestellt werden, das der Struktur der Einwilligungsfelder des Profilaktivierten Datensatzes entspricht. |
 
 >[!NOTE]
 >
->Wenn Sie andere Zustimmungsstandards in Verbindung mit `Adobe` (z. B. `IAB TCF`) können Sie weitere Objekte zur `consent` -Array für jeden Standard. Jedes Objekt muss die entsprechenden Werte für `standard`, `version`, und `value` für den Einverständnisstandard, den sie darstellen.
+>Wenn Sie andere Zustimmungsstandards zusammen mit `Adobe` verwenden (z. B. `IAB TCF`), können Sie dem Array `consent` für jeden Standard zusätzliche Objekte hinzufügen. Jedes Objekt muss die entsprechenden Werte für `standard`, `version` und `value` für den Zustimmungsstandard enthalten, den sie darstellen.
 
-Das folgende JavaScript zeigt ein Beispiel für eine Funktion, die Änderungen der Zustimmungsvoreinstellungen auf einer Website verarbeitet, die als Rückruf in einem Ereignis-Listener oder CMP-Erweiterungspunkt verwendet werden kann:
+Im folgenden JavaScript finden Sie ein Beispiel für eine Funktion, mit der Änderungen der Zustimmungsvoreinstellungen auf einer Website verarbeitet werden, die als Callback in einem Ereignis-Listener oder CMP-Hook verwendet werden kann:
 
 ```js
 var setConsent = function () {
@@ -193,9 +193,9 @@ var setConsent = function () {
 
 ## Umgang mit SDK-Antworten
 
-Alle [!DNL Platform SDK] -Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Siehe [Befehlsantworten](/help/web-sdk/commands/command-responses.md) für weitere Informationen.
+Alle [!DNL Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Weitere Informationen finden Sie unter [Befehlsantworten](/help/web-sdk/commands/command-responses.md) .
 
-Nachdem Sie erfolgreich `setConsent` -Aufrufe mit dem SDK verwenden, können Sie den Profil-Viewer in der Platform-Benutzeroberfläche verwenden, um zu überprüfen, ob Daten im Profilspeicher landen. Siehe Abschnitt zu [Profile nach Identität durchsuchen](../../../profile/ui/user-guide.md#browse-identity) für weitere Informationen.
+Nachdem Sie mit dem SDK erfolgreich `setConsent` -Aufrufe durchgeführt haben, können Sie mit dem Profil-Viewer in der Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt zum [Durchsuchen von Profilen nach Identität](../../../profile/ui/user-guide.md#browse-identity) .
 
 ## Nächste Schritte
 

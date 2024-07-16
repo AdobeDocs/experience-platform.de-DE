@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Assurance
-breadcrumb-title: Zuverlässigkeitshandbuch
-user-guide-description: Mit Adobe Experience Platform Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihren Apps überprüfen, testen, simulieren und überprüfen.
+breadcrumb-title: Handbuch zu Assurance
+user-guide-description: Mit Adobe Experience Platform Assurance können Sie die Datenerfassung und die Bereitstellung von Erlebnissen in Ihren Mobile Apps untersuchen, testen, simulieren und überprüfen.
 feature: Assurance
 role: Developer
 source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 11%
+ht-degree: 56%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 11%
 - Ansichten {#view}
    - [Ereignistransaktionen](./views/event-transactions.md)
    - [Erweiterungsversionen](./views/extension-versions.md)
-   - [Edge-Bereitstellung](./views/edge-delivery.md)
+   - [Edge Delivery](./views/edge-delivery.md)
    - [In-App-Nachrichten](./views/in-app-messaging.md)
    - [Bei Geräteansichten](./views/on-device-views.md)
    - [Places Service](./views/places-service.md)

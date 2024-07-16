@@ -6,26 +6,26 @@ description: Mit der Catalog Service-API können Entwickler Datensatzmetadaten i
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 67%
+source-wordcount: '588'
+ht-degree: 58%
 
 ---
 
 # [!DNL Catalog Service]-API-Handbuch
 
-[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. [!DNL Catalog] dient als Metadatenspeicher oder „Katalog“, in dem Sie Informationen über Ihre Daten in finden können, ohne auf die Daten selbst zugreifen zu müssen.[!DNL Experience Platform] Weitere Informationen finden Sie in der [[!DNL Catalog] Übersicht](../home.md).
+[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. [!DNL Catalog] dient als Metadatenspeicher oder &quot;Katalog&quot;, in dem Sie Informationen zu Ihren Daten innerhalb von [!DNL Experience Platform] finden können, ohne auf die Daten selbst zugreifen zu müssen. Weitere Informationen finden Sie in der [[!DNL Catalog] Übersicht](../home.md).
 
-In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der Verwendung der [!DNL Catalog]-API beginnen können. Dann bietet das Handbuch Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mithilfe von [!DNL Catalog].
+In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der Verwendung der [!DNL Catalog]-API beginnen können. Das Handbuch enthält dann Beispiel-API-Aufrufe für die Ausführung wichtiger Vorgänge mit [!DNL Catalog].
 
 ## Voraussetzungen
 
-[!DNL Catalog] verfolgt Metadaten für verschiedene Arten von Ressourcen und Vorgängen in [!DNL Experience Platform]. Dieses Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform] Dienste, die mit der Erstellung und Verwaltung dieser Ressourcen verbunden sind:
+[!DNL Catalog] verfolgt Metadaten für verschiedene Arten von Ressourcen und Vorgängen innerhalb von [!DNL Experience Platform]. Dieses Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste voraus, die mit der Erstellung und Verwaltung dieser Ressourcen verbunden sind:
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
-* [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]: So erfasst und speichert Daten aus Datendateien wie CSV und Parquet.
-* [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): Wie [!DNL Experience Platform] erfasst und speichert Daten von Client- und Server-seitigen Geräten in Echtzeit.
+* [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md): Wie [!DNL Experience Platform] Daten aus Datendateien wie CSV und Parquet erfasst und speichert.
+* [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): Wie [!DNL Experience Platform] Daten von Client- und Server-seitigen Geräten in Echtzeit erfasst und speichert.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Catalog Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Catalog Service] -API erfolgreich aufrufen zu können.
 
 ## Lesen von Beispiel-API-Aufrufen
 
@@ -33,7 +33,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ## Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) lesen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -53,16 +53,16 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Best Practices für [!DNL Catalog] API-Aufrufe
 
-Bei der Durchführung von GET-Anfragen an [!DNL Catalog] API verwenden, empfiehlt es sich, Abfrageparameter in Ihre Anfragen einzubeziehen, um nur die benötigten Objekte und Eigenschaften zurückzugeben. Ungefilterte Anfragen können dazu führen, dass Antwort-Payloads größer als 3 GB sind, was die Gesamtleistung verringern kann.
+Bei der Durchführung von GET-Anfragen an die [!DNL Catalog] -API ist es Best Practice, Abfrageparameter in Ihre Anfragen aufzunehmen, um nur die benötigten Objekte und Eigenschaften zurückzugeben. Ungefilterte Anfragen können dazu führen, dass Antwort-Payloads größer als 3 GB sind, was die Gesamt-Performance verringern kann.
 
 Außerdem können Sie bestimmte Objekte durch Einfügen ihrer Kennung in den Anfragepfad anzeigen oder Abfrageparameter wie `properties` und `limit` zum Filtern von Antworten verwenden. Filter können als Kopfzeilen und Abfrageparameter übergeben werden, wobei Abfrageparameter bei der Übergabe Vorrang erhalten. Weiterführende Informationen finden Sie im Dokument zum [Filtern von Catalog-Daten](filter-data.md).
 
-Da einige Abfragen die API stark belasten können, wurden globale Beschränkungen für implementiert. [!DNL Catalog] Abfragen zur weiteren Unterstützung von Best Practices.
+Da einige Abfragen die API stark belasten können, wurden globale Beschränkungen für [!DNL Catalog]-Abfragen implementiert, um Best Practices weiter zu unterstützen.
 
 ## Nächste Schritte
 
 Dieses Dokument behandelt die erforderlichen Grundkenntnisse zum Aufrufen der [!DNL Catalog]-API. Sie können nun mit den Beispielaufrufen in diesem Entwicklungshandbuch fortfahren und den entsprechenden Anweisungen folgen.
 
-Die meisten Beispiele in diesem Handbuch verwenden `/dataSets` -Endpunkt, die Prinzipien können jedoch auf andere Endpunkte in [!DNL Catalog] (z. B. `/batches`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/).
+Die meisten Beispiele in diesem Handbuch verwenden den Endpunkt `/dataSets` , die Prinzipien können jedoch auf andere Endpunkte innerhalb von [!DNL Catalog] angewendet werden (z. B. `/batches`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-Für einen Schritt-für-Schritt-Workflow, der zeigt, wie das [!DNL Catalog] Die API ist an der Datenerfassung beteiligt. Weitere Informationen finden Sie im Tutorial zu [Datensatz erstellen](../datasets/create.md).
+Einen schrittweisen Workflow, der zeigt, wie die [!DNL Catalog]-API an der Datenerfassung beteiligt ist, finden Sie im Tutorial zum Erstellen eines Datensatzes [.](../datasets/create.md)

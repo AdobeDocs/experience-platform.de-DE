@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Übersicht über Datenströme
 
-Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während [`configure`](/help/web-sdk/commands/configure/overview.md) -Befehl im SDK steuert Dinge, die auf dem Client verarbeitet werden müssen (z. B. die `edgeDomain`), verarbeiten Datastreams alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `edgeConfigId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
+Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während der Befehl [`configure`](/help/web-sdk/commands/configure/overview.md) im SDK Elemente steuert, die auf dem Client verarbeitet werden müssen (z. B. `edgeDomain`), handhaben Datenspeicher alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `edgeConfigId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
 
 Sie können Datenströme erstellen und verwalten, indem Sie **[!UICONTROL Datenströme]** in der linken Navigation innerhalb der Adobe Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche auswählen.
 
@@ -57,7 +57,7 @@ Wenn ein Schema in einem vorhandenen Datenstrom mit nicht HIPAA-fähigen Dienste
 
 ### Audit-Protokolle
 
-In Experience Platform können Datenstrom-Aktivitäten in Form von Administratorprotokollen überwacht werden. Prüfprotokolle zeigen an **who** ausgeführt **what** Aktion und **when**, zusammen mit anderen Kontextdaten, die Ihnen bei der Fehlerbehebung von Problemen im Zusammenhang mit Datastreams helfen können, damit Ihr Unternehmen die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Vorschriften einhalten kann.
+In Experience Platform können Datenstrom-Aktivitäten in Form von Administratorprotokollen überwacht werden. Prüfprotokolle geben an, wer **** die Aktion **was** und **wann** ausgeführt hat, sowie weitere Kontextdaten, die Ihnen bei der Fehlerbehebung von Problemen im Zusammenhang mit Datenastreams helfen, damit Ihr Unternehmen die Richtlinien zur Unternehmensdatenverwaltung und regulatorischen Anforderungen einhalten kann.
 
 Jedes Mal, wenn eine Benutzerin oder ein Benutzer einen Datenstrom erstellt, aktualisiert oder löscht, wird ein Administratorprotokoll erstellt, um die Aktion aufzuzeichnen. Dasselbe erfolgt, wenn jemand über die [Datenvorbereitung für die Datenerfassung](./data-prep.md) eine Zuordnung erstellt, aktualisiert oder löscht. Unabhängig davon, ob es sich um einen Datenstrom oder eine Zuordnung handelt, die aktualisiert wurde, wird das resultierende Administratorprotokoll unter dem Ressourcentyp [!UICONTROL Datenströme] kategorisiert.
 

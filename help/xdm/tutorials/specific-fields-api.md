@@ -4,14 +4,14 @@ description: Erfahren Sie, wie Sie mithilfe der Schema Registry-API einzelne Fel
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '625'
 ht-degree: 100%
 
 ---
 
 # Hinzufügen bestimmter Felder zu einem Schema mithilfe der Schema Registry-API
 
-Experience-Datenmodell(XDM)-Schemas bestehen aus einer Basisklasse, wobei zusätzliche Felder durch die Verwendung von Standardfeldgruppen eingeschlossen werden, die von Adobe definiert werden, sowie aus benutzerdefinierten Feldergruppen, die von Ihrem Unternehmen definiert werden.
+Experience-Datenmodell(XDM)-Schemata bestehen aus einer Basisklasse, wobei zusätzliche Felder durch die Verwendung von Standardfeldgruppen eingeschlossen werden, die von Adobe definiert werden, sowie aus benutzerdefinierten Feldergruppen, die von Ihrem Unternehmen definiert werden.
 
 Beim Erstellen eines Schemas können Sie einige Felder aus einer bestimmten Feldergruppe verwenden und gleichzeitig andere nicht benötigte Felder aus derselben Gruppe ausschließen. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Schema Registry-API einzelne Felder aus einer Feldergruppe zu einem Schema hinzufügen.
 

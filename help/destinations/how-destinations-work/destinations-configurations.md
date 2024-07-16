@@ -4,7 +4,7 @@ description: Erfahren Sie, welche Exporteinstellungen in Zielen auf Zielebene ko
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
 source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '834'
 ht-degree: 92%
 
 ---
@@ -58,7 +58,7 @@ Die folgenden verschiedenen Optionen und Schritte sind im Aktivierungs-Workflow 
 * [Aktivieren von Zielgruppendaten für Unternehmensziele ](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exportieren von Dateien nach Bedarf an Batch-Ziele](/help/destinations/ui/export-file-now.md)
-* [Exportieren von Datensätzen an Cloud-Speicher-Ziele](/help/destinations/ui/export-datasets.md)
+* [Exportieren von Datensätzen in Cloud-Speicher-Ziele](/help/destinations/ui/export-datasets.md)
 
 ## Nächste Schritte {#next-steps}
 

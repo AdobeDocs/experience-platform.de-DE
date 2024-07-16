@@ -4,7 +4,7 @@ description: Mit der Reactor-API können Entwickler alle Ressourcen für Tags in
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1079'
 ht-degree: 99%
 
 ---
@@ -41,7 +41,7 @@ Regeln steuern das Verhalten der Ressourcen, die in einer bereitgestellten Bibli
 
 Informationen zum Verwalten von Regeln in der API finden Sie im [Handbuch zum rules-Endpunkt](./endpoints/rules.md).
 
-## Regel Komponenten
+## Regelkomponenten
 
 Regelkomponenten sind die einzelnen Elemente, aus denen eine Regel besteht. Regelkomponenten haben drei grundlegende Typen:
 

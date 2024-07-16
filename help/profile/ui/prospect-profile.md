@@ -5,30 +5,30 @@ type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 10%
+source-wordcount: '400'
+ht-degree: 4%
 
 ---
 
 # Interessentenprofile
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren.
+Mit Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden bereitstellen, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren.
 
 Mithilfe von potenziellen Profilen werden Personen repräsentiert, die noch nicht mit Ihrem Unternehmen interagiert haben, aber Kontakt mit Ihnen aufnehmen möchten. Mit potenziellen Profilen können Sie Ihre Kundenprofile durch Attribute vertrauenswürdiger Drittanbieter-Partner ergänzen.
 
 ## Durchsuchen {#browse}
 
-Um auf die Profile zuzugreifen, wählen Sie **[!UICONTROL Profile]** im **[!UICONTROL Perspektiven]** Abschnitt.
+Um auf Prospect-Profile zuzugreifen, wählen Sie **[!UICONTROL Profile]** im Abschnitt **[!UICONTROL Perspektiven]** aus.
 
-Die **[!UICONTROL Durchsuchen]** angezeigt. Eine Liste aller potenziellen Profile für Ihre Organisation wird angezeigt.
+Die Seite **[!UICONTROL Durchsuchen]** wird angezeigt. Eine Liste aller potenziellen Profile für Ihre Organisation wird angezeigt.
 
-![Die [!UICONTROL Profile] -Schaltfläche markiert ist, wird die [!UICONTROL Durchsuchen] Seite für Interessenten-Profile.](../images/prospect-profile/browse-profiles.png)
+![Die Schaltfläche [!UICONTROL Profile] ist hervorgehoben und zeigt die Seite [!UICONTROL Durchsuchen] für Interessenten-Profile an.](../images/prospect-profile/browse-profiles.png)
 
 >[!IMPORTANT]
 >
->Während die meisten Browsing-Funktionen zwischen Kundenprofilen und Interessenten-Profilen identisch sind, haben Sie **cannot** Prospektprofile nach Zusammenführungsrichtlinie durchsuchen. Dies liegt daran, dass Interessenten-Profile automatisch von einer vom System entworfenen zeitbasierten Zusammenführungsrichtlinie verwaltet werden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Zusammenführungsrichtlinienübersicht](../merge-policies/overview.md).
+>Während die meisten Browsing-Funktionen zwischen Kundenprofilen und Interessenten-Profilen identisch sind, können Sie die Prospektprofile **nicht** nach Zusammenführungsrichtlinien durchsuchen. Dies liegt daran, dass Interessenten-Profile automatisch von einer vom System entworfenen zeitbasierten Zusammenführungsrichtlinie verwaltet werden. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie in der [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
-Weiterführende Informationen zu Browsing-Profilen finden Sie im Abschnitt [Abschnitt &quot;Durchsuchen&quot;des Profil-Benutzerhandbuchs](./user-guide.md#browse-identity).
+Weiterführende Informationen zum Durchsuchen von Profilen finden Sie im Abschnitt [Durchsuchen des Profil-Benutzerhandbuchs](./user-guide.md#browse-identity).
 
 ## Profildetails {#profile-details}
 
@@ -36,7 +36,7 @@ Weiterführende Informationen zu Browsing-Profilen finden Sie im Abschnitt [Absc
 >
 >Ein Prospektprofil läuft automatisch nach 25 Tagen Aufenthalt in Adobe Experience Platform ab.
 
-Um weitere Informationen zu einem bestimmten Profil anzuzeigen, wählen Sie ein Profil auf der [!UICONTROL Durchsuchen] Seite.
+Um weitere Informationen zu einem bestimmten Prospektprofil anzuzeigen, wählen Sie ein Profil auf der Seite [!UICONTROL Durchsuchen] aus.
 
 ![Ein Interessenten-Profil wird auf der Durchsuchen-Seite hervorgehoben.](../images/prospect-profile/select-specific-profile.png)
 
@@ -44,13 +44,13 @@ Es werden Informationen zum potenziellen Profil angezeigt, einschließlich der A
 
 ![Die Seite mit den Profildetails des Interessenten wird angezeigt.](../images/prospect-profile/profile-details.png)
 
-Weitere Informationen zu diesen Registerkarten finden Sie im [Anzeigen des Bereichs Profildetails im Profil-Benutzerhandbuch](./user-guide.md#profile-detail).
+Weitere Informationen zu diesen Registerkarten finden Sie im Abschnitt [Profildetails anzeigen des Profil-Benutzerhandbuchs](./user-guide.md#profile-detail).
 
-Sie können auch alle Attribute im JSON-Format anzeigen, indem Sie **[!UICONTROL JSON anzeigen]**.
+Sie können auch alle Attribute im JSON-Format anzeigen, indem Sie **[!UICONTROL JSON anzeigen]** auswählen.
 
-![Die [!UICONTROL JSON anzeigen] wird auf der Seite mit den Profildetails des Interessenten-Profils markiert.](../images/prospect-profile/profile-select-view-json.png)
+![Die Schaltfläche [!UICONTROL JSON anzeigen] wird auf der Seite mit den potenziellen Profildetails hervorgehoben.](../images/prospect-profile/profile-select-view-json.png)
 
-Die [!UICONTROL JSON anzeigen] angezeigt. Die Attribute des potenziellen Profils werden jetzt im JSON-Formular angezeigt.
+Das Dialogfeld [!UICONTROL JSON anzeigen] wird angezeigt. Die Attribute des potenziellen Profils werden jetzt im JSON-Formular angezeigt.
 
 ![Die Attribute des potenziellen Profils werden im JSON-Formular angezeigt.](../images/prospect-profile/profile-view-json.png)
 
@@ -62,4 +62,4 @@ Informationen dazu, wie Sie die Prospektprofilfunktionalität in Experience Plat
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Handbuchs wissen Sie jetzt, wie Prospektprofile in Adobe Experience Platform verwendet werden können. Um zu erfahren, wie diese Profile in Audiences verwendet werden können, lesen Sie bitte den Abschnitt [Handbuch für potenzielle Zielgruppen](../../segmentation/ui/prospect-audience.md).
+Nach dem Lesen dieses Handbuchs wissen Sie jetzt, wie Prospektprofile in Adobe Experience Platform verwendet werden können. Informationen zur Verwendung dieser potenziellen Profile in Zielgruppen finden Sie im Leitfaden [Interessenten-Zielgruppen-Handbuch](../../segmentation/ui/prospect-audience.md) .

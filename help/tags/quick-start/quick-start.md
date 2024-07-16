@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1525'
-ht-degree: 92%
+source-wordcount: '1521'
+ht-degree: 90%
 
 ---
 
@@ -33,11 +33,11 @@ Tags sind vollständig mit Ihrer Adobe ID integriert. Benutzerberechtigungen wer
 
 Tags verfügen über ein berechtigungsbasiertes Benutzerverwaltungssystem. Das bedeutet, dass individuelle Rechte explizit gewährt werden müssen. Diese Rechte werden Gruppen zugewiesen, dann werden Benutzer den entsprechenden Gruppen hinzugefügt, um Zugriff zu erhalten. Selbst wenn Ihr Unternehmen Zugriff auf die Datenerfassung hat, können einzelne Benutzer nichts tun, bis ihnen ein Administrator ausdrücklich einige Rechte gewährt.
 
-Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern für Tags finden Sie in der [Handbuch zu Datenerfassungsberechtigungen](../../collection/permissions.md).
+Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern für Tags finden Sie im [Handbuch zu Datenerfassungsberechtigungen](../../collection/permissions.md).
 
 ## 2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Sie können dies tun, indem Sie direkt zur [Anmeldebildschirm des Experience Cloud](https://experience.adobe.com/)und wählen Sie entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]**.
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche anmelden. Sie können dies tun, indem Sie direkt zum [Experience Cloud-Anmeldebildschirm](https://experience.adobe.com/) navigieren und entweder **[!UICONTROL Datenerfassung]** oder **[!UICONTROL Experience Platform]** auswählen.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ Nachdem das Datenelement definiert wurde, können Sie das Element überall in de
 
 ### Bibliotheken und Builds
 
-Tag-Builds werden nie automatisch veröffentlicht. Alle Änderungen, die Sie vornehmen, werden in eine [Bibliothek](../ui/publishing/libraries.md) eingeschlossen. Alle erstellten Bibliotheken übernehmen automatisch alle vorgelagerten Elemente (veröffentlichte, genehmigte oder gesendete Elemente) als Basis, sodass Sie lediglich die Änderungen definieren müssen, die Sie vornehmen möchten. Diese Bibliothek dient als Entwurf für einen [Build](../ui/publishing/builds.md). Ein Build ist der eigentliche Satz von JavaScript-Dateien, die bereitgestellt und verwendet werden.
+Tag-Builds werden nie automatisch veröffentlicht. Alle Änderungen, die Sie vornehmen, werden in eine [Bibliothek](../ui/publishing/libraries.md) eingeschlossen. Alle erstellten Bibliotheken übernehmen automatisch alle vorgelagerten Elemente (veröffentlichte, genehmigte oder gesendete Elemente) als Baseline, sodass Sie lediglich die Änderungen definieren müssen, die Sie vornehmen möchten. Diese Bibliothek dient als Entwurf für einen [Build](../ui/publishing/builds.md). Ein Build ist der eigentliche Satz von JavaScript-Dateien, die bereitgestellt und verwendet werden.
 
 Es ist wichtig, die Beziehung zwischen Ihrer Web-Seite, Ihrem Hosting-Standort und Tags zu verstehen.
 
@@ -135,5 +135,5 @@ Weitere Informationen zu den verschiedenen Status und Optionen, die während des
 Weitere Informationen zu Tags finden Sie in den folgenden Ressourcen:
 
 * **[Datensammlungs-Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
-* **[Entwicklerdokumente](../api/overview.md)**: Beteiligen Sie sich an der Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die Tag-APIs zu verwenden
+* **[Entwicklerdokumente](../api/overview.md)**: Nehmen Sie an der Tag-Entwickler-Community teil, um Erweiterungen zu erstellen oder die Tags-APIs zu verwenden
 * **[Tutorials - Überblick](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=de)**: Diese Dokumente enthalten eine Einführung in Tag-Konzepte, einschließlich Ereignisweiterleitung und Mobile SDK in Android-Mobile-Apps.

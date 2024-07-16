@@ -1,6 +1,6 @@
 ---
 title: Netzwerkregisterkarte
-description: Erfahren Sie, wie Sie die Registerkarte "Netzwerk"im Adobe Experience Platform Debugger verwenden.
+description: Erfahren Sie, wie Sie die Registerkarte "Netzwerk"in Adobe Experience Platform Debugger verwenden.
 keywords: debugger;experience Platform Debugger extension;chrome;extension;network;information
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
@@ -15,7 +15,7 @@ ht-degree: 59%
 
 # Registerkarte „Netzwerk“
 
-Die **Netzwerk** -Tab fasst alle Adobe Experience Cloud-Lösungsaufrufe zusammen, die auf der Seite durchgeführt wurden, und zeigt sie von links nach rechts an. Standardparameter werden automatisch mit benutzerfreundlichen Namen versehen und so angeordnet, dass gemeinsame Parameter derselben Rolle zusammenstehen.
+Die Registerkarte **Netzwerk** fasst alle Adobe Experience Cloud-Lösungsaufrufe zusammen, die auf der Seite durchgeführt wurden, und zeigt sie von links nach rechts an. Standardparameter werden automatisch mit benutzerfreundlichen Namen versehen und so angeordnet, dass gemeinsame Parameter derselben Rolle zusammenstehen.
 
 ![](images/network.jpg)
 
@@ -29,7 +29,7 @@ Um die entsprechenden Informationen einer Lösung anzuzeigen, wählen Sie die ge
 
 ![](images/network-analytics.jpg)
 
-Um zur Anzeige aller Lösungen zurückzukehren, wählen Sie **[!UICONTROL Netzwerk]**
+Um zur Anzeige aller Lösungen zurückzukehren, wählen Sie **[!UICONTROL Netzwerk]** aus
 
 Wählen Sie in der Netzwerkansicht ein Element aus, um eine erweiterte Ansicht anzuzeigen. In der erweiterten Ansicht können Sie die angezeigten Informationen in die Zwischenablage kopieren.
 
@@ -39,6 +39,6 @@ Wählen Sie in der Netzwerkansicht ein Element aus, um eine erweiterte Ansicht a
 
 ![](images/copy.jpg)-->
 
-Um die Liste zu löschen, wählen Sie **[!UICONTROL Ereignisse löschen]**.
+Um die Liste zu löschen, wählen Sie **[!UICONTROL Ereignisse entfernen]** aus.
 
-Um eine Excel-Datei mit den Informationen auf diesem Bildschirm herunterzuladen, wählen Sie **[!UICONTROL Download]**.
+Um eine Excel-Datei mit den Informationen auf diesem Bildschirm herunterzuladen, wählen Sie **[!UICONTROL Download]** aus.

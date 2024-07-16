@@ -4,7 +4,7 @@ description: Machen Sie sich mit dem Konzept und der Funktionsweise von Builds i
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '784'
 ht-degree: 100%
 
 ---
@@ -56,7 +56,7 @@ Um einen Build abzuschließen, wählen Sie eine Bibliothek und die Build-Option 
 
 Durch Minimierung werden Bandbreitenkosten reduziert und die Geschwindigkeit erhöht, indem Daten, die nicht für die Ausführung erforderlich sind, aus der jeweiligen Datei entfernt werden.
 
-Um die Leistung zu steigern, minimiert Platform alle Elemente, einschließlich:
+Um die Performance zu steigern, minimiert Platform alle Elemente, einschließlich:
 
 * Tag-Hauptbibliothek
 * Modul-Code, der von den Entwicklern als Teil einer Erweiterung bereitgestellt wird

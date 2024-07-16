@@ -4,8 +4,8 @@ description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience 
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 90%
+source-wordcount: '1632'
+ht-degree: 89%
 
 ---
 
@@ -31,7 +31,7 @@ v3.4.1
       * Query String Parameter
       * Traffic-Quelle
       * Variable
-* Ändert den &quot;events/EntersViewport&quot;-Delegaten für die Verwendung der [Schnittstellenbeobachter-API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) anstelle der manuellen Erkennung von Elementen, die in den Viewport gelangen.
+* Ändert den &quot;events/EntersViewport&quot;-Delegaten dahingehend, dass er die [Schnittstellenbeobachtungs-API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) anstelle der manuellen Erkennung von Elementen verwendet, die in den Viewport gelangen.
 * Entfernt Code, der DTM-Cookies zu LocalStorage migriert hat.
 * Protokolliert eine Warnung auf der Konsole, wenn die LocalStorage- und SessionStorage-APIs nicht verfügbar sind.
 
@@ -117,7 +117,7 @@ v2.0.4
 
 * Unterstützung von Datenelementen für verschiedene Felder hinzugefügt – Die Unterstützung von Datenelementen wurde den folgenden Ereignissen hinzugefügt: „Zeit auf Seite“, „Betreten des Viewports“, „Hover“ und „Abgespielte Medienzeit“. Zusätzlich zu den folgenden Bedingungen: „Besuchszeit pro Site“ und „Vergleich von Werten“
 * Fügt Unterstützung für das Standardverhalten von Strg/Befehlstaste+Klick und auch Mittelmausklick bei Verwendung der Linkverzögerung hinzu.
-* **Die Linkverzögerung für das Klickereignis wurde als &quot;nicht mehr unterstützt&quot;gekennzeichnet.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
+* **Die Linkverzögerung beim Klickereignis wurde als &quot;nicht mehr unterstützt&quot;markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
 
 ## 6. Januar 2021
 

@@ -33,7 +33,7 @@ Durch die Verwendung der Ereignisse oben und unten auf der Seite im Web SDK kann
 
 ## Beispiel für Seitenereignis oben {#top-of-page}
 
-Das folgende Codebeispiel veranschaulicht einen oberen Rand der Seitenereigniskonfiguration, der eine Personalisierung anfordert, jedoch nicht [Senden von Anzeigeereignissen](../personalization/display-events.md#send-sendEvent-calls) für automatisch gerenderte Vorschläge. Die [Anzeige von Ereignissen](../personalization/display-events.md#send-sendEvent-calls) wird als Teil des Seitenende-Ereignisses gesendet.
+Im folgenden Codebeispiel wird ein Anfang der Seitenereigniskonfiguration veranschaulicht, die eine Personalisierung anfordert, aber für automatisch gerenderte Vorschläge keine [Anzeigeereignisse senden](../personalization/display-events.md#send-sendEvent-calls) sendet. Die [Anzeigeereignisse](../personalization/display-events.md#send-sendEvent-calls) werden als Teil des Seitenende-Ereignisses gesendet.
 
 >[!BEGINTABS]
 
@@ -51,9 +51,9 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 |---|---|---|
-| `type` | Erforderlich | Legen Sie diesen Parameter auf `decisioning.propositionFetch`. Dieser Ereignistyp weist Adobe Analytics an, dieses Ereignis abzulegen. Bei Verwendung von Customer Journey Analytics können Sie auch einen Filter einrichten, um diese Ereignisse abzulegen. |
-| `renderDecisions` | Erforderlich | Legen Sie diesen Parameter auf `true`. Dieser Parameter weist das Web SDK an, vom Edge Network zurückgegebene Entscheidungen zu rendern. |
-| `personalization.sendDisplayEvent` | Erforderlich | Legen Sie diesen Parameter auf `false`. Dadurch wird das Senden von Ereignissen verhindert. |
+| `type` | Erforderlich | Setzen Sie diesen Parameter auf `decisioning.propositionFetch`. Dieser Ereignistyp weist Adobe Analytics an, dieses Ereignis abzulegen. Bei Verwendung von Customer Journey Analytics können Sie auch einen Filter einrichten, um diese Ereignisse abzulegen. |
+| `renderDecisions` | Erforderlich | Setzen Sie diesen Parameter auf `true`. Dieser Parameter weist das Web SDK an, vom Edge Network zurückgegebene Entscheidungen zu rendern. |
+| `personalization.sendDisplayEvent` | Erforderlich | Setzen Sie diesen Parameter auf `false`. Dadurch wird das Senden von Ereignissen verhindert. |
 
 >[!ENDTABS]
 
@@ -63,11 +63,11 @@ alloy("sendEvent", {
 
 >[!TAB Automatisch gerenderte Vorschläge]
 
-Das folgende Codebeispiel veranschaulicht einen unteren Teil der Seitenereigniskonfiguration, der Anzeigeereignisse für Vorschläge sendet, die automatisch auf der Seite gerendert wurden, für die jedoch Anzeigeereignisse unterdrückt wurden in [Seitenanfang](#top-of-page) -Ereignis.
+Das folgende Codebeispiel veranschaulicht den unteren Rand der Seitenereigniskonfiguration, der Anzeigeereignisse für Vorschläge sendet, die automatisch auf der Seite gerendert wurden, für die jedoch Anzeigeereignisse am Anfang des Ereignisses [Seite](#top-of-page) unterdrückt wurden.
 
 >[!NOTE]
 >
->In diesem Szenario müssen Sie das Ende des Seitenereignisses aufrufen _after_ oben auf Seite eins. Das Ende des Seitenereignisses muss jedoch nicht warten, bis der Anfang der ersten Seite abgeschlossen ist.
+>In diesem Szenario müssen Sie das Ende des Seitenereignisses _nach_ am Anfang des ersten Seitenereignisses aufrufen. Das Ende des Seitenereignisses muss jedoch nicht warten, bis der Anfang der ersten Seite abgeschlossen ist.
 
 ```js
 alloy("sendEvent", {
@@ -80,7 +80,7 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | Erforderlich | Legen Sie diesen Parameter auf `true`. Dies ermöglicht das Senden von Anzeigeereignissen, die oben im Seitenereignis unterdrückt wurden. |
+| `personalization.includeRenderedPropositions` | Erforderlich | Setzen Sie diesen Parameter auf `true`. Dies ermöglicht das Senden von Anzeigeereignissen, die oben im Seitenereignis unterdrückt wurden. |
 | `xdm` | Optional | Verwenden Sie diesen Abschnitt, um alle Daten einzuschließen, die Sie für das Ende des Seitenereignisses benötigen. |
 
 >[!TAB Manuell gerenderte Vorschläge]
@@ -117,8 +117,8 @@ alloy("sendEvent", {
 
 | Parameter | Erforderlich/Optional | Beschreibung |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen den Vorschlag einbeziehen `ID`, `scope`, und `scopeDetails`. Weitere Informationen finden Sie in der Dokumentation [Personalisierung manuell rendern](../personalization/rendering-personalization-content.md#manually) für weitere Informationen zum Aufzeichnen von Anzeigeereignissen für manuell gerenderte Inhalte. Manuell gerenderte Personalisierungsinhalte müssen am Ende des Seitenaufrufs enthalten sein. |
-| `xdm._experience.decisioning.propositionEventType` | Erforderlich | Legen Sie diesen Parameter auf `display: 1`. |
+| `xdm._experience.decisioning.propositions` | Erforderlich | In diesem Abschnitt werden die manuell gerenderten Vorschläge definiert. Sie müssen die Vorschläge `ID`, `scope` und `scopeDetails` einbeziehen. Weitere Informationen zum Aufzeichnen von Anzeigeereignissen für manuell gerenderte Inhalte finden Sie in der Dokumentation zum manuellen Rendern der Personalisierung [ . ](../personalization/rendering-personalization-content.md#manually) Manuell gerenderte Personalisierungsinhalte müssen am Ende des Seitenaufrufs enthalten sein. |
+| `xdm._experience.decisioning.propositionEventType` | Erforderlich | Setzen Sie diesen Parameter auf `display: 1`. |
 | `xdm` | Optional | Verwenden Sie diesen Abschnitt, um alle Daten einzuschließen, die Sie für das Ende des Seitenereignisses benötigen. |
 
 >[!ENDTABS]
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 >[!TAB Erste Seitenansicht]
 
-Im folgenden Beispiel wird die erforderliche `xdm.web.webPageDetails.viewName` -Parameter. Dies macht es zu einer einseitigen Anwendung. Die `viewName` in diesem Beispiel ist die Ansicht, die beim Laden der Seite geladen wird.
+Im folgenden Beispiel wird der erforderliche Parameter `xdm.web.webPageDetails.viewName` hinzugefügt. Dies macht es zu einer einseitigen Anwendung. Die `viewName` in diesem Beispiel ist die Ansicht, die beim Laden der Seite geladen wird.
 
 ```js
 // Top of page, render decisions for the "home" view.
@@ -191,7 +191,7 @@ alloy("sendEvent", {
 
 >[!TAB Zweite Seitenansicht (Option 2)]
 
-Wenn Sie den unteren Seitenaufruf weiterhin verzögern müssen, können Sie `applyPropositions` für den Anfang des Seitenaufrufs. Da keine Personalisierung abgerufen werden muss und keine Analytics-Daten aufgezeichnet werden müssen, ist es nicht erforderlich, eine Anfrage an das Edge-Netzwerk zu richten.
+Wenn Sie den unteren Seitenaufruf weiterhin verzögern müssen, können Sie für den oberen Seitenaufruf den Wert &quot;`applyPropositions`&quot;verwenden. Da keine Personalisierung abgerufen werden muss und keine Analytics-Daten aufgezeichnet werden müssen, ist es nicht erforderlich, eine Anfrage an das Edge Network zu richten.
 
 ```js
 // top of page, render the decisions already fetched for the "cart" view.
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## GitHub-Beispiel {#github-sample}
 
-Die Stichprobe unter [diese Adresse](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) zeigt, wie Sie mit Experience Platform und Web SDK Personalisierung oben auf der Seite anfordern und Analytics-Metriken unten senden können. Sie können das Beispiel herunterladen und lokal ausführen, um zu verstehen, wie oben und unten von Seitenereignissen funktionieren.
+Das Beispiel unter [dieser Adresse](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) zeigt, wie Experience Platform und Web SDK verwendet werden, um eine Personalisierung am oberen Seitenrand anzufordern und Analytics-Metriken am unteren Seitenrand zu senden. Sie können das Beispiel herunterladen und lokal ausführen, um zu verstehen, wie oben und unten von Seitenereignissen funktionieren.

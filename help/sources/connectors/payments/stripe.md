@@ -2,7 +2,8 @@
 title: Stripe
 description: Erfahren Sie, wie Sie Zahlungsdaten von Ihrem Stripe-Konto in Adobe Experience Platform erfassen.
 badge: Beta
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 9%
@@ -13,84 +14,84 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->Die [!DNL Stripe]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Stripe]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
 
-Tausende von Unternehmen jeder Größe nutzen [!DNL Stripe] sowohl online als auch persönlich, um Zahlungen zu akzeptieren, neue Einnahmequellen zu generieren und mithilfe von Adobe Experience Platform, Adobe Commerce und [!DNL Magento Open Source].
+Tausende von Unternehmen aller Größenordnungen verwenden [!DNL Stripe] sowohl online als auch persönlich, um Zahlungen zu akzeptieren, neue Umsatzquellen zu erschließen und mithilfe von Adobe Experience Platform, Adobe Commerce und [!DNL Magento Open Source] global zu expandieren.
 
-Verwenden Sie die [!DNL Stripe] -Quelle in Experience Platform verwenden, um Daten zu erfassen, die während des Kaufvorgangs von Ihren Kunden erfasst wurden. Verwenden Sie nach der Erfassung diese Daten, um personalisierte Angebote zu erstellen und umfassendere geschäftliche Einblicke zu gewinnen.
+Verwenden Sie die [!DNL Stripe]-Quelle in Experience Platform, um Daten zu erfassen, die während des Kaufvorgangs von Ihren Kunden erfasst wurden. Verwenden Sie nach der Erfassung diese Daten, um personalisierte Angebote zu erstellen und umfassendere geschäftliche Einblicke zu gewinnen.
 
 >[!TIP]
 >
->Bei Fragen zu [!DNL Stripe] Quelle auf Experience Platform, Kontakt [!DNL Stripe] bei adobe-Partnership<span>@stripe.com
+>Wenden Sie sich bei Fragen zur [!DNL Stripe] Quelle auf Experience Platform an [!DNL Stripe] unter adobe-Partnership<span>@stripe.com.
 
 >[!BEGINSHADEBOX]
 
-**Anwendungsbeispiel für die [!DNL Stripe] source**
+**Beispielanwendungsfall für die [!DNL Stripe] Quelle**
 
-Ihr Unternehmen ermöglicht es Kunden, Artikel in Ihrem Onlineshop zu erwerben, mit der Möglichkeit, **Jetzt kaufen** und **Später bezahlen** (mithilfe von [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm]oder [!DNL Zip]).
+Ihr Unternehmen ermöglicht es Kunden, Artikel in Ihrem Onlineshop mit der Option **Jetzt kaufen** und **später bezahlen** (mit [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm] oder [!DNL Zip]) zu erwerben.
 
-Verwenden Sie die [!DNL Stripe] Datenquelle zur Analyse der Verwendung von **Jetzt kaufen** und **Später bezahlen** Optionen und experimentieren Sie mit personalisierten Angeboten für diese Kunden. Erwägen Sie beispielsweise die Empfehlung von Zusatzartikeln, um die Anzahl der Artikel in ihrem Warenkorb vor dem Checkout zu erhöhen.
+Verwenden Sie die [!DNL Stripe] -Datenquelle, um die Verwendung der Optionen **Jetzt kaufen** und **später bezahlen** zu analysieren und mit personalisierten Angeboten für diese Kunden zu experimentieren. Erwägen Sie beispielsweise die Empfehlung von Zusatzartikeln, um die Anzahl der Artikel in ihrem Warenkorb vor dem Checkout zu erhöhen.
 
 >[!ENDSHADEBOX]
 
-Weitere Informationen zur Einrichtung der [!DNL Stripe] -Quellkonto, rufen Sie die erforderlichen Anmeldeinformationen ab und erstellen Sie Ihre Schemas.
+Im folgenden Dokument erfahren Sie, wie Sie Ihr [!DNL Stripe] -Quellkonto einrichten, die erforderlichen Anmeldeinformationen abrufen und Ihre Schemas erstellen können.
 
 ## Voraussetzungen {#prerequisites}
 
-In den folgenden Abschnitten finden Sie Informationen zur erforderlichen Einrichtung, die Sie vor dem Herstellen einer Verbindung durchführen müssen [!DNL Stripe] -Konto auf Experience Platform.
+In den folgenden Abschnitten finden Sie Informationen zur erforderlichen Einrichtung, die Sie vor dem Herstellen einer Verbindung Ihres [!DNL Stripe]-Kontos mit Experience Platform durchführen müssen.
 
 ### Zugriffstoken abrufen
 
-* Melden Sie sich bei [[!DNL Stripe] Dashboard](https://dashboard.stripe.com/login) mit [!DNL Stripe] E-Mail-Adresse und Passwort.
-* Im [!DNL Developers] Dashboard, auswählen **[!DNL API keys for developers]**.
-* Unter dem **API-Schlüssel** Registerkarte auswählen **[!DNL Reveal test key]** , um Ihr Zugriffstoken anzuzeigen.
-* Sie können dieses Token jetzt als Zugriffstoken beim Verbinden Ihrer [!DNL Stripe] -Konto zu Experience Platform verwenden, indem Sie entweder [!DNL Flow Service] API oder der Experience Platform-Benutzeroberfläche.
+* Melden Sie sich mit Ihrer [!DNL Stripe] E-Mail-Adresse und Ihrem Kennwort beim [[!DNL Stripe] Dashboard](https://dashboard.stripe.com/login) an.
+* Wählen Sie im Dashboard [!DNL Developers] die Option **[!DNL API keys for developers]** aus.
+* Wählen Sie auf der Registerkarte **API-Schlüssel** die Option **[!DNL Reveal test key]** aus, um Ihr Zugriffstoken anzuzeigen.
+* Sie können dieses Token jetzt als Zugriffstoken verwenden, wenn Sie Ihr [!DNL Stripe]-Konto mit der Experience Platform verbinden, indem Sie entweder die [!DNL Flow Service] -API oder die Experience Platform-Benutzeroberfläche verwenden.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Um Ihre [!DNL Stripe] -Konto auf Experience Platform angegeben haben, müssen Sie Werte für die folgenden Authentifizierungsberechtigungen angeben:
+Um Ihr [!DNL Stripe]-Konto mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Authentifizierungsberechtigungen angeben:
 
 >[!BEGINTABS]
 
 >[!TAB API]
 
-Sie müssen beim Verbinden Ihrer [!DNL Stripe] -Konto, das [!DNL Flow Service] API.
+Sie müssen beim Verbinden Ihres [!DNL Stripe]-Kontos mit der [!DNL Flow Service] -API die folgenden Anmeldedaten angeben.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `accessToken` | Ihre [!DNL Stripe] OAuth 2 Authentifizierungstoken für Code aktualisieren. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID der [!DNL Stripe] -Quelle. Diese ID wurde wie folgt festgelegt: `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
+| `accessToken` | Ihr [!DNL Stripe] OAuth 2-Authentifizierungstoken für Code aktualisieren. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID der [!DNL Stripe]-Quelle. Diese ID wird als `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` festgelegt. |
 
->[!TAB Benutzeroberfläche]
+>[!TAB UI]
 
-Sie müssen beim Verbinden Ihrer [!DNL Stripe] -Konto über die Experience Platform-Benutzeroberfläche.
+Sie müssen die folgenden Anmeldedaten angeben, wenn Sie Ihr [!DNL Stripe]-Konto über die Experience Platform-Benutzeroberfläche verbinden.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Zugriffstoken | Ihre [!DNL Stripe] OAuth 2 Authentifizierungstoken für Code aktualisieren. |
+| Zugriffs-Token | Ihr [!DNL Stripe] OAuth 2-Authentifizierungstoken für Code aktualisieren. |
 
 >[!ENDTABS]
 
-Weitere Informationen zur Verwendung [!DNL Stripe] APIs, lesen Sie die [[!DNL Stripe] Dokumentation zu API-Schlüsseln](https://docs.stripe.com/keys).
+Weitere Informationen zur Verwendung von [!DNL Stripe] -APIs finden Sie in der [[!DNL Stripe] Dokumentation zu API-Schlüsseln](https://docs.stripe.com/keys).
 
 ### Erstellen eines Experience-Datenmodell (XDM)-Schemas
 
-Die [!DNL Stripe] -Quelle unterstützt die Erfassung von Daten aus den folgenden Ressourcenpfaden:
+Die Quelle [!DNL Stripe] unterstützt die Aufnahme von Daten aus den folgenden Ressourcenpfaden:
 
 * Gebühren
 * Abonnements
 * Erstattungen
 * Bilanztransaktionen
-* Kunden
+* Kundinnen und Kunden
 * Preise
 
-Sie müssen ein XDM-Schema erstellen, um einen Datensatz zu beschreiben, in dem die Felder und Datentypen gespeichert werden können, von denen gesendet wird [!DNL Stripe] auf Experience Platform.
+Sie müssen ein XDM-Schema erstellen, um einen Datensatz zu beschreiben, in dem die von [!DNL Stripe] an Experience Platform gesendeten Felder und Datentypen gespeichert werden können.
 
 >[!BEGINTABS]
 
 >[!TAB Gebühren]
 
-In [!DNL Stripe], **charges** Versuche darstellen, Geld in Ihre [!DNL Stripe]. Lesen Sie die [[!DNL Stripe] API-Handbuch zu Gebühren](https://docs.stripe.com/api/charges) für weitere Informationen über bestimmte Gebührenattribute.
+In [!DNL Stripe] stellen **charges** die Versuche dar, Geld in Ihre [!DNL Stripe] zu verschieben. Weitere Informationen zu bestimmten Ladungsattributen finden Sie im [[!DNL Stripe] API-Handbuch zu Gebühren](https://docs.stripe.com/api/charges) .
 
 +++Auswählen zum Anzeigen des Stripe Charge-Objekts
 
@@ -185,7 +186,7 @@ In [!DNL Stripe], **charges** Versuche darstellen, Geld in Ihre [!DNL Stripe]. L
 
 >[!TAB Abonnements]
 
-In [!DNL Stripe], können Sie **subscriptions** um einen Kunden regelmäßig zu belasten. Lesen Sie die [[!DNL Stripe] API-Handbuch zu Abonnements](https://docs.stripe.com/api/subscriptions) für weitere Informationen zu bestimmten Abonnementattributen.
+In [!DNL Stripe] können Sie **Abonnements** verwenden, um einen Kunden wiederkehrend zu berechnen. Weitere Informationen zu bestimmten Abonnementattributen finden Sie im [[!DNL Stripe] API-Handbuch zu Abonnements](https://docs.stripe.com/api/subscriptions) .
 
 +++Auswählen zum Anzeigen des Stripe-Abonnementobjekts
 
@@ -325,9 +326,9 @@ In [!DNL Stripe], können Sie **subscriptions** um einen Kunden regelmäßig zu 
 
 +++
 
->[!TAB Erstattungen]
+>[!TAB Rückerstattungen]
 
-In [!DNL Stripe], können Sie **Erstattungen** um eine zuvor erstellte Gebühr zurückzuerstatten. Lesen Sie die [[!DNL Stripe] API-Handbuch zu Erstattungen](https://docs.stripe.com/api/refunds) für weitere Informationen zu bestimmten Erstattungsattributen.
+In [!DNL Stripe] können Sie **erstattungen** verwenden, um eine zuvor erstellte Gebühr zurückzuerstatten. Weitere Informationen zu bestimmten Erstattungsattributen finden Sie im [[!DNL Stripe] API-Handbuch zu Erstattungen](https://docs.stripe.com/api/refunds) .
 
 +++Auswählen zum Anzeigen des Stripe-Rückerstattungsobjekts
 
@@ -363,7 +364,7 @@ In [!DNL Stripe], können Sie **Erstattungen** um eine zuvor erstellte Gebühr z
 
 >[!TAB Bilanztransaktionen]
 
-In [!DNL Stripe], **Bilanztransaktionen** den Geldverkehr zwischen Ihren [!DNL Stripe] Konten. Lesen Sie die [[!DNL Stripe] API-Handbuch zu Bilanztransaktionen](https://docs.stripe.com/api/balance_transactions) für weitere Informationen zu spezifischen Bilanzkreisattributen.
+In [!DNL Stripe] stellen die **Bilanztransaktionen** die Bewegungen der Mittel zwischen Ihren [!DNL Stripe]-Konten dar. Weitere Informationen zu bestimmten Bilanztransaktionsattributen finden Sie im [[!DNL Stripe] API-Handbuch zu Bilanztransaktionen](https://docs.stripe.com/api/balance_transactions) .
 
 +++Auswählen, um das Stripe Balance-Transaktionsobjekt anzuzeigen
 
@@ -389,9 +390,9 @@ In [!DNL Stripe], **Bilanztransaktionen** den Geldverkehr zwischen Ihren [!DNL S
 
 +++
 
->[!TAB Kunden]
+>[!TAB Customers]
 
-In [!DNL Stripe], **Kunden** einen bestimmten Kunden Ihres Unternehmens repräsentieren. Informationen zu bestimmten Kundenattributen finden Sie im Abschnitt [[!DNL Stripe] API-Handbuch für Kunden](https://docs.stripe.com/api/customers) für weitere Informationen zu bestimmten Kundenattributen.
+In [!DNL Stripe] stellen **Kunden** einen bestimmten Kunden Ihres Unternehmens dar. Weitere Informationen zu bestimmten Kundenattributen finden Sie im [[!DNL Stripe] API-Handbuch zu Kunden](https://docs.stripe.com/api/customers) , wo Sie weitere Informationen zu bestimmten Kundenattributen erhalten.
 
 +++Auswählen zum Anzeigen des Stripe-Kundenobjekts
 
@@ -431,7 +432,7 @@ In [!DNL Stripe], **Kunden** einen bestimmten Kunden Ihres Unternehmens repräse
 
 >[!TAB Preise]
 
-In [!DNL Stripe], **Preise** stellen die Stückkosten, die Währung und den optionalen Abrechnungszyklus für den wiederkehrenden und einmaligen Kauf von Produkten dar. Lesen Sie die [[!DNL Stripe] API-Leitfaden zu Preisen](https://docs.stripe.com/api/prices) für weitere Informationen über bestimmte Preisattribute.
+In [!DNL Stripe] stellen die **preise** die Stückkosten, die Währung und den optionalen Abrechnungszyklus für den wiederkehrenden und einmaligen Kauf von Produkten dar. Weitere Informationen zu bestimmten Preisattributen finden Sie im [[!DNL Stripe] API-Handbuch zu Preisen](https://docs.stripe.com/api/prices) .
 
 +++Auswählen zum Anzeigen des Stripe Price-Objekts
 
@@ -476,11 +477,11 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 ### Berechtigungen auf Experience Platform konfigurieren
 
-Sie müssen beide **[!UICONTROL Quellen anzeigen]** und **[!UICONTROL Quellen verwalten]** für Ihr Konto aktivierte Berechtigungen, um Ihre [!DNL Stripe] -Konto auf Experience Platform. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im Abschnitt [UI-Handbuch zur Zugriffskontrolle](../../../access-control/ui/overview.md).
+Sie müssen sowohl über die Berechtigung **[!UICONTROL Quellen anzeigen]** als auch über die Berechtigung **[!UICONTROL Quellen verwalten]** für Ihr Konto verfügen, um Ihr [!DNL Stripe]-Konto mit Experience Platform zu verbinden. Wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten. Weitere Informationen finden Sie im Benutzerhandbuch zur Zugriffskontrolle [.](../../../access-control/ui/overview.md)
 
 ## Nächste Schritte
 
-Nachdem Sie die erforderliche Einrichtung abgeschlossen haben, können Sie mit der Herstellung der Verbindung fortfahren und Ihre [!DNL Stripe] Daten an Experience Platform. In den folgenden Handbüchern erfahren Sie, wie Sie die Aufnahme vornehmen [!DNL Stripe] Daten über APIs oder die Benutzeroberfläche an Experience Platform übergeben:
+Nachdem Sie die erforderliche Einrichtung abgeschlossen haben, können Sie mit der Herstellung der Verbindung und Aufnahme Ihrer [!DNL Stripe]-Daten zu Experience Platform fortfahren. In den folgenden Handbüchern erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche [!DNL Stripe] Zahlungsdaten an Experience Platform erfassen:
 
-* [Erfassen von Zahlungsdaten von Ihrem Stripe-Konto an Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/payments/stripe.md).
-* [Erfassen von Zahlungsdaten von Ihrem Stripe-Konto zum Experience Platform über die Benutzeroberfläche](../../tutorials/ui/create/payments/stripe.md).
+* [Erfassen Sie Zahlungsdaten von Ihrem Stripe-Konto an Experience Platform mithilfe der Flow Service-API](../../tutorials/api/create/payments/stripe.md).
+* [Erfassen Sie Zahlungsdaten von Ihrem Stripe-Konto an Experience Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/payments/stripe.md).

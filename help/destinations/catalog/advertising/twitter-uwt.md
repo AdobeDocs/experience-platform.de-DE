@@ -1,16 +1,16 @@
 ---
-keywords: twitter;Twitter;twitter Universal Website Tag;Twitter Universal Website Tag;Twitter UWT Tag;Twitter uwt;twitter uwt
+keywords: twitter; Twitter; twitter universelle Website-Tag; Twitter Universal Website-Tag; Twitter UWT-Tag; Twitter uwt; twitter uwt
 title: Twitter Universal Website Tag-Erweiterung
 description: Die Twitter Universal Website Tag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 82%
+source-wordcount: '437'
+ht-degree: 84%
 
 ---
 
-# [!DNL Twitter Universal Website Tag]-Erweiterung  {#twitter-uwt-extension}
+# [!DNL Twitter Universal Website Tag]-Erweiterung {#twitter-uwt-extension}
 
 ## Übersicht {#overview}
 
@@ -20,7 +20,7 @@ ht-degree: 82%
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
-![Twitter Universal Website Tag-Erweiterung](../../assets/catalog/advertising/twitter-uwt/catalog.png)
+![Twitter Universal Website Tag Extension](../../assets/catalog/advertising/twitter-uwt/catalog.png)
 
 ## Voraussetzungen {#prerequisites}
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Twitter Universal Website Tag] Erweiterung:
+So installieren Sie die [!DNL Twitter Universal Website Tag]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

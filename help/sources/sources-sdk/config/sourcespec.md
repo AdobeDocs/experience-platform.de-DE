@@ -5,8 +5,8 @@ description: Dieses Dokument bietet einen Überblick über die Konfigurationen, 
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '2078'
-ht-degree: 47%
+source-wordcount: '2084'
+ht-degree: 43%
 
 ---
 
@@ -242,7 +242,7 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definiert die unterstützten Abfrageparameter, mit denen die Quell-URL angehängt werden kann, wenn eine Anfrage zum Abrufen von Daten gesendet wird. **Hinweis**: Jeder vom Benutzer bereitgestellte Parameterwert muss als Platzhalter formatiert sein. Beispiel: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` wird wie folgt an die Quell-URL angehängt: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Definiert Kopfzeilen, die beim Abrufen von Daten in der HTTP-Anfrage an die Quell-URL bereitgestellt werden müssen. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
 | `sourceSpec.attributes.spec.properties.bodyParams` | Dieses Attribut kann so konfiguriert werden, dass der HTTP-Textkörper über eine POST-Anfrage gesendet wird. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Definiert den Knoten, der die Liste der Elemente enthält, die in Platform aufgenommen werden müssen. Dieses Attribut sollte der gültigen JSON-Pfadsyntax entsprechen und muss auf ein bestimmtes Array verweisen. | Anzeigen der [Abschnitt mit zusätzlichen Ressourcen](#content-path) ein Beispiel für die Ressource, die in einem Inhaltspfad enthalten ist. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Definiert den Knoten, der die Liste der Elemente enthält, die in Platform aufgenommen werden müssen. Dieses Attribut sollte der gültigen JSON-Pfadsyntax entsprechen und muss auf ein bestimmtes Array verweisen. | Sehen Sie sich den Abschnitt [Zusätzliche Ressourcen](#content-path) für ein Beispiel der Ressource an, die in einem Inhaltspfad enthalten ist. |
 | `sourceSpec.attributes.spec.properties.contentPath.path` | Pfad, der auf die Sammlungsdatensätze verweist, die in Platform erfasst werden sollen. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Diese Eigenschaft ermöglicht es, in der im Inhaltspfad identifizierten Ressource bestimmte Elemente zu identifizieren, die von der Erfassung ausgeschlossen werden sollen. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Diese Eigenschaft ermöglicht es, explizit die einzelnen Attribute anzugeben, die Sie beibehalten möchten. | `[total_items]` |
@@ -253,7 +253,7 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Diese Eigenschaft ermöglicht es, explizit die einzelnen Attribute anzugeben, die Sie beibehalten möchten. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Diese Eigenschaft ermöglicht es, den in `explodeEntityPath` angegebenen Wert des Attributnamens zu überschreiben. | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | Definiert die Parameter oder Felder, die bereitgestellt werden müssen, um aus der Antwort der aktuellen Seite des Benutzers oder beim Erstellen der URL für eine nächste Seite einen Link zur nächsten Seite zu erhalten. |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | Zeigt den Typ des unterstützten Paginierungstyps für Ihre Quelle an. | <ul><li>`OFFSET`: Dieser Paginierungstyp ermöglicht es, die Ergebnisse zu analysieren, indem Sie einen Index, von dem aus das resultierende Array gestartet werden soll, und eine Begrenzung dafür angeben, wie viele Ergebnisse zurückgegeben werden.</li><li>`POINTER`: Dieser Paginierungstyp ermöglicht es, mit einer `pointer`-Variablen auf ein bestimmtes Element zu verweisen, das mit einer Anfrage gesendet werden muss. Die Paginierung des Zeigertyps erfordert einen Pfad in der Payload, der auf die nächste Seite verweist..</li><li>`CONTINUATION_TOKEN`: Mit diesem Paginierungstyp können Sie Ihre Abfrage- oder Kopfzeilenparameter mit einem Fortsetzung-Token anhängen, um die verbleibenden Rückgabedaten aus Ihrer Quelle abzurufen, die aufgrund eines vorab festgelegten Maximalwerts nicht zurückgegeben wurden.</li><li>`PAGE`: Mit diesem Paginierungstyp können Sie Ihren Abfrageparameter mit einem Paging-Parameter anhängen, um durch die Rückgabedaten nach Seiten zu navigieren, beginnend bei Seite Null.</li><li>`NONE`: Dieser Paginierungstyp kann für Quellen verwendet werden, die keinen der verfügbaren Paginierungstypen unterstützen. Seitentyp `NONE` gibt die gesamten Antwortdaten nach einer Anfrage zurück.</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Zeigt den Typ des unterstützten Paginierungstyps für Ihre Quelle an. | <ul><li>`OFFSET`: Dieser Paginierungstyp ermöglicht es, die Ergebnisse zu analysieren, indem Sie einen Index, von dem aus das resultierende Array gestartet werden soll, und eine Begrenzung dafür angeben, wie viele Ergebnisse zurückgegeben werden.</li><li>`POINTER`: Dieser Paginierungstyp ermöglicht es, mit einer `pointer`-Variablen auf ein bestimmtes Element zu verweisen, das mit einer Anfrage gesendet werden muss. Die Seitennummerierung des Zeigertyps erfordert den Pfad in der Payload, der auf die nächste Seite verweist.</li><li>`CONTINUATION_TOKEN`: Mit diesem Paginierungstyp können Sie Ihre Abfrage- oder Kopfzeilenparameter mit einem Fortsetzung-Token anhängen, um die verbleibenden Rückgabedaten aus Ihrer Quelle abzurufen, die ursprünglich aufgrund eines vorab festgelegten Maximalwerts nicht zurückgegeben wurden.</li><li>`PAGE`: Mit diesem Paginierungstyp können Sie Ihren Abfrageparameter mit einem Paging-Parameter anhängen, um durch die Rückgabedaten nach Seiten zu navigieren, beginnend bei Seite Null.</li><li>`NONE`: Dieser Paginierungstyp kann für Quellen verwendet werden, die keinen der verfügbaren Paginierungstypen unterstützen. Paginierungstyp `NONE` gibt die gesamten Antwortdaten nach einer Anforderung zurück.</li></ul> |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. | `limit` oder `count` |
 | `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. | `limit=10` oder `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Name des Offset-Attributs. Ist erforderlich, wenn der Paginierungstyp auf `offset` festgesetzt ist. | `offset` |
@@ -263,13 +263,13 @@ Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im 
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Definiert den Namen des Endzeit-Parameters | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Definiert das unterstützte Format für `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Definiert das unterstützte Format für `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | Definiert die vom Benutzer bereitgestellten Parameter zum Abrufen von Ressourcenwerten. | Siehe [Zusätzliche Ressourcen](#user-input) für ein Beispiel für vom Benutzer eingegebene Parameter für `spec.properties`. |
+| `sourceSpec.spec.properties` | Definiert die vom Benutzer bereitgestellten Parameter zum Abrufen von Ressourcenwerten. | In den [zusätzlichen Ressourcen](#user-input) finden Sie ein Beispiel für vom Benutzer eingegebene Parameter für `spec.properties`. |
 
 {style="table-layout:auto"}
 
 ## Zusätzliche Ressourcen {#appendix}
 
-Die folgenden Abschnitte enthalten Informationen zu zusätzlichen Konfigurationen, die Sie für Ihre `sourceSpec`, einschließlich erweiterter Planung und benutzerdefinierter Schemata.
+In den folgenden Abschnitten finden Sie Informationen zu zusätzlichen Konfigurationen, die Sie an Ihrem `sourceSpec` vornehmen können, einschließlich erweiterter Planung und benutzerdefinierter Schemata.
 
 ### Beispiel für Inhaltspfad {#content-path}
 
@@ -383,9 +383,9 @@ Im Folgenden finden Sie Beispiele für andere Paginierungstypen, die von Self-Se
 
 >[!BEGINTABS]
 
->[!TAB Versatz]
+>[!TAB offset]
 
-Dieser Paginierungstyp ermöglicht es, die Ergebnisse zu analysieren, indem Sie einen Index, von dem aus das resultierende Array gestartet werden soll, und eine Begrenzung dafür angeben, wie viele Ergebnisse zurückgegeben werden. Beispiel:
+Mit diesem Paginierungstyp können Sie die Ergebnisse analysieren, indem Sie einen Index angeben, von dem aus das resultierende Array gestartet werden soll, und eine Begrenzung dafür, wie viele Ergebnisse zurückgegeben werden. Beispiel:
 
 ```json
 "paginationParams": {
@@ -409,7 +409,7 @@ Dieser Paginierungstyp ermöglicht es, die Ergebnisse zu analysieren, indem Sie 
 
 >[!TAB Pointer]
 
-Dieser Paginierungstyp ermöglicht es, mit einer `pointer`-Variablen auf ein bestimmtes Element zu verweisen, das mit einer Anfrage gesendet werden muss. Die Seitennummerierung des Zeigertyps erfordert den Pfad in der Payload, der auf die nächste Seite verweist. Beispiel:
+Mit diesem Paginierungstyp können Sie eine `pointer` -Variable verwenden, um auf ein bestimmtes Element zu verweisen, das mit einer Anfrage gesendet werden muss. Die Seitennummerierung des Zeigertyps erfordert den Pfad in der Payload, der auf die nächste Seite verweist. Beispiel:
 
 ```json
 {
@@ -425,7 +425,7 @@ Dieser Paginierungstyp ermöglicht es, mit einer `pointer`-Variablen auf ein bes
 | `type` | Die Art der Paginierung, die zum Zurückgeben von Daten verwendet wird. |
 | `limitName` | Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. |
 | `limitValue` | Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. |
-| `pointerPath` | Der Zeiger-Attributname. Dies erfordert den JSON-Pfad zum Feldnamen, der auf die nächste Seite verweist. |
+| `pointerPath` | Der Zeiger-Attributname. Dies erfordert den JSON-Pfad zum -Attribut, das auf die nächste Seite verweist. |
 
 >[!TAB Fortführungstoken]
 
@@ -447,9 +447,9 @@ Eine Quelle, die den Weiterleitungstoken-Typ der Paginierung unterstützt, kann 
 | --- | --- |
 | `type` | Die Art der Paginierung, die zum Zurückgeben von Daten verwendet wird. |
 | `continuationTokenPath` | Der Wert, der an die Abfrageparameter angehängt werden muss, um zur nächsten Seite der zurückgegebenen Ergebnisse zu wechseln. |
-| `parameterType` | Die `parameterType` -Eigenschaft definiert, wo die `parameterName` hinzugefügt werden. Die `QUERYPARAM` -Typ ermöglicht es Ihnen, Ihre Abfrage mit der `parameterName`. Die `HEADERPARAM` ermöglicht es Ihnen, Ihre `parameterName` zu Ihrer Kopfzeilenanforderung hinzufügen. |
-| `parameterName` | Der Name des Parameters, der zum Integrieren des Fortsetzung-Tokens verwendet wird. Die hat das folgende Format: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
-| `delayRequestMillis` | Die `delayRequestMillis` -Eigenschaft in Paginierung ermöglicht es Ihnen, die Rate der Anforderungen zu steuern, die an Ihre Quelle gesendet werden. Einige Quellen können die Anzahl der Anfragen begrenzen, die Sie pro Minute stellen können. Beispiel: [!DNL Zendesk] ist auf 100 Anfragen pro Minute beschränkt und definiert  `delayRequestMillis` nach `850` ermöglicht es Ihnen, die Quelle so zu konfigurieren, dass sie Anrufe mit nur etwa 80 Anfragen pro Minute sendet, deutlich unter dem Schwellenwert von 100 Anfragen pro Minute. |
+| `parameterType` | Die Eigenschaft `parameterType` definiert, wo die `parameterName` hinzugefügt werden muss. Mit dem Typ `QUERYPARAM` können Sie Ihre Abfrage mit dem `parameterName` anhängen. Mit dem `HEADERPARAM` können Sie Ihre `parameterName` zu Ihrer Header-Anfrage hinzufügen. |
+| `parameterName` | Der Name des Parameters, der zum Integrieren des Fortsetzung-Tokens verwendet wird. Das Format lautet wie folgt: `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
+| `delayRequestMillis` | Mit der Eigenschaft `delayRequestMillis` bei der Paginierung können Sie die Rate der Anforderungen steuern, die an Ihre Quelle gesendet werden. Einige Quellen können die Anzahl der Anfragen begrenzen, die Sie pro Minute stellen können. Beispielsweise erlaubt [!DNL Zendesk] eine Begrenzung von 100 Anfragen pro Minute und die Definition von `delayRequestMillis` auf `850` Ihnen, die Quelle so zu konfigurieren, dass sie nur 80 Anfragen pro Minute und damit deutlich unter dem Schwellenwert von 100 Anfragen pro Minute sendet. |
 
 Im Folgenden finden Sie ein Beispiel für eine Antwort, die mit dem Paginierungstyp Fortsetzung-Token zurückgegeben wird:
 
@@ -480,7 +480,7 @@ Im Folgenden finden Sie ein Beispiel für eine Antwort, die mit dem Paginierungs
 
 >[!TAB Seite]
 
-Die `PAGE` Mit dem Seitentyp können Sie durch die Rückkehrdaten nach der Anzahl der Seiten, die bei null beginnen, navigieren. Bei Verwendung von `PAGE` Paginierung eingeben, müssen Sie die Anzahl der Datensätze angeben, die auf einer einzelnen Seite angegeben werden.
+Mit dem Paginierungstyp `PAGE` können Sie durch die Rückgabedaten nach der Anzahl der Seiten, die bei null beginnen, navigieren. Bei Verwendung von Paginierung vom Typ `PAGE` müssen Sie die Anzahl der Datensätze angeben, die auf einer einzelnen Seite angegeben werden.
 
 ```json
 "paginationParams": {
@@ -500,16 +500,16 @@ Die `PAGE` Mit dem Seitentyp können Sie durch die Rückkehrdaten nach der Anzah
 | `limitName` | Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. |
 | `limitValue` | Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. |
 | `initialPageIndex` | (Optional) Der anfängliche Seitenindex definiert die Seitenzahl, von der aus die Paginierung beginnt. Dieses Feld kann für Quellen verwendet werden, bei denen die Paginierung nicht von 0 beginnt. Wenn nicht angegeben, wird der anfängliche Seitenindex standardmäßig auf 0 gesetzt. Dieses Feld erwartet eine Ganzzahl. |
-| `endPageIndex` | (Optional) Mit dem Endseitenindex können Sie eine Endbedingung erstellen und die Paginierung stoppen. Dieses Feld kann verwendet werden, wenn keine standardmäßigen Endbedingungen zum Anhalten der Paginierung verfügbar sind. Dieses Feld kann auch verwendet werden, wenn die Anzahl der aufzunehmenden Seiten oder die letzte Seitenzahl über die Antwortheader angegeben wird, was bei Verwendung von `PAGE` Typ der Paginierung. Der Wert für den Endseitenindex kann entweder die letzte Seitennummer oder ein Ausdruckswert vom Typ Zeichenfolge aus dem Antwortheader sein. Sie können beispielsweise `headers.x-pagecount` , um den Endseitenindex dem `x-pagecount` -Wert aus den Antwortheadern. **Hinweis**: `x-pagecount` ist ein obligatorischer Antwortheader für einige Quellen und enthält die Wertanzahl der aufzunehmenden Seiten. |
-| `pageParamName` | Der Name des Parameters, der an Abfrageparameter angehängt werden muss, um durch verschiedene Seiten der Rückgabedaten zu navigieren. Beispiel: `https://abc.com?pageIndex=1` gibt die zweite Seite der Rückgabe-Payload einer API zurück. |
+| `endPageIndex` | (Optional) Mit dem Endseitenindex können Sie eine Endbedingung erstellen und die Paginierung stoppen. Dieses Feld kann verwendet werden, wenn keine standardmäßigen Endbedingungen zum Anhalten der Paginierung verfügbar sind. Dieses Feld kann auch verwendet werden, wenn die Anzahl der aufzunehmenden Seiten oder die letzte Seitenzahl über die Antwortheader angegeben wird, was bei Verwendung von Paginierung vom Typ `PAGE` häufig vorkommt. Der Wert für den Endseitenindex kann entweder die letzte Seitennummer oder ein Ausdruckswert vom Typ Zeichenfolge aus dem Antwortheader sein. Sie können beispielsweise `headers.x-pagecount` verwenden, um dem Wert `x-pagecount` aus den Antwortheadern den Endseitenindex zuzuweisen. **Hinweis**: `x-pagecount` ist ein obligatorischer Antwortheader für einige Quellen und enthält die Wertanzahl der aufzunehmenden Seiten. |
+| `pageParamName` | Der Name des Parameters, der an Abfrageparameter angehängt werden muss, um durch verschiedene Seiten der Rückgabedaten zu navigieren. Beispielsweise gibt `https://abc.com?pageIndex=1` die zweite Seite der Rückgabe-Payload einer API zurück. |
 | `maximumRequest` | Die maximale Anzahl von Anforderungen, die eine Quelle für eine bestimmte inkrementelle Ausführung stellen kann. Der aktuelle Standardwert ist 10000. |
 
 {style="table-layout:auto"}
 
 
->[!TAB Keine]
+>[!TAB None]
 
-Die `NONE` Der Paginierungstyp kann für Quellen verwendet werden, die keinen der verfügbaren Paginierungstypen unterstützen. Quellen, die die Paginierung verwenden `NONE` geben Sie einfach alle abrufbaren Datensätze zurück, wenn eine GET angefordert wird.
+Der Paginierungstyp `NONE` kann für Quellen verwendet werden, die keinen der verfügbaren Paginierungstypen unterstützen. Quellen, die den Paginierungstyp &quot;`NONE`&quot;verwenden, geben einfach alle abrufbaren Datensätze zurück, wenn eine GET angefordert wird.
 
 ```json
 "paginationParams": {
@@ -521,9 +521,9 @@ Die `NONE` Der Paginierungstyp kann für Quellen verwendet werden, die keinen de
 
 ### Erweiterte Planung für Self-Serve-Quellen (Batch-SDK)
 
-Konfigurieren Sie den inkrementellen und Aufstockungsplan Ihrer Quelle mithilfe der erweiterten Planung. Die `incremental` -Eigenschaft können Sie einen Zeitplan konfigurieren, in dem Ihre Quelle nur neue oder geänderte Datensätze erfasst, während die `backfill` -Eigenschaft können Sie einen Zeitplan für die Erfassung historischer Daten erstellen.
+Konfigurieren Sie den inkrementellen und Aufstockungsplan Ihrer Quelle mithilfe der erweiterten Planung. Mit der Eigenschaft `incremental` können Sie einen Zeitplan konfigurieren, in dem Ihre Quelle nur neue oder geänderte Datensätze erfasst, während Sie mit der Eigenschaft `backfill` einen Zeitplan für die Erfassung historischer Daten erstellen können.
 
-Mit der erweiterten Planung können Sie Quellausdrücke und -funktionen verwenden, um inkrementelle Zeitpläne und Aufstockungszeitpläne zu konfigurieren. Im folgenden Beispiel wird die Variable [!DNL Zendesk] -Quelle erfordert, dass der inkrementelle Zeitplan als `type:user updated > {START_TIME} updated < {END_TIME}` und Aufstockung als `type:user updated < {END_TIME}`.
+Mit der erweiterten Planung können Sie Quellausdrücke und -funktionen verwenden, um inkrementelle Zeitpläne und Aufstockungszeitpläne zu konfigurieren. Im folgenden Beispiel erfordert die Quelle [!DNL Zendesk], dass der inkrementelle Zeitplan als `type:user updated > {START_TIME} updated < {END_TIME}` und die Aufstockung als `type:user updated < {END_TIME}` formatiert ist.
 
 ```json
 "scheduleParams": {
@@ -537,11 +537,11 @@ Mit der erweiterten Planung können Sie Quellausdrücke und -funktionen verwende
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `scheduleParams.type` | Die Art der Planung Ihrer Quelle wird verwendet. Setzen Sie diesen Wert auf `ADVANCE` , um den erweiterten Planungstyp zu verwenden. |
-| `scheduleParams.paramFormat` | Das definierte Format Ihres Planungsparameters. Dieser Wert kann mit dem Wert Ihrer Quelle übereinstimmen. `scheduleStartParamFormat` und `scheduleEndParamFormat` -Werte. |
+| `scheduleParams.paramFormat` | Das definierte Format Ihres Planungsparameters. Dieser Wert kann mit den `scheduleStartParamFormat` - und `scheduleEndParamFormat` -Werten Ihrer Quelle übereinstimmen. |
 | `scheduleParams.incremental` | Die inkrementelle Abfrage Ihrer Quelle. Inkrementell bezieht sich auf eine Erfassungsmethode, bei der nur neue oder geänderte Daten erfasst werden. |
 | `scheduleParams.backfill` | Die Aufstockungsabfrage Ihrer Quelle. Aufstockung bezieht sich auf eine Erfassungsmethode, bei der historische Daten erfasst werden. |
 
-Nachdem Sie die erweiterte Planung konfiguriert haben, müssen Sie die `scheduleParams` im Abschnitt URL-, Text- oder Kopfzeilenparameter , je nachdem, was Ihre jeweilige Quelle unterstützt. Im folgenden Beispiel: `{SCHEDULE_QUERY}` ist ein Platzhalter, mit dem festgelegt wird, wo die inkrementellen Ausdrücke für die Aufstockung und die Aufstockung verwendet werden. Im Falle einer [!DNL Zendesk] Quelle, `query` wird in der `queryParams` , um die erweiterte Planung festzulegen.
+Nachdem Sie die erweiterte Planung konfiguriert haben, müssen Sie je nach Unterstützung Ihrer jeweiligen Quelle im Abschnitt &quot;URL-, Text- oder Kopfzeilenparameter&quot;auf Ihr `scheduleParams` verweisen. Im folgenden Beispiel ist `{SCHEDULE_QUERY}` ein Platzhalter, mit dem festgelegt wird, wo die Planungsausdrücke für Inkrementelle und Aufstockung verwendet werden. Bei einer [!DNL Zendesk] -Quelle wird `query` in der `queryParams` verwendet, um die erweiterte Planung anzugeben.
 
 ```json
 "urlParams": {
@@ -556,7 +556,7 @@ Nachdem Sie die erweiterte Planung konfiguriert haben, müssen Sie die `schedule
 
 ### Fügen Sie ein benutzerdefiniertes Schema hinzu, um die dynamischen Attribute Ihrer Quelle zu definieren
 
-Sie können ein benutzerdefiniertes Schema zu Ihrem `sourceSpec` , um alle für Ihre Quelle erforderlichen Attribute zu definieren, einschließlich etwaiger dynamischer Attribute, die Sie benötigen. Sie können die entsprechende Verbindungsspezifikation Ihrer Quelle aktualisieren, indem Sie eine PUT-Anfrage an die `/connectionSpecs` Endpunkt der [!DNL Flow Service] API bei der Bereitstellung Ihres benutzerdefinierten Schemas im `sourceSpec` Abschnitt Ihrer Verbindungsspezifikation.
+Sie können ein benutzerdefiniertes Schema zu Ihrem &quot;`sourceSpec`&quot; hinzufügen, um alle für Ihre Quelle erforderlichen Attribute zu definieren, einschließlich aller erforderlichen dynamischen Attribute. Sie können die entsprechende Verbindungsspezifikation Ihrer Quelle aktualisieren, indem Sie eine PUT-Anfrage an den `/connectionSpecs` -Endpunkt der [!DNL Flow Service] -API richten und Ihr benutzerdefiniertes Schema im Abschnitt `sourceSpec` Ihrer Verbindungsspezifikation angeben.
 
 Im Folgenden finden Sie ein Beispiel für ein benutzerdefiniertes Schema, das Sie zur Verbindungsspezifikation Ihrer Quelle hinzufügen können:
 
@@ -659,4 +659,4 @@ Im Folgenden finden Sie ein Beispiel für ein benutzerdefiniertes Schema, das Si
 
 ## Nächste Schritte
 
-Wenn Ihre Quellspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Erkundungsspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Siehe Dokument unter [Konfigurieren von Erkunden-Spezifikationen](./explorespec.md) für weitere Informationen.
+Wenn Ihre Quellspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Erkundungsspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Weitere Informationen finden Sie im Dokument unter [Konfigurieren von Erkundungsspezifikationen](./explorespec.md) .

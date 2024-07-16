@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Cloud Connector-Ereignisweiterleitungse
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1356'
 ht-degree: 100%
 
 ---
@@ -63,11 +63,11 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 
 | Header | Beschreibung |
 |---|---|
-| [A-IM](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) |  |
-| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
-| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
+| [A-IM](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) | |
+| [Accept](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) | |
+| [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) | |
+| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) | |
+| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | |
 | [Accept-Datetime](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) | Wird von einem Benutzeragenten zur Angabe übertragen, dass er auf einen früheren Zustand einer Originalressource zugreifen möchte. Zu diesem Zweck wird der `Accept-Datetime`-Header in einer HTTP-Anfrage an ein TimeGate für eine ursprüngliche Ressource übermittelt. Der Wert gibt den Zeitpunkt des gewünschten früheren Zustands der Originalressource an. |
 | Access-Control-Request-Headers | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Header](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers) der Client bei der eigentlichen Anfrage senden könnte. |
 | Access-Control-Request-Method | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Methode](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Methods) bei der eigentlichen Anfrage verwendet wird. Dieser Header ist erforderlich, da die Preflight-Anfrage immer eine [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) ist und nicht dieselbe Methode wie die eigentliche Anfrage verwendet. |
@@ -83,24 +83,24 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 | Forwarded | Enthält Informationen von den [Reverse-Proxy-Servern](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling), die verändert werden oder verloren gehen, wenn ein Proxy am Pfad der Anfrage beteiligt ist. |
 | Aus | Enthält eine Internet-E-Mail-Adresse für einen menschlichen Benutzer, der den anfragenden Benutzeragenten steuert. |
 | Host | Gibt den Host und die Port-Nummer des Servers an, an den die Anfrage gesendet wird. |
-| If-Match |  |
-| If-Modified-Since |  |
-| [If-None-Match](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) |  |
-| [If-Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) |  |
-| [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) |  |
-| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Implementierungsspezifischer Header, der an jeder Stelle der Anfrage-Antwort-Kette verschiedene Effekte haben kann. Wird für Abwärtskompatibilität mit HTTP/1.0-Caches verwendet, bei denen der Cache-Control-Header noch nicht vorhanden ist. |  |
+| If-Match | |
+| If-Modified-Since | |
+| [If-None-Match](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) | |
+| [If-Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) | |
+| [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) | |
+| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | Implementierungsspezifischer Header, der an jeder Stelle der Anfrage-Antwort-Kette verschiedene Effekte haben kann. Wird für Abwärtskompatibilität mit HTTP/1.0-Caches verwendet, bei denen der Cache-Control-Header noch nicht vorhanden ist. | |
 | [Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Bereich](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Gibt den Teil eines Dokuments an, der vom Server zurückgegeben werden soll. |  |
-| [Referrer](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Referer) | Die Adresse der vorherigen Web-Seite, von der einem Link zur aktuell angeforderten Seite gefolgt wurde. |  |
+| [Bereich](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | Gibt den Teil eines Dokuments an, der vom Server zurückgegeben werden soll. | |
+| [Referrer](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Referer) | Die Adresse der vorherigen Web-Seite, von der einem Link zur aktuell angeforderten Seite gefolgt wurde. | |
 | TE | Gibt die Übertragungskodierungen an, die der Benutzeragent akzeptiert. (Sie könnten es informell `Accept-Transfer-Encoding` nennen, was intuitiver wäre). |
-| Upgrade | Das relevante RFC-Dokument für das [`Upgrade`-Header-Feld ist RFC 7230, Abschnitt 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Der Standard legt Regeln für die Aktualisierung oder den Wechsel zu einem anderen Protokoll in der aktuellen Client-, Server- und Transportprotokollverbindung fest. Dieser Header-Standard ermöglicht es beispielsweise einem Client, von HTTP 1.1 zu HTTP 2.0 zu wechseln, vorausgesetzt, der Server entscheidet, das `Upgrade`-Header-Feld zu bestätigen und zu implementieren. Keine der Parteien muss die im `Upgrade`-Header-Feld angegebenen Bedingungen akzeptieren. Es kann sowohl in Client- als auch in Server-Headern verwendet werden. Wenn das `Upgrade`-Header-Feld angegeben ist, MUSS der Absender auch das `Connection`-Header-Feld mit der `upgrade`-Option senden. |  |
+| Upgrade | Das relevante RFC-Dokument für das [`Upgrade`-Header-Feld ist RFC 7230, Abschnitt 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). Der Standard legt Regeln für die Aktualisierung oder den Wechsel zu einem anderen Protokoll in der aktuellen Client-, Server- und Transportprotokollverbindung fest. Dieser Header-Standard ermöglicht es beispielsweise einem Client, von HTTP 1.1 zu HTTP 2.0 zu wechseln, vorausgesetzt, der Server entscheidet, das `Upgrade`-Header-Feld zu bestätigen und zu implementieren. Keine der Parteien muss die im `Upgrade`-Header-Feld angegebenen Bedingungen akzeptieren. Es kann sowohl in Client- als auch in Server-Headern verwendet werden. Wenn das `Upgrade`-Header-Feld angegeben ist, MUSS der Absender auch das `Connection`-Header-Feld mit der `upgrade`-Option senden. | |
 | [User-Agent](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/User-Agent) | Enthält eine charakteristische Zeichenfolge, die es den Netzwerkprotokoll-Peers ermöglicht, den Programmtyp, das Betriebssystem, den Software-Hersteller oder die Software-Version des anfragenden Software-Benutzeragenten zu identifizieren. |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | Wird von Proxies hinzugefügt, sowohl von Forward- als auch von Reverse-Proxies, und kann in den Anfrage-Headern und in den Antwort-Headern vorhanden sein. |
 | [Warnung](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | Allgemeine Warnhinweise zu möglichen Problemen. |
-| X-CSRF-Token |  |
-| X-Requested-With |  |
+| X-CSRF-Token | |
+| X-Requested-With | |
 
 #### Nachrichtenkörper als JSON
 

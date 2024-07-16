@@ -4,7 +4,7 @@ description: Die neuesten Versionshinweise für die Tag-Erweiterung „Adobe Med
 exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '210'
 ht-degree: 100%
 
 ---

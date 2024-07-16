@@ -4,8 +4,8 @@ description: Machen Sie sich mit der Tag-Erweiterung „Common Analytics“ in A
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 90%
+source-wordcount: '399'
+ht-degree: 86%
 
 ---
 
@@ -71,4 +71,4 @@ Die folgenden Datenelemente sind in der allgemeinen Analytics-Plug-in-Erweiterun
 
 >[!NOTE]
 >
->Weitere Informationen zu den oben genannten Plug-ins finden Sie im [Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=de).
+>Weitere Informationen zu den oben genannten Plug-ins finden Sie in der [Analytics-Dokumentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=de).

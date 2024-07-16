@@ -5,16 +5,16 @@ description: Die QuestionPro Intercept Surveys-Erweiterung ist ein Umfrageziel i
 exl-id: a0d6d46b-caac-48ae-94bc-4ebf24f9c94a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 92%
+source-wordcount: '458'
+ht-degree: 88%
 
 ---
 
-# [!DNL QuestionPro Intercept Surveys]-Erweiterung  {#questionpro-extension}
+# [!DNL QuestionPro Intercept Surveys]-Erweiterung {#questionpro-extension}
 
 ## Übersicht {#overview}
 
-[!DNL QuestionPro Intercept Surveys] ist eine Plattform zur Bereitstellung von Umfragen und Erfassung von Einstellungsdaten am Transaktionspunkt bzw. an dem Punkt, an dem Benutzer Ihre Website betreten oder verlassen.
+[!DNL QuestionPro Intercept Surveys] ist eine Plattform für die Bereitstellung von Umfragen und die Erfassung von Einstellungsdaten zum Zeitpunkt der Transaktion oder zum Zeitpunkt des Besuchs/Austritts von Benutzern auf Ihrer Website.
 
 [!DNL QuestionPro Intercept Surveys] ist eine Umfrageerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL QuestionPro Intercept Surveys] Erweiterung:
+So installieren Sie die [!DNL QuestionPro Intercept Surveys]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

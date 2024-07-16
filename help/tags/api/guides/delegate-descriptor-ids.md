@@ -5,7 +5,7 @@ exl-id: 2c2b9b31-0618-4b93-97ec-0798fc06aac0
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '501'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ Wenn beispielsweise ein Erweiterungspaket mit dem Namen `example-package`eine Ak
 
 Es ist wichtig, Delegaten-Deskriptor-IDs zu verstehen, wenn Sie Regelkomponenten (Ereignisse, Bedingungen und Aktionen) und Datenelemente in der API definieren möchten. In den folgenden Abschnitten wird beschrieben, welche Rolle diese IDs für die einzelnen Ressourcen spielen.
 
-### Regel  Komponenten
+### Regelkomponenten
 
 Eine [Regelkomponente](../endpoints/rule-components.md) muss einem Ereignis, einer Bedingung oder einer Aktion zugeordnet sein, das/die zu einem Erweiterungspaket gehört. Dies stellt den „Typ“ der Regelkomponente dar, der sich auf die Logik der Gesamtregel bezieht (ein Ereignis, eine Bedingung oder eine Aktion). Daher muss beim Erstellen einer Regelkomponente eine Delegierten-Deskriptor-ID bereitgestellt werden, um anzugeben, welchem Ereignis, welcher Bedingung oder Aktion die Regelkomponente zugeordnet werden soll.
 

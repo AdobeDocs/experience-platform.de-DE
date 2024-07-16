@@ -5,7 +5,7 @@ description: In diesem Dokument erfahren Sie, wie Sie mithilfe von Datenvorberei
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1845'
+source-wordcount: '1847'
 ht-degree: 90%
 
 ---
@@ -19,8 +19,8 @@ In diesem Dokument erfahren Sie, wie Sie in der Adobe Experience Platform-Benutz
 Für dieses Tutorial werden Kenntnisse der folgenden Platform-Komponenten benötigt:
 
 * [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Customer-Experience-Daten von Platform strukturiert werden.
-   * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Quellen](../../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
@@ -47,7 +47,7 @@ Während dieses Vorgangs können Sie auch die Optionen [!UICONTROL Fehlerdiagnos
 
 ### Verwenden eines neuen Zieldatensatzes
 
-Um Ihre CSV-Daten in einen neuen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemas im Dropdown-Menü ein Schema zum Zuordnen aus.
+Um Ihre CSV-Daten in einen neuen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus.
 
 Wenn Sie ein Schema ausgewählt haben, geben Sie einen Namen für Ihren Datenfluss und eine optionale Beschreibung an. Wenden Sie dann die Einstellungen [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Aufnahme] an, sofern Sie sie für Ihren Datenfluss benötigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
@@ -169,23 +169,23 @@ Mithilfe des Ausdruckseditors in der Mitte können Sie manuell Felder, Funktione
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
 
-### Import-Mapping {#import}
+### Zuordnung importieren {#import}
 
-Sie können die Zuordnung eines vorhandenen Datenflusses wiederverwenden, um die manuelle Konfigurationszeit Ihrer Datenaufnahme zu reduzieren und Fehler zu begrenzen. Auswählen **[!UICONTROL Import-Mapping]** , um eine vorhandene Zuordnung wiederzuverwenden.
+Sie können die Zuordnung eines vorhandenen Datenflusses wiederverwenden, um die manuelle Konfigurationszeit Ihrer Datenaufnahme zu verkürzen und Fehler zu begrenzen. Wählen Sie **[!UICONTROL Importzuordnung]** aus, um eine vorhandene Zuordnung wiederzuverwenden.
 
 ![import-mapping](../images/ui/mapping/import-mapping.png)
 
-Die [!UICONTROL Import-Mapping] -Fenster angezeigt, sodass Sie eine Liste mit Datenflüssen zur Auswahl erhalten.
+Das Fenster [!UICONTROL Importzuordnung] wird angezeigt und enthält eine Liste der Datenflüsse, aus denen Sie auswählen können.
 
 Wählen Sie das Vorschausymbol aus, um die Zuordnung des ausgewählten Datenflusses in der Vorschau anzuzeigen.
 
 ![list-mapping](../images/ui/mapping/list-mapping.png)
 
-Im Vorschaufenster können Sie die vorhandene Zuordnung vor dem Import in Ihren Datenfluss überprüfen. Nachdem Sie die Zuordnung überprüft haben, können Sie **[!UICONTROL Zurück]** , um zur Liste der Datenflüsse zurückzukehren und einen anderen Satz von Zuordnungen zu überprüfen, oder Sie können **[!UICONTROL Auswählen]** um fortzufahren.
+Im Vorschaufenster können Sie die vorhandene Zuordnung vor dem Import in Ihren Datenfluss überprüfen. Nachdem Sie die Zuordnung überprüft haben, können Sie **[!UICONTROL Zurück]** auswählen, um zur Liste der Datenflüsse zurückzukehren und einen anderen Satz von Mapping zu überprüfen. Alternativ können Sie **[!UICONTROL Auswählen]** auswählen, um fortzufahren.
 
 ![preview-mapping](../images/ui/mapping/preview-mapping.png)
 
-Alternativ können Sie die zu importierende Zuordnung aus der Liste der Datenflüsse auswählen. Wählen Sie den Datenfluss aus, der die zu importierende Zuordnung enthält, und wählen Sie dann **[!UICONTROL Auswählen]** um fortzufahren.
+Alternativ können Sie die zu importierende Zuordnung aus der Liste der Datenflüsse auswählen. Wählen Sie den Datenfluss aus, der die zu importierende Zuordnung enthält, und wählen Sie dann **[!UICONTROL Auswählen]** aus, um fortzufahren.
 
 ![select-mapping](../images/ui/mapping/select-mapping.png)
 
@@ -193,9 +193,9 @@ Die Benutzeroberfläche wird mit dem importierten Mapping aktualisiert.
 
 >[!NOTE]
 >
->Alle vorhandenen Zuordnungssätze, die Sie erstellen oder die Empfehlungen für die ML-Zuordnung erstellen, werden durch die Zuordnung ersetzt, die Sie aus einem vorhandenen Datenfluss importiert haben.
+>Alle vorhandenen Zuordnungssätze, die Sie erstellen oder die Empfehlungen für die ML-Zuordnung erstellen, werden durch die aus einem vorhandenen Datenfluss importierte Zuordnung ersetzt.
 
-![mapping-importiert](../images/ui/mapping/mapping-imported.png)
+![mapping-importing](../images/ui/mapping/mapping-imported.png)
 
 Wählen Sie **[!UICONTROL Vorschaudaten]** aus, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Beispieldaten aus dem ausgewählten Datensatz anzuzeigen.
 

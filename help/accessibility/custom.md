@@ -95,9 +95,9 @@ Auf alle Tabellen in der Experience Platform-Benutzeroberfläche kann über die 
 * Wenn eine Zeile ausgewählt oder im Fokus ist, können Sie über die **Eingabetaste** in der Zeile Details in der rechten Leiste aufrufen.
 * Wenn eine Zeile ausgewählt oder im Fokus ist, verwenden Sie die **Pfeiltasten**, um durch sämtliche Elemente in der Zeile zu navigieren.
 * Verwenden Sie die **Eingabetaste**, um ein Element in der Zeile auszuwählen. Benutzer mit Bildschirmlesehilfen werden benachrichtigt, wenn ein neues Fenster geöffnet werden muss.
-* Beim Zoomen auf 200 % oder mehr können Sie die **Schieneninspektor** -Symbol, da die rechte Leiste reduziert wird, um mehr Anzeigeraum für die Tabelle bereitzustellen.
+* Wenn Sie auf 200 % oder mehr zoomen, wird das Symbol **Schieneninspektor** angezeigt, da die rechte Leiste ausgeblendet wird, um mehr Anzeigeraum für die Tabelle bereitzustellen.
 
-![Das Symbol für den Schieneninspektor im Fokus, wenn ein Benutzer auf 200 % zoomt.](images/rail-inspector.png)
+![Das im Fokus befindliche Symbol für den Schieneninspektor, wenn ein Benutzer auf 200 % zoomt.](images/rail-inspector.png)
 
 ### Barrierefreiheit beim Durchsuchen von Tabellen
 
@@ -134,7 +134,7 @@ Wenn Sie die Benutzeroberfläche von Segment Builder zum Erstellen und Bearbeite
 
 Sie können jetzt die linken und rechten Leisten der Arbeitsfläche des Segmentaufbaus reduzieren oder erweitern, um mehr Platz auf dem Bildschirm zu erhalten. Diese Funktion ist besonders hilfreich, da sie bei 200 % Zoom volle Funktionen bietet.
 
-![Die Arbeitsfläche des Segmentaufbaus mit den Veröffentlichungs-Widgets der linken und rechten Leiste wird hervorgehoben.](images/left-right-rail-expandables.png)
+![Die Arbeitsfläche des Segmentaufbaus mit hervorgehobenen Veröffentlichungs-Widgets für die linke und rechte Leiste.](images/left-right-rail-expandables.png)
 
 ## Abfrage-Service-Editor
 
@@ -145,7 +145,7 @@ Die folgenden Barrierefreiheitsfunktionen sind im Abfrage-Service-Editor verfüg
 
 >[!NOTE]
 >
->Der Abfrage-Editor verarbeitet die **Registerkarte** -Schlüssel standardmäßig aus. Aufrufen **Registerkarte** -Funktion im Editor verwenden, müssen Sie die **Escape** und drücken Sie die **Registerkarte** direkt darauf folgen. Presse **Registerkarte** erneut verwenden, um den Fokus über den Editor hinaus zu verschieben.
+>Der Abfrageeditor verarbeitet den Schlüssel **Tab** nicht standardmäßig. Um die Funktion **Tab** im Editor aufzurufen, müssen Sie die Taste **Escape** drücken und anschließend direkt danach die Taste **Tab** drücken. Drücken Sie erneut **Tab** , um den Fokus über den Editor hinaus zu verschieben.
 
 ## Registerkarte „Systemansicht“ in „Quellen und Ziele“
 

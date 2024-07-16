@@ -10,15 +10,15 @@ ht-degree: 36%
 
 ---
 
-# Erstellen Sie eine neue Verbindungsspezifikation mit der [!DNL Flow Service] API
+# Erstellen einer neuen Verbindungsspezifikation mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
 
 Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Sie enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und geprüft werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Der `/connectionSpecs`-Endpunkt in der [!DNL Flow Service]-API ermöglicht Ihnen die programmgesteuerte Verwaltung der Verbindungsspezifikationen innerhalb Ihrer Organisation.
 
-Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der [!DNL Flow Service] API und Integration einer neuen Quelle über Self-Serve-Quellen (Streaming-SDK).
+Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mit der [!DNL Flow Service] -API erstellen und eine neue Quelle über Self-Serve-Quellen (Streaming-SDK) integrieren.
 
 ## Erste Schritte
 
@@ -42,8 +42,8 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 | Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
 | {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte enthalten, die mit Ihrer Quelle in Ihrem privaten Git-Repository zusammenhängen. | `medallia` |
-| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich bitte an Ihren Adobe-Support-Mitarbeiter, um zu besprechen. | `medallia-category.txt` Geben Sie innerhalb der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
-| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, die Sie verwenden können, um [!DNL Medallia] Daten an Experience Platform. |
+| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. **Hinweis**: Wenn Sie glauben, dass Ihre Quelle nicht in eine der oben genannten Kategorien passt, wenden Sie sich an Ihren Adobe-Kundenbetreuer, um darüber zu diskutieren. | `medallia-category.txt` Geben Sie in der Datei die Kategorie Ihrer Quelle an, z. B.: `streaming`. |
+| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Medallia] ist eine Marketing-Automatisierungsquelle, mit der Sie [!DNL Medallia] -Daten an Experience Platform übertragen können. |
 | {your_source}-icon.svg | Das Bild, das für die Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
 | {your_source}-label.txt | Der Quellname, wie er im Experience Platform-Quellkatalog angezeigt werden soll. | Medallia |
 | {your_source}-connectionSpec.json | Eine JSON-Datei mit der Verbindungsspezifikation Ihrer Quelle. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `medallia-connectionSpec.json` |
@@ -52,11 +52,11 @@ Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukt
 
 >[!TIP]
 >
->Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle von Schlüsselwerten Folgendes verwenden: `text` in der Verbindungsspezifikation.
+>Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle der Schlüsselwerte `text` in der Verbindungsspezifikation verwenden.
 
 Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anforderung (PA) erstellen, damit Adobe sie überprüfen kann. Wenn Ihr PR genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
 
-Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, wie z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch unter [Quellspezifikationen konfigurieren](../config/sourcespec.md).
+Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, wie z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch [Konfigurieren von Quellspezifikationen](../config/sourcespec.md).
 
 ## Kopieren der Vorlage für die Verbindungsspezifikation
 

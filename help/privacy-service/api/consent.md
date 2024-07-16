@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # Zustimmungsendpunkt
 
-Bestimmte Vorschriften erfordern eine ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Die `/consent` -Endpunkt im [!DNL Privacy Service] Mit der API können Sie Anfragen zur Kundenzustimmung verarbeiten und in Ihren Datenschutz-Workflow integrieren.
+Bestimmte Vorschriften erfordern eine ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Mit dem Endpunkt `/consent` in der API [!DNL Privacy Service] können Sie Anfragen zur Kundenzustimmung verarbeiten und in Ihren Datenschutz-Workflow integrieren.
 
-Bevor Sie dieses Handbuch verwenden, lesen Sie bitte den Abschnitt [Erste Schritte](./getting-started.md) Anleitung für Informationen zu den erforderlichen Authentifizierungskopfzeilen, die im folgenden Beispiel-API-Aufruf beschrieben werden.
+Bevor Sie dieses Handbuch verwenden, finden Sie im Leitfaden [Erste Schritte](./getting-started.md) Informationen zu den erforderlichen Authentifizierungskopfzeilen, die im folgenden Beispiel-API-Aufruf vorgestellt werden.
 
 ## Verarbeiten einer Kundenzustimmungsanfrage
 
-Einverständnisanfragen werden verarbeitet, indem eine POST-Anfrage an die `/consent` -Endpunkt.
+Zustimmungsanfragen werden verarbeitet, indem eine POST-Anfrage an den `/consent` -Endpunkt gesendet wird.
 
 **API-Format**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird ein neuer Zustimmungsauftrag für die Benutzer-IDs erstellt, die in der `entities` Array.
+Mit der folgenden Anfrage wird ein neuer Zustimmungsauftrag für die Benutzer-IDs erstellt, die im Array `entities` angegeben sind.
 
 ```shell
 curl -X POST \
@@ -61,17 +61,17 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `optOutOfSale` | Gibt bei der Festlegung auf &quot;true&quot;an, dass die unter `entities` möchte den Verkauf oder die Weitergabe ihrer personenbezogenen Daten deaktivieren. |
-| `entities` | Ein Array von Objekten, die die Benutzer angeben, für die die Genehmigungsanfrage gilt. Jedes Objekt enthält eine `namespace` und ein Array von `values` , um einzelne Benutzer mit diesem Namespace abzugleichen. |
-| `nameSpace` | Jedes Objekt im `entities` -Array muss einen der [Standard-Identitäts-Namespaces](./appendix.md#standard-namespaces) von der Privacy Service-API erkannt werden. |
-| `values` | Ein Array von Werten für jeden Benutzer, die dem bereitgestellten `nameSpace`. |
+| `optOutOfSale` | Gibt bei der Festlegung auf &quot;true&quot;an, dass die unter `entities` angegebenen Benutzer den Verkauf oder die Weitergabe ihrer personenbezogenen Daten deaktivieren möchten. |
+| `entities` | Ein Array von Objekten, die die Benutzer angeben, für die die Genehmigungsanfrage gilt. Jedes Objekt enthält ein `namespace` und ein Array von `values`, um einzelne Benutzer mit diesem Namespace abzugleichen. |
+| `nameSpace` | Jedes Objekt im `entities` -Array muss einen der von der Privacy Service-API erkannten [standardmäßigen Identitäts-Namespaces](./appendix.md#standard-namespaces) enthalten. |
+| `values` | Ein Array von Werten für jeden Benutzer, das dem bereitgestellten `nameSpace` entspricht. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Weitere Informationen dazu, wie Sie bestimmen, an welche Kundenidentitätswerte gesendet werden [!DNL Privacy Service], siehe Handbuch zu [Identitätsdaten bereitstellen](../identity-data.md).
+>Weitere Informationen dazu, wie Sie bestimmen, welche Identitätswerte von Kunden an [!DNL Privacy Service] gesendet werden, finden Sie im Handbuch zu [Identitätsdaten bereitstellen](../identity-data.md) .
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) ohne Payload zurück und gibt an, dass die Anfrage von [!DNL Privacy Service] und wird verarbeitet.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) ohne Payload zurück und gibt an, dass die Anfrage von [!DNL Privacy Service] akzeptiert wurde und derzeit verarbeitet wird.

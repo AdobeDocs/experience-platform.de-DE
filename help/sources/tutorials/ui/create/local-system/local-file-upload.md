@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; lokales System; Datei-Upload; CSV zuordnen; CSV-Datei zuordnen; CSV-Datei xdm zuordnen; CSV-Datei xdm zuordnen; Handbuch zu ui;
+keywords: Experience Platform;home;popular topics;local system;file upload;map csv;map csv file;map csv file;map csv file to xdm;map csv to xdm;ui guide
 solution: Experience Platform
-title: Erstellen eines Connectors für lokale Datei-Upload-Quelle in der Benutzeroberfläche
+title: Erstellen eines lokalen Datei-Uploads für Source Connector über die Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Ihr lokales System erstellen, um lokale Dateien auf Platform zu bringen.
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
-ht-degree: 71%
+ht-degree: 69%
 
 ---
 
@@ -18,26 +18,26 @@ In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platform voraus:
+Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Customer-Experience-Daten von Platform strukturiert werden.
-   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Hochladen lokaler Dateien in Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, für die Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] enthält verschiedene Quellen, für die Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem [!UICONTROL Lokales System] category, select **[!UICONTROL Lokaler Datei-Upload]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter der Kategorie [!UICONTROL Lokales System] die Option **[!UICONTROL Lokaler Datei-Upload]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Katalog](../../../../images/tutorials/create/local/catalog.png)
 
 ### Verwenden eines vorhandenen Datensatzes
 
-Die [!UICONTROL Datenflussdetails] -Seite können Sie auswählen, ob Sie Ihre CSV-Daten in einen vorhandenen Datensatz oder in einen neuen Datensatz aufnehmen möchten.
+Auf der Seite &quot;[!UICONTROL Datenfluss-Detail]&quot;können Sie auswählen, ob Sie Ihre CSV-Daten in einen vorhandenen Datensatz oder in einen neuen Datensatz aufnehmen möchten.
 
 Um Ihre CSV-Daten in einen vorhandenen Datensatz einzufügen, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder über die Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü abrufen.
 
@@ -49,7 +49,7 @@ Während dieses Vorgangs können Sie auch die Optionen [!UICONTROL Fehlerdiagnos
 
 ### Verwenden eines neuen Datensatzes
 
-Um Ihre CSV-Daten in einen neuen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemas im Dropdown-Menü ein Schema zum Zuordnen aus.
+Um Ihre CSV-Daten in einen neuen Datensatz aufzunehmen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes mithilfe der Option [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemata im Dropdown-Menü ein Schema zum Zuordnen aus.
 
 Wenn Sie ein Schema ausgewählt haben, geben Sie einen Namen für Ihren Datenfluss und eine optionale Beschreibung an. Wenden Sie dann die Einstellungen [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Aufnahme] an, sofern Sie sie für Ihren Datenfluss benötigen. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
 
@@ -81,13 +81,13 @@ Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstel
 
 Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Eine ausführliche Anleitung zur Verwendung der Zuordnungsschnittstelle finden Sie im [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
-Sobald Ihre Zuordnungssätze fertig sind, wählen Sie **[!UICONTROL Beenden]** und lassen einige Momente zu, damit der neue Datenfluss erstellt wird.
+Sobald Ihre Zuordnungssätze fertig sind, wählen Sie **[!UICONTROL Beenden]** aus und lassen Sie einige Augenblicke zu, bis der neue Datenfluss erstellt wird.
 
 ![Zuordnung](../../../../images/tutorials/create/local/mapping.png)
 
 ## Überwachen der Datenaufnahme
 
-Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die über sie erfassten Daten mithilfe des Monitoring-Dashboards überwachen. Weitere Informationen finden Sie im Tutorial zu [Überwachen von Datenflüssen aus Quellen in der Benutzeroberfläche](../../../../../dataflows/ui/monitor-sources.md).
+Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die über sie erfassten Daten mithilfe des Monitoring-Dashboards überwachen. Weitere Informationen finden Sie im Tutorial zum [Überwachen von Datenflüssen zu Quellen in der Benutzeroberfläche](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Nächste Schritte
 

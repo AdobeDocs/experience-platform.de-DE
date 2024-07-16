@@ -5,18 +5,18 @@ description: Die Google Global Site Tag-Erweiterung ist ein Analyseziel in Adobe
 exl-id: 9643adc5-997d-45b3-a2b6-e365164022b8
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 89%
+source-wordcount: '453'
+ht-degree: 92%
 
 ---
 
-# [!DNL Google Global Site Tag]-Erweiterung  {#gtag-analytics-extension}
+# [!DNL Google Global Site Tag]-Erweiterung {#gtag-analytics-extension}
 
 ## Übersicht {#overview}
 
-Senden von Daten an [!DNL Google Analytics], [!DNL Google Ads]und die [!DNL Google Marketing Platform] via [!DNL Google's Global Site Tag]oder gtag.js. Für die einzelnen Produkte können jeweils mehrere Konten konfiguriert werden.
+Senden Sie Daten an [!DNL Google Analytics], [!DNL Google Ads] und die [!DNL Google Marketing Platform] über [!DNL Google's Global Site Tag] oder gtag.js. Für die einzelnen Produkte können jeweils mehrere Konten konfiguriert werden.
 
-[!DNL Google Global Site Tag] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
+[!DNL Google Global Site Tag] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Google Global Site Tag] Erweiterung:
+So installieren Sie die [!DNL Google Global Site Tag]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

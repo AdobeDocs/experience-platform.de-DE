@@ -14,11 +14,11 @@ ht-degree: 65%
 
 # Native Kennung für eine Identität abrufen
 
-Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Namespace in erfassten XDM-Daten und bei der Bereitstellung einer Identität zur Verwendung in einem API-Aufruf bereitgestellt. Wenn Identitäten beibehalten werden in [!DNL Identity Service], wird eine ID generiert und dieser Identität zugewiesen, die als native XID bezeichnet wird. [!DNL Platform] APIs, die Identitätsdaten erfordern, unterstützen die Verwendung dieses kompakteren Formulars für die aggregierte ID und den Namespace. XID ist eine Base64-kodierte Zeichenfolge.
+Identitätsdaten werden in der Regel als ID-Zeichenfolgenwert und Identitäts-Namespace in erfassten XDM-Daten und bei der Bereitstellung einer Identität zur Verwendung in einem API-Aufruf bereitgestellt. Wenn Identitäten in [!DNL Identity Service] persistiert werden, wird eine ID generiert und dieser Identität zugewiesen, die als native XID bezeichnet wird. [!DNL Platform] APIs, die Identitätsdaten erfordern, unterstützen diese kompaktere Form für die aggregierte ID und den Namespace. XID ist eine Base64-kodierte Zeichenfolge.
 
 >[!NOTE]
 >
->Dieses Format ist hauptsächlich für den internen Adobe-Gebrauch vorgesehen. Native XID als einzelner Wert ist platzsparender und wird intern innerhalb von verwendet [!DNL Platform] Lösungen zur Speicherung und Serialisierung. Sie ist jedoch nicht für Menschen lesbar, ist opak und erfordert einen separaten Aufruf, um sie zur Verwendung abzurufen.
+>Dieses Format ist hauptsächlich für den internen Adobe-Gebrauch vorgesehen. Native XID als einzelner Wert ist platzsparender und wird intern in [!DNL Platform] -Lösungen für Speicherung und Serialisierung verwendet. Sie ist jedoch nicht für Menschen lesbar, ist opak und erfordert einen separaten Aufruf, um sie zur Verwendung abzurufen.
 
 Verschaffen Sie sich die XID für einen angegebenen ID-Wert und Namespace mithilfe des in diesem Abschnitt beschriebenen Diensts.
 

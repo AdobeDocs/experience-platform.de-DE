@@ -23,7 +23,7 @@ Verwenden Sie diese Funktion, um Experience-Datenmodell (XDM)-Schemafelder mit B
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit Data Governance-Funktionen von Experience Platform. Mit diesen Funktionen können Sie mithilfe von Bezeichnungen und Richtlinien steuern, wie Daten in Platform verwendet werden, anstatt zu steuern, auf welche Benutzer in Ihrem Unternehmen Zugriff besteht. Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen.
+>Die attributbasierte Zugriffssteuerung ist nicht zu verwechseln mit Data Governance-Funktionen von Experience Platform. Mit diesen Funktionen können Sie mithilfe von Bezeichnungen und Richtlinien steuern, wie Daten in Platform verwendet werden, anstatt zu steuern, auf welche Benutzer in Ihrem Unternehmen Zugriff besteht. Weitere Informationen finden Sie in der [Übersicht zur Data Governance](../../data-governance/home.md) .
 
 Mit der attributbasierten Zugriffssteuerung können Admins Ihrer Organisation den Zugriff von Benutzenden auf sensible persönliche Daten (SPD), persönlich identifizierbare Informationen (PII) und andere benutzerdefinierte Datentypen in allen Workflows und Ressourcen von Platform steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
@@ -67,7 +67,7 @@ Die folgenden Abschnitte enthalten Informationen dazu, wie die attributbasierte 
 
 ### Zugangssteuerung
 
-Plattformnutzungen [Adobe Admin Console](https://adminconsole.adobe.com) Rollen, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
+Platform nutzt [Adobe Admin Console](https://adminconsole.adobe.com) -Rollen, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen. Berechtigungen steuern den Zugriff auf verschiedene Platform-Funktionen, einschließlich Datenmodellierung, Profil-Management und Sandbox-Verwaltung. Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Rollen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
 
 Es gibt nur eine begrenzte Verfügbarkeit der attributbasierten Zugriffssteuerung für Kunden, die Healthcare und/oder Privacy Shields erwerben. Zu den Features dieser Funktion gehören:
 
@@ -79,7 +79,7 @@ Die Verwaltungs-Workflows für alle Experience Platform-gestützten Anwendungen,
 
 >[!IMPORTANT]
 >
->Ihre Rollen werden automatisch in die Benutzeroberfläche &quot;Berechtigungen&quot;migriert, wenn Ihre Organisation aktiviert ist. Die Rollen in der Admin Console bleiben bis jetzt unverändert. Bitte **nicht** ändern Sie Ihre Rollen, nachdem Ihre Organisation aktiviert wurde.
+>Ihre Rollen werden automatisch in die Benutzeroberfläche &quot;Berechtigungen&quot;migriert, wenn Ihre Organisation aktiviert ist. Die Rollen in der Admin Console bleiben bis jetzt unverändert. Ändern Sie Ihre Rollen **nicht**, nachdem Ihre Organisation aktiviert wurde.
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../home.md).
 
@@ -98,7 +98,7 @@ Als Admin können Sie attributbasierte Zugriffssteuerungsfunktionen für Folgend
 >
 >Beachten Sie daher bei der Arbeit mit Zielen und attributbasierter Zugriffssteuerung die folgenden Auswirkungen:
 >
->* Sie können Zielgruppen nur aktivieren, die Sie aufrufen und in der [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) und [Segmentschritt auswählen](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) des Aktivierungs-Workflows.
+>* Sie können nur Zielgruppen aktivieren, die Sie über die Berechtigung zum Zugriff auf und zur Anzeige in [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) und [Segmentschritt auswählen](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) des Aktivierungs-Workflows verfügen.
 >* Im [Zuordnungsschritt des Aktivierungs-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) können Sie nur die Felder anzeigen und zur Aktivierung auswählen, für die Sie über Zugriffsberechtigungen verfügen.
 >* Wenn Sie zusätzliche Segmente für ein vorhandenes Ziel aktivieren möchten, bei dem Sie nicht auf alle Felder zugreifen können, die für den Export zugeordnet sind, wird der Aktivierungs-Workflow für Sie blockiert.
 

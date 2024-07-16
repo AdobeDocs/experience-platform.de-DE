@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Konten-Endpunkt
 
-In Adobe Experience Platform Query Service werden Konten verwendet, um nicht ablaufende Anmeldeinformationen zu erstellen, die Sie mit externen SQL-Clients verwenden können. Sie können die `/accounts` -Endpunkt in der Query Service-API, mit dem Sie programmatisch Ihre Query Service-Integrationskonten erstellen, abrufen, bearbeiten und löschen können (auch als technisches Konto bezeichnet).
+In Adobe Experience Platform Query Service werden Konten verwendet, um nicht ablaufende Anmeldeinformationen zu erstellen, die Sie mit externen SQL-Clients verwenden können. Sie können den Endpunkt `/accounts` in der Query Service-API verwenden, mit dem Sie programmatisch Ihre Query Service-Integrationskonten erstellen, abrufen, bearbeiten und löschen können (auch als technisches Konto bezeichnet).
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der Query Service-API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der Query Service-API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Konto erstellen
 
-Sie können ein Integrationskonto für Query Service erstellen, indem Sie eine POST-Anfrage an die `/accounts` -Endpunkt.
+Sie können ein Integrationskonto für Query Service erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/accounts` senden.
 
 **API-Format**
 
@@ -72,12 +72,12 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu erstellte
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `technicalAccountName` | Der Name Ihres Query Service-Integrationskontos. |
-| `technicalAccountId` | Die ID Ihres Query Service-Integrationskontos. Dies wird zusammen mit dem `credential`, stellt Ihr Passwort für Ihr Konto zusammen. |
-| `credential` | Die Berechtigung Ihres Query Service-Integrationskontos. Dies wird zusammen mit dem `technicalAccountId`, stellt Ihr Passwort für Ihr Konto zusammen. |
+| `technicalAccountId` | Die ID Ihres Query Service-Integrationskontos. Dies stellt zusammen mit dem `credential` Ihr Kennwort für Ihr Konto zusammen. |
+| `credential` | Die Berechtigung Ihres Query Service-Integrationskontos. Dies stellt zusammen mit dem `technicalAccountId` Ihr Kennwort für Ihr Konto zusammen. |
 
 ## Konto aktualisieren
 
-Sie können Ihr Integrationskonto für Query Service aktualisieren, indem Sie eine PUT-Anfrage an die `/accounts` -Endpunkt.
+Sie können Ihr Query Service-Integrationskonto aktualisieren, indem Sie eine PUT-Anfrage an den `/accounts` -Endpunkt senden.
 
 **API-Format**
 
@@ -135,7 +135,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Alle Konten auflisten
 
-Sie können eine Liste aller Query Service-Integrationskonten abrufen, indem Sie eine GET-Anfrage an die `/accounts` -Endpunkt.
+Sie können eine Liste aller Query Service-Integrationskonten abrufen, indem Sie eine GET-Anfrage an den `/accounts` -Endpunkt senden.
 
 **API-Format**
 
@@ -206,7 +206,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste aller Query S
 
 ## Konto löschen
 
-Sie können Ihr Integrationskonto für Query Service löschen, indem Sie eine DELETE-Anfrage an die `/accounts` -Endpunkt.
+Sie können Ihr Integrationskonto für Query Service löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/accounts` senden.
 
 **API-Format**
 

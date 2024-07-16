@@ -5,16 +5,16 @@ description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Pla
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 87%
+source-wordcount: '445'
+ht-degree: 89%
 
 ---
 
-# [!DNL Marketo]-Erweiterung  {#marketo-extension}
+# [!DNL Marketo]-Erweiterung {#marketo-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Marketo]Die leistungsstarke Marketing-Automatisierungs-Software hilft Marketern, die Kunst und Wissenschaft des digitalen Marketings Übergeordnet zu gestalten, um Kunden und Interessenten zu binden.
+Die leistungsstarke Marketing-Automatisierungssoftware von [!DNL Marketo] hilft Marketern, die Kunst und Wissenschaft des digitalen Marketings zu beherrschen, um Kunden und Interessenten zu binden.
 
 [!DNL Marketo] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der [Seite der Erweiterung auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Marketo] Erweiterung:
+So installieren Sie die [!DNL Marketo]-Erweiterung:
 
 1. Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 2. Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.

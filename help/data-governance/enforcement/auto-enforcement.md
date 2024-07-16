@@ -19,7 +19,7 @@ Um Ihre Organisation vor potenziellen Risiken und Verbindlichkeiten zu schützen
 
 >[!IMPORTANT]
 >
->Einverständnisrichtlinien und die automatische Durchsetzung von Einwilligungsrichtlinien sind nur für Unternehmen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield**.
+>Einverständnisrichtlinien und die automatische Durchsetzung von Einwilligungsrichtlinien sind nur für Organisationen verfügbar, die **Adobe Healthcare Shield** oder **Adobe Privacy &amp; Security Shield** erworben haben.
 
 Dieses Dokument konzentriert sich auf die Durchsetzung von Richtlinien zu Data Governance und Einverständnis. Informationen zu Richtlinien für die Zugriffssteuerung finden Sie in der Dokumentation zur [attributbasierten Zugriffssteuerung](../../access-control/abac/overview.md).
 
@@ -94,35 +94,35 @@ Wenn ein Richtlinienverstoß beim Versuch auftritt, eine Zielgruppe zu aktiviere
 
 Wählen Sie einen Richtliniennamen aus, um Details zu diesem Verstoß anzuzeigen.
 
-![Ein Dialogfeld, das angibt, dass eine Richtlinienverletzung aufgetreten ist und der Richtlinienname hervorgehoben wurde.](../images/enforcement/violation-policy-select.png)
+![Ein Dialogfeld, das anzeigt, dass eine Richtlinienverletzung aufgetreten ist, wobei der Richtlinienname hervorgehoben ist.](../images/enforcement/violation-policy-select.png)
 
 Die Meldung zum Verstoß enthält eine Zusammenfassung der verletzten Richtlinie. Hierzu gehören die Bedingungen, die die Richtlinie gemäß Konfiguration überprüft, die spezifische Aktion, durch die der Verstoß ausgelöst wurde, sowie eine Liste möglicher Lösungen für das Problem.
 
-![Ein Dialogfeld mit einer Richtlinienverletzung, in dem die Zusammenfassung der Verstöße hervorgehoben ist.](../images/enforcement/violation-summary.png)
+![Ein Dialogfeld für einen Richtlinienverstoß, in dem die Zusammenfassung der Verstöße hervorgehoben ist.](../images/enforcement/violation-summary.png)
 
 Unter der Zusammenfassung der Verletzung wird ein Datenherkunftsdiagramm angezeigt, das Ihnen veranschaulicht, welche Datensätze, Zusammenführungsrichtlinien, Zielgruppen und Ziele an der Richtlinienverletzung beteiligt waren. Die Entität, die Sie aktuell ändern, wird im Diagramm hervorgehoben, sodass klar ist, welcher Punkt im Fluss die Verletzung verursacht. Sie können einen Entitätsnamen im Diagramm auswählen, um die Detailseite für die jeweilige Entität zu öffnen.
 
-![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobenem Datenherstellungsdiagramm.](../images/enforcement/data-lineage.png)
+![Ein Dialogfeld für einen Richtlinienverstoß mit hervorgehobenem Datenherstellungsdiagramm.](../images/enforcement/data-lineage.png)
 
-Sie können auch die **[!UICONTROL Filter]** Symbol (![Ein Filtersymbol.](../images/enforcement/filter.png)), um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
+Sie können auch das Symbol **[!UICONTROL Filter]** (![Filtersymbol) verwenden.](../images/enforcement/filter.png)), um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
 
-![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobenem Filter für Datenherkunft und Dropdown-Menü.](../images/enforcement/lineage-filter.png)
+![Ein Dialogfeld mit einem Richtlinienverstoß, in dem der Filter für die Datenherkunft und das Dropdown-Menü hervorgehoben sind.](../images/enforcement/lineage-filter.png)
 
 Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste anzuzeigen. Um zum visuellen Diagramm zurückzukehren, wählen Sie **[!UICONTROL Pfadansicht]**.
 
-![Ein Dialogfeld für Richtlinienverstöße mit hervorgehobener Pfadansicht für die Datenherkunft.](../images/enforcement/list-view.png)
+![Ein Dialogfeld für einen Richtlinienverstoß mit hervorgehobener Ansicht des Datenherstellungspfads.](../images/enforcement/list-view.png)
 
-#### Erfolgreich angewendete Beschriftungen {#labels-successfully-applied}
+#### Labels erfolgreich angewendet {#labels-successfully-applied}
 
-Wenn Sie Datennutzungsrichtlinien erstellen, bevor Sie Ihre Schemafelder beschriften, wird möglicherweise ein Dialogfeld zur Verletzung von Governance-Richtlinien angezeigt, sobald Sie Beschriftungen auf Ihr Schema anwenden. In diesem Fall können Sie einen Teil Ihres Schemas erfolgreich beschriften. Die [!UICONTROL Erfolgreich angewendete Beschriftungen] gibt an, welche Beschriftungen erfolgreich angewendet wurden, da für dieses Feld keine Richtlinienbeschränkungen bestehen.
+Wenn Sie Datennutzungsrichtlinien erstellen, bevor Sie Ihre Schemafelder beschriften, wird möglicherweise ein Dialogfeld zur Verletzung von Governance-Richtlinien angezeigt, sobald Sie Beschriftungen auf Ihr Schema anwenden. In diesem Fall können Sie einen Teil Ihres Schemas erfolgreich beschriften. Die Registerkarte [!UICONTROL Bezeichnungen, die erfolgreich angewendet wurden] gibt an, welche Bezeichnungen erfolgreich angewendet wurden, da für dieses Feld keine Richtlinienbeschränkungen gelten.
 
 Verwenden Sie das Datenherstellungsdiagramm, um zu verstehen, welche anderen Konfigurationsänderungen vorgenommen werden müssen, bevor Sie die Beschriftung zum Schemafeld hinzufügen können.
 
-![Ein Dialogfeld mit einer Richtlinienverletzung mit [!UICONTROL Erfolgreich angewendete Beschriftungen] hervorgehoben.](../images/enforcement/labels-successfully-applied.png)
+![Ein Dialogfeld für einen Richtlinienverstoß mit der Registerkarte [!UICONTROL Bezeichnungen erfolgreich angewendet] wurde hervorgehoben.](../images/enforcement/labels-successfully-applied.png)
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Beim Aktivieren einer Zielgruppe für ein Ziel können Sie sehen, wie Ihre [Einverständnisrichtlinien](../policies/user-guide.md#consent-policy) sich auf unterschiedliche Prozentsätze der Profile auswirken, die in der Aktivierung enthalten sind.
+Beim Aktivieren einer Zielgruppe für ein Ziel können Sie sehen, wie sich Ihre [Zustimmungsrichtlinien](../policies/user-guide.md#consent-policy) auf die verschiedenen Prozentsätze der Profile auswirken, die in der Aktivierung enthalten sind.
 
 >[!NOTE]
 >

@@ -31,7 +31,7 @@ Tags werden [!DNL Adobe Experience Cloud]-Kunden als inbegriffene Mehrwertfunkti
 
 Verwenden Sie die Hilfe zum Produkt in der rechten Leiste, um mehr über Tags zu erfahren und zusätzliche verfügbare Ressourcen anzuzeigen.
 
-![Eigenschaften von Tags in der Datenerfassungs-Benutzeroberfläche.](./images/ui/tags-overview/tags-properties.png)
+![Tags-Eigenschaften in der Datenerfassungs-Benutzeroberfläche.](./images/ui/tags-overview/tags-properties.png)
 
 ### Erweiterungen {#extensions}
 

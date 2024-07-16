@@ -79,8 +79,8 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
-| [!DNL AI Assistant] | [!UICONTROL Aktivieren des KI-Assistenten] | Möglichkeit, die [KI-Assistent](../ai-assistant/access.md) Fragen. |
-| [!DNL AI Assistant] | [!UICONTROL Anzeigen operativer Einblicke] | Zugriff auf das Abrufen von Antworten [operative Erkenntnisse](../ai-assistant/home.md##operational-insights) Abfragen. |
+| [!DNL AI Assistant] | [!UICONTROL KI-Assistenten aktivieren] | Möglichkeit, Fragen an den [KI-Assistenten](../ai-assistant/access.md) zu stellen. |
+| [!DNL AI Assistant] | [!UICONTROL Anzeigen operativer Einblicke] | Zugriff auf Antworten auf [operative Einblicke](../ai-assistant/home.md##operational-insights)-Abfragen. |
 | [!DNL Alerts] | [!UICONTROL Warnhinweisverlauf anzeigen] | Schreibgeschützter Zugriff auf den Warnhinweisverlauf. |
 | [!DNL Alerts] | [!UICONTROL Auflösen von Warnhinweisen] | Zugriff zum Lesen, Bearbeiten und Löschen von Warnhinweisen. |
 | [!DNL Alerts] | [!UICONTROL Anzeigen von Warnhinweisen] | Schreibgeschützter Zugriff auf Warnhinweise |
@@ -98,7 +98,7 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Zugriff zum Erstellen, Akzeptieren und Ablehnen von Partner-Handshakes, um zwei Organisationen miteinander zu verbinden und [!DNL Segment Match]-Flüsse zu aktivieren. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Veröffentlichen von [!DNL Segment Match]-Feeds mit aktiven Partnern. |
 | [!DNL Data Lifecycle] | [!UICONTROL Datenlebenszyklus anzeigen] | Schreibgeschützter Zugriff für den Datenlebenszyklus. |
-| [!DNL Data Lifecycle] | [!UICONTROL Data Lebenszyklus verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen des Datenlebenszyklus. |
+| [!DNL Data Lifecycle] | [!UICONTROL Data Lifecycle verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen des Datenlebenszyklus. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Schemata] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schemata und zugehörigen Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Anzeigen von Schemata] | Schreibgeschützter Zugriff auf Schemata und zugehörige Ressourcen. |
 | [!DNL Data Modeling] | [!UICONTROL Verwalten von Beziehungen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Schema-Beziehungen. |
@@ -107,11 +107,11 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Data Management] | [!UICONTROL Anzeigen von Datensätzen] | Schreibgeschützter Zugriff auf Datensätze und Schemata. |
 | [!DNL Data Management] | [!UICONTROL Datenüberwachung] | Schreibgeschützter Zugriff auf das Monitoring von Datensätzen und Streams. |
 | [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen in [!DNL Data Science Workspace]. |
-| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff zur Anzeige der verfügbaren Ziele im **[!UICONTROL Katalog]** Registerkarte und authentifizierte Ziele im **[!UICONTROL Durchsuchen]** Registerkarte. |
+| [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff zur Anzeige der verfügbaren Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierter Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]** . |
 | [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen und Löschen von Zielverbindungen und Zielkonten. |
-| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Ermöglicht Benutzerinnen und Benutzern das Aktivieren von Segmenten für vorhandene Ziele. Aktiviert den Zuordnungsschritt im Aktivierungs-Workflow. Diese Berechtigung erfordert auch die [!UICONTROL Ziele anzeigen] -Berechtigung für den Benutzer, der Daten für Ziele aktiviert. |
-| [!DNL Destinations] | [!UICONTROL Segment ohne Zuordnung aktivieren] | Ermöglicht das Aktivieren von Segmenten für vorhandene Ziele, ohne den [Zuordnungsschritt](../destinations/ui/activate-batch-profile-destinations.md#mapping) anzuzeigen. Benutzerinnen  und Bbenutzer können in Aktivierungs-Workflows Segmente, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. Diese Berechtigung erfordert auch die [!UICONTROL Ziele anzeigen] -Berechtigung für den Benutzer, der Daten für Ziele aktiviert. |
-| [!DNL Destinations] | [!UICONTROL Verwalten und Aktivieren von Datensatzzielen] | Fähigkeit zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Datensatzexport-Flüssen. Möglichkeit, auch Daten für aktive Datensätze zu aktivieren, die erstellt wurden. Diese Berechtigung erfordert auch die [!UICONTROL Ziele anzeigen] -Berechtigung für den Benutzer, der Daten für Ziele aktiviert. |
+| [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Ermöglicht Benutzerinnen und Benutzern das Aktivieren von Segmenten für vorhandene Ziele. Aktiviert den Zuordnungsschritt im Aktivierungs-Workflow. Diese Berechtigung erfordert auch die Berechtigung [!UICONTROL Ziele anzeigen] , die dem Benutzer gewährt wird, der Daten für Ziele aktiviert. |
+| [!DNL Destinations] | [!UICONTROL Segment ohne Zuordnung aktivieren] | Ermöglicht das Aktivieren von Segmenten für vorhandene Ziele, ohne den [Zuordnungsschritt](../destinations/ui/activate-batch-profile-destinations.md#mapping) anzuzeigen. Benutzerinnen  und Bbenutzer können in Aktivierungs-Workflows Segmente, jedoch keine zugeordneten Attribute oder Identitäten hinzufügen oder entfernen. Diese Berechtigung erfordert auch die Berechtigung [!UICONTROL Ziele anzeigen] , die dem Benutzer gewährt wird, der Daten für Ziele aktiviert. |
+| [!DNL Destinations] | [!UICONTROL Verwalten und Aktivieren von Datensatzzielen] | Fähigkeit zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Datensatzexport-Flüssen. Möglichkeit, auch Daten für aktive Datensätze zu aktivieren, die erstellt wurden. Diese Berechtigung erfordert auch die Berechtigung [!UICONTROL Ziele anzeigen] , die dem Benutzer gewährt wird, der Daten für Ziele aktiviert. |
 | [!DNL Destinations] | [!UICONTROL Ziel-Authoring] | Möglichkeit, Ziele mithilfe des [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) zu erstellen. |
 | [!DNL Identity Management] | [!UICONTROL Verwalten von Identitäts-Namensräumen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Identitäts-Namensräumen. |
 | [!DNL Identity Management] | [!UICONTROL Anzeigen von Identitäts-Namensräumen] | Schreibgeschützter Zugriff für Identitäts-Namensräume. |

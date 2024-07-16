@@ -15,7 +15,7 @@ ht-degree: 93%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Das Löschen einer Ressource entfernt diese Ressource dauerhaft aus Adobe Experience Platform. Wenn Sie eine Ressource aus einer bestimmten Tag-Bibliothek entfernen möchten, diese Ressource aber dennoch für andere Bibliotheken verfügbar sein soll, lesen Sie das Handbuch unter [Entfernen von Ressourcen aus einer Bibliothek](remove-resources-from-library.md).
+Das Löschen einer Ressource entfernt diese Ressource dauerhaft aus Adobe Experience Platform. Wenn Sie eine Ressource aus einer bestimmten Tag-Bibliothek entfernen möchten, diese Ressource aber dennoch für andere Bibliotheken verfügbar sein soll, finden Sie im Handbuch zum Entfernen von Ressourcen aus einer Bibliothek ](remove-resources-from-library.md) weitere Informationen.[
 
 Sie können Datenelemente, Regeln, Erweiterungen, Hosts, Umgebungen und Eigenschaften löschen. Nach der Löschung sind diese Ressourcen nicht wiederherstellbar.
 

@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL IAB TCF 2.0-Zustimmung] Feldergruppe für Profilschemata
+# Feldergruppe [!UICONTROL IAB TCF 2.0 Consent] für Profilschemata
 
 >[!NOTE]
 >
->Dieses Dokument behandelt die [!UICONTROL IAB TCF 2.0-Zustimmung] Schemafeldgruppe für die Klasse &quot;XDM Individual Profile&quot;. Die Feldergruppe, die für die XDM ExperienceEvent-Klasse vorgesehen ist, finden Sie im Folgenden. [Dokument](../event/iab.md) anstatt.
+>Dieses Dokument behandelt die Schemafeldgruppe [!UICONTROL IAB TCF 2.0 Consent] für die Klasse &quot;XDM Individual Profile&quot;. Die Feldergruppe, die für die XDM ExperienceEvent-Klasse vorgesehen ist, finden Sie stattdessen im folgenden [Dokument](../event/iab.md) .
 
-[!UICONTROL IAB TCF 2.0-Zustimmung] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) wird verwendet, um IAB-Zustimmungszeichenfolgen mit Zeitstempel zu erfassen, um Zustimmungsänderungen im Laufe der Zeit zu verfolgen.
+[!UICONTROL IAB TCF 2.0 Consent] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md), die zum Erfassen einer IAB-Zustimmungszeichenfolge mit Zeitstempel verwendet wird, um Zustimmungsänderungsmuster im Laufe der Zeit zu verfolgen.
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-Die folgende JSON-Datei zeigt die Struktur der `identityPrivacyInfo` map.
+Die folgende JSON-Datei zeigt die Struktur der `identityPrivacyInfo`-Zuordnung.
 
 ```json
 {
@@ -50,15 +50,15 @@ Die folgende JSON-Datei zeigt die Struktur der `identityPrivacyInfo` map.
 }
 ```
 
-Wie das Beispiel zeigt, ist jeder Schlüssel auf der Stammebene von `xdm:identityPrivacyInfo` entspricht einem vom Identity Service erkannten Identitäts-Namespace. Jede Namespace-Eigenschaft muss wiederum mindestens eine Untereigenschaft aufweisen, deren Schlüssel mit dem entsprechenden Identitätswert des Kunden für diesen Namespace übereinstimmt. In diesem Beispiel wird der Kunde mit einer Experience Cloud-ID (`ECID`) Wert `13782522493631189`.
+Wie das Beispiel zeigt, entspricht jeder Schlüssel der Stammebene von `xdm:identityPrivacyInfo` einem vom Identity Service erkannten Identitäts-Namespace. Jede Namespace-Eigenschaft muss wiederum mindestens eine Untereigenschaft aufweisen, deren Schlüssel mit dem entsprechenden Identitätswert des Kunden für diesen Namespace übereinstimmt. In diesem Beispiel wird der Kunde mit dem Experience Cloud-ID-Wert (`ECID`) von `13782522493631189` identifiziert.
 
 >[!NOTE]
 >
 >Im obigen Beispiel wird zwar ein einzelnes Namespace-Wert-Paar verwendet, um die Identität des Kunden darzustellen, Sie können aber auch zusätzliche Schlüssel für andere Namespaces hinzufügen. Jeder Namespace kann mehrere Identitätswerte mit jeweils eigenen TCF-Zustimmungsvoreinstellungen aufweisen.
 
-Für jeden Identitätswert wird ein `identityIABConsent` -Eigenschaft muss angegeben werden, die den TCF-Zustimmungswert für die Identität bereitstellt. Der Wert für diese Eigenschaft muss mit dem [[!UICONTROL Zustimmungszeichenfolge] Datentyp](../../data-types/consent-string.md).
+Für jeden Identitätswert muss eine `identityIABConsent` -Eigenschaft angegeben werden, die den TCF-Zustimmungswert für die Identität bereitstellt. Der Wert für diese Eigenschaft muss mit dem Datentyp [[!UICONTROL Zustimmungszeichenfolge]](../../data-types/consent-string.md) übereinstimmen.
 
-Siehe Handbuch unter [IAB TCF 2.0-Unterstützung in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) für weitere Informationen zum Anwendungsfall dieser Feldergruppe. Weitere Informationen zur Feldergruppe selbst finden Sie im öffentlichen XDM-Repository:
+Weitere Informationen zum Anwendungsfall dieser Feldergruppe finden Sie im Handbuch zur Unterstützung von [IAB TCF 2.0 in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) . Weitere Informationen zur Feldergruppe selbst finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

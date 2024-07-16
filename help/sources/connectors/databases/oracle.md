@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Oracle; oracle
+keywords: Experience Platform; home; beliebte Themen; Oracle; oracle
 solution: Experience Platform
 title: Oracle Source Connector - Übersicht
 description: Erfahren Sie, wie Sie Oracle über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
@@ -7,21 +7,21 @@ exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 52%
+ht-degree: 36%
 
 ---
 
 # [!DNL Oracle]-Connector
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
 
-Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter umfasst [!DNL Oracle].
+Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter beinhaltet [!DNL Oracle].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Oracle] mit mithilfe von APIs oder der Benutzeroberfläche:[!DNL Platform]
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche [!DNL Oracle] mit [!DNL Platform] verbinden:
 
 ## Verbinden von [!DNL Oracle] mit [!DNL Platform] mithilfe von APIs
 

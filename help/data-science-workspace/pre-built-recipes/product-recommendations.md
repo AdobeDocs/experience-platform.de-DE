@@ -6,7 +6,7 @@ description: Mit dem Rezept „Produktempfehlungen“ können Sie personalisiert
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '466'
 ht-degree: 90%
 
 ---
@@ -25,14 +25,14 @@ Das Rezept „Produktempfehlungen“ verwendet maschinelles Lernen, um frühere 
 
 ## Wie sehen die ersten Schritte aus?
 
-Beginnen Sie mit dem Tutorial zum Adobe Experience Platform Lab (siehe Lab-Link unten). In diesem Tutorial erfahren Sie, wie Sie das Produkt-Recommendations-Rezept in einem Jupyter-Notebook erstellen, indem Sie Folgendes befolgen: [Notebook an Rezept](../jupyterlab/create-a-model.md) und Implementierung des Rezepts in [!DNL Experience Platform] [!DNL Data Science Workspace].
+Beginnen Sie mit dem Tutorial zum Adobe Experience Platform Lab (siehe Lab-Link unten). In diesem Tutorial erfahren Sie, wie Sie das Produkt-Recommendations-Rezept in einem Jupyter-Notebook erstellen, indem Sie dem Workflow [Notebook an Rezept](../jupyterlab/create-a-model.md) folgen und das Rezept in [!DNL Experience Platform] [!DNL Data Science Workspace] implementieren.
 
 * [Lab: Prognostizieren der Zukunft mit Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab-Ressourcen](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
 ## Datenschema
 
-Dieses Rezept nutzt benutzerdefinierte [XDM-Schemas](../../xdm/schema/field-dictionary.md) zum Modellieren der Eingabe- und Ausgabedaten:
+Dieses Rezept nutzt benutzerdefinierte [XDM-Schemata](../../xdm/schema/field-dictionary.md) zum Modellieren der Eingabe- und Ausgabedaten:
 
 ### Schema für Eingabedaten
 

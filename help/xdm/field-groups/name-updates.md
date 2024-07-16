@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Endbenutzer; Endbenutzer; Endbenutzer; ID; Aktualisierungen;
+keywords: Experience Platform; home; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Endbenutzer; Endbenutzer; Endbenutzer; ID; Updates;
 solution: Experience Platform
 title: Aktualisierung der Namen der Schemafeldgruppe
 description: Eine Liste der letzten Änderungen am Namen der XDM-Schema-Feldergruppe.
@@ -7,7 +7,7 @@ exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 15%
+ht-degree: 7%
 
 ---
 
@@ -21,30 +21,30 @@ In der folgenden Tabelle werden die vorhandenen Feldergruppen, die aktualisiert 
 | Vorheriger Name | Aktualisierter Name |
 | --- | --- |
 | [!UICONTROL Datenschutz-Mixin für Erlebnisereignisse] | [!UICONTROL Datenschutzdetails] |
-| [!UICONTROL ExperienceEvent-Anwendungsdetails] | [!UICONTROL Anwendungsdetails] |
-| [!UICONTROL ExperienceEvent-Kanaldetails] | [!UICONTROL Kanaldetails] |
+| [!UICONTROL Anwendungsdetails für ExperienceEvent] | [!UICONTROL Anwendungsdetails] |
+| [!UICONTROL Details zum ExperienceEvent-Kanal] | [!UICONTROL Kanaldetails] |
 | [!UICONTROL ExperienceEvent-Commerce-Details] | [!UICONTROL Handelsdetails] |
-| [!UICONTROL ExperienceEvent-Details für Werbung] | [!UICONTROL Werbedetails] |
-| [!UICONTROL ExperienceEvent-Details für das Marketing] | [!UICONTROL Kampagnen-Marketing-Details] |
-| [!UICONTROL ExperienceEvent-Details für Medien] | [!UICONTROL Medieninteraktionsdetails] |
+| [!UICONTROL ExperienceEvent-Details für Werbung] | [!UICONTROL Advertising-Details] |
+| [!UICONTROL ExperienceEvent-Details für Marketing] | [!UICONTROL Kampagnen-Marketing-Details] |
+| [!UICONTROL ExperienceEvent-Details für media] | [!UICONTROL Medien-Interaktionsdetails] |
 | [!UICONTROL ExperienceEvent-Details für die Suche] | [!UICONTROL Suchdetails] |
-| [!UICONTROL Direkte Marketing-Details zu ExperienceEvent] | [!UICONTROL Direkt-Marketing-Details] |
+| [!UICONTROL Direkte Marketing-Details für ExperienceEvent] | [!UICONTROL Direkte Marketingdetails] |
 | [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL Details zur Endbenutzer-ID] |
 | [!UICONTROL Details zur ExperienceEvent-Umgebung] | [!UICONTROL Umgebungsdetails] |
-| [!UICONTROL Details zur ExperienceEvent-Implementierung] | [!UICONTROL Implementierungsdetails] |
-| [!UICONTROL Details zur ExperienceEvent-Profilzuordnung] | [!UICONTROL Profilzuordnung] |
-| [!UICONTROL Details zur Segmentmitgliedschaft in ExperienceEvent] | [!UICONTROL Details zur Segmentzugehörigkeit] |
+| [!UICONTROL Implementierungsdetails für ExperienceEvent] | [!UICONTROL Implementierungsdetails] |
+| [!UICONTROL Details zur ExperienceEvent-Profilzuordnung] | [!UICONTROL Profilzusammenfügung] |
+| [!UICONTROL Details zur Segmentmitgliedschaft in ExperienceEvent] | [!UICONTROL Details der Segmentmitgliedschaft] |
 | [!UICONTROL Technische Details zu ExperienceEvent] | [!UICONTROL Technische Details] |
 | [!UICONTROL ExperienceEvent-Webdetails] | [!UICONTROL Web-Details] |
 | [!UICONTROL Profil-Direktmarketing] | [!UICONTROL Kontaktdetails für Direktmarketing] |
-| [!UICONTROL Persönliche Daten des Profils] | [!UICONTROL Demografische Details] |
-| [!UICONTROL Persönliche Daten des Profils] | [!UICONTROL Persönliche Kontaktdaten] |
-| [!UICONTROL Profilphones] | [!UICONTROL Telefonnummerndetails] |
+| [!UICONTROL Persönliche Details des Profils] | [!UICONTROL Demografische Details] |
+| [!UICONTROL Persönliche Profildetails] | [!UICONTROL Persönliche Kontaktdetails] |
+| [!UICONTROL Profil-Telefone] | [!UICONTROL Telefonnummerndetails] |
 | [!UICONTROL Details zu Profilvoreinstellungen] | [!UICONTROL Präferenzdetails] |
-| [!UICONTROL Profildatenschutz] | [!UICONTROL Datenschutzdetails] |
-| [!UICONTROL Profil-Push-Details] | [!UICONTROL Details zum Push-Benachrichtigungs-Token] |
-| [!UICONTROL Profilsegmentierung] | [!UICONTROL Details zur Segmentzugehörigkeit] |
+| [!UICONTROL Datenschutz bei Profilen] | [!UICONTROL Datenschutzdetails] |
+| [!UICONTROL Profil-Push-Details] | [!UICONTROL Details zum Push-Benachrichtigungstoken] |
+| [!UICONTROL Profilsegmentierung] | [!UICONTROL Details der Segmentmitgliedschaft] |
 | [!UICONTROL Profilanmeldungen] | [!UICONTROL Abonnementdetails] |
-| [!UICONTROL Profil-Arbeitsdetails] | [!UICONTROL Details zu Arbeitskontakten] |
-| [!UICONTROL Details zu Push-Benachrichtigungen] | [!UICONTROL Details zu Push-Benachrichtigungen] |
-| [!UICONTROL Segmentausdruck] | [!UICONTROL Details zu Segmentausdrücken] |
+| [!UICONTROL Profil-Arbeitsdetails] | [!UICONTROL Kontaktdetails für die Arbeit] |
+| [!UICONTROL Details zu Push-Benachrichtigungen] | [!UICONTROL Details der Push-Benachrichtigung] |
+| [!UICONTROL Segmentausdruck] | [!UICONTROL Details des Segmentausdrucks] |

@@ -23,11 +23,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 
 Die [!DNL Marketo]-Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Um Standardaktivitäten zu verwenden, müssen Sie Ihr Schema mithilfe des [Dienstprogramms zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) aktualisieren, denn wenn Sie einen neuen `activities`-Datenfluss erstellen, ohne Ihr Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder nicht in Ihrem Schema vorhanden sind. Wenn Sie sich dafür entscheiden, Ihr Schema nicht zu aktualisieren, können Sie trotzdem einen neuen Datenfluss erstellen und etwaige Fehler ignorieren. Neue oder aktualisierte Felder werden jedoch nicht in Platform aufgenommen.
 
-Lesen Sie die Dokumentation unter [XDM-Erlebnisereignisklasse](../../../../xdm/classes/experienceevent.md) für weitere Informationen zu den XDM-Klassen und XDM-Feldergruppen.
+Lesen Sie die Dokumentation zu [XDM Experience Event Class](../../../../xdm/classes/experienceevent.md) , um weitere Informationen zur XDM-Klasse und zu XDM Field Group(s) zu erhalten.
 
 >[!NOTE]
 >
->Die `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` Das Quellfeld ist ein berechnetes Feld, das mithilfe des **[!UICONTROL Berechnetes Feld hinzufügen]** in der Experience Platform-Benutzeroberfläche. Tutorial lesen unter [Hinzufügung berechneter Felder](../../../../data-prep/ui/mapping.md#calculated-fields) für weitere Informationen.
+>Das Quellfeld `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` ist ein berechnetes Feld, das mithilfe der Option **[!UICONTROL Berechnetes Feld hinzufügen]** in der Experience Platform-Benutzeroberfläche hinzugefügt werden muss. Lesen Sie das Tutorial zum Hinzufügen von berechneten Feldern [](../../../../data-prep/ui/mapping.md#calculated-fields) , um weitere Informationen zu erhalten.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |

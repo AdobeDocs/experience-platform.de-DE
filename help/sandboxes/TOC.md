@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 85%
+ht-degree: 87%
 
 ---
 
@@ -26,12 +26,12 @@ ht-degree: 85%
    * [Sandbox-Verwaltung](api/sandboxes.md)
    * [Sandbox-Typen](api/types.md)
    * [Anhang](api/appendix.md)
-* Sandbox Tooling-API {#sandbox-tooling-api}
+* Sandbox Tooling API {#sandbox-tooling-api}
    * [Übersicht](sandbox-tooling-api/overview.md)
    * [Erste Schritte](sandbox-tooling-api/getting-started.md)
-   * [Pakete](sandbox-tooling-api/packages.md)
+   * [Packages       ](sandbox-tooling-api/packages.md)
    * [Tools](sandbox-tooling-api/tools.md)
    * [Anhang](sandbox-tooling-api/appendix.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Platform – Versionshinweise](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)

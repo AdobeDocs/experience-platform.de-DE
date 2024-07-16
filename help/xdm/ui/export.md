@@ -7,44 +7,44 @@ exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '655'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
-# Exportieren von XDM-Schemas in die Benutzeroberfläche {#export-xdm-schemas-in-the-UI}
+# Exportieren von XDM-Schemata in die Benutzeroberfläche {#export-xdm-schemas-in-the-UI}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_copyjsonstructure"
->title="JSON-Struktur kopieren"
->abstract="Generieren Sie eine Export-Payload für Ihr ausgewähltes Schema, indem Sie die JSON-Struktur in die Zwischenablage kopieren. Verwenden Sie diese Funktion, um die Details eines beliebigen Schemas in der Schema Library zu exportieren. Diese exportierte JSON-Datei kann dann zum Importieren des Schemas und der zugehörigen Ressourcen in eine andere Sandbox oder Organisation verwendet werden. Dadurch wird die Freigabe und Wiederverwendung von Schemas zwischen verschiedenen Umgebungen einfach und effizient."
+>title="Kopieren von JSON-Strukturen"
+>abstract="Generieren Sie eine Export-Payload für Ihr ausgewähltes Schema, indem Sie die JSON-Struktur in die Zwischenablage kopieren. Verwenden Sie diese Funktion, um die Details eines beliebigen Schemas in die Schema-Bibliothek zu exportieren. Diese exportierte JSON-Datei kann dann zum Importieren des Schemas und der zugehörigen Ressourcen in eine andere Sandbox oder Organisation verwendet werden. Dadurch wird die Freigabe und Wiederverwendung von Schemata zwischen verschiedenen Umgebungen einfach und effizient."
 
 Alle Ressourcen in der Schema Library sind in einer bestimmten Sandbox innerhalb eines Unternehmens enthalten. In einigen Fällen möchten Sie möglicherweise Experience-Datenmodell (XDM)-Ressourcen zwischen Sandboxes und Organisationen freigeben.
 
-Um diesem Bedarf zu begegnen, muss die [!UICONTROL Schemas] Mit Workspace in der Adobe Experience Platform-Benutzeroberfläche können Sie eine Export-Payload für ein Schema in der Schema Library generieren. Diese Payload kann dann in einem Aufruf an die Schema Registry-API verwendet werden, um das Schema (und alle abhängigen Ressourcen) in eine Ziel-Sandbox und -Organisation zu importieren.
+Um dies zu erreichen, können Sie mit dem Arbeitsbereich [!UICONTROL Schemas] in der Adobe Experience Platform-Benutzeroberfläche eine Export-Payload für jedes Schema in der Schema Library generieren. Diese Payload kann dann in einem Aufruf an die Schema Registry-API verwendet werden, um das Schema (und alle abhängigen Ressourcen) in eine Ziel-Sandbox und -Organisation zu importieren.
 
 >[!NOTE]
 >
->Sie können die Schema Registry-API auch verwenden, um neben Schemas weitere Ressourcen zu exportieren, darunter Klassen, Schemafeldgruppen und Datentypen. Siehe [Export-Endpunkthandbuch](../api/export.md) für weitere Informationen.
+>Sie können die Schema Registry-API auch verwenden, um neben Schemas weitere Ressourcen zu exportieren, darunter Klassen, Schemafeldgruppen und Datentypen. Weitere Informationen finden Sie im [Export-Endpunkthandbuch](../api/export.md) .
 
 ## Voraussetzungen
 
-Die Platform-Benutzeroberfläche ermöglicht den Export von XDM-Ressourcen. Sie müssen jedoch die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder Organisationen zu importieren und den Workflow abzuschließen. Weitere Informationen finden Sie im Handbuch [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen erhalten, bevor Sie diesem Handbuch folgen.
+Die Platform-Benutzeroberfläche ermöglicht den Export von XDM-Ressourcen. Sie müssen jedoch die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder Organisationen zu importieren und den Workflow abzuschließen. Wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen finden Sie im Leitfaden [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) , bevor Sie dieses Handbuch befolgen.
 
 ## Exportnutzlast generieren {#generate-export-payload}
 
-Export-Payloads können in der Platform-Benutzeroberfläche über das Detailbedienfeld im [!UICONTROL Durchsuchen] oder direkt von der Arbeitsfläche des Schemas im Schema-Editor aus.
+Export-Payloads können in der Platform-Benutzeroberfläche über das Detailbedienfeld auf der Registerkarte [!UICONTROL Durchsuchen] oder direkt über die Arbeitsfläche des Schemas im Schema-Editor generiert werden.
 
-Um eine Export-Payload zu generieren, wählen Sie **[!UICONTROL Schemas]** in der linken Navigation. Innerhalb der [!UICONTROL Schemas] Arbeitsbereich wählen Sie die Zeile für das Schema aus, das Sie exportieren möchten, um Schemadetails in der rechten Seitenleiste anzuzeigen.
+Um eine Export-Payload zu generieren, wählen Sie im linken Navigationsbereich **[!UICONTROL Schemas]** aus. Wählen Sie im Arbeitsbereich [!UICONTROL Schemas] die Zeile für das Schema aus, das Sie exportieren möchten, um Schemadetails in der rechten Seitenleiste anzuzeigen.
 
 >[!TIP]
 >
->Siehe Handbuch unter [Erkunden von XDM-Ressourcen](./explore.md) für Details zum Auffinden der gesuchten XDM-Ressource.
+>Weitere Informationen zum Auffinden der gesuchten XDM-Ressource finden Sie im Handbuch zu [Erkunden von XDM-Ressourcen](./explore.md) .
 
-Wählen Sie als Nächstes die **[!UICONTROL JSON kopieren]** Symbol (![Symbol &quot;Kopieren&quot;](../images/ui/export/icon.png)) aus den verfügbaren Optionen.
+Wählen Sie anschließend das Symbol **[!UICONTROL JSON kopieren]** (![Symbol Kopieren](../images/ui/export/icon.png)) aus den verfügbaren Optionen aus.
 
-![Der Arbeitsbereich &quot;Schemas&quot;mit einer Schemazeile und [!UICONTROL Kopieren in JSON] hervorgehoben.](../images/ui/export/copy-json.png)
+![Der Arbeitsbereich &quot;Schemas&quot;mit einer Schemazeile und [!UICONTROL In JSON kopieren] hervorgehoben.](../images/ui/export/copy-json.png)
 
-Dadurch wird eine JSON-Payload in die Zwischenablage kopiert, die basierend auf der Schemastruktur generiert wurde. Für &quot;[!DNL Loyalty Members]&quot; Schema oben gezeigt, wird die folgende JSON generiert:
+Dadurch wird eine JSON-Payload in die Zwischenablage kopiert, die basierend auf der Schemastruktur generiert wurde. Für das oben dargestellte Schema &quot;[!DNL Loyalty Members]&quot; wird die folgende JSON generiert:
 
 +++Auswählen zum Erweitern der JSON-Beispielnutzlast
 
@@ -212,22 +212,22 @@ Dadurch wird eine JSON-Payload in die Zwischenablage kopiert, die basierend auf 
 
 +++
 
-Die Payload kann auch kopiert werden, indem Sie [!UICONTROL Mehr] oben rechts im Schema Editor. Ein Dropdown-Menü bietet zwei Optionen: [!UICONTROL JSON-Struktur kopieren] und [!UICONTROL Schema löschen].
+Die Payload kann auch kopiert werden, indem Sie oben rechts im Schema Editor [!UICONTROL Mehr] auswählen. Ein Dropdown-Menü bietet zwei Optionen: [!UICONTROL JSON-Struktur kopieren] und [!UICONTROL Schema löschen].
 
 >[!NOTE]
 >
 >Ein Schema kann nicht gelöscht werden, wenn es für Profil aktiviert ist oder über zugeordnete Datensätze verfügt.
 
-![Der Schema-Editor mit [!UICONTROL Mehr] und [!UICONTROL Kopieren in JSON] hervorgehoben.](../images/ui/export/schema-editor-copy-json.png)
+![Der Schema-Editor mit [!UICONTROL Mehr] und [!UICONTROL In JSON kopieren] hervorgehoben.](../images/ui/export/schema-editor-copy-json.png)
 
-Die Payload hat die Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine zu exportierende benutzerdefinierte XDM-Ressource darstellt. Im obigen Beispiel wird der[!DNL Loyalty details]&quot; benutzerdefinierte Feldergruppe und &quot;[!DNL Loyalty Members]&quot; Schema enthalten sind. Kernressourcen, die vom Schema verwendet werden, sind nicht im Export enthalten, da diese Ressourcen in allen Sandboxes und Organisationen verfügbar sind.
+Die Payload hat die Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine zu exportierende benutzerdefinierte XDM-Ressource darstellt. Im obigen Beispiel sind die benutzerdefinierte Feldergruppe &quot;[!DNL Loyalty details]&quot; und das Schema &quot;[!DNL Loyalty Members]&quot; enthalten. Kernressourcen, die vom Schema verwendet werden, sind nicht im Export enthalten, da diese Ressourcen in allen Sandboxes und Organisationen verfügbar sind.
 
-Beachten Sie, dass die Mandanten-ID jeder Instanz Ihres Unternehmens als `<XDM_TENANTID_PLACEHOLDER>` in der Payload. Diese Platzhalter werden automatisch durch den entsprechenden Mandanten-ID-Wert ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt importieren.
+Beachten Sie, dass jede Instanz der Mandanten-ID Ihres Unternehmens in der Payload als `<XDM_TENANTID_PLACEHOLDER>` angezeigt wird. Diese Platzhalter werden automatisch durch den entsprechenden Mandanten-ID-Wert ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt importieren.
 
 ## Importieren der Ressource mit der API {#import-resource-with-api}
 
-Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Payload für eine POST-Anfrage an die `/rpc/import` -Endpunkt in der Schema Registry-API. Siehe [Import-Endpunkthandbuch](../api/import.md) für Details zur Konfiguration des Aufrufs zum Senden des Schemas an die gewünschte Organisation und Sandbox.
+Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Payload für eine POST-Anfrage an den `/rpc/import` -Endpunkt in der Schema Registry-API verwenden. Weitere Informationen zum Konfigurieren des Aufrufs zum Senden des Schemas an die gewünschte Organisation und Sandbox finden Sie im Leitfaden zum [Import-Endpunkt](../api/import.md) .
 
 ## Nächste Schritte
 
-In diesem Handbuch haben Sie erfolgreich ein XDM-Schema in eine andere Organisation oder Sandbox exportiert. Weitere Informationen zu den Funktionen der [!UICONTROL Schemas] Benutzeroberfläche, siehe [[!UICONTROL Schemas] Übersicht über die Benutzeroberfläche](./overview.md).
+In diesem Handbuch haben Sie erfolgreich ein XDM-Schema in eine andere Organisation oder Sandbox exportiert. Weitere Informationen zu den Funktionen der Benutzeroberfläche von [!UICONTROL Schemas] finden Sie in der Übersicht über die Benutzeroberfläche von [[!UICONTROL Schemas]](./overview.md) .

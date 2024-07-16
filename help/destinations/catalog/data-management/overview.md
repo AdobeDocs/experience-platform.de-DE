@@ -5,14 +5,14 @@ description: Data Management Platform (DMPs) ermöglichen es Advertisern, Heraus
 exl-id: 1c925edc-b31e-440f-bdd9-37aa399565d5
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '140'
 ht-degree: 16%
 
 ---
 
-# [!DNL Data Management Platform] (DMP)-Ziele - Übersicht {#dmp-destinations}
+# Übersicht über [!DNL Data Management Platform] (DMP)-Ziele {#dmp-destinations}
 
-[!DNL Data Management Platforms] (DMPs) bieten Advertisern, Herausgebern und Agenturen die Möglichkeit, eindeutige Zielgruppenprofile zu erstellen, ihre wertvollsten Segmente zu identifizieren und diese über jeden digitalen Kanal zu nutzen. Auf diese Weise können Sie eine echte 360-Grad-Ansicht eines Kundenprofils erstellen, aussagekräftige Zielgruppen erstellen und aktivieren.
+[!DNL Data Management Platforms] (DMPs) ermöglichen es Werbetreibenden und Agenturen, eindeutige Zielgruppenprofile zu erstellen, ihre wertvollsten Segmente zu identifizieren und sie über jeden digitalen Kanal zu nutzen. Auf diese Weise können Sie eine echte 360-Grad-Ansicht eines Kundenprofils erstellen, aussagekräftige Zielgruppen erstellen und aktivieren.
 
 Derzeit unterstützt Adobe Experience Platform die unten aufgeführten Data Management Platform-Ziele (DMP). Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 

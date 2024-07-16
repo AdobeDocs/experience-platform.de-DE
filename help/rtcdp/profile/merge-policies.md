@@ -13,8 +13,8 @@ ht-degree: 32%
 
 # Zusammenführungsrichtlinien – Übersicht
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die [!DNL Platform] verwendet , um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht des Profils zu erstellen.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Profilansicht zu erstellen.
 
 Über eine RESTful-API und die Experience Platform-Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen. Außerdem können Sie Voreinstellungen für Datenquellen definieren und festlegen, welche Daten beim Auftreten eines Konflikts beim Zusammenführen Priorität haben sollen.
 
-Um mehr über Zusammenführungsrichtlinien und ihre Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst das [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md).
+Um mehr über Zusammenführungsrichtlinien und die Rolle zu erfahren, die sie innerhalb von Experience Platform spielen, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md).

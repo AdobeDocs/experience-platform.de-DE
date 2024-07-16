@@ -7,11 +7,11 @@ exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
 source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
-# Governance-Richtlinien in Attribution AI
+# Governance-Strategien in Attribution AI
 
 Sobald Sie den Workflow zur Modellerstellung abgeschlossen haben und die Konfiguration des Modells übermitteln, wird im Rahmen der [Richtliniendurchsetzung](../../../data-governance/enforcement/auto-enforcement.md) überprüft, ob Verstöße vorliegen. Wenn ein Richtlinienverstoß auftritt, wird ein Popup angezeigt, das angibt, dass eine oder mehrere Richtlinien verletzt wurden. Dadurch soll sichergestellt werden, dass Ihre Datenvorgänge und Marketing-Aktionen in Platform mit Datennutzungsrichtlinien konform sind.
 

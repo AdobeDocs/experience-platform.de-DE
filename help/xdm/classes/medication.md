@@ -9,18 +9,18 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL Medizin] class
+# [!UICONTROL Medication] class
 
-Im Experience-Datenmodell (XDM) wird die [!UICONTROL Medizin] Klasse erfasst die Mindesteigenschaften, die einen Stoff definieren, der für die medizinische Behandlung verwendet wird, insbesondere ein Arzneimittel oder ein Medikament.
+Im Experience-Datenmodell (XDM) erfasst die Klasse [!UICONTROL Medication] die Mindesteigenschaften, die einen Stoff definieren, der für die medizinische Behandlung verwendet wird, insbesondere ein Arzneimittel oder ein Medikament.
 
 ![Klassenstruktur](../images/classes/medication.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `_id` | [!UICONTROL String] | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemgeneriert ist, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten. |
+| `_id` | [!UICONTROL String] | Eine eindeutige, systemgenerierte Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Da dieses Feld systemseitig generiert wird, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten. |
 | `medicationId` | [!UICONTROL String] | Eine eindeutige Kennung für das Medikament. |
 | `medicationName` | [!UICONTROL String] | Der Name des Arzneimittels. |
 
 {style="table-layout:auto"}
 
-Die Klasse kann mit der [[!UICONTROL Medizin] Feldergruppe](../field-groups/medication/healthcare-medication.md) zur Beschreibung weiterer Details über das Arzneimittel oder Arzneimittel.
+Die Klasse kann mit der Feldergruppe [[!UICONTROL Gesundheitsmedikament] ](../field-groups/medication/healthcare-medication.md) erweitert werden, um weitere Details über das Arzneimittel oder Medikament zu beschreiben.

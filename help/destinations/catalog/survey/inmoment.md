@@ -5,16 +5,16 @@ description: Die InMoment-Erweiterung ist ein Umfrageziel in Adobe Experience Pl
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '464'
 ht-degree: 85%
 
 ---
 
-# [!DNL InMoment]-Erweiterung  {#inmoment-extension}
+# [!DNL InMoment]-Erweiterung {#inmoment-extension}
 
 ## Übersicht {#overview}
 
-Die [!DNL InMoment] Tag-Erweiterung ermöglicht es Ihnen, Online-Feedback schnell und einfach über Digital Intercept zu aktivieren. Im Programm können Abfangen über den CXI Cloud Admin konfiguriert und verwaltet werden, sodass CX-Manager ihre Programme besser steuern können.
+Mit der Tag-Erweiterung [!DNL InMoment] können Sie schnell und einfach Online-Feedback über das Digital Intercept-Produkt aktivieren. Im Programm können Abfangen über den CXI Cloud Admin konfiguriert und verwaltet werden, sodass CX-Manager ihre Programme besser steuern können.
 
 [!DNL InMoment] ist eine Umfrageerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL InMoment] Erweiterung:
+So installieren Sie die [!DNL InMoment]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

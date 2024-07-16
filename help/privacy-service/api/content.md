@@ -15,19 +15,19 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->Die `/content` -Endpunkt befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
+>Der Endpunkt `/content` befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
 
-Verwenden Sie die `/content` Endpunkt zum sicheren Abrufen *Zugriffsdaten* (die Informationen, auf die ein Datenschutzsubjekt zu Recht Zugriff anfordern kann) für Ihre Kunden. Die Download-URL, die in der Antwort auf eine `/jobs/{JOB_ID}` GET-Anfrage verweist auf einen Adobe-Dienstendpunkt. Anschließend können Sie eine GET-Anfrage an `/jobs/:JOB_ID/content` , um Ihre Kundendaten im JSON-Format zurückzugeben. Diese Zugriffsmethode implementiert mehrere Ebenen der Authentifizierung und Zugriffskontrolle, um die Sicherheit zu erhöhen.
+Verwenden Sie den `/content` -Endpunkt, um *Zugriffsinformationen* sicher abzurufen (die Informationen, auf die ein Datenschutzsubjekt berechtigterweise Zugriff anfordern kann). Die in der Antwort auf eine `/jobs/{JOB_ID}` -GET-Anfrage angegebene Download-URL verweist auf einen Adobe-Dienstendpunkt. Anschließend können Sie eine GET-Anfrage an `/jobs/:JOB_ID/content` senden, um Ihre Kundendaten im JSON-Format zurückzugeben. Diese Zugriffsmethode implementiert mehrere Ebenen der Authentifizierung und Zugriffskontrolle, um die Sicherheit zu erhöhen.
 
-Bevor Sie dieses Handbuch verwenden, lesen Sie bitte den Abschnitt [Erste Schritte](./getting-started.md) Informationen zu den erforderlichen Authentifizierungskopfzeilen finden Sie im folgenden Beispiel-API-Aufruf.
+Bevor Sie dieses Handbuch verwenden, lesen Sie bitte das Erste-Schritte-Handbuch ](./getting-started.md) , um Informationen zu den erforderlichen Authentifizierungskopfzeilen zu erhalten, das im folgenden Beispiel-API-Aufruf vorgestellt wird.[
 
 >[!TIP]
 >
->Wenn Sie die Auftrags-ID für die benötigten Zugriffsinformationen derzeit nicht kennen, rufen Sie die `/jobs` -Endpunkt und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Eine vollständige Liste der verfügbaren Abfrageparameter finden Sie im Abschnitt [Endleitfaden für Datenschutzaufträge](./privacy-jobs.md).
+>Wenn Sie die Auftrags-ID für die benötigten Zugriffsinformationen derzeit nicht kennen, rufen Sie den Endpunkt `/jobs` auf und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Eine vollständige Liste der verfügbaren Abfrageparameter finden Sie im [Endpunkthandbuch zu Datenschutzaufträgen](./privacy-jobs.md).
 
 ## Abrufen von Datenschutzauftragsinformationen
 
-Um Informationen zu einem bestimmten Auftrag abzurufen, z. B. dessen aktuellen Verarbeitungsstatus, schließen Sie die `jobId` im Pfad einer GET-Anfrage an die `/jobs` -Endpunkt.
+Um Informationen zu einem bestimmten Auftrag abzurufen, z. B. dessen aktuellen Verarbeitungsstatus, fügen Sie den Wert &quot;`jobId`&quot;des Auftrags in den Pfad einer GET-Anfrage zum `/jobs` -Endpunkt ein.
 
 **API-Format**
 
@@ -53,7 +53,7 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 
 >[!NOTE]
 >
->Datenschutzaufträge müssen `complete` -Status, der `downloadUrl`.
+>Datenschutzaufträge müssen den Status `complete` aufweisen, um den Wert `downloadUrl` enthalten zu können.
 
 ```json
 {
@@ -87,7 +87,7 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 |----------------------|---------------------------------------------------------------------------------------------------------------|
 | `jobId` | Eine eindeutige Kennung für den Datenschutzauftrag. |
 | `requestId` | Eine eindeutige Kennung für die spezifische Anfrage an den Privacy Service. |
-| `userKey` | `userKey` ist die `key` -Wert, den Sie beim Senden der Datenschutzanfrage angegeben haben. Die `key` -Wert ist Ihre Möglichkeit, eine für Sie sinnvolle Kennung für das Datensubjekt bereitzustellen. Es handelt sich normalerweise um eine eindeutige Kennung, die Ihr System zur Verfolgung dieser betroffenen Person erstellt hat. TIPP: Sie können alle aktiven Datenschutzaufträge auflisten und Ihre `key` zu jedem Auftrag. |
+| `userKey` | `userKey` ist der `key` -Wert, den Sie beim Senden der Datenschutzanfrage angegeben haben. Der Wert `key` ist Ihre Möglichkeit, eine für Sie sinnvolle Kennung für das Datensubjekt bereitzustellen. Es handelt sich normalerweise um eine eindeutige Kennung, die Ihr System zur Verfolgung dieser betroffenen Person erstellt hat. TIPP: Sie können alle aktiven Datenschutzaufträge auflisten und Ihre `key` mit jedem Auftrag vergleichen. |
 | `action` | Die Art der angeforderten Aktion. Die zulässigen Werte sind `access` und `delete`. |
 | `status` | Der aktuelle Status des Datenschutzauftrags. |
 | `submittedBy` | Die E-Mail-Adresse der Person, die den Datenschutzauftrag gesendet hat. |
@@ -105,18 +105,18 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 | `productResponses.processedDate` | Datum und Uhrzeit der Verarbeitung der Produktantwort. |
 | `productResponses.productStatusResponse` | Ein Objekt, das den Status der Produktantwort enthält. |
 | `productResponses.productStatusResponse.status` | Der Status der Produktantwort. |
-| `downloadURL` | Dieses Attribut stellt einen Endpunkt bereit, der 60 Tage nach Abschluss des Auftrags aufgerufen werden kann. Der Status des Auftrags muss `complete` und `action` muss `access`. Andernfalls fehlt dieses Feld. |
-| `regulation` | Der Rechtsrahmen, unter dem die Datenschutzanfrage verarbeitet wird, z. B. `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha`usw. |
+| `downloadURL` | Dieses Attribut stellt einen Endpunkt bereit, der 60 Tage nach Abschluss des Auftrags aufgerufen werden kann. Der Status des Auftrags muss `complete` und der `action` muss `access` sein. Andernfalls fehlt dieses Feld. |
+| `regulation` | Das regulatorische Framework, unter dem die Datenschutzanfrage verarbeitet wird, z. B. `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha` usw. |
 
 {style="table-layout:auto"}
 
 ## Abrufen von Kundenzugriffsinformationen {#retrieve-access-data}
 
-Um die auf die Abfrage Ihres Datensubjekts bezogenen &quot;Zugriffsinformationen&quot;abzurufen, wenden Sie eine GET-Anfrage an die `/jobs/{JOB_ID}/content` -Endpunkt. Die Antwort ist eine ZIP-Datei (*.zip), die einen Ordner mit Unterordnern für jedes Produkt enthält, das Daten zum Datensubjekt enthält.
+Um die &quot;Zugriffsinformationen&quot;abzurufen, die als Antwort auf die Abfrage des Datensubjekts erstellt wurden, stellen Sie eine GET-Anfrage an den `/jobs/{JOB_ID}/content` -Endpunkt. Die Antwort ist eine ZIP-Datei (*.zip), die einen Ordner mit Unterordnern für jedes Produkt enthält, das Daten zum Datensubjekt enthält.
 
 >[!TIP]
 >
->Sie benötigen eine bestimmte Auftrags-ID, um diese Anfrage ausführen zu können. Wenn Sie die spezifische Auftrags-ID abrufen müssen, stellen Sie zunächst eine GET-Anfrage an die `/jobs` -Endpunkt und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Detaillierte Informationen einschließlich der zulässigen Abfrageparameter finden Sie im Abschnitt [Endleitfaden für Datenschutzaufträge](./privacy-jobs.md).
+>Sie benötigen eine bestimmte Auftrags-ID, um diese Anfrage ausführen zu können. Wenn Sie die spezifische Auftrags-ID abrufen müssen, stellen Sie zunächst eine GET-Anfrage an den `/jobs` -Endpunkt und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Detaillierte Informationen einschließlich der zulässigen Abfrageparameter finden Sie im [Endpoint-Handbuch zu Datenschutzaufträgen](./privacy-jobs.md).
 
 **API-Format**
 

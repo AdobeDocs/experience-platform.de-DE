@@ -6,7 +6,7 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '797'
 ht-degree: 89%
 
 ---
@@ -83,7 +83,7 @@ Um mit Warnhinweisen in der Platform-Benutzeroberfläche zu arbeiten, müssen Si
 >
 >Weitere Informationen zum Verwalten von Berechtigungen in Platform finden Sie in der [Dokumentation zur Zugangssteuerung](../../access-control/ui/overview.md).
 
-Mit der Berechtigung Warnhinweise anzeigen können Sie erhaltene Warnhinweise anzeigen, indem Sie das Glockensymbol (![Glockensymbol](../images/alerts/overview/icon.png)) oben rechts.
+Mit der Berechtigung Warnhinweise anzeigen können Sie erhaltene Warnhinweise anzeigen, indem Sie oben rechts das Glockensymbol (![Glockensymbol](../images/alerts/overview/icon.png)) auswählen.
 
 ![](../images/alerts/overview/ui.png)
 

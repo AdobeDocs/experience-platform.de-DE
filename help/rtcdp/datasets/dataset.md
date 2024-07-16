@@ -13,6 +13,6 @@ ht-degree: 10%
 
 # Datensätze in Real-time Customer Data Platform
 
-In der Benutzeroberfläche von Real-time Customer Data Platform können Sie alle Datensätze, die Ihr Unternehmen erstellt hat, anzeigen und verwalten sowie neue Datensätze erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensätze]**. Die **[!UICONTROL Durchsuchen]** tab enthält eine Liste von Datensätzen, einschließlich der Spalten mit dem Namen, der erstellten Erstellung (Datum und Uhrzeit), der Quelle, dem Schema und dem Status des letzten Batches sowie Datum und Uhrzeit der letzten Aktualisierung des Datensatzes.
+In der Benutzeroberfläche von Real-time Customer Data Platform können Sie alle Datensätze, die Ihr Unternehmen erstellt hat, anzeigen und verwalten sowie neue Datensätze erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensätze]**. Die Registerkarte **[!UICONTROL Durchsuchen]** enthält eine Liste von Datensätzen, einschließlich der Spalten, die den Namen, die erstellte Datei (Datum und Uhrzeit), die Quelle, das Schema und den letzten Batch-Status sowie Datum und Uhrzeit der letzten Aktualisierung des Datensatzes enthalten.
 
-Informationen zu Datensätzen in [!DNL Experience Platform], beginnen Sie mit dem Lesen der [Datensätze - Übersicht](../../catalog/datasets/overview.md).
+Informationen zu Datensätzen in [!DNL Experience Platform] erhalten Sie, indem Sie die [Datensatzübersicht](../../catalog/datasets/overview.md) lesen.

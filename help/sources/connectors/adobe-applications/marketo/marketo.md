@@ -17,27 +17,27 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) ist eine Komplettlösung für das Lead-Management. B2B-Marketer können damit Kundenerlebnisse transformieren, indem sie in allen Phasen komplexer Journey Interaktionen ermöglichen.
 
-Mit dem [!DNL Marketo Engage] Quell-Connector: Sie können B2B-Daten von [!DNL Marketo Engage] zu Platform hinzufügen und diese Daten mithilfe von Anwendungen, die mit Platform verbunden sind, auf dem neuesten Stand zu halten.
+Mit dem Quell-Connector [!DNL Marketo Engage] können Sie B2B-Daten von [!DNL Marketo Engage] an Platform übertragen und diese Daten mithilfe von Anwendungen, die mit Platform verbunden sind, auf dem neuesten Stand halten.
 
 >[!IMPORTANT]
 >
->Sie müssen Zugriff auf [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) , um alle Marketo-Datensätze für die Segmentierung mit der [Echtzeit-Kundenprofil](../../../../profile/home.md). Ohne Real-Time CDP B2B Edition können Sie die Marketo-Quelle weiterhin verwenden, um Daten aus den Personen- und Aktivitätsdatensätzen zur Segmentierung an das Echtzeit-Kundenprofil zu übertragen.
+>Sie müssen Zugriff auf [Adobe Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) haben, um alle Marketo-Datensätze für die Segmentierung mit dem [Echtzeit-Kundenprofil](../../../../profile/home.md) verwenden zu können. Ohne Real-Time CDP B2B Edition können Sie die Marketo-Quelle weiterhin verwenden, um Daten aus den Personen- und Aktivitätsdatensätzen zur Segmentierung an das Echtzeit-Kundenprofil zu übertragen.
 
-Dieses Dokument bietet einen Überblick über die [!DNL Marketo Engage] Quell-Connector, einschließlich Informationen zur Authentifizierung des Connectors, zur Zuordnung [!DNL Marketo Engage] -Felder auf das Experience-Datenmodell (XDM) und die Datenlatenz des Connectors hinzu.
+Dieses Dokument bietet einen Überblick über den Quell-Connector [!DNL Marketo Engage], einschließlich Informationen zur Authentifizierung des Connectors, zur Zuordnung von [!DNL Marketo Engage] -Feldern zum Experience-Datenmodell (XDM) und zur Datenlatenz des Connectors.
 
 ## Einrichten der Adobe-Organisationszuordnung
 
-Bevor Sie Zuordnungssätze für [!DNL Marketo Engage]müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch unter [Einrichten der Adobe-Organisationszuordnung für [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+Bevor Sie Zuordnungssätze für [!DNL Marketo Engage] festlegen können, müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen dazu finden Sie im Handbuch zum Einrichten der Adobe-Organisationszuordnung für  [!DNL Marketo Engage]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).[
 
-## Authentifizieren Ihrer [!DNL Marketo Engage] Connector
+## Authentifizieren des [!DNL Marketo Engage]-Connectors
 
-Um eine Verbindung herzustellen [!DNL Marketo Engage] in Platform müssen Sie zunächst Werte für Ihre `munchkinId`, `clientId`, und `clientSecret`.
+Um [!DNL Marketo Engage] mit Platform zu verbinden, müssen Sie zunächst Werte für Ihre `munchkinId`, `clientId` und `clientSecret` abrufen.
 
-Siehe die Schritte, die im Abschnitt [Authentifizieren des Marketo-Quell-Connectors](./marketo-auth.md) Dokument zum Abrufen Ihrer Anmeldedaten.
+Lesen Sie die im Dokument [Authentifizieren des Marketo-Quell-Connectors](./marketo-auth.md) beschriebenen Schritte, um Ihre Anmeldeinformationen abzurufen.
 
 ## Einrichten von B2B-Namespaces und des Dienstprogramm zur automatischen Schemaerstellung
 
-Verwenden Sie als Nächstes den B2B-Namespace und das Dienstprogramm zur automatischen Schemaerstellung, um Ihre Platform-Entwicklerkonsole und Postman-Umgebung einzurichten. Auf diese Weise können Sie Ihre B2B-Namespaces und -Schemata automatisch ausfüllen lassen. Detaillierte Anweisungen finden Sie im Handbuch unter [Einrichten Ihrer B2B-Namespaces und des Dienstprogramm zur automatischen Schemaerstellung](./marketo-namespaces.md)
+Verwenden Sie als Nächstes den B2B-Namespace und das Dienstprogramm zur automatischen Schemaerstellung, um Ihre Platform-Entwicklerkonsole und Postman-Umgebung einzurichten. Auf diese Weise können Sie Ihre B2B-Namespaces und -Schemata automatisch ausfüllen lassen. Detaillierte Anweisungen finden Sie im Handbuch zum [Einrichten Ihrer B2B-Namespaces und des Dienstprogramm zur automatischen Schemaerstellung](./marketo-namespaces.md) .
 
 ## Experience-Datenmodell (XDM)
 
@@ -45,13 +45,13 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die allgemeine Strukturen 
 
 Durch die Einhaltung von XDM-Standards können Daten einheitlich in das Platform-Ökosystem integriert werden, was die Bereitstellung von Daten und die Erfassung von Informationen erleichtert.
 
-Weitere Informationen zu XDM und seiner Rolle in Platform finden Sie unter [XDM-System - Übersicht](../../../../xdm/home.md).
+Weitere Informationen zu XDM und seiner Rolle in Platform finden Sie in der [XDM-Systemübersicht](../../../../xdm/home.md).
 
-## Feldzuordnung aus [!DNL Marketo Engage] in XDM
+## Feldzuordnung von [!DNL Marketo Engage] zu XDM
 
-So richten Sie eine Quellverbindung zwischen [!DNL Marketo Engage] und Platform, müssen die Marketo-Quelldatenfelder ihren entsprechenden Ziel-XDM-Feldern zugeordnet werden, bevor sie in Platform erfasst werden.
+Um eine Quellverbindung zwischen [!DNL Marketo Engage] und Platform herzustellen, müssen die Marketo-Quelldatenfelder den entsprechenden Ziel-XDM-Feldern zugeordnet werden, bevor sie in Platform erfasst werden.
 
-Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Marketo Engage] Datensätze und Plattform:
+Im Folgenden finden Sie detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Marketo Engage] Datensätzen und Platform:
 
 * [Aktivitäten](../mapping/marketo.md#activities)
 * [Programme](../mapping/marketo.md#programs)
@@ -64,9 +64,9 @@ Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Marketo En
 * [Rollen von Kontakten bei Opportunities](../mapping/marketo.md#opportunity-contact-roles)
 * [Personen](../mapping/marketo.md#persons)
 
-## Erwartete Latenz von [!DNL Marketo Engage] Daten in Platform
+## Erwartete Latenz von [!DNL Marketo Engage] Daten auf Platform
 
-In der folgenden Tabelle wird die erwartete Latenz für die [!DNL Marketo Engage] Daten in Platform, basierend auf der Art der Aufnahme und dem gewünschten Ziel:
+In der folgenden Tabelle wird die erwartete Latenz für das Einbringen von [!DNL Marketo Engage] -Daten in Platform basierend auf der Art der Aufnahme und des gewünschten Ziels beschrieben:
 
 | Ziel | Erwartete Latenz |
 | ----------- | ---------------- |
@@ -79,12 +79,12 @@ In der folgenden Tabelle wird die erwartete Latenz für die [!DNL Marketo Engage
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Die folgende Dokumentation enthält weitere Informationen zum Erstellen eines [!DNL Marketo Engage] Quellverbindung:
+Die folgende Dokumentation enthält weitere Informationen zum Erstellen einer [!DNL Marketo Engage]-Quellverbindung:
 
-* Informationen zum Verbinden Ihrer [!DNL Marketo Engage] Daten an Platform übermitteln, lesen Sie das Tutorial unter [Erstellen einer [!DNL Marketo Engage] Quellverbindung in der Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).
-   * Informationen zum Einrichten von Schemata und zum Erfassen benutzerdefinierter Aktivitätsdaten finden Sie im Tutorial zu [Erstellen einer Quellverbindung und eines Datenflusses für [!DNL Marketo Engage] benutzerdefinierte Aktivitätsdaten](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-   * Informationen zur Migration Ihres ECID-Mappings aus dem [!DNL Person] Datensatz in der [!DNL Activity] Datensatz, lesen Sie die [Migrationshandbuch zur ECID-Zuordnung](./migration.md).
-* Informationen zur zugrunde liegenden Einrichtung für die B2B-Namespaces und -Schemata, die mit [!DNL Marketo Engage], lesen Sie die Dokumentation für [B2B-Namespaces und -Schemata](./marketo-namespaces.md).
-* Informationen zum Auffinden Ihrer [!DNL Marketo Engage] Munchkin-ID und Generieren Ihrer Anmeldeinformationen lesen Sie den Abschnitt [[!DNL Marketo Engage] Authentifizierungshandbuch](./marketo-auth.md).
-* Informationen zu den spezifischen Zuordnungsregeln für [!DNL Marketo Engage] Datensätze, lesen Sie die Dokumentation unter [[!DNL Marketo Engage] Feldzuordnungen](../mapping/marketo.md).
-* Allgemeine Informationen: [!DNL Real-Time Customer Data Platform B2B Edition] und deren Funktionen lesen Sie die Dokumentation unter [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* Informationen zum Verbinden Ihrer [!DNL Marketo Engage] -Daten mit Platform finden Sie im Tutorial zum Erstellen einer  [!DNL Marketo Engage]  -Quellverbindung in der Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).[
+   * Informationen zum Einrichten Ihrer Schemas und Erfassen benutzerdefinierter Aktivitätsdaten finden Sie im Tutorial zum Erstellen einer Quellverbindung und eines Datenflusses für  [!DNL Marketo Engage] benutzerdefinierte Aktivitätsdaten](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md) .[
+   * Informationen zum Migrieren Ihrer ECID-Zuordnung aus dem [!DNL Person] -Datensatz in den [!DNL Activity] -Datensatz finden Sie im Migrationshandbuch zur [ECID-Zuordnung](./migration.md).
+* Informationen zur zugrunde liegenden Einrichtung für die mit [!DNL Marketo Engage] verwendeten B2B-Namespaces und Schemas finden Sie in der Dokumentation für [B2B-Namespaces und -Schemas](./marketo-namespaces.md).
+* Informationen zum Auffinden Ihrer [!DNL Marketo Engage] -Munchkin-ID und zum Generieren Ihrer Anmeldeinformationen finden Sie im [[!DNL Marketo Engage] Authentifizierungshandbuch](./marketo-auth.md).
+* Informationen zu den spezifischen Zuordnungsregeln, die für [!DNL Marketo Engage] -Datensätze gelten, finden Sie in der Dokumentation zu [[!DNL Marketo Engage] Feldzuordnungen](../mapping/marketo.md).
+* Allgemeine Informationen zu [!DNL Real-Time Customer Data Platform B2B Edition] und seinen Funktionen finden Sie in der Dokumentation zu [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

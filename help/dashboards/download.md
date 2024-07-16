@@ -25,7 +25,7 @@ Dieses Dokument bietet eine Zusammenfassung, wie Dashboards über die Platform-B
 
 Um mit dem Herunterladen eines Dashboards zu beginnen, navigieren Sie zum Dashboard, das Sie herunterladen möchten (z. B. das Dashboard [!UICONTROL Profile]), und wählen Sie dann oben rechts im Dashboard das Menü mit weiteren Optionen (**`...`**) aus. Wählen Sie als Nächstes **[!UICONTROL Herunterladen]** aus.
 
-![Das Dashboard Experience Platform Profiles , auf dem die Auslassungspunkte und das Dropdown-Menü Download hervorgehoben sind.](images/download/download-button.png)
+![Das Dashboard &quot;Experience Platform-Profile&quot;mit hervorgehobenen Auslassungspunkten und dem Dropdown-Menü &quot;Herunterladen&quot;](images/download/download-button.png).
 
 ## PDF-Vorschau
 
@@ -33,7 +33,7 @@ Nach dem Klicken auf **[!UICONTROL Herunterladen]** wird das standardmäßige Dr
 
 Im Druckmenü können Sie eine Vorschau der zu speichernden PDF-Datei anzeigen. Die PDF-Datei ist eine wahre Darstellung der Dashboard-Widgets, wie sie in der Platform-Benutzeroberfläche angezeigt werden. Die Größe der PDF-Datei wird automatisch angepasst, um alle derzeit sichtbaren Dashboard-Widgets auf einer einzigen Seite anzuzeigen.
 
-![Die Profilübersicht wird auf einem einzelnen Seitenformat mit dem Bereich Druckoptionen auf der rechten Seite angezeigt.](images/download/download-chrome-print.png)
+![Die Profilübersicht, die auf einem einzelnen Seitenformat mit dem Bereich &quot;Druckoptionen&quot;rechts angezeigt wird.](images/download/download-chrome-print.png)
 
 Die PDF-Datei enthält eine automatisch generierte Kopfzeile mit dem Logo von Experience Platform, dem Namen des Dashboards, Ihrem Namen sowie dem Datum und der Uhrzeit des Herunterladens des Dashboards. Diese Informationen sind schreibgeschützt und können in der PDF-Datei nicht bearbeitet werden.
 
@@ -47,7 +47,7 @@ Klicken Sie nach der Vorschau der PDF-Datei auf **Speichern**, um den Speicheror
 >
 >Bei Bedarf können Sie das Dropdown-Menü **Ziel** verwenden, um **Als PDF speichern** auszuwählen, wenn diese Option nicht automatisch für Sie ausgewählt ist.
 
-![Die Profilübersicht wird auf einem Einzelseitenformat angezeigt, wobei die Option Als PDF-Druck speichern im Dropdown-Menü Ziel hervorgehoben ist.](images/download/download-chrome-print-destination.png)
+![Die Profilübersicht, die auf einem Einzelseitenformat angezeigt wird, wobei die Option Als PDF-Druck speichern im Dropdown-Menü Ziel hervorgehoben ist.](images/download/download-chrome-print-destination.png)
 
 ## Anpassen von Dashboard-PDFs
 
@@ -59,7 +59,7 @@ Sie können beispielsweise das Erscheinungsbild Ihres Profil-Dashboards ändern,
 
 Wenn Sie das aktualisierte Dashboard herunterladen, wird eine neue PDF-Vorschau angezeigt, die dem Erscheinungsbild des Dashboards für die benutzerdefinierten Profile entspricht. Außerdem wird die Größe der PDF-Datei automatisch angepasst, um sicherzustellen, dass alle sichtbaren Widgets in einer PDF-Datei mit einer einzigen Seite enthalten sind.
 
-![Die Profilübersicht wird auf einem einzelnen Seitenformat mit dem Bereich Druckoptionen auf der rechten Seite angezeigt.](images/download/download-chrome-print-modified.png)
+![Die Profilübersicht, die auf einem einzelnen Seitenformat mit dem Bereich &quot;Druckoptionen&quot;rechts angezeigt wird.](images/download/download-chrome-print-modified.png)
 
 Um mehr über das Anpassen von Dashboards zu erfahren, lesen Sie zunächst die [Übersicht zur Dashboard-Anpassung](customize/overview.md).
 

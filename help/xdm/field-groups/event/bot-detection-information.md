@@ -1,18 +1,19 @@
 ---
 title: Feldergruppe "Bot Detection"
 description: Erfahren Sie mehr über die Schemafeldgruppe "Bot Detection"(XDM).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: 8ade14a8-9a34-4060-95b2-812d1a21deeb
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 8%
 
 ---
 
-# [!UICONTROL Bot-Erkennung] Feldergruppe
+# Feldergruppe [!UICONTROL Bot-Erkennung]
 
-[!UICONTROL Bot-Erkennung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe enthält Informationen zum Bot-generierten Traffic.
+[!UICONTROL Bot-Erkennung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md). Die Feldergruppe enthält Informationen zum Bot-generierten Traffic.
 
-![Ein Diagramm des [!UICONTROL Bot-Erkennung] Feldergruppe.](../../images/field-groups/bot-detection-information.png)
+![Ein Diagramm der Feldergruppe [!UICONTROL Bot-Erkennung].](../../images/field-groups/bot-detection-information.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |----------------------------|-----------------|-----------|---------------------------------------------------------|
@@ -25,4 +26,3 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.schema.json)
-

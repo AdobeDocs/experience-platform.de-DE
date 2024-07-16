@@ -13,19 +13,19 @@ ht-degree: 24%
 
 # Erstellen einer Segmentdefinition mithilfe der Segmentation Service-API
 
-Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Vorschau und Speichern einer Segmentdefinition mithilfe der [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Dieses Dokument bietet eine Anleitung zum Entwickeln, Testen, Anzeigen einer Vorschau und Speichern einer Segmentdefinition mit dem [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Informationen zum Erstellen von Segmentdefinitionen mithilfe der Benutzeroberfläche finden Sie in der [Segment Builder-Handbuch](../ui/segment-builder.md).
+Informationen zum Erstellen von Segmentdefinitionen mithilfe der Benutzeroberfläche finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md).
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die an der Erstellung von Segmentdefinitionen beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
+Dieses Tutorial setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Dienste voraus, die am Erstellen von Segmentdefinitionen beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppen mithilfe von Segmentdefinitionen oder anderen externen Quellen aus Echtzeit-Kundenprofildaten.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen mithilfe von Segmentdefinitionen oder anderen externen Quellen aus Echtzeit-Kundenprofildaten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten durch [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profile und Ereignisse gemäß den [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md) aufgenommen werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Platform] APIs.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform] -APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -53,22 +53,22 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Entwickeln einer Segmentdefinition
 
-Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine Abfrage enthält, die in [!DNL Profile Query Language] (PQL). Dieses Objekt wird auch als PQL-Eigenschaft bezeichnet. PQL prädiktiert die Definition der Regeln für die Segmentdefinition anhand von Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile]. Siehe [PQL-Handbuch](../pql/overview.md) für weitere Informationen zum Schreiben von PQL-Abfragen.
+Der erste Schritt bei der Segmentierung besteht darin, eine Segmentdefinition zu definieren. Eine Segmentdefinition ist ein Objekt, das eine in [!DNL Profile Query Language] (PQL) geschriebene Abfrage enthält. Dieses Objekt wird auch als PQL-Eigenschaft bezeichnet. PQL prädikiert die Definition der Regeln für die Segmentdefinition basierend auf Bedingungen, die sich auf Datensatz- oder Zeitreihendaten beziehen, die Sie für [!DNL Real-Time Customer Profile] angeben. Weitere Informationen zum Schreiben von PQL-Abfragen finden Sie im [PQL-Handbuch](../pql/overview.md) .
 
-Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an die `/segment/definitions` -Endpunkt im [!DNL Segmentation] API. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die erforderlich sind, damit eine Segmentdefinition erfolgreich definiert werden kann.
+Sie können eine neue Segmentdefinition erstellen, indem Sie eine POST-Anfrage an den `/segment/definitions` -Endpunkt in der [!DNL Segmentation] -API richten. Im folgenden Beispiel wird beschrieben, wie Sie eine Definitionsanfrage formatieren, einschließlich der Informationen, die erforderlich sind, damit eine Segmentdefinition erfolgreich definiert werden kann.
 
-Eine ausführliche Erläuterung zur Definition einer Segmentdefinition finden Sie im Abschnitt [Entwicklerhandbuch zur Segmentdefinition](../api/segment-definitions.md#create).
+Eine ausführliche Erläuterung zum Definieren einer Segmentdefinition finden Sie im [Entwicklerhandbuch für die Segmentdefinition](../api/segment-definitions.md#create).
 
 ## Schätzen und Anzeigen der Vorschau einer Zielgruppe {#estimate-and-preview-an-audience}
 
-Bei der Entwicklung Ihrer Segmentdefinition können Sie die Tools für die Schätzung und Vorschau in [!DNL Real-Time Customer Profile] um Informationen auf Zusammenfassungsebene anzuzeigen, um sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Schätzungen liefern statistische Informationen über eine Segmentdefinition, z. B. die prognostizierte Zielgruppengröße und das Konfidenzintervall. Vorschau bietet paginierte Listen mit qualifizierten Profilen für eine Segmentdefinition, sodass Sie die Ergebnisse mit dem, was Sie erwarten, vergleichen können.
+Bei der Entwicklung Ihrer Segmentdefinition können Sie die Schätzungs- und Vorschau-Tools in [!DNL Real-Time Customer Profile] verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren. Schätzungen liefern statistische Informationen über eine Segmentdefinition, z. B. die prognostizierte Zielgruppengröße und das Konfidenzintervall. Vorschau bietet paginierte Listen mit qualifizierten Profilen für eine Segmentdefinition, sodass Sie die Ergebnisse mit dem, was Sie erwarten, vergleichen können.
 
 Durch Schätzung und Vorschau Ihrer Zielgruppe können Sie Ihre PQL-Prädikate testen und optimieren, bis sie ein gewünschtes Ergebnis erzielen und dort in einer aktualisierten Segmentdefinition verwendet werden können.
 
 Es gibt zwei erforderliche Schritte, um eine Vorschau Ihrer Segmentdefinition anzuzeigen oder eine Schätzung davon zu erhalten:
 
 1. [Vorschauauftrag erstellen](#create-a-preview-job)
-2. [Anzeigen von Schätzungen oder Vorschau](#view-an-estimate-or-preview) Verwendung der ID des Vorschauauftrags
+2. [Anzeigen der Schätzung oder Vorschau](#view-an-estimate-or-preview) mithilfe der ID des Vorschauauftrags
 
 ### Erstellung von Schätzungen
 
@@ -91,17 +91,17 @@ Schätzungen laufen in der Regel über 10-15 Sekunden, beginnend mit einer grobe
 
 ### Vorschauauftrag erstellen
 
-Sie können einen neuen Vorschauauftrag erstellen, indem Sie eine POST-Anfrage an die `/preview` -Endpunkt.
+Sie können einen neuen Vorschauauftrag erstellen, indem Sie eine POST-Anfrage an den `/preview` -Endpunkt senden.
 
-Detaillierte Anweisungen zum Erstellen eines Vorschauauftrags finden Sie im [Handbuch zu Vorschau- und Schätzendpunkten](../api/previews-and-estimates.md#create-preview).
+Detaillierte Anweisungen zum Erstellen eines Vorschauauftrags finden Sie im Handbuch [Endpunkte für Vorschau und Schätzungen](../api/previews-and-estimates.md#create-preview).
 
 ### Anzeigen einer Schätzung oder Vorschau
 
 Schätzungs- und Vorschauprozesse werden asynchron ausgeführt, da unterschiedliche Abfragen unterschiedliche Zeiträume in Anspruch nehmen können. Nachdem eine Abfrage initiiert wurde, können Sie API-Aufrufe verwenden, um den aktuellen Status der Schätzung oder Vorschau während des Vorgangs abzurufen (GET).
 
-Verwenden der [!DNL Segmentation Service] API können Sie den aktuellen Status eines Vorschauauftrags anhand seiner Kennung nachschlagen. Wenn der Status &quot;RESULT_READY&quot;lautet, können Sie die Ergebnisse anzeigen. Informationen zum aktuellen Status eines Vorschauauftrags finden Sie im Abschnitt unter [Abrufen eines Vorschauauftragsabschnitts](../api/previews-and-estimates.md#get-preview) im Handbuch zu Vorschau- und Schätzungen-Endpunkten. Um den aktuellen Status eines Schätzauftrags zu ermitteln, lesen Sie bitte den Abschnitt unter [Abrufen eines Schätzauftrags](../api/previews-and-estimates.md#get-estimate) im Handbuch zu Vorschau- und Schätzungen-Endpunkten.
+Mit der API [!DNL Segmentation Service] können Sie den aktuellen Status eines Vorschauauftrags anhand seiner Kennung nachschlagen. Wenn der Status &quot;RESULT_READY&quot;lautet, können Sie die Ergebnisse anzeigen. Um den aktuellen Status eines Vorschauauftrags nachzuschlagen, lesen Sie den Abschnitt über den Abschnitt [Abrufen eines Vorschauauftrags](../api/previews-and-estimates.md#get-preview) im Handbuch zu Vorschauen und Schätzungen-Endpunkten. Um den aktuellen Status eines Schätzauftrags zu ermitteln, lesen Sie bitte den Abschnitt über das Abrufen eines Schätzauftrags ](../api/previews-and-estimates.md#get-estimate) im Handbuch für Vorschau- und Schätzendpunkte.[
 
 
 ## Nächste Schritte
 
-Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, können Sie einen Segmentauftrag erstellen, um eine Zielgruppe mithilfe der [!DNL Segmentation Service] API. Siehe Tutorial zu [Segmentergebnisse bewerten und aufrufen](./evaluate-a-segment.md) für detaillierte Schritte, wie Sie dies erreichen können.
+Nachdem Sie Ihre Segmentdefinition entwickelt, getestet und gespeichert haben, können Sie einen Segmentauftrag erstellen, um mithilfe der [!DNL Segmentation Service] -API eine Zielgruppe zu erstellen. Detaillierte Anweisungen dazu finden Sie im Tutorial zum [Auswerten und Aufrufen von Segmentergebnissen](./evaluate-a-segment.md) .

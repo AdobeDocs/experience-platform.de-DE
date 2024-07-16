@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Experience Platform-Tags (China)
 
-Wenn Sie eine [Adobe-verwalteter Host](./hosts/managed-by-adobe-host.md) Um Ihre Adobe Experience Platform-Tags auf Ihrer Website bereitzustellen, werden diese Assets in verschiedenen Inhaltsbereitstellungsnetzwerken (Content Delivery Network, CDNs) auf der ganzen Welt verteilt, um die schnellste Download-Geschwindigkeit zu erzielen. Es gibt jedoch bestimmte Regionen, in denen alle Website-Assets repliziert und auf einem Server in dieser Region gehostet werden müssen.
+Wenn Sie einen [Adobe-verwalteten Host](./hosts/managed-by-adobe-host.md) verwenden, um Ihre Adobe Experience Platform-Tags-Assets auf Ihrer Website bereitzustellen, werden diese Assets auf verschiedene Inhaltsbereitstellungsnetzwerke (Content Delivery Network, CDNs) auf der ganzen Welt verteilt, um die schnellste Download-Geschwindigkeit zu erzielen. Es gibt jedoch bestimmte Regionen, in denen alle Website-Assets repliziert und auf einem Server in dieser Region gehostet werden müssen.
 
 Um dies zu berücksichtigen, bieten Tags in Experience Platform eine Experience Platform-Tags-Funktion (China), mit der Sie Inhalte für diese speziellen Regionen bereitstellen können.
 
@@ -33,14 +33,14 @@ Nachdem Sie Tags in China aktiviert und alle Bibliotheken neu erstellt haben, di
 
 >[!NOTE]
 >
->Der Bibliotheks-Einbettungscode, der unter der [!UICONTROL Standard] Hosting-Region funktioniert weiterhin wie bisher, ebenso wie alle Einbettungscodes &quot;Seitenanfang&quot;oder &quot;Seitenende&quot;, die bereits auf Ihren Websites vorhanden sind.
+>Der Bibliotheks-Einbettungscode, der unter dem Hosting-Bereich [!UICONTROL Standard] aufgeführt ist, funktioniert weiterhin wie gewohnt und alle Einbettungscodes für &quot;Seitenanfang&quot;oder &quot;Seitenende&quot;befinden sich bereits auf Ihren Websites.
 
-Besuchen Sie die **[!UICONTROL Umgebungen]** -Seite oder zeigen Sie im Bildschirm zur Bibliotheksbearbeitung die Installationsanweisungen für die Umgebung an, um die neuen Einbettungscodes zu finden. Jede neue unterstützte Hostingregion wird nach dem [!UICONTROL Standard] Hosting-Region (wird für Gebiete weltweit verwendet, die ohne Experience Platform Tags (China) unterstützt werden). Der folgende Screenshot zeigt einen Einbettungscode für die Region China, die `.cn` als Domäne der obersten Ebene (TLD).
+Rufen Sie die Seite **[!UICONTROL Umgebungen]** auf oder zeigen Sie die Installationsanweisungen für die Umgebung im Bildschirm zum Bearbeiten der Bibliothek an, um die neuen Einbettungscodes zu finden. Jede neue unterstützte Hostingregion wird nach der Hostingregion [!UICONTROL Standard] angezeigt (wird für Gebiete weltweit verwendet, die ohne Experience Platform-Tags (China) unterstützt werden). Der folgende Screenshot zeigt einen Einbettungscode für die chinesische Region, die `.cn` als Domäne der obersten Ebene (TLD) verwendet.
 
 ![Einbettungscode für die chinesische Region](../../images/ui/publishing/premium-cdn/embed-codes.png)
 
-Wählen Sie den entsprechenden Einbettungscode für die Webseite aus und fügen Sie ihn in die `<head>` -Tag Ihres Dokuments. Weitere Informationen zur Installation von Tag-Bibliotheken mithilfe von Einbettungscodes finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche von Umgebungen](./environments.md#installation).
+Wählen Sie den entsprechenden Einbettungscode für die Webseite aus und fügen Sie ihn im Tag `<head>` Ihres Dokuments ein. Weitere Informationen zur Installation von Tag-Bibliotheken mithilfe von Einbettungscodes finden Sie im Handbuch [Umgebungen UI guide](./environments.md#installation) .
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie die Experience Platform-Tags-Funktion (China) für Ihre Tag-Implementierung aktivieren und installieren. Weitere Informationen zum Installieren und Testen von Tag-Bibliotheken in Ihren Web- und mobilen Eigenschaften finden Sie im Abschnitt [Publishing-Übersicht](./overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie die Experience Platform-Tags-Funktion (China) für Ihre Tag-Implementierung aktivieren und installieren. Weitere Informationen zum Installieren und Testen von Tag-Bibliotheken in Ihren Web- und mobilen Eigenschaften finden Sie in der [Veröffentlichungsübersicht](./overview.md).

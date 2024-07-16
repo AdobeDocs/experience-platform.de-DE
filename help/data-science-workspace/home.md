@@ -52,7 +52,7 @@ Bevor wir in die Details von [!DNL Data Science Workspace] eintauchen, hier eine
 | Künstliche Intelligenz | Künstliche Intelligenz befasst sich mit der Theorie und Entwicklung von Computersystemen, die in der Lage sind, Aufgaben auszuführen, die normalerweise menschliche Intelligenz erfordern, wie visuelle Wahrnehmung, Spracherkennung, Entscheidungsfindung und Übersetzung zwischen Sprachen. |
 | Maschinelles Lernen | Maschinelles Lernen ist der Studienbereich, der es Computern ermöglicht zu lernen, ohne explizit programmiert zu werden. |
 | [!DNL Sensei] ML Framework | [!DNL Sensei] ML Framework ist ein einheitlicher Rahmen für maschinelles Lernen überall bei Adobe, das Daten auf [!DNL Experience Platform] nutzt, um Datenwissenschaftler bei der Entwicklung maschinenlerngestützter Intelligenz-Services schneller, skalierbar und wiederverwendbar zu unterstützen. |
-| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) von Adobe führt zur Definition von Standardschemas wie [!DNL Profile] und [!DNL ExperienceEvent] für Customer Experience Management. |
+| [!DNL Experience Data Model] | [!DNL Experience Data Model] (XDM) von Adobe führt zur Definition von Standardschemata wie [!DNL Profile] und [!DNL ExperienceEvent] für Customer Experience Management. |
 | [!DNL JupyterLab] | [!DNL JupyterLab] ist eine Web-basierte Open-Source-Schnittstelle für Project Jupyter und ist eng in [!DNL Experience Platform] integriert. |
 | Rezepte | Ein „Rezept“ ist ein von Adobe verwendeter Begriff für eine Modellspezifikation. Es handelt sich dabei um einen Container auf oberster Ebene, der einen bestimmten Algorithmus für maschinelles Lernen, einen KI-Algorithmus oder eine Gruppe von Algorithmen, eine Verarbeitungslogik und eine Konfiguration darstellt, die für die Einrichtung und Ausführung eines trainierten Modells und somit zur Lösung spezifischer geschäftlicher Herausforderungen erforderlich sind. |
 | Modell | Ein Modell ist eine Instanz eines Rezepts für maschinelles Lernen, das mithilfe von historischen Daten und Konfigurationen dazu trainiert wird, eine geschäftliche Fragestellung zu lösen. |
@@ -117,7 +117,7 @@ Wenn Sie mit Ihrem Rezept zufrieden sind, brauchen Sie nur ein paar Klicks, um e
 
 ### Kontinuierliche Verbesserung
 
-[!DNL Data Science Workspace] verfolgt, wo intelligente Services aufgerufen werden und wie sie funktionieren. Wenn Daten eingehen, können Sie die Genauigkeit intelligenter Services auswerten, um den Kreis zu schließen, und die Rezepte bei Bedarf neu trainieren, um die Leistung zu verbessern. Das Ergebnis ist eine kontinuierliche Verfeinerung der Präzision der Kundenpersonalisierung.
+[!DNL Data Science Workspace] verfolgt, wo intelligente Services aufgerufen werden und wie sie funktionieren. Wenn Daten eingehen, können Sie die Genauigkeit intelligenter Services auswerten, um den Kreis zu schließen, und die Rezepte bei Bedarf neu trainieren, um die Performance zu verbessern. Das Ergebnis ist eine kontinuierliche Verfeinerung der Präzision der Kundenpersonalisierung.
 
 ### Zugriff auf neue Funktionen und Datensätze
 
@@ -148,7 +148,7 @@ Zum Zeitpunkt des Kontakts mit dem Callcenter hat der Kunde noch zwei Paar Schuh
 
 Basierend auf der definierten geschäftlichen Herausforderung wissen Sie, dass das Rezept alle Web-Transaktionen des Kunden berücksichtigen sollte, einschließlich Site-Besuche, Suchvorgänge, Seitenaufrufe, angeklickte Links, Warenkorbaktionen, erhaltene Angebote, erhaltene E-Mails, Interaktionen mit dem Callcenter usw.
 
-Ein Datenwissenschaftler verbringt in der Regel bis zu 75 % der Zeit, die für die Erstellung eines Rezepts benötigt wird, damit, die Daten zu erforschen und zu transformieren. Daten stammen oft aus mehreren Repositorys und werden in verschiedenen Schemas gespeichert – so müssen sie kombiniert und zugeordnet werden, bevor sie zur Erstellung eines Rezepts verwendet werden können.
+Ein Datenwissenschaftler verbringt in der Regel bis zu 75 % der Zeit, die für die Erstellung eines Rezepts benötigt wird, damit, die Daten zu erforschen und zu transformieren. Daten stammen oft aus mehreren Repositorys und werden in verschiedenen Schemata gespeichert – so müssen sie kombiniert und zugeordnet werden, bevor sie zur Erstellung eines Rezepts verwendet werden können.
 
 [//]: # (Your first step is to check the recipe gallery to see if an existing recipe meets your needs, or comes close. An alternative is to import a recipe you created outside of Adobe Experience Platform. Starting with an existing recipe often streamlines the data exploration phase and makes it easier for a data scientist.)
 

@@ -10,46 +10,46 @@ ht-degree: 18%
 
 ---
 
-# (Beta) Die [!DNL Trade Desk] - CRM-Verbindung
+# (Beta) Die Verbindung [!DNL Trade Desk] - CRM
 
 >[!IMPORTANT]
 >
->[!DNL The Trade Desk - CRM] Das Ziel in Platform befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalitäten können sich ändern.
+>Das Ziel für [!DNL The Trade Desk - CRM] in Platform befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalitäten können sich ändern.
 >
 >Mit Veröffentlichung der EUID (European Unified ID) sehen Sie jetzt zwei [!DNL The Trade Desk - CRM]-Ziele im [Zielkatalog](/help/destinations/catalog/overview.md).
 >* Wenn Sie Daten in der EU beziehen, verwenden Sie bitte das **[!DNL The Trade Desk - CRM (EU)]**-Ziel.
 >* Wenn Sie Daten in der APAC- oder NAMER-Region beziehen, verwenden Sie das **[!DNL The Trade Desk - CRM (NAMER & APAC)]**-Ziel.
 >
->Beide Ziele in Experience Platform befinden sich derzeit in der Beta-Phase. Diese Ziel-Connector- und Dokumentationsseite wird von der *[!DNL Trade Desk]* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihre [!DNL Trade Desk] -Support-Mitarbeiter, können sich die Dokumentation und Funktionalität ändern.
+>Beide Ziele in Experience Platform befinden sich derzeit in der Beta-Phase. Diese Ziel-Connector- und Dokumentationsseite werden vom *[!DNL Trade Desk]*-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte an Ihren [!DNL Trade Desk]-Support-Mitarbeiter. Die Dokumentation und Funktionalität können sich ändern.
 
 ## Übersicht {#overview}
 
-Dieses Dokument soll Ihnen helfen, Profile für Ihre [!DNL Trade Desk] Zielgruppen-Targeting und -Unterdrückung anhand von CRM-Daten.
+Dieses Dokument soll Ihnen dabei helfen, Profile für Ihr [!DNL Trade Desk] -Konto zu aktivieren, um Zielgruppen-Targeting und -Unterdrückung auf der Basis von CRM-Daten zu ermöglichen.
 
-[!DNL The Trade Desk(TTD)] verarbeitet die Upload-Datei von E-Mail-Adressen zu keinem Zeitpunkt direkt, noch [!DNL The Trade Desk] Speichern Sie Ihre ungehashten E-Mails.
+[!DNL The Trade Desk(TTD)] verarbeitet die Upload-Datei von E-Mail-Adressen zu keinem Zeitpunkt direkt und [!DNL The Trade Desk] speichert Ihre rohen (ungehashten) E-Mails nicht.
 
 >[!TIP]
 >
->Verwendung [!DNL The Trade Desk] CRM-Ziele für das CRM-Daten-Mapping, z. B. E-Mail- oder Hash-E-Mail-Adresse. Verwenden Sie die [anderes Handelszentrum-Ziel](/help/destinations/catalog/advertising/tradedesk.md) im Adobe Experience Platform-Katalog für Cookies und Geräte-ID-Zuordnungen.
+>Verwenden Sie [!DNL The Trade Desk] CRM-Ziele für die CRM-Datenzuordnung, z. B. E-Mail- oder Hash-E-Mail-Adresse. Verwenden Sie für Cookies und Geräte-ID-Zuordnungen das [andere Handelsvertretungs-Ziel](/help/destinations/catalog/advertising/tradedesk.md) im Adobe Experience Platform-Katalog.
 
 ## Voraussetzungen {#prerequisites}
 
-Vor der Aktivierung von Zielgruppen in [!DNL The Trade Desk]müssen Sie Ihre [!DNL The Trade Desk] Kundenbetreuer zur Unterzeichnung des CRM-Onboarding-Vertrags. [!DNL The Trade Desk] gibt dann die Erlaubnis und gibt Ihre Advertiser-ID frei, um Ihr Ziel zu konfigurieren.
+Bevor Sie Zielgruppen für [!DNL The Trade Desk] aktivieren können, müssen Sie sich an Ihren [!DNL The Trade Desk] Kundenbetreuer wenden, um den CRM-Onboarding-Vertrag zu unterzeichnen. [!DNL The Trade Desk] gibt dann die Berechtigung und gibt Ihre Advertiser-ID frei, um Ihr Ziel zu konfigurieren.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
-Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen. Bitte lesen Sie die [Übersicht über Identity Namespace](/help/identity-service/features/namespaces.md) für weitere Informationen.
+Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden Sie in der [Übersicht zum Identity-Namespace](/help/identity-service/features/namespaces.md) .
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL The Trade Desk] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+[!DNL The Trade Desk] unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt Anforderungen für die ID-Zuordnung und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen.
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
-| E-Mail | E-Mail-Adressen (Klartext) | Eingabe `email` als Zielidentität, wenn Ihre Quellidentität ein E-Mail-Namespace oder -Attribut ist. |
-| Email_LC_SHA256 | E-Mail-Adressen müssen mit SHA256 gehasht und in Kleinbuchstaben geschrieben werden. Sie können diese Einstellung später nicht ändern. | Eingabe `hashed_email` als Zielidentität, wenn Ihre Quellidentität ein Namespace oder ein Attribut von Email_LC_SHA256 ist. |
+| E-Mail | E-Mail-Adressen (Klartext) | Geben Sie `email` als Zielidentität ein, wenn Ihre Quellidentität ein E-Mail-Namespace oder -Attribut ist. |
+| Email_LC_SHA256 | E-Mail-Adressen müssen mit SHA256 gehasht und in Kleinbuchstaben geschrieben werden. Sie können diese Einstellung später nicht ändern. | Geben Sie `hashed_email` als Zielidentität ein, wenn Ihre Quellidentität ein Namespace oder Attribut E-Mail_LC_SHA256 ist. |
 
 {style="table-layout:auto"}
 
@@ -57,15 +57,15 @@ Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experi
 
 Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder Sie können E-Mail-Adressen als Rohdaten verwenden.
 
-Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie im Abschnitt [Batch-Erfassung - Übersicht](/help/ingestion/batch-ingestion/overview.md).
+Weiterführende Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie in der [Batch-Erfassungsübersicht](/help/ingestion/batch-ingestion/overview.md).
 
 Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
 * Entfernen Sie Leerzeichen am Anfang und am Ende.
 * Konvertieren Sie alle ASCII-Zeichen in Kleinbuchstaben.
-* In `gmail.com` E-Mail-Adressen die folgenden Zeichen aus dem Benutzernamen-Teil der E-Mail-Adresse entfernen:
-   * Der Punkt (. (ASCII-Code 46). Beispiel: normalisieren `jane.doe@gmail.com` nach `janedoe@gmail.com`.
-   * Das Pluszeichen (+ (ASCII-Code 43)) und alle nachfolgenden Zeichen. Beispiel: normalisieren `janedoe+home@gmail.com` nach `janedoe@gmail.com`.
+* Entfernen Sie in `gmail.com` E-Mail-Adressen die folgenden Zeichen aus dem Benutzernamen-Teil der E-Mail-Adresse:
+   * Der Punkt (. (ASCII-Code 46). Normalisieren Sie beispielsweise `jane.doe@gmail.com` auf `janedoe@gmail.com`.
+   * Das Pluszeichen (+ (ASCII-Code 43)) und alle nachfolgenden Zeichen. Normalisieren Sie beispielsweise `janedoe+home@gmail.com` auf `janedoe@gmail.com`.
 
 ## Exporttyp und -häufigkeit {#export-type-frequency}
 
@@ -74,7 +74,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
 | Exporttyp | **[!UICONTROL Zielgruppenexport]** | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (E-Mail oder Hash-E-Mail), die im Trade Desk-Ziel verwendet werden. |
-| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Wenn ein Profil auf der Grundlage einer Zielgruppenbewertung im Experience Platform aktualisiert wird, wird das Profil (die Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Mehr dazu [Stapelexporte](/help/destinations/destination-types.md#file-based). |
+| Exporthäufigkeit | **[!UICONTROL Täglicher Batch]** | Wenn ein Profil auf der Grundlage einer Zielgruppenbewertung im Experience Platform aktualisiert wird, wird das Profil (die Identitäten) einmal täglich nachgelagert zur Zielplattform aktualisiert. Weitere Informationen zu [Batch-Exporten](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -82,68 +82,68 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ### Auf Ziel authentifizieren {#authenticate}
 
-[!DNL The Trade Desk] Das CRM-Ziel ist ein täglicher Batch-Datei-Upload und erfordert keine Authentifizierung durch den Benutzer.
+[!DNL The Trade Desk] CRM-Ziel ist ein täglicher Batch-Datei-Upload und erfordert keine Authentifizierung durch den Benutzer.
 
 ### Zieldetails ausfüllen {#fill-in-details}
 
 Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen Sie eine Verbindung zu Ihrer eigenen Zielplattform herstellen. Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=de) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL Kontotyp]**: Bitte wählen Sie die **[!UICONTROL Vorhandenes Konto]** -Option.
+* **[!UICONTROL Kontotyp]**: Wählen Sie die Option **[!UICONTROL Vorhandenes Konto]** aus.
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Advertiser-ID]**: your [!DNL Trade Desk Advertiser ID], die entweder von Ihrer [!DNL Trade Desk] Kundenbetreuer oder finden Sie unter [!DNL Advertiser Preferences] im [!DNL Trade Desk] Benutzeroberfläche.
+* **[!UICONTROL Advertiser-ID]**: Ihre [!DNL Trade Desk Advertiser ID], die entweder von Ihrem [!DNL Trade Desk]-Kundenbetreuer oder unter [!DNL Advertiser Preferences] in der [!DNL Trade Desk] -Benutzeroberfläche freigegeben werden kann.
 
-![Screenshot der Platform-Benutzeroberfläche, in dem gezeigt wird, wie Zieldetails ausgefüllt werden.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+![Screenshot der Platform-Benutzeroberfläche, der zeigt, wie Zieldetails ausgefüllt werden.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
 
-Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Lesen Sie die Experience Platform . [Data Governance - Übersicht](/help/data-governance/policies/overview.md) für weitere Details.
+Beim Herstellen einer Verbindung zum Ziel ist das Festlegen einer Data Governance-Richtlinie vollständig optional. Weitere Informationen finden Sie unter Experience Platform [Data Governance - Übersicht](/help/data-governance/policies/overview.md) .
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](/help/destinations/ui/activate-batch-profile-destinations.md) für Anweisungen zum Aktivieren von Zielgruppen für ein Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für ein Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](/help/destinations/ui/activate-batch-profile-destinations.md) .
 
-Im **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Zielgruppe konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+Auf der Seite **[!UICONTROL Planung]** können Sie den Zeitplan und die Dateinamen für jede Zielgruppe konfigurieren, die Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
 
 ![Screenshot der Platform-Benutzeroberfläche zur Planung der Aktivierung der Zielgruppe.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->Alle für aktivierten Zielgruppen [!DNL The Trade Desk] Das CRM-Ziel wird automatisch auf eine tägliche Häufigkeit und einen vollständigen Dateiexport eingestellt.
+>Alle für das CRM-Ziel [!DNL The Trade Desk] aktivierten Zielgruppen werden automatisch auf eine tägliche Häufigkeit und einen vollständigen Dateiexport eingestellt.
 
 ![Screenshot der Platform-Benutzeroberfläche zur Planung der Aktivierung der Zielgruppe.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
-Im **[!UICONTROL Zuordnung]** -Seite, müssen Sie Attribute oder Identitäts-Namespaces aus der Quellspalte auswählen und der Zielspalte zuordnen.
+Auf der Seite **[!UICONTROL Zuordnung]** müssen Sie Attribute oder Identitäts-Namespaces aus der Quellspalte auswählen und der Zielspalte zuordnen.
 
 ![Screenshot der Platform-Benutzeroberfläche zur Zuordnung der Zielgruppenaktivierung.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-Nachstehend finden Sie ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Zielgruppen zu [!DNL The Trade Desk] CRM-Ziel.
+Nachstehend finden Sie ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Zielgruppen für das CRM-Ziel [!DNL The Trade Desk] .
 
 >[!IMPORTANT]
 >
-> [!DNL The Trade Desk] CRM-Ziel akzeptiert keine rohen und Hash-E-Mail-Adressen als Identitäten im selben Aktivierungsfluss. Erstellen Sie separate Aktivierungsflüsse für Roh- und Hash-E-Mail-Adressen.
+> [!DNL The Trade Desk] CRM-Ziel akzeptiert keine rohen und gehashten E-Mail-Adressen als Identitäten im selben Aktivierungsfluss. Erstellen Sie separate Aktivierungsflüsse für Roh- und Hash-E-Mail-Adressen.
 
 Quellfelder auswählen:
 
-* Wählen Sie die `Email` Namespace oder Attribut als Quellidentität verwenden, wenn die E-Mail-Adresse bei der Datenerfassung verwendet wird.
-* Wählen Sie die `Email_LC_SHA256` -Namespace oder -Attribut als Quellidentität verwenden, wenn Sie bei der Datenerfassung in Platform einen Hash für E-Mail-Adressen von Kunden durchführen.
+* Wählen Sie den Namespace oder das Attribut `Email` als Quellidentität aus, wenn Sie die E-Mail-Adresse bei der Datenerfassung als Rohdaten verwenden.
+* Wählen Sie den Namespace oder das Attribut `Email_LC_SHA256` als Quellidentität aus, wenn Sie bei der Datenerfassung in Platform E-Mail-Adressen von Kunden gehasht haben.
 
 Zielgruppenfelder auswählen:
 
-* Eingabe  `email` als Zielidentität verwenden, wenn Ihr Quell-Namespace oder -Attribut `Email`.
-* Eingabe  `hashed_email` als Zielidentität verwenden, wenn Ihr Quell-Namespace oder -Attribut `Email_LC_SHA256`.
+* Geben Sie `email` als Zielidentität ein, wenn Ihr Quellnamespace oder -attribut `Email` ist.
+* Geben Sie `hashed_email` als Zielidentität ein, wenn Ihr Quellnamespace oder -attribut `Email_LC_SHA256` ist.
 
 ## Datenexport überprüfen {#validate}
 
-Überprüfen, ob die Daten von Experience Platform und nach ordnungsgemäß exportiert wurden [!DNL The Trade Desk], finden Sie die Zielgruppen unter der Adobe 1PD-Datenkachel in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID im [!DNL Trade Desk] Benutzeroberfläche:
+Um zu überprüfen, ob Daten ordnungsgemäß aus dem Experience Platform in [!DNL The Trade Desk] exportiert wurden, suchen Sie die Zielgruppen in der Datenkachel Adobe 1PD in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID in der Benutzeroberfläche von [!DNL Trade Desk]:
 
-1. Klicken Sie zunächst auf die **[!UICONTROL Daten]** Registerkarte und Überprüfung **[!UICONTROL Erstanbieter]**.
-2. Scrollen Sie nach unten, unter **[!UICONTROL Importierte Daten]**, finden Sie **[!UICONTROL Adobe 1PD-Kachel]**.
-3. Klicken Sie auf die Schaltfläche **[!UICONTROL Adobe 1PD]Die Kachel ** enthält alle Zielgruppen, die für die [!DNL Trade Desk] Ziel für Ihren Advertiser. Sie können auch die Suchfunktion verwenden.
-4. Die Segment-ID-Nummer von Experience Platform wird als Segmentname in der [!DNL Trade Desk] Benutzeroberfläche.
+1. Klicken Sie zunächst auf die Registerkarte **[!UICONTROL Daten]** und überprüfen Sie **[!UICONTROL Erstanbieter]**.
+2. Scrollen Sie auf der Seite nach unten, unter **[!UICONTROL Importierte Daten]**, finden Sie die Kachel **[!UICONTROL Adobe 1PD]**.
+3. Klicken Sie auf die Kachel **[!UICONTROL Adobe 1PD]** und listet alle Zielgruppen auf, die für das Ziel [!DNL Trade Desk] Ihres Advertisers aktiviert sind. Sie können auch die Suchfunktion verwenden.
+4. Die Segment-ID-Nummer von Experience Platform wird als Segmentname in der Benutzeroberfläche von [!DNL Trade Desk] angezeigt.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

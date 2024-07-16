@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Auf dieser Seite wird davon ausgegangen, dass die Zusammenführungsrichtlinie das Identitätsdiagramm verwendet. Weitere Informationen zu Zusammenführungsrichtlinien im Echtzeit-Kundenprofil finden Sie in der Dokumentation unter [Zusammenführungsrichtlinien und Identitätszusammenfügung](../profile/merge-policies/overview.md#identity-stitching).
+>Auf dieser Seite wird davon ausgegangen, dass die Zusammenführungsrichtlinie das Identitätsdiagramm verwendet. Weitere Informationen zu Zusammenführungsrichtlinien im Echtzeit-Kundenprofil finden Sie in der Dokumentation zu [Zusammenführungsrichtlinien und Identitätszusammenfügung](../profile/merge-policies/overview.md#identity-stitching).
 
 Sie können Identity Service und Echtzeit-Kundenprofil zwar gemeinsam verwenden, aber die beiden Funktionen von Adobe Experience Platform sind von Natur aus nicht identisch.
 
@@ -42,7 +42,7 @@ Lesen Sie die folgenden Schritte, um ein besseres Verständnis des Prozesses zum
 * Zunächst verweist das Echtzeit-Kundenprofil auf ein Identitätsdiagramm und ruft alle Identitäten ab.
 * Als Nächstes ruft Profil Profilfragmente mit primären Identitäten im Identitätsdiagramm ab.
 * Nach dem Erfolg führt Profil als alle vorhandenen Ereignisse und Attribute zusammen.
-   * Wenn es in Konflikt stehende Attributinformationen gibt, werden Attribute anhand der Zusammenführungsmethode ausgewählt. Weitere Informationen finden Sie im Abschnitt [Übersicht über Zusammenführungsrichtlinien](../profile/merge-policies/overview.md).
+   * Wenn es in Konflikt stehende Attributinformationen gibt, werden Attribute anhand der Zusammenführungsmethode ausgewählt. Weitere Informationen finden Sie in der [Übersicht über Zusammenführungsrichtlinien](../profile/merge-policies/overview.md) .
 
 ![Ein Flussdiagramm, in dem beschrieben wird, wie Identity Service und Profile Merging funktionieren.](./images/merge-profile-process.png)
 

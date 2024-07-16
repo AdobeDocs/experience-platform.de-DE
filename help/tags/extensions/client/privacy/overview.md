@@ -21,11 +21,11 @@ In diesem Handbuch wird beschrieben, wie Sie die Adobe Privacy-Erweiterung in de
 
 >[!NOTE]
 >
->Wenn Sie diese Funktionen lieber ohne Tags installieren möchten, lesen Sie den Abschnitt [Übersicht über die Privacy JavaScript Library](../../../../privacy-service/js-library.md) für Schritte zur Implementierung mit Rohcode.
+>Wenn Sie diese Funktionen lieber ohne Verwendung von Tags installieren möchten, finden Sie in der [Übersicht zur Privacy JavaScript Library](../../../../privacy-service/js-library.md) Anweisungen zur Implementierung mit Rohcode.
 
 ## Installieren und Konfigurieren der Erweiterung
 
-Auswählen **[!UICONTROL Erweiterungen]** im linken Navigationsbereich, gefolgt von der **[!UICONTROL Katalog]** Registerkarte. Verwenden Sie die Suchleiste, um die Liste der verfügbaren Erweiterungen einzuschränken, bis Sie „Adobe Privacy“ finden. Wählen Sie **[!UICONTROL Installieren]** aus, um fortzufahren.
+Wählen Sie im linken Navigationsbereich **[!UICONTROL Erweiterungen]** und dann die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie die Suchleiste, um die Liste der verfügbaren Erweiterungen einzuschränken, bis Sie „Adobe Privacy“ finden. Wählen Sie **[!UICONTROL Installieren]** aus, um fortzufahren.
 
 ![Installieren der Erweiterung](../../../images/extensions/client/privacy/install.png)
 
@@ -71,7 +71,7 @@ Bei Verwendung der Adobe Privacy-Tag-Erweiterung müssen Sie die erforderliche C
 
 ### Definieren eines Datenelements zur Verarbeitung von Identitäten
 
-Erstellen Sie ein neues Datenelement, indem Sie **[!UICONTROL Datenelemente]** im linken Navigationsbereich, gefolgt von **[!UICONTROL Datenelement hinzufügen]**. Wählen Sie im Konfigurationsbildschirm die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Benutzerspezifischer Code]** für den Datenelementtyp. Wählen Sie danach im rechten Panel **[!UICONTROL Editor öffnen]**.
+Beginnen Sie mit der Erstellung eines neuen Datenelements, indem Sie im linken Navigationsbereich die Option **[!UICONTROL Datenelemente]** und anschließend **[!UICONTROL Datenelement hinzufügen]** auswählen. Wählen Sie im Konfigurationsbildschirm die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Benutzerspezifischer Code]** für den Datenelementtyp. Wählen Sie danach im rechten Panel **[!UICONTROL Editor öffnen]**.
 
 ![Auswählen des Datenelementtyps](../../../images/extensions/client/privacy/data-element-type.png)
 

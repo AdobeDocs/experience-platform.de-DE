@@ -4,8 +4,8 @@ description: Die neuesten Versionshinweise für Tags und Ereignisweiterleitung i
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 97%
+source-wordcount: '771'
+ht-degree: 99%
 
 ---
 
@@ -75,4 +75,4 @@ Es wurden neue Erweiterungen veröffentlicht:
 
 * [Google-Datenschicht-Tag-Erweiterung](../extensions/client/google-data-layer/overview.md): Ermöglicht es Ihnen, eine Google-Datenschicht in Ihrer Tag-Implementierung zu verwenden.
 * [Erweiterung für Ereignisweiterleitung mit Google Ads Enhanced Conversions](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html): Ermöglicht es Ihnen, Ihre Google Ads Conversions in Echtzeit zu verbessern.
-* [Mailchimp-Ereignisweiterleitung](../extensions/server/mailchimp/overview.md): Sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journeys oder Transaktionen auslösen können.
+* [Mailchimp-Ereignisweiterleitungs-Erweiterung](../extensions/server/mailchimp/overview.md): Sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journeys oder Transaktionen auslösen können.

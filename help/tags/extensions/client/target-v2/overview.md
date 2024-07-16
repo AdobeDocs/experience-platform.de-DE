@@ -4,7 +4,7 @@ description: Machen Sie sich mit der Tag-Erweiterung „Adobe Target v2“ in Ad
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1318'
 ht-degree: 93%
 
 ---
@@ -134,7 +134,7 @@ Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab 
    * Wenn für die Seitenladeanfrage eine Zeitüberschreitung eintritt
    * Wenn für den Ausschnitt selbst eine Zeitüberschreitung eintritt
 * Die Aktion &quot;Seitenladeanforderung auslösen&quot;sollte auf allen Seiten verwendet werden, die den vorab ausgeblendeten Ausschnitt verwenden, um die Dauer der Vorab-Ausblendung zu minimieren.
-* Die Ausblendung des Textkörpers muss auch in der Aktion &quot;Seitenladeanforderung&quot;in der Seitenladeregel aktiviert sein, die Sie für Target verwenden. Andernfalls bleiben alle Seitenladevorgänge für die Timeout-Zeit ausgeblendet.
+* Das Ausblenden des Textkörpers muss auch in der Aktion &quot;Seitenladeanforderung&quot;der für Target verwendeten Seitenladeregel aktiviert sein. Andernfalls bleiben alle Seitenladevorgänge während der Timeout-Zeit ausgeblendet.
 
 Der vorab ausgeblendete Codeausschnitt lautet wie folgt und kann minimiert werden. Die konfigurierbaren Optionen befinden sich am Ende:
 

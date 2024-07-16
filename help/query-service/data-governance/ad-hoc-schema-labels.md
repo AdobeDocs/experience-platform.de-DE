@@ -27,14 +27,14 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 * [Experience-Datenmodell (XDM)-System](../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Erfahren Sie, wie Sie Schemas und andere Ressourcen in der Platform-Benutzeroberfläche erstellen und verwalten.
-* [[!DNL Data Governance]](../../data-governance/home.md): Erfahren Sie, wie Sie [!DNL Data Governance] ermöglicht Ihnen, Kundendaten zu verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datennutzung sicherzustellen.
-* [Attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md): Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können einem Objekt Metadaten hinzugefügt werden, z. B. eine Bezeichnung, die einem Ad-hoc- oder regulären Schemafeld hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
+* [[!DNL Data Governance]](../../data-governance/home.md): Erfahren Sie, wie Sie mit [!DNL Data Governance] Kundendaten verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sicherstellen können.
+* [Attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md): Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, mit der Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können einem Objekt Metadaten hinzugefügt werden, z. B. eine Bezeichnung, die einem Ad-hoc- oder regulären Schemafeld hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 ## Erstellen eines Ad-hoc-Schemas
 
 Nachdem Ihre Abfrage ausgeführt und Ergebnisse generiert wurden, wird automatisch ein Ad-hoc-Schema generiert und zum Schema-Inventar hinzugefügt.
 
-Navigieren Sie zum Hinzufügen einer Datenbeschriftung zu [!UICONTROL Schemas] Registerkarte zum Durchsuchen von Dashboards durch Auswahl [!UICONTROL Schemas] in der linken Leiste der Platform-Benutzeroberfläche. Das Schema-Inventar wird angezeigt.
+Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zur Registerkarte &quot;Dashboard-Durchsuchen&quot;von [!UICONTROL Schemas] , indem Sie in der linken Leiste der Platform-Benutzeroberfläche die Option [!UICONTROL Schemas] auswählen. Das Schema-Inventar wird angezeigt.
 
 >[!NOTE]
 >
@@ -42,41 +42,41 @@ Navigieren Sie zum Hinzufügen einer Datenbeschriftung zu [!UICONTROL Schemas] R
 
 ## Entdecken Sie Ad-hoc-Schemas im Schema-Inventar der Platform-Benutzeroberfläche. {#discover-ad-hoc-schemas}
 
-Um die Anzeige von Ad-hoc-Schemata in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Ein Filtersymbol.](../images/data-governance/filter.png)) links neben dem Suchfeld und wählen Sie dann ** aus.[!UICONTROL Anzeigen von Ad-hoc-Schemata] in der linken Leiste angezeigt.
+Um die Anzeige von Ad-hoc-Schemas in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Filtersymbol) aus.](../images/data-governance/filter.png)) links neben dem Suchfeld und wählen Sie dann **[!UICONTROL Ad-hoc-Schemata anzeigen] in der angezeigten linken Leiste aus.
 
-![Die Filter-Optionen des Schema-Dashboards werden in der linken Leiste mit aktiviertem Umschalter &quot;Ad-hoc-Schema anzeigen&quot;angezeigt.](../images/data-governance/adhoc-schema-toggle.png)
+![Die Schema-Dashboard-Filteroptionen in der linken Leiste mit aktiviertem Umschalter &quot;Ad-hoc-Schema anzeigen&quot;](../images/data-governance/adhoc-schema-toggle.png).
 
 Wählen Sie den Namen des kürzlich erstellten Ad-hoc-Schemas aus der verfügbaren Liste aus. Eine Visualisierung der Ad-hoc-Schemastruktur wird angezeigt.
 
-![Das Beispieldiagramm zur Struktur von Ad-hoc-Schemas.](../images/data-governance/adhoc-schema-structure-diagram.png)
+![Das Beispiel-Ad-hoc-Schemastrukturdiagramm.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
 ## Governance-Kennzeichnungen bearbeiten
 
-Um Datenbezeichnungen für Ihr Ad-hoc-Schema zu bearbeiten, wählen Sie die [!UICONTROL Bezeichnungen] Registerkarte. Im Arbeitsbereich &quot;Beschriftungen&quot;können Sie Beschriftungen auf Ihre Ad-hoc-Schemafelder anwenden, erstellen und bearbeiten und Zugriffsberechtigungen über die Benutzeroberfläche steuern. Alle Felder im Ad-hoc-Schema werden hier dargestellt.
+Um Datenbezeichnungen für Ihr Ad-hoc-Schema zu bearbeiten, wählen Sie die Registerkarte [!UICONTROL Beschriftungen] aus. Im Arbeitsbereich &quot;Beschriftungen&quot;können Sie Beschriftungen auf Ihre Ad-hoc-Schemafelder anwenden, erstellen und bearbeiten und Zugriffsberechtigungen über die Benutzeroberfläche steuern. Alle Felder im Ad-hoc-Schema werden hier dargestellt.
 
 ## Bearbeiten von Bezeichnungen für das Schema oder Feld
 
-Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![Ein Bleistiftsymbol.](../images/data-governance/edit-icon.png)) neben dem Namen des Schemas unter dem [!UICONTROL Bezeichnungen] Registerkarte.
+Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![Stiftsymbol) aus.](../images/data-governance/edit-icon.png)) auf die Seite des Schemanamens unter der Registerkarte [!UICONTROL Beschriftungen].
 
 ![Die Beschriftungsansicht im Arbeitsbereich &quot;Schemas&quot;mit hervorgehobenem Stiftsymbol.](../images/data-governance/edit-entire-schema-labels.png)
 
-Um eine Beschriftung auf ein vorhandenes Feld anzuwenden, wählen Sie ein oder mehrere Felder aus der Liste aus, gefolgt von [!UICONTROL Bearbeiten von Governance-Titeln] in der rechten Seitenleiste.
+Um eine Beschriftung auf ein vorhandenes Feld anzuwenden, wählen Sie ein oder mehrere Felder aus der Liste aus, gefolgt von [!UICONTROL Governance-Beschriftungen bearbeiten] in der rechten Seitenleiste.
 
-![Die Beschriftungsansicht im Arbeitsbereich &quot;Schemas&quot;mit der Option &quot;Governance-Beschriftungen bearbeiten&quot;wird in der rechten Seitenleiste hervorgehoben.](../images/data-governance/edit-governance-labels.png)
+![Die Beschriftungsansicht im Arbeitsbereich &quot;Schemas&quot;mit der Option &quot;Governance-Beschriftungen bearbeiten&quot;in der rechten Seitenleiste hervorgehoben.](../images/data-governance/edit-governance-labels.png)
 
 ## Popover &quot;Bezeichnungen bearbeiten&quot;
 
-Die [!UICONTROL Bearbeiten von Bezeichnungen] Popover angezeigt. In dieser Ansicht können Sie vorhandene Governance-Beschriftungen über die Benutzeroberfläche erstellen oder bearbeiten.
+Das Popup [!UICONTROL Bezeichnungen bearbeiten] wird angezeigt. In dieser Ansicht können Sie vorhandene Governance-Beschriftungen über die Benutzeroberfläche erstellen oder bearbeiten.
 
-![Das Popup Bezeichnungen bearbeiten .](../images/data-governance/edit-labels-popover.png)
+![Das Popup-Fenster Titel bearbeiten .](../images/data-governance/edit-labels-popover.png)
 
-Anleitungen zum [Erstellen oder Bearbeiten von Beschriftungen für das ausgewählte Schema oder Feld](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
+In der Dokumentation finden Sie Anleitungen zum Erstellen oder Bearbeiten von Beschriftungen für das ausgewählte Schema oder Feld ](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).[
 
 >[!NOTE]
 >
 >Für das Erstellen einer neuen Bezeichnung oder Bearbeiten einer vorhandenen Bezeichnung sind Administratorberechtigungen für Ihr Unternehmen erforderlich. Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um den Zugriff zu arrangieren.
 
-Beschriftungen können auch über den Arbeitsbereich &quot;Berechtigungen&quot;erstellt werden. Siehe [Handbuch zum Erstellen von Bezeichnungen im Arbeitsbereich &quot;Berechtigungen&quot;](../../access-control/abac/ui/labels.md) für Anweisungen.
+Beschriftungen können auch über den Arbeitsbereich &quot;Berechtigungen&quot;erstellt werden. Anweisungen finden Sie im [Handbuch zum Erstellen von Bezeichnungen im Arbeitsbereich für Berechtigungen](../../access-control/abac/ui/labels.md) .
 
 Sobald die entsprechende Ebene der attributbasierten Zugriffssteuerung angewendet wurde, gilt das folgende Systemverhalten für alle Abfragen, die über Query Service ausgeführt werden, wenn ein Benutzer versucht, auf nicht zugängliche Daten zuzugreifen:
 

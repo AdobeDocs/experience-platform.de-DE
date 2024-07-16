@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Experience-Datenmodell-Felder (XDM) in der Sc
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '584'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,6 @@ Um ein Feld in einer benutzerdefinierten Klasse, Feldergruppe oder einem Datenty
 >* [Aktualisieren einer Klasse](../api/classes.md#patch)
 >* [Aktualisieren einer Feldergruppe](../api/field-groups.md#patch)
 >* [Aktualisieren eines Datentyps](../api/data-types.md#patch)
-
 
 Im folgenden Beispiel für einen API-Aufruf wird ein Feld in einem benutzerdefinierten Datentyp verworfen.
 

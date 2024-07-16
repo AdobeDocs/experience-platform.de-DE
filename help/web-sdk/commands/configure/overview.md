@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # Konfigurieren des Adobe Experience Platform Web SDK
 
-Die Konfiguration für das Web SDK erfolgt mit dem `configure` Befehl. Die Konfiguration des Web SDK ist ein wichtiger und erforderlicher Schritt, der immer dann erfolgen muss, wenn die Bibliothek oder Tag-Erweiterung verwendet wird.
+Die Konfiguration für das Web SDK erfolgt mit dem Befehl `configure` . Die Konfiguration des Web SDK ist ein wichtiger und erforderlicher Schritt, der immer dann erfolgen muss, wenn die Bibliothek oder Tag-Erweiterung verwendet wird.
 
 ## Web SDK mit der Tag-Erweiterung konfigurieren {#configure-tag-extension}
 
 Gehen Sie wie folgt vor, um das Web SDK über die Tag-Erweiterung zu konfigurieren.
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** Klicken Sie auf **[!UICONTROL Konfigurieren]** auf [!UICONTROL Adobe Experience Platform Web SDK] Karte.
-1. Navigieren Sie zu [Konfigurationsseite der Web SDK-Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) für detaillierte Informationen zu allen Konfigurationsoptionen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
+1. Gehen Sie zur Konfigurationsseite [Web SDK Tag-Erweiterung ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) , um detaillierte Informationen zu allen Konfigurationsoptionen zu erhalten.
 
 Diese Konfigurationseinstellungen werden immer dann festgelegt, wenn Sie die Erweiterung verwenden, um Daten an Adobe zu senden.
 
 ## Web SDK mithilfe der JavaScript-Bibliothek konfigurieren {#configure-js}
 
-Führen Sie die `configure` Befehl. Dieser Befehl ist erforderlich, bevor Sie andere Web SDK-Befehle aufrufen können, z. B. [`sendEvent`](../sendevent/overview.md).
+Führen Sie den Befehl `configure` aus. Dieser Befehl ist erforderlich, bevor Sie andere Web SDK-Befehle wie [`sendEvent`](../sendevent/overview.md) aufrufen können.
 
-Die [`edgeConfigId`](edgeconfigid.md) und [`orgId`](orgid.md) -Eigenschaften erforderlich sind. Alle anderen Eigenschaften sind je nach den Implementierungsanforderungen Ihres Unternehmens optional.
+Die Eigenschaften [`edgeConfigId`](edgeconfigid.md) und [`orgId`](orgid.md) sind erforderlich. Alle anderen Eigenschaften sind je nach den Implementierungsanforderungen Ihres Unternehmens optional.
 
 Detaillierte Informationen zu den einzelnen unterstützten Befehlen finden Sie im Inhaltsverzeichnis dieses Benutzerhandbuchs.
 

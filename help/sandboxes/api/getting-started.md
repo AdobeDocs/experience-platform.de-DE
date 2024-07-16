@@ -20,7 +20,7 @@ In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie die Sandbox-AP
 
 ## Voraussetzungen
 
-Um Sandboxes für Ihre Organisation verwalten zu können, benötigen Sie Sandbox-Administratorberechtigungen. Benutzer ohne Zugriffsberechtigungen können nur die [verfügbarer Sandbox-Endpunkt](./available.md) , um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
+Um Sandboxes für Ihre Organisation verwalten zu können, benötigen Sie Sandbox-Administratorberechtigungen. Benutzer ohne Zugriffsberechtigungen können nur den Endpunkt [Verfügbare Sandboxes ](./available.md) verwenden, um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 

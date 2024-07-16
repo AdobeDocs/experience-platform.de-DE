@@ -13,17 +13,17 @@ ht-degree: 0%
 
 Mit der Ansicht &quot;Event Transactions&quot;in Adobe Experience Platform Assurance können Sie Ihre Edge Network-Client-Implementierung validieren und debuggen und die vorgelagerten Validierungsergebnisse nahezu in Echtzeit anzeigen.
 
-## Einrichten der Sicherheit für den Edge Network-Workflow
+## Einrichten der Versicherung für den Edge Network-Workflow
 
-Nachher [Einrichten der Sicherheit](../tutorials/implement-assurance.md)müssen Sie sicherstellen, dass Sie die neuesten Versionen der Assurance- und Edge Network-Erweiterungen in Ihrer App implementiert haben.
+Nachdem Sie [ Assurance](../tutorials/implement-assurance.md) eingerichtet haben, stellen Sie sicher, dass Sie die neuesten Versionen der Assurance- und Edge Network-Erweiterungen in Ihrer App implementiert haben.
 
-Um Ihre Ereignisse anzuzeigen, wählen Sie im Menü links die Option **[!UICONTROL Ereignistransaktionen]** unter **[!UICONTROL Adobe Experience Platform Edge]** Abschnitt.
+Um Ihre Ereignisse anzuzeigen, wählen Sie im Menü auf der linken Seite **[!UICONTROL Ereignistransaktionen]** unter dem Abschnitt **[!UICONTROL Adobe Experience Platform Edge]** aus.
 
-Wenn diese Option nicht angezeigt wird, wählen Sie **[!UICONTROL Konfigurieren]** Fügen Sie links unten im Fenster den **[!UICONTROL Ereignistransaktionen]** Ansicht und wählen Sie **[!UICONTROL Speichern]**.
+Wenn diese Option nicht angezeigt wird, wählen Sie unten links im Fenster die Option **[!UICONTROL Konfigurieren]**, fügen Sie die Ansicht **[!UICONTROL Ereignistransaktionen]** hinzu und wählen Sie **[!UICONTROL Speichern]**.
 
 ## Erste Schritte mit der Ansicht &quot;Event Transactions&quot;
 
-In diesem Abschnitt lernen Sie die Ansicht &quot;Event Transaction&quot;kennen und erfahren, wie Sie sie effizient verwenden können, um die Validierung in Edge-Netzwerk-Workflows zu beenden.
+Machen Sie sich in diesem Abschnitt mit der Ansicht &quot;Event Transaction&quot;vertraut und erfahren Sie, wie Sie sie effizient verwenden können, um die Validierung von Edge Network-Workflows zu beenden.
 
 ### Ereignisverarbeitungsfluss
 
@@ -31,15 +31,15 @@ In diesem Abschnitt lernen Sie die Ansicht &quot;Event Transaction&quot;kennen u
 
 In der Ansicht &quot;Event Transactions&quot;werden drei Spalten in der Reihenfolge des Ereignisverarbeitungsablaufs angezeigt:
 
-- **[!UICONTROL Client-seitig]**: In dieser Spalte werden die Ereignisse angezeigt, die Client-seitig verarbeitet oder empfangen wurden und auf die das Mobile SDK zugreifen kann. Dazu gehören die Ereignisse, die mit einem API-Aufruf erstellt wurden, z. B. `Edge.sendEvent`und die Antwort-Ereignisbehandlung, die vom Client vom Edge Network-Server empfangen wurde, sofern vorhanden. Beispiele für clientseitige Ereignisse:
+- **[!UICONTROL Client-seitig]**: Diese Spalte zeigt die Ereignisse an, die Client-seitig verarbeitet oder empfangen wurden und auf die das Mobile SDK zugreifen kann. Dazu gehören die Ereignisse, die mit einem API-Aufruf erstellt wurden, z. B. `Edge.sendEvent`, und die Antwortereignis-Handles, die vom Client vom Edge Network-Server empfangen wurden (falls vorhanden). Beispiele für clientseitige Ereignisse:
    - Das AEP-Anforderungsereignis ist das Ereignis, das über die Edge-Erweiterung gesendet wird und die XDM- und optionalen Freiformdaten enthält.
-   - AEP Response Event Handle ist der Ereignishandler, der vom Edge Network als Antwort auf ein AEP Request Event empfangen wurde. Ein Anfrageereignis kann keine, eine oder mehrere Antwortereignis-Handles empfangen.
+   - AEP Response Event Handle ist der Ereignishandler, der von Edge Network als Antwort auf ein AEP Request Event empfangen wurde. Ein Anfrageereignis kann keine, eine oder mehrere Antwortereignis-Handles empfangen.
    - AEP-Fehlerantwort kann im Fall eines Fehlers angezeigt werden, z. B. wenn die XDM-Payload nicht verarbeitet werden konnte oder wenn einer der Upstream-Dienste einen Fehler oder eine Warnung zurückgab.
-- **[!UICONTROL Edge Network]**: In dieser Spalte wird das Ereignis angezeigt, das vom Edge-Netzwerk über eine Netzwerkanforderung serverseitig empfangen wurde, sowie die Daten und Metadaten, die das Ereignis enthalten hat.
-- **[!UICONTROL Upstream]**: In dieser Spalte werden die Ereignisse angezeigt, die von den konfigurierten Upstream-Diensten empfangen wurden, einschließlich detaillierter Informationen zu den Verarbeitungs- und/oder Validierungsergebnissen für das eingehende Ereignis.
+- **[!UICONTROL Edge Network]**: In dieser Spalte wird das Ereignis angezeigt, das serverseitig vom Edge Network über eine Netzwerkanforderung empfangen wurde, sowie die Daten und Metadaten des enthaltenen Ereignisses.
+- **[!UICONTROL Upstream]**: Diese Spalte zeigt die Ereignisse an, die von den konfigurierten Upstream-Diensten empfangen wurden, einschließlich detaillierter Informationen zu den Verarbeitungs- und/oder Validierungsergebnissen für das eingehende Ereignis.
 Beachten Sie, dass diese Spalte dynamisch ist und je nach zwei Hauptfaktoren unterschiedliche Arten von Informationen anzeigen kann:
    - Die Konfiguration des Datenspeichers und die darin aktivierten Dienste.
-   - Der Typ des Ereignisses, das an das Edge-Netzwerk gesendet wird.
+   - Der Typ des Ereignisses, das an das Edge Network gesendet wird.
 
 ### Inspect-Ereignisse
 
@@ -47,8 +47,8 @@ Die in der Ansicht &quot;Event Transactions&quot;angezeigten Ereignisse enthalte
 
 #### Erweitern der Ereignisdetails
 
-Um ein Ereignis zu überprüfen, wählen Sie das gewünschte Ereignis aus der Ansicht aus. Diese Aktion erweitert die **[!UICONTROL Ereignisdetails]** Ansicht auf der rechten Seite des Bildschirms.
-Verschachtelte Daten werden in einem Baumstrukturformat angezeigt. Sie können verschachtelte Schlüsselwerte überprüfen, indem Sie die **+** (Plus) auf der linken Seite des Schlüsselnamens.
+Um ein Ereignis zu überprüfen, wählen Sie das gewünschte Ereignis aus der Ansicht aus. Diese Aktion erweitert die Ansicht **[!UICONTROL Ereignisdetails]** auf der rechten Seite des Bildschirms.
+Verschachtelte Daten werden in einem Baumstrukturformat angezeigt. Sie können verschachtelte Schlüsselwerte überprüfen, indem Sie links neben dem Schlüsselnamen die Schaltfläche **+** (Plus) auswählen.
 
 ![Ereignisdetails](./images/event-transactions/event-details.png)
 
@@ -57,14 +57,14 @@ Verschachtelte Daten werden in einem Baumstrukturformat angezeigt. Sie können v
 Jedem Ereignisnamen wird ein Symbol vorangestellt, das den allgemeinen Status der Verarbeitung für dieses Ereignis anzeigt:
 
 - Wenn das Ereignis erfolgreich verarbeitet wurde, wird ein grünes Häkchen angezeigt.
-- Wenn Warnungen oder Fehler erkannt wurden, wird ein Warnzeichen angezeigt. Wählen Sie das zugehörige Ereignis aus, um mehr über die Ursache der Warnung oder des Fehlers im **[!UICONTROL Ereignisdetails]** anzeigen.
+- Wenn Warnungen oder Fehler erkannt wurden, wird ein Warnzeichen angezeigt. Wählen Sie das zugehörige Ereignis aus, um mehr über die Ursache der Warnung oder des Fehlers in der Ansicht **[!UICONTROL Ereignisdetails]** zu erfahren.
 
 ### Konfigurationseinstellungen
 
-Sie können die derzeit verwendete Kennung des Datastreams überprüfen, indem Sie die Info-QuickInfo neben dem **[!UICONTROL Edge Network]** Spaltenüberschrift.
+Sie können die derzeit verwendete Datastream-Kennung überprüfen, indem Sie die Info-QuickInfo neben der Spaltenüberschrift **[!UICONTROL Edge Network]** auswählen.
 
 ![Anzeigen der Datensatz-ID](./images/event-transactions/show-datastream-id.png)
 
 >[!INFO]
 >
->Wenn mehrere Clients mit derselben Assurance-Sitzung verbunden sind und unterschiedliche Datastream-IDs verwendet werden, werden hier alle angezeigt. Dies bedeutet jedoch nicht, dass Ihre aktuelle Implementierung mehrere Datenspeicher verwendet. Zur Verarbeitung neuer Ereignisse von diesem Client wird nur die aktuelle Datastraam-ID verwendet, die im -Tag (mobile Eigenschaft) festgelegt ist, das von der App verwendet wird. Beim Testen komplexerer Anwendungsfälle mit unterschiedlichen Konfigurationseinstellungen und mehreren Clients, die verbunden sind, kann es hilfreich sein, separate Zuverlässigkeitssitzungen zu verwenden, um den Validierungsprozess zu vereinfachen.
+>Wenn mehrere Clients mit derselben Assurance-Sitzung verbunden sind und unterschiedliche Datastream-IDs verwendet werden, werden hier alle angezeigt. Dies bedeutet jedoch nicht, dass Ihre aktuelle Implementierung mehrere Datenspeicher verwendet. Zur Verarbeitung neuer Ereignisse aus diesem Client wird nur die aktuelle Datastraam-ID verwendet, die im -Tag (mobile Eigenschaft) festgelegt ist, das von der App verwendet wird. Beim Testen komplexerer Anwendungsfälle mit unterschiedlichen Konfigurationseinstellungen und mehreren Clients, die verbunden sind, kann es hilfreich sein, separate Zuverlässigkeitssitzungen zu verwenden, um den Validierungsprozess zu vereinfachen.

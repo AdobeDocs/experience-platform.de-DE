@@ -44,17 +44,17 @@ Eine Datensatzgültigkeit ist eine zeitverzögerte Aktion zum Löschen eines Dat
 
 >[!IMPORTANT]
 >
->Löschanfragen von Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Healthcare Shield**.
+>Löschanfragen zu Datensätzen stehen nur für Unternehmen zur Verfügung, die **Adobe Healthcare Shield** erworben haben.
 >
 >
 >Löschvorgänge von Datensätzen dienen zur Datenbereinigung, zum Entfernen anonymer Daten oder zur Datenminimierung. Sie dürfen **nicht** für Anfragen zu den Rechten der betroffenen Personen (Compliance) verwendet werden, da sie sich auf Datenschutzbestimmungen wie die Datenschutz-Grundverordnung (DSGVO) beziehen. Verwenden Sie stattdessen [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) für alle Compliance-Anwendungsfälle.
 
-Mit der Data Hygiene API können Sie alle mit einer Identität verknüpften Datensätze aus einem oder allen Datensätzen löschen. Alle Datenlebenszyklusaufgaben, die Identitäten löschen, werden durch ein Konstrukt dargestellt, das als Arbeitsreihenfolge bezeichnet wird. Siehe [Endpunktleitfaden für Arbeitsaufträge](./workorder.md) für Details zum Arbeiten mit Datensatzlöschungen in der API.
+Mit der Data Hygiene API können Sie alle mit einer Identität verknüpften Datensätze aus einem oder allen Datensätzen löschen. Alle Datenlebenszyklusaufgaben, die Identitäten löschen, werden durch ein Konstrukt dargestellt, das als Arbeitsreihenfolge bezeichnet wird. Weitere Informationen zum Arbeiten mit Datensatzlöschungen in der API finden Sie im [Handbuch zum Workflow-Bestell-Endpunkt](./workorder.md) .
 
 ## Kontingent
 
-Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Auftragsquoten für jeden Datenlebenszyklusvorgang beschränkt, das je nach Lizenzierung variieren kann. Siehe [Quotenendpunkt-Handbuch](./quota.md) für Details zur Anzeige des aktuellen Quotenstatus Ihrer Datenlebenszyklusprozesse.
+Ihr Unternehmen ist auf ein vorab festgelegtes monatliches Auftragsquoten für jeden Datenlebenszyklusvorgang beschränkt, das je nach Lizenzierung variieren kann. Weitere Informationen zum Anzeigen des aktuellen Quotenstatus Ihrer Datenlebenszyklusprozesse finden Sie im [Quotenendpunkt-Handbuch](./quota.md) .
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Datenlebenszyklusanfragen mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie in der [Handbuch zur Benutzeroberfläche für die Datenlebenszyklusbenutzeroberfläche](../ui/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Datenlebenszyklusanfragen mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie im [UI-Handbuch zur Datenlebenszyklusbenutzeroberfläche](../ui/overview.md).

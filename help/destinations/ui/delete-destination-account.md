@@ -6,7 +6,7 @@ description: In diesem Tutorial werden die Schritte zum Löschen von Zielkonten 
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
 source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 18%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 ## Übersicht {#overview}
 
-Die **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit verschiedenen Zielen hergestellt haben. Siehe Abschnitt [Übersicht über Konten](../ui/destinations-workspace.md#accounts) für alle Informationen, die Sie für jedes Zielkonto erhalten können.
+Die Registerkarte **[!UICONTROL Konten]** enthält Details zu den Verbindungen, die Sie mit verschiedenen Zielen hergestellt haben. In der [Übersicht über Konten](../ui/destinations-workspace.md#accounts) finden Sie alle Informationen, die Sie für jedes Zielkonto erhalten können.
 
 In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, die nicht mehr über die Experience Platform-Benutzeroberfläche benötigt werden.
 
@@ -25,11 +25,11 @@ In diesem Tutorial werden die Schritte zum Löschen von Zielkonten beschrieben, 
 
 >[!TIP]
 >
->Bevor Sie das Zielkonto löschen, müssen Sie zunächst alle vorhandenen Datenflüsse löschen, die mit dem Zielkonto verknüpft sind. Informationen zum Löschen vorhandener Ziel-Datenflüsse finden Sie im Tutorial unter [Löschen von Ziel-Datenflüssen in der Benutzeroberfläche](./delete-destinations.md).
+>Bevor Sie das Zielkonto löschen, müssen Sie zunächst alle vorhandenen Datenflüsse löschen, die mit dem Zielkonto verknüpft sind. Informationen zum Löschen vorhandener Ziel-Datenflüsse finden Sie im Tutorial zum [Löschen von Ziel-Datenflüssen in der Benutzeroberfläche](./delete-destinations.md).
 
 Gehen Sie wie folgt vor, um vorhandene Zielkonten zu löschen.
 
-1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Auswählen **[!UICONTROL Konten]** aus der oberen Kopfzeile, um Ihre vorhandenen Konten anzuzeigen.
+1. Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** über die linke Navigationsleiste aus. Wählen Sie in der oberen Kopfzeile **[!UICONTROL Konten]** aus, um Ihre vorhandenen Konten anzuzeigen.
 
    ![Registerkarte „Konten“](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -37,16 +37,16 @@ Gehen Sie wie folgt vor, um vorhandene Zielkonten zu löschen.
 
    ![Ziele filtern](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos, das Sie löschen möchten. Ein Popup-Bedienfeld wird angezeigt, das Optionen für **[!UICONTROL Aktivieren von Zielgruppen]**, **[!UICONTROL Details bearbeiten]**, und **[!UICONTROL Löschen]** das Konto. Wählen Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Löschen]** zum Löschen des gewünschten Kontos.
+3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos aus, das Sie löschen möchten. Es wird ein Popup-Bedienfeld angezeigt, das Optionen für **[!UICONTROL Zielgruppen aktivieren]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** des Kontos bereitstellt. Wählen Sie die Schaltfläche ![Löschen ](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Löschen]** aus, um das gewünschte Konto zu löschen.
 
    ![Zielkonto löschen](../assets/ui/delete-accounts/delete-accounts.png)
 
-4. Ein letztes Bestätigungsdialogfeld wird angezeigt, wählen Sie **[!UICONTROL Löschen]** , um den Prozess abzuschließen.
+4. Ein letztes Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Löschen]** aus, um den Vorgang abzuschließen.
 
-![Löschen eines Kontos bestätigen](../assets/ui/delete-accounts/confirm-account-deletion.png)
+![Kontolöschung bestätigen](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
 ## Nächste Schritte
 
 In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich &quot;Ziele&quot;zum Löschen vorhandener Konten verwendet.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit dem [!DNL Flow Service] API, siehe Tutorial zu [Löschen von Verbindungen mithilfe der Flow Service-API](../api/delete-destination-account.md)
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service]-API finden Sie im Tutorial zum [Löschen von Verbindungen mithilfe der Flow Service-API](../api/delete-destination-account.md) .

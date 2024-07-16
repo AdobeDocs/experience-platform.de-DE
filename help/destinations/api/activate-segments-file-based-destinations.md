@@ -17,7 +17,7 @@ Verwenden Sie die erweiterten Dateiexportfunktionen, um auf erweiterte Anpassung
 
 * Zusätzliche [Dateibenennungsoptionen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Möglichkeit zum Festlegen benutzerdefinierter Datei-Kopfzeilen in exportierten Dateien durch den [verbesserten Zuordnungsschritt](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Möglichkeit zur Auswahl der [Dateityp](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) der exportierten Datei.
+* Möglichkeit, den [Dateityp](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) der exportierten Datei auszuwählen.
 * [Möglichkeit zum Anpassen der Formatierung exportierter CSV-Datendateien](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Diese Funktion wird von den folgenden sechs Cloud-Speicherkarten unterstützt:
@@ -29,11 +29,11 @@ Diese Funktion wird von den folgenden sechs Cloud-Speicherkarten unterstützt:
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-In diesem Artikel wird der Workflow erläutert, der zur Verwendung der [Flussdienst-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) , um qualifizierte Profile aus Adobe Experience Platform in einen der oben verknüpften Cloud-Speicher zu exportieren.
+In diesem Artikel wird der Workflow erläutert, der zur Verwendung der [Flow Service-API](https://developer.adobe.com/experience-platform-apis/references/destinations/) erforderlich ist, um qualifizierte Profile aus Adobe Experience Platform an einen der oben verknüpften Cloud-Speicher zu exportieren.
 
 >[!TIP]
 >
->Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Profile in Cloud-Speicher-Ziele zu exportieren. Lesen Sie die [Tutorial zum Aktivieren dateibasierter Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) für weitere Informationen.
+>Sie können auch die Experience Platform-Benutzeroberfläche verwenden, um Profile in Cloud-Speicher-Ziele zu exportieren. Weitere Informationen finden Sie im Tutorial ](/help/destinations/ui/activate-batch-profile-destinations.md) zum Aktivieren dateibasierter Ziele [.
 
 <!--
 
@@ -50,16 +50,16 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Zielgruppen und das Generieren von Zielgruppen in [!DNL Adobe Experience Platform] aus dem [!DNL Real-Time Customer Profile] Daten.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen, aus Ihren [!DNL Real-Time Customer Profile] -Daten Zielgruppen zu erstellen und in [!DNL Adobe Experience Platform] Zielgruppen zu generieren.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für dateibasierte Ziele in Platform aktivieren zu können.
 
 ### Erforderliche Berechtigungen {#permissions}
 
-Für den Export von Profilen benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+Zum Exportieren von Profilen benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
@@ -67,7 +67,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln der Werte für erforderliche und optionale Kopfzeilen {#gather-values-headers}
 
-Um Aufrufe an [!DNL Platform] APIs verwenden, müssen Sie zunächst die [Tutorial zur Experience Platform-Authentifizierung](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen [!DNL Experience Platform] API-Aufrufe, wie unten dargestellt:
+Um [!DNL Platform] -APIs aufrufen zu können, müssen Sie zunächst das Tutorial zur Experience Platform-Authentifizierung [2} abschließen. ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -81,17 +81,17 @@ Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen 
 >
 >Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
-Alle Anfragen, die eine Payload enthalten (`POST`, `PUT`, `PATCH`) erfordert eine zusätzliche Kopfzeile vom Medientyp:
+Für alle Anfragen, die eine Payload enthalten (`POST`, `PUT`, `PATCH`), ist eine zusätzliche Kopfzeile vom Medientyp erforderlich:
 
 * Content-Type: `application/json`
 
 ### API-Referenzdokumentation {#api-reference-documentation}
 
-Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Siehe Abschnitt [Flussdienst - Dokumentation zur Ziel-API auf der Adobe Developer-Website](https://developer.adobe.com/experience-platform-apis/references/destinations/). Wir empfehlen, dass Sie dieses Tutorial und die API-Referenzdokumentation parallel verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Weitere Informationen finden Sie in der Dokumentation zur API für Fluss-Service - Ziele auf der Adobe Developer-Website](https://developer.adobe.com/experience-platform-apis/references/destinations/). [ Wir empfehlen, dass Sie dieses Tutorial und die API-Referenzdokumentation parallel verwenden.
 
 ### Glossar {#glossary}
 
-Beschreibungen der Begriffe, auf die Sie in diesem API-Tutorial treffen werden, finden Sie im [Glossarabschnitt](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) der API-Referenzdokumentation.
+Beschreibungen der Begriffe, auf die Sie in diesem API-Tutorial treffen werden, finden Sie im Abschnitt [Glossar Abschnitt](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) der API-Referenzdokumentation.
 
 ## Auswählen des Ziels, an das Zielgruppen exportiert werden sollen {#select-destination}
 
@@ -118,7 +118,7 @@ Sie benötigen diese IDs, um in den nächsten Schritten dieses Tutorials verschi
 
 **Anfrage**
 
-+++Retrieve [!DNL connection spec] für [!DNL Amazon S3]
++++Abrufen [!DNL connection spec] für [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -152,7 +152,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Anfrage**
 
-+++Retrieve [!DNL connection spec] für [!DNL Azure Blob Storage]
++++Abrufen [!DNL connection spec] für [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -186,7 +186,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Anfrage**
 
-+++Retrieve [!DNL connection spec] für [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++Abrufen [!DNL connection spec] für [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -216,11 +216,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Data Landing Zone(DLZ)]
 
 **Anfrage**
 
-+++Retrieve [!DNL connection spec] für [!DNL Data Landing Zone(DLZ)]
++++Abrufen [!DNL connection spec] für [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -254,7 +254,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Anfrage**
 
-+++Retrieve [!DNL connection spec] für [!DNL Google Cloud Storage]
++++Abrufen [!DNL connection spec] für [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -288,7 +288,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Anfrage**
 
-+++Retrieve [!DNL connection spec] für SFTP
++++Abrufen [!DNL connection spec] für SFTP
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -320,13 +320,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Gehen Sie wie folgt vor, um einen Zielgruppenexport-Datenfluss zu einem Cloud-Speicher-Ziel einzurichten. Bei einigen Schritten unterscheiden sich die Anforderungen und Antworten zwischen den verschiedenen Cloud-Speicher-Zielen. Verwenden Sie in diesen Fällen die Registerkarten auf der Seite, um die Anforderungen und Antworten abzurufen, die spezifisch für das Ziel sind, mit dem Sie Zielgruppen verbinden und exportieren möchten. Stellen Sie sicher, dass Sie die richtige `connection spec` und `flow spec` für das Ziel, das Sie konfigurieren.
+Gehen Sie wie folgt vor, um einen Zielgruppenexport-Datenfluss zu einem Cloud-Speicher-Ziel einzurichten. Bei einigen Schritten unterscheiden sich die Anforderungen und Antworten zwischen den verschiedenen Cloud-Speicher-Zielen. Verwenden Sie in diesen Fällen die Registerkarten auf der Seite, um die Anforderungen und Antworten abzurufen, die spezifisch für das Ziel sind, mit dem Sie Zielgruppen verbinden und exportieren möchten. Verwenden Sie unbedingt die korrekten `connection spec` und `flow spec` für das Ziel, das Sie konfigurieren.
 
-## Erstellen einer Quellverbindung {#create-source-connection}
+## Erstellen einer Source-Verbindung {#create-source-connection}
 
 ![Schritte zum Aktivieren von Zielgruppen, die den aktuellen Schritt hervorheben, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Nachdem Sie entschieden haben, an welches Ziel Sie Zielgruppen exportieren, müssen Sie eine Quellverbindung erstellen. Die [Quellverbindung](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) stellt die Verbindung zum internen [Experience Platform-Profilspeicher](/help/profile/home.md#profile-data-store).
+Nachdem Sie entschieden haben, an welches Ziel Sie Zielgruppen exportieren, müssen Sie eine Quellverbindung erstellen. Die [Quellverbindung](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) stellt die Verbindung zum internen [Experience Platform-Profilspeicher](/help/profile/home.md#profile-data-store) dar.
 
 >[!BEGINSHADEBOX]
 
@@ -370,21 +370,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-Eine erfolgreiche Antwort gibt die ID (`id`) der neu erstellten Quellverbindung und einer `etag`. Notieren Sie sich die Kennung der Quellverbindung, wie Sie sie später beim Erstellen des Datenflusses benötigen.
+Eine erfolgreiche Antwort gibt die Kennung (`id`) der neu erstellten Quellverbindung und eine `etag` zurück. Notieren Sie sich die Kennung der Quellverbindung, wie Sie sie später beim Erstellen des Datenflusses benötigen.
 
 ## Erstellen einer Basisverbindung {#create-base-connection}
 
 ![Schritte zum Aktivieren von Zielgruppen, die den aktuellen Schritt hervorheben, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
-A [Basisverbindung](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) speichert die Anmeldeinformationen sicher in Ihrem Ziel. Je nach Zieltyp können die für die Authentifizierung an diesem Ziel erforderlichen Anmeldeinformationen variieren. Um diese Authentifizierungsparameter zu finden, rufen Sie zunächst die `connection spec` für Ihr gewünschtes Ziel, wie im Abschnitt beschrieben [Auswählen des Ziels, an das Zielgruppen exportiert werden sollen](#select-destination) und dann die `authSpec` der Antwort. Verweisen Sie auf die folgenden Registerkarten für die `authSpec` Eigenschaften aller unterstützten Ziele.
+Eine [Basisverbindung](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) speichert die Anmeldeinformationen sicher in Ihrem Ziel. Je nach Zieltyp können die für die Authentifizierung an diesem Ziel erforderlichen Anmeldeinformationen variieren. Um diese Authentifizierungsparameter zu finden, rufen Sie zunächst die `connection spec` für Ihr gewünschtes Ziel ab, wie im Abschnitt [Ziel auswählen, an das Zielgruppen exportiert werden sollen](#select-destination) beschrieben, und sehen Sie sich dann die `authSpec` der Antwort an. Referenzieren Sie die folgenden Registerkarten für die `authSpec` -Eigenschaften aller unterstützten Ziele.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] Anzeige [!DNL auth spec]
++++[!DNL Amazon S3] - [!DNL Connection spec] mit [!DNL auth spec]
 
-Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die Authentifizierungsparameter in der [!DNL connection spec].
+Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im Beispiel [!DNL connection spec] unten, die zusätzliche Informationen darüber enthalten, wo die Authentifizierungsparameter in der [!DNL connection spec] zu finden sind.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -449,9 +449,9 @@ Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection
 
 >[!TAB Azure-Blobspeicher]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] Anzeige [!DNL auth spec]
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] mit [!DNL auth spec]
 
-Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die Authentifizierungsparameter in der [!DNL connection spec].
+Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im Beispiel [!DNL connection spec] unten, die zusätzliche Informationen darüber enthalten, wo die Authentifizierungsparameter in der [!DNL connection spec] zu finden sind.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -490,9 +490,9 @@ Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection
 
 >[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] Anzeige [!DNL auth spec]
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] mit [!DNL auth spec]
 
-Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die Authentifizierungsparameter in der [!DNL connection spec].
+Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im Beispiel [!DNL connection spec] unten, die zusätzliche Informationen darüber enthalten, wo die Authentifizierungsparameter in der [!DNL connection spec] zu finden sind.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -544,13 +544,13 @@ Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection
 +++
 
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Data Landing Zone(DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] Anzeige [!DNL auth spec]
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] mit [!DNL auth spec]
 
 >[!NOTE]
 >
->Für das Data Landing Zone-Ziel ist kein [!DNL auth spec].
+>Für das Data Landing Zone-Ziel ist kein [!DNL auth spec] erforderlich.
 
 ```json
 {
@@ -568,9 +568,9 @@ Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] Anzeige [!DNL auth spec]
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] mit [!DNL auth spec]
 
-Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die Authentifizierungsparameter in der [!DNL connection spec].
+Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im Beispiel [!DNL connection spec] unten, die zusätzliche Informationen darüber enthalten, wo die Authentifizierungsparameter in der [!DNL connection spec] zu finden sind.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -613,13 +613,13 @@ Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] Anzeige [!DNL auth spec]
++++SFTP - [!DNL Connection spec] mit [!DNL auth spec] anzeigen
 
 >[!NOTE]
 >
->Das SFTP-Ziel enthält zwei separate Elemente im [!DNL auth spec], da es sowohl die Authentifizierung von Passwörtern als auch von SSH-Schlüsseln unterstützt.
+>Das SFTP-Ziel enthält zwei separate Elemente in der [!DNL auth spec], da es die Authentifizierung von Passwörtern und SSH-Schlüsseln unterstützt.
 
-Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die Authentifizierungsparameter in der [!DNL connection spec].
+Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im Beispiel [!DNL connection spec] unten, die zusätzliche Informationen darüber enthalten, wo die Authentifizierungsparameter in der [!DNL connection spec] zu finden sind.
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -703,7 +703,7 @@ Beachten Sie die hervorgehobene Zeile mit Inline-Kommentaren im [!DNL connection
 
 >[!ENDTABS]
 
-Verwenden der im Authentifizierungsspezifikat angegebenen Eigenschaften (d. h. `authSpec` aus der Antwort) können Sie eine Basisverbindung mit den erforderlichen Anmeldeinformationen erstellen, die für jeden Zieltyp spezifisch sind, wie in den folgenden Beispielen dargestellt:
+Mithilfe der in der Authentifizierungsspezifikation angegebenen Eigenschaften (d. h. `authSpec` aus der Antwort) können Sie eine Basisverbindung mit den erforderlichen Anmeldeinformationen erstellen, die für jeden Zieltyp spezifisch sind, wie in den folgenden Beispielen dargestellt:
 
 >[!BEGINTABS]
 
@@ -711,11 +711,11 @@ Verwenden der im Authentifizierungsspezifikat angegebenen Eigenschaften (d. h. `
 
 **Anfrage**
 
-+++[!DNL Amazon S3] - Basierende Verbindungsanforderung mit Zugriffsschlüssel und geheimer Schlüsselauthentifizierung
++++[!DNL Amazon S3] - Basis-Verbindungsanforderung mit Zugriffsschlüssel und geheimer Schlüsselauthentifizierung
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) auf der Zieldokumentationsseite für Amazon S3.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizierung für das Ziel](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) der Zieldokumentation für Amazon S3.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -749,7 +749,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) auf der Zieldokumentationsseite für Amazon S3.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizierung für das Ziel](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) der Zieldokumentation für Amazon S3.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -780,7 +780,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-+++[!DNL Amazon S3] Basisverbindungsantwort
++++[!DNL Amazon S3] Antwort auf Basisverbindung
 
 ```json
 {
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) auf der Seite mit der Dokumentation zum Azure Blob Storage-Ziel.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Für Ziel authentifizieren](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) der Azure Blob Storage-Zieldokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) Abschnitt der Zieldokumentation für Azure Data Lake Gen 2 (ADLS Gen2).
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Authentifizierung für Ziel](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) der Zieldokumentation für Azure Data Lake Gen 2 (ADLS Gen2).
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -894,7 +894,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Data Landing Zone(DLZ)]
 
 **Anfrage**
 
@@ -902,7 +902,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Für das Data Landing Zone-Ziel sind keine Authentifizierungsberechtigungen erforderlich. Weitere Informationen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) auf der Zieldokumentationsseite der Data Landing Zone .
+>Für das Data Landing Zone-Ziel sind keine Authentifizierungsberechtigungen erforderlich. Weitere Informationen finden Sie im Abschnitt [Authentifizierung für Ziel](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) der Zieldokumentation für die Dateneinstiegszone.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -940,7 +940,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) auf der Zieldokumentationsseite für Google Cloud Storage .
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Für Ziel authentifizieren](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) der Dokumentation zum Google Cloud-Speicher-Ziel.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -991,7 +991,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) auf der Seite mit der Dokumentation zum SFTP-Ziel.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Für Ziel authentifizieren](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) der Dokumentation zum SFTP-Ziel.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -1037,7 +1037,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [beim Ziel authentifizieren](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) auf der Seite mit der Dokumentation zum SFTP-Ziel.
+>Informationen zum Abrufen der erforderlichen Authentifizierungsberechtigungen finden Sie im Abschnitt [Für Ziel authentifizieren](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) der Dokumentation zum SFTP-Ziel.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -1096,7 +1096,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### Verschlüsselung zu exportierten Dateien hinzufügen
 
-Optional können Sie Ihren exportierten Dateien Verschlüsselung hinzufügen. Dazu müssen Sie Elemente aus dem `encryptionSpecs`. Siehe Anforderungsbeispiel unten mit hervorgehobenen obligatorischen Parametern:
+Optional können Sie Ihren exportierten Dateien Verschlüsselung hinzufügen. Dazu müssen Sie Elemente aus dem `encryptionSpecs` hinzufügen. Siehe Anforderungsbeispiel unten mit hervorgehobenen obligatorischen Parametern:
 
 
 >[!BEGINSHADEBOX]
@@ -1200,17 +1200,17 @@ Notieren Sie die Verbindungs-ID aus der Antwort. Diese ID ist im nächsten Schri
 
 ![Schritte zum Aktivieren von Zielgruppen, die den aktuellen Schritt hervorheben, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
-Als Nächstes müssen Sie eine Zielverbindung erstellen. [Zielverbindungen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) die Exportparameter für die exportierten Zielgruppen speichern. Zu den Exportparametern gehören Exportspeicherort, Dateiformat, Komprimierung und andere Details. Für CSV-Dateien können Sie beispielsweise mehrere Exportoptionen auswählen. Ausführliche Informationen zu allen unterstützten CSV-Exportoptionen finden Sie in der [Seite mit Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+Als Nächstes müssen Sie eine Zielverbindung erstellen. [Zielverbindungen](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) speichern die Exportparameter für die exportierten Zielgruppen. Zu den Exportparametern gehören Exportspeicherort, Dateiformat, Komprimierung und andere Details. Für CSV-Dateien können Sie beispielsweise mehrere Exportoptionen auswählen. Ausführliche Informationen zu allen unterstützten CSV-Exportoptionen finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
-Siehe Abschnitt `targetSpec` Eigenschaften, die im `connection spec` , um die unterstützten Eigenschaften für jeden Zieltyp zu verstehen. Verweisen Sie auf die folgenden Registerkarten für die `targetSpec` Eigenschaften aller unterstützten Ziele.
+Die unterstützten Eigenschaften für die einzelnen Zieltypen finden Sie in den `connection spec` -Eigenschaften des Ziels. `targetSpec` Referenzieren Sie die folgenden Registerkarten für die `targetSpec` -Eigenschaften aller unterstützten Ziele.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] Anzeigen der Zielverbindungsparameter
++++[!DNL Amazon S3] - [!DNL Connection spec] zeigt Zielverbindungsparameter an
 
-Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die [!DNL target spec] Parameter in der Verbindungsspezifikation. Im folgenden Beispiel sehen Sie auch, welche Zielparameter *not* für Zielgruppenexport-Ziele.
+Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Beispiel unten [!DNL connection spec] , die zusätzliche Informationen darüber enthalten, wo die Parameter [!DNL target spec] in der Verbindungsspezifikation zu finden sind. Im Beispiel unten sehen Sie auch, welche Zielparameter für Zielgruppenexport-Ziele *nicht* gelten.
 
 ```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
@@ -1419,9 +1419,9 @@ Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connecti
 
 >[!TAB Azure-Blobspeicher]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] Anzeigen der Zielverbindungsparameter
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] zeigt Zielverbindungsparameter an
 
-Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die [!DNL target spec] Parameter in der Verbindungsspezifikation. Im folgenden Beispiel sehen Sie auch, welche Zielparameter *not* für Zielgruppenexport-Ziele.
+Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Beispiel unten [!DNL connection spec] , die zusätzliche Informationen darüber enthalten, wo die Parameter [!DNL target spec] in der Verbindungsspezifikation zu finden sind. Im Beispiel unten sehen Sie auch, welche Zielparameter für Zielgruppenexport-Ziele *nicht* gelten.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1619,9 +1619,9 @@ Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connecti
 
 >[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] Anzeigen der Zielverbindungsparameter
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] zeigt Zielverbindungsparameter an
 
-Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die [!DNL target spec] Parameter in der Verbindungsspezifikation. Im folgenden Beispiel sehen Sie auch, welche Zielparameter *not* für Zielgruppenexport-Ziele.
+Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Beispiel unten [!DNL connection spec] , die zusätzliche Informationen darüber enthalten, wo die Parameter [!DNL target spec] in der Verbindungsspezifikation zu finden sind. Im Beispiel unten sehen Sie auch, welche Zielparameter für Zielgruppenexport-Ziele *nicht* gelten.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1808,11 +1808,11 @@ Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connecti
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Data Landing Zone(DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] Anzeigen der Zielverbindungsparameter
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] zeigt Zielverbindungsparameter an
 
-Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die [!DNL target spec] Parameter in der Verbindungsspezifikation. Im folgenden Beispiel sehen Sie auch, welche Zielparameter *not* für Zielgruppenexport-Ziele.
+Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Beispiel unten [!DNL connection spec] , die zusätzliche Informationen darüber enthalten, wo die Parameter [!DNL target spec] in der Verbindungsspezifikation zu finden sind. Im Beispiel unten sehen Sie auch, welche Zielparameter für Zielgruppenexport-Ziele *nicht* gelten.
 
 ```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
@@ -2000,9 +2000,9 @@ Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connecti
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] Anzeigen der Zielverbindungsparameter
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] zeigt Zielverbindungsparameter an
 
-Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die [!DNL target spec] Parameter in der Verbindungsspezifikation. Im folgenden Beispiel sehen Sie auch, welche Zielparameter *not* für Zielgruppenexport-Ziele.
+Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Beispiel unten [!DNL connection spec] , die zusätzliche Informationen darüber enthalten, wo die Parameter [!DNL target spec] in der Verbindungsspezifikation zu finden sind. Im Beispiel unten sehen Sie auch, welche Zielparameter für Zielgruppenexport-Ziele *nicht* gelten.
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -2199,9 +2199,9 @@ Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connecti
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] Anzeigen der Zielverbindungsparameter
++++SFTP - [!DNL Connection spec] zeigt Zielverbindungsparameter an
 
-Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im [!DNL connection spec] Beispiel unten, das zusätzliche Informationen darüber bereitstellt, wo die [!DNL target spec] Parameter in der Verbindungsspezifikation. Im folgenden Beispiel sehen Sie auch, welche Zielparameter *not* für Zielgruppenexport-Ziele.
+Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Beispiel unten [!DNL connection spec] , die zusätzliche Informationen darüber enthalten, wo die Parameter [!DNL target spec] in der Verbindungsspezifikation zu finden sind. Im Beispiel unten sehen Sie auch, welche Zielparameter für Zielgruppenexport-Ziele *nicht* gelten.
 
 ```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
@@ -2402,7 +2402,7 @@ Mithilfe des obigen Spezifikationen können Sie eine zielgerichtete Verbindungsa
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) Abschnitt [!DNL Amazon S3] Zieldokumentationsseite
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [ Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) der Zieldokumentationsseite [!DNL Amazon S3].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -2437,7 +2437,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie im Abschnitt [Seite mit Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2494,7 +2494,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) Abschnitt [!DNL Azure Blob Storage] Zieldokumentationsseite
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [ Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) der Zieldokumentationsseite [!DNL Azure Blob Storage].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -2529,7 +2529,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie im Abschnitt [Seite mit Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2586,7 +2586,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) -Abschnitt des Azure [!DNL Data Lake Gen 2(ADLS Gen2)] Zieldokumentationsseite
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) der Azure [!DNL Data Lake Gen 2(ADLS Gen2)]-Zieldokumentation.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -2620,7 +2620,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie im Abschnitt [Seite mit Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2669,7 +2669,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Data Landing Zone(DLZ)]
 
 **Anfrage**
 
@@ -2677,7 +2677,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) Abschnitt [!DNL Data Landing Zone] Zieldokumentationsseite
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [ Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) der Zieldokumentationsseite [!DNL Data Landing Zone].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -2711,7 +2711,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie im Abschnitt [Seite mit Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2768,7 +2768,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) Abschnitt [!DNL Google Cloud Storage] Zieldokumentationsseite
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [ Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Zieldokumentationsseite [!DNL Google Cloud Storage].
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -2803,7 +2803,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie im Abschnitt [Seite mit Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2860,7 +2860,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Zieldetails ausfüllen](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) auf der Seite mit der Dokumentation zum SFTP-Ziel.
+>Informationen zum Abrufen der erforderlichen Zielparameter finden Sie im Abschnitt [Ausfüllen der Zieldetails](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) der Dokumentation zum SFTP-Ziel.
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -2894,7 +2894,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie im Abschnitt [Seite mit Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Ausführliche Informationen zu den verfügbaren CSV-Optionen für den Dateiexport finden Sie auf der Seite [Dateiformatierungskonfigurationen](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2947,13 +2947,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Beachten Sie die `target connection ID` aus der Antwort. Diese ID ist im nächsten Schritt beim Erstellen des Datenflusses für den Zielgruppen-Export erforderlich.
 
-Eine erfolgreiche Antwort gibt die ID (`id`) der neuen Zielquellenverbindung und einer `etag`. Notieren Sie sich die Ziel-Verbindungs-ID, wie Sie sie später beim Erstellen des Datenflusses benötigen.
+Bei einer erfolgreichen Antwort werden die ID (`id`) der neuen Zielquellenverbindung und eine `etag` zurückgegeben. Notieren Sie sich die Ziel-Verbindungs-ID, wie Sie sie später beim Erstellen des Datenflusses benötigen.
 
 ## Erstellen eines Datenflusses {#create-dataflow}
 
 ![Schritte zum Aktivieren von Zielgruppen, die den aktuellen Schritt hervorheben, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
-Der nächste Schritt in der Zielkonfiguration besteht darin, einen Datenfluss zu erstellen. A [dataflow](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) verknüpft zuvor erstellte Entitäten und bietet außerdem Optionen zum Konfigurieren des Zielgruppenexport-Zeitplans. Verwenden Sie zum Erstellen des Datenflusses je nach gewünschtem Cloud-Speicher-Ziel die folgenden Payloads und ersetzen Sie die Kennungen der Flussentität aus vorherigen Schritten. Beachten Sie, dass Sie in diesem Schritt keine Informationen im Zusammenhang mit der Attribut- oder Identitätszuordnung zum Datenfluss hinzufügen. Das wird im nächsten Schritt folgen.
+Der nächste Schritt in der Zielkonfiguration besteht darin, einen Datenfluss zu erstellen. Ein [Datenfluss](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) verknüpft zuvor erstellte Entitäten und bietet außerdem Optionen zum Konfigurieren des Zeitplans für den Zielgruppenexport. Verwenden Sie zum Erstellen des Datenflusses je nach gewünschtem Cloud-Speicher-Ziel die folgenden Payloads und ersetzen Sie die Kennungen der Flussentität aus vorherigen Schritten. Beachten Sie, dass Sie in diesem Schritt keine Informationen im Zusammenhang mit der Attribut- oder Identitätszuordnung zum Datenfluss hinzufügen. Das wird im nächsten Schritt folgen.
 
 >[!BEGINTABS]
 
@@ -2961,7 +2961,7 @@ Der nächste Schritt in der Zielkonfiguration besteht darin, einen Datenfluss zu
 
 **Anfrage**
 
-+ + + Erstellen des Datenflusses zum Zielgruppenexport in [!DNL Amazon S3] destination - Request
+++ + Erstellen des Zielgruppen-Export-Datenflusses zum Ziel [!DNL Amazon S3] - Anfrage
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -3009,7 +3009,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Anfrage**
 
-+ + + Erstellen des Datenflusses zum Zielgruppenexport in [!DNL Azure Blob Storage] destination - Request
+++ + Erstellen des Zielgruppen-Export-Datenflusses zum Ziel [!DNL Azure Blob Storage] - Anfrage
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -3069,7 +3069,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Anfrage**
 
-+ + + Erstellen des Datenflusses zum Zielgruppenexport in [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination - Request
+++ + Erstellen des Zielgruppen-Export-Datenflusses zum Ziel [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Anfrage
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -3113,11 +3113,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Data Landing Zone (DLZ)]
+>[!TAB Data Landing Zone(DLZ)]
 
 **Anfrage**
 
-+ + + Erstellen des Datenflusses zum Zielgruppenexport in [!DNL Data Landing Zone] destination - Request
+++ + Erstellen des Zielgruppen-Export-Datenflusses zum Ziel [!DNL Data Landing Zone] - Anfrage
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -3165,7 +3165,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Anfrage**
 
-+ + + Erstellen des Datenflusses zum Zielgruppenexport in [!DNL Google Cloud Storage] destination - Request
+++ + Erstellen des Zielgruppen-Export-Datenflusses zum Ziel [!DNL Google Cloud Storage] - Anfrage
 
 Beachten Sie die hervorgehobenen Zeilen mit Inline-Kommentaren im Anfragebeispiel, die zusätzliche Informationen bereitstellen. Entfernen Sie die Inline-Kommentare in der Anforderung, wenn Sie die Anforderung kopieren und in Ihr Terminal Ihrer Wahl einfügen.
 
@@ -3263,7 +3263,7 @@ Notieren Sie die Datenfluss-ID aus der Antwort. Diese ID wird in späteren Schri
 
 ### Hinzufügen von Zielgruppen zum Export
 
-In diesem Schritt können Sie auch auswählen, welche Zielgruppen Sie an das Ziel exportieren möchten. Ausführliche Informationen zu diesem Schritt und dem Anfrageformat zum Hinzufügen einer Zielgruppe zum Datenfluss finden Sie in den Beispielen in der [Ziel-Datenfluss aktualisieren](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) Abschnitt der API-Referenzdokumentation.
+In diesem Schritt können Sie auch auswählen, welche Zielgruppen Sie an das Ziel exportieren möchten. Ausführliche Informationen zu diesem Schritt und zum Anfrageformat zum Hinzufügen einer Zielgruppe zum Datenfluss finden Sie in den Beispielen im Abschnitt [Aktualisieren eines Ziel-Datenflusses](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) der API-Referenzdokumentation.
 
 
 ## Einrichten der Attribut- und Identitätszuordnung {#attribute-and-identity-mapping}
@@ -3278,11 +3278,11 @@ Nachdem Sie Ihren Datenfluss erstellt haben, müssen Sie eine Zuordnung für die
 
 Um beispielsweise die folgende Zuordnung zu erhalten, die in der Benutzeroberfläche angezeigt wird, müssen Sie die drei oben aufgelisteten und in den nächsten Überschriften detaillierten Schritte ausführen.
 
-![Beispiel für einen Zuordnungsschritt](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
+![Beispiel für Zuordnungsschritt](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
 ### Eingabeschema erstellen
 
-Um ein Eingabeschema zu erstellen, müssen Sie zunächst Ihre [Vereinigungsschema](/help/profile/ui/union-schema.md) und die Identitäten, die an das Ziel exportiert werden können. Dies ist das Schema von Attributen und Identitäten, die Sie als Quellzuordnung auswählen können.
+Um ein Eingabeschema zu erstellen, müssen Sie zunächst Ihr [Vereinigungsschema](/help/profile/ui/union-schema.md) und die Identitäten abrufen, die an das Ziel exportiert werden können. Dies ist das Schema von Attributen und Identitäten, die Sie als Quellzuordnung auswählen können.
 
 ![Aufzeichnung, die die Attribut- und Identitätsoptionen in der Ansicht des ausgewählten Quellfelds anzeigt](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
 
@@ -3477,7 +3477,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Verfügbare Identitäten anzeigen, die im Eingabeschema verwendet werden sollen
 
-Die Antwort gibt die Identitäten zurück, die Sie beim Erstellen des Eingabeschema verwenden können. Beachten Sie, dass diese Antwort beide [standard](/help/identity-service/features/namespaces.md#standard) und [custom](/help/identity-service/features/namespaces.md#manage-namespaces) Identitäts-Namespaces, die Sie unter Experience Platform einrichten.
+Die Antwort gibt die Identitäten zurück, die Sie beim Erstellen des Eingabeschema verwenden können. Beachten Sie, dass diese Antwort sowohl die in Experience Platform eingerichteten Identitäts-Namespaces [standard](/help/identity-service/features/namespaces.md#standard) als auch [custom](/help/identity-service/features/namespaces.md#manage-namespaces) zurückgibt.
 
 ```json
 [
@@ -3671,7 +3671,7 @@ Die Antwort gibt die Identitäten zurück, die Sie beim Erstellen des Eingabesch
 
 >[!ENDSHADEBOX]
 
-Als Nächstes müssen Sie die Antwort von oben kopieren und zum Erstellen Ihres Eingabeschema verwenden. Sie können die gesamte JSON-Antwort aus der obigen Antwort kopieren und in die `jsonSchema` unten angegeben.
+Als Nächstes müssen Sie die Antwort von oben kopieren und zum Erstellen Ihres Eingabeschema verwenden. Sie können die gesamte JSON-Antwort aus der obigen Antwort kopieren und in das unten angegebene `jsonSchema` -Objekt platzieren.
 
 >[!BEGINSHADEBOX]
 
@@ -3728,7 +3728,7 @@ Als Nächstes müssen Sie das Ausgabeschema für Ihren Export einrichten. Zunäc
 
 +++ Anfrage zum Abrufen des Partnerschemas für das Ausgabeschema
 
-Beachten Sie, dass im folgenden Beispiel die Variable `connection spec ID` für Amazon S3. Ersetzen Sie diesen Wert durch die für Ihr Ziel spezifische Verbindungsspezifikations-ID.
+Beachten Sie, dass im folgenden Beispiel der `connection spec ID` für Amazon S3 verwendet wird. Ersetzen Sie diesen Wert durch die für Ihr Ziel spezifische Verbindungsspezifikations-ID.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwort mit einem Beispielschema**
 
-Inspect die Antwort, die Sie beim Ausführen des oben genannten Aufrufs erhalten haben. Sie müssen einen Drilldown in die Antwort durchführen, um das Objekt zu finden `targetSpec.attributes.partnerSchema.jsonSchema`
+Inspect die Antwort, die Sie beim Ausführen des oben genannten Aufrufs erhalten haben. Sie müssen einen Drilldown in die Antwort durchführen, um das Objekt `targetSpec.attributes.partnerSchema.jsonSchema` zu finden
 
 +++ Antwort zum Abrufen des Partnerschemas für das Ausgabeschema
 
@@ -4028,7 +4028,7 @@ Inspect die Antwort, die Sie beim Ausführen des oben genannten Aufrufs erhalten
 
 >[!ENDSHADEBOX]
 
-Als Nächstes müssen Sie ein Ausgabeschema erstellen. Kopieren Sie die oben angegebene JSON-Antwort und fügen Sie sie in die `jsonSchema` -Objekt weiter unten.
+Als Nächstes müssen Sie ein Ausgabeschema erstellen. Kopieren Sie die obige JSON-Antwort und fügen Sie sie in das nachstehende `jsonSchema` -Objekt ein.
 
 >[!BEGINSHADEBOX]
 
@@ -4364,7 +4364,7 @@ Die ID in der Antwort stellt die eindeutige Kennung des von Ihnen erstellten Ein
 
 ### Zuordnungssatz erstellen {#create-mapping-set}
 
-Verwenden Sie als Nächstes das [Datenvorbereitung-API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) , um den Zuordnungssatz mithilfe der Eingabe-Schema-ID, der Ausgabeschema-ID und der gewünschten Feldzuordnungen zu erstellen.
+Verwenden Sie anschließend die [Datenvorbereitung-API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) , um den Zuordnungssatz mithilfe der Eingabe-Schema-ID, der Ausgabeschema-ID und der gewünschten Feldzuordnungen zu erstellen.
 
 >[!BEGINSHADEBOX]
 
@@ -4374,9 +4374,9 @@ Verwenden Sie als Nächstes das [Datenvorbereitung-API](https://developer.adobe.
 
 >[!IMPORTANT]
 >
->* Im Zuordnungsobjekt, das unten gezeigt wird, wird die `destination` -Parameter akzeptiert keine Punkte `"."`. Beispielsweise müssen Sie personalEmail_address oder segmentMembership_status verwenden, wie im Konfigurationsbeispiel hervorgehoben.
->* Es gibt einen bestimmten Fall, in dem das Quellattribut ein Identitätsattribut ist und einen Punkt enthält. In diesem Fall muss das Attribut mit `//`, wie unten hervorgehoben.
->* Beachten Sie auch, dass die folgende Beispielkonfiguration Folgendes enthält: `Email` und `Phone_E.164`können Sie pro Datenfluss nur ein Identitätsattribut exportieren.
+>* Im unten gezeigten Zuordnungsobjekt akzeptiert der Parameter `destination` keine Punkte `"."`. Beispielsweise müssen Sie personalEmail_address oder segmentMembership_status verwenden, wie im Konfigurationsbeispiel hervorgehoben.
+>* Es gibt einen bestimmten Fall, in dem das Quellattribut ein Identitätsattribut ist und einen Punkt enthält. In diesem Fall muss das Attribut mit `//` maskiert werden, wie unten hervorgehoben.
+>* Beachten Sie außerdem, dass, obwohl die folgende Beispielkonfiguration `Email` und `Phone_E.164` enthält, Sie nur ein Identitätsattribut pro Datenfluss exportieren können.
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
@@ -4450,11 +4450,11 @@ Rufen Sie als Nächstes die Kennung des Datenflusses ab, den Sie aktualisieren m
 
 >[!BEGINSHADEBOX]
 
-Siehe [Abrufen der Details eines Ziel-Datenflusses](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) für Informationen zum Abrufen der Kennung eines Datenflusses.
+Informationen zum Abrufen der Kennung eines Datenflusses finden Sie unter [Abrufen der Details eines Ziel-Datenflusses](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/getFlowById) .
 
 >[!ENDSHADEBOX]
 
-Schließlich müssen Sie `PATCH` den Datenfluss mit den soeben erstellten Mapping-Set-Informationen.
+Schließlich müssen Sie den Datenfluss mit den soeben erstellten Mapping-Set-Informationen `PATCH` auswählen.
 
 >[!BEGINSHADEBOX]
 
@@ -4504,19 +4504,19 @@ Die Antwort der Flow Service-API gibt die ID des aktualisierten Datenflusses zur
 
 ![Schritte zum Aktivieren von Zielgruppen, die den aktuellen Schritt hervorheben, in dem sich der Benutzer befindet](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-Verwenden Sie die `PATCH` Vorgang. Sie können beispielsweise Ihren Datenflüssen eine Marketing-Aktion hinzufügen. Oder Sie können Ihren Datenfluss aktualisieren, um Felder als Pflichtschlüssel oder Deduplizierungsschlüssel auszuwählen.
+Verwenden Sie den Vorgang `PATCH` , um Aktualisierungen an Ihrem Datenfluss vorzunehmen. Sie können beispielsweise Ihren Datenflüssen eine Marketing-Aktion hinzufügen. Oder Sie können Ihren Datenfluss aktualisieren, um Felder als Pflichtschlüssel oder Deduplizierungsschlüssel auszuwählen.
 
 ### Hinzufügen einer Marketing-Aktion {#add-marketing-action}
 
-So fügen Sie eine [Marketing-Aktion](/help/data-governance/api/marketing-actions.md), siehe die Beispiele für Anfragen und Antworten unten.
+Informationen zum Hinzufügen einer [Marketing-Aktion](/help/data-governance/api/marketing-actions.md) finden Sie in den Beispielen für Anfragen und Antworten unten.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist erforderlich, wenn Sie eine `PATCH` -Anfrage. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
+>Die Kopfzeile `If-Match` ist bei einer `PATCH` -Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
 >
-> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an die `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` Endpunkt, wobei `{ID}` ist die Datenfluss-ID, die Sie aktualisieren möchten.
+> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an den `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -Endpunkt, wobei `{ID}` die Datenfluss-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie den Wert der `If-Match` -Kopfzeile in doppelten Anführungszeichen wie in den Beispielen unten beim Erstellen von `PATCH` -Anfragen.
+> Stellen Sie sicher, dass Sie den Wert der Kopfzeile `If-Match` in doppelte Anführungszeichen setzen, wie in den Beispielen unten bei der Durchführung von `PATCH` -Anfragen.
 
 >[!BEGINSHADEBOX]
 
@@ -4524,7 +4524,7 @@ So fügen Sie eine [Marketing-Aktion](/help/data-governance/api/marketing-action
 
 >[!TIP]
 >
->Bevor Sie einem Datenfluss eine Marketing-Aktion hinzufügen, können Sie Ihre vorhandenen Kern- und benutzerdefinierten Marketing-Aktionen nachschlagen. Ansicht [Abrufen einer Liste vorhandener Marketing-Aktionen](/help/data-governance/api/marketing-actions.md#list).
+>Bevor Sie einem Datenfluss eine Marketing-Aktion hinzufügen, können Sie Ihre vorhandenen Kern- und benutzerdefinierten Marketing-Aktionen nachschlagen. Anzeigen von [, wie eine Liste vorhandener Marketing-Aktionen abgerufen wird](/help/data-governance/api/marketing-actions.md#list).
 
 + + + Hinzufügen einer Marketing-Aktion zu einem Ziel-Datenfluss - Anfrage
 
@@ -4562,7 +4562,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 + + + Hinzufügen einer Marketing-Aktion - Antwort
 
-Eine erfolgreiche Antwort gibt Antwort-Code zurück `200` zusammen mit der Kennung des aktualisierten Datenflusses und des aktualisierten eTags.
+Bei einer erfolgreichen Antwort wird zusammen mit der ID des aktualisierten Datenflusses und dem aktualisierten eTag der Antwortcode `200` zurückgegeben.
 
 ```json
 {
@@ -4577,15 +4577,15 @@ Eine erfolgreiche Antwort gibt Antwort-Code zurück `200` zusammen mit der Kennu
 
 ### Einen obligatorischen Schlüssel hinzufügen {#add-mandatory-key}
 
-So fügen Sie eine [Pflichtschlüssel](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), siehe die Beispiele für Anfragen und Antworten unten.
+Informationen zum Hinzufügen eines [obligatorischen Schlüssels](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) finden Sie in den Beispielen für Anfragen und Antworten unten.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist erforderlich, wenn Sie eine `PATCH` -Anfrage. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
+>Die Kopfzeile `If-Match` ist bei einer `PATCH` -Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
 >
-> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an die `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` Endpunkt, wobei `{ID}` ist die Datenfluss-ID, die Sie aktualisieren möchten.
+> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an den `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -Endpunkt, wobei `{ID}` die Datenfluss-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie den Wert der `If-Match` -Kopfzeile in doppelten Anführungszeichen wie in den Beispielen unten beim Erstellen von `PATCH` -Anfragen.
+> Stellen Sie sicher, dass Sie den Wert der Kopfzeile `If-Match` in doppelte Anführungszeichen setzen, wie in den Beispielen unten bei der Durchführung von `PATCH` -Anfragen.
 
 >[!BEGINSHADEBOX]
 
@@ -4656,15 +4656,15 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ### Deduplizierungsschlüssel hinzufügen {#add-deduplication-key}
 
-So fügen Sie eine [Deduplizierungsschlüssel](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)finden Sie unten die Beispiele für Anfragen und Antworten .
+Informationen zum Hinzufügen eines [Deduplizierungsschlüssels](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) finden Sie in den unten stehenden Anforderungs- und Antwortbeispielen
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist erforderlich, wenn Sie eine `PATCH` -Anfrage. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
+>Die Kopfzeile `If-Match` ist bei einer `PATCH` -Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version des Datenflusses, den Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung einer Flussentität wie Datenfluss, Zielverbindung und anderen aktualisiert.
 >
-> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an die `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` Endpunkt, wobei `{ID}` ist die Datenfluss-ID, die Sie aktualisieren möchten.
+> Um die neueste Version des eTag-Werts zu erhalten, stellen Sie eine GET-Anfrage an den `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -Endpunkt, wobei `{ID}` die Datenfluss-ID ist, die Sie aktualisieren möchten.
 >
-> Stellen Sie sicher, dass Sie den Wert der `If-Match` -Kopfzeile in doppelten Anführungszeichen wie in den Beispielen unten beim Erstellen von `PATCH` -Anfragen.
+> Stellen Sie sicher, dass Sie den Wert der Kopfzeile `If-Match` in doppelte Anführungszeichen setzen, wie in den Beispielen unten bei der Durchführung von `PATCH` -Anfragen.
 
 >[!BEGINSHADEBOX]
 
@@ -4813,11 +4813,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Informationen zu [Verschiedene Parameter, die von der DataFlow-Ausführungs-API zurückgegeben werden](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) in der API-Referenzdokumentation.
+Informationen zu den [verschiedenen Parametern, die von der DataFlow-Ausführungs-API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) zurückgegeben werden, finden Sie in der API-Referenzdokumentation.
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Siehe Abschnitt [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Weitere Informationen zur Interpretation von Fehlerantworten finden Sie unter [API-Status-Codes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anforderungsheader](/help/landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
 
 ## Nächste Schritte {#next-steps}
 

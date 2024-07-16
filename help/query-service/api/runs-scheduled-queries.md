@@ -16,7 +16,7 @@ ht-degree: 76%
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit beginnen, die [!DNL Query Service]-API aufzurufen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mithilfe der [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit beginnen, die [!DNL Query Service]-API aufzurufen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der [!DNL Query Service] -API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Liste aller ausgeführten Vorgänge für eine bestimmte geplante Abfrage abrufen
 
@@ -42,7 +42,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Au
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die ältesten Ausführungen zurück und listet dann weiterhin die neuesten Ergebnisse auf<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` um das Datum 7. September 2020 auszudrücken. Ein komplexeres Beispiel würde wie folgt geschrieben: `2022-11-05T08:15:30-05:00` und entspricht dem 5. November 2022, 8.:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`). Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
+| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die ältesten Ausführungen zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` , um das Datum 7. September 2020 anzugeben. Ein komplexeres Beispiel würde als `2022-11-05T08:15:30-05:00` geschrieben und entspricht dem Wert vom 5. November 2022, 8:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`) gekennzeichnet. Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
 | `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `state` und `externalTrigger`. Die Liste der unterstützten Operatoren umfasst `>` (größer als), `<` (kleiner als), `==` (gleich) und `!=` (ungleich). Beispielsweise gibt `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` alle manuell erstellten, erfolgreichen und nach dem 20. April 2019 erstellten Ausführungen zurück. |
 
 **Anfrage**
@@ -149,7 +149,7 @@ Bei einer erfolgreichen Antwort wird für die angegebene geplante Abfrage der HT
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` nach [Beenden einer Ausführung für eine bestimmte geplante Abfrage](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Sie können den Wert `_links.cancel` verwenden, um [eine Ausführung für eine bestimmte geplante Abfrage anzuhalten](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Sofort eine Ausführung für eine bestimmte geplante Abfrage auslösen
 

@@ -12,13 +12,13 @@ ht-degree: 16%
 ---
 
 
-# [!UICONTROL Details zur Endbenutzer-ID] Schemafeldgruppe
+# [!UICONTROL Endbenutzer-ID-Details] Schemafeldgruppe
 
 >[!NOTE]
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Details zur Endbenutzer-ID] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), mit dem die Identitätsdaten einer Person in mehreren Adobe-Applikationen beschrieben werden. Die Feldergruppe stellt eine Stammebene bereit `endUserIDs` -Objekt, das selbst ein schreibgeschütztes enthält `_experience` -Feld, dessen Werte automatisch aktualisiert werden, wenn Daten erfasst werden.
+[!UICONTROL Endbenutzer-ID-Details] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md), die verwendet wird, um die Identitätsdaten einer Person in mehreren Adobe-Anwendungen zu beschreiben. Die Feldergruppe stellt ein `endUserIDs` -Objekt auf der Stammebene bereit, das wiederum ein schreibgeschütztes `_experience` -Feld enthält, dessen Werte bei der Erfassung von Daten automatisch aktualisiert werden.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 

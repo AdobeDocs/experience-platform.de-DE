@@ -157,13 +157,13 @@ Sie werden zur Registerkarte **[!UICONTROL Benutzergruppen]** zurückgeleitet.
 
 ## Hinzufügen von Benutzern zum Experience Platform über eine Rolle
 
-Um einen Benutzer zu einer Rolle hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]**
+Um einen Benutzer zu einer Rolle hinzuzufügen, melden Sie sich bei der Admin Console an und wählen Sie **[!UICONTROL Benutzer hinzufügen]** aus.
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
 Der Dialog **[!UICONTROL Benutzer zu Ihrem Team hinzufügen]** wird angezeigt. Geben Sie die E-Mail-Adresse des Benutzers, den Vornamen (optional) und den Nachnamen (optional) ein.
 
-Wählen Sie das Stiftsymbol aus, um Produkte und Benutzergruppen auszuwählen. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, wählen Sie **[!UICONTROL AEP-Default-All-Users]**, wählen Sie  **[!UICONTROL Speichern]**.
+Wählen Sie das Stiftsymbol aus, um Produkte und Benutzergruppen auszuwählen, wählen Sie **[!UICONTROL Adobe Experience Platform]**, dann **[!UICONTROL AEP-Default-All-Users]** und dann **[!UICONTROL Save]**.
 
 ![product-profile](../../images/flac-ui/product-profile.png)
 

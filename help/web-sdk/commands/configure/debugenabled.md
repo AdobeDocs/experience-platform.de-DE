@@ -1,7 +1,8 @@
 ---
 title: debugEnabled
 description: Verwenden Sie Code, um Debugging-Funktionen im Web SDK zu aktivieren.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 89392d16-9a0d-427b-86b6-70005f63f440
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -10,17 +11,17 @@ ht-degree: 0%
 
 # `debugEnabled`
 
-Die `debugEnabled` -Eigenschaft können Sie das Debugging mit Web SDK-Code aktivieren oder deaktivieren. Es ist eine der verfügbaren Möglichkeiten, [Debugging](../../use-cases/debugging.md). Die Aktivierung des Debuggens in Ihrer Implementierung kann während der Website-Entwicklung praktischer sein als andere Methoden, wenn Sie das Debugging immer aktivieren möchten. Diese Debugging-Methode ermöglicht sie für alle Besucher, sodass sie nicht für Produktionsseiten empfohlen wird.
+Mit der Eigenschaft `debugEnabled` können Sie das Debugging mithilfe des Web SDK-Codes aktivieren oder deaktivieren. Es ist eine der verfügbaren Möglichkeiten, das [Debugging](../../use-cases/debugging.md) zu aktivieren. Die Aktivierung des Debuggens in Ihrer Implementierung kann während der Website-Entwicklung praktischer sein als andere Methoden, wenn Sie das Debugging immer aktivieren möchten. Diese Debugging-Methode ermöglicht sie für alle Besucher, sodass sie nicht für Produktionsseiten empfohlen wird.
 
-Siehe [Debugging](../../use-cases/debugging.md) Anwendungsfallseite finden Sie weitere Möglichkeiten, das Debugging zu aktivieren.
+Weitere Möglichkeiten zum Aktivieren des Debuggens finden Sie auf der Seite mit den Anwendungsbeispielen für das [Debugging](../../use-cases/debugging.md) .
 
 ## Aktivieren des Debuggens mithilfe der Web SDK-Tag-Erweiterung
 
 Es sind keine Debugging-Optionen verfügbar, die nativ mit der Web SDK-Tag-Erweiterung verwendet werden. Verwenden Sie eine [alternative Debugging-Methode](../../use-cases/debugging.md).
 
-## Aktivieren des Debuggens mithilfe der JavaScript-Bibliothek des Web SDK
+## Aktivieren des Debuggens mithilfe der Web SDK JavaScript-Bibliothek
 
-Legen Sie die `debugEnabled` boolean to `true` beim Ausführen der `configure` Befehl. Wenn Sie diese Eigenschaft beim Konfigurieren des SDK weglassen, wird standardmäßig `false`.
+Setzen Sie den booleschen Wert `debugEnabled` beim Ausführen des Befehls `configure` auf `true`. Wenn Sie diese Eigenschaft beim Konfigurieren des SDK weglassen, wird standardmäßig `false` verwendet.
 
 ```js
 alloy("configure", {

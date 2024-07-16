@@ -24,9 +24,9 @@ Verwenden Sie Data Distiller, um Ihre Pipelines für maschinelles Lernen mit hoc
 
 Dieses Dokument bietet eine Reihe Cloud-basierter Notebook-Umgebungen für maschinelles Lernen, die einen durchgängigen Workflow demonstrieren. Der Workflow verwendet Ihre bevorzugten Tools für das maschinelle Lernen, um benutzerdefinierte Datenmodelle zu erstellen, die Ihre Marketing-Anwendungsfälle mit Experience Platform-Daten unterstützen.
 
-Dieser Workflow erfordert die Verwendung von [!DNL Python] Notebooks in Ihren Umgebungen für maschinelles Lernen. Anweisungen für die ersten Schritte mit diesen [!DNL Python] Notebooks sind in ihren jeweiligen Readme-Dateien enthalten.
+Dieser Workflow erfordert die Verwendung von [!DNL Python] Notebooks in Ihren Umgebungen für maschinelles Lernen. Anweisungen zum Einstieg in diese [!DNL Python] Notebooks finden Sie in den entsprechenden Readme-Dateien.
 
-Bevor Sie mit diesem Handbuch fortfahren, führen Sie die Schritte aus, die im Abschnitt [Übersicht über KI/ML-Feature-Pipelines](./overview.md) , um die Verwendung der in dieser AI/ML-Feature-Pipeline verwendeten Python-Beispiel-Notebooks zu aktivieren.
+Bevor Sie mit diesem Handbuch fortfahren, führen Sie die Schritte aus, die in der Übersicht über AI-/ML-Feature-Pipelines ](./overview.md) beschrieben sind, um die Verwendung der Python-Beispiel-Notebooks zu aktivieren, die in diesem Anwendungsfall für die KI/ML-Feature-Pipeline verwendet werden.[
 
 ## Notebooks mit der Cloud-Umgebung für maschinelles Lernen {#cmle-notebooks}
 

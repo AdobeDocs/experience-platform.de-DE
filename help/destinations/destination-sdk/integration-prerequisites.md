@@ -4,7 +4,7 @@ title: Voraussetzungen für die Integration
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '199'
 ht-degree: 2%
 
 ---
@@ -24,10 +24,10 @@ Um Destination SDK zu verwenden, stellen Sie sicher, dass Sie die in den folgend
 
 ## Technische Voraussetzungen für Batch-Ziele {#batch-prerequisites}
 
-1. Sie haben einen Zielspeicherort, der auf gehostet wird. [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud]oder eine private [!DNL Data Landing Zone], wo Sie Dateien empfangen können, die aus Experience Platform exportiert wurden.
-2. Ihre Zielplattform kann Dateien in dem Format erfassen, das über das [Dateiformatierungsoptionen](functionality/destination-server/file-formatting.md) in Destination SDK für Batch-Ziele.
-3. (Optional) Sie haben eine Zielgruppe erstellt/abgerufen/aktualisiert/gelöscht ([!DNL CRUD]) API- oder API-Endpunkt für die programmatische Metadatenverwaltung.
+1. Sie haben einen Zielspeicherort, der auf [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud] oder einer privaten [!DNL Data Landing Zone] gehostet wird, wo Sie Dateien empfangen können, die aus Experience Platform exportiert wurden.
+2. Ihre Zielplattform kann Dateien in dem Format erfassen, das über die [Dateiformatierungsoptionen](functionality/destination-server/file-formatting.md) in der Destination SDK für Batch-Ziele konfiguriert wurde.
+3. (Optional) Sie haben eine Zielgruppen-API zum Erstellen/Abrufen/Aktualisieren/Löschen ([!DNL CRUD]) oder einen API-Endpunkt für die programmgesteuerte Metadatenverwaltung.
 
 ## Voraussetzungen für die Partnerschaft {#partnership-prerequisites}
 
-Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und Destination SDK verwenden möchten, lesen Sie die Partnerschaftserfordernisse für ISVs und SIs im Abschnitt [Zugriffsabschnitt abrufen](overview.md#get-access).
+Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und Destination SDK verwenden möchten, lesen Sie die Partnerschaftserfordernisse für ISVs und SIs im Abschnitt [Erhalten des Zugriffs](overview.md#get-access).

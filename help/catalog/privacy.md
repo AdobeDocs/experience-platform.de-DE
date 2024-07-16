@@ -19,7 +19,7 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher erstellen möchten, lesen Sie das Handbuch unter [Verarbeitung von Datenschutzanfragen für Profil](../profile/privacy.md) zusätzlich zu diesem Tutorial.
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial das Handbuch zur Verarbeitung von Datenschutzanfragen für Profil](../profile/privacy.md) .[
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
@@ -113,7 +113,7 @@ curl -X POST \
 | `xdm:sourceProperty` | Der Pfad zum Schemafeld, auf das der Deskriptor angewendet wird. |
 | `xdm:namespace` | Einer der [standardmäßigen Identity-Namespaces](../privacy-service/api/appendix.md#standard-namespaces), die von [!DNL Privacy Service] erkannt werden, oder ein benutzerdefinierter Namespace, der von Ihrem Unternehmen definiert wurde. |
 | `xdm:property` | Entweder „xdm:id“ oder „xdm:code“, je nach Namespace, der unter `xdm:namespace` verwendet wird. |
-| `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn „true“, bedeutet dies, dass das Feld eine primäre Identität ist. Schemas dürfen nur eine primäre Identität enthalten. Die Standardeinstellung lautet „false“, wenn sie nicht enthalten ist. |
+| `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn „true“, bedeutet dies, dass das Feld eine primäre Identität ist. Schemata dürfen nur eine primäre Identität enthalten. Die Standardeinstellung lautet „false“, wenn sie nicht enthalten ist. |
 
 **Antwort**
 
@@ -139,7 +139,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) sowie die Details 
 >
 >In diesem Abschnitt wird beschrieben, wie Sie Datenschutzanfragen für den Data Lake formatieren. Es wird dringend empfohlen, die Dokumentation zur [[!DNL Privacy Service] Benutzeroberfläche](../privacy-service/ui/overview.md) oder zur [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) zu lesen, um mehr über alle Schritte beim Übermitteln eines Datenschutzauftrags zu erfahren, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Payloads von Anfragen.
 
-Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanfragen für den Data Lake mit dem [!DNL Privacy Service] Benutzeroberfläche oder API.
+Im folgenden Abschnitt wird beschrieben, wie Sie mithilfe der [!DNL Privacy Service] -Benutzeroberfläche oder -API Datenschutzanfragen für den Data Lake ausführen.
 
 >[!IMPORTANT]
 >
@@ -147,17 +147,17 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanfragen für den Da
 
 ### Verwenden der Benutzeroberfläche
 
-Wählen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche **[!UICONTROL AEP Data Lake]** under **[!UICONTROL Produkte]** um Aufträge für Daten zu verarbeiten, die im Data Lake gespeichert sind.
+Stellen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche sicher, dass Sie unter **[!UICONTROL Produkte]** die Option **[!UICONTROL AEP Data Lake]** auswählen, um Aufträge für Daten zu verarbeiten, die im Data Lake gespeichert sind.
 
 ![Bild, das das im Dialogfeld zur Erstellung von Datenschutzanfragen ausgewählte Data Lake-Produkt anzeigt](./images/privacy/product-value.png)
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für den Data Lake müssen `unregistered` für ihre `type` und einen `namespace` -Wert, der mit einem [Datenschutzbezeichnungen](#privacy-labels) die zu den entsprechenden Datensätzen hinzugefügt wurden.
+Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für den Data Lake müssen für ihren `type` -Wert `unregistered` und einen `namespace` -Wert verwenden, der mit einer der [Datenschutzbezeichnungen](#privacy-labels) übereinstimmt, die den entsprechenden Datensätzen hinzugefügt wurden.
 
-Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Bei Anforderungen an den Data Lake muss das Array den Wert enthalten `aepDataLake`.
+Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Bei Anfragen an den Data Lake muss das Array den Wert `aepDataLake` enthalten.
 
-Mit der folgenden Anfrage wird ein neuer Datenschutzauftrag für den Data Lake erstellt, wobei die nicht registrierte `email_label` Namespace. Er enthält auch den Produktwert für den Data Lake im `include` array:
+Mit der folgenden Anfrage wird ein neuer Datenschutzauftrag für den Data Lake mit dem nicht registrierten Namespace `email_label` erstellt. Sie enthält auch den Produktwert für den Data Lake im Array `include` :
 
 ```shell
 curl -X POST \
@@ -206,13 +206,13 @@ curl -X POST \
 
 Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann innerhalb von sieben Tagen aus dem Data Lake entfernt. Während dieses 7-Tage-Fensters werden die Daten vorläufig gelöscht und stehen somit keinem [!DNL Platform]-Service mehr zur Verfügung.
 
-Wenn auch `ProfileService` oder `identity` in der Datenschutzanfrage werden die zugehörigen Daten separat verarbeitet. Siehe Abschnitt zu [Verarbeitung von Löschanfragen für Profil](../profile/privacy.md#delete) für weitere Informationen.
+Wenn Sie auch `ProfileService` oder `identity` in die Datenschutzanfrage aufgenommen haben, werden die zugehörigen Daten separat verarbeitet. Weitere Informationen finden Sie im Abschnitt zum [Löschen der Anforderungsverarbeitung für Profil](../profile/privacy.md#delete) .
 
 ## Nächste Schritte
 
 Durch Lesen dieses Dokuments haben Sie sich mit den wichtigen Konzepten der Verarbeitung von Datenschutzanfragen für den Data Lake vertraut gemacht. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Siehe Dokument unter [Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil](../profile/privacy.md) für Schritte zur Verarbeitung von Datenschutzanfragen für die [!DNL Profile] speichern.
+Anweisungen zur Verarbeitung von Datenschutzanfragen für den [!DNL Profile]-Store finden Sie im Dokument zur Verarbeitung von Datenschutzanfragen für das Echtzeit-Kundenprofil ](../profile/privacy.md).[
 
 ## Anhang
 

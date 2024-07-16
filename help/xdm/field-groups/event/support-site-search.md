@@ -9,9 +9,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Support-Site-Suche] Schemafeldgruppe
+# [!UICONTROL Unterstützung der Schemafeldgruppe &quot;Site-Suche&quot;]
 
-[!UICONTROL Support-Site-Suche] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Sie bietet eine `siteKnowledge.supportSiteSearch` -Objekt zu einem Schema, das Informationen über eine Support-Site-Suche erfasst.
+[!UICONTROL Site-Suche unterstützen] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md). Es stellt ein einzelnes `siteKnowledge.supportSiteSearch` -Objekt für ein Schema bereit, das Informationen über eine Support-Site-Suche erfasst.
 
 ![](../../images/field-groups/support-site-search.png)
 
@@ -21,4 +21,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).
+Weitere Informationen zur Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

@@ -11,9 +11,9 @@ ht-degree: 3%
 
 # `appendIdentityToUrl`
 
-Die `appendIdentityToUrl` -Befehl können Sie der URL eine Benutzer-ID als Abfragezeichenfolge hinzufügen. Mit dieser Aktion können Sie die Identität eines Besuchers zwischen Domänen übertragen, wodurch doppelte Besucherzahlen für Datensätze verhindert werden, die sowohl Domänen als auch Kanäle enthalten. Sie ist in Web SDK-Versionen 2.11.0 oder höher verfügbar.
+Mit dem Befehl `appendIdentityToUrl` können Sie der URL eine Benutzer-ID als Abfragezeichenfolge hinzufügen. Mit dieser Aktion können Sie die Identität eines Besuchers zwischen Domänen übertragen, wodurch doppelte Besucherzahlen für Datensätze verhindert werden, die sowohl Domänen als auch Kanäle enthalten. Sie ist in Web SDK-Versionen 2.11.0 oder höher verfügbar.
 
-Die generierte und an die URL angehängte Abfragezeichenfolge lautet `adobe_mc`. Wenn das Web SDK keine ECID finden kann, wird die `/acquire` -Endpunkt zu erstellen.
+Die generierte und an die URL angehängte Abfragezeichenfolge lautet `adobe_mc`. Wenn das Web SDK keine ECID finden kann, ruft es den `/acquire` -Endpunkt auf, um eine zu generieren.
 
 >[!NOTE]
 >
@@ -23,24 +23,24 @@ Die generierte und an die URL angehängte Abfragezeichenfolge lautet `adobe_mc`.
 
 Das Anhängen einer Identität an eine URL erfolgt als Aktion innerhalb einer Regel in der Adobe Experience Platform-Oberfläche für Datenerfassungs-Tags.
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. under [!UICONTROL Aktionen], wählen Sie eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie die [!UICONTROL Erweiterung] Dropdown-Feld zu **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie die [!UICONTROL Aktionstyp] nach **[!UICONTROL Umleiten mit Identität]**.
-1. Klicks **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
+1. Wählen Sie unter [!UICONTROL Aktionen] eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und setzen Sie den [!UICONTROL Aktionstyp] auf **[!UICONTROL Mit Identität umleiten]**.
+1. Klicken Sie auf **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
 
 Dieser Befehl wird normalerweise mit einer bestimmten Regel verwendet, die auf Klicks prüft und die gewünschten Domänen überprüft.
 
 +++ Regelereigniskriterien
 
-Trigger, wenn ein Anker-Tag `href` -Eigenschaft angeklickt wird.
+Trigger, wenn auf ein Anker-Tag mit der Eigenschaft `href` geklickt wird.
 
 * **[!UICONTROL Erweiterung]**: Core
-* **[!UICONTROL Ereignistyp]**: Klicken
-* **[!UICONTROL Wenn der Benutzer auf]**: Spezifische Elemente
-* **[!UICONTROL Elemente, die mit der CSS-Auswahl übereinstimmen]**: `a[href]`
+* **[!UICONTROL Ereignistyp]**: Klicken Sie auf
+* **[!UICONTROL Wenn der Benutzer auf]** klickt: Bestimmte Elemente
+* **[!UICONTROL Elemente, die mit dem CSS-Selektor übereinstimmen]**: `a[href]`
 
 ![Regelereignis](../assets/id-sharing-event-configuration.png)
 
@@ -53,9 +53,9 @@ Trigger nur auf gewünschten Domänen.
 * **[!UICONTROL Logiktyp]**: Normal
 * **[!UICONTROL Erweiterung]**: Core
 * **[!UICONTROL Bedingungstyp]**: Wertvergleich
-* **[!UICONTROL Linke Opera]**: `%this.hostname%`
+* **[!UICONTROL Left Operand]**: `%this.hostname%`
 * **[!UICONTROL Operator]**: Entspricht Regex
-* **[!UICONTROL Rechter Operand]**: Ein regulärer Ausdruck, der den gewünschten Domänen entspricht. Beispiel: `adobe.com$|behance.com$`
+* **[!UICONTROL Right Operand]**: Ein regulärer Ausdruck, der den gewünschten Domänen entspricht. Beispiel: `adobe.com$|behance.com$`
 
 ![Regelbedingung](../assets/id-sharing-condition-configuration.png)
 
@@ -66,15 +66,15 @@ Trigger nur auf gewünschten Domänen.
 Hängen Sie die Identität an die URL an.
 
 * **[!UICONTROL Erweiterung]**: Adobe Experience Platform Web SDK
-* **[!UICONTROL Aktionstyp]**: Umleitung mit Identität
+* **[!UICONTROL Aktionstyp]**: Mit Identität umleiten
 
 ![Regelaktion](../assets/id-sharing-action-configuration.png)
 
 +++
 
-## Identität an URL mithilfe der Web SDK-JavaScript-Bibliothek anhängen
+## Anhängen der Identität an URL mithilfe der Web SDK JavaScript-Bibliothek
 
-Führen Sie die `appendIdentityToUrl` -Befehl mit einer URL als Parameter. Die Methode gibt eine URL zurück, an die die Kennung als Abfragezeichenfolge angehängt ist.
+Führen Sie den Befehl `appendIdentityToUrl` mit einer URL als Parameter aus. Die Methode gibt eine URL zurück, an die die Kennung als Abfragezeichenfolge angehängt ist.
 
 ```js
 alloy("appendIdentityToUrl",document.location);
@@ -100,4 +100,4 @@ document.addEventListener("click", event => {
 
 ## Antwortobjekt
 
-Wenn Sie sich für [Antworten verarbeiten](command-responses.md) mit diesem Befehl, enthält das Antwortobjekt **`url`**, die neue URL mit Identitätsdaten, die als Abfragezeichenfolgenparameter hinzugefügt werden.
+Wenn Sie sich für [Antworten verarbeiten](command-responses.md) mit diesem Befehl entscheiden, enthält das Antwortobjekt **`url`**, die neue URL mit Identitätsdaten, die als Abfragezeichenfolgenparameter hinzugefügt werden.

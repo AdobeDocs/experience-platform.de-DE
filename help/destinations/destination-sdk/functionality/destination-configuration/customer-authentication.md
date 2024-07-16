@@ -4,7 +4,7 @@ title: Konfiguration der Kundenauthentifizierung
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1101'
 ht-degree: 97%
 
 ---
@@ -26,7 +26,7 @@ Wenn Sie durch Destination SDK [ein Ziel erstellen](../../authoring-api/destinat
 
 * Für Ziele, die eine [einfache Authentifizierung](#basic) verwenden, müssen Benutzerinnen und Benutzer einen Benutzernamen und ein Kennwort direkt auf der Authentifizierungsseite der Experience Platform-Benutzeroberfläche angeben.
 * Für Ziele, die eine [Bearer-Authentifizierung](#bearer) verwenden, müssen Benutzerinnen und Benutzer ein Bearer-Token bereitstellen.
-* Für Ziele, die [OAuth2-Autorisierung](#oauth2), werden Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
+* Bei Zielen mit der [OAuth2-Autorisierung](#oauth2) werden Benutzer zur Anmeldeseite Ihres Ziels weitergeleitet, wo sie sich mit ihren Anmeldeinformationen anmelden können.
 * Für [Amazon S3](#s3)-Ziele müssen Benutzerinnen und Benutzer ihren [!DNL Amazon S3]-Zugriffsschlüssel und geheimen Schlüssel angeben.
 * Für [Azure Blob](#blob)-Ziele müssen Benutzerinnen und Benutzer ihre [!DNL Azure Blob]-Verbindungszeichenfolge angeben.
 

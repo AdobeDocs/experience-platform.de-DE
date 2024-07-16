@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;servicenow;ServiceNow
 solution: Experience Platform
-title: ServiceNow Source Connector - Übersicht
+title: ServiceNow Source Connector - Überblick
 description: Erfahren Sie, wie Sie ServiceNow über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 80%
+ht-degree: 67%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 80%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] ermöglicht Unterstützung für die Aufnahme von Daten aus einem Drittanbieter-System für Customer Success. Zu den Support-Anbietern für den Kundenerfolg zählen: [!DNL ServiceNow].
+[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem Drittanbieter-Kundenerfolgssystem. Zu den Support-Anbietern für den Kundenerfolg zählen [!DNL ServiceNow].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL ServiceNow] mit mithilfe von APIs oder der Benutzeroberfläche:[!DNL Platform]
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche [!DNL ServiceNow] mit [!DNL Platform] verbinden:
 
 ## Verbinden von [!DNL ServiceNow] mit [!DNL Platform] mithilfe von APIs
 

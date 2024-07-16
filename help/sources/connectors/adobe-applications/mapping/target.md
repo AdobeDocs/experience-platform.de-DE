@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie Adobe Target-Ereignisfelder einem Experience-
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 3%
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 

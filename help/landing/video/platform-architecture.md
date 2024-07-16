@@ -1,5 +1,5 @@
 ---
-title: Experience Platform Architecture - Überblick
+title: Übersicht über die Experience Platform-Architektur
 description: In diesem Video wird ein Übersichtsdiagramm erläutert, in dem die Hauptkomponenten von Adobe Experience Platform erläutert werden.
 kt: 4336
 audience: all
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Übersicht über die Experience Platform-Architektur
 
-Dieses Video führt Sie durch ein Architekturdiagramm, in dem die Hauptkomponenten der Experience Platform erläutert werden.
+Dieses Video führt durch ein Architekturdiagramm, in dem die Hauptkomponenten des Experience Platform erläutert werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)

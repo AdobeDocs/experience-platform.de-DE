@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
+keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
 title: Anzeigen eines Rollup-Berichts für einen bestimmten Besucher
 description: Das folgende Dokument enthält Beispiele für Abfragen, die Erlebnisereignisse in Adobe Experience Platform Query Service beinhalten.
 exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
@@ -12,9 +12,9 @@ ht-degree: 1%
 
 # Anzeigen eines Rollup-Berichts für einen bestimmten Besucher
 
-Dieses Dokument bietet ein SQL-Beispiel zum Aggregieren von Daten aus mehreren Analytics-Eigenschaften für einen bestimmten Benutzer und zum Anzeigen dieser Daten in einem Bericht. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] , um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Siehe [Abschnitt mit den nächsten Schritten](#next-steps) für weitere Anwendungsfälle, bei denen [!DNL Experience Events] , um Besucherberichte zu generieren.
+Dieses Dokument bietet ein SQL-Beispiel zum Aggregieren von Daten aus mehreren Analytics-Eigenschaften für einen bestimmten Benutzer und zum Anzeigen dieser Daten in einem Bericht. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Im Abschnitt [Nächste Schritte](#next-steps) finden Sie weitere Anwendungsfälle, bei denen [!DNL Experience Events] zum Generieren von Besucherberichten erforderlich ist.
 
-Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie im Abschnitt [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch Kombination von Query Service mit [!DNL Experience Events]können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen, die Folgendes beinhalten: [!DNL Experience Events].
+Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch Kombination von Query Service mit [!DNL Experience Events] können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit [!DNL Experience Events].
 
 ## Ziel
 
@@ -49,7 +49,7 @@ Die Abfrageergebnisse werden in der folgenden Tabelle angezeigt.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments erhalten Sie ein besseres Verständnis dafür, wie Sie Query Service mit [!DNL Experience Events] , um einen aggregierten Bericht mit Analysewerten für einen bestimmten Benutzer anzuzeigen.
+Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie Query Service mit [!DNL Experience Events] verwenden, um einen aggregierten Bericht mit Analysewerten für einen bestimmten Benutzer anzuzeigen.
 
 In den folgenden Anwendungsfällen erfahren Sie mehr über andere besucherbasierte Anwendungsfälle:
 

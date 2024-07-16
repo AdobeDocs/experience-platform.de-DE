@@ -3,12 +3,12 @@ title: Standardmäßige Limits für Daten und Segmentierung von Echtzeit-Kundenp
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Erfahren Sie mehr über die Leistung und systemerzwungene Limits für Profildaten und die Segmentierung, um eine optimale Nutzung der Real-Time CDP-Funktionalität sicherzustellen.
+description: Erfahren Sie mehr über Leistung und systemerzwungene Schutzmechanismen für Profildaten und die Segmentierung, um eine optimale Nutzung der Funktionalität von Real-Time CDP sicherzustellen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
 source-wordcount: '2457'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
@@ -18,7 +18,7 @@ Mit Adobe Experience Platform können Sie personalisierte kanalübergreifende Er
 
 >[!IMPORTANT]
 >
->Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und den entsprechenden [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) über die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+>Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
 
 Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass eine optimale System-Performance gewährleistet ist. Bei der Überprüfung der folgenden Leitplanken wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
@@ -33,7 +33,7 @@ Die folgenden Experience Platform-Services sind an der Modellierung von Echtzeit
 * [[!DNL Real-Time Customer Profile]](home.md): Erstellen einheitlicher Verbraucherprofile anhand von Daten aus mehreren Quellen.
 * [Identitäten](../identity-service/home.md): Überbrücken von Identitäten aus unterschiedlichen Datenquellen, während sie in Platform aufgenommen werden.
 * [Schemata](../xdm/home.md): Experience-Datenmodell-Schemata (XDM) sind das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
-* [Zielgruppen](../segmentation/home.md): Die Segmentierungsmaschine innerhalb von Platform wird verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf dem Kundenverhalten und den Kundenattributen zu erstellen.
+* [Zielgruppen](../segmentation/home.md): Die Segmentierungs-Engine in Platform wird verwendet, um Zielgruppen aus Ihren Kundenprofilen basierend auf dem Kundenverhalten und den Kundenattributen zu erstellen.
 
 ## Arten von Beschränkungen
 
@@ -54,7 +54,7 @@ In diesem Dokument gibt es zwei Arten von Standardbeschränkungen:
 
 Die folgenden Limits bieten empfohlene Einschränkungen bei der Modellierung von Echtzeit-Kundenprofildaten. Weitere Informationen zu primären Entitäten und Dimensionsentitäten finden Sie im Abschnitt zu [Entitätstypen](#entity-types) in der Anlage.
 
-![Ein Diagramm mit den verschiedenen Limits für Profildaten in Adobe Experience Platform.](./images/guardrails/profile-guardrails.png)
+![Ein Diagramm, das die verschiedenen Limits für Profildaten in Adobe Experience Platform anzeigt.](./images/guardrails/profile-guardrails.png)
 
 ### Leitplanken für primäre Entitäten
 
@@ -98,7 +98,7 @@ Die folgenden Leitplanken beziehen sich auf die Datengröße und bieten empfohle
 | Maximale Größe von Profilfragmenten | 50 MB | Systemerzwungene Limits | **Die maximale Größe eines einzelnen Profldatensatzes ist 50 MB.** Die Segmentierung, der Export und die Suche können bei [Profilfragmenten](#profile-fragments), die größer als 50 MB sind, fehlschlagen. |
 | Maximale Größe gespeicherter Profile | 50 MB | Leistungsgarantie | **Die maximale Größe eines gespeicherten Profils ist 50 MB.** Das Hinzufügen neuer [Profilfragmente](#profile-fragments) in einem Profil, das größer als 50 MB ist, wirkt sich negativ auf die System-Performance aus. Beispielsweise könnte ein Profil ein einzelnes Fragment mit 50 MB enthalten oder mehrere Fragmente aus mehreren Datensätzen mit einer kombinierten Gesamtgröße von 50 MB. Der Versuch, ein Profil mit einem einzelnen Fragment, das größer als 50 MB ist, oder mit mehreren Fragmenten mit einer kombinierten Größe von mehr als 50 MB zu speichern, wirkt sich negativ auf die System-Performance aus. |
 | Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | 90 | Leistungsgarantie | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die System-Performance. |
-| Anzahl der ExperienceEvents pro Profildatensatz | 5.000 | Leistungsgarantie | **Die maximale Anzahl von ExperienceEvents pro Profildatensatz beträgt 5.000.** Profile mit mehr als 5000 ExperienceEvents werden **not** für die Segmentierung berücksichtigt werden. |
+| Anzahl der ExperienceEvents pro Profildatensatz | 5.000 | Leistungsgarantie | **Die maximale Anzahl von ExperienceEvents pro Profildatensatz beträgt 5.000.** Profile mit mehr als 5000 ExperienceEvents werden für die Segmentierung **nicht** berücksichtigt. |
 
 {style="table-layout:auto"}
 
@@ -118,21 +118,21 @@ Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Ar
 
 | Leitplanke | Limit | Art von Limit | Beschreibung |
 | --------- | ----- | ---------- | ----------- |
-| Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Dies umfasst Batch-, Streaming- und Edge-Zielgruppen. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Erstellen von Zielgruppen](/help/segmentation/ui/segment-builder.md) durch den Segment-Builder. |
-| Edge-Zielgruppen pro Sandbox | 150 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 150 Edge-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Zielgruppen enthalten sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Mehr dazu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
-| Edge-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungsgarantie | Die Edge-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde, die in das Adobe Experience Platform-Edge Network eintreten. Die Verarbeitung eines eingehenden Ereignisses nach Eintritt in das Adobe Experience Platform-Edge Network kann bis zu 350 Millisekunden dauern. Mehr dazu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
-| Streaming-Zielgruppen pro Sandbox | 500 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Dies umfasst sowohl Streaming- als auch Edge-Zielgruppen. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. Mehr dazu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
-| Streaming-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungsgarantie | Die Streaming-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde. Die Qualifizierung eines Profils für die Segmentzugehörigkeit kann bis zu 5 Minuten dauern. Mehr dazu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
+| Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über 4.000 Zielgruppen verfügen, sofern in jeder Sandbox weniger als 4.000 Zielgruppen enthalten sind. Dies umfasst Batch-, Streaming- und Edge-Zielgruppen. Der Versuch, zusätzliche Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Erfahren Sie mehr über das Erstellen von Zielgruppen ](/help/segmentation/ui/segment-builder.md) im Segment Builder.[ |
+| Edge-Zielgruppen pro Sandbox | 150 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 150 Edge-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 150 Edge-Zielgruppen enthalten sind. Der Versuch, zusätzliche Edge-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
+| Edge-Durchsatz für alle Sandboxes | 1500 RPS | Leistungsgarantie | Die Edge-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde, die in das Adobe Experience Platform-Edge Network eintreten. Die Verarbeitung eines eingehenden Ereignisses nach Eintritt in das Adobe Experience Platform-Edge Network kann bis zu 350 Millisekunden dauern, bis die Edge-Segmentierung abgeschlossen ist. Weitere Informationen zu [Edge-Zielgruppen](/help/segmentation/ui/edge-segmentation.md). |
+| Streaming-Zielgruppen pro Sandbox | 500 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 500 Streaming-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Zielgruppen enthalten sind. Dies umfasst sowohl Streaming- als auch Edge-Zielgruppen. Der Versuch, zusätzliche Streaming-Zielgruppen zu erstellen, kann die Systemleistung beeinträchtigen. Weitere Informationen zu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
+| Streaming-Durchsatz über alle Sandboxes hinweg | 1500 RPS | Leistungsgarantie | Die Streaming-Segmentierung unterstützt einen Spitzenwert von 1500 eingehenden Ereignissen pro Sekunde. Die Qualifizierung eines Profils für die Segmentzugehörigkeit kann bis zu 5 Minuten dauern. Weitere Informationen zu [Streaming-Zielgruppen](/help/segmentation/ui/streaming-segmentation.md). |
 | Batch-Zielgruppen pro Sandbox | 4.000 | Leistungsgarantie | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Zielgruppen verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Zielgruppen enthalten sind. Der Versuch, zusätzliche Batch-Zielgruppen zu erstellen, kann sich auf die Systemleistung auswirken. |
-| Konto-Zielgruppen pro Sandbox | 50 | Systemerzwungene Limits | Sie können maximal 50 Zielgruppen für ein Konto in einer Sandbox erstellen. Wenn Sie 50 Zielgruppen in einer Sandbox erreicht haben, wird die **[!UICONTROL Erstellen einer Zielgruppe]** -Kontrolle beim Versuch, eine neue Konto-Audience zu erstellen, deaktiviert ist. Mehr dazu [Kontozielgruppen](/help/segmentation/ui/account-audiences.md). |
-| Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungsgarantie | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Mehr dazu [Audience-Komposition im UI-Handbuch](/help/segmentation/ui/audience-composition.md). |
+| Konto-Zielgruppen pro Sandbox | 50 | Systemerzwungene Limits | Sie können maximal 50 Zielgruppen für ein Konto in einer Sandbox erstellen. Wenn Sie 50 Zielgruppen in einer Sandbox erreicht haben, ist das Steuerelement **[!UICONTROL Zielgruppe erstellen]** beim Versuch, eine neue Zielgruppe zu erstellen, deaktiviert. Weitere Informationen zu [Konto-Zielgruppen](/help/segmentation/ui/account-audiences.md). |
+| Veröffentlichte Kompositionen pro Sandbox | 10 | Leistungsgarantie | Sie können maximal 10 veröffentlichte Kompositionen in einer Sandbox haben. Weitere Informationen zur [Komposition der Zielgruppe finden Sie im UI-Handbuch](/help/segmentation/ui/audience-composition.md). |
 | Maximale Zielgruppengröße | 30 Prozent | Leistungsgarantie | Die empfohlene Höchstzahl an Zielgruppen beträgt 30 Prozent der Gesamt-Profilanzahl im System. Das Erstellen von Zielgruppen mit mehr als 30 % der Profile als Mitglieder oder mehreren großen Zielgruppen ist möglich, hat aber Auswirkungen auf die Systemleistung. |
 
 {style="table-layout:auto"}
 
 ## Erwartete Verfügbarkeit
 
-Im folgenden Abschnitt wird die **erwartet** Verfügbarkeit für Zielgruppen und Zusammenführungsrichtlinien in nachgelagerten Diensten wie Real-Time CDP-Zielen:
+Im folgenden Abschnitt wird die Verfügbarkeit von **erwartet** für Zielgruppen und Zusammenführungsrichtlinien in nachgelagerten Diensten wie Real-Time CDP-Zielen beschrieben:
 
 | Sandbox-Typ | Zeit |
 | ------------ | ---- |
@@ -148,7 +148,7 @@ Dieser Abschnitt enthält zusätzliche Details zu den Limits in diesem Dokument.
 
 ### Entitätstypen
 
-Die [!DNL Profile] Store-Datenmodell besteht aus zwei Kernentitätstypen: [primäre Entitäten](#primary-entity) und [Dimensionselemente](#dimension-entity).
+Das [!DNL Profile] Store-Datenmodell besteht aus zwei Kernentitätstypen: [primäre Entitäten](#primary-entity) und [Dimensionseinheiten](#dimension-entity).
 
 #### Primäre Entität
 
@@ -156,17 +156,17 @@ Eine primäre Entität oder Profilentität führt Daten zu einer &quot;einzigen 
 
 Zeitunabhängige Attribute, auch „Datensatzdaten “genannt, werden mithilfe von [!DNL XDM Individual Profile] modelliert, während die auch als „Ereignisdaten“ bezeichneten Zeitreihendaten mit [!DNL XDM ExperienceEvent] modelliert werden. Wenn Datensatz- und Zeitreihendaten in Adobe Experience Platform aufgenommen werden, dient dies als Trigger für [!DNL Real-Time Customer Profile], um mit der Aufnahme von Daten zu beginnen, die für diese Verwendung aktiviert wurden. Je mehr Interaktionen und Details erfasst werden, desto zuverlässiger werden die einzelnen Profile.
 
-![Eine Infografik, in der die Unterschiede zwischen Datensatzdaten und Zeitreihendaten erläutert werden.](images/guardrails/profile-entity.png)
+![Eine Infografik, die die Unterschiede zwischen Datensatzdaten und Zeitreihendaten beschreibt.](images/guardrails/profile-entity.png)
 
 #### Entität der Dimension
 
-Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionselementen, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md).
+Während der Profildatenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht das Profil die Integration mit kleinen Dimensionselementen, um Zielgruppen auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md) bezeichnet.
 
-Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Nicht-[!DNL XDM Individual Profile] Schemas werden als &quot;Dimensionselemente&quot;(auch als &quot;Lookup-Entitäten&quot;bezeichnet) bezeichnet und enthalten keine Zeitreihendaten. Schemas, die Dimensionentitäten darstellen, werden mithilfe von [Schemabeziehungen](../xdm/tutorials/relationship-ui.md).
+Ihr Unternehmen kann auch XDM-Klassen definieren, um abgesehen von Einzelpersonen auch andere Dinge zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese Nicht-[!DNL XDM Individual Profile]-Schemas werden als &quot;Dimensionselemente&quot;(auch als &quot;Lookup-Entitäten&quot;bezeichnet) bezeichnet und enthalten keine Zeitreihendaten. Schemas, die Dimensionselemente darstellen, werden mithilfe von [Schemabeziehungen](../xdm/tutorials/relationship-ui.md) mit Profilentitäten verknüpft.
 
 Dimensionsentitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehreren Entitäten unterstützen und vereinfachen. Sie müssen klein genug sein, damit die Segmentierungsmaschine den gesamten Datensatz in den Speicher laden kann, um eine optimale Verarbeitung zu gewährleisten (schnelle Punktsuche).
 
-![Eine Infografik, die anzeigt, dass eine Profilentität aus Dimensionentitäten besteht.](images/guardrails/profile-and-dimension-entities.png)
+![Eine Infografik, die anzeigt, dass eine Profilentität aus Dimensionselementen besteht.](images/guardrails/profile-and-dimension-entities.png)
 
 ### Profilfragmente
 
@@ -187,5 +187,5 @@ Weitere Informationen zu anderen Limits für Experience Platform-Services, End-t
 * [Limits in Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Dienste.
 * [Real-time Customer Data Platform (B2C Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

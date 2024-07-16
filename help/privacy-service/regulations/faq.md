@@ -6,8 +6,8 @@ description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu 
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 33%
+source-wordcount: '1631'
+ht-degree: 32%
 
 ---
 
@@ -17,7 +17,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützte
 
 >[!NOTE]
 >
->Definitionen zu den verschiedenen in diesem Dokument verwendeten Begriffen finden Sie im Abschnitt [Terminologie zur Datenschutzbestimmung](terminology.md) Handbuch.
+>Definitionen zu den verschiedenen in diesem Dokument verwendeten Begriffen finden Sie im Handbuch [Terminologie der Datenschutzverordnung](terminology.md) .
 
 ## Allgemeine Fragen
 
@@ -25,7 +25,7 @@ Die folgenden Fragen beziehen sich auf alle von Experience Cloud unterstützten 
 
 ### Auf wen wirken sich die unterstützten Datenschutzbestimmungen aus?
 
-Die [Unterstützte Datenschutzbestimmungen von Experience Cloud](./overview.md) gelten für alle Organisationen, die personenbezogene Daten von Bürgern innerhalb der jeweiligen Rechtsordnungen der jeweiligen Rechtsordnung speichern und verarbeiten, unabhängig vom geografischen Standort der Organisation.
+Die von Experience Cloud](./overview.md) unterstützten [Datenschutzbestimmungen gelten für alle Organisationen, die personenbezogene Daten von Bürgern innerhalb der jeweiligen Rechtsordnungen der jeweiligen Rechtsordnung speichern und verarbeiten, unabhängig vom geografischen Standort der Organisation.
 
 ### Was sind personenbezogene Daten?
 
@@ -38,7 +38,7 @@ Die folgenden Kennungen werden häufig in Experience Cloud-Anwendungen verwendet
 * Eindeutige personenbezogene Kennung
 * Online-Kennung
 * IP-Adresse
-* E-Mail  Adresse
+* E-Mail-Adresse
 * Kontoname
 
 Personenbezogene Daten können auch Informationen über Aktivitäten im Internet oder in anderen elektronischen Netzwerken umfassen. Dazu gehören unter anderem:
@@ -53,13 +53,13 @@ Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten a
 
 Ein **Datenverantwortlicher** ist die Stelle, die die Ziele, Bedingungen und Wege der Verarbeitung personenbezogener Daten bestimmt, während der **Datenverarbeiter** eine Stelle ist, die personenbezogene Daten im Auftrag des Datenverantwortlichen verarbeitet.
 
-A **Datenverantwortlicher** ist die Person oder Organisation, die befugt und dafür verantwortlich ist, Entscheidungen über die Erhebung, Verwendung oder Weitergabe personenbezogener Daten zu treffen. A **Datenprozessor** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Verwendung oder Offenlegung der personenbezogenen Daten und der Leitung des Datenverantwortlichen tätig ist.
+Ein **Datenverantwortlicher** ist die Person oder Organisation, die befugt und dafür verantwortlich ist, Entscheidungen über die Erhebung, Verwendung oder Weitergabe personenbezogener Daten zu treffen. Ein **Datenverarbeiter** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Verwendung oder Offenlegung der personenbezogenen Daten und der Leitung des Datenverantwortlichen tätig ist.
 
 ### Was ist der Unterschied zwischen der ausdrücklichen und eindeutigen Zustimmung der betroffenen Person?
 
-**Explizite Zustimmung** bezieht sich auf einen Standard der Einwilligung, der eine spezifische, informierte und eindeutige Angabe der Wünsche der betroffenen Person in mündlicher oder schriftlicher Form umfasst. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
+**Explizite Einwilligung** bezieht sich auf einen Standard der Einwilligung, der einen spezifischen, informierten und eindeutigen Hinweis auf die Wünsche der betroffenen Person in mündlicher oder schriftlicher Form beinhaltet. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
 
-**Eindeutige (implizite) Zustimmung** bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, jedoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass die betroffene Person durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
+**Eindeutige (implizite) Einwilligung** bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, aber dennoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass die betroffene Person durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
 
 Bei vielen Vorschriften wie der DSGVO ist eine ausdrückliche Zustimmung für die Verarbeitung sensibler personenbezogener Daten erforderlich, wobei nur eine &quot;Opt-in&quot;-Klausel ausreicht. Für nicht vertrauliche Daten ist jedoch eine eindeutige (implizite) Zustimmung zulässig.
 
@@ -67,7 +67,7 @@ Bei vielen Vorschriften wie der DSGVO ist eine ausdrückliche Zustimmung für di
 
 In vielen Datenschutzbestimmungen ist festgelegt, dass betroffene Personen, die jünger als ein bestimmtes Alter sind, keine Einwilligung zur Erhebung ihrer personenbezogenen Daten einholen können. Einige Verordnungen sehen vor, dass der Inhaber der elterlichen Verantwortung für die betroffene Person in diesen Fällen die Einwilligung erteilt, aber nicht in allen Fällen. In der folgenden Tabelle ist das Mindestalter für die Einwilligung von Datensubjekten in die einzelnen Verordnungen aufgeführt, wobei Hinweise für weitere Informationen beigefügt werden:
 
-| Verordnung | Alter der Einwilligung | Anmerkungen |
+| Regelung | Alter der Einwilligung | Anmerkungen |
 | --- | --- | --- |
 | CCPA (Kalifornien) | 16 | <ul><li>Die elterliche Zustimmung kann nur für Datensubjekte ab 13 Jahren erteilt werden.</li><li>Die Erhebung personenbezogener Daten von Personen unter 13 Jahren ist streng verboten.</li></ul> |
 | DSGVO (Europäische Union) | 16 | <ul><li>Einige EU-Mitgliedstaaten können zu diesem Zweck ein Gesetz für ein niedrigeres Alter vorsehen, jedoch nicht weniger als 13.</li><li>Die elterliche Zustimmung muss für alle Datensubjekte unter der Altersgrenze erteilt werden.</li></ul> |
@@ -84,7 +84,7 @@ Wenn das Unternehmen personenbezogene Daten gesammelt hat und die Identität ein
 >
 >Der Zeitrahmen für die Reaktion in &quot;Tagen&quot;spiegelt die Fristen wider, die jedes Regulierungsgesetz für die Erfüllung einer Verbraucheranfrage vorsieht.
 
-| Verordnung | Zeitrahmen für die Antwort | Anmerkungen |
+| Regelung | Zeitrahmen für die Antwort | Anmerkungen |
 | --- | --- | --- |
 | CCPA (Kalifornien) | 45 Tage | |
 | DSGVO (Europäische Union) | 30 Tage | Wenn die Anfrage komplex ist oder zahlreiche Anfragen von demselben Datensubjekt gestellt wurden, kann die Anfrage auf 60 Tage verlängert werden. |
@@ -107,11 +107,11 @@ Wenn die Datenoperationen Ihres Unternehmens unter die gesetzlichen Bestimmungen
 
 ### Wie kann ich Datenschutzanfragen von Verbrauchern unterstützen, wenn ich Daten unterhalte, die unter Datenschutzbestimmungen fallen?
 
-Nachdem Sie die erforderlichen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen von Verbrauchern an kompatible Experience Cloud-Apps senden. Weitere Informationen finden Sie in der [[!DNL Privacy Service] Übersicht. ](../home.md) Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
+Sobald Sie die erforderlichen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen an kompatible Experience Cloud-Apps senden. Weitere Informationen finden Sie in der [[!DNL Privacy Service] Übersicht](../home.md) . Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
->Die kalifornische Regulierungsbehörde wird weitere Bestimmungen dazu vorlegen, welche Arten von Daten für Datenschutzanfragen von Verbrauchern infrage kommen.
+>Die kalifornische Regulierungsbehörde wird noch weitere Leitlinien dazu vorlegen, welche Datentypen für Datenschutzanfragen von Verbrauchern infrage kommen.
 
 ## CCPA-Fragen
 

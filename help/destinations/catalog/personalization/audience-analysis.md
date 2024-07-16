@@ -12,7 +12,7 @@ ht-degree: 37%
 
 # Zielgruppenanalyse-Ziel
 
-Die [!UICONTROL Zielgruppenanalyse] Mit dem Ziel können Sie Adobe Experience Platform-Zielgruppendaten in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de). Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) Berichterstellung.
+Mit dem Ziel [!UICONTROL Zielgruppenanalyse] können Sie Adobe Experience Platform-Zielgruppendaten in [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=de) anreichern. Sie können auswählen, welche Zielgruppen in die resultierenden angereicherten Daten aufgenommen werden sollen. Zielgruppenqualifikationen sind dann als Dimensionen in den Berichten [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) verfügbar.
 
 >[!AVAILABILITY]
 >
@@ -34,7 +34,7 @@ Die Zielgruppenanalyse unterstützt die Aktivierung von Identitäten, die in der
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/features/ecid.md) für weitere Informationen. |
+| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument zu [ECID](/help/identity-service/features/ecid.md) . |
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
@@ -47,7 +47,7 @@ Bei Verwendung dieses Ziels werden die folgenden Arten von Zielgruppen unterstü
 
 | Audience Origin | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -67,9 +67,9 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Zum Erstellen eines Ziels benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Zum Erstellen eines Ziels benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [ . ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+Um dieses Ziel zu erstellen, führen Sie die Schritte aus, die im Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.[
 
 ### Zieldetails
 
@@ -77,14 +77,14 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Der Zielname.
 * **[!UICONTROL Beschreibung]**: Die Zielbeschreibung.
-* **[!UICONTROL Datenspeicher-ID]**: Die Datastream-ID, die Sie mit qualifizierten Zielgruppen anreichern möchten. Sie können diese ID im [Datenspeicher-Manager](/help/datastreams/overview.md).
+* **[!UICONTROL Datenspeicher-ID]**: Die Datenspeicher-ID, die Sie mit qualifizierten Zielgruppen anreichern möchten. Sie können diese ID im [Datenspeicher-Manager](/help/datastreams/overview.md) abrufen.
 * **[!UICONTROL Integrationsalias]**: Der Integrationsalias.
 
 ### Warnhinweise
 
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
-* **[!UICONTROL Aktivierungsübersprungene Rate überschritten]**: Werden Sie benachrichtigt, wenn die Aktivierungsrate einen Schwellenwert überschreitet.
+* **[!UICONTROL Übersprungene Aktivierungsrate überschritten]**: Seien Sie benachrichtigt, wenn die Aktivierungsrate übersprungen wurde einen Schwellenwert überschreitet.
 
 Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
@@ -98,13 +98,13 @@ Wenn Sie mit der Auswahl der gewünschten Marketing-Aktionen für das Ziel ferti
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Nachdem das Ziel erstellt wurde, können Sie die gewünschten Zielgruppen für das Ziel aktivieren.
 
-1. Wenn Sie sich noch nicht im erstellten Ziel befinden, können Sie es erneut finden, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]**.
-1. Auswählen **[!UICONTROL Aktivieren von Zielgruppen]**.
+1. Wenn Sie sich noch nicht im erstellten Ziel befinden, können Sie es erneut finden, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** navigieren.
+1. Wählen Sie **[!UICONTROL Zielgruppen aktivieren]** aus.
 1. Wählen Sie die gewünschten Zielgruppen aus, für die Sie Qualifikationen analysieren möchten. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
-1. Überprüfen Sie die Zielkonfiguration und die Zielgruppeneinstellungen und wählen Sie dann **[!UICONTROL Beenden]**.
+1. Überprüfen Sie die Zielkonfiguration und die Zielgruppeneinstellungen und wählen Sie dann **[!UICONTROL Beenden]** aus.
 
-Sie können weitere Zielgruppen hinzufügen, die in der Zukunft analysiert werden sollen, indem Sie zur **[!UICONTROL Aktivieren von Zielgruppen]** Seite. Zielgruppen können nicht entfernt werden, nachdem sie aktiviert wurden.
+Sie können weitere Zielgruppen hinzufügen, die in Zukunft analysiert werden sollen, indem Sie zur Seite **[!UICONTROL Zielgruppen aktivieren]** zurückkehren. Zielgruppen können nicht entfernt werden, nachdem sie aktiviert wurden.

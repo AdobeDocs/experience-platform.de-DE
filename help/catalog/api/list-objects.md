@@ -24,7 +24,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das aufgeführt werden soll. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des aufzulistenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](filter-data.md). |
 
 **Anfrage**
@@ -42,11 +42,11 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekte in Form von Schlüssel-Wert-Paaren, gefiltert durch die in der Anfrage angegebenen Abfrageparameter. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel eine eindeutige Kennung für die [!DNL Catalog] -Objekt, das dann in einem anderen Aufruf an verwendet werden kann [Anzeigen eines bestimmten Objekts](look-up-object.md) für weitere Details.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekten in Form von Schlüssel-Wert-Paaren zurück, gefiltert nach den in der Anfrage angegebenen Abfrageparametern. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel eine eindeutige Kennung für das betreffende [!DNL Catalog] -Objekt dar, die dann in einem anderen Aufruf von [Anzeigen dieses bestimmten Objekts](look-up-object.md) für weitere Details verwendet werden kann.
 
 >[!NOTE]
 >
->Wenn ein zurückgegebenes Objekt keine der angeforderten Eigenschaften enthält, die durch die Variable `properties` -Abfrage, gibt die Antwort nur die angeforderten Eigenschaften zurück, die sie enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten.
+>Wenn ein zurückgegebenes Objekt eine oder mehrere der angeforderten Eigenschaften, die durch die `properties` -Abfrage angegeben sind, nicht enthält, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten dargestellt.
 
 ```json
 {

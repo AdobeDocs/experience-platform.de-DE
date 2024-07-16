@@ -1,6 +1,6 @@
 ---
-title: Datentyp der externen Quell-System-Prüfattribute
-description: Erfahren Sie mehr über den Datentyp "Experience-Datenmodell (XDM)"der Audit-Attribute des externen Quellsystems.
+title: Datentyp für externe Source-Systemprüfungsattribute
+description: Erfahren Sie mehr über den Datentyp "Experience-Datenmodell (XDM)"für externe Source-Systemaudit-Attribute.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
@@ -9,15 +9,15 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Audit-Attribute des externen Quellsystems] Datentyp
+# Datentyp [!UICONTROL Externe Source-Systemprüfungsattribute]
 
-[!UICONTROL Audit-Attribute des externen Quellsystems] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
+[!UICONTROL Externe Source-Systemprüfungsattribute] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Prüfdetails zu einem externen Quellsystem erfasst.
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `externalKey` | [[!UICONTROL B2B-Quelle]](./b2b-source.md) | Eine zusammengesetzte Kennung für die für die Prüfung verwendete Quelle. |
+| `externalKey` | [[!UICONTROL B2B Source]](./b2b-source.md) | Eine zusammengesetzte Kennung für die für die Prüfung verwendete Quelle. |
 | `createdBy` | Zeichenfolge | Der Name des Benutzers, der diesen Datensatz erstellt hat. |
 | `createdDate` | DateTime | Das Datum der Erstellung dieses Datensatzes. |
 | `externalID` | Zeichenfolge | Externe eindeutige Kennung für die Quelle. Dieser Wert hilft bei der Identifizierung und Deduplizierung bei Bedarf. |

@@ -18,8 +18,8 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Datenbank
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#database) für eine Liste von Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
->* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden. Der einzige für die [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) ist TIMESTAMP_NTZ mit UTC-Zeit.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Datenbankquelle verfügen. Wenn Sie nicht über diese ID verfügen, finden Sie in der [Quellenübersicht](../../../home.md#database) eine Liste der Datenbankquellen, mit denen Sie eine Basisverbindung erstellen können.
+>* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden. Der einzige Zeitstempel, der für die [[!DNL Snowflake] Quelle](../../../connectors/databases/snowflake.md) unterstützt wird, ist TIMESTAMP_NTZ mit UTC-Zeit.
 
 ## Erste Schritte
 

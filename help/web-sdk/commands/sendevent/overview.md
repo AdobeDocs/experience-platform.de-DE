@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # `sendEvent`
 
-Die `sendEvent` -Befehl ist die primäre Methode zum Senden von Daten an Adobe, zum Abrufen personalisierter Inhalte, Identitäten und Zielgruppenziele. Verwenden Sie die [`xdm`](xdm.md) -Objekt zum Senden von Daten, die Ihrem Adobe Experience Platform-Schema zugeordnet sind. Verwenden Sie die [`data`](data.md) -Objekt zum Senden von Nicht-XDM-Daten. Mit dem Datastream-Mapper können Sie Daten in diesem Objekt an Schemafeldern ausrichten.
+Der Befehl `sendEvent` ist die primäre Methode zum Senden von Daten an Adobe, zum Abrufen personalisierter Inhalte, Identitäten und Zielgruppenziele. Verwenden Sie das Objekt [`xdm`](xdm.md) , um Daten zu senden, die Ihrem Adobe Experience Platform-Schema zugeordnet sind. Verwenden Sie das Objekt [`data`](data.md) , um Nicht-XDM-Daten zu senden. Mit dem Datastream-Mapper können Sie Daten in diesem Objekt an Schemafeldern ausrichten.
 
 ## Senden von Ereignisdaten mit der Web SDK-Tag-Erweiterung
 
 Das Senden von Ereignisdaten erfolgt als Aktion innerhalb einer Regel in der Adobe Experience Platform-Oberfläche für Datenerfassungs-Tags.
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
 1. Navigieren Sie zu **[!UICONTROL Regeln]** und wählen Sie dann die gewünschte Regel aus.
-1. under [!UICONTROL Aktionen], wählen Sie eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
-1. Legen Sie die [!UICONTROL Erweiterung] Dropdown-Feld zu **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie die [!UICONTROL Aktionstyp] nach **[!UICONTROL Ereignis senden]**.
+1. Wählen Sie unter [!UICONTROL Aktionen] eine vorhandene Aktion aus oder erstellen Sie eine Aktion.
+1. Setzen Sie das Dropdown-Feld [!UICONTROL Erweiterung] auf **[!UICONTROL Adobe Experience Platform Web SDK]** und legen Sie den Aktionstyp ] auf **[!UICONTROL Ereignis senden]** fest.[!UICONTROL 
 1. Legen Sie die gewünschten Felder fest, klicken Sie auf **[!UICONTROL Änderungen beibehalten]** und führen Sie dann Ihren Veröffentlichungs-Workflow aus.
 
-## Senden von Ereignisdaten mit der JavaScript-Bibliothek des Web SDK
+## Senden von Ereignisdaten mit der Web SDK JavaScript-Bibliothek
 
-Führen Sie die `sendEvent` beim Aufruf Ihrer konfigurierten Instanz des Web SDK. Stellen Sie sicher, dass Sie die [`configure`](../configure/overview.md) -Befehl vor dem Aufruf der `sendEvent` Befehl.
+Führen Sie den Befehl `sendEvent` aus, wenn Sie Ihre konfigurierte Instanz des Web SDK aufrufen. Rufen Sie den Befehl [`configure`](../configure/overview.md) auf, bevor Sie den Befehl `sendEvent` aufrufen.
 
 ```js
 alloy("sendEvent", {
@@ -42,8 +42,8 @@ alloy("sendEvent", {
 
 ## Antwortobjekt
 
-Wenn Sie sich für [Antworten verarbeiten](../command-responses.md) Mit diesem Befehl sind die folgenden Eigenschaften im Antwortobjekt verfügbar:
+Wenn Sie mit diesem Befehl die [Handhabung von Antworten](../command-responses.md) festlegen, sind die folgenden Eigenschaften im Antwortobjekt verfügbar:
 
-* **`propositions`**: Ein Array von Vorschlägen, die vom Edge Network zurückgegeben werden. Automatisch gerenderte Vorschläge beinhalten das Flag `renderAttempted` auf `true`.
+* **`propositions`**: Ein Array von Vorschlägen, die vom Edge Network zurückgegeben werden. Vorschläge, die automatisch gerendert werden, beinhalten die Markierung `renderAttempted`, die auf `true` gesetzt ist.
 * **`inferences`**: Ein Array von Inference-Objekten, die Informationen zum maschinellen Lernen über diesen Benutzer enthalten.
 * **`destinations`**: Ein Array von Zielobjekten, die vom Edge Network zurückgegeben werden.

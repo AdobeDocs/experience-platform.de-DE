@@ -6,7 +6,7 @@ exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1152'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 Jedes Mal, wenn ein Webbrowser eine Anforderung an einen Webserver sendet, enthält der Header der Anfrage Informationen über den Browser und die Umgebung, in der der Browser ausgeführt wird. Alle diese Daten werden in einer Zeichenfolge zusammengefasst, die als Benutzeragenten-Zeichenfolge bezeichnet wird.
 
-Im Folgenden finden Sie ein Beispiel dafür, wie eine Benutzeragenten-Zeichenfolge bei einer Anforderung aussieht, die von einem Chrome-Browser stammt, der auf einem [!DNL Mac OS] Gerät.
+Im Folgenden finden Sie ein Beispiel dafür, wie eine Benutzeragenten-Zeichenfolge bei einer Anfrage aussieht, die von einem Chrome-Browser stammt, der auf einem [!DNL Mac OS] -Gerät ausgeführt wird.
 
 >[!NOTE]
 >
@@ -28,13 +28,13 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 | Feld | Wert |
 |---|---|
-| Software-Name | Chrome |
-| Software-Version | 105 |
-| Vollständige Software-Version | 105.0.0.0 |
+| Softwarename | Chrome |
+| Softwareversion | 105 |
+| Vollversion der Software | 105.0.0.0 |
 | Name der Layout-Engine | AppleWebKit |
-| Version der Layout-Engine | 537.36 |
-| Betriebssystem | Mac OS X |
-| Version des Betriebssystems | 10,15,7 |
+| Layout-Engine-Version | 537,36 |
+| Betriebssystem | MAC OS X |
+| Betriebssystemversion | 10,15,7 |
 | Gerät | Intel Mac OS X 10_15_7 |
 
 ## Anwendungsfälle {#use-cases}
@@ -64,7 +64,7 @@ Wenn moderne Browser einen Benutzer an einen Webserver senden, wird die gesamte 
 
 ## Browserunterstützung {#browser-support}
 
-[Benutzeragenten-Clienthinweise](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) wurden eingeführt mit [!DNL Google Chrome]Version 89.
+[Clienthinweise für Benutzeragenten](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) wurden mit Version 89 von [!DNL Google Chrome]eingeführt.
 
 Zusätzliche Chromium-basierte Browser unterstützen die Client Hints-API, z. B.:
 
@@ -116,17 +116,17 @@ Wenn Sie in Ihrer Umgebung keine Client-Hinweise mit hoher Entropie aktivieren, 
 
 ### Adobe Analytics-Berichte, die auf Client-Hinweisen mit hoher Entropie basieren {#analytics}
 
-Die [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=de) -Dimension umfasst die Betriebssystemversion, die als Client-Hinweis mit hoher Entropie gespeichert wird. Wenn Client-Hinweise mit hoher Entropie nicht aktiviert sind, kann die Betriebssystemversion für Treffer, die von Chromium-Browsern erfasst werden, ungenau sein.
+Die Dimension [Betriebssystem](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) enthält die Betriebssystemversion, die als Client-Hinweis mit hoher Entropie gespeichert wird. Wenn Client-Hinweise mit hoher Entropie nicht aktiviert sind, kann die Betriebssystemversion für Treffer, die von Chromium-Browsern erfasst werden, ungenau sein.
 
 ### Audience Manager-Eigenschaften, die auf Client-Hinweisen mit hoher Entropie basieren {#aam}
 
-[!DNL Google] hat die [!DNL Chrome] Browserfunktionalität, um die über die `User-Agent` -Kopfzeile. Daher verwenden Audience Manager, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) keine zuverlässigen Informationen mehr für Eigenschaften erhalten, die auf [Schlüssel auf Plattformebene](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] hat die Browserfunktion [!DNL Chrome] aktualisiert, um die über die Kopfzeile `User-Agent` erfassten Informationen zu minimieren. Daher erhalten Audience Manager, die [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) verwenden, keine zuverlässigen Informationen mehr für Eigenschaften, die auf [Schlüsseln auf Plattformebene](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html) basieren.
 
-Audience Manager, die Schlüssel auf Plattformebene für das Targeting verwenden, müssen zu [Experience Platform Web SDK](/help/web-sdk/home.md) anstelle von [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de)und aktivieren Sie [Hohe Entropy-Client-Hinweise](#enabling-high-entropy-client-hints) , um weiterhin zuverlässige Eigenschaftsdaten zu erhalten.
+Audience Manager, die Schlüssel auf Plattformebene für das Targeting verwenden, müssen zu [Experience Platform Web SDK](/help/web-sdk/home.md) anstelle von [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=de) wechseln und [High Entropy Client Hints](#enabling-high-entropy-client-hints) aktivieren, um weiterhin zuverlässige Eigenschaftsdaten zu erhalten.
 
 ## Aktivieren von Client-Hinweisen mit hoher Entropie {#enabling-high-entropy-client-hints}
 
-Um Client-Hinweise mit hoher Entropie in Ihrer Web SDK-Bereitstellung zu aktivieren, müssen Sie die zusätzlichen `highEntropyUserAgentHints` Kontextoption in der [`context`](/help/web-sdk/commands/configure/context.md) -Feld.
+Um Client-Hinweise mit hoher Entropie in Ihrer Web SDK-Bereitstellung zu aktivieren, müssen Sie die zusätzliche Kontextoption `highEntropyUserAgentHints` in das Feld [`context`](/help/web-sdk/commands/configure/context.md) einschließen.
 
 Um beispielsweise Hinweise zu hochgradigen Entropy-Clients aus Web-Eigenschaften abzurufen, würde Ihre Konfiguration wie folgt aussehen:
 
@@ -144,7 +144,7 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "macOS
 ```
 
-Die Entsprechung [!DNL User-Agent] -Kopfzeile für denselben Browser würde wie folgt aussehen:
+Die entsprechende [!DNL User-Agent] -Kopfzeile für denselben Browser würde wie folgt aussehen:
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
@@ -152,9 +152,9 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 Während die Informationen ähnlich sind, enthält die erste Anfrage an den Server Client-Hinweise. Diese enthalten nur eine Teilmenge der in der Benutzeragenten-Zeichenfolge verfügbaren Elemente. Fehlt in der Anfrage sind die Betriebssystemarchitektur, die vollständige Betriebssystemversion, der Name der Layout-Engine, die Version der Layout-Engine und die vollständige Browser-Version.
 
-Bei nachfolgenden Anfragen muss die Variable [!DNL Client Hints API] ermöglicht es Webservern, zusätzliche Details zum Gerät anzufordern. Wenn diese Werte angefordert werden, kann die Browserantwort abhängig von der Browserrichtlinie oder den Benutzereinstellungen diese Informationen enthalten.
+Bei nachfolgenden Anfragen erlaubt der [!DNL Client Hints API] Webservern jedoch, zusätzliche Details zum Gerät anzufordern. Wenn diese Werte angefordert werden, kann die Browserantwort abhängig von der Browserrichtlinie oder den Benutzereinstellungen diese Informationen enthalten.
 
-Nachfolgend finden Sie ein Beispiel für das JSON-Objekt, das vom [!DNL Client Hints API] wenn hohe Entropiewerte angefordert werden:
+Nachfolgend finden Sie ein Beispiel für das JSON-Objekt, das von [!DNL Client Hints API] zurückgegeben wird, wenn hohe Entropiewerte angefordert werden:
 
 
 ```json

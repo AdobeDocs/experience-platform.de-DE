@@ -1,12 +1,12 @@
 ---
-title: Erstellen einer Quellverbindung aus SAP Commerce über die Benutzeroberfläche
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung zu SAP Commerce erstellen.
+title: Erstellen einer Quellverbindung von SAP Commerce über die Benutzeroberfläche
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit SAP Commerce erstellen.
 badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 34%
+source-wordcount: '965'
+ht-degree: 32%
 
 ---
 
@@ -14,37 +14,37 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->Die [!DNL SAP Commerce]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL SAP Commerce]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../../../home.md#terms-and-conditions) .
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL SAP Commerce] Quellverbindung zu [[!DNL SAP] Abrechnung von Abonnements](https://www.sap.com/products/financial-management/subscription-billing.html) Kontakte und Kundendaten über die Benutzeroberfläche von Adobe Experience Platform.
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung mit [!DNL SAP Commerce], um [[!DNL SAP] Abonnementabrechnung](https://www.sap.com/products/financial-management/subscription-billing.html) -Kontakte und Kundendaten über die Adobe Experience Platform-Benutzeroberfläche zu importieren.
 
 ## Erste Schritte {#getting-started}
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Wenn Sie bereits über ein gültiges [!DNL SAP Commerce]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/ecommerce.md) fortfahren.
 
 ### Sammeln erforderlicher Anmeldeinformationen {#gather-credentials}
 
-Um eine Verbindung herzustellen [!DNL SAP Commerce] zum Experience Platform müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um [!DNL SAP Commerce] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
 | Client-ID | Der Wert von `clientId` aus dem Dienstschlüssel. |
 | Client-Geheimnis | Der Wert von `clientSecret` aus dem Dienstschlüssel. |
-| Token-Endpunkt | Der Wert von `url` aus dem Dienstschlüssel, wird er dem `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| Region | Ihr Rechenzentrumsstandort. Die Region ist in der Region `url` und weist einen Wert auf, der `eu10` oder `us10`. Beispiel: `url` is `https://eu10.revenue.cloud.sap/api` benötigen Sie `eu10`. |
+| Token-Endpunkt | Der Wert von `url` aus dem Dienstschlüssel ist ähnlich wie `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
+| Region | Ihr Rechenzentrumsstandort. Der Bereich ist im `url` vorhanden und hat einen Wert ähnlich dem Wert `eu10` oder `us10`. Wenn der `url` beispielsweise `https://eu10.revenue.cloud.sap/api` ist, benötigen Sie `eu10`. |
 
-Weitere Informationen finden Sie im Abschnitt [[!DNL SAP Commerce] Dokumentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+Weitere Informationen finden Sie in der [[!DNL SAP Commerce] Dokumentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ### Erstellen eines Platform-Schemas {#create-platform-schema}
 
-Vor der Erstellung [!DNL SAP Commerce] -Quellverbindung erstellen, müssen Sie außerdem sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Siehe Tutorial zu [Erstellen eines Platform-Schemas](../../../../../xdm/schema/composition.md) für umfassende Schritte zum Erstellen eines Schemas.
+Bevor Sie eine [!DNL SAP Commerce]-Quellverbindung erstellen, müssen Sie außerdem sicherstellen, dass Sie zunächst ein Experience Platform-Schema erstellen, das für Ihre Quelle verwendet werden soll. Umfassende Schritte zum Erstellen eines Schemas finden Sie im Tutorial zum Erstellen eines Platform-Schemas](../../../../../xdm/schema/composition.md) .[
 
 Erweitern Sie den folgenden Abschnitt, um ein Beispielschema anzuzeigen.
 
@@ -147,11 +147,11 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem *eCommerce* category, select **[!UICONTROL SAP Commerce]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter der Kategorie *eCommerce* die Option **[!UICONTROL SAP Commerce]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
-![Platform-UI-Screenshot für Katalog mit SAP Commerce-Karte](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+![Screenshot der Platform-Benutzeroberfläche für den Katalog mit SAP Commerce-Karte](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
-Die **[!UICONTROL SAP Commerce-Konto verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL SAP Commerce-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto {#existing-account}
 
@@ -161,9 +161,9 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL SAP Commerce]-Konto
 
 ### Neues Konto {#new-account}
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre -Anmeldedaten an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre Anmeldeinformationen ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![Screenshot der Platform-Benutzeroberfläche zum Verbinden des SAP Commerce-Kontos mit einem neuen Konto](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![Bildschirm der Platform-Benutzeroberfläche zum Verbinden des SAP Commerce-Kontos mit einem neuen Konto](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Daten auswählen {#select-data}
 
@@ -176,15 +176,15 @@ Schließlich müssen Sie den Objekttyp auswählen, den Sie für Platform erfasse
 
 >[!BEGINTABS]
 
->[!TAB Kunden]
+>[!TAB Customers]
 
-Um Kundendaten zu erfassen, wählen Sie **[!UICONTROL Kunden]** als Objekttyp und wählen Sie dann **[!UICONTROL Nächste]**.
+Um Kundendaten zu erfassen, wählen Sie **[!UICONTROL Kunden]** als Objekttyp und dann **[!UICONTROL Weiter]** aus.
 
 ![Screenshot der Platform-Benutzeroberfläche für SAP Commerce mit ausgewählter Option Konfiguration mit Kunden](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
->[!TAB Kontakte]
+>[!TAB Contacts]
 
-Um Kontaktdaten zu erfassen, wählen Sie **[!UICONTROL Kontakte]** als Objekttyp und wählen Sie dann **[!UICONTROL Nächste]**.
+Um Kontaktdaten zu erfassen, wählen Sie **[!UICONTROL Kontakte]** als Objekttyp und dann **[!UICONTROL Weiter]** aus.
 
 ![Screenshot der Platform-Benutzeroberfläche für SAP Commerce mit ausgewählter Option Konfiguration mit Kontakten](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
@@ -196,21 +196,21 @@ Mithilfe dieses Tutorials haben Sie eine Verbindung zu Ihrem [!DNL SAP Commerce]
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei der Verwendung der Variablen [!DNL SAP Commerce] -Quelle.
+Die folgenden Abschnitte enthalten zusätzliche Ressourcen, auf die Sie bei Verwendung der [!DNL SAP Commerce]-Quelle verweisen können.
 
 ### Zuordnung {#mapping}
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Zuordnungsoberfläche und der berechneten Felder finden Sie im Handbuch [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
 Die Zuordnungskonfigurationen für Ihren Datenfluss unterscheiden sich je nach Schema und Objekttyp, den Sie erfassen möchten.
 
 >[!BEGINTABS]
 
->[!TAB Kunden]
+>[!TAB Customers]
 
-Für Kundendaten: [!DNL SAP Commerce] verwendet die [Kunden](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) und [Kundenkontaktbeziehungen](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) -Endpunkte der [!DNL SAP Business Partners] API zum Abrufen der Daten
+Für Kundendaten verwendet [!DNL SAP Commerce] die Endpunkte [Kunden](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) und [Kunden-Kontakte-Beziehungen](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) der API [!DNL SAP Business Partners] , um die Daten abzurufen.
 
-Im Folgenden finden Sie ein Beispiel für Zuordnungskonfigurationen für [!DNL SAP Commerce] Datenfluss für Kundendaten:
+Im Folgenden finden Sie ein Beispiel für die Zuordnungskonfigurationen für den [!DNL SAP Commerce] -Datenfluss für Kundendaten:
 
 | Zielfeld | Beschreibung |
 | --- | --- |
@@ -230,11 +230,11 @@ Im Folgenden finden Sie ein Beispiel für Zuordnungskonfigurationen für [!DNL S
 
 ![Der Zuordnungsschritt des Ursprungs-Workflows.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-customers.png)
 
->[!TAB Kontakte]
+>[!TAB Contacts]
 
-Für Kontaktdaten: [!DNL SAP Commerce] verwendet die [contact](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) Endpunkt der [!DNL SAP Business Partners] API zum Abrufen der Daten.
+Für Kontaktdaten verwendet [!DNL SAP Commerce] den Endpunkt [contact](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) der [!DNL SAP Business Partners] -API, um die Daten abzurufen.
 
-Im Folgenden finden Sie ein Beispiel für Zuordnungskonfigurationen für [!DNL SAP Commerce] Datenfluss für Kontaktdaten:
+Im Folgenden finden Sie ein Beispiel für Zuordnungskonfigurationen für den [!DNL SAP Commerce]-Datenfluss für Kontaktdaten:
 
 | Zielfeld | Beschreibung |
 | --- | --- |

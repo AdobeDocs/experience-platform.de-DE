@@ -2,7 +2,8 @@
 title: Unterstützte Anwendungsfälle mit dem Adobe Experience Platform Query Service
 description: Erfahren Sie, welche Anwendungsfälle mit dem Adobe Experience Platform Query Service unterstützt werden.
 keywords: Query Service;Anwendungsfälle
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 7%
@@ -20,4 +21,3 @@ Jedes Dokument in diesem Abschnitt enthält Informationen zur Implementierung de
 - [Kundenlebenszeitwert](./customer-lifetime-value.md)
 - [Bestimmen eines Tendenzwerts](./propensity-score.md)
 - [Fuzzy Match](./fuzzy-match.md)
-

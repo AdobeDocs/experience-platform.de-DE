@@ -5,18 +5,18 @@ description: Die Decibel-Erweiterung ist ein Analyseziel in Adobe Experience Pla
 exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 92%
+source-wordcount: '447'
+ht-degree: 94%
 
 ---
 
-# [!DNL Decibel]-Erweiterung  {#decibel-extension}
+# [!DNL Decibel]-Erweiterung {#decibel-extension}
 
 ## Übersicht {#overview}
 
-Schnelle und nahtlose Bereitstellung [!DNL Decibel] in Ihren Web-Eigenschaften. Zusätzliche erweiterte Konfigurationen können auch mit Regeln bereitgestellt werden, indem über die Erweiterung verfügbare Aktionen verwendet werden.
+Stellen Sie [!DNL Decibel] schnell und nahtlos in Ihren Web-Eigenschaften bereit. Zusätzliche erweiterte Konfigurationen können auch mit Regeln bereitgestellt werden, indem über die Erweiterung verfügbare Aktionen verwendet werden.
 
-[!DNL Decibel] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
+[!DNL Decibel] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Decibel] Erweiterung:
+So installieren Sie die [!DNL Decibel]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

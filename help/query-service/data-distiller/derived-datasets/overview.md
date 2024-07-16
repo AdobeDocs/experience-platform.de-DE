@@ -50,4 +50,4 @@ Sie können Geschäftsmetriken auch als abgeleitetes Attribut berechnen und in V
 
 ## Nächste Schritte und Anwendungsfälle
 
-Durch Lesen dieses Dokuments können Sie besser verstehen, wie abgeleitete Datensätze aus Query Service komplexe Anwendungsfälle zur Maximierung der Nützlichkeit Ihrer Daten erleichtern. Als Nächstes sollten Sie die [Anwendungsfall für dezimalbasierte abgeleitete Attribute](../../use-cases/deciles-use-case.md) um zu sehen, wie diese Funktion in einem realen Szenario angewendet wird.
+Durch Lesen dieses Dokuments können Sie besser verstehen, wie abgeleitete Datensätze aus Query Service komplexe Anwendungsfälle zur Maximierung der Nützlichkeit Ihrer Daten erleichtern. Als Nächstes sollten Sie das Nutzungsszenario [dezimalbasiertes abgeleitetes Attribut lesen](../../use-cases/deciles-use-case.md), um zu sehen, wie diese Funktion in einem realen Szenario angewendet wird.

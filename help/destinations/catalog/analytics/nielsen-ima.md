@@ -5,16 +5,16 @@ description: Die Nielsen IMA Handler-Erweiterung ist ein Analyseziel in Adobe Ex
 exl-id: a6f8260b-063d-4784-9f26-8b3dacd4ba58
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 90%
+source-wordcount: '405'
+ht-degree: 91%
 
 ---
 
-# [!DNL Nielsen IMA Handler]-Erweiterung  {#nielsen-ima-extension}
+# [!DNL Nielsen IMA Handler]-Erweiterung {#nielsen-ima-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Nielsen IMA Handler] ist eine Analyseerweiterung in Adobe Experience Platform.
+[!DNL Nielsen IMA Handler] ist eine Analytics-Erweiterung in Adobe Experience Platform.
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -28,7 +28,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Nielsen IMA Handler] Erweiterung:
+So installieren Sie die [!DNL Nielsen IMA Handler]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

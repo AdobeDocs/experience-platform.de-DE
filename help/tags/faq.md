@@ -4,7 +4,7 @@ description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Tags in Adob
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1032'
 ht-degree: 89%
 
 ---
@@ -45,7 +45,7 @@ Das virtuelle Self-Service-Portal von Tags ermöglicht es Entwicklern von Erweit
 
 Wir haben viele Kunden, die sich auch dafür entscheiden, ihre eigenen privaten Erweiterungen zu erstellen, die nur innerhalb ihres eigenen Unternehmens verwendet werden und die die gleichen Methoden zur Entwicklung von Erweiterungen verwenden.
 
-Informationen zum Entwickeln einer Erweiterung finden Sie im Abschnitt [Übersicht über die Erweiterungsentwicklung](./extension-dev/overview.md) Seite.
+Informationen zum Entwickeln einer Erweiterung finden Sie auf der Seite [Übersicht über die Erweiterungsentwicklung](./extension-dev/overview.md) .
 
 ## Erfüllen Tags die Sicherheitsstandards meines Unternehmens?
 
@@ -69,11 +69,11 @@ Ereignistypen sind über Erweiterungen verfügbar. Die Anzahl der unterstützten
 
 ## Werden Tags meine Website beschleunigen (oder verlangsamen)?
 
-Tags sind so konzipiert, dass Marketing- und Werbetechnologien mithilfe moderner Best-Practice-Verfahren auf Ihrer Website so effizient wie möglich bereitgestellt und ausgeführt werden. Es wurde nachgewiesen, dass Tags bei ordnungsgemäßer Verwendung die Leistung von Websites gegenüber alternativen Methoden verbessern, die ähnliche Funktionen bieten.
+Tags sind so konzipiert, dass Marketing- und Werbetechnologien mithilfe moderner Best-Practice-Verfahren auf Ihrer Website so effizient wie möglich bereitgestellt und ausgeführt werden. Es wurde nachgewiesen, dass Tags bei ordnungsgemäßer Verwendung die Performance von Websites gegenüber alternativen Methoden verbessern, die ähnliche Funktionen bieten.
 
 ## Welche Browser werden von Tags unterstützt?
 
-Unterstützte Browser anzeigen [here](./extension-dev/browsers.md).
+Die unterstützten Browser finden Sie [hier](./extension-dev/browsers.md).
 
 Die meisten Adobe-Kunden nutzen mittlerweile modernere Web-Plattformfunktionen in aktuellen Browsern, um bessere Benutzererlebnisse zu erstellen, einschließlich Single Page Applications und interaktiver Ajax-lastiger Websites und Seiten. Da die meisten Kunden zu moderneren Konzepten für ihre Sites wechseln, fordern sie eine Lösung wie Tags, die diese Ansätze ermöglicht.
 
@@ -83,7 +83,7 @@ Ja! Tags unterstützen jetzt mobile Eigenschaften und Konfiguration für die neu
 
 ## Warum gibt die Benutzeroberfläche an, dass beim Laden meines Kontos ein Fehler aufgetreten ist?
 
-Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Siehe Handbuch unter [Berechtigungen verwalten](../collection/permissions.md) Erfahren Sie, wie Sie ein Produktprofil in Adobe Admin Console konfigurieren, um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren.
+Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um Zugriff auf Datenerfassungsfunktionen in der Benutzeroberfläche zu gewähren, finden Sie im Handbuch zu [Berechtigungen verwalten](../collection/permissions.md) .
 
 ## Warum kann ich in der Benutzeroberfläche keine Eigenschaften hinzufügen?
 
@@ -93,4 +93,4 @@ Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um 
 
 ## Was ist, wenn ich weitere Fragen habe?
 
-Wenn Sie weitere Fragen haben, können Sie die [Adobe Experience Platform-Datenerfassungs-Community-Seite](https://adobe.com/go/launchme) auf der Experience League oder dem [Community Slack Workspace](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) für Entwickler und technische Implementierungsthemen.
+Wenn Sie weitere Fragen haben, können Sie auf der [Adobe Experience Platform Data Collection Community-Seite](https://adobe.com/go/launchme) auf Experience League fragen oder sich dem [Community Slack Workspace](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) für Entwickler und technische Implementierungsthemen anschließen.

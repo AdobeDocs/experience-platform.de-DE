@@ -7,8 +7,8 @@ description: Mit Customer AI können Sie Bewertungen im Parquet-Dateiformat heru
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 81%
+source-wordcount: '962'
+ht-degree: 72%
 
 ---
 
@@ -24,10 +24,10 @@ Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine D
 
 Derzeit gibt es zwei Möglichkeiten, Customer AI-Bewertungen herunterzuladen:
 
-1. Wenn Sie die Bewertungen auf der jeweiligen Ebene herunterladen möchten und/oder das Echtzeit-Kundenprofil nicht aktiviert ist, navigieren Sie zu [Auffinden der Datensatz-ID](#dataset-id).
+1. Wenn Sie die Bewertungen auf der jeweiligen Ebene herunterladen möchten und/oder das Echtzeit-Kundenprofil nicht aktiviert ist, navigieren Sie zu [Suchen Ihrer Datensatz-ID](#dataset-id).
 2. Wenn Sie Profil aktiviert haben und Segmente herunterladen möchten, die Sie mit Customer AI konfiguriert haben, gehen Sie zu [Herunterladen eines mit Customer AI konfigurierten Segments](#segment).
 
-## Ermitteln Ihrer Datensatz-ID {#dataset-id}
+## Datensatz-ID ermitteln {#dataset-id}
 
 Klicken Sie in Ihrer Dienstinstanz für Customer AI-Einblicke auf das Dropdown-Menü *Mehr Aktionen* und wählen Sie **[!UICONTROL Auf Bewertungen zugreifen]** aus.
 
@@ -39,7 +39,7 @@ Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen 
 
 ## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
-Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für den Parameter limit query auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../../catalog/api/filter-data.md).
+Mithilfe Ihrer Datensatz-ID aus dem vorherigen Schritt müssen Sie die Catalog-API aufrufen, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für den Parameter limit query auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../../catalog/api/filter-data.md).
 
 **API-Format**
 
@@ -63,7 +63,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Batch-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Batch-Kennung `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
 
 ```json
 {
@@ -245,7 +245,7 @@ Um Ihre Dateidaten herunterzuladen, stellen Sie eine GET-Anfrage an den `"href"`
 
 >[!NOTE]
 >
-> Wenn Sie diese Anfrage direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Kopfzeilen Ihrer Anfrage hinzuzufügen. Im folgenden Anfragebeispiel wird `--output {FILENAME.FILETYPE}` verwendet.
+>Wenn Sie diese Anfrage direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Kopfzeilen Ihrer Anfrage hinzuzufügen. Im folgenden Anfragebeispiel wird `--output {FILENAME.FILETYPE}` verwendet.
 
 **API-Format**
 
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Vergewissern Sie sich, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET-Anfrage stellen.
+>Stellen Sie sicher, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET anfordern.
 
 **Antwort**
 

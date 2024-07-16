@@ -21,12 +21,12 @@ Darüber hinaus bietet der Datentyp eine Reihe optionaler Eigenschaften, die in 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `courtesyTitle` | Eine Abkürzung für den Titel, die Ehrlichkeit oder die Anrede einer Person (z. B. `Mr.`, `Miss.`oder `Dr.`). |
+| `courtesyTitle` | Eine Abkürzung für den Titel, den Ehrgeiz oder die Anrede einer Person (z. B. `Mr.`, `Miss.` oder `Dr.`). |
 | `firstName` | Das erste Segment des Namens in der am häufigsten akzeptierten Schreibreihenfolge in der Sprache des Namens. |
 | `fullName` | Der vollständige Name der Person, in der am häufigsten akzeptierten Schreibreihenfolge in der Sprache des Namens. |
 | `lastName` | Das letzte Segment des Namens in der am häufigsten akzeptierten Schreibreihenfolge in der Sprache des Namens. |
 | `middleName` | Zwischen dem Vor- und dem Nachnamen angegebene mittlere, alternative oder zusätzliche Namen. |
-| `suffix` | Eine Gruppe von Briefen, die nach dem Namen einer Person eingereicht werden, um zusätzliche Informationen bereitzustellen (z. B. `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`usw.). |
+| `suffix` | Eine Gruppe von Briefen, die nach dem Namen einer Person bereitgestellt werden, um zusätzliche Informationen bereitzustellen (z. B. `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III` usw.). |
 
 {style="table-layout:auto"}
 

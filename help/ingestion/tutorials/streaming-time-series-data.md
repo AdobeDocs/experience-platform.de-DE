@@ -7,22 +7,22 @@ description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Str
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 60%
+source-wordcount: '1210'
+ht-degree: 57%
 
 ---
 
 # Streamen von Zeitreihendaten mit Streaming-Aufnahme-APIs
 
-In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen, die Teil von Adobe Experience Platform sind [!DNL Data Ingestion Service] APIs.
+In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen, die Teil der Adobe Experience Platform [!DNL Data Ingestion Service] -APIs sind.
 
 ## Erste Schritte
 
 Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Experience Platform-Diensten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, durch den [!DNL Platform] organisiert Erlebnisdaten.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Erlebnisdaten organisiert.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry] API und wie Sie Aufrufe an sie durchführen. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
+- [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry] -API abdeckt und Anweisungen zum Aufrufen an diese Endpunkte enthält. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemata erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
 
 Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Verbindung hergestellt haben. Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
 
@@ -32,7 +32,7 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## Schema erstellen auf Grundlage der XDM ExperienceEvent-Klasse
 
-Um einen Datensatz zu erstellen, müssen Sie zunächst ein neues Schema erstellen, das die [!DNL XDM ExperienceEvent] -Klasse. Weiterführende Informationen zum Erstellen von Schemas finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
+Um einen Datensatz zu erstellen, müssen Sie zunächst ein neues Schema erstellen, das die [!DNL XDM ExperienceEvent] -Klasse implementiert. Weiterführende Informationen zum Erstellen von Schemata finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
 
 **API-Format**
 
@@ -77,7 +77,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Der Name, den Sie für Ihr Schema verwenden möchten. Dieser Name muss eindeutig sein. |
 | `description` | Eine aussagekräftige Beschreibung des Schemas, das Sie erstellen. |
-| `meta:immutableTags` | In diesem Beispiel wird die `union` -Tag verwendet wird, um Ihre Daten in [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In diesem Beispiel wird das Tag `union` verwendet, um Ihre Daten in [[!DNL Real-Time Customer Profile]](../../profile/home.md) zu speichern. |
 
 **Antwort**
 
@@ -193,11 +193,11 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->&#x200B;**Identitäts-Namespace-Codes**
+>&#x200B;**Identity-Namespace-Codes**
 >
 > Stellen Sie sicher, dass die Codes gültig sind – im obigen Beispiel kommt „email“ zum Einsatz, was ein standardmäßiger Identitäts-Namespace ist. Weitere häufig verwendete standardmäßige Identitäts-Namespaces finden Sie in den [FAQ zum Identity Service](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> Wenn Sie einen benutzerspezifischen Namespace erstellen möchten, führen Sie die in der [Übersicht zum Identitäts-Namespace](../../identity-service/home.md) beschriebenen Schritte aus.
+> Wenn Sie einen benutzerdefinierten Namespace erstellen möchten, führen Sie die Schritte aus, die in der [Übersicht zum Identitäts-Namespace](../../identity-service/home.md) beschrieben sind.
 
 **Antwort**
 
@@ -225,7 +225,7 @@ Nachdem Sie Ihr Schema erstellt haben, müssen Sie nun einen Datensatz für die 
 
 >[!NOTE]
 >
->Dieser Datensatz wird für **[!DNL Real-Time Customer Profile]** und **[!DNL Identity]** durch Festlegen der entsprechenden Tags.
+>Dieser Datensatz wird für **[!DNL Real-Time Customer Profile]** und **[!DNL Identity]** aktiviert, indem die entsprechenden Tags festgelegt werden.
 
 **API-Format**
 
@@ -275,7 +275,7 @@ Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Si
 
 ## Zeitreihendaten an die Streaming-Verbindung erfassen
 
-Mit dem erstellten Datensatz, der Streaming-Verbindung und dem erstellten Datenfluss können Sie XDM-formatierte JSON-Datensätze erfassen, um Zeitreihendaten in [!DNL Platform].
+Mit dem erstellten Datensatz, der Streaming-Verbindung und dem erstellten Datenfluss können Sie XDM-formatierte JSON-Datensätze erfassen, um Zeitreihendaten innerhalb von [!DNL Platform] zu erfassen.
 
 **API-Format**
 
@@ -286,7 +286,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | Der `id`-Wert der neu erstellten Streaming-Verbindung. |
-| `syncValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. Beachten Sie Folgendes: Wenn Sie diesen Abfrageparameter auf `true` dass die Anfrage auf 60-mal pro Minute beschränkt wird `CONNECTION_ID`. |
+| `syncValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. Beachten Sie, dass bei der Festlegung dieses Abfrageparameters auf &quot;`true`&quot; die Anforderungsrate auf 60-mal pro Minute und `CONNECTION_ID` begrenzt ist. |
 
 **Anfrage**
 
@@ -294,13 +294,13 @@ Die Erfassung von Zeitreihendaten in eine Streaming-Verbindung kann entweder mit
 
 Die folgende Beispielanfrage erfasst Zeitreihendaten mit einem fehlenden Quellnamen in Platform. Wenn den Daten der Quellname fehlt, wird die Quell-ID aus der Definition der Streaming-Verbindung hinzugefügt.
 
-Beide `xdmEntity._id` und `xdmEntity.timestamp` sind erforderliche Felder für Zeitreihendaten. Die `xdmEntity._id` -Attribut eine eindeutige Kennung für den Datensatz selbst darstellt, **not** eine eindeutige ID der Person oder des Geräts, deren Datensatz sie enthält.
+Sowohl `xdmEntity._id` als auch `xdmEntity.timestamp` sind erforderliche Felder für Zeitreihendaten. Das Attribut `xdmEntity._id` stellt eine eindeutige Kennung für den Datensatz selbst dar, **nicht** eine eindeutige Kennung der Person oder des Geräts, deren Datensatz er ist.
 
-Sie müssen Ihre eigene `xdmEntity._id` und `xdmEntity.timestamp` für den Datensatz so zu verwenden, dass er konsistent bleibt, wenn der Datensatz jemals wieder aufgenommen werden muss. Idealerweise enthält Ihr Quellsystem diese Werte. Wenn keine ID verfügbar ist, sollten Sie die Werte anderer Felder im Datensatz verketten, um einen eindeutigen Wert zu erstellen, der bei der erneuten Aufnahme durchgängig aus dem Datensatz neu generiert werden kann.
+Sie müssen Ihre eigenen `xdmEntity._id` und `xdmEntity.timestamp` für den Datensatz so generieren, dass er konsistent bleibt, wenn der Datensatz jemals wieder aufgenommen werden muss. Idealerweise enthält Ihr Quellsystem diese Werte. Wenn keine ID verfügbar ist, sollten Sie die Werte anderer Felder im Datensatz verketten, um einen eindeutigen Wert zu erstellen, der bei der erneuten Aufnahme durchgängig aus dem Datensatz neu generiert werden kann.
 
 >[!NOTE]
 >
->Der folgende API-Aufruf **not** Authentifizierungs-Header benötigen.
+>Der folgende API-Aufruf erfordert für **nicht** Authentifizierungskopfzeilen.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -391,7 +391,7 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamten zurück [!DNL Profile].
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamten [!DNL Profile] zurück.
 
 ```json
 {
@@ -413,11 +413,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamt
 
 ## Die neu erfassten Zeitreihendaten abrufen
 
-Zur Validierung der zuvor erfassten Datensätze können Sie die [[!DNL Profile Access API]](../../profile/api/entities.md) , um die Zeitreihendaten abzurufen. Dazu können Sie eine GET-Anfrage an den `/access/entities`-Endpunkt richten und optionale Abfrageparameter nutzen. Es können mehrere Parameter verwendet werden, getrennt durch das kaufmännische Und-Zeichen (&amp;).
+Um die zuvor erfassten Datensätze zu validieren, können Sie die Zeitreihendaten mit dem [[!DNL Profile Access API]](../../profile/api/entities.md) abrufen. Dazu können Sie eine GET-Anfrage an den `/access/entities`-Endpunkt richten und optionale Abfrageparameter nutzen. Es können mehrere Parameter verwendet werden, getrennt durch das kaufmännische Und-Zeichen (&amp;).
 
 >[!NOTE]
 >
->Wenn die Kennung der Zusammenführungsrichtlinie nicht definiert ist und die `schema.name` oder `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] wird abgerufen **all** verwandte Identitäten.
+>Wenn die Kennung der Zusammenführungsrichtlinie nicht definiert ist und die `schema.name` oder `relatedSchema.name` den Wert `_xdm.context.profile` aufweist, ruft [!DNL Profile Access] alle verwandten Identitäten **5} ab.**
 
 **API-Format**
 
@@ -515,6 +515,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten in [!DNL Platform] Streaming-Verbindungen verwenden. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie mit der Überwachung der erfassten Daten beginnen durch [!DNL Platform] Benutzeroberfläche. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
+Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Platform] aufnehmen können. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie mit der Überwachung der erfassten Daten über die Benutzeroberfläche von [!DNL Platform] beginnen. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
 
 Weitere allgemeine Informationen zur Streaming-Erfassung finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).

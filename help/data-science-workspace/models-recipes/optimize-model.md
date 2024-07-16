@@ -3,18 +3,18 @@ keywords: Experience Platform; optimieren; Modell; Data Science Workspace; belie
 solution: Experience Platform
 title: Modell mithilfe des Model Insights Framework optimieren
 type: Tutorial
-description: Das Model Insights Framework bietet Data Scientists Werkzeuge in Data Science Workspace, um auf der Grundlage von Experimenten schnelle und fundierte Entscheidungen für optimale maschinelle Lernmodelle zu treffen.
+description: Das Model Insights Framework bietet Datenwissenschaftlern Werkzeuge in Data Science Workspace, um auf der Grundlage von Experimenten schnelle und fundierte Entscheidungen für optimale Modelle für maschinelles Lernen zu treffen.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 88%
+source-wordcount: '1187'
+ht-degree: 81%
 
 ---
 
 # Modell mithilfe des Model Insights-Frameworks optimieren
 
-Das Model Insights Framework stellt den Datenwissenschaftlern Tools in [!DNL Data Science Workspace] um schnelle und fundierte Entscheidungen für optimale Modelle des maschinellen Lernens auf der Grundlage von Experimenten zu treffen. Das Framework verbessert die Geschwindigkeit und Effektivität des Workflows für maschinelles Lernen und erhöht die Anwenderfreundlichkeit für Data Scientists. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, sodass sich Modelle verfeinern lassen. Das Endergebnis ermöglicht es Data Scientists und Citizen Data Scientists, bessere Entscheidungen zur Optimierung von Modellen ihrer Endkunden zu treffen.
+Das Model Insights Framework bietet Datenwissenschaftlern Werkzeuge in [!DNL Data Science Workspace], um anhand von Experimenten schnelle und fundierte Entscheidungen für optimale Modelle für maschinelles Lernen zu treffen. Das Framework verbessert die Geschwindigkeit und Effektivität des Workflows für maschinelles Lernen und erhöht die Anwenderfreundlichkeit für Data Scientists. Dies geschieht durch Bereitstellung einer Standardvorlage für jeden maschinellen Lernalgorithmustyp, sodass sich Modelle verfeinern lassen. Das Endergebnis ermöglicht es Data Scientists und Citizen Data Scientists, bessere Entscheidungen zur Optimierung von Modellen ihrer Endkunden zu treffen.
 
 ## Was sind Metriken?
 
@@ -87,7 +87,7 @@ Der benutzerdefinierte Auswerter kann angegeben werden, indem Sie die Oberfläch
 
 >[!IMPORTANT]
 >
->Verwenden Sie bei der `MLMetric`-Klasse nicht `"measures"` als `valueType`, wenn Sie eine neue `MLMetric` erstellen, da diese Metrik sonst nicht in die Tabelle mit den benutzerdefinierten Auswertungsmetriken aufgenommen wird.
+>Verwenden Sie für die Klasse `MLMetric` nicht `"measures"` für `valueType` bei der Erstellung eines neuen `MLMetric` , da die Metrik sonst nicht in die Tabelle der benutzerdefinierten Auswertungsmetriken aufgenommen wird.
 >  
 > Führen Sie folgende Schritte aus: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Und nicht: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
@@ -99,19 +99,19 @@ Nach der Definition im Rezept besteht der nächste Schritt darin, sie in den Rez
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Im [!DNL Data Science Workspace]festgelegt ist, kann der Benutzer die Einblicke auf der Registerkarte &quot;Auswertungsmetriken&quot;auf der Experimentseite sehen.
+Im Tab [!DNL Data Science Workspace] könnte der Benutzer die Einblicke auf der Registerkarte &quot;Auswertungsmetriken&quot;auf der Experimentseite sehen.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-Derzeit gibt es keine standardmäßigen Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow]. So erhalten Sie die Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow]müssen Sie eine benutzerdefinierte Auswertungsmetrik erstellen. Dies kann durch Implementierung der `Evaluator`-Klasse erfolgen.
+Derzeit gibt es keine standardmäßigen Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow]. Um die Auswertungsmetriken für [!DNL Python] oder [!DNL Tensorflow] zu erhalten, müssen Sie daher eine benutzerdefinierte Auswertungsmetrik erstellen. Dies kann durch Implementierung der `Evaluator`-Klasse erfolgen.
 
 #### Benutzerdefinierte Auswertungsmetriken für [!DNL Python]
 
 Für benutzerdefinierte Auswertungsmetriken müssen für den Auswerter zwei Hauptmethoden implementiert werden: `split()` und `evaluate()`.
 
-Für [!DNL Python]festlegen, würden diese Methoden in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) für `Evaluator` -Klasse. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
+Für [!DNL Python] würden diese Methoden in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) für die Klasse `Evaluator` definiert. Folgen Sie dem Link [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py), um ein Beispiel für `Evaluator` zu sehen.
 
-Erstellen von Auswertungsmetriken in [!DNL Python] erfordert, dass der Benutzer die `evaluate()` und `split()` -Methoden.
+Zum Erstellen von Auswertungsmetriken in [!DNL Python] muss der Benutzer die Methoden `evaluate()` und `split()` implementieren.
 
 Die `evaluate()`-Methode gibt das metrische Objekt zurück, das eine Gruppe von Metrikobjekten mit den Eigenschaften `name`, `value` und `valueType` enthält.
 
@@ -121,7 +121,7 @@ Die `split()`-Methode sollte einen Trainings- und Prüf-Dataframe zurückgeben, 
 
 #### Benutzerdefinierte Auswertungsmetriken für TensorFlow
 
-Für [!DNL Tensorflow], ähnlich wie [!DNL Python], die Methoden `evaluate()` und `split()` im `Evaluator` -Klasse implementiert werden. Für `evaluate()` sollten die Metriken zurückgegeben werden, während `split()` die Trainings- und Testdatensätze zurückgibt.
+Für [!DNL Tensorflow] müssen, ähnlich wie [!DNL Python], die Methoden `evaluate()` und `split()` in der `Evaluator`-Klasse implementiert werden. Für `evaluate()` sollten die Metriken zurückgegeben werden, während `split()` die Trainings- und Testdatensätze zurückgibt.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -156,7 +156,7 @@ Daten werden zunächst aus einer in [retail.config.json](https://github.com/adob
 
 ## Verwenden von vordefinierten Metriken und Visualisierungsdiagrammen
 
-Die [!DNL Sensei Model Insights Framework] unterstützt eine Standardvorlage für jeden Typ von maschinellem Lernalgorithmus. Die folgende Tabelle beinhaltet allgemeine übergeordnete Klassen für maschinelle Lernalgorithmen und zugehörige Auswertungsmetriken und Visualisierungen.
+Der [!DNL Sensei Model Insights Framework] unterstützt eine Standardvorlage für jeden Typ von maschinellem Lernalgorithmus. Die folgende Tabelle beinhaltet allgemeine übergeordnete Klassen für maschinelle Lernalgorithmen und zugehörige Auswertungsmetriken und Visualisierungen.
 
 | ML-Algorithmustyp | Auswertungsmetriken | Visualisierungen |
 | --- | --- | --- |

@@ -7,18 +7,18 @@ exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 18%
+ht-degree: 16%
 
 ---
 
 
-# [!UICONTROL Persönliche Kontaktangaben] Schemafeldgruppe
+# [!UICONTROL Persönliche Kontaktdetails] Schemafeldgruppe
 
 >[!NOTE]
 >
 >Die Namen mehrerer Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Persönliche Kontaktangaben] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) beschreibt die Kontaktinformationen einer Person.
+[!UICONTROL Persönliche Kontaktdetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md), die die Kontaktinformationen für eine Person beschreibt.
 
 ![](../../images/field-groups/personal-contact-details.png)
 

@@ -15,7 +15,7 @@ ht-degree: 82%
 
 Um Benutzer einem Produktprofil zuzuweisen oder daraus zu entfernen, öffnen Sie die Detailseite des Profils und navigieren Sie zur Registerkarte **[!UICONTROL Benutzer]**. Wählen Sie hier **[!UICONTROL Benutzer hinzufügen]**.
 
-![Auf der Seite mit den Produktprofildetails werden die in der [!UICONTROL Benutzer] Registerkarte.](../images/add-user.png)
+![Die Seite mit Produktprofildetails, auf der die auf der Registerkarte [!UICONTROL Benutzer] aufgelisteten Benutzer angezeigt werden.](../images/add-user.png)
 
 Das Dialogfeld **[!UICONTROL Benutzer hinzufügen]** wird angezeigt. Mithilfe des Suchfelds können Sie Benutzer suchen, um sie entweder per Name oder E-Mail-Adresse hinzuzufügen. Während der Eingabe werden übereinstimmende Benutzer in einem Fenster mit automatischer Vervollständigung unterhalb des Textfelds angezeigt.
 
@@ -25,7 +25,7 @@ Das Dialogfeld **[!UICONTROL Benutzer hinzufügen]** wird angezeigt. Mithilfe de
 
 Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **[!UICONTROL Speichern]**, um ihn zum Produktprofil hinzuzufügen.
 
-![Fügen Sie Benutzer zur Produktprofilseite hinzu, auf der Benutzerdetails hervorgehoben werden.](../images/save-user.png)
+![Fügen Sie Benutzer zur Produktprofilseite hinzu, auf der die Benutzerdetails hervorgehoben werden.](../images/save-user.png)
 
 Das folgende Video soll Ihr Verständnis für die Verwaltung von Administratoren für ein Produktprofil unterstützen.
 

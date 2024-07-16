@@ -23,7 +23,7 @@ Für jede Tag-Eigenschaft in Adobe Experience Platform müssen die folgenden Erw
 * Experience Cloud-Besucher-ID-Service
 * Haupterweiterung
 
-Verwenden Sie die [&quot;Einbetten eines Players mit einem \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) Codeausschnitt aus der Google-Entwicklerdokumentation auf der HTML jeder Webseite, auf der ein Videoplayer gerendert werden soll.
+Verwenden Sie das Codefragment &quot;[&quot;Einbetten eines Players mithilfe eines &quot;\&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds)&quot;-Tags aus den Google-Entwicklerdokumenten in der HTML jeder Webseite, auf der ein Videoplayer wiedergegeben werden soll.
 
 Die Erweiterungsversion 2.0.1 unterstützt das Einbetten eines oder mehrerer YouTube-Videos auf einer einzelnen Website, indem ein `id`-Attribut mit einem eindeutigen Wert im iframe-Skript-Tag eingefügt und `enablejsapi=1` und `rel=0` an das Ende des `src`-Attributwerts angehängt werden, falls dies noch nicht der Fall ist. Beispiel:
 
@@ -75,18 +75,18 @@ Für jedes Videoereignis (die sieben oben aufgelisteten Ereignisse) kann eine Ta
 Die Regeln umfassen drei Aktionen:
 
 * **Variablen festlegen:** Festlegen der Adobe Analytics-Variablen (Zuordnen zu allen oder einigen enthaltenen Datenelementen).
-* **Signal senden:** Senden Sie das Adobe Analytics-Beacon als benutzerspezifischen Linktracking-Aufruf und geben Sie den Wert &quot;Linkname&quot;an.
+* **Beacon senden:** Senden Sie das Adobe Analytics-Beacon als benutzerspezifischen Linktracking-Aufruf und geben Sie den Wert &quot;Linkname&quot;an.
 * **Variablen löschen:** Löschen der Adobe Analytics-Variablen.
 
 ## Beispiel für eine Tag-Regel für „Videostart“
 
 Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
-* **Veranstaltungen**: &quot;Videostart&quot;(Dieses Ereignis löst die Regel aus, wenn der Besucher mit der Wiedergabe eines YouTube-Videos beginnt.)
+* **Ereignisse**: &quot;Videostart&quot;(Dieses Ereignis löst die Regel aus, wenn der Besucher mit der Wiedergabe eines YouTube-Videos beginnt.)
 
 * **Bedingung**: Keine
 
-* **Aktionen**: Verwenden Sie die **Analytics-Erweiterung** auf die Aktion &quot;Variablen festlegen&quot;, um Folgendes zuzuordnen:
+* **Aktionen**: Verwenden Sie die Aktion **Analytics-Erweiterung** zum &quot;Festlegen von Variablen&quot;, um Folgendes zuzuordnen:
 
    * Das Ereignis für Videostart,
    * Eine prop/eVar für das Datenelement „Videodauer“
@@ -94,7 +94,7 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
    * Eine prop/eVar für das Datenelement „Videoname“
    * Ein prop/eVar für das Datenelement „Video-URL“
 
-  Schließen Sie dann die Aktion &quot;Beacon senden&quot;ein (`s.tl`) mit dem Linknamen &quot;Videostart&quot;gefolgt von der Aktion &quot;Variablen löschen&quot;.
+  Schließen Sie dann die Aktion &quot;Beacon senden&quot;(`s.tl`) mit dem Link-Namen &quot;Videostart&quot;gefolgt von der Aktion &quot;Variablen löschen&quot;ein.
 
 >[!TIP]
 > 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Weitere Informationen dazu, wie Sie Datenelemente in Platform effektiv erstellen und nutzen können, finden Sie im Abschnitt [Datenelemente](../../../ui/managing-resources/data-elements.md) Dokumentation.
+Weitere Informationen zum Erstellen und Verwenden von Datenelementen in Platform finden Sie in der Dokumentation zu [Datenelementen](../../../ui/managing-resources/data-elements.md) .

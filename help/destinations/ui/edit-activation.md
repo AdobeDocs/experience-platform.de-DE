@@ -6,8 +6,8 @@ description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandene
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 26%
+source-wordcount: '327'
+ht-degree: 25%
 
 ---
 
@@ -31,20 +31,20 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsdatenflüsse zu bearbeiten:
 
    ![Auswählen des Ziels](../assets/ui/edit-activation/destination-select.png)
 
-4. Die **[!UICONTROL Datenfluss-Abläufe]** -Seite für das Ziel angezeigt und zeigt die verfügbaren Steuerelemente an. An dieser Stelle können Sie mehrere Komponenten des Ziel-Datenflusses bearbeiten:
+4. Die Seite **[!UICONTROL Datenfluss wird ausgeführt]** für das Ziel wird angezeigt und zeigt die verfügbaren Steuerelemente an. An dieser Stelle können Sie mehrere Komponenten des Ziel-Datenflusses bearbeiten:
 
-   * Auswählen **[!UICONTROL Aktivieren von Zielgruppen]** in der rechten Leiste, um zu ändern, welche Zielgruppen oder Profilattribute an das Ziel gesendet werden. Dadurch gelangen Sie zum Aktivierungs-Workflow, der sich je nach Zieltyp unterscheidet. Weitere Informationen finden Sie in den Handbüchern zu:
+   * Wählen Sie in der rechten Leiste die Option **[!UICONTROL Zielgruppen aktivieren]** aus, um zu ändern, welche Zielgruppen oder Profilattribute an das Ziel gesendet werden. Dadurch gelangen Sie zum Aktivierungs-Workflow, der sich je nach Zieltyp unterscheidet. Weitere Informationen finden Sie in den Handbüchern zu:
       * [Aktivieren von Zielgruppendaten für Zielgruppen-Streaming-Ziele](./activate-segment-streaming-destinations.md) (z. B. Facebook oder Twitter);
       * [Aktivieren von Zielgruppendaten für profilbasierte Batch-Ziele](./activate-batch-profile-destinations.md) (z. B. Amazon S3 oder Oracle Eloqua);
-      * [Aktivieren von Zielgruppendaten für Streaming profilbasierter Ziele](./activate-streaming-profile-destinations.md) (z. B. HTTP-API oder Amazon Kinesis).
+      * [Aktivieren von Zielgruppendaten für Streaming-profilbasierte Ziele](./activate-streaming-profile-destinations.md) (z. B. HTTP-API oder Amazon Kinesis).
 
    * Darüber hinaus können Sie den Namen und die Beschreibung des Ziel-Datenflusses bearbeiten.
-   * Sie können die **[!UICONTROL Aktiviert]/[!UICONTROL Behinderte]** Umschalten, um alle Datenexporte an das Ziel zu starten und anzuhalten.
+   * Sie können den Umschalter **[!UICONTROL Aktiviert]/[!UICONTROL Deaktiviert]** verwenden, um alle Datenexporte an das Ziel zu starten und anzuhalten.
 
    ![Zieldetails](../assets/ui/edit-activation/destination-details.png)
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich die **[!UICONTROL Ziele]** Arbeitsbereich zum Aktualisieren vorhandener Ziel-Datenflüsse.
+In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich **[!UICONTROL Ziele]** verwendet, um vorhandene Ziel-Datenflüsse zu aktualisieren.
 
-Weitere Informationen zu Zielen finden Sie im Abschnitt [Ziele - Übersicht](../catalog/overview.md).
+Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../catalog/overview.md).

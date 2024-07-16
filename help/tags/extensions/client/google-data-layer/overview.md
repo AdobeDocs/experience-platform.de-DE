@@ -11,13 +11,13 @@ ht-degree: 12%
 
 # Google Data Layer-Erweiterung
 
-Mit der Google-Datenschicht-Erweiterung können Sie eine Google-Datenschicht in Ihrer Tags-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und der Open Source von Google verwendet werden [Data Layer Helper Library](https://github.com/google/data-layer-helper).
+Mit der Google-Datenschicht-Erweiterung können Sie eine Google-Datenschicht in Ihrer Tags-Implementierung verwenden. Die Erweiterung kann unabhängig oder gleichzeitig mit Google-Lösungen und der Open-Source-Bibliothek [Data Layer Helper Library](https://github.com/google/data-layer-helper) von Google verwendet werden.
 
-Die Hilfsbibliothek bietet ähnliche ereignisgesteuerte Funktionen wie die Adobe Client-Datenschicht (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschicht-Erweiterung bieten ähnliche Funktionen wie die im [ACDL-Erweiterung](../client-data-layer/overview.md).
+Die Hilfsbibliothek bietet ähnliche ereignisgesteuerte Funktionen wie die Adobe Client-Datenschicht (ACDL). Die Datenelemente, Regeln und Aktionen der Google-Datenschicht-Erweiterung bieten ähnliche Funktionen wie die in der [ACDL-Erweiterung](../client-data-layer/overview.md) vorhandenen.
 
 ## Installation
 
-Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche und wählen Sie **[!UICONTROL Google-Datenschicht]**.
+Um die Erweiterung zu installieren, navigieren Sie zum Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche und wählen Sie **[!UICONTROL Google-Datenschicht]** aus.
 
 Nach der Installation erstellt oder greift die Erweiterung auf eine Datenschicht bei jedem Laden der Adobe Experience Platform Tags-Bibliothek zu.
 
@@ -25,7 +25,7 @@ Nach der Installation erstellt oder greift die Erweiterung auf eine Datenschicht
 
 Die Erweiterungskonfiguration kann verwendet werden, um den Namen der Datenschicht zu definieren, die die Erweiterung nutzt. Wenn beim Laden von Adobe Experience Platform-Tags keine Datenschicht mit dem konfigurierten Namen vorhanden ist, erstellt die Erweiterung eine.
 
-Der standardmäßige Name der Datenschicht ist Google `dataLayer`.
+Der Standardwert für den Datenschichtnamen ist der Google-Standardname `dataLayer`.
 
 >[!NOTE]
 >
@@ -35,27 +35,27 @@ Der standardmäßige Name der Datenschicht ist Google `dataLayer`.
 
 >[!NOTE]
 >
->Das Wort _event_ wird überlastet, wenn in Adobe Experience Platform-Tags eine ereignisbasierte Datenschicht verwendet wird. _Veranstaltungen_ kann sein:
+>Das Wort _event_ wird überschrieben, wenn in Adobe Experience Platform-Tags eine ereignisgesteuerte Datenschicht verwendet wird. _Ereignisse_ kann Folgendes sein:
 > - Adobe Experience Platform Tags-Ereignisse (Bibliothek geladen usw.).
 > - JavaScript-Ereignisse.
-> - Daten, die mit der _event_ Keyword.
+> - Daten werden mit dem Schlüsselwort _event_ an die Datenschicht gesendet.
 
 Die Erweiterung bietet Ihnen die Möglichkeit, auf Änderungen auf der Datenschicht zu warten.
 
 >[!NOTE]
 >
->Es ist wichtig, die Verwendung der _event_ Keyword, wenn Daten auf eine Google-Datenschicht übertragen werden, ähnlich wie auf die Adobe Client-Datenschicht. Die _event_ -Keyword ändert das Verhalten der Google-Datenschicht und daher diese Erweiterung.\
+>Es ist wichtig, die Verwendung des Schlüsselworts _event_ zu verstehen, wenn Daten auf eine Google-Datenschicht übertragen werden, ähnlich wie auf der Adobe Client-Datenschicht. Das Schlüsselwort _event_ ändert das Verhalten der Google-Datenschicht und daher diese Erweiterung.\
 > Lesen Sie die Dokumentation zu Google oder recherchieren Sie, wenn Sie sich diesbezüglich nicht sicher sind.
 
 ### Google-Ereignistypen
 
-Google unterstützt zwei Methoden zum Pushen von Ereignissen: den Google Tag Manager unter Verwendung der `push()` -Methode und Google Analytics 4 unter Verwendung der `gtag()` -Methode.
+Google unterstützt zwei Methoden zum Übertragen von Ereignissen: den Google Tag Manager mit der `push()` -Methode und Google Analytics 4 mit der `gtag()` -Methode.
 
-Google Data Layer-Erweiterungsversionen vor 1.2.1 unterstützten nur Ereignisse, die von `push()`, wie in den Codebeispielen auf dieser Seite gezeigt.
+Google Data Layer-Erweiterungsversionen vor 1.2.1 unterstützten nur Ereignisse, die von `push()` erstellt wurden, wie in den Codebeispielen auf dieser Seite dargestellt.
 
-Unterstützungs-Ereignisse ab Version 1.2.1, die mithilfe von `gtag()`.  Dies ist optional und kann im Dialogfeld Erweiterungskonfiguration aktiviert werden.
+Die Versionen 1.2.1 und höher unterstützen Ereignisse, die mit `gtag()` erstellt wurden.  Dies ist optional und kann im Dialogfeld Erweiterungskonfiguration aktiviert werden.
 
-Weitere Informationen finden Sie unter `push()` und `gtag()` Ereignisse, siehe [Google-Dokumentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Informationen finden Sie auch in den Konfigurations- und Regeldialogfeldern der Erweiterung.
+Weitere Informationen zu den Ereignissen `push()` und `gtag()` finden Sie in der [Google-Dokumentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Informationen finden Sie auch in den Konfigurations- und Regeldialogfeldern der Erweiterung.
 
 ### Achten Sie auf alle Push-Vorgänge an die Datenschicht
 
@@ -105,9 +105,9 @@ Wenn Sie beispielsweise `myEvent` bei Verwendung dieser Konfiguration festlegen,
 dataLayer.push({"event":"myEvent"})
 ```
 
-Es kann ein (ECMAScript-/JavaScript-) Regex verwendet werden, um Ereignisnamen zuzuordnen.
+Es kann ein (ECMAScript/JavaScript)-Regex verwendet werden, um Ereignisnamen zuzuordnen.
 
-Wenn beispielsweise &quot;myEvent\d&quot;festgelegt wird, wird `myEvent` mit einer Ziffer (\d):
+Wenn Sie beispielsweise &quot;myEvent\d&quot;festlegen, wird `myEvent` mit einer Ziffer (\d) verfolgt:
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -157,4 +157,4 @@ Das Datenelement kann daher Folgendes zurückgeben:
 
 Die Datenelement- und Ereignisdialogfelder der Erweiterung enthalten detaillierte Nutzungsinformationen und Beispiele.
 
-Weitere allgemeine Informationen finden Sie unter [Projekt README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+Zusätzliche allgemeine Informationen finden Sie in der [Projekt-README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md) .

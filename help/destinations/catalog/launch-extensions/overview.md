@@ -27,9 +27,9 @@ Um die Erweiterungen in der Platform-Benutzeroberfläche zu finden, navigieren S
 
 ## Funktionsweise von Tag-Erweiterungen {#how-extensions-work}
 
-A [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder App verbessert. Dazu kann das Senden von Rohdaten für Ereignisse an ein Ziel wie [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) aber sie können auch andere Funktionen bedienen.
+Eine [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder App verbessert. Dazu kann das Senden von Rohdaten für Ereignisse an ein Ziel wie [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) gehören, sie können aber auch andere Funktionen nutzen.
 
-Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die in der Benutzeroberfläche der Platform-Ziele angezeigten Erweiterungen sind *Tag-Erweiterungen*. Weiterführende Informationen finden Sie in der Übersicht zur Ereignisweiterleitung . [Unterschiede zwischen Tags und Ereignisweiterleitung](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
+Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die in der Benutzeroberfläche von Platform-Zielen angezeigten Erweiterungen sind *Tag-Erweiterungen*. Weiterführende Informationen zu den [Unterschieden zwischen Tags und der Ereignisweiterleitung](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags) finden Sie in der Übersicht zur Ereignisweiterleitung.
 
 
 

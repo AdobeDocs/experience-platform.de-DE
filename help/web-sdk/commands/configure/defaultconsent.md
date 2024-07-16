@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # `defaultConsent`
 
-Die `defaultConsent` -Eigenschaft bestimmt, wie Sie die Datenerfassungszustimmung verarbeiten, bevor Sie [`setConsent`](../setconsent.md) Befehl. Diese Eigenschaft ist nützlich, wenn Sie nicht versehentlich Daten von Einzelpersonen erfassen möchten, die sich in Bereichen befinden, in denen vor der Datenerfassung eine Einwilligung erforderlich ist.
+Die `defaultConsent` -Eigenschaft bestimmt, wie Sie die Datenerfassungs-Zustimmung verarbeiten, bevor Sie den [`setConsent`](../setconsent.md) -Befehl aufrufen. Diese Eigenschaft ist nützlich, wenn Sie nicht versehentlich Daten von Einzelpersonen erfassen möchten, die sich in Bereichen befinden, in denen vor der Datenerfassung eine Einwilligung erforderlich ist.
 
 Standardmäßig sind Benutzer für alle Zwecke angemeldet und das Web SDK darf die folgenden Aufgaben ausführen:
 
@@ -23,23 +23,23 @@ Wenn Benutzer sich von allen Zwecken abmelden, führt das Web SDK keine dieser A
 
 Die `defaultConsent` -Eigenschaft unterstützt drei Werte:
 
-* **`in`**: Die Datenerfassung wird wie gewohnt fortgesetzt, bis der Benutzer sich abmeldet.
-* **`out`**: Die Daten werden dauerhaft verworfen, bis der Benutzer sich anmeldet.
-* **`pending`**: Die Daten werden lokal gespeichert, bis sich der Benutzer für die Verwendung der [`setConsent`](../setconsent.md) Befehl. Wenn die Standardzustimmung für den allgemeinen Zweck auf `pending`, der versucht, alle Befehle auszuführen, die von den Anmeldevoreinstellungen des Benutzers abhängen (z. B. die [`sendEvent`](../sendevent/overview.md) -Befehl) führt dazu, dass der -Befehl im Web SDK in die Warteschlange gestellt wird. In der Warteschlange befindliche Befehle werden erst verarbeitet, nachdem Sie die Opt-in-Voreinstellungen des Benutzers an das Web SDK übermittelt haben.
+* **`in`**: Die Datenerfassung wird wie gewohnt fortgesetzt, bis sich der Benutzer abmeldet.
+* **`out`**: Die Daten werden dauerhaft verworfen, bis sich der Benutzer anmeldet.
+* **`pending`**: Die Daten werden lokal gespeichert, bis sich der Benutzer mit dem Befehl [`setConsent`](../setconsent.md) anmeldet. Wenn die Standardzustimmung für den allgemeinen Zweck auf &quot;`pending`&quot;festgelegt ist, führt der Versuch, Befehle auszuführen, die von den Anmeldeeinstellungen des Benutzers abhängen (z. B. dem Befehl &quot;[`sendEvent`](../sendevent/overview.md)&quot;), dazu, dass der Befehl im Web SDK in die Warteschlange gestellt wird. In der Warteschlange befindliche Befehle werden erst verarbeitet, nachdem Sie die Opt-in-Voreinstellungen des Benutzers an das Web SDK übermittelt haben.
 
 >[!NOTE]
 >
 > Die Einwilligungsdaten bleiben nicht zwischen den Seitenladevorgängen erhalten.
 
-Wenn Sie einen Besucher haben, der nicht in die Rechtsprechung der Datenschutz-Grundverordnung (DSGVO) fällt, kann die Standardzustimmung auf `in`. Besucher, die sich in der Gerichtsbarkeit der DSGVO befinden, können ihre standardmäßige Einwilligung auf `pending`. Ihre Consent Management Platform (CMP) kann die Region des Kunden erkennen und das Flag bereitstellen `gdprApplies` nach IAB TCF 2.0. Mit diesem Flag können Sie die Standardzustimmung festlegen.
+Wenn Sie einen Besucher haben, der nicht unter die Datenschutz-Grundverordnung (DSGVO) fällt, kann die Standardzustimmung auf `in` gesetzt werden. Besucher innerhalb der Gerichtsbarkeit der DSGVO können ihre standardmäßige Einwilligung auf `pending` setzen lassen. Ihre Consent Management Platform (CMP) kann die Region des Kunden erkennen und das Flag `gdprApplies` für IAB TCF 2.0 bereitstellen. Mit diesem Flag können Sie die Standardzustimmung festlegen.
 
-Wenn Sie keine Ereignisse erfassen möchten, die vor dem Festlegen der Anmeldevoreinstellungen des Benutzers aufgetreten sind, können Sie `"defaultConsent": "out"` während der Web SDK-Konfiguration. Der Versuch, Befehle auszuführen, die von den Anmeldeeinstellungen des Benutzers abhängen, hat keine Auswirkungen, bis Sie die Anmeldeeinstellungen des Benutzers an das Web SDK übermittelt haben.
+Wenn Sie keine Ereignisse erfassen möchten, die vor dem Festlegen der Opt-in-Voreinstellungen des Benutzers aufgetreten sind, können Sie `"defaultConsent": "out"` während der Web SDK-Konfiguration übergeben. Der Versuch, Befehle auszuführen, die von den Anmeldeeinstellungen des Benutzers abhängen, hat keine Auswirkungen, bis Sie die Anmeldeeinstellungen des Benutzers an das Web SDK übermittelt haben.
 
 >[!NOTE]
 >
->Derzeit unterstützt das Web SDK nur einen einzigen All-or-Nichts-Zweck. Obwohl wir planen, einen robusteren Satz von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und Produktangeboten entsprechen, ist die aktuelle Implementierung ein Alles-oder-Nichts-Ansatz zum Opt-in.  Dies gilt nur für [!DNL Web SDK] und NICHT andere Adobe-JavaScript-Bibliotheken.
+>Derzeit unterstützt das Web SDK nur einen einzigen All-or-Nichts-Zweck. Obwohl wir planen, einen robusteren Satz von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und Produktangeboten entsprechen, ist die aktuelle Implementierung ein Alles-oder-Nichts-Ansatz zum Opt-in.  Dies gilt nur für [!DNL Web SDK] und NICHT für andere Adobe JavaScript-Bibliotheken.
 
-## Verwenden `defaultConsent` zusammen mit `setConsent` {#using-consent}
+## Verwenden von `defaultConsent` zusammen mit `setConsent` {#using-consent}
 
 Das Web SDK bietet zwei komplementäre Konfigurationsbefehle für die Zustimmung:
 
@@ -66,7 +66,7 @@ Die folgenden Cookies werden gesetzt, wenn die Konfiguration der Zustimmung Folg
 
 | Name | Max. Alter | Beschreibung |
 |---|---|---|
-| **AMCV_###@AdobeOrg** | 34128000 (395 Tage) | Vorhanden, wenn [`idMigrationEnabled`](../configure/idmigrationenabled.md) aktiviert ist. Dies ist beim Übergang zum Web SDK hilfreich, während einige Teile der Site weiterhin verwenden `visitor.js`. |
+| **AMCV_###@AdobeOrg** | 34128000 (395 Tage) | Vorhanden, wenn [`idMigrationEnabled`](../configure/idmigrationenabled.md) aktiviert ist. Dies ist beim Übergang zum Web SDK hilfreich, während einige Teile der Site weiterhin `visitor.js` verwenden. |
 | **Demdex-Cookie** | 15552000 (180 Tage) | Vorhanden bei aktivierter ID-Synchronisierung. Audience Manager setzt dieses Cookie, um Site-Besuchern eine eindeutige ID zuzuweisen. Das demdex-Cookie hilft Audience Manager bei der Ausführung grundlegender Funktionen wie Besucheridentifizierung, ID-Synchronisierung, Segmentierung, Modellierung, Berichterstellung usw. |
 | **kndctr_orgid_cluster** | 1800 (30 Minuten) | Speichert den Edge Network-Bereich, der den Anforderungen des aktuellen Benutzers entspricht. Der Bereich wird im URL-Pfad verwendet, damit das Edge Network die Anfrage an den richtigen Bereich weiterleiten kann. Wenn ein Benutzer eine Verbindung mit einer anderen IP-Adresse oder in einer anderen Sitzung herstellt, wird die Anforderung erneut an den nächsten Bereich weitergeleitet. |
 | **kndct_orgid_identity** | 34128000 (395 Tage) | Speichert die ECID sowie andere Informationen zur ECID. |
@@ -75,18 +75,18 @@ Die folgenden Cookies werden gesetzt, wenn die Konfiguration der Zustimmung Folg
 
 ## Festlegen der Standardzustimmung mit der Web SDK-Tag-Erweiterung
 
-Wählen Sie das gewünschte Optionsfeld unter **[!UICONTROL Standardzustimmung]** when [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Wählen Sie die gewünschte Optionsschaltfläche unter **[!UICONTROL Standardzustimmung]** aus, wenn [die Tag-Erweiterung konfigurieren](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Anmelden bei [experience.adobe.com](https://experience.adobe.com) mit Ihren Adobe ID-Anmeldedaten.
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
 1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
 1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** Klicken Sie auf **[!UICONTROL Konfigurieren]** auf [!UICONTROL Adobe Experience Platform Web SDK] Karte.
-1. Scrollen Sie nach unten zum [!UICONTROL Datenschutz] und wählen Sie dann die gewünschte **[!UICONTROL Standardzustimmung]**.
-1. Klicks **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
+1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Datenschutz] und wählen Sie dann die gewünschte **[!UICONTROL Standardzustimmung]** aus.
+1. Klicken Sie auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
 
-## Festlegen der Standardzustimmung mithilfe der Web SDK-JavaScript-Bibliothek
+## Festlegen der Standardzustimmung mit der Web SDK JavaScript-Bibliothek
 
-Legen Sie die `defaultConsent` Zeichenfolgeneigenschaft auf die gewünschte Zustimmungsstufe beim Ausführen der `configure` Befehl. Diese Eigenschaft unterscheidet zwischen Groß- und Kleinschreibung und unterstützt nur die folgenden drei Werte: `"in"`, `"out"`, und `"pending"`. Wenn Sie versuchen, einen anderen Wert zu verwenden, gibt die Bibliothek einen Fehler aus.
+Legen Sie die String-Eigenschaft `defaultConsent` beim Ausführen des Befehls `configure` auf die gewünschte Zustimmungsebene fest. Diese Eigenschaft unterscheidet zwischen Groß- und Kleinschreibung und unterstützt nur die folgenden drei Werte: `"in"`, `"out"` und `"pending"`. Wenn Sie versuchen, einen anderen Wert zu verwenden, gibt die Bibliothek einen Fehler aus.
 
 ```js
 alloy("configure", {

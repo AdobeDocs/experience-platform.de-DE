@@ -11,35 +11,35 @@ ht-degree: 37%
 
 ---
 
-# Dashboard-Datensätze mithilfe von analysieren, überprüfen und verarbeiten [!DNL Query Service]
+# Dashboard-Datensätze mit [!DNL Query Service] durchsuchen, überprüfen und verarbeiten
 
-Adobe Experience Platform bietet wichtige Informationen zu den Profil-, Zielgruppen- und Zieldaten Ihres Unternehmens über Dashboards, die in der Experience Platform-Benutzeroberfläche verfügbar sind. Sie können dann Adobe Experience Platform verwenden [!DNL Query Service] , um die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, mit denen diese Dashboards im Data Lake bereitgestellt werden.
+Adobe Experience Platform bietet wichtige Informationen zu den Profil-, Zielgruppen- und Zieldaten Ihres Unternehmens über Dashboards, die in der Experience Platform-Benutzeroberfläche verfügbar sind. Sie können dann Adobe Experience Platform [!DNL Query Service] verwenden, um die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, über die diese Dashboards im Data Lake bereitgestellt werden.
 
 ## Erste Schritte mit [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] unterstützt Marketingexperten dabei, Einblicke aus ihren Daten zu gewinnen, indem die Verwendung von Standard-SQL zur Abfrage von Daten im Data Lake ermöglicht wird. [!DNL Query Service] bietet eine Benutzeroberfläche und eine API, die verwendet werden können, um einen beliebigen Datensatz in den Data Lake einzubinden und die Abfrageergebnisse als neue Datensätze zu erfassen, die für die Berichterstellung, das maschinelle Lernen oder die Aufnahme in das Echtzeit-Kundenprofil verwendet werden können.
+Adobe Experience Platform [!DNL Query Service] unterstützt Marketingexperten dabei, Einblicke aus ihren Daten zu gewinnen, indem es die Verwendung von Standard-SQL zur Abfrage von Daten im Data Lake ermöglicht. [!DNL Query Service] bietet eine Benutzeroberfläche und eine API, die verwendet werden kann, um einen beliebigen Datensatz in den Data Lake einzubinden und die Abfrageergebnisse als neue Datensätze zu erfassen, die für die Berichterstellung, das maschinelle Lernen oder die Aufnahme in das Echtzeit-Kundenprofil verwendet werden können.
 
-Weitere Informationen zu [!DNL Query Service] und seiner Rolle innerhalb von Experience Platform. Bitte lesen Sie zunächst die [[!DNL Query Service] Übersicht](../query-service/home.md).
+Um mehr über [!DNL Query Service] und seine Rolle innerhalb von Experience Platform zu erfahren, lesen Sie zunächst die [[!DNL Query Service] Übersicht](../query-service/home.md).
 
 ## Zugreifen auf verfügbare Datensätze
 
-Sie können [!DNL Query Service] zum Abfragen von Rohdatensätzen für Profil-, Zielgruppen- und Ziel-Dashboards. Um Ihre verfügbaren Datensätze anzuzeigen, wählen Sie in der Experience Platform-Benutzeroberfläche die Option **Datensätze** im linken Navigationsbereich, um das Dashboard Datensätze zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
+Sie können &quot;[!DNL Query Service]&quot;verwenden, um Raw-Datensätze für Profil-, Zielgruppen- und Ziel-Dashboards abzufragen. Um Ihre verfügbaren Datensätze anzuzeigen, wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich **Datensätze** aus, um das Dashboard &quot;Datensätze&quot;zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Details werden für jeden aufgelisteten Datensatz angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
 
-![Das Dashboard zum Durchsuchen von Datensätzen , wobei die Registerkarte Datensätze im linken Navigationsbereich hervorgehoben ist.](./images/query/browse-datasets.png)
+![Das Dashboard zum Durchsuchen von Datensätzen mit der Registerkarte &quot;Datensätze&quot;im linken Navigationsbereich hervorgehoben.](./images/query/browse-datasets.png)
 
 ### Systemgenerierte Datensätze {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
->Systemgenerierte Datensätze werden standardmäßig ausgeblendet. Standardmäßig wird die Variable [!UICONTROL Durchsuchen] zeigt nur Datensätze an, in die Sie Daten aufgenommen haben.
+>Systemgenerierte Datensätze werden standardmäßig ausgeblendet. Standardmäßig zeigt die Registerkarte [!UICONTROL Durchsuchen] nur Datensätze an, in die Sie Daten aufgenommen haben.
 
-Um systemgenerierte Datensätze anzuzeigen, wählen Sie das Filtersymbol (![Ein Filtersymbol.](./images/query/filter.png)) links neben der Suchleiste.
+Um systemgenerierte Datensätze anzuzeigen, wählen Sie das Filtersymbol (![Filtersymbol) aus.](./images/query/filter.png)) links neben der Suchleiste.
 
-![Auf der Registerkarte &quot;Durchsuchen von Datensätzen&quot;ist das Filtersymbol hervorgehoben.](./images/query/filter-datasets.png)
+![Die Registerkarte &quot;Durchsuchen von Datensätzen&quot;mit hervorgehobenem Filtersymbol.](./images/query/filter-datasets.png)
 
-Es wird eine Seitenleiste mit zwei Umschaltern angezeigt, [!UICONTROL Im Profil enthalten] und [!UICONTROL Anzeigen von Systemdatensätzen]. Umschalten zwischen [!UICONTROL Anzeigen von Systemdatensätzen] , um systemgenerierte Datensätze in die Browser-Liste der Datensätze aufzunehmen.
+Es wird eine Seitenleiste mit zwei Umschalter angezeigt: [!UICONTROL Im Profil enthalten] und [!UICONTROL Systemdatensätze anzeigen]. Aktivieren Sie den Umschalter für [!UICONTROL Systemdatensätze anzeigen] , um systemgenerierte Datensätze in die Browser-Liste der Datensätze einzuschließen.
 
-![Auf der Registerkarte zum Durchsuchen von Datensätzen wird die Option Systemdatensätze anzeigen aktiviert.](./images/query/show-system-datasets.png)
+![Die Registerkarte &quot;Durchsuchen von Datensätzen&quot;mit dem Umschalter Systemdatensätze anzeigen markiert.](./images/query/show-system-datasets.png)
 
 ### Profilattributdatensätze {#profile-attribute-datasets}
 
@@ -49,7 +49,7 @@ Die Namenskonvention für diese Datensätze lautet **Profil-Schnappschuss-Export
 
 Um das vollständige Schema jedes Profilschnappschuss-Exportdatensatzes zu verstehen, können Sie eine Vorschau anzeigen und die Datensätze [unter Verwendung des Datensatz-Viewers](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche erkunden.
 
-![Eine Vorschau des Datensatzes Profil-Snapshot-Export .](images/query/profile-attribute.png)
+![Eine Vorschau des Datensatzes Profile-Snapshot-Export.](images/query/profile-attribute.png)
 
 #### Zuordnen von Profilattribut-Datensätzen zu Zusammenführungsrichtlinien-IDs
 
@@ -80,17 +80,17 @@ Die Namenskonvention dieses Datensatzes lautet **DIM_Destination**.
 
 Um das vollständige Schema des DIM-Zieldatensatzes zu verstehen, können Sie eine Vorschau anzeigen und den Datensatz [unter Verwendung des Datensatz-Viewers](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche erkunden.
 
-![Eine Vorschau des DIM_Destination -Datensatzes.](images/query/destinations-metadata.png)
+![Eine Vorschau des DIM_Destination-Datensatzes.](images/query/destinations-metadata.png)
 
 ## Insight-Berichte für Customer Data Platform (CDP)
 
 Die Funktion CDP Insights Data Models legt die SQL offen, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungs-Widgets ermöglicht. Sie können diese SQl-Abfragevorlagen anpassen, um CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.
 
-Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Zielgruppen und Zielen. Detaillierte Informationen dazu finden Sie in der Dokumentation zum CDP Insights-Datenmodell . [die CDP Insights-Datenmodelle auf Ihre jeweiligen KPI-Anwendungsfälle anwenden](./data-models/cdp-insights-data-model-b2c.md).
+Die CDP-Berichterstellung bietet Einblicke in Ihre Profildaten und ihre Beziehung zu Zielgruppen und Zielen. Detaillierte Informationen dazu, wie Sie die CDP Insights-Datenmodelle auf Ihre jeweiligen KPI-Anwendungsfälle anwenden, finden Sie in der Dokumentation zum CDP Insights-Datenmodell](./data-models/cdp-insights-data-model-b2c.md) .[
 
 ## Beispielabfragen
 
-Die folgenden Beispielabfragen enthalten Beispiel-SQL, das in [!DNL Query Service] , um die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, die Ihre Dashboards unterstützen.
+Die folgenden Beispielabfragen enthalten Beispiel-SQL, das in [!DNL Query Service] verwendet werden kann, um die Rohdatensätze zu untersuchen, zu überprüfen und zu verarbeiten, die Ihre Dashboards unterstützen.
 
 ### Anzahl der Profile nach Identität
 
@@ -144,6 +144,6 @@ Select
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs können Sie jetzt [!DNL Query Service] , um mehrere Abfragen durchzuführen, um die Rohdatensätze zu untersuchen und zu verarbeiten, mit denen Ihre Profil-, Zielgruppen- und Ziel-Dashboards bereitgestellt werden.
+Durch Lesen dieses Handbuchs können Sie jetzt mit [!DNL Query Service] mehrere Abfragen durchführen, um die Rohdatensätze zu untersuchen und zu verarbeiten, mit denen Sie Ihre Profil-, Zielgruppen- und Ziel-Dashboards versorgen können.
 
 Um mehr über diese Dashboards und die darin verfügbaren Metriken zu erfahren, treffen Sie bitte eine entsprechende Auswahl aus der Liste der verfügbaren Dashboards in der Dokumentationsnavigation.

@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
-title: Erstellen eines Datenflusses mithilfe einer CRM-Quelle in der Benutzeroberfläche
+title: Erstellen eines Datenflusses mithilfe eines CRM-Source in der Benutzeroberfläche
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine CRM-Quelle erstellen.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
 source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
 source-wordcount: '1444'
-ht-degree: 45%
+ht-degree: 47%
 
 ---
 
@@ -18,7 +18,7 @@ Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und 
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit einer CRM-Quelle verfügen. Eine Liste der Tutorials zum Erstellen verschiedener CRM-Quellkonten in der Benutzeroberfläche finden Sie im [Quellen - Übersicht](../../../home.md#crm).
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit einer CRM-Quelle verfügen. Eine Liste der Tutorials zum Erstellen verschiedener CRM-Quellkonten in der Benutzeroberfläche finden Sie in der [Quellenübersicht](../../../home.md#crm).
 >* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte
@@ -34,16 +34,16 @@ Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von Platform vo
 
 ## Daten hinzufügen
 
-Nach der Erstellung Ihres CRM-Quellkontos muss die **[!UICONTROL Daten hinzufügen]** angezeigt, um eine Oberfläche zur Verfügung zu stellen, über die Sie die Tabellenhierarchie Ihres CRM-Kontos aufrufen können.
+Nach der Erstellung Ihres CRM-Quellkontos wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, der eine Oberfläche bietet, über die Sie die Tabellenhierarchie Ihres CRM-Kontos durchsuchen können.
 
 * In der linken Hälfte der Benutzeroberfläche befindet sich ein Browser, der eine Liste der in Ihrem Konto enthaltenen Datentabellen anzeigt. Die Benutzeroberfläche enthält außerdem eine Suchoption, mit der Sie die Quelldaten, die Sie verwenden möchten, schnell identifizieren können.
 * Die rechte Hälfte der Benutzeroberfläche ist ein Vorschaufenster, mit dem Sie bis zu 100 Datenzeilen in der Vorschau anzeigen können.
 
 >[!NOTE]
 >
->Die Option &quot;Suchquellendaten&quot;steht allen tabellenbasierten Quellen außer der Adobe Analytics zur Verfügung. [!DNL Amazon Kinesis], und [!DNL Azure Event Hubs].
+>Die Option &quot;Suchquellendaten&quot;ist für alle tabellenbasierten Quellen mit Ausnahme von Adobe Analytics, [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] verfügbar.
 
-Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie auf **[!UICONTROL Nächste]**.
+Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
@@ -85,41 +85,41 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Zuordnungsoberfläche und der berechneten Felder finden Sie im Handbuch [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->Wenn Sie [!DNL Salesforce] als Teil von Adobe Real-time Customer Data Platform B2B Edition, siehe [[!DNL Salesforce] Feldzuordnungsdokument](../../../connectors/adobe-applications/mapping/salesforce.md) Anleitungen für die Kartierung [!DNL Salesforce] Quellfelder in die entsprechenden XDM-Zielfelder.
+>Wenn Sie [!DNL Salesforce] als Teil von Adobe Real-time Customer Data Platform B2B Edition verwenden, finden Sie im Dokument [[!DNL Salesforce] Feldzuordnung](../../../connectors/adobe-applications/mapping/salesforce.md) Anleitungen zum Zuordnen von [!DNL Salesforce] Quellfeldern zu den entsprechenden XDM-Zielfeldern.
 
-Nachdem die Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Nächste]**.
+Nachdem die Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Weiter]** aus.
 
 ![Zuordnung](../../../images/tutorials/dataflow/table-based/mapping.png)
 
 ## Erfassungsläufe planen
 
-Die [!UICONTROL Planung] angezeigt, sodass Sie einen Aufnahmezeitplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch zu erfassen. Standardmäßig ist die Planung auf `Once`. Um die Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Häufigkeit]** und wählen Sie dann eine Option aus dem Dropdown-Menü aus.
+Der Schritt [!UICONTROL Planung] wird angezeigt, in dem Sie einen Aufnahmeplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch zu erfassen. Standardmäßig ist die Planung auf `Once` eingestellt. Um die Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Häufigkeit]** und dann eine Option aus dem Dropdown-Menü aus.
 
 >[!TIP]
 >
 >Während einer einmaligen Erfassung sind Intervall und Aufstockung nicht sichtbar.
 
-![Planung](../../../images/tutorials/dataflow/table-based/scheduling.png)
+![ scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
-Wenn Sie die Aufnahmefrequenz auf `Minute`, `Hour`, `Day`oder `Week`, müssen Sie ein Intervall festlegen, um einen bestimmten Zeitrahmen zwischen jeder Aufnahme festzulegen. Eine Erfassungsfrequenz, die beispielsweise auf `Day` und ein Intervall festgelegt auf `15` bedeutet, dass Ihr Datenfluss alle 15 Tage Daten aufnehmen soll.
+Wenn Sie die Aufnahmefrequenz auf `Minute`, `Hour`, `Day` oder `Week` festlegen, müssen Sie ein Intervall festlegen, um einen bestimmten Zeitrahmen zwischen jeder Aufnahme festzulegen. Beispielsweise bedeutet eine Erfassungsfrequenz, die auf &quot;`Day`&quot;und ein auf &quot;`15`&quot;festgelegtes Intervall, dass Ihr Datenfluss alle 15 Tage Daten aufnehmen soll.
 
-Während dieses Schritts können Sie auch **Aufstockung** und definieren eine Spalte für die inkrementelle Datenaufnahme. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
+Während dieses Schritts können Sie auch **Aufstockung** aktivieren und eine Spalte für die inkrementelle Aufnahme von Daten definieren. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
 
 Weitere Informationen zu Planungskonfigurationen finden Sie in der Tabelle unten.
 
 | Feld | Beschreibung |
 | --- | --- |
-| Häufigkeit | Die Häufigkeit, mit der eine Aufnahme erfolgt. Selektive Häufigkeiten beinhalten `Once`, `Minute`, `Hour`, `Day`, und `Week`. |
+| Häufigkeit | Die Häufigkeit, mit der eine Aufnahme erfolgt. Zu den auswählbaren Frequenzen gehören `Once`, `Minute`, `Hour`, `Day` und `Week`. |
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Häufigkeit festlegt. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden. |
 | Startzeit | Ein UTC-Zeitstempel, der angibt, wann die erste Aufnahme erfolgen soll. Die Startzeit muss größer oder gleich der aktuellen UTC-Zeit sein. |
 | Aufstockung | Ein boolean -Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien erfasst, die zwischen der ersten Ausführung der Aufnahme und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht erfasst. |
-| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Dieses Feld wird verwendet, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
+| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld wird genutzt, um zwischen neuen und bestehenden Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. |
 
-![Aufstockung](../../../images/tutorials/dataflow/table-based/backfill.png)
+![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Überprüfen des Datenflusses
 
@@ -135,7 +135,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen des Datenflusses finden Sie im Tutorial zu [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../monitor.md).
+Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen des Datenflusses finden Sie im Tutorial zum [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../monitor.md).
 
 ## Löschen des Datenflusses
 

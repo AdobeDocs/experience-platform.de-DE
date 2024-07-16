@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Impressionen] Datentyp
+# Datentyp [!UICONTROL Impressionen]
 
-[!UICONTROL Impressionen] ist ein standardmäßiger XDM-Datentyp, der eine Marketing-Impression beschreibt. Hierbei handelt es sich um eine Metrik, mit der die Anzahl der digitalen Ansichten oder Interaktionen für einen Inhaltselement wie Werbung, digitaler Beitrag oder Webseite quantifiziert wird.
+[!UICONTROL Impressionen] ist ein standardmäßiger XDM-Datentyp, der eine Marketing-Impression beschreibt. Hierbei handelt es sich um eine Metrik, mit der die Anzahl der digitalen Ansichten oder Interaktionen für einen Inhaltsabschnitt wie Werbung, einen digitalen Beitrag oder eine Webseite quantifiziert wird.
 
 ![](../images/data-types/impressions.png)
 

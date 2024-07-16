@@ -18,7 +18,7 @@ ht-degree: 14%
 
 B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jedes nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine genaue Ansicht der Kunden zu erhalten und so die Effizienz und Effektivität ihrer B2B-Marketing- und Verkaufsaktivitäten zu reduzieren.
 
-| ID | Name | Website | Branche | Land | Telefon | Hat eine Opportunity mit dem Wert > `$1 million` |
+| ID | Name | Website | Branche | Land | Telefon | Hat offene Gelegenheit mit einem Betrag > `$1 million` |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | Software | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
@@ -28,7 +28,7 @@ B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gesp
 
 {style="table-layout:auto"}
 
-mit den entsprechenden Konten, [!DNL Real-Time CDP B2B] zeigt Ihnen jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind.
+Mit verwandten Konten zeigt Ihnen [!DNL Real-Time CDP B2B] jetzt eine Liste von Konten an, die dem von Ihnen verwendeten Konto ähnlich sind.
 
 ![Bildschirm mit verwandten Konten in der Experience Platform-Benutzeroberfläche.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
@@ -36,34 +36,34 @@ Verwenden Sie diese Funktion, um verwandte Kontoprofile für ein Kontoprofil in 
 
 ## Aktivieren des zugehörigen Kontodienstes {#enable}
 
-Um den Dienst zu aktivieren, wählen Sie **[!UICONTROL Profile]** in der Seitenleiste gefolgt von **[!UICONTROL Einstellungen]**.
+Um den Dienst zu aktivieren, wählen Sie **[!UICONTROL Profile]** in der Seitenleiste gefolgt von **[!UICONTROL Einstellungen]** aus.
 
-![Experience Platform-UI, die Profile und Einstellungen hervorhebt.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![Experience Platform UI, die Profile und Einstellungen hervorhebt.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Umschalten neben [!UICONTROL Zugehörige Konten aktivieren] , um den Dienst zu aktivieren, und wählen Sie dann **[!UICONTROL Speichern]**.
+Wählen Sie den Umschalter neben [!UICONTROL Zugehörige Konten aktivieren] aus, um den Dienst zu aktivieren, und wählen Sie dann **[!UICONTROL Speichern]** aus.
 
-![Bildschirm &quot;Kontoeinstellungen&quot;, der die Umschaltung und das Speichern markiert.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+![Bildschirm &quot;Kontoeinstellungen&quot;, der den Umschalter und das Speichern markiert.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Funktionsweise {#how-it-works}
 
 Tägliche Aufträge für maschinelles Lernen verwenden einen hierarchischen Algorithmus, um ähnliche Kontoprofile basierend auf drei Faktoren in Gruppen zu gruppieren:
 
 * Link zum übergeordneten Konto
-* Webdomäne
+* Webdomain
 * Kontoname
 
-Nach einem erfolgreichen Verarbeitungsauftrag wird jedes Mitglied der Kontoprofilgruppe mit der Liste Zugehörige Konten markiert. Sie können die Liste im **Verwandte Konten** auf der Seite &quot;Kontoprofil&quot;ein und verwenden Sie die zugehörigen Konten in den Segmentdefinitionen.
+Nach einem erfolgreichen Verarbeitungsauftrag wird jedes Mitglied der Kontoprofilgruppe mit der Liste Zugehörige Konten markiert. Sie können die Liste auf der Registerkarte **Zugehörige Konten** der Seite &quot;Kontoprofil&quot;anzeigen und die zugehörigen Konten in Segmentdefinitionen verwenden.
 
-Weitere Informationen zu den [Vorgänge im Zusammenhang mit der Profilanreicherung](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Weitere Informationen zu den [Aufträgen zur Profilanreicherung von Konten](/help/dataflows/ui/b2b/monitor-profile-enrichment.md) finden Sie in der Dokumentation .
 
 ## Darstellung verwandter Konten {#how-to-view}
 
 Sie können zugehörige Konten für ein Konto, das Sie durchsuchen, in der Experience Platform-Benutzeroberfläche anzeigen.
 
-Weitere Informationen zu den [Finden verwandter Konten in der Benutzeroberfläche](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
+Weitere Informationen zum Auffinden verwandter Konten in der Benutzeroberfläche finden Sie in der Dokumentation [ .](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 
 ## Verwendung verwandter Konten {#how-to-use}
 
 Sie können Konten und zugehörige Konten bei der Segmentierung verwenden. Die Entscheidung, ob verwandte Konten in Ihren Segmentdefinitionen verwendet werden sollen, hängt von Ihrem Marketing-Anwendungsfall ab. Sie können beispielsweise verwandte Konten für E-Mail-Marketing- oder Werbekampagnen verwenden, bei denen Sie im Austausch für eine größere Reichweite eine geringere Genauigkeit akzeptieren können.
 
-Siehe [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-accounts) , die verwandte Konten verwendet.
+Siehe ein [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-accounts), das verwandte Konten verwendet.

@@ -6,7 +6,7 @@ exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1189'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ Dieses Handbuch enthält Informationen zum besseren Verständnis der Segmentsuch
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] -API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
 Zusätzlich zu den erforderlichen Kopfzeilen, die im Abschnitt &quot;Erste Schritte&quot;beschrieben werden, benötigen alle Anforderungen an den Segmentsuchendpunkt die folgende zusätzliche Kopfzeile:
 
@@ -37,8 +37,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wo {SCHEMA} stellt den Schemaklasse-Wert dar, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Wo {SEARCH_TERM} stellt eine Abfrage dar, die der Implementierung von Microsoft entspricht. [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert darstellt, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der Microsoft-Implementierung der Suchsyntax von [Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) entspricht. Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -97,12 +97,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wo {SCHEMA} enthält den Wert der Schemaklasse, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `namespace={NAMESPACE}` | **(Erforderlich)** Wo {NAMESPACE} enthält den Namespace, in dem Sie suchen möchten. |
-| `s={SEARCH_TERM}` | *(Optional)* Wo {SEARCH_TERM} enthält eine Abfrage, die mit der Microsoft-Implementierung von [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle Datensätze, die mit `schema.name` zurückgegeben. Eine ausführlichere Erläuterung finden Sie im Abschnitt [Anhang](#appendix) dieses Dokuments. |
-| `entityId={ENTITY_ID}` | *(Optional)* Schränkt Ihre Suche in den angegebenen Ordner ein, mit {ENTITY_ID}. |
-| `limit={LIMIT}` | *(Optional)* Wo {LIMIT} stellt die Anzahl der zurückzugebenden Suchergebnisse dar. Der Standardwert lautet 50. |
-| `page={PAGE}` | *(Optional)* Wo {PAGE} stellt die Seitenzahl dar, die für die Paginierung der Ergebnisse der gesuchten Abfrage verwendet wird. Beachten Sie, dass die Seitenzahl bei **0**. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem Sie suchen möchten. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Microsoft-Implementierung der Suchsyntax von [Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) entspricht. Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `entityId={ENTITY_ID}` | *(Optional)* Beschränkt Ihre Suche auf den angegebenen Ordner, der mit {ENTITY_ID} angegeben ist. |
+| `limit={LIMIT}` | *(Optional)* Wobei {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse darstellt. Der Standardwert lautet 50. |
+| `page={PAGE}` | *(Optional)* Wobei {PAGE} die Seitennummer darstellt, die zum Paginieren der Ergebnisse der gesuchten Abfrage verwendet wird. Beachten Sie, dass die Seitenzahl bei **0** beginnt. |
 
 
 **Anfrage**
@@ -168,9 +168,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Erforderlich)** Wo {SCHEMA} enthält den Wert der Schemaklasse, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `namespace={NAMESPACE}` | **(Erforderlich)** Wo {NAMESPACE} enthält den Namespace, in dem Sie suchen möchten. |
-| `entityId={ENTITY_ID}` | **(Erforderlich)** Die ID des Suchobjekts, zu dem Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
+| `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
+| `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem Sie suchen möchten. |
+| `entityId={ENTITY_ID}` | **(Erforderlich)** Die Kennung des Suchobjekts, für das Sie die Strukturinformationen abrufen möchten, angegeben mit {ENTITY_ID}. |
 
 **Anfrage**
 
@@ -223,7 +223,7 @@ Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon,
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder zu suchen, [!DNL Platform]verwenden Sie die folgende Suchabfrage: `s=segmentName:AAM%20OR%20Platform`.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einer Segmentdefinition mit dem Namen AAM oder [!DNL Platform] zu suchen, würden Sie die folgende Suchabfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
 
 >  Für Best Practices sollte der Suchausdruck wie im oben gezeigten Beispiel HTML-kodiert sein.
 
@@ -249,15 +249,15 @@ In der folgenden Tabelle finden Sie die Details zur Funktionsweise von Suchabfra
 | Beispielsuchausdruck | Beschreibung |
 | ------------------------- | ----------- |
 | foo | Suchen Sie nach einem beliebigen Wort. Dies gibt Ergebnisse zurück, wenn das Wort &quot;foo&quot;in einem der durchsuchbaren Felder gefunden wird. |
-| foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **both** Die Wörter &quot;foo&quot; und &quot;bar&quot; befinden sich in allen durchsuchbaren Feldern. |
-| foo OR bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **entweder** das Wort &quot;foo&quot; oder das Wort &quot;bar&quot; finden Sie in allen durchsuchbaren Feldern. |
+| foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn in einem der durchsuchbaren Felder **beide** die Wörter &quot;foo&quot;und &quot;bar&quot;gefunden werden. |
+| foo OR bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **entweder** das Wort &quot;foo&quot;oder das Wort &quot;bar&quot;in einem der durchsuchbaren Felder gefunden werden. |
 | foo NOT bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn das Wort &quot;foo&quot;gefunden wird, das Wort &quot;bar&quot;jedoch in keinem der durchsuchbaren Felder gefunden wird. |
-| name: foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **both** Die Wörter &quot;foo&quot; und &quot;bar&quot; finden Sie im Feld &quot;name&quot;. |
+| name: foo AND bar | Boolesche Suche. Dies gibt Ergebnisse zurück, wenn **beide** die Wörter &quot;foo&quot;und &quot;bar&quot;im Feld &quot;name&quot;gefunden werden. |
 | run* | Eine Platzhaltersuche. Die Verwendung eines Sternchens (*) entspricht 0 oder mehr Zeichen, d. h. es werden Ergebnisse ausgegeben, wenn der Inhalt eines durchsuchbaren Felds ein Wort enthält, das mit &quot;run&quot;beginnt. Dies gibt beispielsweise Ergebnisse zurück, wenn die Wörter &quot;wird ausgeführt&quot;, &quot;läuft&quot;, &quot;runner&quot;oder &quot;runt&quot;angezeigt werden. |
 | Cam? | Eine Platzhaltersuche. Verwenden eines Fragezeichens (?) entspricht nur genau einem Zeichen. Das bedeutet, dass Ergebnisse ausgegeben werden, wenn der Inhalt eines durchsuchbaren Felds mit &quot;cam&quot;und einem zusätzlichen Buchstaben beginnt. Dies gibt beispielsweise Ergebnisse zurück, wenn die Wörter &quot;Camp&quot;oder &quot;Cams&quot;angezeigt werden, aber keine Ergebnisse zurückgeben, wenn die Wörter &quot;Camera&quot;oder &quot;Campfire&quot;angezeigt werden. |
 | &quot;blauer Regenschirm&quot; | Eine Satzsuche. Dies gibt Ergebnisse zurück, wenn der Inhalt eines durchsuchbaren Felds den vollständigen Wortlaut &quot;blauer Schirm&quot;enthält. |
-| blue\~ | Eine unscharfe Suche. Optional können Sie eine Zahl zwischen 0 und 2 nach der Tilde (~) setzen, um den Bearbeitungsabstand anzugeben. Beispielsweise würde &quot;blue\~1&quot;&quot;blue&quot;, &quot;blues&quot;oder &quot;kleue&quot;zurückgeben. Unscharfe Suche kann **only** auf Begriffe, nicht auf Sätze angewendet werden. Sie können jedoch am Ende jedes Wortes in einer Wortgruppe Tildes anhängen. Beispielsweise würde &quot;camping\~ in\~ the\~ summer\~&quot;mit &quot;camping im Sommer&quot;übereinstimmen. |
-| &quot;Hotel Airport&quot;\~5 | Näherungssuche. Diese Art der Suche wird verwendet, um Begriffe zu finden, die in einem Dokument nahe beieinander liegen. Beispielsweise die Wortgruppe `"hotel airport"~5` findet die Begriffe &quot;Hotel&quot; und &quot;Flughafen&quot; innerhalb von 5 Wörtern voneinander in einem Dokument. |
-| `/a[0-9]+b$/` | Suche nach regulären Ausdrücken. Diese Art der Suche findet eine Übereinstimmung basierend auf dem Inhalt zwischen Schrägstrichen &quot;/&quot;, wie in der RegExp-Klasse dokumentiert. Um beispielsweise Dokumente zu finden, die &quot;motel&quot;oder &quot;hotel&quot;enthalten, geben Sie `/[mh]otel/`. Die Suche nach regulären Ausdrücken wird mit einzelnen Wörtern abgeglichen. |
+| blue\~ | Eine unscharfe Suche. Optional können Sie eine Zahl zwischen 0 und 2 nach der Tilde (~) setzen, um den Bearbeitungsabstand anzugeben. Beispielsweise würde &quot;blue\~1&quot;&quot;blue&quot;, &quot;blues&quot;oder &quot;kleue&quot;zurückgeben. Die unscharfe Suche kann **nur** auf Begriffe und nicht auf Ausdrücke angewendet werden. Sie können jedoch am Ende jedes Wortes in einer Wortgruppe Tildes anhängen. Beispielsweise würde &quot;camping\~ in\~ the\~ summer\~&quot;mit &quot;camping im Sommer&quot;übereinstimmen. |
+| &quot;Hotel Airport&quot;\~5 | Näherungssuche. Diese Art der Suche wird verwendet, um Begriffe zu finden, die in einem Dokument nahe beieinander liegen. Beispielsweise findet die Wortgruppe `"hotel airport"~5` die Begriffe &quot;Hotel&quot;und &quot;Flughafen&quot;in einem Dokument innerhalb von 5 Wörtern voneinander. |
+| `/a[0-9]+b$/` | Suche nach regulären Ausdrücken. Diese Art der Suche findet eine Übereinstimmung basierend auf dem Inhalt zwischen Schrägstrichen &quot;/&quot;, wie in der RegExp-Klasse dokumentiert. Um beispielsweise Dokumente zu finden, die &quot;motel&quot;oder &quot;hotel&quot;enthalten, geben Sie &quot;`/[mh]otel/`&quot;an. Die Suche nach regulären Ausdrücken wird mit einzelnen Wörtern abgeglichen. |
 
-Eine ausführlichere Dokumentation zur Abfragesyntax finden Sie im Abschnitt [Dokumentation zur Lucene-Abfragesyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax).
+Eine ausführlichere Dokumentation zur Abfragesyntax finden Sie in der Dokumentation zur [Lucene-Abfragesyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) .

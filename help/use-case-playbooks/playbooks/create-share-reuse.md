@@ -22,7 +22,7 @@ Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anw
 >title="Erstellen einer Instanz"
 >abstract="Erstellen Sie eine Liste mit Assets wie Journeys, Zielgruppen, Schemata oder Zielen, die für Journeys oder Aktivierungsszenarien verwendet werden können."
 
-Bevor Sie eine Playbook-Instanz erstellen, sollten Sie die verfügbaren Playbooks in [das richtige Playbook auswählen](/help/use-case-playbooks/playbooks/choose.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
+Bevor Sie eine Playbook-Instanz erstellen, sollten Sie die verfügbaren Playbooks durchsuchen, um [das richtige Playbook auszuwählen](/help/use-case-playbooks/playbooks/choose.md). Wenn Sie bereit sind, mit einem Playbook fortzufahren und eine Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]** aus, um mit dem Playbook fortzufahren und technische Assets zu generieren.
 
 ![Erstellen einer Playbook-Instanz.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -63,7 +63,7 @@ Das oben beschriebene Verhalten gilt für alle Assets, die erstellt werden, mit 
 >
 >Testen Sie in der Entwicklungs-Sandbox und wechseln Sie zur Produktion, wenn Sie dazu bereit sind.
 >
->Nachdem Objekte generiert wurden, können Sie sie in den Entwicklungs-Sandboxes weiter testen, indem Sie Daten hinzufügen. Sie können die Assets so lange testen, wie Sie es in der Entwicklungs-Sandbox wünschen, und die Asset-Logik (Zielgruppendefinitionen, Journey, Schemas usw.) in der Produktions-Sandbox replizieren, wenn Sie bereit sind. Sie können zur Entwicklungs-Sandbox und dann zur Produktions-Sandbox wechseln, indem Sie die [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md).
+>Nachdem Objekte generiert wurden, können Sie sie in den Entwicklungs-Sandboxes weiter testen, indem Sie Daten hinzufügen. Sie können die Assets so lange testen, wie Sie es in der Entwicklungs-Sandbox wünschen, und die Asset-Logik (Zielgruppendefinitionen, Journey, Schemas usw.) in der Produktions-Sandbox replizieren, wenn Sie bereit sind. Sie können zur Entwicklungs-Sandbox und dann zur Produktions-Sandbox wechseln, indem Sie die [Datenerfassungsfunktion](/help/use-case-playbooks/playbooks/data-awareness.md) verwenden.
 
 ## Wiederverwenden von Playbooks {#reuse-playbooks}
 

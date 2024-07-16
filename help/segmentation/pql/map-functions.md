@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: PQL Map-Funktionen
-description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Zuordnungen erleichtern.
+description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Karten erleichtern.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 90%
+ht-degree: 76%
 
 ---
 
 # Zuordnungsfunktionen
 
-[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zuordnungen erleichtern. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Karten erleichtern. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
 
 ## Abrufen
 

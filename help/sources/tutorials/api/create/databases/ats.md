@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen[!DNL Azure Table Storage];[!DNL Azure Table Storage]Azure-Tabellenspeicher
+keywords: Experience Platform; home; beliebte Themen;[!DNL Azure Table Storage];[!DNL Azure Table Storage]; Azure-Tabellenspeicher
 solution: Experience Platform
 title: Erstellen einer Azure Table Storage-Basisverbindung mit der Flow Service-API
 type: Tutorial
@@ -7,16 +7,16 @@ description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Azure Table Sto
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 69%
+source-wordcount: '465'
+ht-degree: 66%
 
 ---
 
-# Erstellen einer [!DNL Azure Table Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Azure Table Storage]-Basisverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die [!DNL Azure Table Storage] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Der [!DNL Azure Table Storage] -Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -29,7 +29,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Azure Table Storage] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Azure Table Storage] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -37,10 +37,10 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Azure Table Storage] herstel
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einem [!DNL Azure Table Storage] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Azure Table Storage] ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit einer [!DNL Azure Table Storage] -Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Azure Table Storage] lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Azure Table Storage] ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie unter [this [!DNL Azure Table Storage] Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
+Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem [!DNL Azure Table Storage] Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
 ### Verwenden von Platform-APIs
 
@@ -88,8 +88,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einem [!DNL Azure Table Storage] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Azure Table Storage] ist: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | Die [!DNL Azure Table Storage]-Verbindungsspezifikations-ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit einer [!DNL Azure Table Storage] -Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Azure Table Storage] lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Die [!DNL Azure Table Storage] Verbindungsspezifikations-ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Antwort**
 
@@ -107,4 +107,4 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 In diesem Tutorial haben Sie eine [!DNL Azure Table Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)

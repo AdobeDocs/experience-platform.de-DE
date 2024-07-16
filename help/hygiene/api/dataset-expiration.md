@@ -28,7 +28,7 @@ Sobald das Löschen des Datensatzes gestartet wurde, wird seine Gültigkeit als 
 >
 >Wenn ein Datensatz ausläuft, müssen alle Datenflüsse, die Daten in diesen Datensatz einspeisen, manuell geändert werden, damit Ihre nachgeschalteten Workflows nicht beeinträchtigt werden.
 
-Das erweiterte Data Lifecycle Management unterstützt das Löschen von Datensätzen über den Ablaufendpunkt des Datensatzes und das Löschen von IDs (Daten auf Zeilenebene) mithilfe von primären Identitäten über die [Workorder-Endpunkt](./workorder.md). Sie können auch [Datensatzabläufe](../ui/dataset-expiration.md) und [Löschung von Datensätzen](../ui/record-delete.md) über die Platform-Benutzeroberfläche. Weitere Informationen finden Sie in der verknüpften Dokumentation .
+Das erweiterte Data Lifecycle Management unterstützt das Löschen von Datensätzen über den Ablaufendpunkt des Datensatzes und das Löschen von IDs (Daten auf Zeilenebene) mithilfe von primären Identitäten über den Endpunkt [workorder](./workorder.md). Sie können auch [Datensatzabläufe](../ui/dataset-expiration.md) und [Löschungen von Datensätzen](../ui/record-delete.md) über die Platform-Benutzeroberfläche verwalten. Weitere Informationen finden Sie in der verknüpften Dokumentation .
 
 >[!NOTE]
 >
@@ -36,11 +36,11 @@ Das erweiterte Data Lifecycle Management unterstützt das Löschen von Datensät
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie bitte die [API-Handbuch](./overview.md) Informationen zu erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und zum Lesen von Beispiel-API-Aufrufen.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie zunächst das [API-Handbuch](./overview.md) , in dem Sie Informationen zu erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiele für API-Aufrufe finden.
 
 >[!IMPORTANT]
 >
->Bei Aufrufen der Data Hygiene API müssen Sie den -H verwenden `x-sandbox-name: {SANDBOX_NAME}` -Kopfzeile.
+>Bei Aufrufen der Data Hygiene API müssen Sie die -H `x-sandbox-name: {SANDBOX_NAME}` -Kopfzeile verwenden.
 
 ## Auflisten der Datensatzgültigkeiten {#list}
 
@@ -75,7 +75,7 @@ Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. 
 
 >[!IMPORTANT]
 >
->Die `ttlId` in der Antwort wird auch als `{DATASET_EXPIRATION_ID}`. Beide beziehen sich auf die eindeutige Kennung für den Ablauf des Datensatzes.
+>Die `ttlId` in der Antwort wird auch als `{DATASET_EXPIRATION_ID}` bezeichnet. Beide beziehen sich auf die eindeutige Kennung für den Ablauf des Datensatzes.
 
 ```json
 {
@@ -107,11 +107,11 @@ Eine erfolgreiche Antwort listet die resultierenden Datensatzgültigkeiten auf. 
 
 ## Nachschlagen einer Datensatzgültigkeit {#lookup}
 
-Um nach dem Ablauf eines Datensatzes zu suchen, stellen Sie eine GET-Anfrage mit der `{DATASET_ID}` oder `{DATASET_EXPIRATION_ID}`.
+Um nach einem Ablauf des Datensatzes zu suchen, stellen Sie eine GET-Anfrage mit entweder dem Wert `{DATASET_ID}` oder dem Wert `{DATASET_EXPIRATION_ID}`.
 
 >[!IMPORTANT]
 >
->Die `{DATASET_EXPIRATION_ID}` wird als `ttlId` in der Antwort. Beide beziehen sich auf die eindeutige Kennung für den Ablauf des Datensatzes.
+>Die `{DATASET_EXPIRATION_ID}` wird in der Antwort als `ttlId` bezeichnet. Beide beziehen sich auf die eindeutige Kennung für den Ablauf des Datensatzes.
 
 **API-Format**
 
@@ -234,7 +234,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `datasetId` | **Erforderlich** Die ID des Zieldatensatzes, für den Sie einen Ablauf planen möchten. |
-| `expiry` | **Erforderlich** Datum und Uhrzeit im ISO 8601-Format. Wenn die Zeichenfolge keinen expliziten Zeitzonenversatz hat, wird als Zeitzone UTC angenommen. Die Lebensdauer der Daten im System wird entsprechend dem angegebenen Ablaufwert festgelegt.<br>Hinweis:<ul><li>Die Anfrage schlägt fehl, wenn für den Datensatz bereits eine Gültigkeit für den Datensatz existiert.</li><li>Dieses Datum und diese Uhrzeit müssen mindestens **24 Stunden in der Zukunft**.</li></ul> |
+| `expiry` | **Erforderlich** Ein Datum und eine Uhrzeit im ISO 8601-Format. Wenn die Zeichenfolge keinen expliziten Zeitzonenversatz hat, wird als Zeitzone UTC angenommen. Die Lebensdauer der Daten im System wird entsprechend dem angegebenen Ablaufwert festgelegt.<br>Hinweis:<ul><li>Die Anfrage schlägt fehl, wenn für den Datensatz bereits eine Gültigkeit für den Datensatz existiert.</li><li>Dieses Datum und diese Uhrzeit müssen in der Zukunft mindestens **24 Stunden betragen**.</li></ul> |
 | `displayName` | Ein optionaler Anzeigename für die Datensatzablaufanforderung. |
 | `description` | Eine optionale Beschreibung für die Anfrage zur Gültigkeit. |
 
@@ -276,7 +276,7 @@ Der HTTP-Status 400 (Ungültige Anfrage) tritt auf, wenn für den Datensatz bere
 
 ## Aktualisieren der Datensatzgültigkeit {#update}
 
-Um ein Ablaufdatum für einen Datensatz zu aktualisieren, verwenden Sie eine PUT-Anfrage und die `ttlId`. Sie können die `displayName`, `description`, und/oder `expiry` Informationen.
+Um ein Ablaufdatum für einen Datensatz zu aktualisieren, verwenden Sie eine PUT-Anfrage und die `ttlId`. Sie können die `displayName`-, `description`- und/oder `expiry`-Informationen aktualisieren.
 
 >[!NOTE]
 >
@@ -290,11 +290,11 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | Die ID des Datensatzablaufs, den Sie ändern möchten. Hinweis: Dies wird als `ttlId` in der Antwort. |
+| `{DATASET_EXPIRATION_ID}` | Die ID des Datensatzablaufs, den Sie ändern möchten. Hinweis: Dies wird in der Antwort als `ttlId` bezeichnet. |
 
 **Anfrage**
 
-Die folgende Anfrage plant einen Datensatzablauf neu. `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` Ende 2024 (Greenwich Mean Time). Wenn der vorhandene Datensatzablauf gefunden wird, wird dieser Ablauf mit dem neuen aktualisiert `expiry` -Wert.
+Mit der folgenden Anfrage wird eine Datensatzgültigkeit `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` für Ende 2024 (Greenwich Mean Time) neu geplant. Wenn die vorhandene Gültigkeit des Datensatzes gefunden wird, wird diese Gültigkeit mit dem neuen `expiry` -Wert aktualisiert.
 
 ```shell
 curl -X PUT \
@@ -313,7 +313,7 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `expiry` | **Erforderlich** Datum und Uhrzeit im ISO 8601-Format. Wenn die Zeichenfolge keinen expliziten Zeitzonenversatz hat, wird als Zeitzone UTC angenommen. Die Lebensdauer der Daten im System wird entsprechend dem angegebenen Ablaufwert festgelegt. Jeder vorherige Ablaufzeitstempel für denselben Datensatz wird durch den von Ihnen angegebenen neuen Ablaufwert ersetzt. Dieses Datum und diese Uhrzeit müssen mindestens **24 Stunden in der Zukunft**. |
+| `expiry` | **Erforderlich** Ein Datum und eine Uhrzeit im ISO 8601-Format. Wenn die Zeichenfolge keinen expliziten Zeitzonenversatz hat, wird als Zeitzone UTC angenommen. Die Lebensdauer der Daten im System wird entsprechend dem angegebenen Ablaufwert festgelegt. Jeder vorherige Ablaufzeitstempel für denselben Datensatz wird durch den von Ihnen angegebenen neuen Ablaufwert ersetzt. Dieses Datum und diese Uhrzeit müssen in der Zukunft mindestens **24 Stunden betragen**. |
 | `displayName` | Ein Anzeigename für die Anfrage zur Gültigkeit. |
 | `description` | Eine optionale Beschreibung für die Anfrage zur Gültigkeit. |
 
@@ -390,7 +390,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) zurück und das
 
 ## Gültigkeitsstatus-Verlauf eines Datensatzes abrufen {#retrieve-expiration-history}
 
-Verwenden Sie zum Nachschlagen des Ablaufstatus-Verlaufs eines bestimmten Datensatzes die `{DATASET_ID}` und `include=history` Abfrageparameter in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung des Datensatzablaufs, alle angewendeten Aktualisierungen sowie über den Abbruch oder die Ausführung (falls zutreffend). Sie können auch die `{DATASET_EXPIRATION_ID}` , um den Ablaufstatus des Datensatzes abzurufen.
+Um den Ablaufstatusverlauf eines bestimmten Datensatzes nachzuschlagen, verwenden Sie die Abfrageparameter `{DATASET_ID}` und `include=history` in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung des Datensatzablaufs, alle angewendeten Aktualisierungen sowie über den Abbruch oder die Ausführung (falls zutreffend). Sie können auch den `{DATASET_EXPIRATION_ID}` verwenden, um den Ablaufstatus des Datensatzes abzurufen.
 
 **API-Format**
 
@@ -402,7 +402,7 @@ GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 | Parameter | Beschreibung |
 | --- | --- |
 | `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeitsprotokoll Sie aufrufen möchten. |
-| `{DATASET_EXPIRATION_ID}` | Die ID des Datensatzablaufs. Hinweis: Dies wird als `ttlId` in der Antwort. |
+| `{DATASET_EXPIRATION_ID}` | Die ID des Datensatzablaufs. Hinweis: Dies wird in der Antwort als `ttlId` bezeichnet. |
 
 {style="table-layout:auto"}
 
@@ -478,7 +478,7 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 
 >[!NOTE]
 >
->Die `description`, `displayName`, und `datasetName` -Parameter enthalten alle die Möglichkeit, nach LIKE-Werten zu suchen. Das bedeutet, dass Sie geplante Datensatzabläufe namens &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot;finden können, indem Sie nach der Zeichenfolge &quot;Name1&quot;suchen.
+>Die Parameter `description`, `displayName` und `datasetName` enthalten alle die Möglichkeit, nach LIKE-Werten zu suchen. Das bedeutet, dass Sie geplante Datensatzabläufe namens &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot;finden können, indem Sie nach der Zeichenfolge &quot;Name1&quot;suchen.
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
@@ -495,11 +495,11 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtert Ergebnisse anhand eines exakten Ausführungsdatums, eines Enddatums für die Ausführung oder eines Anfangsdatums für die Ausführung. Sie werden zum Abrufen von Daten oder Datensätzen verwendet, die mit der Ausführung eines Vorgangs an einem bestimmten Datum, vor einem bestimmten Datum oder nach einem bestimmten Datum verknüpft sind. | `executedDate=2023-02-05T19:34:40.383615Z` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der zurückzugebenden Gültigkeiten angibt. Die Standardeinstellung ist 25. | `limit=50` |
-| `orderBy` | Die `orderBy` -Abfrageparameter gibt die Sortierreihenfolge der von der API zurückgegebenen Ergebnisse an. Verwenden Sie sie, um die Daten basierend auf einem oder mehreren Feldern anzuordnen, entweder in aufsteigender (ASC) oder in absteigender (DESC) Reihenfolge. Verwenden Sie das Präfix + oder - , um ASC bzw. DESC anzugeben. Die folgenden Werte werden akzeptiert: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
+| `orderBy` | Der Abfrageparameter `orderBy` gibt die Sortierreihenfolge der von der API zurückgegebenen Ergebnisse an. Verwenden Sie sie, um die Daten basierend auf einem oder mehreren Feldern anzuordnen, entweder in aufsteigender (ASC) oder in absteigender (DESC) Reihenfolge. Verwenden Sie das Präfix + oder - , um ASC bzw. DESC anzugeben. Die folgenden Werte werden akzeptiert: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | Gibt die Gültigkeiten von Datensätzen zurück, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert ist standardmäßig auf den Wert der `x-gw-ims-org-id`-Kopfzeilen festgelegt und wird ignoriert, es sei denn, die Anfrage liefert ein Service-Token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Eine Ganzzahl, die angibt, welche Seite der Gültigkeitenliste zurückgegeben werden soll. | `page=3` |
 | `sandboxName` | Gibt die Datensatzgültigkeiten wieder, deren Sandbox-Name genau mit dem Argument übereinstimmt. Die Standardeinstellung ist der Sandbox-Name in der `x-sandbox-name`-Kopfzeile der Anfrage. Verwenden Sie `sandboxName=*`, um Datensatzgültigkeiten aus allen Sandboxes einzuschließen. | `sandboxName=dev1` |
-| `search` | Sucht nach Abläufen, bei denen die angegebene Zeichenfolge eine exakte Übereinstimmung mit der Ablaufüberkennung ist oder **enthalten** in einem dieser Felder:<br><ul><li>Autor</li><li>Anzeigename</li><li>Beschreibung</li><li>Anzeigename</li><li>Datensatzname</li></ul> | `search=TESTING` |
+| `search` | Sucht nach Ablauf, bei dem die angegebene Zeichenfolge eine exakte Übereinstimmung mit der Ablaufkennung darstellt oder **in einem dieser Felder** enthält:<br><ul><li>Autor</li><li>Anzeigename</li><li>Beschreibung</li><li>Anzeigename</li><li>Datensatzname</li></ul> | `search=TESTING` |
 | `status` | Eine durch Kommas getrennte Liste von Status. Wenn diese Liste enthalten ist, entspricht die Antwort den Datensatzgültigkeiten, deren aktueller Status in der Liste enthalten ist. | `status=pending,cancelled` |
 | `ttlId` | Entspricht der Ablaufanfrage der angegebenen ID. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Wie `createdDate` / `createdFromDate` / `createdToDate`, jedoch wird die Aktualisierungszeit einer Datensatzgültigkeit anstelle der Erstellungszeit herangezogen.<br><br>Eine Gültigkeit wird bei jeder Bearbeitung als aktualisiert erachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |

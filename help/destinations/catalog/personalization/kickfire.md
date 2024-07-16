@@ -5,16 +5,16 @@ description: Die KickFire-Erweiterung ist ein Personalisierungsziel in Adobe Exp
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 85%
+source-wordcount: '437'
+ht-degree: 86%
 
 ---
 
-# [!DNL KickFire]-Erweiterung  {#kickfire-extension}
+# [!DNL KickFire]-Erweiterung {#kickfire-extension}
 
 ## Übersicht {#overview}
 
-[!DNL KickFire's] IP-Adressenintelligenz &amp; B2B-firmografische Daten ermöglichen es Ihnen, IP-Adressen in Unternehmen zu übersetzen, anonyme Web-Besucher zu identifizieren und Kontodaten in Ihren Technologie-Stack zu integrieren - alles basierend auf der IP-Adresse eines Unternehmens.
+[!DNL KickFire's] IP-Adressenintelligenz &amp; B2B-firmografische Daten ermöglichen es Ihnen, IP-Adressen in Unternehmen zu übersetzen, anonyme Web-Besucher zu identifizieren und Kontodaten in Ihren Technologiestapel zu integrieren - alles basierend auf der IP-Adresse eines Unternehmens.
 
 [!DNL KickFire] ist eine Personalisierungserweiterung in Adobe Experience Platform. Weitere Informationen zur Erweiterungsfunktion finden Sie auf der [Kickfire-Website](https://www.kickfire.com/).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL KickFire] Erweiterung:
+So installieren Sie die [!DNL KickFire]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

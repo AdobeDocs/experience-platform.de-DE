@@ -10,19 +10,19 @@ ht-degree: 5%
 
 ---
 
-# Teilweise Zeilenaktualisierungen senden an [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
+# Teilweise Zeilen-Updates mit [!DNL Data Prep] an [!DNL Real-Time Customer Profile] senden
 
 >[!WARNING]
 >
->Die Erfassung von Entitäts-Update-Meldungen für Experience-Datenmodell (XDM) (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Inlet wird nicht mehr unterstützt. Alternativ können Sie [Erfassen von Rohdaten in den DCS-Inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) und geben Sie die erforderlichen Datenzuordnungen an, um Ihre Daten in XDM-kompatible Nachrichten für Profilaktualisierungen umzuwandeln.
+>Die Erfassung von Entitäts-Update-Meldungen für Experience-Datenmodell (XDM) (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Inlet wird nicht mehr unterstützt. Alternativ können Sie [Rohdaten in den DCS-Inlet aufnehmen](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) und die erforderlichen Datenzuordnungen angeben, um Ihre Daten in XDM-kompatible Nachrichten für Profilaktualisierungen umzuwandeln.
 
-Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilenaktualisierungen an zu senden [!DNL Real-Time Customer Profile] -Daten sowie beim Erstellen und Erstellen neuer Identitätslinks mit einer einzelnen API-Anfrage.
+Streaming-Uploads in [!DNL Data Prep] ermöglichen es Ihnen, partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile] -Daten zu senden und gleichzeitig neue Identitäts-Links mit einer einzelnen API-Anfrage zu erstellen und zu erstellen.
 
-Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten in [!DNL Real-Time Customer Profile] PATCH-Anfragen während der Aufnahme. Basierend auf den von Ihnen bereitgestellten Eingaben [!DNL Data Prep] ermöglicht Ihnen das Senden einer einzelnen API-Payload und das Übersetzen der Daten in beide [!DNL Real-Time Customer Profile] PATCH und [!DNL Identity Service] ERSTELLEN SIE -Anfragen.
+Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten während der Aufnahme in [!DNL Real-Time Customer Profile] PATCH-Anfragen übersetzen. Basierend auf den von Ihnen bereitgestellten Eingaben ermöglicht Ihnen [!DNL Data Prep] das Senden einer einzelnen API-Payload und die Übersetzung der Daten in sowohl [!DNL Real-Time Customer Profile] PATCH- als auch [!DNL Identity Service] CREATE-Anfragen.
 
 >[!NOTE]
 >
->Um die Upload-Funktion zu nutzen, wird empfohlen, XDM-kompatible Konfigurationen während der Datenerfassung zu deaktivieren und die eingehende Payload mit [Datenvorbereitung](./ui/mapping.md).
+>Um die Upsert-Funktion zu nutzen, wird empfohlen, XDM-kompatible Konfigurationen während der Datenerfassung zu deaktivieren und die eingehende Payload mit [Datenvorbereitungs-Mapper](./ui/mapping.md) neu zuzuordnen.
 
 Dieses Dokument enthält Informationen zum Streamen von Uploads in [!DNL Data Prep].
 
@@ -35,7 +35,7 @@ Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Expe
 * [Echtzeit-Kundenprofil](../profile/home.md): Das Echtzeit-Kundenprofli bietet ein einheitliches, kundenspezifisches Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [Quellen](../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 
-## Verwenden von Streaming-Uploads in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
+## Verwenden von Streaming-Aufnahmen in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 
 >[!NOTE]
 >
@@ -43,26 +43,26 @@ Diese Übersicht setzt ein Verständnis der folgenden Komponenten von Adobe Expe
 
 ### Streaming aktiviert einen allgemeinen Workflow
 
-Streaming-Aktualisierungen in [!DNL Data Prep] funktioniert wie folgt:
+Streaming-Aufrufe in [!DNL Data Prep] funktionieren wie folgt:
 
-* Sie müssen zunächst einen Datensatz für [!DNL Profile] Verbrauch. Siehe Handbuch unter [Datensatz für [!DNL Profile]](../catalog/datasets/enable-for-profile.md) für weitere Informationen.
-* Wenn neue Identitäten verknüpft werden müssen, müssen Sie auch einen zusätzlichen Datensatz erstellen **mit demselben Schema** als [!DNL Profile] Datensatz.
-* Nachdem Ihre Datensätze vorbereitet wurden, müssen Sie einen Datenfluss erstellen, um Ihre eingehende Anfrage der [!DNL Profile] Datensatz;
+* Sie müssen zunächst einen Datensatz für den [!DNL Profile]-Verbrauch erstellen und aktivieren. Weitere Informationen finden Sie im Handbuch zum Aktivieren eines Datensatzes für  [!DNL Profile]](../catalog/datasets/enable-for-profile.md).[
+* Wenn neue Identitäten verknüpft werden müssen, müssen Sie auch einen zusätzlichen Datensatz **mit demselben Schema** wie Ihren [!DNL Profile]-Datensatz erstellen.
+* Nachdem Ihre Datensätze vorbereitet wurden, müssen Sie einen Datenfluss erstellen, um Ihre eingehende Anfrage dem [!DNL Profile] -Datensatz zuzuordnen.
 * Als Nächstes müssen Sie die eingehende Anfrage aktualisieren, um die erforderlichen Kopfzeilen einzuschließen. Diese Header definieren:
-   * Der Datenvorgang, der mit [!DNL Profile]: `create`, `merge`, und `delete`.
-   * Der optionale Identitätsvorgang, der mit [!DNL Identity Service]: `create`.
+   * Der Datenvorgang, der mit [!DNL Profile]: `create`, `merge` und `delete` ausgeführt werden muss.
+   * Der optionale Identitätsvorgang, der mit [!DNL Identity Service]: `create` ausgeführt werden soll.
 
 ### Identitätsdatensatz konfigurieren
 
 Wenn neue Identitäten verknüpft werden müssen, müssen Sie einen zusätzlichen Datensatz in der eingehenden Payload erstellen und weitergeben. Beim Erstellen eines Identitätsdatensatzes müssen Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind:
 
-* Der Identitätsdatensatz muss sein zugewiesenes Schema als [!DNL Profile] Datensatz. Eine Inkongruenz von Schemas kann zu inkonsistentem Systemverhalten führen.
-* Sie müssen jedoch sicherstellen, dass sich der Identitätsdatensatz von der [!DNL Profile] Datensatz. Wenn die Datensätze identisch sind, werden die Daten überschrieben und nicht aktualisiert.
-* Während der ursprüngliche Datensatz für [!DNL Profile], den Identitätsdatensatz **sollte nicht aktiviert sein** für [!DNL Profile]. Andernfalls werden auch Daten überschrieben und nicht aktualisiert. Der Identitätsdatensatz **sollte aktiviert sein** für [!DNL Identity Service].
+* Der Identitätsdatensatz muss über sein zugewiesenes Schema als [!DNL Profile] -Datensatz verfügen. Eine Inkongruenz von Schemas kann zu inkonsistentem Systemverhalten führen.
+* Sie müssen jedoch sicherstellen, dass sich der Identitätsdatensatz vom [!DNL Profile] -Datensatz unterscheidet. Wenn die Datensätze identisch sind, werden die Daten überschrieben und nicht aktualisiert.
+* Während der ursprüngliche Datensatz für [!DNL Profile] aktiviert werden muss, sollte der Identitätsdatensatz **nicht aktiviert sein** für [!DNL Profile]. Andernfalls werden auch Daten überschrieben und nicht aktualisiert. Der Identitätsdatensatz **sollte jedoch für [!DNL Identity Service] aktiviert sein.**
 
 #### Erforderliche Felder in den Schemas, die mit dem Identitätsdatensatz verknüpft sind {#identity-dataset-required-fileds}
 
-Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] um nur die Identitäten zu empfangen. Sie können die Validierung unterdrücken, indem Sie die `disabled` -Wert `acp_validationContext` -Parameter. Siehe folgendes Beispiel:
+Wenn Ihr Schema erforderliche Felder enthält, muss die Validierung des Datensatzes unterdrückt werden, damit [!DNL Identity Service] nur die Identitäten empfangen kann. Sie können die Validierung unterdrücken, indem Sie den Wert `disabled` auf den Parameter `acp_validationContext` anwenden. Siehe folgendes Beispiel:
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
@@ -114,33 +114,33 @@ Im Folgenden finden Sie ein Beispiel einer eingehenden Payload-Struktur, die neu
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `flowId` | Eine eindeutige ID zur Identifizierung eines Datenflusses. Diese Datenfluss-ID sollte mit der Quellverbindung übereinstimmen, die mit [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]oder [!DNL HTTP API]. Dieser Datenfluss sollte auch eine [!DNL Profile]-aktivierter Datensatz als Zieldatensatz. **Hinweis**: Die ID der [!DNL Profile]-aktivierter Zieldatensatz wird auch als `datasetId` -Parameter. |
+| `flowId` | Eine eindeutige ID zur Identifizierung eines Datenflusses. Diese Datenfluss-ID sollte der mit [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] oder [!DNL HTTP API] erstellten Quellverbindung entsprechen. Dieser Datenfluss sollte auch einen [!DNL Profile]-aktivierten Datensatz als Zieldatensatz enthalten. **Hinweis**: Die Kennung des [!DNL Profile]-aktivierten Zieldatensatzes wird auch als Ihr `datasetId` -Parameter verwendet. |
 | `imsOrgId` | Die Kennung, die Ihrer Organisation entspricht. |
-| `datasetId` | Die ID der [!DNL Profile]-aktivierter Zieldatensatz Ihres Datenflusses. **Hinweis**: Diese Kennung entspricht der des [!DNL Profile]-aktivierte Ziel-Datensatz-ID in Ihrem Datenfluss. |
-| `operations` | Dieser Parameter beschreibt die Aktionen, die [!DNL Data Prep] wird basierend auf der eingehenden Anfrage ausgeführt. |
-| `operations.data` | Definiert die Aktionen, die in [!DNL Real-Time Customer Profile]. |
-| `operations.identity` | Definiert die Vorgänge, die für die Daten zulässig sind durch [!DNL Identity Service]. |
+| `datasetId` | Die ID des [!DNL Profile]-aktivierten Zieldatensatzes Ihres Datenflusses. **Hinweis**: Dies ist dieselbe ID wie die [!DNL Profile]-aktivierte Ziel-Datensatz-ID in Ihrem Datenfluss. |
+| `operations` | Dieser Parameter beschreibt die Aktionen, die [!DNL Data Prep] je nach eingehender Anfrage durchführt. |
+| `operations.data` | Definiert die Aktionen, die in [!DNL Real-Time Customer Profile] ausgeführt werden müssen. |
+| `operations.identity` | Definiert die Vorgänge, die für die Daten durch [!DNL Identity Service] zulässig sind. |
 | `operations.identityDatasetId` | (Optional) Die Kennung des Identitätsdatensatzes, die nur erforderlich ist, wenn neue Identitäten verknüpft werden müssen. |
 
 #### Unterstützte Vorgänge
 
-Die folgenden Vorgänge werden von [!DNL Real-Time Customer Profile]:
+Die folgenden Vorgänge werden von [!DNL Real-Time Customer Profile] unterstützt:
 
 | Funktionsweise | Beschreibung |
 | --- | --- | 
-| `create` | Der Standardvorgang. Dadurch wird eine XDM-Entitätserstellungsmethode für [!DNL Real-Time Customer Profile]. |
-| `merge` | Dadurch wird eine Aktualisierungsmethode für XDM-Entitäten für [!DNL Real-Time Customer Profile]. |
-| `delete` | Dadurch wird eine Löschmethode zum Löschen von XDM-Entitäten für [!DNL Real-Time Customer Profile] und entfernt die Daten dauerhaft aus der [!DNL Profile store]. |
+| `create` | Der Standardvorgang. Dadurch wird eine XDM-Entitätserstellungsmethode für [!DNL Real-Time Customer Profile] generiert. |
+| `merge` | Dadurch wird eine Aktualisierungsmethode für XDM-Entitäten für [!DNL Real-Time Customer Profile] generiert. |
+| `delete` | Dadurch wird eine XDM-Entitätslöschmethode für [!DNL Real-Time Customer Profile] generiert und die Daten dauerhaft aus dem [!DNL Profile store] entfernt. |
 
-Die folgenden Vorgänge werden von [!DNL Identity Service]:
+Die folgenden Vorgänge werden von [!DNL Identity Service] unterstützt:
 
 | Funktionsweise | Beschreibungen |
 | --- | --- |
-| `create` | Der einzige zulässige Vorgang für diesen Parameter. Wenn `create` wird als Wert für `operations.identity`, dann [!DNL Data Prep] generiert eine XDM-Entitätserstellungsanforderung für [!DNL Identity Service]. Wenn die Identität bereits vorhanden ist, wird die Identität ignoriert. **Hinweis:** Wenn `operations.identity` auf `create`, dann die `identityDatasetId` muss ebenfalls angegeben werden. Die XDM-Entität erstellt eine Nachricht, die intern von [!DNL Data Prep] wird für diese Datensatz-ID generiert. |
+| `create` | Der einzige zulässige Vorgang für diesen Parameter. Wenn `create` als Wert für `operations.identity` übergeben wird, generiert [!DNL Data Prep] eine Anforderung zum Erstellen einer XDM-Entität für [!DNL Identity Service]. Wenn die Identität bereits vorhanden ist, wird die Identität ignoriert. **Hinweis:** Wenn `operations.identity` auf `create` gesetzt ist, muss auch der `identityDatasetId` angegeben werden. Die von der Komponente [!DNL Data Prep] intern generierte XDM-Entität wird für diese Datensatz-ID generiert. |
 
 ### Nutzlast ohne Identitätskonfiguration
 
-Wenn neue Identitäten nicht verknüpft werden müssen, können Sie die `identity` und `identityDatasetId` Parameter in den Vorgängen. Dadurch werden nur Daten an gesendet [!DNL Real-Time Customer Profile] und überspringt die [!DNL Identity Service]. Ein Beispiel finden Sie in der folgenden Payload:
+Wenn keine neuen Identitäten verknüpft werden müssen, können Sie die Parameter `identity` und `identityDatasetId` in den Vorgängen auslassen. Dadurch werden nur Daten an [!DNL Real-Time Customer Profile] gesendet und die [!DNL Identity Service] übersprungen. Ein Beispiel finden Sie in der folgenden Payload:
 
 ```shell
 {
@@ -158,14 +158,14 @@ Wenn neue Identitäten nicht verknüpft werden müssen, können Sie die `identit
 
 ## Primäre Identitäten dynamisch übergeben
 
-Bei XDM-Aktualisierungen muss das Schema für [!DNL Profile] und eine primäre Identität enthalten. Sie können die primäre Identität eines XDM-Schemas auf zwei Arten angeben:
+Bei XDM-Aktualisierungen muss das Schema für [!DNL Profile] aktiviert sein und eine primäre Identität enthalten. Sie können die primäre Identität eines XDM-Schemas auf zwei Arten angeben:
 
 * Legen Sie ein statisches Feld als primäre Identität im XDM-Schema fest.
 * Weisen Sie über die Feldergruppe &quot;Identitätszuordnung&quot;im XDM-Schema eines der Identitätsfelder als primäre Identität zu.
 
 ### Festlegen eines statischen Felds als primäres Identitätsfeld im XDM-Schema
 
-Im folgenden Beispiel: `state`, `homePhone.number` und andere Attribute werden mit ihren jeweiligen angegebenen Werten in die [!DNL Profile] mit der primären Identität von `sampleEmail@gmail.com`. Eine Aktualisierungsmeldung zur XDM-Entität wird dann vom Streaming generiert [!DNL Data Prep] -Komponente. [!DNL Real-Time Customer Profile] bestätigt dann, dass die XDM-Aktualisierungsmeldung den Profildatensatz aktualisiert.
+Im folgenden Beispiel werden `state`, `homePhone.number` und andere Attribute mit ihren jeweiligen angegebenen Werten in die [!DNL Profile] mit der primären Identität von `sampleEmail@gmail.com` eingefügt. Eine Aktualisierungsmeldung zur XDM-Entität wird dann von der Streaming-Komponente [!DNL Data Prep] generiert. [!DNL Real-Time Customer Profile] bestätigt dann, dass die XDM-Aktualisierungsmeldung den Profildatensatz aktualisiert.
 
 >[!NOTE]
 >
@@ -214,7 +214,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ### Weisen Sie eines der Identitätsfelder als primäre Identität über die Feldergruppe &quot;Identitätszuordnung&quot;im XDM-Schema zu.
 
-In diesem Beispiel enthält die Kopfzeile die `operations` -Attribut mit dem `identity` und `identityDatasetId` Eigenschaften. Dadurch können Daten zusammengeführt werden mit [!DNL Real-Time Customer Profile] sowie für Identitäten, die an weitergegeben werden sollen [!DNL Identity Service].
+In diesem Beispiel enthält die Kopfzeile das Attribut `operations` mit den Eigenschaften `identity` und `identityDatasetId`. Dadurch können Daten mit [!DNL Real-Time Customer Profile] zusammengeführt und Identitäten an [!DNL Identity Service] weitergegeben werden.
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -261,12 +261,12 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ## Bekannte Einschränkungen und wichtige Überlegungen
 
-Im Folgenden finden Sie eine Liste bekannter Einschränkungen, die beim Streaming von Uploads mit [!DNL Data Prep]:
+Im Folgenden finden Sie eine Liste bekannter Einschränkungen, die beim Streaming von Uploads mit [!DNL Data Prep] zu beachten sind:
 
-* Die Streaming-Upsermethode sollte nur verwendet werden, wenn Teilzeilenaktualisierungen an [!DNL Real-Time Customer Profile]. Teilzeilenaktualisierungen sind **not** von Data Lake verbraucht.
-* Die Streaming-Upsert-Methode unterstützt nicht das Aktualisieren, Ersetzen und Entfernen von Identitäten. Neue Identitäten werden erstellt, wenn sie nicht vorhanden sind. Daher `identity` -Vorgang muss immer auf &quot;Erstellen&quot;eingestellt sein. Wenn bereits eine Identität vorhanden ist, ist der Vorgang ein no-op-Vorgang.
-* Die Streaming-Upsermethode unterstützt derzeit nicht [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) und [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* Die Streaming-Upsert-Methode sollte nur verwendet werden, wenn Teilzeilenaktualisierungen an [!DNL Real-Time Customer Profile] gesendet werden. Teilzeilenaktualisierungen werden vom Data Lake **nicht** genutzt.
+* Die Streaming-Upsert-Methode unterstützt nicht das Aktualisieren, Ersetzen und Entfernen von Identitäten. Neue Identitäten werden erstellt, wenn sie nicht vorhanden sind. Daher muss der Vorgang `identity` immer auf &quot;create&quot;eingestellt sein. Wenn bereits eine Identität vorhanden ist, ist der Vorgang ein no-op-Vorgang.
+* Die Methode zur Streaming-Aufstockung unterstützt derzeit nicht [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) und [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie Uploads in gestreamt werden [!DNL Data Prep] , um Teilzeilenaktualisierungen an Ihre [!DNL Real-Time Customer Profile] Daten, während Identitäten auch mit einer einzelnen API-Anfrage erstellt und verknüpft werden. Weitere Informationen zu anderen [!DNL Data Prep] Funktionen, lesen Sie bitte die [[!DNL Data Prep] Übersicht](./home.md). So erfahren Sie, wie Sie Zuordnungssätze im [!DNL Data Prep] API, lesen Sie bitte die [[!DNL Data Prep] Entwicklerhandbuch](./api/overview.md).
+Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie Upserts in [!DNL Data Prep] gestreamt werden, um partielle Zeilenaktualisierungen an Ihre [!DNL Real-Time Customer Profile]-Daten zu senden, und gleichzeitig Identitäten erstellen und mit einer einzelnen API-Anfrage verknüpfen. Weitere Informationen zu anderen [!DNL Data Prep]-Funktionen finden Sie in der [[!DNL Data Prep] Übersicht](./home.md) . Informationen zur Verwendung von Zuordnungssätzen in der API [!DNL Data Prep] finden Sie im [[!DNL Data Prep] Entwicklerhandbuch](./api/overview.md).

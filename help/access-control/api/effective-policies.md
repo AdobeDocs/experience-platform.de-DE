@@ -18,7 +18,7 @@ ht-degree: 74%
 >
 >Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über die Rolle &quot;org admin&quot;für die angeforderte Organisation verfügen.
 
-Um effektive Zugriffssteuerungsrichtlinien für den aktuellen Benutzer anzuzeigen, stellen Sie eine POST-Anfrage an die `/acl/effective-policies` -Endpunkt im [!DNL Access Control] API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
+Um effektive Zugriffssteuerungsrichtlinien für den aktuellen Benutzer anzuzeigen, stellen Sie eine POST-Anfrage an den `/acl/effective-policies` -Endpunkt in der [!DNL Access Control] -API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
 
 **API-Format**
 
@@ -69,7 +69,7 @@ Eine erfolgreiche Antwort gibt Informationen über die in der Anfrage angegebene
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie Aufrufe an die [!DNL Access Control] API zum Zurückgeben von Informationen zu aktiven Berechtigungen und zugehörigen Zugriffsrichtlinien für Ressourcentypen. Weitere Informationen zur Zugriffssteuerung für [!DNL Experience Platform] finden Sie in [Zugriffssteuerung – Übersicht](../home.md).
+In diesem Dokument wurde beschrieben, wie Sie Aufrufe an die [!DNL Access Control] -API ausführen, um Informationen zu aktiven Berechtigungen und zugehörigen Zugriffsrichtlinien für Ressourcentypen zurückzugeben. Weitere Informationen zur Zugriffssteuerung für [!DNL Experience Platform] finden Sie in [Zugriffssteuerung – Übersicht](../home.md).
 
 ## Anhang
 

@@ -13,7 +13,7 @@ ht-degree: 74%
 
 # Aktualisieren eines Katalogobjekts
 
-Sie können einen Teil eines [!DNL Catalog] -Objekt, indem die zugehörige ID in den Pfad einer PATCH-Anfrage aufgenommen wird. In diesem Dokument werden die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte behandelt:
+Sie können einen Teil eines [!DNL Catalog] -Objekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen. In diesem Dokument werden die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte behandelt:
 
 * Verwenden von Feldern
 * Verwenden der JSON Patch-Notation
@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -69,7 +69,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des aktualisierten 
 
 Der folgende Beispielaufruf zeigt, wie ein Objekt, wie in [RFC-6902](https://tools.ietf.org/html/rfc6902) beschrieben, mit JSON Patch aktualisiert wird.
 
-Weitere Informationen zur JSON Patch-Syntax finden Sie unter [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
+Weitere Informationen zur JSON Patch-Syntax finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 **API-Format**
 
@@ -79,7 +79,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**

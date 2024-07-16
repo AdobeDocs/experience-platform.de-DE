@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Anführungsanfragedetails] Schemafeldgruppe
+# [!UICONTROL Anforderungsdetails zitieren] Schemafeldgruppe
 
-[!UICONTROL Anführungsanfragedetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Die Feldergruppe stellt eine einzelne `quotes` -Objekt auf ein Schema verweist, das die Details des Anfrageprozesses für verschiedene Arten von Anführungszeichen erfasst, einschließlich Versicherungspolicen, Gesundheitsversorgung, Fertigungsaufträge und High-Tech-Bestellungen.
+[!UICONTROL Anforderungsdetails zitieren] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] Klasse](../../classes/experienceevent.md). Die Feldergruppe stellt ein einzelnes `quotes` -Objekt für ein Schema bereit, das die Anfrageprozessdetails für verschiedene Arten von Anführungszeichen erfasst, darunter Versicherungspolicen, Gesundheitsfürsorge, Fertigungsaufträge und High-Tech-Bestellungen.
 
 ![](../../images/field-groups/quote-request-details.png)
 
@@ -25,4 +25,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).
+Weitere Informationen zur Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

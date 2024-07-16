@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ---
 
-# Integrationen mit Experience Cloud-Anwendungen
+# Integrationen mit Experience Cloud-Applikationen
 
 In diesem Video erhalten Sie einen Überblick darüber, wie Adobe Experience Platform in Adobe Experience Cloud-Anwendungen und -Funktionen wie Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, Kundenattribute, Zielgruppenbibliothek und Tags integriert wird.
 

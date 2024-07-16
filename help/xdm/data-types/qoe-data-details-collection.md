@@ -1,7 +1,8 @@
 ---
 title: Datenerfassungstyp QoE (Qualität des Erlebnisses)-Datendetails
 description: Erfahren Sie mehr über den Datentyp QoE (Quality of Experience) Data Details Data Collection Type Experience Data Model (XDM) .
-source-git-commit: e1c94635b691c68de6154d19e974bfdf2e250923
+exl-id: d99816d9-e207-434a-9a40-ee9ded46c4d2
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 6%
@@ -10,10 +11,10 @@ ht-degree: 6%
 
 # QoE-Datentyp (Qualität des Erlebnisses) Datenerfassung
 
-[!UICONTROL QoE-Datendetails] Die Erfassung ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der detaillierte Metriken zur Erlebnisqualität (QoE) während der Medienwiedergabe bereitstellt. Verwenden Sie die [!UICONTROL QoE-Datendetails] Sammlungsdatentyp zum Erfassen von Details wie Bitrateninformationen, Frameraten, Pufferereignissen, Dropped Frames usw. Medienerfassungsfelder erfassen Daten und senden sie zur weiteren Verarbeitung an andere Adobe-Dienste. Dieser Datentyp ermöglicht die Analyse der Wiedergabequalität, sodass Einblicke in die Streaming-Leistung, das Benutzererlebnis und potenzielle Probleme während der Wiedergabesitzungen möglich sind.
+[!UICONTROL QoE-Datendetails] Sammlung ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der detaillierte Metriken zur Erlebnisqualität (QoE) während der Medienwiedergabe bereitstellt. Verwenden Sie den Datentyp [!UICONTROL QoE-Datendetails]-Sammlung , um Details wie Bitrateninformationen, Frameraten, Pufferereignisse, Dropped Frames usw. zu erfassen. Medienerfassungsfelder erfassen Daten und senden sie zur weiteren Verarbeitung an andere Adobe-Dienste. Dieser Datentyp ermöglicht die Analyse der Wiedergabequalität, sodass Einblicke in die Streaming-Leistung, das Benutzererlebnis und potenzielle Probleme während der Wiedergabesitzungen möglich sind.
 
 +++Auswählen , um den Datentyp QoE-Datendetails anzuzeigen.
-![Ein Diagramm des Datenerfassungsdatentyps QoE (Qualität des Erlebnisses).](../images/data-types/qoe-data-details-collection.png)
+![Ein Diagramm des Datenerfassungsdatentyps QoE (Quality of Experience, Qualität der Erfahrung).](../images/data-types/qoe-data-details-collection.png)
 +++
 
 >[!NOTE]

@@ -4,8 +4,8 @@ description: Mit dem Endpunkt /tools in der Sandbox Tooling API können Sie JSON
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 20%
+source-wordcount: '150'
+ht-degree: 22%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 20%
 
 Mit Sandbox-Tools können Sie verschiedene Artefakte auswählen und in ein Paket exportieren. Ein Paket kann aus einem oder mehreren Objekten bestehen. Alle Objekte, die in einem Paket enthalten sind, müssen aus derselben Sandbox stammen.
 
-Die `/tools` -Endpunkt in der Sandbox-Tool-API können Sie JSON-Auftragsdaten auflisten und abrufen.
+Mit dem Endpunkt `/tools` in der Sandbox-Tool-API können Sie JSON-Auftragsdaten auflisten und abrufen.
 
-## Auftragsdetails {#details}
+## Vorgangsdetails {#details}
 
-Um die JSON-Daten des Auftrags unabhängig abzurufen, stellen Sie eine GET-Anfrage an die `/tools` -Endpunkt und geben Sie die ID des Auftrags an.
+Um die JSON-Daten des Auftrags unabhängig abzurufen, stellen Sie eine GET-Anfrage an den `/tools` -Endpunkt und geben Sie die ID des Auftrags an.
 
 **API-Format**
 
@@ -31,7 +31,7 @@ GET /tools/job/{JOB_ID}
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen für {JOB_ID}.
+Die folgende Anfrage ruft Informationen für {JOB_ID} ab.
 
 ```shell
 curl -X GET \
@@ -43,7 +43,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Details für die abgefragte Auftrags-ID zurückgegeben, wobei Statusaktualisierungen in Echtzeit als `completedTasks` und `failedTasks` werden im Laufe des Vorgangs aktualisiert.
+Bei einer erfolgreichen Antwort werden Details für die abgefragte Auftrags-ID zurückgegeben, wobei Echtzeitstatusaktualisierungen bereitgestellt werden, wenn `completedTasks` und `failedTasks` im Laufe des Auftrags aktualisiert werden.
 
 ```json
 {

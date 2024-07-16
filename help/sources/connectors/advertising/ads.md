@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform; home; beliebte Themen; Google Ads; Google Ads
-title: Google Ads Source Overview
+title: Übersicht über Google Ads Source
 description: Erfahren Sie, wie Sie Google Ads über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
@@ -14,15 +14,15 @@ ht-degree: 54%
 
 >[!WARNING]
 >
->Die [!DNL Google Ads] -Quelle vorübergehend nicht verfügbar ist. Adobe arbeitet an der Lösung von Problemen mit dieser Quelle.
+>Die Quelle [!DNL Google Ads] ist vorübergehend nicht verfügbar. Adobe arbeitet an der Lösung von Problemen mit dieser Quelle.
 
 >[!NOTE]
 >
->Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Die [!DNL Google Ads]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../home.md#terms-and-conditions) .
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem Drittanbieter-Werbesystem. Die Unterstützung für Werbetreibende umfasst [!DNL Google Ads].
+[!DNL Experience Platform] bietet Unterstützung für die Aufnahme von Daten aus einem Drittanbieter-Werbesystem. Die Unterstützung für Werbetreibende umfasst [!DNL Google Ads].
 
 ## IP-Adressen-Zulassungsliste
 

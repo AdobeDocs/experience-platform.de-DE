@@ -14,7 +14,7 @@ ht-degree: 82%
 
 In Adobe Experience Platform können Sie die Daten Ihres Unternehmens mithilfe mehrerer Dashboards anzeigen und damit interagieren. Sie können bestimmte Dashboards auch aktualisieren, indem Sie Ihrer Dashboard-Ansicht neue Widgets hinzufügen. Adobe bietet eine Auswahl an Standard-Widgets, die Sie Ihren Dashboards hinzufügen können.
 
-Die [[!UICONTROL Profile]](../guides/profiles.md#default-widgets), [[!UICONTROL Zielgruppen]](../guides/audiences.md#default-widgets), und [[!UICONTROL Ziele]](../guides/destinations.md#default-widgets) Dashboards verfügen jeweils über ein standardmäßiges Widget-Load-out, wenn eine neue Platform-Instanz erstellt wird. Dieses Handbuch enthält schrittweise Anweisungen zum Hinzufügen von Standard-Widgets zum Anpassen der [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Dashboards in der Platform-Benutzeroberfläche.
+Die Dashboards [[!UICONTROL Profile]](../guides/profiles.md#default-widgets), [[!UICONTROL Zielgruppen]](../guides/audiences.md#default-widgets) und [[!UICONTROL Ziele]](../guides/destinations.md#default-widgets) enthalten jeweils ein standardmäßiges Widget-Load-out, wenn eine neue Platform-Instanz erstellt wird. Dieses Handbuch enthält schrittweise Anweisungen zum Hinzufügen von Standard-Widgets zum Anpassen der Dashboards [!UICONTROL Profile], [!UICONTROL Zielgruppen] und [!UICONTROL Ziele] in der Platform-Benutzeroberfläche.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Die Standard-Widgets für die ausgewählte Kategorie werden angezeigt. Jedes Wid
 >
 >Widgets dürfen nur zu dem Dashboard hinzugefügt werden, das der ausgewählten Kategorie entspricht. Beispielsweise können nur Widgets aus der Kategorie [!UICONTROL Profile] zum Dashboard [!UICONTROL Profile] hinzugefügt werden.
 
-![Der Arbeitsbereich der Widget-Bibliothek mit der Registerkarte Standard und den verfügbaren Kategorien, die hervorgehoben sind.](../images/customization/standard-widgets.png)
+![Der Arbeitsbereich für die Widget-Bibliothek mit der Registerkarte &quot;Standard&quot;und den verfügbaren Kategorien, die hervorgehoben sind.](../images/customization/standard-widgets.png)
 
 ## Standard-Widget zum Dashboard hinzufügen
 
@@ -50,7 +50,7 @@ Um ein Standard-Widget zum Dashboard hinzuzufügen, markieren Sie das Widget und
 
 Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um die ausgewählten Widgets zu Ihrem Dashboard hinzuzufügen.
 
-![Der Arbeitsbereich der Widget-Bibliothek mit einem ausgewählten Widget und hervorgehobenen Widget hinzufügen und Abbrechen .](../images/customization/add-widget.png)
+![Der Widget-Bibliotheksarbeitsbereich mit einem ausgewählten Widget und hervorgehobenen Widget &quot;Widget hinzufügen&quot;und &quot;Abbrechen&quot;.](../images/customization/add-widget.png)
 
 ## Nächste Schritte
 

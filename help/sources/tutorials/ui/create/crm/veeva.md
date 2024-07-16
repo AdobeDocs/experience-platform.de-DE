@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Veva CRM; VEC
+keywords: Experience Platform;home;popular topics;Veeva CRM;veeva
 solution: Experience Platform
-title: Erstellen einer VEC CRM-Quellverbindung in der Benutzeroberfläche
+title: Erstellen einer VEC CRM Source-Verbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit dem VEE CRM erstellen.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 78%
+source-wordcount: '425'
+ht-degree: 79%
 
 ---
 
@@ -21,8 +21,8 @@ Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, CRM-Date
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
-   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
+   * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+   * [Tutorial zum Schema-Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemata mithilfe der Benutzeroberfläche des Schema-Editors erstellen können.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 Wenn Sie bereits über ein gültiges [!DNL Veeva CRM]-Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/crm.md) fortfahren.
@@ -31,12 +31,12 @@ Wenn Sie bereits über ein gültiges [!DNL Veeva CRM]-Konto verfügen, können S
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `environmentUrl` | Die URL der [!DNL Veeva CRM] Quellinstanz. |
-| `username` | Der Benutzername für die [!DNL Veeva CRM] Benutzerkonto. |
-| `password` | Das Kennwort für die [!DNL Veeva CRM] Benutzerkonto. |
-| `securityToken` | Das Sicherheits-Token für [!DNL Veeva CRM] Benutzerkonto. |
+| `environmentUrl` | Die URL der Quellinstanz [!DNL Veeva CRM]. |
+| `username` | Der Benutzername für das [!DNL Veeva CRM] -Benutzerkonto. |
+| `password` | Das Kennwort für das [!DNL Veeva CRM] -Benutzerkonto. |
+| `securityToken` | Das Sicherheits-Token für das [!DNL Veeva CRM] -Benutzerkonto. |
 
-Weiterführende Informationen zu den ersten Schritten finden Sie in diesem Abschnitt [[!DNL Veeva CRM] Dokument](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Veeva CRM] Dokument](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Verbinden Ihres [!DNL Veeva CRM]-Kontos
 
@@ -46,11 +46,11 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Unter dem [!UICONTROL CRM] category, select **[!UICONTROL Veeva CRM]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter der Kategorie [!UICONTROL CRM] die Option **[!UICONTROL VEE CRM]** und dann **[!UICONTROL Daten hinzufügen]** aus.
 
 ![Katalog](../../../../images/tutorials/create/veeva/catalog.png)
 
-Die **[!UICONTROL Veeva CRM-Konto verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Veeva CRM-Konto verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 

@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Sie können die Zeitbegrenzung &quot;Jahr ignorieren&quot;nur in einer Segmentdefinition verwenden, die mit **Stapelsegmentierung**. Durch Hinzufügen der Zeitbegrenzung &quot;Jahr ignorieren&quot;zur Segmentdefinition wird die resultierende Zielgruppe erstellt **nicht förderfähig** für Streaming oder Kantensegmentierung.
+>Sie können die Zeitbegrenzung &quot;Jahr ignorieren&quot;nur in einer Segmentdefinition verwenden, die mit **Batch-Segmentierung** ausgewertet wurde. Wenn Sie die Zeitbegrenzung &quot;Jahr ignorieren&quot;zu Ihrer Segmentdefinition hinzufügen, ist die resultierende Zielgruppe **nicht für Streaming- oder Edge-Segmentierung geeignet**.
 
 In der Version vom Februar 2024 für Adobe Experience Platform wurden Änderungen am Adobe Experience Platform-Segmentierungsdienst eingeführt, die ein Problem mit der Option &quot;Jahr ignorieren&quot;bei der Erstellung und Auswertung von Zielgruppen beheben.
 

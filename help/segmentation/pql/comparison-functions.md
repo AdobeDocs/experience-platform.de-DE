@@ -12,7 +12,7 @@ ht-degree: 80%
 
 # Vergleichsfunktionen
 
-Vergleichsfunktionen dienen zum Vergleich zwischen verschiedenen Ausdrücken und Werten und geben `true` oder `false` entsprechend. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] Übersicht](./overview.md).
+Vergleichsfunktionen werden verwendet, um zwischen verschiedenen Ausdrücken und Werten zu vergleichen und `true` oder `false` entsprechend zurückzugeben. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
 
 ## Gleich
 

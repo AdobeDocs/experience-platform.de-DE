@@ -14,27 +14,27 @@ ht-degree: 32%
 
 ## Übersicht
 
-[!DNL Airship] ist die führende Plattform für Kundeninteraktionen, mit der Sie Ihren Benutzern in allen Phasen des Kundenlebenszyklus sinnvolle, personalisierte Omnichannel-Nachrichten bereitstellen können.
+[!DNL Airship] ist die führende Customer Engagement-Plattform, mit der Sie Ihren Benutzern in jeder Phase des Kundenlebenszyklus sinnvolle, personalisierte Omnichannel-Botschaften bereitstellen können.
 
-Diese Integration übergibt Adobe Experience Platform-Zielgruppendaten an [!DNL Airship] as [Tags](https://docs.airship.com/guides/audience/tags/) für Targeting oder Aktivierung.
+Durch diese Integration werden Adobe Experience Platform-Zielgruppendaten zum Targeting oder Auslösen als [Tags](https://docs.airship.com/guides/audience/tags/) an [!DNL Airship] übergeben.
 
-Weitere Informationen zu [!DNL Airship], siehe [Dokumente für die Luftfahrt](https://docs.airship.com).
+Weitere Informationen zu [!DNL Airship] finden Sie in den [Luftschiffsdokumenten](https://docs.airship.com).
 
 
 >[!TIP]
 >
->Diese Ziel-Connector- und Dokumentationsseite wird von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
+>Diese Ziel-Connector- und Dokumentationsseite werden vom [!DNL Airship]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
 
 ## Voraussetzungen
 
-Bevor Sie Ihre Adobe Experience Platform-Zielgruppen an senden können [!DNL Airship]müssen Sie:
+Bevor Sie Ihre Adobe Experience Platform-Zielgruppen an [!DNL Airship] senden können, müssen Sie Folgendes tun:
 
-* Erstellen Sie eine Tag-Gruppe in Ihrem [!DNL Airship] Projekt.
+* Erstellen Sie eine Tag-Gruppe in Ihrem [!DNL Airship] -Projekt.
 * Generieren Sie ein Trägertoken zur Authentifizierung.
 
 >[!TIP]
 > 
->Erstellen Sie eine [!DNL Airship] Konto über [dieser Anmelde-Link](https://go.airship.eu/accounts/register/plan/starter/) wenn Sie noch nicht fertig sind.
+>Erstellen Sie ein [!DNL Airship] -Konto über [diesen Anmelde-Link](https://go.airship.eu/accounts/register/plan/starter/) , falls noch nicht geschehen.
 
 ## Unterstützte Zielgruppen {#supported-audiences}
 
@@ -42,7 +42,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 | Audience Origin | Unterstützt | Beschreibung |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Über die Experience Platform generierte Zielgruppen [Segmentierungsdienst](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Zielgruppen, die durch den Experience Platform [Segmentierungsdienst](../../../segmentation/home.md) generiert wurden. |
 | Benutzerdefinierte Uploads | ✓ | Zielgruppen, die aus CSV-Dateien in Experience Platform [importiert](../../../segmentation/ui/audience-portal.md#import-audience) werden. |
 
 {style="table-layout:auto"}
@@ -60,33 +60,33 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 ## Tag-Gruppen
 
-Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt dem [Tags](https://docs.airship.com/guides/audience/tags/) im Luftverkehr mit geringfügigen Abweichungen bei der Durchführung. Diese Integration ordnet den Status eines Benutzers zu [Mitgliedschaft in einem Experience Platform-Segment](../../../xdm/field-groups/profile/segmentation.md) das Vorhandensein oder Nichtvorhandensein einer [!DNL Airship] -Tag. Beispiel: In einer Platform-Audience, in der die Variable `xdm:status` Änderungen an `realized`, wird das Tag zum [!DNL Airship] -Kanal oder benannter Benutzer, dem dieses Profil zugeordnet ist. Wenn die Variable `xdm:status` Änderungen an `exited`, wird das Tag entfernt.
+Das Konzept der Zielgruppen in Adobe Experience Platform ähnelt dem in Airship verwendeten Tag [Tags](https://docs.airship.com/guides/audience/tags/), allerdings mit geringfügigen Abweichungen bei der Implementierung. Diese Integration ordnet den Status der [Mitgliedschaft eines Benutzers in einem Experience Platform-Segment](../../../xdm/field-groups/profile/segmentation.md) dem Vorhandensein oder Nichtvorhandensein eines [!DNL Airship] -Tags zu. Beispiel: In einer Platform-Audience, in der sich die `xdm:status` in `realized` ändert, wird das Tag dem Kanal [!DNL Airship] hinzugefügt oder dem benannten Benutzer, dem dieses Profil zugeordnet ist. Wenn sich die `xdm:status` in `exited` ändert, wird das Tag entfernt.
 
-Um diese Integration zu aktivieren, erstellen Sie eine *Tag-Gruppe* in [!DNL Airship] benannt `adobe-segments`.
+Um diese Integration zu aktivieren, erstellen Sie eine *Tag-Gruppe* in [!DNL Airship] mit dem Namen `adobe-segments`.
 
 >[!IMPORTANT]
 >
->Beim Erstellen einer neuen Tag-Gruppe **Nicht überprüfen** das Optionsfeld &quot;[!DNL Allow these tags to be set only from your server]&quot;. Andernfalls schlägt die Adobe-Tags-Integration fehl.
+>Aktivieren Sie beim Erstellen der neuen Tag-Gruppe **nicht** die Optionsschaltfläche mit &quot;[!DNL Allow these tags to be set only from your server]&quot;. Andernfalls schlägt die Adobe-Tags-Integration fehl.
 
-Siehe [Tag-Gruppen verwalten](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) für Anweisungen zum Erstellen der Tag-Gruppe.
+Anweisungen zum Erstellen der Tag-Gruppe finden Sie unter [Tag-Gruppen verwalten](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) .
 
 ## Bearer-Token generieren
 
-Navigieren Sie zu **[!UICONTROL Einstellungen]** &quot; **[!UICONTROL APIs und Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen **[!UICONTROL Token]** im Menü links.
+Navigieren Sie zu **[!UICONTROL Einstellungen]**&quot; **[!UICONTROL APIs &amp; Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen Sie im Menü links die Option **[!UICONTROL Token]** aus.
 
-Klicks **[!UICONTROL Token erstellen]**.
+Klicken Sie auf **[!UICONTROL Token erstellen]**.
 
 Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Adobe-Tags-Ziel&quot;und wählen Sie &quot;Zugriff auf alle&quot;für die Rolle.
 
-Klicks **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
+Klicken Sie auf **[!UICONTROL Token erstellen]** und speichern Sie die Details als vertraulich.
 
 ## Anwendungsfälle
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Airship Tags] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das [!DNL Airship Tags]-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Anwendungsfall 1
 
-Einzelhändler oder Unterhaltungsplattformen können Benutzerprofile für ihre Treuekunden erstellen und diese Zielgruppen an [!DNL Airship] für Nachrichten-Targeting für mobile Kampagnen.
+Einzelhändler oder Unterhaltungsplattformen können Benutzerprofile für ihre Treuekunden erstellen und diese Zielgruppen für Nachrichten-Targeting auf mobilen Kampagnen an [!DNL Airship] übergeben.
 
 ### Anwendungsfall 2
 
@@ -98,7 +98,7 @@ So richtet beispielsweise ein Einzelhändler eine brandspezifische Zielgruppe f�
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -106,7 +106,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-* **[!UICONTROL Trägertoken]**: das Trägertoken, das Sie aus dem [!DNL Airship] Dashboard.
+* **[!UICONTROL Trägertoken]**: das Trägertoken, das Sie im [!DNL Airship] -Dashboard generiert haben.
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -114,7 +114,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels hilft.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für dieses Ziel ein.
-* **[!UICONTROL Domäne]**: Wählen Sie entweder ein US- oder EU-Rechenzentrum aus, je nachdem, welche [!DNL Airship] -Rechenzentrum gilt für dieses Ziel.
+* **[!UICONTROL Domäne]**: Wählen Sie entweder ein US- oder ein EU-Rechenzentrum aus, je nachdem, welches [!DNL Airship] Rechenzentrum für dieses Ziel gilt.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -126,22 +126,22 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Zielgruppen-Exportziele](../../ui/activate-segment-streaming-destinations.md).
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 
-[!DNL Airship] -Tags können entweder für einen Kanal festgelegt werden, der die Geräteinstanz darstellt, z. B. iPhone, oder für einen benannten Benutzer, der alle Geräte eines Benutzers einer gemeinsamen Kennung wie einer Kunden-ID zuordnet. Wenn Sie in Ihrem Schema als primäre Identität Nur-Text-E-Mail-Adressen (ungehasht) verwenden, wählen Sie das E-Mail-Feld in Ihrem **[!UICONTROL Source-Attribute]** und zugeordnet werden [!DNL Airship] benannter Benutzer in der rechten Spalte unter **[!UICONTROL Target-Identitäten]**, wie unten dargestellt.
+[!DNL Airship] -Tags können entweder für einen Kanal festgelegt werden, der die Geräteinstanz darstellt, z. B. iPhone, oder für einen benannten Benutzer, der alle Geräte eines Benutzers einer gemeinsamen Kennung wie einer Kunden-ID zuordnet. Wenn Sie in Ihrem Schema als primäre Identität Nur-Text-E-Mail-Adressen (ungehasht) verwenden, wählen Sie das E-Mail-Feld in Ihren **[!UICONTROL Source-Attributen]** aus und ordnen Sie es wie unten dargestellt dem benannten [!DNL Airship] Benutzer in der rechten Spalte unter **[!UICONTROL Zielidentitäten]** zu.
 
-![Zuordnung von benannten Benutzern](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
+![ Zuordnung von benannten Benutzern](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-Bei Kennungen, die einem Kanal zugeordnet werden sollen, d. h. einem Gerät, müssen Sie basierend auf der Quelle dem entsprechenden Kanal zuordnen. Die folgenden Abbildungen zeigen, wie Sie eine Google Advertising ID einer [!DNL Airship] Android-Kanal.
+Bei Kennungen, die einem Kanal zugeordnet werden sollen, d. h. einem Gerät, müssen Sie basierend auf der Quelle dem entsprechenden Kanal zuordnen. Die folgenden Abbildungen zeigen, wie Sie eine Google Advertising ID einem Android-Kanal mit dem Wert [!DNL Airship] zuordnen.
 
-![Verbindung zu Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
-![Verbindung zu Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
+![Verbindung zu Airship Tags herstellen](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
+![Verbindung zu Airship Tags herstellen](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
 ![Kanalzuordnung](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, siehe [Data Governance - Übersicht](../../../data-governance/home.md).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie [!DNL Adobe Experience Platform] Data Governance durchsetzt, finden Sie unter [Data Governance - Übersicht](../../../data-governance/home.md).

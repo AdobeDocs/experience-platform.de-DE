@@ -20,7 +20,7 @@ Das Adobe Experience Platform Web SDK unterstützt Funktionen zur Freigabe von B
 
 ### Einheitliche Personalisierung zwischen mobilen Apps und mobilen Websites
 
-Ein Bekleidungsunternehmen möchte das Kundenerlebnis auf der Grundlage seiner Interessen personalisieren und die Personalisierung in einer Mobile App, die auch WebViews lädt, präzise halten. Durch die Verwendung der Funktion zur Freigabe von mobilen IDs können sie sicherstellen, dass Kunden die präzisesten Angebote unterbreitet werden. Dabei wird dieselbe Besucherkennung in der App und der mobile Webinhalt verwendet, indem die Variable [!DNL ECID] zur mobilen Web-URL.
+Ein Bekleidungsunternehmen möchte das Kundenerlebnis auf der Grundlage seiner Interessen personalisieren und die Personalisierung in einer Mobile App, die auch WebViews lädt, präzise halten. Durch die Verwendung der Funktion zur Freigabe von Mobilgeräte-zu-Web-IDs können sie sicherstellen, dass Kunden die genauesten Angebote unterbreitet werden. Dabei wird dieselbe Besucherkennung in der App und derselbe mobile Webinhalt verwendet, indem die [!DNL ECID] an die mobile Web-URL übergeben wird.
 
 ### Konsistente Personalisierung über Domänen hinweg
 
@@ -32,29 +32,29 @@ Ein Technologie-Händler möchte die Berichte zu Besucheraktivitäten verbessern
 
 ## Voraussetzungen {#prerequisites}
 
-Um die Freigabe mobiler und domänenübergreifender IDs zu verwenden, müssen Sie [!DNL Web SDK] Version 2.11.0 oder höher.
+Um die Freigabe mobiler und domänenübergreifender IDs zu verwenden, müssen Sie Version 2.11.0 (oder höher) verwenden.[!DNL Web SDK]
 
-Bei mobilen Implementierungen von Edge Network wird diese Funktion im Abschnitt [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) -Erweiterung ab Version 1.1.0 (iOS und Android).
+Bei Edge Network-Implementierungen für Mobilgeräte wird diese Funktion in der Erweiterung [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) ab Version 1.1.0 (iOS und Android) unterstützt.
 
-Diese Funktion ist auch mit [!DNL VisitorAPI.js] Version 1.7.0 oder höher.
+Diese Funktion ist auch mit der [!DNL VisitorAPI.js] -Version 1.7.0 oder höher kompatibel.
 
 ## Freigabe mobiler oder Web-IDs {#mobile-to-web}
 
-Verwenden Sie die `getUrlVariables` API von [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) Erweiterung, um die IDs als Abfrageparameter abzurufen und sie beim Öffnen an Ihre URL anzuhängen [!DNL webViews].
+Verwenden Sie die API `getUrlVariables` aus der Erweiterung [Identität für Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) , um die Kennungen als Abfrageparameter abzurufen und sie beim Öffnen von [!DNL webViews] an Ihre URL anzuhängen.
 
-Es ist keine zusätzliche Konfiguration erforderlich, damit das Web SDK `ECID` -Werte in der Abfragezeichenfolge.
+Es ist keine zusätzliche Konfiguration erforderlich, damit das Web SDK `ECID` -Werte in der Abfragezeichenfolge akzeptiert.
 
 Der Abfragezeichenfolgenparameter umfasst:
 
 * `MCID`: Die Experience Cloud-ID (`ECID`)
-* `MCORGID`: Die Experience Cloud `orgID` muss mit dem `orgID` in der [!DNL Web SDK].
+* `MCORGID`: Die Experience Cloud `orgID`, die mit der im [!DNL Web SDK] konfigurierten `orgID` übereinstimmen muss.
 * `TS`: Ein Zeitstempelparameter, der nicht älter als fünf Minuten sein darf.
 
 
-Die Freigabe von Mobile-to-Web-IDs verwendet die `adobe_mc` -Parameter. Wenn die Variable `adobe_mc` -Parameter vorhanden und gültig ist, wird die `ECID` aus der Abfragezeichenfolge wird bei der ersten Anfrage an das Edge-Netzwerk automatisch zur Identitätszuordnung hinzugefügt. Alle nachfolgenden Edge Network-Interaktionen verwenden diese `ECID`.
+Bei der Freigabe von Mobile-to-Web-IDs wird der Parameter `adobe_mc` verwendet. Wenn der Parameter `adobe_mc` vorhanden und gültig ist, wird der Parameter `ECID` aus der Abfragezeichenfolge in der ersten Anfrage an das Edge Network automatisch zur Identitätszuordnung hinzugefügt. Bei allen nachfolgenden Edge Network-Interaktionen wird dieser `ECID` verwendet.
 
-Weitere Informationen zur Übergabe von Besucher-IDs von einer mobilen App an eine WebView finden Sie in der Dokumentation unter [Umgang mit WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Weitere Informationen zum Übergeben von Besucher-IDs von einer mobilen App an eine WebView finden Sie in der Dokumentation zum [Umgang mit WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
 
 ## Implementieren der domänenübergreifenden ID-Freigabe {#cross-domain-sharing}
 
-Siehe [`appendIdentityToUrl`](../commands/appendidentitytourl.md) für Implementierungsanweisungen unter Verwendung der Web SDK-Tag-Erweiterung und der Web SDK-JavaScript-Bibliothek.
+Implementierungsanweisungen mit der Web SDK-Tag-Erweiterung und der Web SDK JavaScript-Bibliothek finden Sie im Befehl [`appendIdentityToUrl`](../commands/appendidentitytourl.md) .

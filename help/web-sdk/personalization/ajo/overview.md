@@ -10,30 +10,30 @@ ht-degree: 1%
 
 ---
 
-# Verwenden [!DNL Adobe Journey Optimizer] mit dem [!DNL Platform Web SDK]
+# Verwenden von [!DNL Adobe Journey Optimizer] mit dem [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kann personalisierte Erlebnisse bereitstellen und rendern, die in verwaltet werden [!DNL Adobe Journey Optimizer] zum Webkanal hinzu. Sie können einen WYSIWYG-Editor verwenden, [!DNL Adobe Journey Optimizer] [Webkanal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)oder einer nicht visuellen Benutzeroberfläche, der [Code-basierter Erlebniskanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) , um Ihre [!DNL Journey Optimizer Web] Kampagnen und Personalisierungserlebnisse.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kann personalisierte Erlebnisse, die in [!DNL Adobe Journey Optimizer] verwaltet werden, für den Webkanal bereitstellen und rendern. Sie können einen WYSIWYG-Editor, [!DNL Adobe Journey Optimizer] [Webkanal](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) oder eine nicht visuelle Schnittstelle, den [code-basierten Experience-Kanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based), verwenden, um Ihre [!DNL Journey Optimizer Web]-Kampagnen und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
 
 >[!IMPORTANT]
 >
->Lesen Sie die [Adobe Journey Optimizer-Webkanal-Dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=de) Informationen zu den ersten Schritten mit [!DNL Journey Optimizer Web] Erlebnis-Authoring und -Reporting.
+>Informationen zu den ersten Schritten mit dem [!DNL Journey Optimizer Web] -Erlebnis-Authoring und -Reporting finden Sie in der Dokumentation zu Adobe Journey Optimizer-Webkanälen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=de) .[
 
 ## Terminologie {#terminology}
 
-**[!UICONTROL Oberfläche]**: Eine Weboberfläche ist eine Webseite oder ein Ort auf einer Seite, die durch einen URI identifiziert wird, wobei die Variable [!DNL Adobe Journey Optimizer] Erlebnisinhalte werden bereitgestellt.
+**[!UICONTROL Oberfläche]**: Eine Weboberfläche ist eine Webseite oder Position auf einer Seite, die durch einen URI identifiziert wird, auf der der Erlebnisinhalt [!DNL Adobe Journey Optimizer] bereitgestellt wird.
 
-**[!UICONTROL Vorschläge]**: In [!DNL Adobe Journey Optimizer], korrelieren Vorschläge mit dem aus einem [!DNL Journey Optimizer Campaign].
+**[!UICONTROL Vorschläge]**: In [!DNL Adobe Journey Optimizer] korrelieren Vorschläge mit dem Erlebnis, das aus einem [!DNL Journey Optimizer Campaign] ausgewählt wurde.
 
-## Aktivieren [!DNL Adobe Journey Optimizer] {#enable-ajo}
+## Aktivieren von [!DNL Adobe Journey Optimizer] {#enable-ajo}
 
-Zu Beginn der Verwendung von [!DNL Adobe Journey Optimizer]führen Sie die folgenden Schritte aus.
+Gehen Sie wie folgt vor, um mit der Verwendung von [!DNL Adobe Journey Optimizer] zu beginnen.
 
-1. Durchsuchen Sie die [Voraussetzungen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) aus dem [!DNL Adobe Journey Optimizer] [Handbuch für Web-Erlebnisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), insbesondere:
-   * Einrichten [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * Aktivieren [!DNL Adobe Journey Optimizer] in [datastream](../../../datastreams/overview.md).
-   * Aktivieren Sie die [!UICONTROL Richtlinie zur aktiven Zusammenführung auf Edge] -Option.
+1. Gehen Sie im [!DNL Adobe Journey Optimizer] [Web Experience Guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) durch die [Voraussetzungen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites), insbesondere:
+   * Einrichten von [!DNL Adobe Experience Cloud Visual Editing Helper].
+   * Aktivieren Sie [!DNL Adobe Journey Optimizer] in Ihrem [Datastream](../../../datastreams/overview.md).
+   * Aktivieren Sie die Option [!UICONTROL Richtlinie zum Zusammenführen von aktiven Elementen in Edge] .
 
-2. Fügen Sie die `renderDecisions` -Option zu Ihren Ereignissen hinzufügen. Satz `renderDecisions` nach `true` für die automatische Darstellung von bereitgestellten Journey Optimizer-Inhaltsvorschlägen auf Webseiten.
+2. Fügen Sie Ihren Ereignissen die Option `renderDecisions` hinzu. Setzen Sie `renderDecisions` auf `true` , um die bereitgestellten Journey Optimizer-Inhaltsvorschläge auf den Oberflächen Ihrer Webseite automatisch zu rendern.
 
    ```javascript
    alloy("sendEvent", {
@@ -42,7 +42,7 @@ Zu Beginn der Verwendung von [!DNL Adobe Journey Optimizer]führen Sie die folge
    })
    ```
 
-3. Optional können Sie in Ihren Ereignissen zusätzliche Oberflächen angeben. Standardmäßig generiert das Web SDK automatisch die Weboberfläche für die aktuelle Webseite und fügt sie in die Anforderung an das Edge-Netzwerk ein. Bei Bedarf können zusätzliche Oberflächen in die Anforderung eingeschlossen werden, indem Sie diese in der `personalization.surfaces` der `sendEvent` -Befehl oder im entsprechenden **[!UICONTROL Oberflächen]** [[!UICONTROL Ereignis senden] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) Konfiguration der Web SDK-Erweiterung.
+3. Optional können Sie in Ihren Ereignissen zusätzliche Oberflächen angeben. Standardmäßig generiert das Web SDK automatisch die Weboberfläche für die aktuelle Webseite und fügt sie in die Anforderung an das Edge Network ein. Falls erforderlich, können zusätzliche Oberflächen in die Anfrage aufgenommen werden, indem Sie diese in der Option `personalization.surfaces` des Befehls `sendEvent` oder in der entsprechenden Konfiguration **[!UICONTROL Oberflächen]** [[!UICONTROL Ereignis senden] Aktion](../../../tags/extensions/client/web-sdk/action-types.md#send-event) der Web SDK-Erweiterung angeben.
 
    ```javascript
    alloy("sendEvent", {
@@ -55,7 +55,7 @@ Zu Beginn der Verwendung von [!DNL Adobe Journey Optimizer]führen Sie die folge
 
    ![extension-add-interface](./assets/extension-add-surface.png)
 
-   Ereignisflächen sind im `query.personalization.surfaces` Anforderungsfeld:
+   Ereignisflächen sind im Anforderungsfeld `query.personalization.surfaces` enthalten:
 
    ```json
    {
@@ -80,17 +80,17 @@ Zu Beginn der Verwendung von [!DNL Adobe Journey Optimizer]führen Sie die folge
    }
    ```
 
-4. Ähnlich wie bei anderen Personalisierungsfunktionen können Sie auch eine **[Codeausschnitt vorab ausblenden](../manage-flicker.md)** , um beim Abrufen von Erlebnissen nur bestimmte Teile der Seite auszublenden.
+4. Ähnlich wie bei anderen Personalisierungsfunktionen können Sie einen **[Codeausschnitt zur Vorab-Ausblendung](../manage-flicker.md)** hinzufügen, um beim Abrufen von Erlebnissen nur bestimmte Teile der Seite auszublenden.
 
 ## Erstellen von Adobe Journey Optimizer-Web-Erlebnissen {#create-ajo-web-experiences}
 
-Befolgen Sie die [Erstellung von Web-Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) Anweisungen aus [!DNL Adobe Journey Optimizer] [Handbuch für Web-Erlebnisse](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) erstellen [!DNL Journey Optimizer Web] Kampagnen und Erlebnisse.
+Befolgen Sie die Anweisungen zum [Erstellen von Web-Kampagnen](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) im [!DNL Adobe Journey Optimizer] [Web-Erlebnisse-Handbuch](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) , um [!DNL Journey Optimizer Web] Kampagnen und Erlebnisse zu erstellen.
 
 ## Rendern von personalisiertem Inhalt {#rendering-personalized-content}
 
-Siehe die Dokumentation unter [Rendern von Personalisierungsinhalten](../rendering-personalization-content.md) für weitere Informationen.
+Weitere Informationen finden Sie in der Dokumentation zu [Rendern von Personalisierungsinhalten](../rendering-personalization-content.md) .
 
-Adobe Journey Optimizer-Vorschläge für Weboberflächen werden auf ähnliche Weise wie die `__view__` Vorschläge für den Entscheidungsbereich. Insbesondere wann `renderDecisions` ist auf `true` im `sendEvent` verwenden, werden diese automatisch vom Web SDK gerendert.
+Adobe Journey Optimizer-Vorschläge für Weboberflächen werden auf ähnliche Weise verarbeitet wie die Vorschläge für den Entscheidungsbereich von `__view__`. Wenn die Option `renderDecisions` im Befehl `sendEvent` auf `true` gesetzt ist, werden diese vom Web SDK automatisch gerendert.
 
 Beispiel für Journey Optimizer-Inhaltsvorschlag:
 
@@ -145,6 +145,6 @@ Beispiel für Journey Optimizer-Inhaltsvorschlag:
 
 ## Debugging {#debugging}
 
-Zum Debuggen von Adobe Journey Optimizer-Personalisierungsimplementierungen verwenden Sie [Web SDK-Debugging](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] Debugging-Traces sind verfügbar, wenn Sie die Fehlerbehebung mit [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Auf Ereignisse mit `AJO:` -Präfix.
+Verwenden Sie zum Debuggen von Adobe Journey Optimizer-Personalisierungsimplementierungen das [Debugging des Web SDK](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] Debug-Traces sind verfügbar, wenn Sie eine Fehlerbehebung mit [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/) durchführen. Suchen Sie nach Ereignissen mit dem Präfix `AJO:` .
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

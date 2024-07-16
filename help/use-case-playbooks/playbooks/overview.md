@@ -29,7 +29,7 @@ Inhalt dieses Dokumentationshandbuchs:
 
 ## Übersicht {#overview}
 
-[!UICONTROL Anwendungsbeispiele für Playbooks] kann Ihnen bei den ersten Schritten mit Real-Time CDP oder Adobe Journey Optimizer helfen, das Problem zu beheben, wenn Sie möglicherweise nicht genau wissen, was Sie verwenden sollten oder wie Sie die richtigen Assets erstellen, um Ihre gewünschten Anwendungsfälle zu erreichen. Anwendungsbeispiel Playbooks helfen Ihnen hier:
+[!UICONTROL Anwendungsbeispiele] können Ihnen bei der Lösung des Problems beim Einstieg in Real-Time CDP oder Adobe Journey Optimizer helfen, wenn Sie möglicherweise nicht genau wissen, was Sie verwenden sollten oder wie Sie die richtigen Assets erstellen, um Ihre gewünschten Anwendungsfälle zu erreichen. Anwendungsbeispiel Playbooks helfen Ihnen hier:
 
 * Anzeigen von Anwendungsfällen für Inspiration
 * Erstellen verschiedener Assets, die Sie verwenden, testen und für die Produktion weiterleiten können, sobald sie fertig sind.
@@ -50,11 +50,11 @@ In diesem Video erfahren Sie, wie Sie von Anfang bis Ende Instanzen eines Nutzun
 
 ## Verfügbarkeit {#availability}
 
-Einige [!UICONTROL Anwendungsbeispiele für Playbooks] sind auf Real-Time CDP-Anwendungsfälle zugeschnitten, während andere am besten für Kunden geeignet sind, die Journey Optimizer verwenden. Durchsuchen Sie den Katalog, um die Bücher zu finden, die am besten zu Ihrem Produkt und Anwendungsfall passen. Weitere Informationen zu Real-Time CDP und Journey Optimizer finden Sie im [Produktbeschreibungen für Adobe](https://helpx.adobe.com/de/legal/product-descriptions.html).
+Einige [!UICONTROL Anwendungsbeispiele] sind auf Real-Time CDP-Anwendungsfälle zugeschnitten, während andere am besten für Kunden geeignet sind, die Journey Optimizer verwenden. Durchsuchen Sie den Katalog, um die Bücher zu finden, die am besten zu Ihrem Produkt und Anwendungsfall passen. Weitere Informationen zu Real-Time CDP und Journey Optimizer finden Sie in den [Adobe-Produktbeschreibungen](https://helpx.adobe.com/de/legal/product-descriptions.html).
 
 ## Handbücher zur Benutzeroberfläche {#ui-guides}
 
-Nachdem Sie sich für das gewünschte Playbook entschieden haben, wählen Sie es in der Benutzeroberfläche aus und führen Sie die ersten Schritte durch. Benutzerhandbücher lesen unter [wie Sie das richtige Playbook aus einer Auswahl auswählen](/help/use-case-playbooks/playbooks/choose.md) für Sie [Erstellen, Freigeben und Wiederverwenden von Playbook-Instanzen](/help/use-case-playbooks/playbooks/create-share-reuse.md) für vollständige Informationen zum Erstellen von Instanzen und zum Optimum aus einem Playbook. Informationen zum Weiterleiten verschiedener Assets von der inspirierenden Sandbox zu anderen Entwicklungs-Sandboxes und dann zur Produktion finden Sie in der Dokumentation unter [Datenbewusstsein](/help/use-case-playbooks/playbooks/data-awareness.md).
+Nachdem Sie sich für das gewünschte Playbook entschieden haben, wählen Sie es in der Benutzeroberfläche aus und führen Sie die ersten Schritte durch. Lesen Sie die UI-Handbücher unter [, wie Sie aus einer Auswahl das richtige Playbook auswählen](/help/use-case-playbooks/playbooks/choose.md) für Sie und [wie Sie Playbook-Instanzen erstellen, freigeben und wiederverwenden](/help/use-case-playbooks/playbooks/create-share-reuse.md) , um vollständige Informationen dazu zu erhalten, wie Sie Instanzen erstellen und ein Playbook optimal nutzen können. Informationen zum Weiterleiten verschiedener Assets von der inspirierenden Sandbox zu anderen Entwicklungs-Sandboxes und dann zur Produktion finden Sie in der Dokumentation zum [Datenbewusstsein](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Fehlerbehebung und bekannte Einschränkungen {#trouble-shooting-known-limitations}
 

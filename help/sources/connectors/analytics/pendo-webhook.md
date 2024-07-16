@@ -1,12 +1,12 @@
 ---
-title: Pendo Source Overview
+title: Pendo Source - Übersicht
 description: Erfahren Sie, wie Sie Pendo über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden können, indem Sie Webhooks nutzen.
 badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
 source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 20%
+source-wordcount: '347'
+ht-degree: 18%
 
 ---
 
@@ -14,40 +14,40 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Die [!DNL Pendo]-Quelle befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus Analytics-Anwendungen von Drittanbietern. Unterstützung für Analytics-Anbieter: [!DNL Pendo].
+Experience Platform unterstützt die Aufnahme von Daten aus Analytics-Anwendungen von Drittanbietern. Unterstützung für Analytics-Anbieter ist [!DNL Pendo].
 
-[[!DNL Pendo]](https://pendo.io/) ist eine Produktanalyseanwendung, die Software-Unternehmen bei der Entwicklung von Produkten unterstützt, die bei Kunden ankommen. Die App ermöglicht es Softwareherstellern, ihre Produkte mit einer breiten Palette von Tools einzubetten, die sowohl zu einer besseren Produkterfahrung für Benutzer als auch zu neuen Einblicken für das Produktteam führen können.
+[[!DNL Pendo]](https://pendo.io/) ist eine Produktanalyseanwendung, die Software-Unternehmen dabei unterstützt, Produkte zu entwickeln, die bei Kunden ankommen. Die App ermöglicht es Softwareherstellern, ihre Produkte mit einer breiten Palette von Tools einzubetten, die sowohl zu einer besseren Produkterfahrung für Benutzer als auch zu neuen Einblicken für das Produktteam führen können.
 
-Die [!DNL Pendo] -Quelle können Sie unterstützte Webhook-Ereignisschemata und die zugehörigen Ereignisdaten aus [!DNL Pendo.io] mithilfe der [[!DNL Pendo] Webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks). Die [!DNL Pendo] -Quelle funktioniert mit [!DNL Pendo] URL-Webhooks.
+Mit der Quelle [!DNL Pendo] können Sie unterstützte Webhook-Ereignisschemas und die zugehörigen Ereignisdaten aus [!DNL Pendo.io] mithilfe der [[!DNL Pendo] Webhooks](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks) erfassen. Die Quelle [!DNL Pendo] funktioniert mit [!DNL Pendo] URL-Webhooks.
 
 Folgende Webhooks werden unterstützt:
 
-* [Handbuch](https://support.pendo.io/hc/en-us/articles/8146679315867-Creating-a-Guide) Angezeigt
-* [Umfrage](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) Angezeigt/gesendet
-* [Net Promoter-Bewertung](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) Angezeigt/gesendet
+* [Guide](https://support.pendo.io/hc/en-us/articles/8146679315867-Creating-a-Guide) angezeigt
+* [Umfrage](https://support.pendo.io/hc/en-us/articles/360031867152-Polls-Classic-) angezeigt/gesendet
+* [Net Promoter-Punktzahl](https://support.pendo.io/hc/en-us/articles/360033527151-Set-up-an-NPS-Survey) angezeigt/gesendet
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie eine [!DNL Pendo] -Quellverbindung verwenden, müssen Sie zunächst Folgendes sicherstellen:
+Bevor Sie eine [!DNL Pendo]-Quellverbindung erstellen können, müssen Sie zunächst Folgendes sicherstellen:
 
-A [!DNL Pendo] -Konto. Wenn Sie noch keine haben, sehen Sie die [[!DNL Pendo] registrieren](https://app.pendo.io/register) Seite, um sich zu registrieren und Ihr Konto zu erstellen.
+Ein [!DNL Pendo] -Konto. Wenn noch keines vorhanden ist, wird die Seite [[!DNL Pendo] register](https://app.pendo.io/register) angezeigt, auf der Sie sich registrieren und Ihr Konto erstellen können.
 
-### Einrichten [!DNL Pendo] Webhook {#set-up-webhook}
+### Webhook einrichten [!DNL Pendo] {#set-up-webhook}
 
-Nachdem Sie Ihren Datenfluss erfolgreich erstellt haben, müssen Sie einen Webhook einrichten, um Platform über [!DNL Pendo] -Ereignisse. [!DNL Pendo] Webhooks können Echtzeit-Benachrichtigungen an andere Dienste senden, wenn bestimmte Ereignisse eintreten, und diese Informationen an Ihre [!DNL Pendo] -Quelle. Weitere Informationen finden Sie in den Tutorials unter [Abrufen der Streaming-Endpunkt-URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) und [Einrichtung einer [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Nachdem Sie Ihren Datenfluss erfolgreich erstellt haben, müssen Sie einen Webhook einrichten, um Platform über [!DNL Pendo] -Ereignisse zu informieren. [!DNL Pendo] Webhooks können Echtzeit-Benachrichtigungen an andere Dienste senden, wenn bestimmte Ereignisse eintreten, und diese Informationen an Ihre [!DNL Pendo]-Quelle senden. Weitere Informationen finden Sie in den Tutorials zu [Abrufen der Streaming-Endpunkt-URL](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) und [Einrichten eines [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook) .
 
-## Verbinden [!DNL Pendo] Platform {#connect-to-platform}
+## Verbinden von [!DNL Pendo] mit Platform {#connect-to-platform}
 
-Die folgende Dokumentation enthält Informationen zum Erstellen einer [!DNL Pendo] Streaming-Connector für die Verbindung [!DNL Platform] Verwendung von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen zum Erstellen eines [!DNL Pendo]-Streaming-Connectors für die Verbindung mit [!DNL Platform] mithilfe von APIs oder der Benutzeroberfläche:
 
 ### Verbinden von [!DNL Pendo] mit Platform mithilfe von APIs {#connect-to-platform-using-api}
 
-* [Erstellen Sie eine Quellverbindung, um [!DNL Pendo] -Daten über APIs in Platform zu importieren.](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [Erstellen Sie eine Quellverbindung, um [!DNL Pendo] Daten mithilfe von APIs an Platform zu übertragen.](../../tutorials/api/create/analytics/pendo-webhook.md)
 
 ### Verbinden von [!DNL Pendo] mit Platform über die Benutzeroberfläche {#connect-to-platform-using-ui}
 
-* [Erstellen Sie eine Quellverbindung, um sie zu bringen [!DNL Pendo] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [Erstellen einer Quellverbindung zum Übertragen von [!DNL Pendo] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/analytics/pendo-webhook.md)

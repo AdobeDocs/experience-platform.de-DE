@@ -31,7 +31,7 @@ Die Ressourcen, die von [!DNL Catalog Service] verfolgt werden, werden von mehre
 
 ### [!DNL Experience Data Model] (XDM)-System
 
-Das [!DNL Experience Data Model] (XDM)-System ist das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert. [!DNL Experience Platform]XDM-Schemas dienen in zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten.
+Das [!DNL Experience Data Model] (XDM)-System ist das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert. [!DNL Experience Platform]XDM-Schemata dienen in zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten.
 
 Bei der Aufnahme von Daten in [!DNL Platform] wird die Struktur dieser Daten einem XDM-Schema zugeordnet und in [!DNL Data Lake] als Teil eines Datensatzes gespeichert. Die Metadaten der einzelnen Datensätze werden von [!DNL Catalog Service] dokumentiert, wobei ein Verweis auf das dem Datensatz entsprechende XDM-Schema enthalten ist.
 

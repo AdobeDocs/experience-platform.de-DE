@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow S
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
 source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 100%
+source-wordcount: '511'
+ht-degree: 98%
 
 ---
 

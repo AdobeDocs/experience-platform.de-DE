@@ -16,7 +16,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Kontoprofile sind nur für Kunden von Real-time Customer Data Platform B2B Edition verfügbar. Um mehr über Real-Time CDP zu erfahren, einschließlich der für jeden Lizenztyp verfügbaren Funktionen, lesen Sie zunächst das [Übersicht über Real-Time CDP](../overview.md).
+>Kontoprofile sind nur für Kunden von Real-time Customer Data Platform B2B Edition verfügbar. Um mehr über Real-Time CDP zu erfahren, einschließlich der für jeden Lizenztyp verfügbaren Funktionen und Funktionen, lesen Sie zunächst die [Real-Time CDP - Übersicht](../overview.md) .
 
 Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. Diese einheitliche Ansicht eines Accounts führt Daten aus all Ihren Marketing-Kanälen und den diversen Systemen zusammen, die Ihr Unternehmen derzeit zum Speichern von Kunden-Account-Informationen verwendet. Dieses Dokument enthält eine Anleitung zur Interaktion mit Kontoprofilen mithilfe der in der Benutzeroberfläche von Adobe Experience Platform verfügbaren Real-Time CDP-Funktionen, B2B Edition.
 
@@ -24,11 +24,11 @@ Weitere Informationen zur Erstellung von Account-Profilen im Rahmen des B2B-Work
 
 ## Übersicht über Account-Profile {#account-profiles-overview}
 
-Auswählen **[!UICONTROL Profile]** under [!UICONTROL Konten] im linken Navigationsbereich, um die Übersicht der Kontoprofile anzuzeigen. Unter dem [!UICONTROL Übersicht] -Registerkarte, zeigt das Dashboard eine Grafik oder ein Diagramm an, die bzw. das Widgets in einem einzelnen Einstiegspunkt anzeigt.
+Wählen Sie **[!UICONTROL Profile]** unter [!UICONTROL Konten] im linken Navigationsbereich aus, um die Übersicht über Kontoprofile anzuzeigen. Unter der Registerkarte [!UICONTROL Übersicht] zeigt das Dashboard eine Grafik oder ein Diagramm mit Widgets als Einstiegspunkt an.
 
-![Die Registerkarte Übersicht über Kontoprofile mit Profilen im linken Navigationsbereich und hervorgehoben Übersicht .](images/b2b-account-profile-overview.png)
+![Die Registerkarte Übersicht über Kontoprofile mit Profilen im linken Navigationsbereich und hervorgehobener Übersicht.](images/b2b-account-profile-overview.png)
 
-Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontoprofile]](../../dashboards/guides/account-profiles.md) Dashboard , um mehr zu erfahren. Siehe die Dokumentation unter [Real-time Customer Data Platform Insights-Datenmodell B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) Weitere Informationen dazu, wie Sie mit Ihren Insight-Datenmodellen benutzerdefinierte Diagramme für Ihre Dashboards erstellen können.
+Weitere Informationen finden Sie in der Dokumentation zum Dashboard [[!UICONTROL Kontoprofile]](../../dashboards/guides/account-profiles.md) . Weitere Informationen dazu, wie Sie mit Ihren Insights-Datenmodellen benutzerdefinierte Diagramme für Ihre Dashboards erstellen können, finden Sie in der Dokumentation zu [Real-time Customer Data Platform Insights-Datenmodell B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) .
 
 ## Konfigurieren des Leads zur Kontozuordnung {#configure-lead-to-account-matching}
 
@@ -36,11 +36,11 @@ Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontopr
 >
 > Nur B2B AI-Administratoren können den Lead aktivieren, deaktivieren und konfigurieren, um den Dienst für die Kontoabstimmung zu aktivieren. Nach der Deaktivierung des Dienstes werden die entsprechenden Ergebnisse innerhalb von 24 Stunden gelöscht.
 
-Wählen Sie zum Konfigurieren des Interessenten-Kontoabgleichs **[!UICONTROL Profile]** under [!UICONTROL Konten] in der linken Navigation. Im **[!UICONTROL Übersicht]** Registerkarte auswählen **[!UICONTROL Einstellungen]** oben rechts.
+Wählen Sie zum Konfigurieren der Kontoübereinstimmung die Option **[!UICONTROL Profile]** unter [!UICONTROL Konten] im linken Navigationsbereich aus. Wählen Sie auf der Registerkarte **[!UICONTROL Übersicht]** oben rechts die Option **[!UICONTROL Einstellungen]** aus.
 
-![Registerkarte Übersicht über Kontoprofile mit hervorgehobener Einstellung.](images/b2b-configuring-accounts-profile.png)
+![Die Registerkarte Übersicht über die Kontoprofile mit hervorgehobener Einstellung.](images/b2b-configuring-accounts-profile.png)
 
-Die **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier die **[!UICONTROL Lead-zu-Konto-Abgleich aktivieren]** aktivieren, um die Funktion zu aktivieren. Wählen Sie über das Dropdown-Menü **[!UICONTROL Täglich]** für die **[!UICONTROL Übereinstimmende Cadence]** -Einstellung. Wählen Sie abschließend die entsprechende **[!UICONTROL Übereinstimmende Kriterien]** Optionen gefolgt von **[!UICONTROL Speichern]** , um Ihre Einstellungen zu bestätigen und zur **[!UICONTROL Kontoprofile]** angezeigt.
+Das Dialogfeld **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier den Umschalter **[!UICONTROL Lead-zu-Konto-Abgleich aktivieren]** aus, um die Funktion zu aktivieren. Verwenden Sie das Dropdown-Menü, um **[!UICONTROL Täglich]** für die Einstellung **[!UICONTROL Übereinstimmungscadence]** auszuwählen. Wählen Sie abschließend die relevanten Optionen für **[!UICONTROL Übereinstimmungskriterien]** und danach **[!UICONTROL Speichern]** aus, um Ihre Einstellungen zu bestätigen und zum Bildschirm **[!UICONTROL Kontoprofile]** zurückzukehren.
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Die **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier die **[
 
 ![Kontoeinstellungen konfigurieren](images/b2b-configuring-account-settings.png)
 
-Weitere Informationen zum Interessenten-Kontoabgleich finden Sie im Abschnitt [Lead zur Kontoübereinstimmung in Real-Time CDP B2B - Übersicht](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Weiterführende Informationen zum Abgleich von Leads mit Konten finden Sie in der Übersicht über die Kontozuordnung bei Real-Time CDP B2B](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).[
 
 ## Durchsuchen von Account-Profilen {#browse-account-profiles}
 
@@ -56,7 +56,7 @@ Um Account-Profile zu durchsuchen, wählen Sie zunächst **[!UICONTROL Profile]*
 
 Auf der Registerkarte **[!UICONTROL Durchsuchen]** können Sie Account-Profile mithilfe einer Account-ID aus einer verbundenen Unternehmensquelle analysieren oder Quelldetails direkt eingeben.
 
-![Verwenden der Konto-ID zur Profilanalyse](images/b2b-account-browse-by.png)
+![Verwenden Sie die Konto-ID, um Profile zu analysieren](images/b2b-account-browse-by.png)
 
 ### Durchsuchen nach [!UICONTROL Verbundener Unternehmensquelle] {#browse-by-connected-enterprise-source}
 
@@ -88,7 +88,7 @@ Bei ausgewählter Quelle müssen Sie jetzt eine **[!UICONTROL Account-ID]** eing
 
 ### Durchsuchen nach [!UICONTROL Sonstige] {#browse-by-others}
 
-Real-Time CDP, B2B Edition unterstützt die Möglichkeit, eine direkte Suche durchzuführen, indem Sie eine **[!UICONTROL Quellname]**, **[!UICONTROL Quellinstanz]**, und **[!UICONTROL Konto-ID]** für ein Konto, das Sie anzeigen möchten. Indem Sie den Quellnamen und die Instanz direkt eingeben, geben Sie den Kontext an, den Experience Platform benötigt, um nach den richtigen Account-Profildaten zu suchen und diese anzuzeigen.
+Real-Time CDP, B2B Edition unterstützt die Möglichkeit, eine direkte Suche durchzuführen, indem Sie einen **[!UICONTROL Source name]**, **[!UICONTROL Source instance]** und **[!UICONTROL Account ID]** für ein Konto eingeben können, das Sie anzeigen möchten. Indem Sie den Quellnamen und die Instanz direkt eingeben, geben Sie den Kontext an, den Experience Platform benötigt, um nach den richtigen Account-Profildaten zu suchen und diese anzuzeigen.
 
 Die Möglichkeit, eine direkte Suche durchzuführen, ist unter Umständen nützlich, wenn eine direkte Quellverbindung zu den Daten nicht möglich ist. Wenn Ihr Unternehmen beispielsweise über Data Governance-Richtlinien verfügt, die eine direkte Verbindung zu einem CRM verhindern, können Sie diese Daten in ein Cloud-Speichersystem exportieren und dann in Experience Platform aufnehmen.
 
@@ -96,7 +96,7 @@ Ein weiteres Beispiel könnte sein, dass Sie eine Umwandlung der Daten durchfüh
 
 Um eine direkte Suche zu starten, wählen Sie **[!UICONTROL Sonstige]** aus dem Dropdown-Menü **[!UICONTROL Durchsuchen nach]** aus, und geben Sie dann **[!UICONTROL Quellnamen]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Account-ID]** für den Account ein, den Sie anzeigen möchten.
 
-![Andere durchsuchen](images/b2b-account-browse-adhoc.png)
+![Durchsuchen durch andere](images/b2b-account-browse-adhoc.png)
 
 ## Anzeigen von Details zum Account-Profil {#view-account-profile-details}
 
@@ -128,9 +128,9 @@ Die Registerkarte **[!UICONTROL Personen]** enthält eine Liste der einzelnen Pe
 >
 >Auf der Registerkarte [!UICONTROL Personen] wird eine Liste mit bis zu 25 Personen angezeigt, die mit dem Account in Verbindung stehen. Bei Accounts mit mehr als 25 Personen zeigt das System eine Stichprobe von 25 Datensätzen an.
 
-Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profil-ID]**: ein anklickbarer Link, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Kundenprofile in Bezug auf Ihre Konten finden Sie im Handbuch für [Durchsuchen von Profilen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).
+Neben einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profil-ID]**, bei der es sich um einen anklickbaren Link handelt, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Kundenprofile für Ihre Konten finden Sie im Handbuch für das Durchsuchen von Profilen in Real-Time CDP, B2B Edition](../profile/profile-browse.md).[
 
-![Personenregisterkarte](images/b2b-account-people.png)
+![Registerkarte &quot;Personen&quot;](images/b2b-account-people.png)
 
 ## Registerkarte „Opportunitys“ {#opportunities-tab}
 
@@ -146,15 +146,15 @@ Jede Opportunity umfasst Informationen wie den Namen der Opportunity, ihren Umfa
 
 ## Registerkarte &quot;Verwandte Konten&quot; {#related-accounts-tab}
 
-Die **[!UICONTROL Verwandte Konten]** enthält Informationen zu anderen Konten, die mit dem Konto in Verbindung stehen, das Sie durchsuchen. Detaillierte Informationen zur Funktion finden Sie im Abschnitt [Übersicht über verwandte Konten](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+Die Registerkarte **[!UICONTROL Zugehörige Konten]** enthält Informationen zu anderen Konten, die mit dem Konto in Verbindung stehen, das Sie durchsuchen. Detaillierte Informationen zur Funktion finden Sie in der [Übersicht über zugehörige Konten](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 >[!NOTE]
 >
 >* Eine Gruppe verwandter Konten kann über maximal 30 Kontoprofile verfügen. Wenn mehr als 30 Kontoprofile als verwandt gefunden wurden, werden sie willkürlich in mehrere Gruppen unterteilt, von denen jede maximal 30 Mitglieder hat. Die Gruppe Zugehörige Konten eines Kontoprofils enthält immer sich selbst.
->* Die [!UICONTROL Verwandte Konten] zeigt derzeit eine Liste von bis zu 25 Konten an, die mit dem Konto verknüpft sind, das Sie durchsuchen. Dies ist eine Einschränkung, die in einer zukünftigen Aktualisierung behoben wird. Trotz dieser Benutzeroberflächenbeschränkung werden bei der Verwendung verwandter Konten in Segmentdefinitionen für Gruppen mit 30 verwandten Kontoprofilen alle Profile für das Targeting verwendet.
+>* Auf der Registerkarte [!UICONTROL Zugehörige Konten] wird derzeit eine Liste mit bis zu 25 Konten angezeigt, die mit dem Konto verknüpft sind, das Sie durchsuchen. Dies ist eine Einschränkung, die in einer zukünftigen Aktualisierung behoben wird. Trotz dieser Benutzeroberflächenbeschränkung werden bei der Verwendung verwandter Konten in Segmentdefinitionen für Gruppen mit 30 verwandten Kontoprofilen alle Profile für das Targeting verwendet.
 
 Jedes zugehörige Konto enthält Informationen wie die Kontoprofil-ID und den Namen, den Kontoquellschlüssel und weitere Informationen zu Homepage, Adresse, übergeordnetem Konto, Telefon, Branche und Jahresumsatz.
 
 ![Registerkarte &quot;Verwandte Konten&quot;](images/b2b-account-related-accounts.png)
 
-Sie können die zugehörigen Konten in dieser Liste für Segmentierungszwecke verwenden. Siehe [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-account) , um zu verstehen, wie Sie verwandte Konten verwenden können, um Ihre Reichweite in Segmentdefinitionen zu erweitern.
+Sie können die zugehörigen Konten in dieser Liste für Segmentierungszwecke verwenden. In einem [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-account) erfahren Sie, wie Sie verwandte Konten verwenden können, um Ihre Reichweite in Segmentdefinitionen zu erweitern.

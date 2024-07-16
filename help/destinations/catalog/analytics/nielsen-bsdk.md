@@ -5,22 +5,22 @@ description: Die Nielsen BSDK-Erweiterung ist ein Analyseziel in Adobe Experienc
 exl-id: e1c10673-e3f4-474d-98d7-960124b2bfc7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 88%
+source-wordcount: '517'
+ht-degree: 89%
 
 ---
 
-# [!DNL Nielsen BSDK]-Erweiterung  {#nielsen-bsdk-extension}
+# [!DNL Nielsen BSDK]-Erweiterung {#nielsen-bsdk-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Nielsen Digital SDK] Tag-Erweiterung bietet Zielgruppenmessungen über die folgenden digitalen Messprodukte:
+Die Tag-Erweiterung [!DNL Nielsen Digital SDK] bietet Zielgruppenmessungen über die folgenden digitalen Messprodukte:
 
 DCR: Eine Messlösung, die eine tägliche Messung von nicht-linearen digitalen Inhalten einschließlich Inhalten mit Anzeigen ermöglicht; erlaubt eine umfassende Ansicht des Verbrauchs an digitalen Inhalten von Desktop-, Mobil-, Tablet- und vernetzten Geräten in Zielgruppen.
 
 DTVR: Dies ermöglicht teilnehmenden Programmierquellen eine lineare Fernsehwiedergabe auf Desktop- und Mobilgeräten. Das ist die erste Lösung, die eine Akkreditierung des MRC für ihren Beitrag zur Messung der Zuschauerzahlen von auf Computern und Mobilgeräten angesehenen Programmen erhalten hat.
 
-[!DNL Nielsen BSDK] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
+[!DNL Nielsen BSDK] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -34,7 +34,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Nielsen BSDK] Erweiterung:
+So installieren Sie die [!DNL Nielsen BSDK]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -46,7 +46,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie in der [Nielsen-BSDK-Seite auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der Seite [Nielsen BSDK auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

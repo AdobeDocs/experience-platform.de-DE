@@ -303,7 +303,7 @@ Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitte
 
 Sie sollten auch in der Dokumentation nachlesen, wie Sie [geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und über [die API](./api/scheduled-queries.md) durchführen können.
 
-Beachten Sie bei der Verwendung von [!DNL Query Editor] Sie können einen Zeitplan nur zu einer bereits erstellten und gespeicherten Abfrage hinzufügen. Dies gilt nicht für die [!DNL Query Service]-API.
+Beachten Sie, dass Sie bei Verwendung von [!DNL Query Editor] nur einen Zeitplan zu einer bereits erstellten und gespeicherten Abfrage hinzufügen können. Dies gilt nicht für die [!DNL Query Service]-API.
 +++
 
 ### Was bedeutet die Fehlermeldung „Sitzungs-Limit erreicht“?
@@ -587,18 +587,20 @@ Nein, Query Service unterstützt den Befehl „INSERT OVERWRITE INTO“ nicht.
 
 ### Wie häufig werden die Nutzungsdaten im Dashboard zur Lizenznutzung für Data Distiller-Berechnungszeiten aktualisiert?
 
-+++Antwort Das Dashboard zur Lizenznutzung für Data Distiller-Computerzeiten wird viermal täglich, alle sechs Stunden aktualisiert.
++++Antwort
+Das Dashboard zur Lizenznutzung für Data Distiller-Computerzeiten wird viermal täglich, alle sechs Stunden aktualisiert.
 +++
 
 ### Kann ich den Befehl CREATE VIEW ohne Data Distiller-Zugriff verwenden?
 
-+++Antwort Ja, Sie können `CREATE VIEW` -Befehl ohne Data Distiller-Zugriff. Dieser Befehl bietet eine logische Ansicht der Daten, schreibt sie jedoch nicht zurück in den Daten-Pool.
++++Antwort
+Ja, Sie können den Befehl `CREATE VIEW` ohne Zugriff auf Data Distiller verwenden. Dieser Befehl bietet eine logische Ansicht der Daten, schreibt sie jedoch nicht zurück in den Daten-Pool.
 +++
 
 ### Kann ich anonyme Bausteine in DbVisualizer verwenden?
 
 +++Antwort
-Ja. Einige Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil eines Skripts als einzelne Anweisung behandelt werden soll. Weitere Informationen finden Sie im [Anonyme Blockdokumentation](./key-concepts/anonymous-block.md) oder [die offizielle DbVisualizer-Dokumentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
+Ja. Einige Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil eines Skripts als einzelne Anweisung behandelt werden soll. Weitere Informationen finden Sie in der [Dokumentation zu anonymen Bausteinen](./key-concepts/anonymous-block.md) oder in der [offiziellen DbVisualizer-Dokumentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) .
 +++
 
 ## Exportieren von Daten {#exporting-data}

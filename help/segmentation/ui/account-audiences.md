@@ -15,55 +15,55 @@ ht-degree: 30%
 
 >[!AVAILABILITY]
 >
->Kontozielgruppen sind nur im [B2B Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) und [B2P Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Kontozielgruppen sind nur in der [B2B Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) und der [B2P Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p) verfügbar.
 
 Mit der Kontosegmentierung können Sie mit Adobe Experience Platform die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen bringen.
 
-Kontozielgruppen können als Eingabe für kontobasierte Ziele verwendet werden, sodass Sie die Personen innerhalb dieser Konten in nachgelagerten Diensten ansprechen können. Beispielsweise können Sie kontobasierte Zielgruppen verwenden, um Datensätze aller Konten abzurufen, die **not** Kontaktinformationen für alle Personen mit dem Titel Chief Operating Officer (COO) oder Chief Marketing Officer (CMO).
+Kontozielgruppen können als Eingabe für kontobasierte Ziele verwendet werden, sodass Sie die Personen innerhalb dieser Konten in nachgelagerten Diensten ansprechen können. Sie können beispielsweise kontobasierte Zielgruppen verwenden, um Datensätze aller Konten abzurufen, die **nicht** über Kontaktinformationen für Personen mit dem Titel Chief Operating Officer (COO) oder Chief Marketing Officer (CMO) verfügen.
 
 ## Terminologie {#terminology}
 
 Bevor Sie mit Kontozielgruppen beginnen, sollten Sie sich die Unterschiede zwischen den verschiedenen Zielgruppentypen ansehen:
 
-- **Kontozielgruppen**: Eine Zielgruppe eines Kontos ist eine Zielgruppe, die mithilfe von **account** Profildaten. Kontoprofildaten können verwendet werden, um Zielgruppen zu erstellen, die Personen in nachgelagerten Konten ansprechen. Weitere Informationen zu Kontoprofilen finden Sie im Abschnitt [Übersicht über Kontoprofile](../../rtcdp/accounts/account-profile-overview.md).
-- **Zielgruppen**: Eine Zielgruppe ist eine Zielgruppe, die mit **customer** Profildaten. Kundenprofildaten können verwendet werden, um Zielgruppen zu erstellen, die auf die Kundengruppe Ihres Unternehmens ausgerichtet sind. Weiterführende Informationen zu Kundenprofilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
-- **Interessensgruppen**: Eine Interessenten-Zielgruppe ist eine Zielgruppe, die mithilfe von **Interessent** Profildaten. Mit potenziellen Profildaten können Sie Zielgruppen von nicht authentifizierten Benutzern erstellen. Weitere Informationen zu potenziellen Profilen finden Sie im Abschnitt [Interessenten-Profil - Übersicht](../../profile/ui/prospect-profile.md).
+- **Konto-Zielgruppen**: Eine Konto-Zielgruppe ist eine Zielgruppe, die mit den Profildaten **Konto** erstellt wird. Kontoprofildaten können verwendet werden, um Zielgruppen zu erstellen, die Personen in nachgelagerten Konten ansprechen. Weiterführende Informationen zu Kontoprofilen finden Sie in der [Kontoprofilübersicht](../../rtcdp/accounts/account-profile-overview.md).
+- **Zielgruppen für Personen**: Eine Zielgruppe für Personen ist eine Zielgruppe, die mithilfe von Profildaten vom Typ **Kunde** erstellt wird. Kundenprofildaten können verwendet werden, um Zielgruppen zu erstellen, die auf die Kundengruppe Ihres Unternehmens ausgerichtet sind. Weiterführende Informationen zu Kundenprofilen finden Sie in der [Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md) .
+- **Interessante Zielgruppen**: Eine potenzielle Zielgruppe ist eine Zielgruppe, die mithilfe von Profildaten vom Typ **Interessent** erstellt wird. Mit potenziellen Profildaten können Sie Zielgruppen von nicht authentifizierten Benutzern erstellen. Weiterführende Informationen zu potenziellen Profilen finden Sie in der [Profilübersicht für Interessenten](../../profile/ui/prospect-profile.md).
 
 ## Zugriff {#access}
 
-Um auf Kontozielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** im **[!UICONTROL Konten]** Abschnitt.
+Um auf Kontozielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** im Abschnitt **[!UICONTROL Konten]** aus.
 
-![Die Schaltfläche Zielgruppen wird im Abschnitt Konten hervorgehoben.](../images/ui/account-audiences/select.png)
+![Die Schaltfläche &quot;Zielgruppen&quot;wird im Abschnitt &quot;Konten&quot;hervorgehoben.](../images/ui/account-audiences/select.png)
 
-Die [!UICONTROL Durchsuchen] angezeigt, auf der eine Liste aller Zielgruppen des Kontos für die Organisation angezeigt wird.
+Die Seite [!UICONTROL Durchsuchen] wird angezeigt und enthält eine Liste aller Zielgruppen des Kontos für die Organisation.
 
-![Daraufhin werden die Zielgruppen des Kontos der Organisation angezeigt.](../images/ui/account-audiences/browse.png)
+![Die Zielgruppen des Kontos, die zur Organisation gehören, werden angezeigt.](../images/ui/account-audiences/browse.png)
 
 Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Profilanzahl, Ursprung, Lebenszyklusstatus, Erstellungsdatum und Datum der letzten Aktualisierung.
 
-Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimmten Kontozielgruppen zu suchen und diese zu sortieren. Weitere Informationen zu dieser Funktion finden Sie im [Übersicht über Audience Portal](./audience-portal.md#manage-audiences).
+Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimmten Kontozielgruppen zu suchen und diese zu sortieren. Weitere Informationen zu dieser Funktion finden Sie in der [Audience Portal-Übersicht](./audience-portal.md#manage-audiences) .
 
 ## Zielgruppe erstellen {#create}
 
 >[!NOTE]
 >
->Kontozielgruppen werden anhand von **Batch** und werden alle 24 Stunden ausgewertet.
+>Kontozielgruppen werden mit der **Batch**-Segmentierung ausgewertet und alle 24 Stunden ausgewertet.
 
-Um eine Konto-Audience zu erstellen, wählen Sie **[!UICONTROL Erstellen einer Zielgruppe]** auf [!UICONTROL Durchsuchen] Seite.
+Um eine Konto-Audience zu erstellen, wählen Sie auf der Seite [!UICONTROL Durchsuchen] die Option **[!UICONTROL Audience erstellen]** aus.
 
-![Die [!UICONTROL Erstellen einer Zielgruppe] auf der Seite zum Durchsuchen der Zielgruppe des Kontos markiert ist.](../images/ui/account-audiences/select-create-audience.png)
+![Die Schaltfläche [!UICONTROL Audience erstellen] wird auf der Seite zum Durchsuchen der Zielgruppe des Kontos hervorgehoben.](../images/ui/account-audiences/select-create-audience.png)
 
-Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Unter dem [!UICONTROL Attribute] -Registerkarte können Sie sowohl Platform-erstellte als auch benutzerdefinierte Attribute hinzufügen.
+Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Auf der Registerkarte [!UICONTROL Attribute] können Sie sowohl von Platform erstellte als auch benutzerdefinierte Attribute hinzufügen.
 
 ![Der Segment Builder wird angezeigt. Beachten Sie, dass nur die Attribute und Zielgruppen angezeigt werden.](../images/ui/account-audiences/segment-builder.png)
 
-Beachten Sie beim Erstellen von Kontozielgruppen, dass Ereignisse unter **[!UICONTROL Personen]**, anstatt ihre eigene Registerkarte zu sein, da diese Attribute mit Personen verknüpft sind.
+Beachten Sie bei der Erstellung von Kontozielgruppen, dass Ereignisse unter **[!UICONTROL Personen]** aufgelistet werden, anstatt ihre eigene Registerkarte zu sein, da diese Attribute mit Personen verknüpft sind.
 
-![Der Ort, an dem Ereignisse gefunden werden sollen, der sich im [!UICONTROL Personen] -Ordner, hervorgehoben ist.](../images/ui/account-audiences/attributes.png)
+![Der Speicherort für Ereignisse, der sich im Ordner [!UICONTROL Personen] befindet, wird hervorgehoben.](../images/ui/account-audiences/attributes.png)
 
-Unter dem [!UICONTROL Zielgruppen] können Sie zuvor erstellte benutzerspezifische Zielgruppen hinzufügen, um diese bei der Erstellung Ihrer eigenen Kontozielgruppe zu erweitern.
+Auf der Registerkarte [!UICONTROL Zielgruppen] können Sie zuvor erstellte personenbasierte Zielgruppen hinzufügen, die bei der Erstellung Ihrer eigenen Kontozielgruppe erstellt werden sollen.
 
-![Die Registerkarte Zielgruppen im Segment Builder wird hervorgehoben.](../images/ui/account-audiences/audiences.png)
+![Die Registerkarte &quot;Zielgruppen&quot;im Segment Builder wird hervorgehoben.](../images/ui/account-audiences/audiences.png)
 
 Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md).
 
@@ -75,15 +75,15 @@ Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch
 
 Nachdem Sie Ihre Zielgruppe erstellt haben, können Sie die Zielgruppe für andere nachgelagerte Dienste aktivieren.
 
-Wählen Sie die zu aktivierende Audience aus, gefolgt von **[!UICONTROL Auf Ziel aktivieren]**.
+Wählen Sie die Zielgruppe aus, die Sie aktivieren möchten, gefolgt von **[!UICONTROL Für Ziel aktivieren]**.
 
-![Die [!UICONTROL Auf Ziel aktivieren] im Schnellaktionsmenü der ausgewählten Audience hervorgehoben.](../images/ui/account-audiences/activate.png)
+![Die Schaltfläche [!UICONTROL In Ziel aktivieren] ist im Schnellaktionsmenü für die ausgewählte Zielgruppe hervorgehoben.](../images/ui/account-audiences/activate.png)
 
-Die [!UICONTROL Ziel aktivieren] angezeigt. Weitere Informationen zum Aktivierungsprozess, einschließlich unterstützter Ziele und Details zu Feldzuordnungen, finden Sie im Abschnitt [Kontozielgruppen aktivieren](/help/destinations/ui/activate-account-audiences.md) Tutorial.
+Die Seite [!UICONTROL Ziel aktivieren] wird angezeigt. Weitere Informationen zum Aktivierungsprozess, einschließlich unterstützter Ziele und Details zu Feldzuordnungen, finden Sie im Tutorial [Kontozielgruppen aktivieren](/help/destinations/ui/activate-account-audiences.md) .
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Handbuchs erhalten Sie jetzt ein besseres Verständnis dafür, wie Sie Ihre Kontozielgruppen in Adobe Experience Platform erstellen und verwenden. Informationen zur Verwendung anderer Zielgruppentypen in Platform finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](./overview.md).
+Nach dem Lesen dieses Handbuchs erhalten Sie jetzt ein besseres Verständnis dafür, wie Sie Ihre Kontozielgruppen in Adobe Experience Platform erstellen und verwenden. Informationen zur Verwendung anderer Zielgruppentypen in Platform finden Sie im [UI-Handbuch für den Segmentation Service](./overview.md).
 
 ## Anhang {#appendix}
 
@@ -161,24 +161,24 @@ Im folgenden Abschnitt finden Sie weitere Informationen zu Kontozielgruppen.
 >title="Verstoß gegen eine Einschränkung"
 >abstract="Die Zielgruppe verstößt gegen eine Einschränkung. Weitere Informationen hierzu finden Sie im verknüpften Dokument."
 
-Bei Verwendung von Kontozielgruppen wird die Zielgruppe **must** die folgenden Einschränkungen einhalten:
+Bei der Verwendung von Kontozielgruppen muss die Zielgruppe **1} die folgenden Einschränkungen erfüllen:**
 
 >[!NOTE]
 >
->Die folgende Liste zeigt die **default** Einschränkungen für Zielgruppen. Diese Werte **kann** ändern, abhängig von den vom Administrator Ihres Unternehmens implementierten Einstellungen.
+>Die folgende Liste zeigt die **standardmäßigen** -Begrenzungen für Kontozielgruppen. Diese Werte **können** entsprechend den vom Administrator Ihres Unternehmens implementierten Einstellungen ändern.
 
-- Das maximale Lookback-Fenster für Erlebnisereignisse ist **30 Tage**.
+- Das maximale Lookback-Fenster für Erlebnisereignisse beträgt **30 Tage**.
 - Die maximale Tiefe verschachtelter Container beträgt **5**.
    - Das bedeutet, dass Sie beim Erstellen Ihrer Zielgruppe **nicht** mehr als fünf verschachtelte Container haben dürfen.
-- Die maximale Anzahl von Regeln in einem einzelnen Container beträgt **5**.
-   - Das bedeutet, dass Ihre Zielgruppe **cannot** haben mehr als fünf Regeln, aus denen sich Ihre Zielgruppe zusammensetzt.
-- Die maximale Anzahl von Entitäten, die verwendet werden können, lautet **5**.
+- Die maximale Anzahl von Regeln innerhalb eines einzelnen Containers beträgt **5**.
+   - Das bedeutet, dass Ihre Audience **nicht mehr als fünf Regeln haben kann, aus denen Ihre Audience besteht.**
+- Die maximale Anzahl von Querentitäten, die verwendet werden können, ist **5**.
    - Eine übergreifende Entität ist der Fall, wenn Sie zwischen verschiedenen Entitäten in Ihrer Zielgruppe wechseln. So können Sie beispielsweise von einem Konto zu einer Person zu einer Marketingliste wechseln.
-- Benutzerdefinierte Entitäten **cannot** verwendet werden.
+- Benutzerdefinierte Entitäten **können nicht** verwendet werden.
 - Die maximale Anzahl von Werten, die für ein einzelnes Feld überprüft werden können, beträgt **50**.
    - Wenn Sie beispielsweise das Feld &quot;Stadt&quot;haben, können Sie diesen Wert mit 50 Stadtnamen vergleichen.
-- Kontozielgruppen **cannot** use `inSegment` -Ereignisse.
-- Kontozielgruppen **cannot** sequenzielle Ereignisse verwenden.
-- Kontozielgruppen **cannot** Verwenden Sie Maps.
+- Kontozielgruppen **können** keine `inSegment` -Ereignisse verwenden.
+- Kontozielgruppen **können keine sequenziellen Ereignisse verwenden.**
+- Kontozielgruppen **können keine Karten verwenden**.
 - Die maximale Tiefe von verschachtelten Arrays beträgt **5**.
-- Die maximale Anzahl verschachtelter Objekte beträgt **10**.
+- Die maximale Anzahl verschachtelter Objekte ist **10**.

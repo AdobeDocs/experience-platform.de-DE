@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; CRM; crm; Crm Flow-Dienst
+keywords: Experience Platform;home;popular topics;CRM;crm;crm-Flow-Service
 solution: Experience Platform
 title: Erkunden eines CRM-Systems mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um CRM-Systeme zu untersuchen.
 exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 39%
+source-wordcount: '586'
+ht-degree: 38%
 
 ---
 
-# Erkunden Sie ein CRM-System mithilfe des [!DNL Flow Service] API
+# CRM-System mit der [!DNL Flow Service]-API durchsuchen
 
-[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu erfassen und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service] API zur Erforschung von CRM-Systemen.
+In diesem Tutorial wird die [!DNL Flow Service] -API verwendet, um CRM-Systeme zu untersuchen.
 
 ## Erste Schritte
 
@@ -24,11 +24,11 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu einem CRM-System herstellen zu können.
 
 ### Erstellen einer Verbindungs-ID
 
-Zur Nutzung Ihres CRM-Systems mithilfe von [!DNL Platform] APIs verwenden, müssen Sie über eine gültige Verbindungs-ID verfügen. Wenn Sie noch keine Verbindung für das CRM-System haben, mit dem Sie arbeiten möchten, können Sie eine durch die folgenden Tutorials erstellen:
+Um Ihr CRM-System mithilfe von [!DNL Platform] -APIs zu untersuchen, benötigen Sie eine gültige Verbindungs-ID. Wenn Sie noch keine Verbindung für das CRM-System haben, mit dem Sie arbeiten möchten, können Sie eine durch die folgenden Tutorials erstellen:
 
 * [Microsoft Dynamics](../create/crm/ms-dynamics.md)
 * [Salesforce](../create/crm/salesforce.md)
@@ -55,7 +55,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Datentabellen durchsuchen
 
-Mithilfe der Verbindungs-ID für Ihr CRM-System können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in die Sie aufnehmen möchten [!DNL Platform].
+Mithilfe der Verbindungs-ID für Ihr CRM-System können Sie Ihre Datentabellen durch Ausführen von GET-Anfragen untersuchen. Verwenden Sie den folgenden Aufruf, um den Pfad der Tabelle zu finden, die Sie untersuchen oder in [!DNL Platform] aufnehmen möchten.
 
 **API-Format**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort besteht aus einer Reihe von Tabellen aus Ihrem CRM-System. Finden Sie den Tisch, den Sie mitbringen möchten [!DNL Platform] und nimmt Kenntnis von `path` -Eigenschaft, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
+Eine erfolgreiche Antwort besteht aus einer Reihe von Tabellen aus Ihrem CRM-System. Suchen Sie die Tabelle, die Sie in [!DNL Platform] aufnehmen möchten, und notieren Sie sich ihre Eigenschaft `path`, da Sie sie im nächsten Schritt bereitstellen müssen, um ihre Struktur zu überprüfen.
 
 ```json
 [
@@ -136,7 +136,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen der `columns` Array.
+Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu den einzelnen Spalten der Tabelle befinden sich in Elementen des `columns` -Arrays.
 
 ```json
 {
@@ -171,4 +171,4 @@ Eine erfolgreiche Antwort gibt die Struktur einer Tabelle zurück. Details zu de
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie Ihr CRM-System untersucht und den Pfad der Tabelle gefunden, in die Sie einführen möchten. [!DNL Platform]und Informationen über seine Struktur erhalten. Sie können diese Informationen im nächsten Tutorial zu [Daten aus Ihrem CRM-System erfassen und in Platform integrieren](../collect/crm.md).
+In diesem Tutorial haben Sie Ihr CRM-System untersucht, den Pfad der Tabelle gefunden, die Sie in [!DNL Platform] einführen möchten, und Informationen über die Struktur erhalten. Sie können diese Informationen im nächsten Tutorial verwenden, um [Daten aus Ihrem CRM-System zu erfassen und in Platform](../collect/crm.md) zu importieren.

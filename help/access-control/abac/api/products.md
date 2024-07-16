@@ -18,7 +18,7 @@ ht-degree: 25%
 >
 >Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über die Rolle &quot;org admin&quot;für die angeforderte Organisation verfügen.
 
-Die `/products` -Endpunkt in der attributbasierten Zugriffssteuerungs-API können Sie Produkte sowie Berechtigungskategorien und Berechtigungssätze, die mit Produkten in Ihrer Organisation verknüpft sind, programmgesteuert verwalten.
+Mit dem Endpunkt `/products` in der attributbasierten Zugriffssteuerungs-API können Sie Produkte sowie Berechtigungskategorien und Berechtigungssätze, die mit Produkten in Ihrer Organisation verknüpft sind, programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -26,7 +26,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der API für die attribu
 
 ## Liste der berechtigten Produkte abrufen {#list}
 
-Sie können eine Liste der berechtigten Produkte abrufen, indem Sie eine GET-Anfrage an die `/products` -Endpunkt.
+Sie können eine Liste berechtigter Produkte abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/products` senden.
 
 **API-Format**
 
@@ -70,7 +70,7 @@ Eine erfolgreiche Antwort gibt eine Liste der berechtigten Produkte zurück, die
 
 ## Suchen nach Berechtigungskategorien nach Produkt-ID
 
-Sie können Berechtigungskategorien für ein bestimmtes Produkt nachschlagen, indem Sie eine GET-Anfrage an die `/products/{PRODUCT_ID}/categories` -Endpunkt bei der Angabe Ihrer Produkt-ID.
+Sie können nach Berechtigungskategorien für ein bestimmtes Produkt suchen, indem Sie eine GET-Anfrage an den Endpunkt `/products/{PRODUCT_ID}/categories` richten und dabei Ihre Produkt-ID angeben.
 
 **API-Format**
 
@@ -84,7 +84,7 @@ GET /products/{PRODUCT_ID}/categories
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden Berechtigungskategorien abgerufen, die mit `{PRODUCT_ID}`.
+Mit der folgenden Anfrage werden die mit `{PRODUCT_ID}` verknüpften Berechtigungskategorien abgerufen.
 
 ```shell
 curl -X GET \
@@ -145,7 +145,7 @@ Bei einer erfolgreichen Antwort werden die Berechtigungskategorien zurückgegebe
 
 ## Berechtigungssätze nach Produkt-ID nachschlagen
 
-Sie können Berechtigungssätze für ein bestimmtes Produkt nachschlagen, indem Sie eine GET-Anfrage an die `/products/{PRODUCT_ID}/permission-sets` -Endpunkt bei der Angabe Ihrer Produkt-ID.
+Sie können nach Berechtigungssätzen für ein bestimmtes Produkt suchen, indem Sie eine GET-Anfrage an den `/products/{PRODUCT_ID}/permission-sets` -Endpunkt richten und dabei Ihre Produkt-ID angeben.
 
 **API-Format**
 
@@ -159,7 +159,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 **Anfrage**
 
-Die folgende Anfrage ruft Berechtigungssätze ab, die mit `{PRODUCT_ID}`.
+Mit der folgenden Anfrage werden die mit `{PRODUCT_ID}` verknüpften Berechtigungssätze abgerufen.
 
 ```shell
 curl -X GET \
@@ -242,4 +242,4 @@ Bei einer erfolgreichen Antwort werden die mit der abgefragten Produkt-ID verkn�
 | `category` | Die verfügbare Berechtigungskategorie. |
 | `permissions` | Zu den Berechtigungen gehört die Möglichkeit, Adobe Campaign-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemata und die Verwaltung von Datensätzen. |
 | `permissions.resource` | Das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht. Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
-| `permissions.actions` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `view`, `read`, `create`, `edit`, und `delete` |
+| `permissions.actions` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `view`, `read`, `create`, `edit` und `delete` |

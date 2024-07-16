@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Luma-Webdaten; Data Science Workspace; beliebte Themen; Rezepte; Demodaten; Demowebdaten; Luma-Daten
+keywords: Experience Platform; Luma-Web-Daten; Data Science Workspace; beliebte Themen; Rezepte; Demodaten; Demo-Web-Daten; Luma-Daten
 solution: Experience Platform
 title: Erstellen von Luma-Webschemata und -Datensätzen
 type: Tutorial
@@ -7,16 +7,16 @@ description: In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 3%
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 # Erstellen von Luma-Propensity-Modellschemas und -Datensätzen
 
-In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] Tutorials. Nach Abschluss des Vorgangs stehen Ihnen und Ihrer Organisation die folgenden Schemas und Datensätze zur Verfügung.
+In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen Tutorials [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] erforderlich sind. Nach Abschluss des Vorgangs stehen Ihnen und Ihrer Organisation die folgenden Schemas und Datensätze zur Verfügung.
 
-**Schemata:**
+**Schemas:**
 
 - Luma-Webdatenschema
 - Schema für Tendenzmodelle mit Scoring-Ergebnissen
@@ -28,9 +28,9 @@ In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle an
 - Scoring-Datensatz für Tendenzmodelle
 - Datensatz mit Tendenzmodellauswertungen
 
-## Laden Sie die Assets herunter. {#assets}
+## Herunterladen der Assets {#assets}
 
-Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Vor dem Verfahren [Herunterladen der erforderlichen Assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) ZIP-Ordner. Dieser Ordner enthält:
+Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell. Laden Sie vor dem Fortfahren den gewünschten Ordner mit der ZIP-Datei &quot;assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip)&quot;herunter. [ Dieser Ordner enthält:
 
 - Das Modell-Notebook mit Kaufneigung
 - Ein Notebook, mit dem Daten in einen Trainings- und Scoring-Datensatz (eine Untergruppe der Luma-Webdaten) aufgenommen werden
@@ -43,7 +43,7 @@ Das folgende Tutorial verwendet ein benutzerdefiniertes Luma-Kaufneigungsmodell.
 
 ### Erstellen des Luma-Webdatenschemas und Erfassen der Daten
 
-Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Platform verfügen, der zum Trainieren und Bewertung Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace-Kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Erfassung der vom Kaufpropensionsmodell verwendeten Daten.
+Um ein Modell zu erstellen, müssen Sie über einen Datensatz in Platform verfügen, der zum Trainieren und Bewertung Ihres Modells verwendet wird. Das folgende Video-Tutorial aus dem [Data Science Workspace Kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=de) führt Sie durch die Erstellung des Luma-Schemas und die Erfassung der vom Kaufneigungsmodell verwendeten Daten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
@@ -55,6 +55,6 @@ Um das Rezept Builder-Notebook auszuführen oder die API zum Trainieren und Bewe
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich die erforderlichen Schemas und Datensätze für das Luma-Tendenzmodell erstellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und das Modell mithilfe der [Rezept-Builder-Notebook](../jupyterlab/create-a-model.md) Tutorial.
+In diesem Tutorial haben Sie erfolgreich die erforderlichen Schemas und Datensätze für das Luma-Tendenzmodell erstellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und das Modell mithilfe des Tutorials [Rezept-Builder-Notebook](../jupyterlab/create-a-model.md) erstellen.
 
-Darüber hinaus können Sie die Daten mithilfe des bereitgestellten Notebooks Exploratory Data Analysis (EDA) untersuchen. Dieses Notebook kann verwendet werden, um Muster in den Luma-Daten zu verstehen, die Datensaniertheit zu überprüfen und die relevanten Daten für das prädiktive Tendenzmodell zusammenzufassen. Weitere Informationen zur Explorationsdatenanalyse finden Sie unter [EDA-Dokumentation](../jupyterlab/eda-notebook.md).
+Darüber hinaus können Sie die Daten mithilfe des bereitgestellten Notebooks Exploratory Data Analysis (EDA) untersuchen. Dieses Notebook kann verwendet werden, um Muster in den Luma-Daten zu verstehen, die Datensaniertheit zu überprüfen und die relevanten Daten für das prädiktive Tendenzmodell zusammenzufassen. Weitere Informationen zur Explorationsdatenanalyse finden Sie in der [EDA-Dokumentation](../jupyterlab/eda-notebook.md).

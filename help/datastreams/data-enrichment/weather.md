@@ -1,22 +1,22 @@
 ---
 title: Erweitern der Datenerfassung mit Wetterdaten aus DNL The Weather Channel
 description: Verbessern Sie die Daten, die Sie über Datastreams erfassen, mit Wetterdaten aus DNL The Weather Channel.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 68%
 
 ---
 
-
-# Erweitern der Datenerfassung mit Wetterdaten aus [!DNL The Weather Channel]
+# Datenerfassung mit Wetterdaten aus [!DNL The Weather Channel] verbessern
 
 Adobe ist eine Partnerschaft mit [!DNL [The Weather Company]](https://www.ibm.com/weather) eingegangen, um die über Datenströme gesammelten Daten um den zusätzlichen Kontext des Wetters in den Vereinigten Staaten zu ergänzen. Sie können diese Daten für Analysen, Targeting und die Erstellung von Zielgruppen in Experience Platform verwenden.
 
-Es gibt drei Datentypen, die in verfügbar sind [!DNL The Weather Channel]:
+Es gibt drei Datentypen, die von [!DNL The Weather Channel] verfügbar sind:
 
 * **[!UICONTROL Aktuelles Wetter]**: Die aktuellen Wetterbedingungen der Benutzenden basierend auf ihrem Standort. Dazu gehören aktuelle Temperatur, Niederschlag, Wolkenabdeckung und mehr.
-* **[!UICONTROL Vorhergesagtes Wetter]**: Die Prognose enthält die 1-, 2-, 3-, 5-, 7- und 10-tägige Prognose für den Standort des Benutzers.
+* **[!UICONTROL Prognostiziertes Wetter]**: Die Prognose enthält die Vorhersage für den Benutzerstandort von 1, 2, 3, 5, 7 und 10 Tagen.
 * **[!UICONTROL Trigger]**: Trigger sind spezifische Kombinationen, die verschiedenen semantischen Wetterbedingungen entsprechen. Es gibt drei verschiedene Arten von Wetter-Triggern:
 
    * **[!UICONTROL Wetter-Trigger]**: Semantisch aussagekräftige Bedingungen, wie z. B. kaltes oder regnerisches Wetter. Diese können sich in ihren Definitionen nach verschiedenen Klimazonen unterscheiden.
@@ -27,10 +27,10 @@ Es gibt drei Datentypen, die in verfügbar sind [!DNL The Weather Channel]:
 
 Bevor Sie Wetterdaten verwenden, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 
-* Sie müssen die Wetterdaten lizenzieren, die Sie von [!DNL The Weather Channel]. Von dort werden sie dann für Ihr Konto aktiviert.
-* Wetterdaten sind nur über Datenströme verfügbar. Um Wetterdaten zu verwenden, müssen Sie [!DNL Web SDK], [!DNL Mobile Edge Extension] oder [Server-API](../../server-api/overview.md) , um diese Daten einzuschließen.
+* Sie müssen die von [!DNL The Weather Channel] verwendeten Wetterdaten lizenzieren. Von dort werden sie dann für Ihr Konto aktiviert.
+* Wetterdaten sind nur über Datenströme verfügbar. Um Wetterdaten zu verwenden, müssen Sie [!DNL Web SDK], [!DNL Mobile Edge Extension] oder die [Server-API](../../server-api/overview.md) verwenden, um diese Daten einzuschließen.
 * Für Ihren Datenstrom muss die [[!UICONTROL Geo-Position]](../configure.md#advanced-options) aktiviert sein.
-* Fügen Sie die [Wetterfeldgruppe](#schema-configuration) dem Schema, das Sie verwenden.
+* Fügen Sie dem verwendeten Schema die [Wetterfeldgruppe](#schema-configuration) hinzu.
 
 ## Bereitstellung {#provisioning}
 
@@ -62,11 +62,11 @@ Die Liste der Felder, die Sie zuordnen können, finden Sie auf der Seite [Wetter
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics] sind die Wetterdaten in dem Datensatz verfügbar, der im Datenstrom angegeben ist. Solange die Wetterattribute [zu Ihrem Schema hinzugefügt wurde](#prerequisites-prerequisites), können sie [Hinzufügen zu einer Datenansicht](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=de) in [!DNL Customer Journey Analytics].
+In [!DNL Adobe Customer Journey Analytics] sind die Wetterdaten in dem Datensatz verfügbar, der im Datenstrom angegeben ist. Solange die Wetterattribute [Ihrem Schema hinzugefügt werden](#prerequisites-prerequisites), sind sie für [zum Hinzufügen zu einer Datenansicht](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=de) in [!DNL Customer Journey Analytics] verfügbar.
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Die Wetterdaten sind im [Real-time Customer Data Platform](../../rtcdp/overview.md), zur Verwendung in Zielgruppen. Wetterdaten werden an Ereignisse angehängt.
+Wetterdaten sind in der [Real-time Customer Data Platform](../../rtcdp/overview.md) zur Verwendung in Zielgruppen verfügbar. Wetterdaten werden an Ereignisse angehängt.
 
 ![Segment Builder, der Wetterereignisse anzeigt](../assets/data-enrichment/weather/schema-builder.png)
 

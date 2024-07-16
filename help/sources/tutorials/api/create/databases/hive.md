@@ -7,20 +7,20 @@ description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Apache Hive auf
 exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 60%
+source-wordcount: '477'
+ht-degree: 58%
 
 ---
 
-# Erstellen Sie eine [!DNL Apache Hive] on [!DNL Azure HDInsights] Basisverbindung mit [!DNL Flow Service] API
+# Erstellen einer Basisverbindung mit [!DNL Apache Hive] für [!DNL Azure HDInsights] mithilfe der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Die [!DNL Apache Hive] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
+>Der Connector [!DNL Apache Hive] on [!DNL Azure HDInsights] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Apache Hive] on [!DNL Azure HDInsights] (nachstehend &quot;genannt)[!DNL Hive]&quot;) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Apache Hive] auf [!DNL Azure HDInsights] (nachfolgend als &quot;[!DNL Hive]&quot; bezeichnet) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -29,7 +29,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Hive] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Hive] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -37,12 +37,12 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Hive] herstellen kann, müss
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Die IP-Adresse oder der Hostname der [!DNL Hive] Server. |
-| `username` | Der Benutzername, mit dem Sie auf zugreifen [!DNL Hive] Server. |
+| `host` | Die IP-Adresse oder der Hostname des [!DNL Hive] -Servers. |
+| `username` | Der Benutzername, mit dem Sie auf den [!DNL Hive] -Server zugreifen. |
 | `password` | Das dem Benutzer entsprechende Kennwort. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Hive] ist: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Hive] lautet: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
-Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Hive-Dokument](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem Hive-Dokument](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
 ### Verwenden von Platform-APIs
 
@@ -90,8 +90,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrer [!DNL Hive] -Konto. |
-| `connectionSpec.id` | Die [!DNL Hive]-Verbindungsspezifikations-ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die Ihrem [!DNL Hive]-Konto zugeordnet ist. |
+| `connectionSpec.id` | Die [!DNL Hive] Verbindungsspezifikations-ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
 
 **Antwort**
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Apache Hive] on [!DNL Azure HDInsights] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie mit der [!DNL Flow Service] -API eine Basisverbindung für [!DNL Apache Hive] auf [!DNL Azure HDInsights] erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)

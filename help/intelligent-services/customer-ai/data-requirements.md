@@ -8,7 +8,7 @@ description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '2484'
+source-wordcount: '2505'
 ht-degree: 100%
 
 ---
@@ -219,7 +219,7 @@ Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe 
 | ----- | ----------- |
 | [!UICONTROL Ergebnis] | Die relative Wahrscheinlichkeit, mit der ein Kunde das prognostizierte Ziel innerhalb des definierten Zeitraums erreicht. Dieser Wert ist nicht als Prozentsatz der Wahrscheinlichkeit zu behandeln, sondern vielmehr als die Wahrscheinlichkeit eines Individuums im Vergleich zur Gesamtbevölkerung. Dieser Wert liegt im Bereich von 0 bis 100. |
 | Wahrscheinlichkeit | Dieses Attribut ist die wahre Wahrscheinlichkeit eines Profils, dass es das das prognostizierte Ziel innerhalb des definierten Zeitraums erreicht. Beim Vergleichen der Ausgaben über verschiedene Ziele hinweg wird empfohlen, die Wahrscheinlichkeit über das Perzentil oder die Bewertung in Betracht zu ziehen. Die Wahrscheinlichkeit sollte immer bei der Bestimmung der durchschnittlichen Wahrscheinlichkeit für die gesamte geeignete Bevölkerung verwendet werden, da die Wahrscheinlichkeit für Ereignisse, die nicht häufig auftreten, tendenziell niedriger liegt. Die Werte für die Wahrscheinlichkeit liegen zwischen 0 und 1. |
-| Perzentil | Dieser Wert enthält Informationen zur Leistung eines Profils im Vergleich zu anderen Profilen mit ähnlichen Werten. Ein Profil mit einem Perzentil-Rang von 99 für Kundenabwanderung weist beispielsweise darauf hin, dass es ein höheres Risiko für Abwanderungen aufweist als 99 % aller anderen Profile, die bewertet wurden. Die Perzentile liegen zwischen 1 und 100. |
+| Perzentil | Dieser Wert enthält Informationen zur Performance eines Profils im Vergleich zu anderen Profilen mit ähnlichen Werten. Ein Profil mit einem Perzentil-Rang von 99 für Kundenabwanderung weist beispielsweise darauf hin, dass es ein höheres Risiko für Abwanderungen aufweist als 99 % aller anderen Profile, die bewertet wurden. Die Perzentile liegen zwischen 1 und 100. |
 | Tendenztyp | Der ausgewählte Tendenztyp. |
 | Datum der Auswertung | Das Datum, an dem die Auswertung erfolgte. |
 | Einflussfaktoren | Dies sind prognostizierte Gründe dafür, warum ein Profil wahrscheinlich konvertiert oder abwandert. Die Faktoren bestehen aus den folgenden Attributen:<ul><li>Code: Das Profil- oder Verhaltensattribut, das das prognostizierte Ergebnis eines Profils positiv beeinflusst. </li><li>Wert: Der Wert des Profil- oder Verhaltensattributs.</li><li>Wichtigkeit: Gibt an, welche Gewichtung das Profil- oder Verhaltensattribut auf das prognostizierte Ergebnis hat (niedrig, mittel, hoch)</li></ul> |

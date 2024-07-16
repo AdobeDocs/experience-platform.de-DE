@@ -1,7 +1,8 @@
 ---
 title: Sammlungsdatentyp für Kapiteldetails
 description: Erfahren Sie mehr über den Datentyp "Chapter Details Collection Experience Data Model (XDM)".
-source-git-commit: c6108bb692c80c79e115ac7b1488d95a7039ffcf
+exl-id: 4f841f5a-3840-4da5-a3a4-ceecde87c684
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 11%
@@ -10,7 +11,7 @@ ht-degree: 11%
 
 # [!UICONTROL Kapiteldetails] Sammlungsdatentyp
 
-[!UICONTROL Kapiteldetails] Die Sammlung ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der verschiedene Attribute beschreibt, die sich auf Kapitel oder Segmente in Medieninhalten beziehen. Verwenden Sie die [!UICONTROL Kapiteldetails] Sammlungsdatentyp zum Erfassen von Details wie Kapitelname, Offset, Dauer und Kapitelindex. Medienerfassungsfelder erfassen Daten und senden sie zur weiteren Verarbeitung an andere Adobe-Dienste.
+[!UICONTROL Kapiteldetails] Sammlung ist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der verschiedene Attribute beschreibt, die sich auf Kapitel oder Segmente in Medieninhalten beziehen. Verwenden Sie den Sammlungsdatentyp [!UICONTROL Kapiteldetails] , um Details wie Kapitelname, Offset, Dauer und Kapitelindex zu erfassen. Medienerfassungsfelder erfassen Daten und senden sie zur weiteren Verarbeitung an andere Adobe-Dienste.
 
 ![Ein Diagramm des Datentyps der Kapiteldetails-Sammlung.](../images/data-types/chapter-details-collection.png)
 

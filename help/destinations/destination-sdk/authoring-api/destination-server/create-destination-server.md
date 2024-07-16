@@ -4,7 +4,7 @@ title: Erstellen einer Ziel-Server-Konfiguration
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2036'
 ht-degree: 89%
 
 ---
@@ -850,7 +850,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 
 ### Dynamische Dropdown-Zielserver erstellen {#dynamic-dropdown-servers}
 
-Verwendung [dynamische Dropdown-Listen](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) , um Dropdown-Kundendatenfelder dynamisch abzurufen und auszufüllen, basierend auf Ihrer eigenen API. Beispielsweise können Sie eine Liste vorhandener Benutzerkonten abrufen, die Sie für eine Zielverbindung verwenden möchten.
+Verwenden Sie [dynamische Dropdown-Listen](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors), um Dropdown-Kundendatenfelder dynamisch abzurufen und auszufüllen, basierend auf Ihrer eigenen API. Beispielsweise können Sie eine Liste vorhandener Benutzerkonten abrufen, die Sie für eine Zielverbindung verwenden möchten.
 
 Sie müssen einen Zielserver für dynamische Dropdown-Listen konfigurieren, bevor Sie das Feld für dynamische Dropdown-Kundendaten konfigurieren können.
 
@@ -924,9 +924,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
 | `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres dynamischen Dropdown-Servers dar, der nur für Adobe sichtbar ist. |
-| `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie `URL_BASED` für dynamische Dropdown-Server. |
+| `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie bei dynamischen Dropdown-Servern auf `URL_BASED` fest. |
 | `urlBasedDestination.url.templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Adobe die URL im nachstehenden Feld `value` umwandeln muss. Verwenden Sie diese Option, wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Verwenden Sie `NONE`, wenn von Adobe keine Umwandlung erforderlich ist, z. B. wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Füllen Sie die Adresse des API-Endpunkts aus, mit dem sich Experience Platform verbinden und die Dropdown-Werte abrufen soll. |
+| `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, zu dem sich Experience Platform verbinden und die Dropdown-Werte abrufen soll. |
 | `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Verwenden Sie für dynamische Dropdown-Server `GET`. |
 | `httpTemplate.headers` | Objekt | *Optional.l* Schließen Sie alle Header ein, die zum Herstellen einer Verbindung mit dem dynamischen Dropdown-Server erforderlich sind. |
 | `responseFields.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |

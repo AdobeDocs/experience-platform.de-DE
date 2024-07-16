@@ -5,16 +5,16 @@ description: Die Foresee-Erweiterung ist ein Umfrageziel in Adobe Experience Pla
 exl-id: 3eca9e2e-fd41-4dca-a38f-8e281c45a01b
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '429'
 ht-degree: 89%
 
 ---
 
-# [!DNL Foresee]-Erweiterung  {#foresee-extension}
+# [!DNL Foresee]-Erweiterung {#foresee-extension}
 
 ## Übersicht {#overview}
 
-Konfigurieren [!DNL ForeSee] Produktbereitstellungen mithilfe von Tags.
+Konfigurieren von [!DNL ForeSee] -Produktbereitstellungen mithilfe von Tags.
 
 [!DNL Foresee] ist eine Umfrageerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Foresee] Erweiterung:
+So installieren Sie die [!DNL Foresee]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschließen der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie unter [Foresee-Erweiterungsseite](https://exchange.adobe.com/experiencecloud.details.100164.html) auf Adobe Exchange.
+Informationen zu den Konfigurationsoptionen für Erweiterungen finden Sie auf der [Foresee-Erweiterungsseite](https://exchange.adobe.com/experiencecloud.details.100164.html) in der Adobe Exchange.
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt zum Thema [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

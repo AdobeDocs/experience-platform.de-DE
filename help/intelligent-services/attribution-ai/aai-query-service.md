@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Analyse von Attributionswerten mithilfe von Query Service
 
-Jede Zeile in den Daten stellt eine Konversion dar, in der Informationen für verwandte Touchpoints als Array von Strukturen unter dem `touchpointsDetail` Spalte.
+Jede Zeile in den Daten stellt eine Konversion dar, in der Informationen für verwandte Touchpoints als Array von Strukturen unter der Spalte `touchpointsDetail` gespeichert werden.
 
 | Touchpoint-Informationen | Spalte |
 | ---------------------- | ------ |
@@ -23,7 +23,7 @@ Jede Zeile in den Daten stellt eine Konversion dar, in der Informationen für ve
 
 ## Suchen nach Datenpfaden
 
-Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche die Option **[!UICONTROL Datensätze]** in der linken Navigation. Die **[!UICONTROL Datensätze]** angezeigt. Wählen Sie als Nächstes die **[!UICONTROL Durchsuchen]** und suchen Sie den Ausgabedatensatz für Ihre Attribution AI-Bewertungen.
+Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Datensätze]** aus. Die Seite **[!UICONTROL Datensätze]** wird angezeigt. Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Durchsuchen]** aus und suchen Sie den Ausgabedatensatz für Ihre Attribution AI-Bewertungen.
 
 ![Zugriff auf Ihr Modell](./images/aai-query/datasets_browse.png)
 
@@ -31,37 +31,37 @@ Wählen Sie Ihren Ausgabedatensatz aus. Die Seite mit der Datensatzaktivität wi
 
 ![Datensatzaktivität-Seite](./images/aai-query/select_preview.png)
 
-Wählen Sie auf der Seite Datensatzaktivität die Option **[!UICONTROL Vorschau des Datensatzes anzeigen]** in der oberen rechten Ecke, um eine Vorschau Ihrer Daten anzuzeigen und sicherzustellen, dass sie erwartungsgemäß erfasst wurden.
+Wählen Sie auf der Seite mit der Datensatzaktivität **[!UICONTROL Datensatz-Vorschau]** in der oberen rechten Ecke aus, um Ihre Daten in der Vorschau anzuzeigen und sicherzustellen, dass sie erwartungsgemäß erfasst wurden.
 
 ![Vorschau-Datensatz](./images/aai-query/preview_dataset.JPG)
 
 Wählen Sie nach der Vorschau Ihrer Daten das Schema in der rechten Leiste aus. Es wird ein Popover mit dem Schemanamen und der Beschreibung angezeigt. Wählen Sie den Hyperlink für den Schemanamen aus, um zum Scoring-Schema umzuleiten.
 
-![Schema auswählen](./images/aai-query/select_schema.png)
+![Wählen Sie das Schema aus](./images/aai-query/select_schema.png)
 
-Mithilfe des Scoring-Schemas können Sie einen Wert auswählen oder suchen. Nach der Auswahl wird die **[!UICONTROL Feldeigenschaften]** Seitenleiste öffnet sich, sodass Sie den Pfad kopieren können, der zum Erstellen von Abfragen verwendet werden soll.
+Mithilfe des Scoring-Schemas können Sie einen Wert auswählen oder suchen. Nach der Auswahl wird die Seitenleiste **[!UICONTROL Feldeigenschaften]** geöffnet, in der Sie den Pfad kopieren können, der zum Erstellen von Abfragen verwendet werden soll.
 
-![Pfad kopieren](./images/aai-query/copy_path.png)
+![Kopieren Sie den Pfad](./images/aai-query/copy_path.png)
 
 ## Zugriff auf Query Service
 
-Um über die Platform-Benutzeroberfläche auf Query Service zuzugreifen, wählen Sie zunächst **[!UICONTROL Abfragen]** Wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Durchsuchen]** Registerkarte. Eine Liste der zuvor gespeicherten Abfragen wird geladen.
+Um über die Platform-Benutzeroberfläche auf Query Service zuzugreifen, wählen Sie zunächst **[!UICONTROL Abfragen]** im linken Navigationsbereich und dann die Registerkarte **[!UICONTROL Durchsuchen]** aus. Eine Liste der zuvor gespeicherten Abfragen wird geladen.
 
 ![Query Service Browse](./images/aai-query/query_tab.png)
 
-Wählen Sie als Nächstes **[!UICONTROL Abfrage erstellen]** in der oberen rechten Ecke. Der Abfrage-Editor wird geladen. Mithilfe des Abfrage-Editors können Sie mit der Erstellung von Abfragen mit Ihren Scoring-Daten beginnen.
+Wählen Sie dann oben rechts **[!UICONTROL Abfrage erstellen]** aus. Der Abfrage-Editor wird geladen. Mithilfe des Abfrage-Editors können Sie mit der Erstellung von Abfragen mit Ihren Scoring-Daten beginnen.
 
 ![Abfrageeditor](./images/aai-query/query_example.png)
 
-Weitere Informationen zum Abfrage-Editor finden Sie unter [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md).
+Weitere Informationen zum Abfrage-Editor finden Sie im [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md).
 
 ## Abfragevorlagen für die Attributionswertanalyse
 
-Die folgenden Abfragen können als Vorlage für verschiedene Bewertungsanalyseszenarien verwendet werden. Sie müssen die Variable `_tenantId` und `your_score_output_dataset` mit den entsprechenden Werten, die in Ihrem Scoring-Ausgabeschema gefunden wurden.
+Die folgenden Abfragen können als Vorlage für verschiedene Bewertungsanalyseszenarien verwendet werden. Sie müssen die Werte `_tenantId` und `your_score_output_dataset` durch die entsprechenden Werte in Ihrem Scoring-Ausgabeschema ersetzen.
 
 >[!NOTE]
 >
-> Je nachdem, wie Ihre Daten erfasst wurden, werden die unten verwendeten Werte wie `timestamp` kann in einem anderen Format vorliegen.
+> Je nachdem, wie Ihre Daten erfasst wurden, können die unten verwendeten Werte wie `timestamp` in einem anderen Format vorliegen.
 
 ### Validierungsbeispiele
 
@@ -155,7 +155,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Bewertungsanalysesz
 
 ### Beispiele zur Insight-Generierung
 
-**Inkrementelle Aufschlüsselung nach Touchpoint und Konversionsdatum (innerhalb eines Konvertierungsfensters)**
+**Inkrementelle Einheiten - Aufschlüsselung nach Touchpoint- und Konversionsdatum (innerhalb eines Konvertierungsfensters)**
 
 ```sql
     SELECT conversionName,
@@ -180,7 +180,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Bewertungsanalysesz
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**Inkrementelle Aufschlüsselung nach Touchpoint- und Touchpoint-Datum (in einem Konvertierungsfenster)**
+**Inkrementelle Einheiten - Aufschlüsselung nach Touchpoint- und Touchpoint-Datum (innerhalb eines Konvertierungsfensters)**
 
 ```sql
     SELECT conversionName,
@@ -268,7 +268,7 @@ Rufen Sie eine Pfadlängenverteilung für jeden Konversionsereignistyp ab:
         conversionName, path_length
 ```
 
-**Erweitert - eindeutige Anzahl von Touchpoints bei der Analyse von Konversionspfaden**
+**Erweitert - Bestimmte Anzahl von Touchpoints auf der Analyse von Konversionspfaden**
 
 Rufen Sie die Verteilung für die Anzahl unterschiedlicher Touchpoints auf einem Konversionspfad für jeden Konversionsereignistyp ab:
 
@@ -305,7 +305,7 @@ Diese Abfrage reduziert die Strukturspalte in mehrere Einzelspalten und explodie
 
 >[!TIP]
 >
-> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset`. Die `COLUMN_NAME` kann die Werte der optionalen Übergabe durch Spaltennamen (Berichtsspalten) annehmen, die bei der Konfiguration Ihres Attribution AI-Modells hinzugefügt wurden. Sehen Sie sich Ihr Scoring-Ausgabeschema an, um die `{COLUMN_NAME}` Werte, die zum Abschließen dieser Abfrage erforderlich sind.
+> In diesem Beispiel müssen Sie zusätzlich zu `_tenantId` und `your_score_output_dataset` `{COLUMN_NAME}` ersetzen. Die Variable &quot;`COLUMN_NAME`&quot; kann die Werte der optionalen Übergabe durch Spaltennamen (Berichtsspalten) annehmen, die bei der Konfiguration Ihres Attribution AI-Modells hinzugefügt wurden. Überprüfen Sie Ihr Scoring-Ausgabeschema, um die `{COLUMN_NAME}` -Werte zu finden, die zum Abschließen dieser Abfrage erforderlich sind.
 
 ```sql
 SELECT 

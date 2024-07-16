@@ -36,7 +36,7 @@ Ein Einzelhändler sucht nach einem besseren Verständnis der Kundenpräferenzen
 Die folgenden Informationen sind erforderlich, um die Medallia-Verbindung herzustellen:
 * **OAuth-Token-Endpunkt-URL**
 * **Client ID** (Client-ID)
-* **Client-Geheimnis**
+* **Client Secret** (Client-Geheimnis)
 * **API-Gateway-URL**
 * **Import API Name**
 
@@ -59,7 +59,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle neu qualifizierten Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute auswählen der [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle neu qualifizierten Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Profilattribute auswählen&quot;des [Zielaktivierungs-Workflows](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) ausgewählt. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -76,11 +76,11 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
-* **[!UICONTROL OAuth-Token-Endpunkt-URL]**: In der Regel hat die Form https://instance.medallia.tld/oauth/tenant/token.
-* **[!UICONTROL Client-ID]**: Rufen Sie von Ihrem Medallia-Versandteam ab.
-* **[!UICONTROL Client Secret]**: Rufen Sie von Ihrem Medallia-Versandteam ab.
+* **[!UICONTROL OAuth-Token-Endpunkt-URL]**: In der Regel wird https://instance.medallia.tld/oauth/tenant/token verwendet.
+* **[!UICONTROL Client-ID]**: Rufen Sie sich von Ihrem Medallia-Bereitstellungsteam ab.
+* **[!UICONTROL Client-Geheimnis]**: Besorgen Sie sich von Ihrem Medallia-Versandteam.
 
-![Bild mit dem Authentifizierungsbildschirm für dieses Ziel.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+![Bild, das den Authentifizierungsbildschirm für dieses Ziel anzeigt.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -88,10 +88,10 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL API-Gateway-URL]**: Rufen Sie von Ihrem Medallia-Versandteam ab. In der Regel hat das Format https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Import API Name]**: Rufen Sie von Ihrem Medallia-Versandteam ab. Name der Media Import-API (auch als Web-Feed bezeichnet), die in dieser Verbindung verwendet werden soll. Sie können verschiedene Zielgruppen für verschiedene Import-APIs aktivieren, um verschiedene Umfrageprogramme Trigger.
+* **[!UICONTROL API-Gateway-URL]**: Rufen Sie sich von Ihrem Medallia-Versandteam ab. In der Regel hat das Format https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Import API Name]**: Rufen Sie sich von Ihrem Medallia-Bereitstellungsteam ab. Name der Media Import-API (auch als Web-Feed bezeichnet), die in dieser Verbindung verwendet werden soll. Sie können verschiedene Zielgruppen für verschiedene Import-APIs aktivieren, um verschiedene Umfrageprogramme Trigger.
 
-![Bild mit dem Bildschirm mit den Zieldetails für dieses Ziel.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![Bild, das den Bildschirm mit den Zieldetails für dieses Ziel anzeigt.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -103,35 +103,35 @@ Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
 Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Aktivieren von Profilen und Zielgruppen für Streaming-Zielgruppen-Exportziele](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
 Die folgenden Ziel-Identitäts-Namespaces müssen je nach Anwendungsfall zugeordnet werden:
-* Bei E-Mail-basierten Umfragen: **email** muss als Zielfeld mit **Zielfeld** > **Identitäts-Namespace auswählen** > **email**
-* Bei SMS-basierten Umfragen: **phone** muss als Zielfeld mit **Zielfeld** > **Identitäts-Namespace auswählen** > **phone**. Die Telefonnummern müssen im E.164-Format vorliegen, das ein Pluszeichen (+), ein internationales Rufzeichen, eine Ortsvorwahl und eine Telefonnummer enthält.
+* Bei E-Mail-basierten Umfragen muss **E-Mail** als Zielfeld mithilfe von **Zielfeld** > **Identitäts-Namespace auswählen** > **E-Mail** zugeordnet werden.
+* Bei SMS-basierten Umfragen muss **phone** als Zielfeld mithilfe von **Zielfeld** > **Identitäts-Namespace auswählen** > **phone** zugeordnet werden. Die Telefonnummern müssen im E.164-Format vorliegen, das ein Pluszeichen (+), ein internationales Rufzeichen, eine Ortsvorwahl und eine Telefonnummer enthält.
 
 Es wird dringend empfohlen, zusätzliche benutzerdefinierte Zielattribute zuzuordnen, um personalisierte Umfragen zu erstellen und zusätzliche Informationen über den Kunden an den Umfragedatensatz anzuhängen:
 
 * Personalisierte Umfragen richten sich in der Regel nach Name an den Kunden
-   * Den Vornamen des Kunden zuordnen zu **Zielfeld** > **Benutzerdefinierte Attribute auswählen** > **Attributname** > **firstname**
-   * Ordnen Sie den Nachnamen des Kunden zu **Zielfeld** > **Benutzerdefinierte Attribute auswählen** > **Attributname** > **lastname**
+   * Weisen Sie den Vornamen des Kunden **Zielfeld** > **Benutzerdefinierte Attribute auswählen** > **Attributname** > **Vorname** zu
+   * Ordnen Sie den Nachnamen des Kunden **Zielfeld** > **Benutzerdefinierte Attribute auswählen** > **Attributname** > **lastname** zu
 * Fügen Sie nach Bedarf Zuordnungen für andere benutzerdefinierte Zielattribute hinzu.
 
-![Bild, das eine Beispielzuordnung für Identitäten und Attribute anzeigt.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
+![Bild mit einer Beispielzuordnung für Identitäten und Attribute.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 > 
-> Geben Sie für Ihr Medallia-Versandteam die genaue **Attributnamen** für jedes benutzerdefinierte Zielattribut, das Sie zuordnen, **Zielfeld** > **Benutzerdefinierte Attribute auswählen** > **Attributname**. Sie können einen Screenshot der Zuordnungsseite erstellen, um sie direkt freizugeben.
+> Geben Sie für Ihr Medallia-Versandteam die exakten **Attributnamen** für jedes benutzerdefinierte Zielattribut frei, das Sie mit **Zielfeld** > **Benutzerdefinierte Attribute auswählen** > **Attributname** zuordnen. Sie können einen Screenshot der Zuordnungsseite erstellen, um sie direkt freizugeben.
 
 ## Exportierte Daten {#exported-data}
 
 Nachdem Sie Ihre Segmente für das Ziel aktiviert haben, informieren Sie Ihr Medallia-Versandteam, das die exportierten Daten aus Adobe Experience Platform nach Medallia validieren kann. Beachten Sie, dass Umfragen nur nach erfolgreicher Datenüberprüfung in Medallia aktiviert werden können. Zuvor werden Daten nach Medallia exportiert, aber keine Umfragen an Kunden Trigger.
 
-Nachfolgend finden Sie ein Beispiel für eine JSON-Datei der exportierten Daten, die die Beispielzuordnung aus dem Screenshot oben in der **Zuordnen von Attributen und Identitäten** Abschnitt:
+Nachfolgend finden Sie ein Beispiel-JSON der exportierten Daten, das die Beispielzuordnung aus dem obigen Screenshot im Abschnitt **Attribute und Identitäten zuordnen** verwendet:
 
 ```json
 [

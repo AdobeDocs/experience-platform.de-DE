@@ -16,19 +16,19 @@ ht-degree: 50%
 
 Mithilfe der API-Endpunkte für das Echtzeit-Kundenprofil können Sie grundlegende CRUD-Vorgänge für Profildaten durchführen, z. B. die Konfiguration berechneter Attribute, den Zugriff auf Entitäten, den Export von Profildaten und das Löschen nicht benötigter Datensätze oder Batches.
 
-Die Verwendung des Entwicklerhandbuchs setzt ein Verständnis der verschiedenen Adobe Experience Platform-Dienste voraus, die an der Arbeit mit [!DNL Profile] Daten. Bevor Sie die [!DNL Real-Time Customer Profile]-API nutzen, lesen Sie die Dokumentation für folgende Services:
+Die Verwendung des Entwicklerhandbuchs setzt ein Verständnis der verschiedenen Adobe Experience Platform-Dienste voraus, die am Arbeiten mit [!DNL Profile] -Daten beteiligt sind. Bevor Sie die [!DNL Real-Time Customer Profile]-API nutzen, lesen Sie die Dokumentation für folgende Services:
 
 * [[!DNL Real-Time Customer Profile]](../home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über Ihren Kunden und sein Verhalten, indem Sie Identitäten zwischen Geräten und Systemen überbrücken.
-* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Ermöglicht das Erstellen von Zielgruppen aus Echtzeit-Kundenprofildaten.
+* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen aus Echtzeit-Kundenprofildaten.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an [!DNL Profile] API-Endpunkte.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an [!DNL Profile] -API-Endpunkte vornehmen zu können.
 
 ## Lesen von Beispiel-API-Aufrufen
 
-Die [!DNL Real-Time Customer Profile] Die API-Dokumentation enthält Beispiel-API-Aufrufe, die zeigen, wie Anfragen korrekt formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+Die API-Dokumentation für [!DNL Real-Time Customer Profile] enthält Beispiel-API-Aufrufe, die zeigen, wie Anfragen korrekt formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ## Erforderliche Kopfzeilen
 
@@ -38,7 +38,7 @@ Außerdem setzt die API-Dokumentation voraus, dass Sie das [Authentifizierungs-T
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Anforderungen an [!DNL Platform] APIs erfordern eine Kopfzeile, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Für Anfragen an [!DNL Platform] -APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

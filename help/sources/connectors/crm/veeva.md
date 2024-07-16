@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Veva CRM; Veva crm; VEC; crm
+keywords: Experience Platform;home;popular topics;Veeva CRM;veeva crm;veeva;crm;crm
 solution: Experience Platform
-title: Übersicht über den Connector für Veva CRM-Quellen
+title: Übersicht über den Connector für Veva CRM Source
 description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Veva CRM und Adobe Experience Platform herstellen.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -19,7 +19,7 @@ Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem 
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
 Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Veeva CRM] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 

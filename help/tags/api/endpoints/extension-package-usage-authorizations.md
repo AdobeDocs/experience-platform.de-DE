@@ -11,9 +11,9 @@ ht-degree: 16%
 
 # Endpunkt für Nutzungsberechtigungen für Erweiterungspakete
 
-Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können, werden durch ein Erweiterungspaket definiert. Diese Funktionen können Hauptmodule und gemeinsame Module enthalten, die jedoch am häufigsten als [Regelkomponenten](./rule-components.md) (Ereignisse, Bedingungen und Aktionen) und [Datenelemente](./data-elements.md).
+Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können, werden durch ein Erweiterungspaket definiert. Diese Funktionen können Hauptmodule und freigegebene Module umfassen, obwohl sie am häufigsten als [Regelkomponenten](./rule-components.md) (Ereignisse, Bedingungen und Aktionen) und [Datenelemente](./data-elements.md) bereitgestellt werden.
 
-Ein Erweiterungspaket gehört dem [Firma](./companies.md). Inhaber von Erweiterungspaketen können anderen Unternehmen die Verwendung ihrer privaten Versionen der Pakete gestatten. Jedes autorisierte Unternehmen erhält eine Nutzungsgenehmigung für ein einzelnes Erweiterungspaket, das für alle zukünftigen und aktuellen privaten Versionen des Pakets gültig ist.
+Ein Erweiterungspaket gehört dem [Unternehmen](./companies.md) des Entwicklers. Inhaber von Erweiterungspaketen können anderen Unternehmen die Verwendung ihrer privaten Versionen der Pakete gestatten. Jedes autorisierte Unternehmen erhält eine Nutzungsgenehmigung für ein einzelnes Erweiterungspaket, das für alle zukünftigen und aktuellen privaten Versionen des Pakets gültig ist.
 
 ## Erste Schritte
 
@@ -102,7 +102,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungspaketen zurück.
 
 ## Erstellen einer Nutzungsautorisierung für ein Erweiterungspaket {#create}
 
-Erstellen Sie für jede [Erweiterungspaket](./extension-packages.md) und `{ORG_ID}` der Organisation, die Sie autorisieren möchten. Um eine neue Autorisierung zur Verwendung von Erweiterungspaketen zu erstellen, stellen Sie eine POST-Anfrage an den unten stehenden Endpunkt.
+Erstellen Sie für jedes [Erweiterungspaket](./extension-packages.md) und `{ORG_ID}` der Organisation, die Sie autorisieren möchten, eine Autorisierung zur Verwendung des Erweiterungspakets. Um eine neue Autorisierung zur Verwendung von Erweiterungspaketen zu erstellen, stellen Sie eine POST-Anfrage an den unten stehenden Endpunkt.
 
 **API-Format**
 
@@ -183,7 +183,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Autorisierung zur 
 
 >[!NOTE]
 >
->In der obigen Beispielantwort befindet sich die Autorisierung derzeit im `pending_approval` Bühne. Vor Verwendung des Erweiterungspakets muss die Organisation die Autorisierung genehmigen. Benutzer der Organisation können das private Erweiterungspaket durchsuchen, während die Autorisierung aussteht, es jedoch nicht installieren kann und nicht in ihrem Erweiterungskatalog finden.
+>In der obigen Beispielantwort befindet sich die Autorisierung derzeit in der Phase &quot;`pending_approval`&quot;. Vor Verwendung des Erweiterungspakets muss die Organisation die Autorisierung genehmigen. Benutzer der Organisation können das private Erweiterungspaket durchsuchen, während die Autorisierung aussteht, es jedoch nicht installieren kann und nicht in ihrem Erweiterungskatalog finden.
 
 ## Abrufen einer Liste der Nutzungsberechtigungen für Erweiterungspakete {#list_authorizations}
 
@@ -264,7 +264,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungspaketen zurück.
 
 ## Nutzungsautorisierung eines Erweiterungspakets löschen {#delete}
 
-Um eine Nutzungsautorisierung für ein Erweiterungspaket zu löschen, fügen Sie dessen `ID` im Pfad einer DELETE-Anfrage. Dadurch wird verhindert, dass die autorisierte Organisation die privaten Versionen des Erweiterungspakets im Katalog anzeigt und in ihren Eigenschaften installiert.
+Um die Nutzungsberechtigung für ein Erweiterungspaket zu löschen, fügen Sie dessen `ID` in den Pfad einer DELETE-Anfrage ein. Dadurch wird verhindert, dass die autorisierte Organisation die privaten Versionen des Erweiterungspakets im Katalog anzeigt und in ihren Eigenschaften installiert.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `ID` | Die `ID` der Nutzungsberechtigung für das Erweiterungspaket, die Sie löschen möchten. |
+| `ID` | Die `ID` der Nutzungsautorisierung des Erweiterungspakets, die Sie löschen möchten. |
 
 {style="table-layout:auto"}
 
@@ -298,11 +298,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttex
 
 ## Aktualisieren der Autorisierung zur Verwendung eines Erweiterungspakets {#update}
 
-Um eine Nutzungsgenehmigung für ein Erweiterungspaket zu genehmigen oder abzulehnen, fügen Sie dessen `ID` im Pfad einer PATCH-Anfrage.
+Um eine Autorisierung zur Verwendung eines Erweiterungspakets zu genehmigen oder abzulehnen, fügen Sie dessen `ID` in den Pfad einer PATCH-Anfrage ein.
 
 >[!NOTE]
 >
->Um eine Genehmigung zur Verwendung eines Erweiterungspakets für Ihr Unternehmen zu genehmigen oder abzulehnen, müssen Sie über `manage_properties` Rechte.
+>Um die Genehmigung zur Verwendung eines Erweiterungspakets für Ihr Unternehmen zu genehmigen oder abzulehnen, müssen Sie über `manage_properties` -Rechte verfügen.
 
 **API-Format**
 
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `ID` | Die `ID` der Nutzungsberechtigung für das Erweiterungspaket, die Sie löschen möchten. |
+| `ID` | Die `ID` der Nutzungsautorisierung des Erweiterungspakets, die Sie löschen möchten. |
 
 {style="table-layout:auto"}
 
@@ -338,7 +338,7 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Die Attribute, die Sie überarbeiten möchten. Für die Nutzungsberechtigungen von Erweiterungspaketen können Sie deren `state`. |
+| `attributes` | Die Attribute, die Sie überarbeiten möchten. Für die Nutzungsberechtigungen von Erweiterungspaketen können Sie deren `state` überarbeiten. |
 
 **Antwort**
 

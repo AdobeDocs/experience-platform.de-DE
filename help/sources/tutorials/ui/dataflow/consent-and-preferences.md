@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform; home; beliebte Themen; Einverständnis und Voreinstellungen; Einverständnis; onetrust; OneTrust
 solution: Experience Platform
-title: Erstellen eines Datenflusses mithilfe einer Einverständnis- und Voreinstellungsquelle in der Benutzeroberfläche
+title: Erstellen eines Datenflusses mithilfe eines Einverständnis- und Voreinstellungs-Source in der Benutzeroberfläche
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe der Platform-Benutzeroberfläche einen Datenfluss für eine Zustimmungs- und Voreinstellungsquelle erstellen.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
@@ -18,7 +18,7 @@ Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und 
 
 >[!NOTE]
 >
->* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit dem [!DNL OneTrust Integration] -Quelle. Siehe Tutorial zu [Erstellen einer [!DNL OneTrust Integration] Quellverbindung in der Benutzeroberfläche](../../ui/create/consent-and-preferences/onetrust.md) für weitere Informationen.
+>* Um einen Datenfluss zu erstellen, müssen Sie bereits über ein authentifiziertes Konto mit der Quelle [!DNL OneTrust Integration] verfügen. Weitere Informationen finden Sie im Tutorial zum Erstellen einer  [!DNL OneTrust Integration] Quellverbindung in der Benutzeroberfläche](../../ui/create/consent-and-preferences/onetrust.md) .[
 >* Damit Experience Platform Daten erfassen kann, müssen Zeitzonen für alle tabellenbasierten Batch-Quellen auf UTC konfiguriert werden.
 
 ## Erste Schritte
@@ -34,16 +34,16 @@ Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von Platform vo
 
 ## Daten hinzufügen
 
-Nachdem Sie Ihr Einverständnis- und Voreinstellungsquellenkonto erstellt haben, wird die **[!UICONTROL Daten hinzufügen]** angezeigt, um eine Oberfläche zur Verfügung zu stellen, über die Sie die Tabellenhierarchie Ihres Einwilligungs- und Voreinstellungskontos durchsuchen können.
+Nach der Erstellung des Quellkontos für die Einwilligung und Voreinstellungen wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt, der Ihnen eine Oberfläche bietet, über die Sie die Tabellenhierarchie Ihres Einwilligungs- und Einstellungskontos durchsuchen können.
 
 * In der linken Hälfte der Benutzeroberfläche befindet sich ein Browser, der eine Liste der in Ihrem Konto enthaltenen Datentabellen anzeigt. Die Benutzeroberfläche enthält außerdem eine Suchoption, mit der Sie die Quelldaten, die Sie verwenden möchten, schnell identifizieren können.
 * Die rechte Hälfte der Benutzeroberfläche ist ein Vorschaufenster, mit dem Sie bis zu 100 Datenzeilen in der Vorschau anzeigen können.
 
 >[!NOTE]
 >
->Die Option &quot;Suchquellendaten&quot;steht allen tabellenbasierten Quellen außer der Adobe Analytics zur Verfügung. [!DNL Amazon Kinesis], und [!DNL Azure Event Hubs].
+>Die Option &quot;Suchquellendaten&quot;ist für alle tabellenbasierten Quellen mit Ausnahme von Adobe Analytics, [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] verfügbar.
 
-Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie auf **[!UICONTROL Nächste]**.
+Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![select-data](../../../images/tutorials/dataflow/table-based/select-data.png)
 
@@ -85,41 +85,41 @@ Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken
 
 >[!IMPORTANT]
 >
->Sie können keine dynamischen Schlüssel-Paar-Werte als Objekt zuordnen von [!DNL OneTrust] auf Platform gesetzt werden und müssen diese Schlüssel im Zielschema angeben, damit Ihre Daten während der Aufnahme zugeordnet werden können.
+>Sie können keine dynamischen Schlüssel-Paar-Werte als Objekt von [!DNL OneTrust] zu Platform zuordnen und müssen diese Schlüssel im Zielschema angeben, um Ihre Daten während der Aufnahme zuzuordnen.
 
 Es erfolgt der Schritt der [!UICONTROL Zuordnung], in dem Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden XDM-Zielfeldern im Zielschema bereitgestellt wird.
 
-Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../data-prep/ui/mapping.md).
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen. Je nach Bedarf können Sie wahlweise Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder anderweitig ermittelte Werte abzuleiten. Umfassende Schritte zur Verwendung der Zuordnungsoberfläche und der berechneten Felder finden Sie im Handbuch [Data Prep UI guide](../../../../data-prep/ui/mapping.md).
 
-Nachdem die Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Nächste]**.
+Nachdem die Quelldaten erfolgreich zugeordnet wurden, wählen Sie **[!UICONTROL Weiter]** aus.
 
 ![Zuordnung](../../../images/tutorials/dataflow/table-based/mapping.png)
 
 ## Erfassungsläufe planen
 
-Die [!UICONTROL Planung] angezeigt, sodass Sie einen Aufnahmezeitplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch zu erfassen. Standardmäßig ist die Planung auf `Once`. Um die Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Häufigkeit]** und wählen Sie dann eine Option aus dem Dropdown-Menü aus.
+Der Schritt [!UICONTROL Planung] wird angezeigt, in dem Sie einen Aufnahmeplan konfigurieren können, um die ausgewählten Quelldaten mithilfe der konfigurierten Zuordnungen automatisch zu erfassen. Standardmäßig ist die Planung auf `Once` eingestellt. Um die Aufnahmefrequenz anzupassen, wählen Sie **[!UICONTROL Häufigkeit]** und dann eine Option aus dem Dropdown-Menü aus.
 
 >[!TIP]
 >
 >Während einer einmaligen Erfassung sind Intervall und Aufstockung nicht sichtbar.
 
-![Planung](../../../images/tutorials/dataflow/table-based/scheduling.png)
+![ scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
-Wenn Sie die Aufnahmefrequenz auf `Minute`, `Hour`, `Day`oder `Week`, müssen Sie ein Intervall festlegen, um einen bestimmten Zeitrahmen zwischen jeder Aufnahme festzulegen. Eine Erfassungsfrequenz, die beispielsweise auf `Day` und ein Intervall festgelegt auf `15` bedeutet, dass Ihr Datenfluss alle 15 Tage Daten aufnehmen soll.
+Wenn Sie die Aufnahmefrequenz auf `Minute`, `Hour`, `Day` oder `Week` festlegen, müssen Sie ein Intervall festlegen, um einen bestimmten Zeitrahmen zwischen jeder Aufnahme festzulegen. Beispielsweise bedeutet eine Erfassungsfrequenz, die auf &quot;`Day`&quot;und ein auf &quot;`15`&quot;festgelegtes Intervall, dass Ihr Datenfluss alle 15 Tage Daten aufnehmen soll.
 
-Während dieses Schritts können Sie auch **Aufstockung** und definieren eine Spalte für die inkrementelle Datenaufnahme. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
+Während dieses Schritts können Sie auch **Aufstockung** aktivieren und eine Spalte für die inkrementelle Aufnahme von Daten definieren. Die Aufstockung wird verwendet, um historische Daten zu erfassen, während die Spalte, die Sie für die inkrementelle Erfassung definieren, es ermöglicht, neue Daten von vorhandenen Daten zu unterscheiden.
 
 Weitere Informationen zu Planungskonfigurationen finden Sie in der Tabelle unten.
 
 | Feld | Beschreibung |
 | --- | --- |
-| Häufigkeit | Die Häufigkeit, mit der eine Aufnahme erfolgt. Selektive Häufigkeiten beinhalten `Once`, `Minute`, `Hour`, `Day`, und `Week`. |
+| Häufigkeit | Die Häufigkeit, mit der eine Aufnahme erfolgt. Zu den auswählbaren Frequenzen gehören `Once`, `Minute`, `Hour`, `Day` und `Week`. |
 | Intervall | Eine Ganzzahl, die das Intervall für die ausgewählte Häufigkeit festlegt. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und auf größer oder gleich 15 gesetzt werden. |
 | Startzeit | Ein UTC-Zeitstempel, der angibt, wann die erste Aufnahme erfolgen soll. Die Startzeit muss größer oder gleich der aktuellen UTC-Zeit sein. |
 | Aufstockung | Ein boolean -Wert, der bestimmt, welche Daten ursprünglich erfasst werden. Wenn die Aufstockung aktiviert ist, werden alle aktuellen Dateien im angegebenen Pfad während der ersten geplanten Erfassung erfasst. Wenn die Aufstockung deaktiviert ist, werden nur die Dateien erfasst, die zwischen der ersten Ausführung der Aufnahme und der Startzeit geladen werden. Dateien, die vor der Startzeit geladen wurden, werden nicht erfasst. |
-| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, für das Sie **[!UICONTROL Inkrementelle Daten laden nach]** muss über Datums-/Uhrzeitwerte in UTC-Zeitzone verfügen, um inkrementelle Daten ordnungsgemäß laden zu können. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Zeitstempelwert für Delta-Spalten mit der entsprechenden UTC-Zeit des Flusslauffensters vergleichen und dann die Daten aus der Quelle kopieren, wenn im UTC-Zeitfenster neue Daten gefunden werden. |
+| Inkrementelle Daten laden nach | Eine Option mit einem gefilterten Satz von Quellschemafeldern vom Typ, Datum oder Uhrzeit. Das Feld, das Sie für **[!UICONTROL Inkrementelle Daten von]** laden auswählen, muss über seine Datums-/Uhrzeitwerte in UTC-Zeitzone verfügen, damit inkrementelle Daten korrekt geladen werden können. Alle tabellenbasierten Batch-Quellen wählen inkrementelle Daten aus, indem sie einen Zeitstempelwert für Delta-Spalten mit der entsprechenden UTC-Zeit des Flusslauffensters vergleichen und dann die Daten aus der Quelle kopieren, wenn im UTC-Zeitfenster neue Daten gefunden werden. |
 
-![Aufstockung](../../../images/tutorials/dataflow/table-based/backfill.png)
+![backfill](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Überprüfen des Datenflusses
 
@@ -135,7 +135,7 @@ Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Be
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen des Datenflusses finden Sie im Tutorial zu [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../monitor.md).
+Nachdem Ihr Datenfluss hergestellt worden ist, können Sie Daten, die dadurch aufgenommen werden, überwachen, um Informationen zu Aufnahmegeschwindigkeiten, Erfolg und Fehlern zu erhalten. Weitere Informationen zum Überwachen des Datenflusses finden Sie im Tutorial zum [Überwachen von Konten und Datenflüssen in der Benutzeroberfläche](../monitor.md).
 
 ## Löschen des Datenflusses
 

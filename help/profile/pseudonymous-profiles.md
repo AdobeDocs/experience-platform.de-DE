@@ -80,9 +80,9 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 - Dies ist **kein** einmaliger Bereinigungsvorgang. Das Ablaufdatum der pseudonymen Profildaten wird einmal täglich ausgeführt und löscht Profile, die der Eingabe des Kunden entsprechen.
 - **Alle** Profile, die als pseudonyme Profile definiert sind, sind von Ablauf von Daten pseudonymer Profile betroffen. Es kommt dabei **nicht** darauf an, ob das Profil nur ein Erlebnisereignis ist oder nur Profilattribute enthält.
 - Diese Bereinigung findet **nur** im Profil statt. Identity Service kann die gelöschten Identitäten innerhalb des Diagramms nach der Bereinigung weiterhin anzeigen, wenn das Profil zwei oder mehr pseudonyme Identitäten aufweist (z. B. `AAID` und `ECID`). Diese Diskrepanz wird in naher Zukunft angegangen.
-- Pseudonyme Profildaten laufen ab **not** sofort ausgeführt werden und die Verarbeitung kann bis zu drei Tage dauern.
+- Der Ablauf der pseudonymen Profildaten wird **nicht** sofort ausgeführt und kann bis zu drei Tage dauern.
 
 ### Wie interagiert der Datenablauf bei Pseudonymen Profilen mit Limits für Identity Service-Daten?
 
-- Der Identitätsdienst [&quot;First-in, First-out&quot;-Löschsystem](../identity-service/guardrails.md) konnte ECIDs aus dem Identitätsdiagramm löschen, die im Identity Service gespeichert sind.
+- Das Löschsystem ](../identity-service/guardrails.md) des Identitätsdienstes [ &quot;first-in, first-out&quot;(Erstanmeldung) könnte ECIDs aus dem Identitätsdiagramm löschen, die im Identity Service gespeichert sind.
 - Wenn dieses Löschungsverhalten dazu führt, dass ein ausschließlich ECID-basiertes Profil im Echtzeit-Kundenprofil (Profilspeicher) gespeichert wird, löscht der Ablauf der Profildaten für Pseudonyme Profile dieses Profil aus dem Profilspeicher.

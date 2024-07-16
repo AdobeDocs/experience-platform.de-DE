@@ -19,7 +19,7 @@ In diesem Dokument werden Best Practices und Tools beschrieben, mit denen Sie Ih
 
 ## Grundlagen zur Datenspeicherung in Adobe Experience Platform
 
-Experience Platform besteht hauptsächlich aus zwei Datenspeichern: dem [!DNL data lake] und den Profilspeicher.
+Experience Platform besteht hauptsächlich aus zwei Datenspeichern: dem [!DNL data lake] und dem Profilspeicher.
 
 Der **[!DNL data lake]** dient hauptsächlich folgenden Zwecken:
 
@@ -27,7 +27,7 @@ Der **[!DNL data lake]** dient hauptsächlich folgenden Zwecken:
 * Fungiert als langfristiger Datenspeicher für alle Daten in Experience Platform;
 * Ermöglicht Anwendungsfälle wie die Datenanalyse und Datenwissenschaft.
 
-Die **Profilspeicher** ist der Ort, an dem Kundenprofile erstellt werden und in erster Linie die folgenden Zwecke erfüllt:
+Im **Profilspeicher** werden Kundenprofile erstellt und dienen hauptsächlich folgenden Zwecken:
 
 * Fungiert als Datenspeicher für Profile, die zur Bereitstellung von Echtzeit-Erlebnissen verwendet werden;
 * Aktiviert Anwendungsfälle wie die Segmentierung, Aktivierung und Personalisierung.
@@ -46,8 +46,8 @@ Wenn Sie eine Lizenz für Experience Platform erwerben, erhalten Sie Lizenznutzu
 
 Die [!DNL Profile Richness]-Metrik variiert je nach der von Ihnen erworbenen Lizenz. Die [!DNL Profile Richness] kann durch zwei Berechnungen festgestellt werden:
 
-* Die Summe aller in Adobe Real-time Customer Data Platform gespeicherten Produktionsdaten (d. h. Echtzeit-Kundenprofil und Identitätsdienst) zu einem beliebigen Zeitpunkt dividiert durch die Variable [!DNL Addressable Audience];
-* Die Summe aller in Platform gespeicherten Daten (einschließlich, aber nicht beschränkt auf die Variable [!DNL data lake], Echtzeit-Kundenprofil und Identity Service) zu einem beliebigen Zeitpunkt und beliebigen Daten, die Sie in der Plattform in den letzten 12 Monaten streamen (anstatt darin zu speichern), geteilt durch die [!DNL Addressable Audience].
+* Die Summe aller in Adobe Real-time Customer Data Platform gespeicherten Produktionsdaten (d. h. Echtzeit-Kundenprofil und Identitätsdienst) zu einem beliebigen Zeitpunkt, dividiert durch [!DNL Addressable Audience];
+* Die Summe aller in Platform gespeicherten Daten (einschließlich, aber nicht beschränkt auf den [!DNL data lake], das Echtzeit-Kundenprofil und den Identitätsdienst) zu einem beliebigen Zeitpunkt und aller Daten, die Sie in der Plattform in den letzten 12 Monaten streamen (anstatt darin zu speichern), dividiert durch den [!DNL Addressable Audience].
 
 Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab.
 
@@ -79,7 +79,7 @@ Es gibt zwei zentrale Überlegungen, die Sie berücksichtigen sollten, wenn Sie 
 
 ### Welche Daten integrieren Sie in Platform?
 
-Daten können in Platform in ein oder mehrere Systeme aufgenommen werden, nämlich die [!DNL data lake] und/oder den Profilspeicher. Dies bedeutet, dass in beiden Systemen für eine Vielzahl verschiedener Anwendungsfälle unterschiedliche Daten vorhanden sein können. Beispielsweise können Sie historische Daten im [!DNL data lake], jedoch nicht im Profilspeicher. Sie können auswählen, welche Daten an den Profilspeicher gesendet werden sollen, indem Sie einen Datensatz für die Profilaufnahme aktivieren.
+Daten können in Platform in ein oder mehrere Systeme aufgenommen werden, nämlich in den Speicher &quot;[!DNL data lake]&quot;und/oder &quot;Profil&quot;. Dies bedeutet, dass in beiden Systemen für eine Vielzahl verschiedener Anwendungsfälle unterschiedliche Daten vorhanden sein können. Beispielsweise können Sie historische Daten im [!DNL data lake], aber nicht im Profilspeicher speichern. Sie können auswählen, welche Daten an den Profilspeicher gesendet werden sollen, indem Sie einen Datensatz für die Profilaufnahme aktivieren.
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ Es gibt eine Reihe von Tools, die Ihnen helfen, Ihre Lizenznutzungsberechtigunge
 
 Identitätsdiagramme werden nicht mit Ihrer gesamten adressierbaren Zielgruppenberechtigungen angerechnet, da adressierbare Zielgruppen auf Ihre Gesamtzahl an Kundenprofilen verweisen.
 
-Beschränkungen für Identitätsdiagramme können sich jedoch auf Ihre adressierbare Zielgruppe auswirken, da Identitäten geteilt werden. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, existiert die ECID weiterhin im Echtzeit-Kundenprofil als pseudonymes Profil. Sie können [Pseudonyme Profildatenabläufe](../../profile/pseudonymous-profiles.md) um dieses Verhalten zu umgehen. Weitere Informationen finden Sie im Abschnitt [Limits für Identity Service-Daten](../../identity-service/guardrails.md).
+Beschränkungen für Identitätsdiagramme können sich jedoch auf Ihre adressierbare Zielgruppe auswirken, da Identitäten geteilt werden. Wenn beispielsweise die älteste ECID aus dem Diagramm entfernt wird, existiert die ECID weiterhin im Echtzeit-Kundenprofil als pseudonymes Profil. Sie können [Pseudonyme Profildatenabläufe](../../profile/pseudonymous-profiles.md) festlegen, um dieses Verhalten zu umgehen. Weitere Informationen finden Sie in den [Limits für Identity Service-Daten](../../identity-service/guardrails.md).
 
 ### Aufnahmefilter {#ingestion-filters}
 
@@ -106,12 +106,12 @@ Aufnahmefilter ermöglichen Ihnen, nur die für Ihre Anwendungsfälle erforderli
 
 | Aufnahmefilter | Beschreibung |
 | --- | --- |
-| Adobe Audience Manager-Quellfilter | Wenn Sie eine Adobe Audience Manager-Quellverbindung erstellen, können Sie auswählen, welche Segmente und Eigenschaften in die [!DNL data lake] und Echtzeit-Kundenprofil verwenden, anstatt die Daten des Audience Managers vollständig zu erfassen. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer Audience Manager-Quellverbindung](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
+| Adobe Audience Manager-Quellfilter | Wenn Sie eine Adobe Audience Manager-Quellverbindung erstellen, können Sie auswählen, welche Segmente und Eigenschaften in das [!DNL data lake]- und Echtzeit-Kundenprofil aufgenommen werden sollen, anstatt die Daten des Audience Managers vollständig zu erfassen. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer Audience Manager-Quellverbindung](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Adobe Analytics Data Prep | Sie können beim Erstellen einer Analytics-Quellverbindung mit [!DNL Data Prep]-Funktionen Daten herausfiltern, die für Ihre Anwendungsfälle nicht erforderlich sind. Mit [!DNL Data Prep] können Sie festlegen, welche Attribute/Spalten für das jeweilige Profil veröffentlicht werden sollen. Sie können auch bedingte Anweisungen erstellen, um Platform darüber zu informieren, ob Daten für das Profil oder nur für den [!DNL data lake] veröffentlicht werden sollen. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer Analytics-Quellverbindung](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 | Unterstützung für das Aktivieren/Deaktivieren von Datensätzen für ein Profil | Um Daten in das Echtzeit-Kundenprofil zu erfassen, müssen Sie einen Datensatz für die Verwendung im Profilspeicher aktivieren. Dadurch wird ein höherer Anteil Ihrer [!DNL Addressable Audience]- und [!DNL Profile Richness]-Berechtigungen verbraucht. Sobald ein Datensatz für Anwendungsfälle von Kundenprofilen nicht mehr erforderlich ist, können Sie die Integration dieses Datensatzes in das Profil deaktivieren, um sicherzustellen, dass Ihre Daten weiterhin lizenzkonform sind. Weitere Informationen dazu finden Sie in der Anleitung zum [Aktivieren und Deaktivieren von Datensätzen für ein Profil](../../catalog/datasets/enable-for-profile.md). |
 | Ausschließen von Web SDK- und Mobile SDK-Daten | Es gibt zwei Arten von Daten, die vom Web- und Mobile-SDK erfasst werden: automatisch erfasste Daten und explizit von Ihrem Entwickler erfasste Daten. Um die Einhaltung Ihrer Lizenz zu gewährleisten, können Sie die automatische Datenerfassung in der SDK-Konfiguration über die Kontexteinstellung deaktivieren. Benutzerdefinierte Daten können auch von Ihrem Entwickler entfernt oder nicht festgelegt werden. |
 | Datenausschluss bei Server-seitiger Weiterleitung | Wenn Sie Daten mithilfe der Server-seitigen Weiterleitung an Platform senden, können Sie festlegen, welche Daten beim Versand ausgeschlossen werden, indem Sie entweder in einer Regel das Mapping entfernen und es für alle Ereignisse ausschließen oder Bedingungen zur Regel hinzufügen, sodass Daten nur für bestimmte Ereignisse ausgelöst werden. Weitere Informationen finden Sie in der Dokumentation unter [Ereignisse und Bedingungen](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if). |
-| Filtern von Daten auf Quellebene | Sie können logische Operatoren und Vergleichsoperatoren verwenden, um Daten auf Zeilenebene aus Ihren Quellen zu filtern, bevor Sie eine Verbindung herstellen und Daten auf Experience Platform erfassen. Weitere Informationen finden Sie im Handbuch unter [Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
+| Filtern von Daten auf Quellebene | Sie können logische Operatoren und Vergleichsoperatoren verwenden, um Daten auf Zeilenebene aus Ihren Quellen zu filtern, bevor Sie eine Verbindung herstellen und Daten auf Experience Platform erfassen. Weitere Informationen finden Sie im Handbuch zum [Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der  [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -132,18 +132,18 @@ Der Profilspeicher besteht aus den folgenden Komponenten:
 
 Es stehen verschiedene Berichte zur Verfügung, die Ihnen helfen, die Zusammensetzung des Profilspeichers zu verstehen. Diese Berichte helfen Ihnen dabei, fundierte Entscheidungen darüber zu treffen, wie und wo Sie Ihre Erlebnisereignis-Abläufe festlegen können, um Ihre Lizenznutzung besser zu optimieren:
 
-* **Dataset Overlap Report API**: Zeigt die Datensätze, die am meisten zu Ihrer adressierbaren Zielgruppe beitragen. Mit diesem Bericht können Sie ermitteln, welche [!DNL ExperienceEvent] -Datensätze, für die ein Ablaufdatum festgelegt wird. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Dataset Overlap Reports](../../profile/tutorials/dataset-overlap-report.md).
+* **Dataset Overlap Report API**: Zeigt die Datensätze, die am meisten zu Ihrer adressierbaren Zielgruppe beitragen. Mit diesem Bericht können Sie ermitteln, für welche [!DNL ExperienceEvent] -Datensätze eine Gültigkeit festgelegt werden soll. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Dataset Overlap Reports](../../profile/tutorials/dataset-overlap-report.md).
 * **Identity Overlap Report API**: Zeigt die Identity-Namespaces, die am meisten zu Ihrer adressierbaren Zielgruppe beitragen. Weitere Informationen dazu finden Sie im Tutorial zum [Erstellen des Identity Overlap Reports](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 #### Pseudonyme Profildatenabläufe {#pseudonymous-profile-expirations}
 
-Mit dieser Funktion können Sie alte Pseudonyme Profile automatisch aus dem Profilspeicher entfernen. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Übersicht über den Ablauf der pseudonymen Profildaten](../../profile/pseudonymous-profiles.md).
+Mit dieser Funktion können Sie alte Pseudonyme Profile automatisch aus dem Profilspeicher entfernen. Weiterführende Informationen zu dieser Funktion finden Sie in der [Übersicht über den Ablauf der Profildaten für Pseudonyme Kontakte](../../profile/pseudonymous-profiles.md) .
 
 #### Gültigkeitsdauern von Erlebnisereignissen {#event-expirations}
 
-Mit dieser Funktion können Sie Verhaltensdaten automatisch aus einem für Profile aktivierten Datensatz entfernen, der für Ihre Anwendungsfälle nicht mehr nützlich ist. Siehe Übersicht unter [Ablauf von Erlebnisereignissen](../../profile/event-expirations.md) für Details darüber, wie dieser Prozess funktioniert, nachdem er für einen Datensatz aktiviert wurde.
+Mit dieser Funktion können Sie Verhaltensdaten automatisch aus einem für Profile aktivierten Datensatz entfernen, der für Ihre Anwendungsfälle nicht mehr nützlich ist. Weitere Informationen dazu, wie dieser Prozess funktioniert, nachdem er für einen Datensatz aktiviert wurde, finden Sie in der Übersicht zu [Ablauf von Erlebnisereignissen](../../profile/event-expirations.md) .
 
 ## Zusammenfassung der Best Practices für die Lizenznutzung {#best-practices}
 
@@ -152,8 +152,8 @@ Im Folgenden finden Sie eine Liste empfohlener Best Practices, die Sie befolgen 
 * Verwenden Sie das [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md), um die Nutzung durch Kunden zu verfolgen und zu überwachen. Dadurch können Sie potenziellen Überschreitungen rechtzeitig gegensteuern.
 * Konfigurieren Sie [Aufnahmefilter](#ingestion-filters), indem Sie die Ereignisse bestimmen, die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind. Dies ermöglicht Ihnen, nur wichtige Ereignisse zu senden, die für Ihre Anwendungsfälle nötig sind.
 * Stellen Sie sicher, dass Sie nur [Datensätze für Profile aktiviert haben](#ingestion-filters), die für Ihre Segmentierungs- und Personalisierungs-Anwendungsfälle erforderlich sind.
-* Konfigurieren [Ablauf von Erlebnisereignissen](#event-expirations) und [Pseudonyme Profildatenabläufe](#pseudonymous-profile-expirations) für hochfrequente Daten wie Webdaten.
-* Prüfen Sie regelmäßig die [Berichte zur Profilgruppierung](#profile-store-composition-reports) , um die Komposition im Profilspeicher zu verstehen. Auf diese Weise können Sie die Datenquellen ermitteln, die im Rahmen Ihrer Lizenzberechtigung die meisten Daten nutzen.
+* Konfigurieren Sie die [Ablauffristen von Erlebnisereignissen](#event-expirations) und die [Ablauffristen der Profildaten des Pseudonyms](#pseudonymous-profile-expirations) für hochfrequente Daten wie Webdaten.
+* Prüfen Sie regelmäßig die [Berichte zur Profilkomposition](#profile-store-composition-reports) , um Ihre Profilspeicherkomposition zu verstehen. Auf diese Weise können Sie die Datenquellen ermitteln, die im Rahmen Ihrer Lizenzberechtigung die meisten Daten nutzen.
 
 ## Funktionsüberblick und -verfügbarkeit {#feature-summary}
 

@@ -15,11 +15,11 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 > * Adobe empfiehlt, diese Seite mit einem Lesezeichen zu versehen und alle drei Monate erneut zu besuchen, um nach den neuesten IP-Adressen zu suchen. Adobe stellt keine Benachrichtigung über neue IP-Bereiche bereit.
-> * Während Adobe Datenexporte an SFTP-Server unterstützt, sind die empfohlenen Cloud-Speicherorte für den Datenexport folgende: [!DNL Amazon S3] und [!DNL Azure Blob].
+> * Während Adobe Datenexporte an SFTP-Server unterstützt, werden für den Export von Daten für Cloud-Speicher [!DNL Amazon S3] und [!DNL Azure Blob] empfohlen.
 
 ## Übersicht {#overview}
 
-Auf dieser Seite finden Sie IP-Adressen, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform in Ihre [SFTP-Server](../destinations/catalog/cloud-storage/sftp.md).
+Diese Seite enthält IP-Adressen, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform auf Ihren [SFTP-Server](../destinations/catalog/cloud-storage/sftp.md) zu exportieren.
 
 Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen.
 

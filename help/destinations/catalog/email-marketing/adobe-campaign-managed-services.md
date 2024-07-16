@@ -29,17 +29,17 @@ Mit Campaign haben Sie folgende Möglichkeiten:
 
 Beachten Sie bei der Verwendung der Adobe Campaign Managed Cloud Services-Verbindung die folgenden Limits:
 
-* Sie können [Aktivieren](#activate) maximal 25 Zielgruppen zu diesem Ziel hinzu.
+* Sie können für dieses Ziel [maximal 25 Zielgruppen aktivieren](#activate).
 
-  Sie können diese Grenze ändern, indem Sie den Wert der **nmsCdp_aep_audience_list_limit** in der **[!UICONTROL Administration]** > **[!UICONTROL Plattform]** > **[!UICONTROL Optionen]** Ordner des Campaign-Explorers.
+  Sie können diese Beschränkung ändern, indem Sie den Wert der Option **NmsCdp_Aep_Audience_List_Limit** im Ordner **[!UICONTROL Administration]** > **[!UICONTROL Plattform]** > **[!UICONTROL Optionen]** des Campaign-Explorer aktualisieren.
 
-* Für jede Zielgruppe können bis zu 20 Felder hinzugefügt werden. [map](#map) nach Adobe Campaign.
+* Für jede Zielgruppe können Sie bis zu 20 Felder zu [map](#map) zu Adobe Campaign hinzufügen.
 
-  Sie können diese Grenze ändern, indem Sie den Wert der **nmsCdp_aep_destinations_max_columns** in der **[!UICONTROL Administration]** > **[!UICONTROL Plattform]** > **[!UICONTROL Optionen]** Ordner des Campaign-Explorers.
+  Sie können diese Beschränkung ändern, indem Sie den Wert der Option **NmsCdp_aep_Destinations_Max_Columns** im Ordner **[!UICONTROL Administration]** > **[!UICONTROL Plattform]** > **[!UICONTROL Optionen]** des Campaign-Explorer aktualisieren.
 
 * Datenbeibehaltung in Azure Blob Storage Data Landing Zone (DLZ) : 7 Tage.
 * Die Aktivierungshäufigkeit beträgt mindestens 3 Stunden.
-* Die maximale Länge des Dateinamens, die von dieser Verbindung unterstützt wird, beträgt 255 Zeichen. Wenn Sie [den exportierten Dateinamen konfigurieren](../../ui/activate-batch-profile-destinations.md#configure-file-names)darf der Dateiname nicht länger als 255 Zeichen sein. Wenn die maximale Länge des Dateinamens überschritten wird, treten Aktivierungsfehler auf.
+* Die maximale Länge des Dateinamens, die von dieser Verbindung unterstützt wird, beträgt 255 Zeichen. Wenn Sie [den exportierten Dateinamen konfigurieren](../../ui/activate-batch-profile-destinations.md#configure-file-names), stellen Sie sicher, dass der Dateiname 255 Zeichen nicht überschreitet. Wenn die maximale Länge des Dateinamens überschritten wird, treten Aktivierungsfehler auf.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -69,7 +69,7 @@ Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Adobe Campaign-Ver
 | Ziel-Identität | Beschreibung | Zu beachten |
 |---|---|---|
 | external_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. Es wird empfohlen, diese Identität zu verwenden und sie der ID in Ihrer Campaign-Instanz zuzuordnen, die den Kunden repräsentiert (loyalty_ID, account_ID, customer_ID..). |
-| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Siehe folgendes Dokument unter [ECID](/help/identity-service/features/ecid.md) für weitere Informationen. |
+| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Aliase referenziert werden: „Adobe Marketing Cloud ID“, „Adobe Experience Cloud ID“, „Adobe Experience Platform ID“. Weitere Informationen finden Sie im folgenden Dokument zu [ECID](/help/identity-service/features/ecid.md) . |
 | email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Es werden sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Es werden sowohl einfache als auch SHA256-Hash-Telefonnummern von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht. |
 | GAID | GOOGLE ADVERTISING ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
@@ -83,7 +83,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 ---------|----------|---------|
-| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute auswählen der [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder einer Zielgruppe zusammen mit den gewünschten Schemafeldern (z. B. E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute auswählen des [Zielaktivierungs-Workflows](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) ausgewählt. |
 | Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Weitere Informationen finden Sie unter [Batch-Datei-basierte Ziele](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -92,7 +92,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Zugriffskontrolle – Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
@@ -104,22 +104,22 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Instanz auswählen]**: Ihr **[!DNL Campaign]** Marketing-Instanz.
-* **[!UICONTROL Zielgruppen-Mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie in verwenden **[!DNL Adobe Campaign]** zum Versand. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
-* **[!UICONTROL Synchronisierungstyp auswählen]**:
+* **[!UICONTROL Instanz auswählen]**: Ihre **[!DNL Campaign]** Marketing-Instanz.
+* **[!UICONTROL Zielgruppen-Mapping]**: Wählen Sie das Zielgruppen-Mapping aus, das Sie in **[!DNL Adobe Campaign]** zum Senden von Sendungen verwenden. [Weitere Informationen](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Wählen Sie den Synchronisierungstyp]** aus:
 
-   * **[!UICONTROL Zielgruppensynchronisierung]**: Verwenden Sie diese Option, um Adobe Experience Platform-Zielgruppen an Adobe Campaign zu senden.
-   * **[!UICONTROL Profilsynchronisierung (nur Aktualisierung)]**: Verwenden Sie diese Option, um Adobe Experience Platform-Profilattribute in Adobe Campaign zu importieren und einen Synchronisierungsprozess einzurichten, damit sie regelmäßig aktualisiert werden können.
+   * **[!UICONTROL Zielgruppensynchronisierung]**: Mit dieser Option können Sie Adobe Experience Platform-Zielgruppen an Adobe Campaign senden.
+   * **[!UICONTROL Profilsynchronisierung (nur aktualisieren)]**: Verwenden Sie diese Option, um Adobe Experience Platform-Profilattribute in Adobe Campaign zu importieren und einen Synchronisierungsprozess einzurichten, damit sie regelmäßig aktualisiert werden können.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zu [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
 Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ### Governance-Richtlinie und Durchsetzungsmaßnahmen {#governance}
 
-Wählen Sie die Marketing-Aktionen aus, die für die Daten gelten, die Sie an das Ziel exportieren möchten. Für Adobe Campaign wird empfohlen, die **[!UICONTROL E-Mail-Targeting]** Marketing-Aktion.
+Wählen Sie die Marketing-Aktionen aus, die für die Daten gelten, die Sie an das Ziel exportieren möchten. Für Adobe Campaign wird empfohlen, die Marketing-Aktion **[!UICONTROL E-Mail-Targeting]** auszuwählen.
 
 Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Datennutzungsrichtlinien – Übersicht](/help/data-governance/policies/overview.md).
 
@@ -127,10 +127,10 @@ Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Datennutzu
 
 >[!IMPORTANT]
 > 
->* Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
->* Export *identities*, benötigen Sie die **[!UICONTROL Identitätsdiagramm anzeigen]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). <br> ![Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
+>* Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>* Um *identities* zu exportieren, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Identitätsdiagramm anzeigen]** [ ](/help/access-control/home.md#permissions). <br> ![Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren.](/help/destinations/assets/overview/export-identities-to-destination.png "Wählen Sie den im Workflow hervorgehobenen Identitäts-Namespace aus, um Zielgruppen für Ziele zu aktivieren."){width="100" zoomable="yes"}
 
-Lesen [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) für Anweisungen zum Aktivieren von Zielgruppendaten für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppendaten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) .
 
 ### Zuordnen von Attributen und Identitäten {#map}
 
@@ -138,20 +138,20 @@ Wählen Sie XDM-Felder aus, die mit den Profilen exportiert werden sollen, und o
 
 1. Quellfelder auswählen:
 
-   * Wählen Sie eine **identifier** (z. B. das E-Mail-Feld) als Quellidentität, die ein Profil in Adobe Experience Platform und Adobe Campaign eindeutig identifiziert.
+   * Wählen Sie eine **Kennung** (z. B. das E-Mail-Feld) als Quellidentität aus, die ein Profil in Adobe Experience Platform und Adobe Campaign eindeutig identifiziert.
 
-   * Alle anderen auswählen **XDM-Quellprofilattribute** die nach Adobe Campaign exportiert werden müssen.
+   * Wählen Sie alle anderen **XDM-Quellprofilattribute** aus, die nach Adobe Campaign exportiert werden sollen.
 
    >[!NOTE]
    >
    >Das Feld &quot;segmentMembershipStatus&quot;ist ein erforderliches Mapping, das den Segmentzugehörigkeitsstatus widerspiegelt. Dieses Feld wird standardmäßig hinzugefügt und kann nicht geändert oder entfernt werden.
 
-1. Ordnen Sie jedes Feld dem Zielfeld in Adobe Campaign zu. Die verfügbaren Zielfelder werden durch das beim [Erstellen des Ziels](#destination-details).
+1. Ordnen Sie jedes Feld dem Zielfeld in Adobe Campaign zu. Die verfügbaren Zielfelder werden durch das beim [Erstellen des Ziels](#destination-details) ausgewählte Zielgruppen-Mapping bestimmt.
 
 1. Identifizieren Sie erforderliche Attribute und Deduplizierungsschlüssel. Beachten Sie, dass Werte in Attributen, die als &quot;Obligatorisch&quot;oder &quot;Deduplizierungsschlüssel&quot;markiert sind, nicht null sein können.
 
    * [Obligatorische Attribute](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) stellen sicher, dass alle Profildatensätze die ausgewählten Attribute enthalten. Beispiel: Alle exportierten Profile enthalten eine E-Mail-Adresse. Es wird empfohlen, sowohl das Identitätsfeld als auch das als Deduplizierungsschlüssel verwendete Feld als obligatorisch festzulegen.
-   * [Deduplizierungsschlüssel](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) ist ein Primärschlüssel, der die Identität bestimmt, anhand derer Benutzer ihre Profile deduplizieren möchten.
+   * [Ein Deduplizierungsschlüssel](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) ist ein Primärschlüssel, der die Identität bestimmt, anhand derer Benutzer ihre Profile deduplizieren möchten.
 
      >[!IMPORTANT]
      >
@@ -159,7 +159,7 @@ Wählen Sie XDM-Felder aus, die mit den Profilen exportiert werden sollen, und o
 
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. Nachdem die Zuordnung durchgeführt wurde, können Sie die Zielkonfiguration überprüfen und abschließen, um mit dem Senden von Daten an zu beginnen. **[!DNL Campaign]**.
+1. Nachdem die Zuordnung durchgeführt wurde, können Sie die Zielkonfiguration überprüfen und abschließen, um mit dem Senden von Daten an **[!DNL Campaign]** zu beginnen.
    [Erfahren Sie, wie Sie die Zielkonfiguration überprüfen und abschließen](/help/destinations/destination-types.md#review).
 
 ## Exportierte Daten/Datenexport validieren {#exported-data}
@@ -168,17 +168,17 @@ Nachdem ein Ziel aktiviert wurde, können Sie in Campaign auf den entsprechenden
 
 ### Überwachen von Datenexportvorgängen {#jobs}
 
-Navigieren Sie zum **[!UICONTROL Administration]** > **[!UICONTROL Prüfung]** > **[!UICONTROL Audience-Ladevorgänge]** -Menü, um alle von Adobe Experience Platform aktivierten Exportvorgänge zu überwachen.
+Navigieren Sie zum Menü **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load-Aufträge]** , um alle Exportvorgänge zu überwachen, die von Adobe Experience Platform aktiviert wurden.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### Auf exportierte Daten zugreifen {#data}
 
-Für **[!UICONTROL Zielgruppensynchronisierung]** können Sie die exportierte Zielgruppe überprüfen, indem Sie zu der **[!UICONTROL Profil und Zielgruppe]** > **[!UICONTROL Liste]** > **[!UICONTROL AEP-Zielgruppen]** Menü.
+Für die **[!UICONTROL Zielgruppensynchronisierung]** können Sie die exportierte Zielgruppe überprüfen, indem Sie zum Menü **[!UICONTROL Profil und Ziel]** > **[!UICONTROL Liste]** > **[!UICONTROL AEP-Zielgruppen]** navigieren.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-Für **[!UICONTROL Profilsynchronisierung (nur Aktualisierung)]** werden die Daten für jedes Profil, das in der Zielgruppe aktiviert ist, automatisch in die Campaign-Datenbank aktualisiert.
+Bei der **[!UICONTROL Profilsynchronisierung (nur Aktualisierung)]** werden die Daten für jedes Profil, das von der im Ziel aktivierten Zielgruppe angesprochen wird, automatisch in die Campaign-Datenbank aktualisiert.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

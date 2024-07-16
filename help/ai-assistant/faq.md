@@ -1,7 +1,8 @@
 ---
 title: Häufig gestellte Fragen zum KI-Assistenten
 description: Erfahren Sie mehr über die Antworten auf häufig gestellte Fragen zu AI Assistant
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
+source-git-commit: da5a4e099909d7994b9bbe408a70039d34c14b50
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -16,13 +17,13 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 Die in den KI-Assistenten-Antworten dargestellten Daten werden täglich aktualisiert. Das bedeutet, dass Daten in Antworten bis zu 24 Stunden älter sein können als die Daten, die zum Zeitpunkt der Antwort auf der Experience Platform-Benutzeroberfläche angezeigt werden.
 
-Die gleichen Grundsätze gelten für die Zugangssteuerung. Es kann bis zu 24 Stunden dauern, bis der AI-Assistent alle Änderungen an den Konfigurationen der Zugriffskontrolle und Berechtigungen widerspiegelt. Weitere Informationen finden Sie im Handbuch unter [Datenschutz in AI Assistant](./privacy.md).
+Die gleichen Grundsätze gelten für die Zugangssteuerung. Es kann bis zu 24 Stunden dauern, bis der AI-Assistent alle Änderungen an den Konfigurationen der Zugriffskontrolle und Berechtigungen widerspiegelt. Weitere Informationen finden Sie im Handbuch zum [Datenschutz im AI-Assistenten](./privacy.md).
 
 ## Welche Adobe-Applikationen unterstützt der AI Assistant?
 
 Derzeit ist der Umfang des AI-Assistenten wie folgt:
 
-* [Produktwissen](./home.md#product-knowledge): AI Assistant kann Fragen zu Produktwissen für Experience Platform, Real-time Customer Data Platform und Adobe Journey Optimizer beantworten. Sie können sich auch über die Customer Journey Analytics-Benutzeroberfläche mit Produktwissensthemen für Customer Journey Analytics befassen.
+* [Produktwissen](./home.md#product-knowledge): Der KI-Assistent kann Fragen zu Produktwissen für Experience Platform, Real-time Customer Data Platform und Adobe Journey Optimizer beantworten. Sie können sich auch über die Customer Journey Analytics-Benutzeroberfläche mit Produktwissensthemen für Customer Journey Analytics befassen.
 * [Operative Einblicke](./home.md#operational-insights): Sie können den KI-Assistenten mit Fragen zu betrieblichen Einblicken in die folgenden Datenobjekte befassen: Attribute, Zielgruppen, Datenflüsse, Datensätze, Ziele, Journey, Schemata und Quellen.
 
 ## Welche Funktionen hat die KI-Assistenzkraft?

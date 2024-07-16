@@ -13,11 +13,11 @@ ht-degree: 48%
 
 # Löschen eines Objekts in der API
 
-Sie können [!DNL Catalog] -Objekt, indem Sie die Kennung im Pfad einer DELETE-Anfrage angeben.
+Sie können ein [!DNL Catalog] -Objekt löschen, indem Sie dessen Kennung im Pfad einer DELETE-Anfrage angeben.
 
 >[!WARNING]
 >
->Seien Sie besonders vorsichtig beim Löschen von Objekten, da dies nicht rückgängig gemacht werden kann und andernorts in [!DNL Experience Platform].
+>Seien Sie besonders vorsichtig beim Löschen von Objekten, da dies nicht rückgängig gemacht werden kann und andernorts in [!DNL Experience Platform] zu unerwarteten Änderungen führen kann.
 
 **API-Format**
 
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Die `DELETE /batches/{ID}` -Endpunkt wird nicht mehr unterstützt. Um einen Batch zu löschen, sollten Sie [Batch-Aufnahme-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Der Endpunkt `DELETE /batches/{ID}` wird nicht mehr unterstützt. Um einen Batch zu löschen, sollten Sie die [Batch Ingestion-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) verwenden.
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu löschen. Gültige Objekte sind: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu löschenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -59,4 +59,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein Array mit der ID des
 
 >[!NOTE]
 >
->Wenn nicht [!DNL Catalog] -Objekte mit der in Ihrer Anfrage angegebenen ID übereinstimmen, erhalten Sie möglicherweise weiterhin einen HTTP-Status-Code 200, das Antwort-Array ist jedoch leer.
+>Wenn keine [!DNL Catalog] -Objekte mit der in Ihrer Anfrage angegebenen ID übereinstimmen, erhalten Sie möglicherweise weiterhin einen HTTP-Status-Code 200, das Antwort-Array ist jedoch leer.

@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Leitplanken
 
-Siehe [Limits für Query Service](../guardrails.md) Dokument zu Standardbeschränkungen für Query Service-Daten in Bezug auf Ihre Lizenzberechtigung.
+Weitere Informationen zu Standardbeschränkungen für Query Service-Daten im Zusammenhang mit Ihrer Lizenzberechtigung finden Sie im Dokument [Limits für Query Service](../guardrails.md) .
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

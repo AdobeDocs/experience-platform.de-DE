@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Azure; Azure-Dateispeicher; Azure-Dateispeicher
+keywords: Experience Platform; home; beliebte Themen; Azure; Azure File Storage; Azure-Dateispeicher
 solution: Experience Platform
 title: Erstellen einer Azure File Storage Base-Verbindung mithilfe der Flow Service-API
 type: Tutorial
@@ -7,12 +7,12 @@ description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Azure File Stor
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 64%
+source-wordcount: '463'
+ht-degree: 63%
 
 ---
 
-# Erstellen einer [!DNL Azure File Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Azure File Storage]-Basisverbindung mit der [!DNL Flow Service]-API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -25,7 +25,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Azure File Storage] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Azure File Storage] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -33,12 +33,12 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Azure File Storage] herstell
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Der Endpunkt der [!DNL Azure File Storag]z. B. auf die Sie zugreifen. |
-| `userId` | Der Benutzer hat ausreichenden Zugriff auf die [!DNL Azure File Storage] -Endpunkt. |
-| `password` | Das Kennwort für Ihre [!DNL Azure File Storage] instance |
+| `host` | Der Endpunkt der [!DNL Azure File Storag]e -Instanz, auf die Sie zugreifen. |
+| `userId` | Der Benutzer mit ausreichendem Zugriff auf den [!DNL Azure File Storage] -Endpunkt. |
+| `password` | Das Kennwort für Ihre [!DNL Azure File Storage]-Instanz |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Azure File Storage] ist: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
-Weitere Informationen zu den ersten Schritten finden Sie unter [Dieses Azure-Dateispeicherdokument](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem Azure File Storage-Dokument](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ### Verwenden von Platform-APIs
 
@@ -89,9 +89,9 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `auth.params.host` | Der Endpunkt der [!DNL Azure File Storage] -Instanz, auf die Sie zugreifen. |
-| `auth.params.userId` | Der Benutzer hat ausreichenden Zugriff auf die [!DNL Azure File Storage] -Endpunkt. |
-| `auth.params.password` | Die [!DNL Azure File Storage] Zugriffsschlüssel. |
-| `connectionSpec.id` | Die [!DNL Azure File Storage]-Verbindungsspezifikations-ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `auth.params.userId` | Der Benutzer mit ausreichendem Zugriff auf den [!DNL Azure File Storage] -Endpunkt. |
+| `auth.params.password` | Der Zugriffsschlüssel [!DNL Azure File Storage]. |
+| `connectionSpec.id` | Die [!DNL Azure File Storage] Verbindungsspezifikations-ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 **Antwort**
 
@@ -106,4 +106,4 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Azure File Storage] Verbindung mithilfe der [!DNL Flow Service] API und haben den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, während Sie lernen, wie Sie [Erkunden eines Drittanbieter-Cloud-Speichers mithilfe der Flow Service-API](../../explore/cloud-storage.md).
+In diesem Tutorial haben Sie eine [!DNL Azure File Storage] -Verbindung mit der [!DNL Flow Service] -API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie mit der Flow Service-API](../../explore/cloud-storage.md) einen Drittanbieter-Cloud-Speicher erkunden können.[

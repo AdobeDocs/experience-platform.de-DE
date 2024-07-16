@@ -15,7 +15,7 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 > * Adobe empfiehlt, diese Seite mit einem Lesezeichen zu versehen und alle drei Monate erneut zu besuchen, um nach den neuesten IP-Adressen zu suchen. Adobe stellt keine Benachrichtigung über neue IP-Bereiche bereit.
-> * Während Adobe Datenexporte an SFTP-Server unterstützt, sind die empfohlenen Cloud-Speicherorte für den Datenexport folgende: [!DNL Amazon S3] und [!DNL Azure Blob].
+> * Während Adobe Datenexporte an SFTP-Server unterstützt, werden für den Export von Daten für Cloud-Speicher [!DNL Amazon S3] und [!DNL Azure Blob] empfohlen.
 
 ## Anwendbarkeit {#applicability}
 
@@ -27,7 +27,7 @@ Die IP-Bereichsinformationen auf dieser Seite gelten für die folgenden dateibas
 
 >[!IMPORTANT]
 >
->Die auf dieser Seite dokumentierten IP-Bereiche sind *not* unterstützt für die folgenden dateibasierten Cloud-Speicher-Ziele: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] und [!UICONTROL Data Landing Zone].
+>Die auf dieser Seite dokumentierten IP-Bereiche werden für die folgenden dateibasierten Cloud-Speicher-Ziele *nicht* unterstützt: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] und [!UICONTROL Data Landing Zone].
 
 ## Übersicht {#overview}
 

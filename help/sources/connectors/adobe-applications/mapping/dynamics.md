@@ -4,8 +4,8 @@ description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Micro
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 38%
+source-wordcount: '499'
+ht-degree: 40%
 
 ---
 
@@ -171,8 +171,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Anweisungen finden Sie im Anhang unter [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) für weitere Informationen. | Für eine Liste der möglichen Werte und Beschriftungen für `record1objecttypecode` Quellfeld, siehe dieses [[!DNL Microsoft Dynamics] Referenzdokument zur Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Anweisungen finden Sie im Anhang unter [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) für weitere Informationen. | Für eine Liste der möglichen Werte und Beschriftungen für `record2objecttypecode` Quellfeld, siehe dieses [[!DNL Microsoft Dynamics] Referenzdokument zur Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Weitere Informationen finden Sie im Anhang für die Schritte zum [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) . | Eine Liste der möglichen Werte und Beschriftungen für das Quellfeld `record1objecttypecode` finden Sie in diesem Referenzdokument für die [[!DNL Microsoft Dynamics] Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options) . |
+| `record2objecttypecode` | *Eine benutzerdefinierte Feldergruppe muss als Zielschema definiert sein.* Weitere Informationen finden Sie im Anhang für die Schritte zum [Zuordnen eines Quellfelds vom Typ Picklist zu einem XDM-Zielschema](#picklist-type-fields) . | Eine Liste der möglichen Werte und Beschriftungen für das Quellfeld `record2objecttypecode` finden Sie in diesem Referenzdokument für die [[!DNL Microsoft Dynamics] Verbindungsentität](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options) . |
 
 {style="table-layout:auto"}
 
@@ -201,7 +201,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 {style="table-layout:auto"}
 
-## Marketingliste {#marketing-list}
+## Marketing-Liste {#marketing-list}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
@@ -216,7 +216,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 {style="table-layout:auto"}
 
-## Mitglieder der Marketing-Liste {#marketing-list-members}
+## Marketing-Listenmitglieder {#marketing-list-members}
 
 | Quellfeld | Target-XDM-Feld | Anmerkungen |
 | --- | --- | --- |
@@ -232,20 +232,20 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Microsoft Dynami
 
 ## Anhang
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie beim Konfigurieren von B2B-Zuordnungen für Ihre [!DNL Microsoft] Dynamics-Quelle.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie beim Konfigurieren von B2B-Zuordnungen für Ihre [!DNL Microsoft] Dynamics-Quelle verwenden können.
 
 ### Felder vom Typ Liste auswählen {#picklist-type-fields}
 
-Sie können [berechnete Felder](../../../../data-prep/ui/mapping.md#calculated-fields) zum Zuordnen eines Quellfelds vom Typ &quot;Picklist&quot; [!DNL Microsoft Dynamics] in ein Ziel-XDM-Feld.
+Sie können [berechnete Felder](../../../../data-prep/ui/mapping.md#calculated-fields) verwenden, um ein Quellfeld vom Typ Picklist von [!DNL Microsoft Dynamics] einem Ziel-XDM-Feld zuzuordnen.
 
-Beispiel: die `genderCode` -Feld umfasst zwei Optionen:
+Das Feld `genderCode` enthält beispielsweise zwei Optionen:
 
 | Wert | Kennzeichnung |
 | --- | --- |
 | 1 | `male` |
 | 2 | `female` |
 
-Sie können die folgenden Optionen verwenden, um die `genderCode` Quellfeld in `person.gender` Zielfeld:
+Sie können die folgenden Optionen verwenden, um das Quellfeld `genderCode` dem Zielfeld `person.gender` zuzuordnen:
 
 #### Logischen Operator verwenden
 
@@ -253,7 +253,7 @@ Sie können die folgenden Optionen verwenden, um die `genderCode` Quellfeld in `
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-In diesem Szenario entspricht der Wert dem Schlüssel, wenn der Schlüssel in den Optionen gefunden wird, oder `default`, wenn `default` vorhanden ist und der Schlüssel nicht gefunden wurde. Der Wert entspricht `null` , wenn Optionen `null` oder es gibt keine `default` und der Schlüssel nicht gefunden wurde.
+In diesem Szenario entspricht der Wert dem Schlüssel, wenn der Schlüssel in den Optionen gefunden wird, oder `default`, wenn `default` vorhanden ist und der Schlüssel nicht gefunden wird. Der Wert entspricht `null` , wenn die Optionen `null` sind oder es kein `default` gibt und der Schlüssel nicht gefunden wird.
 
 #### Berechnetes Feld verwenden
 
@@ -263,6 +263,6 @@ In diesem Szenario entspricht der Wert dem Schlüssel, wenn der Schlüssel in de
 
 >[!TIP]
 >
->Eine verschachtelte Iteration des obigen Vorgangs würde in etwa wie folgt aussehen: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
+>Eine verschachtelte Iteration des obigen Vorgangs wäre ähnlich wie: `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Weitere Informationen finden Sie unter [Dokument zu logischen Operatoren in [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Weitere Informationen finden Sie im Dokument [für logische Operatoren in  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators) .

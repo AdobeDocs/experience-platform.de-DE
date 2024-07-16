@@ -13,7 +13,7 @@ ht-degree: 53%
 
 ## Übersicht {#overview}
 
-Die [!DNL Adobe Commerce] Mit dem Ziel-Connector können Sie eine oder mehrere Real-Time CDP-Zielgruppen auswählen, die für Ihre [!DNL Adobe Commerce] -Konto ein dynamisches personalisiertes Erlebnis für Ihre Kunden bereitstellen. Within [!DNL Adobe Commerce]können Sie dann diese Real-Time CDP-Zielgruppen auswählen, um individuelle Angebote im Warenkorb zu personalisieren, z. B. &quot;Kauf 2 erhalten 1 gratis&quot;. Sie können Hero-Banner auch anzeigen und die Produktpreise über Werbeangebote ändern, die alle auf Adobe Real-Time CDP-Zielgruppen abgestimmt sind.
+Mit dem Ziel-Connector [!DNL Adobe Commerce] können Sie eine oder mehrere Real-Time CDP-Zielgruppen auswählen, die für Ihr [!DNL Adobe Commerce] -Konto aktiviert werden sollen, um Ihren Kunden ein dynamisches personalisiertes Erlebnis zu bieten. Innerhalb von [!DNL Adobe Commerce] können Sie dann diese Real-Time CDP-Zielgruppen auswählen, um individuelle Angebote im Warenkorb zu personalisieren, z. B. &quot;Kauf 2 erhält 1 kostenlos&quot;. Sie können Hero-Banner auch anzeigen und die Produktpreise über Werbeangebote ändern, die alle auf Adobe Real-Time CDP-Zielgruppen abgestimmt sind.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -22,7 +22,7 @@ Dieser Connector ist im Zielkatalog für Kunden verfügbar, die Real-Time CDP Pr
 Um diese Zielverbindung zu verwenden, müssen Sie Zugriff auf Folgendes haben:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer-Konsole](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Mit Zugriff auf die Entwicklerkonsole können Sie Informationen zu Dienstkonten und Anmeldedaten anzeigen, die für [Konfiguration abschließen](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) der Erweiterung in Adobe Commerce.
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Mit Zugriff auf die Entwicklerkonsole können Sie Informationen zu Dienstkonten und Anmeldedaten anzeigen, die zum [Abschließen der Konfiguration](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) der Erweiterung in Adobe Commerce erforderlich sind.
 - [Adobe Commerce Cloud-Version 2.4.4 oder höher](https://business.adobe.com/de/products/magento/magento-commerce.html)
 
 Erstellen Sie in Experience Platform Folgendes:
@@ -37,7 +37,7 @@ Nachdem Sie die Voraussetzungen erfüllt haben, stellen Sie eine Verbindung mit 
 
 >[!IMPORTANT]
 > 
->Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]** und **[!UICONTROL Ziele verwalten]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffskontrolle](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 So stellen Sie eine Verbindung mit dem Ziel [!DNL Adobe Commerce] her:
 
@@ -53,7 +53,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 - **[!UICONTROL Name]**: Geben Sie den gewünschten Namen für das Ziel ein.
 - **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
 - **[!UICONTROL Integrationsalias]**: Dieser Wert wird als JSON-Objektname an das Experience Platform Web SDK gesendet.
-- **[!UICONTROL Datenspeicher-ID]**: Dadurch wird bestimmt, welcher Datenerfassungs-Datastream die Zielgruppen enthält, die in der Antwort auf die Seite enthalten sind. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Weitere Details finden Sie unter [Konfigurieren eines Datenstroms](../../../datastreams/overview.md).
+- **[!UICONTROL Datenspeicher-ID]**: Hiermit wird bestimmt, welcher Datenerfassungs-Datastream die Zielgruppen enthält, die in der Antwort auf die Seite enthalten sind. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Weitere Details finden Sie unter [Konfigurieren eines Datenstroms](../../../datastreams/overview.md).
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
 
@@ -61,23 +61,23 @@ Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenf
 
 Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
 
-## Aktivieren von Zielgruppen für die [!DNL Commerce] Ziel {#activate}
+## Aktivieren von Zielgruppen für das [!DNL Commerce]-Ziel {#activate}
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
-Lesen [Profile und Zielgruppen für Profilanfrageziele aktivieren](../../ui/activate-edge-personalization-destinations.md) Anweisungen zum Aktivieren von Zielgruppen für die [!DNL Commerce] Ziel.
+Anweisungen zum Aktivieren von Zielgruppen für das Ziel [!DNL Commerce] finden Sie unter [Aktivieren von Profilen und Zielgruppen für Profilanfrageziele](../../ui/activate-edge-personalization-destinations.md) .
 
 ## Nächste Schritte in [!DNL Adobe Commerce]
 
-Nachdem Sie die [!DNL Commerce] Ziel innerhalb von Experience Platform, müssen Sie die [!DNL Audience Activation] Erweiterung in [!DNL Commerce] und konfigurieren Sie die [!DNL Commerce Admin] , um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
+Nachdem Sie das Ziel [!DNL Commerce] innerhalb von Experience Platform konfiguriert haben, müssen Sie die Erweiterung [!DNL Audience Activation] in [!DNL Commerce] installieren und die [!DNL Commerce Admin] konfigurieren, um die von Ihnen erstellten Real-Time CDP-Zielgruppen zu importieren. Weitere Informationen finden Sie in der [[!DNL Commerce] Dokumentation](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html).
 
 ## Validieren von Zielgruppen-Aktivierung in Commerce {#exported-data}
 
-Nachdem Sie Real-Time CDP-Zielgruppen für Ihre [!DNL Adobe Commerce] -Konto verwenden, werden diese Zielgruppen angezeigt, wenn Sie zum _Admin_ Seitenleiste, dann zu **[!UICONTROL Kunden]** > **[!UICONTROL Real-Time CDP Audience]**.
+Nachdem Sie Real-Time CDP-Zielgruppen für Ihr [!DNL Adobe Commerce]-Konto aktiviert haben, werden diese Zielgruppen angezeigt, wenn Sie zur Seitenleiste _Admin_ navigieren und dann zu **[!UICONTROL Kunden]** > **[!UICONTROL Real-Time CDP-Zielgruppe]** navigieren.
 
-![Dashboard für Real-Time CDP-Zielgruppen](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
+![Real-Time CDP-Zielgruppen-Dashboard](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

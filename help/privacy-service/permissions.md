@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie die Benutzerrechte für den Adobe Experience 
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1481'
 ht-degree: 95%
 
 ---
@@ -47,17 +47,17 @@ In der folgenden Tabelle finden Sie eine Übersicht über die verfügbaren Berec
 
 Um die Berechtigungen für den Privacy Service zu verwalten, melden Sie sich bei [Admin Console](https://adminconsole.adobe.com/) an und wählen Sie **[!UICONTROL Produkte]** in der oberen Navigationsleiste. Wählen Sie von hier aus **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![Die Admin Console mit der Privacy Service-Produktkarte wurde hervorgehoben.](./images/permissions/privacy-service-card.png)
+![Die Admin Console mit der Privacy Service-Produktkarte ist hervorgehoben.](./images/permissions/privacy-service-card.png)
 
 ### Auswählen oder Erstellen eines Produktprofils
 
 Auf dem nächsten Bildschirm sehen Sie eine Liste der verfügbaren Produktprofile für Privacy Service unter Ihrer Organisation. Wenn keine Produktprofile vorhanden sind, wählen Sie **[!UICONTROL Neues Profil]**, um eines zu erstellen. Wenn Sie in Ihrer Organisation mehrere Rollen oder Benutzergruppen haben, die unterschiedliche Zugriffsrechte benötigen, sollten Sie für jede dieser Gruppen ein eigenes Produktprofil erstellen.
 
-![Die Admin Console mit dem Privacy Service-Produktprofil wurde hervorgehoben.](./images/permissions/select-or-create-profile.png)
+![Die Admin Console mit dem Privacy Service-Produktprofil ist hervorgehoben.](./images/permissions/select-or-create-profile.png)
 
 Nachdem Sie ein Produktprofil ausgewählt haben, können Sie auf der Registerkarte **[!UICONTROL Berechtigungen]** mit der [Bearbeitung der Berechtigungen](#edit-permissions) für das Profil beginnen oder auf der Registerkarte **[!UICONTROL Benutzer]** mit der [Zuweisung von Benutzern](#assign-users) für das Profil beginnen.
 
-![Die Registerkarte Berechtigungen für eine Produktprofil-Admin Console.](./images/permissions/users-permissions-tabs.png)
+![Die Registerkarte &quot;Berechtigungen&quot;für eine Produktprofil-Admin Console.](./images/permissions/users-permissions-tabs.png)
 
 ### Bearbeiten der Berechtigungen für das Profil {#edit-permissions}
 
@@ -69,7 +69,7 @@ Wenn Sie die Berechtigungen für ein Profil bearbeiten, werden die verfügbaren 
 
 Berechtigungen sind in Kategorien unterteilt. Um zwischen Kategorien zu wechseln, wählen Sie die gewünschte Kategorie in der linken Navigationsleiste.
 
-![Die [!UICONTROL Opt-out aus dem Verkauf] unter Berechtigungen.](./images/permissions/switch-category.png)
+![Der Abschnitt [!UICONTROL Opt-out vom Verkauf] unter &quot;Berechtigungen&quot;.](./images/permissions/switch-category.png)
 
 Wählen Sie **[!UICONTROL Speichern]**, sobald Sie die Konfiguration der Berechtigungen abgeschlossen haben.
 
@@ -83,7 +83,7 @@ Die Ansicht des Produktprofils wird mit den hinzugefügten Berechtigungen wieder
 
 Um dem Produktprofil Benutzer zuzuweisen (und ihnen die konfigurierten Berechtigungen des Profils zu gewähren), wählen Sie die Registerkarte **[!UICONTROL Benutzer]**, gefolgt von **[!UICONTROL Benutzer hinzufügen]**.
 
-![Die Registerkarte Benutzer für ein Produktprofil in Admin Console.](./images/permissions/manage-users.png)
+![Die Registerkarte &quot;Benutzer&quot;für ein Produktprofil in Admin Console.](./images/permissions/manage-users.png)
 
 Weitere Informationen zur Verwaltung von Benutzern für ein Produktprofil finden Sie in der [Dokumentation zu Admin Console](https://helpx.adobe.com/de/enterprise/using/manage-product-profiles.html).
 

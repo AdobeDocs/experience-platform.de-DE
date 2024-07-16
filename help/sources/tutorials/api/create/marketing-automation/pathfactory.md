@@ -14,7 +14,7 @@ ht-degree: 46%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-In diesem Dokument erfahren Sie, wie Sie eine Basisverbindung für [!DNL PathFactory] mithilfe der [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+In diesem Dokument erfahren Sie, wie Sie mit der [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) eine Basisverbindung für [!DNL PathFactory] erstellen.
 
 ## Erste Schritte
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience 
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-Im folgenden Abschnitt finden Sie weitere Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL PathFactory] mithilfe der [!DNL Flow Service] API.
+Im folgenden Abschnitt finden Sie weitere Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL PathFactory] herstellen zu können.
 
 ### Erforderliche Anmeldedaten sammeln {#gather-credentials}
 
@@ -35,19 +35,19 @@ Um auf Ihr PathFactory-Konto in Platform zuzugreifen, müssen Sie die folgenden 
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Benutzername | Ihre [!DNL PathFactory] Benutzername des Kontos. Dies ist für die Identifikation Ihres Kontos im System unerlässlich. |
-| Kennwort | Das Kennwort für Ihre [!DNL PathFactory] -Konto. Stellen Sie sicher, dass dies geschützt ist, um einen unbefugten Zugriff zu verhindern. |
-| Domain | Die Ihrer [!DNL PathFactory] -Konto. Dies bezieht sich normalerweise auf die eindeutige Kennung in Ihrer [!DNL PathFactory] URL. |
-| Zugriffs-Token | Ein eindeutiges Token, das zur API-Authentifizierung verwendet wird, um eine sichere Kommunikation zwischen Ihren Systemen und [!DNL PathFactory]. |
-| API-Endpunkte | Bestimmte API-Endpunkte für den Zugriff auf Daten: Besucher, Sitzungen und Seitenansichten. Jeder Endpunkt entspricht verschiedenen Datensätzen, die Sie abrufen können. **Hinweis:** Diese werden vordefiniert durch [!DNL PathFactory] und spezifisch für die Daten sind, auf die Sie zugreifen möchten: <ul><li>**Besucher-Endpunkt**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Sitzungsendpunkt**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Seitenansichten-Endpunkt**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
+| Benutzername | Ihr [!DNL PathFactory] -Konto-Benutzername. Dies ist für die Identifikation Ihres Kontos im System unerlässlich. |
+| Kennwort | Das Ihrem [!DNL PathFactory]-Konto zugeordnete Kennwort. Stellen Sie sicher, dass dies geschützt ist, um einen unbefugten Zugriff zu verhindern. |
+| Domain | Die mit Ihrem [!DNL PathFactory] -Konto verknüpfte Domäne. Dies bezieht sich normalerweise auf die eindeutige Kennung in Ihrer [!DNL PathFactory]-URL. |
+| Zugriffs-Token | Ein eindeutiges Token für die API-Authentifizierung, um eine sichere Kommunikation zwischen Ihren Systemen und [!DNL PathFactory] sicherzustellen. |
+| API-Endpunkte | Bestimmte API-Endpunkte für den Zugriff auf Daten: Besucher, Sitzungen und Seitenansichten. Jeder Endpunkt entspricht verschiedenen Datensätzen, die Sie abrufen können. **Hinweis:** Diese sind durch [!DNL PathFactory] vordefiniert und spezifisch für die Daten, auf die Sie zugreifen möchten: <ul><li>**Besucherendpunkt**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Sitzungsendpunkt**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Endpunkt &quot;Seitenansichten&quot;**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-Weitere Informationen zum Sichern und Verwenden Ihrer Anmeldeinformationen sowie zum Abrufen und Aktualisieren Ihres Zugriffstokens finden Sie unter [[!DNL PathFactory] Support Center](https://support.pathfactory.com/categories/adobe/). Diese Ressource enthält umfassende Anleitungen zur Verwaltung Ihrer Anmeldedaten und zur Sicherstellung einer effektiven und sicheren API-Integration.
+Weitere Informationen zum Sichern und Verwenden Ihrer Anmeldeinformationen sowie zum Abrufen und Aktualisieren Ihres Zugriffstokens finden Sie im [[!DNL PathFactory] Support-Center](https://support.pathfactory.com/categories/adobe/). Diese Ressource enthält umfassende Anleitungen zur Verwaltung Ihrer Anmeldedaten und zur Sicherstellung einer effektiven und sicheren API-Integration.
 
 ## Erstellen einer Basisverbindung
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt beim Bereitstellen [!DNL PathFactory] Authentifizierungsberechtigungen als Teil des Anfragetexts.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL PathFactory]-Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -87,8 +87,8 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.clientId` | Die mit Ihrer [!DNL PathFactory] Anwendung. |
-| `auth.params.clientSecret` | Das Client-Geheimnis, das mit Ihrem [!DNL PathFactory] Anwendung. |
+| `auth.params.clientId` | Die mit Ihrer [!DNL PathFactory] -Anwendung verknüpfte Client-ID. |
+| `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrer [!DNL PathFactory]-Anwendung zugeordnet ist. |
 | `connectionSpec.id` | Die [!DNL PathFactory] Verbindungsspezifikations-ID: `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Antwort**

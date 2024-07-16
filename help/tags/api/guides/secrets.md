@@ -4,8 +4,8 @@ description: Hier erfahren Sie mehr über die Grundlagen zum Konfigurieren von g
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 89%
+source-wordcount: '1206'
+ht-degree: 88%
 
 ---
 
@@ -27,7 +27,7 @@ Dieses Handbuch bietet einen allgemeinen Überblick darüber, wie geheime Daten 
 
 ## Anmeldeinformationen
 
-Geheime Daten enthalten ein Attribut `credentials`, das die entsprechenden Werte der Anmeldeinformationen enthält. Wann [Erstellen eines Geheimnisses in der API](../endpoints/secrets.md#create), weist jeder geheime Typ verschiedene erforderliche Attribute auf, wie in den folgenden Abschnitten dargestellt:
+Geheime Daten enthalten ein Attribut `credentials`, das die entsprechenden Werte der Anmeldeinformationen enthält. Beim Erstellen eines Geheimnisses in der API ](../endpoints/secrets.md#create) hat jeder geheime Typ verschiedene erforderliche Attribute, wie in den folgenden Abschnitten dargestellt:[
 
 * [`token`](#token)
 * [`simple-http`](#simple-http)
@@ -101,19 +101,19 @@ Wenn der Austausch fehlschlägt, erfolgen drei weitere Versuche, den Vorgang aus
 
 ### `oauth2-google` {#oauth2-google}
 
-Geheimnisse mit `type_of` Wert von `oauth2-google` erfordert das folgende Attribut unter `credentials`:
+Geheimnisse mit dem Wert `type_of` von `oauth2-google` erfordern das folgende Attribut unter `credentials`:
 
 | Anmeldeinformations-Attribut | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `scopes` | Array | Listet die Google-Produktbereiche für die Authentifizierung auf. Die folgenden Bereiche werden unterstützt:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google-Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+| `scopes` | Array | Listet die Google-Produktbereiche für die Authentifizierung auf. Die folgenden Bereiche werden unterstützt:<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Google Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-Nach der Erstellung `oauth2-google` geheim ist, enthält die Antwort eine `meta.authorization_url` -Eigenschaft. Sie müssen diese URL kopieren und in einen Browser einfügen, um den Google-Authentifizierungsfluss abzuschließen.
+Nach dem Erstellen des `oauth2-google`-Geheimnisses enthält die Antwort eine `meta.authorization_url` -Eigenschaft. Sie müssen diese URL kopieren und in einen Browser einfügen, um den Google-Authentifizierungsfluss abzuschließen.
 
-#### Erneutes Autorisieren eines `oauth2-google` secret
+#### Erneutes Autorisieren eines `oauth2-google`-Geheimnisses
 
-Die Autorisierungs-URL für eine `oauth2-google` geheim läuft eine Stunde nach der Erstellung des Geheimnisses ab (wie durch `meta.authorization_url_expires_at`). Danach muss das Geheimnis erneut autorisiert werden, um den Authentifizierungsprozess zu verlängern.
+Die Autorisierungs-URL für ein `oauth2-google` -Geheimnis läuft eine Stunde nach der Erstellung des Geheimnisses ab (wie durch `meta.authorization_url_expires_at` angegeben). Danach muss das Geheimnis erneut autorisiert werden, um den Authentifizierungsprozess zu verlängern.
 
-Siehe Abschnitt [Endpunktleitfaden für Geheimnisse](../endpoints/secrets.md#reauthorize) für Details zur Neuautorisierung eines `oauth2-google` geheim durch eine PATCH-Anfrage an die Reactor-API.
+Weitere Informationen dazu, wie Sie ein `oauth2-google`-Geheimnis erneut autorisieren, indem Sie eine PATCH-Anfrage an die Reactor-API richten, finden Sie im [Endpunkthandbuch zu Geheimnissen](../endpoints/secrets.md#reauthorize) .
 
 ## Umgebungsbeziehung
 

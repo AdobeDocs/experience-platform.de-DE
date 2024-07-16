@@ -4,8 +4,8 @@ description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target�
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 98%
+source-wordcount: '578'
+ht-degree: 97%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 98%
 ### Adobe Target-Erweiterung 0.11.4
 
 * Aktualisierung auf at.js v1.8.3
-* Hinzugefügt `SameSite=None` und `Secure` Attribute beim Setzen von Cookies
+* Attribute `SameSite=None` und `Secure` beim Setzen von Cookies hinzugefügt
 
 ## 24. Juli 2020
 
@@ -46,11 +46,11 @@ ht-degree: 98%
 ### Adobe Target-Erweiterung 0.11.0
 
 * at.js wurde auf Version 1.8 aktualisiert.
-* Verbesserte Leistung bei Integrationen zwischen Experience Cloud ID Library (ECID) v4.4 und at.js 1.8.
-* Zuvor führte die ECID-Bibliothek zwei Sperraufrufe durch, bevor at.js Erlebnisse abrufen konnte. Dies wurde auf einen einzigen Aufruf reduziert, wodurch die Leistung deutlich verbessert wird.
+* Verbesserte Performance bei Integrationen zwischen Experience Cloud ID Library (ECID) v4.4 und at.js 1.8.
+* Zuvor führte die ECID-Bibliothek zwei Sperraufrufe durch, bevor at.js Erlebnisse abrufen konnte. Dies wurde auf einen einzigen Aufruf reduziert, wodurch die Performance deutlich verbessert wird.
 
 >[!NOTE]
->Aktualisieren Sie Ihre ECID-Tag-Erweiterung für Adobe Experience Platform auf Version 4.4.1, um diese Leistungsverbesserung nutzen zu können.
+>Aktualisieren Sie Ihre ECID-Tag-Erweiterung für Adobe Experience Platform auf Version 4.4.1, um diese Performance-Verbesserung nutzen zu können.
 
 ## 31. Juli 2019
 

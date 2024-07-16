@@ -48,10 +48,10 @@ Mit Platform können Sie eigene benutzerdefinierte Feldergruppen und Datentypen 
 
 >[!IMPORTANT]
 >
->SPI und PII sollten nur im [Individuelles XDM-Profil](../classes/individual-profile.md) und [XDM ExperienceEvent](../classes/experienceevent.md) Klassen. Als Best Practice für das Löschen von Daten sowie Datenschutz und Governance sollten Sie SPI und PII nicht in anderen benutzerdefinierten oder standardmäßigen XDM-Klassen speichern.
+>SPI und PII sollten nur in den Klassen [XDM Individual Profile](../classes/individual-profile.md) und [XDM ExperienceEvent](../classes/experienceevent.md) gespeichert werden. Als Best Practice für das Löschen von Daten sowie Datenschutz und Governance sollten Sie SPI und PII nicht in anderen benutzerdefinierten oder standardmäßigen XDM-Klassen speichern.
 
 ## Nächste Schritte
 
-In diesem Dokument wurden wichtige Aspekte bezüglich sensibler und personenbezogener Daten in XDM behandelt. Weitere Informationen dazu, wie Sie Ihre Schemas so modellieren, dass sie Ihren geschäftlichen Anwendungsfällen am besten entsprechen, finden Sie im Handbuch zu [Best Practices für die Datenmodellierung](./best-practices.md).
+In diesem Dokument wurden wichtige Aspekte bezüglich sensibler und personenbezogener Daten in XDM behandelt. Weitere Informationen dazu, wie Sie Ihre Schemas modellieren, um Ihre geschäftlichen Anwendungsfälle am besten zu erfüllen, finden Sie im Handbuch zu [Best Practices für die Datenmodellierung](./best-practices.md).
 
-Weitere Informationen zu Data Governance- und Datenschutzfunktionen in Experience Platform finden Sie in der Übersicht unter [Governance, Datenschutz und Sicherheit](../../landing/governance-privacy-security/overview.md).
+Weitere Informationen zu Data Governance- und Datenschutzfunktionen in Experience Platform finden Sie in der Übersicht zu [Governance, Datenschutz und Sicherheit](../../landing/governance-privacy-security/overview.md).

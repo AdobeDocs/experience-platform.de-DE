@@ -20,7 +20,7 @@ ht-degree: 27%
 
 Rollen definieren den Zugriff, den ein Administrator, ein Spezialist oder ein Endbenutzer auf Ressourcen in Ihrem Unternehmen hat. In einer rollenbasierten Zugriffssteuerungsumgebung erfolgt die Bereitstellung des Benutzerzugriffs über gemeinsame Zuständigkeiten und Anforderungen. Eine Rolle verfügt über bestimmte Berechtigungen, wobei Mitglieder Ihrer Organisation je nach dem Umfang des Lese- oder Schreibzugriffs, den sie benötigen, einer oder mehreren Rollen zugewiesen werden können.
 
-Die `/roles` -Endpunkt in der attributbasierten API zur Zugriffskontrolle können Sie Rollen in Ihrem Unternehmen programmgesteuert verwalten.
+Mit dem Endpunkt `/roles` in der API für die attributbasierte Zugriffskontrolle können Sie Rollen in Ihrer Organisation programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -28,7 +28,7 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der API für die attribu
 
 ## Liste von Rollen abrufen {#list}
 
-Sie können alle vorhandenen Rollen Ihres Unternehmens auflisten, indem Sie eine GET-Anfrage an die `/roles` -Endpunkt.
+Sie können alle vorhandenen Rollen, die zu Ihrem Unternehmen gehören, auflisten, indem Sie eine GET-Anfrage an den Endpunkt `/roles` stellen.
 
 **API-Format**
 
@@ -113,7 +113,7 @@ Bei einer erfolgreichen Antwort wird eine Liste der Rollen in Ihrer Organisation
 
 ## Rolle nachschlagen {#lookup}
 
-Sie können eine einzelne Rolle nachschlagen, indem Sie eine GET anfordern, die die entsprechende `roleId` im Anfragepfad.
+Sie können eine einzelne Rolle nachschlagen, indem Sie eine GET-Anfrage ausführen, die im Anfragepfad die entsprechende `roleId` enthält.
 
 **API-Format**
 
@@ -127,7 +127,7 @@ GET /roles/{ROLE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage ruft Informationen für `{ROLE_ID}`.
+Die folgende Anfrage ruft Informationen für `{ROLE_ID}` ab.
 
 ```shell
 curl -X GET \
@@ -180,7 +180,7 @@ Bei einer erfolgreichen Antwort werden Details zur abgefragten Rollen-ID zurück
 
 ## Suchen von Benutzern nach Rollen-ID
 
-Sie können auch Objekte abrufen, indem Sie eine GET-Anfrage an die `/roles` Endpunkt beim Bereitstellen von {ROLE_ID}.
+Sie können auch Subjekte abrufen, indem Sie eine GET-Anfrage an den `/roles` -Endpunkt senden und dabei eine {ROLE_ID} angeben.
 
 **API-Format**
 
@@ -194,7 +194,7 @@ GET /roles/{ROLE_ID}/subjects
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die mit `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+Mit der folgenden Anfrage werden die mit `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809` verknüpften Objekte abgerufen.
 
 ```shell
 curl -X GET \
@@ -254,9 +254,9 @@ Bei einer erfolgreichen Antwort werden die mit der abgefragten Rollen-ID verknü
 | `subjectType` | Der Typ des abgefragten Betreffs. |
 | `subjectId` | Die Kennung, die dem abgefragten Betreff entspricht. |
 
-## Erstellen einer Rolle {#create}
+## Rollen erstellen {#create}
 
-Um eine neue Rolle zu erstellen, stellen Sie eine POST-Anfrage an die `/roles` -Endpunkt hinzugefügt, während Werte für den Namen, die Beschreibung und den Rollentyp Ihrer Rolle angegeben werden.
+Um eine neue POST zu erstellen, stellen Sie eine Rollenanfrage an den `/roles` -Endpunkt und geben Sie dabei Werte für den Namen, die Beschreibung und den Rollentyp Ihrer Rolle an.
 
 **API-Format**
 
@@ -328,7 +328,7 @@ Bei einer erfolgreichen Antwort werden Ihre neu erstellte Rolle mit der zugehör
 
 ## Rolle aktualisieren {#patch}
 
-Sie können die Eigenschaften einer Rolle aktualisieren, indem Sie eine PATCH-Anfrage an die `/roles` -Endpunkt hinzugefügt, während Sie die entsprechende Rollen-ID und Werte für die Vorgänge angeben, die Sie anwenden möchten.
+Sie können die Eigenschaften einer Rolle aktualisieren, indem Sie eine PATCH-Anfrage an den `/roles` -Endpunkt richten und dabei die entsprechende Rollen-ID und die entsprechenden Werte für die Vorgänge angeben, die Sie anwenden möchten.
 
 **API-Format**
 
@@ -408,7 +408,7 @@ Eine erfolgreiche Antwort gibt die aktualisierte Rolle zurück, einschließlich 
 
 ## Aktualisieren einer Rolle nach Rollen-ID {#put}
 
-Sie können eine Rolle aktualisieren, indem Sie eine PUT-Anfrage an die `/roles` -Endpunkt und die Rolle-ID angeben, die der Rolle entspricht, die Sie aktualisieren möchten.
+Sie können eine Rolle aktualisieren, indem Sie eine PUT-Anfrage an den `/roles` -Endpunkt senden und die Rollen-ID angeben, die der zu aktualisierenden Rolle entspricht.
 
 **API-Format**
 
@@ -482,7 +482,7 @@ Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, ei
 
 ## Betreff nach Rollen-ID aktualisieren
 
-Um die mit einer Rolle verknüpften Themen zu aktualisieren, stellen Sie eine PATCH-Anfrage an die `/roles` -Endpunkt und geben die Rollen-ID der Themen an, die Sie aktualisieren möchten.
+Um die mit einer Rolle verknüpften Personen zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/roles` -Endpunkt und geben Sie dabei die Rollen-ID der Personen an, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -496,7 +496,7 @@ PATCH /roles/{ROLE_ID}/subjects
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die Betreffs, die mit `{ROLE_ID}`.
+Die folgende Anfrage aktualisiert die mit `{ROLE_ID}` verknüpften Betreffs.
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -550,9 +550,9 @@ Bei einer erfolgreichen Antwort wird Ihre aktualisierte Rolle zurückgegeben, ei
 }
 ```
 
-## Löschen einer Rolle {#delete}
+## Rollen löschen {#delete}
 
-Um eine Rolle zu löschen, stellen Sie eine DELETE-Anfrage an die `/roles` -Endpunkt beim Angeben der ID der Rolle, die Sie löschen möchten.
+Um eine Rolle zu löschen, senden Sie eine DELETE-Anfrage an den Endpunkt `/roles` , während Sie die Kennung der Rolle angeben, die Sie löschen möchten.
 
 **API-Format**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage löscht die Rolle mit der ID von `{ROLE_ID}`.
+Mit der folgenden Anfrage wird die Rolle mit der ID `{ROLE_ID}` gelöscht.
 
 ```shell
 curl -X DELETE \
@@ -584,7 +584,7 @@ Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GE
 
 ## API-Berechtigung hinzufügen {#apicredential}
 
-Um eine API-Berechtigung hinzuzufügen, stellen Sie eine PATCH-Anfrage an `/roles` -Endpunkt und geben die Rollen-ID der Betreffs an.
+Um eine API-Berechtigung hinzuzufügen, stellen Sie eine PATCH-Anfrage an den `/roles` -Endpunkt und geben Sie dabei die Rollen-ID der Betreffs an.
 
 **API-Format**
 

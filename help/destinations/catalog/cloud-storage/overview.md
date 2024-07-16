@@ -5,8 +5,8 @@ description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 49%
+source-wordcount: '387'
+ht-degree: 50%
 
 ---
 
@@ -46,7 +46,7 @@ Um einen benutzerdefinierten Ordner pro Zielgruppendatei in Ihrem Speicherort zu
 
 ![Verwenden von Makros zum Erstellen eines Ordners in Ihrem Speicher](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-Die folgenden Beispiele verweisen auf eine Beispielzielgruppe `Luxury Audience` mit ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+Die folgenden Beispiele verweisen auf eine Beispielzielgruppe `Luxury Audience` mit der ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **Makro 1:`%SEGMENT_NAME%`**
 
@@ -66,9 +66,9 @@ Ordnerpfad an Ihrem Speicherort: `acme/campaigns/2021/Luxury Audience/25768be6-e
 ## Datenexporttyp {#export-type}
 
 Cloud-Speicher-Ziele unterstützen die folgenden Exporttypen:
-* **Profilbasierter Export**. Das bedeutet, dass Sie Details zu den Einzelpersonen in der Zielgruppe exportieren. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignisse, Zielgruppenmitgliedschaften und mehr umfassen.
+* **Profil-basierter Export**. Das bedeutet, dass Sie Details zu den Einzelpersonen in der Zielgruppe exportieren. Diese Details sind für die Personalisierung erforderlich und können Attribute, Ereignisse, Zielgruppenmitgliedschaften und mehr umfassen.
 * **Datensatzexport**. Mit dieser Funktion können Sie ganze Datensätze in Cloud-Speicher-Ziele exportieren. [Mehr dazu](/help/destinations/ui/export-datasets.md) über die Funktionalität.
 
 ## Nächste Schritte {#next-steps}
 
-Nach Auswahl der [unterstützte Cloud-Ziele](#supported-destinations) lesen Sie die [Tutorial zum Verbinden mit Zielen](/help/destinations/ui/connect-destination.md) , um zu erfahren, wie eine Verbindung zum Ziel hergestellt wird. Lesen Sie dann das Aktivierungs-Tutorial zu dateibasierten Zielen , um zu erfahren, wie Sie beginnen [exportieren](/help/destinations/ui/activate-batch-profile-destinations.md) Daten zu Ihrem Cloud-Speicher-Ziel.
+Nachdem Sie eines der [unterstützten Cloud-Ziele](#supported-destinations) ausgewählt haben, die Sie verwenden möchten, lesen Sie das Tutorial [Verbindung zu Zielen herstellen](/help/destinations/ui/connect-destination.md) , um zu erfahren, wie Sie eine Verbindung zum Ziel herstellen. Lesen Sie dann das Aktivierungs-Tutorial zu dateibasierten Zielen , um zu erfahren, wie Sie den [Export von](/help/destinations/ui/activate-batch-profile-destinations.md) -Daten an Ihr Cloud-Speicher-Ziel starten.

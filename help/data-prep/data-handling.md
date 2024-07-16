@@ -6,8 +6,8 @@ description: In diesem Dokument erhalten Sie einen Überblick darüber, wie vers
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 98%
+source-wordcount: '602'
+ht-degree: 99%
 
 ---
 
@@ -47,7 +47,7 @@ Der Ausdruck `date(orderDate, "yyyy-MM-dd")` konvertiert den Wert `orderDate` be
 
 ### Konvertierungen von Datumsfunktionen
 
-Wenn Zeichenfolgenfelder aus eingehenden Daten mithilfe des Experience-Datenmodells (XDM) Datumsfeldern in Schemas zugeordnet werden, sollte das Datumsformat explizit angegeben werden. Wenn es nicht explizit angegeben ist, versucht Datenvorbereitung, die Eingabedaten zu konvertieren, indem sie mit folgenden Formaten abgeglichen werden. Sobald ein passendes Format gefunden wurde, wird die Auswertung aller nachfolgenden Formate beendet.
+Wenn Zeichenfolgenfelder aus eingehenden Daten mithilfe des Experience-Datenmodells (XDM) Datumsfeldern in Schemata zugeordnet werden, sollte das Datumsformat explizit angegeben werden. Wenn es nicht explizit angegeben ist, versucht Datenvorbereitung, die Eingabedaten zu konvertieren, indem sie mit folgenden Formaten abgeglichen werden. Sobald ein passendes Format gefunden wurde, wird die Auswertung aller nachfolgenden Formate beendet.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
@@ -108,4 +108,4 @@ Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen def
 
 ## Karten {#maps}
 
-Karten werden derzeit nicht in [!DNL Data Prep].
+Karten werden in [!DNL Data Prep] derzeit nicht unterstützt.

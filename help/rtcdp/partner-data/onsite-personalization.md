@@ -209,7 +209,7 @@ Benennen Sie das Datenelement `partnerData`, belassen Sie den Wert [!UICONTROL E
 
 Um das zweite Datenelement einzurichten, benennen Sie die neue Variable `pageVisit`, setzen Sie die **[!UICONTROL Erweiterung]** auf **[!UICONTROL Adobe Experience Platform]** und wählen Sie als den Datentyp **[!UICONTROL XDM-Objekt]** aus.
 
-![Markierte Auswahlen zur korrekten Konfiguration des Datenelements pageVisit .](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Markierte Auswahlen zur korrekten Konfiguration des Datenelements &quot;pageVisit&quot;.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 Wählen Sie im Schema die Attribute von Drittanbietern aus, die den Werten entsprechen, die Sie vom Datenpartner erwarten. Wählen Sie dann das Optionsfeld mit dem Titel **[!UICONTROL Gesamtes Objekt bereitstellen]** aus. Klicken Sie auf das Symbol, das wie eine Datenbank aussieht, und wählen Sie das `partnerData`-Datenelement aus, das Sie zuvor erstellt haben.
 
@@ -261,9 +261,9 @@ Jetzt können Sie Zielgruppen für die Personalisierung erstellen und aktivieren
 
 Navigieren Sie in der Platform-Benutzeroberfläche zu **[!UICONTROL Kunde]** > **[!UICONTROL Zielgruppen]** und erstellen Sie eine Zielgruppe, um Ihre Website-Besucher zu erfassen.
 
-![Hier erfahren Sie, wie Sie zu Zielgruppen navigieren.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+![Ansicht, wie Sie zu Zielgruppen navigieren.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Sie müssen Ihre Zielgruppe mit [Kantensegmentierung](/help/segmentation/ui/edge-segmentation.md) sodass die Zielgruppenzugehörigkeit Ihrer Besucher in Echtzeit beim Besuch Ihrer Webeigenschaft ausgewertet wird.
+Sie müssen Ihre Zielgruppe mit [Kantensegmentierung](/help/segmentation/ui/edge-segmentation.md) einrichten, damit die Zielgruppenzugehörigkeit Ihrer Besucher beim Besuch Ihrer Webeigenschaft in Echtzeit ausgewertet wird.
 
 Stellen Sie sicher, dass auch eine [„Active-On-Edge“-Zusammenführungsrichtlinie](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) für die Edge-Zielgruppen eingerichtet ist.
 
@@ -287,4 +287,4 @@ Erkunden Sie weitere Anwendungsfälle, die durch die Unterstützung von Partnerd
 
 * [Ergänzen Sie Erstanbieterprofile mit Attributen von vertrauenswürdigen Datenpartnern, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * Verwenden Sie die Unterstützung von Drittanbieterdaten in Real-Time CDP, damit Sie [Ihre Profilbasis mit potenziellen Profilen von Datenpartnern erweitern und mit ihnen interagieren können, um neue Kundinnen und Kunden zu gewinnen oder zu erreichen](/help/rtcdp/partner-data/prospecting.md).
-* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) , um Ziele auszuwählen.
+* [Erweiterte Aktivierung von Interessenten- und Interessenten-Zielgruppen](/help/destinations/ui/activate-prospect-audiences.md) zur Auswahl von Zielen.

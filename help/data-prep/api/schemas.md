@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemas;
+keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemata;
 solution: Experience Platform
-title: API-Endpunkt für Schemas
-description: Sie können den Endpunkt „/schemas“ in der Adobe Experience Platform-API verwenden, um Schemas zur Verwendung mit Mapper in Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren.
+title: API-Endpunkt für Schemata
+description: Sie können den Endpunkt „/schemas“ in der Adobe Experience Platform-API verwenden, um Schemata zur Verwendung mit Mapper in Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '616'
 ht-degree: 94%
 
 ---
 
 
 
-# Endpunkt für Schemas
+# Endpunkt für Schemata
 
-Schemas können mit Mapper verwendet werden, um dafür zu sorgen, dass die von Ihnen in Adobe Experience Platform erfassten Daten mit den gewünschten Daten übereinstimmen. Sie können den `/schemas`-Endpunkt nutzen, um programmgesteuert benutzerdefinierte Schemas zur Verwendung mit Mapper in Platform zu erstellen, aufzulisten und abzurufen.
+Schemata können mit Mapper verwendet werden, um dafür zu sorgen, dass die von Ihnen in Adobe Experience Platform erfassten Daten mit den gewünschten Daten übereinstimmen. Sie können den `/schemas`-Endpunkt nutzen, um programmgesteuert benutzerdefinierte Schemata zur Verwendung mit Mapper in Platform zu erstellen, aufzulisten und abzurufen.
 
 >[!NOTE]
 >
->Mit diesem Endpunkt erstellte Schemas werden ausschließlich mit Mapper und Zuordnungssätzen genutzt. Informationen zum Erstellen von Schemas, auf die andere Platform-Dienste zugreifen können, finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md).
+>Mit diesem Endpunkt erstellte Schemata werden ausschließlich mit Mapper und Zuordnungssätzen genutzt. Informationen zum Erstellen von Schemata, auf die andere Platform-Dienste zugreifen können, finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md).
 
-## Abrufen aller Schemas
+## Abrufen aller Schemata
 
-Sie können eine Liste aller für Ihr Unternehmen verfügbaren Mapper-Schemas abrufen, indem Sie eine GET-Anfrage an die `/schemas` -Endpunkt.
+Sie können eine Liste aller für Ihr Unternehmen verfügbaren Mapper-Schemas abrufen, indem Sie eine GET-Anfrage an den `/schemas` -Endpunkt senden.
 
 **API-Format**
 
@@ -36,7 +36,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{LIMIT}` | **Erforderlich**. Gibt die Anzahl der Schemas an, die zurückgegeben werden. |
+| `{LIMIT}` | **Erforderlich**. Gibt die Anzahl der Schemata an, die zurückgegeben werden. |
 | `{START}` | **Erforderlich**. Gibt den Versatz der Ergebnisseiten an. Um die erste Ergebnisseite zu erhalten, setzen Sie den Wert auf `start=0`. |
 | `{NAME}` | Filtert das Schema anhand des Namens. |
 | `{ORDER_BY}` | Sortiert die Reihenfolge der Ergebnisse. Die unterstützten Felder sind `modifiedDate` und `createdDate`. Sie können der Eigenschaft `+` oder `-` voranstellen, um in auf- bzw. absteigender Reihenfolge zu sortieren. |
@@ -55,7 +55,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status-Code 200 mit einer Liste der angeforderten Schemas zurück.
+Die folgende Antwort gibt den HTTP-Status-Code 200 mit einer Liste der angeforderten Schemata zurück.
 
 >[!NOTE]
 >

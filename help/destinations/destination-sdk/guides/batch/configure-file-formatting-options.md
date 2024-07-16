@@ -1,15 +1,15 @@
 ---
-description: Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
+description: Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
 title: Erfahren Sie, wie Sie mit Destination SDK Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 24%
+ht-degree: 22%
 
 ---
 
-# Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele
+# Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
 
 ## Übersicht {#overview}
 
@@ -19,18 +19,18 @@ Auf dieser Seite wird beschrieben, wie Sie mit Destination SDK Dateiformatierung
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](../../getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Adobe I/O-Authentifizierungsberechtigungen und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
+Bevor Sie mit den unten beschriebenen Schritten fortfahren, lesen Sie die Seite [Erste Schritte der Destination SDK](../../getting-started.md) , um Informationen zum Abrufen der erforderlichen Adobe I/O-Authentifizierungsberechtigungen und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs zu erhalten.
 
 Adobe empfiehlt Ihnen außerdem, sich mit der folgenden Dokumentation vertraut zu machen, bevor Sie fortfahren:
 
-* Jede verfügbare Dateiformatierungsoption wird ausführlich im Abschnitt [Dateiformatierungskonfiguration](../../functionality/destination-server/file-formatting.md) Abschnitt.
-* Führen Sie die Schritte zum [ein dateibasiertes Ziel konfigurieren](../../guides/configure-file-based-destination-instructions.md) Destination SDK verwenden.
+* Jede verfügbare Dateiformatierungsoption wird im Abschnitt [Dateiformatierungskonfiguration](../../functionality/destination-server/file-formatting.md) ausführlich dokumentiert.
+* Führen Sie die Schritte zum [Konfigurieren eines dateibasierten Ziels](../../guides/configure-file-based-destination-instructions.md) mithilfe von Destination SDK aus.
 
 ## Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Verwenden Sie zunächst die `/destination-server` -Endpunkt, um zu bestimmen, welche Dateiformatierungskonfigurationsoptionen Sie für die exportierten Dateien einrichten möchten.
+Verwenden Sie zunächst den `/destination-server` -Endpunkt, um zu bestimmen, welche Dateiformatierungskonfigurationsoptionen Sie für die exportierten Dateien einrichten möchten.
 
-Nachfolgend finden Sie ein Beispiel für eine Zielserverkonfiguration für eine [!DNL Amazon S3] Ziel, wobei mehrere Dateiformatierungsoptionen ausgewählt sind.
+Nachfolgend finden Sie ein Beispiel für eine Zielserverkonfiguration für ein [!DNL Amazon S3] -Ziel mit mehreren ausgewählten Dateiformatierungsoptionen.
 
 **API-Format**
 
@@ -102,21 +102,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Überprüfen der Experience Platform-Benutzeroberfläche**. Wenn Sie die Dateiformatierungsoptionen mit den in den folgenden Abschnitten beschriebenen Konfigurationen konfigurieren, sollten Sie die Experience Platform-Benutzeroberfläche auf die Darstellung dieser Optionen überprüfen.
+>**Überprüfen Sie die Experience Platform-Benutzeroberfläche**. Wenn Sie die Dateiformatierungsoptionen mit den in den folgenden Abschnitten beschriebenen Konfigurationen konfigurieren, sollten Sie die Experience Platform-Benutzeroberfläche auf die Darstellung dieser Optionen überprüfen.
 
-Nachdem Sie die gewünschten Dateiformatierungsoptionen im vorherigen Schritt zum Zielserver hinzugefügt und die Dateiformatierungskonfiguration konfiguriert haben, können Sie jetzt die `/destinations` API-Endpunkt zum Hinzufügen der gewünschten Felder als Kundendatenfelder zur Zielkonfiguration.
+Nachdem Sie die gewünschten Dateiformatierungsoptionen im vorherigen Schritt zum Zielserver und zur Dateiformatierungskonfiguration hinzugefügt haben, können Sie jetzt den API-Endpunkt `/destinations` verwenden, um die gewünschten Felder als Kundendatenfelder zur Zielkonfiguration hinzuzufügen.
 
 >[!IMPORTANT]
 >
->Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen Benutzern in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die im Abschnitt [Server- und Dateikonfiguration](#create-server-file-configuration).
+>Dieser Schritt ist optional und bestimmt nur, welche der Dateiformatierungsoptionen Benutzern in der Experience Platform-Benutzeroberfläche angezeigt werden sollen. Wenn Sie keine Dateiformatierungsoptionen als Kundendatenfelder einrichten, werden die Dateiexporte mit den Standardwerten fortgesetzt, die im [Server und in der Dateikonfiguration](#create-server-file-configuration) konfiguriert sind.
 
 In diesem Schritt können Sie die angezeigten Optionen in beliebiger Reihenfolge gruppieren. Sie können benutzerdefinierte Gruppierungen, Dropdown-Felder und bedingte Gruppierungen basierend auf den ausgewählten Dateitypen erstellen. Alle diese Einstellungen werden in der Aufzeichnung und in den weiter unten stehenden Abschnitten angezeigt.
 
-![Bildschirmaufzeichnung mit verschiedenen Dateiformatierungsoptionen für Stapeldateien.](../../assets/guides/batch/file-formatting-options.gif)
+![Bildschirmaufzeichnung mit verschiedenen Dateiformatierungsoptionen für Batch-Dateien.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### Reihenfolge der Dateiformatierungsoptionen {#ordering}
 
-Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Benutzeroberfläche angezeigt. Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge angezeigt werden **[!UICONTROL Trennzeichen]**, **[!UICONTROL Anführungszeichen]**, **[!UICONTROL Escape-Zeichen]**, **[!UICONTROL Leerer Wert]**, **[!UICONTROL Nullwert]**.
+Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder in der Zielkonfiguration hinzufügen, wird in der Benutzeroberfläche angezeigt. Beispielsweise wird die folgende Konfiguration entsprechend in der Benutzeroberfläche angezeigt, wobei die Optionen in der Reihenfolge **[!UICONTROL Trennzeichen]**, **[!UICONTROL Anführungszeichen]**, **[!UICONTROL Escape-Zeichen]**, **[!UICONTROL Leerwert]**, **[!UICONTROL Nullwert]** angezeigt werden.
 
 ![Bild, das die Reihenfolge der Dateiformatierungsoptionen in der Experience Platform-Benutzeroberfläche anzeigt.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -241,7 +241,7 @@ Die Reihenfolge, in der Sie die Dateiformatierungsoptionen als Kundendatenfelder
 
 Sie können mehrere Dateiformatierungsoptionen in einem Abschnitt gruppieren. Beim Einrichten der Verbindung zum Ziel in der Benutzeroberfläche kann der Benutzer eine visuelle Gruppierung ähnlicher Felder sehen und davon profitieren.
 
-Verwenden Sie dazu `"type": "object"` , um die Gruppe zu erstellen und die gewünschten Dateiformatierungsoptionen innerhalb einer `properties` , wie im folgenden Beispiel gezeigt, wobei die Gruppierung **[!UICONTROL CSV-Optionen]** hervorgehoben ist.
+Verwenden Sie dazu `"type": "object"` , um die Gruppe zu erstellen, und sammeln Sie die gewünschten Dateiformatierungsoptionen innerhalb eines `properties` -Parameters, wie im Beispiel unten gezeigt, wobei die Gruppierungsoptionen **[!UICONTROL CSV-Optionen]** hervorgehoben sind.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -279,7 +279,7 @@ Verwenden Sie dazu `"type": "object"` , um die Gruppe zu erstellen und die gewü
 ]
 ```
 
-![Bild mit der Gruppierung der CSV-Optionen in der Benutzeroberfläche.](../../assets/guides/batch/file-formatting-grouping.png)
+![Bild, das die Gruppe der CSV-Optionen in der Benutzeroberfläche anzeigt.](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### Erstellen von Dropdown-Selektoren für Dateiformatierungsoptionen {#dropdown-selectors}
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Artikels wissen Sie jetzt, wie Sie benutzerdefinierte Dateiformatierungsoptionen für Ihre exportierten Dateien mithilfe von Destination SDK einrichten. Als Nächstes kann Ihr Team die [Aktivierungs-Workflow für dateibasierte Ziele](../../../ui/activate-batch-profile-destinations.md) , um Daten an das Ziel zu exportieren.
+Durch Lesen dieses Artikels wissen Sie jetzt, wie Sie benutzerdefinierte Dateiformatierungsoptionen für Ihre exportierten Dateien mithilfe von Destination SDK einrichten. Anschließend kann Ihr Team den [Aktivierungs-Workflow für dateibasierte Ziele](../../../ui/activate-batch-profile-destinations.md) verwenden, um Daten an das Ziel zu exportieren.

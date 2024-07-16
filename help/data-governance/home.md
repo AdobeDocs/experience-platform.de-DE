@@ -34,7 +34,7 @@ Als Konzept ist Data Governance weder automatisch, noch wird die Aufgabe in eine
 
 Zwar sollte sich jeder Einzelne in der Organisation für Data Governance verantwortlich fühlen, doch werden im Folgenden einige der zentralen Rollen im Data Governance-Zyklus aufgeführt:
 
-![Grafisch zur Vermittlung der vier Data Governance-Rollen mit Anführungszeichen zu den Aufgaben jeder Rolle.](./images/overview/roles.png)
+![Grafisch , um die vier Data Governance-Rollen mit Anführungszeichen zu den Aufgaben jeder Rolle zu vermitteln.](./images/overview/roles.png)
 
 ### Data Steward {#data-steward}
 
@@ -67,7 +67,7 @@ Data Governance ermöglicht es Data Stewards, Nutzungsbezeichnungen auf Schema-F
 
 Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnungen, mit denen Daten auf vier Arten kategorisiert werden können:
 
-![Die drei Kategorien für Datennutzungsbezeichnungen.](./images/overview/label-categories.png)
+![Die drei Kategorien für die Datennutzungsbezeichnung.](./images/overview/label-categories.png)
 
 * **Datenbezeichnungen „C“ (Contract):** Kennzeichnen und kategorisieren Sie Daten, die vertragliche Bestimmungen aufweisen oder mit den Richtlinien zur Verwaltung von Kundendaten in Zusammenhang stehen.
 * **Datenbezeichnungen „I“ (Identity):** Kennzeichnen und kategorisieren Sie Daten, die zum Identifizieren oder Kontaktieren einer bestimmten Person dienen können.
@@ -75,11 +75,11 @@ Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnun
 
 >[!NOTE]
 >
->Siehe Handbuch unter [unterstützte Datennutzungsbezeichnungen](labels/reference.md) für eine vollständige Liste der verfügbaren Bezeichnungen und Definitionen für jeden Bezeichnungstyp.
+>Eine vollständige Liste der verfügbaren Beschriftungen und Definitionen für jeden Beschriftungstyp finden Sie im Handbuch zu [unterstützten Datennutzungsbezeichnungen](labels/reference.md) .
 
-Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practice empfiehlt die Kennzeichnung von Daten bei der Erfassung in Experience Platform oder sobald Daten verfügbar sind in [!DNL Platform].
+Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practice empfiehlt die Beschriftung von Daten bei der Erfassung in Experience Platform oder sobald Daten in [!DNL Platform] verfügbar sind.
 
-Siehe Übersicht unter [Datennutzungsbezeichnungen](./labels/overview.md) Weitere Informationen dazu, wie Datennutzungsbezeichnungen verwendet werden, um die Einhaltung von Data Governance durchzusetzen.
+Weiterführende Informationen zur Verwendung von Datennutzungsbezeichnungen zur Durchsetzung der Einhaltung von Data Governance finden Sie in der Übersicht zu [Datennutzungsbezeichnungen](./labels/overview.md) .
 
 ## Datennutzungsrichtlinien {#data-usage-policies}
 
@@ -91,7 +91,7 @@ Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz
 Es sind zwei Richtlinientypen verfügbar:
 
 * **[!UICONTROL Data Governance-Richtlinie]**: Zum Beschränken der Datenaktivierung auf Grundlage der durchgeführten Marketing-Aktion und der Datennutzungskennzeichnungen der betreffenden Daten
-* **[!UICONTROL Einverständnisrichtlinie]**: Filtern Sie die Profile, für die aktiviert werden können. [Ziele](../destinations/home.md) basierend auf der Zustimmung oder den Vorlieben Ihrer Kunden.
+* **[!UICONTROL Einverständnisrichtlinie]**: Filtern Sie die Profile, die für [Ziele](../destinations/home.md) aktiviert werden können, basierend auf der Einwilligung oder den Voreinstellungen Ihrer Kunden.
 
 Sobald Datennutzungsbezeichnungen angewendet wurden, können Data Stewards Richtlinien mithilfe der Policy Service-API oder der Experience Platform-Benutzeroberfläche erstellen. Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
 
@@ -122,7 +122,7 @@ In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit der Data Go
 | **Feldkennzeichnung** | Feldkennzeichnungen sind Data-Governance-Kennzeichnungen, die entweder von einem Schema übernommen oder direkt auf ein Feld angewendet werden. Auf ein Feld angewendete Data-Governance-Kennzeichnungen werden nicht bis auf Schemaebene übernommen. |
 | **Geofence** | Eine „Geofence“ ist eine virtuelle geografische Grenze, die durch GPS- oder RFID-Technologie definiert wird und Software in die Lage versetzt, eine Antwort auszulösen, wenn ein Mobilgerät ein bestimmtes Gebiet erreicht oder verlässt. |
 | **Identitätsbezeichnungen** | Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt. |
-| **Interessenbasiertes Targeting** | Eine interessensbasierte Zielgruppenbestimmung, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind:<br>Die vor Ort erfassten Daten sind<br><ul><li>Dient dazu, Rückschlüsse auf das Interesse eines Benutzers zu ziehen;</li><li>Wird in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder in einer anderen App (außerhalb der Site)</li><li>Wird verwendet, um anhand dieser Rückschlüsse festzulegen, welche Inhalte oder Anzeigen bereitgestellt werden.</li></ul> |
+| **Interessenbasiertes Targeting** | Interessensbasiertes Targeting, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind:<br>Auf der Site erfasste Daten sind,<br><ul><li>Dient dazu, Rückschlüsse auf das Interesse eines Benutzers zu ziehen;</li><li>Wird in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder in einer anderen App (außerhalb der Site)</li><li>Wird verwendet, um anhand dieser Rückschlüsse festzulegen, welche Inhalte oder Anzeigen bereitgestellt werden.</li></ul> |
 | **Marketing-Aktion** | Eine Marketing-Aktion ist im Kontext des Data Governance-Frameworks eine Aktion, die ein Datennutzer von Experience Platform ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde. |
 | **Richtlinie** | Im Data Governance-Framework ist eine Richtlinie eine Regel, die beschreibt, welche Arten von Marketing-Aktionen für bestimmte Daten zulässig sind oder nicht. |
 | **Schemakennzeichnungen** | Verwalten Sie die Kennzeichnungen für Data Governance, Einwilligung und Zugriffssteuerung auf Schemaebene. Dadurch werden die Beschriftungen zu jedem Datensatz übertragen, der dieses Schema verwendet. |

@@ -5,18 +5,18 @@ description: Die Marketo Munchkin-Erweiterung ist ein Personalisierungsziel in A
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '458'
 ht-degree: 80%
 
 ---
 
-# [!DNL Marketo Munchkin]-Erweiterung  {#marketo-munchkin-extension}
+# [!DNL Marketo Munchkin]-Erweiterung {#marketo-munchkin-extension}
 
 ## Übersicht {#overview}
 
-Vom Lead-Management zum kontobasierten Marketing [!DNL Marketo Engagement Platform] vereinfacht die Planung, Orchestrierung und Messung der Interaktion mit Kunden und Interessenten in jeder Phase ihres Erlebnisses.
+Vom Lead-Management bis zum kontobasierten Marketing vereinfacht [!DNL Marketo Engagement Platform] die Planung, Orchestrierung und Messung der Interaktion mit Kunden und Interessenten in jeder Phase ihres Erlebnisses.
 
-[!DNL Marketo’s Munchkin] Mit JavaScript können Sie Seitenbesuche und -klicks von Endbenutzern in Ihren [!DNL Marketo] Landingpages und externe Webseiten.
+[!DNL Marketo’s Munchkin] JavaScript ermöglicht das Tracking von Seitenbesuchen und -klicks von Endbenutzern auf Ihren [!DNL Marketo] -Landingpages und externen Webseiten.
 
 [!DNL Marketo Munchkin] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Marketo Munchkin finden Sie unter [Lead-Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in der Marketo-Dokumentation.
 
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Marketo Munchkin] Erweiterung:
+So installieren Sie die [!DNL Marketo Munchkin]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

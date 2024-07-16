@@ -9,9 +9,9 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL Produktkategorie] Schemafeldgruppe
+# [!UICONTROL Schemakategorie] Schemakonfeldgruppe
 
-[!UICONTROL Produktkategorie] ist eine Standardschemafeldgruppe für die [[!UICONTROL Produkt] class](../../classes/product.md) erfasst Eigenschaften im Zusammenhang mit der Kategorie eines Produkts.
+[!UICONTROL Produktkategorie] ist eine Standardschemafeldgruppe für die [[!UICONTROL Produkt] -Klasse](../../classes/product.md), die Eigenschaften erfasst, die mit der Kategorie eines Produkts zusammenhängen.
 
 ![](../../images/field-groups/product/product-category.png)
 
@@ -24,4 +24,4 @@ ht-degree: 9%
 
 {style="table-layout:auto"}
 
-Weiterführende Informationen zur Feldergruppe finden Sie im Abschnitt [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).
+Weitere Informationen zur Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).

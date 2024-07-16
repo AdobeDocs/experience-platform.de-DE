@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Modell bewerten;Data Science Workspace;beliebte Themen;Sensei-API für maschinelles Lernen
+keywords: Experience Platform;Modell bewerten;Data Science Workspace;beliebte Themen;Sensei Machine Learning API
 solution: Experience Platform
 title: Modellbewertung mit der Sensei Machine Learning API
 type: Tutorial
@@ -7,14 +7,14 @@ description: In diesem Tutorial erfahren Sie, wie Sie die Sensei Machine Learnin
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 78%
+source-wordcount: '547'
+ht-degree: 77%
 
 ---
 
 # Score a model using [!DNL Sensei Machine Learning API]
 
-In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine Liste aller Endpunkte der Sensei Machine Learning-API finden Sie unter [dieses Dokuments](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
+In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine Liste aller Endpunkte der Sensei Machine Learning-API finden Sie in [diesem Dokument](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Geplantes Experiment für Scoring erstellen
 
@@ -34,7 +34,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Ihre Organisationsberechtigungen finden Sie in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Das Objekt für den Experimentlauf, das gesendet werden soll. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
@@ -122,7 +122,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`: Ihre Organisationsberechtigungen finden Sie in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
 `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{EXPERIMENT_ID}`: Die dem Zielexperiment entsprechende Kennung. Diese finden Sie in der Antwort beim Erstellen Ihres Experiments.\
@@ -187,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht, unter dem der Lauf ausgeführt wird.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen finden Sie in Ihrer eindeutigen Adobe Experience Platform-Integration.
+`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 Da es mehrere Experimentläufe für ein spezifisches Experiment gibt, verfügt die zurückgegebene Antwort über verschiedene Ausführungskennungen.
 
@@ -230,11 +230,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{ORG_ID}`: Ihre Organisationsberechtigungen finden Sie in Ihrer eindeutigen Adobe Experience Platform-Integration.
+`{ORG_ID}`: Ihre Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 >[!NOTE]
 >
-> Der API-Aufruf deaktiviert die Erstellung neuer Experimentabläufe. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
+>Der API-Aufruf deaktiviert die Erstellung neuer Experimentabläufe. Die Ausführung bereits ausgeführter Experimentabläufe wird jedoch nicht beendet.
 
 Im Folgenden finden Sie die Antwort, die darauf hinweist, dass das Experiment erfolgreich gelöscht wurde.
 

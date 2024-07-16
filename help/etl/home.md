@@ -78,7 +78,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 Zunächst meldet sich ein ETL-Anwender bei der Benutzeroberfläche von [!DNL Experience Platform] an und erstellt Datensätze für die Aufnahme mit einem Standard-Connector oder einem Push-Service-Connector.
 
-In der Benutzeroberfläche erstellt der Anwender den Ausgabedatensatz, indem er ein Datensatzschema auswählt. Die Auswahl des Schemas hängt davon ab, welcher Datentyp (Datensatz- oder Zeitreihendaten) in [!DNL Platform] aufgenommen wird. In der Benutzeroberfläche können alle verfügbaren Schemas einschließlich des vom Schema unterstützten Verhaltenstyps über die Registerkarte „Schemas“ eingesehen werden.
+In der Benutzeroberfläche erstellt der Anwender den Ausgabedatensatz, indem er ein Datensatzschema auswählt. Die Auswahl des Schemas hängt davon ab, welcher Datentyp (Datensatz- oder Zeitreihendaten) in [!DNL Platform] aufgenommen wird. In der Benutzeroberfläche können alle verfügbaren Schemata einschließlich des vom Schema unterstützten Verhaltenstyps über die Registerkarte „Schemata“ eingesehen werden.
 
 Beginnt der Anwender im ETL-Tool mit der Konzeptionierung, wird seine Zuordnung nach Konfiguration der entsprechenden Verbindung (unter Verwendung seiner Anmeldeinformationen) umgewandelt. Es wird hier davon ausgegangen, dass für das ETL-Tool bereits [!DNL Experience Platform]-Connectoren installiert wurden. (Auf den entsprechenden Prozess wird in diesem Integrationshandbuch nicht eingegangen.)
 
@@ -94,7 +94,7 @@ Modelldarstellungen eines Beispiel-ETL-Tools und -Workflows stehen unter [ETL-Wo
 
 Sie können zur Auflistung aller verfügbaren Datensätze eine einzelne API-Anfrage (z. B. `GET /dataSets`) ausführen. Dabei empfiehlt sich als Best Practice die Angabe von Abfrageparametern, durch die die Größe der Antwort beschränkt wird.
 
-Werden vollständige Datensatzinformationen angefragt, wächst die Größe der Antwort-Payload unter Umständen auf mehr als 3 GB an, was zu einer insgesamt verlangsamten Leistung führen kann. Die Verwendung von Abfrageparametern, mittels derer aus den Informationen nur die tatsächlich benötigten gefiltert werden, ist daher ein effizienterer Ansatz für [!DNL Catalog]-Abfragen.
+Werden vollständige Datensatzinformationen angefragt, wächst die Größe der Antwort-Payload unter Umständen auf mehr als 3 GB an, was zu einer insgesamt verlangsamten Performance führen kann. Die Verwendung von Abfrageparametern, mittels derer aus den Informationen nur die tatsächlich benötigten gefiltert werden, ist daher ein effizienterer Ansatz für [!DNL Catalog]-Abfragen.
 
 #### Filtern von Listen
 
@@ -249,7 +249,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->Der optionale Abfrageparameter `expansion=xdm` weist die API an, alle referenzierten Schemas vollständig zu erweitern und einzubinden. Dies empfiehlt sich, wenn Sie eine Liste aller potenziellen Felder anzeigen möchten.
+>Der optionale Abfrageparameter `expansion=xdm` weist die API an, alle referenzierten Schemata vollständig zu erweitern und einzubinden. Dies empfiehlt sich, wenn Sie eine Liste aller potenziellen Felder anzeigen möchten.
 
 **Antwort**
 

@@ -13,33 +13,33 @@ ht-degree: 38%
 
 # [!UICONTROL Zielgruppen]-Dashboard {#audiences-dashboard}
 
-Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Zielgruppen anzeigen können, die in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf die [!UICONTROL Zielgruppen] Dashboard in der Benutzeroberfläche und bietet weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Zielgruppen anzeigen können, die in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf das Dashboard [!UICONTROL Zielgruppen] in der Benutzeroberfläche zugreifen und mit ihm arbeiten. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
 Einen Überblick über alle Funktionen des Segmentierungs-Services von Adobe Experience Platform in der Platform-Benutzeroberfläche erhalten Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](../../segmentation/ui/overview.md).
 
-## [!UICONTROL Zielgruppen] Dashboard-Daten
+## [!UICONTROL Dashboard-Daten der Zielgruppen]
 
-Die [!UICONTROL Zielgruppen] Dashboard zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher unter Experience Platform hat. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
+Das Dashboard [!UICONTROL Zielgruppen] zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher in Experience Platform hat. Die Momentaufnahme enthält keine Ereignisdaten (Zeitreihendaten).
 
-Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum Zeitpunkt der Momentaufnahme vorgefunden werden. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten, und die [!UICONTROL Zielgruppen] Das Dashboard wird nicht in Echtzeit aktualisiert.
+Die Attributdaten in der Momentaufnahme zeigen die Daten exakt so an, wie sie zum Zeitpunkt der Momentaufnahme vorgefunden werden. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder kein Beispiel der Daten und das Dashboard [!UICONTROL Zielgruppen] wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
 >Änderungen oder Aktualisierungen, die seit der Aufnahme der Momentaufnahme an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn die nächste Momentaufnahme erstellt wird.
 
-## Die [!UICONTROL Zielgruppen] Dashboard {#explore}
+## Dashboard [!UICONTROL Zielgruppen] durchsuchen {#explore}
 
-So navigieren Sie zum [!UICONTROL Zielgruppen] Dashboard in der Platform-Benutzeroberfläche auswählen **[!UICONTROL Zielgruppen]** Wählen Sie in der linken Leiste die **[!UICONTROL Übersicht]** zum Anzeigen des Dashboards.
+Um in der Platform-Benutzeroberfläche zum Dashboard [!UICONTROL Zielgruppen] zu navigieren, wählen Sie in der linken Leiste die Option **[!UICONTROL Zielgruppen]** und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
 
 >[!NOTE]
 >
 >Wenn Ihre Organisation erst seit kurzem Platform nutzt und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt hat, ist das Dashboard [!UICONTROL Zielgruppen] nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten im Zusammenhang mit der Segmentierung helfen können.
 
-![Die [!UICONTROL Zielgruppen] Dashboard [!UICONTROL Übersicht] Registerkarte mit [!UICONTROL Zielgruppen] und [!UICONTROL Übersicht] hervorgehoben.](../images/audiences/dashboard-overview.png)
+![Die Registerkarte [!UICONTROL Audiences] Dashboard [!UICONTROL Überblick] mit den Registerkarten [!UICONTROL Audiences] und [!UICONTROL Übersicht] wurde hervorgehoben.](../images/audiences/dashboard-overview.png)
 
-### Ändern Sie die [!UICONTROL Zielgruppen] Dashboard {#modify}
+### Ändern des Dashboards [!UICONTROL Zielgruppen] {#modify}
 
-Sie können das Erscheinungsbild der [!UICONTROL Zielgruppen] Dashboard durch Auswahl von **[!UICONTROL Dashboard ändern]**. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** zugreifen, um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
+Sie können das Erscheinungsbild des Dashboards [!UICONTROL Zielgruppen] ändern, indem Sie die Option **[!UICONTROL Dashboard ändern]** auswählen. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** zugreifen, um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
 
 Weitere Informationen finden Sie in der Dokumentation zum [Ändern von Dashboards](../customize/modify.md) und zur [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
 
@@ -47,13 +47,13 @@ Weitere Informationen finden Sie in der Dokumentation zum [Ändern von Dashboard
 
 Wählen Sie **[!UICONTROL Widget hinzufügen]** aus, um zur Widget-Bibliothek zu navigieren und eine Liste der verfügbaren Widgets anzuzeigen, die Sie Ihrem Dashboard hinzufügen können.
 
-![Die [!UICONTROL Zielgruppen] Dashboard-Übersicht mit [!UICONTROL Widget hinzufügen] hervorgehoben.](../images/audiences/audiences-overview-add-widget.png)
+![Die Übersicht über das Dashboard [!UICONTROL Zielgruppen] mit dem Hinweis [!UICONTROL Widget hinzufügen] ist hervorgehoben.](../images/audiences/audiences-overview-add-widget.png)
 
 In der Widget-Bibliothek können Sie die Auswahl von Standard- und benutzerdefinierten Zielgruppen-Widgets durchsuchen. Informationen zum Hinzufügen von Widgets finden Sie in der Widget-Bibliothek-Dokumentation zum [Hinzufügen eines Widget](../customize/widget-library.md#add-widgets).
 
 ### SQL anzeigen {#view-sql}
 
-Sie können die SQL, die die in Ihrem Dashboard visualisierten Einblicke generiert, mit einem Umschalter im [!UICONTROL Übersicht] Arbeitsbereich. Sie können sich die SQL Ihrer vorhandenen Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen eindeutige Einblicke aus Platform-Daten gewinnen. Weitere Informationen zu dieser Funktion finden Sie unter [Handbuch zur SQL-Benutzeroberfläche](../view-sql.md).
+Sie können die SQL anzeigen, die die auf Ihrem Dashboard visualisierten Einblicke generiert, indem Sie den Arbeitsbereich [!UICONTROL Überblick] aktivieren. Sie können sich die SQL Ihrer vorhandenen Einblicke inspirieren lassen, um neue Abfragen zu erstellen, die anhand Ihrer geschäftlichen Anforderungen eindeutige Einblicke aus Platform-Daten gewinnen. Weitere Informationen zu dieser Funktion finden Sie im Handbuch [SQL-Benutzeroberfläche anzeigen](../view-sql.md) .
 
 ## Auswählen einer Zielgruppe {#select-audience}
 
@@ -65,17 +65,17 @@ Um eine andere Zielgruppe auszuwählen, wählen Sie das Dropdown-Menü neben dem
 >
 >In der Liste der auswählbaren Zielgruppen werden nur Zielgruppen angezeigt, deren Profilanzahl über null liegt.
 
-![Die Übersicht über das Audiences-Dashboard mit dem Dropdown-Menü für globale Zielgruppen wurde hervorgehoben.](../images/audiences/change-audience.png)
+![Die Übersicht des Zielgruppen-Dashboards mit dem Dropdown-Menü für globale Zielgruppen wurde hervorgehoben.](../images/audiences/change-audience.png)
 
-![Die [!UICONTROL Zielgruppe auswählen] -Dialogfeld, das alle verfügbaren Zielgruppen anzeigt.](../images/audiences/select-audience-dialog.png)
+![Das Dialogfeld [!UICONTROL Zielgruppe auswählen] , in dem alle verfügbaren Zielgruppen angezeigt werden.](../images/audiences/select-audience-dialog.png)
 
 ## Widgets und Metriken {#widgets-and-metrics}
 
-Die [!UICONTROL Zielgruppen] Das Dashboard besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihrer ausgewählten Zielgruppe enthalten.
+Das Dashboard [!UICONTROL Zielgruppen] besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihrer ausgewählten Zielgruppe enthalten.
 
-Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Dropdown-Menü &quot;Zielgruppe&quot;ein. Alle Widget-Daten sind zum Stand dieses Datums und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird im UTC-Format angegeben, nicht in der Zeitzone der jeweiligen Person oder Organisation.
+Datum und Uhrzeit der letzten Momentaufnahme werden oben auf der Registerkarte [!UICONTROL Übersicht] neben dem Zielgruppen-Dropdown-Menü angezeigt. Alle Widget-Daten sind zum Stand dieses Datums und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird im UTC-Format angegeben, nicht in der Zeitzone der jeweiligen Person oder Organisation.
 
-![Die Registerkarte Übersicht über Zielgruppen mit einem markierten Widget-Zeitstempel.](../images/audiences/widget-timestamp.png)
+![Die Registerkarte &quot;Zielgruppenübersicht&quot;mit einem markierten Widget-Zeitstempel.](../images/audiences/widget-timestamp.png)
 
 ## Standard-Widgets {#default-widgets}
 
@@ -88,12 +88,12 @@ Für alle neuen Instanzen von Adobe Experience Platform wird ein standardmäßig
 
 >[!NOTE]
 >
->Seit dem 26. Juli 2023 [!UICONTROL Profile], [!UICONTROL Zielgruppen], und [!UICONTROL Ziele] Die Übersichts-Dashboards wurden für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf ein neues standardmäßiges Widget-Load-out zurückgesetzt.
->Weitere Informationen finden Sie in der Dokumentation unter [Profile](./profiles.md#default-widgets) und [Ziele](./destinations.md#default-widgets) Standard-Widget-Abschnitte für Details darüber, welche Widgets als Teil der standardmäßigen Widget-Ladevorgänge einbezogen werden. Sie können Ihre Dashboard-Widgets weiterhin wie bisher anpassen.
+>Ab dem 26. Juli 2023 wurden die Dashboards [!UICONTROL Profile], [!UICONTROL Zielgruppen] und [!UICONTROL Ziele] Übersicht für alle Benutzer, die ihre Ansichten in den letzten sechs Monaten nicht geändert haben, auf ein neues standardmäßiges Widget-Load-out zurückgesetzt.
+>In der Dokumentation in den Abschnitten [Profile](./profiles.md#default-widgets) und [Ziele](./destinations.md#default-widgets) des Standard-Widgets finden Sie Informationen dazu, welche Widgets als Teil der standardmäßigen Widget-Auslastungen enthalten sind. Sie können Ihre Dashboard-Widgets weiterhin wie bisher anpassen.
 
 ## Kunden-KI-Widgets {#customer-ai-audiences-widgets}
 
-Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Customer AI analysiert dazu vorhandene Erlebnisereignisdaten von Verbrauchern, um sie vorherzusagen **Tendenzwerte für Abwanderung oder Konversion**. Diese hochpräzisen kundenspezifischen Tendenzmodelle ermöglichen eine präzisere Segmentierung und Targeting. Die [Verteilung der Punktzahl](#customer-ai-distribution-of-scores) und [Bewertungszusammenfassung](#customer-ai-scoring-summary) Einblicke zeigen die Aufteilung in Ihrer Zielgruppe. Sie heben hervor, welche Profile die hohe/niedrige/mittlere Tendenz aufweisen und wie sie über Ihre Profilzahlen verteilt sind.
+Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Customer AI analysiert dazu vorhandene Erlebnisereignisdaten von Verbrauchern, um die Tendenzwerte für Abwanderung oder Konversion vorherzusagen **.** Diese hochpräzisen kundenspezifischen Tendenzmodelle ermöglichen eine präzisere Segmentierung und Targeting. Die Einblicke [Verteilung der Bewertungen](#customer-ai-distribution-of-scores) und [Bewertungszusammenfassung](#customer-ai-scoring-summary) zeigen die Aufteilung in Ihrer Zielgruppe. Sie heben hervor, welche Profile die hohe/niedrige/mittlere Tendenz aufweisen und wie sie über Ihre Profilzahlen verteilt sind.
 
 * [[!UICONTROL Kunden-KI – Bewertungszusammenfassung]](#customer-ai-scoring-summary)
 * [[!UICONTROL Kunden-KI – Verteilung von Bewertungen]](#customer-ai-distribution-of-scores)
@@ -105,27 +105,27 @@ Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte
 >title="Verteilung der Scores"
 >abstract="Dieses Widget visualisiert die Verteilung der Gesamtanzahl der Profile anhand ihrer Tendenzwerte in Schritten von fünf Prozent. Die Verteilung der Profilanzahl wird durch das KI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt. Sie können das KI-Modell im Dropdown-Menü unter dem Widget-Titel ändern."
 
-Die [!UICONTROL Customer AI-Verteilung von Bewertungen] Widget kategorisiert die Gesamtanzahl der Profile nach ihren Tendenzwerten. Die Verteilung der Profilanzahl wird durch das AI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in fünfprozentigen Schritten visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse angegeben und die Tendenzwerte werden entlang der X-Achse angegeben.
+Das Widget [!UICONTROL Customer AI-Verteilung der Bewertungen] kategorisiert die Gesamtanzahl der Profile nach ihren Tendenzwerten. Die Verteilung der Profilanzahl wird durch das AI-Modell und die ausgewählte Zusammenführungsrichtlinie bestimmt und dann in fünfprozentigen Schritten visualisiert, die ihre Neigung angeben. Die Anzahl der Profile wird entlang der Y-Achse angegeben und die Tendenzwerte werden entlang der X-Achse angegeben.
 
 >[!NOTE]
 >
 >Wenn es sich bei der Visualisierung um eine Konversion-Tendenzbewertung handelt, werden die hohen Werte grün und die niedrigen Punkte rot angezeigt. Wenn Sie die Abwanderungsneigung vorhersagen, wird diese gespiegelt, die hohen Werte sind rot und die niedrigen Werte grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
 
-Das AI-Modell, das die Tendenzwerte bestimmt, wird aus der Dropdown-Auswahl unter dem Widget-Titel ausgewählt. Das Dropdown-Menü enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Anweisungen finden Sie in der Dokumentation zu [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md).
+Das AI-Modell, das die Tendenzwerte bestimmt, wird aus der Dropdown-Auswahl unter dem Widget-Titel ausgewählt. Das Dropdown-Menü enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Anweisungen zum Konfigurieren einer Customer AI-Instanz finden Sie in der Dokumentation [.](../../intelligent-services/customer-ai/user-guide/configure.md)
 
 >[!NOTE]
 >
->Wählen Sie das Dropdown-Menü direkt unter dem Tab Übersicht aus, um die Zusammenführungsrichtlinie zu ändern, die bestimmt, welche Profile in die Analyse aufgenommen werden. Siehe Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) für eine kurze Beschreibung oder [Zusammenführungsrichtlinienübersicht](../../profile/merge-policies/overview.md) für weitere Details.
+>Wählen Sie das Dropdown-Menü direkt unter dem Tab Übersicht aus, um die Zusammenführungsrichtlinie zu ändern, die bestimmt, welche Profile in die Analyse aufgenommen werden. Eine kurze Beschreibung finden Sie im Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) oder im Abschnitt [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) .
 
-Um zur detaillierten Insight-Seite für das ausgewählte Customer AI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]**.
+Um zur detaillierten Insight-Seite für das ausgewählte Customer AI-Modell zu navigieren, wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus.
 
-![Das Dashboard &quot;Experience Platform-Zielgruppen&quot;mit dem [!UICONTROL Customer AI-Verteilung von Bewertungen] Widget und [!UICONTROL Modelldetails anzeigen] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
+![Das Dashboard &quot;Experience Platform-Zielgruppen&quot;mit dem Widget [!UICONTROL Customer AI distribution of scores] und [!UICONTROL View model details] hervorgehoben.](../images/segments/customer-ai-distribution-of-scores.png)
 
 Die Seite mit detaillierten Modelleinblicken wird angezeigt.
 
-![Die Einblicke-Seite für die Customer AI.](../images/profiles/customer-ai-insights-page.png)
+![Die Einblicke-Seite für die Kunden-KI.](../images/profiles/customer-ai-insights-page.png)
 
-Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfläche für Einblicke](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Weitere Informationen zu Customer AI finden Sie im Leitfaden zur Benutzeroberfläche von [Discovery Insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ### [!UICONTROL Kunden-KI – Bewertungszusammenfassung] {#customer-ai-scoring-summary}
 
@@ -140,15 +140,15 @@ Dieses Widget zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie 
 >
 >Wenn es sich bei der Visualisierung um eine Konversion-Tendenzbewertung handelt, werden die hohen Werte grün und die niedrigen Punkte rot angezeigt. Wenn Sie die Abwanderungsneigung vorhersagen, wird diese gespiegelt, die hohen Werte sind rot und die niedrigen Werte grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
 
-Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Siehe die Dokumentation unter [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md) für detaillierte Anweisungen.
+Das Dropdown-Menü unter dem Widget-Titel enthält eine Liste aller konfigurierten Customer AI-Modelle. Wählen Sie aus der Liste der verfügbaren Modelle das passende KI-Modell für Ihre Analyse aus. Wenn kein Customer AI-Modell verfügbar ist, werden Sie durch eine Meldung im Widget angewiesen, mindestens ein Customer AI-Modell zu konfigurieren. Außerdem wird ein Hyperlink zur Konfigurationsseite des Customer AI-Modells bereitgestellt. Detaillierte Anweisungen finden Sie in der Dokumentation zu [Konfigurieren einer Customer AI-Instanz](../../intelligent-services/customer-ai/user-guide/configure.md) .
 
 >[!NOTE]
 >
->Die Gesamtzahl der berechneten Profile hängt von der gewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Siehe Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) für eine kurze Beschreibung oder [Zusammenführungsrichtlinienübersicht](../../profile/merge-policies/overview.md) für weitere Details.
+>Die Gesamtzahl der berechneten Profile hängt von der gewählten Zusammenführungsrichtlinie ab. Um die verwendete Zusammenführungsrichtlinie zu ändern, wählen Sie das Dropdown-Menü direkt unter der Registerkarte Übersicht aus. Eine kurze Beschreibung finden Sie im Abschnitt zu [Zusammenführungsrichtlinien](#merge-policies) oder im Abschnitt [Übersicht über Zusammenführungsrichtlinien](../../profile/merge-policies/overview.md) .
 
 ![Das Dashboard Experience Platform-Zielgruppen mit dem Widget Customer AI-Bewertungszusammenfassung wurde hervorgehoben.](../images/segments/customer-ai-scoring-summary.png)
 
-Auswählen **[!UICONTROL Modelldetails anzeigen]** , um zur detaillierten Insights-Seite für das ausgewählte Customer AI-Modell zu navigieren. Weitere Informationen zu Customer AI finden Sie im [Leitfaden zur Benutzeroberfläche für Einblicke](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Wählen Sie **[!UICONTROL Modelldetails anzeigen]** aus, um zur detaillierten Insight-Seite für das ausgewählte Customer AI-Modell zu navigieren. Weitere Informationen zu Customer AI finden Sie im Leitfaden zur Benutzeroberfläche von [Discovery Insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -174,11 +174,11 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 >title="Zielgruppen-Größe"
 >abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe an. Diese Zahl hängt von der auf Ihre Daten angewendeten Zusammenführungsrichtlinie ab und ist zum Zeitpunkt der letzten Momentaufnahme korrekt."
 
-Die **[!UICONTROL Zielgruppengröße]** Widget zeigt die Gesamtzahl der zusammengeführten Profile in der ausgewählten Zielgruppe zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Zielgruppen-Zusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zusammenzuführen und für jede Einzelperson in der Zielgruppe ein Profil zu erstellen.
+Das Widget **[!UICONTROL Zielgruppengröße]** zeigt die Gesamtzahl der zusammengeführten Profile innerhalb der ausgewählten Zielgruppe zum Zeitpunkt der Aufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Zielgruppen-Zusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zusammenzuführen und für jede Einzelperson in der Zielgruppe ein Profil zu erstellen.
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weiterführende Informationen zu Fragmenten und zusammengeführten Profilen finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md) .
 
-![Die [!UICONTROL Zielgruppen] Dashboard-Übersicht mit [!UICONTROL Zielgruppengröße] Widget hervorgehoben.](../images/audiences/audience-size.png)
+![Die Übersicht über das Dashboard [!UICONTROL Zielgruppen] mit dem Widget [!UICONTROL Zielgruppengröße] ist hervorgehoben.](../images/audiences/audience-size.png)
 
 ### [!UICONTROL Trend der Zielgruppen-Größe] {#audience-size-trend}
 
@@ -187,17 +187,17 @@ Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie i
 >title="Trend der Zielgruppen-Größe"
 >abstract="Dieses Widget liefert Informationen zur Gesamtanzahl der Profile, die den Kriterien **einer beliebigen** Segmentdefinition entsprechen und die während des täglichen Snapshots in den letzten 30 Tagen, 90 Tagen oder 12 Monate erfasst wurden."
 
-Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die sich für **any** Zielgruppe über einen bestimmten Zeitraum. Die Entwicklung der Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
+Das Widget **[!UICONTROL Trend zur Zielgruppengröße]** bietet eine Liniendiagrammdarstellung für die Gesamtanzahl der Profile, die für die **beliebige** -Zielgruppe in einem bestimmten Zeitraum qualifiziert sind. Die Entwicklung der Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und die Zeit auf der X-Achse dargestellt.
 
-Dieses Widget enthält auch die automatische [!UICONTROL Untertitel] Funktion, bei der ein Modell für maschinelles Lernen die Grafik- und Zielgruppendaten analysiert und automatisch Untertitel generiert, um die wichtigsten Trends und Ereignisse zu beschreiben. Wählen Sie **[!UICONTROL Beschriftungen]** aus, um das Dialogfeld für automatische Beschriftungen zu öffnen.
+Dieses Widget enthält auch die automatische Funktion [!UICONTROL Untertitel] , bei der ein Modell für maschinelles Lernen das Diagramm und die Zielgruppendaten analysiert und automatisch Untertitel generiert, um die wichtigsten Trends und wichtigen Ereignisse zu beschreiben. Wählen Sie **[!UICONTROL Beschriftungen]** aus, um das Dialogfeld für automatische Beschriftungen zu öffnen.
 
-![Die [!UICONTROL Zielgruppen] -Übersicht zeigt das Trend-Widget zur Zielgruppengröße an.](../images/audiences/audience-size-trend-captions.png)
+![Die Übersicht über [!UICONTROL Zielgruppen] zeigt das Trend-Widget zur Zielgruppengröße an.](../images/audiences/audience-size-trend-captions.png)
 
 Das Dialogfeld für automatische Beschriftungen wird geöffnet und bietet Einblicke in Ihre Daten.
 
 ![Das Dialogfeld für automatische Beschriftungen für das Widget „Entwicklung der Zielgruppengröße“.](../images/audiences/audience-size-trend-automatic-captions-dialog.png)
 
-Weiterführende Informationen zur Auswertung von Audiences und zur Qualifizierung und Ausstieg von Profilen finden Sie im Abschnitt [Dokumentation zum Segmentierungsdienst](../../segmentation/home.md).
+Weitere Informationen zur Auswertung von Zielgruppen und zur Qualifizierung und Ausstieg von Profilen finden Sie in der Dokumentation zum [Segmentation Service](../../segmentation/home.md).
 
 ### [!UICONTROL Trend bei der Änderung der Zielgruppen-Größe] {#audience-size-change-trend}
 
@@ -213,7 +213,7 @@ Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für eine bestimm
 
 ### [!UICONTROL Reihenfolge der Zielgruppen-Aktivierung] {#audience-activation-order}
 
-Die [!UICONTROL Aktivierungsreihenfolge für Zielgruppen] -Widget bietet eine dreiseitige Tabelle, in der der Zielname, die Plattform und das Aktivierungsdatum der Zielgruppe aufgelistet sind. Die Liste ist entsprechend der Aktualität von oben nach unten geordnet und kann bis zu 10 Zeilen enthalten.
+Das Widget [!UICONTROL Zielgruppenaktivierungsreihenfolge] enthält eine dreiseitige Tabelle, in der der Zielname, die Plattform und das Aktivierungsdatum der Zielgruppe aufgelistet sind. Die Liste ist entsprechend der Aktualität von oben nach unten geordnet und kann bis zu 10 Zeilen enthalten.
 
 ![Das Widget „Reihenfolge der Zielgruppenaktivierung“](../images/audiences/audience-activation-order.png)
 
@@ -227,7 +227,7 @@ Mit diesem Widget können Sie Ihre Segmentierungsstrategie optimieren, indem Sie
 
 ### [!UICONTROL Bericht zur Zielgruppenüberschneidung] {#audience-overlap-report}
 
-Dieses Widget enthält eine tabellarische Darstellung der Profilüberlagerungsdaten für eine bestimmte Zielgruppe. Eine Liste mit fünf Zielgruppen, die von den Prozentsätzen der höchsten bis zur niedrigsten Überschneidung sortiert sind, wird für die aus dem Dropdown-Menü am oberen Bildschirmrand ausgewählte Zielgruppe bereitgestellt. Die ausgewählte Audience wird im Abschnitt [!UICONTROL ZIELGRUPPE A NAME] Spalte. Die Analyse der Zielgruppenüberschneidung wird für die zweite Zielgruppe bereitgestellt, die im Abschnitt [!UICONTROL AUDIENCE B NAME] Spalte. Die prozentuale Überschneidung wird in der dritten Spalte auf zwölf Dezimalstellen genau angegeben.
+Dieses Widget enthält eine tabellarische Darstellung der Profilüberlagerungsdaten für eine bestimmte Zielgruppe. Eine Liste mit fünf Zielgruppen, die von den Prozentsätzen der höchsten bis zur niedrigsten Überschneidung sortiert sind, wird für die aus dem Dropdown-Menü am oberen Bildschirmrand ausgewählte Zielgruppe bereitgestellt. Aus Gründen der Klarheit wird Ihre ausgewählte Zielgruppe in der Spalte [!UICONTROL ZIELGRUPPE A NAME] aufgeführt. Die Analyse der Zielgruppenüberschneidung wird für die zweite Zielgruppe bereitgestellt, die in der Spalte [!UICONTROL ZIELGRUPPE B NAME] aufgeführt ist. Die prozentuale Überschneidung wird in der dritten Spalte auf zwölf Dezimalstellen genau angegeben.
 
 Der Bericht zur Zielgruppenüberschneidung hilft Ihnen beim Erstellen neuer, leistungsstarker Zielgruppen. Durch die Beachtung hoher prozentualer Überschneidungen können Sie Zielgruppen unterdrücken und das Senden derselben Zielgruppe an verschiedene Ziele verhindern. Diese Daten helfen Ihnen auch dabei, verborgene Insights zu entdecken, die bei einer besseren Segmentierung hilfreich sein können. Eine geringe prozentuale Überschneidung hilft, eindeutige Profile zu finden, deren Kontaktierung Sie fortsetzen sollten.
 
@@ -251,7 +251,7 @@ Wählen Sie eine Zeile aus dem Bericht aus, um ein Venn-Diagramm der Überschnei
 
 ![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung mit einem Venn-Diagramm und einer hervorgehobenen Zeile.](../images/audiences/audience-overlap-report-dialog-venn.png)
 
-Auswählen **[!UICONTROL Schließen]** , um zu [!UICONTROL Zielgruppen] Dashboard.
+Wählen Sie **[!UICONTROL Schließen]** aus, um zum Dashboard [!UICONTROL Zielgruppen] zurückzukehren.
 
 ### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
@@ -260,15 +260,15 @@ Auswählen **[!UICONTROL Schließen]** , um zu [!UICONTROL Zielgruppen] Dashboar
 >title="Identitätsüberschneidung"
 >abstract="Dieses Widget zeigt die Überschneidung von Profilen in der Zielgruppe an, die beide ausgewählten Identitäten enthalten. Die Kreise zeigen die relative Größe jeder Identität an. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch den Überschneidungsbereich der Kreise dargestellt."
 
-Die **[!UICONTROL Identitätsüberschneidung]** -Widget zeigt ein Venn-Diagramm oder ein Set-Diagramm an, das die Überschneidung von Profilen in Ihrer Zielgruppe mit mehreren Identitäten anzeigt.
+Das Widget **[!UICONTROL Identitätsüberschneidung]** zeigt ein Venn-Diagramm oder Set-Diagramm an, das die Überschneidung von Profilen in Ihrer Zielgruppe mit mehreren Identitäten anzeigt.
 
 Verwenden Sie die Dropdown-Menüs im Widget, um die Identitäten auszuwählen, die Sie vergleichen möchten. Die Kreise zeigen die relative Größe jeder ausgewählten Identität an, wobei die Anzahl der Profile, die beide Namespaces enthalten, der Größe des Überschneidungsbereichs der Kreise entspricht.
 
 Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. In dieser Situation ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehreren Identitäten enthalten.
 
-Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Identity Service](../../identity-service/home.md).
+Weitere Informationen zu Identitäten finden Sie in der Dokumentation zum [Identitätsdienst](../../identity-service/home.md) .
 
-![Die [!UICONTROL Zielgruppen] Dashboard-Übersicht mit hervorgehobenem Widget zur Identitätsüberschneidung.](../images/audiences/identity-overlap.png)
+![Die Übersicht über das Dashboard [!UICONTROL Zielgruppen] mit dem Widget zur Identitätsüberschneidung wurde hervorgehoben.](../images/audiences/identity-overlap.png)
 
 ### [!UICONTROL Profile nach Identität] {#profiles-by-identity}
 
@@ -277,15 +277,15 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Identit
 >title="Profile nach Identität"
 >abstract="Dieses Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in der ausgewählten Zielgruppe an."
 
-Die **[!UICONTROL Profile nach Identität]** -Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrer ausgewählten Zielgruppe an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile in der Zielgruppe, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass die Summe der für jede Identität angezeigten Werte die Gesamtgröße der Zielgruppe übersteigen kann. Dies liegt daran, dass bei der Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
+Das Widget **[!UICONTROL Profile nach Identität]** zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrer ausgewählten Zielgruppe an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile in der Zielgruppe, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass die Summe der für jede Identität angezeigten Werte die Gesamtgröße der Zielgruppe übersteigen kann. Dies liegt daran, dass bei der Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
 
 Wählen Sie **[!UICONTROL Beschriftungen]** aus, um das Dialogfeld für automatische Beschriftungen zu öffnen.
 
-![Die [!UICONTROL Zielgruppen] Dashboard-Übersicht mit hervorgehobener Option Profile nach Identitäts-Widget und Beschriftungen.](../images/audiences/profiles-by-identity.png)
+![Die Übersicht über das Dashboard [!UICONTROL Zielgruppen] mit der Option Profile nach Identitäts-Widget und Beschriftungen hervorgehoben.](../images/audiences/profiles-by-identity.png)
 
 Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsselaspekte der Daten analysiert.
 
-Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Identity Service](../../identity-service/home.md).
+Weitere Informationen zu Identitäten finden Sie in der Dokumentation zum [Identitätsdienst](../../identity-service/home.md) .
 
 ### Geplante Aktivierungen {#scheduled-activations}
 
@@ -297,4 +297,4 @@ Mit diesem Widget können Sie auf einen Blick erkennen, wo und wann die Zielgrup
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Dokuments sollten Sie jetzt die [!UICONTROL Zielgruppen] und wählen Sie eine Zielgruppe aus, die angezeigt werden soll. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Zielgruppen in der Experience Platform-Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Benutzeroberfläche des Segmentierungsdienstes](../../segmentation/ui/overview.md).
+Durch Befolgen dieses Dokuments sollten Sie jetzt das Dashboard [!UICONTROL Zielgruppen] finden und eine anzuzeigende Zielgruppe auswählen können. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Zielgruppen in der Experience Platform-Benutzeroberfläche finden Sie im Handbuch zur Benutzeroberfläche von [Segmentation Service](../../segmentation/ui/overview.md).

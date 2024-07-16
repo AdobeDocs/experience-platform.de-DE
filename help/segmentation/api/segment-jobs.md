@@ -13,17 +13,17 @@ ht-degree: 17%
 
 # Endpunkt der Segmentaufträge
 
-Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Sie verweist auf eine [Segmentdefinition](./segment-definitions.md)sowie [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md) Steuern der [!DNL Real-Time Customer Profile] Führt überlappende Attribute über Ihre Profilfragmente hinweg zusammen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
+Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Er verweist auf eine [Segmentdefinition](./segment-definitions.md) sowie auf alle [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md), die steuern, wie [!DNL Real-Time Customer Profile] überlappende Attribute über Ihre Profilfragmente hinweg zusammenführt. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und umfasst Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] API. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service] -API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Liste mit Segmentaufträgen abrufen {#retrieve-list}
 
-Sie können eine Liste aller Segmentaufträge für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/segment/jobs` -Endpunkt.
+Sie können eine Liste aller Segmentaufträge für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/segment/jobs` senden.
 
 **API-Format**
 
@@ -60,7 +60,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentau
 
 **Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
 
-Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen innerhalb der `children.segments` -Attribut.
+Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen im Attribut `children.segments` angezeigt.
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt we
 
 **Mehr als 1500 Segmentdefinitionen**
 
-Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, wird die `children.segments` -Attribut wird angezeigt `*`, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
+Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, zeigt das Attribut `children.segments` den Wert `*` an, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werde
 
 ## Neuen Segmentauftrag erstellen {#create}
 
-Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an die `/segment/jobs` -Endpunkt und die Kennung der Segmentdefinition, aus der Sie eine neue Zielgruppe erstellen möchten, in den Text einschließen.
+Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an den `/segment/jobs` -Endpunkt senden und die Kennung der Segmentdefinition, aus der Sie eine neue Zielgruppe erstellen möchten, in den Textkörper einschließen.
 
 **API-Format**
 
@@ -308,7 +308,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Diese Segmentdefinitionen können zu verschiedenen Zusammenführungsrichtlinien gehören. Weitere Informationen zu Segmentdefinitionen finden Sie im Abschnitt [Endpunktleitfaden für die Segmentdefinition](./segment-definitions.md). |
+| `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Diese Segmentdefinitionen können zu verschiedenen Zusammenführungsrichtlinien gehören. Weitere Informationen zu Segmentdefinitionen finden Sie im [Endpunkthandbuch zur Segmentdefinition](./segment-definitions.md). |
 
 **Antwort**
 
@@ -417,7 +417,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 >[!NOTE]
 >
->Sie können zwar einen Segmentauftrag mit mehr als 1500 Segmentdefinitionen erstellen, aber dies ist **dringend empfohlen**.
+>Sie können zwar einen Segmentauftrag mit mehr als 1500 Segmentdefinitionen erstellen, dies ist jedoch **dringend nicht empfohlen**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -441,7 +441,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `schema.name` | Der Name des Schemas für die Segmentdefinitionen. |
-| `segments.segmentId` | Wenn Sie einen Segmentauftrag mit mehr als 1500 Segmenten ausführen, müssen Sie `*` als Segment-ID, um anzugeben, dass Sie einen Segmentierungsauftrag mit allen Segmenten ausführen möchten. |
+| `segments.segmentId` | Wenn Sie einen Segmentauftrag mit mehr als 1500 Segmenten ausführen, müssen Sie `*` als Segment-ID übergeben, um anzugeben, dass Sie einen Segmentierungsauftrag mit allen Segmenten ausführen möchten. |
 
 **Antwort**
 
@@ -526,13 +526,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `id` | Eine systemgenerierte schreibgeschützte Kennung für den neu erstellten Segmentauftrag. |
-| `status` | Der aktuelle Status für den Segmentauftrag. Da der Segmentauftrag neu erstellt wurde, wird der Status immer `NEW`. |
+| `status` | Der aktuelle Status für den Segmentauftrag. Da der Segmentauftrag neu erstellt wurde, lautet der Status immer `NEW`. |
 | `segments` | Ein Objekt, das Informationen zu den Segmentdefinitionen enthält, für die dieser Segmentauftrag ausgeführt wird. |
-| `segments.segment.id` | Die `*` bedeutet, dass dieser Segmentauftrag für alle Segmentdefinitionen in Ihrer Organisation ausgeführt wird. |
+| `segments.segment.id` | Der `*` bedeutet, dass dieser Segmentauftrag für alle Segmentdefinitionen in Ihrer Organisation ausgeführt wird. |
 
 ## Bestimmten Segmentauftrag abrufen {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten Segmentauftrag abrufen, indem Sie eine GET-Anfrage an die `/segment/jobs` -Endpunkt und geben Sie die ID des Segmentauftrags an, den Sie im Anfragepfad abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten Segmentauftrag abrufen, indem Sie eine GET-Anfrage an den `/segment/jobs` -Endpunkt senden und im Anfragepfad die Kennung des Segmentauftrags angeben, den Sie abrufen möchten.
 
 **API-Format**
 
@@ -560,7 +560,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 **Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
 
-Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen innerhalb der `children.segments` -Attribut.
+Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen im Attribut `children.segments` angezeigt.
 
 ```json
 {
@@ -624,7 +624,7 @@ Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt we
 
 **Mehr als 1500 Segmentdefinitionen**
 
-Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, wird die `children.segments` -Attribut wird angezeigt `*`, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
+Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, zeigt das Attribut `children.segments` den Wert `*` an, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
 
 ```json
 {
@@ -713,7 +713,7 @@ Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werde
 
 ## Massenabruf von Segmentaufträgen {#bulk-get}
 
-Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST-Anfrage an die `/segment/jobs/bulk-get` Endpunkt und Bereitstellung der  `id` -Werte der Segmentaufträge im Anfragetext.
+Sie können detaillierte Informationen über mehrere Segmentaufträge abrufen, indem Sie eine POST-Anfrage an den `/segment/jobs/bulk-get` -Endpunkt senden und die `id` -Werte der Segmentaufträge im Anfrageinhalt angeben.
 
 **API-Format**
 
@@ -744,7 +744,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segmentaufträgen zurück. Der Wert der Variablen `children.segments` -Attribut unterscheidet sich, wenn der Segmentauftrag für mehr als 1500 Segmentdefinitionen ausgeführt wird.
+Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segmentaufträgen zurück. Der Wert des Attributs `children.segments` ist jedoch unterschiedlich, wenn der Segmentauftrag für mehr als 1500 Segmentdefinitionen ausgeführt wird.
 
 >[!NOTE]
 >
@@ -806,7 +806,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 
 ## Bestimmten Segmentauftrag abbrechen oder löschen {#delete}
 
-Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anfrage an die `/segment/jobs` -Endpunkt und geben Sie die ID des Segmentauftrags an, den Sie im Anfragepfad löschen möchten.
+Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anfrage an den `/segment/jobs` -Endpunkt senden und im Anfragepfad die Kennung des Segmentauftrags angeben, den Sie löschen möchten.
 
 >[!NOTE]
 >

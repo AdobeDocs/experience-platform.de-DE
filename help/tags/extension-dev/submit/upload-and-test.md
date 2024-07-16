@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2362'
 ht-degree: 92%
 
 ---
@@ -39,7 +39,7 @@ Ein konkretes Beispiel ist Ihre Logodatei: Fügen Sie die Zeile `"iconPath": "e
 
 Um die API oder die Befehlszeilen-Tools verwenden zu können, benötigen Sie ein technisches Konto bei Adobe I/O. Sie müssen das technische Konto in der I/O-Konsole erstellen und dann das Erweiterungspaket mit dem Uploader-Tool hochladen.
 
-Informationen zum Erstellen eines technischen Kontos für die Verwendung mit Tags in Adobe Experience Platform finden Sie im Abschnitt [Reactor-API - Erste Schritte](../../api/getting-started.md) Handbuch.
+Informationen zum Erstellen eines technischen Kontos für die Verwendung mit Tags in Adobe Experience Platform finden Sie im Handbuch [Erste Schritte mit der Reactor-API](../../api/getting-started.md) .
 
 >[!IMPORTANT]
 >
@@ -74,7 +74,7 @@ Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extensi
 
 >[!NOTE]
 >
->Beim Hochladen oder Patchen werden Erweiterungspakete in einen ausstehenden Status versetzt, während das System das Paket asynchron extrahiert und bereitstellt. Während dieses Vorgangs können Sie die `extension_package` Kennung für den Status mithilfe der API und innerhalb der Benutzeroberfläche. Im Katalog wird eine Erweiterungskarte angezeigt, die als „Ausstehend“ markiert ist.
+>Beim Hochladen oder Patchen werden Erweiterungspakete in einen ausstehenden Status versetzt, während das System das Paket asynchron extrahiert und bereitstellt. Während dieses Vorgangs können Sie die `extension_package`-ID anhand der API und in der Benutzeroberfläche nach ihrem Status abfragen. Im Katalog wird eine Erweiterungskarte angezeigt, die als „Ausstehend“ markiert ist.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extensi
 
 ## Erstellen einer Entwicklungseigenschaft {#property}
 
-Nachdem Sie sich bei der Benutzeroberfläche angemeldet haben, wählen Sie **[!UICONTROL Tags]** im linken Navigationsbereich die [!UICONTROL Eigenschaften] angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
+Nachdem Sie sich bei der Benutzeroberfläche angemeldet haben und im linken Navigationsbereich **[!UICONTROL Tags]** ausgewählt haben, wird der Bildschirm [!UICONTROL Eigenschaften] angezeigt. Eine Eigenschaft ist ein Container für die Tags, die Sie bereitstellen möchten, und kann auf einer oder mehreren Sites verwendet werden.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -170,7 +170,7 @@ Wählen Sie beim Testen Ihrer Erweiterung alle relevanten Ereignisse und Bedingu
 
 ## Veröffentlichen der Änderungen {#publish}
 
-Klicken Sie im Hauptnavigationsmenü auf **Publishing** und dann auf den Link **Neue Bibliothek hinzufügen**:
+Klicken Sie im Hauptnavigationsmenü auf **Veröffentlichung** und dann auf den Link **Neue Bibliothek hinzufügen**:
 
 ![](../images/getting-started/add-new-library.png)
 
@@ -217,7 +217,7 @@ Ziel dieser Tests ist es, die Funktionalität der bereitgestellten Bibliothek zu
 
 Wenn Sie feststellen, dass Sie Änderungen an Ihrem Erweiterungspaket vornehmen müssen, ähnelt der Iterationsvorgang dem Entwicklungsprozess.
 
-1. Vornehmen von Änderungen am Code des Projekts.
+1. Nehmen Sie Änderungen am Code in Ihrem Projekt vor.
 1. Validieren der Änderungen mit dem Sandbox-Tool.
 1. Erstellen eines neuen ZIP-Pakets mit dem Packager-Tool
 1. Verwenden Sie das Uploader-Tool, um Ihr neues .zip-Paket hochzuladen. Der Prozess folgt denselben Anweisungen wie beim ersten Upload. Sie werden jedoch feststellen, dass dieses neue Paket die ältere Version überschreibt, anstatt eine neue zu erstellen, da es bereits ein Erweiterungspaket mit diesem Namen im Entwicklungsmodus gibt.

@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Salesforce über APIs oder die Benutzeroberfl
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '864'
 ht-degree: 20%
 
 ---
@@ -17,13 +17,13 @@ Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem 
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-## Feldzuordnung aus [!DNL Salesforce] in XDM
+## Feldzuordnung von [!DNL Salesforce] zu XDM
 
-So richten Sie eine Quellverbindung zwischen [!DNL Salesforce] und Platform, die [!DNL Salesforce] Quelldatenfelder müssen ihren entsprechenden Ziel-XDM-Feldern zugeordnet werden, bevor sie in Platform erfasst werden.
+Um eine Quellverbindung zwischen [!DNL Salesforce] und Platform herzustellen, müssen die [!DNL Salesforce]-Quelldatenfelder den entsprechenden Ziel-XDM-Feldern zugeordnet werden, bevor sie in Platform erfasst werden.
 
-Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Salesforce] Datensätze und Plattform:
+Im Folgenden finden Sie detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Salesforce] Datensätzen und Platform:
 
 - [Kontakte](../adobe-applications/mapping/salesforce.md#contact)
 - [Leads](../adobe-applications/mapping/salesforce.md#lead)
@@ -34,50 +34,50 @@ Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Salesforce
 - [Kampagnenmitglieder](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [Account-Kontaktbeziehung](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-## Richten Sie die [!DNL Salesforce] Dienstprogramm zur automatischen Namespace- und Schemaerstellung
+## Einrichten des Namespace- und Schemadienstprogramms für die automatische Schemaerstellung[!DNL Salesforce]
 
-So verwenden Sie die [!DNL Salesforce] als Teil von [!DNL B2B-CDP], müssen Sie zunächst eine [!DNL Postman] -Dienstprogramm zum automatischen Generieren Ihrer [!DNL Salesforce] Namespaces und Schemas. Die folgende Dokumentation enthält zusätzliche Informationen zum Einrichten der [!DNL Postman] Dienstprogramm:
+Um die [!DNL Salesforce]-Quelle als Teil von [!DNL B2B-CDP] zu verwenden, müssen Sie zunächst ein [!DNL Postman]-Dienstprogramm einrichten, um Ihre [!DNL Salesforce]-Namespaces und -Schemas automatisch zu generieren. Die folgende Dokumentation enthält zusätzliche Informationen zum Einrichten des Dienstprogramms [!DNL Postman] :
 
-- Sie können die Sammlung und Umgebung des Dienstprogramms für die automatische Generierung von Namespaces und Schemas von dieser [GitHub-Repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
-- Informationen zur Verwendung von Platform-APIs, einschließlich Details zum Sammeln von Werten für erforderliche Kopfzeilen und zum Lesen von Beispiel-API-Aufrufen, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
-- Informationen zum Generieren Ihrer Anmeldeinformationen für Platform-APIs finden Sie im Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md).
-- Informationen zur Einrichtung von [!DNL Postman] Informationen zu Platform-APIs finden Sie im Tutorial zu [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md).
+- Sie können die Sammlung und Umgebung des Dienstprogramms für die automatische Generierung von Namespace- und Schemas von diesem [GitHub-Repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) herunterladen.
+- Informationen zur Verwendung von Platform-APIs, einschließlich Details zum Sammeln von Werten für erforderliche Kopfzeilen und zum Lesen von Beispiel-API-Aufrufen, finden Sie im Leitfaden zu den ersten Schritten mit Platform-APIs ](../../../landing/api-guide.md).[
+- Informationen zum Generieren Ihrer Anmeldeinformationen für Platform-APIs finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md).
+- Informationen zum Einrichten von [!DNL Postman] für Platform-APIs finden Sie im Tutorial zum [Einrichten der Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md).
 
-Mit der Platform-Entwicklerkonsole und [!DNL Postman] eingerichtet haben, können Sie jetzt mit der Anwendung der entsprechenden Umgebungswerte auf Ihre [!DNL Postman] Umgebung.
+Mit der Einrichtung einer Platform-Entwicklerkonsole und [!DNL Postman] können Sie jetzt mit der Anwendung der entsprechenden Umgebungswerte auf Ihre [!DNL Postman] -Umgebung beginnen.
 
-Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum Ausfüllen Ihrer [!DNL Postman] Umgebung:
+Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum Ausfüllen Ihrer [!DNL Postman] -Umgebung:
 
 | Variable | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Eine eindeutige Kennung, mit der Ihre `{ACCESS_TOKEN}`. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) für Informationen zum Abrufen Ihrer `{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | Das JSON Web Token (JWT) ist eine Authentifizierungsberechtigung, mit der Ihre {ACCESS_TOKEN}. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) für Informationen zur Generierung Ihrer `{JWT_TOKEN}`. | `{JWT_TOKEN}` |
-| `API_KEY` | Eine eindeutige Kennung, mit der Aufrufe an Experience Platform-APIs authentifiziert werden. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) für Informationen zum Abrufen Ihrer `{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Das Autorisierungstoken, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) für Informationen zum Abrufen Ihrer `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
-| `META_SCOPE` | Im Hinblick auf [!DNL Marketo]festgelegt ist, ist dieser Wert fest und immer auf Folgendes festgelegt: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | Die `global` -Container enthält alle vom Experience Platform-Partner bereitgestellten Standardklassen, Schemafeldgruppen, Datentypen und Schemas, die vom Adobe- und -Partner bereitgestellt werden. Im Hinblick auf [!DNL Marketo]festgelegt ist, wird dieser Wert festgelegt und immer auf `global`. | `global` |
-| `PRIVATE_KEY` | Eine Berechtigung zum Authentifizieren Ihrer [!DNL Postman] -Instanz zu Experience Platform-APIs. Siehe Tutorial zum Einrichten der Entwicklerkonsole und [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) Anweisungen zum Abrufen Ihrer {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
+| `CLIENT_SECRET` | Eine eindeutige Kennung, mit der Ihr `{ACCESS_TOKEN}` generiert wird. Informationen zum Abrufen Ihrer `{CLIENT_SECRET}` finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md) . | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | Das JSON-Web-Token (JWT) ist eine Authentifizierungsberechtigung, die zum Generieren Ihres {ACCESS_TOKEN} verwendet wird. Informationen zum Generieren Ihrer `{JWT_TOKEN}` finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md) . | `{JWT_TOKEN}` |
+| `API_KEY` | Eine eindeutige Kennung, mit der Aufrufe an Experience Platform-APIs authentifiziert werden. Informationen zum Abrufen Ihrer `{API_KEY}` finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md) . | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Das Autorisierungstoken, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Informationen zum Abrufen Ihrer `{ACCESS_TOKEN}` finden Sie im Tutorial zum [Authentifizieren und Zugreifen auf Experience Platform-APIs](../../../landing/api-authentication.md) . | `Bearer {ACCESS_TOKEN}` |
+| `META_SCOPE` | In Bezug auf [!DNL Marketo] ist dieser Wert fest festgelegt und immer auf: `ent_dataservices_sdk` festgelegt. | `ent_dataservices_sdk` |
+| `CONTAINER_ID` | Der `global` -Container enthält alle vom Experience Platform-Partner bereitgestellten Standardklassen, Schemafeldgruppen, Datentypen und Schemata. In Bezug auf [!DNL Marketo] ist dieser Wert festgelegt und immer auf `global` gesetzt. | `global` |
+| `PRIVATE_KEY` | Eine Berechtigung zum Authentifizieren Ihrer [!DNL Postman] -Instanz bei Experience Platform-APIs. Anweisungen zum Abrufen Ihrer {PRIVATE_KEY} finden Sie im Tutorial zum Einrichten der Entwicklerkonsole und [Einrichten der Entwicklerkonsole und  [!DNL Postman]](../../../landing/postman.md) . | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Eine Berechtigung zur Integration in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
-| `IMS` | Das Identity Management-System (IMS) stellt das Framework für die Authentifizierung bei Adobe-Diensten bereit. Im Hinblick auf [!DNL Marketo]festgelegt ist, wird dieser Wert festgelegt und immer auf Folgendes festgelegt: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienste besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann. Siehe Tutorial zu [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) Anweisungen zum Abrufen Ihrer `{ORG_ID}` Informationen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS` | Das Identity Management-System (IMS) stellt das Framework für die Authentifizierung bei Adobe-Diensten bereit. In Bezug auf [!DNL Marketo] ist dieser Wert festgelegt und immer auf: `ims-na1.adobelogin.com` festgelegt. | `ims-na1.adobelogin.com` |
+| `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienste besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann. Anweisungen zum Abrufen Ihrer `{ORG_ID}` -Informationen finden Sie im Tutorial zum Einrichten der Entwicklerkonsole mit [und  [!DNL Postman]](../../../landing/postman.md) . | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Der Name der verwendeten virtuellen Sandbox-Partition. | `prod` |
 | `TENANT_ID` | Eine ID, mit der sichergestellt wird, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrem Unternehmen enthalten sind. | `b2bcdpproductiontest` |
-| `PLATFORM_URL` | Der URL-Endpunkt, an den Sie API-Aufrufe durchführen. Dieser Wert ist fest festgelegt und immer auf Folgendes festgelegt: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
-| `munchkinId` | Die eindeutige ID für Ihre [!DNL Marketo] -Konto. Siehe Tutorial zu [Ihre [!DNL Marketo] instance](../adobe-applications/marketo/marketo-auth.md) für Informationen zum Abrufen Ihrer `munchkinId`. | `123-ABC-456` |
-| `sfdc_org_id` | Die Organisations-ID für Ihre [!DNL Salesforce] -Konto. Siehe Folgendes [[!DNL Salesforce] Handbuch](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) Weitere Informationen zum Erwerb Ihrer [!DNL Salesforce] Organisations-ID. | `00D4W000000FgYJUA0` |
-| `has_abm` | Ein boolean -Wert, der anzeigt, ob Sie ein Abonnement für [!DNL Marketo Account-Based Marketing]. | `false` |
-| `has_msi` | Ein boolean -Wert, der anzeigt, ob Sie sich bei [!DNL Marketo Sales Insight]. | `false` |
+| `PLATFORM_URL` | Der URL-Endpunkt, an den Sie API-Aufrufe durchführen. Dieser Wert ist fest und immer auf `http://platform.adobe.io/` festgelegt. | `http://platform.adobe.io/` |
+| `munchkinId` | Die eindeutige ID für Ihr [!DNL Marketo]-Konto. Informationen zum Abrufen Ihrer `munchkinId` finden Sie im Tutorial zum [Authentifizieren Ihrer [!DNL Marketo] Instanz](../adobe-applications/marketo/marketo-auth.md) . | `123-ABC-456` |
+| `sfdc_org_id` | Die Organisations-ID für Ihr [!DNL Salesforce]-Konto. Weitere Informationen zum Erwerb Ihrer [!DNL Salesforce] Organisations-ID finden Sie im folgenden [[!DNL Salesforce] Handbuch](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) . | `00D4W000000FgYJUA0` |
+| `has_abm` | Ein boolean -Wert, der anzeigt, ob Sie [!DNL Marketo Account-Based Marketing] abonniert haben. | `false` |
+| `has_msi` | Ein boolean -Wert, der anzeigt, ob Sie bei [!DNL Marketo Sales Insight] angemeldet sind. | `false` |
 
 {style="table-layout:auto"}
 
 ### Scripts ausführen
 
-Mit [!DNL Postman] Sammlung und Umgebung eingerichtet sind, können Sie das Skript jetzt über das [!DNL Postman] -Schnittstelle.
+Nachdem Sie die [!DNL Postman] -Sammlung und -Umgebung eingerichtet haben, können Sie das Skript jetzt über die [!DNL Postman] -Oberfläche ausführen.
 
-Im [!DNL Postman] -Benutzeroberfläche, wählen Sie den Stammordner des AutoGenerator-Dienstprogramms aus und klicken Sie dann auf **[!DNL Run]** aus der oberen Kopfzeile.
+Wählen Sie in der Benutzeroberfläche von [!DNL Postman] den Stammordner des Autogenerator-Dienstprogramms aus und wählen Sie dann **[!DNL Run]** aus der oberen Kopfzeile aus.
 
 ![root-folder](../../images/tutorials/create/salesforce/root-folder.png)
 
-Die [!DNL Runner] -Benutzeroberfläche angezeigt. Vergewissern Sie sich von hier aus, dass alle Kontrollkästchen aktiviert sind, und wählen Sie dann **[!DNL Run Namespaces and Schemas Autogeneration Utility]**.
+Die Oberfläche [!DNL Runner] wird angezeigt. Stellen Sie von hier aus sicher, dass alle Kontrollkästchen aktiviert sind, und wählen Sie dann **[!DNL Run Namespaces and Schemas Autogeneration Utility]** aus.
 
 ![run-generator](../../images/tutorials/create/salesforce/run-generator.png)
 

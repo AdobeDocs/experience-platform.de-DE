@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie den /rule_components-Endpunkt in der Reactor-
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 93%
+source-wordcount: '1151'
+ht-degree: 92%
 
 ---
 
@@ -15,7 +15,7 @@ In Datenerfassungs-Tags steuern [Regeln](./rules.md) das Verhalten der Ressource
 
 >[!NOTE]
 >
->In diesem Dokument wird beschrieben, wie Sie Regelkomponenten in der Reactor-API verwalten. Weitere Informationen zur Interaktion mit Regeln und Regelkomponenten in der Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch](../../ui/managing-resources/rules.md).
+>In diesem Dokument wird beschrieben, wie Sie Regelkomponenten in der Reactor-API verwalten. Weitere Informationen zur Interaktion mit Regeln und Regelkomponenten in der Benutzeroberfläche finden Sie im [UI-Handbuch](../../ui/managing-resources/rules.md).
 
 Regelkomponenten haben drei grundlegende Typen:
 
@@ -316,7 +316,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Regelkomponente. In der Payload wird die `relationships` -Eigenschaft verknüpft die Komponente mit bestimmten Regeln und einer vorhandenen Erweiterung. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
+Die folgende Anfrage erstellt eine neue Regelkomponente. In der Payload ordnet die Eigenschaft `relationships` der Komponente bestimmte Regeln und eine vorhandene Erweiterung zu. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \

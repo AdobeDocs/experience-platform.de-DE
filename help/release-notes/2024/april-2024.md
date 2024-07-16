@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Versionshinweise April 2024 für Adobe Experience Platform.
-source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
+exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 22%
@@ -14,7 +15,7 @@ ht-degree: 22%
 
 >[!TIP]
 >
->Verwenden Sie die [Glossar zu Adobe Experience Platform](/help/landing/glossary.md) , um sich mit der in Real-time Customer Data Platform und Adobe Experience Platform verwendeten Terminologie vertraut zu machen. Wenn Sie einen bestimmten Begriff, den Sie suchen, nicht finden können, verwenden Sie die Feedback-Optionen auf der Seite, um die Hinzufügung neuer Begriffe zum Glossar anzufordern.
+>Verwenden Sie das [Adobe Experience Platform-Glossar](/help/landing/glossary.md), um sich mit der in Real-time Customer Data Platform und Adobe Experience Platform verwendeten Terminologie vertraut zu machen. Wenn Sie einen bestimmten Begriff, den Sie suchen, nicht finden können, verwenden Sie die Feedback-Optionen auf der Seite, um die Hinzufügung neuer Begriffe zum Glossar anzufordern.
 
 Aktualisierungen vorhandener Funktionen im Experience Platform:
 
@@ -36,7 +37,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Real-time Customer Data Platform B2B-Einblicke | Vorkonfigurierte Ergebnisse durchsuchen [Real-Time CDP B2B-Dateneinblicke über Konten und Chancen](../../dashboards/insights/account-profiles.md) um Ihnen dabei zu helfen, Ihre Daten zu verstehen und Ihre Geschäftsentscheidungen zu treffen. Sie können auch [Erstellen eigener Einblicke mithilfe des Real-Time CDP B2B-Datenmodells](../../dashboards/data-models/cdp-insights-data-model-b2c.md) um Ihre Daten zu visualisieren und zu untersuchen und Ihre benutzerdefinierten Visualisierungen in Ihrem Dashboard zu speichern. |
+| Real-time Customer Data Platform B2B-Einblicke | Erfahren Sie mehr über vorkonfigurierte [B2B-Dateneinblicke von Real-Time CDP zu Konten und Möglichkeiten](../../dashboards/insights/account-profiles.md), um Ihnen zu helfen, Ihre Daten zu verstehen und Ihre Geschäftsentscheidungen zu beeinflussen. Sie können auch [mithilfe des Real-Time CDP B2B-Datenmodells](../../dashboards/data-models/cdp-insights-data-model-b2c.md) eigene Einblicke erstellen, um Ihre Daten zu visualisieren und zu untersuchen und Ihre benutzerdefinierten Visualisierungen in Ihrem Dashboard zu speichern. |
 
 {style="table-layout:auto"}
 
@@ -50,19 +51,19 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie clie
 
 | Typ | Funktion | Beschreibung |
 | --- | --- | --- |
-| Erweiterungen | [!DNL Acxiom Anonymous Visitor Insights] Tag-Erweiterung | Erfahren Sie, woher Ihre Website-Besucher kommen. [!DNL Acxiom's Visitor Insights]. Durch die Verwendung der Geo-IP-Suchtechnologie kann Acxiom den Standort anonymer Browser bestimmen. Nach der Identifizierung liefert eine Suche in ihrer organisierten Datenbank zusätzliche Einblicke, die an den Browser zurückgesendet werden. Autoren von Inhalten können so ihren Inhalt an diese Datenpunkte anpassen und so ein personalisierteres und ansprechenderes Erlebnis für Besucher bieten, selbst wenn sie als Fremde gestartet sind. |
-| Datenströme | [Edge Network-Bot-Erkennung](../../datastreams/bot-detection.md) | Traffic, der von unmenschlichen Entitäten stammt, wie z. B. automatisierten Programmen, Webcrapers, Spider, Skriptscannern, kann es erschweren, Ereignisse von Besuchern zu identifizieren. Dieser Traffic-Typ kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen. <br>Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die von der [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../../server-api/overview.md) als von bekannten Spiders und Bots generiert wurde. Durch die Konfiguration der Bot-Erkennung für Ihre Datenspeicher können Sie bestimmte IP-Adressen, IP-Bereiche und Anforderungsheader identifizieren, die Sie als Bot-Ereignisse klassifizieren möchten. <br> Die Identifizierung des Bot-Traffics kann Ihnen eine präzisere Messung der Benutzeraktivität auf Ihrer Site oder in Ihrer mobilen Anwendung ermöglichen. |
-| Mobile SDK | Hauptversion | Für die folgenden Plattformen wurden neue Hauptversionen des Mobile SDK veröffentlicht: iOS Mobile Core 5.x und kompatible iOS-Erweiterungen, Android Mobile Core 3.x und kompatible Android-Erweiterungen, React Native Core 6.x und kompatible React Native Extensions, Flutter Core 4.x und kompatible Flutter-Erweiterungen. Diese Version bietet verschiedene neue Funktionen und Verbesserungen, einschließlich Unterstützung im Android SDK für Jetpack Compose, Unterstützung für code-basierte Adobe Journey Optimizer-Erlebnisse und allgemeine Verfügbarkeit der Adobe Journey Optimizer Messaging-Erweiterung für Flutter. Weitere Informationen zu den Versionshinweisen finden Sie unter [Versionshinweise zum Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
+| Erweiterungen | [!DNL Acxiom Anonymous Visitor Insights] Tags-Erweiterung | Erfahren Sie, woher Ihre Website-Besucher mit [!DNL Acxiom's Visitor Insights] kommen. Durch die Verwendung der Geo-IP-Suchtechnologie kann Acxiom den Standort anonymer Browser bestimmen. Nach der Identifizierung liefert eine Suche in ihrer organisierten Datenbank zusätzliche Einblicke, die an den Browser zurückgesendet werden. Autoren von Inhalten können so ihren Inhalt an diese Datenpunkte anpassen und so ein personalisierteres und ansprechenderes Erlebnis für Besucher bieten, selbst wenn sie als Fremde gestartet sind. |
+| Datenströme | [Edge Network-Bot-Erkennung](../../datastreams/bot-detection.md) | Traffic, der von unmenschlichen Entitäten stammt, wie z. B. automatisierten Programmen, Webcrapers, Spider, Skriptscannern, kann es erschweren, Ereignisse von Besuchern zu identifizieren. Dieser Traffic-Typ kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen. Mit der <br>Bot-Erkennung können Sie Ereignisse identifizieren, die vom [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../../server-api/overview.md) generiert wurden, als von bekannten Spiders und Bots generiert. Durch die Konfiguration der Bot-Erkennung für Ihre Datenspeicher können Sie bestimmte IP-Adressen, IP-Bereiche und Anforderungsheader identifizieren, die Sie als Bot-Ereignisse klassifizieren möchten. <br> Die Identifizierung des Bot-Traffics kann Ihnen eine genauere Messung der Benutzeraktivität auf Ihrer Site oder in Ihrer mobilen Anwendung ermöglichen. |
+| Mobile SDK | Hauptversion | Für die folgenden Plattformen wurden neue Hauptversionen des Mobile SDK veröffentlicht: iOS Mobile Core 5.x und kompatible iOS-Erweiterungen, Android Mobile Core 3.x und kompatible Android-Erweiterungen, React Native Core 6.x und kompatible React Native-Erweiterungen, Flutter Core 4.x und kompatible Flutter-Erweiterungen. Diese Version bietet verschiedene neue Funktionen und Verbesserungen, einschließlich Unterstützung im Android SDK für Jetpack Compose, Unterstützung für code-basierte Adobe Journey Optimizer-Erlebnisse und allgemeine Verfügbarkeit der Adobe Journey Optimizer Messaging-Erweiterung für Flutter. Detaillierte Versionshinweise finden Sie unter [Mobile SDK - Versionshinweise](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobile SDK | Datenschutz    | Aufgrund der Richtlinienaktualisierung von Apple müssen Entwickler ab dem 1. Mai 2024 neue Datenschutzfunktionen implementieren, um die Informationen an App Store übermitteln zu können. Alle Adobe-Kunden, die das Mobile SDK verwenden, müssen ein Upgrade auf Version 5.x des SDK durchführen, wenn sie nach dem 1. Mai die App Store-Genehmigung erhalten möchten. |
 | Roku SDK | Roku SDK | Die erste Hauptversion des Roku-SDK wurde mit Unterstützung für die Streaming-Medien für das Platform-Edge Network veröffentlicht. |
-| Tags und Ereignisweiterleitung | Produktinterne Anleitung | Experience Platform [Tags](../../tags/home.md) und [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) bieten eine neue Reihe von Erlebnissen, die Ihnen dabei helfen, schnell zu beginnen und eine schnelle Amortisierungszeit zu erreichen. Zu diesen Erlebnissen gehören neue Onboarding-Bildschirme, produktinterne Tutorials und QuickInfos. <br>![Ereignisweiterleitung mit hervorgehobenen produktinternen Anleitungen.](../2024/assets/april/event-forwarding.png "Der Schemaeditor mit den Feldern Typ und Typ Zuordnungs-Wert hervorgehoben."){width="100" zoomable="yes"}<br> |
-| Web SDK | Vereinfachtes Web SDK für Audience Manager-Kunden | Mehrere Web SDK-Updates vereinfachen jetzt die Übernahme des Web SDK, ohne Experience-Datenmodell (XDM) für Experience Cloud-Lösungen wie Audience Manager, Analytics und Target zu verwenden. Weitere Informationen zur Übernahme des Audience Manager Web SDK finden Sie in den folgenden Handbüchern: <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Aktualisieren Sie Ihre Datenerfassungsbibliothek für den Audience Manager von der Audience Manager-Tag-Erweiterung auf die Web SDK-Tag-Erweiterung</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Aktualisieren Sie Ihre Datenerfassungsbibliothek für Audience Manager aus der JavaScript-AppMeasurement-Bibliothek in die JavaScript-Bibliothek des Web SDK.</li></ul> |
+| Tags und Ereignisweiterleitung | Produktinterne Anleitung | Experience Platform [Tags](../../tags/home.md) und [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) bieten eine neue Reihe von Erlebnissen, die Ihnen dabei helfen, schnell zu beginnen und eine schnelle Amortisierungszeit zu erreichen. Zu diesen Erlebnissen gehören neue Onboarding-Bildschirme, produktinterne Tutorials und QuickInfos. <br>![Ereignisweiterleitung mit hervorgehobener Produktleitlinie.](../2024/assets/april/event-forwarding.png "Der Schema-Editor mit den Feldern Typ und Typ Zuordnungs-Wert hervorgehoben."){width="100" zoomable="yes"}<br> |
+| Web SDK | Vereinfachtes Web SDK für Audience Manager-Kunden | Mehrere Web SDK-Updates vereinfachen jetzt die Übernahme des Web SDK, ohne Experience-Datenmodell (XDM) für Experience Cloud-Lösungen wie Audience Manager, Analytics und Target zu verwenden. Weitere Informationen zur Übernahme des Audience Manager Web SDK finden Sie in den folgenden Handbüchern: <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Aktualisieren Sie Ihre Datenerfassungsbibliothek für Audience Manager von der Audience Manager-Tag-Erweiterung auf die Web SDK-Tag-Erweiterung</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Aktualisieren Sie Ihre Datenerfassungsbibliothek für den Audience Manager aus der AppMeasurement JavaScript-Bibliothek in die Web SDK JavaScript-Bibliothek.</li></ul> |
 
 {style="table-layout:auto"}
 
 <!--| Web SDK | [Streaming Media Collection support in Web SDK](../../web-sdk/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](../../web-sdk/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
 
-Weitere Informationen zu Datenerfassungen finden Sie im Abschnitt [Datenerfassung - Übersicht](../../collection/home.md).
+Weitere Informationen zu Datenerfassungen finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
 ## Ziele {#destinations}
 
@@ -72,9 +73,9 @@ Weitere Informationen zu Datenerfassungen finden Sie im Abschnitt [Datenerfassun
 
 | Funktionalität | Beschreibung |
 | ----------- | ----------- |
-| `isRequired` -Parameter jetzt für verschachtelte Kundendatenfelder in Destination SDK verfügbar | Beim Konfigurieren eines Ziels in Destination SDK können Sie jetzt [stellen Sie verschachtelte Kundendatenfelder nach Bedarf ein.](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Auf diese Weise können Benutzer, die Ihr Ziel einrichten, ihren Aktivierungsfluss erst fortsetzen, wenn sie einen Wert für dieses Feld auswählen. |
-| Die Edge-Segmentierung ist bei der Einrichtung eines Adobe Target-Ziels mit dem Web SDK nicht mehr erforderlich. | Bisher wurde beim Konfigurieren von [Adobe Target-Ziel](/help/destinations/catalog/personalization/adobe-target-connection.md) mit Web SDK musste der Datastream für die Personalisierung und Kantensegmentierung aktiviert werden. Die Anforderung, dass der Datastream für die Kantensegmentierung aktiviert werden muss [wurde entfernt](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Beachten Sie, dass dieses Integrationsmuster nur Ihnen ermöglicht, bei der Verwendung von Adobe Target mit Real-Time CDP von einer Untergruppe von Anwendungsfällen zur Personalisierung zu profitieren. Mehr über [Anwendungsfälle, die vom Integrationstyp aktiviert wurden](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
-| [!BADGE Beta]{type=Informative} Entfernen Sie mehrere Zielgruppen und Datensätze aus Aktivierungsabläufen | Sie können jetzt mehrere Zielgruppen und Datensätze auswählen und aus den Zielaktivierungsflüssen entfernen. Siehe [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-remove) und [Datensatzexport](../../destinations/ui/export-datasets.md) Dokumentation für weitere Details. |
+| Der Parameter `isRequired` ist jetzt für verschachtelte Kundendatenfelder in Destination SDK verfügbar | Beim Konfigurieren eines Ziels in Destination SDK können Sie jetzt [verschachtelte Kundendatenfelder nach Bedarf festlegen](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Auf diese Weise können Benutzer, die Ihr Ziel einrichten, ihren Aktivierungsfluss erst fortsetzen, wenn sie einen Wert für dieses Feld auswählen. |
+| Die Edge-Segmentierung ist nicht mehr obligatorisch, wenn Sie ein Adobe Target-Ziel mit dem Web SDK einrichten | Bisher musste beim Konfigurieren eines [Adobe Target-Ziels](/help/destinations/catalog/personalization/adobe-target-connection.md) mit dem Web SDK der Datastream für die Personalisierung und Kantensegmentierung aktiviert werden. Die Anforderung, dass der Datastream für die Kantensegmentierung [aktiviert werden muss, wurde entfernt](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Beachten Sie, dass dieses Integrationsmuster nur Ihnen ermöglicht, bei der Verwendung von Adobe Target mit Real-Time CDP von einer Untergruppe von Anwendungsfällen zur Personalisierung zu profitieren. Weitere Informationen zu den [Anwendungsfällen, die nach Integrationstyp aktiviert sind](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Entfernen Sie mehrere Zielgruppen und Datensätze aus Aktivierungsflüssen | Sie können jetzt mehrere Zielgruppen und Datensätze auswählen und aus den Zielaktivierungsflüssen entfernen. Weitere Informationen finden Sie in der Dokumentation zu [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-remove) und [Datensatzexport](../../destinations/ui/export-datasets.md) . |
 
 {style="table-layout:auto"}
 
@@ -88,7 +89,7 @@ Verwenden Sie Adobe Experience Platform Identity Service, um eine umfassende Üb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Einstellung der `/orgs/{ORG}/` -Endpunkte in der API | Die folgenden Endpunkte im [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) sind veraltet:<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> Sie können `/idnamespace/identities` und `/idnamespace/identities/{ID}` -Endpunkte zum Ausführen derselben Aufgaben und Abrufen entweder aller Namespaces in einer Organisation oder eines bestimmten Namespace in einer Organisation. |
+| Veraltete `/orgs/{ORG}/` -Endpunkte in der API | Die folgenden Endpunkte in der [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) werden nicht mehr unterstützt:<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> Sie können die Endpunkte `/idnamespace/identities` und `/idnamespace/identities/{ID}` verwenden, um dieselben Aufgaben auszuführen und entweder alle Namespaces in einer Organisation oder einen bestimmten Namespace in einer Organisation abzurufen. |
 
 {style="table-layout:auto"}
 
@@ -106,7 +107,7 @@ Verwenden Sie das Monitoring-Dashboard in der Experience Platform-Benutzeroberfl
 
 {style="table-layout:auto"}
 
-Weitere Informationen finden Sie im Handbuch unter [über das Monitoring-Dashboard](../../dataflows/ui/monitor.md).
+Weitere Informationen finden Sie im Handbuch zu [Verwendung des Monitoring-Dashboards](../../dataflows/ui/monitor.md).
 
 ## Query Service {#query-service}
 
@@ -116,12 +117,12 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Abfragequarantäne | Automatische Isolierung fehlgeschlagener Abfrageausführungen, um Unterbrechungen zu vermeiden und eine konsistente Leistung zu gewährleisten. Siehe [Quarantäne der Abfrage](../../query-service/ui/query-schedules.md#quarantine) Dokumentation finden Sie weitere Informationen. |
-| Abfrage abbrechen | Kontrollieren Sie die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. Lesen Sie hierzu den Abschnitt . [Abbrechen der Abfrage](../../query-service/ui/user-guide.md#cancel-query) Dokumentation finden Sie weitere Informationen. |
-| Warnhinweise zu geplanten Abfragen | Halten Sie sich während der Planung von Abfragen über proaktive Benachrichtigungen auf dem Laufenden, um eine effiziente und zeitnahe Aufgabenverwaltung zu gewährleisten. Sie können [Warnhinweise entweder bei der Erstellung einer Abfrage abonnieren](../../query-service/ui/query-schedules.md#alerts-for-query-status) oder die Inline-Aktionen für bestehende geplante Abfragen verwenden. Siehe [Warnhinweise mit Inline-Aktionen abonnieren](../../query-service/ui/monitor-queries.md#alert-subscription) Dokumentation finden Sie weitere Informationen. |
-| Verbesserte geplante Abfragennavigation | Für eine höhere Produktivität können Sie einfach zwischen Abfragevorlagen und geplanten Ausführungen navigieren. Siehe die Dokumentation unter [Anzeigen geplanter Abfrageausführungen](../../query-service/ui/query-schedules.md#scheduled-query-runs) für weitere Informationen. |
-| Erweiterte Abfrageausgabe | Greifen Sie in der Konsole auf bis zu 500 Zeilen mit Abfrageergebnissen zu, um eine tiefere Analyse Ihrer Daten zu erhalten. Weitere Informationen finden Sie unter [Ergebnisanzahl](../../query-service/ui/user-guide.md#result-count) Dokumentation finden Sie weitere Informationen. |
-| Veraltete Abmeldung des Abfrage-Editors | Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor für alle Benutzer zum Standardeditor geworden. Der alte Editor wird vom 24. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar. Siehe [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md) für weitere Informationen. |
+| Abfragequarantäne | Automatische Isolierung fehlgeschlagener Abfrageausführungen, um Unterbrechungen zu vermeiden und eine konsistente Leistung zu gewährleisten. Weitere Informationen finden Sie in der Dokumentation zu [Quarantäne für Abfragen](../../query-service/ui/query-schedules.md#quarantine) . |
+| Abfrage abbrechen | Übernehmen Sie die Kontrolle über die Ausführung von Abfragen und verbessern Sie Ihre Produktivität, indem Sie langwierige Abfragen abbrechen. Weiterführende Informationen dazu finden Sie in der Dokumentation zur [Abfrage abbrechen](../../query-service/ui/user-guide.md#cancel-query) . |
+| Warnhinweise zu geplanten Abfragen | Halten Sie sich während der Planung von Abfragen über proaktive Benachrichtigungen auf dem Laufenden, um eine effiziente und zeitnahe Aufgabenverwaltung zu gewährleisten. Sie können Warnungen [abonnieren, wenn Sie eine Abfrage erstellen](../../query-service/ui/query-schedules.md#alerts-for-query-status) oder die Inline-Aktionen für bestehende geplante Abfragen verwenden. Weitere Informationen finden Sie in der Dokumentation [Warnhinweise mit Inline-Aktionen abonnieren](../../query-service/ui/monitor-queries.md#alert-subscription) . |
+| Verbesserte geplante Abfragennavigation | Für eine höhere Produktivität können Sie einfach zwischen Abfragevorlagen und geplanten Ausführungen navigieren. Weitere Informationen finden Sie in der Dokumentation zu [ Anzeigen geplanter Abfrageausführungen](../../query-service/ui/query-schedules.md#scheduled-query-runs) . |
+| Erweiterte Abfrageausgabe | Greifen Sie in der Konsole auf bis zu 500 Zeilen mit Abfrageergebnissen zu, um eine tiefere Analyse Ihrer Daten zu erhalten. Weitere Informationen finden Sie in der Dokumentation zur [Ergebnisanzahl](../../query-service/ui/user-guide.md#result-count) . |
+| Veraltete Abmeldung des Abfrage-Editors | Ab dem 30. April 2024 ist der erweiterte Abfrage-Editor für alle Benutzer zum Standardeditor geworden. Der alte Editor wird vom 24. Mai 2024 eingestellt und ist nicht mehr zur Verwendung verfügbar. Weitere Informationen finden Sie im [Benutzerhandbuch zum Abfrage-Editor](../../query-service/ui/user-guide.md) . |
 
 {style="table-layout:auto"}
 
@@ -135,11 +136,11 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Sandbox-Werkzeuge](../../sandboxes/ui/sandbox-tooling.md) | Verwenden der Sandbox-Tools für [export](../../sandboxes/ui/sandbox-tooling.md#export-entire-sandbox) alle unterstützten Objekttypen in ein vollständiges Sandbox-Paket einschließen und [importieren](../../sandboxes/ui/sandbox-tooling.md#import-entire-sandbox) das -Paket über verschiedene Sandboxes hinweg, um Objektkonfigurationen zu replizieren. |
+| [Sandbox-Werkzeuge](../../sandboxes/ui/sandbox-tooling.md) | Verwenden Sie Sandbox-Tools, um [alle unterstützten Objektarten in ein vollständiges Sandbox-Paket zu exportieren, und importieren Sie dann das Paket über verschiedene Sandboxes hinweg, um Objektkonfigurationen zu replizieren. [Importieren](../../sandboxes/ui/sandbox-tooling.md#import-entire-sandbox)](../../sandboxes/ui/sandbox-tooling.md#export-entire-sandbox) |
 
 {style="table-layout:auto"}
 
-Weitere Informationen zu Sandboxes finden Sie im Abschnitt [Sandbox-Übersicht](../../sandboxes/home.md).
+Weitere Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -149,7 +150,7 @@ Weitere Informationen zu Sandboxes finden Sie im Abschnitt [Sandbox-Übersicht](
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Status des Zielgruppen-Lebenszyklus | Der Status des Zielgruppen-Lebenszyklus wurde optimiert, um die Lebenszyklusverwaltung zu vereinfachen. Weitere Informationen zu diesen Lebenszyklusstatus finden Sie im Abschnitt [Häufig gestellte Fragen zum Segmentierungsdienst](../../segmentation/faq.md#lifecycle-states). |
+| Status des Zielgruppen-Lebenszyklus | Der Status des Zielgruppen-Lebenszyklus wurde optimiert, um die Lebenszyklusverwaltung zu vereinfachen. Weitere Informationen zu diesen Lebenszyklusstatus finden Sie in den [FAQ zum Segmentierungsdienst](../../segmentation/faq.md#lifecycle-states) . |
 
 {style="table-layout:auto"}
 
@@ -165,8 +166,8 @@ Verwenden Sie Quellen im Experience Platform, um Daten aus einer Adobe-Anwendung
 
 | Neue Quellen | Beschreibung |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | Verwenden Sie die [[!DNL PathFactory] source](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md) zur Integration Ihrer Besucher-, Sitzungs- und Seitenansichtsdaten aus [!DNL PathFactory] auf Experience Platform. Lesen Sie die [[!DNL PathFactory] Übersicht](../../sources/connectors/marketing-automation/pathfactory.md) für Informationen zu den ersten Schritten. |
-| [!DNL Teradata Vantage] | Verwenden Sie die [[!DNL Teradata Vantage] source](../../sources/tutorials/ui/create/databases/teradata-vantage.md) , um Daten von hybriden Multi-Cloud-Umgebungen auf Experience Platform zu erfassen. Lesen Sie die [[!DNL Teradata Vantage] Übersicht](../../sources/connectors/databases/teradata-vantage.md) für Informationen zu den ersten Schritten. |
+| [!BADGE Beta]{type=informative} [!DNL PathFactory] | Verwenden Sie die [[!DNL PathFactory] Quelle](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md) , um Ihre Besucher-, Sitzungs- und Seitenansichtsdaten von [!DNL PathFactory] in Experience Platform zu integrieren. Informationen zu den ersten Schritten finden Sie in der [[!DNL PathFactory] Übersicht](../../sources/connectors/marketing-automation/pathfactory.md) . |
+| [!DNL Teradata Vantage] | Verwenden Sie die [[!DNL Teradata Vantage] Quelle](../../sources/tutorials/ui/create/databases/teradata-vantage.md), um Daten aus hybriden Multi-Cloud-Umgebungen zu Experience Platform zu erfassen. Informationen zu den ersten Schritten finden Sie in der [[!DNL Teradata Vantage] Übersicht](../../sources/connectors/databases/teradata-vantage.md) . |
 
 {style="table-layout:auto"}
 
@@ -174,12 +175,12 @@ Verwenden Sie Quellen im Experience Platform, um Daten aus einer Adobe-Anwendung
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierungen von IP-Adressen für die Zulassungsauflistung in VA7 | Die folgenden IP-Adressen wurden zur Liste der IP-Adressen hinzugefügt, um sie zu Ihrer Zulassungsliste für VA7 (Nordamerika) hinzuzufügen: <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> Eine umfassende Liste der zu Ihrer Zulassungsliste hinzuzufügenden IP-Adressen finden Sie im Abschnitt [Dokument zur Zulassungsliste von IP-Adressen](../../sources/ip-address-allow-list.md). |
-| Unterstützung neuer Authentifizierungstypen mit der [!DNL Azure Event Hubs] source | Sie können jetzt Ihre [!DNL Event Hubs] -Quelle zu Experience Platform mithilfe von [!DNL Azure Active Directory Authentication] oder [!DNL Scoped Azure Active Directory Authentication]. Lesen Sie das Handbuch unter [Verbindung [!DNL Event Hubs] auf Experience Platform](../../sources/tutorials/ui/create/cloud-storage/eventhub.md) für weitere Informationen. |
-| Aktualisierungen für [!DNL Data Landing Zone] Anmeldedaten abrufen | Sie können jetzt die rechte Leiste im Arbeitsbereich &quot;Quellen&quot;verwenden, um Ihre [!DNL Data Landing Zone] Anmeldedaten. Sie können jetzt auch die rechte Leiste verwenden, um Ihre Anmeldedaten zu aktualisieren. Lesen Sie die [[!DNL Data Landing Zone] UI-Handbuch](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) für weitere Informationen. |
+| Aktualisierungen von IP-Adressen für die Zulassungsauflistung in VA7 | Die folgenden IP-Adressen wurden zur Liste der IP-Adressen hinzugefügt, um sie zu Ihrer Zulassungsliste für VA7 (Nordamerika) hinzuzufügen: <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> Eine umfassende Liste der zu Ihrer Zulassungsliste hinzuzufügenden IP-Adressen finden Sie im Dokument zur [IP-Adressen-Zulassungsliste](../../sources/ip-address-allow-list.md) . |
+| Unterstützung neuer Authentifizierungstypen mit der [!DNL Azure Event Hubs]-Quelle | Sie können jetzt Ihre [!DNL Event Hubs]-Quelle entweder mit [!DNL Azure Active Directory Authentication] oder mit [!DNL Scoped Azure Active Directory Authentication] mit Experience Platform verbinden. Weitere Informationen finden Sie in der Anleitung zum Verbinden von  [!DNL Event Hubs] mit Experience Platform](../../sources/tutorials/ui/create/cloud-storage/eventhub.md) .[ |
+| Aktualisierungen des Abrufs von [!DNL Data Landing Zone]-Anmeldedaten | Sie können jetzt die rechte Leiste im Arbeitsbereich &quot;Quellen&quot;verwenden, um Ihre [!DNL Data Landing Zone] -Anmeldedaten abzurufen. Sie können jetzt auch die rechte Leiste verwenden, um Ihre Anmeldedaten zu aktualisieren. Weitere Informationen finden Sie im [[!DNL Data Landing Zone] UI-Handbuch](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) . |
 
 {style="table-layout:auto"}
 
 <!--| Enhanced filtering and navigation in the sources UI workspace | Use the enhanced filtering, search, and inline action tools in the sources UI workspace to streamline your workflow. <ul><li>Use filtering and search capabilities to navigate your way through sources accounts and dataflows in your organization.</li><li>Use inline actions to modify configuration settings applied to your dataflows and improve organizational workflows. You can use inline actions to apply tags, set up alerts, or create ingestion jobs on demand.</li></ul> For more information, read the guide on [filtering sources objects in the UI](../../sources/tutorials/ui/filter.md).|-->
 
-Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen - Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).

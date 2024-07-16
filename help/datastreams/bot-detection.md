@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Traffic, der von unmenschlichen Entitäten stammt, wie z. B. automatisierten Programmen, Webcrapers, Spider, Skriptscannern, kann es erschweren, Ereignisse von Besuchern zu identifizieren. Dieser Traffic-Typ kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen.
 
-Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die von der [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../server-api/overview.md) als von bekannten Spiders und Bots generiert wurde.
+Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die vom [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../server-api/overview.md) generiert wurden, als von bekannten Spiders und Bots generiert.
 
 Durch die Konfiguration der Bot-Erkennung für Ihre Datenspeicher können Sie bestimmte IP-Adressen, IP-Bereiche und Anforderungsheader identifizieren, die Sie als Bot-Ereignisse klassifizieren möchten.
 
@@ -33,50 +33,50 @@ Diese Bot-Bewertung hilft den Lösungen, die die Anfrage erhalten, den Bot-Traff
 
 >[!IMPORTANT]
 >
->Bei der Bot-Erkennung werden keine Bot-Anforderungen entfernt. Es aktualisiert nur das XDM-Schema mit dem Bot-Scoring und leitet das Ereignis an die [Datastream-Dienst](configure.md) die Sie konfiguriert haben.
+>Bei der Bot-Erkennung werden keine Bot-Anforderungen entfernt. Es aktualisiert nur das XDM-Schema mit dem Bot-Scoring und leitet das Ereignis an den von Ihnen konfigurierten [Datastream-Dienst](configure.md) weiter.
 >
->Adobe-Lösungen können Bot-Scoring auf unterschiedliche Weise handhaben. Adobe Analytics verwendet beispielsweise eine eigene [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) und verwendet nicht den vom Edge Network festgelegten Wert. Die beiden Dienste verwenden dasselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), sodass die Bot-Bewertung identisch ist.
+>Adobe-Lösungen können Bot-Scoring auf unterschiedliche Weise handhaben. Adobe Analytics verwendet beispielsweise seinen eigenen [Bot-Filterdienst](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) und verwendet nicht den vom Edge Network festgelegten Wert. Die beiden Dienste verwenden dieselbe [IAB-Bot-Liste](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), sodass die Bot-Auswertung identisch ist.
 
 Es kann bis zu 15 Minuten dauern, bis Bot-Erkennungsregeln nach der Erstellung über das Edge Network übertragen werden.
 
 ## Voraussetzungen {#prerequisites}
 
-Damit die Bot-Erkennung auf Ihrem Datastream funktioniert, müssen Sie die **[!UICONTROL Informationen zur Bot-Erkennung]** Feldergruppe in Ihr Schema ein. Siehe [XDM-Schema](../xdm/ui/resources/schemas.md#add-field-groups) Dokumentation , um zu erfahren, wie Sie einem Schema Feldergruppen hinzufügen.
+Damit die Bot-Erkennung auf Ihrem Datastream funktioniert, müssen Sie die Feldergruppe **[!UICONTROL Bot-Erkennungsinformationen]** zu Ihrem Schema hinzufügen. Informationen zum Hinzufügen von Feldergruppen zu einem Schema finden Sie in der Dokumentation zum [XDM-Schema](../xdm/ui/resources/schemas.md#add-field-groups) .
 
 ## Konfigurieren der Bot-Erkennung für Datenspeicher {#configure}
 
-Sie können die Bot-Erkennung konfigurieren, nachdem Sie eine Datastream-Konfiguration erstellt haben. Weitere Informationen finden Sie in der Dokumentation [Erstellen und Konfigurieren eines Datenspeichers](configure.md)folgen Sie dann den unten stehenden Anweisungen, um Ihrem Datastream Bot-Erkennungsfunktionen hinzuzufügen.
+Sie können die Bot-Erkennung konfigurieren, nachdem Sie eine Datastream-Konfiguration erstellt haben. Lesen Sie die Dokumentation zum Erstellen und Konfigurieren eines Datastreams ](configure.md) und befolgen Sie dann die unten stehenden Anweisungen, um Ihrem Datastream Bot-Erkennungsfunktionen hinzuzufügen.[
 
 Gehen Sie zur Liste der Datenspeicher und wählen Sie den Datastream aus, dem Sie die Bot-Erkennung hinzufügen möchten.
 
-![Benutzeroberfläche &quot;Datastreams&quot;mit der Liste der Datenspeicher.](assets/bot-detection/datastream-list.png)
+![Die Benutzeroberfläche &quot;Datastreams&quot;mit der Liste der Datenspeicher.](assets/bot-detection/datastream-list.png)
 
-Wählen Sie auf der Seite mit den Datenspeicherdetails die **[!UICONTROL Bot-Erkennung]** in der rechten Leiste.
+Wählen Sie auf der Seite mit den Datenspeicherdetails die Option **[!UICONTROL Bot-Erkennung]** in der rechten Leiste aus.
 
-![Die Option &quot;Bot-Erkennung&quot;wurde in der Benutzeroberfläche von Datastreams hervorgehoben.](assets/bot-detection/bot-detection.png)
+![Die Bot-Erkennungsoption, die in der Benutzeroberfläche von Datastreams hervorgehoben ist, wurde hervorgehoben.](assets/bot-detection/bot-detection.png)
 
-Die **[!UICONTROL Regeln zur Bot-Erkennung]** angezeigt.
+Die Seite **[!UICONTROL Bot Detection Rules]** wird angezeigt.
 
-![Einstellungen für die Bot-Erkennung auf der Seite mit den Datastream-Einstellungen .](assets/bot-detection/bot-detection-page.png)
+![Bot-Erkennungseinstellungen auf der Seite mit den Datastream-Einstellungen.](assets/bot-detection/bot-detection-page.png)
 
 Auf der Seite &quot;Bot-Erkennungsregeln&quot;können Sie die Bot-Erkennung mithilfe der folgenden Funktionen konfigurieren:
 
-* Verwenden der [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Verwenden des [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Erstellen eigener Bot-Erkennungsregeln
 
 ### Verwenden der IAB/ABC International Spiders and Bots List {#iab-list}
 
-Die [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) ist eine branchenübliche Drittanbieter-Liste von Internet-Spiders und Bots, mit der Sie automatisierten Traffic identifizieren können, z. B. Suchmaschinen-Crawler, Überwachungswerkzeuge und anderen nicht menschlichen Traffic, den Sie möglicherweise nicht in Ihren Analytics-Zählungen anzeigen möchten.
+Die Liste &quot;[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)&quot; ist eine branchenübliche Liste von Internet-Spiders und Bots von Drittanbietern, mit der Sie automatisierten Traffic identifizieren können, wie Suchmaschinen-Crawler, Überwachungstools und anderen nicht menschlichen Traffic, den Sie möglicherweise nicht in Ihren Analytics-Zählungen anzeigen möchten.
 
-So konfigurieren Sie Ihren Datenspeicher für die Verwendung der [!DNL IAB/ABC International Spiders and Bots List], um die **[!UICONTROL Verwenden der IAB/ABC International Spiders and Bots List zur Bot-Erkennung für diesen Datastream]** und wählen Sie dann Speichern aus, um die Bot-Erkennungseinstellungen auf Ihren Datastream anzuwenden.
+Um Ihren Datastream für die Verwendung von [!DNL IAB/ABC International Spiders and Bots List] zu konfigurieren, schalten Sie die Option **[!UICONTROL IAB/ABC International Spiders and Bots List for Bots Detection on this datastream]** und wählen Sie dann Speichern aus, um die Bot-Erkennungseinstellungen auf Ihren Datastream anzuwenden.
 
 ![IAB-Spider und Bot-Liste aktiviert.](assets/bot-detection/bot-detection-list.png)
 
 ### Erstellen von Bot-Erkennungsregeln {#rules}
 
-Zusätzlich zur Verwendung der [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)können Sie für jeden Datastream eigene Bot-Erkennungsregeln definieren.
+Zusätzlich zur Verwendung der [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) können Sie für jeden Datastream eigene Bot-Erkennungsregeln definieren.
 
-Sie können Bot-Erkennungsregeln erstellen, die auf **IP-Adressen** und **IP-Adressbereiche**.
+Sie können Bot-Erkennungsregeln basierend auf **IP-Adressen** und **IP-Adressbereichen** erstellen.
 
 Wenn Sie detailliertere Bot-Erkennungsregeln benötigen, können Sie die IP-Bedingungen mit den Anforderungen-Header-Bedingungen kombinieren. Bot-Erkennungsregeln können die folgenden Kopfzeilen verwenden:
 
@@ -96,35 +96,35 @@ Wenn Sie detailliertere Bot-Erkennungsregeln benötigen, können Sie die IP-Bedi
 
 Gehen Sie wie folgt vor, um eine Bot-Erkennungsregel zu erstellen:
 
-1. Auswählen **[!UICONTROL Neue Regel hinzufügen]**.
+1. Wählen Sie **[!UICONTROL Neue Regel hinzufügen]** aus.
 
-   ![Einstellungsbildschirm für die Bot-Erkennung mit hervorgehobener Schaltfläche Neue Regel hinzufügen .](assets/bot-detection/bot-detection-new-rule.png)
+   ![Bildschirm mit den Erkennungseinstellungen für Bots mit hervorgehobener Schaltfläche Neue Regel hinzufügen](assets/bot-detection/bot-detection-new-rule.png).
 
-2. Geben Sie einen Namen für die Regel im **[!UICONTROL Regelname]** -Feld.
+2. Geben Sie im Feld **[!UICONTROL Regelname]** einen Namen für die Regel ein.
 
-   ![Regelbildschirm zur Bot-Erkennung mit hervorgehobenem Regelnamen.](assets/bot-detection/rule-name.png)
+   ![Bildschirm mit der Bot-Erkennungsregel, auf dem der Regelname hervorgehoben ist.](assets/bot-detection/rule-name.png)
 
-3. Auswählen **[!UICONTROL Neue IP-Bedingung hinzufügen]** , um eine neue IP-basierte Regel hinzuzufügen. Sie können die Regel nach IP-Adresse oder IP-Adressbereich definieren.
+3. Wählen Sie **[!UICONTROL Neue IP-Bedingung hinzufügen]** aus, um eine neue IP-basierte Regel hinzuzufügen. Sie können die Regel nach IP-Adresse oder IP-Adressbereich definieren.
 
-   ![Bot-Erkennungsregel-Bildschirm mit hervorgehobenem Feld für die IP-Adresse.](assets/bot-detection/ip-address-rule.png)
+   ![Bildschirm mit der Bot-Erkennungsregel, auf dem das Feld für die IP-Adresse hervorgehoben ist.](assets/bot-detection/ip-address-rule.png)
 
-   ![Regelbildschirm zur Bot-Erkennung mit hervorgehobenem Feld für den IP-Bereich.](assets/bot-detection/ip-range-rule.png)
+   ![Bildschirm mit der Bot-Erkennungsregel, auf dem das Feld für den IP-Bereich hervorgehoben ist.](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
-   >Die IP-Bedingungen basieren auf einem logischen `OR` Vorgang. Eine Anfrage wird als von einem Bot kommend markiert, wenn eine der von Ihnen definierten IP-Bedingungen erfüllt ist.
+   >Die IP-Bedingungen basieren auf einem logischen `OR` -Vorgang. Eine Anfrage wird als von einem Bot kommend markiert, wenn eine der von Ihnen definierten IP-Bedingungen erfüllt ist.
 
-4. Wenn Sie der Regel Kopfzeilenbedingungen hinzufügen möchten, wählen Sie **[!UICONTROL Gruppe mit Kopfzeilenbedingungen hinzufügen]** und wählen Sie dann die Kopfzeilen aus, die die Regel verwenden soll.
+4. Wenn Sie der Regel Kopfzeilenbedingungen hinzufügen möchten, wählen Sie **[!UICONTROL Kopfzeilenbedingungen hinzufügen Gruppe]** und wählen Sie dann die Kopfzeilen aus, die die Regel verwenden soll.
 
-   ![Bildschirm mit Bot-Erkennungsregeln mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-conditions.png)
+   ![Bildschirm mit der Bot-Erkennungsregel mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-conditions.png)
 
    Fügen Sie dann die für die ausgewählte Kopfzeile zu verwendenden Bedingungen hinzu.
 
-   ![Bildschirm mit Bot-Erkennungsregeln mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-condition-rule.png)
+   ![Bildschirm mit der Bot-Erkennungsregel mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/header-condition-rule.png)
 
-5. Nachdem Sie die gewünschten Bot-Erkennungsregeln konfiguriert haben, wählen Sie **[!UICONTROL Speichern]** , damit die Regeln auf Ihren Datastream angewendet werden.
+5. Nachdem Sie die gewünschten Bot-Erkennungsregeln konfiguriert haben, wählen Sie **[!UICONTROL Speichern]** aus, damit die Regeln auf Ihren Datastream angewendet werden.
 
-   ![Bildschirm mit Bot-Erkennungsregeln mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/bot-detection-save.png)
+   ![Bildschirm mit der Bot-Erkennungsregel mit hervorgehobenen Kopfzeilenbedingungen.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Beispiele für Bot-Erkennungsregeln {#examples}
@@ -153,19 +153,19 @@ Um alle Anforderungen aus einer beliebigen IP-Adresse in einem bestimmten Bereic
 
 Um alle Anforderungen, die von einer bestimmten IP-Adresse stammen und einen bestimmten Anforderungsheader enthalten, als Bot-Traffic zu markieren, erstellen Sie eine neue Bot-Erkennungsregel, wie in der Abbildung unten dargestellt.
 
-Diese Regel prüft, ob die Anfrage von einer bestimmten IP-Adresse stammt und ob die `referer` Anfrage-Kopfzeile beginnt mit `www.adobe.com`.
+Diese Regel überprüft, ob die Anforderung von einer bestimmten IP-Adresse stammt und ob der `referer`-Anforderungsheader mit `www.adobe.com` beginnt.
 
-![Bot-Erkennungsregel basierend auf IP-Adresse und Anfrage-Kopfzeile.](assets/bot-detection/bot-detection-header-ip.png)
+![Bot-Erkennungsregel basierend auf IP-Adresse und Anforderungsheader.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Bot-Erkennung basierend auf mehreren Bedingungen {#multiple-conditions}
 
 Sie können Bot-Erkennungsregeln erstellen, die auf Folgendem basieren:
 
-* **Verschiedene Bedingungen**: Verschiedene Bedingungen werden als logisch ausgewertet `AND` -Vorgang, d. h. die Bedingungen müssen gleichzeitig erfüllt sein, damit der Antrag als von einem Bot stammt identifiziert werden kann.
-* **Mehrere Bedingungen desselben Typs**: Bedingungen desselben Typs werden als logisch ausgewertet `OR` -Vorgang, d. h. wenn eine der Bedingungen erfüllt ist, wird die Anfrage als von einem Bot stammt identifiziert.
+* **Mehrere unterschiedliche Bedingungen**: Verschiedene Bedingungen werden als logischer `AND` Vorgang ausgewertet, d. h. die Bedingungen müssen gleichzeitig erfüllt sein, damit die Anforderung als von einem Bot stammt identifiziert werden kann.
+* **Mehrere Bedingungen desselben Typs**: Bedingungen desselben Typs werden als logischer `OR` -Vorgang ausgewertet, d. h., wenn eine der Bedingungen erfüllt ist, wird die Anforderung als von einem Bot stammend identifiziert.
 
 Die in der folgenden Abbildung dargestellte Regel identifiziert eine Bot-Origin-Anfrage, wenn die folgenden Bedingungen erfüllt sind:
 
-Die Anfrage stammt von einer der beiden IP-Adressen, der `referer` -Kopfzeile beginnt mit `www.adobe.com`und die `sec-ch-ua-mobile` -Kopfzeile identifiziert die Anforderung als von einem Desktop-Browser stammt.
+Die Anfrage stammt von einer der beiden IP-Adressen, die Kopfzeile `referer` beginnt mit `www.adobe.com` und die Kopfzeile `sec-ch-ua-mobile` identifiziert die Anforderung als von einem Desktop-Browser stammt.
 
 ![Bot-Erkennungsregel basierend auf mehreren Bedingungen.](assets/bot-detection/bot-detection-multiple.png)

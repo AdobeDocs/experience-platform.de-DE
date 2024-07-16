@@ -4,8 +4,8 @@ description: Hier erfahren Sie, wie Sie eine Adobe Experience Cloud-Organisation
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 95%
+source-wordcount: '573'
+ht-degree: 90%
 
 ---
 
@@ -41,9 +41,9 @@ Dieses Programm richtet sich an Beratungsfirmen, die Adobe-Kunden dabei unterst�
 >
 >Derzeit kann Ihre geschäftliche E-Mail-Adresse jeweils nur in einem Partnerprogramm verwendet werden, so dass Sie für jedes der Programme eine andere geschäftliche E-Mail-Adresse als registrierten Kontakt verwenden müssen.
 
-Sobald sich Ihre Firma im Exchange Partner-Programm befindet, können Sie den Zugriff auf Adobe-Lösungen anfordern, indem Sie sich bei der [Exchange Partner-Website](https://partners.adobe.com/exchangeprogram/experiencecloud) anmelden und die folgenden Schritte ausführen.
+Sobald sich Ihr Unternehmen im Exchange Partner-Programm befindet, können Sie den Zugriff auf Adobe Solutions anfordern, indem Sie sich bei der [Exchange Partner-Site](https://partners.adobe.com/exchangeprogram/experiencecloud) anmelden und die folgenden Schritte ausführen.
 
-Wenn Sie über ein Experience Cloud-Konto verfügen, das Zugriff auf die Datenerfassungs-Benutzeroberfläche und die Benutzeroberfläche für Experience Platformen erfordert, lesen Sie die Informationen unter [Handbuch zu Datenerfassungsberechtigungen](../../../collection/permissions.md).
+Wenn Sie über ein Experience Cloud-Konto verfügen, das Zugriff auf die Datenerfassungs-Benutzeroberfläche und die Experience Platform-Benutzeroberfläche erfordert, lesen Sie das Handbuch [für Datenerfassungsberechtigungen](../../../collection/permissions.md).
 
 ## Für unabhängige Entwickler
 

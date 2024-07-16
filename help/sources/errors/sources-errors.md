@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Fehlermeldungen, die bei Verwendung des
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '3192'
+source-wordcount: '3188'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ Dieses Dokument enthält einen Katalog mit Fehlermeldungen, Beschreibungen und e
 | `1005-500` | Interner Fehler | Ein unbekannter Fehler ist aufgetreten. Bitte erneut versuchen und den Support kontaktieren, wenn das Problem weiterhin besteht. |
 | `1006-408` | Zeitüberschreitung der Anfrage | Bei der Verarbeitung der Anfrage ist ein Fehler aufgetreten. Die Zeit für die Anfrage wurde überschritten. Bitte erneut versuchen und den Support kontaktieren, wenn das Problem weiterhin besteht. |
 | `1007-400` | Ungültiger Kopfzeilenparameter | Ein ungültiger Kopfzeilenparameter: {headerName} wurde empfangen. Bitte die Kopfzeilenparameter überprüfen und erneut versuchen. |
-| `1008-401` |  | Ungültiges Autorisierungs-Token | Das Autorisierungs-Token hat keinen Zugriff auf diese Organisation oder die Organisation existiert nicht. Bitte sicherstellen, dass die Organisation vorhanden ist, oder Admin kontaktieren, um Zugriff zu erhalten. |
+| `1008-401` | | Ungültiges Autorisierungs-Token | Das Autorisierungs-Token hat keinen Zugriff auf diese Organisation oder die Organisation existiert nicht. Bitte sicherstellen, dass die Organisation vorhanden ist, oder Admin kontaktieren, um Zugriff zu erhalten. |
 | `1009-403` | Die IMS-Organisations-ID fehlt oder ist leer | Die Anfragekopfzeile für die Organisations-ID fehlt oder ist leer. Bitte den Wert der Kopfzeile aktualisieren und erneut versuchen. |
 | `1010-500` | Ungültige detaillierte Nachricht | Der Parameter in der detaillierten Nachricht wurde nicht ordnungsgemäß angegeben. Bitte den Parameter in der detaillierten Nachricht überprüfen und erneut versuchen. |
 | `1011-503` | Dienst nicht verfügbar | Der Dienst ist derzeit nicht verfügbar. Bitte erneut versuchen und den Support kontaktieren, wenn das Problem weiterhin besteht. |

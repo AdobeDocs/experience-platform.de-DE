@@ -5,8 +5,8 @@ description: Erfahren Sie, wie Sie die Zustimmungseinstellungen von Kunden für 
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 2%
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -14,27 +14,27 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->In diesem Handbuch wird erläutert, wie Sie Einwilligungen in **Segmentdefinitionen**.
+>In diesem Handbuch wird erläutert, wie Sie Einwilligungen in **Segmentdefinitionen** berücksichtigen können.
 
-Rechtliche Datenschutzbestimmungen wie die [!DNL California Consumer Privacy Act] (CCPA) bieten Verbrauchern das Recht, sich gegen die Erfassung oder Weitergabe personenbezogener Daten an Dritte zu entscheiden. Adobe Experience Platform bietet standardmäßige Experience-Datenmodell (XDM)-Komponenten, mit denen diese Voreinstellungen bezüglich der Kundenzustimmung in Echtzeit-Kundenprofildaten erfasst werden sollen.
+Durch gesetzliche Datenschutzbestimmungen wie den [!DNL California Consumer Privacy Act] (CCPA) haben Verbraucher das Recht, sich gegen die Erfassung oder Weitergabe personenbezogener Daten an Dritte zu entscheiden. Adobe Experience Platform bietet standardmäßige Experience-Datenmodell (XDM)-Komponenten, mit denen diese Voreinstellungen bezüglich der Kundenzustimmung in Echtzeit-Kundenprofildaten erfasst werden sollen.
 
 Wenn ein Kunde die Freigabe seiner personenbezogenen Daten widerrufen oder verweigert hat, muss Ihr Unternehmen diese Voreinstellung beim Generieren von Zielgruppen für Marketingaktivitäten berücksichtigen. In diesem Dokument wird beschrieben, wie Sie mithilfe der Experience Platform-Benutzeroberfläche Kundenzustimmungswerte in Ihre Segmentdefinitionen integrieren.
 
 ## Erste Schritte
 
-Die Einhaltung der Zustimmungswerte von Kunden erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] beteiligte Dienste. Bevor Sie mit diesem Tutorial beginnen, sollten Sie mit den folgenden Diensten vertraut sein:
+Die Einhaltung der Zustimmungswerte von Kunden erfordert ein Verständnis der verschiedenen beteiligten [!DNL Adobe Experience Platform]-Dienste. Bevor Sie mit diesem Tutorial beginnen, sollten Sie mit den folgenden Diensten vertraut sein:
 
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten ordnet.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] Daten.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] -Daten.
 
 ## Einverständnisschemafelder
 
-Um Kundeneinwilligungen und -präferenzen zu berücksichtigen, ist eines der Schemas, das Teil Ihrer [!UICONTROL Individuelles XDM-Profil] Das Vereinigungsschema muss die Standardfeldgruppe enthalten **[!UICONTROL Einverständnis und Voreinstellungen]**.
+Um Kundeneinwilligungen und -einstellungen zu berücksichtigen, muss eines der Schemas, das Teil Ihres Vereinigungsschemas für [!UICONTROL XDM Individual Profile] ist, die Standardfeldgruppe **[!UICONTROL Einverständnisse und Voreinstellungen]** enthalten.
 
-Weitere Informationen zur Struktur und zum vorgesehenen Anwendungsfall der einzelnen Attribute, die von der Feldergruppe bereitgestellt werden, finden Sie in der [Referenzhandbuch zu Einverständnissen und Voreinstellungen](../xdm/field-groups/profile/consents.md). Eine schrittweise Anleitung zum Hinzufügen einer Feldergruppe zu einem Schema finden Sie im Abschnitt [Handbuch zur XDM-Benutzeroberfläche](../xdm/ui/resources/schemas.md#add-field-groups).
+Weitere Informationen zur Struktur und zum vorgesehenen Anwendungsfall der einzelnen Attribute, die von der Feldergruppe bereitgestellt werden, finden Sie im Referenzhandbuch für [Einwilligungen und Voreinstellungen](../xdm/field-groups/profile/consents.md). Eine schrittweise Anleitung zum Hinzufügen einer Feldergruppe zu einem Schema finden Sie im [XDM UI-Handbuch](../xdm/ui/resources/schemas.md#add-field-groups).
 
-Nachdem die Feldergruppe zu einem [Profil-aktiviertes Schema](../xdm/ui/resources/schemas.md#profile) und ihre Felder zum Erfassen von Einwilligungsdaten aus Ihrer Erlebnisanwendung verwendet wurden, können Sie die erfassten Zustimmungsattribute in Ihren Segmentregeln verwenden.
+Nachdem die Feldergruppe einem [Profil-aktivierten Schema](../xdm/ui/resources/schemas.md#profile) hinzugefügt wurde und die Felder zum Erfassen von Einwilligungsdaten aus Ihrer Erlebnisanwendung verwendet wurden, können Sie die erfassten Zustimmungsattribute in Ihren Segmentregeln verwenden.
 
 ## Umgang mit Zustimmung in der Segmentierung
 
@@ -47,29 +47,29 @@ Die folgenden Schritte zeigen, wie Sie die entsprechenden Felder für zwei Arten
 
 >[!NOTE]
 >
->Während sich dieses Handbuch auf die beiden oben genannten Opt-out-Flags konzentriert, können Sie Ihre Segmentdefinitionen so konfigurieren, dass auch zusätzliche Zustimmungssignale einbezogen werden. Die [Referenzhandbuch zu Einverständnissen und Voreinstellungen](../xdm/field-groups/profile/consents.md) enthält weitere Informationen zu den einzelnen Optionen und den vorgesehenen Anwendungsfällen.
+>Während sich dieses Handbuch auf die beiden oben genannten Opt-out-Flags konzentriert, können Sie Ihre Segmentdefinitionen so konfigurieren, dass auch zusätzliche Zustimmungssignale einbezogen werden. Das Referenzhandbuch [Einverständnisse und Voreinstellungen](../xdm/field-groups/profile/consents.md) enthält weitere Informationen zu den einzelnen Optionen und den beabsichtigten Anwendungsfällen.
 
-Beim Erstellen einer Segmentdefinition in der Benutzeroberfläche unter **[!UICONTROL Attribute]**, navigieren Sie zu **[!UICONTROL Individuelles XDM-Profil]**, wählen Sie **[!UICONTROL Einverständnis und Voreinstellungen]**. Von hier aus können Sie die Optionen für **[!UICONTROL Datenerfassung]** und **[!UICONTROL Daten freigeben]**.
+Navigieren Sie beim Erstellen einer Segmentdefinition in der Benutzeroberfläche unter **[!UICONTROL Attribute]** zu **[!UICONTROL XDM Individual Profile]** und wählen Sie dann **[!UICONTROL Einverständnisse und Voreinstellungen]** aus. Von hier aus können Sie die Optionen für **[!UICONTROL Datenerfassung]** und **[!UICONTROL Daten freigeben]** sehen.
 
 ![](./images/opt-outs/consents.png)
 
-Wählen Sie zunächst **[!UICONTROL Datenerfassung]** Kategorie, dann ziehen **[!UICONTROL Auswahlwert]** in den Segment-Builder. Beim Hinzufügen des Attributs zur Segmentdefinition können Sie die [Zustimmungswerte](../xdm/field-groups/profile/consents.md#choice-values) die ein- oder ausgeschlossen werden müssen.
+Wählen Sie zunächst die Kategorie **[!UICONTROL Datenerfassung]** aus und ziehen Sie dann **[!UICONTROL Auswahlwert]** in den Segment-Builder. Beim Hinzufügen des Attributs zur Segmentdefinition können Sie die [Zustimmungswerte](../xdm/field-groups/profile/consents.md#choice-values) angeben, die ein- oder ausgeschlossen werden müssen.
 
 ![](./images/opt-outs/consent-values.png)
 
-Ein Ansatz besteht darin, alle Kunden auszuschließen, die sich gegen die Erfassung ihrer Daten entschieden haben. Setzen Sie dazu den Operator auf **[!UICONTROL ist nicht gleich]** und wählen Sie die folgenden Werte aus:
+Ein Ansatz besteht darin, alle Kunden auszuschließen, die sich gegen die Erfassung ihrer Daten entschieden haben. Setzen Sie dazu den Operator auf **[!UICONTROL ist nicht gleich]** und wählen Sie die folgenden Werte:
 
 * **[!UICONTROL Nein (Opt-out)]**
-* **[!UICONTROL Standardwert Nein (Opt-out)]**
-* **[!UICONTROL unbekannt]** (wenn davon ausgegangen wird, dass die Einwilligung verweigert wird, falls nicht anders bekannt)
+* **[!UICONTROL Standardwert von Nein (Opt-out)]**
+* **[!UICONTROL Unbekannt]** (wenn angenommen wird, dass die Einwilligung verweigert wird, falls nicht anders bekannt)
 
 ![](./images/opt-outs/collect.png)
 
-under **[!UICONTROL Attribute]** Navigieren Sie in der linken Leiste zurück zur **[!UICONTROL Einverständnis und Voreinstellungen]** und wählen Sie **[!UICONTROL Daten freigeben]**. Ziehen Sie die entsprechenden **[!UICONTROL Auswahlwert]** in die Arbeitsfläche ein und wählen Sie dieselben Werte wie für die [!UICONTROL Datenerfassung] Auswahlwert. Stellen Sie sicher, dass **[!UICONTROL Oder]** Beziehung wird zwischen den beiden Attributen hergestellt.
+Navigieren Sie unter &quot;**[!UICONTROL Attribute]**&quot;in der linken Leiste zurück zum Abschnitt &quot;**[!UICONTROL Einverständnisse und Voreinstellungen]**&quot;und wählen Sie dann &quot;**[!UICONTROL Daten freigeben]**&quot;. Ziehen Sie den entsprechenden **[!UICONTROL Auswahlwert]** in die Arbeitsfläche und wählen Sie dieselben Werte wie für den Auswahlwert [!UICONTROL Datenerfassung] aus. Stellen Sie sicher, dass zwischen den beiden Attributen eine **[!UICONTROL Oder]** -Beziehung hergestellt wird.
 
 ![](./images/opt-outs/share.png)
 
-Mit beiden **[!UICONTROL Datenerfassung]** und **[!UICONTROL Daten freigeben]** Zustimmungswerte, die zur Segmentdefinition hinzugefügt wurden, werden alle Kunden, die sich für die Verwendung ihrer Daten entschieden haben, von der resultierenden Zielgruppe ausgeschlossen. Von hier aus können Sie die Segmentdefinition weiter anpassen, bevor Sie **[!UICONTROL Speichern]** , um den Prozess abzuschließen.
+Wenn sowohl die Zustimmungswerte **[!UICONTROL Datenerfassung]** als auch **[!UICONTROL Daten freigeben]** zur Segmentdefinition hinzugefügt werden, werden alle Kunden, die sich gegen die Verwendung ihrer Daten entschieden haben, von der resultierenden Zielgruppe ausgeschlossen. Von hier aus können Sie die Segmentdefinition weiter anpassen, bevor Sie **[!UICONTROL Speichern]** auswählen, um den Prozess abzuschließen.
 
 ## Nächste Schritte
 

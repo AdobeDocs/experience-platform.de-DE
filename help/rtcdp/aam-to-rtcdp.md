@@ -23,7 +23,7 @@ Stellen Sie außerdem Überlegungen über die aktuell in Audience Manager verwen
 
 Adobe empfiehlt, Ihre Segmente wie folgt zu kategorisieren:
 
-* Segmente, die über das [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), da sie keine Datenabhängigkeiten, keine Ziel- oder Aktivierungsprobleme haben und ihre Segmentierungsregeln über die Real-Time CDP erstellt werden können [Segment Builder](/help/segmentation/ui/segment-builder.md) später.
+* Segmente, die über den Source Connector ]](/help/sources/connectors/adobe-applications/audience-manager.md) für den Audience Manager [[!UICONTROL  an Experience Platform gesendet werden können, da sie keine Datenabhängigkeiten, keine Ziel- oder Aktivierungsprobleme aufweisen und ihre Segmentierungsregeln später über den Real-Time CDP [Segment Builder](/help/segmentation/ui/segment-builder.md) erstellt werden können.
 * Segmente mit Regeln, die unterstützt werden können, aber möglicherweise Daten enthalten, die in Real-Time CDP nicht verfügbar sind.
 * Segmente, die nicht in Real-Time CDP erstellt werden können und Funktionen fehlen.
 

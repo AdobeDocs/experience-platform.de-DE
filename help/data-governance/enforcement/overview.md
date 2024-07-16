@@ -23,7 +23,7 @@ Es gibt zwei Methoden zur Durchsetzung von Richtlinien auf Adobe Experience Plat
 
 ## Automatische Durchsetzung
 
-Experience Platform nutzt die Ermittlung der Datenherkunft sowie Daten-Classification- und Richtlinienverwaltungsfunktionen, um automatisch Verstöße gegen Richtlinien zu bewerten und zu untersuchen. Weitere Informationen finden Sie in der Übersicht über [automatische Richtliniendurchsetzung](./auto-enforcement.md).
+Experience Platform nutzt die Ermittlung der Datenherkunft sowie Daten-Classification- und Richtlinienverwaltungsfunktionen, um automatisch Verstöße gegen Richtlinien auszuwerten und zu untersuchen. Weitere Informationen finden Sie in der Übersicht über [automatische Richtliniendurchsetzung](./auto-enforcement.md).
 
 ## API-basierte Durchsetzung
 

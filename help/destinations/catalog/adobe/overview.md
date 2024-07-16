@@ -5,8 +5,8 @@ description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Platform 
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 33%
+source-wordcount: '224'
+ht-degree: 29%
 
 ---
 
@@ -20,7 +20,7 @@ Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Adobe Experience Platf
 
 Derzeit unterstützt Platform die unten aufgeführten Adobe-Ziele.
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und -kategorien .
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und -kategorien.
 
 ### Verbindungen
 
@@ -44,8 +44,8 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Marketo Munchkin-Erweiterung](../email/marketo-munchkin.md)
 * [Marketo Web-Personalisierungserweiterung](../personalization/marketo-web-personalization.md)
 
-## Zielgruppenfreigabe in Experience Platform
+## Experience Platform-Zielgruppenfreigabe
 
 Verwenden Sie die Experience Platform-Zielgruppenfreigabe, um Ihre Experience Platform-Zielgruppen für zusätzliche Adobe-Ziele freizugeben. Weitere Informationen finden Sie auf der folgenden Seite (wird im Audience Manager-Dokumentationsportal geöffnet):
 
-* [Experience Platform der Zielgruppenfreigabe mit Adobe Audience Manager, Adobe Advertising Cloud und Adobe Target über die Integration von Core Services](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
+* [Experience Platform der Zielgruppenfreigabe mit Adobe Audience Manager, Adobe Advertising Cloud und Adobe Target über die Integration der Hauptdienste](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)

@@ -10,13 +10,13 @@ ht-degree: 40%
 
 ---
 
-# Limits [!DNL Identity Service] data
+# Schutzmechanismen für [!DNL Identity Service] -Daten
 
 Dieses Dokument enthält Informationen über die Verwendung und die Ratenbeschränkungen für [!DNL Identity Service]-Daten, um Ihnen bei der optimalen Nutzung des Identitätsdiagramms zu helfen. Bei der Überprüfung der folgenden Leitplanken wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
 >[!IMPORTANT]
 >
->Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und den entsprechenden [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) über die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+>Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
 
 ## Erste Schritte
 
@@ -35,7 +35,7 @@ In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten au
 
 | Leitplanke | Limit | Anmerkungen |
 | --- | --- | --- |
-| Anzahl der Identitäten in einem Diagramm | 50 | Wenn ein Diagramm mit 50 verknüpften Identitäten aktualisiert wird, wendet Identity Service einen &quot;First-in-First-out&quot;-Mechanismus an und löscht die älteste Identität, um Platz für die neueste Identität für dieses Diagramm zu schaffen (**Hinweis**: Echtzeit-Kundenprofil ist nicht betroffen). Das Löschen basiert auf Identitätstyp und Zeitstempel. Die Beschränkung wird auf Sandbox-Ebene angewendet. Weitere Informationen finden Sie im Abschnitt unter [die Löschlogik verstehen](#deletion-logic). |
+| Anzahl der Identitäten in einem Diagramm | 50 | Wenn ein Diagramm mit 50 verknüpften Identitäten aktualisiert wird, wendet Identity Service einen &quot;First-in-First-out&quot;-Mechanismus an und löscht die älteste Identität, um Platz für die neueste Identität für dieses Diagramm zu schaffen (**Hinweis**: Das Echtzeit-Kundenprofil ist nicht betroffen). Das Löschen basiert auf Identitätstyp und Zeitstempel. Die Beschränkung wird auf Sandbox-Ebene angewendet. Weitere Informationen finden Sie im Abschnitt zu [Verständnis der Löschlogik](#deletion-logic). |
 | Anzahl der Links zu einer Identität für eine Batch-Erfassung | 50 | Ein einzelner Batch kann anomale Identitäten enthalten, die unerwünschte Zusammenführungen von Diagrammen verursachen. Um dies zu verhindern, erfasst Identity Service keine Identitäten, die bereits mit 50 oder mehr Identitäten verknüpft sind. |
 | Anzahl der Identitäten in einem XDM-Eintrag | 20 | Die erforderliche Mindestanzahl von XDM-Einträgen beträgt zwei. |
 | Anzahl der benutzerdefinierten Namespaces | Keine | Die Anzahl der benutzerdefinierten Namespaces, die Sie erstellen können, ist unbegrenzt. |
@@ -98,7 +98,7 @@ Sobald diese Funktion verfügbar ist, werden Diagramme, die die Grenze von 50 Id
 Das Löschen erfolgt nur für Daten im Identity Service, nicht aber für Echtzeit-Kundenprofile.
 
 * Dieses Verhalten könnte folglich mehr Profile mit einer einzigen ECID erstellen, da die ECID nicht mehr Teil des Identitätsdiagramms ist.
-* Damit Sie sich innerhalb Ihrer adressierbaren Zielgruppen-Berechtigungsnummern befinden, sollten Sie die Option [pseudonyme Profildaten ablaufen](../profile/pseudonymous-profiles.md) , um Ihre alten Profile zu löschen.
+* Damit Sie innerhalb Ihrer adressierbaren Berechtigungsnummern der Zielgruppe bleiben, wird empfohlen, den [pseudonymen Profildaten-Ablauf](../profile/pseudonymous-profiles.md) zu aktivieren, um Ihre alten Profile zu löschen.
 
 #### Echtzeit-Kundenprofil und WebSDK: Primäres Löschen von Identitäten
 
@@ -113,12 +113,12 @@ Wenn Sie Ihre authentifizierten Ereignisse mit der CRM-ID vergleichen möchten, 
 
 *Diagrammnotizen:*
 
-* `t` = Zeitstempel.
-* Der Wert eines Zeitstempels entspricht der Neuigkeit einer bestimmten Identität. Beispiel: `t1` stellt die erste verknüpfte Identität (älteste) dar und `t51` würde die neueste verknüpfte Identität darstellen.
+* `t` = Zeitstempel
+* Der Wert eines Zeitstempels entspricht der Neuigkeit einer bestimmten Identität. Beispiel: `t1` steht für die erste verknüpfte Identität (alt) und `t51` für die neueste verknüpfte Identität.
 
 In diesem Beispiel löscht Identity Service zuerst die vorhandene Identität mit dem ältesten Zeitstempel, bevor das Diagramm auf der linken Seite mit einer neuen Identität aktualisiert werden kann. Da die älteste Identität jedoch eine Geräte-ID ist, überspringt Identity Service diese Identität, bis er zum Namespace mit einem Typ gelangt, der höher in der Liste mit Löschprioritäten ist, was in diesem Fall `ecid-3` ist. Sobald die älteste Identität mit einer höheren Löschpriorität entfernt wurde, wird das Diagramm mit einer neuen Verknüpfung, `ecid-51`, aktualisiert.
 
-* In dem seltenen Fall, dass es zwei Identitäten mit demselben Zeitstempel und Identitätstyp gibt, sortiert Identity Service die IDs basierend auf [XID](./api/list-native-id.md) und führen Löschung durch.
+* In dem seltenen Fall, dass es zwei Identitäten mit demselben Zeitstempel und Identitätstyp gibt, sortiert Identity Service die IDs basierend auf [XID](./api/list-native-id.md) und führt das Löschen durch.
 
 ![Ein Beispiel für die älteste Identität, die gelöscht wird, um die neueste Identität aufzunehmen](./images/graph-limits-v3.png)
 
@@ -130,10 +130,10 @@ In diesem Beispiel löscht Identity Service zuerst die vorhandene Identität mit
 
 *Diagrammnotizen:*
 
-* Das folgende Diagramm geht davon aus, dass bei `timestamp=50`, sind im Identitätsdiagramm 50 Identitäten vorhanden.
+* Das folgende Diagramm geht davon aus, dass bei `timestamp=50` 50 Identitäten im Identitätsdiagramm vorhanden sind.
 * `(...)` bezeichnet die anderen Identitäten, die bereits im Diagramm verknüpft sind.
 
-In diesem Beispiel wird ECID:32110 erfasst und mit einem großen Diagramm unter `timestamp=51`, wodurch die Grenze von 50 Identitäten überschritten wird.
+In diesem Beispiel wird ECID:32110 erfasst und mit einem großen Diagramm bei `timestamp=51` verknüpft, wodurch die Grenze von 50 Identitäten überschritten wird.
 
 ![](./images/guardrails/before-split.png)
 
@@ -159,12 +159,12 @@ Infolge des Löschens von ECID:35577 werden auch die Edges gelöscht, die die CR
 
 *Diagrammnotizen:*
 
-* Das folgende Diagramm geht davon aus, dass bei `timestamp=50`, sind im Identitätsdiagramm 50 Identitäten vorhanden.
+* Das folgende Diagramm geht davon aus, dass bei `timestamp=50` 50 Identitäten im Identitätsdiagramm vorhanden sind.
 * `(...)` bezeichnet die anderen Identitäten, die bereits im Diagramm verknüpft sind.
 
 Aufgrund der Löschlogik können auch einige &quot;Hub&quot;-Identitäten gelöscht werden. Diese Hub-Identitäten beziehen sich auf Knoten, die mit mehreren individuellen Identitäten verknüpft sind, die sonst nicht verknüpft wären.
 
-Im folgenden Beispiel wird ECID:21011 erfasst und mit dem Diagramm unter `timestamp=51`, wodurch die Grenze von 50 Identitäten überschritten wird.
+Im folgenden Beispiel wird ECID:21011 erfasst und mit dem Diagramm bei `timestamp=51` verknüpft, wodurch die Grenze von 50 Identitäten überschritten wird.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
@@ -173,7 +173,7 @@ Im folgenden Beispiel wird ECID:21011 erfasst und mit dem Diagramm unter `timest
 Daher löscht Identity Service die älteste Identität nur aus dem Identitätsdiagramm, in diesem Fall ECID:35577. Durch das Löschen von ECID:35577 wird auch Folgendes gelöscht:
 
 * Die Verknüpfung zwischen CRM-ID 60013 und der inzwischen gelöschten ECID:35577, was zu einem Diagrammaufspaltungsszenario führte.
-* IDFA: 32110, IDFA: 02383 und die verbleibenden Identitäten, vertreten durch `(...)`. Diese Identitäten werden gelöscht, da sie einzeln nicht mit anderen Identitäten verknüpft sind und daher nicht in einem Diagramm dargestellt werden können.
+* IDFA: 32110, IDFA: 02383 und die verbleibenden Identitäten, dargestellt durch `(...)`. Diese Identitäten werden gelöscht, da sie einzeln nicht mit anderen Identitäten verknüpft sind und daher nicht in einem Diagramm dargestellt werden können.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
@@ -197,5 +197,5 @@ Weitere Informationen zu anderen Limits für Experience Platform-Services, End-t
 * [Limits in Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [End-to-End-Latenzdiagramme](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) für verschiedene Experience Platform-Dienste.
 * [Real-time Customer Data Platform (B2C Edition - Prime und Ultimate Packages)](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Prime und Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Prime- und Ultimate-Pakete)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

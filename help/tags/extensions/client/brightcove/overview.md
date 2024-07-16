@@ -4,7 +4,7 @@ description: Machen Sie sich mit der Tag-Erweiterung „BrightCove Video Trackin
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '898'
 ht-degree: 97%
 
 ---
@@ -94,9 +94,9 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen:
       * Eine Prop/eVar für das Datenelement **Videoname** (Beispiel: eVar10)
       * Eine Prop/eVar für das Datenelement **Videodauer** (Beispiel: eVar11)
       * Eine Prop/eVar für das Datenelement **Aktuelle Videoposition** (Beispiel: eVar12)
+
    1. Die Analytics-Aktion „Beacon senden“ (`s.tl`)
    1. Die Analytics-Aktion „Variablen löschen“
-
 
 >[!TIP]
 >

@@ -7,12 +7,12 @@ description: Adobe Experience Platform bietet verschiedene Services und Tools, m
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 98%
+source-wordcount: '206'
+ht-degree: 96%
 
 ---
 
-# Attributions-KI und Data Governance in Attribution AI
+# Attribution AI und Data Governance in Attribution AI
 
 Sämtliche Einstellungen mit Bezug zu Data Governance in Attributions-KI werden von Adobe Experience Platform übernommen.
 

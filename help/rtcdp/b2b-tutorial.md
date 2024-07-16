@@ -86,13 +86,13 @@ In diesem Beispiel findet die Zielgruppe alle Personen, die in der Verkaufsabtei
 
 >[!NOTE]
 > 
->Anweisungen zum Erstellen von Zielgruppen zur Auswertung Ihrer Daten finden Sie unter [Handbuch zur Benutzeroberfläche von Segment Builder](../segmentation/ui/segment-builder.md). Spezifischere Anwendungsfälle für die B2B-Segmentierung finden Sie im Abschnitt [Segmentierungsübersicht für Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Anweisungen zum Erstellen von Zielgruppen zur Auswertung Ihrer Daten finden Sie im [Handbuch zur Segment Builder-Benutzeroberfläche](../segmentation/ui/segment-builder.md). Spezifische Anwendungsfälle für die B2B-Segmentierung finden Sie in der [Segmentierungsübersicht für Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 Mit Segment Builder können Sie aus Echtzeit-Kundenprofildaten eine vermarktbare Zielgruppe erstellen und Schätzungen Ihrer potenziellen Zielgruppe basierend auf der Kombination von Attributen, Ereignissen und vorhandenen Zielgruppen anzeigen, die Sie definiert haben.
 
 ## Aktivieren von ausgewerteten Daten für ein Ziel
 
-Nachdem die Audience erfolgreich erstellt wurde, wird im Abschnitt [!UICONTROL Details] des Arbeitsbereichs. Da derzeit keine Ziele für die Segmentdefinition aktiviert sind, muss der Bodea-Marketing-Experte die Zielgruppe in einen Datensatz exportieren, in dem sie aufgerufen und bearbeitet werden kann.
+Nachdem die Zielgruppe erfolgreich erstellt wurde, wird im Abschnitt [!UICONTROL Details] des Arbeitsbereichs eine Zusammenfassung bereitgestellt. Da derzeit keine Ziele für die Segmentdefinition aktiviert sind, muss der Bodea-Marketing-Experte die Zielgruppe in einen Datensatz exportieren, in dem sie aufgerufen und bearbeitet werden kann.
 
 Im Arbeitsbereich [!UICONTROL Segmente] der Platform-Benutzeroberfläche wählt der Bodea-Marketing-Experte die Option **[!UICONTROL Für Ziel aktivieren]**.
 
@@ -100,7 +100,7 @@ Im Arbeitsbereich [!UICONTROL Segmente] der Platform-Benutzeroberfläche wählt 
 
 >[!NOTE]
 > 
->Siehe Tutorial zu [Aktivieren einer Zielgruppe für ein Ziel](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) für umfassende Schritte, wie dies erreicht werden kann.
+>Umfassende Anweisungen dazu finden Sie im Tutorial zum Aktivieren einer Zielgruppe für ein Ziel ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de) .[
 
 Der Bodea-Marketingexperte aktiviert die Zielgruppe für das Marketo-Ziel, sodass sie Zielgruppendaten in Form einer statischen Liste von Platform auf Marketo Engage übertragen kann. Weitere Informationen finden Sie im Handbuch zum [Marketo-Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=de).
 

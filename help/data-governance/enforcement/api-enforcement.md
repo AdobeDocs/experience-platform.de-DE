@@ -3,22 +3,22 @@ keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung
 solution: Experience Platform
 title: Durchsetzen von Datennutzungsrichtlinien mithilfe der Policy Service-API
 type: Tutorial
-description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
+description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '998'
 ht-degree: 100%
 
 ---
 
 # Durchsetzen von Datennutzungsrichtlinien mit der [!DNL Policy Service]-API
 
-Nachdem Sie Datennutzungskennzeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Kennzeichnungen erstellt haben, können Sie mit der [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Kennzeichnungen ausgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
+Nachdem Sie Datennutzungskennzeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Kennzeichnungen erstellt haben, können Sie mit der [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) auswerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Kennzeichnungen ausgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 
 >[!NOTE]
 >
->Standardmäßig können nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, an der Bewertung teilnehmen. Damit `DRAFT`-Richtlinien an der Bewertung teilnehmen können, müssen Sie den Abfrageparameter `includeDraft=true` in den Anfragepfad einbeziehen.
+>Standardmäßig können nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, an der Auswertung teilnehmen. Damit `DRAFT`-Richtlinien an der Auswertung teilnehmen können, müssen Sie den Abfrageparameter `includeDraft=true` in den Anfragepfad einbeziehen.
 
 In diesem Dokument wird beschrieben, wie Sie mit der [!DNL Policy Service]-API in verschiedenen Szenarien nach Richtlinienverletzungen suchen können.
 
@@ -130,9 +130,9 @@ Bei einer erfolgreichen Antwort werden die URL für die Marketing-Aktion, die Da
 | --- | --- |
 | `violatedPolicies` | Ein Array, das alle Richtlinien auflistet, die durch Testen der Marketing-Aktion (angegeben in `marketingActionRef`) hinsichtlich der angegebenen `duleLabels` verletzt wurden. |
 
-## Mit Datensätzen bewerten
+## Mit Datensätzen auswerten
 
-Sie können eine Datennutzungsrichtlinie bewerten, indem Sie eine Marketing-Aktion mit einem oder mehreren Datensätzen testen, aus denen Kennzeichnungen gesammelt werden können. Dies geschieht durch eine POST-Anfrage an `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` und Angabe von Datensatz-IDs im Anfragetext, wie im folgenden Beispiel gezeigt.
+Sie können eine Datennutzungsrichtlinie auswerten, indem Sie eine Marketing-Aktion mit einem oder mehreren Datensätzen testen, aus denen Kennzeichnungen gesammelt werden können. Dies geschieht durch eine POST-Anfrage an `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` und Angabe von Datensatz-IDs im Anfragetext, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -143,7 +143,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der von Ihnen bewerteten Richtlinie verknüpft ist. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die mit der von Ihnen ausgewerteten Richtlinie verknüpft ist. |
 
 **Anfrage**
 

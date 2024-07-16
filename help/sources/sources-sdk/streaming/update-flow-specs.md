@@ -10,15 +10,15 @@ ht-degree: 13%
 
 ---
 
-# Flussspezifikationen mithilfe der [!DNL Flow Service] API
+# Flussspezifikationen mithilfe der [!DNL Flow Service]-API aktualisieren
 
 >[!NOTE]
 >
->Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
 
 Nachdem Sie eine neue Verbindungsspezifikations-ID generiert haben, müssen Sie diese ID einer Flussspezifikation hinzufügen, um einen Datenfluss zu erstellen.
 
-Flussspezifikationen enthalten Informationen, die einen Fluss definieren, einschließlich der von ihm unterstützten Quell- und Zielverbindungs-IDs, Transformationsspezifikationen, die auf die Daten angewendet werden müssen, und Planungsparameter, die zum Generieren eines Datenflusses erforderlich sind. Sie können Flussspezifikationen mithilfe des `/flowSpecs` -Endpunkt.
+Flussspezifikationen enthalten Informationen, die einen Fluss definieren, einschließlich der von ihm unterstützten Quell- und Zielverbindungs-IDs, Transformationsspezifikationen, die auf die Daten angewendet werden müssen, und Planungsparameter, die zum Generieren eines Datenflusses erforderlich sind. Sie können Flussspezifikationen mithilfe des Endpunkts `/flowSpecs` bearbeiten.
 
 Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der [!DNL Flow Service] API für Self-Serve-Quellen (Streaming-SDK).
 
@@ -28,7 +28,7 @@ Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.
 
 ## Flussspezifikation nachschlagen {#lookup}
 
-Mit der `generic-streaming` -Vorlage verwenden alle `GenericStreamingAEP` Flussspezifikation. Diese Flussspezifikation kann abgerufen werden, indem eine GET-Anfrage an die `/flowSpecs/` -Endpunkt und Bereitstellung der `flowSpec.id` von `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Quellen, die mit der Vorlage `generic-streaming` erstellt wurden, verwenden alle die Flussspezifikation `GenericStreamingAEP`. Diese Flussspezifikation kann abgerufen werden, indem eine GET-Anfrage an den `/flowSpecs/` -Endpunkt gesendet und der `flowSpec.id` von `e77fde5a-22a8-11ed-861d-0242ac120002` angegeben wird.
 
 **API-Format**
 
@@ -38,7 +38,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Anfrage**
 
-Die folgende Anfrage ruft die `e77fde5a-22a8-11ed-861d-0242ac120002` Flussspezifikation.
+Mit der folgenden Anfrage wird die Flussspezifikation `e77fde5a-22a8-11ed-861d-0242ac120002` abgerufen.
 
 ```shell
 curl -X GET \
@@ -154,7 +154,7 @@ Sie können die Felder einer Flussspezifikation über einen PUT-Vorgang aktualis
 
 >[!IMPORTANT]
 >
->Wenn Sie eine Verbindungsspezifikation für eine neue Quelle erstellen, müssen Sie deren Spezifikations-ID der `sourceConnectionSpecIds` -Array der Flussspezifikationen, die Ihrer Quelle entsprechen. Dadurch wird sichergestellt, dass Ihre neue Quelle von einer vorhandenen Flussspezifikation unterstützt wird, sodass Sie den Datenfluss-Erstellungsprozess mit Ihrer neuen Quelle abschließen können.
+>Wenn Sie eine Verbindungsspezifikation für eine neue Quelle erstellen, müssen Sie deren Spezifikations-ID dem Array `sourceConnectionSpecIds` der Flussspezifikationen hinzufügen, die Ihrer Quelle entsprechen. Dadurch wird sichergestellt, dass Ihre neue Quelle von einer vorhandenen Flussspezifikation unterstützt wird, sodass Sie den Datenfluss-Erstellungsprozess mit Ihrer neuen Quelle abschließen können.
 
 **API-Format**
 
@@ -164,7 +164,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die Flussspezifikation von `e77fde5a-22a8-11ed-861d-0242ac120002` , um die Verbindungsspezifikations-ID einzuschließen. `bdb5b792-451b-42de-acf8-15f3195821de`.
+Mit der folgenden Anfrage wird die Flussspezifikation von `e77fde5a-22a8-11ed-861d-0242ac120002` aktualisiert und enthält die Verbindungsspezifikations-ID `bdb5b792-451b-42de-acf8-15f3195821de`.
 
 ```shell
 PUT -X GET \
@@ -266,7 +266,7 @@ PUT -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Spezifikation des abgefragten Flusses zurück, einschließlich der aktualisierten Liste der `sourceConnectionSpecIds`.
+Eine erfolgreiche Antwort gibt die Details der Spezifikation des abgefragten Flusses zurück, einschließlich der aktualisierten Liste mit `sourceConnectionSpecIds`.
 
 ```json
 {
@@ -368,4 +368,4 @@ Eine erfolgreiche Antwort gibt die Details der Spezifikation des abgefragten Flu
 
 ## Nächste Schritte
 
-Nachdem Ihre neue Verbindungsspezifikation der entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Siehe Handbuch unter [Testen und Senden einer neuen Quelle](./submit.md) für weitere Informationen.
+Nachdem Ihre neue Verbindungsspezifikation der entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Weitere Informationen finden Sie im Handbuch zum [Testen und Senden einer neuen Quelle](./submit.md) .

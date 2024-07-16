@@ -14,7 +14,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Bitte lesen Sie die [Quellen - Übersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-beschrifteten Quellen.
+>Das Streaming-SDK für Self-Serve-Quellen befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-beschrifteten Quellen finden Sie in der [Quellenübersicht](../../home.md#terms-and-conditions) .
 
 Sie können die Eigenschaften einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich sind.
 
@@ -196,4 +196,4 @@ Bei einem erfolgreichen Aufruf werden die aktualisierten Details zur Verbindungs
 
 ## Nächste Schritte
 
-Nachdem Sie die Aktualisierungen Ihrer Verbindungsspezifikation abgeschlossen haben, können Sie jetzt mit dem [Testen und Senden der Quelle für die Integration](./submit.md).
+Nachdem Sie die Aktualisierungen Ihrer Verbindungsspezifikation abgeschlossen haben, können Sie jetzt mit [Testen und Senden Ihrer Quelle zur Integration](./submit.md) fortfahren.

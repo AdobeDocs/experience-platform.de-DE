@@ -7,8 +7,8 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 6%
+source-wordcount: '605'
+ht-degree: 5%
 
 ---
 
@@ -27,16 +27,16 @@ Account-basiertes Marketing ist eine zunehmend wichtige Strategie für B2B-Marke
 Kontobasiertes Marketing bietet die Möglichkeit, bekannte Personen und anonyme Webbesucher mit Verkaufskonten zu verknüpfen. Dadurch können Marketing-Teams frühzeitig auf der Journey mit potenziellen Leads aus den Zielkonten interagieren, um ihre Konversionschancen zu erhöhen. Ein bekannter Personendatensatz enthält in der Regel die folgenden Informationen teilweise oder vollständig:
 
 - Personenname
-- E-Mail Adresse
+- E-Mail-Adresse
 - Kontaktnummer
-- Firmenname
+- Unternehmensname
 - Firmenwebsite
 - Stellenbezeichnung
 - Standort
 
 Mithilfe der Lead-Konto-Zuordnung können Sie bekannte Personenprofile mit Kontoprofilen verbinden. Anschließend können Sie Daten in einem B2B-Kontext segmentieren und ansprechen, z. B. in Konten, Opportunities usw. Die Personenprofile können in die folgenden drei Kategorien eingeteilt werden:
 
-- **Profil der Kontoperson:** Das Personenprofil ist durch die Beziehung aus einer Datenquelle bereits mit mindestens einem Kontoprofil verknüpft. Dies bedeutet, dass es mindestens ein Kontaktfragment gibt.
+- **Profil der Kontoperson:** Das Personenprofil ist durch die Beziehung aus einer Datenquelle bereits mindestens einem Kontoprofil zugeordnet. Dies bedeutet, dass es mindestens ein Kontaktfragment gibt.
 
 >[!NOTE]
 >
@@ -44,14 +44,14 @@ Mithilfe der Lead-Konto-Zuordnung können Sie bekannte Personenprofile mit Konto
 
 - **Bekanntes Personenprofil:** Das Personenprofil ist NICHT mit einem Kontoprofil verknüpft und mindestens eines der folgenden Personenprofilattribute hat einen Wert:
 
-   - E-Mail Adresse
-   - Firmenname
+   - E-Mail-Adresse
+   - Unternehmensname
    - Firmenwebsite
 
 - **Anonymes Personenprofil:** Das Personenprofil ist NICHT mit einem Kontoprofil verknüpft und keines der folgenden Personenprofilattribute hat einen Wert:
 
-   - E-Mail Adresse
-   - Firmenname
+   - E-Mail-Adresse
+   - Unternehmensname
    - Firmenwebsite
 
 >[!NOTE]
@@ -80,17 +80,17 @@ Das Attribut workEmail kann als Feldergruppe der obersten Ebene im B2B-Personens
 
 Profile werden am besten abgeglichen, wenn der Übereinstimmungswert über einem internen Konfidenzschwellenwert liegt. Die Ergebnisse werden in einem neuen Systemdatensatz des vorhandenen Konto-Personen-Verhältnisses XDM gespeichert.
 
-Der Lead für den Kontoabgleichdienst wird ausgeführt, wenn ein neuer Personenprofil-Schnappschuss verfügbar wird, der alle 24 Stunden verfügbar ist. Weitere Informationen zu den [Konfiguration des Interessenten-Kontoabgleichs](/help/rtcdp/accounts/account-profile-ui-guide.md).
+Der Lead für den Kontoabgleichdienst wird ausgeführt, wenn ein neuer Personenprofil-Schnappschuss verfügbar wird, der alle 24 Stunden verfügbar ist. Weitere Informationen zur [Konfiguration des Leads zur Kontoübereinstimmung](/help/rtcdp/accounts/account-profile-ui-guide.md) finden Sie in der Dokumentation .
 
 ## Anleitung zum Anzeigen der Ausgabe des Kontoabgleichs {#how-to-view}
 
 Nach Ausführung des Auftrags werden die Ergebnisse in einem neuen Datensatz des vorhandenen Konto-Personen-Verhältnisses XDM gespeichert.
 
-Um eine Vorschau des Datensatzes anzuzeigen, wählen Sie **[!UICONTROL Datensatz-Vorschau]** oben rechts.
+Um eine Vorschau des Datensatzes anzuzeigen, wählen Sie oben rechts **[!UICONTROL Datensatz-Vorschau anzeigen]** aus.
 
 ![Neuer Datensatz](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-Der Datensatz enthält die übereinstimmenden Kontoinformationen sowie den Übereinstimmungswert für Ihren ausgewählten Datensatz. Die **[!UICONTROL Beziehungsquelle]** gibt an, ob es aus dem Lead stammt, um einen Kontoabstimmungsprozess durchzuführen.
+Der Datensatz enthält die übereinstimmenden Kontoinformationen sowie den Übereinstimmungswert für Ihren ausgewählten Datensatz. Das Feld **[!UICONTROL Beziehung Source]** gibt an, ob es aus dem Lead stammt, um einen Kontoabstimmungsprozess durchzuführen.
 
 ![Vorschau der Konfidenzwerte und Ausgabe des Datensatzes anzeigen](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 
@@ -98,4 +98,4 @@ Der Datensatz enthält die übereinstimmenden Kontoinformationen sowie den Über
 
 Über das Dashboard können Sie den Auftragsstatus und die zugehörigen Metriken auf jeden Lead überwachen, der zu den entsprechenden Aufträgen führt.
 
-Weitere Informationen zu den [Überwachen von Aufträgen für die Kontozuordnung als Lead](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Weitere Informationen zu den [Überwachungsaufträgen für Interessenten, die mit dem Konto übereinstimmen](/help/dataflows/ui/b2b/monitor-profile-enrichment.md), finden Sie in der Dokumentation .

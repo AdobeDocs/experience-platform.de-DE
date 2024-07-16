@@ -5,16 +5,16 @@ description: Die Confirmit Digital Feedback-Erweiterung ist ein Voice of the Cus
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 86%
+source-wordcount: '489'
+ht-degree: 85%
 
 ---
 
-# [!DNL Confirmit Digital Feedback]-Erweiterung 
+# [!DNL Confirmit Digital Feedback]-Erweiterung
 
 ## Übersicht {#overview}
 
-[!DNL Confirmit Digital Feedback] -Lösung hilft Ihnen, Ihren Website-Traffic in Echtzeit-Einblicke zu verwandeln. Mit [!DNL Confirmit], können unauffällige und zielgerichtete Umfragen entsprechend Ihren Anforderungen angezeigt werden, wodurch Besucher dazu ermutigt werden, Feedback zu geben, z. B.:
+Mit der Lösung [!DNL Confirmit Digital Feedback] können Sie Ihren Website-Traffic in Echtzeit-Einblicke umwandeln. Mit [!DNL Confirmit] können unauffällige und zielgerichtete Umfragen entsprechend Ihren Anforderungen angezeigt werden, was Besucher dazu ermutigt, Feedback zu geben, z. B.:
 
 * Website-Feedback
 * Transaktionszufriedenheit

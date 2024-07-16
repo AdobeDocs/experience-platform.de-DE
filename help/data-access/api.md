@@ -13,13 +13,13 @@ ht-degree: 12%
 
 # Handbuch zur Data Access API
 
-Die Data Access API unterstützt Adobe Experience Platform, indem sie Benutzern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze in [!DNL Experience Platform].
+Die Data Access API unterstützt Adobe Experience Platform, indem sie Benutzern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von [!DNL Experience Platform] konzentriert.
 
-![Ein Diagramm, wie Data Access die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von Experience Platform erleichtert.](images/Data_Access_Experience_Platform.png)
+![Ein Diagramm, wie der Datenzugriff die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von Experience Platform erleichtert.](images/Data_Access_Experience_Platform.png)
 
 ## API-Spezifikationsreferenz
 
-Die Referenzdokumentation zur Swagger-API finden Sie [here](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+Die Referenz-Dokumentation zur Swagger-API finden Sie [hier](https://developer.adobe.com/experience-platform-apis/references/data-access/).
 
 ## Terminologie {#terminology}
 
@@ -93,7 +93,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-Die `"data"` -Array enthält eine Liste aller Dateien im angegebenen Batch. Jede zurückgegebene Datei verfügt über eine eigene eindeutige ID (`{FILE_ID}`), die in der `"dataSetFileId"` -Feld. Sie können diese eindeutige ID verwenden, um auf die Datei zuzugreifen oder sie herunterzuladen.
+Das Array `"data"` enthält eine Liste aller Dateien innerhalb des angegebenen Batches. Jede zurückgegebene Datei verfügt über eine eigene eindeutige ID (`{FILE_ID}`), die im Feld `"dataSetFileId"` enthalten ist. Sie können diese eindeutige ID verwenden, um auf die Datei zuzugreifen oder sie herunterzuladen.
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
@@ -102,7 +102,7 @@ Die `"data"` -Array enthält eine Liste aller Dateien im angegebenen Batch. Jede
 
 ## Zugreifen auf und Herunterladen von Dateien in einem Batch
 
-Verwenden Sie eine Datei-ID (`{FILE_ID}`) mit der Data Access API, einschließlich des Namens, der Größe in Byte und eines Links zum Herunterladen.
+Um auf bestimmte Details einer Datei zuzugreifen, verwenden Sie eine Dateikennung (`{FILE_ID}`) mit der Data Access API, einschließlich des Namens, der Größe in Byte und eines Links zum Herunterladen.
 
 Die Antwort enthält ein Daten-Array. Je nachdem, ob es sich bei der von der ID referenzierten Datei um eine einzelne Datei oder ein Verzeichnis handelt, kann das zurückgegebene Datenarray einen einzelnen Eintrag oder eine Liste von Dateien enthalten, die zu diesem Verzeichnis gehören. Jedes Dateielement enthält die Details der Datei.
 
@@ -114,7 +114,7 @@ GET /files/{FILE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{FILE_ID}` | Gleich `"dataSetFileId"`, die Kennung der Datei, auf die zugegriffen werden soll. |
+| `{FILE_ID}` | Entspricht &quot;`"dataSetFileId"`&quot;, der Kennung der Datei, auf die zugegriffen werden soll. |
 
 **Anfrage**
 
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 | `data.length` | Die Größe der Datei (in Byte). |
 | `data._links.self.href` | Die URL zum Herunterladen der Datei. |
 
-**Verzeichnisantwort**
+**Ordnerantwort**
 
 ```JSON
 {
@@ -202,7 +202,7 @@ Wenn ein Verzeichnis zurückgegeben wird, enthält es ein Array aller Dateien im
 
 ## Dateiinhalt aufrufen {#access-file-contents}
 
-Sie können auch die [!DNL Data Access] API für den Zugriff auf den Inhalt einer Datei. Sie können die Inhalte dann in eine externe Quelle herunterladen.
+Sie können auch die [!DNL Data Access] -API verwenden, um auf den Inhalt einer Datei zuzugreifen. Sie können die Inhalte dann in eine externe Quelle herunterladen.
 
 **API-Format**
 
@@ -235,8 +235,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Zusätzliche Codebeispiele
 
-Weitere Beispiele finden Sie im Abschnitt [Tutorial zum Datenzugriff](tutorials/dataset-data.md).
+Weitere Beispiele finden Sie im Tutorial [Datenzugriff](tutorials/dataset-data.md).
 
 ## Abonnieren von Datenerfassungsereignissen {#subscribe-to-data-ingestion-events}
 
-Sie können bestimmte Ereignisse mit hohem Wert über die [Adobe Developer-Konsole](https://developer.adobe.com/console/). Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenaufnahmebenachrichtigungen](../ingestion/quality/subscribe-events.md).
+Sie können bestimmte Ereignisse mit hohem Wert über die [Adobe Developer Console](https://developer.adobe.com/console/) abonnieren. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenaufnahmebenachrichtigungen](../ingestion/quality/subscribe-events.md).

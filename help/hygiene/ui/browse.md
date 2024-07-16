@@ -23,11 +23,11 @@ In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der 
 
 ## Auflisten und Filtern vorhandener Arbeitsaufträge
 
-Beim ersten Zugriff auf **[!UICONTROL Lebenszyklus der Daten]** Arbeitsbereich in der Benutzeroberfläche werden eine Liste der bestehenden Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
+Wenn Sie zum ersten Mal auf den Arbeitsbereich **[!UICONTROL Data Lifecycle]** in der Benutzeroberfläche zugreifen, wird eine Liste der vorhandenen Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
 
-![Bild, das die [!UICONTROL Lebenszyklus der Daten] Arbeitsbereich in der Platform-Benutzeroberfläche](../images/ui/browse/work-order-list.png)
+![Bild, das den Arbeitsbereich [!UICONTROL Datenlebenszyklus] in der Platform-Benutzeroberfläche anzeigt](../images/ui/browse/work-order-list.png)
 
-In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Auswählen **[!UICONTROL Verbraucher]** eine Liste mit Löschaufgaben für Datensätze anzuzeigen, und **[!UICONTROL Datensatz]** , um eine Liste der geplanten Datensatzabläufe anzuzeigen.
+In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. Wählen Sie **[!UICONTROL Verbraucher]** aus, um eine Liste der Aufgaben zum Löschen von Datensätzen anzuzeigen, und **[!UICONTROL Datensatz]**, um eine Liste der geplanten Datensatzabläufe anzuzeigen.
 
 ![Bild, das die Registerkarte [!UICONTROL Datensatz] zeigt](../images/ui/browse/dataset-tab.png)
 
@@ -87,7 +87,7 @@ Je nach ausgewähltem Typ des Arbeitsauftrags sind unterschiedliche Informatione
 
 Die Details einer Anfrage zum Löschen von Datensätzen umfassen den aktuellen Status und die seit der Anforderung verstrichene Zeit. Jede Anfrage enthält auch den Abschnitt **[!UICONTROL Status nach Service]**, der individuelle Statusdetails zu jedem nachgelagerten Service bereitstellt, der an der Löschung beteiligt ist. In der rechten Leiste können Sie mithilfe von Steuerelementen den Namen und die Beschreibung der Arbeitsaufträge aktualisieren.
 
-![Bild, das die Detailseite für eine Datensatzlöschreihenfolge anzeigt](../images/ui/browse/record-delete-details.png)
+![Bild, das die Detailseite für eine Datensatzlöscharbeitsreihenfolge anzeigt](../images/ui/browse/record-delete-details.png)
 
 ### Details zur Datensatzgültigkeit {#dataset-expiration}
 

@@ -38,8 +38,8 @@ Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu 
 | Erhöhen Sie den Produktkauf während des Store-Besuchs | Überreden Sie die Käufer, Produkte zu kaufen, während sie sich in der Nähe des Stores befinden. |
 | Erhöhen Sie den Kauf von Produkten und Dienstleistungen während des Aufenthalts. | Überreden Sie Gäste, Produkte und Dienstleistungen zu kaufen, während sie sich im Haus befinden. |
 | Einzelspielkäufe erhöhen | Targeting von Fans, um wiederholte Einzelspielkäufe zu erhöhen. |
-| Post-Event-Umfrage und Anreizangebot | Fans sollten dazu angehalten werden, auf eine Umfrage nach einem Ereignis zu reagieren, indem sie eine Anreizaktion anbieten. |
-| Umfrage nach der Reise | Überreden Sie die Gäste, auf eine Umfrage nach einem Ausflug zu reagieren, indem Sie ein Anreizangebot anbieten. |
+| Post Event Survey und Incentive Promo | Fans sollten dazu angehalten werden, auf eine Umfrage nach einem Ereignis zu reagieren, indem sie eine Anreizaktion anbieten. |
+| Post-Trip-Umfrage | Überreden Sie die Gäste, auf eine Umfrage nach einem Ausflug zu reagieren, indem Sie ein Anreizangebot anbieten. |
 | Produktwerbung | Überreden Sie Kunden, während einer laufenden Produktpromo-Kampagne Produkte zu kaufen. |
 | Kaufbestätigung: Merchandise | Bestätigen Sie einen neuen Merchandise-Kauf-Fan. |
 | Kaufbestätigung: Produkt | Bestätigen Sie einen neuen Produktkauf. |
@@ -77,4 +77,4 @@ Lesen Sie diese Seite, um einen Überblick über alle verfügbaren Playbooks zu 
 
 ## Nächste Schritte
 
-Nachdem Sie die verfügbaren Bücher kennen, lesen Sie das hier [Handbuch](/help/use-case-playbooks/playbooks/choose.md) um zu verstehen, wie man mit den Büchern beginnt und das richtige in der Benutzeroberfläche auswählt.
+Nachdem Sie die verfügbaren Playbooks kennen, lesen Sie diesen [Leitfaden](/help/use-case-playbooks/playbooks/choose.md) , um zu verstehen, wie Sie mit den Playbooks beginnen, und wählen Sie in der Benutzeroberfläche das richtige für Sie aus.

@@ -6,8 +6,8 @@ description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (X
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 12%
+source-wordcount: '666'
+ht-degree: 7%
 
 ---
 
@@ -17,9 +17,9 @@ In Experience-Datenmodell (XDM)-Schemas beschränkt der Typ eines Felds, welche 
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schemakomposition](./composition.md) für eine Einführung in XDM-Schemas, Klassen und Schemafeldgruppen.
+Bevor Sie dieses Handbuch verwenden, lesen Sie die [Grundlagen der Schemakomposition](./composition.md) , um eine Einführung in XDM-Schemas, -Klassen und Schemafeldgruppen zu erhalten.
 
-Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, wird dringend empfohlen, mit der [Entwicklerhandbuch zur Schema Registry](../api/getting-started.md) , um zu erfahren, wie Sie Feldergruppen und Datentypen erstellen, in die Ihre benutzerdefinierten Felder eingefügt werden. Wenn Sie die Experience Platform-Benutzeroberfläche zum Erstellen Ihrer Schemas verwenden, lesen Sie das Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md) um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Feldergruppen und Datentypen definieren.
+Wenn Sie planen, Ihre eigenen Feldtypen in der API zu definieren, wird dringend empfohlen, mit dem [Entwicklerhandbuch zur Schema Registry](../api/getting-started.md) zu beginnen, um zu erfahren, wie Sie Feldergruppen und Datentypen erstellen, in die Ihre benutzerdefinierten Felder eingeschlossen werden. Wenn Sie die Experience Platform-Benutzeroberfläche zum Erstellen Ihrer Schemas verwenden, finden Sie im Handbuch zum Definieren von Feldern in der Benutzeroberfläche [Informationen dazu, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Feldergruppen und Datentypen definieren.](../ui/fields/overview.md)
 
 ## Basisstruktur und Beispiele {#basic-types}
 
@@ -27,7 +27,7 @@ XDM basiert auf dem JSON-Schema und daher erben XDM-Felder bei der Definition ih
 
 >[!NOTE]
 >
->Siehe [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-schema) Weitere Informationen zum JSON-Schema und anderen zugrunde liegenden Technologien in Platform-APIs.
+>Weitere Informationen zum JSON-Schema und anderen zugrunde liegenden Technologien in Platform-APIs finden Sie im Leitfaden zu den API-Grundlagen zu [APIs](../../landing/api-fundamentals.md#json-schema) .
 
 In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema dargestellt wird, zusammen mit einem Beispielwert, der dem Typ entspricht:
 
@@ -60,7 +60,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
+{
+  "type": "integer",
+  "Maximum": 9007199254740991,
+  "minimum": -9007199254740991
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +72,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
+{
+  "type": "integer",
+  "Maximum": 2147483648,
+  "minimum": -2147483648
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +84,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
+{
+  "type": "integer",
+  "Maximum": 32768,
+  "minimum": -32768
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +96,11 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
+{
+  "type": "integer",
+  "Maximum": 128,
+  "minimum": -128
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -92,7 +108,10 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Datum]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date" }</pre>
+{
+  "type": "string",
+  "format": "date"
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -100,7 +119,10 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date-time" }</pre>
+{
+  "type": "string",
+  "format": "date-time"
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -115,7 +137,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
   </tbody>
 </table>
 
-**Alle datumsformatierten Zeichenfolgen müssen dem ISO 8601-Standard ([RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
+**Alle datumsformatierten Zeichenfolgen müssen dem ISO 8601-Standard ([RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)) entsprechen.*
 
 ## Zuordnen von XDM-Typen zu anderen Formaten
 
@@ -127,24 +149,24 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 
 >[!NOTE]
 >
->Unter den in den folgenden Tabellen aufgeführten Standard-XDM-Typen ist die [!UICONTROL Zuordnung] Typ ist ebenfalls enthalten. Maps werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel vernünftigerweise nicht in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
+>Unter den in den folgenden Tabellen aufgeführten Standard-XDM-Typen ist auch der Typ [!UICONTROL Zuordnung] enthalten. Maps werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel vernünftigerweise nicht in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
 >
->Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen. Sie können auch [Definieren von benutzerdefinierten Zuordnungsfeldern](../tutorials/custom-fields-api.md#custom-maps) falls gewünscht. Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen festzustellen, wie Sie Ihre vorhandenen Daten XDM zuordnen können, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
+>Viele standardmäßige XDM-Komponenten verwenden Zuordnungstypen, und Sie können bei Bedarf auch [benutzerdefinierte Zuordnungsfelder definieren](../tutorials/custom-fields-api.md#custom-maps). Die Aufnahme des Zuordnungstyps in die folgenden Tabellen soll Ihnen dabei helfen festzustellen, wie Sie Ihre vorhandenen Daten XDM zuordnen können, wenn sie derzeit in einem der unten aufgeführten Formate gespeichert sind.
 
 ### Parquet, Spark SQL und Java {#parquet}
 
 | XDM-Typ | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Typ: `BYTE_ARRAY`<br>Anmerkung: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Zahl] | Typ: `DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL Lang] | Typ: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Ganzzahl] | Typ: `INT32`<br>Anmerkung: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Kurz] | Typ: `INT32`<br>Anmerkung: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Nummer] | Typ: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Long] | Typ: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Integer] | Typ: `INT32`<br>Anmerkung: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL short] | Typ: `INT32`<br>Anmerkung: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Typ: `INT32`<br>Anmerkung: `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Datum] | Typ: `INT32`<br>Anmerkung: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Typ: `INT64`<br>Anmerkung: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL Boolesch] | Typ: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Landkarte] | `MAP`-kommentierte Gruppe<br><br>(`<key-type>` muss `STRING`) | `MapType`<br><br>(`keyType` muss `StringType`) | `java.util.Map` |
+| [!UICONTROL Boolean] | Typ: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Landkarte] | `MAP`-kommentierte Gruppe<br><br>(`<key-type>` muss `STRING` sein) | `MapType`<br><br>(`keyType` muss `StringType` sein) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -153,14 +175,14 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | XDM-Typ | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Zahl] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL Lang] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Ganzzahl] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Kurz] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Nummer] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL short] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL Datum] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL Boolesch] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Landkarte] | `Map` | (Nicht angegeben) | `object` |
 
 {style="table-layout:auto"}
@@ -170,18 +192,18 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | XDM-Typ | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Zahl] | `double` | `Double` | `double` |
-| [!UICONTROL Lang] | `long` | `Integer` | `int64` |
-| [!UICONTROL Ganzzahl] | `int` | `Integer` | `int32` |
-| [!UICONTROL Kurz] | `int` | `Integer` | `int32` |
+| [!UICONTROL Nummer] | `double` | `Double` | `double` |
+| [!UICONTROL Long] | `long` | `Integer` | `int64` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL short] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Datum] | `date` | `Integer`<br>(Unix-Millisekunden) | `int64`<br>(Unix-Millisekunden) |
-| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix-Millisekunden) | `int64`<br>(Unix-Millisekunden) |
-| [!UICONTROL Boolesch] | `bool` | `Integer`<br>(0/1 binär) | `bool` |
+| [!UICONTROL Datum] | `date` | `Integer`<br>(Unix Millisekunden) | `int64`<br>(Unix Millisekunden) |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix Millisekunden) | `int64`<br>(Unix Millisekunden) |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binary) | `bool` |
 | [!UICONTROL Landkarte] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 
 ## Definieren von XDM-Feldtypen in der API {#define-fields}
 
-Mit der Schema Registry-API können Sie benutzerdefinierte Felder mithilfe von Formaten und optionalen Einschränkungen definieren. Siehe Handbuch unter [Definieren benutzerdefinierter Felder in der Schema Registry-API](../tutorials/custom-fields-api.md) für weitere Informationen.
+Mit der Schema Registry-API können Sie benutzerdefinierte Felder mithilfe von Formaten und optionalen Einschränkungen definieren. Weitere Informationen finden Sie im Handbuch zum [Definieren benutzerdefinierter Felder in der Schema Registry-API](../tutorials/custom-fields-api.md) .

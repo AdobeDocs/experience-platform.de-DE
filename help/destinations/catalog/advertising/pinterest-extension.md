@@ -4,12 +4,12 @@ description: Die Pinterest Conversion Tracking-Erweiterung ist ein Werbeziel in 
 exl-id: c2a78f79-99c8-4aca-892e-fb40f9281f2d
 source-git-commit: 0d0f1afcc1cc259d3f3feae2584329ef030f1902
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 94%
+source-wordcount: '453'
+ht-degree: 95%
 
 ---
 
-# [!DNL Pinterest Conversion Tracking]-Erweiterung  {#pinterest-extension}
+# [!DNL Pinterest Conversion Tracking]-Erweiterung {#pinterest-extension}
 
 ## Übersicht {#overview}
 
@@ -29,7 +29,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Pinterest Conversion Tracking] Erweiterung:
+So installieren Sie die [!DNL Pinterest Conversion Tracking]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

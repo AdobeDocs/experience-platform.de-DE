@@ -4,7 +4,7 @@ description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigu
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1305'
 ht-degree: 91%
 
 ---
@@ -21,7 +21,7 @@ Dieses Handbuch bietet einen Überblick über die verschiedenen Arten von Berech
 
 >[!NOTE]
 >
->Anweisungen zum Konfigurieren von Berechtigungen für Benutzer mithilfe von Admin Console finden Sie im Tutorial zu [Verwalten von Berechtigungen für die Datenerfassung](../../../collection/permissions.md).
+>Anweisungen zum Konfigurieren von Berechtigungen für Benutzer, die Admin Console verwenden, finden Sie im Tutorial zum Verwalten von Berechtigungen für die Datenerfassung [.](../../../collection/permissions.md)
 
 ## Berechtigungstypen
 
@@ -121,4 +121,4 @@ In der folgenden Tabelle finden Sie einige Beispiele für die Rollentypen, die S
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die verfügbaren Berechtigungen für Tags in Experience Platform. Anweisungen zum Konfigurieren von Produktprofilen für Tags in Adobe Admin Console finden Sie im Handbuch unter [Verwalten von Benutzerberechtigungen für die Datenerfassung](../../../collection/permissions.md).
+Dieses Dokument bietet einen Überblick über die verfügbaren Berechtigungen für Tags in Experience Platform. Anweisungen zum Konfigurieren von Produktprofilen für Tags in Adobe Admin Console finden Sie im Handbuch zum [Verwalten von Benutzerberechtigungen für die Datenerfassung](../../../collection/permissions.md).

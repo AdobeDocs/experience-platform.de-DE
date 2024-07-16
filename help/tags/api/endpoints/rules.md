@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie den /rules-Endpunkt in der Reactor-API aufruf
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '893'
 ht-degree: 95%
 
 ---
@@ -15,7 +15,7 @@ Im Kontext von Datenerfassungs-Tags steuern Regeln das Verhalten der Ressourcen 
 
 >[!NOTE]
 >
->In diesem Dokument wird beschrieben, wie Sie Regeln in der Reactor-API verwalten. Informationen zur Interaktion mit Regeln in der Benutzeroberfläche finden Sie im Abschnitt [UI-Handbuch](../../ui/managing-resources/rules.md).
+>In diesem Dokument wird beschrieben, wie Sie Regeln in der Reactor-API verwalten. Informationen zur Interaktion mit Regeln in der Benutzeroberfläche finden Sie im [UI-Handbuch](../../ui/managing-resources/rules.md).
 
 Eine Regel gehört zu genau einer [Eigenschaft](./properties.md). Eine Eigenschaft kann über viele Regeln verfügen.
 

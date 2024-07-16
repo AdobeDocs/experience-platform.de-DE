@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie Tags in Adobe Experience Platform so konfigur
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 39%
+source-wordcount: '811'
+ht-degree: 38%
 
 ---
 
@@ -19,9 +19,9 @@ Mit Adobe Experience Platform können Sie Tag-Bibliotheks-Builds an einen gesich
 
 >[!NOTE]
 >
->Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Siehe Handbuch unter [Hosts, die von Adoben verwaltet werden](./managed-by-adobe-host.md) für weitere Informationen.
+>Sie können auch einen Host verwenden, der stattdessen von Adobe verwaltet wird. Weitere Informationen finden Sie im Handbuch zu [Adobe-verwalteten Hosts](./managed-by-adobe-host.md) .
 >
->Informationen zu den Vorteilen und Einschränkungen von Self-Hosting-Bibliotheken finden Sie in der [Handbuch zum selbstständigen Hosting](./self-hosting-libraries.md).
+>Informationen zu den Vorteilen und Einschränkungen von Self-Hosting-Bibliotheken finden Sie im [Handbuch zum selbstständigen Hosting](./self-hosting-libraries.md).
 
 ## Einrichten eines Zugriffsschlüssels für Ihren Server {#access-key}
 
@@ -33,9 +33,9 @@ Auf Ihrem SFTP-Server muss ein öffentliches/privates Schlüsselpaar installiert
 
 ### Schlüssel verschlüsseln
 
-Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Siehe Abschnitt zu [Verschlüsseln von Werten](../../../api/guides/encrypting-values.md) Anweisungen zum Verschlüsseln öffentlicher Schlüssel finden Sie im Reactor-API-Handbuch . Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
+Der private Schlüssel wird zum Verschlüsseln des öffentlichen Schlüssels verwendet. Sie müssen Ihren privaten Schlüssel während des Erstellungsprozesses des SFTP-Hosts angeben. Anweisungen zum Verschlüsseln öffentlicher Schlüssel finden Sie im Abschnitt zum [Verschlüsseln von Werten](../../../api/guides/encrypting-values.md) im Reactor-API-Handbuch. Verwenden Sie den GPG-Schlüssel der Produktionsumgebung, sofern Sie nicht wissen, dass Sie einen bestimmten Schlüssel benötigen. Sie können Ihren privaten Schlüssel auf jedem beliebigen Computer verschlüsseln. Sie müssen GPG also nicht auf Ihrem Server installieren, um diesen Schritt abzuschließen.
 
-### IP-Adressen der Zulassungsliste-Plattform
+### IP-Adressen der Auf die Zulassungsliste setzen-Plattform
 
 Möglicherweise müssen Sie eine Reihe von IP-Adressen genehmigen, die in Ihrer Unternehmensfirewall verwendet werden sollen, damit Platform Ihren SFTP-Server erreichen und eine Verbindung mit ihm herstellen kann. Diese IP-Adressen sind:
 
@@ -51,30 +51,30 @@ Detaillierte Informationen finden Sie im folgenden Artikel von Medium zum [Einri
 
 ## Erstellen eines SFTP-Hosts {#create}
 
-Auswählen **[!UICONTROL Hosts]** im linken Navigationsbereich, gefolgt von **[!UICONTROL Organisation hinzufügen]**.
+Wählen Sie im linken Navigationsbereich **[!UICONTROL Hosts]** , gefolgt von **[!UICONTROL Host hinzufügen]**.
 
 ![Bild, das die in der Benutzeroberfläche ausgewählte Schaltfläche &quot;Add Host&quot;anzeigt](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-Das Dialogfeld zur Hosterstellung wird angezeigt. Geben Sie einen Namen für den Host ein und unter **[!UICONTROL Typ]** auswählen **[!UICONTROL SFTP]**.
+Das Dialogfeld zur Hosterstellung wird angezeigt. Geben Sie einen Namen für den Host ein und wählen Sie unter **[!UICONTROL Typ]** **[!UICONTROL SFTP]** aus.
 
 ![Bild, das die ausgewählte SFTP-Hosting-Option anzeigt](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
-### Konfigurieren des SFTP-Hosts {#configure}
+### SFTP-Host konfigurieren {#configure}
 
 Das Dialogfeld wird um zusätzliche Konfigurationsoptionen für den SFTP-Host erweitert. Diese werden nachfolgend erläutert.
 
-![Bild mit den erforderlichen Details für eine SFTP-Host-Verbindung](../../../images/ui/publishing/sftp-hosts/host-details.png)
+![Bild, das die erforderlichen Details für eine SFTP-Hostverbindung anzeigt](../../../images/ui/publishing/sftp-hosts/host-details.png)
 
 | Konfigurationsfeld | Beschreibung |
 | --- | --- |
-| [!UICONTROL Symlinks nicht verwenden] | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf die Bibliothek zu verweisen [builds](../builds.md) die auf dem Server gespeichert werden. Allerdings unterstützen nicht alle Server die Verwendung von Symlinks. Wenn diese Option ausgewählt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
+| [!UICONTROL Verwenden Sie keine Symlinks] | Standardmäßig verwenden alle SFTP-Hosts symbolische Links (Symlinks), um auf die Bibliothek [builds](../builds.md) zu verweisen, die auf dem Server gespeichert sind. Allerdings unterstützen nicht alle Server die Verwendung von Symlinks. Wenn diese Option ausgewählt ist, verwendet der Host einen Kopiervorgang, um die Build-Assets direkt zu aktualisieren, anstatt Symlinks zu verwenden. |
 | [!UICONTROL SFTP-Server-URL] | Der URL-Basispfad für Ihren Server. |
-| [!UICONTROL Path] | Der Pfad, der an die Basis-Server-URL für diesen Host angehängt werden soll. |
+| [!UICONTROL Pfad] | Der Pfad zum Anhängen an die Basis-Server-URL für diesen Host. |
 | [!UICONTROL Port] | Der Port muss einer der folgenden sein:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Als Best Practice im Hinblick auf die Sicherheit beschränkt Adobe die Anzahl der Ports, die für den ausgehenden Datenverkehr verwendet werden können. Die ausgewählten Ports sind in der Regel über Unternehmens-Firewalls erlaubt und enthalten einige Bereiche für mehr Flexibilität. |
 | [!UICONTROL Benutzername] | Der Benutzername, der beim Zugriff auf den Server verwendet werden soll. |
-| [!UICONTROL Verschlüsselter privater Schlüssel] | Der verschlüsselte private Schlüssel, den Sie in einem [vorheriger Schritt](#access-key). |
+| [!UICONTROL Verschlüsselter privater Schlüssel] | Der verschlüsselte private Schlüssel, den Sie in einem [vorherigen Schritt](#access-key) erstellt haben. |
 
-Auswählen **[!UICONTROL Speichern]** , um den Host mit der ausgewählten Konfiguration zu erstellen.
+Wählen Sie **[!UICONTROL Speichern]** aus, um den Host mit der ausgewählten Konfiguration zu erstellen.
 
 ![Bild, das den zu speichernden SFTP-Host anzeigt](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
@@ -82,4 +82,4 @@ Wenn Sie **[!UICONTROL Speichern]** auswählen, werden die Verbindung und die M�
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie einen selbst gehosteten SFTP-Server für die Verwendung in Tags einrichten. Sobald der Host eingerichtet wurde, können Sie ihn mit einer oder mehreren Ihrer [Umgebungen](../environments.md) zum Veröffentlichen von Tag-Bibliotheken. Weitere Informationen zum allgemeinen Verfahren zum Aktivieren von Tag-Funktionen in Ihren Web- oder mobilen Eigenschaften finden Sie in der [Publishing-Übersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie einen selbst gehosteten SFTP-Server für die Verwendung in Tags einrichten. Nachdem der Host eingerichtet wurde, können Sie ihn mit einer oder mehreren Ihrer [Umgebungen](../environments.md) zum Veröffentlichen von Tag-Bibliotheken verknüpfen. Weitere Informationen zum allgemeinen Verfahren zum Aktivieren von Tag-Funktionen in Ihren Web- oder mobilen Eigenschaften finden Sie in der [Veröffentlichungsübersicht](../overview.md).

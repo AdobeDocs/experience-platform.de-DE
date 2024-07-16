@@ -5,8 +5,8 @@ title: API-Endpunkt für Beispieldaten
 description: Sie können den Endpunkt „/samples“ in der Adobe Experience Platform-API verwenden, um Beispieldaten von Zuordnungen programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 90%
+source-wordcount: '405'
+ht-degree: 91%
 
 ---
 
@@ -17,7 +17,7 @@ Beispieldaten können beim Erstellen eines Schemas für Ihren Zuordnungssatz ver
 
 ## Auflisten von Beispieldaten
 
-Sie können eine Liste aller Mapping-Beispieldaten für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/samples` -Endpunkt.
+Sie können eine Liste aller Beispieldaten für die Zuordnung für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/samples` senden.
 
 **API-Format**
 
@@ -81,8 +81,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu den letzt
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sampleData` |  |
-| `sampleType` |  |
+| `sampleData` | |
+| `sampleType` | |
 
 ## Erstellen von Beispieldaten
 

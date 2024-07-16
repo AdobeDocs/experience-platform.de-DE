@@ -125,7 +125,7 @@ Bei erfolgreicher Antwort werden Ihr öffentlicher, mit Base64 verschlüsselter 
 
 ### Abrufen von Verschlüsselungsschlüsseln {#retrieve-encryption-keys}
 
-Um alle Verschlüsselungsschlüssel in Ihrem Unternehmen abzurufen, stellen Sie eine GET-Anfrage an die `/encryption/keys` endpoit=nt.
+Um alle Verschlüsselungsschlüssel in Ihrem Unternehmen abzurufen, stellen Sie eine GET-Anfrage an den Endpunkt `/encryption/keys` endpoint=nt.
 
 **API-Format**
 
@@ -168,7 +168,7 @@ Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, der öf
 
 ### Abrufen von Verschlüsselungsschlüsseln nach ID {#retrieve-encryption-keys-by-id}
 
-Um einen bestimmten Satz von Verschlüsselungsschlüsseln abzurufen, stellen Sie eine GET-Anfrage an die `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüssel-ID als Kopfzeilenparameter an.
+Um einen bestimmten Satz von Verschlüsselungsschlüsseln abzurufen, stellen Sie eine GET-Anfrage an den `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüsselkennung als Kopfzeilenparameter an.
 
 **API-Format**
 
@@ -457,7 +457,7 @@ Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenfluss
 
 ### Schlüssel löschen {#delete-encryption-keys}
 
-Um Ihre Verschlüsselungsschlüssel zu löschen, stellen Sie eine DELETE-Anfrage an die `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüssel-ID als Kopfzeilenparameter an.
+Um Ihre Verschlüsselungsschlüssel zu löschen, stellen Sie eine DELETE-Anfrage an den `/encryption/keys` -Endpunkt und geben Sie Ihre öffentliche Schlüsselkennung als Kopfzeilenparameter an.
 
 **API-Format**
 
@@ -485,7 +485,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text
 
 ### Überprüfen von Verschlüsselungsschlüsseln {#validate-encryption-keys}
 
-Um Ihre Verschlüsselungsschlüssel zu validieren, stellen Sie eine GET-Anfrage an die `/encryption/keys/validate/` -Endpunkt und geben Sie die öffentliche Schlüssel-ID an, die Sie als Kopfzeilenparameter überprüfen möchten.
+Um Ihre Verschlüsselungsschlüssel zu validieren, stellen Sie eine GET-Anfrage an den `/encryption/keys/validate/` -Endpunkt und geben Sie die öffentliche Schlüssel-ID an, die Sie als Kopfzeilenparameter überprüfen möchten.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -513,7 +513,7 @@ Eine erfolgreiche Antwort gibt entweder eine Bestätigung zurück, dass Ihre IDs
 
 >[!TAB Gültig]
 
-Eine gültige öffentliche Schlüssel-ID gibt den Status `Active` zusammen mit Ihrer öffentlichen Schlüssel-ID.
+Eine gültige öffentliche Schlüssel-ID gibt den Status &quot;`Active`&quot;zusammen mit Ihrer öffentlichen Schlüssel-ID zurück.
 
 ```json
 {
@@ -522,9 +522,9 @@ Eine gültige öffentliche Schlüssel-ID gibt den Status `Active` zusammen mit I
 }
 ```
 
->[!TAB Ungültig]
+>[!TAB Invalid]
 
-Eine ungültige Kennung des öffentlichen Schlüssels gibt den Status `Expired` zusammen mit Ihrer öffentlichen Schlüssel-ID.
+Eine ungültige Kennung des öffentlichen Schlüssels gibt den Status &quot;`Expired`&quot;zusammen mit Ihrer Kennung des öffentlichen Schlüssels zurück.
 
 ```json
 {
@@ -540,18 +540,18 @@ Eine ungültige Kennung des öffentlichen Schlüssels gibt den Status `Expired` 
 
 Die verschlüsselte Datenerfassung unterstützt nicht die Erfassung wiederkehrender oder mehrstufiger Ordner in Quellen. Alle verschlüsselten Dateien müssen in einem einzigen Ordner enthalten sein. Platzhalter mit mehreren Ordnern in einem einzelnen Quellpfad werden ebenfalls nicht unterstützt.
 
-Im Folgenden finden Sie ein Beispiel für eine unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*.csv.gpg`.
+Im Folgenden finden Sie ein Beispiel für eine unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*.csv.gpg` ist.
 
 In diesem Szenario werden die fett gedruckten Dateien in Experience Platform aufgenommen.
 
 * ACME-Kunden
-   * **File1.csv.gpg**
+   * **Datei1.csv.gpg**
    * File2.json.gpg
    * **File3.csv.gpg**
    * File4.json
    * **File5.csv.gpg**
 
-Im Folgenden finden Sie ein Beispiel für eine nicht unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*`.
+Im Folgenden finden Sie ein Beispiel für eine nicht unterstützte Ordnerstruktur, bei der der Quellpfad `/ACME-customers/*` lautet.
 
 In diesem Szenario schlägt die Flussausführung fehl und gibt eine Fehlermeldung zurück, die angibt, dass Daten nicht aus der Quelle kopiert werden können.
 
@@ -568,4 +568,4 @@ In diesem Szenario schlägt die Flussausführung fehl und gibt eine Fehlermeldun
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie ein Verschlüsselungsschlüsselpaar für Ihre Cloud-Speicherdaten und einen Datenfluss erstellt, um Ihre verschlüsselten Daten mithilfe der [!DNL Flow Service API] aufzunehmen. Statusaktualisierungen zur Vollständigkeit, zu Fehlern und Metriken Ihres Datenflusses finden Sie im Handbuch unter [Überwachen Ihres Datenflusses mithilfe des [!DNL Flow Service] API](./monitor.md).
+In diesem Tutorial haben Sie ein Verschlüsselungsschlüsselpaar für Ihre Cloud-Speicherdaten und einen Datenfluss erstellt, um Ihre verschlüsselten Daten mithilfe der [!DNL Flow Service API] aufzunehmen. Statusaktualisierungen zur Vollständigkeit, zu Fehlern und Metriken Ihres Datenflusses finden Sie im Handbuch unter [Überwachung Ihres Datenflusses mit der  [!DNL Flow Service] API](./monitor.md) .

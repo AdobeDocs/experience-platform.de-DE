@@ -5,18 +5,18 @@ description: Die Google Universal Analytics-Erweiterung ist ein Analyseziel in A
 exl-id: 72576a0f-f2da-46d6-a722-33a0cf17f2c4
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 92%
+source-wordcount: '454'
+ht-degree: 90%
 
 ---
 
-# [!DNL Google Universal Analytics]-Erweiterung  {#google-universal-analytics-extension}
+# [!DNL Google Universal Analytics]-Erweiterung {#google-universal-analytics-extension}
 
 ## Übersicht {#overview}
 
-[!DNL Google Universal Analytics]Mit können Sie Ihren Werbe-ROI messen sowie Ihre Flash-, Video- und Social-Networking-Sites und -Anwendungen verfolgen.
+Mit [!DNL Google Universal Analytics] können Sie Ihren Werbe-ROI messen sowie Ihre Flash-, Video- und Social-Networking-Sites und -Anwendungen verfolgen.
 
-[!DNL Google Universal Analytics] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+[!DNL Google Universal Analytics] ist eine Analytics-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite zu Erweiterungen auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie in der [Übersicht zu Tag-Erweiterungen](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Google Universal Analytics] Erweiterung:
+So installieren Sie die [!DNL Google Universal Analytics]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

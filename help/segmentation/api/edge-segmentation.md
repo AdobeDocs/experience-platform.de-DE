@@ -19,7 +19,7 @@ ht-degree: 89%
 >
 >Die Edge-Segmentierung ist jetzt allgemein für alle Benutzenden von Platform verfügbar. Wenn Sie während der Beta-Phase Edge-Segmentdefinitionen erstellt haben, sind diese Segmentdefinitionen weiterhin funktionsfähig.
 
-Mit der Edge-Segmentierung können Segmentdefinitionen in Adobe Experience Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Mit der Segmentierung von Edge können Segmentdefinitionen in Adobe Experience Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Mit der Edge-Segmentierung können Segmentdefinitionen in Adobe Experience Platf
 Dieses Entwicklerhandbuch setzt Grundkenntnisse der verschiedenen [!DNL Adobe Experience Platform]-Services voraus, die mit Edge-Segmentierungen zusammenhängen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Kundenprofil in Echtzeit, das auf aggregierten Daten aus verschiedenen Quellen beruht.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] Daten.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppen aus [!DNL Real-Time Customer Profile] -Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
 Lesen Sie für erfolgreiche Aufrufe an API-Endpunkte in Experience Platform das Handbuch [Erste Schritte mit Platform-APIs](../../landing/api-guide.md), um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.
@@ -68,7 +68,7 @@ Eine Segmentdefinition wird für die Edge-Segmentierung in den folgenden Szenari
 
 ## Abrufen aller für die Edge-Segmentierung aktivierten Segmente
 
-Sie können eine Liste aller Segmente abrufen, die für die Kantensegmentierung in Ihrem Unternehmen aktiviert sind, indem Sie eine GET-Anfrage an die `/segment/definitions` -Endpunkt.
+Sie können eine Liste aller Segmente abrufen, die für die Kantensegmentierung in Ihrem Unternehmen aktiviert sind, indem Sie eine GET-Anfrage an den Endpunkt `/segment/definitions` senden.
 
 **API-Format**
 

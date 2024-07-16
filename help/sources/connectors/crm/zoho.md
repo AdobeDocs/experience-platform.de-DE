@@ -6,7 +6,7 @@ description: Erfahren Sie, wie Sie Zoho CRM über APIs oder die Benutzeroberflä
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '496'
 ht-degree: 100%
 
 ---
@@ -19,7 +19,7 @@ Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem 
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Informationen finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
 ## Abrufen Ihrer Authentifizierungsberechtigungen für [!DNL Zoho CRM]
 
@@ -27,7 +27,7 @@ Bevor Sie Daten aus Ihrem [!DNL Zoho CRM]-Konto auf Platform übertragen können
 
 ### Registrieren Ihres Programms
 
-Der erste Schritt zum Abrufen Ihrer Authentifizierungsdaten ist die Registrierung Ihres Programms über die [[!DNL Zoho CRM] Entwicklerkonsole](https://accounts.zoho.com/). Um Ihr Programm zu registrieren, müssen Sie Ihren Client-Typ unter folgendem Pfad auswählen: JavaScript, Web-basiert, Mobile Apps ohne Browser oder Self-Client. Geben Sie als Nächstes Werte für den Namen Ihres Programms, die URL Ihrer Web-Seite und einen autorisierten Weiterleitungs-URI an, den [!DNL Zoho CRM] dann verwenden kann, um Sie mit einem Grant-Token weiterzuleiten.
+Der erste Schritt zum Abrufen Ihrer Authentifizierungsdaten ist die Registrierung Ihres Programms über die [[!DNL Zoho CRM] Entwicklerkonsole](https://accounts.zoho.com/). Um Ihr Programm zu registrieren, müssen Sie Ihren Client-Typ unter folgendem Pfad auswählen: JavaScript, Web-basiert, Mobile Apps ohne Browser oder Self-Client. Geben Sie als Nächstes Werte für den Namen Ihres Programms, die URL Ihrer Web-Seite und einen autorisierten Umleitungs-URI an, den [!DNL Zoho CRM] dann verwenden kann, um Sie mit einem Grant-Token umzuleiten.
 
 Bei erfolgreicher Registrierung werden Ihre Client-ID und das Client-Geheimnis angegeben.
 
@@ -39,7 +39,7 @@ Bei der Erstellung einer Autorisierungsanfrage müssen Sie Werte für **Bereiche
 
 ### Erstellen Ihrer Zugriffs- und Aktualisierungs-Token
 
-Nachdem Sie Ihr Grant-Token abgerufen haben, können Sie Ihre [Zugriffs- und Aktualisierungs-Token](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) erstellen, indem Sie eine POST-Anfrage an `{ACCOUNTS_URL}/oauth/v2/token` stellen, und dabei Ihre Client-ID, Ihr Client-Geheimnis, Ihr Grant-Token und die Weiterleitungs-URI angeben. In diesem Schritt müssen Sie auch `grant_type` als Parameter verwenden und den Wert auf `"authorization_code"` festlegen.
+Nachdem Sie Ihr Grant-Token abgerufen haben, können Sie Ihre [Zugriffs- und Aktualisierungs-Token](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) erstellen, indem Sie eine POST-Anfrage an `{ACCOUNTS_URL}/oauth/v2/token` stellen, und dabei Ihre Client-ID, Ihr Client-Geheimnis, Ihr Grant-Token und die Umleitungs-URI angeben. In diesem Schritt müssen Sie auch `grant_type` als Parameter verwenden und den Wert auf `"authorization_code"` festlegen.
 
 Bei einer erfolgreichen Anfrage werden Ihre Zugriffs- und Aktualisierungs-Token angegeben, die Sie dann zur Authentifizierung verwenden können.
 

@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Quellen in Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] ermöglicht es Ihnen, Daten aus externen Quellen zu erfassen und gleichzeitig eingehende Daten zu strukturieren, zu beschriften und zu erweitern mithilfe von [!DNL Platform] Dienste. Sie können Daten aus verschiedenen Quellen erfassen, z. B. aus Adobe-Apps, Cloud-basiertem Speicher, Software von Drittanbietern, Ihrem CRM-System und mehr.
+Mit [!DNL Adobe Real-Time Customer Data Platform] können Sie Daten aus externen Quellen erfassen und gleichzeitig eingehende Daten mithilfe von [!DNL Platform]-Diensten strukturieren, beschriften und erweitern. Sie können Daten aus verschiedenen Quellen erfassen, z. B. aus Adobe-Apps, Cloud-basiertem Speicher, Software von Drittanbietern, Ihrem CRM-System und mehr.
 
-Eine detailliertere Übersicht über die Quellen, einschließlich einer Liste der verfügbaren Quellen und Links zu Tutorials, finden Sie im Abschnitt [Quelldokumentation](../../sources/home.md).
+Eine detailliertere Übersicht über Quellen, einschließlich einer Liste der verfügbaren Quellen und Links zu Tutorials, finden Sie in der Dokumentation zu [Quellen](../../sources/home.md).

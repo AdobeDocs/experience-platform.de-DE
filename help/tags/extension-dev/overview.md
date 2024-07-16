@@ -4,7 +4,7 @@ description: Lernen Sie die Hauptkomponenten verschiedener Tag-Erweiterungstypen
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '935'
 ht-degree: 95%
 
 ---
@@ -37,7 +37,7 @@ Sie können Bibliotheksmoduldateien an einer beliebigen Stelle im Erweiterungsor
 
 ### Ansichten 
 
-Eine Ansicht ist eine HTML-Datei, die in eine [`iframe` element](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) innerhalb der Tags-Anwendung, insbesondere über die Platform-Benutzeroberfläche und die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
+Eine Ansicht ist eine HTML-Datei, die in ein [`iframe` -Element](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) innerhalb der Tags-Anwendung geladen werden kann, insbesondere über die Platform-Benutzeroberfläche und die Benutzeroberfläche für die Datenerfassung. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit dem Programm kommunizieren zu können.
 
 Die wichtigste Ansichtsdatei für eine Erweiterung ist ihre Konfiguration. Weitere Informationen finden Sie im Abschnitt [Erweiterungskonfigurationen](#configuration).
 

@@ -5,12 +5,12 @@ description: Die Branch-Erweiterung ist ein Werbeziel in Adobe Experience Platfo
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 93%
+source-wordcount: '428'
+ht-degree: 94%
 
 ---
 
-# [!DNL Branch]-Erweiterung  {#branch-extension}
+# [!DNL Branch]-Erweiterung {#branch-extension}
 
 ## Übersicht {#overview}
 
@@ -30,7 +30,7 @@ Um diese Erweiterung verwenden zu können, müssen Sie Zugriff auf Tags in Adobe
 
 ## Installieren einer Erweiterung {#install-extension}
 
-So installieren Sie die [!DNL Branch] Erweiterung:
+So installieren Sie die [!DNL Branch]-Erweiterung:
 
 Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 

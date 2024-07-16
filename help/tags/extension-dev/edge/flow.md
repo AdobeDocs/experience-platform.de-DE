@@ -30,5 +30,5 @@ Der Regelverarbeitungsablauf umfasst die folgenden Phasen:
 1. Die Methoden `settings` und `trigger` werden dem Ereignisbibliotheksmodul beim Start zur Verfügung gestellt.
 1. Wenn das Ereignisbibliotheksmodul feststellt, dass das Ereignis aufgetreten ist, ruft es die Methode `trigger` auf.
 1. Platform übergibt `settings` an die Bedingungstyp-Bibliotheksmodule der Regel, in denen Bedingungen ausgewertet werden.
-1. Jeder Bedingungstyp gibt zurück, ob eine Bedingung „true“ ergibt.
+1. Jeder Bedingungstyp gibt zurück, ob eine Bedingung als „true“ ausgewertet wird.
 1. Wenn alle Bedingungen erfüllt sind, werden die Aktionen der Regel ausgeführt.

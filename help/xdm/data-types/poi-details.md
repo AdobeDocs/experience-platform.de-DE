@@ -11,9 +11,9 @@ ht-degree: 16%
 
 ---
 
-# [!UICONTROL Details zum POI] Datentyp
+# [!UICONTROL POI-Details]-Datentyp
 
-[!UICONTROL Details zum POI] ist ein standardmäßiger XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
+[!UICONTROL Details zum Zielpunkt] ist ein standardmäßiger XDM-Datentyp, der die geografischen Daten beschreibt, in denen ein Ereignis beobachtet wurde.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 

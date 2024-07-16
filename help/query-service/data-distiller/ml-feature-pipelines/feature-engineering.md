@@ -4,27 +4,27 @@ description: Erfahren Sie, wie Sie Daten in Adobe Experience Platform in Funktio
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 14%
+source-wordcount: '1140'
+ht-degree: 13%
 
 ---
 
 # Technische Funktionen für maschinelles Lernen
 
-Dieses Dokument zeigt, wie Sie Daten in Adobe Experience Platform in **Funktionen** oder Variablen, die von einem maschinellen Lernmodell genutzt werden können. Dieser Prozess wird als **Funktionsentwicklung**. Verwenden Sie Data Distiller, um ML-Funktionen im Maßstab zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben. Dies umfasst Folgendes:
+Dieses Dokument zeigt, wie Sie Daten in Adobe Experience Platform in **features** oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Dieser Prozess wird als **Funktionsentwicklung** bezeichnet. Verwenden Sie Data Distiller, um ML-Funktionen im Maßstab zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben. Dies umfasst Folgendes:
 
 1. Erstellen Sie eine Abfragevorlage, um die Zielbeschriftungen und Funktionen zu definieren, die Sie für Ihr Modell berechnen möchten
 2. Ausführen der Abfrage und Speichern der Ergebnisse in einem Trainings-Datensatz
 
 ## Trainings-Daten definieren {#define-training-data}
 
-Das folgende Beispiel zeigt eine Abfrage zum Ableiten von Trainings-Daten aus einem Experience Events-Datensatz für ein Modell, um die Neigung eines Benutzers vorherzusagen, einen Newsletter zu abonnieren. Abonnementereignisse werden durch den Ereignistyp dargestellt `web.formFilledOut`und andere Verhaltensereignisse im Datensatz werden verwendet, um Funktionen auf Profilebene abzuleiten und Abonnements vorherzusagen.
+Das folgende Beispiel zeigt eine Abfrage zum Ableiten von Trainings-Daten aus einem Experience Events-Datensatz für ein Modell, um die Neigung eines Benutzers vorherzusagen, einen Newsletter zu abonnieren. Abonnementereignisse werden durch den Ereignistyp &quot;`web.formFilledOut`&quot;dargestellt und andere Verhaltensereignisse im Datensatz werden verwendet, um Funktionen auf Profilebene abzuleiten, um Abonnements vorherzusagen.
 
 ### Positive und negative Bezeichnungen abfragen {#query-positive-and-negative-labels}
 
 Ein vollständiger Datensatz zum Trainieren eines (beaufsichtigten) maschinellen Lernmodells umfasst eine Zielvariable oder einen Titel, die bzw. der das voraussichtliche Ergebnis darstellt, sowie eine Reihe von Funktionen oder erklärenden Variablen, die zur Beschreibung der Beispielprofile verwendet werden, die zum Trainieren des Modells verwendet werden.
 
-In diesem Fall ist die Bezeichnung eine Variable namens `subscriptionOccurred` entspricht 1, wenn das Benutzerprofil über ein Ereignis vom Typ `web.formFilledOut` und andernfalls 0. Die folgende Abfrage gibt einen Satz von 50.000 Benutzern aus dem Ereignis-Datensatz zurück, einschließlich aller Benutzer mit positiven Bezeichnungen (`subscriptionOccurred = 1`) und einem nach dem Zufallsprinzip ausgewählten Benutzer mit negativen Beschriftungen, um die Stichprobengröße von 50.000 Benutzern zu ergänzen. Dadurch wird sichergestellt, dass die Trainings-Daten sowohl positive als auch negative Beispiele enthalten, aus denen das Modell lernen kann.
+In diesem Fall ist die Beschriftung eine Variable mit dem Namen `subscriptionOccurred`, die gleich 1 ist, wenn das Benutzerprofil über ein Ereignis mit dem Typ `web.formFilledOut` verfügt, andernfalls 0. Die folgende Abfrage gibt eine Gruppe von 50.000 Benutzern aus dem Ereignis-Datensatz zurück, einschließlich aller Benutzer mit positiven Bezeichnungen (`subscriptionOccurred = 1`) sowie eines Sets, die zufällig ausgewählt wurden, mit negativen Bezeichnungen, um die Beispielgröße für 50.000 Benutzer abzuschließen. Dadurch wird sichergestellt, dass die Trainings-Daten sowohl positive als auch negative Beispiele enthalten, aus denen das Modell lernen kann.
 
 ```python
 from aepp import queryservice
@@ -70,13 +70,13 @@ Anzahl der Klassen: 50000
 
 Mit einer geeigneten Abfrage können Sie die Ereignisse im Datensatz in aussagekräftige, numerische Merkmale erfassen, die zum Trainieren eines Tendenzmodells verwendet werden können. Unten finden Sie Beispielereignisse:
 
-- **Anzahl der E-Mails** die zu Marketingzwecken gesendet und vom Benutzer empfangen wurden.
-- Teil dieser E-Mails **geöffnet**.
-- Teil dieser E-Mails, in denen der Benutzer **selected** den Link.
-- **Anzahl Produkte** die angezeigt wurden.
-- Anzahl der **Vorschläge, die mit**.
-- Anzahl der **Zurückweisungen**.
-- Anzahl der **ausgewählte Links**.
+- **Anzahl der E-Mails**, die zu Marketingzwecken gesendet und vom Benutzer empfangen wurden.
+- Teil dieser E-Mails, die **geöffnet** waren.
+- Teil dieser E-Mails, in dem der Benutzer **den Link ausgewählt hat**.
+- **Anzahl der angezeigten Produkte**.
+- Anzahl der **Vorschläge, die mit** interagiert wurden.
+- Anzahl der verworfenen **Vorschläge**.
+- Anzahl der ausgewählten **** Links.
 - Anzahl der Minuten zwischen zwei aufeinander folgenden E-Mails.
 - Anzahl der Minuten zwischen zwei aufeinander folgenden geöffneten E-Mails.
 - Anzahl der Minuten zwischen zwei aufeinander folgenden E-Mails, in denen der Benutzer den Link tatsächlich ausgewählt hat.
@@ -151,8 +151,8 @@ df_features.head()
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
 | 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0,0 | NaN | NaN | NaN | Keine | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0,0 | NaN | NaN | NaN | Keine | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | Keine | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | Keine | NaN |
 
 {style="table-layout:auto"}
 
@@ -231,11 +231,11 @@ df_training_set.head()
 
 |  | userId | eventType | Zeitstempel | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpen | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0,0 | NaN | 1703.0 | NaN | Keine | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1,0 | NaN | NaN | Keine | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17.13.2023:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 06.06.2023:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Keine | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19.18.2023:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Keine | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21.06.2023 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21.06.2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -246,9 +246,9 @@ Es ist typisch, ein Modell regelmäßig mit aktualisierten Trainings-Daten neu z
 Dazu müssen einige Änderungen an der Trainings-Set-Abfrage vorgenommen werden:
 
 - Fügen Sie eine Logik hinzu, um einen neuen Trainings-Datensatz zu erstellen, falls dieser nicht vorhanden ist, und fügen Sie andernfalls die neuen Bezeichnungen und Funktionen in den vorhandenen Trainings-Datensatz ein. Dies erfordert eine Reihe von zwei Versionen der Trainings-Set-Abfrage:
-   - Verwenden Sie zunächst die `CREATE TABLE IF NOT EXISTS {table_name} AS` statement
-   - Als Nächstes verwenden Sie die `INSERT INTO {table_name}` -Anweisung für den Fall, dass der Trainings-Datensatz bereits vorhanden ist
-- Hinzufügen einer `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` -Anweisung, um die Abfrage auf Ereignisdaten zu beschränken, die innerhalb eines bestimmten Intervalls hinzugefügt wurden. Die `$` -Präfix der Snapshot-IDs zeigt an, dass es sich um Variablen handelt, die bei der Ausführung der Abfragevorlage übergeben werden.
+   - Verwenden Sie zunächst die Anweisung `CREATE TABLE IF NOT EXISTS {table_name} AS` .
+   - Verwenden Sie als Nächstes die `INSERT INTO {table_name}` -Anweisung für den Fall, dass der Trainings-Datensatz bereits vorhanden ist.
+- Fügen Sie eine `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` -Anweisung hinzu, um die Abfrage auf Ereignisdaten zu beschränken, die innerhalb eines bestimmten Intervalls hinzugefügt wurden. Das Präfix `$` für die Snapshot-IDs zeigt an, dass es sich um Variablen handelt, die bei der Ausführung der Abfragevorlage übergeben werden.
 
 Die Anwendung dieser Änderungen führt zur folgenden Abfrage:
 
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Nächste Schritte:
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Der nächste Schritt beim Erstellen von Feature Pipelines aus dem Experience Platform, um benutzerdefinierte Modelle in Ihrer maschinellen Lernumgebung zu speisen, besteht darin, [Exportfunktionen-Datensätze](./export-data.md).
+Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform, um benutzerdefinierte Modelle in Ihrer maschinellen Lernumgebung zu speisen, besteht darin, [Feature-Datensätze zu exportieren](./export-data.md).

@@ -6,7 +6,7 @@ description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '789'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Date
 - Erstellen von XDM-Hierarchien mithilfe von hierarchischen Funktionen
 - Vorschau der Daten, wie sie in der Datenvorbereitung bearbeitet werden
 
-Die Datenvorbereitung wendet außerdem mehrere intrinsische Datenvalidierungen an, um sicherzustellen, dass die Integrität der Daten bei der Aufnahme erhalten bleibt. Sofern möglich, ordnet die Datenvorbereitung die eingehenden Daten-Schemas automatisch XDM zu. Dateningenieure können die vorgeschlagenen Zuordnungen ändern, korrigieren und löschen und sie gegebenenfalls durch andere Zuordnungen ersetzen.
+Die Datenvorbereitung wendet außerdem mehrere intrinsische Datenvalidierungen an, um sicherzustellen, dass die Integrität der Daten bei der Aufnahme erhalten bleibt. Sofern möglich, ordnet die Datenvorbereitung die eingehenden Daten-Schemata automatisch XDM zu. Dateningenieure können die vorgeschlagenen Zuordnungen ändern, korrigieren und löschen und sie gegebenenfalls durch andere Zuordnungen ersetzen.
 
 >[!NOTE]
 >

@@ -49,7 +49,7 @@ Sobald eine Sandbox ausgewählt ist, wird der Bildschirm mit der ausgewählten S
 
 >[!NOTE]
 >
->Für die Erstellung einer neuen Sandbox müssen Sie sie einer Rolle in [[!UICONTROL Berechtigungen]](../../access-control/abac/ui/permissions.md) bevor Sie mit der Verwendung beginnen können. Informationen zum Bereitstellen einer Sandbox für eine Rolle finden Sie im Abschnitt [Verwalten von Sandboxes für eine Rolle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) Dokumentation.
+>Für die Erstellung einer neuen Sandbox müssen Sie sie einer Rolle in [[!UICONTROL Berechtigungen]](../../access-control/abac/ui/permissions.md) hinzufügen, bevor Sie mit der Verwendung beginnen können. Informationen zum Bereitstellen einer Sandbox für eine Rolle finden Sie in der Dokumentation [Verwalten von Sandboxes für eine Rolle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) .
 
 Das folgende Video bietet einen schnellen Überblick über die Verwendung von Sandboxes in Experience Platform.
 
@@ -88,15 +88,15 @@ Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite. Die 
 
 Die Zielgruppenzusammensetzung ist derzeit nicht in die Sandbox-Funktion zum Zurücksetzen integriert. Daher müssen Zielgruppen vor dem Zurücksetzen der Sandbox manuell gelöscht werden.
 
-Auswählen **[!UICONTROL Zielgruppen]** aus der linken Navigation und wählen Sie dann **[!UICONTROL Kompositionen]**.
+Wählen Sie **[!UICONTROL Zielgruppen]** aus der linken Navigation und dann **[!UICONTROL Kompositionen]**.
 
-![Die [!UICONTROL Kompositionen] im [!UICONTROL Zielgruppen] Arbeitsbereich.](../images/ui/audiences.png)
+![Die Registerkarte [!UICONTROL Kompositionen] im Arbeitsbereich [!UICONTROL Zielgruppen].](../images/ui/audiences.png)
 
-Wählen Sie als Nächstes die Auslassungszeichen (`...`) neben der ersten Zielgruppe und wählen Sie **[!UICONTROL Löschen]**.
+Wählen Sie als Nächstes das Auslassungszeichen (`...`) neben der ersten Zielgruppe und dann **[!UICONTROL Löschen]** aus.
 
-![Das Zielgruppenmenü, das die [!UICONTROL Löschen] -Option.](../images/ui/delete-composition.png)
+![Das Zielgruppenmenü, das die Option [!UICONTROL Löschen] markiert.](../images/ui/delete-composition.png)
 
-Eine Bestätigung des erfolgreichen Löschvorgangs wird angezeigt und Sie werden zum **[!UICONTROL Kompositionen]** Registerkarte.
+Eine Bestätigung des erfolgreichen Löschvorgangs wird angezeigt und Sie werden zum Tab **[!UICONTROL Kompositionen]** zurückgeleitet.
 
 Wiederholen Sie die obigen Schritte mit allen Kompositionen. Dadurch werden alle Zielgruppen aus dem Zielgruppenbestand gelöscht. Nachdem alle Zielgruppen entfernt wurden, können Sie die Sandbox weiterhin zurücksetzen.
 

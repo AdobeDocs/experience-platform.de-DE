@@ -23,7 +23,7 @@ In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus 
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Lesen Sie hierzu die [Verpackung](../../packaging.md), [Limits](../../guardrails.md#query-accelerated-store), und  [Lizenz](../../data-distiller/license-usage.md) Dokumentation, die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Weitere Informationen finden Sie in der Dokumentation zu [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store) und [licensing](../../data-distiller/license-usage.md) , die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 
@@ -33,7 +33,7 @@ Zu Beginn verfügen Sie über ein erstes Datenmodell aus Ihren Quellen (möglich
 
 ![Ein Entitäts-Relations-Diagramm (ERD) des Zielgruppen-Insight-Benutzermodells.](../../images/data-distiller/customizable-insights/audience-insight-user-model.png)
 
-In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die `externalaudiencemapping` -Dimensionstabelle/-datensatz ordnet die externe ID einem Ziel und einer Zielgruppe in Platform zu.
+In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die Dimensionstabelle/-datensatz `externalaudiencemapping` ordnet die externe ID einem Ziel und einer Zielgruppe in Platform zu.
 
 ## Erstellen eines Modells für Reporting-Insights mit Data Distiller
 

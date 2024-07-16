@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry; Verhalten; Verhalten; Verhalten; Verhalten; Verhalten;
+keywords: Experience Platform; home; beliebte Themen; API; XDM; XDM; XDM-System; Erlebnisdatenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema Registry; Verhalten; Verhalten; Verhalten; Verhalten; Verhalten;
 solution: Experience Platform
 title: Verhalten-API-Endpunkt
 description: Mit dem Endpunkt /verhaltenors in der Schema Registry-API können Sie alle verfügbaren Verhaltensweisen im globalen Container abrufen.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 22%
+source-wordcount: '417'
+ht-degree: 23%
 
 ---
 
-# Verhaltensendpunkt
+# Verhaltens-Endpunkt
 
 Im Experience-Datenmodell (XDM) definieren Verhaltensweisen die Art der Daten, die ein Schema beschreibt. Jede XDM-Klasse muss auf ein bestimmtes Verhalten verweisen, das von allen Schemas übernommen wird, die diese Klasse verwenden. Für fast alle Anwendungsfälle in Platform gibt es zwei verfügbare Verhaltensweisen:
 
@@ -20,11 +20,11 @@ Im Experience-Datenmodell (XDM) definieren Verhaltensweisen die Art der Daten, d
 
 >[!NOTE]
 >
->Es gibt einige Anwendungsfälle in Platform, bei denen die Verwendung eines Schemas erforderlich ist, das keines der oben genannten Verhaltensweisen anwendet. Für diese Fälle ist ein drittes &quot;Ad-hoc&quot;-Verhalten verfügbar. Siehe Tutorial zu [Erstellen eines Ad-hoc-Schemas](../tutorials/ad-hoc.md) für weitere Informationen.
+>Es gibt einige Anwendungsfälle in Platform, bei denen die Verwendung eines Schemas erforderlich ist, das keines der oben genannten Verhaltensweisen anwendet. Für diese Fälle ist ein drittes &quot;Ad-hoc&quot;-Verhalten verfügbar. Weitere Informationen finden Sie im Tutorial zum Erstellen eines Ad-hoc-Schemas ](../tutorials/ad-hoc.md) .[
 >
->Allgemeine Informationen zu Datenverhalten in Bezug auf die Schemakomposition finden Sie im Handbuch zu [Grundlagen der Schemakomposition](../schema/composition.md).
+>Allgemeine Informationen zu Datenverhalten in Bezug darauf, wie sie sich auf die Schemakomposition auswirken, finden Sie im Handbuch zu den [Grundlagen der Schemakomposition](../schema/composition.md).
 
-Die `/behaviors` -Endpunkt im [!DNL Schema Registry] Mit der API können Sie verfügbare Verhaltensweisen im `global` Container.
+Mit dem Endpunkt `/behaviors` in der API [!DNL Schema Registry] können Sie verfügbare Verhaltensweisen im Container `global` anzeigen.
 
 ## Erste Schritte
 
@@ -32,7 +32,7 @@ Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] 
 
 ## Liste von Verhaltensweisen abrufen {#list}
 
-Sie können eine Liste aller verfügbaren Verhaltensweisen abrufen, indem Sie eine GET-Anfrage an die `/behaviors` -Endpunkt.
+Sie können eine Liste aller verfügbaren Verhaltensweisen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/behaviors` senden.
 
 **API-Format**
 
@@ -89,7 +89,7 @@ curl -X GET \
 
 ## Verhalten nachschlagen {#lookup}
 
-Sie können ein bestimmtes Verhalten nachschlagen, indem Sie dessen Kennung im Pfad einer GET-Anfrage an die `/behaviors` -Endpunkt.
+Sie können ein bestimmtes Verhalten nachschlagen, indem Sie dessen Kennung im Pfad einer GET-Anfrage an den `/behaviors` -Endpunkt angeben.
 
 **API-Format**
 
@@ -99,13 +99,13 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BEHAVIOR_ID}` | Die `meta:altId` oder URL-kodiert `$id` des Verhaltens, das Sie nachschlagen möchten. |
+| `{BEHAVIOR_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Verhaltens, das Sie nachschlagen möchten. |
 
 {style="table-layout:auto"}
 
 **Anfrage**
 
-Die folgende Anfrage ruft die Details des Datensatzverhaltens ab, indem sie dessen `meta:altId` im Anfragepfad.
+Die folgende Anfrage ruft die Details des Datensatzverhaltens ab, indem sie im Anfragepfad den Wert &quot;`meta:altId`&quot; angibt.
 
 ```shell
 curl -X GET \
@@ -172,4 +172,4 @@ Eine erfolgreiche Antwort gibt die Details des Verhaltens zurück, einschließli
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Verwendung der `/behaviors` -Endpunkt im [!DNL Schema Registry] API. Informationen zum Zuweisen eines Verhaltens zu einer Klasse mithilfe der API finden Sie unter [Endpunktleitfaden für Klassen](./classes.md).
+In diesem Handbuch wurde die Verwendung des Endpunkts `/behaviors` in der API [!DNL Schema Registry] behandelt. Informationen zum Zuweisen eines Verhaltens zu einer Klasse mithilfe der API finden Sie im [Klassen-Endpunkthandbuch](./classes.md).

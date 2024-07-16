@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie Tag-Ressourcen in Adobe Experience Platform m
 exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 100%
+source-wordcount: '310'
+ht-degree: 99%
 
 ---
 
@@ -20,7 +20,7 @@ Anmerkungen sind Kommentare in Textform, die Sie bestimmten Tag-Ressourcen in Ad
 * Erweiterungen
 * Datenelemente
 * Regeln
-* Regel Komponenten
+* Regelkomponenten
 * Bibliotheken
 * Eigenschaften
 

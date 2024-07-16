@@ -11,20 +11,20 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL Bestellung] Datentyp
+# Datentyp [!UICONTROL Bestellung]
 
-[!UICONTROL Bestellung] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die für eine Produktliste platzierte Reihenfolge beschreibt.
+[!UICONTROL Bestellung] ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die Reihenfolge beschreibt, die für eine Produktliste platziert wird.
 
-![Ein Diagramm des [!UICONTROL Bestellung] Datentyp.](../images/data-types/order.png)
+![Ein Diagramm des Datentyps [!UICONTROL Bestellung].](../images/data-types/order.png)
 
 | Anzeigename | Eigenschaft | Datentyp | Beschreibung |
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
 | Kauf-ID | `purchaseID` | Zeichenfolge | Eine eindeutige Kennung, die vom Verkäufer für diesen Kauf oder Vertrag zugewiesen wird. Es gibt keine Garantie dafür, dass die ID eindeutig ist, da die ID vom Verkäufer definiert wird. |
 | Bestellnummer | `purchaseOrderNumber` | Zeichenfolge | Eine eindeutige Kennung, die vom Käufer für diesen Kauf oder Vertrag zugewiesen wird. |
-| Zahlungsliste | `payments` | Array von [[!UICONTROL Zahlungselemente]](./payment-item.md) | Die Liste der Zahlungen für diese Bestellung. Die Zahlungen sind im Abschnitt [!UICONTROL Zahlungselemente] Spezifikation. |
-| Erstattungsliste | `refunds` | Array von [[!UICONTROL Erstattungsbeträge]](./refund-item.md) | Die Liste der Erstattungen für diese Bestellung. Die Erstattungen sind im Abschnitt [!UICONTROL Erstattungsbeträge] Spezifikation. |
-| Rückkehrinformationen | `returns` | [[!UICONTROL Rückkehrinformationen]](./return.md) | RMA (Return Merchandise Authorization) ausgestellt. Die Rückgaben werden im Abschnitt [!UICONTROL Rückkehrinformationen] Spezifikation. |
-| Währung | `currencyCode` | Zeichenfolge | Der für die Bestellsummen verwendete Währungscode nach ISO 4217. Beispiele sind `USD` und `EUR`. Alle Instanzen müssen dem Muster entsprechen `^[A-Z]{3}$`. |
+| Zahlungsliste | `payments` | Array von [[!UICONTROL Zahlungselementen]](./payment-item.md) | Die Liste der Zahlungen für diese Bestellung. Die Zahlungen werden in der Spezifikation [!UICONTROL Zahlungselemente] beschrieben. |
+| Erstattungsliste | `refunds` | Array von [[!UICONTROL Rückerstattungselementen]](./refund-item.md) | Die Liste der Erstattungen für diese Bestellung. Erstattungen werden in der Spezifikation [!UICONTROL Erstattungselemente] beschrieben. |
+| Rückkehrinformationen | `returns` | [[!UICONTROL Return Info]](./return.md) | RMA (Return Merchandise Authorization) ausgestellt. Die Rückgaben werden in der Spezifikation [!UICONTROL Rückgabeinformationen] beschrieben. |
+| Währung | `currencyCode` | Zeichenfolge | Der für die Bestellsummen verwendete Währungscode nach ISO 4217. Beispiele sind `USD` und `EUR`. Alle Instanzen müssen dem Muster `^[A-Z]{3}$` entsprechen. |
 | Steuerbetrag | `taxAmount` | Zahl | Der vom Käufer im Rahmen der Abschlusszahlung entrichtete Steuerbetrag. |
 | Rabattbetrag | `discountAmount` | Zahl | Der Unterschied zwischen dem regulären Preis und dem Sonderpreis, der auf die gesamte Bestellung und nicht auf einzelne Produkte angewandt wird. |
 | Gesamtpreis | `priceTotal` | Zahl | Der Gesamtpreis für diese Bestellung, nachdem alle Rabatte und Steuern berücksichtigt wurden. |

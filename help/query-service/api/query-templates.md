@@ -16,13 +16,13 @@ ht-degree: 44%
 
 ## Beispiel-API-Aufrufe
 
-In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie mithilfe der [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie mit der [!DNL Query Service] -API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-Siehe [Dokumentation zu Benutzeroberflächenabfragevorlagen](../ui/query-templates.md) für Informationen zum Erstellen von Vorlagen über die Experience Platform-Benutzeroberfläche.
+Informationen zum Erstellen von Vorlagen über die Experience Platform-Benutzeroberfläche finden Sie in der Dokumentation zu [UI-Abfragevorlagen](../ui/query-templates.md) .
 
 ### Liste von Abfragevorlagen abrufen
 
-Sie können eine Liste aller Abfragevorlagen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/query-templates` -Endpunkt.
+Sie können eine Liste aller Abfragevorlagen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/query-templates` senden.
 
 **API-Format**
 
@@ -43,7 +43,7 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zum Auflist
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die ältesten erstellten Vorlagen zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` um das Datum 7. September 2020 auszudrücken. Ein komplexeres Beispiel würde wie folgt geschrieben: `2022-11-05T08:15:30-05:00` und entspricht dem 5. November 2022, 8.:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`). Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
+| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die ältesten erstellten Vorlagen zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` , um das Datum 7. September 2020 anzugeben. Ein komplexeres Beispiel würde als `2022-11-05T08:15:30-05:00` geschrieben und entspricht dem Wert vom 5. November 2022, 8:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`) gekennzeichnet. Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
 | `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `name` und `userId`. Der einzige unterstützte Operator ist `==` (gleich). Beispielsweise gibt `name==my_template` alle Abfragevorlagen mit dem Namen `my_template` zurück. |
 
 **Anfrage**
@@ -109,7 +109,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragevo
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
 ### Abfragevorlage erstellen
 
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sql` | Die SQL-Abfrage, die Sie erstellen möchten. Sie können entweder Standard-SQL oder eine Parameterersetzung verwenden. Um einen Parameteraustausch in der SQL zu verwenden, müssen Sie dem Parameterschlüssel eine `$`. Beispiel: `$key`und geben Sie die Parameter an, die in SQL als JSON-Schlüsselwertpaare im `queryParameters` -Feld. Die hier übergebenen Werte sind die Standardparameter, die in der Vorlage verwendet werden. Wenn Sie diese Parameter überschreiben möchten, müssen Sie sie in der POST-Anfrage überschreiben. |
+| `sql` | Die SQL-Abfrage, die Sie erstellen möchten. Sie können entweder Standard-SQL oder eine Parameterersetzung verwenden. Um einen Parameteraustausch in der SQL zu verwenden, müssen Sie dem Parameterschlüssel eine `$` voranstellen. Beispiel: `$key` und geben Sie die in SQL als JSON-Schlüsselwertpaare im Feld `queryParameters` verwendeten Parameter an. Die hier übergebenen Werte sind die Standardparameter, die in der Vorlage verwendet werden. Wenn Sie diese Parameter überschreiben möchten, müssen Sie sie in der POST-Anfrage überschreiben. |
 | `name` | Der Name der Abfragevorlage. |
-| `queryParameters` | Eine Schlüsselwertpaarung zum Ersetzen von parametrisierten Werten in der SQL-Anweisung. Dies ist nur erforderlich **if** Sie verwenden Parameterersetzungen innerhalb der von Ihnen bereitgestellten SQL. An diesen Schlüsselwertpaaren wird keine Wertüberprüfung durchgeführt. |
+| `queryParameters` | Eine Schlüsselwertpaarung zum Ersetzen von parametrisierten Werten in der SQL-Anweisung. Dies ist nur erforderlich, wenn **Sie** Parameter verwenden, die in der von Ihnen bereitgestellten SQL ersetzt werden. An diesen Schlüsselwertpaaren wird keine Wertüberprüfung durchgeführt. |
 
 **Antwort**
 
@@ -176,7 +176,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zur 
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage abrufen
 
@@ -234,7 +234,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen A
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage aktualisieren
 
@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->Für die PUT-Anfrage müssen sowohl das Feld &quot;sql&quot;als auch das Feld &quot;name&quot;ausgefüllt werden. **overwrite** den aktuellen Inhalt dieser Abfragevorlage.
+>Für die PUT-Anfrage müssen sowohl das Feld &quot;sql&quot;als auch das Feld &quot;name&quot;ausgefüllt werden. **überschreibt** den aktuellen Inhalt dieser Abfragevorlage.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,9 +273,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sql` | Die SQL-Abfrage, die Sie erstellen möchten. Sie können entweder Standard-SQL oder eine Parameterersetzung verwenden. Um einen Parameteraustausch in der SQL zu verwenden, müssen Sie dem Parameterschlüssel eine `$`. Beispiel: `$key`und geben Sie die Parameter an, die in SQL als JSON-Schlüsselwertpaare im `queryParameters` -Feld. Die hier übergebenen Werte sind die Standardparameter, die in der Vorlage verwendet werden. Wenn Sie diese Parameter überschreiben möchten, müssen Sie sie in der POST-Anfrage überschreiben. |
+| `sql` | Die SQL-Abfrage, die Sie erstellen möchten. Sie können entweder Standard-SQL oder eine Parameterersetzung verwenden. Um einen Parameteraustausch in der SQL zu verwenden, müssen Sie dem Parameterschlüssel eine `$` voranstellen. Beispiel: `$key` und geben Sie die in SQL als JSON-Schlüsselwertpaare im Feld `queryParameters` verwendeten Parameter an. Die hier übergebenen Werte sind die Standardparameter, die in der Vorlage verwendet werden. Wenn Sie diese Parameter überschreiben möchten, müssen Sie sie in der POST-Anfrage überschreiben. |
 | `name` | Der Name der Abfragevorlage. |
-| `queryParameters` | Eine Schlüsselwertpaarung zum Ersetzen von parametrisierten Werten in der SQL-Anweisung. Dies ist nur erforderlich **if** Sie verwenden Parameterersetzungen innerhalb der von Ihnen bereitgestellten SQL. An diesen Schlüsselwertpaaren wird keine Wertüberprüfung durchgeführt. |
+| `queryParameters` | Eine Schlüsselwertpaarung zum Ersetzen von parametrisierten Werten in der SQL-Anweisung. Dies ist nur erforderlich, wenn **Sie** Parameter verwenden, die in der von Ihnen bereitgestellten SQL ersetzt werden. An diesen Schlüsselwertpaaren wird keine Wertüberprüfung durchgeführt. |
 
 **Antwort**
 
@@ -310,7 +310,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit den aktualis
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` nach [Abfragevorlage löschen](#delete-a-specified-query-template).
+>Sie können den Wert von `_links.delete` verwenden, um [Ihre Abfragevorlage zu löschen](#delete-a-specified-query-template).
 
 ### Bestimmte Abfragevorlage löschen
 

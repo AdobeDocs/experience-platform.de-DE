@@ -24,15 +24,15 @@ In diesem Tutorial erfahren Sie, wie Sie Datenflüsse entweder direkt im Arbeits
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
-   - [Datenfluss-Abläufe](../../sources/notifications.md): Datenflüsse sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
+   - [Datenfluss-Ausführungen](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
 - [Ziele](../../destinations/home.md): Ziele sind vordefinierte Integrationen mit häufig verwendeten Anwendungen, die die nahtlose Aktivierung von Daten aus Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln können.
 
 ## Überwachen von Datenflüssen im Arbeitsbereich &quot;Ziele&quot; {#monitor-dataflows-in-the-destinations-workspace}
 
-Im **[!UICONTROL Ziele]** Navigieren Sie in der Platform-Benutzeroberfläche zum **[!UICONTROL Durchsuchen]** und wählen Sie den Namen eines Ziels aus, das Sie anzeigen möchten.
+Navigieren Sie im Arbeitsbereich **[!UICONTROL Ziele]** in der Platform-Benutzeroberfläche zur Registerkarte **[!UICONTROL Durchsuchen]** und wählen Sie den Namen eines Ziels aus, das Sie anzeigen möchten.
 
-![Zielansicht mit hervorgehobener Zielverbindung auswählen](../assets/ui/monitor-destinations/select-destination.png)
+![Wählen Sie die Zielansicht mit einer hervorgehobenen Zielverbindung aus](../assets/ui/monitor-destinations/select-destination.png)
 
 Eine Liste der vorhandenen Datenflüsse wird angezeigt. Auf dieser Seite finden Sie eine Liste sichtbarer Datenflüsse, einschließlich Informationen zu Ziel, Benutzername, Anzahl der Datenflüsse und Status.
 
@@ -40,10 +40,10 @@ Weitere Informationen zu Status finden Sie in der folgenden Tabelle:
 
 | Status | Beschreibung |
 | ------ | ----------- |
-| Aktiviert | Die `Enabled` Der Status gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem Zeitplan exportiert, der ihm bereitgestellt wurde. |
-| Deaktiviert | Die `Disabled` Der Status gibt an, dass ein Datenfluss inaktiv ist und keine Daten exportiert. |
-| Verarbeitung läuft | Die `Processing` Status gibt an, dass ein Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
-| Fehler | Die `Error` Status gibt an, dass der Aktivierungsprozess eines Datenflusses unterbrochen wurde. |
+| Aktiviert | Der Status &quot;`Enabled`&quot;zeigt an, dass ein Datenfluss aktiv ist und Daten gemäß dem Zeitplan exportiert, der ihm bereitgestellt wurde. |
+| Deaktiviert | Der Status &quot;`Disabled`&quot;zeigt an, dass ein Datenfluss inaktiv ist und keine Daten exportiert. |
+| Verarbeitung läuft | Der Status &quot;`Processing`&quot;zeigt an, dass ein Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
+| Fehler | Der Status `Error` gibt an, dass der Aktivierungsprozess eines Datenflusses unterbrochen wurde. |
 
 ### Datenflussausführungen für Streaming-Ziele {#dataflow-runs-for-streaming-destinations}
 
@@ -72,41 +72,41 @@ Weitere Informationen zu Status finden Sie in der folgenden Tabelle:
 >title="Fehlgeschlagene Identitäten"
 >abstract="Die Anzahl individueller Profilidentitäten, deren Aktivierung für das ausgewählte Ziel fehlgeschlagen ist. Genauere Informationen dazu finden Sie in der Fehlerdiagnose."
 
-Bei Streaming-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab bietet eine stündliche Aktualisierung für Metrikdaten zu Ihren Datenflüssen. Die auffälligsten gekennzeichneten Statistiken sind für Identitäten.
+Für Streaming-Ziele stellt die Registerkarte [!UICONTROL Datenfluss-Läufe] eine stündliche Aktualisierung für Metrikdaten zu Ihren Datenfluss-Läufen bereit. Die auffälligsten gekennzeichneten Statistiken sind für Identitäten.
 
 Identitäten stellen die verschiedenen Facetten eines Profils dar. Wenn beispielsweise ein Profil sowohl eine Telefonnummer als auch eine E-Mail-Adresse enthält, hat dieses Profil zwei Identitäten.
 
 Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den folgenden Gesamtwerten für Identitäten angezeigt:
 
-- **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der erfolgreich für das ausgewählte Ziel aktivierten Profilidentitäten. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
+- **[!UICONTROL Identitäten aktiviert]**: Die Gesamtzahl der für das ausgewählte Ziel erfolgreich aktivierten Profilidentitäten. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
 - **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die zur Aktivierung aufgrund fehlender Attribute und Zustimmungsverletzungen übersprungen werden.
-- **[!UICONTROL Identitäten fehlgeschlagen]**: Die Gesamtzahl der Profilidentitäten, die aufgrund von Fehlern nicht für das Ziel aktiviert werden.
+- **[!UICONTROL Identitäten fehlgeschlagen]**: Die Gesamtzahl der Profilidentitäten, die für das Ziel aufgrund von Fehlern nicht aktiviert werden.
 
 ![Datenfluss führt Details für Streaming-Ziele aus.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Jeder einzelne Datenfluss zeigt die folgenden Details an:
 
-- **[!UICONTROL Start des Datenflusses]**: Die Zeit, zu der der Datenfluss gestartet wurde. Für Streaming-Datenfluss-Ausführungen erfasst Experience Platform Metriken basierend auf dem Start des Datenflusses in Form von stündlichen Metriken. Wenn beim Ausführen des Streaming-Datenflusses ein Datenfluss gestartet wird (z. B. um 22:30 Uhr), zeigt die Metrik die Startzeit in der Benutzeroberfläche als 22:00 Uhr an.
-- **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die die Verarbeitung des Datenflusses gedauert hat.
-   - Für **[!UICONTROL completed]** ausgeführt wird, zeigt die Verarbeitungszeitmetrik immer eine Stunde an.
-   - Für Datenfluss-Läufe, die sich noch in einer **[!UICONTROL Verarbeitung]** state festgelegt ist, bleibt das Fenster zur Erfassung aller Metriken länger als eine Stunde geöffnet, um alle Metriken zu verarbeiten, die dem Datenfluss entsprechen. Beispielsweise kann ein Datenfluss, der um 9:30 Uhr gestartet wurde, eine Stunde und dreißig Minuten lang im Verarbeitungsstatus bleiben, um alle Metriken zu erfassen und zu verarbeiten. Sobald das Verarbeitungsfenster geschlossen wird und der Status des Datenflusses aktualisiert wird auf **completed** festgelegt ist, wird die angezeigte Verarbeitungszeit auf eine Stunde geändert.
-- **[!UICONTROL Vorgenommene Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile.
-- **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profil-Identitäten, die erfolgreich für das ausgewählte Ziel im Rahmen der Datenfluss-Ausführung aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
-- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profil-Identitäten, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung ausgeschlossen sind.
-- **[!UICONTROL Identitäten fehlgeschlagen]** Die Gesamtzahl der Profilidentitäten, die aufgrund von Fehlern nicht für das Ziel aktiviert werden.
+- **[!UICONTROL Dataflow run start]**: Die Zeit, zu der der Datenfluss gestartet wurde. Für Streaming-Datenfluss-Ausführungen erfasst Experience Platform Metriken basierend auf dem Start des Datenflusses in Form von stündlichen Metriken. Wenn beim Ausführen des Streaming-Datenflusses ein Datenfluss gestartet wird (z. B. um 22:30 Uhr), zeigt die Metrik die Startzeit in der Benutzeroberfläche als 22:00 Uhr an.
+- **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
+   - Für die Ausführung von **[!UICONTROL completed]** wird in der Verarbeitungszeitmetrik immer eine Stunde angezeigt.
+   - Bei Datenfluss-Ausführungen, die sich noch im Status **[!UICONTROL processing]** befinden, bleibt das Fenster zum Erfassen aller Metriken länger als eine Stunde geöffnet, um alle Metriken zu verarbeiten, die dem Datenfluss entsprechen. Beispielsweise kann ein Datenfluss, der um 9:30 Uhr gestartet wurde, eine Stunde und dreißig Minuten lang im Verarbeitungsstatus bleiben, um alle Metriken zu erfassen und zu verarbeiten. Sobald das Verarbeitungsfenster geschlossen und der Status des Datenflusses auf **completed** aktualisiert wird, wird die angezeigte Verarbeitungszeit auf eine Stunde geändert.
+- **[!UICONTROL empfangenen Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile.
+- **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profilidentitäten, die im Rahmen der Datenfluss-Ausführung erfolgreich für das ausgewählte Ziel aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
+- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die aufgrund fehlender Attribute und einer Verletzung der Einwilligung von der Aktivierung ausgeschlossen sind.
+- **[!UICONTROL Identitäten fehlgeschlagen]** Die Gesamtzahl der Profilidentitäten, die für das Ziel aufgrund von Fehlern nicht aktiviert werden.
 - **[!UICONTROL Aktivierungsrate]**: Der Prozentsatz der empfangenen Identitäten, die erfolgreich aktiviert oder übersprungen wurden. Die folgende Formel zeigt, wie dieser Wert berechnet wird:
-  ![Formel zur Aktivierungsrate](../assets/ui/monitor-destinations/activation-rate-formula.png)
-- **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: Entweder [!UICONTROL Abgeschlossen] oder [!UICONTROL Verarbeitung]. [!UICONTROL Abgeschlossen] bedeutet, dass alle Identitäten für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde exportiert wurden. [!UICONTROL Verarbeitung] bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
+  ![ Formel der Aktivierungsrate.](../assets/ui/monitor-destinations/activation-rate-formula.png)
+- **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: entweder [!UICONTROL Abgeschlossen] oder [!UICONTROL Verarbeitung]. [!UICONTROL Abgeschlossen] bedeutet, dass alle Identitäten für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde exportiert wurden. [!UICONTROL Verarbeitung] bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
 
 Um die Details eines bestimmten Datenflusses anzuzeigen, wählen Sie die Startzeit der Ausführung aus der Liste aus.
 
 Die Detailseite für einen Datenfluss-Lauf enthält zusätzliche Informationen wie die Anzahl der empfangenen Profile, die Anzahl der aktivierten Identitäten, die Anzahl der fehlgeschlagenen Identitäten und die Anzahl der ausgeschlossenen Identitäten.
 
-![Datenfluss-Details für Streaming-Ziele.](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+![Datenflamdetails für Streaming-Ziele.](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und ausgeschlossenen Identitäten angezeigt. Es werden Informationen für die fehlgeschlagenen und ausgeschlossenen Identitäten angezeigt, einschließlich Fehlercode, Identitätsanzahl und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Identitäten angezeigt. Um übersprungene Identitäten anzuzeigen, wählen Sie die **[!UICONTROL Ausgeschlossene Identitäten]** umschalten.
+Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und ausgeschlossenen Identitäten angezeigt. Es werden Informationen für die fehlgeschlagenen und ausgeschlossenen Identitäten angezeigt, einschließlich Fehlercode, Identitätsanzahl und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Identitäten angezeigt. Um übersprungene Identitäten anzuzeigen, wählen Sie den Umschalter **[!UICONTROL Ausgeschlossene Identitäten]** aus.
 
-![Datenflussdatensätze für Streaming-Ziele mit einer hervorgehobenen Fehlermeldung.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+![Datenfluss-Datensätze für Streaming-Ziele mit hervorgehobener Fehlermeldung.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
 ### Datenflussausführungen für Batch-Ziele {#dataflow-runs-for-batch-destinations}
 
@@ -131,89 +131,89 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 >title="Ausgeschlossene Identitäten"
 >abstract="Die Anzahl individueller Profildatensätze, die aufgrund fehlender Attribute und Einverständnisverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
 
-Bei Batch-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfluss-Läufen. Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den folgenden Gesamtwerten für Identitäten angezeigt:
+Für Batch-Ziele stellt die Registerkarte [!UICONTROL Datenfluss-Läufe] Metrikdaten für Ihre Datenflug-Läufe bereit. Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den folgenden Gesamtwerten für Identitäten angezeigt:
 
-- **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der erfolgreich für das ausgewählte Ziel aktivierten Profilidentitäten. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
-- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Anzahl der einzelnen Profilidentitäten, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind.
+- **[!UICONTROL Identitäten aktiviert]**: Die Gesamtzahl der für das ausgewählte Ziel erfolgreich aktivierten Profilidentitäten. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
+- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Anzahl der einzelnen Profilidentitäten, die von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind, basierend auf fehlenden Attributen und der Verletzung der Einwilligung.
 
-![Datenfluss-Ausführungsansicht für Batch-Ziele.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+![Datenfluss führt die Ansicht für Batch-Ziele aus.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
 Jeder einzelne Datenfluss zeigt die folgenden Details an:
 
-- **[!UICONTROL Start des Datenflusses]**: Die Zeit, zu der der Datenfluss gestartet wurde.
-- **[!UICONTROL Zielgruppe]**: Der Name der Zielgruppe, die mit jedem Datenfluss verknüpft ist.
+- **[!UICONTROL Dataflow run start]**: Die Zeit, zu der der Datenfluss gestartet wurde.
+- **[!UICONTROL Audience]**: Der Name der Audience, die mit jedem Datenfluss verknüpft ist.
 - **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
-- **[!UICONTROL Vorgenommene Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert.
-- **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profil-Identitäten, die erfolgreich für das ausgewählte Ziel im Rahmen der Datenfluss-Ausführung aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
-- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profil-Identitäten, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung ausgeschlossen sind.
-- **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet. Dabei kann es sich um einen von drei Status handeln: [!UICONTROL Erfolg], [!UICONTROL Fehlgeschlagen], und [!UICONTROL Verarbeitung]. [!UICONTROL Erfolg] bedeutet, dass der Datenfluss aktiv ist und Daten gemäß dem bereitgestellten Zeitplan exportiert. [!UICONTROL Fehlgeschlagen] bedeutet, dass die Aktivierung der Daten aufgrund von Fehlern ausgesetzt wurde. [!UICONTROL Verarbeitung] bedeutet, dass der Datenfluss noch nicht aktiv ist und im Allgemeinen beim Erstellen eines neuen Datenflusses auftritt.
+- **[!UICONTROL empfangenen Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert.
+- **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profilidentitäten, die im Rahmen der Datenfluss-Ausführung erfolgreich für das ausgewählte Ziel aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
+- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die aufgrund fehlender Attribute und einer Verletzung der Einwilligung von der Aktivierung ausgeschlossen sind.
+- **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet. Dabei kann es sich um einen von drei Status handeln: [!UICONTROL Erfolg], [!UICONTROL Fehlgeschlagen] und [!UICONTROL Verarbeitung]. [!UICONTROL Erfolg] bedeutet, dass der Datenfluss aktiv ist und Daten gemäß dem bereitgestellten Zeitplan exportiert. [!UICONTROL Fehlgeschlagen] bedeutet, dass die Aktivierung der Daten aufgrund von Fehlern ausgesetzt wurde. [!UICONTROL Verarbeitung] bedeutet, dass der Datenfluss noch nicht aktiv ist und im Allgemeinen beim Erstellen eines neuen Datenflusses auftritt.
 
 Um Details zu einem bestimmten Datenfluss anzuzeigen, wählen Sie die Startzeit der Ausführung aus der Liste aus.
 
 >[!NOTE]
 >
->Datenflüsse werden basierend auf der Zeitplanfrequenz des Zieldatenflusses generiert. Für jeden wird ein separater Datenfluss ausgeführt [Zusammenführungsrichtlinie](../../profile/merge-policies/overview.md) auf eine Zielgruppe angewendet werden.
+>Datenflüsse werden basierend auf der Zeitplanfrequenz des Zieldatenflusses generiert. Für jede [Zusammenführungsrichtlinie](../../profile/merge-policies/overview.md), die auf eine Zielgruppe angewendet wird, wird ein separater Datenfluss ausgeführt.
 
 Auf der Detailseite für einen Datenfluss werden neben den Details, die in der Liste der Datenflüsse angezeigt werden, spezifischere Informationen zum Datenfluss angezeigt:
 
-- **[!UICONTROL Datengröße]**: Die Größe des zu exportierenden Datenflusses.
+- **[!UICONTROL Datengröße]**: Die Größe des Datenflusses, der exportiert wird.
 - **[!UICONTROL Dateien insgesamt]**: Die Gesamtzahl der im Datenfluss exportierten Dateien.
 - **[!UICONTROL Letzte Aktualisierung]**: Der Zeitpunkt, zu dem der Datenfluss zuletzt aktualisiert wurde.
 
-![Datenfluss-Ausführungsdetails für Batch-Ziele](../assets/ui/monitor-destinations/dataflow-batch.png)
+![Datenfluss-Ausführungsdetails für Batch-Ziele.](../assets/ui/monitor-destinations/dataflow-batch.png)
 
-Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und ausgeschlossenen Identitäten angezeigt. Es werden Informationen für die fehlgeschlagenen und ausgeschlossenen Identitäten angezeigt, einschließlich Fehlercode und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Identitäten angezeigt. Um ausgeschlossene Identitäten anzuzeigen, wählen Sie die **[!UICONTROL Ausgeschlossene Identitäten]** umschalten.
+Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und ausgeschlossenen Identitäten angezeigt. Es werden Informationen für die fehlgeschlagenen und ausgeschlossenen Identitäten angezeigt, einschließlich Fehlercode und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Identitäten angezeigt. Um ausgeschlossene Identitäten anzuzeigen, wählen Sie den Umschalter **[!UICONTROL Ausgeschlossene Identitäten]** aus.
 
-![Datenflussdatensätze für Batch-Ziele mit einer hervorgehobenen Fehlermeldung.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+![Datenfluss-Datensätze für Batch-Ziele mit hervorgehobener Fehlermeldung.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Dashboard „Ziele überwachen“ {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
->- Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Außer* die [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) Ziele.
->- Für [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), und [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) Ziele, werden die Metriken geschätzt, die sich auf ausgeschlossene, fehlgeschlagene und aktivierte Identitäten beziehen. Höhere Volumina von Aktivierungsdaten führen zu einer höheren Genauigkeit der Metriken.
+>- Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform *unterstützt, mit Ausnahme von* den Zielen [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md).
+>- Für die Ziele [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hub](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) und [HTTP API](/help/destinations/catalog/streaming/http-destination.md) werden die Metriken geschätzt, die sich auf ausgeschlossene, fehlgeschlagene und aktivierte Identitäten beziehen. Höhere Volumina von Aktivierungsdaten führen zu einer höheren Genauigkeit der Metriken.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="Die Zielaktivierungsansicht enthält Informationen zum Aktivierungsstatus einer Zielgruppe und Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren."
 
-So greifen Sie auf die [!UICONTROL Überwachung] Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, auswählen [!UICONTROL Ziele]. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den ausgeführten Zielaufträgen.
+Um auf das Dashboard [!UICONTROL Überwachung] zuzugreifen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) aus. Wählen Sie auf der Seite [!UICONTROL Überwachung] einmal [!UICONTROL Ziele] aus. Das Dashboard [!UICONTROL Überwachung] enthält Metriken und Informationen zu den Zielausführungsaufträgen.
 
-Verwenden Sie die [!UICONTROL Ziele] Dashboard , um einen Überblick über den Zustand Ihrer Aktivierungsflüsse zu erhalten. Rufen Sie zunächst Einblicke in eine aggregierte Ebene für alle Batch- und Streaming-Ziele ab und führen Sie dann einen Drilldown in detaillierten Ansichten für Datenflüsse, Datenfluss-Ausführungen und aktivierte Zielgruppen durch, um Ihre Aktivierungsdaten eingehend zu untersuchen. Die Bildschirme im [!UICONTROL Überwachung] Dashboard bietet praktische Einblicke über Metriken und Fehlerbeschreibungen, mit denen Sie Probleme beheben können, die in Ihren Aktivierungsszenarien auftreten können.
+Verwenden Sie das Dashboard [!UICONTROL Ziele] , um einen Überblick über den Zustand Ihrer Aktivierungsflüsse zu erhalten. Rufen Sie zunächst Einblicke in eine aggregierte Ebene für alle Batch- und Streaming-Ziele ab und führen Sie dann einen Drilldown in detaillierten Ansichten für Datenflüsse, Datenfluss-Ausführungen und aktivierte Zielgruppen durch, um Ihre Aktivierungsdaten eingehend zu untersuchen. Die Bildschirme im Dashboard [!UICONTROL Überwachung] bieten praktische Einblicke über Metriken und Fehlerbeschreibungen, mit denen Sie Probleme beheben können, die in Ihren Aktivierungsszenarien auftreten können.
 
-Sie können die angezeigten Informationen nach Datentyp (Kunden, Konten (nur für die Adobe Real-Time CDP B2B-Bearbeitung), Interessenten und Kontoanreicherung filtern. Weitere Informationen zu diesen Optionen finden Sie im Abschnitt [Handbuch zum Monitoring-Dashboard](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Sie können die angezeigten Informationen nach Datentyp (Kunden, Konten (nur für die Adobe Real-Time CDP B2B-Bearbeitung), Interessenten und Kontoanreicherung filtern. Weitere Informationen zu diesen Optionen finden Sie im Leitfaden zum [Monitoring-Dashboard](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
-![Datentypfilter in der Monitoring-Dashboard-Ansicht hervorgehoben.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
+![In der Monitoring-Dashboard-Ansicht hervorgehobener Filter vom Datentyp.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
-In der Mitte des Dashboards befindet sich der [!UICONTROL Aktivierung] -Bereich, der Metriken und Diagramme enthält, die Daten zur Aktivierungsrate der Daten anzeigen, die an Streaming-Ziele exportiert werden, sowie über den fehlgeschlagenen Batch-Datenfluss, der an Batch-Ziele ausgeführt wird.
+Im Mittelpunkt des Dashboards steht das Bedienfeld [!UICONTROL Aktivierung] , das Metriken und Diagramme enthält, die Daten zur Aktivierungsrate der Daten anzeigen, die an Streaming-Ziele exportiert werden, sowie über die fehlgeschlagenen Batch-Datenflüsse, die an Batch-Ziele ausgeführt werden.
 
 ![In der Überwachungsansicht hervorgehobene Diagramme für Streaming- und Batch-Aktivierung.](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
-Standardmäßig enthalten die angezeigten Daten die Aktivierungsinformationen der letzten 24 Stunden. Auswählen **[!UICONTROL Letzte 24 Stunden]** , um den Zeitrahmen der angezeigten Datensätze anzupassen. Verfügbare Optionen umfassen **[!UICONTROL Letzte 24 Stunden]**, **[!UICONTROL Letzte 7 Tage]**, und **[!UICONTROL Letzte 30 Tage]**. Alternativ können Sie die Datumsangaben im daraufhin angezeigten Kalender-Popup-Fenster auswählen. Nachdem Sie die Daten ausgewählt haben, wählen Sie **[!UICONTROL Anwenden]** , um den Zeitrahmen der angezeigten Informationen anzupassen.
+Standardmäßig enthalten die angezeigten Daten die Aktivierungsinformationen der letzten 24 Stunden. Wählen Sie **[!UICONTROL Letzte 24 Stunden]** aus, um den Zeitrahmen der angezeigten Datensätze anzupassen. Zu den verfügbaren Optionen gehören **[!UICONTROL Letzte 24 Stunden]**, **[!UICONTROL Letzte 7 Tage]** und **[!UICONTROL Letzte 30 Tage]**. Alternativ können Sie die Datumsangaben im daraufhin angezeigten Kalender-Popup-Fenster auswählen. Nachdem Sie die Daten ausgewählt haben, wählen Sie **[!UICONTROL Anwenden]** aus, um den Zeitrahmen der angezeigten Informationen anzupassen.
 
 >[!NOTE]
 >
->Der folgende Screenshot zeigt die Aktivierungsrate und den Batch-Datenfluss für die letzten 30 Tage anstelle der letzten 24 Stunden. Sie können den Zeitrahmen anpassen, indem Sie **[!UICONTROL Letzte 30 Tage]**.
+>Der folgende Screenshot zeigt die Aktivierungsrate und den Batch-Datenfluss für die letzten 30 Tage anstelle der letzten 24 Stunden. Sie können den Zeitraum anpassen, indem Sie **[!UICONTROL Letzte 30 Tage]** auswählen.
 
-![Ändern der für aktivierte Ziele hervorgehobenen Kontrolle des Lookback-Datumsbereichs](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+![Änderung der für aktivierte Ziele hervorgehobenen Kontrolle des Lookback-Datumsbereichs](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Verwenden Sie das Pfeilsymbol (![Pfeilsymbol](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)), um die Karten oben im Bildschirm zu erweitern oder zu schließen, die einen Überblick über die Aktivierungsdetails basierend auf dem Zieltyp - Streaming oder Batch anzeigen:
+Verwenden Sie das Pfeilsymbol (![Pfeilsymbol](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)), um die Karten oben im Bildschirm zu erweitern oder zu schließen, die anhand des Zieltyps - Streaming oder Batch - einen Überblick über die Aktivierungsdetails bieten:
 
-- **[!UICONTROL Streaming-Aktivierungsrate]**: Stellt den Prozentsatz der empfangenen Identitäten dar, die erfolgreich aktiviert oder übersprungen wurden. Die zur Berechnung dieses Prozentsatzes verwendete Formel wird weiter oben auf dieser Seite im Abschnitt [Datenfluss-Ausführungen für Streaming-Ziele](#dataflow-runs-for-streaming-destinations) Abschnitt.
-- **[!UICONTROL Batch-fehlgeschlagene Datenfluss-Ausführungen]**: Stellt die Anzahl der fehlgeschlagenen Datenfluss-Ausführungen im ausgewählten Zeitintervall dar.
+- **[!UICONTROL Streaming-Aktivierungsrate]**: Stellt den Prozentsatz der empfangenen Identitäten dar, die erfolgreich aktiviert oder übersprungen wurden. Die Formel zur Berechnung dieses Prozentsatzes wird weiter oben auf dieser Seite im Abschnitt [Datenfluss wird für Streaming-Ziele ausgeführt](#dataflow-runs-for-streaming-destinations) beschrieben.
+- **[!UICONTROL Batch failed dataflow running]**: Stellt die Anzahl der fehlgeschlagenen Datenfluss-Ausführungen im ausgewählten Zeitintervall dar.
 
-![Anzeigen oder Verwerfen von Karten am Seitenanfang](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
+![ Zeigt Karten oben auf der Seite an oder verwirft sie.](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
 
-Die **[!UICONTROL Aktivierung]** -Diagramm wird standardmäßig angezeigt und Sie können es deaktivieren, um die Liste der Ziele unten zu erweitern. Wählen Sie die **[!UICONTROL Metriken und Diagramme]** Umschalten, um die Diagramme zu deaktivieren.
+Das Diagramm **[!UICONTROL Aktivierung]** wird standardmäßig angezeigt und Sie können es deaktivieren, um die Liste der Ziele unten zu erweitern. Wählen Sie den Umschalter **[!UICONTROL Metriken und Diagramme]** aus, um die Diagramme zu deaktivieren.
 
-Die **[!UICONTROL Aktivierung]** zeigt eine Liste von Zielen an, die mindestens ein vorhandenes Konto enthalten. Diese Liste enthält auch Informationen zu den empfangenen Profilen, aktivierten Identitäten, fehlgeschlagenen Identitäten, ausgeschlossenen Identitäten, Aktivierungsrate, insgesamt fehlgeschlagenen Datenflüssen und dem letzten aktualisierten Datum für diese Ziele. Nicht alle Metriken sind für alle Zieltypen verfügbar. In der folgenden Tabelle sind die Metriken und Informationen aufgeführt, die pro Zieltyp, Streaming oder Batch verfügbar sind.
+Im Bedienfeld **[!UICONTROL Aktivierung]** wird eine Liste von Zielen angezeigt, die mindestens ein vorhandenes Konto enthalten. Diese Liste enthält auch Informationen zu den empfangenen Profilen, aktivierten Identitäten, fehlgeschlagenen Identitäten, ausgeschlossenen Identitäten, Aktivierungsrate, insgesamt fehlgeschlagenen Datenflüssen und dem letzten aktualisierten Datum für diese Ziele. Nicht alle Metriken sind für alle Zieltypen verfügbar. In der folgenden Tabelle sind die Metriken und Informationen aufgeführt, die pro Zieltyp, Streaming oder Batch verfügbar sind.
 
-| Metrik | Zieltyp |
+| Metrik | Typ des Ziels |
 ---------|----------|
-| **[!UICONTROL Vorgenommene Profile]** | Streaming und Batch |
-| **[!UICONTROL Aktivierte Identitäten]** | Streaming und Batch |
+| **[!UICONTROL empfangenen Profile]** | Streaming und Batch |
+| **[!UICONTROL Identitäten aktiviert]** | Streaming und Batch |
 | **[!UICONTROL Identitäten fehlgeschlagen]** | Streaming |
 | **[!UICONTROL Ausgeschlossene Identitäten]** | Streaming und Batch |
 | **[!UICONTROL Aktivierungsrate]** | Streaming |
@@ -222,25 +222,25 @@ Die **[!UICONTROL Aktivierung]** zeigt eine Liste von Zielen an, die mindestens 
 
 ![Überwachen des Dashboards mit allen aktivierten Zielen hervorgehoben.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
-Sie können Ihre Zielliste auch so filtern, dass nur die ausgewählte Zielkategorie angezeigt wird. Wählen Sie die **[!UICONTROL Meine Ziele]** und wählen Sie die [Zielkategorie](/help/destinations/destination-types.md#categories) , nach dem Sie filtern möchten.
+Sie können Ihre Zielliste auch so filtern, dass nur die ausgewählte Zielkategorie angezeigt wird. Wählen Sie das Dropdown-Menü **[!UICONTROL Meine Ziele]** aus und wählen Sie die [Zielkategorie](/help/destinations/destination-types.md#categories) aus, nach der Sie filtern möchten.
 
-![Ziele mithilfe der Dropdown-Auswahl filtern](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
+![Ziele mithilfe des Dropdown-Selektors filtern](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Darüber hinaus können Sie ein Ziel in die Suchleiste eingeben, um es zu einem einzelnen Ziel zu isolieren. Wenn Sie die Datenflüsse des Ziels anzeigen möchten, können Sie den Filter auswählen ![filter](../assets/ui/monitor-destinations/filter-add.png) daneben, um eine Liste der aktiven Datenflüsse anzuzeigen.
+Darüber hinaus können Sie ein Ziel in die Suchleiste eingeben, um es zu einem einzelnen Ziel zu isolieren. Wenn Sie die Datenflüsse des Ziels anzeigen möchten, können Sie den Filter ![filter](../assets/ui/monitor-destinations/filter-add.png) daneben auswählen, um eine Liste der aktiven Datenflüsse anzuzeigen.
 
-![Filtern Sie Ziele mithilfe der Suchleiste, die in der Überwachungsansicht hervorgehoben ist.](../assets/ui/monitor-destinations/filtered-destinations.png)
+![Filtern Sie Ziele mithilfe der in der Überwachungsansicht hervorgehobenen Suchleiste.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
-Wenn Sie alle vorhandenen Datenflüsse über alle Ziele hinweg anzeigen möchten, wählen Sie **[!UICONTROL Datenflüsse]**.
+Wenn Sie alle vorhandenen Datenflüsse für alle Ziele anzeigen möchten, wählen Sie **[!UICONTROL Datenflüsse]** aus.
 
-Es wird eine Liste mit Datenflüssen angezeigt, die nach der letzten Ausführung des Datenflusses sortiert sind. Sie können zusätzliche Details für einen bestimmten Datenfluss anzeigen, indem Sie das Ziel, das Sie überwachen möchten, suchen und den Filter auswählen ![filter](../assets/ui/monitor-destinations/filter-add.png) daneben und anschließend den Filter auswählen ![filter](../assets/ui/monitor-destinations/filter-add.png) neben dem Datenfluss weitere Informationen.
+Es wird eine Liste mit Datenflüssen angezeigt, die nach der letzten Ausführung des Datenflusses sortiert sind. Sie können zusätzliche Details für einen bestimmten Datenfluss anzeigen, indem Sie das zu überwachende Ziel suchen, den Filter ![filter](../assets/ui/monitor-destinations/filter-add.png) daneben auswählen und anschließend den Filter ![filter](../assets/ui/monitor-destinations/filter-add.png) neben dem Datenfluss auswählen, über den Sie weitere Informationen erhalten möchten.
 
-![Alle im Monitoring-Dashboard markierten Datenflüsse.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+![Alle im Monitoring-Dashboard hervorgehobenen Datenflüsse.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
 Nachdem Sie einen Datenfluss für eine weitere Überprüfung ausgewählt haben, enthält die Seite mit den Datenflug-Details einen Umschalter, mit dem Sie die aktivierten Daten im Datenfluss anzeigen können, aufgeschlüsselt nach Datenflüssen oder Zielgruppen.
 
 ### Datenfluss-Ausführungsansicht {#dataflow-runs-view}
 
-Wann **[!UICONTROL Datenfluss-Abläufe]** ausgewählt ist, können Sie eine Liste der Datenflug-Ausführungen für den ausgewählten Datenfluss sowie weitere Informationen zu den einzelnen Ausführungen anzeigen.
+Wenn **[!UICONTROL Datenfluss ausgeführt wird]** ausgewählt ist, können Sie eine Liste der Datenfluss-Läufe für den ausgewählten Datenfluss und weitere Informationen zu den einzelnen Läufen sehen.
 
 >[!INFO]
 >
@@ -248,17 +248,17 @@ Wann **[!UICONTROL Datenfluss-Abläufe]** ausgewählt ist, können Sie eine List
 >
 >Für Datenflüsse an Batch-Ziele wird für jede Zielgruppe ein entsprechender Datenfluss generiert, der auf der geplanten Häufigkeit der Zielgruppenaktivierung basiert. Wenn Sie beispielsweise eine tägliche geplante Aktivierung für fünf Zielgruppen im selben Ziel-Datenfluss einrichten, werden täglich fünf separate Datenfluss-Läufe generiert.
 
-![Datenfluss-Bedienfeld mit mehreren Läufen hervorgehoben.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
+![Der Datenfluss-Bedienfeld wird ausgeführt, wobei mehrere Ausführungen hervorgehoben sind.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
-Verwenden Sie die **[!UICONTROL Nur Fehler anzeigen]** umschalten, um nur die fehlgeschlagenen Ausführungen für einen Datenfluss anzuzeigen.
+Verwenden Sie den Umschalter **[!UICONTROL Fehler nur anzeigen]** , um nur die fehlgeschlagenen Ausführungen für einen Datenfluss anzuzeigen.
 
-![Ansicht &quot;Datenfluss-Ausführung&quot;, bei der Fehler anzeigen nur hervorgehoben wurden](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
+![Datenfluss führt die Ansicht aus, während die Fehler anzeigen nur hervorgehoben wurden](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
 ### Ansicht auf Zielgruppenebene {#segment-level-view}
 
-Wann **[!UICONTROL Zielgruppen]** ausgewählt ist, wird eine Liste der Zielgruppen angezeigt, die innerhalb des ausgewählten Zeitraums für den ausgewählten Datenfluss aktiviert wurden. Dieser Bildschirm enthält Informationen auf Zielgruppenebene über die aktivierten Identitäten, die ausgeschlossenen Identitäten sowie den Status und die Uhrzeit des letzten Datenflusses. Durch Überprüfen der Metriken auf ausgeschlossene und aktivierte Identitäten können Sie überprüfen, ob eine Zielgruppe erfolgreich aktiviert wurde oder nicht.
+Wenn **[!UICONTROL Zielgruppen]** ausgewählt ist, wird eine Liste der Zielgruppen angezeigt, die für den ausgewählten Datenfluss innerhalb des ausgewählten Zeitraums aktiviert wurden. Dieser Bildschirm enthält Informationen auf Zielgruppenebene über die aktivierten Identitäten, die ausgeschlossenen Identitäten sowie den Status und die Uhrzeit des letzten Datenflusses. Durch Überprüfen der Metriken auf ausgeschlossene und aktivierte Identitäten können Sie überprüfen, ob eine Zielgruppe erfolgreich aktiviert wurde oder nicht.
 
-Sie aktivieren beispielsweise eine Zielgruppe mit dem Namen &quot;Mitglieder des Treueprogramms in Kalifornien&quot;für ein Amazon S3-Ziel &quot;Mitglieder des Treueprogramms, Kalifornien, Dezember&quot;. Angenommen, die ausgewählte Zielgruppe enthält 100 Profile, aber nur 80 von 100 Profilen enthalten Loyalitäts-ID-Attribute. Sie haben die Export-Zuordnungsregeln als `loyalty.id` ist erforderlich. In diesem Fall werden auf Zielgruppenebene 80 Identitäten aktiviert und 20 Identitäten ausgeschlossen.
+Sie aktivieren beispielsweise eine Zielgruppe mit dem Namen &quot;Mitglieder des Treueprogramms in Kalifornien&quot;für ein Amazon S3-Ziel &quot;Mitglieder des Treueprogramms, Kalifornien, Dezember&quot;. Angenommen, die ausgewählte Zielgruppe enthält 100 Profile, aber nur 80 von 100 Profilen enthalten Loyalitäts-ID-Attribute. Sie haben die Exportzuordnungsregeln als &quot;0&quot; definiert. `loyalty.id` In diesem Fall werden auf Zielgruppenebene 80 Identitäten aktiviert und 20 Identitäten ausgeschlossen.
 
 >[!IMPORTANT]
 >
@@ -269,21 +269,21 @@ Sie aktivieren beispielsweise eine Zielgruppe mit dem Namen &quot;Mitglieder des
 ![Im Datenfluss-Bedienfeld hervorgehobene Zielgruppen.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 In der Ansicht auf Zielgruppenebene werden die Metriken über mehrere Datenfluss-Läufe innerhalb des ausgewählten Zeitraums aggregiert. Wenn mehrere Datenfluss-Läufe vorhanden sind, können Sie einen Drilldown aus der Zielgruppenebene durchführen, um die Aufschlüsselung für jeden Datenfluss anzuzeigen, gefiltert nach der ausgewählten Zielgruppe.
-Verwenden der Filterschaltfläche ![filter](../assets/ui/monitor-destinations/filter-add.png) , um einen Drilldown in die Datenfluss-Ausführungsansicht für jede Zielgruppe im Datenfluss durchzuführen.
+Verwenden Sie die Filterschaltfläche &quot;![filter](../assets/ui/monitor-destinations/filter-add.png)&quot;, um einen Drilldown in die Datenfluss-Ansicht für jede Zielgruppe im Datenfluss durchzuführen.
 
 ### Seite mit Datenfluss-Ausführungen {#dataflow-runs-page}
 
 Auf der Seite &quot;Datenfluss-Ausführung&quot;werden Informationen zu Ihren Datenfluss-Ausführungen angezeigt, einschließlich Startzeit des Datenflusses, Verarbeitungszeit, empfangene Profile, aktivierte Identitäten, ausgeschlossene Identitäten, fehlgeschlagene Identitäten, Aktivierungsrate und Status.
 
-Wenn Sie einen Drilldown in die Seite mit den Datenflüssen durchführen, wählen Sie die [Ansicht auf Zielgruppenebene](#segment-level-view)haben Sie die Möglichkeit, den Datenfluss nach folgenden Optionen zu filtern:
+Wenn Sie über die Ansicht [auf Zielgruppenebene](#segment-level-view) einen Drilldown in die Seite mit den Datenflüssen durchführen, haben Sie die Möglichkeit, den Datenfluss nach folgenden Optionen zu filtern:
 
-- **[!UICONTROL Datenfluss wird mit fehlgeschlagenen Identitäten ausgeführt]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenfluss-Ausführungen auf, die bei der Aktivierung fehlgeschlagen sind. Informationen dazu, warum Identitäten in einem bestimmten Datenfluss fehlschlugen, finden Sie unter [Seite mit Datenfluss-Ausführungsdetails](#dataflow-run-details-page) für diesen Datenfluss.
-- **[!UICONTROL Datenfluss wird mit übersprungenen Identitäten ausgeführt]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenfluss-Läufe auf, bei denen einige Identitäten nicht vollständig aktiviert und einige Profile übersprungen wurden. Informationen dazu, warum Identitäten in einem bestimmten Datenfluss übersprungen wurden, finden Sie unter [Seite mit Datenfluss-Ausführungsdetails](#dataflow-run-details-page) für diesen Datenfluss.
+- **[!UICONTROL Datenfluss wird mit fehlgeschlagenen Identitäten ausgeführt]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenfluss-Ausführungen auf, die bei der Aktivierung fehlgeschlagen sind. Informationen dazu, warum Identitäten in einem bestimmten Datenfluss fehlschlugen, finden Sie auf der Seite [Datenfluss-Ausführungsdetails](#dataflow-run-details-page) für diesen Datenfluss.
+- **[!UICONTROL Datenfluss wird mit übersprungenen Identitäten ausgeführt]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenfluss-Läufe auf, bei denen einige Identitäten nicht vollständig aktiviert waren und einige Profile übersprungen wurden. Informationen dazu, warum Identitäten in einem bestimmten Datenfluss übersprungen wurden, finden Sie auf der Seite [Datenfluss-Ausführungsdetails](#dataflow-run-details-page) für diesen Datenfluss.
 - **[!UICONTROL Datenfluss wird mit aktivierten Identitäten ausgeführt]**: Für die ausgewählte Zielgruppe listet diese Option alle Datenfluss-Ausführungen mit Identitäten auf, die erfolgreich aktiviert wurden.
 
-![Optionsfelder, die zeigen, wie Datenfluss-Ausführungen für Zielgruppen gefiltert werden.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+![Optionsfelder, die zeigen, wie Datenflüsse für Zielgruppen gefiltert werden.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Um weitere Details über einen bestimmten Datenfluss anzuzeigen, wählen Sie den Filter aus ![filter](../assets/ui/monitor-destinations/filter-add.png) neben der Startzeit des Datenflusses, um die Seite mit den Ausführungsdetails des Datenflusses anzuzeigen.
+Um weitere Details zu einer bestimmten Ausführung des Datenflusses anzuzeigen, wählen Sie den Filter &quot;![filter](../assets/ui/monitor-destinations/filter-add.png)&quot;neben der Startzeit des Datenflusses aus, um die Seite mit den Ausführungsdetails des Datenflusses anzuzeigen.
 
 ![Datenfluss führt Filter im Monitoring-Dashboard aus, um weitere Informationen für einen bestimmten Datenfluss zu suchen.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
@@ -291,20 +291,20 @@ Um weitere Details über einen bestimmten Datenfluss anzuzeigen, wählen Sie den
 
 Auf der Seite mit den Ausführungsdetails des Datenflusses werden zusätzlich zu den Details, die in der Liste der Datenflüsse angezeigt werden, spezifischere Informationen zum Datenfluss angezeigt:
 
-- **[!UICONTROL Dataflow-run-ID]**: Die Kennung des Datenflusses.
-- **[!UICONTROL Kennung der IMS-Organisation]**: Die Organisation, zu der der Datenfluss gehört.
+- **[!UICONTROL Datenfluss-ID]**: Die Kennung des Datenflusses.
+- **[!UICONTROL IMS-Organisations-ID]**: Die Organisation, zu der der Datenfluss gehört.
 - **[!UICONTROL Letzte Aktualisierung]**: Der Zeitpunkt, zu dem der Datenfluss zuletzt aktualisiert wurde.
 
 Auf der Detailseite können Sie auch zwischen Datenfluss-Ausführungsfehlern und Zielgruppen wechseln. Diese Option ist nur für Datenfluss-Ausführungen in Batch-Zielen verfügbar.
 
-Die Ansicht &quot;Fehler bei Datenfluss-Ausführung&quot;zeigt eine Liste der Identitäten an, die fehlgeschlagen sind, und Identitäten, die ausgeschlossen wurden. Es werden Informationen für die fehlgeschlagenen und ausgeschlossenen Identitäten angezeigt, einschließlich Fehlercode, Identitätsanzahl und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Identitäten angezeigt. Um übersprungene Identitäten anzuzeigen, wählen Sie die **[!UICONTROL Ausgeschlossene Identitäten]** umschalten.
+Die Ansicht &quot;Fehler bei Datenfluss-Ausführung&quot;zeigt eine Liste der Identitäten an, die fehlgeschlagen sind, und Identitäten, die ausgeschlossen wurden. Es werden Informationen für die fehlgeschlagenen und ausgeschlossenen Identitäten angezeigt, einschließlich Fehlercode, Identitätsanzahl und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Identitäten angezeigt. Um übersprungene Identitäten anzuzeigen, wählen Sie den Umschalter **[!UICONTROL Ausgeschlossene Identitäten]** aus.
 
-![In der Überwachungsansicht hervorgehobene Identitäten werden ausgeschlossen umgeschaltet](../assets/ui/monitor-destinations/identities-excluded.png)
+![Ausgeschlossene Identitäten - Umschalter, der in der Überwachungsansicht hervorgehoben ist](../assets/ui/monitor-destinations/identities-excluded.png)
 
-Wann **[!UICONTROL Zielgruppen]** ausgewählt ist, wird eine Liste der Zielgruppen angezeigt, die im ausgewählten Datenfluss aktiviert wurden. Dieser Bildschirm enthält Informationen auf Zielgruppenebene über die aktivierten Identitäten, die ausgeschlossenen Identitäten sowie den Status und die Uhrzeit des letzten Datenflusses.
+Wenn **[!UICONTROL Zielgruppen]** ausgewählt ist, wird eine Liste der Zielgruppen angezeigt, die im ausgewählten Datenfluss aktiviert wurden. Dieser Bildschirm enthält Informationen auf Zielgruppenebene über die aktivierten Identitäten, die ausgeschlossenen Identitäten sowie den Status und die Uhrzeit des letzten Datenflusses.
 
-![Zielgruppenansicht im Bildschirm mit den Ausführungsdetails des Datenflusses.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+![Ansicht &quot;Zielgruppen&quot;im Bildschirm mit den Ausführungsdetails des Datenflusses.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch erfahren Sie jetzt, wie Sie Datenflüsse für Batch- und Streaming-Ziele überwachen können, einschließlich aller relevanten Informationen wie Verarbeitungszeit, Aktivierungsrate und Status. Weitere Informationen zu Datenflüssen in Platform finden Sie in der [Datenflüsse - Übersicht](../home.md). Weitere Informationen zu Zielen finden Sie im Abschnitt [Ziele - Übersicht](../../destinations/home.md).
+In diesem Handbuch erfahren Sie jetzt, wie Sie Datenflüsse für Batch- und Streaming-Ziele überwachen können, einschließlich aller relevanten Informationen wie Verarbeitungszeit, Aktivierungsrate und Status. Weiterführende Informationen zu Datenflüssen in Platform finden Sie in der [Übersicht über Datenflüsse](../home.md) . Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../../destinations/home.md).

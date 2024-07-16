@@ -1,20 +1,20 @@
 ---
-title: Erstellen einer Amazon Kinesis-Quellverbindung mithilfe der Flow Service-API
+title: Erstellen einer Amazon Kinesis Source-Verbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einer Amazon Kinesis-Quelle herstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 66%
+source-wordcount: '726'
+ht-degree: 59%
 
 ---
 
-# Erstellen Sie eine [!DNL Amazon Kinesis] Quellverbindung mit der Flow Service-API
+# Erstellen einer [!DNL Amazon Kinesis]-Quellverbindung mit der Flow Service-API
 
 >[!IMPORTANT]
 >
->Die [!DNL Amazon Kinesis] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die Quelle &quot;[!DNL Amazon Kinesis]&quot; steht Benutzern, die Real-time Customer Data Platform Ultimate erworben haben, im Quellkatalog zur Verfügung.
 
 Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Amazon Kinesis] (nachstehend „[!DNL Kinesis]“ genannt) mit Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -22,23 +22,23 @@ Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Amazon Kinesis
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md)[!DNL Platform]: Experience ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
-* [Sandboxes](../../../../../sandboxes/home.md)[!DNL Platform]: Experience bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform stellt virtuelle Sandboxes bereit, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Kinesis] mithilfe der [!DNL Flow Service]-API erfolgreich mit Platform verbinden zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Zur [!DNL Flow Service] , um eine Verbindung mit Ihrer [!DNL Amazon Kinesis] -Konto angeben, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung zu Ihrem [!DNL Amazon Kinesis]-Konto herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `accessKeyId` | Die Zugriffsschlüssel-ID entspricht der Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihrer [!DNL Kinesis] -Konto auf Platform. |
-| `secretKey` | Der geheime Zugriffsschlüssel ist die andere Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihrer [!DNL Kinesis] -Konto auf Platform. |
-| `region` | Die Region für Ihre [!DNL Kinesis] -Konto. Siehe Handbuch unter [Hinzufügen von IP-Adressen zu Ihrer Zulassungsliste](../../../../ip-address-allow-list.md) für weitere Informationen über Regionen. |
+| `accessKeyId` | Die Zugriffsschlüssel-ID entspricht der Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Platform verwendet wird. |
+| `secretKey` | Der geheime Zugriffsschlüssel ist die andere Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Platform verwendet wird. |
+| `region` | Die Region für Ihr [!DNL Kinesis]-Konto. Weitere Informationen zu Regionen finden Sie im Handbuch zum Hinzufügen von IP-Adressen zu Ihrer Zulassungsliste ](../../../../ip-address-allow-list.md) .[ |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Spezifikations-ID der [!DNL Kinesis]-Verbindung lautet: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
-Weitere Informationen unter [!DNL Kinesis] Zugriffsschlüssel und deren Erstellung; siehe [[!DNL AWS] Handbuch zum Verwalten von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Weitere Informationen zu [!DNL Kinesis]-Zugriffsschlüsseln und deren Generierung finden Sie in diesem [[!DNL AWS]  Handbuch zur Verwaltung von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/de_de/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Verwenden von Platform-APIs
 
@@ -87,9 +87,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID für Ihre [!DNL Kinesis] -Konto. |
-| `auth.params.secretKey` | Der geheime Zugriffsschlüssel für Ihre [!DNL Kinesis] -Konto. |
-| `auth.params.region` | Die Region für Ihre [!DNL Kinesis] -Konto. |
+| `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID für Ihr [!DNL Kinesis]-Konto. |
+| `auth.params.secretKey` | Der geheime Zugriffsschlüssel für Ihr [!DNL Kinesis] -Konto. |
+| `auth.params.region` | Die Region für Ihr [!DNL Kinesis]-Konto. |
 | `connectionSpec.id` | Die [!DNL Kinesis]-Verbindungsspezifikations-ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Antwort**
@@ -153,7 +153,7 @@ curl -X POST \
 | `data.format` | Das Format der [!DNL Kinesis]-Daten, die Sie aufnehmen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
 | `params.stream` | Der Name des Datenstreams, aus dem Datensätze abgerufen werden sollen. |
 | `params.dataType` | Dieser Parameter definiert den Typ der aufgenommenen Daten. Zu den unterstützten Datentypen gehören: `raw` und `xdm`. |
-| `params.reset` | Dieser Parameter definiert, wie die Daten gelesen werden. Verwendung `latest` , um mit dem Lesen der neuesten Daten zu beginnen, und verwenden Sie `earliest` , um mit dem Lesen der ersten verfügbaren Daten im Stream zu beginnen. |
+| `params.reset` | Dieser Parameter definiert, wie die Daten gelesen werden. Verwenden Sie `latest` , um mit dem Lesen der neuesten Daten zu beginnen, und verwenden Sie `earliest`, um mit dem Lesen der ersten verfügbaren Daten im Stream zu beginnen. |
 
 **Antwort**
 

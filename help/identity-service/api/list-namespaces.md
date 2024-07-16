@@ -33,7 +33,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces mit einem &quot;&quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; sind Standard-Namespaces, während diejenigen mit einem &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; sind Namespaces, die Ihre Organisation erstellt hat.
+Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces mit dem Wert &quot;[!UICONTROL custom]&quot;von &quot;[!UICONTROL false]&quot;sind Standard-Namespaces, während Namespaces mit dem Wert &quot;[!UICONTROL custom]&quot;mit dem Wert &quot;[!UICONTROL true]&quot;Namespaces sind, die von Ihrem Unternehmen erstellt wurden.
 
 >[!NOTE]
 >

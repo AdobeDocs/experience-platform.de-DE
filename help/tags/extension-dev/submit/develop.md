@@ -4,8 +4,8 @@ description: Dieses Dokument bietet einen allgemeinen Überblick über den Entwi
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 100%
+source-wordcount: '473'
+ht-degree: 97%
 
 ---
 
@@ -29,7 +29,7 @@ Wenn ein Plan vorhanden ist, können diese Anleitungen Ihnen helfen, den Entwick
 * Artikel [JSON-Schema verstehen](https://spacetelescope.github.io/understanding-json-schema/index.html#).
 * [JSON Lint/Validator](https://jsonlint.com/).
 * [JSON-Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome-Erweiterung zum Hervorheben und Drucken von JSON &amp; JSONP.
-* [jsonschema.net](https://jsonschema.net/#/editor) Editor, um ein JSON-Schema von Ihrem Objekt zu erstellen.
+* Der Editor [jsonschema.net](https://jsonschema.net/#/editor) hilft beim Erstellen eines JSON-Schemas aus Ihrem Objekt.
 * [JSON-Schema-Validator](https://www.jsonschemavalidator.net) Ein interaktiver JSON-Schema-Online-Validator.
 
 ## Werkzeuge

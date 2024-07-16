@@ -12,27 +12,27 @@ ht-degree: 0%
 
 # Integrieren der IAB TCF 2.0-Unterstützung in das Platform Web SDK
 
-In diesem Handbuch wird gezeigt, wie das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0), ohne Tags mit dem Adobe Experience Platform Web SDK integriert werden kann. Eine Übersicht über die Integration mit IAB TCF 2.0 finden Sie im Abschnitt [Übersicht](./overview.md). Eine Anleitung zur Integration mit Tags finden Sie im Abschnitt [IAB TCF 2.0-Handbuch für Tags](./with-tags.md).
+In diesem Handbuch wird gezeigt, wie das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0), ohne Tags mit dem Adobe Experience Platform Web SDK integriert werden kann. Eine Übersicht über die Integration mit IAB TCF 2.0 finden Sie in der [Übersicht](./overview.md) . Eine Anleitung zur Integration mit Tags finden Sie im [IAB TCF 2.0-Handbuch für Tags](./with-tags.md).
 
 ## Erste Schritte
 
-In diesem Handbuch werden die `__tcfapi` -Schnittstelle für den Zugriff auf die Zustimmungsinformationen. Die direkte Integration mit Ihrem Cloud Management-Provider (CMP) kann für Sie einfacher sein. Die Informationen in diesem Handbuch können jedoch weiterhin nützlich sein, da die CMPs im Allgemeinen ähnliche Funktionen wie die TCF-API bieten.
+In diesem Handbuch wird die `__tcfapi` -Benutzeroberfläche für den Zugriff auf die Zustimmungsinformationen verwendet. Die direkte Integration mit Ihrem Cloud Management-Provider (CMP) kann für Sie einfacher sein. Die Informationen in diesem Handbuch können jedoch weiterhin nützlich sein, da die CMPs im Allgemeinen ähnliche Funktionen wie die TCF-API bieten.
 
 >[!NOTE]
 >
->Bei diesen Beispielen wird davon ausgegangen, dass zum Zeitpunkt der Ausführung des Codes `window.__tcfapi` wird auf der Seite definiert. CMPs können einen Hook bereitstellen, mit dem Sie diese Funktionen ausführen können, wenn die `__tcfapi` -Objekt bereit ist.
+>In diesen Beispielen wird davon ausgegangen, dass bei Ausführung des Codes `window.__tcfapi` auf der Seite definiert ist. CMPs können einen Hook bereitstellen, mit dem Sie diese Funktionen ausführen können, wenn das `__tcfapi` -Objekt bereit ist.
 
 Um das IAB TCF 2.0 mit Tags und die Adobe Experience Platform Web SDK-Erweiterung zu verwenden, benötigen Sie ein XDM-Schema. Wenn Sie keines dieser beiden Optionen eingerichtet haben, sehen Sie sich diese Seite an, bevor Sie fortfahren.
 
-Darüber hinaus setzt dieses Handbuch ein Verständnis des Adobe Experience Platform Web SDK voraus. Für einen schnellen Auffrischungskurs lesen Sie bitte die [Übersicht über das Adobe Experience Platform Web SDK](../../home.md) und [Häufig gestellte Fragen](../../faq.md) Dokumentation.
+Darüber hinaus setzt dieses Handbuch ein Verständnis des Adobe Experience Platform Web SDK voraus. Einen schnellen Auffrischungskurs finden Sie in der [Übersicht über das Adobe Experience Platform Web SDK](../../home.md) - und der Dokumentation zu [Häufig gestellten Fragen](../../faq.md) .
 
 ## Standardzustimmung aktivieren
 
-Wenn Sie alle unbekannten Benutzer gleich behandeln möchten, können Sie [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) nach `pending` oder `out`. Dadurch werden Erlebnisereignisse in die Warteschlange gestellt oder verworfen, bis Zustimmungseinstellungen empfangen wurden.
+Wenn Sie alle unbekannten Benutzer gleich behandeln möchten, können Sie [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) auf `pending` oder `out` setzen. Dadurch werden Erlebnisereignisse in die Warteschlange gestellt oder verworfen, bis Zustimmungseinstellungen empfangen wurden.
 
-### Festlegen der Standardzustimmung basierend auf `gdprApplies`
+### Festlegen der standardmäßigen Einwilligung basierend auf `gdprApplies`
 
-Einige CMPs bieten die Möglichkeit festzustellen, ob die Datenschutz-Grundverordnung (DSGVO) für den Kunden gilt. Wenn Sie die Zustimmung für Kunden übernehmen möchten, für die die DSGVO nicht gilt, können Sie die `gdprApplies` -Markierung im TCF-API-Aufruf.
+Einige CMPs bieten die Möglichkeit festzustellen, ob die Datenschutz-Grundverordnung (DSGVO) für den Kunden gilt. Wenn Sie die Zustimmung für Kunden annehmen möchten, für die die DSGVO nicht gilt, können Sie die Markierung `gdprApplies` im TCF-API-Aufruf verwenden.
 
 Das folgende Beispiel zeigt eine Möglichkeit, dies zu tun:
 
@@ -46,11 +46,11 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-In diesem Beispiel wird die `configure` aufgerufen wird, nachdem die `tcData` wird von der TCF-API abgerufen. Wenn `gdprApplies` auf &quot;true&quot;gesetzt ist, wird die Standardzustimmung auf `pending`. Wenn `gdprApplies` ist &quot;false&quot;, ist die standardmäßige Zustimmung auf `in`. Vergewissern Sie sich, dass Sie die `alloyConfiguration` mit Ihrer Konfiguration.
+In diesem Beispiel wird der Befehl `configure` aufgerufen, nachdem `tcData` von der TCF-API abgerufen wurde. Wenn `gdprApplies` wahr ist, wird die Standardzustimmung auf `pending` gesetzt. Wenn `gdprApplies` falsch ist, wird die Standardzustimmung auf `in` gesetzt. Stellen Sie sicher, dass Sie die Variable `alloyConfiguration` mit Ihrer Konfiguration ausfüllen.
 
 >[!NOTE]
 >
->Wenn die standardmäßige Zustimmung auf `in`, die `setConsent` kann weiterhin verwendet werden, um die Zustimmungsvoreinstellungen Ihrer Kunden aufzuzeichnen.
+>Wenn die Standardzustimmung auf `in` festgelegt ist, kann der Befehl `setConsent` weiterhin verwendet werden, um die Zustimmungseinstellungen Ihrer Kunden aufzuzeichnen.
 
 ## Verwenden des Ereignisses setConsent
 
@@ -77,13 +77,13 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-Dieser Codeblock überwacht die `useractioncomplete` -Ereignis und legt dann die Zustimmung fest, wobei die Zustimmungszeichenfolge und die `gdprApplies` Markierung. Wenn Sie benutzerdefinierte Identitäten für Ihre Kunden haben, füllen Sie `identityMap` -Variable. Weitere Informationen finden Sie im Handbuch unter [setConsent](../../../web-sdk/commands/setconsent.md) für weitere Informationen.
+Dieser Codeblock überwacht das `useractioncomplete` -Ereignis und legt dann die Zustimmung fest, wobei die Zustimmungszeichenfolge und die `gdprApplies` -Markierung übergeben werden. Wenn Sie benutzerdefinierte Identitäten für Ihre Kunden haben, stellen Sie sicher, dass Sie die Variable `identityMap` ausfüllen. Weitere Informationen finden Sie im Handbuch zu [setConsent](../../../web-sdk/commands/setconsent.md) .
 
 ## Einschließen von Einwilligungsinformationen in sendEvent
 
 In XDM-Schemas können Sie Informationen zu Zustimmungsvoreinstellungen aus Experience Events speichern. Es gibt zwei Möglichkeiten, diese Informationen zu jedem Ereignis hinzuzufügen.
 
-Zuerst können Sie das relevante XDM-Schema für jede `sendEvent` aufrufen. Das folgende Beispiel zeigt eine Möglichkeit, dies zu tun:
+Zunächst können Sie bei jedem `sendEvent` -Aufruf das relevante XDM-Schema angeben. Das folgende Beispiel zeigt eine Möglichkeit, dies zu tun:
 
 ```javascript
 var sendEventOptions = { ... };
@@ -102,8 +102,8 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 Dieses Beispiel ruft die Zustimmungsinformationen für die TCF-API ab und sendet dann ein Ereignis mit den Zustimmungsinformationen, die zum XDM-Schema hinzugefügt wurden.
 
-Die andere Möglichkeit, die Zustimmungsinformationen zu jeder Anfrage hinzuzufügen, ist mit der [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) Callback.
+Die andere Möglichkeit, die Zustimmungsinformationen zu jeder Anfrage hinzuzufügen, ist der Rückruf [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) .
 
 ## Nächste Schritte
 
-Nachdem Sie jetzt gelernt haben, wie Sie IAB TCF 2.0 mit der Platform Web SDK-Erweiterung verwenden, können Sie auch mit anderen Adobe-Lösungen wie Adobe Analytics oder Adobe Real-time Customer Data Platform integrieren. Siehe [Übersicht über das IAB Transparency &amp; Consent Framework 2.0](./overview.md) für weitere Informationen.
+Nachdem Sie jetzt gelernt haben, wie Sie IAB TCF 2.0 mit der Platform Web SDK-Erweiterung verwenden, können Sie auch mit anderen Adobe-Lösungen wie Adobe Analytics oder Adobe Real-time Customer Data Platform integrieren. Weitere Informationen finden Sie in der Übersicht über das [IAB Transparency &amp; Consent Framework 2.0](./overview.md) .

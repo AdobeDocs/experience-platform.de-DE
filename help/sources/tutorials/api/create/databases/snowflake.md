@@ -14,11 +14,11 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Die [!DNL Snowflake] -Quelle ist im Quellkatalog für Benutzer verfügbar, die Real-time Customer Data Platform Ultimate erworben haben.
+>Die Quelle &quot;[!DNL Snowflake]&quot; steht Benutzern, die Real-time Customer Data Platform Ultimate erworben haben, im Quellkatalog zur Verfügung.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Verwenden Sie das folgende Tutorial, um zu erfahren, wie Sie eine Basisverbindung für [!DNL Snowflake] mithilfe der [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Verwenden Sie das folgende Tutorial, um zu erfahren, wie Sie mit der [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>) eine Basisverbindung für [!DNL Snowflake] erstellen.
 
 ## Erste Schritte
 
@@ -31,52 +31,52 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-Im folgenden Abschnitt finden Sie weitere Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Snowflake] mithilfe der [!DNL Flow Service] API.
+Im folgenden Abschnitt finden Sie weitere Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Snowflake] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
-Sie müssen Werte für die folgenden Berechtigungseigenschaften angeben, um Ihre [!DNL Snowflake] -Quelle.
+Sie müssen Werte für die folgenden Berechtigungseigenschaften angeben, um Ihre [!DNL Snowflake] -Quelle zu authentifizieren.
 
 >[!BEGINTABS]
 
->[!TAB Kontoschlüsselauthentifizierung]
+>[!TAB Authentifizierung des Kontoschlüssels]
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `account` | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto eindeutig über verschiedene [!DNL Snowflake] Organisationen. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu den Kontonamen finden Sie im Abschnitt [!DNL Snowflake] Dokumentation zu [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `warehouse` | Die [!DNL Snowflake] Warehouse verwaltet den Prozess der Ausführung der Abfrage für die Anwendung. Jeder [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
-| `database` | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an Platform übermitteln möchten. |
-| `username` | Der Benutzername für die [!DNL Snowflake] -Konto. |
-| `password` | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
-| `role` | Die standardmäßige Zugriffssteuerungsrolle, die in der [!DNL Snowflake] Sitzung. Die Rolle sollte eine bestehende sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle lautet `PUBLIC`. |
-| `connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Snowflake] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
+| `account` | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto für verschiedene [!DNL Snowflake] -Organisationen eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu Kontonamen finden Sie in der Dokumentation [!DNL Snowflake] unter [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `warehouse` | Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
+| `database` | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an die Plattform übermitteln möchten. |
+| `username` | Der Benutzername für das [!DNL Snowflake]-Konto. |
+| `password` | Das Kennwort für das [!DNL Snowflake] -Benutzerkonto. |
+| `role` | Die standardmäßige Zugriffssteuerungsrolle, die in der [!DNL Snowflake] -Sitzung verwendet werden soll. Die Rolle sollte eine bestehende sein, die dem angegebenen Benutzer bereits zugewiesen wurde. Die Standardrolle ist `PUBLIC`. |
+| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Snowflake]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] ist `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 >[!TAB Authentifizierung mit Schlüsselpaaren]
 
-Um die Schlüsselpaar-Authentifizierung zu verwenden, müssen Sie ein 2048-Bit-RSA-Schlüsselpaar generieren und dann beim Erstellen eines Kontos für Ihre [!DNL Snowflake] -Quelle.
+Um die Schlüsselpaar-Authentifizierung zu verwenden, müssen Sie ein 2048-Bit-RSA-Schlüsselpaar generieren und dann beim Erstellen eines Kontos für Ihre [!DNL Snowflake]-Quelle die folgenden Werte angeben.
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `account` | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto eindeutig über verschiedene [!DNL Snowflake] Organisationen. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu den Kontonamen finden Sie im Abschnitt [!DNL Snowflake] Dokumentation zu [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `username` | Der Benutzername Ihres [!DNL Snowflake] -Konto. |
-| `privateKey` | Die [!DNL Base64-]kodierter privater Schlüssel Ihres [!DNL Snowflake] -Konto. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie bei der Authentifizierung bei Experience Platform auch eine Passphrase für den privaten Schlüssel angeben. |
+| `account` | Ein Kontoname identifiziert ein Konto in Ihrer Organisation eindeutig. In diesem Fall müssen Sie ein Konto für verschiedene [!DNL Snowflake] -Organisationen eindeutig identifizieren. Dazu müssen Sie dem Kontonamen den Namen Ihres Unternehmens voranstellen. Beispiel: `orgname-account_name`. Weitere Informationen zu Kontonamen finden Sie in der Dokumentation [!DNL Snowflake] unter [Kontokennung](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | Der Benutzername Ihres [!DNL Snowflake]-Kontos. |
+| `privateKey` | Der [!DNL Base64-]kodierte private Schlüssel Ihres [!DNL Snowflake]-Kontos. Sie können entweder verschlüsselte oder unverschlüsselte private Schlüssel generieren. Wenn Sie einen verschlüsselten privaten Schlüssel verwenden, müssen Sie bei der Authentifizierung bei Experience Platform auch eine Passphrase für den privaten Schlüssel angeben. |
 | `privateKeyPassphrase` | Die Passphrase des privaten Schlüssels ist eine zusätzliche Sicherheitsebene, die Sie bei der Authentifizierung mit einem verschlüsselten privaten Schlüssel verwenden müssen. Sie müssen die Passphrase nicht bereitstellen, wenn Sie einen unverschlüsselten privaten Schlüssel verwenden. |
 | `database` | Die [!DNL Snowflake] -Datenbank, die die Daten enthält, die Sie auf Experience Platform erfassen möchten. |
-| `warehouse` | Die [!DNL Snowflake] Warehouse verwaltet den Prozess der Ausführung der Abfrage für die Anwendung. Jeder [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Experience Platform übermittelt werden. |
+| `warehouse` | Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Experience Platform übermittelt werden. |
 
-Weitere Informationen zu diesen Werten finden Sie im Abschnitt [[!DNL Snowflake] Authentifizierungshandbuch für Schlüsselpaare](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+Weitere Informationen zu diesen Werten finden Sie im [[!DNL Snowflake] Authentifizierungshandbuch für Schlüsselpaare](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->Sie müssen die `PREVENT_UNLOAD_TO_INLINE_URL` Markierung auf `FALSE` , um das Entladen von Daten aus Ihrem [!DNL Snowflake] Datenbank zu Experience Platform.
+>Sie müssen die `PREVENT_UNLOAD_TO_INLINE_URL` -Markierung auf `FALSE` setzen, damit das Entladen von Daten aus Ihrer [!DNL Snowflake]-Datenbank auf Experience Platform zugelassen wird.
 
 ## Erstellen einer Basisverbindung
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt beim Bereitstellen [!DNL Snowflake] Authentifizierungsberechtigungen als Teil des Anfragetexts.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL Snowflake]-Authentifizierungsdaten als Teil des Anfragetexts an.
 
 **API-Format**
 
@@ -118,7 +118,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL Snowflake] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Snowflake]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Snowflake] ist `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
 | `connectionSpec.id` | Die [!DNL Snowflake] Verbindungsspezifikations-ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 +++
@@ -172,12 +172,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.account` | Der Name Ihres [!DNL Snowflake] -Konto. |
-| `auth.params.username` | Der mit Ihrer [!DNL Snowflake] -Konto. |
-| `auth.params.database` | Die [!DNL Snowflake] Datenbank, aus der die Daten abgerufen werden. |
-| `auth.params.privateKey` | Die [!DNL Base64-]verschlüsselter privater Schlüssel Ihres [!DNL Snowflake] -Konto. |
+| `auth.params.account` | Der Name Ihres [!DNL Snowflake]-Kontos. |
+| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Snowflake] -Konto zugeordnet ist. |
+| `auth.params.database` | Die [!DNL Snowflake]-Datenbank, aus der die Daten abgerufen werden. |
+| `auth.params.privateKey` | Der [!DNL Base64-]kodierte verschlüsselte private Schlüssel Ihres [!DNL Snowflake]-Kontos. |
 | `auth.params.privateKeyPassphrase` | Die Passphrase, die Ihrem privaten Schlüssel entspricht. |
-| `auth.params.warehouse` | Die [!DNL Snowflake] -Warehouse verwenden. |
+| `auth.params.warehouse` | Das von Ihnen verwendete [!DNL Snowflake]-Warehouse. |
 | `connectionSpec.id` | Die [!DNL Snowflake] Verbindungsspezifikations-ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 +++
@@ -229,11 +229,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.account` | Der Name Ihres [!DNL Snowflake] -Konto. |
-| `auth.params.username` | Der mit Ihrer [!DNL Snowflake] -Konto. |
-| `auth.params.database` | Die [!DNL Snowflake] Datenbank, aus der die Daten abgerufen werden. |
-| `auth.params.privateKey` | Die [!DNL Base64-]verschlüsselter, unverschlüsselter privater Schlüssel Ihres [!DNL Snowflake] -Konto. |
-| `auth.params.warehouse` | Die [!DNL Snowflake] -Warehouse verwenden. |
+| `auth.params.account` | Der Name Ihres [!DNL Snowflake]-Kontos. |
+| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Snowflake] -Konto zugeordnet ist. |
+| `auth.params.database` | Die [!DNL Snowflake]-Datenbank, aus der die Daten abgerufen werden. |
+| `auth.params.privateKey` | Der [!DNL Base64-]-kodierte, unverschlüsselte private Schlüssel Ihres [!DNL Snowflake]-Kontos. |
+| `auth.params.warehouse` | Das von Ihnen verwendete [!DNL Snowflake]-Warehouse. |
 | `connectionSpec.id` | Die [!DNL Snowflake] Verbindungsspezifikations-ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 +++
@@ -256,4 +256,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 In diesem Tutorial haben Sie eine [!DNL Snowflake]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Datenbankdaten mit der [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Erstellen Sie einen Datenfluss, um Datenbankdaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/database-nosql.md)

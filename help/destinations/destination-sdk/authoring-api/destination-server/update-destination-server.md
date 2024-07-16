@@ -4,7 +4,7 @@ title: Aktualisieren einer Ziel-Server-Konfiguration
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1101'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,7 @@ Auf dieser Seite werden die API-Anfrage und die Payload erläutert, die Sie verw
 
 >[!TIP]
 >
->Jeder Aktualisierungsvorgang für produktbezogene/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Publishing-API](../../publishing-api/create-publishing-request.md) verwendet und die Aktualisierung zur Überprüfung durch Adobe eingereicht haben.
+>Jeder Aktualisierungsvorgang für produktbezogene/öffentliche Ziele ist erst sichtbar, nachdem Sie die [Veröffentlichungs-API](../../publishing-api/create-publishing-request.md) verwendet und die Aktualisierung zur Überprüfung durch Adobe eingereicht haben.
 
 Eine ausführliche Beschreibung der Funktionen, die Sie über diesen Endpunkt konfigurieren können, finden Sie in den folgenden Artikeln:
 

@@ -21,7 +21,7 @@ Es gibt mehrere Zieltypen in Experience Platform, wie in der Abbildung unten dar
 
 ## Nachrichtenaggregation in Streaming-Zielen
 
-Bevor Sie sich mit bestimmten Informationen nach Zieltyp befassen, sollten Sie sich mit dem Konzept der Nachrichtenaggregation für *Streaming-Ziele*.
+Bevor Sie sich mit bestimmten Informationen nach Zieltyp befassen, sollten Sie sich mit dem Konzept der Nachrichtenaggregation für *Streaming-Ziele* vertraut machen.
 
 Experience Platform-Ziele exportieren Daten an API-basierte Integrationen in Form von HTTPS-Aufrufen. Sobald der Ziel-Service von anderen Upstream-Services darüber informiert wird, dass Profile infolge der Batch-Aufnahme, Streaming-Aufnahme, Batch-Segmentierung, Streaming-Segmentierung oder Identitätsdiagramm-Änderungen aktualisiert wurden, werden die Daten exportiert und an Streaming-Ziele gesendet.
 

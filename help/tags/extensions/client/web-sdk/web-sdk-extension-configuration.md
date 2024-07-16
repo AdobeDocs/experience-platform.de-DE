@@ -11,7 +11,7 @@ ht-degree: 5%
 
 # Konfigurieren der Web SDK-Tag-Erweiterung
 
-Die [!DNL Web SDK] Tag-Erweiterung sendet Daten von Web-Eigenschaften über das Experience Platform-Edge Network an Adobe Experience Cloud.
+Die Tag-Erweiterung [!DNL Web SDK] sendet Daten aus Webeigenschaften über das Experience Platform-Edge Network an Adobe Experience Cloud.
 
 Mit der Erweiterung können Sie Daten in Platform streamen, Identitäten synchronisieren, Zustimmungssignale von Kunden verarbeiten und automatisch Kontextdaten erfassen.
 
@@ -19,15 +19,15 @@ In diesem Dokument wird beschrieben, wie Sie die Tag-Erweiterung in der Benutzer
 
 ## Installieren der Web SDK-Tag-Erweiterung {#install}
 
-Die Web SDK-Tag-Erweiterung benötigt eine Eigenschaft, auf der installiert werden soll. Wenn Sie dies noch nicht getan haben, lesen Sie die Dokumentation unter [Erstellen einer Tag-Eigenschaft](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=de).
+Die Web SDK-Tag-Erweiterung benötigt eine Eigenschaft, auf der installiert werden soll. Wenn Sie dies noch nicht getan haben, lesen Sie die Dokumentation zum Erstellen einer Tag-Eigenschaft ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=de).[
 
-Nachdem Sie eine Eigenschaft erstellt haben, öffnen Sie die Eigenschaft und wählen Sie die **[!UICONTROL Erweiterungen]** auf der linken Seitenleiste.
+Nachdem Sie eine Eigenschaft erstellt haben, öffnen Sie die Eigenschaft und wählen Sie in der linken Seitenleiste die Registerkarte **[!UICONTROL Erweiterungen]** aus.
 
-Wählen Sie die **[!UICONTROL Katalog]** Registerkarte. Suchen Sie in der Liste der verfügbaren Erweiterungen nach der [!DNL Web SDK] Erweiterung und wählen Sie **[!UICONTROL Installieren]**.
+Wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie in der Liste der verfügbaren Erweiterungen die Erweiterung [!DNL Web SDK] und wählen Sie **[!UICONTROL Installieren]** aus.
 
 ![Bild, das die Tags-Benutzeroberfläche mit ausgewählter Web SDK-Erweiterung anzeigt](assets/web-sdk-install.png)
 
-Nach Auswahl **[!UICONTROL Installieren]** müssen Sie die Web SDK-Tag-Erweiterung konfigurieren und die Konfiguration speichern.
+Nach Auswahl von **[!UICONTROL Installieren]** müssen Sie die Web SDK-Tag-Erweiterung konfigurieren und die Konfiguration speichern.
 
 >[!NOTE]
 >
@@ -37,11 +37,11 @@ Nach Auswahl **[!UICONTROL Installieren]** müssen Sie die Web SDK-Tag-Erweiteru
 
 Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an, wo die Daten weitergeleitet werden und welche Konfigurationen auf dem Server verwendet werden sollen.
 
-![Bild mit den allgemeinen Einstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-general.png)
+![Bild, das die allgemeinen Einstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Name]**: Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer Tag-Konfiguration an mehrere Organisationen zu senden. Der Instanzname wird standardmäßig auf `alloy`. Sie können den Instanznamen jedoch in einen beliebigen gültigen JavaScript-Objektnamen ändern.
-* **[!UICONTROL Kennung der IMS-Organisation]**: Die ID der Organisation, an die die Daten bei der Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
-* **[!UICONTROL Edge-Domain]**: Die Domäne, von der die Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieterdomäne (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
+* **[!UICONTROL Name]**: Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer Tag-Konfiguration an mehrere Organisationen zu senden. Der Instanzname ist standardmäßig auf `alloy` eingestellt. Sie können den Instanznamen jedoch in einen beliebigen gültigen JavaScript-Objektnamen ändern.
+* **[!UICONTROL IMS-Organisations-ID]**: Die ID der Organisation, an die die Daten bei der Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
+* **[!UICONTROL Edge-Domäne]**: Die Domäne, von der die Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieterdomäne (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
 
 ## Konfigurieren von Datenspeichereinstellungen {#datastreams}
 
@@ -49,9 +49,9 @@ In diesem Abschnitt können Sie die Datenspeicher auswählen, die für jede der 
 
 Wenn eine Anforderung an das Edge Network gesendet wird, wird eine Datastream-ID verwendet, um auf die serverseitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
-Siehe Handbuch unter [datastreams](../../../../datastreams/overview.md) , um zu erfahren, wie Sie einen Datastream konfigurieren.
+Informationen zum Konfigurieren eines Datenspeichers finden Sie im Handbuch zu [datastreams](../../../../datastreams/overview.md) .
 
-Sie können entweder einen Datenspeicher aus den verfügbaren Dropdownmenüs auswählen oder **[!UICONTROL Werte eingeben]** und geben Sie eine benutzerdefinierte Datastream-ID für jede Umgebung ein.
+Sie können entweder einen Datastream aus den verfügbaren Dropdownmenüs auswählen oder **[!UICONTROL Werte eingeben]** und eine benutzerdefinierte Datastraam-ID für jede Umgebung eingeben.
 
 ![Bild, das die Datastream-Einstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/web-sdk-ext-datastreams.png)
 
@@ -63,37 +63,37 @@ Die standardmäßige Zustimmungsstufe wird nicht im Benutzerprofil gespeichert.
 
 ![Bild, das die Datenschutzeinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/web-sdk-ext-privacy.png)
 
-| [!UICONTROL Standardeinverständnisebene] | Beschreibung |
+| [!UICONTROL Standardmäßige Zustimmungsstufe] | Beschreibung |
 | --- | --- |
-| [!UICONTROL In] | Erfassen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
-| [!UICONTROL Out] | Verwerfen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
+| [!UICONTROL in] | Erfassen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
+| [!UICONTROL out] | Verwerfen Sie Ereignisse, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. |
 | [!UICONTROL Ausstehend] | Einreihen von Ereignissen in die Warteschlange, die auftreten, bevor der Benutzer Zustimmungsvoreinstellungen bereitstellt. Wenn Zustimmungsvoreinstellungen angegeben werden, werden die Ereignisse abhängig von den bereitgestellten Voreinstellungen erfasst oder verworfen. |
 | [!UICONTROL Wird vom Datenelement bereitgestellt] | Die standardmäßige Zustimmungsstufe wird durch ein separates Datenelement bestimmt, das Sie definieren. Bei Verwendung dieser Option müssen Sie das Datenelement über das bereitgestellte Dropdown-Menü angeben. |
 
 >[!TIP]
 >
->Verwendung **[!UICONTROL Out]** oder **[!UICONTROL Ausstehend]** , wenn Sie eine ausdrückliche Benutzerzustimmung für Ihre Geschäftsvorgänge benötigen.
+>Verwenden Sie **[!UICONTROL Out]** oder **[!UICONTROL Ausstehend]** , wenn Sie eine ausdrückliche Benutzerzustimmung für Ihre Geschäftsvorgänge benötigen.
 
 ## Identitätseinstellungen konfigurieren {#identity}
 
 In diesem Abschnitt können Sie das Verhalten des Web SDK bezüglich der Handhabung der Benutzeridentifizierung definieren.
 
-![Bild mit den Identitätseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-identity.png)
+![Bild, das die Identitätseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/web-sdk-ext-identity.png)
 
-* **[!UICONTROL Migrieren der ECID aus der VisitorAPI]**: Diese Option ist standardmäßig aktiviert. Wenn diese Funktion aktiviert ist, kann das SDK die `AMCV` und `s_ecid` Cookies und legen Sie die `AMCV` von [!DNL Visitor.js]. Diese Funktion ist bei der Migration zum Web SDK wichtig, da einige Seiten möglicherweise weiterhin verwenden. [!DNL Visitor.js]. Mit dieser Option kann das SDK weiterhin dieselbe [!DNL ECID] sodass Benutzer nicht als zwei getrennte Benutzer identifiziert werden.
-* **[!UICONTROL Verwenden von Drittanbieter-Cookies]**: Wenn diese Option aktiviert ist, versucht das Web SDK, eine Benutzer-ID in einem Drittanbieter-Cookie zu speichern. Bei erfolgreicher Ausführung wird der Benutzer als einzelner Benutzer identifiziert, der über mehrere Domänen navigiert, anstatt für jede Domäne als separater Benutzer identifiziert zu werden. Wenn diese Option aktiviert ist, kann das SDK die Benutzer-ID möglicherweise weiterhin nicht in einem Drittanbieter-Cookie speichern, wenn der Browser keine Drittanbieter-Cookies unterstützt oder vom Benutzer so konfiguriert wurde, dass keine Drittanbieter-Cookies zugelassen werden. In diesem Fall speichert das SDK die Kennung nur in der Erstanbieterdomäne.
+* **[!UICONTROL ECID aus VisitorAPI migrieren]**: Diese Option ist standardmäßig aktiviert. Wenn diese Funktion aktiviert ist, kann das SDK die `AMCV` - und `s_ecid` -Cookies lesen und das von [!DNL Visitor.js] verwendete `AMCV` -Cookie setzen. Diese Funktion ist bei der Migration zum Web SDK wichtig, da einige Seiten möglicherweise weiterhin [!DNL Visitor.js] verwenden. Mit dieser Option kann das SDK weiterhin denselben [!DNL ECID] verwenden, sodass Benutzer nicht als zwei separate Benutzer identifiziert werden.
+* **[!UICONTROL Drittanbieter-Cookies verwenden]**: Wenn diese Option aktiviert ist, versucht das Web SDK, eine Benutzer-ID in einem Drittanbieter-Cookie zu speichern. Bei erfolgreicher Ausführung wird der Benutzer als einzelner Benutzer identifiziert, der über mehrere Domänen navigiert, anstatt für jede Domäne als separater Benutzer identifiziert zu werden. Wenn diese Option aktiviert ist, kann das SDK die Benutzer-ID möglicherweise weiterhin nicht in einem Drittanbieter-Cookie speichern, wenn der Browser keine Drittanbieter-Cookies unterstützt oder vom Benutzer so konfiguriert wurde, dass keine Drittanbieter-Cookies zugelassen werden. In diesem Fall speichert das SDK die Kennung nur in der Erstanbieterdomäne.
 
   >[!IMPORTANT]
-  >>Drittanbieter-Cookies sind nicht mit dem [Erstanbieter-Geräte-ID](../../../../web-sdk/identity/first-party-device-ids.md) -Funktion im Web SDK.
+  >>Drittanbieter-Cookies sind nicht mit der Funktion [Erstanbieter-Geräte-ID](../../../../web-sdk/identity/first-party-device-ids.md) im Web SDK kompatibel.
 Sie können entweder Geräte-IDs von Erstanbietern verwenden oder Sie können Drittanbieter-Cookies verwenden, aber Sie können nicht beide Funktionen gleichzeitig verwenden.
   >
 ## Personalisierungseinstellungen konfigurieren {#personalization}
 
 In diesem Abschnitt können Sie konfigurieren, wie Sie bestimmte Teile einer Seite ausblenden möchten, während personalisierter Inhalt geladen wird. Dadurch wird sichergestellt, dass Ihre Besucher nur die personalisierte Seite sehen.
 
-![Bild mit den Personalisierungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche](assets/web-sdk-ext-personalization.png)
+![Bild, das die Personalisierungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/web-sdk-ext-personalization.png)
 
-* **[!UICONTROL Migrieren von Target von at.js zum Web SDK]**: Verwenden Sie diese Option, um [!DNL Web SDK] zum Lesen und Schreiben der alten `mbox` und `mboxEdgeCluster` von at.js verwendete Cookies `1.x` oder `2.x` -Bibliotheken. Auf diese Weise können Sie das Besucherprofil beim Wechsel von einer Seite, die das Web SDK verwendet, zu einer Seite, die at.js verwendet, beibehalten `1.x` oder `2.x` und umgekehrt.
+* **[!UICONTROL Migrieren von Target von at.js zum Web SDK]**: Mit dieser Option können Sie [!DNL Web SDK] aktivieren, die veralteten `mbox` - und `mboxEdgeCluster` -Cookies zu lesen und zu schreiben, die von at.js `1.x` - oder `2.x` -Bibliotheken verwendet werden. Auf diese Weise können Sie das Besucherprofil beibehalten, während Sie von einer Seite, die das Web SDK verwendet, zu einer Seite wechseln, die at.js `1.x` - oder `2.x` -Bibliotheken verwendet, und umgekehrt.
 
 ### Stil vorab ausblenden {#prehiding-style}
 
@@ -103,37 +103,37 @@ Mit dem Stil-Editor für die Vorab-Ausblendung können Sie benutzerdefinierte CS
 
 Das Vorabausblendungs-Snippet ist nützlich, wenn die Web SDK-Bibliothek asynchron geladen wird. In diesem Fall wird empfohlen, den Inhalt vor dem Laden der Web SDK-Bibliothek zu verbergen, um Flackern zu vermeiden.
 
-Um den Codeausschnitt zur Vorab-Ausblendung zu verwenden, kopieren Sie ihn und fügen Sie ihn in das `<head>` -Element Ihrer Seite.
+Um den Codeausschnitt zur Vorab-Ausblendung zu verwenden, kopieren Sie ihn und fügen Sie ihn in das Element `<head>` Ihrer Seite ein.
 
 >[!IMPORTANT]
 >
-Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe die Verwendung desselben [!DNL CSS] -Regel als von der [Pre-hiding-Stil](#prehiding-style).
+Bei Verwendung des Codeausschnitts zum Vorab-Ausblenden empfiehlt Adobe, dieselbe [!DNL CSS] -Regel zu verwenden wie die vom [Vorab-Ausblendestil](#prehiding-style) verwendete Regel.
 
 ## Datenerfassungseinstellungen konfigurieren {#data-collection}
 
-Verwalten Sie die Konfigurationseinstellungen für die Datenerfassung. Ähnliche Einstellungen in der JavaScript-Bibliothek sind über die [`configure`](/help/web-sdk/commands/configure/overview.md) Befehl.
+Verwalten Sie die Konfigurationseinstellungen für die Datenerfassung. Ähnliche Einstellungen in der JavaScript-Bibliothek sind mit dem Befehl [`configure`](/help/web-sdk/commands/configure/overview.md) verfügbar.
 
 ![Bild, das die Datenerfassungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt.](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Ein vor Ereignis - Rückruf senden]**: Eine Rückruffunktion zum Auswerten und Ändern der an Adobe gesendeten Payload. Verwenden Sie die `content` innerhalb der Callback-Funktion, um die Payload zu ändern. Dieser Rückruf entspricht dem Tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der JavaScript-Bibliothek.
-* **[!UICONTROL Interne Link-Klicks abrufen]**: Ein Kontrollkästchen, das die Erfassung von Linktracking-Daten für Ihre Site oder Eigenschaft aktiviert. Wenn Sie dieses Kontrollkästchen aktivieren, werden die Optionen für die Ereignisgruppierung angezeigt:
+* **[!UICONTROL On before event send callback]**: Eine Callback-Funktion zum Auswerten und Ändern der an Adobe gesendeten Payload. Verwenden Sie die Variable `content` in der Callback-Funktion, um die Payload zu ändern. Dieser Rückruf ist das Tag, das [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in der JavaScript-Bibliothek entspricht.
+* **[!UICONTROL Interne Link-Klicks erfassen]**: Ein Kontrollkästchen, mit dem die Erfassung von Linktracking-Daten innerhalb Ihrer Site oder Eigenschaft aktiviert wird. Wenn Sie dieses Kontrollkästchen aktivieren, werden die Optionen für die Ereignisgruppierung angezeigt:
    * **[!UICONTROL Keine Ereignisgruppierung]**: Linktracking-Daten werden in separaten Ereignissen an Adobe gesendet. Klicks auf Links, die in separaten Ereignissen gesendet werden, können die vertragliche Nutzung von an Adobe Experience Platform gesendeten Daten erhöhen.
    * **[!UICONTROL Ereignisgruppierung mithilfe der Sitzungsspeicherung]**: Speichern Sie Linktracking-Daten im Sitzungsspeicher bis zum nächsten Seitenereignis. Auf der folgenden Seite werden die gespeicherten Linktracking-Daten und Seitenansichtsdaten gleichzeitig an Adobe gesendet. Adobe empfiehlt, diese Einstellung beim Tracking interner Links zu aktivieren.
-   * **[!UICONTROL Ereignisgruppierung mit lokalem Objekt]**: Speichern Sie die Linktracking-Daten bis zum nächsten Seitenereignis in einem lokalen Objekt. Wenn ein Besucher zu einer neuen Seite navigiert, gehen die Linktracking-Daten verloren. Diese Einstellung ist im Kontext von Einzelseitenanwendungen am nützlichsten.
-* **[!UICONTROL Externe Link-Klicks erfassen]**: Ein Kontrollkästchen, mit dem externe Links erfasst werden können.
-* **[!UICONTROL Download-Link-Klicks abrufen]**: Ein Kontrollkästchen, mit dem die Sammlung von Downloadlinks aktiviert wird.
-* **[!UICONTROL Downloadlink-Qualifizierer]**: Ein regulärer Ausdruck, der eine Link-URL als Downloadlink qualifiziert.
-* **[!UICONTROL Klickeigenschaften filtern]**: Eine Rückruffunktion zum Auswerten und Ändern klickbezogener Eigenschaften vor der Erfassung. Diese Funktion wird vor dem [!UICONTROL Ein vor Ereignis - Rückruf senden].
-* **Kontexteinstellungen**: Erfassen Sie automatisch Besucherinformationen, mit denen bestimmte XDM-Felder für Sie gefüllt werden. Sie können **[!UICONTROL Alle standardmäßigen Kontextinformationen]** oder **[!UICONTROL Spezifische Kontextdaten]**. Dies entspricht dem Tag [`context`](/help/web-sdk/commands/configure/context.md) in der JavaScript-Bibliothek.
+   * **[!UICONTROL Ereignisgruppierung mit lokalem Objekt]**: Speichert Linktracking-Daten bis zum nächsten Seitenereignis in einem lokalen Objekt. Wenn ein Besucher zu einer neuen Seite navigiert, gehen die Linktracking-Daten verloren. Diese Einstellung ist im Kontext von Einzelseitenanwendungen am nützlichsten.
+* **[!UICONTROL Externe Link-Klicks abrufen]**: Ein Kontrollkästchen, mit dem externe Links erfasst werden können.
+* **[!UICONTROL Klicks auf Downloadlink erfassen]**: Ein Kontrollkästchen, mit dem die Sammlung von Downloadlinks aktiviert wird.
+* **[!UICONTROL Link-Qualifizierer herunterladen]**: Ein regulärer Ausdruck, der eine Link-URL als Downloadlink qualifiziert.
+* **[!UICONTROL Klickeigenschaften filtern]**: Eine Rückruffunktion zum Auswerten und Ändern klickbezogener Eigenschaften vor der Erfassung. Diese Funktion wird vor dem Rückruf [!UICONTROL Ein vor dem Ereignisversand ] ausgeführt.
+* **Kontexteinstellungen**: Erfassen Sie automatisch Besucherinformationen, mit denen bestimmte XDM-Felder für Sie gefüllt werden. Sie können **[!UICONTROL Alle standardmäßigen Kontextinformationen]** oder **[!UICONTROL Spezifische Kontextinformationen]** auswählen. Das Tag entspricht [`context`](/help/web-sdk/commands/configure/context.md) in der JavaScript-Bibliothek.
    * **[!UICONTROL Web]**: Erfasst Informationen zur aktuellen Seite.
-   * **[!UICONTROL Gerät]**: Erfasst Informationen zum Gerät des Benutzers.
+   * **[!UICONTROL Gerät]**: Erfasst Informationen über das Gerät des Benutzers.
    * **[!UICONTROL Umgebung]**: Erfasst Informationen zum Browser des Benutzers.
-   * **[!UICONTROL Ortskontext]**: Erfasst Informationen zum Standort des Benutzers.
-   * **[!UICONTROL High entropy user-agent hints]**: Erfasst detailliertere Informationen zum Gerät des Benutzers.
+   * **[!UICONTROL Kontext platzieren]**: Erfasst Informationen zum Standort des Benutzers.
+   * **[!UICONTROL Benutzer-Agent-Hinweise mit hoher Entropie]**: Erfasst detailliertere Informationen über das Gerät des Benutzers.
 
 >[!TIP]
 >
-Die **[!UICONTROL Vor dem Link klicken auf Senden]** -Feld ist ein veralteter Rückruf, der nur für Eigenschaften sichtbar ist, für die er bereits konfiguriert ist. Dies entspricht dem Tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in der JavaScript-Bibliothek. Verwenden Sie die **[!UICONTROL Klickeigenschaften filtern]** Rückruf zum Filtern oder Anpassen von Klickdaten oder zur Verwendung der **[!UICONTROL Ein vor Ereignis - Rückruf senden]** , um die an Adobe gesendete Payload zu filtern oder anzupassen. Wenn beide **[!UICONTROL Klickeigenschaften filtern]** und **[!UICONTROL Vor dem Link klicken auf Senden]** Callback festgelegt wird, wird nur die **[!UICONTROL Klickeigenschaften filtern]** Callback wird ausgeführt.
+Das Feld &quot;**[!UICONTROL Vor dem Link-Klick senden]**&quot; ist ein veralteter Rückruf, der nur für Eigenschaften sichtbar ist, für die er bereits konfiguriert wurde. Das Tag entspricht [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in der JavaScript-Bibliothek. Verwenden Sie den Rückruf **[!UICONTROL Klickeigenschaften filtern]** , um Klickdaten zu filtern oder anzupassen, oder verwenden Sie den Rückruf **[!UICONTROL Ein vor dem Ereignisversand]** , um die an Adobe gesendete Payload insgesamt zu filtern oder anzupassen. Wenn sowohl der Rückruf **[!UICONTROL Klickeigenschaften filtern]** als auch der Rückruf **[!UICONTROL Ein vor Link-Klick senden]** festgelegt sind, wird nur der Rückruf **[!UICONTROL Klickeigenschaften filtern]** ausgeführt.
 
 ## Einstellungen für die Medienerfassung konfigurieren {#media-collection}
 
@@ -141,14 +141,14 @@ Mit der Medienerfassungsfunktion können Sie Daten im Zusammenhang mit Mediensit
 
 Die erfassten Daten können Informationen zu Medienwiedergaben, Pausen, Beendigungen und anderen damit zusammenhängenden Ereignissen enthalten. Nach der Erfassung können Sie diese Daten an Adobe Experience Platform und/oder Adobe Analytics senden, um Berichte zu erstellen. Diese Funktion bietet eine umfassende Lösung zum Verfolgen und Verstehen des Verhaltens der Mediennutzung auf Ihrer Website.
 
-![Bild, das die Mediensammlungs-Einstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/media-collection.png)
+![Bild, das die Mediensammlungseinstellungen der Web SDK-Tag-Erweiterung in der Tags-Benutzeroberfläche anzeigt](assets/media-collection.png)
 
 
 * **[!UICONTROL Kanal]**: Der Name des Kanals, in dem die Mediensammlung erfolgt. Beispiel: `Video channel`.
 * **[!UICONTROL Player-Name]**: Der Name des Medienplayers.
 * **[!UICONTROL Anwendungsversion]**: Die Version der Medienplayer-Anwendung.
-* **[!UICONTROL Haupt-Ping-Intervall]**: Häufigkeit der Pings für den Hauptinhalt in Sekunden. Der Standardwert lautet `10`. Die Werte können einen Bereich von `10` nach `50` Sekunden.  Wenn kein Wert angegeben ist, wird der Standardwert bei Verwendung von [automatisch verfolgte Sitzungen](../../../../web-sdk/commands/createmediasession.md#automatic).
-* **[!UICONTROL Anzeigen-Ping-Intervall]**: Häufigkeit der Pings für Anzeigeninhalte in Sekunden. Der Standardwert lautet `10`. Die Werte können einen Bereich von `1` nach `10` Sekunden. Wenn kein Wert angegeben ist, wird der Standardwert bei Verwendung von [automatisch verfolgte Sitzungen](../../../../web-sdk/commands/createmediasession.md#automatic)
+* **[!UICONTROL Haupt-Ping-Intervall]**: Häufigkeit der Pings für den Hauptinhalt in Sekunden. Der Standardwert lautet `10`. Die Werte können zwischen `10` und `50` Sekunden liegen.  Wenn kein Wert angegeben ist, wird der Standardwert bei Verwendung von [automatisch verfolgten Sitzungen](../../../../web-sdk/commands/createmediasession.md#automatic) verwendet.
+* **[!UICONTROL Anzeigen-Ping-Intervall]**: Häufigkeit der Pings für Anzeigeninhalte in Sekunden. Der Standardwert lautet `10`. Die Werte können zwischen `1` und `10` Sekunden liegen. Wenn kein Wert angegeben ist, wird der Standardwert bei Verwendung von [automatisch verfolgten Sitzungen](../../../../web-sdk/commands/createmediasession.md#automatic) verwendet
 
 ## Konfigurieren von Datenstromüberschreibungen {#datastream-overrides}
 
@@ -161,7 +161,7 @@ Das Überschreiben der Datenstromkonfiguration besteht aus zwei Schritten:
 1. Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](/help/datastreams/configure.md) definieren.
 2. Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der Web SDK-Tag-Erweiterung an das Edge Network senden.
 
-Anzeigen des Datenspeichers [Dokumentation zu Konfigurationsüberschreibungen](/help/datastreams/overrides.md) für detaillierte Anweisungen zum Überschreiben von Datenspeicherkonfigurationen.
+Detaillierte Anweisungen zum Überschreiben von Datastream-Konfigurationen finden Sie in der Dokumentation zum Außerkraftsetzen der [Konfiguration ](/help/datastreams/overrides.md) .
 
 Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl können Sie die Überschreibungen im Bildschirm für die Tag-Erweiterung konfigurieren, der unten dargestellt wird.
 
@@ -169,10 +169,10 @@ Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl 
 >
 Datastream-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben alle separate Außerkraftsetzungen. Sie können die Einstellungen zwischen ihnen mithilfe der entsprechenden Optionen kopieren, die im folgenden Bildschirm angezeigt werden.
 
-![Bild, das die Konfiguration des Datenspeichers anzeigt, überschreibt die Verwendung der Seite Web SDK-Tag-Erweiterung .](assets/datastream-overrides.png)
+![Das Bild, das die Konfiguration des Datastreams anzeigt, überschreibt die Verwendung der Seite zur Web SDK-Tag-Erweiterung.](assets/datastream-overrides.png)
 
 ## Erweiterte Einstellungen konfigurieren
 
-Verwenden Sie die **[!UICONTROL Edge-Basispfad]** -Feld, wenn Sie den Basispfad ändern müssen, der für die Interaktion mit dem Edge Network verwendet wird. Dies sollte keine Aktualisierung erfordern, aber falls Sie an einer Beta- oder Alpha-Phase teilnehmen, kann Adobe Sie bitten, dieses Feld zu ändern.
+Verwenden Sie das Feld **[!UICONTROL Edge-Basispfad]** , wenn Sie den Basispfad ändern müssen, der für die Interaktion mit dem Edge Network verwendet wird. Dies sollte keine Aktualisierung erfordern, aber falls Sie an einer Beta- oder Alpha-Phase teilnehmen, kann Adobe Sie bitten, dieses Feld zu ändern.
 
-![Bild mit den erweiterten Einstellungen unter Verwendung der Web SDK-Tag-Erweiterungsseite.](assets/advanced-settings.png)
+![Bild, das die erweiterten Einstellungen mithilfe der Web SDK-Tag-Erweiterungsseite anzeigt.](assets/advanced-settings.png)

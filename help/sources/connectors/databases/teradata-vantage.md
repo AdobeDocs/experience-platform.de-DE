@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;teradata;teradata Vantage
-title: Übersicht über den Teradata Vantage Source Connector
+title: Übersicht über Teradata Vantage Source Connector
 description: Erfahren Sie, wie Sie Teradata Vantage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
 source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
@@ -14,7 +14,7 @@ ht-degree: 60%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Platform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationalen, NoSQL- oder Data Warehouse-Datenbanken herstellen. Unterstützung für Datenbankanbieter umfasst [!DNL Teradata Vantage].
+Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Platform kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationalen, NoSQL- oder Data Warehouse-Datenbanken herstellen. Unterstützung für Datenbankanbieter ist [!DNL Teradata Vantage].
 
 ## IP-Adressen-Zulassungsliste
 

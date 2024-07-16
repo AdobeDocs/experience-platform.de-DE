@@ -23,7 +23,7 @@ Bei der Segmentierung werden bestimmte Attribute oder Verhaltensweisen definiert
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] ermöglicht Ihnen das einfache Erstellen und Aufrufen von Segmentdefinitionen sowie die Verwendung verschiedener Bausteine zur weiteren Charakterisierung Ihrer Zielgruppen. Weiterführende Informationen zur Nutzung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder-guide.md).
+Mit [!DNL Platform] können Sie einfach Segmentdefinitionen erstellen und aufrufen sowie verschiedene Bausteine verwenden, um Ihre Zielgruppen weiter zu charakterisieren. Weiterführende Informationen zur Nutzung von Segment Builder finden Sie im [Segment Builder-Handbuch](./segment-builder-guide.md).
 
 ## Kunden-KI
 

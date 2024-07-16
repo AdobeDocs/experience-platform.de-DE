@@ -1,7 +1,8 @@
 ---
 title: Verwalten von Array- und Zuordnungsdatentypen mit Funktionen mit höherer Reihenfolge
 description: Erfahren Sie, wie Sie in Query Service Array-Datentypen mit Funktionen mit höherer Reihenfolge verwalten und zuordnen können. Praktische Beispiele werden mit gängigen Anwendungsfällen bereitgestellt.
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 1%
@@ -18,7 +19,7 @@ Die folgende Liste von Anwendungsfällen enthält Beispiele für Funktionen zur 
 
 `transform(array<T>, function<T, U>): array<U>`
 
-Das obige Snippet wendet eine Funktion auf jedes Element des Arrays an und gibt ein neues Array transformierter Elemente zurück. Insbesondere wird die `transform` -Funktion nimmt ein Array des Typs T und konvertiert jedes Element vom Typ T in den Typ U. Anschließend wird ein Array des Typs U zurückgegeben. Die tatsächlichen Typen T und U hängen von der spezifischen Verwendung der Transformationsfunktion ab.
+Das obige Snippet wendet eine Funktion auf jedes Element des Arrays an und gibt ein neues Array transformierter Elemente zurück. Die Funktion `transform` nimmt ein Array des Typs T und konvertiert jedes Element vom Typ T in den Typ U. Anschließend wird ein Array des Typs U zurückgegeben. Die tatsächlichen Typen T und U hängen von der spezifischen Verwendung der Transformationsfunktion ab.
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ Diese Array-Umwandlungsfunktion ähnelt dem vorherigen Beispiel, es gibt jedoch 
 
 **Beispiel**
 
-Das folgende SQL-Beispiel zeigt diesen Anwendungsfall. Die Abfrage ruft eine begrenzte Anzahl von Zeilen aus der angegebenen Tabelle ab und wandelt die `productListItems` Array durch Multiplikation der `priceTotal` -Attribut jedes Elements um 73. Das Ergebnis enthält die `_id`, `productListItems`und der umgewandelten `price_in_inr` Spalten. Die Auswahl basiert auf einem bestimmten Zeitstempelbereich.
+Das folgende SQL-Beispiel zeigt diesen Anwendungsfall. Die Abfrage ruft eine begrenzte Anzahl von Zeilen aus der angegebenen Tabelle ab und wandelt das Array `productListItems` um, indem das Attribut `priceTotal` jedes Elements mit 73 multipliziert wird. Das Ergebnis umfasst die Spalten `_id`, `productListItems` und die umgewandelten `price_in_inr`. Die Auswahl basiert auf einem bestimmten Zeitstempelbereich.
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ Die Ergebnisse für diese SQL würden den unten aufgeführten ähneln.
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-Im obigen Snippet wird die `exists` -Funktion wird auf jedes Element des Arrays angewendet und gibt einen booleschen Wert zurück. Der boolesche Wert gibt an, ob ein oder mehrere Elemente im Array vorhanden sind, die eine bestimmte Bedingung erfüllen. In diesem Fall wird bestätigt, ob ein Produkt mit einer bestimmten SKU vorhanden ist.
+Im obigen Ausschnitt wird die Funktion `exists` auf jedes Element des Arrays angewendet und gibt einen booleschen Wert zurück. Der boolesche Wert gibt an, ob ein oder mehrere Elemente im Array vorhanden sind, die eine bestimmte Bedingung erfüllen. In diesem Fall wird bestätigt, ob ein Produkt mit einer bestimmten SKU vorhanden ist.
 
 **Beispiel**
 
-Im folgenden SQL-Beispiel ruft die Abfrage ab `productListItems` aus dem `geometrixxx_999_xdm_pqs_1batch_10k_rows` und bewertet, ob ein Element mit einer SKU gleich `123679` im `productListItems` -Array vorhanden ist. Anschließend werden die Ergebnisse anhand eines bestimmten Zeitstempelbereichs gefiltert und die endgültigen Ergebnisse auf zehn Zeilen beschränkt.
+Im folgenden SQL-Beispiel ruft die Abfrage `productListItems` aus der Tabelle `geometrixxx_999_xdm_pqs_1batch_10k_rows` ab und bewertet, ob ein Element mit einer SKU von `123679` im Array `productListItems` vorhanden ist. Anschließend werden die Ergebnisse anhand eines bestimmten Zeitstempelbereichs gefiltert und die endgültigen Ergebnisse auf zehn Zeilen beschränkt.
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ Diese Funktion filtert ein Array von Elementen basierend auf einer gegebenen Bed
 
 **Beispiel**
 
-In der folgenden Abfrage wird die `productListItems` verwendet einen Filter, um nur Elemente mit einer SKU von mehr als 100000 einzuschließen, und beschränkt den Ergebnissatz auf Zeilen innerhalb eines bestimmten Zeitstempelbereichs. Das gefilterte Array wird dann als Alias für `_filter` in der Ausgabe.
+In der folgenden Abfrage wird die Spalte `productListItems` ausgewählt, ein Filter angewendet, um nur Elemente mit einer SKU von mehr als 10000 einzuschließen und der Ergebnissatz auf Zeilen innerhalb eines bestimmten Zeitstempelbereichs beschränkt. Das gefilterte Array wird dann in der Ausgabe als `_filter` Alias genannt.
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ Dieser Aggregat-Vorgang wendet einen binären Operator auf einen Anfangsstatus u
 
 **Beispiel**
 
-In diesem Abfragebeispiel wird der maximale SKU-Wert aus dem `productListItems` -Array innerhalb des angegebenen Zeitstempelbereichs und verdoppelt das Ergebnis. Die Ausgabe enthält das Original `productListItems` Array und das berechnete `max_value`.
+In diesem Abfragebeispiel wird der maximale SKU-Wert aus dem `productListItems` -Array innerhalb des angegebenen Zeitstempelbereichs berechnet und das Ergebnis verdoppelt. Die Ausgabe enthält das ursprüngliche `productListItems` -Array und den berechneten `max_value`.
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ Dieses Snippet kombiniert die Elemente zweier Arrays in einem neuen Array. Der V
 
 **Beispiel**
 
-Die folgende Abfrage verwendet die `zip_with` -Funktion zum Erstellen von Wertepaaren aus zwei Arrays. Dazu werden die SKU-Werte aus dem `productListItems` Array in eine Ganzzahlsequenz umwandeln, die mithilfe der `Sequence` -Funktion. Das Ergebnis wird neben dem Original ausgewählt `productListItems` und basierend auf einem Zeitstempelbereich begrenzt ist.
+Die folgende Abfrage verwendet die Funktion `zip_with` , um aus zwei Arrays Wertepaare zu erstellen. Dazu werden die SKU-Werte aus dem `productListItems` -Array einer Ganzzahlsequenz hinzugefügt, die mithilfe der Funktion `Sequence` generiert wurde. Das Ergebnis wird neben der ursprünglichen Spalte `productListItems` ausgewählt und ist basierend auf einem Zeitstempelbereich begrenzt.
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-Die `map_form_arrays` erstellt eine Zuordnung, die paarweise Werte aus zwei Arrays verwendet.
+Die Funktion `map_form_arrays` erstellt eine Zuordnung, die paarweise Werte aus zwei Arrays verwendet.
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ Die `map_form_arrays` erstellt eine Zuordnung, die paarweise Werte aus zwei Arra
 
 **Beispiel**
 
-Die folgende SQL erstellt eine Zuordnung, bei der die Schlüssel sequenzielle Zahlen sind, die mithilfe der `Sequence` -Funktion und die Werte sind Elemente aus der `productListItems` Array. Die Abfrage wählt die `productListItems` und verwendet die `Map_from_arrays` -Funktion, um die Zuordnung basierend auf der generierten Zahlensequenz und den Elementen des Arrays zu erstellen. Das Ergebnis ist auf zehn Zeilen begrenzt und wird anhand eines Zeitstempelbereichs gefiltert.
+Die nachstehende SQL erstellt eine Zuordnung, bei der die Schlüssel sequenzierte Zahlen sind, die mit der Funktion `Sequence` generiert werden, und die Werte Elemente aus dem Array `productListItems` sind. Die Abfrage wählt die Spalte `productListItems` aus und erstellt mithilfe der Funktion `Map_from_arrays` die Zuordnung basierend auf der generierten Zahlenfolge und den Elementen des Arrays. Das Ergebnis ist auf zehn Zeilen begrenzt und wird anhand eines Zeitstempelbereichs gefiltert.
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-Die `map_concat` -Funktion im obigen Snippet verwendet mehrere Maps als Argumente und gibt eine neue Zuordnung zurück, die alle Schlüssel-Wert-Paare aus den Eingabemaps kombiniert. Die Funktion verkettet mehrere Maps in einer Zuordnung, und die resultierende Zuordnung enthält alle Schlüssel-Wert-Paare aus den Eingabemaps.
+Die Funktion `map_concat` im obigen Codefragment akzeptiert mehrere Maps als Argumente und gibt eine neue Zuordnung zurück, die alle Schlüssel-Wert-Paare aus den Eingabemaps kombiniert. Die Funktion verkettet mehrere Maps in einer Zuordnung, und die resultierende Zuordnung enthält alle Schlüssel-Wert-Paare aus den Eingabemaps.
 
 **Beispiel**
 
-Die folgende SQL erstellt eine Zuordnung, in der jedes Element in `productListItems` ist mit einer Sequenznummer verknüpft, die dann mit einer anderen Zuordnung verkettet wird, bei der Schlüssel in einem bestimmten Sequenzbereich generiert werden.
+Die nachstehende SQL erstellt eine Zuordnung, bei der jedes Element in `productListItems` mit einer Sequenznummer verknüpft ist, die dann mit einer anderen Zuordnung verkettet wird, bei der Schlüssel in einem bestimmten Sequenzbereich generiert werden.
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ Bei Maps wird entweder ein Wert für den angegebenen Schlüssel zurückgegeben o
 
 **Beispiel**
 
-Die Abfrage wählt die `identitymap` Spalte aus der Tabelle `geometrixxx_999_xdm_pqs_1batch_10k_rows` und extrahiert den mit dem Schlüssel verknüpften Wert `AAID` für jede Zeile. Die Ergebnisse sind auf Zeilen beschränkt, die innerhalb des angegebenen Zeitstempelbereichs liegen, und die Abfrage beschränkt die Ausgabe auf zehn Zeilen.
+Die Abfrage wählt die Spalte `identitymap` aus der Tabelle `geometrixxx_999_xdm_pqs_1batch_10k_rows` aus und extrahiert für jede Zeile den Wert, der dem Schlüssel `AAID` zugeordnet ist. Die Ergebnisse sind auf Zeilen beschränkt, die innerhalb des angegebenen Zeitstempelbereichs liegen, und die Abfrage beschränkt die Ausgabe auf zehn Zeilen.
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ Dieses Snippet gibt die Größe eines angegebenen Arrays oder einer gegebenen Zu
 
 **Beispiel**
 
-Die nachstehende Abfrage ruft die `identitymap` und die `Cardinality` berechnet die Anzahl der Elemente in jeder Zuordnung innerhalb der `identitymap`. Die Ergebnisse sind auf zehn Zeilen beschränkt und werden anhand eines festgelegten Zeitstempelbereichs gefiltert.
+Die folgende Abfrage ruft die Spalte `identitymap` ab und die Funktion `Cardinality` berechnet die Anzahl der Elemente in jeder Zuordnung innerhalb der `identitymap`. Die Ergebnisse sind auf zehn Zeilen beschränkt und werden anhand eines festgelegten Zeitstempelbereichs gefiltert.
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ Der obige Ausschnitt entfernt doppelte Werte aus dem angegebenen Array.
 
 **Beispiel**
 
-In der folgenden Abfrage wird die `productListItems` entfernt alle doppelten Elemente aus den Arrays und beschränkt die Ausgabe auf zehn Zeilen basierend auf einem angegebenen Zeitstempelbereich.
+In der folgenden Abfrage werden die Spalte `productListItems` ausgewählt, doppelte Elemente aus den Arrays entfernt und die Ausgabe auf zehn Zeilen basierend auf einem angegebenen Zeitstempelbereich beschränkt.
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Die folgenden Beispiele für Funktionen mit höherer Reihenfolge werden im Anwendungsbeispiel zum Abrufen ähnlicher Datensätze erläutert. Ein Beispiel und eine Erläuterung der Verwendung jeder Funktion finden Sie im entsprechenden Abschnitt dieses Dokuments.
 
-Die [`transform` Funktionsbeispiel](../use-cases/retrieve-similar-records.md#length-adjustment) umfasst die Tokenisierung einer Produktliste.
+Das Funktionsbeispiel [`transform`](../use-cases/retrieve-similar-records.md#length-adjustment) umfasst die Tokenisierung einer Produktliste.
 
-Die [`filter` Funktionsbeispiel](../use-cases/retrieve-similar-records.md#filter-results) zeigt eine präzisere und präzisere Extraktion relevanter Informationen aus Textdaten.
+Das Funktionsbeispiel [`filter`](../use-cases/retrieve-similar-records.md#filter-results) zeigt eine verfeinerte und präzisere Extraktion relevanter Informationen aus Textdaten.
 
-Die [`reduce` function](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) bietet die Möglichkeit, kumulative Werte oder Aggregate abzuleiten, die in verschiedenen Analyse- und Planungsprozessen von entscheidender Bedeutung sein können.
+Die Funktion [`reduce` ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) bietet eine Möglichkeit, kumulative Werte oder Aggregate abzuleiten, die in verschiedenen Analyse- und Planungsprozessen ausschlaggebend sein können.

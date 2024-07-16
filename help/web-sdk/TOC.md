@@ -24,7 +24,7 @@ ht-degree: 52%
    * [Installieren des Web SDK mithilfe der JavaScript-Bibliothek](install/library.md)
    * [Installieren des Web SDK mit dem NPM-Paket](install/npm.md)
 * Befehle {#commands}
-   * konfigurieren {#configure}
+   * configure {#configure}
       * [Übersicht](commands/configure/overview.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)

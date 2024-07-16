@@ -1,5 +1,5 @@
 ---
-title: Publishing-Ablauf
+title: Veröffentlichungsablauf
 description: Erfahren Sie mehr über den Prozess der Erstellung von Bibliotheken, das Testen von Builds und die Freigabe für die Produktion in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
@@ -9,7 +9,7 @@ ht-degree: 97%
 
 ---
 
-# Publishing-Ablauf
+# Veröffentlichungsablauf
 
 >[!NOTE]
 >
@@ -17,9 +17,9 @@ ht-degree: 97%
 
 Der Veröffentlichungsablauf für Tags in Adobe Experience Platform bezieht sich auf den Prozess der Erstellung von Bibliotheken, des Testens von Builds und der Freigabe für die Produktion.
 
-Welche Aktionen Sie mit einer Bibliothek ausführen können, hängt vom Status der Bibliothek und der Berechtigungsstufe ab. Darüber hinaus wirkt sich der Status einer Bibliothek auch auf die darin enthaltenen Ressourcen (Regeln, Datenelemente und Erweiterungen) aus, je nachdem, was im Publishing-Ablauf vorangeht.
+Welche Aktionen Sie mit einer Bibliothek ausführen können, hängt vom Status der Bibliothek und der Berechtigungsstufe ab. Darüber hinaus wirkt sich der Status einer Bibliothek auch auf die darin enthaltenen Ressourcen (Regeln, Datenelemente und Erweiterungen) aus, je nachdem, was im Veröffentlichungsablauf vorangeht.
 
-In den folgenden Abschnitten werden die Details zu Berechtigungen, zum Bibliotheksstatus und das Vorhergehende in Bezug auf den Publishing-Ablauf beschrieben.
+In den folgenden Abschnitten werden die Details zu Berechtigungen, zum Bibliotheksstatus und das Vorhergehende in Bezug auf den Veröffentlichungsablauf beschrieben.
 
 ## Berechtigungen {#permissions}
 
@@ -35,14 +35,14 @@ Weitere Informationen zum Verwalten von Berechtigungen für Tags finden Sie im [
 
 ## Bibliotheksstatus {#state}
 
-Was den Publishing-Ablauf betrifft, gibt es vier Grundzustände, in denen sich eine Bibliothek befinden kann:
+Was den Veröffentlichungsablauf betrifft, gibt es vier Grundzustände, in denen sich eine Bibliothek befinden kann:
 
 * [[!UICONTROL Entwicklung]](#development)
 * [[!UICONTROL Gesendet]](#submitted)
 * [[!UICONTROL Genehmigt]](#approved)
 * [[!UICONTROL Veröffentlicht]](#published)
 
-Diese vier Status werden als Spalten innerhalb der **[!UICONTROL Veröffentlichungsfluss]** Registerkarte.
+Diese vier Status werden als Spalten auf der Registerkarte **[!UICONTROL Veröffentlichungsfluss]** dargestellt.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -68,7 +68,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, die für eine Bibliothek
 
 ### [!UICONTROL Gesendet] {#submitted}
 
-Befindet sich eine Bibliothek im Zustand [!UICONTROL Eingereicht], kann sie ein Benutzer mit Berechtigungen zum Genehmigen in der Staging-Umgebung testen. Nach Abschluss der Tests wird die Bibliothek genehmigt oder abgelehnt. Abgelehnte Builds kehren zurück in den Zustand [!UICONTROL Entwicklung], sodass weitere Änderungen vorgenommen werden können, bevor der Publishing-Ablauf erneut gestartet wird.
+Befindet sich eine Bibliothek im Zustand [!UICONTROL Eingereicht], kann sie ein Benutzer mit Berechtigungen zum Genehmigen in der Staging-Umgebung testen. Nach Abschluss der Tests wird die Bibliothek genehmigt oder abgelehnt. Abgelehnte Builds kehren zurück in den Zustand [!UICONTROL Entwicklung], sodass weitere Änderungen vorgenommen werden können, bevor der Veröffentlichungsablauf erneut gestartet wird.
 
 In der folgenden Tabelle sind die Aktionen aufgeführt, die für eine Bibliothek im Zustand [!UICONTROL Eingereicht] verfügbar sind:
 
@@ -82,7 +82,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, die für eine Bibliothek
 
 ### [!UICONTROL Genehmigt] {#approved}
 
-Nachdem eine Bibliothek genehmigt wurde, kann ein Benutzer mit Veröffentlichungsberechtigungen die Bibliothek veröffentlichen oder ablehnen. Abgelehnte Builds werden wieder in die Spalte [!UICONTROL Entwicklung] verschoben, damit Änderungen vorgenommen werden können, bevor der Publishing-Ablauf erneut gestartet wird.
+Nachdem eine Bibliothek genehmigt wurde, kann ein Benutzer mit Veröffentlichungsberechtigungen die Bibliothek veröffentlichen oder ablehnen. Abgelehnte Builds werden wieder in die Spalte [!UICONTROL Entwicklung] verschoben, damit Änderungen vorgenommen werden können, bevor der Veröffentlichungsablauf erneut gestartet wird.
 
 In der folgenden Tabelle sind die Aktionen, die für eine Bibliothek im Zustand [!UICONTROL Genehmigt] verfügbar sind, aufgeführt:
 
@@ -106,13 +106,13 @@ Diese Spalte [!UICONTROL Veröffentlicht] zeigt, welche Bibliotheken veröffentl
 
 Nachdem Sie die erste Bibliothek veröffentlicht haben, wird es wichtig, dass Sie die Rolle von Upstream verstehen, während Sie mit neueren Bibliotheken den Publishing-Ablauf durchlaufen.
 
-Wenn sich eine Bibliothek derzeit in der Phase [!UICONTROL Entwicklung], [!UICONTROL Eingereicht] oder [!UICONTROL Genehmigt] befindet, erbt diese Bibliothek die Regeln, Datenelemente und Erweiterungen aller Bibliotheken, die sich im Upstream befinden. Diese vererbten Ressourcen bilden eine „Grundlinie“ für jede Bibliothek, die den Publishing-Ablauf durchläuft. Im Grunde können Sie sich jede neue Bibliothek einfach als eine Reihe von Änderungen der Grundlinie vorstellen, die durch den Upstream festgelegt wird. Dadurch wird sichergestellt, dass bei der Veröffentlichung einer neuen Iteration nichts aus einer vorherigen Bibliothek unerwartet überschrieben wird.
+Wenn sich eine Bibliothek derzeit in der Phase [!UICONTROL Entwicklung], [!UICONTROL Eingereicht] oder [!UICONTROL Genehmigt] befindet, erbt diese Bibliothek die Regeln, Datenelemente und Erweiterungen aller Bibliotheken, die sich im Upstream befinden. Diese vererbten Ressourcen bilden eine „Baseline“ für jede Bibliothek, die den Veröffentlichungsablauf durchläuft. Im Grunde können Sie sich jede neue Bibliothek einfach als eine Reihe von Änderungen der Baseline vorstellen, die durch den Upstream festgelegt wird. Dadurch wird sichergestellt, dass bei der Veröffentlichung einer neuen Iteration nichts aus einer vorherigen Bibliothek unerwartet überschrieben wird.
 
 Was im Upstream enthalten ist, hängt vom aktuellen Stand der Bibliothek ab. Beispielsweise erben Bibliotheken in der Spalte [!UICONTROL Genehmigt] nur Ressourcen aus der Bibliothek [!UICONTROL Veröffentlicht], während Bibliotheken unter [!UICONTROL Entwicklung] Ressourcen aus allen anderen Spalten erben.
 
 ![](./images/approval-workflow/upstream.png)
 
-Bei der Bearbeitung einer Bibliothek in der Benutzeroberfläche werden alle Ressourcen, die von den Upstream-Servern übernommen werden, im **[!UICONTROL Ressourcen-Upstream]** Abschnitt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
+Beim Bearbeiten einer Bibliothek in der Benutzeroberfläche werden alle Ressourcen, die vom Upstream übernommen werden, im Abschnitt **[!UICONTROL Ressourcen - Upstream]** dargestellt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

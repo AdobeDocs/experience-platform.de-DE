@@ -11,9 +11,9 @@ ht-degree: 93%
 
 # Datenerfassung End-to-End – Übersicht
 
-Adobe Experience Platform erfasst und überträgt Ihre Daten an andere Adobe-Produkte und Ziele von Drittanbietern. Um Ereignisdaten von Ihrer Anwendung an das Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
+Adobe Experience Platform erfasst und überträgt Ihre Daten an andere Adobe-Produkte und Ziele von Drittanbietern. Um Ereignisdaten von Ihrer Anwendung an das Experience Platform-Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
 
-Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge-Netzwerk mithilfe der Datenerfassungsfunktionen von Platform. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
+Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses durch das Edge Network mithilfe der Datenerfassungsfunktionen von Platform. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ In diesem Tutorial wird die Datenerfassungs-Benutzeroberfläche verwendet, um ei
 * Entwickeln
 * Erweiterungen verwalten
 
-Siehe Handbuch unter [Verwalten von Berechtigungen für die Datenerfassung](./permissions.md) , um zu erfahren, wie Sie Zugriff auf Eigenschaften und Eigentumsrechte gewähren.
+Informationen zum Gewähren des Zugriffs auf Eigenschaften und Eigenschaftsrechte finden Sie im Handbuch zum [Verwalten von Berechtigungen für die Datenerfassung](./permissions.md) .
 
 Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemata zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihr Adobe-Account-Team, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
 
@@ -60,7 +60,7 @@ Der erste Schritt bei der Einrichtung Ihrer Datenerfassungsvorgänge besteht dar
 >
 >XDM-Schemata sind sehr anpassbar. Die unten beschriebenen Schritte konzentrieren sich nicht auf übermäßige Vorgaben, sondern auf die Schemaanforderungen für das Web SDK. Außerhalb dieser Parameter können Sie die verbleibende Struktur Ihrer Daten beliebig definieren.
 
-Wählen Sie in der Benutzeroberfläche **[!UICONTROL Schemas]** in der linken Navigation. Von hier aus können Sie eine Liste der zuvor erstellten Schemata sehen, die zu Ihrer Organisation gehören. Um fortzufahren, wählen Sie **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL XDM ExperienceEvent]** aus dem Dropdown-Menü.
+Wählen Sie in der Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Schemas]** aus. Von hier aus können Sie eine Liste der zuvor erstellten Schemata sehen, die zu Ihrer Organisation gehören. Um fortzufahren, wählen Sie **[!UICONTROL Schema erstellen]** und dann **[!UICONTROL XDM ExperienceEvent]** aus dem Dropdown-Menü.
 
 ![Arbeitsbereich „Schemata“](./images/e2e/schemas.png)
 
@@ -100,7 +100,7 @@ Ein Datenstrom ist eine Konfiguration, die dem Edge Network mitteilt, wohin Ihre
 >
 >Wenn Sie die [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md) verwenden möchten (vorausgesetzt, Ihr Unternehmen ist für die Funktion lizenziert), müssen Sie sie für einen Datenstrom auf dieselbe Weise aktivieren wie Adobe-Produkte. Details zu diesem Prozess werden in einem [späteren Abschnitt](#event-forwarding) erläutert.
 
-Auswählen **[!UICONTROL Datenspeicher]** in der linken Navigation. Von hier aus können Sie einen vorhandenen Datenstrom aus der Liste auswählen, um ihn zu bearbeiten, oder Sie können eine neue Konfiguration erstellen, indem Sie **[!UICONTROL Neuer Datenstrom]** auswählen.
+Wählen Sie im linken Navigationsbereich **[!UICONTROL Datastreams]** aus. Von hier aus können Sie einen vorhandenen Datenstrom aus der Liste auswählen, um ihn zu bearbeiten, oder Sie können eine neue Konfiguration erstellen, indem Sie **[!UICONTROL Neuer Datenstrom]** auswählen.
 
 ![Datenströme](./images/e2e/datastreams.png)
 

@@ -47,11 +47,11 @@ Weitere Informationen finden Sie im [Handbuch zum Zielgruppen-Dashboard](../../d
 
 ## Durchsuchen {#browse}
 
-Wählen Sie die **[!UICONTROL Durchsuchen]** Registerkarte, um das Audience Portal anzuzeigen. Audience Portal bietet eine Liste aller Zielgruppen, die zu Ihrer Organisation und Sandbox gehören, und enthält Details wie Profilanzahl, Ursprung, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
+Wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus, um das Audience Portal anzuzeigen. Audience Portal bietet eine Liste aller Zielgruppen, die zu Ihrer Organisation und Sandbox gehören, und enthält Details wie Profilanzahl, Ursprung, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
 
 Darüber hinaus können Sie mit Audience Portal neue Zielgruppen mit Segment Builder oder Zielgruppenkomposition erstellen und extern generierte Zielgruppen in Platform importieren.
 
-Weitere Informationen zu Audience Portal finden Sie unter [Übersicht über Audience Portal](./audience-portal.md).
+Weitere Informationen zu Audience Portal finden Sie in der [Übersicht über Audience Portal](./audience-portal.md) .
 
 ## Kompositionen {#compositions}
 
@@ -67,7 +67,7 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | ------ | ----------- |
 | Duplizieren | Kopiert die ausgewählte Zielgruppe. |
 | Verwalten des Zugriffs | Verwalten der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
-| Löschen | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängig sind **cannot** gelöscht werden. Weitere Informationen zum Löschen von Zielgruppen finden Sie im [Segmentierungs-FAQ](../faq.md#lifecycle-states). |
+| Löschen | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängige Zielgruppen sind, **können nicht** gelöscht werden. Weitere Informationen zum Löschen von Zielgruppen finden Sie in den [FAQ zur Segmentierung](../faq.md#lifecycle-states) . |
 
 Sie können das Symbol ![Tabelle anpassen](../images/ui/overview/customize-table.png) auswählen, um zu ändern, welche Felder angezeigt werden.
 

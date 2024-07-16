@@ -14,12 +14,12 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->Die **[!UICONTROL Datei jetzt exportieren]** -Option in Adobe Experience Platform ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalitäten können sich ändern.
+>Die Option **[!UICONTROL Datei jetzt exportieren]** in Adobe Experience Platform befindet sich derzeit in Beta. Dokumentation und Funktionalitäten können sich ändern.
 >Wenden Sie sich an den Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion zu erhalten.
 
 >[!IMPORTANT]
 > 
->Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Anzeigen von Profilen]**, und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
+>Um Daten zu aktivieren, benötigen Sie die Zugriffssteuerungsberechtigungen **[!UICONTROL Ziele anzeigen]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [. ](/help/access-control/home.md#permissions) Lesen Sie die [Übersicht über die Zugriffssteuerung](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihre Produktadmins, um die erforderlichen Berechtigungen zu erhalten.
 
 ## **[!UICONTROL Datei jetzt exportieren]** – Übersicht {#overview}
 
@@ -28,56 +28,56 @@ ht-degree: 21%
 >title="Datei jetzt exportieren"
 >abstract="Wählen Sie diese Option, um zusätzlich zu eventuell zuvor geplanten Exporten einen vollständigen Dateiexport vorzunehmen. Der Dateiexport wird sofort ausgelöst und die neuesten Ergebnisse der Segmentierungsdurchgänge von Experience Platform werden abgerufen."
 
-In diesem Artikel wird erläutert, wie Sie mit der Experience Platform-Benutzeroberfläche Dateien bei Bedarf an Batch-Zielen exportieren können, z. B. [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und [E-Mail-Marketing](/help/destinations/catalog/email-marketing/overview.md) Ziele.
+In diesem Artikel wird erläutert, wie Sie mit der Experience Platform-Benutzeroberfläche Dateien bei Bedarf an Batch-Zielen wie [Cloud-Speicher](/help/destinations/catalog/cloud-storage/overview.md) und [E-Mail-Marketing](/help/destinations/catalog/email-marketing/overview.md)-Zielen exportieren können.
 
-Die **[!UICONTROL Datei jetzt exportieren]** Mit dieser Kontrolle können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportplan einer zuvor geplanten Audience zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nicht die Exportfrequenz der Audience. Der Dateiexport wird sofort ausgelöst und die neuesten Ergebnisse der Segmentierungsdurchgänge von Experience Platform werden abgerufen.
+Mit dem Steuerelement **[!UICONTROL Datei jetzt exportieren]** können Sie eine vollständige Datei exportieren, ohne den aktuellen Exportplan einer zuvor geplanten Audience zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nicht die Exportfrequenz der Audience. Der Dateiexport wird sofort ausgelöst und die neuesten Ergebnisse der Segmentierungsdurchgänge von Experience Platform werden abgerufen.
 
-Zu diesem Zweck können Sie auch die Experience Platform-APIs verwenden. Lesen der Anleitung [Aktivieren von Zielgruppen bei Bedarf für Batch-Ziele über die Ad-hoc-Aktivierungs-API](/help/destinations/api/ad-hoc-activation-api.md).
+Zu diesem Zweck können Sie auch die Experience Platform-APIs verwenden. Erfahren Sie, wie Sie Zielgruppen bei Bedarf über die Ad-hoc-Aktivierungs-API ](/help/destinations/api/ad-hoc-activation-api.md) für Batch-Ziele aktivieren.[
 
 ## Voraussetzungen {#prerequisites}
 
-Um Dateien On-Demand an Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit Ziel verbunden](./connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
+Um Dateien On-Demand an Batch-Ziele zu exportieren, müssen Sie erfolgreich [mit einem Ziel verbunden haben](./connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
 
 ## Exportieren von Dateien bei Bedarf {#how-to-export-files-on-demand}
 
-1. Navigieren Sie zu **[!UICONTROL Verbindungen > Ziele]**, wählen Sie die **[!UICONTROL Durchsuchen]** und das Filtersymbol, um vorhandene Verbindungen zu den gewünschten Batch-Zielen anzuzeigen.
+1. Wechseln Sie zu **[!UICONTROL Verbindungen > Ziele]**, wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** und das Filtersymbol aus, um vorhandene Verbindungen zu Ihren gewünschten Batch-Zielen anzuzeigen.
 
-   ![Bild, das zeigt, wie Sie zur Registerkarte &quot;Durchsuchen&quot;gelangen und vorhandene Datenflüsse filtern können.](../assets/ui/activate-on-demand/browse-tab.png)
+   ![Bild, das zeigt, wie man zur Registerkarte &quot;Durchsuchen&quot;gelangt und vorhandene Datenflüsse filtert.](../assets/ui/activate-on-demand/browse-tab.png)
 
 2. Wählen Sie die gewünschte Zielverbindung aus, um den vorhandenen Datenfluss zum Ziel zu überprüfen.
 
-   ![Bild, das einen gefilterten Datenfluss markiert.](../assets/ui/activate-on-demand/filtered-dataflow.png)
+   ![ Bild, das einen gefilterten Datenfluss markiert.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Wählen Sie die **[!UICONTROL Aktivierungsdaten]** und wählen Sie die Zielgruppen aus, für die Sie Dateien bei Bedarf exportieren möchten, und wählen Sie die **[!UICONTROL Datei jetzt exportieren]** -Steuerelement, um einen einmaligen Export Trigger, der eine Datei für jede ausgewählte Zielgruppe an Ihr Batch-Ziel sendet.
+3. Wählen Sie den Tab **[!UICONTROL Aktivierungsdaten]** aus, wählen Sie die Zielgruppen aus, für die Sie Dateien On-Demand exportieren möchten, und wählen Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** aus, um einen einmaligen Export Trigger, durch den eine Datei für jede ausgewählte Zielgruppe an Ihr Batch-Ziel gesendet wird.
 
-   ![Bild, das die Schaltfläche Datei jetzt exportieren markiert](../assets/ui/activate-on-demand/bulk-export-file-now.png)
+   ![Bild, das die Schaltfläche &quot;Datei jetzt exportieren&quot;markiert.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
-4. Auswählen **[!UICONTROL Ja]** , um den Dateiexport zu bestätigen und zu Trigger zu führen.
+4. Wählen Sie **[!UICONTROL Ja]** aus, um den Dateiexport zu bestätigen und Trigger.
 
-   ![Bild mit dem Bestätigungsdialogfeld &quot;Datei exportieren&quot;.](../assets/ui/activate-on-demand/confirm-activation.png)
+   ![ Bild, das die Exportdatei anzeigt, jetzt Bestätigungsdialogfeld.](../assets/ui/activate-on-demand/confirm-activation.png)
 
 5. Eine Bestätigungsmeldung wird angezeigt, die Sie darüber informiert, dass der Dateiexport gestartet wurde.
 
-   ![Bild mit Bestätigung einer erfolgreichen Ad-hoc-Aktivierung.](../assets/ui/activate-on-demand/ad-hoc-success.png)
+   ![Bild, das die Bestätigung einer erfolgreichen Ad-hoc-Aktivierung anzeigt.](../assets/ui/activate-on-demand/ad-hoc-success.png)
 
-6. Sie können auch zum **[!UICONTROL Datenfluss-Abläufe]** um zu bestätigen, dass der Dateiexport gestartet wurde.
+6. Sie können auch zur Registerkarte **[!UICONTROL Datenfluss-Ausführung]** wechseln, um zu bestätigen, dass der Dateiexport gestartet wurde.
 
 ## Zu beachten {#considerations}
 
-Beachten Sie bei der Verwendung der **[!UICONTROL Datei jetzt exportieren]** Kontrolle:
+Beachten Sie bei Verwendung des Steuerelements **[!UICONTROL Datei jetzt exportieren]** die folgenden Hinweise:
 
-* **[!UICONTROL Datei jetzt exportieren]** funktioniert nur für Zielgruppen, deren Zeitplan im Batch-Aktivierungsdatenfluss mit dem aktuellen Datum überschneidet. Dies umfasst Zielgruppen mit Zeitplänen, die kein Enddatum haben (Exportfrequenz von **[!UICONTROL Einmal]**) oder wenn das Enddatum noch nicht überschritten wurde.
-* Warten Sie beim Hinzufügen einer Zielgruppe zu einem vorhandenen Datenfluss mindestens 15 Minuten, bis Sie die Variable **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
-* Wenn Sie die Zusammenführungsrichtlinie einer Zielgruppe ändern oder eine Zielgruppe erstellen, die eine neue Zusammenführungsrichtlinie verwendet, warten Sie 24 Stunden, bis Sie die **[!UICONTROL Datei jetzt exportieren]** Kontrolle.
+* **[!UICONTROL Datei jetzt exportieren]** funktioniert nur für Zielgruppen, deren Zeitplan im Batch-Aktivierungsdatenfluss mit dem aktuellen Datum überschneidet. Dazu gehören Zielgruppen mit Zeitplänen, die kein Enddatum haben (Exportfrequenz **[!UICONTROL Einmal]**) oder bei denen das Enddatum noch nicht erreicht wurde.
+* Warten Sie beim Hinzufügen einer Zielgruppe zu einem vorhandenen Datenfluss mindestens 15 Minuten, bis Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** verwenden.
+* Wenn Sie die Zusammenführungsrichtlinie einer Zielgruppe ändern oder eine Zielgruppe erstellen, die eine neue Zusammenführungsrichtlinie verwendet, warten Sie 24 Stunden, bis Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** verwenden.
 
 ## Benutzeroberflächenfehlermeldungen {#ui-error-messages}
 
-Bei Verwendung von **[!UICONTROL Datei jetzt exportieren]** -Kontrolle verwenden, können Sie auf eine der unten aufgeführten Fehlermeldungen stoßen. Überprüfen Sie die Tabelle, um zu verstehen, wie Sie sie bearbeiten können, wenn sie angezeigt werden.
+Bei Verwendung des Steuerelements **[!UICONTROL Datei jetzt exportieren]** werden möglicherweise die unten aufgeführten Fehlermeldungen angezeigt. Überprüfen Sie die Tabelle, um zu verstehen, wie Sie sie bearbeiten können, wenn sie angezeigt werden.
 
 | Fehlermeldung | Auflösung |
 |---------|----------|
-| Bereits für die Zielgruppe ausgeführt `segment ID` für die Bestellung `dataflow ID` mit Run-ID `flow run ID` | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für eine Zielgruppe ausgeführt wird. Warten Sie, bis der Auftrag abgeschlossen ist, bevor Sie den Aktivierungsauftrag erneut auslösen. |
-| Zielgruppen `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des Zeitplanbereichs! | Diese Fehlermeldung weist darauf hin, dass die von Ihnen ausgewählten Zielgruppen nicht dem Datenfluss zugeordnet sind oder dass der für die Zielgruppen eingerichtete Aktivierungsplan entweder abgelaufen ist oder noch nicht gestartet wurde. Überprüfen Sie, ob die Audience tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Aktivierungszeitplan für die Zielgruppe mit dem aktuellen Datum überschneidet. |
+| Führen Sie bereits für die Zielgruppe `segment ID` für die Bestellung `dataflow ID` mit der Ausführungskennung `flow run ID` aus. | Diese Fehlermeldung weist darauf hin, dass derzeit ein Ad-hoc-Aktivierungsfluss für eine Zielgruppe ausgeführt wird. Warten Sie, bis der Auftrag abgeschlossen ist, bevor Sie den Aktivierungsauftrag erneut auslösen. |
+| Zielgruppen `<segment name>` sind nicht Teil dieses Datenflusses oder außerhalb des festgelegten Zeitraums! | Diese Fehlermeldung weist darauf hin, dass die von Ihnen ausgewählten Zielgruppen nicht dem Datenfluss zugeordnet sind oder dass der für die Zielgruppen eingerichtete Aktivierungsplan entweder abgelaufen ist oder noch nicht gestartet wurde. Überprüfen Sie, ob die Audience tatsächlich dem Datenfluss zugeordnet ist, und stellen Sie sicher, dass sich der Aktivierungszeitplan für die Zielgruppe mit dem aktuellen Datum überschneidet. |
 
 ## Verwandte Informationen {#related-information}
 

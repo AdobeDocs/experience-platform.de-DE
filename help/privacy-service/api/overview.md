@@ -16,20 +16,20 @@ Die Privacy Service-API bietet mehrere Endpunkte, mit denen Sie Datenschutzauftr
 
 >[!NOTE]
 >
->In diesem Handbuch wird die Verwendung der [!DNL Privacy Service] API. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie unter [Übersicht über die Privacy Service-Benutzeroberfläche](../ui/overview.md).
+>In diesem Handbuch wird die Verwendung der [!DNL Privacy Service] -API beschrieben. Weitere Informationen zur Verwendung der Benutzeroberfläche finden Sie in der [Übersicht über die Benutzeroberfläche des Privacy Service](../ui/overview.md).
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [Privacy Service-API-Referenz](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, rufen Sie die [Privacy Service-API-Referenz](https://www.adobe.io/experience-platform-apis/references/privacy-service/) auf.
 
 ## Datenschutzaufträge
 
 Wenn Privacy Service eine Anfrage zum Zugriff auf oder Löschen der personenbezogenen Daten eines Betreffs erhalten, erstellt das System Datenschutzaufträge, um diese Anfrage zu erfüllen. Jeder Datenschutzauftrag enthält Identitätsdaten zum Datensubjekt, Metadaten zum Adobe Experience Cloud-Produkt, für das der Auftrag gilt, und den Verarbeitungsstatus des Auftrags.
 
-Die `/jobs` Mit dem -Endpunkt können Sie Datenschutzaufträge für Ihre Organisation erstellen und abrufen. Informationen zur Verwendung dieses Endpunkts finden Sie unter [Endleitfaden für Datenschutzaufträge](./privacy-jobs.md).
+Mit dem Endpunkt `/jobs` können Sie Datenschutzaufträge für Ihre Organisation erstellen und abrufen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Endpunkthandbuch zu Datenschutzaufträgen](./privacy-jobs.md).
 
 ## Einverständnis
 
-Bestimmte Vorschriften erfordern eine ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Die `/consent` Mit dem Endpunkt können Sie Anfragen zur Kundenzustimmung verarbeiten und in Ihren Datenschutz-Workflow integrieren. Siehe [Einverständnisendpunkt-Handbuch](./consent.md) , um mehr zu erfahren.
+Bestimmte Vorschriften erfordern eine ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Mit dem Endpunkt `/consent` können Sie Anfragen zur Kundenzustimmung verarbeiten und in Ihren Datenschutz-Workflow integrieren. Weitere Informationen finden Sie im [Endpoint-Handbuch zum Einverständnis](./consent.md) .
 
 ## Nächste Schritte
 
-Um mit der Privacy Service-API Aufrufe zu tätigen, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md) Wählen Sie dann eine der Endpunktleitfäden aus, um zu erfahren, wie Sie bestimmte Endpunkte verwenden.
+Um Aufrufe mithilfe der Privacy Service-API zu tätigen, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) und wählen Sie dann eine der Endpunkthandbücher aus, um zu erfahren, wie Sie bestimmte Endpunkte verwenden.

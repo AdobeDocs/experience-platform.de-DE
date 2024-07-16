@@ -4,8 +4,8 @@ description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience P
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '5482'
-ht-degree: 96%
+source-wordcount: '5445'
+ht-degree: 95%
 
 ---
 
@@ -384,7 +384,7 @@ Wählen Sie einen oder mehrere der folgenden Browser aus:
 
 * Chrome
 * Firefox
-* Internet Explorer/Edge
+* Internet Explorer/Edge
 * Internet Explorer Mobile
 * Mobile Safari
 * OmniWeb
@@ -460,7 +460,7 @@ Geben Sie ein oder mehrere Hash-Muster an, die in der URL vorhanden sein müssen
 1. (Optional) Aktivieren Sie reguläre Ausdrücke, wenn dies ein regulärer Ausdruck ist.
 1. Fügen Sie beliebige weitere Hash-Muster hinzu.
 
-#### Path And Query String
+#### Pfad und Abfragezeichenfolge
 
 Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen.  Dazu gehören der Pfad und die Abfragezeichenfolge.
 
@@ -646,7 +646,7 @@ In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Dat
 
 ### Cookie
 
-Jedes verfügbare Domain-Cookie kann im Cookie-Namensfeld referenziert werden.
+Auf jedes verfügbare Domänen-Cookie kann im Feld Cookie-Name verwiesen werden.
 
 #### Beispiel:
 
@@ -720,9 +720,9 @@ Im folgenden Beispiel enthält das Markup eine JavaScript-Variable namens `Page_
 </script>
 ```
 
-Wenn Sie das Datenelement  erstellen, geben Sie einfach den Pfad zu dieser Variablen an.
+Wenn Sie das Datenelement erstellen, geben Sie einfach den Pfad zu dieser Variablen an.
 
-Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie Punktnotation im Pfad, um auf das Objekt und die Eigenschaft zu verweisen, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName`oder `digitalData.pageName`usw.
+Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie im Pfad Punktnotation zur Referenzierung des Objekts und der Eigenschaft, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName` oder `digitalData.pageName` usw.
 
 #### Beispiel:
 

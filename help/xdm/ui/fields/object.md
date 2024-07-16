@@ -15,22 +15,22 @@ ht-degree: 0%
 
 Mit Adobe Experience Platform können Sie die Struktur Ihrer benutzerdefinierten Experience-Datenmodell (XDM)-Klassen, Schemafeldgruppen und Datentypen vollständig anpassen. Um verwandte Felder in benutzerdefinierten XDM-Ressourcen zu organisieren und zu verschachteln, können Sie Objekttypen definieren, die zusätzliche Unterfelder enthalten können.
 
-Wann [Definieren eines neuen Felds](./overview.md#define) Verwenden Sie in der Benutzeroberfläche von Adobe Experience Platform die **[!UICONTROL Typ]** Dropdown-Liste auswählen[!UICONTROL Objekt]&quot; aus der Liste.
+Beim Definieren eines neuen Felds ](./overview.md#define) in der Adobe Experience Platform-Benutzeroberfläche verwenden Sie das Dropdown-Menü **[!UICONTROL Typ]** und wählen Sie &quot;[!UICONTROL Objekt]&quot; aus der Liste aus.[
 
 ![](../../images/ui/fields/special/object.png)
 
-Auswählen **[!UICONTROL Anwenden]** , um das Objekt zum Schema hinzuzufügen. Die Arbeitsfläche wird aktualisiert, um das neue Feld mit dem [!UICONTROL Objekt] angewendeter Datentyp, einschließlich der Steuerelemente zum Bearbeiten und Hinzufügen von Unterfeldern zum Objekt.
+Wählen Sie **[!UICONTROL Anwenden]** aus, um das Objekt zum Schema hinzuzufügen. Die Arbeitsfläche wird aktualisiert und zeigt das neue Feld mit dem angewendeten Datentyp [!UICONTROL Objekt] an, einschließlich der Steuerelemente zum Bearbeiten und Hinzufügen von Unterfeldern zum Objekt.
 
 ![](../../images/ui/fields/special/object-applied.png)
 
-Um ein Unterfeld hinzuzufügen, wählen Sie die **plus (+)** neben dem Objektfeld auf der Arbeitsfläche. Unter dem Objekt wird ein neues Feld mit Steuerelementen zum Konfigurieren des Unterfelds in der rechten Leiste angezeigt.
+Um ein Unterfeld hinzuzufügen, wählen Sie auf der Arbeitsfläche das Symbol **Plus (+)** neben dem Objektfeld aus. Unter dem Objekt wird ein neues Feld mit Steuerelementen zum Konfigurieren des Unterfelds in der rechten Leiste angezeigt.
 
 ![](../../images/ui/fields/special/object-add-field.png)
 
-Nachdem Sie das Unterfeld konfiguriert und ausgewählt haben **[!UICONTROL Anwenden]** können Sie dem Objekt weiterhin Felder hinzufügen, indem Sie denselben Prozess verwenden. Sie können auch Unterfelder hinzufügen, die Objekte selbst sind, sodass Sie Felder beliebig tief verschachteln können.
+Nachdem Sie das Unterfeld konfiguriert und **[!UICONTROL Anwenden]** ausgewählt haben, können Sie dem Objekt weiterhin Felder hinzufügen, indem Sie denselben Prozess verwenden. Sie können auch Unterfelder hinzufügen, die Objekte selbst sind, sodass Sie Felder beliebig tief verschachteln können.
 
-Nachdem Sie die Erstellung des Objekts abgeschlossen haben, sollten Sie dessen Struktur möglicherweise in verschiedenen Klassen und Feldergruppen wiederverwenden. In diesem Fall können Sie das Objekt in einen Datentyp konvertieren. Siehe Abschnitt zu [Konvertieren von Objekten in Datentypen](../resources/data-types.md#convert) im UI-Handbuch für Datentypen finden Sie weitere Informationen.
+Nachdem Sie die Erstellung des Objekts abgeschlossen haben, sollten Sie dessen Struktur möglicherweise in verschiedenen Klassen und Feldergruppen wiederverwenden. In diesem Fall können Sie das Objekt in einen Datentyp konvertieren. Weitere Informationen finden Sie im Abschnitt zum [Konvertieren von Objekten in Datentypen](../resources/data-types.md#convert) im UI-Handbuch für Datentypen.
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie ein Objektfeld in der Benutzeroberfläche definiert wird. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) Informationen zum Definieren anderer XDM-Feldtypen im [!DNL Schema Editor].
+In diesem Handbuch wurde beschrieben, wie ein Objektfeld in der Benutzeroberfläche definiert wird. Informationen zum Definieren anderer XDM-Feldtypen in der [!DNL Schema Editor] finden Sie in der Übersicht zu [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) .

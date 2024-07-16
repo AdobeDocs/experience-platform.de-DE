@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; generische OData; generische Daten
+keywords: Experience Platform;home;popular topics;Generic OData;generic odata
 solution: Experience Platform
 title: Erstellen einer generischen OData-Basisverbindung mit der Flow Service-API
 type: Tutorial
@@ -7,7 +7,7 @@ description: Erfahren Sie, wie Sie mithilfe der Flow Service-API generische ODat
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '426'
 ht-degree: 72%
 
 ---
@@ -25,7 +25,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Generic OData] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Generic OData] herstellen zu können.
 
 ### Sammeln erforderlicher Anmeldeinformationen
 
@@ -33,10 +33,10 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Generic OData] herstellen ka
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `url` | Die Stamm-URL der [!DNL Generic OData] Dienst. |
+| `url` | Die Stamm-URL des [!DNL Generic OData]-Dienstes. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Generic Generic OData] ist: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
-Weitere Informationen zu den ersten Schritten finden Sie unter [this [!DNL Generic OData] Dokument](https://www.odata.org/getting-started/basic-tutorial/).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem [!DNL Generic OData] Dokument](https://www.odata.org/getting-started/basic-tutorial/).
 
 ### Verwenden von Platform-APIs
 
@@ -84,8 +84,8 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.url` | Der Host der [!DNL Generic OData] Server. |
-| `connectionSpec.id` | Die [!DNL Generic OData]-Verbindungsspezifikations-ID: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
+| `auth.params.url` | Der Host des [!DNL Generic OData]-Servers. |
+| `connectionSpec.id` | Die [!DNL Generic OData] Verbindungsspezifikations-ID: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 **Antwort**
 
@@ -103,4 +103,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 In diesem Tutorial haben Sie eine [!DNL Generic REST OData]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt. Sie können diese Basisverbindungs-ID in den folgenden Tutorials verwenden:
 
 * [Erkunden von Struktur und Inhalten Ihrer Datentabellen mithilfe der  [!DNL Flow Service] -API](../../explore/tabular.md)
-* [Erstellen Sie einen Datenfluss, um Protokolldaten mit der [!DNL Flow Service] API](../../collect/protocols.md)
+* [Erstellen Sie einen Datenfluss, um Protokolldaten mithilfe der [!DNL Flow Service] API an Platform zu übertragen.](../../collect/protocols.md)

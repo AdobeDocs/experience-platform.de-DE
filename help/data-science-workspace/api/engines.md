@@ -20,7 +20,7 @@ Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Worksp
 
 >[!TIP]
 >
->Wenn Sie keine Docker-URL haben, besuchen Sie die [Quelldateien in einem Rezept verpacken](../models-recipes/package-source-files-recipe.md) Tutorial für eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL.
+>Wenn Sie keine Docker-URL haben, finden Sie im Tutorial [Quelldateien in einem Rezept verpacken](../models-recipes/package-source-files-recipe.md) eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL.
 
 Ihre Anmeldedaten für die Docker-Registrierung benötigen Sie, um eine verpackte Rezeptdatei hochladen zu können, einschließlich Ihrer Docker-Host-URL, des Benutzernamens und des Passworts. Sie können diese Daten nachschlagen, indem Sie die folgende GET-Anfrage ausführen:
 
@@ -46,7 +46,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details Ihrer Docke
 
 >[!NOTE]
 >
->Ihr Docker-Passwort ändert sich immer dann, wenn Ihr `{ACCESS_TOKEN}` aktualisiert wird.
+>Ihr Docker-Passwort ändert sich, sobald Ihr `{ACCESS_TOKEN}` aktualisiert wird.
 
 ```json
 {
@@ -66,7 +66,7 @@ Sie können eine Engine erstellen, indem Sie eine POST-Anfrage ausführen und gl
 POST /engines
 ```
 
-**Anfrage Python/R**
+**Python anfordern/R**
 
 ```shell
 curl -X POST \
@@ -104,7 +104,7 @@ curl -X POST \
 
 **PySpark/Scala anfordern**
 
-Wenn Sie eine Anforderung für PySpark-Rezepte stellen, wird die `executionType` und `type` ist &quot;PySpark&quot;. Wenn Sie eine Anforderung für Scala-Rezepte stellen, wird die `executionType` und `type` ist &quot;Spark&quot;. Das folgende Scala-Rezept-Beispiel verwendet Spark:
+Wenn Sie eine Anfrage für PySpark-Rezepte stellen, lautet die `executionType` und die `type` &quot;PySpark&quot;. Wenn Sie eine Anfrage für Scala-Rezepte stellen, lautet die `executionType` und die `type` &quot;Spark&quot;. Das folgende Scala-Rezept-Beispiel verwendet Spark:
 
 ```shell
 curl -X POST \
@@ -137,13 +137,13 @@ curl -X POST \
 | `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
 | `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Der Wert kann auf Spark oder PySpark festgelegt werden. |
-| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
+| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` gesetzt werden. |
 | `artifacts.default.image.location` | Der Speicherort des Docker-Bildes. Nur Azure ACR oder Public (nicht authentifiziert) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`). Die folgende Beispielantwort gilt für eine Python-Engine. Alle Engine-Antworten haben folgendes Format:
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort gilt für eine Python-Engine. Alle Engine-Antworten haben folgendes Format:
 
 ```json
 {
@@ -217,15 +217,15 @@ curl -X POST \
 | `algorithm` | Setzen Sie den verwendeten Algorithmus auf `fp` (Feature Pipeline). |
 | `name` | Der gewünschte Name für die Feature Pipeline-Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
+| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` gesetzt werden. |
 | `artifacts.default.image.location` | Der Speicherort des Docker-Bildes. Nur Azure ACR oder Public (nicht authentifiziert) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
-| `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Ihre `pipeline.json` Konfigurationsparameter. |
+| `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker` gesetzt werden. |
+| `artifacts.default.defaultMLInstanceConfigs` | Ihre Parameter für die `pipeline.json`-Konfigurationsdatei. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Feature Pipeline-Engine einschließlich ihrer eindeutigen Kennung (`id`). Die folgende Beispielantwort bezieht sich auf eine PySpark-Feature-Pipeline-Engine.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Feature Pipeline-Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine PySpark-Feature-Pipeline-Engine.
 
 ```json
 {
@@ -387,7 +387,7 @@ Sie können eine vorhandene Engine ändern und aktualisieren, indem Sie ihre Eig
 
 >[!NOTE]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [Abfrage der Engine nach ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um sicherzustellen, dass diese PUT-Anfrage erfolgreich ausgeführt wird, wird empfohlen, zuerst eine GET-Anfrage zum Abrufen der Engine durch ID](#retrieve-specific) durchzuführen. [ Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen und die Beschreibung einer Engine und weist zunächst folgende Eigenschaften auf:
 

@@ -17,7 +17,7 @@ In diesem Dokument werden die Struktur und der Anwendungsfall der Feldgruppe der
 
 >[!NOTE]
 >
->Aufgrund des Umfangs und der Anzahl der sich wiederholenden Elemente in dieser Feldgruppe wurden viele der in diesem Handbuch angezeigten Felder reduziert, um Platz zu sparen. Um die gesamte Struktur dieser Feldergruppe zu untersuchen, können Sie [in der Platform-Benutzeroberfläche nachschlagen](../../ui/explore.md) oder das vollständige Schema im [öffentliches XDM-Repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>Aufgrund des Umfangs und der Anzahl der sich wiederholenden Elemente in dieser Feldgruppe wurden viele der in diesem Handbuch angezeigten Felder reduziert, um Platz zu sparen. Um die vollständige Struktur dieser Feldergruppe zu untersuchen, können Sie sie [in der Platform-Benutzeroberfläche](../../ui/explore.md) nachschlagen oder das vollständige Schema im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) anzeigen.
 
 ## Feldgruppenstruktur
 
