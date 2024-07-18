@@ -1,10 +1,10 @@
 ---
 title: Merkury Enterprise Identity Destination
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Verbindung zum Enterprise Identity-Ziel von Merkury erstellen.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -74,11 +74,12 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 ## Exporttyp und -häufigkeit
 
-Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
-|**Audience**|**Supported**|**Description origin**|\
-|—|—|—|\
-|Segmentation Service|✓|Zielgruppen, die durch die Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) generiert wurden.|
-Benutzerdefinierte Uploads|X|Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform.
+Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
+
+| **Zielgruppe** | **Unterstützt** | **Beschreibung origin** |
+|---|---|---|      
+| Segmentierungs-Service | ✓ | Zielgruppen, die durch die Experience Platform [[Segmentierungsdienst]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) generiert wurden. |
+| Benutzerdefinierte Uploads | X | Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
 
 {style="table-layout:auto"}
 

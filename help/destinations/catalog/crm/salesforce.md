@@ -3,10 +3,10 @@ keywords: crm;CRM;crm-Ziele;Salesforce crm;Salesforce crm-Ziel
 title: Salesforce-CRM-Verbindung
 description: Mit dem Salesforce CRM-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce CRM für Ihre geschäftlichen Anforderungen aktivieren.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
 workflow-type: tm+mt
 source-wordcount: '2821'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -98,7 +98,7 @@ Ein Beispiel für die Erstellung eines benutzerdefinierten Felds in [!DNL Salesf
 >* Diese Einschränkung bedeutet, dass Sie immer nur maximal 25 Experience Platform-Zielgruppenmitgliedschaften aktiv sein können.
 >* Wenn Sie diese Grenze in Salesforce erreicht haben, müssen Sie die benutzerdefinierten Attribute aus Salesforce entfernen, die zum Speichern des Zielgruppenstatus für ältere Zielgruppen innerhalb von Experience Platform verwendet wurden, bevor eine neue **[!UICONTROL Zuordnungs-ID]** verwendet werden kann.
 
-#### Sammeln von [!DNL Salesforce CRM]-Anmeldeinformationen {#gather-credentials}
+#### Sammeln von [!DNL Salesforce CRM]-Anmeldedaten {#gather-credentials}
 
 Beachten Sie die folgenden Elemente, bevor Sie sich beim [!DNL Salesforce CRM]-Ziel authentifizieren:
 
@@ -134,7 +134,7 @@ Wenn Ihr [!DNL Salesforce] -Kontoadministrator IP-Einschränkungen erzwungen hat
 Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigkeit des Zielexports zu erhalten.
 
 | Element | Typ | Anmerkungen |
----------|----------|---------|
+|---------|----------|---------|
 | Exporttyp | **[!UICONTROL Profilbasiert]** | <ul><li>Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern *(z. B.: E-Mail-Adresse, Telefonnummer, Nachname)*, entsprechend Ihrer Feldzuordnung.</li><li> Jeder Zielgruppenstatus in [!DNL Salesforce CRM] wird anhand des Werts **[!UICONTROL Zuordnungs-ID]** aktualisiert, der während des Schritts [Zielgruppenplanung](#schedule-segment-export-example) angegeben wurde, und erhält den entsprechenden Zielgruppenstatus von Platform.</li></ul> |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | <ul><li>Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Zielgruppenauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
@@ -152,15 +152,15 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Sales
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Eine Anleitung finden Sie im Abschnitt [Anmeldedaten sammeln [!DNL Salesforce CRM] 2} .
-](#gather-credentials)
-| Berechtigung | Beschreibung |
-| — | — |
+Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder unten aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Eine Anleitung finden Sie im Abschnitt [Anmeldedaten sammeln [!DNL Salesforce CRM] 2} .](#gather-credentials)
+
+| Anmeldedaten | Beschreibung |
+| --- | --- |
 | **[!UICONTROL Benutzername]** | Ihr [!DNL Salesforce] -Konto-Benutzername. |
-| **[!UICONTROL Kennwort]** | Eine verkettete Zeichenfolge, die aus Ihrem [!DNL Salesforce]-Kontokennwort besteht und an Ihr [!DNL Salesforce]-Sicherheitstoken angehängt ist.<br>Der verkettete Wert hat die Form &quot;`{PASSWORD}{TOKEN}`&quot;.<br> Beachten Sie, dass Sie keine geschweiften Klammern oder Leerzeichen verwenden.<br>Wenn Ihr [!DNL Salesforce] Kennwort beispielsweise `MyPa$$w0rd123` und Ihr [!DNL Salesforce] Sicherheitstoken `TOKEN12345....0000` lautet, lautet der verkettete Wert, den Sie im Feld **[!UICONTROL Kennwort]** verwenden, `MyPa$$w0rd123TOKEN12345....0000`. |
-| **[!UICONTROL Benutzerdefinierte Domäne]** | Ihr [!DNL Salesforce] -Domänenpräfix. <br>Wenn Ihre Domäne beispielsweise *`d5i000000isb4eak-dev-ed`.my.salesforce.com* ist, müssen Sie als Wert `d5i000000isb4eak-dev-ed` angeben. |
+| **[!UICONTROL Passwort]** | Eine verkettete Zeichenfolge, die aus Ihrem [!DNL Salesforce]-Kontokennwort besteht und an Ihr [!DNL Salesforce]-Sicherheitstoken angehängt ist.<br>Der verkettete Wert hat die Form &quot;`{PASSWORD}{TOKEN}`&quot;.<br> Beachten Sie, dass Sie keine geschweiften Klammern oder Leerzeichen verwenden.<br>Wenn Ihr [!DNL Salesforce] Kennwort beispielsweise `MyPa$$w0rd123` und Ihr [!DNL Salesforce] Sicherheitstoken `TOKEN12345....0000` lautet, lautet der verkettete Wert, den Sie im Feld **[!UICONTROL Kennwort]** verwenden, `MyPa$$w0rd123TOKEN12345....0000`. |
+| **[!UICONTROL Benutzerdefinierte Domäne]** | Ihr [!DNL Salesforce]-Domänenpräfix. <br>Wenn Ihre Domäne beispielsweise *`d5i000000isb4eak-dev-ed`.my.salesforce.com* ist, müssen Sie als Wert `d5i000000isb4eak-dev-ed` angeben. |
 | **[!UICONTROL Client-ID]** | Ihre [!DNL Salesforce] verbundene App `Consumer Key`. |
-| **[!UICONTROL Client-Geheimnis]** | Ihre [!DNL Salesforce] verbundene App `Consumer Secret`. |
+| **[!UICONTROL Client Secret]** (Client-Geheimnis) | Ihre [!DNL Salesforce] verbundene App `Consumer Secret`. |
 
 ![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -213,12 +213,13 @@ Um Ihre XDM-Felder den [!DNL (API) Salesforce CRM]-Zielfeldern korrekt zuzuordne
    * Wenn Sie in Ihrem Segment mit *Kontakten* arbeiten, finden Sie in der Objektreferenz in Salesforce für [Kontakt](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) Informationen zum Definieren von Zuordnungen für die zu aktualisierenden Felder.
    * Sie können erforderliche Felder identifizieren, indem Sie nach dem Wort *Erforderlich* suchen, das in den Feldbeschreibungen im obigen Link erwähnt wird.
    * Je nach den Feldern, die Sie exportieren oder aktualisieren möchten, fügen Sie Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce CRM] hinzu:
-|Source-Feld|Zielfeld| Hinweise |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory` Nachname des Kontakts mit bis zu 80 Zeichen. |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| Vorname des Kontakts mit bis zu 40 Zeichen. |
-|`xdm: personalEmail.address`|`Attribute: Email`| Die E-Mail-Adresse des Kontakts. |
+
+     | Quellfeld | Zielfeld | Anmerkungen |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Nachname des Kontakts mit bis zu 80 Zeichen. |
+     | `xdm: person.name.firstName` | `Attribute: FirstName` | Vorname des Kontakts mit bis zu 40 Zeichen. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | Die E-Mail-Adresse des Kontakts. |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -228,12 +229,13 @@ Um Ihre XDM-Felder den [!DNL (API) Salesforce CRM]-Zielfeldern korrekt zuzuordne
    * Wenn Sie in Ihrem Segment mit *Leads* arbeiten, lesen Sie die Objektreferenz in Salesforce für [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) , um Zuordnungen für die zu aktualisierenden Felder zu definieren.
    * Sie können erforderliche Felder identifizieren, indem Sie nach dem Wort *Erforderlich* suchen, das in den Feldbeschreibungen im obigen Link erwähnt wird.
    * Je nach den Feldern, die Sie exportieren oder aktualisieren möchten, fügen Sie Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL (API) Salesforce CRM] hinzu:
-|Source-Feld|Zielfeld| Hinweise |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory` Nachname des Leads mit bis zu 80 Zeichen. |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| 2. `Mandatory` Die Führung ist dabei. |
-|`xdm: personalEmail.address`|`Attribute: Email`| Die E-Mail-Adresse des Leads. |
+
+     | Quellfeld | Zielfeld | Anmerkungen |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`. Nachname des Leads mit bis zu 80 Zeichen. |
+     | `xdm: b2b.companyName` | `Attribute: Company` | `Mandatory`. Die Führung ist dabei. |
+     | `xdm: personalEmail.address` | `Attribute: Email` | Die E-Mail-Adresse des Leads. |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/salesforce/mappings-leads.png)
@@ -257,8 +259,9 @@ Unten finden Sie ein Beispiel, das die Position der [!DNL Salesforce CRM] **[!UI
 Wie oben gezeigt, entspricht der [!DNL Salesforce] **[!UICONTROL Feldname]** genau dem Wert, der in [!DNL Salesforce CRM] **[!UICONTROL Zuordnungs-ID]** angegeben ist.
 
 Je nach Anwendungsfall können alle aktivierten Zielgruppen demselben benutzerdefinierten Feld [!DNL Salesforce] oder unterschiedlichen **[!UICONTROL Feldnamen]** in [!DNL Salesforce CRM] zugeordnet werden. Ein typisches Beispiel, das auf dem oben gezeigten Bild basiert, könnte sein.
+
 | [!DNL Salesforce CRM] Segmentname | [!DNL Salesforce] **[!UICONTROL Feldname]** | [!DNL Salesforce CRM] **[!UICONTROL Zuordnungs-ID]** |
-| — | — | — |
+| --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 
