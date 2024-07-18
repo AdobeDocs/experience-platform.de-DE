@@ -1,10 +1,10 @@
 ---
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3673'
-ht-degree: 66%
+source-wordcount: '3693'
+ht-degree: 65%
 
 ---
 
@@ -258,6 +258,10 @@ Wenn Sie **[!UICONTROL Eigenschaften bearbeiten]** auswählen, können Sie die g
 ### Zielgruppe insgesamt {#audience-total}
 
 Im Abschnitt **[!UICONTROL Zielgruppe insgesamt]** wird die Gesamtzahl der Profile angezeigt, die für die Zielgruppe qualifiziert sind.
+
+>[!NOTE]
+>
+>Nach Abschluss des Exportvorgangs kann es bis zu 30 Minuten dauern, bis die Gesamtanzahl der Zielgruppen aktualisiert ist.
 
 Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweiligen Tages generiert. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Für zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet und für über 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet. Weiterführende Informationen zum Generieren von Schätzungen finden Sie im Tutorial zur Zielgruppenerstellung im Abschnitt [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
 

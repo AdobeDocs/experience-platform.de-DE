@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4092'
 ht-degree: 22%
 
 ---
@@ -317,7 +317,7 @@ Weitere Informationen zur Verwendung der Zielgruppenkomposition finden Sie im [H
 
 Zielgruppen werden automatisch gespeichert, während sie in der Zielgruppenkomposition erstellt werden. Die Erstellungszeit der Zielgruppe ist das erste Mal, dass diese automatische Speicherung erfolgt.
 
-Nach der Erstellung der Audience kann die Auswertung bis zu 24 Stunden dauern.
+Nachdem die Zielgruppenzusammensetzung erstellt wurde, kann es bis zu 48 Stunden dauern, bis sie ausgewertet und für nachgelagerte Dienste wie ein Real-Time CDP-Ziel oder einen Adobe Journey Optimizer-Kanal aktiviert wird.
 
 ### Wann kann ich die erstellte Zielgruppe verwenden?
 
@@ -337,11 +337,7 @@ Durch die Zielgruppenteilung können Sie Ihre Zielgruppe weiter in kleinere Grup
 
 Bei der Aufteilung nach Attribut besteht eine gegenseitige Exklusivität zwischen den Gruppen. Wenn also ein Eintrag die Kriterien für mehrere Aufspaltungspfade erfüllt, wird ihm der **erste** Pfad von links und **keiner** der anderen Pfade zugewiesen.
 
-Beim Aufteilen nach Prozentsatz werden die Aufspaltungen **zufällig** vorgenommen. Dies bedeutet, dass die Profile zufällig jedem Pfad zugewiesen werden. Die Aufspaltung **ist** persistent, d. h. das Profil befindet sich bei jeder Auswertung in derselben Unter-Zielgruppe.
-
->[!NOTE]
->
->Zuvor waren die Aufspaltungen in der Zielgruppenkomposition **nicht** persistent.
+Beim Aufteilen nach Prozentsatz werden die Aufspaltungen **zufällig** vorgenommen. Dies bedeutet, dass die Profile zufällig jedem Pfad zugewiesen werden.
 
 Weiterführende Informationen zum Block „Aufspaltung“ finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./ui/audience-composition.md#split).
 

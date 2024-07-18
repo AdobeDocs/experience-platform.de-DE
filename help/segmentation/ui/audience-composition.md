@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
-ht-degree: 87%
+source-wordcount: '1951'
+ht-degree: 83%
 
 ---
 
@@ -268,14 +268,18 @@ Darüber hinaus können Sie den Umschalter **[!UICONTROL Andere Profile]** aktiv
 
 ## Veröffentlichen der Zielgruppe
 
-Nachdem Sie Ihre Zielgruppe erstellt haben, können Sie sie speichern und veröffentlichen, indem Sie **[!UICONTROL Veröffentlichen]** auswählen.
+>[!IMPORTANT]
+>
+>Beachten Sie bei der Veröffentlichung Ihrer Zielgruppenzusammensetzung, dass es bis zu 48 Stunden dauern kann, bis sie ausgewertet und für nachgelagerte Dienste wie ein Real-Time CDP-Ziel oder einen Adobe Journey Optimizer-Kanal aktiviert wird.
 
-![Die Schaltfläche „Veröffentlichen“ ist hervorgehoben und zeigt, wie Sie Ihre Zielgruppe speichern und veröffentlichen.](../images/ui/audience-composition/publish.png)
+Nachdem Sie die Komposition erstellt haben, können Sie sie speichern und veröffentlichen, indem Sie **[!UICONTROL Publish]** auswählen.
+
+![Die Schaltfläche &quot;Publish&quot;ist hervorgehoben und zeigt, wie Sie Ihre Komposition speichern und veröffentlichen können.](../images/ui/audience-composition/publish.png)
 
 Wenn bei der Erstellung der Zielgruppe Fehler auftreten, wird ein Warnhinweis angezeigt, über den Sie erfahren, wie Sie das Problem beheben können.
 
-![Die Schaltfläche „Veröffentlichen“ ist hervorgehoben und zeigt, wie Sie Ihre Zielgruppe speichern und veröffentlichen.](../images/ui/audience-composition/audience-alert.png)
+![Die Schaltfläche &quot;Publish&quot;ist hervorgehoben und zeigt, wie Sie Ihre Komposition speichern und veröffentlichen können.](../images/ui/audience-composition/audience-alert.png)
 
 ## Nächste Schritte
 
-Die Zielgruppenkomposition bietet einen umfassenden Workflow, mit dem Sie Zielgruppen von verschiedenen Blocktypen erstellen können. Weitere Informationen zu anderen Teilen der Segmentierungs-Service-Benutzeroberfläche finden Sie im [Segmentierungs-Service-Benutzerhandbuch](./overview.md).
+Audience-Komposition bietet einen umfassenden Workflow, mit dem Sie aus verschiedenen Blocktypen Kompositionen erstellen können. Weitere Informationen zu anderen Teilen der Segmentierungs-Service-Benutzeroberfläche finden Sie im [Segmentierungs-Service-Benutzerhandbuch](./overview.md).
