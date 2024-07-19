@@ -3,10 +3,10 @@ title: API-Endpunkt für Datensatzgültigkeiten
 description: Mit dem Endpunkt /ttl in der Datenhygiene-API können Sie programmgesteuert einen Zeitplan für Datensatzgültigkeiten in Adobe Experience Platform festlegen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
+source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
 workflow-type: tm+mt
-source-wordcount: '2217'
-ht-degree: 58%
+source-wordcount: '1964'
+ht-degree: 51%
 
 ---
 
@@ -388,88 +388,6 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) zurück und das Attribut `status` der Gültigkeit wird auf `cancelled` gesetzt.
 
-## Gültigkeitsstatus-Verlauf eines Datensatzes abrufen {#retrieve-expiration-history}
-
-Um den Ablaufstatusverlauf eines bestimmten Datensatzes nachzuschlagen, verwenden Sie die Abfrageparameter `{DATASET_ID}` und `include=history` in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung des Datensatzablaufs, alle angewendeten Aktualisierungen sowie über den Abbruch oder die Ausführung (falls zutreffend). Sie können auch den `{DATASET_EXPIRATION_ID}` verwenden, um den Ablaufstatus des Datensatzes abzurufen.
-
-**API-Format**
-
-```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}?include=history
-```
-
-| Parameter | Beschreibung |
-| --- | --- |
-| `{DATASET_ID}` | ID des Datensatzes, dessen Gültigkeitsprotokoll Sie aufrufen möchten. |
-| `{DATASET_EXPIRATION_ID}` | Die ID des Datensatzablaufs. Hinweis: Dies wird in der Antwort als `ttlId` bezeichnet. |
-
-{style="table-layout:auto"}
-
-**Anfrage**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Antwort**
-
-Eine erfolgreiche Antwort geben die Details der Datensatzgültigkeit mit einem `history`-Array zurück, das die Details der Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für jede der aufgezeichneten Aktualisierungen angibt.
-
-```json
-{
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-  "datasetId": "62759f2ede9e601b63a2ee14",
-  "datasetName": "Example Dataset",
-  "sandboxName": "prod",
-  "displayName": "Expiration Request 123",
-  "description": "Expiration Request 123 Description",
-  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
-  "status": "cancelled",
-  "expiry": "2022-05-09T23:47:30.071186Z",
-  "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "history": [
-    {
-      "status": "created",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "updated",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "cancelled",
-      "expiry": "2022-05-09T23:47:30.071186Z",
-      "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    }
-  ]
-}
-```
-
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `ttlId` | Die ID der Datensatzgültigkeit. |
-| `datasetId` | Die ID des Datensatzes, für den diese Gültigkeit zutrifft. |
-| `datasetName` | Anzeigename für den Datensatz, für den diese Gültigkeit zutrifft. |
-| `sandboxName` | Name der Sandbox, unter dem der Zieldatensatz zu finden ist. |
-| `displayName` | Der Anzeigename für die Anfrage zur Gültigkeit. |
-| `description` | Eine Beschreibung für die Anfrage zur Gültigkeit. |
-| `imsOrg` | Die Kennung Ihrer Organisation. |
-| `history` | Listet das Protokoll der Aktualisierungen für die Gültigkeit als Array von Objekten auf, wobei jedes Objekt die Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für die Gültigkeit zum Zeitpunkt der Aktualisierung enthält. |
-
-{style="table-layout:auto"}
-
 ## Anhang
 
 ### Akzeptierte Abfrageparameter {#query-params}
@@ -482,18 +400,14 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `author` | Gibt die Gültigkeiten zurück, für die `created_by` der Suchzeichenfolge entspricht. Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE` beginnt, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als exakte Zeichenfolge gehandhabt, die genau mit dem gesamten Inhalt des `created_by`-Felds übereinstimmen muss. | `author=LIKE %john%`, `author=John Q. Public` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Gibt die Gültigkeiten wieder, die zu einem beliebigen Zeitpunkt im angegebenen Intervall abgebrochen wurden. Dies gilt auch dann, wenn die Gültigkeit später erneut erstellt wurde (durch Festlegen eines neuen Ablaufdatums für denselben Datensatz). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt wurden. | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | Gibt die Gültigkeiten zurück, die im 24-Stunden-Fenster erstellt wurden, das mit dem angegebenen Zeitpunkt beginnt.<br><br>Beachten Sie, dass ein Datum ohne Uhrzeit (wie `2021-12-07`) den Datum/Uhrzeit-Wert am Anfang des Tages darstellt. Daher bezieht sich `createdDate=2021-12-07` auf alle am 7. Dezember 2021 erstellten Gültigkeiten, von `00:00:00` bis `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
-| `createdFromDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder danach erstellt wurden. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | Gibt die Gültigkeiten wieder, die zum angegebenen Zeitpunkt oder davor erstellt wurden. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `author` | Verwenden Sie den Abfrageparameter &quot;`author`&quot;, um die Person zu finden, die das Ablaufdatum des Datensatzes zuletzt aktualisiert hat. Wenn seit der Erstellung keine Aktualisierungen vorgenommen wurden, entspricht dies dem ursprünglichen Ersteller des Ablaufs. Dieser Parameter stimmt mit den Abläufen überein, wobei das Feld `created_by` der Suchzeichenfolge entspricht.<br>Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE` beginnt, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als exakte Zeichenfolge gehandhabt, die genau mit dem gesamten Inhalt des `created_by`-Felds übereinstimmen muss. | `author=LIKE %john%`, `author=John Q. Public` |
 | `datasetId` | Gibt die Gültigkeiten wieder, die für einen bestimmten Datensatz gelten. | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | Sucht nach Abläufen, deren Datensatzname die angegebene Suchzeichenfolge enthält. Bei der Übereinstimmung wird nicht zwischen Groß- und Kleinschreibung unterschieden. | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | Sucht nach Ablauf, dessen Anzeigename die angegebene Suchzeichenfolge enthält. Bei der Übereinstimmung wird nicht zwischen Groß- und Kleinschreibung unterschieden. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtert Ergebnisse anhand eines exakten Ausführungsdatums, eines Enddatums für die Ausführung oder eines Anfangsdatums für die Ausführung. Sie werden zum Abrufen von Daten oder Datensätzen verwendet, die mit der Ausführung eines Vorgangs an einem bestimmten Datum, vor einem bestimmten Datum oder nach einem bestimmten Datum verknüpft sind. | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `expiryDate` | Sucht nach Abläufen, die im 24-Stunden-Fenster des angegebenen Datums aufgetreten sind. | `2024-01-01` |
+| `expiryToDate` / `expiryFromDate` | Gibt die Gültigkeiten wieder, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der zurückzugebenden Gültigkeiten angibt. Die Standardeinstellung ist 25. | `limit=50` |
 | `orderBy` | Der Abfrageparameter `orderBy` gibt die Sortierreihenfolge der von der API zurückgegebenen Ergebnisse an. Verwenden Sie sie, um die Daten basierend auf einem oder mehreren Feldern anzuordnen, entweder in aufsteigender (ASC) oder in absteigender (DESC) Reihenfolge. Verwenden Sie das Präfix + oder - , um ASC bzw. DESC anzugeben. Die folgenden Werte werden akzeptiert: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | Gibt die Gültigkeiten von Datensätzen zurück, deren Organisations-ID mit der des Parameters übereinstimmt. Dieser Wert ist standardmäßig auf den Wert der `x-gw-ims-org-id`-Kopfzeilen festgelegt und wird ignoriert, es sei denn, die Anfrage liefert ein Service-Token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
@@ -502,7 +416,8 @@ In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten 
 | `search` | Sucht nach Ablauf, bei dem die angegebene Zeichenfolge eine exakte Übereinstimmung mit der Ablaufkennung darstellt oder **in einem dieser Felder** enthält:<br><ul><li>Autor</li><li>Anzeigename</li><li>Beschreibung</li><li>Anzeigename</li><li>Datensatzname</li></ul> | `search=TESTING` |
 | `status` | Eine durch Kommas getrennte Liste von Status. Wenn diese Liste enthalten ist, entspricht die Antwort den Datensatzgültigkeiten, deren aktueller Status in der Liste enthalten ist. | `status=pending,cancelled` |
 | `ttlId` | Entspricht der Ablaufanfrage der angegebenen ID. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Wie `createdDate` / `createdFromDate` / `createdToDate`, jedoch wird die Aktualisierungszeit einer Datensatzgültigkeit anstelle der Erstellungszeit herangezogen.<br><br>Eine Gültigkeit wird bei jeder Bearbeitung als aktualisiert erachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |
+| `updatedDate` | Sucht nach Ablauffristen, die im 24-Stunden-Fenster des angegebenen Datums aktualisiert wurden. | `2024-01-01` |
+| `updatedToDate` / `updatedFromDate` | Sucht nach Ablauffristen, die im 24-Stunden-Fenster ab dem angegebenen Zeitpunkt aktualisiert wurden.<br><br>Eine Gültigkeit wird bei jeder Bearbeitung als aktualisiert erachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 
