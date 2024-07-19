@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
 workflow-type: tm+mt
-source-wordcount: '4092'
-ht-degree: 22%
+source-wordcount: '4187'
+ht-degree: 21%
 
 ---
 
@@ -46,7 +46,7 @@ Wenn Sie eine extern generierte Zielgruppe hochladen, werden die folgenden Eleme
 
 Während des Workflows &quot;Externe Zielgruppe importieren&quot;müssen Sie angeben, welche Spalte in der CSV-Datei der **Primären Identität** entspricht. Ein Beispiel für eine primäre Identität sind E-Mail-Adresse, ECID oder ein unternehmensspezifischer benutzerdefinierter Identitäts-Namespace.
 
-Die mit dieser primären Identität verknüpften Daten spalten die **nur** -Daten, die an das Profil angehängt sind. Wenn keine vorhandenen Profile vorhanden sind, die mit den Daten in der primären Identitätsspalte übereinstimmen, wird ein neues Profil erstellt. Dieses Profil ist jedoch im Wesentlichen ein verwaistes Profil, da **no** -Attribute oder Erlebnisereignisse mit diesem Profil verknüpft sind.
+Die mit dieser primären Identitätsspalte verknüpften Daten sind die **nur** -Daten, die an das Profil angehängt sind. Wenn keine vorhandenen Profile vorhanden sind, die mit den Daten in der primären Identitätsspalte übereinstimmen, wird ein neues Profil erstellt. Dieses Profil ist jedoch im Wesentlichen ein verwaistes Profil, da **no** -Attribute oder Erlebnisereignisse mit diesem Profil verknüpft sind.
 
 Alle anderen Daten innerhalb der extern generierten Zielgruppe werden als **Payload-Attribute** betrachtet. Diese Attribute können **nur** zur Personalisierung und Anreicherung während der Aktivierung verwendet werden und sind **nicht** an ein Profil angehängt. Diese Attribute werden jedoch im Data Lake gespeichert.
 
@@ -59,6 +59,10 @@ Ja, die extern generierte Zielgruppe wird mit dem in Platform vorhandenen Profil
 ### Kann ich eine extern generierte Zielgruppe verwenden, um andere Zielgruppen zu erstellen?
 
 Ja, alle extern generierten Zielgruppen werden im Zielgruppeninventar angezeigt und können verwendet werden, wenn Zielgruppen innerhalb des [Segment Builders](./ui/segment-builder.md) erstellt werden.
+
+### Wie oft werden extern generierte Zielgruppen ausgewertet?
+
+Extern generierte Zielgruppen werden während des Imports nur **1} ausgewertet.** Da die diesen Importzielgruppen zugeordneten Attribute nicht dauerhaft sind und **nicht** Teil des Profilspeichers sind, wird eine extern generierte Zielgruppe nur aktualisiert, wenn die vorhandene Zielgruppe manuell aktualisiert wird.
 
 ### Kann ich extern hochgeladene Attribute als Teil der Segmentierung verwenden?
 
@@ -97,6 +101,10 @@ Wenn Sie versehentlich eine extern generierte Audience hochgeladen haben und die
 Die aktuelle Datengültigkeit für extern generierte Zielgruppen beträgt **30 Tage**. Diese Datengültigkeit wurde ausgewählt, um die Menge an überschüssigen Daten zu reduzieren, die in Ihrem Unternehmen gespeichert werden.
 
 Nach Ablauf des Datenablaufzeitraums ist der verknüpfte Datensatz weiterhin im Datensatzbestand sichtbar, Sie können jedoch **nicht** die Zielgruppe aktivieren, und die Profilanzahl wird als null angezeigt.
+
+### Gibt es eine maximale Anzahl von extern generierten Zielgruppen, die ich importieren kann?
+
+Die Anzahl der extern generierten Zielgruppen, die Sie importieren können, ist unbegrenzt. Beachten Sie jedoch, dass die importierten Zielgruppen **do** mit dem Gesamtzielgruppenlimit angerechnet werden.
 
 ### Wie interagieren Audience Portal und die Zielgruppenkomposition mit der Veröffentlichung von Real-Time CDP-Partnerdaten?
 
