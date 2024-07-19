@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 94%
@@ -280,7 +280,7 @@ Weitere Informationen zur XDM-Klasse finden Sie in der [Übersicht über XDM Bus
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` ist die sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
+| `iif(externalSourceId != null && externalSourceId != "", to_object("sourceType", externalSourceType, "sourceInstanceID", externalSourceInstanceId, "sourceID", externalSourceId, "sourceKey", externalSourceKey), iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null))` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` ist die sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
