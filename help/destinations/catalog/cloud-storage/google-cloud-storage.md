@@ -3,10 +3,10 @@ title: Verbindung zu Google Cloud Storage
 description: Erfahren Sie, wie Sie eine Verbindung zu Google Cloud Storage herstellen und Zielgruppen aktivieren oder Datensätze exportieren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 63%
+source-wordcount: '1228'
+ht-degree: 62%
 
 ---
 
@@ -114,6 +114,22 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
 
 Wenn Sie alle Details für Ihre Zielverbindung eingegeben haben, klicken Sie auf **[!UICONTROL Weiter]**.
+
+### Erforderliche [!DNL Google Cloud Storage]-Berechtigungen {#required-google-cloud-storage-permission}
+
+Um Daten erfolgreich mit Ihrem [!DNL Google Cloud Storage] -Speicherort zu verbinden und zu exportieren, benötigen Sie die folgenden [!DNL Google Cloud Storage] -Berechtigungen für Ihre Behälter:
+
+*`orgpolicy.policy.get`
+*`resourcemanager.projects.get`
+*`resourcemanager.projects.list`
+*`storage.managedFolders.create`
+*`storage.multipartUploads.abort`
+*`storage.multipartUploads.create`
+*`storage.multipartUploads.listParts`
+*`storage.objects.create`
+*`storage.objects.list`
+
+Weitere Informationen zu [Zugriffssteuerung und -berechtigungen](https://cloud.google.com/storage/docs/access-control/iam-permissions) in [!DNL Google Cloud Storage].
 
 ## Aktivieren von Zielgruppen für dieses Ziel {#activate}
 
