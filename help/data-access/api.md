@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Data Access API-Anleitung
 description: Die Data Access API unterstützt Adobe Experience Platform, indem sie Entwicklern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von Experience Platform konzentriert.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
+source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 12%
+source-wordcount: '554'
+ht-degree: 11%
 
 ---
 
 # Handbuch zur Data Access API
+
+>[!IMPORTANT]
+>
+>Die Data Access API ist jetzt **veraltet**. Es wird empfohlen, zum Exportieren von Daten aus Adobe Experience Platform Ziele zu verwenden. Weitere Informationen finden Sie in der Dokumentation zu [Datenexport-Zielen für Datensätze](../destinations/destination-types.md#dataset-export-destinations).
 
 Die Data Access API unterstützt Adobe Experience Platform, indem sie Benutzern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von [!DNL Experience Platform] konzentriert.
 
@@ -19,7 +23,7 @@ Die Data Access API unterstützt Adobe Experience Platform, indem sie Benutzern 
 
 ## API-Spezifikationsreferenz
 
-Die Referenz-Dokumentation zur Swagger-API finden Sie [hier](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+Die OpenAPI-Referenzdokumentation finden Sie [hier](https://developer.adobe.com/experience-platform-apis/references/data-access/).
 
 ## Terminologie {#terminology}
 

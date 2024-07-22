@@ -2,10 +2,10 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1822'
-ht-degree: 16%
+source-wordcount: '1848'
+ht-degree: 15%
 
 ---
 
@@ -46,6 +46,10 @@ Der Arbeitsbereich für Zeitpläne wird angezeigt. Die Benutzeroberfläche zeigt
 ### Hinzufügen von Planungsdetails {#schedule-details}
 
 Die Seite mit den Zeitplandetails wird angezeigt. Auf dieser Seite können Sie verschiedene Details für die geplante Abfrage bearbeiten. Zu den Details gehören die [Häufigkeit und der Wochentag der geplanten Abfrage](#scheduled-query-frequency)-Ausführung, das Start- und Enddatum, der Datensatz, in den die Ergebnisse exportiert werden sollen, und [Warnhinweise zum Abfragestatus](#alerts-for-query-status).
+
+>[!IMPORTANT]
+>
+>Die Benutzeroberfläche des Abfrageplaners unterstützt keine unbegrenzte oder unbefristete Zeitplanung. Es muss ein Enddatum angegeben werden. Für das Enddatum gibt es keine Obergrenze.
 
 ![Das hervorgehobene Bedienfeld „Zeitplandetails“.](../images/ui/query-schedules/schedule-details.png)
 
