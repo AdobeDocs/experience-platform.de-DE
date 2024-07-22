@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5086e6419c14356b47963b8445389a0048ad11d7
+source-git-commit: e874459cd3018e0cf2358e590c6ec5eb0f7b4c98
 workflow-type: tm+mt
-source-wordcount: '2158'
-ht-degree: 82%
+source-wordcount: '2192'
+ht-degree: 81%
 
 ---
 
@@ -13,6 +13,15 @@ ht-degree: 82%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.25.0 – Freitag, 18. Juli 2024
+
+**Neue Funktionen**
+
+* Die Personalisierung des automatischen Trackings in Adobe Journey Optimizer wird nun unterstützt.
+* Es wurden neue Einstellungen zur Verwaltung der verbesserten Klicksammlung eingeführt.
+
+Enthält Version 2.21.1 des Adobe Experience Platform Web SDK.
 
 ## Version 2.24.0 – Donnerstag, 5. Juni 2024
 

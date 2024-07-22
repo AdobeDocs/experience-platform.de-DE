@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
+source-git-commit: 47cf9cdb7c59ce8459ecb8823787b5145d5f5621
 workflow-type: tm+mt
-source-wordcount: '1811'
-ht-degree: 80%
+source-wordcount: '1857'
+ht-degree: 79%
 
 ---
 
@@ -21,6 +21,20 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 >Google [hat angekündigt,](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) werde die Chrome-Unterstützung für Drittanbieter-Cookies in der zweiten Jahreshälfte 2024 einstellen. Daher werden Drittanbieter-Cookies in keinem der wichtigsten Browser mehr unterstützt.
 >
 >Wenn diese Änderung implementiert ist, stellt Adobe die Unterstützung für das `demdex` -Cookie ein, das derzeit im Web SDK unterstützt wird.
+
+## Version 2.21.1 – Freitag, 18. Juli 2024
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Fehlerkorrektur - bei der Verwendung der NPM-Bibliothek tritt kein Build mehr auf.
+
+## Version 2.21.0 – Mittwoch, 16. Juli 2024
+
+**Neue Funktionen**
+
+* Unterstützung für das automatische Tracking von Vorschlagsinteraktionen hinzugefügt.
+* Es wurde ein benutzerdefiniertes Build-Skript hinzugefügt, das eine Datei vom Typ &quot;legate.js&quot;bereitstellt.
+* Verbesserte Klick-Sammlung mit Unterstützung für ActivityMap und Ereignisgruppierung.
 
 ## Version 2.20.0 – Mittwoch, 21. Mai 2024
 
