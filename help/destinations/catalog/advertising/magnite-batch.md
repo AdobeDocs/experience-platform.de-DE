@@ -1,34 +1,34 @@
 ---
-title: Magnite-Streaming-Batch-Ziel
+title: Magnite-Batch-Ziel
 description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen in Batches an die Magnite-Streaming-Plattform zu senden.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 14%
 
 ---
 
 
-# Magnite Streaming: Batch-Verbindung {#magnite-streaming-batch}
+# Magnite: Batch-Verbindung {#magnite-streaming-batch}
 
 ## Übersicht {#overview}
 
-In diesem Dokument wird das Magnite-Streaming: Batch-Ziel beschrieben und anhand von Beispielanwendungsfällen erhalten Sie ein besseres Verständnis, wie Sie Zielgruppen aktivieren und in sie exportieren können.
+In diesem Dokument wird das Magnite: Batch-Ziel beschrieben und anhand von Beispielanwendungsfällen erhalten Sie ein besseres Verständnis, wie Sie Zielgruppen aktivieren und exportieren können.
 
-Adobe Real-Time CDP-Zielgruppen können auf zwei Arten an Magnite gesendet werden: Streaming-Plattform - sie können einmal täglich bereitgestellt werden oder in Echtzeit bereitgestellt werden:
+Adobe Real-Time CDP-Zielgruppen können auf zwei Arten an die Magnite-Streaming-Plattform bereitgestellt werden - sie können einmal täglich bereitgestellt werden oder in Echtzeit bereitgestellt werden:
 
-1. Wenn Sie Zielgruppen nur einmal pro Tag bereitstellen möchten bzw. müssen, können Sie das Magnite: Streaming-Batch-Ziel verwenden, das Zielgruppen an Magnite bereitstellt: Streaming über eine tägliche S3-Batch-Dateibereitstellung. Diese Batch-Zielgruppen werden auf unbestimmte Zeit in unserer Plattform gespeichert, im Gegensatz zu Echtzeit-Zielgruppen, die nur für ein paar Tage gespeichert werden.
+1. Wenn Sie Zielgruppen nur einmal pro Tag bereitstellen möchten bzw. müssen, können Sie das Magnite: Batch-Ziel verwenden, das Zielgruppen über eine tägliche S3-Batch-Dateibereitstellung für Magnite-Streaming bereitstellt. Diese Batch-Zielgruppen werden auf unbestimmte Zeit in der Magnite-Plattform gespeichert, im Gegensatz zu Echtzeit-Zielgruppen, die nur für einige Tage gespeichert werden.
 
-2. Wenn Sie jedoch Zielgruppen in Echtzeit bereitstellen möchten und/oder müssen, müssen Sie das Ziel Magnite: Streaming in Echtzeit verwenden. Bei Verwendung des Echtzeit-Ziels erhält Magnite: Streaming Zielgruppen in Echtzeit, aber wir können Echtzeit-Zielgruppen nur vorübergehend in unserer Plattform speichern und sie werden innerhalb weniger Tage aus unserem System entfernt. Wenn Sie daher das Ziel Magnite: Streaming Echtzeit verwenden möchten, müssen Sie auch das Ziel Magnite: Streaming-Batch verwenden - jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
+2. Wenn Sie jedoch Zielgruppen häufiger bereitstellen möchten oder müssen, müssen Sie das Ziel [Echtzeit-Magnite](/help/destinations/catalog/advertising/magnite-streaming.md) verwenden. Bei Verwendung des Echtzeit-Ziels erhält Magnite Streaming Zielgruppen in Echtzeit. Magnite kann jedoch nur Echtzeitzielgruppen temporär auf ihrer Plattform speichern. Diese werden innerhalb weniger Tage aus dem System entfernt. Wenn Sie daher das Echtzeit-Ziel von Magnite verwenden möchten, müssen Sie *auch* das Ziel Magnite: Batch verwenden. Jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
 
-Zusammenfassend: Wenn Sie Adobe Real-Time CDP-Zielgruppen nur einmal täglich bereitstellen möchten, verwenden Sie das Magnite: Nur Streaming-Batch-Ziel und Zielgruppen werden einmal täglich bereitgestellt. Wenn Sie Adobe Real-Time CDP-Zielgruppen in Echtzeit bereitstellen möchten, verwenden Sie sowohl das Ziel Magnite: Streaming-Batch als auch das Ziel Magnite: Streaming in Echtzeit. Weitere Informationen erhalten Sie bei Magnite: Streaming .
+Zusammenfassend: Wenn Sie Adobe Real-Time CDP-Zielgruppen nur einmal täglich bereitstellen möchten, verwenden Sie das Magnite: Batch-Ziel nur und Zielgruppen werden einmal täglich bereitgestellt. Wenn Sie Adobe Real-Time CDP-Zielgruppen in Echtzeit bereitstellen möchten, verwenden Sie *sowohl* das Magnite: Batch-Ziel als auch das Magnite-Echtzeit-Ziel. Weitere Informationen erhalten Sie bei Magnite: Streaming .
 
 
-Lesen Sie weiter unten, um weitere Informationen zum Magnite-Ziel zu erhalten: Streaming-Batch-Ziel, wie Sie eine Verbindung herstellen und wie Sie Adobe Real-Time CDP-Zielgruppen aktivieren können.
-Weitere Informationen zum Echtzeit-Ziel finden Sie stattdessen in [diesem Dokument](magnite-streaming.md) .
+Lesen Sie weiter unten, um weitere Informationen zum Magnite-Ziel zu erhalten: Batch-Ziel, wie Sie eine Verbindung herstellen und wie Sie Adobe Real-Time CDP-Zielgruppen aktivieren können.
+Weitere Informationen zum Echtzeit-Ziel finden Sie stattdessen auf [dieser Dokumentationsseite](magnite-streaming.md) .
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Weitere Informationen zum Echtzeit-Ziel finden Sie stattdessen in [diesem Dokume
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Magnite Streaming: Batch-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Magnite: Batch-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Anwendungsfall 1 {#use-case-1}
 
-Sie haben eine Zielgruppe im Ziel Magnite Streaming: Echtzeit aktiviert.
+Sie haben eine Zielgruppe im Echtzeit-Ziel Magnite aktiviert.
 
-Alle Zielgruppen, die über das Magnite-Streaming: Echtzeit-Ziel aktiviert werden, müssen auch das Magnite-Streaming: Batch-Ziel verwenden, da die Daten des Batch-Versands dazu bestimmt sind, die Daten des Echtzeit-Versands innerhalb der Magnite-Streaming-Plattform zu ersetzen/beizubehalten.
+Alle Zielgruppen, die über das Echtzeit-Ziel von Magnite aktiviert werden, müssen auch das Ziel Magnite: Batch verwenden, da die Daten des Batch-Versands dazu bestimmt sind, die Daten des Echtzeit-Versands innerhalb der Magnite-Streaming-Plattform zu ersetzen/beizubehalten.
 
 ### Anwendungsfall 2 {#use-case-2}
 
 Sie möchten eine Zielgruppe nur in einem Batch-/täglichen Cadence für die Magnite-Streaming-Plattform aktivieren.
 
-Alle Zielgruppen, die über das Magnite-Streaming: Batch-Ziel aktiviert werden, werden in Batch-/täglicher Kadenz bereitgestellt und können dann in der Magnite-Streaming-Plattform als Zielgruppe ausgewählt werden.
+Über das Magnite: Batch-Ziel aktivierte Audiences werden in Batch-/Tageskadenz bereitgestellt und stehen dann für das Targeting in der Magnite-Streaming-Plattform zur Verfügung.
 
 ## Voraussetzungen {#prerequisites}
 
-Um die Magnite-Ziele in Adobe Experience Platform zu verwenden, müssen Sie zunächst über ein Magnite-Streaming-Konto verfügen. Wenn Sie über ein [!DNL Magnite Streaming] -Konto verfügen, wenden Sie sich an Ihren [!DNL Magnite] -Kundenbetreuer, um Anmeldeinformationen für den Zugriff auf [!DNL Magnite's] -Ziele zu erhalten. Wenn Sie kein [!DNL Magnite Streaming] -Konto haben, wenden Sie sich an adobe-tech@magnite.com
+Um die [!DNL Magnite] -Ziele in Adobe Experience Platform zu verwenden, müssen Sie zunächst über ein Magnite-Streaming-Konto verfügen. Wenn Sie über ein [!DNL Magnite Streaming] -Konto verfügen, wenden Sie sich an Ihren [!DNL Magnite] -Kundenbetreuer, um Anmeldeinformationen für den Zugriff auf [!DNL Magnite's] -Ziele zu erhalten. Wenn Sie kein [!DNL Magnite Streaming] -Konto haben, wenden Sie sich an adobe-tech@magnite.com
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Das Magnite-Streaming: Batch-Ziel kann *beliebige* Identitätsquellen aus der Adobe-CDP empfangen. Derzeit verfügt dieses Ziel über drei Target-Identitätsfelder, denen Sie zuordnen können.
+Das Magnite: Batch-Ziel kann *beliebige* Identitätsquellen aus der Adobe-CDP empfangen. Derzeit verfügt dieses Ziel über drei Target-Identitätsfelder, denen Sie zuordnen können.
 
 >[!NOTE]
 >
->*Beliebige* Identitätsquellen können einer beliebigen Ziel-Identitäten von Schlüssel_GerätId zugeordnet werden.
+>*Alle* Identitätsquellen können jeder der `magnite_deviceId` Zielidentitäten zugeordnet werden.
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ Das Magnite-Streaming: Batch-Ziel kann *beliebige* Identitätsquellen aus der Ad
 
 | Element | Typ | Anmerkungen |
 |-----------------------------|----------|----------|
-| Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im Magnite Streaming: Batch-Ziel verwendet werden. |
+| Exporttyp | Zielgruppenexport | Sie exportieren alle Mitglieder einer Zielgruppe mit den IDs (Name, Telefonnummer oder andere), die im Ziel Magnite: Batch verwendet werden. |
 | Exporthäufigkeit | Batch | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Erfahren Sie mehr über Batch [dateibasierte Ziele](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Nachdem Sie Ihre Zielnutzung genehmigt und Ihre Anmeldeinformationen für Magnit
 
 ### Beim Ziel authentifizieren {#authenticate}
 
-Suchen Sie das Ziel Magnite Streaming: Batch im Adobe-Erlebniskatalog. Klicken Sie auf die Schaltfläche für zusätzliche Optionen (\...) und konfigurieren Sie dann die Zielverbindung/Instanz.
+Suchen Sie das Ziel Magnite: Batch im Adobe-Erlebniskatalog. Klicken Sie auf die Schaltfläche für zusätzliche Optionen (\...) und konfigurieren Sie dann die Zielverbindung/Instanz.
 
 Wenn Sie bereits über ein bestehendes Konto verfügen, können Sie es finden, indem Sie die Option Kontotyp in &quot;Vorhandenes Konto&quot;ändern. Andernfalls erstellen Sie unten ein Konto:
 
@@ -126,7 +126,7 @@ Zielverbindung/-instanz in der Zukunft.
 
 Sie können dann fortfahren, indem Sie **[!UICONTROL Weiter]** auswählen
 
-Im nächsten Bildschirm mit dem Titel &quot;Governance-Richtlinien und Durchsetzungsaktionen (optional)&quot;können Sie optional relevante Data Governance-Richtlinien auswählen. &quot;Datenexport&quot;ist im Allgemeinen für das Magnite-Streaming-Batch-Ziel ausgewählt.
+Im nächsten Bildschirm mit dem Titel &quot;Governance-Richtlinien und Durchsetzungsaktionen (optional)&quot;können Sie optional relevante Data Governance-Richtlinien auswählen. &quot;Datenexport&quot;ist im Allgemeinen für das Magnite: Batch-Ziel ausgewählt.
 
 ![Optionale Governance-Richtlinie und Durchsetzungsaktionen](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ Im Bildschirm &quot;Konfigurieren eines Dateinamens und eines Exportzeitplans f�
 
 Nach dem Hochladen Ihrer Zielgruppen können Sie überprüfen, ob Ihre Zielgruppen korrekt erstellt und hochgeladen wurden.
 
-* Das Magnite Streaming-Batch-Ziel stellt täglich S3-Dateien an Magnite Streaming bereit. Nach dem Versand und der Erfassung werden Zielgruppen/Segmente voraussichtlich im Magnite-Streaming angezeigt und können auf einen Deal angewendet werden. Sie können dies bestätigen, indem Sie die Segment-ID oder den Segmentnamen nachschlagen, die bzw. der während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
+* Das Magnite: Batch-Ziel liefert S3-Dateien täglich an Magnite Streaming. Nach dem Versand und der Erfassung werden Zielgruppen/Segmente voraussichtlich im Magnite-Streaming angezeigt und können auf einen Deal angewendet werden. Sie können dies bestätigen, indem Sie die Segment-ID oder den Segmentnamen nachschlagen, die bzw. der während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
 
 >[!NOTE]
 >
->Zielgruppen, die für das Magnite-Streaming-Batch-Ziel aktiviert/bereitgestellt werden, ersetzen *1} die gleichen Zielgruppen, die über das Magnite-Streaming-Echtzeit-Ziel aktiviert/bereitgestellt wurden.* Wenn Sie ein Segment mithilfe des Segmentnamens nachschlagen, finden Sie das Segment möglicherweise erst in Echtzeit, nachdem der Batch von der Magnite-Streaming-Plattform erfasst und verarbeitet wurde.
+>Zielgruppen, die für Magnite aktiviert/bereitgestellt werden: Das Batch-Ziel ersetzt *1} die gleichen Zielgruppen, die über das Echtzeit-Ziel Magnite aktiviert/bereitgestellt wurden.* Wenn Sie ein Segment mithilfe des Segmentnamens nachschlagen, finden Sie das Segment möglicherweise erst in Echtzeit, nachdem der Batch von der Magnite-Streaming-Plattform erfasst und verarbeitet wurde.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

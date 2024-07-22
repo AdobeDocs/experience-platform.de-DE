@@ -1,31 +1,31 @@
 ---
-title: Magnite-Streaming-Echtzeit-Zielverbindung
+title: Echtzeit-Zielverbindung vergrößern
 description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen in Echtzeit an die Magnite-Streaming-Plattform zu übermitteln.
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1297'
 ht-degree: 32%
 
 ---
 
 
-# (Beta) Magnite Streaming: Echtzeit-Zielverbindung
+# (Beta) Magnite: Echtzeit-Zielverbindung
 
 ## Übersicht {#overview}
 
-Die Batch-Ziele [!DNL Magnite Streaming: Real-Time] und Magnite Streaming: Batch in Adobe Experience Platform helfen Ihnen bei der Zuordnung und beim Export von Zielgruppen für Targeting und Aktivierung auf der Magnite-Streaming-Plattform.
+Mit den Zielen [!DNL Magnite: Real-Time] und [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) in Adobe Experience Platform können Sie Zielgruppen für Targeting und Aktivierung auf der Magnite-Streaming-Plattform zuordnen und exportieren.
 
-Die Aktivierung von Zielgruppen für die Plattform [!DNL Magnite Streaming] ist ein zweistufiger Prozess, für den Sie sowohl das Magnite-Streaming verwenden müssen: Echtzeit- als auch das Magnite-Streaming: Batch-Ziele.
+Die Aktivierung von Zielgruppen für die Plattform [!DNL Magnite Streaming] ist ein zweistufiger Prozess, für den Sie sowohl das Magnite-Format als auch das Magnite-Ziel verwenden müssen: Echtzeit- und Magnite: Batch-Ziele.
 
 Um Ihre Zielgruppen für [!DNL Magnite Streaming] zu aktivieren, müssen Sie:
 
-* Aktivieren Sie die Zielgruppen für das Ziel [!DNL Magnite Streaming: Real-Time] , wie auf dieser Seite dargestellt.
-* Aktivieren Sie dieselbe Zielgruppe im Magnite-Streaming: Batch-Ziel. Das Ziel [!DNL Magnite Streaming: Batch] ist eine obligatorische Komponente. Wenn Sie die Zielgruppe nicht am Batch-Ziel [!DNL Magnite Streaming] aktivieren, wird die Integration fehlgeschlagen und Ihre Zielgruppen werden nicht aktiviert.
+* Aktivieren Sie die Zielgruppen für das Ziel [!DNL Magnite: Real-Time] , wie auf dieser Seite dargestellt.
+* Aktivieren Sie dieselbe Zielgruppe auf dem Magnite: Batch-Ziel. Das Ziel [!DNL Magnite: Batch] ist eine obligatorische Komponente. Wenn Sie die Zielgruppe nicht am Batch-Ziel [!DNL Magnite Streaming] aktivieren, wird die Integration fehlgeschlagen und Ihre Zielgruppen werden nicht aktiviert.
 
-Hinweis: Bei Verwendung des Echtzeit-Ziels erhält [!DNL Magnite: Streaming] Zielgruppen in Echtzeit, aber wir können nur Echtzeitzielgruppen temporär in unserer Plattform speichern und sie werden innerhalb weniger Tage aus unserem System entfernt. Wenn Sie daher das Ziel Magnite: Streaming in Echtzeit verwenden möchten, müssen Sie *auch* das Ziel Magnite Streaming: Batch verwenden. Jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
+Hinweis: Bei Verwendung des Echtzeit-Ziels erhält [!DNL Magnite Streaming] Zielgruppen in Echtzeit. Magnite kann jedoch nur Echtzeitzielgruppen temporär auf ihrer Plattform speichern. Diese werden innerhalb weniger Tage aus dem System entfernt. Wenn Sie daher das Ziel Magnite: Echtzeit verwenden möchten, müssen Sie *auch* das Ziel Magnite: Batch verwenden. Jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Hinweis: Bei Verwendung des Echtzeit-Ziels erhält [!DNL Magnite: Streaming] Zie
 
 ## Anwendungsfälle {#use-cases}
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Magnite Streaming: Real-Time]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
+Damit Sie besser verstehen können, wie und wann Sie das [!DNL Magnite: Real-Time]-Ziel verwenden sollten, finden Sie hier ein Anwendungsbeispiel, das für Kundinnen und Kunden von Adobe Experience Platform mit diesem Ziel geeignet ist.
 
 ### Aktivierung und Zielgruppenbestimmung {#activation-and-targeting}
 
@@ -48,11 +48,11 @@ Wenn Sie kein [!DNL Magnite Streaming] -Konto haben, wenden Sie sich an adobe-te
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Das Ziel [!DNL Magnite Streaming: Real-Time] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
+Das Ziel [!DNL Magnite: Real-Time] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erhalten Sie weitere Informationen zu [Identitäten](/help/identity-service/features/namespaces.md).
 
 | Ziel-Identität | Beschreibung | Zu beachten |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id | Eine eindeutige Kennung für ein Gerät oder eine Identität. Wir akzeptieren jede Geräte-ID und Erstanbieter-ID unabhängig vom Typ. | Zu den von uns unterstützten Identitätstypen gehören u. a. PPUID, GAID, IDFA und TV-Geräte-IDs. |
+| device_id | Eine eindeutige Kennung für ein Gerät oder eine Identität. Wir akzeptieren jede Geräte-ID und Erstanbieter-ID unabhängig vom Typ. | Zu den von Magnite unterstützten Identitätstypen gehören u. a. PPUID, GAID, IDFA und TV-Geräte-IDs. |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | Element | Typ | Anmerkungen |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Magnite Streaming: Real-Time]-Ziel verwendet werden. |
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder sonstiges), die im [!DNL Magnite: Real-Time]-Ziel verwendet werden. |
 | Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind „immer verfügbare“ API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentauswertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Lesen Sie mehr über [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -162,13 +162,13 @@ Nach dem Hochladen Ihrer Zielgruppen können Sie mit den folgenden Schritten üb
 
 -->
 
-* Post-Erfassung werden Zielgruppen voraussichtlich innerhalb weniger Minuten in [!DNL Magnite Streaming] angezeigt und können auf einen Deal angewendet werden. Sie können dies bestätigen, indem Sie nach der Segment-ID suchen, die während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
+* Nach der Aufnahme werden Zielgruppen voraussichtlich innerhalb weniger Minuten in [!DNL Magnite Streaming] angezeigt und können auf einen Deal angewendet werden. Sie können dies bestätigen, indem Sie nach der Segment-ID suchen, die während der Aktivierungsschritte in der Adobe Experience Platform freigegeben wurde.
 
-## Dieselben Zielgruppen über das [!DNL Magnite Streaming: Batch]Ziel aktivieren
+## Dieselben Zielgruppen über das [!DNL Magnite: Batch]Ziel aktivieren
 
-Zielgruppen, die mit [!DNL Magnite Streaming] über das Echtzeit-Ziel freigegeben werden, müssen auch über das Magnite-Streaming: Batch-Ziel freigegeben werden. Wenn die Segmentnamen in der Benutzeroberfläche von [!DNL Magnite Streaming] korrekt konfiguriert sind, werden sie entsprechend den Segmentnamen aktualisiert, die nach der täglichen Aktualisierung in Adobe Experience Platform verwendet werden.
+Zielgruppen, die mit [!DNL Magnite Streaming] über das Echtzeit-Ziel freigegeben werden, müssen auch über das Magnite: Batch-Ziel freigegeben werden. Wenn die Segmentnamen in der Benutzeroberfläche von [!DNL Magnite Streaming] korrekt konfiguriert sind, werden sie entsprechend den Segmentnamen aktualisiert, die nach der täglichen Aktualisierung in Adobe Experience Platform verwendet werden.
 
-Wenn für Ihre Integration kein Batch-Ziel konfiguriert wurde, richten Sie es jetzt über das Dokument Magnite Streaming: Batch-Ziel ein.
+Wenn für Ihre Integration kein Batch-Ziel konfiguriert wurde, richten Sie es jetzt über das Dokument Magnite: Batch-Ziel ein.
 
 ## Datennutzung und -Governance {#data-usage-governance}
 

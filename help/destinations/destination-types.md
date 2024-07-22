@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 65%
+source-wordcount: '804'
+ht-degree: 55%
 
 ---
 
@@ -20,7 +20,7 @@ In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen 
 
 Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für alle im Zielkatalog enthaltenen Organisationen verfügbar sind, und privaten Zielen, die von Real-Time CDP Ultimate-Kunden erstellt werden können, um ihre spezifischen Anwendungsfälle für den Export zu erfüllen, unterschieden werden.
 
-![Typen von Zielen - Diagramm.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Typen von Zielen.](./assets/destination-types/types-of-destinations-no-highlight.png "Typen von Zielen - Diagramm."){zoomable="yes"}
 
 ## Verbindungen {#connections}
 
@@ -33,17 +33,17 @@ Ziele von Profilexporten erhalten Rohdaten, wobei die E-Mail-Adresse oft als Pri
 * [Exportziele für Streaming-Profile (Unternehmensziele)](#streaming-profile-export)
 * [Batch-Ziele (dateibasiert)](#file-based)
 
-### Exportziele für Streaming-Profile (Unternehmensziele) {#streaming-profile-export}
+### Erweiterte Unternehmensziele (Streaming-Profil-Exportziele) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->Unternehmensziele oder Exportziele von Streaming-Profilen sind nur für Kunden von [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) verfügbar.
+>Erweiterte Unternehmensziele oder Streaming-Profil-Exportziele sind nur für Kunden von [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) verfügbar.
 
-Verwenden Sie Data Connectors für Unternehmensziele, um Profile von Adobe Real-time Customer Data Platform nahezu in Echtzeit für interne Systeme oder andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Anwendungsfällen der Profilanreicherung bereitzustellen.
+Verwenden Sie die erweiterten Ziel-Data Connectors für Unternehmen, um Adobe Real-time Customer Data Platform-Profile nahezu in Echtzeit an interne Systeme oder an andere Drittanbietersysteme zur Datensynchronisation, Analyse und weiteren Anwendungsfällen zur Profilanreicherung bereitzustellen.
 
 Diese Ziele erhalten Zielgruppen- und Profildaten als Experience Platform-Datenströme.
 
-Zu den Unternehmenszielen gehören:
+Zu den erweiterten Unternehmenszielen gehören:
 
 * [HTTP-API-Ziel](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Erfahren Sie mehr über die [verschiedenen Zielgruppentypen](/help/segmentation/
 
 Ein Symbol auf der Zielkarte zeigt an, welche Zielgruppentypen Sie zu jedem Ziel exportieren können.
 
-![Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppen exportiert werden können.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppen exportiert werden können.](/help/destinations/assets/destination-types/types-of-audiences.png "Beispiel einer Zielkarte mit Symbolen, die zeigen, welche Zielgruppen exportiert werden können."){zoomable="yes"}
 
 
 ## Datensatzexport-Ziele {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Erweiterungen sind hilfreich, wenn Ereignisdaten zum Auslösen einer Aktion oder
 
 Die Verbindungen und Erweiterungen im [Zielkatalog](https://platform.adobe.com/destination/catalog) sind nach Zielkategorie (**Werbung**, **Cloud-Speicher**, **Umfrageplattformen**, **E-Mail-Marketing** usw.) gruppiert, je nach Marketing-Aktion, zu deren Erreichung sie beitragen. Weitere Informationen zu den einzelnen Kategorien sowie zu den in den einzelnen Kategorien enthaltenen Zielen finden Sie in der [Dokumentation zum Zielkatalog](./catalog/overview.md).
 
-![Auf der Katalogseite hervorgehobene Zielkategorien.](./assets/destination-types/destination-categories-menu.png)
+![Auf der Katalogseite hervorgehobene Zielkategorien.](./assets/destination-types/destination-categories-menu.png "Auf der Katalogseite hervorgehobene Zielkategorien."){zoomable="yes"}
