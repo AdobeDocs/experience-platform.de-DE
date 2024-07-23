@@ -3,10 +3,10 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 55%
+source-wordcount: '805'
+ht-degree: 54%
 
 ---
 
@@ -20,7 +20,11 @@ In Adobe Experience Platform unterscheiden wir zwischen verschiedenen Zieltypen 
 
 Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für alle im Zielkatalog enthaltenen Organisationen verfügbar sind, und privaten Zielen, die von Real-Time CDP Ultimate-Kunden erstellt werden können, um ihre spezifischen Anwendungsfälle für den Export zu erfüllen, unterschieden werden.
 
+>[!BEGINSHADEBOX]
+
 ![Typen von Zielen.](./assets/destination-types/types-of-destinations-no-highlight.png "Typen von Zielen - Diagramm."){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Verbindungen {#connections}
 
@@ -30,8 +34,8 @@ Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für a
 
 Ziele von Profilexporten erhalten Rohdaten, wobei die E-Mail-Adresse oft als Primärschlüssel dient. Experience Platform unterstützt derzeit zwei Typen von Zielen von Profilexporten:
 
-* [Exportziele für Streaming-Profile (Unternehmensziele)](#streaming-profile-export)
 * [Batch-Ziele (dateibasiert)](#file-based)
+* [Erweiterte Unternehmensziele (Streaming-Profil-Exportziele)](#streaming-profile-export)
 
 ### Erweiterte Unternehmensziele (Streaming-Profil-Exportziele) {#streaming-profile-export}
 
