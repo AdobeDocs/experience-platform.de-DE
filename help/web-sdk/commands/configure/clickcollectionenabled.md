@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: Erfahren Sie, wie Sie das Web SDK so konfigurieren, dass festgestellt wird, ob Link-Klick-Daten automatisch erfasst werden.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ In allen Fällen wird `xdm.web.webInteraction.name` auf die Textbeschriftung des
 
 ## Automatisches Linktracking mit der Web SDK-Tag-Erweiterung aktivieren {#tag-extension}
 
-Aktivieren Sie das Kontrollkästchen **[!UICONTROL Klick-Datenerfassung aktivieren]** bei der Konfiguration der Tag-Erweiterung [.](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)
+Diese Variable wird automatisch von der Tag-Erweiterung verwaltet. Sie müssen sie nicht explizit festlegen. Wenn beim [Konfigurieren der Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) eine der folgenden Optionen ausgewählt ist, werden die entsprechenden Linktracking-Daten erfasst:
 
-1. Melden Sie sich mit Ihren Adobe ID-Anmeldedaten bei [experience.adobe.com](https://experience.adobe.com) an.
-1. Navigieren Sie zu **[!UICONTROL Datenerfassung]** > **[!UICONTROL Tags]**.
-1. Wählen Sie die gewünschte Tag-Eigenschaft aus.
-1. Navigieren Sie zu **[!UICONTROL Erweiterungen]** und klicken Sie dann auf der Karte [!UICONTROL Adobe Experience Platform Web SDK] auf **[!UICONTROL Konfigurieren]** .
-1. Scrollen Sie nach unten zum Abschnitt [!UICONTROL Datenerfassung] und aktivieren Sie dann das Kontrollkästchen **[!UICONTROL Klick-Datenerfassung aktivieren]** .
-1. Klicken Sie auf **[!UICONTROL Speichern]** und veröffentlichen Sie dann Ihre Änderungen.
+* [!UICONTROL Interne Link-Klicks abrufen]
+* [!UICONTROL Externe Link-Klicks abrufen]
+* [!UICONTROL Klicks auf Downloadlink abrufen]
+
+Weitere Informationen finden Sie unter [`clickCollection`](clickcollection.md) .
 
 ## Automatisches Linktracking mit der Web SDK JavaScript-Bibliothek aktivieren {#library}
 
@@ -48,7 +47,7 @@ Legen Sie den booleschen Wert `clickCollectionEnabled` fest, wenn Sie den Befehl
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

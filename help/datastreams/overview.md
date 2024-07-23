@@ -2,7 +2,7 @@
 title: Übersicht über Datenströme
 description: Erfahren Sie, wie Sie mithilfe von Datastreams Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Drittanbieterzielen verbinden können.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 77%
@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Übersicht über Datenströme
 
-Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während der Befehl [`configure`](/help/web-sdk/commands/configure/overview.md) im SDK Elemente steuert, die auf dem Client verarbeitet werden müssen (z. B. `edgeDomain`), handhaben Datenspeicher alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `edgeConfigId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
+Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während der Befehl [`configure`](/help/web-sdk/commands/configure/overview.md) im SDK Elemente steuert, die auf dem Client verarbeitet werden müssen (z. B. `edgeDomain`), handhaben Datenspeicher alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `datastreamId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
 
 Sie können Datenströme erstellen und verwalten, indem Sie **[!UICONTROL Datenströme]** in der linken Navigation innerhalb der Adobe Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche auswählen.
 
