@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Batch-Aufnahme
 description: Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform-APIs für die Batch-Aufnahme von Daten.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 100%
+source-wordcount: '1426'
+ht-degree: 97%
 
 ---
 
@@ -212,11 +212,11 @@ Befindet sich ein Batch im Status „Wird geladen“, bedeutet dies, dass die Co
 
 ### Gibt es eine Möglichkeit herauszufinden, ob ein Batch erfolgreich erfasst wurde?
 
-Sobald der Batch-Status „Aktiv“ ist, wurde ein Batch erfolgreich erfasst. Um den Status des Batch zu ermitteln, führen Sie die [zuvor](#how-is-batch-ingestion-monitored) beschriebenen Schritte aus.
+Ja, sobald der Batch-Status &quot;Aktiv&quot;ist, wurde der Batch erfolgreich erfasst. Um den Status des Batch zu ermitteln, führen Sie die [zuvor](#how-is-batch-ingestion-monitored) beschriebenen Schritte aus.
 
-### Was passiert, wenn ein Batch fehlschlägt?
+### Was passiert, wenn ein Batch fehlschlägt? {#what-if-a-batch-fails}
 
-Wenn ein Batch fehlschlägt, kann der Grund für den Fehler im Abschnitt `errors` der Payload ermittelt werden. Beispiele für Fehler sind nachfolgend aufgeführt:
+Wenn ein Batch fehlschlägt, wird der Prozess beendet und gibt den Status `Failure` zurück. Der Grund für den Fehler kann im Abschnitt `errors` der Payload angegeben werden. Beispiele für Fehler sind nachfolgend aufgeführt:
 
 ```json
     "errors":[

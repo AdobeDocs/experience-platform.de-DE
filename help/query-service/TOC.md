@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 83%
+source-wordcount: '323'
+ht-degree: 82%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 83%
       - [Technische Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Daten in ML-Umgebungen exportieren](data-distiller/ml-feature-pipelines/export-data.md)
       - [End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Anwendungsfälle {#use-cases}
+- Praktische Beispiele {#use-cases}
    - [Übersicht](use-cases/overview.md)
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
    - [Attributionsanalyse](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 83%
    - [Erstellen eines Trendberichts mit Ereignissen](use-cases/trended-report-of-events.md)
    - [Einverständnisanalyse](use-cases/consent-analysis.md)
    - [Kundenlebenszeitwert](use-cases/customer-lifetime-value.md)
+   - [Datenforschung](./use-cases/data-exploration.md)
    - [Entscheidungsbasierte abgeleitete Datensätze](use-cases/deciles-use-case.md)
    - [Ungefähre Übereinstimmung](use-cases/fuzzy-match.md)
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
@@ -86,7 +87,7 @@ ht-degree: 83%
    - [Abfragepläne](ui/query-schedules.md)
    - [Abfrageprotokolle](ui/query-logs.md)
    - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
-   - [Handbuch zu Anmeldeinformationen](ui/credentials.md)
+   - [Handbuch zu Anmeldedaten](ui/credentials.md)
    - [Generieren von Ausgabedatensätzen aus Abfrageergebnissen](ui/create-datasets.md)
 - Abfrage-Service-API-Endpunkte {#api}
    - [Erste Schritte](api/getting-started.md)
