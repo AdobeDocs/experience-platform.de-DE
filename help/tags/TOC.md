@@ -6,9 +6,9 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 97%
 
 ---
@@ -316,6 +316,7 @@ ht-degree: 97%
       * [Delegaten-Deskriptor-IDs](./api/guides/delegate-descriptor-ids.md)
       * [Verschlüsseln von Werten](./api/guides/encrypting-values.md)
       * [Umgang mit Fehlern](./api/guides/error-handling.md)
+      * [Freigeben privater Erweiterungspakete](./api/guides/extension-packages.md)
       * [Filtern von Antworten](./api/guides/filtering.md)
       * [Paginieren von Antworten](./api/guides/pagination.md)
       * [Sortieren von Antworten](./api/guides/sorting.md)

@@ -1,13 +1,13 @@
 ---
 title: Autorisierungs-Endpunkt für Erweiterungspaketverwendung
 description: Erfahren Sie, wie Sie den Endpunkt /extension_package_usage authorizations in der Reactor-API aufrufen.
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 16%
 
 ---
-
 
 # Endpunkt für Nutzungsberechtigungen für Erweiterungspakete
 
@@ -185,7 +185,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Autorisierung zur 
 >
 >In der obigen Beispielantwort befindet sich die Autorisierung derzeit in der Phase &quot;`pending_approval`&quot;. Vor Verwendung des Erweiterungspakets muss die Organisation die Autorisierung genehmigen. Benutzer der Organisation können das private Erweiterungspaket durchsuchen, während die Autorisierung aussteht, es jedoch nicht installieren kann und nicht in ihrem Erweiterungskatalog finden.
 
-## Abrufen einer Liste der Nutzungsberechtigungen für Erweiterungspakete {#list_authorizations}
+## Abrufen einer Liste der Nutzungsberechtigungen für Erweiterungspakete {#list-authorizations}
 
 Sie können eine Liste der Nutzungsberechtigungen für Erweiterungspakete abrufen, indem Sie eine GET-Anfrage stellen.
 
@@ -386,7 +386,7 @@ Eine erfolgreiche Antwort gibt die Details der überarbeiteten Autorisierung zur
 >
 >Nachdem die Autorisierung genehmigt wurde, kann Ihr Unternehmen das Erweiterungspaket in Ihren Eigenschaften installieren.
 
-## Abrufen von Daten für das Erweiterungspaket für die Autorisierung der Verwendung eines Erweiterungspakets {#retrieve_data}
+## Abrufen von Daten für das Erweiterungspaket für die Autorisierung der Verwendung eines Erweiterungspakets {#retrieve-data}
 
 Sie können Daten für das Erweiterungspaket für die Autorisierung der Verwendung eines Erweiterungspakets abrufen, indem Sie eine GET-Anfrage stellen.
 
