@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
 description: Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2020'
 ht-degree: 1%
 
 ---
@@ -71,6 +71,8 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 
 **Dateisystem**: Jeder bestimmte Satz personenbezogener Daten, auf den nach bestimmten Kriterien zugegriffen werden kann oder der abgefragt werden kann.
 
+**FDBR**: Der [!DNL Florida Digital Bill of Rights] (FDBR) ist ein Gesetz, das Florida-Einwohnern die Rechte gibt, auf ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und zu kopieren. Sie sorgt für Transparenz in den Datenpraktiken, ermöglicht Opt-outs für Datenverkäufe oder zielgerichtete Werbung und verbietet die unbefugte Überwachung. Die Rechtsabteilung Florida erzwingt diese Rechte und fordert die Datenverantwortlichen auf, innerhalb von 45 Tagen auf Anfragen zu antworten.
+
 ## G
 
 **DSGVO**: Die [!DNL General Data Protection Regulation] (DSGVO) ist ein Rechtsrahmen, der Richtlinien für die Erhebung und Verarbeitung personenbezogener Daten von Personen im Europäischen Wirtschaftsraum (EWR) festlegt. Die DSGVO legt die Grundsätze für das Datenmanagement und die Rechte des Einzelnen fest und verhängt auch Geldbußen, die einnahmenbasiert sein können. Die DSGVO gilt für alle Unternehmen, die mit den Daten von EWR-Bürgern zu tun haben. Daher ist sie eine wichtige Vorschrift für Compliance-Verantwortliche von Unternehmen bei Banken, Versicherern und anderen Finanzunternehmen.
@@ -107,13 +109,11 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 
 ## O
 
+**OCPA**: Das Oregon Consumer Privacy Act (OCPA)-Gesetz gewährt den Einwohnern Oregon wesentliche Rechte hinsichtlich ihrer personenbezogenen Daten, einschließlich der Rechte, sie zu kennen, zu korrigieren, zu löschen und eine Kopie ihrer Daten zu erhalten. Sie erlegt den Unternehmen strenge Verpflichtungen auf, die sie verpflichten, detaillierte Datenschutzhinweise zu übermitteln, Einverständnis für bestimmte Datenverwendungen zu erhalten und einen verstärkten Schutz sensibler Informationen zu gewährleisten. Die Rechtsvorschriften sollen die Privatsphäre der Verbraucher mit den Interessen der Unternehmen in Einklang bringen.
+
 ## P
 
 **PDPA**: Die [!DNL Personal Data Protection Act] Thailands (PDPA) wurde eingeführt, um die thailändischen Dateneigner vor der illegalen Sammlung, Verwendung oder Weitergabe ihrer personenbezogenen Daten zu schützen. Inspiriert durch die DSGVO der Europäischen Union gewährt die Verordnung den thailändischen Bürgern das Recht, Zugang zu ihren gespeicherten personenbezogenen Daten oder deren Löschung zu beantragen.
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **Persönliche Daten**: Alle Informationen, die eine natürliche Person oder ein &quot;Datensubjekt&quot;betreffen und die zur direkten oder indirekten Identifikation dieser Person verwendet werden können.
 
@@ -152,6 +152,8 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 **Aufsichtsbehörde**: Eine Behörde, die von einem Mitgliedsstaat gemäß Artikel 46 eingerichtet wird.
 
 ## T
+
+**TDPSA**: Der Texas Data Privacy and Security Act (TDPSA) ist eine umfassende Rechtsvorschrift, die die personenbezogenen Daten von Texas-Bewohnern schützt. Einzelpersonen erhalten dadurch das Recht, auf Kopien ihrer Daten zuzugreifen, sie zu korrigieren, zu löschen und zu erhalten sowie den Datenverkauf und die gezielte Werbung abzuwählen. Unternehmen, die gegen diese Rechtsvorschriften verstoßen, können mit Geldstrafen belegt werden.
 
 **Triloge**: Triloge sind informelle Verhandlungen zwischen der Europäischen Kommission, dem Europäischen Parlament und dem Rat der Europäischen Union. Diese Verhandlungen finden in der Regel nach den ersten Lesungen der vorgeschlagenen Rechtsvorschriften statt, um schneller auf einen Kompromisstext zu verständigen, der angenommen werden soll.
 Einigung über die schnellere Annahme eines Kompromisstextes.
