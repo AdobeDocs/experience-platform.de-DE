@@ -97,7 +97,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* [Anmeldeinformationen für OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) mit einfacher Autorisierung, mit einer Autorisierungskopfzeile, die URL-codierte [!DNL client ID] und [!DNL client secret] enthält.
+* [Anmeldedaten für OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) mit einfacher Autorisierung, mit einer Autorisierungskopfzeile, die URL-codierte [!DNL client ID] und [!DNL client secret] enthält.
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
@@ -120,7 +120,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
->title="Typ der Client-Anmeldeinformationen"
+>title="Typ der Client-Anmeldedaten"
 >abstract="Wählen Sie **Im Textkörper codiert**, um die Client-ID und das Client-Geheimwort in den Textkörper der Anfrage aufzunehmen, oder **Einfache Autorisierung**, um die Client-ID und das Client-Geheimnis in eine Autorisierungskopfzeile aufzunehmen. Beispiele sind in der Dokumentation zu finden."
 
 #### Authentifizierung über Bearer-Token {#bearer-token-authentication}
@@ -151,7 +151,7 @@ Wenn Sie für die Verbindung zu Ihrem HTTP-Endpunkt den Authentifizierungstyp **
 * **[!UICONTROL Benutzername]**: Der Benutzername für den Zugriff auf Ihren HTTP-Endpunkt.
 * **[!UICONTROL Passwort]**: Das Passwort für den Zugriff auf Ihren HTTP-Endpunkt.
 
-#### Authenifizierung mit Client-Anmeldeinformationen für OAuth 2 {#oauth-2-client-credentials-authentication}
+#### Authentifizierung mit Client-Anmeldedaten für OAuth 2 {#oauth-2-client-credentials-authentication}
 
 Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen für OAuth 2]** wählen, um sich mit Ihrem HTTP-Endpunkt zu verbinden, füllen Sie die unten stehenden Felder aus und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**:
 
@@ -160,7 +160,7 @@ Wenn Sie den Authentifizierungstyp **[!UICONTROL Client-Anmeldeinformationen fü
 * **[!UICONTROL Zugriffstoken-URL]**: Die URL auf Ihrer Seite, die Zugriffstoken ausgibt und Token optional aktualisiert.
 * **[!UICONTROL Client-ID]**: Die [!DNL client ID], die Ihr System Adobe Experience Platform zuweist.
 * **[!UICONTROL Client-Geheimwort]**: Das [!DNL client secret], das Ihr System Adobe Experience Platform zuweist.
-* **[!UICONTROL Typ der Client-Anmeldeinformationen]**: Wählen Sie den Typ der von Ihrem Endpunkt unterstützten Client-Anmeldeinformationen für OAuth2 aus:
+* **[!UICONTROL Typ der Client-Anmeldedaten]**: Wählen Sie den Typ der von Ihrem Endpunkt unterstützten Client-Anmeldedaten für OAuth2 aus:
    * **[!UICONTROL Im Textkörper codiert]**: In diesem Fall sind [!DNL client ID] und [!DNL client secret] im *Textkörper der Anfrage* enthalten, die an Ihr Ziel gesendet wird.. Ein Beispiel finden Sie im Abschnitt [unterstützte Authentifizierungstypen](#supported-authentication-types).
    * **[!UICONTROL Einfache Autorisierung]**: In diesem Fall werden [!DNL client ID] und [!DNL client secret], nachdem sie mit Base64 codiert wurden, *in eine `Authorization`-Kopfzeile* aufgenommen und an Ihr Ziel gesendet. Ein Beispiel finden Sie im Abschnitt [Unterstützte Authentifizierungstypen](#supported-authentication-types).
 
