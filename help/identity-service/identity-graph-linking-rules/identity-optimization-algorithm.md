@@ -3,9 +3,9 @@ title: Identitätsoptimierungsalgorithmus
 description: Erfahren Sie mehr über den Identity Optimization-Algorithmus im Identity Service.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1565'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Diese Funktion ist noch nicht verfügbar. Das Betaprogramm für Regeln zur Identitätsdiagrammverlinkung wird voraussichtlich im Juli für Entwicklungs-Sandboxes beginnen. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten.
+>Die Regeln zur Verknüpfung von Identitätsdiagrammen befinden sich derzeit in der Beta-Phase. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten. Die Funktion und die Dokumentation können sich ändern.
 
 Der Identitätsoptimierungsalgorithmus ist ein Diagrammalgorithmus für Identity Service, der sicherstellt, dass ein Identitätsdiagramm für eine einzelne Person repräsentativ ist, und daher verhindert, dass Identitäten in Echtzeit-Kundenprofil unerwünscht zusammengeführt werden.
 
@@ -162,6 +162,7 @@ Sehen Sie sich das folgende Diagramm an, um besser zu verstehen, wie die anonyme
 Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finden Sie in der folgenden Dokumentation:
 
 * [Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen](./overview.md)
+* [Namespace-Priorität](./namespace-priority.md)
 * [Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen](./example-scenarios.md)
 * [Identitätsverknüpfungslogik](../features/identity-linking-logic.md)
 * [Identity Service und Echtzeit-Kundenprofil](../identity-and-profile.md)

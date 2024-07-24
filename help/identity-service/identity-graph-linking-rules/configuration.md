@@ -2,14 +2,19 @@
 title: Konfigurationshandbuch für Regeln zur Verknüpfung von Identitätsdiagrammen
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 badge: Beta
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 4%
+source-wordcount: '1312'
+ht-degree: 3%
 
 ---
 
 # Konfigurationshandbuch für Regeln zur Verknüpfung von Identitätsdiagrammen
+
+>[!AVAILABILITY]
+>
+>Die Regeln zur Verknüpfung von Identitätsdiagrammen befinden sich derzeit in der Beta-Phase. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten. Die Funktion und die Dokumentation können sich ändern.
 
 Lesen Sie dieses Dokument, um eine schrittweise Anleitung zur Implementierung Ihrer Daten mit dem Adobe Experience Platform Identity-Dienst zu erhalten.
 
@@ -67,6 +72,11 @@ Anweisungen zum Erstellen eines Datensatzes finden Sie im [Benutzerhandbuch zur 
 
 ## Daten erfassen {#ingest}
 
+>[!WARNING]
+>
+>* Während des Prozesses vor der Implementierung müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung wie CRMID enthalten.
+>* Bei der Implementierung müssen Sie sicherstellen, dass der eindeutige Namespace mit der höchsten Priorität immer in jedem Profil vorhanden ist. Beispiele für Diagrammszenarien, die gelöst werden können, indem sichergestellt wird, dass jedes Profil den eindeutigen Namespace mit der höchsten Priorität enthält, finden Sie im [Anhang](#appendix) .
+
 An dieser Stelle sollten Sie Folgendes haben:
 
 * Die erforderlichen Berechtigungen für den Zugriff auf Identity Service-Funktionen.
@@ -86,3 +96,55 @@ Sobald Sie alle oben aufgelisteten Elemente haben, können Sie mit der Erfassung
 >Nach der Erfassung Ihrer Daten ändert sich die XDM-Rohdaten-Payload nicht mehr. Möglicherweise werden Ihre primären Identitätskonfigurationen weiterhin in der Benutzeroberfläche angezeigt. Diese Konfigurationen werden jedoch durch Identitätseinstellungen überschrieben.
 
 Verwenden Sie für jedes Feedback die Option **[!UICONTROL Beta feedback]** im UI-Arbeitsbereich des Identity Service.
+
+## Anhang {#appendix}
+
+In diesem Abschnitt finden Sie weitere Informationen, auf die Sie bei der Implementierung Ihrer Identitätseinstellungen und eindeutigen Namespaces verweisen können.
+
+### Szenario für freigegebene Geräte {#shared-device-scenario}
+
+Sie müssen sicherstellen, dass für alle Profile, die eine Person repräsentieren, ein einzelner Namespace verwendet wird. Dadurch kann Identity Service die entsprechende Personenkennung in einem bestimmten Diagramm erkennen.
+
+>[!BEGINTABS]
+
+>[!TAB Ohne Namespace mit einer einzelnen Personen-ID]
+
+Ohne einen eindeutigen Namespace zur Darstellung Ihrer Personen-IDs erhalten Sie möglicherweise ein Diagramm, das Links zu unterschiedlichen Personen-IDs mit derselben ECID enthält. In diesem Beispiel sind sowohl B2BCRM als auch B2CCRM gleichzeitig mit derselben ECID verknüpft. Dieses Diagramm legt nahe, dass Tom mithilfe seines B2C-Anmeldekontos mithilfe seines B2C-Anmeldekontos mit Summer ein Gerät freigegeben hat, das er mit seinem B2B-Anmeldekonto genutzt hat. Das System erkennt jedoch, dass es sich um ein Profil handelt (Diagrammausfall).
+
+![Ein Diagrammszenario, bei dem zwei Personen-IDs mit derselben ECID verknüpft sind.](../images/graph-examples/multi_namespaces.png)
+
+>[!TAB Mit einem Namespace mit einer einzelnen Personen-ID]
+
+Bei einem eindeutigen Namespace (in diesem Fall einer CRMID anstelle zweier unterschiedlicher Namespaces) kann Identity Service die Personenkennung erkennen, die zuletzt mit der ECID verknüpft wurde. Da in diesem Beispiel eine eindeutige CRMID vorhanden ist, kann Identity Service ein Szenario mit einem &quot;freigegebenen Gerät&quot;erkennen, bei dem zwei Entitäten dasselbe Gerät gemeinsam nutzen.
+
+![Ein Szenario mit einem freigegebenen Gerätediagramm, in dem zwei Personen-IDs mit derselben ECID verknüpft sind, der ältere Link jedoch entfernt wird.](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
+
+### Dangling loginID scenario {#dangling-loginid-scenario}
+
+Das folgende Diagramm simuliert ein &quot;gefährliches&quot;loginID-Szenario. In diesem Beispiel sind zwei verschiedene loginIDs an dieselbe ECID gebunden. `{loginID: ID_C}` ist jedoch nicht mit der CRMID verknüpft. Identity Service kann daher nicht erkennen, dass diese beiden loginIDs zwei verschiedene Entitäten darstellen.
+
+>[!BEGINTABS]
+
+>[!TAB Ambiguous loginID]
+
+In diesem Beispiel bleibt `{loginID: ID_C}` verwundbar und ist nicht mit einer CRMID verknüpft. Somit bleibt die Personenentität, mit der diese loginID verknüpft werden soll, mehrdeutig.
+
+![Ein Beispiel für ein Diagramm mit einem &quot;gefährlichen&quot; loginID-Szenario.](../images/graph-examples/dangling_example.png)
+
+>[!TAB loginID ist mit einer CRMID verknüpft]
+
+In diesem Beispiel ist `{loginID: ID_C}` mit `{CRMID: Tom}` verknüpft. Daher kann das System erkennen, dass diese loginID mit Tom verknüpft ist.
+
+![LoginID ist mit einer CRMID verknüpft.](../images/graph-examples/id_c_tom.png)
+
+>[!TAB loginID ist mit einer anderen CRMID verknüpft]
+
+In diesem Beispiel ist `{loginID: ID_C}` mit `{CRMID: Summer}` verknüpft. Daher kann das System erkennen, dass diese loginID mit einer anderen Entität, in diesem Fall Summer, verknüpft ist.
+
+Dieses Beispiel zeigt auch, dass Tom und Summer Personen voneinander trennen, die ein Gerät teilen, das durch `{ECID: 111}` dargestellt wird.
+
+![LoginID ist mit einer anderen CRMID verknüpft.](../images/graph-examples/id_c_summer.png)
+
+>[!ENDTABS]

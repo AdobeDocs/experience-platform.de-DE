@@ -1,16 +1,16 @@
 ---
-title: Beispielszenarios für die Konfiguration von Identitätseinstellungen
-description: Erfahren Sie mehr über Beispielszenarien zum Konfigurieren von Identitätseinstellungen.
+title: Beispiel-Kundenszenarios, die von Identitätsdiagramm-Verknüpfungsregeln gelöst werden
+description: Erfahren Sie mehr über Beispiele von Kundenszenarien, die durch Identitätsdiagramm-Verknüpfungsregeln gelöst werden.
 badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
+source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
-# Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen
+# Beispiel-Kundenszenarien, die durch Verknüpfungsregeln von Identitätsdiagrammen gelöst wurden
 
 >[!AVAILABILITY]
 >
@@ -30,22 +30,22 @@ Es gibt Fälle, in denen mehrere Anmeldungen auf einem einzelnen Gerät stattfin
 
 ![shared-devices](../images/identity-settings/shared-devices.png)
 
-In diesen Fällen wird aus Diagrammsicht eine einzelne ECID mit mehreren CRM-IDs verknüpft, ohne dass Einschränkungen aktiviert sind.
+In diesen Fällen wird aus Diagrammsicht eine einzelne ECID mit mehreren CRMIDs verknüpft, ohne dass Einschränkungen aktiviert sind.
 
 Mit den Verknüpfungsregeln für Identitätsdiagramme können Sie:
 
-* Konfigurieren Sie die für die Anmeldung verwendete ID als eindeutige Kennung. Sie können beispielsweise ein Diagramm so einschränken, dass nur eine Identität mit einem CRM-ID-Namespace gespeichert wird, und diese CRM-ID so als eindeutige Kennung eines gemeinsam genutzten Geräts definieren.
-   * Dadurch können Sie sicherstellen, dass CRM-IDs nicht von der ECID zusammengeführt werden.
+* Konfigurieren Sie die für die Anmeldung verwendete ID als eindeutige Kennung. Sie können beispielsweise ein Diagramm so einschränken, dass nur eine Identität mit einem CRMID-Namespace gespeichert wird, und so diese CRMID als eindeutige Kennung eines gemeinsam genutzten Geräts definieren.
+   * Dadurch können Sie sicherstellen, dass CRMIDs nicht von der ECID zusammengeführt werden.
 
 ## Ungültige E-Mail-/Telefonszenarien
 
-Es gibt auch Fälle von Benutzern, die bei der Registrierung falsche Werte als Telefonnummern und/oder E-Mail-Adressen angeben. Wenn in diesen Fällen Beschränkungen nicht aktiviert sind, werden telefonische/E-Mail-bezogene Identitäten letztendlich mit mehreren verschiedenen CRM-IDs verknüpft.
+Es gibt auch Fälle von Benutzern, die bei der Registrierung falsche Werte als Telefonnummern und/oder E-Mail-Adressen angeben. Wenn in diesen Fällen Beschränkungen nicht aktiviert sind, werden telefonische/E-Mail-bezogene Identitäten letztendlich mit mehreren verschiedenen CRMIDs verknüpft.
 
 ![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
 
 Mit den Verknüpfungsregeln für Identitätsdiagramme können Sie:
 
-* Konfigurieren Sie entweder die CRM-ID, Telefonnummer oder E-Mail-Adresse als eindeutige Kennung und beschränken Sie so eine Person auf nur eine CRM-ID, Telefonnummer und/oder E-Mail-Adresse, die mit ihrem Konto verknüpft ist.
+* Konfigurieren Sie entweder die CRMID, Telefonnummer oder E-Mail-Adresse als eindeutige Kennung und beschränken Sie so eine Person auf nur eine CRMID, Telefonnummer und/oder E-Mail-Adresse, die mit ihrem Konto verknüpft ist.
 
 ## Fehlerhafte oder falsche Identitätswerte
 
@@ -56,11 +56,11 @@ Es gibt Fälle, in denen nicht eindeutige, fehlerhafte Identitätswerte im Syste
 * Namespace für Telefonnummern mit dem Identitätswert &quot;Nicht angegeben&quot;.
    * Telefonnummern dürfen keine Buchstaben enthalten.
 
-Diese Identitäten können zu folgenden Diagrammen führen, in denen mehrere CRM-IDs mit der &quot;schlechten&quot;Identität zusammengeführt werden:
+Diese Identitäten können zu den folgenden Diagrammen führen, in denen mehrere CRMIDs mit der &quot;schlechten&quot;Identität zusammengeführt werden:
 
 ![bad-data](../images/identity-settings/bad-data.png)
 
-Mit den Regeln zur Verknüpfung von Identitätsdiagrammen können Sie die CRM-ID als eindeutige Kennung konfigurieren, um unerwünschte Profilzusammenbrüche aufgrund dieses Datentyps zu verhindern.
+Mit Regeln zur Verknüpfung von Identitätsdiagrammen können Sie die CRMID als eindeutige Kennung konfigurieren, um unerwünschte Profilzusammenbrüche aufgrund dieses Datentyps zu verhindern.
 
 ## Nächste Schritte
 

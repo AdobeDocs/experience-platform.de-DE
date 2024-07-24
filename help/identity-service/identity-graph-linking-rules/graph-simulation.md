@@ -3,10 +3,10 @@ title: Anleitung zur Diagrammsimulation in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Benutzeroberfläche des Identity Service verwenden.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 1%
+source-wordcount: '1436'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Diese Funktion ist noch nicht verfügbar. Das Betaprogramm für Regeln zur Identitätsdiagrammverlinkung wird voraussichtlich im Juli für Entwicklungs-Sandboxes beginnen. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten.
+>Die Regeln zur Verknüpfung von Identitätsdiagrammen befinden sich derzeit in der Beta-Phase. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten. Die Funktion und die Dokumentation können sich ändern.
 
 [!DNL Graph Simulation] ist ein Tool in der Identity Service-Benutzeroberfläche, mit dem Sie simulieren können, wie sich ein Identitätsdiagramm bei einer bestimmten Kombination von Identitäten verhält und wie Sie den [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md) konfigurieren.
 
@@ -172,6 +172,8 @@ Im unten stehenden Beispieldiagramm existiert eine gepunktete Linie zwischen `{E
 
 Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit dem Tool [!DNL Graph Simulation] besser verstehen können, wie Ihre Identitätsdaten mit bestimmten Regeln und Konfigurationen behandelt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [Verknüpfungsregeln für Identitätsdiagramme](overview.md)
-* [Identitätsoptimierungsalgorithmus](identity-optimization-algorithm.md)
-* [Namespace-Priorität](namespace-priority.md)
+* [Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
+* [Konfigurationshandbuch](./configuration.md)
+* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
+* [Namespace-Priorität](./namespace-priority.md)
+* [Beispieldiagrammkonfigurationen](./example-configurations.md)
