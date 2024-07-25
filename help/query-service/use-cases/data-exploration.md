@@ -1,9 +1,10 @@
 ---
 title: Erkunden, Fehlerbehebung und Überprüfen der Batch-Erfassung mit SQL
-description: Erfahren Sie, wie Sie den Datenerfassungsprozess in Adobe Experience Platform verstehen und verwalten. In diesem Dokument erfahren Sie, wie Sie Batches überprüfen, Fehler beheben und erfasste Daten abfragen.
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Erfahren Sie, wie Sie den Datenerfassungsprozess in Adobe Experience Platform verstehen und verwalten. In diesem Dokument wird beschrieben, wie Sie Batches überprüfen und erfasste Daten abfragen.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 In diesem Dokument wird beschrieben, wie Sie Datensätze in erfassten Batches mit SQL überprüfen und validieren. In diesem Dokument lernen Sie Folgendes:
 
-- Umgang mit Fehlern, die während des Aufnahmeprozesses auftreten können
 - Zugreifen auf Datensatz-Batch-Metadaten
 - Fehlerbehebung und Gewährleistung der Datenintegrität durch Abfragen von Batches
 
@@ -26,7 +26,6 @@ Um Ihr Verständnis der in diesem Dokument behandelten Konzepte zu vermitteln, s
 
 - **Datenerfassung**: In der [Übersicht über die Datenerfassung](../../ingestion/home.md) erfahren Sie mehr über die Grundlagen der Datenerfassung in der Plattform, einschließlich der verschiedenen beteiligten Methoden und Prozesse.
 - **Batch-Erfassung**: Informationen zu den grundlegenden Konzepten der Batch-Erfassung finden Sie in der [Übersicht zur Batch-Aufnahme-API](../../ingestion/batch-ingestion/overview.md) . Insbesondere, was ein &quot;Batch&quot;ist und wie er im Datenerfassungsprozess von Platform funktioniert.
-- **Umgang mit Fehlern bei der Datenerfassung**: Erfahren Sie mehr über die [verschiedenen Fehlertypen, die bei der Datenerfassung auftreten können](../../ingestion/quality/error-diagnostics.md#retrieve-errors) und [deren Umgang](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
 - **Systemmetadaten in Datensätzen**: In der [Übersicht über den Katalogdienst](../../catalog/home.md) erfahren Sie, wie Systemmetadatenfelder zum Verfolgen und Abfragen erfasster Daten verwendet werden.
 - **Experience-Datenmodell (XDM)**: In der [Übersicht über die Schemas-Benutzeroberfläche](../../xdm/ui/overview.md) und den [&#39;Grundlagen der Schemakomposition&#39;](../../xdm/schema/composition.md) erfahren Sie mehr über XDM-Schemas und darüber, wie sie die Struktur und das Format der in Platform erfassten Daten darstellen und validieren.
 
@@ -57,11 +56,7 @@ Die Ergebnisse dieser Abfrage werden in der Abbildung unten dargestellt.
 
 Diese Ergebnisse zeigen, dass die Anzahl der Eingangs-Batches nicht notwendigerweise mit der Anzahl der Ausgabe-Batches übereinstimmt, da das System bestimmt, wie die Daten am effizientesten im Data Lake gestapelt und gespeichert werden.
 
-Im folgenden Beispiel wird ein anderer Datensatz verwendet, um diesen Punkt zu veranschaulichen.
-
->[!NOTE]
->
->Wenn Sie dieses Beispiel ausprobieren möchten, können Sie die bereitgestellte Beispieldatei ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) in Platform aufnehmen und Ihre Schemazuordnung konfigurieren.
+Für die Zwecke dieses Beispiels wird davon ausgegangen, dass Sie eine CSV-Datei in Platform aufgenommen und einen Datensatz mit dem Namen `drug_checkout_data` erstellt haben.
 
 Die Datei &quot;`drug_checkout_data`&quot; ist ein tief verschachtelter Satz von 35.000 Datensätzen. Verwenden Sie die SQL-Anweisung &quot;`SELECT * FROM drug_orders;`&quot;, um eine Vorschau des ersten Datensatzes im JSON-basierten `drug_orders` Datensatz anzuzeigen.
 
@@ -97,7 +92,7 @@ Die Ergebnisse zeigen die Effizienz und das Verhalten des Datenerfassungsprozess
 
 >[!TIP]
 >
->Um die Batch-Kennung und die mit dieser Batch-Kennung verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Platform erfassen. Lesen Sie das Handbuch zum [Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von AI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md). Hier finden Sie eine CSV-Beispieldatei für ein [Profil](../images/use-cases/sample-profiles.csv).
+>Um die Batch-Kennung und die mit dieser Batch-Kennung verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Platform erfassen. Lesen Sie das Handbuch zum [Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von AI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Nachdem Sie einen Batch erfasst haben, müssen Sie für den Datensatz, in den Sie Daten aufgenommen haben, zur Registerkarte [!UICONTROL Datensatzaktivität] navigieren.
 
