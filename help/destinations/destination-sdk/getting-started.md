@@ -1,11 +1,11 @@
 ---
-description: Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und Adobe Experience Platform Destination SDK verwenden. Sie enthält Anweisungen zum Abrufen der Anmeldeinformationen für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffskontrolle für die Zielerstellung.
+description: Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und Adobe Experience Platform Destination SDK verwenden. Sie enthält Anweisungen zum Abrufen der Anmeldedaten für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffskontrolle für die Zielerstellung.
 title: Erste Schritte mit dem Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 86%
+source-wordcount: '593'
+ht-degree: 82%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 86%
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und Adobe Experience Platform Destination SDK verwenden. Sie enthält Anweisungen zum Abrufen der Anmeldeinformationen für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffskontrolle für die Zielerstellung.
+Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und Adobe Experience Platform Destination SDK verwenden. Sie enthält Anweisungen zum Abrufen der Anmeldedaten für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffskontrolle für die Zielerstellung.
 
 ## Terminologie {#terminology}
 
-In diesem Handbuch werden plattformspezifische Konzepte wie Organisation und Sandboxes verwendet. Definitionen hierzu und zu anderen Begriffen finden Sie im [Experience Platform-Glossar](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=de).
+In diesem Handbuch werden plattformspezifische Konzepte wie Organisation und Sandboxes verwendet. Definitionen zu diesen Begriffen finden Sie im [Experience Platform-Glossar](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=de) . Im [Destination SDK-Glossar](/help/destinations/destination-sdk/glossary.md) finden Sie Begriffe, die sich direkt auf diese Funktion beziehen.
 
-## Erforderliche Authentifizierungsdaten erhalten {#obtain-authentication-credentials}
+## Erforderliche Authentifizierungs-Anmeldedaten erhalten {#obtain-authentication-credentials}
 
 Das Destination SDK verwendet das [Adobe I/O](https://www.adobe.io/)-Gateway zur Authentifizierung. Um API-Aufrufe an Destination SDK-Endpunkte durchzuführen, müssen Sie bestimmte Kopfzeilen in Ihren API-Aufrufen bereitstellen. Arbeiten Sie mit dem Adobe Exchange-Team zusammen, um die Authentifizierung für die [Adobe Developer Console](https://developer.adobe.com/console) einzurichten.
 
@@ -73,7 +73,7 @@ Weitere Informationen finden Sie in den folgenden Dokumenten zur Zugriffskontrol
 
 ## Nächste Schritte {#next-steps}
 
-Wenn Sie die Schritte in diesem Artikel befolgt haben, haben Sie Authentifizierungsdaten für Adobe I/O, einen Sandbox-Namen und die Zugriffskontrolle für die Zielerstellung erhalten. Als Nächstes können Sie mithilfe des Destination SDK ein Ziel einrichten.
+Wenn Sie die Schritte in diesem Artikel befolgt haben, haben Sie Authentifizierungs-Anmeldedaten für Adobe I/O, einen Sandbox-Namen und die Zugriffskontrolle für die Zielerstellung erhalten. Als Nächstes können Sie mithilfe des Destination SDK ein Ziel einrichten.
 
 * Lesen Sie je nach Zieltyp die folgenden Konfigurationshandbücher:
 

@@ -2,7 +2,7 @@
 description: Der Ziel-Service in Adobe Experience Platform verwendet Konfigurationsendpunkte für verschiedene Komponenten, die die Zielfunktion aufbauen. Erfahren Sie, wie diese Komponenten zusammen es Experience Platform ermöglichen, eine Verbindung zu Zielpartnern herzustellen, benutzerdefinierte Nachrichten zu senden und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
 title: Konfigurationsoptionen in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 97%
@@ -17,7 +17,11 @@ Gemeinsam ermöglichen diese Komponenten es Experience Platform, eine Verbindung
 
 Das folgende Diagramm zeigt einen allgemeinen Überblick über die Komponenten, die Sie über Destination SDK konfigurieren können, um Ihr eigenes Ziel zu erstellen. Diese Komponenten werden weiter unten beschrieben.
 
-![Diagramm mit den Destination SDK-Komponenten, den Konfigurations-Endpunkten und den von ihnen unterstützten Vorgängen.](../assets/functionality/destination-sdk-components-diagram.png)
+>[!BEGINSHADEBOX]
+
+![Diagramm mit den Destination SDK-Komponenten, den Konfigurations-Endpunkten und den von ihnen unterstützten Vorgängen.](../assets/functionality/destination-sdk-components-diagram.png){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Server-Konfiguration {#server-configuration}
 
