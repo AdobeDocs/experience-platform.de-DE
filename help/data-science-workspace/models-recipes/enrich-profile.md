@@ -5,10 +5,10 @@ title: Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem L
 type: Tutorial
 description: Dieses Dokument bietet eine Anleitung zur Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: afa27069c7490848398c92973dd77810564b5993
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 15%
+source-wordcount: '630'
+ht-degree: 14%
 
 ---
 
@@ -16,11 +16,13 @@ ht-degree: 15%
 
 Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und Einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in einen [!DNL Profile]-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile]-Datensätze erfasst, die dann mit [!DNL Adobe Experience Platform Segmentation Service] segmentiert werden können.
 
+Der Segmentierungsprozess hängt von der Auswertungsmethode für die Zielgruppe ab. Wenn eine Zielgruppe als **Streaming** konfiguriert ist, werden alle neuen vom Modell in das Profil geschriebenen Aktualisierungen in Echtzeit verarbeitet. Wenn jedoch eine Zielgruppe für die Auswertung von **Batch** konfiguriert ist, werden die neuen Werte im nächsten Batch ausgewertet.
+
 Dieses Dokument enthält Links zu Tutorials, mit denen Sie [!DNL Real-Time Customer Profile] mit Ihren Einblicken aus maschinellem Lernen anreichern können.
 
 ## Erste Schritte
 
-Um die unten stehenden Tutorials abzuschließen, benötigen Sie ein grundlegendes Verständnis für die Aufnahme von [!DNL Profile] -Daten und die Erstellung von Segmenten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
+Um die unten stehenden Tutorials abzuschließen, benötigen Sie ein Verständnis für die Aufnahme von [!DNL Profile] -Daten und die Erstellung von Zielgruppen. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Bietet eine vollständige, einheitliche Darstellung jedes einzelnen Kunden auf der Grundlage aggregierter Daten aus mehreren Quellen.
 - [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-Time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in Platform erfasst werden.
@@ -41,20 +43,20 @@ Wenn Sie lieber ein Schema mit der [!DNL Schema Registry]-API erstellen möchten
 
 Sobald Ihr Schema und Ihr Datensatz vorbereitet sind, können Sie Scoring-Daten generieren und in den Datensatz aufnehmen, indem Sie Scoring-Läufe mit einem geeigneten Modell durchführen.
 
-## Erstellen von Segmenten mit dem [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
+## Erstellen von Zielgruppen mit dem [!DNL Segment Builder] {#create-audiences-using-the-segment-builder}
 
-Nachdem Sie Ihre Auswertungsdateneinblicke generiert und in Ihren [!DNL Profile]-aktivierten Datensatz aufgenommen haben, können Sie dynamische Segmente mit dem [!DNL Segment Builder] erstellen.
+Nachdem Sie Ihre Auswertungsdateneinblicke generiert und in Ihren [!DNL Profile]-aktivierten Datensatz aufgenommen haben, können Sie dynamische Zielgruppen mit dem [!DNL Segment Builder] erstellen.
 
 Der [!DNL Segment Builder] bietet einen umfassenden Arbeitsbereich, in dem Sie mit [!DNL Profile] -Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag &amp; Drop-Kacheln, die zur Darstellung von Dateneigenschaften verwendet werden. Folgen Sie dem [[!DNL Segment Builder] Benutzerhandbuch](../../segmentation/ui/segment-builder.md) , um mehr über Folgendes zu erfahren:
 
 - Erstellen von Segmentdefinitionen mithilfe einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen.
-- Verwenden der Arbeitsfläche und Container des Regel-Builders, um die Reihenfolge zu steuern, in der Segmentregeln ausgeführt werden.
+- Verwenden der Arbeitsfläche und Container des Regel-Builders, um die Reihenfolge zu steuern, in der Zielgruppenregeln ausgeführt werden.
 - Anzeigen von Schätzungen Ihrer potenziellen Zielgruppe, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
 - Aktivieren aller Segmentdefinitionen für die geplante Segmentierung.
 - Aktivierung bestimmter Segmentdefinitionen für Streaming-Segmentierung.
 
 ## Nächste Schritte {#next-steps}
 
-Weitere Informationen zu Segmenten und dem [!DNL Segment Builder] finden Sie in der Übersicht über den [Segmentation Service](../../segmentation/home.md) .
+Weitere Informationen zu Zielgruppen und dem [!DNL Segment Builder] finden Sie in der Übersicht über den [Segmentation Service](../../segmentation/home.md) .
 
 Weitere Informationen zu [!DNL Real-Time Customer Profile] finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md) .
