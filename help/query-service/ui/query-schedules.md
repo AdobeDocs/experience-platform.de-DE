@@ -2,7 +2,7 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 15%
@@ -75,7 +75,7 @@ Wählen Sie **[!UICONTROL Erstellen und an neuen Datensatz anhängen]** aus, um 
 
 ![Das Bedienfeld Zeitplandetails mit Datensatzdetails und die Optionen [!UICONTROL Erstellen und Anhängen an neuen Datensatz] wurden hervorgehoben.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Wählen Sie alternativ **[!UICONTROL In vorhandenen Datensatz anhängen]** und danach das Datensatzsymbol (![Das Datensatzsymbol.](../images/ui/query-schedules/dataset-icon.png)).
+Wählen Sie alternativ **[!UICONTROL In vorhandenen Datensatz anhängen]** und danach das Datensatzsymbol (![Das Datensatzsymbol.](/help/images/icons/database.png)).
 
 ![Das Bedienfeld &quot;Zeitplandetails&quot;mit Datensatzdetails und &quot;An vorhandenen Datensatz anhängen&quot;wurde hervorgehoben.](../images/ui/query-schedules/dataset-details-existing.png)
 

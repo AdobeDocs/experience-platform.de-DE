@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3736'
 ht-degree: 3%
 
 ---
@@ -117,7 +117,7 @@ Aktivieren Sie das Kontrollkästchen neben dem Namen der Feldergruppe, die Sie z
 
 >[!TIP]
 >
->Für jede aufgelistete Feldergruppe können Sie den Mauszeiger über das Informationssymbol (![](../../images/ui/resources/schemas/info-icon.png)) bewegen oder sich auf dieses konzentrieren, um eine kurze Beschreibung der Art der Daten anzuzeigen, die von der Feldergruppe erfasst werden. Sie können auch das Vorschausymbol (![](../../images/ui/resources/schemas/preview-icon.png)) auswählen, um die Struktur der Felder anzuzeigen, die die Feldergruppe bereitstellt, bevor Sie sie zum Schema hinzufügen.
+>Für jede aufgelistete Feldergruppe können Sie den Mauszeiger über das Informationssymbol (![Infosymbol](/help/images/icons/info.png)) bewegen oder sich auf dieses konzentrieren, um eine kurze Beschreibung der Art der Daten anzuzeigen, die von der Feldergruppe erfasst werden. Sie können auch das Vorschausymbol (![Vorschausymbol](/help/images/icons/preview.png)) auswählen, um die Struktur der Felder anzuzeigen, die die Feldergruppe bereitstellt, bevor Sie sie zum Schema hinzufügen.
 
 Nachdem Sie Ihre Feldergruppen ausgewählt haben, wählen Sie **[!UICONTROL Feldergruppen hinzufügen]** aus, um sie dem Schema hinzuzufügen.
 
@@ -129,7 +129,7 @@ Die [!DNL Schema Editor] wird mit den von der Feldergruppe bereitgestellten Feld
 
 >[!NOTE]
 >
->Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](../../images/ui/explore/padlock-icon.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+>Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 >
 >![Der Schema-Editor mit dem Vorhängeschloss-Symbol hervorgehoben](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -189,7 +189,7 @@ Geben Sie unter **[!UICONTROL Feldname]** den Namen des Felds ein, das Sie hinzu
 
 Einige Standardfelder weisen denselben Namen auf, ihre Struktur kann jedoch von der Feldergruppe abhängen, aus der sie stammen. Wenn ein Standardfeld innerhalb eines übergeordneten Objekts in der Feldergruppenstruktur verschachtelt ist, wird das übergeordnete Feld auch im Schema enthalten sein, wenn das untergeordnete Feld hinzugefügt wird.
 
-Wählen Sie das Vorschausymbol (![Vorschau-Symbol](../../images/ui/resources/schemas/preview-icon.png)) neben einem Standardfeld aus, um die Struktur seiner Feldergruppe anzuzeigen und besser zu verstehen, wie sie möglicherweise verschachtelt ist. Um das Standardfeld zum Schema hinzuzufügen, wählen Sie das Pluszeichen (![Plussymbol](../../images/ui/resources/schemas/add-icon.png)) aus.
+Wählen Sie das Vorschausymbol (![Vorschau-Symbol](/help/images/icons/preview.png)) neben einem Standardfeld aus, um die Struktur seiner Feldergruppe anzuzeigen und besser zu verstehen, wie sie möglicherweise verschachtelt ist. Um das Standardfeld zum Schema hinzuzufügen, wählen Sie das Pluszeichen (![Plussymbol](/help/images/icons/add-circle.png)) aus.
 
 ![Standardfeld hinzufügen](../../images/ui/resources/schemas/add-standard-field.png)
 

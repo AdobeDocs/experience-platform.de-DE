@@ -5,7 +5,7 @@ feature: Customer AI
 title: Insights mit Customer AI
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Einblicken von Dienstinstanzen in der Benutzeroberfläche von Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 6%
@@ -180,7 +180,7 @@ Wenn Sie den Mauszeiger über die Zeilen bewegen, werden das Datum und die tats�
 
 ![Bucket-Beispiel](../images/insights/churn_tab.png)
 
-Sie können den Zeitrahmen nach den erwarteten und tatsächlichen angezeigten Raten filtern. Wählen Sie das Symbol **Kalendersymbol** ![ ](../images/insights/calendar_icon.png) und dann einen neuen Datumsbereich aus. Die Ergebnisse in den einzelnen Behältern werden aktualisiert und innerhalb des neuen Datumsbereichs angezeigt.
+Sie können den Zeitrahmen nach den erwarteten und tatsächlichen angezeigten Raten filtern. Wählen Sie das Symbol **Kalendersymbol** ![ ](/help/images/icons/calendar.png) und dann einen neuen Datumsbereich aus. Die Ergebnisse in den einzelnen Behältern werden aktualisiert und innerhalb des neuen Datumsbereichs angezeigt.
 
 ![Datumsauswahl](../images/insights/date_selector.png)
 

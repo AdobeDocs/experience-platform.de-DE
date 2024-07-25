@@ -2,7 +2,7 @@
 title: Durchsuchen von Arbeitsaufträgen für den Datenlebenszyklus
 description: Erfahren Sie, wie Sie bestehende Arbeitsaufträge für den Datenlebenszyklus in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 80%
@@ -31,7 +31,7 @@ In der Liste werden nur Arbeitsaufträge für jeweils eine Kategorie angezeigt. 
 
 ![Bild, das die Registerkarte [!UICONTROL Datensatz] zeigt](../images/ui/browse/dataset-tab.png)
 
-Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/funnel-icon.png)) aus, um eine Liste von Filtern für die angezeigten Arbeitsaufträge aufzurufen.
+Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](/help/images/icons/filter.png)) aus, um eine Liste von Filtern für die angezeigten Arbeitsaufträge aufzurufen.
 
 ![Bild der angezeigten Arbeitsauftragsfilter](../images/ui/browse/filters.png)
 

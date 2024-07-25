@@ -2,7 +2,7 @@
 title: Query Pro-Modus
 description: Erfahren Sie, wie Sie mit SQL-Abfragen in der Adobe Experience Platform-Benutzeroberfläche Diagramme für Ihre benutzerdefinierten Dashboards erstellen können.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Um [global](./filters/global-filter.md) oder [Datumsfilter](./filters/date-filte
 >
 >Wenn Sie einen globalen Filter verwenden möchten, müssen Sie einen Abfrageparameter in Ihrer SQL platzieren und diesen Abfrageparameter dann mit dem globalen Filter im Widget Composer verknüpfen. Im folgenden Screenshot wird `CONSENT_VALUE_FILTER` in der SQL als Abfrageparameter für einen globalen Filter verwendet. Weitere Informationen dazu finden Sie in der Dokumentation zu [globalen Filtern](./filters/global-filter.md#enable-global-filter) .
 
-Um Ihre Abfrage auszuführen, wählen Sie das Ausführungssymbol (![Ausführungssymbol) aus.](../../images/customizable-insights/run-icon.png)). Der Abfrage-Editor zeigt die Registerkarte Ergebnisse an. Wählen Sie als Nächstes **[!UICONTROL Auswählen]** aus, um die Konfiguration zu bestätigen und den Widget Composer zu öffnen.
+Um Ihre Abfrage auszuführen, wählen Sie das Ausführungssymbol (![Ausführungssymbol) aus.](/help/images/icons/play.png)). Der Abfrage-Editor zeigt die Registerkarte Ergebnisse an. Wählen Sie als Nächstes **[!UICONTROL Auswählen]** aus, um die Konfiguration zu bestätigen und den Widget Composer zu öffnen.
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ Um Ihre Abfrage auszuführen, wählen Sie das Ausführungssymbol (![Ausführungs
 
 ## Widget befüllen {#populate-widget}
 
-Der Widget Composer wird jetzt mit den Spalten aus der ausgeführten SQL gefüllt. Der Typ des Dashboards wird oben links angezeigt, in diesem Fall ist er [!UICONTROL Manueller SQL-Eintrag]. Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](../../images/customizable-insights/edit-icon.png)), um die SQL an jedem Punkt zu bearbeiten.
+Der Widget Composer wird jetzt mit den Spalten aus der ausgeführten SQL gefüllt. Der Typ des Dashboards wird oben links angezeigt, in diesem Fall ist er [!UICONTROL Manueller SQL-Eintrag]. Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](/help/images/icons/edit.png)), um die SQL an jedem Punkt zu bearbeiten.
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ Verwenden Sie zum Erstellen Ihres Widgets die in der Spalte [!UICONTROL Attribut
 
 ### Attribute hinzufügen {#add-attributes}
 
-Um Ihrem Widget ein Attribut hinzuzufügen, wählen Sie das Pluszeichen (![A Pluszeichen) aus.](../../images/customizable-insights/add-icon.png)) neben einem Attributnamen. Im angezeigten Dropdown-Menü können Sie der Grafik aus den von Ihrer SQL bestimmten Optionen ein Attribut hinzufügen. Verschiedene Diagrammtypen haben unterschiedliche Optionen, z. B. ein Dropdown-Menü für die X- und Y-Achse.
+Um Ihrem Widget ein Attribut hinzuzufügen, wählen Sie das Pluszeichen (![A Pluszeichen) aus.](/help/images/icons/add-circle.png)) neben einem Attributnamen. Im angezeigten Dropdown-Menü können Sie der Grafik aus den von Ihrer SQL bestimmten Optionen ein Attribut hinzufügen. Verschiedene Diagrammtypen haben unterschiedliche Optionen, z. B. ein Dropdown-Menü für die X- und Y-Achse.
 
 In diesem Ringdiagramm-Beispiel sind die Optionen Größe und Farbe. Farbe unterteilt die Ringdiagrammergebnisse und die Größe ist die tatsächlich verwendete Metrik. Fügen Sie dem Feld [!UICONTROL Farbe] ein Attribut hinzu, um die Ergebnisse basierend auf ihrer Zusammensetzung in verschiedene Farben zu unterteilen.
 
 >[!TIP]
 >
->Wählen Sie das Pfeilsymbol nach oben und unten (![Das Pfeilsymbol nach oben und unten) aus.](../../images/customizable-insights/switch-axis-icon.png)), um die Anordnung der X- und Y-Achse in Balken- oder Liniendiagrammen zu ändern.
+>Wählen Sie das Pfeilsymbol nach oben und unten (![Das Pfeilsymbol nach oben und unten) aus.](/help/images/icons/switch.png)), um die Anordnung der X- und Y-Achse in Balken- oder Liniendiagrammen zu ändern.
 
 ![Der Widget Composer mit dem Dropdown-Menü &quot;Add-Symbol&quot;und hervorgehobenen Umschalt-Pfeilen.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ Um den Diagrammtyp oder das Diagramm Ihres Widgets zu ändern, wählen Sie aus d
 
 ## Widget-Eigenschaften {#properties}
 
-Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](../../images/customizable-insights/properties-icon.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Geben Sie im Bereich [!UICONTROL Eigenschaften] im Textfeld **[!UICONTROL Widget-Titel]** einen Namen für das Widget ein. Sie können auch verschiedene Aspekte Ihres Diagramms umbenennen.
+Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](/help/images/icons/properties.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Geben Sie im Bereich [!UICONTROL Eigenschaften] im Textfeld **[!UICONTROL Widget-Titel]** einen Namen für das Widget ein. Sie können auch verschiedene Aspekte Ihres Diagramms umbenennen.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Wählen Sie **[!UICONTROL Bearbeiten]** aus, um Ihr gesamtes Dashboard oder Ihre
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobener Bearbeitung.](../../images/customizable-insights/edit-dashboard.png)
 
-Wählen Sie **[!UICONTROL Filter hinzufügen]** aus, um einen [[!UICONTROL Datumsfilter]](#create-date-filter) oder einen [[!UICONTROL globalen Filter]](#create-global-filter) zu erstellen. Nach der Erstellung sind alle globalen Filter und Datumsfilter in [dem Filtersymbol](#select-global-filter) (![Ein Filtersymbol) verfügbar.](../../images/customizable-insights/filter.png)) Ihres Dashboards.
+Wählen Sie **[!UICONTROL Filter hinzufügen]** aus, um einen [[!UICONTROL Datumsfilter]](#create-date-filter) oder einen [[!UICONTROL globalen Filter]](#create-global-filter) zu erstellen. Nach der Erstellung sind alle globalen Filter und Datumsfilter in [dem Filtersymbol](#select-global-filter) (![Ein Filtersymbol) verfügbar.](/help/images/icons/filter.png)) Ihres Dashboards.
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Dropdown-Menü Filter hinzufügen.](../../images/customizable-insights/add-filter.png)
 

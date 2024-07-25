@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 93%
@@ -71,7 +71,7 @@ Kennzeichnungen können über die Registerkarte **[!UICONTROL Data Governance]**
 
 ![Die Registerkarte[!UICONTROL Data Governance] des Arbeitsbereichs [!UICONTROL Datensätze] mit hervorgehobener Registerkarte „Data Governance“.](../images/labels/dataset-governance.png)
 
-Um Datennutzungskennzeichnungen auf Datensatzebene zu bearbeiten, wählen Sie zunächst das Stiftsymbol (![Stiftsymbol.](../images/labels/edit-icon.png)) in der Zeile des Datensatznamens aus.
+Um Datennutzungskennzeichnungen auf Datensatzebene zu bearbeiten, wählen Sie zunächst das Stiftsymbol (![Stiftsymbol.](/help/images/icons/edit.png)) in der Zeile des Datensatznamens aus.
 
 ![Die Registerkarte [!UICONTROL Data Governance] des Arbeitsbereichs [!UICONTROL Datensätze] mit hervorgehobenem Stiftsymbol zum Bearbeiten.](../images/labels/dataset-level-edit.png)
 

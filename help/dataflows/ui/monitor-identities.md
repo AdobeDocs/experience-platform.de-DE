@@ -4,7 +4,7 @@ description: Adobe Experience Platform Identity Service bietet Ihnen einen umfas
 title: Überwachen von Datenflüssen auf Identitäten in der Benutzeroberfläche
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 15%
@@ -62,7 +62,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Diagramme aktualisiert]** | Die Anzahl vorhandener Identitätsdiagramme, die mit neuen Edges aktualisiert wurden. |
 | **[!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse]** | Die Anzahl der fehlgeschlagenen Datenflüsse. |
 
-Sie können das Filtersymbol ![Filtersymbol](../assets/ui/monitor-identities/filter.png) neben dem Quellnamen auswählen, um Informationen zur Identitätsverarbeitung für die Datenflüsse der ausgewählten Quelle anzuzeigen.
+Sie können das Filtersymbol ![Filtersymbol](/help/images/icons/filter.png) neben dem Quellnamen auswählen, um Informationen zur Identitätsverarbeitung für die Datenflüsse der ausgewählten Quelle anzuzeigen.
 
 ![Das Filtersymbol wird hervorgehoben. Wenn Sie dieses Symbol auswählen, können Sie die Datenflüsse der ausgewählten Quelle anzeigen.](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Diagramme aktualisiert]** | Die Anzahl vorhandener Identitätsdiagramme, die mit neuen Edges aktualisiert wurden. |
 | **[!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse]** | Die Anzahl der fehlgeschlagenen Datenflüsse. |
 
-Wählen Sie das Filtersymbol ![filter](../assets/ui/monitor-identities/filter.png) neben der Startzeit des Datenflusses aus, um weitere Informationen zum Start des Datenflusses [!DNL Identity] anzuzeigen.
+Wählen Sie das Filtersymbol ![filter](/help/images/icons/filter.png) neben der Startzeit des Datenflusses aus, um weitere Informationen zum Start des Datenflusses [!DNL Identity] anzuzeigen.
 
 ![Das Filtersymbol wird hervorgehoben. Durch Auswahl dieses Symbols können Sie Details zum ausgewählten Datenfluss anzeigen.](../assets/ui/monitor-identities/dataflows-filter.png)
 

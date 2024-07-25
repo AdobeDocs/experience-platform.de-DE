@@ -3,7 +3,7 @@ title: Datensätze löschen
 description: Erfahren Sie, wie Sie Datensätze in der Benutzeroberfläche von Adobe Experience Platform löschen.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 28%
@@ -51,7 +51,7 @@ Der Workflow für die Anforderungserstellung wird angezeigt. Standardmäßig ist
 
 Im nächsten Schritt wird bestimmt, ob Sie Datensätze aus einem einzigen Datensatz oder aus allen Datensätzen löschen möchten. Wenn diese Option nicht verfügbar ist, fahren Sie mit dem Abschnitt [Identitäten bereitstellen](#provide-identities) des Handbuchs fort.
 
-Verwenden Sie im Abschnitt **[!UICONTROL Datensatzdetails]** die Optionsschaltfläche, um zwischen einem bestimmten Datensatz und allen Datensätzen auszuwählen. Wenn Sie &quot;**[!UICONTROL Datensatz auswählen]**&quot;auswählen, wählen Sie das Datenbanksymbol (![Datenbanksymbol](../images/ui/record-delete/database-icon.png)) aus, um ein Dialogfeld zu öffnen, das eine Liste der verfügbaren Datensätze bereitstellt. Wählen Sie den gewünschten Datensatz aus der Liste aus, gefolgt von **[!UICONTROL Fertig]**.
+Verwenden Sie im Abschnitt **[!UICONTROL Datensatzdetails]** die Optionsschaltfläche, um zwischen einem bestimmten Datensatz und allen Datensätzen auszuwählen. Wenn Sie &quot;**[!UICONTROL Datensatz auswählen]**&quot;auswählen, wählen Sie das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)) aus, um ein Dialogfeld zu öffnen, das eine Liste der verfügbaren Datensätze bereitstellt. Wählen Sie den gewünschten Datensatz aus der Liste aus, gefolgt von **[!UICONTROL Fertig]**.
 
 ![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit einem ausgewählten Datensatz und [!UICONTROL Fertig] hervorgehoben.](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ Es werden Steuerelemente angezeigt, mit denen Sie Identitäten einzeln eingeben 
 
 ![Der Workflow zur Anforderungserstellung mit einem manuell hinzugefügten Identitätsfeld.](../images/ui/record-delete/identity-added.png)
 
-Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![Ein Pluszeichen) aus.](../images/ui/record-delete/plus-icon.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Identität hinzufügen]** aus.
+Um weitere Identitäten hinzuzufügen, wählen Sie das Pluszeichen (![Ein Pluszeichen) aus.](/help/images/icons/tree-expand-all.png)) neben einer der Zeilen oder wählen Sie **[!UICONTROL Identität hinzufügen]** aus.
 
 ![Der Workflow für die Anforderungserstellung mit dem Pluszeichen und dem Symbol zum Hinzufügen einer Identität hervorgehoben.](../images/ui/record-delete/more-identities.png)
 

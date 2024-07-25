@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identitätsfelder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein Identitätsfeld definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 16%
@@ -46,7 +46,7 @@ Wählen Sie abschließend **[!UICONTROL Anwenden]** aus, um die Änderung auf da
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-Die Arbeitsfläche wird aktualisiert, um die Änderungen widerzuspiegeln, wobei das ausgewählte Feld ein Fingerabdrucksymbol (![](../../images/ui/fields/special/identity-symbol.png)) erhält, um es als Identität zu kennzeichnen. In der linken Leiste wird das Identitätsfeld jetzt unter dem Namen der Klasse oder Schemafeldgruppe aufgeführt, die das Feld für das Schema bereitstellt.
+Die Arbeitsfläche wird aktualisiert, um die Änderungen widerzuspiegeln, wobei das ausgewählte Feld ein Fingerabdrucksymbol (![](/help/images/icons/identity-service.png)) erhält, um es als Identität zu kennzeichnen. In der linken Leiste wird das Identitätsfeld jetzt unter dem Namen der Klasse oder Schemafeldgruppe aufgeführt, die das Feld für das Schema bereitstellt.
 
 Wenn das Feld auch als primäre Identität festgelegt wurde, wird es auch unter **[!UICONTROL Erforderliche Felder]** in der linken Leiste aufgeführt. Wenn das Identitätsfeld innerhalb der Schemastruktur verschachtelt ist, werden auch alle übergeordneten Felder nach Bedarf aufgelistet.
 

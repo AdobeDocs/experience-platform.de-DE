@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 31%
@@ -57,7 +57,7 @@ Ein Einstellungssymbol über dem Eingabefeld Abfrage-Editor enthält Optionen zu
 >
 >Sie können [!UICONTROL die automatische Syntaxbeendigung deaktivieren], während Sie eine Abfrage erstellen, ohne den Fortschritt zu verlieren.
 
-Um dunkle oder helle Designs zu aktivieren, wählen Sie das Einstellungssymbol (![Einstellungssymbol) aus.](../images/ui/query-editor/settings-icon.png)) gefolgt von der Option im angezeigten Dropdown-Menü.
+Um dunkle oder helle Designs zu aktivieren, wählen Sie das Einstellungssymbol (![Einstellungssymbol) aus.](/help/images/icons/settings.png)) gefolgt von der Option im angezeigten Dropdown-Menü.
 
 ![Der Abfrage-Editor mit dem Einstellungssymbol und der Dropdown-Menüoption Dunkles Design aktivieren hervorgehoben.](../images/ui/query-editor/query-editor-settings.png)
 

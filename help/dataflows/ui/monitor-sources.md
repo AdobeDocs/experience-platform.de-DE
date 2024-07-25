@@ -2,7 +2,7 @@
 description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard die aus Quellen erfassten Daten überwachen können.
 title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 22%
@@ -83,13 +83,13 @@ Sie können Ihre Daten mithilfe der oben in der Metriktabelle bereitgestellten O
 
 {style="table-layout:auto"}
 
-Um die Daten zu überwachen, die in einem bestimmten Datenfluss erfasst werden, wählen Sie das Filtersymbol ![filter](../assets/ui/monitor-sources/filter.png) neben einer Quelle aus.
+Um die Daten zu überwachen, die in einem bestimmten Datenfluss erfasst werden, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben einer Quelle aus.
 
 ![Überwachen Sie einen bestimmten Datenfluss, indem Sie das Filtersymbol neben einer bestimmten Quelle auswählen.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 Die Tabelle &quot;Metriken&quot;wird auf eine Tabelle aktiver Datenflüsse aktualisiert, die der von Ihnen ausgewählten Quelle entsprechen. Während dieses Schritts können Sie zusätzliche Informationen zu Ihren Datenflüssen anzeigen, einschließlich des zugehörigen Datensatzes und Datentyps, sowie einen Zeitstempel, der angibt, wann sie zuletzt aktiv waren.
 
-Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol ![filter](../assets/ui/monitor-sources/filter.png) neben einem Datenfluss aus.
+Um einen Datenfluss weiter zu untersuchen, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben einem Datenfluss aus.
 
 ![Die Datentafeltabelle im Monitoring-Dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ Als Nächstes gelangen Sie zu einer Schnittstelle, die alle Datenfluss-Ausführu
 
 Datenfluss-Ausführungen stellen eine Instanz der Ausführung des Datenflusses dar. Wenn beispielsweise ein Datenfluss für 9:00 Uhr, 10:00 Uhr und 11:00 Uhr geplant ist, haben Sie drei Instanzen eines Durchlaufs. Flussläufe sind spezifisch für Ihre jeweilige Organisation.
 
-Um die Metriken einer bestimmten Datenfluss-Ausführungswiederholung zu überprüfen, wählen Sie das Filtersymbol ![filter](../assets/ui/monitor-sources/filter.png) neben Ihrem Datenfluss aus.
+Um die Metriken einer bestimmten Datenfluss-Ausführungswiederholung zu überprüfen, wählen Sie das Filtersymbol ![filter](/help/images/icons/filter-add.png) neben Ihrem Datenfluss aus.
 
 ![Die Seite mit der Ausführungsmetrik des Datenflusses.](../assets/ui/monitor-sources/dataflow-page.png)
 

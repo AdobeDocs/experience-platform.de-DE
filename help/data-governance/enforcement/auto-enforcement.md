@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Zielgruppen für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 84%
@@ -104,7 +104,7 @@ Unter der Zusammenfassung der Verletzung wird ein Datenherkunftsdiagramm angezei
 
 ![Ein Dialogfeld für einen Richtlinienverstoß mit hervorgehobenem Datenherstellungsdiagramm.](../images/enforcement/data-lineage.png)
 
-Sie können auch das Symbol **[!UICONTROL Filter]** (![Filtersymbol) verwenden.](../images/enforcement/filter.png)), um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
+Sie können auch das Symbol **[!UICONTROL Filter]** (![Filtersymbol) verwenden.](/help/images/icons/filter.png)), um die angezeigten Entitäten nach Kategorie zu filtern. Damit Daten angezeigt werden, müssen mindestens zwei Kategorien ausgewählt werden.
 
 ![Ein Dialogfeld mit einem Richtlinienverstoß, in dem der Filter für die Datenherkunft und das Dropdown-Menü hervorgehoben sind.](../images/enforcement/lineage-filter.png)
 

@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Aktualisieren der Source-Verbindungskontodetails in der Benutzeroberfläche
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 16%
@@ -33,7 +33,7 @@ Melden Sie sich bei der [Experience Platform-Benutzeroberfläche](https://platfo
 
 Die Seite **[!UICONTROL Konten]** wird angezeigt. Auf dieser Seite finden Sie eine Liste sichtbarer Konten, einschließlich Informationen zu ihrer Quelle, Benutzername, Anzahl der Datenflüsse und Erstellungsdatum.
 
-Wählen Sie oben links das Filtersymbol ![filter](../../images/tutorials/update/filter.png) aus, um das Sortierfeld zu starten.
+Wählen Sie oben links das Filtersymbol ![filter](/help/images/icons/filter.png) aus, um das Sortierfeld zu starten.
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 

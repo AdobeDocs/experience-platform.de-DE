@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 71%
@@ -81,15 +81,15 @@ Die Registerkarte **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, d
 
 >
 >
->Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](../images/ui/overview/edit-icon.png)) aus einer beliebigen Zeile des Abfrageprotokolls, um zum [!DNL Query Editor] zu navigieren. Die Abfrage wird vorab ausgefüllt, um die Bearbeitung zu erleichtern.
+>Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](/help/images/icons/edit.png)) aus einer beliebigen Zeile des Abfrageprotokolls, um zum [!DNL Query Editor] zu navigieren. Die Abfrage wird vorab ausgefüllt, um die Bearbeitung zu erleichtern.
 
 Weitere Informationen zu den Protokolldateien, die automatisch von einem Abfrageereignis generiert werden, finden Sie in der Dokumentation zu [Abfrageprotokollen](./query-logs.md) .
 
-## Anmeldeinformationen
+## Anmeldedaten
 
-Die Registerkarte **[!UICONTROL Anmeldeinformationen]** zeigt sowohl Ihre ablaufenden als auch Ihre nicht ablaufenden Anmeldeinformationen an. Weitere Informationen zur Verwendung dieser Anmeldeinformationen für die Verbindung mit externen Clients finden Sie im [Handbuch zu Anmeldeinformationen](../clients/overview.md).
+Die Registerkarte **[!UICONTROL Anmeldedaten]** zeigt sowohl Ihre ablaufenden als auch Ihre nicht ablaufenden Anmeldedaten an. Weitere Informationen zur Verwendung dieser Anmeldedaten für die Verbindung mit externen Clients finden Sie im [Handbuch zu Anmeldedaten](../clients/overview.md).
 
-![Das Dashboard „Abfragen“ mit hervorgehobener Registerkarte „Anmeldeinformationen“.](../images/ui/overview/credentials.png)
+![Das Dashboard „Abfragen“ mit hervorgehobener Registerkarte „Anmeldedaten“.](../images/ui/overview/credentials.png)
 
 ## Nächste Schritte
 

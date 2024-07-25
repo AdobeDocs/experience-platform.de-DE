@@ -2,7 +2,7 @@
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie in Adobe Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 18%
@@ -97,7 +97,7 @@ Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema übe
 >
 >Derzeit können von einem Quellschema zu einem Referenzschema nur n:1- und 1:1-Beziehungen definiert werden. Bei 1:n-Beziehungen müssen Sie das Beziehungsfeld im Schema definieren, das die &quot;viele&quot;darstellt.
 
-Um ein Beziehungsfeld festzulegen, wählen Sie auf der Arbeitsfläche das Pfeilsymbol (![Pfeilsymbol](../images/tutorials/relationship-b2b/arrow.png)) neben dem betreffenden Feld aus. Im Fall des Schemas [!DNL Opportunities] ist dies das Feld `accountKey.sourceKey` , da das Ziel darin besteht, eine n:n-Beziehung zu einem Konto herzustellen.
+Um ein Beziehungsfeld festzulegen, wählen Sie auf der Arbeitsfläche das Pfeilsymbol (![Pfeilsymbol](/help/images/icons/alias.png)) neben dem betreffenden Feld aus. Im Fall des Schemas [!DNL Opportunities] ist dies das Feld `accountKey.sourceKey` , da das Ziel darin besteht, eine n:n-Beziehung zu einem Konto herzustellen.
 
 ![Relationship Button](../images/tutorials/relationship-b2b/relationship-button.png)
 

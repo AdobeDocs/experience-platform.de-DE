@@ -2,10 +2,10 @@
 title: Power BI-Berichtsvorlagen für Platform-Dashboards
 description: Verwenden Sie Berichtvorlagen, um mithilfe von Power BI Experience Platform-Daten zu analysieren.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 92%
+source-wordcount: '1467'
+ht-degree: 91%
 
 ---
 
@@ -46,39 +46,39 @@ Wählen Sie als Nächstes die Registerkarte **[!UICONTROL Integrationen]** aus. 
 
 ![Bildschirm mit Power BI-Details mit hervorgehobener Schaltfläche „Installieren“.](../images/power-bi/details-screen.png)
 
-### Zugangsdaten angeben
+### Anmeldedaten angeben
 
-Der erste Schritt im Installationsprozess besteht darin, nicht ablaufende Zugangsdaten für die Power BI-Anwendungsintegration bereitzustellen. Es gibt zwei Möglichkeiten, diese bereitzustellen: [[!UICONTROL Erstellen neuer Zugangsdaten]](#create-new-credentials) oder [[!UICONTROL Verwenden vorhandener Anmeldeinformationen]](#use-existing-credentials). Wählen Sie den entsprechenden Umschalter aus, um fortzufahren.
+Der erste Schritt im Installationsprozess besteht darin, nicht ablaufende Anmeldedaten für die Power BI-Anwendungsintegration bereitzustellen. Es gibt zwei Möglichkeiten, diese bereitzustellen: [[!UICONTROL Erstellen neuer Anmeldedaten]](#create-new-credentials) oder [[!UICONTROL Verwenden vorhandener Anmeldedaten]](#use-existing-credentials). Wählen Sie den entsprechenden Umschalter aus, um fortzufahren.
 
-#### Erstellen neuer Zugangsdaten {#create-new-credentials}
+#### Erstellen neuer Anmeldedaten {#create-new-credentials}
 
-Beim Generieren neuer Zugangsdaten gibt es zwei erforderliche Felder: [!UICONTROL Name] und [!UICONTROL Zugewiesen an]. Das Feld [!UICONTROL Zugewiesen an] bezieht sich auf die mit Ihrem Power BI-Konto verknüpfte E-Mail-Adresse.
+Beim Generieren neuer Anmeldedaten gibt es zwei erforderliche Felder: [!UICONTROL Name] und [!UICONTROL Zugewiesen an]. Das Feld [!UICONTROL Zugewiesen an] bezieht sich auf die mit Ihrem Power BI-Konto verknüpfte E-Mail-Adresse.
 
-![Bildschirm für das Generieren neuer Zugangsdaten in Power BI.](../images/power-bi/generate-new-credentials.png)
-
->[!IMPORTANT]
->
->Zum Erstellen von nicht ablaufenden Zugangsdaten müssen Ihnen bestimmte Berechtigungen und Rollen zugewiesen sein. Die erforderlichen Berechtigungen sind „Verwalten von Sandboxes“ und „Verwalten der Integration von Query Service“. Die erforderlichen Rollen sind „Adobe Experience Platform-Admin“ und „Entwickler“. Informationen zum Zuweisen dieser Berechtigungen finden Sie in der Dokumentation über die [Zugriffskontrolle](../../access-control/home.md).
-
-Weiterführende Informationen zum Generieren von nicht ablaufenden Zugangsdaten für Query Service finden Sie im [Handbuch zu nicht ablaufenden Zugangsdaten](../../query-service/ui/credentials.md#non-expiring-credentials).
-
-Nachdem das erste Mal nicht ablaufende Zugangsdaten generiert wurden, wird eine JSON-Datei auf den Computer heruntergeladen. Diese JSON-Datei kann dann für andere Benutzer als Zugangsdaten zum Abschließen des Installationsprozesses freigegeben werden.
-
-#### Verwenden vorhandener Zugangsdaten {#use-existing-credentials}
-
-Eine JSON-Zugangsdaten-Datei kann auch zur Validierung hochgeladen werden. Diese JSON-Dateien, die nicht ablaufende Zugangsdaten enthalten, werden auf den lokalen Computer heruntergeladen, der bei der Erstellung nicht ablaufender Zugangsdaten verwendet wird.
+![Bildschirm für das Generieren neuer Anmeldedaten in Power BI.](../images/power-bi/generate-new-credentials.png)
 
 >[!IMPORTANT]
 >
->Um vorhandene, nicht ablaufende Zugangsdaten zu verwenden, müssen dem Benutzer bereits Zugangsdaten zugewiesen worden sein. Wenn dem Benutzer keine Zugangsdaten zugewiesen wurden und er keinen neuen mithilfe von Adobe Admin Console erstellen kann, dann kann der Benutzer nicht mit dem Installationsprozess fortfahren.
+>Zum Erstellen von nicht ablaufenden Anmeldedaten müssen Ihnen bestimmte Berechtigungen und Rollen zugewiesen sein. Die erforderlichen Berechtigungen sind „Verwalten von Sandboxes“ und „Verwalten der Integration von Query Service“. Die erforderlichen Rollen sind „Adobe Experience Platform-Admin“ und „Entwickler“. Informationen zum Zuweisen dieser Berechtigungen finden Sie in der Dokumentation über die [Zugriffskontrolle](../../access-control/home.md).
 
-Wählen Sie **[!UICONTROL Datei für Zugangsdaten hochladen]** und dann im angezeigten Dialogfeld die entsprechende JSON-Datei aus, die hochgeladen werden soll.
+Weiterführende Informationen zum Generieren von nicht ablaufenden Anmeldedaten für Query Service finden Sie im [Handbuch zu nicht ablaufenden Anmeldedaten](../../query-service/ui/credentials.md#non-expiring-credentials).
 
-![Power BI-Zugangsdaten-Bildschirm mit hervorgehobener Schaltfläche „Datei für Zugangsdaten hochladen“.](../images/power-bi/upload-credential-file.png)
+Nachdem das erste Mal nicht ablaufende Anmeldedaten generiert wurden, wird eine JSON-Datei auf den Computer heruntergeladen. Diese JSON-Datei kann dann für andere Benutzer als Anmeldedaten zum Abschließen des Installationsprozesses freigegeben werden.
 
-Nachdem Sie die nicht ablaufenden Zugangsdaten angegeben haben, werden sie automatisch von Platform überprüft. Nach erfolgreicher Überprüfung wird eine Bestätigungsmeldung angezeigt. Wählen Sie **[!UICONTROL Nächste]** aus, um die Einverständniserklärung für das Power BI-Programm zu lesen.
+#### Verwenden vorhandener Anmeldedaten {#use-existing-credentials}
 
-![Bildschirm für die erfolgreiche Prüfung nicht ablaufender Zugangsdaten mit hervorgehobener Schaltfläche „Weiter“.](../images/power-bi/successfully-uploaded-credential-file.png)
+Eine JSON-Anmeldedaten-Datei kann auch zur Validierung hochgeladen werden. Diese JSON-Dateien, die nicht ablaufende Anmeldedaten enthalten, werden auf den lokalen Computer heruntergeladen, der bei der Erstellung nicht ablaufender Anmeldedaten verwendet wird.
+
+>[!IMPORTANT]
+>
+>Um vorhandene, nicht ablaufende Anmeldedaten zu verwenden, müssen dem Benutzer bereits Anmeldedaten zugewiesen worden sein. Wenn dem Benutzer keine Anmeldedaten zugewiesen wurden und er keinen neuen mithilfe von Adobe Admin Console erstellen kann, dann kann der Benutzer nicht mit dem Installationsprozess fortfahren.
+
+Wählen Sie **[!UICONTROL Datei für Anmeldedaten hochladen]** und dann im angezeigten Dialogfeld die entsprechende JSON-Datei aus, die hochgeladen werden soll.
+
+![Power BI-Anmeldedaten-Bildschirm mit hervorgehobener Schaltfläche „Datei für Anmeldedaten hochladen“.](../images/power-bi/upload-credential-file.png)
+
+Nachdem Sie die nicht ablaufenden Anmeldedaten angegeben haben, werden sie automatisch von Platform überprüft. Nach erfolgreicher Überprüfung wird eine Bestätigungsmeldung angezeigt. Wählen Sie **[!UICONTROL Nächste]** aus, um die Einverständniserklärung für das Power BI-Programm zu lesen.
+
+![Bildschirm für die erfolgreiche Prüfung nicht ablaufender Anmeldedaten mit hervorgehobener Schaltfläche „Weiter“.](../images/power-bi/successfully-uploaded-credential-file.png)
 
 ### Einverständnis bereitstellen
 
@@ -94,7 +94,7 @@ Wählen Sie **[!UICONTROL Akzeptieren]** aus, um Power BI Zugriff auf Ihre Platf
 >
 >Wenn Sie den Installationsprozess zu einem beliebigen Zeitpunkt beenden, bevor Sie Ihr Einverständnis erteilen, wird die Power BI-Anwendungsintegration nicht im Dashboard-Inventar installiert.
 
-Nachdem Sie Ihr Einverständnis gegeben haben, wird die Berichtsvorlage automatisch im Rahmen des Installationsprozesses in die Power BI-Umgebung installiert. Power BI verwendet dann die nicht ablaufenden Zugangsdaten, um auf Platform zuzugreifen, alle SQL-Abfragen nacheinander auszuführen und die Berichtsvorlage mit den zurückgegebenen Daten zu füllen.
+Nachdem Sie Ihr Einverständnis gegeben haben, wird die Berichtsvorlage automatisch im Rahmen des Installationsprozesses in die Power BI-Umgebung installiert. Power BI verwendet dann die nicht ablaufenden Anmeldedaten, um auf Platform zuzugreifen, alle SQL-Abfragen nacheinander auszuführen und die Berichtsvorlage mit den zurückgegebenen Daten zu füllen.
 
 Wählen Sie **[!UICONTROL Beenden]** aus, um zum Dashboard-Inventar zurückzukehren.
 
@@ -144,7 +144,7 @@ Sobald Ihr Dashboard über die in den benutzerdefinierten Widgets enthaltenen Me
 
 ## Löschen der Power BI-Anwendungsintegration
 
-Um das Dashboard zu löschen, gehen Sie zum Dashboard-Inventar und wählen Sie das Löschsymbol (![](../images/power-bi/delete-icon.png)) neben dem Dashboard-Namen.
+Um das Dashboard zu löschen, navigieren Sie zum Dashboard-Inventar und wählen Sie das Löschsymbol (![Löschsymbol](/help/images/icons/delete.png)) neben dem Dashboard-Namen aus.
 
 >[!NOTE]
 >

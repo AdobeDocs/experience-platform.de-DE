@@ -3,7 +3,7 @@ description: Erfahren Sie, wie Sie Vorlagen in der Adobe Experience Platform-Ben
 title: Erstellen eines Quellen-Datenflusses mithilfe von Vorlagen in der Benutzeroberfläche
 badge1: „Beta“
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 44%
@@ -86,7 +86,7 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie [!UICONTROL Vorhandenes Konto
 
 Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie dann Ihre Details zur Quellverbindung und Anmeldedaten für die Kontoauthentifizierung an. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie dann einige Zeit, bis die neue Verbindung hergestellt ist.
 
-![Die Authentifizierungsseite für ein neues Konto mit Details zur Quellverbindung und Anmeldeinformationen zur Kontoauthentifizierung.](../../images/tutorials/templates/new-account.png)
+![Die Authentifizierungsseite für ein neues Konto mit Details zur Quellverbindung und Anmeldedaten zur Kontoauthentifizierung.](../../images/tutorials/templates/new-account.png)
 
 >[!ENDTABS]
 
@@ -174,7 +174,7 @@ In der folgenden Tabelle sind die für die Quelle [!DNL Microsoft Dynamics] verf
 
 +++
 
-Je nach ausgewähltem Geschäftstyp wird eine Liste mit Vorlagen angezeigt. Wählen Sie das Vorschausymbol ![Vorschausymbol](../../images/tutorials/templates/preview-icon.png) neben dem Vorlagennamen aus, um eine Vorschau der Beispieldaten aus der Vorlage anzuzeigen.
+Je nach ausgewähltem Geschäftstyp wird eine Liste mit Vorlagen angezeigt. Wählen Sie das Vorschausymbol ![Vorschausymbol](/help/images/icons/preview.png) neben dem Vorlagennamen aus, um eine Vorschau der Beispieldaten aus der Vorlage anzuzeigen.
 
 ![Liste von Vorlagen mit hervorgehobenem Vorschausymbol.](../../images/tutorials/templates/templates.png)
 

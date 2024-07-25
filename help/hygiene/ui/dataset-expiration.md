@@ -2,7 +2,7 @@
 title: Automatisierte Datensatzabläufe
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform die Gültigkeit eines Datensatzes planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 49%
@@ -55,11 +55,11 @@ Der Workflow für die Anforderungserstellung wird angezeigt. Wählen Sie im Absc
 
 ### Auswählen von Datum und Datensatz {#select-date-and-dataset}
 
-Wählen Sie im Abschnitt **[!UICONTROL Angeforderte Aktion]** ein Datum aus, an dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol (![Kalendersymbol) auswählen.](../images/ui/ttl/calendar-icon.png)), um das Datum aus einem Dialogfeld auszuwählen.
+Wählen Sie im Abschnitt **[!UICONTROL Angeforderte Aktion]** ein Datum aus, an dem der Datensatz gelöscht werden soll. Sie können das Datum manuell eingeben (im Format `mm/dd/yyyy`) oder das Kalendersymbol (![Kalendersymbol) auswählen.](/help/images/icons/calendar.png)), um das Datum aus einem Dialogfeld auszuwählen.
 
 ![Ein Kalenderdialogfeld mit einem für den Datensatz ausgewählten und hervorgehobenen Ablaufdatum.](../images/ui/ttl/select-date.png)
 
-Wählen Sie anschließend unter &quot;**[!UICONTROL Datensatzdetails]**&quot;das Datenbanksymbol (![Datenbanksymbol) aus.](../images/ui/ttl/database-icon.png)), um ein Dialogfeld zur Datensatzauswahl zu öffnen. Wählen Sie aus der Liste einen Datensatz aus, auf den die Gültigkeit angewendet werden soll, und klicken Sie danach auf **[!UICONTROL Fertig]**.
+Wählen Sie anschließend unter &quot;**[!UICONTROL Datensatzdetails]**&quot;das Datenbanksymbol (![Datenbanksymbol) aus.](/help/images/icons/database.png)), um ein Dialogfeld zur Datensatzauswahl zu öffnen. Wählen Sie aus der Liste einen Datensatz aus, auf den die Gültigkeit angewendet werden soll, und klicken Sie danach auf **[!UICONTROL Fertig]**.
 
 ![Das Dialogfeld [!UICONTROL Datensatz auswählen] mit einem ausgewählten Datensatz und [!UICONTROL Fertig] hervorgehoben.](../images/ui/ttl/select-dataset.png)
 

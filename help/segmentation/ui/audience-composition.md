@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Zielgruppen-Benutzeroberfläche
 description: Die Zielgruppen-Komposition in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Zielgruppen für Ihre Organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 83%
@@ -20,7 +20,7 @@ Die Zielgruppenkomposition bietet einen Arbeitsbereich zum Erstellen und Bearbei
 
 ![Die Benutzeroberfläche der Zielgruppenkomposition.](../images/ui/audience-composition/audience-composition.png)
 
-Um die Details der Komposition, einschließlich Titel und Beschreibung, zu ändern, wählen Sie die Schaltfläche ![Schieberegler](../images/ui/audience-composition/sliders.png).
+Um die Details der Komposition, einschließlich Titel und Beschreibung, zu ändern, wählen Sie die Schaltfläche ![Schieberegler](/help/images/icons/properties.png).
 
 Das Popup-Fenster **[!UICONTROL Kompositionseigenschaften]** erscheint. Sie können hier Details zu Ihrer Komposition einfügen, einschließlich Titel und Beschreibung.
 
@@ -114,7 +114,7 @@ Eine Liste von Zielgruppen wird angezeigt. Wählen Sie **[!UICONTROL Hinzufügen
 
 ### Ausschließen nach Attribut {#exclude-attribute}
 
-Wenn Sie nach Attribut ausschließen, können Sie durch Auswahl des Symbols ![Filtern](../images/ui/audience-composition/filter-attribute.png) innerhalb des Abschnitts **[!UICONTROL Ausschlussregel]** festlegen, welche Attribute ausgeschlossen werden sollen.
+Wenn Sie nach Attribut ausschließen, können Sie durch Auswahl des Symbols ![Filtern](/help/images/icons/project-edit.png) innerhalb des Abschnitts **[!UICONTROL Ausschlussregel]** festlegen, welche Attribute ausgeschlossen werden sollen.
 
 ![Der Abschnitt „Attribut“ wird hervorgehoben und zeigt an, wo das auszuschließende Attribut ausgewählt werden soll.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ Um einen Block des Typs **[!UICONTROL Anreichern]** hinzuzufügen, wählen Sie d
 
 Der Block **[!UICONTROL Anreichern]** wird hinzugefügt. Wenn dieser Block ausgewählt ist, werden Details zur Anreicherung in der rechten Leiste angezeigt. Dazu gehören der Titel des Blocks und der Anreicherungsdatensatz.
 
-Um den Datensatz auszuwählen, mit dem die Zielgruppe angereichert werden soll, wählen Sie das Symbol ![Filter](../images/ui/audience-composition/filter-attribute.png) aus.
+Um den Datensatz auszuwählen, mit dem die Zielgruppe angereichert werden soll, wählen Sie das Symbol ![Filter](/help/images/icons/project-edit.png) aus.
 
 ![Die Schaltfläche „Filter“ ist hervorgehoben. Wenn Sie dies auswählen, gelangen Sie zum Popup-Fenster [!UICONTROL Datensatz auswählen].](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ Der Abschnitt **[!UICONTROL Anreicherungskriterien]** wird nun in der rechten Le
 
 ![Der Bereich [!UICONTROL Anreicherungskriterien] ist hervorgehoben.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Um den **[!UICONTROL Quell-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das ![Filter](../images/ui/audience-composition/filter-attribute.png)-Symbol aus.
+Um den **[!UICONTROL Quell-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das ![Filter](/help/images/icons/project-edit.png)-Symbol aus.
 
 ![Das Filter-Symbol für den [!UICONTROL Quell-Zusammenführungsschlüssel] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ Das Popup-Fenster **[!UICONTROL Profilattribut auswählen]** erscheint. Wählen 
 
 ![Das Attribut, das Sie als Quell-Zusammenführungsschlüssel verwenden möchten, ist hervorgehoben.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Um den **[!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das Symbol ![Filter](../images/ui/audience-composition/filter-attribute.png).
+Um den **[!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel]** auszuwählen, wählen Sie das Symbol ![Filter](/help/images/icons/project-edit.png).
 
 ![Das Filtersymbol für den [!UICONTROL Anreicherungsdatensatz-Zusammenführungsschlüssel] ist hervorgehoben.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -216,7 +216,7 @@ Bei der Auswahl des Blocks werden Details zum Rang in der rechten Leiste angezei
 
 ![Der Block „Rang“ ist mit zugehörigen Details hervorgehoben.](../images/ui/audience-composition/rank.png)
 
-Um festzulegen, nach welchem Attribut die Zielgruppen geordnet werden sollen, wählen Sie das Symbol ![Filtern](../images/ui/audience-composition/filter-attribute.png) aus.
+Um festzulegen, nach welchem Attribut die Zielgruppen geordnet werden sollen, wählen Sie das Symbol ![Filtern](/help/images/icons/project-edit.png) aus.
 
 ![Das Filtersymbol ist hervorgehoben und zeigt an, welche Optionen für den Zugriff auf den Bildschirm zur Profilattributauswahl ausgewählt werden sollen.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Beispielsweise wären drei Pfade mit jeweils unterschiedlichen Prozentsätzen an
 
 ### Aufspaltung nach Attribut {#split-attribute}
 
-Bei der Aufteilung nach Attribut werden die Zielgruppen anhand der bereitgestellten Attribute aufgeteilt. Um das Attribut auszuwählen, nach dem aufgeteilt werden soll, wählen Sie den Block **[!UICONTROL Aufspaltung]** und dann das Symbol ![Filtern](../images/ui/audience-composition/filter-attribute.png) aus.
+Bei der Aufteilung nach Attribut werden die Zielgruppen anhand der bereitgestellten Attribute aufgeteilt. Um das Attribut auszuwählen, nach dem aufgeteilt werden soll, wählen Sie den Block **[!UICONTROL Aufspaltung]** und dann das Symbol ![Filtern](/help/images/icons/project-edit.png) aus.
 
 ![Die Filterschaltfläche ist ausgewählt und zeigt an, wie nach Attribut gefiltert werden kann.](../images/ui/audience-composition/select-split-attribute.png)
 

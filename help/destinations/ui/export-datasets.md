@@ -3,7 +3,7 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 47%
@@ -205,21 +205,21 @@ Gehen Sie wie folgt vor, um Datensätze aus einem vorhandenen Datenfluss zu entf
 
    >[!TIP]
    > 
-   >Wählen Sie das Symbol ![Filter](../assets/ui/edit-activation/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+   >Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
-1. Wählen Sie in der Spalte **[!UICONTROL Aktivierungsdaten]** das Steuerelement für Datensätze aus, um alle Datensätze anzuzeigen, die diesem Exportdatenfluss zugeordnet sind.
+2. Wählen Sie in der Spalte **[!UICONTROL Aktivierungsdaten]** das Steuerelement für Datensätze aus, um alle Datensätze anzuzeigen, die diesem Exportdatenfluss zugeordnet sind.
 
    ![Die verfügbare Navigationsoption für Datensätze, die in der Spalte „Aktivieriungsdaten“ hervorgehoben ist.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. [!BADGE Beta] Die Seite **[!UICONTROL Aktivierungsdaten]** für das Ziel wird angezeigt. Verwenden Sie die Kontrollkästchen auf der linken Seite der Datensatzliste, um die Datensätze auszuwählen, die Sie entfernen möchten, und wählen Sie dann **[!UICONTROL Datensätze entfernen]** in der rechten Leiste aus, um das Dialogfeld zum Entfernen von Datensätzen Trigger.
+3. [!BADGE Beta] Die Seite **[!UICONTROL Aktivierungsdaten]** für das Ziel wird angezeigt. Verwenden Sie die Kontrollkästchen auf der linken Seite der Datensatzliste, um die Datensätze auszuwählen, die Sie entfernen möchten, und wählen Sie dann **[!UICONTROL Datensätze entfernen]** in der rechten Leiste aus, um das Dialogfeld zum Entfernen von Datensätzen Trigger.
 
    >[!NOTE]
    >
-   >Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
 
    ![Der Dialog „Datensatz entfernen“, der die Steuerung „Datensatz entfernen“ in der rechten Leiste anzeigt.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-1. Wählen Sie im Bestätigungsdialog die Option **[!UICONTROL Entfernen]** aus, um den Datensatz sofort aus den Exporten in das Ziel zu entfernen.
+4. Wählen Sie im Bestätigungsdialog die Option **[!UICONTROL Entfernen]** aus, um den Datensatz sofort aus den Exporten in das Ziel zu entfernen.
 
    ![Dialogfeld mit der Option „Löschen des Datensatzes aus dem Datenfluss bestätigen“.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 

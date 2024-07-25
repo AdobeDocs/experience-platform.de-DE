@@ -2,7 +2,7 @@
 title: Unterstützung der attributbasierten Zugriffssteuerung für Ad-hoc-Schemas
 description: Eine Anleitung zum Einschränken des Zugriffs auf Datenfelder in Ad-hoc-Schemata, die über Adobe Experience Platform Query Service generiert wurden.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 7%
@@ -42,7 +42,7 @@ Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zur Registerkarte &quot;
 
 ## Entdecken Sie Ad-hoc-Schemas im Schema-Inventar der Platform-Benutzeroberfläche. {#discover-ad-hoc-schemas}
 
-Um die Anzeige von Ad-hoc-Schemas in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Filtersymbol) aus.](../images/data-governance/filter.png)) links neben dem Suchfeld und wählen Sie dann **[!UICONTROL Ad-hoc-Schemata anzeigen] in der angezeigten linken Leiste aus.
+Um die Anzeige von Ad-hoc-Schemas in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Filtersymbol) aus.](/help/images/icons/filter.png)) links neben dem Suchfeld und wählen Sie dann **[!UICONTROL Ad-hoc-Schemata anzeigen] in der angezeigten linken Leiste aus.
 
 ![Die Schema-Dashboard-Filteroptionen in der linken Leiste mit aktiviertem Umschalter &quot;Ad-hoc-Schema anzeigen&quot;](../images/data-governance/adhoc-schema-toggle.png).
 
@@ -56,7 +56,7 @@ Um Datenbezeichnungen für Ihr Ad-hoc-Schema zu bearbeiten, wählen Sie die Regi
 
 ## Bearbeiten von Bezeichnungen für das Schema oder Feld
 
-Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![Stiftsymbol) aus.](../images/data-governance/edit-icon.png)) auf die Seite des Schemanamens unter der Registerkarte [!UICONTROL Beschriftungen].
+Um die Beschriftungen für das gesamte Schema zu bearbeiten, wählen Sie das Stiftsymbol (![Stiftsymbol) aus.](/help/images/icons/edit.png)) auf die Seite des Schemanamens unter der Registerkarte [!UICONTROL Beschriftungen].
 
 ![Die Beschriftungsansicht im Arbeitsbereich &quot;Schemas&quot;mit hervorgehobenem Stiftsymbol.](../images/data-governance/edit-entire-schema-labels.png)
 

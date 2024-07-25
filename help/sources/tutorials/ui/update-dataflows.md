@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Aktualisieren eines Source-Verbindungsdatenflusses in der Benutzeroberfläche
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 20%
@@ -36,7 +36,7 @@ Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste 
 
 Die Seite [!UICONTROL Datenflüsse] enthält eine Liste aller vorhandenen Datenflüsse, einschließlich Informationen zu ihrem entsprechenden Zieldatensatz, ihrer Quelle und dem Kontonamen.
 
-Um die Liste zu sortieren, wählen Sie oben links das Filtersymbol ![filter](../../images/tutorials/update/filter.png) aus, um das Sortierungsfenster zu verwenden.
+Um die Liste zu sortieren, wählen Sie oben links das Filtersymbol ![filter](/help/images/icons/filter.png) aus, um das Sortierungsfenster zu verwenden.
 
 ![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

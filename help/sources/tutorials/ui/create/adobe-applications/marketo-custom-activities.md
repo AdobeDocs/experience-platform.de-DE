@@ -2,7 +2,7 @@
 title: Erstellen einer Marketo Engage Source-Verbindung und eines Datenflusses für benutzerdefinierte Aktivitätsdaten in der Benutzeroberfläche
 description: In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Marketo Engage-Quellverbindung und einen Datenfluss erstellen, um benutzerdefinierte Aktivitätsdaten in Adobe Experience Platform zu importieren.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 22%
@@ -127,7 +127,7 @@ Navigieren Sie durch die Quelldatenstruktur und suchen Sie das benutzerdefiniert
 
 ![Die Quelldatenstruktur.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-Um ein Zielfeld hinzuzufügen, wählen Sie das Schemasymbol ![Schemasymbol](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) und dann die benutzerdefinierten Aktivitätsfelder aus dem Zielschema aus.
+Um ein Zielfeld hinzuzufügen, wählen Sie das Schemasymbol ![Schemasymbol](/help/images/icons/schema.png) und dann die benutzerdefinierten Aktivitätsfelder aus dem Zielschema aus.
 
 ![Die Struktur des Zielschemas.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

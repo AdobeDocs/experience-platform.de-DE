@@ -2,7 +2,7 @@
 title: Handbuch zur Benutzeroberfläche "Berechnete Attribute"
 description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen, anzeigen und aktualisieren.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 7%
@@ -32,7 +32,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigations
 
 ![Der Abschnitt [!UICONTROL Profil] und die Registerkarten [!UICONTROL Berechnete Attribute] sind hervorgehoben und zeigen Benutzern, wie sie auf die Durchsuchen-Seite für berechnete Attribute zugreifen können.](./images/ui/browse.png)
 
-Um auszuwählen, welche Felder sichtbar sind, können Sie ![das Symbol zum Konfigurieren von Spalten](./images/ui/configure-icon.png) auswählen, um die Felder hinzuzufügen oder zu entfernen, die angezeigt werden sollen.
+Um auszuwählen, welche Felder sichtbar sind, können Sie ![das Symbol zum Konfigurieren von Spalten](/help/images/icons/column-settings.png) auswählen, um die Felder hinzuzufügen oder zu entfernen, die angezeigt werden sollen.
 
 | Feld | Beschreibung |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ Um auszuwählen, welche Felder sichtbar sind, können Sie ![das Symbol zum Konfi
 | [!UICONTROL Erstellt] | Ein Zeitstempel, der das Datum und die Uhrzeit der Erstellung des berechneten Attributs anzeigt. |
 | [!UICONTROL Zuletzt geändert] | Ein Zeitstempel, der das Datum und die Uhrzeit der letzten Änderung des berechneten Attributs anzeigt. |
 
-Sie können auch die angezeigten berechneten Attribute basierend auf dem Lebenszyklusstatus filtern. Wählen Sie das Symbol ![Trichter](./images/ui/filter-icon.png) aus.
+Sie können auch die angezeigten berechneten Attribute basierend auf dem Lebenszyklusstatus filtern. Wählen Sie das Symbol ![Trichter](/help/images/icons/filter.png) aus.
 
 ![Das Filtersymbol wird hervorgehoben.](./images/ui/select-filter.png)
 

@@ -2,7 +2,7 @@
 title: Insight SQL anzeigen
 description: Zeigen Sie die SQL hinter Ihrem Profil, Ihrer Zielgruppe, Ihrem Ziel und Ihren benutzerdefinierten Einblicken an und führen Sie die Abfrage bei Bedarf über den Abfrage-Editor aus.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Es wird ein Dialogfeld angezeigt, das den Titel des Insight und die SQL, die ihn
 
 >[!TIP]
 >
->Sie können die gesamte SQL-Anweisung in die Zwischenablage kopieren, indem Sie das Kopiersymbol (![Kopiersymbol) auswählen.](./images/view-sql/copy-icon.png)) oben rechts im Dialogfeld.
+>Sie können die gesamte SQL-Anweisung in die Zwischenablage kopieren, indem Sie das Kopiersymbol (![Kopiersymbol) auswählen.](/help/images/icons/copy.png)) oben rechts im Dialogfeld.
 
 ![Ein Insight-Dialogfeld mit hervorgehobener SQL-Anweisung.](./images/view-sql/sql-dialog.png)
 

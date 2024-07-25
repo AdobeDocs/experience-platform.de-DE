@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Anleitung zu Query Service-Anmeldedaten
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1807'
 ht-degree: 3%
 
 ---
 
-# Handbuch zu Anmeldeinformationen
+# Handbuch zu Anmeldedaten
 
 Mit Adobe Experience Platform Query Service können Sie eine Verbindung mit externen Clients herstellen. Sie können eine Verbindung zu diesen externen Clients herstellen, indem Sie entweder ablaufende oder nicht ablaufende Anmeldeinformationen verwenden.
 
@@ -36,7 +36,7 @@ Im Abschnitt **[!UICONTROL Ablaufberechtigungen]** finden Sie die folgenden Info
 - **[!UICONTROL Port]**: Die Portnummer des Hosts, mit dem eine Verbindung hergestellt werden soll.
 - **[!UICONTROL Datenbank]**: Der Name der Datenbank, mit der ein Client verbunden werden soll.
 - **[!UICONTROL Benutzername]**: Der Benutzername, mit dem eine Verbindung zu Query Service hergestellt wird.
-- **[!UICONTROL Kennwort]**: Das Kennwort für die Verbindung mit Query Service. Passwörter in der Benutzeroberfläche wurden aus Sicherheitsgründen gehasht. Wählen Sie das Kopiersymbol (![Kopiersymbol) aus.](../images/ui/credentials/copy-icon.png)), um Ihre vollständigen, nicht gehashten Anmeldedaten in die Zwischenablage zu kopieren.
+- **[!UICONTROL Kennwort]**: Das Kennwort für die Verbindung mit Query Service. Passwörter in der Benutzeroberfläche wurden aus Sicherheitsgründen gehasht. Wählen Sie das Kopiersymbol (![Kopiersymbol) aus.](/help/images/icons/copy.png)), um Ihre vollständigen, nicht gehashten Anmeldedaten in die Zwischenablage zu kopieren.
 - **[!UICONTROL PSQL-Befehl]**: Ein Befehl, der automatisch alle relevanten Informationen eingefügt hat, damit Sie über PSQL über die Befehlszeile eine Verbindung zu Query Service herstellen können.
 - **[!UICONTROL Läuft ab]**: Das Ablaufdatum und die Ablaufzeit für die ablaufenden Anmeldeinformationen. Die standardmäßige Gültigkeitsdauer des Tokens beträgt 24 Stunden. Sie kann jedoch in den erweiterten Einstellungen der Admin Console geändert werden.
 
@@ -126,7 +126,7 @@ Nachdem Sie die generierten Anmeldeinformationen gespeichert haben, wählen Sie 
 
 ![Die Registerkarte &quot;Dashboard-Anmeldedaten für Abfragen&quot;, auf der der Abschnitt &quot;Nicht ablaufende Anmeldedaten&quot;hervorgehoben ist.](../images/ui/credentials/list-credentials.png)
 
-Sie können Ihre nicht ablaufenden Anmeldedaten entweder bearbeiten oder löschen. Um eine nicht ablaufende Berechtigung zu bearbeiten, wählen Sie das Stiftsymbol (![Stiftsymbol) aus.](../images/ui/credentials/edit-icon.png)). Um eine nicht ablaufende Berechtigung zu löschen, wählen Sie das Löschsymbol (![Papierkorbsymbol.](../images/ui/credentials/delete-icon.png)).
+Sie können Ihre nicht ablaufenden Anmeldedaten entweder bearbeiten oder löschen. Um eine nicht ablaufende Berechtigung zu bearbeiten, wählen Sie das Stiftsymbol (![Stiftsymbol) aus.](/help/images/icons/edit.png)). Um eine nicht ablaufende Berechtigung zu löschen, wählen Sie das Löschsymbol (![Papierkorbsymbol.](/help/images/icons/delete.png)).
 
 Beim Bearbeiten einer nicht ablaufenden Berechtigung wird ein Modal angezeigt. Sie können die folgenden Details zur Aktualisierung angeben:
 

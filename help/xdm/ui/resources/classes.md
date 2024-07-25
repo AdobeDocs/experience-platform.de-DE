@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Klassen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 8%
@@ -74,7 +74,7 @@ Wählen Sie ein Optionsfeld aus, um die Klassen nach benutzerdefinierten oder St
 
 ![Der Workflow [!UICONTROL Schema erstellen] mit der Suchleiste, [!UICONTROL Benutzerdefiniert] und [!UICONTROL Branchen] hervorgehoben.](../../images/ui/resources/classes/filter-and-search.png)
 
-Um Ihnen bei der Entscheidung über die entsprechende Klasse zu helfen, gibt es Infos (![Ein Infosymbol).](../../images/ui/resources/classes/info.png)) und die Vorschau (![Ein Vorschausymbol.](../../images/ui/resources/classes/preview.png)) für jede Klasse. Das Infosymbol öffnet ein Dialogfeld, das eine Beschreibung der Klasse und der Branche enthält, der sie zugeordnet ist. Über das Vorschausymbol wird ein Vorschaudialogfeld für die Klasse geöffnet, die ein Schema-Diagramm und dessen Eigenschaften enthält.
+Um Ihnen bei der Entscheidung über die entsprechende Klasse zu helfen, gibt es Infos (![Ein Infosymbol).](/help/images/icons/info.png)) und die Vorschau (![Ein Vorschausymbol.](/help/images/icons/preview.png)) für jede Klasse. Das Infosymbol öffnet ein Dialogfeld, das eine Beschreibung der Klasse und der Branche enthält, der sie zugeordnet ist. Über das Vorschausymbol wird ein Vorschaudialogfeld für die Klasse geöffnet, die ein Schema-Diagramm und dessen Eigenschaften enthält.
 
 ![Eine Vorschau der ausgewählten Klasse mit hervorgehobenen Schemadiagramm- und Klasseneigenschaften.](../../images/ui/resources/classes/class-preview.png)
 

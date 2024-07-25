@@ -2,7 +2,7 @@
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der AI-generierten Recommendations
 description: In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe von KI-generierten Empfehlungen einem XDM-Schema zuordnen.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 82%
@@ -90,7 +90,7 @@ Die CSV-Felder werden mithilfe von ML-Modellen automatisch vorhandenen XDM-Felde
 
 ![Die Schaltfläche [!UICONTROL Bearbeiten], die neben der Schemastruktur ausgewählt wird.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-Ein Dialogfeld wird angezeigt, in dem Sie den Anzeigenamen, den Datentyp und die Feldergruppe für jedes Feld in der Zuordnung bearbeiten können. Klicken Sie auf das Bearbeitungssymbol (![Bearbeiten-Symbol](../../images/tutorials/map-csv-recommendations/edit-icon.png)) neben einem Quellfeld, um dessen Details in der rechten Spalte zu bearbeiten, bevor Sie **[!UICONTROL Anwenden]** auswählen.
+Ein Dialogfeld wird angezeigt, in dem Sie den Anzeigenamen, den Datentyp und die Feldergruppe für jedes Feld in der Zuordnung bearbeiten können. Klicken Sie auf das Bearbeitungssymbol (![Bearbeiten-Symbol](/help/images/icons/edit.png)) neben einem Quellfeld, um dessen Details in der rechten Spalte zu bearbeiten, bevor Sie **[!UICONTROL Anwenden]** auswählen.
 
 ![Die empfohlene Feldergruppe für ein Quellfeld, das geändert wird.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

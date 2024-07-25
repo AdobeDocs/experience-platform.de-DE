@@ -3,7 +3,7 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 57%
@@ -529,14 +529,14 @@ Anreicherungsattribute entsprechen benutzerdefinierten, hochgeladenen Zielgruppe
 
 Gehen Sie wie folgt vor, um Anreicherungsattribute für jede externe Zielgruppe auszuwählen:
 
-1. Wählen Sie in der Spalte **[!UICONTROL Anreicherungsattribute]** die Schaltfläche ![Schaltfläche &quot;Bearbeiten&quot;](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Bearbeiten) aus.
-2. Wählen Sie **[!UICONTROL Anreicherungsattribut hinzufügen]** aus. Ein neues leeres Schemafeld wird angezeigt.
+1. Wählen Sie in der Spalte **[!UICONTROL Anreicherungsattribute]** die Schaltfläche ![Schaltfläche &quot;Bearbeiten&quot;](/help/images/icons/edit.png) (Bearbeiten) aus.
+1. Wählen Sie **[!UICONTROL Anreicherungsattribut hinzufügen]** aus. Ein neues leeres Schemafeld wird angezeigt.
    ![UI-Bild, das den modalen Bildschirm mit den Anreicherungsattributen anzeigt.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. Wählen Sie die Schaltfläche rechts neben dem leeren Feld aus, um den Bildschirm zur Feldauswahl zu öffnen.
-4. Wählen Sie die Attribute aus, die Sie für die Zielgruppe exportieren möchten.
+1. Wählen Sie die Schaltfläche rechts neben dem leeren Feld aus, um den Bildschirm zur Feldauswahl zu öffnen.
+1. Wählen Sie die Attribute aus, die Sie für die Zielgruppe exportieren möchten.
    ![UI-Bild, das die Liste der Anreicherungsattribute anzeigt.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. Nachdem Sie alle Attribute hinzugefügt haben, die Sie exportieren möchten, wählen Sie **[!UICONTROL Speichern und schließen]**.
-6. Wiederholen Sie diese Schritte für jede externe Zielgruppe.
+1. Nachdem Sie alle Attribute hinzugefügt haben, die Sie exportieren möchten, wählen Sie **[!UICONTROL Speichern und schließen]**.
+1. Wiederholen Sie diese Schritte für jede externe Zielgruppe.
 
 Wenn Sie externe Zielgruppen für Ihre Ziele aktivieren möchten, ohne ein Attribut zu exportieren, aktivieren Sie den Umschalter **[!UICONTROL Anreicherungsattribute ausschließen]** . Diese Option exportiert die Profile aus externen Zielgruppen, aber keines der entsprechenden Attribute wird an Ihr Ziel gesendet.
 

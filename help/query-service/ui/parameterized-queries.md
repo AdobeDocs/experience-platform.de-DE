@@ -2,7 +2,7 @@
 title: Parameterisierte Abfragen
 description: Erfahren Sie, wie Sie parametrisierte Abfragen in der Adobe Experience Platform-Benutzeroberfläche verwenden.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 13%
@@ -47,7 +47,7 @@ SELECT
 
 Um Ihre parametrisierte Abfrage in der Benutzeroberfläche zu erstellen, navigieren Sie zum Abfrage-Editor. Weitere Anweisungen finden Sie im Abschnitt [Zugreifen auf den Abfrage-Editor](./user-guide.md#accessing-query-editor) .
 
-Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Wählen Sie dann die Registerkarte **[!UICONTROL Abfrageparameter]** neben der Registerkarte [!UICONTROL Konsole] aus, um den fehlenden Wert für den Schlüssel hinzuzufügen. Die Abfrage kann nicht ausgeführt werden, wenn Sie keinem der erforderlichen Schlüssel einen Wert hinzufügen. Ein Warnsymbol (![Ein Warnsymbol).](../images/ui/parameterized-queries/alert-icon.png)) wird im Abschnitt &quot;Abfrageparameter&quot;neben allen leeren Eingabefeldern für [!UICONTROL Wert] angezeigt.
+Verwenden Sie den `'$'`-Vorspann, um einen Abfrageparameter in Ihre Abfrage im Texteditor einzugeben. Wählen Sie dann die Registerkarte **[!UICONTROL Abfrageparameter]** neben der Registerkarte [!UICONTROL Konsole] aus, um den fehlenden Wert für den Schlüssel hinzuzufügen. Die Abfrage kann nicht ausgeführt werden, wenn Sie keinem der erforderlichen Schlüssel einen Wert hinzufügen. Ein Warnsymbol (![Ein Warnsymbol).](/help/images/icons/alert.png)) wird im Abschnitt &quot;Abfrageparameter&quot;neben allen leeren Eingabefeldern für [!UICONTROL Wert] angezeigt.
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ title: Erstellen eines Schemas mit dem Schema-Editor.
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 80%
@@ -115,7 +115,7 @@ Die Arbeitsfläche des Schemas wird wieder angezeigt. Im Abschnitt **[!UICONTROL
 
 >[!NOTE]
 >
->Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](../images/ui/explore/padlock-icon.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+>Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 >
 >![Der Schema-Editor mit dem Vorhängeschloss-Symbol hervorgehoben](../images/ui/explore/padlock-icon-highlight.png)
 

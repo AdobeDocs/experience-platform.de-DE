@@ -4,7 +4,7 @@ title: Löschen von Zielen
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 32%
@@ -32,11 +32,11 @@ Gehen Sie wie folgt vor, um ein Ziel auf der Registerkarte [!UICONTROL Durchsuch
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Wählen Sie das Symbol ![Filter](../assets/ui/delete-destinations/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Wählen Sie die Schaltfläche ![Mehr ](../assets/ui/delete-destinations/more-icon.png) in der Spalte &quot;Name&quot;und dann die Schaltfläche ![Löschen](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Löschen]** aus, um eine vorhandene Zielverbindung zu entfernen.
+3. Wählen Sie die Schaltfläche ![Mehr ](/help/images/icons/more.png) in der Spalte &quot;Name&quot;und dann die Schaltfläche ![Löschen](/help/images/icons/delete.png) **[!UICONTROL Löschen]** aus, um eine vorhandene Zielverbindung zu entfernen.
    ![Ziele löschen](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Wählen Sie **[!UICONTROL Löschen]** aus, um das Entfernen der Zielverbindung zu bestätigen.
@@ -51,7 +51,7 @@ Gehen Sie wie folgt vor, um ein Ziel auf der Seite mit den Zieldetails zu lösch
 
    ![Ziele durchsuchen](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Wählen Sie das Symbol ![Filter](../assets/ui/delete-destinations/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 

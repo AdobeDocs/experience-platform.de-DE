@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 14%
@@ -161,11 +161,11 @@ Das Dialogfeld [!UICONTROL Datensatz in Ordner verschieben] wird angezeigt. Wäh
 
 >[!TIP]
 >
->Sie können Ordner auch direkt im Dialogfeld Datensatz verschieben erstellen. Um einen Ordner zu erstellen, wählen Sie das Symbol Ordner erstellen aus (![Symbol Ordner erstellen .](../images/datasets/user-guide/create-folder-icon.png)) oben rechts im Dialogfeld.
+>Sie können Ordner auch direkt im Dialogfeld Datensatz verschieben erstellen. Um einen Ordner zu erstellen, wählen Sie das Symbol Ordner erstellen aus (![Symbol Ordner erstellen .](/help/images/icons/folder-add.png)) oben rechts im Dialogfeld.
 >
 >![Das Dialogfeld [!UICONTROL Verschieben] des Datensatzes mit hervorgehobenem Symbol zum Erstellen des Ordners.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Sobald sich der Datensatz in einem Ordner befindet, können Sie festlegen, dass nur Datensätze angezeigt werden, die zu einem bestimmten Ordner gehören. Um Ihre Ordnerstruktur zu öffnen, wählen Sie das Symbol &quot;Ordner anzeigen&quot;(![Symbol &quot;Ordner anzeigen&quot;](../images/datasets/user-guide/show-folders-icon.png)). Wählen Sie als Nächstes den ausgewählten Ordner aus, um alle zugehörigen Datensätze anzuzeigen.
+Sobald sich der Datensatz in einem Ordner befindet, können Sie festlegen, dass nur Datensätze angezeigt werden, die zu einem bestimmten Ordner gehören. Um Ihre Ordnerstruktur zu öffnen, wählen Sie das Symbol &quot;Ordner anzeigen&quot;(![Symbol &quot;Ordner anzeigen&quot;](/help/images/icons/rail-left.png)). Wählen Sie als Nächstes den ausgewählten Ordner aus, um alle zugehörigen Datensätze anzuzeigen.
 
 ![Die Dashboards [!UICONTROL Datensätze] mit der Ordnerstruktur des Datensatzes, dem Symbol &quot;Ordner anzeigen&quot;und einem ausgewählten Ordner, die hervorgehoben sind.](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ Mit der Echtzeit-Kundenprofil-API können Sie mit einem Datensatz verknüpfte Pr
 
 ## Datensätze suchen und filtern {#search-and-filter}
 
-Um die Liste der verfügbaren Datensätze zu durchsuchen oder zu filtern, wählen Sie das Filtersymbol (![Filtersymbol) aus.](../images/datasets/user-guide/icon.png)) oben links im Arbeitsbereich. Eine Reihe von Filteroptionen wird in der linken Leiste angezeigt. Es gibt mehrere Methoden zum Filtern der verfügbaren Datensätze. Dazu gehören: [[!UICONTROL Systemdatensätze anzeigen]](#show-system-datasets), [[!UICONTROL im Profil]](#filter-profile-enabled-datasets) enthalten, [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Erstellungsdatum]](#filter-by-creation-date), [[!UICONTROL Änderungsdatum], [!UICONTROL Erstellt von]](#filter-by-creation-date) und [[!UICONTROL Schema]](#filter-by-schema).
+Um die Liste der verfügbaren Datensätze zu durchsuchen oder zu filtern, wählen Sie das Filtersymbol (![Filtersymbol) aus.](/help/images/icons/filter.png)) oben links im Arbeitsbereich. Eine Reihe von Filteroptionen wird in der linken Leiste angezeigt. Es gibt mehrere Methoden zum Filtern der verfügbaren Datensätze. Dazu gehören: [[!UICONTROL Systemdatensätze anzeigen]](#show-system-datasets), [[!UICONTROL im Profil]](#filter-profile-enabled-datasets) enthalten, [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Erstellungsdatum]](#filter-by-creation-date), [[!UICONTROL Änderungsdatum], [!UICONTROL Erstellt von]](#filter-by-creation-date) und [[!UICONTROL Schema]](#filter-by-schema).
 
 Die Liste der angewendeten Filter wird oberhalb der gefilterten Ergebnisse angezeigt.
 

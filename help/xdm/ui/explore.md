@@ -5,7 +5,7 @@ title: Schema-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schemas, Klassen, Schemafeldgruppen und Datentypen in der Experience Platform-Benutzeroberfläche untersuchen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[
 
 ![](../images/ui/explore/tabs.png)
 
-Das Filtersymbol (![Filtersymbol Bild](../images/ui/explore/icon.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzuschränken. Die angezeigten Steuerelemente variieren je nach Ressourcentyp.
+Das Filtersymbol (![Filtersymbol Bild](/help/images/icons/filter.png)) zeigt Steuerelemente in der linken Leiste an, um die aufgelisteten Ergebnisse einzuschränken. Die angezeigten Steuerelemente variieren je nach Ressourcentyp.
 
 Um beispielsweise die Liste so zu filtern, dass nur die von Adobe bereitgestellten Standarddatentypen angezeigt werden, wählen Sie **[!UICONTROL Datentyp]** und **[!UICONTROL Adobe]** unter den Abschnitten **[!UICONTROL Typ]** und **[!UICONTROL Inhaber]** aus.
 
@@ -56,7 +56,7 @@ Alle Objekttypen, die Untereigenschaften enthalten, werden standardmäßig ausge
 
 ### Standardklasse- und Feldergruppenanzeige {#standard-class-and-field-group-indicator}
 
-Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](../images/ui/explore/padlock-icon.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 
 ![Der Schema-Editor mit dem Vorhängeschloss-Symbol hervorgehoben](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ Wenn es sich bei dem zu prüfenden Feld um ein Enum-Feld handelt, zeigt die rech
 
 Beim Prüfen von Schemas, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldergruppe aufgelistet, die sie für das Schema bereitstellt. Wählen Sie in der linken Leiste den Namen des Identitätsfelds aus, um das Feld auf der Arbeitsfläche anzuzeigen, unabhängig davon, wie tief es verschachtelt ist.
 
-Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdruck-Symbol Bild](../images/ui/explore/identity-symbol.png)) hervorgehoben. Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen wie den [Identitäts-Namespace](../../identity-service/features/namespaces.md) anzeigen und feststellen, ob das Feld die primäre Identität für das Schema ist.
+Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdruck-Symbol Bild](/help/images/icons/identity-service.png)) hervorgehoben. Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen wie den [Identitäts-Namespace](../../identity-service/features/namespaces.md) anzeigen und feststellen, ob das Feld die primäre Identität für das Schema ist.
 
 ![](../images/ui/explore/identity-field.png)
 

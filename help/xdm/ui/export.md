@@ -4,7 +4,7 @@ title: Exportieren von XDM-Schemas in die Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder Organisation in der Benutzeroberfläche von Adobe Experience Platform exportieren.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 11%
@@ -40,7 +40,7 @@ Um eine Export-Payload zu generieren, wählen Sie im linken Navigationsbereich *
 >
 >Weitere Informationen zum Auffinden der gesuchten XDM-Ressource finden Sie im Handbuch zu [Erkunden von XDM-Ressourcen](./explore.md) .
 
-Wählen Sie anschließend das Symbol **[!UICONTROL JSON kopieren]** (![Symbol Kopieren](../images/ui/export/icon.png)) aus den verfügbaren Optionen aus.
+Wählen Sie anschließend das Symbol **[!UICONTROL JSON kopieren]** (![Symbol Kopieren](/help/images/icons/copy.png)) aus den verfügbaren Optionen aus.
 
 ![Der Arbeitsbereich &quot;Schemas&quot;mit einer Schemazeile und [!UICONTROL In JSON kopieren] hervorgehoben.](../images/ui/export/copy-json.png)
 

@@ -2,7 +2,7 @@
 title: Adobe-Datenschutzerweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Privacy“ in Adobe Experience Platform vertraut.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 89%
@@ -95,7 +95,7 @@ Wählen Sie beim Konfigurieren der Aktion für die Regel **[!UICONTROL Adobe Pri
 
 ![Auswählen eines Aktionstyps](../../../images/extensions/client/privacy/action-type.png)
 
-Im rechten Panel werden Sie aufgefordert, ein Datenelement auszuwählen, das als Callback der Aktion dient. Wählen Sie das Datenbanksymbol (![Datenbanksymbol](../../../images/extensions/client/privacy/database.png)) und danach das Datenelement aus der Liste aus, das Sie zuvor erstellt haben. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus, um fortzufahren.
+Im rechten Panel werden Sie aufgefordert, ein Datenelement auszuwählen, das als Callback der Aktion dient. Wählen Sie das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)) und danach das Datenelement aus der Liste aus, das Sie zuvor erstellt haben. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus, um fortzufahren.
 
 ![Auswählen von Datenelementen](../../../images/extensions/client/privacy/add-data-element.png)
 

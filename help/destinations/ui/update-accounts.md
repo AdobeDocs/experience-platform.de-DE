@@ -4,7 +4,7 @@ title: Aktualisieren von Zielkonten
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 10%
@@ -33,11 +33,11 @@ Gehen Sie wie folgt vor, um Verbindungsdetails zu vorhandenen Zielen zu aktualis
 
    ![Registerkarte „Konten“](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Wählen Sie das Symbol ![Filter](../assets/ui/update-accounts/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Konten anzuzeigen, die mit den ausgewählten Zielen verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Konten anzuzeigen, die mit den ausgewählten Zielen verknüpft sind.
 
    ![Ziel-Konten filtern](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos aus, das Sie aktualisieren möchten. Es wird ein Popup-Bedienfeld angezeigt, das Optionen für **[!UICONTROL Zielgruppen aktivieren]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** des Kontos bereitstellt. Wählen Sie die Schaltfläche ![Details bearbeiten](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Details bearbeiten]** aus, um die Kontoinformationen zu bearbeiten.
+3. Wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Kontos aus, das Sie aktualisieren möchten. Es wird ein Popup-Bedienfeld angezeigt, das Optionen für **[!UICONTROL Zielgruppen aktivieren]**, **[!UICONTROL Details bearbeiten]** und **[!UICONTROL Löschen]** des Kontos bereitstellt. Wählen Sie die Schaltfläche ![Details bearbeiten](/help/images/icons/edit.png) **[!UICONTROL Details bearbeiten]** aus, um die Kontoinformationen zu bearbeiten.
 
    ![Konto bearbeiten](../assets/ui/update-accounts/accounts-edit.png)
 

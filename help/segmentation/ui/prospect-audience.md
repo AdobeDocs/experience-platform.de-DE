@@ -3,7 +3,7 @@ title: Potenzielle Zielgruppen
 description: Erfahren Sie, wie Sie mithilfe von potenziellen Zielgruppen unbekannte Kundinnen und Kunden mithilfe von Drittanbieterinformationen ansprechen können.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 89%
@@ -26,7 +26,7 @@ Die Seite „Durchsuchen“ wird angezeigt. Eine Liste aller potenziellen Zielgr
 
 Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Profilanzahl, Ursprung, Lebenszyklusstatus, Erstellungsdatum, Datum der letzten Aktualisierung und Aufschlüsselung.
 
-Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filterattribut-Symbol](../images/ui/prospect-audience/filter-attribute.png) auswählen. Diese zusätzlichen Felder umfassen die Aktualisierungshäufigkeit und „Zuletzt aktualisiert von“.
+Sie können dieser Anzeige zusätzliche Felder hinzufügen, indem Sie das ![Filterattribut-Symbol](/help/images/icons/column-settings.png) auswählen. Diese zusätzlichen Felder umfassen die Aktualisierungshäufigkeit und „Zuletzt aktualisiert von“.
 
 Weitere Informationen zur Durchsuchen-Seite, einschließlich detaillierter Informationen zu den aufgelisteten Feldern, finden Sie in der [Audience Portal-Übersicht](./audience-portal.md#list).
 

@@ -4,7 +4,7 @@ description: Mit dem Echtzeit-Kundenprofil können Sie eine ganzheitliche Sicht 
 title: Überwachen von Datenflüssen für Profile in der Benutzeroberfläche
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 14%
@@ -63,7 +63,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Gesamte Profilfragmente]** | Die Gesamtzahl der in [!DNL Profile] geschriebenen Datensätze, einschließlich aller vorhandenen [!DNL Profile] Fragmente, die aktualisiert wurden, und neuer [!DNL Profile] Fragmente. |
 | **[!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse]** | Die Anzahl der fehlgeschlagenen Datenflüsse. |
 
-Sie können das Filtersymbol ![Filtersymbol](../assets/ui/monitor-profiles/filter.png) neben dem Quellnamen auswählen, um Informationen zur Profilverarbeitung für die Datenflüsse der ausgewählten Quelle anzuzeigen.
+Sie können das Filtersymbol ![Filtersymbol](/help/images/icons/filter.png) neben dem Quellnamen auswählen, um Informationen zur Profilverarbeitung für die Datenflüsse der ausgewählten Quelle anzuzeigen.
 
 ![Das Filtersymbol wird hervorgehoben. Wenn Sie dieses Symbol auswählen, können Sie die Datenflüsse der ausgewählten Quelle anzeigen.](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -86,7 +86,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Gesamtanzahl fehlgeschlagener Durchläufe]** | Die Anzahl der fehlgeschlagenen Datenflüsse. |
 | **[!UICONTROL Letzte aktive]** | Der Zeitstempel, mit dem der Datenfluss zuletzt ausgeführt wurde. |
 
-Wählen Sie das Filtersymbol ![filter](../assets/ui/monitor-profiles/filter.png) neben der Startzeit des Datenflusses aus, um weitere Informationen zum Start des Datenflusses [!DNL Profile] anzuzeigen.
+Wählen Sie das Filtersymbol ![filter](/help/images/icons/filter.png) neben der Startzeit des Datenflusses aus, um weitere Informationen zum Start des Datenflusses [!DNL Profile] anzuzeigen.
 
 ![Das Filtersymbol wird hervorgehoben. Durch Auswahl dieses Symbols können Sie Details zum ausgewählten Datenfluss anzeigen.](../assets/ui/monitor-profiles/dataflows-filter.png)
 

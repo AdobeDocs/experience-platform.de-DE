@@ -2,7 +2,7 @@
 title: Identitätsdiagramm-Viewer
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten für einen bestimmten Kunden und bietet Ihnen eine visuelle Darstellung, wie Ihr Kunde über verschiedene Kanäle hinweg mit Ihrer Marke interagiert.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Um ein Identitätsdiagramm anzuzeigen, geben Sie einen Identitäts-Namespace und
 
 >[!TIP]
 >
->Wählen Sie das Tabellensymbol ![Tabellensymbol](../images/identity-graph-viewer/table-icon.png) aus, um ein Bedienfeld mit einer Liste aller in Ihrer Organisation verfügbaren Identitäts-Namespaces anzuzeigen. Sie können einen beliebigen Identitäts-Namespaces verwenden, solange ein gültiger Identitätswert mit ihm verbunden ist. Weitere Informationen finden Sie im Leitfaden [Identitäts-Namespace](./namespaces.md) .
+>Wählen Sie das Tabellensymbol ![Tabellensymbol](/help/images/icons/table.png) aus, um ein Bedienfeld mit einer Liste aller in Ihrer Organisation verfügbaren Identitäts-Namespaces anzuzeigen. Sie können einen beliebigen Identitäts-Namespaces verwenden, solange ein gültiger Identitätswert mit ihm verbunden ist. Weitere Informationen finden Sie im Leitfaden [Identitäts-Namespace](./namespaces.md) .
 
 ![Ein Identitäts-Namespace und der zugehörige Wert, der im Suchbildschirm für Identitätsdiagramme bereitgestellt wird.](../images/graph-viewer/namespace-and-value.png)
 

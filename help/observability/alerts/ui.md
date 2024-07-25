@@ -4,7 +4,7 @@ title: Handbuch zur Warnhinweis-Benutzeroberfläche
 description: Hier erfahren Sie, wie Sie Warnhinweise in der Benutzeroberfläche von Experience Platform verwalten.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 40%
@@ -71,7 +71,7 @@ Sie haben Ihrer Benachrichtigungsliste erfolgreich Benutzer hinzugefügt. Die ge
 
 Warnhinweise können direkt an Ihre E-Mail gesendet werden.
 
-Wählen Sie das Glockensymbol (![Glockensymbol](../images/alerts/ui/bell-icon.png)) im oberen Band rechts aus, um Benachrichtigungen und Mitteilungen anzuzeigen. Wählen Sie im angezeigten Dropdown-Menü das Zahnradsymbol (![Zahnradsymbol](../images/alerts/ui/cog-icon.png)) aus, um auf die Seite mit den Experience Cloud-Voreinstellungen zuzugreifen.
+Wählen Sie das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) im oberen Band rechts aus, um Benachrichtigungen und Mitteilungen anzuzeigen. Wählen Sie im angezeigten Dropdown-Menü das Zahnradsymbol (![Zahnradsymbol](/help/images/icons/settings.png)) aus, um auf die Seite mit den Experience Cloud-Voreinstellungen zuzugreifen.
 
 ![Eine Liste von Warnhinweisen, die das Glockensymbol und das Zahnradsymbol hervorheben.](../images/alerts/ui/edit-preferences.png)
 

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 80%
@@ -69,7 +69,7 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 | Verwalten des Zugriffs | Verwalten der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
 | Löschen | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängige Zielgruppen sind, **können nicht** gelöscht werden. Weitere Informationen zum Löschen von Zielgruppen finden Sie in den [FAQ zur Segmentierung](../faq.md#lifecycle-states) . |
 
-Sie können das Symbol ![Tabelle anpassen](../images/ui/overview/customize-table.png) auswählen, um zu ändern, welche Felder angezeigt werden.
+Sie können das Symbol ![Tabelle anpassen](/help/images/icons/column-settings.png) auswählen, um zu ändern, welche Felder angezeigt werden.
 
 ![Die Schaltfläche „Tabelle anpassen“ ist hervorgehoben. Durch Auswahl dieser Schaltfläche können Sie die Felder anpassen, die auf der Seite „Zielgruppenkomposition“ angezeigt werden.](../images/ui/overview/compositions-select-customize-table.png)
 

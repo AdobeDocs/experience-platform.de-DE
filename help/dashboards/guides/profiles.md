@@ -4,7 +4,7 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4997'
 ht-degree: 43%
@@ -470,7 +470,7 @@ Wählen Sie **[!UICONTROL Mehr anzeigen]** aus, um ein Vollbilddialogfeld zu öf
 
 ![Das Widget „Bericht Zielgruppenüberscheidung“ mit hervorgehobener Option „Mehr anzeigen“.](../images/profiles/profiles-audience-overlap-report.png)
 
-Das Dialogfeld [!UICONTROL Bericht zur Zielgruppenüberschneidung] wird angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Um Spalten aus der Tabelle zu entfernen oder hinzuzufügen, wählen Sie das Einstellungssymbol (![Einstellungssymbol.](../images/profiles/settings-icon.png)).
+Das Dialogfeld [!UICONTROL Bericht zur Zielgruppenüberschneidung] wird angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Um Spalten aus der Tabelle zu entfernen oder hinzuzufügen, wählen Sie das Einstellungssymbol (![Einstellungssymbol.](/help/images/icons/settings.png)).
 
 ![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

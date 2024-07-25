@@ -3,7 +3,7 @@ title: Übersicht über die AWS-Erweiterung
 description: Erfahren Sie mehr über die AWS-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 7%
@@ -66,7 +66,7 @@ Das rechte Bedienfeld wird aktualisiert und zeigt Konfigurationsoptionen für di
 
 | Eingabe | Beschreibung |
 | --- | --- |
-| [!UICONTROL Payload] | Dieses Feld enthält die Daten, die im JSON-Format an den [!DNL Kinesis] -Datenstrom weitergeleitet werden.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Payload darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
+| [!UICONTROL Payload] | Dieses Feld enthält die Daten, die im JSON-Format an den [!DNL Kinesis] -Datenstrom weitergeleitet werden.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](/help/images/icons/database.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Payload darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
 
 {style="table-layout:auto"}
 

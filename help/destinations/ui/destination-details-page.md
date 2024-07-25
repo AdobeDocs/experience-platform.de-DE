@@ -3,7 +3,7 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 9%
@@ -28,19 +28,19 @@ Gehen Sie wie folgt vor, um weitere Details zu einem vorhandenen Ziel anzuzeigen
 
    ![Ziele durchsuchen](../assets/ui/details-page/browse-destinations.png)
 
-1. Wählen Sie das Symbol ![Filter](../assets/ui/details-page/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/details-page/filter-destinations.png)
 
-1. Wählen Sie die Zeile des Ziels aus, für die weitere Informationen angezeigt werden sollen. Dadurch wird eine rechte Leiste mit Informationen zum Ziel, einschließlich der Ziel-ID, des Benutzers, der die Zielverbindung erstellt hat, und anderen Informationen angezeigt.
+3. Wählen Sie die Zeile des Ziels aus, für die weitere Informationen angezeigt werden sollen. Dadurch wird eine rechte Leiste mit Informationen zum Ziel, einschließlich der Ziel-ID, des Benutzers, der die Zielverbindung erstellt hat, und anderen Informationen angezeigt.
 
    ![Ziel-ID in der rechten Leiste](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. Alternativ können Sie weitere Informationen zum Ziel anzeigen, indem Sie *den Namen des Ziels* auswählen, das Sie anzeigen möchten.
+4. Alternativ können Sie weitere Informationen zum Ziel anzeigen, indem Sie *den Namen des Ziels* auswählen, das Sie anzeigen möchten.
 
    ![Auswählen des Ziels](../assets/ui/details-page/destination-select.png)
 
-1. Die Detailseite für das Ziel wird in der rechten Leiste mit den verfügbaren Steuerelementen angezeigt.
+5. Die Detailseite für das Ziel wird in der rechten Leiste mit den verfügbaren Steuerelementen angezeigt.
 
    ![Zieldetails](../assets/ui/details-page/destination-details.png)
 

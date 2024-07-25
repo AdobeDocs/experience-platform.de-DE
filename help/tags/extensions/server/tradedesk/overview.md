@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Trade Desk Real-Time Conversions API-Er
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 3%
@@ -90,7 +90,7 @@ Weitere Informationen zu den [Anforderungseigenschaften](https://partner.thetrad
 
 **[!UICONTROL Objektanforderungsparameter]**
 
-Ein JSON-Objekt mit weiteren Informationen. Sie haben die Möglichkeit, einen reduzierten Satz von Schlüsselwerteingaben zu verwenden oder rohe JSON-Daten bereitzustellen. Darüber hinaus können Sie dynamische Daten aus einem Datenelement abrufen, indem Sie rechts die Festplatten (![Diskettensymbol](../../../images/extensions/server/tradedesk/disk-icon.png)) auswählen.
+Ein JSON-Objekt mit weiteren Informationen. Sie haben die Möglichkeit, einen reduzierten Satz von Schlüsselwerteingaben zu verwenden oder rohe JSON-Daten bereitzustellen. Darüber hinaus können Sie dynamische Daten aus einem Datenelement abrufen, indem Sie rechts die Festplatten (![Diskettensymbol](/help/images/icons/database.png)) auswählen.
 
 
 ![ Der Abschnitt [!DNL Object Request Parameters] mit den verfügbaren Feldern.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

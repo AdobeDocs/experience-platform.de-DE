@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 12%
@@ -178,7 +178,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 >title="Activation"
 >abstract="Die Zielaktivierungsansicht enthält Informationen zum Aktivierungsstatus einer Zielgruppe und Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren."
 
-Um auf das Dashboard [!UICONTROL Überwachung] zuzugreifen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) aus. Wählen Sie auf der Seite [!UICONTROL Überwachung] einmal [!UICONTROL Ziele] aus. Das Dashboard [!UICONTROL Überwachung] enthält Metriken und Informationen zu den Zielausführungsaufträgen.
+Um auf das Dashboard [!UICONTROL Überwachung] zuzugreifen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Überwachung]** (![Überwachungssymbol](/help/images/icons/monitoring.png)) aus. Wählen Sie auf der Seite [!UICONTROL Überwachung] einmal [!UICONTROL Ziele] aus. Das Dashboard [!UICONTROL Überwachung] enthält Metriken und Informationen zu den Zielausführungsaufträgen.
 
 Verwenden Sie das Dashboard [!UICONTROL Ziele] , um einen Überblick über den Zustand Ihrer Aktivierungsflüsse zu erhalten. Rufen Sie zunächst Einblicke in eine aggregierte Ebene für alle Batch- und Streaming-Ziele ab und führen Sie dann einen Drilldown in detaillierten Ansichten für Datenflüsse, Datenfluss-Ausführungen und aktivierte Zielgruppen durch, um Ihre Aktivierungsdaten eingehend zu untersuchen. Die Bildschirme im Dashboard [!UICONTROL Überwachung] bieten praktische Einblicke über Metriken und Fehlerbeschreibungen, mit denen Sie Probleme beheben können, die in Ihren Aktivierungsszenarien auftreten können.
 
@@ -199,7 +199,7 @@ Standardmäßig enthalten die angezeigten Daten die Aktivierungsinformationen de
 
 ![Änderung der für aktivierte Ziele hervorgehobenen Kontrolle des Lookback-Datumsbereichs](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Verwenden Sie das Pfeilsymbol (![Pfeilsymbol](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)), um die Karten oben im Bildschirm zu erweitern oder zu schließen, die anhand des Zieltyps - Streaming oder Batch - einen Überblick über die Aktivierungsdetails bieten:
+Verwenden Sie das Pfeilsymbol (![Pfeilsymbol](/help/images/icons/chevron-up.png)), um die Karten oben im Bildschirm zu erweitern oder zu schließen, die anhand des Zieltyps - Streaming oder Batch - einen Überblick über die Aktivierungsdetails bieten:
 
 - **[!UICONTROL Streaming-Aktivierungsrate]**: Stellt den Prozentsatz der empfangenen Identitäten dar, die erfolgreich aktiviert oder übersprungen wurden. Die Formel zur Berechnung dieses Prozentsatzes wird weiter oben auf dieser Seite im Abschnitt [Datenfluss wird für Streaming-Ziele ausgeführt](#dataflow-runs-for-streaming-destinations) beschrieben.
 - **[!UICONTROL Batch failed dataflow running]**: Stellt die Anzahl der fehlgeschlagenen Datenfluss-Ausführungen im ausgewählten Zeitintervall dar.
@@ -226,13 +226,13 @@ Sie können Ihre Zielliste auch so filtern, dass nur die ausgewählte Zielkatego
 
 ![Ziele mithilfe des Dropdown-Selektors filtern](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Darüber hinaus können Sie ein Ziel in die Suchleiste eingeben, um es zu einem einzelnen Ziel zu isolieren. Wenn Sie die Datenflüsse des Ziels anzeigen möchten, können Sie den Filter ![filter](../assets/ui/monitor-destinations/filter-add.png) daneben auswählen, um eine Liste der aktiven Datenflüsse anzuzeigen.
+Darüber hinaus können Sie ein Ziel in die Suchleiste eingeben, um es zu einem einzelnen Ziel zu isolieren. Wenn Sie die Datenflüsse des Ziels anzeigen möchten, können Sie den Filter ![filter](/help/images/icons/filter-add.png) daneben auswählen, um eine Liste der aktiven Datenflüsse anzuzeigen.
 
 ![Filtern Sie Ziele mithilfe der in der Überwachungsansicht hervorgehobenen Suchleiste.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Wenn Sie alle vorhandenen Datenflüsse für alle Ziele anzeigen möchten, wählen Sie **[!UICONTROL Datenflüsse]** aus.
 
-Es wird eine Liste mit Datenflüssen angezeigt, die nach der letzten Ausführung des Datenflusses sortiert sind. Sie können zusätzliche Details für einen bestimmten Datenfluss anzeigen, indem Sie das zu überwachende Ziel suchen, den Filter ![filter](../assets/ui/monitor-destinations/filter-add.png) daneben auswählen und anschließend den Filter ![filter](../assets/ui/monitor-destinations/filter-add.png) neben dem Datenfluss auswählen, über den Sie weitere Informationen erhalten möchten.
+Es wird eine Liste mit Datenflüssen angezeigt, die nach der letzten Ausführung des Datenflusses sortiert sind. Sie können zusätzliche Details für einen bestimmten Datenfluss anzeigen, indem Sie das zu überwachende Ziel suchen, den Filter ![filter](/help/images/icons/filter-add.png) daneben auswählen und anschließend den Filter ![filter](/help/images/icons/filter-add.png) neben dem Datenfluss auswählen, über den Sie weitere Informationen erhalten möchten.
 
 ![Alle im Monitoring-Dashboard hervorgehobenen Datenflüsse.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ Sie aktivieren beispielsweise eine Zielgruppe mit dem Namen &quot;Mitglieder des
 ![Im Datenfluss-Bedienfeld hervorgehobene Zielgruppen.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 In der Ansicht auf Zielgruppenebene werden die Metriken über mehrere Datenfluss-Läufe innerhalb des ausgewählten Zeitraums aggregiert. Wenn mehrere Datenfluss-Läufe vorhanden sind, können Sie einen Drilldown aus der Zielgruppenebene durchführen, um die Aufschlüsselung für jeden Datenfluss anzuzeigen, gefiltert nach der ausgewählten Zielgruppe.
-Verwenden Sie die Filterschaltfläche &quot;![filter](../assets/ui/monitor-destinations/filter-add.png)&quot;, um einen Drilldown in die Datenfluss-Ansicht für jede Zielgruppe im Datenfluss durchzuführen.
+Verwenden Sie die Filterschaltfläche &quot;![filter](/help/images/icons/filter-add.png)&quot;, um einen Drilldown in die Datenfluss-Ansicht für jede Zielgruppe im Datenfluss durchzuführen.
 
 ### Seite mit Datenfluss-Ausführungen {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ Wenn Sie über die Ansicht [auf Zielgruppenebene](#segment-level-view) einen Dri
 
 ![Optionsfelder, die zeigen, wie Datenflüsse für Zielgruppen gefiltert werden.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Um weitere Details zu einer bestimmten Ausführung des Datenflusses anzuzeigen, wählen Sie den Filter &quot;![filter](../assets/ui/monitor-destinations/filter-add.png)&quot;neben der Startzeit des Datenflusses aus, um die Seite mit den Ausführungsdetails des Datenflusses anzuzeigen.
+Um weitere Details zu einer bestimmten Ausführung des Datenflusses anzuzeigen, wählen Sie den Filter &quot;![filter](/help/images/icons/filter-add.png)&quot;neben der Startzeit des Datenflusses aus, um die Seite mit den Ausführungsdetails des Datenflusses anzuzeigen.
 
 ![Datenfluss führt Filter im Monitoring-Dashboard aus, um weitere Informationen für einen bestimmten Datenfluss zu suchen.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

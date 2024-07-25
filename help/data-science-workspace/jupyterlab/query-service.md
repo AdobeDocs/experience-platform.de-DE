@@ -5,7 +5,7 @@ title: Query Service in Jupyter Notebook
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie SQL (Structured Query Language) in Data Science Workspace verwenden, indem Sie Query Service als Standardfunktion in JupyterLab integrieren. In diesem Tutorial werden Beispiel-SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von Adobe Analytics-Daten vorgestellt.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 50%
@@ -98,7 +98,7 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 
 Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie sie auf ihre Zelle und dann auf die Schaltfläche **[!UICONTROL play]** klicken. Erfolgreiche Abfrageergebnisse oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
 
-Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und [!DNL Query Service] unterbrochen werden. Starten Sie in solchen Fällen [!DNL JupyterLab] neu, indem Sie die Schaltfläche **Neu starten** ![Neustart-Schaltfläche](../images/jupyterlab/user-guide/restart_button.png) oben rechts neben dem Betriebsschalter auswählen.
+Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und [!DNL Query Service] unterbrochen werden. Starten Sie in solchen Fällen [!DNL JupyterLab] neu, indem Sie die Schaltfläche **Neu starten** ![Neustart-Schaltfläche](/help/images/icons/restart.png) oben rechts neben dem Betriebsschalter auswählen.
 
 Der Notebook-Kernel wird zurückgesetzt, aber die Zellen bleiben, führen Sie alle Zellen erneut aus, um dort weiterzumachen, wo Sie aufgehört haben.
 

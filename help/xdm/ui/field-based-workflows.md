@@ -2,7 +2,7 @@
 title: Feldbasierte Workflows im Schema Editor
 description: Erfahren Sie, wie Sie Ihren Experience-Datenmodell (XDM)-Schemas einzeln Felder aus vorhandenen Feldergruppen hinzufügen können.
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Geben Sie unter **[!UICONTROL Feldname]** den Namen des Felds ein, das Sie hinzu
 
 Einige Standardfelder weisen denselben Namen auf, ihre Struktur kann jedoch von der Feldergruppe abhängen, aus der sie stammen. Wenn ein Standardfeld innerhalb eines übergeordneten Objekts in der Feldergruppenstruktur verschachtelt ist, wird das übergeordnete Feld auch im Schema enthalten sein, wenn das untergeordnete Feld hinzugefügt wird.
 
-Wählen Sie das Vorschausymbol (![Vorschau-Symbol](../images/ui/field-based-workflows/preview-icon.png)) neben einem Standardfeld aus, um die Struktur seiner Feldergruppe anzuzeigen und besser zu verstehen, wie sie möglicherweise verschachtelt ist. Um das Standardfeld zum Schema hinzuzufügen, wählen Sie das Pluszeichen (![Plussymbol](../images/ui/field-based-workflows/add-icon.png)) aus.
+Wählen Sie das Vorschausymbol (![Vorschau-Symbol](/help/images/icons/preview.png)) neben einem Standardfeld aus, um die Struktur seiner Feldergruppe anzuzeigen und besser zu verstehen, wie sie möglicherweise verschachtelt ist. Um das Standardfeld zum Schema hinzuzufügen, wählen Sie das Pluszeichen (![Plussymbol](/help/images/icons/add-circle.png)) aus.
 
 ![Das Symbol zum Hinzufügen, das auf einem Element der vorgeschlagenen Standardfelder hervorgehoben ist.](../images/ui/field-based-workflows/add-standard-field.png)
 

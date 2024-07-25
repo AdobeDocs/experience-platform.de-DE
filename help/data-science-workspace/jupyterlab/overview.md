@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche von JupyterLab
 description: JupyterLab ist eine Web-basierte Benutzeroberfläche für Project Jupyter und ist eng in Adobe Experience Platform integriert. Sie bietet eine interaktive Entwicklungsumgebung für Datenwissenschaftlerinnen und Datenwissenschaftler, die mit Jupyter-Notebooks, -Code und -Daten arbeiten möchten. In diesem Dokument erhalten Sie einen Überblick über JupyterLab und die Funktionen sowie Anleitungen zum Durchführen häufiger Aktionen.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 100%
@@ -116,9 +116,9 @@ Wählen Sie in [!DNL JupyterLab] oben rechts das Zahnradsymbol aus, um *Notebook
 
 ### Beenden und Neustarten von [!DNL JupyterLab]
 
-In [!DNL JupyterLab] können Sie Ihre Sitzung beenden, um die Verwendung weiterer Ressourcen zu verhindern. Wählen Sie zunächst das **Ein/Aus-Symbol** ![Ein/Aus-Symbol](../images/jupyterlab/user-guide/power_button.png) und dann im angezeigten Popup die Option **[!UICONTROL Herunterfahren]** aus, um Ihre Sitzung zu beenden. Notebook-Sitzungen enden nach 12 Stunden ohne Aktivität automatisch.
+In [!DNL JupyterLab] können Sie Ihre Sitzung beenden, um die Verwendung weiterer Ressourcen zu verhindern. Wählen Sie zunächst das **Ein/Aus-Symbol** ![Ein/Aus-Symbol](/help/images/icons/power.png) und dann im angezeigten Popup die Option **[!UICONTROL Herunterfahren]** aus, um Ihre Sitzung zu beenden. Notebook-Sitzungen enden nach 12 Stunden ohne Aktivität automatisch.
 
-Um [!DNL JupyterLab] neu zu starten, wählen Sie das **Neustart-Symbol** ![Neustart-Symbol](../images/jupyterlab/user-guide/restart_button.png) direkt links neben dem Ein/Aus-Symbol und dann im angezeigten Popup die Option **[!UICONTROL Neu starten]** aus.
+Um [!DNL JupyterLab] neu zu starten, wählen Sie das **Neustart-Symbol** ![Neustart-Symbol](/help/images/icons/restart.png) direkt links neben dem Ein/Aus-Symbol und dann im angezeigten Popup die Option **[!UICONTROL Neu starten]** aus.
 
 ![Beenden von JupyterLab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

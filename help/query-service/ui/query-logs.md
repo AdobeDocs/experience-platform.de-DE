@@ -2,7 +2,7 @@
 title: Abfrageprotokolle
 description: Abfrageprotokolle werden automatisch bei jeder Ausführung einer Abfrage generiert und stehen über die Benutzeroberfläche zur Verfügung, um die Fehlerbehebung zu unterstützen. In diesem Dokument wird beschrieben, wie Sie den Abschnitt "Query Service Logs"der Benutzeroberfläche verwenden und darin navigieren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Um die Abfrageprotokolle zu überprüfen, wählen Sie [!UICONTROL Abfragen] , um
 
 ## Anpassen und Suchen {#customize-and-search}
 
-Die Query Service-Logs werden in einem anpassbaren Tabellenformat dargestellt. Um die Tabellenspalten anzupassen, wählen Sie das Einstellungssymbol (![Einstellungssymbol) aus.](../images/ui/query-log/settings-icon.png)) rechts neben dem Bildschirm. Ein Dialogfeld [!UICONTROL Tabelle anpassen] wird angezeigt, in dem die Auswahl jeder Spalte aufgehoben werden kann.
+Die Query Service-Logs werden in einem anpassbaren Tabellenformat dargestellt. Um die Tabellenspalten anzupassen, wählen Sie das Einstellungssymbol (![Einstellungssymbol) aus.](/help/images/icons/column-settings.png)) rechts neben dem Bildschirm. Ein Dialogfeld [!UICONTROL Tabelle anpassen] wird angezeigt, in dem die Auswahl jeder Spalte aufgehoben werden kann.
 
 Sie können auch nach Protokollen suchen, die sich auf bestimmte Abfragevorlagen beziehen, indem Sie den Vorlagennamen in das Suchfeld eingeben.
 
@@ -67,13 +67,13 @@ Sie können auch einen Namen für eine Abfragevorlage aus der Spalte [!UICONTROL
 
 ## Protokolle bearbeiten {#edit-logs}
 
-Neben dem Vorlagennamen jeder Zeile oder einem SQL-Snippet befindet sich ein Stiftsymbol (![Ein Stiftsymbol).](../images/ui/query-log/edit-icon.png)), mit denen Sie zum Abfrage-Editor navigieren können. Die Abfrage wird dann im Editor zur Bearbeitung vorausgefüllt.
+Neben dem Vorlagennamen jeder Zeile oder einem SQL-Snippet befindet sich ein Stiftsymbol (![Ein Stiftsymbol).](/help/images/icons/edit.png)), mit denen Sie zum Abfrage-Editor navigieren können. Die Abfrage wird dann im Editor zur Bearbeitung vorausgefüllt.
 
 ![Der Arbeitsbereich &quot;Abfrage-Protokoll&quot;mit einem hervorgehobenen Stiftsymbol.](../images/ui/query-log/edit-query.png)
 
 ## Filter-Logs {#filter-logs}
 
-Sie können die Liste der Abfrageprotokolle anhand verschiedener Einstellungen filtern. Wählen Sie das Filtersymbol (![Filtersymbol) aus.](../images/ui/query-log/filter-icon.png)) oben links im Arbeitsbereich, um eine Reihe von Filteroptionen in der linken Leiste zu öffnen.
+Sie können die Liste der Abfrageprotokolle anhand verschiedener Einstellungen filtern. Wählen Sie das Filtersymbol (![Filtersymbol) aus.](/help/images/icons/filter.png)) oben links im Arbeitsbereich, um eine Reihe von Filteroptionen in der linken Leiste zu öffnen.
 
 ![Der Arbeitsbereich &quot;Abfrage-Protokoll&quot;mit hervorgehobenem Filtersymbol.](../images/ui/query-log/log-filter.png)
 

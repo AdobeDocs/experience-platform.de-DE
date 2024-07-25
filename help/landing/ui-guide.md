@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über die Experience Platform-Benutzeroberfläche
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 3%
@@ -75,17 +75,17 @@ Wenn Sie den Umschalter auswählen, wird ein Dropdown-Menü mit Organisationen g
 
 ### Wechseln von Anwendungen
 
-Das nächste Element auf der rechten Seite der oberen Navigation ist der **Anwendungsschalter**, der durch das Symbol ![Anwendungsschalter](./images/user-guide/app-switcher-icon.png) dargestellt wird. Wenn Sie dieses Symbol auswählen, können Sie zwischen Adobe-Anwendungen, auf die Ihr Unternehmen Zugriff hat, wie Experience Platform, Analytics, Assets und anderen wechseln.
+Das nächste Element auf der rechten Seite der oberen Navigation ist der **Anwendungsschalter**, der durch das Symbol ![Anwendungsschalter](/help/images/icons/apps.png) dargestellt wird. Wenn Sie dieses Symbol auswählen, können Sie zwischen Adobe-Anwendungen, auf die Ihr Unternehmen Zugriff hat, wie Experience Platform, Analytics, Assets und anderen wechseln.
 
 ### Hilfe
 
-Rechts neben dem Anwendungsschalter befindet sich das Hilfe- und Support-Menü **, das durch das Symbol ![Fragezeichen/Hilfe](./images/user-guide/help-icon.png) dargestellt wird.** Wenn Sie dieses Symbol auswählen, wird ein Popover-Menü mit mehreren Hilfe- und Support-Ressourcen angezeigt. Die Registerkarte **[!UICONTROL Hilfe]** enthält eine Liste der relevanten Dokumentation für die Seite, auf der Sie sich gerade befinden. Mit dem Tab **[!UICONTROL Support]** können Sie ein Support-Ticket beim Adobe-Supportteam erstellen. Im Tab **[!UICONTROL Feedback]** können Sie dem Adobe Feedback zu Platform senden.
+Rechts neben dem Anwendungsschalter befindet sich das Hilfe- und Support-Menü **, das durch das Symbol ![Fragezeichen/Hilfe](/help/images/icons/help.png) dargestellt wird.** Wenn Sie dieses Symbol auswählen, wird ein Popover-Menü mit mehreren Hilfe- und Support-Ressourcen angezeigt. Die Registerkarte **[!UICONTROL Hilfe]** enthält eine Liste der relevanten Dokumentation für die Seite, auf der Sie sich gerade befinden. Mit dem Tab **[!UICONTROL Support]** können Sie ein Support-Ticket beim Adobe-Supportteam erstellen. Im Tab **[!UICONTROL Feedback]** können Sie dem Adobe Feedback zu Platform senden.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Benachrichtigungen und Mitteilungen
 
-Im Abschnitt **Benachrichtigungen** , der durch das Symbol ![Bell/Benachrichtigungen und Mitteilungen](images/user-guide/notification-icon.png) dargestellt wird. Auf der Registerkarte **[!UICONTROL Benachrichtigungen]** werden wichtige Informationen zum Produkt und andere relevante Updates angezeigt, während auf der Registerkarte **[!UICONTROL Mitteilungen]** Informationen zur Serviceverwaltung angezeigt werden.
+Im Abschnitt **Benachrichtigungen** , der durch das Symbol ![Bell/Benachrichtigungen und Mitteilungen](/help/images/icons/bell.png) dargestellt wird. Auf der Registerkarte **[!UICONTROL Benachrichtigungen]** werden wichtige Informationen zum Produkt und andere relevante Updates angezeigt, während auf der Registerkarte **[!UICONTROL Mitteilungen]** Informationen zur Serviceverwaltung angezeigt werden.
 
 ### Benutzerprofil
 

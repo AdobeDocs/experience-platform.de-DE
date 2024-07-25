@@ -4,7 +4,7 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 9%
@@ -101,7 +101,7 @@ Um **eine bestimmte Nutzungsmetrik aus einer bestimmten Sandbox anzuzeigen, navi
 
 ![Die Registerkarte Details des Dashboards zur Lizenzverwendung.](../images/license-usage/details-tab.png)
 
-In dieser Ansicht können Sie das Symbol &quot;![Überprüfen&quot;auswählen.](../images/license-usage/inspect-icon.png) neben einem Sandbox-Namen klicken, um die Visualisierung für diese Metrik anzuzeigen. Ein Dialogfeld mit einer Visualisierung für diese Metrik wird geöffnet.
+In dieser Ansicht können Sie das Symbol &quot;![Überprüfen&quot;auswählen.](/help/images/icons/inspect.png) neben einem Sandbox-Namen klicken, um die Visualisierung für diese Metrik anzuzeigen. Ein Dialogfeld mit einer Visualisierung für diese Metrik wird geöffnet.
 
 ### Visualisierungen {#visualizations}
 

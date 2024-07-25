@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3743'
 ht-degree: 85%
@@ -141,7 +141,7 @@ Wenn Sie einen Wert aus dieser Aufzählungsliste auswählen, wird der Wert mit e
 
 ![Eine Warnung, die angezeigt wird, wenn Sie einen Wert einfügen, der nicht zur Aufzählungsliste gehört](../images/ui/segment-builder/enum-warning.png)
 
-Wenn Sie mehrere Werte erstellen, können Sie sie alle gleichzeitig hinzufügen, indem Sie den Massen-Upload verwenden. Wählen Sie das ![Pluszeichen](../images/ui/segment-builder/plus-icon.png), um das Pop-up **[!UICONTROL Werte in Massen hinzufügen]** anzuzeigen.
+Wenn Sie mehrere Werte erstellen, können Sie sie alle gleichzeitig hinzufügen, indem Sie den Massen-Upload verwenden. Wählen Sie das ![Pluszeichen](/help/images/icons/add-circle.png), um das Pop-up **[!UICONTROL Werte in Massen hinzufügen]** anzuzeigen.
 
 ![Das Pluszeichen wird hervorgehoben und zeigt die Schaltfläche an, auf die Sie klicken können, um auf das Pop-up für den Massen-Upload zuzugreifen.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ Wenn Sie mit der Erstellung Ihrer Segmentdefinition fortfahren, können Sie durc
 >
 >Weiterführende Informationen zum Generieren von Schätzungen für Segmentdefinitionen finden Sie im Abschnitt zum [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) des Tutorials zum Erstellen von Segmentdefinitionen.
 
-Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Auswertungsmethode Sie verwenden möchten, können Sie die gewünschte Auswertungsmethode über die Dropdown-Liste auswählen. Wenn Sie wissen möchten, für welche Auswertungstypen diese Segmentdefinition qualifiziert ist, können Sie das Durchsuchen-Symbol ![Ordnersymbol mit Lupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) auswählen, um eine Liste der verfügbaren Auswertungsmethoden für die Segmentdefinition anzuzeigen.
+Sie können auch Ihre Auswertungsmethode auswählen. Wenn Sie wissen, welche Auswertungsmethode Sie verwenden möchten, können Sie die gewünschte Auswertungsmethode über die Dropdown-Liste auswählen. Wenn Sie wissen möchten, für welche Auswertungstypen diese Segmentdefinition qualifiziert ist, können Sie das Durchsuchen-Symbol ![Ordnersymbol mit Lupe](/help/images/icons/folder-search.png) auswählen, um eine Liste der verfügbaren Auswertungsmethoden für die Segmentdefinition anzuzeigen.
 
 Das Popup-Fenster [!UICONTROL Berechtigung der Auswertungsmethode] angezeigt. In diesem Popup-Fenster werden die verfügbaren Auswertungsmethoden angezeigt, und zwar Batch, Streaming und Edge. Das Popup-Fenster gibt darüber Aufschluss, welche Auswertungsmethoden geeignet und welche nicht geeignet sind. Abhängig von den Parametern, die Sie in Ihrer Segmentdefinition verwendet haben, ist es möglicherweise nicht für bestimmte Auswertungsmethoden qualifiziert. Weitere Informationen zu den Anforderungen der einzelnen Auswertungsmethoden finden Sie in der Übersicht zur [Streaming-Segmentierung](./streaming-segmentation.md#query-types) bzw. [Edge-Segmentierung](./edge-segmentation.md#query-types).
 

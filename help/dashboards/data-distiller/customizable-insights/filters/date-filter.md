@@ -2,7 +2,7 @@
 title: Erstellen eines Datumsfilters
 description: Erfahren Sie, wie Sie Ihre benutzerdefinierten Einblicke nach Datum filtern können.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -94,6 +94,6 @@ Nachdem Sie einen Datumsbereich aus Ihrem Dashboard ausgewählt haben, sehen Ein
 
 ## Datumsfilter löschen {#delete-date-filter}
 
-Um den Datumsfilter zu entfernen, wählen Sie das Symbol Filter löschen (![Symbol Filter löschen.](../../../images/customizable-insights/delete-filter-icon.png)).
+Um den Datumsfilter zu entfernen, wählen Sie das Symbol Filter löschen (![Symbol Filter löschen.](/help/images/icons/filter-delete.png)).
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Symbol zum Löschen des Filters.](../../../images/customizable-insights/delete-date-filter.png)

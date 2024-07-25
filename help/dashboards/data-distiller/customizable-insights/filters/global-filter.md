@@ -2,7 +2,7 @@
 title: Erstellen eines globalen Filters
 description: Erfahren Sie, wie Sie Ihre Dateneinblicke mit einem benutzerdefinierten, global angewendeten Filter filtern können.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Um einen globalen Filter zu erstellen, wählen Sie zunächst **[!UICONTROL Filte
 
 Sie können die von Ihrer SQL bereitgestellten Einblicke mit benutzerdefinierten globalen Filtern schnell ändern.
 
-Das Dialogfeld [!UICONTROL Globalen Filter erstellen] wird geöffnet. Das Erstellen eines globalen Filters folgt demselben Prozess wie das Erstellen eines Insight mit SQL. Wählen Sie zunächst eine Datenbank (Insights-Datenmodell) aus, die abgefragt werden soll, geben Sie dann Ihre benutzerdefinierte SQL in den Abfrage-Editor ein und wählen Sie schließlich das Ausführungssymbol (![Ausführungssymbol.](../../../images/customizable-insights/run-icon.png)).
+Das Dialogfeld [!UICONTROL Globalen Filter erstellen] wird geöffnet. Das Erstellen eines globalen Filters folgt demselben Prozess wie das Erstellen eines Insight mit SQL. Wählen Sie zunächst eine Datenbank (Insights-Datenmodell) aus, die abgefragt werden soll, geben Sie dann Ihre benutzerdefinierte SQL in den Abfrage-Editor ein und wählen Sie schließlich das Ausführungssymbol (![Ausführungssymbol.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ Nachdem Sie Ihren globalen Filter für Ihr Dashboard erstellt haben, wird der Um
 
 ## Globalen Filter auswählen {#select-global-filter}
 
-Um das Dialogfeld [!UICONTROL Filter] zu öffnen, in dem alle Ihre benutzerdefinierten Filter aufgelistet werden, wählen Sie das Filtersymbol (![Ein Filtersymbol) aus.](../../../images/customizable-insights/filter.png)) auf der linken Seite Ihres Dashboards. Wählen Sie anschließend eine Option aus dem Dropdown-Menü Ihres globalen Filters und danach **[!UICONTROL Anwenden]** aus, um die Auswirkungen auf Ihre Dashboard-Einblicke anzuwenden.
+Um das Dialogfeld [!UICONTROL Filter] zu öffnen, in dem alle Ihre benutzerdefinierten Filter aufgelistet werden, wählen Sie das Filtersymbol (![Ein Filtersymbol) aus.](/help/images/icons/filter.png)) auf der linken Seite Ihres Dashboards. Wählen Sie anschließend eine Option aus dem Dropdown-Menü Ihres globalen Filters und danach **[!UICONTROL Anwenden]** aus, um die Auswirkungen auf Ihre Dashboard-Einblicke anzuwenden.
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Filterdialogfeld.](../../../images/customizable-insights/custom-filters.png)

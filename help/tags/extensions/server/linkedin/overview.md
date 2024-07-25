@@ -3,7 +3,7 @@ title: LinkedIn Conversions API Event Forwarding-Erweiterung
 description: Mit dieser Adobe Experience Platform-Ereignisweiterleitungserweiterung können Sie die Leistung Ihrer LinkedIn-Marketingkampagne messen.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Nach der Auswahl scheinen zusätzliche Steuerelemente das Ereignis weiter zu kon
 | --- | --- |
 | [!UICONTROL E-Mail] | E-Mail-Adresse des Kontakts, der mit dem Konversionsereignis verbunden ist. Der E-Mail-Wert wird durch den Erweiterungscode in SHA256 kodiert, es sei denn, der angegebene Wert ist bereits eine SHA256-Zeichenfolge. |
 | [!UICONTROL LinkedIn First Party Ads Tracking UUID] | Dies ist eine Erstanbieter-Cookie-ID. Werbetreibende müssen das erweiterte Konversions-Tracking von [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) aktivieren, um Erstanbieter-Cookies zu aktivieren, die einen Klick-ID-Parameter `li_fat_id` an die Klick-URLs anhängen. |
-| [!UICONTROL Daten zu Kundeninformationen] | Dieses Feld enthält ein JSON-Objekt mit zusätzlichen Attributen, die zusammen mit der Nachricht gesendet werden.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Daten darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. Die zulässigen Schlüsselwerte sind: `firstName`, `lastName`, `companyName`, `title` und `country`. |
+| [!UICONTROL Daten zu Kundeninformationen] | Dieses Feld enthält ein JSON-Objekt mit zusätzlichen Attributen, die zusammen mit der Nachricht gesendet werden.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](/help/images/icons/database.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Daten darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. Die zulässigen Schlüsselwerte sind: `firstName`, `lastName`, `companyName`, `title` und `country`. |
 
 {style="table-layout:auto"}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definieren von Enum-Feldern und vorgeschlagenen Werten in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Auflistungen und empfohlene Werte für Zeichenfolgenfelder definieren.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Wählen Sie **[!UICONTROL Auflistungen und Vorgeschlagene Werte]** und dann **[!
 
 Unter der Spalte **[!UICONTROL Wert]** müssen Sie den genauen Wert angeben, auf den Sie das Feld beschränken möchten. Sie können optional auch einen benutzerfreundlichen **[!UICONTROL Anzeigenamen]** für die Begrenzung angeben, der sich auf die Darstellung des Werts in der Segmentierung auswirkt.
 
-Verwenden Sie weiterhin &quot;**[!UICONTROL Zeile hinzufügen]**&quot;, um die gewünschten Einschränkungen und optionalen Beschriftungen zur Aufzählung hinzuzufügen, oder wählen Sie das Löschsymbol (![Bild des Löschsymbols](../../images/ui/fields/enum/remove-icon.png)) neben einer zuvor hinzugefügten Zeile aus, um sie zu entfernen. Wählen Sie abschließend **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
+Verwenden Sie weiterhin &quot;**[!UICONTROL Zeile hinzufügen]**&quot;, um die gewünschten Einschränkungen und optionalen Beschriftungen zur Aufzählung hinzuzufügen, oder wählen Sie das Löschsymbol (![Bild des Löschsymbols](/help/images/icons/remove-circle.png)) neben einer zuvor hinzugefügten Zeile aus, um sie zu entfernen. Wählen Sie abschließend **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
 
 ![Bild, das die Aufzählungswerte und Anzeigenamen anzeigt, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ Wählen Sie **[!UICONTROL Auflistungen und Vorgeschlagene Werte]** und dann **[!
 
 ![Bild, das die in der Benutzeroberfläche ausgewählte Option &quot;Vorgeschlagene Werte&quot;anzeigt](../../images/ui/fields/enum/suggested-add-row.png)
 
-Geben Sie unter der Spalte **[!UICONTROL Anzeigename]** einen benutzerfreundlichen Namen für den Wert ein, wie er in der Segmentierungsbenutzeroberfläche angezeigt werden soll. Um weitere empfohlene Werte hinzuzufügen, wählen Sie erneut **[!UICONTROL Zeile hinzufügen]** und wiederholen Sie den Vorgang nach Bedarf. Um eine zuvor hinzugefügte Zeile zu entfernen, wählen Sie ![das Löschsymbol](../../images/ui/fields/enum/remove-icon.png) neben der betreffenden Zeile aus.
+Geben Sie unter der Spalte **[!UICONTROL Anzeigename]** einen benutzerfreundlichen Namen für den Wert ein, wie er in der Segmentierungsbenutzeroberfläche angezeigt werden soll. Um weitere empfohlene Werte hinzuzufügen, wählen Sie erneut **[!UICONTROL Zeile hinzufügen]** und wiederholen Sie den Vorgang nach Bedarf. Um eine zuvor hinzugefügte Zeile zu entfernen, wählen Sie ![das Löschsymbol](/help/images/icons/remove-circle.png) neben der betreffenden Zeile aus.
 
 Wählen Sie abschließend **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
 
@@ -68,7 +68,7 @@ Einige Felder aus Standard-XDM-Komponenten enthalten ihre eigenen empfohlenen We
 
 ![Bild, das die Aufzählungswerte und Anzeigenamen anzeigt, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-standard.png)
 
-Um neue empfohlene Werte für ein Standardfeld hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** aus. Um einen vorgeschlagenen Wert zu entfernen, der zuvor von Ihrer Organisation hinzugefügt wurde, wählen Sie ![das Löschsymbol](../../images/ui/fields/enum/remove-icon.png) neben der betreffenden Zeile aus.
+Um neue empfohlene Werte für ein Standardfeld hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** aus. Um einen vorgeschlagenen Wert zu entfernen, der zuvor von Ihrer Organisation hinzugefügt wurde, wählen Sie ![das Löschsymbol](/help/images/icons/remove-circle.png) neben der betreffenden Zeile aus.
 
 ![Bild, das die Aufzählungswerte und Anzeigenamen anzeigt, die für das Zeichenfolgenfeld in der Benutzeroberfläche ausgefüllt wurden](../../images/ui/fields/enum/suggested-standard-add.png)
 

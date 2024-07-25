@@ -2,7 +2,7 @@
 title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mithilfe der Datenerfassungsfunktionen von Adobe Experience Platform an Adobe Experience Cloud-Lösungen senden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 93%
@@ -229,7 +229,7 @@ Die Seite mit der Aktionskonfiguration wird angezeigt. Um die Regel zum Senden v
 
 ![Aktionstyp](./images/e2e/action-type.png)
 
-Der Bildschirm wird aktualisiert und zeigt zusätzliche Optionen zum Konfigurieren der Sendeereignisaktion. Unter **[!UICONTROL Typ]** können Sie einen benutzerdefinierten Typwert bereitstellen, um das XDM-Feld `eventType` auszufüllen. Geben Sie unter **[!UICONTROL XDM-Daten]** den Namen des zuvor erstellten XDM-Datentyps ein (eingeschlossen von Prozentzeichen) oder wählen Sie das Datenbanksymbol (![Datenbanksymbol](./images/e2e/database-symbol.png)) aus, um ihn aus einer Liste auszuwählen. Dies sind die Daten, die letztendlich an das Edge Network gesendet werden.
+Der Bildschirm wird aktualisiert und zeigt zusätzliche Optionen zum Konfigurieren der Sendeereignisaktion. Unter **[!UICONTROL Typ]** können Sie einen benutzerdefinierten Typwert bereitstellen, um das XDM-Feld `eventType` auszufüllen. Geben Sie unter **[!UICONTROL XDM-Daten]** den Namen des zuvor erstellten XDM-Datentyps ein (eingeschlossen von Prozentzeichen) oder wählen Sie das Datenbanksymbol (![Datenbanksymbol](/help/images/icons/database.png)) aus, um ihn aus einer Liste auszuwählen. Dies sind die Daten, die letztendlich an das Edge Network gesendet werden.
 
 Wählen Sie nach Abschluss **[!UICONTROL Änderungen beibehalten]** aus.
 

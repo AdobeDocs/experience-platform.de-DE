@@ -4,7 +4,7 @@ title: Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfe
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Zielgruppen- und Ziel-Dashboards in Experience Platform unterstützen.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 37%
@@ -33,7 +33,7 @@ Sie können &quot;[!DNL Query Service]&quot;verwenden, um Raw-Datensätze für P
 >
 >Systemgenerierte Datensätze werden standardmäßig ausgeblendet. Standardmäßig zeigt die Registerkarte [!UICONTROL Durchsuchen] nur Datensätze an, in die Sie Daten aufgenommen haben.
 
-Um systemgenerierte Datensätze anzuzeigen, wählen Sie das Filtersymbol (![Filtersymbol) aus.](./images/query/filter.png)) links neben der Suchleiste.
+Um systemgenerierte Datensätze anzuzeigen, wählen Sie das Filtersymbol (![Filtersymbol) aus.](/help/images/icons/filter.png)) links neben der Suchleiste.
 
 ![Die Registerkarte &quot;Durchsuchen von Datensätzen&quot;mit hervorgehobenem Filtersymbol.](./images/query/filter-datasets.png)
 

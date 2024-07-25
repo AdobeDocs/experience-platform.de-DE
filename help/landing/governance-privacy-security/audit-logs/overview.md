@@ -2,7 +2,7 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 40%
@@ -94,7 +94,7 @@ Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leis
 >Da es sich hierbei um eine neue Funktion handelt, gehen die angezeigten Daten nur bis März 2022 zurück. Je nach ausgewählter Ressource stehen möglicherweise frühere Daten ab Januar 2022 zur Verfügung.
 
 
-Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)) aus, um eine Liste mit Filtersteuerelementen anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt.
+Wählen Sie das Trichtersymbol (![Filtersymbol](/help/images/icons/filter.png)) aus, um eine Liste mit Filtersteuerelementen anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt.
 
 ![Das Dashboard &quot;Prüfungen&quot;mit dem gefilterten Aktivitätsprotokoll ist hervorgehoben.](../../images/audit-logs/filters.png)
 

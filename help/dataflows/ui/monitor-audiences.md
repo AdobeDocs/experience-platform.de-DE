@@ -3,7 +3,7 @@ description: Erfahren Sie, wie Sie Datenflüsse während der Segmentierung mithi
 title: Überwachen von Datenflüssen für Zielgruppen in der Benutzeroberfläche
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 7%
@@ -64,7 +64,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Letzte Aktivierungsidentitäten]** | Die Anzahl der Identitäten, die im letzten Aktivierungsauftrag der Zielgruppe aktiviert wurden. |
 | **[!UICONTROL Letztes Aktivierungsziel]** | Der Name des Ziels, für das der letzte Aktivierungsauftrag der Zielgruppe aktiviert wurde. |
 
-Sie können die Ergebnisse nach einer bestimmten Zielgruppe filtern und die zugehörigen Segmentierungsaufträge anzeigen, indem Sie das Filtersymbol (![Filtersymbol) auswählen.](../assets/ui/monitor-audiences/filter-icon.png)). Die Segmentierungsaufträge werden in chronologischer Reihenfolge sortiert, wobei die neuesten Segmentierungsaufträge zuerst angezeigt werden.
+Sie können die Ergebnisse nach einer bestimmten Zielgruppe filtern und die zugehörigen Segmentierungsaufträge anzeigen, indem Sie das Filtersymbol (![Filtersymbol) auswählen.](/help/images/icons/filter-add.png)). Die Segmentierungsaufträge werden in chronologischer Reihenfolge sortiert, wobei die neuesten Segmentierungsaufträge zuerst angezeigt werden.
 
 ![Das Filtersymbol wird hervorgehoben. Wenn Sie diese Option auswählen, können Sie die Segmentierungsaufträge für die angegebene Zielgruppe anzeigen.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ Für diese Dashboard-Ansicht stehen die folgenden Metriken zur Verfügung:
 | **[!UICONTROL Identität aktiviert]** | Die Anzahl der Identitäten, die der Segmentierungsauftrag aktiviert. Jedes Profil kann mehrere Identitäten aufweisen. Beispielsweise könnte ein Profil eine E-Mail-, Telefonnummer- und Treuenummer als Identitäten haben. |
 | **[!UICONTROL Zielname]** | Der Name des Ziels, für das der Segmentierungsauftrag aktiviert wird. |
 
-Sie können einen bestimmten Segmentierungsauftrag weiter filtern und dessen Details anzeigen, indem Sie das Filtersymbol (![Filtersymbol) auswählen.](../assets/ui/monitor-audiences/filter-icon.png)). Es gibt zwei verschiedene Arten von Segmentierungsaufträgen, die gefiltert werden können: Aktivierungsaufträge und Auswertungsaufträge.
+Sie können einen bestimmten Segmentierungsauftrag weiter filtern und dessen Details anzeigen, indem Sie das Filtersymbol (![Filtersymbol) auswählen.](/help/images/icons/filter.png)). Es gibt zwei verschiedene Arten von Segmentierungsaufträgen, die gefiltert werden können: Aktivierungsaufträge und Auswertungsaufträge.
 
 ### Details zum Aktivierungsauftrag {#activation-job-details}
 

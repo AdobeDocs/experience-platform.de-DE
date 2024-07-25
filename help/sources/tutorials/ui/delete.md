@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Löschen von Datenflüssen in der Benutzeroberfläche
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 18%
@@ -33,7 +33,7 @@ Wählen Sie in der [Experience Platform-Benutzeroberfläche](https://platform.ad
 
 Die Seite **[!UICONTROL Datenflüsse]** wird angezeigt. Auf dieser Seite finden Sie eine Liste sichtbarer Datenflüsse, einschließlich Informationen zu ihrem Zieldatensatz, ihrer Quelle, dem Kontonamen und dem Erstellungsdatum.
 
-Wählen Sie oben links das Filtersymbol (![filter-icon](../../images/tutorials/delete/filter.png)) aus, um das Sortierfeld zu starten.
+Wählen Sie oben links das Filtersymbol (![filter-icon](/help/images/icons/filter.png)) aus, um das Sortierfeld zu starten.
 
 ![dataflows](../../images/tutorials/delete/dataflows.png)
 

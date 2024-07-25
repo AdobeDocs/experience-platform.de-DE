@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Mit der Zugriffskontrolle auf Objektebene für Ziele können Sie bestimmte Marke
 So wenden Sie Zugriffsbeschriftungen auf einen bestimmten Datenfluss an:
 
 1. Navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und suchen Sie den Ziel-Datenfluss, auf den Sie den Zugriff der Benutzer beschränken möchten.
-1. Wählen Sie die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] aus und verwenden Sie das Steuerelement ![Details bearbeiten](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Zugriffsbeschriftungen anwenden]** , um neue Beschriftungen hinzuzufügen und die vorhandenen Beschriftungen für den Datenfluss zu verwalten.
+1. Wählen Sie die Auslassungszeichen (`...`) in der Spalte [!UICONTROL Name] aus und verwenden Sie das Steuerelement ![Details bearbeiten](/help/images/icons/key.png) **[!UICONTROL Zugriffsbeschriftungen anwenden]** , um neue Beschriftungen hinzuzufügen und die vorhandenen Beschriftungen für den Datenfluss zu verwalten.
    ![Wählen Sie im Arbeitsbereich &quot;Ziele durchsuchen&quot;die Option Zugriffsbeschriftungen anwenden.](/help/access-control/images/olac/apply-access-labels.png)
 1. Wählen Sie die Beschriftungen aus, die Sie dem Ziel-Datenfluss hinzufügen möchten, und wählen Sie **[!UICONTROL Speichern]** aus.
    ![Wählen Sie die Zugriffsbeschriftungen in aus, die für den Ziel-Datenfluss gelten sollen.](/help/access-control/images/olac/view-access-labels.png)

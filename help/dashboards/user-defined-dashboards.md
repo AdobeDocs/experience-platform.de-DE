@@ -2,7 +2,7 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist der Dashboards-Best
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 Das Dialogfeld [!UICONTROL Dashboard erstellen] wird angezeigt. Geben Sie einen benutzerfreundlichen, beschreibenden Namen für die Sammlung von Widgets ein, die Sie erstellen möchten, und wählen Sie **[!UICONTROL Speichern]** aus.
@@ -68,7 +68,7 @@ Das Dialogfeld [!UICONTROL Datenmodell auswählen] wird angezeigt. Wählen Sie i
 
 >[!TIP]
 >
->Wählen Sie das Informationssymbol (![Ein Informationssymbol.](./images/user-defined-dashboards/info-icon.png)), um den vollständigen Namen des Datenmodells anzuzeigen, wenn es für die Anzeige in der Datenleiste zu lang ist.
+>Wählen Sie das Informationssymbol (![Ein Informationssymbol.](/help/images/icons/info.png)), um den vollständigen Namen des Datenmodells anzuzeigen, wenn es für die Anzeige in der Datenleiste zu lang ist.
 
 ![ Das Dialogfeld &quot;Daten auswählen&quot;.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -94,17 +94,17 @@ Wählen Sie eine Tabelle aus der Liste in der linken Leiste aus, um Daten für I
 
 Der Widget Composer enthält jetzt Daten aus Ihrer ausgewählten Tabelle.
 
-Das Datenmodell und die aktuell ausgewählte Tabelle werden oben in der linken Leiste angezeigt und die zum Erstellen des Widgets verfügbaren Attribute werden in der Spalte [!UICONTROL Attribute] aufgeführt. Sie können die Suchleiste verwenden, um nach Attributen zu suchen, anstatt in der Liste zu scrollen, oder das ausgewählte Datenmodell ändern, indem Sie das Stiftsymbol (![Bleistiftsymbol ) auswählen.](./images/user-defined-dashboards/edit-icon.png)) in der linken Leiste.
+Das Datenmodell und die aktuell ausgewählte Tabelle werden oben in der linken Leiste angezeigt und die zum Erstellen des Widgets verfügbaren Attribute werden in der Spalte [!UICONTROL Attribute] aufgeführt. Sie können die Suchleiste verwenden, um nach Attributen zu suchen, anstatt in der Liste zu scrollen, oder das ausgewählte Datenmodell ändern, indem Sie das Stiftsymbol (![Bleistiftsymbol ) auswählen.](/help/images/icons/edit.png)) in der linken Leiste.
 
 ![Ein Widget, das mit Daten im Widget Composer gefüllt wird.](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### Hinzufügen und Filtern von Attributen {#add-and-filter-attributes}
 
-Wählen Sie das Symbol zum Hinzufügen aus (![Ein Symbol zum Hinzufügen.](./images/user-defined-dashboards/add-icon.png)) neben einem Attributnamen, um Ihrem Widget ein Attribut hinzuzufügen. Über das angezeigte Dropdown-Menü können Sie ein Attribut als X-Achse, Y-Achse, Farbe oder Filter für Ihr Widget hinzufügen. Mit dem Attribut [!UICONTROL Farbe] können Sie die Ergebnisse der X- und Y-Achsenmarkierungen anhand der Farbe unterscheiden. Dies geschieht durch die Aufteilung der Ergebnisse in verschiedene Farben basierend auf ihrer Zusammensetzung eines dritten Attributs.
+Wählen Sie das Symbol zum Hinzufügen aus (![Ein Symbol zum Hinzufügen.](/help/images/icons/add-circle.png)) neben einem Attributnamen, um Ihrem Widget ein Attribut hinzuzufügen. Über das angezeigte Dropdown-Menü können Sie ein Attribut als X-Achse, Y-Achse, Farbe oder Filter für Ihr Widget hinzufügen. Mit dem Attribut [!UICONTROL Farbe] können Sie die Ergebnisse der X- und Y-Achsenmarkierungen anhand der Farbe unterscheiden. Dies geschieht durch die Aufteilung der Ergebnisse in verschiedene Farben basierend auf ihrer Zusammensetzung eines dritten Attributs.
 
 >[!TIP]
 >
->Wenn Sie die Anordnung der X- und Y-Achse spiegeln möchten, wählen Sie das Pfeilsymbol nach oben und unten (![Das Pfeilsymbol nach oben und unten).](./images/user-defined-dashboards/switch-axis-icon.png)), um ihre Anordnung zu wechseln.
+>Wenn Sie die Anordnung der X- und Y-Achse spiegeln möchten, wählen Sie das Pfeilsymbol nach oben und unten (![Das Pfeilsymbol nach oben und unten).](/help/images/icons/switch.png)), um ihre Anordnung zu wechseln.
 
 ![Der Widget Composer mit dem Dropdown-Menü &quot;Add-Symbol&quot;wurde hervorgehoben.](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -132,7 +132,7 @@ Alternativ können Sie einen benutzerdefinierten Zeitraum erstellen, nach dem Ih
 
 ### Widget-Eigenschaften
 
-Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](./images/user-defined-dashboards/properties-icon.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Geben Sie im Bereich [!UICONTROL Eigenschaften] im Textfeld [!UICONTROL Widget-Titel] einen Namen für das Widget ein.
+Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](/help/images/icons/properties.png)) in der rechten Leiste, um den Eigenschaftenbereich zu öffnen. Geben Sie im Bereich [!UICONTROL Eigenschaften] im Textfeld [!UICONTROL Widget-Titel] einen Namen für das Widget ein.
 
 ![Das Eigenschaftenbedienfeld mit dem Eigenschaftensymbol und dem Feld Widget-Titel hervorgehoben.](./images/user-defined-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ Durch das Speichern im Widget Composer wird das Widget lokal in Ihrem Dashboard 
 
 >[!TIP]
 >
->Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](./images/user-defined-dashboards/properties-icon.png)) neben dem Dashboard-Namen, um Details zur Erstellung anzuzeigen. Sie können den Namen Ihres Dashboards im angezeigten Dialogfeld ändern.
+>Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](/help/images/icons/properties.png)) neben dem Dashboard-Namen, um Details zur Erstellung anzuzeigen. Sie können den Namen Ihres Dashboards im angezeigten Dialogfeld ändern.
 
 Widgets können in diesem Arbeitsbereich neu angeordnet und in der Größe angepasst werden. Wählen Sie **[!UICONTROL Speichern]** aus, um den Dashboard-Namen und das konfigurierte Layout beizubehalten.
 
@@ -162,7 +162,7 @@ Nachdem Sie ein Widget erstellt haben, können Sie ganze Widgets bearbeiten, dup
 >
 >Um zwischen vorhandenen benutzerdefinierten Dashboards zu wechseln, wählen Sie in der linken Navigationsleiste Dashboards aus und wählen Sie dann den Dashboard-Namen aus der Inventarliste aus.
 
-Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](./images/user-defined-dashboards/edit-icon.png)) oben rechts im benutzerdefinierten Dashboard, um in den Bearbeitungsmodus zu wechseln.
+Wählen Sie das Stiftsymbol (![Ein Stiftsymbol) aus.](/help/images/icons/edit.png)) oben rechts im benutzerdefinierten Dashboard, um in den Bearbeitungsmodus zu wechseln.
 
 ![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Stiftsymbol.](./images/user-defined-dashboards/edit-mode.png)
 

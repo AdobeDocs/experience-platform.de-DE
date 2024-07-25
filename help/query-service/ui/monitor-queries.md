@@ -2,7 +2,7 @@
 title: Überwachung geplanter Abfragen
 description: Erfahren Sie, wie Sie Abfragen über die Benutzeroberfläche des Abfrage-Service überwachen.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 26%
@@ -25,7 +25,7 @@ In der folgenden Tabelle werden die einzelnen verfügbaren Spalten beschrieben.
 
 >[!NOTE]
 >
->Symbol für Warnhinweis-Abonnements (![Ein Symbol für Warnhinweise-Abonnements ).](../images/ui/monitor-queries/alert-subscription-icon.png)) in jeder Zeile einer unbenannten Spalte enthalten ist. Weitere Informationen finden Sie im Abschnitt [Abonnements von Warnhinweisen](#alert-subscription).
+>Symbol für Warnhinweis-Abonnements (![Ein Symbol für Warnhinweise-Abonnements ).](/help/images/icons/alert-add.png)) in jeder Zeile einer unbenannten Spalte enthalten ist. Weitere Informationen finden Sie im Abschnitt [Abonnements von Warnhinweisen](#alert-subscription).
 
 | Spalte | Beschreibung |
 |---|---|
@@ -45,7 +45,7 @@ In der folgenden Tabelle werden die einzelnen verfügbaren Spalten beschrieben.
 
 ## Anpassen von Tabelleneinstellungen für geplante Abfragen {#customize-table}
 
-Sie können die Spalten auf der Registerkarte [!UICONTROL Geplante Abfragen] gemäß Ihren Anforderungen anpassen. Um das Dialogfeld [!UICONTROL Tabellen-Einstellungen anpassen] zu öffnen und verfügbare Spalten zu bearbeiten, wählen Sie das Einstellungssymbol (![Einstellungssymbol) aus.](../images/ui/monitor-queries/settings-icon.png)) oben rechts auf dem Bildschirm.
+Sie können die Spalten auf der Registerkarte [!UICONTROL Geplante Abfragen] gemäß Ihren Anforderungen anpassen. Um das Dialogfeld [!UICONTROL Tabellen-Einstellungen anpassen] zu öffnen und verfügbare Spalten zu bearbeiten, wählen Sie das Einstellungssymbol (![Einstellungssymbol) aus.](/help/images/icons/column-settings.png)) oben rechts auf dem Bildschirm.
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Wenn Sie die Ausführung dieser Abfragevorlage planen möchten, wählen Sie den 
 
 ### Warnhinweise abonnieren {#alert-subscription}
 
-Um Warnhinweise für geplante Abfrageausführungen zu abonnieren, wählen Sie entweder das Symbol &quot;`...`&quot;(mit Auslassungszeichen) oder das Abonnementsymbol für Warnhinweise (![Ein Warnhinweis-Abonnementsymbol.).](../images/ui/monitor-queries/alert-subscription-icon.png)) für die geplante Abfrage, die Sie verwalten möchten. Das Dropdown-Menü für Inline-Aktionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Abonnieren]** aus den verfügbaren Optionen aus.
+Um Warnhinweise für geplante Abfrageausführungen zu abonnieren, wählen Sie entweder das Symbol &quot;`...`&quot;(mit Auslassungszeichen) oder das Abonnementsymbol für Warnhinweise (![Ein Warnhinweis-Abonnementsymbol.).](/help/images/icons/alert-add.png)) für die geplante Abfrage, die Sie verwalten möchten. Das Dropdown-Menü für Inline-Aktionen wird angezeigt. Wählen Sie als Nächstes **[!UICONTROL Abonnieren]** aus den verfügbaren Optionen aus.
 
 ![Der Arbeitsbereich für geplante Abfragen mit Auslassungspunkten, das Symbol für die Anmeldung mit Warnhinweisen und das Dropdown-Menü für Inline-Aktionen wurden hervorgehoben.](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Weitere Informationen finden Sie in der Dokumentation zur API für Warnhinweise]
 
 ### Anzeigen der Abfragedetails {#query-details}
 
-Wählen Sie das Informationssymbol (![Ein Informationssymbol.](../images/ui/monitor-queries/information-icon.png)), um das Detailbedienfeld für die Abfrage anzuzeigen. Das Bedienfeld &quot;Details&quot;enthält alle relevanten Informationen über die Abfrage, die über die in der Tabelle der geplanten Abfragen enthaltenen Informationen hinausgehen. Zu den zusätzlichen Informationen gehören die Abfrage-ID, das Datum der letzten Änderung, die SQL der Abfrage, die Zeitplan-ID und der aktuelle Zeitplan.
+Wählen Sie das Informationssymbol (![Ein Informationssymbol.](/help/images/icons/info.png)), um das Detailbedienfeld für die Abfrage anzuzeigen. Das Bedienfeld &quot;Details&quot;enthält alle relevanten Informationen über die Abfrage, die über die in der Tabelle der geplanten Abfragen enthaltenen Informationen hinausgehen. Zu den zusätzlichen Informationen gehören die Abfrage-ID, das Datum der letzten Änderung, die SQL der Abfrage, die Zeitplan-ID und der aktuelle Zeitplan.
 
 ![Die Registerkarte &quot;Geplante Abfragen&quot;mit dem Informationssymbol und dem Detailbereich, der hervorgehoben ist.](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Im Abschnitt Warnhinweise abonnieren erfahren Sie, wie Sie [Warnhinweise abonnie
 
 ## Filtern von Abfragen {#filter}
 
-Sie können Abfragen nach der Ausführungsfrequenz filtern. Wählen Sie dazu über die Registerkarte [!UICONTROL Geplante Abfragen] das Filtersymbol (![Filtersymbol](../images/ui/monitor-queries/filter-icon.png)) aus, um die Filter-Seitenleiste zu öffnen.
+Sie können Abfragen nach der Ausführungsfrequenz filtern. Wählen Sie dazu über die Registerkarte [!UICONTROL Geplante Abfragen] das Filtersymbol (![Filtersymbol](/help/images/icons/filter.png)) aus, um die Filter-Seitenleiste zu öffnen.
 
 ![Die Registerkarte „Geplante Abfragen“ mit hervorgehobenem Filtersymbol.](../images/ui/monitor-queries/filter-queries.png)
 

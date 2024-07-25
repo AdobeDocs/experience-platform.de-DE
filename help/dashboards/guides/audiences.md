@@ -4,7 +4,7 @@ title: Zielgruppen-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Zielgruppen anzeigen können, die Ihre Organisation erstellt hat.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 38%
@@ -235,7 +235,7 @@ Wählen Sie **[!UICONTROL Mehr anzeigen]** aus, um ein Vollbilddialogfeld zu öf
 
 ![Das Widget „Bericht Zielgruppenüberscheidung“ mit hervorgehobener Option „Mehr anzeigen“.](../images/audiences/audience-overlap-report.png)
 
-Das Dialogfeld [!UICONTROL Bericht zur Zielgruppenüberschneidung] wird angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Wählen Sie das Einstellungssymbol (![Das Einstellungssymbol.](../images/audiences/settings-icon.png)) aus, um Spalten aus der Tabelle zu entfernen oder zur Tabelle hinzuzufügen.
+Das Dialogfeld [!UICONTROL Bericht zur Zielgruppenüberschneidung] wird angezeigt. Dieses Dialogfeld kann bis zu 50 Zeilen mit Analysen zur Zielgruppenüberschneidung enthalten, die in sechs Spalten unterteilt sind. Wählen Sie das Einstellungssymbol (![Das Einstellungssymbol.](/help/images/icons/settings.png)) aus, um Spalten aus der Tabelle zu entfernen oder zur Tabelle hinzuzufügen.
 
 ![Das Dialogfeld mit dem Bericht zur Zielgruppenüberschneidung.](../images/audiences/audience-overlap-report-dialog.png)
 

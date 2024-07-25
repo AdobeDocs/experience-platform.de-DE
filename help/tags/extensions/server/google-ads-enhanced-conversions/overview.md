@@ -3,7 +3,7 @@ title: Google Ads Enhanced Conversions-Erweiterung
 description: Erfahren Sie mehr über die Google Ads Enhanced Conversions-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -103,7 +103,7 @@ Suchen Sie die Erweiterung [!UICONTROL Google Ads Enhanced Conversions] im Ereig
 Um die Erweiterung zu konfigurieren, müssen Sie die beiden erforderlichen Felder ausfüllen:
 
 1. **[!UICONTROL Kunden-ID]**: Die ID, mit der Ihr [!DNL Google Ads]-Konto eindeutig identifiziert wird. Um diesen Wert zu finden, melden Sie sich bei [!DNL Google Ads] an und navigieren Sie zu **[!DNL Help]** > **[!DNL Customer ID]**.
-1. **[!UICONTROL Auf Token-Datenelement zugreifen]**: Wählen Sie das Datenelementsymbol (![Datenelementsymbol](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) und wählen Sie das geheime Datenelement Google OAuth 2 aus, das Sie im vorherigen Schritt [ konfiguriert haben.](#create-secret-data-element)
+2. **[!UICONTROL Auf Token-Datenelement zugreifen]**: Wählen Sie das Datenelementsymbol (![Datenelementsymbol](/help/images/icons/database.png)) und wählen Sie das geheime Datenelement Google OAuth 2 aus, das Sie im vorherigen Schritt [ konfiguriert haben.](#create-secret-data-element)
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** aus, um die Erweiterung zu installieren.
 

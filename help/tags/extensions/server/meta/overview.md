@@ -2,7 +2,7 @@
 title: Übersicht über die API-Erweiterung für Meta Conversions
 description: Erfahren Sie mehr über die Meta Conversions API-Erweiterung für die Ereignisweiterleitung in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2583'
 ht-degree: 0%
@@ -160,7 +160,7 @@ Warten Sie einige Minuten, bis der anfängliche Einrichtungsprozess abgeschlosse
 
 ![Bildschirm zur Bestätigung der Ersteinrichtung](../../../images/extensions/server/meta/setup-complete.png)
 
-Kopieren Sie im Dialogfeld **[!UICONTROL Code für Ihre Site hinzufügen]** den Code, der mit der Kopieren-Funktion ![Kopieren](../../../images/extensions/server/meta/copy-icon.png) bereitgestellt wird, und fügen Sie ihn in den Abschnitt `<head>` Ihrer Quellwebsite ein. Wählen Sie nach der Implementierung **[!UICONTROL Validierung starten]**
+Kopieren Sie im Dialogfeld **[!UICONTROL Code für Ihre Site hinzufügen]** den Code, der mit der Kopieren-Funktion ![Kopieren](/help/images/icons/copy.png) bereitgestellt wird, und fügen Sie ihn in den Abschnitt `<head>` Ihrer Quellwebsite ein. Wählen Sie nach der Implementierung **[!UICONTROL Validierung starten]**
 
 ![Fügen Sie Code im Dialogfeld Ihrer Site hinzu](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

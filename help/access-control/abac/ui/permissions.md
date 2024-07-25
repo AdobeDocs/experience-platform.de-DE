@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;attri
 title: Attributbasierte Zugriffssteuerung − Rollenberechtigungen verwalten
 description: Dieses Dokument enthält Informationen dazu, wie Berechtigungen für eine Rolle über die Benutzeroberfläche „Berechtigungen“ in Adobe Experience Cloud konfiguriert werden
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 93%
@@ -24,7 +24,7 @@ Nach dem [Erstellen einer neuen Rolle](#create-a-new-role) werden Sie sofort zur
 
 ## Filtern von Rollen
 
-Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/icon.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können.
+Wählen Sie das Trichtersymbol (![Filtersymbol](/help/images/icons/filter.png)) aus, um eine Liste von Filterfeldern anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können.
 
 ![flac-filters](../../images/flac-ui/flac-filters.png)
 
@@ -105,29 +105,29 @@ Das folgende Video soll Ihnen dabei helfen, eine neue Rolle zu erstellen und Ben
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## Verwalten von API-Anmeldeinformationen für Rollen {#manage-api-credentials-for-role}
+## Verwalten von API-Anmeldedaten für Rollen {#manage-api-credentials-for-role}
 
-Wählen Sie die Registerkarte **[!UICONTROL API-Anmeldeinformationen]** aus, um die Seite mit den Rollen-API-Anmeldeinformationen zu öffnen, und klicken Sie auf **[!UICONTROL API-Anmeldeinformationen hinzufügen]**, um der Rolle API-Anmeldeinformationen zuzuweisen.
+Wählen Sie die Registerkarte **[!UICONTROL API-Anmeldedaten]** aus, um die Seite mit den Rollen-API-Anmeldedaten zu öffnen, und klicken Sie auf **[!UICONTROL API-Anmeldedaten hinzufügen]**, um der Rolle API-Anmeldedaten zuzuweisen.
 
 ![flac-api-credentials](../../images/flac-ui/flac-api-credentials.png)
 
-Wählen Sie die API-Anmeldeinformationen aus der Liste aus, die Sie der Rolle hinzufügen möchten, und klicken Sie auf **[!UICONTROL Speichern]**.
+Wählen Sie die API-Anmeldedaten aus der Liste aus, die Sie der Rolle hinzufügen möchten, und klicken Sie auf **[!UICONTROL Speichern]**.
 
 ![flac-add-api-credentials](../../images/flac-ui/flac-add-api-credentials.png)
 
-Hinzugefügte API-Anmeldeinformationen erscheinen auf der Registerkarte **[!UICONTROL API-Anmeldeinformationen]**.
+Hinzugefügte API-Anmeldedaten erscheinen auf der Registerkarte **[!UICONTROL API-Anmeldedaten]**.
 
 ![flac-added-api-credentials](../../images/flac-ui/flac-added-api-credentials.png)
 
-Um API-Anmeldeinformationen aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X** neben dem Namen der API-Anmeldeinformation.
+Um API-Anmeldedaten aus einer Rolle zu entfernen, klicken Sie auf das Symbol **X** neben dem Namen der API-Anmeldeinformation.
 
 ![flac-remove-api-credentials](../../images/flac-ui/flac-remove-api-credentials.png)
 
-Der Dialog **[!UICONTROL API-Anmeldeinformationen entfernen]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
+Der Dialog **[!UICONTROL API-Anmeldedaten entfernen]** wird angezeigt, in dem Sie aufgefordert werden, den Löschvorgang zu bestätigen.
 
 ![flac-confirm-api-credentials-delete](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
-Sie werden zur Registerkarte **[!UICONTROL API-Anmeldeinformationen]** zurückgeleitet.
+Sie werden zur Registerkarte **[!UICONTROL API-Anmeldedaten]** zurückgeleitet.
 
 ## Verwalten von Benutzergruppen für Rollen
 

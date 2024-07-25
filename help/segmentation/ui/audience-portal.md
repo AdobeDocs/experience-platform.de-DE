@@ -1,13 +1,13 @@
 ---
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 65%
 
 ---
-
 
 # Übersicht über Audience Portal
 
@@ -90,7 +90,7 @@ Das Tortendiagramm wird mit einer Aufschlüsselung der Zielgruppen nach Zielgrup
 
 ### Anpassen {#customize}
 
-Sie können Audience Portal zusätzliche Felder hinzufügen, indem Sie ![das Filterattribut-Symbol](../images/ui/audience-portal/filter-attribute.png) auswählen. Diese zusätzlichen Felder umfassen: Lebenszyklusstatus, Aktualisierungshäufigkeit, Zuletzt aktualisiert von, Beschreibung, Erstellt von und Zugriffsbeschriftungen.
+Sie können Audience Portal zusätzliche Felder hinzufügen, indem Sie ![das Filterattribut-Symbol](/help/images/icons/column-settings.png) auswählen. Diese zusätzlichen Felder umfassen: Lebenszyklusstatus, Aktualisierungshäufigkeit, Zuletzt aktualisiert von, Beschreibung, Erstellt von und Zugriffsbeschriftungen.
 
 | Feld | Beschreibung |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Wenn die Aufschlüsselung ausgewählt ist, wird ein Balkendiagramm angezeigt, da
 | [!UICONTROL Bestehend] | Die Anzahl der Profile, die in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags im Segment **verblieben** sind. |
 | [!UICONTROL Verlassen] | Die Anzahl der Profile, die das Segment in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags **verlassen** haben. |
 
-Nachdem Sie die Felder ausgewählt haben, die angezeigt werden sollen, können Sie auch die Breite der angezeigten Spalten anpassen. Ziehen Sie dazu entweder den Bereich zwischen die Spalten oder wählen Sie das Symbol ![Pfeil](../images/ui/audience-portal/arrow-icon.png) der Spalte aus, deren Größe geändert werden soll, gefolgt von der Spalte **[!UICONTROL Größe ändern]**.
+Nachdem Sie die Felder ausgewählt haben, die angezeigt werden sollen, können Sie auch die Breite der angezeigten Spalten anpassen. Ziehen Sie dazu entweder den Bereich zwischen die Spalten oder wählen Sie das Symbol ![Pfeil](/help/images/icons/chevron-down.png) der Spalte aus, deren Größe geändert werden soll, gefolgt von der Spalte **[!UICONTROL Größe ändern]**.
 
 ![Die Schaltfläche Spaltengröße ändern ist hervorgehoben.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Sobald sich die Zielgruppe in einem Ordner befindet, können Sie festlegen, dass
 
 Sie können Ihre Zielgruppen auch nach verschiedenen Einstellungen filtern.
 
-Um die verfügbaren Zielgruppen zu filtern, wählen Sie das ![Filtersymbol](../images/ui/audience-portal/filter-icon.png).
+Um die verfügbaren Zielgruppen zu filtern, wählen Sie das ![Filtersymbol](/help/images/icons/filter.png).
 
 ![Die Seite „Zielgruppen durchsuchen“ wird angezeigt, wobei das Filtersymbol hervorgehoben ist.](../images/ui/audience-portal/browse-select-filter.png)
 

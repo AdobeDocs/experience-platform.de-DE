@@ -4,7 +4,7 @@ title: Bearbeiten von Aktivierungsdatenflüssen
 type: Tutorial
 description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsdatenfluss in Adobe Experience Platform zu bearbeiten.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 25%
@@ -23,7 +23,7 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsdatenflüsse zu bearbeiten:
 
    ![Ziele durchsuchen](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Wählen Sie das Symbol ![Filter](../assets/ui/edit-activation/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/edit-activation/filter-destinations.png)
 

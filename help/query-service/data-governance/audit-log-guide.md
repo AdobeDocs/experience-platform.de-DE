@@ -2,7 +2,7 @@
 title: Auditprotokollintegration für Query Service
 description: Die Auditprotokolle von Query Service enthalten Aufzeichnungen zu verschiedenen Benutzeraktionen, um ein Audit-Protokoll zur Fehlerbehebung bei Problemen oder zur Einhaltung von Richtlinien zur Unternehmensdatenverwaltung und Regulierungsanforderungen zu erstellen. Dieses Tutorial bietet einen Überblick über die Auditprotokollfunktionen, die speziell für Query Service gelten.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Die von [!DNL Query Service] bereitgestellten Auditprotokollkategorien lauten wi
 
 ## Durchführen eines [!DNL Query Service]-Auditprotokolls {#perform-an-audit-log}
 
-Um eine Prüfung für [!DNL Query Service] -Aktivitäten durchzuführen, wählen Sie **[!UICONTROL Audits]** aus der linken Navigation, gefolgt vom Trichtersymbol (![Filtersymbol).](../images/audit-log/filter.png)), um eine Liste von Filtersteuerelementen anzuzeigen, mit deren Hilfe Ergebnisse eingegrenzt werden können.
+Um eine Prüfung für [!DNL Query Service] -Aktivitäten durchzuführen, wählen Sie **[!UICONTROL Audits]** aus der linken Navigation, gefolgt vom Trichtersymbol (![Filtersymbol).](/help/images/icons/filter.png)), um eine Liste von Filtersteuerelementen anzuzeigen, mit deren Hilfe Ergebnisse eingegrenzt werden können.
 
 ![Das Auditprotokoll-Dashboard der Platform-Benutzeroberfläche mit &quot;Audits&quot;im linken Navigations- und Filtersteuerelement hervorgehoben.](../images/audit-log/filter-controls.png)
 

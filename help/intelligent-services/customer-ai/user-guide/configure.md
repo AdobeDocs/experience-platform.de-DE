@@ -5,7 +5,7 @@ feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2827'
 ht-degree: 7%
@@ -72,7 +72,7 @@ Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die Schalt
 
 ![Datensatz auswählen](../images/user-guide/select-datasets.png)
 
-Wenn Sie das Infosymbol ![Infosymbol](../images/user-guide/info-icon.png) neben dem Datensatz auswählen, wird das Popup-Fenster für die Datensatzvorschau geöffnet.
+Wenn Sie das Infosymbol ![Infosymbol](/help/images/icons/info.png) neben dem Datensatz auswählen, wird das Popup-Fenster für die Datensatzvorschau geöffnet.
 
 ![Wählen Sie den Datensatz aus und suchen Sie nach ihm](../images/user-guide/dataset-info.png)
 

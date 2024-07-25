@@ -2,7 +2,7 @@
 title: Datenvorbereitung für die Datenerfassung
 description: Erfahren Sie, wie Sie beim Konfigurieren eines Datenstroms für die Adobe Experience Platform Web- und Mobile-SDKs Ihre Daten einem XDM-Ereignisschema (Experience-Datenmodell) zuordnen können.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ Um eine Zuordnungsregel zu erstellen, wählen Sie **[!UICONTROL Neue Zuordnung h
 
 ![Hinzufügen einer neuen Zuordnung.](assets/data-prep/add-new-mapping.png)
 
-Wählen Sie das Quellensymbol (![Quellensymbol](assets/data-prep/source-icon.png)) und danach im sich öffnenden Dialogfeld das Quellfeld aus, das Sie auf der bereitgestellten Arbeitsfläche zuordnen möchten. Nachdem Sie ein Feld ausgewählt haben, verwenden Sie die Schaltfläche **[!UICONTROL Auswählen]**, um fortzufahren.
+Wählen Sie das Quellensymbol (![Quellensymbol](/help/images/icons/source.png)) und danach im sich öffnenden Dialogfeld das Quellfeld aus, das Sie auf der bereitgestellten Arbeitsfläche zuordnen möchten. Nachdem Sie ein Feld ausgewählt haben, verwenden Sie die Schaltfläche **[!UICONTROL Auswählen]**, um fortzufahren.
 
 ![Auswahl des Felds, das im Quellschema zugeordnet werden soll.](assets/data-prep/source-mapping.png)
 
-Wählen Sie anschließend das Schemasymbol (![Schemasymbol](assets/data-prep/schema-icon.png)) aus, um ein ähnliches Dialogfeld für das Zielereignisschema zu öffnen. Wählen Sie das Feld aus, dem Sie die Daten zuordnen möchten, und bestätigen Sie dann mit **[!UICONTROL Auswählen]**.
+Wählen Sie anschließend das Schemasymbol (![Schemasymbol](/help/images/icons/schema.png)) aus, um ein ähnliches Dialogfeld für das Zielereignisschema zu öffnen. Wählen Sie das Feld aus, dem Sie die Daten zuordnen möchten, und bestätigen Sie dann mit **[!UICONTROL Auswählen]**.
 
 ![Auswahl des Felds, das im Zielschema zugeordnet werden soll.](assets/data-prep/target-mapping.png)
 

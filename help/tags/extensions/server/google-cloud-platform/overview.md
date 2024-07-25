@@ -3,7 +3,7 @@ title: Google Cloud Platform-Erweiterung zur Ereignisweiterleitung
 description: Diese Ereignisweiterleitungs-Erweiterung von Adobe Experience Platform sendet Edge Network-Ereignisse an Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 3%
@@ -47,8 +47,8 @@ Nachdem die Erweiterung installiert wurde, erstellen Sie eine neue Ereignisweite
 | Eingabe | Beschreibung |
 | --- | --- |
 | [!UICONTROL Thema] | Das Thema, das die Ereignisse von der Ereignisweiterleitung erhält. Der Wert muss das Format `projects/{projectName}/topics/{topicName}` aufweisen. |
-| [!UICONTROL Daten] | Dieses Feld enthält die Daten, die im JSON-Format an das Thema [!DNL Cloud Pub/Sub] weitergeleitet werden sollen.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Daten darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
-| [!UICONTROL Attribute] | Dieses Feld enthält das JSON-Objekt mit zusätzlichen Attributen, die zusammen mit der Nachricht gesendet werden.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](../../../images/extensions/server/aws/data-element-icon.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Daten darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
+| [!UICONTROL Daten] | Dieses Feld enthält die Daten, die im JSON-Format an das Thema [!DNL Cloud Pub/Sub] weitergeleitet werden sollen.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](/help/images/icons/database.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Daten darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
+| [!UICONTROL Attribute] | Dieses Feld enthält das JSON-Objekt mit zusätzlichen Attributen, die zusammen mit der Nachricht gesendet werden.<br><br>Unter der Option **[!UICONTROL Raw]** können Sie das JSON-Objekt direkt in das bereitgestellte Textfeld einfügen. Alternativ können Sie das Datenelementsymbol (![Datensatzsymbol](/help/images/icons/database.png)) auswählen, das aus einer Liste vorhandener Datenelemente ausgewählt werden soll, um die Daten darzustellen.<br><br>Sie können auch die Option **[!UICONTROL JSON Key-Value Paares Editor]** verwenden, um jedes Schlüssel-Wert-Paar manuell über einen UI-Editor hinzuzufügen. Jeder Wert kann durch eine Roheingabe dargestellt werden oder stattdessen kann ein Datenelement ausgewählt werden. |
 
 {style="table-layout:auto"}
 
