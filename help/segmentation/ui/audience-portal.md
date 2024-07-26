@@ -2,9 +2,9 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '3693'
+source-wordcount: '3725'
 ht-degree: 65%
 
 ---
@@ -391,7 +391,9 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 >
 >Standardmäßig haben extern erstellte Zielgruppen einen Datenablauf von 30 Tagen. Die Datengültigkeit wird zurückgesetzt, wenn die Audience aktualisiert oder geändert wird.
 >
->Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie **1} die erforderlichen Datennutzungsbezeichnungen anwenden, bevor Sie sie für ein beliebiges Ziel aktivieren.** Da Variablen aus extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten Sie **nicht** Einwilligungsdaten in Ihre CSV-Datei aufnehmen. Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation zu [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md).
+>Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie **1} die erforderlichen Datennutzungsbezeichnungen anwenden, bevor Sie sie für ein beliebiges Ziel aktivieren.** Da Variablen aus extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten Sie **nicht** Einwilligungsdaten in Ihre CSV-Datei aufnehmen.
+>
+>Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation zu [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md). Allgemeine Informationen zu Datennutzungsbezeichnungen in Platform finden Sie in der [Übersicht über Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) . Informationen zur Funktionsweise von Einwilligungen in extern generierten Zielgruppen finden Sie in den [häufig gestellten Fragen zu Zielgruppen](../faq.md#consent) .
 
 ## Nächste Schritte
 

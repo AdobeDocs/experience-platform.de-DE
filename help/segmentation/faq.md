@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4187'
+source-wordcount: '4362'
 ht-degree: 21%
 
 ---
@@ -56,6 +56,16 @@ Während beim Erstellen von Zielgruppen mit Segment Builder auf die extern gener
 
 Ja, die extern generierte Zielgruppe wird mit dem in Platform vorhandenen Profil zusammengeführt, wenn die primären Kennungen übereinstimmen. Die Abstimmung dieser Daten kann bis zu 24 Stunden dauern. Wenn noch keine Profildaten vorhanden sind, wird bei der Aufnahme der Daten ein neues Profil erstellt.
 
+### Wie werden die Voreinstellungen für die Kundenzustimmung für extern erstellte Zielgruppen berücksichtigt, die in Audience Portal importiert werden?{#consent}
+
+Da Kundendaten aus mehreren Kanälen erfasst werden, ermöglichen Identitätszusammenfügungs- und Zusammenführungsrichtlinien die Konsolidierung dieser Daten in einem einzigen Echtzeit-Kundenprofil. Informationen zu den Zustimmungsvoreinstellungen der Kunden werden auf Profilebene gespeichert und ausgewertet.
+
+Nachgelagerte Ziele überprüfen jedes Profil vor der Aktivierung auf Zustimmungsinformationen. Die Einwilligungsinformationen jedes Profils werden mit den Einwilligungsanforderungen für ein bestimmtes Ziel verglichen. Wenn das Profil die Anforderungen nicht erfüllt, wird dieses Profil nicht an ein Ziel gesendet.
+
+Wenn eine externe Zielgruppe in Audience Portal aufgenommen wird, werden sie mithilfe einer primären ID wie E-Mail oder ECID mit vorhandenen Profilen verbunden. Daher bleiben die bestehenden Zustimmungsrichtlinien während der gesamten Aktivierung in Kraft.
+
+Beachten Sie bitte, dass Sie **nicht** Einwilligungsinformationen mit einer extern generierten Zielgruppe einbeziehen sollten, da die Payload-Variablen **nicht** im Profilspeicher, sondern im Daten-Pool gespeichert sind. Stattdessen müssen Sie **** einen Adobe Experience Platform-Erfassungskanal verwenden, in den Profildaten importiert werden.
+
 ### Kann ich eine extern generierte Zielgruppe verwenden, um andere Zielgruppen zu erstellen?
 
 Ja, alle extern generierten Zielgruppen werden im Zielgruppeninventar angezeigt und können verwendet werden, wenn Zielgruppen innerhalb des [Segment Builders](./ui/segment-builder.md) erstellt werden.
@@ -80,7 +90,7 @@ Die unternehmensspezifische standardmäßige Zusammenführungsrichtlinie wird be
 
 ### Wo kann ich extern generierte Zielgruppen aktivieren?
 
-Eine extern generierte Zielgruppe kann jedem RTCDP-Ziel zugeordnet und in Adobe Journey Optimizer-Kampagnen verwendet werden.
+Eine extern generierte Zielgruppe kann jedem Ziel zugeordnet und in Adobe Journey Optimizer-Kampagnen verwendet werden.
 
 ### Wie bald sind extern generierte Zielgruppen zur Aktivierung bereit?
 
