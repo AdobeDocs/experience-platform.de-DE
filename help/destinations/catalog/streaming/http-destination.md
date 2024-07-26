@@ -4,10 +4,10 @@ title: HTTP-API-Verbindung
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an Drittanbieter-HTTP-Endpunkte zu senden. Damit können Sie Ihre eigenen Analysen oder andere Vorgänge ausführen, die Sie möglicherweise für Profildaten benötigen, die aus Experience Platform exportiert wurden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
 workflow-type: tm+mt
-source-wordcount: '2639'
-ht-degree: 73%
+source-wordcount: '2664'
+ht-degree: 72%
 
 ---
 
@@ -76,6 +76,8 @@ Wenn Sie [!DNL mTLS] mit [!DNL HTTP API] -Zielen verwenden möchten, muss für d
 Wenn Sie die Werte [!DNL Common Name] (CN) und [!DNL Subject Alternative Names] (SAN) überprüfen möchten, um eine zusätzliche Validierung von Drittanbietern durchzuführen, können Sie das folgende Zertifikat herunterladen:
 
 * [Öffentliches HTTP-API-mTLS-Zertifikat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
+Sie können auch öffentliche Zertifikate sicher abrufen, indem Sie eine GET-Anfrage an den MTLS-Endpunkt senden. Weitere Informationen finden Sie in der Dokumentation zum [öffentlichen Zertifikatendpunkt](../../../data-governance/mtls-api/public-certificate-endpoint.md) .
 
 ## Zulassungsliste von IP-Adressen {#ip-address-allowlist}
 

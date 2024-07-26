@@ -2,9 +2,9 @@
 title: Datenverschlüsselung in Adobe Experience Platform
 description: Erfahren Sie, wie Daten im Transit und im Ruhezustand in Adobe Experience Platform verschlüsselt werden.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 8%
 
 ---
@@ -54,6 +54,8 @@ Wenn Sie die CN oder das SAN überprüfen möchten, um eine zusätzliche Validie
 
 - [Das öffentliche Adobe Journey Optimizer-Zertifikat](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [Das öffentliche Zertifikat des Zieldienstes ](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+
+Sie können auch öffentliche Zertifikate sicher abrufen, indem Sie eine GET-Anfrage an den MTLS-Endpunkt senden. Weitere Informationen finden Sie in der Dokumentation zum [öffentlichen Zertifikatendpunkt](../../data-governance/mtls-api/public-certificate-endpoint.md) .
 
 ## Ruhezeiten {#at-rest}
 

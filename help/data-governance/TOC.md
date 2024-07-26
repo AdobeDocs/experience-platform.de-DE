@@ -5,10 +5,10 @@ breadcrumb-title: Data Governance-Handbuch
 user-guide-description: Setzen Sie Datennutzungsbeschränkungen durch die Verwendung von Kennzeichnungen, Marketing-Aktionen und Governance-Richtlinien durch.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 100%
+source-wordcount: '99'
+ht-degree: 93%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 100%
    * [Übersicht](enforcement/overview.md)
    * [Automatische Durchsetzung](enforcement/auto-enforcement.md)
    * [API-basierte Durchsetzung](enforcement/api-enforcement.md)
+* MTLS Service API {#mtls-api}
+   * [Übersicht](mtls-api/overview.md)
+   * [Erste Schritte](mtls-api/getting-started.md)
+   * [Endpunkt &quot;Öffentliches Zertifikat&quot;](mtls-api/public-certificate-endpoint.md)
 * Policy Service-API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)

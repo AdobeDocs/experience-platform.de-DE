@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Erste Schritte mit Adobe Experience Platform-APIs
 description: Adobe Experience Platform bietet API-Dienste an, die eng miteinander verbunden sind. Dieses Handbuch enthält Informationen zu den verfügbaren Diensten, erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiel-API-Aufrufen.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 28%
+source-wordcount: '1446'
+ht-degree: 27%
 
 ---
 
@@ -124,8 +124,10 @@ Weitere Informationen zu bestimmten Endpunkten in Platform-APIs, einschließlich
 | [[!DNL Catalog Service] API-Handbuch](.././catalog/api/getting-started.md) | Mit der API [!DNL Catalog Service] können Entwickler Datensatzmetadaten in Adobe Experience Platform verwalten. Dazu gehören Datenspeicherorte, Verarbeitungsphasen, während der Verarbeitung aufgetretene Fehler und Datenberichte. |
 | [[!DNL Data Access] API-Handbuch](.././data-access/api.md) | Mit der [!DNL Data Access] -API können Entwickler Informationen zu erfassten Datensätzen innerhalb von Experience Platform abrufen. Dazu gehören der Zugriff auf und das Herunterladen von Datensatzdateien, das Abrufen von Kopfzeileninformationen, das Auflisten fehlgeschlagener und erfolgreicher Batches sowie das Herunterladen von CSV-/Parquet-Vorschaudateien. |
 | [[!DNL Dataset Service] API-Handbuch](.././data-governance/labels/dataset-api.md) | Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet. |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | Mit der API [!DNL Data Hygiene] können Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmgesteuert korrigieren oder löschen sowie Ablaufdaten für Datensätze planen. |
 | [[!DNL Edge Network Server] API-Handbuch](../server-api/overview.md) | Der [!DNL Edge Network Server API] kann für eine Vielzahl von Anwendungsfällen zur Datenerfassung, Personalisierung, Werbung und Marketing verwendet werden. Der [!DNL Server API] kann auf Servern, [!DNL IoT] Geräten, Set-Top-Boxen und verschiedenen anderen Geräten verwendet werden. |
 | [[!DNL Identity Service] API-Handbuch](.././identity-service/api/getting-started.md) | Mit der API [!DNL Identity Service] können Entwickler die geräteübergreifende, kanalübergreifende und nahezu echtzeitübergreifende Identifizierung Ihrer Kunden mithilfe von Identitätsdiagrammen in Adobe Experience Platform verwalten. |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | Mit der API [!DNL MTLS Service] können Sie öffentliche Zertifikate, die von Adobe für Ihr Unternehmen ausgestellt wurden, sicher abrufen. |
 | [[!DNL Observability Insights] API-Handbuch](.././observability/api/overview.md) | [!DNL Observability Insights] ist eine RESTful-API, mit der Entwickler wichtige Beobachtbarkeitsmetriken in Adobe Experience Platform verfügbar machen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Performance-Indikatoren für verschiedene Platform-Funktionen. |
 | [[!DNL Policy Service] API-Handbuch](.././data-governance/api/overview.md) <br> (Data Governance) | Mit der [!DNL Policy Service] -API können Sie Datennutzungsbezeichnungen und -richtlinien erstellen und verwalten, um zu bestimmen, welche Marketing-Aktionen für Daten mit bestimmten Datennutzungsbezeichnungen durchgeführt werden können. Informationen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im Handbuch zur [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) . |
 | [[!DNL Privacy Service] API-Handbuch](.././privacy-service/api/getting-started.md) | Die [!DNL Privacy Service] -API ermöglicht es Entwicklern, Kundenanfragen für den Zugriff auf oder die Löschung ihrer personenbezogenen Daten in allen Experience Cloud-Applikationen gemäß den gesetzlichen Datenschutzbestimmungen zu erstellen und zu verwalten. |
