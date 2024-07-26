@@ -4,14 +4,20 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Debugg
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
+source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 65%
+source-wordcount: '781'
+ht-degree: 64%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
+
+## Version 1.6.1 – Freitag, 25. Juli 2024
+
+### Fehlerbehebungen und Verbesserungen
+
+* Es wurde ein Problem behoben, durch das Benutzer keine neuen Tags-Einbettungscodes zu Seiten hinzufügen konnten, für die sie nicht vorhanden waren.
 
 ## Version 1.6.0 – Freitag, 11. Juli 2024
 
@@ -31,7 +37,7 @@ ht-degree: 65%
 ### Fehlerbehebungen und Verbesserungen
 
 * Es wurde ein Problem behoben, bei dem Einstellungen nicht beibehalten wurden.
-* Es wurde ein Fehler behoben, der dazu führte, dass der Debugger abstürzte, während Analytics Post-verarbeitete Treffer angezeigt wurden.
+* Es wurde ein Fehler behoben, der dazu führte, dass der Debugger abstürzte, während die Analytics-Treffer nach der Verarbeitung angezeigt wurden.
 
 ## Version 1.5.3 – Donnerstag, 6. Dezember 2023
 
