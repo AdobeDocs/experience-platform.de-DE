@@ -2,10 +2,10 @@
 description: Verwenden Sie Vorlagen für Zielgruppen-Metadaten, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine erweiterungsfähige Vorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe zur Strukturierung der API-Aufrufe an Ihr Ziel verwendet.
 title: Verwaltung von Zielgruppen-Metadaten
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
+source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 100%
+source-wordcount: '1308'
+ht-degree: 75%
 
 ---
 
@@ -49,15 +49,14 @@ Sie können die generische Vorlage zur [Erstellung einer neuen Zielgruppenvorlag
 
 * Die HTTP-Methoden: POST, GET, PUT, DELETE, PATCH
 * Die Authentifizierungstypen: OAuth 1, OAuth 2 mit Aktualisierungs-Token, OAuth 2 mit Bearer-Token
-* Die Funktionen: Erstellen einer Zielgruppe, Aktualisieren einer Zielgruppe, Abrufen einer Zielgruppe, Löschen einer Zielgruppe, Validieren der Anmeldeinformationen
+* Die Funktionen: Erstellen einer Zielgruppe, Aktualisieren einer Zielgruppe, Abrufen einer Zielgruppe, Löschen einer Zielgruppe, Validieren der Anmeldedaten
 
 Das Engineering-Team von Adobe ist Ihnen gern dabei behilflich, die generische Vorlage mit benutzerdefinierten Feldern zu erweitern, wenn dies für Ihre Anwendungsfälle erforderlich ist.
 
-## Konfigurationsbeispiele {#configuration-examples}
 
-Dieser Abschnitt enthält drei Beispiele für allgemeine Konfigurationen von Zielgruppen-Metadaten sowie Beschreibungen der wichtigsten Abschnitte der Konfiguration. Beachten Sie, wie sich URL, Kopfzeilen sowie der Aufbau von Anfrage und Antwort zwischen den drei Beispielkonfigurationen unterscheiden. Dies liegt an den unterschiedlichen Spezifikationen der Marketing-API der drei Beispielplattformen.
+## Unterstützte Vorlagenereignisse {#supported-events}
 
-Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToken}}` oder `{{segment.name}}` in der URL und in anderen Beispielen in den Kopfzeilen oder im Anfragetext verwendet werden. Das hängt von den Spezifikationen Ihrer Marketing-API ab.
+In der folgenden Tabelle werden die Ereignisse beschrieben, die von Vorlagen für Zielgruppen-Metadaten unterstützt werden.
 
 | Vorlagenbereich | Beschreibung |
 |--- |--- |
@@ -66,10 +65,21 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 | `delete` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Kopfzeilen, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen sowie Segmente und Zielgruppen in Ihrer Plattform programmgesteuert zu löschen. |
 | `validate` | Führt Überprüfungen für alle Felder in der Vorlagenkonfiguration durch, bevor Sie die Partner-API aufrufen. Sie können beispielsweise überprüfen, ob die Account-ID des Benutzers korrekt eingegeben wurde. |
 | `notify` | Gilt nur für dateibasierte Ziele. Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Header, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen und Sie über erfolgreiche Dateiexporte zu informieren. |
+| `createDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Header, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, einen Datenfluss in Ihrer Plattform programmgesteuert zu erstellen und die Informationen wieder mit Adobe Experience Platform zu synchronisieren. |
+| `updateDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Header, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen, einen Datenfluss in Ihrer Plattform programmgesteuert zu aktualisieren und die Informationen wieder mit Adobe Experience Platform zu synchronisieren. |
+| `deleteDestination` | Umfasst alle erforderlichen Komponenten (URL, HTTP-Methode, Header, Anfrage- und Antworttext), um einen HTTP-Aufruf an Ihre API durchzuführen und einen Datenfluss programmgesteuert von Ihrer Plattform zu löschen. |
 
 {style="table-layout:auto"}
 
-### Streaming-Beispiel 1 {#example-1}
+## Konfigurationsbeispiele {#configuration-examples}
+
+Dieser Abschnitt enthält Beispiele für allgemeine Zielgruppen-Metadatenkonfigurationen, die Sie als Referenz verwenden können.
+
+Beachten Sie, wie sich URL, Kopfzeilen und Anfragetexte zwischen den drei Beispielkonfigurationen unterscheiden. Dies liegt an den unterschiedlichen Spezifikationen der Marketing-API der drei Beispielplattformen.
+
+Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToken}}` oder `{{segment.name}}` in der URL und in anderen Beispielen in den Kopfzeilen oder im Anfragetext verwendet werden. Ihre Verwendung hängt von Ihren Marketing-API-Spezifikationen ab.
+
++++Streaming-Beispiel 1
 
 ```json
 {
@@ -178,7 +188,9 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 }
 ```
 
-### Streaming-Beispiel 2 {#example-2}
++++
+
++++Streaming-Beispiel 2
 
 ```json
 {
@@ -272,7 +284,9 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 }
 ```
 
-### Streaming-Beispiel 3 {#example-3}
++++
+
++++Streaming-Beispiel 3
 
 ```json
 {
@@ -374,8 +388,9 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 }
 ```
 
++++
 
-### Dateibasiertes Beispiel {#example-file-based}
++++Dateibasiertes Beispiel
 
 ```json
 {
@@ -521,6 +536,8 @@ Beachten Sie, dass in einigen Beispielen Makro-Felder wie `{{authData.accessToke
 }
 ```
 
++++
+
 Beschreibungen aller Parameter in der Vorlage finden Sie in der API-Referenz zum [Erstellen einer Zielgruppenvorlage](../metadata-api/create-audience-template.md).
 
 ## Verwendete Makros in Vorlagen für Zielgruppen-Metadaten {#macros}
@@ -537,5 +554,12 @@ Um Informationen wie Zielgruppen-IDs, Zugriffs-Token, Fehlermeldungen und mehr z
 | `{{authData.accessToken}}` | Ermöglicht die Weitergabe des Zugriffs-Tokens an den API-Endpunkt. Verwenden Sie `{{authData.accessToken}}`, wenn Experience Platform nicht ablaufende Token verwenden soll, um eine Verbindung zu Ihrem Ziel herzustellen. Andernfalls verwenden Sie `{{oauth2ServiceAccessToken}}`, um ein Zugriffs-Token zu generieren. |
 | `{{body.segments[0].segment.id}}` | Gibt die eindeutige Kennung der erstellten Zielgruppe als Wert des Schlüssels `externalAudienceId` zurück. |
 | `{{error.message}}` | Gibt eine Fehlermeldung zurück, die Benutzerinnen und Benutzern in der Benutzeroberfläche von Experience Platform angezeigt wird. |
+| `{{{segmentEnrichmentAttributes}}}` | Ermöglicht den Zugriff auf alle Anreicherungsattribute für eine bestimmte Zielgruppe.  Dieses Makro wird von den Ereignissen `create`, `update` und `delete` unterstützt. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl finden Sie im [Batch-Zielgruppenaktivierungshandbuch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) . |
+| `{{destination.name}}` | Gibt den Namen Ihres Ziels zurück. |
+| `{{destination.sandboxName}}` | Gibt den Namen der Experience Platform-Sandbox zurück, in der Ihr Ziel konfiguriert ist. |
+| `{{destination.id}}` | Gibt die ID Ihrer Zielkonfiguration zurück. |
+| `{{destination.imsOrgId}}` | Gibt die IMS-Organisations-ID zurück, in der Ihr Ziel konfiguriert ist. |
+| `{{destination.enrichmentAttributes}}` | Ermöglicht den Zugriff auf alle Anreicherungsattribute für alle Zielgruppen, die einem Ziel zugeordnet sind. Dieses Makro wird von den Ereignissen `createDestination`, `updateDestination` und `deleteDestination` unterstützt. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl finden Sie im [Batch-Zielgruppenaktivierungshandbuch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) . |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Ermöglicht den Zugriff auf Anreicherungsattribute für bestimmte externe Zielgruppen, die einem Ziel zugeordnet sind. Anreicherungsattribute sind nur für [benutzerdefinierte Upload-Zielgruppen](destination-configuration/schema-configuration.md#external-audiences) verfügbar. Informationen zur Funktionsweise der Anreicherungsattribut-Auswahl finden Sie im [Batch-Zielgruppenaktivierungshandbuch](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) . |
 
 {style="table-layout:auto"}
