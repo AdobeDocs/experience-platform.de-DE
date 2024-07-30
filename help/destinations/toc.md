@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1248'
 ht-degree: 87%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 87%
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-Verbindung](./catalog/adobe/marketo-measure-ultimate.md)
       * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
+      * [Verbindung zur Zusammenstellung von Federated Audience (begrenzte Verfügbarkeit)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Werbeziele{#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -275,11 +276,11 @@ ht-degree: 87%
       * [Abrufen einer Zielgruppenvorlage](./destination-sdk/metadata-api/retrieve-audience-template.md)
       * [Aktualisieren einer Zielgruppenvorlage](./destination-sdk/metadata-api/update-audience-template.md)
       * [Löschen einer Zielgruppenvorlage](./destination-sdk/metadata-api/delete-audience-template.md)
-   * API-Referenz für Berechtigungskonfigurationen {#credentials-api}
-      * [Erstellen einer Berechtigungskonfiguration](./destination-sdk/credentials-api/create-credential-configuration.md)
-      * [Abrufen einer Berechtigungskonfiguration](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
-      * [Aktualisieren einer Berechtigungskonfiguration](./destination-sdk/credentials-api/update-credential-configuration.md)
-      * [Löschen einer Berechtigungskonfiguration](./destination-sdk/credentials-api/delete-credential-configuration.md)
+   * API-Referenz für Anmeldedaten-Konfigurationen {#credentials-api}
+      * [Erstellen einer Anmeldedaten-Konfiguration](./destination-sdk/credentials-api/create-credential-configuration.md)
+      * [Abrufen einer Anmeldedaten-Konfiguration](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
+      * [Aktualisieren einer Anmeldedaten-Konfiguration](./destination-sdk/credentials-api/update-credential-configuration.md)
+      * [Löschen einer Anmeldedaten-Konfiguration](./destination-sdk/credentials-api/delete-credential-configuration.md)
    * API-Referenz für Zieltests {#testing-api}
       * Streaming-Zieltest-API {#streaming-destinations}
          * [Streaming-Zieltest-API – Überblick](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Segmentierungs-Service – Übersicht
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 96%
+source-wordcount: '1700'
+ht-degree: 92%
 
 ---
 
@@ -51,6 +51,14 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >Bei einer Erweiterung eines Schemas müssen bei allen künftigen Uploads auch die neu hinzugefügten Felder entsprechend aktualisiert werden. Weitere Informationen zum Anpassen von [!DNL Experience Data Model] (XDM) finden Sie im [Tutorial zum Schema-Editor](../xdm/tutorials/create-schema-ui.md).
 >
 >Wenn für den Datensatz ein Wert der Gültigkeitsdauer von Erlebnisereignissen aktiviert ist, könnte sich dies auf die Zugehörigkeit der erstellten Segmentdefinitionen auswirken. Weiterführende Informationen dazu, wie sich diese Funktion auf die Segmentierung auswirken kann, finden Sie im Handbuch zur [Gültigkeitsdauer von Erlebnisereignissen](../profile/event-expirations.md).
+
+### Komposition föderierter Zielgruppen {#fac}
+
+Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Zusammengestellte Zielgruppen-Komposition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+>[!AVAILABILITY]
+>
+>Die Komposition föderierter Zielgruppen ist derzeit nur für eine Gruppe von ausgewählten Organisationen verfügbar (eingeschränkte Verfügbarkeit). Weitere Informationen erhalten Sie beim Adobe-Support.
 
 ## Bewerten von Zielgruppen {#evaluate-segments}
 

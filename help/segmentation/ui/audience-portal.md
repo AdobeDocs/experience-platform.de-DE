@@ -2,10 +2,10 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
-ht-degree: 65%
+source-wordcount: '3826'
+ht-degree: 63%
 
 ---
 
@@ -25,6 +25,7 @@ In Audience Portal können Sie die folgenden Aufgaben ausführen:
 - [Erstellen einer Zielgruppe](#create-audience)
    - [Erstellen einer Zielgruppe mit Segment Builder](#segment-builder)
    - [Verwenden der Zielgruppenkomposition zum Erstellen einer Zielgruppe](#audience-composition)
+   - [Verwenden Sie Federated Audience Komposition , um eine Audience mithilfe von Daten aus Ihrem vorhandenen Data Warehouse zu erstellen](#fac) (begrenzte Verfügbarkeit).
 - [Importieren von extern generierten Zielgruppen](#import-audience)
 
 Um Audience Portal zu öffnen, wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** im Abschnitt &quot;Segmentierung&quot;aus.
@@ -339,6 +340,12 @@ Durch Auswählen von **[!UICONTROL Zielgruppen erstellen]** gelangen Sie zur Zie
 Wenn Sie **[!UICONTROL Regel erstellen]** auswählen, gelangen Sie zum Segment Builder. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Segmentdefinitionen, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen. Weitere Informationen zum Erstellen von Segmentdefinitionen finden Sie im [Segment Builder-Handbuch](./segment-builder.md)
 
 ![Der Segment Builder-Arbeitsbereich wird angezeigt.](../images/ui/audience-portal/segment-builder.png)
+
+### Komposition föderierter Zielgruppen {#fac}
+
+Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Zusammengestellte Zielgruppen-Komposition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Eine Liste der Zielgruppen, die in Federated Audience Komposition für Ihr Unternehmen erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
 
 ## Importieren einer Zielgruppe {#import-audience}
 

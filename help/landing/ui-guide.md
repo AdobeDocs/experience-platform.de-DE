@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Experience Platform-Benutzeroberfläche
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1947'
 ht-degree: 3%
 
 ---
@@ -43,13 +43,13 @@ Das Daten-Dashboard der letzten Zeit enthält Informationen zu kürzlich erstell
 
 ![](images/user-guide/homepage-recent.png)
 
-Im Abschnitt **[!UICONTROL Letzte Datensätze]** werden die fünf zuletzt erstellten Datensätze in Ihrer Organisation aufgelistet. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Datensatz erstellt wird. Sie können einen Datensatz aus der Liste auswählen, um weitere Informationen zum angegebenen Datensatz anzuzeigen, oder Sie wählen **[!UICONTROL Alle anzeigen]** , um eine Liste aller erstellten Datensätze anzuzeigen. Weitere Informationen zu Datensätzen finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
+Im Abschnitt **[!UICONTROL Letzte Datensätze]** werden die fünf zuletzt erstellten Datensätze in Ihrer Organisation aufgelistet. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Datensatz erstellt wird. Sie können einen Datensatz aus der Liste auswählen, um weitere Informationen zum angegebenen Datensatz anzuzeigen. Sie können auch **[!UICONTROL Alle anzeigen]** auswählen, um eine Liste aller erstellten Datensätze anzuzeigen. Weitere Informationen zu Datensätzen finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
 
-Im Abschnitt **[!UICONTROL Letzte Quellen]** werden die fünf zuletzt erstellten Quell-Connectoren innerhalb Ihres Unternehmens aufgelistet. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Quell-Connector erstellt wird. Sie können eine Quellverbindung aus der Liste auswählen, um weitere Informationen zum angegebenen Connector anzuzeigen, oder auf **[!UICONTROL Alle anzeigen]** klicken, um eine Liste aller erstellten Quellverbindungen anzuzeigen. Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../sources/home.md).
+Im Abschnitt **[!UICONTROL Letzte Quellen]** werden die fünf zuletzt erstellten Quell-Connectoren innerhalb Ihres Unternehmens aufgelistet. Diese Liste wird jedes Mal aktualisiert, wenn ein neuer Quell-Connector erstellt wird. Sie können eine Quellverbindung aus der Liste auswählen, um weitere Informationen zum angegebenen Connector anzuzeigen. Sie können auch die Option **[!UICONTROL Alle anzeigen]** auswählen, um eine Liste aller erstellten Quellverbindungen anzuzeigen. Weitere Informationen zu Quellen finden Sie in der [Quellenübersicht](../sources/home.md).
 
-Im Abschnitt **[!UICONTROL Letzte Segmente]** werden die fünf Segmentdefinitionen aufgelistet, die in Ihrem Unternehmen zuletzt erstellt wurden. Diese Liste wird jedes Mal aktualisiert, wenn eine neue Segmentdefinition erstellt wird. Sie können eine Segmentdefinition aus der Liste auswählen, um weitere Informationen zur angegebenen Segmentdefinition anzuzeigen, oder Sie wählen **[!UICONTROL Alle anzeigen]** , um eine Liste aller erstellten Segmentdefinitionen anzuzeigen. Weitere Informationen zu Segmenten finden Sie in der Übersicht über den Segmentierungsdienst [1}.](../segmentation/home.md)
+Im Abschnitt **[!UICONTROL Letzte Segmente]** werden die fünf Segmentdefinitionen aufgelistet, die in Ihrem Unternehmen zuletzt erstellt wurden. Diese Liste wird jedes Mal aktualisiert, wenn eine neue Segmentdefinition erstellt wird. Sie können eine Segmentdefinition aus der Liste auswählen, um weitere Informationen zur angegebenen Segmentdefinition anzuzeigen. Sie können auch **[!UICONTROL Alle anzeigen]** auswählen, um eine Liste aller erstellten Segmentdefinitionen anzuzeigen. Weitere Informationen zu Segmenten finden Sie in der Übersicht über den Segmentierungsdienst [1}.](../segmentation/home.md)
 
-Im Abschnitt **[!UICONTROL Letzte Ziele]** werden die fünf Ziele aufgelistet, die in Ihrem Unternehmen zuletzt erstellt wurden. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen zum angegebenen Ziel anzuzeigen, oder Sie wählen &quot;**[!UICONTROL Alle anzeigen]**&quot;, um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../destinations/home.md).
+Im Abschnitt **[!UICONTROL Letzte Ziele]** werden die fünf Ziele aufgelistet, die in Ihrem Unternehmen zuletzt erstellt wurden. Diese Liste wird jedes Mal aktualisiert, wenn ein neues Ziel erstellt wird. Sie können ein Ziel aus der Liste auswählen, um weitere Informationen zum angegebenen Ziel anzuzeigen. Sie können auch **[!UICONTROL Alle anzeigen]** auswählen, um eine Liste aller erstellten Ziele anzuzeigen. Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../destinations/home.md).
 
 ### Empfohlene Lektüre
 
@@ -117,7 +117,7 @@ Sie können die Navigation in der geöffneten Position sperren, indem Sie nach d
 
 Im Abschnitt **[!UICONTROL Startseite]** können Sie zur Startseite der Platform-Benutzeroberfläche zurückkehren.
 
-Der Abschnitt **[!UICONTROL Workflows]** enthält eine Liste mit mehrstufigen Workflows zur Ausführung von Vorgängen in Platform. Weiterführende Informationen zu Workflows finden Sie in der [Workflow-Übersicht](./workflows.md) .
+Der Abschnitt **[!UICONTROL Workflows]** enthält eine Liste mit mehrstufigen Workflows zur Ausführung von Vorgängen in Platform. Weiterführende Informationen zu Workflows finden Sie in der [Übersicht über Workflows](./workflows.md).
 
 ### [!UICONTROL Verbindungen]
 
@@ -129,7 +129,7 @@ Im Abschnitt **[!UICONTROL Ziele]** können Sie Ziele erstellen, aktualisieren u
 
 Im Abschnitt **[!UICONTROL Profile]** können Sie Kundenprofile durchsuchen, Profilmetriken anzeigen, Zusammenführungsrichtlinien erstellen und verwalten und Vereinigungsschemata anzeigen. Weitere Informationen zur Verwendung des Abschnitts [!UICONTROL Profile] finden Sie im [[!DNL Profile] Benutzerhandbuch](../profile/ui/user-guide.md). Weitere Informationen zum Echtzeit-Kundenprofil finden Sie in der [Übersicht zum Echtzeit-Kundenprofil](../profile/home.md).
 
-Im Abschnitt **[!UICONTROL Zielgruppen]** können Sie Segmentdefinitionen erstellen und verwalten. Weitere Informationen zur Verwendung des Abschnitts [!UICONTROL Zielgruppen] finden Sie im [Benutzerhandbuch zur Segmentierung](../segmentation/ui/overview.md). Weitere Informationen zum Segmentierungsdienst finden Sie in der Übersicht über den Segmentierungsdienst [1}.](../segmentation/home.md)
+Im Abschnitt **[!UICONTROL Zielgruppen]** können Sie Segmentdefinitionen erstellen und verwalten. Weitere Informationen zur Verwendung des Abschnitts [!UICONTROL Zielgruppen] finden Sie im [Benutzerhandbuch zur Segmentierung](../segmentation/ui/overview.md). Weitere Informationen zum Segmentierungsdienst finden Sie in der [Segmentation Service - Übersicht](../segmentation/home.md) .
 
 Im Abschnitt **[!UICONTROL Identitäten]** können Sie Identitäts-Namespaces erstellen und verwalten. Weitere Informationen zum Abschnitt [!UICONTROL Identitäten], einschließlich Informationen zu Identitäts-Namespaces und zur Verwendung von Identitäten in der Platform-Benutzeroberfläche, finden Sie in der [Übersicht zu Identitäts-Namespaces](../identity-service/features/namespaces.md).
 
@@ -137,7 +137,7 @@ Im Abschnitt **[!UICONTROL Identitäten]** können Sie Identitäts-Namespaces er
 
 Im Abschnitt **[!UICONTROL Richtlinien]** können Sie Datennutzungsrichtlinien erstellen und verwalten. Weitere Informationen zur Verwendung des Abschnitts Richtlinien finden Sie im Benutzerhandbuch zu [Datennutzungsrichtlinien](../data-governance/policies/user-guide.md). Weitere Informationen zu Datennutzungsrichtlinien finden Sie in der [Übersicht über Datennutzungsrichtlinien](../data-governance/policies/overview.md).
 
-Im Abschnitt **[!UICONTROL Anforderungen]** können Sie Datenschutzanfragen erstellen und verwalten. Beachten Sie, dass Sie auf die Zulassungsliste gesetzt sein müssen, um Zugriff auf die Benutzeroberfläche von Privacy Service zu erhalten. Weitere Informationen zur Verwendung des Abschnitts Anforderungen finden Sie im [Benutzerhandbuch für Privacy Service](../privacy-service/ui/user-guide.md). Weitere Informationen zu Privacy Service finden Sie in der [Privacy Service - Übersicht](../privacy-service/home.md) .
+Im Abschnitt **[!UICONTROL Anforderungen]** können Sie Datenschutzanfragen erstellen und verwalten. Beachten Sie, dass Sie auf die Zulassungsliste gesetzt sein müssen, um Zugriff auf die Benutzeroberfläche von Privacy Service zu erhalten. Weitere Informationen zur Verwendung des Abschnitts Anforderungen finden Sie im [Benutzerhandbuch für Privacy Service](../privacy-service/ui/user-guide.md). Weitere Informationen zum Privacy Service finden Sie in der [Übersicht über Privacy Service](../privacy-service/home.md).
 
 ### [!UICONTROL Datenwissenschaft]
 
@@ -145,7 +145,7 @@ Der Abschnitt **[!UICONTROL Notebooks]** bietet Zugriff auf JupyterLab, eine int
 
 Im Abschnitt **[!UICONTROL Modelle]** können Sie maschinelles Lernen und künstliche Intelligenz verwenden, um Modelle zu erstellen, zu entwickeln, zu trainieren und anzupassen, um Prognosen zu erstellen. Weitere Informationen zum Abschnitt &quot;Modelle&quot;finden Sie im Tutorial zum [Trainieren und Auswerten eines Modells](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-Im Abschnitt **[!UICONTROL Dienste]** können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Auswertungen verwalten oder Adobe Intelligent Services verwenden, eine Reihe von KI-Diensten, die Echtzeit-Kundenerlebnisse bereitstellen. Weitere Informationen zum Abschnitt &quot;Dienste&quot;finden Sie im Tutorial zum Veröffentlichen eines Modells als Dienst ](../data-science-workspace/models-recipes/publish-model-service-ui.md).[
+Im Abschnitt **[!UICONTROL Dienste]** können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Auswertungen verwalten oder Adobe Intelligent Services verwenden, eine Reihe von KI-Diensten, die Echtzeit-Kundenerlebnisse bereitstellen. Weitere Informationen zum Abschnitt &quot;Dienste&quot;finden Sie im Tutorial [Modell als Dienst veröffentlichen](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Datenverwaltung]
 
@@ -156,6 +156,19 @@ Im Abschnitt **[!UICONTROL Datensätze]** können Sie Datensätze erstellen und 
 Im Abschnitt **[!UICONTROL Abfragen]** können Sie Abfragen erstellen und verwalten, SQL-Abfragen von Adobe Experience Platform Query Service protokollieren und Ihre [!DNL PostgreSQL] -Anmeldedaten anzeigen. Weitere Informationen zu Abfragen finden Sie im [Benutzerhandbuch zu Query Service](../query-service/ui/overview.md).
 
 Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-Erfassung überwachen. Weitere Informationen zur Überwachung finden Sie im Benutzerhandbuch zur [Überwachung der Datenerfassung](../ingestion/quality/monitor-data-ingestion.md).
+
+### [!UICONTROL Federated data] (begrenzte Verfügbarkeit)
+
+Im Abschnitt **[!UICONTROL Modelle]** können Sie Datenmodelle und -schemata entwerfen und erstellen, die die Struktur, die Beziehungen und Einschränkungen Ihrer Daten definieren. Weitere Informationen zu den Datenmodellen und Schemas finden Sie im Benutzerhandbuch zur Zusammenstellung von Federated Audience](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).[
+
+Der Abschnitt **[!UICONTROL Audit-Protokoll]** enthält eine detaillierte und chronologische Übersicht aller Aktionen und Ereignisse, die in Echtzeit an Ihrer Umgebung vorgenommen wurden. Weiterführende Informationen zum Audit-Protokoll finden Sie im Benutzerhandbuch zur [Zusammengestellten Zielgruppe&quot;](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
+
+
+Im Abschnitt **[!UICONTROL Federated Database]** können Sie Adobe Experience Platform mit Ihrem Enterprise Data Warehouse verbinden. Weitere Informationen zur Verbindung mit Federated-Datenbanken finden Sie im Benutzerhandbuch zu Zusammenstellungen von Federated Audience](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).[
+
+>[!AVAILABILITY]
+>
+>Die Komposition föderierter Zielgruppen ist derzeit nur für eine Gruppe von ausgewählten Organisationen verfügbar (eingeschränkte Verfügbarkeit). Weitere Informationen erhalten Sie beim Adobe-Support.
 
 ### [!UICONTROL Entscheidungsfindung]
 

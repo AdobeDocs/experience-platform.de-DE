@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentierungs-Service
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Zielgruppen und Segmentdefinitionen erstellen und verwalten.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 80%
+source-wordcount: '1043'
+ht-degree: 74%
 
 ---
 
@@ -89,6 +89,12 @@ Es wird ein Popup mit allen Feldern angezeigt, die in der Tabelle angezeigt werd
 Um zu sehen, wie sich die Zielgruppe zusammensetzt, wählen Sie den Namen einer Zielgruppe auf der Registerkarte [!UICONTROL Zielgruppen] aus.
 
 Die Seite „Zielgruppenkomposition“ wird mit den Bausteinen angezeigt, aus denen sich Ihre Zielgruppe zusammensetzt. Weitere Informationen zur Verwendung der Zielgruppenkomposition finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./audience-composition.md).
+
+## Komposition föderierter Zielgruppen {#fac}
+
+Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Zusammengestellte Zielgruppen-Komposition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Eine Liste der Zielgruppen, die in Federated Audience Komposition für Ihr Unternehmen erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
 
 ## Streaming-Segmentierung  {#streaming-segmentation}
 
