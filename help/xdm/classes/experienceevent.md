@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
 description: Erfahren Sie mehr über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5537485206c1625ca661d6b33f7bba08538a0fa3
 workflow-type: tm+mt
-source-wordcount: '2672'
-ht-degree: 40%
+source-wordcount: '2761'
+ht-degree: 38%
 
 ---
 
@@ -105,6 +105,7 @@ In der folgenden Tabelle sind die akzeptierten Werte für `eventType` zusammen m
 | `advertising.timePlayed` | Dieses Ereignis verfolgt die Zeit, die ein Benutzer mit einem bestimmten zeitgesteuerten Medien-Asset verbringt. |
 | `application.close` | Dieses Ereignis verfolgt, wann eine Anwendung geschlossen oder in den Hintergrund gesendet wurde. |
 | `application.launch` | Dieses Ereignis verfolgt, wann eine Anwendung gestartet oder in den Vordergrund gestellt wurde. |
+| `click` | **Veraltet** verwenden Sie stattdessen `decisioning.propositionInteract`. |
 | `commerce.backofficeCreditMemoIssued` | Dieses Ereignis verfolgt, wenn einem Kunden eine Kreditmeldung erteilt wurde. |
 | `commerce.backofficeOrderCancelled` | Dieses Ereignis verfolgt, wann ein zuvor initiierter Kaufprozess vor Abschluss beendet wurde. |
 | `commerce.backofficeOrderItemsShipped` | Mit diesem Ereignis wird verfolgt, wann die gekauften Artikel physisch an den Kunden versandt wurden. |
@@ -119,11 +120,12 @@ In der folgenden Tabelle sind die akzeptierten Werte für `eventType` zusammen m
 | `commerce.productViews` | Dieses Ereignis verfolgt, wenn ein Produkt eine oder mehrere Ansichten erhalten hat. |
 | `commerce.purchases` | Dieses Ereignis verfolgt, wann eine Bestellung akzeptiert wurde. Die ist die einzige erforderliche Aktion bei einer Handelskonversion. Für ein Kaufereignis muss eine Produktliste angegeben sein. |
 | `commerce.saveForLaters` | Dieses Ereignis verfolgt, wann eine Produktliste zur zukünftigen Verwendung gespeichert wurde, wie z. B. eine ProduktWunschliste. |
-| `decisioning.propositionDisplay` | Dieses Ereignis verfolgt, wann einer Person ein Entscheidungsvorschlag angezeigt wurde. |
-| `decisioning.propositionDismiss` | Dieses Ereignis verfolgt, wenn entschieden wurde, das unterbreitete Angebot nicht zu beeinflussen. |
-| `decisioning.propositionInteract` | Dieses Ereignis verfolgt, wann eine Person mit einem Entscheidungsvorschlag interagiert hat. |
+| `decisioning.propositionDisplay` | Dieses Ereignis wird verwendet, wenn das Web SDK automatisch Informationen darüber sendet, was auf einer Seite angezeigt wird. Sie benötigen diesen Ereignistyp jedoch nicht, wenn Sie bereits Anzeigeinformationen auf andere Weise einbeziehen, z. B. mit Treffern am oberen und unteren Seitenrand. Für den unteren Bereich von Seitentreffern können Sie einen beliebigen Ereignistyp auswählen. |
+| `decisioning.propositionDismiss` | Dieser Ereignistyp wird verwendet, wenn eine In-App-Nachricht oder eine Inhaltskarte von Adobe Journey Optimizer verworfen wird. |
+| `decisioning.propositionFetch` | Wird verwendet, um anzugeben, dass ein Ereignis hauptsächlich zum Abrufen von Entscheidungen dient. Adobe Analytics wird dieses Ereignis automatisch ablegen. |
+| `decisioning.propositionInteract` | Dieser Ereignistyp wird verwendet, um Interaktionen, z. B. Klicks, mit personalisierten Inhalten zu verfolgen. |
 | `decisioning.propositionSend` | Dieses Ereignis verfolgt, wann entschieden wurde, eine Empfehlung oder ein Angebot zur Prüfung an einen potenziellen Kunden zu senden. |
-| `decisioning.propositionTrigger` | Dieses Ereignis verfolgt die Aktivierung eines Vorschlags-Prozesses. Es ist eine bestimmte Bedingung oder Aktion aufgetreten, um die Vorlage eines Angebots zu ermuntern. |
+| `decisioning.propositionTrigger` | Ereignisse dieses Typs werden vom [Web SDK](../../web-sdk/home.md) im lokalen Speicher gespeichert, jedoch nicht an Experience Edge gesendet. Jedes Mal, wenn ein Regelsatz erfüllt wird, wird ein Ereignis generiert und im lokalen Speicher gespeichert (sofern diese Einstellung aktiviert ist). |
 | `delivery.feedback` | Dieses Ereignis verfolgt Feedback-Ereignisse für einen Versand, z. B. einen E-Mail-Versand. |
 | `directMarketing.emailBounced` | Dieses Ereignis verfolgt, wann eine E-Mail an eine Person abgestürzt ist. |
 | `directMarketing.emailBouncedSoft` | Dieses Ereignis verfolgt, wenn eine E-Mail an eine Person mit Softbounce gesendet wird. |
@@ -132,6 +134,7 @@ In der folgenden Tabelle sind die akzeptierten Werte für `eventType` zusammen m
 | `directMarketing.emailOpened` | Dieses Ereignis verfolgt, wann eine Person eine Marketing-E-Mail geöffnet hat. |
 | `directMarketing.emailSent` | Dieses Ereignis verfolgt, wann eine Marketing-E-Mail an eine Person gesendet wurde. |
 | `directMarketing.emailUnsubscribed` | Dieses Ereignis verfolgt, wenn sich eine Person von einer Marketing-E-Mail abgemeldet hat. |
+| `display` | **Veraltet** verwenden Sie stattdessen `decisioning.propositionDisplay`. |
 | `inappmessageTracking.dismiss` | Dieses Ereignis verfolgt, wann eine In-App-Nachricht verworfen wurde. |
 | `inappmessageTracking.display` | Dieses Ereignis verfolgt, wann eine In-App-Nachricht angezeigt wurde. |
 | `inappmessageTracking.interact` | Dieses Ereignis verfolgt, wann mit einer In-App-Nachricht interagiert wurde. |
@@ -146,33 +149,34 @@ In der folgenden Tabelle sind die akzeptierten Werte für `eventType` zusammen m
 | `leadOperation.statusInCampaignProgressionChanged` | Dieses Ereignis verfolgt, wann sich der Status eines Leads in einer Kampagne geändert hat. |
 | `listOperation.addToList` | Dieses Ereignis verfolgt, wann eine Person zu einer Marketing-Liste hinzugefügt wurde. |
 | `listOperation.removeFromList` | Dieses Ereignis verfolgt, wann eine Person aus einer Marketing-Liste entfernt wurde. |
-| `media.adBreakComplete` | Dieses Ereignis verfolgt, wann ein `adBreakComplete` -Ereignis aufgetreten ist. Dieses Ereignis wird zu Beginn einer Werbeunterbrechung ausgelöst. |
-| `media.adBreakStart` | Dieses Ereignis verfolgt, wann ein `adBreakStart` -Ereignis aufgetreten ist. Dieses Ereignis wird am Ende einer Werbeunterbrechung ausgelöst. |
-| `media.adComplete` | Dieses Ereignis verfolgt, wann ein `adComplete` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn eine Anzeige abgeschlossen ist. |
-| `media.adSkip` | Dieses Ereignis verfolgt, wann ein `adSkip` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn eine Anzeige übersprungen wurde. |
-| `media.adStart` | Dieses Ereignis verfolgt, wann ein `adStart` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn eine Anzeige begonnen hat. |
-| `media.bitrateChange` | Dieses Ereignis verfolgt, wann ein `bitrateChange` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn sich die Bitrate ändert. |
-| `media.bufferStart` | Dieses Ereignis verfolgt, wann ein `bufferStart` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn die Pufferung von Medien begonnen hat. |
-| `media.chapterComplete` | Dieses Ereignis verfolgt, wann ein `chapterComplete` -Ereignis aufgetreten ist. Dieses Ereignis wird nach Abschluss eines Medienkapitels ausgelöst. |
-| `media.chapterSkip` | Dieses Ereignis verfolgt, wann ein `chapterSkip` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn ein Benutzer einen vorwärts- oder rückwärts zu einem anderen Abschnitt oder Kapitel im Medieninhalt springt. |
-| `media.chapterStart` | Dieses Ereignis verfolgt, wann ein `chapterStart` -Ereignis aufgetreten ist. Dieses Ereignis wird zu Beginn eines bestimmten Abschnitts oder Kapitels im Medieninhalt ausgelöst. |
+| `media.adBreakComplete` | Dieses Ereignis signalisiert den Abschluss einer Werbeunterbrechung. |
+| `media.adBreakStart` | Dieses Ereignis signalisiert den Start einer Werbeunterbrechung. |
+| `media.adComplete` | Dieses Ereignis signalisiert den Abschluss einer Anzeige. |
+| `media.adSkip` | Dieses Ereignis signalisiert, wenn eine Anzeige übersprungen wurde. |
+| `media.adStart` | Dieses Ereignis signalisiert den Start einer Anzeige. |
+| `media.bitrateChange` | Dieses Ereignis signalisiert, wenn sich die Bitrate ändert. |
+| `media.bufferStart` | Der Ereignistyp `media.bufferStart` wird gesendet, wenn die Pufferung beginnt. Es gibt keinen bestimmten `bufferResume` -Ereignistyp. Die Pufferung gilt als wieder aufgenommen, wenn ein `play` -Ereignis nach einem `bufferStart` -Ereignis gesendet wird. |
+| `media.chapterComplete` | Dieses Ereignis signalisiert den Abschluss eines Kapitels. |
+| `media.chapterSkip` | Dieses Ereignis wird ausgelöst, wenn ein Benutzer zu einem anderen Abschnitt oder Kapitel vorwärts oder rückwärts springt. |
+| `media.chapterStart` | Dieses Ereignis signalisiert den Beginn eines Kapitels. |
 | `media.downloaded` | Dieses Ereignis verfolgt, wann Medien heruntergeladene Inhalte aufgetreten sind. |
-| `media.error` | Dieses Ereignis verfolgt, wann ein `error` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn während der Medienwiedergabe ein Fehler oder Problem auftritt. |
-| `media.pauseStart` | Dieses Ereignis verfolgt, wann ein `pauseStart` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn ein Benutzer eine Pause in der Medienwiedergabe initiiert. |
-| `media.ping` | Dieses Ereignis verfolgt, wann ein `ping` -Ereignis aufgetreten ist. Dadurch wird die Verfügbarkeit einer Medienressource überprüft. |
-| `media.play` | Dieses Ereignis verfolgt, wann ein `play` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn der Medieninhalt wiedergegeben wird, was auf die aktive Nutzung durch den Benutzer hinweist. |
-| `media.sessionComplete` | Dieses Ereignis verfolgt, wann ein `sessionComplete` -Ereignis aufgetreten ist. Dieses Ereignis markiert das Ende einer Medienwiedergabesitzung. |
-| `media.sessionEnd` | Dieses Ereignis verfolgt, wann ein `sessionEnd` -Ereignis aufgetreten ist. Dieses Ereignis gibt den Abschluss einer Mediensitzung an. Zu diesem Schluss kann das Schließen des Medienplayers oder das Beenden der Wiedergabe gehören. |
-| `media.sessionStart` | Dieses Ereignis verfolgt, wann ein `sessionStart` -Ereignis aufgetreten ist. Dieses Ereignis markiert den Anfang einer Medienwiedergabesitzung. Sie wird ausgelöst, wenn ein Benutzer mit der Wiedergabe einer Mediendatei beginnt. |
-| `media.statesUpdate` | Dieses Ereignis verfolgt, wann ein `statesUpdate` -Ereignis aufgetreten ist. Die Player-Status-Tracking-Funktionen können an einen Audio- oder Video-Stream angehängt werden. Die Standardstatus sind: Vollbild, Stummschaltung, closedCaptioning, pictureInPicture und inFocus. |
+| `media.error` | Dieses Ereignis signalisiert, wenn während der Medienwiedergabe ein Fehler aufgetreten ist. |
+| `media.pauseStart` | Dieses Ereignis verfolgt, wann ein `pauseStart` -Ereignis aufgetreten ist. Dieses Ereignis wird ausgelöst, wenn ein Benutzer eine Pause in der Medienwiedergabe initiiert. Es gibt keinen Ereignistyp Fortsetzen . Eine Wiederaufnahme wird erkannt, wenn Sie ein Wiedergabeereignis nach einem `pauseStart` senden. |
+| `media.ping` | Der Ereignistyp `media.ping` gibt den Status der laufenden Wiedergabe an. Für den Hauptinhalt muss dieses Ereignis während der Wiedergabe alle 10 Sekunden gesendet werden, beginnend 10 Sekunden nach Beginn der Wiedergabe. Für Anzeigeninhalte müssen diese während des Anzeigen-Trackings jede Sekunde gesendet werden. Ping-Ereignisse sollten die params-Zuordnung nicht im Anfragetext enthalten. |
+| `media.play` | Der Ereignistyp `media.play` wird gesendet, wenn der Player von einem anderen Status wie `buffering,` `paused` (wenn er vom Benutzer fortgesetzt wird) in den Status `playing` wechselt oder `error` (wenn er wiederhergestellt wurde), einschließlich Szenarien wie die automatische Wiedergabe. Dieses Ereignis wird durch den Rückruf `on('Playing')` des Players ausgelöst. |
+| `media.sessionComplete` | Dieses Ereignis wird gesendet, wenn das Ende des Hauptinhalts erreicht ist. |
+| `media.sessionEnd` | Der Ereignistyp &quot;`media.sessionEnd`&quot;benachrichtigt das Media Analytics-Backend, eine Sitzung sofort zu schließen, wenn ein Benutzer die Anzeige beendet und wahrscheinlich nicht zurückkehren wird. Wenn dieses Ereignis nicht gesendet wird, wird die Sitzung nach 10 Minuten Inaktivität oder nach 30 Minuten ohne Verschiebung der Abspielleiste beendet. Alle nachfolgenden Medienaufrufe mit dieser Sitzungs-ID werden ignoriert. |
+| `media.sessionStart` | Der Ereignistyp `media.sessionStart` wird mit dem Aufruf zur Sitzungsinitiierung gesendet. Nach Erhalt einer Antwort wird die Sitzungs-ID aus der Location-Kopfzeile extrahiert und für alle nachfolgenden Ereignisaufrufe an den Erfassungsserver verwendet. |
+| `media.statesUpdate` | Dieses Ereignis verfolgt, wann ein `statesUpdate` -Ereignis aufgetreten ist. Die Player-Status-Tracking-Funktionen können an einen Audio- oder Video-Stream angehängt werden. Die Standardstatus sind: `fullscreen`, `mute`, `closedCaptioning`, `pictureInPicture` und `inFocus`. |
 | `opportunityEvent.addToOpportunity` | Diese Veranstaltung verfolgt, wann eine Person zu einer Gelegenheit hinzugefügt wurde. |
 | `opportunityEvent.opportunityUpdated` | Dieses Ereignis verfolgt, wann eine Gelegenheit aktualisiert wurde. |
 | `opportunityEvent.removeFromOpportunity` | Dieses Ereignis verfolgt, wann eine Person aus einer Gelegenheit entfernt wurde. |
+| `personalization.request` | **Veraltet** verwenden Sie stattdessen `decisioning.propositionFetch`. |
 | `pushTracking.applicationOpened` | Dieses Ereignis verfolgt, wann eine Person eine Anwendung über eine Push-Benachrichtigung geöffnet hat. |
 | `pushTracking.customAction` | Dieses Ereignis verfolgt, wann eine Person eine benutzerdefinierte Aktion in einer Push-Benachrichtigung ausgewählt hat. |
 | `web.formFilledOut` | Dieses Ereignis verfolgt, wenn eine Person ein Formular auf einer Webseite ausfüllt. |
-| `web.webinteraction.linkClicks` | Dieses Ereignis verfolgt, wenn ein Link mindestens einmal ausgewählt wurde. |
-| `web.webpagedetails.pageViews` | Dieses Ereignis verfolgt, wenn eine Webseite eine oder mehrere Ansichten erhalten hat. |
+| `web.webinteraction.linkClicks` | Das Ereignis signalisiert, dass ein Link-Klick automatisch vom Web SDK aufgezeichnet wurde. |
+| `web.webpagedetails.pageViews` | Dieser Ereignistyp ist die Standardmethode zum Markieren des Treffers als Seitenansicht. |
 | `location.entry` | Dieses Ereignis verfolgt den Eintritt einer Person oder eines Geräts an einem bestimmten Ort. |
 | `location.exit` | Dieses Ereignis verfolgt den Ausstieg einer Person oder eines Geräts von einem bestimmten Ort aus. |
 

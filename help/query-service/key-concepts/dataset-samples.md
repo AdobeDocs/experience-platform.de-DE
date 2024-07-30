@@ -2,7 +2,7 @@
 title: Datensatzbeispiele
 description: Mit den Beispieldatensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, verringert jedoch die Abfragegenauigkeit. In diesem Handbuch erfahren Sie, wie Sie Ihre Beispiele für die annähernde Abfrageverarbeitung verwalten können
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 100%
@@ -100,7 +100,7 @@ SELECT * FROM example_dataset_name WITHAPPROXIMATE;
 Mit dem Löschvorgang können Sie neue Stichproben erstellen, sobald die maximale Begrenzung von fünf Datensatzstichproben erreicht wurde.
 
 ```sql
-DROP TABLE SAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
+DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 ```
 
 >[!NOTE]
