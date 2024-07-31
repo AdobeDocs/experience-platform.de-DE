@@ -2,7 +2,7 @@
 title: (API) Salesforce Marketing Cloud-Verbindung
 description: Mit dem Salesforce-Marketing Cloud (ehemals ExactTarget)-Ziel können Sie Ihre Kontodaten exportieren und im Salesforce-Marketing Cloud für Ihre Geschäftsanforderungen aktivieren.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 22%
@@ -98,7 +98,7 @@ Um die Zugriffsebene zu beschränken, können Sie auch den individuellen Zugriff
 
 Detaillierte Anleitungen finden Sie auf den Seiten [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) und [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) .
 
-#### Sammeln von [!DNL Salesforce Marketing Cloud]-Anmeldeinformationen {#gather-credentials}
+#### Sammeln von [!DNL Salesforce Marketing Cloud]-Anmeldedaten {#gather-credentials}
 
 Beachten Sie die folgenden Elemente, bevor Sie sich beim [!DNL (API) Salesforce Marketing Cloud]-Ziel authentifizieren.
 
@@ -242,15 +242,17 @@ Nachfolgend finden Sie ein Beispielattribut von [!DNL Salesforce Marketing Cloud
 ![Screenshot der Salesforce-Marketing Cloud-Benutzeroberfläche mit einem Attribut.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 Unten finden Sie ein Beispiel, das die Position der [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Zuordnungs-ID]** angibt:
-![Screenshot der Platform-Benutzeroberfläche mit Vorstellung des geplanten Zielgruppenexports.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
+
+![Beispiel für einen Screenshot der Platform-Benutzeroberfläche mit der Option Zielgruppenexport planen](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 Wie gezeigt, sollte die [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Zuordnungs-ID]** genau mit dem in [!DNL Salesforce Marketing Cloud] **[!UICONTROL FELDNAME]** angegebenen Wert übereinstimmen.
 
 Wiederholen Sie diesen Abschnitt für jedes aktivierte Platform-Segment.
 
 Ein typisches Beispiel, das auf dem oben gezeigten Bild basiert, könnte sein.
+
 | [!DNL (API) Salesforce Marketing Cloud] Segmentname | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FELDNAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Zuordnungs-ID]** |
-| — | — | — |
+| --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 

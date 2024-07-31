@@ -3,10 +3,10 @@ title: Mailchimp-Tags
 description: Mit dem Ziel Mailchimp Tags können Sie Ihre Kontodaten exportieren und in Mailchimp aktivieren, um Kontakte zu gewinnen.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -175,9 +175,10 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder korrekt den [!DNL Mailchimp Tags] -Z
    ![Screenshot der Platform-Benutzeroberfläche mit dem Target-Feld als E-Mail aus dem Identitäts-Namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    Die Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Tags] lauten wie folgt:
-| Source Field | Zielfeld | Obligatorisch |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`| Ja |
+
+   | Quellfeld | Zielfeld | Obligatorisch |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | Ja |
 
    Nachfolgend finden Sie ein Beispiel mit den abgeschlossenen Zuordnungen:
    ![Screenshot der Platform-Benutzeroberfläche mit Feldzuordnungen.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

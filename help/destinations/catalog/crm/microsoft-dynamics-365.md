@@ -4,10 +4,10 @@ title: Verbindung mit Microsoft Dynamics 365
 description: Mit dem Microsoft Dynamics 365-Ziel können Sie Ihre Kontodaten exportieren und in Microsoft Dynamics 365 für Ihre geschäftlichen Anforderungen aktivieren.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2019'
-ht-degree: 62%
+ht-degree: 60%
 
 ---
 
@@ -62,7 +62,7 @@ Um [!DNL Dynamics 365] für den Zugriff auf Ressourcen zu aktivieren, müssen Si
 
 Sie müssen außerdem [Programmbenutzer](https://docs.microsoft.com/de-de/power-platform/admin/manage-application-users#create-an-application-user) in [!DNL Azure Active Directory] erstellen und sie mit dem neu erstellten Programm verknüpfen.
 
-#### Sammeln von [!DNL Dynamics 365]-Anmeldeinformationen {#gather-credentials}
+#### Sammeln von [!DNL Dynamics 365]-Anmeldedaten {#gather-credentials}
 
 Beachten Sie die folgenden Punkte, bevor Sie sich beim [!DNL Dynamics 365]-CRM-Ziel authentifizieren:
 
@@ -122,7 +122,7 @@ Suchen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** nach [!DNL Dynam
 Um sich beim Ziel zu authentifizieren, wählen Sie **[!UICONTROL Mit Ziel verbinden]**.
 ![Screenshot der Platform-Benutzeroberfläche, auf dem die Authentifizierung gezeigt wird.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
-Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden Sie im Abschnitt [Sammeln von Dynamics 365-Anmeldeinformationen](#gather-credentials).
+Füllen Sie die erforderlichen Felder aus. Eine Anleitung dazu finden Sie im Abschnitt [Sammeln von Dynamics 365-Anmeldedaten](#gather-credentials).
 * **[!UICONTROL Client-ID]**: Die [!DNL Dynamics 365]-Client-ID für Ihr [!DNL Azure Active Directory]-Programm.
 * **[!UICONTROL Mandanten-ID]**: Die [!DNL Dynamics 365]-Mandanten-ID für Ihr [!DNL Azure Active Directory]-Programm.
 * **[!UICONTROL Client-Geheimnis]**: Der [!DNL Dynamics 365]-Client-Geheim-Code für Ihr [!DNL Azure Active Directory]-Programm.
@@ -169,10 +169,11 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
    * **[!UICONTROL Identity-Namespace auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem Identity-Namespace aus der Liste zuzuordnen.
      ![Screenshot der Platform-Benutzeroberfläche mit der Zielgruppen-Zuordnung für den Kontakt.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365]-Instanz hinzu:
-|XDM-Profilschema|[!DNL Dynamics 365] Instanz| Obligatorisch|
-|---|---|---|
-|`contactid`|`contactid`| Ja |
+   * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365] -Instanz hinzu:
+
+     | XDM-Profilschema | [!DNL Dynamics 365] Instanz | Obligatorisch |
+     |---|---|---|
+     | `contactid` | `contactid` | Ja |
 
    * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld **[!UICONTROL Attributname]** definieren. Eine umfassende Liste der unterstützten Attribute finden Sie in der [[!DNL Dynamics 365] Dokumentation](https://docs.microsoft.com/de-de/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
      ![Screenshot der Platform-Benutzeroberfläche mit der Zielgruppen-Zuordnung für E-Mails.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
@@ -182,19 +183,17 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
      > * Die Zielfeldnamen müssen in `lowercase` stehen.
      > * Wenn Sie außerdem über ein Quellfeld für Datum oder Zeitstempel verfügen, das einem Zielfeld für [!DNL Dynamics 365] [Datum oder Zeitstempel](https://docs.microsoft.com/de-de/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) zugeordnet ist, stellen Sie sicher, dass der zugeordnete Wert nicht leer ist. Wenn der exportierte Feldwert leer ist, wird eine Fehlermeldung vom Typ *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* ausgegeben und die Daten werden nicht aktualisiert. Dies ist eine [!DNL Dynamics 365]-Beschränkung.
 
-   * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365]-Instanz ein: 
-|XDM-Profilschema|[!DNL Dynamics 365] Instanz|
+   * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Dynamics 365] -Instanz hinzu:
 
-|---|---|
-
-|`person.name.firstName`|`firstname`|
-
-|`person.name.lastName`|`lastname`|
-
-|`personalEmail.address`|`emailaddress1`|
+     | XDM-Profilschema | [!DNL Dynamics 365] Instanz |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
-     ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Zielgruppenexport und Beispiel planen {#schedule-audience-export-example}
 

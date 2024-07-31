@@ -3,10 +3,10 @@ title: Mailchimp-Interessenkategorien
 description: Mailchimp (auch Intuit Mailchimp genannt) ist eine beliebte Marketing-Automatisierungsplattform und ein E-Mail-Marketing-Service, die von Unternehmen verwendet werden, um Kontakte (Kunden, Kunden oder andere interessierte Parteien) mithilfe von Mailinglisten und E-Mail-Marketing-Kampagnen zu verwalten und mit ihnen zu kommunizieren. Verwenden Sie diesen Connector, um Ihre Kontakte nach deren Interessen und Präferenzen zu sortieren.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2299'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -168,12 +168,13 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder korrekt den [!DNL Mailchimp Interest
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** den Eintrag **[!UICONTROL Identitäts-Namespace auswählen]** aus, wählen Sie eine Identität aus oder wählen Sie die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie aus der Liste der Attribute aus, die in der API [!DNL Mailchimp] eingetragen sind. *Alle benutzerdefinierten Attribute, die Sie der ausgewählten [!DNL Mailchimp] Zielgruppe hinzugefügt haben, stehen ebenfalls zur Auswahl als Zielfelder zur Verfügung.*
 
    Die zwischen Ihrem XDM-Profilschema und [!DNL Mailchimp Interest Categories] verfügbaren Zuordnungen sind wie folgt:
-| Source Field | Zielfeld | Hinweise |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| Obligatorisch: ja |
-|`xdm: person.name.firstName`|`Attribute: FNAME`| |
-|`xdm: person.name.lastName`|`Attribute: LNAME`| |
-|`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+
+   | Quellfeld | Zielfeld | Anmerkungen |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: email` | Obligatorisch: ja |
+   | `xdm: person.name.firstName` | `Attribute: FNAME` | |
+   | `xdm: person.name.lastName` | `Attribute: LNAME` | |
+   | `xdm: person.birthDayAndMonth` | `Attribute: BIRTHDAY` | |
 
    Außerdem ist `ADDRESS` ein spezielles Zielfeld, das in Ihrer [!DNL Mailchimp] -Zielgruppe als `merge field` bezeichnet wird. Die [[!DNL Mailchimp] Dokumentation](https://mailchimp.com/developer/marketing/docs/merge-fields/) definiert die erforderlichen Schlüssel als `addr1`, `city`, `state` und `zip` sowie die optionalen Schlüssel `addr2` und `country`. Die Werte für diese Felder müssen Zeichenfolgen sein. Wenn eine der `ADDRESS` -Feldzuordnungen vorhanden ist, übergibt das Ziel das `ADDRESS` -Objekt zur Aktualisierung an die [!DNL Mailchimp] -API. Alle nicht zugeordneten `ADDRESS` -Felder haben den Standardwert `NULL` , außer für das Land, das standardmäßig auf `US` festgelegt ist.
 

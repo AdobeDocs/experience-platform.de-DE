@@ -3,10 +3,10 @@ title: Zendesk-Verbindung
 description: Mit dem Zendesk-Ziel können Sie Ihre Kontodaten exportieren und innerhalb von Zendesk für Ihre geschäftlichen Anforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -34,7 +34,7 @@ Informationen zum Zielgruppenstatus finden Sie in der Experience Platform-Dokume
 
 Um Daten von Platform in Ihr [!DNL Zendesk] -Konto zu exportieren, benötigen Sie ein [!DNL Zendesk] -Konto.
 
-#### Sammeln von [!DNL Zendesk]-Anmeldeinformationen {#gather-credentials}
+#### Sammeln von [!DNL Zendesk]-Anmeldedaten {#gather-credentials}
 
 Beachten Sie die folgenden Elemente, bevor Sie sich beim [!DNL Zendesk]-Ziel authentifizieren:
 
@@ -121,12 +121,14 @@ Um Ihre XDM-Felder den [!DNL Zendesk]-Zielfeldern korrekt zuzuordnen, führen Si
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** aus, wählen Sie das XDM-Attribut aus oder wählen Sie den Eintrag **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität aus.
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Kategorie **[!UICONTROL Identitäts-Namespace auswählen]** aus und wählen Sie eine Zielidentität oder die Kategorie **[!UICONTROL Attribute auswählen]** und wählen Sie eines der unterstützten Schemaattribute aus.
+
    * Wiederholen Sie diese Schritte, um die folgenden obligatorischen Zuordnungen hinzuzufügen. Sie können auch alle anderen Attribute hinzufügen, die Sie zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Zendesk]-Instanz aktualisieren möchten:
-|Source-Feld|Zielfeld| Obligatorisch|
-|—|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`| Ja |
-|`IdentityMap: Email`|`Identity: email`| Ja |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | Quellfeld | Zielfeld | Obligatorisch |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | Ja |
+     | `IdentityMap: Email` | `Identity: email` | Ja |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
      ![Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/crm/zendesk/mappings.png)

@@ -3,10 +3,10 @@ title: Kundenkontointeraktion in Salesforce Marketing Cloud
 description: Erfahren Sie, wie Sie mit dem Salesforce Marketing Cloud Account Engagement (ehemals Pardot)-Ziel Ihre Kontodaten exportieren und innerhalb der Salesforce Marketing Cloud Account Engagement für Ihre Geschäftsanforderungen aktivieren können.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1532'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
@@ -50,7 +50,7 @@ Schließlich sollte Ihr Konto auch auf den [[!DNL Account Engagement Lightning A
 
 Wenden Sie sich an den [[!DNL Salesforce] Support](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) oder Ihren [!DNL Salesforce] -Kontoadministrator, wenn Sie kein Konto haben oder das Konto das [!DNL Marketing Cloud Account Engagement]-Abonnement oder den [!DNL Account Engagement Administrator role] fehlt.
 
-#### Sammeln von [!DNL Marketing Cloud Account Engagement]-Anmeldeinformationen {#gather-credentials}
+#### Sammeln von [!DNL Marketing Cloud Account Engagement]-Anmeldedaten {#gather-credentials}
 
 Beachten Sie die folgenden Elemente, bevor Sie sich beim [!DNL Marketing Cloud Account Engagement]-Ziel authentifizieren.
 
@@ -153,11 +153,12 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder korrekt den [!DNL Marketing Cloud Ac
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** den Eintrag **[!UICONTROL Identitäts-Namespace auswählen]** aus, wählen Sie eine Identität aus oder wählen Sie die Kategorie **[!UICONTROL Benutzerdefinierte Attribute auswählen]** und geben Sie in der Liste von [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) aus dem verfügbaren Schema an.
 
    * Wiederholen Sie diese Schritte, um Zuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Marketing Cloud Account Engagement] hinzuzufügen:
-| Source Field | Zielfeld | Obligatorisch |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| Ja |
-|`xdm: MailingAddress.city`|`xdm: city`| |
-|`xdm: person.name.firstName`|`Attribute: firstName`| |
+
+     | Quellfeld | Zielfeld | Obligatorisch |
+     | --- | --- | --- |
+     | `IdentityMap: Email` | `Identity: email` | Ja |
+     | `xdm: MailingAddress.city` | `xdm: city` | |
+     | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * Nachfolgend finden Sie ein Beispiel mit den oben aufgeführten Zuordnungen:
      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

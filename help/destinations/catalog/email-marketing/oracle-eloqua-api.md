@@ -3,10 +3,10 @@ title: (API) Oracle Eloqua-Verbindung
 description: Mit dem (API) Oracle Eloqua-Ziel können Sie Ihre Kontodaten exportieren und innerhalb von Oracle Eloqua für Ihre Geschäftsanforderungen aktivieren.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
@@ -37,7 +37,7 @@ Um Daten von Platform in Ihr [!DNL Oracle Eloqua] -Konto zu exportieren, benöti
 
 Zusätzlich benötigen Sie mindestens die *&quot;Erweiterte Benutzer - Marketing-Berechtigungen&quot;* für Ihre [!DNL Oracle Eloqua] -Instanz. Eine Anleitung dazu finden Sie im Abschnitt *&quot;Sicherheitsgruppen&quot;* auf der Seite [Sicherer Benutzerzugriff](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) . Der Zugriff ist für das Ziel erforderlich, um beim Aufrufen der [!DNL Oracle Eloqua] -API programmgesteuert [Ihre Basis-URL](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) zu bestimmen.
 
-#### Sammeln von [!DNL Oracle Eloqua]-Anmeldeinformationen {#gather-credentials}
+#### Sammeln von [!DNL Oracle Eloqua]-Anmeldedaten {#gather-credentials}
 
 Beachten Sie die folgenden Elemente, bevor Sie sich beim [!DNL Oracle Eloqua]-Ziel authentifizieren:
 
@@ -148,19 +148,21 @@ Gehen Sie wie folgt vor, um Ihre XDM-Felder den [!DNL Oracle Eloqua] -Zielfelder
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird eine neue Zuordnungszeile angezeigt.
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** aus, wählen Sie das XDM-Attribut aus oder wählen Sie den Eintrag **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität aus.
 1. Wählen Sie im Fenster **[!UICONTROL Zielfeld auswählen]** die Option **[!UICONTROL Identitäts-Namespace auswählen]** und wählen Sie eine Identität aus oder wählen Sie **[!UICONTROL Benutzerdefinierte Attribute auswählen]** und geben Sie den gewünschten Attributnamen in das Feld **[!UICONTROL Attributname]** ein. Der von Ihnen angegebene Attributname sollte mit dem in [!DNL Oracle Eloqua] vorhandenen Kontaktattribut übereinstimmen. Unter [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) finden Sie die genauen Attributnamen, die Sie in [!DNL Oracle Eloqua] verwenden können.
+
    * Wiederholen Sie diese Schritte, um sowohl die erforderlichen als auch alle gewünschten Attributzuordnungen zwischen Ihrem XDM-Profilschema und [!DNL Oracle Eloqua] hinzuzufügen:
-| Source Field | Zielfeld | Obligatorisch |
-|—|—|—|
-|`IdentityMap: Eid`|`Identity: EloquaId`| Ja |
-|`xdm: personalEmail.address`|`Attribute: emailAddress`| Ja |
-|`xdm: personName.firstName`|`Attribute: firstName`| |
-|`xdm: personName.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.street1`|`Attribute: address1`| |
-|`xdm: workAddress.street2`|`Attribute: address2`| |
-|`xdm: workAddress.street3`|`Attribute: address3`| |
-|`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
-|`xdm: workAddress.country`|`Attribute: country`| |
-|`xdm: workAddress.city`|`Attribute: city`| |
+
+     | Quellfeld | Zielfeld | Obligatorisch |
+     |---|---|---|
+     | `IdentityMap: Eid` | `Identity: EloquaId` | Ja |
+     | `xdm: personalEmail.address` | `Attribute: emailAddress` | Ja |
+     | `xdm: personName.firstName` | `Attribute: firstName` | |
+     | `xdm: personName.lastName` | `Attribute: lastName` | |
+     | `xdm: workAddress.street1` | `Attribute: address1` | |
+     | `xdm: workAddress.street2` | `Attribute: address2` | |
+     | `xdm: workAddress.street3` | `Attribute: address3` | |
+     | `xdm: workAddress.postalCode` | `Attribute: postalCode` | |
+     | `xdm: workAddress.country` | `Attribute: country` | |
+     | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Nachfolgend finden Sie ein Beispiel mit den oben aufgeführten Zuordnungen:
      ![Screenshot der Platform-Benutzeroberfläche mit Attributzuordnungen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)

@@ -3,7 +3,7 @@ title: SAP Commerce-Verbindung
 description: Verwenden Sie den SAP Commerce Destination Connector, um Kundendatensätze in Ihrem SAP-Konto zu aktualisieren.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 26%
@@ -88,7 +88,7 @@ Nachfolgend finden Sie ein Beispiel für die Erstellung eines benutzerdefinierte
 
 Weitere Hinweise finden Sie in der Dokumentation zu [!DNL SAP Subscription Billing] [benutzerdefinierten Verweisen](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) .
 
-### Sammeln erforderlicher Anmeldeinformationen {#gather-credentials}
+### Sammeln erforderlicher Anmeldedaten {#gather-credentials}
 
 Um [!DNL SAP Commerce] mit Experience Platform zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
@@ -194,6 +194,7 @@ Um Ihre Zielgruppendaten korrekt von Adobe Experience Platform an das Ziel [!DNL
 #### `customerNumberSAP`-Identität zuordnen
 
 Die `customerNumberSAP` -Identität ist eine obligatorische Zuordnung für dieses Ziel. Gehen Sie wie folgt vor, um sie zuzuordnen:
+
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird jetzt eine neue Zuordnungszeile angezeigt.
    ![Screenshot der Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche zum Hinzufügen einer neuen Zuordnung.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** den Namen **[!UICONTROL Identitäts-Namespace auswählen]** und danach `customerNumberSAP` aus.
@@ -211,6 +212,7 @@ Nachfolgend finden Sie ein Beispiel mit der Identitätszuordnung:
 #### Zuordnen von Attributen
 
 Um weitere Attribute hinzuzufügen, die Sie zwischen Ihrem XDM-Profilschema und Ihrem [!DNL SAP Subscription Billing]-Konto aktualisieren möchten, wiederholen Sie die folgenden Schritte:
+
 1. Wählen Sie Im Schritt **[!UICONTROL Zuordnung]** die Option **[!UICONTROL Neue Zuordnung hinzufügen]** aus. Auf dem Bildschirm wird jetzt eine neue Zuordnungszeile angezeigt.
    ![Screenshot der Platform-Benutzeroberfläche mit hervorgehobener Schaltfläche zum Hinzufügen einer neuen Zuordnung.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Wählen Sie im Fenster **[!UICONTROL Quellfeld auswählen]** die Kategorie **[!UICONTROL Attribute auswählen]** und danach das XDM-Attribut aus.
@@ -302,8 +304,9 @@ Wie gezeigt, sollte der Wert im Feld **[!UICONTROL Zuordnungs-ID]** genau mit de
 Wiederholen Sie diesen Abschnitt für jede aktivierte Platform-Audience.
 
 Basierend auf dem oben gezeigten Bild, in dem Sie zwei Zielgruppen ausgewählt haben, würde das Mapping wie folgt aussehen:
-| [!DNL SAP Commerce] Zielgruppenname | [!DNL SAP Subscription Billing] **[!UICONTROL Referenztyp]** | [!DNL SAP Commerce] **[!UICONTROL ID-Wert]** zuordnen |
-| — | — | — |
+
+| [!DNL SAP Commerce] Zielgruppenname | [!DNL SAP Subscription Billing] **[!UICONTROL Referenztyp]** | [!DNL SAP Commerce] **[!UICONTROL ID-Wert zuordnen]** |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | SAP Audience2 | `SAP_2` | `SAP_2` |
 

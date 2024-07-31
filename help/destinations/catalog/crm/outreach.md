@@ -3,10 +3,10 @@ keywords: crm;CRM;CRM-Ziele;Outreach;CRM-Ziel erreichen
 title: Outreach-Verbindung
 description: Mit dem Ziel Outreach können Sie Ihre Kontodaten exportieren und für Ihre geschäftlichen Anforderungen in Outreach aktivieren.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
-ht-degree: 43%
+ht-degree: 42%
 
 ---
 
@@ -154,19 +154,21 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
    * **[!UICONTROL Identity-Namespace auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem Identity-Namespace aus der Liste zuzuordnen.
      ![Screenshot der Platform-Benutzeroberfläche mit der Target-Zuordnung mithilfe von OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
-   * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Outreach]-Instanz hinzu:
-|XDM-Profilschema|[!DNL Outreach] Instanz| Obligatorisch|
-|---|---|---|
-|`Oid`|`OutreachId`| Ja |
+   * Fügen Sie die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Outreach] -Instanz hinzu:
+
+     | XDM-Profilschema | [!DNL Outreach] Instanz | Obligatorisch |
+     |---|---|---|
+     | `Oid` | `OutreachId` | Ja |
 
    * **[!UICONTROL Benutzerdefinierte Attribute auswählen]**: Wählen Sie diese Option aus, um Ihr Quellfeld einem benutzerdefinierten Attribut zuzuordnen, das Sie im Feld [!UICONTROL Attributname] definieren. Eine umfassende Liste der unterstützten Attribute finden Sie in der [[!DNL Outreach] Prospektdokumentation](https://api.outreach.io/api/v2/docs#prospect) .
      ![Screenshot der Platform-Benutzeroberfläche mit der Zielgruppen-Zuordnung unter Verwendung von LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Fügen Sie je nach den Werten, die Sie aktualisieren möchten, beispielsweise die folgende Zuordnung zwischen Ihrem XDM-Profilschema und Ihrer [!DNL Outreach] -Instanz hinzu:
-|XDM-Profilschema|[!DNL Outreach] Instanz|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | XDM-Profilschema | [!DNL Outreach] Instanz |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * Nachfolgend finden Sie ein Beispiel für die Verwendung dieser Zuordnungen:
      ![Beispiel-Screenshot der Platform-Benutzeroberfläche mit Ziel-Zuordnungen.](../../assets/catalog/crm/outreach/mappings.png)
@@ -184,7 +186,7 @@ Um Ihre Zielgruppendaten ordnungsgemäß von Adobe Experience Platform an das [!
   > * [!DNL Outreach] unterstützt maximal 150 benutzerdefinierte Beschriftungsfelder.
   > * Weitere Informationen finden Sie in der [[!DNL Outreach] Prospektdokumentation](https://api.outreach.io/api/v2/docs#prospect) .
 
-   * Beispiel:
+   * Zum Beispiel:
 
      | [!DNL Outreach] Feld | Plattformzuordnungs-ID |
      |---|---|
