@@ -3,9 +3,9 @@ title: Google-Kundenabgleich + Display & Video 360-Verbindung
 description: Mit dem Ziel-Connector Google-Kundenabgleich + Display & Video 360 können Sie Ihre Online- und Offline-Daten von Experience Platform verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1999'
 ht-degree: 18%
 
 ---
@@ -222,6 +222,12 @@ Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DN
 Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
 
 ![Wenden Sie die Transformationssteuerung an, die im Schritt &quot;Zuordnung&quot;des Aktivierungs-Workflows hervorgehoben ist.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+
+## Ziel überwachen
+
+Nachdem Sie eine Verbindung zum Ziel hergestellt und einen Ziel-Datenfluss eingerichtet haben, können Sie die [Überwachungsfunktion](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP verwenden, um umfassende Informationen über die Profildatensätze zu erhalten, die in jedem Datenfluss für Ihr Ziel aktiviert wurden.
+
+Die Überwachungsinformationen für die Verbindung [!DNL Google Customer Match + Display & Video 360] enthalten Informationen auf Zielgruppenebene, die sich auf aktivierte, ausgeschlossene und fehlgeschlagene Identitäten in jedem Datenfluss und jeder Datenfluss-Ausführung beziehen. Erfahren Sie mehr über die Funktionalität.
 
 ## Überprüfen, ob die Zielgruppenaktivierung erfolgreich war {#verify-activation}
 
