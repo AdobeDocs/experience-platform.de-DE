@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
-source-wordcount: '3549'
+source-wordcount: '3542'
 ht-degree: 11%
 
 ---
@@ -86,7 +86,7 @@ Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den f
 
 Jeder einzelne Datenfluss zeigt die folgenden Details an:
 
-- **[!UICONTROL Dataflow run start]**: Die Zeit, zu der der Datenfluss gestartet wurde. Für Streaming-Datenfluss-Ausführungen erfasst Experience Platform Metriken basierend auf dem Start des Datenflusses in Form von stündlichen Metriken. Das bedeutet, dass die Metrik für Streaming-Datenflüsse die Startzeit auf 22:00 Uhr in der Benutzeroberfläche als 22:00 Uhr anzeigt, wenn beispielsweise ein Datenfluss um 23:30 Uhr gestartet wurde.
+- **[!UICONTROL Start des Datenflusses]**: Der Zeitpunkt, zu dem der Datenfluss gestartet wurde. Für Streaming-Datenfluss-Ausführungen erfasst Experience Platform Metriken basierend auf dem Start des Datenflusses in Form von stündlichen Metriken. Das bedeutet, dass die Metrik für Streaming-Datenflüsse die Startzeit auf 22:00 Uhr in der Benutzeroberfläche als 22:00 Uhr anzeigt, wenn beispielsweise ein Datenfluss um 23:30 Uhr gestartet wurde.
 - **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
    - Für die Ausführung von **[!UICONTROL completed]** wird in der Verarbeitungszeitmetrik immer eine Stunde angezeigt.
    - Bei Datenfluss-Ausführungen, die sich noch im Status **[!UICONTROL processing]** befinden, bleibt das Fenster zum Erfassen aller Metriken länger als eine Stunde geöffnet, um alle Metriken zu verarbeiten, die dem Datenfluss entsprechen. Beispielsweise kann ein Datenfluss, der um 9:30 Uhr gestartet wurde, eine Stunde und dreißig Minuten lang im Verarbeitungsstatus bleiben, um alle Metriken zu erfassen und zu verarbeiten. Sobald das Verarbeitungsfenster geschlossen und der Status des Datenflusses auf **completed** aktualisiert wird, wird die angezeigte Verarbeitungszeit auf eine Stunde geändert.
@@ -110,13 +110,13 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 #### (Beta) Überwachung des Datenflusses auf Zielgruppenebene für Streaming-Ziele {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Sie können Informationen zu den aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten auf Zielgruppenebene für jede Zielgruppe anzeigen, die Teil des Datenflusses ist. Dies kann Ihnen dabei helfen, die Überwachung auf Zielgruppenebene für Streaming-Ziele zu verstehen, die derzeit nur für das [[!DNL Google Customer Match + Display & Video 360] Ziel](/help/destinations/catalog/advertising/google-customer-match-dv360.md) verfügbar ist.
+Sie können Informationen zu den aktivierten, ausgeschlossenen oder fehlgeschlagenen Identitäten auf Zielgruppenebene für jede Zielgruppe anzeigen, die Teil des Datenflusses ist. Die Überwachung auf Zielgruppenebene für Streaming-Ziele ist derzeit nur für [[!DNL Google Customer Match + Display & Video 360] Ziel](/help/destinations/catalog/advertising/google-customer-match-dv360.md) verfügbar.
 
 ![Überwachung auf Zielgruppenebene für Streaming-Ziele.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->Die Nummer **[!UICONTROL empfangenen Profile]** auf der Registerkarte &quot;Zielgruppen&quot;stimmt möglicherweise nicht immer mit der Anzahl der Profile überein, die für den Datenfluss empfangen wurden. Dies liegt daran, dass ein bestimmtes Profil Teil von mehr als einer Zielgruppe sein kann, die in der Datenfluss-Ausführung aktiviert wird.
+>Die Nummer **[!UICONTROL empfangenen Profile]** auf der Registerkarte **[!UICONTROL Zielgruppen]** stimmt möglicherweise nicht immer mit der Anzahl der Profile überein, die für den Datenfluss empfangen wurden. Dies liegt daran, dass ein bestimmtes Profil Teil von mehr als einer Zielgruppe sein kann, die in der Datenfluss-Ausführung aktiviert wird.
 
 ### Datenflussausführungen für Batch-Ziele {#dataflow-runs-for-batch-destinations}
 
@@ -150,7 +150,7 @@ Für Batch-Ziele stellt die Registerkarte [!UICONTROL Datenfluss-Läufe] Metrikd
 
 Jeder einzelne Datenfluss zeigt die folgenden Details an:
 
-- **[!UICONTROL Dataflow run start]**: Die Zeit, zu der der Datenfluss gestartet wurde.
+- **[!UICONTROL Start des Datenflusses]**: Der Zeitpunkt, zu dem der Datenfluss gestartet wurde.
 - **[!UICONTROL Audience]**: Der Name der Audience, die mit jedem Datenfluss verknüpft ist.
 - **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
 - **[!UICONTROL empfangenen Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert.
