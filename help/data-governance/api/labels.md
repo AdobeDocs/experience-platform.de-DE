@@ -5,10 +5,10 @@ title: Beschriftungs-API-Endpunkt
 description: Erfahren Sie, wie Sie mit der Richtlinien-Service-API Datennutzungsbeschriftungen in Experience Platform verwalten.
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 100%
+source-wordcount: '536'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 
 >[!NOTE]
 >
->Der `/labels`-Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Datennutzungsbeschriftungen verwendet. Anleitungen zum Hinzufügen von Beschriftungen zu Datensätzen und Feldern mithilfe von API-Aufrufen finden Sie im Handbuch zum [Verwalten von Datensatzbeschriftungen](../labels/dataset-api.md).
+>Der `/labels`-Endpunkt wird nur zum Abrufen, Erstellen und Aktualisieren von Datennutzungsbeschriftungen verwendet. Titel können nicht gelöscht werden. Sie können Datensätze und Feldern jedoch mithilfe von API-Aufrufen Beschriftungen hinzufügen oder entfernen. Anweisungen finden Sie im Dokument [Verwalten von Datensatzbezeichnungen](../labels/dataset-api.md) .
 
 ## Erste Schritte
 
@@ -163,6 +163,10 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 ## Erstellen oder Aktualisieren einer benutzerdefinierten Kennzeichnung {#create-update}
 
 Um eine benutzerdefinierte Kennzeichnung zu erstellen oder zu aktualisieren, müssen Sie eine PUT-Anfrage an die [!DNL Policy Service]-API richten.
+
+>[!NOTE]
+>
+>Wenn Sie Bezeichnungen aus einem Datensatz entfernen möchten, können Sie eine [PUT-Anfrage für die Datensatzdienst-API](../labels/dataset-api.md#remove) oder die [Datensatz-Benutzeroberfläche](../labels/user-guide.md#remove-labels-from-a-dataset) verwenden.
 
 **API-Format**
 

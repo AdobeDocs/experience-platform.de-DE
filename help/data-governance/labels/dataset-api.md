@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs
 description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
-ht-degree: 93%
+source-wordcount: '1340'
+ht-degree: 91%
 
 ---
 
@@ -23,7 +23,7 @@ In diesem Dokument wird beschrieben, wie Sie Kennzeichnungen für Datensätze un
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [Erste Schritte](../../catalog/api/getting-started.md) im Catalog-Entwicklerhandbuch beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe an [!DNL Platform]-APIs zu sammeln.
+Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [Erste Schritte](../../catalog/api/getting-started.md) im Catalog-Entwicklerhandbuch beschrieben sind, um die erforderlichen Anmeldedaten für Aufrufe an [!DNL Platform]-APIs zu sammeln.
 
 Um die in diesem Dokument beschriebenen Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id`-Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch [Auflistung der Catalog-Objekte](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
 
@@ -166,6 +166,10 @@ Eine erfolgreiche Antwort gibt den aktualisierten Satz von Kennzeichnungen für 
 ## Entfernen von Kennzeichnungen aus einem Datensatz {#remove}
 
 Sie können alle zuvor angewendeten Feldkennzeichnungen vollständig entfernen, indem Sie entweder vorhandene `optionalLabels`-Werte mit einer Teilmenge der vorhandenen Feldkennzeichnungen oder einer leeren Liste aktualisieren. Stellen Sie eine PUT-Anfrage an die [!DNL Dataset Service]-API, um zuvor angewendete Kennzeichnungen zu aktualisieren oder zu entfernen.
+
+>[!NOTE]
+>
+>Sie können die Bezeichnungen eines Datensatzes vollständig entfernen, indem Sie eine leere Liste für den Parameter `labels` angeben. Es ist nicht erforderlich, dass ein Datensatz Bezeichnungen enthält.
 
 **API-Format**
 

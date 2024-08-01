@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 93%
+source-wordcount: '1550'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungske
 
 ## Verwalten von Kennzeichnungen {#manage-labels}
 
-Um Kennzeichnungen auf Ihre Daten anzuwenden, benötigen Sie die Berechtigung **[!UICONTROL Nutzungskennzeichnungen verwalten]** für die Verwendung in der standardmäßigen Produktions-Sandbox „prod“. Um eine benutzerdefinierte Kennzeichnung zu erstellen, müssen Sie ebenfalls über Administratorrechte für das Produktprofil verfügen. Jedes Unternehmen verfügt nur über eine Liste gültiger Kennzeichnungen. Das Löschen von Kennzeichnungen wird derzeit nicht unterstützt.
+Um Kennzeichnungen auf Ihre Daten anzuwenden, benötigen Sie die Berechtigung **[!UICONTROL Nutzungskennzeichnungen verwalten]** für die Verwendung in der standardmäßigen Produktions-Sandbox „prod“. Um eine benutzerdefinierte Kennzeichnung zu erstellen, müssen Sie ebenfalls über Administratorrechte für das Produktprofil verfügen. Jede Organisation verfügt nur über eine Liste der zutreffenden Beschriftungen. Sie können **keine** Beschriftungen löschen. Stattdessen können Sie sie aus den Datensätzen oder Feldern entfernen, auf die sie angewendet werden.
 
 Weitere Informationen zum Zuweisen einer Berechtigung finden Sie im Handbuch zum [Konfigurieren von Berechtigungen](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de) oder im Abschnitt [Zugriffssteuerung – Übersicht](../../access-control/home.md). Wenn Sie keinen Zugriff auf Admin Console für Ihr Unternehmen haben, wenden Sie sich an das Admin-Team Ihres Unternehmens.
 
