@@ -6,10 +6,10 @@ title: Datenanforderungen in Kunden-KI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Kunden-KI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
 workflow-type: tm+mt
-source-wordcount: '2505'
-ht-degree: 100%
+source-wordcount: '2545'
+ht-degree: 96%
 
 ---
 
@@ -63,9 +63,9 @@ In der folgenden Tabelle sind einige der in diesem Dokument häufig verwendeten 
 | Begriff | Definition |
 | --- | --- |
 | [Experience-Datenmodell (XDM)](../../xdm/home.md) | XDM ist der grundlegende Rahmen, durch den Adobe Experience Cloud als Teil von Adobe Experience Platform die richtige Botschaft der richtigen Person zur richtigen Zeit auf dem richtigen Kanal präsentieren kann. Platform verwendet das XDM-System, um Daten auf eine bestimmte Weise zu organisieren, die die Verwendung für Platform-Services vereinfacht. |
-| [XDM-Schema](../../xdm/schema/composition.md) | Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend dem jeweiligen Feld einschränkt. Schemata bestehen aus einer XDM-Basisklasse und keiner, einer oder mehreren Schemafeldgruppen. |
-| [XDM-Klasse](../../xdm/schema/field-constraints.md) | Alle XDM-Schemata beschreiben Daten, die als `Experience Event` kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei der Ersterstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben. |
-| [Feldergruppen](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Feldergruppen erzwingen die Art und Weise, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema, in dem sie enthalten sind, dieselbe Struktur auf. Feldgruppen sind nur mit bestimmten Klassen kompatibel, angegeben durch ihr `meta:intendedToExtend`-Attribut. |
+| [XDM-Schema](../../xdm/schema/composition.md) | Schemata dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, deren Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Bevor Daten in Platform aufgenommen werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und den Datentyp entsprechend des jeweiligen Feldes einschränkt. Schemata bestehen aus einer XDM-Basisklasse und keiner, einer oder mehreren Schemafeldgruppen. |
+| [XDM-Klasse](../../xdm/schema/field-constraints.md) | Alle XDM-Schemata beschreiben Daten, die als `Experience Event` kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema bei dessen Erstellung zugewiesen wird. XDM-Klassen beschreiben die Mindestanzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten zu haben. |
+| [Feldergruppen](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Feldgruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema, in dem sie enthalten sind, dieselbe Struktur auf. Feldgruppen sind nur mit bestimmten Klassen kompatibel, angegeben durch ihr `meta:intendedToExtend`-Attribut. |
 | [Datentyp](../../xdm/schema/composition.md) | Eine Komponente, die ebenfalls ein oder mehrere Felder für ein Schema bereitstellen kann. Im Gegensatz zu Feldgruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch stellen Datentypen eine flexiblere Möglichkeit dar, um allgemeine Datenstrukturen zu beschreiben, die über mehrere Schemata mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können. Die in diesem Dokument beschriebenen Datentypen werden sowohl von CEE- als auch von Adobe Analytics-Schemata unterstützt. |
 | [Echtzeit-Kundenprofil](../../profile/home.md) | Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die systemübergreifend aggregiert werden, sowie relevante, mit einem Zeitstempel versehene Ereignisse, an denen die entsprechende Person beteiligt ist und die in einem der Systeme stattfanden, die Sie in Verbindung mit Experience Platform verwenden. |
 
@@ -83,7 +83,7 @@ Sie können XDM-Schemata für Erlebnis- oder Kundenerlebnisereignisse bei Eingab
 
 ### Von Kunden-KI verwendete Standardfeldgruppen {#standard-events}
 
-Erlebnisereignisse werden zur Bestimmung verschiedener Kundenverhaltensweisen verwendet. Je nach Strukturierung der Daten umfassen die unten aufgeführten Ereignistypen möglicherweise nicht alle Verhaltensweisen Ihrer Kundin oder Ihres Kunden. Sie müssen selbst bestimmen, welche Felder über die erforderlichen Daten verfügen, um Web- oder andere kanalspezifische Benutzeraktivitäten klar und eindeutig zu identifizieren. Abhängig vom Prognoseziel können unterschiedliche Felder erforderlich sein.
+Erlebnisereignisse werden zur Bestimmung verschiedener Kundenverhaltensweisen verwendet. Je nachdem, wie Ihre Daten strukturiert sind, umfassen die unten aufgeführten Ereignistypen möglicherweise nicht alle Verhaltensweisen Ihres Kunden. Sie müssen selbst bestimmen, welche Felder über die erforderlichen Daten verfügen, um Web- oder andere kanalspezifische Benutzeraktivitäten klar und eindeutig zu identifizieren. Abhängig vom Prognoseziel können unterschiedliche Felder erforderlich sein.
 
 >[!NOTE]
 >
@@ -159,6 +159,8 @@ Standardmäßig sucht Kunden-KI nach Benutzenden, die in den letzten 45 Tagen ak
 
 Die folgenden Beispiele zeigen, wie Sie mit einer einfachen Formel die erforderliche Mindestmenge an Daten ermitteln können. Wenn Sie über mehr Daten als die Mindestanforderung verfügen, liefert Ihr Modell wahrscheinlich genauere Ergebnisse. Wird die erforderliche Mindestmenge unterschritten, schlägt das Modell fehl, da in diesem Fall nicht genügend Daten für das Modell-Training vorhanden sind.
 
+Customer AI verwendet ein Überlebensmodell, um die Wahrscheinlichkeit eines Ereignisses zu einem bestimmten Zeitpunkt zu schätzen und Einflussfaktoren zu identifizieren, zusammen mit beaufsichtigtem Lernen, das positive und negative Populationen definiert, und Entscheidungsbäumen wie `lightgbm`, um einen Wahrscheinlichkeitswert zu generieren.
+
 **Formel**:
 
 So stellen Sie die erforderliche Mindestaufbewahrungsdauer für die im System vorhandenen Daten fest:
@@ -185,7 +187,7 @@ So stellen Sie die erforderliche Mindestaufbewahrungsdauer für die im System vo
 
    - Erforderliche Daten = 60 Tage + 30 Tage = 90 Tage
 
-- Sie möchten vorhersagen, ob eine Benutzerin oder ein Benutzer in den nächsten sieben Tagen wahrscheinlich eine Uhr kaufen wird, **ohne** eine explizite geeignete Population anzugeben. In diesem Fall wird die geeignete Population standardmäßig auf „diejenigen, die in den letzten 45 Tagen aktiv waren“ festgelegt und das Ergebnisfenster beträgt 7 Tage.
+- Sie möchten vorhersagen, ob eine Benutzerin oder ein Benutzer in den nächsten sieben Tagen wahrscheinlich eine Uhr kaufen wird, **ohne** eine explizite geeignete Population anzugeben. In diesem Fall wird die berechtigte Population standardmäßig auf &quot;diejenigen, die in den letzten 45 Tagen aktiv waren&quot;gesetzt und das Ergebnisfenster beträgt 7 Tage.
 
    - Eignungs-Lookback-Fenster = 45 Tage
 
@@ -226,4 +228,4 @@ Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe 
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie Ihre Daten vorbereitet und sichergestellt haben, dass alle Ihre Anmeldeinformationen und Schemata vorhanden sind, lesen Sie das Handbuch [Konfigurieren einer Kunden-KI-Instanz](./user-guide/configure.md), das Sie durch ein schrittweises Tutorial zum Erstellen einer Kunden-KI-Instanz führt.
+Nachdem Sie Ihre Daten vorbereitet und sichergestellt haben, dass alle Ihre Anmeldedaten und Schemata vorhanden sind, lesen Sie das Handbuch [Konfigurieren einer Kunden-KI-Instanz](./user-guide/configure.md), das Sie durch ein schrittweises Tutorial zum Erstellen einer Kunden-KI-Instanz führt.
