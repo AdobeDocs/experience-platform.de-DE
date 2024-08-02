@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
+source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1549'
 ht-degree: 92%
 
 ---
@@ -36,7 +36,7 @@ Sie können Kennzeichnungen direkt zu einem Schema oder zu Feldern innerhalb die
 >
 >![Der Verstoß gegen die Data Governance-Richtlinie hat ein Dialogfeld mit einer Zusammenfassung der Verstöße und einem hervorgehobenen Datenherstellungsdiagramm erkannt.](../images/labels/policy-violation-dialog.png)
 >
->Weitere Informationen zu partiellen Richtlinienverletzungen finden Sie in der Dokumentation zu [Verstößen gegen Datennutzungsrichtlinien](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) .
+>Weitere Informationen zu partiellen Richtlinienverletzungen finden Sie in der Dokumentation zu [Verstößen gegen Datennutzungsrichtlinien](../enforcement/auto-enforcement.md#data-usage-violation) .
 
 Zum Verwalten der Datennutzungskennzeichnungen auf Schemaebene müssen Sie ein vorhandenes Schema auswählen oder ein neues erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform im linken Navigationsbereich die Option **[!UICONTROL Schemata]** aus, um den Arbeitsbereich **[!UICONTROL Schemata]** zu öffnen. Auf dieser Seite werden alle erstellten Schemata, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Schema angezeigt.
 

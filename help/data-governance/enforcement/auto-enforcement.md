@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Automatische Richtliniendurchsetzung
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Zielgruppen für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
 workflow-type: tm+mt
-source-wordcount: '2109'
-ht-degree: 84%
+source-wordcount: '2118'
+ht-degree: 80%
 
 ---
 
@@ -70,8 +70,8 @@ Jeder Schritt in der oben genannten Timeline stellt eine Entität dar, die wie i
 | --- | --- |
 | Datensatz | Datensätze enthalten Datennutzungskennzeichnungen (angewendet auf Schemafeld- oder Datensatzebene), mit denen festgelegt wird, für welche Anwendungsfälle der komplette Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Einverständnisattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Einverständnisrichtlinien haben, werden alle Profile, die nicht den Einverständnisattributanforderungen Ihrer Richtlinien entsprechen, aus Zielgruppen ausgeschlossen, die für ein Ziel aktiviert sind. |
 | Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Platform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
-| Zielgruppe | Segmentierungsregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthalten, übernimmt die Zielgruppe alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten je nach Marketing-Anwendungsfall auf, wenn Sie eine Zielgruppe aktivieren, deren übernommene Beschriftungen aufgrund der jeweiligen Richtlinien des Ziels eingeschränkt sind. |
-| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall hängt von der in einer Richtlinie definierten Marketing-Aktion ab. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Einverständnisrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie eine Zielgruppe aktivieren, dessen Nutzungskennzeichnungen für die Marketing-Aktion des Ziels eingeschränkt sind.<br><br>(Beta) Wenn eine Zielgruppe aktiviert wird, werden alle Profile, die nicht die erforderlichen Einverständnisattribute für die Marketing-Aktion enthalten (gemäß der Definition in Ihren Einverständnisrichtlinien), aus der aktivierten Zielgruppe ausgeschlossen. |
+| Zielgruppe | Segmentierungsregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthalten, übernimmt die Zielgruppe alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren vererbte Bezeichnungen anhand der für das Ziel geltenden Richtlinien je nach Marketing-Anwendungsfall eingeschränkt sind. |
+| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall hängt von der in einer Richtlinie definierten Marketing-Aktion ab. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Einverständnisrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie versuchen, eine Zielgruppe zu aktivieren, deren Nutzungsbezeichnungen für die Marketing-Aktion des Zielziels eingeschränkt sind.<br><br>(Beta) Wenn eine Zielgruppe aktiviert wird, werden alle Profile, die nicht die erforderlichen Einverständnisattribute für die Marketing-Aktion enthalten (gemäß der Definition in Ihren Einverständnisrichtlinien), aus der aktivierten Zielgruppe ausgeschlossen. |
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ Verwenden Sie das Datenherstellungsdiagramm, um zu verstehen, welche anderen Kon
 
 ### Auswertung der Einverständnisrichtlinie {#consent-policy-evaluation}
 
-Beim Aktivieren einer Zielgruppe für ein Ziel können Sie sehen, wie sich Ihre [Zustimmungsrichtlinien](../policies/user-guide.md#consent-policy) auf die verschiedenen Prozentsätze der Profile auswirken, die in der Aktivierung enthalten sind.
+Beim Aktivieren einer Zielgruppe für ein Ziel können Sie sehen, wie Ihre [Zustimmungsrichtlinien](../policies/user-guide.md) die Reichweite Ihrer Zielgruppe während der [Überprüfungsphase des Workflows [!UICONTROL Ziele aktivieren]](#pre-activation-evaluation) beeinflussen.
 
 >[!NOTE]
 >
@@ -138,13 +138,13 @@ Diese Verbesserungen ermöglichen ein größeres Vertrauen in Ihre Marketing-Str
 >
 >Es gibt keine Änderungen aufgrund dieser Verbesserung an der Benutzeroberfläche.
 
-#### Auswertung vor der Aktivierung
+#### Auswertung vor der Aktivierung {#pre-activation-evaluation}
 
-Wenn Sie beim [Aktivieren eines Ziels](../../destinations/ui/activation-overview.md) den Schritt **[!UICONTROL Überprüfen]** erreicht haben, wählen Sie **[!UICONTROL Angewendete Richtlinien anzeigen]** aus.
+Sobald Sie beim Aktivieren eines Ziels ](../../destinations/ui/activation-overview.md) den Schritt **[!UICONTROL Überprüfen]** erreicht haben, wählen Sie **[!UICONTROL Angewandte Richtlinien anzeigen]** aus.[
 
 ![Schaltfläche „Angewendete Richtlinien anzeigen“ im Workflow „Ziel aktivieren“](../images/enforcement/view-applied-policies.png)
 
-Es wird ein Dialogfeld für die Richtlinienüberprüfung angezeigt, in dem Sie eine Vorschau der Auswirkungen Ihrer Einverständnisrichtlinien auf die einverstandene Zielgruppe der aktivierten Zielgruppen anzeigen können.
+Es wird ein Dialogfeld mit einer Richtlinienüberprüfung angezeigt, in dem Sie eine Vorschau der Auswirkungen Ihrer Zustimmungsrichtlinien auf die zu aktivierende Zielgruppe anzeigen können.
 
 ![Dialogfeld für die Überprüfung von Einverständnisrichtlinien in der Platform-Benutzeroberfläche](../images/enforcement/consent-policy-check.png)
 
