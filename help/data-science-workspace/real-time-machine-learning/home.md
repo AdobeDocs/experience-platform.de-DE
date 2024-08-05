@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Übersicht zu maschinellem Lernen in Echtzeit
 description: Maschinelles Lernen in Echtzeit kann die Relevanz der Inhalte Ihrer digitalen Erlebnisse für Ihre Endbenutzenden erheblich steigern. Dies wird durch die Nutzung von Echtzeit-Unterscheidungen und kontinuierlichem Lernen am Experience Platform-Edge Network ermöglicht.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 93%
+source-wordcount: '576'
+ht-degree: 89%
 
 ---
 
 # Übersicht zu maschinellem Lernen in Echtzeit (Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 >[!IMPORTANT]
 >

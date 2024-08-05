@@ -5,14 +5,20 @@ title: Publish a Model as a Service mithilfe der Sensei Machine Learning API
 type: Tutorial
 description: In diesem Tutorial wird der Prozess der Veröffentlichung eines Modells als Dienst mit der Sensei Machine Learning-API behandelt.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1541'
 ht-degree: 44%
 
 ---
 
 # Publish ein Modell als Dienst mit dem [!DNL Sensei Machine Learning API]
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 In diesem Tutorial wird der Prozess zum Veröffentlichen eines Modells als Dienst mit dem Wert [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) beschrieben.
 

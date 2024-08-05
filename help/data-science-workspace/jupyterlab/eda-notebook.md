@@ -5,14 +5,20 @@ title: Notebook zur explorativen Datenanalyse (EDA)
 type: Tutorial
 description: In diesem Handbuch wird beschrieben, wie Sie mit dem Notebook zur explorativen Datenanalyse (EDA) Muster in Web-Daten erkennen, Ereignisse mit einem Prognoseziel aggregieren, aggregierte Daten bereinigen und die Beziehung zwischen Prädiktoren und Zielen verstehen können.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '2766'
-ht-degree: 100%
+source-wordcount: '2789'
+ht-degree: 99%
 
 ---
 
 # Untersuchen Web-basierter Daten für Prognosemodelle mit dem Notebook zur explorativen Datenanalyse (EDA)
+
+>[!NOTE]
+>
+>Daten Science Arbeitsbereich ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit früheren Berechtigungen für Daten Science Arbeitsbereich.
 
 Das Notebook zur explorativen Datenanalyse (EDA) hilft Ihnen beim Erkennen von Datenmustern, Überprüfen der Datenplausibilität und Zusammenfassen der relevanten Daten für Prognosemodelle.
 

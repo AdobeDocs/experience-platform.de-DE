@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Datenzugriff in Jupyterlab-Notebooks
 description: Dieser Leitfaden konzentriert sich auf die Verwendung von Jupyter Notebooks, die in Data Science Workspace für den Zugriff auf Ihre Daten entwickelt wurden.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '3320'
+source-wordcount: '3343'
 ht-degree: 23%
 
 ---
 
 # Datenzugriff in [!DNL Jupyterlab] Notebooks
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Jeder unterstützte Kernel bietet native Funktionen, mit denen Sie Platform-Daten aus einem Datensatz in einem Notebook lesen können. Derzeit unterstützt JupyterLab in Adobe Experience Platform Data Science Workspace Notebooks für [!DNL Python], R, PySpark und Scala. Die Unterstützung für die Paginierung von Daten ist jedoch auf [!DNL Python]- und R-Notebooks beschränkt. In diesem Handbuch wird beschrieben, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können.
 
@@ -405,7 +411,7 @@ Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datens
 
 ### Lokalen Dataframe erstellen {#pyspark-create-dataframe}
 
-Verwenden Sie SQL-Abfragen, um einen lokalen Dataframe mit PySpark 3 zu erstellen. Beispiel:
+Verwenden Sie SQL-Abfragen, um einen lokalen Dataframe mit PySpark 3 zu erstellen. Zum Beispiel:
 
 ```scala
 date_aggregation.createOrReplaceTempView("temp_df")
@@ -580,7 +586,7 @@ df1.write.format("com.adobe.platform.query")
 
 ### Erstellen eines lokalen Dataframes {#scala-create-dataframe}
 
-Um einen lokalen Dataframe mit Scala zu erstellen, sind SQL-Abfragen erforderlich. Beispiel:
+Um einen lokalen Dataframe mit Scala zu erstellen, sind SQL-Abfragen erforderlich. Zum Beispiel:
 
 ```scala
 sparkdf.createOrReplaceTempView("sparkdf")

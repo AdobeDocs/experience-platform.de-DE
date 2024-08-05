@@ -5,14 +5,20 @@ title: Experiment-API-Endpunkt
 description: Modellentwicklung und -schulung finden auf Experimentebene statt, bei der ein Experiment aus einer MLInstance, Trainings-Läufen und Scoring-Läufen besteht.
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '806'
 ht-degree: 17%
 
 ---
 
 # Experiment-Endpunkt
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Modellentwicklung und -schulung finden auf Experimentebene statt, bei der ein Experiment aus einer MLInstance, Trainings-Läufen und Scoring-Läufen besteht.
 

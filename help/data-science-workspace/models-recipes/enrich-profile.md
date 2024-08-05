@@ -5,14 +5,20 @@ title: Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem L
 type: Tutorial
 description: Dieses Dokument bietet eine Anleitung zur Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: afa27069c7490848398c92973dd77810564b5993
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 14%
+source-wordcount: '653'
+ht-degree: 13%
 
 ---
 
 # Anreicherung von [!DNL Real-Time Customer Profile] mit Einblicken aus maschinellem Lernen
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und Einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in einen [!DNL Profile]-aktivierten Datensatz aufgenommen werden, werden dieselben Daten auch als [!DNL Profile]-Datensätze erfasst, die dann mit [!DNL Adobe Experience Platform Segmentation Service] segmentiert werden können.
 

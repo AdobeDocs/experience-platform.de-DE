@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Rezept für Produktempfehlungen
 description: Mit dem Rezept „Produktempfehlungen“ können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie von Kunden feststellen, für welche Produkte sie sich interessieren.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 90%
+source-wordcount: '489'
+ht-degree: 86%
 
 ---
 
 # Rezept für Produktempfehlungen
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Mit dem Rezept „Produktempfehlungen“ können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie von Kunden feststellen, für welche Produkte sie sich interessieren.
 

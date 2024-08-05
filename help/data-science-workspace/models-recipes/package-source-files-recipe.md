@@ -5,14 +5,20 @@ title: Verpacken von Source-Dateien in einem Rezept
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie die bereitgestellten Beispielquelldateien für Einzelhandelsumsätze in eine Archivdatei verpacken können, die zum Erstellen eines Rezepts in Adobe Experience Platform Data Science Workspace verwendet werden kann, indem Sie dem Workflow für den Rezeptimport entweder in der Benutzeroberfläche oder mithilfe der API folgen.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
 
 # Packen von Quelldateien in ein Rezept
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 In diesem Tutorial erfahren Sie, wie Sie die bereitgestellten Beispielquelldateien für Einzelhandelsumsätze in eine Archivdatei verpacken können, die zum Erstellen eines Rezepts in Adobe Experience Platform [!DNL Data Science Workspace] verwendet werden kann, indem Sie dem Workflow für den Rezeptimport entweder in der Benutzeroberfläche oder mithilfe der API folgen.
 

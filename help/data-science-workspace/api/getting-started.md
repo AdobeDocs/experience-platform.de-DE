@@ -5,14 +5,20 @@ title: Handbuch zur Sensei Machine Learning API
 description: Mit der Sensei Machine Learning API können Entwickler CRUD-Vorgänge für verschiedene Data Science Workspace-Ressourcen durchführen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 37%
+source-wordcount: '255'
+ht-degree: 34%
 
 ---
 
 # [!DNL Sensei Machine Learning]-API-Handbuch
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Die [!DNL Sensei Machine Learning] -API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von Diensten für maschinelles Lernen, von der Onboarding von Algorithmen über Experimente bis hin zur Bereitstellung von Diensten.
 

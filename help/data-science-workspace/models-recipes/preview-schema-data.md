@@ -5,14 +5,20 @@ title: Vorschau des Schemas und Datensatzes für Einzelhandelsumsätze
 type: Tutorial
 description: Im folgenden Dokument wird die Vorschau von Schemas und Datensätzen in Adobe Experience Platform beschrieben.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 22%
+source-wordcount: '259'
+ht-degree: 20%
 
 ---
 
 # Vorschau des Einzelhandelsschemas und -datensatzes
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem Tutorial zum [Einzelhandelsschema und -datensatz](./create-retails-sales-dataset.md). Ausgabeschemas und -datensätze können auf [!DNL Experience Platform] angezeigt werden. Gehen Sie zur Anzeige der Schemata und Datensätze wie folgt vor:
 

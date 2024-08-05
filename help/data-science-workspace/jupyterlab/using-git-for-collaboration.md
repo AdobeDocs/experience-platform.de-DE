@@ -5,14 +5,20 @@ title: Zusammenarbeiten in JupyterLab mit Git
 type: Tutorial
 description: Git ist ein verteiltes Versionskontrollsystem für das Tracking von Änderungen im Quell-Code während der Software-Entwicklung. Git ist im Datenwissenschafts-Arbeitsbereich der JupyterLab-Umgebung vorinstalliert.
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 100%
+source-wordcount: '303'
+ht-degree: 92%
 
 ---
 
 # Zusammenarbeiten in [!DNL JupyterLab] mit [!DNL Git]
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 [!DNL Git] ist ein verteiltes Versionskontrollsystem zum Tracking von Änderungen im Quell-Code während der Software-Entwicklung. Git ist in der [!DNL Data Science Workspace JupyterLab]-Umgebung vorinstalliert.
 

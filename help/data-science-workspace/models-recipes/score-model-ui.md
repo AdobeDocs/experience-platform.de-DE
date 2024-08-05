@@ -5,14 +5,20 @@ title: Modell in der Benutzeroberfläche von Data Science Workspace bewerten
 type: Tutorial
 description: Scoring in Adobe Experience Platform Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 31%
+source-wordcount: '670'
+ht-degree: 30%
 
 ---
 
 # Modell in der Benutzeroberfläche von Data Science Workspace bewerten
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Scoring in Adobe Experience Platform [!DNL Data Science Workspace] kann erzielt werden, indem Eingabedaten in ein vorhandenes trainiertes Modell eingespeist werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 

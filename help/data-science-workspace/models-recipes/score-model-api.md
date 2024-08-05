@@ -5,14 +5,20 @@ title: Modellbewertung mit der Sensei Machine Learning API
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie die Sensei Machine Learning-APIs nutzen können, um ein Experiment und einen Experimentablauf zu erstellen.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 77%
+source-wordcount: '570'
+ht-degree: 74%
 
 ---
 
 # Score a model using [!DNL Sensei Machine Learning API]
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine Liste aller Endpunkte der Sensei Machine Learning-API finden Sie in [diesem Dokument](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 

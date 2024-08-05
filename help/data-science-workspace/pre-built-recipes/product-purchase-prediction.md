@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Rezept für Vorhersagen bei Produktkäufen
 description: Mit dem Rezept "Vorhersage für Produktkäufe"können Sie die Wahrscheinlichkeit eines bestimmten Typs von Kundenkaufereignissen vorhersagen, z. B. einen Produktkauf.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '415'
 ht-degree: 11%
 
 ---
 
 # Rezept für Produktakktionsvorhersage
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Mit dem Rezept &quot;Vorhersage für Produktkäufe&quot;können Sie die Wahrscheinlichkeit eines bestimmten Typs von Kundenkaufereignissen vorhersagen, z. B. einen Produktkauf.
 

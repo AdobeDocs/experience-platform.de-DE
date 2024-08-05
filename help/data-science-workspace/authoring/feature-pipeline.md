@@ -4,14 +4,20 @@ title: Erstellen einer Feature Pipeline mit dem Model Authoring SDK
 type: Tutorial
 description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktions-Pipelines erstellen und erstellen, um mithilfe von Sensei Machine Learning Framework Runtime Funktionen bedarfsgerecht zu entwickeln. In diesem Dokument werden die verschiedenen Klassen in einer Feature Pipeline beschrieben und ein schrittweises Tutorial zum Erstellen einer benutzerdefinierten Feature Pipeline mit dem Model Authoring SDK in PySpark bereitgestellt.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1438'
 ht-degree: 27%
 
 ---
 
 # Erstellen einer Funktions-Pipeline mit dem Model Authoring SDK
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 >[!IMPORTANT]
 >

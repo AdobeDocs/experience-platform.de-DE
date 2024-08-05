@@ -5,14 +5,20 @@ title: Insights-API-Endpunkt
 description: Insights bieten Metriken, mit denen Datenwissenschaftler durch Anzeige relevanter Auswertungsmetriken optimale ML-Modelle ermitteln und auswählen können.
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 96%
+source-wordcount: '537'
+ht-degree: 91%
 
 ---
 
 # Insights-Endpunkt
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Insights bieten Metriken, mit denen Datenwissenschaftler durch Anzeige relevanter Auswertungsmetriken optimale ML-Modelle ermitteln und auswählen können.
 

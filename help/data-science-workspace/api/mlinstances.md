@@ -5,14 +5,20 @@ title: MLInstances API Endpoint
 description: Eine MLInstance ist eine Kopplung einer vorhandenen Engine mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 19%
+source-wordcount: '642'
+ht-degree: 18%
 
 ---
 
 # MLInstances-Endpunkt
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Eine MLInstance ist eine Kopplung einer vorhandenen [Engine](./engines.md) mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
 

@@ -5,15 +5,21 @@ title: Schema und Datensatz für Einzelhandelsumsätze erstellen
 type: Tutorial
 description: Diese Anleitung beinhaltet Informationen über die Voraussetzungen und Elemente, die bei allen anderen Anleitungen für Adobe Experience Platform Data Science Workspace benötigt werden. Nach Abschluss sind das Schema und die Datensätze für Einzelhandelsumsätze für Sie und Mitglieder Ihres Unternehmens auf der Experience Platform verfügbar.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 43%
+source-wordcount: '557'
+ht-degree: 41%
 
 ---
 
 
 # Schema und Datensatz für Einzelhandelsumsätze erstellen
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen Tutorials [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] erforderlich sind. Nach Abschluss sind das Schema und die Datensätze für Einzelhandelsumsätze für Sie und Mitglieder Ihres Unternehmens unter [!DNL Experience Platform] verfügbar.
 

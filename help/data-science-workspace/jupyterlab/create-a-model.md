@@ -5,14 +5,20 @@ title: Erstellen eines Modells mit JupyterLab Notebooks
 type: Tutorial
 description: Dieses Tutorial führt Sie durch die erforderlichen Schritte zum Erstellen eines Rezepts mithilfe der JupyterLab Notebook-Rezept-Builder-Vorlage.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2106'
 ht-degree: 29%
 
 ---
 
 # Erstellen eines Modells mit JupyterLab Notebooks
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Dieses Tutorial führt Sie durch die erforderlichen Schritte zum Erstellen eines Modells mithilfe der JupyterLab Notebook-Rezept-Builder-Vorlage.
 

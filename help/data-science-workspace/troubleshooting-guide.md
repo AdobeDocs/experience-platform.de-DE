@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung im Datenwissenschafts-Arbeitsbereich
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Datenwissenschafts-Arbeitsbereich von Adobe Experience Platform.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 100%
+source-wordcount: '1497'
+ht-degree: 98%
 
 ---
 
 # [!DNL Data Science Workspace] – Handbuch zur Fehlerbehebung
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Data Science Workspace]. Antworten zu Fragen und allgemeine Informationen zur Fehlerbehebung bei [!DNL Platform]-APIs finden Sie im [Handbuch zur Fehlerbehebung bei Adobe Experience Platform-APIs](../landing/troubleshooting.md).
 

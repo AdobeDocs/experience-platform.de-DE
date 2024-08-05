@@ -5,14 +5,20 @@ title: MLServices API Endpoint
 description: Ein MLService ist ein veröffentlichtes Schulungsmodell, das Ihrem Unternehmen die Möglichkeit gibt, auf zuvor entwickelte Modelle zuzugreifen und diese wiederzuverwenden. Eine wichtige Funktion von MLServices ist die Möglichkeit, Schulungen und Auswertungen planmäßig zu automatisieren. Geplante Trainings-Läufe können dazu beitragen, die Effizienz und Genauigkeit eines Modells zu erhalten, während geplante Scoring-Läufe sicherstellen können, dass neue Einblicke konsistent generiert werden.
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '910'
 ht-degree: 9%
 
 ---
 
 # MLServices-Endpunkt
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Ein MLService ist ein veröffentlichtes Schulungsmodell, das Ihrem Unternehmen die Möglichkeit gibt, auf zuvor entwickelte Modelle zuzugreifen und diese wiederzuverwenden. Eine wichtige Funktion von MLServices ist die Möglichkeit, Schulungen und Auswertungen planmäßig zu automatisieren. Geplante Trainings-Läufe können dazu beitragen, die Effizienz und Genauigkeit eines Modells zu erhalten, während geplante Scoring-Läufe sicherstellen können, dass neue Einblicke konsistent generiert werden.
 

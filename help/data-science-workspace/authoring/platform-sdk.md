@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Modell-Authoring mit dem Adobe Experience Platform Platform SDK
 description: In diesem Tutorial erhalten Sie Informationen zum Konvertieren von data_access_sdk_python in das neue Python platform_sdk in sowohl Python als auch R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 60%
+source-wordcount: '509'
+ht-degree: 57%
 
 ---
 
 # Modellerstellung mit dem Adobe Experience Platform [!DNL Platform] SDK
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Diese Anleitung bietet Ihnen Informationen zum Konvertieren von `data_access_sdk_python` in das neue Python `platform_sdk` in sowohl Python als auch R. Diese Anleitung enthält Informationen zu den folgenden Vorgängen:
 

@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Knotenreferennz für maschinelles Lernen in Echtzeit
 description: Ein Knoten ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Verknüpfungen mit anderen Knoten verkettet werden, um ein Diagramm zu bilden, das für eine ML-Pipeline steht. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang an Eingabedaten dar, beispielsweise eine Umwandlung von Daten oder Schemata oder eine Schlussfolgerung durch maschinelles Lernen. Der Knoten gibt den transformierten oder abgeleiteten Wert an den oder die nächsten Knoten aus.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 9030a5482d4ea2b54426680cef92b89e68ef5b33
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 100%
+source-wordcount: '675'
+ht-degree: 96%
 
 ---
 
 # Knotenreferenz für maschinelles Lernen in Echtzeit (Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 >[!IMPORTANT]
 >

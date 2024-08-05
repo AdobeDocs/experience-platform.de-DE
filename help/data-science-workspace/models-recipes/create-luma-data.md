@@ -5,14 +5,20 @@ title: Erstellen von Luma-Webschemata und -Datensätzen
 type: Tutorial
 description: In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für das Luma-Demo-Tendenzmodell erforderlich sind.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
 
 # Erstellen von Luma-Propensity-Modellschemas und -Datensätzen
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle anderen Tutorials [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] erforderlich sind. Nach Abschluss des Vorgangs stehen Ihnen und Ihrer Organisation die folgenden Schemas und Datensätze zur Verfügung.
 

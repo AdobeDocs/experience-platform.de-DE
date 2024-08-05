@@ -5,15 +5,20 @@ title: Modell mithilfe der Sensei Machine Learning API trainieren und bewerten
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mit Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 81%
+source-wordcount: '1240'
+ht-degree: 79%
 
 ---
 
 # Modell mithilfe der [!DNL Sensei Machine Learning]-API trainieren und bewerten
 
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen erstellen, dazu schulen und auswerten. Eine detaillierte Liste der API-Dokumentation finden Sie in [diesem Dokument](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 

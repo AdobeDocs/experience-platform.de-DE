@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Erste Schritte beim maschinellem Lernen in Echtzeit
 description: Im folgenden Dokument werden die Schritte beschrieben, die zum Erstellen eines Modells für maschinelles Lernen in Echtzeit in Adobe Experience Platform erforderlich sind.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 94%
+source-wordcount: '461'
+ht-degree: 89%
 
 ---
 
 # Erste Schritte beim maschinellem Lernen in Echtzeit (Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 >[!IMPORTANT]
 >

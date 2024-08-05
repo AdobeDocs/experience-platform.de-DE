@@ -5,14 +5,20 @@ title: Analysieren Ihrer Daten mit Notebooks
 type: Tutorial
 description: In diesem Tutorial wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace integriert sind, auf Ihre Daten zugreifen, sie untersuchen und visualisieren können.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1729'
 ht-degree: 22%
 
 ---
 
 # Daten mithilfe von Notebooks analysieren
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 In diesem Tutorial wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace integriert sind, auf Ihre Daten zugreifen, sie untersuchen und visualisieren können. Am Ende dieses Tutorials sollten Sie einige der Funktionen von Jupyter Notebooks kennen, die Ihnen ein besseres Verständnis Ihrer Daten bieten.
 

@@ -5,15 +5,21 @@ title: Erstellen und Publish eines Modells für maschinelles Lernen
 type: Tutorial
 description: Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Veröffentlichen eines Modells für maschinelles Lernen erforderlich sind.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1096'
 ht-degree: 4%
 
 ---
 
 
 # Erstellen und Veröffentlichen eines Modells für maschinelles Lernen
+
+>[!NOTE]
+>
+>Data Science Workspace ist nicht mehr erhältlich.
+>
+>Diese Dokumentation richtet sich an Bestandskunden mit vorherigen Berechtigungen für Data Science Workspace.
 
 Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Veröffentlichen eines Modells für maschinelles Lernen erforderlich sind. Jeder Abschnitt enthält eine Beschreibung Ihrer Aktionen sowie einen Link zur Benutzeroberfläche und API-Dokumentation, um den beschriebenen Schritt durchzuführen.
 
