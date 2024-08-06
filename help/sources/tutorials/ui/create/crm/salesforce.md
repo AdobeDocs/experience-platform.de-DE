@@ -2,9 +2,9 @@
 title: Salesforce-Konto über die Experience Platform-Benutzeroberfläche verbinden
 description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche an die Experience Platform übertragen können.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '841'
 ht-degree: 21%
 
 ---
@@ -24,7 +24,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 Wenn Sie bereits über ein authentifiziertes [!DNL Salesforce] -Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum Konfigurieren eines Datenflusses für CRM-Daten [ fortfahren.](../../dataflow/crm.md)
 
-### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
+### Sammeln erforderlicher Anmeldedaten {#gather-required-credentials}
 
 Die Quelle [!DNL Salesforce] unterstützt grundlegende Authentifizierung und OAuth2 Client Credential.
 
@@ -36,7 +36,7 @@ Sie müssen Werte für die folgenden Anmeldeinformationen angeben, um Ihr [!DNL 
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Umgebungs-URL | Die URL der Quellinstanz [!DNL Salesforce]. |
+| Umgebungs-URL | Die URL der Quellinstanz [!DNL Salesforce]. Das Format der Umgebungs-URL ist `https://[domain].my.salesforce.com`. |
 | Benutzername | Der Benutzername für das [!DNL Salesforce] -Benutzerkonto. |
 | Kennwort | Das Kennwort für das [!DNL Salesforce] -Benutzerkonto. |
 | Sicherheitstoken | Das Sicherheits-Token für das [!DNL Salesforce] -Benutzerkonto. |
@@ -50,7 +50,7 @@ Sie müssen Werte für die folgenden Anmeldedaten angeben, um Ihr [!DNL Salesfor
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Umgebungs-URL | Die URL der Quellinstanz [!DNL Salesforce]. |
+| Umgebungs-URL | Die URL der Quellinstanz [!DNL Salesforce]. Das Format der Umgebungs-URL ist `https://[domain].my.salesforce.com`. |
 | Client-ID | Die Client-ID wird zusammen mit dem Client-Geheimnis als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglichen es die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung mit [!DNL Salesforce] identifizieren. |
 | Client-Geheimnis | Das Client-Geheimnis wird zusammen mit der Client-ID als Teil der OAuth2-Authentifizierung verwendet. Gemeinsam ermöglichen es die Client-ID und das Client-Geheimnis Ihrer Anwendung, im Namen Ihres Kontos zu arbeiten, indem Sie Ihre Anwendung mit [!DNL Salesforce] identifizieren. |
 | API-Version | Die REST-API-Version der von Ihnen verwendeten [!DNL Salesforce]-Instanz. Der Wert für die API-Version muss mit einer Dezimalzahl formatiert sein. Wenn Sie beispielsweise die API-Version `52` verwenden, müssen Sie den Wert als `52.0` eingeben. Wenn dieses Feld leer gelassen wird, verwendet Experience Platform automatisch die neueste verfügbare Version. |
