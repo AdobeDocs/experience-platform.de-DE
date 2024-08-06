@@ -2,9 +2,9 @@
 title: Überwachung der Nutzung der Batch Query-Lizenz
 description: Die Benutzeroberfläche von Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Verwendung der Data Distiller-Lizenz durch Ihr Unternehmen anzeigen können.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: f3542105e423633e2bdf0f8e8501c1a1dc200f32
+source-git-commit: 010780b7d7f998c38fdd5344457409ed97f982fa
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Die Metrik [!UICONTROL  Berechnungsstunden] gilt nur für Kunden mit der Data Di
 
 >[!NOTE]
 >
->**Die [!UICONTROL Stunden berechnen] -Daten sind mit Einschränkungen verfügbar**: Die Daten beginnen am 1. Oktober 2023 und enthalten keine Trends.
+>**Die [!UICONTROL Stunden berechnen] -Daten sind mit Einschränkungen verfügbar**: Die angezeigten Daten für die Nutzung von Berechnungsstunden beginnen am 15. September 2023.
 
 ![Das Dashboard zur Lizenznutzung mit hervorgehobener Metrik für die Berechnungsstunden.](../images/data-distiller/compute-hours.png)
 
