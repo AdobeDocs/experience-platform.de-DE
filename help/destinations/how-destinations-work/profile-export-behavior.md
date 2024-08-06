@@ -2,7 +2,7 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 97%
@@ -44,7 +44,7 @@ Die Aggregationsrichtlinie ist konfigurierbar, und das Zielentwickler-Team kann 
 >
 > Unternehmensziele sind nur mit [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) verfügbar.
 
-Die [Unternehmensziele](/help/destinations/destination-types.md#streaming-profile-export) in Experience Platform sind Amazon Kinesis, Azure Event Hubs und HTTP-API.
+Die [Unternehmensziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform sind Amazon Kinesis, Azure Event Hubs und HTTP-API.
 
 Experience Platform optimiert das Verhalten beim Profilexport für Ihr Unternehmensziel, sodass Daten nur an Ihren API-Endpunkt exportiert werden, wenn relevante Profilaktualisierungen nach der Zielgruppenqualifikation oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 

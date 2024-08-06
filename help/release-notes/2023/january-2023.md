@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise Januar 2023
 description: Versionshinweise Januar 2023 für Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 99%
@@ -175,7 +175,7 @@ Um Redundanz im Lebenszyklus der Segmentzugehörigkeit zu entfernen, läuft der 
 
 Nach der Einstellung werden in einem Segment qualifizierte Profile als `Realized` und disqualifizierte Profile weiterhin als `Exited` dargestellt. Dies führt zu Gleichheit bei dateibasierten Zielen mit `Active`- und `Expired`-Segmentstatus.
 
-Diese Änderung könnte sich auf Sie auswirken, wenn Sie [Unternehmensziele](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) verwenden und automatisierte nachgelagerte Prozesse basierend auf dem `Existing`-Status anwenden. Überprüfen Sie Ihre nachgelagerten Integrationen, falls dies auf Sie zutrifft. Wenn Sie über einen bestimmten Zeitraum hinaus an der Identifizierung neu qualifizierter Profile interessiert sind, sollten Sie eine Kombination des `Realized`-Status und der `lastQualificationTime` bei Ihrer Segmentzugehörigkeitszuordnung erwägen. Weitere Informationen erhalten Sie von Ihren Adobe-Support-Mitarbeitenden.
+Diese Änderung könnte sich auf Sie auswirken, wenn Sie [Unternehmensziele](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, HTTP API) verwenden und automatisierte nachgelagerte Prozesse basierend auf dem `Existing`-Status anwenden. Überprüfen Sie Ihre nachgelagerten Integrationen, falls dies auf Sie zutrifft. Wenn Sie über einen bestimmten Zeitraum hinaus an der Identifizierung neu qualifizierter Profile interessiert sind, sollten Sie eine Kombination des `Realized`-Status und der `lastQualificationTime` bei Ihrer Segmentzugehörigkeitszuordnung erwägen. Weitere Informationen erhalten Sie von Ihren Adobe-Support-Mitarbeitenden.
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, finden Sie in der [Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 

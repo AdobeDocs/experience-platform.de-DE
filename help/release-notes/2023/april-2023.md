@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -174,7 +174,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Segmentzugehörigkeitszuordnung | Als Folgemaßnahme zur Ankündigung vom Februar wird seit dem 15. Mai 2023 der Status `Existing` in der Segmentzugehörigkeitszuordnung nicht mehr unterstützt, um Redundanz im Lebenszyklus der Segmentzugehörigkeit zu entfernen. Nach dieser Änderung werden in einem Segment qualifizierte Profile als `Realized` und disqualifizierte Profile weiterhin als `Exited` dargestellt. <br/><br/> Diese Änderung könnte sich auf Sie auswirken, wenn Sie [Unternehmensziele](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, HTTP API) verwenden und automatisierte nachgelagerte Prozesse basierend auf dem Status `Existing` anwenden. Wenn dies der Fall ist, überprüfen Sie Ihre nachgelagerten Integrationen. Wenn Sie über einen bestimmten Zeitraum hinaus an der Identifizierung neu qualifizierter Profile interessiert sind, sollten Sie eine Kombination des `Realized`-Status und der `lastQualificationTime` bei Ihrer Segmentzugehörigkeitszuordnung erwägen. Weitere Informationen erhalten Sie von Ihren Adobe-Support-Mitarbeitenden. |
+| Segmentzugehörigkeitszuordnung | Als Folgemaßnahme zur Ankündigung vom Februar wird seit dem 15. Mai 2023 der Status `Existing` in der Segmentzugehörigkeitszuordnung nicht mehr unterstützt, um Redundanz im Lebenszyklus der Segmentzugehörigkeit zu entfernen. Nach dieser Änderung werden in einem Segment qualifizierte Profile als `Realized` und disqualifizierte Profile weiterhin als `Exited` dargestellt. <br/><br/> Diese Änderung könnte sich auf Sie auswirken, wenn Sie [Unternehmensziele](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, HTTP API) verwenden und automatisierte nachgelagerte Prozesse basierend auf dem Status `Existing` anwenden. Wenn dies der Fall ist, überprüfen Sie Ihre nachgelagerten Integrationen. Wenn Sie über einen bestimmten Zeitraum hinaus an der Identifizierung neu qualifizierter Profile interessiert sind, sollten Sie eine Kombination des `Realized`-Status und der `lastQualificationTime` bei Ihrer Segmentzugehörigkeitszuordnung erwägen. Weitere Informationen erhalten Sie von Ihren Adobe-Support-Mitarbeitenden. |
 
 {style="table-layout:auto"}
 

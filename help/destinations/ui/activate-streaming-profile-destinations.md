@@ -4,7 +4,7 @@ type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren können, indem Sie Zielgruppen an profilbasierte Ziele senden.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 23%
@@ -23,7 +23,7 @@ ht-degree: 23%
 
 ## Übersicht {#overview}
 
-In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppendaten in Adobe Experience Platform für das Streaming profilbasierter Ziele erforderlich ist (auch als [Enterprise-Ziele](/help/destinations/destination-types.md#streaming-profile-export) bezeichnet).
+In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppendaten in Adobe Experience Platform für das Streaming profilbasierter Ziele erforderlich ist (auch als [Enterprise-Ziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) bezeichnet).
 
 Dieser Artikel gilt für die folgenden drei Ziele:
 

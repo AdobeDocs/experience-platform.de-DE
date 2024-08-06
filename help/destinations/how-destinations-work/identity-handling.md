@@ -2,7 +2,7 @@
 title: Umgang mit Identitäten im Aktivierungs-Workflow für Ziele
 description: Erfahren Sie, wie der Identitätsexport im Aktivierungs-Workflow je nach Zieltyp verarbeitet wird.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 99%
@@ -92,7 +92,7 @@ Beim Konfigurieren eines Datenstroms, wie in der oben verlinkten Dokumentation b
 
 ## Unternehmensziele {#enterprise-destinations}
 
-[Unternehmensziele](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP-API) erfordern keine spezifischen IDs im Datenexport, da diese für Anwendungsfälle der Unternehmensintegration entwickelt wurden. Sie können jedoch bei Bedarf Identitäten als XDM-Attribute oder aus der Identitätszuordnung exportieren. Sehen Sie sich ein [Beispiel für an das HTTP-Ziel exportierte Daten](/help/destinations/catalog/streaming/http-destination.md#exported-data) an, das sowohl das `personalEmail.address`-XDM-Attribut als auch die Identitäten `ECID` und `email_lc_sha256` (gehashte E-Mail-Adresse) aus der Identitätszuordnung beinhaltet.
+[Unternehmensziele](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP-API) erfordern keine spezifischen IDs im Datenexport, da diese für Anwendungsfälle der Unternehmensintegration entwickelt wurden. Sie können jedoch bei Bedarf Identitäten als XDM-Attribute oder aus der Identitätszuordnung exportieren. Sehen Sie sich ein [Beispiel für an das HTTP-Ziel exportierte Daten](/help/destinations/catalog/streaming/http-destination.md#exported-data) an, das sowohl das `personalEmail.address`-XDM-Attribut als auch die Identitäten `ECID` und `email_lc_sha256` (gehashte E-Mail-Adresse) aus der Identitätszuordnung beinhaltet.
 
 ## Personalisierungsziele {#personalization-destinations}
 

@@ -3,7 +3,7 @@ keywords: Ziele;Ziel;Zieltypen
 title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 54%
@@ -35,9 +35,9 @@ Schließlich können Verbindungen auch zwischen öffentlichen Zielen, die für a
 Ziele von Profilexporten erhalten Rohdaten, wobei die E-Mail-Adresse oft als Primärschlüssel dient. Experience Platform unterstützt derzeit zwei Typen von Zielen von Profilexporten:
 
 * [Batch-Ziele (dateibasiert)](#file-based)
-* [Erweiterte Unternehmensziele (Streaming-Profil-Exportziele)](#streaming-profile-export)
+* [Erweiterte Unternehmensziele (Streaming-Profil-Exportziele)](#advanced-enterprise-destinations)
 
-### Erweiterte Unternehmensziele (Streaming-Profil-Exportziele) {#streaming-profile-export}
+### Erweiterte Unternehmensziele (Streaming-Profil-Exportziele) {#advanced-enterprise-destinations}
 
 >[!IMPORTANT]
 >
