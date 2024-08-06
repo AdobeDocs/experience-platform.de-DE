@@ -4,9 +4,9 @@ title: Playbooks für Anwendungsfälle – Übersicht
 description: Erfahren Sie, wie Sie in Experience Platform mit der Funktion „Playbooks für Anwendungsfälle – Übersicht“ erste Schritte mit verschiedenen Marketing-Anwendungsfällen ausführen können
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '529'
 ht-degree: 30%
 
 ---
@@ -29,10 +29,12 @@ Inhalt dieses Dokumentationshandbuchs:
 
 ## Übersicht {#overview}
 
-[!UICONTROL Anwendungsbeispiele] können Ihnen bei der Lösung des Problems beim Einstieg in Real-Time CDP oder Adobe Journey Optimizer helfen, wenn Sie möglicherweise nicht genau wissen, was Sie verwenden sollten oder wie Sie die richtigen Assets erstellen, um Ihre gewünschten Anwendungsfälle zu erreichen. Anwendungsbeispiel Playbooks helfen Ihnen hier:
+[!UICONTROL Anwendungsbeispiele] können Ihnen bei der Lösung des Problems beim Einstieg in Real-Time CDP oder Adobe Journey Optimizer helfen, wenn Sie möglicherweise nicht genau wissen, was Sie verwenden sollten oder wie Sie die richtigen Assets erstellen, um Ihre gewünschten Anwendungsfälle zu erreichen.
 
-* Anzeigen von Anwendungsfällen für Inspiration
-* Erstellen verschiedener Assets, die Sie verwenden, testen und für die Produktion weiterleiten können, sobald sie fertig sind.
+Anwendungsbeispiel Playbooks helfen Ihnen hier:
+
+* [Einführung eines Katalogs verfügbarer Playbooks, um in Anwendungsfällen schneller zu beginnen](../playbooks/playbooks-list.md)
+* [Erstellen verschiedener Assets](../playbooks/create-share-reuse.md)
 
 ![Ansicht aller Playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
