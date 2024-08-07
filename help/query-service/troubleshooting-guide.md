@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Häufig gestellte Fragen
 description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zum Abfrage-Service. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
 workflow-type: tm+mt
-source-wordcount: '4425'
-ht-degree: 96%
+source-wordcount: '4564'
+ht-degree: 93%
 
 ---
 
@@ -18,7 +18,11 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Abfrage-Serv
 Die folgende Liste von Antworten auf häufig gestellte Fragen ist in folgende Kategorien unterteilt:
 
 - [Allgemein](#general)
+- [Abfragebenutzeroberfläche](#queries-ui) 
+- [Datensatzbeispiele](#dataset-samples)
 - [Exportieren von Daten](#exporting-data)
+- [SQL-Syntax](#sql-syntax) 
+- [ITAS-Abfragen](#itas-queries)
 - [Drittanbieter-Tools](#third-party-tools)
 - [PostgreSQL-API-Fehler](#postgresql-api-errors)
 - [REST-API-Fehler](#rest-api-errors)
@@ -42,7 +46,7 @@ Eine potenzielle Ursache ist die Funktion zur automatischen Vervollständigung. 
 ### Kann ich [!DNL Postman] für die Abfrage-Service-API verwenden?
 
 +++Antwort
-Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Ja, Sie können alle Adobe-API-Dienste mithilfe von [!DNL Postman] (eine kostenlose Drittanbieteranwendung) visualisieren und mit ihnen interagieren. Sehen Sie sich das [[!DNL Postman] Setup-Handbuch](https://video.tv.adobe.com/v/28832) an, um schrittweise Anleitungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldedaten für die Verwendung mit [!DNL Postman] zu erhalten. In der offiziellen Dokumentation finden Sie [Anleitungen zum Starten, Ausführen und Freigeben von  [!DNL Postman] -Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
@@ -603,6 +607,22 @@ Ja, Sie können den Befehl `CREATE VIEW` ohne Zugriff auf Data Distiller verwend
 Ja. Einige Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil eines Skripts als einzelne Anweisung behandelt werden soll. Weitere Informationen finden Sie in der [Dokumentation zu anonymen Bausteinen](./key-concepts/anonymous-block.md) oder in der [offiziellen DbVisualizer-Dokumentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) .
 +++
 
+## Abfragebenutzeroberfläche
+
+### Beim Versuch, eine Verbindung mit Query Service herzustellen, hängt &quot;Abfrage erstellen&quot;an &quot;Verbindung initialisieren...&quot;. Wie kann ich das Problem beheben?
+
++++Antwort
+Wenn &quot;Abfrage erstellen&quot;bei &quot;Verbindung initialisieren..&quot;hängt, ist dies wahrscheinlich ein Verbindungs- oder Sitzungsproblem. Aktualisieren Sie den Browser, wenn Sie die Platform-Benutzeroberfläche verwenden, und versuchen Sie es erneut.
++++
+
+## Datensatzbeispiele
+
+### Kann ich Beispiele für einen Systemdatensatz erstellen?
+
++++Antwort 
+Nr. Schreibberechtigungen sind auf Systemdatensätze beschränkt, sodass Sie keine Beispiele erstellen können.
++++
+
 ## Exportieren von Daten {#exporting-data}
 
 Dieser Abschnitt enthält Informationen zum Exportieren von Daten und Einschränkungen.
@@ -649,6 +669,22 @@ and timestamp < to_timestamp('2022-07-23');
 
 +++
 
+## SQL-Syntax
+
+### Wird das MERGE INTO von Data Distiller oder Query Service unterstützt?
+
++++Antwort
+Das Konstrukt MERGE INTO SQL wird von Data Distiller oder Query Service nicht unterstützt.
++++
+
+## ITAS-Abfragen
+
+### Was sind ITAS-Abfragen?
+
++++Antwort
+INSERT IN Abfragen werden als ITAS-Abfragen bezeichnet. Beachten Sie, dass CREATE TABLE-Abfragen als CTAS-Abfragen bezeichnet werden.
++++
+
 ## Drittanbieter-Tools {#third-party-tools}
 
 Dieser Abschnitt enthält Informationen zur Verwendung von Drittanbieter-Tools wie PSQL und Power BI.
@@ -662,14 +698,14 @@ Ja, Sie können mehrere Desktop-Clients von Drittanbietern mit dem Abfrage-Servi
 ### Gibt es eine Möglichkeit, den Abfrage-Service einmal für die kontinuierliche Verwendung mit einem Tool eines Drittanbieters zu verbinden?
 
 +++Antwort
-Ja, Desktop-Clients von Drittanbietern können über eine einmalige Einrichtung ohne ablaufende Anmeldeinformationen mit dem Abfrage-Service verbunden werden. Nicht ablaufende Anmeldeinformationen können von einem autorisierten Benutzer generiert und in einer JSON-Datei empfangen werden, die automatisch auf den lokalen Computer heruntergeladen wird. Eine vollständige [Anleitung zum Erstellen und Herunterladen von nicht ablaufenden Anmeldeinformationen](./ui/credentials.md#non-expiring-credentials) finden Sie in der Dokumentation.
+Ja, Desktop-Clients von Drittanbietern können über eine einmalige Einrichtung ohne ablaufende Anmeldedaten mit dem Abfrage-Service verbunden werden. Nicht ablaufende Anmeldedaten können von einem autorisierten Benutzer generiert und in einer JSON-Datei empfangen werden, die automatisch auf den lokalen Computer heruntergeladen wird. Eine vollständige [Anleitung zum Erstellen und Herunterladen von nicht ablaufenden Anmeldedaten](./ui/credentials.md#non-expiring-credentials) finden Sie in der Dokumentation.
 +++
 
-### Warum funktionieren meine nicht ablaufenden Anmeldeinformationen nicht?
+### Warum funktionieren meine nicht ablaufenden Anmeldedaten nicht?
 
 +++Antwort
-Der Wert für nicht ablaufende Anmeldeinformationen sind die verketteten Argumente aus der `technicalAccountID` und dem `credential` aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{{technicalAccountId}:{credential}}`.
-In der Dokumentation finden Sie weitere Informationen zur [Verbindung mit externen Clients mit Anmeldeinformationen](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
+Der Wert für nicht ablaufende Anmeldedaten sind die verketteten Argumente aus der `technicalAccountID` und dem `credential` aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{{technicalAccountId}:{credential}}`.
+In der Dokumentation finden Sie weitere Informationen zur [Verbindung mit externen Clients mit Anmeldedaten](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
 ### Welche Art von SQL-Editoren von Drittanbietern kann ich mit dem Abfrage-Service-Editor verbinden?
