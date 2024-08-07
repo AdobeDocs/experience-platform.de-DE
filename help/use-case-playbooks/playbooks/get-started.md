@@ -4,7 +4,7 @@ title: Erste Schritte mit Anwendungsbeispiel-Playbooks
 description: Erfahren Sie, wie Sie die ersten Schritte mit der Funktion „Playbooks für Anwendungsfälle“ ausführen.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 14%
@@ -20,7 +20,7 @@ Erfahren Sie, wie Sie Ihr Konto für Anwendungsfall-Playbooks einrichten, die f�
 * Konfigurieren von Benutzerberechtigungen
 * Konfigurieren der Journey Optimizer-Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen (falls Sie vorhaben, Journey Optimizer-Playbooks zu verwenden)
 
-Um auf eine Rich-Galerie mit Anwendungsfallbüchern in der Experience Platform-Benutzeroberfläche zuzugreifen, wählen Sie im linken Navigationsbereich **[!UICONTROL Playbooks]** aus. Lesen Sie die Dokumentation, wie Sie [durch Nutzungsszenario-Playbooks](../playbooks/navigate.md) navigieren und mit einer [inspirierenden Sandbox](../playbooks/navigate.md) beginnen können.
+Um auf eine Rich-Galerie mit Anwendungsfallbüchern in der Experience Platform-Benutzeroberfläche zuzugreifen, wählen Sie im linken Navigationsbereich **[!UICONTROL Playbooks]** aus. Lesen Sie die Dokumentation, wie Sie [durch Nutzungsszenario-Playbooks](../playbooks/navigate.md) navigieren und mit einer inspirierenden Sandbox [ beginnen können.](../playbooks/navigate.md)
 
 ## Anwendungsbeispiele konfigurieren - Videoeinführung {#video}
 

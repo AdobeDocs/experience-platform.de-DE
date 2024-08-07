@@ -4,16 +4,16 @@ title: Auswahl aus einer Auswahl an Büchern
 description: Erfahren Sie, wie Sie das richtige Playbook für Ihren Anwendungsfall wählen, um Spielbücher zu aktivieren.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
 # Auswahl aus einer Auswahl an Büchern
 
-Um ein Playbook zu verwenden, navigieren Sie zu **[!UICONTROL Playbooks für Anwendungsfälle] > [!UICONTROL Playbooks]**. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
+Um ein Playbook zu verwenden, wählen Sie im linken Navigationsbereich **[!UICONTROL Playbooks]** aus. Durchsuchen und verwenden Sie die verschiedenen Such- und Filteroptionen auf der Seite, um ein bestimmtes Playbook auszuwählen und die ersten Schritte damit auszuführen.
 
 ## Suchen und filtern {#search-and-filter}
 
