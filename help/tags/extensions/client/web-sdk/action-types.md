@@ -3,9 +3,9 @@ title: Aktionstypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: c3b05dfd57b3335230e9abb40de6f2e1ee5ee6fa
+source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2112'
 ht-degree: 2%
 
 ---
@@ -93,10 +93,6 @@ Verwenden Sie den Selektor **[!UICONTROL Instanz]** , um Ihre Web SDK-Instanz au
 
 * **[!UICONTROL Instanz]**: Wählen Sie die Web SDK-Instanz aus, die Sie konfigurieren möchten. Wenn Sie nur eine Instanz haben, wird sie vorausgewählt.
 * **[!UICONTROL Geführte Ereignisse verwenden]**: Aktivieren Sie diese Option, um bestimmte Felder automatisch auszufüllen oder auszublenden, um einen bestimmten Anwendungsfall zu aktivieren. Durch Aktivierung dieser Option wird die Anzeige der folgenden Einstellungen Trigger.
-
-  >[!NOTE]
-  >
-  >Die unten aufgeführten geführten Ereignisse beziehen sich auf [die Ereignisse oben und unten auf der Seite](../../../../web-sdk/use-cases/top-bottom-page-events.md).
    * **[!UICONTROL Personalisierung anfordern]**: Dieses Ereignis soll oben auf der Seite aufgerufen werden. Wenn diese Option aktiviert ist, werden durch dieses Ereignis die folgenden Felder festgelegt:
       * **[!UICONTROL Typ]**: **[!UICONTROL Abrufen des Entscheidungsvorschlags]**
       * **[!UICONTROL Ereignis &quot;Anzeige automatisch senden&quot;]**: **[!UICONTROL false]**
@@ -104,6 +100,10 @@ Verwenden Sie den Selektor **[!UICONTROL Instanz]** , um Ihre Web SDK-Instanz au
    * **[!UICONTROL Analyse erfassen]**: Dieses Ereignis soll am Ende der Seite aufgerufen werden. Wenn diese Option aktiviert ist, werden durch dieses Ereignis die folgenden Felder festgelegt:
       * **[!UICONTROL Wiedergegebene Vorschläge einschließen]**: **[!UICONTROL true]**
       * Die Einstellungen für **[!UICONTROL Personalization]** sind ausgeblendet
+
+  >[!NOTE]
+  >
+  >Die geführten Ereignisse beziehen sich auf [Anfang und Ende der Seitenereignisse](../../../../web-sdk/use-cases/top-bottom-page-events.md).
 
 
 ### Daten {#data}
