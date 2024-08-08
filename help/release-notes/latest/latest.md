@@ -31,7 +31,7 @@ Aktualisierungen vorhandener Funktionen und Dokumentationen in Experience Platfo
 
 Zusammengestellte Zielgruppenkomposition ermöglicht es Unternehmen, Daten für eine bessere Anwendung in verschiedenen Anwendungsfällen zu erstellen. Mit diesem neuen Ansatz können Sie als Adobe Real-time Customer Data Platform- und/oder Adobe Journey Optimizer-Benutzer Datensätze direkt aus Ihrem vorhandenen Data Warehouse verbinden, um Adobe Experience Platform-Zielgruppen und -Attribute in einem System zu erstellen und anzureichern.
 
-Weitere Informationen finden Sie in der Dokumentation zur Zusammenstellung von Federated Audience](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).[
+Weitere Informationen finden Sie in der Dokumentation zur Zusammenstellung von Federated Audience](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).[
 
 ## Erweiterte Lebenszyklusverwaltung {#advanced-data-lifecycle-management}
 
