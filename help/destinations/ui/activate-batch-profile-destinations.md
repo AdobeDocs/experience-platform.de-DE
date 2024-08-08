@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '4024'
-ht-degree: 56%
+source-wordcount: '4069'
+ht-degree: 55%
 
 ---
 
@@ -32,8 +32,13 @@ Um Zielgruppen für Ziele zu aktivieren, müssen Sie erfolgreich [mit einem Ziel
 ## Unterstützte Dateiformate für den Export {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="Enddatum für diesen Datenfluss aktualisieren"
+>abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat ein standardmäßiges Enddatum auf den 1. März 2025 gesetzt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum angehalten."
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Enddatum für diesen Dataflow-Hauptteil aktualisieren"
 >abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat ein standardmäßiges Enddatum auf den 1. März 2025 gesetzt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum angehalten."
 
 Beim Exportieren von Zielgruppen werden die folgenden Dateiformate unterstützt:
@@ -522,7 +527,6 @@ Dateiexporte variieren je nachdem, ob `segmentMembership.seg_namespace.seg_id.st
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Ausschließen von Anreicherungsattributen"
 abstract="Aktivieren Sie diese Option, um die Profile aus den ausgewählten benutzerdefinierten, hochgeladenen Zielgruppen zu exportieren und dabei alle zugehörigen Attribute auszuschließen."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=de#select-enrichment-attributes" text="Weitere Informationen finden Sie in der Dokumentation"
 
 >[!IMPORTANT]
 >
