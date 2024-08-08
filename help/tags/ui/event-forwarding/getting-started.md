@@ -3,14 +3,18 @@ title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
+source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '887'
 ht-degree: 84%
 
 ---
 
 # Erste Schritte mit der Ereignisweiterleitung
+
+>[!NOTE]
+>
+>Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die im Rahmen von Adobe Real-time Customer Data Platform Connections, Prime und Ultimate angeboten wird.
 
 >[!NOTE]
 >
