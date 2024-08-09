@@ -4,9 +4,9 @@ description: Beginnen Sie mit Adobe Real-Time CDP, lernen Sie die vielfältigen 
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1175'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,12 @@ Verwenden Sie Adobe Real-time Customer Data Platform (Real-Time CDP), um bekannt
 Hier erhalten Sie einen Einblick in die neuesten Verbesserungen des Real-Time CDP-Produkts und der Dokumentation. Eine umfassende Liste der Funktionen, Verbesserungen und Fehlerbehebungen finden Sie in den detaillierten [Versionshinweisen](/help/release-notes/latest/latest.md). Halten Sie sich über die neuesten Änderungen in unserer Dokumentation auf dem Laufenden, indem Sie den Abschnitt [Aktualisierungen der Dokumentation der monatlichen Versionshinweise](/help/release-notes/latest/latest.md#documentation-updates) aufrufen.
 
 >[!BEGINTABS]
+
+>[!TAB Zusammengestellte Zielgruppenkomposition]
+
+Zusammengestellte Zielgruppenkomposition ermöglicht es Unternehmen, Daten für eine bessere Anwendung in verschiedenen Anwendungsfällen zu erstellen. Mit diesem neuen Ansatz können Sie als Adobe Real-time Customer Data Platform- und/oder Adobe Journey Optimizer-Benutzer Datensätze direkt aus Ihrem vorhandenen Data Warehouse verbinden, um Adobe Experience Platform-Zielgruppen und -Attribute in einem System zu erstellen und anzureichern.
+
+[![Bild](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home)
 
 >[!TAB Anwendungsfall-Playbooks]
 

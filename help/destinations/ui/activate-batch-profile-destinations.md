@@ -3,9 +3,9 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '4069'
+source-wordcount: '4112'
 ht-degree: 55%
 
 ---
@@ -40,6 +40,16 @@ Um Zielgruppen für Ziele zu aktivieren, müssen Sie erfolgreich [mit einem Ziel
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Enddatum für diesen Dataflow-Hauptteil aktualisieren"
 >abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat ein standardmäßiges Enddatum auf den 1. März 2025 gesetzt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum angehalten."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Ordnerpfad bearbeiten"
+>abstract="Verwenden Sie mehrere bereitgestellte Makros, um den Ordnerpfad anzupassen, in den der Datensatz exportiert wird."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Vorschau des Datensatzordnerpfads"
+>abstract="Hier erhalten Sie eine Vorschau der Ordnerstruktur, die basierend auf den in diesem Fenster hinzugefügten Makros an Ihrem Speicherort erstellt wird."
 
 Beim Exportieren von Zielgruppen werden die folgenden Dateiformate unterstützt:
 
