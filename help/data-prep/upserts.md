@@ -3,22 +3,28 @@ keywords: Experience Platform;home;popular topics;data prep;Data Prep;streaming;
 title: Teilweise Zeilen-Aktualisierungen mithilfe der Datenvorbereitung an das Echtzeit-Kundenprofil senden
 description: Erfahren Sie, wie Sie mithilfe der Datenvorbereitung partielle Zeilenaktualisierungen an das Echtzeit-Kundenprofil senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1360'
 ht-degree: 5%
 
 ---
 
 # Teilweise Zeilen-Updates mit [!DNL Data Prep] an [!DNL Real-Time Customer Profile] senden
 
->[!WARNING]
+>[!IMPORTANT]
 >
->Die Erfassung von Entitäts-Update-Meldungen für Experience-Datenmodell (XDM) (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Inlet wird nicht mehr unterstützt. Alternativ können Sie [Rohdaten in den DCS-Inlet aufnehmen](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) und die erforderlichen Datenzuordnungen angeben, um Ihre Daten in XDM-kompatible Nachrichten für Profilaktualisierungen umzuwandeln.
+>* Die Erfassung von Experience-Datenmodell (XDM)-Entitäts-Update-Meldungen (mit JSON-PATCH-Vorgängen) für Profilaktualisierungen über den DCS-Inlet wurde eingestellt. Führen Sie als Alternative die in diesem Handbuch beschriebenen Schritte aus.
+>
+>* Sie können auch die HTTP-API-Quelle verwenden, um rohe Daten in den DCS-Inlet zu ](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) aufzunehmen und die erforderlichen Datenzuordnungen anzugeben, um Ihre Daten in XDM-kompatible Nachrichten für Profilaktualisierungen umzuwandeln.[
+>
+>* Bei der Verwendung von Arrays in Streaming-Aufnahmen müssen Sie explizit `upsert_array_append` oder `upsert_array_replace` verwenden, um den klaren Zweck des Vorgangs zu definieren. Wenn diese Funktionen fehlen, kann es zu Fehlern kommen.
 
-Streaming-Uploads in [!DNL Data Prep] ermöglichen es Ihnen, partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile] -Daten zu senden und gleichzeitig neue Identitäts-Links mit einer einzelnen API-Anfrage zu erstellen und zu erstellen.
+Verwenden Sie Streaming-Aufrufe in [!DNL Data Prep] , um partielle Zeilenaktualisierungen an [!DNL Real-Time Customer Profile] -Daten zu senden, während Sie gleichzeitig neue Identitäts-Links mit einer einzelnen API-Anfrage erstellen und einrichten.
 
 Durch Streaming-Uploads können Sie das Format Ihrer Daten beibehalten und diese Daten während der Aufnahme in [!DNL Real-Time Customer Profile] PATCH-Anfragen übersetzen. Basierend auf den von Ihnen bereitgestellten Eingaben ermöglicht Ihnen [!DNL Data Prep] das Senden einer einzelnen API-Payload und die Übersetzung der Daten in sowohl [!DNL Real-Time Customer Profile] PATCH- als auch [!DNL Identity Service] CREATE-Anfragen.
+
+[!DNL Data Prep] verwendet Kopfzeilenparameter, um zwischen Einfügungen und Auffüllungen zu unterscheiden. Alle Zeilen, die Upserts verwenden, müssen über eine Kopfzeile verfügen. Sie können mit oder ohne Identitätsdeskriptoren Aktualisierungen verwenden. Wenn Sie Upserts mit Identitäten verwenden, müssen Sie die Konfigurationsschritte ausführen, die im Abschnitt [Konfigurieren des Identitätsdatensatzes](#configure-the-identity-dataset) beschrieben sind. Wenn Sie untergeordnete Elemente ohne Identitäten verwenden, müssen Sie in Ihrer Anfrage keine Identitätskonfigurationen angeben. Weitere Informationen finden Sie im Abschnitt über [Streaming-Uploads ohne Identitäten](#payload-without-identity-configuration) .
 
 >[!NOTE]
 >
@@ -52,7 +58,7 @@ Streaming-Aufrufe in [!DNL Data Prep] funktionieren wie folgt:
    * Der Datenvorgang, der mit [!DNL Profile]: `create`, `merge` und `delete` ausgeführt werden muss.
    * Der optionale Identitätsvorgang, der mit [!DNL Identity Service]: `create` ausgeführt werden soll.
 
-### Identitätsdatensatz konfigurieren
+### Identitätsdatensatz konfigurieren {#configure-the-identity-dataset}
 
 Wenn neue Identitäten verknüpft werden müssen, müssen Sie einen zusätzlichen Datensatz in der eingehenden Payload erstellen und weitergeben. Beim Erstellen eines Identitätsdatensatzes müssen Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind:
 
@@ -138,7 +144,7 @@ Die folgenden Vorgänge werden von [!DNL Identity Service] unterstützt:
 | --- | --- |
 | `create` | Der einzige zulässige Vorgang für diesen Parameter. Wenn `create` als Wert für `operations.identity` übergeben wird, generiert [!DNL Data Prep] eine Anforderung zum Erstellen einer XDM-Entität für [!DNL Identity Service]. Wenn die Identität bereits vorhanden ist, wird die Identität ignoriert. **Hinweis:** Wenn `operations.identity` auf `create` gesetzt ist, muss auch der `identityDatasetId` angegeben werden. Die von der Komponente [!DNL Data Prep] intern generierte XDM-Entität wird für diese Datensatz-ID generiert. |
 
-### Nutzlast ohne Identitätskonfiguration
+### Nutzlast ohne Identitätskonfiguration {#payload-without-identity-configuration}
 
 Wenn keine neuen Identitäten verknüpft werden müssen, können Sie die Parameter `identity` und `identityDatasetId` in den Vorgängen auslassen. Dadurch werden nur Daten an [!DNL Real-Time Customer Profile] gesendet und die [!DNL Identity Service] übersprungen. Ein Beispiel finden Sie in der folgenden Payload:
 
