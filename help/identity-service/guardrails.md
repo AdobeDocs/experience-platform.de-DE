@@ -3,10 +3,10 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 40%
+source-wordcount: '1591'
+ht-degree: 39%
 
 ---
 
@@ -57,6 +57,10 @@ In der folgenden Tabelle sind die vorhandenen Regeln aufgeführt, die Sie befolg
 ### Aufnahme von Identity-Namespaces
 
 Ab dem 31. März 2023 blockiert Identity Service die Aufnahme der Adobe Analytics ID (AAID) für neue Kundinnen und Kunden. Diese Identität wird normalerweise über die [Adobe Analytics-Quelle](../sources/connectors/adobe-applications/analytics.md) und die [Adobe Audience Manager-Quelle](../sources//connectors/adobe-applications/audience-manager.md) aufgenommen und ist überflüssig, da die ECID denselben Webbrowser darstellt. Wenn Sie diese Standardkonfiguration ändern möchten, wenden Sie sich an Ihr Adobe-Accountteam.
+
+## Performance-Garantien {#performance-guardrails}
+
+Identity Service überwacht eingehende Daten kontinuierlich, um eine hohe Leistung und Zuverlässigkeit im Maßstab zu gewährleisten. Ein Fluss von Erlebnisereignisdaten in einem kurzen Zeitraum kann jedoch zu Leistungsbeeinträchtigungen und Latenzzeiten führen. Adobe ist nicht für eine solche Leistungsbeeinträchtigung verantwortlich.
 
 ## Grundlegendes zur Löschlogik bei Aktualisierung eines Identitätsdiagramms bei Kapazität {#deletion-logic}
 
