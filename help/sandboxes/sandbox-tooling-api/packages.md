@@ -2,10 +2,10 @@
 title: Sandbox Tooling Packages API Endpoint
 description: Mit dem Endpunkt /packages in der Sandbox Tooling API können Sie Pakete in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 8%
+source-wordcount: '1621'
+ht-degree: 10%
 
 ---
 
@@ -57,7 +57,7 @@ curl -X POST \
 | --- | --- | --- | --- |
 | `name` | Der Name Ihres Pakets. | Zeichenfolge | Ja |
 | `description` | Eine Beschreibung, die weitere Informationen zu Ihrem Paket enthält. | Zeichenfolge | Nein |
-| `packageType` | Der Pakettyp ist **PARTIAL** , um anzugeben, dass Sie bestimmte Artefakte in ein Paket einschließen. | Zeichenfolge | JA |
+| `packageType` | Der Pakettyp ist **PARTIAL** , um anzugeben, dass Sie bestimmte Artefakte in ein Paket einschließen. | String | JA |
 | `sourceSandbox` | Die Quell-Sandbox des Pakets. | Zeichenfolge | Nein |
 | `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert beträgt 90 Tage ab dem Erstellungsdatum. Das Feld für das Ablaufdatum der Antwort ist Epoch-UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
 | `artifacts` | Eine Liste von Artefakten, die in das Paket exportiert werden sollen. Der `artifacts` -Wert sollte **null** oder **leer** sein, wenn der `packageType` den Wert `FULL` aufweist. | Array | Nein |
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
 | `action` | Um Artefakte zum Paket hinzuzufügen, sollte der Aktionswert **ADD** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
-| `artifacts` | Eine Liste von Artefakten, die dem Paket hinzugefügt werden sollen. Es gibt keine Änderung am Paket, wenn die Liste **null** oder **leer** ist. Artefakte werden dedupliziert, bevor sie zum Paket hinzugefügt werden. | Array | Nein |
+| `artifacts` | Eine Liste von Artefakten, die dem Paket hinzugefügt werden sollen. Es gibt keine Änderung am Paket, wenn die Liste **null** oder **leer** ist. Artefakte werden dedupliziert, bevor sie zum Paket hinzugefügt werden. Eine vollständige Liste der unterstützten Artefakte finden Sie in der nachfolgenden Tabelle. | Array | Nein |
 | `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert beträgt 90 Tage ab dem Zeitpunkt, zu dem die PUT-API aufgerufen wird, wenn in der Payload kein Ablaufdatum angegeben ist. Das Feld für das Ablaufdatum der Antwort ist Epoch-UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
+
+Die folgenden Artefakttypen werden derzeit unterstützt.
+
+| Artefakt | Plattform | Objekt | Teilfluss | Vollständige Sandbox |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | Journeys | Ja | Nein |
+| `ID_NAMESPACE` | Kundendatenplattform | Identitäten | Ja | Ja |
+| `REGISTRY_DATATYPE` | Kundendatenplattform | Datentyp | Ja | Ja |
+| `REGISTRY_CLASS` | Kundendatenplattform | Klasse | Ja | Ja |
+| `REGISTRY_MIXIN` | Kundendatenplattform | Feldergruppe | Ja | Ja |
+| `REGISTRY_SCHEMA` | Kundendatenplattform | Schemata | Ja | Ja |
+| `CATALOG_DATASET` | Kundendatenplattform | Datensätze | Ja | Ja |
+| `DULE_CONSENT_POLICY` | Kundendatenplattform | Einverständnis und Governance-Richtlinien | Ja | Ja |
+| `PROFILE_SEGMENT` | Kundendatenplattform | Zielgruppen | Ja | Ja |
+| `FLOW` | Kundendatenplattform | Datenfluss der Quellen | Ja | Ja |
 
 **Antwort**
 
