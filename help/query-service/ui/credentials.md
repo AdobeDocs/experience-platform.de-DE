@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Anleitung zu Query Service-Anmeldedaten
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1828'
 ht-degree: 3%
 
 ---
@@ -76,7 +76,11 @@ Sie können nicht ablaufende Anmeldedaten verwenden, um eine permanentere Verbin
 
 >[!NOTE]
 >
->Für nicht ablaufende Anmeldedaten gelten die folgenden Einschränkungen:<br><ul><li>Benutzer müssen sich mit ihrem Benutzernamen und Kennwort, bestehend aus `{technicalAccountId}:{credential}`, anmelden. Weitere Informationen finden Sie im Abschnitt [Anmeldeinformationen generieren](#generate-credentials) .</li><li>Nach der Erstellung ablaufender Anmeldeinformationen wird eine neue Rolle mit grundlegenden Berechtigungen erstellt, die es Benutzern ermöglicht, Schemas und Datensätze anzuzeigen. Diese Rolle erhält auch die Berechtigung &quot;Abfragen verwalten&quot;zur Verwendung mit Query Service.</li><li>Bei der Auflistung von Abfrageobjekten kann es vorkommen, dass Clients von Drittanbietern eine andere Leistung als erwartet ausführen. Einige Clients von Drittanbietern wie [!DNL DB Visualizer] zeigen beispielsweise den Ansichtsnamen nicht im linken Bereich an. Der Ansichtsname ist jedoch verfügbar, wenn er in einer SELECT-Abfrage aufgerufen wird. Ebenso darf [!DNL PowerUI] die temporären Ansichten, die über die SQL erstellt wurden, nicht auflisten, um sie für die Dashboard-Erstellung auszuwählen.</li></ul>
+>Für nicht ablaufende Anmeldedaten gelten die folgenden Einschränkungen:
+>
+>- Benutzer müssen sich mit ihrem Benutzernamen und Kennwort im Format `{technicalAccountId}:{credential}` anmelden. Weitere Informationen finden Sie im Abschnitt [Anmeldeinformationen generieren](#generate-credentials) .
+>- Standardmäßig erhalten nicht ablaufende Anmeldeinformationen die Berechtigung, nur `SELECT` -Abfragen auszuführen. Um `CTAS` - oder `ITAS` -Abfragen auszuführen, fügen Sie manuell die Berechtigungen &quot;Datensatz verwalten&quot;und &quot;Schemas verwalten&quot;zu der Rolle hinzu, die der nicht ablaufenden Berechtigung zugeordnet ist. Die Berechtigung &quot;Schemas verwalten&quot;finden Sie im Abschnitt &quot;Datenmodellierung&quot;und die Berechtigung &quot;Datensätze verwalten&quot;finden Sie im Abschnitt &quot;Datenverwaltung&quot;von [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- Bei der Auflistung von Abfrageobjekten kann es vorkommen, dass Clients von Drittanbietern eine andere Leistung als erwartet ausführen. Einige Clients von Drittanbietern wie [!DNL DB Visualizer] zeigen beispielsweise den Ansichtsnamen nicht im linken Bereich an. Der Ansichtsname ist jedoch verfügbar, wenn er in einer `SELECT` -Abfrage aufgerufen wird. Entsprechend listet [!DNL PowerUI] die temporären Ansichten, die über SQL zur Auswahl bei der Dashboard-Erstellung erstellt wurden, möglicherweise nicht auf.
 
 ### Voraussetzungen
 
