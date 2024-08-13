@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Benutzerhandbuch zu Datensätzen
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3111'
 ht-degree: 14%
 
 ---
@@ -92,6 +92,10 @@ Sie können eine Vorschau der DatensatzBeispieldaten sowohl aus den Inline-Optio
 ![Die Registerkarte &quot;Durchsuchen&quot;im Arbeitsbereich &quot;Datensätze&quot;mit den Auslassungszeichen und der Option Datensatz-Vorschau für den ausgewählten Datensatz hervorgehoben.](../images/datasets/user-guide/preview-dataset-option.png)
 
 Dadurch wird das Vorschaufenster geöffnet, in dem rechts die hierarchische Ansicht des Schemas für den Datensatz angezeigt wird.
+
+>[!NOTE]
+>
+>Das Schemadiagramm auf der linken Seite der Ansicht zeigt nur Felder an, die Daten enthalten. Felder ohne Daten werden automatisch ausgeblendet, um die Benutzeroberfläche zu optimieren und sich auf relevante Informationen zu konzentrieren.
 
 ![Das Dialogfeld für die Datensatzvorschau mit Informationen über die Struktur sowie Beispielwerte für den Datensatz werden angezeigt.](../images/datasets/user-guide/preview-dataset.png)
 
