@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
+source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2429'
 ht-degree: 8%
 
 ---
@@ -91,6 +91,16 @@ Um eine Zusammenfassung der Nutzung einer Produktberechtigungen anzuzeigen, wäh
 Die Registerkarte Zusammenfassung wird angezeigt. Sie können die auf den Registerkarten [!UICONTROL Zusammenfassung] und [!UICONTROL Details] verfügbaren detaillierten Prognosen verwenden, um eine fundierte Entscheidungsfindung für eine effiziente Lizenzverwendung sicherzustellen.
 
 ![Die Zusammenfassungsansicht eines Platform-Produkts mit hervorgehobener Spalte zur prognostizierten Nutzung.](../images/license-usage/summary-predicted-usage.png)
+
+Der Prozentsatz der prognostizierten Nutzung wird wie folgt ermittelt:
+
+- Wenn sich die unteren und oberen Grenzen deutlich unterscheiden, werden sie als Bereich angezeigt (z. B. 32 % - 35 %).
+- Wenn die oberen und unteren Begrenzungen nahezu identisch sind und nicht null, werden sie als ungefährer Wert angezeigt (z. B. ~34 %).
+- Wenn die oberen und unteren Begrenzungen nahezu identisch sind und null sind, werden sie als genau 0 % angezeigt.
+
+>[!NOTE]
+>
+&quot;Fast identisch&quot;bedeutet in diesem Zusammenhang, dass die Werte statistisch auf zwei Dezimalstellen signifikant sind (beispielsweise werden eine untere Grenze von 0,342 und eine obere Grenze von 0,344 auf 34 % gerundet).
 
 Die prognostizierte Nutzungsfunktion unterstützt die folgenden Metriken:
 
