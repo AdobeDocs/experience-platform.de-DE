@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Zielgruppen aus Ihren Echtzeit-Kundenprofildaten mithilfe von in Adobe Experience Platform generierten Segmentdefinitionen oder externen Quellen.
 feature: Segments
 role: User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 92%
+source-wordcount: '194'
+ht-degree: 94%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 92%
    - [Audience Portal](ui/audience-portal.md)
    - [Zielgruppenkomposition](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
-   - [Zusammengestellte Zielgruppenkomposition (begrenzte Verfügbarkeit)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+   - [Komposition föderierter Zielgruppen (begrenzte Verfügbarkeit)](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home)
    - [Konto-Zielgruppen](ui/account-audiences.md)
    - [Lookalike-Zielgruppen](ui/lookalike-audiences.md)
    - [Potenzielle Zielgruppen](ui/prospect-audience.md)
@@ -73,6 +73,7 @@ ht-degree: 92%
    - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datennutzungs-Compliance für Segmente](tutorials/governance.md)
+- [Aktualisierung der Eignungskriterien](./eligibility-criteria-update.md)
 - [Häufig gestellte Fragen](./faq.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
