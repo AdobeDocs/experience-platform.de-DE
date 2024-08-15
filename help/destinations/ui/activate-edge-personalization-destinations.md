@@ -3,7 +3,7 @@ title: Aktivieren von Zielgruppen für Edge-Personalisierungsziele
 description: Erfahren Sie, wie Sie Zielgruppen von Adobe Experience Platform aus für Edge-Personalisierungsziele aktivieren können, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu nutzen.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -47,7 +47,7 @@ Eine kurze Übersicht darüber, wie Sie Zielgruppen und Profilattribute für Ado
 
 ## Anwendungsfälle {#use-cases}
 
-Verwenden Sie Adobe-Personalisierungslösungen wie Adobe Target oder Ihre eigenen Personalisierungspartner-Plattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietäre Systeme (z. B. internes CMS), um ein tieferes Kundenpersonalisierungs-Erlebnis über das Ziel [Benutzerspezifische Personalization](../catalog/personalization/custom-personalization.md) zu erzielen. Dies alles nutzt gleichzeitig auch Experience Platform Edge Network-Datenerfassungs- und Segmentierungsfunktionen.
+Verwenden Sie Adobe-Personalisierungslösungen wie Adobe Target oder Ihre eigenen Personalisierungspartner-Plattformen (z. B. [!DNL Optimizely], [!DNL Pega]) sowie proprietäre Systeme (z. B. das interne CMS), um ein tieferes Kundenpersonalisierungs-Erlebnis über das Ziel [Benutzerspezifische Personalization](../catalog/personalization/custom-personalization.md) zu erzielen. Dies alles nutzt gleichzeitig auch Experience Platform Edge Network-Datenerfassungs- und Segmentierungsfunktionen.
 
 Die unten beschriebenen Anwendungsfälle umfassen sowohl die Personalisierung der Site als auch zielgruppengerechte On-site-Werbung.
 
@@ -112,7 +112,7 @@ Im [Tutorial zur Erstellung von Zielverbindungen](../ui/connect-destination.md) 
 Abhängig vom konfigurierten Ziel finden Sie in den folgenden Artikeln Informationen zu zielspezifischen Voraussetzungen und zugehörigen Informationen:
 
 * [Adobe Target-Verbindung](../catalog/personalization/adobe-target-connection.md#parameters)
-* [Benutzerdefinierte Personalisierungsverbindung](../catalog/personalization/custom-personalization.md##parameters)
+* [Benutzerdefinierte Personalisierungsverbindung](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Auswählen des Ziels {#select-destination}
 

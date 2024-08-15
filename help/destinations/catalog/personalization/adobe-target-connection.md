@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
-source-wordcount: '1555'
-ht-degree: 36%
+source-wordcount: '1755'
+ht-degree: 32%
 
 ---
 
@@ -35,6 +35,15 @@ Eine kurze Übersicht über die Konfiguration der Adobe Target-Verbindung unter 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
+## Unterstützte Anwendungsfälle basierend auf dem Implementierungstyp {#supported-use-cases}
+
+In der folgenden Tabelle werden die unterstützten Anwendungsfälle für das Adobe Target-Ziel basierend auf Ihrem Implementierungstyp mit oder ohne [Web SDK](/help/web-sdk/home.md) und mit oder ohne aktivierte [Edge-Segmentierung](/help/segmentation/home.md#edge) angezeigt.
+
+| Adobe Target-Implementierung *ohne* Web-SDK | Adobe Target-Implementierung *mit* Web SDK | Adobe Target-Implementierung *mit* Web SDK *und* Kantensegmentierung von |
+|---|---|---|
+| <ul><li>Ein Datastream ist nicht erforderlich. Adobe Target kann über die Implementierungsmethoden [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [serverseitig](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) oder [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) bereitgestellt werden.</li><li>[Edge-Segmentierung](../../../segmentation/ui/edge-segmentation.md) wird nicht unterstützt.</li><li>[ Die Personalisierung derselben Seite und der nächsten Seite](../../ui/activate-edge-personalization-destinations.md) wird nicht unterstützt.</li><li>Sie können Zielgruppen und Profilattribute für die Adobe Target-Verbindung für die standardmäßige Produktions-Sandbox *und nicht standardmäßige Sandboxes verwenden.*</li><li>Verwenden Sie [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html), um die Personalisierung der nächsten Sitzung ohne Verwendung einer Datastream-ID zu konfigurieren.</li></ul> | <ul><li>Ein Datastream mit Adobe Target und Experience Platform ist als Dienste konfiguriert.</li><li>Die Edge-Segmentierung funktioniert wie erwartet.</li><li>[ Die Personalisierung derselben Seite und der nächsten Seite](../../ui/activate-edge-personalization-destinations.md#use-cases) wird unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> | <ul><li>Ein Datastream mit Adobe Target und Experience Platform ist als Dienste konfiguriert.</li><li>Aktivieren Sie beim [Konfigurieren des Datastreams](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream) nicht das Kontrollkästchen **Edge-Segmentierung** .</li><li>[Die Personalisierung der nächsten Sitzung](../../ui/activate-edge-personalization-destinations.md#next-session) wird unterstützt.</li><li>Die Freigabe von Zielgruppen und Profilattributen aus anderen Sandboxes wird unterstützt.</li></ul> |
+
+
 ## Voraussetzungen {#prerequisites}
 
 ### Datastream-ID {#datastream-id}
@@ -62,7 +71,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 >[!IMPORTANT]
 >
->Beim Aktivieren von *Edge-Zielgruppen für die Personalisierungsfälle für die gleiche Seite und die nächste Seite* müssen die Zielgruppen ** eine [aktive Zusammenführungsrichtlinie für Edge verwenden](../../../segmentation/ui/segment-builder.md#merge-policies). Die [!DNL active-on-edge]-Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [am Rand](../../../segmentation/ui/edge-segmentation.md) ausgewertet werden und für Anwendungsfälle zur Personalisierung von Echtzeit- und nächsten Seiten verfügbar sind.  Lesen Sie mehr über [alle verfügbaren Anwendungsfälle](#parameter), basierend auf dem Implementierungstyp.
+>Beim Aktivieren von *Edge-Zielgruppen für die Personalisierungsfälle für die gleiche Seite und die nächste Seite* müssen die Zielgruppen ** eine [aktive Zusammenführungsrichtlinie für Edge verwenden](../../../segmentation/ui/segment-builder.md#merge-policies). Die [!DNL active-on-edge]-Zusammenführungsrichtlinie stellt sicher, dass Zielgruppen ständig [am Rand](../../../segmentation/ui/edge-segmentation.md) ausgewertet werden und für Anwendungsfälle zur Personalisierung von Echtzeit- und nächsten Seiten verfügbar sind.  Lesen Sie mehr über [alle verfügbaren Anwendungsfälle](#parameters), basierend auf dem Implementierungstyp.
 >Wenn Sie Edge-Zielgruppen, die eine andere Zusammenführungsrichtlinie verwenden, Adobe Target-Zielen zuordnen, werden diese Zielgruppen nicht für Anwendungsfälle in Echtzeit und auf der nächsten Seite ausgewertet.
 >Befolgen Sie die Anweisungen zum [Erstellen einer Zusammenführungsrichtlinie](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) und stellen Sie sicher, dass Sie die **[!UICONTROL Active-On-Edge-Zusammenführungsrichtlinie]** aktivieren.
 
@@ -119,7 +128,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
   >
   >Die Datastream-ID ist für jede Adobe Target-Zielverbindung eindeutig. Wenn Sie dieselben Zielgruppen mehreren Datastreams zuordnen müssen, müssen Sie [für jede Datastream-ID eine neue Zielverbindung erstellen](../../ui/connect-destination.md) und den [Aktivierungsfluss für die Zielgruppe](#activate) durchlaufen.
 
-   * **[!UICONTROL None]**: Wählen Sie diese Option, wenn Sie die Adobe Target-Personalisierung konfigurieren müssen, das [Experience Platform Web SDK](/help/web-sdk/home.md) jedoch nicht implementieren können. Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. In der unten stehenden Tabelle finden Sie einen Vergleich der verfügbaren Anwendungsfälle pro Implementierungstyp.
+   * **[!UICONTROL None]**: Wählen Sie diese Option, wenn Sie die Adobe Target-Personalisierung konfigurieren müssen, das [Experience Platform Web SDK](/help/web-sdk/home.md) jedoch nicht implementieren können. Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Referenzieren Sie die Tabelle im Abschnitt [Unterstützte Anwendungsfälle](#supported-use-cases) , um einen Vergleich der verfügbaren Anwendungsfälle pro Implementierungstyp anzuzeigen.
 
   | Adobe Target-Implementierung *ohne* Web-SDK | Adobe Target-Implementierung *mit* Web SDK | Adobe Target-Implementierung *mit* Web SDK *und* Kantensegmentierung von |
   |---|---|---|
