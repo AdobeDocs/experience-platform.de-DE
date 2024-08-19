@@ -3,9 +3,9 @@ title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -78,13 +78,13 @@ Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wi
 * Bei Erlebnisereignissen wird die primäre Identität nach der Konfiguration der Identitätseinstellungen für eine bestimmte Sandbox durch die höchste Namespace-Priorität bestimmt.
    * Dies liegt daran, dass Erlebnisereignisse von Natur aus dynamisch sind. Eine Identitätszuordnung kann drei oder mehr Identitäten enthalten. Mit der Namespace-Priorität wird sichergestellt, dass der wichtigste Namespace mit dem Erlebnisereignis verknüpft ist.
 * Daher werden die folgenden Konfigurationen **nicht mehr vom Echtzeit-Kundenprofil** verwendet:
-   * Kontrollkästchen &quot;Primär&quot;zum Datenelementtyp im WebSDK.
+   * Das Kontrollkästchen &quot;Primär&quot;für den Datenelementtyp im WebSDK (was in identityMap zu `primary=true` bedeutet). **Hinweis**: Der Identitäts-Namespace und der Identitätswert werden weiterhin im Profil verwendet. Darüber hinaus müssen Sie weiterhin Ihre &quot;Primären&quot;Kontrollkästchen konfigurieren, da Dienste außerhalb des Echtzeit-Kundenprofils weiterhin auf diese Konfiguration verweisen.
    * Alle Felder, die in einem XDM Experience Event Class-Schema als primäre Identität markiert sind.
    * Standardmäßige primäre Identitätseinstellungen im Adobe Analytics-Quell-Connector (ECID oder AAID).
 * Andererseits bestimmt die Namespace-Priorität **nicht die primäre Identität für Profildatensätze**.
    * Für Profildatensätze können Sie den Arbeitsbereich &quot;Schemas&quot;in der Experience Platform-Benutzeroberfläche verwenden, um Ihre Identitätsfelder einschließlich der primären Identität zu definieren. Weitere Informationen finden Sie im Handbuch zum Definieren von Identitätsfeldern in der Benutzeroberfläche ](../../xdm/ui/fields/identity.md) .[
 
->[!NOTE]
+>[!TIP]
 >
 >* Namespace-Priorität ist **eine Eigenschaft eines Namespace**. Es handelt sich um einen numerischen Wert, der einem Namespace zugewiesen wird, um dessen relative Bedeutung anzugeben.
 >
@@ -183,3 +183,7 @@ Weitere Informationen finden Sie in den Dokumenten unter [Attribution AI](../../
 * Data Lake: Löscht jeden Datensatz mit der angegebenen Identität als primäre oder sekundäre Identität.
 
 Weitere Informationen finden Sie in der [Übersicht über den Datenschutzdienst](../../privacy-service/home.md) .
+
+### Adobe Target- und Edge-Personalisierung
+
+[Edge personalization](../../server-api/personalization-target.md) bezieht sich weiterhin darauf, wie Sie Ihr &quot;Primäres&quot;Kontrollkästchen für den Datenelementtyp im WebSDK konfiguriert haben (was in identityMap zu `primary=true` bedeutet).
