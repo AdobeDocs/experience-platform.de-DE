@@ -2,7 +2,7 @@
 title: Adobe Target mit Web SDK für Personalisierung verwenden
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
+source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
 workflow-type: tm+mt
 source-wordcount: '1364'
 ht-degree: 3%
@@ -197,17 +197,16 @@ Im folgenden Beispiel wird eine trackEvent-Meldung gesendet, Profilskripte ausge
 ```js
 alloy("sendEvent", {
     "renderDecisions": true,
+    "xdm": { /* Experience Event XDM data */ },
     "data": {
-        "xdm": { // Experience Event XDM data },
-            "__adobe": {
-                "target": {
-                    " __save": true|false,
-                    //defaults to true if omitted 
-                    "profile.gender": "female",
-                    "profile.age": 30,
-                    "entity.name": "T-shirt",
-                    "entity.id": "1234"
-                }
+        "__adobe": {
+            "target": {
+                " __save": true|false,
+                //defaults to true if omitted
+                "profile.gender": "female",
+                "profile.age": 30,
+                "entity.name": "T-shirt",
+                "entity.id": "1234"
             }
         }
     }
