@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie mit dem Monitoring-Dashboard die aus Quellen erfassten Daten überwachen können.
 title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 22%
+source-wordcount: '1320'
+ht-degree: 21%
 
 ---
 
@@ -62,9 +62,9 @@ Im unteren Teil des Dashboards wird eine Tabelle mit dem aktuellen Metrikbericht
 
 | Metriken | Beschreibung |
 | --- | --- |
-| Empfangene Einträge | Die Gesamtzahl der aus der Quelle empfangenen Datensätze. |
+| Empfangene Einträge | Die Gesamtzahl der Datensätze, die von einer bestimmten Quelle empfangen wurden. |
 | Aufgenommene Einträge | Die Gesamtzahl der Datensätze, die in den Data Lake aufgenommen wurden. |
-| Einträge übersprungen | Die Gesamtzahl der übersprungenen Datensätze. |
+| Einträge übersprungen | Die Gesamtzahl der übersprungenen Datensätze. Ein übersprungener Datensatz bezieht sich auf Felder, die übersprungen wurden, da sie für die Aufnahme nicht erforderlich waren. Wenn Sie beispielsweise einen Datenfluss für Quellen mit aktivierter partieller Erfassung erstellen, können Sie einen Schwellenwert für eine akzeptable Fehlerrate konfigurieren. Während des Aufnahmevorgangs werden Datensätze von nicht erforderlichen Feldern, wie z. B. Identitätsfeldern, bei der Erfassung übersprungen, sofern sie sich innerhalb der Fehlerschwelle befinden. |
 | Fehlgeschlagene Einträge | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern nicht erfasst werden konnten. |
 | Aufgenommene Rate | Der Prozentsatz der erfassten Datensätze basierend auf der Gesamtzahl der empfangenen Datensätze. |
 | Insgesamt fehlgeschlagene Datenflüsse | Die Gesamtzahl der fehlgeschlagenen Datenflüsse. |
