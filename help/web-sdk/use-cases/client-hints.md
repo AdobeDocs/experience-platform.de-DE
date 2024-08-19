@@ -3,10 +3,10 @@ title: Benutzeragenten-Clienthinweise
 description: Erfahren Sie, wie Benutzeragenten-Clienthinweise im Web SDK funktionieren. Clienthinweise ermöglichen es Website-Inhabern, auf einen Großteil der Informationen zuzugreifen, die in der Benutzeragenten-Zeichenfolge verfügbar sind, wobei die Privatsphäre jedoch gewahrt bleibt.
 keywords: Benutzeragent; Clienthinweise; Zeichenfolge; user-agent-Zeichenfolge; niedrige Entropie; hohe Entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 3%
+source-wordcount: '1245'
+ht-degree: 4%
 
 ---
 
@@ -98,13 +98,16 @@ Clienthinweise mit geringer Entropie sind im Web SDK standardmäßig aktiviert u
 
 Hohe Entropie-Client-Hinweise sind detailliertere Informationen über das Client-Gerät, wie Plattformversion, Architektur, Modell, Bitness (64-Bit- oder 32-Bit-Plattformen) oder vollständige Betriebssystemversion. Diese Informationen können potenziell beim Fingerabdruck verwendet werden.
 
-| HTTP-Header | JavaScript | Standardmäßig im Benutzeragent enthalten | Standardmäßig in Client-Hinweisen enthalten |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | Ja | Nein |
-| `Sec-CH-UA-Arc` | `architecture` | Ja | Nein |
-| `Sec-CH-UA-Model` | `model` | Ja | Nein |
-| `Sec-CH-UA-Bitness` | `Bitness` | Ja | Nein |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Ja | Nein |
+| Eigenschaft | Beschreibung | HTTP-Header | XDM-Pfad | Beispiel | Standardmäßig im Benutzeragent enthalten | Standardmäßig in Client-Hinweisen enthalten |
+| --- | --- | --- | --- | --- |---|---|
+| Betriebssystemversion | Die Betriebssystemversion. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Ja | Nein |
+| Architektur | Die zugrunde liegende CPU-Architektur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Ja | Nein |
+| Gerätemodell | Der Name des verwendeten Geräts. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Ja | Nein |
+| Bitrate | Die Anzahl der Bit, die die zugrunde liegende CPU-Architektur unterstützt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Ja | Nein |
+| Browser-Anbieter | Das Unternehmen, das den Browser erstellt hat. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Ja | Nein |
+| Browsername | Der verwendete Browser. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Ja | Nein |
+| Browserversion | Die signifikante Version des Browsers. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. Die genaue Browserversion wird nicht automatisch erfasst. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Ja | Nein |
+
 
 Clienthinweise mit hoher Entropie sind im Web SDK standardmäßig deaktiviert. Um sie zu aktivieren, müssen Sie das Web SDK manuell so konfigurieren, dass Clienthinweise mit hoher Entropie angefordert werden.
 

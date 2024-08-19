@@ -2,10 +2,10 @@
 title: context
 description: Automatisch Geräte-, Umgebungs- oder Standortdaten erfassen.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 14%
+source-wordcount: '915'
+ht-degree: 13%
 
 ---
 
@@ -89,21 +89,25 @@ Das Schlüsselwort `implementationDetails` erfasst Informationen zur SDK-Version
 | Umgebung | Die Umgebung, in der die Daten erfasst wurden. Dies ist immer auf `browser` gesetzt. | `xdm.implementationDetails.environment` | `browser` |
 
 
-### Hohe Entropie-Client-Hinweise
+### Hohe Entropie-Client-Hinweise {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>Detaillierte Informationen zur Konfiguration finden Sie in der Dokumentation zu [Benutzeragenten-Client-Hinweisen](../../use-cases/client-hints.md) .
 
 Das Schlüsselwort `"highEntropyUserAgentHints"` erfasst detaillierte Informationen über das Gerät des Benutzers. Diese Daten sind im HTTP-Header der an Adobe gesendeten Anfrage enthalten. Nachdem die Daten im Edge-Netzwerk eintreffen, füllt das XDM-Objekt den entsprechenden XDM-Pfad. Wenn Sie den entsprechenden XDM-Pfad in Ihrem `sendEvent` -Aufruf festlegen, hat er Vorrang vor dem HTTP-Header-Wert.
 
 Wenn Sie beim Konfigurieren Ihres Datenspeichers ](/help/datastreams/configure.md) Gerätesuchen verwenden, können Daten zugunsten von Gerätesuchwerten gelöscht werden. [ Einige Clienthinweisfelder und Geräte-Suchfelder können nicht im selben Treffer vorhanden sein.
 
-| Dimension | Beschreibung | HTTP-Header | XDM-Pfad | Beispielwert |
+| Eigenschaft | Beschreibung | HTTP-Header | XDM-Pfad | Beispiel |
 | --- | --- | --- | --- | --- |
-| Betriebssystemversion | Die Betriebssystemversion. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| Architektur | Die zugrunde liegende CPU-Architektur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| Gerätemodell | Der Name des verwendeten Geräts. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| Bitrate | Die Anzahl der Bit, die die zugrunde liegende CPU-Architektur unterstützt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Browser-Anbieter | Das Unternehmen, das den Browser erstellt hat. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. | `Sec-CH-UA-Full-Version-List` | | |
-| Browsername | Der verwendete Browser. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Browserversion | Die signifikante Version des Browsers. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. Die genaue Browserversion wird nicht automatisch erfasst. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Betriebssystemversion | Die Betriebssystemversion. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| Architektur | Die zugrunde liegende CPU-Architektur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| Gerätemodell | Der Name des verwendeten Geräts. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| Bitrate | Die Anzahl der Bit, die die zugrunde liegende CPU-Architektur unterstützt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| Browser-Anbieter | Das Unternehmen, das den Browser erstellt hat. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| Browsername | Der verwendete Browser. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| Browserversion | Die signifikante Version des Browsers. Der Hinweis für die niedrige Entropie `Sec-CH-UA` erfasst auch dieses Element. Die genaue Browserversion wird nicht automatisch erfasst. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 
