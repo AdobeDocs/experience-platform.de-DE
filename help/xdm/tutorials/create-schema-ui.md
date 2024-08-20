@@ -5,10 +5,10 @@ title: Erstellen eines Schemas mit dem Schema-Editor.
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4813'
-ht-degree: 80%
+source-wordcount: '4922'
+ht-degree: 78%
 
 ---
 
@@ -46,14 +46,23 @@ Um mit der Erstellung eines Schemas zu beginnen, wählen Sie oben rechts im Arbe
 
 ![Die Registerkarte [!UICONTROL Schemas] Arbeitsbereich [!UICONTROL Durchsuchen] mit der Markierung [!UICONTROL Schema erstellen].](../images/tutorials/create-schema/create-schema-button.png)
 
+Das Dialogfeld [!UICONTROL Schema erstellen] wird angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema durch Hinzufügen von Feldern und Feldergruppen erstellen oder eine CSV-Datei hochladen und mithilfe von ML-Algorithmen ein Schema generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
+
+![Das Dialogfeld Schema erstellen mit den Workflow-Optionen und markieren hervorgehoben.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Manuelle oder ML-gestützte Schemaerstellung {#manual-or-assisted}
+
+Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Schemastruktur basierend auf einer hochgeladenen Datei zu empfehlen, finden Sie im Leitfaden zur Erstellung von Schemas, die durch maschinelles Lernen unterstützt werden](../ui/ml-assisted-schema-creation.md). [ Dieses UI-Handbuch konzentriert sich auf den Workflow für die manuelle Erstellung.
+
+### Basisklasse auswählen {#choose-a-class}
+
 Der Workflow [!UICONTROL Schema erstellen] wird angezeigt. Wählen Sie anschließend eine Basisklasse für das Schema aus. Sie können zwischen den Core-Klassen [!UICONTROL XDM Individual Profile] und [!UICONTROL XDM ExperienceEvent] oder [!UICONTROL Other] wählen, wenn diese Klassen Ihren Zwecken nicht entsprechen. Mit der Option [!UICONTROL Sonstige] Klassen können Sie entweder [ eine neue Klasse erstellen](#create-new-class) oder aus anderen bereits vorhandenen Klassen auswählen.
 
-Weitere Informationen zu diesen Klassen finden Sie in der Dokumentation zu [XDM-individuellen Profilen](../classes/individual-profile.md) und [XDM ExperienceEvent](../classes/experienceevent.md) . Wählen Sie für dieses Tutorial **[!UICONTROL XDM Individual Profile]** gefolgt von **[!UICONTROL Next]**.
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+Weitere Informationen zu diesen Klassen finden Sie in der Dokumentation zu [[!UICONTROL XDM-individuellen Profilen]](../classes/individual-profile.md) und [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) . Wählen Sie für dieses Tutorial **[!UICONTROL XDM Individual Profile]** gefolgt von **[!UICONTROL Next]**.
 
 ![Der Workflow [!UICONTROL Schema erstellen] mit den Optionen [!UICONTROL XDM individuelles Profil] und [!UICONTROL Weiter], hervorgehoben.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### Benennen und überprüfen {#name-and-review}
 
 Nachdem Sie eine Klasse ausgewählt haben, wird der Abschnitt [!UICONTROL Name und Überprüfung] angezeigt. In diesem Abschnitt geben Sie einen Namen und eine Beschreibung ein, um Ihr Schema zu identifizieren. Bei der Entscheidung über einen Namen für Ihr Schema sind einige wichtige Aspekte zu beachten:
 
@@ -68,6 +77,8 @@ In diesem Tutorial wird ein Schema zur Aufnahme von Daten über die Mitglieder e
 Geben Sie einen benutzerfreundlichen [!UICONTROL Anzeigenamen des Schemas] in das Textfeld ein. Geben Sie anschließend eine Beschreibung ein, die die Identifizierung Ihres Schemas erleichtert. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
 ![Der Abschnitt [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] , in dem der [!UICONTROL Anzeigename des Schemas], die [!UICONTROL Beschreibung] und der Abschnitt [!UICONTROL Beenden] hervorgehoben sind.](../images/ui/resources/schemas/name-and-review.png)
+
+### Erstellen Ihres Schemas {#compose-your-schema}
 
 Der [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen. Das selbstbenannte Schema wird automatisch im Abschnitt **[!UICONTROL Struktur]** der Arbeitsfläche erstellt, wenn Sie in den Editor gelangen, zusammen mit den Standardfeldern, die in der von Ihnen ausgewählten Basisklasse enthalten sind. Die zugewiesene Klasse für das Schema wird auch im Abschnitt **[!UICONTROL Komposition]** unter **[!UICONTROL Klasse]** aufgelistet.
 

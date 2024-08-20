@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3736'
+source-wordcount: '3861'
 ht-degree: 3%
 
 ---
@@ -29,13 +29,23 @@ Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Eine Einführung 
 
 >[!NOTE]
 >
->In diesem Abschnitt wird beschrieben, wie Sie ein neues Schema in der Benutzeroberfläche manuell erstellen. Wenn Sie CSV-Daten in Platform erfassen, können Sie diese Daten mit [einem XDM-Schema zuordnen, das von AI-generierten Empfehlungen](../../../ingestion/tutorials/map-csv/recommendations.md) (derzeit in der Beta-Phase) erstellt wurde, ohne das Schema manuell erstellen zu müssen.
+>In diesem Abschnitt wird beschrieben, wie Sie ein neues Schema in der Benutzeroberfläche manuell erstellen. Wenn Sie CSV-Daten in Platform erfassen, können Sie mithilfe von ML-Algorithmen (Machine Learning) ein Schema aus CSV-Beispieldaten generieren **.** Dieser Workflow entspricht Ihrem Datenformat und erstellt automatisch ein neues Schema, das auf der Struktur und dem Inhalt Ihrer CSV-Datei basiert. Weitere Informationen zu diesem Workflow finden Sie im Handbuch zur Erstellung von [ML-unterstützten Schemas](../ml-assisted-schema-creation.md) .
 
 Wählen Sie im Arbeitsbereich [!UICONTROL Schemas] oben rechts die Option **[!UICONTROL Schema erstellen]** aus.
 
 ![Der Arbeitsbereich &quot;Schemas&quot;mit dem Eintrag [!UICONTROL Schema erstellen] ist hervorgehoben.](../../images/ui/resources/schemas/create-schema.png)
 
-Der Workflow [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Sonstige]** und anschließend **[!UICONTROL Weiter]** auswählen, um Ihre Auswahl zu bestätigen. Weitere Informationen zu diesen Klassen finden Sie in der Dokumentation zu [XDM-individuellen Profilen](../../classes/individual-profile.md) und [XDM ExperienceEvent](../../classes/experienceevent.md) .
+Das Dialogfeld [!UICONTROL Schema erstellen] wird angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema durch Hinzufügen von Feldern und Feldergruppen erstellen oder eine CSV-Datei hochladen und mithilfe von ML-Algorithmen ein Schema generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
+
+![Das Dialogfeld Schema erstellen mit den Workflow-Optionen und markieren hervorgehoben.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Manuelle oder ML-gestützte Schemaerstellung {#manual-or-assisted}
+
+Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Schemastruktur basierend auf einer CSV-Datei zu empfehlen, finden Sie im Leitfaden zur Erstellung von Schemas mit maschinellem Lernen](../ml-assisted-schema-creation.md). [ Dieses UI-Handbuch konzentriert sich auf den Workflow für die manuelle Erstellung.
+
+### Manuelle Schemaerstellung {#manual-creation}
+
+Der Workflow [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basisklasse für das Schema auswählen, indem Sie entweder **[!UICONTROL Individuelles Profil]**, **[!UICONTROL Erlebnisereignis]** oder **[!UICONTROL Sonstige]** und anschließend **[!UICONTROL Weiter]** auswählen, um Ihre Auswahl zu bestätigen. Weitere Informationen zu diesen Klassen finden Sie in der Dokumentation zu [[!UICONTROL XDM-individuellen Profilen]](../../classes/individual-profile.md) und [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) .
 
 ![Der Workflow [!UICONTROL Schema erstellen] mit den drei Klassenoptionen und [!UICONTROL Weiter] hervorgehoben.](../../images/ui/resources/schemas/schema-class-options.png)
 

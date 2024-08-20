@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datenerfassung – Übersicht
 description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 73%
+source-wordcount: '578'
+ht-degree: 66%
 
 ---
 
@@ -42,6 +42,12 @@ Weiterführende Informationen dazu finden Sie in unter [Streaming-Aufnahme – �
 Quellverbindungen können so konfiguriert sein, dass Daten aus anderen Adobe-Programmen (beispielsweise Adobe Analytics und Adobe Audience Manager), Cloud-Speichern von Drittanbietern (beispielsweise [!DNL Azure Blob], [!DNL Amazon] S3, FTP-Server und SFTP-Server) und Drittanbieter-CRM-Systemen (beispielsweise [!DNL Microsoft Dynamics] und [!DNL Salesforce]) erfasst werden.
 
 Weiterführende Informationen dazu finden Sie in der [Übersicht zu Quellen](../sources/home.md).
+
+### ML-gestützte Schemaerstellung {#ml-assisted-schema-creation}
+
+Um neue Datenquellen schnell zu integrieren, können Sie jetzt maschinelle Lernalgorithmen verwenden, um ein Schema aus Beispieldaten zu generieren. Diese Automatisierung vereinfacht die Erstellung genauer Schemata, reduziert Fehler und beschleunigt den Prozess von der Datenerfassung über Analysen und Einblicke.
+
+Weitere Informationen zu diesem Workflow finden Sie im Handbuch zur Erstellung von [ML-unterstützten Schemas](../xdm/ui/ml-assisted-schema-creation.md) .
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

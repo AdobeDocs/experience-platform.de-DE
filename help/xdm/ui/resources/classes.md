@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Klassen in der Experience Platform-Benutzeroberfläche erstellen und bearbeiten.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1560'
 ht-degree: 8%
 
 ---
@@ -60,7 +60,15 @@ Die von Ihnen erstellte Klasse ist verfügbar und wird in der Ansicht [!UICONTRO
 
 ### Erstellen oder Bearbeiten einer Klasse {#create-or-edit}
 
-Wenn Sie alternativ **[!UICONTROL Schema erstellen]** auswählen, wird der Workflow [!UICONTROL Schema erstellen] angezeigt. Wählen Sie im Abschnitt [!UICONTROL Schemadetails] die Option **[!UICONTROL Sonstige]**. Eine Liste der verfügbaren Klassen wird angezeigt. Von hier aus können Sie bereits vorhandene Klassen durchsuchen und filtern, auf denen Ihre neue Klasse basieren soll.
+Wenn Sie ein Schema manuell erstellen, können Sie alternativ eine vorhandene Klasse im Rahmen dieses Workflows erstellen oder bearbeiten. Wählen Sie **[!UICONTROL Schema erstellen]** und danach **[!UICONTROL Manuell]** im daraufhin angezeigten Dialogfeld [!UICONTROL Schema erstellen] aus.
+
+>[!NOTE]
+>
+>Wenn Sie den Workflow zur Erstellung von ML-unterstützten Schemas verwenden, können Sie eine Datei hochladen und mithilfe von ML-Algorithmen ein empfohlenes Schema generieren. In diesem Workflow zur Schemaerstellung müssen Sie nicht die Basisklasse für Ihr Schema angeben. Informationen dazu, wie ML eine Schemastruktur auf der Basis einer CSV-Datei empfehlen kann, finden Sie im Leitfaden zur Erstellung von Schemas mit maschinellem Lernen](../ml-assisted-schema-creation.md).[
+
+![Das Dialogfeld Schema erstellen mit den Workflow-Optionen und markieren hervorgehoben.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+Der Workflow für die Schemaerstellung wird angezeigt. Wählen Sie im Abschnitt [!UICONTROL Schemadetails] die Option **[!UICONTROL Sonstige]**. Eine Liste der verfügbaren Klassen wird angezeigt. Von hier aus können Sie bereits vorhandene Klassen durchsuchen und filtern, auf denen Ihre neue Klasse basieren soll.
 
 >[!NOTE]
 >

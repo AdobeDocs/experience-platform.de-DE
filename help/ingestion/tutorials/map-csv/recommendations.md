@@ -2,10 +2,10 @@
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema mithilfe der AI-generierten Recommendations
 description: In diesem Tutorial wird beschrieben, wie Sie eine CSV-Datei mithilfe von KI-generierten Empfehlungen einem XDM-Schema zuordnen.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 82%
+source-wordcount: '1172'
+ht-degree: 77%
 
 ---
 
@@ -101,3 +101,5 @@ Wenn Sie mit der Anpassung der Schemaempfehlungen für Ihre Quellfelder fertig s
 In diesem Handbuch wurde beschrieben, wie Sie eine CSV-Datei mithilfe von KI-generierten Empfehlungen einem XDM-Schema zuordnen, sodass Sie diese Daten durch eine Batch-Aufnahme in Platform importieren können.
 
 Schritte zum Zuordnen einer CSV-Datei zu einem vorhandenen Schema finden Sie im [Zuordnungs-Workflow für vorhandene Schemata](./existing-schema.md). Informationen zum Echtzeit-Streaming von Daten an Platform über vordefinierte Quellverbindungen finden Sie im Abschnitt [Quellen – Übersicht](../../../sources/home.md).
+
+Sie können auch maschinelle Lernalgorithmen (ML) verwenden, um **ein Schema aus CSV-Beispieldaten zu generieren**. Dieser Workflow erstellt automatisch ein neues Schema basierend auf der Struktur und dem Inhalt Ihrer CSV-Datei. Dieses neu erstellte Schema passt das Format Ihrer Daten an, um Zeit zu sparen und die Genauigkeit bei der Definition der Struktur, der Felder und der Datentypen für große komplexe Datensätze zu erhöhen. Weitere Informationen zu diesem Workflow finden Sie im Handbuch zur Erstellung von [ML-unterstützten Schemas](../../../xdm/ui/ml-assisted-schema-creation.md) .
