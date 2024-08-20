@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
-source-git-commit: b586edb3f8fc866c2bc0f8c387740490173174a0
+source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 30%
+source-wordcount: '1028'
+ht-degree: 29%
 
 ---
 
@@ -12,10 +12,53 @@ ht-degree: 30%
 
 **Veröffentlichungsdatum: Mittwoch, 20. August 2024**
 
+>[!TIP]
+>
+>Sehen Sie sich eine [Übersicht der Beispielanwendungsfalldokumentation](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) an, um mehr über verschiedene Anwendungsfälle wie Prospektion, Akquise und mehr zu erfahren, die Ihr Unternehmen mit Real-Time CDP erreichen kann.
+
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Experience Platform:
 
+- [Ziele](#destinations)
+- [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
+
+## Ziele {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| Der Export von Dateien On-Demand an Batch-Ziele ist jetzt allgemein verfügbar. | Die Option zum Exportieren von Dateien On-Demand an Batch-Ziele ist jetzt für alle Kunden verfügbar. Weitere Informationen finden Sie in der [dedizierten Dokumentation](../../destinations/ui/export-file-now.md) . |
+| Bearbeiten Sie Exportpläne für mehrere exportierte Zielgruppen im Schritt [Planen](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | Die Option, die Exportpläne für mehrere exportierte Zielgruppen direkt im Planungsschritt des Workflows für die Zielgruppenaktivierung zu bearbeiten, steht nun allen Kunden zur Verfügung. ![Bild der Experience Platform-Benutzeroberfläche, in dem die Option Zeitplan bearbeiten im Planungsschritt hervorgehoben wird.](assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"} |
+| Bearbeiten Sie die Dateinamen für mehrere exportierte Zielgruppen im [Planungsschritt](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | Die Option, die Namen mehrerer exportierter Dateien direkt im Planungsschritt des Workflows für die Zielgruppenaktivierung zu bearbeiten, ist jetzt für alle Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, in der die Option Dateinamen bearbeiten im Planungsschritt hervorgehoben wird.](assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
+| Entfernen Sie mehrere Zielgruppen aus einem Datenfluss aus der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-remove) . | Die Option zum Entfernen mehrerer Zielgruppen aus vorhandenen Datenflüssen aus der Seite **[!UICONTROL Zieldetails]** ist jetzt für alle Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, in dem die Option &quot;Zielgruppen entfernen&quot;auf der Seite &quot;Zieldetails&quot;hervorgehoben wird.](assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| Exportieren Sie mehrere Dateien bei Bedarf von der Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-export) in Batch-Ziele. | Die Option zum Exportieren mehrerer Dateien On-Demand an Batch-Ziele über die Seite **[!UICONTROL Zieldetails]** ist jetzt für alle Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, die die Option &quot;Datei jetzt exportieren&quot;auf der Seite &quot;Zieldetails&quot;hervorhebt.](assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| Bearbeiten Sie Dateinamen für mehrere exportierte Zielgruppen über die Seite [Zieldetails](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) . | Sie können jetzt die Namen mehrerer exportierter Dateien direkt auf der Seite **[!UICONTROL Zieldetails]** bearbeiten. ![Bild der Experience Platform-Benutzeroberfläche, in der die Option zum Bearbeiten des Dateinamens auf der Seite mit den Zieldetails hervorgehoben wird.](assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| Entfernen Sie mehrere Datensätze aus einem Datenfluss aus der Seite [Zieldetails](../../destinations/ui/export-datasets.md#remove-dataset) . | Die Option zum Entfernen mehrerer Datensätze aus einem Datenfluss ist jetzt für alle Kunden verfügbar. ![Bild der Experience Platform-Benutzeroberfläche, in der die Option &quot;Datensätze entfernen&quot;auf der Detailseite des Ziels hervorgehoben wird.](assets/august/bulk-remove-datasets.png) {width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+Weitere Informationen finden Sie in der [Zielübersicht](../../destinations/home.md).
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemata) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Erstellungsfluss von ML-unterstützten Schemas | Verwenden Sie erweiterte Algorithmen des maschinellen Lernens, um Ihre CSV-Musterdatendateien zu analysieren und automatisch optimierte Schemata mithilfe von Standard- und benutzerdefinierten Feldern zu erstellen.<br>Schlüsselfunktionen:<br><ul><li>Schnellere Schemaerstellung: Generieren Sie Schemas direkt aus Beispieldatendateien mithilfe von ML-empfohlenen und generierten XDM-Feldern.</li><li>Flexible Schemaentwicklung: Einfaches Hinzufügen oder Aktualisieren von Feldern im generierten Schema.</li><li>Nahtlose Integration: Vollständig in den Erstellungsfluss des Kernschemas in der Schema-Benutzeroberfläche integriert, sodass eine reibungslose und einheitliche Benutzererfahrung gewährleistet ist.</li><li>Effiziente Überprüfung und Bearbeitung: Schnelles Anzeigen und Aktualisieren Ihres Schemas mit dem Editor für einfache Ansicht, wodurch der Erstellungsprozess effizienter und benutzerfreundlicher wird.</li></ul> |
+
+{style="table-layout:auto"}
+
+<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -30,6 +73,20 @@ Verwenden Sie Adobe Experience Platform Identity Service, um eine umfassende Üb
 {style="table-layout:auto"}
 
 Weiterführende Informationen zu Identity Service finden Sie in der [Übersicht zu Identity Service](../../identity-service/home.md).
+
+## Segmentierungs-Service {#segmentation}
+
+[!DNL Segmentation Service] ermöglicht es Ihnen, in [!DNL Experience Platform] gespeicherte Daten, die sich auf Einzelpersonen (wie Kundinnen und Kunden, Interessierte, Benutzerinnen und Benutzer oder Organisationen) beziehen, in Zielgruppen zu segmentieren. Sie können Zielgruppen über Segmentdefinitionen oder andere Quellen aus Ihren [!DNL Real-Time Customer Profile]-Daten erstellen. Diese Zielgruppen werden zentral auf [!DNL Platform] konfiguriert und verwaltet und stehen jeder Adobe-Lösung zur Verfügung.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Aufnahmedetails | Bei Zielgruppen mit der Quelle Benutzerspezifischer Upload können Sie Details zur Aufnahme der Zielgruppe auf der Seite mit den Zielgruppendetails umfassender anzeigen. Darüber hinaus können Sie Bezeichnungen auf die Payload-Attribute anwenden, indem Sie das Schema auswählen und die gewünschten Attribute zur Beschriftung auswählen. Weitere Informationen zum Abschnitt &quot;Aufnahmedetails&quot;finden Sie im [Audience Portal-Handbuch](../../segmentation/ui/audience-portal.md#ingestion-details). |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md).
 
 ## Quellen
 
