@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim XDM-System
 description: Hier finden Sie Antworten auf häufig gestellte Fragen zum Experience-Datenmodell (XDM), einschließlich schrittweiser Anweisungen zur Behebung gängiger API-Fehler.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
+source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
 workflow-type: tm+mt
-source-wordcount: '2446'
-ht-degree: 79%
+source-wordcount: '2390'
+ht-degree: 81%
 
 ---
 
@@ -49,7 +49,7 @@ Bei einem Feld vom Typ „long“ handelt es sich um eine Ganzzahl mit einer max
 
 Weiterführende Informationen zu Feldtypen finden Sie im Dokument zu [Begrenzungen für XDM-Feldtypen](./schema/field-constraints.md).
 
-### Was ist meta:AltId und wie kann ich es abrufen?
+### Was ist meta:AltId?
 
 `meta:altId` ist eine eindeutige Kennung für ein Schema. Der `meta:altId` bietet eine einfach zu referenzierende ID für die Verwendung in API-Aufrufen. Diese ID vermeidet, dass jedes Mal, wenn sie wie im JSON-URI-Format verwendet wird, kodiert/dekodiert werden muss.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -58,13 +58,6 @@ Weiterführende Informationen zu Feldtypen finden Sie im Dokument zu [Begrenzung
 
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
-
-### Kann ich eine JSON-Beispieldarstellung abrufen, um einen Datentyp zu erstellen?
-
-Sie können sowohl die Schema Registry-API als auch die Platform-Benutzeroberfläche verwenden, um einen Datentyp zu erstellen. Anweisungen dazu finden Sie in der Dokumentation:
-
-- [Erstellen eines Datentyps mithilfe der API](./api/data-types.md#create)
-- [Erstellen eines Datentyps über die Benutzeroberfläche](./ui/resources/data-types.md#create)
 
 ### Welche Nutzungsbeschränkungen gelten für einen Zuordnungs-Datentyp?
 
