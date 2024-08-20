@@ -2,10 +2,10 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
-ht-degree: 63%
+source-wordcount: '4125'
+ht-degree: 59%
 
 ---
 
@@ -254,17 +254,39 @@ Wenn Sie **[!UICONTROL Zielgruppe bearbeiten]** auswählen, können Sie Ihre Zie
 
 Wenn Sie **[!UICONTROL Eigenschaften bearbeiten]** auswählen, können Sie die grundlegenden Details der Zielgruppe bearbeiten, z. B. den Namen, die Beschreibung und die Tags.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![Die Schaltfläche &quot;Eigenschaften bearbeiten&quot;wird auf der Seite mit den Zielgruppendetails hervorgehoben.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Zielgruppe insgesamt {#audience-total}
 
-Im Abschnitt **[!UICONTROL Zielgruppe insgesamt]** wird die Gesamtzahl der Profile angezeigt, die für die Zielgruppe qualifiziert sind.
+Für plattformgenerierte Zielgruppen und Kompositionen zeigt der Abschnitt **[!UICONTROL Zielgruppengesamtwert]** die Gesamtanzahl der Profile an, die für die Zielgruppe qualifiziert sind.
 
 >[!NOTE]
 >
 >Nach Abschluss des Exportvorgangs kann es bis zu 30 Minuten dauern, bis die Gesamtanzahl der Zielgruppen aktualisiert ist.
 
 Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweiligen Tages generiert. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Für zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet und für über 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet. Weiterführende Informationen zum Generieren von Schätzungen finden Sie im Tutorial zur Zielgruppenerstellung im Abschnitt [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
+
+### Aufnahmedetails {#ingestion-details}
+
+Bei Zielgruppen mit dem Ursprung **[!UICONTROL Benutzerdefinierter Upload]** zeigt der Abschnitt **[!UICONTROL Aufnahmedetails]** sowohl die Gesamtsumme des Profils als auch Details zum Datensatz an, in den die extern generierte Zielgruppe aufgenommen wurde.
+
+![Der Abschnitt mit den Aufnahmedetails für die Seite mit den Zielgruppendetails wird angezeigt.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| Anzahl der Profile | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
+| Datensatzname | Der Name des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können den Datensatznamen auswählen, um weitere Informationen zum Datensatz zu erhalten. Weitere Informationen zu Datensätzen finden Sie im [Benutzerhandbuch zur Datensatz-Benutzeroberfläche](../../catalog/datasets/user-guide.md). |
+| Datensatz-Batch | Die ID des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können die Kennung des Batches auswählen, um weitere Informationen zum Batch zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Überwachung der Datenerfassung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profil-Batch | Die Kennung des Batches, mit dem die Profile in Platform erstellt wurden. Sie können die Kennung des Batches auswählen, um weitere Informationen zum Batch zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Überwachung der Datenerfassung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Schema | Der Name des Schemas, zu dem die Zielgruppe gehört. Sie können den Namen des Schemas auswählen, um Informationen zur Struktur des Schemas anzuzeigen und Datennutzungsbezeichnungen anzuwenden. Weitere Informationen finden Sie unter [Verwalten von Datennutzungsbezeichnungen für ein Schema-Handbuch](../../xdm/tutorials/labels.md). |
+| Aufgenommene Einträge | Die Anzahl der Datensätze, die in den Datensatz aufgenommen werden. |
+| Fehlgeschlagene Einträge | Die Anzahl der Datensätze, die nicht in den Datensatz aufgenommen werden konnten. |
+| Neue Profilfragmente | Die Anzahl der neu erstellten Profile. |
+| Vorhandene Profilfragmente | Die Anzahl der vorhandenen Profile, die aktualisiert wurden. |
+
+>[!NOTE]
+>
+>Best Practice ist, Datennutzungsbezeichnungen auf das Schema anzuwenden. Sie können **nicht** eine Datennutzungsbezeichnung direkt auf die Zielgruppe anwenden.
 
 ### Aktivierte Ziele {#activated-destinations}
 
@@ -343,7 +365,7 @@ Wenn Sie **[!UICONTROL Regel erstellen]** auswählen, gelangen Sie zum Segment B
 
 ### Komposition föderierter Zielgruppen {#fac}
 
-Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Zusammengestellte Zielgruppen-Komposition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
 
 ![Eine Liste der Zielgruppen, die in Federated Audience Komposition für Ihr Unternehmen erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
 
