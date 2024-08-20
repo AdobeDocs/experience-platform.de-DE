@@ -5,9 +5,9 @@ description: Bei der Erkennung freigegebener Geräte werden verschiedene authent
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: d7c7bed74d746aba2330ecba62f9f810fbaf0d63
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1353'
 ht-degree: 9%
 
 ---
@@ -60,7 +60,7 @@ Bei der Arbeit mit
 [!DNL Shared Device Detection] funktioniert durch die Einrichtung von zwei Namespaces: dem **gemeinsamen Identitäts-Namespace** und dem **Benutzer-Identitäts-Namespace**.
 
 * Der Shared Identity-Namespace stellt das Gerät dar, das von mehreren Benutzern verwendet werden kann. Adobe empfiehlt Kunden die Verwendung von ECID als gemeinsam genutzte Gerätekennung.
-* Der Benutzer-Identitäts-Namespace wird dem Identitäts-Namespace zugeordnet, der der Anmelde-ID eines Benutzers entspricht. Dabei kann es sich um die CRM-ID eines Benutzers, die E-Mail-Adresse, die gehashte E-Mail-Adresse oder Telefonnummer handeln.
+* Der Benutzer-Identitäts-Namespace ist dem Identitäts-Namespace zugeordnet, der der Anmelde-ID eines Benutzers entspricht. Dabei kann es sich um die CRMID eines Benutzers, die E-Mail-Adresse, die gehashte E-Mail-Adresse oder Telefonnummer handeln.
 
 Ein freigegebenes Gerät, wie ein Tablet, hat einen einzelnen **gemeinsamen Identitäts-Namespace**. Andererseits hat jeder Benutzer eines gemeinsam genutzten Geräts seinen eigenen festgelegten **Benutzer-Identitäts-Namespace**, der seinen jeweiligen Anmelde-IDs entspricht. Beispielsweise verfügt ein Tablet, das Kevin und Nora für die E-Commerce-Verwendung freigeben, über eine eigene ECID von `1234`, während Kevin über einen eigenen Benutzer-Identitäts-Namespace verfügt, der seinem `kevin@email.com`-Konto zugeordnet ist, und Nora über einen eigenen Benutzer-Identitäts-Namespace, der ihrem `nora@email.com`-Konto zugeordnet ist.
 
@@ -72,17 +72,17 @@ Sehen Sie sich das folgende Beispiel an, um zu verstehen, wie [!DNL Shared Devic
 
 >[!NOTE]
 >
->In diesem Diagramm ist der Freigegebene Identitäts-Namespace für ECID und der Benutzer-Identitäts-Namespace für CRM-ID konfiguriert.
+>In diesem Diagramm ist der Shared Identity-Namespace für ECID konfiguriert und der User Identity-Namespace für CRMID.
 
 ![Diagramm](./images/shared-device/diagram.png)
 
 * Kevin und Nora teilen sich ein Tablet, um eine E-Commerce-Website zu besuchen. Sie verfügen jedoch beide über eigene unabhängige Konten, die sie jeweils verwenden, um online zu surfen und einzukaufen.
    * Als freigegebenes Gerät verfügt das Tablet über eine entsprechende ECID, die die Cookie-ID des Tablet-Webbrowsers darstellt.
-* Angenommen, Kevin verwendet das Tablet und **meldet sich in** bei seinem E-Commerce-Konto an, um nach Kopfhörern zu suchen. Dies bedeutet, dass die CRM-ID von Kevin (**Benutzer-Identitäts-Namespace**) jetzt mit der ECID des Tablets (**Freigegebener Identitäts-Namespace**) verknüpft ist. Die Browserdaten des Tablets sind jetzt in Kevins Identitätsdiagramm integriert.
-   * Wenn sich Kevin **abmeldet** und Nora das Tablet verwendet und sich **in** bei ihrem eigenen Konto anmeldet und eine Kamera kauft, dann ist ihre CRM-ID jetzt mit der ECID des Tablets verknüpft. Daher sind die Browserdaten des Tablets jetzt in das Identitätsdiagramm von Nora integriert.
-   * Wenn Nora **sich nicht abmeldet** und Kevin das Tablet verwendet, sich jedoch nicht bei **anmeldet, sind die Browserdaten des Tablets weiterhin in Nora integriert, da sie als authentifizierter Benutzer verbleiben und ihre CRM-ID weiterhin mit der ECID des Tablets verknüpft ist.**
-   * Wenn Nora **sich abmeldet** und Kevin das Tablet verwendet, sich jedoch nicht bei **3} anmeldet, sind die Browserdaten des Tablets weiterhin in das Identitätsdiagramm von Nora integriert, da als** zuletzt authentifizierter Benutzer **ihre CRM-ID mit der ECID des Tablets verknüpft bleibt.**
-   * Wenn sich Kevin **erneut in** anmeldet, wird seine CRM-ID jetzt mit der ECID des Tablets verknüpft, da er nun der letzte authentifizierte Benutzer ist und die Browserdaten des Tablets jetzt in sein Identitätsdiagramm integriert sind.
+* Angenommen, Kevin verwendet das Tablet und **meldet sich in** bei seinem E-Commerce-Konto an, um nach Kopfhörern zu suchen. Dies bedeutet, dass die CRMID von Kevin (**Benutzer-Identitäts-Namespace**) jetzt mit der ECID des Tablets (**Freigegebener Identitäts-Namespace**) verknüpft ist. Die Browserdaten des Tablets sind jetzt in Kevins Identitätsdiagramm integriert.
+   * Wenn sich Kevin **abmeldet** und Nora das Tablet verwendet und sich **in** bei ihrem eigenen Konto anmeldet und eine Kamera kauft, dann ist ihre CRMID jetzt mit der ECID des Tablets verknüpft. Daher sind die Browserdaten des Tablets jetzt in das Identitätsdiagramm von Nora integriert.
+   * Wenn Nora **sich nicht abmeldet** und Kevin das Tablet verwendet, sich jedoch nicht bei **anmeldet, sind die Browserdaten des Tablets weiterhin in Nora integriert, da sie als authentifizierter Benutzer verbleibt und ihre CRMID weiterhin mit der ECID des Tablets verknüpft ist.**
+   * Wenn Nora **sich abmeldet** und Kevin das Tablet verwendet, sich jedoch nicht bei **3} anmeldet, sind die Browserdaten des Tablets weiterhin in das Identitätsdiagramm von Nora integriert, da der** letzte authentifizierte Benutzer **seine CRMID weiterhin mit der ECID des Tablets verknüpft bleibt.**
+   * Wenn sich Kevin **erneut in** anmeldet, wird seine CRMID jetzt mit der ECID des Tablets verknüpft, da er jetzt der letzte authentifizierte Benutzer ist und die Browserdaten des Tablets jetzt in sein Identitätsdiagramm integriert sind.
 
 ### Zusammenführen von Profilfragmenten mit aktiviertem [!DNL Shared Device Detection][!DNL Profile Service]
 

@@ -3,9 +3,9 @@ title: Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen
 description: Erfahren Sie mehr über die Regeln für die Verknüpfung von Identitätsdiagrammen im Identity-Dienst.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1170'
 ht-degree: 1%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 1%
 * [Beispieldiagrammkonfigurationen](./configuration.md)
 * [Beispielszenarien](./example-scenarios.md)
 
-Mit Adobe Experience Platform Identity Service und Echtzeit-Kundenprofil ist es einfach, davon auszugehen, dass Ihre Daten perfekt erfasst werden und dass alle zusammengeführten Profile eine einzelne Person über eine Personen-ID repräsentieren, z. B. eine CRM-ID. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen (&quot;Diagrammreduzierung&quot;). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über Identitätsdiagramm-Verknüpfungsregeln bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen.
+Mit Adobe Experience Platform Identity Service und Echtzeit-Kundenprofil ist es einfach, davon auszugehen, dass Ihre Daten perfekt erfasst werden und dass alle zusammengeführten Profile eine einzelne Person über eine Personen-ID darstellen, z. B. eine CRMID. Es gibt jedoch mögliche Szenarien, in denen bestimmte Daten versuchen könnten, mehrere unterschiedliche Profile zu einem einzigen Profil zusammenzuführen (&quot;Diagrammreduzierung&quot;). Um diese unerwünschten Zusammenführungen zu verhindern, können Sie Konfigurationen verwenden, die über Identitätsdiagramm-Verknüpfungsregeln bereitgestellt werden, und eine genaue Personalisierung für Ihre Benutzer ermöglichen.
 
 ## Beispielszenarien, in denen eine Diagrammreduzierung möglich ist
 
 * **Freigegebenes Gerät**: Freigegebenes Gerät bezieht sich auf Geräte, die von mehreren Personen verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks.
 * **Schlechte E-Mail- und Telefonnummern**: Schlechte E-Mail- und Telefonnummern beziehen sich auf Endbenutzer, die ungültige Kontaktinformationen wie &quot;test<span>@test.com&quot;für E-Mail und &quot;+1-111-1111&quot;für Telefonnummer registrieren.
-* **Falsche oder ungültige Identitätswerte**: Fehlerhafte oder falsche Identitätswerte beziehen sich auf nicht eindeutige Identitätswerte, die CRM-IDs zusammenführen können. Während IDFAs beispielsweise 36 Zeichen haben müssen (32 alphanumerische Zeichen und vier Bindestriche), gibt es Szenarien, in denen ein IDFA mit dem Identitätswert &quot;user_null&quot;erfasst werden kann. Auf ähnliche Weise unterstützen Telefonnummern nur numerische Zeichen, aber ein Namespace für Smartphones mit dem Identitätswert &quot;nicht angegeben&quot;kann erfasst werden.
+* **Falsche oder ungültige Identitätswerte**: Fehlerhafte oder falsche Identitätswerte beziehen sich auf nicht eindeutige Identitätswerte, die CRMIDs zusammenführen können. Während IDFAs beispielsweise 36 Zeichen haben müssen (32 alphanumerische Zeichen und vier Bindestriche), gibt es Szenarien, in denen ein IDFA mit dem Identitätswert &quot;user_null&quot;erfasst werden kann. Auf ähnliche Weise unterstützen Telefonnummern nur numerische Zeichen, aber ein Namespace für Smartphones mit dem Identitätswert &quot;nicht angegeben&quot;kann erfasst werden.
 
 Weitere Informationen zu Anwendungsszenarios für Identitätsdiagramm-Verknüpfungsregeln finden Sie im Dokument zu [Beispielszenarien](./example-scenarios.md) .
 
@@ -60,15 +60,15 @@ Betrachten Sie das folgende Szenario:
 * Scott verwendet ein Tablet und öffnet seinen Google Chrome-Browser, um zu nike<span>.com zu gehen, wo er sich anmeldet und nach neuen Basketballschuhen sucht.
    * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
       * Ein ECID-Namespace und -Wert für die Verwendung des Browsers
-      * Ein CRM-ID-Namespace und -Wert für den authentifizierten Benutzer (Scott hat sich mit seiner Kombination aus Benutzername und Kennwort angemeldet).
+      * Ein CRMID-Namespace und -Wert für den authentifizierten Benutzer (Scott hat sich mit seiner Kombination aus Benutzername und Kennwort angemeldet).
 * Sein Sohn Peter benutzt dann das gleiche Tablet und verwendet auch Google Chrome, um zu nike<span>.com zu gehen, wo er sich mit seinem eigenen Konto anmeldet, um nach Fußballausrüstung zu suchen.
    * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
       * Derselbe ECID-Namespace und -Wert für den Browser.
-      * Ein neuer CRM-ID-Namespace und -Wert, der den authentifizierten Benutzer darstellt.
+      * Ein neuer CRMID-Namespace und -Wert, der den authentifizierten Benutzer darstellt.
 
-Wenn die CRM-ID als eindeutiger Namespace konfiguriert wurde, teilt der Identitätsoptimierungsalgorithmus die CRM-IDs in zwei separate Identitätsdiagramme auf, anstatt sie zusammenzuführen.
+Wenn CRMID als eindeutiger Namespace konfiguriert wurde, teilt der Identitätsoptimierungsalgorithmus die CRMIDs in zwei separate Identitätsdiagramme auf, anstatt sie zusammenzuführen.
 
-Wenn Sie keinen eindeutigen Namespace konfigurieren, können unerwünschte Diagrammzusammenführungen auftreten, z. B. zwei Identitäten mit demselben CRM-ID-Namespace, aber unterschiedliche Identitätswerte (Szenarien wie diese stellen häufig zwei verschiedene Personen-Entitäten im selben Diagramm dar).
+Wenn Sie keinen eindeutigen Namespace konfigurieren, können unerwünschte Diagrammzusammenführungen auftreten, z. B. zwei Identitäten mit demselben CRMID-Namespace, aber unterschiedliche Identitätswerte (Szenarien wie diese stellen häufig zwei verschiedene Entitäten im selben Diagramm dar).
 
 Sie müssen einen eindeutigen Namespace konfigurieren, um den Identitätsoptimierungsalgorithmus darüber zu informieren, dass Einschränkungen bei den Identitätsdaten erzwungen werden, die in ein bestimmtes Identitätsdiagramm aufgenommen werden.
 

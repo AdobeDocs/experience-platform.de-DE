@@ -3,10 +3,10 @@ title: Identitätsoptimierungsalgorithmus
 description: Erfahren Sie mehr über den Identity Optimization-Algorithmus im Identity Service.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 1%
+source-wordcount: '1533'
+ht-degree: 2%
 
 ---
 
@@ -26,14 +26,14 @@ In diesem Abschnitt finden Sie Informationen zu eindeutigen Namespaces und der N
 
 Ein eindeutiger Namespace legt die Links fest, die entfernt werden, wenn das Diagramm reduziert wird.
 
-Ein einzelnes zusammengeführtes Profil und das zugehörige Identitätsdiagramm sollten eine einzelne Person (Personenentität) repräsentieren. Eine einzelne Person wird in der Regel durch CRM-IDs und/oder Anmelde-IDs dargestellt. Es wird erwartet, dass nicht zwei Personen (CRM-IDs) zu einem Profil oder Diagramm zusammengeführt werden.
+Ein einzelnes zusammengeführtes Profil und das zugehörige Identitätsdiagramm sollten eine einzelne Person (Personenentität) repräsentieren. Eine einzelne Person wird in der Regel durch CRMIDs und/oder Anmelde-IDs dargestellt. Es wird erwartet, dass keine zwei Personen (CRMIDs) zu einem einzelnen Profil oder Diagramm zusammengeführt werden.
 
-Sie müssen mithilfe des Identitätsoptimierungsalgorithmus angeben, welche Namespaces eine Personenentität in Identity Service darstellen. Wenn beispielsweise in einer CRM-Datenbank ein Benutzerkonto definiert wird, das mit einer einzelnen CRM-ID und einer einzelnen E-Mail-Adresse verknüpft werden soll, würden die Identitätseinstellungen für diese Sandbox wie folgt aussehen:
+Sie müssen mithilfe des Identitätsoptimierungsalgorithmus angeben, welche Namespaces eine Personenentität in Identity Service darstellen. Wenn beispielsweise eine CRM-Datenbank ein Benutzerkonto definiert, das mit einer einzelnen CRMID und einer einzelnen E-Mail-Adresse verknüpft werden soll, würden die Identitätseinstellungen für diese Sandbox wie folgt aussehen:
 
-* CRM-ID-Namespace = eindeutig
+* CRMID-Namespace = eindeutig
 * Email namespace = unique
 
-Ein Namespace, den Sie als eindeutig deklarieren, wird automatisch so konfiguriert, dass er innerhalb eines bestimmten Identitätsdiagramms eine maximale Begrenzung von 1 aufweist. Wenn Sie beispielsweise einen CRM-ID-Namespace als eindeutig deklarieren, darf ein Identitätsdiagramm nur eine Identität enthalten, die einen CRM-ID-Namespace enthält. Wenn Sie keinen Namespace als eindeutig deklarieren, kann das Diagramm mehr als eine Identität mit diesem Namespace enthalten.
+Ein Namespace, den Sie als eindeutig deklarieren, wird automatisch so konfiguriert, dass er innerhalb eines bestimmten Identitätsdiagramms eine maximale Begrenzung von 1 aufweist. Wenn Sie beispielsweise einen CRMID-Namespace als eindeutig deklarieren, darf ein Identitätsdiagramm nur eine Identität enthalten, die einen CRMID-Namespace enthält. Wenn Sie keinen Namespace als eindeutig deklarieren, kann das Diagramm mehr als eine Identität mit diesem Namespace enthalten.
 
 >[!NOTE]
 >
@@ -84,15 +84,15 @@ Ein freigegebenes Gerät bezieht sich auf ein Gerät, das von mehr als einer Per
 
 | Namespace | Eindeutiger Namespace |
 | --- | --- |
-| CRM-ID | Ja |
+| CRMID | Ja |
 | E-Mail | Ja |
 | ECID | Nein |
 
-In diesem Beispiel werden sowohl die CRM-ID als auch die E-Mail-Adresse als eindeutige Namespaces bezeichnet. Bei `timestamp=0` wird ein CRM-Datensatz erfasst und aufgrund der eindeutigen Namespace-Konfiguration zwei unterschiedliche Diagramme erstellt. Jedes Diagramm enthält eine CRM-ID und einen E-Mail-Namespace.
+In diesem Beispiel werden sowohl CRMID als auch E-Mail als eindeutige Namespaces bezeichnet. Bei `timestamp=0` wird ein CRM-Datensatz erfasst und aufgrund der eindeutigen Namespace-Konfiguration zwei unterschiedliche Diagramme erstellt. Jedes Diagramm enthält eine CRMID und einen E-Mail-Namespace.
 
-* `timestamp=1`: Jane meldet sich mit einem Laptop bei Ihrer E-Commerce-Website an. Jane wird durch ihre CRM-ID und E-Mail repräsentiert, während der Webbrowser auf dem Laptop, den sie verwendet, durch eine ECID repräsentiert wird.
-* `timestamp=2`: John meldet sich mit demselben Laptop bei Ihrer E-Commerce-Website an. John wird durch seine CRM-ID und E-Mail repräsentiert, während der von ihm verwendete Webbrowser bereits durch eine ECID repräsentiert wird. Da dieselbe ECID mit zwei verschiedenen Diagrammen verknüpft ist, kann Identity Service wissen, dass dieses Gerät (Laptop) ein gemeinsam genutztes Gerät ist.
-* Aufgrund der eindeutigen Namespace-Konfiguration, die maximal einen CRM-ID-Namespace und einen E-Mail-Namespace pro Diagramm festlegt, teilt der Identitätsoptimierungsalgorithmus das Diagramm dann in zwei auf.
+* `timestamp=1`: Jane meldet sich mit einem Laptop bei Ihrer E-Commerce-Website an. Jane wird durch ihre CRMID und E-Mail repräsentiert, während der Webbrowser auf ihrem Laptop, den sie verwendet, durch eine ECID repräsentiert wird.
+* `timestamp=2`: John meldet sich mit demselben Laptop bei Ihrer E-Commerce-Website an. John wird durch seine CRMID und E-Mail repräsentiert, während der von ihm verwendete Webbrowser bereits durch eine ECID repräsentiert wird. Da dieselbe ECID mit zwei verschiedenen Diagrammen verknüpft ist, kann Identity Service wissen, dass dieses Gerät (Laptop) ein gemeinsam genutztes Gerät ist.
+* Aufgrund der eindeutigen Namespace-Konfiguration, die maximal einen CRMID-Namespace und einen E-Mail-Namespace pro Diagramm festlegt, teilt der Identitätsoptimierungsalgorithmus das Diagramm dann in zwei auf.
    * Da John der letzte authentifizierte Benutzer ist, bleibt die ECID, die den Laptop darstellt, mit seinem Diagramm verknüpft und nicht mit der von Jane.
 
 ![gemeinsam genutzter Gerätefall 1](../images/identity-settings/shared-device-case-one.png)
@@ -101,16 +101,16 @@ In diesem Beispiel werden sowohl die CRM-ID als auch die E-Mail-Adresse als eind
 
 | Namespace | Eindeutiger Namespace |
 | --- | --- |
-| CRM-ID | Ja |
+| CRMID | Ja |
 | ECID | Nein |
 
-In diesem Beispiel wird der CRM-ID-Namespace als eindeutiger Namespace bezeichnet.
+In diesem Beispiel wird der CRMID-Namespace als eindeutiger Namespace bezeichnet.
 
-* `timestamp=1`: Jane meldet sich mit einem Laptop bei Ihrer E-Commerce-Website an. Sie wird durch ihre CRM-ID repräsentiert und der Webbrowser auf dem Laptop wird durch die ECID repräsentiert.
-* `timestamp=2`: John meldet sich mit demselben Laptop bei Ihrer E-Commerce-Website an. Er wird durch seine CRM-ID repräsentiert und der von ihm verwendete Webbrowser wird durch dieselbe ECID repräsentiert.
-   * Dieses Ereignis verknüpft zwei unabhängige CRM-IDs mit derselben ECID, die die konfigurierte Grenze einer CRM-ID überschreitet.
-   * Daher entfernt der Identitätsoptimierungsalgorithmus den älteren Link, in diesem Fall die CRM-ID von Jane, die unter `timestamp=1` verknüpft war.
-   * Obwohl die CRM-ID von Jane nicht mehr als Diagramm zum Identity Service vorhanden ist, bleibt sie dennoch als Profil im Echtzeit-Kundenprofil bestehen. Der Grund dafür ist, dass ein Identitätsdiagramm mindestens zwei verknüpfte Identitäten enthalten muss. Durch das Entfernen der Links hat Janes CRM-ID keine andere Identität mehr, mit der eine Verknüpfung hergestellt werden kann.
+* `timestamp=1`: Jane meldet sich mit einem Laptop bei Ihrer E-Commerce-Website an. Sie wird durch ihre CRMID repräsentiert und der Webbrowser auf dem Laptop wird durch die ECID repräsentiert.
+* `timestamp=2`: John meldet sich mit demselben Laptop bei Ihrer E-Commerce-Website an. Er wird durch seine CRMID repräsentiert und der von ihm verwendete Webbrowser wird durch dieselbe ECID repräsentiert.
+   * Dieses Ereignis verknüpft zwei unabhängige CRMIDs mit derselben ECID, die die konfigurierte Beschränkung einer CRMID überschreitet.
+   * Daher entfernt der Identitätsoptimierungsalgorithmus den älteren Link, in diesem Fall die CRMID von Jane, die mit `timestamp=1` verknüpft war.
+   * Während die CRMID von Jane nicht mehr als Diagramm im Identity Service vorhanden sein wird, bleibt sie dennoch als Profil im Echtzeit-Kundenprofil bestehen. Der Grund dafür ist, dass ein Identitätsdiagramm mindestens zwei verknüpfte Identitäten enthalten muss. Infolge des Entfernens der Links hat Janes CRMID keine andere Identität mehr, mit der eine Verknüpfung hergestellt werden kann.
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
 
@@ -122,18 +122,18 @@ Es gibt Fälle, in denen ein Benutzer falsche Werte für seine E-Mail- und/oder 
 
 | Namespace | Eindeutiger Namespace |
 | --- | --- |
-| CRM-ID | Ja |
+| CRMID | Ja |
 | E-Mail | Ja |
 | ECID | Nein |
 
-In diesem Beispiel werden die CRM-ID und E-Mail-Namespaces als eindeutig gekennzeichnet. Nehmen wir das Szenario, dass Jane und John sich mit einem schlechten E-Mail-Wert bei Ihrer E-Commerce-Website angemeldet haben (z. B. test<span>@test.com).
+In diesem Beispiel werden die CRMID- und E-Mail-Namespaces als eindeutig gekennzeichnet. Nehmen wir das Szenario, dass Jane und John sich mit einem schlechten E-Mail-Wert bei Ihrer E-Commerce-Website angemeldet haben (z. B. test<span>@test.com).
 
-* `timestamp=1`: Jane meldet sich mit Safari in ihrer iPhone bei Ihrer E-Commerce-Website an und ermittelt dabei ihre CRM-ID (Anmeldeinformationen) und ihre ECID (Browser).
-* `timestamp=2`: John meldet sich mit Google Chrome auf seiner iPhone bei Ihrer E-Commerce-Website an und stellt seine CRM-ID (Anmeldeinformationen) und ECID (Browser) ein.
-* `timestamp=3`: Ihr Dateningenieur erfasst den CRM-Datensatz von Jane, was dazu führt, dass seine CRM-ID mit der fehlerhaften E-Mail verknüpft wird.
-* `timestamp=4`: Ihr Dateningenieur erfasst Johns CRM-Datensatz, was dazu führt, dass seine CRM-ID mit der schlechten E-Mail verknüpft wird.
-   * Dies verstößt dann gegen die eindeutige Namespace-Konfiguration, da ein einzelnes Diagramm mit zwei CRM-ID-Namespaces erstellt wird.
-   * Daher löscht der Identitätsoptimierungsalgorithmus den älteren Link, der in diesem Fall die Verknüpfung zwischen der Identität von Jane mit dem CRM-ID-Namespace und der Identität mit test<span>@test ist.
+* `timestamp=1`: Jane meldet sich mit Safari auf ihrer iPhone bei Ihrer E-Commerce-Website an und legt ihre CRMID (Anmeldeinformationen) und ihre ECID (Browser) fest.
+* `timestamp=2`: John meldet sich mit Google Chrome auf seiner iPhone bei Ihrer E-Commerce-Website an und stellt seine CRMID (Anmeldeinformationen) und ECID (Browser) ein.
+* `timestamp=3`: Ihr Dateningenieur erfasst den CRM-Datensatz von Jane, was dazu führt, dass ihre CRMID mit der fehlerhaften E-Mail verknüpft wird.
+* `timestamp=4`: Ihr Dateningenieur erfasst Johns CRM-Datensatz, was dazu führt, dass seine CRMID mit der fehlerhaften E-Mail verknüpft wird.
+   * Dies stellt dann einen Verstoß gegen die eindeutige Namespace-Konfiguration dar, da ein einzelnes Diagramm mit zwei CRMID-Namespaces erstellt wird.
+   * Daher löscht der Identitätsoptimierungsalgorithmus den älteren Link, der in diesem Fall die Verknüpfung zwischen Janes Identität mit dem CRMID-Namespace und der Identität mit test<span>@test ist.
 
 Mit dem Identitätsoptimierungsalgorithmus werden ungültige Identitätswerte wie falsche E-Mails oder Telefonnummern nicht über mehrere Identitätsdiagramme hinweg übertragen.
 
@@ -141,13 +141,13 @@ Mit dem Identitätsoptimierungsalgorithmus werden ungültige Identitätswerte wi
 
 ### Anonyme Ereigniszuordnung
 
-ECIDs speichern nicht authentifizierte (anonyme) Ereignisse, während CRM-ID authentifizierte Ereignisse speichert. Bei freigegebenen Geräten wird die ECID (Träger nicht authentifizierter Ereignisse) mit dem **letzten authentifizierten Benutzer** verknüpft.
+ECIDs speichern nicht authentifizierte (anonyme) Ereignisse, während CRMID authentifizierte Ereignisse speichert. Bei freigegebenen Geräten wird die ECID (Träger nicht authentifizierter Ereignisse) mit dem **letzten authentifizierten Benutzer** verknüpft.
 
 Sehen Sie sich das folgende Diagramm an, um besser zu verstehen, wie die anonyme Ereigniszuordnung funktioniert:
 
 * Kevin und Nora teilen sich ein Tablet.
-   * `timestamp=1`: Kevin meldet sich mit seinem Konto bei einer E-Commerce-Website an und ermittelt dadurch seine CRM-ID (Anmeldeinformationen) und eine ECID (Browser). Zum Zeitpunkt der Anmeldung wird Kevin jetzt als der zuletzt authentifizierte Benutzer betrachtet.
-   * `timestamp=2`: Nora meldet sich mit ihrem Konto bei einer E-Commerce-Website an und ermittelt dadurch ihre CRM-ID (Anmeldeinformationen) und dieselbe ECID. Zum Zeitpunkt der Anmeldung wird Nora jetzt als der zuletzt authentifizierte Benutzer betrachtet.
+   * `timestamp=1`: Kevin meldet sich mithilfe seines Kontos bei einer E-Commerce-Website an und stellt dadurch seine CRMID (Anmeldeinformationen) und eine ECID (Browser) ein. Zum Zeitpunkt der Anmeldung wird Kevin jetzt als der zuletzt authentifizierte Benutzer betrachtet.
+   * `timestamp=2`: Nora meldet sich mit ihrem Konto bei einer E-Commerce-Website an und stellt dadurch ihre CRMID (Anmeldeinformationen) und dieselbe ECID her. Zum Zeitpunkt der Anmeldung wird Nora jetzt als der zuletzt authentifizierte Benutzer betrachtet.
    * `timestamp=3`: Kevin verwendet das Tablet, um die E-Commerce-Website zu durchsuchen, meldet sich aber nicht mit seinem Konto an. Die Suchaktivität von Kevin wird dann in der ECID gespeichert, die wiederum mit Nora verknüpft ist, da sie der letzte authentifizierte Benutzer ist. Zu diesem Zeitpunkt gehören Nora die anonymen Ereignisse.
       * Bis sich Kevin erneut anmeldet, wird das zusammengeführte Profil von Nora mit allen nicht authentifizierten Ereignissen verknüpft, die gegen die ECID gespeichert sind (wobei Ereignisse, bei denen ECID die primäre Identität ist).
    * `timestamp=4`: Kevin meldet sich zum zweiten Mal an. An dieser Stelle wird er wieder der zuletzt authentifizierte Benutzer und besitzt jetzt auch die nicht authentifizierten Ereignisse:

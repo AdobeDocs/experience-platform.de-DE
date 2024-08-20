@@ -2,10 +2,10 @@
 title: Löschungen in Identity Service
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Mechanismen, mit denen Sie Ihre Identitätsdaten in Experience Platform löschen und Klarheit darüber schaffen können, wie sich dies auf Identitätsdiagramme auswirken kann.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 97%
+source-wordcount: '1198'
+ht-degree: 95%
 
 ---
 
@@ -23,7 +23,7 @@ Das nachstehende Dokument verweist auf die folgenden Funktionen von Experience P
 
 * [Identity Service](../home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kundinnen und Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
    * [Identitätsdiagramm](./identity-graph-viewer.md): In einem Identitätsdiagramm werden die Beziehungen zwischen den verschiedenen Identitäten einer Kundin oder eines Kunden zusammengefasst. Dort wird visuell veranschaulicht, wie die Kundin oder der Kunde auf unterschiedlichen Kanälen mit Ihrer Marke interagiert.
-   * [Identity-Namespaces](./namespaces.md): Identity-Namespaces sind eine Komponente von Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert von „name<span>@email.com“ als E-Mail-Adresse oder „443522“ als numerische CRM-ID.
+   * [Identity-Namespaces](./namespaces.md): Identity-Namespaces sind eine Komponente von Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert &quot;name<span>@email.com&quot; als E-Mail-Adresse oder &quot;443522&quot; als numerische CRMID.
 * [Katalog-Service](../../catalog/home.md): Informieren Sie sich über Datenherkunft, Metadaten, Dateibeschreibungen, Verzeichnisse und Datensätze im Data Lake.
 * [Datenhygiene](../../hygiene/home.md): Verwalten Sie Ihre gespeicherten Verbraucherdaten, indem Sie einen automatisierten Ablauf von Datensätzen planen oder einzelne Datensätze aus einem Datensatz oder allen Datensätzen löschen.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): Verwalten Sie Kundenanfragen für den Zugriff, den Opt-out vom Verkauf oder das Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.

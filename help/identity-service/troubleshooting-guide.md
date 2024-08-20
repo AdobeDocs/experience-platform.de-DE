@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Identity Service
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 100%
+source-wordcount: '2165'
+ht-degree: 99%
 
 ---
 
@@ -31,7 +31,7 @@ Durch Kennzeichnung bestimmter Datenfelder in Ihren Datensatz- und Zeitreihendat
 
 ## Was sind bekannte und anonyme Identitäten?
 
-Eine bekannte Identität bezieht sich auf einen Identitätswert, der allein oder mit anderen Daten zum Identifizieren, Kontaktieren oder Finden einer bestimmten Person verwendet werden kann. Beispiele für bekannte Identitäten sind E-Mail-Adressen, Telefonnummern und CRM-Kennungen.
+Eine bekannte Identität bezieht sich auf einen Identitätswert, der allein oder mit anderen Daten zum Identifizieren, Kontaktieren oder Finden einer bestimmten Person verwendet werden kann. Beispiele für bekannte Identitäten sind E-Mail-Adressen, Telefonnummern und CRMIDs.
 
 Eine anonyme Identität bezieht sich auf einen Identitätswert, der sich nicht allein oder mit anderen Daten zum Identifizieren, Kontaktieren oder Finden einer bestimmten Person nutzen lässt (z. B. eine Cookie-Kennung).
 

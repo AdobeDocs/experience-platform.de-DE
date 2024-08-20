@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '3978'
-ht-degree: 100%
+source-wordcount: '3977'
+ht-degree: 99%
 
 ---
 
@@ -80,7 +80,7 @@ Zunächst meldet sich ein ETL-Anwender bei der Benutzeroberfläche von [!DNL Exp
 
 In der Benutzeroberfläche erstellt der Anwender den Ausgabedatensatz, indem er ein Datensatzschema auswählt. Die Auswahl des Schemas hängt davon ab, welcher Datentyp (Datensatz- oder Zeitreihendaten) in [!DNL Platform] aufgenommen wird. In der Benutzeroberfläche können alle verfügbaren Schemata einschließlich des vom Schema unterstützten Verhaltenstyps über die Registerkarte „Schemata“ eingesehen werden.
 
-Beginnt der Anwender im ETL-Tool mit der Konzeptionierung, wird seine Zuordnung nach Konfiguration der entsprechenden Verbindung (unter Verwendung seiner Anmeldeinformationen) umgewandelt. Es wird hier davon ausgegangen, dass für das ETL-Tool bereits [!DNL Experience Platform]-Connectoren installiert wurden. (Auf den entsprechenden Prozess wird in diesem Integrationshandbuch nicht eingegangen.)
+Beginnt der Anwender im ETL-Tool mit der Konzeptionierung, wird seine Zuordnung nach Konfiguration der entsprechenden Verbindung (unter Verwendung seiner Anmeldedaten) umgewandelt. Es wird hier davon ausgegangen, dass für das ETL-Tool bereits [!DNL Experience Platform]-Connectoren installiert wurden. (Auf den entsprechenden Prozess wird in diesem Integrationshandbuch nicht eingegangen.)
 
 Modelldarstellungen eines Beispiel-ETL-Tools und -Workflows stehen unter [ETL-Workflow](./workflow.md) zur Verfügung. Die einzelnen ETL-Tools unterscheiden sich zwar in ihrem Format, sind sich in ihrer Funktion aber größtenteils ähnlich.
 
@@ -789,5 +789,5 @@ Adobe Experience Platform erkennt derzeit keine zeitversetzten Daten. Daher müs
 | ---- | ------ | ----------- |
 | 19.01.2019 | Eigenschaft „fields“ aus Datensätzen entfernt | Bislang umfassten Datensätze eine „fields“-Eigenschaft, die eine Kopie des Schemas enthielt. Diese Funktion sollte nicht mehr verwendet werden. Ist die Eigenschaft „fields“ vorhanden, sollte sie ignoriert und stattdessen das Attribut „observedSchema“ oder „schemaRef“ verwendet werden. |
 | 15.03.2019 | Datensätze ergänzt um Eigenschaft „schemaRef“ | Die Eigenschaft „schemaRef“ eines Datensatzes enthält einen URI, der auf das XDM-Schema verweist, auf dem der Datensatz basiert, und der alle vom Datensatz potenziell verwendbaren Felder repräsentiert. |
-| 15.03.2019 | Alle Endbenutzer-IDs der Eigenschaft „identityMap“ zugeordnet | Bei der „identityMap“ handelt es sich um eine Kapselung aller eindeutigen Kennungen eines Subjekts, z. B. CRM-ID, ECID oder Treueprogramm-ID. Diese Zuordnung wird von [[!DNL Identity Service]](../identity-service/home.md) verwendet, um alle bekannten und anonymen Identitäten eines Subjekts aufzulösen und für jeden Endbenutzer ein individuelles Identitätsdiagramm zu erstellen. |
+| 15.03.2019 | Alle Endbenutzer-IDs der Eigenschaft „identityMap“ zugeordnet | Die &quot;identityMap&quot;ist eine Kapselung aller eindeutigen Kennungen eines Subjekts, z. B. CRMID, ECID oder Treueprogramm-ID. Diese Zuordnung wird von [[!DNL Identity Service]](../identity-service/home.md) verwendet, um alle bekannten und anonymen Identitäten eines Subjekts aufzulösen und für jeden Endbenutzer ein individuelles Identitätsdiagramm zu erstellen. |
 | 30.05.2019 | Eigenschaft „Schema“ wurde eingestellt und aus Datensätzen entfernt | Anhand der Eigenschaft „Schema“ des Datensatzes wurde ein Verweis auf das Schema mit dem veralteten Endpunkt `/xdms` in der Service [!DNL Catalog] API bereitgestellt. Diese wurde ersetzt durch „schemaRef“, über das „id“, „version“ und „contentType“ des Schemas bereitgestellt wird, die in der neuen [!DNL Schema Registry]-API referenziert werden. |

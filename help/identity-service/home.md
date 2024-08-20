@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service – Übersicht
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1555'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Um relevante digitale Erlebnisse bereitstellen zu können, benötigen Sie eine umfassende und genaue Darstellung der realen Einheiten, aus denen sich Ihr Kundenstamm zusammensetzt.
 
-Unternehmen und Unternehmen stehen heutzutage vor einer großen Menge unterschiedlicher Datensätze: Ihre einzelnen Kunden sind durch eine Vielzahl unterschiedlicher Kennungen repräsentiert. Ihr Kunde kann mit verschiedenen Webbrowsern (Safari, Google Chrome), Hardwaregeräten (Smartphones und Tablets) und anderen Personen-IDs (CRM-IDs, E-Mail-Konten) verknüpft werden. Dadurch entsteht eine unzusammenhängende Sicht auf Ihren Kunden.
+Unternehmen und Unternehmen stehen heutzutage vor einer großen Menge unterschiedlicher Datensätze: Ihre einzelnen Kunden sind durch eine Vielzahl unterschiedlicher Kennungen repräsentiert. Ihr Kunde kann mit verschiedenen Webbrowsern (Safari, Google Chrome), Hardwaregeräten (Smartphones und Tablets) und anderen Personen-IDs (CRMIDs, E-Mail-Konten) verknüpft werden. Dadurch entsteht eine unzusammenhängende Sicht auf Ihren Kunden.
 
 Sie können diese Probleme mit dem Adobe Experience Platform Identity Service und seinen Funktionen lösen, um:
 
@@ -78,20 +78,20 @@ Eine Verknüpfung zwischen zwei Identitäten wird hergestellt, wenn der Identit�
 
 Ein typisches Anmeldeereignis **sendet zwei Identitäten** an Experience Platform:
 
-* Die Personenkennung (z. B. eine CRM-ID), die einen authentifizierten Benutzer darstellt.
+* Die Personen-ID (z. B. eine CRMID), die einen authentifizierten Benutzer darstellt.
 * Die Browser-Kennung (z. B. eine ECID), die den Webbrowser darstellt.
 
 Siehe folgendes Beispiel:
 
-* Sie melden sich mit Ihrem Benutzernamen und Passwort auf einer E-Commerce-Website mit Ihrem Laptop an. Dieses Ereignis qualifiziert Sie als authentifizierten Benutzer, sodass Identity Service Ihre CRM-ID erkennt.
+* Sie melden sich mit Ihrem Benutzernamen und Passwort auf einer E-Commerce-Website mit Ihrem Laptop an. Dieses Ereignis qualifiziert Sie als authentifizierten Benutzer, sodass Identity Service Ihre CRMID erkennt.
 * Ihre Verwendung eines Browsers für den Zugriff auf die E-Commerce-Website wird auch von Identity Service als Ereignis erkannt. Dieses Ereignis wird im Identity Service durch eine ECID dargestellt.
 * Hinter den Kulissen verarbeitet Identity Service die beiden Ereignisse als: `CRM_ID:ABC, ECID:123`.
-   * CRM-ID: ABC ist der Namespace und der Wert, der Sie als authentifizierten Benutzer darstellt.
+   * CRMID: ABC ist der Namespace und der Wert, der Sie als authentifizierten Benutzer darstellt.
    * ECID: 123 ist der Namespace und der Wert, der für die Nutzung Ihres Webbrowsers auf Ihrem Laptop steht.
 * Wenn Sie sich als Nächstes mit denselben Anmeldedaten bei derselben E-Commerce-Website anmelden, aber den Webbrowser auf Ihrem Telefon anstelle des Webbrowsers auf Ihrem Laptop verwenden, wird eine neue ECID im Identity Service registriert.
 * Hinter den Kulissen verarbeitet Identity Service dieses neue Ereignis als &quot;`{CRM_ID:ABC, ECID:456}`&quot;, wobei CRM_ID: ABC Ihre authentifizierte Kunden-ID darstellt und ECID:456 den Webbrowser auf Ihrem Mobilgerät darstellt.
 
-In Anbetracht der obigen Szenarien richtet Identity Service eine Verknüpfung zwischen `{CRM_ID:ABC, ECID:123}` und `{CRM_ID:ABC, ECID:456}` ein. Dies führt zu einem Identitätsdiagramm, in dem Sie drei Identitäten &quot;besitzen&quot;: eine für die Personen-ID (CRM ID) und zwei für Cookie-IDs (ECIDs).
+In Anbetracht der obigen Szenarien richtet Identity Service eine Verknüpfung zwischen `{CRM_ID:ABC, ECID:123}` und `{CRM_ID:ABC, ECID:456}` ein. Dies führt zu einem Identitätsdiagramm, in dem Sie drei Identitäten &quot;besitzen&quot;: eine für die Personen-ID (CRMID) und zwei für Cookie-IDs (ECIDs).
 
 Weitere Informationen finden Sie in der Anleitung zum [Verknüpfen von Identitäten durch Identity Service](./features/identity-linking-logic.md).
 

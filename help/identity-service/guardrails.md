@@ -3,10 +3,10 @@ keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Li
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1591'
-ht-degree: 39%
+source-wordcount: '1585'
+ht-degree: 40%
 
 ---
 
@@ -92,7 +92,7 @@ In den folgenden Abschnitten werden die Implikationen erläutert, die die Lösch
 
 Wenden Sie sich an Ihr Adobe-Account-Team, um eine Änderung des Identitätstyps anzufordern, wenn Ihre Produktions-Sandbox Folgendes enthält:
 
-* Ein benutzerdefinierter Namespace, bei dem die Personen-IDs (z. B. CRM-IDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.
+* Ein benutzerdefinierter Namespace, bei dem die Personen-IDs (z. B. CRMIDs) als Cookie-/Geräte-Identitätstyp konfiguriert sind.
 * Ein benutzerdefinierter Namespace, bei dem Cookie-/Geräte-IDs als geräteübergreifender Identitätstyp konfiguriert sind.
 
 Sobald diese Funktion verfügbar ist, werden Diagramme, die die Grenze von 50 Identitäten überschreiten, auf bis zu 50 Identitäten reduziert. Bei Real-Time CDP B2C Edition konnte dies zu einem minimalen Anstieg der Anzahl der Profile führen, die sich für eine Zielgruppe qualifizieren, da diese Profile zuvor in Segmentierung und Aktivierung ignoriert wurden.
@@ -106,7 +106,7 @@ Das Löschen erfolgt nur für Daten im Identity Service, nicht aber für Echtzei
 
 #### Echtzeit-Kundenprofil und WebSDK: Primäres Löschen von Identitäten
 
-Wenn Sie Ihre authentifizierten Ereignisse mit der CRM-ID vergleichen möchten, sollten Sie Ihre primären IDs von ECID in CRM-ID ändern. In den folgenden Dokumenten finden Sie Anweisungen zur Implementierung dieser Änderung:
+Wenn Sie Ihre authentifizierten Ereignisse gegenüber der CRMID beibehalten möchten, sollten Sie Ihre primären IDs von ECID in CRMID ändern. In den folgenden Dokumenten finden Sie Anweisungen zur Implementierung dieser Änderung:
 
 * [Identitätszuordnung für Experience Platform-Tags konfigurieren](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identitätsdaten im Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
@@ -149,7 +149,7 @@ Daher löscht Identity Service die älteste Identität basierend auf Zeitstempel
 
 >[!TAB Diagrammausgabe]
 
-Infolge des Löschens von ECID:35577 werden auch die Edges gelöscht, die die CRM-ID:60013 und die CRM-ID:25212 mit der inzwischen gelöschten ECID:35577 verknüpft haben. Dieser Löschvorgang führt dazu, dass das Diagramm in zwei kleinere Diagramme aufgeteilt wird.
+Infolge des Löschens von ECID:35577 werden die Kanten, die CRMID:60013 und CRMID:25212 mit der inzwischen gelöschten ECID:35577 verknüpft haben, ebenfalls gelöscht. Dieser Löschvorgang führt dazu, dass das Diagramm in zwei kleinere Diagramme aufgeteilt wird.
 
 ![](./images/guardrails/after-split.png)
 
@@ -176,7 +176,7 @@ Im folgenden Beispiel wird ECID:21011 erfasst und mit dem Diagramm bei `timestam
 
 Daher löscht Identity Service die älteste Identität nur aus dem Identitätsdiagramm, in diesem Fall ECID:35577. Durch das Löschen von ECID:35577 wird auch Folgendes gelöscht:
 
-* Die Verknüpfung zwischen CRM-ID 60013 und der inzwischen gelöschten ECID:35577, was zu einem Diagrammaufspaltungsszenario führte.
+* Die Verknüpfung zwischen CRMID: 60013 und der inzwischen gelöschten ECID:35577, was zu einem Diagrammaufspaltungsszenario führte.
 * IDFA: 32110, IDFA: 02383 und die verbleibenden Identitäten, dargestellt durch `(...)`. Diese Identitäten werden gelöscht, da sie einzeln nicht mit anderen Identitäten verknüpft sind und daher nicht in einem Diagramm dargestellt werden können.
 
 ![](./images/guardrails/hub-and-spoke-process.png)

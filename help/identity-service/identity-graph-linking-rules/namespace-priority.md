@@ -3,10 +3,10 @@ title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 2%
+source-wordcount: '1626'
+ht-degree: 3%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 2%
 
 Jede Kundenimplementierung ist einzigartig und auf die Ziele eines bestimmten Unternehmens zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der realen Welt:
 
-* Auf der einen Seite könnten Sie den E-Mail-Namespace als eine Entität einer Person betrachten und somit pro Person eindeutig sein. Andererseits könnte ein anderer Kunde den E-Mail-Namespace als unzuverlässige Kennung betrachten und daher zulassen, dass eine einzelne CRM-ID mit mehreren Identitäten mit dem E-Mail-Namespace verknüpft wird.
-* Sie können das Online-Verhalten mithilfe des Namespace &quot;Anmelde-ID&quot;erfassen. Diese Anmelde-ID kann eine 1:1-Beziehung zur CRM-ID aufweisen, die dann Attribute aus einem CRM-System speichert und als der wichtigste Namespace betrachtet werden kann. In diesem Fall bestimmen Sie dann, dass der CRM-ID-Namespace eine genauere Darstellung einer Person darstellt, während der Anmelde-ID-Namespace der zweitwichtigste ist.
+* Auf der einen Seite könnten Sie den E-Mail-Namespace als eine Entität einer Person betrachten und somit pro Person eindeutig sein. Andererseits könnte ein anderer Kunde den E-Mail-Namespace als unzuverlässige Kennung betrachten und daher zulassen, dass eine einzelne CRMID mehreren Identitäten mit dem E-Mail-Namespace zugeordnet wird.
+* Sie können das Online-Verhalten mithilfe des Namespace &quot;Anmelde-ID&quot;erfassen. Diese Anmelde-ID kann eine 1:1-Beziehung zur CRMID aufweisen, die dann Attribute aus einem CRM-System speichert und als der wichtigste Namespace betrachtet werden kann. In diesem Fall bestimmen Sie dann, dass der CRMID-Namespace eine genauere Darstellung einer Person darstellt, während der Anmelde-ID-Namespace der zweitwichtigste ist.
 
 Sie müssen im Identity Service Konfigurationen vornehmen, die die Wichtigkeit Ihrer Namespaces widerspiegeln, da dies Einfluss darauf hat, wie Profile gebildet und segmentiert werden.
 
@@ -49,7 +49,7 @@ Eine Identität stellt ein Objekt der realen Welt dar. Im Identitätsdiagramm we
 
 Personen-Namespaces sind im Vergleich zu Hardwaregeräten (wie IDFA, GAID), die im Vergleich zu Webbrowsern relativ unveränderlich sind, relativ unveränderlich. Grundsätzlich sind Sie (die Person) immer eine Einheit, die über mehrere Hardwaregeräte (Smartphone, Laptop, Tablet usw.) und mehrere Browser (Google Chrome, Safari, FireFox usw.) verfügen kann.
 
-Eine andere Möglichkeit, dieses Thema anzugehen, ist die Kardinalität. Wie viele Identitäten werden für eine bestimmte Entität erstellt? In den meisten Fällen verfügt eine Person über eine CRM-ID, eine Handvoll Hardware-Geräte-IDs (IDFA/GAID-Resets sollten nicht oft auftreten) und sogar über mehr Cookies (eine Person könnte möglicherweise mehrere Geräte durchsuchen, den Inkognito-Modus verwenden oder Cookies jederzeit zurücksetzen). Im Allgemeinen gibt **niedrigere Kardinalität einen Namespace mit einem höheren Wert an**.
+Eine andere Möglichkeit, dieses Thema anzugehen, ist die Kardinalität. Wie viele Identitäten werden für eine bestimmte Entität erstellt? In den meisten Fällen verfügt eine Person über eine CRMID, eine Handvoll von Hardware-Geräte-IDs (IDFA/GAID-Resets sollten nicht oft auftreten) und sogar über mehr Cookies (eine Person könnte möglicherweise mehrere Geräte durchsuchen, den Inkognito-Modus verwenden oder Cookies jederzeit zurücksetzen). Im Allgemeinen gibt **niedrigere Kardinalität einen Namespace mit einem höheren Wert an**.
 
 ## Validieren der Namespace-Prioritätseinstellungen
 
@@ -112,9 +112,9 @@ In Anbetracht der oben beschriebenen Konfigurationen werden Benutzeraktionen und
 | --- | --- | --- | --- | --- |
 | Angebotsseite für Kreditkarten anzeigen | Nicht authentifiziert (anonym) | Web SDK | {ECID} | ECID |
 | Hilfeseite anzeigen | Nicht authentifiziert | Mobile SDK | {ECID, IDFA} | IDFA |
-| Kontoübersicht anzeigen | Authentifiziert | Web SDK | {CRM ID, ECID} | CRM-ID |
-| Für Eigenheimdarlehen anmelden | Authentifiziert | Analytics-Quell-Connector | {CRM ID, ECID, AAID} | CRM-ID |
-| 1.000 USD aus der Überprüfung auf Einsparungen übertragen | Authentifiziert | Mobile SDK | {CRM ID, GAID, ECID} | CRM-ID |
+| Kontoübersicht anzeigen | Authentifiziert | Web SDK | {CRMID, ECID} | CRMID |
+| Für Eigenheimdarlehen anmelden | Authentifiziert | Analytics-Quell-Connector | {CRMID, ECID, AAID} | CRMID |
+| 1.000 USD aus der Überprüfung auf Einsparungen übertragen | Authentifiziert | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Weitere Informationen finden Sie in der [Übersicht über die erweiterte Lebensz
 
 ### Berechnete Attribute
 
-Berechnete Attribute verwenden keine Namespace-Priorität zur Berechnung von Werten. Wenn Sie berechnete Attribute verwenden, müssen Sie sicherstellen, dass die CRM-ID als Ihre primäre Identität für das WebSDK festgelegt ist. Diese Einschränkung wird voraussichtlich im August 2024 behoben.
+Berechnete Attribute verwenden keine Namespace-Priorität zur Berechnung von Werten. Wenn Sie berechnete Attribute verwenden, müssen Sie sicherstellen, dass die CRMID als Ihre primäre Identität für WebSDK festgelegt ist. Diese Einschränkung wird voraussichtlich im August 2024 behoben.
 
 Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
 
@@ -168,8 +168,8 @@ Weitere Informationen zu XDM-Schemas finden Sie in der [Übersicht über Schemas
 
 Bei der Auswahl Ihrer Daten müssen Sie einen Namespace angeben, der verwendet wird, um die Ereignisse zu bestimmen, die Bewertungen berechnen, sowie die Ereignisse, die die berechneten Bewertungen speichern. Es wird empfohlen, den Namespace auszuwählen, der eine Person darstellt.
 
-* Wenn Sie Web-Verhaltensdaten mit WebSDk erfassen, sollten Sie den CRM-ID-Namespace in der Identitätszuordnung auswählen.
-* Wenn Sie Webverhaltensdaten mithilfe des Analytics-Quell-Connectors erfassen, sollten Sie den Identitätsdeskriptor (CRM-ID) auswählen.
+* Wenn Sie Web-Verhaltensdaten mit WebSDk erfassen, sollten Sie den CRMID-Namespace in der Identitätszuordnung auswählen.
+* Wenn Sie Webverhaltensdaten mit dem Analytics-Quell-Connector erfassen, sollten Sie den Identitätsdeskriptor (CRMID) auswählen.
 
 Diese Konfiguration führt dazu, dass Bewertungen nur mit authentifizierten Ereignissen berechnet werden.
 

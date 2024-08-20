@@ -3,9 +3,9 @@ title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '515'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ Um einen eindeutigen Namespace zu bestimmen, aktivieren Sie das Kontrollkästche
 
 ![Zwei Namespaces wurden ausgewählt und als eindeutig definiert.](../images/rules/unique-namespace.png)
 
-Sobald Ihre eindeutigen Namespaces eingerichtet sind, können Diagramme nicht mehr mehrere Identitäten aufweisen, die einen eindeutigen Namespace enthalten. Wenn Sie beispielsweise die CRM-ID als eindeutigen Namespace festgelegt haben, darf ein Diagramm nur eine Identität mit dem CRM-ID-Namespace enthalten. Weitere Informationen finden Sie in der Übersicht zum [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md#unique-namespace) .
+Sobald Ihre eindeutigen Namespaces eingerichtet sind, können Diagramme nicht mehr mehrere Identitäten aufweisen, die einen eindeutigen Namespace enthalten. Wenn Sie beispielsweise CRMID als eindeutigen Namespace festgelegt haben, kann ein Diagramm nur eine Identität mit dem CRMID-Namespace enthalten. Weitere Informationen finden Sie in der Übersicht zum [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md#unique-namespace) .
 
 Wenn Sie mit Ihren Konfigurationen fertig sind, wählen Sie **[!UICONTROL Weiter]** aus. Es wird eine Bestätigungsmeldung angezeigt. Verwenden Sie diese Gelegenheit, um zu überprüfen, ob Ihre Konfigurationen korrekt sind, und wählen Sie dann **[!UICONTROL Beenden]** aus.
 

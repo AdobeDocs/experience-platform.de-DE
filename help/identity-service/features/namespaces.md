@@ -2,9 +2,9 @@
 title: Überblick über den Identitäts-Namespace
 description: Erfahren Sie mehr über Identitäts-Namespaces im Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1858'
 ht-degree: 26%
 
 ---
@@ -35,7 +35,7 @@ Identitäts-Namespaces erfordern ein Verständnis verschiedener Adobe Experience
 >abstract="Ein Identitätswert ist eine Kennung, die für eine eindeutige Person, eine eindeutige Organisation oder ein eindeutiges Asset steht. Der Kontext oder der Typ der Identität, den der Wert darstellt, wird durch einen entsprechenden Identity-Namespace definiert. Bei der Zuordnung von Eintragsdaten über Profilfragmente hinweg müssen Namespace und Identitätswert übereinstimmen. Bei der Zuordnung von Eintragsdaten über Profilfragmente hinweg müssen Namespace und Identitätswert übereinstimmen."
 >text="Learn more in documentation"
 
-Eine voll qualifizierte Identität umfasst zwei Komponenten: einen **Identitätswert** und einen **Identitäts-Namespace**. Wenn der Wert einer Identität beispielsweise &quot;`scott@acme.com`&quot; lautet, liefert ein Namespace Kontext für diesen Wert, indem er ihn als E-Mail-Adresse unterscheidet. Auf ähnliche Weise kann ein Namespace `555-123-456` als Telefonnummer und `3126ABC` als CRM-ID unterscheiden. Im Grunde stellt **ein Namespace Kontext für eine bestimmte Identität bereit**. Wenn Datensatzdaten über Profilfragmente hinweg abgeglichen werden (z. B. wenn [!DNL Real-Time Customer Profile] Profildaten zusammenführt), müssen sowohl der Identitätswert als auch der Namespace übereinstimmen.
+Eine voll qualifizierte Identität umfasst zwei Komponenten: einen **Identitätswert** und einen **Identitäts-Namespace**. Wenn der Wert einer Identität beispielsweise &quot;`scott@acme.com`&quot; lautet, liefert ein Namespace Kontext für diesen Wert, indem er ihn als E-Mail-Adresse unterscheidet. Auf ähnliche Weise kann ein Namespace `555-123-456` als Telefonnummer und `3126ABC` als CRMID unterscheiden. Im Grunde stellt **ein Namespace Kontext für eine bestimmte Identität bereit**. Wenn Datensatzdaten über Profilfragmente hinweg abgeglichen werden (z. B. wenn [!DNL Real-Time Customer Profile] Profildaten zusammenführt), müssen sowohl der Identitätswert als auch der Namespace übereinstimmen.
 
 Zwei Profilfragmente können beispielsweise unterschiedliche primäre IDs enthalten, für den Namespace &quot;E-Mail&quot;jedoch denselben Wert verwenden. Daher kann Experience Platform sehen, dass diese Fragmente eigentlich dieselbe Person sind und die Daten im Identitätsdiagramm für die Person zusammenführen.
 
@@ -47,8 +47,8 @@ Eine andere Möglichkeit, das Konzept des Namespace besser zu verstehen, besteht
 
 Anwenden derselben Logik auf Identity Service:
 
-* Auf einen Blick kann der Identitätswert von: `1-234-567-8900` wie eine Telefonnummer aussehen. Aus Sicht des Systems hätte dieser Wert jedoch als CRM-ID konfiguriert werden können. Identity Service kann ohne einen entsprechenden Namespace den erforderlichen Kontext auf diesen Identitätswert nicht anwenden.
-* Ein weiteres Beispiel ist der Identitätswert: `john@gmail.com`. Dieser Identitätswert kann zwar leicht als E-Mail-Adresse betrachtet werden, es ist jedoch durchaus möglich, dass er als benutzerdefinierte Namespace-CRM-ID konfiguriert ist. Mit dem Namespace können Sie `Email:john@gmail.com` von `CRM ID:john@gmail.com` unterscheiden.
+* Auf einen Blick kann der Identitätswert von: `1-234-567-8900` wie eine Telefonnummer aussehen. Aus Sicht des Systems hätte dieser Wert jedoch als CRMID konfiguriert werden können. Identity Service kann ohne einen entsprechenden Namespace den erforderlichen Kontext auf diesen Identitätswert nicht anwenden.
+* Ein weiteres Beispiel ist der Identitätswert: `john@gmail.com`. Dieser Identitätswert kann zwar leicht als E-Mail-Adresse betrachtet werden, es ist jedoch durchaus möglich, dass er als benutzerdefinierte Namespace-CRMID konfiguriert ist. Mit dem Namespace können Sie `Email:john@gmail.com` von `CRMID:john@gmail.com` unterscheiden.
 
 >[!ENDSHADEBOX]
 
@@ -81,7 +81,7 @@ Die folgenden Identitätstypen sind innerhalb von Experience Platform verfügbar
 | Identitätstyp | Beschreibung |
 | --- | --- |
 | Cookie-ID | Cookie-IDs identifizieren Webbrowser. Diese Identitäten sind für Erweiterungen von entscheidender Bedeutung und bilden den Großteil des Identitätsdiagramms. Sie verfallen jedoch von Natur aus schnell und verlieren mit der Zeit ihren Wert. |
-| Geräteübergreifende ID | Geräteübergreifende IDs identifizieren eine Person und verbinden normalerweise andere IDs miteinander. Beispiele sind eine Anmelde-ID, CRM-ID und Loyalitäts-ID. Dies ist ein Hinweis an [!DNL Identity Service], den Wert sensibel zu behandeln. |
+| Geräteübergreifende ID | Geräteübergreifende IDs identifizieren eine Person und verbinden normalerweise andere IDs miteinander. Beispiele sind eine Anmelde-ID, CRMID und Loyalitäts-ID. Dies ist ein Hinweis an [!DNL Identity Service], den Wert sensibel zu behandeln. |
 | Geräte-ID | Geräte-IDs identifizieren Hardware-Geräte, wie IDFA (iPhone und iPad), GAID (Android) und RIDA (Roku) und können von mehreren Personen in Haushalten gemeinsam verwendet werden. |
 | E-Mail-Adresse | E-Mail-Adressen sind oft mit einer einzelnen Person verknüpft und können daher zur kanalübergreifenden Identifizierung dieser Person verwendet werden. Identitäten dieser Art beinhalten personenbezogene Daten (PII). Dies ist ein Hinweis an [!DNL Identity Service], den Wert sensibel zu behandeln. |
 | Nicht personenbezogene Kennung | Nicht personenbezogene IDs werden für das Speichern von Identifikatoren verwendet, die Namespaces erfordern, aber nicht mit einem Personen-Cluster verbunden sind, z. B. eine Produktnummer oder Daten, die mit Produkten, Organisationen oder Geschäften verbunden sind. |
