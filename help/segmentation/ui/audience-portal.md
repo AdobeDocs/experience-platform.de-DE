@@ -2,9 +2,9 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
+source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
 workflow-type: tm+mt
-source-wordcount: '4125'
+source-wordcount: '4162'
 ht-degree: 59%
 
 ---
@@ -386,6 +386,10 @@ Der Workflow **[!UICONTROL Zielgruppen-CSV importieren]** wird angezeigt. Sie k�
 >[!NOTE]
 >
 >Die extern generierte Zielgruppe **muss** im CSV-Format vorliegen, darf **maximal** 25 Spalten enthalten und muss kleiner als 1 GB sein.
+>
+>Außerdem können Sie **keine Leerzeichen oder Gedankenstriche in der ersten Zeile oder den zugehörigen Spalten der CSV verwenden.**
+>
+>Der Wert der ersten Zeile kann beispielsweise &quot;FirstName&quot;oder &quot;First_Name&quot;lauten, darf jedoch nicht &quot;First Name&quot;oder &quot;First-Name&quot;lauten.
 
 Nach Auswahl der zu importierenden CSV-Datei wird eine Liste mit Beispieldaten für diese extern generierte Zielgruppe angezeigt. Nachdem Sie die Richtigkeit der Beispieldaten bestätigt haben, wählen Sie **[!UICONTROL Weiter]** aus.
 

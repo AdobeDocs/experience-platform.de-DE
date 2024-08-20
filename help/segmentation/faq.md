@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Zielgruppen
 description: Erfahren Sie mehr über Antworten auf häufig gestellte Fragen zu Zielgruppen und anderen segmentierungsbezogenen Konzepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4235'
 ht-degree: 21%
 
 ---
@@ -33,14 +33,7 @@ Um extern generierte Zielgruppen hochladen zu können, benötigen Sie die Berech
 
 ### Was passiert, wenn ich eine extern generierte Zielgruppe hochlade?
 
-Wenn Sie eine extern generierte Zielgruppe hochladen, werden die folgenden Elemente erstellt:
-
-- Datensatz
-   - Der Datensatz ist im Datensatzbestand sichtbar und der Name des Datensatzes ist der **gleiche** wie der Name der extern generierten Zielgruppe, die Sie hochgeladen haben.
-- Batch-Auftrag
-   - Ein Batch-Auftrag wird **automatisch** ausgeführt, wenn Sie eine extern generierte Zielgruppe hochladen. Das bedeutet, dass Sie **nicht** warten müssen, bis der tägliche Segmentierungsauftrag ausgeführt wird, um die extern generierte Zielgruppe zu aktivieren.
-- Ad-hoc-Schema
-   - Ein **neues** XDM-Schema wird für die Verwendung mit der extern generierten Zielgruppe erstellt. Die Felder in diesem XDM-Schema sind Namespaces zur Verwendung mit dem ebenfalls erstellten Datensatz.
+Wenn Sie eine extern generierte Zielgruppe hochladen, wird ein Datensatz erstellt und im Datensatzbestand sichtbar. Der Name des Datensatzes entspricht dem **gleichen** Namen der extern generierten Zielgruppe, die Sie hochgeladen haben.
 
 ### Woraus besteht eine extern generierte Zielgruppe und was passiert mit diesen Daten, wenn sie in Platform importiert werden?
 
@@ -91,12 +84,6 @@ Die unternehmensspezifische standardmäßige Zusammenführungsrichtlinie wird be
 ### Wo kann ich extern generierte Zielgruppen aktivieren?
 
 Eine extern generierte Zielgruppe kann jedem Ziel zugeordnet und in Adobe Journey Optimizer-Kampagnen verwendet werden.
-
-### Wie bald sind extern generierte Zielgruppen zur Aktivierung bereit?
-
-Bei Aktivierung für ein Streaming-Ziel stehen die Daten aus der extern generierten Zielgruppe innerhalb von zwei Stunden zur Verfügung.
-
-Wenn sie für ein Batch-Ziel aktiviert wird, werden die Daten aus der extern generierten Zielgruppe mit dem nächsten 24-Stunden-Segmentierungsauftrag synchronisiert.
 
 ### Kann ich eine extern generierte Zielgruppe löschen?
 
