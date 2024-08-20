@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -33,23 +33,23 @@ Um Zielgruppen für Ziele zu aktivieren, müssen Sie erfolgreich [mit einem Ziel
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
->title="Enddatum für diesen Datenfluss aktualisieren"
->abstract="Enddatum für diesen Datenfluss aktualisieren"
+>title="Aktualisieren des Enddatums für diesen Datenfluss"
+>abstract="Aktualisieren des Enddatums für diesen Datenfluss"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
->title="Enddatum für diesen Dataflow-Hauptteil aktualisieren"
->abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat ein standardmäßiges Enddatum auf den 1. März 2025 gesetzt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum angehalten."
+>title="Aktualisieren des Enddatums für diesen Datenflusshauptteil"
+>abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat als standardmäßiges Enddatum den 1. März 2025 festgelegt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum gestoppt."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
 >title="Ordnerpfad bearbeiten"
->abstract="Verwenden Sie mehrere bereitgestellte Makros, um den Ordnerpfad anzupassen, in den der Datensatz exportiert wird."
+>abstract="Verwenden Sie mehrere bereitgestellte Makros, um den Ordnerpfad anzupassen, in den Datensätze exportiert werden."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template_preview"
 >title="Vorschau des Datensatzordnerpfads"
->abstract="Hier erhalten Sie eine Vorschau der Ordnerstruktur, die basierend auf den in diesem Fenster hinzugefügten Makros an Ihrem Speicherort erstellt wird."
+>abstract="Sehen Sie sich eine Vorschau der Ordnerstruktur an, die basierend auf den in diesem Fenster hinzugefügten Makros am Speicherort erstellt wird."
 
 Beim Exportieren von Zielgruppen werden die folgenden Dateiformate unterstützt:
 
