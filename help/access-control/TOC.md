@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zur Zugriffssteuerung
 user-guide-description: Verwenden Sie Produktprofile in Adobe Admin Console, um Benutzerberechtigungen zu verwalten. Erfahren Sie, wie Sie Benutzende zu Produkten und Sandboxes zuweisen.
 feature: Access Control
 role: Admin
-source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
+source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 86%
+source-wordcount: '131'
+ht-degree: 85%
 
 ---
 
@@ -28,6 +28,9 @@ ht-degree: 86%
       * [Rollen](abac/ui/roles.md)
       * [Sandboxes](abac/ui/sandboxes.md)
       * [Benutzende](abac/ui/users.md)
+   * Berechtigungs-Manager {#permissions-manager}
+      * [Übersicht](abac/permission-manager/overview.md)
+      * [Berechtigungen](abac/permission-manager/permissions.md)
    * Attributbasierte Zugriffssteuerungs-API {#abac-api}
       * [Übersicht](abac/api/overview.md)
       * [Erste Schritte](abac/api/getting-started.md)
