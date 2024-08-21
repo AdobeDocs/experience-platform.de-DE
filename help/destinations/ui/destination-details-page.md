@@ -3,9 +3,9 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1286'
 ht-degree: 8%
 
 ---
@@ -144,11 +144,7 @@ Um mehrere Zielgruppen aus vorhandenen Aktivierungsabläufen zu entfernen, wähl
 
 ![Bildschirm mit den Aktivierungsdaten, der die Option &quot;Zielgruppen entfernen&quot;hervorhebt.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Export mehrerer Dateien On-Demand an Batch-Ziele {#bulk-export}
-
->[!NOTE]
->
-Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+### Mehrere Dateien On-Demand an Batch-Ziele exportieren {#bulk-export}
 
 Sie können [mehrere Dateien On-Demand exportieren](../ui/export-file-now.md) von der Seite **[!UICONTROL Aktivierungsdaten]**. Wählen Sie dazu die Zielgruppen aus, für die Sie Dateien bei Bedarf exportieren möchten, und wählen Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** aus, um einen einmaligen Export Trigger, durch den eine Datei für jede ausgewählte Zielgruppe an Ihr Batch-Ziel gesendet wird.
 
@@ -162,7 +158,7 @@ Um den vorhandenen Aktivierungsplan mehrerer Zielgruppen gleichzeitig zu bearbei
 
 >[!NOTE]
 >
-Weitere Informationen zum Erkunden der Detailseite einer Audience finden Sie in der [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#segment-details) .
+>Weitere Informationen zum Erkunden der Detailseite einer Audience finden Sie in der [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#segment-details) .
 
 ### Bearbeiten von Dateinamen für mehrere Zielgruppen, die in Batch-Ziele exportiert werden {#bulk-edit-file-names}
 
