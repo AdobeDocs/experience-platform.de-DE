@@ -1,16 +1,17 @@
 ---
-title: (Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche
+title: Exportieren von Dateien On-Demand an Batch-Ziele über die Experience Platform-Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie Dateien bei Bedarf mithilfe der Experience Platform-Benutzeroberfläche in Batch-Ziele exportieren.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
+source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 21%
+source-wordcount: '720'
+ht-degree: 17%
 
 ---
 
-# (Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche
+
+# Exportieren von Dateien On-Demand an Batch-Ziele über die Experience Platform-Benutzeroberfläche
 
 >[!IMPORTANT]
 >

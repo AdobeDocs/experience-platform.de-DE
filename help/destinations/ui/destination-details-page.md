@@ -3,10 +3,10 @@ keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Zielgruppen und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 9%
+source-wordcount: '1310'
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ Gehen Sie wie folgt vor, um weitere Details zu einem vorhandenen Ziel anzuzeigen
 
    ![Ziele durchsuchen](../assets/ui/details-page/browse-destinations.png)
 
-2. Wählen Sie das Symbol ![Filter](/help/images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie das Symbol ![Filter](../../images/icons/filter.png) oben links, um das Sortier-Bedienfeld zu öffnen. Das Sortier-Bedienfeld bietet eine Liste aller Ihrer Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/details-page/filter-destinations.png)
 
@@ -103,33 +103,52 @@ Weitere Informationen finden Sie unter [Datenfluss wird an Streaming-Ziele ausge
 
 Bei Datenflüssen, die an dateibasierte Ziele ausgeführt werden, hängt die **[!UICONTROL Verarbeitungsdauer]** von der Größe der zu exportierenden Daten und der Systemlast ab. Beachten Sie außerdem, dass der Datenfluss zu dateibasierten Zielen nach Zielgruppen aufgeschlüsselt wird.
 
-![Bild des Datenflusses führt die Seite aus, auf der die Spalte Verarbeitungszeit für ein dateibasiertes Ziel hervorgehoben ist.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![Bild des Datenflusses führt die Seite aus, auf der die Spalte Verarbeitungszeit für ein dateibasiertes Ziel hervorgehoben ist.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 Weitere Informationen finden Sie unter [Datenfluss wird in der Überwachungsdokumentation zu Batch-(dateibasierten) Zielen ausgeführt](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) .
 
 ## [!UICONTROL Aktivierungsdaten] {#activation-data}
 
-Auf der Registerkarte [!UICONTROL Aktivierungsdaten] wird eine Liste der Zielgruppen angezeigt, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie anderer relevanter Informationen für den Datenexport, wie Exporttyp, -plan und -frequenz. Um Details zu einer bestimmten Zielgruppe anzuzeigen, wählen Sie deren Namen aus der Liste aus.
+Auf der Registerkarte **[!UICONTROL Aktivierungsdaten]** wird eine Liste der Zielgruppen angezeigt, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie anderer relevanter Informationen für den Datenexport, wie Exporttyp, -plan und -frequenz. Um Details zu einer bestimmten Zielgruppe anzuzeigen, wählen Sie deren Namen aus der Liste aus.
 
 >[!TIP]
 >
 >Um Details zu den Attributen und Identitäten anzuzeigen und zu bearbeiten, die einem Ziel zugeordnet sind, wählen Sie **[!UICONTROL Zielgruppen aktivieren]** in der [rechten Leiste](#right-rail) aus.
 
+>[!BEGINSHADEBOX]
+
+Die Registerkarte **[!UICONTROL Aktivierungsdaten]** für ein dateibasiertes Ziel.
+
 ![Batch-Ziel der Aktivierungsdaten-Ansicht](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+Registerkarte **[!UICONTROL Aktivierungsdaten]** für ein Streaming-Ziel.
 
 ![Streaming-Ziel für Aktivierungsdaten-Ansicht ](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} Entfernen mehrerer Zielgruppen aus Aktivierungsflüssen {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
-Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
+### Filtern aktivierter Zielgruppen {#filter-audiences}
+
+Um die Liste der für ein Ziel aktivierten Zielgruppen zu filtern, geben Sie einen Zielgruppennamen in das Suchfeld ein. Die Liste der Zielgruppen wird automatisch mit den Suchergebnissen aktualisiert.
+
+![Suchfeld für das Filtern von Zielgruppen.](../assets/ui/details-page/filter-audiences.png)
+
+### Entfernen mehrerer Zielgruppen aus Aktivierungsflüssen {#bulk-remove}
 
 Um mehrere Zielgruppen aus vorhandenen Aktivierungsabläufen zu entfernen, wählen Sie die Zielgruppen aus und klicken Sie dann auf **[!UICONTROL Zielgruppen entfernen]**.
 
 ![Bildschirm mit den Aktivierungsdaten, der die Option &quot;Zielgruppen entfernen&quot;hervorhebt.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### Mehrere Dateien On-Demand an Batch-Ziele exportieren {#bulk-export}
+### [!BADGE Beta]{type=Informative} Export mehrerer Dateien On-Demand an Batch-Ziele {#bulk-export}
+
+>[!NOTE]
+>
+Diese Funktion befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff auf diese Funktion anzufordern.
 
 Sie können [mehrere Dateien On-Demand exportieren](../ui/export-file-now.md) von der Seite **[!UICONTROL Aktivierungsdaten]**. Wählen Sie dazu die Zielgruppen aus, für die Sie Dateien bei Bedarf exportieren möchten, und wählen Sie das Steuerelement **[!UICONTROL Datei jetzt exportieren]** aus, um einen einmaligen Export Trigger, durch den eine Datei für jede ausgewählte Zielgruppe an Ihr Batch-Ziel gesendet wird.
 
@@ -144,3 +163,9 @@ Um den vorhandenen Aktivierungsplan mehrerer Zielgruppen gleichzeitig zu bearbei
 >[!NOTE]
 >
 Weitere Informationen zum Erkunden der Detailseite einer Audience finden Sie in der [Übersicht über Audience Portal](../../segmentation/ui/audience-portal.md#segment-details) .
+
+### Bearbeiten von Dateinamen für mehrere Zielgruppen, die in Batch-Ziele exportiert werden {#bulk-edit-file-names}
+
+Um die exportierten Dateinamen mehrerer Zielgruppen gleichzeitig zu bearbeiten, wählen Sie die gewünschten Zielgruppen aus und klicken Sie dann auf **[!UICONTROL Dateinamen bearbeiten]**. Ausführliche Informationen zum Definieren oder Bearbeiten eines Dateinamens finden Sie im Abschnitt zum [Konfigurieren von Dateinamen](../ui/activate-batch-profile-destinations.md#configure-file-names) .
+
+![Aktivierungsdatenbildschirm, der die Option zum Bearbeiten von Dateinamen für mehrere Zielgruppen hervorhebt.](../assets/ui/details-page/bulk-edit-file-name.png)

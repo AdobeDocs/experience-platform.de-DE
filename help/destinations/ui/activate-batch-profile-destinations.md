@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
-ht-degree: 58%
+source-wordcount: '4202'
+ht-degree: 56%
 
 ---
 
@@ -110,6 +110,10 @@ Experience Platform legt automatisch einen Standardzeitplan für jeden Dateiexpo
 
 ![Bearbeiten Sie die Steuerung des Zeitplans, die im Planungsschritt hervorgehoben ist.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+Um mehrere Zeitpläne gleichzeitig zu bearbeiten, wählen Sie die Zielgruppen mithilfe der Kontrollkästchen auf der linken Bildschirmseite aus und wählen Sie dann **[!UICONTROL Zeitplan bearbeiten]** aus. Der konfigurierte Zeitplan wird dann auf alle exportierten Dateien für die ausgewählten Zielgruppen angewendet.
+
+![Bild der Experience Platform-Benutzeroberfläche mit der Option zum Bearbeiten des Zeitplans für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >Sie können die Aktivierungszeitpläne für die Zielgruppe für vorhandene Aktivierungsflüsse von der Seite **[!UICONTROL Aktivierungsdaten]** aus bearbeiten. Weitere Informationen finden Sie in der Dokumentation zu [Zeitplänen für die Massenbearbeitung](../ui/destination-details-page.md#bulk-edit-schedule) .
@@ -200,7 +204,7 @@ Wählen Sie &quot;**[!UICONTROL Inkrementelle Dateien exportieren]**&quot;, um e
 
 4. Klicken Sie auf **[!UICONTROL Erstellen]**, um den Zeitplan zu speichern.
 
-### Konfigurieren der Dateinamen
+### Konfigurieren der Dateinamen {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ Zielname und Zielgruppen-ID können nicht aus Dateinamen entfernt werden. Zusät
 | **[!UICONTROL Sandbox-Name]** | Die Kennung der Sandbox, die Sie zum Exportieren der Audience verwenden. |
 
 {style="table-layout:auto"}
+
+Um mehrere Dateinamen gleichzeitig zu bearbeiten, wählen Sie die Zielgruppen mithilfe der Kontrollkästchen links im Bildschirm aus und wählen Sie dann **[!UICONTROL Dateinamen bearbeiten]** aus. Die von Ihnen konfigurierten Dateinamenoptionen werden dann auf alle exportierten Dateien für die ausgewählten Zielgruppen angewendet.
+
+![Bild der Experience Platform-Benutzeroberfläche mit der Option zum Bearbeiten des Dateinamens für mehrere ausgewählte Zielgruppen.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Klicken Sie auf **[!UICONTROL Änderungen übernehmen]**, um Ihre Auswahl zu bestätigen.
 
