@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
-source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
+source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 27%
+source-wordcount: '1300'
+ht-degree: 29%
 
 ---
 
@@ -18,11 +18,28 @@ ht-degree: 27%
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Experience Platform:
 
+- [Attributbasierte Zugriffssteuerung](#abac)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
+
+## Attributbasierte Zugriffssteuerung {#abac}
+
+Die attributbasierte Zugriffskontrolle ist eine Funktion von Adobe Experience Platform, die datenschutzbewussten Marken größere Flexibilität bei der Verwaltung des Benutzerzugriffs gibt. Einzelne Objekte wie Schemafelder und Segmente können Benutzerrollen zugewiesen werden. Mit dieser Funktion können Sie bestimmten Platform-Benutzenden in Ihrer Organisation den Zugriff auf einzelne Objekte gewähren oder sperren.
+
+Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres Unternehmens den Zugriff der Benutzer auf sensible personenbezogene Daten (EPPD), personenbezogene Daten (PII) und andere benutzerdefinierte Datentypen für alle Platform-Workflows und -Ressourcen steuern. Admins können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+
+**Neue Funktion**
+
+| Funktionsaktualisierung | Beschreibung |
+| --- | --- |
+| Neue Funktion &quot;Berechtigungs-Manager&quot; | Sie können jetzt den [Berechtigungs-Manager](../../access-control/abac/permission-manager/overview.md) verwenden, um Berichte mithilfe einfacher Abfragen zu erstellen. Dies hilft Ihnen, die Zugriffsverwaltung zu verstehen und Zeit zu sparen, indem Sie Zugriffsberechtigungen für mehrere Workflows und Granularitätsebenen überprüfen. Weitere Informationen zum Erstellen von Berichten für Benutzer und Rollen finden Sie im [Benutzerhandbuch für Berechtigungs-Manager](../../access-control/abac/permission-manager/permissions.md). ![Image-Experience Platform-Benutzeroberfläche, die den Berechtigungs-Manager im linken Navigationsbereich markiert.](../2024/assets/august/permission-manager-rn.png "Berechtigungs-Manager in der Benutzeroberfläche."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im [Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/end-to-end-guide.md).
 
 ## Ziele {#destinations}
 
