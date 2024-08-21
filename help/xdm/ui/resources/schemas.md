@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
 workflow-type: tm+mt
-source-wordcount: '3861'
+source-wordcount: '3859'
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ Das Dialogfeld [!UICONTROL Schema erstellen] wird angezeigt. In diesem Dialogfel
 
 ![Das Dialogfeld Schema erstellen mit den Workflow-Optionen und markieren hervorgehoben.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### Manuelle oder ML-gestützte Schemaerstellung {#manual-or-assisted}
+### [!BADGE Beta]{type=Informative} Manuelle oder ML-gestützte Schemaerstellung {#manual-or-assisted}
 
 Informationen dazu, wie Sie einen ML-Algorithmus verwenden können, um eine Schemastruktur basierend auf einer CSV-Datei zu empfehlen, finden Sie im Leitfaden zur Erstellung von Schemas mit maschinellem Lernen](../ml-assisted-schema-creation.md). [ Dieses UI-Handbuch konzentriert sich auf den Workflow für die manuelle Erstellung.
 
@@ -63,7 +63,7 @@ Die Registerkarte [!UICONTROL Schema] [!UICONTROL Durchsuchen] wird angezeigt. I
 
 >[!NOTE]
 >
->Sobald ein Schema gespeichert und in der Datenerfassung verwendet wurde, können nur noch additive Änderungen daran vorgenommen werden. Weitere Informationen finden Sie unter [Regeln der Schemaentwicklung](../../schema/composition.md#evolution) .
+Sobald ein Schema gespeichert und in der Datenerfassung verwendet wurde, können nur noch additive Änderungen daran vorgenommen werden. Weitere Informationen finden Sie unter [Regeln der Schemaentwicklung](../../schema/composition.md#evolution) .
 
 Um ein vorhandenes Schema zu bearbeiten, wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus und wählen Sie dann den Namen des Schemas aus, das Sie bearbeiten möchten. Sie können auch die Suchleiste verwenden, um die Liste der verfügbaren Optionen einzuschränken.
 
@@ -71,7 +71,7 @@ Um ein vorhandenes Schema zu bearbeiten, wählen Sie die Registerkarte **[!UICON
 
 >[!TIP]
 >
->Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um das Schema leichter zu finden. Weitere Informationen finden Sie im Handbuch zum [Erkunden von XDM-Ressourcen](../explore.md) .
+Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um das Schema leichter zu finden. Weitere Informationen finden Sie im Handbuch zum [Erkunden von XDM-Ressourcen](../explore.md) .
 
 Nachdem Sie ein Schema ausgewählt haben, wird der [!DNL Schema Editor] mit der Struktur des Schemas auf der Arbeitsfläche angezeigt. Sie können jetzt [Feldergruppen](#add-field-groups) zum Schema hinzufügen (oder [einzelne Felder](#add-individual-fields) aus diesen Gruppen hinzufügen), [Anzeigenamen von Feldern bearbeiten](#display-names) oder [vorhandene benutzerdefinierte Feldergruppen bearbeiten](./field-groups.md#edit) , wenn das Schema beliebige verwendet.
 
@@ -89,7 +89,7 @@ Der Schema Editor bietet einen Umschalter zum Ändern zwischen den ursprünglich
 
 >[!NOTE]
 >
->Die Änderung von Feldnamen zu Anzeigenamen ist rein kosmetischer Natur und ändert keine nachgelagerten Ressourcen.
+Die Änderung von Feldnamen zu Anzeigenamen ist rein kosmetischer Natur und ändert keine nachgelagerten Ressourcen.
 
 ![Der Schema-Editor mit [!UICONTROL Anzeigenamen für Felder anzeigen] hervorgehoben.](../../images/ui/resources/schemas/display-name-toggle.png)
 
@@ -99,7 +99,7 @@ Die Anzeigenamen für Standardfeldgruppen werden vom System generiert, können j
 
 >[!NOTE]
 >
->In diesem Abschnitt wird beschrieben, wie Sie einem Schema vorhandene Feldergruppen hinzufügen. Wenn Sie eine neue benutzerdefinierte Feldergruppe erstellen möchten, lesen Sie stattdessen das Handbuch zum Erstellen und Bearbeiten von Feldergruppen](./field-groups.md#create) .[
+In diesem Abschnitt wird beschrieben, wie Sie einem Schema vorhandene Feldergruppen hinzufügen. Wenn Sie eine neue benutzerdefinierte Feldergruppe erstellen möchten, lesen Sie stattdessen das Handbuch zum Erstellen und Bearbeiten von Feldergruppen](./field-groups.md#create) .[
 
 Nachdem Sie ein Schema innerhalb von [!DNL Schema Editor] geöffnet haben, können Sie dem Schema mithilfe von Feldergruppen Felder hinzufügen. Wählen Sie zunächst in der linken Leiste **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldergruppen]** aus.
 
@@ -115,7 +115,7 @@ Wenn Sie die allgemeine Aktivität oder den Geschäftsbereich der Felder kennen,
 
 >[!NOTE]
 >
->Weitere Informationen zu Best Practices für branchenspezifische Datenmodellierung in XDM finden Sie in der Dokumentation zu [Datenmodellen der Branche](../../schema/industries/overview.md).
+Weitere Informationen zu Best Practices für branchenspezifische Datenmodellierung in XDM finden Sie in der Dokumentation zu [Datenmodellen der Branche](../../schema/industries/overview.md).
 
 Sie können auch die Suchleiste verwenden, um Ihre gewünschte Feldergruppe zu finden. Feldergruppen, deren Name mit der Abfrage übereinstimmt, werden oben in der Liste angezeigt. Unter **[!UICONTROL Standardfelder]** werden Feldergruppen angezeigt, die Felder enthalten, die die gewünschten Datenattribute beschreiben.
 
@@ -127,7 +127,7 @@ Aktivieren Sie das Kontrollkästchen neben dem Namen der Feldergruppe, die Sie z
 
 >[!TIP]
 >
->Für jede aufgelistete Feldergruppe können Sie den Mauszeiger über das Informationssymbol (![Infosymbol](/help/images/icons/info.png)) bewegen oder sich auf dieses konzentrieren, um eine kurze Beschreibung der Art der Daten anzuzeigen, die von der Feldergruppe erfasst werden. Sie können auch das Vorschausymbol (![Vorschausymbol](/help/images/icons/preview.png)) auswählen, um die Struktur der Felder anzuzeigen, die die Feldergruppe bereitstellt, bevor Sie sie zum Schema hinzufügen.
+Für jede aufgelistete Feldergruppe können Sie den Mauszeiger über das Informationssymbol (![Infosymbol](/help/images/icons/info.png)) bewegen oder sich auf dieses konzentrieren, um eine kurze Beschreibung der Art der Daten anzuzeigen, die von der Feldergruppe erfasst werden. Sie können auch das Vorschausymbol (![Vorschausymbol](/help/images/icons/preview.png)) auswählen, um die Struktur der Felder anzuzeigen, die die Feldergruppe bereitstellt, bevor Sie sie zum Schema hinzufügen.
 
 Nachdem Sie Ihre Feldergruppen ausgewählt haben, wählen Sie **[!UICONTROL Feldergruppen hinzufügen]** aus, um sie dem Schema hinzuzufügen.
 
@@ -139,9 +139,9 @@ Die [!DNL Schema Editor] wird mit den von der Feldergruppe bereitgestellten Feld
 
 >[!NOTE]
 >
->Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
+Im Schema Editor werden Standardklassen (Adobe-generierte) und Feldgruppen mit dem Vorhängeschloss-Symbol (![Vorhängeschlosssymbol) angezeigt.](/help/images/icons/lock-closed.png). Das Vorhängeschloss wird in der linken Leiste neben dem Namen der Klasse oder Feldergruppe sowie neben jedem Feld im Schemadiagramm angezeigt, das Teil einer systemgenerierten Ressource ist.
 >
->![Der Schema-Editor mit dem Vorhängeschloss-Symbol hervorgehoben](../../images/ui/explore/schema-editor-padlock-icon.png)
+![Der Schema-Editor mit dem Vorhängeschloss-Symbol hervorgehoben](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 Nachdem Sie eine Feldergruppe zu einem Schema hinzugefügt haben, können Sie optional [vorhandene Felder entfernen](#remove-fields) oder [neue benutzerdefinierte Felder hinzufügen](#add-fields), um diese Gruppen hinzuzufügen, je nach Ihren Anforderungen.
 
@@ -151,7 +151,7 @@ Nachdem Sie einem Schema eine Feldergruppe hinzugefügt haben, können Sie alle 
 
 >[!NOTE]
 >
->Das Entfernen von Feldern aus einer Feldergruppe wirkt sich nur auf das bearbeitete Schema aus und hat keine Auswirkungen auf die Feldergruppe selbst. Wenn Sie Felder in einem Schema entfernen, sind diese Felder weiterhin in allen anderen Schemas verfügbar, die dieselbe Feldergruppe verwenden.
+Das Entfernen von Feldern aus einer Feldergruppe wirkt sich nur auf das bearbeitete Schema aus und hat keine Auswirkungen auf die Feldergruppe selbst. Wenn Sie Felder in einem Schema entfernen, sind diese Felder weiterhin in allen anderen Schemas verfügbar, die dieselbe Feldergruppe verwenden.
 
 Im folgenden Beispiel wurde dem Schema die Standardfeldgruppe **[!UICONTROL Demografische Details]** hinzugefügt. Um ein einzelnes Feld wie `taxId` zu entfernen, wählen Sie das Feld auf der Arbeitsfläche aus und klicken Sie dann in der rechten Leiste auf **[!UICONTROL Entfernen]** .
 
@@ -185,7 +185,7 @@ Mit dem Schema Editor können Sie einzelne Felder direkt zu einem Schema hinzuf�
 
 >[!IMPORTANT]
 >
->Auch wenn Sie im Schema Editor mit Funktionen einzelne Felder direkt zu einem Schema hinzufügen können, ändert dies nichts daran, dass alle Felder in einem XDM-Schema von seiner Klasse oder einer Feldergruppe bereitgestellt werden müssen, die mit dieser Klasse kompatibel ist. Wie in den folgenden Abschnitten erläutert, sind alle einzelnen Felder weiterhin einer Klasse oder Feldergruppe als wichtigen Schritt zugeordnet, wenn sie einem Schema hinzugefügt werden.
+Auch wenn Sie im Schema Editor mit Funktionen einzelne Felder direkt zu einem Schema hinzufügen können, ändert dies nichts daran, dass alle Felder in einem XDM-Schema von seiner Klasse oder einer Feldergruppe bereitgestellt werden müssen, die mit dieser Klasse kompatibel ist. Wie in den folgenden Abschnitten erläutert, sind alle einzelnen Felder weiterhin einer Klasse oder Feldergruppe als wichtigen Schritt zugeordnet, wenn sie einem Schema hinzugefügt werden.
 
 ### Standardfelder hinzufügen {#add-standard-fields}
 
@@ -219,23 +219,23 @@ Beginnen Sie mit der Eingabe des Namens des Felds, das Sie hinzufügen möchten,
 
 ![Neues Feld](../../images/ui/resources/schemas/custom-field-search.png)
 
-Nachdem Sie einen Anzeigenamen und einen Datentyp für das Feld bereitgestellt haben, besteht der nächste Schritt darin, das Feld einer übergeordneten XDM-Ressource zuzuweisen. Wenn Ihr Schema eine benutzerdefinierte Klasse verwendet, können Sie stattdessen das Feld [zur zugewiesenen Klasse](#add-to-class) oder einer [Feldergruppe](#add-to-field-group) hinzufügen. Wenn Ihr Schema jedoch eine Standardklasse verwendet, können Sie das benutzerdefinierte Feld nur einer Feldergruppe zuweisen.
+Nach Angabe des Anzeigenamens und des Datentyps for Im Feld wird das Feld als Nächster Schritt einer übergeordneten XDM-Ressource zugewiesen. Wenn Ihr Schema eine benutzerdefinierte Klasse verwendet, können Sie stattdessen das Feld [zur zugewiesenen Klasse](#add-to-class) oder einer [Feldergruppe](#add-to-field-group) hinzufügen. Wenn Ihr Schema jedoch eine Standardklasse verwendet, können Sie das benutzerdefinierte Feld nur einer Feldergruppe zuweisen.
 
 #### Weisen Sie das Feld einer benutzerdefinierten Feldergruppe zu {#add-to-field-group}
 
 >[!NOTE]
 >
->In diesem Abschnitt wird nur beschrieben, wie Sie das Feld einer benutzerdefinierten Feldergruppe zuweisen. Wenn Sie stattdessen eine Standardfeldgruppe mit dem neuen benutzerdefinierten Feld erweitern möchten, finden Sie weitere Informationen im Abschnitt [Hinzufügen benutzerdefinierter Felder zu Standardfeldgruppen](#custom-fields-for-standard-groups).
+In diesem Abschnitt wird nur beschrieben, wie Sie das Feld einer benutzerdefinierten Feldergruppe zuweisen. Wenn Sie stattdessen eine Standardfeldgruppe mit dem neuen benutzerdefinierten Feld erweitern möchten, finden Sie weitere Informationen im Abschnitt [Hinzufügen benutzerdefinierter Felder zu Standardfeldgruppen](#custom-fields-for-standard-groups).
 
 Wählen Sie unter &quot;**[!UICONTROL Zuweisen zu]**&quot;die Option &quot;**[!UICONTROL Feldergruppe]**&quot;. Wenn Ihr Schema eine Standardklasse verwendet, ist dies die einzige verfügbare Option und standardmäßig ausgewählt.
 
-Als Nächstes müssen Sie eine Feldergruppe auswählen, mit der das neue Feld verknüpft werden soll. Beginnen Sie mit der Eingabe des Namens der Feldergruppe in der bereitgestellten Texteingabe. Wenn bereits benutzerdefinierte Feldergruppen vorhanden sind, die mit der Eingabe übereinstimmen, werden diese in der Dropdown-Liste angezeigt. Alternativ können Sie einen eindeutigen Namen eingeben, um stattdessen eine neue Feldergruppe zu erstellen.
+Als Nächstes müssen Sie eine Feldergruppe auswählen, mit der das neue Feld verknüpft werden soll. Beginnen Sie mit der Eingabe des Namens der Feldergruppe in der bereitgestellten Texteingabe. Wenn bereits benutzerdefinierte Feldergruppen vorhanden sind, die mit der Eingabe übereinstimmen, werden diese in der Dropdown-Liste angezeigt. Alternativ können Sie a eindeutiger Name, um stattdessen eine neue Feldergruppe zu erstellen.
 
 ![Feldgruppe auswählen](../../images/ui/resources/schemas/select-field-group.png)
 
 >[!WARNING]
 >
->Wenn Sie eine vorhandene benutzerdefinierte Feldergruppe auswählen, übernehmen alle anderen Schemas, die diese Feldergruppe verwenden, auch das neu hinzugefügte Feld, nachdem Sie Ihre Änderungen gespeichert haben. Wählen Sie daher nur dann eine existierende Feldergruppe aus, wenn Sie diese Art von Vermehrung wünschen. Andernfalls sollten Sie stattdessen eine neue benutzerdefinierte Feldergruppe erstellen.
+Wenn Sie eine vorhandene benutzerdefinierte Feldergruppe auswählen, übernehmen alle anderen Schemas, die diese Feldergruppe verwenden, auch das neu hinzugefügte Feld, nachdem Sie Ihre Änderungen gespeichert haben. Wählen Sie daher nur dann eine vorhandene Feldergruppe aus, wenn Sie diesen Typ wünschen of Vermehrung. Andernfalls sollten Sie stattdessen eine neue benutzerdefinierte Feldergruppe erstellen.
 
 Nachdem Sie die Feldergruppe aus der Liste ausgewählt haben, wählen Sie **[!UICONTROL Anwenden]**.
 
@@ -247,7 +247,7 @@ Das neue Feld wird der Arbeitsfläche hinzugefügt und unter Ihrer [Mandanten-ID
 
 >[!NOTE]
 >
->Die übrigen von der ausgewählten benutzerdefinierten Feldergruppe bereitgestellten Felder werden standardmäßig aus dem Schema entfernt. Wenn Sie einige dieser Felder zum Schema hinzufügen möchten, wählen Sie ein Feld aus, das zur Gruppe gehört, und wählen Sie dann in der rechten Leiste **[!UICONTROL Zugehörige Felder verwalten]** aus.
+Die übrigen von der ausgewählten benutzerdefinierten Feldergruppe bereitgestellten Felder werden standardmäßig aus dem Schema entfernt. Wenn Sie einige dieser Felder zum Schema hinzufügen möchten, wählen Sie ein Feld aus, das zur Gruppe gehört, und wählen Sie dann in der rechten Leiste **[!UICONTROL Zugehörige Felder verwalten]** aus.
 
 #### Weisen Sie das Feld einer benutzerdefinierten Klasse zu {#add-to-class}
 
@@ -265,15 +265,15 @@ Das neue Feld wird der Arbeitsfläche hinzugefügt und unter Ihrer [Mandanten-ID
 
 ### Fügen Sie benutzerdefinierte Felder zur Struktur von Standardfeldgruppen hinzu {#custom-fields-for-standard-groups}
 
-Wenn das Schema, mit dem Sie arbeiten, ein Objekt enthält, das von einer Standardfeldgruppe bereitgestellt wird, können Sie diesem Standardobjekt eigene benutzerdefinierte Felder hinzufügen.
+Wenn das Schema, an dem Sie arbeiten, einen Objekttyp aufweist field von einer Standardfeldgruppe bereitgestellt werden, können Sie diesem Standardobjekt eigene benutzerdefinierte Felder hinzufügen.
 
 >[!WARNING]
 >
->Alle Felder, die einer Feldergruppe in einem Schema hinzugefügt werden, werden auch in allen anderen Schemas angezeigt, die dieselbe Feldergruppe verwenden. Wenn ein benutzerdefiniertes Feld zu einer Standardfeldgruppe hinzugefügt wird, wird diese Feldergruppe in eine benutzerdefinierte Feldergruppe konvertiert und die ursprüngliche Standardfeldgruppe ist nicht mehr verfügbar.
+Alle Felder, die einer Feldergruppe in einem Schema hinzugefügt werden, werden auch in allen anderen Schemas angezeigt, die dieselbe Feldergruppe verwenden. Wenn ein benutzerdefiniertes Feld zu einer Standardfeldgruppe hinzugefügt wird, wird diese Feldergruppe in eine benutzerdefinierte Feldergruppe konvertiert und die ursprüngliche Standardfeldgruppe ist nicht mehr verfügbar.
 >
->Wenn Sie an der Beta-Version für diese Funktion teilgenommen haben, erhalten Sie einen Dialog, in dem Sie über die Standardfeldgruppen informiert werden, die Sie zuvor angepasst haben. Nachdem Sie **[!UICONTROL Bestätigen]** ausgewählt haben, werden die aufgelisteten Ressourcen in benutzerdefinierte Feldergruppen konvertiert.
+Wenn Sie an der Beta-Version für diese Funktion teilgenommen haben, erhalten Sie einen Dialog, in dem Sie über die Standardfeldgruppen informiert werden, die Sie zuvor angepasst haben. Nachdem Sie **[!UICONTROL Bestätigen]** ausgewählt haben, werden die aufgelisteten Ressourcen in benutzerdefinierte Feldergruppen konvertiert.
 >
->![Bestätigungsdialogfeld zum Konvertieren von Standardfeldgruppen](../../images/ui/resources/schemas/beta-extension-confirmation.png)
+![Bestätigungsdialogfeld zum Konvertieren von Standardfeldgruppen](../../images/ui/resources/schemas/beta-extension-confirmation.png)
 
 Wählen Sie zunächst das Pluszeichen (**+**) neben dem Stamm des von der Standardfeldgruppe bereitgestellten Objekts aus.
 
@@ -293,16 +293,16 @@ Nachdem Sie Ihre Änderungen angewendet haben, wird das neue Feld unter Ihrem Ma
 
 ## Aktivieren eines Schemas für das Echtzeit-Kundenprofil {#profile}
 
->[!CONTEXTUALHELP]
->id="platform_schemas_enableforprofile"
->title="Aktivieren eines Schemas für das Echtzeit-Kundenprofil"
->abstract="Wenn ein Schema für das Echtzeit-Kundenprofil aktiviert ist, werden alle Datensätze, die aus diesem Schema erstellt werden, für das Echtzeit-Kundenprofil verwendet. Dieses führt Daten aus unterschiedlichen Quellen zusammen und erstellt eine vollständige Ansicht jedes Kunden. Nachdem ein Schema verwendet wurde, um Daten in das Echtzeit-Kundenprofil aufzunehmen, kann es nicht mehr deaktiviert werden. Weitere Informationen finden Sie in der Dokumentation."
+[!CONTEXTUALHELP]
+id="platform_schemas_enableforprofile"
+title="Aktivieren eines Schemas für das Echtzeit-Kundenprofil"
+abstract="Wenn ein Schema für das Echtzeit-Kundenprofil aktiviert ist, werden alle Datensätze, die aus diesem Schema erstellt werden, für das Echtzeit-Kundenprofil verwendet. Dieses führt Daten aus unterschiedlichen Quellen zusammen und erstellt eine vollständige Ansicht jedes Kunden. Nachdem ein Schema verwendet wurde, um Daten in das Echtzeit-Kundenprofil aufzunehmen, kann es nicht mehr deaktiviert werden. Weitere Informationen finden Sie in der Dokumentation."
 
 [Echtzeit-Kundenprofil](../../../profile/home.md) führt Daten aus unterschiedlichen Quellen zusammen, um eine vollständige Ansicht jedes einzelnen Kunden zu erstellen. Wenn die von einem Schema erfassten Daten an diesem Prozess teilnehmen sollen, müssen Sie das Schema zur Verwendung in [!DNL Profile] aktivieren.
 
 >[!IMPORTANT]
 >
->Um ein Schema für [!DNL Profile] zu aktivieren, muss ein primäres Identitätsfeld definiert sein. Weitere Informationen finden Sie im Handbuch zum [Definieren von Identitätsfeldern](../fields/identity.md) .
+Um ein Schema für [!DNL Profile] zu aktivieren, muss ein primäres Identitätsfeld definiert sein. Weitere Informationen finden Sie im Handbuch zum [Definieren von Identitätsfeldern](../fields/identity.md) .
 
 Um das Schema zu aktivieren, wählen Sie zunächst den Namen des Schemas in der linken Leiste aus und wählen Sie dann in der rechten Leiste den Umschalter **[!UICONTROL Profil]** aus.
 
@@ -316,7 +316,7 @@ Die Arbeitsfläche wird mit aktiviertem Umschalter [!UICONTROL Profil] wieder an
 
 >[!IMPORTANT]
 >
->Da das Schema noch nicht gespeichert wurde, ist dies der Punkt, an dem Sie Ihre Meinung ändern, das Schema im Echtzeit-Kundenprofil teilnehmen zu lassen: Nachdem Sie ein aktiviertes Schema gespeichert haben, kann es nicht mehr deaktiviert werden. Wählen Sie den Umschalter **[!UICONTROL Profil]** erneut aus, um das Schema zu deaktivieren.
+Da das Schema noch nicht gespeichert wurde, ist dies der Punkt, an dem Sie Ihre Meinung ändern, das Schema im Echtzeit-Kundenprofil teilnehmen zu lassen: Nachdem Sie ein aktiviertes Schema gespeichert haben, kann es nicht mehr deaktiviert werden. Wählen Sie den Umschalter **[!UICONTROL Profil]** erneut aus, um das Schema zu deaktivieren.
 
 Um den Prozess abzuschließen, wählen Sie **[!UICONTROL Speichern]** aus, um das Schema zu speichern.
 
@@ -330,9 +330,9 @@ Nachdem Sie einem Schema eine Klasse zugewiesen und Feldergruppen hinzugefügt h
 
 >[!NOTE]
 >
->Beachten Sie, dass die Anzeigenamen von Feldern, die zu Standardklassen oder Feldgruppen gehören, nur im Kontext eines bestimmten Schemas bearbeitet werden können. Das heißt, dass die Änderung des Anzeigenamens eines Standardfelds in einem Schema keine Auswirkungen auf andere Schemas hat, die dieselbe zugeordnete Klasse oder Feldergruppe verwenden.
+Beachten Sie, dass die Anzeigenamen von Feldern, die zu Standardklassen oder Feldgruppen gehören, nur im Kontext eines bestimmten Schemas bearbeitet werden können. Das heißt, dass die Änderung des Anzeigenamens eines Standardfelds in einem Schema keine Auswirkungen auf andere Schemas hat, die dieselbe zugeordnete Klasse oder Feldergruppe verwenden.
 >
->Sobald Sie die Anzeigenamen für die Felder eines Schemas ändern, werden diese Änderungen sofort in allen vorhandenen Datensätzen übernommen, die auf diesem Schema basieren.
+Sobald Sie die Anzeigenamen für die Felder eines Schemas ändern, werden diese Änderungen sofort in allen vorhandenen Datensätzen übernommen, die auf diesem Schema basieren.
 
 Um den Anzeigenamen eines Schemafelds zu bearbeiten, wählen Sie das Feld auf der Arbeitsfläche aus. Geben Sie in der rechten Leiste unter **[!UICONTROL Anzeigename]** den neuen Namen ein.
 
@@ -348,7 +348,7 @@ Sie können die Klasse eines Schemas während des anfänglichen Kompositionsproz
 
 >[!WARNING]
 >
->Die Neuzuweisung der Klasse für ein Schema sollte mit äußerster Vorsicht erfolgen. Feldergruppen sind nur mit bestimmten Klassen kompatibel. Daher werden die Arbeitsfläche und alle von Ihnen hinzugefügten Felder beim Ändern der Klasse zurückgesetzt.
+Die Neuzuweisung der Klasse für ein Schema sollte mit äußerster Vorsicht erfolgen. Feldergruppen sind nur mit bestimmten Klassen kompatibel. Daher werden die Arbeitsfläche und alle von Ihnen hinzugefügten Felder beim Ändern der Klasse zurückgesetzt.
 
 Um eine Klasse neu zuzuweisen, wählen Sie auf der linken Seite der Arbeitsfläche **[!UICONTROL Zuweisen]** aus.
 
@@ -368,7 +368,7 @@ Nach Bestätigung der Klassenänderung wird die Arbeitsfläche zurückgesetzt un
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Platform-Benutzeroberfläche beschrieben. Es wird dringend empfohlen, das Tutorial [zur Schemaerstellung](../../tutorials/create-schema-ui.md) für einen umfassenden Workflow zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche zu lesen, einschließlich der Erstellung benutzerdefinierter Feldergruppen und Datentypen für eindeutige Anwendungsfälle.
+In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Platform-Benutzeroberfläche beschrieben. Es wird dringend empfohlen, das Tutorial zur Erstellung von [Schemas](../../tutorials/create-schema-ui.md) für einen umfassenden Workflow zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche zu lesen, einschließlich der Erstellung benutzerdefinierter Feldergruppen und Datentypen for eindeutige Anwendungsfälle.
 
 Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemas] finden Sie in der Übersicht über den Arbeitsbereich [[!UICONTROL Schemas] ](../overview.md) .
 

@@ -2,7 +2,7 @@
 title: Advertising Details Collection Datentyp
 description: Erfahren Sie mehr über den Datentyp Advertising Details Collection Experience Data Model (XDM) .
 exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 14%
@@ -22,7 +22,7 @@ ht-degree: 14%
 >Jeder Anzeigename enthält einen Link zu weiteren Informationen zu den Audio- und Videoparametern. Die verknüpften Seiten enthalten Details zu den von Adobe erfassten Videoanzeigendaten, Implementierungswerten, Netzwerkparametern, Berichten und wichtigen Aspekten.
 
 | Anzeigename | Eigenschaft | Datentyp | Erforderlich | Beschreibung |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
 | [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | Zeichenfolge | Nein | Das Unternehmen oder die Marke, deren Produkt in der Anzeige vorgestellt wird. |
 | [[!UICONTROL Anzeigenkampagne]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | Zeichenfolge | Nein | Die ID der Anzeigenkampagne. |
 | [[!UICONTROL Kreative ID der Anzeige]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | Zeichenfolge | Nein | Die ID des Kreativinhalts der Anzeige. |
@@ -33,3 +33,5 @@ ht-degree: 14%
 | [[!UICONTROL Anzeigen-Platzierungs-ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | Zeichenfolge | Nein | Die Platzierungs-ID der Anzeige. |
 | [[!UICONTROL Name des Anzeigenplayers]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | Zeichenfolge | Ja | Der Name des Players, der für das Rendering der Werbeanzeige verantwortlich ist. |
 | [[!UICONTROL Anzeigen-Site-ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | Zeichenfolge | Nein | Die ID der Anzeigen-Site. |
+
+{style="table-layout:auto"}

@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
-source-git-commit: ab26566cb7f2586d709147686180625db4e920ec
+source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
 workflow-type: tm+mt
 source-wordcount: '1300'
 ht-degree: 30%
@@ -69,11 +69,9 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Erstellungsfluss von ML-unterstützten Schemas | Verwenden Sie erweiterte Algorithmen des maschinellen Lernens, um Ihre CSV-Musterdatendateien zu analysieren und automatisch optimierte Schemata mithilfe von Standard- und benutzerdefinierten Feldern zu erstellen.<br>Schlüsselfunktionen:<br><ul><li>Schnellere Schemaerstellung: Generieren Sie Schemas direkt aus Beispieldatendateien mithilfe von ML-empfohlenen und generierten XDM-Feldern.</li><li>Flexible Schemaentwicklung: Einfaches Hinzufügen oder Aktualisieren von Feldern im generierten Schema.</li><li>Nahtlose Integration: Vollständig in den Erstellungsfluss des Kernschemas in der Schema-Benutzeroberfläche integriert, sodass eine reibungslose und einheitliche Benutzererfahrung gewährleistet ist.</li><li>Effiziente Überprüfung und Bearbeitung: Schnelles Anzeigen und Aktualisieren Ihres Schemas mit dem Editor für einfache Ansicht, wodurch der Erstellungsprozess effizienter und benutzerfreundlicher wird.</li></ul> |
+| Erstellungsfluss von ML-unterstützten Schemas | Verwenden Sie erweiterte Algorithmen des maschinellen Lernens, um Ihre Beispieldatendateien zu analysieren und automatisch optimierte Schemata mithilfe von Standard- und benutzerdefinierten Feldern zu erstellen.<br>Schlüsselfunktionen:<br><ul><li>Schnellere Schemaerstellung: Generieren Sie Schemas direkt aus Beispieldatendateien mithilfe von ML-empfohlenen und generierten XDM-Feldern.</li><li>Flexible Schemaentwicklung: Einfaches Hinzufügen oder Aktualisieren von Feldern im generierten Schema.</li><li>Nahtlose Integration: Vollständig in den Erstellungsfluss des Kernschemas in der Schema-Benutzeroberfläche integriert, sodass eine reibungslose und einheitliche Benutzererfahrung gewährleistet ist.</li><li>Effiziente Überprüfung und Bearbeitung: Schnelles Anzeigen und Aktualisieren Ihres Schemas mit dem Editor für einfache Ansicht, wodurch der Erstellungsprozess effizienter und benutzerfreundlicher wird.</li></ul><br>Weitere Informationen finden Sie im Workflow-Handbuch zur Erstellung von Schemas mit HTML-Unterstützung](../../xdm/ui/ml-assisted-schema-creation.md).[ |
 
 {style="table-layout:auto"}
-
-Weitere Informationen finden Sie in der Übersicht zur Erstellung von [ML-unterstützten Schemas](../../xdm/ui/ml-assisted-schema-creation.md) .
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 

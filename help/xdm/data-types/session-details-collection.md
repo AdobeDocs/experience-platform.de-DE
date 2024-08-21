@@ -2,10 +2,10 @@
 title: Sammlungsdatentyp für Sitzungsdetails
 description: Erfahren Sie mehr über den Datentyp "Session Details Collection Experience Data Model"(XDM).
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,6 @@ ht-degree: 15%
 | [[!UICONTROL  Broadcast Content Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | Zeichenfolge | Ja | Der [!UICONTROL Broadcast-Inhaltstyp] des Stream-Versands. Zu den verfügbaren Werten für [!UICONTROL Streamtyp] gehören:<br>Audio: &quot;Song&quot;, &quot;Podcast&quot;, &quot;audiobook&quot;und &quot;Radio&quot;;<br>Video: &quot;VoD&quot;, &quot;Live&quot;, &quot;Linear&quot;, &quot;UGC&quot;und &quot;DVoD&quot;.<br>Kunden können für diesen Parameter benutzerdefinierte Werte bereitstellen. |
 | [[!UICONTROL Übertragungsnetzwerk]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | Zeichenfolge | Nein | Der Netzwerk-/Kanalname. |
 | [[!UICONTROL Inhaltskanal]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | Zeichenfolge | Ja | Der [!UICONTROL Inhaltskanal] ist der Verteilungskanal, von dem aus der Inhalt wiedergegeben wurde. |
-| [[!UICONTROL Inhaltsbeendigungen]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | Boolesch | Nein | [!UICONTROL Inhaltsbeendigungen] gibt an, ob ein zeitgesteuertes Medien-Asset bis zum Ende angesehen wurde. Dieses Ereignis bedeutet nicht unbedingt, dass der Betrachter das gesamte Video angesehen hat. Der Betrachter hätte vorausspringen können. |
 | [!UICONTROL Netzwerk zur Inhaltsbereitstellung] | `cdn` | Zeichenfolge | Nein | Das [!UICONTROL Netzwerk zur Inhaltsbereitstellung] des wiedergegebenen Inhalts. |
 | [[!UICONTROL Inhalts-ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | Zeichenfolge | Ja | Die [!UICONTROL Inhalts-ID] ist eine eindeutige Kennung des Inhalts. Sie kann verwendet werden, um eine Verknüpfung mit anderen Branchen- oder CMS-IDs herzustellen. |
 | [[!UICONTROL Inhaltsname]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | Zeichenfolge | Nein | Der [!UICONTROL Inhaltsname] ist der (für Menschen lesbare) Anzeigename des Inhalts. |
@@ -45,7 +44,6 @@ ht-degree: 15%
 | [[!UICONTROL Genre]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | Zeichenfolge | Nein | Der Typ oder die Gruppierung des Inhalts entsprechend der Definition des Inhaltserstellers. Werte sollten bei der Variablenimplementierung durch Kommas getrennt sein. |
 | [[!UICONTROL Medien autorisiert]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | Zeichenfolge | Nein | Bestätigt, ob der Benutzer über Adobe-Authentifizierung autorisiert wurde. |
 | [[!UICONTROL Länge des Medieninhalts]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | Ganzzahl | Ja | Die [!UICONTROL Länge des Medieninhalts] enthält die Cliplänge/-laufzeit - Dies ist die maximale Länge (oder Dauer) des wiedergegebenen Inhalts (in Sekunden). |
-| [[!UICONTROL Medienstarts]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | Boolesch | Nein | Das Ladeereignis für das Medium. Dies tritt auf, wenn der Viewer die Wiedergabeschaltfläche auswählt. Dies zählt auch, wenn Pre-Roll-Anzeigen, Pufferung, Fehler usw. vorhanden sind. |
 | [[!UICONTROL MVPD-Kennung]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | Zeichenfolge | Nein | Die MVPD-Kennung (Multi-Channel Video Programming Distributor), die über Adobe-Authentifizierung bereitgestellt wurde. |
 | [[!UICONTROL Herausgeber]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | Zeichenfolge | Nein | Der Name des Herausgebers des Audioinhalts. |
 | [[!UICONTROL Radiostation]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | Zeichenfolge | Nein | Der Name des Radiosenders, auf dem das Audio wiedergegeben wird. |
@@ -60,10 +58,3 @@ ht-degree: 15%
 | [[!UICONTROL Version]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | Zeichenfolge | Nein | Die vom Player verwendete SDK-Version. Dies kann einen beliebigen benutzerdefinierten Wert haben, der für Ihren Player sinnvoll ist. |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

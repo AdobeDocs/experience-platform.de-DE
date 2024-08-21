@@ -1,14 +1,19 @@
 ---
 title: Erstellung von maschinell lernunterstützten Schemata
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche Schemas erstellen.
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # Erstellung von Schemata, die durch maschinelles Lernen unterstützt werden
+
+>[!AVAILABILITY]
+>
+>* Die Erstellung von Schemas, die durch maschinelles Lernen unterstützt werden, befindet sich derzeit in der Betaphase. Dokumentation und Funktionalitäten können sich ändern.
 
 Verwenden Sie ML-Algorithmen, um ein Schema aus Beispieldaten zu generieren. Dieser Prozess spart Zeit und erhöht die Genauigkeit beim Definieren der Struktur, Felder und Datentypen für große komplexe Datensätze.
 
