@@ -2,9 +2,9 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
+source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1451'
 ht-degree: 74%
 
 ---
@@ -16,6 +16,14 @@ Im Folgenden finden Sie eine Liste der Versionshinweise für die Adobe Analytics
 >[!NOTE]
 >
 >Die Analytics-Tag-Erweiterung , wenn sie häufig als Reaktion auf Aktualisierungen der [AppMeasurement JavaScript-Bibliothek](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de) aktualisiert wird. Weitere Informationen zu den unten aufgeführten Versionen finden Sie in den [AppMeasurement-Versionshinweisen](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) .
+
+## 12. August 2024
+
+**Adobe Analytics-Erweiterung 1.9.5**
+
+**Funktionen**:
+
+* Aktualisierung auf [AppMeasurement auf Version 2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
 
 ## 4. März 2024
 
