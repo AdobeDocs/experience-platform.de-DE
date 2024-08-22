@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 87%
+source-wordcount: '1247'
+ht-degree: 86%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 87%
       * [Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-IDs](./ui/activate-curated-destinations.md)
       * [Aktivieren von potenziellen Zielgruppen für Ziele](./ui/activate-prospect-audiences.md)
       * [Kontozielgruppen für Ziele aktivieren](./ui/activate-account-audiences.md)
-      * [(Beta) Exportieren von Dateien nach Bedarf in Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
+      * [Exportieren von Dateien On-Demand an Batch-Ziele über die Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
       * [Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
       * [(Beta) Verwenden von berechneten Feldern, um Arrays in flache Schemadateien zu exportieren](/help/destinations/ui/export-arrays-calculated-fields.md)
