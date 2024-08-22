@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
@@ -41,18 +41,18 @@ Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponen
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_datalakeretention"
->title="Datenbeibehaltung"
->abstract="Zeigt die aktuelle Aufbewahrungsrichtlinie für jeden Datensatz an. Dieser Wert kann in den Aufbewahrungseinstellungen jedes Datensatzes geändert werden. Sie können die Aufbewahrungszeit nur für ExperienceEvent-Datensatz festlegen."
+>title="Datalake-Aufbewahrung"
+>abstract="Zeigt die aktuelle Aufbewahrungsrichtlinie für jeden Datensatz. Dieser Wert kann in den Aufbewahrungseinstellungen jedes Datensatzes geändert werden. Sie können die Aufbewahrungszeit nur für einen ExperienceEvent-Datensatz festlegen."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_profileretention"
->title="Profilbeibehaltung"
->abstract="Zeigt die aktuelle Aufbewahrungsrichtlinie für jeden Datensatz an. Dieser Wert kann in den Aufbewahrungseinstellungen jedes Datensatzes geändert werden. Sie können die Aufbewahrungszeit nur für einen ExperienceEvent-Datensatz festlegen."
+>title="Profilaufbewahrung"
+>abstract="Zeigt die aktuelle Aufbewahrungsrichtlinie für jeden Datensatz. Dieser Wert kann in den Aufbewahrungseinstellungen jedes Datensatzes geändert werden. Sie können die Aufbewahrungszeit nur für einen ExperienceEvent-Datensatz festlegen."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_datalakesettings_datasetretention"
->title="Aufbewahrung von Datensätzen"
->abstract="Durch die Datenaufbewahrung werden Regeln festgelegt, wie lange Daten gespeichert werden und wann sie in verschiedenen Diensten gelöscht werden sollen. Dadurch wird die Einhaltung von Vorschriften, die Verwaltung von Speicherkosten und die Aufrechterhaltung der Datenqualität gewährleistet."
+>title="Datensatzaufbewahrung"
+>abstract="Mit der Datalake-Aufbewahrung werden Regeln festgelegt, wie lange Daten gespeichert werden und wann sie in verschiedenen Diensten gelöscht werden sollen. Dies gewährleistet die Einhaltung von Vorschriften, die Verwaltung von Speicherkosten und die Aufrechterhaltung der Datenqualität."
 
 
 Wählen Sie in der Benutzeroberfläche von [!DNL Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Datensätze]** aus, um das Dashboard **[!UICONTROL Datensätze]** zu öffnen. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
