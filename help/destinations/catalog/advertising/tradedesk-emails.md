@@ -3,9 +3,9 @@ title: (Beta) Verbindung zwischen Trade Desk und CRM
 description: Aktivieren Sie Profile in Ihrem Trade Desk-Konto für Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1148'
 ht-degree: 18%
 
 ---
@@ -26,6 +26,8 @@ ht-degree: 18%
 
 Dieses Dokument soll Ihnen dabei helfen, Profile für Ihr [!DNL Trade Desk] -Konto zu aktivieren, um Zielgruppen-Targeting und -Unterdrückung auf der Basis von CRM-Daten zu ermöglichen.
 
+Dieser Connector sendet Daten an den Erstanbieter-Endpunkt [!DNL The Trade Desk]. Die Integration zwischen Adobe Experience Platform und [!DNL The Trade Desk] unterstützt nicht den Export von Daten in den Drittanbieter-Endpunkt [!DNL The Trade Desk].
+
 [!DNL The Trade Desk(TTD)] verarbeitet die Upload-Datei von E-Mail-Adressen zu keinem Zeitpunkt direkt und [!DNL The Trade Desk] speichert Ihre rohen (ungehashten) E-Mails nicht.
 
 >[!TIP]
@@ -38,7 +40,7 @@ Bevor Sie Zielgruppen für [!DNL The Trade Desk] aktivieren können, müssen Sie
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
-Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden Sie in der [Übersicht zum Identity-Namespace](/help/identity-service/features/namespaces.md) .
+Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen. Weitere Informationen finden Sie in der [Übersicht zum Identity-Namespace](/help/identity-service/features/namespaces.md) .
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -140,7 +142,7 @@ Zielgruppenfelder auswählen:
 
 Um zu überprüfen, ob Daten ordnungsgemäß aus dem Experience Platform in [!DNL The Trade Desk] exportiert wurden, suchen Sie die Zielgruppen in der Datenkachel Adobe 1PD in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID in der Benutzeroberfläche von [!DNL Trade Desk]:
 
-1. Klicken Sie zunächst auf die Registerkarte **[!UICONTROL Daten]** und überprüfen Sie **[!UICONTROL Erstanbieter]**.
+1. Wählen Sie zunächst die Registerkarte **[!UICONTROL Daten]** aus und überprüfen Sie den Abschnitt **[!UICONTROL Erstanbieter]** .
 2. Scrollen Sie auf der Seite nach unten, unter **[!UICONTROL Importierte Daten]**, finden Sie die Kachel **[!UICONTROL Adobe 1PD]**.
 3. Klicken Sie auf die Kachel **[!UICONTROL Adobe 1PD]** und listet alle Zielgruppen auf, die für das Ziel [!DNL Trade Desk] Ihres Advertisers aktiviert sind. Sie können auch die Suchfunktion verwenden.
 4. Die Segment-ID-Nummer von Experience Platform wird als Segmentname in der Benutzeroberfläche von [!DNL Trade Desk] angezeigt.

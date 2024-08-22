@@ -3,10 +3,10 @@ keywords: Werbung; Handelsvertretung; Werbe- und Schreibtisch;
 title: Verbindung mit The Trade Desk
 description: Das Trade Desk ist eine Self-Service-Plattform für Anzeigenkäufer, mit der sie digitale Kampagnen für Zielgruppen und Zielgruppen aus Display-, Video- und mobilen Inventarquellen ausführen können.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 41%
+source-wordcount: '778'
+ht-degree: 40%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 41%
 
 ## Übersicht {#overview}
 
-[!DNL The Trade Desk] Ziel hilft Ihnen, Profildaten an [!DNL The Trade Desk] zu senden.
+Verwenden Sie diesen Ziel-Connector, um Profildaten an [!DNL The Trade Desk] zu senden. Dieser Connector sendet Daten an den Erstanbieter-Endpunkt [!DNL The Trade Desk]. Die Integration zwischen Adobe Experience Platform und [!DNL The Trade Desk] unterstützt nicht den Export von Daten in den Drittanbieter-Endpunkt [!DNL The Trade Desk].
 
-[!DNL The Trade Desk] ist eine Self-Service-Plattform für Anzeigenkäufer, mit der sie digitale Kampagnen für Anzeigen, Videos und mobile Inventarquellen mit Zielgruppen und Zielgruppen-Targeting ausführen können.
+[!DNL The Trade Desk] ist eine Self-Service-Plattform für Anzeigenkäufer, mit der sie digitale Kampagnen für Zielgruppen und Zielgruppen aus Display-, Video- und mobilen Inventarquellen ausführen können.
 
-Um Profildaten an [!DNL Trade Desk] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
+Um Profildaten an [!DNL Trade Desk] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen, wie in den folgenden Abschnitten dieser Seite beschrieben.
 
 ## Anwendungsfälle {#use-cases}
 
-Marketingexperten möchten in der Lage sein, aus [!DNL Trade Desk IDs] oder Geräte-IDs erstellte Zielgruppen für die Erstellung von digitalen Kampagnen mit Retargeting oder Zielgruppen-Targeting zu verwenden.
+Marketingexperten möchten in der Lage sein, aus [!DNL Trade Desk IDs] oder Geräte-IDs erstellte Zielgruppen für die Erstellung von digitalen Kampagnen mit Retargeting oder Zielgruppenansprache zu verwenden.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -62,7 +62,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=de) im Experience Cloud ID-Dienst noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon [!DNL The Trade Desk]-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
+>Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) im Experience Cloud ID-Dienst noch nicht aktiviert haben (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor schon [!DNL The Trade Desk]-Integrationen in Audience Manager eingerichtet hatten, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
 
 ## Herstellen einer Verbindung mit dem Ziel {#connect}
 
@@ -79,7 +79,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
 * **[!UICONTROL Konto-ID]**: Ihre [!DNL Trade Desk] [!UICONTROL Konto-ID].
-* **[!UICONTROL Serverstandort]**: Fragen Sie Ihren [!DNL Trade Desk] -Support-Mitarbeiter, welchen regionalen Server Sie verwenden sollten. Diese regionalen Server stehen zur Auswahl:
+* **[!UICONTROL Serverstandort]**: Fragen Sie Ihren [!DNL Trade Desk] -Support-Mitarbeiter, welchen regionalen Server Sie verwenden sollten. Nachfolgend finden Sie die verfügbaren regionalen Server, aus denen Sie wählen können:
    * **[!UICONTROL Europa]**
    * **[!UICONTROL Singapur]**
    * **[!UICONTROL Tokyo]**
@@ -104,7 +104,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 Im Schritt [Zielgruppenplan](../../ui/activate-segment-streaming-destinations.md#scheduling) müssen Sie Ihre Zielgruppen manuell ihrer entsprechenden ID oder ihrem Anzeigenamen in der Zielplattform zuordnen.
 
-Für die Zuordnung von Segmenten empfehlen wir die Verwendung des Platform-Zielgruppennamen oder einer kürzeren Form davon, um die Verwendung zu vereinfachen. Die Zielgruppen-ID oder der Name in Ihrem Ziel muss jedoch nicht mit der in Ihrem Platform-Konto übereinstimmen. Alle Werte, die Sie in das Zuordnungsfeld einfügen, werden vom Ziel übernommen.
+Bei der Zuordnung von Zielgruppen empfiehlt Adobe, den Namen der Platform-Zielgruppe oder eine kürzere Form zu verwenden, um die Verwendung zu vereinfachen. Die Zielgruppen-ID oder der Name in Ihrem Ziel muss jedoch nicht mit der in Ihrem Platform-Konto übereinstimmen. Alle Werte, die Sie in das Zuordnungsfeld einfügen, werden vom Ziel übernommen.
 
 Wenn Sie mehrere Gerätezuordnungen (Cookie-IDs, [!DNL IDFA], [!DNL GAID]) verwenden, stellen Sie sicher, dass Sie für alle drei Zuordnungen denselben Zuordnungswert verwenden. [!DNL The Trade Desk] aggregiert alle Daten zu einem einzelnen Segment mit einer Aufschlüsselung auf Geräteebene.
 
@@ -112,4 +112,4 @@ Wenn Sie mehrere Gerätezuordnungen (Cookie-IDs, [!DNL IDFA], [!DNL GAID]) verwe
 
 ## Exportierte Daten {#exported-data}
 
-Um zu überprüfen, ob die Daten erfolgreich an das Ziel [!DNL The Trade Desk] exportiert wurden, überprüfen Sie Ihr [!DNL Trade Desk] -Konto. Wenn die Aktivierung erfolgreich war, werden in Ihrem Konto Zielgruppen ausgefüllt.
+Um sich zu vergewissern, dass die Daten erfolgreich in das [!DNL The Trade Desk]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Trade Desk]-Konto. Wenn die Aktivierung erfolgreich war, werden in Ihrem Konto Zielgruppen ausgefüllt.
