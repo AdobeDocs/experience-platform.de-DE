@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
-source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
+source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 30%
+source-wordcount: '1352'
+ht-degree: 29%
 
 ---
 
@@ -44,6 +44,14 @@ Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [
 ## Ziele {#destinations}
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Ziele** {#new-updated-destinations}
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] verwaltet eine Reihe verschiedener Instanzen für ihr Dashboard und ihre REST-Endpunkte. [!UICONTROL Braze] -Kunden sollten den richtigen REST-Endpunkt verwenden, je nachdem, für welche Instanz Sie bereitgestellt sind. Diese Version fügt einen neuen US-07-Endpunkt hinzu, den Sie beim Herstellen einer Verbindung zu [!UICONTROL Braze] auswählen können. |
+
+{style="table-layout:auto"}
 
 **Neue oder aktualisierte Funktionen** {#destinations-new-updated-functionality}
 
