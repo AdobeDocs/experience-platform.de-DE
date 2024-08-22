@@ -3,9 +3,9 @@ title: Konfigurationshandbuch für Regeln zur Verknüpfung von Identitätsdiagra
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
+source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1358'
 ht-degree: 3%
 
 ---
@@ -76,7 +76,7 @@ Anweisungen zum Erstellen eines Datensatzes finden Sie im [Benutzerhandbuch zur 
 >
 >* Während des Prozesses vor der Implementierung müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung wie CRMID enthalten.
 >* Bei der Implementierung müssen Sie sicherstellen, dass der eindeutige Namespace mit der höchsten Priorität immer in jedem Profil vorhanden ist. Beispiele für Diagrammszenarien, die gelöst werden können, indem sichergestellt wird, dass jedes Profil den eindeutigen Namespace mit der höchsten Priorität enthält, finden Sie im [Anhang](#appendix) .
->* Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) zum Erfassen von Daten verwenden, müssen Sie Ihren ECIDs eine höhere Priorität als AID zuweisen, da Identity Service AAID blockiert. Durch die Priorisierung von ECID können Sie Identity Service anweisen, nicht authentifizierte Ereignisse anstelle von AAID in ECID zu speichern.
+>* Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) zum Erfassen von Daten verwenden, müssen Sie Ihren ECIDs eine höhere Priorität als AID zuweisen, da Identity Service AAID blockiert. Durch die Priorisierung von ECID können Sie das Echtzeit-Kundenprofil anweisen, nicht authentifizierte Ereignisse anstelle von AAID in ECID zu speichern.
 
 An dieser Stelle sollten Sie Folgendes haben:
 
