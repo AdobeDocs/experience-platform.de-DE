@@ -3,9 +3,9 @@ title: Ereignistypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie, wie Sie Ereignistypen verwenden, die von der Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch bereitgestellt werden.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Regelsatzelemente abonnieren] {#subscribe-ruleset-items}
+
+Mit dem Ereignistyp **[!UICONTROL Regelsatzelemente abonnieren]** können Sie Adobe Journey Optimizer-Inhaltskarten für eine Oberfläche abonnieren. Jedes Mal, wenn die Regelsätze ausgewertet werden, erhält der für diesen Befehl bereitgestellte Rückruf ein Ergebnisobjekt mit Vorschlägen, die die Inhaltskartendaten enthalten.
+
+![Bild der Experience Platform-Tags-Benutzeroberfläche mit dem Ereignistyp Regelsatzelemente abonnieren.](assets/subscribe-ruleset-items.png)
+
+Dieser Ereignistyp unterstützt die folgenden konfigurierbaren Eigenschaften:
+
+* **[!UICONTROL Schemas]**: Ein Array von Schemas, für die Sie Inhaltskarten abonnieren möchten. Sie können die Schemata manuell oder durch Angabe eines Datenelements eingeben.
+* **[!UICONTROL Oberflächen]**: Ein Array von Oberflächen, für die Sie Inhaltskarten abonnieren möchten. Sie können die Oberflächen manuell oder durch Angabe eines Datenelements aufrufen.
