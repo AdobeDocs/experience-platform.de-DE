@@ -2,10 +2,10 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
-ht-degree: 59%
+source-wordcount: '4250'
+ht-degree: 58%
 
 ---
 
@@ -161,6 +161,18 @@ Weitere Informationen zum Erstellen und Verwalten von Tags finden Sie im [Handbu
 #### Ordner {#folders}
 
 Für ein besseres Zielgruppen-Management können Sie Zielgruppen in Ordnern platzieren.
+
+Um einen Ordner für Ihre Zielgruppen zu erstellen, wählen Sie **[!UICONTROL Ordner erstellen]** aus.
+
+![Die Schaltfläche Ordner erstellen ist hervorgehoben.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>Sie können einen Ordner nur erstellen, wenn Sie sich in einem anderen Ordner befinden. Das bedeutet, dass Sie **keinen Ordner erstellen können, wenn Sie in der linken Navigationsleiste**[!UICONTROL  Alle Zielgruppen ]**ausgewählt haben.**
+
+Es wird ein Popup angezeigt, in dem Sie den neu erstellten Ordner benennen können. Wählen Sie **[!UICONTROL Speichern]** aus, nachdem Sie Ihren Ordner benannt haben, um die Erstellung des Ordners abzuschließen. Beachten Sie, dass die Namen **must** für den übergeordneten Ordner eindeutig sein müssen.
+
+![Die Schaltfläche &quot;Speichern&quot;im Dialogfeld &quot;Ordner erstellen&quot;ist hervorgehoben.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Um eine Zielgruppe in einen Ordner zu verschieben, wählen Sie **[!UICONTROL In Ordner verschieben]** für die Zielgruppe, die Sie verschieben möchten.
 
