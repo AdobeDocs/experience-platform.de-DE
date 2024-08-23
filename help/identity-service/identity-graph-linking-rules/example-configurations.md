@@ -2,9 +2,9 @@
 title: Anleitung zur Diagrammkonfiguration
 description: Erfahren Sie mehr über gängige Diagrammszenarien, auf die Sie bei der Arbeit mit Regeln zur Identitätsdiagrammverlinkung und Identitätsdaten stoßen können.
 badge: Beta
-source-git-commit: a1f12f266b74bd88fbb1c1a095bb6f6eb565612b
+source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
 workflow-type: tm+mt
-source-wordcount: '2757'
+source-wordcount: '2749'
 ht-degree: 6%
 
 ---
@@ -478,7 +478,7 @@ In diesem Szenario gibt es eine einzelne CRMID, die eine Personenentität darste
 
 | Verwendete Namespaces | Webverhalten-Erfassungsmethode |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-Quell-Connector **Hinweis:** Standardmäßig sind AIDs im Identity Service blockiert. Daher müssen Sie bei der Verwendung der Analytics-Quelle Ihren ECIDs eine höhere Priorität als AID einräumen. Weitere Informationen finden Sie im [Implementierungshandbuch](configuration.md#ingest-your-data) . |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-Quell-Connector. <br> **Hinweis:** Standardmäßig werden AIDs im Identity Service blockiert. Daher müssen Sie bei der Verwendung der Analytics-Quelle Ihren ECIDs eine höhere Priorität als AIDs einräumen. Weitere Informationen finden Sie im [Implementierungshandbuch](configuration.md#ingest-your-data) .</br> |
 
 **Ereignisse:**
 
@@ -488,11 +488,11 @@ Sie können dieses Szenario in der Diagrammsimulation erstellen, indem Sie die f
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 ```
 
 **Algorithmuskonfiguration:**
@@ -532,7 +532,7 @@ Im Folgenden finden Sie ein Beispiel für zwei Diagramme mit einer Person, von d
 
 >[!TAB Diagramm für mehrere Personen: gemeinsam genutztes Gerät 1]
 
-Im Folgenden finden Sie ein Szenario für ein gemeinsam genutztes Gerät mit mehreren Personen, in dem `{ECID:111, AAID:AAA}` sowohl mit `{loginID:ID_A}` als auch mit `{loginID:ID_C}` verknüpft ist. In diesem Fall werden die älteren etablierten Links zugunsten der aktuelleren Links entfernt.
+Im Folgenden finden Sie ein Szenario für ein gemeinsam genutztes Gerät mit mehreren Personen, in dem `{ECID:111}` sowohl mit `{loginID:ID_A}` als auch mit `{loginID:ID_C}` verknüpft ist. In diesem Fall werden die älteren etablierten Links zugunsten der aktuelleren Links entfernt.
 
 ![Ein gemeinsam genutztes Gerätediagramm für mehrere Personen.](../images/graph-examples/complex_shared_device_one.png)
 
@@ -634,9 +634,9 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 >[!ENDTABS]
 
-## Verwendung in anderen Adobe-Anwendungen
+## Verwendung in anderen Adobe Commerce
 
-In den Beispielen für die Diagrammkonfiguration in diesem Abschnitt werden Anwendungsfälle für Real-time Customer Data Platform, Adobe Journey Optimizer und Adobe Commerce beschrieben. Die folgenden Beispiele konzentrieren sich auf Einzelhandelskunden mit zwei Benutzertypen:
+Die Beispiele für die Diagrammkonfiguration in diesem Abschnitt beschreiben Anwendungsfälle für Adobe Commerce. Die folgenden Beispiele konzentrieren sich auf Einzelhandelskunden mit zwei Benutzertypen:
 
 * Registrierter Benutzer (Benutzer, die ein Konto erstellt haben)
 * Gastbenutzer (Benutzer, die nur über eine E-Mail-Adresse verfügen)
