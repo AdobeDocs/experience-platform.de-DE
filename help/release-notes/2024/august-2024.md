@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 29%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 29%
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Experience Platform:
 
 - [Attributbasierte Zugriffssteuerung](#abac)
+- [Datenaufnahme](#data-ingestion)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -40,6 +41,19 @@ Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres U
 {style="table-layout:auto"}
 
 Weitere Informationen zur attributbasierten Zugriffssteuerung finden Sie unter [Attributbasierte Zugriffssteuerung – Übersicht](../../access-control/abac/overview.md). Eine umfassende Anleitung zum attributbasierten Zugriffssteuerungs-Workflow finden Sie im [Handbuch zur attributbasierten Zugriffskontrolle](../../access-control/abac/end-to-end-guide.md).
+
+## Datenerfassung (aktualisiert am 23. August) {#data-ingestion}
+
+Adobe Experience Platform bietet eine Vielzahl von Funktionen zur Aufnahme von Datentypen aller Art und beliebiger Latenz. Die Datenaufnahme kann anhand von Batch- oder Streaming-APIs, von Adobe bereitgestellten Quellen, Datenintegrationspartnern oder der Benutzeroberfläche von Adobe Experience Platform erfolgen.
+
+**Aktualisierung der Verarbeitung des Datumsformats bei der Batch-Datenerfassung**
+
+Diese Version behebt ein Problem mit der Verarbeitung des *Datumsformats* bei der Batch-Datenerfassung. Zuvor wandelte das System die von den Clients als `Date` eingefügten Datumsfelder in das Format `DateTime` um. Das bedeutet, dass die Zeitzone automatisch zu Feldern hinzugefügt wurde und es für Benutzer, die das Format `Date` bevorzugen oder benötigen, Schwierigkeiten gab. In Zukunft wird die Zeitzone nicht automatisch zu Feldern vom Typ `Date` hinzugefügt. Durch diese Aktualisierung wird sichergestellt, dass das exportierte Datenformat mit dem Format übereinstimmt, das im Profil für dieses Feld angezeigt wird, wie von Kunden angefordert.
+
+`Date` Felder vor der Veröffentlichung : `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` Felder nach der Veröffentlichung: `"birthDate": "2018-01-12"`
+
+Weitere Informationen zur [Batch-Erfassung](/help/ingestion/batch-ingestion/overview.md).
 
 ## Ziele {#destinations}
 
