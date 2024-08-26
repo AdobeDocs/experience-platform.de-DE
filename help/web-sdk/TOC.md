@@ -6,10 +6,10 @@ breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: 1a6d42fd1319828f5bb5d470f24ea5ee8bed4661
+source-git-commit: da0d9d0976dc0f7244500e62bb364b11fab7baca
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 51%
+ht-degree: 52%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 51%
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
-   * [Überschreibungen des Datastreams konfigurieren](commands/datastream-overrides.md)
+   * [Konfigurieren von Datenstromüberschreibungen](commands/datastream-overrides.md)
    * [Befehlsantworten](commands/command-responses.md)
 
 * Identität {#identity}
