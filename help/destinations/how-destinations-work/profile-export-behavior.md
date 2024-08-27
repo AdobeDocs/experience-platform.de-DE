@@ -2,10 +2,10 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
 workflow-type: tm+mt
-source-wordcount: '2931'
-ht-degree: 97%
+source-wordcount: '2930'
+ht-degree: 89%
 
 ---
 
@@ -145,9 +145,11 @@ In allen oben genannten Exportsituationen enthalten die exportierten Dateien die
 
 ### Inkrementelle Dateiexporte {#incremental-file-exports}
 
-Ein Profil qualifiziert sich nicht bei jeder Aktualisierung für die Aufnahme in inkrementelle Dateiexporte. Wenn beispielsweise ein Attribut einem Profil hinzugefügt oder daraus entfernt wurde, wird das Profil nicht in den Export eingeschlossen. Nur Profile, bei denen sich das Attribut `segmentMembership` geändert hat, werden in die exportierten Dateien aufgenommen. Das heißt, nur wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte einbezogen.
+Ein Profil qualifiziert sich nicht bei jeder Aktualisierung für die Aufnahme in inkrementelle Dateiexporte. Wenn beispielsweise ein Attribut einem Profil hinzugefügt oder daraus entfernt wurde, wird das Profil nicht in den Export einbezogen.
 
-Wenn eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) einem Profil im [Identitätsdiagramm](/help/identity-service/features/identity-graph-viewer.md) hinzugefügt wird, stellt dies ebenfalls keinen Grund dar, das Profil in einen neuen inkrementellen Dateiexport einzuschließen.
+Wenn sich das Attribut `segmentMembership` eines Profils jedoch ändert, wird das Profil in die exportierten Dateien aufgenommen. Das heißt, wenn das Profil Teil der Zielgruppe wird oder aus der Zielgruppe entfernt wird, wird es in inkrementelle Dateiexporte aufgenommen.
+
+Wenn einem Profil eine neue Identität (neue E-Mail-Adresse, Telefonnummer, ECID usw.) im [Identitätsdiagramm](/help/identity-service/features/identity-graph-viewer.md) hinzugefügt wird, wird das Profil auf ähnliche Weise in einen neuen inkrementellen Dateiexport aufgenommen.
 
 Wenn einer Zielzuordnung eine neue Zielgruppe hinzugefügt wird, hat dies keine Auswirkungen auf Qualifikationen und Exporte für ein anderes Segment. Exportpläne werden für jede Zielgruppe einzeln konfiguriert und Dateien werden für jedes Segment separat exportiert, selbst wenn die Zielgruppen demselben Zieldatenfluss hinzugefügt wurden.
 
@@ -157,10 +159,10 @@ Beachten Sie beispielsweise in der unten dargestellten Exporteinstellung, bei de
 
 ![Exporteinstellung mit mehreren ausgewählten Attributen](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* Ein Profil wird in einen inkrementellen Dateiexport eingeschlossen, wenn es für das Segment qualifiziert oder nicht qualifiziert ist.
-* Ein Profil wird *nicht* in einen inkrementellen Dateiexport eingeschlossen, wenn dem Identitätsdiagramm eine neue Telefonnummer hinzugefügt wird.
-* Ein Profil wird *nicht* in einen inkrementellen Dateiexport eingeschlossen, wenn der Wert eines zugeordneten XDM-Felds wie `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` in einem Profil aktualisiert wird.
-* Sobald das XDM-Feld `segmentMembership.status` im Zielaktivierungs-Workflow zugeordnet wird, werden Profile, die die Zielgruppe verlassen, mit einem Status `exited` ebenfalls in exportierte inkrementelle Dateien eingeschlossen.
+* Ein Profil &quot;*ist*&quot;, das in einen inkrementellen Dateiexport einbezogen wird, wenn es für das Segment qualifiziert oder disqualifiziert ist.
+* Ein Profil &quot;*is*&quot;ist in einem inkrementellen Dateiexport enthalten, wenn dem Identitätsdiagramm eine neue Telefonnummer hinzugefügt wird.
+* Ein Profil &quot;*ist nicht*&quot;ist in einem inkrementellen Dateiexport enthalten, wenn der Wert eines der zugeordneten XDM-Felder wie `xdm: loyalty.points`, `xdm: loyalty.tier` und `xdm: personalEmail.address` für ein Profil aktualisiert wird.
+* Jedes Mal, wenn das XDM-Feld `segmentMembership.status` im Zielaktivierungs-Workflow zugeordnet wird, werden Profile, die die Zielgruppe verlassen, *in exportierte inkrementelle Dateien mit dem Status `exited` ebenfalls mit* aufgenommen.
 
 >[!ENDSHADEBOX]
 
@@ -184,7 +186,7 @@ Im ersten Dateiexport nach der Einrichtung des Aktivierungs-Workflows wird die g
 
 | Was einen Zielexport bestimmt | In der exportierten Datei enthaltene Informationen |
 |---------|----------|
-| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan bestimmt den Start eines Zielexports.</li><li>Alle Änderungen an der Zielgruppenzugehörigkeit eines Profils, unabhängig davon, ob es für das Segment qualifiziert oder nicht mehr qualifiziert ist, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte. Änderungen an Attributen oder Identitätszuordnungen für ein Profil qualifizieren ein Profil *nicht* für die Aufnahme in inkrementelle Exporte.</li></ul> | <p>Die Profile, für die die Zielgruppenzugehörigkeit geändert wurde, sowie die neuesten Informationen zu jedem für den Export ausgewählten XDM-Attribut.</p><p>Profile mit dem Status „Beendet“ werden in Zielexporte eingeschlossen, wenn im Zuordnungsschritt das XDM-Feld `segmentMembership.status` ausgewählt wird.</p> |
+| <ul><li>Der in der Benutzeroberfläche oder API festgelegte Exportzeitplan bestimmt den Start eines Zielexports.</li><li>Änderungen in der Zielgruppenzugehörigkeit eines Profils, unabhängig davon, ob es sich für das Segment qualifiziert oder von ihm abweicht, oder Änderungen in Identitätszuordnungen, qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte. Änderungen an Attributen für ein Profil *nicht* qualifizieren ein Profil für die Aufnahme in inkrementelle Exporte.</li></ul> | <p>Die Profile, für die die Zielgruppenzugehörigkeit geändert wurde, sowie die neuesten Informationen zu jedem für den Export ausgewählten XDM-Attribut.</p><p>Profile mit dem Status „Beendet“ werden in Zielexporte eingeschlossen, wenn im Zuordnungsschritt das XDM-Feld `segmentMembership.status` ausgewählt wird.</p> |
 
 {style="table-layout:fixed"}
 
