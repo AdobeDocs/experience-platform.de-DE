@@ -3,7 +3,7 @@ title: Identitätsoptimierungsalgorithmus
 description: Erfahren Sie mehr über den Identity Optimization-Algorithmus im Identity Service.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 2%
@@ -68,7 +68,7 @@ Wenn die eindeutige Namespace-Beschränkung verletzt wird, &quot;wiederholt&quot
 * Das Diagramm würde auf der Grundlage der obigen Reihenfolge wieder aufgebaut. Wenn das Hinzufügen des Links die Beschränkung verletzt (z. B. wenn das Diagramm zwei oder mehr Identitäten mit einem eindeutigen Namespace enthält), werden die Links entfernt.
 * Das resultierende Diagramm entspricht dann der eindeutigen Namespace-Beschränkung, die Sie konfiguriert haben.
 
-![Ein Diagramm, das den Identitätsoptimierungsalgorithmus visualisiert.](../images/ido.png)
+![Ein Diagramm, das den Identitätsoptimierungsalgorithmus visualisiert.](../images/ido_algorithm.png)
 
 ## Beispielszenarien für den Identitätsoptimierungsalgorithmus
 
