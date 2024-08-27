@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insi
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Real-time Customer Data Platform Insights-Datenmodell B2C Edition
 
-Das Real-time Customer Data Platform Insights-Datenmodell für die [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungswidgets nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Informationen zum Erstellen eines Berichtseinblicks-Datenmodells mit Berichtseinblicken über Query Service für die Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards finden Sie in der Dokumentation zu Query Accelerated Store Reporting Insights](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) .[
+Das Real-time Customer Data Platform Insights-Datenmodell für die [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) stellt die Datenmodelle und SQL bereit, die die Einblicke für verschiedene Profil-, Ziel- und Segmentierungswidgets nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle (Key Performance Indicators) zu erstellen. Diese Insights können dann als benutzerdefinierte Widgets für benutzerdefinierte Dashboards verwendet werden. Informationen zum Erstellen eines Berichtseinblicks-Datenmodells mit Berichtseinblicken über Query Service für die Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards finden Sie in der Dokumentation zu Query Accelerated Store Reporting Insights](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md) .[
 
 >[!NOTE]
 >

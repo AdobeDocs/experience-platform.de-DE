@@ -5,7 +5,7 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 83%
@@ -27,11 +27,11 @@ ht-degree: 83%
       - [Übersicht](data-distiller/derived-datasets/overview.md)
       - [Erstellen abgeleiteter Datensätze mit SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Erstellen von dezimalbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Anpassbare Insights für erweiterte App-Berichte {#customizable-insights}
-      - [Übersicht](data-distiller/customizable-insights/overview.md)
-      - [Abfrage pro Modus](data-distiller/customizable-insights/query-pro-mode.md)
-      - [Beschleunigte Abfragen senden](data-distiller/customizable-insights/send-accelerated-queries.md)
-      - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/customizable-insights/reporting-insights-data-model.md)
+   - SQL Insights für erweiterte App-Berichterstellung {#sql-insights}
+      - [Übersicht](data-distiller/sql-insights/overview.md)
+      - [Abfrage pro Modus](data-distiller/sql-insights/query-pro-mode.md)
+      - [Beschleunigte Abfragen senden](data-distiller/sql-insights/send-accelerated-queries.md)
+      - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/sql-insights/reporting-insights-data-model.md)
    - AI-/ML-Funktions-Pipelines {#ml-feature-pipelines}
       - [Übersicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Herstellen einer Verbindung zu Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)

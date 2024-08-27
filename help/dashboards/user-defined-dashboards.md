@@ -2,7 +2,7 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ Das Dialogfeld [!UICONTROL Dashboard erstellen] wird angezeigt. Geben Sie einen 
 
 ![Das Dialogfeld &quot;Dashboard erstellen&quot;](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Benutzer, die die Data Distiller-SKU erworben haben, können benutzerdefinierte SQL-Abfragen verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden Sie im [Handbuch zur Erstellung anpassbarer Insight-Inhalte](./data-distiller/customizable-insights/overview.md) .
+Benutzer, die die Data Distiller-SKU erworben haben, können benutzerdefinierte SQL-Abfragen verwenden, um ihre Einblicke zu erstellen. Anweisungen zu diesem Workflow finden Sie im [Handbuch zur SQL Insight-Erstellung](./data-distiller/sql-insights/overview.md) .
 
 Das neu erstellte leere Dashboard wird mit Ihrem Namen in der oberen linken Ecke der Ansicht angezeigt.
 

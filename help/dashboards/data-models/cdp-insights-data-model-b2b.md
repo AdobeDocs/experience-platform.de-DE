@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insi
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Das Real-time Customer Data Platform Insights-Datenmodell für die B2B Edition s
 >Diese Funktion steht Kunden zur Verfügung, die das Prime- oder das Ultimate-Paket von Real-Time CDP erworben haben. Weitere Informationen finden Sie in der Dokumentation zu verfügbaren [Real-Time CDP-Editionen](../../rtcdp/overview.md#rtcdp-editions) oder wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
 
 <!-- 
-See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
  -->
 
 ## Voraussetzungen

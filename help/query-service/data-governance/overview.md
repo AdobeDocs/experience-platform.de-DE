@@ -2,7 +2,7 @@
 title: Data Governance in Query Service
 description: Dieser Überblick behandelt die wichtigsten Elemente der Data Governance in Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '3129'
 ht-degree: 1%
@@ -93,7 +93,7 @@ Das Schlüsselwort `CREATE VIEW` definiert eine Ansicht einer Abfrage, aber die 
 
 #### Feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze erstellen {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Mit der [attributbasierten Zugriffssteuerungsfunktion](../../access-control/abac/overview.md) können Sie Organisations- oder Datennutzungsbereiche für Ereignis- und Dimensionsdatensätze im [beschleunigten Speicher](../data-distiller/customizable-insights/send-accelerated-queries.md) definieren. Dadurch können Administratoren den Zugriff auf bestimmte Segmente verwalten und den Zugriff für Benutzer oder Benutzergruppen besser verwalten.
+Mit der [attributbasierten Zugriffssteuerungsfunktion](../../access-control/abac/overview.md) können Sie Organisations- oder Datennutzungsbereiche für Ereignis- und Dimensionsdatensätze im [beschleunigten Speicher](../data-distiller/sql-insights/send-accelerated-queries.md) definieren. Dadurch können Administratoren den Zugriff auf bestimmte Segmente verwalten und den Zugriff für Benutzer oder Benutzergruppen besser verwalten.
 
 Um feldbasierte Zugriffsbeschränkungen für beschleunigte Datensätze zu erstellen, können Sie CTAS-Abfragen von Query Service verwenden, um beschleunigte Datensätze zu erstellen und diese Datensätze basierend auf vorhandenen XDM-Schemas oder Ad-hoc-Schemas zu strukturieren. Administratoren können dann [Datennutzungsbezeichnungen für das Schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) oder [Ad-hoc-Schema](./ad-hoc-schema-labels.md#edit-governance-labels) hinzufügen und bearbeiten. Sie können Beschriftungen auf Ihre Schemas über den Arbeitsbereich [!UICONTROL Beschriftungen] in der Benutzeroberfläche von [!UICONTROL Schemas] anwenden, erstellen und bearbeiten.
 

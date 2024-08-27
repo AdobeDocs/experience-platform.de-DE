@@ -2,7 +2,7 @@
 title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
 description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -47,7 +47,7 @@ Der erste Schritt bei der Erstellung Ihrer CLV besteht darin, einen abgeleiteten
 
 ## Erweitern des Insight-Datenmodells und Planen von Aktualisierungen {#extend-data-model-and-set-refresh-schedule}
 
-Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein vorhandenes Adobe Real-Time CDP-Datenmodell erweitern, um mit Ihren CLV-Berichtseinblicken zu interagieren. In der Dokumentation erfahren Sie, wie Sie mit Query Service ein Berichtseinblicke-Datenmodell für die Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen ](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). [ Das Tutorial umfasst die folgenden Schritte:
+Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein vorhandenes Adobe Real-Time CDP-Datenmodell erweitern, um mit Ihren CLV-Berichtseinblicken zu interagieren. In der Dokumentation erfahren Sie, wie Sie mit Query Service ein Berichtseinblicke-Datenmodell für die Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen ](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). [ Das Tutorial umfasst die folgenden Schritte:
 
 * Erstellen Sie ein Modell für die Berichterstellung von Einblicken mit Data Distiller.
 * Erstellen Sie Tabellen, Beziehungen und füllen Sie Daten aus.

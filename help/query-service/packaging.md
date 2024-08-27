@@ -2,7 +2,7 @@
 title: Query Service Packaging
 description: Im folgenden Dokument wird die Verpackung der für Query Service verfügbaren Funktionen und Produkte beschrieben und die Unterschiede zwischen Ad-hoc- und Batch-Abfragen hervorgehoben.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 5%
@@ -67,9 +67,9 @@ In der folgenden Tabelle sind die Auswirkungen der Berechtigung [!DNL Manage Que
 
 {style="table-layout:auto"}
 
-### Relevante anpassbare Insights-Berechtigungen {#customizable-insights-permissions}
+### Relevante SQL Insights-Berechtigungen {#sql-insights-permissions}
 
-Um Daten-Distiller [Anpassbare Insights](./data-distiller/customizable-insights/overview.md) in Dashboards zu erstellen, müssen die folgenden Berechtigungen **3} in Admin Console aktiviert werden.**
+Um Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md) in Dashboards zu erstellen, müssen die folgenden Berechtigungen **** in Admin Console aktiviert werden.
 
 | Berechtigung | Funktion |
 |---|---|
