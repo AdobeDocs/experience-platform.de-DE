@@ -3,9 +3,9 @@ title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '529'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ Wenn Sie mit Ihren Konfigurationen fertig sind, wählen Sie **[!UICONTROL Weiter
 
 ![Die Überprüfungsseite mit hervorgehobenem Abschluss.](../images/rules/finish.png)
 
-Es wird eine Warnung angezeigt, die angibt, dass Ihre neuen Einstellungen keine Auswirkungen auf vorhandene Links in einem Identitätsdiagramm und auf bereits erfasste Experience-Ereignisprofilfragmente haben. Außerdem werden Sie darüber informiert, dass es bis zu sechs Stunden dauern wird, bis Ihre neuen Einstellungen im System angezeigt werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie dann **[!UICONTROL Bestätigen]** aus.
+Es wird eine Warnmeldung angezeigt, die besagt, dass vorhandene Diagramme nur dann vom Diagrammalgorithmus betroffen sind, wenn die Diagramme nach dem Speichern Ihrer Einstellungen aktualisiert werden **und dass die primäre Identität von Ereignisfragmenten im Echtzeit-Kundenprofil nicht aktualisiert wird, selbst wenn sich die Namespace-Priorität ändert.** Darüber hinaus werden Sie benachrichtigt, dass es bis zu **sechs Stunden** dauern wird, bis Ihre neuen Einstellungen wirksam werden. Geben Sie zur Bestätigung Ihren Sandbox-Namen ein und wählen Sie dann **[!UICONTROL Bestätigen]** aus.
 
 ![Das Bestätigungsfenster, das eine Warnung über eine sechsstündige Verzögerung anzeigt, bevor Konfigurationen verarbeitet werden.](../images/rules/confirm-settings.png)
 
