@@ -3,7 +3,7 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
 workflow-type: tm+mt
 source-wordcount: '4202'
 ht-degree: 56%
@@ -39,7 +39,7 @@ Um Zielgruppen für Ziele zu aktivieren, müssen Sie erfolgreich [mit einem Ziel
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Aktualisieren des Enddatums für diesen Datenflusshauptteil"
->abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat als standardmäßiges Enddatum den 1. März 2025 festgelegt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum gestoppt."
+>abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat ein Standardenddatum auf den 1. Mai 2025 gesetzt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum gestoppt."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
