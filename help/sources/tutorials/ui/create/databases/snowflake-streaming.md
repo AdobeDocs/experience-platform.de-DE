@@ -4,9 +4,9 @@ type: Tutorial
 description: Erfahren Sie, wie Sie Daten aus Ihrer Snwoflake-Datenbank auf Experience Platform streamen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 17%
 
 ---
@@ -54,7 +54,7 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und wart
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| Konto | Der Name Ihres [!DNL Snowflake]-Kontos. |
+| Konto | Der Name Ihres [!DNL Snowflake]-Kontos. Konventionen zu Kontonamen finden Sie im [[!DNL Snowflake Streaming] Authentifizierungshandbuch](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Warehouse | Der Name Ihres [!DNL Snowflake] Warehouse. Warehouse verwaltet die Ausführung von Abfragen in [!DNL Snowflake]. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, um Daten an Experience Platform zu bringen. |
 | Datenbank | Der Name Ihrer [!DNL Snowflake] -Datenbank. Die Datenbank enthält die Daten, die Sie zum Experience Platform mitbringen möchten. |
 | Schema | (Optional) Das Datenbankschema, das mit Ihrem [!DNL Snowflake]-Konto verknüpft ist. |
@@ -78,7 +78,9 @@ Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 >[!IMPORTANT]
 >
->In der Quelltabelle muss eine Spalte mit Zeitstempel vorhanden sein, damit ein Streaming-Datenfluss erstellt werden kann. Der Zeitstempel ist erforderlich, damit Experience Platform weiß, wann Daten erfasst und wann inkrementelle Daten gestreamt werden. Sie können rückwirkend eine Zeitstempelspalte für eine bestehende Verbindung hinzufügen und einen neuen Datenfluss erstellen.
+>* In der Quelltabelle muss eine Spalte mit Zeitstempel vorhanden sein, damit ein Streaming-Datenfluss erstellt werden kann. Der Zeitstempel ist erforderlich, damit Experience Platform weiß, wann Daten erfasst und wann inkrementelle Daten gestreamt werden. Sie können rückwirkend eine Zeitstempelspalte für eine bestehende Verbindung hinzufügen und einen neuen Datenfluss erstellen.
+>
+>* Stellen Sie sicher, dass die Groß-/Kleinschreibung der Datenfelder in Ihrer Beispiel-Quelldatendatei den Anweisungen von [!DNL Snowflake] zur Fallauflösung für Kennungen entspricht. Weitere Informationen finden Sie im Dokument [[!DNL Snowflake] zur Identifizierungsweise](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) .
 
 Der Schritt [!UICONTROL Daten auswählen] wird angezeigt. In diesem Schritt müssen Sie die Daten auswählen, die Sie in Experience Platform importieren möchten, Zeitstempel und Zeitzonen konfigurieren und eine Beispieldatendatei für die Aufnahme von Rohdaten bereitstellen.
 

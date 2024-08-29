@@ -5,10 +5,10 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
+source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 11%
+source-wordcount: '791'
+ht-degree: 18%
 
 ---
 
@@ -33,13 +33,19 @@ Durch die Verwendung von [!DNL Kafka Connect] zeichnet die Streaming-Quelle [!DN
 
 Im folgenden Abschnitt werden die erforderlichen Schritte beschrieben, die ausgeführt werden müssen, bevor Sie Daten von Ihrer [!DNL Snowflake]-Datenbank an Experience Platform streamen können:
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Aktualisieren der IP-Adressen-Zulassungsliste
+
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources).
+
+Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Amazon Redshift] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
+
+### Sammeln erforderlicher Anmeldedaten
 
 Damit [!DNL Flow Service] eine Verbindung zu [!DNL Snowflake] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | --- | --- |
-| `account` | Der vollständige Kontoname, der Ihrem [!DNL Snowflake] -Konto zugeordnet ist. Ein voll qualifizierter [!DNL Snowflake] -Kontoname enthält Ihren Kontonamen, Ihre Region und Ihre Cloud-Plattform. Beispiel: `cj12345.east-us-2.azure`. Weiterführende Informationen zu Kontonamen finden Sie in diesem Abschnitt [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
+| `account` | Die vollständige Kontokennung (Kontoname oder Kontostandort) Ihres [!DNL Snowflake]-Kontos, das mit dem Suffix `snowflakecomputing.com` angehängt wird. Die Kontokennung kann in verschiedenen Formaten verwendet werden: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (z. B. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (z. B. `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (z. B. `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Weitere Informationen finden Sie unter [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
 | `warehouse` | Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
 | `database` | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie an die Plattform übermitteln möchten. |
 | `username` | Der Benutzername für das [!DNL Snowflake]-Konto. |
@@ -47,6 +53,7 @@ Damit [!DNL Flow Service] eine Verbindung zu [!DNL Snowflake] herstellen kann, m
 | `role` | (Optional) Eine benutzerdefinierte Rolle, die für einen Benutzer für eine bestimmte Verbindung bereitgestellt werden kann. Wenn dieser Wert nicht angegeben wird, wird standardmäßig `public` verwendet. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Snowflake] ist `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
+{style="table-layout:auto"}
 
 ### Rolleneinstellungen konfigurieren {#configure-role-settings}
 
