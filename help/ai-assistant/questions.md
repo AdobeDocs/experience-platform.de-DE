@@ -2,7 +2,7 @@
 title: Fragenleitfaden für den AI-Assistenten
 description: Lesen Sie dieses Dokument, um Beispielfragen zu erfahren, die Sie bei der Abfrage von AI Assistant verwenden können.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 1%
@@ -33,6 +33,8 @@ Die folgenden Beispielfragen sind nach Zielen gruppiert, die Sie bei der Verwend
 ## Operative Einblicke nach Entitäts- und Produktwissensfragen{#objects-questions}
 
 Die folgenden Fragen werden nach Datenobjekten gruppiert und entweder als [operative Einblicke](./home.md#operational-insights) oder als [Produktkenntnis](./home.md#product-knowledge) klassifiziert.
+
+![](./images/prompt.png)
 
 * **Zielgruppen - operative Einblicke**
    * Welche Zielgruppen verwenden andere Zielgruppen?
