@@ -2,10 +2,10 @@
 description: Erfahren Sie, wie Sie beim Aktivieren von Daten für dateibasierte Ziele Dateiformatierungsoptionen konfigurieren
 title: Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 50%
+source-wordcount: '1228'
+ht-degree: 48%
 
 ---
 
@@ -68,17 +68,21 @@ Zeigen Sie die folgenden Beispiele des Inhalts in den exportierten CSV-Dateien m
 >title="Anführungszeichen"
 >abstract="Verwenden Sie diese Option, wenn Sie doppelte Anführungszeichen aus exportierten Zeichenfolgen entfernen möchten. In der Dokumentation finden Sie Beispiele für jede Auswahl."
 
-Verwenden Sie diese Option, wenn Sie doppelte Anführungszeichen aus exportierten Zeichenfolgen entfernen möchten. Verfügbare Optionen sind:
+Mit dieser Option können Sie steuern, ob doppelte Anführungszeichen in exportierten Zeichenfolgen entfernt oder beibehalten werden sollen.
+
+Folgende Optionen sind verfügbar:
 
 * **[!UICONTROL Null-Zeichen (\0000)]**. Verwenden Sie diese Option, um doppelte Anführungszeichen aus exportierten CSV-Dateien zu entfernen.
-* **[!UICONTROL Doppelte Anführungszeichen (&quot;)]**. Verwenden Sie diese Option, um doppelte Anführungszeichen in Ihren exportierten CSV-Dateien zu beibehalten.
+* **[!UICONTROL Doppelte Anführungszeichen (&quot;)]**. Verwenden Sie diese Option, wenn die Zeichenfolgenwerte ein Trennzeichen oder doppelte Anführungszeichen enthalten. Mit dieser Option können Sie die Trennzeichen oder doppelten Anführungszeichen in Ihren exportierten CSV-Dateien beibehalten, sodass Sie richtig erkennen können, welcher Wert zu welchem Feld gehört.
 
 #### Beispiele
 
+Betrachten Sie den Eingabewert `Anna,"Doe,John"`.
+
 Zeigen Sie die folgenden Beispiele des Inhalts aus exportierten CSV-Dateien mit jeder Auswahl in der Benutzeroberfläche an.
 
-* Beispielausgabe mit ausgewähltem **[!UICONTROL Null-Zeichen (\0000)]**: `Test,John,LastName`
-* Beispielausgabe mit ausgewählten **[!UICONTROL Doppelzitaten (&quot;)]**: `"Test","John","LastName"`
+* Beispielausgabe mit ausgewähltem **[!UICONTROL Null-Zeichen (\0000)]**: `Anna,Doe,John`
+* Beispielausgabe mit ausgewählten **[!UICONTROL Doppelzitaten (&quot;)]**: `Anna,"Doe,John"`
 
 ### Escape-Zeichen {#escape-character}
 
