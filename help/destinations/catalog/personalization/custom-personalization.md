@@ -3,10 +3,10 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Zielgruppendaten aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Zielgruppenmitgliedschaft des Benutzerprofils.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
+source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 57%
+source-wordcount: '962'
+ht-degree: 51%
 
 ---
 
@@ -35,7 +35,11 @@ Richten Sie dieses Ziel ein, damit externe Personalisierungsplattformen, Content
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) oder [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). Sie müssen eines dieser SDKs verwenden, um dieses Ziel verwenden zu können.
+Für dieses Ziel ist je nach Implementierung eine der folgenden Datenerfassungsmethoden erforderlich:
+
+* Verwenden Sie das [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) , wenn Sie Daten von Ihrer Website erfassen möchten.
+* Verwenden Sie das [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) , wenn Sie Daten aus Ihrer Mobile App erfassen möchten.
+* Verwenden Sie die [Edge Network-Server-API](../../../server-api/overview.md) , wenn Sie das [Web-SDK](/help/web-sdk/home.md) oder das [Mobile-SDK](https://developer.adobe.com/client-sdks/documentation/) nicht verwenden oder wenn Sie das Benutzererlebnis auf der Grundlage von Profilattributen personalisieren möchten.
 
 >[!IMPORTANT]
 >
