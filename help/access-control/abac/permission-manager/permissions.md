@@ -1,9 +1,10 @@
 ---
 title: Berechtigungsmanager für attributbasierte Zugriffssteuerung
 description: Erfahren Sie, wie Sie mit dem Berechtigungs-Manager in Adobe Experience Platform Berichte erstellen und Zugriffsberechtigungen überprüfen können.
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 4%
 
 ---
@@ -40,7 +41,7 @@ Für einen detaillierteren Bericht können Sie die Ressource mit Aktionen in ein
 
 >[!INFO]
 >
->[!UICONTROL Resource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Für jeden Bericht kann nur eine [!UICONTROL Ressource] ausgewählt werden. Eine Aktion oder Sandbox kann nach dem Hinzufügen entfernt werden, indem Sie die **&#39;x&#39;** neben der Auswahl auswählen, die Sie entfernen möchten.
+>[!UICONTROL Resource], [!UICONTROL Aktionen] und [!UICONTROL Sandboxes] sind keine Pflichtfelder. Eine Aktion oder Sandbox kann nach dem Hinzufügen entfernt werden, indem Sie die **&#39;x&#39;** neben der Auswahl auswählen, die Sie entfernen möchten.
 
 ![Die Dropdown-Listen Ressource, Aktionen, Sandboxes und Ergebnisse anzeigen hervorgehoben](../../images/permission-manager/users-additional-attributes-select.png)
 
