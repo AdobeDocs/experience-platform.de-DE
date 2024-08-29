@@ -3,10 +3,10 @@ keywords: Experience Platform;Fehlerbehebung;Leitplanken;Richtlinien;
 title: Schutzmaßnahmen bei der Datenaufnahme
 description: Erfahren Sie mehr über Limits für die Datenerfassung in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: a574e30a12f56618e8bfaff988aa095025b36a28
+source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 47%
+source-wordcount: '737'
+ht-degree: 46%
 
 ---
 
@@ -34,7 +34,7 @@ In der folgenden Tabelle sind Schutzmaßnahmen aufgeführt, die bei der Verwendu
 | Data-Lake-Aufnahme mithilfe von Batch-Quellen | <ul><li>Sie können mit Batch-Aufnahme-Quellen wie [!DNL Azure Blob], [!DNL Amazon S3] und [!DNL SFTP] bis zu 200 GB Daten pro Stunde in den Data Lake aufnehmen.</li><li>Die Batch-Größe sollte zwischen 256 MB und 100 GB liegen. Dies gilt sowohl für unkomprimierte als auch für komprimierte Daten. Wenn komprimierte Daten im Data Lake unkomprimiert sind, gelten diese Einschränkungen.</li><li>Die maximale Anzahl von Dateien pro Batch beträgt 1.500.</li><li>Die Mindestgröße einer Datei oder eines Ordners beträgt 1 Byte. Es ist nicht möglich, Dateien oder Ordner mit der Größe 0 Byte zu erfassen.</li></ul> | Lesen Sie die [Quellenübersicht](../sources/home.md) für einen Katalog von Quellen, die Sie für die Datenerfassung verwenden können. |
 | Batch-Aufnahme in Profil | <ul><li>Die maximale Größe einer Datensatzklasse beträgt 100 KB (fest).</li><li>Die maximale Größe einer ExperienceEvent-Klasse beträgt 10 KB (hart).</li></ul> | |
 | Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die System-Performance. | Dies ist ein weiches Limit. Es ist möglich, über ein weiches Limit hinauszugehen, jedoch stellen weiche Limits einen empfohlenen Richtwert für die System-Performance dar. |
-| Verschlüsselte Datenaufnahme | Die maximal unterstützte Größe einer einzelnen verschlüsselten Datei beträgt 1 GB. Sie können beispielsweise Daten von 2 oder mehr GBs in einem einzigen Datenfluss erfassen, jedoch darf keine einzelne Datei im Datenfluss-Lauf 1 GB überschreiten. | Weitere Informationen finden Sie im Leitfaden zur [verschlüsselten Datenerfassungs-API](../sources/tutorials/api/encrypt-data.md) . |
+| Verschlüsselte Datenaufnahme | Die maximal unterstützte Größe einer einzelnen verschlüsselten Datei beträgt 1 GB. Sie können beispielsweise Daten von 2 oder mehr GBs in einem einzigen Datenfluss erfassen, jedoch darf keine einzelne Datei im Datenfluss-Lauf 1 GB überschreiten. | Die Erfassung verschlüsselter Daten kann länger dauern als die normale Datenerfassung. Weitere Informationen finden Sie im Leitfaden zur [verschlüsselten Datenerfassungs-API](../sources/tutorials/api/encrypt-data.md) . |
 
 {style="table-layout:auto"}
 
