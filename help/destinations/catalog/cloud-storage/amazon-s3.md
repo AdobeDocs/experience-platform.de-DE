@@ -2,10 +2,10 @@
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem S3-Speicher in Amazon Web Services (AWS), um in regelmäßigen Abständen CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 51%
+source-wordcount: '1499'
+ht-degree: 49%
 
 ---
 
@@ -109,7 +109,7 @@ Verwenden Sie diese Authentifizierungsmethode, wenn Sie Ihren Amazon S3-Zugriffs
 
 Verwenden Sie diese Authentifizierungstyp, wenn Sie Konto- und Geheimschlüssel nicht mit Adobe teilen möchten. Stattdessen stellt Experience Platform über rollenbasierten Zugriff eine Verbindung zu Ihrem Amazon S3-Standort her.
 
-Dazu müssen Sie in der AWS-Konsole einen angenommenen Benutzer für das Adobe mit den [erforderlichen Berechtigungen](#required-s3-permission) erstellen, um in Ihre Amazon S3-Behälter zu schreiben. Erstellen Sie eine **[!UICONTROL vertrauenswürdige Entität]** in AWS mit dem Adobe-Konto **[!UICONTROL 670664943635]**. Weitere Informationen finden Sie in der [AWS-Dokumentation zum Erstellen von Rollen](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Dazu müssen Sie in der AWS-Konsole einen angenommenen Benutzer für das Adobe mit den [erforderlichen Berechtigungen](#minimum-permissions-iam-user) erstellen, um in Ihre Amazon S3-Behälter zu schreiben. Erstellen Sie eine **[!UICONTROL vertrauenswürdige Entität]** in AWS mit dem Adobe-Konto **[!UICONTROL 670664943635]**. Weitere Informationen finden Sie in der [AWS-Dokumentation zum Erstellen von Rollen](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 * **[!DNL Role]**: Fügen Sie den ARN der Rolle ein, die Sie in AWS für den Adobe-Benutzer erstellt haben. Das Muster ähnelt `arn:aws:iam::800873819705:role/destinations-role-customer`.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien eine Verschlüsselung hinzuzufügen. Ein Beispiel für einen korrekt formatierten Verschlüsselungsschlüssel finden Sie in der folgenden Abbildung.
@@ -162,6 +162,38 @@ Um Daten erfolgreich mit Ihrem [!DNL Amazon S3]-Speicherort zu verbinden und dor
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### Mindestens erforderliche Berechtigungen für die Rollenauthentifizierung von IAM {#minimum-permissions-iam-user}
+
+Stellen Sie beim Konfigurieren der IAM-Rolle als Kunde sicher, dass die mit der Rolle verknüpfte Berechtigungsrichtlinie die erforderlichen Aktionen für den Zielordner im Behälter und die Aktion `s3:ListBucket` für den Stammordner des Behälters enthält. Sehen Sie sich unten ein Beispiel für die Mindestberechtigungsrichtlinie für diesen Authentifizierungstyp an:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+```
 
 <!--
 
