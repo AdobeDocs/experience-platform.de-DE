@@ -2,10 +2,10 @@
 title: Vom Kunden verwaltete Schlüssel in Adobe Experience Platform
 description: Erfahren Sie, wie Sie eigene Verschlüsselungsschlüssel für in Adobe Experience Platform gespeicherte Daten einrichten.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5a5d35dad5f1b89c0161f4b29722b76c3caf3609
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 36%
+source-wordcount: '752'
+ht-degree: 29%
 
 ---
 
@@ -15,7 +15,7 @@ In Adobe Experience Platform gespeicherte Daten werden im Ruhezustand mithilfe v
 
 >[!NOTE]
 >
->Daten in Adobe Experience Platform Data Lake und Profilspeicher werden mit CMK verschlüsselt. Diese werden als Ihre primären Datenspeicher betrachtet.
+>Kundenprofildaten, die im [!DNL Azure Data Lake] der Plattform und im [!DNL Azure Cosmos DB] Profilspeicher gespeichert sind, werden nach Aktivierung ausschließlich mit CMK verschlüsselt. Die Sperrung der Schlüssel in Ihren primären Datenspeichern kann zwischen **ein paar Minuten und 24 Stunden** dauern und kann bei vorübergehenden oder sekundären Datenspeichern **bis zu 7 Tage** dauern. Weitere Informationen finden Sie im Abschnitt [Implikationen beim Sperren des Schlüsselzugriffs](#revoke-access).
 
 Dieses Dokument bietet einen allgemeinen Überblick über den Prozess zur Aktivierung der Funktion für kundenverwaltete Schlüssel (CMK) in Platform und die erforderlichen Informationen zum Ausführen dieser Schritte.
 
@@ -54,15 +54,22 @@ Der Prozess sieht folgendermaßen aus:
 
 Sobald der Einrichtungsprozess abgeschlossen ist, werden alle Daten aus allen Sandboxes, die in Platform integriert sind, mit Ihrer [!DNL Azure]-Schlüsseleinrichtung verschlüsselt. Zur Verwendung von CMK nutzen Sie die [!DNL Microsoft Azure]-Funktionen, die Teil des [öffentlichen Vorschauprogramms](https://azure.microsoft.com/de-de/support/legal/preview-supplemental-terms/) sein können.
 
-## Zugriff sperren {#revoke-access}
+## Auswirkungen der Sperrung des Schlüsselzugriffs {#revoke-access}
 
-Wenn Sie den Platform-Zugriff auf Ihre Daten sperren möchten, können Sie die mit dem Programm verknüpfte Benutzerrolle aus dem Schlüsseltresor in [!DNL Azure] entfernen.
+Das Sperren oder Deaktivieren des Zugriffs auf die Key Vault-, Schlüssel- oder CMK-App kann zu erheblichen Unterbrechungen führen, wozu auch das Umbrechen von Änderungen an den Vorgängen Ihrer Plattform gehört. Sobald diese Schlüssel deaktiviert sind, können Daten in Platform nicht mehr zugänglich sein, und alle nachgelagerten Vorgänge, die auf diese Daten angewiesen sind, funktionieren nicht mehr. Es ist von entscheidender Bedeutung, die nachgelagerten Auswirkungen vollständig zu verstehen, bevor Sie Änderungen an Ihren Schlüsselkonfigurationen vornehmen.
 
->[!WARNING]
->
->Das Deaktivieren der Schlüssel-Vault-, Schlüssel- oder CMK-App kann zu einer brechenden Änderung führen. Sobald die Schlüssel-Vault-, Schlüssel- oder CMK-App deaktiviert ist und die Daten in Platform nicht mehr verfügbar sind, sind alle nachgelagerten Vorgänge im Zusammenhang mit diesen Daten nicht mehr möglich. Stellen Sie sicher, dass Sie die nachgelagerten Auswirkungen der Sperrung des Platform-Zugriffs auf Ihren Schlüssel verstehen, bevor Sie Änderungen an Ihrer Konfiguration vornehmen.
+Wenn Sie sich entscheiden, den Platform-Zugriff auf Ihre Daten zu sperren, können Sie dies tun, indem Sie die mit der Anwendung verknüpfte Benutzerrolle aus dem Key Vault in [!DNL Azure] entfernen.
 
-Nach dem Entfernen des Schlüsselzugriffs oder dem Deaktivieren/Löschen des Schlüssels aus Ihrem [!DNL Azure]-Schlüsselvault kann es einige Minuten bis zu 24 Stunden dauern, bis diese Konfiguration in die primären Datenspeicher übertragen wird. Platform-Workflows umfassen auch zwischengespeicherte und vorübergehende Datenspeicher, die für die Leistung und die Kernfunktionen der Anwendung erforderlich sind. Die Übertragung der CMK-Sperrung durch diese zwischengespeicherten und vorübergehenden Speicher kann bis zu sieben Tage dauern, wie von ihren Datenverarbeitungs-Workflows bestimmt. Dies bedeutet beispielsweise, dass das Profil-Dashboard Daten aus seinem Cache-Datenspeicher aufbewahrt und anzeigt und es sieben Tage dauert, bis die im Cache-Datenspeicher gespeicherten Daten im Rahmen des Aktualisierungszyklus ablaufen. Die gleiche Zeitverzögerung gilt für Daten, die erneut verfügbar werden, wenn der Zugriff auf das Programm erneut aktiviert wird.
+### Zeitpläne für die Propagierung {#propagation-timelines}
+
+Nachdem der Schlüsselzugriff von Ihrem [!DNL Azure] Key Vault widerrufen wurde, werden die Änderungen wie folgt übertragen:
+
+| **Speichertyp** | **Beschreibung** | **Planung** |
+|---|---|---|
+| Primäre Datenspeicher | Zu diesen Stores gehören Azure Data Lake und Azure Cosmos DB Profile Stores. Sobald der Zugriff auf Schlüssel widerrufen wurde, ist der Zugriff auf Daten nicht mehr möglich. | Ein **paar Minuten bis 24 Stunden**. |
+| Zwischengespeicherte/Übergangs-Datenspeicher | Umfasst Datenspeicher, die für Leistung und Kernanwendungsfunktionen verwendet werden. Die Auswirkungen der wichtigsten Sperrung sind verzögert. | **Bis zu 7 Tage**. |
+
+Beispielsweise zeigt das Profil-Dashboard bis zu sieben Tage lang, bevor die Daten ablaufen, weiterhin Daten aus dem Cache an und wird aktualisiert. Ebenso dauert es ebenso lange, den Zugriff auf die Anwendung erneut zu aktivieren, bis die Datenverfügbarkeit in diesen Stores wiederhergestellt ist.
 
 >[!NOTE]
 >
