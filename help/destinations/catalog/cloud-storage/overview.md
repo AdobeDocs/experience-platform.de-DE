@@ -3,10 +3,10 @@ keywords: Cloud-Speicherziel;Cloud-Speicher
 title: Übersicht über die Cloud-Speicher-Ziele
 description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 50%
+source-wordcount: '453'
+ht-degree: 42%
 
 ---
 
@@ -62,6 +62,13 @@ Ordnerpfad an Ihrem Speicherort: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12
 
 Eingabe: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 Ordnerpfad an Ihrem Speicherort: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Weitere Makros**
+
+Ähnlich wie in den obigen Beispielen können Sie weitere Makros verwenden, um eine benutzerdefinierte Ordnerstruktur in Ihrem Ordnerspeicherort zu erstellen:
+
+* `%DATETIME%` oder `%TIMESTAMP%` , um einen benutzerdefinierten Ordnernamen hinzuzufügen, der auf der Exportzeit der Dateien basiert. Das Format für das erste Makro ist `MMDDYYYY_HHMMSS` und das UNIX-10-stellige Format für das zweite Makro.
+* `%DESTINATION_NAME%` , um einen benutzerdefinierten Ordner hinzuzufügen, der auf dem Namen des Ziel-Datenflusses basiert.
 
 ## Datenexporttyp {#export-type}
 
