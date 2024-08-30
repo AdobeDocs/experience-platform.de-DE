@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Quell-Connectoren
 user-guide-description: Nehmen Sie Daten aus verschiedenen Quellen auf. Erfahren Sie, wie Sie bereits aufgenommene Daten strukturieren, kennzeichnen und erweitern können.
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 97%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 97%
       - Feldzuordnungen {#mapping}
          - [Analytics-Feldzuordnungen](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager-Feldzuordnungen](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Zielfeldzuordnungen](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage-Feldzuordnungen](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics-Feldzuordnungen](connectors/adobe-applications/mapping/dynamics.md)
          - [Salesforce-Feldzuordnungen](connectors/adobe-applications/mapping/salesforce.md)
