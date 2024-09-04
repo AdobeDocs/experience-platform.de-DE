@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
+source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 8%
+source-wordcount: '2664'
+ht-degree: 9%
 
 ---
 
@@ -66,7 +66,7 @@ In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte,
 | **[!UICONTROL Lizenzbetrag]** | Der vertraglich vereinbarte Wert für den Höchstbetrag der Primären Metrik, wie in Ihrem Produktlizenzvertrag vereinbart. |
 | **[!UICONTROL Verwendung]** | Die Menge Ihrer verwendeten primären Metrik. Dieser Wert gibt die Gesamtverwendung dieser Metrik über alle Sandboxes hinweg an, entweder in der Produktion oder in der Entwicklung. |
 | **[!UICONTROL Nutzung %]** | Der Prozentsatz Ihrer primären Metrik, der gemäß Ihrem Lizenzbetrag verwendet wird. |
-| **[!UICONTROL Nutzung der Prognose]** | (**Beta**) Der prognostizierte Nutzungsprozentsatz Ihrer primären Metrik entsprechend Ihrem Lizenzbetrag. |
+| **[!UICONTROL Nutzung der Prognose]** | Der prognostizierte Nutzungsprozentsatz Ihrer primären Metrik entsprechend Ihrem Lizenzbetrag. |
 
 >[!NOTE]
 >
@@ -74,31 +74,27 @@ In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte,
 
 Die Tabelle zeigt die primäre Metrik für jedes Produkt an, da jedes Produkt zahlreiche Metriken verfolgen kann.
 
-### [!BADGE Beta]{type=informative} Erwartete Verwendung {#predicted-usage}
+### Prognostizierte Nutzung {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Prognostizierte Nutzung"
-abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
+>abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Es wird erwartet, dass die Nutzung die prognostizierten Werte zwischen {startDate} und {endDate} erreicht. Die Daten wurden zuletzt am {collectionDate} erfasst. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="Prognostizierte Nutzung"
-abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
-
->[!AVAILABILITY]
->
-Die Funktion zur Vorhersage künftiger Lizenznutzung befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalitäten können sich ändern.
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="Prognostizierte Nutzung"
+>abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Es wird erwartet, dass die Nutzung die prognostizierten Werte zwischen {startDate} und {endDate} erreicht. Die Daten wurden zuletzt am {collectionDate} erfasst. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 
 Proaktive Verwaltung und Optimierung Ihrer Lizenzierungsressourcen auf der Grundlage aufschlussreicher Nutzungsvorhersagen. In der Spalte [!UICONTROL Erwartete Nutzung] wird die künftige Lizenznutzung auf Sandbox-Ebene für alle Produktions- und Entwicklungs-Sandboxes für all Ihre gekauften Produkte genau vorhergesagt. Diese Warnfunktion bietet eine Prognose der zukünftigen Lizenznutzung für sechs Wochen, basierend auf Ihrer Nutzung bis zum 15. dieses Kalendermonats. Prognosen werden mit einer unteren und einer oberen Grenze bereitgestellt.
 
 >[!IMPORTANT]
 >
-Prognosen werden monatlich aktualisiert. Das Datum der Aktualisierung ist in einem Infosymbol (![Dieses Infosymbol) enthalten.](../images/license-usage/info-icon.png)) über dem Spaltentitel.
+>Prognosen werden monatlich aktualisiert. Das Datum der Aktualisierung ist in einem Infosymbol (![Dieses Infosymbol) enthalten.](../images/license-usage/info-icon.png)) über dem Spaltentitel.
 
 Um eine Zusammenfassung der Nutzung einer Produktberechtigungen anzuzeigen, wählen Sie ein Produkt aus der Liste [!UICONTROL Überblick] aus.
 
@@ -108,7 +104,7 @@ Die Registerkarte Zusammenfassung wird angezeigt. Sie können die auf den Regist
 
 >[!NOTE]
 >
-Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht.
+>Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht.
 
 ![Die Zusammenfassungsansicht eines Platform-Produkts mit hervorgehobener Spalte zur prognostizierten Nutzung.](../images/license-usage/summary-predicted-usage.png)
 
@@ -120,7 +116,7 @@ Der Prozentsatz der prognostizierten Nutzung wird wie folgt ermittelt:
 
 >[!NOTE]
 >
-&quot;Fast identisch&quot;bedeutet in diesem Zusammenhang, dass die Werte statistisch auf zwei Dezimalstellen signifikant sind (beispielsweise werden eine untere Grenze von 0,342 und eine obere Grenze von 0,344 auf 34 % gerundet).
+>&quot;Fast identisch&quot;bedeutet in diesem Zusammenhang, dass die Werte statistisch auf zwei Dezimalstellen signifikant sind (beispielsweise werden eine untere Grenze von 0,342 und eine obere Grenze von 0,344 auf 34 % gerundet).
 
 Die prognostizierte Nutzungsfunktion unterstützt die folgenden Metriken:
 
@@ -136,23 +132,23 @@ Um weitere Metriken und detaillierte Einblicke in die Nutzung Ihrer Produktlizen
 
 ![Die Zusammenfassungsansicht eines Platform-Produkts, die alle für dieses Produkt verfügbaren Metriken anzeigt.](../images/license-usage/summary-tab.png)
 
-Auf der Registerkarte &quot;Zusammenfassung&quot;enthält die Tabelle die Spalte [!UICONTROL Metrik] . Diese für Menschen lesbaren Beschreibungen zeigen alle Metriken an, die für diesen Typ verwendet werden of Sandbox.
+Auf der Registerkarte &quot;Zusammenfassung&quot;enthält die Tabelle die Spalte [!UICONTROL Metrik] . Diese für Menschen lesbaren Beschreibungen zeigen alle Metriken an, die für diesen Sandbox-Typ verwendet werden.
 
 ### Sandbox auswählen {#select-sandbox}
 
-So ändern Sie die Ansicht zwischen Produktions- und Entwicklungs-Sandbox-Typen: select entweder [!UICONTROL Produktions-Sandboxes] oder [!UICONTROL Entwicklungs-Sandboxes]. Der ausgewählte Sandbox-Typ is angezeigt durch das Optionsfeld neben dem Sandbox-Namen.
+Um die Ansicht zwischen Produktions- und Entwicklungs-Sandbox-Typen zu ändern, wählen Sie entweder [!UICONTROL Produktions-Sandboxes] oder [!UICONTROL Entwicklungs-Sandboxes] aus. Der ausgewählte Sandbox-Typ wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
 
-Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. In Mit anderen Worten: Wenn Sie [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] auswählen, werden Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereitgestellt.
+Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Mit anderen Worten: Durch die Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] werden Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereitgestellt.
 
 ![Die Zusammenfassungsansicht eines Platform-Produkts mit Produktions-Sandboxes und Entwicklungs-Sandboxes hervorgehoben.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
-Die Berechtigung zum Anzeigen des Dashboards zur Lizenznutzung muss auf Sandbox-Ebene angegeben werden. Fügen Sie den einzelnen Sandboxes Berechtigungen hinzu, um sie im Dashboard anzuzeigen. Diese Einschränkung wird in einer zukünftigen Version behoben. In der Zwischenzeit ist die folgende Problemumgehung verfügbar:
+>Die Berechtigung zum Anzeigen des Dashboards zur Lizenznutzung muss auf Sandbox-Ebene angegeben werden. Fügen Sie den einzelnen Sandboxes Berechtigungen hinzu, um sie im Dashboard anzuzeigen. Diese Einschränkung wird in einer zukünftigen Version behoben. In der Zwischenzeit ist die folgende Problemumgehung verfügbar:
 >
-1. Erstellen Sie ein Produktprofil in der Adobe Admin Console.
-2. Fügen Sie unter Berechtigungen in der Kategorie Sandbox alle Sandboxes hinzu, die Sie im Dashboard zur Lizenznutzung anzeigen möchten.
-3. Fügen Sie unter der Kategorie Berechtigungen für Benutzer-Dashboard die Berechtigung &quot;Dashboard zur Nutzung der Lizenz anzeigen&quot;hinzu.
+>1. Erstellen Sie ein Produktprofil in der Adobe Admin Console.
+>2. Fügen Sie unter Berechtigungen in der Kategorie Sandbox alle Sandboxes hinzu, die Sie im Dashboard zur Lizenznutzung anzeigen möchten.
+>3. Fügen Sie unter der Kategorie Berechtigungen für Benutzer-Dashboard die Berechtigung &quot;Dashboard zur Nutzung der Lizenz anzeigen&quot;hinzu.
 
 ## Registerkarte [!UICONTROL Details] {#details-tab}
 
@@ -201,7 +197,7 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 | [!UICONTROL Datenexportgröße] | Die Menge der Daten, die durch Datensatzaktivierungen in einem Jahr gesendet werden. |
 | [!UICONTROL Datenexporte] | Die Gesamtgröße der Datensätze, die in einem Jahr (direkt oder indirekt) in eine Nicht-Adobe-Lösung exportiert werden können. |
 | [!UICONTROL  Data Lake Storage] | Die Menge, die für den Analysedatenspeicher in Adobe Experience Platform verwendet wird. |
-| [!UICONTROL Interagierbare Zielgruppe] | Diese Metrik bezieht sich auf die Zielgruppe von interagierbaren Profilen. Ein interagierbares Profil ist ein Datensatz mit Informationen, die eine Person repräsentieren und im Profil-Dienst dargestellt werden. Diese Datensätze sind Profile, mit denen Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Versand-, Experimentierungs- oder Orchestrierungsfunktionen von Journey Optimizer interagiert haben. |
+| [!UICONTROL Interagierbare Zielgruppe] | Diese Metrik bezieht sich auf die Zielgruppe von interagierbaren Profilen. Ein ansprechbares Profil ist ein Eintrag mit Informationen, die einen Kontakt repräsentieren und im Profil-Service dargestellt werden. Diese Einträge sind Profile, mit denen Sie in den letzten 12 Monaten mithilfe der Authoring-, Entscheidungs-, Versand-, Experimentierungs- oder Orchestrierungsfunktionen von Journey Optimizer interagiert haben. |
 | [!UICONTROL Look-alike-Zielgruppen] | Zählung der Zielgruppen, die durch Modellierung einer bestehenden Verbraucherzielgruppe generiert werden, um Personenprofile zu identifizieren, die der vorhandenen Verbraucherzielgruppe ähnlich sind. |
 | [!UICONTROL Anzahl der AMM-Modelle] | Zählung des maschinellen Lernmodells (integrierter Adobe Mix Modeler), mit dem ein bestimmtes, auf Ihren Investitionen basierendes Ergebnis gemessen und/oder vorhergesagt werden kann. |
 | [!UICONTROL Anzahl der Sandboxes] | Zählung der logischen Trennungen innerhalb Ihrer Instanz eines Adobe On-Demand-Dienstes, der auf Adobe Experience Platform-Isolationsdaten und -Vorgänge zugreift. |
@@ -213,7 +209,7 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 
 >[!TIP]
 >
-Sie können Ihre Lizenzberechtigungen in Ihrem Kundenauftrag überprüfen, um Metriken wie Ihre &quot;Speicherzulage&quot;zu berechnen.<br>Beispiel:<ul><li>Speicherzulage = Die Anzahl der &quot;autorisierten Profile&quot;in Ihrem Vertrag X Durchschnittliche Profilreichweite</li></ul>
+>Sie können Ihre Lizenzberechtigungen in Ihrem Kundenauftrag überprüfen, um Metriken wie Ihre &quot;Speicherzulage&quot;zu berechnen.<br>Beispiel:<ul><li>Speicherzulage = Die Anzahl der &quot;autorisierten Profile&quot;in Ihrem Vertrag X Durchschnittliche Profilreichweite</li></ul>
 
 Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
 
@@ -228,7 +224,7 @@ Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metrike
 
 >[!WARNING]
 >
-Das Dashboard zur Lizenznutzung zeigt nur die neueste Lizenz an, die für Ihr Unternehmen bereitgestellt wurde. Wenn die neueste für Ihre Organisation bereitgestellte Lizenz nicht in der obigen Tabelle angezeigt wird, wird das Dashboard zur Lizenzverwendung möglicherweise nicht ordnungsgemäß angezeigt. Die Unterstützung für zusätzliche Lizenzen und mehrere Lizenzen in einer Organisation ist für eine künftige Version geplant.
+>Das Dashboard zur Lizenznutzung zeigt nur die neueste Lizenz an, die für Ihr Unternehmen bereitgestellt wurde. Wenn die neueste für Ihre Organisation bereitgestellte Lizenz nicht in der obigen Tabelle angezeigt wird, wird das Dashboard zur Lizenzverwendung möglicherweise nicht ordnungsgemäß angezeigt. Die Unterstützung für zusätzliche Lizenzen und mehrere Lizenzen in einer Organisation ist für eine künftige Version geplant.
 
 ## Nächste Schritte
 
