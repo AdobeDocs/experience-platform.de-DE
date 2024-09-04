@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
+source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 9%
+source-wordcount: '2626'
+ht-degree: 10%
 
 ---
 
@@ -79,14 +79,14 @@ Die Tabelle zeigt die primäre Metrik für jedes Produkt an, da jedes Produkt za
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Prognostizierte Nutzung"
->abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Es wird erwartet, dass die Nutzung die prognostizierten Werte zwischen {startDate} und {endDate} erreicht. Die Daten wurden zuletzt am {collectionDate} erfasst. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
+>abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Prognostizierte Nutzung"
->abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Es wird erwartet, dass die Nutzung die prognostizierten Werte zwischen {startDate} und {endDate} erreicht. Die Daten wurden zuletzt am {collectionDate} erfasst. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
+>abstract="Die Prognosen basieren auf der Nutzung der letzten 6 bis 7 Monate und werden jeweils am 15. jedes Monats erstellt. Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht. Um die Nutzung zu reduzieren, können Sie die Ablaufdaten für Datensätze oder pseudonyme Profildaten für Sandboxes und Datensätze konfigurieren."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automatisierte Datensatzablauffristen"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Ablauf von Daten pseudonymer Profile"
 
