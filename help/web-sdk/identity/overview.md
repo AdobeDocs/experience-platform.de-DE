@@ -2,57 +2,61 @@
 title: Identitätsdaten in Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen und verwalten.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1472'
 ht-degree: 2%
 
 ---
 
+
 # Identitätsdaten in Web SDK
 
-Das Adobe Experience Platform Web SDK verwendet [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md), um das Besucherverhalten zu verfolgen. Mithilfe von ECIDs können Sie sicherstellen, dass jedes Gerät über eine eindeutige ID verfügt, die über mehrere Sitzungen hinweg persistent sein kann, und alle Treffer, die während und über mehrere Websitzungen hinweg auftreten, an ein bestimmtes Gerät binden.
+Das Adobe Experience Platform Web SDK verwendet [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md), um das Besucherverhalten zu verfolgen. Mit [!DNL ECIDs] können Sie sicherstellen, dass jedes Gerät über eine eindeutige Kennung verfügt, die über mehrere Sitzungen hinweg bestehen bleiben kann, wobei alle Treffer, die während und über mehrere Websitzungen hinweg auftreten, an ein bestimmtes Gerät gebunden werden.
 
-Dieses Dokument bietet einen Überblick darüber, wie ECIDs mit dem Platform Web SDK verwaltet werden.
+Dieses Dokument bietet einen Überblick darüber, wie Sie [!DNL ECIDs] mit dem Web SDK verwalten.
 
-## Tracking von ECIDs mit dem SDK
+## Tracking von ECIDs mit dem Web SDK {#tracking-ecids-we-sdk}
 
-Das Platform Web SDK weist ECIDs mithilfe von Cookies zu und verfolgt sie. Es stehen verschiedene Methoden zur Konfiguration der Erstellung dieser Cookies zur Verfügung.
+Das Web SDK weist [!DNL ECIDs] mithilfe von Cookies zu und verfolgt sie nach, wobei mehrere verfügbare Methoden zum Konfigurieren der Erstellung dieser Cookies verfügbar sind.
 
-Wenn ein neuer Benutzer auf Ihre Website gelangt, versucht Adobe Experience Cloud Identity Service, ein Cookie zur Identifizierung des Geräts für diesen Benutzer zu setzen. Bei Erstbesuchern wird eine ECID generiert und in der ersten Antwort vom Adobe Experience Platform-Edge Network zurückgegeben. Bei wiederkehrenden Besuchern wird die ECID aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie abgerufen und vom Edge Network zur Payload hinzugefügt.
+Wenn ein neuer Benutzer auf Ihre Website gelangt, versucht der [Adobe Experience Cloud Identity Service](../../identity-service/home.md), ein Identifizierungs-Cookie für den betreffenden Benutzer zu setzen.
 
-Nachdem das Cookie mit der ECID gesetzt wurde, enthält jede nachfolgende vom Web SDK generierte Anfrage eine codierte ECID im `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie.
+* Bei Erstbesuchern wird ein [!DNL ECID] generiert und in der ersten Antwort vom Experience Platform-Edge Network zurückgegeben.
+* Bei wiederkehrenden Besuchern wird der [!DNL ECID] aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie abgerufen und vom Edge Network zur Anfrage-Payload hinzugefügt.
 
-Bei der Verwendung von Cookies zur Geräteidentifizierung haben Sie zwei Möglichkeiten, mit dem Edge Network zu interagieren:
+Nachdem das Cookie mit dem [!DNL ECID] gesetzt wurde, enthält jede nachfolgende vom Web SDK generierte Anforderung einen kodierten [!DNL ECID] im `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie.
 
-1. Senden Sie Daten direkt an die Edge Network-Domäne `adobedc.net`. Diese Methode wird als [Datenerfassung durch Dritte](#third-party) bezeichnet.
+Bei der Verwendung von Cookies zur Geräterkennung haben Sie zwei Möglichkeiten, mit dem Edge Network zu interagieren:
+
 1. Erstellen Sie einen CNAME für Ihre eigene Domäne, der auf `adobedc.net` verweist. Diese Methode wird als [Erstanbieter-Datenerfassung](#first-party) bezeichnet.
+1. Senden Sie Daten direkt an die Edge Network-Domäne `adobedc.net`. Diese Methode wird als [Datenerfassung durch Dritte](#third-party) bezeichnet.
 
 Wie in den folgenden Abschnitten erläutert, wirkt sich die von Ihnen gewählte Datenerfassungsmethode direkt auf die Cookie-Lebensdauer in allen Browsern aus.
+
+### Erstanbieter-Datenerfassung {#first-party}
+
+Die Datenerfassung von Erstanbietern umfasst das Setzen von Cookies über eine `CNAME` in Ihrer eigenen Domäne, die auf `adobedc.net` verweist.
+
+Während Browser Cookies, die von `CNAME` -Endpunkten gesetzt werden, seit langem ähnlich wie von Site-eigenen Endpunkten behandeln, haben jüngste, von Browsern implementierte Änderungen eine Unterscheidung in der Handhabung von `CNAME` -Cookies geschaffen. Es gibt zwar keine Browser, die standardmäßig Erstanbieter-Cookies vom Typ `CNAME` blockieren, aber einige Browser beschränken die Lebensdauer von Cookies, die mit dem Wert `CNAME` gesetzt werden, auf nur sieben Tage.
 
 ### Datenerfassung von Drittanbietern {#third-party}
 
 Die Datenerfassung von Drittanbietern beinhaltet das direkte Senden von Daten an die Edge Network-Domäne `adobedc.net`.
 
-In den letzten Jahren haben die Webbrowser bei der Behandlung von Cookies von Drittanbietern immer restriktiver werden. Einige Browser blockieren standardmäßig Drittanbieter-Cookies. Wenn Sie zur Identifizierung von Site-Besuchern Drittanbieter-Cookies verwenden, ist die Lebensdauer dieser Cookies fast immer kürzer, als dies sonst durch Erstanbieter-Cookies möglich wäre. Manchmal läuft ein Drittanbieter-Cookie in nur sieben Tagen ab.
+In den letzten Jahren haben die Webbrowser bei der Behandlung von Cookies, die von Dritten gesetzt werden, immer restriktiver werden. Einige Browser blockieren standardmäßig Drittanbieter-Cookies. Wenn Sie zur Identifizierung von Site-Besuchern Drittanbieter-Cookies verwenden, ist die Lebensdauer dieser Cookies fast immer kürzer, als dies sonst durch Erstanbieter-Cookies möglich wäre. Manchmal läuft ein Drittanbieter-Cookie in nur sieben Tagen ab.
 
-Wenn die Datenerfassung von Drittanbietern verwendet wird, beschränken einige Anzeigensperren den Traffic außerdem vollständig auf Adobe-Datenerfassungs-Endpunkte.
-
-### Erstanbieter-Datenerfassung {#first-party}
-
-Die Datenerfassung von Erstanbietern umfasst das Setzen von Cookies über einen CNAME in Ihrer eigenen Domäne, der auf `adobedc.net` verweist.
-
-Während Browser Cookies, die von CNAME-Endpunkten gesetzt werden, seit langem ähnlich wie von Site-eigenen Endpunkten behandeln, haben kürzlich von Browsern implementierte Änderungen eine Unterscheidung in der Handhabung von CNAME-Cookies geschaffen. Es gibt zwar keine Browser, die standardmäßig Erstanbieter-CNAME-Cookies blockieren, aber einige Browser beschränken die Lebensdauer von Cookies, die mit einem CNAME gesetzt werden, auf sieben Tage.
+Bei der Verwendung der Datenerfassung von Drittanbietern beschränken einige Anzeigensperren den Traffic außerdem vollständig auf Adobe-Datenerfassungs-Endpunkte.
 
 ### Auswirkungen von Cookie-Lebenszyklen auf Adobe Experience Cloud-Anwendungen {#lifespans}
 
-Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, hat die Dauer, die ein Cookie beibehalten werden kann, direkte Auswirkungen auf die Besucherzahlen in Adobe Analytics und Customer Journey Analytics. Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn Adobe Target oder Offer decisioning auf der Site verwendet werden.
+Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, hat die Dauer, die ein Cookie beibehalten werden kann, direkte Auswirkungen auf die Besucherzahlen in [Adobe Analytics](https://experienceleague.adobe.com/de/docs/analytics) und [Customer Journey Analytics](https://experienceleague.adobe.com/de/docs/customer-journey-analytics). Außerdem kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn [Adobe Target](https://experienceleague.adobe.com/en/docs/target) oder [Offer decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) auf der Site verwendet werden.
 
 Angenommen, Sie haben ein Personalisierungs-Erlebnis erstellt, das jedes Element auf die Startseite weiterleitet, wenn ein Benutzer es in den letzten sieben Tagen dreimal angesehen hat.
 
 Wenn ein Endbenutzer die Site dreimal in einer Woche besucht und dann sieben Tage lang nicht erneut aufruft, kann dieser Benutzer bei seiner Rückkehr zur Site als neuer Benutzer gelten, da seine Cookies möglicherweise von einer Browserrichtlinie gelöscht wurden (je nach dem Browser, den er bei seinem Besuch auf der Site verwendet hat). In diesem Fall behandelt Ihr Analytics-Tool den Besucher als neuen Benutzer, auch wenn er die Site vor etwas mehr als sieben Tagen besucht hat. Außerdem beginnt jeder Versuch, das Erlebnis für den Benutzer zu personalisieren, erneut.
 
-### IDs von Erstanbieter-Geräten
+### Erstanbieter-Geräte-IDs (FPIDs) {#fpid}
 
 Um die oben beschriebenen Auswirkungen von Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Weitere Informationen finden Sie im Leitfaden zu [IDs von Erstanbieter-Geräten](./first-party-device-ids.md).
 
@@ -142,12 +146,12 @@ Jedes Identitätsobjekt im Identitäten-Array enthält die folgenden Eigenschaft
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `id` | Zeichenfolge | **(Erforderlich)** Die ID, die Sie für den angegebenen Namespace festlegen möchten. |
-| `authenticationState` | Zeichenfolge | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
+| `authenticationState` | String | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
 | `primary` | Boolesch | Bestimmt, ob diese Identität als primäres Fragment im Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt. Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 
 Die Verwendung des Felds `identityMap` zur Identifizierung von Geräten oder Benutzern führt zum selben Ergebnis wie die Verwendung der Methode [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) aus dem [!DNL ID Service API]. Weitere Informationen finden Sie in der Dokumentation zur [ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) .
 
-## Migration von der Besucher-API zur ECID
+## Migration von der Besucher-API zur ECID {#migrating-visitor-api-ecid}
 
 Bei der Migration von der Verwendung der Besucher-API können Sie auch vorhandene AMCV-Cookies migrieren. Um die ECID-Migration zu aktivieren, legen Sie den Parameter `idMigrationEnabled` in der Konfiguration fest. Die ID-Migration ermöglicht die folgenden Anwendungsfälle:
 
