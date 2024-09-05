@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Data Access API-Anleitung
 description: Die Data Access API unterstützt Adobe Experience Platform, indem sie Entwicklern eine RESTful-Schnittstelle bereitstellt, die sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze innerhalb von Experience Platform konzentriert.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 11%
+ht-degree: 9%
 
 ---
 
@@ -243,4 +243,4 @@ Weitere Beispiele finden Sie im Tutorial [Datenzugriff](tutorials/dataset-data.m
 
 ## Abonnieren von Datenerfassungsereignissen {#subscribe-to-data-ingestion-events}
 
-Sie können bestimmte Ereignisse mit hohem Wert über die [Adobe Developer Console](https://developer.adobe.com/console/) abonnieren. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenaufnahmebenachrichtigungen](../ingestion/quality/subscribe-events.md).
+Sie können bestimmte Ereignisse mit hohem Wert über die [Adobe Developer Console](https://developer.adobe.com/console/) abonnieren. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum Anmelden von Adobe-Ereignisbenachrichtigungen ](../observability/alerts/subscribe.md).[

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Data Access – Übersicht
 description: Data Access unterstützt Adobe Experience Platform, indem es den Benutzern Tools bietet, die auf die Auffindbarkeit und Zugänglichkeit der aufgenommenen Platform-Datensätze ausgerichtet sind.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -29,4 +29,4 @@ Für weitere Informationen zu [!DNL Data Science Workspace] lesen Sie zunächst 
 
 ## Abonnieren von Datenerfassungsereignissen
 
-[!DNL Platform] stellt bestimmte hochwertige Ereignisse über [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) zum Abonnieren bereit. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Datenaufnahmebenachrichtigungen](../ingestion/quality/subscribe-events.md).
+[!DNL Platform] stellt bestimmte hochwertige Ereignisse über [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) zum Abonnieren bereit. Sie können beispielsweise Ereignisse zur Datenaufnahme abonnieren, um über potenzielle Verzögerungen und Fehler informiert zu werden. Weitere Informationen finden Sie im Tutorial zum Anmelden von Adobe-Ereignisbenachrichtigungen ](../observability/alerts/subscribe.md).[

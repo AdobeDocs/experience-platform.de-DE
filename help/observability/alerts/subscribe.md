@@ -4,9 +4,9 @@ title: Abonnieren von Adobe I/O-Ereignisbenachrichtigungen
 description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Services von Adobe Experience Platform abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren  [!DNL Platform] -Service bereitgestellt.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '767'
 ht-degree: 90%
 
 ---
@@ -98,7 +98,6 @@ Die Detailseite für die neu erstellte Ereignisregistrierung wird angezeigt. Dor
 In diesem Tutorial haben Sie einen Webhook registriert, um [!DNL I/O Event]-Benachrichtigungen für [!DNL Experience Platform] und/oder [!DNL Privacy Service] zu erhalten. Weitere Informationen zu verfügbaren Ereignissen und zur Interpretation der Benachrichtigungs-Payloads für jeden Service finden Sie in der folgenden Dokumentation:
 
 * [[!DNL Privacy Service] Benachrichtigungen](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] Benachrichtigungen](../../ingestion/quality/subscribe-events.md)
 * [[!DNL Flow Service] (Quellen)-Benachrichtigungen](../../sources/notifications.md)
 
 Weitere Informationen dazu, wie Sie Ihre Aktivitäten auf [!DNL Experience Platform] und [!DNL Privacy Service] überwachen können, finden Sie in der [[!DNL Observability Insights] Übersicht](../home.md).
