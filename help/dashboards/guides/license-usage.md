@@ -4,14 +4,19 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
+source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '2641'
 ht-degree: 10%
 
 ---
 
 # Lizenznutzungs-Dashboard {#license-usage-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="testy-mctestface"
+>title="Testdialogfeld, das nicht sichtbar sein sollte"
+>abstract="Das Objekt {name} wird auf {date} angezeigt."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
