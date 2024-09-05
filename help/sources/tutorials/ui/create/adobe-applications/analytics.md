@@ -2,10 +2,10 @@
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 40%
+source-wordcount: '2577'
+ht-degree: 42%
 
 ---
 
@@ -301,7 +301,7 @@ Eine Liste der vorhandenen Analytics-Datenflüsse in Ihrer Organisation wird ang
 
 ![Eine Liste der vorhandenen Adobe Analytics-Datenflüsse in Ihrem Unternehmen.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Die Seite [!UICONTROL Datensatzaktivität] enthält Informationen zum Fortschritt der Daten, die von Analytics an Experience Platform gesendet werden. Die Benutzeroberfläche zeigt Metriken wie die Anzahl der aufgenommenen Datensätze, die Anzahl der aufgenommenen Batches und die Anzahl der fehlgeschlagenen Batches an.
+Die Seite [!UICONTROL Datensatzaktivität] enthält Informationen zum Fortschritt der Daten, die von Analytics an Experience Platform gesendet werden. Die Oberfläche zeigt Metriken wie die Gesamtzahl der Datensätze im Vormonat, die Gesamtzahl der erfassten Datensätze in den letzten sieben Tagen und die Größe der Daten im Vormonat an.
 
 Die Quelle instanziiert zwei Datensatzflüsse. Ein Fluss stellt Aufstockungsdaten dar, der andere ist für Live-Daten. Aufstockungsdaten sind nicht für die Aufnahme in das Echtzeit-Kundenprofil konfiguriert, werden jedoch für analytische und datenwissenschaftliche Anwendungsfälle an den Data Lake gesendet.
 
@@ -309,35 +309,9 @@ Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenz
 
 ![Die Datensatzaktivitätsseite für einen bestimmten Zieldatensatz für Adobe Analytics-Daten.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++Anzeigen einzelner Batches über die veraltete Überwachungsschnittstelle
-
-Auf der Seite mit der Datensatzaktivität wird keine Liste einzelner Batches angezeigt. Um eine Liste einzelner Batches anzuzeigen, wählen Sie ein Diagramm in der Oberfläche für die Datensatzaktivität aus.
-
-![Die Seite mit der Datensatzaktivität mit einem ausgewählten Diagramm.](../../../../images/tutorials/create/analytics/select-chart.png)
-
-Sie gelangen zum Monitoring-Dashboard. Wählen Sie als Nächstes **[!UICONTROL NUR FEHLER AUFNEHMEN: JA]** aus, um den Filter zu löschen und eine Liste der einzelnen Batches anzuzeigen.
-
-![Das Monitoring-Dashboard mit ausgewähltem Fehlerfilter.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-Die Benutzeroberfläche aktualisiert eine Liste einzelner Batches, einschließlich Informationen zu den jeweiligen Metriken.
-
-![Die veraltete Überwachungsseite für Batch-Daten.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Metriken | Beschreibung |
-| --- | --- |
-| Batch-ID | Die Kennung eines bestimmten Batches. Dieser Wert wird intern generiert. |
-| Datensatzname | Der Name eines bestimmten Datensatzes, der für Analytics-Daten verwendet wird. |
-| Quelle | Die Quelle der aufgenommenen Daten. |
-| Aktualisiert | Das Datum der letzten Durchlaufdurchlauf-Iteration. |
-| Daten im Eintrag | Die Gesamtzahl der Datensätze im Datensatz. **Hinweis**: Dieser Parameter zeigt gelegentlich den Status `in-progress` an. Dieser Status zeigt an, dass der Aufnahmevorgang für Datensätze noch nicht abgeschlossen ist. |
-| Neue Profilfragmente | Die Gesamtanzahl der neuen Profilfragmente, die erfasst wurden. |
-| Vorhandene Profilfragmente | Die Gesamtanzahl vorhandener Profilfragmente. |
-| Identitätseinträge zusammengefügt | Die Gesamtzahl der Identitätsdatensätze, die nach der Erfassung zusammengeführt wurden. |
-| Einträge in Profile | Die Gesamtzahl der Datensätze, die in das Echtzeit-Kundenprofil aufgenommen wurden. |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>Auf der Seite Datensatzaktivität werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig von Adobe verwaltet wird. Sie können überwachen, dass Daten fließen, indem Sie sich die Metriken um die erfassten Datensätze ansehen.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 

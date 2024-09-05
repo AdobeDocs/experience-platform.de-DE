@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise August 2024
 description: Versionshinweise August 2024 für Adobe Experience Platform.
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 29%
+source-wordcount: '1562'
+ht-degree: 28%
 
 ---
 
@@ -130,6 +131,12 @@ Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersic
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
 Verwenden Sie Quellen im Experience Platform, um Daten aus einer Adobe-Anwendung oder einer Datenquelle von Drittanbietern zu erfassen.
+
+**Aktualisierte Funktion**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Aktualisierungen des Quell-Connectors für Adobe Analytics | Auf der Seite Datensatzaktivität werden keine Informationen zu Batches angezeigt, da der Analytics Source Connector vollständig von Adobe verwaltet wird. Sie können überwachen, dass Daten fließen, indem Sie sich die Metriken um die erfassten Datensätze ansehen. Weitere Informationen finden Sie im Handbuch zum Erstellen einer [Quellverbindung für Analytics-Daten](../../sources/tutorials/ui/create/adobe-applications/analytics.md) . |
 
 **Aktualisierte Dokumentation**
 
