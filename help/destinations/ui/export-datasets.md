@@ -3,10 +3,10 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
 workflow-type: tm+mt
-source-wordcount: '1814'
-ht-degree: 49%
+source-wordcount: '1845'
+ht-degree: 48%
 
 ---
 
@@ -234,7 +234,8 @@ Sie können Ihre Profilexporte anhand Ihrer vertraglichen Beschränkungen im Liz
 Beachten Sie die folgenden Einschränkungen für die allgemeine Verfügbarkeit von Datensatzexporten:
 
 * Derzeit können Sie nur inkrementelle Dateien exportieren, und für Ihre Datensatzexporte kann kein Enddatum ausgewählt werden.
-* Die Namen von exportierten Dateien können derzeit nicht angepasst werden.
+* Experience Platform kann mehrere Dateien auch für kleine Datensätze exportieren. Der Datensatzexport wurde für die Integration von System zu System entwickelt und für die Leistung optimiert. Daher kann die Anzahl der exportierten Dateien nicht angepasst werden.
+* Exportierte Dateinamen können derzeit nicht angepasst werden.
 * Über API erstellte Datensätze können derzeit nicht exportiert werden.
 * Die Benutzeroberfläche hindert Sie derzeit nicht daran, einen Datensatz zu löschen, während er an ein Ziel exportiert wird. Löschen Sie keine Datensätze, während sie an Ziele exportiert werden. [Entfernen Sie den Datensatz](#remove-dataset) aus einem Ziel-Datenfluss, bevor Sie ihn löschen.
 * Überwachungsmetriken für Datensatzexporte werden derzeit mit Zahlen für Profilexporte gemischt, sodass sie nicht die tatsächlichen Exportzahlen widerspiegeln.
