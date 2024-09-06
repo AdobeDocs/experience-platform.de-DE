@@ -1,23 +1,74 @@
 ---
 title: Verschlüsselte Daten in der Quellenbenutzeroberfläche von Workspace erfassen
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quellenbenutzeroberfläche erfassen.
+badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 9f827c1ba97fba237c216fce9c2966bcc91fd05b
+source-git-commit: b4545943abbb68d36a64935feb4466d075331504
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 30%
+source-wordcount: '617'
+ht-degree: 18%
 
 ---
 
 # Verschlüsselte Daten in der Quell-Benutzeroberfläche erfassen
 
-In diesem Handbuch erfahren Sie, wie Sie verschlüsselte Daten mithilfe von Cloud-Speicher-Quellen für Batch-Daten in Adobe Experience Platform erfassen können.
+>[!AVAILABILITY]
+>
+>Die Unterstützung für die verschlüsselte Datenerfassung in der Quell-Benutzeroberfläche befindet sich in der Beta-Phase und steht Ihrem Unternehmen möglicherweise nicht zur Verfügung. Die Funktion und die Dokumentation können sich ändern.
 
-## Voraussetzungen
+Sie können verschlüsselte Datendateien und Ordner mit Cloud-Speicher-Batch-Quellen in Adobe Experience Platform erfassen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Derzeit werden die asymmetrischen Verschlüsselungsmechanismen PGP und GPG unterstützt.
 
-* Daten verschlüsseln
+Diese Funktion steht den folgenden Quellen zur Verfügung:
+
+* [Amazon S3]
+* [Azure Blob]
+* [Azure Data Lake Storage Gen2]
+* [Azure-Dateispeicher]
+* [Data Landing Zone]
+* [FTP]
+* [Google Cloud Storage]
+* [HDFS]
+* [Oracle Object Storage]
+* [SFTP]
+
+In diesem Handbuch erfahren Sie, wie Sie verschlüsselte Daten mit Cloud-Speicher-Batch-Quellen über die Benutzeroberfläche erfassen können.
+
+## Erste Schritte
+
+Es ist hilfreich, sich mit den folgenden Experience Platform-Funktionen und -Konzepten vertraut zu machen, bevor Sie mit der verschlüsselten Datenerfassung in der Benutzeroberfläche arbeiten:
+
+* [Quellen](../../home.md): Verwenden Sie Experience Platform-Quellen, um Daten aus einer Adobe-Anwendung oder einer Datenquelle von Drittanbietern zu erfassen.
+* [Datenflüsse](../../../dataflows/home.md): Datenflüsse sind Darstellungen von Datenaufträgen, die Daten über Experience Platform verschieben. Sie können den Arbeitsbereich &quot;Quellen&quot;verwenden, um Datenflüsse zu erstellen, die Daten von einer bestimmten Quelle zu Experience Platform erfassen.
+* [Sandboxes](../../../sandboxes/home.md): Verwenden Sie Sandboxes in Experience Platform, um virtuelle Partitionen zwischen Ihren Experience Platform-Instanzen zu erstellen und Umgebungen für die Entwicklung oder Produktion zu erstellen.
+
+### Allgemeine Übersicht
+
+1. Erstellen Sie ein Verschlüsselungsschlüsselpaar mithilfe des Arbeitsbereichs &quot;Quellen&quot;in der Experience Platform-Benutzeroberfläche. Optional können Sie auch ein Schlüsselpaar für die Signaturüberprüfung erstellen, um eine zusätzliche Sicherheitsschicht für Ihre verschlüsselten Daten bereitzustellen.
+2. Verwenden Sie den öffentlichen Schlüssel zum Verschlüsseln Ihrer Daten.
+3. Platzieren Sie Ihre verschlüsselten Daten in Ihrem Cloud-Speicher-Provider. In diesem Schritt müssen Sie außerdem sicherstellen, dass Sie über eine Beispieldatei verfügen, die als Referenz für die Zuordnung Ihrer Quelldaten zu einem Experience-Datenmodell (XDM)-Schema verwendet werden kann.
+4. Erfassen Sie Ihre verschlüsselten Daten auf Experience Platform, indem Sie eine Quellverbindung erstellen.
+5. Geben Sie beim Erstellen der Quellverbindung die Schlüssel-ID an, die dem öffentlichen Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben. Wenn Sie auch den Schlüssel-Paar-Mechanismus für die Signierüberprüfung verwendet haben, müssen Sie auch die Schlüssel-ID für die Signierüberprüfung angeben, die Ihren verschlüsselten Daten entspricht.
+6. Fahren Sie mit den Schritten zur Erstellung des Datenflusses fort.
+
+## Verschlüsselungs-Schlüsselpaar erstellen {#create-an-encryption-key-pair}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_encryptionKeyId"
+>title="Verschlüsselungsschlüssel-ID"
+>abstract="Geben Sie die Verschlüsselungsschlüssel-ID an, die Ihrem Verschlüsselungsschlüssel entspricht, der zum Verschlüsseln Ihrer Quelldaten verwendet wurde."
+
+* Navigieren Sie in der Platform-Benutzeroberfläche zum Arbeitsbereich &quot;Quellen&quot;und wählen Sie dann in der oberen Kopfzeile [!UICONTROL Schlüsselpaare] aus.
+* Sie gelangen zu einer Seite, auf der eine Liste der in Ihrem Unternehmen vorhandenen Verschlüsselungsschlüsselpaare angezeigt wird. Auf dieser Seite finden Sie Informationen zu Titel, Kennung, Typ, Verschlüsselungsalgorithmus, Ablauf und Status eines bestimmten Schlüssels. Um ein neues Schlüsselpaar zu erstellen, wählen Sie **[!UICONTROL Schlüssel erstellen]** aus.
+* Wählen Sie als Nächstes den Schlüsseltyp aus, den Sie erstellen möchten. Um einen Verschlüsselungsschlüssel zu erstellen, wählen Sie **[!UICONTROL Verschlüsselungsschlüssel]** aus und geben Sie dann einen Titel und eine Passphrase für Ihren Verschlüsselungsschlüssel ein. Die Passphrase ist eine zusätzliche Schutzschicht für Ihre Verschlüsselungsschlüssel. Bei der Erstellung speichert Experience Platform die Passphrase in einem anderen sicheren Tresor als den öffentlichen Schlüssel. Sie müssen eine nicht leere Zeichenfolge als Passphrase angeben.
+
+### Erstellen eines Signaturüberprüfungsschlüssels {#create-a-sign-verification-key}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_signVerificationKeyId"
+>title="Sign Verification Key ID"
+>abstract="Geben Sie die Kennung des Signierüberprüfungsschlüssels an, der Ihren signierten, verschlüsselten Quelldaten entspricht."
 
 ## Aufnehmen verschlüsselter Daten {#ingest-encrypted-data}
 
@@ -31,15 +82,6 @@ In diesem Handbuch erfahren Sie, wie Sie verschlüsselte Daten mithilfe von Clou
 >title="Auswählen einer Beispieldatei"
 >abstract="Sie müssen bei der Aufnahme verschlüsselter Daten eine Beispieldatei aufnehmen, um eine Zuordnung zu erstellen."
 
->[!CONTEXTUALHELP]
->id="platform_sources_encrypted_encryptionKeyId"
->title="Verschlüsselungsschlüssel-ID"
->abstract="Geben Sie die Verschlüsselungsschlüssel-ID an, die Ihrem Verschlüsselungsschlüssel entspricht, der zum Verschlüsseln Ihrer Quelldaten verwendet wurde."
-
->[!CONTEXTUALHELP]
->id="platform_sources_encrypted_signVerificationKeyId"
->title="Sign Verification Key ID"
->abstract="Geben Sie die Kennung des Signierüberprüfungsschlüssels an, der Ihren signierten, verschlüsselten Quelldaten entspricht."
 
 <!-- 
 ## Outline
