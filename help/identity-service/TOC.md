@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 75%
+source-wordcount: '143'
+ht-degree: 72%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 75%
       - [Identitätseinstellungen](./identity-graph-linking-rules/identity-settings-ui.md)
       - [Beispiele für Kundenszenarien](./identity-graph-linking-rules/example-scenarios.md)
       - [Beispieldiagrammkonfigurationen](./identity-graph-linking-rules/example-configurations.md)
+      - [Fehlerbehebung für Verknüpfungsregeln für Identitätsdiagramme](./identity-graph-linking-rules/troubleshooting.md)
    - [ECID-Übersicht](./features/ecid.md)
 - [Implementierungshandbuch](implementation.md)
 - [Leitplanken für Identitätsdaten](guardrails.md)
