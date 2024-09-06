@@ -4,10 +4,10 @@ title: API-Endpunkt für Segmentdefinitionen
 description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentation Service-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 14%
+source-wordcount: '1472'
+ht-degree: 13%
 
 ---
 
@@ -176,6 +176,61 @@ POST /segment/definitions
 
 **Anfrage**
 
+Beim Erstellen einer neuen Segmentdefinition können Sie sie im Format `pql/text` oder `pql/json` erstellen.
+
+>[!BEGINTABS]
+
+>[!TAB Verwenden von pql/text]
+
++++ Eine Beispielanfrage zum Erstellen einer Segmentdefinition.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+    }'
+```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
+| `description` | (Optional) Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
+| `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
+| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
+| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Zu den unterstützten Werten gehören `pql/text` und `pql/json`. |
+| `expression.value` | Ein Ausdruck, der dem in `expression.format` angegebenen Typ entspricht. |
+| `evaluationInfo` | (Optional) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, setzen Sie `evaluationInfo.batch.enabled` auf &quot;true&quot;. Wenn Sie ein Streaming-Segment erstellen möchten, setzen Sie &quot;`evaluationInfo.continuous.enabled`&quot;auf &quot;true&quot;. Wenn Sie ein Kantensegment erstellen möchten, setzen Sie &quot;`evaluationInfo.synchronous.enabled`&quot;auf &quot;true&quot;. Wenn Sie das Feld leer lassen, wird die Segmentdefinition als **Batch**-Segment erstellt. |
+| `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einem Feld `id` oder einem Feld `name`. |
+
++++
+
+>[!TAB Verwenden von pql/json]
+
 +++ Eine Beispielanfrage zum Erstellen einer Segmentdefinition.
 
 ```shell
@@ -191,8 +246,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "description": "Last 30 days",
         "expression": {
             "type": "PQL",
-            "format": "pql/text",
-            "value": "workAddress.country = \"US\""
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
         },
         "evaluationInfo": {
             "batch": {
@@ -215,15 +270,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `name` | Ein eindeutiger Name, mit dem auf die Segmentdefinition verwiesen wird. |
-| `description` | (Optional.) Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
-| `evaluationInfo` | (Optional.) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, setzen Sie `evaluationInfo.batch.enabled` auf &quot;true&quot;. Wenn Sie ein Streaming-Segment erstellen möchten, setzen Sie &quot;`evaluationInfo.continuous.enabled`&quot;auf &quot;true&quot;. Wenn Sie ein Kantensegment erstellen möchten, setzen Sie &quot;`evaluationInfo.synchronous.enabled`&quot;auf &quot;true&quot;. Wenn Sie das Feld leer lassen, wird die Segmentdefinition als **Batch**-Segment erstellt. |
+| `description` | (Optional) Eine Beschreibung der Segmentdefinition, die Sie erstellen. |
+| `evaluationInfo` | (Optional) Der Typ der Segmentdefinition, die Sie erstellen. Wenn Sie ein Batch-Segment erstellen möchten, setzen Sie `evaluationInfo.batch.enabled` auf &quot;true&quot;. Wenn Sie ein Streaming-Segment erstellen möchten, setzen Sie &quot;`evaluationInfo.continuous.enabled`&quot;auf &quot;true&quot;. Wenn Sie ein Kantensegment erstellen möchten, setzen Sie &quot;`evaluationInfo.synchronous.enabled`&quot;auf &quot;true&quot;. Wenn Sie das Feld leer lassen, wird die Segmentdefinition als **Batch**-Segment erstellt. |
 | `schema` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einem Feld `id` oder einem Feld `name`. |
 | `expression` | Eine Entität, die Feldinformationen zur Segmentdefinition enthält. |
 | `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
-| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Derzeit wird das folgende Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. |
 | `expression.value` | Ein Ausdruck, der dem in `expression.format` angegebenen Typ entspricht. |
 
 +++
+
+>[!ENDTABS]
 
 **Antwort**
 
