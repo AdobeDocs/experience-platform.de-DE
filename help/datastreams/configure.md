@@ -2,9 +2,9 @@
 title: Erstellen und Konfigurieren von Datenspeichern
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
+source-git-commit: b87cb25ac791bebbf865f8513f2b4b482a1531bc
 workflow-type: tm+mt
-source-wordcount: '2813'
+source-wordcount: '2817'
 ht-degree: 52%
 
 ---
@@ -49,7 +49,7 @@ Erweitern Sie den Abschnitt **[!UICONTROL Geolocation and network lookup]** , um
 | Einstellung | Beschreibung |
 | --- | --- |
 | [!UICONTROL Geo-Suche] | Aktiviert die Geolocation-Suche für die ausgewählten Optionen basierend auf der IP-Adresse des Besuchers. Zu den verfügbaren Optionen gehören: <ul><li>**Land**: Füllt `xdm.placeContext.geo.countryCode`</li><li>**Postleitzahl**: Füllt `xdm.placeContext.geo.postalCode`</li><li>**Bundesland/-staat**: Füllt `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: Füllt `xdm.placeContext.geo.dmaID`</li><li>**Stadt**: Füllt `xdm.placeContext.geo.city`</li><li>**Latitude**: Füllt `xdm.placeContext.geo._schema.latitude`</li><li>**Längengrad**: Füllt `xdm.placeContext.geo._schema.longitude`</li></ul>Die Auswahl von **[!UICONTROL Stadt]**, **[!UICONTROL Breitengrad]** oder **[!UICONTROL Längengrad]** liefert Koordinaten mit bis zu zwei Dezimalstellen, unabhängig davon, welche anderen Optionen ausgewählt wurden. Dies gilt als Granularität auf Stadtebene.<br> <br> Wenn keine Option ausgewählt wird, werden die Geolocation-Suchen deaktiviert. Die Geolokation erfolgt vor der [!UICONTROL IP-Verschleierung], was bedeutet, dass sie von der Einstellung [!UICONTROL IP-Verschleierung] nicht betroffen ist. |
-| [!UICONTROL Netzwerksuche] | Aktiviert die Netzwerksuche für die ausgewählten Optionen basierend auf der IP-Adresse des Besuchers. Zu den verfügbaren Optionen gehören: <ul><li>**Carrier**: Füllt `xdm.environment.carrier`</li><li>**Domäne**: Füllt `xdm.environment.domain`</li><li>**ISP**: Füllt `xdm.environment.ISP`</li></ul> |
+| [!UICONTROL Netzwerksuche] | Aktiviert die Netzwerksuche für die ausgewählten Optionen basierend auf der IP-Adresse des Besuchers. Zu den verfügbaren Optionen gehören: <ul><li>**Mobilnetzbetreiber**: Füllt `xdm.environment.carrier`</li><li>**Domäne**: Füllt `xdm.environment.domain`</li><li>**ISP**: Füllt `xdm.environment.ISP`</li><li>**Verbindungstyp**: Füllt `xdm.environment.connectionType`</li></ul> |
 
 Wenn Sie eines der oben genannten Felder für die Datenerfassung aktivieren, stellen Sie sicher, dass Sie die [`context`](/help/web-sdk/commands/configure/context.md) -Array-Eigenschaft beim Konfigurieren des Web SDK korrekt festlegen.
 
