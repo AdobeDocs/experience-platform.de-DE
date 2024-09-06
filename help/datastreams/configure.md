@@ -2,10 +2,10 @@
 title: Erstellen und Konfigurieren von Datenspeichern
 description: Erfahren Sie, wie Sie Ihre Client-seitige Web SDK-Integration mit anderen Adobe-Produkten und Drittanbieterzielen verbinden.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
+source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 53%
+source-wordcount: '2813'
+ht-degree: 52%
 
 ---
 
@@ -189,7 +189,7 @@ Mit diesem Service wird festgelegt, ob und wie Daten an Adobe Target gesendet we
 | --- | --- |
 | [!UICONTROL Eigenschafts-Token] | Mit [!DNL Target] können Kunden Berechtigungen mithilfe von Eigenschaften steuern. Weitere Informationen zu Eigenschaften finden Sie in der Anleitung zum [Konfigurieren von Unternehmensberechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de) in der [!DNL Target]-Dokumentation.<br><br>Das Eigenschafts-Token befindet sich in der Adobe Target-Benutzeroberfläche unter [!UICONTROL Einrichtung] > [!UICONTROL Eigenschaften]. |
 | [!UICONTROL Target-Umgebungs-ID] | [Umgebungen in Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=de) helfen Ihnen in allen Entwicklungsphasen bei der Implementierung. Diese Einstellung gibt an, welche Umgebung Sie für diesen Datenstrom verwenden werden.<br><br>Empfohlen wird, der Einfachheit halber eine unterschiedliche Einstellung für jede Ihrer `dev`-, `stage`- und `prod`Datenstrom-Umgebungen auszuwählen. Wenn Sie jedoch bereits Adobe Target-Umgebungen definiert haben, können Sie diese verwenden. |
-| [!UICONTROL Namespace der Target-Third-Party-ID] | Der Identity-Namespace für die `mbox3rdPartyId`, den Sie für diesen Datenstrom verwenden möchten. Weitere Informationen dazu erhalten Sie im Handbuch zur [Implementierung der `mbox3rdPartyId` mit dem Web SDK](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md). |
+| [!UICONTROL Namespace der Target-Third-Party-ID] | Der Identity-Namespace für die `mbox3rdPartyId`, den Sie für diesen Datenstrom verwenden möchten. Wenn Sie eine [!DNL Customer Attributes] -Integration in Adobe Target verwenden oder `thirdPartyId` verwenden, um Profile über die [Adobe Target Profiles API](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api) zu aktualisieren oder zu erstellen, müssen Sie einen Namespace-Wert Ihrer Wahl angeben. Sie müssen diesen Namespace im Abschnitt `IdentityMap` Ihres XDM-Schemas verwenden, um die `customerID` oder `thirdPartyId` zu senden, die beim Hochladen der Kundenattribut-Datei oder in Ihren API-Aufrufen zur Profilaktualisierung verwendet werden.  Weitere Informationen dazu erhalten Sie im Handbuch zur [Implementierung der `mbox3rdPartyId` mit dem Web SDK](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md). |
 | [!UICONTROL Eigenschafts-Token-Überschreibungen] | In diesem Abschnitt können Sie zusätzliche Eigenschafts-Token definieren, mit denen Sie den Standard überschreiben können. |
 
 ### Einstellungen zur [!UICONTROL Ereignisweiterleitung]
