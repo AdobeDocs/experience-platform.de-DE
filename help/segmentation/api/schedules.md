@@ -4,10 +4,10 @@ title: Zeitplan-API-Endpunkt
 description: Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 16%
+source-wordcount: '2104'
+ht-degree: 15%
 
 ---
 
@@ -29,18 +29,25 @@ Der `/config/schedules`-Endpunkt unterstützt verschiedene Abfrageparameter, mit
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `{START}` | Gibt an, von welcher Seite der Offset beginnt. Der Standardwert ist 0. |
-| `{LIMIT}` | Gibt die Anzahl der Zeitpläne an, die zurückgegeben werden. Der Standardwert ist 100. |
+**Abfrageparameter**
+
++++ Eine Liste der verfügbaren Abfrageparameter.
+
+| Parameter | Beschreibung | Beispiel |
+| --------- | ----------- | ------- |
+| `start` | Gibt an, von welcher Seite der Offset beginnt. Der Standardwert ist 0. | `start=5` |
+| `limit` | Gibt die Anzahl der Zeitpläne an, die zurückgegeben werden. Der Standardwert ist 100. | `limit=20` |
+
++++
 
 **Anfrage**
 
 Mit der folgenden Anfrage werden die letzten zehn Zeitpläne abgerufen, die innerhalb Ihres Unternehmens veröffentlicht wurden.
+
++++ Eine Beispielanfrage zum Abrufen einer Liste von Zeitplänen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zeitplänen für die angegebene Organisation als JSON zurück.
@@ -57,6 +66,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zeitplän
 >[!NOTE]
 >
 >Die folgende Antwort wurde aus Platzgründen abgeschnitten und zeigt nur den ersten zurückgegebenen Zeitplan an.
+
++++ Eine Beispielantwort beim Abrufen einer Liste von Zeitplänen.
 
 ```json
 {
@@ -102,6 +113,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Zeitplän
 | `children.schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
 | `children.state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
 
++++
+
 ## Erstellen neuer Zeitpläne {#create}
 
 Sie können einen neuen Zeitplan erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/config/schedules` senden.
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **Anfrage**
+
++++ Eine Beispielanfrage zum Erstellen eines Zeitplans.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *Optional.* Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. <br><br>Wenn diese Zeichenfolge nicht angegeben wird, wird automatisch ein vom System generierter Zeitplan generiert. |
 | `state` | *Optional.* Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum von Ihnen neu erstellten Zeitplan zurück.
+
++++ Eine Beispielantwort beim Erstellen eines Zeitplans.
 
 ```json
 {
@@ -172,6 +191,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum von Ihn
 }
 ```
 
++++
+
 ## Abrufen einzelner Zeitpläne {#get}
 
 Sie können detaillierte Informationen zu einem bestimmten Zeitplan abrufen, indem Sie eine GET-Anfrage an den `/config/schedules` -Endpunkt senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie abrufen möchten.
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Anfrage**
 
++++ Eine Beispielanfrage zum Abrufen eines Zeitplans.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegebenen Zeitplan zurück.
+
++++ Eine Beispielantwort beim Abrufen eines Zeitplans.
 
 ```json
 {
@@ -233,15 +260,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegeb
 | `schedule` | Eine Zeichenfolge, die den Auftragsplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix). In diesem Beispiel bedeutet &quot;0 0 1 * *&quot;, dass dieser Zeitplan täglich um 1 Uhr ausgeführt wird. |
 | `state` | Eine Zeichenfolge, die den Status des Zeitplans enthält. Unterstützt werden die Status `active` und `inactive`. Standardmäßig lautet der Status `inactive`. |
 
++++
+
 ## Aktualisieren von Details für einen bestimmten Zeitplan {#update}
 
 Sie können einen bestimmten Zeitplan aktualisieren, indem Sie eine PATCH-Anfrage an den `/config/schedules` -Endpunkt senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie aktualisieren möchten.
 
 Mit der PATCH-Anfrage können Sie entweder den [Status](#update-state) oder den [Cron-Zeitplan](#update-schedule) für einen einzelnen Zeitplan aktualisieren.
-
-### Aktualisieren des Status eines Zeitplans {#update-state}
-
-Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie die `path` -Eigenschaft als `/state` und setzen die `value` auf entweder `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie in der Dokumentation zum [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) .
 
 **API-Format**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | Der `id` -Wert des Zeitplans, den Sie aktualisieren möchten. |
 
+>[!BEGINTABS]
+
+>[!TAB Planstatus aktualisieren]
+
+Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie die `path` -Eigenschaft als `/state` und setzen die `value` auf entweder `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie in der Dokumentation zum [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) .
+
 **Anfrage**
+
++++ Eine Beispielanfrage zum Aktualisieren des Zeitplanstatus.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status des Zeitplans aktualisieren, müssen Sie den Wert von `path` auf &quot;/state&quot;setzen. |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 Bei erfolgreicher Antwort wird der HTTP-Status-Code 204 (kein Inhalt) zurückgegeben.
 
-### Cron-Zeitplan aktualisieren {#update-schedule}
+>[!TAB cron-Zeitplan aktualisieren]
 
 Sie können einen JSON Patch-Vorgang verwenden, um den Cron-Zeitplan zu aktualisieren. Um den Zeitplan zu aktualisieren, deklarieren Sie die `path` -Eigenschaft als `/schedule` und setzen die `value` auf einen gültigen Cron-Zeitplan. Weitere Informationen zum JSON Patch finden Sie in der Dokumentation zum [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) . Weitere Informationen zu Cron-Zeitplänen finden Sie im Anhang zum [Cron-Ausdrucksformat](#appendix).
 
-**API-Format**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` -Wert des Zeitplans, den Sie aktualisieren möchten. |
+>[!ENDTABS]
 
 **Anfrage**
+
++++ Eine Beispielanfrage zum Aktualisieren des Zeitplans.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | Der Pfad des Werts, den Sie aktualisieren möchten. Da Sie in diesem Fall den Cron-Zeitplan aktualisieren, müssen Sie den Wert von `path` auf `/schedule` setzen. |
 | `value` | Der aktualisierte Wert des Cron-Zeitplans. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird der Zeitplan am zweiten Tag jedes Monats ausgeführt. |
 
++++
+
 **Antwort**
 
 Bei erfolgreicher Antwort wird der HTTP-Status-Code 204 (kein Inhalt) zurückgegeben.
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **Anfrage**
 
++++ Eine Beispielanfrage zum Löschen eines Zeitplans.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Antwort**
 

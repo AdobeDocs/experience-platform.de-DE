@@ -4,10 +4,10 @@ title: API-Endpunkt für Segmentaufträge
 description: Der Endpunkt für Segmentaufträge in der Segmentation Service-API von Adobe Experience Platform ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentaufträgen für Ihr Unternehmen.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 17%
+source-wordcount: '1655'
+ht-degree: 16%
 
 ---
 
@@ -36,6 +36,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 **Abfrageparameter**
 
++++ Eine Liste der verfügbaren Abfrageparameter.
+
 | Parameter | Beschreibung | Beispiel |
 | --------- | ----------- | ------- |
 | `start` | Gibt den Startversatz für die zurückgegebenen Segmentaufträge an. | `start=1` |
@@ -44,7 +46,11 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | Ordnet die zurückgegebenen Segmentaufträge. Ist im Format `[attributeName]:[desc|asc]` geschrieben. | `sort=creationTime:desc` |
 | `property` | Filtert Segmentaufträge und erhält genaue Übereinstimmungen für den angegebenen Filter. Das kann in einem der folgenden Formate geschrieben sein: <ul><li>`[jsonObjectPath]==[value]` – Filtern nach dem Objektschlüssel</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` – Filtern innerhalb des Arrays</li></ul> | `property=segments~segmentId==workInUS` |
 
++++
+
 **Anfrage**
+
++++ Eine Beispielanfrage zum Anzeigen einer Liste von Segmentaufträgen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -54,17 +60,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentaufträgen für die angegebene Organisation als JSON zurück. Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
 
-**Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
+>[!BEGINTABS]
+
+>[!TAB Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag]
 
 Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen im Attribut `children.segments` angezeigt.
 
 >[!NOTE]
 >
 >Die folgende Antwort wurde aus Platzgründen abgeschnitten und zeigt nur den ersten zurückgegebenen Auftrag.
+
++++ Eine Beispielantwort beim Abrufen einer Liste von Segmentaufträgen.
 
 ```json
 {
@@ -166,13 +178,17 @@ Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt we
 }
 ```
 
-**Mehr als 1500 Segmentdefinitionen**
++++
+
+>[!TAB Mehr als 1500 Segmentdefinitionen]
 
 Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, zeigt das Attribut `children.segments` den Wert `*` an, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
 
 >[!NOTE]
 >
 >Die folgende Antwort wurde aus Platzgründen abgeschnitten und zeigt nur den ersten zurückgegebenen Auftrag.
+
++++ Eine Beispielantwort beim Anzeigen einer Liste von Segmentaufträgen.
 
 ```json
 {
@@ -276,6 +292,10 @@ Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werde
 | `metrics.segmentProfileByStatusCounter` | Die Anzahl der Profile für jeden Status. Die folgenden drei Status werden unterstützt: <ul><li>&quot;realisiert&quot;- Die Anzahl der Profile, die für die Segmentdefinition qualifiziert sind.</li><li>&quot;Exited&quot;- Die Anzahl der Profile, die in der Segmentdefinition nicht mehr vorhanden sind.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Die Gesamtzahl der zusammengeführten Profile je Zusammenführungsrichtlinie. |
 
++++
+
+>[!ENDTABS]
+
 ## Neuen Segmentauftrag erstellen {#create}
 
 Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an den `/segment/jobs` -Endpunkt senden und die Kennung der Segmentdefinition, aus der Sie eine neue Zielgruppe erstellen möchten, in den Textkörper einschließen.
@@ -288,9 +308,13 @@ POST /segment/jobs
 
 Beim Erstellen eines neuen Segmentauftrags unterscheiden sich Anforderung und Antwort je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
 
-**Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
+>[!BEGINTABS]
+
+>[!TAB Weniger als oder gleich 1500 Segmenten in Ihrem Segmentauftrag]
 
 **Anfrage**
+
+++ + Eine Beispielanfrage zum Erstellen eines neuen Segmentauftrags
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -302,6 +326,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -d '[
     {
         "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    },
+    {
+        "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85"
     }
  ]'
 ```
@@ -310,9 +337,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | -------- | ----------- |
 | `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Diese Segmentdefinitionen können zu verschiedenen Zusammenführungsrichtlinien gehören. Weitere Informationen zu Segmentdefinitionen finden Sie im [Endpunkthandbuch zur Segmentdefinition](./segment-definitions.md). |
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem neu erstellten Segmentauftrag zurück.
+
++++ Eine Beispielantwort beim Erstellen eines neuen Segmentauftrags.
 
 ```json
 {
@@ -335,6 +366,22 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
             "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
                 "id": "7863c010-e092-41c8-ae5e-9e533186752e",
+                "expression": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": "workAddress.country = \"US\""
+                },
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                "mergePolicy": {
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85",
+            "segment": {
+                "id": "07d39471-05d1-4083-a310-d96978fd7c85",
                 "expression": {
                     "type": "PQL",
                     "format": "pql/json",
@@ -411,13 +458,17 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 | `segments.segment.id` | Die ID der von Ihnen bereitgestellten Segmentdefinition. |
 | `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
 
-**Mehr als 1500 Segmentdefinitionen**
++++
+
+>[!TAB Mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag]
 
 **Anfrage**
 
 >[!NOTE]
 >
 >Sie können zwar einen Segmentauftrag mit mehr als 1500 Segmentdefinitionen erstellen, dies ist jedoch **dringend nicht empfohlen**.
+
++++ Eine Beispielanfrage zum Erstellen eines Segmentauftrags.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -443,9 +494,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `schema.name` | Der Name des Schemas für die Segmentdefinitionen. |
 | `segments.segmentId` | Wenn Sie einen Segmentauftrag mit mehr als 1500 Segmenten ausführen, müssen Sie `*` als Segment-ID übergeben, um anzugeben, dass Sie einen Segmentierungsauftrag mit allen Segmenten ausführen möchten. |
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erstellten Segmentauftrag zurück.
+
++++ Eine Beispielantwort beim Erstellen eines Segmentauftrags.
 
 ```json
 {
@@ -530,6 +585,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 | `segments` | Ein Objekt, das Informationen zu den Segmentdefinitionen enthält, für die dieser Segmentauftrag ausgeführt wird. |
 | `segments.segment.id` | Der `*` bedeutet, dass dieser Segmentauftrag für alle Segmentdefinitionen in Ihrer Organisation ausgeführt wird. |
 
++++
+
+>[!ENDTABS]
+
+
 ## Bestimmten Segmentauftrag abrufen {#get}
 
 Sie können detaillierte Informationen zu einem bestimmten Segmentauftrag abrufen, indem Sie eine GET-Anfrage an den `/segment/jobs` -Endpunkt senden und im Anfragepfad die Kennung des Segmentauftrags angeben, den Sie abrufen möchten.
@@ -546,6 +606,8 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 **Anfrage**
 
++++ Eine Beispielanfrage zum Abrufen eines Segmentauftrags.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -554,13 +616,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zum angegebenen Segmentauftrag zurück.  Die Antwort unterscheidet sich jedoch je nach der Anzahl der Segmentdefinitionen im Segmentauftrag.
 
-**Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag**
+>[!BEGINTABS]
+
+>[!TAB Weniger als oder gleich 1500 Segmentdefinitionen in Ihrem Segmentauftrag]
 
 Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt werden, wird eine vollständige Liste aller Segmentdefinitionen im Attribut `children.segments` angezeigt.
+
++++ Eine Beispielantwort zum Abrufen eines Segmentauftrags.
 
 ```json
 {
@@ -622,9 +690,13 @@ Wenn in Ihrem Segmentauftrag weniger als 1500 Segmentdefinitionen ausgeführt we
 }
 ```
 
-**Mehr als 1500 Segmentdefinitionen**
++++
+
+>[!TAB Mehr als 1500 Segmentdefinitionen]
 
 Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werden, zeigt das Attribut `children.segments` den Wert `*` an, der angibt, dass alle Segmentdefinitionen ausgewertet werden.
+
++++ Eine Beispielantwort zum Abrufen eines Segmentauftrags.
 
 ```json
 {
@@ -711,6 +783,10 @@ Wenn mehr als 1500 Segmentdefinitionen in Ihrem Segmentauftrag ausgeführt werde
 | `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
 | `metrics` | Ein Objekt, das diagnostische Informationen zum Segmentauftrag enthält. |
 
++++
+
+>[!ENDTABS]
+
 ## Massenabruf von Segmentaufträgen {#bulk-get}
 
 Sie können detaillierte Informationen über mehrere Segmentaufträge abrufen, indem Sie eine POST-Anfrage an den `/segment/jobs/bulk-get` -Endpunkt senden und die `id` -Werte der Segmentaufträge im Anfrageinhalt angeben.
@@ -722,6 +798,8 @@ POST /segment/jobs/bulk-get
 ```
 
 **Anfrage**
+
++++ Eine Beispielanfrage für die Verwendung des Massen-Abruf-Endpunkts.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -742,6 +820,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segmentaufträgen zurück. Der Wert des Attributs `children.segments` ist jedoch unterschiedlich, wenn der Segmentauftrag für mehr als 1500 Segmentdefinitionen ausgeführt wird.
@@ -749,6 +829,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 >[!NOTE]
 >
 >Die folgende Antwort wurde aus Platzgründen abgeschnitten und zeigt nur teilweise Details zu jedem Segmentauftrag. Die vollständige Antwort enthält alle Details zu den angeforderten Segmentaufträgen.
+
++++ Eine Beispielantwort bei Verwendung der Massen-GET-Antwort.
 
 ```json
 {
@@ -804,6 +886,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 | `segments.segment.id` | Die ID der Segmentdefinition. |
 | `segments.segment.expression` | Ein Objekt, das Informationen zum Ausdruck der Segmentdefinition enthält, geschrieben in PQL. |
 
++++
+
 ## Bestimmten Segmentauftrag abbrechen oder löschen {#delete}
 
 Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anfrage an den `/segment/jobs` -Endpunkt senden und im Anfragepfad die Kennung des Segmentauftrags angeben, den Sie löschen möchten.
@@ -824,6 +908,8 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 **Anfrage**
 
++++ Eine Beispielanfrage zum Löschen eines Segmentauftrags.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -832,9 +918,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 mit folgenden Informationen zurück.
+
++++ Eine Beispielantwort beim Löschen eines Segmentauftrags.
 
 ```json
 {
@@ -842,6 +932,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 mit folgenden Informationen z
     "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
 }
 ```
+
++++
 
 ## Nächste Schritte
 

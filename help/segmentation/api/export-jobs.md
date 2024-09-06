@@ -4,10 +4,10 @@ title: API-Endpunkt für Segmentexport-Aufträge
 description: Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können den Endpunkt /export/jobs in der Adobe Experience Platform Segmentation Service-API verwenden, mit dem Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 12%
+source-wordcount: '1678'
+ht-degree: 11%
 
 ---
 
@@ -33,20 +33,26 @@ Der `/export/jobs`-Endpunkt unterstützt verschiedene Abfrageparameter, mit dene
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `{LIMIT}` | Gibt die Zahl der zurückgegebenen Exportaufträge an. |
-| `{OFFSET}` | Gibt den Versatz der Ergebnisseiten an. |
-| `{STATUS}` | Filtert die Ergebnisse anhand ihres Status. Die unterstützten Werte sind &quot;NEW&quot;, &quot;SUCCEEDED&quot;und &quot;FAILED&quot;. |
+**Abfrageparameter**
+
++++ Eine Liste der verfügbaren Abfrageparameter.
+
+| Parameter | Beschreibung | Beispiel |
+| --------- | ----------- | ------- |
+| `limit` | Gibt die Zahl der zurückgegebenen Exportaufträge an. | `limit=10` |
+| `offset` | Gibt den Versatz der Ergebnisseiten an. | `offset=1540974701302_96` |
+| `status` | Filtert die Ergebnisse anhand ihres Status. Die unterstützten Werte sind &quot;NEW&quot;, &quot;SUCCEEDED&quot;und &quot;FAILED&quot;. | `status=NEW` |
+
++++
 
 **Anfrage**
 
 Mit der folgenden Anfrage werden die letzten beiden Exportaufträge innerhalb Ihres Unternehmens abgerufen.
+
++++ Eine Beispielanfrage zum Abrufen von Exportvorgängen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste erfolgreich abgeschlossener Exportaufträge zurück, basierend auf dem Abfrageparameter, der im Anfragepfad angegeben ist.
+
++++ Eine Beispielantwort beim Abrufen von Exportvorgängen.
 
 ```json
 {
@@ -207,6 +217,8 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste erfolgreich abgesc
 | `page` | Informationen zur Paginierung der angeforderten Exportaufträge. |
 | `link.next` | Ein Link zur nächsten Seite der Exportaufträge. |
 
++++
+
 ## Neuen Exportauftrag erstellen {#create}
 
 Sie können einen neuen Exportauftrag erstellen, indem Sie eine POST-Anfrage an den `/export/jobs`-Endpunkt senden.
@@ -220,6 +232,8 @@ POST /export/jobs
 **Anfrage**
 
 Die folgende Anfrage erstellt einen neuen Exportauftrag, der durch die in der Payload bereitgestellten Parameter konfiguriert wird.
+
++++ Eine Beispielanfrage zum Erstellen eines Exportauftrags.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
 | `evaluationInfo.segmentation` | *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig auf `false` gesetzt ist. Der Wert `true` zeigt an, dass die Segmentierung für den Exportauftrag durchgeführt werden muss. |
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erstellten Exportauftrag zurück.
+
++++ Eine Beispielantwort beim Erstellen eines Exportauftrags.
 
 ```json
 {
@@ -380,6 +398,8 @@ Wenn `destination.segmentPerBatch` auf `true` gesetzt worden wäre, hätte das o
     }
 ```
 
++++
+
 ## Bestimmten Exportauftrag abrufen {#get}
 
 Sie können detaillierte Informationen zu einem bestimmten Exportauftrag abrufen, indem Sie eine GET-Anfrage an den `/export/jobs` -Endpunkt senden und im Anfragepfad die Kennung des Exportauftrags angeben, den Sie abrufen möchten.
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Anfrage**
 
++++ Eine Beispielanfrage zum Abrufen eines Exportauftrags.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum angegebenen Exportauftrag zurück.
+
++++ Eine Beispielantwort beim Abrufen eines Exportauftrags.
 
 ```json
 {
@@ -476,6 +502,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 | `metrics.profileExportTime` | Ein Feld, das angibt, wie lange der Export der Profile dauerte. |
 | `totalExportedProfileCounter` | Die Gesamtanzahl der Profile, die in allen Stapeln exportiert wurden. |
 
++++
+
 ## Bestimmten Exportauftrag abbrechen oder löschen {#delete}
 
 Sie können das Löschen des angegebenen Exportauftrags anfordern, indem Sie eine DELETE-Anfrage an den Endpunkt `/export/jobs` senden und im Anfragepfad die Kennung des Exportauftrags angeben, den Sie löschen möchten.
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Anfrage**
 
++++ Eine Beispielanfrage zum Löschen eines Exportauftrags.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Antwort**
 

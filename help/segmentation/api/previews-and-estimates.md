@@ -4,9 +4,9 @@ title: Vorschau und Schätzung von API-Endpunkten
 description: Bei der Entwicklung der Segmentdefinition können Sie die Schätzungs- und Vorschau-Tools in Adobe Experience Platform verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1016'
 ht-degree: 11%
 
 ---
@@ -62,6 +62,8 @@ POST /preview
 
 **Anfrage**
 
++++ Beispielanfrage zum Erstellen einer Vorschau.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | Der Name der Schemaklasse [!DNL Experience Data Model] (XDM), auf der die Profildaten basieren. |
 | `graphType` | Der Diagrammtyp, aus dem Sie den Cluster abrufen möchten. Die unterstützten Werte sind &quot;`none`&quot;(keine Identitätszusammenfügung) und &quot;`pdg`&quot;(führt eine Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durch). |
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) mit Details zur neu erstellten Vorschau zurück.
+
++++ Eine Beispielantwort beim Erstellen einer Vorschau.
 
 ```json
 {
@@ -103,6 +109,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) mit Details zur ne
 | -------- | ----------- |
 | `state` | Der aktuelle Status des Vorschauauftrags. Nach der anfänglichen Erstellung befindet er sich im Status &quot;NEU&quot;. Anschließend befindet er sich im Status &quot;WIRD AUSGEFÜHRT&quot;, bis die Verarbeitung abgeschlossen ist. Anschließend wird er zu &quot;RESULT_READY&quot;oder &quot;FEHLGESCHLAGEN&quot;. |
 | `previewId` | Die ID des Vorschauauftrags, die für Nachschlagezwecke bei der Anzeige einer Schätzung oder Vorschau verwendet wird, wie im nächsten Abschnitt beschrieben. |
+
++++
 
 ## Ergebnisse einer bestimmten Vorschau abrufen {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **Anfrage**
 
++++ Eine Beispielanfrage zum Abrufen einer Vorschau.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
+
++++ Eine Beispielantwort beim Abrufen einer Vorschau.
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Vorschau zurück.
 
@@ -181,6 +195,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 | -------- | ----------- |
 | `results` | Eine Liste der Entitäts-IDs zusammen mit den zugehörigen Identitäten. Die bereitgestellten Links können verwendet werden, um die angegebenen Entitäten mithilfe des [API-Endpunkts für den Profilzugriff](../../profile/api/entities.md) nachzuschlagen. |
 
++++
+
 ## Abrufen der Ergebnisse eines bestimmten Schätzauftrags {#get-estimate}
 
 Nachdem Sie einen Vorschauauftrag erstellt haben, können Sie dessen `previewId` im Pfad einer GET-Anfrage an den `/estimate` -Endpunkt verwenden, um statistische Informationen über die Segmentdefinition anzuzeigen, einschließlich der projizierten Zielgruppengröße, des Konfidenzintervalls und der Standardabweichung für Fehler.
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 Die folgende Anfrage ruft die Ergebnisse eines bestimmten Schätzauftrags ab.
 
++++ Eine Beispielanfrage zum Abrufen eines Schätzauftrags.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zurück.
+
++++ Eine Beispielantwort beim Abrufen eines Schätzauftrags.
 
 ```json
 {
@@ -243,9 +265,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Ein Array von Objekten, das die Anzahl der Profile innerhalb des Segments anzeigt, aufgeschlüsselt nach Identitäts-Namespace. Die Gesamtanzahl der Profile nach Namespace (addiert die für jeden Namespace angezeigten Werte) kann höher sein als die Profilzählungsmetrik, da ein Profil mit mehreren Namespaces verknüpft werden könnte. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet. |
+| `estimatedNamespaceDistribution` | Ein Array von Objekten, das die Anzahl der Profile innerhalb der Segmentdefinition anzeigt, aufgeschlüsselt nach Identitäts-Namespace. Die Gesamtanzahl der Profile nach Namespace (addiert die für jeden Namespace angezeigten Werte) kann höher sein als die Profilzählungsmetrik, da ein Profil mit mehreren Namespaces verknüpft werden könnte. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet. |
 | `state` | Der aktuelle Status des Vorschauauftrags. Der Status lautet &quot;WIRD AUSGEFÜHRT&quot;, bis die Verarbeitung abgeschlossen ist. Anschließend wird sie zu &quot;RESULT_READY&quot;oder &quot;FEHLGESCHLAGEN&quot;. |
 | `_links.preview` | Wenn der `state` &quot;RESULT_READY&quot;ist, stellt dieses Feld eine URL zum Anzeigen der Schätzung bereit. |
+
++++
 
 ## Nächste Schritte
 
