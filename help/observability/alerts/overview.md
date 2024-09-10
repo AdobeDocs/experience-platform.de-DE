@@ -4,9 +4,9 @@ title: Warnhinweise – Übersicht
 description: Erfahren Sie mehr über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '793'
 ht-degree: 89%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Warnhinweise werden in Nicht-Produktions-Sandboxes nicht unterstützt. Um Warnhinweise abonnieren zu können, müssen Sie sicherstellen, dass Sie eine Produktions-Sandbox verwenden. Alle Abonnementwarnungen werden zurückgesetzt, wenn die Sandbox zurückgesetzt wird. Alle Abonnementwarnungen werden ebenfalls gelöscht, wenn eine Sandbox gelöscht wird.
+>Da Warnhinweise sowohl in Produktions- als auch in Entwicklungs-Sandboxes unterstützt werden, können Sie sie in jeder beliebigen Sandbox abonnieren. Wenn eine Sandbox zurückgesetzt wird, werden auch alle Abonnementwarnungen zurückgesetzt und beim Löschen einer Sandbox werden alle Abonnementwarnungen gelöscht.
 
 Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob Fehler aufgetreten sind.
 
