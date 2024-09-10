@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 85%
+source-wordcount: '4767'
+ht-degree: 67%
 
 ---
 
@@ -213,6 +213,90 @@ Die Zählungsfunktion wird jetzt hinzugefügt. Nun können Sie die Zählungsfunk
 
 ![Eine Liste der Zählungsfunktionen wird angezeigt und hervorgehoben.](../images/ui/segment-builder/select-count.png)
 
+### Zeitbeschränkungen {#time-constraints}
+
+Mit Zeitbeschränkungen können Sie zeitbasierte Attribute, Ereignisse und die Reihenfolge zwischen den Ereignissen zeitbegrenzen.
+
+>[!IMPORTANT]
+>
+>Wenn Sie eine Segmentdefinition mit den Zeitbeschränkungen &quot;Dieser Monat&quot;oder &quot;Dieses Jahr&quot;vor Juni 2024 erstellt haben, müssen Sie Ihre Segmentdefinitionen erneut speichern. Vor Juni 2024 basierte &quot;Dieser Monat&quot;auf 30 Tagen und &quot;Dieses Jahr&quot;auf 365 Tagen.
+
+Die Liste der verfügbaren Zeitbeschränkungen lautet wie folgt:
+
++++ Verfügbare Zeitbeschränkungen
+
+>[!NOTE]
+>
+>Alle Zeitbeschränkungen basieren auf UTC.
+>
+>Wenn das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktiviert ist, wird außerdem das Jahr **nicht** im Rahmen der Segmentdefinitionsbewertung verglichen.
+
+| Zeitliche Beschränkung | Beschreibung | Kann ignoriertes Jahr aktivieren | Beispiel |
+| --------------- | ----------- | ------------------- | ------- |
+| Heute | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt heute auf. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Heute&quot;.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Gestern | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt gestern auf. | Ja | ![Ein Beispiel für die Zeitbegrenzung &quot;Gestern&quot;, die verwendet wird.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Dieser Monat | Das Attribut oder Ereignis, mit dem **muss** verglichen wird, tritt in diesem Kalendermonat auf. | Ja | ![Ein Beispiel für die Zeitbegrenzung &quot;Dieser Monat&quot;, die verwendet wird.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Dieses Jahr | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt in diesem Kalenderjahr auf. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Dieses Jahr&quot;.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Benutzerdefiniertes Datum | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt am angegebenen Datum auf. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Benutzerdefiniertes Datum&quot;.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| Letzten | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt innerhalb des letzten ausgewählten Zeitraums auf. Dieser Zeitraum ist **einschließlich** bis zur Auswertungszeit. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;In last&quot;.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| Von (bis) | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt innerhalb der beiden ausgewählten Kalenderdaten auf. Dieser Zeitraum ist **einschließlich** beider Daten. | Ja, wenn benutzerdefiniertes Datum | ![Ein Beispiel für die Verwendung von &quot;Von bis&quot;.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Während | Das Attribut oder Ereignis, mit dem **muss** verglichen wird, tritt innerhalb des ausgewählten Monats oder Jahres auf. Wenn ein Monat ausgewählt wird, müssen Sie sowohl den Monat als auch das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat.  Wenn ein Jahr ausgewählt wird, müssen Sie nur das Jahr auswählen, in dem das Attribut oder Ereignis stattgefunden hat. Wenn Sie einen Monat auswählen, können Sie auch das Kontrollkästchen [!UICONTROL Jahr ignorieren] aktivieren. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Während&quot;.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Within (+/-) | Das Attribut oder Ereignis, mit dem **muss** verglichen werden, tritt innerhalb von Tagen, Wochen, Monaten oder Jahren ab dem ausgewählten Datum auf. Dieser Zeitraum ist **einschließlich** beider Daten. Das ausgewählte Datum kann heute, gestern oder ein anderes benutzerdefiniertes Datum Ihrer Wahl sein. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;In&quot;.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Vorher | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt vor dem ausgewählten Datum auf. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren vor. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Vor&quot;.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Nachher | Das Attribut oder Ereignis, mit dem **must** verglichen wird, tritt nach dem ausgewählten Datum auf. Das ausgewählte Datum kann ein benutzerdefiniertes Datum Ihrer Wahl oder eine Auswahl zwischen Tagen, Wochen, Monaten oder Jahren vor. | Ja | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Nach&quot;.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rollbereich | Das zu vergleichende Attribut oder Ereignis muss zwischen den beiden relativen Daten auftreten. Die Daten können in Sekunden, Minuten, Stunden, Tagen, Wochen, Monaten oder Jahren dargestellt werden. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Rollierender Bereich&quot;.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| Nächste | Das zu vergleichende Attribut oder Ereignis muss innerhalb des nächsten ausgewählten Zeitraums auftreten. Die ausgewählten Zeiträume umfassen Minuten, Stunden, Tage, Wochen, Monate und Jahre. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;In Nächstes&quot;.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Existiert | Das -Attribut ist vorhanden. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Existiert&quot;.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Nicht vorhanden | Das -Attribut ist nicht vorhanden. | Nein | ![Ein Beispiel für die verwendete Zeitbegrenzung &quot;Existiert nicht&quot;.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+Wenn Sie eine Zeitbegrenzung auf ein Ereignis anwenden, können Sie sie entweder auf die Arbeitsfläche, die Kartenebene oder zwischen Ereignissen anwenden.
+
+#### Begrenzung auf Arbeitsflächenebene
+
+Um eine Zeitbegrenzung auf Arbeitsflächenebene anzuwenden, wählen Sie das Uhrensymbol aus, das über der Zeitleiste der Ereignisse angezeigt wird.
+
+![Die Zeitbegrenzungsauswahl auf Arbeitsflächenebene wird hervorgehoben.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+Wenn Sie eine Zeitbegrenzung auf die Arbeitsflächenebene anwenden, wird die Zeitbegrenzung auf **alle** Ereignisse in der Zielgruppe angewendet.
+
+#### Begrenzung auf Kartenebene
+
+Um eine Begrenzung auf Kartenebene anzuwenden, wählen Sie die Karte aus, auf die die Zeitbegrenzung angewendet werden soll, gefolgt vom Auslassungssymbol und **[!UICONTROL Zeitregel anwenden]**. Auf diese Weise können Sie eine Zeitbegrenzung innerhalb des Containers **[!UICONTROL Ereignisregeln]** auswählen.
+
+![Die Zeitbegrenzungsauswahl auf Kartenebene ist hervorgehoben.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+Wenn Sie eine Zeitbegrenzung auf Kartenebene anwenden, wird die Zeitbegrenzung auf das Ereignis **specified** in der Zielgruppe angewendet.
+
+#### Zwischen Ereignisbegrenzung
+
+Um eine Zeitbegrenzung zwischen Ereignissen anzuwenden, wählen Sie das Uhrensymbol zwischen den beiden Ereignissen aus, auf die Sie die Zeitbegrenzung anwenden möchten.
+
+![Die Zeitbegrenzungsauswahl zwischen Ereignissen wird hervorgehoben.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+Wenn Sie eine Zeitbegrenzung zwischen dem Ereignis anwenden, wird die Zeitbegrenzung auf die Zeit **zwischen** der Ereignisse angewendet.
+
+Die Liste der verfügbaren Zeitbeschränkungen für diesen Vorgang unterscheidet sich von der Hauptliste der Zeitbeschränkungen und umfasst folgende Elemente:
+
++++ Verfügbare Zeitbeschränkungen
+
+| Zeitliche Beschränkung | Beschreibung |
+| --------------- | ----------- |
+| Nachher | Das letztgenannte Ereignis **muss mindestens** nach dem vorherigen Ereignis stattfinden. |
+| Within | Die beiden Ereignisse **must** finden während des Zeitraums statt, der innerhalb der Zeitbegrenzung aufgeführt ist. |
+
+>[!NOTE]
+>
+>Bei Verwendung der Zeitbegrenzung &quot;Nach&quot;kann das letztgenannte Ereignis mehr als die in der Zeitbegrenzung aufgelistete Zeitdauer betragen. >
+>Wenn Sie beispielsweise ein Seitenansichtsereignis und ein Checkout-Ereignis haben und die Zeitbegrenzung &quot;Nach 1 Stunde&quot;zwischen diesen beiden Ereignissen setzen, qualifiziert sich eine Segmentdefinition mit einem Checkout-Ereignis 2 Stunden nach dem Seitenansichtsereignis.
+>
+>Darüber hinaus können diese beiden Zeitbeschränkungen in Abstimmung miteinander verwendet werden.
+>
+>Wenn Sie beispielsweise über ein Seitenansichtsereignis und ein Checkout-Ereignis verfügen und sowohl die Zeitbeschränkungen &quot;Nach 1 Stunde&quot;als auch &quot;Innerhalb 24 Stunden&quot;festlegen, qualifiziert sich eine Segmentdefinition mit einem Checkout-Ereignis 12 Stunden nach dem Seitenansichtsereignis, aber eine Segmentdefinition mit einem Checkout-Ereignis 36 Stunden nach dem Seitenansichtsereignis würde nicht qualifiziert.
+
++++
+
 ## Container
 
 Segmentregeln werden in der Reihenfolge ausgewertet, in der sie aufgelistet sind. Container ermöglichen eine Steuerung der Ausführungsreihenfolge durch Verwendung verschachtelter Abfragen.
@@ -248,7 +332,7 @@ Sie können eine Zusammenführungsrichtlinie auswählen, die Ihrem Marketing-Zwe
 
 Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, wählen Sie auf der Registerkarte **[!UICONTROL Felder]** das Zahnradsymbol und dann im Dropdown-Menü die Option **[!UICONTROL Zusammenführungsrichtlinie]** aus, um die gewünschte Zusammenführungsrichtlinie festzulegen.
 
-![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben. Darüber können Sie festlegen, welche Zusammenführungsrichtlinie für Ihre Segmentdefinition ausgewählt werden soll.](../images/ui/segment-builder/merge-policy-selector.png)
+![Die Auswahl für die Zusammenführungsrichtlinie ist hervorgehoben. Auf diese Weise können Sie auswählen, welche Zusammenführungsrichtlinie für Ihre Segmentdefinition ausgewählt werden soll.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Eigenschaften der Segmentdefinition {#segment-properties}
 
