@@ -3,9 +3,9 @@ title: Zielgruppen-API-Endpunkt
 description: Verwenden Sie den Zielgruppen-Endpunkt in der Adobe Experience Platform Segmentation Service-API, um Zielgruppen für Ihr Unternehmen programmgesteuert zu erstellen, zu verwalten und zu aktualisieren.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 6%
 
 ---
@@ -30,6 +30,10 @@ Der `/audiences`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen 
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>Wenn Sie diesen Endpunkt ohne Abfrageparameter verwenden, werden inaktive Zielgruppen **nicht** zurückgegeben. Wenn Sie diesen Endpunkt jedoch zusammen mit dem Abfrageparameter `property=audienceId` verwenden, werden inaktive Zielgruppen **zurückgegeben**.
 
 Beim Abrufen einer Zielgruppenliste können die folgenden Abfrageparameter verwendet werden:
 
