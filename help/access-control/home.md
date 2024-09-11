@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Benutzende mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
+source-git-commit: 5d5c57dfb9e4abda6b1bca96147a95d063bc17c6
 workflow-type: tm+mt
-source-wordcount: '1731'
-ht-degree: 82%
+source-wordcount: '1787'
+ht-degree: 78%
 
 ---
 
@@ -116,7 +116,11 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Identity Management] | [!UICONTROL Verwalten von Identitäts-Namensräumen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Identitäts-Namensräumen. |
 | [!DNL Identity Management] | [!UICONTROL Anzeigen von Identitäts-Namensräumen] | Schreibgeschützter Zugriff für Identitäts-Namensräume. |
 | [!DNL Identity Management] | [!UICONTROL Anzeigen von Identitätsdiagrammen] | Schreibgeschützter Zugriff für Identitätsdiagramme. |
-| [!DNL Profile Management] | [!UICONTROL Verwalten von Profilen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datensätzen, die für Kundenprofile verwendet werden. Schreibgeschützter Zugriff auf verfügbare Profile. |
+| [!DNL Intelligent Services] | [!UICONTROL Attribution AI anzeigen] | Schreibgeschützter Zugriff für Attribution AI-Einstellungen und -Einblicke. |
+| [!DNL Intelligent Services] | [!UICONTROL Attribution AI verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Attribution AI-Modellen. |
+| [!DNL Intelligent Services] | [!UICONTROL Anzeigen von Customer AI] | Zugriff auf das Lesen oder Anzeigen von Customer AI-Modellen. |
+| [!DNL Intelligent Services] | [!UICONTROL Verwalten von Customer AI] | Zugriff auf das Erstellen, Aktualisieren, Löschen, Aktivieren oder Deaktivieren von Customer AI-Modellen. |
+| [!DNL Profile Management] | [!UICONTROL Verwalten von Profilen] | Erfassen Sie Daten aus mehreren Quellen, erstellen Sie zuverlässige Profile für einzelne Kunden und speichern Sie profilaktivierte Daten im Data Lake und im Datenspeicher &quot;Echtzeit-Kundenprofil&quot;. |
 | [!DNL Profile Management] | [!UICONTROL Anzeigen von Profilen] | Schreibgeschützter Zugriff auf verfügbare Profile. |
 | [!DNL Profile Management] | [!UICONTROL Segmente verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Segmenten. |
 | [!DNL Profile Management] | [!UICONTROL Anzeigen von Segmenten] | Schreibgeschützter Zugriff auf verfügbare Segmente. |
@@ -130,7 +134,7 @@ In der folgenden Tabelle stehen die verfügbaren Berechtigungen für Experience 
 | [!DNL Profile Management] | [!UICONTROL B2B-Profil anzeigen] | Schreibgeschützter Zugriff auf B2B-Entitätsprofile (z. B. Konto, Chancen usw.), Einstellungen und Konfigurationen für alle B2B AI/ML-Dienste und B2B-Dashboard-Widgets. |
 | [!DNL Profile Management] | [!UICONTROL B2B-Profil verwalten] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von B2B-Entitätsprofilen (z. B. Konto, Chancen usw.). Schreibgeschützter Zugriff für Einstellungen und Konfigurationen für alle B2B AI/ML-Dienste und B2B-Dashboard-Widgets. |
 | [!DNL Query Service] | [!UICONTROL Verwalten von Abfragen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Platform-Daten. |
-| [!DNL Query Service] | [!UICONTROL Verwalten der Integration des Abfrage-Service] | Zugriff auf das Erstellen, Aktualisieren und Löschen nicht ablaufender Anmeldeinformationen für den Zugriff auf den Abfrage-Service. |
+| [!DNL Query Service] | [!UICONTROL Verwalten der Integration des Abfrage-Service] | Zugriff auf das Erstellen, Aktualisieren und Löschen nicht ablaufender Anmeldedaten für den Zugriff auf den Abfrage-Service. |
 | [!DNL Sandbox Administration] | [!UICONTROL Verwalten von Sandboxes] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen von Sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL Anzeigen von Sandboxes] | Schreibgeschützter Zugriff für Sandboxes Ihrer Organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Zurücksetzen einer Sandbox] | Fähigkeit, eine Sandbox zurückzusetzen. |
