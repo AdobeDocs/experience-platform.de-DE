@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads bietet eine Reihe von Optionen, die Ihnen beim Erreichen Ihrer Werbeziele für Agenturen und/oder registrierte Verkäuferschaft, Anbieterschaft, Buchhändlerinnen und -händler, Entwickelnde von Apps oder Autorinnen bzw. Autoren von Kindle Direct Publishing (KDP) hilft. Die Amazon Ads-Integration mit Adobe Experience Platform bietet eine schlüsselfertige Integration in Amazon Ads-Produkte, einschließlich Amazon DSP (ADSP). Mit dem Amazon Ads-Ziel in Adobe Experience Platform können Benutzerinnen und Benutzer Advertiser-Zielgruppen für Targeting und Aktivierung im Amazon DSP definieren.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
+source-git-commit: 56971631eb7ab2ef3dd2dcf077ee3b52f131ffe7
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 55%
+source-wordcount: '1761'
+ht-degree: 52%
 
 ---
 
@@ -97,7 +97,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 >[!NOTE]
 >
->Nach dem Speichern der Zielkonfiguration können Sie die [!DNL Amazon Ads] Advertiser-ID nicht ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere [!DNL Amazon Ads] Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen.
+>Nach dem Speichern der Zielkonfiguration können Sie die [!DNL Amazon Ads] Advertiser-ID nicht ändern, selbst wenn Sie sich über Ihr Amazon-Konto erneut authentifizieren. Um eine andere [!DNL Amazon Ads] Advertiser-ID zu verwenden, müssen Sie eine neue Zielverbindung erstellen. Werbetreibende, die bereits für eine Integration mit ADSP eingerichtet sind, müssen einen neuen Zielfluss erstellen, wenn sie möchten, dass ihre Zielgruppen an AMC oder ein anderes ADSP-Konto bereitgestellt werden.
 
 * **[!UICONTROL Advertiser-Region]**: Wählen Sie die gewünschte Region aus, in der Ihr Advertiser gehostet wird. Weitere Informationen zu den von den einzelnen Regionen unterstützten Marktplätzen finden Sie in der [Amazon Ads-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
@@ -129,6 +129,7 @@ Die Verbindung [!DNL Amazon Ads] unterstützt Hash-E-Mail-Adresse und Hash-Telef
 * Um Hash-E-Mail-Adressen zuzuordnen, wählen Sie den Identity-Namespace von `Email_LC_SHA256` als ein Quellfeld aus.
 * Um Hash-Telefonnummern zuzuordnen, wählen Sie den Identity-Namespace von `Phone_SHA256` als ein Quellfeld aus.
 * Um ungehashte E-Mail-Adressen oder Telefonnummern zuzuordnen, wählen Sie die entsprechenden Identity-Namespaces als Quellfelder aus und überprüfen Sie die Option `Apply Transformation`, damit Platform die Identitäten bei der Aktivierung hasht.
+* *NEU ab Version September 2024*: Amazon Ads erfordert, dass Sie ein Feld mit einem `countryCode` -Wert im ISO-Format mit zwei Zeichen zuordnen, um den Prozess der Identitätsauflösung zu erleichtern (z. B. USA, GB, MX, CA usw.). Verbindungen ohne `countryCode` -Zuordnungen wirken sich negativ auf die Identitätsübereinstimmungsraten aus.
 
 Sie wählen ein bestimmtes Zielfeld nur einmal in einer Zielkonfiguration des [!DNL Amazon Ads] -Connectors aus.  Wenn Sie beispielsweise eine geschäftliche E-Mail senden, können Sie keine persönliche E-Mail in derselben Zielkonfiguration zuordnen.
 
@@ -148,7 +149,7 @@ Navigieren Sie zu Ihrer **[!UICONTROL Advertiser-ID]** > **[!UICONTROL Zielgrupp
 
 Suchen Sie im linken Schema-Browser Ihre Zielgruppe unter **[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]**. Anschließend können Sie Ihre Zielgruppe im AMC SQL-Editor mit der folgenden -Klausel abfragen:
 
-`select count(user_id) from aep_audiences where audienceId = '1234567'`
+`select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
 ![Validierung der Audience-Erstellung für Amazon Marketing Cloud](../../assets/catalog/advertising/amazon_ads_image_5.png)
 
@@ -171,6 +172,7 @@ In diesem Abschnitt werden aktualisierte Funktionen und wesentliche Dokumentatio
 
 | Veröffentlichungsmonat | Art der Aktualisierung | Beschreibung |
 |---|---|---|
+| Mai 2024 | Funktions- und Dokumentationsaktualisierung | Die Zuordnungsoption zum Exportieren des Parameters `countryCode` in Amazon Ads wurde hinzugefügt. Verwenden Sie `countryCode` im Schritt [Zuordnen](#map) , um Ihre Identitätsübereinstimmungsraten mit Amazon zu verbessern. |
 | März 2024 | Funktions- und Dokumentationsaktualisierung | Die Option zum Exportieren von Zielgruppen, die in [!DNL Amazon Marketing Cloud] (AMC) verwendet werden sollen, wurde hinzugefügt. |
 | Mai 2023 | Funktions- und Dokumentationsaktualisierung | <ul><li>Unterstützung für die Auswahl der Advertiser-Region im [Zielverbindungs-Workflow](#destination-details) hinzugefügt.</li><li>Dokumentation aktualisiert, um das Hinzufügen der Auswahl der Advertiser-Region widerzuspiegeln. Weitere Informationen zum Auswählen der richtigen Advertiser-Region finden Sie in der [Amazon-Dokumentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | März 2023 | Erstmalige Veröffentlichung | Ursprüngliche Zielversion und Dokumentation veröffentlicht. |
