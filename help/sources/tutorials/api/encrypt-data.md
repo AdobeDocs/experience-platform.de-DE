@@ -2,10 +2,10 @@
 title: Verschlüsselte Datenaufnahme
 description: Erfahren Sie, wie Sie verschlüsselte Dateien über Cloud-Speicher-Batch-Quellen mithilfe der API aufnehmen.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 76%
+source-wordcount: '1806'
+ht-degree: 72%
 
 ---
 
@@ -15,7 +15,7 @@ Sie können verschlüsselte Datendateien mit Batch-Quellen für den Cloud-Speich
 
 Die verschlüsselte Datenaufnahme läuft wie folgt ab:
 
-1. [Erstellen Sie zunächst ein Verschlüsselungsschlüsselpaar mit Experience Platform-APIs](#create-encryption-key-pair). Das Verschlüsselungsschlüsselpaar besteht aus einem privaten Schlüssel und einem öffentlichen Schlüssel. Nach der Erstellung können Sie den öffentlichen Schlüssel zusammen mit der zugehörigen öffentlichen Schlüssel-ID und der Ablaufzeit kopieren oder herunterladen. Während dieses Vorgangs wird der private Schlüssel von Experience Platform in einem sicheren Tresor gespeichert. **HINWEIS**: Der öffentliche Schlüssel in der Antwort ist mit Base64 verschlüsselt und muss vor der Verwendung entschlüsselt werden.
+1. [Erstellen Sie zunächst ein Verschlüsselungsschlüsselpaar mit Experience Platform-APIs](#create-encryption-key-pair). Das Verschlüsselungsschlüsselpaar besteht aus einem privaten Schlüssel und einem öffentlichen Schlüssel. Nach der Erstellung können Sie den öffentlichen Schlüssel zusammen mit der zugehörigen öffentlichen Schlüssel-ID und der Ablaufzeit kopieren oder herunterladen. Während dieses Vorgangs wird der private Schlüssel von Experience Platform in einem sicheren Tresor gespeichert. **HINWEIS:** Der öffentliche Schlüssel in der Antwort ist Base64-kodiert und muss vor der Verwendung dekodiert werden.
 2. Verwenden Sie den öffentlichen Schlüssel, um die aufzunehmende Datendatei zu verschlüsseln.
 3. Legen Sie Ihre verschlüsselte Datei in Ihrem Cloud-Speicher ab.
 4. Sobald die verschlüsselte Datei fertig ist, [erstellen Sie eine Quellverbindung und einen Datenfluss für Ihre Cloud-Speicherquelle](#create-a-dataflow-for-encrypted-data). Während des Schritts zur Flusserstellung müssen Sie einen `encryption`-Parameter angeben und Ihre öffentliche Schlüssel-ID einschließen.
@@ -64,6 +64,10 @@ Die Liste der unterstützten Dateierweiterungen für verschlüsselte Dateien ist
 
 ## Erstellen eines Verschlüsselungsschlüsselpaars {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>Verschlüsselungsschlüssel sind für eine bestimmte Sandbox spezifisch. Daher müssen Sie neue Verschlüsselungsschlüssel erstellen, wenn Sie verschlüsselte Daten in einer anderen Sandbox innerhalb Ihres Unternehmens erfassen möchten.
+
 Der erste Schritt bei der Aufnahme verschlüsselter Daten in Experience Platform besteht darin, Ihr Verschlüsselungsschlüsselpaar durch eine POST-Anfrage an den `/encryption/keys`-Endpunkt der [!DNL Connectors]-API zu erstellen.
 
 **API-Format**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
+| `name` | Der Name Ihres Verschlüsselungsschlüsselpaars. |
 | `encryptionAlgorithm` | Der Typ des von Ihnen verwendeten Verschlüsselungsalgorithmus. Die unterstützten Verschlüsselungstypen sind `PGP` und `GPG`. |
 | `params.passPhrase` | Die Passphrase bietet eine zusätzliche Schutzschicht für Ihre Verschlüsselungsschlüssel. Bei der Erstellung speichert Experience Platform die Passphrase in einem anderen sicheren Tresor als den öffentlichen Schlüssel. Sie müssen eine nicht leere Zeichenfolge als Passphrase angeben. |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++ Beispielantwort anzeigen
 
-Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Ihr Name, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels, der Schlüsseltyp und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++ Beispielantwort anzeigen
 
-Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
+Bei einer erfolgreichen Antwort werden Ihr Verschlüsselungsalgorithmus, Ihr Name, der öffentliche Schlüssel, die Kennung des öffentlichen Schlüssels, der Schlüsseltyp und die entsprechende Ablaufzeit Ihrer Schlüssel zurückgegeben.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `publicKeyId` | Diese öffentliche Schlüssel-ID wird zurückgegeben, wenn Sie Ihren kundenverwalteten Schlüssel für Experience Platform freigeben. Sie können diese öffentliche Schlüssel-ID als Kennung des Signaturverfizierungsschlüssels angeben, wenn Sie einen Datenfluss für signierte und verschlüsselte Daten erstellen. |
+
++++
+
+### Vom Kunden verwaltetes Schlüsselpaar abrufen
+
+Um vom Kunden verwaltete Schlüssel abzurufen, stellen Sie eine GET-Anfrage an den `/customer-keys` -Endpunkt.
+
+**API-Format**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Anfrage**
+
++++ Beispielanfrage anzeigen
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Antwort**
+
++++ Beispielantwort anzeigen
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
