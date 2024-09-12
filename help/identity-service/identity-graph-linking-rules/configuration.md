@@ -1,16 +1,16 @@
 ---
-title: Konfigurationshandbuch für Regeln zur Verknüpfung von Identitätsdiagrammen
+title: Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1361'
 ht-degree: 3%
 
 ---
 
-# Konfigurationshandbuch für Regeln zur Verknüpfung von Identitätsdiagrammen
+# Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ Verwenden Sie für jedes Feedback die Option **[!UICONTROL Beta feedback]** im U
 
 In diesem Abschnitt finden Sie weitere Informationen, auf die Sie bei der Implementierung Ihrer Identitätseinstellungen und eindeutigen Namespaces verweisen können.
 
-### Szenario für freigegebene Geräte {#shared-device-scenario}
+### Namespace-Anforderung für eine Person {#single-person-namespace-requirement}
 
 Sie müssen sicherstellen, dass für alle Profile, die eine Person repräsentieren, ein einzelner Namespace verwendet wird. Dadurch kann Identity Service die entsprechende Personenkennung in einem bestimmten Diagramm erkennen.
 

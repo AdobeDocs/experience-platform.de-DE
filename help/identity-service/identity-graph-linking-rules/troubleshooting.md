@@ -3,9 +3,9 @@ title: Fehlerbehebungshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie, wie Sie häufige Probleme in den Regeln zur Identitätsdiagrammverlinkung beheben können.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
+source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '3181'
 ht-degree: 0%
 
 ---
@@ -132,12 +132,42 @@ Es gibt verschiedene Gründe, warum Ihre Erlebnisereignisfragmente nicht in das 
 * [Möglicherweise ist ein Überprüfungsfehler in Profil](../../xdm/classes/experienceevent.md) aufgetreten.
    * Beispielsweise muss ein Erlebnisereignis sowohl ein `_id` als auch ein `timestamp` enthalten.
    * Darüber hinaus muss der `_id` für jedes Ereignis (Datensatz) eindeutig sein.
+* Der Namespace mit der höchsten Priorität ist eine leere Zeichenfolge.
 
-Im Zusammenhang mit der Namespace-Priorität lehnt das Profil alle Ereignisse ab, die zwei oder mehr Identitäten mit der höchsten Namespace-Priorität enthalten. Wenn beispielsweise GAID nicht als eindeutiger Namespace markiert ist und zwei Identitäten mit einem GAID-Namespace und verschiedenen Identitätswerten eingehen, speichert Profil keines der Ereignisse.
+Im Zusammenhang mit der Namespace-Priorität lehnt das Profil Folgendes ab:
+
+* Jedes Ereignis, das zwei oder mehr Identitäten mit der höchsten Namespace-Priorität enthält. Wenn beispielsweise GAID nicht als eindeutiger Namespace markiert ist und zwei Identitäten mit einem GAID-Namespace und verschiedenen Identitätswerten eingehen, speichert Profil keines der Ereignisse.
+* Jedes Ereignis, bei dem der Namespace mit der höchsten Priorität eine leere Zeichenfolge ist.
 
 **Schritte zur Fehlerbehebung**
 
-Um diesen Fehler zu beheben, lesen Sie die im obigen Handbuch beschriebenen Schritte zur Fehlerbehebung unter [Fehlerbehebung bei Fehlern bei der Erfassung von Daten in Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+Wenn Ihre Daten an den Data Lake gesendet werden, jedoch nicht an das Profil, und Sie glauben, dass dies auf das Senden von zwei oder mehr Identitäten mit der höchsten Namespace-Priorität in einem einzelnen Ereignis zurückzuführen ist, können Sie die folgende Abfrage ausführen, um zu überprüfen, ob für denselben Namespace zwei verschiedene Identitätswerte gesendet werden:
+
+>[!TIP]
+>
+>In den folgenden Abfragen müssen Sie:
+>
+>* Ersetzen Sie `_testimsorg.identification.core.email` durch den Pfad, der die Identität sendet.
+>* Ersetzen Sie `Email` durch den Namespace mit der höchsten Priorität. Dies ist derselbe Namespace, der nicht erfasst wird.
+>* Ersetzen Sie `dataset_name` durch den Datensatz, den Sie abfragen möchten.
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+Sie können auch die folgende Abfrage ausführen, um zu überprüfen, ob die Aufnahme in das Profil aufgrund des höchsten Namespace mit einer leeren Zeichenfolge nicht erfolgt:
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+Bei diesen beiden Abfragen wird davon ausgegangen, dass eine Identität von der identityMap und eine andere Identität von einem Identitätsdeskriptor gesendet wird. **HINWEIS**: In Experience-Datenmodell (XDM)-Schemas ist der Identitätsdeskriptor das Feld, das als Identität markiert ist.
 
 ### Meine Erlebnisereignisfragmente werden erfasst, haben jedoch die &quot;falsche&quot;primäre Identität im Profil.
 
@@ -296,3 +326,79 @@ Sie können die folgende Abfrage im Datensatz zum Exportieren von Profilmomentda
 >[!TIP]
 >
 >Die beiden oben aufgeführten Abfragen liefern erwartete Ergebnisse, wenn die Sandbox nicht für den gemeinsamen Gerätezeitansatz aktiviert ist, und unterscheiden sich von den Verknüpfungsregeln für Identitätsdiagramme.
+
+## Häufig gestellte Fragen {#faq}
+
+In diesem Abschnitt finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu Regeln zur Identitätsdiagrammverlinkung.
+
+### Identitätsoptimierungsalgorithmus {#identity-optimization-algorithm}
+
+#### Ich habe eine CRMID für jede meiner Geschäftseinheiten (B2C CRMID, B2B CRMID), aber ich habe keinen eindeutigen Namespace für alle meine Profile. Was geschieht, wenn ich B2C CRMID und B2B CRMID als eindeutig markiere und meine Identitätseinstellungen aktiviere?
+
+Dieses Szenario wird nicht unterstützt. Daher können Diagramme in Fällen reduziert werden, in denen sich ein Benutzer mit seiner B2C-CRMID anmeldet und ein anderer Benutzer seine B2B-CRMID zur Anmeldung verwendet. Weitere Informationen finden Sie im Abschnitt [Namespace-Anforderung für einzelne Personen](./configuration.md#single-person-namespace-requirement) auf der Implementierungsseite.
+
+#### Korrigiert der Identitätsoptimierungsalgorithmus vorhandene reduzierte Diagramme?
+
+Vorhandene reduzierte Diagramme werden vom Diagrammalgorithmus nur betroffen (&#39;fixed&#39;), wenn diese Diagramme nach dem Speichern Ihrer neuen Einstellungen aktualisiert werden.
+
+#### Was passiert mit den Ereignissen, wenn sich zwei Personen mit demselben Gerät anmelden und abmelden? Werden alle Ereignisse an den letzten authentifizierten Benutzer übertragen?
+
+* Anonyme Ereignisse (Ereignisse mit ECID als primäre Identität im Echtzeit-Kundenprofil) werden an den letzten authentifizierten Benutzer übertragen. Dies liegt daran, dass die ECID mit der CRMID des letzten authentifizierten Benutzers (im Identity Service) verknüpft wird.
+* Alle authentifizierten Ereignisse (Ereignisse mit CRMID als primäre Identität definiert) verbleiben bei der Person.
+
+Weitere Informationen finden Sie in der Anleitung zum [Ermitteln der primären Identität für Erlebnisereignisse](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+
+#### Wie werden die Journey in Adobe Journey Optimizer beeinflusst, wenn die ECID von einer Person zur anderen übertragen wird?
+
+Die CRMID des letzten authentifizierten Benutzers wird mit der ECID (freigegebenes Gerät) verknüpft. ECIDs können basierend auf dem Benutzerverhalten von einer Person zu einer anderen neu zugewiesen werden. Die Auswirkungen hängen davon ab, wie die Journey erstellt wird. Daher ist es wichtig, dass Kunden die Journey in einer Entwicklungs-Sandbox-Umgebung testen, um das Verhalten zu überprüfen.
+
+Die wichtigsten Punkte sind:
+
+* Sobald ein Profil eine Journey aufruft, führt die erneute Zuweisung der ECID nicht dazu, dass das Profil mitten in einer Journey existiert.
+   * Journey-Ausstiege werden nicht durch Diagrammänderungen ausgelöst.
+* Wenn ein Profil nicht mehr mit einer ECID verknüpft ist, kann dies dazu führen, dass der Journey-Pfad geändert wird, wenn eine Bedingung vorliegt, die die Zielgruppenqualifikation verwendet.
+   * Die Entfernung der ECID kann die mit einem Profil verknüpften Ereignisse ändern, was zu Änderungen der Zielgruppenqualifizierung führen kann.
+* Die erneute Eingabe einer Journey hängt von den Journey-Eigenschaften ab.
+   * Wenn Sie die erneute Eingabe einer Journey deaktivieren, wird das gleiche Profil, sobald ein Profil von dieser Journey beendet wird, 91 Tage lang nicht erneut angezeigt (basierend auf dem globalen Journey-Timeout).
+* Wenn eine Journey mit einem ECID-Namespace beginnt, das eingegebene Profil und das Profil, an das die Aktion gesendet wird (z. B. E-Mail, Angebot) können je nach Design der Journey unterschiedlich sein.
+   * Wenn es beispielsweise eine Wartebedingung zwischen Aktionen gibt und die ECID-Transfers während der Wartezeit durchgeführt werden, kann ein anderes Profil als Ziel ausgewählt werden.
+   * Mit dieser Funktion ist die ECID nicht mehr immer einem Profil zugeordnet.
+   * Es wird empfohlen, Journey mit Personen-Namespaces (CRMID) zu beginnen.
+
+### Namespace-Priorität
+
+#### Ich habe meine Identitätseinstellungen aktiviert. Was passiert mit meinen Einstellungen, wenn ich einen benutzerdefinierten Namespace hinzufügen möchte, nachdem die Einstellungen aktiviert wurden?
+
+Es gibt zwei &quot;Behälter&quot;mit Namespaces: Personen-Namespaces und Geräte-/Cookie-Namespaces. Der neu erstellte benutzerdefinierte Namespace hat in jedem &quot;Bucket&quot;die niedrigste Priorität, sodass dieser neue benutzerdefinierte Namespace keine Auswirkungen auf die vorhandene Datenerfassung hat.
+
+#### Wenn das Echtzeit-Kundenprofil das &quot;primäre&quot;Flag auf identityMap nicht mehr verwendet, muss dieser Wert dennoch gesendet werden?
+
+Ja, das &quot;primäre&quot;Flag auf identityMap wird von anderen Diensten verwendet. Weitere Informationen finden Sie im Handbuch zu [Auswirkungen der Namespace-Priorität auf andere Experience Platform-Dienste](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+
+#### Wird die Namespace-Priorität auf Profildatensätze im Echtzeit-Kundenprofil angewendet?
+
+Nein. Die Namespace-Priorität gilt nur für Experience Event-Datensätze, die die XDM ExperienceEvent-Klasse verwenden.
+
+#### Wie funktioniert diese Funktion zusammen mit den Limits von 50 Identitäten pro Diagramm? Beeinflusst die Namespace-Priorität dieses systemdefinierte Limits?
+
+Der Identitätsoptimierungsalgorithmus wird zuerst angewendet, um die Darstellung der Entität der Person sicherzustellen. Wenn das Diagramm anschließend versucht, den [Limits des Identitätsdiagramms](../guardrails.md) (50 Identitäten pro Diagramm) zu überschreiten, wird diese Logik angewendet. Die Namespace-Priorität wirkt sich nicht auf die Löschlogik des 50-Identitäts-/Diagrammschutzes aus.
+
+### Testen
+
+#### Welche Szenarien sollten in einer Entwicklungs-Sandbox-Umgebung getestet werden?
+
+Im Allgemeinen sollten Tests an einer Entwicklungs-Sandbox die Anwendungsfälle imitieren, die Sie in Ihrer Produktions-Sandbox ausführen möchten. In der folgenden Tabelle finden Sie einige zu validierende Schlüsselbereiche bei der Durchführung umfassender Tests:
+
+| Testfall | Testschritte | Erwartetes Ergebnis |
+| --- | --- | --- |
+| Präzise Personenentitätsdarstellung | <ul><li>Anonym misiertes Browsen</li><li>Zwei Personen imitieren (John, Jane), die sich mit demselben Gerät anmelden</li></ul> | <ul><li>Sowohl John als auch Jane sollten mit ihren Attributen und authentifizierten Ereignissen verknüpft sein.</li><li>Der zuletzt authentifizierte Benutzer sollte den anonymen Browsing-Ereignissen zugeordnet werden.</li></ul> |
+| Segmentierung | Erstellen Sie vier Segmentdefinitionen (**HINWEIS**: Für jedes Segment-Definitionspaar sollte eine mit Batch und die andere Streaming-Methode ausgewertet werden.) <ul><li>Segmentdefinition A: Segmentqualifizierung basierend auf den authentifizierten Ereignissen von John.</li><li>Segmentdefinition B: Segmentqualifizierung basierend auf den authentifizierten Ereignissen von Jane.</li></ul> | Unabhängig von freigegebenen Geräteszenarien sollten John und Jane immer für ihre jeweiligen Segmente qualifiziert sein. |
+| Zielgruppenqualifizierung/einheitliche Journey in Adobe Journey Optimizer | <ul><li>Erstellen Sie eine Journey, die mit einer Audience-Qualifikationsaktivität beginnt (z. B. mit der oben erstellten Streaming-Segmentierung).</li><li>Erstellen Sie eine Journey, die mit einem Einzelereignis beginnt. Dieses Einzelereignis sollte ein authentifiziertes Ereignis sein.</li><li>Sie müssen die erneute Eingabe deaktivieren, wenn Sie diese Journey erstellen.</li></ul> | <ul><li>Unabhängig von freigegebenen Geräteszenarien sollten John und Jane die entsprechenden Journey, die sie eingeben sollten, Trigger haben.</li><li>John und Jane sollten die Journey nicht erneut eingeben, wenn die ECID an sie zurückgegeben wird.</li></ul> |
+
+{style="table-layout:auto"}
+
+#### Wie kann ich überprüfen, ob diese Funktion erwartungsgemäß funktioniert?
+
+Verwenden Sie das [Diagrammsimulationswerkzeug](./graph-simulation.md), um zu überprüfen, ob die Funktion auf einer einzelnen Diagrammebene funktioniert.
+
+Informationen zum Validieren der Funktion auf Sandbox-Ebene finden Sie im Abschnitt [!UICONTROL Diagrammanzahl mit mehreren Namespaces] im Identitäts-Dashboard.

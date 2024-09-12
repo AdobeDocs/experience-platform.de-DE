@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 72%
+source-wordcount: '149'
+ht-degree: 68%
 
 ---
 
@@ -24,14 +24,14 @@ ht-degree: 72%
    - [Löschungen in Identity Service](./features/deletion.md)
    - Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
       - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
-      - [Konfigurationshandbuch](./identity-graph-linking-rules/configuration.md)
       - [Identitätsoptimierungsalgorithmus](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
-      - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
-      - [Identitätseinstellungen](./identity-graph-linking-rules/identity-settings-ui.md)
-      - [Beispiele für Kundenszenarien](./identity-graph-linking-rules/example-scenarios.md)
+      - [Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung](./identity-graph-linking-rules/configuration.md)
       - [Beispieldiagrammkonfigurationen](./identity-graph-linking-rules/example-configurations.md)
       - [Fehlerbehebung für Verknüpfungsregeln für Identitätsdiagramme](./identity-graph-linking-rules/troubleshooting.md)
+      - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
+      - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
+      - [Benutzeroberfläche für Identitätseinstellungen](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [Beispiele für Kundenszenarien](./identity-graph-linking-rules/example-scenarios.md)
    - [ECID-Übersicht](./features/ecid.md)
 - [Implementierungshandbuch](implementation.md)
 - [Leitplanken für Identitätsdaten](guardrails.md)
