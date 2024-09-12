@@ -3,9 +3,9 @@ title: Fehlerbehebungshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie, wie Sie häufige Probleme in den Regeln zur Identitätsdiagrammverlinkung beheben können.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
+source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -333,6 +333,8 @@ In diesem Abschnitt finden Sie eine Liste von Antworten auf häufig gestellte Fr
 
 ### Identitätsoptimierungsalgorithmus {#identity-optimization-algorithm}
 
+In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zum [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md).
+
 #### Ich habe eine CRMID für jede meiner Geschäftseinheiten (B2C CRMID, B2B CRMID), aber ich habe keinen eindeutigen Namespace für alle meine Profile. Was geschieht, wenn ich B2C CRMID und B2B CRMID als eindeutig markiere und meine Identitätseinstellungen aktiviere?
 
 Dieses Szenario wird nicht unterstützt. Daher können Diagramme in Fällen reduziert werden, in denen sich ein Benutzer mit seiner B2C-CRMID anmeldet und ein anderer Benutzer seine B2B-CRMID zur Anmeldung verwendet. Weitere Informationen finden Sie im Abschnitt [Namespace-Anforderung für einzelne Personen](./configuration.md#single-person-namespace-requirement) auf der Implementierungsseite.
@@ -367,6 +369,8 @@ Die wichtigsten Punkte sind:
 
 ### Namespace-Priorität
 
+In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu [Namespace-Priorität](./namespace-priority.md).
+
 #### Ich habe meine Identitätseinstellungen aktiviert. Was passiert mit meinen Einstellungen, wenn ich einen benutzerdefinierten Namespace hinzufügen möchte, nachdem die Einstellungen aktiviert wurden?
 
 Es gibt zwei &quot;Behälter&quot;mit Namespaces: Personen-Namespaces und Geräte-/Cookie-Namespaces. Der neu erstellte benutzerdefinierte Namespace hat in jedem &quot;Bucket&quot;die niedrigste Priorität, sodass dieser neue benutzerdefinierte Namespace keine Auswirkungen auf die vorhandene Datenerfassung hat.
@@ -384,6 +388,8 @@ Nein. Die Namespace-Priorität gilt nur für Experience Event-Datensätze, die d
 Der Identitätsoptimierungsalgorithmus wird zuerst angewendet, um die Darstellung der Entität der Person sicherzustellen. Wenn das Diagramm anschließend versucht, den [Limits des Identitätsdiagramms](../guardrails.md) (50 Identitäten pro Diagramm) zu überschreiten, wird diese Logik angewendet. Die Namespace-Priorität wirkt sich nicht auf die Löschlogik des 50-Identitäts-/Diagrammschutzes aus.
 
 ### Testen
+
+In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu Test- und Debugging-Funktionen in Identitätsdiagramm-Verknüpfungsregeln.
 
 #### Welche Szenarien sollten in einer Entwicklungs-Sandbox-Umgebung getestet werden?
 
