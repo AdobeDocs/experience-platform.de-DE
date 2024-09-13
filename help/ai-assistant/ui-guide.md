@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform
 description: Erfahren Sie, wie Sie mit dem AI-Assistenten zu Experience Platform- und Real-time Customer Data Platform-Konzepten navigieren und deren Konzepte sowie Nutzungsinformationen zu Ihren Objekten verstehen können.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Handbuch zur Benutzeroberfläche des AI-Assistenten
 
 In diesem Handbuch erfahren Sie, wie Sie den KI-Assistenten in der Adobe Experience Platform-Benutzeroberfläche verwenden können.
-
-Das folgende Video soll Ihr Verständnis von AI Assistant unterstützen.
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Zugriff auf den KI-Assistenten in der Experience Platform-Benutzeroberfläche
 
