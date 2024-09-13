@@ -3,7 +3,7 @@ title: Fehlerbehebungshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie, wie Sie häufige Probleme in den Regeln zur Identitätsdiagrammverlinkung beheben können.
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '3226'
 ht-degree: 0%
@@ -176,7 +176,7 @@ Die Namespace-Priorität spielt eine wichtige Rolle bei der Bestimmung der prim�
 * Nachdem Sie Ihre [Identitätseinstellungen](./identity-settings-ui.md) für eine bestimmte Sandbox konfiguriert und gespeichert haben, verwendet das Profil die [Namespace-Priorität](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events), um die primäre Identität zu bestimmen. Im Falle von identityMap verwendet das Profil dann nicht mehr das `primary=true` -Flag.
 * Während Profile nicht mehr auf diese Markierung verweisen, können andere Dienste auf Experience Platform weiterhin die Markierung `primary=true` verwenden.
 
-Damit [authentifizierte Benutzerereignisse](configuration.md#ingest-your-data) an den Personen-Namespace gebunden werden können, müssen alle authentifizierten Ereignisse den Personen-Namespace (CRMID) enthalten. Das bedeutet, dass der Personen-Namespace auch nach der Anmeldung eines Benutzers bei jedem authentifizierten Ereignis vorhanden sein muss.
+Damit [authentifizierte Benutzerereignisse](implementation-guide.md#ingest-your-data) an den Personen-Namespace gebunden werden können, müssen alle authentifizierten Ereignisse den Personen-Namespace (CRMID) enthalten. Das bedeutet, dass der Personen-Namespace auch nach der Anmeldung eines Benutzers bei jedem authentifizierten Ereignis vorhanden sein muss.
 
 Wenn Sie ein Profil in der Profilansicht suchen, wird möglicherweise weiterhin die Markierung `primary=true` &#39;events&#39; angezeigt. Dies wird jedoch ignoriert und vom Profil nicht verwendet.
 
@@ -272,9 +272,9 @@ ORDER BY timestamp desc
 Weitere Informationen finden Sie in der Dokumentation zum [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md) sowie in den Typen der unterstützten Diagrammstrukturen.
 
 * Beispiele für unterstützte Diagrammstrukturen finden Sie im [Konfigurationshandbuch für Diagramme](./example-configurations.md) .
-* Beispiele für nicht unterstützte Diagrammstrukturen finden Sie auch im [Implementierungshandbuch](./configuration.md#appendix) . Es können zwei Szenarien eintreten:
+* Beispiele für nicht unterstützte Diagrammstrukturen finden Sie auch im [Implementierungshandbuch](./implementation-guide.md#appendix) . Es können zwei Szenarien eintreten:
    * Kein einzelner Namespace für alle Profile.
-   * Ein [&quot;dangling ID&quot;](./configuration.md#dangling-loginid-scenario) -Szenario tritt auf. In diesem Szenario kann Identity Service nicht ermitteln, ob die verwundbare ID mit einer der Personen-Entitäten in den Diagrammen verknüpft ist.
+   * Ein [&quot;dangling ID&quot;](./implementation-guide.md#dangling-loginid-scenario) -Szenario tritt auf. In diesem Szenario kann Identity Service nicht ermitteln, ob die verwundbare ID mit einer der Personen-Entitäten in den Diagrammen verknüpft ist.
 
 Sie können auch das Tool zur [Diagrammsimulation in der Benutzeroberfläche](./graph-simulation.md) verwenden, um Ereignisse zu simulieren und Ihre eigenen eindeutigen Namespace- und Namespace-Prioritätseinstellungen zu konfigurieren. Dies kann Ihnen dabei helfen, ein grundlegendes Verständnis dafür zu erhalten, wie sich der Identitätsoptimierungsalgorithmus verhalten sollte.
 
@@ -331,26 +331,26 @@ Sie können die folgende Abfrage im Datensatz zum Exportieren von Profilmomentda
 
 In diesem Abschnitt finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu Regeln zur Identitätsdiagrammverlinkung.
 
-### Identitätsoptimierungsalgorithmus {#identity-optimization-algorithm}
+## Identitätsoptimierungsalgorithmus {#identity-optimization-algorithm}
 
 In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zum [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md).
 
-#### Ich habe eine CRMID für jede meiner Geschäftseinheiten (B2C CRMID, B2B CRMID), aber ich habe keinen eindeutigen Namespace für alle meine Profile. Was geschieht, wenn ich B2C CRMID und B2B CRMID als eindeutig markiere und meine Identitätseinstellungen aktiviere?
+### Ich habe eine CRMID für jede meiner Geschäftseinheiten (B2C CRMID, B2B CRMID), aber ich habe keinen eindeutigen Namespace für alle meine Profile. Was geschieht, wenn ich B2C CRMID und B2B CRMID als eindeutig markiere und meine Identitätseinstellungen aktiviere?
 
-Dieses Szenario wird nicht unterstützt. Daher können Diagramme in Fällen reduziert werden, in denen sich ein Benutzer mit seiner B2C-CRMID anmeldet und ein anderer Benutzer seine B2B-CRMID zur Anmeldung verwendet. Weitere Informationen finden Sie im Abschnitt [Namespace-Anforderung für einzelne Personen](./configuration.md#single-person-namespace-requirement) auf der Implementierungsseite.
+Dieses Szenario wird nicht unterstützt. Daher können Diagramme in Fällen reduziert werden, in denen sich ein Benutzer mit seiner B2C-CRMID anmeldet und ein anderer Benutzer seine B2B-CRMID zur Anmeldung verwendet. Weitere Informationen finden Sie im Abschnitt [Namespace-Anforderung für einzelne Personen](./implementation-guide.md#single-person-namespace-requirement) auf der Implementierungsseite.
 
-#### Korrigiert der Identitätsoptimierungsalgorithmus vorhandene reduzierte Diagramme?
+### Korrigiert der Identitätsoptimierungsalgorithmus vorhandene reduzierte Diagramme?
 
 Vorhandene reduzierte Diagramme werden vom Diagrammalgorithmus nur betroffen (&#39;fixed&#39;), wenn diese Diagramme nach dem Speichern Ihrer neuen Einstellungen aktualisiert werden.
 
-#### Was passiert mit den Ereignissen, wenn sich zwei Personen mit demselben Gerät anmelden und abmelden? Werden alle Ereignisse an den letzten authentifizierten Benutzer übertragen?
+### Was passiert mit den Ereignissen, wenn sich zwei Personen mit demselben Gerät anmelden und abmelden? Werden alle Ereignisse an den letzten authentifizierten Benutzer übertragen?
 
 * Anonyme Ereignisse (Ereignisse mit ECID als primäre Identität im Echtzeit-Kundenprofil) werden an den letzten authentifizierten Benutzer übertragen. Dies liegt daran, dass die ECID mit der CRMID des letzten authentifizierten Benutzers (im Identity Service) verknüpft wird.
 * Alle authentifizierten Ereignisse (Ereignisse mit CRMID als primäre Identität definiert) verbleiben bei der Person.
 
 Weitere Informationen finden Sie in der Anleitung zum [Ermitteln der primären Identität für Erlebnisereignisse](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
 
-#### Wie werden die Journey in Adobe Journey Optimizer beeinflusst, wenn die ECID von einer Person zur anderen übertragen wird?
+### Wie werden die Journey in Adobe Journey Optimizer beeinflusst, wenn die ECID von einer Person zur anderen übertragen wird?
 
 Die CRMID des letzten authentifizierten Benutzers wird mit der ECID (freigegebenes Gerät) verknüpft. ECIDs können basierend auf dem Benutzerverhalten von einer Person zu einer anderen neu zugewiesen werden. Die Auswirkungen hängen davon ab, wie die Journey erstellt wird. Daher ist es wichtig, dass Kunden die Journey in einer Entwicklungs-Sandbox-Umgebung testen, um das Verhalten zu überprüfen.
 
@@ -367,31 +367,31 @@ Die wichtigsten Punkte sind:
    * Mit dieser Funktion ist die ECID nicht mehr immer einem Profil zugeordnet.
    * Es wird empfohlen, Journey mit Personen-Namespaces (CRMID) zu beginnen.
 
-### Namespace-Priorität
+## Namespace-Priorität
 
 In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu [Namespace-Priorität](./namespace-priority.md).
 
-#### Ich habe meine Identitätseinstellungen aktiviert. Was passiert mit meinen Einstellungen, wenn ich einen benutzerdefinierten Namespace hinzufügen möchte, nachdem die Einstellungen aktiviert wurden?
+### Ich habe meine Identitätseinstellungen aktiviert. Was passiert mit meinen Einstellungen, wenn ich einen benutzerdefinierten Namespace hinzufügen möchte, nachdem die Einstellungen aktiviert wurden?
 
 Es gibt zwei &quot;Behälter&quot;mit Namespaces: Personen-Namespaces und Geräte-/Cookie-Namespaces. Der neu erstellte benutzerdefinierte Namespace hat in jedem &quot;Bucket&quot;die niedrigste Priorität, sodass dieser neue benutzerdefinierte Namespace keine Auswirkungen auf die vorhandene Datenerfassung hat.
 
-#### Wenn das Echtzeit-Kundenprofil das &quot;primäre&quot;Flag auf identityMap nicht mehr verwendet, muss dieser Wert dennoch gesendet werden?
+### Wenn das Echtzeit-Kundenprofil das &quot;primäre&quot;Flag auf identityMap nicht mehr verwendet, muss dieser Wert dennoch gesendet werden?
 
 Ja, das &quot;primäre&quot;Flag auf identityMap wird von anderen Diensten verwendet. Weitere Informationen finden Sie im Handbuch zu [Auswirkungen der Namespace-Priorität auf andere Experience Platform-Dienste](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
-#### Wird die Namespace-Priorität auf Profildatensätze im Echtzeit-Kundenprofil angewendet?
+### Wird die Namespace-Priorität auf Profildatensätze im Echtzeit-Kundenprofil angewendet?
 
 Nein. Die Namespace-Priorität gilt nur für Experience Event-Datensätze, die die XDM ExperienceEvent-Klasse verwenden.
 
-#### Wie funktioniert diese Funktion zusammen mit den Limits von 50 Identitäten pro Diagramm? Beeinflusst die Namespace-Priorität dieses systemdefinierte Limits?
+### Wie funktioniert diese Funktion zusammen mit den Limits von 50 Identitäten pro Diagramm? Beeinflusst die Namespace-Priorität dieses systemdefinierte Limits?
 
 Der Identitätsoptimierungsalgorithmus wird zuerst angewendet, um die Darstellung der Entität der Person sicherzustellen. Wenn das Diagramm anschließend versucht, den [Limits des Identitätsdiagramms](../guardrails.md) (50 Identitäten pro Diagramm) zu überschreiten, wird diese Logik angewendet. Die Namespace-Priorität wirkt sich nicht auf die Löschlogik des 50-Identitäts-/Diagrammschutzes aus.
 
-### Testen
+## Testen
 
 In diesem Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu Test- und Debugging-Funktionen in Identitätsdiagramm-Verknüpfungsregeln.
 
-#### Welche Szenarien sollten in einer Entwicklungs-Sandbox-Umgebung getestet werden?
+### Welche Szenarien sollten in einer Entwicklungs-Sandbox-Umgebung getestet werden?
 
 Im Allgemeinen sollten Tests an einer Entwicklungs-Sandbox die Anwendungsfälle imitieren, die Sie in Ihrer Produktions-Sandbox ausführen möchten. In der folgenden Tabelle finden Sie einige zu validierende Schlüsselbereiche bei der Durchführung umfassender Tests:
 
@@ -403,7 +403,7 @@ Im Allgemeinen sollten Tests an einer Entwicklungs-Sandbox die Anwendungsfälle 
 
 {style="table-layout:auto"}
 
-#### Wie kann ich überprüfen, ob diese Funktion erwartungsgemäß funktioniert?
+### Wie kann ich überprüfen, ob diese Funktion erwartungsgemäß funktioniert?
 
 Verwenden Sie das [Diagrammsimulationswerkzeug](./graph-simulation.md), um zu überprüfen, ob die Funktion auf einer einzelnen Diagrammebene funktioniert.
 

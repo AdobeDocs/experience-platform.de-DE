@@ -1,15 +1,16 @@
 ---
-title: Anleitung zur Diagrammkonfiguration
+title: Beispiele für Diagrammkonfigurationen
 description: Erfahren Sie mehr über gängige Diagrammszenarien, auf die Sie bei der Arbeit mit Regeln zur Identitätsdiagrammverlinkung und Identitätsdaten stoßen können.
 badge: Beta
-source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
+exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '2749'
+source-wordcount: '2786'
 ht-degree: 6%
 
 ---
 
-# Handbuch zu Diagrammkonfigurationen
+# Beispiele für Diagrammkonfigurationen
 
 >[!AVAILABILITY]
 >
@@ -19,6 +20,7 @@ ht-degree: 6%
 >
 >* &quot;CRMID&quot;und &quot;loginID&quot;sind benutzerdefinierte Namespaces. In diesem Dokument ist &quot;CRMID&quot;eine Personen-ID und &quot;loginID&quot;eine Anmelde-Kennung, die mit einer bestimmten Person verknüpft ist.
 >* Um die in diesem Dokument beschriebenen Beispieldiagrammszenarien zu simulieren, müssen Sie zunächst zwei benutzerdefinierte Namespaces erstellen, einen mit dem Identitätssymbol &quot;CRMID&quot;und einen anderen mit dem Identitätssymbol &quot;loginID&quot;. Bei Identitätssymbolen wird zwischen Groß- und Kleinschreibung unterschieden.
+
 
 In diesem Dokument werden Beispiele für die Diagrammkonfiguration gängiger Szenarien beschrieben, auf die Sie bei der Arbeit mit Regeln zur Identitätsdiagrammverknüpfung und Identitätsdaten stoßen können.
 
@@ -478,7 +480,7 @@ In diesem Szenario gibt es eine einzelne CRMID, die eine Personenentität darste
 
 | Verwendete Namespaces | Webverhalten-Erfassungsmethode |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-Quell-Connector. <br> **Hinweis:** Standardmäßig werden AIDs im Identity Service blockiert. Daher müssen Sie bei der Verwendung der Analytics-Quelle Ihren ECIDs eine höhere Priorität als AIDs einräumen. Weitere Informationen finden Sie im [Implementierungshandbuch](configuration.md#ingest-your-data) .</br> |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-Quell-Connector. <br> **Hinweis:** Standardmäßig werden AIDs im Identity Service blockiert. Daher müssen Sie bei der Verwendung der Analytics-Quelle Ihren ECIDs eine höhere Priorität als AIDs einräumen. Weitere Informationen finden Sie im [Implementierungshandbuch](./implementation-guide.md#ingest-your-data) .</br> |
 
 **Ereignisse:**
 
@@ -756,3 +758,15 @@ CRMID: Tom, ECID: 111
 ```
 
 >[!ENDTABS]
+
+## Nächste Schritte
+
+Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finden Sie in der folgenden Dokumentation:
+
+* [Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen](./overview.md)
+* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
+* [Implementierungshandbuch](./implementation-guide.md)
+* [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
+* [Namespace-Priorität](./namespace-priority.md)
+* [Benutzeroberfläche der Diagrammsimulation](./graph-simulation.md)
+* [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md)

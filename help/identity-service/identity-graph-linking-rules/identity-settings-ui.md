@@ -3,9 +3,9 @@ title: Benutzeroberfläche für Identitätseinstellungen
 description: Erfahren Sie, wie Sie die Benutzeroberfläche für Identitätseinstellungen verwenden.
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 2%
 
 ---
@@ -24,8 +24,10 @@ In diesem Handbuch erfahren Sie, wie Sie Ihre Identitätseinstellungen in der Be
 
 Lesen Sie die folgenden Dokumente, bevor Sie mit der Arbeit mit Identitätseinstellungen beginnen:
 
-* [Konfigurationshandbuch für Regeln zur Verknüpfung von Identitätsdiagrammen](./configuration.md)
+* [Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
 * [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
+* [Implementierungshandbuch](./implementation-guide.md)
+* [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Namespace-Priorität](./namespace-priority.md)
 * [Diagrammsimulation](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ Es wird eine Warnmeldung angezeigt, die besagt, dass vorhandene Diagramme nur da
 
 ## Nächste Schritte
 
-Sie haben jetzt Ihre Namespace-Prioritäten konfiguriert und Ihre eindeutigen Namespaces mithilfe der UI-Seite mit den Identitätseinstellungen zugewiesen. Weitere Informationen finden Sie in der Übersicht über die Regeln zur Verknüpfung von Identitätsdiagrammen](./overview.md).[
+Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finden Sie in der folgenden Dokumentation:
+
+* [Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen](./overview.md)
+* [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
+* [Implementierungshandbuch](./implementation-guide.md)
+* [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
+* [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
+* [Namespace-Priorität](./namespace-priority.md)
+* [Benutzeroberfläche der Diagrammsimulation](./graph-simulation.md)

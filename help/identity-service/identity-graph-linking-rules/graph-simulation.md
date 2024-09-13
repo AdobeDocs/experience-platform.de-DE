@@ -3,9 +3,9 @@ title: Anleitung zur Diagrammsimulation in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie die Diagrammsimulation in der Benutzeroberfläche des Identity Service verwenden.
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1443'
 ht-degree: 2%
 
 ---
@@ -172,8 +172,10 @@ Im unten stehenden Beispieldiagramm existiert eine gepunktete Linie zwischen `{E
 
 Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit dem Tool [!DNL Graph Simulation] besser verstehen können, wie Ihre Identitätsdaten mit bestimmten Regeln und Konfigurationen behandelt werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [Verknüpfungsregeln für Identitätsdiagramme](./overview.md)
-* [Konfigurationshandbuch](./configuration.md)
+* [Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen](./overview.md)
 * [Identitätsoptimierungsalgorithmus](./identity-optimization-algorithm.md)
+* [Implementierungshandbuch](./implementation-guide.md)
+* [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
+* [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
 * [Namespace-Priorität](./namespace-priority.md)
-* [Beispieldiagrammkonfigurationen](./example-configurations.md)
+* [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md)

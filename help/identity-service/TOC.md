@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 role: Admin,Developer
-source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 68%
+source-wordcount: '146'
+ht-degree: 69%
 
 ---
 
@@ -25,13 +25,12 @@ ht-degree: 68%
    - Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
       - [Funktionsübersicht](./identity-graph-linking-rules/overview.md)
       - [Identitätsoptimierungsalgorithmus](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung](./identity-graph-linking-rules/configuration.md)
+      - [Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung](./identity-graph-linking-rules/implementation-guide.md)
       - [Beispieldiagrammkonfigurationen](./identity-graph-linking-rules/example-configurations.md)
       - [Fehlerbehebung für Verknüpfungsregeln für Identitätsdiagramme](./identity-graph-linking-rules/troubleshooting.md)
       - [Namespace-Priorität](./identity-graph-linking-rules/namespace-priority.md)
       - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
       - [Benutzeroberfläche für Identitätseinstellungen](./identity-graph-linking-rules/identity-settings-ui.md)
-      - [Beispiele für Kundenszenarien](./identity-graph-linking-rules/example-scenarios.md)
    - [ECID-Übersicht](./features/ecid.md)
 - [Implementierungshandbuch](implementation.md)
 - [Leitplanken für Identitätsdaten](guardrails.md)

@@ -3,9 +3,9 @@ title: Identitätsoptimierungsalgorithmus
 description: Erfahren Sie mehr über den Identity Optimization-Algorithmus im Identity Service.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -162,7 +162,9 @@ Sehen Sie sich das folgende Diagramm an, um besser zu verstehen, wie die anonyme
 Weitere Informationen zu Regeln zur Verknüpfung von Identitätsdiagrammen finden Sie in der folgenden Dokumentation:
 
 * [Übersicht über die Verknüpfungsregeln von Identitätsdiagrammen](./overview.md)
+* [Implementierungshandbuch](./implementation-guide.md)
+* [Beispiele für Diagrammkonfigurationen](./example-configurations.md)
+* [Fehlerbehebung und häufig gestellte Fragen](./troubleshooting.md)
 * [Namespace-Priorität](./namespace-priority.md)
-* [Beispielszenarien für die Konfiguration von Regeln für die Zuordnung von Identitätsdiagrammen](./example-scenarios.md)
-* [Identitätsverknüpfungslogik](../features/identity-linking-logic.md)
-* [Identity Service und Echtzeit-Kundenprofil](../identity-and-profile.md)
+* [Benutzeroberfläche der Diagrammsimulation](./graph-simulation.md)
+* [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md)
