@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
-ht-degree: 10%
+source-wordcount: '2720'
+ht-degree: 9%
 
 ---
 
@@ -17,6 +17,16 @@ ht-degree: 10%
 >id="testy-mctestface"
 >title="Testdialogfeld, das nicht sichtbar sein sollte"
 >abstract="Das Objekt {name} wird auf {date} angezeigt."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Kernprodukttabelle"
+>abstract="Die in der Tabelle aufgelisteten Hauptprodukte verfügen über eigene Metriken, Nutzungsverfolgung und Drillthrough-Ansichten auf Sandbox-Ebene. Diese Hauptprodukte stellen die Schlüsselmetriken für die Verfolgung bereit. Alle Add-ons sind in diesen Metriken enthalten."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="Add-ons-Tabelle"
+>abstract="In der Tabelle Add-ons werden Produkte aufgelistet, deren Lizenzmengen mit den von Kernprodukten unterstützten Metriken kombiniert werden. Diese Add-ons verfügen nicht über separate Metriken, sondern verbessern die Nutzungsverfolgung der Kernprodukte, mit denen sie verknüpft sind."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
