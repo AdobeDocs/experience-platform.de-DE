@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 78%
+source-wordcount: '1920'
+ht-degree: 77%
 
 ---
 
@@ -16,11 +16,21 @@ ht-degree: 78%
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.23.0 – Freitag, 19. September 2024
+
+**Neue Funktionen**
+
+- Unterstützung für das Anfordern der [CORE ID](identity/overview.md#tracking-coreid-web-sdk) im Befehl [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) hinzugefügt.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Es wurde ein Problem behoben, bei dem Cookies beim lokalen Ausführen des Web SDK nicht richtig geschrieben wurden.
+
 ## Version 2.22.0 – Freitag, 22. August 2024
 
 **Neue Funktionen**
 
-- Es wurden Personalisierungsmonitore hinzugefügt.
+- Unterstützung für Personalisierungsüberwachungshaken hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 
