@@ -3,10 +3,10 @@ keywords: Experience Platform; profile; Echtzeit-Kundenprofil; Fehlerbehebung; A
 title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden und kombiniert Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
+source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
-source-wordcount: '2155'
-ht-degree: 7%
+source-wordcount: '2212'
+ht-degree: 6%
 
 ---
 
@@ -127,6 +127,11 @@ Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Ansicht]** und ein 
 ![Das Profil, das dem Identitätswert entspricht, wird hervorgehoben.](../images/user-guide/filtered-identity-value.png)
 
 ## Profildetails anzeigen {#profile-detail}
+
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_201001_404"
+>title="Entität nicht gefunden"
+>abstract="Das bedeutet, dass Platform die angeforderte Entität nicht finden konnte. Um diesen Fehler zu beheben, versuchen Sie eine der folgenden Lösungen:<ul><li>Stellen Sie sicher, dass die richtige Profil-ID in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
 Nach Auswahl einer **[!UICONTROL Profil-ID]** wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht des einzelnen Kunden zu bilden. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Kanalpräferenzen.
 
