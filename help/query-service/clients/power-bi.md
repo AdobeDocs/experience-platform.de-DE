@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbinden von Power BI mit dem Abfrage-Service
 description: In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Abfrage-Service von Adobe Experience Platform beschrieben.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1011'
 ht-degree: 96%
 
 ---
@@ -23,17 +23,7 @@ Für dieses Handbuch müssen Sie bereits Zugriff auf die [!DNL Power BI] Desktop
 >
 > Die [!DNL Power BI] Desktop-Anwendung ist **nur** auf Windows-Geräten verfügbar.
 
-Um die erforderlichen Anmeldeinformationen zum Verbinden von [!DNL Power BI] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche. Bitte wenden Sie sich an die Administratorin oder den Administrator Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
-
-Nach der Installation von [!DNL Power BI] müssen Sie `Npgsql`, ein .NET-Treiberpaket für PostgreSQL, installieren. Weitere Informationen zu Npgsql finden Sie in der [Npgsql-Dokumentation](https://www.npgsql.org/doc/index.html).
-
->[!IMPORTANT]
->
->Sie müssen Version 4.0.10 oder niedriger herunterladen, da neuere Versionen zu Fehlern führen.
-
-Wählen Sie im Bildschirm für benutzerdefiniertes Setup unter „[!DNL Npgsql GAC Installation]“ die Option **[!DNL Will be installed on local hard drive]** aus.
-
-Um sicherzustellen, dass Npgsql ordnungsgemäß installiert wurde, starten Sie den Computer neu, bevor Sie mit den nächsten Schritten fortfahren.
+Um die erforderlichen Anmeldedaten zum Verbinden von [!DNL Power BI] mit Experience Platform zu erhalten, benötigen Sie Zugriff auf den Arbeitsbereich „Abfragen“ in der Platform-Benutzeroberfläche. Bitte wenden Sie sich an die Administratorin oder den Administrator Ihrer Organisation, wenn Sie derzeit keinen Zugriff auf den Arbeitsbereich „Abfragen“ haben.
 
 ## Verbinden von [!DNL Power BI] mit dem Abfrage-Service {#connect-power-bi}
 
@@ -41,15 +31,15 @@ Um [!DNL Power BI] mit dem Abfrage-Service zu verbinden, öffnen Sie [!DNL Power
 
 Das [!DNL PostgreSQL]-Datenbankdialogfeld wird angezeigt, über das Werte für Ihren Server und Ihre Datenbank angefordert werden. Zusätzliche Anweisungen zum [Verbinden mit einer PostgreSQL-Datenbank über Power Query Desktop](https://learn.microsoft.com/de-de/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) finden Sie in der offiziellen [!DNL PowerBI]-Dokumentation.
 
-Diese erforderlichen Werte werden aus Ihren Adobe Experience Platform-Anmeldeinformationen übernommen. Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Abfragen]** und dann **[!UICONTROL Anmeldeinformationen]** aus. Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldeinformationen finden können, stehen im [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
+Diese erforderlichen Werte werden aus Ihren Adobe Experience Platform-Anmeldedaten übernommen. Um Ihre Anmeldedaten zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Abfragen]** und dann **[!UICONTROL Anmeldedaten]** aus. Weiterführende Informationen dazu, wie Sie Datenbanknamen, Hosts, Ports und Anmeldedaten finden können, stehen im [Handbuch zu Anmeldedaten](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
 >Als Power BI- oder Tableau-Benutzer können Sie über die Registerkarte Query Service-Anmeldedaten eine Verbindung zu Ihren BI-Tools herstellen. Anweisungen zum Verbinden Ihrer BI-Tools mit Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics) finden Sie in der Dokumentation zu den Anmeldedaten .[
 
-![Der Experience Platform-Arbeitsbereich „Abfragen“, auf dem die Registerkarte „Anmeldeinformationen“ und Anmeldeinformationen mit ihrem Ablaufdatum hervorgehoben sind.](../images/clients/power-bi/query-service-credentials-page.png)
+![Der Experience Platform-Arbeitsbereich „Abfragen“, auf dem die Registerkarte „Anmeldedaten“ und Anmeldedaten mit ihrem Ablaufdatum hervorgehoben sind.](../images/clients/power-bi/query-service-credentials-page.png)
 
-Geben Sie in das Feld **[!DNL Server]** des Dialogfelds [!DNL PostgreSQL database] den Wert für den Host ein, der im Abschnitt [!UICONTROL Anmeldeinformationen] für den Abfrage-Service zu finden ist. Für die Produktion fügen Sie Port `:80` dem Ende der Host-Zeichenfolge hinzu. Beispiel: `made-up.platform-query.adobe.io:80`.
+Geben Sie in das Feld **[!DNL Server]** des Dialogfelds [!DNL PostgreSQL database] den Wert für den Host ein, der im Abschnitt [!UICONTROL Anmeldedaten] für den Abfrage-Service zu finden ist. Für die Produktion fügen Sie Port `:80` dem Ende der Host-Zeichenfolge hinzu. Beispiel: `made-up.platform-query.adobe.io:80`.
 
 Das Feld **[!DNL Database]** kann entweder auf „alle“ oder einen Datensatz-Tabellennamen lauten. Beispiel: `prod:all`.
 
@@ -67,7 +57,7 @@ Wählen Sie nach Bestätigung Ihrer Datenbankdetails **[!DNL OK]** aus.
 
 ### Authentifizierung {#authentication}
 
-Nachdem Sie den Datenkonnektivitätsmodus bestätigt haben, wird eine Eingabeaufforderung angezeigt, in der Sie nach Ihrem Benutzernamen, Kennwort und den Anwendungseinstellungen gefragt werden. Der Benutzername in diesem Fall ist Ihre Organisations-ID und das Kennwort Ihr Authentifizierungs-Token. Beide Informationen finden Sie auf der Seite mit den Anmeldeinformationen des Abfrage-Service.
+Nachdem Sie den Datenkonnektivitätsmodus bestätigt haben, wird eine Eingabeaufforderung angezeigt, in der Sie nach Ihrem Benutzernamen, Kennwort und den Anwendungseinstellungen gefragt werden. Der Benutzername in diesem Fall ist Ihre Organisations-ID und das Kennwort Ihr Authentifizierungs-Token. Beide Informationen finden Sie auf der Seite mit den Anmeldedaten des Abfrage-Service.
 
 Füllen Sie diese Details aus und wählen Sie dann **[!DNL Connect]** aus, um mit dem nächsten Schritt fortzufahren.
 
