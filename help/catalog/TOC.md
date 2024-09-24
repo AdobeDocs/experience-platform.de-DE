@@ -4,9 +4,9 @@ user-guide-title: Anleitung zu Katalog und Datensätzen
 user-guide-description: Erkunden Sie Datenherkunft, Metadaten, Dateibeschreibungen, Verzeichnisse und Datensätze im Data Lake und erfahren Sie mehr über das Katalog-Service-System.
 feature: Catalog
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 71fc03194c38a155822d6fc1ee69c82e6f71ad73
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '115'
 ht-degree: 100%
 
 ---
@@ -36,4 +36,5 @@ ht-degree: 100%
    * [Aktivieren eines Datensatzes für Profilaktualisierungen (Upsert)](datasets/enable-upsert.md)
 * [Verarbeitung von Datenschutzanfragen im Data Lake](privacy.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/catalog/)
+* [Häufig gestellte Fragen](catalog-faq.md)
 * [Platform – Versionshinweise](https://experienceleague.adobe.com/de/docs/experience-platform/release-notes/latest)
