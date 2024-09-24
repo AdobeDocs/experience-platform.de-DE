@@ -2,9 +2,9 @@
 title: Push Debug View
 description: Dieses Handbuch enthält Informationen zur Push-Debug-Ansicht in Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f9cc088cdda4323c80e35978fcde373cbba9204d
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Diese Ansicht ist nur für einen einzelnen Client aktiviert. Wenn Sie also einen
 
 ## Validieren der Einrichtung
 
-Auf der Registerkarte **[!UICONTROL Einrichtung validieren]** werden weitere Details zur Push-Einrichtung der App überprüft und bereitgestellt. Es gibt drei Bereiche, die Überprüfungen durchführen. Sie zeigen ein grünes Häkchen an, wenn die Überprüfungen alle erfolgreich sind. Wenn drei grüne Häkchen vorhanden sind, wurde die App ordnungsgemäß für Push-Nachrichten konfiguriert, schreibt Push-Token in das Benutzerprofil und hat eine zugehörige App-Oberfläche konfiguriert.
+Auf der Registerkarte **[!UICONTROL Einrichtung validieren]** werden weitere Details zur Push-Einrichtung der App überprüft und bereitgestellt. Es gibt drei Bereiche, die Überprüfungen durchführen. Sie zeigen ein grünes Häkchen an, wenn die Überprüfungen alle erfolgreich sind. Wenn drei grüne Häkchen vorhanden sind, wurde die App ordnungsgemäß für Push-Nachrichten konfiguriert, schreibt Push-Token in das Benutzerprofil und hat eine zugehörige Kanalkonfiguration konfiguriert.
 
 Wenn etwas nicht erwartungsgemäß funktioniert, wird ein Warnhinweis mit Details zur Behebung dieses Problems angezeigt:
 
@@ -49,11 +49,9 @@ Am unteren Rand des Bedienfelds befindet sich ein Link, über den dieses spezifi
 
 ### AppStore-Anmeldeinformationen und -Konfiguration
 
-In diesem Bedienfeld wird geprüft, ob die App-ID und die Messaging-Plattform, die im Profil gespeichert wurden, eine passende App-Oberfläche erstellt haben. Auf einer App-Oberfläche werden Push-Anmeldeinformationen für die Anwendung hochgeladen.
+In diesem Bedienfeld wird geprüft, ob die App-ID und die Messaging-Plattform, die im Profil gespeichert wurden, mit der Kanalkonfiguration übereinstimmen. Bei einer Kanalkonfiguration werden Push-Anmeldeinformationen für die Anwendung hochgeladen.
 
-Wenn gültig, zeigt das Profil den Namen der App-Oberfläche, die App-ID und den Namen des Messaging-Dienstes an.
-
-Am unteren Rand des Bedienfelds befindet sich ein Link, über den diese spezifische App-Oberfläche in einer neuen Registerkarte geöffnet wird.
+Falls gültig, zeigt das Profil den Namen der Kanalkonfiguration, die App-ID und den Namen des Messaging-Dienstes an.
 
 ## Test-Push senden
 
@@ -71,9 +69,9 @@ Im Bereich **[!UICONTROL Nachricht]** können Sie einen Titel und einen Text fü
 
 ### Push-Ziel
 
-Im Bereich **[!UICONTROL Push Target]** können Sie anpassen, welches Push-Token und welche App-Oberfläche beim Senden der Push-Nachricht verwendet werden sollen.
+Im Bereich **[!UICONTROL Push-Ziel]** können Sie anpassen, welches Push-Token und welche Kanalkonfiguration für den Versand der Push-Nachricht verwendet werden sollen.
 
-Diese Informationen werden standardmäßig bereitgestellt, wenn auf der Registerkarte **[!UICONTROL Einrichtung validieren]** drei grüne Häkchen angezeigt werden. Sie können jedoch Ihr eigenes Push-Token und Ihre eigene App-Oberfläche bereitstellen, auch wenn Ihre App nicht vollständig konfiguriert ist.
+Diese Informationen werden standardmäßig bereitgestellt, wenn auf der Registerkarte **[!UICONTROL Einrichtung validieren]** drei grüne Häkchen angezeigt werden. Sie können jedoch Ihr eigenes Push-Token und Ihre eigene Kanalkonfiguration bereitstellen, auch wenn Ihre App nicht vollständig konfiguriert ist.
 
 ![Zielbereich](./images/push-debug-view/target-pane.png)
 

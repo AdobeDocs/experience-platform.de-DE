@@ -4,7 +4,7 @@ title: Navigieren Sie zu "Anwendungsfall-Playbooks".
 description: Erfahren Sie, wie Sie in einer Galerie mit Büchern navigieren und mit einer inspirierenden Sandbox beginnen.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 2%
@@ -51,7 +51,7 @@ Beachten Sie, dass bei der Erstellung einer inspirierenden Sandbox Kanalflächen
 
 ## Konfigurieren von Sandbox- und Kanaloberflächen in Journey Optimizer {#configure-channel-surfaces}
 
-Wenn Ihr Unternehmen für [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) lizenziert ist und Sie die für Journey Optimizer entwickelten Playbooks verwenden möchten, müssen Sie die Kanalvorgaben in Ihrer Sandbox konfigurieren, die die für Ihre Nachrichten erforderlichen technischen Parameter definieren. [Erfahren Sie, wie Sie in Adobe Journey Optimizer Kanaloberflächen einrichten.](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=de).
+Wenn Ihr Unternehmen für [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=de) lizenziert ist und Sie die für Journey Optimizer entwickelten Playbooks verwenden möchten, müssen Sie die Kanalvorgaben in Ihrer Sandbox konfigurieren, die die für Ihre Nachrichten erforderlichen technischen Parameter definieren. [Erfahren Sie, wie Sie in Adobe Journey Optimizer Kanaloberflächen einrichten.](https://experienceleague.adobe.com/de/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Um in Journey Optimizer Playbooks zu erstellen, müssen Sie Kanaloberflächen für E-Mail-, Push- und SMS-Benachrichtigungen konfigurieren.
 
@@ -67,7 +67,7 @@ Konfigurieren Sie außerdem Kanäle für Playbooks, die Transaktionsnachrichten 
 
 ### Push-Kanaloberfläche
 
-Vergewissern Sie sich, dass die App über die Experience Platform- oder Datenerfassungs-Benutzeroberfläche konfiguriert ist. So sehen App-Oberflächen in der Umgebung &quot;Datenerfassungen&quot;aus.
+Vergewissern Sie sich, dass die Kanalkonfigurationen entweder über die Experience Platform- oder die Datenerfassungs-Benutzeroberfläche konfiguriert sind. So sehen Kanalkonfigurationen in der Umgebung &quot;Datenerfassungen&quot;aus.
 
 ## Nächste Schritte {#next-steps}
 
