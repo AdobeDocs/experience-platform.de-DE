@@ -1,15 +1,15 @@
 ---
-title: Versionshinweise für die Adobe Experience Platform Cloud Connector-Erweiterung
-description: Die aktuellen Versionshinweise für die Cloud Connector-Erweiterung in Adobe Experience Platform.
+title: Versionshinweise für die Adobe Experience Platform Cloud-Connector-Erweiterung
+description: Aktuelle Versionshinweise zur Cloud-Connector-Erweiterung in Adobe Experience Platform.
 exl-id: 5ee85d9f-71f4-46ee-9064-4ceee1cf90e7
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '128'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
-# Versionshinweise zur Adobe Experience Platform Cloud Connector-Erweiterung
+# Versionshinweise zur Adobe Experience Platform Cloud-Connector-Erweiterung
 
 >[!NOTE]
 >
@@ -19,6 +19,6 @@ ht-degree: 35%
 
 v1.0.1
 
-* Es wurde ein Problem behoben, bei dem eine gültige JSON, die in den Textbereich &quot;Body Raw&quot;eingefügt wurde, als Zeichenfolge statt als JSON gespeichert wurde.
-* Setzen Sie den Body nicht bei GET- oder HEAD-Anfragen ein.
-* Behebung eines Fehlers, durch den das Speichern einer Antwort, die größer als 5 KB ist, dazu führte, dass die Regelausführung fehlschlug.
+* Es wurde ein Problem behoben, bei dem eine gültige JSON, die in den Textbereich „Body Raw“ eingefügt wurde, als Zeichenfolge statt als JSON gespeichert wurde.
+* Lassen Sie nicht zu, dass der Textkörper für GET- oder HEAD-Anfragen festgelegt wird.
+* Es wurde ein Fehler behoben, bei dem das Speichern einer Antwort, die größer als 5 KB ist, zu einem Fehlschlagen der Regelausführung führte.

@@ -5,70 +5,70 @@ keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;V
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '781'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
 
-## Version 1.6.1 – Freitag, 25. Juli 2024
+## Version 1.6.1 – 25. Juli 2024
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Es wurde ein Problem behoben, durch das Benutzer keine neuen Tags-Einbettungscodes zu Seiten hinzufügen konnten, für die sie nicht vorhanden waren.
+* Es wurde ein Problem behoben, durch das Benutzende keine neuen Tags-Einbettungs-Codes zu Seiten hinzufügen konnten, für die sie nicht vorhanden waren.
 
-## Version 1.6.0 – Freitag, 11. Juli 2024
+## Version 1.6.0 – 11. Juli 2024
 
 ### Neue Funktionen
 
-* Erlauben für Benutzer, die technische und persönliche Datenerfassung zu aktivieren/deaktivieren.
+* Ermöglicht es Benutzenden, die Erfassung technischer und personenbezogenen Daten auszuwählen/abzuwählen.
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Korrigieren Sie den Link zur Skriptinjektion und Datenschutzrichtlinie für Firefox.
-* Erfassen fehlender Analytics-Anforderungen.
-* Korrektur von Abstürzen auf Seiten mit vielen komplexen Konsolenmeldungen.
-* Aktualisieren Sie den Adobe Experience Platform Debugger auf eine Manifest v3-Erweiterung.
+* Der Link zur Skriptinjektion und Datenschutzrichtlinie von Firefox wurde korrigiert.
+* Es wurden fehlende Analytics-Anforderungen erfasst.
+* Es wurden Abstürze auf Seiten mit vielen komplexen Konsolenmeldungen behoben.
+* Der Adobe Experience Platform Debugger wurde auf die Manifest v3-Erweiterung aktualisiert.
 
-## Version 1.5.4 – Mittwoch, 19. Dezember 2023
+## Version 1.5.4 – 19. Dezember 2023
 
 ### Fehlerbehebungen und Verbesserungen
 
 * Es wurde ein Problem behoben, bei dem Einstellungen nicht beibehalten wurden.
-* Es wurde ein Fehler behoben, der dazu führte, dass der Debugger abstürzte, während die Analytics-Treffer nach der Verarbeitung angezeigt wurden.
+* Es wurde ein Fehler behoben, bei dem der Debugger abstürzte, während die Analytics-Treffer nach der Verarbeitung angezeigt wurden.
 
-## Version 1.5.3 – Donnerstag, 6. Dezember 2023
+## Version 1.5.3 – 6. Dezember 2023
 
 ### Neue Funktionen
 
-* Die Einstellung &quot;Sperren der aktiven Registerkarte beim Öffnen des Debuggers&quot;wurde hinzugefügt.
+* Eine Einstellung zum Fixieren der aktiven Registerkarte beim Öffnen des Debuggers wurde hinzugefügt.
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Es wurde ein Problem behoben, bei dem Analytics-Anforderungen auf privaten Domänen fehlten.
-* Es wurde ein Problem behoben, bei dem Activity Map-Daten in der Analytics-Anforderungstabelle fehlten.
+* Es wurde ein Problem behoben, bei dem Analytics-Anfragen auf privaten Domains fehlten.
+* Es wurde ein Problem behoben, bei dem Activity Map-Daten in der Analytics-Anfragentabelle fehlten.
 * Es wurde ein Problem behoben, bei dem das Anzeigen der Target Trace zu einem Absturz führte.
 * Es wurde eine Warnung hinzugefügt, wenn der Debugger die Einrichtung einer On-Page-Infrastruktur in Firefox nicht durchführt.
 
-## Version 1.5.2 – Samstag, 10. November 2023
+## Version 1.5.2 – 10. November 2023
 
 (Nur Firefox)
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Die Dateiorganisation wurde aktualisiert.
+* Die Organisation von Dateien wurde aktualisiert.
 
-## Version 1.5.1 – Freitag, 2. November 2023
+## Version 1.5.1 – 2. November 2023
 
 ### Fehlerbehebungen und Verbesserungen
 
 * Es wurden Probleme behoben, bei denen Analytics-Ereignisse ignoriert oder dupliziert wurden.
 * Es wurde ein Problem behoben, bei dem die maximale Speichergröße für den Status überschritten wurde.
-* Es wurde ein Problem behoben, bei dem die Edge Logs-Suche keine Ereignisse filtert.
+* Es wurde ein Problem behoben, bei dem die Edge Logs-Suche keine Ereignisse filterte.
 
-## Version 1.5.0 – Freitag, 19. Oktober 2023
+## Version 1.5.0 – 19. Oktober 2023
 
 ### Neue Funktionen
 
@@ -76,15 +76,15 @@ ht-degree: 64%
 
 ### Fehlerbehebungen und Verbesserungen
 
-* Es wurde ein Problem behoben, bei dem keine Tags-Zusammenfassungsdaten gesendet wurden.
-* Es wurde ein Problem behoben, durch das bei Zuverlässigkeitssitzungen ein CORS-Fehler ausgegeben wurde.
+* Es wurde ein Problem behoben, bei dem keine Daten zu Tag-Zusammenfassungen gesendet wurden.
+* Es wurde ein Problem behoben, durch das bei Assurance-Sitzungen ein CORS-Fehler ausgegeben wurde.
 * Es wurde ein Problem behoben, das die Anzeige von Target Trace verhinderte.
-* Die Schaltfläche &quot;Feedback senden&quot;wurde korrigiert.
-* Fehlerkorrektur - Die &quot;Datastream-ID&quot;in der Web SDK-Zusammenfassung für Version ≥ 2.18.0 fehlt nun.
+* Ein Fehler bei der Schaltfläche „Feedback senden“ wurde korrigiert.
+* Das Fehlen der „Datastream-ID“ in der Web SDK-Zusammenfassung für Version ≥ 2.18.0 wurde behoben.
 * Es wurde ein Problem behoben, bei dem Edge-Protokolle nicht durchsuchbar waren.
 * Es wurde ein Hinweis zu zusätzlichen Profilen für bestimmte Kontotypen hinzugefügt.
 
-## Version 1.4.1 – Mittwoch, 1. November 2022
+## Version 1.4.1 – 1. November 2022
 
 * Die Leistung auf Seiten mit vielen Adobe Experience Platform Assurance-Ereignissen wurde verbessert.
 
