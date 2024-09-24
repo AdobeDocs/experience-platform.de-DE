@@ -2,10 +2,10 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 15%
+source-wordcount: '2051'
+ht-degree: 14%
 
 ---
 
@@ -141,7 +141,28 @@ Alternativ können Sie eine Liste der geplanten Ausführungen einer Abfragevorla
 
 Die Liste der ausgeführten Abfragen für diese geplante Abfrage wird angezeigt.
 
+### Berechnungsstunden auf Arbeitsplatzebene {#compute-hours}
+
+Verfolgen Sie die auf der Abfrageausführungsebene verbrauchten Berechnungsstunden für Ihre CTAS/ITAS-Batch-Abfragen. Diese Funktion bietet Einblicke in die Berechnung der Nutzung, was Ihnen dabei hilft, die Ressourcenzuordnung zu optimieren und die Abfrageleistung zu verbessern.
+
+>[!AVAILABILITY]
+>
+>Die Compute Hours-Funktion ist nur für Benutzer verfügbar, die die [Data Distiller SKU](../data-distiller/overview.md) erworben haben. Wenden Sie sich für weitere Informationen an Ihren Adobe-Support-Mitarbeiter.
+
 ![Der Detailabschnitt des Arbeitsbereichs &quot;Geplante Abfragen&quot;mit einer Liste von Abfragen wird für eine geplante Abfrage hervorgehoben.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+Die folgende Tabelle enthält Beschreibungen der einzelnen Spalten, die im Detailabschnitt mit Listen geplanter Abfrageausführungen verfügbar sind.
+
+| Spaltentitel | Beschreibung |
+|---------------------|----------------------------------|
+| [!UICONTROL Kennung des Abfrageausführens] | Zeigt eine eindeutige Kennung für jeden Abfrageablauf an, mit der Sie einzelne Ausführungen Ihrer geplanten Abfragen verfolgen und referenzieren können. |
+| [!UICONTROL Start des Abfrageausführens] | Gibt das Startdatum und die Startzeit des Abfrageausführens an, damit Sie besser überwachen können, wann die Ausführung begonnen hat. |
+| [!UICONTROL Abfragenausführung abgeschlossen] | Zeigt das Datum und die Uhrzeit der Ausführung der Abfrage an, um Einblicke in Ausführungsdauer und -status zu erhalten. |
+| [!UICONTROL Status] | Zeigt den aktuellen Status der Abfrageausführung an, z. B. `Completed,` `Running,` oder `Failed,`, um das Ergebnis schnell zu bewerten. |
+| [!UICONTROL Datensätze] | Listet im Abfrageablauf verwendete Datensätze auf, um anzuzeigen, welche Datenquellen an der Ausführung beteiligt waren. |
+| [!UICONTROL Stunden berechnen] | Zeigt die für jeden Abfrageablauf verwendete Berechnungszeit in Stunden an. Dies hilft, die Ressourcennutzung zu verfolgen und die Abfrageleistung zu optimieren. |
+
+{style="table-layout:auto"}
 
 Vollständige Informationen zum Überwachen des Status aller Abfrageaufträge über die Benutzeroberfläche finden Sie im Leitfaden [Geplante abgefragte Abfragen überwachen](./monitor-queries.md#inline-actions) .
 
