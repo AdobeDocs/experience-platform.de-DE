@@ -3,10 +3,10 @@ title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Regeln zur Verknüpfung von Identitätsdiagrammen im Identity Service.
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: a4e5ab14904fe17aa8bab2f8555ae6d535c856e8
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 1%
+source-wordcount: '1427'
+ht-degree: 2%
 
 ---
 
@@ -30,13 +30,53 @@ Die folgenden Dokumente sind für das Verständnis der Regeln für die Zuordnung
 * [Benutzeroberfläche der Diagrammsimulation](./graph-simulation.md)
 * [Benutzeroberfläche für Identitätseinstellungen](./identity-settings-ui.md)
 
-## Beispielszenarien, in denen eine Diagrammreduzierung möglich ist
+## Beispielszenarien, in denen eine Diagrammreduzierung möglich ist {#example-scenarios-where-graph-collapse-could-happen}
 
-* **Freigegebenes Gerät**: Freigegebenes Gerät bezieht sich auf Geräte, die von mehreren Personen verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks.
-* **Schlechte E-Mail- und Telefonnummern**: Schlechte E-Mail- und Telefonnummern beziehen sich auf Endbenutzer, die ungültige Kontaktinformationen wie &quot;test<span>@test.com&quot;für E-Mail und &quot;+1-111-1111&quot;für Telefonnummer registrieren.
-* **Falsche oder ungültige Identitätswerte**: Fehlerhafte oder falsche Identitätswerte beziehen sich auf nicht eindeutige Identitätswerte, die CRMIDs zusammenführen können. Während IDFAs beispielsweise 36 Zeichen haben müssen (32 alphanumerische Zeichen und vier Bindestriche), gibt es Szenarien, in denen ein IDFA mit dem Identitätswert &quot;user_null&quot;erfasst werden kann. Auf ähnliche Weise unterstützen Telefonnummern nur numerische Zeichen, aber ein Namespace für Smartphones mit dem Identitätswert &quot;nicht angegeben&quot;kann erfasst werden.
+In diesem Abschnitt werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen berücksichtigen können.
 
-Weitere Informationen zu Anwendungsszenarios für Identitätsdiagramm-Verknüpfungsregeln finden Sie im Abschnitt zu [Beispielszenarien](#example-scenarios) .
+### Freigegebenes Gerät
+
+Es gibt Fälle, in denen mehrere Anmeldungen auf einem einzelnen Gerät stattfinden können:
+
+| Freigegebenes Gerät | Beschreibung |
+| --- | --- |
+| Familiencomputer und Tablets | Sowohl Ehemann als auch Ehefrau melden sich auf ihren jeweiligen Bankkonten an. |
+| Öffentlicher Kiosk | Reisende an einem Flughafen, die sich mit ihrer Treuekennung anmelden, können Taschen und Bordkarten einchecken. |
+| Callcenter | Die Mitarbeiter des Callcenters melden sich auf einem einzelnen Gerät im Namen von Kunden an, die den Kundensupport aufrufen, um Probleme zu lösen. |
+
+![Ein Diagramm einiger gemeinsamer Geräte.](../images/identity-settings/shared-devices.png)
+
+In diesen Fällen wird aus Diagrammsicht eine einzelne ECID mit mehreren CRMIDs verknüpft, ohne dass Einschränkungen aktiviert sind.
+
+Mit den Verknüpfungsregeln für Identitätsdiagramme können Sie:
+
+* Konfigurieren Sie die für die Anmeldung verwendete ID als eindeutige Kennung. Sie können beispielsweise ein Diagramm so einschränken, dass nur eine Identität mit einem CRMID-Namespace gespeichert wird, und so diese CRMID als eindeutige Kennung eines gemeinsam genutzten Geräts definieren.
+   * Dadurch können Sie sicherstellen, dass CRMIDs nicht von der ECID zusammengeführt werden.
+
+### Ungültige E-Mail-/Telefonszenarien
+
+Es gibt auch Fälle von Benutzern, die bei der Registrierung falsche Werte als Telefonnummern und/oder E-Mail-Adressen angeben. Wenn in diesen Fällen Beschränkungen nicht aktiviert sind, werden telefonische/E-Mail-bezogene Identitäten letztendlich mit mehreren verschiedenen CRMIDs verknüpft.
+
+![Ein Diagramm, das ungültige E-Mail- oder Telefonszenarien darstellt.](../images/identity-settings/invalid-email-phone.png)
+
+Mit den Verknüpfungsregeln für Identitätsdiagramme können Sie:
+
+* Konfigurieren Sie entweder die CRMID, Telefonnummer oder E-Mail-Adresse als eindeutige Kennung und beschränken Sie so eine Person auf nur eine CRMID, Telefonnummer und/oder E-Mail-Adresse, die mit ihrem Konto verknüpft ist.
+
+### Fehlerhafte oder falsche Identitätswerte
+
+Es gibt Fälle, in denen nicht eindeutige, fehlerhafte Identitätswerte im System erfasst werden, unabhängig vom Namespace. Zu den Beispielen gehören:
+
+* IDFA-Namespace mit dem Identitätswert &quot;user_null&quot;.
+   * IDFA-Identitätswerte sollten 36 Zeichen enthalten: 32 alphanumerische Zeichen und vier Bindestriche.
+* Namespace für Telefonnummern mit dem Identitätswert &quot;Nicht angegeben&quot;.
+   * Telefonnummern dürfen keine Buchstaben enthalten.
+
+Diese Identitäten können zu den folgenden Diagrammen führen, in denen mehrere CRMIDs mit der &quot;schlechten&quot;Identität zusammengeführt werden:
+
+![Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder falschen Identitätswerten.](../images/identity-settings/bad-data.png)
+
+Mit Regeln zur Verknüpfung von Identitätsdiagrammen können Sie die CRMID als eindeutige Kennung konfigurieren, um unerwünschte Profilzusammenbrüche aufgrund dieses Datentyps zu verhindern.
 
 ## Verknüpfungsregeln für Identitätsdiagramme {#identity-graph-linking-rules}
 
@@ -95,55 +135,6 @@ Eindeutige Namespaces und Namespace-Prioritäten können im UI-Arbeitsbereich f�
 * Wenn ein Erlebnisereignis in der identityMap zwei oder mehr Identitäten mit der höchsten Namespace-Priorität aufweist, wird es von der Erfassung ausgeschlossen, da es als &quot;schlechte Daten&quot;gilt. Wenn die identityMap beispielsweise `{ECID: 111, CRMID: John, CRMID: Jane}` enthält, wird das gesamte Ereignis als ungültige Daten zurückgewiesen, da dies bedeutet, dass das Ereignis sowohl `CRMID: John` als auch `CRMID: Jane` gleichzeitig zugeordnet ist.
 
 Weitere Informationen finden Sie im Handbuch zu [Namespace-Priorität](./namespace-priority.md).
-
-## Beispiel-Kundenszenarien, die durch Verknüpfungsregeln von Identitätsdiagrammen gelöst wurden {#example-scenarios}
-
-In diesem Abschnitt werden Beispielszenarien beschrieben, die Sie bei der Konfiguration von Regeln für die Verknüpfung von Identitätsdiagrammen berücksichtigen können.
-
-### Freigegebenes Gerät
-
-Es gibt Fälle, in denen mehrere Anmeldungen auf einem einzelnen Gerät stattfinden können:
-
-| Freigegebenes Gerät | Beschreibung |
-| --- | --- |
-| Familiencomputer und Tablets | Sowohl Ehemann als auch Ehefrau melden sich auf ihren jeweiligen Bankkonten an. |
-| Öffentlicher Kiosk | Reisende an einem Flughafen, die sich mit ihrer Treuekennung anmelden, können Taschen und Bordkarten einchecken. |
-| Callcenter | Die Mitarbeiter des Callcenters melden sich auf einem einzelnen Gerät im Namen von Kunden an, die den Kundensupport aufrufen, um Probleme zu lösen. |
-
-![Ein Diagramm einiger gemeinsamer Geräte.](../images/identity-settings/shared-devices.png)
-
-In diesen Fällen wird aus Diagrammsicht eine einzelne ECID mit mehreren CRMIDs verknüpft, ohne dass Einschränkungen aktiviert sind.
-
-Mit den Verknüpfungsregeln für Identitätsdiagramme können Sie:
-
-* Konfigurieren Sie die für die Anmeldung verwendete ID als eindeutige Kennung. Sie können beispielsweise ein Diagramm so einschränken, dass nur eine Identität mit einem CRMID-Namespace gespeichert wird, und so diese CRMID als eindeutige Kennung eines gemeinsam genutzten Geräts definieren.
-   * Dadurch können Sie sicherstellen, dass CRMIDs nicht von der ECID zusammengeführt werden.
-
-### Ungültige E-Mail-/Telefonszenarien
-
-Es gibt auch Fälle von Benutzern, die bei der Registrierung falsche Werte als Telefonnummern und/oder E-Mail-Adressen angeben. Wenn in diesen Fällen Beschränkungen nicht aktiviert sind, werden telefonische/E-Mail-bezogene Identitäten letztendlich mit mehreren verschiedenen CRMIDs verknüpft.
-
-![Ein Diagramm, das ungültige E-Mail- oder Telefonszenarien darstellt.](../images/identity-settings/invalid-email-phone.png)
-
-Mit den Verknüpfungsregeln für Identitätsdiagramme können Sie:
-
-* Konfigurieren Sie entweder die CRMID, Telefonnummer oder E-Mail-Adresse als eindeutige Kennung und beschränken Sie so eine Person auf nur eine CRMID, Telefonnummer und/oder E-Mail-Adresse, die mit ihrem Konto verknüpft ist.
-
-### Fehlerhafte oder falsche Identitätswerte
-
-Es gibt Fälle, in denen nicht eindeutige, fehlerhafte Identitätswerte im System erfasst werden, unabhängig vom Namespace. Zu den Beispielen gehören:
-
-* IDFA-Namespace mit dem Identitätswert &quot;user_null&quot;.
-   * IDFA-Identitätswerte sollten 36 Zeichen enthalten: 32 alphanumerische Zeichen und vier Bindestriche.
-* Namespace für Telefonnummern mit dem Identitätswert &quot;Nicht angegeben&quot;.
-   * Telefonnummern dürfen keine Buchstaben enthalten.
-
-Diese Identitäten können zu den folgenden Diagrammen führen, in denen mehrere CRMIDs mit der &quot;schlechten&quot;Identität zusammengeführt werden:
-
-![Ein Diagrammbeispiel für Identitätsdaten mit fehlerhaften oder falschen Identitätswerten.](../images/identity-settings/bad-data.png)
-
-Mit Regeln zur Verknüpfung von Identitätsdiagrammen können Sie die CRMID als eindeutige Kennung konfigurieren, um unerwünschte Profilzusammenbrüche aufgrund dieses Datentyps zu verhindern.
-
 
 ## Nächste Schritte
 

@@ -3,9 +3,9 @@ title: Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1470'
 ht-degree: 3%
 
 ---
@@ -20,16 +20,89 @@ Lesen Sie dieses Dokument, um eine schrittweise Anleitung zur Implementierung Ih
 
 Schrittweise Anleitung:
 
-1. [Erstellen der erforderlichen Identitäts-Namespaces](#namespace)
-2. [Verwenden Sie das Tool zur Diagrammsimulation, um sich mit dem Identitätsoptimierungsalgorithmus vertraut zu machen.](#graph-simulation)
-3. [Verwenden Sie das Tool für Identitätseinstellungen, um Ihre eindeutigen Namespaces zu bestimmen und die Prioritätseinstufung für Ihre Namespaces zu konfigurieren](#identity-settings)
-4. [Erstellen eines Experience-Datenmodell (XDM)-Schemas](#schema)
-5. [Erstellen eines Datensatzes](#dataset)
-6. [Daten auf Experience Platform erfassen](#ingest)
 
-## Voraussetzungen für die Implementierung
+1. [Vollständige Voraussetzungen für die Implementierung](#prerequisites-for-implementation)
+2. [Erstellen der erforderlichen Identitäts-Namespaces](#namespace)
+3. [Verwenden Sie das Tool zur Diagrammsimulation, um sich mit dem Identitätsoptimierungsalgorithmus vertraut zu machen.](#graph-simulation)
+4. [Verwenden Sie das Tool für Identitätseinstellungen, um Ihre eindeutigen Namespaces zu bestimmen und die Prioritätseinstufung für Ihre Namespaces zu konfigurieren](#identity-settings)
+5. [Erstellen eines Experience-Datenmodell (XDM)-Schemas](#schema)
+6. [Erstellen eines Datensatzes](#dataset)
+7. [Daten auf Experience Platform erfassen](#ingest)
 
-Bevor Sie beginnen können, müssen Sie zunächst sicherstellen, dass authentifizierte Ereignisse in Ihrem System immer eine Personenkennung enthalten.
+## Voraussetzungen für die Implementierung {#prerequisites-for-implementation}
+
+In diesem Abschnitt werden die erforderlichen Schritte beschrieben, die Sie vor der Implementierung der Regeln zur Identitätsdiagrammverknüpfung mit Ihren Daten durchführen müssen.
+
+### Eindeutiger Namespace
+
+#### Namespace-Anforderung für eine Person {#single-person-namespace-requirement}
+
+Sie müssen sicherstellen, dass der eindeutige Namespace mit der höchsten Priorität immer in jedem Profil vorhanden ist. Dadurch kann Identity Service die entsprechende Personenkennung in einem bestimmten Diagramm erkennen.
+
++++Auswählen , um ein Beispiel für ein Diagramm ohne Namespace für eine einzelne Person anzuzeigen
+
+Ohne einen eindeutigen Namespace zur Darstellung Ihrer Personen-IDs erhalten Sie möglicherweise ein Diagramm, das Links zu unterschiedlichen Personen-IDs mit derselben ECID enthält. In diesem Beispiel sind sowohl B2BCRM als auch B2CCRM gleichzeitig mit derselben ECID verknüpft. Dieses Diagramm legt nahe, dass Tom mithilfe seines B2C-Anmeldekontos mithilfe seines B2C-Anmeldekontos mit Summer ein Gerät freigegeben hat, das er mit seinem B2B-Anmeldekonto genutzt hat. Das System erkennt jedoch, dass es sich um ein Profil handelt (Diagrammausfall).
+
+![Ein Diagrammszenario, bei dem zwei Personen-IDs mit derselben ECID verknüpft sind.](../images/graph-examples/multi_namespaces.png)
+
++++
+
++++Auswählen , um ein Beispiel für ein Diagramm mit einem Namespace für eine einzelne Person anzuzeigen
+
+Bei einem eindeutigen Namespace (in diesem Fall einer CRMID anstelle zweier unterschiedlicher Namespaces) kann Identity Service die Personenkennung erkennen, die zuletzt mit der ECID verknüpft wurde. Da in diesem Beispiel eine eindeutige CRMID vorhanden ist, kann Identity Service ein Szenario mit einem &quot;freigegebenen Gerät&quot;erkennen, bei dem zwei Entitäten dasselbe Gerät gemeinsam nutzen.
+
+![Ein Szenario mit einem freigegebenen Gerätediagramm, in dem zwei Personen-IDs mit derselben ECID verknüpft sind, der ältere Link jedoch entfernt wird.](../images/graph-examples/crmid_only_multi.png)
+
++++
+
+### Namespace-Prioritätskonfiguration
+
+Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) zum Erfassen von Daten verwenden, müssen Sie Ihren ECIDs eine höhere Priorität als der Adobe Analytics ID (AAID) zuweisen, da Identity Service AAID blockiert. Durch die Priorisierung von ECID können Sie das Echtzeit-Kundenprofil anweisen, nicht authentifizierte Ereignisse anstelle von AAID in ECID zu speichern.
+
+### XDM-Erlebnisereignisse
+
+* Während des Prozesses vor der Implementierung müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung wie CRMID enthalten.
+* Senden Sie beim Senden von Ereignissen mit XDM-Erlebnisereignissen keine leere Zeichenfolge als Identitätswert. Dies führt zu Systemfehlern.
+
++++Auswählen , um ein Beispiel einer Payload mit einer leeren Zeichenfolge anzuzeigen
+
+Im folgenden Beispiel wird ein Fehler zurückgegeben, da der Identitätswert für `Phone` als leere Zeichenfolge übermittelt wird.
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ],
+        "Phone": [
+            {
+                "id": "",
+                "primary": true
+            }
+        ]
+    }
+```
+
++++
+
+Sie müssen sicherstellen, dass Sie beim Senden von Ereignissen mit XDM-Erlebnisereignissen über eine voll qualifizierte Identität verfügen.
+
++++Auswählen , um ein Beispiel für ein Ereignis mit einer vollständig qualifizierten Identität anzuzeigen
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ]
+    }
+```
+
++++
 
 ## Berechtigungen festlegen {#set-permissions}
 
@@ -72,12 +145,6 @@ Anweisungen zum Erstellen eines Datensatzes finden Sie im [Benutzerhandbuch zur 
 
 ## Daten erfassen {#ingest}
 
->[!WARNING]
->
->* Während des Prozesses vor der Implementierung müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung wie CRMID enthalten.
->* Bei der Implementierung müssen Sie sicherstellen, dass der eindeutige Namespace mit der höchsten Priorität immer in jedem Profil vorhanden ist. Beispiele für Diagrammszenarien, die gelöst werden können, indem sichergestellt wird, dass jedes Profil den eindeutigen Namespace mit der höchsten Priorität enthält, finden Sie im [Anhang](#appendix) .
->* Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) zum Erfassen von Daten verwenden, müssen Sie Ihren ECIDs eine höhere Priorität als AID zuweisen, da Identity Service AAID blockiert. Durch die Priorisierung von ECID können Sie das Echtzeit-Kundenprofil anweisen, nicht authentifizierte Ereignisse anstelle von AAID in ECID zu speichern.
-
 An dieser Stelle sollten Sie Folgendes haben:
 
 * Die erforderlichen Berechtigungen für den Zugriff auf Identity Service-Funktionen.
@@ -101,26 +168,6 @@ Verwenden Sie für jedes Feedback die Option **[!UICONTROL Beta feedback]** im U
 ## Anhang {#appendix}
 
 In diesem Abschnitt finden Sie weitere Informationen, auf die Sie bei der Implementierung Ihrer Identitätseinstellungen und eindeutigen Namespaces verweisen können.
-
-### Namespace-Anforderung für eine Person {#single-person-namespace-requirement}
-
-Sie müssen sicherstellen, dass für alle Profile, die eine Person repräsentieren, ein einzelner Namespace verwendet wird. Dadurch kann Identity Service die entsprechende Personenkennung in einem bestimmten Diagramm erkennen.
-
->[!BEGINTABS]
-
->[!TAB Ohne Namespace mit einer einzelnen Personen-ID]
-
-Ohne einen eindeutigen Namespace zur Darstellung Ihrer Personen-IDs erhalten Sie möglicherweise ein Diagramm, das Links zu unterschiedlichen Personen-IDs mit derselben ECID enthält. In diesem Beispiel sind sowohl B2BCRM als auch B2CCRM gleichzeitig mit derselben ECID verknüpft. Dieses Diagramm legt nahe, dass Tom mithilfe seines B2C-Anmeldekontos mithilfe seines B2C-Anmeldekontos mit Summer ein Gerät freigegeben hat, das er mit seinem B2B-Anmeldekonto genutzt hat. Das System erkennt jedoch, dass es sich um ein Profil handelt (Diagrammausfall).
-
-![Ein Diagrammszenario, bei dem zwei Personen-IDs mit derselben ECID verknüpft sind.](../images/graph-examples/multi_namespaces.png)
-
->[!TAB Mit einem Namespace mit einer einzelnen Personen-ID]
-
-Bei einem eindeutigen Namespace (in diesem Fall einer CRMID anstelle zweier unterschiedlicher Namespaces) kann Identity Service die Personenkennung erkennen, die zuletzt mit der ECID verknüpft wurde. Da in diesem Beispiel eine eindeutige CRMID vorhanden ist, kann Identity Service ein Szenario mit einem &quot;freigegebenen Gerät&quot;erkennen, bei dem zwei Entitäten dasselbe Gerät gemeinsam nutzen.
-
-![Ein Szenario mit einem freigegebenen Gerätediagramm, in dem zwei Personen-IDs mit derselben ECID verknüpft sind, der ältere Link jedoch entfernt wird.](../images/graph-examples/crmid_only_multi.png)
-
->[!ENDTABS]
 
 ### Dangling loginID scenario {#dangling-loginid-scenario}
 
