@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche von Schemas
 description: Dieser Überblick behandelt die wichtigsten Funktionen des Arbeitsbereichs "Schemas"im Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '307'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ Der Arbeitsbereich [!UICONTROL Schemas] in der Benutzeroberfläche von Adobe Exp
 
 Um in der Platform-Benutzeroberfläche auf den Arbeitsbereich zuzugreifen, wählen Sie in der linken Leiste **[!UICONTROL Schemas]** aus.
 
-![](../images/ui/overview/schemas-tab.png)
+![Der Arbeitsbereich &quot;Schemas&quot;mit in der Platform-Benutzeroberfläche hervorgehobenen Schemas hat die Navigation verlassen.](../images/ui/overview/schemas-tab.png)
 
 ## Erste Schritte
 

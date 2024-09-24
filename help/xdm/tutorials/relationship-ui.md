@@ -5,10 +5,10 @@ title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Edit
 description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Experience Platform-Benutzeroberfläche.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 26%
+source-wordcount: '1376'
+ht-degree: 21%
 
 ---
 
@@ -109,19 +109,49 @@ Sobald in Ihrem Quellschema ein dediziertes Referenzfeld definiert ist, können 
 
 >[!NOTE]
 >
->Die folgenden Schritte beschreiben, wie Sie ein Beziehungsfeld mithilfe der Steuerelemente in der rechten Leiste auf der Arbeitsfläche definieren. Wenn Sie Zugriff auf Real-Time CDP B2B Edition haben, können Sie auch eine Eins-zu-Eins-Beziehung mithilfe des [gleichen Dialogfelds](./relationship-b2b.md#relationship-field) definieren, wie beim Erstellen von Eins-zu-Eins-Beziehungen.
+>Beziehungen können nur für Zeichenfolgen- oder Zeichenfolgen-Array-Felder unterstützt werden.
 
-Wählen Sie das Feld `preferredHotel` auf der Arbeitsfläche aus und scrollen Sie dann unter **[!UICONTROL Feldeigenschaften]** nach unten, bis das Kontrollkästchen **[!UICONTROL Beziehung]** angezeigt wird. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
+Wählen Sie das Feld `preferredHotel` auf der Arbeitsfläche aus und wählen Sie dann **[!UICONTROL Beziehung hinzufügen]** in der Seitenleiste **[!UICONTROL Feldeigenschaften]** aus.
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![Der Schema-Editor mit der Option Beziehung hinzufügen , die in der Seitenleiste für Feldeigenschaften hervorgehoben ist.](../images/tutorials/relationship/add-relationship.png)
 
-Wählen Sie das Dropdown-Menü für **[!UICONTROL Referenzschema]** aus und wählen Sie das Referenzschema für die Beziehung (&quot;[!DNL Hotels]&quot; in diesem Beispiel). Wählen Sie unter **[!UICONTROL Referenz-Identitäts-Namespace]** den Namespace des Identitätsfelds des Referenzschemas (in diesem Fall &quot;[!DNL Hotel ID]&quot;). Wählen Sie **[!UICONTROL Anwenden]** aus, wenn Sie fertig sind.
+Das Dialogfeld [!UICONTROL Beziehung hinzufügen] wird angezeigt. In diesem Dialogfeld können Sie die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds festlegen. Für Real-Time CDP-B2C-Benutzer können Sie **nur** eine Eins-zu-Eins-Beziehung zwischen dem Quell- und dem Referenzschema festlegen.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>Wenn Sie Zugriff auf Real-Time CDP B2B Edition haben, können Sie die Steuerelemente in der rechten Leiste der Arbeitsfläche verwenden, um ein Beziehungsfeld zu definieren und mithilfe des [gleichen Dialogfelds](./relationship-b2b.md#relationship-field) eine n:n-Beziehung zu erstellen.
+
+![Das Dialogfeld &quot;Beziehung hinzufügen&quot;.](../images/tutorials/relationship/add-relationship-dialog.png)
+
+Verwenden Sie das Dropdown-Menü für **[!UICONTROL Referenzschema]** und wählen Sie das Referenzschema für die Beziehung aus (&quot;[!DNL Hotels]&quot; in diesem Beispiel).
+
+>[!NOTE]
+>
+>Nur Schemas, die eine primäre Identität enthalten, werden im Dropdown-Menü des Referenzschemas eingeschlossen. Dieser Schutz verhindert, dass Sie versehentlich eine Beziehung mit einem Schema erstellen, das noch nicht ordnungsgemäß konfiguriert ist.
+
+Der Identitäts-Namespace des Referenzschemas (in diesem Fall &quot;[!DNL Hotel ID]&quot;) wird automatisch unter **[!UICONTROL Referenz-Identitäts-Namespace]** ausgefüllt. Wählen Sie **[!UICONTROL Anwenden]** aus, wenn Sie fertig sind.
+
+![Das Dialogfeld &quot;Beziehung hinzufügen&quot;mit den konfigurierten Beziehungsparametern und &quot;Anwenden&quot;wurde hervorgehoben.](../images/tutorials/relationship/apply-relationship.png)
 
 Das Feld `preferredHotel` wird jetzt auf der Arbeitsfläche als Beziehung hervorgehoben und zeigt den Namen des Referenzschemas an. Wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen zu speichern und den Workflow abzuschließen.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![Der Schema-Editor mit den Verweisen auf die Beziehung und &quot;Speichern hervorgehoben&quot;](../images/tutorials/relationship/relationship-save.png).
+
+### Vorhandenes Beziehungsfeld bearbeiten {#edit-relationship}
+
+Um das Referenzschema zu ändern, wählen Sie ein Feld mit einer vorhandenen Beziehung aus und wählen Sie dann **[!UICONTROL Beziehung bearbeiten]** in der Seitenleiste **[!UICONTROL Feldeigenschaften]** aus.
+
+![Der Schema-Editor mit hervorgehobener Bearbeitungsbeziehung.](../images/tutorials/relationship/edit-relationship.png)
+
+Das Dialogfeld [!UICONTROL Beziehung bearbeiten] wird angezeigt. Von hier aus können Sie den unter [Definieren eines Beziehungsfelds](#relationship-field) beschriebenen Prozess ausführen oder die Beziehung löschen. Wählen Sie **[!UICONTROL Beziehung löschen]** aus, um die Beziehung zum Referenzschema zu entfernen.
+
+![Das Dialogfeld &quot;Beziehung bearbeiten&quot;.](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## Filtern und Suchen nach Beziehungen {#filter-and-search}
+
+Sie können bestimmte Beziehungen innerhalb Ihrer Schemas über die Registerkarte [!UICONTROL Beziehungen] im Arbeitsbereich [!UICONTROL Schemas] filtern und nach ihnen suchen. Sie können diese Ansicht verwenden, um Ihre Beziehungen schnell zu finden und zu verwalten. Lesen Sie das Dokument unter [Erkunden von Schemaressourcen](../ui/explore.md#lookup) , um detaillierte Anweisungen zu den Filteroptionen zu erhalten.
+
+![Die Registerkarte Beziehungen im Arbeitsbereich &quot;Schemas&quot;.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Nächste Schritte
 
