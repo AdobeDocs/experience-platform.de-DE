@@ -4,10 +4,10 @@ type: Tutorial
 description: Erfahren Sie, wie Sie eine Snowflake-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 18%
+source-wordcount: '886'
+ht-degree: 16%
 
 ---
 
@@ -104,6 +104,12 @@ Um die Schlüsselpaar-Authentifizierung zu verwenden, geben Sie Werte für Ihr K
 ![Die Authentifizierungsschnittstelle für Kontoschlüssel-Paare.](../../../../images/tutorials/create/snowflake/key-pair.png)
 
 >[!ENDTABS]
+
+### Vorschau der Beispieldaten überspringen {#skip-preview-of-sample-data}
+
+Während des Datenauswahlschritts kann es bei der Aufnahme großer Tabellen oder Datendateien zu einer Zeitüberschreitung kommen. Sie können die Datenvorschau überspringen, um die Zeitüberschreitung zu umgehen und Ihr Schema weiterhin anzuzeigen, wenn auch ohne Beispieldaten. Um die Datenvorschau zu überspringen, aktivieren Sie den Umschalter **[!UICONTROL Vorschau der Beispieldaten überspringen]** .
+
+Der Rest des Workflows bleibt unverändert. Der einzige Nachteil besteht darin, dass das Überspringen der Datenvorschau verhindern kann, dass berechnete und erforderliche Felder während des Zuordnungsschritts automatisch validiert werden. Anschließend müssen Sie diese Felder während der Zuordnung manuell validieren.
 
 ## Nächste Schritte
 

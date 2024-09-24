@@ -3,10 +3,10 @@ title: Erstellen einer Google Big Query Source-Verbindung in der Benutzeroberfl�
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Google Big Query-Quellverbindung erstellen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 39%
+source-wordcount: '620'
+ht-degree: 33%
 
 ---
 
@@ -74,6 +74,12 @@ Um die Dienstauthentifizierung zu verwenden, wählen Sie **[!UICONTROL Dienstaut
 ![Die neue Kontoschnittstelle, in der die Dienstauthentifizierung ausgewählt ist.](../../../../images/tutorials/create/google-big-query/service_auth.png)
 
 >[!ENDTABS]
+
+### Vorschau der Beispieldaten überspringen {#skip-preview-of-sample-data}
+
+Während des Datenauswahlschritts kann es bei der Aufnahme großer Tabellen oder Datendateien zu einer Zeitüberschreitung kommen. Sie können die Datenvorschau überspringen, um die Zeitüberschreitung zu umgehen und Ihr Schema weiterhin anzuzeigen, wenn auch ohne Beispieldaten. Um die Datenvorschau zu überspringen, aktivieren Sie den Umschalter **[!UICONTROL Vorschau der Beispieldaten überspringen]** .
+
+Der Rest des Workflows bleibt unverändert. Der einzige Nachteil besteht darin, dass das Überspringen der Datenvorschau verhindern kann, dass berechnete und erforderliche Felder während des Zuordnungsschritts automatisch validiert werden. Anschließend müssen Sie diese Felder während der Zuordnung manuell validieren.
 
 ## Nächste Schritte
 

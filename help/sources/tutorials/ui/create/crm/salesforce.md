@@ -1,11 +1,11 @@
 ---
-title: Salesforce-Konto über die Experience Platform-Benutzeroberfläche verbinden
-description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche an die Experience Platform übertragen können.
+title: Verbinden Ihres Salesforce-Kontos über die Experience Platform-Benutzeroberfläche
+description: Erfahren Sie, wie Sie Ihr Salesforce-Konto verbinden und Ihre CRM-Daten mithilfe der Benutzeroberfläche an das Experience Platform übertragen können.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 21%
+source-wordcount: '935'
+ht-degree: 19%
 
 ---
 
@@ -73,7 +73,7 @@ Wählen Sie **[!DNL Salesforce]** unter der Kategorie *[!UICONTROL CRM]* und dan
 
 ![Der Quellkatalog auf der Experience Platform-Benutzeroberfläche mit ausgewählter Salesforce-Quellkarte.](../../../../images/tutorials/create/salesforce/catalog.png)
 
-Die Seite **[!UICONTROL Mit Salesforce verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Verbindung zu Salesforce herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto verwenden
 
@@ -85,7 +85,7 @@ Um ein vorhandenes Konto zu verwenden, wählen Sie **[!UICONTROL Vorhandenes Kon
 
 Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus und geben Sie einen Namen und eine Beschreibung für Ihr neues [!DNL Salesforce]-Konto ein.
 
-![Die Oberfläche, in der Sie ein neues Salesforce-Konto erstellen können, indem Sie die entsprechenden Authentifizierungsberechtigungen angeben.](../../../../images/tutorials/create/salesforce/new.png)
+![Die Benutzeroberfläche, in der Sie ein neues Salesforce-Konto erstellen können, indem Sie die entsprechenden Authentifizierungsberechtigungen angeben.](../../../../images/tutorials/create/salesforce/new.png)
 
 Wählen Sie anschließend den Authentifizierungstyp aus, den Sie für Ihr neues Konto verwenden möchten.
 
@@ -102,7 +102,7 @@ Wählen Sie zur einfachen Authentifizierung **[!UICONTROL Grundlegende Authentif
 
 Wählen Sie nach Abschluss **[!UICONTROL Mit Quelle verbinden]** aus.
 
-![Die grundlegende Authentifizierungsschnittstelle für die Salesforce-Kontoerstellung.](../../../../images/tutorials/create/salesforce/basic.png)
+![ Die grundlegende Authentifizierungsschnittstelle für die Erstellung von Salesforce-Konten.](../../../../images/tutorials/create/salesforce/basic.png)
 
 >[!TAB OAuth2 Client Credential]
 
@@ -115,9 +115,15 @@ Wählen Sie für OAuth 2 Client Credential **[!UICONTROL OAuth2 Client Credentia
 
 Wählen Sie nach Abschluss **[!UICONTROL Mit Quelle verbinden]** aus.
 
-![Die OAuth-Schnittstelle für die Salesforce-Kontoerstellung.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![Die OAuth-Schnittstelle für die Erstellung von Salesforce-Konten.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### Vorschau der Beispieldaten überspringen {#skip-preview-of-sample-data}
+
+Während des Datenauswahlschritts kann es bei der Aufnahme großer Tabellen oder Datendateien zu einer Zeitüberschreitung kommen. Sie können die Datenvorschau überspringen, um die Zeitüberschreitung zu umgehen und Ihr Schema weiterhin anzuzeigen, wenn auch ohne Beispieldaten. Um die Datenvorschau zu überspringen, aktivieren Sie den Umschalter **[!UICONTROL Vorschau der Beispieldaten überspringen]** .
+
+Der Rest des Workflows bleibt unverändert. Der einzige Nachteil besteht darin, dass das Überspringen der Datenvorschau verhindern kann, dass berechnete und erforderliche Felder während des Zuordnungsschritts automatisch validiert werden. Anschließend müssen Sie diese Felder während der Zuordnung manuell validieren.
 
 ## Nächste Schritte
 
