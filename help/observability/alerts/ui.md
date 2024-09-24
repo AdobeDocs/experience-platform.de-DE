@@ -4,10 +4,10 @@ title: Handbuch zur Warnhinweis-Benutzeroberfläche
 description: Hier erfahren Sie, wie Sie Warnhinweise in der Benutzeroberfläche von Experience Platform verwalten.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 40%
+source-wordcount: '797'
+ht-degree: 36%
 
 ---
 
@@ -23,7 +23,7 @@ Wählen Sie zunächst im linken Navigationsbereich **[!UICONTROL Warnhinweise]**
 
 ![Warnt die Seite, die im linken Navigationsbereich [!UICONTROL Warnhinweise] markiert.](../images/alerts/ui/workspace.png)
 
-## Verwalten von Warnhinweisregeln
+## Verwalten von Warnhinweisregeln {#manage-rules}
 
 Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die verfügbaren Regeln aufgelistet, die einen Warnhinweis auslösen können.
 
@@ -37,7 +37,7 @@ Wählen Sie auf die Auslassungspunkte (**...**) neben dem Namen einer Regel klic
 
 ![Die ausgewählten Ellipsen zeigen das Dropdown-Menü an.](../images/alerts/ui/disable-subscribe.png)
 
-## Warnhinweis-Abonnierende verwalten
+## Warnhinweis-Abonnierende verwalten {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Sie haben Ihrer Benachrichtigungsliste erfolgreich Benutzer hinzugefügt. Die ge
 
 ![Ein E-Mail-Beispiel für die erhaltene Warnhinweis-Benachrichtigung.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Aktivieren von E-Mail-Warnungen
+## Aktivieren von E-Mail-Warnungen {#enable-email}
 
 Warnhinweise können direkt an Ihre E-Mail gesendet werden.
 
@@ -85,7 +85,35 @@ Scrollen Sie zum Abschnitt **E-Mails** am unteren Rand der Seite und wählen Sie
 
 Alle Warnungen, die Sie abonniert haben, werden jetzt an die E-Mail-Adresse gesendet, die mit Ihrem Adobe ID-Konto verbunden ist.
 
-## Anzeigen des Warnhinweisverlaufs
+## Warnschwellenwert anpassen {#alert-threshold}
+
+Die Warnschwellen können für die folgenden Warnhinweistypen angepasst werden:
+
+| Warnhinweistyp | Benutzerdefinierter Parameter |
+|---|---|
+| Verzögerung bei Segmentvorgängen | Verzögerungsschwellenwert |
+| Verzögerung beim Segmentexport | Verzögerungsschwellenwert |
+| Verzögerung des Zielflussablaufs | Verzögerungsschwellenwert |
+| Verzögerung bei der Ausführung des Identity Service-Flusses | Verzögerungsschwellenwert |
+| Verzögerung bei der Ausführung eines Profilflusses | Verzögerungsschwellenwert |
+| Verzögerung bei der Ausführung von Quellen | Verzögerungsschwellenwert |
+| Verzögerung der Abfrageausführung | Verzögerungsschwellenwert |
+| Aktivierungsübersprungrate überschritten | Fehlerschwellenwert |
+| Fehlerrate der Quellenaufnahme überschritten | Fehlerschwellenwert |
+
+Wählen Sie die Auslassungszeichen (**...**) neben dem Namen einer Regel aus. Ein Dropdown-Menü zeigt Steuerelemente an. Wählen Sie **[!UICONTROL Bearbeiten]** aus.
+
+![Die Option [!UICONTROL Bearbeiten] ist für die ausgewählte Regel hervorgehoben.](../images/alerts/ui/threshold-edit.png)
+
+Die Seite **[!UICONTROL Warnhinweis anpassen]** wird angezeigt. Aktualisieren Sie den Schwellenwert auf die gewünschten Minuten und wählen Sie dann **[!UICONTROL Bestätigen]** aus.
+
+![Die Warnhinweisseite anpassen , auf der die Optionen [!UICONTROL Schwellenwert] und [!UICONTROL Bestätigen] hervorgehoben werden.](../images/alerts/ui/threshold-update.png)
+
+Sie werden zur Seite **[!UICONTROL Warnhinweise]** zurückgeleitet. Um die Schwellenwerte für die Warnung anzuzeigen, wählen Sie die Regel aus der Liste aus. Die Schwellenwerte für den Warnhinweis werden in der rechten Leiste angezeigt, einschließlich Details wie Status und Schweregrad.
+
+![Ein Warnhinweis, der Details in der rechten Leiste anzeigt und [!UICONTROL Schwellenwert] markiert.](../images/alerts/ui/threshold-view.png)
+
+## Anzeigen des Warnhinweisverlaufs {#alert-history}
 
 Die Registerkarte **[!UICONTROL Verlauf]** zeigt den Verlauf der empfangenen Warnhinweise für Ihre Organisation, einschließlich der Regel, die den jeweiligen Warnhinweis ausgelöst hat, des Auslösedatums und ggf. des Auflösungsdatums.
 
