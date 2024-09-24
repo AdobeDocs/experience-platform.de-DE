@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4767'
-ht-degree: 67%
+source-wordcount: '4717'
+ht-degree: 66%
 
 ---
 
@@ -111,8 +111,6 @@ Wenn Sie mit dem Mauszeiger über das ⓘ neben einer Zielgruppe fahren, können
 
 ![Ein Bild, das zeigt, wie die Ordnerhierarchie für Zielgruppen funktioniert](../images/ui/segment-builder/audience-folder-structure.png)
 
-Sie können auch über die Suchleiste nach Zielgruppen suchen; dabei wird die [Suchsyntax von Lucene](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) verwendet. Wenn Sie auf der Registerkarte **[!UICONTROL Zielgruppen]** einen Ordner der obersten Ebene auswählen, wird die Suchleiste angezeigt, sodass Sie in diesem Ordner suchen können. Suchergebnisse beginnen sich erst dann zu füllen, wenn ganze Wörter eingegeben werden. Wenn Sie beispielsweise eine Zielgruppen mit dem Namen `Online Shoppers` suchen, geben Sie in der Suchleiste „Online“ ein. Nach vollständiger Eingabe des Worts „Online“ erscheinen Suchergebnisse, die das Wort „Online“ enthalten.
-
 ## Arbeitsfläche des Regel-Builders {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ Beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diese Grenze über
 ![Es erscheint eine Warnung, die anzeigt, dass Sie die maximale Anzahl von Werten erreicht haben.](../images/ui/segment-builder/maximum-values.png)
 
 ### Hinzufügen von Zielgruppen
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="Suchaktualisierungen"
+>abstract="Das bestehende Suchsystem wurde aktualisiert und verwendet nun die einheitliche Suche. Mit der einheitlichen Suche können Sie Ihre Zielgruppen einfacher und robuster nach Segmentmitgliedschaften durchsuchen."
 
 Sie können eine Zielgruppe per Drag-and-Drop vom Tab **[!UICONTROL Zielgruppe]** auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Zielgruppenzugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie die Zielgruppenzugehörigkeit als Attribut in den Regeln der neuen Segmentdefinition ein- oder ausschließen.
 
