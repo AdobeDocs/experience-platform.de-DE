@@ -2,10 +2,10 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 40%
+source-wordcount: '1350'
+ht-degree: 39%
 
 ---
 
@@ -133,6 +133,22 @@ Um die aktuelle Liste der Audit-Prüfprotokolle zu exportieren, wählen Sie **[!
 Wählen Sie im angezeigten Dialogfeld Ihr bevorzugtes Format (entweder **[!UICONTROL CSV]** oder **[!UICONTROL JSON]**) und dann **[!UICONTROL Download]** aus. Der Browser lädt die generierte Datei herunter und speichert sie auf Ihrem Computer.
 
 ![Das Dialogfeld für die Dateiformatauswahl mit der Markierung [!UICONTROL Download].](../../images/audit-logs/select-download-format.png)
+
+## Aktivieren von Warnhinweisen {#enable-alerts}
+
+Sie können Prüfwarnungen aktivieren, um Benachrichtigungen für die folgenden Regeln zu erhalten:
+
+* Zielgruppenerstellung
+* Zielgruppenaktualisierung
+* Zielgruppenlöschung
+* Datensatz erstellen
+* Datensatz-Update
+* Datensatz löschen
+* Schema erstellen
+* Schemaaktualisierung
+* Schemalöschen
+
+Wählen Sie den gewünschten Warnhinweis aus der Liste aus, um sich für den Erhalt von Benachrichtigungen anzumelden. Weitere Informationen zu Warnungen finden Sie im Handbuch zum [Abonnieren von Warnungen über die Benutzeroberfläche](../../../observability/alerts/ui.md).
 
 ## Verwalten von Auditprotokollen in der API
 
