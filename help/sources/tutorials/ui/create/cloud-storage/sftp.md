@@ -2,10 +2,10 @@
 title: Erstellen einer SFTP-Source-Verbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine SFTP-Quellverbindung erstellen.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 21%
+source-wordcount: '662'
+ht-degree: 25%
 
 ---
 
@@ -28,22 +28,9 @@ Dieses Tutorial setzt ein Verständnis der folgenden Komponenten von Platform vo
 
 Wenn Sie bereits über eine gültige [!DNL SFTP]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/batch/cloud-storage.md) fortfahren.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
-Um eine Verbindung zu [!DNL SFTP] herzustellen, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
-
-| Anmeldedaten | Beschreibung |
-| ---------- | ----------- |
-| `host` | Der Name oder die IP-Adresse, die Ihrem [!DNL SFTP] -Server zugeordnet ist. |
-| `port` | Der [!DNL SFTP] Server-Port, mit dem Sie eine Verbindung herstellen. Wenn nicht angegeben, wird der Wert standardmäßig auf `22` gesetzt. |
-| `username` | Der Benutzername mit Zugriff auf Ihren [!DNL SFTP] -Server. |
-| `password` | Das Kennwort für Ihren [!DNL SFTP] -Server. |
-| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
-| `passPhrase` | Der Ausdruck oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Pass-Satz geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
-| `maxConcurrentConnections` | Mit diesem Parameter können Sie eine maximale Anzahl gleichzeitiger Verbindungen festlegen, die Platform beim Herstellen einer Verbindung zu Ihrem SFTP-Server erstellt. Sie müssen festlegen, dass dieser Wert kleiner als der von SFTP festgelegte Grenzwert ist. **Hinweis**: Wenn diese Einstellung für ein vorhandenes SFTP-Konto aktiviert ist, betrifft sie nur zukünftige Datenflüsse und nicht vorhandene Datenflüsse. |
-| Ordnerpfad | Der Pfad zu dem Ordner, auf den Sie Zugriff gewähren möchten. [!DNL SFTP] -Quelle, können Sie den Ordnerpfad angeben, um den Benutzerzugriff auf den Unterordner Ihrer Wahl anzugeben. |
-
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues [!DNL SFTP]-Konto für die Verbindung mit Platform zu erstellen.
+Ausführliche Anweisungen zum Abrufen Ihrer Authentifizierungsberechtigungen finden Sie im [[!DNL SFTP] Authentifizierungshandbuch](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials) .
 
 ## Mit Ihrem [!DNL SFTP]-Server verbinden
 
@@ -81,13 +68,32 @@ Die Quelle [!DNL SFTP] unterstützt sowohl die einfache Authentifizierung als au
 
 >[!TAB Grundlegende Authentifizierung]
 
-Um eine einfache Authentifizierung zu verwenden, wählen Sie **[!UICONTROL Kennwort]** und geben Sie dann neben Ihrem Benutzernamen und Kennwort die Host- und Anschlusswerte für die Verbindung an. Während dieses Schritts können Sie auch den Pfad zum Unterordner angeben, auf den Sie Zugriff gewähren möchten. Wählen Sie nach Abschluss **[!UICONTROL Mit Quelle verbinden]** aus.
+Um eine einfache Authentifizierung zu verwenden, wählen Sie **[!UICONTROL Kennwort]** und geben Sie dann die entsprechenden Werte für die folgenden Anmeldeinformationen ein:
+
+* Host
+* port
+* Benutzername
+* password
+
+Während dieses Schritts können Sie auch Ihre maximalen gleichzeitigen Verbindungen konfigurieren, Ihren Ordnerpfad definieren und das Blockieren für Ihren [!DNL SFTP] -Server aktivieren oder deaktivieren. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt wird.
+
+Weitere Informationen zur Authentifizierung finden Sie im Handbuch unter [ Erfassen erforderlicher Anmeldedaten für  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![Der Bildschirm für das neue Konto für die SFTP-Quelle mit einfacher Authentifizierung](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB Authentifizierung mit öffentlichen SSH-Schlüsseln]
 
-Um die SSH-Anmeldeinformationen mit öffentlichem Schlüssel zu verwenden, wählen Sie **[!UICONTROL SSH-öffentlichen Schlüssel]** aus und geben Sie dann Ihre Host- und Anschlusswerte sowie Ihre privaten Schlüsselinhalte und Passphrase-Kombination an. Während dieses Schritts können Sie auch den Pfad zum Unterordner angeben, auf den Sie Zugriff gewähren möchten. Wählen Sie nach Abschluss **[!UICONTROL Mit Quelle verbinden]** aus.
+Um auf SSH-öffentlichen Schlüssel basierende Anmeldeinformationen zu verwenden, wählen Sie **[!UICONTROL SSH public key]** aus und geben Sie dann die entsprechenden Werte für die folgenden Anmeldeinformationen ein:
+
+* Host
+* port
+* Benutzername
+* Inhalt privater Schlüssel
+* Passphrase
+
+Während dieses Schritts können Sie auch Ihre maximalen gleichzeitigen Verbindungen konfigurieren, Ihren Ordnerpfad definieren und das Blockieren für Ihren [!DNL SFTP] -Server aktivieren oder deaktivieren. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie einige Augenblicke, bis die Verbindung hergestellt wird.
+
+Weitere Informationen zur Authentifizierung finden Sie im Handbuch unter [ Erfassen erforderlicher Anmeldedaten für  [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![Der neue Kontobildschirm für die SFTP-Quelle mit dem öffentlichen SSH-Schlüssel.](../../../../images/tutorials/create/sftp/ssh.png)
 
