@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform - Überblick
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '926'
 ht-degree: 9%
 
 ---
@@ -53,7 +53,7 @@ Produktkenntnis bezieht sich auf Konzepte und Themen, die auf der Experience Lea
 
 | Produktwissen | Beispiele |
 | --- | --- |
-| Zielgerichtetes Lernen | <ul><li>Was ist der Unterschied zwischen einer Identität und einem Primärschlüssel oder Fremdschlüssel?</li><li>Wie wird der Reichtum des Profils berechnet?</li></ul> |
+| Zielgerichtetes Lernen | <ul><li>Was ist der Unterschied zwischen einer Identität und einem Primärschlüssel oder Fremdschlüssel?</li><li>Was sind Lookalike-Zielgruppen?</li></ul> |
 | Offene Entdeckung | <ul><li>Wie kann ich diesen Datensatz exportieren?</li><li>Gibt es Schemata für Kunden im Gesundheitswesen?</li></ul> |
 | Fehlerbehebung | <ul><li>Warum kann ich ein Schema, das im Besitz von Adobe ist, nicht für ein Profil aktivieren?</li><li>Warum kann ich ein Segment nicht löschen?</li></ul> |
 

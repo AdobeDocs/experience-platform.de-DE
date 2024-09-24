@@ -3,10 +3,10 @@ title: Ergänzen von Erstanbieterprofilen mit von Partnern bereitgestellten Attr
 description: Erfahren Sie, wie Sie Erstanbieterprofile mit Attributen vertrauenswürdiger Datenpartner ergänzen, um Ihre Datengrundlage zu verbessern, neue Einblicke in Ihre Kundenbasis zu gewinnen und eine bessere Zielgruppenoptimierung zu erzielen.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 79%
+source-wordcount: '1257'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Wenn Sie Ihre eigenen Erstanbieterprofile mit Attributen von Datenpartnern ergä
 
 >[!WARNING]
 >
->Die zusätzlichen von den Partnern bereitgestellten Attribute, die in Real-Time CDP aufgenommen werden, wirken sich auf Ihren *durchschnittlichen Profilumfang* aus. Weitere Informationen zum Profilumfang finden Sie in der [Real-time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html).
+>Die zusätzlichen von Partnern bereitgestellten Attribute, die in Real-Time CDP erfasst werden, wirken sich auf Ihr *Gesamtdatenvolumen* aus. Weitere Informationen zum Gesamtvolumen der Daten finden Sie in der [Real-time Customer Data Platform-Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) .
 
 ## Videoeinführung {#video-walkthrough}
 

@@ -2,9 +2,9 @@
 title: Fragenleitfaden für den AI-Assistenten
 description: Lesen Sie dieses Dokument, um Beispielfragen zu erfahren, die Sie bei der Abfrage von AI Assistant verwenden können.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,6 @@ Die folgenden Fragen werden nach Datenobjekten gruppiert und entweder als [opera
    * Wie sind Benutzergruppen mit Rollen verbunden?
    * Wann sollte ich einen Datentyp oder eine Feldergruppe verwenden?
    * Was ist der Unterschied zwischen einer Identität und einem Primärschlüssel oder Fremdschlüssel?
-   * Wie wird der Reichtum des Profils berechnet?
 * **Fehlerbehebung - Produktwissen (Real-Time CDP und Journey Optimizer)**
    * Wobei kann der KI-Assistent helfen?
    * Kann ich ein Profil-aktiviertes Schema löschen, nachdem Daten erfasst wurden?

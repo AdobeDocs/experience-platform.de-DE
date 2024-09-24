@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2702'
 ht-degree: 9%
 
 ---
@@ -205,7 +205,6 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 | [!UICONTROL Audience Activation Size] | Die Gesamtgröße der Profile, die in einem Jahr für ein dateibasiertes Ziel aktiviert wurden. Hinweis: Dies umfasst keine Profile, die über Streaming-Ziele gesendet werden. |
 | [!UICONTROL Addressable Audience] | Die Summe der Berechtigungen Ihrer geschäftlichen Zielgruppe und der Berechtigung für die Verbraucher-Zielgruppe. Eine Audience vom Verbraucher wird definiert als die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe des Verbrauchers&quot;identifiziert werden. Eine Business-Audience ist definiert als die Anzahl der Geschäftspersonenprofile, die in der Bestellung als &quot;Business Audience&quot;identifiziert werden. |
 | [!UICONTROL  Adhoc Query Service Users Packs] | Ein Add-on zur Erhöhung der Berechtigung für gleichzeitige Query Service-Benutzer um fünf zusätzliche gleichzeitige Query Service-Benutzer und eine zusätzliche gleichzeitige Ausführung von Ad-hoc-Abfragen pro Pack. Es können mehrere zusätzliche Ad Hoc Query User Packs lizenziert sein. |
-| [!UICONTROL Durchschnittliche Profilreichweite] | Die Summe aller im Hub-Profil-Service gespeicherten Produktionsdaten zu einem beliebigen Zeitpunkt, dividiert durch die fünffache Anzahl autorisierter Geschäftspersonenprofile. [!UICONTROL Durchschnittliche Profilreichweite] ist eine gemeinsam genutzte Funktion. |
 | [!UICONTROL Verfügbare CJA-Zeilen] | Die täglichen durchschnittlichen Datenzeilen, die in Customer Journey Analytics zur Analyse verfügbar sind. |
 | [!UICONTROL Berechnete Attribute] | Die Gesamtanzahl der aggregierten Profilverhaltensdaten. Aggregierte Profilverhaltensdaten basieren auf Erlebnisereignissen, die in ein Profilattribut konvertiert werden und in ein Personenprofil oder ein Geschäftsprofil aufgenommen werden können. |
 | [!UICONTROL Consumer Audience] | Die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe für Verbraucher&quot;identifiziert wurden. |
@@ -216,9 +215,10 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 | [!UICONTROL Look-alike-Zielgruppen] | Zählung der Zielgruppen, die durch Modellierung einer bestehenden Verbraucherzielgruppe generiert werden, um Personenprofile zu identifizieren, die der vorhandenen Verbraucherzielgruppe ähnlich sind. |
 | [!UICONTROL Anzahl der AMM-Modelle] | Zählung des maschinellen Lernmodells (integrierter Adobe Mix Modeler), mit dem ein bestimmtes, auf Ihren Investitionen basierendes Ergebnis gemessen und/oder vorhergesagt werden kann. |
 | [!UICONTROL Anzahl der Sandboxes] | Zählung der logischen Trennungen innerhalb Ihrer Instanz eines Adobe On-Demand-Dienstes, der auf Adobe Experience Platform-Isolationsdaten und -Vorgänge zugreift. |
-| [!UICONTROL Profilreichhaltigkeitsnummer der Pakete] | Eine Steigerung der zulässigen durchschnittlichen Profilreichweite pro Profil um 25 KB pro Profil für jedes zusätzliche Profil-Rich-ness-Paket. |
+| [!UICONTROL Profilreichhaltigkeitsnummer der Pakete] | Eine Steigerung des zulässigen Gesamtdatenvolumens um 25 KB pro Profil für jedes zusätzliche Profil-Rich-ness-Paket. |
 | [!UICONTROL Berechnungsstunden des Query Service] | Eine Maßeinheit für die Zeit, die die Query Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird. |
 | [!UICONTROL Streaming-Segmentierungsnummer der Pakete] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungsdienst gelangen. Die Segmentzugehörigkeit wird auf der Grundlage der aktuellen Personenprofilattribute und des Werts des aktuellen Ereignisses ausgewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsame Funktion. |
+| [!UICONTROL Datenvolumen insgesamt] | Die Gesamtanzahl der Daten, die für Adobe Experience Platform Profile Service zur Verwendung in Interaktionsarbeitsabläufen verfügbar sind. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

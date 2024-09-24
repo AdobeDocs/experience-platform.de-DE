@@ -2,10 +2,10 @@
 title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen
 description: Erfahren Sie mehr über Best Practices und Werkzeuge, die Sie zur besseren Verwaltung Ihrer Lizenzberechtigungen mit Adobe Experience Platform einsetzen können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 73%
+source-wordcount: '2145'
+ht-degree: 74%
 
 ---
 
@@ -42,12 +42,7 @@ Wenn Sie eine Lizenz für Experience Platform erwerben, erhalten Sie Lizenznutzu
 
 **[!DNL Addressable Audience]** – die Gesamtzahl der Kundenprofile, die vertraglich für Experience Platform zugelassen sind, einschließlich bekannter und pseudonymer Profile.
 
-**[!DNL Profile Richness]** – die durchschnittliche Größe Ihrer Profildaten in Experience Platform. Sie können die Obergrenze Ihrer [!DNL Profile Richness]-Berechtigung durch den Kauf eines Anreicherungspakets erhöhen.
-
-Die [!DNL Profile Richness]-Metrik variiert je nach der von Ihnen erworbenen Lizenz. Die [!DNL Profile Richness] kann durch zwei Berechnungen festgestellt werden:
-
-* Die Summe aller in Adobe Real-time Customer Data Platform gespeicherten Produktionsdaten (d. h. Echtzeit-Kundenprofil und Identitätsdienst) zu einem beliebigen Zeitpunkt, dividiert durch [!DNL Addressable Audience];
-* Die Summe aller in Platform gespeicherten Daten (einschließlich, aber nicht beschränkt auf den [!DNL data lake], das Echtzeit-Kundenprofil und den Identitätsdienst) zu einem beliebigen Zeitpunkt und aller Daten, die Sie in der Plattform in den letzten 12 Monaten streamen (anstatt darin zu speichern), dividiert durch den [!DNL Addressable Audience].
+**[!DNL Total Data Volume]** - die Gesamtdatenmenge, die für Adobe Experience Platform Profile Service zur Verwendung in Interaktions-Workflows verfügbar ist.
 
 Die Verfügbarkeit und spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab.
 
@@ -108,7 +103,7 @@ Aufnahmefilter ermöglichen Ihnen, nur die für Ihre Anwendungsfälle erforderli
 | --- | --- |
 | Adobe Audience Manager-Quellfilter | Wenn Sie eine Adobe Audience Manager-Quellverbindung erstellen, können Sie auswählen, welche Segmente und Eigenschaften in das [!DNL data lake]- und Echtzeit-Kundenprofil aufgenommen werden sollen, anstatt die Daten des Audience Managers vollständig zu erfassen. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer Audience Manager-Quellverbindung](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Adobe Analytics Data Prep | Sie können beim Erstellen einer Analytics-Quellverbindung mit [!DNL Data Prep]-Funktionen Daten herausfiltern, die für Ihre Anwendungsfälle nicht erforderlich sind. Mit [!DNL Data Prep] können Sie festlegen, welche Attribute/Spalten für das jeweilige Profil veröffentlicht werden sollen. Sie können auch bedingte Anweisungen erstellen, um Platform darüber zu informieren, ob Daten für das Profil oder nur für den [!DNL data lake] veröffentlicht werden sollen. Weitere Informationen finden Sie in der Anleitung zum [Erstellen einer Analytics-Quellverbindung](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
-| Unterstützung für das Aktivieren/Deaktivieren von Datensätzen für ein Profil | Um Daten in das Echtzeit-Kundenprofil zu erfassen, müssen Sie einen Datensatz für die Verwendung im Profilspeicher aktivieren. Dadurch wird ein höherer Anteil Ihrer [!DNL Addressable Audience]- und [!DNL Profile Richness]-Berechtigungen verbraucht. Sobald ein Datensatz für Anwendungsfälle von Kundenprofilen nicht mehr erforderlich ist, können Sie die Integration dieses Datensatzes in das Profil deaktivieren, um sicherzustellen, dass Ihre Daten weiterhin lizenzkonform sind. Weitere Informationen dazu finden Sie in der Anleitung zum [Aktivieren und Deaktivieren von Datensätzen für ein Profil](../../catalog/datasets/enable-for-profile.md). |
+| Unterstützung für das Aktivieren/Deaktivieren von Datensätzen für ein Profil | Um Daten in das Echtzeit-Kundenprofil zu erfassen, müssen Sie einen Datensatz für die Verwendung im Profilspeicher aktivieren. Dadurch wird ein höherer Anteil Ihrer [!DNL Addressable Audience]- und [!DNL Total Data Volume]-Berechtigungen verbraucht. Sobald ein Datensatz für Anwendungsfälle von Kundenprofilen nicht mehr erforderlich ist, können Sie die Integration dieses Datensatzes in das Profil deaktivieren, um sicherzustellen, dass Ihre Daten weiterhin lizenzkonform sind. Weitere Informationen dazu finden Sie in der Anleitung zum [Aktivieren und Deaktivieren von Datensätzen für ein Profil](../../catalog/datasets/enable-for-profile.md). |
 | Ausschließen von Web SDK- und Mobile SDK-Daten | Es gibt zwei Arten von Daten, die vom Web- und Mobile-SDK erfasst werden: automatisch erfasste Daten und explizit von Ihrem Entwickler erfasste Daten. Um die Einhaltung Ihrer Lizenz zu gewährleisten, können Sie die automatische Datenerfassung in der SDK-Konfiguration über die Kontexteinstellung deaktivieren. Benutzerdefinierte Daten können auch von Ihrem Entwickler entfernt oder nicht festgelegt werden. |
 | Datenausschluss bei Server-seitiger Weiterleitung | Wenn Sie Daten mithilfe der Server-seitigen Weiterleitung an Platform senden, können Sie festlegen, welche Daten beim Versand ausgeschlossen werden, indem Sie entweder in einer Regel das Mapping entfernen und es für alle Ereignisse ausschließen oder Bedingungen zur Regel hinzufügen, sodass Daten nur für bestimmte Ereignisse ausgelöst werden. Weitere Informationen finden Sie in der Dokumentation unter [Ereignisse und Bedingungen](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if). |
 | Filtern von Daten auf Quellebene | Sie können logische Operatoren und Vergleichsoperatoren verwenden, um Daten auf Zeilenebene aus Ihren Quellen zu filtern, bevor Sie eine Verbindung herstellen und Daten auf Experience Platform erfassen. Weitere Informationen finden Sie im Handbuch zum [Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der  [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
