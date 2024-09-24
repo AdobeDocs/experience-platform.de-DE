@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutorials, wie Sie Ihren Kundinnen und Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
-source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
+source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 86%
+source-wordcount: '282'
+ht-degree: 85%
 
 ---
 
@@ -74,6 +74,7 @@ ht-degree: 86%
 * Lizenznutzung und Leitlinien {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Lizenznutzungs-Dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Datenvolumen insgesamt](./license-usage-and-guardrails/total-data-volume.md)
    * [Adobe Journey Optimizer-Limits](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [Customer Journey Analytics-Limits](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [Real-Time CDP-Limits](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
