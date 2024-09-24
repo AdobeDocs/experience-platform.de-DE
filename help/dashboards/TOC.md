@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Dashboards
 user-guide-description: Erfahren Sie, wie Sie Daten in Experience Platform über anpassbare Dashboards visualisieren können.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 63%
+source-wordcount: '135'
+ht-degree: 64%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 63%
       * Filter {#filters}
          * [Datumsfilter](data-distiller/query-pro-mode/filters/date-filter.md)
          * [Globaler Filter](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Durchfahren](data-distiller/query-pro-mode/drill-through.md)
       * [Mehr anzeigen](data-distiller/query-pro-mode/view-more.md)
       * [SQL anzeigen](data-distiller/query-pro-mode/view-sql.md)
       * [Als CSV herunterladen](data-distiller/query-pro-mode/download-csv.md)
