@@ -2,10 +2,10 @@
 title: Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 42%
+source-wordcount: '2672'
+ht-degree: 41%
 
 ---
 
@@ -312,6 +312,13 @@ Weitere Informationen zur Aufstockung, zu Live-Daten und ihren jeweiligen Latenz
 >[!NOTE]
 >
 >Auf der Seite Datensatzaktivität werden keine Informationen zu Batches angezeigt, da der Analytics-Quell-Connector vollständig von Adobe verwaltet wird. Sie können überwachen, dass Daten fließen, indem Sie sich die Metriken um die erfassten Datensätze ansehen.
+
+## Löschen des Datenflusses {#delete-dataflow}
+
+Um Ihren Analytics-Datenfluss zu löschen, wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile des Arbeitsbereichs &quot;Quellen&quot;aus. Verwenden Sie die Seite &quot;Datenflüsse&quot;, um den Analytics-Datenfluss zu finden, den Sie löschen möchten, und wählen Sie dann die Auslassungszeichen (`...`) daneben aus. Verwenden Sie anschließend das Dropdown-Menü und wählen Sie **[!UICONTROL Löschen]** aus.
+
+* Durch das Löschen des Live-Analytics-Datenflusses wird auch der zugrunde liegende Datensatz gelöscht.
+* Durch das Löschen des Analytics-Datenflusses zur Aufstockung wird der zugrunde liegende Datensatz nicht gelöscht, sondern der Aufstockungsprozess für die entsprechende Report Suite wird angehalten. Wenn Sie den Datenfluss zum Aufstocken löschen, können die erfassten Daten weiterhin über den Datensatz angezeigt werden.
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
