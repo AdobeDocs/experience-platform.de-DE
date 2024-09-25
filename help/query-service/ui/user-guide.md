@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
 workflow-type: tm+mt
-source-wordcount: '2430'
-ht-degree: 31%
+source-wordcount: '2802'
+ht-degree: 24%
 
 ---
 
@@ -49,6 +49,12 @@ Im Abfrage-Editor ausgeführte Abfragen werden interaktiv ausgeführt. Das bedeu
 
 Mit dem Abfrage-Editor können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle Abfragen, die ausgeführt oder im Abfrage-Editor gespeichert werden, stehen allen Benutzern in Ihrer Organisation mit Zugriff auf Query Service zur Verfügung.
 
+### Datenbankauswahl {#database-selector}
+
+Wählen Sie im Dropdown-Menü oben rechts im Abfrage-Editor eine Datenbank aus, die abgefragt werden soll. Die ausgewählte Datenbank wird im Dropdown-Menü angezeigt.
+
+![Der Abfrage-Editor mit dem Dropdown-Menü &quot;Datenbank&quot;hervorgehoben.](../images/ui/query-editor/database-dropdown.png)
+
 ### Einstellungen        {#settings}
 
 Ein Einstellungssymbol über dem Eingabefeld Abfrage-Editor enthält Optionen zum Aktivieren/Deaktivieren des Dunklen Designs oder Deaktivieren/Aktivieren der automatischen Vervollständigung.
@@ -66,9 +72,6 @@ Um dunkle oder helle Designs zu aktivieren, wählen Sie das Einstellungssymbol (
 Der Abfrage-Editor schlägt bei der Erstellung der Abfrage automatisch potenzielle SQL-Schlüsselwörter zusammen mit Tabellen- oder Spaltendetails vor. Die Funktion zur automatischen Vervollständigung ist standardmäßig aktiviert und kann jederzeit über die Einstellungen des Abfrage-Editors deaktiviert oder aktiviert werden.
 
 Die Konfigurationseinstellung für die automatische Vervollständigung erfolgt pro Benutzer und wird für die aufeinander folgenden Anmeldungen für diesen Benutzer gespeichert. Die Deaktivierung dieser Funktion verhindert, dass mehrere Metadatenbefehle verarbeitet werden, und bietet Empfehlungen, die in der Regel die Bearbeitung von Abfragen durch den Autor beschleunigt.
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### Mehrere sequenzielle Abfragen ausführen {#execute-multiple-sequential-queries}
@@ -112,17 +115,7 @@ Um Ihre Entwicklungszeit zu minimieren, sollten Sie Ihre Abfragen mit Begrenzung
 
 ## Schreibwerkzeuge im Abfrage-Editor {#writing-tools}
 
-- **Automatische Syntaxhervorhebung**: Erleichtert das Lesen und Organisieren von SQL.
-
-![Eine SQL-Anweisung im Abfrage-Editor, in der die Syntaxfarbhervorhebung veranschaulicht ist.](../images/ui/query-editor/syntax-highlight.png)
-
-- **SQL-Schlüsselwort automatisch vervollständigen:** Beginnen Sie mit der Eingabe Ihrer Abfrage, navigieren Sie mit den Pfeiltasten zum gewünschten Begriff und drücken Sie die **Eingabetaste**.
-
-![Einige SQL-Zeichen mit dem Dropdown-Menü zur automatischen Vervollständigung mit Optionen aus dem Abfrage-Editor.](../images/ui/query-editor/syntax-auto.png)
-
-- **Tabelle und Felder automatisch vervollständigen:** Beginnen Sie mit der Eingabe des Tabellennamens für den `SELECT`-Vorgang, navigieren Sie mit den Pfeiltasten zur gewünschten Tabelle und drücken Sie die **Eingabetaste**. Sobald eine Tabelle ausgewählt ist, erkennt die automatische Vervollständigung die Felder in dieser Tabelle.
-
-![Die Eingabe im Abfrage-Editor mit einem Dropdown-Menü mit Tabellennamenvorschlägen.](../images/ui/query-editor/tables-auto.png)
+Verwenden Sie die Schreibwerkzeuge des Abfrage-Editors, um Ihren Abfrageerstellungsprozess zu verbessern. Zu den Funktionen gehören Optionen zum Formatieren von Text, Kopieren von SQL, Verwalten von Abfragedetails und Speichern oder Planen Ihrer Arbeit während des Ablaufs.
 
 ### Text formatieren {#format-text}
 
@@ -202,6 +195,43 @@ Wenn eine Abfrage geplant wurde, bietet die Registerkarte [!UICONTROL Geplante A
 >[!NOTE]
 >
 >Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage in Query Service verfügbar ist, muss sie im Abfrage-Editor ausgeführt oder gespeichert werden.
+
+### Objektbrowser {#object-browser}
+
+>[!AVAILABILITY]
+>
+>Die Navigationsleiste des Datensatzes ist nur für Data Distiller-Kunden verfügbar. Ihre Platform-Benutzeroberfläche enthält möglicherweise nicht die Navigationsleiste des linken Datensatzes.  Andere Bilder in diesem Dokument spiegeln möglicherweise nicht die Navigationsleiste des Datensatzes wider. Wenden Sie sich für weitere Informationen an Ihren Adobe-Support-Mitarbeiter.
+
+Verwenden Sie den Objektbrowser, um Datensätze einfach zu suchen und zu filtern. Der Objektbrowser reduziert die Zeit für die Suche nach Tabellen und Datensätzen in großen Umgebungen mit zahlreichen Datensätzen. Dank des optimierten Zugriffs auf relevante Daten und Metadaten können Sie sich mehr auf die Erstellung von Abfragen und weniger auf die Navigation konzentrieren.
+
+Um mit dem Objektbrowser durch Ihre Datenbank zu navigieren, geben Sie einen Tabellennamen in das Suchfeld ein oder wählen Sie **[!UICONTROL Tabellen]** aus, um die Liste der verfügbaren Datensätze und Tabellen zu erweitern. Bei Verwendung des Suchfelds wird die Liste der verfügbaren Tabellen dynamisch anhand Ihrer Eingabe gefiltert.
+
+>[!NOTE]
+>
+>Jeder Datensatz, der in [Ihrer ausgewählten Datenbank](#database-dropdown) enthalten ist, wird in einer Navigationsleiste links neben dem Abfrage-Editor aufgeführt.
+
+![Die Navigationsleiste des Datensatzes im Abfrage-Editor mit hervorgehobener Sucheingabe.](../images/ui/query-editor/search-tables.png)
+
+Das im Objektbrowser angezeigte Schema ist ein beobachtbares Schema. Dies bedeutet, dass Sie damit Änderungen und Aktualisierungen in Echtzeit überwachen können, da Änderungen sofort sichtbar sind. Die beobachtbaren Schemata helfen bei der Sicherstellung der Datensynchronisation und helfen bei Debugging- oder Analyseaufgaben.
+
+#### Aktuelle Einschränkungen {#current-limitations}
+
+Im Folgenden finden Sie eine Liste der aktuellen Einschränkungen:
+
+- Sequenzielle Abfrageausführung: Es kann jeweils nur eine Abfrage ausgeführt werden. Während eine Abfrage ausgeführt wird, können im linken Navigationsbereich keine zusätzlichen Tabellen geöffnet werden, da Abfragen nacheinander verarbeitet werden.
+- Zusätzliche Zeilen in Abfragelogs: Möglicherweise treten in den Protokollen irrelevante Abfragen mit der Bezeichnung &quot;TABELLEN ANZEIGEN&quot;auf. Diese werden in zukünftigen Versionen entfernt.
+
+#### Auf Tabellenmetadaten zugreifen {#table-metadata}
+
+Zusätzlich zu den schnellen Suchvorgängen können Sie jetzt problemlos auf Metadaten für jede Tabelle zugreifen, indem Sie das Symbol &quot;i&quot;neben dem Tabellennamen auswählen. Auf diese Weise erhalten Sie detaillierte Informationen über die ausgewählte Tabelle, die Ihnen beim Schreiben von Abfragen helfen, fundierte Entscheidungen zu treffen.
+
+![Die Navigationsleiste des Datensatzes im Abfrage-Editor mit hervorgehobener Sucheingabe.](../images/ui/query-editor/table-metadata.png)
+
+#### Untergeordnete Tabellen durchsuchen
+
+Um untergeordnete oder verknüpfte Tabellen zu untersuchen, wählen Sie den Dropdown-Pfeil neben einem Tabellennamen in der Liste aus. Dadurch wird die Tabelle erweitert, sodass alle zugehörigen untergeordneten Tabellen angezeigt werden. Außerdem erhalten Sie einen klaren Überblick über die Datenstruktur und können komplexere Abfragekonstruktionen erstellen. Das Symbol neben dem Feldnamen zeigt den Datentyp der Spalte an, damit Sie ihn bei komplexen Abfragen identifizieren können.
+
+![Der Abfrage-Editor mit der gefilterten Tabellenliste, der angezeigt wird.](../images/ui/query-editor/child-table-list.png)
 
 ## Ausführen von Abfragen mit dem Abfrage-Editor {#executing-queries}
 
