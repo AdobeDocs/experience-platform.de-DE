@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 9%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 9%
 
 Wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen finden Sie im Dashboard für die Adobe Experience Platform [!UICONTROL Lizenznutzung] . Die hier angezeigten Informationen werden während einer täglichen Momentaufnahme Ihrer Platform-Instanz erfasst.
 
-Lizenzverwendungsberichte bieten eine hohe Granularität im Vergleich zu Ihren Lizenzverwendungsmetriken. Das Dashboard bietet Nutzungsmetriken für jedes gekaufte Produkt, die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Anwendungen können mit Nutzungsmetriken verfolgt werden: Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
+Lizenzverwendungsberichte bieten eine hohe Granularität im Vergleich zu Ihren Lizenzverwendungsmetriken. Das Dashboard bietet Nutzungsmetriken für jedes gekaufte Produkt (und zugehörige Add-ons), die konsolidierte Verwendung von Metriken in allen Produktions- oder Entwicklungs-Sandboxes und die Nutzungsmetrik aus einer bestimmten Sandbox. Die folgenden Experience Platform-Anwendungen können mit Nutzungsmetriken verfolgt werden: Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics.
 
 In diesem Handbuch wird beschrieben, wie Sie auf das Dashboard zur Lizenzverwendung in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
@@ -52,7 +52,7 @@ Eine allgemeine Übersicht über die Platform-Benutzeroberfläche finden Sie im 
 
 ## [!UICONTROL Nutzung der Lizenz] Dashboard-Daten
 
-Im Dashboard [!UICONTROL Lizenznutzung] wird eine Liste aller von Ihnen erworbenen Experience Platform-Produkte angezeigt. Aus dieser Liste können Sie eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens zum Experience Platform in allen zugehörigen Sandboxes finden.
+Das Dashboard [!UICONTROL Lizenznutzung] enthält eine Liste aller von Ihnen erworbenen Experience Platform-Produkte sowie aller Add-ons für diese Produkte. In diesem Dashboard können Sie eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens zum Experience Platform in allen zugehörigen Sandboxes finden.
 
 Die Daten in diesem Dashboard werden genau so angezeigt, wie sie zu dem Zeitpunkt angezeigt werden, zu dem der Schnappschuss erstellt wurde. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Dashboard wird nicht in Echtzeit aktualisiert.
 
@@ -72,12 +72,16 @@ Um in der Platform-Benutzeroberfläche zum Dashboard für die Lizenzverwendung z
 
 ## Registerkarte [!UICONTROL Übersicht] {#overview-tab}
 
-In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte, einschließlich Add-ons, in Tabellenformat angezeigt. Die Tabelle enthält wichtige Informationen zur Nutzung Ihrer Lizenz für alle verfügbaren Profile.
+Das Dashboard [!UICONTROL Lizenznutzung] enthält zwei separate Tabellen: **Core-Produkte** und **Add-ons**.
+
+- **[!UICONTROL Kernprodukte] Tabelle**: In dieser Tabelle sind die wichtigsten Adobe Experience Platform-Produkte aufgeführt, die von Ihrem Unternehmen lizenziert wurden. Jedes Kernprodukt verfügt über eigene Metriken, Nutzungsverfolgung und Drillthrough-Ansichten auf Sandbox-Ebene. Diese Hauptprodukte stellen die Schlüsselmetriken für die Verfolgung bereit. Alle Add-ons sind in diesen Metriken enthalten.
+
+- **[!UICONTROL Add-ons] table**: Diese Tabelle listet zusätzliche Produkte auf, deren Lizenzmengen mit den von den Kernprodukten unterstützten Metriken kombiniert werden. Add-ons verfügen nicht über separate Metriken, sondern verbessern die Nutzungsverfolgung der Kernprodukte, mit denen sie verknüpft sind.
 
 | Spaltenname | Beschreibung |
 |---|---|
 | **[!UICONTROL Produkt]** | Die von Ihrem Unternehmen lizenzierte Adobe-Lösung. |
-| **[!UICONTROL Primäre Metrik]** | Die primäre Metrik, die zur Verfolgung in für dieses Produkt verwendet wird. |
+| **[!UICONTROL Primäre Metrik]** | Die primäre Metrik, die zur Verfolgung innerhalb dieses Produkts verwendet wird. |
 | **[!UICONTROL Lizenzbetrag]** | Der vertraglich vereinbarte Wert für den Höchstbetrag der Primären Metrik, wie in Ihrem Produktlizenzvertrag vereinbart. |
 | **[!UICONTROL Verwendung]** | Die Menge Ihrer verwendeten primären Metrik. Dieser Wert gibt die Gesamtverwendung dieser Metrik über alle Sandboxes hinweg an, entweder in der Produktion oder in der Entwicklung. |
 | **[!UICONTROL Nutzung %]** | Der Prozentsatz Ihrer primären Metrik, der gemäß Ihrem Lizenzbetrag verwendet wird. |
@@ -85,9 +89,9 @@ In diesem Dashboard werden alle lizenzierten Adobe Experience Platform-Produkte,
 
 >[!NOTE]
 >
->Ergänzungen zum [!UICONTROL Lizenzbetrag] infolge von Add-ons werden zusätzlich zum [!UICONTROL Lizenzbetrag] für Basisprodukte wie Real-time Customer Data Platform, Adobe Journey Optimizer und Customer Journey Analytics hinzugefügt. Die Verwendung dieses lizenzierten Betrags (nach den Add-ons) wird durch die Basisprodukte verfolgt. Wenn Sie beispielsweise eine Packung mit fünf Sandboxes kaufen, wird die Menge von fünf weiteren Sandboxes der Menge des Basisprodukts hinzugefügt. In diesem Fall zeigt das Add-on den [!UICONTROL Lizenzbetrag] von einem an und die Verwendung für dieses Add-on ist &quot;leer&quot;, da die Verwendung durch das Basisprodukt verfolgt wird.
+>Lizenzbeträge für Add-ons sind im [!UICONTROL Lizenzbetrag] der Kernprodukte enthalten. Wenn Sie beispielsweise eine Packung mit fünf Sandboxes als Add-on kaufen, wird der Betrag zum Basisprodukt hinzugefügt. Die Add-ons-Tabelle zeigt einen [!UICONTROL Lizenzbetrag] speziell für das Add-on an, die tatsächliche Verwendung wird jedoch über das Basisprodukt verfolgt.
 
-Die Tabelle zeigt die primäre Metrik für jedes Produkt an, da jedes Produkt zahlreiche Metriken verfolgen kann.
+Die Tabellen zeigen die primäre Metrik für jedes Produkt an, da jedes Produkt zahlreiche Metriken verfolgen kann.
 
 ### Prognostizierte Nutzung {#predicted-usage}
 
@@ -111,8 +115,9 @@ Proaktive Verwaltung und Optimierung Ihrer Lizenzierungsressourcen auf der Grund
 >
 >Prognosen werden monatlich aktualisiert. Das Datum der Aktualisierung ist in einem Infosymbol (![Dieses Infosymbol) enthalten.](../images/license-usage/info-icon.png)) über dem Spaltentitel.
 
-Um eine Zusammenfassung der Nutzung einer Produktberechtigungen anzuzeigen, wählen Sie ein Produkt aus der Liste [!UICONTROL Überblick] aus.
+Um eine Zusammenfassung der Berechtigungsnutzung eines Produkts anzuzeigen, wählen Sie ein Produkt aus der Tabelle [!UICONTROL Kernprodukte] aus.
 
+<!-- update image ... -->
 ![Die [!UICONTROL Lizenznutzung] [!UICONTROL Überblick] mit einem Produkt und der Spalte mit der voraussichtlichen Verwendung sind hervorgehoben.](../images/license-usage/product-predicted-usage.png)
 
 Die Registerkarte Zusammenfassung wird angezeigt. Sie können die auf den Registerkarten [!UICONTROL Zusammenfassung] und [!UICONTROL Details] verfügbaren detaillierten Prognosen verwenden, um eine fundierte Entscheidungsfindung für eine effiziente Lizenzverwendung sicherzustellen.
@@ -121,6 +126,7 @@ Die Registerkarte Zusammenfassung wird angezeigt. Sie können die auf den Regist
 >
 >Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht.
 
+<!-- update image ... -->
 ![Die Zusammenfassungsansicht eines Platform-Produkts mit hervorgehobener Spalte zur prognostizierten Nutzung.](../images/license-usage/summary-predicted-usage.png)
 
 Der Prozentsatz der prognostizierten Nutzung wird wie folgt ermittelt:
@@ -163,7 +169,7 @@ Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselb
 >
 >1. Erstellen Sie ein Produktprofil in der Adobe Admin Console.
 >2. Fügen Sie unter Berechtigungen in der Kategorie Sandbox alle Sandboxes hinzu, die Sie im Dashboard zur Lizenznutzung anzeigen möchten.
->3. Fügen Sie unter der Kategorie Berechtigungen für Benutzer-Dashboard die Berechtigung &quot;Dashboard zur Nutzung der Lizenz anzeigen&quot;hinzu.
+>3. Fügen Sie unter der Kategorie Berechtigungen für das Benutzer-Dashboard die Berechtigung &quot;Dashboard zur Nutzung der Lizenz anzeigen&quot;hinzu.
 
 ## Registerkarte [!UICONTROL Details] {#details-tab}
 
@@ -229,7 +235,7 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
 
 | Lizenz | Produktbeschreibung |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
