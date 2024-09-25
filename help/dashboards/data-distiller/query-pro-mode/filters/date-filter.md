@@ -2,10 +2,10 @@
 title: Erstellen eines Datumsfilters
 description: Erfahren Sie, wie Sie Ihre benutzerdefinierten Einblicke nach Datum filtern können.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 77cedd351b5628d15c279fceabde735f4f93f392
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 0%
+source-wordcount: '922'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,60 @@ Wenn Sie mit Abfrageparametern nicht vertraut sind, finden Sie in der Dokumentat
 Um einen Datumsfilter anzuwenden, wählen Sie **[!UICONTROL Filter hinzufügen]** und dann **[!UICONTROL Datumsfilter]** aus dem Dropdown-Menü Ihrer Dashboard-Ansicht.
 
 ![Ein benutzerdefiniertes Dashboard mit Filter hinzufügen und seinem Dropdown-Menü hervorgehoben.](../../../images/query-pro-mode/add-filter.png)
+
+Ihnen werden die folgenden Datumsfilteroptionen angezeigt.
+
+| Filter | Beschreibung |
+| --- | --- |
+| Kein benutzerdefiniertes Datum | Wählen Sie ein oder mehrere benutzerdefinierte Daten aus mehreren voreingestellten Werten aus. |
+| Benutzerdefinierter Datumsbereich | Wählen Sie ein oder mehrere benutzerdefinierte Daten aus mehreren voreingestellten Werten aus oder geben Sie einen benutzerdefinierten Datumsbereich an. |
+| Benutzerdefiniertes Datum | Wählen Sie aus den vorherigen Werten aus oder geben Sie das Startdatum für Ihr Dashboard an. |
+
+![Das Dialogfeld &quot;Datumsfilter erstellen&quot;mit den drei benutzerdefinierten Datumsauswahloptionen wurde hervorgehoben.](../../../images/query-pro-mode/create-date-filter.png)
+
+### Erstellen Sie einen benutzerdefinierten Datumsfilter ohne
+
+Um einen vordefinierten Datumsfilter anzuwenden, wählen Sie &quot;**[!UICONTROL Kein benutzerdefiniertes Datum]**&quot;und wählen Sie dann die vordefinierten Datumsoptionen aus, die Sie einbeziehen möchten. Verwenden Sie abschließend das Dropdown-Menü, um den standardmäßigen Datumsbereich auszuwählen, und wählen Sie dann **[!UICONTROL Speichern]** aus.
+
+![Das Dialogfeld &quot;Datumsfilter erstellen&quot;ohne benutzerdefinierten Datumsfilter und hervorgehobenes Speichern.](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+Sie werden zum Dashboard zurückgeleitet, das den zuvor ausgewählten Standarddatumsbereich anzeigt. Wählen Sie im Dropdown-Menü einen anderen vordefinierten Datumsbereich aus.
+
+![Ein benutzerdefiniertes Dashboard, das den Standarddatumsbereich mit hervorgehobenem Dropdown-Menü anzeigt.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### Benutzerdefinierten Datumsbereichsfilter erstellen
+
+Um einen benutzerdefinierten Datumsbereichsfilter anzuwenden, wählen Sie **[!UICONTROL Benutzerdefinierter Datumsbereich]** und wählen Sie dann die vordefinierten Datumsoptionen aus, die Sie einbeziehen möchten. Wählen Sie abschließend **[!UICONTROL Benutzerdefiniert]** aus, um den standardmäßigen Datumsbereich festzulegen. Geben Sie im Kalender einen Datumsbereich an und wählen Sie dann **[!UICONTROL Speichern]** aus.
+
+>[!NOTE]
+>
+>Es ist nicht erforderlich, vordefinierte Datumsoptionen auszuwählen.
+
+![Das Dialogfeld &quot;Datumsfilter erstellen&quot;mit dem benutzerdefinierten Datumsbereichsfilter, benutzerdefiniert und hervorgehoben.](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+Sie werden zum Dashboard zurückgeleitet, das den zuvor von Ihnen angegebenen benutzerdefinierten Datenbereich anzeigt. Wählen Sie im Dropdown-Menü einen anderen vordefinierten Datumsbereich aus.
+
+![Ein benutzerdefiniertes Dashboard, das den Standarddatumsbereich mit hervorgehobenem benutzerdefiniertem Datum anzeigt.](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### Benutzerdefinierten Datumsfilter erstellen
+
+Um einen benutzerdefinierten Datumsfilter anzuwenden, wählen Sie **[!UICONTROL Benutzerdefiniertes Datum]** und wählen Sie die vordefinierten Datumsoptionen aus, die Sie einbeziehen möchten. Wählen Sie abschließend **[!UICONTROL Benutzerdefiniert]** aus und wählen Sie dann im Kalender ein Startdatum aus. Wählen Sie abschließend **[!UICONTROL Speichern]** aus.
+
+>[!NOTE]
+>
+>Es ist nicht erforderlich, vordefinierte Datumsoptionen auszuwählen.
+
+![Das Dialogfeld zum Erstellen eines Datumsfilters mit dem benutzerdefinierten Datumsfilter, benutzerdefiniert und hervorgehoben.](../../../images/query-pro-mode/custom-date-filter.png)
+
+Sie werden zum Dashboard zurückgeleitet, das die zuvor von Ihnen angegebenen benutzerdefinierten Daten anzeigt. Wählen Sie im Dropdown-Menü ein anderes Datum aus.
+
+![Ein benutzerdefiniertes Dashboard, das den Standarddatumsbereich mit hervorgehobenem benutzerdefiniertem Datum anzeigt.](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## Datumsfilter löschen {#delete-date-filter}
+
+Um den Datumsfilter zu entfernen, wählen Sie das Symbol Filter löschen (![Symbol Filter löschen.](/help/images/icons/filter-delete.png)).
+
+![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Symbol zum Löschen des Filters.](../../../images/query-pro-mode/delete-date-filter.png)
 
 ## SQL bearbeiten, um Datumsabfrageparameter einzuschließen {#include-date-parameters}
 
@@ -75,25 +129,3 @@ Wählen Sie anschließend die entsprechenden Abfrageparameter aus den Dropdown-M
 ![Der Widget Composer mit dem Dropdown-Menü Start_Datum ist hervorgehoben.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Wählen Sie abschließend **[!UICONTROL Speichern und schließen]** aus, um zu Ihrem Dashboard zurückzukehren. Datumsfilter sind nun für alle Einblicke mit Start- und Enddatumsparametern aktiviert.
-
-## Datumsfilter verwenden
-
-Um einen benutzerdefinierten Datumsfilter zu verwenden, wählen Sie das Kalendersymbol aus und wählen Sie einen Start und ein Ende in der Kalenderansicht aus.
-
->[!IMPORTANT]
->
->Wenn Sie einfach einen Datumsfilter hinzufügen, ändert sich die Grafik nicht. Sie müssen jede Ihrer Einblicke bearbeiten, um Ihr ausgewähltes Start- und Enddatum einzubeziehen.
-
-![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Datumsfilterkalender.](../../../images/query-pro-mode/date-filter.png)
-
-Nachdem Sie einen Datumsbereich aus Ihrem Dashboard ausgewählt haben, sehen Einblicke mit Datumsparametern in ihrer SQL die Datumsfilteroptionen im Widget Composer.
-
->[!NOTE]
->
->Wenn Sie einen Datumsbereich in Ihrem Dashboard auswählen, werden die Umschalter für Datumsfilter im Rahmen des Arbeitsablaufs zur Insight-Erstellung angezeigt.
-
-## Datumsfilter löschen {#delete-date-filter}
-
-Um den Datumsfilter zu entfernen, wählen Sie das Symbol Filter löschen (![Symbol Filter löschen.](/help/images/icons/filter-delete.png)).
-
-![Ein benutzerdefiniertes Dashboard mit hervorgehobenem Symbol zum Löschen des Filters.](../../../images/query-pro-mode/delete-date-filter.png)

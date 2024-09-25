@@ -2,7 +2,7 @@
 title: Erstellen eines globalen Filters
 description: Erfahren Sie, wie Sie Ihre Dateneinblicke mit einem benutzerdefinierten, global angewendeten Filter filtern können.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5dd821383e1b1a7bd4998a6cf14a941bfdf3f26c
+source-git-commit: 581eb2a33f9bdfddc89c9d8dbf9fca8eb3725b1d
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 1%
@@ -66,4 +66,3 @@ Um das Dialogfeld [!UICONTROL Filter] zu öffnen, in dem alle Ihre benutzerdefin
 Um alle Ihre benutzerdefinierten globalen Filter zu löschen, wählen Sie **[!UICONTROL Alle löschen]** aus dem Dialogfeld [!UICONTROL Filter] aus.
 
 ![Das Dialogfeld &quot;Filter&quot;mit &quot;Alle löschen&quot;wurde hervorgehoben.](../../../images/query-pro-mode/clear-all.png)
-
