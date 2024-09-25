@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: a7796a93d588b4e41c668f1a0f60bffbcb291550
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 83%
+source-wordcount: '325'
+ht-degree: 84%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 83%
       - [Technische Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Daten in ML-Umgebungen exportieren](data-distiller/ml-feature-pipelines/export-data.md)
       - [End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- [Distiller-Hyperwürfel](hypercubes.md)
 - Beispiele {#use-cases}
    - [Übersicht](use-cases/overview.md)
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
@@ -48,7 +49,7 @@ ht-degree: 83%
    - [Einverständnisanalyse](use-cases/consent-analysis.md)
    - [Kundenlebenszeitwert](use-cases/customer-lifetime-value.md)
    - [Datenforschung](./use-cases/data-exploration.md)
-   - [Entscheidungsbasierte abgeleitete Datensätze](use-cases/deciles-use-case.md)
+   - [Dezilbasierte abgeleitete Datensätze](use-cases/deciles-use-case.md)
    - [Ungefähre Übereinstimmung](use-cases/fuzzy-match.md)
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
    - [Besuchende nach Seitenansichten auflisten](use-cases/visitors-by-number-of-page-views.md)

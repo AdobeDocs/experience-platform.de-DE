@@ -2,10 +2,10 @@
 title: Datensatzbeispiele
 description: Mit den Beispieldatensätzen des Abfrage-Service können Sie explorative Abfragen zu Big Data durchführen. Dies verkürzt die Verarbeitungszeit, verringert jedoch die Abfragegenauigkeit. In diesem Handbuch erfahren Sie, wie Sie Ihre Beispiele für die annähernde Abfrageverarbeitung verwalten können
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 100%
+source-wordcount: '632'
+ht-degree: 96%
 
 ---
 
@@ -17,12 +17,13 @@ Da viele Benutzende keine genaue Antwort für einen Aggregatvorgang für einen D
 
 Um Ihnen bei der Verwaltung Ihrer Beispiele für die annähernde Abfrageverarbeitung zu helfen, unterstützt der Abfrage-Service die folgenden Vorgänge für Datensatzbeispiele:
 
-- [Erstellen einer einheitlichen Stichprobe für zufällige Datensätze.](#create-a-sample)
-- [Optionale Filterkriterien angeben.](##optional-filter-criteria)
-- [Anzeigen der Beispielliste für eine ADLS-Tabelle.](#view-list-of-samples)
-- [Direktes Abfragen der Beispieldatensätze.](#query-sample-datasets)
-- [Löschen eines Beispiels.](#delete-a-sample)
-- Löschen der zugehörigen Beispiele, wenn die ursprüngliche ADLS-Tabelle abgelegt wird.
+- [Datensatzbeispiele](#dataset-samples)
+   - [Erste Schritte {#get-started}](#getting-started-get-started)
+   - [Erstellen einer einheitlichen Stichprobe für einen beliebigen Datensatz {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Optional ein Filterkriterium {#optional-filter-criteria} angeben](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Liste der Beispiele anzeigen {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [Beispieldatensatz {#query-sample-datasets} abfragen](#query-the-sample-dataset-query-sample-datasets)
+   - [Beispiele für Datensätze löschen {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## Erste Schritte {#get-started}
 
@@ -32,7 +33,7 @@ Um die in diesem Dokument beschriebenen Funktionen zum Erstellen und Löschen vo
 >
 >Sie müssen das Sitzungs-Flag jedes Mal aktivieren, wenn Sie sich bei Platform anmelden.
 
-![Der Abfrage-Editor mit dem hervorgehobenen Befehl &quot;SET aqp=true;&quot;.](../images/essential-concepts/set-session-flag.png)
+![Der Abfrage-Editor mit dem hervorgehobenen Befehl &quot;SET aqp=true;&quot;.](../images/key-concepts/set-session-flag.png)
 
 ## Erstellen einer einheitlichen Stichprobe zufälliger Datensätze {#create-a-sample}
 
