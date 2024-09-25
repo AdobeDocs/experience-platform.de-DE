@@ -2,9 +2,9 @@
 title: Übersicht über den Query Pro-Modus
 description: Erfahren Sie, wie Sie mit SQL-Abfragen in der Adobe Experience Platform-Benutzeroberfläche Diagramme für Ihre benutzerdefinierten Dashboards erstellen können.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ In diesem Ringdiagramm-Beispiel sind die Optionen Größe und Farbe. Farbe unter
 Um den Diagrammtyp oder das Diagramm Ihres Widgets zu ändern, wählen Sie aus den verfügbaren Optionen der Dropdown-Liste [!UICONTROL Markierungen] aus. Zu den Optionen gehören [!UICONTROL Linie], [!UICONTROL Donut], [!UICONTROL Big number] und [!UICONTROL Balken]. Nach der Auswahl wird eine Vorschau-Visualisierung der aktuellen Einstellungen Ihres Widgets generiert.
 
 ![Der Widget Composer mit hervorgehobener Widget-Vorschau.](../../images/sql-insights/widget-preview.png)
+
+## Erweiterte Tabellenattribute {#advanced-attributes}
+
+Um eine automatische Sortierungsfunktion für alle oder alle Spalten in Ihren Tabellen anzuwenden, wählen Sie **[!UICONTROL Bearbeiten]** aus, um das gesamte Dashboard zu bearbeiten.
+
+![Ein benutzerdefiniertes Dashboard mit hervorgehobener Bearbeitung.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+Wählen Sie die Auslassungszeichen (`...`) im Tabellendiagramm aus, dem Sie eine Spaltensortierung hinzufügen möchten, und wählen Sie dann **[!UICONTROL Bearbeiten]** aus.
+
+![Eine Tabelle, die das Ellipsenmenü mit hervorgehobener Option &quot;Bearbeiten&quot;anzeigt.](../../images/query-pro-mode/advanced-table-edit.png)
+
+Um die Sortierung für eine Spalte zu aktivieren, aktivieren Sie die Kontrollkästchen **[!UICONTROL Sortable]** .
+
+![Seite zur Tabellenbearbeitung mit markierten sortierbaren Kontrollkästchen.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+Wählen Sie das Eigenschaftensymbol (![Das Eigenschaftensymbol) aus.](/help/images/icons/properties.png)) in der rechten Leiste, um den Bereich [!UICONTROL Eigenschaften] zu öffnen. Wählen Sie im Bereich **[!UICONTROL Eigenschaften]** die Spalte **[!UICONTROL Standardsortierung]** aus der Dropdown-Liste aus und wählen Sie dann mithilfe der Dropdown-Liste die Sortierrichtung **[!UICONTROL 5} aus.]** Wählen Sie abschließend **[!UICONTROL Speichern und schließen]**.
+
+![Der Widget Composer mit dem Eigenschaftensymbol, der Standardsortierung, der Sortierrichtung sowie dem hervorgehobenen Speichern und Schließen.](../../images/query-pro-mode/advanced-table-properties.png)
+
+Weitere Informationen zur Verwendung der Sortierungs-, Größenänderungs- und Paginierungsfunktionen finden Sie unter [Mehr anzeigen](./view-more.md).
 
 ## Widget-Eigenschaften {#properties}
 
