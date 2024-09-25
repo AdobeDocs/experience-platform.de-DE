@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung
 description: Mit der Streaming-Segmentierung in Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf die Relevanz der Daten konzentrieren. Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, während Daten an Platform übermittelt werden. Das bedeutet, dass die Segmentzugehörigkeit auch ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '1537'
-ht-degree: 89%
+source-wordcount: '1443'
+ht-degree: 86%
 
 ---
 
@@ -32,15 +32,13 @@ Mit der Streaming-Segmentierung in [!DNL Adobe Experience Platform] können Kund
 
 Eine Abfrage wird automatisch mithilfe der Streaming-Segmentierung ausgewertet, wenn sie eines der folgenden Kriterien erfüllt:
 
-| Abfragetyp | Details | Beispiel |
-| ---------- | ------- | ------- |
-| Einzelnes Ereignis | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | ![Ein Beispiel für ein einzelnes Ereignis wird angezeigt.](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Einzelnes Ereignis innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. | ![Ein Beispiel für ein einzelnes Ereignis innerhalb eines relativen Zeitfensters wird angezeigt.](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Einzelnes Ereignis mit einem Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Zeitfenster wird angezeigt.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. | |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. | ![Ein Beispiel für ein einzelnes Ereignis mit einem Profilattribut in einem relativen Zeitfenster wird angezeigt.](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. | ![Ein Beispiel für ein Segment von Segmenten wird angezeigt.](../images/ui/streaming-segmentation/two-batches.png) |
-| Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. | ![Ein Beispiel für mehrere Ereignisse mit einem Profilattribut wird angezeigt.](../images/ui/streaming-segmentation/event-history-success.png) |
+| Abfragetyp | Details |
+| ---------- | ------- |
+| Einzelereignis innerhalb eines Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb eines Zeitfensters von weniger als 24 Stunden verweist. |
+| Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. |
+| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. |
+| Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. |
 
 Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
 

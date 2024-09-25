@@ -4,10 +4,10 @@ title: Auswerten von Ereignissen mit Streaming-Segmentierung nahezu in Echtzeit
 description: Dieses Dokument enthält Beispiele für die Verwendung der Streaming-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '2050'
-ht-degree: 67%
+source-wordcount: '2027'
+ht-degree: 65%
 
 ---
 
@@ -73,9 +73,7 @@ Damit eine Segmentdefinition mithilfe der Streaming-Segmentierung bewertet werde
 
 | Abfragetyp | Details |
 | ---------- | ------- |
-| Einzelnes Ereignis | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
-| Einzelnes Ereignis innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. |
-| Einzelnes Ereignis mit einem Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. |
+| Einzelereignis innerhalb eines Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb eines Zeitfensters von weniger als 24 Stunden verweist. |
 | Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. |
 | Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. |
 | Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. |
