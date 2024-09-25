@@ -4,10 +4,10 @@ title: Zusammenführungsrichtlinien – Übersicht
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Datenfragmente aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 80%
+source-wordcount: '1285'
+ht-degree: 77%
 
 ---
 
@@ -71,11 +71,11 @@ Eine Organisation kann eine standardmäßige Zusammenführungsrichtlinie für ih
 
 Jede Organisation kann mehrere Zusammenführungsrichtlinien erstellen, die sich auf eine einzelne XDM-Schemaklasse beziehen, jedoch kann für jede Klasse nur eine standardmäßige Zusammenführungsrichtlinie deklariert werden. Ihre Organisation könnte beispielsweise über eine standardmäßige Zusammenführungsrichtlinie für die [!DNL XDM Individual Profile]-Klasse und eine andere standardmäßige Zusammenführungsrichtlinie für eine benutzerdefinierte Produktinventarklasse verfügen.
 
-Wenn Sie eine neue Zusammenführungsrichtlinie erstellen und sie als Standard festlegen, wird die vorherige standardmäßige Zusammenführungsrichtlinie automatisch vom System aktualisiert, sodass sie nicht mehr der Standard ist.
+Wenn Sie eine neue Zusammenführungsrichtlinie erstellen und sie als Standard festlegen, wird die vorherige standardmäßige Zusammenführungsrichtlinie automatisch vom System aktualisiert, sodass sie nicht mehr der Standard ist. Jede Zielgruppe, die nach diesem Zeitpunkt erstellt wurde, verwendet diese neue standardmäßige Zusammenführungsrichtlinie.
 
 >[!WARNING]
 >
->Profilzählungen und Zielgruppen mit einer vorhandenen, zugehörigen standardmäßigen Zusammenführungsrichtlinie können betroffen sein. Alle Zielgruppen, für die eine standardmäßige Zusammenführungsrichtlinie angewendet wurde, werden auf die neue standardmäßige Zusammenführungsrichtlinie aktualisiert.
+>Profilzählungen und Zielgruppen mit einer vorhandenen, zugehörigen standardmäßigen Zusammenführungsrichtlinie können betroffen sein. Darüber hinaus werden die Zielgruppen **nicht** automatisch aktualisiert, um die neue standardmäßige Zusammenführungsrichtlinie zu verwenden, und verwenden weiterhin die vorherige Zusammenführungsrichtlinie.
 
 ## Nächste Schritte
 
