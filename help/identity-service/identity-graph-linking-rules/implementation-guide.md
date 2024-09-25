@@ -3,9 +3,9 @@ title: Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
+source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1526'
 ht-degree: 3%
 
 ---
@@ -164,6 +164,10 @@ Sobald Sie alle oben aufgelisteten Elemente haben, können Sie mit der Erfassung
 >Nach der Erfassung Ihrer Daten ändert sich die XDM-Rohdaten-Payload nicht mehr. Möglicherweise werden Ihre primären Identitätskonfigurationen weiterhin in der Benutzeroberfläche angezeigt. Diese Konfigurationen werden jedoch durch Identitätseinstellungen überschrieben.
 
 Verwenden Sie für jedes Feedback die Option **[!UICONTROL Beta feedback]** im UI-Arbeitsbereich des Identity Service.
+
+## Überprüfen Ihrer Diagramme {#validate}
+
+Verwenden Sie das Identitäts-Dashboard, um Einblicke in den Zustand Ihrer Identitätsdiagramme zu erhalten, z. B. Ihre gesamten Trends bei Identitätszählung und Diagrammanzahl, Identitätszählung nach Namespace und Diagrammanzahl nach Diagrammgröße. Sie können das Identitäts-Dashboard auch verwenden, um Trends in Diagrammen mit zwei oder mehr Identitäten anzuzeigen, die nach Namespace organisiert sind.
 
 ## Anhang {#appendix}
 

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, September 2024
 description: Versionshinweise September 2024 zu Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
+source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 28%
+source-wordcount: '1975'
+ht-degree: 26%
 
 ---
 
@@ -112,6 +112,12 @@ Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../../xdm/
 
 Verwenden Sie den Adobe Experience Platform Identity Service, um sich einen besseren Überblick über Ihre Kundinnen und Kunden und deren Verhaltensweisen zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen.
 
+**Aktualisierte Funktion**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Eingeschränkte Verfügbarkeit von Verknüpfungsregeln für Identitätsdiagramme | Die Regeln zur Verknüpfung von Identitätsdiagrammen sind eine Suite von Tools im Identity Service, die Sie verwenden können, um eine genaue Personalisierung für Ihre Benutzer sicherzustellen. <ul><li>Sie können jetzt den [Identitätsoptimierungsalgorithmus](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md) verwenden, um sicherzustellen, dass ein Identitätsdiagramm für eine einzelne Person repräsentativ ist, und somit die unerwünschte Zusammenführung von Identitäten mit dem Echtzeit-Kundenprofil verhindert.</li><li>Konfigurieren Sie [Namespace-Prioritäten](../../identity-service/identity-graph-linking-rules/namespace-priority.md) , um die Wichtigkeit Ihrer jeweiligen Namespaces zu definieren und zu beeinflussen, wie Ihre Profile gebildet und segmentiert werden.</li><li>Verwenden Sie das [Graph-Simulationstool in der Benutzeroberfläche](../../identity-service/identity-graph-linking-rules/graph-simulation.md), um Identitätsdiagramme mit unterschiedlichen Konfigurationen zu simulieren.</li><li>Verwenden Sie die [Benutzeroberfläche für Identitätseinstellungen](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md), um Ihren eindeutigen Namespace zu bestimmen und Prioritäten für alle Namespaces in Ihrer Organisation festzulegen.</li><li>Metriken und Trends zu Ihren Diagrammdaten finden Sie im [Identitäts-Dashboard](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) .</li></ul> Wenden Sie sich an Ihr Adobe-Account-Team, um Zugriff auf Entwicklungs-Sandboxes zu erhalten, um die Verknüpfungsregeln für Identitätsdiagramme auszuprobieren. |
+
 **Aktualisierte Dokumentation**
 
 | Funktion | Beschreibung |
@@ -131,7 +137,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Data Distiller Audiences | Einfaches Erstellen, Verwalten und Aktivieren von Zielgruppen mit der SQL-Zielgruppenerweiterung in Experience Platform Data Distiller. Definieren Sie Zielgruppensegmente mit SQL-Befehlen direkt aus Ihrem Data Lake, ohne dass Rohdaten in Profilen benötigt werden. Verfeinern Sie Zielgruppenstrategien und synchronisieren Sie Zielgruppen automatisch mit dateibasierten Zielen mit diesem flexiblen, datengesteuerten Ansatz. Optimierung von Workflows, Optimierung des Zielgruppen-Managements und Erschließung des vollen Potenzials von Daten. Lesen Sie das [Handbuch zur Verwendung der SQL-Zielgruppenerweiterung](../../query-service/home.md), um Ihre Zielgruppenstrategien zu verbessern. |
+| Data Distiller Audiences | Einfaches Erstellen, Verwalten und Aktivieren von Zielgruppen mit der SQL-Zielgruppenerweiterung in Experience Platform Data Distiller. Definieren Sie Zielgruppensegmente mit SQL-Befehlen direkt aus Ihrem Data Lake, ohne dass Rohdaten in Profilen benötigt werden. Verfeinern Sie Zielgruppenstrategien und synchronisieren Sie Zielgruppen automatisch mit dateibasierten Zielen mit diesem flexiblen, datengesteuerten Ansatz. Optimierung von Workflows, Optimierung des Zielgruppen-Managements und Erschließung des vollen Potenzials von Daten. Lesen Sie das [Handbuch zur Verwendung der SQL-Zielgruppenerweiterung](../../query-service/data-distiller-audiences/overview.md), um Ihre Zielgruppenstrategien zu verbessern. |
 | Data Distiller Statistics - Hyperwürfel | Optimieren Sie die Big-Data-Analyse mit Hyperwürfeln. Komplexe Berechnungen - wie eindeutige Zählungen und mehrdimensionale Analysen - ohne die historischen Daten erneut zu verarbeiten. Inkrementelle Aktualisierung von Daten, Optimierung von Workflows und Verkürzung der Verarbeitungszeit unter Beibehaltung von Genauigkeit und Effizienz. Erhalten Sie schnellere, skalierbare und kostengünstige Einblicke, die die Entscheidungsfindung verändern. Lesen Sie das [Handbuch zur Verwendung von Hyperwürfen](../../query-service/hypercubes.md) , um die erweiterte Analyse zu entsperren. |
 | Objekt-Browser des Abfrage-Editors | Verbessern der Abfrageleistung mit dem neuen Objektbrowser im Abfrage-Editor. Schnelles Suchen, Filtern und Aufrufen von Datensätzen, um Abfragen schneller zu schreiben und zu verfeinern. Mit Echtzeit-Schemaaktualisierungen und Instant-Tabellen-Metadaten können Sie Workflows optimieren, die Navigationszeit verkürzen und Ihr Abfrageerlebnis verbessern. Erschließen Sie das Potenzial Ihrer Daten und optimieren Sie die Analyse. Weitere Informationen finden Sie im [Handbuch zur Verwendung des Objektbrowsers](../../query-service/ui/user-guide.md#object-browser) . |
 | Berechnungsstunden | Gewinnen Sie Kontrolle über die Ressourcennutzung mit der neu sichtbaren Metrik &quot;Compute Hours&quot;für geplante Abfragen. Zeigen Sie die Ausführungszeiten der Abfrage an, um die Ressourcenverwendung für CTAS/ITAS-Batch-Abfragen zu überwachen und zu optimieren. Verfolgen Sie Startzeiten, Abschlussstatus und die Berechnungszeit für jeden Abfrageablauf. Optimieren Sie die Leistung und reduzieren Sie die Kosten mühelos. Informationen zur Maximierung Ihrer Abfrageeffizienz finden Sie im [Handbuch zu Compute Hours](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) . |

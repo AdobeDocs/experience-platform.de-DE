@@ -3,9 +3,9 @@ title: Verschlüsselte Daten in der Quellenbenutzeroberfläche von Workspace erf
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quellenbenutzeroberfläche erfassen.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
+source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1464'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ Bevor Sie mit diesem Tutorial fortfahren, lesen Sie bitte die folgenden Dokument
 * Erstellen Sie ein Verschlüsselungsschlüsselpaar mithilfe des Arbeitsbereichs &quot;Quellen&quot;in der Experience Platform-Benutzeroberfläche.
    * Optional können Sie auch Ihr eigenes Schlüsselpaar für die Signierüberprüfung erstellen, um eine zusätzliche Sicherheitsschicht für Ihre verschlüsselten Daten bereitzustellen.
 * Verwenden Sie den öffentlichen Schlüssel aus Ihrem Verschlüsselungsschlüsselpaar, um Ihre Daten zu verschlüsseln.
-* Platzieren Sie Ihre verschlüsselten Daten in Ihrem Cloud-Speicher-Provider. In diesem Schritt müssen Sie außerdem sicherstellen, dass Sie über eine Beispieldatei verfügen, die als Referenz für die Zuordnung Ihrer Quelldaten zu einem Experience-Datenmodell (XDM)-Schema verwendet werden kann.
+* Platzieren Sie Ihre verschlüsselten Daten in Ihrem Cloud-Speicher. In diesem Schritt müssen Sie außerdem sicherstellen, dass Sie über eine Beispieldatei Ihrer Daten in Ihrem Cloud-Speicher verfügen, die als Referenz für die Zuordnung Ihrer Quelldaten zu einem Experience-Datenmodell (XDM)-Schema verwendet werden kann.
 * Verwenden Sie Ihre Batch-Quelle für den Cloud-Speicher und starten Sie den Datenerfassungsprozess im Arbeitsbereich &quot;Quellen&quot;der Experience Platform-Benutzeroberfläche.
 * Geben Sie bei der Erstellung der Quellverbindung die Schlüssel-ID an, die dem öffentlichen Schlüssel entspricht, den Sie zum Verschlüsseln Ihrer Daten verwendet haben.
    * Wenn Sie auch den Schlüssel-Paar-Mechanismus für die Signierüberprüfung verwendet haben, müssen Sie auch die Schlüssel-ID für die Signierüberprüfung angeben, die Ihren verschlüsselten Daten entspricht.
