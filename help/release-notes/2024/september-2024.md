@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform – Versionshinweise, September 2024
 description: Versionshinweise September 2024 zu Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
 workflow-type: tm+mt
 source-wordcount: '1823'
