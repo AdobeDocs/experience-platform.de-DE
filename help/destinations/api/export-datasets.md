@@ -4,10 +4,10 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze für ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
 workflow-type: tm+mt
-source-wordcount: '3524'
-ht-degree: 16%
+source-wordcount: '5107'
+ht-degree: 11%
 
 ---
 
@@ -16,6 +16,19 @@ ht-degree: 16%
 >[!AVAILABILITY]
 >
 >* Diese Funktion steht Kunden zur Verfügung, die das Real-Time CDP Prime- und Ultimate-Package, Adobe Journey Optimizer oder Customer Journey Analytics erworben haben. Wenden Sie sich für weitere Informationen an Ihren Adobe-Support-Mitarbeiter.
+
+>[!IMPORTANT]
+>
+>**Aktionselement**: In der Experience Platform](/help/release-notes/latest/latest.md#destinations) -Version vom [September 2024 ist die Option zum Festlegen eines `endTime` -Datums für den Export von Datensatz-Datenflüssen eingeführt. Adobe führt außerdem ein standardmäßiges Enddatum vom 1. Mai 2025 für alle Datenfluss-Datenflüsse ein, die vor der September-Version ** erstellt wurden. Für jeden dieser Datenflüsse müssen Sie das Enddatum im Datenfluss manuell vor dem Enddatum aktualisieren. Andernfalls werden Ihre Exporte für dieses Datum beendet. Verwenden Sie die Experience Platform-Benutzeroberfläche, um anzuzeigen, welche Datenflüsse am 1. Mai angehalten werden sollen.
+>
+>Gleichermaßen gilt für alle Datenflüsse, die Sie erstellen, ohne ein `endTime` -Datum anzugeben, dass sie standardmäßig sechs Monate nach ihrer Erstellung auf eine Endzeit festgelegt werden.
+
+<!--
+
+>You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>
+
+-->
 
 In diesem Artikel wird der Workflow erläutert, der erforderlich ist, um [!DNL Flow Service API] zum Exportieren von [Datensätzen](/help/catalog/datasets/overview.md) aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher zu verwenden, z. B. [!DNL Amazon S3], SFTP-Speicherorte oder [!DNL Google Cloud Storage].
 
@@ -49,7 +62,7 @@ Derzeit können Sie Datensätze zu den im Screenshot hervorgehobenen und unten a
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Alle Daten, die erfolgreich in Adobe Experience Platform aufgenommen wurden, bleiben im [!DNL Data Lake] als Datensätze erhalten. Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Datensätze enthalten auch Metadaten, die verschiedene Aspekte der in ihnen gespeicherten Daten beschreiben.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
+   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse besser entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Datensätze in Cloud-Speicher-Ziele in Platform zu exportieren.
 
@@ -1955,13 +1968,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
         "interval": 3, // also supports 6, 9, 12 hour increments
-        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
-        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+Die nachstehende Tabelle enthält Beschreibungen aller Parameter im Abschnitt `scheduleParams` , mit denen Sie Exportzeiten, Häufigkeit, Ort und mehr für Ihre Datensatzexporte anpassen können.
+
+| Parameter | Beschreibung |
+|---------|----------|
+| `exportMode` | Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung der Batch-Ziele. Die drei verfügbaren Exportoptionen sind: <br> **Vollständige Datei - Einmal**: `"DAILY_FULL_EXPORT"` kann nur in Kombination mit `timeUnit`:`day` und `interval`:`0` für einen einmaligen vollständigen Export des Datensatzes verwendet werden. Der tägliche vollständige Export von Datensätzen wird nicht unterstützt. Wenn Sie tägliche Exporte benötigen, verwenden Sie die Option Inkrementeller Export . <br> **Inkrementelle tägliche Exporte**: Wählen Sie `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` und `interval`:`1` für tägliche inkrementelle Exporte. <br> **Inkrementelle stündliche Exporte**: Wählen Sie für stündliche inkrementelle Exporte `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` und `interval` :`3`, `6`, `9` oder `12` aus. |
+| `timeUnit` | Wählen Sie je nach der Häufigkeit, mit der Sie Datensatzdateien exportieren möchten, `day` oder `hour` aus. |
+| `interval` | Wählen Sie &quot;`1`&quot;, wenn der `timeUnit` Tag ist, und &quot;`3`&quot;, &quot;`6`&quot;, &quot;`9`&quot;, &quot;`12`&quot;, wenn die Zeiteinheit `hour` ist. |
+| `startTime` | Datum und Uhrzeit in UNIX-Sekunden, zu der die Datensatzexporte beginnen sollen. |
+| `endTime` | Datum und Uhrzeit in UNIX Sekunden, zu der die Datensatzexporte enden sollen. |
+| `foldernameTemplate` | Geben Sie die erwartete Ordnernamenstruktur in Ihrem Speicherort an, an dem die exportierten Dateien abgelegt werden sollen. <ul><li><code>DATASET_ID</code> = <span>Eine eindeutige Kennung für den Datensatz.</span></li><li><code>ZIELORT</code> = <span>Der Name des Ziels.</span></li><li><code>DATETIME</code> = <span>Datum und Uhrzeit, formatiert als yyyyMM_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Die geplante Zeit für den Datenexport, formatiert als `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Der Name der spezifischen Instanz des Ziels.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Eine eindeutige Kennung für die Zielinstanz.</span></li><li><code>SANDBOX_NAME</code> = <span>Der Name der Sandbox-Umgebung.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Der Name der Organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **Antwort**
@@ -2008,12 +2037,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Die nachstehende Tabelle enthält Beschreibungen aller Parameter im Abschnitt `scheduleParams` , mit denen Sie Exportzeiten, Häufigkeit, Ort und mehr für Ihre Datensatzexporte anpassen können.
+
+| Parameter | Beschreibung |
+|---------|----------|
+| `exportMode` | Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung der Batch-Ziele. Die drei verfügbaren Exportoptionen sind: <br> **Vollständige Datei - Einmal**: `"DAILY_FULL_EXPORT"` kann nur in Kombination mit `timeUnit`:`day` und `interval`:`0` für einen einmaligen vollständigen Export des Datensatzes verwendet werden. Der tägliche vollständige Export von Datensätzen wird nicht unterstützt. Wenn Sie tägliche Exporte benötigen, verwenden Sie die Option Inkrementeller Export . <br> **Inkrementelle tägliche Exporte**: Wählen Sie `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` und `interval`:`1` für tägliche inkrementelle Exporte. <br> **Inkrementelle stündliche Exporte**: Wählen Sie für stündliche inkrementelle Exporte `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` und `interval` :`3`, `6`, `9` oder `12` aus. |
+| `timeUnit` | Wählen Sie je nach der Häufigkeit, mit der Sie Datensatzdateien exportieren möchten, `day` oder `hour` aus. |
+| `interval` | Wählen Sie &quot;`1`&quot;, wenn der `timeUnit` Tag ist, und &quot;`3`&quot;, &quot;`6`&quot;, &quot;`9`&quot;, &quot;`12`&quot;, wenn die Zeiteinheit `hour` ist. |
+| `startTime` | Datum und Uhrzeit in UNIX-Sekunden, zu der die Datensatzexporte beginnen sollen. |
+| `endTime` | Datum und Uhrzeit in UNIX Sekunden, zu der die Datensatzexporte enden sollen. |
+| `foldernameTemplate` | Geben Sie die erwartete Ordnernamenstruktur in Ihrem Speicherort an, an dem die exportierten Dateien abgelegt werden sollen. <ul><li><code>DATASET_ID</code> = <span>Eine eindeutige Kennung für den Datensatz.</span></li><li><code>ZIELORT</code> = <span>Der Name des Ziels.</span></li><li><code>DATETIME</code> = <span>Datum und Uhrzeit, formatiert als yyyyMM_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Die geplante Zeit für den Datenexport, formatiert als `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Der Name der spezifischen Instanz des Ziels.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Eine eindeutige Kennung für die Zielinstanz.</span></li><li><code>SANDBOX_NAME</code> = <span>Der Name der Sandbox-Umgebung.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Der Name der Organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2061,12 +2107,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Die nachstehende Tabelle enthält Beschreibungen aller Parameter im Abschnitt `scheduleParams` , mit denen Sie Exportzeiten, Häufigkeit, Ort und mehr für Ihre Datensatzexporte anpassen können.
+
+| Parameter | Beschreibung |
+|---------|----------|
+| `exportMode` | Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung der Batch-Ziele. Die drei verfügbaren Exportoptionen sind: <br> **Vollständige Datei - Einmal**: `"DAILY_FULL_EXPORT"` kann nur in Kombination mit `timeUnit`:`day` und `interval`:`0` für einen einmaligen vollständigen Export des Datensatzes verwendet werden. Der tägliche vollständige Export von Datensätzen wird nicht unterstützt. Wenn Sie tägliche Exporte benötigen, verwenden Sie die Option Inkrementeller Export . <br> **Inkrementelle tägliche Exporte**: Wählen Sie `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` und `interval`:`1` für tägliche inkrementelle Exporte. <br> **Inkrementelle stündliche Exporte**: Wählen Sie für stündliche inkrementelle Exporte `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` und `interval` :`3`, `6`, `9` oder `12` aus. |
+| `timeUnit` | Wählen Sie je nach der Häufigkeit, mit der Sie Datensatzdateien exportieren möchten, `day` oder `hour` aus. |
+| `interval` | Wählen Sie &quot;`1`&quot;, wenn der `timeUnit` Tag ist, und &quot;`3`&quot;, &quot;`6`&quot;, &quot;`9`&quot;, &quot;`12`&quot;, wenn die Zeiteinheit `hour` ist. |
+| `startTime` | Datum und Uhrzeit in UNIX-Sekunden, zu der die Datensatzexporte beginnen sollen. |
+| `endTime` | Datum und Uhrzeit in UNIX Sekunden, zu der die Datensatzexporte enden sollen. |
+| `foldernameTemplate` | Geben Sie die erwartete Ordnernamenstruktur in Ihrem Speicherort an, an dem die exportierten Dateien abgelegt werden sollen. <ul><li><code>DATASET_ID</code> = <span>Eine eindeutige Kennung für den Datensatz.</span></li><li><code>ZIELORT</code> = <span>Der Name des Ziels.</span></li><li><code>DATETIME</code> = <span>Datum und Uhrzeit, formatiert als yyyyMM_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Die geplante Zeit für den Datenexport, formatiert als `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Der Name der spezifischen Instanz des Ziels.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Eine eindeutige Kennung für die Zielinstanz.</span></li><li><code>SANDBOX_NAME</code> = <span>Der Name der Sandbox-Umgebung.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Der Name der Organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2114,13 +2177,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+Die nachstehende Tabelle enthält Beschreibungen aller Parameter im Abschnitt `scheduleParams` , mit denen Sie Exportzeiten, Häufigkeit, Ort und mehr für Ihre Datensatzexporte anpassen können.
+
+| Parameter | Beschreibung |
+|---------|----------|
+| `exportMode` | Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung der Batch-Ziele. Die drei verfügbaren Exportoptionen sind: <br> **Vollständige Datei - Einmal**: `"DAILY_FULL_EXPORT"` kann nur in Kombination mit `timeUnit`:`day` und `interval`:`0` für einen einmaligen vollständigen Export des Datensatzes verwendet werden. Der tägliche vollständige Export von Datensätzen wird nicht unterstützt. Wenn Sie tägliche Exporte benötigen, verwenden Sie die Option Inkrementeller Export . <br> **Inkrementelle tägliche Exporte**: Wählen Sie `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` und `interval`:`1` für tägliche inkrementelle Exporte. <br> **Inkrementelle stündliche Exporte**: Wählen Sie für stündliche inkrementelle Exporte `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` und `interval` :`3`, `6`, `9` oder `12` aus. |
+| `timeUnit` | Wählen Sie je nach der Häufigkeit, mit der Sie Datensatzdateien exportieren möchten, `day` oder `hour` aus. |
+| `interval` | Wählen Sie &quot;`1`&quot;, wenn der `timeUnit` Tag ist, und &quot;`3`&quot;, &quot;`6`&quot;, &quot;`9`&quot;, &quot;`12`&quot;, wenn die Zeiteinheit `hour` ist. |
+| `startTime` | Datum und Uhrzeit in UNIX-Sekunden, zu der die Datensatzexporte beginnen sollen. |
+| `endTime` | Datum und Uhrzeit in UNIX Sekunden, zu der die Datensatzexporte enden sollen. |
+| `foldernameTemplate` | Geben Sie die erwartete Ordnernamenstruktur in Ihrem Speicherort an, an dem die exportierten Dateien abgelegt werden sollen. <ul><li><code>DATASET_ID</code> = <span>Eine eindeutige Kennung für den Datensatz.</span></li><li><code>ZIELORT</code> = <span>Der Name des Ziels.</span></li><li><code>DATETIME</code> = <span>Datum und Uhrzeit, formatiert als yyyyMM_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Die geplante Zeit für den Datenexport, formatiert als `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Der Name der spezifischen Instanz des Ziels.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Eine eindeutige Kennung für die Zielinstanz.</span></li><li><code>SANDBOX_NAME</code> = <span>Der Name der Sandbox-Umgebung.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Der Name der Organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **Antwort**
@@ -2167,12 +2246,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Die nachstehende Tabelle enthält Beschreibungen aller Parameter im Abschnitt `scheduleParams` , mit denen Sie Exportzeiten, Häufigkeit, Ort und mehr für Ihre Datensatzexporte anpassen können.
+
+| Parameter | Beschreibung |
+|---------|----------|
+| `exportMode` | Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung der Batch-Ziele. Die drei verfügbaren Exportoptionen sind: <br> **Vollständige Datei - Einmal**: `"DAILY_FULL_EXPORT"` kann nur in Kombination mit `timeUnit`:`day` und `interval`:`0` für einen einmaligen vollständigen Export des Datensatzes verwendet werden. Der tägliche vollständige Export von Datensätzen wird nicht unterstützt. Wenn Sie tägliche Exporte benötigen, verwenden Sie die Option Inkrementeller Export . <br> **Inkrementelle tägliche Exporte**: Wählen Sie `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` und `interval`:`1` für tägliche inkrementelle Exporte. <br> **Inkrementelle stündliche Exporte**: Wählen Sie für stündliche inkrementelle Exporte `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` und `interval` :`3`, `6`, `9` oder `12` aus. |
+| `timeUnit` | Wählen Sie je nach der Häufigkeit, mit der Sie Datensatzdateien exportieren möchten, `day` oder `hour` aus. |
+| `interval` | Wählen Sie &quot;`1`&quot;, wenn der `timeUnit` Tag ist, und &quot;`3`&quot;, &quot;`6`&quot;, &quot;`9`&quot;, &quot;`12`&quot;, wenn die Zeiteinheit `hour` ist. |
+| `startTime` | Datum und Uhrzeit in UNIX-Sekunden, zu der die Datensatzexporte beginnen sollen. |
+| `endTime` | Datum und Uhrzeit in UNIX Sekunden, zu der die Datensatzexporte enden sollen. |
+| `foldernameTemplate` | Geben Sie die erwartete Ordnernamenstruktur in Ihrem Speicherort an, an dem die exportierten Dateien abgelegt werden sollen. <ul><li><code>DATASET_ID</code> = <span>Eine eindeutige Kennung für den Datensatz.</span></li><li><code>ZIELORT</code> = <span>Der Name des Ziels.</span></li><li><code>DATETIME</code> = <span>Datum und Uhrzeit, formatiert als yyyyMM_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Die geplante Zeit für den Datenexport, formatiert als `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Der Name der spezifischen Instanz des Ziels.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Eine eindeutige Kennung für die Zielinstanz.</span></li><li><code>SANDBOX_NAME</code> = <span>Der Name der Sandbox-Umgebung.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Der Name der Organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2220,12 +2316,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Die nachstehende Tabelle enthält Beschreibungen aller Parameter im Abschnitt `scheduleParams` , mit denen Sie Exportzeiten, Häufigkeit, Ort und mehr für Ihre Datensatzexporte anpassen können.
+
+| Parameter | Beschreibung |
+|---------|----------|
+| `exportMode` | Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung der Batch-Ziele. Die drei verfügbaren Exportoptionen sind: <br> **Vollständige Datei - Einmal**: `"DAILY_FULL_EXPORT"` kann nur in Kombination mit `timeUnit`:`day` und `interval`:`0` für einen einmaligen vollständigen Export des Datensatzes verwendet werden. Der tägliche vollständige Export von Datensätzen wird nicht unterstützt. Wenn Sie tägliche Exporte benötigen, verwenden Sie die Option Inkrementeller Export . <br> **Inkrementelle tägliche Exporte**: Wählen Sie `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` und `interval`:`1` für tägliche inkrementelle Exporte. <br> **Inkrementelle stündliche Exporte**: Wählen Sie für stündliche inkrementelle Exporte `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` und `interval` :`3`, `6`, `9` oder `12` aus. |
+| `timeUnit` | Wählen Sie je nach der Häufigkeit, mit der Sie Datensatzdateien exportieren möchten, `day` oder `hour` aus. |
+| `interval` | Wählen Sie &quot;`1`&quot;, wenn der `timeUnit` Tag ist, und &quot;`3`&quot;, &quot;`6`&quot;, &quot;`9`&quot;, &quot;`12`&quot;, wenn die Zeiteinheit `hour` ist. |
+| `startTime` | Datum und Uhrzeit in UNIX-Sekunden, zu der die Datensatzexporte beginnen sollen. |
+| `endTime` | Datum und Uhrzeit in UNIX Sekunden, zu der die Datensatzexporte enden sollen. |
+| `foldernameTemplate` | Geben Sie die erwartete Ordnernamenstruktur in Ihrem Speicherort an, an dem die exportierten Dateien abgelegt werden sollen. <ul><li><code>DATASET_ID</code> = <span>Eine eindeutige Kennung für den Datensatz.</span></li><li><code>ZIELORT</code> = <span>Der Name des Ziels.</span></li><li><code>DATETIME</code> = <span>Datum und Uhrzeit, formatiert als yyyyMM_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Die geplante Zeit für den Datenexport, formatiert als `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Der Name der spezifischen Instanz des Ziels.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Eine eindeutige Kennung für die Zielinstanz.</span></li><li><code>SANDBOX_NAME</code> = <span>Der Name der Sandbox-Umgebung.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Der Name der Organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2345,10 +2458,15 @@ Beachten Sie bei der Komprimierung den Unterschied im Dateiformat zwischen den b
 
 * Beim Exportieren komprimierter JSON-Dateien ist das exportierte Dateiformat `json.gz`
 * Beim Exportieren komprimierter Parquet-Dateien ist das exportierte Dateiformat `gz.parquet`
+* JSON-Dateien können nur komprimiert exportiert werden.
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
 Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Experience Platform API-Fehlermeldungsprinzipien. Weitere Informationen zur Interpretation von Fehlerantworten finden Sie unter [API-Status-Codes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anforderungsheader](/help/landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
+
+## Häufig gestellte Fragen {#faq}
+
+Anzeigen einer [ Liste häufig gestellter Fragen](/help/destinations/ui/export-datasets.md#faq) zu Datensatzexporten.
 
 ## Nächste Schritte {#next-steps}
 

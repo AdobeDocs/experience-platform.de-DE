@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '4202'
-ht-degree: 56%
+source-wordcount: '4095'
+ht-degree: 55%
 
 ---
 
@@ -30,26 +30,6 @@ In diesem Artikel wird der Arbeitsablauf erläutert, der zum Aktivieren von Ziel
 Um Zielgruppen für Ziele zu aktivieren, müssen Sie erfolgreich [mit einem Ziel verbunden sein](./connect-destination.md). Wenn Sie es noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
 
 ## Unterstützte Dateiformate für den Export {#supported-file-formats-export}
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="Aktualisieren des Enddatums für diesen Datenfluss"
->abstract="Aktualisieren des Enddatums für diesen Datenfluss"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="Aktualisieren des Enddatums für diesen Datenflusshauptteil"
->abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat ein Standardenddatum auf den 1. Mai 2025 gesetzt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum gestoppt."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="Ordnerpfad bearbeiten"
->abstract="Verwenden Sie mehrere bereitgestellte Makros, um den Ordnerpfad anzupassen, in den Datensätze exportiert werden."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="Vorschau des Datensatzordnerpfads"
->abstract="Sehen Sie sich eine Vorschau der Ordnerstruktur an, die basierend auf den in diesem Fenster hinzugefügten Makros am Speicherort erstellt wird."
 
 Beim Exportieren von Zielgruppen werden die folgenden Dateiformate unterstützt:
 

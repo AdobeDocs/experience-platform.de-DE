@@ -3,10 +3,10 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '1845'
-ht-degree: 48%
+source-wordcount: '2573'
+ht-degree: 36%
 
 ---
 
@@ -24,7 +24,7 @@ Sie können auch die Experience Platform-APIs verwenden, um Datensätze zu expor
 
 Die Datensätze, die Sie exportieren können, variieren je nach Experience Platform-App (Real-Time CDP, Adobe Journey Optimizer), Ebene (Prime oder Ultimate) und den von Ihnen gekauften Add-ons (z. B. Data Distiller).
 
-Machen Sie sich mit der Tabelle vertraut, welche Datensatztypen Sie je nach Anwendung, Produktstufe und gekauften Add-ons exportieren können:
+Verwenden Sie die nachstehende Tabelle, um zu verstehen, welche Datensatztypen Sie je nach Anwendung, Produktstufe und gekauften Add-ons exportieren können:
 
 <table>
 <thead>
@@ -137,11 +137,29 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Dateiexportoptionen für Datensätze"
->abstract="Wählen Sie **Inkrementelle Dateien exportieren** aus, um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, sodass eine Aufstockung durchgeführt wird. Weitere inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden."
+>abstract="Wählen Sie **Inkrementelle Dateien exportieren** aus, um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, sodass eine Aufstockung durchgeführt wird. Zukünftige inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden. <br> Wählen Sie **Vollständige Dateien exportieren** aus, um die vollständige Mitgliedschaft jedes Datensatzes bei jedem Export zu exportieren. "
 
-Im Schritt **[!UICONTROL Planung]** können Sie ein Startdatum und eine Exportkadenz für Ihre Datensatzexporte festlegen.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_header"
+>title="Aktualisieren des Enddatums für diesen Datenfluss"
+>abstract="Aktualisieren des Enddatums für diesen Datenfluss"
 
-Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist automatisch ausgewählt. Dies Trigger den Export einer oder mehrerer Dateien, die eine vollständige Momentaufnahme des Datensatzes darstellen. Nachfolgende Dateien werden seit dem vorherigen Export inkrementell zum Datensatz hinzugefügt.
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Aktualisieren des Enddatums für diesen Datenflusshauptteil"
+>abstract="Aufgrund aktueller Aktualisierungen an diesem Ziel benötigt der Datenfluss jetzt ein Enddatum. Adobe hat ein Standardenddatum auf den 1. Mai 2025 gesetzt. Bitte aktualisieren Sie auf das gewünschte Enddatum. Andernfalls werden die Datenexporte am Standarddatum gestoppt."
+
+Verwenden Sie den Schritt **[!UICONTROL Planung]** , um:
+
+* Legen Sie ein Start- und ein Enddatum sowie eine Exportkadenz für Ihre Datensatzexporte fest.
+* Konfigurieren Sie, ob die exportierten Datensatzdateien die vollständige Mitgliedschaft im Datensatz exportieren sollen oder nur inkrementelle Änderungen an der Mitgliedschaft bei jedem Auftreten eines Exports.
+* Passen Sie den Ordnerpfad in Ihrem Speicherort an, an den Datensätze exportiert werden sollen. Erfahren Sie mehr darüber, wie Sie [den Exportordnerpfad bearbeiten](#edit-folder-path).
+
+Verwenden Sie das Steuerelement **[!UICONTROL Zeitplan bearbeiten]** auf der Seite, um den Exportkatalog zu bearbeiten und festzulegen, ob vollständige oder inkrementelle Dateien exportiert werden sollen.
+
+![Bearbeiten Sie die Steuerung des Zeitplans, die im Planungsschritt hervorgehoben ist.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
+
+Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist standardmäßig ausgewählt. Dies Trigger den Export einer oder mehrerer Dateien, die eine vollständige Momentaufnahme des Datensatzes darstellen. Nachfolgende Dateien werden seit dem vorherigen Export inkrementell zum Datensatz hinzugefügt. Sie können auch &quot;**[!UICONTROL Vollständige Dateien exportieren]**&quot;auswählen. Wählen Sie in diesem Fall die Häufigkeit **[!UICONTROL Einmal]** für einen einmaligen vollständigen Export des Datensatzes aus.
 
 >[!IMPORTANT]
 >
@@ -156,13 +174,37 @@ Die Option **[!UICONTROL Inkrementelle Dateien exportieren]** ist automatisch au
 
 2. Verwenden Sie den **[!UICONTROL Zeitselektor]** zur Auswahl der Tageszeit im Format [!DNL UTC], zu der der Export erfolgen soll.
 
-3. Verwenden Sie den **[!UICONTROL Datumsselektor]**, um das Intervall auszuwählen, in dem der Export stattfinden soll. Beachten Sie, dass Sie derzeit kein Enddatum für die Exporte festlegen können. Weitere Informationen finden Sie im Abschnitt [Bekannte Einschränkungen](#known-limitations).
+3. Verwenden Sie die Auswahl **[!UICONTROL Datum]** , um das Intervall auszuwählen, in dem der Export stattfinden soll.
 
-4. Klicken Sie auf **[!UICONTROL Weiter]**, um den Zeitplan zu speichern, und fahren Sie mit dem Schritt **[!UICONTROL Überprüfen]** fort.
+4. Wählen Sie **[!UICONTROL Speichern]** aus, um den Zeitplan zu speichern und mit dem Schritt **[!UICONTROL Überprüfen]** fortzufahren.
 
 >[!NOTE]
 > 
 >Bei Datensatzexporten haben die Dateinamen ein vordefiniertes Standardformat, das nicht geändert werden kann. Siehe Abschnitt [Überprüfen eines erfolgreichen Datensatzexports](#verify), um weitere Informationen und Beispiele für exportierte Dateien zu erhalten.
+
+## Ordnerpfad bearbeiten {#edit-folder-path}
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Ordnerpfad bearbeiten"
+>abstract="Verwenden Sie mehrere bereitgestellte Makros, um den Ordnerpfad anzupassen, in den Datensätze exportiert werden."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Vorschau des Datensatzordnerpfads"
+>abstract="Sehen Sie sich eine Vorschau der Ordnerstruktur an, die basierend auf den in diesem Fenster hinzugefügten Makros am Speicherort erstellt wird."
+
+Wählen Sie **[!UICONTROL Ordnerpfad bearbeiten]** aus, um die Ordnerstruktur in Ihrem Speicherort anzupassen, an dem exportierte Datensätze abgelegt werden.
+
+![Bearbeiten Sie das Ordnerpfadsteuerelement, das im Planungsschritt hervorgehoben ist.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+
+Sie können mehrere verfügbare Makros verwenden, um einen gewünschten Ordnernamen anzupassen. Doppelklicken Sie auf ein Makro, um es zum Ordnerpfad hinzuzufügen, und verwenden Sie `/` zwischen den Makros, um die Ordner zu trennen.
+
+![Im modalen Fenster des benutzerdefinierten Ordners hervorgehobene Makroauswahl.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+
+Nach Auswahl der gewünschten Makros wird eine Vorschau der Ordnerstruktur angezeigt, die in Ihrem Speicherort erstellt wird. Die erste Ebene in der Ordnerstruktur stellt den **[!UICONTROL Ordnerpfad]** dar, den Sie angegeben haben, als Sie [mit dem Ziel verbunden](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) sind, um Datensätze zu exportieren.
+
+![Vorschau des Ordnerpfads im modalen Fenster des benutzerdefinierten Ordners hervorgehoben.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## Überprüfung {#review}
 
@@ -174,7 +216,11 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 Beim Exportieren von Datensätzen erstellt Experience Platform eine oder mehrere `.json` - oder `.parquet` -Dateien am von Ihnen angegebenen Speicherort. Erwarten Sie, dass neue Dateien entsprechend dem von Ihnen angegebenen Exportplan an Ihrem Speicherort abgelegt werden.
 
-Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in der die exportierten Datensatzdateien abgelegt werden. Für jeden Exportzeitpunkt wird ein neuer Ordner erstellt, wobei das folgende Muster befolgt wird:
+Experience Platform erstellt eine Ordnerstruktur am angegebenen Speicherort, in der die exportierten Datensatzdateien abgelegt werden. Das Standardmuster für den Ordnerexport ist unten dargestellt, Sie können die Ordnerstruktur jedoch mit Ihren bevorzugten Makros anpassen [1}.](#edit-folder-path)
+
+>[!TIP]
+> 
+>Die erste Ebene in dieser Ordnerstruktur - `folder-name-you-provided` - stellt den **[!UICONTROL Ordnerpfad]** dar, den Sie angegeben haben, als Sie [mit dem Ziel verbunden](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) sind, um Datensätze zu exportieren.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -194,6 +240,8 @@ Beachten Sie bei der Komprimierung den Unterschied im Dateiformat zwischen den b
 
 * Beim Exportieren komprimierter JSON-Dateien ist das exportierte Dateiformat `json.gz`
 * Beim Exportieren komprimierter Parquet-Dateien ist das exportierte Dateiformat `gz.parquet`
+
+Exporte in JSON-Dateien werden *nur im komprimierten Modus* unterstützt. Exporte in Parquet-Dateien werden in einem komprimierten und unkomprimierten Modus unterstützt.
 
 ## Entfernen von Datensätzen aus Zielen {#remove-dataset}
 
@@ -227,7 +275,7 @@ Beachten Sie, dass die Berechtigungen für Datenexporte für verschiedene Anwend
 
 Wenn Sie hingegen Add-ons wie Data Distiller erworben haben, stellt die Datenexport-Beschränkung, zu der Sie berechtigt sind, die Summe der Produktebene und des Add-ons dar.
 
-Sie können Ihre Profilexporte anhand Ihrer vertraglichen Beschränkungen im Lizenzierungs-Dashboard anzeigen und verfolgen.
+Sie können Ihre Profilexporte anhand Ihrer vertraglichen Beschränkungen im [Dashboard zur Lizenznutzung](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md) anzeigen und verfolgen.
 
 ## Bekannte Einschränkungen {#known-limitations}
 
@@ -240,3 +288,59 @@ Beachten Sie die folgenden Einschränkungen für die allgemeine Verfügbarkeit v
 * Die Benutzeroberfläche hindert Sie derzeit nicht daran, einen Datensatz zu löschen, während er an ein Ziel exportiert wird. Löschen Sie keine Datensätze, während sie an Ziele exportiert werden. [Entfernen Sie den Datensatz](#remove-dataset) aus einem Ziel-Datenfluss, bevor Sie ihn löschen.
 * Überwachungsmetriken für Datensatzexporte werden derzeit mit Zahlen für Profilexporte gemischt, sodass sie nicht die tatsächlichen Exportzahlen widerspiegeln.
 * Daten mit einem Zeitstempel, der älter als 365 Tage ist, sind von den Datensatzexporten ausgeschlossen. Weitere Informationen finden Sie in den [Limits für geplante Datensatzexporte](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+
+## Häufig gestellte Fragen {#faq}
+
+**Können wir eine Datei ohne Ordner generieren, wenn wir einfach unter `/` als Ordnerpfad speichern? Wenn kein Ordnerpfad erforderlich ist, wie werden dann Dateien mit doppelten Namen in einem Ordner oder Speicherort generiert?**
+
++++
+Ab der Version vom September 2024 ist es möglich, den Ordnernamen anzupassen und sogar `/` für den Export von Dateien für alle Datensätze im selben Ordner zu verwenden. Adobe empfiehlt dies nicht für Ziele, die mehrere Datensätze exportieren, da systemgenerierte Dateinamen, die zu verschiedenen Datensätzen gehören, im selben Ordner gemischt werden.
++++
+
+**Können Sie die Manifestdatei an einen Ordner und Datendateien in einen anderen Ordner weiterleiten?**
+
++++
+Nein, es gibt keine Möglichkeit, die Manifestdatei an einen anderen Speicherort zu kopieren.
++++
+
+**Können wir die Sequenzierung oder den Zeitpunkt der Dateibereitstellung steuern?**
+
++++
+Es gibt Optionen zum Planen des Exports. Es gibt keine Optionen zum Verschieben oder Sequenzieren der Kopie der Dateien. Sie werden nach der Erstellung an Ihren Speicherort kopiert.
++++
+
+**Welche Formate sind für die Manifestdatei verfügbar?**
+
++++
+Die Manifestdatei liegt im JSON-Format vor.
++++
+
+**Gibt es API-Verfügbarkeit für die Manifestdatei?**
+
++++
+Für die Manifestdatei ist keine API verfügbar, sie enthält jedoch eine Liste mit Dateien, die den Export enthalten.
++++
+
+**Können der Manifestdatei zusätzliche Details hinzugefügt werden (d. h. die Datensatzanzahl)? Wenn ja, wie?**
+
++++
+Es ist nicht möglich, der Manifestdatei zusätzliche Informationen hinzuzufügen. Die Datensatzanzahl ist über die Entität `flowRun` verfügbar (über die API abgefragt). Weitere Informationen finden Sie unter Zielüberwachung.
++++
+
+**Wie werden Datendateien aufgeteilt? Wie viele Datensätze pro Datei?**
+
++++
+Datendateien werden nach der Standardpartitionierung im Experience Platform Data Lake aufgeteilt. Größere Datensätze haben eine höhere Anzahl von Partitionen. Die Standardpartitionierung kann vom Benutzer nicht konfiguriert werden, da sie für das Lesen optimiert ist.
++++
+
+**Können wir einen Schwellenwert festlegen (Anzahl an Datensätzen pro Datei)?**
+
++++
+Nein, das ist nicht möglich.
++++
+
+**Wie senden wir einen Datensatz erneut, wenn der erste Versand fehlerhaft ist?**
+
++++
+Bei den meisten Systemfehlern werden automatisch Wiederholungen durchgeführt.
++++
