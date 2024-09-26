@@ -6,7 +6,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
 source-wordcount: '1464'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -39,7 +39,7 @@ Bevor Sie mit diesem Tutorial fortfahren, lesen Sie bitte die folgenden Dokument
    * Wenn Sie auch den Schlüssel-Paar-Mechanismus für die Signierüberprüfung verwendet haben, müssen Sie auch die Schlüssel-ID für die Signierüberprüfung angeben, die Ihren verschlüsselten Daten entspricht.
 * Fahren Sie mit den Schritten zur Erstellung des Datenflusses fort.
 
-## Verschlüsselungs-Schlüsselpaar erstellen {#create-an-encryption-key-pair}
+## Erstellen eines Schlüsselpaars für Verschlüsselung {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_encryptionKeyId"
@@ -80,12 +80,12 @@ Um Informationen zu einem vorhandenen Verschlüsselungsschlüssel anzuzeigen, w�
 
 ![Die Schlüsselpaarseite, auf der eine Liste von Verschlüsselungsschlüsseln angezeigt wird. Die Auslassungspunkte neben &quot;acme-encryption-key&quot;sind ausgewählt und das Dropdown-Menü zeigt Optionen zum Anzeigen von Schlüsseldetails oder Löschen der Schlüssel an.](../../images/tutorials/edi/configuration_options.png)
 
-### Erstellen eines Signaturüberprüfungsschlüssels {#create-a-sign-verification-key}
+### Erstellen eines Signaturverifizierungsschlüssels {#create-a-sign-verification-key}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"
->title="Sign Verification Key ID"
->abstract="Geben Sie die Kennung des Signierüberprüfungsschlüssels an, der Ihren signierten, verschlüsselten Quelldaten entspricht."
+>title="Signaturverifizierungsschlüssel-ID"
+>abstract="Geben Sie die Signaturverifizierungsschlüssel-ID an, die Ihren signierten, verschlüsselten Quelldaten entspricht."
 
 >[!BEGINSHADEBOX]
 

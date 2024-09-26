@@ -5,7 +5,7 @@ exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 4%
+ht-degree: 9%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 4%
 
 Verwenden Sie einfache Abfragen im [!UICONTROL Berechtigungs-Manager], um knappe Berichte zu erstellen, die Ihnen helfen, die Zugriffsverwaltung zu verstehen und Zeit zu sparen, indem Sie Zugriffsberechtigungen für viele Workflows und Granularitätsstufen überprüfen. Sie können [!UICONTROL Berechtigungs-Manager] verwenden, um Benutzer zu finden, die zu einer Benutzergruppe gehören und über bestimmte Zugriffsberechtigungen verfügen, sowie Rollen mit bestimmten Bezeichnungen.
 
-## Suchen Sie Benutzer innerhalb einer angegebenen Benutzergruppe. {#search-users}
+## Suchen nach Benutzerinnen und Benutzern innerhalb einer angegebenen Benutzergruppe {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"
 >title="Berechtigungs-Manager"
->abstract="Verwenden Sie die Dropdown-Selektoren auf der Seite, um Berichte auf Zugriffsebene mit unterschiedlichen Granularitätsstufen für Benutzer und Rollen zu erhalten."
+>abstract="Verwenden Sie die Dropdown-Auswahl auf der Seite, um Berichte auf Zugriffsebene mit unterschiedlichen Granularitätsstufen für Benutzende und Rollen zu erhalten."
 <!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 Wählen Sie über die Dropdown-Liste das Attribut **[!UICONTROL Benutzer]** aus.
