@@ -1,13 +1,14 @@
 ---
 title: Merkury Enterprise Identity Destination
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Verbindung zum Enterprise Identity-Ziel von Merkury erstellen.
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 18%
 
 ---
-
 
 # Merkury Enterprise Identity Destination
 
@@ -67,7 +68,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 | **Zielgruppe** | **Unterstützt** | **Beschreibung** | **origin** |
 |---|---|---|---|
-| Segmentierungs-Service | ✓ | Zielgruppen, die durch die Experience Platform [[Segmentierungsdienst]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) generiert wurden. |
+| Segmentierungs-Service | ✓ | Zielgruppen, die durch die Experience Platform [[Segmentierungsdienst]](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home) generiert wurden. |
 | Benutzerdefinierte Uploads | x | Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ Beziehen Sie sich auf die folgende Tabelle, um Informationen zu Typ und Häufigk
 
 | **Zielgruppe** | **Unterstützt** | **Beschreibung origin** |
 |---|---|---|      
-| Segmentierungs-Service | ✓ | Zielgruppen, die durch die Experience Platform [[Segmentierungsdienst]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) generiert wurden. |
+| Segmentierungs-Service | ✓ | Zielgruppen, die durch die Experience Platform [[Segmentierungsdienst]](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home) generiert wurden. |
 | Benutzerdefinierte Uploads | X | Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
 
 {style="table-layout:auto"}
@@ -135,7 +136,7 @@ Konten, die bereits mit dem Merkury Enterprise Identity-Ziel definiert wurden, w
 
 ### Aktivieren von Warnhinweisen
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/ui/alerts).
 
 Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **Weiter** aus.
 

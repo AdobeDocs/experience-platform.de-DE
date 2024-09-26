@@ -1,13 +1,14 @@
 ---
 title: Merkury Enterprise Connections Destination
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Enterprise Connections-Zielverbindung für Merkury erstellen.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 20%
 
 ---
-
 
 # Merkury Enterprise Connections Destination
 
@@ -60,7 +61,7 @@ In diesem Abschnitt wird beschrieben, welche Zielgruppentypen Sie an dieses Ziel
 
 | **Zielgruppe** | **Unterstützt** | **Beschreibung origin** |
 |---|---|---|      
-| Segmentierungs-Service | ✓ | Zielgruppen, die durch die Experience Platform [[Segmentierungsdienst]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) generiert wurden. |
+| Segmentierungs-Service | ✓ | Zielgruppen, die durch die Experience Platform [[Segmentierungsdienst]](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/home) generiert wurden. |
 | Benutzerdefinierte Uploads | X | Zielgruppen [[importiert]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) aus CSV-Dateien in Experience Platform. |
 
 {style="table-layout:auto"}
@@ -127,7 +128,7 @@ Konten, die bereits mit dem Ziel &quot;Enterprise Connections&quot;von Merkury d
 
 ## Aktivieren von Warnhinweisen
 
-Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status des Datenflusses zu Ihrem Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zum [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/ui/alerts).
 
 Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **Weiter** aus.
 
