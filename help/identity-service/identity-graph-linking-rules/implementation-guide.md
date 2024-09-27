@@ -3,9 +3,9 @@ title: Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1546'
 ht-degree: 3%
 
 ---
@@ -168,6 +168,8 @@ Verwenden Sie für jedes Feedback die Option **[!UICONTROL Beta feedback]** im U
 ## Überprüfen Ihrer Diagramme {#validate}
 
 Verwenden Sie das Identitäts-Dashboard, um Einblicke in den Zustand Ihrer Identitätsdiagramme zu erhalten, z. B. Ihre gesamten Trends bei Identitätszählung und Diagrammanzahl, Identitätszählung nach Namespace und Diagrammanzahl nach Diagrammgröße. Sie können das Identitäts-Dashboard auch verwenden, um Trends in Diagrammen mit zwei oder mehr Identitäten anzuzeigen, die nach Namespace organisiert sind.
+
+Wählen Sie die Auslassungszeichen (`...`) aus und wählen Sie dann **[!UICONTROL Mehr anzeigen]** , um weitere Informationen zu erhalten und zu überprüfen, ob keine ausgeblendeten Diagramme vorhanden sind.
 
 ## Anhang {#appendix}
 

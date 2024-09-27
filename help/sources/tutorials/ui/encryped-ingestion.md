@@ -3,9 +3,9 @@ title: Verschlüsselte Daten in der Quellenbenutzeroberfläche von Workspace erf
 description: Erfahren Sie, wie Sie verschlüsselte Daten im Arbeitsbereich der Quellenbenutzeroberfläche erfassen.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1456'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->Die Unterstützung für die verschlüsselte Datenerfassung in der Quell-Benutzeroberfläche befindet sich in der Beta-Phase und steht Ihrem Unternehmen möglicherweise nicht zur Verfügung. Die Funktion und die Dokumentation können sich ändern.
+>Die Unterstützung für die verschlüsselte Datenerfassung in der Quell-Benutzeroberfläche befindet sich in der Beta-Phase. Die Funktion und die Dokumentation können sich ändern.
 
 Sie können verschlüsselte Datendateien und Ordner mit Cloud-Speicher-Batch-Quellen in Adobe Experience Platform erfassen. Mithilfe der verschlüsselten Datenaufnahme können Sie asymmetrische Verschlüsselungsmechanismen nutzen, um Batch-Daten sicher in Experience Platform zu übertragen. Die unterstützten asymmetrischen Verschlüsselungsmechanismen sind PGP und GPG.
 

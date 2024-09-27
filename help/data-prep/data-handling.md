@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Verarbeiten von Datenformaten mit der Datenvorbereitung
 description: In diesem Dokument erhalten Sie einen Überblick darüber, wie verschiedene Datentypen von der Datenvorbereitung verarbeitet werden.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 99%
+source-wordcount: '626'
+ht-degree: 95%
 
 ---
 
@@ -75,6 +75,10 @@ Wenn Zeichenfolgenfelder aus eingehenden Daten mithilfe des Experience-Datenmode
 > Datenvorbereitung versucht, Zeichenfolgen so gut wie möglich in Daten zu konvertieren. Solche Konversionen können jedoch zu unerwünschten Ergebnissen führen. Der Zeichenfolgenwert „12112020“ entspricht beispielsweise dem Muster „MMddyyyy“, der Benutzer hat jedoch ggf. beabsichtigt, dass das Datum dem Muster „ddMMyyyy“ folgt. Darum sollten Benutzer das Datumsformat für Zeichenfolgen explizit angeben.
 
 ### Zeichenfolgen im Datum/Zeit-Format {#format}
+
+>[!TIP]
+>
+>Derzeit entfernt die Datumsfunktion in der Batch-Erfassung Millisekunden, wenn die Datumswerte folgendes Format aufweisen: `2024-05-05 20:39:00.005` PST. Verwenden Sie folgendes Format, um Millisekunden beizubehalten: `2024-05-05 20:39:00.005-0800`
 
 Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen definiert sind. Beachten Sie, dass bei den Buchstaben die Groß- und Kleinschreibung beachtet wird.
 
