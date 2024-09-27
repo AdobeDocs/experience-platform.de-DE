@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die von Adobe Experience Platform Query Service unterstützte SQL-Syntax erläutert.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '4305'
+source-wordcount: '4291'
 ht-degree: 5%
 
 ---
@@ -707,11 +707,7 @@ Die Werte aus dem `source_dataset` werden zum Ausfüllen der Zieltabelle verwend
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;)&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA, NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
-## [!DNL Spark] SQL-Befehle
-
-Der folgende Unterabschnitt behandelt die von Query Service unterstützten Spark-SQL-Befehle.
-
-### SET
+## SET
 
 Der Befehl `SET` legt eine Eigenschaft fest und gibt entweder den Wert einer vorhandenen Eigenschaft zurück oder listet alle vorhandenen Eigenschaften auf. Wenn für einen vorhandenen Eigenschaftenschlüssel ein Wert angegeben wird, wird der alte Wert überschrieben.
 

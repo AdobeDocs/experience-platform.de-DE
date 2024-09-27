@@ -2,10 +2,10 @@
 title: Anonymer Block in Query Service
 description: Der anonyme Block ist eine SQL-Syntax, die von Adobe Experience Platform Query Service unterstützt wird und mit der Abfragen effizient ausgeführt werden können.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 73%
+source-wordcount: '603'
+ht-degree: 69%
 
 ---
 
@@ -44,9 +44,7 @@ $$;
 
 Im folgenden Beispiel behält `SET` das Ergebnis einer `SELECT`-Abfrage in der angegebenen lokalen Variablen. Die Variable wird dem anonymen Block zugeordnet.
 
-Die Snapshot-ID wird als lokale Variable (`@current_sid`) gespeichert. Sie wird dann in der nächsten Abfrage verwendet, um Ergebnisse basierend auf SNAPSHOT aus demselben Datensatz/derselben Tabelle zurückzugeben.
-
-Ein Datenbank-Snapshot ist eine schreibgeschützte statische Ansicht einer SQL Server-Datenbank. Weitere [Informationen zur Snapshot-Klausel](../sql/syntax.md#SNAPSHOT-clause) finden Sie in der SQL-Syntax-Dokumentation.
+Die Snapshot-ID wird als lokale Variable (`@current_sid`) gespeichert. Sie wird dann in der nächsten Abfrage verwendet, um Ergebnisse basierend auf SNAPSHOT aus demselben Datensatz/derselben Tabelle zurückzugeben. Weitere [Informationen zur Snapshot-Klausel](../sql/syntax.md#SNAPSHOT-clause) finden Sie in der SQL-Syntax-Dokumentation.
 
 ```SQL
 $$ BEGIN                                             

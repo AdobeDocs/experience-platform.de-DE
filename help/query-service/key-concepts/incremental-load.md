@@ -2,10 +2,10 @@
 title: Inkrementelles Laden im Abfrage-Service
 description: Die inkrementelle Ladefunktion verwendet Funktionen sowohl für anonyme Blöcke als auch für Momentaufnahmen, um eine nahezu in Echtzeit entstehende Lösung zum Verschieben von Daten aus dem Data Lake in Ihr Data Warehouse zu bieten, ohne übereinstimmende Daten zu berücksichtigen.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 100%
+source-wordcount: '671'
+ht-degree: 99%
 
 ---
 
@@ -125,10 +125,6 @@ Die folgenden Schritte zeigen, wie Sie Daten mithilfe von Momentaufnahmen und de
 Diese Logik kann auf jede Tabelle angewendet werden, um inkrementelles Laden durchzuführen.
 
 ## Abgelaufene Momentaufnahmen
-
->[!IMPORTANT]
->
->Momentaufnahmen-Metadaten laufen nach **zwei** Tagen ab. Eine abgelaufene Momentaufnahme macht die Logik des oben angegebenen Skripts ungültig.
 
 Um das Problem einer abgelaufenen Momentaufnahme-ID zu beheben, fügen Sie den folgenden Befehl am Anfang des anonymen Blocks ein. Die folgende Codezeile überschreibt die `@from_snapshot_id` mit der frühesten verfügbaren `snapshot_id` aus Metadaten.
 
