@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1251'
 ht-degree: 86%
 
 ---
@@ -67,6 +67,7 @@ ht-degree: 86%
       * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
       * [Verbindung zur Zusammenstellung von Federated Audience (begrenzte Verfügbarkeit)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Werbeziele{#advertising}
+      * [(Beta) Acxiom-Zielgruppenverteilung](./catalog/advertising/acxiom-audience-distribution.md)
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
