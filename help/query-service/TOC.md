@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 81%
+source-wordcount: '339'
+ht-degree: 80%
 
 ---
 
@@ -41,7 +41,6 @@ ht-degree: 81%
       - [End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Data Distiller Audiences {#data-distiller-audiences}
    - [Erstellen externer Zielgruppen mit SQL](data-distiller-audiences/overview.md)
-- [DATEN DISTILLER-HYPERKEN](hypercubes.md)
 - Beispiele {#use-cases}
    - [Übersicht](use-cases/overview.md)
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
@@ -70,6 +69,8 @@ ht-degree: 81%
    - [Deduplizierung von Daten](key-concepts/deduplication.md)
    - [Datensatzbeispiele](key-concepts/dataset-samples.md)
    - [Berechnung der Datensatzstatistiken](key-concepts/dataset-statistics.md)
+- Distiller-Hyperwürfel {#hypercubes}
+   - [Effiziente Big-Data-Analyse mit Hyperwürfen](hypercubes/overview.md)
 - Clients mit Query Service verbinden {#clients}
    - [Kundenverbindungen – Überblick](clients/overview.md)
    - [SSL-Modi](./clients/ssl-modes.md)

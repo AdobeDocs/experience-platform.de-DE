@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise, September 2024
 description: Versionshinweise September 2024 zu Adobe Experience Platform.
-source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
+source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
 workflow-type: tm+mt
-source-wordcount: '2144'
+source-wordcount: '2149'
 ht-degree: 24%
 
 ---
@@ -14,15 +14,16 @@ ht-degree: 24%
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience Platform:
 
-- [Warnhinweise](#alerts)
-- [Dashboards](#dashboards)
-- [Datenvorbereitung](#data-prep)
-- [Ziele](#destinations)
-- [Experience-Datenmodell (XDM)](#xdm)
-- [Identity Service](#identity-service)
-- [Abfrage-Service](#query-service)
-- [Segmentierungs-Service](#segmentation-service)
-- [Quellen](#sources)
+- [Adobe Experience Platform – Versionshinweise](#adobe-experience-platform-release-notes)
+   - [Warnhinweise {#alerts}](#alerts-alerts)
+   - [Dashboards {#dashboards}](#dashboards-dashboards)
+   - [Datenvorbereitung {#data-prep}](#data-prep-data-prep)
+   - [Ziele {#destinations}](#destinations-destinations)
+   - [Experience-Datenmodell (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Identity Service {#identity-service}](#identity-service-identity-service)
+   - [Abfrage-Service {#query-service}](#query-service-query-service)
+   - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
+   - [Quellen {#sources}](#sources-sources)
 
 ## Warnhinweise {#alerts}
 
@@ -139,7 +140,7 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 | Funktion | Beschreibung |
 | --- | --- |
 | Data Distiller Audiences | Einfaches Erstellen, Verwalten und Aktivieren von Zielgruppen mit der SQL-Zielgruppenerweiterung in Experience Platform Data Distiller. Definieren Sie Zielgruppensegmente mit SQL-Befehlen direkt aus Ihrem Data Lake, ohne dass Rohdaten in Profilen benötigt werden. Verfeinern Sie Zielgruppenstrategien und synchronisieren Sie Zielgruppen automatisch mit dateibasierten Zielen mit diesem flexiblen, datengesteuerten Ansatz. Optimierung von Workflows, Optimierung des Zielgruppen-Managements und Erschließung des vollen Potenzials von Daten. Lesen Sie das [Handbuch zur Verwendung der SQL-Zielgruppenerweiterung](../../query-service/data-distiller-audiences/overview.md), um Ihre Zielgruppenstrategien zu verbessern. |
-| Data Distiller Statistics - Hyperwürfel | Optimieren Sie die Big-Data-Analyse mit Hyperwürfeln. Komplexe Berechnungen - wie eindeutige Zählungen und mehrdimensionale Analysen - ohne die historischen Daten erneut zu verarbeiten. Inkrementelle Aktualisierung von Daten, Optimierung von Workflows und Verkürzung der Verarbeitungszeit unter Beibehaltung von Genauigkeit und Effizienz. Erhalten Sie schnellere, skalierbare und kostengünstige Einblicke, die die Entscheidungsfindung verändern. Lesen Sie das [Handbuch zur Verwendung von Hyperwürfen](../../query-service/hypercubes.md) , um die erweiterte Analyse zu entsperren. |
+| Data Distiller Statistics - Hyperwürfel | Optimieren Sie die Big-Data-Analyse mit Hyperwürfeln. Komplexe Berechnungen - wie eindeutige Zählungen und mehrdimensionale Analysen - ohne die historischen Daten erneut zu verarbeiten. Inkrementelle Aktualisierung von Daten, Optimierung von Workflows und Verkürzung der Verarbeitungszeit unter Beibehaltung von Genauigkeit und Effizienz. Erhalten Sie schnellere, skalierbare und kostengünstige Einblicke, die die Entscheidungsfindung verändern. Lesen Sie das [Handbuch zur Verwendung von Hyperwürfen](../../query-service/hypercubes/overview.md) , um die erweiterte Analyse zu entsperren. |
 | Objekt-Browser des Abfrage-Editors | Verbessern der Abfrageleistung mit dem neuen Objektbrowser im Abfrage-Editor. Schnelles Suchen, Filtern und Aufrufen von Datensätzen, um Abfragen schneller zu schreiben und zu verfeinern. Mit Echtzeit-Schemaaktualisierungen und Instant-Tabellen-Metadaten können Sie Workflows optimieren, die Navigationszeit verkürzen und Ihr Abfrageerlebnis verbessern. Erschließen Sie das Potenzial Ihrer Daten und optimieren Sie die Analyse. Weitere Informationen finden Sie im [Handbuch zur Verwendung des Objektbrowsers](../../query-service/ui/user-guide.md#object-browser) . |
 | Berechnungsstunden | Gewinnen Sie Kontrolle über die Ressourcennutzung mit der neu sichtbaren Metrik &quot;Compute Hours&quot;für geplante Abfragen. Zeigen Sie die Ausführungszeiten der Abfrage an, um die Ressourcenverwendung für CTAS/ITAS-Batch-Abfragen zu überwachen und zu optimieren. Verfolgen Sie Startzeiten, Abschlussstatus und die Berechnungszeit für jeden Abfrageablauf. Optimieren Sie die Leistung und reduzieren Sie die Kosten mühelos. Informationen zur Maximierung Ihrer Abfrageeffizienz finden Sie im [Handbuch zu Compute Hours](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) . |
 

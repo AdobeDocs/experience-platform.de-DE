@@ -2,9 +2,9 @@
 title: Abfragezeitpläne
 description: Erfahren Sie, wie Sie geplante Abfrageausführungen automatisieren, einen Abfragezeitplan löschen oder deaktivieren und die verfügbaren Planungsoptionen über die Adobe Experience Platform-Benutzeroberfläche nutzen können.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2066'
 ht-degree: 14%
 
 ---
@@ -163,6 +163,11 @@ Die folgende Tabelle enthält Beschreibungen der einzelnen Spalten, die im Detai
 | [!UICONTROL Stunden berechnen] | Zeigt die für jeden Abfrageablauf verwendete Berechnungszeit in Stunden an. Dies hilft, die Ressourcennutzung zu verfolgen und die Abfrageleistung zu optimieren. |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Die Daten zu Compute Hours sind ab dem 15.08.2024 verfügbar. Daten vor diesem Datum werden als &quot;Nicht verfügbar&quot;angezeigt.
+
 
 Vollständige Informationen zum Überwachen des Status aller Abfrageaufträge über die Benutzeroberfläche finden Sie im Leitfaden [Geplante abgefragte Abfragen überwachen](./monitor-queries.md#inline-actions) .
 
