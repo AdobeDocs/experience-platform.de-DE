@@ -6,7 +6,7 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
 source-wordcount: '2212'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -126,12 +126,12 @@ Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Ansicht]** und ein 
 
 ![Das Profil, das dem Identitätswert entspricht, wird hervorgehoben.](../images/user-guide/filtered-identity-value.png)
 
-## Profildetails anzeigen {#profile-detail}
+## Anzeigen von Profildetails {#profile-detail}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entität nicht gefunden"
->abstract="Das bedeutet, dass Platform die angeforderte Entität nicht finden konnte. Um diesen Fehler zu beheben, versuchen Sie eine der folgenden Lösungen:<ul><li>Stellen Sie sicher, dass die richtige Profil-ID in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
+>abstract="Das bedeutet, dass die angeforderte Entität von Platform nicht gefunden wurde. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Profilkennung in der URL der Entität aufgeführt ist, auf die Sie zugreifen möchten.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Entität verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
 Nach Auswahl einer **[!UICONTROL Profil-ID]** wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht des einzelnen Kunden zu bilden. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Kanalpräferenzen.
 

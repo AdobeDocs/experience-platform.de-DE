@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
 source-wordcount: '4784'
-ht-degree: 65%
+ht-degree: 67%
 
 ---
 
@@ -102,7 +102,7 @@ Nachdem die Report Suites zugeordnet wurden, können Sie diese neu zugeordneten 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="Komplexe Auswertung"
->abstract="Der folgende Ausdruck ist zu kompliziert, um als einzelne Zielgruppe ausgedrückt zu werden. Um sowohl B2B-Regeln als auch benutzerbasierte Ereignisse in derselben Segmentdefinition zu verwenden, führen Sie die folgenden Schritte aus.<ol><li>Erstellen Sie eine Segmentdefinition, die nur auf die benutzerbasierten Ereignisse verweist, und speichern Sie sie als eigene Segmentdefinition.</li><li>Importieren Sie in einer neuen Segmentdefinition die zuvor erstellte Segmentdefinition, während Sie auf die B2B-Regeln verweisen.</li></ol>"
+>abstract="Der folgende Ausdruck ist zu komplex, um als einzelne Zielgruppe ausgedrückt zu werden. Führen Sie die folgenden Schritte aus, um sowohl B2B-Regeln als auch benutzerbasierte Ereignisse in derselben Segmentdefinition zu verwenden.<ol><li>Erstellen Sie eine Segmentdefinition, die nur auf die benutzerbasierten Ereignisse verweist, und speichern Sie sie als eigene Segmentdefinition.</li><li>Importieren Sie in einer neuen Segmentdefinition die zuvor erstellte Segmentdefinition, während Sie auf die B2B-Regeln verweisen.</li></ol>"
 
 >[!NOTE]
 >
@@ -164,8 +164,8 @@ Beachten Sie, dass maximal 250 Werte zulässig sind. Wenn Sie diese Grenze über
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
->title="Suchaktualisierungen"
->abstract="Das bestehende Suchsystem wurde aktualisiert und verwendet nun die einheitliche Suche. Mit der einheitlichen Suche können Sie Ihre Zielgruppen einfacher und robuster nach Segmentmitgliedschaften durchsuchen."
+>title="Aktualisierungen der Suchfunktion"
+>abstract="Das bestehende Suchsystem wurde aktualisiert und verwendet jetzt die einheitliche Suche. Mit der einheitlichen Suche können Sie die Zielgruppen einfacher und robuster nach Segmentzugehörigkeit durchsuchen."
 
 Sie können eine Zielgruppe per Drag-and-Drop vom Tab **[!UICONTROL Zielgruppe]** auf die Arbeitsfläche des Regel-Builders ziehen, um auf die Zielgruppenzugehörigkeit in der neuen Segmentdefinition zu verweisen. Auf diese Weise können Sie die Zielgruppenzugehörigkeit als Attribut in den Regeln der neuen Segmentdefinition ein- oder ausschließen.
 

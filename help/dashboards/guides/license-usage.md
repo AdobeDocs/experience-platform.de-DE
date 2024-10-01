@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
 source-wordcount: '2738'
-ht-degree: 16%
+ht-degree: 19%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 16%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
->title="Kernprodukttabelle"
->abstract="Die in der Tabelle aufgelisteten Hauptprodukte verfügen über eigene Metriken, Nutzungsverfolgung und Drillthrough-Ansichten auf Sandbox-Ebene. Diese Hauptprodukte stellen die Schlüsselmetriken für die Verfolgung bereit. Alle Add-ons sind in diesen Metriken enthalten."
+>title="Hauptprodukttabelle"
+>abstract="Die in der Tabelle aufgeführten Hauptprodukte verfügen über eigene Metriken, ein eigenes Nutzungs-Tracking und eigene Drillthrough-Ansichten auf Sandbox-Ebene. Diese Hauptprodukte stellen die Schlüsselmetriken für das Tracking bereit. Alle Add-ons sind in diesen Metriken enthalten."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"
 >title="Add-ons-Tabelle"
->abstract="In der Tabelle Add-ons werden Produkte aufgelistet, deren Lizenzmengen mit den von Kernprodukten unterstützten Metriken kombiniert werden. Diese Add-ons verfügen nicht über separate Metriken, sondern verbessern die Nutzungsverfolgung der Kernprodukte, mit denen sie verknüpft sind."
+>abstract="In der Add-ons-Tabelle werden Produkte aufgeführt, deren Lizenzanzahl mit den von Hauptprodukten unterstützten Metriken kombiniert wird. Diese Add-ons verfügen nicht über separate Metriken, sondern verbessern das Nutzungs-Tracking der Hauptprodukte, mit denen sie verknüpft sind."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
@@ -74,7 +74,7 @@ Um in der Platform-Benutzeroberfläche zum Dashboard für die Lizenzverwendung z
 
 Das Dashboard [!UICONTROL Lizenznutzung] enthält zwei separate Tabellen: **Core-Produkte** und **Add-ons**.
 
-- **[!UICONTROL Kernprodukte] Tabelle**: In dieser Tabelle sind die wichtigsten Adobe Experience Platform-Produkte aufgeführt, die von Ihrem Unternehmen lizenziert wurden. Jedes Kernprodukt verfügt über eigene Metriken, Nutzungsverfolgung und Drillthrough-Ansichten auf Sandbox-Ebene. Diese Hauptprodukte stellen die Schlüsselmetriken für die Verfolgung bereit. Alle Add-ons sind in diesen Metriken enthalten.
+- **[!UICONTROL Kernprodukte] Tabelle**: In dieser Tabelle sind die wichtigsten Adobe Experience Platform-Produkte aufgeführt, die von Ihrem Unternehmen lizenziert wurden. Jedes Kernprodukt verfügt über eigene Metriken, Nutzungsverfolgung und Drillthrough-Ansichten auf Sandbox-Ebene. Diese Hauptprodukte stellen die Schlüsselmetriken für das Tracking bereit. Alle Add-ons sind in diesen Metriken enthalten.
 
 - **[!UICONTROL Add-ons] table**: Diese Tabelle listet zusätzliche Produkte auf, deren Lizenzmengen mit den von den Kernprodukten unterstützten Metriken kombiniert werden. Add-ons verfügen nicht über separate Metriken, sondern verbessern die Nutzungsverfolgung der Kernprodukte, mit denen sie verknüpft sind.
 

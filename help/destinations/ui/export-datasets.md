@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
 source-wordcount: '2573'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -137,7 +137,7 @@ Aktivieren Sie die Kontrollkästchen links neben den Datensatznamen, um die Date
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Dateiexportoptionen für Datensätze"
->abstract="Wählen Sie **Inkrementelle Dateien exportieren** aus, um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, sodass eine Aufstockung durchgeführt wird. Zukünftige inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden. <br> Wählen Sie **Vollständige Dateien exportieren** aus, um die vollständige Mitgliedschaft jedes Datensatzes bei jedem Export zu exportieren. "
+>abstract="Wählen Sie **Inkrementelle Dateien exportieren** aus, um nur die Daten zu exportieren, die dem Datensatz seit dem letzten Export hinzugefügt wurden. <br> Der erste inkrementelle Dateiexport umfasst alle Daten im Datensatz, sodass eine Aufstockung durchgeführt wird. Weitere inkrementelle Dateien enthalten nur die Daten, die dem Datensatz seit dem ersten Export hinzugefügt wurden. <br> Wählen Sie **Vollständige Dateien exportieren** aus, um bei jedem Export die vollständige Zugehörigkeit jedes Datensatzes zu exportieren. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
