@@ -3,7 +3,8 @@ title: Demandbase-Verbindung
 description: Verwenden Sie dieses Ziel, um Ihre Zielgruppen für Account-Based Marketing (ABM) zu aktivieren. Werben Sie über die B2B-Demand Side Platform (DSP) von DemandBase an relevante Personen und Rollen in Ihren Zielkonten. Target-Konten können auch mit Demandbase-Drittanbieterdaten angereichert werden, um sie für andere nachgelagerte Anwendungsfälle in Marketing und Vertrieb nutzen zu können.
 badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: 5c694dfab7e53cf8a78500e3ecd086a3986b9b91
+last-substantial-update: 2024-09-30T00:00:00Z
+source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 26%

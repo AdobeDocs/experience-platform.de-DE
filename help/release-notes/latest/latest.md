@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise, September 2024
 description: Versionshinweise September 2024 zu Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
+source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 24%
+source-wordcount: '2199'
+ht-degree: 23%
 
 ---
 
@@ -15,16 +15,15 @@ ht-degree: 24%
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience Platform:
 
-- [Adobe Experience Platform – Versionshinweise](#adobe-experience-platform-release-notes)
-   - [Warnhinweise {#alerts}](#alerts-alerts)
-   - [Dashboards {#dashboards}](#dashboards-dashboards)
-   - [Datenvorbereitung {#data-prep}](#data-prep-data-prep)
-   - [Ziele {#destinations}](#destinations-destinations)
-   - [Experience-Datenmodell (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Identity Service {#identity-service}](#identity-service-identity-service)
-   - [Abfrage-Service {#query-service}](#query-service-query-service)
-   - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-   - [Quellen {#sources}](#sources-sources)
+- [Warnhinweise {#alerts}](#alerts)
+- [Dashboards {#dashboards}](#dashboards)
+- [Datenvorbereitung {#data-prep}](#data-prep)
+- [Ziele {#destinations}](#destinations)
+- [Experience-Datenmodell (XDM) {#xdm}](#xdm)
+- [Identity Service {#identity-service}](#identity-service)
+- [Abfrage-Service {#query-service}](#query-service)
+- [Segmentation Service {#segmentation-service}](#segmentation-service)
+- [Quellen {#sources}](#sources)
 
 ## Warnhinweise {#alerts}
 
@@ -77,6 +76,8 @@ Weitere Informationen zur Datenvorbereitung finden Sie in der [Datenvorbereitung
 
 ## Ziele {#destinations}
 
+**Aktualisiert: 30. September 2024**
+
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
 **Neue oder aktualisierte Ziele** {#new-updated-destinations}
@@ -84,6 +85,7 @@ Weitere Informationen zur Datenvorbereitung finden Sie in der [Datenvorbereitung
 | Ziel | Beschreibung |
 | --- | --- |
 | [Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) | In der Version vom September 2024 wurde die Zuordnungsoption hinzugefügt, mit der der Parameter `countryCode` in Amazon Ads exportiert werden kann. Verwenden Sie `countryCode` im Schritt [Zuordnen](/help/destinations/catalog/advertising/amazon-ads.md#map) , um Ihre Identitätsübereinstimmungsraten mit Amazon zu verbessern. |
+| [[!BADGE B2B]{type=informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | Verwenden Sie dieses Ziel, um Ihre Zielgruppen für Account-Based Marketing (ABM) zu aktivieren. Werben Sie über die B2B-Demand Side Platform (DSP) von DemandBase an relevante Personen und Rollen in Ihren Zielkonten. Target-Konten können auch mit Demandbase-Drittanbieterdaten angereichert werden, um sie für andere nachgelagerte Anwendungsfälle in Marketing und Vertrieb nutzen zu können. |
 
 {style="table-layout:auto"}
 
