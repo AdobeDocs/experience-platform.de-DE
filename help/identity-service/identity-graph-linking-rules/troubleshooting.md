@@ -1,11 +1,10 @@
 ---
 title: Fehlerbehebungshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie, wie Sie häufige Probleme in den Regeln zur Identitätsdiagrammverlinkung beheben können.
-badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Die Regelfunktion zur Verknüpfung von Identitätsdiagrammen befindet sich derzeit in der Beta-Phase. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten. Die Funktion und die Dokumentation können sich ändern.
+>Die Regeln zur Verknüpfung von Identitätsdiagrammen sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Beim Testen und Validieren der Verknüpfungsregeln von Identitätsdiagrammen können Probleme im Zusammenhang mit der Datenerfassung und dem Verhalten von Diagrammen auftreten. In diesem Dokument erfahren Sie, wie Sie einige häufige Probleme beheben können, die bei der Arbeit mit Regeln zur Identitätsdiagrammzuordnung auftreten können.
 
@@ -167,7 +166,10 @@ Sie können auch die folgende Abfrage ausführen, um zu überprüfen, ob die Auf
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-Bei diesen beiden Abfragen wird davon ausgegangen, dass eine Identität von der identityMap und eine andere Identität von einem Identitätsdeskriptor gesendet wird. **HINWEIS**: In Experience-Datenmodell (XDM)-Schemas ist der Identitätsdeskriptor das Feld, das als Identität markiert ist.
+Bei diesen beiden Abfragen wird davon ausgegangen, dass:
+
+* Eine Identität wird von der identityMap und eine andere Identität von einem Identitätsdeskriptor gesendet. **HINWEIS**: In Experience-Datenmodell (XDM)-Schemas ist der Identitätsdeskriptor das Feld, das als Identität markiert ist.
+* Die CRMID wird über identityMap gesendet. Wenn die CRMID als Feld gesendet wird, entfernen Sie die `key='Email'` aus der WHERE-Klausel.
 
 ### Meine Erlebnisereignisfragmente werden erfasst, haben jedoch die &quot;falsche&quot;primäre Identität im Profil.
 
@@ -398,7 +400,7 @@ Im Allgemeinen sollten Tests an einer Entwicklungs-Sandbox die Anwendungsfälle 
 | Testfall | Testschritte | Erwartetes Ergebnis |
 | --- | --- | --- |
 | Präzise Personenentitätsdarstellung | <ul><li>Anonym misiertes Browsen</li><li>Zwei Personen imitieren (John, Jane), die sich mit demselben Gerät anmelden</li></ul> | <ul><li>Sowohl John als auch Jane sollten mit ihren Attributen und authentifizierten Ereignissen verknüpft sein.</li><li>Der zuletzt authentifizierte Benutzer sollte den anonymen Browsing-Ereignissen zugeordnet werden.</li></ul> |
-| Segmentierung | Erstellen Sie vier Segmentdefinitionen (**HINWEIS**: Für jedes Segment-Definitionspaar sollte eine mit Batch und die andere Streaming-Methode ausgewertet werden.) <ul><li>Segmentdefinition A: Segmentqualifizierung basierend auf den authentifizierten Ereignissen von John.</li><li>Segmentdefinition B: Segmentqualifizierung basierend auf den authentifizierten Ereignissen von Jane.</li></ul> | Unabhängig von freigegebenen Geräteszenarien sollten John und Jane immer für ihre jeweiligen Segmente qualifiziert sein. |
+| Segmentierung | Erstellen Sie vier Segmentdefinitionen (**HINWEIS**: Für jedes Segment-Definitionspaar sollte eine mit Batch und die andere Streaming-Methode ausgewertet werden.) <ul><li>Segmentdefinition A: Segmentqualifizierung basierend auf den authentifizierten Ereignissen und/oder Attributen von John.</li><li>Segmentdefinition B: Segmentqualifizierung basierend auf den authentifizierten Ereignissen und/oder Attributen von Jane.</li></ul> | Unabhängig von freigegebenen Geräteszenarien sollten John und Jane immer für ihre jeweiligen Segmente qualifiziert sein. |
 | Zielgruppenqualifizierung/einheitliche Journey in Adobe Journey Optimizer | <ul><li>Erstellen Sie eine Journey, die mit einer Audience-Qualifikationsaktivität beginnt (z. B. mit der oben erstellten Streaming-Segmentierung).</li><li>Erstellen Sie eine Journey, die mit einem Einzelereignis beginnt. Dieses Einzelereignis sollte ein authentifiziertes Ereignis sein.</li><li>Sie müssen die erneute Eingabe deaktivieren, wenn Sie diese Journey erstellen.</li></ul> | <ul><li>Unabhängig von freigegebenen Geräteszenarien sollten John und Jane die entsprechenden Journey, die sie eingeben sollten, Trigger haben.</li><li>John und Jane sollten die Journey nicht erneut eingeben, wenn die ECID an sie zurückgegeben wird.</li></ul> |
 
 {style="table-layout:auto"}

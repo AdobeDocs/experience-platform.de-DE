@@ -1,12 +1,11 @@
 ---
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
-badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1626'
-ht-degree: 3%
+source-wordcount: '1605'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Die Regeln zur Verknüpfung von Identitätsdiagrammen befinden sich derzeit in der Beta-Phase. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten. Die Funktion und die Dokumentation können sich ändern.
+>Die Regeln zur Verknüpfung von Identitätsdiagrammen sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Jede Kundenimplementierung ist einzigartig und auf die Ziele eines bestimmten Unternehmens zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der realen Welt:
 
@@ -90,7 +89,7 @@ Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wi
 >
 >* Primäre Identität ist die Identität, mit der ein Profilfragment gespeichert wird. Ein Profilfragment ist ein Datensatz mit Daten, in dem Informationen über einen bestimmten Benutzer gespeichert werden: Attribute (in der Regel über CRM-Datensätze erfasst) oder Ereignisse (in der Regel aus Erlebnisereignissen oder Online-Daten erfasst).
 
-### Beispiel für ein Diagrammszenario
+### Beispielszenario
 
 In diesem Abschnitt finden Sie ein Beispiel dafür, wie sich die Prioritätskonfiguration auf Ihre Daten auswirken kann.
 
@@ -184,6 +183,6 @@ Weitere Informationen finden Sie in den Dokumenten unter [Attribution AI](../../
 
 Weitere Informationen finden Sie in der [Übersicht über den Datenschutzdienst](../../privacy-service/home.md) .
 
-### Adobe Target- und Edge-Personalisierung
+### Adobe Target
 
-[Edge personalization](../../server-api/personalization-target.md) bezieht sich weiterhin darauf, wie Sie Ihr &quot;Primäres&quot;Kontrollkästchen für den Datenelementtyp im WebSDK konfiguriert haben (was in identityMap zu `primary=true` bedeutet).
+Sie können die Batch- und Streaming-Segmentierung nur in Adobe Target aktivieren.

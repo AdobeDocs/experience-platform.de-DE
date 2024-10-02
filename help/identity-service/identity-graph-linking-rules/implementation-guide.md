@@ -3,10 +3,10 @@ title: Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 3%
+source-wordcount: '1635'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Die Regeln zur Verknüpfung von Identitätsdiagrammen befinden sich derzeit in der Beta-Phase. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zu den Teilnahmekriterien zu erhalten. Die Funktion und die Dokumentation können sich ändern.
+>Die Regeln zur Verknüpfung von Identitätsdiagrammen sind derzeit nur eingeschränkt verfügbar. Wenden Sie sich an Ihr Adobe-Account-Team, um Informationen zum Zugriff auf die Funktion in Entwicklungs-Sandboxes zu erhalten.
 
 Lesen Sie dieses Dokument, um eine schrittweise Anleitung zur Implementierung Ihrer Daten mit dem Adobe Experience Platform Identity-Dienst zu erhalten.
 
@@ -61,8 +61,67 @@ Wenn Sie den [Adobe Analytics-Quell-Connector](../../sources/tutorials/ui/create
 
 ### XDM-Erlebnisereignisse
 
-* Während des Prozesses vor der Implementierung müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung wie CRMID enthalten.
-* Senden Sie beim Senden von Ereignissen mit XDM-Erlebnisereignissen keine leere Zeichenfolge als Identitätswert. Dies führt zu Systemfehlern.
+Während des Prozesses vor der Implementierung müssen Sie sicherstellen, dass die authentifizierten Ereignisse, die Ihr System an Experience Platform sendet, immer eine Personenkennung wie CRMID enthalten.
+
+>[!BEGINTABS]
+
+>[!TAB Authentifizierte Ereignisse mit Personen-ID]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB Authentifizierte Ereignisse ohne Personen-ID]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+Senden Sie beim Senden von Ereignissen mit XDM-Erlebnisereignissen keine leere Zeichenfolge als Identitätswert. Wenn der Identitätswert des Namespace mit der höchsten Namespace-Priorität eine leere Zeichenfolge ist, wird der Datensatz aus dem Echtzeit-Kundenprofil ignoriert. Dies gilt sowohl für identityMap als auch für Felder, die als Identität markiert sind.
 
 +++Auswählen , um ein Beispiel einer Payload mit einer leeren Zeichenfolge anzuzeigen
 
@@ -170,6 +229,12 @@ Verwenden Sie für jedes Feedback die Option **[!UICONTROL Beta feedback]** im U
 Verwenden Sie das Identitäts-Dashboard, um Einblicke in den Zustand Ihrer Identitätsdiagramme zu erhalten, z. B. Ihre gesamten Trends bei Identitätszählung und Diagrammanzahl, Identitätszählung nach Namespace und Diagrammanzahl nach Diagrammgröße. Sie können das Identitäts-Dashboard auch verwenden, um Trends in Diagrammen mit zwei oder mehr Identitäten anzuzeigen, die nach Namespace organisiert sind.
 
 Wählen Sie die Auslassungszeichen (`...`) aus und wählen Sie dann **[!UICONTROL Mehr anzeigen]** , um weitere Informationen zu erhalten und zu überprüfen, ob keine ausgeblendeten Diagramme vorhanden sind.
+
+![Das Identitäts-Dashboard im UI-Arbeitsbereich des Identity Service.](../images/implementation/identity_dashboard.png)
+
+Verwenden Sie das Fenster, das angezeigt wird, um Informationen zu den reduzierten Diagrammen anzuzeigen. In diesem Beispiel werden sowohl E-Mail als auch Telefon als eindeutiger Namespace markiert, sodass Ihre Sandbox keine ausgeblendeten Diagramme enthält.
+
+![Das Popup-Fenster für Diagramme mit mehreren Identitäten.](../images/implementation/graphs.png)
 
 ## Anhang {#appendix}
 
