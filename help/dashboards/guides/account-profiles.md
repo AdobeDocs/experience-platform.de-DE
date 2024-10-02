@@ -2,14 +2,14 @@
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1827'
 ht-degree: 4%
 
 ---
 
-# Dashboard [!UICONTROL Kontoprofile]
+# Dashboard &quot;Kontoprofile&quot;
 
 Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Kontoprofilen anzeigen können, die in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf das Dashboard [!UICONTROL Kontoprofile] in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
@@ -64,6 +64,11 @@ Wählen Sie die [!UICONTROL Profil-ID] aus den Ergebnissen aus, die auf der Regi
 Die auf der Registerkarte [!UICONTROL Details] angezeigten Kontoprofilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht des einzelnen Kontos zu bilden. Weitere Informationen zu den Anzeigefunktionen von Kontoprofilen in der Platform-Benutzeroberfläche finden Sie in der Dokumentation zum Durchsuchen von Kontoprofilen in Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) .[
 
 ## Standard-Widgets {#standard-widgets}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="Kunden pro Konto - Übersicht"
+>abstract="Dieses Durchlaufwidget bietet Einblicke in die Struktur Ihrer B2B-Daten. Sie können damit feststellen, wie viele Kontoprofile nicht mit Kundenprofilen verknüpft sind oder mit denen ein oder mehrere Kundenprofile verknüpft sind.<ul><li>Direkte Kunden: Kundenprofile, die über die `personComponents` -Route direkt mit einem Konto verknüpft sind.</li><li>Indirekte Kunden: Kundenprofile, die über die `Account-Person` -Route mit einem Konto verknüpft sind.</li></ul>"
 
 Adobe stellt standardmäßige Widgets bereit, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Kontoprofilen visualisieren können.
 
