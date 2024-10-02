@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise, September 2024
 description: Versionshinweise September 2024 zu Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
+source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
 workflow-type: tm+mt
 source-wordcount: '2199'
 ht-degree: 23%
@@ -15,15 +15,15 @@ ht-degree: 23%
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience Platform:
 
-- [Warnhinweise {#alerts}](#alerts)
-- [Dashboards {#dashboards}](#dashboards)
-- [Datenvorbereitung {#data-prep}](#data-prep)
-- [Ziele {#destinations}](#destinations)
-- [Experience-Datenmodell (XDM) {#xdm}](#xdm)
-- [Identity Service {#identity-service}](#identity-service)
-- [Abfrage-Service {#query-service}](#query-service)
-- [Segmentation Service {#segmentation-service}](#segmentation-service)
-- [Quellen {#sources}](#sources)
+- [Warnhinweise](#alerts)
+- [Dashboards](#dashboards)
+- [Datenvorbereitung](#data-prep)
+- [Ziele](#destinations)
+- [Experience-Datenmodell (XDM)](#xdm)
+- [Identity Service](#identity-service)
+- [Abfrage-Service](#query-service)
+- [Segmentierungs-Service](#segmentation-service)
+- [Quellen](#sources)
 
 ## Warnhinweise {#alerts}
 
