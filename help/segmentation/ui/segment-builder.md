@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Segment Builder
 description: Segment Builder in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die Dateneigenschaften entsprechen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
+source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
-source-wordcount: '4784'
-ht-degree: 67%
+source-wordcount: '4955'
+ht-degree: 65%
 
 ---
 
@@ -28,6 +28,19 @@ ht-degree: 67%
 >abstract="Die drei Feldtypen, aus denen eine Segmentdefinition besteht, sind Attribute, Ereignisse und Zielgruppen. Mit Attributen kann man Profilattribute verwenden, die zur Klasse „XDM-Kontaktprofil“ gehören. Mit Ereignissen kann man mithilfe von XDM ExperienceEvent-Datenelementen eine Zielgruppe basierend auf Aktionen oder stattfindenden Ereignissen erstellen, und mit Zielgruppen kann man importierte Zielgruppen aus externen Quellen verwenden."
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse als Komponenten für neue Definitionen verwendet werden.
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="Zusammenfassungsdaten"
+>abstract="Zusammenfassungsdaten werden nur für Profilattribute angezeigt und für Ereignis- oder Zielgruppenattribute wird <b>nicht</b> angezeigt.<br/><br/>Zusammenfassungsdaten für Profilattribute werden unter folgenden Umständen möglicherweise nicht angezeigt: <ol><li>Einige Werte des Attributs sind mehr als 100 Zeichen lang.</li><li>Es gibt mehr als 3000 eindeutige Werte für das Attribut.</li></ol>"
+
+>[!NOTE]
+>
+>Wenn Sie die Informationsblase eines Attributs auswählen, können Sie die Verteilung der Werte des Felds, auch Zusammenfassungsdaten genannt, anzeigen. Diese sind auf der Registerkarte &quot;Attribute&quot;nur **1} verfügbar und stehen nicht für die Verwendung auf der Registerkarte &quot;Ereignisse&quot;oder &quot;Zielgruppen&quot;zur Verfügung.**
+>
+>Zusammenfassungsdaten werden angezeigt, wenn das Attribut die folgenden Kriterien erfüllt: Alle Werte des Attributs sind maximal 100 Zeichen und es gibt 3000 oder weniger eindeutige Werte für das Attribut.
+>
+>Ein Attribut enthält jedoch **nicht** Zusammenfassungsdaten, wenn es sich um Daten mit mehreren Entitäten handelt, die über eine Beziehung mit dem Profil verknüpft sind. Wenn Sie beispielsweise ein benutzerdefiniertes Schema mit dem Namen `Vehicle` haben, enthalten die **properties** im Schema `Vehicle` die Zusammenfassungsdaten **nicht**.
 
 Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von [!DNL Segment Builder] sehen. Der Abschnitt **[!UICONTROL Felder]** enthält eine Registerkarte für jeden der Hauptbausteine: [!UICONTROL Attribute], [!UICONTROL Ereignisse] und [!UICONTROL Zielgruppen].
 
