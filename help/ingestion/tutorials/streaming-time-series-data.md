@@ -5,7 +5,7 @@ title: Streamen von Zeitreihendaten mit Streaming-Aufnahme-APIs
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 57%
@@ -307,12 +307,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
   -H "Content-Type: application/json" \
   -d '{
     "header": {
-        "schemaRef": {
-            "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        },
-        "flowId": "{FLOW_ID}",
-        "datasetId": "{DATASET_ID}"
+    "datasetId": "{DATASET_ID}",
+    "flowId": "{FLOW_ID}",
+    "imsOrgID": "{ORG_ID}"
     },
     "body": {
         "xdmMeta": {
@@ -377,15 +374,12 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
 
 ```json
     "header": {
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        },
-        "imsOrgId": "{ORG_ID}",
-        "datasetId": "{DATASET_ID}",
-        "source": {
-            "name": "Sample source name"
-        }
+    "datasetId": "{DATASET_ID}",
+    "flowId": "{FLOW_ID}",
+    "imsOrgID": "{ORG_ID}",
+      "source": {
+        "name": "ACME source"
+      }
     }
 ```
 
