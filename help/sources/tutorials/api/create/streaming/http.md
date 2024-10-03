@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung
 title: Erstellen einer HTTP-API-Streaming-Verbindung mithilfe der Flow Service-API
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Flow Service-API eine Streaming-Verbindung mithilfe der HTTP-API-Quelle für Roh- und XDM-Daten erstellen
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1646'
 ht-degree: 33%
 
 ---
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Ohne Umwandlungen]
+>[!TAB XDM]
 
-Die folgende Anfrage erstellt einen Streaming-Datenfluss für die HTTP-API ohne Datenumwandlungen.
+Die folgende Anfrage erstellt einen Streaming-Datenfluss für XDM-Daten.
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB Mit Transformationen]
+>[!TAB RAW]
 
-Die folgenden Anfragen erstellen einen Streaming-Datenfluss für die HTTP-API mit auf Ihre Daten angewendeten Zuordnungs-Transformationen.
+Die folgenden Anfragen erstellen einen Streaming-Datenfluss für Rohdaten.
 
 Beim Erstellen eines Datenflusses mit Transformationen kann der Parameter `name` nicht geändert werden. Dieser Wert muss immer auf `Mapping` gesetzt werden.
 
@@ -559,7 +559,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zum neu erstellte
 }
 ```
 
-## Post-Daten, die in Platform erfasst werden sollen {#ingest-data}
+## Beitragsdaten, die in Platform erfasst werden sollen {#ingest-data}
 
 >[!NOTE]
 >
