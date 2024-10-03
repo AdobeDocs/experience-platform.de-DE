@@ -2,9 +2,9 @@
 title: Sandbox-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 50f3976d73c8a34a51179157a7c93e3d9b1c0ff4
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 8%
 
 ---
@@ -58,7 +58,7 @@ In der folgenden Tabelle sind [!DNL Adobe Journey Optimizer] -Objekte aufgeführ
 | [!DNL Adobe Journey Optimizer] | Ereignis | Die auf der Journey verwendeten Ereignisse und Ereignisdetails werden kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt. |
 | [!DNL Adobe Journey Optimizer] | Aktion | E-Mail- und Push-Nachrichten, die auf der Journey verwendet werden, können als abhängige Objekte kopiert werden. Die in den Journey-Feldern verwendeten Kanalaktionsaktivitäten, die zur Personalisierung in der Nachricht verwendet werden, werden nicht auf Vollständigkeit überprüft. Inhaltsbausteine werden nicht kopiert.<br><br>Die auf dem Journey verwendete Profilaktion &quot;Aktualisieren&quot;kann kopiert werden. Benutzerdefinierte Aktionen und Aktionsdetails, die auf der Journey verwendet werden, werden ebenfalls kopiert. Es wird immer eine neue Version in der Ziel-Sandbox erstellt. |
 | [!DNL Adobe Journey Optimizer] | Journey | Durch Hinzufügen einer ganzen Journey zu einem Package werden die meisten Objekte, von denen die Journey abhängig ist, kopiert, einschließlich Zielgruppen, Schemata, Ereignisse und Aktionen. |
-| [!DNL Adobe Journey Optimizer] | Inhaltsvorlage | Eine Inhaltsvorlage kann als abhängiges Objekt des Journey-Objekts kopiert werden. Eigenständige Vorlagen, mit denen Sie benutzerdefinierte Inhalte in allen Journey Optimizer-Kampagnen und Journey einfach wiederverwenden können. |
+| [!DNL Adobe Journey Optimizer] | Inhaltsvorlage | Eine Inhaltsvorlage kann als abhängiges Objekt des Journey-Objekts kopiert werden. Eigenständige Vorlagen ermöglichen die einfache Wiederverwendung benutzerdefinierter Inhalte in allen Journey Optimizer-Kampagnen und -Journey. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Ein Fragment kann als abhängiges Objekt des Journey-Objekts kopiert werden. Fragmente sind wiederverwendbare Komponenten, die in einer oder mehreren E-Mails in Journey Optimizer-Kampagnen und -Journey referenziert werden können. |
 
 Oberflächen (z. B. Vorgaben) werden nicht kopiert. Das System wählt basierend auf dem Nachrichtentyp und dem Oberflächennamen automatisch die nächstmögliche Übereinstimmung in der Ziel-Sandbox aus. Wenn keine Oberflächen in der Ziel-Sandbox gefunden werden, schlägt die Oberflächenkopie fehl, was dazu führt, dass die Nachrichtenkopie fehlschlägt, da für eine Nachricht eine Oberfläche zur Einrichtung verfügbar sein muss. In diesem Fall muss mindestens eine Fläche für den rechten Kanal der Nachricht erstellt werden, damit die Kopie funktioniert.

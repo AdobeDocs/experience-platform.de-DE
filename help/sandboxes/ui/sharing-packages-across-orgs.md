@@ -2,10 +2,10 @@
 title: Freigeben von Paketen in der gesamten Organisation mithilfe von Sandbox Tooling
 description: Erfahren Sie, wie Sie mit Sandbox Tooling in Adobe Experience Platform Pakete unternehmensübergreifend freigeben können.
 badge: Beta
-source-git-commit: 492f1d9dc08965dba3f1c5b6e1d479ef645afd04
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 2%
+source-wordcount: '646'
+ht-degree: 0%
 
 ---
 
@@ -15,29 +15,27 @@ ht-degree: 2%
 >
 >Die organisationsübergreifende Freigabe von Paketen befindet sich derzeit in der Beta-Phase und steht nur ausgewählten Beta-Kunden zur Verfügung.
 
-In diesem Dokument wird beschrieben, wie Sie Sandbox-Tools in Adobe Experience Platform verwenden, um Pakete unternehmensübergreifend freizugeben.
+Dank der Sandbox-Tool-Funktion können Sie die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos exportieren und importieren. In diesem Dokument wird beschrieben, wie Sie Sandbox-Tools in Adobe Experience Platform verwenden, um Pakete unternehmensübergreifend freizugeben. Es gibt zwei Typen von freigegebenen Paketen:
 
-Dank der Sandbox-Tool-Funktion können Sie die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos exportieren und importieren. Es gibt zwei Typen von freigegebenen Paketen:
+- **Privates Paket**
 
-**Privates Paket**
+[Private Pakete](#private-packages) können nur für Organisationen freigegeben werden, die die Freigabeanfrage von der Quellorganisation über eine Opt-in-Zulassungsliste genehmigt haben.
 
-Private Pakete können nur für Organisationen freigegeben werden, die die Freigabeanfrage von der Quellorganisation über eine Opt-in-Zulassungsliste genehmigt haben.
+- **Öffentliches Paket**
 
-**Öffentliches Paket**
+[Öffentliche Pakete](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) können ohne zusätzliche Genehmigung importiert werden. Diese Pakete können auf der Website, dem Blog oder der Plattform eines Partners freigegeben werden. Mit der Paket-Payload können Pakete kopiert und aus diesen Kanälen in die Zielorganisation eingefügt werden.
 
-Öffentliche Packages können ohne zusätzliche Validierung importiert werden. Diese Pakete können auf der Website, dem Blog oder der Plattform eines Partners freigegeben werden. Mit der Paket-Payload können Pakete kopiert und aus diesen Kanälen in die Zielorganisation eingefügt werden.
-
-## Private Pakete
+## Private Pakete {#private-packages}
 
 >[!NOTE]
 >
 >Um eine Freigabeanforderung zu starten und zu genehmigen und Pakete unternehmensübergreifend freizugeben, benötigen Sie die rollenbasierte Zugriffssteuerungsberechtigung **package-share** .
 
-Die Sandbox-Tool-Funktion bietet Ihnen die Möglichkeit, Unternehmenspartnerschaften zu erstellen, den Status einer Partneranfrage zu verfolgen, bestehende Partnerschaften zu verwalten und Pakete mit Partnerorganisationen zu teilen.
+Verwenden Sie die Sandbox Tooling-Funktion, um Partnerschaften zu erstellen, Statistiken zu Partneranfragen zu verfolgen, bestehende Partnerschaften zu verwalten und Pakete mit Partnerorganisationen zu teilen.
 
 ### Erstellen einer Partnerschaft für eine Organisation
 
-Navigieren Sie zum Erstellen einer Anforderung für eine Partnerschaft innerhalb der Organisation zur Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Partner-Organisationen]** . Wählen Sie dann **[!UICONTROL Partnerorganisationen verwalten]** aus.
+Navigieren Sie zum Erstellen einer Anforderung für eine Partnerschaft innerhalb der Organisation zur Registerkarte **[!UICONTROL Sandboxes]** **[!UICONTROL Partner-Organisationen]** . Wählen Sie dann **[!UICONTROL Partnerorganisationen verwalten]** aus.
 
 ![Die Sandbox-Benutzeroberfläche, wobei die Registerkarte &quot;Partner-Organisationen&quot;und &quot;Partnerorganisationen verwalten&quot;hervorgehoben sind.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
@@ -53,13 +51,13 @@ Die Freigabeanforderung wurde erfolgreich an die Partnerorganisation gesendet un
 
 ![Die Registerkarte Partner-Organisationen mit hervorgehobener ausgehender Anfrage.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
-### Partnerschaftserfordernis genehmigen
+### Partnerschaftserfordernis genehmigen {#authorize-request}
 
 Navigieren Sie zum Autorisieren einer Partneranfrage für eine Organisation zur Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Partner-Organisationen]** . Wählen Sie als Nächstes **[!UICONTROL Eingehende Anforderung]** aus.
 
 ![Die Sandbox-Benutzeroberfläche mit der Registerkarte &quot;Partner-Organisationen&quot;und der eingehenden Anforderung hervorgehoben.](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
-Der aktuelle **[!UICONTROL Status]** für die Anfrage lautet **Ausstehend**. Um die Anforderung zu genehmigen, wählen Sie die Auslassungszeichen (`...`) neben der ausgewählten Anforderung aus und wählen Sie dann **[!UICONTROL Genehmigen]** aus der Dropdown-Liste aus.
+Der aktuelle **[!UICONTROL Status]** für die Anfrage lautet in dieser Phase **Ausstehend**. Um die Anforderung zu genehmigen, wählen Sie die Auslassungszeichen (`...`) neben der ausgewählten Anforderung aus und wählen Sie dann **[!UICONTROL Genehmigen]** aus der Dropdown-Liste aus.
 
 ![Liste der eingehenden Anforderungen, die das Dropdown-Menü mit hervorgehobener Genehmigung anzeigen.](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
@@ -71,9 +69,9 @@ Sie werden zur Seite [!UICONTROL Eingehende Anfrage] zurückgeleitet und der Sta
 
 ![ Liste der eingehenden Anforderungen mit hervorgehobener Genehmigt.](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
-Sie können jetzt Pakete zwischen Ihrer Organisation und der Quellorganisation freigeben.
+Verwenden Sie diesen Workflow/Prozess, um Pakete zwischen Ihrer Organisation und der Quellorganisation freizugeben.
 
-### Freigeben von Paketen für Partnerorganisationen
+### Freigeben von Paketen für Partnerorganisationen {#share-package}
 
 >[!NOTE]
 >
@@ -85,14 +83,14 @@ Um ein Paket für eine genehmigte Partnerorganisation freizugeben, navigieren Si
 
 Wählen Sie im Dialogfeld **[!UICONTROL Package freigeben]** das freizugebende Paket aus der Dropdown-Liste **[!UICONTROL Freigabeeinstellungen]** und dann **[!UICONTROL Bestätigen]** aus.
 
-![Geben Sie das Dialogfeld &quot;Package freigeben&quot;mit den Freigabeeinstellungen frei und bestätigen Sie die Markierung.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
-
 >[!TIP]
 >
 >Es ist möglich, mehrere Organisationen auszuwählen. Ausgewählte Organisationen werden unter dem Dropdown-Menü [!UICONTROL Freigabeeinstellungen] angezeigt.
 
-## Nächste Schritte
+![Geben Sie das Dialogfeld &quot;Package freigeben&quot;mit den Freigabeeinstellungen frei und bestätigen Sie die Markierung.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Nächste Schritte {#next-steps}
 
 In diesem Dokument erfahren Sie, wie Sie mit der Sandbox-Tool-Funktion Pakete unternehmensübergreifend freigeben können. Weitere Informationen finden Sie im [Sandbox-Tool-Handbuch](../ui/sandbox-tooling.md).
 
-Anweisungen zum Ausführen verschiedener Vorgänge mit der Sandbox-API finden Sie im [Sandbox-Entwicklerhandbuch](../api/getting-started.md). Eine allgemeine Übersicht über Sandboxes im Experience Platform finden Sie in der [Übersichtsdokumentation](../home.md).
+Informationen zum Ausführen verschiedener Vorgänge mithilfe der Sandbox-API finden Sie im [Sandbox-Entwicklerhandbuch](../api/getting-started.md). Eine allgemeine Übersicht über Sandboxes im Experience Platform finden Sie in der [Übersichtsdokumentation](../home.md).
