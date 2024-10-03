@@ -2,9 +2,9 @@
 title: Erstanbieter-Geräte-IDs im Web SDK
 description: Erfahren Sie, wie Sie Erstanbieter-Geräte-IDs (FPIDs) im Adobe Experience Platform Web SDK konfigurieren.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ Die vom Edge Network zurückgegebene Fehlerantwort ähnelt in diesem Fall der fo
     }
 }
 ```
+
+## Festlegen einer FPID in Ihrer eigenen Domäne {#setting-fpid-domain}
+
+Zusätzlich zum Festlegen von [!DNL FPID] in der Identitätszuordnung können Sie das [!DNL FPID] -Cookie in Ihrer eigenen Domäne setzen, wenn Sie eine Erstanbieter-Datenerfassung [!DNL CNAME] konfiguriert haben.
+
+Wenn die Erstanbieter-Datenerfassung mit dem Wert &quot;[!DNL CNAME]&quot;aktiviert wird, werden alle Cookies für Ihre Domäne auf Anforderungen gesendet, die an den Datenerfassungsendpunkt gesendet werden.
+
+Alle Cookies, die für die Datenerfassung in Adobe nicht relevant sind, werden gelöscht. Für [!DNL FPID] können Sie den Namen des [!DNL FPID] -Cookies in der Datastream-Konfiguration angeben. Wenn Sie dies tun, liest das Edge Network den Inhalt des Cookies [!DNL FPID], anstatt nach dem Wert [!DNL FPID] in der Identitätszuordnung zu suchen.
+
+Um diese Funktion verwenden zu können, müssen Sie die [!DNL FPID] auf der obersten Ebene Ihrer Domäne und nicht auf eine bestimmte Subdomäne festlegen. Wenn Sie ihn für eine Subdomäne festlegen, wird der Cookie-Wert nicht an das Edge Network gesendet und die [!DNL FPID] -Lösung funktioniert nicht wie gewünscht.
 
 ## ID-Hierarchie {#id-hierarchy}
 
