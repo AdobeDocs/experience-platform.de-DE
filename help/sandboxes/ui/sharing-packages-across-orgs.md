@@ -2,9 +2,9 @@
 title: Freigeben von Paketen in der gesamten Organisation mithilfe von Sandbox Tooling
 description: Erfahren Sie, wie Sie mit Sandbox Tooling in Adobe Experience Platform Pakete unternehmensübergreifend freigeben können.
 badge: Beta
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Navigieren Sie zum Erstellen einer Anforderung für eine Partnerschaft innerhalb
 
 ![Die Sandbox-Benutzeroberfläche, wobei die Registerkarte &quot;Partner-Organisationen&quot;und &quot;Partnerorganisationen verwalten&quot;hervorgehoben sind.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-Geben Sie im Dialogfeld [!UICONTROL Package Partner Management] die Organisations-ID in **[!UICONTROL Enter Org ID]** ein und drücken Sie die Eingabetaste. Die Organisations-ID wird im Abschnitt **[!UICONTROL Ausgewählte Organisations-IDs]** unten angezeigt. Wählen Sie nach dem Hinzufügen der IDs **[!UICONTROL Bestätigen]** aus.
+Geben Sie im Dialogfeld [!UICONTROL Package Partner Management] die Organisations-ID in **[!UICONTROL Enter Org ID]** ein und drücken Sie die Eingabetaste (Windows) oder die Eingabetaste (Mac). Die Organisations-ID wird im Abschnitt **[!UICONTROL Ausgewählte Organisations-IDs]** unten angezeigt. Wählen Sie nach dem Hinzufügen der IDs **[!UICONTROL Bestätigen]** aus.
 
 >[!TIP]
 >
