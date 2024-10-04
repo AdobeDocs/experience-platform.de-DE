@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2802'
-ht-degree: 24%
+source-wordcount: '2821'
+ht-degree: 23%
 
 ---
 
@@ -102,6 +102,10 @@ Ein Bestätigungsdialogfeld wird angezeigt. Wählen Sie **[!UICONTROL Bestätige
 ### Ergebniszähler {#result-count}
 
 Der Abfrage-Editor verfügt über eine Ausgabe von maximal 50.000 Zeilen. Sie können die Anzahl der Zeilen auswählen, die gleichzeitig in der Konsole &quot;Abfrage-Editor&quot;angezeigt werden. Um die Anzahl der in der Konsole angezeigten Zeilen zu ändern, wählen Sie das Dropdown-Menü **[!UICONTROL Ergebnisanzahl]** aus und wählen Sie aus den Optionen 50, 100, 150, 300 und 500 aus.
+
+>[!NOTE]
+>
+>Da die Platform-Benutzeroberfläche nur bis zu 500 Zeilen unterstützen kann, wird die Übergabe eines LIMIT-Werts über 500 ignoriert.
 
 ![Der Abfrage-Editor mit hervorgehobenem Dropdown-Menü &quot;Ergebnisanzahl&quot;.](../images/ui/query-editor/result-count.png)
 
