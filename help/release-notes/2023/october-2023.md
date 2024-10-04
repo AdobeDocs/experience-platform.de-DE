@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
+title: Adobe Experience Platform – Versionshinweise, Oktober 2023
 description: Versionshinweise von Oktober 2023 für Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1054'
 ht-degree: 37%
 
 ---
@@ -98,7 +98,7 @@ Weiterführende Informationen zu Sandboxes finden Sie in der [Sandbox-Übersicht
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Kontozielgruppen (beschränkte allgemeine Verfügbarkeit) | In Real-time Customer Data Platform B2B Edition können Sie jetzt die Kontosegmentierung verwenden, um die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen zu erzielen. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht über Kontozielgruppen](../../segmentation/ui/account-audiences.md) . |
+| Kontozielgruppen (beschränkte allgemeine Verfügbarkeit) | In Real-time Customer Data Platform B2B edition können Sie jetzt die Kontosegmentierung verwenden, um die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen zu erzielen. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht über Kontozielgruppen](../../segmentation/ui/account-audiences.md) . |
 
 Weiterführende Informationen zu Segmentation Service finden Sie in der [Segmentation Service - Übersicht](../../segmentation/home.md) .
 

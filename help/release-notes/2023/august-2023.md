@@ -1,10 +1,10 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
+title: Adobe Experience Platform – Versionshinweise August 2023
 description: Versionshinweise August 2023 für Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1741'
 ht-degree: 43%
 
 ---
