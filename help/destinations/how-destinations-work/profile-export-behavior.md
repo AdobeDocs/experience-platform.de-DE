@@ -2,10 +2,10 @@
 title: Profilexportverhalten
 description: Erfahren Sie, wie sich das Verhalten beim Profilexport zwischen den verschiedenen Integrationsmustern unterscheidet, die in Experience Platform-Zielen unterstützt werden.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
-ht-degree: 89%
+source-wordcount: '2939'
+ht-degree: 87%
 
 ---
 
@@ -192,7 +192,7 @@ Im ersten Dateiexport nach der Einrichtung des Aktivierungs-Workflows wird die g
 
 >[!TIP]
 >
->Zur Erinnerung: Änderungen an Attributwerten oder Identitätszuordnungen für ein Profil qualifizieren ein Profil nicht für die Aufnahme in einen inkrementellen Dateiexport.
+>Zur Erinnerung: Änderungen bei Identitätszuordnungen für ein Profil qualifizieren es sich für einen inkrementellen Dateiexport. Änderungen der Attributwerte *nicht* qualifizieren sie für einen inkrementellen Dateiexport.
 
 ## Nächste Schritte {#next-steps}
 
