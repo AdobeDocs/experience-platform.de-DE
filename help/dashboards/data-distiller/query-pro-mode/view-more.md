@@ -2,7 +2,7 @@
 title: Mehr anzeigen
 description: Erfahren Sie mehr über die verschiedenen Anzeigeoptionen für SQL-analysierte Daten. Über Ihr benutzerdefiniertes Dashboard können Sie die tabellarischen Ergebnisse Ihrer Analyse anzeigen oder die verarbeiteten Daten im CSV-Format herunterladen.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Sie können Spalten sortieren, indem Sie das Dropdown-Menü neben dem Spaltennam
 
 >[!NOTE]
 >
->Die Optionen [!UICONTROL Aufsteigende Sortierung] und [!UICONTROL Absteigende Sortierung] werden nur für Spalten angezeigt, die mit der [Sortierungsfunktion](../overview.md/#advanced-attributes) konfiguriert wurden.
+>Die Optionen [!UICONTROL Aufsteigende Sortierung] und [!UICONTROL Absteigende Sortierung] werden nur für Spalten angezeigt, die mit der [Sortierungsfunktion](./overview.md#advanced-attributes) konfiguriert wurden.
 
 ![Ein Dropdown-Menü für die Tabellenspalte, in dem die Optionen Aufsteigende Sortierung und Absteigende Sortierung hervorgehoben sind.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 

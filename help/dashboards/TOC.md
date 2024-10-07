@@ -5,9 +5,9 @@ breadcrumb-title: Anleitung zu Dashboards
 user-guide-description: Erfahren Sie, wie Sie Daten in Experience Platform über anpassbare Dashboards visualisieren können.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '134'
 ht-degree: 64%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 64%
 * [Dashboards](user-defined-dashboards.md)
 * [Herunterladen von Dashboards als PDF](download.md)
 * Data Distiller {#data-distiller}
-   * [Übersicht](data-distiller/overview.md)
    * SQl Insights für erweiterte Anwendungsberichte {#sql-insights}
       * [Übersicht](data-distiller/sql-insights/overview.md)
    * Query pro mode {#query-pro-mode}

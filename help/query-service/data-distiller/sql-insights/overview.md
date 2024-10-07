@@ -2,7 +2,7 @@
 title: SQL Insights
 description: Erfahren Sie mehr über die Anwendungsfälle, die wichtigsten Funktionen und erforderlichen Schritte zur Entwicklung eines SQL Insights-Dashboards mit Data Distiller. Erfahren Sie, wie die SQL Insights-Funktion in Data Distiller die Transparenz verbessert und betriebliche Einblicke in verschiedene Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen erhält.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 Erstellen Sie maßgeschneiderte Berichtsdatenmodelle, um tiefere Einblicke zu gewinnen, Strategien zu optimieren und Analysen an spezifische Geschäftsanforderungen mit Data Distiller SQL Insights anzupassen. Verwenden Sie die SQL Insights-Funktion, um die Transparenz zu erhöhen und operative Einblicke aus Ihren Adobe Experience Platform-Daten über Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen hinweg zu gewinnen. Diese Funktion bietet eine vielseitige, adaptive Lösung, um die Berichtsdatenmodelle Ihres Unternehmens an Ihre spezifischen Geschäftsanforderungen anzupassen.
 
-Um [Ihre SQL Insights](../../../dashboards/data-distiller/overview.md) zu visualisieren, können Sie [query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md) verwenden, um komplexe Analysen mit benutzerdefinierten SQL-Abfragen durchzuführen und Ihre Daten in leicht verständliche Diagramme umzuwandeln. Verwenden Sie den Abfragepro-Modus, um individuelle Einblicke und Visualisierungen in Ihren Dashboards zu erstellen und sowohl technische als auch nicht technische Zielgruppen zu berücksichtigen, indem Sie Ihre Einblicke als CSV-Dateien herunterladen.
+Um [Ihre SQL Insights](../../../dashboards/data-distiller/sql-insights/overview.md) zu visualisieren, können Sie [query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md) verwenden, um komplexe Analysen mit benutzerdefinierten SQL-Abfragen durchzuführen und Ihre Daten in leicht verständliche Diagramme umzuwandeln. Verwenden Sie den Abfragepro-Modus, um individuelle Einblicke und Visualisierungen in Ihren Dashboards zu erstellen und sowohl technische als auch nicht technische Zielgruppen zu berücksichtigen, indem Sie Ihre Einblicke als CSV-Dateien herunterladen.
 
 In diesem Dokument werden die Anwendungsfälle, grundlegenden Funktionen und erforderlichen Schritte zum Entwickeln eines SQL Insights-Dashboards mit Data Distiller beschrieben.
 
