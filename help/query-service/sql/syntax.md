@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-Syntax in Query Service
 description: In diesem Dokument wird die von Adobe Experience Platform Query Service unterstützte SQL-Syntax erläutert.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 5%
 
 ---
@@ -577,7 +577,7 @@ Die folgende Tabelle zeigt den Unterschied in den Ergebnissen, den die Einstellu
 
 ### Fallback-Momentaufnahme bei Fehler beheben {#resolve-fallback-snapshot-on-failure}
 
-Die Option `resolve_fallback_snapshot_on_failure` wird verwendet, um das Problem einer abgelaufenen Snapshot-ID zu beheben. Momentaufnahmen-Metadaten laufen nach zwei Tagen ab und ein abgelaufener Schnappschuss kann die Logik eines Skripts ungültig machen. Dies kann bei der Verwendung anonymer Bausteine ein Problem darstellen.
+Die Option `resolve_fallback_snapshot_on_failure` wird verwendet, um das Problem einer abgelaufenen Snapshot-ID zu beheben.
 
 Setzen Sie die Option `resolve_fallback_snapshot_on_failure` auf &quot;true&quot;, um einen Snapshot mit einer vorherigen Snapshot-ID zu überschreiben.
 

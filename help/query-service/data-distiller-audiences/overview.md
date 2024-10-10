@@ -1,9 +1,9 @@
 ---
 title: Erstellen von Zielgruppen mit SQL
 description: Erfahren Sie, wie Sie mit der SQL-Zielgruppenerweiterung in Adobe Experience Platform Data Distiller Zielgruppen mit SQL-Befehlen erstellen, verwalten und veröffentlichen können. In diesem Handbuch werden alle Aspekte des Zielgruppen-Lebenszyklus behandelt, einschließlich Erstellung, Aktualisierung und Löschung von Profilen und Verwendung datengesteuerter Zielgruppendefinitionen für dateibasierte Ziele.
-source-git-commit: fbfd232c4e101f29ae01328c33763786a0e4a8cb
+source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1280'
 ht-degree: 1%
 
 ---
@@ -137,41 +137,103 @@ In diesem Abschnitt werden häufig gestellte Fragen zum Erstellen und Verwalten 
 
 +++Auswählen, um Fragen und Antworten anzuzeigen
 
+**Fragen**:
+
 - Wird die Zielgruppenerstellung nur für flache Datensätze unterstützt?
-- Verschachtelte Datensätze werden ebenfalls unterstützt, in der Zielgruppe sind jedoch nur flache Attribute verfügbar.
+
++++Antwort
+
+Verschachtelte Datensätze werden ebenfalls unterstützt, in der Zielgruppe sind jedoch nur flache Attribute verfügbar.
+
++++
 
 - Führt die Erstellung von Zielgruppen zu einem einzelnen Datensatz oder mehreren Datensätzen oder variiert die Erstellung je nach Konfiguration?
-- Es gibt eine Eins-zu-Eins-Zuordnung zwischen einer Zielgruppe und einem Datensatz.
+
++++Antwort
+
+Es gibt eine Eins-zu-Eins-Zuordnung zwischen einer Zielgruppe und einem Datensatz.
+
++++
 
 - Ist der bei der Zielgruppenerstellung erstellte Datensatz für Profil markiert?
-- Nein, der bei der Zielgruppenerstellung erstellte Datensatz ist nicht für Profil markiert.
+
++++Antwort
+
+Nein, der bei der Zielgruppenerstellung erstellte Datensatz ist nicht für Profil markiert.
+
++++
 
 - Wird der Datensatz im Data Lake erstellt?
-- Ja, der Datensatz wird im Data Lake erstellt.
+
++++Antwort
+
+Ja, der Datensatz wird im Data Lake erstellt.
+
++++
 
 - Sind Attribute in der Zielgruppe auf die Verwendung nur in dateibasierten Enterprise-Zielen beschränkt? (Ja oder Nein)
-- Ja, Attribute in der Zielgruppe sind auf die Verwendung nur in dateibasierten Enterprise-Zielen beschränkt.
+
++++Antwort
+
+Ja, Attribute in der Zielgruppe sind auf die Verwendung nur in dateibasierten Enterprise-Zielen beschränkt.
+
++++
 
 - Kann ich eine Audience von Zielgruppen erstellen, die eine Data Distiller-Audience verwenden?
-- Ja, Sie können eine Audience von Audiences erstellen, die eine Data Distiller-Audience verwendet.
+
++++Antwort
+
+Ja, Sie können eine Audience von Audiences erstellen, die eine Data Distiller-Audience verwendet.
+
++++
 
 - Werden diese Zielgruppen in Adobe Journey Optimizer angezeigt? Wenn nicht, was passiert, wenn ich im Regel-Builder eine neue Zielgruppe erstelle, die alle Mitglieder dieser Zielgruppe enthält?
-- Datendestiller-Zielgruppen sind derzeit nicht in Adobe Journey Optimizer verfügbar. Sie müssen eine neue Zielgruppe im Adobe Journey Optimizer Rule Builder erstellen, damit sie in Adobe Journey Optimizer verfügbar ist.
+
++++Antwort
+
+Datendestiller-Zielgruppen sind derzeit nicht in Adobe Journey Optimizer verfügbar. Sie müssen eine neue Zielgruppe im Adobe Journey Optimizer Rule Builder erstellen, damit sie in Adobe Journey Optimizer verfügbar ist.
+
++++
 
 - Wie sollte ich zwei Data Distiller-Zielgruppen mit unterschiedlichen Zeitplänen erstellen? Wie viele Datensätze werden erstellt und sind sie für Profil gekennzeichnet?
-- Es werden zwei Datensätze erstellt, da jede Zielgruppe über einen zugrunde liegenden Datensatz verfügt. Diese Datensätze sind jedoch nicht für Profil markiert. Die beiden Datensätze werden anhand ihrer eigenen Zeitpläne verwaltet.
+
++++Antwort
+
+Es werden zwei Datensätze erstellt, da jede Zielgruppe über einen zugrunde liegenden Datensatz verfügt. Diese Datensätze sind jedoch nicht für Profil markiert. Die beiden Datensätze werden anhand ihrer eigenen Zeitpläne verwaltet.
+
++++
 
 - Wie lösche ich eine Zielgruppe?
-- Um eine Zielgruppe zu löschen, können Sie den Befehl [`DROP AUDIENCE`](#delete-audience) in der Befehlszeilenschnittstelle verwenden oder die Schnellaktionen im Arbeitsbereich [Zielgruppen](../../segmentation/ui/audience-portal.md#quick-actions) verwenden. HINWEIS: Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängig sind, können nicht gelöscht werden.
+
++++Antwort
+
+Um eine Zielgruppe zu löschen, können Sie den Befehl [`DROP AUDIENCE`](#delete-audience) in der Befehlszeilenschnittstelle verwenden oder die Schnellaktionen im Arbeitsbereich [Zielgruppen](../../segmentation/ui/audience-portal.md#quick-actions) verwenden. HINWEIS: Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängig sind, können nicht gelöscht werden.
+
++++
 
 - Wenn ich eine Zielgruppe in Profil veröffentliche, wie bald ist sie in der Benutzeroberfläche des Segmentaufbaus verfügbar und wann ist sie in Ziele verfügbar?
-- Sobald der Export der Profil-Momentaufnahme abgeschlossen ist, können Profile in der Zielgruppe angezeigt werden.
+
++++Antwort
+
+Sobald der Export der Profil-Momentaufnahme abgeschlossen ist, können Profile in der Zielgruppe angezeigt werden.
+
++++
 
 - Werden Data Distiller-Zielgruppen alle 30 Tage gelöscht, da es sich um externe Zielgruppen handelt?
-- Ja, Data Distiller-Zielgruppen werden alle 30 Tage gelöscht, da es sich um externe Zielgruppen handelt.
+
++++Antwort
+
+Ja, Data Distiller-Zielgruppen werden alle 30 Tage gelöscht, da es sich um externe Zielgruppen handelt.
+
++++
 
 - Werden Daten-Distiller-Zielgruppen im Zielgruppen-Inventar angezeigt?
-- Ja, Daten-Distiller-Zielgruppen werden im Zielgruppen-Inventar unter dem Ursprungsnamen &quot;Data Distiller&quot;angezeigt.
+
++++Antwort
+
+Ja, Daten-Distiller-Zielgruppen werden im Zielgruppen-Inventar unter dem Ursprungsnamen &quot;Data Distiller&quot;angezeigt.
+
++++
 
 +++
 

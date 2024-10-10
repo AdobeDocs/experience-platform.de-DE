@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definieren von XDM-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie XDM-Felder in der Experience Platform-Benutzeroberfläche definieren.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,6 @@ Beim Definieren eines neuen Felds werden in der rechten Leiste je nach dem für 
 | Feldeigenschaft | Kompatible Typen | Beschreibung |
 | --- | --- | --- |
 | [!UICONTROL Map value type] | [!UICONTROL Landkarte] | Die Eigenschaft [!UICONTROL Map value type] wird nur dann in der Benutzeroberfläche angezeigt, wenn Sie den Wert Map aus den Dropdown-Optionen [!UICONTROL Typ] auswählen. Sie können zwischen den Werttypen String und Integer für die Zuordnung auswählen.<br>![Der Schemaeditor mit hervorgehobenen Feldern vom Typ Typ und Typ Zuordnungs-Wert.](../../images/ui/fields/overview/map-type.png "Der Schemaeditor mit hervorgehobenen Feldern vom Typ Typ und Typ Zuordnungs-Wert."){width="100" zoomable="yes"}<br>Hinweis: Alle über die API erstellten Zuordnungs-Datentypen, die weder vom Typ String noch vom Typ Integer sind, werden als Datentyp &quot;[!UICONTROL Komplex]&quot;angezeigt. Über die Benutzeroberfläche können keine Datentypen vom Typ &quot;[!UICONTROL Komplex]&quot;erstellt werden. |
-| [!UICONTROL Standardwert] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | Ein Standardwert, der diesem Feld zugewiesen wird, wenn während der Erfassung kein anderer Wert angegeben wird. Dieser Wert muss dem ausgewählten Feldtyp entsprechen.<br><br>Die Standardwerte werden zum Zeitpunkt der Aufnahme nicht im Datensatz gespeichert, da sie sich im Laufe der Zeit ändern können. Die im Schema festgelegten Standardwerte werden von nachgelagerten Platform-Diensten und -Anwendungen abgeleitet, wenn sie die Daten aus dem Datensatz lesen. Wenn beispielsweise die Daten mit Query Service abgefragt werden und das Attribut einen NULL-Wert hat, der Standardwert jedoch auf Schemaebene auf `5` festgelegt ist, wird erwartet, dass Query Service anstelle von NULL `5` zurückgibt. Beachten Sie, dass dieses Verhalten derzeit nicht für alle AEP-Dienste einheitlich ist. |
 | [!UICONTROL Muster] | [!UICONTROL String] | Ein [regulärer Ausdruck](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) , mit dem der Wert für dieses Feld übereinstimmen muss, damit er während der Aufnahme akzeptiert werden kann. |
 | [!UICONTROL Format] | [!UICONTROL String] | Wählen Sie aus einer Liste vordefinierter Formate für Zeichenfolgen aus, denen der Wert entsprechen muss. Zu den verfügbaren Formaten gehören: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Mindestlänge] | [!UICONTROL String] | Die Mindestanzahl von Zeichen, die die Zeichenfolge enthalten muss, damit der Wert während der Aufnahme akzeptiert wird. |
