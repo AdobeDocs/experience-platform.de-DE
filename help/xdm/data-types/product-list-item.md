@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Datentyp des Produktlistenelements
 description: Erfahren Sie mehr über den XDM-Datentyp des Produktlistenelements.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba6c6eb2c6b0fc1dfc4e7440fd16a85bc7b46457
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 18%
+source-wordcount: '338'
+ht-degree: 21%
 
 ---
 
@@ -28,7 +28,7 @@ Die in diesem Datentyp erfassten Werte können vom Produktdatensatz abweichen. B
 | `discountAmount` | [!UICONTROL Double] | Wenn das Produkt abgezinst wird, entspricht dies der Differenz zwischen dem regulären Preis und dem Sonderpreis für das Produkt. |
 | `name` | [!UICONTROL String] | Der Anzeigename für das Produkt, wie er dem Benutzer für diese Produktansicht präsentiert wird. |
 | `priceTotal` | [!UICONTROL Double] | Der Gesamtpreis für den Zeileneintrag des Produkts. |
-| `product` | [!UICONTROL String] (URI) | Der URI `$id` des XDM-Schemas, das das Produkt selbst erfasst. |
+| `product` | [!UICONTROL String] (URI) | Die XDM-ID des Produkts. |
 | `productAddMethod` | [!UICONTROL String] | Die Methode, mit der der Besucher der Liste ein Produktelement hinzugefügt hat. |
 | `productImageUrl` | [!UICONTROL String] | Eine URL für das Hauptbild des Produkts. |
 | `quantity` | [!UICONTROL Integer] | Die Anzahl der Einheiten, die der Kunde vom Produkt benötigt. |
