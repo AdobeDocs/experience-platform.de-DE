@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
 description: Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
+source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2301'
 ht-degree: 1%
 
 ---
@@ -91,6 +91,8 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 
 **IMS-Organisations-ID**: Bezieht sich auf ein Adobe-Autorisierungstoken für Service-to-Service-Authentifizierung, für das keine Benutzeranmeldung erforderlich ist. Sie wird an einen IMS-Client ausgegeben und hat keinen zugehörigen Benutzer. Ein IMS-Client benötigt ein Service-Token, um Back-Channel-Anfragen zwischen Diensten zu autorisieren. (Der Begriff &quot;System-Token&quot;wird gelegentlich als Service-Token verwendet.)
 
+**[!DNL Iowa Consumer Data Protection Act]**: Ein Gesetz zum Schutz der Privatsphäre des Staates, das Iowa-Einwohnern das Recht einräumt, auf den Verkauf ihrer personenbezogenen Daten zuzugreifen, sie zu löschen und sie abzuwählen. Das ICDPA gilt für Unternehmen, die Daten für mehr als 100.000 Einwohner von Iowa verarbeiten oder mehr als 50 % des Umsatzes aus Datenverkäufen erzielen. Wesentliche Ausnahmen sind gemeinnützige Einrichtungen und Bildungseinrichtungen. Das Gesetz sieht eine 90-tägige Heilungsfrist vor, innerhalb derer Unternehmen Verstöße korrigieren können, bevor Sanktionen verhängt werden.
+
 ## J
 
 ## K
@@ -105,7 +107,16 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 
 **MHMDAa**: Der [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) verbessert die Datenschutzrechte für Verbraucher in Bezug auf ihre Gesundheitsdaten. Sie schreibt Offenlegungs-, Zustimmungs- und Löschungsrechte für Gesundheitsdaten vor und verbietet den Verkauf von Gesundheitsdaten ohne Genehmigung. Darüber hinaus ist es nach dem Gesetz rechtswidrig, Geofencing rund um Gesundheitseinrichtungen zu nutzen.
 
+**[!DNL Montana Consumer Data Privacy Act]**: Durch dieses Gesetz erhalten Einwohner von Montana Rechte auf Zugriff, Berichtigung, Löschung und Anforderung von Kopien ihrer personenbezogenen Daten. Die MCDPA gilt für Unternehmen, die Daten für mehr als 50.000 Montana-Verbraucher verarbeiten, und betont den Schutz sensibler personenbezogener Daten wie biometrischer und genetischer Informationen. Sie erzwingt Transparenz in Bezug auf Datenerfassung, -freigabe und -verkäufe.
+
 ## N
+
+**[!DNL Nebraska Data Protection Act]**: Ein Datenschutzgesetz, das Nebraskans das Recht gibt, auf den Verkauf ihrer personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und abzuwählen. Sie gilt für Unternehmen, die bestimmte Datenverarbeitungs- und Umsatzschwellen erreichen. Die NDPA verpflichtet die Unternehmen auch zur Durchführung angemessener Maßnahmen zur Datensicherheit und bietet eine 30-tägige Behandlungsdauer, um Verstöße zu beheben, bevor Sanktionen verhängt werden.
+
+**[!DNL New Hampshire Data Privacy Act]**: Diese Verordnung schützt die personenbezogenen Daten der Einwohner von New Hampshire, indem sie ihnen Rechte auf Zugriff, Löschung und Übermittlung ihrer Daten einräumt. Unternehmen müssen ihre Datenerfassungs- und Freigabepraktiken offenlegen, damit Verbraucher den Datenverkauf deaktivieren können. Die NHDPA gilt für Unternehmen, die bestimmte Schwellenwerte für die Datenverarbeitung erreichen.
+
+**[!DNL New Jersey Data Protection Act]**: Ein umfassendes Datenschutzgesetz für den Bundesstaat, das Einwohnern von New Jersey Rechte zum Zugriff auf, zur Berichtigung und zum Löschen personenbezogener Daten einräumt. Es umfasst Opt-out-Mechanismen für Datenverkäufe und gezielte Werbung. Das NJDPA gilt für Unternehmen, die große Mengen an Verbraucherdaten verarbeiten, und erfordert Transparenz in der Art und Weise, wie Unternehmen personenbezogene Daten verarbeiten.
+
 
 ## O
 
