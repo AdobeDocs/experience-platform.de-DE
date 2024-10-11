@@ -3,9 +3,9 @@ title: Berechnete Felder zum Exportieren von Arrays als Zeichenfolgen verwenden
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden können, um Arrays aus Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Erhalten Sie umfassende Informationen zu berechneten Feldern - was diese sind un
 
 ## Arrays und andere Objekttypen in Platform {#arrays-strings-other-objects}
 
-Unter Experience Platform können Sie [XDM-Schemas](/help/xdm/home.md) verwenden, um verschiedene Feldtypen zu verwalten. Zuvor war es Ihnen möglich, einfache Schlüssel-Wert-Paar-Felder wie Zeichenfolgen aus dem Experience Platform in Ihre gewünschten Ziele zu exportieren. Ein Beispiel für ein solches Feld, das zuvor für den Export unterstützt wurde, ist `personalEmail.address`:`johndoe@acme.org`.
+Unter Experience Platform können Sie [XDM-Schemas](/help/xdm/home.md) verwenden, um verschiedene Feldtypen zu verwalten. Bevor die Unterstützung für Array-Exporte hinzugefügt wurde, konnten Sie einfache Schlüssel-Wert-Paarfelder wie Zeichenfolgen aus dem Experience Platform in Ihre gewünschten Ziele exportieren. Ein Beispiel für ein solches Feld, das zuvor für den Export unterstützt wurde, ist `personalEmail.address`:`johndoe@acme.org`.
 
 Andere Feldtypen im Experience Platform umfassen Array-Felder. Erfahren Sie mehr über [Verwalten von Array-Feldern in der Experience Platform-Benutzeroberfläche](/help/xdm/ui/fields/array.md). Zusätzlich zu den zuvor unterstützten Feldtypen können Sie jetzt Array-Objekte wie das folgende Beispiel exportieren, die mithilfe der Funktion `array_to_string` in eine Zeichenfolge verkettet werden.
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `flattenArray` -Funktion zum Exportieren von reduzierten Arrays
-
-Verwenden Sie die Funktion `flattenArray` , um ein exportiertes mehrdimensionales Array zu reduzieren. Sie können diese Funktion mit der oben beschriebenen Funktion `array_to_string` kombinieren.
-
-Wenn Sie mit dem Array-Objekt `organizations` von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', flattenArray(organizations))` schreiben. Beachten Sie, dass die Funktion `array_to_string` das Eingabe-Array standardmäßig in eine Zeichenfolge reduziert.
-
-Die resultierende Ausgabe entspricht der oben beschriebenen `array_to_string` -Funktion.
-
-
 ### `filterArray` -Funktion zum Exportieren gefilterter Arrays
 
 Verwenden Sie die Funktion `filterArray` , um die Elemente eines exportierten Arrays zu filtern. Sie können diese Funktion mit der oben beschriebenen Funktion `array_to_string` kombinieren.
@@ -210,6 +201,14 @@ In diesem Fall sieht Ihre Ausgabedatei wie folgt aus. Beachten Sie, wie die drei
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### `flattenArray` -Funktion zum Exportieren von reduzierten Arrays
+
+Verwenden Sie die Funktion `flattenArray` , um ein exportiertes mehrdimensionales Array zu reduzieren. Sie können diese Funktion mit der oben beschriebenen Funktion `array_to_string` kombinieren.
+
+Wenn Sie mit dem Array-Objekt `organizations` von oben fortfahren, können Sie eine Funktion wie `array_to_string('_', flattenArray(organizations))` schreiben. Beachten Sie, dass die Funktion `array_to_string` das Eingabe-Array standardmäßig in eine Zeichenfolge reduziert.
+
+Die resultierende Ausgabe entspricht der oben beschriebenen `array_to_string` -Funktion.
 
 ### `coalesce` -Funktion zum Exportieren von Arrays {#coalesce-function-export-arrays}
 
