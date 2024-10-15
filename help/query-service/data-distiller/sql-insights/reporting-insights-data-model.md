@@ -2,7 +2,7 @@
 title: Anleitung zu Query Accelerated Store Reporting Insights
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 82%
@@ -19,7 +19,7 @@ Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in 
 
 ## Voraussetzungen
 
-In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zu benutzerdefinierten Dashboards](../../../dashboards/user-defined-dashboards.md).
+In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der [Dokumentation zu benutzerdefinierten Dashboards](../../../dashboards/standard-dashboards.md).
 
 ## Erste Schritte
 
@@ -228,4 +228,4 @@ Die folgende Abbildung zeigt ein Beispiel für die möglichen benutzerdefinierte
 
 ![Eine Übereinstimmungszählung nach Ziel und Zielgruppen-Widget, das aus dem neuen Datenmodell der Berichtseinblicke erstellt wurde.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-Ihr benutzerdefiniertes Datenmodell ist in der Liste der verfügbaren Datenmodelle im benutzerdefinierten Dashboard-Arbeitsbereich zu finden. Eine Anleitung zur Verwendung Ihres benutzerdefinierten Datenmodells finden Sie im [Handbuch zum benutzerdefinierten Dashboard](../../../dashboards/user-defined-dashboards.md).
+Ihr benutzerdefiniertes Datenmodell ist in der Liste der verfügbaren Datenmodelle im benutzerdefinierten Dashboard-Arbeitsbereich zu finden. Eine Anleitung zur Verwendung Ihres benutzerdefinierten Datenmodells finden Sie im [Handbuch zum benutzerdefinierten Dashboard](../../../dashboards/standard-dashboards.md).

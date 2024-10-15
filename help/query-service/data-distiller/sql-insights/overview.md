@@ -2,7 +2,7 @@
 title: SQL Insights
 description: Erfahren Sie mehr über die Anwendungsfälle, die wichtigsten Funktionen und erforderlichen Schritte zur Entwicklung eines SQL Insights-Dashboards mit Data Distiller. Erfahren Sie, wie die SQL Insights-Funktion in Data Distiller die Transparenz verbessert und betriebliche Einblicke in verschiedene Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen erhält.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 5%
@@ -13,13 +13,13 @@ ht-degree: 5%
 
 Erstellen Sie maßgeschneiderte Berichtsdatenmodelle, um tiefere Einblicke zu gewinnen, Strategien zu optimieren und Analysen an spezifische Geschäftsanforderungen mit Data Distiller SQL Insights anzupassen. Verwenden Sie die SQL Insights-Funktion, um die Transparenz zu erhöhen und operative Einblicke aus Ihren Adobe Experience Platform-Daten über Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen hinweg zu gewinnen. Diese Funktion bietet eine vielseitige, adaptive Lösung, um die Berichtsdatenmodelle Ihres Unternehmens an Ihre spezifischen Geschäftsanforderungen anzupassen.
 
-Um [Ihre SQL Insights](../../../dashboards/data-distiller/sql-insights/overview.md) zu visualisieren, können Sie [query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md) verwenden, um komplexe Analysen mit benutzerdefinierten SQL-Abfragen durchzuführen und Ihre Daten in leicht verständliche Diagramme umzuwandeln. Verwenden Sie den Abfragepro-Modus, um individuelle Einblicke und Visualisierungen in Ihren Dashboards zu erstellen und sowohl technische als auch nicht technische Zielgruppen zu berücksichtigen, indem Sie Ihre Einblicke als CSV-Dateien herunterladen.
+Um [Ihre SQL Insights](../../../dashboards/sql-insights-query-pro-mode/overview.md) zu visualisieren, können Sie [query pro mode](../../../dashboards/sql-insights-query-pro-mode/overview.md) verwenden, um komplexe Analysen mit benutzerdefinierten SQL-Abfragen durchzuführen und Ihre Daten in leicht verständliche Diagramme umzuwandeln. Verwenden Sie den Abfragepro-Modus, um individuelle Einblicke und Visualisierungen in Ihren Dashboards zu erstellen und sowohl technische als auch nicht technische Zielgruppen zu berücksichtigen, indem Sie Ihre Einblicke als CSV-Dateien herunterladen.
 
 In diesem Dokument werden die Anwendungsfälle, grundlegenden Funktionen und erforderlichen Schritte zum Entwickeln eines SQL Insights-Dashboards mit Data Distiller beschrieben.
 
 ## Voraussetzungen
 
-In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der Dokumentation zu [benutzerdefinierten Dashboards](../../../dashboards/user-defined-dashboards.md) .
+In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der Dokumentation zu [benutzerdefinierten Dashboards](../../../dashboards/standard-dashboards.md) .
 
 ## Erste Schritte
 
@@ -72,7 +72,7 @@ Um ein SQL Insights-Dashboard in Data Distiller zu entwickeln, folgen Sie den un
 1. **Ad-hoc-Abfrageerforschung:** Beginnen Sie mit der Ausführung von Ad-hoc-Abfragen `SELECT`, um Rohdaten im Data Lake zu untersuchen. Dies ermöglicht eine spontane, explorative Datenanalyse zum Experimentieren und Validieren von Daten, in denen die Ergebnisse der Abfragen nicht im Data Lake gespeichert sind.
 1. **Nutzung der Batch-Abfrage:** Verwenden Sie Batch-Abfragen, um [geplante Aufträge zu erstellen](../../api/scheduled-queries.md#create-a-new-scheduled-query), um Insights-Aggregattabellen zu generieren und so einen systematischen und automatisierten Ansatz bei der Datenverarbeitung sicherzustellen. Batch-Abfragen führen Abfragen aus `INSERT TABLE AS SELECT` und `CREATE TABLE AS SELECT`, um Daten zu bereinigen, zu formen, zu bearbeiten und anzureichern. Die Ergebnisse dieser Abfragen werden im Data Lake gespeichert.
 1. **Laden aggregierter Einblicke:** Laden Sie die generierten aggregierten Einblicke in den beschleunigten Speicher und verwenden Sie SQL, um Abfragen zu testen, und stellen Sie die Genauigkeit und Effizienz des Datenabrufs sicher. Informationen dazu, wie Sie &quot;[stateless&quot;-Abfragen an den beschleunigten Speicher vornehmen](../../api/accelerated-queries.md), finden Sie in der Dokumentation.
-1. **Zugriff und Integration:** Greifen Sie nahtlos auf die im beschleunigten Speicher gespeicherten Einblicke zu, indem Sie sie in Adobe Experience Platform [Benutzerdefinierte Dashboards](../../../dashboards/user-defined-dashboards.md) oder andere bevorzugte Business Intelligence-Tools (BI) integrieren. Diese Integrationen mit Clients von Drittanbietern ermöglichen ein kohärentes und intuitives Benutzererlebnis.
+1. **Zugriff und Integration:** Greifen Sie nahtlos auf die im beschleunigten Speicher gespeicherten Einblicke zu, indem Sie sie in Adobe Experience Platform [Benutzerdefinierte Dashboards](../../../dashboards/standard-dashboards.md) oder andere bevorzugte Business Intelligence-Tools (BI) integrieren. Diese Integrationen mit Clients von Drittanbietern ermöglichen ein kohärentes und intuitives Benutzererlebnis.
 
 ![Eine Infografik, die die vier Schritte zur SQL Insights-Anleitung in Data Distiller veranschaulicht.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

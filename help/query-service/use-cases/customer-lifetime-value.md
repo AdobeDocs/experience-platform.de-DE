@@ -2,7 +2,7 @@
 title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
 description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -62,7 +62,7 @@ Stellen Sie sicher, dass Sie einen Zeitplan festlegen, um Ihr benutzerdefinierte
 
 ## Erstellen eines Dashboards zum Erfassen von Einblicken {#build-a-custom-dashboard}
 
-Nachdem Sie Ihr benutzerdefiniertes Datenmodell erstellt haben, können Sie Ihre Daten mit benutzerdefinierten Abfragen und benutzerdefinierten Dashboards visualisieren. Eine vollständige Anleitung zum [Erstellen eines benutzerdefinierten Dashboards](../../dashboards/user-defined-dashboards.md) finden Sie in der Übersicht über benutzerdefinierte Dashboards . Das UI-Handbuch enthält Details zu:
+Nachdem Sie Ihr benutzerdefiniertes Datenmodell erstellt haben, können Sie Ihre Daten mit benutzerdefinierten Abfragen und benutzerdefinierten Dashboards visualisieren. Eine vollständige Anleitung zum [Erstellen eines benutzerdefinierten Dashboards](../../dashboards/standard-dashboards.md) finden Sie in der Übersicht über benutzerdefinierte Dashboards . Das UI-Handbuch enthält Details zu:
 
 * So erstellen Sie ein Widget.
 * Verwendung des Widget Composers.

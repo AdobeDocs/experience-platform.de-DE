@@ -2,7 +2,7 @@
 title: Anzeigen von konfigurierten Dashboards
 description: Zeigen Sie eine Liste der konfigurierten Dashboards Ihrer Organisation in der Experience Platform-Benutzeroberfläche an.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 100%
@@ -23,8 +23,8 @@ Sie können ein einzelnes Dashboard anzeigen, indem Sie seinen Namen aus der Lis
 
 ![Registerkarte „Durchsuchen“ mit dem hervorgehobenen Namen eines Dashboards.](./images/inventory/dashboard-name.png)
 
-Wenn das Dashboard ausgewählt wird, wird es entweder in der Platform-Benutzeroberfläche oder in einem vollständig integrierten Anwendungs-Arbeitsbereich geöffnet, in dem Sie sich mit den erforderlichen Zugangsdaten anmelden müssen.
+Wenn das Dashboard ausgewählt wird, wird es entweder in der Platform-Benutzeroberfläche oder in einem vollständig integrierten Anwendungs-Arbeitsbereich geöffnet, in dem Sie sich mit den erforderlichen Anmeldedaten anmelden müssen.
 
 ## Erstellen benutzerdefinierter Dashboards
 
-Mit Adobe Experience Platform-Dashboards können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um für Ihre Organisation relevante Schlüsselmetriken zu visualisieren. Vollständige Anweisungen zum Erstellen und Konfigurieren von benutzerdefinierten Dashboards finden Sie im [Handbuch zu benutzerdefinierten Dashboards](./user-defined-dashboards.md).
+Mit Adobe Experience Platform-Dashboards können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um für Ihre Organisation relevante Schlüsselmetriken zu visualisieren. Vollständige Anweisungen zum Erstellen und Konfigurieren von benutzerdefinierten Dashboards finden Sie im [Handbuch zu benutzerdefinierten Dashboards](./standard-dashboards.md).

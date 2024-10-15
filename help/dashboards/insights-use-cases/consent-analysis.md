@@ -2,7 +2,7 @@
 title: Einverständnisanalyse und -verfolgung
 description: Erfahren Sie, wie Sie ein Dashboard für die Einwilligungsanalyse erstellen, um zu verfolgen, wie sich die Einwilligung der Benutzer im Laufe der Zeit entwickelt hat.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Das Berichtdialogfeld Zielgruppenüberschneidung wird erweitert und zeigt zusät
 
 ![Der Bericht Zielgruppenüberschneidung , wobei die Benutzer, die der E-Mail-Zielgruppe zugestimmt haben, hervorgehoben sind.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
-## Trends der Zielgruppengröße {#audience-size-trends}
+## Zielgruppengrößen-Trends {#audience-size-trends}
 
 Wenn Sie eine einwilligungsbasierte Zielgruppe erstellen, werden automatisch Trends bis zu 12 Monate nach dem Datum der Erstellung der Zielgruppe erstellt. Um einen voll funktionsfähigen Trend Ihrer Kundenzustimmung zu erreichen, fügen Sie die folgenden Widgets zur Seite [!UICONTROL Segmente] [!UICONTROL Überblick] hinzu. Diese Einblicke bieten eine leistungsstarke Möglichkeit, zu verfolgen, wie sich Ihre Einwilligung im Laufe der Zeit ändert. Sie korrelieren sogar mit allen parallel ausgeführten Kampagnen, die sich positiv oder negativ auf die Zustimmung auswirken könnten. Die für diese Widgets angebotenen Beschreibungen gelten für den Anwendungsfall der Zustimmung.
 
@@ -112,13 +112,13 @@ Nachdem Sie eine einwilligungsbezogene Zielgruppe erstellt haben, z. B. &quot;Be
 
 Sie können auch eigene Widgets mit benutzerdefinierten Dashboards erstellen. Durch die Erstellung Ihres eigenen Widgets können Sie den Typ des Widgets vollständig steuern und flexibel Filter hinzufügen und vieles mehr direkt in Adobe Real-Time CDP.
 
-Wenn Sie z. B. mehrere Zustimmungszielgruppen im selben Diagramm als Trend verfolgen möchten, damit Sie im Laufe der Zeit sehen können, wie sich die einzelnen Zustimmungsvoreinstellungen verändert haben. Diese Art der Visualisierung ist mit benutzerdefinierten Dashboards in minimalen Schritten und einer einmaligen Einrichtung möglich. Wählen Sie zunächst **[!UICONTROL Dashboards]** im linken Navigationsbereich aus. Der Arbeitsbereich [!UICONTROL Dashboards] wird angezeigt. Wählen Sie dann **[!UICONTROL Dashboard erstellen]** aus. Umfassende Anweisungen zum Erstellen von [Dashboards und benutzerdefinierten Widgets](../user-defined-dashboards.md) finden Sie im Handbuch zu benutzerdefinierten Dashboards.
+Wenn Sie z. B. mehrere Zustimmungszielgruppen im selben Diagramm als Trend verfolgen möchten, damit Sie im Laufe der Zeit sehen können, wie sich die einzelnen Zustimmungsvoreinstellungen verändert haben. Diese Art der Visualisierung ist mit benutzerdefinierten Dashboards in minimalen Schritten und einer einmaligen Einrichtung möglich. Wählen Sie zunächst **[!UICONTROL Dashboards]** im linken Navigationsbereich aus. Der Arbeitsbereich [!UICONTROL Dashboards] wird angezeigt. Wählen Sie dann **[!UICONTROL Dashboard erstellen]** aus. Umfassende Anweisungen zum Erstellen von [Dashboards und benutzerdefinierten Widgets](../standard-dashboards.md) finden Sie im Handbuch zu benutzerdefinierten Dashboards.
 
-![Der Arbeitsbereich &quot;Dashboards&quot;mit Dashboards und Dashboard erstellen ist hervorgehoben.](../images/user-defined-dashboards/create-dashboard.png)
+![Der Arbeitsbereich &quot;Dashboards&quot;mit Dashboards und Dashboard erstellen ist hervorgehoben.](../images/standard-dashboards/create-dashboard.png)
 
-Wenn Sie [Ihr Datenmodell](../user-defined-dashboards.md#select-data-model) im Widget Composer auswählen, wählen Sie `CDPInsights` gefolgt von **[!UICONTROL Weiter]**. Das Dialogfeld [!UICONTROL Tabelle auswählen] wird angezeigt.
+Wenn Sie [Ihr Datenmodell](../standard-dashboards.md#select-data-model) im Widget Composer auswählen, wählen Sie `CDPInsights` gefolgt von **[!UICONTROL Weiter]**. Das Dialogfeld [!UICONTROL Tabelle auswählen] wird angezeigt.
 
-![Das Dialogfeld &quot;Datenmodell auswählen&quot;mit hervorgehobenem CDPInsights-Modell.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![Das Dialogfeld &quot;Datenmodell auswählen&quot;mit hervorgehobenem CDPInsights-Modell.](../images/standard-dashboards/select-data-model-dialog.png)
 
 In der nächsten Ansicht wird eine Liste der verfügbaren Tabellen in der linken Leiste angezeigt. Wählen Sie die `adwh_fact_profile_by_segment_and_namespace_trendlines`.
 
@@ -126,16 +126,16 @@ In der nächsten Ansicht wird eine Liste der verfügbaren Tabellen in der linken
 
 Nachdem der Widget Composer mit Daten aus Ihrer ausgewählten Tabelle gefüllt wurde, führen Sie die folgenden Schritte aus:
 
-- [Suchen Sie [!UICONTROL Attribute]](../user-defined-dashboards.md#add-filter-attributes) nach `[!UICONTROL date]` und verwenden Sie dann das Symbol + , um das Attribut `[!UICONTROL date]` zur X-Achse aus dem Dropdown-Menü hinzuzufügen.
-  ![Der Widget Composer mit dem Add-Symbol und dem Dropdown-Menü hervorgehoben.](../images/user-defined-dashboards/attributes-dropdown.png)
+- [Suchen Sie [!UICONTROL Attribute]](../standard-dashboards.md#add-filter-attributes) nach `[!UICONTROL date]` und verwenden Sie dann das Symbol + , um das Attribut `[!UICONTROL date]` zur X-Achse aus dem Dropdown-Menü hinzuzufügen.
+  ![Der Widget Composer mit dem Add-Symbol und dem Dropdown-Menü hervorgehoben.](../images/standard-dashboards/attributes-dropdown.png)
 - Suchen Sie [!UICONTROL Attribute] nach `[!UICONTROL count_of_profiles]` und verwenden Sie dann das Symbol + , um das Attribut `[!UICONTROL count_of_profiles]` zur Y-Achse aus dem Dropdown-Menü hinzuzufügen.
 - Wählen Sie im Feld [!UICONTROL Y-Achse] das Symbol `...` (mit Auslassungspunkten) und dann im Dropdown-Menü die Aggregatfunktion [!UICONTROL SUM] aus.
   ![Das Widget Composer-Widget Einverständnistrends mit dem Datenmodell, der Tabelle und dem Dropdown-Menü für die Y-Achse und der SUM-Funktion hervorgehoben. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Wählen Sie das Dropdown-Menü [!UICONTROL Markierungen] aus und ändern Sie den Diagrammtyp in [!UICONTROL Linie].
 - Suchen Sie [!UICONTROL Attribute] nach dem Wert `[!UICONTROL segment_name]` und verwenden Sie dann das Symbol + , um den Wert `segment_name` als einen [!UICONTROL Filter] aus dem Dropdown-Menü hinzuzufügen. Das Dialogfeld [!UICONTROL Filter: Segment_name] wird angezeigt. Wählen Sie die zuvor erstellten Zielgruppen aus, die sich auf die Zustimmung beziehen. Wählen Sie für dieses Beispiel **[!UICONTROL Benutzer, die Anrufen zugestimmt haben]**, **[!UICONTROL Benutzer, die SMS zugestimmt haben]** und **[!UICONTROL Benutzer, die E-Mail zugestimmt haben]**, gefolgt von **[!UICONTROL Anwenden]**.
 - Suchen Sie [!UICONTROL Attribute] nach `[!UICONTROL segment_name]` und wählen Sie dann das Symbol + aus, um `segment_name` als [!UICONTROL Farbe] aus dem Dropdown-Menü hinzuzufügen.
-- Öffnen Sie [das Bedienfeld [!UICONTROL Eigenschaften]](../user-defined-dashboards.md#widget-properties) und geben Sie einen entsprechenden [!UICONTROL Widget-Titel] und eine [!UICONTROL Achsenbeschriftung] ein.
-  ![Der Widget Composer mit dem Eigenschaftensymbol und dem Widget-Titel hervorgehoben.](../images/user-defined-dashboards/properties-panel.png)
+- Öffnen Sie [das Bedienfeld [!UICONTROL Eigenschaften]](../standard-dashboards.md#widget-properties) und geben Sie einen entsprechenden [!UICONTROL Widget-Titel] und eine [!UICONTROL Achsenbeschriftung] ein.
+  ![Der Widget Composer mit dem Eigenschaftensymbol und dem Widget-Titel hervorgehoben.](../images/standard-dashboards/properties-panel.png)
 - Wählen Sie **[!UICONTROL Speichern und schließen]** aus, um Ihre Einstellungen zu bestätigen.
 
 >[!TIP]

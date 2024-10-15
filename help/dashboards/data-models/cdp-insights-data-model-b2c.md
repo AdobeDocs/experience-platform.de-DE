@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insi
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Das Real-time Customer Data Platform Insights-Datenmodell für die [B2C Edition]
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Verständnis der [benutzerdefinierten Dashboards-Funktion](../user-defined-dashboards.md) voraus. Lesen Sie die Dokumentation , bevor Sie mit diesem Handbuch fortfahren.
+Dieses Handbuch setzt ein Verständnis der [benutzerdefinierten Dashboards-Funktion](../standard-dashboards.md) voraus. Lesen Sie die Dokumentation , bevor Sie mit diesem Handbuch fortfahren.
 
 ## Real-Time CDP Insight-Berichte und Anwendungsfälle
 

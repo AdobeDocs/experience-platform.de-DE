@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise April 2023
 description: Versionshinweise April 2023 für Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -37,7 +37,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Benutzerdefinierte Dashboards | Sie können jetzt aus Ihren Widget-Einblicken **historische Daten filtern** und entweder aktuelle Daten oder einen benutzerdefinierten Analysezeitraum verwenden. Weiterführende Informationen finden Sie im [Handbuch zu benutzerdefinierten Profilen](../../dashboards/user-defined-dashboards.md#filter-historical-data).<br>Sie können jetzt auch **vorhandene Widgets duplizieren**. Wenn Sie ein Duplikat anpassen und dessen Attribute bearbeiten, können Sie dadurch vermeiden, bei der Erstellung eines neuen, eindeutigen Widgets vollständig von vorne zu beginnen. Weitere Informationen finden Sie im [Handbuch zur Widget-Duplizierung](../../dashboards/user-defined-dashboards.md#duplicate-a-widget).  |
+| Benutzerdefinierte Dashboards | Sie können jetzt aus Ihren Widget-Einblicken **historische Daten filtern** und entweder aktuelle Daten oder einen benutzerdefinierten Analysezeitraum verwenden. Weiterführende Informationen finden Sie im [Handbuch zu benutzerdefinierten Profilen](../../dashboards/standard-dashboards.md#filter-historical-data).<br>Sie können jetzt auch **vorhandene Widgets duplizieren**. Wenn Sie ein Duplikat anpassen und dessen Attribute bearbeiten, können Sie dadurch vermeiden, bei der Erstellung eines neuen, eindeutigen Widgets vollständig von vorne zu beginnen. Weitere Informationen finden Sie im [Handbuch zur Widget-Duplizierung](../../dashboards/standard-dashboards.md#duplicate-a-widget).  |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 | --- | --- |
 | Verschleierung von IP-Adressen für Datenströme | Sie können jetzt in der [Benutzeroberfläche für die Datenstromkonfiguration](../../datastreams/configure.md) Optionen für die partielle oder vollständige IP-Verschleierung auf der Ebene eines Datenstroms festlegen. <br><br>Die Einstellung für die IP-Verschleierung auf Datenstromebene hat Vorrang vor jeder in Adobe Target und Audience Manager konfigurierten IP-Verschleierung. <br><br>An Adobe Analytics gesendete Daten sind von der Einstellung für [!UICONTROL IP-Verschleierung] auf Datenstromebene nicht betroffen. Adobe Analytics empfängt derzeit nicht-verschleierte IP-Adressen. Damit Analytics verschleierte IP-Adressen empfangen kann, müssen Sie die IP-Verschleierung separat in Adobe Analytics konfigurieren. Dieses Verhalten wird in zukünftigen Versionen aktualisiert.<br><br> Weitere Informationen zur IP-Verschleierung und Anweisungen zur Konfiguration finden Sie in der [Dokumentation zur Datenstromkonfiguration](../../datastreams/configure.md#advanced-options). |
 | [Überschreibungen der Datenstromkonfiguration](../../datastreams/overrides.md) | Sie können jetzt zusätzliche Konfigurationsoptionen für Datenströme festlegen, mit denen Sie bestimmte Einstellungen wie Ereignis-Datensätze, Target-Eigenschafts-Token, ID-Synchronisierungs-Container und Analytics-Report Suites überschreiben können. <br><br>Das Überschreiben von Datenstromkonfigurationen ist ein zweistufiger Prozess: <ol><li>Zunächst müssen Sie Ihre Überschreibungen der Datenstromkonfiguration auf der Seite [Datenstromkonfiguration](../../datastreams/configure.md) definieren.</li><li>Anschließend müssen Sie die Überschreibungen entweder über einen Web SDK-Befehl oder mithilfe der [Tag-Erweiterung](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) des Web SDK an das Edge-Netzwerk senden.</li></ol> |
-| OAuth JWT-Geheimnis | Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
+| OAuth JWT-Geheimnis | Das [OAuth JWT-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets?lang=de) ermöglicht Kundinnen und Kunden die Verwendung von Adobe- und Google-Service-Token zur Unterstützung von Server-zu-Server-Interaktionen bei der Ereignisweiterleitung. |
 | [!DNL Pinterest Conversions API]-Erweiterung  | Mit der Ereignisweiterleitungserweiterung [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Pinterest Conversions API] an [!DNL Pinterest] gesendet werden. |
 
 {style="table-layout:auto"}

@@ -2,7 +2,7 @@
 title: Audiences Insights
 description: Entdecken Sie die SQL, die Ihre Zielgruppeneinblicke ermöglicht und nutzen Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren und Zielgruppendaten aus Adobe Experience Platform weiter zu untersuchen.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Machen Sie sich mit den Einblicken Ihrer Zielgruppe vertraut, indem Sie auf die 
 
 Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die PLatform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten [benutzerdefinierten benutzerdefinierten Dashboards](../user-defined-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../user-defined-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
+Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten [benutzerdefinierten benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../standard-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
 
 Die folgenden Einblicke stehen Ihnen alle als Teil des [Zielgruppen-Dashboards](../guides/audiences.md) oder eines benutzerdefinierten Dashboards zur Verfügung.
 

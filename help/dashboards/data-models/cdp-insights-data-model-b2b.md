@@ -1,17 +1,17 @@
 ---
-title: Real-time Customer Data Platform Insights-Datenmodell B2B Edition
-description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insights-Datenmodellen (B2B Edition) SQL-Abfragen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
+title: Real-time Customer Data Platform Insights-Datenmodell B2B edition
+description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insights-Datenmodellen (B2B edition) SQL-Abfragen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 3%
 
 ---
 
-# Real-time Customer Data Platform Insights-Datenmodell B2B Edition
+# Real-time Customer Data Platform Insights-Datenmodell B2B edition
 
 Das Real-time Customer Data Platform Insights-Datenmodell für die B2B Edition stellt die Datenmodelle und SQL bereit, die die Einblicke für [Kontoprofile](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle von B2B-Marketing und Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
 
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Verständnis benutzerdefinierter Dashboards voraus. Lesen Sie die Dokumentation zu [Erstellen eines benutzerdefinierten Dashboards](../user-defined-dashboards.md) , bevor Sie mit diesem Handbuch fortfahren.
+Dieses Handbuch setzt ein Verständnis benutzerdefinierter Dashboards voraus. Lesen Sie die Dokumentation zu [Erstellen eines benutzerdefinierten Dashboards](../standard-dashboards.md) , bevor Sie mit diesem Handbuch fortfahren.
 
 ## Real-Time CDP B2B Insight-Berichte und Anwendungsfälle {#B2B-insight-reports-and-use-cases}
 

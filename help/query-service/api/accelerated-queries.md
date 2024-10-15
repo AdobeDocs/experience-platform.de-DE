@@ -3,7 +3,7 @@ title: Endpunkt für beschleunigte Abfragen
 description: Erfahren Sie, wie Sie statuslos auf den abfragebeschleunigten Speicher zugreifen können, um schnell Ergebnisse basierend auf aggregierten Daten zurückzugeben. Dieses Dokument enthält eine beispielhafte HTTP-Anfrage und -Antwort für den Endpunkt für beschleunigte Abfragen des Abfrage-Service.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 97%
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 # Endpunkt für beschleunigte Abfragen
 
-Im Rahmen der Data Distiller SKU ermöglicht Ihnen die [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/), statuslose Abfragen an den beschleunigten Speicher zu stellen. Die zurückgegebenen Ergebnisse basieren auf aggregierten Daten. Die geringere Latenz der Ergebnisse ermöglicht einen interaktiveren Informationsaustausch. Die APIs für beschleunigte Abfragen werden auch für [benutzerdefinierte Dashboards](../../dashboards/user-defined-dashboards.md) verwendet.
+Im Rahmen der Data Distiller SKU ermöglicht Ihnen die [Abfrage-Service-API](https://developer.adobe.com/experience-platform-apis/references/query-service/), statuslose Abfragen an den beschleunigten Speicher zu stellen. Die zurückgegebenen Ergebnisse basieren auf aggregierten Daten. Die geringere Latenz der Ergebnisse ermöglicht einen interaktiveren Informationsaustausch. Die APIs für beschleunigte Abfragen werden auch für [benutzerdefinierte Dashboards](../../dashboards/standard-dashboards.md) verwendet.
 
 Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie das [Handbuch zur Abfrage-Service-API](./getting-started.md) gelesen und verstanden haben, um die Abfrage-Service-API erfolgreich verwenden zu können.
 

@@ -2,7 +2,7 @@
 title: Profileinblicke
 description: Entdecken Sie die SQL, die Ihre Profileinblicke nutzt, um benutzerdefinierte Einblicke zu generieren, mit denen Sie Ihre Kunden und deren Kundenerlebnisse weiter untersuchen können.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Machen Sie sich mit Ihren Profileinblicken vertraut, indem Sie auf die SQL zugre
 
 Weitere Informationen zum direkten Anpassen der SQL Ihrer Einblicke über die Platform-Benutzeroberfläche finden Sie in der [SQL-Dokumentation anzeigen](../view-sql.md) .
 
-Die folgenden Einblicke stehen Ihnen als Teil des [Profil-Dashboards](../guides/profiles.md) oder eines benutzerdefinierten [benutzerdefinierten benutzerdefinierten Dashboards](../user-defined-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../user-defined-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
+Die folgenden Einblicke stehen Ihnen als Teil des [Profil-Dashboards](../guides/profiles.md) oder eines benutzerdefinierten [benutzerdefinierten benutzerdefinierten Dashboards](../standard-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../standard-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
 
 ## Zielgruppenüberschneidung durch Zusammenführungsrichtlinie {#audience-overlap-by-merge-policy}
 

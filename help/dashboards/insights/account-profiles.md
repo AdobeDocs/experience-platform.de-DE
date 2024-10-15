@@ -4,7 +4,7 @@ description: Entdecken Sie die SQL, mit der Sie Ihre Kontoprofil-Einblicke gewin
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Mit dem Zugriff auf die SQL-Datenbank, die Ihre Einblicke ermöglicht, können S
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Die folgenden Einblicke stehen Ihnen im Dashboard [Kontoprofile](../guides/account-profiles.md) oder im benutzerdefinierten Dashboard [Dashboard](../user-defined-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../user-defined-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
+Die folgenden Einblicke stehen Ihnen im Dashboard [Kontoprofile](../guides/account-profiles.md) oder im benutzerdefinierten Dashboard [Dashboard](../standard-dashboards.md) zur Verfügung. Anweisungen zum Anpassen Ihres Dashboards oder zum Erstellen und Bearbeiten neuer Widgets ](../customize/custom-widgets.md) in der Widget-Bibliothek und [benutzerdefinierten Dashboards](../standard-dashboards.md#create-widget) finden Sie in der [Übersicht zur Anpassung](../customize/overview.md) .[
 
 ## Hinzugefügte Kontoprofile {#account-profiles-added}
 
