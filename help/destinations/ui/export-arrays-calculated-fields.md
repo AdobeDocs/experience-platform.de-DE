@@ -3,9 +3,9 @@ title: Berechnete Felder zum Exportieren von Arrays als Zeichenfolgen verwenden
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden können, um Arrays aus Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
+source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,16 @@ Beachten Sie die folgenden bekannten Einschränkungen, die derzeit für diese Fu
 [ Verbinden Sie](/help/destinations/ui/connect-destination.md) mit einem gewünschten Cloud-Speicher-Ziel, gehen Sie durch die [Aktivierungsschritte für Cloud-Speicher-Ziele](/help/destinations/ui/activate-batch-profile-destinations.md) und gehen Sie zum Schritt [Zuordnung](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) .
 
 ## Berechnete Felder exportieren {#how-to-export-calculated-fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="Hierarchisches Ausgabeschema aktivieren"
+>abstract="Aktivieren Sie diese Option, wenn Sie hierarchische Strukturen wie Arrays exportieren möchten."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="Berechnete Felder deaktivieren"
+>abstract="Diese Steuerung ist deaktiviert, da Sie beim Herstellen einer Verbindung zum Ziel ausgewählt haben, flache Strukturen zu exportieren."
 
 Wählen Sie im Zuordnungsschritt des Aktivierungs-Workflows für Cloud-Speicher-Ziele **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
 
