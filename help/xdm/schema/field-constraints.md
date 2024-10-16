@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Einschränkungen für XDM-Feldtypen
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren können.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '683'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ Wenn Sie planen, Ihre eigenen Feldtypen in der API zu definieren, wird dringend 
 
 ## Basisstruktur und Beispiele {#basic-types}
 
-XDM basiert auf dem JSON-Schema und daher erben XDM-Felder bei der Definition ihres Typs eine ähnliche Syntax. Wenn Sie wissen, wie verschiedene Feldtypen im JSON-Schema dargestellt werden, können Sie die grundlegenden Einschränkungen der einzelnen Typen anzeigen.
+XDM basiert auf dem JSON-Schema und daher erben XDM-Felder bei der Definition ihres Typs eine ähnliche Syntax. Wenn Sie wissen, wie verschiedene Feldtypen im JSON-Schema dargestellt werden, können Sie die grundlegenden Einschränkungen der einzelnen Typen anzeigen. Bei den Namen benutzerdefinierter Felder wird nicht zwischen Groß- und Kleinschreibung unterschieden. Sie müssen unterschiedliche Namen auf derselben Ebene im Schema haben.
 
 >[!NOTE]
 >
