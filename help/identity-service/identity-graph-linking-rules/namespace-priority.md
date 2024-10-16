@@ -2,7 +2,7 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 2%
@@ -185,4 +185,4 @@ Weitere Informationen finden Sie in der [Übersicht über den Datenschutzdienst]
 
 ### Adobe Target
 
-Sie können die Batch- und Streaming-Segmentierung nur in Adobe Target aktivieren.
+Adobe Target kann zu unerwartetem Benutzer-Targeting für Szenarien mit freigegebenen Geräten führen.
