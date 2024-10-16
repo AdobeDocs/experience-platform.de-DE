@@ -2,9 +2,9 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 57%
 
 ---
@@ -286,6 +286,10 @@ Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweil
 ### Aufnahmedetails {#ingestion-details}
 
 Bei Zielgruppen mit dem Ursprung **[!UICONTROL Benutzerdefinierter Upload]** zeigt der Abschnitt **[!UICONTROL Aufnahmedetails]** sowohl die Gesamtsumme des Profils als auch Details zum Datensatz an, in den die extern generierte Zielgruppe aufgenommen wurde.
+
+>[!NOTE]
+>
+>Es kann bis zu 30 Minuten nach dem Exportauftrag dauern, bis die Profilanzahl der Audience vollständig aktualisiert ist.
 
 ![Der Abschnitt mit den Aufnahmedetails für die Seite mit den Zielgruppendetails wird angezeigt.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
