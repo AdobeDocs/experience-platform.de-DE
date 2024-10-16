@@ -2,10 +2,10 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
-ht-degree: 58%
+source-wordcount: '4298'
+ht-degree: 57%
 
 ---
 
@@ -209,6 +209,11 @@ Die Liste der verfügbaren Filter wird angezeigt.
 ![Die verfügbaren Filter werden auf der Seite „Zielgruppen durchsuchen“ angezeigt und hervorgehoben.](../images/ui/audience-portal/filter-audiences.png)
 
 #### Massenaktionen {#bulk-actions}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Flexible Zielgruppenbewertungsbeschränkungen"
+>abstract="Sie können bis zu 20 Zielgruppen in einem einzigen, flexiblen Evaluierungsablauf für Zielgruppen auswerten.<br/><br/>Während der Auswertungsauftrag so schnell wie möglich ausgeführt wird, kann es außerdem zu Systemverzögerungen kommen, da On-Demand-Auswertungen <b> nicht gleichzeitig mit einer anderen On-Demand- oder Batch-Auswertung ausgeführt werden können.</b>"
 
 Darüber hinaus können Sie bis zu 25 verschiedene Zielgruppen auswählen und verschiedene Aktionen für diese Zielgruppen durchführen. Zu diesen Aktionen gehören das [ Verschieben in einen Ordner](#folders), das [ Bearbeiten oder Anwenden eines Tags](#tags), das [ Anwenden von Zugriffsbeschriftungen](../../access-control/abac/ui/labels.md) und das [Löschen](#browse).
 
