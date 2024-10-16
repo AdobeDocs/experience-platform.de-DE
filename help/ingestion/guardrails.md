@@ -3,10 +3,10 @@ keywords: Experience Platform;Fehlerbehebung;Leitplanken;Richtlinien;
 title: Schutzmaßnahmen bei der Datenaufnahme
 description: Erfahren Sie mehr über Limits für die Datenerfassung in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 46%
+source-wordcount: '810'
+ht-degree: 42%
 
 ---
 
@@ -35,6 +35,7 @@ In der folgenden Tabelle sind Schutzmaßnahmen aufgeführt, die bei der Verwendu
 | Batch-Aufnahme in Profil | <ul><li>Die maximale Größe einer Datensatzklasse beträgt 100 KB (fest).</li><li>Die maximale Größe einer ExperienceEvent-Klasse beträgt 10 KB (hart).</li></ul> | |
 | Anzahl der täglich aufgenommenen Profil- oder ExperienceEvent-Batches | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag aufgenommen werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der pro Tag aufgenommenen Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Das Aufnehmen zusätzlicher Batches beeinträchtigt die System-Performance. | Dies ist ein weiches Limit. Es ist möglich, über ein weiches Limit hinauszugehen, jedoch stellen weiche Limits einen empfohlenen Richtwert für die System-Performance dar. |
 | Verschlüsselte Datenaufnahme | Die maximal unterstützte Größe einer einzelnen verschlüsselten Datei beträgt 1 GB. Sie können beispielsweise Daten von 2 oder mehr GBs in einem einzigen Datenfluss erfassen, jedoch darf keine einzelne Datei im Datenfluss-Lauf 1 GB überschreiten. | Die Erfassung verschlüsselter Daten kann länger dauern als die normale Datenerfassung. Weitere Informationen finden Sie im Leitfaden zur [verschlüsselten Datenerfassungs-API](../sources/tutorials/api/encrypt-data.md) . |
+| Batch-Erfassung aktualisieren | Die Aufnahme von aufgenommenen Batches kann bis zu 10-mal langsamer sein als normale Batches. Daher sollten Sie **Ihre aktualisierten Batches unter zwei Millionen Datensätzen aufbewahren**, um eine effiziente Laufzeit sicherzustellen und zu vermeiden, dass andere Batches in der Sandbox verarbeitet werden. | Sie können zwar zweifellos Batches erfassen, die zwei Millionen Datensätze überschreiten, aber aufgrund der Einschränkungen kleiner Sandboxes wird die Aufnahmezeit erheblich länger sein. |
 
 {style="table-layout:auto"}
 
