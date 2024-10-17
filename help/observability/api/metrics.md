@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Metrik-API-Endpunkt
 description: Erfahren Sie, wie Sie mithilfe der Observability Insights-API Beobachtbarkeitsmetriken in Experience Platform abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1278'
 ht-degree: 25%
 
 ---
@@ -56,8 +56,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -79,12 +78,11 @@ curl -X POST \
 | --- | --- |
 | `start` | Das früheste Datum/die früheste Uhrzeit, ab dem/der Metrikdaten abgerufen werden sollen. |
 | `end` | Das aktuelle Datum/die aktuelle Uhrzeit, ab dem/der Metrikdaten abgerufen werden sollen. |
-| `granularity` | Ein optionales Feld, das das Zeitintervall angibt, nach dem die Metrikdaten geteilt werden sollen. Beispielsweise gibt der Wert `DAY` Metriken für jeden Tag zwischen dem Datum `start` und dem Datum `end` zurück, während der Wert `MONTH` die Metrikergebnisse stattdessen nach Monat gruppiert. Bei Verwendung dieses Felds muss auch eine entsprechende `downsample` -Eigenschaft angegeben werden, um die Aggregationsfunktion anzugeben, mit der Daten gruppiert werden sollen. |
+| `granularity` | Ein optionales Feld, das das Zeitintervall angibt, nach dem die Metrikdaten geteilt werden sollen. Beispielsweise gibt der Wert `DAY` Metriken für jeden Tag zwischen dem Datum `start` und dem Datum `end` zurück, während der Wert `MONTH` die Metrikergebnisse stattdessen nach Monat gruppiert. |
 | `metrics` | Ein Array von Objekten, eines für jede Metrik, die Sie abrufen möchten. |
 | `name` | Der Name einer Metrik, die von Observability Insights erkannt wird. Eine vollständige Liste der akzeptierten Metriknamen finden Sie im [Anhang](#available-metrics) . |
 | `filters` | Ein optionales Feld, mit dem Sie Metriken nach bestimmten Datensätzen filtern können. Das Feld ist ein Array von Objekten (eines für jeden Filter), wobei jedes Objekt die folgenden Eigenschaften enthält: <ul><li>`name`: Der Typ der Entität, nach der Metriken gefiltert werden sollen. Derzeit wird nur `dataSets` unterstützt.</li><li>`value`: Die ID eines oder mehrerer Datensätze. Es können mehrere Datensatz-IDs als einzelne Zeichenfolge angegeben werden, wobei jede ID durch vertikale Balkenzeichen (`\|`) getrennt ist.</li><li>`groupBy`: Gibt bei Festlegung auf &quot;true&quot;an, dass der entsprechende `value` mehrere Datensätze darstellt, deren Metrikergebnisse separat zurückgegeben werden sollen. Wenn der Wert auf &quot;false&quot;gesetzt ist, werden die Metrikergebnisse für diese Datensätze gruppiert.</li></ul> |
-| `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren mehrerer Datensätze aus Zeitreihen zu einzelnen Ergebnissen verwendet werden soll. Ausführliche Informationen zu verfügbaren Aggregatoren finden Sie in der [OpenTSDB-Dokumentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
-| `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Sampling-Rate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für das Downsampling wird durch die Eigenschaft `granularity` bestimmt. Ausführliche Informationen zum Downsampling finden Sie in der [OpenTSDB-Dokumentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren mehrerer Datensätze aus Zeitreihen zu einzelnen Ergebnissen verwendet werden soll. Die derzeit unterstützten Aggregatoren sind &quot;min&quot;, &quot;max&quot;, &quot;sum&quot;und &quot;avg&quot;, je nach Definition der Metrik. |
 
 {style="table-layout:auto"}
 
@@ -221,8 +219,7 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Anzahl der Einträge, die für einen Datensatz oder alle Datensätze von [!DNL Identity Service] in ihre Datenquelle geschrieben wurden. | Datensatz-ID |
 | timeseries.identity.dataset.recordfailed.count | Anzahl der fehlgeschlagenen Einträge von [!DNL Identity Service], für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Anzahl der Identitätseinträge, die aufgrund eines Namespace fehlgeschlagen sind. | Namespace-ID (**erforderlich**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Anzahl der Identitätseinträge, die von einem Namespace übersprungen wurden. | Namespace-ID (**erforderlich**) |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Anzahl der übersprungenen Identitätsdatensätze. | Organisations-ID |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für Ihre Organisation gespeichert sind. | K. A. |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für einen Namespace gespeichert sind. | Namespace-ID (**erforderlich**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für Ihre Organisation für eine bestimmte Diagrammstärke (&quot;unbekannt&quot;, &quot;schwach&quot;oder &quot;stark&quot;) gespeichert sind. | Diagrammstärke (**erforderlich**) |
