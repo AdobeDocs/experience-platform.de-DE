@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
@@ -32,7 +32,7 @@ Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereigniss
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="Zusammenfassungsdaten"
->abstract="Zusammenfassungsdaten werden nur für Profilattribute angezeigt und für Ereignis- oder Zielgruppenattribute wird <b>nicht</b> angezeigt.<br/><br/>Zusammenfassungsdaten für Profilattribute werden unter folgenden Umständen möglicherweise nicht angezeigt: <ol><li>Einige Werte des Attributs sind mehr als 100 Zeichen lang.</li><li>Es gibt mehr als 3000 eindeutige Werte für das Attribut.</li></ol>"
+>abstract="Zusammenfassungsdaten werden nur für Profilattribute und <b>nicht</b> für Ereignis- oder Zielgruppenattribute angezeigt.<br/><br/>Zusammenfassungsdaten für Profilattribute werden unter folgenden Umständen möglicherweise nicht angezeigt: <ol><li>Einige Werte des Attributs sind mehr als 100 Zeichen lang.</li><li>Es gibt mehr als 3000 eindeutige Werte für das Attribut.</li></ol>"
 
 >[!NOTE]
 >

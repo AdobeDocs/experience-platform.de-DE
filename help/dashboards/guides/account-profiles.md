@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
 source-wordcount: '1827'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -67,8 +67,8 @@ Die auf der Registerkarte [!UICONTROL Details] angezeigten Kontoprofilinformatio
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
->title="Kunden pro Konto - Übersicht"
->abstract="Dieses Durchlaufwidget bietet Einblicke in die Struktur Ihrer B2B-Daten. Sie können damit feststellen, wie viele Kontoprofile nicht mit Kundenprofilen verknüpft sind oder mit denen ein oder mehrere Kundenprofile verknüpft sind.<ul><li>Direkte Kunden: Kundenprofile, die über die `personComponents` -Route direkt mit einem Konto verknüpft sind.</li><li>Indirekte Kunden: Kundenprofile, die über die `Account-Person` -Route mit einem Konto verknüpft sind.</li></ul>"
+>title="Überblick über Kundinnen und Kunden pro Konto"
+>abstract="Dieses Drillthrough-Widget bietet Einblicke in die Struktur Ihrer B2B-Daten. Sie können damit feststellen, wie viele Kontoprofile mit keinem, einem oder mehreren Kundenprofilen verknüpft sind.<ul><li>Direkte Kundschaft: Profile von Kundinnen und Kunden, die über die `personComponents`-Route direkt mit einem Konto verknüpft sind.</li><li>Indirekte Kundschaft: Profile von Kundinnen und Kunden, die über die `Account-Person`-Route mit einem Konto verknüpft sind.</li></ul>"
 
 Adobe stellt standardmäßige Widgets bereit, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Kontoprofilen visualisieren können.
 
