@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PAL Arithmetic-Funktionen
 description: Arithmetische Funktionen dienen der Durchführung grundlegender Berechnungen von Werten in Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 82%
+source-wordcount: '258'
+ht-degree: 51%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 82%
 
 Arithmetische Funktionen dienen der Durchführung grundlegender Berechnungen von Werten in [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md) .
 
-## Addieren
+## Hinzufügen
 
-Mit der Funktion `+` (Addition) wird die Summe zweier Argumentausdrücke ermittelt.
+Mit der Funktion `+` (Addition) wird die Summe zweier Argumentausdrücke als Zahl ermittelt.
 
 **Format**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## Multiplizieren
 
-Mit der Funktion `*` (Multiplikation) wird das Produkt zweier Argumentausdrücke ermittelt.
+Mit der Funktion `*` (Multiplikation) wird das Produkt zweier Argumentausdrücke als Zahl ermittelt.
 
 **Format**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## Subtrahieren
 
-Mit der Funktion `-` (Subtraktion) wird der Unterschied zwischen zwei Argumentausdrücken ermittelt.
+Mit der Funktion `-` (Subtraktion) wird der Unterschied zwischen zwei Argumentausdrücken als Zahl ermittelt.
 
 **Format**
 
@@ -70,7 +70,7 @@ product1.price - product2.price
 
 ## Dividieren
 
-Mit der Funktion `/` (Division) wird der Quotient zweier Argumentausdrücke ermittelt.
+Mit der Funktion `/` (Division) wird der Quotient zweier Argumentausdrücke als Zahl ermittelt.
 
 **Format**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## Rest
 
-Mit der Funktion `%` (Modulo/Rest) wird nach der Division der beiden Argumentausdrücke der Rest ermittelt.
+Die Funktion `%` (Modulo/Rest) wird verwendet, um den Rest zu finden, nachdem die beiden Argumentausdrücke als Zahl geteilt wurden.
 
 **Format**
 

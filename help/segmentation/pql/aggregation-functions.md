@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL-Aggregationsfunktionen
 description: Aggregationsfunktionen dienen dazu, mehrere Werte innerhalb von Profile Query Language (PQL)-Arrays zu gruppieren, um einen einzigen Zusammenfassungswert zu bilden.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 69%
+source-wordcount: '242'
+ht-degree: 38%
 
 ---
 
@@ -16,7 +16,7 @@ Aggregationsfunktionen dienen dazu, mehrere Werte innerhalb von [!DNL Profile Qu
 
 ## Anzahl
 
-Die Funktion `count` gibt die Anzahl der Elemente innerhalb des angegebenen Arrays zurück.
+Die Funktion `count` gibt die Anzahl der Elemente im angegebenen Array als Zahl zurück.
 
 **Format**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## Summe
 
-Die Funktion `sum` gibt die Summe aller ausgewählten Werte im Array zurück.
+Die Funktion `sum` gibt die Summe aller im Array ausgewählten Werte als Zahl zurück.
 
 **Format**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## Durchschnitt
 
-Die Funktion `average` gibt das arithmetische Mittel aller ausgewählten Werte im Array zurück.
+Die Funktion `average` gibt das arithmetische Mittel aller im Array ausgewählten Werte als Zahl zurück.
 
 **Format**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## Minimum
 
-Die Funktion `min` gibt den kleinsten aller ausgewählten Werte im Array zurück.
+Die Funktion `min` gibt die kleinste aller im Array ausgewählten Werte als Zahl zurück.
 
 **Format**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## Maximum
 
-Die Funktion `max` gibt den größten der ausgewählten Werte im Array zurück.
+Die Funktion `max` gibt den größten Wert aller im Array ausgewählten Werte als Zahl zurück.
 
 **Format**
 

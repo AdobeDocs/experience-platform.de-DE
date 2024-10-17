@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Datums- und Uhrzeitfunktionen von PQL
 description: Mit Datums- und Uhrzeitfunktionen können Datums- und Uhrzeitvorgänge für Werte in Profile Query Language (PQL) durchgeführt werden.
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 7%
+source-wordcount: '496'
+ht-degree: 8%
 
 ---
 
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Tritt auf
 
-Die Funktion `occurs` vergleicht die angegebene Zeitstempelfunktion mit einem bestimmten Zeitraum.
+Die Funktion `occurs` vergleicht die angegebene Zeitstempelfunktion mit einem festen Zeitraum als booleschen Wert.
 
 **Format**
 

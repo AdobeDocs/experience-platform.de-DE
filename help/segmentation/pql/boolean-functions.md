@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Boolesche PQL-Funktionen
 description: Boolesche Funktionen werden verwendet, um boolesche Logik für verschiedene Elemente in Profile Query Language (PQL) durchzuführen.
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 74%
+source-wordcount: '248'
+ht-degree: 58%
 
 ---
 
@@ -16,7 +16,7 @@ Boolesche Funktionen werden verwendet, um eine boolesche Logik für verschiedene
 
 ## Und
 
-Die Funktion `and` wird zur Erstellung einer logischen Verknüpfung verwendet.
+Mit der Funktion `and` wird ein logisches Bindewort als boolescher Wert erstellt.
 
 **Format**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## Oder
 
-Die Funktion `or` wird verwendet, um eine logische Trennung zu erstellen.
+Mit der Funktion `or` wird eine logische Trennung als boolescher Wert erstellt.
 
 **Format**
 
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## Wenn 
 
-Die Funktion `if` wird verwendet, um einen Ausdruck aufzulösen, wenn eine angegebene Bedingung eintritt.
+Die Funktion `if` wird verwendet, um einen Ausdruck aufzulösen, je nachdem, ob eine angegebene Bedingung als boolescher Wert wahr ist.
 
 **Format**
 

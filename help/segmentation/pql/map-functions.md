@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL Map-Funktionen
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Karten erleichtern.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 76%
+source-wordcount: '169'
+ht-degree: 46%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 76%
 
 ## Abrufen
 
-Mit der `get`-Funktion wird der Wert einer Zuordnung für einen bestimmten Schlüssel abgerufen.
+Mit der Funktion `get` wird der Wert einer Zuordnung für einen bestimmten Schlüssel als Objekt abgerufen.
 
 **Format**
 
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## Schlüssel
 
-Die `keys`-Funktion wird zum Abrufen aller Schlüssel einer gegebenen Zuordnung verwendet.
+Mit der Funktion `keys` werden alle Schlüssel für eine bestimmte Zuordnung als Array oder Liste abgerufen.
 
 **Format**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## Werte
 
-Die `values`-Funktion wird zum Abrufen aller Werte einer gegebenen Zuordnung verwendet.
+Mit der Funktion `values` werden alle Werte einer gegebenen Zuordnung als Array oder Liste abgerufen.
 
 **Format**
 

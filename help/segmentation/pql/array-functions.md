@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Array-, List- und Set PQL Functions
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Arrays, Listen und Zeichenfolgen vereinfachen.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 94%
+source-wordcount: '820'
+ht-degree: 57%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 
 ## Enthalten
 
-Mit der `in`-Funktion wird bestimmt, ob ein Element einem Array oder einer Liste angehört.
+Mit der Funktion `in` wird bestimmt, ob ein Element einem Array oder einer Liste als boolescher Wert angehört.
 
 **Format**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Nicht enthalten
 
-Mit der `notIn`-Funktion wird bestimmt, ob ein Element einem Array oder einer Liste nicht angehört.
+Mit der Funktion `notIn` wird bestimmt, ob ein Element nicht Mitglied eines Arrays oder einer Liste als boolescher Wert ist.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Schnittmengen
 
-Mit der `intersects`-Funktion wird bestimmt, ob zwei Arrays oder Listen mindestens ein gemeinsames Element aufweisen.
+Mit der Funktion `intersects` wird bestimmt, ob zwei Arrays oder Listen mindestens ein gemeinsames Element als boolescher Wert aufweisen.
 
 **Format**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Schnittmenge
 
-Die `intersection`-Funktion dient zur Bestimmung der gemeinsamen Elemente von zwei Arrays oder Listen.
+Mit der Funktion `intersection` werden die gemeinsamen Elemente von zwei Arrays oder Listen als Liste bestimmt.
 
 **Format**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Teilmenge von
 
-Mit der `subsetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Teilmenge eines anderen Arrays (Array B) ist. Mit anderen Worten: ob alle Elemente in Array A Elemente von Array B sind.
+Mit der `subsetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Teilmenge eines anderen Arrays (Array B) ist. Mit anderen Worten, dass alle Elemente in Array A Elemente von Array B als boolescher Wert sind.
 
 **Format**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Obermenge
 
-Mit der `supersetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Obermenge eines anderen Arrays (Array B) ist. Mit anderen Worten: ob Array A alle Elemente in Array B enthält.
+Mit der `supersetOf`-Funktion wird bestimmt, ob ein bestimmtes Array (Array A) eine Obermenge eines anderen Arrays (Array B) ist. Mit anderen Worten, dieses Array A enthält alle Elemente in Array B als booleschen Wert.
 
 **Format**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Enthält
 
-Mit der `includes`-Funktion wird bestimmt, ob ein Array oder eine Liste ein bestimmtes Element enthält.
+Mit der Funktion `includes` wird bestimmt, ob ein Array oder eine Liste ein bestimmtes Element als boolescher Wert enthält.
 
 **Format**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Verschieden
 
-Die `distinct`-Funktion dient dazu, doppelt vorhandene Werte aus einem Array oder einer Liste zu entfernen.
+Mit der Funktion `distinct` werden doppelte Werte aus einem Array oder einer Liste als Array entfernt.
 
 **Format**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Gruppieren nach
 
-Die `groupBy`-Funktion dient dazu, Werte eines Arrays oder einer Liste basierend auf dem Wert des Ausdrucks in eine Gruppe zu unterteilen.
+Die Funktion `groupBy` wird verwendet, um Werte eines Arrays oder einer Liste basierend auf dem Wert des Ausdrucks als Zuordnung von eindeutigen Werten des Gruppierungsausdrucks zu Arrays zu unterteilen, die Partitionen des Werts des Array-Ausdrucks sind.
 
 **Format**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argument | Beschreibung |
@@ -182,12 +182,12 @@ Die `groupBy`-Funktion dient dazu, Werte eines Arrays oder einer Liste basierend
 Die folgende PQL-Abfrage gruppiert alle Bestellungen anhand des Geschäfts, in dem die Bestellung aufgegeben wurde.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filter
 
-Die `filter`-Funktion wird zum Filtern eines Arrays oder einer Liste anhand eines Ausdrucks verwendet.
+Die Funktion `filter` wird zum Filtern eines Arrays oder einer Liste anhand eines Ausdrucks als Array oder Liste verwendet, je nach Eingabe.
 
 **Format**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Zuordnung
 
-Die `map`-Funktion wird zum Erstellen eines neuen Arrays verwendet, indem auf jedes Element in einem Array ein Ausdruck angewendet wird.
+Mit der Funktion `map` wird ein neues Array erstellt, indem ein Ausdruck auf jedes Element in einem Array als Array angewendet wird.
 
 **Format**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## Erste `n` in Array {#first-n}
 
-Die `topN`-Funktion gibt die ersten `N` Elemente in einem Array zurück, wenn sie anhand des angegebenen numerischen Ausdrucks in aufsteigender Reihenfolge sortiert werden.
+Die Funktion `topN` gibt die ersten `N` Elemente in einem Array zurück, wenn sie anhand des angegebenen numerischen Ausdrucks in aufsteigender Reihenfolge als Array sortiert werden.
 
 **Format**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Letzte `n` in Array
 
-Die `bottomN`-Funktion gibt die letzten `N` Elemente in einem Array zurück, wenn sie anhand des angegebenen numerischen Ausdrucks in aufsteigender Reihenfolge sortiert werden.
+Die Funktion `bottomN` gibt die letzten `N` Elemente in einem Array zurück, wenn sie anhand des angegebenen numerischen Ausdrucks in aufsteigender Reihenfolge als Array sortiert werden.
 
 **Format**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## Erstes Element
 
-Mit der `head`-Funktion wird das erste Element im Array oder in der Liste zurückgegeben.
+Mit der Funktion `head` wird das erste Element im Array oder in der Liste als Objekt zurückgegeben.
 
 **Format**
 

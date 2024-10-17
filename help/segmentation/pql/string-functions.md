@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL String-Funktionen
 description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 65%
+source-wordcount: '848'
+ht-degree: 43%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 65%
 
 ## Ist wie
 
-Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge einem angegebenen Muster entspricht.
+Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge mit einem angegebenen Muster als boolescher Wert übereinstimmt.
 
 **Format**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Beginnt mit
 
-Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge beginnt.
+Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge als boolescher Wert beginnt.
 
 **Format**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## Beginnt nicht mit
 
-Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge beginnt.
+Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Teilzeichenfolge als boolescher Wert beginnt.
 
 **Format**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Endet mit
 
-Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge endet.
+Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge als boolescher Wert endet.
 
 **Format**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Endet nicht mit
 
-Mit der Funktion `doesNotEndWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge endet.
+Mit der Funktion `doesNotEndWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Teilzeichenfolge als boolescher Wert endet.
 
 **Format**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Enthält
 
-Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge enthält.
+Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene Teilzeichenfolge als boolescher Wert enthält.
 
 **Format**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Enthält nicht
 
-Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge nicht enthält.
+Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge keine angegebene Unterzeichenfolge als boolescher Wert enthält.
 
 **Format**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Gleich
 
-Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge gleich der angegebenen Zeichenfolge ist.
+Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge mit der angegebenen Zeichenfolge als boolescher Wert übereinstimmt.
 
 **Format**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## Ungleich
 
-Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht gleich der angegebenen Zeichenfolge ist.
+Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht mit der angegebenen Zeichenfolge als boolescher Wert übereinstimmt.
 
 **Format**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Stimmt überein mit
 
-Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern bei regulären Ausdrücken finden Sie in [diesem Dokument](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
+Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zum Abgleichen von Mustern in regulären Ausdrücken als boolescher Wert finden Sie in [diesem Dokument](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) .
 
 **Format**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## Gruppe regelmäßiger Ausdrücke
 
-Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend auf dem bereitgestellten regulären Ausdruck zu extrahieren.
+Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend auf dem regulären Ausdruck zu extrahieren, der als Zeichenfolge bereitgestellt wird.
 
 **Format**
 
