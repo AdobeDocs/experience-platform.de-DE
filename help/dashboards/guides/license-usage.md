@@ -4,9 +4,9 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2738'
+source-wordcount: '2855'
 ht-degree: 19%
 
 ---
@@ -117,7 +117,6 @@ Proaktive Verwaltung und Optimierung Ihrer Lizenzierungsressourcen auf der Grund
 
 Um eine Zusammenfassung der Berechtigungsnutzung eines Produkts anzuzeigen, wählen Sie ein Produkt aus der Tabelle [!UICONTROL Kernprodukte] aus.
 
-<!-- update image ... -->
 ![Die [!UICONTROL Lizenznutzung] [!UICONTROL Überblick] mit einem Produkt und der Spalte mit der voraussichtlichen Verwendung sind hervorgehoben.](../images/license-usage/product-predicted-usage.png)
 
 Die Registerkarte Zusammenfassung wird angezeigt. Sie können die auf den Registerkarten [!UICONTROL Zusammenfassung] und [!UICONTROL Details] verfügbaren detaillierten Prognosen verwenden, um eine fundierte Entscheidungsfindung für eine effiziente Lizenzverwendung sicherzustellen.
@@ -126,7 +125,6 @@ Die Registerkarte Zusammenfassung wird angezeigt. Sie können die auf den Regist
 >
 >Beachten Sie, dass die Prognosen zur Lizenznutzung anhand der bisherigen Nutzung als Näherungswert betrachtet werden sollten. Sie sind dafür verantwortlich, die tatsächliche Nutzung Ihres Unternehmens zu verstehen und sicherzustellen, dass die Nutzung mit Adobe nicht über den Umfang der Lizenz Ihres Unternehmens hinausgeht.
 
-<!-- update image ... -->
 ![Die Zusammenfassungsansicht eines Platform-Produkts mit hervorgehobener Spalte zur prognostizierten Nutzung.](../images/license-usage/summary-predicted-usage.png)
 
 Der Prozentsatz der prognostizierten Nutzung wird wie folgt ermittelt:
@@ -142,10 +140,9 @@ Der Prozentsatz der prognostizierten Nutzung wird wie folgt ermittelt:
 Die prognostizierte Nutzungsfunktion unterstützt die folgenden Metriken:
 
 - [!UICONTROL Addressable audience]
-- [!UICONTROL Durchschnittliche Profilreichweite]
 - [!UICONTROL  Berechnungsstunden]
 - [!UICONTROL Kunden-Journey-Zielgruppenanzahl Zeilen]
-- [!UICONTROL Gesamtspeicher]
+- [!UICONTROL Datenvolumen insgesamt]
 
 ## Registerkarte [!UICONTROL Zusammenfassung] {#summary-tab}
 
@@ -204,6 +201,10 @@ Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** auswählen, um den a
 
 ## Verfügbare Metriken {#available-metrics}
 
+>[!IMPORTANT]
+>
+>Ab dem 20. August sahen Kunden mit Berechtigungen für &quot;[!UICONTROL Durchschnittliche Profilgenauigkeit]&quot;und &quot;[!UICONTROL Gesamtspeicherung]&quot;stattdessen &quot;[!UICONTROL Gesamtdatenvolumen]&quot;im Dashboard zur Lizenznutzung. Es gab keine Änderung an den Kundenberechtigungen, sondern nur eine Vereinfachung der Tracking-Metriken. [!UICONTROL Gesamtdatenvolumen] stellt die Daten dar, die im Adobe Experience Platform-Profildienst für Interaktions- und Personalisierungs-Workflows verfügbar sind. Diese vereinfachte Metrik verbesserte die Verwaltung und Messung der Verwendung von Profil-Service. Die Kunden sollten sich zwecks weiterer Klärung dieser Änderung an ihren Adobe-Vertreter wenden.
+
 Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen Metriken, die für mehrere Produkte in der Organisation gelten. Die verfügbaren Metriken sind:
 
 | Metrik | Beschreibung |
@@ -211,6 +212,7 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 | [!UICONTROL Audience Activation Size] | Die Gesamtgröße der Profile, die in einem Jahr für ein dateibasiertes Ziel aktiviert wurden. Hinweis: Dies umfasst keine Profile, die über Streaming-Ziele gesendet werden. |
 | [!UICONTROL Addressable Audience] | Die Summe der Berechtigungen Ihrer geschäftlichen Zielgruppe und der Berechtigung für die Verbraucher-Zielgruppe. Eine Audience vom Verbraucher wird definiert als die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe des Verbrauchers&quot;identifiziert werden. Eine Business-Audience ist definiert als die Anzahl der Geschäftspersonenprofile, die in der Bestellung als &quot;Business Audience&quot;identifiziert werden. |
 | [!UICONTROL  Adhoc Query Service Users Packs] | Ein Add-on zur Erhöhung der Berechtigung für gleichzeitige Query Service-Benutzer um fünf zusätzliche gleichzeitige Query Service-Benutzer und eine zusätzliche gleichzeitige Ausführung von Ad-hoc-Abfragen pro Pack. Es können mehrere zusätzliche Ad Hoc Query User Packs lizenziert sein. |
+| [!UICONTROL Durchschnittliche Profilreichweite] | **Veraltet** - Die Summe aller Produktionsdaten, die zu einem beliebigen Zeitpunkt im Hub-Profildienst gespeichert sind, dividiert durch die fünffache Anzahl autorisierter Geschäftsprofile. [!UICONTROL Durchschnittliche Profilreichweite] ist eine gemeinsam genutzte Funktion. |
 | [!UICONTROL Verfügbare CJA-Zeilen] | Die täglichen durchschnittlichen Datenzeilen, die in Customer Journey Analytics zur Analyse verfügbar sind. |
 | [!UICONTROL Berechnete Attribute] | Die Gesamtanzahl der aggregierten Profilverhaltensdaten. Aggregierte Profilverhaltensdaten basieren auf Erlebnisereignissen, die in ein Profilattribut konvertiert werden und in ein Personenprofil oder ein Geschäftsprofil aufgenommen werden können. |
 | [!UICONTROL Consumer Audience] | Die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe für Verbraucher&quot;identifiziert wurden. |
