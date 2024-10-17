@@ -4,7 +4,7 @@ title: Anleitung zur attributbasierten Zugriffssteuerung (End-to-End)
 description: Dieses Dokument enthält eine umfassende Anleitung zur attributbasierten Zugriffskontrolle in Adobe Experience Platform.
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
+source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 24%
@@ -45,8 +45,7 @@ Sie werden:
 
 * [Rollen für Ihre Benutzer beschriften](#label-roles): Verwenden Sie das Beispiel eines Gesundheitsdienstleisters (ACME Business Group), dessen Marketinggruppe mit externen Agenturen zusammenarbeitet.
 * [Beschriften Ihrer Ressourcen (Schemafelder und Segmente)](#label-resources): Weisen Sie den Schemaressourcen und -segmenten die Beschriftung **[!UICONTROL PHI/ Regulated Health Data]** zu.
-* 
-   * [Aktivieren Sie die Richtlinie, die sie miteinander verknüpft:](#policy): Aktivieren Sie die Standardrichtlinie, um den Zugriff auf Schemafelder und Segmente zu verhindern, indem Sie die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle verknüpfen. Benutzer mit übereinstimmenden Bezeichnungen erhalten dann Zugriff auf das Schemafeld und das Segment für alle Sandboxes.
+* [Aktivieren Sie die Richtlinie, die sie miteinander verknüpft ](#policy): Aktivieren Sie die Standardrichtlinie, um den Zugriff auf Schemafelder und Segmente zu verhindern, indem Sie die Beschriftungen in Ihren Ressourcen mit den Beschriftungen in Ihrer Rolle verknüpfen. Benutzer mit übereinstimmenden Bezeichnungen erhalten dann Zugriff auf das Schemafeld und das Segment für alle Sandboxes.
 
 ## Berechtigungen
 
