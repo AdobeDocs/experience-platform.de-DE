@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage-Editors
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
+source-git-commit: e66f3540d22a441089916183538921ea5654b312
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2843'
 ht-degree: 23%
 
 ---
@@ -200,12 +200,12 @@ Wenn eine Abfrage geplant wurde, bietet die Registerkarte [!UICONTROL Geplante A
 >
 >Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage in Query Service verfügbar ist, muss sie im Abfrage-Editor ausgeführt oder gespeichert werden.
 
-### [!BADGE Beta]{type=Informative} Objektbrowser {#object-browser}
+### [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Objektbrowser {#object-browser}
 
 >[!AVAILABILITY]
 >
 Die Navigationsleiste des Datensatzes ist nur für Data Distiller-Kunden verfügbar. Ihre Platform-Benutzeroberfläche enthält möglicherweise nicht die Navigationsleiste des linken Datensatzes. Andere Bilder in diesem Dokument spiegeln möglicherweise nicht die Navigationsleiste des Datensatzes wider. Wenden Sie sich für weitere Informationen an Ihren Adobe-Support-Mitarbeiter.<br>
-Der Objektbrowser befindet sich derzeit in der Beta-Phase und ist nur in einer **limitierten Version** verfügbar. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um frühzeitigen Release-Zugriff zu erhalten.
+Der Objektbrowser ist derzeit nur in einer **limitierten Version** verfügbar. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um frühzeitigen Release-Zugriff zu erhalten.
 
 Verwenden Sie den Objektbrowser, um Datensätze einfach zu suchen und zu filtern. Der Objektbrowser reduziert die Zeit für die Suche nach Tabellen und Datensätzen in großen Umgebungen mit zahlreichen Datensätzen. Dank des optimierten Zugriffs auf relevante Daten und Metadaten können Sie sich mehr auf die Erstellung von Abfragen und weniger auf die Navigation konzentrieren.
 
