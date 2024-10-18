@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;Konten aktualisieren
-solution: Experience Platform
 title: Aktualisieren von Konten mithilfe der Flow Service-API
-type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldeinformationen eines Kontos mithilfe der Flow Service-API beschrieben.
+description: In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldedaten eines Kontos mithilfe der Flow Service-API beschrieben.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 100%
+source-wordcount: '539'
+ht-degree: 91%
 
 ---
 
 # Aktualisieren von Konten mithilfe der Flow Service-API
 
-Unter bestimmten Umständen kann es erforderlich sein, die Details einer vorhandenen Quellverbindung zu aktualisieren. [!DNL Flow Service] bietet Ihnen die Möglichkeit, Details einer vorhandenen Batch- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
+Unter bestimmten Umständen kann es erforderlich sein, die Details einer vorhandenen Basisverbindung zu aktualisieren. [!DNL Flow Service] bietet Ihnen die Möglichkeit, Details einer vorhandenen Batch- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldedaten, hinzuzufügen, zu bearbeiten und zu löschen.
 
-In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldeinformationen einer Verbindung mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldedaten einer Verbindung mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+
+>[!TIP]
+>
+>Wenn eine Aktualisierung erforderlich ist, müssen Sie keine neue Basisverbindung erstellen. Alle Änderungen, die Sie an Ihrer Basisverbindung vornehmen, werden im zugehörigen Datenfluss übernommen.
 
 ## Erste Schritte
 
@@ -98,7 +99,7 @@ Bei einer erfolgreichen Antwort werden die aktuellen Details Ihrer Verbindung zu
 
 ## Aktualisieren der Verbindung
 
-Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durch und geben Sie dabei Ihre Verbindungs-ID, die Version und die neuen Informationen an, die Sie verwenden möchten.
+Um den Namen, die Beschreibung und die Anmeldedaten Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durch und geben Sie dabei Ihre Verbindungs-ID, die Version und die neuen Informationen an, die Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
@@ -116,7 +117,7 @@ PATCH /connections/{CONNECTION_ID}
 
 **Anfrage**
 
-Die folgende Anfrage enthält einen neuen Namen und eine neue Beschreibung sowie einen neuen Satz von Anmeldeinformationen, mit denen Sie Ihre Verbindung aktualisieren können.
+Die folgende Anfrage enthält einen neuen Namen und eine neue Beschreibung sowie einen neuen Satz von Anmeldedaten, mit denen Sie Ihre Verbindung aktualisieren können.
 
 ```shell
 curl -X PATCH \
@@ -168,4 +169,4 @@ Bei einer erfolgreichen Antwort werden Ihre Verbindungs-ID und ein aktualisierte
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der [!DNL Flow Service]-API die Anmeldeinformationen und Informationen für Ihre Verbindung aktualisiert. Weitere Informationen zur Verwendung von Quell-Connectoren finden Sie im Abschnitt [Quellen – Übersicht](../../home.md).
+In diesem Tutorial haben Sie mithilfe der [!DNL Flow Service]-API die Anmeldedaten und Informationen für Ihre Verbindung aktualisiert. Weitere Informationen zur Verwendung von Quell-Connectoren finden Sie im Abschnitt [Quellen – Übersicht](../../home.md).
