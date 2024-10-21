@@ -2,10 +2,10 @@
 title: Implementierungshandbuch für Identity Service
 description: Erfahren Sie, wie an Adobe Experience Platform bereitgestellte Daten verarbeitet werden, bevor sie von Identity Service zum Erstellen von Identitätsdiagrammen verwendet werden.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 64%
+source-wordcount: '600'
+ht-degree: 62%
 
 ---
 
@@ -46,6 +46,7 @@ Wenn Sie beispielsweise Telefonnummernfelder als Identitätsfelder kennzeichnen,
 >
 >* Felder vom Typ Array und Zuordnung werden nicht unterstützt und können nicht als Identitätsfelder markiert und gekennzeichnet werden.
 >* Der Namespace der resultierenden Identitäten wird zum Zeitpunkt der Kennzeichnung des Felds bereitgestellt.
+>* Ein Feld kann als Identität markiert werden, solange sich dieses Feld nicht unter einem Array-Objekt befindet.
 
 Weitere Informationen finden Sie im Handbuch zum Definieren von Identitätsfeldern in der Benutzeroberfläche ](../xdm/ui/fields/identity.md).[
 
