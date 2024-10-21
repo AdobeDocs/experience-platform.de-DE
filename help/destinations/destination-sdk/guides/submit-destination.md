@@ -2,10 +2,10 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
 title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 36%
+source-wordcount: '1052'
+ht-degree: 35%
 
 ---
 
@@ -32,6 +32,7 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
 * Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nur erforderlich, wenn Sie eine neue Zielkonfiguration übermitteln.
 * Eine Beschreibung des Grundes für die Zielübermittlung. Dies ist nur erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
 * Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Geben Sie an die Adobe einen API-Aufruf für Ihren Ziel-Endpunkt und die API-Antwort weiter, die Sie von Ihrem Ziel-Endpunkt erhalten haben.
+* Eine Bildschirmaufzeichnung, die das Benutzererlebnis für jemanden anzeigt, der eine Verbindung zu Ihrem Ziel herstellt und die Aktivierungsschritte durchläuft.
 * Zusätzliche Anforderungen für dateibasierte Ziele:
    * Geben Sie nach Verwendung der Test-API eine Anfrage und ein Beispiel für eine Antwort an [Testen Sie Ihr dateibasiertes Ziel mit Beispielprofilen](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Fügen Sie eine Beispieldatei an, die von Ihrem Ziel generiert und an Ihren Speicherort exportiert wurde.
