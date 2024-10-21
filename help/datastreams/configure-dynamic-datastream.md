@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie dynamische Datastream-Konfigurationen erstell
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Nachdem Sie [einen Datastream](configure.md) erstellt und [einen Dienst](configu
 
    ![Bild der Benutzeroberfläche von Datastraams mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Schalten Sie im Abschnitt **[!UICONTROL Konfiguration]** die Dienste, die Sie für jede Regel aktivieren oder deaktivieren möchten, je nachdem, ob die Daten an jeden Dienst gesendet werden sollen. Wenn Sie den Umschalter deaktivieren, ist die Regel deaktiviert und *alle Daten* werden an den Upstream-Dienst gesendet.
+1. Schalten Sie im Abschnitt **[!UICONTROL Konfiguration]** die Dienste, die Sie für jede Regel aktivieren oder deaktivieren möchten, je nachdem, ob die Daten an jeden Dienst gesendet werden sollen. Wenn Sie den Umschalter deaktivieren, ist das Service-Routing deaktiviert und *keine Daten* werden an den Upstream-Dienst gesendet.
 
    ![Bild der Benutzeroberfläche von Datastraams mit der dynamischen Konfigurationsregel.](assets/configure-dynamic-datastream/enable-service.png)
 
