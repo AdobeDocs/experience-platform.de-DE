@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
 description: Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '2301'
 ht-degree: 1%
@@ -113,7 +113,7 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 
 **[!DNL Nebraska Data Protection Act]**: Ein Datenschutzgesetz, das Nebraskans das Recht gibt, auf den Verkauf ihrer personenbezogenen Daten zuzugreifen, sie zu korrigieren, zu löschen und abzuwählen. Sie gilt für Unternehmen, die bestimmte Datenverarbeitungs- und Umsatzschwellen erreichen. Die NDPA verpflichtet die Unternehmen auch zur Durchführung angemessener Maßnahmen zur Datensicherheit und bietet eine 30-tägige Behandlungsdauer, um Verstöße zu beheben, bevor Sanktionen verhängt werden.
 
-**[!DNL New Hampshire Data Privacy Act]**: Diese Verordnung schützt die personenbezogenen Daten der Einwohner von New Hampshire, indem sie ihnen Rechte auf Zugriff, Löschung und Übermittlung ihrer Daten einräumt. Unternehmen müssen ihre Datenerfassungs- und Freigabepraktiken offenlegen, damit Verbraucher den Datenverkauf deaktivieren können. Die NHDPA gilt für Unternehmen, die bestimmte Schwellenwerte für die Datenverarbeitung erreichen.
+**[!DNL New Hampshire Privacy Act]**: Diese Verordnung schützt die personenbezogenen Daten der Einwohner von New Hampshire, indem sie ihnen Rechte auf Zugriff, Löschung und Übermittlung ihrer Daten einräumt. Unternehmen müssen ihre Datenerfassungs- und Freigabepraktiken offenlegen, damit Verbraucher den Datenverkauf deaktivieren können. Die NHDPA gilt für Unternehmen, die bestimmte Schwellenwerte für die Datenverarbeitung erreichen.
 
 **[!DNL New Jersey Data Protection Act]**: Ein umfassendes Datenschutzgesetz für den Bundesstaat, das Einwohnern von New Jersey Rechte zum Zugriff auf, zur Berichtigung und zum Löschen personenbezogener Daten einräumt. Es umfasst Opt-out-Mechanismen für Datenverkäufe und gezielte Werbung. Das NJDPA gilt für Unternehmen, die große Mengen an Verbraucherdaten verarbeiten, und erfordert Transparenz in der Art und Weise, wie Unternehmen personenbezogene Daten verarbeiten.
 
