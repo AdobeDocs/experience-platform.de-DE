@@ -2,9 +2,9 @@
 title: Fehlerbehebungshandbuch für Identitätsdiagramm-Verknüpfungsregeln
 description: Erfahren Sie, wie Sie häufige Probleme in den Regeln zur Identitätsdiagrammverlinkung beheben können.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3335'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ Im Kontext von Regeln zur Zuordnung von Identitätsdiagrammen kann ein Datensatz
 
 Betrachten Sie das folgende Ereignis mit zwei Annahmen:
 
-* Der Feldname CRMID wird als Identität mit dem Namespace CRMID markiert.
-* Der Namespace CRMID ist als eindeutiger Namespace definiert.
+1. Der Feldname CRMID wird als Identität mit dem Namespace CRMID markiert.
+2. Der Namespace CRMID ist als eindeutiger Namespace definiert.
 
 Das folgende Ereignis gibt eine Fehlermeldung zurück, die angibt, dass die Aufnahme fehlgeschlagen ist.
 
@@ -123,6 +123,24 @@ Suchen Sie nach der Ausführung Ihrer Abfrage den Ereignisdatensatz, von dem Sie
 >
 >Wenn die beiden Identitäten identisch sind und das Ereignis über Streaming erfasst wird, deduplizieren sowohl Identity als auch Profile die Identität.
 
+### ExperienceEvents nach der Authentifizierung werden dem falschen authentifizierten Profil zugeordnet
+
+Die Namespace-Priorität spielt eine wichtige Rolle bei der Bestimmung der primären Identität durch Ereignisfragmente.
+
+* Nachdem Sie Ihre [Identitätseinstellungen](./identity-settings-ui.md) für eine bestimmte Sandbox konfiguriert und gespeichert haben, verwendet das Profil die [Namespace-Priorität](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events), um die primäre Identität zu bestimmen. Im Falle von identityMap verwendet das Profil dann nicht mehr das `primary=true` -Flag.
+* Während Profile nicht mehr auf diese Markierung verweisen, können andere Dienste auf Experience Platform weiterhin die Markierung `primary=true` verwenden.
+
+Damit [authentifizierte Benutzerereignisse](implementation-guide.md#ingest-your-data) an den Personen-Namespace gebunden werden können, müssen alle authentifizierten Ereignisse den Personen-Namespace (CRMID) enthalten. Das bedeutet, dass der Personen-Namespace auch nach der Anmeldung eines Benutzers bei jedem authentifizierten Ereignis vorhanden sein muss.
+
+Wenn Sie ein Profil in der Profilansicht suchen, wird möglicherweise weiterhin die Markierung `primary=true` &#39;events&#39; angezeigt. Dies wird jedoch ignoriert und vom Profil nicht verwendet.
+
+AAIDs werden standardmäßig blockiert. Wenn Sie daher den Quell-Connector [Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) verwenden, müssen Sie sicherstellen, dass die ECID höher als die ECID priorisiert ist, damit die nicht authentifizierten Ereignisse die primäre Identität ECID aufweisen.
+
+**Schritte zur Fehlerbehebung**
+
+1. Um zu überprüfen, ob authentifizierte Ereignisse sowohl den Personen- als auch den Cookie-Namespace enthalten, lesen Sie die Schritte, die im Abschnitt [Fehlerbehebung bei Fehlern bei der Erfassung von Daten, die nicht in Identity Service aufgenommen werden](#my-identities-are-not-getting-ingested-into-identity-service) beschrieben sind.
+2. Um zu überprüfen, ob authentifizierte Ereignisse die primäre Identität des Personen-Namespace haben (z. B. CRMID), suchen Sie den Personen-Namespace im Profil-Viewer mithilfe der Zusammenführungsrichtlinie ohne Zuordnung (dies ist die Zusammenführungsrichtlinie, die kein privates Diagramm verwendet). Diese Suche gibt nur Ereignisse zurück, die mit dem Personen-Namespace verknüpft sind.
+
 ### Meine Erlebnisereignisfragmente werden nicht in das Profil aufgenommen {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 Es gibt verschiedene Gründe, warum Ihre Erlebnisereignisfragmente nicht in das Profil aufgenommen werden, darunter:
@@ -171,29 +189,11 @@ Bei diesen beiden Abfragen wird davon ausgegangen, dass:
 * Eine Identität wird von der identityMap und eine andere Identität von einem Identitätsdeskriptor gesendet. **HINWEIS**: In Experience-Datenmodell (XDM)-Schemas ist der Identitätsdeskriptor das Feld, das als Identität markiert ist.
 * Die CRMID wird über identityMap gesendet. Wenn die CRMID als Feld gesendet wird, entfernen Sie die `key='Email'` aus der WHERE-Klausel.
 
-### Meine Erlebnisereignisfragmente werden erfasst, haben jedoch die &quot;falsche&quot;primäre Identität im Profil.
-
-Die Namespace-Priorität spielt eine wichtige Rolle bei der Bestimmung der primären Identität durch Ereignisfragmente.
-
-* Nachdem Sie Ihre [Identitätseinstellungen](./identity-settings-ui.md) für eine bestimmte Sandbox konfiguriert und gespeichert haben, verwendet das Profil die [Namespace-Priorität](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events), um die primäre Identität zu bestimmen. Im Falle von identityMap verwendet das Profil dann nicht mehr das `primary=true` -Flag.
-* Während Profile nicht mehr auf diese Markierung verweisen, können andere Dienste auf Experience Platform weiterhin die Markierung `primary=true` verwenden.
-
-Damit [authentifizierte Benutzerereignisse](implementation-guide.md#ingest-your-data) an den Personen-Namespace gebunden werden können, müssen alle authentifizierten Ereignisse den Personen-Namespace (CRMID) enthalten. Das bedeutet, dass der Personen-Namespace auch nach der Anmeldung eines Benutzers bei jedem authentifizierten Ereignis vorhanden sein muss.
-
-Wenn Sie ein Profil in der Profilansicht suchen, wird möglicherweise weiterhin die Markierung `primary=true` &#39;events&#39; angezeigt. Dies wird jedoch ignoriert und vom Profil nicht verwendet.
-
-AAIDs werden standardmäßig blockiert. Wenn Sie daher den Quell-Connector [Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) verwenden, müssen Sie sicherstellen, dass die ECID höher als die ECID priorisiert ist, damit die nicht authentifizierten Ereignisse die primäre Identität ECID aufweisen.
-
-**Schritte zur Fehlerbehebung**
-
-* Um zu überprüfen, ob authentifizierte Ereignisse sowohl den Personen- als auch den Cookie-Namespace enthalten, lesen Sie die Schritte, die im Abschnitt [Fehlerbehebung bei Fehlern bei der Erfassung von Daten, die nicht in Identity Service aufgenommen werden](#my-identities-are-not-getting-ingested-into-identity-service) beschrieben sind.
-* Um zu überprüfen, ob authentifizierte Ereignisse die primäre Identität des Personen-Namespace haben (z. B. CRMID), suchen Sie den Personen-Namespace im Profil-Viewer mithilfe der Zusammenführungsrichtlinie ohne Zuordnung (dies ist die Zusammenführungsrichtlinie, die kein privates Diagramm verwendet). Diese Suche gibt nur Ereignisse zurück, die mit dem Personen-Namespace verknüpft sind.
-
 ## Probleme mit dem Diagrammverhalten {#graph-behavior-related-issues}
 
 In diesem Abschnitt werden häufig auftretende Probleme bezüglich des Verhaltens des Identitätsdiagramms beschrieben.
 
-### Die Identität wird mit der &quot;falschen&quot;Person verknüpft
+### Nicht authentifizierte ExperienceEvents werden an das falsche authentifizierte Profil angehängt
 
 Der Identitätsoptimierungsalgorithmus berücksichtigt [die zuletzt eingerichteten Links und entfernt die ältesten Links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Daher ist es möglich, dass ECIDs nach Aktivierung dieser Funktion von einer Person zu einer anderen neu zugeordnet (neu verknüpft) werden können. Gehen Sie wie folgt vor, um den Verlauf der Verknüpfung einer Identität im Zeitverlauf zu verstehen:
 
@@ -209,11 +209,11 @@ Der Identitätsoptimierungsalgorithmus berücksichtigt [die zuletzt eingerichtet
 
 Zunächst müssen Sie die folgenden Informationen erfassen:
 
-* Das Identitäts-Symbol (namespaceCode) des Cookie-Namespace (z. B. ECID) und der Personen-Namespace (z. B. CRMID), die gesendet wurden.
-   * Bei Web SDK-Implementierungen sind dies normalerweise die Namespaces, die in der identityMap enthalten sind.
-   * Bei Implementierungen des Analytics-Quell-Connectors handelt es sich um die Cookie-ID, die in der identityMap enthalten ist. Die Personenkennung ist ein eVar, das als Identität gekennzeichnet ist.
-* Der Datensatz, in dem das Ereignis gesendet wurde (dataset_name).
-* Der Identitätswert des zu suchenden Cookie-Namespace (identity_value).
+1. Das Identitäts-Symbol (namespaceCode) des Cookie-Namespace (z. B. ECID) und der Personen-Namespace (z. B. CRMID), die gesendet wurden.
+1.1. Bei Web SDK-Implementierungen sind dies normalerweise die in der identityMap enthaltenen Namespaces.
+1.2. Bei Implementierungen des Analytics-Quell-Connectors handelt es sich um die Cookie-ID, die in der identityMap enthalten ist. Die Personenkennung ist ein eVar, das als Identität gekennzeichnet ist.
+2. Der Datensatz, in dem das Ereignis gesendet wurde (dataset_name).
+3. Der Identitätswert des zu suchenden Cookie-Namespace (identity_value).
 
 Bei Identitätssymbolen (namespaceCode) wird zwischen Groß- und Kleinschreibung unterschieden. Um alle Identitätssymbole für einen bestimmten Datensatz in der identityMap abzurufen, führen Sie die folgende Abfrage aus:
 
@@ -241,7 +241,7 @@ Wenn Sie den Identitätswert Ihrer Cookie-ID nicht kennen und nach einer Cookie-
 
 >[!ENDTABS]
 
-Überprüfen Sie anschließend die Zuordnung des Cookie-Namespace in der Reihenfolge des Zeitstempels, indem Sie die folgende Abfrage ausführen:
+Nachdem Sie nun die mit mehreren Personen-IDs verknüpften Cookie-Werte identifiziert haben, verwenden Sie eine aus den Ergebnissen in der folgenden Abfrage, um eine chronologische Übersicht darüber zu erhalten, wann dieser Cookie-Wert mit einer anderen Personen-ID verknüpft wurde:
 
 >[!BEGINTABS]
 
@@ -368,6 +368,13 @@ Die wichtigsten Punkte sind:
    * Wenn es beispielsweise eine Wartebedingung zwischen Aktionen gibt und die ECID-Transfers während der Wartezeit durchgeführt werden, kann ein anderes Profil als Ziel ausgewählt werden.
    * Mit dieser Funktion ist die ECID nicht mehr immer einem Profil zugeordnet.
    * Es wird empfohlen, Journey mit Personen-Namespaces (CRMID) zu beginnen.
+
+>[!TIP]
+>
+>Journey sollten nach einem Profil mit eindeutigen Namespaces suchen, da ein nicht eindeutiger Namespace möglicherweise einem anderen Benutzer erneut zugewiesen wird.
+>
+>* ECIDs und nicht eindeutige E-Mail-/Telefon-Namespaces können von einer Person zur anderen verschoben werden.
+>* Wenn eine Journey eine Wartebedingung hat und diese nicht eindeutigen Namespaces zum Nachschlagen eines Profils auf einer Journey verwendet werden, kann die Journey-Nachricht an die falsche Person gesendet werden.
 
 ## Namespace-Priorität
 

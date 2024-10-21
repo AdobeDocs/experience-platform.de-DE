@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1700'
 ht-degree: 2%
 
 ---
@@ -107,7 +107,7 @@ Angenommen, die folgenden Konfigurationen werden für eine bestimmte Sandbox fes
 
 In Anbetracht der oben beschriebenen Konfigurationen werden Benutzeraktionen und die Bestimmung der primären Identität als solche aufgelöst:
 
-| Benutzeraktion (Erlebnisereignis) | Authentifizierungsstatus | Datenquelle | Identitätszuordnung | Primäre Identität (Primärschlüssel des Profilfragments) |
+| Benutzeraktion (Erlebnisereignis) | Authentifizierungsstatus | Datenquelle | Namespaces im Ereignis | Namespace der primären Identität |
 | --- | --- | --- | --- | --- |
 | Angebotsseite für Kreditkarten anzeigen | Nicht authentifiziert (anonym) | Web SDK | {ECID} | ECID |
 | Hilfeseite anzeigen | Nicht authentifiziert | Mobile SDK | {ECID, IDFA} | IDFA |
@@ -121,12 +121,16 @@ In Anbetracht der oben beschriebenen Konfigurationen werden Benutzeraktionen und
 
 ![Ein Diagramm zum Speicher der Segmentzugehörigkeit](../images/namespace-priority/segment-membership-storage.png)
 
-Für ein bestimmtes zusammengeführtes Profil werden Segmentmitgliedschaften mit der Identität mit dem Namespace mit der höchsten Priorität gespeichert.
+Für ein bestimmtes zusammengeführtes Profil werden Segmentmitgliedschaften mit der Identität mit der höchsten Namespace-Priorität gespeichert.
 
 Angenommen, es gibt zwei Profile:
 
-* Das erste Profil steht für John.
-* Das zweite Profil steht für Jane.
+* Profil 1 steht für John.
+   * Johns Profil ist für S1 qualifiziert (Segmentmitgliedschaft 1). S1 könnte beispielsweise auf ein Segment von Kunden verweisen, die sich als männlich identifizieren.
+   * John&#39;s Profil qualifiziert sich auch für S2 (Segmentmitgliedschaft 2). Dies kann sich auf ein Segment von Kunden beziehen, deren Treuestatus Gold ist.
+* Profil 2 steht für Jane.
+   * Janes Profil ist für S3 qualifiziert (Segmentmitgliedschaft 3). Dies könnte sich auf ein Segment von Kunden beziehen, die sich als weiblich identifizieren.
+   * Janes Profil ist auch für S4 qualifiziert (Segmentmitgliedschaft 4). Dies kann sich auf ein Segment von Kunden beziehen, deren Treuestatus Platin ist.
 
 Wenn John und Jane ein Gerät gemeinsam nutzen, wird die ECID (Webbrowser) von einer Person an eine andere übertragen. Dies hat jedoch keinen Einfluss auf die Informationen zur Segmentmitgliedschaft, die für John und Jane gespeichert wurden.
 
@@ -141,15 +145,13 @@ In diesem Abschnitt wird beschrieben, wie sich die Namespace-Priorität auf ande
 Löschanfragen von Datensammlungen funktionieren für eine bestimmte Identität wie folgt:
 
 * Echtzeit-Kundenprofil: Löscht alle Profilfragmente mit der angegebenen Identität als primäre Identität. **Die primäre Identität für das Profil wird jetzt anhand der Namespace-Priorität bestimmt.**
-* Data Lake: Löscht jeden Datensatz mit der angegebenen Identität als primäre Identität.
+* Data Lake: Löscht jeden Datensatz mit der angegebenen Identität als primäre Identität. Im Gegensatz zum Echtzeit-Kundenprofil basiert die primäre Identität im Data Lake auf der primären Identität, die im WebSDK (`primary=true`) angegeben ist, oder auf einem Feld, das als primäre Identität markiert ist
 
 Weitere Informationen finden Sie in der [Übersicht über die erweiterte Lebenszyklusverwaltung](../../hygiene/home.md) .
 
 ### Berechnete Attribute
 
-Berechnete Attribute verwenden keine Namespace-Priorität zur Berechnung von Werten. Wenn Sie berechnete Attribute verwenden, müssen Sie sicherstellen, dass die CRMID als Ihre primäre Identität für WebSDK festgelegt ist. Diese Einschränkung wird voraussichtlich im August 2024 behoben.
-
-Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
+Berechnete Attribute verwenden keine Namespace-Priorität zur Berechnung von Werten. Wenn Sie berechnete Attribute verwenden, müssen Sie sicherstellen, dass die CRMID als Ihre primäre Identität für WebSDK festgelegt ist. Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
 
 ### Data Lake
 
