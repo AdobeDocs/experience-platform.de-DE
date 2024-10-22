@@ -5,7 +5,7 @@ exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
 source-wordcount: '4320'
-ht-degree: 57%
+ht-degree: 58%
 
 ---
 
@@ -212,8 +212,8 @@ Die Liste der verfügbaren Filter wird angezeigt.
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Flexible Zielgruppenbewertungsbeschränkungen"
->abstract="Sie können bis zu 20 Zielgruppen in einem einzigen, flexiblen Evaluierungsablauf für Zielgruppen auswerten.<br/><br/>Während der Auswertungsauftrag so schnell wie möglich ausgeführt wird, kann es außerdem zu Systemverzögerungen kommen, da On-Demand-Auswertungen <b> nicht gleichzeitig mit einer anderen On-Demand- oder Batch-Auswertung ausgeführt werden können.</b>"
+>title="Flexible Begrenzungen für Zielgruppenbewertung"
+>abstract="Sie können bis zu 20 Zielgruppen in einem einzigen flexiblen Auswertungsdurchlauf auswerten.<br/><br/>Während der Auswertungsauftrag so schnell wie möglich ausgeführt wird, kann es außerdem zu Systemverzögerungen kommen, da On-Demand-Auswertungen <b>nicht</b> gleichzeitig mit einer anderen On-Demand- oder Batch-Auswertung ausgeführt werden können."
 
 Darüber hinaus können Sie bis zu 25 verschiedene Zielgruppen auswählen und verschiedene Aktionen für diese Zielgruppen durchführen. Zu diesen Aktionen gehören das [ Verschieben in einen Ordner](#folders), das [ Bearbeiten oder Anwenden eines Tags](#tags), das [ Anwenden von Zugriffsbeschriftungen](../../access-control/abac/ui/labels.md) und das [Löschen](#browse).
 

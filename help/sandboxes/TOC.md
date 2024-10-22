@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Hilfe zu Sandboxes in Adobe Experience Platform
-breadcrumb-title: Sandbox-Anleitung
+breadcrumb-title: Handbuch zu Sandboxes
 user-guide-description: Erfahren Sie, wie Sandboxes funktionieren und wie Sie eine Platform-Instanz zur Entwicklung, zum Testen und zur Anwendungsbereitstellung in virtuelle Umgebungen unterteilen.
 feature: Sandboxes
 source-git-commit: 868800de5dc6dde6654ff5256c91bddc2997b11b
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 79%
+ht-degree: 82%
 
 ---
 
