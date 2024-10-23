@@ -2,9 +2,9 @@
 title: Implementierungshandbuch für Regeln zur Identitätsdiagrammzuordnung
 description: Erfahren Sie mehr über die empfohlenen Schritte zur Implementierung Ihrer Daten mit Regelkonfigurationen für die Identitätsdiagrammzuordnung.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Schrittweise Anleitung:
 1. [Vollständige Voraussetzungen für die Implementierung](#prerequisites-for-implementation)
 2. [Erstellen der erforderlichen Identitäts-Namespaces](#namespace)
 3. [Verwenden Sie das Tool zur Diagrammsimulation, um sich mit dem Identitätsoptimierungsalgorithmus vertraut zu machen.](#graph-simulation)
-4. [Verwenden Sie das Tool für Identitätseinstellungen, um Ihre eindeutigen Namespaces zu bestimmen und die Prioritätseinstufung für Ihre Namespaces zu konfigurieren](#identity-settings)
+4. [Verwenden Sie die Benutzeroberfläche für Identitätseinstellungen, um Ihre eindeutigen Namespaces zu bestimmen und die Prioritätseinstufung für Ihre Namespaces zu konfigurieren](#identity-settings)
 5. [Erstellen eines Experience-Datenmodell (XDM)-Schemas](#schema)
 6. [Erstellen eines Datensatzes](#dataset)
 7. [Daten auf Experience Platform erfassen](#ingest)
@@ -183,9 +183,13 @@ Durch die Erstellung verschiedener Konfigurationen können Sie mit dem Tool für
 
 ## Identitätseinstellungen konfigurieren {#identity-settings}
 
-Sobald Sie eine bessere Vorstellung davon haben, wie sich Ihr Diagramm verhalten soll, navigieren Sie zum [Tool für Identitätseinstellungen](./identity-settings-ui.md) in der Benutzeroberfläche des Identity Service-Arbeitsbereichs.
+Sobald Sie eine bessere Vorstellung davon haben, wie sich Ihr Diagramm verhalten soll, navigieren Sie zur Benutzeroberfläche mit den [Identitätseinstellungen](./identity-settings-ui.md) in der Benutzeroberfläche des Identity Service-Arbeitsbereichs. Um auf die Benutzeroberfläche für Identitätseinstellungen zuzugreifen, wählen Sie im linken Navigationsbereich **[!UICONTROL Identitäten]** und dann **[!UICONTROL Einstellungen]** aus.
 
-Verwenden Sie das Tool für Identitätseinstellungen, um Ihre eindeutigen Namespaces zu bestimmen und Ihre Namespaces nach Priorität zu konfigurieren. Sobald Sie mit der Anwendung Ihrer Einstellungen fertig sind, müssen Sie mindestens sechs Stunden warten, bis Sie mit der Datenerfassung fortfahren können, da es mindestens sechs Stunden dauert, bis neue Einstellungen in Identity Service angezeigt werden.
+![Die Identitäten durchsuchen die Seite, auf der die Einstellungsschaltfläche hervorgehoben ist.](../images/implementation/settings.png)
+
+Verwenden Sie die Benutzeroberfläche für Identitätseinstellungen, um Ihre eindeutigen Namespaces zu bestimmen und Ihre Namespaces nach Priorität zu konfigurieren. Sobald Sie mit der Anwendung Ihrer Einstellungen fertig sind, müssen Sie mindestens sechs Stunden warten, bis Sie mit der Datenerfassung fortfahren können, da es mindestens sechs Stunden dauert, bis neue Einstellungen in Identity Service angezeigt werden.
+
+Weitere Informationen finden Sie im Benutzerhandbuch zu [Identitätseinstellungen](./identity-settings-ui.md).
 
 ## Erstellen eines XDM-Schemas {#schema}
 

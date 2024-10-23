@@ -2,7 +2,7 @@
 title: Verknüpfungsregeln für Identitätsdiagramme
 description: Erfahren Sie mehr über die Regeln zur Verknüpfung von Identitätsdiagrammen im Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 2%
@@ -98,11 +98,11 @@ Sie können einen Namespace mithilfe des Arbeitsbereichs für die Benutzeroberfl
 
 Betrachten Sie das folgende Szenario:
 
-* Scott verwendet ein Tablet und öffnet seinen Google Chrome-Browser, um zu nike<span>.com zu gehen, wo er sich anmeldet und nach neuen Basketballschuhen sucht.
+* Scott verwendet ein Tablet und öffnet seinen Google Chrome-Browser, um zu acme<span>.com zu gehen, wo er sich anmeldet und nach neuen Basketballschuhen sucht.
    * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
       * Ein ECID-Namespace und -Wert für die Verwendung des Browsers
       * Ein CRMID-Namespace und -Wert für den authentifizierten Benutzer (Scott hat sich mit seiner Kombination aus Benutzername und Kennwort angemeldet).
-* Sein Sohn Peter benutzt dann das gleiche Tablet und verwendet auch Google Chrome, um zu nike<span>.com zu gehen, wo er sich mit seinem eigenen Konto anmeldet, um nach Fußballausrüstung zu suchen.
+* Sein Sohn Peter verwendet dann dasselbe Tablet und verwendet auch Google Chrome, um zu acme<span>.com zu gehen, wo er sich mit seinem eigenen Konto anmeldet, um nach Fußballausrüstung zu suchen.
    * Hinter den Kulissen protokolliert dieses Szenario die folgenden Identitäten:
       * Derselbe ECID-Namespace und -Wert für den Browser.
       * Ein neuer CRMID-Namespace und -Wert, der den authentifizierten Benutzer darstellt.
