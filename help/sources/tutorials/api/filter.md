@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;Flow Service API;sources;Sources
 title: Filtern von Daten auf Zeilenebene für eine Source mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben.
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
+source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 14%
+source-wordcount: '1820'
+ht-degree: 16%
 
 ---
 
 # Filtern von Daten auf Zeilenebene für eine Quelle mithilfe der [!DNL Flow Service]-API
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Die Unterstützung für das Filtern von Daten auf Zeilenebene ist derzeit nur für die folgenden Quellen verfügbar:
 >
->* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
->* [Salesforce](../../connectors/crm/salesforce.md)
->* [Snowflake](../../connectors/databases/snowflake.md)
+>* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>* [[!DNL Marketo Engage] Standardaktivitäten](../../connectors/adobe-applications/marketo/marketo.md)
 
-In diesem Tutorial erfahren Sie, wie Sie Daten auf Zeilenebene mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) für eine Quelle filtern.
+In diesem Handbuch finden Sie Anweisungen zum Filtern von Daten auf Zeilenebene für eine Quelle mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
@@ -34,15 +34,15 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
 
-## Filtern von Quelldaten
+## Filtern von Quelldaten {#filter-source-data}
 
 Im Folgenden werden die Schritte beschrieben, die zum Filtern von Daten auf Zeilenebene für Ihre Quelle durchgeführt werden müssen.
 
-### Verbindungsspezifikationen nachschlagen
+### Abrufen Ihrer Verbindungsspezifikationen {#retrieve-your-connection-specs}
 
-Bevor Sie die API zum Filtern von Daten auf Zeilenebene für eine Quelle verwenden können, müssen Sie zunächst die Verbindungsspezifikationsdetails Ihrer Quelle abrufen, um die von einer bestimmten Quelle unterstützten Operatoren und Sprachen zu bestimmen.
+Der erste Schritt beim Filtern von Daten auf Zeilenebene für Ihre Quelle besteht darin, die Verbindungsspezifikationen Ihrer Quelle abzurufen und die von Ihrer Quelle unterstützten Operatoren und Sprachen zu bestimmen.
 
-Um die Verbindungsspezifikation einer bestimmten Quelle abzurufen, stellen Sie eine GET-Anfrage an den `/connectionSpecs` -Endpunkt der [!DNL Flow Service] -API und geben Sie dabei den Eigenschaftsnamen Ihrer Quelle als Teil Ihrer Abfrageparameter an.
+Um die Verbindungsspezifikation einer bestimmten Quelle abzurufen, stellen Sie eine GET-Anfrage an den `/connectionSpecs` -Endpunkt der [!DNL Flow Service] -API und geben Sie den Eigenschaftsnamen Ihrer Quelle als Teil Ihrer Abfrageparameter an.
 
 **API-Format**
 
@@ -54,9 +54,9 @@ GET /connectionSpecs/{QUERY_PARAMS}
 | --- | --- |
 | `{QUERY_PARAMS}` | Die optionalen Abfrageparameter, nach denen Ergebnisse gefiltert werden sollen. Sie können die Verbindungsspezifikation [!DNL Google BigQuery] abrufen, indem Sie die Eigenschaft `name` anwenden und in Ihrer Suche `"google-big-query"` angeben. |
 
-**Anfrage**
++++Anfrage
 
-Die folgende Anfrage ruft Verbindungsspezifikationen für [!DNL Google BigQuery] ab.
+Die folgende Anfrage ruft die Verbindungsspezifikationen für [!DNL Google BigQuery] ab.
 
 ```shell
 curl -X GET \
@@ -67,13 +67,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwort**
++++
 
-Bei einer erfolgreichen Antwort werden die Verbindungsspezifikationen für [!DNL Google BigQuery] zurückgegeben, einschließlich Informationen zur unterstützten Abfragesprache und zu den logischen Operatoren.
++++Antwort
 
->[!NOTE]
->
->Die nachstehende API-Antwort wird aus Gründen der Kürze abgeschnitten.
+Eine erfolgreiche Antwort gibt den Status-Code 200 und die Verbindungsanforderungen für [!DNL Google BigQuery] zurück, einschließlich Informationen zur unterstützten Abfragesprache und logischen Operatoren.
 
 ```json
 "attributes": {
@@ -111,7 +109,9 @@ Bei einer erfolgreichen Antwort werden die Verbindungsspezifikationen für [!DNL
 
 {style="table-layout:auto"}
 
-#### Vergleichsoperatoren 
++++
+
+#### Vergleichsoperatoren  {#comparison-operators}
 
 | Operator | Beschreibung |
 | --- | --- |
@@ -126,7 +126,7 @@ Bei einer erfolgreichen Antwort werden die Verbindungsspezifikationen für [!DNL
 
 {style="table-layout:auto"}
 
-### Filterbedingungen für die Aufnahme festlegen
+### Filterbedingungen für die Aufnahme festlegen {#specify-filtering-conditions-for-ingestion}
 
 Nachdem Sie die von Ihrer Quelle unterstützten logischen Operatoren und Abfragesprachen identifiziert haben, können Sie mit Profile Query Language (PQL) die Filterbedingungen festlegen, die auf Ihre Quelldaten angewendet werden sollen.
 
@@ -153,7 +153,7 @@ Im folgenden Beispiel werden Bedingungen nur auf ausgewählte Daten angewendet, 
 }
 ```
 
-### Datenvorschau
+### Datenvorschau {#preview-your-data}
 
 Sie können eine Vorschau Ihrer Daten anzeigen, indem Sie eine GET-Anfrage an den `/explore` -Endpunkt der [!DNL Flow Service] -API richten, dabei `filters` als Teil Ihrer Abfrageparameter angeben und Ihre PQL-Eingabebedingungen in [!DNL Base64] angeben.
 
@@ -169,7 +169,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{TABLE_PATH}` | Die Pfadeigenschaft der Tabelle, die Sie überprüfen möchten. |
 | `{FILTERS}` | Ihre in [!DNL Base64] kodierten PQL-Filterbedingungen. |
 
-**Anfrage**
++++Anfrage
 
 ```shell
 curl -X GET \
@@ -180,9 +180,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Antwort**
++++
 
-Eine erfolgreiche Anfrage gibt die folgende Antwort zurück.
++++Antwort
+
+Eine erfolgreiche Antwort gibt den Inhalt und die Struktur Ihrer Daten zurück.
 
 ```json
 {
@@ -328,9 +330,11 @@ Eine erfolgreiche Anfrage gibt die folgende Antwort zurück.
 }
 ```
 
++++
+
 ### Quellverbindung für gefilterte Daten erstellen
 
-Um eine Quellverbindung zu erstellen und gefilterte Daten zu erfassen, stellen Sie eine POST-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie dabei Ihre Filterbedingungen als Teil Ihrer Textparameter an.
+Um eine Quellverbindung zu erstellen und gefilterte Daten zu erfassen, stellen Sie eine POST-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie Ihre Filterbedingungen in den Anfrageteilparametern an.
 
 **API-Format**
 
@@ -338,7 +342,7 @@ Um eine Quellverbindung zu erstellen und gefilterte Daten zu erfassen, stellen S
 POST /sourceConnections
 ```
 
-**Anfrage**
++++Anfrage
 
 Die folgende Anfrage erstellt eine Quellverbindung zum Erfassen von Daten von `test1.fasTestTable`, wobei `city` = `DDN` ist.
 
@@ -385,7 +389,9 @@ curl -X POST \
     }'
 ```
 
-**Antwort**
++++
+
++++Antwort
 
 Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück.
 
@@ -396,6 +402,493 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
++++
+
+## Filtern von Aktivitätsentitäten nach [!DNL Marketo Engage] {#filter-for-marketo}
+
+Sie können die Filterung auf Zeilenebene verwenden, um bei Verwendung des [[!DNL Marketo Engage] Quell-Connectors](../../connectors/adobe-applications/marketo/marketo.md) nach Aktivitätsentitäten zu filtern. Derzeit können Sie nur nach Aktivitätsentitäten und standardmäßigen Aktivitätstypen filtern. Benutzerdefinierte Aktivitäten werden weiterhin unter [[!DNL Marketo] Feldzuordnungen](../../connectors/adobe-applications/mapping/marketo.md) verwaltet.
+
+### [!DNL Marketo] standardmäßige Aktivitätstypen {#marketo-standard-activity-types}
+
+In der folgenden Tabelle sind die standardmäßigen Aktivitätstypen für [!DNL Marketo] aufgeführt. Verwenden Sie diese Tabelle als Referenz für Ihre Filterkriterien.
+
+| Aktivitätstyp-ID | Aktivitätstyp name |
+| --- | --- |
+| 1 | Besuchs-Webseite |
+| 2 | Formular ausfüllen |
+| 3 | Link auswählen |
+| 6 | E-Mail senden |
+| 7 | E-Mail zugestellt |
+| 8 | E-Mail gebounct |
+| 9 | E-Mail abmelden |
+| 10 | E-Mail öffnen |
+| 11 | Klick auf E-Mail |
+| 12 | Neuer Lead |
+| 21 | Lead konvertieren |
+| 22 | Score ändern |
+| 24 | Zu Liste hinzufügen |
+| 25 | Aus Liste entfernen |
+| 27 | E-Mail nicht zugestellt (Soft-Bounce) |
+| 32 | Leads zusammenführen |
+| 34 | Zu Chancen hinzufügen |
+| 35 | Aus Opportunity entfernen |
+| 36 | Aktualisierungsmöglichkeit |
+| 46 | Interessanter Moment |
+| 101 | Umsatzschritt ändern |
+| 104 | Änderungsstatus in Progression |
+| 110 | Webhook aufrufen |
+| 113 | Zu Krankenpflege hinzufügen |
+| 114 | Wechseln der Krankenpflege |
+| 115 | Wechseln der Krankenpflege |
+
+{style="table-layout:auto"}
+
+Gehen Sie wie folgt vor, um Ihre standardmäßigen Aktivitätsentitäten bei Verwendung des Quell-Connectors [!DNL Marketo] zu filtern.
+
+### Erstellen eines Entwurfsdatenflusses
+
+Erstellen Sie zunächst einen [[!DNL Marketo] Datenfluss](../ui/create/adobe-applications/marketo.md) und speichern Sie ihn als Entwurf. Eine detaillierte Anleitung zum Erstellen eines Entwurfs für einen Datenfluss finden Sie in der folgenden Dokumentation:
+
+* [Speichern eines Datenflusses als Entwurf mithilfe der Benutzeroberfläche](../ui/draft.md)
+* [Speichern eines Datenflusses als Entwurf mithilfe der API](../api/draft.md)
+
+### Datenfluss-ID abrufen
+
+Sobald Sie über einen entworfenen Datenfluss verfügen, müssen Sie dessen entsprechende ID abrufen.
+
+Navigieren Sie in der Benutzeroberfläche zum Quellkatalog und wählen Sie dann **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus. Verwenden Sie die Statusspalte, um alle im Entwurfsmodus gespeicherten Datenflüsse zu identifizieren, und wählen Sie dann den Namen Ihres Datenflusses aus. Suchen Sie dann im Bereich **[!UICONTROL Eigenschaften]** rechts nach Ihrer Datenfluss-ID.
+
+### Abrufen Ihrer Datenflussdetails
+
+Als Nächstes müssen Sie Ihre Datenflug-Details abrufen, insbesondere die mit Ihrem Datenfluss verknüpfte Quell-Verbindungs-ID. Um Ihre Datenflussdetails abzurufen, stellen Sie eine GET-Anfrage an den `/flows` -Endpunkt und geben Sie Ihre Datenfluss-ID als Pfadparameter an.
+
+**API-Format**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{FLOW_ID}` | Die ID des Datenflusses, den Sie abrufen möchten. |
+
++++Anfrage
+
+Mit der folgenden Anfrage werden Informationen zur Datenfluss-ID abgerufen: `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef`.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Antwort
+
+Bei einer erfolgreichen Antwort werden Ihre Datenfluss-Details zurückgegeben, einschließlich Informationen zu den entsprechenden Quell- und Zielverbindungen. Sie müssen Ihre Quell- und Zielverbindungs-IDs zur Kenntnis nehmen, da diese Werte später erforderlich sind, um Ihren Datenfluss zu veröffentlichen.
+
+```json {line-numbers="true" start-line="1" highlight="23, 26"}
+{
+    "items": [
+        {
+            "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "createdAt": 1728592929650,
+            "updatedAt": 1728597187444,
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acme",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "acme@AdobeOrg",
+            "name": "Marketo Engage Standard Activities ACME",
+            "description": "",
+            "flowSpec": {
+                "id": "15f8402c-ba66-4626-b54c-9f8e54244d61",
+                "version": "1.0"
+            },
+            "state": "enabled",
+            "version": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "etag": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "sourceConnectionIds": [
+                "56f7eb3a-b544-4eaa-b167-ef1711044c7a"
+            ],
+            "targetConnectionIds": [
+                "7e53e6e8-b432-4134-bb29-21fc6e8532e5"
+            ],
+            "inheritedAttributes": {
+                "properties": {
+                    "isSourceFlow": true
+                },
+                "sourceConnections": [
+                    {
+                        "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+                        "connectionSpec": {
+                            "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                            "version": "1.0"
+                        },
+                        "baseConnection": {
+                            "id": "0137118b-373a-4c4e-847c-13a0abf73b33",
+                            "connectionSpec": {
+                                "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                                "version": "1.0"
+                            }
+                        }
+                    }
+                ],
+                "targetConnections": [
+                    {
+                        "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+                        "connectionSpec": {
+                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                            "version": "1.0"
+                        }
+                    }
+                ]
+            },
+            "options": {
+                "isSampleDataflow": false,
+                "errorDiagnosticsEnabled": true
+            },
+            "transformations": [
+                {
+                    "name": "Mapping",
+                    "params": {
+                        "mappingVersion": 0,
+                        "mappingId": "f6447514ef95482889fac1818972e285"
+                    }
+                }
+            ],
+            "runs": "/runs?property=flowId==a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "lastOperation": {
+                "started": 1728592929650,
+                "updated": 0,
+                "operation": "create"
+            },
+            "lastRunDetails": {
+                "id": "2d7863d5-ca4d-4313-ac52-2603eaf2cdbe",
+                "state": "success",
+                "startedAtUTC": 1728594713537,
+                "completedAtUTC": 1728597183080
+            },
+            "labels": [],
+            "recordTypes": [
+                {
+                    "type": "experienceevent",
+                    "extensions": {}
+                }
+            ]
+        }
+    ]
+}
+```
+
++++
+
+### Abrufen der Details zur Quellverbindung
+
+Verwenden Sie als Nächstes Ihre Quell-Verbindungs-ID und stellen Sie eine GET-Anfrage an den `/sourceConnections` -Endpunkt, um Ihre Details zur Quellverbindung abzurufen.
+
+**API-Format**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | Die ID der Quellverbindung, die Sie abrufen möchten. |
+
++++Anfrage
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Antwort
+
+Eine erfolgreiche Antwort gibt die Details Ihrer Quellverbindung zurück. Notieren Sie sich die Version, da Sie diesen Wert im nächsten Schritt benötigen werden, um Ihre Quellverbindung zu aktualisieren.
+
+```json {line-numbers="true" start-line="1" highlight="30"}
+{
+    "items": [
+        {
+            "id": "b85b895f-a289-42e9-8fe1-ae448ccc7e53",
+            "createdAt": 1729634331185,
+            "updatedAt": 1729634331185,
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acme",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "acme@AdobeOrg",
+            "name": "New Source Connection - 2024-10-23T03:28:50+05:30",
+            "description": "Source connection created from the workflow",
+            "baseConnectionId": "fd9f7455-1e23-4831-9283-7717e20bee40",
+            "state": "draft",
+            "data": {
+                "format": "tabular",
+                "schema": null,
+                "properties": null
+            },
+            "connectionSpec": {
+                "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
+                "version": "1.0"
+            },
+            "params": {
+                "columns": [],
+                "tableName": "Activity"
+            },
+            "version": "\"210068a6-0000-0200-0000-6718201b0000\"",
+            "etag": "\"210068a6-0000-0200-0000-6718201b0000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "fd9f7455-1e23-4831-9283-7717e20bee40",
+                    "connectionSpec": {
+                        "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
+                        "version": "1.0"
+                    }
+                }
+            },
+            "lastOperation": {
+                "started": 1729634331185,
+                "updated": 0,
+                "operation": "draft_create"
+            }
+        }
+    ]
+}
+```
+
++++
+
+### Quellverbindung mit Filterbedingungen aktualisieren
+
+Nachdem Sie nun über Ihre Quell-Verbindungs-ID und die zugehörige Version verfügen, können Sie jetzt eine PATCH-Anfrage mit den Filterbedingungen stellen, die Ihre standardmäßigen Aktivitätstypen angeben.
+
+Um Ihre Quellverbindung zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie Ihre Quellverbindungs-ID als Abfrageparameter an. Darüber hinaus müssen Sie einen `If-Match` -Header-Parameter mit der entsprechenden Version Ihrer Quellverbindung angeben.
+
+>[!TIP]
+>
+>Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version/das Tag des Datenflusses, den Sie aktualisieren möchten. Der Versions-/Tag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert.
+
+**API-Format**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | Die ID der Quellverbindung, die Sie abrufen möchten. |
+
++++Anfrage
+
+```shell
+curl -X PATCH \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: {VERSION_HERE}'
+  -d '
+      {
+        "op": "add",
+        "path": "/params/filters",
+        "value": {
+            "type": "PQL",
+            "format": "pql/json",
+            "value": {
+                "nodeType": "fnApply",
+                "fnName": "in",
+                "params": [
+                    {
+                        "nodeType": "fieldLookup",
+                        "fieldName": "activityType"
+                    },
+                    {
+                        "nodeType": "literal",
+                        "value": [
+                            "Change Status in Progression",
+                            "Fill Out Form"
+                        ]
+                    }
+                ]
+            }
+        }
+    }'
+```
+
++++
+
++++Antwort
+
+Bei einer erfolgreichen Antwort werden Ihre Quell-Verbindungs-ID und das eTag (Version) zurückgegeben.
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"210068a6-0000-0200-0000-6718201b0000\""
+}
+```
+
++++
+
+### Publish der Quellverbindung
+
+Nachdem Ihre Quellverbindung mit Ihren Filterbedingungen aktualisiert wurde, können Sie jetzt vom Entwurfsstatus abwechseln und Ihre Quellverbindung veröffentlichen. Senden Sie dazu eine POST-Anfrage an den `/sourceConnections` -Endpunkt und geben Sie die ID Ihrer Quellverbindung als Entwurf sowie einen Aktionsvorgang für die Veröffentlichung an.
+
+**API-Format**
+
+```http
+POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | Die ID der Quellverbindung, die Sie veröffentlichen möchten. |
+| `op` | Ein Aktionsvorgang, mit dem der Status der abgefragten Quellverbindung aktualisiert wird. Um eine Entwurfsquellverbindung zu veröffentlichen, legen Sie für `op` den Wert `publish` fest. |
+
++++Anfrage
+
+Die folgende Anfrage veröffentlicht eine entworfene Quellverbindung.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Antwort
+
+Bei einer erfolgreichen Antwort werden Ihre Quell-Verbindungs-ID und das eTag (Version) zurückgegeben.
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\""
+}
+```
+
++++
+
+### Publish Ihre Zielverbindung
+
+Ähnlich wie im vorherigen Schritt müssen Sie auch Ihre Zielverbindung veröffentlichen, um mit dem Entwurf des Datenflusses fortzufahren und ihn zu veröffentlichen. Stellen Sie eine POST-Anfrage an den `/targetConnections` -Endpunkt und geben Sie die ID der Entwurfs-Zielverbindung an, die Sie veröffentlichen möchten, sowie einen Aktionsvorgang für die Veröffentlichung.
+
+**API-Format**
+
+```http
+POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{TARGET_CONNECTION_ID}` | Die ID der Zielverbindung, die Sie veröffentlichen möchten. |
+| `op` | Ein Aktionsvorgang, mit dem der Status der abgefragten Zielverbindung aktualisiert wird. Um eine Entwurfszielverbindung zu veröffentlichen, legen Sie für `op` den Wert `publish` fest. |
+
++++Anfrage
+
+Die folgende Anfrage veröffentlicht die Zielverbindung mit der ID: `7e53e6e8-b432-4134-bb29-21fc6e8532e5`.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/7e53e6e8-b432-4134-bb29-21fc6e8532e5/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Antwort
+
+Bei einer erfolgreichen Antwort werden die ID und das entsprechende eTag für Ihre veröffentlichte Zielverbindung zurückgegeben.
+
+```json
+{
+    "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
+
+
+### Publish Ihres Datenflusses
+
+Nachdem Ihre Quell- und Zielverbindungen veröffentlicht wurden, können Sie jetzt mit dem letzten Schritt fortfahren und Ihren Datenfluss veröffentlichen. Um Ihren Datenfluss zu veröffentlichen, stellen Sie eine POST-Anfrage an den `/flows` -Endpunkt und geben Sie Ihre Datenfluss-ID sowie einen Aktionsvorgang zur Veröffentlichung an.
+
+**API-Format**
+
+```http
+POST /flows/{FLOW_ID}/action?op=publish
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{FLOW_ID}` | Die ID des Datenflusses, den Sie veröffentlichen möchten. |
+| `op` | Ein Aktionsvorgang, der den Status des abgefragten Datenflusses aktualisiert. Um einen Datenfluss-Entwurf zu veröffentlichen, legen Sie `op` auf `publish` fest. |
+
++++Anfrage
+
+Mit der folgenden Anfrage wird Ihr Datenfluss-Entwurf veröffentlicht.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Antwort
+
+Bei einer erfolgreichen Antwort werden die ID und das entsprechende `etag` Ihres Datenflusses zurückgegeben.
+
+```json
+{
+  "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+  "etag": "\"4b0354b7-0000-0200-0000-6716ce1f0000\""
+}
+```
+
++++
+
+Sie können die Experience Platform-Benutzeroberfläche verwenden, um zu überprüfen, ob Ihr Entwurf-Datenfluss veröffentlicht wurde. Navigieren Sie zur Seite &quot;Datenflüsse&quot;im Quellkatalog und referenzieren Sie den **[!UICONTROL Status]** Ihres Datenflusses. Bei erfolgreicher Ausführung sollte der Status jetzt auf **Aktiviert** gesetzt werden.
+
+>[!TIP]
+>
+>* Ein Datenfluss mit aktivierter Filterung wird nur einmal aufgestockt. Alle Änderungen in der , die Sie an den Filterkriterien vornehmen (sei es ein Zusatz oder eine Entfernung), können nur für inkrementelle Daten wirksam werden.
+>* Wenn Sie historische Daten für neue Aktivitätstypen erfassen müssen, wird empfohlen, einen neuen Datenfluss zu erstellen und die Filterkriterien mit den entsprechenden Aktivitätstypen in der Filterbedingung zu definieren.
+>* Sie können keine benutzerdefinierten Aktivitätstypen filtern.
+>* Sie können keine Vorschau gefilterter Daten anzeigen.
+
 ## Anhang
 
 Dieser Abschnitt enthält weitere Beispiele für verschiedene Payloads zum Filtern.
@@ -403,6 +896,8 @@ Dieser Abschnitt enthält weitere Beispiele für verschiedene Payloads zum Filte
 ### Besondere Bedingungen
 
 Sie können die anfängliche `fnApply` für Szenarien auslassen, für die nur eine Bedingung erforderlich ist.
+
++++Auswählen zum Anzeigen des Beispiels
 
 ```json
 {
@@ -425,9 +920,13 @@ Sie können die anfängliche `fnApply` für Szenarien auslassen, für die nur ei
 }
 ```
 
++++
+
 ### Verwenden des `in` -Operators
 
 In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `in`.
+
++++Auswählen zum Anzeigen des Beispiels
 
 ```json
 {
@@ -459,7 +958,11 @@ In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `in`
 }
 ```
 
++++
+
 ### Verwenden des `isNull` -Operators
+
++++Auswählen zum Anzeigen des Beispiels
 
 In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `isNull`.
 
@@ -480,9 +983,14 @@ In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `isN
 }
 ```
 
++++
+
 ### Verwenden des `NOT` -Operators
 
 In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `NOT`.
+
+
++++Auswählen zum Anzeigen des Beispiels
 
 ```json
 {
@@ -507,9 +1015,13 @@ In der folgenden Beispiel-Payload finden Sie ein Beispiel für den Operator `NOT
 }
 ```
 
++++
+
 ### Beispiel mit verschachtelten Bedingungen
 
 Ein Beispiel für komplexe verschachtelte Bedingungen finden Sie unten in der Beispiel-Payload .
+
++++Auswählen zum Anzeigen des Beispiels
 
 ```json
 {
@@ -585,3 +1097,5 @@ Ein Beispiel für komplexe verschachtelte Bedingungen finden Sie unten in der Be
   }
 }
 ```
+
++++
