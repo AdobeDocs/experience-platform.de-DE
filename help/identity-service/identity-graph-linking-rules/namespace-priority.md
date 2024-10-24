@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ In Anbetracht der oben beschriebenen Konfigurationen werden Benutzeraktionen und
 
 | Benutzeraktion (Erlebnisereignis) | Authentifizierungsstatus | Datenquelle | Namespaces im Ereignis | Namespace der primären Identität |
 | --- | --- | --- | --- | --- |
-| Angebotsseite für Kreditkarten anzeigen | Nicht authentifiziert (anonym) | Web SDK | {ECID} | ECID |
-| Hilfeseite anzeigen | Nicht authentifiziert | Mobile SDK | {ECID, IDFA} | IDFA |
-| Kontoübersicht anzeigen | Authentifiziert | Web SDK | {CRMID, ECID} | CRMID |
-| Für Eigenheimdarlehen anmelden | Authentifiziert | Analytics-Quell-Connector | {CRMID, ECID, AAID} | CRMID |
-| 1.000 USD aus der Überprüfung auf Einsparungen übertragen | Authentifiziert | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| Angebotsseite für Kreditkarten anzeigen | Nicht authentifiziert (anonym) | Web SDK | `{ECID}` | ECID |
+| Hilfeseite anzeigen | Nicht authentifiziert | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| Kontoübersicht anzeigen | Authentifiziert | Web SDK | `{CRMID, ECID}` | CRMID |
+| Für Eigenheimdarlehen anmelden | Authentifiziert | Analytics-Quell-Connector | `{CRMID, ECID, AAID}` | CRMID |
+| 1.000 USD aus der Überprüfung auf Einsparungen übertragen | Authentifiziert | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 

@@ -2,7 +2,7 @@
 title: Filtern von Daten auf Zeilenebene für eine Source mithilfe der Flow Service-API
 description: In diesem Tutorial werden die Schritte zum Filtern von Daten auf Quellebene mithilfe der Flow Service-API beschrieben.
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 16%
@@ -687,12 +687,12 @@ Um Ihre Quellverbindung zu aktualisieren, stellen Sie eine PATCH-Anfrage an den 
 **API-Format**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | Die ID der Quellverbindung, die Sie abrufen möchten. |
+| `{SOURCE_CONNECTION_ID}` | Die ID der Quellverbindung, die Sie aktualisieren möchten |
 
 +++Anfrage
 
