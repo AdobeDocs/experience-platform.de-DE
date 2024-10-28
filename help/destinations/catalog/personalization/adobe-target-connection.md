@@ -3,9 +3,9 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 32%
 
 ---
@@ -126,7 +126,8 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
   >[!IMPORTANT]
   >
-  >Die Datastream-ID ist für jede Adobe Target-Zielverbindung eindeutig. Wenn Sie dieselben Zielgruppen mehreren Datastreams zuordnen müssen, müssen Sie [für jede Datastream-ID eine neue Zielverbindung erstellen](../../ui/connect-destination.md) und den [Aktivierungsfluss für die Zielgruppe](#activate) durchlaufen.
+  >Die Datastream-ID ist für jede Adobe Target-Zielverbindung eindeutig. Sie können nicht dieselbe Datastream-ID für mehrere Adobe Target-Zielverbindungen verwenden.
+  >Wenn Sie dieselben Zielgruppen mehreren Datastreams zuordnen müssen, müssen Sie [für jede Datastream-ID eine neue Zielverbindung erstellen](../../ui/connect-destination.md) und den [Aktivierungsfluss für die Zielgruppe](#activate) durchlaufen.
 
    * **[!UICONTROL None]**: Wählen Sie diese Option, wenn Sie die Adobe Target-Personalisierung konfigurieren müssen, das [Experience Platform Web SDK](/help/web-sdk/home.md) jedoch nicht implementieren können. Bei Verwendung dieser Option unterstützen Zielgruppen, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Referenzieren Sie die Tabelle im Abschnitt [Unterstützte Anwendungsfälle](#supported-use-cases) , um einen Vergleich der verfügbaren Anwendungsfälle pro Implementierungstyp anzuzeigen.
 
