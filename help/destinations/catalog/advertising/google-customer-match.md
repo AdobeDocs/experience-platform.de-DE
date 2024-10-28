@@ -3,10 +3,10 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google Customer Match-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 19%
+source-wordcount: '2100'
+ht-degree: 18%
 
 ---
 
@@ -215,6 +215,20 @@ Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DN
 Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasht.
 
 ![Wenden Sie die Transformationssteuerung an, die im Schritt &quot;Zuordnung&quot;des Aktivierungs-Workflows hervorgehoben ist.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## Ziel überwachen {#monitor-destination}
+
+Nachdem Sie eine Verbindung zum Ziel hergestellt und einen Ziel-Datenfluss eingerichtet haben, können Sie die [Überwachungsfunktion](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP verwenden, um umfassende Informationen über die Profildatensätze zu erhalten, die in jedem Datenfluss für Ihr Ziel aktiviert wurden.
+
+>[!IMPORTANT]
+>
+> Ab Oktober 2024 führt Adobe eine Aktualisierung durch, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Diese Verbesserung sorgt für eine bessere Abstimmung zwischen der Berichterstellung für Experience Platform und Zielplattformen.
+>
+> Vor dieser Aktualisierung umfasste **[!UICONTROL fehlgeschlagene Identitäten]** alle Aktivierungsversuche. Nach dieser Aktualisierung ist nur der letzte Aktivierungsversuch in der Gesamtanzahl enthalten.
+>
+> Diese Verbesserung gilt derzeit für das Ziel [Google-Kundenabgleich](google-customer-match.md) , wird jedoch schrittweise für andere Experience Platform-Streaming-Ziele eingeführt.
+> Nach dieser Verbesserung sehen Benutzer dieses Ziels möglicherweise einen erwarteten Rückgang ihrer Anzahl von **[!UICONTROL Identitäten fehlgeschlagen]**.
+
 
 ## Überprüfen, ob die Zielgruppenaktivierung erfolgreich war {#verify-activation}
 

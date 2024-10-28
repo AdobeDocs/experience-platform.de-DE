@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '3542'
+source-wordcount: '3639'
 ht-degree: 11%
 
 ---
@@ -94,6 +94,17 @@ Jeder einzelne Datenfluss zeigt die folgenden Details an:
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profilidentitäten, die im Rahmen der Datenfluss-Ausführung erfolgreich für das ausgewählte Ziel aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Zielgruppen erstellt, aktualisiert und entfernt werden.
 - **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die aufgrund fehlender Attribute und einer Verletzung der Einwilligung von der Aktivierung ausgeschlossen sind.
 - **[!UICONTROL Identitäten fehlgeschlagen]** Die Gesamtzahl der Profilidentitäten, die für das Ziel aufgrund von Fehlern nicht aktiviert werden.
+
+  >[!IMPORTANT]
+  >
+  > Ab Oktober 2024 führt Adobe eine Aktualisierung durch, um die Berichtsgenauigkeit für Streaming-Ziele zu erhöhen. Diese Verbesserung sorgt für eine bessere Abstimmung zwischen der Berichterstellung für Experience Platform und Zielplattformen.
+  >
+  > Vor dieser Aktualisierung umfasste **[!UICONTROL fehlgeschlagene Identitäten]** alle Aktivierungsversuche. Nach dieser Aktualisierung ist nur der letzte Aktivierungsversuch in der Gesamtanzahl enthalten.
+  > 
+  > Diese Verbesserung gilt derzeit für das Ziel [Google-Kundenabgleich](../../destinations/catalog/advertising/google-customer-match.md) , wird jedoch schrittweise für andere Experience Platform-Streaming-Ziele eingeführt.
+  > Nach dieser Verbesserung kann es bei Benutzern des Ziels [Google-Kundenabgleich](../../destinations/catalog/advertising/google-customer-match.md) zu einem erwarteten Rückgang der Anzahl der **[!UICONTROL fehlgeschlagenen Identitäten]** kommen.
+
+
 - **[!UICONTROL Aktivierungsrate]**: Der Prozentsatz der empfangenen Identitäten, die erfolgreich aktiviert oder übersprungen wurden. Die folgende Formel zeigt, wie dieser Wert berechnet wird:
   ![ Formel der Aktivierungsrate.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: entweder [!UICONTROL Abgeschlossen] oder [!UICONTROL Verarbeitung]. [!UICONTROL Abgeschlossen] bedeutet, dass alle Identitäten für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde exportiert wurden. [!UICONTROL Verarbeitung] bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
@@ -205,7 +216,7 @@ Um auf das Dashboard [!UICONTROL Überwachung] zuzugreifen, wählen Sie im linke
 
 Verwenden Sie das Dashboard [!UICONTROL Ziele] , um einen Überblick über den Zustand Ihrer Aktivierungsflüsse zu erhalten. Rufen Sie zunächst Einblicke in eine aggregierte Ebene für alle Batch- und Streaming-Ziele ab und führen Sie dann einen Drilldown in detaillierten Ansichten für Datenflüsse, Datenfluss-Ausführungen und aktivierte Zielgruppen durch, um Ihre Aktivierungsdaten eingehend zu untersuchen. Die Bildschirme im Dashboard [!UICONTROL Überwachung] bieten praktische Einblicke über Metriken und Fehlerbeschreibungen, mit denen Sie Probleme beheben können, die in Ihren Aktivierungsszenarien auftreten können.
 
-Sie können die angezeigten Informationen nach Datentyp (Kunden, Konten (nur für die Adobe Real-Time CDP B2B-Bearbeitung), Interessenten und Kontoanreicherung filtern. Weitere Informationen zu diesen Optionen finden Sie im Leitfaden zum [Monitoring-Dashboard](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+Sie können die angezeigten Informationen nach Datentyp (Kunden, Konten (nur für Adobe Real-Time CDP B2B edition), Perspektiven und Kontoanreicherung) filtern. Weitere Informationen zu diesen Optionen finden Sie im Leitfaden zum [Monitoring-Dashboard](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
 
 ![In der Monitoring-Dashboard-Ansicht hervorgehobener Filter vom Datentyp.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
