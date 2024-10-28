@@ -3,10 +3,10 @@ keywords: Cloud-Speicherziel;Cloud-Speicher
 title: Übersicht über die Cloud-Speicher-Ziele
 description: Adobe Experience Platform kann Ihre Zielgruppen als Datendateien an Ihre Amazon S3-, AWS Kinesis-, Azure Event Hubs- oder SFTP-Cloud-Speicherorte senden.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 42%
+source-wordcount: '463'
+ht-degree: 38%
 
 ---
 
@@ -40,7 +40,7 @@ Um Zielgruppen an Cloud-Speicher-Ziele für Ihre Kampagnen zu senden, muss Platf
 
 >[!NOTE]
 >
-> Die in diesem Abschnitt beschriebene Funktion ist derzeit nur für [Amazon S3](amazon-s3.md)-Ziele verfügbar.
+> Die in diesem Abschnitt beschriebene Funktionalität ist für alle Cloud-Speicher-Ziele verfügbar. Das Ziel [Amazon S3](amazon-s3.md) unterstützt jedoch derzeit nur die Makros `%SEGMENT_ID%` und `%SEGMENT_NAME%`.
 
 Um einen benutzerdefinierten Ordner pro Zielgruppendatei in Ihrem Speicherort zu erstellen, können Sie Makros im Eingabefeld Ordnerpfad verwenden. Fügen Sie die Makros am Ende des Eingabefelds ein, wie unten dargestellt.
 
