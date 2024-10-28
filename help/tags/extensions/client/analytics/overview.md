@@ -2,10 +2,10 @@
 title: Adobe Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 93%
+source-wordcount: '2331'
+ht-degree: 83%
 
 ---
 
@@ -288,7 +288,19 @@ Die Analytics-Erweiterung umfasst folgende Aktionen:
 
 ### Variablen festlegen {#set-variables}
 
-Wichtig: Die Verwendung einer „Variablen festlegen“-Aktion sendet das Signal nicht. Sie müssen die Aktion „Signal senden“ verwenden.
+>[!IMPORTANT]
+>
+>Sie können den Beacon nicht mit der Aktion &quot;Variablen festlegen&quot;senden. Um den Beacon zu senden, müssen Sie die Aktion &quot;Beacon senden&quot;auswählen.
+
+Sie können zwischen zwei verschiedenen Ansichten in **Variablen festlegen** wählen:
+
+>[!BEGINTABS]
+
+>[!TAB Bereitstellen einzelner Attribute]
+
+In dieser Ansicht können Sie verschiedene Variablen angeben, z. B. `eVars`, `Props`, `Events`.
+
+![Die Adobe Analytics-Formularansichtsseite, auf der zusätzliche Attribute aufgelistet sind.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -318,6 +330,25 @@ Legen Sie ein oder mehrere [Ereignisse](https://experienceleague.adobe.com/docs/
 1. (Optional) Wählen Sie ein Datenelement für die [Ereignis-Serialisierung](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=de) aus oder geben Sie ein Datenelement an.
 1. (Optional) Klicken Sie auf **[!UICONTROL Ereignis hinzufügen]**, um weitere Ereignisse festzulegen.
 1. Wählen Sie **[!UICONTROL Änderungen beibehalten]** aus.
+
+>[!TAB JSON-Ansicht]
+
+In dieser Ansicht können Sie eine JSON-Version der Aktion **Variablen festlegen** anzeigen und bearbeiten.
+
+![Eine Ansicht, die die aktuelle Variablenkonfiguration im JSON-Format in der Adobe Analytics-Erweiterung darstellt.](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+Verwenden Sie in der Aktion **Variablen festlegen** die JSON-Ansicht, um JSON-Daten hochzuladen, zu kopieren oder herunterzuladen und auf Ihrem Gerät zu speichern.
+
+Es gibt jedoch einige Einschränkungen:
+
+* **Benutzerdefinierter Code**: Wenn Sie benutzerdefinierten Code zum Ausfüllen von Variablen verwenden, wird dieser nicht in der JSON-Ansicht angezeigt. Stattdessen wird beim Anzeigen, Kopieren oder Herunterladen der JSON-Datei ein Warnhinweis angezeigt, der angibt, dass über benutzerdefinierten Code vorgenommene Änderungen nicht einbezogen werden.
+* **Aus URL-Attribut kopieren**: Das Kopieren eines Werts aus einer URL wird in der JSON-Ansicht nicht unterstützt. Diese Einschränkung wird in einem Warnhinweis angezeigt.
+* **Veraltete Variablen**: Veraltete oder veraltete Variablen werden in der JSON-Ansicht angezeigt und es wird ein Warnhinweis angezeigt, der darüber informiert, dass veraltete Variablen festgelegt wurden.
+* **Datenelemente**: Datenelemente werden in der JSON-Ansicht dargestellt. Wenn die JSON-Daten in eine andere Tags-Eigenschaft kopiert werden, werden die entsprechenden Datenelemente dort möglicherweise nicht definiert und bei ihrer Ausführung nicht korrekt aufgelöst.
+
+>[!ENDTABS]
 
 #### Hierarchie
 
