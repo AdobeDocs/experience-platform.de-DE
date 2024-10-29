@@ -1,29 +1,24 @@
 ---
 title: Freigeben von Paketen in der gesamten Organisation mithilfe von Sandbox Tooling
 description: Erfahren Sie, wie Sie mit Sandbox Tooling in Adobe Experience Platform Pakete unternehmensübergreifend freigeben können.
-badge: Beta
-source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
+source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
 
 # Freigeben von Paketen in Unternehmen mithilfe von Sandbox Tooling
 
->[!NOTE]
->
->Die organisationsübergreifende Freigabe von Paketen befindet sich derzeit in der Beta-Phase und steht nur ausgewählten Beta-Kunden zur Verfügung.
-
 Dank der Sandbox-Tool-Funktion können Sie die Konfigurationsgenauigkeit über Sandboxes hinweg verbessern und Sandbox-Konfigurationen zwischen Sandboxes nahtlos exportieren und importieren. In diesem Dokument wird beschrieben, wie Sie Sandbox-Tools in Adobe Experience Platform verwenden, um Pakete unternehmensübergreifend freizugeben. Es gibt zwei Typen von freigegebenen Paketen:
 
 - **Privates Paket**
 
-[Private Pakete](#private-packages) können nur für Organisationen freigegeben werden, die die Freigabeanfrage von der Quellorganisation über eine Opt-in-Zulassungsliste genehmigt haben.
+[Private Pakete](#private-packages) können nur für Organisationen freigegeben werden, die die Freigabeanfrage von der Quellorganisation genehmigt haben.
 
 - **Öffentliches Paket**
 
-[Öffentliche Pakete](./sandbox-tooling.md/#export-and-import-an-entire-sandbox) können ohne zusätzliche Genehmigung importiert werden. Diese Pakete können auf der Website, dem Blog oder der Plattform eines Partners freigegeben werden. Mit der Paket-Payload können Pakete kopiert und aus diesen Kanälen in die Zielorganisation eingefügt werden.
+[Öffentliche Pakete](#public-packages) können ohne zusätzliche Genehmigung importiert werden. Diese Pakete können auf der Website, dem Blog oder der Plattform eines Partners freigegeben werden. Mit der Paket-Payload können Pakete kopiert und aus diesen Kanälen in die Zielorganisation eingefügt werden.
 
 ## Private Pakete {#private-packages}
 
@@ -88,6 +83,52 @@ Wählen Sie im Dialogfeld **[!UICONTROL Package freigeben]** das freizugebende P
 >Es ist möglich, mehrere Organisationen auszuwählen. Ausgewählte Organisationen werden unter dem Dropdown-Menü [!UICONTROL Freigabeeinstellungen] angezeigt.
 
 ![Geben Sie das Dialogfeld &quot;Package freigeben&quot;mit den Freigabeeinstellungen frei und bestätigen Sie die Markierung.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Öffentliche Pakete {#public-packages}
+
+Verwenden Sie die Sandbox Tooling-Funktion, um gemeinsam nutzbare öffentliche Pakete zu erstellen, die keine zusätzliche Genehmigung erfordern und mit der Payload des Pakets einfach importiert werden können.
+
+### Aktualisieren der Paketverfügbarkeit auf öffentlich {#update-package}
+
+Um den Verfügbarkeitstyp eines Pakets zu aktualisieren, navigieren Sie zur Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Pakete]** . Wählen Sie als Nächstes das Auslassungszeichen (`...`) neben dem Paket und dann **[!UICONTROL Auf öffentliches Paket aktualisieren]** aus dem Dropdown-Menü aus.
+
+![Die Sandboxes-Benutzeroberfläche mit der Registerkarte &quot;Pakete&quot;und dem Dropdown-Optionsmenü mit hervorgehobenem Symbol Aktualisierung auf öffentliches Paket.](../images/ui/sandbox-tooling/update-to-public.png)
+
+Überprüfen Sie im Dialogfeld **[!UICONTROL Paketverfügbarkeit in &quot;Öffentlich&quot;]** ändern den Paketnamen und wählen Sie **[!UICONTROL Bestätigen]** aus.
+
+>[!IMPORTANT]
+>
+> Sobald ein Paket veröffentlicht wurde, kann es nicht mehr in privat geändert werden.
+
+![Ändern Sie die Paketverfügbarkeit in den öffentlichen Dialog mit hervorgehobener Bestätigung.](../images/ui/sandbox-tooling/change-package-availability.png)
+
+### Pakete mithilfe der Package-Payload freigeben
+
+Um das öffentliche Paket freizugeben, wählen Sie die Auslassungszeichen (`...`) neben dem Paket aus und wählen Sie dann **[!UICONTROL Paket-Payload kopieren]**.
+
+![Die Sandbox-Benutzeroberfläche, die ein Dropdown-Menü für einzelne Pakete anzeigt, wobei die Option Paket-Payload kopieren hervorgehoben ist.](../images/ui/sandbox-tooling/copy-package-payload.png)
+
+Im Dialogfeld **[!UICONTROL Paket-Payload kopieren]** werden der Paketname und die Payload angezeigt. Wählen Sie **[!UICONTROL Paket-Payload kopieren]** aus, um die mit dem Paket verknüpfte Payload zu kopieren.
+
+![Kopieren Sie das Dialogfeld &quot;Paket-Payload&quot;, das die JSON-Payload mit der hervorgehobenen Copy package-Payload anzeigt.](../images/ui/sandbox-tooling/confirm-payload-copy.png)
+
+### Erstellen eines neuen Pakets mit einer Paket-Payload
+
+Um ein Paket mit einer Paket-Payload zu erstellen, navigieren Sie zur Registerkarte [!UICONTROL Sandboxes] **[!UICONTROL Pakete]** . Wählen Sie als Nächstes **[!UICONTROL Paket erstellen]** aus.
+
+![Die Sandbox-Benutzeroberfläche, auf der die Option Paket erstellen hervorgehoben ist.](../images/ui/sandbox-tooling/create-package.png)
+
+Wählen Sie im Dialogfeld **[!UICONTROL Paket erstellen]** die Option &quot;**[!UICONTROL Paket-Payload einfügen]**&quot;und dann &quot;**[!UICONTROL Auswählen]**&quot;.
+
+![Erstellen Sie das Dialogfeld &quot;Paket&quot;mit ausgewählter Paste-Paket-Payload und hervorgehobener Auswahl.](../images/ui/sandbox-tooling/create-package-options.png)
+
+Fügen Sie die kopierte Paket-Payload in das Textfeld ein und wählen Sie **[!UICONTROL Erstellen]** aus.
+
+![Erstellen Sie das Dialogfeld &quot;Paket&quot;mit dem leeren Textfeld und hervorgehoben Erstellen.](../images/ui/sandbox-tooling/paste-payload.png)
+
+Um den aktuellen Status Ihrer Freigabeanfrage anzuzeigen, navigieren Sie zum **[!UICONTROL Freigabestatus]**. Der aktuelle Status der Anforderung wird in der Spalte **[!UICONTROL Freigabestatus]** angezeigt.
+
+![Die Registerkarte &quot;Freigabestatus&quot;mit einer ausstehenden Payload-Anfrage.](../images/ui/sandbox-tooling/sharing-status.png)
 
 ## Nächste Schritte {#next-steps}
 
