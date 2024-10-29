@@ -2,10 +2,10 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
+source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
 workflow-type: tm+mt
-source-wordcount: '4320'
-ht-degree: 58%
+source-wordcount: '4530'
+ht-degree: 55%
 
 ---
 
@@ -208,22 +208,47 @@ Die Liste der verfügbaren Filter wird angezeigt.
 
 ![Die verfügbaren Filter werden auf der Seite „Zielgruppen durchsuchen“ angezeigt und hervorgehoben.](../images/ui/audience-portal/filter-audiences.png)
 
-#### Massenaktionen {#bulk-actions}
+### Massenaktionen {#bulk-actions}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Flexible Begrenzungen für Zielgruppenbewertung"
->abstract="Sie können bis zu 20 Zielgruppen in einem einzigen flexiblen Auswertungsdurchlauf auswerten.<br/><br/>Während der Auswertungsauftrag so schnell wie möglich ausgeführt wird, kann es außerdem zu Systemverzögerungen kommen, da On-Demand-Auswertungen <b>nicht</b> gleichzeitig mit einer anderen On-Demand- oder Batch-Auswertung ausgeführt werden können."
+Darüber hinaus können Sie bis zu 25 verschiedene Zielgruppen auswählen und verschiedene Aktionen für diese Zielgruppen durchführen. Zu diesen Aktionen gehören [Verschieben in einen Ordner](#folders), [Bearbeiten oder Anwenden eines Tags](#tags), [Auswerten von Zielgruppen](#flexible-audience-evaluation), [Anwenden von Zugriffsbeschriftungen](../../access-control/abac/ui/labels.md) und [Löschen](#browse).
 
-Darüber hinaus können Sie bis zu 25 verschiedene Zielgruppen auswählen und verschiedene Aktionen für diese Zielgruppen durchführen. Zu diesen Aktionen gehören das [ Verschieben in einen Ordner](#folders), das [ Bearbeiten oder Anwenden eines Tags](#tags), das [ Anwenden von Zugriffsbeschriftungen](../../access-control/abac/ui/labels.md) und das [Löschen](#browse).
+![Die verfügbaren Optionen für Massenaktionen werden angezeigt.](../images/ui/audience-portal/bulk-actions.png)
 
-![Die verfügbaren Optionen für Massenaktionen werden hervorgehoben.](../images/ui/audience-portal/bulk-actions.png)
-
-Wenn Sie Massenaktionen auf diese Zielgruppen anwenden, gelten die folgenden Bedingungen:
+Wenn Sie Massenaktionen auf Zielgruppen anwenden, gelten die folgenden Bedingungen:
 
 - Sie **können** Zielgruppen aus verschiedenen Seiten auswählen.
 - Sie können eine Zielgruppe, die in einer Zielaktivierung verwendet wird, **nicht** löschen.
 - Wenn Sie einen Filter auswählen, werden die ausgewählten Zielgruppen **1} zurückgesetzt.**
+
+#### [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Flexible Zielgruppenbewertung {#flexible-audience-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Flexible Begrenzungen für Zielgruppenbewertung"
+abstract="Sie können bis zu 20 Zielgruppen in einem einzigen flexiblen Auswertungsdurchlauf auswerten.<br/><br/>Während der Auswertungsauftrag so schnell wie möglich ausgeführt wird, kann es außerdem zu Systemverzögerungen kommen, da On-Demand-Auswertungen <b>nicht</b> gleichzeitig mit einer anderen On-Demand- oder Batch-Auswertung ausgeführt werden können."
+
+Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Segmentierungsauftrag ausführen. Wählen Sie die Zielgruppen aus, die ausgewertet werden sollen, und wählen Sie **[!UICONTROL Zielgruppen auswerten]** aus.
+
+>[!IMPORTANT]
+>
+Bei der Auswahl von Zielgruppen für eine flexible Zielgruppenbewertung gelten die folgenden Bedingungen:
+>
+- Alle Zielgruppen &quot;**must**&quot;haben den Ursprung von &quot;Segmentation Service&quot;.
+- Alle Zielgruppen **müssen** mithilfe der Batch-Segmentierung ausgewertet werden.
+- Alle Zielgruppen **müssen** personenbasierte Zielgruppen sein.
+- Sie können nur maximal 20 Zielgruppen auswählen.
+
+![Die Zielgruppen, für die Sie eine flexible Zielgruppenbewertung verwenden möchten, sind ausgewählt.](../images/ui/audience-portal/evaluate-audiences.png)
+
+Das Popup-Fenster **[!UICONTROL Zielgruppen bei Bedarf bewerten]** wird angezeigt und zeigt die Liste der Zielgruppen an, die mit dem On-Demand-Segmentauftrag ausgewertet werden. Wenn eine Audience nicht für eine Bewertung bei Bedarf geeignet ist, wird sie automatisch aus dem Auswertungsauftrag entfernt. Vergewissern Sie sich, dass die aufgelisteten Zielgruppen diejenigen sind, die ausgewertet werden sollen.
+
+![Die Zielgruppen, die mit flexibler Zielgruppenbewertung ausgewertet werden können, werden angezeigt.](../images/ui/audience-portal/evaluate-audiences-modal.png)
+
+Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, fahren Sie mit der Anfrage fort und die flexible Zielgruppenbewertung beginnt.
+
+>[!NOTE]
+>
+Wenn Sie eine flexible Zielgruppenbewertung für Zielgruppen durchführen, die bereits [nach der Segmentbewertung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) aktiviert werden, werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenbewertungsauftrag abgeschlossen ist, unabhängig von früheren täglichen Aktivierungsaufträgen.
 
 ## Zielgruppendetails {#audience-details}
 
@@ -279,7 +304,7 @@ Für plattformgenerierte Zielgruppen und Kompositionen zeigt der Abschnitt **[!U
 
 >[!NOTE]
 >
->Nach Abschluss des Exportvorgangs kann es bis zu 30 Minuten dauern, bis die Gesamtanzahl der Zielgruppen aktualisiert ist.
+Nach Abschluss des Exportvorgangs kann es bis zu 30 Minuten dauern, bis die Gesamtanzahl der Zielgruppen aktualisiert ist.
 
 Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweiligen Tages generiert. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Für zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet und für über 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet. Weiterführende Informationen zum Generieren von Schätzungen finden Sie im Tutorial zur Zielgruppenerstellung im Abschnitt [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
 
@@ -289,7 +314,7 @@ Bei Zielgruppen mit dem Ursprung **[!UICONTROL Benutzerdefinierter Upload]** zei
 
 >[!NOTE]
 >
->Es kann bis zu 30 Minuten nach dem Exportauftrag dauern, bis die Profilanzahl der Audience vollständig aktualisiert ist.
+Es kann bis zu 30 Minuten nach dem Exportauftrag dauern, bis die Profilanzahl der Audience vollständig aktualisiert ist.
 
 ![Der Abschnitt mit den Aufnahmedetails für die Seite mit den Zielgruppendetails wird angezeigt.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -307,7 +332,7 @@ Bei Zielgruppen mit dem Ursprung **[!UICONTROL Benutzerdefinierter Upload]** zei
 
 >[!NOTE]
 >
->Best Practice ist, Datennutzungsbezeichnungen auf das Schema anzuwenden. Sie können **nicht** eine Datennutzungsbezeichnung direkt auf die Zielgruppe anwenden.
+Best Practice ist, Datennutzungsbezeichnungen auf das Schema anzuwenden. Sie können **nicht** eine Datennutzungsbezeichnung direkt auf die Zielgruppe anwenden.
 
 ### Aktivierte Ziele {#activated-destinations}
 
@@ -315,7 +340,7 @@ Der Abschnitt **[!UICONTROL Aktivierte Ziele]** zeigt die Ziele, für die diese 
 
 >[!NOTE]
 >
-> Ziele sind eine Funktion, die mit [!DNL Adobe Real-Time Customer Data Platform] verfügbar ist und es Ihnen ermöglicht, Daten auf externe Plattformen zu exportieren. Weitere Informationen zu Zielen finden Sie unter [Ziele – Übersicht](../../destinations/home.md). Informationen zum Aktivieren eines Segments für ein Ziel finden Sie unter [Aktivierung – Übersicht](../../destinations/ui/activation-overview.md).
+Ziele sind eine Funktion, die mit [!DNL Adobe Real-Time Customer Data Platform] verfügbar ist und es Ihnen ermöglicht, Daten auf externe Plattformen zu exportieren. Weitere Informationen zu Zielen finden Sie unter [Ziele – Übersicht](../../destinations/home.md). Informationen zum Aktivieren eines Segments für ein Ziel finden Sie unter [Aktivierung – Übersicht](../../destinations/ui/activation-overview.md).
 
 ### Beispielprofile {#profile-samples}
 
@@ -341,10 +366,10 @@ Ausführlichere Informationen zu jedem [!DNL Profile] erhalten Sie, wenn Sie auf
 
 ## Geplante Segmentierung {#scheduled-segmentation}
 
->[!CONTEXTUALHELP]
->id="platform_segments_browse_addallsegmentstoschedule"
->title="Alle Zielgruppen zum Zeitplan hinzufügen"
->abstract="Aktivieren Sie diese Option, um alle Zielgruppen einzubeziehen, die mit der Batch-Segmentierung in der täglich geplanten Aktualisierung ausgewertet wurden. Deaktivieren Sie sie, um alle Zielgruppen aus der geplanten Aktualisierung zu entfernen."
+[!CONTEXTUALHELP]
+id="platform_segments_browse_addallsegmentstoschedule"
+title="Alle Zielgruppen zum Zeitplan hinzufügen"
+abstract="Aktivieren Sie diese Option, um alle Zielgruppen einzubeziehen, die mit der Batch-Segmentierung in der täglich geplanten Aktualisierung ausgewertet wurden. Deaktivieren Sie sie, um alle Zielgruppen aus der geplanten Aktualisierung zu entfernen."
 
 Nachdem Sie Zielgruppen erstellt haben, können Sie diese durch eine bedarfsgesteuerte oder geplante (kontinuierliche) Auswertung auswerten. Auswertung bedeutet, dass [!DNL Real-Time Customer Profile]-Daten durch Segmentaufträge bewegt werden, um entsprechende Zielgruppen zu produzieren. Nach der Erstellung werden die Zielgruppen gespeichert und aufbewahrt, sodass sie über die APIs von [!DNL Experience Platform] exportiert werden können.
 
@@ -356,7 +381,7 @@ Die Aktivierung Ihrer Zielgruppen für eine geplante Auswertung kann über die B
 
 >[!NOTE]
 >
->Die geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] aktiviert werden. Wenn Ihre Organisation in einer Sandbox-Umgebung über mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] verfügt, können Sie keine geplante Auswertung verwenden.
+Die geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] aktiviert werden. Wenn Ihre Organisation in einer Sandbox-Umgebung über mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] verfügt, können Sie keine geplante Auswertung verwenden.
 
 Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweisungen zum Erstellen, Bearbeiten und Verwenden von Zeitplänen mithilfe der API finden Sie im Tutorial zum Auswerten und Aufrufen von Segmentergebnissen, insbesondere im Abschnitt zur [geplanten Auswertung mithilfe der API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -370,7 +395,7 @@ Sie können **[!UICONTROL Zielgruppe erstellen]** auswählen, um eine Zielgruppe
 
 Es wird ein Pop-up angezeigt, in dem Sie auswählen können, ob Sie eine Zielgruppe oder Regeln erstellen möchten.
 
-![Ein Pop-up, das die beiden Arten von Zielgruppen anzeigt, die Sie erstellen können.](../images/ui/audience-portal/create-audience-type.png)
+![Ein Popover, das die beiden Typen anzeigt of Zielgruppen, die Sie erstellen können.](../images/ui/audience-portal/create-audience-type.png)
 
 ### Zielgruppenkomposition {#audience-composition}
 
@@ -394,7 +419,7 @@ Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit 
 
 >[!IMPORTANT]
 >
->Um eine extern generierte Zielgruppe zu importieren, müssen Sie **** über die folgenden Berechtigungen verfügen: [!UICONTROL Segmente anzeigen], [!UICONTROL Segmente verwalten] und [!UICONTROL Zielgruppe importieren]. Weitere Informationen zu diesen Berechtigungen finden Sie in der [Zugriffskontrolle - Übersicht](../../access-control/home.md#permissions) .
+Um eine extern generierte Zielgruppe zu importieren, müssen Sie **** über die folgenden Berechtigungen verfügen: [!UICONTROL Segmente anzeigen], [!UICONTROL Segmente verwalten] und [!UICONTROL Zielgruppe importieren]. Weitere Informationen zu diesen Berechtigungen finden Sie in der [Zugriffskontrolle - Übersicht](../../access-control/home.md#permissions) .
 
 Sie können **[!UICONTROL Zielgruppe importieren]** auswählen, um eine extern generierte Zielgruppe zu importieren.
 
@@ -406,11 +431,11 @@ Der Workflow **[!UICONTROL Zielgruppen-CSV importieren]** wird angezeigt. Sie k�
 
 >[!NOTE]
 >
->Die extern generierte Zielgruppe **muss** im CSV-Format vorliegen, darf **maximal** 25 Spalten enthalten und muss kleiner als 1 GB sein.
+Die extern generierte Zielgruppe **muss** im CSV-Format vorliegen, darf **maximal** 25 Spalten enthalten und muss kleiner als 1 GB sein.
 >
->Außerdem können Sie **keine Leerzeichen oder Gedankenstriche in der ersten Zeile oder den zugehörigen Spalten der CSV verwenden.**
+Außerdem können Sie **keine Leerzeichen oder Gedankenstriche in der ersten Zeile oder den zugehörigen Spalten der CSV verwenden.**
 >
->Der Wert der ersten Zeile kann beispielsweise &quot;FirstName&quot;oder &quot;First_Name&quot;lauten, darf jedoch nicht &quot;First Name&quot;oder &quot;First-Name&quot;lauten.
+Der Wert der ersten Zeile kann beispielsweise &quot;FirstName&quot;oder &quot;First_Name&quot;lauten, darf jedoch nicht &quot;First Name&quot;oder &quot;First-Name&quot;lauten.
 
 Nach Auswahl der zu importierenden CSV-Datei wird eine Liste mit Beispieldaten für diese extern generierte Zielgruppe angezeigt. Nachdem Sie die Richtigkeit der Beispieldaten bestätigt haben, wählen Sie **[!UICONTROL Weiter]** aus.
 
@@ -426,10 +451,10 @@ Sie können optional auch zusätzliche Details zu Ihrer extern generierten Zielg
 
 >[!NOTE]
 >
->Wenn Sie eine benutzerdefinierte externe Zielgruppen-ID verwenden, muss diese den folgenden Richtlinien entsprechen:
+Wenn Sie eine benutzerdefinierte externe Zielgruppen-ID verwenden, muss diese den folgenden Richtlinien entsprechen:
 >
-> - Er muss **mit einem Buchstaben (a-z oder A-Z), einem Unterstrich (_) oder einem Dollarzeichen ($) beginnen.**
-> - Alle nachfolgenden Zeichen können alphanumerisch (a-z, A-Z, 0-9), Unterstriche (_) oder Dollarzeichen ($) sein.
+- Er muss **mit einem Buchstaben (a-z oder A-Z), einem Unterstrich (_) oder einem Dollarzeichen ($) beginnen.**
+- Alle nachfolgenden Zeichen können alphanumerisch (a-z, A-Z, 0-9), Unterstriche (_) oder Dollarzeichen ($) sein.
 
 Nachdem Sie die Zielgruppendetails ausgefüllt haben, wählen Sie **[!UICONTROL Weiter]** aus.
 
@@ -443,11 +468,11 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 
 >[!IMPORTANT]
 >
->Standardmäßig haben extern erstellte Zielgruppen einen Datenablauf von 30 Tagen. Die Datengültigkeit wird zurückgesetzt, wenn die Audience aktualisiert oder geändert wird.
+Standardmäßig haben extern erstellte Zielgruppen einen Datenablauf von 30 Tagen. Die Datengültigkeit wird zurückgesetzt, wenn die Audience aktualisiert oder geändert wird.
 >
->Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie **1} die erforderlichen Datennutzungsbezeichnungen anwenden, bevor Sie sie für ein beliebiges Ziel aktivieren.** Da Variablen aus extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten Sie **nicht** Einwilligungsdaten in Ihre CSV-Datei aufnehmen.
+Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie **1} die erforderlichen Datennutzungsbezeichnungen anwenden, bevor Sie sie für ein beliebiges Ziel aktivieren.** Da Variablen aus extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten Sie **nicht** Einwilligungsdaten in Ihre CSV-Datei aufnehmen.
 >
->Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation zu [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md). Allgemeine Informationen zu Datennutzungsbezeichnungen in Platform finden Sie in der [Übersicht über Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) . Informationen zur Funktionsweise von Einwilligungen in extern generierten Zielgruppen finden Sie in den [häufig gestellten Fragen zu Zielgruppen](../faq.md#consent) .
+Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation zu [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md). Allgemeine Informationen zu Datennutzungsbezeichnungen in Platform finden Sie in der [Übersicht über Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) . Informationen zur Funktionsweise von Einwilligungen in extern generierten Zielgruppen finden Sie in den [häufig gestellten Fragen zu Zielgruppen](../faq.md#consent) .
 
 ## Nächste Schritte
 
