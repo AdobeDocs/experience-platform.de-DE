@@ -2,9 +2,9 @@
 title: Sandbox Tooling Packages API Endpoint
 description: Mit dem Endpunkt /packages in der Sandbox Tooling API können Sie Pakete in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
+source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '2541'
 ht-degree: 10%
 
 ---
@@ -58,7 +58,7 @@ curl -X POST \
 | `name` | Der Name Ihres Pakets. | Zeichenfolge | Ja |
 | `description` | Eine Beschreibung, die weitere Informationen zu Ihrem Paket enthält. | Zeichenfolge | Nein |
 | `packageType` | Der Pakettyp ist **PARTIAL** , um anzugeben, dass Sie bestimmte Artefakte in ein Paket einschließen. | String | JA |
-| `sourceSandbox` | Die Quell-Sandbox des Pakets. | Zeichenfolge | Nein |
+| `sourceSandbox` | Die Quell-Sandbox des Pakets. | Objekt | Nein |
 | `expiry` | Der Zeitstempel, der das Ablaufdatum für das Paket definiert. Der Standardwert beträgt 90 Tage ab dem Erstellungsdatum. Das Feld für das Ablaufdatum der Antwort ist Epoch-UTC-Zeit. | Zeichenfolge (UTC-Zeitstempelformat) | Nein |
 | `artifacts` | Eine Liste von Artefakten, die in das Paket exportiert werden sollen. Der `artifacts` -Wert sollte **null** oder **leer** sein, wenn der `packageType` den Wert `FULL` aufweist. | Array | Nein |
 
@@ -200,7 +200,6 @@ Eine erfolgreiche Antwort gibt Ihr aktualisiertes Paket zurück. Die Antwort ent
 
 Um Artefakte aus einem Package zu löschen, müssen Sie `id` angeben und **DELETE** für die `action` einschließen.
 
-
 **API-Format**
 
 ```http
@@ -308,7 +307,7 @@ curl -X PUT \
 | `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
 | `action` | Um die Metadatenfelder in einem Paket zu aktualisieren, sollte der Aktionswert **UPDATE** sein. Diese Aktion wird nur für die Pakettypen **PARTIAL** unterstützt. | Zeichenfolge | Ja |
 | `name` | Der aktualisierte Name des Pakets. Doppelte Paketnamen sind nicht zulässig. | Array | Ja |
-| `sourceSandbox` | Die Source-Sandbox sollte derselben Organisation angehören, die in der Kopfzeile der Anfrage angegeben ist. | Zeichenfolge | Ja |
+| `sourceSandbox` | Die Source-Sandbox sollte derselben Organisation angehören, die in der Kopfzeile der Anfrage angegeben ist. | Objekt | Ja |
 
 **Antwort**
 
@@ -356,7 +355,7 @@ DELETE /packages/{PACKAGE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {PACKAGE_ID} | Die Kennung des Pakets, das Sie löschen möchten. |
+| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie löschen möchten. |
 
 **Anfrage**
 
@@ -392,7 +391,7 @@ GET /packages/{PACKAGE_ID}/export
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {PACKAGE_ID} | Die ID des Pakets, das Sie veröffentlichen möchten. |
+| `{PACKAGE_ID}` | Die ID des Pakets, das Sie veröffentlichen möchten. |
 
 **Anfrage**
 
@@ -441,7 +440,7 @@ GET /packages/{PACKAGE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {PACKAGE_ID} | Die Kennung des Pakets, das Sie nachschlagen möchten. |
+| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -508,7 +507,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {QUERY_PARAMS} | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
 
 **Anfrage**
 
@@ -613,7 +612,7 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {PACKAGE_ID} | Die Kennung des Pakets, das Sie nachschlagen möchten. |
+| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -632,7 +631,7 @@ curl -X GET \
 
 In der Antwort werden Konflikte zurückgegeben. Die Antwort zeigt das Originalpaket sowie das `alternatives` -Fragment als Array an, das nach Rang geordnet ist.
 
-Antwort anzeigen+++
++++Antwort anzeigen
 
 ```json
 [
@@ -826,7 +825,7 @@ POST /packages/{PACKAGE_ID}/children
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {PACKAGE_ID} | Die Kennung des Pakets. |
+| `{PACKAGE_ID}` | Die Kennung des Pakets. |
 
 **Anfrage**
 
@@ -905,7 +904,7 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {PACKAGE_ID} | Die Kennung des Pakets, das Sie importieren möchten. |
+| `{PACKAGE_ID}` | Die Kennung des Pakets, das Sie importieren möchten. |
 
 **Anfrage**
 
@@ -924,7 +923,7 @@ curl -X GET \
 
 Eine erfolgreiche Antwort gibt Ressourcenberechtigungen für die Ziel-Sandbox zurück, einschließlich einer Liste der erforderlichen Berechtigungen, fehlender Berechtigungen, des Typs des Artefakts und einer Entscheidung, ob die Erstellung zulässig ist.
 
-Antwort anzeigen+++
++++Antwort anzeigen
 
 ```json
 {
@@ -1053,7 +1052,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| {QUERY_PARAMS} | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md) . |
 
 **Anfrage**
 
@@ -1150,5 +1149,867 @@ Eine erfolgreiche Antwort gibt alle erfolgreichen Importaufträge zurück.
             "createdBy": "{CREATED_BY}"
         }
     ]
+}
+```
+
+## Freigeben von Paketen über Organisationen hinweg {#org-linking}
+
+Der Endpunkt `/handshake` in der Sandbox-Tool-API ermöglicht es Ihnen, mit anderen Organisationen zusammenzuarbeiten, um Pakete freizugeben.
+
+### Senden einer Freigabeanfrage {#send-request}
+
+Senden Sie eine Anfrage zur Freigabe an eine Zielpartner-Organisation, indem Sie eine POST-Anfrage an den `/handshake/bulkCreate` -Endpunkt senden. Dies ist erforderlich, bevor Sie private Pakete freigeben können.
+
+**API-Format**
+
+```http
+POST /handshake/bulkCreate
+```
+
+**Anfrage**
+
+Mit der folgenden Anfrage wird die Freigabe zwischen einer Zielpartner-Organisation und der Quellorganisation initiiert.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/handshake/bulkCreate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "targetIMSOrgIds":["acme@AdobeOrg"],
+      "sourceIMSDetails":{
+        "id":"acme@AdobeOrg",
+        "name":"acme_org"
+      } 
+  }' 
+```
+
+| Eigenschaft | Beschreibung | Typ | Erforderlich |
+| --- | --- | --- | --- |
+| `targetIMSOrgIds` | Eine Liste der Zielunternehmen, an die eine Freigabeanfrage gesendet werden soll. | Array | Ja |
+| `sourceIMSDetails` | Details zur Quellorganisation. | Objekt | Ja |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt Details zu Ihrer Freigabeanforderung zurück.
+
+```json
+{
+    "successfulRequests": {
+        "acme@AdobeOrg": {
+            "id": "{ID}",
+            "version": 0,
+            "createdDate": 1724938816798,
+            "modifiedDate": 1724938816798,
+            "createdBy": "{CREATED_BY}",
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va6",
+            "sourceIMSOrgName": "{SOURCE_NAME}",
+            "status": "APPROVAL_PENDING",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{ORG_ID}",
+            "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
+            "linkingId": "{LINKIND_ID}"
+        }
+    },
+    "failedRequests": {}
+}
+```
+
+### Genehmigen empfangener Freigabeanfragen {#approve-requests}
+
+Genehmigen Sie Freigabeanfragen von Zielpartner-Organisationen, indem Sie eine POST-Anfrage an den `/handshake/action` -Endpunkt senden. Nach der Genehmigung können Partner-Quellorganisationen private Pakete freigeben.
+
+**API-Format**
+
+```http
+POST /handshake/action
+```
+
+**Anfragen**
+
+Mit der folgenden Anfrage wird eine Freigabeanforderung von einer Zielpartner-Organisation genehmigt.
+
+```shell
+curl -X POST  \
+  https://platform.adobe.io/data/foundation/exim/handshake/action \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "linkingID":"{LINKING_ID}",
+      "status":"APPROVED",
+      "reason":"Done",
+      "targetIMSOrgDetails":{
+          "id":"acme@AdobeOrg",
+          "name":"acme",
+          "region":"va7"
+      }
+  }'
+```
+
+| Eigenschaft | Beschreibung | Typ | Erforderlich |
+| --- | --- | --- | --- |
+| `linkingID` | Die ID der Freigabeanfrage, auf die Sie reagieren. | Zeichenfolge | Ja |
+| `status` | Die Aktion, die auf die Freigabeanforderung durchgeführt wird. | Zeichenfolge | Ja |
+| `reason` | Der Grund, aus dem die Maßnahmen ergriffen werden. | Zeichenfolge | Ja |
+| `targetIMSOrgDetails` | Details zur Zielorganisation, bei der der ID-Wert die **ID** der Zielorganisation sein sollte, der Name-Wert der **NAME** der Zielorganisation und der Regionswert die Zielorganisationen **REGION** sein sollte. | Objekt | Ja |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt Details zur genehmigten Freigabeanforderung zurück.
+
+```json
+{
+    "id": "{ID}",
+    "version": 1,
+    "createdDate": 1726737474000,
+    "modifiedDate": 1726737541731,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "sourceRegion": "va7",
+    "targetRegion": "va7",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetOrgName": "{TARGET_ORG}",
+    "status": "APPROVED",
+    "createdByName": "{CREATED_BY}",
+    "modifiedByIMSOrgId": "{MODIFIED_BY}",
+    "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"acme@AdobeOrg\",\"action\":\"INITIATED\",\"actionTimeStamp\":1726737474450,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":null,\"actionTakenByImsOrgID\":\"745F37C35E4B776E0A49421B@AdobeOrg\",\"action\":\"APPROVED\",\"actionTimeStamp\":1726737541818,\"reason\":\"Done\"}]",
+    "linkingId": "{LINKING_ID}"
+}
+```
+
+### Ausgehende/eingehende Freigabeanforderungen auflisten {#outgoing-and-incoming-requests}
+
+Auflisten ausgehender und eingehender Freigabeanfragen durch eine GET-Anfrage an den `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` -Endpunkt.
+
+**API-Format**
+
+```http
+POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+```
+
+| Parameter | Akzeptierte/Standardwerte |
+| --- | --- |
+| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. den Status. Zulässige Werte für den Status sind: `APPROVED`, `REJECTED` und `IN_PROGRESS`. |
+| `start` | Der Standardwert des Starts ist `0`. |
+| `limit` | Der Standardwert für limit ist `20`. |
+| `orderBy` | Sortiert Datensätze in auf- oder absteigender Reihenfolge. |
+| `requestType` | Akzeptiert entweder `INCOMING` oder `OUTGOING`. |
+
+**Anfrage**
+
+Die folgende Anfrage gibt eine Liste aller ausgehenden und eingehenden Freigabeanfragen zurück.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id:{ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt eine Liste der ausgehenden und eingehenden Freigabeanfragen und deren Details zurück.
+
+```json
+{
+    "totalElements": 1,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "version": 1,
+            "createdDate": 1724929446000,
+            "modifiedDate": 1724929617000,
+            "modifiedBy": "{MODIFIED_BY}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "sourceRegion": "va7",
+            "targetRegion": "va6",
+             "sourceOrgName": "{SOURCE_ORG}",
+            "targetOrgName": "{TARGET_ORG}",
+            "status": "APPROVED",
+            "createdByName": "{CREATED_BY}",
+            "modifiedByName": "{MODIFIED_BY}",
+            "modifiedByIMSOrgId": "{MODIFIED_BY}",
+            "statusHistory": "[{\"actionTakenBy\":\"{ACTION_BY}\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724929442467,\"reason\":null},{\"actionTakenBy\":null,\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"APPROVED\",\"actionTimeStamp\":1724929617531,\"reason\":\"Done\"}]",
+            "linkingId": "{LINKING_ID}"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+## Packages übertragen
+
+Verwenden Sie den Endpunkt `/transfer` in der Sandbox-Tool-API, um neue Anfragen zur Paketfreigabe abzurufen und zu erstellen.
+
+### Neue Freigabeanforderung {#share-request}
+
+Rufen Sie das Paket einer veröffentlichten Quellorganisation ab und geben Sie es für eine Zielorganisation frei, indem Sie eine POST-Anfrage an den `/transfer` -Endpunkt senden und dabei die Paket-ID und die ID der Zielorganisation angeben.
+
+**API-Format**
+
+```http
+POST /transfer
+```
+
+**Anfrage**
+
+Die folgende Anfrage ruft ein Quellorganisationspaket ab und gibt es für eine Zielorganisation frei.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "packageId": "{PACKAGE_ID}",
+      "targets": [
+          {
+              "imsOrgId": "{TARGET_IMS_ORG}"
+          }
+      ]
+  }'
+```
+
+| Eigenschaft | Beschreibung | Typ | Erforderlich |
+| --- | --- | --- | --- |
+| `packageId` | Die ID des Pakets, das Sie freigeben möchten. | Zeichenfolge | Ja |
+| `targets` | Eine Liste der Organisationen, für die Pakete freigegeben werden sollen. | Array | Ja |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt Details zum angeforderten Paket und dessen Freigabestatus zurück.
+
+```json
+[
+    {
+        "id": "{ID}",
+        "version": 0,
+        "createdDate": 1726480559313,
+        "modifiedDate": 1726480559313,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceIMSOrgId": "{ORG_ID}",
+        "targetIMSOrgId": "{TARGET_ID}",
+        "packageId": "{PACKAGE_ID}",
+        "status": "PENDING",
+        "initiatedBy": "acme@3ec9197a65a86f34494221.e",
+        "transferDetails": {
+            "messages": [
+                "Fetched Package",
+                "Fetched Manifest"
+            ],
+            "additionalMetadata": null
+        },
+        "requestType": "PRIVATE"
+    }
+]
+```
+
+### Abrufen einer Freigabeanforderung nach ID {#fetch-transfer-by-id}
+
+Rufen Sie die Details einer Freigabeanfrage ab, indem Sie eine GET-Anfrage an den `/transfer/{TRANSFER_ID}` -Endpunkt senden und dabei die Transfer-ID angeben.
+
+**API-Format**
+
+```http
+GET /transfer/{TRANSFER_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{TRANSFER_ID}` | Die ID der Übertragung, die Sie abrufen möchten. |
+
+**Anfrage**
+
+Die folgende Anfrage ruft eine Übertragung mit der Kennung {TRANSFER_ID} ab.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/0c843180a64c445ca1beece339abc04b \
+  -H 'x-api-key: {API__KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**Antwort**
+
+Eine Erfolgsantwort gibt Details einer Freigabeanfrage zurück.
+
+```json
+{
+    "id": "{ID}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "sourceOrgName": "{SOURCE_ORG}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "targetOrgName": "{TARGET_ORG}",
+    "packageId": "{PACKAGE_ID}",
+    "packageName": "{PACKAGE_NAME}",
+    "status": "COMPLETED",
+    "initiatedBy": "{INITIATED_BY}",
+    "createdDate": 1724442856000,
+    "transferDetails": {
+        "messages": [
+            "Fetched Package",
+            "Fetched Manifest",
+            "Tenant Identified",
+            "Fetched Sandbox Id",
+            "Fetched Blob Files",
+            "Message Published to Kafka",
+            "Completed Transfer"
+        ],
+        "additionalMetadata": null
+    },
+    "requestType": "PRIVATE"
+}
+```
+
+### Abrufen der Freigabeliste {#transfers-list}
+
+Rufen Sie eine Liste von Übertragungsanfragen ab, indem Sie eine GET-Anfrage an den `/transfer/list?{QUERY_PARAMETERS}` -Endpunkt senden und dabei die Abfrageparameter nach Bedarf ändern.
+
+**API-Format**
+
+```http
+GET `/transfer/list?{QUERY_PARAMETERS}`
+```
+
+| Parameter | Akzeptierte/Standardwerte |
+| --- | --- |
+| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. den Status. Zulässige Werte für den Status sind: `COMPLETED`, `PENDING`, `IN_PROGRESS`, `FAILED`. |
+| `start` | Der Standardwert des Starts ist `0`. |
+| `limit` | Der Standardwert für limit ist `20`. |
+| `orderBy` | Die Reihenfolge akzeptiert nur das Feld `createdDate` . |
+
+**Anfrage**
+
+Die folgende Anfrage ruft eine Liste von Übertragungsanfragen aus den angegebenen Suchparametern ab.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status==COMPLETED&start=0&limit=2&orderBy=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den bereitgestellten Suchparametern zurück.
+
+```json
+{
+    "totalElements": 43,
+    "currentPage": 0,
+    "totalPages": 22,
+    "hasPreviousPage": false,
+    "hasNextPage": true,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726129077000,
+            "createdDate": 1726129062000,
+            "transferDetails": {
+                "messages": [
+                    "Fetched Package",
+                    "Fetched Manifest",
+                    "Tenant Identified",
+                    "Fetched Sandbox Id",
+                    "Fetched Blob Files",
+                    "Message Published to Kafka",
+                    "Completed Transfer",
+                    "Finished with status: COMPLETED"
+                ],
+                "additionalMetadata": null
+            },
+            "requestType": "PRIVATE"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_ORG}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "{PACKAGE_NAME}",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1726066046000,
+            "createdDate": 1726065936000,
+            "transferDetails": {
+                "messages": [
+                    "Fetched Package",
+                    "Fetched Manifest",
+                    "Tenant Identified",
+                    "Fetched Sandbox Id",
+                    "Fetched Blob Files",
+                    "Message Published to Kafka",
+                    "Completed Transfer",
+                    "Finished with status: COMPLETED"
+                ],
+                "additionalMetadata": null
+            },
+            "requestType": "PRIVATE"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
+### Aktualisierung der Paketverfügbarkeit von privat zu öffentlich {#update-availability}
+
+Ändern Sie ein Package von &quot;privat&quot;in &quot;öffentlich&quot;, indem Sie eine GET-Anfrage an den Endpunkt `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` senden. Standardmäßig wird ein Package mit privater Verfügbarkeit erstellt.
+
+**Anfrage**
+
+Die folgende Anfrage ändert die Verfügbarkeit von Paketen von privat zu öffentlich.
+
+```shell
+curl -X GET \
+  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-type: application/json' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -d '{
+      "id":"{ID}",
+      "action":"UPDATE",
+      "packageVisibility":"PUBLIC"
+  }'
+```
+
+| Eigenschaft | Beschreibung | Typ | Erforderlich |
+| --- | --- | --- | --- |
+| `id` | Die ID des zu aktualisierenden Pakets. | Zeichenfolge | Ja |
+| `action` | Um die Sichtbarkeit auf &quot;public&quot;zu aktualisieren, sollte der Aktionswert **UPDATE** sein. | Zeichenfolge | Ja |
+| `packageVisbility` | Um die Sichtbarkeit zu aktualisieren, sollte der Wert für packageVisibility **PUBLIC** lauten. | Zeichenfolge | Ja |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt Details zu einem Paket und dessen Sichtbarkeit zurück.
+
+```json
+{
+    "id": "{ID}",
+    "version": 7,
+    "createdDate": 1729624618000,
+    "modifiedDate": 1729658596340,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "acme",
+    "imsOrgId": "{ORG_ID}",
+    "packageType": "PARTIAL",
+    "expiry": 1737434596325,
+    "status": "PUBLISH_FAILED",
+    "packageVisibility": "PUBLIC",
+    "artifactsList": [
+        {
+            "id": "{ID}",
+            "type": "PROFILE_SEGMENT",
+            "found": false,
+            "count": 0,
+            "title": "Acme Profile Segment"
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "acme-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    }
+}
+```
+
+### Anfrage zum Importieren eines öffentlichen Pakets {#pull-public-package}
+
+Importieren Sie ein Package aus einer Quellorganisation mit öffentlicher Verfügbarkeit, indem Sie eine POST an den Endpunkt `/transfer/pullRequest` anfordern.
+
+**API-Format**
+
+```http
+POST /transfer/pullRequest
+```
+
+**Anfrage**
+
+Mit der folgenden Anfrage wird ein Paket importiert und seine Verfügbarkeit auf &quot;Öffentlich&quot;gesetzt.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/exim/transfer/pullRequest \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
+  }'
+```
+
+| Eigenschaft | Beschreibung | Typ | Erforderlich |
+| --- | --- | --- | --- |
+| `imsOrgId` | Die ID aus der Quellorganisation des Pakets. | Zeichenfolge | Ja |
+| `packageId` | Die ID aus dem zu importierenden Package. | Zeichenfolge | Ja |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt Details zum importierten öffentlichen Paket zurück.
+
+```json
+{
+    "id": "{ID}",
+    "version": 0,
+    "createdDate": 1729658890425,
+    "modifiedDate": 1729658890425,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceIMSOrgId": "{ORG_ID}",
+    "targetIMSOrgId": "{TARGET_ID}",
+    "packageId": "{PACKAGE_ID}",
+    "status": "PENDING",
+    "initiatedBy": "{INITIATED_BY}",
+    "pipelineMessageId": "{MESSAGE_ID}",
+    "requestType": "PUBLIC"
+}
+```
+
+### Öffentliche Pakete auflisten {#list-public-packages}
+
+Rufen Sie eine Liste von Paketen mit öffentlicher Sichtbarkeit ab, indem Sie eine GET-Anfrage an den Endpunkt `/transfer/list?{QUERY_PARAMS}` senden.
+
+**API-Format**
+
+```http
+GET /transfer/list?{QUERY_PARAMS}
+```
+
+| Parameter | Akzeptierte/Standardwerte |
+| --- | --- |
+| `property` | Gibt die Eigenschaft an, nach der gefiltert werden soll, z. B. den Status. Zulässige Werte für den Status sind: `COMPLETED` und `FAILED`. |
+| `start` | Der Standardwert des Starts ist `0`. |
+| `limit` | Der Standardwert für limit ist `20`. |
+| `orderBy` | Die Reihenfolge akzeptiert nur das Feld `createdDate` . |
+| `requestType` | Akzeptiert entweder `PUBLIC` oder `PRIVATE`. |
+
+**Anfrage**
+
+Die folgende Anfrage ruft eine Liste von Paketen mit öffentlicher Verfügbarkeit ab.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC&orderby=-createdDate \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt eine Liste öffentlicher Pakete und deren Details zurück.
+
++++Antwort anzeigen
+
+```json
+{
+    "totalElements": 14,
+    "currentPage": 0,
+    "totalPages": 1,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "data": [
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_ORG}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359318000,
+            "createdDate": 1729359316000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public package demo",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729359284000,
+            "createdDate": 1729359283000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Test Private Flow Final",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284462000,
+            "createdDate": 1729275962000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOUCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Fest",
+            "status": "FAILED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284104000,
+            "createdDate": 1729253854000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "PublicPackageSharing",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284835000,
+            "createdDate": 1729253556000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284667000,
+            "createdDate": 1729253421000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284957000,
+            "createdDate": 1729253143000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package Audit Test",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284562000,
+            "createdDate": 1729252975000,
+            "requestType": "PUBLIC"
+        },
+        {
+               "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Private Package Test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284262000,
+            "createdDate": 1729229755000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Demo Package 1016",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284784000,
+            "createdDate": 1729208888000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284934000,
+            "createdDate": 1729153097000,
+            "requestType": "PUBLIC"
+        },
+        {
+            "id": "{ID}",
+            "sourceIMSOrgId": "{ORG_ID}",
+            "sourceOrgName": "{SOURCE_NAME}",
+            "targetIMSOrgId": "{TARGET_ID}",
+            "targetOrgName": "{TARGET_NAME}",
+            "packageId": "{PACKAGE_ID}",
+            "packageName": "Public Package test 1",
+            "status": "COMPLETED",
+            "initiatedBy": "{INITIATED_BY}",
+            "completedTime": 1729284912000,
+            "createdDate": 1729153043000,
+            "requestType": "PUBLIC"
+        }
+    ],
+    "nextPage": null,
+    "pageSize": null
+}
+```
+
++++
+
+## Package-Payload kopieren (#package-payload)
+
+Sie können die Payload eines öffentlichen Pakets kopieren, indem Sie eine GET-Anfrage an den Endpunkt `/packages/payload` senden, der die entsprechende Paketkennung im Anfragepfad enthält.
+
+**API-Format**
+
+```http
+GET /packages/payload/{PACKAGE_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{PACKAGE_ID}` | Die ID des Pakets, das Sie kopieren möchten. |
+
+**Anfrage**
+
+Die folgende Anfrage ruft die Payload eines Pakets mit der ID {PACKAGE_ID} ab.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/exim/packages/payload/{PACKAGE_ID} \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "imsOrgId": "{ORG_ID}",
+      "packageId": "{PACKAGE_ID}"
+  }'
+```
+
+| Eigenschaft | Beschreibung | Typ | Erforderlich |
+| --- | --- | --- | --- |
+| `imsOrdId` | Die ID der Organisation, zu der das Paket gehört. | Zeichenfolge | Ja |
+| `packageId` | Die ID des Pakets, das die angeforderte Payload nutzt. | Zeichenfolge | Ja |
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt die Payload des Pakets zurück.
+
+```json
+{
+    "imsOrgId": "{ORG_ID}",
+    "packageId": "{PACKAGE_ID}"
 }
 ```
