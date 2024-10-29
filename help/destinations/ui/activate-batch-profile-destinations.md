@@ -3,10 +3,10 @@ title: Aktivieren von Zielgruppen für Batch-Profil-Exportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppen aktivieren können, indem Sie sie an profilbasierte Batch-Ziele senden.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
-ht-degree: 55%
+source-wordcount: '4151'
+ht-degree: 54%
 
 ---
 
@@ -133,11 +133,11 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, um den Datei
 
 2. Mit dem Umschalter **[!UICONTROL Zeit]** können Sie festlegen, ob der Export unmittelbar nach der Zielgruppenbewertung oder auf geplanter Basis zu einem bestimmten Zeitpunkt erfolgen soll. Bei Auswahl der Option **[!UICONTROL Geplant]** können Sie mit dem Selektor die Tageszeit für den Export im [!DNL UTC]-Format wählen.
 
-   >[!NOTE]
-   >
-   >Die unten beschriebene Option **[!UICONTROL Nach der Segmentauswertung]** steht nur ausgewählten Beta-Kunden zur Verfügung.
+   Verwenden Sie die Option **[!UICONTROL Nach der Segmentauswertung]**, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Mit dieser Option wird sichergestellt, dass bei Ausführung des Aktivierungsauftrags die aktuellsten Profile nach Ihrem Ziel exportiert werden. Dies kann dazu führen, dass eine Zielgruppe basierend auf Ihren Aktionen mehrmals am Tag exportiert wird.
 
-   Verwenden Sie die Option **[!UICONTROL Nach der Segmentauswertung]**, damit der Aktivierungsvorgang unmittelbar nach Abschluss des täglichen Platform-Batch-Segmentierungsvorgangs ausgeführt wird. Mit dieser Option wird sichergestellt, dass bei Ausführung des Aktivierungsauftrags die aktuellsten Profile nach Ihrem Ziel exportiert werden.
+   >[!IMPORTANT]
+   >
+   >Wenn Sie die [flexible Zielgruppenbewertung](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) für Zielgruppen ausführen, die bereits nach der Segmentbewertung aktiviert werden sollen, werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenbewertungsauftrag abgeschlossen ist, unabhängig von früheren täglichen Aktivierungsaufträgen. Dies kann dazu führen, dass Audiences basierend auf Ihren Aktionen mehrmals am Tag exportiert werden.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -485,7 +485,7 @@ Wenn Sie zu Ihren exportierten Dateien während der Beta-Phase Identitäts-Names
 > 
 Alle Cloud-Speicher-Ziele im Katalog können einen verbesserten Schritt [[!UICONTROL Zuordnung] Schritt](#mapping) anzeigen, der den Schritt **[!UICONTROL Attribute auswählen]** ersetzt, der in diesem Abschnitt beschrieben wird.
 >
-Dieser Schritt **[!UICONTROL Attribute auswählen]** wird weiterhin für die E-Mail-Marketing-Ziele des Adobe Campaign-, Oracle Responsys-, Oracle Eloqua- und Salesforce-Marketings Cloud angezeigt.
+Dieser Schritt **[!UICONTROL Attribute auswählen]** wird weiterhin für die E-Mail-Marketing-Ziele Adobe Campaign, Oracle Responsys, Oracle Eloqua und Salesforce Marketing Cloud angezeigt.
 
 Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie an das Ziel senden möchten.
 
