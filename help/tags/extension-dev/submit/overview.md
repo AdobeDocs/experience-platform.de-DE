@@ -2,10 +2,10 @@
 title: Übersicht über den Prozess zur Übermittlung von Erweiterungen
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform übermitteln – alle Schritte von der Entwicklung bis zur Veröffentlichung.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 100%
+source-wordcount: '231'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ Die Übermittlung einer Erweiterung an den Datenerfassungskatalog in Adobe Exper
 1. [Gewähren des Benutzerzugriffs für die Entwicklung von Erweiterungen](./access.md)
 1. [Entwickeln einer Erweiterung](./develop.md)
 1. [Erstellen eines Exchange-Listeneintrags](./create-listing.md)
-1. Erstellen des Erweiterungspakets
+1. [Erstellen der ZIP-Datei für das Erweiterungspaket](./create-extension-package-zip.md)
 1. [Hochladen und Testen der Erweiterung](./upload-and-test.md)
 1. [Freigeben der Erweiterung](./release.md)
 

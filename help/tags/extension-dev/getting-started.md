@@ -2,10 +2,10 @@
 title: Erste Schritte bei der Entwicklung von Erweiterungen
 description: So beginnen Sie mit der Entwicklung Ihrer eigenen Tag-Erweiterungen in Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 077d3ac5a34f052ef6293927d67e3cc8afb27563
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 95%
+source-wordcount: '510'
+ht-degree: 80%
 
 ---
 
@@ -40,9 +40,13 @@ npx @adobe/reactor-scaffold
 Das scaffold-Tool fordert Sie zur Eingabe folgender anfänglicher Konfigurationsoptionen auf:
 
 * Anzeigename: Der sichtbare Name der Erweiterung
+* Plattform - Gibt an, ob die Erweiterung für Web, Mobile oder Edge entwickelt wurde
 * Version: Die Version der Erweiterung
 * Beschreibung: Eine kurze Beschreibung des Zwecks der Erweiterung
 * Autor: Der Name des Autors der Erweiterung
+
+>[!NOTE]
+> Bei mobilen Erweiterungen werden verschiedene Fragen zur Struktur Ihrer Android- und iOS-Anwendungen gestellt.
 
 Das scaffold-Tool stellt anschließend Optionen zum Erstellen der Erweiterungsstruktur bereit:
 
@@ -52,8 +56,10 @@ Das scaffold-Tool stellt anschließend Optionen zum Erstellen der Erweiterungsst
 So kann beispielsweise ermittelt werden, ob der Benutzer den Browser Chrome verwendet, ob er ein iPad benutzt oder ob er sich in einer bestimmten Domain befindet.
 * [Aktionstypen](./web/action-types.md): Die Aktion, die ausgeführt werden soll, wenn ein Ereignis eintritt. So können Sie beispielsweise einen Analytics-Beacon senden, ein Angebot anzeigen, ein Cookie speichern oder einen Support-Chat öffnen.
 * [Datenelementtypen](./web/data-element-types.md): Datenelementtypen rufen Daten ab. Diese Daten können sich in einem lokalen Datenspeicher, in einem Cookie, in einem DOM-Element oder an einem benutzerdefinierten Speicherort befinden.
-* [Freigegebene Module](./web/shared.md): Ein freigegebenes Modul ist ein Mechanismus, mit dem Erweiterungen mit anderen Erweiterungen kommunizieren können.
+* [Freigegebene Module](./web/shared.md) (nur Web): Ein freigegebenes Modul ist ein Mechanismus, mit dem Erweiterungen mit anderen Erweiterungen kommunizieren können.
 * [Ansichten](./web/views.md): Jedes Ereignis, jede Bedingung, jede Aktion und jeder Datenelementtyp kann eine Ansicht bereitstellen, in der Benutzer Einstellungen angeben können.
+* Exchange URL (nur Web und Edge): Eine Erweiterung wird im öffentlichen Adobe-Katalog veröffentlicht. Geben Sie hier die Auflistungs-URL an.
+* Symbolpfad: Ein Pfad zu einer Symboldatei für die Erweiterung.
 
 >[!NOTE]
 >

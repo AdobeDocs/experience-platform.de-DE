@@ -2,10 +2,10 @@
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 92%
+source-wordcount: '2345'
+ht-degree: 86%
 
 ---
 
@@ -43,13 +43,13 @@ Informationen zum Erstellen eines technischen Kontos für die Verwendung mit Tag
 
 >[!IMPORTANT]
 >
->Um eine Integration in Adobe I/O erstellen zu können, müssen Sie Experience Cloud-Organisationsadministrator oder Experience Cloud-Organisationsentwickler sein.
+>Um eine Integration in Adobe I/O zu erstellen, müssen Sie Experience Cloud-Organisationsadministrator oder Experience Cloud-Org-Entwickler sein.
 
-Wenn Sie keine Integration erstellen können, verfügen Sie wahrscheinlich nicht über die notwendigen Berechtigungen. Dazu muss entweder ein Administrator Ihres Unternehmens die Schritte für Sie durchführen oder Sie als Entwickler festlegen.
+Wenn Sie keine Integration erstellen können, verfügen Sie wahrscheinlich nicht über die richtigen Berechtigungen. Dazu muss entweder ein Administrator Ihres Unternehmens die Schritte für Sie durchführen oder Sie als Entwickler festlegen.
 
 ## Hochladen des Erweiterungspakets {#upload}
 
-Nachdem Sie über die Berechtigungen verfügen, können Sie Ihr Erweiterungspaket vollumfänglich testen.
+Nachdem Sie über die Anmeldedaten verfügen, können Sie Ihr Erweiterungspaket vollumfänglich testen.
 
 Wenn Sie das Erweiterungspaket zum ersten Mal hochladen, wird ihm der Status `development` zugewiesen. Das bedeutet, dass es nur für Ihr eigenes Unternehmen und nur bei einer Eigenschaft sichtbar ist, die für die Erweiterungsentwicklung markiert wurde.
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx` ermöglicht Ihnen, ein npm-Paket herunterzuladen und auszuführen, ohne es tatsächlich auf Ihrem Computer zu installieren. Dies ist die einfachste Möglichkeit, Uploader auszuführen.
 
-Der Uploader fordert Sie auf, mehrere Informationen einzugeben. Die ID des technischen Kontos, der API-Schlüssel und weitere Informationen können über die Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die korrekte Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL Ansicht]**.
+>[!NOTE]
+> Standardmäßig erwartet der Uploader Adobe I/O-Anmeldeinformationen für einen Server-zu-Server-OAuth-Fluss. Die veralteten `jwt-auth`-Anmeldedaten
+> kann durch Ausführen von `npx @adobe/reactor-uploader@v5.2.0` bis zur Einstellung am 1. Januar 2025 verwendet werden. Die erforderlichen Parameter
+> zum Ausführen der `jwt-auth` -Version finden Sie [hier](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-- Wie lautet der Pfad zu Ihrem privaten Schlüssel? /path/to/private.key. Dies ist der Ort, an dem Sie in Schritt 2 oben Ihren privaten Schlüssel gespeichert haben.
-- Wie lautet Ihre Organisations-ID? Kopieren Sie diese aus der Übersichtsseite der I/O-Konsole, die Sie zuvor geöffnet gelassen haben, und fügen Sie sie ein.
-- Wie lautet die ID Ihres technischen Kontos? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
-- Wie lautet Ihr API-Schlüssel? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
-- Wie lautet das Client-Geheimnis? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
-- Wie lautet der Pfad des Pakets extension_package, das Sie hochladen möchten? /path/to/extension_package.zip. Wenn Sie Uploader aus dem Verzeichnis heraus aufrufen, das Ihr ZIP-Paket enthält, können Sie dies einfach aus der Liste auswählen, anstatt den Pfad einzugeben.
+Für den Uploader müssen Sie nur einige wenige Informationen eingeben. Die `clientId` und `clientSecret` können aus der Adobe I/O-Konsole abgerufen werden. Navigieren Sie in der I/O-Konsole zur Seite [Integrationen](https://console.adobe.io/integrations). Wählen Sie die korrekte Organisation im Dropdown-Menü aus, suchen Sie die richtige Integration und klicken Sie auf **[!UICONTROL Ansicht]**.
+
+- Was ist Ihr `clientId`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
+- Was ist Ihr `clientSecret`? Kopieren Sie diese aus der I/O-Konsole und fügen Sie sie ein.
+- Wenn Sie Uploader aus dem Verzeichnis heraus aufrufen, das Ihr ZIP-Paket enthält, können Sie dies einfach aus der Liste auswählen, anstatt den Pfad einzugeben.
 
 Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extension_package aus.
 
@@ -79,6 +81,8 @@ Das Erweiterungspaket wird dann hochgeladen und Uploader gibt die ID des extensi
 >[!NOTE]
 >
 >Wenn Sie den Uploader häufig ausführen möchten, kann es umständlich sein, diese Informationen jedes Mal eingeben zu müssen. Sie können sie auch als Argument in der Befehlszeile eingeben. Weitere Informationen finden Sie im Abschnitt [Befehlszeilenargumente](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) der NPM-Dokumentation.
+
+Wenn Sie das direkte Hochladen Ihrer Erweiterung mithilfe der API verwalten möchten, finden Sie weitere Informationen in den Beispielaufrufen zum [Erstellen eines Erweiterungspakets ](../../api/endpoints/extension-packages.md/#create) oder zum [Aktualisieren](../../api/endpoints/extension-packages.md#update) in den API-Dokumenten.
 
 ## Erstellen einer Entwicklungseigenschaft {#property}
 
@@ -224,7 +228,7 @@ Wenn Sie feststellen, dass Sie Änderungen an Ihrem Erweiterungspaket vornehmen 
 
    >[!NOTE]
    >
-   >Um Zeit zu sparen, können Argumente an die Befehlszeile übergeben werden. So wird die wiederholte Eingabe von Anmeldeinformationen vermieden. Weitere Informationen hierzu finden Sie in der [Dokumentation zu Reactor Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader).
+   >Um Zeit zu sparen, können Argumente an die Befehlszeile übergeben werden. So wird die wiederholte Eingabe von Anmeldedaten vermieden. Weitere Informationen hierzu finden Sie in der [Dokumentation zu Reactor Uploader](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. Der Installationsschritt kann beim Aktualisieren eines vorhandenen Pakets übersprungen werden.
 1. Ändern von Ressourcen: Wenn die Konfiguration für eine Ihrer Erweiterungskomponenten geändert wurde, müssen Sie diese Ressourcen in der Benutzeroberfläche aktualisieren.
 1. Hinzufügen der neuesten Änderungen zur Bibliothek und erneutes Erstellen.

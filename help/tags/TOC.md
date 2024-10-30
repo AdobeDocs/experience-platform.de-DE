@@ -6,10 +6,10 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 97%
+source-wordcount: '778'
+ht-degree: 96%
 
 ---
 
@@ -265,6 +265,7 @@ ht-degree: 97%
       * [Gewähren von Benutzerzugriff](./extension-dev/submit/access.md)
       * [Entwickeln einer Erweiterung](./extension-dev/submit/develop.md)
       * [Erstellen eines Exchange-Listeneintrags](./extension-dev/submit/create-listing.md)
+      * [Erstellen einer ZIP-Datei für ein Erweiterungspaket](./extension-dev/submit/create-extension-package-zip.md)
       * [Hochladen und Implementieren von End-to-End-Tests](./extension-dev/submit/upload-and-test.md)
       * [Freigeben einer Erweiterung](./extension-dev/submit/release.md)
    * [Erweiterungskonfiguration](./extension-dev/configuration.md)
