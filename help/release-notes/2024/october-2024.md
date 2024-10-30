@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise, Oktober 2024
 description: Versionshinweise von Oktober 2024 für Adobe Experience Platform.
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 25%
@@ -14,12 +14,12 @@ ht-degree: 25%
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience Platform:
 
-- [Dashboards {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [Datenerfassung {#collection}](#data-collection-collection)
-- [Ziele {#destinations}](#destinations-destinations)
-- [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-- [Sandboxes {#sandboxes}](#sandboxes-sandboxes)
-- [Quellen {#sources}](#sources-sources)
+- [Dashboards](#dashboards)
+- [Datenerfassung](#data-collection-)
+- [Ziele](#destinations)
+- [Segmentierungs-Service](#segmentation-service)
+- [Sandboxes](#sandboxes)
+- [Quellen](#sources)
 
 ## Dashboards {#dashboards}
 
