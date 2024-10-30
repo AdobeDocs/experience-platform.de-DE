@@ -5,10 +5,10 @@ breadcrumb-title: Anleitung zu Dashboards
 user-guide-description: Erfahren Sie, wie Sie Daten in Experience Platform über anpassbare Dashboards visualisieren können.
 feature: Dashboards
 role: Developer,User
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 64%
+source-wordcount: '142'
+ht-degree: 65%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 64%
 * [Herunterladen von Dashboards als PDF](download.md)
 * SQL Insights: query pro mode {#sql-insights-query-pro-mode}
    * [Übersicht](sql-insights-query-pro-mode/overview.md)
+   * Data Distiller-Vorlagen {#templates}
+      * [Übersicht](sql-insights-query-pro-mode/templates/overview.md)
+      * [Erweiterte Zielgruppenüberschneidungen](sql-insights-query-pro-mode/templates/overlaps.md)
+      * [Zielgruppenvergleich](sql-insights-query-pro-mode/templates/comparison.md)
+      * [Zielgruppen-Trends](sql-insights-query-pro-mode/templates/trends.md)
+      * [Zielgruppen-Identitätsüberschneidungen](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * Filter {#filters}
       * [Datumsfilter](sql-insights-query-pro-mode/filters/date-filter.md)
       * [Globaler Filter](sql-insights-query-pro-mode/filters/global-filter.md)
@@ -51,7 +57,7 @@ ht-degree: 64%
 * Anwendungsfälle für Insights {#insights-use-cases}
    * [Einverständnisanalyse](insights-use-cases/consent-analysis.md)
 * Verfügbare Datenmodelle {#data-models}
-   * [Real-time Customer Data Platform Insights-Datenmodell B2B Edition](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-time Customer Data Platform Insights-Datenmodell B2B edition](data-models/cdp-insights-data-model-b2b.md)
    * [Real-time Customer Data Platform Insights-Datenmodell B2C-Bearbeitung](data-models/cdp-insights-data-model-b2c.md)
 * Anwendungsintegrationen {#integrations}
    * [Power BI](integrations/power-bi.md)
