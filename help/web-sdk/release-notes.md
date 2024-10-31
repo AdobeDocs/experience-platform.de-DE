@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
+source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 73%
 
 ---
@@ -22,7 +22,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - [Datenspeicherüberschreibungen](../datastreams/overrides.md) werden jetzt beim Starten von Mediensitzungen unterstützt.
 
-- Unterstützung für Adobe Target-Antwort-Token im Rendering-Überwachungs-Hook hinzugefügt.
+- Unterstützung für Adobe Target-Antwort-Token im Überwachungs-Hook [`onContentRendering`](monitoring-hooks.md#onContentRendering)hinzugefügt.
 
 **Fehlerbehebungen und Verbesserungen**
 

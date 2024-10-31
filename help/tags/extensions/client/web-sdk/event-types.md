@@ -3,9 +3,9 @@ title: Ereignistypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie, wie Sie Ereignistypen verwenden, die von der Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch bereitgestellt werden.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # Ereignistypen
 
 Auf dieser Seite werden die Adobe Experience Platform-Ereignistypen beschrieben, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden. Diese werden für [Erstellungsregeln](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=de) verwendet und sollten nicht mit dem Feld `eventType` im Objekt [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) verwechselt werden.
+
+## Überwachungs-Hook ausgelöst {#monitoring-hook-triggered}
+
+Das Adobe Experience Platform Web SDK enthält Überwachungshooks, mit denen Sie verschiedene Systemereignisse überwachen können. Diese Tools sind nützlich für die Entwicklung Ihrer eigenen Debugging-Tools und zum Erfassen von Web SDK-Protokollen.
+
+Ausführliche Informationen zu den Parametern der einzelnen Überwachungs-Hook-Ereignisse finden Sie in der Dokumentation zu den [Web SDK-Überwachungs-Hooks](../../../../web-sdk/monitoring-hooks.md) .
+
+![Tags-Benutzeroberflächenbild mit dem Überwachungs-Hook-Ereignistyp](assets/monitoring-hook-triggered.png)
+
+Die Web SDK-Tag-Erweiterung unterstützt die folgenden Überwachungshaken:
+
+* **[!UICONTROL onInstanceCreated]**: Dieses Monitoring-Hook-Ereignis wird ausgelöst, wenn Sie eine neue Web SDK-Instanz erfolgreich erstellt haben.
+* **[!UICONTROL onInstanceConficonfigured]**: Dieses Überwachungs-Hook-Ereignis wird vom Web SDK ausgelöst, wenn der Befehl [`configure`](../../../../web-sdk/commands/configure/overview.md) erfolgreich aufgelöst wurde
+* **[!UICONTROL onBeforeCommand]**: Dieses Überwachungs-Hook-Ereignis wird vom Web SDK ausgelöst, bevor ein anderer Befehl ausgeführt wird. Sie können diesen Überwachungs-Hook verwenden, um die Konfigurationsoptionen eines bestimmten Befehls abzurufen.
+* **[!UICONTROL onCommandResolved]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor das Befehlsversprechen aufgelöst wird. Sie können diese Funktion verwenden, um die Befehlsoptionen und das Ergebnis anzuzeigen.
+* **[!UICONTROL onCommandRejected]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn ein Befehls-Promise abgelehnt wird. Es enthält Informationen zur Fehlerursache.
+* **[!UICONTROL onBeforeNetworkRequest]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor eine Netzwerkanforderung ausgeführt wird.
+* **[!UICONTROL onNetworkResponse]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn der Browser eine Antwort erhält.
+* **[!UICONTROL onNetworkError]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn die Netzwerkanforderung fehlgeschlagen ist.
+* **[!UICONTROL onBeforeLog]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, bevor das Web SDK alles in der Konsole protokolliert.
+* **[!UICONTROL onContentRendering]**: Dieses Monitoring-Hook-Ereignis wird von der `personalization` -Komponente ausgelöst und hilft Ihnen beim Debugging des Renderings des Personalisierungsinhalts. Dieses Ereignis kann unterschiedliche Status haben:
+   * `rendering-started`: Gibt an, dass das Web SDK im Begriff ist, Vorschläge zu rendern. Bevor das Web SDK beginnt, einen Entscheidungsbereich oder eine Ansicht zu rendern, können Sie im `data` -Objekt die Vorschläge sehen, die von der `personalization` -Komponente gerendert werden sollen, sowie den Bereichsnamen.
+   * `no-offers`: Gibt an, dass für die angeforderten Parameter keine Payload empfangen wurde.
+   * `rendering-failed`: Gibt an, dass das Web SDK einen Vorschlag nicht rendern konnte.
+   * `rendering-succeeded`: Gibt an, dass das Rendering für einen Entscheidungsbereich abgeschlossen wurde.
+   * `rendering-redirect`: Gibt an, dass das Web SDK einen Umleitungsantrag ausführt.
+* **[!UICONTROL onContentHiding]**: Dieses Überwachungs-Hook-Ereignis wird ausgelöst, wenn ein Vorab-Ausblendestil angewendet oder entfernt wird.
+
 
 ## [!UICONTROL Ereignis-Abschluss senden]
 
