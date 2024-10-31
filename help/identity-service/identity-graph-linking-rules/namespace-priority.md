@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -150,6 +150,8 @@ Löschanfragen von Datensammlungen funktionieren für eine bestimmte Identität 
 Weitere Informationen finden Sie in der [Übersicht über die erweiterte Lebenszyklusverwaltung](../../hygiene/home.md) .
 
 ### Berechnete Attribute
+
+Berechnete Attribute verwenden die Namespace-Priorität, um den berechneten Attributwert zu speichern. Für ein bestimmtes Ereignis hat die Identität mit der höchsten Namespace-Priorität den Wert des berechneten Attributs, das dagegen geschrieben wurde. Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
 
 Berechnete Attribute verwenden keine Namespace-Priorität zur Berechnung von Werten. Wenn Sie berechnete Attribute verwenden, müssen Sie sicherstellen, dass die CRMID als Ihre primäre Identität für WebSDK festgelegt ist. Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
 
