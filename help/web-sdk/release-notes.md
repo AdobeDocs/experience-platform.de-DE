@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 77%
+source-wordcount: '2044'
+ht-degree: 73%
 
 ---
 
@@ -15,6 +15,26 @@ ht-degree: 77%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.24.0 – Freitag, 31. Oktober 2024
+
+**Neue Funktionen**
+
+- [Datenspeicherüberschreibungen](../datastreams/overrides.md) werden jetzt beim Starten von Mediensitzungen unterstützt.
+
+- Unterstützung für Adobe Target-Antwort-Token im Rendering-Überwachungs-Hook hinzugefügt.
+
+**Fehlerbehebungen und Verbesserungen**
+
+- Wenn mehrere In-App-Nachrichten zurückgegeben werden, wird nur die mit der höchsten Priorität angezeigt. Die anderen werden als unterdrückt aufgezeichnet.
+- Leere Datastream-Überschreibungen werden nicht mehr an das Edge Network gesendet, wodurch potenzielle Konflikte mit serverseitigen Routing-Konfigurationen verringert werden.
+- Die folgenden Namen der Protokollmeldungskomponenten wurden umbenannt, um sie an andere Adobe-SDKs anzupassen:
+   - `DecisioningEngine` wurde in `RulesEngine` umbenannt.
+   - `LegacyMediaAnalytics` wurde in `MediaAnalyticsBridge` umbenannt.
+   - `Privacy` wurde in `Consent` umbenannt.
+- Fehlerkorrektur - bei der Wiedergabe von Standardinhalt-Elementen über [`applyPropositions`](../web-sdk/commands/applypropositions.md) tritt kein Fehler mehr auf.
+- Korrektur eines CSS-Fehlers in Adobe Target-Verschiebungs- und Größenanpassungsaktionen.
+- Der Schlüssel `machineLearning` wurde aus [`sendEvent`](../web-sdk/commands/sendevent/overview.md) -Antworten entfernt.
 
 ## Version 2.23.0 – Freitag, 19. September 2024
 

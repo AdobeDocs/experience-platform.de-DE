@@ -2,16 +2,25 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK – Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
 workflow-type: tm+mt
-source-wordcount: '2291'
-ht-degree: 79%
+source-wordcount: '2332'
+ht-degree: 78%
 
 ---
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Version 2.27.0 – Freitag, 31. Oktober 2024
+
+**Neue Funktionen**
+
+- [Datastream overrides](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) enthält jetzt Einstellungen zum Deaktivieren von Experience Cloud-Lösungen und Adobe Experience Platform-Diensten.
+- Sie können jetzt [Datastream overrides](../web-sdk/web-sdk-extension-configuration.md) für Mediensitzungen erstellen.
+
+Enthält Version 2.24.0 des Adobe Experience Platform Web SDK.
 
 ## Version 2.26.1 – Freitag, 19. September 2024
 
