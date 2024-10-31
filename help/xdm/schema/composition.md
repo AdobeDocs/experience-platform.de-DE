@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Grundlagen der Schemakomposition
 description: Erfahren Sie mehr über Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4365'
 ht-degree: 26%
 
 ---
@@ -223,6 +223,10 @@ Der folgende Screenshot zeigt, wie Feldgruppen in der Platform-Benutzeroberfläc
 
 Die aktuellste Liste der verfügbaren Standard-XDM-Feldergruppen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Alternativ können Sie das Handbuch zum [Erkunden von XDM-Komponenten](../ui/explore.md) lesen, wenn Sie es vorziehen, Ressourcen in der Benutzeroberfläche anzuzeigen.
 
+>[!NOTE]
+>
+> Standard-XDM-Feldergruppen entwickeln sich immer weiter und einige Feldergruppen werden nicht mehr unterstützt. Die aktuellste Liste veralteter Feldergruppen finden Sie im Abschnitt [veraltete Feldergruppen](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) im offiziellen XDM-Repository.
+
 ### Datentyp {#data-type}
 
 Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Unterfelder auf die gleiche Weise definieren können wie Feldgruppen. Der wesentliche Unterschied besteht darin, dass Datentypen an einer beliebigen Stelle in ein Schema eingefügt werden können, indem sie als &quot;Datentyp&quot;eines Felds hinzugefügt werden. Während Feldergruppen nur mit bestimmten Klassen kompatibel sind, können Datentypen in jede übergeordnete Klasse oder Feldergruppe aufgenommen werden.
@@ -238,6 +242,10 @@ Der folgende Screenshot zeigt, wie Datentypen in der Platform-Benutzeroberfläch
 ![Ein Diagramm im Schema Editor für eine einzelne Person mit dem Objekt und den Attributen &quot;Vollständiger Name&quot;.](../images/schema-composition/data-type.png)
 
 Die aktuellste Liste der verfügbaren Standard-XDM-Datentypen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/datatypes). Alternativ können Sie das Handbuch zum [Erkunden von XDM-Komponenten](../ui/explore.md) lesen, wenn Sie es vorziehen, Ressourcen in der Benutzeroberfläche anzuzeigen.
+
+>[!NOTE]
+>
+> Standard-XDM-Datentypen entwickeln sich immer, und einige Datentypen sind veraltet. Die aktuellste Liste veralteter Datentypen finden Sie im Abschnitt [veraltete Datentypen](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) im offiziellen XDM-Repository.
 
 ### Feld {#field}
 
