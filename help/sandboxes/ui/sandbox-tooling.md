@@ -2,9 +2,9 @@
 title: Sandbox-Tooling
 description: Exportieren und importieren Sie nahtlos Sandbox-Konfigurationen zwischen Sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2431'
 ht-degree: 8%
 
 ---
@@ -151,6 +151,8 @@ Die Seite [!UICONTROL Paketobjekt und Abhängigkeiten] enthält eine Liste aller
 >[!NOTE]
 >
 >Abhängige Objekte können in der Ziel-Sandbox durch vorhandene ersetzt werden, sodass Sie vorhandene Objekte wiederverwenden können, anstatt eine neue Version zu erstellen. Wenn Sie beispielsweise ein Paket mit Schemas importieren, können Sie vorhandene benutzerdefinierte Feldergruppen und Identitäts-Namespaces in der Ziel-Sandbox wiederverwenden. Alternativ können Sie beim Importieren eines Pakets mit Journey bestehende Segmente in der Ziel-Sandbox wiederverwenden.
+>
+>Sandbox-Tools unterstützen derzeit nicht das Aktualisieren oder Überschreiben vorhandener Objekte. Sie können ein neues Objekt erstellen oder das vorhandene Objekt ohne Änderungen weiterhin verwenden.
 
 Um ein vorhandenes Objekt zu verwenden, wählen Sie das Stiftsymbol neben dem abhängigen Objekt aus.
 
