@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 80%
+source-wordcount: '357'
+ht-degree: 78%
 
 ---
 
@@ -39,6 +39,16 @@ ht-degree: 80%
       - [Technische Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Daten in ML-Umgebungen exportieren](data-distiller/ml-feature-pipelines/export-data.md)
       - [End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Distiller-Statistiken für Daten {#advanced-statistics}
+   - [Übersicht](advanced-statistics/overview.md)
+   - [Funktionsentwicklung](advanced-statistics/feature-engineering.md)
+   - [Modelle](advanced-statistics/models.md)
+Modelle implementieren {#implement-models}
+      - [Modelle implementieren](advanced-statistics/implement-models/implement-models.md)
+      - [Regression](advanced-statistics/implement-models/regression.md)
+      - [Klassifizierung](advanced-statistics/implement-models/classification.md)
+      - [Clustering](advanced-statistics/implement-models/clustering.md)
+   - [Merkmalumwandlung](advanced-statistics/feature-transformation.md)
 - Data Distiller Audiences {#data-distiller-audiences}
    - [Erstellen externer Zielgruppen mit SQL](data-distiller-audiences/overview.md)
 - Beispiele {#use-cases}
