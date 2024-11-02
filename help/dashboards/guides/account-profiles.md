@@ -2,10 +2,10 @@
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 8%
+source-wordcount: '2362'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ Dieses Dokument bietet einen Überblick über die Funktionen des Dashboards [!UI
 
 ## Erste Schritte
 
-Sie müssen über die Berechtigung [Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) verfügen, um auf das Dashboard &quot;B2B [!UICONTROL Kontoprofile]&quot;zuzugreifen.
+Sie müssen über die Berechtigung [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) verfügen, um auf das Dashboard &quot;B2B [!UICONTROL Kontoprofile]&quot;zuzugreifen.
 
 ## Kontoprofildaten {#data}
 
@@ -79,6 +79,10 @@ Adobe stellt standardmäßige Widgets bereit, mit denen Sie verschiedene Metrike
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
 * [Hinzugefügte Kontoprofile](#account-profiles-added)
+* [Überblick über Kundinnen und Kunden pro Konto](#customers-per-account-overview)
+   * [Übersicht über die Möglichkeiten pro Konto](#opportunities-per-account-overview)
+   * [Möglichkeiten pro Kontodetails](#opportunities-per-account-detail)
+   * [Kunden pro Kontodetails](#customers-per-account-detail)
 * [Neue Abschlüsse nach Wirtschaftszweigen](#accounts-by-industry)
 * [Neue Konten nach Typ](#accounts-by-type)
 * [Neue Möglichkeiten für die Rolle der Person](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 Das Widget [!UICONTROL Hinzugefügte Kontoprofile] verwendet ein Liniendiagramm, um die Anzahl der Kontoprofile anzuzeigen, die jeden Tag über einen bestimmten Zeitraum hinzugefügt wurden. Verwenden Sie den globalen Datumsfilter oben im Dashboard, um den Analysezeitraum zu bestimmen. Wenn kein Datumsfilter angegeben wird, werden im Standardverhalten die Kontoprofile aufgelistet, die für das Jahr vor dem aktuellen Datum hinzugefügt wurden. Die Ergebnisse können verwendet werden, um einen Trend bei der Anzahl der hinzugefügten Kontoprofile zu erkennen.
 
 ![Das Widget Kontoprofile hinzugefügt.](../images/account-profiles/account-profiles-added.png)
+
+### Überblick über Kundinnen und Kunden pro Konto {#customers-per-account-overview}
+
+Das Diagramm [!UICONTROL Kunden pro Konto - Übersicht] enthält eine Zusammenfassung der Konten, die auf ihren Kundentypen basieren. Es wird eine vierzeilige Tabelle angezeigt, in der Konten entweder als direkte oder indirekte Kunden oder als Kunden ohne Kunden kategorisiert werden. Sie enthält die Gesamtzahl der Konten für jede Kategorie. Das Diagramm hilft bei der Identifizierung der Verteilung der Konten, die direkte oder indirekte Kunden haben.
+
+Direkte Kunden sind Kundenprofile, die über die `personComponents` -Route direkt mit einem Konto verknüpft sind. Diese Beziehung ist einfacher und umfasst eine direkte, explizite Verbindung zwischen dem Kunden und dem Konto.
+
+Indirekte Kunden sind Kundenprofile, die über die `Account-Person` -Route mit einem Konto verknüpft sind. Diese Beziehung ist weniger einfach und umfasst eine Zwischenentität oder eine komplexere Verbindung zwischen dem Kunden und dem Konto, normalerweise über andere Konten oder Beziehungen.
+
+![Das Widget Kunden pro Konto - Übersicht .](../images/account-profiles/customers-per-account-overview-widget.png)
+
+Um auf detailliertere Einblicke zuzugreifen, wählen Sie die Auslassungspunkte (**...**) im Diagramm [!UICONTROL Kunden pro Konto - Übersicht] aus und wählen Sie **[!UICONTROL Durchsuchen]** aus dem Dropdown-Menü.
+
+![Das Widget Kunden pro Konto - Überblick mit dem Dropdown-Menü mit den Auslassungspunkten und hervorgehobenem Durchlauf.](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+Die Drillthrough-Ansicht wird angezeigt. Sehen Sie sich als Nächstes die verfügbaren Drillthrough-Diagramme an, um ein tieferes Verständnis der Struktur Ihrer B2B-Daten zu erhalten. Anhand dieser Drilldown-Diagramme können Sie ermitteln, wie viele Kontoprofile nicht mit Kundenprofilen verknüpft sind oder mit denen ein oder mehrere Kundenprofile verknüpft sind. Sie können sie auch verwenden, um zu ermitteln, wie viele direkte oder indirekte Kunden mit Ihren Konten verbunden sind.
+
+* [[!UICONTROL Kunden pro Kontodetails]](#customers-per-account-detail)
+* [[!UICONTROL Übersicht über Konten pro Opportunity]](#accounts-per-opportunity-overview)
+* [[!UICONTROL Möglichkeiten pro Kontodetails]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL Zwischen Dashboard-Ansichten navigieren] {#dashboard-view-navigation}
+
+Um zwischen dem Drilldown und dem Dashboard &quot;Kontoprofile&quot;zu wechseln, wählen Sie das Ordnersymbol (![Ordnersymbol) aus.](../images/account-profiles/folder-icon.png)) gefolgt von der richtigen Ansicht aus dem Dropdown-Menü.
+
+![Der Drilldown-Vorgang durch die Ansicht im Dashboard &quot;Kontoprofile&quot;mit hervorgehobenem Navigations-Dropdown-Menü.](../images/account-profiles/navigation-dropdown.png)
+
+Weitere Informationen zu Durchsuchen in der Platform-Benutzeroberfläche finden Sie im Leitfaden [Durchsuchen](../sql-insights-query-pro-mode/drill-through.md).
+
+#### [!UICONTROL Kunden pro Kontodetails] {#customers-per-account-detail}
+
+Das Diagramm [!UICONTROL Kunden pro Konto-Detail] enthält genauere Details zur Anzahl der Konten, die verschiedenen Kundentypen zugeordnet sind. Es wird eine dreiseitige Tabelle mit der Anzahl der Konten nach Kundentyp (direkt oder indirekt) und dem damit verbundenen Kundenbereich angezeigt. Dieses Diagramm hilft Ihnen dabei zu verstehen, wie die Kunden über verschiedene Kundenkategorien verteilt sind und wie viele Konten insgesamt den einzelnen Kategorien zugeordnet sind.
+
+![Das Detail-Widget Kunden pro Konto .](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL Übersicht über die Möglichkeiten pro Konto] {#opportunities-per-account-overview}
+
+Das Diagramm [!UICONTROL Chancen pro Konto - Übersicht] enthält eine Zusammenfassung der Konten, die über oder ohne Möglichkeiten verfügen. Diese zweizeilige Tabelle hilft dabei, schnell die Anzahl der Konten zu ermitteln, die mit Chancen verbunden sind, und bietet eine Momentaufnahme der Kontointeraktion mit Opportunities.
+
+![Das Widget &quot;Chancen pro Konto - Übersicht&quot;.](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### [!UICONTROL Möglichkeiten pro Kontodetails] {#opportunities-per-account-detail}
+
+Das Diagramm [!UICONTROL Möglichkeiten pro Konto Details] bietet eine detailliertere Aufschlüsselung der Konten basierend auf der Anzahl der Möglichkeiten, die sie haben. In der Tabelle wird die Anzahl der Konten nach Opportunitätszählungsbereichen gruppiert angezeigt, z. B. 1-10 Möglichkeiten oder 100+ Möglichkeiten. Anhand dieses Diagramms können Sie erkennen, wie die Konten nach der Anzahl der von ihnen verwalteten Möglichkeiten verteilt werden.
+
+![Das Detail-Widget &quot;Möglichkeiten pro Konto&quot;.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### Neue Abschlüsse nach Wirtschaftszweigen {#accounts-by-industry}
 
@@ -185,4 +235,4 @@ Um das Problem zu beheben, müssen Sie B2B-Entitätsdaten wie *Opportunity perso
 
 ## Nächste Schritte
 
-In diesem Dokument erfahren Sie, wie Sie das Dashboard [!UICONTROL Kontoprofile] finden und welche Metriken in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Kontoprofilen als Teil Ihrer B2B-Daten in der Experience Platform-Benutzeroberfläche finden Sie in der [Übersicht über Kontoprofile](../../rtcdp/accounts/account-profile-overview.md) für Adobe Real-Time CDP, B2B Edition.
+In diesem Dokument erfahren Sie, wie Sie das Dashboard [!UICONTROL Kontoprofile] finden und welche Metriken in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Kontoprofilen als Teil Ihrer B2B-Daten in der Experience Platform-Benutzeroberfläche finden Sie in der [Übersicht über Kontoprofile](../../rtcdp/accounts/account-profile-overview.md) für Adobe Real-Time CDP, B2B edition.
