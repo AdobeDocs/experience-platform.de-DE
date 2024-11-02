@@ -4,10 +4,10 @@ title: Lizenznutzungs-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
+source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
 workflow-type: tm+mt
-source-wordcount: '2855'
-ht-degree: 19%
+source-wordcount: '2867'
+ht-degree: 18%
 
 ---
 
@@ -182,10 +182,10 @@ Jedes Visualisierungs-Widget umfasst die folgenden Aspekte:
 
 - Ein Liniendiagramm, das die Änderung der Metrik im Zeitverlauf verfolgt
 - Ein Schlüssel für das Liniendiagramm
-- Der Sandbox-Name
-- Ein Dropdown-Menü zum Anpassen des Zeitraums für das Liniendiagramm
+- Der Name der Sandbox
+- Ein Dropdown-Menü zum Anpassen der Zeitraum für die Kantengraph
 
-Die Liniendiagramme vergleichen die Nutzungszahlen für Ihr Unternehmen mit der Gesamtsumme, die für die Lizenzierung Ihres Unternehmens zur Verfügung steht, und geben einen Prozentsatz der Gesamtnutzung an.
+Die Liniendiagramme vergleichen die Nutzungszahlen für Ihre Organisation mit der Gesamtnutzung, die mit der Lizenzierung Ihrer Organisation verfügbar ist, und bieten einen Prozentsatz der Gesamtnutzung.
 
 ![Die Visualisierung einer Metrik.](../images/license-usage/visualization.png)
 
@@ -209,8 +209,8 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 
 | Metrik | Beschreibung |
 |---|---|
-| [!UICONTROL Audience Activation Size] | Die Gesamtgröße der Profile, die in einem Jahr für ein dateibasiertes Ziel aktiviert wurden. Hinweis: Dies umfasst keine Profile, die über Streaming-Ziele gesendet werden. |
-| [!UICONTROL Addressable Audience] | Die Summe der Berechtigungen Ihrer geschäftlichen Zielgruppe und der Berechtigung für die Verbraucher-Zielgruppe. Eine Audience vom Verbraucher wird definiert als die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe des Verbrauchers&quot;identifiziert werden. Eine Business-Audience ist definiert als die Anzahl der Geschäftspersonenprofile, die in der Bestellung als &quot;Business Audience&quot;identifiziert werden. |
+| [!UICONTROL Größe Audience Activation] | Die Gesamtgröße der Profile, die innerhalb eines Jahres für ein beliebiges dateibasiertes Ziel aktiviert wurden. Hinweis: Dies gilt nicht für Profile, die über Streaming-Ziele gesendet werden. |
+| [!UICONTROL Adressierbare Audience] | Die Summe der Berechtigungen Ihrer geschäftlichen Zielgruppe und der Berechtigung für die Verbraucher-Zielgruppe. Eine Audience vom Verbraucher wird definiert als die Anzahl der Personenprofile, die in der Bestellung als &quot;Zielgruppe des Verbrauchers&quot;identifiziert werden. Eine Business-Audience ist definiert als die Anzahl der Geschäftspersonenprofile, die in der Bestellung als &quot;Business Audience&quot;identifiziert werden. |
 | [!UICONTROL  Adhoc Query Service Users Packs] | Ein Add-on zur Erhöhung der Berechtigung für gleichzeitige Query Service-Benutzer um fünf zusätzliche gleichzeitige Query Service-Benutzer und eine zusätzliche gleichzeitige Ausführung von Ad-hoc-Abfragen pro Pack. Es können mehrere zusätzliche Ad Hoc Query User Packs lizenziert sein. |
 | [!UICONTROL Durchschnittliche Profilreichweite] | **Veraltet** - Die Summe aller Produktionsdaten, die zu einem beliebigen Zeitpunkt im Hub-Profildienst gespeichert sind, dividiert durch die fünffache Anzahl autorisierter Geschäftsprofile. [!UICONTROL Durchschnittliche Profilreichweite] ist eine gemeinsam genutzte Funktion. |
 | [!UICONTROL Verfügbare CJA-Zeilen] | Die täglichen durchschnittlichen Datenzeilen, die in Customer Journey Analytics zur Analyse verfügbar sind. |
@@ -226,23 +226,23 @@ Das Dashboard zur Lizenznutzung enthält Berichte zu verschiedenen eindeutigen M
 | [!UICONTROL Profilreichhaltigkeitsnummer der Pakete] | Eine Steigerung des zulässigen Gesamtdatenvolumens um 25 KB pro Profil für jedes zusätzliche Profil-Rich-ness-Paket. |
 | [!UICONTROL Berechnungsstunden des Query Service] | Eine Maßeinheit für die Zeit, die die Query Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird. |
 | [!UICONTROL Streaming-Segmentierungsnummer der Pakete] | Die Pakete aktualisieren die Segmentzugehörigkeit für ein Personenprofil, wenn neue Daten über einen Streaming-Fluss in den Segmentierungsdienst gelangen. Die Segmentzugehörigkeit wird auf der Grundlage der aktuellen Personenprofilattribute und des Werts des aktuellen Ereignisses ausgewertet, ohne das historische Verhalten zu berücksichtigen. Streaming-Segmentierung ist eine gemeinsame Funktion. |
-| [!UICONTROL Datenvolumen insgesamt] | Die Gesamtanzahl der Daten, die für Adobe Experience Platform Profile Service zur Verwendung in Interaktionsarbeitsabläufen verfügbar sind. |
+| [!UICONTROL Datenvolumen insgesamt] | Die Gesamtanzahl der Daten, die für Adobe Experience Platform Profile Service zur Verwendung in Interaktionsarbeitsabläufen verfügbar sind. Weitere Informationen finden Sie in den [ häufig gestellten Fragen zum Gesamtdatenvolumen](../../landing/license-usage-and-guardrails/total-data-volume.md) . |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
 >[!TIP]
 >
->Sie können Ihre Lizenzberechtigungen in Ihrem Kundenauftrag überprüfen, um Metriken wie Ihre &quot;Speicherzulage&quot;zu berechnen.<br>Beispiel:<ul><li>Speicherzulage = Die Anzahl der &quot;autorisierten Profile&quot;in Ihrem Vertrag X Durchschnittliche Profilreichweite</li></ul>
+>Sie können Ihre Lizenzberechtigungen in Ihrem Kundenauftrag überprüfen, um Metriken wie Ihren &quot;Speicherplatz&quot; zu berechnen.<br>Beispiel:<ul><li>Speicherkontingent = Die Anzahl der &quot;autorisierten Profile&quot; in Ihrem Vertrag X Durchschnitt Profilvielfalt</li></ul>
 
-Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
+Die Verfügbarkeit dieser Metriken und die spezifische Definition jeder dieser Metriken hängt von der Lizenzierung ab, die Ihre Organisation erworben hat. Detaillierte Definitionen der einzelnen Kennzahl finden Sie in der entsprechenden Produktdokumentation Beschreibung:
 
 | Lizenz | Produktbeschreibung |
 | --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD ACTIVATION PRFL BIS 10 M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD AKTIVIERUNG PRFL BIS 10M</li><li>AEP:OD AKTIVIERUNG PRFL BIS ZU 50M</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD-INTELLIGENZ</li></ul> | [Adobe Experience Platform Intelligenz](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/de/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
