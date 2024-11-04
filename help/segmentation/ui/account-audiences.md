@@ -1,13 +1,13 @@
 ---
 title: Kontozielgruppen
 description: Erfahren Sie, wie Sie Zielgruppen für Konten erstellen und verwenden, um Kontoprofile in nachgelagerten Zielen auszuwählen.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 30%
+source-wordcount: '1518'
+ht-degree: 22%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 30%
 
 >[!AVAILABILITY]
 >
->Kontozielgruppen sind nur in der [B2B Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) und der [B2P Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p) verfügbar.
+>Kontozielgruppen sind nur in der [B2B edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) und der [B2P Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p) verfügbar.
 
 Mit der Kontosegmentierung können Sie mit Adobe Experience Platform die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen bringen.
 
@@ -66,6 +66,39 @@ Auf der Registerkarte [!UICONTROL Zielgruppen] können Sie zuvor erstellte perso
 ![Die Registerkarte &quot;Zielgruppen&quot;im Segment Builder wird hervorgehoben.](../images/ui/account-audiences/audiences.png)
 
 Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md).
+
+### Beziehungen herstellen {#relationships}
+
+Standardmäßig zeigt die Benutzeroberfläche von Segment Builder für Kontozielgruppen die direkte Beziehung zwischen einem Konto und einer Person an. Für Kontozielgruppen stehen jedoch andere Beziehungstypen zur Verfügung.
+
+Um die alternativen Beziehungstypen zu verwenden, wählen Sie ![das Einstellungssymbol](../../images/icons/settings.png) aus.
+
+![Das Einstellungssymbol wird im Abschnitt &quot;Felder&quot;hervorgehoben.](../images/ui/account-audiences/select-settings.png)
+
+Wählen Sie auf der Registerkarte [!UICONTROL Einstellungen] die Option **[!UICONTROL Beziehungsselektoren anzeigen]** im Abschnitt **[!UICONTROL Beziehung der Felder]** aus.
+
+![Der Umschalter Verknüpfungsauswahl anzeigen ist im Bereich Beziehung der Felder auf der Registerkarte Einstellungen ausgewählt.](../images/ui/account-audiences/show-relation-selectors.png)
+
+Wählen Sie erneut ![das Einstellungssymbol](../../images/icons/settings.png) aus, um zur Registerkarte [!UICONTROL Felder] zurückzukehren. Sie können jetzt den Abschnitt **[!UICONTROL Beziehungen herstellen]** sehen, in dem Sie feststellen können, wie das Konto mit der Person verbunden ist und wie die Person mit der Gelegenheit verbunden ist.
+
+![Der Abschnitt Beziehungen herstellen wird hervorgehoben und zeigt die Optionen zum Herstellen einer Verbindung zwischen einem Konto und einer Person und zum Herstellen einer Verbindung zu einer Gelegenheit an.](../images/ui/account-audiences/establish-relationships.png)
+
+Beim Verbinden des Kontos mit der Person können Sie aus den folgenden Optionen wählen:
+
+| Option | Beschreibung |
+| ------ | ----------- |
+| Direkte Beziehung | Die direkte Verbindung zwischen dem Konto und der Person Dies gibt an, mit welchen Konten jede Person über das Array von `accountID` -Werten im Array `personComponents` des Personenschemas verknüpft ist. Dieser Pfad wird am häufigsten verwendet. |
+| Kundenbeziehung | Die Beziehung zwischen dem Konto und der Person, die durch das Objekt `accountPersonRelation` definiert wird. Dieser Pfad ermöglicht es auch, jede Person mit mehreren Konten zu verbinden. Sie wird verwendet, wenn Ihr Unternehmen aus Ihren Quelldaten eine explizite Beziehungstabelle definiert hat. |
+| Chancen-/Personenbeziehung | Die Beziehung zwischen der Gelegenheit und der Person, die durch das `opportunityPersonRelation` -Objekt definiert wird. Dadurch wird die Person mit einem Konto verbunden, indem sie von der Opportunity zur Opportunity zum Konto wechselt. Auf diese Weise können Sie beschreiben, bei welchen Unternehmen die Person mit Chancen verbunden ist. |
+
+Wenn Sie die Gelegenheit mit der Person verbinden, können Sie aus den folgenden Optionen wählen:
+
+| Option | Beschreibung |
+| ------ | ----------- |
+| Konto | Die direkte Verbindung zwischen dem Konto und der Gelegenheit. Wenn Sie dies in einer Konto-Zielgruppe verwenden, verbindet dieser Pfad alle Personen im Unternehmen mit der Möglichkeit. |
+| Chancen-/Personenbeziehung | Die Beziehung zwischen der Chance und der Person, die auf dem Opportunity-Person-Objekt basiert. Dieser Weg verbindet nur Personen, die als an einer Gelegenheit beteiligt identifiziert wurden. |
+
+Nachdem Sie die gewünschte Beziehung hergestellt haben, können Sie die erforderlichen Personen-Zielgruppen zu Ihrer Segmentdefinition hinzufügen.
 
 ## Zielgruppe aktivieren {#activate}
 
