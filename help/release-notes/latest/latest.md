@@ -11,7 +11,7 @@ ht-degree: 25%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: Mittwoch, 29. Oktober 2024**
+**Veröffentlichungsdatum: 29. Oktober 2024**
 
 Aktualisierungen vorhandener Funktionen und Dokumentationen in Adobe Experience Platform:
 
