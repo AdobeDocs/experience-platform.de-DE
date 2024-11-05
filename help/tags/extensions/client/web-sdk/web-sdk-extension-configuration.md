@@ -2,10 +2,10 @@
 title: Web SDK-Tag-Erweiterung konfigurieren
 description: Erfahren Sie, wie Sie die Tag-Erweiterung des Experience Platform Web SDK in der Benutzeroberfläche für Tags konfigurieren.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 5%
+source-wordcount: '2525'
+ht-degree: 4%
 
 ---
 
@@ -170,6 +170,66 @@ Als Alternative zum Übergeben der Überschreibungen über einen Web SDK-Befehl 
 Datastream-Überschreibungen müssen pro Umgebung konfiguriert werden. Die Entwicklungs-, Staging- und Produktionsumgebungen haben alle separate Außerkraftsetzungen. Sie können die Einstellungen zwischen ihnen mithilfe der entsprechenden Optionen kopieren, die im folgenden Bildschirm angezeigt werden.
 
 ![Das Bild, das die Konfiguration des Datastreams anzeigt, überschreibt die Verwendung der Seite zur Web SDK-Tag-Erweiterung.](assets/datastream-overrides.png)
+
+Standardmäßig ist die Außerkraftsetzung der Datastream-Konfiguration deaktiviert. Die Option **[!UICONTROL Übereinstimmung mit der Datastream-Konfiguration]** ist standardmäßig ausgewählt.
+
+![Die Benutzeroberfläche der Web SDK-Tag-Erweiterung, in der die Konfiguration des Datastraams angezeigt wird, setzt die Standardeinstellung außer Kraft.](assets/datastream-override-default.png)
+
+Um das Überschreiben von Datastreams in der Tag-Erweiterung zu aktivieren, wählen Sie **[!UICONTROL Aktiviert]** aus dem Dropdown-Menü aus.
+
+![Die Benutzeroberfläche der Web SDK-Tag-Erweiterung, in der die Konfiguration des Datastreams angezeigt wird, überschreibt die Einstellung Aktiviert .](assets/datastream-override-enabled.png)
+
+Nachdem Sie die Außerkraftsetzungen der Datastream-Konfiguration aktiviert haben, können Sie die Überschreibungen für jeden unten beschriebenen Dienst konfigurieren.
+
+Die folgenden Einstellungen zum Außerkraftsetzen des Datastreams setzen serverseitige Datenspeicherkonfigurationen und Regeln für die ausgewählte Umgebung außer Kraft.
+
+### Adobe Analytics {#analytics}
+
+Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Adobe Analytics-Dienst zu überschreiben.
+
+![UI-Bild der Web SDK-Tag-Erweiterung, das die Einstellungen zum Überschreiben des Adobe Analytics-Datastreams anzeigt.](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL Aktiviert]** / **[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdownmenü, um das Daten-Routing zum Adobe Analytics-Dienst zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL Report Suites]**: Die IDs für die Ziel-Report Suites in Adobe Analytics. Der Wert muss eine vorkonfigurierte Report Suite (oder eine kommagetrennte Liste von Report Suites) aus Ihrer Datastream-Konfiguration sein. Diese Einstellung setzt die primären Report Suites außer Kraft.
+* **[!UICONTROL Report Suite hinzufügen]**: Wählen Sie diese Option, um zusätzliche Report Suites hinzuzufügen.
+
+### Adobe Audience Manager {#audience-manager}
+
+Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Adobe Audience Manager-Dienst zu überschreiben.
+
+![UI-Bild der Web SDK-Tag-Erweiterung, das die Einstellungen zum Überschreiben des Adobe Audience Manager-Datastreams anzeigt.](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL Aktiviert]** / **[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdownmenü, um das Daten-Routing zum Adobe Audience Manager-Dienst zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL ID-Synchronisierungscontainer von Drittanbietern]**: Die ID für den ID-Synchronisierungscontainer von Drittanbietern in Audience Manager. Der Wert muss ein vorkonfigurierter sekundärer Container aus Ihrer Datastream-Konfiguration sein und überschreibt den primären Container.
+
+### Adobe Experience Platform {#experience-platform}
+
+Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Adobe Experience Platform-Dienst zu überschreiben.
+
+![UI-Bild der Web SDK-Tag-Erweiterung, das die Einstellungen zum Überschreiben des Adobe Experience Platform-Datastreams anzeigt.](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL Aktiviert]** / **[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdownmenü, um das Daten-Routing zum Adobe Experience Platform-Dienst zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL Ereignis-Datensatz]**: Die ID für den Zielereignis-Datensatz in der Adobe Experience Platform. Der Wert muss ein vorkonfigurierter sekundärer Datensatz aus Ihrer Datastream-Konfiguration sein.
+* **[!UICONTROL Offer decisioning]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum [!DNL Offer Decisioning]-Dienst zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL Edge-Segmentierung]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum [!DNL Edge Segmentation]-Dienst zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL Personalization-Ziele]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zu Personalisierungszielen zu aktivieren oder zu deaktivieren.
+* **[!UICONTROL Adobe Journey Optimizer]**: Verwenden Sie dieses Dropdownmenü, um das Daten-Routing zum [!DNL Adobe Journey Optimizer]-Dienst zu aktivieren oder zu deaktivieren.
+
+### Adobe Server-seitige Ereignisweiterleitung {#ssf}
+
+Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Adobe Server-seitigen Ereignisweiterleitungsdienst zu überschreiben.
+
+![UI-Bild der Web SDK-Tag-Erweiterung, das die Einstellungen für die Adobe Server-seitige Ereignisweiterleitung zum Außerkraftsetzen des Datenspeichers anzeigt.](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL Aktiviert]** / **[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdown-Menü, um das Daten-Routing zum Adobe Server-seitigen Ereignisweiterleitungsdienst zu aktivieren oder zu deaktivieren.
+
+### Adobe Target {#target}
+
+Verwenden Sie die Einstellungen in diesem Abschnitt, um das Daten-Routing zum Adobe Target-Dienst zu überschreiben.
+
+![UI-Bild der Web SDK-Tag-Erweiterung, das die Einstellungen zum Überschreiben des Adobe Target-Datastreams anzeigt.](assets/datastream-override-target.png)
+
+* **[!UICONTROL Aktiviert]** / **[!UICONTROL Deaktiviert]**: Verwenden Sie dieses Dropdownmenü, um das Daten-Routing zum Adobe Target-Dienst zu aktivieren oder zu deaktivieren.
 
 ## Erweiterte Einstellungen konfigurieren
 
