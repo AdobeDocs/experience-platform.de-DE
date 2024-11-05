@@ -2,10 +2,10 @@
 title: Erstellen einer Salesforce-Marketing Cloud-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Ihr Salesforce-Marketing Cloud-Konto mithilfe der Flow Service-API gegen Experience Platform authentifizieren.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 58%
+source-wordcount: '508'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->Die Erfassung benutzerdefinierter Objekte wird von der Quellintegration für [!DNL Salesforce Marketing Cloud] derzeit nicht unterstützt.
+>Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -32,7 +32,7 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 Im folgenden Abschnitt finden Sie weitere Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service] -API erfolgreich eine Verbindung zu [!DNL Salesforce Marketing Cloud] herstellen zu können.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Damit [!DNL Flow Service] eine Verbindung zu [!DNL Salesforce Marketing Cloud] herstellen kann, müssen Sie die folgenden Verbindungseigenschaften angeben:
 
@@ -47,7 +47,11 @@ Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Salesf
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+>[!IMPORTANT]
+>
+>Die Erfassung benutzerdefinierter Objekte wird von der Quellintegration für [!DNL Salesforce Marketing Cloud] derzeit nicht unterstützt.
+
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
 Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den `/connections` -Endpunkt und geben Sie dabei Ihre [!DNL Salesforce Marketing Cloud]-Authentifizierungsdaten als Teil des Anfragetexts an.
 

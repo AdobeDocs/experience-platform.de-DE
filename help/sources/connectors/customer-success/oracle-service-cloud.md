@@ -4,14 +4,18 @@ title: Oracle Service Cloud-Quell-Connector – Übersicht
 description: Erfahren Sie, wie Sie Oracle Service Cloud über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 98%
+source-wordcount: '268'
+ht-degree: 91%
 
 ---
 
 # Oracle Service Cloud-Quelle
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Oracle Service Cloud] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

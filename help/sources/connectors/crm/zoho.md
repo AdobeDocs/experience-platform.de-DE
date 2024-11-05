@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Übersicht über den Quell-Connector Zoho CRM
 description: Erfahren Sie, wie Sie Zoho CRM über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 100%
+source-wordcount: '515'
+ht-degree: 96%
 
 ---
 
 # [!DNL Zoho CRM]
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Zoho CRM] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -21,13 +25,13 @@ Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem 
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen. Weitere Informationen finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-## Abrufen Ihrer Authentifizierungsberechtigungen für [!DNL Zoho CRM]
+## Abrufen Ihrer Authentifizierungs-Anmeldedaten für [!DNL Zoho CRM]
 
 Bevor Sie Daten aus Ihrem [!DNL Zoho CRM]-Konto auf Platform übertragen können, müssen Sie zunächst Ihre Anmeldedaten abrufen, um Ihre [!DNL Zoho CRM]-Quelle zu authentifizieren. Gehen Sie wie folgt vor, um Ihre Client-ID, Ihr Client-Geheimnis, Ihr Zugriffs-Token und Ihr Aktualisierungs-Token abzurufen.
 
 ### Registrieren Ihres Programms
 
-Der erste Schritt zum Abrufen Ihrer Authentifizierungsdaten ist die Registrierung Ihres Programms über die [[!DNL Zoho CRM] Entwicklerkonsole](https://accounts.zoho.com/). Um Ihr Programm zu registrieren, müssen Sie Ihren Client-Typ unter folgendem Pfad auswählen: JavaScript, Web-basiert, Mobile Apps ohne Browser oder Self-Client. Geben Sie als Nächstes Werte für den Namen Ihres Programms, die URL Ihrer Web-Seite und einen autorisierten Umleitungs-URI an, den [!DNL Zoho CRM] dann verwenden kann, um Sie mit einem Grant-Token umzuleiten.
+Der erste Schritt zum Abrufen Ihrer Authentifizierungs-Anmeldedaten ist die Registrierung Ihres Programms über die [[!DNL Zoho CRM] Entwicklerkonsole](https://accounts.zoho.com/). Um Ihr Programm zu registrieren, müssen Sie Ihren Client-Typ unter folgendem Pfad auswählen: JavaScript, Web-basiert, Mobile Apps ohne Browser oder Self-Client. Geben Sie als Nächstes Werte für den Namen Ihres Programms, die URL Ihrer Web-Seite und einen autorisierten Umleitungs-URI an, den [!DNL Zoho CRM] dann verwenden kann, um Sie mit einem Grant-Token umzuleiten.
 
 Bei erfolgreicher Registrierung werden Ihre Client-ID und das Client-Geheimnis angegeben.
 

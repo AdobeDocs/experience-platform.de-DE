@@ -3,14 +3,18 @@ keywords: Experience Platform;Startseite;Beliebte Themen;Oracle Service Cloud;or
 title: Erstellen einer Oracle Service Cloud-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Oracle Service Cloud-Quellverbindung erstellen.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 100%
+source-wordcount: '487'
+ht-degree: 96%
 
 ---
 
 # Erstellen einer Oracle Service Cloud-Quellverbindung in der Benutzeroberfläche
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Oracle Service Cloud] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 In diesem Tutorial werden die Schritte zum Erstellen einer Oracle Service Cloud-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche beschrieben.
 
@@ -25,7 +29,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 Wenn Sie bereits über eine gültige Oracle Service Cloud-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial [Konfigurieren eines Datenflusses](../../dataflow/customer-success.md) fortfahren
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um auf Ihr Oracle Service Cloud-Konto in [!DNL Platform] zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
@@ -57,7 +61,7 @@ Um ein bestehendes Konto zu verbinden, wählen Sie das Oracle Service Cloud-Kont
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Oracle Service Cloud-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Oracle Service Cloud-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
 ![Die neue Kontoschnittstelle mit Platzhalterwerten.](../../../../images/tutorials/create/oracle-service-cloud/new.png)
 

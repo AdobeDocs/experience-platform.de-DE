@@ -5,14 +5,18 @@ title: Erstellen einer Zoho CRM-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem Zoho-CRM verbinden.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 98%
+source-wordcount: '657'
+ht-degree: 95%
 
 ---
 
 # Erstellen einer [!DNL Zoho CRM]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Zoho CRM] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -27,7 +31,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie für eine erfolgreiche Verbindung mit [!DNL Zoho CRM] unter Verwendung der [!DNL Flow Service]-API benötigen.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Damit [!DNL Flow Service] eine Verbindung mit [!DNL Zoho CRM] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
@@ -41,7 +45,7 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Zoho CRM] herstellen kann, m
 | `refreshToken` | Ein Aktualisierungs-Token ist ein Token, mit dem ein neues Zugriffs-Token generiert wird, sobald Ihr Zugriffs-Token abgelaufen ist. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Zoho CRM] ist: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
-Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der Dokumentation unter [[!DNL Zoho CRM] Authentifizierung](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
+Weitere Informationen zu diesen Anmeldedaten finden Sie in der Dokumentation unter [[!DNL Zoho CRM] Authentifizierung](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
 ### Verwenden von Platform-APIs
 
@@ -49,9 +53,9 @@ Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste
 
 ## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungs-Anmeldedaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Zoho CRM]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Zoho CRM]-Authentifizierungs-Anmeldedaten als Teil der Anfrageparameter an.
 
 **API-Format**
 

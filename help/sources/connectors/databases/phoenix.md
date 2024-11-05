@@ -3,14 +3,18 @@ title: Phoenix Source - Übersicht
 description: Erfahren Sie, wie Sie Ihr Phoenix-Konto mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 32%
+source-wordcount: '203'
+ht-degree: 29%
 
 ---
 
 # [!DNL Phoenix]
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Phoenix] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 Adobe Experience Platform Sources unterstützt die Datenerfassung aus Datenbanken von Drittanbietern, z. B. [[!DNL Phoenix]](https://phoenix.apache.org/index.html). Dieses Dokument enthält Informationen zu Voraussetzungen, bevor Sie Ihr [!DNL Phoenix]-Konto über die [!DNL Flow Service]-API oder die Experience Platform-Benutzeroberfläche verbinden.
 

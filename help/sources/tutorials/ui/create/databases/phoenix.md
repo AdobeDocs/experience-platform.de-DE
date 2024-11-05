@@ -2,14 +2,18 @@
 title: Verbinden Ihres Phoenix-Kontos über die Experience Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihr Phoenix-Konto verbinden und Daten aus Ihrer Phoenix-Datenbank über die Benutzeroberfläche zum Experience Platform übertragen.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: b7e42eb180b8f16344afedadf763c33bcf22fa35
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 22%
+source-wordcount: '621'
+ht-degree: 21%
 
 ---
 
 # Verbinden Sie Ihr [!DNL Phoenix]-Konto über die Benutzeroberfläche mit Experience Platform.
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Phoenix] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Phoenix]-Konto verbinden und Daten aus Ihrer [!DNL Phoenix]-Datenbank an Experience Platform übertragen.
 
@@ -24,7 +28,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Wenn Sie bereits über ein authentifiziertes [!DNL Phoenix] -Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum Konfigurieren eines Datenflusses für eine Datenbank [ fortfahren.](../../dataflow/databases.md)
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um auf Ihr [!DNL Phoenix] -Konto auf dem Experience Platform zuzugreifen, müssen Sie die folgenden Werte angeben:
 

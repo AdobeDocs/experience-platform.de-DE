@@ -5,18 +5,18 @@ title: Erstellen einer Couchbase Source-Verbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Couchbase erstellen.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 51%
+source-wordcount: '465'
+ht-degree: 50%
 
 ---
 
 # Erstellen eines Quell-Connectors für [!DNL Couchbase] in der Benutzeroberfläche
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> Der [!DNL Couchbase] -Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie in der [Übersicht über Quellen](../../../../home.md#terms-and-conditions) .
+>Die Quelle [!DNL Couchbase] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 Source-Connectoren in [!DNL Adobe Experience Platform] bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für [!DNL Couchbase] mithilfe der Benutzeroberfläche von [!DNL Platform] beschrieben.
 
@@ -31,7 +31,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von [!DNL 
 
 Wenn Sie bereits über eine gültige [!DNL Couchbase]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum [Konfigurieren eines Datenflusses](../../dataflow/databases.md) fortfahren.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um den Quell-Connector [!DNL Couchbase] zu authentifizieren, müssen Sie Werte für die folgende Verbindungseigenschaft angeben:
 
@@ -55,7 +55,7 @@ Die Seite **[!UICONTROL Mit Couchbase verbinden]** wird angezeigt. Auf dieser Se
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Couchbase]-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
+Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre [!DNL Couchbase]-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
 ![connect](../../../../images/tutorials/create/couchbase/new.png)
 

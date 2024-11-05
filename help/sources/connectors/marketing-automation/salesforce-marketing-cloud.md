@@ -1,17 +1,21 @@
 ---
 solution: Experience Platform
-title: Salesforce Marketing Cloud Source - Überblick
-description: Erfahren Sie, wie Sie Salesforce Marketing Cloud über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+title: Überblick über Salesforce Marketing Cloud Source
+description: Erfahren Sie, wie Sie Salesforce Marketing Cloud mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 44%
+source-wordcount: '341'
+ht-degree: 41%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud]
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
@@ -40,7 +44,7 @@ Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von I
 
 Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs [!DNL Salesforce Marketing Cloud] mit Platform verbinden:
 
-* [Erstellen einer Salesforce-Marketing Cloud-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Erstellen einer Basisverbindung mit dem Salesforce-Marketing Cloud mithilfe der Flow Service-API](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Erkunden von Datentabellen mithilfe der Flow Service-API](../../tutorials/api/explore/tabular.md)
 * [Erstellen eines Datenflusses für eine Marketing-Automatisierungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/marketing-automation.md)
 

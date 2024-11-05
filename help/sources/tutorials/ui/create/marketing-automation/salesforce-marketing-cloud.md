@@ -1,11 +1,11 @@
 ---
 title: Verbinden Ihres Salesforce-Marketing Cloud-Kontos mit dem Experience Platform über die Benutzeroberfläche
-description: Erfahren Sie, wie Sie über die Benutzeroberfläche Ihr Salesforce-Marketing Cloud-Konto mit Experience Platform verbinden.
+description: Erfahren Sie, wie Sie über die Benutzeroberfläche Ihr Salesforce Marketing Cloud-Konto mit Experience Platform verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 27%
+source-wordcount: '517'
+ht-degree: 26%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->Die Erfassung benutzerdefinierter Objekte wird von der Quellintegration für [!DNL Salesforce Marketing Cloud] derzeit nicht unterstützt.
+>Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Mai 2025 nicht mehr unterstützt. Alternativ können Sie die Quelle [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) verwenden.
 
 In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Salesforce Marketing Cloud]-Konto über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 
@@ -28,7 +28,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Experi
 
 Wenn Sie bereits über ein [!DNL Salesforce Marketing Cloud] -Konto verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum Thema [Bringen von Daten zur Marketing-Automatisierung über die Benutzeroberfläche](../../dataflow/marketing-automation.md) an Experience Platform fortfahren.
 
-### Sammeln erforderlicher Anmeldeinformationen
+### Sammeln erforderlicher Anmeldedaten
 
 Um auf Ihr [!DNL Salesforce Marketing Cloud]-Konto in Platform zugreifen zu können, müssen Sie die folgenden Werte angeben:
 
@@ -42,6 +42,10 @@ Weitere Informationen zur Authentifizierung für [!DNL Salesforce Marketing Clou
 
 ## Verbinden Ihres [!DNL Salesforce Marketing Cloud]-Kontos
 
+>[!IMPORTANT]
+>
+>Die Erfassung benutzerdefinierter Objekte wird von der Quellintegration für [!DNL Salesforce Marketing Cloud] derzeit nicht unterstützt.
+
 Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, die von Experience Platform unterstützt werden.
 
 Sie können die gewünschte Kategorie aus der Liste der Kategorien auswählen. Sie können auch die Suchleiste verwenden, um nach einer bestimmten Quelle zu filtern.
@@ -50,7 +54,7 @@ Wählen Sie unter der Kategorie [!UICONTROL Marketing-Automatisierung] die Optio
 
 ![Der Quellkatalog mit der ausgewählten Salesforce-Marketing Cloud-Quelle.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-Die Seite **[!UICONTROL Mit Salesforce-Marketing Cloud verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder ein neues Konto erstellen oder ein vorhandenes Konto verwenden.
+Die Seite **[!UICONTROL Verbindung mit Salesforce Marketing Cloud herstellen]** wird angezeigt. Auf dieser Seite können Sie entweder ein neues Konto erstellen oder ein vorhandenes Konto verwenden.
 
 ### Neues Konto
 
@@ -58,13 +62,13 @@ Um ein neues Konto zu erstellen, wählen Sie **[!UICONTROL Neues Konto]** aus un
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und warten Sie, bis die neue Verbindung hergestellt ist.
 
-![Die neue Kontoschnittstelle, über die Sie ein neues Konto für Salesforce-Marketing Cloud authentifizieren können.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+![Die neue Kontoschnittstelle, über die Sie ein neues Konto für Salesforce Marketing Cloud authentifizieren können.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
 
 ### Vorhandenes Konto
 
 Wenn Sie bereits über ein vorhandenes Konto verfügen, wählen Sie **[!UICONTROL Vorhandenes Konto]** und dann das Konto, das Sie verwenden möchten, aus der angezeigten Liste aus.
 
-![Die vorhandene Kontoschnittstelle, über die Sie aus einer Liste vorhandener Salesforce-Marketing Cloud-Konten auswählen können.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![Die vorhandene Kontoschnittstelle, über die Sie aus einer Liste vorhandener Salesforce Marketing Cloud-Konten auswählen können.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## Nächste Schritte
 
