@@ -2,10 +2,10 @@
 title: Clustering-Algorithmen
 description: Erfahren Sie, wie Sie verschiedene Clustering-Algorithmen mit Schlüsselparametern, Beschreibungen und Beispielcode konfigurieren und optimieren können, um Ihnen bei der Implementierung erweiterter statistischer Modelle zu helfen.
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 5%
+source-wordcount: '874'
+ht-degree: 4%
 
 ---
 
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **Parameter**
 
-| Parameter | Beschreibung | Standardwert | Mögliche Werte |                                                                                                                                                                  | Standardwert | Mögliche Werte |
+| Parameter | Beschreibung | Standardwert | Mögliche Werte |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | Die maximale Anzahl von Iterationen, die der Algorithmus ausführt. | 20 | (>= 0) |
 | `OPTIMIZER` | Der Optimierer- oder Inferenzalgorithmus, der zur Schätzung des LDA-Modells verwendet wird. Unterstützte Optionen sind `"online"` (Online Variational Bayes) und `"em"` (Erwartungsmaximierung). | &quot;online&quot; | `online`, `em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | Für den Optimierer `online`: der Anteil des Korpus, der in jeder Iteration des Mini-Batch-Farbverlaufs im Bereich `(0, 1]` entnommen und verwendet wird. | 0,05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | Konzentrationsparameter (&quot;Beta&quot;oder &quot;Beta&quot;) für die zuvor auf die Verteilung der Themen über Bedingungen platzierten Elemente. | Automatisch | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | Ausgabespalte mit Schätzungen der Themenmischung Verteilung für jedes Dokument. | NICHT GESETZT | Beliebige Zeichenfolge |
+
+{style="table-layout:auto"}
 
 **Beispiel**
 

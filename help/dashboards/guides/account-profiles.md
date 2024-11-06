@@ -2,9 +2,9 @@
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
+source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2397'
 ht-degree: 6%
 
 ---
@@ -100,6 +100,10 @@ Das Widget [!UICONTROL Hinzugefügte Kontoprofile] verwendet ein Liniendiagramm,
 ![Das Widget Kontoprofile hinzugefügt.](../images/account-profiles/account-profiles-added.png)
 
 ### Überblick über Kundinnen und Kunden pro Konto {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>Der Einblick in [!UICONTROL Kunden pro Konto - Überblick] und die darin enthaltenen Drillthrough-Diagramme ([!UICONTROL Kunden pro Kontodetails], [!UICONTROL Chancen pro Konto - Übersicht], [!UICONTROL Möglichkeiten pro Kontodetails]) sind von den von Ihnen festgelegten globalen Datumsfiltern nicht betroffen.
 
 Das Diagramm [!UICONTROL Kunden pro Konto - Übersicht] enthält eine Zusammenfassung der Konten, die auf ihren Kundentypen basieren. Es wird eine vierzeilige Tabelle angezeigt, in der Konten entweder als direkte oder indirekte Kunden oder als Kunden ohne Kunden kategorisiert werden. Sie enthält die Gesamtzahl der Konten für jede Kategorie. Das Diagramm hilft bei der Identifizierung der Verteilung der Konten, die direkte oder indirekte Kunden haben.
 
