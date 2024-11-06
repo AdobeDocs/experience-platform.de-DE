@@ -2,9 +2,9 @@
 title: Audience Portal - Überblick
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
+source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4547'
 ht-degree: 55%
 
 ---
@@ -244,7 +244,7 @@ Das Popup-Fenster **[!UICONTROL Zielgruppen bei Bedarf bewerten]** wird angezeig
 
 ![Die Zielgruppen, die mit flexibler Zielgruppenbewertung ausgewertet werden können, werden angezeigt.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, fahren Sie mit der Anfrage fort und die flexible Zielgruppenbewertung beginnt.
+Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren und die flexible Zielgruppenbewertung beginnt. Sie können den Status dieser Zielgruppenbewertung in der [Überwachungsansicht des Bewertungsauftrags](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) anzeigen.
 
 >[!NOTE]
 >
