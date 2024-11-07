@@ -2,9 +2,9 @@
 title: Leitlinien für die Performance der Edge Network Server-API
 description: Erfahren Sie, wie Sie die Server-API in optimalen Leistungsgarantien verwenden.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 5%
 
 ---
@@ -21,6 +21,8 @@ Adobe ist nicht für Leistungsbeeinträchtigungen verantwortlich, die durch übe
 >[!IMPORTANT]
 >
 >Überprüfen Sie Ihre Lizenzberechtigungen in Ihrem Kundenauftrag und die entsprechende [Produktbeschreibung](https://helpx.adobe.com/de/legal/product-descriptions.html) auf die tatsächlichen Nutzungsbeschränkungen zusätzlich zu dieser Limits-Seite.
+
+Alle auf dieser Seite beschriebenen Leistungsgarantien gelten für die IMS-Organisation. Für Benutzer mit mehreren konfigurierten IMS-Organisationen unterliegt jede Organisation den nachstehenden Leistungsgarantien. Weitere Informationen zu [!DNL IMS Organizations] finden Sie im [Experience Platform-Glossar](../landing/glossary.md) .
 
 ## Definitionen
 
