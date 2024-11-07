@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über den Quell-Connector Zoho CRM
 description: Erfahren Sie, wie Sie Zoho CRM über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 96%
+source-wordcount: '507'
+ht-degree: 97%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->Die Quelle [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt. Sie können die [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) anstelle der [!DNL Zoho CRM]-Quelle verwenden.
+>Die Quelle [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 

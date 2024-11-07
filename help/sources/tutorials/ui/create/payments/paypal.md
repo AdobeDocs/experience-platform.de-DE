@@ -5,10 +5,10 @@ title: Erstellen einer PayPal-Source-Verbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine PayPal-Quellverbindung erstellen.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 42%
+source-wordcount: '458'
+ht-degree: 43%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 42%
 
 >[!IMPORTANT]
 >
->Die Quelle [!DNL PayPal] wird Ende Mai 2025 nicht mehr unterstützt. Sie können die [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) anstelle der [!DNL PayPal]-Quelle verwenden.
+>Die Quelle [!DNL PayPal] wird Ende Mai 2025 nicht mehr unterstützt.
 
 Source-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für [!DNL PayPal] mithilfe der Platform-Benutzeroberfläche beschrieben.
 

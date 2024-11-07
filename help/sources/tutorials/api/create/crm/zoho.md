@@ -5,10 +5,10 @@ title: Erstellen einer Zoho CRM-Basisverbindung mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem Zoho-CRM verbinden.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 95%
+source-wordcount: '649'
+ht-degree: 96%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->Die Quelle [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt. Sie können die [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) anstelle der [!DNL Zoho CRM]-Quelle verwenden.
+>Die Quelle [!DNL Zoho CRM] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
