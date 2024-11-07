@@ -1,14 +1,14 @@
 ---
-title: Vorbereiten einer ZIP-Datei für ein Erweiterungspaket
+title: Erstellen einer ZIP-Datei für ein Erweiterungspaket
 description: Erfahren Sie, wie Sie eine ZIP-Datei für ein Erweiterungspaket vorbereiten.
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 50%
+source-wordcount: '102'
+ht-degree: 45%
 
 ---
 
-# Hochladen und Implementieren von End-to-End-Tests
+# Erstellen Sie eine ZIP-Datei für das Erweiterungspaket.
 
 >[!NOTE]
 >
