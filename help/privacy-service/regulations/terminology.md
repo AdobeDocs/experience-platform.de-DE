@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
 description: Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2404'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,8 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 **Datenschutzbeauftragter**: Ein Experte für Datenschutz, der unabhängig arbeitet, um sicherzustellen, dass eine Organisation die in der DSGVO beschriebenen Richtlinien und Verfahren einhält.
 
 **Datensubjekt**: Eine natürliche Person, deren personenbezogene Daten von einem Datenverantwortlichen oder Auftragsverarbeiter verarbeitet werden.
+
+**[!DNL Delaware Personal Data Privacy Act]**: Der [!DNL Delaware Personal Data Privacy Act] bietet Delaware-Gebietsansässigen Rechte zum Zugriff auf, zur Berichtigung, zum Löschen und zum Opt-out von Verkäufen personenbezogener Daten und gezielter Werbung. Das Gesetz gilt für Unternehmen, die Daten für mindestens 35 000 Verbraucher verarbeiten oder mehr als 20 % des Umsatzes aus Datenverkäufen erzielen, die sich auf mehr als 10 000 Verbraucher auswirken. Die vom Justizministerium durchgesetzte Richtlinie umfasst obligatorische Datenschutzpraktiken und eine Frist von 60 Tagen zur Bekämpfung von Verstößen.
 
 **Delegierte Rechtsakte**: Nicht legislative Rechtsakte, die erlassen wurden, um die bestehenden Rechtsvorschriften zu ergänzen und Kriterien oder Klarheit zu schaffen.
 
@@ -141,6 +143,8 @@ Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mi
 **Pseudonymisierung**: Die Verarbeitung personenbezogener Daten so, dass sie ohne die Verwendung zusätzlicher Daten nicht mehr einem einzelnen Datensubjekt zugeordnet werden können, sofern diese zusätzlichen Daten gesondert aufbewahrt werden.
 
 ## Q
+
+**[!DNL Quebec Law 25]**: [!DNL Quebec Law 25] verbessert die Datenschutzrechte für Einwohner, indem ausdrückliche Einwilligung, Datenminimierung und Rechte zum Zugriff, zur Berichtigung, zum Löschen und zum Übertragen personenbezogener Daten vorgeschrieben werden. Organisationen müssen einen Datenschutzbeauftragten ernennen, Folgenabschätzungen zum Datenschutz durchführen und Verstöße melden. Bei Verstößen werden Fristen für die Einhaltung der Vorschriften und erhebliche Sanktionen verhängt.
 
 ## R
 
