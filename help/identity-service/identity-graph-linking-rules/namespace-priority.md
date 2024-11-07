@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -177,6 +177,15 @@ Bei der Auswahl Ihrer Daten müssen Sie einen Namespace angeben, der verwendet w
 Diese Konfiguration führt dazu, dass Bewertungen nur mit authentifizierten Ereignissen berechnet werden.
 
 Weitere Informationen finden Sie in den Dokumenten unter [Attribution AI](../../intelligent-services/attribution-ai/overview.md) und [Customer AI](../../intelligent-services/customer-ai/overview.md).
+
+### Partnerdefinierte Ziele
+
+Aktualisierte Ergebnisse zur Zielgruppendisqualifizierung für Profile, die mit einem freigegebenen Gerät verknüpft sind, werden möglicherweise nicht an nachgelagerte Ziele gesendet. Dies kann in bestimmten seltenen Fällen auftreten, wenn:
+
+* Die Zielgruppenqualifizierung basiert nur auf einer anonymen Aktivität.
+* Anmeldungen über mehrere Profile hinweg treten in einem kurzen Zeitraum auf.
+
+Weitere Informationen zu Partnerzielen finden Sie in der [Zielübersicht](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
