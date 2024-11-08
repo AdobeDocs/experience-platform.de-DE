@@ -4,7 +4,7 @@ title: Überblick über Salesforce Marketing Cloud Source
 description: Erfahren Sie, wie Sie Salesforce Marketing Cloud mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 42%
@@ -13,7 +13,7 @@ ht-degree: 42%
 
 # [!DNL Salesforce Marketing Cloud]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Mai 2025 nicht mehr unterstützt.
 

@@ -3,7 +3,7 @@ title: Phoenix Source - Übersicht
 description: Erfahren Sie, wie Sie Ihr Phoenix-Konto mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 30%
@@ -12,7 +12,7 @@ ht-degree: 30%
 
 # [!DNL Phoenix]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >Die Quelle [!DNL Phoenix] wird Ende Mai 2025 nicht mehr unterstützt.
 

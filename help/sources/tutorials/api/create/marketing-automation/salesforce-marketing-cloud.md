@@ -2,7 +2,7 @@
 title: Erstellen einer Salesforce-Marketing Cloud-Basisverbindung mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie Ihr Salesforce-Marketing Cloud-Konto mithilfe der Flow Service-API gegen Experience Platform authentifizieren.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 57%
@@ -11,7 +11,7 @@ ht-degree: 57%
 
 # Erstellen einer [!DNL Salesforce Marketing Cloud]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Mai 2025 nicht mehr unterstützt.
 

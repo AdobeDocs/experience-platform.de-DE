@@ -2,7 +2,7 @@
 title: Erstellen einer Oracle Eloqua-Basisverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Eloqua verbinden.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 80%
@@ -11,7 +11,7 @@ ht-degree: 80%
 
 # Erstellen einer [!DNL Oracle Eloqua]-Basisverbindung mit der [!DNL Flow Service]-API
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >Die Quelle [!DNL Oracle Eloqua] wird Ende Mai 2025 nicht mehr unterstützt.
 
