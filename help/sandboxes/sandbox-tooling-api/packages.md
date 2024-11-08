@@ -2,9 +2,9 @@
 title: Sandbox Tooling Packages API Endpoint
 description: Mit dem Endpunkt /packages in der Sandbox Tooling API können Sie Pakete in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 10%
 
 ---
@@ -1595,7 +1595,13 @@ Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den be
 
 ### Aktualisierung der Paketverfügbarkeit von privat zu öffentlich {#update-availability}
 
-Ändern Sie ein Package von &quot;privat&quot;in &quot;öffentlich&quot;, indem Sie eine GET-Anfrage an den Endpunkt `/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC` senden. Standardmäßig wird ein Package mit privater Verfügbarkeit erstellt.
+Ändern Sie ein Package von &quot;privat&quot;in &quot;öffentlich&quot;, indem Sie eine GET-Anfrage an den Endpunkt `/packages/update` senden. Standardmäßig wird ein Package mit privater Verfügbarkeit erstellt.
+
+**API-Format**
+
+```http
+GET `/packages/update`
+```
 
 **Anfrage**
 
@@ -1603,7 +1609,7 @@ Die folgende Anfrage ändert die Verfügbarkeit von Paketen von privat zu öffen
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
