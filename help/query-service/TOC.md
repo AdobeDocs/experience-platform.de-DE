@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 78%
+source-wordcount: '366'
+ht-degree: 77%
 
 ---
 
@@ -104,7 +104,7 @@ Modelle implementieren {#implement-models}
    - [Überwachen von geplanten Abfragen ](ui/monitor-queries.md)
    - [Handbuch zu Anmeldedaten](ui/credentials.md)
    - [Generieren von Ausgabedatensätzen aus Abfrageergebnissen](ui/create-datasets.md)
-- Abfrage-Service-API-Endpunkte {#api}
+- Query Service-API {#api}
    - [Erste Schritte](api/getting-started.md)
    - [Abfragen](api/queries.md)
    - [Verbindungsparameter](api/connection-parameters.md)
@@ -113,6 +113,11 @@ Modelle implementieren {#implement-models}
    - [Abfragevorlagen](api/query-templates.md)
    - [Beschleunigte Abfragen](api/accelerated-queries.md)
    - [Abonnements von Warnhinweisen](api/alert-subscriptions.md)
+- Query Service-Authentifizierungs-API {#auth-api}
+   - [Übersicht](auth-api/overview.md)
+   - [Erste Schritte](auth-api/getting-started.md)
+   - [IP-Zugriff](auth-api/ip-access.md)
+   - [Überprüfen](auth-api/validate.md)
 - Data Governance {#data-governance}
    - [Übersicht](data-governance/overview.md)
    - [Handbuch für Auditprotokolle](data-governance/audit-log-guide.md)
