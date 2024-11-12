@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Rendern Sie Vorschläge erneut, die bereits mit sendEvent gerendert wurden.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Führen Sie den Befehl `applyPropositions` aus, wenn Sie Ihre konfigurierte Inst
 * **`viewName`**: Der Name der Ansicht, die in einer Einzelseitenanwendung dargestellt werden soll. Die Anzeigenbenachrichtigungen für diese Entscheidungen werden zwischengespeichert und können mit `personalization.includePendingDisplayNotifications` in einen nachfolgenden `sendEvent`-Befehl aufgenommen werden.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""
