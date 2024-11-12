@@ -3,9 +3,9 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2603'
 ht-degree: 37%
 
 ---
@@ -238,7 +238,7 @@ Im Workflow [Verbindung mit Ziel herstellen](/help/destinations/ui/connect-desti
 
 Beachten Sie bei der Komprimierung den Unterschied im Dateiformat zwischen den beiden Dateitypen:
 
-* Beim Exportieren komprimierter JSON-Dateien ist das exportierte Dateiformat `json.gz`
+* Beim Exportieren komprimierter JSON-Dateien ist das exportierte Dateiformat `json.gz`. Das Format der exportierten JSON ist NDJSON, das standardmäßige Austauschformat im Big-Data-Ökosystem. Adobe empfiehlt die Verwendung eines NDJSON-kompatiblen Clients zum Lesen der exportierten Dateien.
 * Beim Exportieren komprimierter Parquet-Dateien ist das exportierte Dateiformat `gz.parquet`
 
 Exporte in JSON-Dateien werden *nur im komprimierten Modus* unterstützt. Exporte in Parquet-Dateien werden in einem komprimierten und unkomprimierten Modus unterstützt.

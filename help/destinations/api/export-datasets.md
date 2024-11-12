@@ -4,9 +4,9 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze für ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 11%
 
 ---
@@ -1163,9 +1163,11 @@ Notieren Sie die Verbindungs-ID aus der Antwort. Diese ID ist im nächsten Schri
 
 Als Nächstes müssen Sie eine Zielverbindung erstellen, in der die Exportparameter für Ihre Datensätze gespeichert werden. Zu den Exportparametern gehören Speicherort, Dateiformat, Komprimierung und andere Details. Informationen zu den unterstützten Eigenschaften für die einzelnen Zieltypen finden Sie in den Eigenschaften für `targetSpec` der Verbindungsspezifikation des Ziels. Referenzieren Sie die folgenden Registerkarten für die `targetSpec` -Eigenschaften aller unterstützten Ziele.
 
->[!WARNING]
+>[!IMPORTANT]
 >
->Exporte in JSON-Dateien werden nur im komprimierten Modus unterstützt. Exporte in [!DNL Parquet] -Dateien werden in einem komprimierten und unkomprimierten Modus unterstützt.
+>Exporte in JSON-Dateien werden nur im komprimierten Modus unterstützt. Exporte in [!DNL Parquet] -Dateien werden sowohl im komprimierten als auch im unkomprimierten Modus unterstützt.
+>
+>Das Format der exportierten JSON-Datei ist NDJSON, das standardmäßige Austauschformat im Big Data-Ökosystem. Adobe empfiehlt die Verwendung eines NDJSON-kompatiblen Clients zum Lesen der exportierten Dateien.
 
 >[!BEGINTABS]
 
