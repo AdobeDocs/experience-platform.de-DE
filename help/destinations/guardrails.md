@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: Erfahren Sie mehr über die Standardnutzung und die Ratenbeschränkungen für die Datenaktivierung.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 50%
+source-wordcount: '1715'
+ht-degree: 48%
 
 ---
 
@@ -53,7 +53,7 @@ Die folgenden Leitplanken gelten generell für die Aktivierung durch [alle Zielt
 | Maximale Anzahl von Attributen, die einem Ziel zugeordnet sind | 50 | Leistungsgarantie | Bei mehreren Zielen und Zieltypen können Sie Profilattribute und Identitäten auswählen, die dem Export zugeordnet werden sollen. Für eine optimale Performance sollten maximal 50 Attribute in einem Datenfluss einem Ziel zugeordnet werden. |
 | Maximale Anzahl von Zielen | 100 | Systemerzwungene Limits | Sie können maximal 100 Ziele erstellen, mit denen Sie *pro Sandbox* Daten verbinden und aktivieren können. [Edge-Personalisierungsziele (benutzerdefinierte Personalisierung)](#edge-destinations-activation) können maximal 10 der 100 empfohlenen Ziele ausmachen. |
 | Art der für Ziele aktivierten Daten | Profildaten, einschließlich Identitäten und Identitätszuordnung | Systemerzwungene Limits | Derzeit ist es nur möglich, *Profilsatzattribute* zu Zielen zu exportieren. XDM-Attribute, die Ereignisdaten beschreiben, werden derzeit nicht für den Export unterstützt. |
-| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Nicht verfügbar | Systemerzwungene Limits | Zur Zeit ist es **nicht** möglich, *Array- oder Zuordnungsattribute* zu Zielen zu exportieren. Die Ausnahme von dieser Regel ist die [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md), die sowohl bei Streaming- als auch bei dateibasierten Aktivierungen exportiert wird. |
+| Art der für Ziele aktivierten Daten – Unterstützung von Array- und Zuordnungsattributen | Teilweise verfügbar | Systemerzwungene Limits | Sie können Array-Attribute in [dateibasierte Ziele](/help/destinations/destination-types.md#file-based) exportieren. Sie müssen weiterhin die Funktion `array_to_string` verwenden, um das Array in eine Zeichenfolge in der Zieldatei zu reduzieren. [Mehr dazu](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) über die Funktionalität. <br><br> Derzeit ist es **nicht** möglich, *Zuordnungsattribute* zu Zielen zu exportieren. Die Ausnahme von dieser Regel ist die [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md), die sowohl bei Streaming- als auch bei dateibasierten Aktivierungen exportiert wird. |
 
 {style="table-layout:auto"}
 
