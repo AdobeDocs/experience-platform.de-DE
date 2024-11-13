@@ -3,14 +3,19 @@ keywords: Experience Platform; Sicherheit; IP-Zugriff; Validierung; API-Handbuch
 title: IP-Validierungsendpunkt
 description: Erfahren Sie, wie Sie den IP-Zugriff für Sandboxes in Query Service mithilfe des IP-Validierungs-API-Endpunkts überprüfen.
 role: Developer
-source-git-commit: ad1b6d8449a2a3ca9c8422e70769d12e33d8e255
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 1%
+source-wordcount: '229'
+ht-degree: 4%
 
 ---
 
 # IP-Validierungsendpunkt
+
+>[!AVAILABILITY]
+>
+>Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
 Verwenden Sie den IP-Validierungs-API-Endpunkt, um zu überprüfen, ob eine bestimmte IP-Adresse berechtigt ist, in Query Service auf eine bestimmte Sandbox zuzugreifen. Diese Prüfung bestätigt, ob Zugriffsbeschränkungen gelten oder ob eine IP-Adresse berechtigt ist, auf Daten in einer Sandbox zuzugreifen.
 

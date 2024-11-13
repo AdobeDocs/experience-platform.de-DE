@@ -3,14 +3,19 @@ keywords: Experience Platform; Sicherheit; IP-Zugriff; QS-Auth; API-Handbuch; Qu
 title: IP-Zugriffs-Endpunkt
 description: Erfahren Sie, wie Sie IP-Bereiche für den Sandbox-Zugriff in Query Service mithilfe des IP Access API-Endpunkts verwalten.
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 3%
+source-wordcount: '422'
+ht-degree: 5%
 
 ---
 
 # IP-Zugriffs-Endpunkt
+
+>[!AVAILABILITY]
+>
+>Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
 Um den Datenzugriff innerhalb einer angegebenen Query Service-Sandbox zu sichern, verwenden Sie den IP-Zugriffendpunkt, um zulässige IP-Bereiche zu verwalten. Mit dieser API können Sie IP-Bereiche abrufen, konfigurieren oder löschen, die mit der ID Ihres Unternehmens verknüpft sind.
 
@@ -163,4 +168,3 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den gelöschte
   ]
 }
 ```
-

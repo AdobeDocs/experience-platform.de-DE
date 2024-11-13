@@ -2,14 +2,19 @@
 title: Handbuch zur Autorisierungs-API für Query Service
 description: Erfahren Sie, wie Sie mit der Autorisierungs-API von Query Service netzwerkbasierte IP-Einschränkungen für sichere Verbindungen über SQL erzwingen können. Verwenden Sie diese API, um die Kontrolle des Datenzugriffs für Ihre Adobe Experience Platform-Daten zu verbessern.
 role: Developer
-source-git-commit: f673d0d71458fe87491318f06be59719e4c9d76c
+exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 1%
+source-wordcount: '386'
+ht-degree: 2%
 
 ---
 
 # Handbuch zur Autorisierungs-API für Query Service
+
+>[!AVAILABILITY]
+>
+>Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
 Verwenden Sie die Autorisierungs-API von Query Service, um IP-basierte Einschränkungen zu erzwingen. Durch Anwendung dieser Maßnahmen wird sichergestellt, dass nur zugelassene Netzwerke und Clientcomputer über SQL in Adobe Experience Platform auf Daten zugreifen können. Diese Steuerelemente helfen Ihnen bei der Erfüllung strenger Sicherheitsstandards und bieten gleichzeitig eine Echtzeitüberwachung des Zugriffs und Warnhinweise.
 
