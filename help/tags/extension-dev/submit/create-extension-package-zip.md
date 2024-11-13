@@ -1,14 +1,15 @@
 ---
 title: Erstellen einer ZIP-Datei für ein Erweiterungspaket
 description: Erfahren Sie, wie Sie eine ZIP-Datei für ein Erweiterungspaket vorbereiten.
-source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
+exl-id: e66ff29a-1130-4e44-aca2-92a5398e5651
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 45%
 
 ---
 
-# Erstellen Sie eine ZIP-Datei für das Erweiterungspaket.
+# Erstellen einer ZIP-Datei für ein Erweiterungspaket
 
 >[!NOTE]
 >

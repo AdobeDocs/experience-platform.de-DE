@@ -6,7 +6,7 @@ user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeige
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 96%
@@ -261,7 +261,7 @@ ht-degree: 96%
    * [Unterstützte Browser](./extension-dev/browsers.md)
    * Einreichungsprozess {#submit}
       * [Übersicht](./extension-dev/submit/overview.md)
-      * [Einrichten einer Firma](./extension-dev/submit/setup.md)
+      * [Einrichtung](./extension-dev/submit/setup.md)
       * [Gewähren von Benutzerzugriff](./extension-dev/submit/access.md)
       * [Entwickeln einer Erweiterung](./extension-dev/submit/develop.md)
       * [Erstellen eines Exchange-Listeneintrags](./extension-dev/submit/create-listing.md)
