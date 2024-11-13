@@ -2,24 +2,22 @@
 title: Konfigurieren der Bot-Erkennung für Datenspeicher
 description: Erfahren Sie, wie Sie die Bot-Erkennung für Datastreams konfigurieren, um menschlichen und nichtmenschlichen Traffic zu unterscheiden.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # Konfigurieren der Bot-Erkennung für Datenspeicher
 
-Traffic, der von unmenschlichen Entitäten stammt, wie z. B. automatisierten Programmen, Webcrapers, Spider, Skriptscannern, kann es erschweren, Ereignisse von Besuchern zu identifizieren. Dieser Traffic-Typ kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen.
+Unmenschlicher Traffic von automatisierten Programmen, Webcrappern, Spidern und Skriptscannern kann es schwierig machen, Ereignisse von Besuchern zu identifizieren. Dieser Traffic-Typ kann sich negativ auf wichtige Geschäftsmetriken auswirken und zu falschen Traffic-Berichten führen.
 
 Mit der Bot-Erkennung können Sie Ereignisse identifizieren, die vom [Web SDK](../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) und [[!DNL Server API]](../server-api/overview.md) generiert wurden, als von bekannten Spiders und Bots generiert.
 
-Durch die Konfiguration der Bot-Erkennung für Ihre Datenspeicher können Sie bestimmte IP-Adressen, IP-Bereiche und Anforderungsheader identifizieren, die Sie als Bot-Ereignisse klassifizieren möchten.
+Durch die Konfiguration der Bot-Erkennung für Ihre Datenspeicher können Sie bestimmte IP-Adressen, IP-Bereiche und Anforderungsheader identifizieren, die als Bot-Ereignisse klassifiziert werden sollen. Dadurch erhalten Sie eine genauere Messung der Benutzeraktivität auf Ihrer Site oder in Ihrer mobilen Anwendung.
 
-Die Identifizierung des Bot-Traffics kann Ihnen eine präzisere Messung der Benutzeraktivität auf Ihrer Site oder in Ihrer mobilen Anwendung ermöglichen.
-
-Wenn eine Anfrage an das Edge Network mit einer der Bot-Erkennungsregeln übereinstimmt, wird das XDM-Schema mit einer Bot-Auswertung aktualisiert (immer auf 1 gesetzt), wie unten dargestellt.
+Wenn eine Anfrage an das Edge Network mit einer der Bot-Erkennungsregeln übereinstimmt, wird das XDM-Schema mit einem Bot-Score aktualisiert (immer auf 1 gesetzt), wie unten dargestellt:
 
 ```json
 {
@@ -66,9 +64,12 @@ Auf der Seite &quot;Bot-Erkennungsregeln&quot;können Sie die Bot-Erkennung mith
 
 ### Verwenden der IAB/ABC International Spiders and Bots List {#iab-list}
 
-Die Liste &quot;[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)&quot; ist eine branchenübliche Liste von Internet-Spiders und Bots von Drittanbietern, mit der Sie automatisierten Traffic identifizieren können, wie Suchmaschinen-Crawler, Überwachungstools und anderen nicht menschlichen Traffic, den Sie möglicherweise nicht in Ihren Analytics-Zählungen anzeigen möchten.
+Die [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) ist eine Liste von Internet-Spiders und Bots, die dem Industriestandard von Drittanbietern entsprechen. Diese Liste hilft Ihnen dabei, automatisierten Traffic wie Suchmaschinen-Crawler, Überwachungstools und anderen nicht menschlichen Traffic zu identifizieren, den Sie möglicherweise nicht in Ihre Analytics-Zählungen aufnehmen möchten.
 
-Um Ihren Datastream für die Verwendung von [!DNL IAB/ABC International Spiders and Bots List] zu konfigurieren, schalten Sie die Option **[!UICONTROL IAB/ABC International Spiders and Bots List for Bots Detection on this datastream]** und wählen Sie dann Speichern aus, um die Bot-Erkennungseinstellungen auf Ihren Datastream anzuwenden.
+So konfigurieren Sie Ihren Datenspeicher für die Verwendung der IAB/ABC International Spiders and Bots List:
+
+1. Schalten Sie die Option **[!UICONTROL IAB/ABC International Spiders and Bots List verwenden zur Bot-Erkennung für diesen Datastream]** um.
+2. Wählen Sie **[!UICONTROL Speichern]** aus, um die Bot-Erkennungseinstellungen auf Ihren Datastream anzuwenden.
 
 ![IAB-Spider und Bot-Liste aktiviert.](assets/bot-detection/bot-detection-list.png)
 

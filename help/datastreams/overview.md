@@ -2,16 +2,18 @@
 title: Übersicht über Datenströme
 description: Erfahren Sie, wie Sie mithilfe von Datastreams Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Drittanbieterzielen verbinden können.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 77%
+source-wordcount: '712'
+ht-degree: 70%
 
 ---
 
 # Übersicht über Datenströme
 
-Ein Datenstrom stellt die Server-seitige Konfiguration bei der Implementierung der Adobe Experience Platform Web- und Mobile-SDKs dar. Während der Befehl [`configure`](/help/web-sdk/commands/configure/overview.md) im SDK Elemente steuert, die auf dem Client verarbeitet werden müssen (z. B. `edgeDomain`), handhaben Datenspeicher alle anderen Konfigurationen für das SDK. Wenn eine Anfrage an das Adobe Experience Platform Edge Network gesendet wird, wird die `datastreamId` verwendet, um auf den Datenstrom zu verweisen. Auf diese Weise können Sie die Server-seitige Konfiguration aktualisieren, ohne Code-Änderungen auf Ihrer Website vornehmen zu müssen.
+Ein Datastream stellt die serverseitige Konfiguration für die Adobe Experience Platform Web- und Mobile-SDKs dar. Während der Befehl [`configure`](/help/web-sdk/commands/configure/overview.md) im SDK clientseitige Einstellungen verarbeitet (z. B. `edgeDomain`), verwalten Datastreams alle anderen Konfigurationen.
+
+Wenn Sie eine Anforderung an das Edge Network senden, verweist der `datastreamId` auf den Datastream, an den die Daten gesendet werden. Auf diese Weise können Sie die serverseitige Konfiguration aktualisieren, ohne den Code Ihrer Website zu ändern.
 
 Sie können Datenströme erstellen und verwalten, indem Sie **[!UICONTROL Datenströme]** in der linken Navigation innerhalb der Adobe Experience Platform-Benutzeroberfläche oder der Datenerfassungs-Benutzeroberfläche auswählen.
 
@@ -27,7 +29,7 @@ Weitere Informationen zum Konfigurieren eines Datenstroms in der Benutzeroberfl�
 
 Unternehmensrichtlinien zur Datenverwaltung und gesetzliche Vorschriften schränken die Erfassung, Verarbeitung und Nutzung sensibler Kundendaten zunehmend ein. Dazu gehören die Erfassung, Verarbeitung und Verwendung geschützter Gesundheitsdaten (PHI), die Vorschriften wie dem Health Insurance Portability and Accountability Act (HIPAA) unterliegen.
 
-Datenströme bietet drei Methoden, um Sie bei der sicheren Handhabung Ihrer sensiblen Daten zu unterstützen:
+Datastreams bieten drei Methoden, um Sie bei der sicheren Verarbeitung vertraulicher Daten zu unterstützen:
 
 * [Verbesserte Verschlüsselung](#encryption)
 * [Data Governance](#governance)
