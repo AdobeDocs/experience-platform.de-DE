@@ -1,13 +1,13 @@
 ---
 title: Kontoprofileinblicke
 description: Entdecken Sie die SQL, mit der Sie Ihre Kontoprofil-Einblicke gewinnen und diese Abfragen nutzen können, um benutzerdefinierte Einblicke zu generieren, mit denen Sie Ihre Kunden und deren Kundenerlebnisse weiter untersuchen können.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 1%
+source-wordcount: '773'
+ht-degree: 0%
 
 ---
 
@@ -281,10 +281,232 @@ ORDER BY  d.date_key limit 5000;
 
 +++
 
+## Kunden nach Kontoübersicht {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>Das Diagramm [!UICONTROL Kunden pro Konto - Übersicht] enthält drei Durchlaufeinblicke: [!UICONTROL Kunden pro Kontodetails], [!UICONTROL Chancen pro Konto - Übersicht] und [!UICONTROL Möglichkeiten pro Kontodetails]. Diese Durchsichten bieten detailliertere Einblicke, indem Kunden- und Opportunity-Zählungen nach Kategorien (wie direkten und indirekten Kunden) und Bereichen (wie Kunden- und Opportunitäts-Bands) aufgeschlüsselt werden. Diese Diagramme sind von den von Ihnen festgelegten globalen Datumsfiltern nicht betroffen.
+
+Fragen, die durch diesen Einblick beantwortet werden:
+
+- Wie ist die Verteilung der Konten darauf ausgerichtet, ob sie direkte oder indirekte Kunden haben?
+
++++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
+
+```sql
+WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
+     CategorizedData AS (
+         SELECT CASE 
+                    WHEN is_direct = 'true' AND person_count = 0 THEN 'Accounts without Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count = 0 THEN 'Accounts without Indirect Customers' 
+                    WHEN is_direct = 'true' AND person_count > 0 THEN 'Accounts with Direct Customers' 
+                    WHEN is_direct = 'false' AND person_count > 0 THEN 'Accounts with Indirect Customers' 
+                END AS Account_Category, 
+                account_count 
+         FROM adwh_b2b_account_person_association 
+         WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+     ),
+     AggregatedData AS (
+         SELECT Account_Category, SUM(account_count) AS Accounts 
+         FROM CategorizedData 
+         GROUP BY Account_Category
+     ),
+     AllCategories AS (
+         SELECT 'Accounts without Direct Customers' AS Account_Category 
+         UNION ALL SELECT 'Accounts without Indirect Customers' 
+         UNION ALL SELECT 'Accounts with Direct Customers' 
+         UNION ALL SELECT 'Accounts with Indirect Customers'
+     )
+SELECT ac.Account_Category AS Account_Category, COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad ON ac.Account_Category = ad.Account_Category 
+ORDER BY ac.Account_Category;
+```
+
++++
+
+## Kunden pro Kontodetails {#customers-per-account-detail}
+
+>[!NOTE]
+>
+>Diese Einblicke sind von globalen Datumsfiltern nicht betroffen.
+
+Fragen, die durch diesen Einblick beantwortet werden:
+
+- Wie viele Konten weisen unterschiedliche Bereiche von direkten oder indirekten Kunden auf?
+
++++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
+
+```sql
+WITH customer_ranges AS (
+    SELECT 'Direct Customer' AS customer_type, '1-10 Customers' AS person_range 
+    UNION ALL
+    SELECT 'Direct Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Direct Customer', '1000+ Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1-10 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '11-100 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '101-1000 Customers' 
+    UNION ALL
+    SELECT 'Indirect Customer', '1000+ Customers'
+)
+SELECT 
+    cr.customer_type, 
+    cr.person_range, 
+    COALESCE(SUM(ap.account_count), 0) AS Accounts
+FROM customer_ranges cr
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END AS customer_type,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END AS person_range,
+        SUM(account_count) AS account_count
+    FROM adwh_b2b_account_person_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_person_association) 
+    GROUP BY 
+        CASE 
+            WHEN is_direct = 'true' THEN 'Direct Customer' 
+            ELSE 'Indirect Customer' 
+        END,
+        CASE 
+            WHEN person_count BETWEEN 1 AND 10 THEN '1-10 Customers' 
+            WHEN person_count BETWEEN 11 AND 100 THEN '11-100 Customers' 
+            WHEN person_count BETWEEN 101 AND 1000 THEN '101-1000 Customers' 
+            WHEN person_count > 1000 THEN '1000+ Customers' 
+        END
+) ap ON cr.customer_type = ap.customer_type AND cr.person_range = ap.person_range
+GROUP BY cr.customer_type, cr.person_range
+ORDER BY cr.customer_type, 
+    CASE cr.person_range 
+        WHEN '1-10 Customers' THEN 1 
+        WHEN '11-100 Customers' THEN 2 
+        WHEN '101-1000 Customers' THEN 3 
+        WHEN '1000+ Customers' THEN 4 
+    END;
+```
+
++++
+
+## Übersicht über die Möglichkeiten pro Konto {#opportunities-per-account-overview}
+
+>[!NOTE]
+>
+>Diese Einblicke sind von globalen Datumsfiltern nicht betroffen.
+
+Fragen, die durch diesen Einblick beantwortet werden:
+
+- Wie wird die Verteilung der Konten darauf verteilt, ob ihnen damit verbundene Möglichkeiten zur Verfügung stehen?
+
++++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
+
+```sql
+WITH LatestDate AS (
+    SELECT MAX(inserted_date) AS max_inserted_date 
+    FROM adwh_b2b_account_opportunity_association
+),
+CategorizedData AS (
+    SELECT 
+        CASE 
+            WHEN opportunity_count = 0 THEN 'Accounts without Opportunities'
+            WHEN opportunity_count > 0 THEN 'Accounts with Opportunities'
+        END AS Opportunity_Category, 
+        account_count 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT max_inserted_date FROM LatestDate)
+),
+AggregatedData AS (
+    SELECT 
+        Opportunity_Category,
+        SUM(account_count) AS Accounts 
+    FROM CategorizedData 
+    GROUP BY Opportunity_Category
+),
+AllCategories AS (
+    SELECT 'Accounts without Opportunities' AS Opportunity_Category 
+    UNION ALL 
+    SELECT 'Accounts with Opportunities'
+)
+SELECT 
+    ac.Opportunity_Category AS Opportunity_Category, 
+    COALESCE(ad.Accounts, 0) AS Accounts 
+FROM AllCategories ac 
+LEFT JOIN AggregatedData ad 
+    ON ac.Opportunity_Category = ad.Opportunity_Category 
+ORDER BY ac.Opportunity_Category;
+```
+
++++
+
+## Möglichkeiten pro Kontodetails {#opportunities-per-account-detail}
+
+>[!NOTE]
+>
+>Diese Einblicke sind von globalen Datumsfiltern nicht betroffen.
+
+Fragen, die durch diesen Einblick beantwortet werden:
+
+- Wie viele Konten verfügen über unterschiedliche Bereiche der zugehörigen Möglichkeiten?
+
++++Auswählen, um die SQL anzuzeigen, die diesen Einblick generiert
+
+```sql
+WITH opportunity_ranges AS (
+    SELECT '1-10 Opportunities' AS opportunity_range 
+    UNION ALL 
+    SELECT '11-50 Opportunities' 
+    UNION ALL 
+    SELECT '51-100 Opportunities' 
+    UNION ALL 
+    SELECT '100+ Opportunities'
+)
+SELECT opportunity_ranges.opportunity_range AS OPPORTUNITIES, 
+       COALESCE(SUM(accounts.total_accounts), 0) AS ACCOUNTS 
+FROM opportunity_ranges 
+LEFT JOIN (
+    SELECT 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END AS opportunity_range, 
+        SUM(account_count) AS total_accounts 
+    FROM adwh_b2b_account_opportunity_association 
+    WHERE inserted_date = (SELECT MAX(inserted_date) FROM adwh_b2b_account_opportunity_association) 
+      AND opportunity_count > 0 
+    GROUP BY 
+        CASE 
+            WHEN opportunity_count BETWEEN 1 AND 10 THEN '1-10 Opportunities' 
+            WHEN opportunity_count BETWEEN 11 AND 50 THEN '11-50 Opportunities' 
+            WHEN opportunity_count BETWEEN 51 AND 100 THEN '51-100 Opportunities' 
+            WHEN opportunity_count > 100 THEN '100+ Opportunities' 
+        END
+) AS accounts ON opportunity_ranges.opportunity_range = accounts.opportunity_range 
+GROUP BY opportunity_ranges.opportunity_range 
+ORDER BY CASE opportunity_ranges.opportunity_range 
+            WHEN '1-10 Opportunities' THEN 1 
+            WHEN '11-50 Opportunities' THEN 2 
+            WHEN '51-100 Opportunities' THEN 3 
+            WHEN '100+ Opportunities' THEN 4 
+        END;
+```
+
++++
+
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL, die Einblicke in das Kontoprofil-Dashboard generiert, und welche häufig gestellten Fragen diese Analyse löst. Jetzt können Sie die SQL bearbeiten und iterieren, um Ihre eigenen Einblicke zu generieren.
-
-<!-- Add link above Learn how to [generate insights with SQL](). after April release -->
+Durch Lesen dieses Dokuments verstehen Sie jetzt die SQL, die Einblicke in das Kontoprofil-Dashboard generiert, und welche häufig gestellten Fragen diese Analyse löst. Jetzt können Sie die SQL bearbeiten und iterieren, um Ihre eigenen Einblicke zu generieren. Informationen zum Generieren benutzerdefinierter Einblicke mit SQL finden Sie in der [Übersicht über Query Pro Mode](../sql-insights-query-pro-mode/overview.md) .
 
 Sie können auch die SQL lesen und verstehen, die Einblicke in die Dashboards [Profile](./profiles.md), [Zielgruppen](./audiences.md) und [Ziele](./destinations.md) generiert.
