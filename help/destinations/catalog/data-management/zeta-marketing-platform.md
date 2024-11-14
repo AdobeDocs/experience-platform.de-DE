@@ -3,13 +3,13 @@ title: Zeta-Marketing-Plattform
 description: Die Zeta Marketing Platform (ZMP) ist ein Cloud-basiertes System, das Ihnen dabei hilft, Kunden effizienter zu gewinnen, zu wachsen und zu binden, basierend auf intelligenten (proprietären Daten und KI).
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
+source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 28%
 
 ---
-
 
 # Zeta-Marketing-Plattform {#zeta-marketing-platform}
 
@@ -31,17 +31,17 @@ Ein Marketer möchte eindeutige Zielgruppenprofile erstellen, seine wertvollsten
 
 ### Benutzer mit Anzeigen als Ziel auswählen {#use-case-target-users}
 
-Ein Advertiser möchte Benutzer über die Zeta-Demand Side Platform (DSP) in bestimmten Zielgruppen ansprechen, da diese Benutzer mit ihren Marken interagieren. Klicken Sie für weitere Informationen zum DSP auf [hier](https://knowledgebase.zetaglobal.com/programmatic-user-guide/).
+Ein Advertiser möchte Benutzer über die Zeta-Demand Side Platform (DSP) in bestimmten Zielgruppen ansprechen, da diese Benutzer mit ihren Marken interagieren. Klicken Sie für weitere Informationen zum DSP auf [hier](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Voraussetzungen {#prerequisites}
 
 ### Voraussetzungen für Zeta-Marketing-Plattform
 
-* Bevor Sie eine neue Verbindung zum Ziel der Zeta Marketing Platform herstellen, müssen Sie eine leere Kundenliste in Ihrem Zeta Marketing Platform-Konto erstellen. Sie müssen eine dieser Kundenlisten als Zielgruppe für den Empfang der Adobe Experience Platform-Zielgruppe auswählen, die Sie senden möchten. Sie können eine leere Kundenliste im ZMP erstellen, indem Sie die Anweisungen [hier](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList) befolgen.
+* Bevor Sie eine neue Verbindung zum Ziel der Zeta Marketing Platform herstellen, müssen Sie eine leere Kundenliste in Ihrem Zeta Marketing Platform-Konto erstellen. Sie müssen eine dieser Kundenlisten als Zielgruppe für den Empfang der Adobe Experience Platform-Zielgruppe auswählen, die Sie senden möchten. Sie können eine leere Kundenliste im ZMP erstellen, indem Sie die Anweisungen [hier](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) befolgen.
 * Obwohl die Adobe Experience Platform die Aktivierung mehrerer Zielgruppen für eine bestimmte ZMP-Zielinstanz zulässt, ist es obligatorisch, dass jede ZMP-Zielinstanz nur eine Experience Platform-Zielgruppe erhält. Um mehrere Zielgruppen aus der Experience Platform zu verarbeiten, erstellen Sie zusätzliche ZMP-Zielinstanzen für jede Zielgruppe und wählen Sie eine andere Kundenliste aus der Dropdown-Liste aus. Dieser Ansatz stellt sicher, dass die ZMP-Zielgruppen nicht überschrieben werden. Weitere Informationen finden Sie unter [Ausfüllen von Zieldetails](#destination-details) .
 * Verwenden Sie die folgenden Anmeldeinformationen, um das Ziel zu konfigurieren:
    * Benutzername: **api**
-   * Kennwort: Ihr ZMP-REST-API-Schlüssel. Sie finden Ihren REST-API-Schlüssel, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie in der [ZMP-Dokumentation](https://knowledgebase.zetaglobal.com/zmp/integrations) .
+   * Kennwort: Ihr ZMP-REST-API-Schlüssel. Sie finden Ihren REST-API-Schlüssel, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie in der [ZMP-Dokumentation](https://knowledgebase.zetaglobal.com/kb/integrations) .
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -94,7 +94,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im [Tutorial zur 
 Um sich beim Ziel zu authentifizieren, füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
 
 * **[!UICONTROL Benutzername]**: `api`
-* **[!UICONTROL Kennwort]**: Ihr ZMP-REST-API-Schlüssel. Sie finden Ihren REST-API-Schlüssel, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie in der [ZMP-Dokumentation](https://knowledgebase.zetaglobal.com/zmp/integrations) .
+* **[!UICONTROL Kennwort]**: Ihr ZMP-REST-API-Schlüssel. Sie finden Ihren REST-API-Schlüssel, indem Sie sich bei Ihrem ZMP-Konto anmelden und zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie in der [ZMP-Dokumentation](https://knowledgebase.zetaglobal.com/kb/integrations) .
 
 ### Ausfüllen der Zieldetails {#destination-details}
 
@@ -103,7 +103,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 ![Bild mit ZMP-Konfiguration](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL ZMP-Konto-Site-ID]**: Ihre ZMP **Site-ID**, an die Sie Ihre Zielgruppen senden möchten. Sie können Ihre Site-ID anzeigen, indem Sie zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie [hier](https://knowledgebase.zetaglobal.com/zmp/integrations).
+* **[!UICONTROL ZMP-Konto-Site-ID]**: Ihre ZMP **Site-ID**, an die Sie Ihre Zielgruppen senden möchten. Sie können Ihre Site-ID anzeigen, indem Sie zum Abschnitt **Einstellungen** > **Integrationen** > **Schlüssel und Apps** navigieren. Weitere Informationen finden Sie [hier](https://knowledgebase.zetaglobal.com/kb/integrations).
 * **[!UICONTROL ZMP-Segment]**: Das Kundenlistensegment in Ihrem ZMP-Site-ID-Konto, das Sie mit der Platform-Zielgruppe aktualisieren möchten.
 
 ### Aktivieren von Warnhinweisen {#enable-alerts}
@@ -152,4 +152,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Zeta-Wissensdatenbank](https://knowledgebase.zetaglobal.com/zmp/)
+* [Zeta-Wissensdatenbank](https://knowledgebase.zetaglobal.com/kb/)
