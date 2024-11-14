@@ -4,10 +4,10 @@ title: Experience Platform-APIs authentifizieren und aufrufen
 type: Tutorial
 description: Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 7%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
@@ -67,6 +67,10 @@ Weitere Informationen finden Sie im Handbuch zum Verwalten von Benutzergruppen i
 >Wenn Sie diesem Dokument aus dem [Privacy Service-API-Handbuch](../privacy-service/api/getting-started.md) folgen, können Sie jetzt zu diesem Handbuch zurückkehren, um die eindeutigen Zugriffsberechtigungen für [!DNL Privacy Service] zu generieren.
 
 Nachdem Sie Entwickler- und Benutzerzugriff auf Platform über [!DNL Admin Console] erhalten haben, besteht der nächste Schritt darin, Ihre Anmeldedaten für `{ORG_ID}` und `{API_KEY}` in Adobe Developer Console zu generieren. Diese Anmeldeinformationen müssen nur einmal generiert werden und können in zukünftigen Platform-API-Aufrufen wiederverwendet werden.
+
+>[!TIP]
+>
+>Statt zu Developer Console zu wechseln, können Sie alle Authentifizierungsberechtigungen, die Sie für die Arbeit mit Platform-APIs benötigen, direkt von den Seiten der API-Referenzdokumentation abrufen. [Mehr dazu](#get-credentials-functionality) über die Funktionalität.
 
 ### Experience Platform zu einem Projekt hinzufügen {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ Der nächste Schritt besteht darin, eine `{ACCESS_TOKEN}` -Berechtigung für die
 >[!TIP]
 >
 Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffstoken zu generieren. Weitere Informationen finden Sie im Abschnitt über die Verwendung von Postman zum Authentifizieren und Testen von API-Aufrufen](#use-postman).[
+
+## Erstellen und Abrufen von Authentifizierungsberechtigungen direkt in der API-Referenzdokumentation {#get-credentials-functionality}
+
+Ab der Experience Platform-Version November 2024 können Sie Anmeldeinformationen zur Verwendung der Experience Platform-APIs direkt von den API-Referenzseiten erhalten, ohne zu [!UICONTROL Developer Console] wechseln zu müssen. Sehen Sie sich das unten stehende Beispiel auf der Seite [Flow Service-API - Ziele ](https://developer.adobe.com/experience-platform-apis/references/destinations/) an.
+
+![Lassen Sie die Berechtigungsfunktion oben auf einer API-Referenzseite hervorgehoben werden.](././images/api-authentication/get-credentials-highlighted.png)
+
+Um Anmeldeinformationen zum Aufrufen von Platform-APIs abzurufen, navigieren Sie zu einer beliebigen Experience Platform-API-Referenzseite und wählen Sie oben auf der Seite die Option **[!UICONTROL Anmelden]** aus. Melden Sie sich mit Ihrem **[!UICONTROL persönlichen Konto]** oder Ihrem **[!UICONTROL Firmen- oder Schulkonto]** an.
+
+Wählen Sie nach der Anmeldung **[!UICONTROL Neue Berechtigung erstellen]** aus, um einen neuen Satz von Anmeldedaten für den Zugriff auf Platform-APIs zu erstellen.
+
+![Erstellen Sie neue Anmeldedaten für den Zugriff auf Platform-APIs.](././images/api-authentication/create-credentials.gif)
+
+Verwenden Sie anschließend die Dropdown-Auswahl, um das Fenster mit den Anmeldedaten zu öffnen, ein Zugriffstoken zu generieren und Ihren API-Schlüssel und Ihre Organisations-ID abzurufen. Kopieren Sie die Anmeldeinformationen in die Bausteine [**[!UICONTROL Probieren Sie es]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) auf den API-Referenzseiten, um mit Platform-APIs zu arbeiten.
+
+![Verwenden Sie die Dropdown-Auswahl, um Anmeldeinformationen anzuzeigen und ein Zugriffstoken zu generieren.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+Der Berechtigungsblock am oberen Seitenrand wird weiterhin angezeigt, wenn Sie zwischen verschiedenen Endpunktseiten in der Experience Platform-API-Referenzdokumentation navigieren.
 
 ## [!BADGE Veraltet]{type=negative} Erstellen eines JSON-Web-Tokens (JWT) {#jwt}
 
