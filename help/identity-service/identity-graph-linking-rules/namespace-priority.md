@@ -2,9 +2,9 @@
 title: Namespace-Priorität
 description: Erfahren Sie mehr über die Namespace-Priorität in Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
+source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1789'
 ht-degree: 2%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 2%
 
 Jede Kundenimplementierung ist einzigartig und auf die Ziele eines bestimmten Unternehmens zugeschnitten. Daher variiert die Bedeutung eines bestimmten Namespace von Kunde zu Kunde. Beispiele aus der realen Welt:
 
-* Auf der einen Seite könnten Sie den E-Mail-Namespace als eine Entität einer Person betrachten und somit pro Person eindeutig sein. Andererseits könnte ein anderer Kunde den E-Mail-Namespace als unzuverlässige Kennung betrachten und daher zulassen, dass eine einzelne CRMID mehreren Identitäten mit dem E-Mail-Namespace zugeordnet wird.
+* Ihr Unternehmen kann davon ausgehen, dass jede E-Mail-Adresse eine Einzelperson darstellt, und daher [Identitätseinstellungen](./identity-settings-ui.md) verwenden, um den E-Mail-Namespace als eindeutig zu konfigurieren. Ein anderes Unternehmen könnte jedoch Einzelpersonen als Entitäten mit mehreren E-Mail-Adressen darstellen und so den E-Mail-Namespace als nicht eindeutig konfigurieren. Diese Unternehmen müssen einen anderen Identitäts-Namespace als eindeutig verwenden, z. B. einen CRMID-Namespace, sodass eine Einzelperson-Kennung vorhanden sein kann, die mit mehreren E-Mail-Adressen verknüpft ist.
 * Sie können das Online-Verhalten mithilfe des Namespace &quot;Anmelde-ID&quot;erfassen. Diese Anmelde-ID kann eine 1:1-Beziehung zur CRMID aufweisen, die dann Attribute aus einem CRM-System speichert und als der wichtigste Namespace betrachtet werden kann. In diesem Fall bestimmen Sie dann, dass der CRMID-Namespace eine genauere Darstellung einer Person darstellt, während der Anmelde-ID-Namespace der zweitwichtigste ist.
 
-Sie müssen im Identity Service Konfigurationen vornehmen, die die Wichtigkeit Ihrer Namespaces widerspiegeln, da dies Einfluss darauf hat, wie Profile gebildet und segmentiert werden.
+Sie müssen im Identity Service Konfigurationen vornehmen, die die Wichtigkeit Ihrer Namespaces widerspiegeln, da dies beeinflusst, wie Profile und die zugehörigen Identitätsdiagramme gebildet und aufgeteilt werden.
 
 ## Legen Sie Ihre Prioritäten fest
 
@@ -28,7 +28,7 @@ Die Bestimmung der Namespace-Priorität basiert auf den folgenden Faktoren:
 
 ### Identitätsdiagrammstruktur
 
-Wenn das strukturierte Diagramm Ihres Unternehmens eine Ebene hat, sollte die Namespace-Priorität dies widerspiegeln, damit die richtigen Links im Falle eines Diagrammausfalls entfernt werden.
+Wenn die Diagrammstruktur Ihres Unternehmens auf einer Ebene angeordnet ist, sollte die Namespace-Priorität dies widerspiegeln, damit die richtigen Links im Falle eines Diagrammausfalls entfernt werden.
 
 >[!TIP]
 >
@@ -52,11 +52,11 @@ Eine andere Möglichkeit, dieses Thema anzugehen, ist die Kardinalität. Wie vie
 
 ## Validieren der Namespace-Prioritätseinstellungen
 
-Sobald Sie eine Vorstellung davon haben, wie Sie Ihre Namespaces priorisieren, können Sie das Tool zur Diagrammsimulation verwenden, um verschiedene Szenarien für die Diagrammreduzierung zu testen und sicherzustellen, dass Ihre Prioritätskonfigurationen die erwarteten Diagrammergebnisse zurückgeben. Weitere Informationen finden Sie im Handbuch zur Verwendung des [Diagrammsimulations-Tools](./graph-simulation.md).
+Sobald Sie eine Vorstellung davon haben, wie Sie Ihre Namespaces priorisieren, können Sie das Tool zur Diagrammsimulation in der Benutzeroberfläche verwenden, um verschiedene Szenarien zum Reduzieren von Diagrammen zu testen und sicherzustellen, dass Ihre Prioritätskonfigurationen die erwarteten Diagrammergebnisse zurückgeben. Weitere Informationen finden Sie im Handbuch zur Verwendung des [Diagrammsimulations-Tools](./graph-simulation.md).
 
 ## Namespace-Priorität konfigurieren
 
-Die Namespace-Priorität kann mit [!UICONTROL Identitätseinstellungen] konfiguriert werden. In der Benutzeroberfläche [!UICONTROL Identitätseinstellungen] können Sie einen Namespace per Drag-and-Drop verschieben, um dessen relative Bedeutung zu bestimmen.
+Die Namespace-Priorität kann über die Benutzeroberfläche mit den [Identitätseinstellungen](./identity-settings-ui.md) konfiguriert werden. In der Benutzeroberfläche für Identitätseinstellungen können Sie einen Namespace per Drag-and-Drop verschieben, um dessen relative Bedeutung zu bestimmen.
 
 >[!IMPORTANT]
 >
@@ -74,20 +74,20 @@ Bei relativ komplexen Diagrammstrukturen spielt die Namespace-Priorität eine wi
 
 ### Echtzeit-Kundenprofil: primäre Identitätsfeststellung für Erlebnisereignisse
 
-* Bei Erlebnisereignissen wird die primäre Identität nach der Konfiguration der Identitätseinstellungen für eine bestimmte Sandbox durch die höchste Namespace-Priorität bestimmt.
+* Nachdem Sie Identitätseinstellungen für eine bestimmte Sandbox konfiguriert haben, wird die primäre Identität für Erlebnisereignisse durch die höchste Namespace-Priorität in der Konfiguration bestimmt.
    * Dies liegt daran, dass Erlebnisereignisse von Natur aus dynamisch sind. Eine Identitätszuordnung kann drei oder mehr Identitäten enthalten. Mit der Namespace-Priorität wird sichergestellt, dass der wichtigste Namespace mit dem Erlebnisereignis verknüpft ist.
 * Daher werden die folgenden Konfigurationen **nicht mehr vom Echtzeit-Kundenprofil** verwendet:
-   * Das Kontrollkästchen &quot;Primär&quot;für den Datenelementtyp im WebSDK (was in identityMap zu `primary=true` bedeutet). **Hinweis**: Der Identitäts-Namespace und der Identitätswert werden weiterhin im Profil verwendet. Darüber hinaus müssen Sie weiterhin Ihre &quot;Primären&quot;Kontrollkästchen konfigurieren, da Dienste außerhalb des Echtzeit-Kundenprofils weiterhin auf diese Konfiguration verweisen.
+   * Die primäre Identitätskonfiguration (`primary=true`) beim Senden von Identitäten in der identityMap mithilfe des Web SDK, des Mobile SDK oder der Edge Network Server-API (Identitäts-Namespace und Identitätswert werden weiterhin im Profil verwendet). **Hinweis**: Dienste außerhalb des Echtzeit-Kundenprofils wie Daten-Lake-Speicher oder Adobe Target verwenden weiterhin die primäre Identitätskonfiguration (`primary=true`).
    * Alle Felder, die in einem XDM Experience Event Class-Schema als primäre Identität markiert sind.
    * Standardmäßige primäre Identitätseinstellungen im Adobe Analytics-Quell-Connector (ECID oder AAID).
 * Andererseits bestimmt die Namespace-Priorität **nicht die primäre Identität für Profildatensätze**.
-   * Für Profildatensätze können Sie den Arbeitsbereich &quot;Schemas&quot;in der Experience Platform-Benutzeroberfläche verwenden, um Ihre Identitätsfelder einschließlich der primären Identität zu definieren. Weitere Informationen finden Sie im Handbuch zum Definieren von Identitätsfeldern in der Benutzeroberfläche ](../../xdm/ui/fields/identity.md) .[
+   * Für Profildatensätze sollten Sie weiterhin Ihre Identitätsfelder im Schema definieren, einschließlich der primären Identität. Weitere Informationen finden Sie im Handbuch zum Definieren von Identitätsfeldern in der Benutzeroberfläche ](../../xdm/ui/fields/identity.md) .[
 
 >[!TIP]
 >
 >* Namespace-Priorität ist **eine Eigenschaft eines Namespace**. Es handelt sich um einen numerischen Wert, der einem Namespace zugewiesen wird, um dessen relative Bedeutung anzugeben.
 >
->* Primäre Identität ist die Identität, mit der ein Profilfragment gespeichert wird. Ein Profilfragment ist ein Datensatz mit Daten, in dem Informationen über einen bestimmten Benutzer gespeichert werden: Attribute (in der Regel über CRM-Datensätze erfasst) oder Ereignisse (in der Regel aus Erlebnisereignissen oder Online-Daten erfasst).
+>* Primäre Identität ist die Identität, mit der ein Profilfragment gespeichert wird. Ein Profilfragment ist ein Datensatz mit Daten, die Informationen über einen bestimmten Benutzer speichern: Attribute (z. B. CRM-Datensätze) oder Ereignisse (z. B. Website-Browsing).
 
 ### Beispielszenario
 
@@ -151,9 +151,7 @@ Weitere Informationen finden Sie in der [Übersicht über die erweiterte Lebensz
 
 ### Berechnete Attribute
 
-Berechnete Attribute verwenden die Namespace-Priorität, um den berechneten Attributwert zu speichern. Für ein bestimmtes Ereignis hat die Identität mit der höchsten Namespace-Priorität den Wert des berechneten Attributs, das dagegen geschrieben wurde. Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
-
-Berechnete Attribute verwenden keine Namespace-Priorität zur Berechnung von Werten. Wenn Sie berechnete Attribute verwenden, müssen Sie sicherstellen, dass die CRMID als Ihre primäre Identität für WebSDK festgelegt ist. Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
+Wenn die Identitätseinstellungen aktiviert sind, verwenden berechnete Attribute die Namespace-Priorität, um den berechneten Attributwert zu speichern. Für ein bestimmtes Ereignis hat die Identität mit der höchsten Namespace-Priorität den Wert des berechneten Attributs, das dagegen geschrieben wurde. Weitere Informationen finden Sie im Benutzerhandbuch für berechnete Attribute ](../../profile/computed-attributes/ui.md).[
 
 ### Data Lake
 
@@ -198,4 +196,4 @@ Weitere Informationen finden Sie in der [Übersicht über den Datenschutzdienst]
 
 ### Adobe Target
 
-Adobe Target kann zu unerwartetem Benutzer-Targeting für Szenarien mit freigegebenen Geräten führen.
+Adobe Target kann bei Verwendung der Kantensegmentierung zu unerwartetem Benutzer-Targeting für Szenarien mit freigegebenen Geräten führen.
