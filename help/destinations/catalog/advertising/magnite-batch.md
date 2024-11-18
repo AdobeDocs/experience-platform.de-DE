@@ -1,16 +1,14 @@
 ---
 title: Magnite-Batch-Ziel
 description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen in Batches an die Magnite-Streaming-Plattform zu senden.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
+source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1680'
 ht-degree: 14%
 
 ---
-
 
 # Magnite: Batch-Verbindung {#magnite-streaming-batch}
 
@@ -31,8 +29,6 @@ Lesen Sie weiter unten, um weitere Informationen zum Magnite-Ziel zu erhalten: B
 Weitere Informationen zum Echtzeit-Ziel finden Sie stattdessen auf [dieser Dokumentationsseite](magnite-streaming.md) .
 
 >[!IMPORTANT]
->
->Dieser Ziel-Connector befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff anzufordern.
 >
 >Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL Magnite]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen kontaktieren Sie diese bitte direkt unter `adobe-tech@magnite.com`.
 
@@ -116,13 +112,17 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 Zukunft.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses
 Zielverbindung/-instanz in der Zukunft.
-* **[!UICONTROL Name Ihres Quell-Partners]**: Der Name, den Sie als Quelle auf der Magnite Streaming-Plattform verwenden möchten
+* **[!UICONTROL Ihr Firmenname]**: Ihr Name für den Kunden/das Unternehmen. Es stehen nur unterstützte [!DNL Magnite Streaming] -Clients zur Auswahl zur Verfügung.
+
+>[!NOTE]
+>
+>Der Unternehmensname muss eine Zeichenfolge sein, die mit dem Namen des Amazon S3-Bereitstellungsbuckets übereinstimmt, den Sie mit Magnite konfiguriert und im Schritt [Für Ziel authentifizieren](#authenticate) eingerichtet haben. Zu den unterstützten Zeichen gehören &quot;a-z&quot;, &quot;A-Z&quot;, &quot;0-9&quot;, &quot;-&quot;(Bindestrich) oder &quot;_&quot;(Unterstrich).
 
 ![ Felder für die Zielkonfigurationsauth ](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
->Wenn Sie mehrere ID-Typen (GAID, IDFA usw.) Bei Verwendung des Batch-Ziels ist für jede neue Zielverbindung/Instanz erforderlich. Weitere Informationen erhalten Sie von Ihrem Magnite-Kundenbetreuer.
+>Wenn Sie planen, mehrere ID-Typen (GAID, IDFA usw.) mit dem Batch-Ziel zu senden, ist jeweils eine neue Ziel-Verbindung/-Instanz erforderlich. Weitere Informationen erhalten Sie von Ihrem Magnite-Kundenbetreuer.
 
 Sie können dann fortfahren, indem Sie **[!UICONTROL Weiter]** auswählen
 
@@ -158,7 +158,7 @@ In diesem Beispiel haben wir das **[!UICONTROL Zielfeld]**: Magma_deviceId_CUSTO
 
 >[!NOTE]
 >
->Wenn Sie planen, mehrere ID-Typen (GAID, IDFA usw.) Bei Verwendung des Batch-Ziels ist für jede neue Zielverbindung/Instanz erforderlich. Weitere Informationen erhalten Sie von Ihrem Magnite-Kundenbetreuer.
+>Wenn Sie planen, mithilfe des Batch-Ziels mehrere ID-Typen (GAID, IDFA usw.) zu senden/zuzuordnen, ist jeweils eine neue Zielverbindung/Instanz erforderlich. Weitere Informationen erhalten Sie von Ihrem Magnite-Kundenbetreuer.
 
 
 Im Bildschirm &quot;Konfigurieren eines Dateinamens und eines Exportzeitplans für jede Zielgruppe&quot;müssen Sie jetzt für jede Zielgruppe ein Startdatum (obligatorisch), ein Enddatum (optional) und eine Zuordnungs-ID (obligatorisch) konfigurieren.
