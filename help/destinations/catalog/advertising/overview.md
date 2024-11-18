@@ -2,11 +2,10 @@
 keywords: Werbeziele; Ziele; Plattformziele
 title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
-exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 50%
+source-wordcount: '274'
+ht-degree: 49%
 
 ---
 
@@ -35,6 +34,8 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Google Ad Manager-Verbindung](google-ad-manager.md)
 * [(Beta) Google Ad Manager 360-Verbindung](google-ad-manager-360-connection.md)
 * [Google Customer Match-Verbindung](google-customer-match.md)
+* [Magnite-Batch-Verbindung](magnite-batch.md)
+* [Magnite-Streaming-Echtzeit-Verbindung](magnite-streaming.md)
 * [Microsoft Bing-Verbindung](bing.md)
 * [Pinterest Customer List-Verbindung](pinterest.md)
 * [PubMatic Connect-Ziel](pubmatic.md)

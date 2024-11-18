@@ -1,18 +1,16 @@
 ---
 title: Echtzeit-Zielverbindung vergrößern
 description: Verwenden Sie dieses Ziel, um Adobe CDP-Zielgruppen in Echtzeit an die Magnite-Streaming-Plattform zu übermitteln.
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 32%
+source-wordcount: '1317'
+ht-degree: 31%
 
 ---
 
-
-# (Beta) Magnite: Echtzeit-Zielverbindung
+# Magnite: Echtzeit-Zielverbindung
 
 ## Übersicht {#overview}
 
@@ -28,8 +26,6 @@ Um Ihre Zielgruppen für [!DNL Magnite Streaming] zu aktivieren, müssen Sie:
 Hinweis: Bei Verwendung des Echtzeit-Ziels erhält [!DNL Magnite Streaming] Zielgruppen in Echtzeit. Magnite kann jedoch nur Echtzeitzielgruppen temporär auf ihrer Plattform speichern. Diese werden innerhalb weniger Tage aus dem System entfernt. Wenn Sie daher das Ziel Magnite: Echtzeit verwenden möchten, müssen Sie *auch* das Ziel Magnite: Batch verwenden. Jede Zielgruppe, die Sie für das Echtzeit-Ziel aktivieren, müssen Sie auch für das Batch-Ziel aktivieren.
 
 >[!IMPORTANT]
->
->Dieser Ziel-Connector befindet sich in der Beta-Phase und steht nur ausgewählten Kunden zur Verfügung. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Zugriff anzufordern.
 >
 >Der Ziel-Connector und die Dokumentationsseite werden vom [!DNL Magnite]-Team erstellt und gepflegt. Bei Fragen oder Aktualisierungsanfragen kontaktieren Sie diese bitte direkt unter `adobe-tech@magnite.com`.
 
@@ -101,7 +97,11 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 
 * **[!UICONTROL Name]**: Ein Name, durch den Sie dieses Ziel in Zukunft erkennen können.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in Zukunft zu identifizieren.
-* **[!UICONTROL Name Ihres Quell-Partners]**: Ihr Name des Kunden/Unternehmens. Es stehen nur unterstützte [!DNL Magnite Streaming] -Clients zur Auswahl zur Verfügung.
+* **[!UICONTROL Ihr Firmenname]**: Ihr Name für den Kunden/das Unternehmen. Es stehen nur unterstützte [!DNL Magnite Streaming] -Clients zur Auswahl zur Verfügung.
+
+>[!NOTE]
+>
+>Der Unternehmensname muss eine Zeichenfolge sein, die mit dem Namen des Amazon S3-Bereitstellungsbuckets übereinstimmt, den Sie mit Magnite konfiguriert und im Schritt [Für Ziel authentifizieren](#authenticate) eingerichtet haben. Zu den unterstützten Zeichen gehören &quot;a-z&quot;, &quot;A-Z&quot;, &quot;0-9&quot;, &quot;-&quot;(Bindestrich) oder &quot;_&quot;(Unterstrich).
 
 ![ Felder für die Zielkonfigurationsauth ](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 

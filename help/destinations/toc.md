@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 85%
+source-wordcount: '1248'
+ht-degree: 86%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 85%
       * [Exportieren von Dateien On-Demand an Batch-Ziele über die Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
       * [Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
-      * [Berechnete Felder zum Exportieren von Arrays als Zeichenfolgen verwenden](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [Verwenden von berechneten Feldern zum Exportieren von Arrays als Zeichenfolgen](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
    * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
    * [Löschen von Zielkonten](./ui/delete-destination-account.md)
@@ -92,8 +92,8 @@ ht-degree: 85%
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
       * [LiveRamp – Onboarding-Verbindung](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Verteilungsverbindung](./catalog/advertising/liveramp-distribution.md)
-      * [(Beta) Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [(Beta) Magnite-Streaming-Echtzeitverbindung](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Magnite-Streaming-Echtzeit-Verbindung](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
