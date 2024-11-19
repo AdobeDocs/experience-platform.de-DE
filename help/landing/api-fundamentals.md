@@ -3,8 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Experience Platform-API-Grundlagen
 description: In diesem Dokument erhalten Sie einen kurzen Überblick über einige der zugrunde liegenden Technologien und Syntaxen, die mit Experience Platform-APIs verbunden sind.
+role: Developer
+feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 50%

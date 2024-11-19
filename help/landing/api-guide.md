@@ -3,8 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Adobe Experience Pla
 solution: Experience Platform
 title: Erste Schritte mit Adobe Experience Platform-APIs
 description: Adobe Experience Platform bietet API-Dienste an, die eng miteinander verbunden sind. Dieses Handbuch enthält Informationen zu den verfügbaren Diensten, erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiel-API-Aufrufen.
+role: Developer
+feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 27%

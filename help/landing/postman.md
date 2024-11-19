@@ -3,8 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Adobe Experience Pla
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
 description: In diesem Dokument wird beschrieben, wie Sie eine Postman-Umgebung einrichten, Postman-Sammlungen importieren und für jeden Platform-Dienst eine Liste der verfügbaren Sammlungen anzeigen.
+role: Developer
+feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

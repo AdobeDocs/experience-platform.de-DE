@@ -3,8 +3,10 @@ keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consensus
 solution: Experience Platform
 title: Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Einverständnisdaten
 description: Dieses Dokument enthält Schritte zum Einrichten der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Zustimmungsdaten.
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1674'
 ht-degree: 3%

@@ -1,8 +1,10 @@
 ---
 title: Erste Schritte mit der Auditabfrage-API
 description: Mit der Auditabfrage-API können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Audit-Abfrage-API durchführen.
+role: Developer
+feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 40%

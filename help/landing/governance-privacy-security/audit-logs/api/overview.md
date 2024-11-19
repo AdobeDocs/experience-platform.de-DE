@@ -1,8 +1,10 @@
 ---
 title: Audit Query API-Anleitung
 description: Audit Query ist eine RESTful-API, mit der Entwickler sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
+role: Developer
+feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 9%
