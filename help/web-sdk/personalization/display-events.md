@@ -2,7 +2,7 @@
 title: Verwalten von Anzeigeereignissen im Web SDK
 description: In diesem Artikel wird erläutert, was Anzeigeereignisse sind und wie Sie sie im Web SDK verwenden können.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Das Senden von Anzeigeereignissen liefert automatisch genauere Analytics-Metrike
 Um Anzeigeereignisse automatisch nach der Wiedergabe des personalisierten Inhalts auf der Seite zu senden, müssen Sie die folgenden Parameter konfigurieren:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` oder nicht angegeben
+* `personalization.sendDisplayEvent: true` oder nicht angegeben
 
 Das Web SDK sendet die Anzeigeereignisse unmittelbar nach der Wiedergabe einer Personalisierung als Ergebnis eines `sendEvent` -Aufrufs.
 
@@ -50,9 +50,9 @@ Darüber hinaus werden durch das Senden von Anzeigeereignissen in `sendEvent` -A
 Um Anzeigeereignisse für automatisch gerenderte Vorschläge zu senden, müssen Sie die folgenden Parameter im `sendEvent` -Aufruf konfigurieren:
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` für den oberen Seitenaufruf
+* `personalization.sendDisplayEvent: false` für den oberen Seitenaufruf
 
-Um die Anzeigeereignisse zu senden, rufen Sie `sendEvent` mit `personalization.includePendingDisplayNotifications: true` auf
+Um die Anzeigeereignisse zu senden, rufen Sie `sendEvent` mit `personalization.includeRenderedPropositions: true` auf
 
 ### Senden von Anzeigeereignissen für manuell gerenderte Vorschläge {#manually-rendered-propositions}
 

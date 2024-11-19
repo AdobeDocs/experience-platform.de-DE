@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Rendern Sie Vorschläge erneut, die bereits mit sendEvent gerendert wurden.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Mit dem Befehl `applyPropositions` können Sie Vorschläge erneut rendern, die b
 Dieser Befehl unterstützt die folgenden Felder:
 
 * **Vorschläge**: Ein Array von Vorschlagsobjekten, die Sie erneut rendern möchten.
-* **Name der Ansicht**: Der Name der Ansicht, die gerendert werden soll. Die Anzeigebenachrichtigungen für diese Entscheidungen werden zwischengespeichert und können mithilfe der Option `personalization.includePendingDisplayNotifications` in einen nachfolgenden `sendEvent` -Befehl aufgenommen werden.
+* **Name der Ansicht**: Der Name der Ansicht, die gerendert werden soll. Die Anzeigebenachrichtigungen für diese Entscheidungen werden zwischengespeichert und können mithilfe der Option `personalization.includeRenderedPropositions` in einen nachfolgenden `sendEvent` -Befehl aufgenommen werden.
 * **Metadaten**: Ein Objekt, das bestimmt, wie HTML-Angebote angewendet werden können. Sie enthält die folgenden Eigenschaften:
    * Anwendungsbereich
    * Selektor
@@ -43,7 +43,7 @@ Führen Sie den Befehl `applyPropositions` aus, wenn Sie Ihre konfigurierte Inst
 * **`metadata`**: Bestimmt, wie HTML-Angebote angewendet werden. Dies ist eine Zuordnung, bei der der Schlüssel ein Bereich oder eine Oberfläche ist und der Wert ein Objekt ist, das die Schlüssel `selector` und `actionType` enthält.
    * `selector`: Eine Zeichenfolge, die einen CSS-Selektor enthält, in dem die HTML angewendet werden soll.
    * `actionType`: Die Aktion, die mit der HTML ausgeführt werden soll. Gültige Werte sind `setHtml`, `replaceHtml` und `appendHtml`.
-* **`viewName`**: Der Name der Ansicht, die in einer Einzelseitenanwendung dargestellt werden soll. Die Anzeigenbenachrichtigungen für diese Entscheidungen werden zwischengespeichert und können mit `personalization.includePendingDisplayNotifications` in einen nachfolgenden `sendEvent`-Befehl aufgenommen werden.
+* **`viewName`**: Der Name der Ansicht, die in einer Einzelseitenanwendung dargestellt werden soll. Die Anzeigenbenachrichtigungen für diese Entscheidungen werden zwischengespeichert und können mit `personalization.includeRenderedPropositions` in einen nachfolgenden `sendEvent`-Befehl aufgenommen werden.
 
 ```js
 alloy("applyPropositions",{
