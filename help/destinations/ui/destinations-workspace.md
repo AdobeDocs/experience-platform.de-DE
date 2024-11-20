@@ -3,10 +3,10 @@ keywords: Plattform;Ziele;Arbeitsbereich Ziele;Arbeitsbereich;Benutzeroberfläch
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich „Ziele“ besteht aus fünf Bereichen: Übersicht, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 81%
+source-wordcount: '1233'
+ht-degree: 79%
 
 ---
 
@@ -77,11 +77,11 @@ Die Registerkarte **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, 
 
 | Element | Beschreibung |
 |---|---|
-| [!UICONTROL Plattform] | Das Ziel, für das Sie die Verbindung eingerichtet haben. |
+| [!UICONTROL Ziel] | Der Zielanschluss, für den Sie die Verbindung eingerichtet haben. |
 | [!UICONTROL Verbindungstyp] | Gibt den Kontoverbindungstyp zu Ihrem Speicher-Behälter oder Ziel an. Je nach Ziel stehen folgende Authentifizierungsoptionen zur Verfügung: <ul><li>Bei E-Mail-Marketing-Zielen: S3, FTP oder Azure Blob.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li><li>OAuth 1- oder OAuth 2-Authentifizierung</li><li>Authentifizierung über Bearer-Token</li></ul> |
-| [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Zielverbindungsassistenten](../catalog/email-marketing/overview.md#connect-destination) ausgewählt haben. |
-| [!UICONTROL Ziele] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Ziel-Datenflüsse an, die für ein Ziel erstellt wurden, zusammen mit grundlegenden Informationen. |
-| [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
+| [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Ziel-Workflow verbinden](../catalog/email-marketing/overview.md#connect-destination) ausgewählt haben. |
+| [!UICONTROL Verbindungen] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Ziel-Datenflüsse an, die für ein Ziel erstellt wurden, zusammen mit grundlegenden Informationen. |
+| [!UICONTROL Autorisierungsdatum] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
 
 {style="table-layout:auto"}
 
