@@ -5,7 +5,7 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 77%
@@ -113,7 +113,7 @@ Modelle implementieren {#implement-models}
    - [Abfragevorlagen](api/query-templates.md)
    - [Beschleunigte Abfragen](api/accelerated-queries.md)
    - [Abonnements von Warnhinweisen](api/alert-subscriptions.md)
-- Query Service-Authentifizierungs-API {#auth-api}
+- Data Distiller Authorization API {#auth-api}
    - [Übersicht](auth-api/overview.md)
    - [Erste Schritte](auth-api/getting-started.md)
    - [IP-Zugriff](auth-api/ip-access.md)

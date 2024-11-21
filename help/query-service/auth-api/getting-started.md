@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform; Query Service; IP-Zugriffskontrolle; Autorisierung; API; Erste Schritte
-title: Handbuch zur Autorisierungs-API für Query Service
+title: Data Distiller Authorization API-Anleitung
 description: Erfahren Sie mehr über die ersten Schritte zur Autorisierung und IP-Bereichsbeschränkungen für sicheren Datenzugriff in Adobe Experience Platform Query Service.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 6%
+source-wordcount: '485'
+ht-degree: 5%
 
 ---
 
-# Handbuch zur Autorisierungs-API für Query Service
+# Erste Schritte mit der Data Distiller Authorization API
 
 >[!AVAILABILITY]
 >
 >Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
-Die Autorisierungs-API von Query Service bietet Unternehmen eine strengere Kontrolle über den Datenzugriff über die SQL-Schnittstelle in Adobe Experience Platform. Mit dieser API können Sie IP-Einschränkungen definieren, den Datenzugriff auf bestimmte Netzwerke einschränken und die Sicherheitsüberwachung verbessern.
+Die Data Distiller Authorization-API bietet Unternehmen eine strengere Kontrolle über den Datenzugriff über die SQL-Schnittstelle in Adobe Experience Platform. Mit dieser API können Sie IP-Einschränkungen definieren, den Datenzugriff auf bestimmte Netzwerke einschränken und die Sicherheitsüberwachung verbessern.
 
-In diesem Handbuch wird beschrieben, wie Sie die Autorisierungsberechtigungen und -berechtigungen einrichten, die für Aufrufe an die Autorisierungs-API von Query Service erforderlich sind.
+In diesem Handbuch wird beschrieben, wie Sie die Autorisierungsberechtigungen und -berechtigungen einrichten, die für Aufrufe an die Data Distiller Authorization-API erforderlich sind.
 
 ## Erste Schritte {#getting-started}
 
-In den folgenden Abschnitten finden Sie Informationen zum Vorbereiten der erforderlichen Autorisierungswerte und zum Ausführen Ihrer ersten Anfragen an die Autorisierungs-API von Query Service.
+In den folgenden Abschnitten finden Sie Informationen zum Vorbereiten der erforderlichen Autorisierungswerte und zum Ausführen Ihrer ersten Anfragen an die Data Distiller Authorization-API.
 
 ### Erforderliche Berechtigungen {#required-permissions}
 
@@ -41,7 +41,7 @@ Die folgenden Funktionen sind mit der Berechtigung **[!UICONTROL Zulassungsliste
 
 ### Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-for-required-headers}
 
-Um die Autorisierungs-API von Query Service aufzurufen, müssen Sie das [Tutorial zur Platform-API-Authentifizierung](../../landing/api-authentication.md) abschließen, das Werte für erforderliche Kopfzeilen in API-Aufrufen bereitstellt. Schließen Sie die folgenden Header in jede Anfrage ein:
+Um die Data Distiller Authorization-API aufzurufen, müssen Sie das Tutorial zur Authentifizierung mit der Platform-API](../../landing/api-authentication.md) abschließen, das Werte für erforderliche Kopfzeilen in API-Aufrufen bereitstellt. [ Schließen Sie die folgenden Header in jede Anfrage ein:
 
 - **Autorisierung**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`

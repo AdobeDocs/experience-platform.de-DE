@@ -3,7 +3,7 @@ keywords: IP-Adresse, IP-Bereich, Zulassungsliste, Zulassungsliste, Query Servic
 title: IP-Adressen-Zulassungsliste für Query Service
 description: Diese Seite enthält aktualisierte IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um sicheren Zugriff auf den Query Service zu erhalten.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 4%
@@ -47,7 +47,7 @@ Adobe empfiehlt, je nach Region die folgenden regionsspezifischen IP-Bereiche zu
 
 ## IP-basierte Einschränkungen einrichten {#set-ip-restrictions}
 
-Verwenden Sie die [API-Handbücher zur Autorisierung von Query Service](./auth-api/overview.md), um IP-basierte Einschränkungen einzurichten. Diese IP-basierten Einschränkungen stellen sicher, dass nur zugelassene Netzwerke und Clientcomputer über SQL in Adobe Experience Platform auf Daten zugreifen können. Erfahren Sie, wie Sie IP-Einschränkungen konfigurieren, durchsetzen und überwachen können, um hohe Sicherheitsstandards einzuhalten, mit Funktionen zum Echtzeit-Zugrifftracking und Warnhinweisen.
+Verwenden Sie die [Data Distiller Authorization API guides](./auth-api/overview.md) , um IP-basierte Einschränkungen einzurichten. Diese IP-basierten Einschränkungen stellen sicher, dass nur zugelassene Netzwerke und Clientcomputer über SQL in Adobe Experience Platform auf Daten zugreifen können. Erfahren Sie, wie Sie IP-Einschränkungen konfigurieren, durchsetzen und überwachen können, um hohe Sicherheitsstandards einzuhalten, mit Funktionen zum Echtzeit-Zugrifftracking und Warnhinweisen.
 
 * [Handbuch &quot;Erste Schritte&quot;](./auth-api/getting-started.md)
 * [Handbuch zum IP-Access-Endpunkt](./auth-api/ip-access.md)
