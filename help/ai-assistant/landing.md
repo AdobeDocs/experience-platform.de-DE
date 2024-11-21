@@ -3,9 +3,10 @@ title: AI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 4db38ebceaa7ac4ac46b2ac122b5869e6b28cab3
+exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
@@ -23,15 +24,15 @@ Lesen Sie zunächst das Material in den unten stehenden Links, um sich mit den K
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Grundlegendes zu Ihren Datenobjekten</strong><br/>Rufen Sie operative Einblicke zu Ihren Datenobjekten ab, um eine bessere Ansicht zu ihrem Status, ihrer Verwendung und ihrer Auswirkungen auf die Sprache zu erhalten.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Verbessern Sie Ihr Lernen</strong><br/>Entdecken, beheben und erweitern Sie Ihr Verständnis von Produktwissen, ohne Ihre Workflows zu unterbrechen.</div>
     </td>
     <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"></a>
+    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Wenden Sie Berechtigungen auf Grundlage Ihrer Nutzung an</strong><br/>Gewähren und Widerrufen von Zugriffsberechtigungen je nach den Rollen Ihrer Teammitglieder.</div>
     </td>
   </tr>
@@ -41,6 +42,7 @@ Lesen Sie zunächst das Material in den unten stehenden Links, um sich mit den K
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
 
 ## Neue Funktionen
 
@@ -118,6 +120,14 @@ Sehen Sie sich die folgenden Videos an, um weitere Anwendungsbeispiele für AI A
 >[!ENDTABS]
 
 ## Zusätzliche Ressourcen
+
+>[!BEGINSHADEBOX]
+
+**Lesen Sie das AI Assistant Security-Faktenblatt**
+
+Weitere Informationen zum AI-Assistenten finden Sie im [Sicherheitsdatenblatt für den AI-Assistenten in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 Unter den unten stehenden Links erhalten Sie weitere Informationen zu Anwendungsfällen, Funktionen und vielem mehr von AI Assistant.
 

@@ -2,9 +2,9 @@
 title: Zugriff auf den KI-Assistenten im Experience Platform
 description: Erfahren Sie, wie Sie auf den AI-Assistenten in der Experience Cloud-Benutzeroberfläche zugreifen können.
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 706a20e70aa20adb0f4a554d0ec35518811ea9a1
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,12 @@ Verwenden Sie die Berechtigungs-Benutzeroberfläche, um Berechtigungen für die 
 Sobald Sie über die erforderlichen Berechtigungen verfügen, können Sie auf den AI-Assistenten zugreifen, indem Sie das Symbol AI Assistant in der oberen Kopfzeile der von Ihnen verwendeten Anwendung auswählen.
 
 ![KI-Assistent mit erstmaliger Benutzererfahrung.](./images/ai-assistant.png)
+
+## Zugriff auf den AI-Assistenten erhalten
+
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf AI Assistant für Ihre Organisationen und Benutzer konfigurieren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## Nächste Schritte
 
