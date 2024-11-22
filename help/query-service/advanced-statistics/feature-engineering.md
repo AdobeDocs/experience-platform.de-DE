@@ -2,9 +2,10 @@
 title: Feature Engineering SQL-Erweiterung
 description: Erfahren Sie mehr über die SQL-Erweiterung der Data Distiller-Funktionen zur Vorverarbeitung von Daten für eine erweiterte statistische Modellierung. Sie umfasst die verfügbaren Techniken zur Extraktion, Transformation und Auswahl von Funktionen.
 role: Developer
-source-git-commit: 1fcfb5c41750e853daaf036ceaae3527b805391c
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -13,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie beim Adobe-Support.
+>Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
 Um Ihre Anforderungen an die Funktionsentwicklung zu erfüllen, verwenden Sie die SQL Transformer-Erweiterung, um die Vorverarbeitung Ihrer Daten zu vereinfachen und zu automatisieren. Verwenden Sie diese Erweiterung, um Funktionen zu erstellen und nahtlose Experimente mit verschiedenen Techniken der Funktionsentwicklung zu genießen, einschließlich der Zuordnung dieser Funktionen zu Modellen. Für dezentrales Computing konzipiert, können Sie Funktionen für große Datensätze parallel und skalierbar entwickeln und damit die für die Datenvorverarbeitung erforderliche Zeit mit der Data Distiller-Funktionstechnik-SQL-Erweiterung erheblich verkürzen.
 
@@ -41,9 +42,10 @@ Verwenden Sie nicht nur Funktionen zum Extrahieren, sondern auch die folgenden a
 
 Nachstehend finden Sie eine Liste von Tools zur Verarbeitung einer Vielzahl von Datentypen, mit denen Sie Ihren Datenvorverarbeitungs-Workflow verbessern können.
 
-- **[Numerischer Rechner](./feature-transformation.md#numeric-imputer)**: Füllen Sie fehlende Werte in numerischen Spalten mit einer
-- **[String Imputer](./feature-transformation.md#string-imputer)**: Ersetzen Sie fehlende Zeichenfolgenwerte durch einen angegebenen
-- **[Vektor-Assembler](./feature-transformation.md#vector-assembler)**: Kombinieren Sie mehrere Spalten in einer einzelnen Vektorspalte.
+- **[Numerischer Imputer](./feature-transformation.md#numeric-imputer)**: Füllen Sie fehlende Werte in numerischen Spalten mit einem bestimmten Wert aus, z. B. Mittelwert oder Median.
+- **[String-Imputer](./feature-transformation.md#string-imputer)**: Ersetzen Sie fehlende Zeichenfolgenwerte durch einen angegebenen Wert, z. B. die häufigste Zeichenfolge in der Spalte.
+- **[Vector Assembler](./feature-transformation.md#vector-assembler)**: Kombinieren Sie mehrere Spalten in einer einzigen Vektorspalte, um Daten für Modelle für maschinelles Lernen vorzubereiten.
+- **[Boolescher Rechner](./feature-transformation.md#boolean-imputer)**: Füllen Sie fehlende boolesche Werte mit einem angegebenen Wert aus, z. B. `true` oder `false`.
 
 #### Numerische Transformatoren
 
@@ -88,7 +90,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## Umsetzung der OPTIONS-Klausel {#options-clause}
 
-Wenn Sie Ihr Modell definieren, verwenden Sie die `OPTIONS`-Klausel, um den Algorithmus und seine Parameter anzugeben. Legen Sie zunächst den Parameter `type` fest, um den verwendeten Algorithmus anzugeben, z. B. `K-Means`. Definieren Sie dann die relevanten Parameter in der `OPTIONS`-Klausel als Schlüssel-Wert-Paare, um Ihr Modell zu optimieren. Beachten Sie, dass einige Parameter möglicherweise positioniert sind und dass alle vorangehenden Parameter angegeben werden müssen, wenn benutzerdefinierte Werte angegeben werden. Wenn Sie bestimmte Parameter nicht anpassen möchten, wendet das System die Standardeinstellungen an. Die Funktionen und Standardwerte der einzelnen Parameter finden Sie in der entsprechenden Dokumentation .
+Wenn Sie Ihr Modell definieren, verwenden Sie die `OPTIONS`-Klausel, um den Algorithmus und seine Parameter anzugeben. Legen Sie zunächst den Parameter `type` fest, um den verwendeten Algorithmus anzugeben, z. B. `K-Means`. Definieren Sie dann die relevanten Parameter in der `OPTIONS`-Klausel als Schlüssel-Wert-Paare, um Ihr Modell zu optimieren. Wenn Sie bestimmte Parameter nicht anpassen möchten, wendet das System die Standardeinstellungen an. Die Funktionen und Standardwerte der einzelnen Parameter finden Sie in der entsprechenden Dokumentation .
 
 ### Nächste Schritte
 

@@ -2,10 +2,11 @@
 title: Klassifizierungsalgorithmen
 description: Erfahren Sie, wie Sie verschiedene Klassifizierungsalgorithmen mit Schlüsselparametern, Beschreibungen und Beispielcode konfigurieren und optimieren können, um Ihnen bei der Implementierung erweiterter statistischer Modelle zu helfen.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: 9105ab04-b480-48a0-b8f7-cf0ed5e5399d
+source-git-commit: 489063fcd003e20f233a9c9d85d8cb6c22708d88
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 3%
+source-wordcount: '2449'
+ht-degree: 4%
 
 ---
 
@@ -27,13 +28,13 @@ In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration u
 | `CACHE_NODE_IDS` | Wenn `false`, übergibt der Algorithmus Bäume an Executors, um Instanzen mit Knoten abzugleichen. Wenn der Wert `true` beträgt, speichert der Algorithmus Knoten-IDs für jede Instanz zwischen, was die Schulung tiefer liegender Bäume beschleunigt. | `false` | `true`, `false` |
 | `CHECKPOINT_INTERVAL` | Gibt an, wie oft die zwischengespeicherten Knoten-IDs überprüft werden. Beispiel: `10` bedeutet, dass der Cache alle 10 Iterationen überprüft wird. | 10 | (>= 1) |
 | `IMPURITY` | Das für die Berechnung des Informationsgewinns verwendete Kriterium (Groß-/Kleinschreibung nicht beachten). | &quot;gini&quot; | `entropy`, `gini` |
-| `MAX_DEPTH` | Die maximale Tiefe der Baumstruktur (nicht negativ). Beispielsweise bedeutet &quot;depth `0`&quot;einen Blattknoten und &quot;depth `1`&quot;einen internen Knoten und 2 Blattknoten. | 5 | [0, 30] |
+| `MAX_DEPTH` | Die maximale Tiefe der Baumstruktur (nicht negativ). Beispielsweise bedeutet &quot;depth `0`&quot;einen Blattknoten und &quot;depth `1`&quot;einen internen Knoten und 2 Blattknoten. | 5 | (>= 0) (Bereich: [0,30]) |
 | `MIN_INFO_GAIN` | Der Mindestinformationsgewinn, der erforderlich ist, damit eine Aufspaltung in einem Strukturknoten berücksichtigt werden kann. | 0,0 | (>= 0.0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | Der Mindestanteil der gewichteten Stichprobenanzahl, die jedes Kind nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung dazu führt, dass der Anteil der Gesamtgewichtung in einem der untergeordneten Elemente unter diesem Wert liegt, wird er verworfen. | 0,0 | (>= 0.0, &lt;= 0.5) |
 | `MIN_INSTANCES_PER_NODE` | Die Mindestanzahl von Instanzen, die jedes untergeordnete Element nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung zu weniger Instanzen als diesem Wert führt, wird die Aufspaltung verworfen. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 |                    |
+| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 | (>= 0) |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
-| `SEED` | Der zufällige Samen. | NICHT GESETZT | Beliebige 64-Bit-Zahl |
+| `SEED` | Der zufällige Samen. | K. A. | Beliebige 64-Bit-Zahl |
 | `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT | Beliebige Zeichenfolge |
 | `ONE_VS_REST` | Aktiviert oder deaktiviert das Umbrechen dieses Algorithmus mit &quot;Eins vs. Rest&quot;, das für Classification-Probleme mit mehreren Klassen verwendet wird. | `false` | `true`, `false` |
 
@@ -64,9 +65,9 @@ Die nachstehende Tabelle enthält wichtige Parameter für die Konfiguration und 
 | `FIT_LINEAR` | Gibt an, ob der lineare Begriff angepasst werden soll (auch als 1-Weg-Begriff bezeichnet). | `true` | `true`, `false` |
 | `INIT_STD` | Die Standardabweichung für die Initialisierung von Koeffizienten. | 0,01 | (>= 0) |
 | `MAX_ITER` | Die maximale Anzahl der Iterationen, die der Algorithmus ausführen soll. | 100 | (>= 0) |
-| `MINI_BATCH_FRACTION` | Der Teil der Daten, die während des Trainings in Mini-Batches verwendet werden sollen. Muss im Bereich `(0, 1]` liegen. | 1,0 | `(0, 1]` |
+| `MINI_BATCH_FRACTION` | Der Teil der Daten, die während des Trainings in Mini-Batches verwendet werden sollen. Muss im Bereich `(0, 1]` liegen. | 1,0 | 0 &lt; Wert &lt;= 1 |
 | `REG_PARAM` | Der Regularisierungsparameter hilft bei der Steuerung der Modellkomplexität und der Vermeidung einer Überanpassung. | 0,0 | (>= 0) |
-| `SEED` | Die Zufallsstichprobe zur Steuerung zufälliger Prozesse im Algorithmus. | NICHT GESETZT | Beliebige 64-Bit-Zahl |
+| `SEED` | Die Zufallsstichprobe zur Steuerung zufälliger Prozesse im Algorithmus. | K. A. | Beliebige 64-Bit-Zahl |
 | `SOLVER` | Der für die Optimierung verwendete Lösungs-Algorithmus. Unterstützte Optionen sind `gd` (Abstufung des Verlaufs) und `adamW`. | &quot;adamW&quot; | `gd`, `adamW` |
 | `STEP_SIZE` | Die anfängliche Schrittgröße zur Optimierung, häufig als Lernrate interpretiert. | 1,0 | > 0 |
 | `PROBABILITY_COL` | Der Spaltenname für prognostizierte bedingte Klassenwahrscheinlichkeiten. Hinweis: Nicht alle Modelle liefern gut kalibrierte Wahrscheinlichkeiten; diese sollten als Konfidenzwerte und nicht als exakte Wahrscheinlichkeiten behandelt werden. | &quot;wahrscheinlichkeit&quot; | Beliebige Zeichenfolge |
@@ -102,17 +103,17 @@ Die nachstehende Tabelle enthält wichtige Parameter für die Konfiguration und 
 | `MIN_INFO_GAIN` | Der Mindestinformationsgewinn, der erforderlich ist, damit eine Aufspaltung in einem Strukturknoten berücksichtigt werden kann. | 0,0 | (>= 0.0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | Der Mindestanteil der gewichteten Stichprobenanzahl, die jedes Kind nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung dazu führt, dass der Anteil der Gesamtgewichtung in einem der untergeordneten Elemente unter diesem Wert liegt, wird er verworfen. | 0,0 | (>= 0.0, &lt;= 0.5) |
 | `MIN_INSTANCES_PER_NODE` | Die Mindestanzahl von Instanzen, die jedes untergeordnete Element nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung zu weniger Instanzen als diesem Wert führt, wird die Aufspaltung verworfen. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 |                                                                                                      |
+| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 | (>= 0) |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
-| `VALIDATION_INDICATOR_COL` | Der Spaltenname gibt an, ob die einzelnen Zeilen für Schulungen oder Überprüfungen verwendet werden. `false` für Schulung und `true` für Validierung. | NICHT GESETZT | Beliebige Zeichenfolge |
+| `VALIDATION_INDICATOR_COL` | Der Spaltenname gibt an, ob die einzelnen Zeilen für Schulungen oder Überprüfungen verwendet werden. Der Wert &quot;`false`&quot;zeigt das Training an und &quot;`true`&quot;zeigt die Validierung an. Wenn kein Wert festgelegt ist, ist der Standardwert `None`. | „Keine“ | Beliebige Zeichenfolge |
 | `RAW_PREDICTION_COL` | Der Spaltenname für Rohdatenprognosewerte (auch als Konfidenz bezeichnet). | &quot;rawPreforecast&quot; | Beliebige Zeichenfolge |
 | `LEAF_COL` | Der Spaltenname für Blattindizes, d. h. der prognostizierte Blattindex jeder Instanz in jedem Baum, der durch Preorder Traversal generiert wird. | &quot;&quot; | Beliebige Zeichenfolge |
-| `FEATURE_SUBSET_STRATEGY` | Die Anzahl der Funktionen, die für die Aufteilung auf jedem Baumknoten berücksichtigt werden. Unterstützte Optionen: `auto`, `all`, `onethird`, `sqrt`, `log2` und `n` (für einen Bruchteil der Funktionen). | &quot;auto&quot; | `auto`, `all`, `onethird`, `sqrt`, `log2`, `n` (wobei `n` eine Bruchzahl zwischen 0 und 1,0 ist) |
-| `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT |                                                                                                      |
-| `LOSS_TYPE` | Die Verlustfunktion, die das Modell [!DNL Gradient Boosted Tree] zu minimieren versucht. Unterstützte Optionen: `logistic`. | &quot;logistisch&quot; | `logistic` |
-| `STEP_SIZE` | Die Schrittgröße (auch als Lernrate bezeichnet) im Bereich `(0, 1]`, die verwendet wird, um den Beitrag der einzelnen Schätzer zu verkleinern. | 0,1 | `(0, 1]` |
+| `FEATURE_SUBSET_STRATEGY` | Die Anzahl der Funktionen, die für die Aufteilung auf jedem Baumknoten berücksichtigt werden. Unterstützte Optionen: `auto` (automatisch basierend auf der Aufgabe bestimmt), `all` (alle Funktionen verwenden), `onethird` (Verwendung eines Drittels der Funktionen), `sqrt` (Verwendung der Quadratwurzel der Anzahl der Funktionen), `log2` (Verwendung des Basis-2-Logarithmus der Anzahl der Funktionen) und `n` (wobei n entweder ein Bruchteil der Funktionen im Bereich `(0, 1]` oder eine bestimmte Anzahl von Funktionen ist wenn im Bereich `[1, total number of features]`). | &quot;auto&quot; | `auto`, `all`, `onethird`, `sqrt`, `log2`, `n` |
+| `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT | Beliebige Zeichenfolge |
+| `LOSS_TYPE` | Die Verlustfunktion, die das Modell [!DNL Gradient Boosted Tree] zu minimieren versucht. | &quot;logistisch&quot; | `logistic` (nicht von Schreibweise abhängig) |
+| `STEP_SIZE` | Die Schrittgröße (auch als Lernrate bezeichnet) im Bereich `(0, 1]`, die verwendet wird, um den Beitrag der einzelnen Schätzer zu verkleinern. | 0,1 | (>= 0,0, &lt;= 1) |
 | `MAX_ITER` | Die maximale Anzahl von Iterationen für den Algorithmus. | 20 | (>= 0) |
-| `SUBSAMPLING_RATE` | Der Anteil der Trainings-Daten, die zum Trainieren der einzelnen Entscheidungsstrukturen verwendet werden, im Bereich `(0, 1]`. | 1,0 | `(0, 1]` |
+| `SUBSAMPLING_RATE` | Der Bruchteil der Schulungsdaten, die zum Trainieren der einzelnen Entscheidungsstrukturen verwendet werden. Der Wert muss im Bereich 0 &lt; Wert &lt;= 1 liegen. | 1,0 | `(0, 1]` |
 | `PROBABILITY_COL` | Der Spaltenname für prognostizierte bedingte Klassenwahrscheinlichkeiten. Hinweis: Nicht alle Modelle liefern gut kalibrierte Wahrscheinlichkeiten; diese sollten als Konfidenzwerte und nicht als exakte Wahrscheinlichkeiten behandelt werden. | &quot;wahrscheinlichkeit&quot; | Beliebige Zeichenfolge |
 | `ONE_VS_REST` | Aktiviert oder deaktiviert das Umbrechen dieses Algorithmus mit Eins- vs. Ruhezustand für mehrklassige Classification. | `false` | `true`, `false` |
 
@@ -138,12 +139,12 @@ Die nachstehende Tabelle enthält wichtige Parameter für die Konfiguration und 
 | Parameter | Beschreibung | Standardwert | Mögliche Werte |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
 | `MAX_ITER` | Die maximale Anzahl der Iterationen, die der Algorithmus ausführen soll. | 100 | (>= 0) |
-| `AGGREGATION_DEPTH` | Die vorgeschlagene Tiefe für die Baumaggregation. | 2 |                                                                                                      |
+| `AGGREGATION_DEPTH` | Die Tiefe für die Baumaggregation. Dieser Parameter wird verwendet, um den Mehraufwand für die Netzwerkkommunikation zu reduzieren. | 2 | Beliebige positive ganze Zahl |
 | `FIT_INTERCEPT` | Ob ein Begriffsbegriff passt. | `true` | `true`, `false` |
-| `TOL` | Die Konvergenztoleranz für die Optimierung. | 1E-6 | (>= 0) |
-| `MAX_BLOCK_SIZE_IN_MB` | Der maximale Speicher in MB für die Stapelung von Eingabedaten in Blöcken. Daten werden innerhalb von Partitionen gestapelt, und wenn die verbleibende Datengröße in einer Partition kleiner ist, wird dieser Wert entsprechend angepasst. | 0,0 | (>= 0) |
+| `TOL` | Dieser Parameter legt den Schwellenwert zum Anhalten von Iterationen fest. | 1E-6 | (>= 0) |
+| `MAX_BLOCK_SIZE_IN_MB` | Der maximale Speicher in MB für die Stapelung von Eingabedaten in Blöcken. Wenn der Parameter auf `0` gesetzt ist, wird automatisch der optimale Wert ausgewählt (normalerweise etwa 1 MB). | 0,0 | (>= 0) |
 | `REG_PARAM` | Der Regularisierungsparameter hilft bei der Steuerung der Modellkomplexität und der Vermeidung einer Überanpassung. | 0,0 | (>= 0) |
-| `STANDARDIZATION` | Ob die Trainingsfunktionen vor der Anpassung an das Modell standardisiert werden sollen. | `true` | `true`, `false` |
+| `STANDARDIZATION` | Dieser Parameter gibt an, ob die Trainings-Funktionen standardisiert werden sollen, bevor das Modell angepasst wird. | `true` | `true`, `false` |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
 | `RAW_PREDICTION_COL` | Der Spaltenname für Rohdatenprognosewerte (auch als Konfidenz bezeichnet). | &quot;rawPreforecast&quot; | Beliebige Zeichenfolge |
 | `ONE_VS_REST` | Aktiviert oder deaktiviert das Umbrechen dieses Algorithmus mit Eins- vs. Ruhezustand für mehrklassige Classification. | `false` | `true`, `false` |
@@ -161,7 +162,7 @@ Create MODEL modelname OPTIONS(
 
 ## [!DNL Logistic Regression] {#logistic-regression}
 
-[!DNL Logistic Regression] ist ein beaufsichtigter Algorithmus, der für die binäre Klassifizierung verwendet wird. Sie modelliert die Wahrscheinlichkeit, mit der eine Instanz zu einer Klasse gehört, mithilfe der logistischen Funktion, sodass sie für Aufgaben geeignet ist, bei denen das Ziel darin besteht, Instanzen in eine von zwei Kategorien zu klassifizieren.
+[!DNL Logistic Regression] ist ein beaufsichtigter Algorithmus, der für binäre Klassifizierungsaufgaben verwendet wird. Sie modelliert die Wahrscheinlichkeit, dass eine Instanz zu einer Klasse gehört, mithilfe der logistischen Funktion und weist die Instanz der Klasse mit der höheren Wahrscheinlichkeit zu. Dies ist für Probleme geeignet, bei denen die Daten in eine von zwei Kategorien unterteilt werden sollen.
 
 **Parameter**
 
@@ -186,7 +187,7 @@ Create MODEL modelname OPTIONS(
 
 ## [!DNL Multilayer Perceptron Classifier] {#multilayer-perceptron-classifier}
 
-[!DNL Multilayer Perceptron Classifier] ist ein künstlichen neuronalen Netzwerk-Klassifizierer, der aus mehreren vollständig verbundenen Knotenschichten besteht. Jeder Knoten in einer Ebene ordnet Eingaben den Ausgaben mithilfe einer gewichteten linearen Kombination der Eingabedaten zu, wobei die Knotengewichte (`w`) und der Verzerrungswert (`b`) gefolgt von einer Aktivierungsfunktion sind. Dieser Prozess hilft beim Konfigurieren und Optimieren erweiterter statistischer Modelle durch Anpassung von Schlüsselparametern mit Codebeispielen für weitere Anleitungen. —>
+Der [!DNL Multilayer Perceptron Classifier] (MLPC) ist ein künstlichen neuronalen Netzwerk-Klassifizierer für den Feedback. Sie besteht aus mehreren vollständig verbundenen Knotenschichten, wobei jeder Knoten eine gewichtete lineare Kombination von Eingaben anwendet, gefolgt von einer Aktivierungsfunktion. MLPC wird für komplexe Klassifizierungsaufgaben verwendet, die nichtlineare Entscheidungsgrenzen erfordern.
 
 **Parameter**
 
@@ -215,15 +216,15 @@ CREATE MODEL modelname OPTIONS(
 
 ## [!DNL Naive Bayes Classifier] {#naive-bayes-classifier}
 
-[!DNL Naive Bayes Classifier] ist ein einfacher probabilistischer, mehrklassenbasierter Klassifizierer, der auf dem Bayes-Theorem basiert und starke (naive) Unabhängigkeitsannahmen zwischen Funktionen aufweist. Es ist sehr effizient in der Ausbildung, da nur eine einzige Weiterleitung der Trainings-Daten erforderlich ist, um die bedingte Wahrscheinlichkeitsverteilung für jede Funktion für jede Bezeichnung zu berechnen. Für Prognosen verwendet er das Bayes-Theorem, um die bedingte Wahrscheinlichkeitsverteilung jedes einzelnen Kennzeichens, das eine Beobachtung erhalten hat, zu berechnen.
+[!DNL Naive Bayes Classifier] ist ein einfacher probabilistischer, mehrklassenbasierter Klassifizierer, der auf dem Bayes-Theorem basiert und starke (naive) Unabhängigkeitsannahmen zwischen Funktionen aufweist. Sie trainiert effizient, indem sie bedingte Wahrscheinlichkeiten in einem einzigen Übergang über die Trainings-Daten berechnet, um die bedingte Wahrscheinlichkeitsverteilung für jede Funktion für jede Bezeichnung zu berechnen. Für Prognosen verwendet er das Bayes-Theorem, um die bedingte Wahrscheinlichkeitsverteilung jedes einzelnen Kennzeichens, das eine Beobachtung erhalten hat, zu berechnen.
 
 **Parameter**
 
 | Parameter | Beschreibung | Standardwert | Mögliche Werte |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------|
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------|
 | `MODEL_TYPE` | Gibt den Modelltyp an. Unterstützte Optionen sind `"multinomial"`, `"complement"`, `"bernoulli"` und `"gaussian"`. Beim Modelltyp wird zwischen Groß- und Kleinschreibung unterschieden. | &quot;multinomial&quot; | `"multinomial"`, `"complement"`, `"bernoulli"`, `"gaussian"` |
-| `SMOOTHING` | Der Ausgleichsparameter, mit dem kategorische Daten glättet und unsichtbare Funktionen verarbeitet werden. | 1,0 | (>= 0) |
-| `PROBABILITY_COL` | Der Spaltenname für prognostizierte bedingte Klassenwahrscheinlichkeiten. Diese sollten als Konfidenzwerte und nicht als exakte Wahrscheinlichkeiten behandelt werden. | &quot;wahrscheinlichkeit&quot; | Beliebige Zeichenfolge |
+| `SMOOTHING` | Der Ausgleichsparameter wird verwendet, um Probleme mit Nullfrequenzen in kategorischen Daten zu beheben. | 1,0 | (>= 0) |
+| `PROBABILITY_COL` | Dieser Parameter gibt den Spaltennamen für die prognostizierten bedingten Klassenwahrscheinlichkeiten an. Hinweis: Nicht alle Modelle liefern gut kalibrierte Wahrscheinlichkeitsschätzungen; behandeln diese Werte als Konfidenzen und nicht als präzise Wahrscheinlichkeiten. | &quot;wahrscheinlichkeit&quot; | Beliebige Zeichenfolge |
 | `WEIGHT_COL` | Der Spaltenname für die Instanzgewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT | Beliebige Zeichenfolge |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
 | `RAW_PREDICTION_COL` | Der Spaltenname für Rohdatenprognosewerte (auch als Konfidenz bezeichnet). | &quot;rawPreforecast&quot; | Beliebige Zeichenfolge |
@@ -258,13 +259,13 @@ CREATE MODEL modelname OPTIONS(
 | `MIN_INSTANCES_PER_NODE` | Die Mindestanzahl von Instanzen, die jedes untergeordnete Element nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung zu weniger Instanzen als diesem Wert führt, wird die Aufspaltung verworfen. | 1 | (>= 1) |
 | `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 | (>= 1) |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
-| `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT | Beliebige Zeichenfolge |
+| `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT | Beliebiger gültiger Spaltenname oder leer |
 | `SEED` | Der Zufallsstichtest, der zur Steuerung zufälliger Prozesse im Algorithmus verwendet wird. | -1689246527 | Beliebige 64-Bit-Zahl |
 | `BOOTSTRAP` | Ob Bootstrap-Proben beim Erstellen von Bäumen verwendet werden. | `true` | `true`, `false` |
 | `NUM_TREES` | Die Anzahl der zu trainierenden Bäume. Wenn `1`, wird kein Bootstrapping verwendet. Wenn größer als `1` ist, wird das Bootstrapping angewendet. | 20 | (>= 1) |
 | `SUBSAMPLING_RATE` | Der Anteil der Trainings-Daten, die für das Lernen der einzelnen Entscheidungsstrukturen verwendet werden. | 1,0 | (> 0, &lt;= 1) |
 | `LEAF_COL` | Der Spaltenname für die Blattindizes, der den prognostizierten Blattindex jeder Instanz in jeder Baumstruktur nach Vorreihenfolge enthält. | &quot;&quot; | Beliebige Zeichenfolge |
-| `PROBABILITY_COL` | Der Spaltenname für prognostizierte bedingte Klassenwahrscheinlichkeiten. Diese sollten als Konfidenzwerte und nicht als exakte Wahrscheinlichkeiten behandelt werden. | &quot;wahrscheinlichkeit&quot; | Beliebige Zeichenfolge |
+| `PROBABILITY_COL` | Der Spaltenname für prognostizierte bedingte Klassenwahrscheinlichkeiten. Diese sollten als Konfidenzwerte und nicht als exakte Wahrscheinlichkeiten behandelt werden. | NICHT GESETZT | Beliebige Zeichenfolge |
 | `RAW_PREDICTION_COL` | Der Spaltenname für Rohdatenprognosewerte (auch als Konfidenz bezeichnet). | &quot;rawPreforecast&quot; | Beliebige Zeichenfolge |
 | `ONE_VS_REST` | Gibt an, ob Eins-vs-Rest für mehrklassige Classification aktiviert werden soll. | `false` | `true`, `false` |
 
@@ -282,4 +283,3 @@ Create MODEL modelname OPTIONS(
 ## Nächste Schritte
 
 Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie verschiedene Classification-Algorithmen konfigurieren und verwenden können. Weitere Informationen zu anderen Typen erweiterter statistischer Modelle finden Sie in den Dokumenten zu [Regression](./regression.md) und [Clustering](./clustering.md) .
-

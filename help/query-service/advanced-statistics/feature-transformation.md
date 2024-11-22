@@ -2,9 +2,10 @@
 title: Techniken zur Funktionsumwandlung
 description: Erfahren Sie mehr über die wichtigsten Verfahren zur Vorverarbeitung von Daten wie Transformation, Kodierung und Funktionsskalierung, die die Daten für das Trainieren statistischer Modelle vorbereiten. Es geht um die Wichtigkeit des Umgangs mit fehlenden Werten und der Konvertierung kategorischer Daten, um die Modellleistung und -genauigkeit zu verbessern.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 9%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 Verwenden Sie zum Definieren der benutzerdefinierten Datenvorverarbeitung in Ihrer `CREATE MODEL` -Anweisung die `TRANSFORM` -Klausel in Kombination mit einer beliebigen Anzahl der verfügbaren Umwandlungsfunktionen. Diese manuellen Vorverarbeitungsfunktionen können auch außerhalb der `TRANSFORM` -Klausel verwendet werden. Alle Umwandlungen, die im Abschnitt [Transformator unter](#available-transformations) beschrieben werden, können verwendet werden, um die Daten manuell vorab zu verarbeiten.
 
-### Wesentliche Merkmale
+### Schlüsselmerkmale {#key-characteristics}
 
 Die folgenden Hauptmerkmale der Merkmalumwandlung sind bei der Definition der Vorverarbeitungsfunktionen zu beachten:
 
 - **Syntax**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - Der Aliasname ist in der Syntax obligatorisch. Sie müssen einen Aliasnamen angeben, sonst schlägt die Abfrage fehl.
 
-- **Parameter**: Die Parameter sind positionelle Argumente. Das bedeutet, dass jeder Parameter nur bestimmte Werte annehmen kann. Weitere Informationen dazu, welche Funktion welches Argument verwendet, finden Sie in der entsprechenden Dokumentation.
+- **Parameter**: Die Parameter sind positionelle Argumente. Das bedeutet, dass jeder Parameter nur bestimmte Werte annehmen kann und dass alle vorangehenden Parameter angegeben werden müssen, wenn benutzerdefinierte Werte angegeben werden. Weitere Informationen dazu, welche Funktion welches Argument verwendet, finden Sie in der entsprechenden Dokumentation.
 
 - **Transformatoren verketten**: Die Ausgabe eines Transformators kann zur Eingabe in einen anderen Transformator werden.
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | Alice |
 
-#### Boolescher Fehler {#imputer}
+#### Boolescher Fehler {#boolean-imputer}
 
 Der Transformator **Boolescher Imputer** schließt fehlende Werte in einem Datensatz für eine boolesche Spalte ab. Die Eingabe- und Ausgabespalten sollten den Typ `Boolean` aufweisen.
 

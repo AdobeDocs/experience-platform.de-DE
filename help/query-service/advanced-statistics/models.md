@@ -2,9 +2,10 @@
 title: Modelle
 description: Modelllebenszyklusverwaltung mit der Data Distiller SQL-Erweiterung. Erfahren Sie, wie Sie mithilfe von SQL erweiterte statistische Modelle erstellen, trainieren und verwalten, einschließlich wichtiger Prozesse wie Modellversionierung, -auswertung und -vorhersage, um aus Ihren Daten verwertbare Einblicke abzuleiten.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
+source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1229'
 ht-degree: 1%
 
 ---
@@ -13,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie beim Adobe-Support.
+>Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
 Query Service unterstützt jetzt die Kernprozesse beim Erstellen und Bereitstellen eines Modells. Sie können SQL verwenden, um das Modell mithilfe Ihrer Daten zu trainieren, seine Genauigkeit zu bewerten und dann das Zugmodell anzuwenden, um Prognosen zu neuen Daten zu erstellen. Anschließend können Sie das Modell verwenden, um aus Ihren bisherigen Daten fundierte Entscheidungen über reale Szenarien zu treffen.
 
@@ -76,19 +77,33 @@ Verwenden Sie SQL, um auf den für das Training verwendeten Datensatz zu verweis
 
 ## Modell aktualisieren {#update}
 
-Erfahren Sie, wie Sie ein vorhandenes Modell für maschinelles Lernen aktualisieren können, indem Sie neue Funktionsumwandlungen anwenden und Optionen wie den Algorithmustyp und die Beschriftungsspalte konfigurieren. Die folgende SQL-Anleitung zeigt, wie Sie die Versionsnummer des Modells bei jeder Aktualisierung erhöhen und sicherstellen, dass Änderungen verfolgt werden, damit das Modell in zukünftigen Evaluierungs- oder Prognoseschritten wiederverwendet werden kann.
+Erfahren Sie, wie Sie ein vorhandenes Modell für maschinelles Lernen aktualisieren, indem Sie neue Funktionsumwandlungen anwenden und Optionen wie den Algorithmustyp und die Titelspalte konfigurieren. Jedes Update erstellt eine neue Version des Modells, inkrementiert von der letzten Version. Dadurch wird sichergestellt, dass Änderungen verfolgt werden und das Modell in zukünftigen Evaluierungs- oder Prognoseschritten wiederverwendet werden kann.
+
+Im folgenden Beispiel wird gezeigt, wie ein Modell mit neuen Umwandlungen und Optionen aktualisiert wird:
 
 ```sql
-UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
-       col2,
-       col3
-FROM   training-dataset.
+UPDATE MODEL <model_alias> TRANSFORM (vector_assembler(array(current_customers, previous_customers)) features)  OPTIONS(MODEL_TYPE='logistic_reg', LABEL='churn_rate')  AS SELECT * FROM churn_with_rate ORDER BY period;
 ```
 
-Um Ihnen zu vermitteln, wie Sie Modellversionen verwalten und Umwandlungen effektiv anwenden können, werden in den folgenden Abschnitten die wichtigsten Komponenten und Optionen im Workflow für die Modellaktualisierung erläutert.
+**Beispiel**
 
-- `UPDATE model <model_alias>`: Der Aktualisierungsbefehl verarbeitet die Versionierung und erhöht bei jeder Aktualisierung die Versionsnummer des Modells.
-- `version`: Ein optionales Keyword, das nur bei Aktualisierungen zum Erstellen einer neuen Version des Modells verwendet wird.
+Beachten Sie den folgenden Befehl, um den Versionierungsprozess zu verstehen:
+
+```sql
+UPDATE MODEL model_vdqbrja OPTIONS(MODEL_TYPE='logistic_reg', LABEL='Survived') AS SELECT * FROM titanic_e2e_dnd;
+```
+
+Nach Ausführung dieses Befehls verfügt das Modell über eine neue Version, wie in der folgenden Tabelle dargestellt:
+
+| Aktualisierte Modell-ID | Aktualisiertes Modell | Neue Version |
+|--------------------------------------------|---------------|-------------|
+| a8f6a254-8f28-42ec-8b26-94edeb4698e8 | model_vdqbrja | 2 |
+
+Die folgenden Hinweise erläutern die wichtigsten Komponenten und Optionen im Workflow zur Modellaktualisierung.
+
+- `UPDATE model <model_alias>`: Der Aktualisierungsbefehl verarbeitet die Versionierung und erstellt eine neue Modellversion, die von der letzten Version inkrementiert wird.
+- `version`: Ein optionales Keyword, das nur bei Aktualisierungen verwendet wird, um explizit anzugeben, dass eine neue Version erstellt werden soll. Wenn diese Option weggelassen wird, inkrementiert das System automatisch die Version.
+
 
 ## Modelle auswerten {#evaluate-model}
 

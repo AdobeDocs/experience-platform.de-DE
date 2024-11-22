@@ -2,9 +2,10 @@
 title: Regressionsalgorithmen
 description: Erfahren Sie, wie Sie verschiedene Regressionsalgorithmen mit Schlüsselparametern, Beschreibungen und Beispielcode konfigurieren und optimieren können, um Ihnen bei der Implementierung erweiterter statistischer Modelle zu helfen.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: d38733bb-0420-40bf-a70b-19e0e0e58730
+source-git-commit: 8b9cfb48a11701f0e4b358416c6b627bedf1db8b
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2384'
 ht-degree: 4%
 
 ---
@@ -23,18 +24,18 @@ In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration u
 
 | Parameter | Beschreibung | Standardwert | Mögliche Werte |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------|
-| `MAX_BINS` | Die maximale Anzahl von Klassen bestimmt, wie kontinuierliche Merkmale in diskrete Intervalle aufgeteilt werden. Dies wirkt sich darauf aus, wie Funktionen auf jedem Entscheidungsbaum-Knoten aufgeteilt werden. Mehr Klassen bieten eine höhere Granularität. | 32 | Muss mindestens 2 und mindestens die Anzahl der Kategorien in einer beliebigen kategorischen Funktion betragen. |
-| `CACHE_NODE_IDS` | Wenn `false`, übergibt der Algorithmus Bäume an Executors, um Instanzen mit Knoten abzugleichen. Wenn `true`, speichert der Algorithmus Knoten-IDs für jede Instanz zwischen. Caching kann das Training tiefer liegender Bäume beschleunigen. | false | `true` oder `false` |
-| `CHECKPOINT_INTERVAL` | Gibt an, wie oft die zwischengespeicherten Knoten-IDs überprüft werden. Beispiel: `10` bedeutet, dass der Cache alle 10 Iterationen überprüft wird. | 10 | (>=1) |
-| `IMPURITY` | Das für die Berechnung des Informationsgewinns verwendete Kriterium (Groß-/Kleinschreibung nicht beachten). | `gini` | `entropy`, `gini` |
-| `MAX_DEPTH` | Die maximale Tiefe der Baumstruktur (nicht negativ). Beispielsweise bedeutet &quot;depth `0`&quot;einen Blattknoten und &quot;depth `1`&quot;einen internen Knoten und 2 Blattknoten. | 5 | [0, 30] |
-| `MIN_INFO_GAIN` | Der Mindestinformationsgewinn, der erforderlich ist, damit eine Aufspaltung in einem Strukturknoten berücksichtigt werden kann. | 0,0 | (>=0.0) |
-| `MIN_WEIGHT_FRACTION_PER_NODE` | Der Mindestanteil der gewichteten Stichprobenanzahl, die jedes Kind nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung dazu führt, dass der Anteil der Gesamtgewichtung in einem der untergeordneten Elemente unter diesem Wert liegt, wird er verworfen. | 0,0 | (>=0.0, 0.5) |
-| `MIN_INSTANCES_PER_NODE` | Die Mindestanzahl von Instanzen, die jedes untergeordnete Element nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung zu weniger Instanzen als diesem Wert führt, wird die Aufspaltung verworfen. | 1 | (>=1) |
-| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn der Speicher zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt, was dazu führen kann, dass die Aggregate die Größe überschreiten. | 256 |                                                                                                        |
-| `PREDICTION_COL` | Der Parameter für den Spaltennamen der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
-| `SEED` | Der -Parameter für das zufällige Seed. | K. A. | Beliebige 64-Bit-Zahl |
-| `WEIGHT_COL` | Der Parameter für den Namen der Gewichtungsspalte. Wenn dies nicht festgelegt oder leer ist, werden alle Instanzgewichte als `1.0` behandelt. | nicht festgelegt |                                                                                                        |
+| `MAX_BINS` | Dieser Parameter gibt die maximale Anzahl von Klassen an, die verwendet werden, um kontinuierliche Funktionen zu diskretisieren und Aufspaltungen an jedem Knoten zu bestimmen. Mehr Klassen führen zu feiner Granularität und Details. | 32 | Muss mindestens 2 und mindestens die Anzahl der Kategorien in einer beliebigen kategorischen Funktion betragen. |
+| `CACHE_NODE_IDS` | Dieser Parameter bestimmt, ob Knoten-IDs für jede Instanz zwischengespeichert werden. Wenn `false`, übergibt der Algorithmus Bäume an Executors, um Instanzen mit Knoten abzugleichen. Wenn der Wert `true` ist, speichert der Algorithmus Knoten-IDs für jede Instanz zwischen, was das Training tiefer liegender Bäume beschleunigen kann. Benutzer können konfigurieren, wie oft der Cache überprüft werden soll, oder deaktivieren ihn, indem sie `CHECKPOINT_INTERVAL` festlegen. | false | `true` oder `false` |
+| `CHECKPOINT_INTERVAL` | Dieser Parameter gibt an, wie oft die zwischengespeicherten Knoten-IDs überprüft werden sollen. Wenn Sie sie beispielsweise auf &quot;`10`&quot;setzen, wird der Cache alle 10 Iterationen überprüft. Dies gilt nur, wenn `CACHE_NODE_IDS` auf `true` gesetzt ist und das Checkpoint-Verzeichnis in `org.apache.spark.SparkContext` konfiguriert ist. | 10 | (>=1) |
+| `IMPURITY` | Dieser Parameter gibt das für die Berechnung des Informationsgewinns verwendete Kriterium an. Unterstützte Werte sind `entropy` und `gini`. | `gini` | `entropy`, `gini` |
+| `MAX_DEPTH` | Dieser Parameter gibt die maximale Tiefe der Baumstruktur an. Beispielsweise bedeutet eine Tiefe von &quot;`0`&quot; einen Blattknoten, während eine Tiefe von &quot;`1`&quot; 1 interner Knoten und 2 Blattknoten bedeutet. Die Tiefe muss im Bereich `[0, 30]` liegen. | 5 | [0, 30] |
+| `MIN_INFO_GAIN` | Dieser Parameter legt den Mindestinformationsgewinn fest, der erforderlich ist, damit eine Aufspaltung in einem Strukturknoten als gültig betrachtet werden kann. | 0,0 | (>=0.0) |
+| `MIN_WEIGHT_FRACTION_PER_NODE` | Dieser Parameter gibt den minimalen Anteil der gewichteten Stichprobenanzahl an, den jeder untergeordnete Knoten nach einer Aufspaltung aufweisen muss. Wenn einer der untergeordneten Knoten einen Bruchteil unter diesem Wert hat, wird die Aufspaltung verworfen. | 0,0 | [0.0, 0.5] |
+| `MIN_INSTANCES_PER_NODE` | Dieser Parameter legt die Mindestanzahl von Instanzen fest, die jeder untergeordnete Knoten nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung zu weniger Instanzen als diesem Wert führt, wird die Aufspaltung als ungültig verworfen. | 1 | (>=1) |
+| `MAX_MEMORY_IN_MB` | Dieser Parameter gibt den maximal zugewiesenen Speicher in Megabyte (MB) für die Histogrammaggregation an. Wenn der Speicher zu klein ist, wird nur ein Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 | Ein positiver ganzzahliger Wert |
+| `PREDICTION_COL` | Dieser Parameter gibt den Namen der Spalte an, die zum Speichern von Prognosen verwendet wird. | &quot;prediction&quot; | Beliebige Zeichenfolge |
+| `SEED` | Dieser Parameter legt den im Modell verwendeten zufälligen Test fest. | Keine | Beliebige 64-Bit-Zahl |
+| `WEIGHT_COL` | Dieser Parameter gibt den Namen der Gewichtungsspalte an. Wenn dieser Parameter nicht festgelegt oder leer ist, werden alle Instanzgewichte als `1.0` behandelt. | Nicht festgelegt | Beliebige Zeichenfolge |
 
 {style="table-layout:auto"}
 
@@ -53,22 +54,22 @@ CREATE MODEL modelname OPTIONS(
 
 **Parameter**
 
-In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration und Optimierung der Leistung der [!DNL Factorization Machines] Regression aufgeführt.
+In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration und Optimierung der Leistung der [!DNL Factorization Machines] -Regression aufgeführt.
 
 | Parameter | Beschreibung | Standardwert | Mögliche Werte |
-|------------------------|--------------------------------------------------------------------------------------|---------------|----------------|
-| `TOL` | Die Konvergenztoleranz. | `1E-6` | (>= 0) |
-| `FACTOR_SIZE` | Die Dimensionalität der Faktoren. | 8 | (>= 0) |
-| `FIT_INTERCEPT` | Ob ein Begriffsbegriff passt. | `true` | `true`, `false` |
-| `FIT_LINEAR` | Ob der lineare Begriff (auch als &quot;1-way-Begriff&quot;bezeichnet) passt. | `true` | `true`, `false` |
-| `INIT_STD` | Standardabweichung der ursprünglichen Koeffizienten. | 0,01 | (>= 0) |
-| `MAX_ITER` | Die Anzahl der Iterationen, die der Algorithmus ausführen soll. | 100 | (>= 0) |
-| `MINI_BATCH_FRACTION` | Die Mini-Batch-Fraktion, die im Bereich `(0, 1]` liegen muss. | 1,0 | `(0, 1]` |
-| `REG_PARAM` | Der Regularisierungsparameter. | 0,0 | (>= 0) |
-| `SEED` | Der zufällige Samen. | NICHT GESETZT | Beliebige 64-Bit-Zahl |
-| `SOLVER` | Der für die Optimierung verwendete Lösungs-Algorithmus. | &quot;adamW&quot; | `gd`, `adamW` |
-| `STEP_SIZE` | Die anfängliche Schrittgröße für den ersten Schritt (ähnlich der Lernrate). | 1,0 |                   |
-| `PREDICTION_COL` | Der Name der Prognosespalte. | &quot;prediction&quot; | Beliebige Zeichenfolge |
+|------------------------|-------------------------------------------------------------------------------------------------|---------------|-----------------------|
+| `TOL` | Dieser Parameter gibt die Konvergenztoleranz für den Algorithmus an. Höhere Werte können zu einer schnelleren Konvergenz führen, aber weniger Genauigkeit. | `1E-6` | (>= 0) |
+| `FACTOR_SIZE` | Dieser Parameter definiert die Dimensionalität der Faktoren. Höhere Werte erhöhen die Modellkomplexität. | 8 | (>= 0) |
+| `FIT_INTERCEPT` | Dieser Parameter gibt an, ob das Modell einen Konstanten-Begriff enthalten soll. | `true` | `true`, `false` |
+| `FIT_LINEAR` | Dieser Parameter gibt an, ob ein linearer Begriff (auch als 1-Weg-Begriff bezeichnet) in das Modell aufgenommen werden soll. | `true` | `true`, `false` |
+| `INIT_STD` | Dieser Parameter definiert die Standardabweichung der anfänglichen Koeffizienten, die im Modell verwendet werden. | 0,01 | (>= 0) |
+| `MAX_ITER` | Dieser Parameter gibt die maximale Anzahl von Iterationen an, die der Algorithmus ausführen soll. | 100 | (>= 0) |
+| `MINI_BATCH_FRACTION` | Dieser Parameter legt die Mini-Batch-Fraktion fest, die den in den einzelnen Batches verwendeten Datenanteil bestimmt. Sie muss im Bereich `(0, 1]` liegen. | 1,0 | `(0, 1]` |
+| `REG_PARAM` | Dieser Parameter legt den Regularisierungsparameter fest, um eine Überanpassung zu verhindern. | 0,0 | (>= 0) |
+| `SEED` | Dieser Parameter gibt den für die Modellinitialisierung verwendeten Zufallsstichprobe an. | Keine | Beliebige 64-Bit-Zahl |
+| `SOLVER` | Dieser Parameter gibt den für die Optimierung verwendeten Solver-Algorithmus an. | &quot;adamW&quot; | `gd` (Verlaufswert), `adamW` |
+| `STEP_SIZE` | Dieser Parameter gibt die anfängliche Schrittgröße (oder Lernrate) für den ersten Optimierungsschritt an. | 1,0 | Alle positiven Werte |
+| `PREDICTION_COL` | Dieser Parameter gibt den Namen der Spalte an, in der Prognosen gespeichert werden. | &quot;prediction&quot; | Beliebige Zeichenfolge |
 
 {style="table-layout:auto"}
 
@@ -98,12 +99,12 @@ In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration u
 | `FAMILY` | Der Familienparameter, der die im Modell verwendete Fehlerverteilung beschreibt. Unterstützte Optionen sind `gaussian`, `binomial`, `poisson`, `gamma` und `tweedie`. | &quot;gaussisch&quot; | `gaussian`, `binomial`, `poisson`, `gamma`, `tweedie` |
 | `FIT_INTERCEPT` | Ob ein Begriffsbegriff passt. | `true` | `true`, `false` |
 | `LINK` | Die Verknüpfungsfunktion, die die Beziehung zwischen dem linearen Prädiktor und dem arithmetischen Mittel der Verteilungsfunktion definiert. Unterstützte Optionen sind `identity`, `log`, `inverse`, `logit`, `probit`, `cloglog` und `sqrt`. | NICHT GESETZT | `identity`, `log`, `inverse`, `logit`, `probit`, `cloglog`, `sqrt` |
-| `LINK_POWER` | Der Index in der Stromverbindungsfunktion, der für die [!DNL Tweedie] -Familie gilt. Wenn nicht festgelegt, wird standardmäßig `1 - variancePower` nach dem R `statmod`-Paket verwendet. Die Link-Befugnisse von 0, 1, -1 und 0.5 entsprechen jeweils Protokoll-, Identitäts-, Umkehrungs- und SQL-Links. | 1 |
+| `LINK_POWER` | Dieser Parameter gibt den Index in der Power Link-Funktion an. Der Parameter gilt nur für die [!DNL Tweedie] -Familie. Wenn nicht festgelegt, wird standardmäßig `1 - variancePower` verwendet, was mit dem R `statmod`-Paket übereinstimmt. Spezifische Verknüpfungsmächte von 0, 1, -1 und 0.5 entsprechen den Links Protokoll, Identität, Umgekehrt und SQL. | 1 | Beliebiger numerischer Wert |
 | `SOLVER` | Der für die Optimierung verwendete Lösungs-Algorithmus. Unterstützte Option: `irls` (die kleinsten Quadrate werden iterativ neu gewichtet). | &quot;irls&quot; | `irls` |
-| `VARIANCE_POWER` | Die Leistung in der Varianzfunktion der [!DNL Tweedie] -Verteilung, die die Beziehung zwischen Varianz und Mittelwert definiert. Die unterstützten Werte sind 0 und `[1, inf)`. | 0,0 | 0, `[1, inf)` |
+| `VARIANCE_POWER` | Dieser Parameter gibt die Leistung in der Varianzfunktion der [!DNL Tweedie] -Verteilung an und definiert die Beziehung zwischen Varianz und Mittelwert. Die unterstützten Werte sind 0 und `[1, inf)`. Die Varianz von 0, 1 und 2 entspricht jeweils den Familien Gaussisch, Poisson und Gamma. | 0,0 | 0, `[1, inf)` |
 | `LINK_PREDICTION_COL` | Der Spaltenname der Link-Prognose (Lineare Vorhersage). | NICHT GESETZT | Beliebige Zeichenfolge |
-| `OFFSET_COL` | Der Name der Offset-Spalte. Wenn nicht festgelegt, werden alle Instanzabweichungen als 0.0 behandelt. Die Offset-Funktion hat einen konstanten Koeffizienten von 1,0. | NICHT GESETZT |                                                                        |
-| `WEIGHT_COL` | Der Name der Gewichtungsspalte. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. In der Binomial-Familie entsprechen die Gewichtungen der Anzahl der Versuche und die nicht ganzzahligen Gewichtungen werden in der AIC-Berechnung gerundet. | NICHT GESETZT |                                                                        |
+| `OFFSET_COL` | Der Name der Offset-Spalte. Wenn nicht festgelegt, werden alle Instanzabweichungen als 0.0 behandelt. Die Offset-Funktion hat einen konstanten Koeffizienten von 1,0. | NICHT GESETZT | Beliebige Zeichenfolge |
+| `WEIGHT_COL` | Der Name der Gewichtungsspalte. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. In der Binomial-Familie entsprechen die Gewichtungen der Anzahl der Versuche und die nicht ganzzahligen Gewichtungen werden in der AIC-Berechnung gerundet. | NICHT GESETZT | Beliebige Zeichenfolge |
 
 {style="table-layout:auto"}
 
@@ -133,14 +134,14 @@ In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration u
 | `MIN_INFO_GAIN` | Der Mindestinformationsgewinn, der erforderlich ist, damit eine Aufspaltung in einem Strukturknoten berücksichtigt werden kann. | 0,0 | (>= 0.0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | Der Mindestanteil der gewichteten Stichprobenanzahl, die jedes Kind nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung dazu führt, dass der Anteil des Gesamtgewichts in einem der untergeordneten Elemente kleiner als dieser Wert ist, wird er verworfen. | 0,0 | (>= 0.0, &lt;= 0.5) |
 | `MIN_INSTANCES_PER_NODE` | Die Mindestanzahl von Instanzen, die jedes untergeordnete Element nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung zu weniger Instanzen als diesem Wert führt, wird die Aufspaltung verworfen. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 |                                                                                                      |
+| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 | Ein positiver ganzzahliger Wert |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
 | `VALIDATION_INDICATOR_COL` | Der Spaltenname, der angibt, ob die einzelnen Zeilen für Schulungen oder Überprüfungen verwendet werden. `false` für Schulung und `true` für Validierung. | NICHT GESETZT | Beliebige Zeichenfolge |
 | `LEAF_COL` | Der Spaltenname für Blattindizes. Der prognostizierte Blattindex jeder Instanz in jedem Baum, generiert durch Preorder Traversal. | &quot;&quot; | Beliebige Zeichenfolge |
-| `FEATURE_SUBSET_STRATEGY` | Die Anzahl der Funktionen, die für die Aufteilung auf jedem Baumknoten berücksichtigt werden. | &quot;auto&quot; | `auto`, `all`, `onethird`, `sqrt`, `log2`, `n` (wobei `n` eine Bruchzahl zwischen 0 und 1,0 ist) |
+| `FEATURE_SUBSET_STRATEGY` | Dieser Parameter gibt die Anzahl der Funktionen an, die bei Aufspaltungen an jedem Strukturknoten berücksichtigt werden sollen. | &quot;auto&quot; | `auto`, `all`, `onethird`, `sqrt`, `log2` oder eine Bruchzahl zwischen 0 und 1,0 |
 | `SEED` | Der zufällige Samen. | NICHT GESETZT | Beliebige 64-Bit-Zahl |
-| `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT |                                                                                                      |
-| `LOSS_TYPE` | Die Verlustfunktion, die das Modell [!DNL Gradient Boosted Tree] zu minimieren versucht. | &quot;squared&quot; | `squared` (L2) und `absolute` (L1). Hinweis: Bei Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden. |
+| `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT | Beliebige Zeichenfolge |
+| `LOSS_TYPE` | Dieser Parameter gibt die Verlustfunktion an, die das [!DNL Gradient Boosted Tree]-Modell minimiert. | &quot;squared&quot; | `squared` (L2) und `absolute` (L1). Hinweis: Bei Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden. |
 | `STEP_SIZE` | Die Schrittgröße (auch als Lernrate bezeichnet) im Bereich `(0, 1]`, die verwendet wird, um den Beitrag der einzelnen Schätzer zu verkleinern. | 0,1 | `(0, 1]` |
 | `MAX_ITER` | Die maximale Anzahl von Iterationen für den Algorithmus. | 20 | (>= 0) |
 | `SUBSAMPLING_RATE` | Der Teil der Trainings-Daten, der zum Erlernen der einzelnen Entscheidungsstrukturen verwendet wird, im Bereich `(0, 1]`. | 1,0 | `(0, 1]` |
@@ -169,7 +170,7 @@ In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration u
 | `ISOTONIC` | Gibt an, ob die Ausgabesequenz isotonisch (erhöht) sein soll, wenn `true` oder antitonisch (absteigend) bei `false`. | `true` | `true`, `false` |
 | `WEIGHT_COL` | Der Spaltenname, z. B. die Gewichtung. Wenn nicht festgelegt oder leer, werden alle Instanzgewichte als `1.0` behandelt. | NICHT GESETZT | Beliebige Zeichenfolge |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
-| `FEATURE_INDEX` | Der Index der Funktion, anwendbar, wenn `featuresCol` eine Vektorspalte ist. Wenn nicht festgelegt, ist der Standardwert `0`. Andernfalls hat dies keine Auswirkungen. | 0 |                 |
+| `FEATURE_INDEX` | Der Index der Funktion, anwendbar, wenn `featuresCol` eine Vektorspalte ist. Wenn nicht festgelegt, ist der Standardwert `0`. Andernfalls hat dies keine Auswirkungen. | 0 | Beliebige nicht negative Ganzzahl |
 
 {style="table-layout:auto"}
 
@@ -221,14 +222,14 @@ In der folgenden Tabelle sind die wichtigsten Parameter für die Konfiguration u
 | `CACHE_NODE_IDS` | Wenn `false`, übergibt der Algorithmus Bäume an Executors, um Instanzen mit Knoten abzugleichen. Wenn der Wert `true` beträgt, speichert der Algorithmus Knoten-IDs für jede Instanz zwischen, was die Schulung tiefer liegender Bäume beschleunigt. | `false` | `true`, `false` |
 | `CHECKPOINT_INTERVAL` | Gibt an, wie oft die zwischengespeicherten Knoten-IDs überprüft werden. Beispiel: `10` bedeutet, dass der Cache alle 10 Iterationen überprüft wird. | 10 | (>= 1) |
 | `IMPURITY` | Das für die Berechnung des Informationsgewinns verwendete Kriterium (Groß-/Kleinschreibung nicht beachten). | &quot;entropy&quot; | `entropy`, `gini` |
-| `MAX_DEPTH` | Die maximale Tiefe der Baumstruktur (nicht negativ). Beispielsweise bedeutet &quot;depth `0`&quot;einen Blattknoten und &quot;depth `1`&quot;einen internen Knoten und 2 Blattknoten. | 5 | [0, 30] |
+| `MAX_DEPTH` | Die maximale Tiefe der Baumstruktur (nicht negativ). Beispielsweise bedeutet &quot;depth `0`&quot;einen Blattknoten und &quot;depth `1`&quot;einen internen Knoten und 2 Blattknoten. | 5 | Beliebige nicht negative Ganzzahl |
 | `MIN_INFO_GAIN` | Der Mindestinformationsgewinn, der erforderlich ist, damit eine Aufspaltung in einem Strukturknoten berücksichtigt werden kann. | 0,0 | (>= 0.0) |
 | `MIN_WEIGHT_FRACTION_PER_NODE` | Der Mindestanteil der gewichteten Stichprobenanzahl, die jedes Kind nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung dazu führt, dass der Anteil der Gesamtgewichtung in einem der untergeordneten Elemente unter diesem Wert liegt, wird er verworfen. | 0,0 | (>= 0.0, &lt;= 0.5) |
 | `MIN_INSTANCES_PER_NODE` | Die Mindestanzahl von Instanzen, die jedes untergeordnete Element nach einer Aufspaltung aufweisen muss. Wenn eine Aufspaltung zu weniger Instanzen als diesem Wert führt, wird die Aufspaltung verworfen. | 1 | (>= 1) |
-| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 |                                                                                                      |
+| `MAX_MEMORY_IN_MB` | Der maximale Speicher in MB, der der Histogrammaggregation zugeordnet ist. Wenn dieser Wert zu klein ist, wird nur 1 Knoten pro Iteration aufgeteilt und die Aggregate können diese Größe überschreiten. | 256 | (>= 1) |
 | `BOOTSTRAP` | Ob beim Erstellen von Bäumen Bootstrap-Proben verwendet werden. | TRUE | `true`, `false` |
 | `NUM_TREES` | Die Anzahl der zu trainierenden Bäume (mindestens 1). Wenn `1`, wird kein Bootstrapping verwendet. Wenn größer als `1` ist, wird das Bootstrapping angewendet. | 20 | (>= 1) |
-| `SUBSAMPLING_RATE` | Der Bruchteil der Trainings-Daten, die zum Trainieren der einzelnen Entscheidungsstrukturen verwendet werden, im Bereich `(0, 1]`. | 1,0 | `(0, 1]` |
+| `SUBSAMPLING_RATE` | Der Bruchteil der Trainings-Daten, die zum Trainieren der einzelnen Entscheidungsstrukturen verwendet werden, im Bereich `(0, 1]`. | 1,0 | (>= 0,0, &lt;= 1) |
 | `LEAF_COL` | Der Spaltenname für Blattindizes, d. h. der prognostizierte Blattindex jeder Instanz in jedem Baum, der durch Preorder Traversal generiert wird. | &quot;&quot; | Beliebige Zeichenfolge |
 | `PREDICTION_COL` | Der Spaltenname für die Ausgabe der Prognose. | &quot;prediction&quot; | Beliebige Zeichenfolge |
 | `SEED` | Der zufällige Samen. | NICHT GESETZT | Beliebige 64-Bit-Zahl |
