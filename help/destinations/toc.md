@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 86%
+source-wordcount: '1257'
+ht-degree: 85%
 
 ---
 
@@ -42,6 +42,7 @@ ht-degree: 86%
       * [Aktivieren von Zielgruppen für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md)
       * [Aktivieren von Zielgruppen für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md)
       * [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](./ui/activate-edge-personalization-destinations.md)
+      * [Suchen nach Profilattributen am Edge in Echtzeit](./ui/activate-edge-profile-lookup.md)
       * [Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-IDs](./ui/activate-curated-destinations.md)
       * [Aktivieren von potenziellen Zielgruppen für Ziele](./ui/activate-prospect-audiences.md)
       * [Kontozielgruppen für Ziele aktivieren](./ui/activate-account-audiences.md)

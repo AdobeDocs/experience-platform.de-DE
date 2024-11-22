@@ -2,7 +2,7 @@
 title: Leitlinien für die Performance der Edge Network Server-API
 description: Erfahren Sie, wie Sie die Server-API in optimalen Leistungsgarantien verwenden.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 5%
@@ -58,7 +58,6 @@ Die folgende Tabelle zeigt die Standardgrenzwerte. Wenden Sie sich an Ihren Kund
 | --- | --- |
 | `/v2/interact` | 4.000 |
 | `/v2/collect` | 6000 |
-
 
 ### HTTP-Anfragegrößenbeschränkung
 
