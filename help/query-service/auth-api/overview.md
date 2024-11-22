@@ -3,9 +3,9 @@ title: Data Distiller Authorization API-Anleitung
 description: Erfahren Sie, wie Sie mit der Data Distiller Authorization-API netzwerkbasierte IP-Einschränkungen für sichere Verbindungen über SQL erzwingen können. Verwenden Sie diese API, um die Kontrolle des Datenzugriffs für Ihre Adobe Experience Platform-Daten zu verbessern.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---
@@ -30,13 +30,17 @@ Mit den folgenden Funktionen können Sie IP-basierte Zugriffsbeschränkungen def
 
 ## Audit- und Überwachungsfunktionen
 
-Um sichere Datenzugriffsmethoden zu unterstützen, protokolliert Query Service alle Client-IPs, die auf AEP zugreifen oder versuchen, darauf zuzugreifen. Prüfereignisse, einschließlich verweigerter Verbindungen, werden an Platform Audit-Protokolle gesendet. Dies ermöglicht Folgendes:
+Um sichere Datenzugriffsmethoden zu unterstützen, protokolliert Query Service alle Client-IPs, die auf Experience Platform zugreifen oder versuchen. Prüfereignisse, einschließlich verweigerter Verbindungen, werden an Platform Audit-Protokolle gesendet. Dies ermöglicht Folgendes:
 
 - **Echtzeit-Überwachung**: Verfolgen Sie IP-basierte Zugriffsmuster, um die Compliance sicherzustellen.
 - **Warnung bei nicht autorisiertem Zugriff**: Identifizieren Sie Zugriffsversuche von nicht autorisierten IPs und reagieren Sie darauf.
 
-Weitere Informationen zur Auditprotokollierung finden Sie in der Dokumentation zum [Auditdienst](https://experienceleague.adobe.com/docs/experience-platform/audit/audit-overview.html).
+Weitere Informationen finden Sie in der [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md) .
 
 ## Nächste Schritte
 
 Beginnen Sie mit der Data Distiller Authorization-API, indem Sie sich das [Erste Schritte-Handbuch](./getting-started.md) ansehen, um wichtige Einrichtungsschritte zu erhalten, einschließlich erforderlicher Kopfzeilen und API-Aufrufkonventionen. Konsultieren Sie dann die endpunktspezifischen Handbücher für den [IP-Zugriff](./ip-access.md) und die [IP-Überprüfung](./validate.md) zum Konfigurieren und Verwalten des sicheren Datenzugriffs.
+
+In der Referenzdokumentation für die Data Distiller Authorization OpenAPI](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) finden Sie ein standardisiertes, maschinenlesbares Format für einfachere Integration, Tests und Exploration.[
+
+Informationen zu den verschiedenen Antwortparametern für jeden zurückgegebenen Datensatz finden Sie in der [Entwicklerdokumentation für die Datensatz-API](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) .
