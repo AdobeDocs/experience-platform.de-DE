@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Übersicht über Privacy Service
 description: Erfahren Sie, wie Privacy Service die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei Ihren Experience Cloud-Datenvorgängen erleichtern kann.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 46%
+source-wordcount: '1660'
+ht-degree: 43%
 
 ---
 
@@ -68,6 +68,14 @@ Lesen Sie das Dokument zu [Identitätsdaten für Datenschutzanfragen](./identity
 
 Sobald Sie die Datenschutzanforderungen Ihres Unternehmens ermittelt und entschieden haben, welche Identitätswerte an Privacy Service gesendet werden, können Sie mit Datenschutzanfragen beginnen. Verwenden Sie Privacy Service, um Datenschutzanfragen entweder über die API oder die Benutzeroberfläche zu senden.
 
+#### Dateidetails zu Zugriffsanfragen {#access-requests}
+
+In der Antwort auf eine erfolgreiche Zugriffsanfrage gibt es eine **Download-URL**, die mehrere Dateien enthält. Für jede Adobe-Anwendung, in der Daten angefordert wurden, wird eine Datei bereitgestellt. Beachten Sie, dass das Dateiformat für jede Anwendung je nach Datenstruktur der Anwendung variieren kann.
+
+#### Löschanfragen - Keine Download-URL {#delete-requests}
+
+Es gibt **keine Download-URL** in der Antwort für eine **Löschanfrage**, da keine Kundendaten abgerufen werden.
+
 >[!IMPORTANT]
 >
 >Die folgenden Abschnitte enthalten Links zur Dokumentation, in der beschrieben wird, wie allgemeine Datenschutzanfragen in der API oder Benutzeroberfläche ausgeführt werden. Je nach den von Ihnen verwendeten [!DNL Experience Cloud]-Programmen können sich jedoch die Felder, die Sie in der Anfrage-Payload senden müssen, von den Beispielen in diesen Anleitungen unterscheiden.
@@ -97,6 +105,10 @@ Sobald Sie Datenschutzaufträge abgeschlossen haben, stehen Ihnen verschiedene O
 | Privacy Service-Benutzeroberfläche | Mit dem Monitoring-Dashboard der Privacy Service-Benutzeroberfläche können Sie eine visuelle Darstellung des Status aller aktiven Anforderungen anzeigen. Weiterführende Informationen finden Sie im [Privacy Service-Benutzerhandbuch](ui/overview.md). |
 | Privacy Service-API | Sie können den Status von Datenschutzaufträgen programmgesteuert überwachen, indem Sie die von der Privacy Service-API bereitgestellten Lookup-Endpunkte verwenden. Ausführliche Anweisungen zur Verwendung der API finden Sie im [Privacy Service-Entwicklerhandbuch](./api/overview.md). |
 | [!DNL Privacy Events] | [!DNL Privacy Events] verwenden Adobe I/O-Ereignisse, die an einen konfigurierten Webhook gesendet werden, um eine effiziente Automatisierung von Auftragsanfragen zu ermöglichen. Sie verringern oder eliminieren die Notwendigkeit, die Privacy Service-API abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen ist oder ob ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Privacy Events](./privacy-events.md). |
+
+#### Antworten für nicht vorhandene Benutzer {#non-existing-users}
+
+Wenn Sie eine Zugriffs- oder Löschanfrage senden, gibt die Antwort immer den Wert &quot;`success`&quot;zurück, selbst wenn die Benutzerdaten nicht gefunden wurden. Das bedeutet, dass auch wenn die Daten nicht vorhanden sind, ein Zugriff oder Löschung erfolgreich abgeschlossen werden kann, ohne dass Daten abgerufen oder gelöscht werden.
 
 ## Nächste Schritte
 
