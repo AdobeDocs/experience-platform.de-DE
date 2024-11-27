@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practices für die Datenmodellierung
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemata und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemata, die in Adobe Experience Platform verwendet werden können.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
+source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
 workflow-type: tm+mt
-source-wordcount: '3245'
+source-wordcount: '3227'
 ht-degree: 68%
 
 ---
@@ -246,12 +246,12 @@ Um Einschränkungen für ein bestimmtes Feld festzulegen, wählen Sie das Feld i
 Im Folgenden finden Sie eine Sammlung von Vorschlägen zur Gewährleistung der Datenintegrität bei der Erstellung eines Schemas.
 
 * **Primäre Identitäten betrachten**: Bei Adobe-Produkten wie Web SDK, Mobile SDK, Adobe Analytics und Adobe Journey Optimizer dient das Feld `identityMap` häufig als primäre Identität. Vermeiden Sie die Benennung zusätzlicher Felder als primäre Identitäten für dieses Schema.
-* **Vermeiden Sie die Verwendung von `_id` als Identität**: Vermeiden Sie die Verwendung des Felds `_id` in Experience Event-Schemas als Identität. Sie ist für die Eindeutigkeit von Datensätzen und nicht zur Verwendung als Identität gedacht.
+* **Stellen Sie sicher, dass `_id` nicht als Identität verwendet wird**: Das Feld `_id` in Experience Event-Schemas kann nicht als Identität verwendet werden, da es für die Eindeutigkeit von Datensätzen vorgesehen ist.
 * **Längenbegrenzungen festlegen**: Es empfiehlt sich, Mindest- und Höchstlängen für Felder festzulegen, die als Identitäten markiert sind. Ein Warnhinweis-Trigger, wenn Sie versuchen, einem Identitätsfeld einen benutzerdefinierten Namespace zuzuweisen, ohne die Mindest- und Höchstlängenbeschränkungen zu erfüllen. Diese Einschränkungen helfen bei der Gewährleistung von Konsistenz und Datenqualität.
 * **Muster für konsistente Werte anwenden**: Wenn Ihre Identitätswerte einem bestimmten Muster entsprechen, sollten Sie die Einstellung **[!UICONTROL Muster]** verwenden, um diese Einschränkung zu erzwingen. Diese Einstellung kann Regeln wie nur Ziffern, Groß- oder Kleinbuchstaben oder bestimmte Zeichenkombinationen enthalten. Verwenden Sie reguläre Ausdrücke, um Muster in Ihren Zeichenfolgen abzugleichen.
 * **eVars in Analytics-Schemata begrenzen**: In der Regel sollte für ein Analytics-Schema nur ein eVar als Identität gekennzeichnet sein. Wenn Sie mehr als eine eVar als Identität verwenden möchten, sollten Sie überprüfen, ob die Datenstruktur optimiert werden kann.
-* **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Ihr ausgewähltes Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie es nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identitäts-Namespaces wie Telefonnummern.
-* **Beschränkt Warnungen bezüglich Triggern für benutzerdefinierte Namespace-Felder**: Setzen Sie Einschränkungen so, dass eine Warnung Trigger wird, wenn ein Schemafeld mit einem benutzerdefinierten Namespace markiert ist, ohne die Mindest- und Höchstlänge anzugeben. Die Warnung dient als wichtige Vorsichtsmaßnahme zur Wahrung der Datenintegrität. Informationen zum Festlegen von Einschränkungen für ein bestimmtes Feld finden Sie in der Dokumentation zu [typspezifischen Feldeigenschaften](../ui/fields/overview.md#type-specific-properties) .
+* **Eindeutigkeit eines ausgewählten Felds sicherstellen**: Ihr ausgewähltes Feld sollte im Vergleich zur primären Identität im Schema eindeutig sein. Ist dies nicht der Fall, markieren Sie es nicht als Identität. Wenn beispielsweise mehrere Kunden dieselbe E-Mail-Adresse angeben können, ist dieser Namespace keine geeignete Identität. Dieses Prinzip gilt auch für andere Identitäts-Namespaces wie Telefonnummern. Das Markieren eines nicht eindeutigen Felds als Identität könnte zu unerwünschten Profilzusammenbrüchen führen.
+* **Mindestlänge der Zeichenfolge überprüfen**: Alle Zeichenfolgenfelder sollten mindestens ein Zeichen lang sein, da Zeichenfolgenwerte niemals leer sein sollten. Nullwerte für nicht erforderliche Felder sind jedoch zulässig.
 
 ## Nächste Schritte
 
