@@ -2,7 +2,7 @@
 title: Verbinden Ihres Salesforce-Marketing Cloud-Kontos mit dem Experience Platform über die Benutzeroberfläche
 description: Erfahren Sie, wie Sie über die Benutzeroberfläche Ihr Salesforce Marketing Cloud-Konto mit Experience Platform verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 27%
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Mai 2025 nicht mehr unterstützt.
+>Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Juni 2025 eingestellt.
 
 In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Salesforce Marketing Cloud]-Konto über die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 

@@ -2,7 +2,7 @@
 title: Erstellen einer Phoenix-Basisverbindung mit der Flow Service-API
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Phoenix-Datenbank mit Adobe Experience Platform verbinden.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 38%
@@ -13,7 +13,7 @@ ht-degree: 38%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Phoenix] wird Ende Mai 2025 nicht mehr unterstützt.
+>Die Quelle [!DNL Phoenix] wird Ende Juni 2025 eingestellt.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

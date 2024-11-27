@@ -2,7 +2,7 @@
 title: Erstellen einer Oracle Eloqua-Quellverbindung über die Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Adobe Experience Platform über die Platform-Benutzeroberfläche mit Oracle Eloqua verbinden.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 59%
@@ -13,7 +13,7 @@ ht-degree: 59%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Oracle Eloqua] wird Ende Mai 2025 nicht mehr unterstützt.
+>Die Quelle [!DNL Oracle Eloqua] wird Ende Juni 2025 eingestellt.
 
 In diesem Tutorial werden die Schritte zum Erstellen einer 0-Quell-Verbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.[!DNL Oracle Eloqua]
 

@@ -2,7 +2,7 @@
 title: Verbinden Ihres Phoenix-Kontos über die Experience Platform-Benutzeroberfläche
 description: Erfahren Sie, wie Sie Ihr Phoenix-Konto verbinden und Daten aus Ihrer Phoenix-Datenbank über die Benutzeroberfläche zum Experience Platform übertragen.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 21%
@@ -13,7 +13,7 @@ ht-degree: 21%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Phoenix] wird Ende Mai 2025 nicht mehr unterstützt.
+>Die Quelle [!DNL Phoenix] wird Ende Juni 2025 eingestellt.
 
 In diesem Tutorial erfahren Sie, wie Sie Ihr [!DNL Phoenix]-Konto verbinden und Daten aus Ihrer [!DNL Phoenix]-Datenbank an Experience Platform übertragen.
 

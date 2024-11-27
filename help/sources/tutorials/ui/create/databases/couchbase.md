@@ -5,7 +5,7 @@ title: Erstellen einer Couchbase Source-Verbindung in der Benutzeroberfläche
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung von Couchbase erstellen.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 51%
@@ -16,7 +16,7 @@ ht-degree: 51%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Couchbase] wird Ende Mai 2025 nicht mehr unterstützt.
+>Die Quelle [!DNL Couchbase] wird Ende Juni 2025 eingestellt.
 
 Source-Connectoren in [!DNL Adobe Experience Platform] bieten die Möglichkeit, extern bezogene Daten planmäßig zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für [!DNL Couchbase] mithilfe der Benutzeroberfläche von [!DNL Platform] beschrieben.
 

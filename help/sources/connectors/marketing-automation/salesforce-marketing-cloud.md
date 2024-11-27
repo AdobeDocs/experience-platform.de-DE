@@ -4,7 +4,7 @@ title: Überblick über Salesforce Marketing Cloud Source
 description: Erfahren Sie, wie Sie Salesforce Marketing Cloud mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 42%
@@ -15,7 +15,7 @@ ht-degree: 42%
 
 >[!WARNING]
 >
->Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Mai 2025 nicht mehr unterstützt.
+>Die Quelle [!DNL Salesforce Marketing Cloud] wird Ende Juni 2025 eingestellt.
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
