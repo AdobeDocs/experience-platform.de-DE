@@ -2,10 +2,10 @@
 title: Datentyp für externe Source-Systemprüfungsattribute
 description: Erfahren Sie mehr über den Datentyp "Experience-Datenmodell (XDM)"für externe Source-Systemaudit-Attribute.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 7%
+source-wordcount: '186'
+ht-degree: 6%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 7%
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `externalKey` | [[!UICONTROL B2B Source]](./b2b-source.md) | Eine zusammengesetzte Kennung für die für die Prüfung verwendete Quelle. |
-| `createdBy` | Zeichenfolge | Der Name des Benutzers, der diesen Datensatz erstellt hat. |
+| `createdBy` | String | Der Name des Benutzers, der diesen Datensatz erstellt hat. |
 | `createdDate` | DateTime | Das Datum der Erstellung dieses Datensatzes. |
-| `externalID` | Zeichenfolge | Externe eindeutige Kennung für die Quelle. Dieser Wert hilft bei der Identifizierung und Deduplizierung bei Bedarf. |
+| `externalID` | String | Externe eindeutige Kennung für die Quelle. Dieser Wert hilft bei der Identifizierung und Deduplizierung bei Bedarf. |
 | `lastActivityDate` | DateTime | Das letzte Aktivitätsdatum für das Quellsystem. |
 | `lastReferencedDate` | DateTime | Das letzte referenzierte Datum für das Quellsystem. |
-| `lastUpdatedBy` | Zeichenfolge | Der Name der Person, die diesen Datensatz zuletzt aktualisiert hat. |
-| `lastUpdatedDate` | DateTime | Das letzte aktualisierte Datum für das Quellsystem. |
+| `lastUpdatedBy` | String | Der Name der Person, die diesen Datensatz zuletzt aktualisiert hat. |
+| `lastUpdatedDate` | DateTime | Das letzte aktualisierte Datum für das Quellsystem. Dieser Wert wird von der [Attributzusammenführungsrichtlinie ](../../profile/api/merge-policies.md#attribute-merge) verwendet, um die Priorität im Fall von Zusammenführungskonflikten zu bestimmen. |
 | `lastViewedDate` | DateTime | Das letzte angezeigte Datum für das Quellsystem. |
 
 {style="table-layout:auto"}
