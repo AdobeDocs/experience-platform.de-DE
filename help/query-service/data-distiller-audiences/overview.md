@@ -1,10 +1,11 @@
 ---
 title: Erstellen von Zielgruppen mit SQL
 description: Erfahren Sie, wie Sie mit der SQL-Zielgruppenerweiterung in Adobe Experience Platform Data Distiller Zielgruppen mit SQL-Befehlen erstellen, verwalten und veröffentlichen können. In diesem Handbuch werden alle Aspekte des Zielgruppen-Lebenszyklus behandelt, einschließlich Erstellung, Aktualisierung und Löschung von Profilen und Verwendung datengesteuerter Zielgruppendefinitionen für dateibasierte Ziele.
-source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
+exl-id: c35757c1-898e-4d65-aeca-4f7113173473
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 1%
+source-wordcount: '1164'
+ht-degree: 2%
 
 ---
 
@@ -125,7 +126,7 @@ Mit der SQL-Erweiterung erstellte Zielgruppen werden automatisch unter Data Dist
 
 ![Der Arbeitsbereich &quot;Zielgruppe&quot;in Adobe Experience Platform, in dem Data Distiller-Zielgruppen automatisch veröffentlicht und einsatzbereit angezeigt werden.](../images/data-distiller/sql-audiences/audiences.png)
 
-## Aktivieren von Zielgruppen für Ziele {#activate-audiences}
+## Zielgruppen für Ziele aktivieren {#activate-audiences}
 
 Aktivieren Sie Ihre Zielgruppen, indem Sie sie an ein beliebiges dateibasiertes Ziel wie [!DNL Amazon S3], [!DNL SFTP] oder [!DNL Azure Blob] richten. Die angereicherten Zielgruppenattribute stehen bei Bedarf zur weiteren Verfeinerung und Filterung zur Verfügung.
 
@@ -209,4 +210,4 @@ Als Nächstes können Sie die folgende Dokumentation lesen, um Ihre Zielgruppen-
 
 - **Zielgruppenbewertung durchsuchen**: Erfahren Sie mehr über die [Zielgruppenbewertungsmethoden in Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): Streaming-Segmentierung für Echtzeitaktualisierungen, Batch-Segmentierung für geplante oder On-Demand-Verarbeitung und Kantensegmentierung für die sofortige Auswertung des Edge Networks.
 - **Integrieren mit Zielen**: Lesen Sie das Handbuch zum [Exportieren von Dateien On-Demand an Batch-Ziele](../../destinations/ui/export-file-now.md) mithilfe der Benutzeroberfläche &quot;Platform Destinations&quot;.
-- **Audience Performance überprüfen**: Analysieren Sie, wie Ihre SQL-definierten Zielgruppen über verschiedene Kanäle hinweg funktionieren. Verwenden Sie Dateneinblicke, um Ihre Zielgruppendefinitionen und Zielgruppenstrategien anzupassen und zu verbessern. Lesen Sie das Dokument zu [Zielgruppeneinblicken](../../dashboards/insights/audiences.md) , um zu erfahren, wie Sie auf die SQL-Abfragen für Zielgruppeneinblicke in Adobe Real-time Customer Data Platform zugreifen und diese anpassen können. Anschließend können Sie eigene Einblicke erstellen und Rohdaten in umsetzbare Informationen umwandeln, indem Sie das Zielgruppen-Dashboard anpassen, um diese Einblicke effektiv zu visualisieren und für eine bessere Entscheidungsfindung zu verwenden.
+- **Audience Performance überprüfen**: Analysieren Sie, wie Ihre SQL-definierten Zielgruppen über verschiedene Kanäle hinweg funktionieren. Verwenden Sie Dateneinblicke, um Ihre Zielgruppendefinitionen und Zielgruppenstrategien anzupassen und zu verbessern. Lesen Sie das Dokument zu [Zielgruppeneinblicken](../../dashboards/insights/audiences.md) , um zu erfahren, wie Sie auf die SQL-Abfragen für Zielgruppeneinblicke in Adobe Real-Time CDP zugreifen und diese anpassen können. Anschließend können Sie eigene Einblicke erstellen und Rohdaten in umsetzbare Informationen umwandeln, indem Sie das Zielgruppen-Dashboard anpassen, um diese Einblicke effektiv zu visualisieren und für eine bessere Entscheidungsfindung zu verwenden.

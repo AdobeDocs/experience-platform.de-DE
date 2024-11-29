@@ -2,16 +2,16 @@
 title: Audiences Insights
 description: Entdecken Sie die SQL, die Ihre Zielgruppeneinblicke ermöglicht und nutzen Sie diese Abfragen, um benutzerdefinierte Einblicke zu generieren und Zielgruppendaten aus Adobe Experience Platform weiter zu untersuchen.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
 # Einblicke in Zielgruppen
 
-Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-time Customer Data Platform-Daten leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.
+Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-Time CDP-Daten leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.
 
 Machen Sie sich mit den Einblicken Ihrer Zielgruppe vertraut, indem Sie auf die SQL zugreifen, über die diese Benutzer verfügen, und dann Ihre eigenen Einblicke generieren, um die Identitäten und Profile Ihrer Zielgruppen weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 

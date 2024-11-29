@@ -2,16 +2,16 @@
 title: Destinations Insights
 description: Entdecken Sie die SQL-Datenbank, die Ihre Zieleinblicke nutzt, um benutzerdefinierte Einblicke zu generieren und die Aktivierung von Daten aus Adobe Experience Platform weiter zu untersuchen.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
 
 # Zieleinblicke
 
-Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-time Customer Data Platform-Daten leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.
+Die aus der Analyse Ihres Datenmodells gewonnenen Erkenntnisse machen Ihre Adobe Real-Time CDP-Daten leichter zugänglich, verständlich und für die Entscheidungsfindung wirkungsvoll.
 
 Machen Sie sich mit Ihren Zieleinblicken vertraut, indem Sie auf die SQL-Datenbank zugreifen, über die diese Benutzer verfügen, und generieren Sie dann Ihre eigenen Einblicke, um die Aktivierung von Daten von Adobe Experience Platform zu Ihren Zielplattformen weiter zu untersuchen. Transformieren Sie Ihre Rohdaten in neue umsetzbare Einblicke, indem Sie die vorhandene SQL des Real-Time CDP-Datenmodells als Anregung verwenden, um Abfragen für Ihre individuellen Geschäftsanforderungen zu erstellen.
 

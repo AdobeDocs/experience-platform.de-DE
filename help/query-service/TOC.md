@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Abfragedienst
 user-guide-description: Verwenden Sie Standard-SQL-Abfragen, um Daten im Data Lake in Experience Platform abzufragen.
 feature: Queries
 role: User,Developer
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 77%
+source-wordcount: '369'
+ht-degree: 76%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 77%
       - [Technische Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Daten in ML-Umgebungen exportieren](data-distiller/ml-feature-pipelines/export-data.md)
       - [End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Distiller-Statistiken für Daten {#advanced-statistics}
+- Statistiken zu Data Distiller und maschinelles Lernen {#advanced-statistics}
    - [Übersicht](advanced-statistics/overview.md)
    - [Funktionsentwicklung](advanced-statistics/feature-engineering.md)
    - [Modelle](advanced-statistics/models.md)

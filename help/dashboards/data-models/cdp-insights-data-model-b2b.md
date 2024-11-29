@@ -1,19 +1,19 @@
 ---
 title: Real-time Customer Data Platform Insights-Datenmodell B2B edition
 description: Erfahren Sie, wie Sie mit den Real-time Customer Data Platform Insights-Datenmodellen (B2B edition) SQL-Abfragen verwenden können, um Ihre eigenen Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle anzupassen.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '472'
 ht-degree: 3%
 
 ---
 
-# Real-time Customer Data Platform Insights-Datenmodell B2B edition
+# Real-Time CDP Insights-Datenmodell B2B edition
 
-Das Real-time Customer Data Platform Insights-Datenmodell für die B2B Edition stellt die Datenmodelle und SQL bereit, die die Einblicke für [Kontoprofile](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle von B2B-Marketing und Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
+Das Real-Time CDP Insights-Datenmodell für B2B edition stellt die Datenmodelle und SQL bereit, die die Einblicke für [Kontoprofile](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview) nutzen. Sie können diese SQL-Abfragevorlagen anpassen, um Real-Time CDP-Berichte für Ihre Anwendungsfälle von B2B-Marketing und Key Performance Indicators (KPI) zu erstellen. Diese Einblicke können dann als benutzerdefinierte Widgets für Ihre Dashboards verwendet werden.
 
 >[!AVAILABILITY]
 >
