@@ -2,9 +2,9 @@
 title: Sandbox Tooling Packages API Endpoint
 description: Mit dem Endpunkt /packages in der Sandbox Tooling API können Sie Pakete in Adobe Experience Platform programmgesteuert verwalten.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
+source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
 workflow-type: tm+mt
-source-wordcount: '2543'
+source-wordcount: '2547'
 ht-degree: 10%
 
 ---
@@ -367,6 +367,7 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Antwort**
@@ -403,6 +404,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 | Eigenschaft | Beschreibung | Typ | Obligatorisch |
@@ -424,7 +426,8 @@ Eine erfolgreiche Antwort gibt das veröffentlichte Paket zurück.
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -452,6 +455,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Antwort**
@@ -809,7 +813,8 @@ curl -X POST \
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -833,10 +838,11 @@ Die folgende Anfrage listet alle abhängigen Objekte für den {PACKAGE_ID} auf.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/children \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d'[
       {
         "id": "4d4c874ec3344d64bf8b3160e60ac78b",
@@ -1064,6 +1070,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Antwort**
@@ -1261,7 +1268,7 @@ curl -X POST  \
 | Eigenschaft | Beschreibung | Typ | Erforderlich |
 | --- | --- | --- | --- |
 | `linkingID` | Die ID der Freigabeanfrage, auf die Sie reagieren. | Zeichenfolge | Ja |
-| `status` | Die Aktion, die auf die Freigabeanforderung durchgeführt wird. | Zeichenfolge | Ja |
+| `status` | Die Aktion, die auf die Freigabeanforderung durchgeführt wird. Zulässige Werte sind `APPROVED` oder `REJECTED`. | Zeichenfolge | Ja |
 | `reason` | Der Grund, aus dem die Maßnahmen ergriffen werden. | Zeichenfolge | Ja |
 | `targetIMSOrgDetails` | Details zur Zielorganisation, bei der der ID-Wert die **ID** der Zielorganisation sein sollte, der Name-Wert der **NAME** der Zielorganisation und der Regionswert die Zielorganisationen **REGION** sein sollte. | Objekt | Ja |
 
@@ -1298,7 +1305,7 @@ Auflisten ausgehender und eingehender Freigabeanfragen durch eine GET-Anfrage an
 **API-Format**
 
 ```http
-POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 ```
 
 | Parameter | Akzeptierte/Standardwerte |
@@ -1420,13 +1427,6 @@ Eine erfolgreiche Antwort gibt Details zum angeforderten Paket und dessen Freiga
         "packageId": "{PACKAGE_ID}",
         "status": "PENDING",
         "initiatedBy": "acme@3ec9197a65a86f34494221.e",
-        "transferDetails": {
-            "messages": [
-                "Fetched Package",
-                "Fetched Manifest"
-            ],
-            "additionalMetadata": null
-        },
         "requestType": "PRIVATE"
     }
 ]
@@ -1475,18 +1475,6 @@ Eine Erfolgsantwort gibt Details einer Freigabeanfrage zurück.
     "status": "COMPLETED",
     "initiatedBy": "{INITIATED_BY}",
     "createdDate": 1724442856000,
-    "transferDetails": {
-        "messages": [
-            "Fetched Package",
-            "Fetched Manifest",
-            "Tenant Identified",
-            "Fetched Sandbox Id",
-            "Fetched Blob Files",
-            "Message Published to Kafka",
-            "Completed Transfer"
-        ],
-        "additionalMetadata": null
-    },
     "requestType": "PRIVATE"
 }
 ```
@@ -1545,19 +1533,6 @@ Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den be
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726129077000,
             "createdDate": 1726129062000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         },
         {
@@ -1572,19 +1547,6 @@ Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den be
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726066046000,
             "createdDate": 1726065936000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         }
     ],
@@ -1600,7 +1562,7 @@ Eine erfolgreiche Antwort gibt eine Liste aller Übertragungsanfragen aus den be
 **API-Format**
 
 ```http
-GET `/packages/update`
+PUT `/packages/update`
 ```
 
 **Anfrage**
@@ -1608,8 +1570,8 @@ GET `/packages/update`
 Die folgende Anfrage ändert die Verfügbarkeit von Paketen von privat zu öffentlich.
 
 ```shell
-curl -X GET \
-  http://platform.adobe.io/data/foundation/exim/packages/update \
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/exim/packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1998,10 +1960,6 @@ curl -X GET \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -d '{
-      "imsOrgId": "{ORG_ID}",
-      "packageId": "{PACKAGE_ID}"
-  }'
 ```
 
 | Eigenschaft | Beschreibung | Typ | Erforderlich |

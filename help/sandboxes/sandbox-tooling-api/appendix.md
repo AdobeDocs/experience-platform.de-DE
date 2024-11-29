@@ -2,9 +2,9 @@
 title: Anhang zum Sandbox Tooling API
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Sandbox Tooling-API.
 exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 955c6946786e9425bdb99d623595420a6d13747e
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '188'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,9 @@ Die Sandbox Tooling-API unterstützt die Verwendung von Abfrageparametern zum Pa
 | `limit` | Die maximale Anzahl von Datensätzen, die in der Antwort zurückgegeben werden. Der Standardwert ist 20. |
 | `start` | Der Beginn, an dem eine untergeordnete Liste von Elementen beginnen soll. |
 | `targetSandbox` | Stellt den Namen der Sandbox dar, in die Sie Ihre Artefakte importieren möchten. |
-| `jobType` | Der Auftragstyp. Dieser Wert kann NEW, RESUME und ROLLBACK lauten. |
-| `jobStatus` | Der Status des Auftrags. Dieser Wert kann &quot;Ausstehend&quot;, &quot;IN_PROGRESS&quot;, &quot;SUCCESS&quot;, &quot;FEHLGESCHLAGEN&quot;und &quot;ABGEBROCHEN&quot;sein. |
-| `requestType` | Der Typ der Anforderung. Dieser Wert kann EXPORT, IMPORT und COPY sein. |
-| `expiryPeriod ` | Dieser vom Benutzer angegebene Zeitraum definiert das Ablaufdatum des Pakets (in Tagen) ab der Veröffentlichung des Pakets. Dieser Wert darf nicht negativ sein. Der Standardwert beträgt 90 Tage ab dem Zeitpunkt, zu dem die Update- oder Publish-API aufgerufen wird. |
+| `jobType` | Der Auftragstyp. Dieser Wert kann `NEW`, `RESUME` oder `ROLLBACK` sein. |
+| `jobStatus` | Der Status des Auftrags. Dieser Wert kann `PENDING`, `IN_PROGRESS`, `SUCCESS`, `FAILED` oder `CANCELLED` sein. |
+| `requestType` | Der Typ der Anforderung. Dieser Wert kann `EXPORT`, `IMPORT` oder `COPY` sein. |
+| `expiryPeriod` | Dieser vom Benutzer angegebene Zeitraum definiert das Ablaufdatum des Pakets (in Tagen) ab der Veröffentlichung des Pakets. Dieser Wert darf nicht negativ sein. Der Standardwert beträgt 90 Tage ab dem Zeitpunkt, zu dem die Update- oder Publish-API aufgerufen wird. |
+| `packageType` | Der Pakettyp. Dieser Wert kann `PARTIAL` oder `FULL` sein. |
+| `status` | Der Status des Pakets. Dieser Wert kann `DRAFT`, `PUBLISHED`, `PUBLISH_IN_PROGRESS` oder `PUBLISH_FAILED` sein. |
