@@ -2,9 +2,9 @@
 title: AI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 653c97c8632eeaf4cad02accc63d3e4dbffb54dd
+source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ Weitere Informationen zum AI-Assistenten finden Sie im [Sicherheitsdatenblatt f√
 Unter den unten stehenden Links erhalten Sie weitere Informationen zu Anwendungsf√§llen, Funktionen und vielem mehr von AI Assistant.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
-<td><strong>Real-time Customer Data Platform</strong><br/>
+<td><strong>Real-Time CDP</strong><br/>
 <a href="./home.md" target="_blank">Dokumentation</a> - <a href="./ui-guide.md" target="_blank">UI-Handbuch</a> - <a href="./access.md" target="_blank">Zugriff auf den AI-Assistenten</a> - <a href="./privacy.md" target="_blank">Datenschutz, Sicherheit und Governance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
