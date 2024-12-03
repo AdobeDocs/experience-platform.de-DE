@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Datenmodell der Einzelhandelsbranche
 description: Sehen Sie sich ein standardisiertes Datenmodell für den Einzelhandel an, das mit dem Experience-Datenmodell (XDM) kompatibel ist und in Adobe Experience Platform verwendet werden kann.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '458'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -21,12 +21,12 @@ Das folgende Entitätsbeziehungsdiagramm (ERD) stellt ein standardisiertes Daten
 Verwenden Sie die folgende Legende, um diese ERD zu interpretieren:
 
 * Jede in angezeigte Entität basiert auf einer zugrunde liegenden [Erlebnis-Datenmodell (XDM)-Klasse](../composition.md#class).
-* Für eine bestimmte Entität stellt jede in **fett** markierte Zeile eine Feldergruppe oder einen Datentyp dar, wobei die entsprechenden Felder unten in unfettetem Text aufgeführt sind.
+* Die unter einem übergeordneten Feld eingerückten Felder stellen ein untergeordnetes Feld oder Unterfeld dar, das zur Feldergruppe des übergeordneten Felds gehört.
 * Die wichtigsten Felder für eine bestimmte Entität sind rot hervorgehoben.
 * Alle Eigenschaften, die zur Identifizierung einzelner Kunden verwendet werden können, werden als &quot;Identität&quot;gekennzeichnet, wobei eine dieser Eigenschaften als &quot;primäre Identität&quot;markiert ist.
 * Entitätsbeziehungen werden als nicht abhängig markiert, da Cookie-basierte Ereignisse häufig nicht die Person oder Person bestimmen können, die die Transaktion getätigt hat.
 
-![](../../images/industries/retail.png)
+![Ein Beispiel-ERD für ein Datenmodell der Einzelhandelsbranche](../../images/industries/retail.png)
 
 >[!NOTE]
 >

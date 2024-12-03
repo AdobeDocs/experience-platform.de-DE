@@ -2,9 +2,9 @@
 title: Datenmodell der Gesundheitsbranche
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (ERD) an, das ein standardisiertes Datenmodell für die Gesundheitsbranche beschreibt. Dieses Datenmodell ist mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '605'
 ht-degree: 8%
 
 ---
@@ -20,12 +20,12 @@ Das folgende Entitätsbeziehungsdiagramm (ERD) stellt ein standardisiertes Daten
 Verwenden Sie die folgende Legende, um diese ERD zu interpretieren:
 
 * Jede in angezeigte Entität basiert auf einer zugrunde liegenden [Erlebnis-Datenmodell (XDM)-Klasse](../composition.md#class).
-* Für eine bestimmte Entität stellt jede in **fett** markierte Zeile eine Feldergruppe oder einen Datentyp dar, wobei die entsprechenden Felder unten in unfettetem Text aufgeführt sind.
+* Die unter einem übergeordneten Feld eingerückten Felder stellen ein untergeordnetes Feld oder Unterfeld dar, das zur Feldergruppe des übergeordneten Felds gehört.
 * Die wichtigsten Felder für eine bestimmte Entität sind rot hervorgehoben.
 * Alle Eigenschaften, die zur Identifizierung einzelner Kunden verwendet werden können, werden als &quot;Identität&quot;gekennzeichnet, wobei eine dieser Eigenschaften als &quot;primäre Identität&quot;markiert ist.
 * Entitätsbeziehungen werden als nicht abhängig markiert, da Cookie-basierte Ereignisse häufig nicht die Person oder Person bestimmen können, die die Transaktion getätigt hat.
 
-![Bild mit dem Entitätsbeziehungsdiagramm für das Datenmodell der Gesundheitsbranche](../../images/industries/healthcare.png)
+![Ein Beispiel-ERD für ein Datenmodell der Gesundheitsbranche](../../images/industries/healthcare.png)
 
 >[!NOTE]
 >

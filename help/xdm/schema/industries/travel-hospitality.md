@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Datenmodell für die Reise- und Gastgewerbe
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (ERD) an, das ein standardisiertes Datenmodell für die Reise- und Gastgewerbe beschreibt, das mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel ist.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 4%
@@ -21,12 +21,12 @@ Das folgende Entitätsbeziehungsdiagramm (ERD) stellt ein standardisiertes Daten
 Verwenden Sie die folgende Legende, um diese ERD zu interpretieren:
 
 * Jede in angezeigte Entität basiert auf einer zugrunde liegenden [Erlebnis-Datenmodell (XDM)-Klasse](../composition.md#class).
-* Für eine bestimmte Entität stellt jede in **fett** markierte Zeile eine Feldergruppe oder einen Datentyp dar, wobei die entsprechenden Felder unten in unfettetem Text aufgeführt sind.
+* Die unter einem übergeordneten Feld eingerückten Felder stellen ein untergeordnetes Feld oder Unterfeld dar, das zur Feldergruppe des übergeordneten Felds gehört.
 * Die wichtigsten Felder für eine bestimmte Entität sind rot hervorgehoben.
 * Alle Eigenschaften, die zur Identifizierung einzelner Kunden verwendet werden können, werden als &quot;Identität&quot;gekennzeichnet, wobei eine dieser Eigenschaften als &quot;primäre Identität&quot;markiert ist.
 * Entitätsbeziehungen werden als nicht abhängig markiert, da Cookie-basierte Ereignisse häufig nicht die Person oder Person bestimmen können, die die Transaktion getätigt hat.
 
-![](../../images/industries/travel-hospitality.png)
+![Ein Beispiel-ERD für ein Datenmodell für Reisegastfreundlichkeit](../../images/industries/travel-hospitality.png)
 
 >[!NOTE]
 >

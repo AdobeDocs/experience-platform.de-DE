@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Datenmodell der Finanzdienstleistungsbranche
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (ERD) an, in dem ein standardisiertes Datenmodell für die Bank-, Finanz- und Versicherungsbranche (BFSI) beschrieben wird. Dieses Datenmodell ist mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 2%
@@ -21,12 +21,12 @@ Das folgende Entitätsbeziehungsdiagramm (ERD) stellt ein standardisiertes Daten
 Verwenden Sie die folgende Legende, um diese ERD zu interpretieren:
 
 * Jede in angezeigte Entität basiert auf einer zugrunde liegenden [Erlebnis-Datenmodell (XDM)-Klasse](../composition.md#class).
-* Für eine bestimmte Entität stellt jede in **fett** markierte Zeile eine Feldergruppe oder einen Datentyp dar, wobei die entsprechenden Felder unten in unfettetem Text aufgeführt sind.
+* Die unter einem übergeordneten Feld eingerückten Felder stellen ein untergeordnetes Feld oder Unterfeld dar, das zur Feldergruppe des übergeordneten Felds gehört.
 * Die wichtigsten Felder für eine bestimmte Entität sind rot hervorgehoben.
 * Alle Eigenschaften, die zur Identifizierung einzelner Kunden verwendet werden können, werden als &quot;Identität&quot;gekennzeichnet, wobei eine dieser Eigenschaften als &quot;primäre Identität&quot;markiert ist.
 * Entitätsbeziehungen werden als nicht abhängig markiert, da Cookie-basierte Ereignisse häufig nicht die Person oder Person bestimmen können, die die Transaktion getätigt hat.
 
-![](../../images/industries/financial.png)
+![Ein Beispiel-ERD für ein Datenmodell der Finanzbranche](../../images/industries/financial.png)
 
 >[!NOTE]
 >
