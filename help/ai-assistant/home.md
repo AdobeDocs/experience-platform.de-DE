@@ -2,9 +2,9 @@
 title: KI-Assistent in Adobe Experience Platform - Überblick
 description: Erfahren Sie mehr über den KI-Assistenten, seine Funktionen und Anwendungsbeispiele sowie darüber, wie Sie damit Ihren Workflow mit Adobe Experience Platform und Real-time Customer Data Platform beschleunigen können.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '938'
 ht-degree: 9%
 
 ---
@@ -23,7 +23,7 @@ AI Assistant in Adobe Experience Platform ist eine Dialogerfahrung, mit der Sie 
 
 >[!IMPORTANT]
 >
->Sie müssen einer [Benutzervereinbarung](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) zustimmen, bevor Sie den KI-Assistenten verwenden können. Die Nutzervereinbarung enthält auch die öffentliche Betavereinbarung. Dies ist erforderlich, damit Sie zusätzliche Funktionen des KI-Assistenten verwenden können, wenn sie als Beta-Version eingeführt werden.
+>Sie müssen einer [Benutzervereinbarung](https://www.adobe.com/de/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) zustimmen, bevor Sie den KI-Assistenten verwenden können. Die Nutzervereinbarung enthält auch die öffentliche Betavereinbarung. Dies ist erforderlich, damit Sie zusätzliche Funktionen des KI-Assistenten verwenden können, wenn sie als Beta-Version eingeführt werden.
 
 +++Auswählen zum Anzeigen der Benutzeroberfläche für Benutzervereinbarungen
 
@@ -58,6 +58,10 @@ Produktkenntnis bezieht sich auf Konzepte und Themen, die auf der Experience Lea
 | Fehlerbehebung | <ul><li>Warum kann ich ein Schema, das im Besitz von Adobe ist, nicht für ein Profil aktivieren?</li><li>Warum kann ich ein Segment nicht löschen?</li></ul> |
 
 {style="table-layout:auto"}
+
+Sehen Sie sich das folgende Video an, um weitere Informationen zu Produktwissen von AI Assistant zu erhalten:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Betriebliche Erkenntnisse {#operational-insights}
 
