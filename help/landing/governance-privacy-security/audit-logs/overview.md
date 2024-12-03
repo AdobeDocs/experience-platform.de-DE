@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können,
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 39%
+source-wordcount: '1388'
+ht-degree: 37%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 39%
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht es Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Dienste und Funktionen in Form von &quot;Auditprotokollen&quot;zu überprüfen. Diese Protokolle bilden ein Audit-Protokoll, das Ihnen bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen kann, die Richtlinien der Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
 Grundsätzlich teilt ein Prüfprotokoll **Wer** **was** und **wann** mit. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute für den Aktionstyp angeben.
+
+>[!NOTE]
+>
+> Die Metadaten für die Aktionen **Benutzer hinzufügen** und **Benutzer entfernen** innerhalb der Ressource **Rolle** enthalten nicht die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat. Stattdessen zeigen die Protokolle die vom System generierte E-Mail-ID an (system@adobe.com).
 
 In diesem Dokument werden Auditprotokolle in Platform behandelt, einschließlich der Anzeige und Verwaltung in der Benutzeroberfläche oder API.
 
