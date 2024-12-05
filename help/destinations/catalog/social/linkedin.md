@@ -3,9 +3,9 @@ keywords: LinkedIn-Verbindung; LinkedIn-Verbindung; LinkedIn-Ziele; LinkedIn;
 title: Verbindung von LinkedIn mit übereinstimmenden Zielgruppen
 description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 37%
 
 ---
@@ -149,7 +149,7 @@ Anweisungen zum Aktivieren von Zielgruppen für dieses Ziel finden Sie unter [Ak
 
 ## Exportierte Daten {#exported-data}
 
-Eine erfolgreiche Aktivierung bedeutet, dass in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login) programmgesteuert eine benutzerdefinierte Audience vom Typ [!DNL LinkedIn] erstellt wird. Die Zielgruppenmitgliedschaft wird hinzugefügt und entfernt, da Benutzer für die aktivierten Zielgruppen qualifiziert oder disqualifiziert sind.
+Eine erfolgreiche Aktivierung bedeutet, dass eine benutzerdefinierte Zielgruppe vom Typ [!DNL LinkedIn] programmgesteuert in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login) erstellt wird. Die Zielgruppenmitgliedschaft wird angepasst, wenn Benutzer für die aktivierten Zielgruppen qualifiziert oder disqualifiziert sind.
 
 >[!TIP]
 >

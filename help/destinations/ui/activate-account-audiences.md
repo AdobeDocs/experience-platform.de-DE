@@ -2,12 +2,12 @@
 title: Kontozielgruppen für Ziele aktivieren
 type: Tutorial
 description: Erfahren Sie, wie Sie Kontozielgruppen für Ziele aktivieren.
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 7%
 
 ---
@@ -22,7 +22,7 @@ In diesem Artikel wird der Workflow erläutert, der zum Exportieren von [Konto-Z
 
 ## Unterstützte Ziele {#supported-destinations}
 
-Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie den Filter **[!UICONTROL Datentypen]** und wählen Sie **[!UICONTROL Konten]** aus, um die Ziele anzuzeigen, die die Aktivierung von Kontozielgruppen unterstützen. Derzeit ist der Export von Kontozielgruppen nur für bestimmte Cloud-Speicher-Ziele ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) und [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) und das Ziel [(Unternehmen) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) verfügbar.
+Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Verwenden Sie den Filter **[!UICONTROL Datentypen]** und wählen Sie **[!UICONTROL Konten]** aus, um die Ziele anzuzeigen, die die Aktivierung von Kontozielgruppen unterstützen. Derzeit ist der Export von Kontozielgruppen nur für bestimmte Cloud-Speicher-Ziele verfügbar ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) und [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) und die LinkedIn-Matches [Demandbase](/help/destinations/catalog/advertising/demandbase.md) und [ (Unternehmen) Zielgruppen](/help/destinations/catalog/social/linkedin-b2b.md)-Streaming-Ziel.
 
 ![Ziele, die Kontozielgruppen unterstützen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -57,7 +57,7 @@ Befolgen Sie die Anweisungen zum Auswählen eines Ziels, an das Sie Ihre Datens�
 >
 >Die Ziele, die Zielgruppen für Konten exportieren können, werden mit einem Symbol oben rechts auf der Karte angezeigt, das dem unten hervorgehobenen Ziel ähnelt. Alternativ können Sie den Datentypfilter verwenden, um nur Ziele anzuzeigen, die Zielgruppen für Konten exportieren können, wie oben auf der Seite ](#supported-destinations) gezeigt.[
 
-![Amazon S3-Zielseite, die hervorgehobene Profilzielgruppen exportieren kann.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+![Demandbase-Zielseite, die hervorgehobene Profilzielgruppen exportieren kann.](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. Wählen Sie **[!UICONTROL Datentypkonten]**, gefolgt von der Zielverbindung, in die Sie Datensätze exportieren möchten, und wählen Sie dann **[!UICONTROL Weiter]** aus.
 

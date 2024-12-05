@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 85%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 85%
    * Social-Media-Ziele{#social}
       * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
+      * [(Firmen) Verbindung zwischen LinkedIn Matched Audiences](./catalog/social/linkedin-b2b.md)
       * [Verbindung für zugeordnete LinkedIn-Zielgruppen](./catalog/social/linkedin.md)
       * [TikTok-Verbindung](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences]-Verbindung](./catalog/social/twitter.md)
