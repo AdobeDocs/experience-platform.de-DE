@@ -3,9 +3,9 @@ title: Exportieren von Datensätzen in Cloud-Speicher-Ziele
 type: Tutorial
 description: Erfahren Sie, wie Sie Datensätze aus Adobe Experience Platform in Ihren bevorzugten Cloud-Speicher exportieren.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2612'
 ht-degree: 37%
 
 ---
@@ -293,54 +293,54 @@ Beachten Sie die folgenden Einschränkungen für die allgemeine Verfügbarkeit v
 
 **Können wir eine Datei ohne Ordner generieren, wenn wir einfach unter `/` als Ordnerpfad speichern? Wenn kein Ordnerpfad erforderlich ist, wie werden dann Dateien mit doppelten Namen in einem Ordner oder Speicherort generiert?**
 
-+++
++++Antwort
 Ab der Version vom September 2024 ist es möglich, den Ordnernamen anzupassen und sogar `/` für den Export von Dateien für alle Datensätze im selben Ordner zu verwenden. Adobe empfiehlt dies nicht für Ziele, die mehrere Datensätze exportieren, da systemgenerierte Dateinamen, die zu verschiedenen Datensätzen gehören, im selben Ordner gemischt werden.
 +++
 
 **Können Sie die Manifestdatei an einen Ordner und Datendateien in einen anderen Ordner weiterleiten?**
 
-+++
++++Antwort
 Nein, es gibt keine Möglichkeit, die Manifestdatei an einen anderen Speicherort zu kopieren.
 +++
 
 **Können wir die Sequenzierung oder den Zeitpunkt der Dateibereitstellung steuern?**
 
-+++
++++Antwort
 Es gibt Optionen zum Planen des Exports. Es gibt keine Optionen zum Verschieben oder Sequenzieren der Kopie der Dateien. Sie werden nach der Erstellung an Ihren Speicherort kopiert.
 +++
 
 **Welche Formate sind für die Manifestdatei verfügbar?**
 
-+++
++++Antwort
 Die Manifestdatei liegt im JSON-Format vor.
 +++
 
 **Gibt es API-Verfügbarkeit für die Manifestdatei?**
 
-+++
++++Antwort
 Für die Manifestdatei ist keine API verfügbar, sie enthält jedoch eine Liste mit Dateien, die den Export enthalten.
 +++
 
 **Können der Manifestdatei zusätzliche Details hinzugefügt werden (d. h. die Datensatzanzahl)? Wenn ja, wie?**
 
-+++
++++Antwort
 Es ist nicht möglich, der Manifestdatei zusätzliche Informationen hinzuzufügen. Die Datensatzanzahl ist über die Entität `flowRun` verfügbar (über die API abgefragt). Weitere Informationen finden Sie unter Zielüberwachung.
 +++
 
 **Wie werden Datendateien aufgeteilt? Wie viele Datensätze pro Datei?**
 
-+++
++++Antwort
 Datendateien werden nach der Standardpartitionierung im Experience Platform Data Lake aufgeteilt. Größere Datensätze haben eine höhere Anzahl von Partitionen. Die Standardpartitionierung kann vom Benutzer nicht konfiguriert werden, da sie für das Lesen optimiert ist.
 +++
 
 **Können wir einen Schwellenwert festlegen (Anzahl an Datensätzen pro Datei)?**
 
-+++
++++Antwort
 Nein, das ist nicht möglich.
 +++
 
 **Wie senden wir einen Datensatz erneut, wenn der erste Versand fehlerhaft ist?**
 
-+++
++++Antwort
 Bei den meisten Systemfehlern werden automatisch Wiederholungen durchgeführt.
 +++

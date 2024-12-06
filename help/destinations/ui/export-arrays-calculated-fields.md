@@ -3,7 +3,7 @@ title: Verwenden von berechneten Feldern zum Exportieren von Arrays als Zeichenf
 type: Tutorial
 description: Erfahren Sie, wie Sie berechnete Felder verwenden können, um Arrays aus Real-Time CDP als Zeichenfolgen in Cloud-Speicher-Ziele zu exportieren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 7%
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->* Die Funktion zum Exportieren von Arrays über berechnete Felder ist allgemein verfügbar.
+>Die Funktion zum Exportieren von Arrays über berechnete Felder ist allgemein verfügbar.
 
 Erfahren Sie, wie Sie Arrays über berechnete Felder aus Real-Time CDP als Zeichenfolgen in [Cloud-Speicher-Ziele](/help/destinations/catalog/cloud-storage/overview.md) exportieren. Lesen Sie dieses Dokument, um die durch diese Funktion aktivierten Anwendungsfälle zu verstehen.
 
