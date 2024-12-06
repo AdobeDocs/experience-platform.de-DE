@@ -2,7 +2,7 @@
 title: sendMediaEvent
 description: Erfahren Sie, wie Sie mit dem Befehl sendMediaEvent Mediensitzungen im Web SDK verfolgen können.
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 877e12f1d53bb4a8d7c2564490d4e8f3e9e34e34
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### Statusaktualisierungen {#state-updates}
 
-Der Ereignistyp `media.stateUpdate` wird verwendet, um zu verfolgen, wann sich der Player-Status ändert. Dieses Ereignis sollte gesendet werden, wenn sich der Player-Status ändert.
+Der Ereignistyp `media.statesUpdate` wird verwendet, um zu verfolgen, wann sich der Player-Status ändert. Dieses Ereignis sollte gesendet werden, wenn sich der Player-Status ändert.
 
 >[!BEGINTABS]
 
@@ -636,7 +636,7 @@ Der Ereignistyp `media.stateUpdate` wird verwendet, um zu verfolgen, wann sich d
 alloy("sendMediaEvent", {
     playerId: "movie-test",
     xdm: {
-        eventType: "media.stateUpdate",
+        eventType: "media.statesUpdate",
         mediaCollection: {
             statesStart: [{
                     name: "mute"
