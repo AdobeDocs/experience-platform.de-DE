@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Abfrage-Service-Benutzeroberfläche
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, mit der Sie Abfragen schreiben und ausführen, zuvor ausgeführte Abfragen anzeigen und auf Abfragen zugreifen können, die von Benutzern in Ihrer Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 24%
@@ -175,4 +175,3 @@ Die Registerkarte **[!UICONTROL Anmeldedaten]** zeigt sowohl Ihre ablaufenden al
 ## Nächste Schritte
 
 Nachdem Sie sich mit der Query Service-Benutzeroberfläche für [!DNL Platform] vertraut gemacht haben, können Sie auf den Abfrage-Editor zugreifen, um Ihre eigenen Abfrageprojekte zu erstellen, die für andere Benutzer in Ihrer Organisation freigegeben werden können. Weitere Informationen zum Erstellen und Ausführen von Abfragen im Abfrage-Editor finden Sie im [Benutzerhandbuch für den Abfrage-Editor](./user-guide.md).
-
