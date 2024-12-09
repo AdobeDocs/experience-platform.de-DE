@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
+source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 74%
+source-wordcount: '705'
+ht-degree: 77%
 
 ---
 
@@ -29,30 +29,30 @@ ht-degree: 74%
       * [Gesundheitswesen](./schema/industries/healthcare.md)
       * [Telekommunikation](./schema/industries/telecom.md)
       * [Reisen und Touristik](./schema/industries/travel-hospitality.md)
-   * Datenmodell V2 {#health-care-data-model-v2} der Gesundheitsfürsorge
-      * [Gesundheitswesen V2](./schema/industries/healthcare-v2.md)
-      * Klassen {#health-care-classes}
+   * Datenmodell für das Gesundheitswesen V2 {#healthcare}
+      * [Gesundheitswesen V2](./schema/healthcare-v2.md)
+      * Klassen {#classes}
          * [Standort](./classes/location.md)
-      * Feldergruppen {#health-care-v2-field-groups}
-         * XDM Individual Profile {#health-care-v2-profile}
-            * [Gesundheitskonto](./field-groups/profile/healthcare-account.md)
-            * [Gesundheitsplan](./field-groups/profile/healthcare-care-plan.md)
-            * [Gesundheitsziel](./field-groups/profile/healthcare-goal.md)
-            * [Gesundheitsorganisation](./field-groups/profile/healthcare-organization.md)
-            * [Patienten im Gesundheitswesen](./field-groups/profile/healthcare-patient.md)
-            * [Gesundheitspraxis](./field-groups/profile/healthcare-practioner.md)
-            * [Gesundheitsplan](./field-groups/profile/healthcare-schedule.md)
-         * XDM-Erlebnisereignis {#health-care-v2-event}
-            * [Immunisierung im Gesundheitswesen](./field-groups/event/healthcare-immunization.md)
-         * Ort {#health-care-v2-location}
-            * [Ort der Gesundheitsversorgung](./field-groups/location/healthcare-location.md)
-         * Medizin {#health-care-v2-medication}
-            * [Medikationskosten im Gesundheitswesen](./field-groups/medication/healthcare-medication-dispense.md)
-            * [Medizinische Anfrage](./field-groups/medication/healthcare-medication-request.md)
-            * [Medizin im Gesundheitswesen](./field-groups/medication/healthcare-medication-v2.md)
-         * Pläne {#health-care-v2-plans}
-            * [Gesundheitsfürsorge](./field-groups/plan/healthcare-coverage.md)
-      * Datentypen {#health-care-v2-data-types}
+      * Feldergruppen {#field-groups}
+         * XDM Individual Profile {#profile}
+            * [Konto](./field-groups/profile/healthcare-account.md)
+            * [Pflegeplan](./field-groups/profile/healthcare-care-plan.md)
+            * [Ziel](./field-groups/profile/healthcare-goal.md)
+            * [Organisation](./field-groups/profile/healthcare-organization.md)
+            * [Patient](./field-groups/profile/healthcare-patient.md)
+            * [Anwendende](./field-groups/profile/healthcare-practioner.md)
+            * [Zeitplan](./field-groups/profile/healthcare-schedule.md)
+         * XDM-Erlebnisereignis {#event}
+            * [Immunisierung](./field-groups/event/healthcare-immunization.md)
+         * Ort {#location}
+            * [Standort](./field-groups/location/healthcare-location.md)
+         * Medizin {#medication}
+            * [Medikationskosten](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Mediationsanfrage](./field-groups/medication/healthcare-medication-request.md)
+            * [Medizin](./field-groups/medication/healthcare-medication-v2.md)
+         * Plan {#plan}
+            * [Reichweite](./field-groups/plan/healthcare-coverage.md)
+      * Datentypen {#data-types}
          * [Adresse](./data-types/healthcare/address.md)
          * [Anmerkung](./data-types/healthcare/annotation.md)
          * [Verfügbarkeit](./data-types/healthcare/availability.md)
