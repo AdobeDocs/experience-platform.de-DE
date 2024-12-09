@@ -5,10 +5,10 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 81%
+source-wordcount: '719'
+ht-degree: 74%
 
 ---
 
@@ -29,6 +29,53 @@ ht-degree: 81%
       * [Gesundheitswesen](./schema/industries/healthcare.md)
       * [Telekommunikation](./schema/industries/telecom.md)
       * [Reisen und Touristik](./schema/industries/travel-hospitality.md)
+   * Datenmodell V2 {#health-care-data-model-v2} der Gesundheitsfürsorge
+      * [Gesundheitswesen V2](./schema/industries/healthcare-v2.md)
+      * Klassen {#health-care-classes}
+         * [Standort](./classes/location.md)
+      * Feldergruppen {#health-care-v2-field-groups}
+         * XDM Individual Profile {#health-care-v2-profile}
+            * [Gesundheitskonto](./field-groups/profile/healthcare-account.md)
+            * [Gesundheitsplan](./field-groups/profile/healthcare-care-plan.md)
+            * [Gesundheitsziel](./field-groups/profile/healthcare-goal.md)
+            * [Gesundheitsorganisation](./field-groups/profile/healthcare-organization.md)
+            * [Patienten im Gesundheitswesen](./field-groups/profile/healthcare-patient.md)
+            * [Gesundheitspraxis](./field-groups/profile/healthcare-practioner.md)
+            * [Gesundheitsplan](./field-groups/profile/healthcare-schedule.md)
+         * XDM-Erlebnisereignis {#health-care-v2-event}
+            * [Immunisierung im Gesundheitswesen](./field-groups/event/healthcare-immunization.md)
+         * Ort {#health-care-v2-location}
+            * [Ort der Gesundheitsversorgung](./field-groups/location/healthcare-location.md)
+         * Medizin {#health-care-v2-medication}
+            * [Medikationskosten im Gesundheitswesen](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Medizinische Anfrage](./field-groups/medication/healthcare-medication-request.md)
+            * [Medizin im Gesundheitswesen](./field-groups/medication/healthcare-medication-v2.md)
+         * Pläne {#health-care-v2-plans}
+            * [Gesundheitsfürsorge](./field-groups/plan/healthcare-coverage.md)
+      * Datentypen {#health-care-v2-data-types}
+         * [Adresse](./data-types/healthcare/address.md)
+         * [Anmerkung](./data-types/healthcare/annotation.md)
+         * [Verfügbarkeit](./data-types/healthcare/availability.md)
+         * [Codeable Concept](./data-types/healthcare/codeable-concept.md)
+         * [Codeable Reference](./data-types/healthcare/codeable-reference.md)
+         * [Kodierung](./data-types/healthcare/coding.md)
+         * [Kontaktpunkt](./data-types/healthcare/contact-point.md)
+         * [Dosierung](./data-types/healthcare/dosage.md)
+         * [Dauer](./data-types/healthcare/duration.md)
+         * [Erweiterte Kontaktdetails](./data-types/healthcare/extended-contact-detail.md)
+         * [Menschname](./data-types/healthcare/human-name.md)
+         * [Kennung](./data-types/healthcare/identifier.md)
+         * [Geld](./data-types/healthcare/money.md)
+         * [Zeitraum](./data-types/healthcare/period.md)
+         * [Person](./data-types/healthcare/person.md)
+         * [Menge](./data-types/healthcare/quantity.md)
+         * [Bereich](./data-types/healthcare/range.md)
+         * [Verhältnis](./data-types/healthcare/ratio.md)
+         * [Referenz](./data-types/healthcare/reference.md)
+         * [Wiederholen](./data-types/healthcare/repeat.md)
+         * [Einfache Menge](./data-types/healthcare/simple-quantity.md)
+         * [Zeit](./data-types/healthcare/timing.md)
+         * [Virtueller Dienst](./data-types/healthcare/virtual-service-detail.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
 * Klassen {#classes}
    * [Individuelles XDM-Profil](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 81%
    * XDM Individual Profile {#profile}
       * [Einverständnis und Voreinstellungen](./field-groups/profile/consents.md)
       * [Demografische Details](./field-groups/profile/demographic-details.md)
+      * [Details zum versicherten Mitglied](./field-groups/profile/healthcare-member-details.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [Details zum versicherten Mitglied](./field-groups/profile/healthcare-member-details.md)
       * [Treuedetails](./field-groups/profile/loyalty-details.md)
       * [Persönliche Kontaktdaten](./field-groups/profile/personal-contact-details.md)
       * [Profilpartner-Anreicherung (Beispiel)](./field-groups/profile/profile-partner-enrichment.md)
