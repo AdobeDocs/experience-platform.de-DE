@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Erfahren Sie mehr über die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Experience Platform-Benutzeroberfläche.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4056'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Wählen Sie im Arbeitsbereich [!UICONTROL Schemas] oben rechts die Option **[!UI
 
 Das Dialogfeld [!UICONTROL Schema erstellen] wird angezeigt. In diesem Dialogfeld können Sie entweder manuell ein Schema durch Hinzufügen von Feldern und Feldergruppen erstellen oder eine CSV-Datei hochladen und mithilfe von ML-Algorithmen ein Schema generieren. Wählen Sie im Dialogfeld einen Workflow zur Schemaerstellung aus.
 
-![Das Dialogfeld Schema erstellen mit den Workflow-Optionen und markieren hervorgehoben.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![Das Dialogfeld Schema erstellen mit den Workflow-Optionen und markieren hervorgehoben.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Manuelle oder ML-gestützte Schemaerstellung {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ Der Workflow [!UICONTROL Schema erstellen] wird angezeigt. Sie können eine Basi
 
 ![Der Workflow [!UICONTROL Schema erstellen] mit den drei Klassenoptionen und [!UICONTROL Weiter] hervorgehoben.](../../images/ui/resources/schemas/schema-class-options.png)
 
+Bei der Auswahl von **[!UICONTROL Sonstige]** wird eine Liste der verfügbaren Klassen angezeigt. Von hier aus können Sie bereits vorhandene Klassen durchsuchen und filtern.
+
+![Der Workflow [!UICONTROL Schema erstellen] , wobei [!UICONTROL Sonstige] im Abschnitt [!UICONTROL Schemadetails] hervorgehoben ist.](../../images/ui/resources/schemas/other-schema-details.png)
+
+Wählen Sie ein Optionsfeld aus, um die Klassen nach benutzerdefinierten oder Standardklassen zu filtern. Sie können die verfügbaren Ergebnisse auch nach Branche filtern oder mithilfe des Suchfelds nach einer bestimmten Klasse suchen.
+
+![Der Workflow [!UICONTROL Schema erstellen] mit der Suchleiste, [!UICONTROL Benutzerdefiniert] und [!UICONTROL Branchen] hervorgehoben.](../../images/ui/resources/schemas/filter-and-search.png)
+
+Um Ihnen bei der Entscheidung über die entsprechende Klasse zu helfen, gibt es Infos- und Vorschausymbole für jede Klasse. Das Infosymbol (![Ein Infosymbol).](/help/images/icons/info.png)) öffnet ein Dialogfeld, das eine Beschreibung der Klasse und der Branche bereitstellt, mit der sie verknüpft ist.
+
+![Das Infosymbol und die QuickInfo der ausgewählten Klasse wurden hervorgehoben.](../../images/ui/resources/schemas/class-info.png)
+
+Das Vorschausymbol (![Ein Vorschausymbol).](/help/images/icons/preview.png)) öffnet ein Vorschaudialogfeld für die Klasse, die ein Schema-Diagramm und dessen Eigenschaften enthält.
+
+![Eine Vorschau der ausgewählten Klasse mit dem Schemadiagramm und den Klasseneigenschaften.](../../images/ui/resources/schemas/class-preview.png)
+
+Wählen Sie eine beliebige Zeile aus, um eine Klasse auszuwählen, und wählen Sie dann **[!UICONTROL Weiter]** aus, um Ihre Auswahl zu bestätigen.
+
+![Der Workflow [!UICONTROL Schema erstellen] , bei dem eine Klasse aus der Tabelle der verfügbaren Klassen ausgewählt und [!UICONTROL Weiter] hervorgehoben ist.](../../images/ui/resources/schemas/select-class.png)
+
 Nachdem Sie eine Klasse ausgewählt haben, wird der Abschnitt [!UICONTROL Name und Überprüfung] angezeigt. In diesem Abschnitt geben Sie einen Namen und eine Beschreibung ein, um Ihr Schema zu identifizieren. &#x200B;Die (von der Klasse bereitgestellte) Basisstruktur des Schemas wird auf der Arbeitsfläche angezeigt, damit Sie Ihre ausgewählte Klasse und Schemastruktur überprüfen und überprüfen können.
 
 Geben Sie einen benutzerfreundlichen [!UICONTROL Anzeigenamen des Schemas] in das Textfeld ein. Geben Sie anschließend eine Beschreibung ein, die die Identifizierung Ihres Schemas erleichtert. Wenn Sie Ihre Schemastruktur überprüft haben und mit Ihren Einstellungen zufrieden sind, wählen Sie **[!UICONTROL Beenden]** aus, um Ihr Schema zu erstellen.
 
 ![Der Abschnitt [!UICONTROL Name und Überprüfung] des Workflows [!UICONTROL Schema erstellen] , in dem der [!UICONTROL Anzeigename des Schemas], die [!UICONTROL Beschreibung] und der Abschnitt [!UICONTROL Beenden] hervorgehoben sind.](../../images/ui/resources/schemas/name-and-review.png)
 
-Die Registerkarte [!UICONTROL Schema] [!UICONTROL Durchsuchen] wird angezeigt. Ihr kürzlich erstelltes Schema ist jetzt in der Schema Library aufgeführt und kann im [!DNL Schema Editor] bearbeitet werden.
+Der Schema-Editor wird angezeigt, wobei die Struktur des Schemas auf der Arbeitsfläche angezeigt wird. Bei Bedarf können Sie jetzt [Felder zur Klasse](../../ui/resources/classes.md#add-fields) hinzufügen.
 
-![Die Registerkarte &quot;Durchsuchen des Arbeitsbereichs &quot;Schemas&quot;mit dem kürzlich erstellten Schema.](../../images/ui/resources/schemas/example-schema.png)
+![Der Schema-Editor mit der Struktur des Schemas wird auf der Arbeitsfläche angezeigt.](../../images/ui/resources/schemas/edit.png)
 
 ## Vorhandenes Schema bearbeiten {#edit}
 
