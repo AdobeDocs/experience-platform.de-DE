@@ -3,10 +3,10 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 73%
+source-wordcount: '2085'
+ht-degree: 72%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 73%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Versionshinweisen zur Tag-Erweiterung für Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.24.1 – Samstag, 6. Dezember 2024
+
+**Korrigiert und verbessert**
+
+- Es wurde ein Abhängigkeitsproblem im Zusammenhang mit [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) behoben, das bei einigen Kundenintegrationen Fehler verursachte. Für die Web-SDK ist jetzt die [Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) -Version 2.0.3 oder höher erforderlich.
 
 ## Version 2.24.0 – Freitag, 31. Oktober 2024
 
@@ -44,7 +50,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 **Fehlerbehebungen und Verbesserungen**
 
-- Es wurde ein Problem behoben, bei dem Cookies beim lokalen Ausführen des Web SDK nicht richtig geschrieben wurden.
+- Es wurde ein Problem behoben, bei dem Cookies beim lokalen Ausführen der Web SDK nicht richtig geschrieben wurden.
 
 ## Version 2.22.0 – Freitag, 22. August 2024
 
@@ -90,7 +96,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 - Es wurde ein Problem behoben, durch das Identitätsfehler andere Fehler maskierten und Identitätsfehler in Warnungen geändert wurden.
 - Es wurde ein Problem behoben, durch das Seitenaufrufe am Ende nicht gesendet wurden, wenn der Seitenaufruf am Anfang war und `renderDecisions` auf `false` festgelegt war.
-- Es wurde ein Problem behoben, bei dem das Web SDK domänenübergreifende Identitäten nicht gelesen hat, wenn mehrere `adobe_mc` Abfragezeichenfolgenparameter vorhanden waren.
+- Es wurde ein Problem behoben, bei dem Web SDK domänenübergreifende Identitäten nicht gelesen hat, wenn mehrere `adobe_mc` Abfragezeichenfolgenparameter vorhanden waren.
 
 ## Version 2.19.1 – Samstag, 10. November 2023
 
@@ -257,7 +263,7 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.4.0 – März 2021 
 
-- Das SDK kann jetzt als [NPM-Paket](/help/web-sdk/install/npm.md) installiert werden.
+- SDK kann jetzt als [NPM-Paket](/help/web-sdk/install/npm.md) installiert werden.
 - Es wurde Unterstützung für eine `out`-Option beim [Konfigurieren des Standardeinverständnisses](/help/web-sdk/commands/configure/defaultconsent.md) hinzugefügt, wodurch alle Ereignisse ignoriert werden, bis das Einverständnis eingeht (die vorhandene `pending`-Option stellt Ereignisse in die Warteschlange und sendet sie, sobald das Einverständnis eingeht).
 - Der Rückruf [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
 - Jetzt wird eine XDM-Schemafeldgruppe anstelle von `meta.personalization` verwendet, wenn Ereignisse über gerenderte oder angeklickte personalisierte Inhalte gesendet werden.
@@ -281,8 +287,8 @@ Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in den [Ver
 
 ## Version 2.2.0 – Oktober 2020
 
-- Fehlerbehebung: Das Opt-in-Objekt hinderte das Web SDK daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` `true` ist.
-- Fehlerbehebung: Sorgen Sie dafür, dass das Web SDK über Anforderungen informiert wird, die Personalisierungsangebote zurückgeben sollen, um ein flackerndes Problem zu vermeiden.
+- Fehlerbehebung: Das Opt-in-Objekt hinderte Web SDK daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` `true` ist.
+- Fehlerbehebung: Sorgen Sie dafür, dass Web SDK über Anforderungen informiert wird, die Personalisierungsangebote zurückgeben sollten, um ein flackerndes Problem zu vermeiden.
 
 ## Version 2.1.0 – August 2020
 
