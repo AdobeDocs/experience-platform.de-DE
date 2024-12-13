@@ -1,34 +1,34 @@
 ---
-title: Audience Portal - Überblick
+title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
+source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
 workflow-type: tm+mt
-source-wordcount: '4547'
-ht-degree: 55%
+source-wordcount: '4557'
+ht-degree: 54%
 
 ---
 
-# Übersicht über Audience Portal
+# Zielgruppen-Portal - Übersicht
 
-Audience Portal ist innerhalb von Adobe Experience Platform ein zentrales Portal, über das Sie Zielgruppen anzeigen, verwalten und erstellen können.
+Audience Portal ist ein zentraler Knotenpunkt in Adobe Experience Platform, über den Sie Zielgruppen anzeigen, verwalten und erstellen können.
 
 In Audience Portal können Sie die folgenden Aufgaben ausführen:
 
 - [Anzeigen einer Liste Ihrer Zielgruppen](#audience-list)
-   - [Verwenden von Schnellaktionen für Zielgruppen](#quick-actions)
-   - [Anpassen der in der Zielgruppenliste angezeigten Eigenschaften](#customize)
-   - [Verwenden von Filtern, Ordnern und Tags zum Organisieren von Zielgruppen](#manage-audiences)
-- [Details zu Ihrer Zielgruppe anzeigen](#audience-details)
-   - [Zusammenfassung zu Ihrer Audience anzeigen](#audience-summary)
+   - [Verwenden von Schnellaktionen für Audiences](#quick-actions)
+   - [Anpassen der in der Liste der Zielgruppen angezeigten Eigenschaften](#customize)
+   - [Verwenden von Filtern, Ordnern und Tags zum Organisieren von Audiences](#manage-audiences)
+- [Details zu Ihrer Audience anzeigen](#audience-details)
+   - [Eine Zusammenfassung Ihrer Audience anzeigen](#audience-summary)
 - [Zielgruppen für geplante Segmentierung aktivieren](#scheduled-segmentation)
 - [Erstellen einer Zielgruppe](#create-audience)
-   - [Erstellen einer Zielgruppe mit Segment Builder](#segment-builder)
-   - [Verwenden der Zielgruppenkomposition zum Erstellen einer Zielgruppe](#audience-composition)
-   - [Verwenden Sie Federated Audience Komposition , um eine Audience mithilfe von Daten aus Ihrem vorhandenen Data Warehouse zu erstellen](#fac) (begrenzte Verfügbarkeit).
-- [Importieren von extern generierten Zielgruppen](#import-audience)
+   - [Verwenden von Segment Builder zum Erstellen einer Zielgruppe](#segment-builder)
+   - [Verwenden der Audience-Komposition zum Erstellen einer Audience](#audience-composition)
+   - [Erstellen einer Zielgruppe mithilfe von Daten aus Ihrem vorhandenen Data Warehouse mithilfe einer Federated Audience ](#fac)Komposition) (eingeschränkte Verfügbarkeit)
+- [Extern generierte Zielgruppen importieren](#import-audience)
 
-Um Audience Portal zu öffnen, wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** im Abschnitt &quot;Segmentierung&quot;aus.
+Um das Audience Portal zu öffnen, wählen Sie **[!UICONTROL Abschnitt Segmentierung]** Registerkarte Durchsuchen aus.
 
 ## Zielgruppenliste {#list}
 
@@ -42,7 +42,7 @@ Um Audience Portal zu öffnen, wählen Sie die Registerkarte **[!UICONTROL Durch
 >title="Auswertungsmethode"
 >abstract="Zu den Auswertungsmethoden für Zielgruppen gehören Batch, Streaming und Edge."
 
-Standardmäßig zeigt Audience Portal eine Liste aller Zielgruppen in Ihrer Organisation und Sandbox an, einschließlich Profilanzahl, Ursprung, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
+Standardmäßig zeigt Zielgruppenportal eine Liste aller Zielgruppen in Ihrer Organisation und Sandbox an, einschließlich Profilanzahl, Herkunft, Erstellungsdatum, Datum der letzten Änderung, Tags und Aufschlüsselung.
 
 ![Der Bildschirm zum Durchsuchen wird angezeigt. Eine Liste aller Zielgruppen, die zur Organisation gehören, wird angezeigt.](../images/ui/audience-portal/audience-browse.png)
 
@@ -54,51 +54,51 @@ Neben jeder Zielgruppe befindet sich ein Symbol mit Auslassungspunkten. Wenn Sie
 
 | Aktion | Ursprünge | Beschreibung |
 | ------ | ------- | ----------- |
-| [!UICONTROL Vorlage] | Segmentierungs-Service | Öffnet den Segment Builder zum Bearbeiten Ihrer Zielgruppe. Beachten Sie, dass Sie, wenn Ihre Zielgruppe über die API erstellt wurde, **nicht** sie mit Segment Builder bearbeiten können. Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md). |
-| [!UICONTROL Komposition öffnen] | Zielgruppenkomposition | Öffnet die Audience-Komposition, um Ihre Zielgruppe anzuzeigen. Weitere Informationen zur Komposition von Zielgruppen finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./audience-composition.md). |
+| [!UICONTROL Vorlage] | Segmentierungs-Service | Öffnet Segment Builder zur Bearbeitung Ihrer Audience. Beachten Sie, dass Sie Ihre Zielgruppe, die über die API erstellt wurde **mit** Segment Builder bearbeiten können. Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md). |
+| [!UICONTROL Komposition öffnen] | Zielgruppenkomposition | Öffnet die Audience-Komposition, um Ihre Audience anzuzeigen. Weitere Informationen zur Komposition von Zielgruppen finden Sie im [Handbuch zur Benutzeroberfläche der Zielgruppenkomposition](./audience-composition.md). |
 | [!UICONTROL Für Ziel aktivieren] | Segmentierungs-Service | Aktiviert die Zielgruppe für ein Ziel. Ausführlichere Informationen zur Aktivierung einer Zielgruppe für ein Ziel finden Sie in der [Übersicht zur Aktivierung](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Mit Partnern teilen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Teilt Ihre Zielgruppe mit anderen Platform-Benutzern. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht zu Segmentübereinstimmungen](./segment-match/overview.md). |
-| [!UICONTROL Tags verwalten] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet die benutzerdefinierten Tags, die zur Zielgruppe gehören. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
+| [!UICONTROL Für Partner freigeben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Gibt Ihre Zielgruppe für andere Platform-Benutzer frei. Weitere Informationen zu dieser Funktion finden Sie in der [Übersicht zu Segmentübereinstimmungen](./segment-match/overview.md). |
+| [!UICONTROL Tags verwalten] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet die benutzerdefinierten Tags, die zur Audience gehören. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
 | [!UICONTROL In Ordner verschieben] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet, zu welchem Ordner die Zielgruppe gehört. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt zum [Filtern und Tagging](#manage-audiences). |
-| [!UICONTROL Kopieren] | Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. Weitere Informationen zu dieser Funktion finden Sie in den [FAQ zur Segmentierung](../faq.md#copy). |
-| [!UICONTROL Zugriffsbeschriftungen anwenden] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwalten der Zugriffsbeschriftungen, die zur Zielgruppe gehören. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Veröffentlichen] | Benutzerdefinierter Upload, Segmentierungsdienst | Veröffentlicht die ausgewählte Zielgruppe. Weitere Informationen zur Lebenszyklusstatusverwaltung finden Sie im Abschnitt [Lebenszyklusstatus-Status der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
-| [!UICONTROL Deaktivieren] | Benutzerdefinierter Upload, Segmentierungsdienst | Deaktiviert die ausgewählte Zielgruppe. Weitere Informationen zur Lebenszyklusstatusverwaltung finden Sie im Abschnitt [Lebenszyklusstatus-Status der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
-| [!UICONTROL Löschen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängige Zielgruppen sind, **können nicht** gelöscht werden. Weitere Informationen zum Löschen von Zielgruppen finden Sie in den [FAQ zur Segmentierung](../faq.md#lifecycle-states) . |
-| [!UICONTROL Zum Paket hinzufügen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verschiebt die Zielgruppe zwischen Sandboxes. Weitere Informationen zu dieser Funktion finden Sie im [Sandbox-Tool-Handbuch](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Kopieren] | Segmentierungs-Service | Dupliziert die ausgewählte Zielgruppe. Weitere Informationen zu dieser Funktion finden Sie in den [Häufig gestellte Fragen zur Segmentierung](../faq.md#copy). |
+| [!UICONTROL Zugriffsbeschriftungen anwenden] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verwaltet die Zugriffsbeschriftungen für die Zielgruppe. Weitere Informationen zu Zugriffsbeschriftungen finden Sie in der Dokumentation zum [Verwalten von Beschriftungen](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Veröffentlichen] | Benutzerdefinierter Upload, Segmentierungs-Service | Veröffentlicht die ausgewählte Zielgruppe. Weitere Informationen zur Verwaltung des Lebenszyklusstatus finden Sie im Abschnitt [Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
+| [!UICONTROL Deaktivieren] | Benutzerdefinierter Upload, Segmentierungs-Service | Deaktiviert die ausgewählte Zielgruppe. Weitere Informationen zur Verwaltung des Lebenszyklusstatus finden Sie im Abschnitt [Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-states). |
+| [!UICONTROL Löschen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Löscht die ausgewählte Zielgruppe. Zielgruppen, die in nachgelagerten Zielen verwendet werden oder von anderen Zielgruppen abhängen **können** nicht gelöscht werden. Weitere Informationen zum Löschen von Audiences finden Sie unter [Häufig gestellte Fragen zur Segmentierung](../faq.md#lifecycle-states). |
+| [!UICONTROL Zu Paket hinzufügen] | Zielgruppen-Komposition, Benutzerdefinierter Upload, Segmentierungs-Service | Verschiebt die Zielgruppe zwischen Sandboxes. Weitere Informationen zu dieser Funktion finden Sie im [Sandbox-Tool-Handbuch](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
->Bevor Sie Ihre Zielgruppe löschen, stellen Sie sicher, dass die Zielgruppe **nicht** als Komponente in einer kontobasierten Zielgruppe verwendet oder in Adobe Journey Optimizer verwendet wird.
+>Stellen Sie vor dem Löschen Ihrer Zielgruppe sicher, dass die Zielgruppe **nicht** als Komponente in einer kontobasierten Zielgruppe oder in Adobe Journey Optimizer verwendet wird.
 
-Oben auf der Seite finden Sie Optionen zum Hinzufügen aller Zielgruppen zu einem Zeitplan, zum Importieren einer Zielgruppe, zum Erstellen einer neuen Zielgruppe und zum Anzeigen einer Zusammenfassung der Zielgruppenbewertung.
+Oben auf der Seite finden Sie Optionen zum Hinzufügen aller Zielgruppen zu einem Zeitplan, zum Importieren einer Zielgruppe, zum Erstellen einer neuen Zielgruppe und zum Anzeigen einer Zusammenfassung der Zielgruppenauswertung.
 
 Durch Umschalten auf **[!UICONTROL Alle Zielgruppen planen]** wird die geplante Segmentierung aktiviert. Weitere Informationen zur geplanten Segmentierung finden Sie im [Abschnitt „Geplante Segmentierung“ in diesem Benutzerhandbuch](#scheduled-segmentation).
 
-Durch Auswahl von **[!UICONTROL Audience importieren]** können Sie eine extern generierte Audience importieren. Weiterführende Informationen zum Importieren von Zielgruppen finden Sie im Abschnitt zum [Importieren einer Zielgruppe im Benutzerhandbuch](#import-audience).
+Wenn Sie **[!UICONTROL Zielgruppe importieren]** auswählen, können Sie eine extern generierte Zielgruppe importieren. Weitere Informationen zum Importieren von Zielgruppen finden Sie im Abschnitt [Importieren einer Zielgruppe“ im Benutzerhandbuch](#import-audience).
 
 Durch Auswahl von **[!UICONTROL Zielgruppe erstellen]** können Sie eine Zielgruppe erstellen. Um mehr über das Erstellen von Zielgruppen zu erfahren, lesen Sie den Abschnitt [Erstellen einer Zielgruppe](#create-audience) im Benutzerhandbuch.
 
 ![Die obere Navigationsleiste auf der Seite zum Durchsuchen von Zielgruppen ist hervorgehoben. Diese Leiste enthält eine Schaltfläche zum Erstellen einer Zielgruppe und eine Schaltfläche zum Importieren einer Zielgruppe.](../images/ui/audience-portal/browse-audiences-top.png)
 
-Sie können **[!UICONTROL Bewertungszusammenfassung]** auswählen, um ein Tortendiagramm mit einer Zusammenfassung der Zielgruppenbewertungen anzuzeigen.
+Sie können auf **[!UICONTROL Auswertungszusammenfassung]** klicken, um ein Tortendiagramm anzuzeigen, das eine Zusammenfassung der Zielgruppenbewertungen anzeigt.
 
-![Die Schaltfläche Bewertungszusammenfassung ist hervorgehoben.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
+![Die Schaltfläche „Bewertungszusammenfassung“ ist hervorgehoben.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
-Das Tortendiagramm wird mit einer Aufschlüsselung der Zielgruppen nach Zielgruppenevaluierung angezeigt. Das Diagramm zeigt die Gesamtzahl der Zielgruppen in der Mitte und die tägliche Batch-Auswertungszeit in UTC am unteren Rand. Wenn Sie den Mauszeiger über die verschiedenen Teile der Audience bewegen, wird die Anzahl der Zielgruppen angezeigt, die zu den verschiedenen Aktualisierungshäufigkeit gehören.
+Das Tortendiagramm wird angezeigt, in dem die Zielgruppen nach Zielgruppenbewertung aufgeschlüsselt sind. Das Diagramm zeigt die Gesamtzahl der Zielgruppen in der Mitte und unten die tägliche Batch-Auswertungszeit in UTC an. Wenn Sie den Mauszeiger über die verschiedenen Teile der Zielgruppe bewegen, wird die Anzahl der Zielgruppen angezeigt, die zu jedem Aktualisierungshäufigkeitstyp gehören.
 
-![Das Kreisdiagramm zur Zielgruppenbewertung wird hervorgehoben, wobei auch die Auswertungszeit für die Batch-Segmentierung angezeigt wird.](../images/ui/audience-portal/evaluation-summary.png)
+![Das Tortendiagramm für die Zielgruppenbewertung ist hervorgehoben, wobei die Auswertungszeit für die Batch-Segmentierung ebenfalls angezeigt wird.](../images/ui/audience-portal/evaluation-summary.png)
 
-### Anpassen {#customize}
+### Customize {#customize}
 
-Sie können Audience Portal zusätzliche Felder hinzufügen, indem Sie ![das Filterattribut-Symbol](/help/images/icons/column-settings.png) auswählen. Diese zusätzlichen Felder umfassen: Lebenszyklusstatus, Aktualisierungshäufigkeit, Zuletzt aktualisiert von, Beschreibung, Erstellt von und Zugriffsbeschriftungen.
+Sie können zusätzliche Felder zu Audience Portal hinzufügen, indem Sie ![das Filterattribut-Symbol](/help/images/icons/column-settings.png) auswählen. Diese zusätzlichen Felder umfassen: Lebenszyklusstatus, Aktualisierungshäufigkeit, Zuletzt aktualisiert von, Beschreibung, Erstellt von und Zugriffsbeschriftungen.
 
 | Feld | Beschreibung |
 | ----- | ----------- |
 | [!UICONTROL Name] | Der Name der Zielgruppe. |
 | [!UICONTROL Anzahl der Profile] | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
 | [!UICONTROL Herkunft] | Die Herkunft der Zielgruppe. Hier wird angegeben, woher die Zielgruppe stammt. Mögliche Werte sind: Segmentierungsdienst, Benutzerdefinierter Upload, Zielgruppenzusammensetzung und Audience Manager. |
-| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive` und `Published`. Weitere Informationen zum Lebenszyklusstatus, einschließlich der Bedeutung der verschiedenen Status und der Möglichkeit, Zielgruppen in verschiedene Lebenszyklusstatus zu verschieben, finden Sie im Abschnitt [Lebenszyklusstatus in den häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-status). |
+| [!UICONTROL Lebenszyklus-Status] | Der Status der Zielgruppe. Mögliche Werte für dieses Feld sind `Draft`, `Inactive` und `Published`. Weitere Informationen zum Lebenszyklusstatus, einschließlich der Bedeutung der verschiedenen Status und der Verlagerung von Zielgruppen in verschiedene Lebenszyklusstatus, finden [ im Abschnitt „Lebenszyklusstatus“ der häufig gestellten Fragen zur Segmentierung](../faq.md#lifecycle-status). |
 | [!UICONTROL Aktualisierungshäufigkeit] | Ein Wert, der angibt, wie oft die Daten der Zielgruppe aktualisiert werden. Mögliche Werte für dieses Feld sind [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] und [!UICONTROL Nicht geplant]. |
 | [!UICONTROL Zuletzt aktualisiert von] | Der Name der Person, die die Zielgruppe zuletzt aktualisiert hat. |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit der Erstellung der Zielgruppe in UTC. |
@@ -117,9 +117,9 @@ Wenn die Aufschlüsselung ausgewählt ist, wird ein Balkendiagramm angezeigt, da
 | [!UICONTROL Bestehend] | Die Anzahl der Profile, die in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags im Segment **verblieben** sind. |
 | [!UICONTROL Verlassen] | Die Anzahl der Profile, die das Segment in den letzten 24 Stunden seit Ausführung des letzten Batch-Segmentauftrags **verlassen** haben. |
 
-Nachdem Sie die Felder ausgewählt haben, die angezeigt werden sollen, können Sie auch die Breite der angezeigten Spalten anpassen. Ziehen Sie dazu entweder den Bereich zwischen die Spalten oder wählen Sie das Symbol ![Pfeil](/help/images/icons/chevron-down.png) der Spalte aus, deren Größe geändert werden soll, gefolgt von der Spalte **[!UICONTROL Größe ändern]**.
+Nachdem Sie die Felder ausgewählt haben, die angezeigt werden sollen, können Sie auch die Breite der angezeigten Spalten ändern. Sie können dies tun, indem Sie den Bereich zwischen die Spalten ziehen oder indem Sie das ![Pfeilsymbol](/help/images/icons/chevron-down.png) der Spalte auswählen, deren Größe Sie ändern möchten, gefolgt von **[!UICONTROL Spaltengröße ändern]**.
 
-![Die Schaltfläche Spaltengröße ändern ist hervorgehoben.](../images/ui/audience-portal/browse-audience-resize-column.png)
+![Die Schaltfläche „Spaltengröße ändern“ ist hervorgehoben.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
 ### Filterung, Ordner und Tagging {#manage-audiences}
 
@@ -164,15 +164,15 @@ Für ein besseres Zielgruppen-Management können Sie Zielgruppen in Ordnern plat
 
 Um einen Ordner für Ihre Zielgruppen zu erstellen, wählen Sie **[!UICONTROL Ordner erstellen]** aus.
 
-![Die Schaltfläche Ordner erstellen ist hervorgehoben.](../images/ui/audience-portal/create-folder.png)
+![Die Schaltfläche „Ordner erstellen“ ist hervorgehoben.](../images/ui/audience-portal/create-folder.png)
 
 >[!NOTE]
 >
->Sie können einen Ordner nur erstellen, wenn Sie sich in einem anderen Ordner befinden. Das bedeutet, dass Sie **keinen Ordner erstellen können, wenn Sie in der linken Navigationsleiste**[!UICONTROL  Alle Zielgruppen ]**ausgewählt haben.**
+>Sie können einen Ordner nur erstellen, wenn Sie sich in einem anderen Ordner befinden. Das bedeutet **dass Sie** Ordner nicht erstellen können, wenn **[!UICONTROL Alle Zielgruppen]** in der linken Navigationsleiste ausgewählt ist.
 
-Es wird ein Popup angezeigt, in dem Sie den neu erstellten Ordner benennen können. Wählen Sie **[!UICONTROL Speichern]** aus, nachdem Sie Ihren Ordner benannt haben, um die Erstellung des Ordners abzuschließen. Beachten Sie, dass die Namen **must** für den übergeordneten Ordner eindeutig sein müssen.
+Ein Pop-up wird angezeigt, in dem Sie den neu erstellten Ordner benennen können. Wählen Sie **[!UICONTROL Speichern]** nach dem Benennen Ihres Ordners aus, um die Erstellung des Ordners abzuschließen. Beachten Sie, dass **Namen** übergeordneten Ordner eindeutig sein müssen.
 
-![Die Schaltfläche &quot;Speichern&quot;im Dialogfeld &quot;Ordner erstellen&quot;ist hervorgehoben.](../images/ui/audience-portal/create-folder-dialog.png)
+![Die Schaltfläche „Speichern“ im Dialogfeld „Ordner erstellen“ ist hervorgehoben.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Um eine Zielgruppe in einen Ordner zu verschieben, wählen Sie **[!UICONTROL In Ordner verschieben]** für die Zielgruppe, die Sie verschieben möchten.
 
@@ -201,7 +201,7 @@ Die Liste der verfügbaren Filter wird angezeigt.
 | [!UICONTROL Herkunft] | Ermöglicht die Filterung nach der Herkunft der Zielgruppe. Zu den verfügbaren Optionen gehören: Segmentierungs-Service, Benutzerdefinierter Upload, Zielgruppenkomposition und Audience Manager. |
 | [!UICONTROL Hat ein beliebiges Tag] | Filtert nach Tags. Sie können zwischen **[!UICONTROL Hat ein beliebiges Tag]** und **[!UICONTROL Hat alle Tags]** wählen. Wenn **[!UICONTROL Hat ein beliebiges Tag]** ausgewählt ist, enthalten die gefilterten Zielgruppen **jedes** der Tags, die Sie hinzugefügt haben. Wenn **[!UICONTROL Hat alle Tags]** ausgewählt ist, müssen die gefilterten Zielgruppen **alle** der von Ihnen hinzugefügten Tags enthalten. |
 | [!UICONTROL Lebenszyklusstatus] | Ermöglicht die Filterung nach dem Lebenszyklusstatus der Zielgruppe. Zu den verfügbaren Optionen gehören [!UICONTROL Gelöscht], [!UICONTROL Entwurf], [!UICONTROL Inaktiv] und [!UICONTROL Veröffentlicht]. |
-| [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht die Filterung nach der Aktualisierungshäufigkeit der Zielgruppe (Auswertungsmethode). Zu den verfügbaren Optionen gehören [!UICONTROL Batch], [!UICONTROL Streaming] und [!UICONTROL Edge] |
+| [!UICONTROL Aktualisierungshäufigkeit] | Ermöglicht das Filtern nach der Aktualisierungshäufigkeit der Zielgruppe (Auswertungsmethode). Zu den verfügbaren Optionen [!UICONTROL Batch], [!UICONTROL Streaming] und [!UICONTROL Edge] |
 | [!UICONTROL Erstellt von] | Ermöglicht die Filterung nach der Person, die die Zielgruppe erstellt hat. |
 | [!UICONTROL Erstellungsdatum] | Ermöglicht die Filterung nach dem Erstellungsdatum der Zielgruppe. Sie können einen Datumsbereich auswählen, um danach zu filtern, wann die Zielgruppe erstellt wurde. |
 | [!UICONTROL Änderungsdatum] | Damit können Sie nach dem letzten Änderungsdatum der Zielgruppe filtern. Sie können einen Datumsbereich auswählen, um danach zu filtern, wann die Zielgruppe zuletzt geändert wurde. |
@@ -210,15 +210,15 @@ Die Liste der verfügbaren Filter wird angezeigt.
 
 ### Massenaktionen {#bulk-actions}
 
-Darüber hinaus können Sie bis zu 25 verschiedene Zielgruppen auswählen und verschiedene Aktionen für diese Zielgruppen durchführen. Zu diesen Aktionen gehören [Verschieben in einen Ordner](#folders), [Bearbeiten oder Anwenden eines Tags](#tags), [Auswerten von Zielgruppen](#flexible-audience-evaluation), [Anwenden von Zugriffsbeschriftungen](../../access-control/abac/ui/labels.md) und [Löschen](#browse).
+Darüber hinaus können Sie bis zu 25 verschiedene Zielgruppen auswählen und verschiedene Aktionen für diese Zielgruppen durchführen. Zu diesen Aktionen gehören [Verschieben in einen Ordner](#folders) [Bearbeiten oder Anwenden eines Tags](#tags), [Auswerten von Zielgruppen](#flexible-audience-evaluation) [Anwenden von Zugriffskennzeichnungen](../../access-control/abac/ui/labels.md) und [Löschen](#browse).
 
 ![Die verfügbaren Optionen für Massenaktionen werden angezeigt.](../images/ui/audience-portal/bulk-actions.png)
 
 Wenn Sie Massenaktionen auf Zielgruppen anwenden, gelten die folgenden Bedingungen:
 
-- Sie **können** Zielgruppen aus verschiedenen Seiten auswählen.
-- Sie können eine Zielgruppe, die in einer Zielaktivierung verwendet wird, **nicht** löschen.
-- Wenn Sie einen Filter auswählen, werden die ausgewählten Zielgruppen **1} zurückgesetzt.**
+- Sie **Zielgruppen** verschiedenen Seiten auswählen.
+- Eine Zielgruppe **die in einer Zielaktivierung verwendet wird, kann** nicht gelöscht werden.
+- Wenn Sie einen Filter auswählen, werden die ausgewählten Zielgruppen **zurückgesetzt**.
 
 #### [!BADGE Eingeschränkte Verfügbarkeit]{type=Informative} Flexible Zielgruppenbewertung {#flexible-audience-evaluation}
 
@@ -227,28 +227,29 @@ Wenn Sie Massenaktionen auf Zielgruppen anwenden, gelten die folgenden Bedingung
 >title="Flexible Begrenzungen für Zielgruppenbewertung"
 abstract="Sie können bis zu 20 Zielgruppen in einem einzigen flexiblen Auswertungsdurchlauf auswerten.<br/><br/>Während der Auswertungsauftrag so schnell wie möglich ausgeführt wird, kann es außerdem zu Systemverzögerungen kommen, da On-Demand-Auswertungen <b>nicht</b> gleichzeitig mit einer anderen On-Demand- oder Batch-Auswertung ausgeführt werden können."
 
-Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Segmentierungsauftrag ausführen. Wählen Sie die Zielgruppen aus, die ausgewertet werden sollen, und wählen Sie **[!UICONTROL Zielgruppen auswerten]** aus.
+Mit der flexiblen Zielgruppenauswertung können Sie bei Bedarf einen Segmentierungsauftrag ausführen. Wählen Sie die Zielgruppen aus, die ausgewertet werden sollen, und wählen Sie **[!UICONTROL Zielgruppen auswerten]**.
 
 >[!IMPORTANT]
 >
-Bei der Auswahl von Zielgruppen für eine flexible Zielgruppenbewertung gelten die folgenden Bedingungen:
+Bei der Auswahl von Zielgruppen für eine flexible Zielgruppenauswertung gelten die folgenden Bedingungen:
 >
-- Alle Zielgruppen &quot;**must**&quot;haben den Ursprung von &quot;Segmentation Service&quot;.
+- Alle Zielgruppen **müssen** haben den Ursprung „Segmentierungs-Service“.
 - Alle Zielgruppen **müssen** mithilfe der Batch-Segmentierung ausgewertet werden.
 - Alle Zielgruppen **müssen** personenbasierte Zielgruppen sein.
+- Die Zielgruppen können **nur** für Ziele in Platform aktiviert werden.
 - Sie können nur maximal 20 Zielgruppen auswählen.
 
-![Die Zielgruppen, für die Sie eine flexible Zielgruppenbewertung verwenden möchten, sind ausgewählt.](../images/ui/audience-portal/evaluate-audiences.png)
+![Die Zielgruppen, für die Sie eine flexible Zielgruppenauswertung verwenden möchten, sind ausgewählt.](../images/ui/audience-portal/evaluate-audiences.png)
 
-Das Popup-Fenster **[!UICONTROL Zielgruppen bei Bedarf bewerten]** wird angezeigt und zeigt die Liste der Zielgruppen an, die mit dem On-Demand-Segmentauftrag ausgewertet werden. Wenn eine Audience nicht für eine Bewertung bei Bedarf geeignet ist, wird sie automatisch aus dem Auswertungsauftrag entfernt. Vergewissern Sie sich, dass die aufgelisteten Zielgruppen diejenigen sind, die ausgewertet werden sollen.
+Das Pop **[!UICONTROL up „Zielgruppen bei]** auswerten“ wird angezeigt und zeigt die Liste der Zielgruppen an, die mit dem On-Demand-Segmentauftrag ausgewertet werden. Wenn eine Zielgruppe nicht für die On-Demand-Auswertung geeignet ist, wird sie automatisch aus dem Auswertungsauftrag entfernt. Bestätigen Sie, dass die aufgelisteten Zielgruppen diejenigen sind, die ausgewertet werden sollen.
 
-![Die Zielgruppen, die mit flexibler Zielgruppenbewertung ausgewertet werden können, werden angezeigt.](../images/ui/audience-portal/evaluate-audiences-modal.png)
+![Es werden die Zielgruppen angezeigt, die mithilfe einer flexiblen Zielgruppenauswertung ausgewertet werden können.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren und die flexible Zielgruppenbewertung beginnt. Sie können den Status dieser Zielgruppenbewertung in der [Überwachungsansicht des Bewertungsauftrags](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) anzeigen.
+Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, können Sie mit der Anfrage fortfahren, und die flexible Zielgruppenbewertung wird gestartet. Sie können den Status dieser Zielgruppenauswertung in der Ansicht [Überwachung von Auswertungsaufträgen“ ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
-Wenn Sie eine flexible Zielgruppenbewertung für Zielgruppen durchführen, die bereits [nach der Segmentbewertung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) aktiviert werden, werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenbewertungsauftrag abgeschlossen ist, unabhängig von früheren täglichen Aktivierungsaufträgen.
+Wenn Sie eine flexible Zielgruppenauswertung für Zielgruppen ausführen, für die bereits eine Aktivierung festgelegt wurde [nach der Segmentauswertung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenauswertungsauftrag abgeschlossen ist, unabhängig von vorherigen täglichen Aktivierungsaufträgen.
 
 ## Zielgruppendetails {#audience-details}
 
@@ -296,43 +297,43 @@ Wenn Sie **[!UICONTROL Zielgruppe bearbeiten]** auswählen, können Sie Ihre Zie
 
 Wenn Sie **[!UICONTROL Eigenschaften bearbeiten]** auswählen, können Sie die grundlegenden Details der Zielgruppe bearbeiten, z. B. den Namen, die Beschreibung und die Tags.
 
-![Die Schaltfläche &quot;Eigenschaften bearbeiten&quot;wird auf der Seite mit den Zielgruppendetails hervorgehoben.](../images/ui/audience-portal/audience-details-edit-properties.png)
+![Die Schaltfläche „Eigenschaften bearbeiten“ ist auf der Seite mit den Zielgruppendetails hervorgehoben.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Zielgruppe insgesamt {#audience-total}
 
-Für plattformgenerierte Zielgruppen und Kompositionen zeigt der Abschnitt **[!UICONTROL Zielgruppengesamtwert]** die Gesamtanzahl der Profile an, die für die Zielgruppe qualifiziert sind.
+Für von Platform generierte Zielgruppen und Kompositionen wird im Abschnitt **[!UICONTROL Zielgruppe insgesamt]** die Gesamtzahl der Profile angezeigt, die für die Zielgruppe qualifiziert sind.
 
 >[!NOTE]
 >
-Nach Abschluss des Exportvorgangs kann es bis zu 30 Minuten dauern, bis die Gesamtanzahl der Zielgruppen aktualisiert ist.
+Es kann bis zu 30 Minuten dauern, bis die Gesamtanzahl der Zielgruppe nach Abschluss des Exportvorgangs aktualisiert ist.
 
-Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweiligen Tages generiert. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Für zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet und für über 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet. Weiterführende Informationen zum Generieren von Schätzungen finden Sie im Tutorial zur Zielgruppenerstellung im Abschnitt [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
+Die Schätzungen werden anhand einer Stichprobengröße aus den Daten des jeweiligen Tages generiert. Wenn sich in Ihrem Profilspeicher weniger als 1 Million Entitäten befinden, wird der vollständige Datensatz verwendet. Bei zwischen 1 und 20 Millionen Entitäten werden 1 Million Entitäten verwendet, und bei mehr als 20 Millionen Entitäten werden 5 % der gesamten Entitäten verwendet. Weiterführende Informationen zum Generieren von Schätzungen finden Sie im Tutorial zur Zielgruppenerstellung im Abschnitt [Generieren von Schätzungen](../tutorials/create-a-segment.md#estimate-and-preview-an-audience).
 
 ### Aufnahmedetails {#ingestion-details}
 
-Bei Zielgruppen mit dem Ursprung **[!UICONTROL Benutzerdefinierter Upload]** zeigt der Abschnitt **[!UICONTROL Aufnahmedetails]** sowohl die Gesamtsumme des Profils als auch Details zum Datensatz an, in den die extern generierte Zielgruppe aufgenommen wurde.
+Bei Zielgruppen mit dem Ursprung **[!UICONTROL Benutzerdefinierter Upload]** werden im Abschnitt **[!UICONTROL Aufnahmedetails]** sowohl die Profilsumme als auch Details zum Datensatz angezeigt, in den die extern generierte Zielgruppe aufgenommen wurde.
 
 >[!NOTE]
 >
-Es kann bis zu 30 Minuten nach dem Exportauftrag dauern, bis die Profilanzahl der Audience vollständig aktualisiert ist.
+Es kann bis zu 30 Minuten nach dem Exportvorgang dauern, bis die Profilanzahl der Zielgruppe vollständig aktualisiert ist.
 
-![Der Abschnitt mit den Aufnahmedetails für die Seite mit den Zielgruppendetails wird angezeigt.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+![Der Abschnitt „Aufnahmedetails“ für die Seite mit Zielgruppendetails wird angezeigt.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | Anzahl der Profile | Die Gesamtzahl der Profile, die für die Zielgruppe qualifiziert sind. |
-| Datensatzname | Der Name des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können den Datensatznamen auswählen, um weitere Informationen zum Datensatz zu erhalten. Weitere Informationen zu Datensätzen finden Sie im [Benutzerhandbuch zur Datensatz-Benutzeroberfläche](../../catalog/datasets/user-guide.md). |
-| Datensatz-Batch | Die ID des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können die Kennung des Batches auswählen, um weitere Informationen zum Batch zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Überwachung der Datenerfassung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Profil-Batch | Die Kennung des Batches, mit dem die Profile in Platform erstellt wurden. Sie können die Kennung des Batches auswählen, um weitere Informationen zum Batch zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Überwachung der Datenerfassung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Schema | Der Name des Schemas, zu dem die Zielgruppe gehört. Sie können den Namen des Schemas auswählen, um Informationen zur Struktur des Schemas anzuzeigen und Datennutzungsbezeichnungen anzuwenden. Weitere Informationen finden Sie unter [Verwalten von Datennutzungsbezeichnungen für ein Schema-Handbuch](../../xdm/tutorials/labels.md). |
-| Aufgenommene Einträge | Die Anzahl der Datensätze, die in den Datensatz aufgenommen werden. |
+| Datensatzname | Der Name des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können den Datensatznamen auswählen, um weitere Informationen zum Datensatz zu erhalten. Weitere Informationen zu Datensätzen finden Sie im [Handbuch zur Datensatz-Benutzeroberfläche](../../catalog/datasets/user-guide.md). |
+| Datensatz-Batch | Die ID des Datensatzes, in den die Zielgruppe aufgenommen wurde. Sie können die ID des Stapels auswählen, um weitere Informationen über den Stapel zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Datenaufnahme bei der Überwachung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profil-Batch | Die ID des Batches, der die Profile in Platform erstellt hat. Sie können die ID des Stapels auswählen, um weitere Informationen über den Stapel zu erhalten. Weitere Informationen zu Batches finden Sie im [Handbuch zur Datenaufnahme bei der Überwachung](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Schema | Der Name des Schemas, zu dem die Zielgruppe gehört. Sie können den Namen des Schemas auswählen, um Informationen zur Struktur des Schemas anzuzeigen und Datennutzungskennzeichnungen anzuwenden. Weitere Informationen finden Sie im [Handbuch zum Verwalten von Datennutzungsbeschriftungen für ein Schema](../../xdm/tutorials/labels.md). |
+| Aufgenommene Einträge | Die Anzahl der in den Datensatz aufgenommenen Datensätze. |
 | Fehlgeschlagene Einträge | Die Anzahl der Datensätze, die nicht in den Datensatz aufgenommen werden konnten. |
 | Neue Profilfragmente | Die Anzahl der neu erstellten Profile. |
 | Vorhandene Profilfragmente | Die Anzahl der vorhandenen Profile, die aktualisiert wurden. |
 
 >[!NOTE]
 >
-Best Practice ist, Datennutzungsbezeichnungen auf das Schema anzuwenden. Sie können **nicht** eine Datennutzungsbezeichnung direkt auf die Zielgruppe anwenden.
+Es empfiehlt sich, Datennutzungskennzeichnungen auf das Schema anzuwenden. Sie **können** eine Datennutzungskennzeichnung direkt auf die Zielgruppe anwenden.
 
 ### Aktivierte Ziele {#activated-destinations}
 
@@ -348,11 +349,11 @@ Unten finden Sie eine Auswahl von Profilen, die für das Segment qualifiziert si
 
 Die Methode, mit der das Daten-Sampling ausgelöst wird, hängt von der Art der Aufnahme ab.
 
-Für die Batch-Erfassung wird der Profilspeicher automatisch alle fünfzehn Minuten überprüft, um festzustellen, ob ein neuer Batch seit der letzten Sampling-Ausführung erfolgreich erfasst wurde. Ist dies der Fall, wird der Profilspeicher daraufhin überprüft, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingungen erfüllt sind, wird ein neuer Sampling-Auftrag ausgelöst.
+Bei der Batch-Aufnahme wird der Profilspeicher automatisch alle fünfzehn Minuten gescannt, um festzustellen, ob seit dem letzten Sampling-Auftrag ein neuer Batch erfolgreich aufgenommen wurde. Wenn dies der Fall ist, wird der Profilspeicher anschließend überprüft, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingungen erfüllt sind, wird ein neuer Sampling-Auftrag ausgelöst.
 
-Für die Streaming-Erfassung wird der Profilspeicher automatisch stündlich gescannt, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingung erfüllt ist, wird ein neuer Sampling-Auftrag ausgelöst.
+Bei der Streaming-Aufnahme wird der Profilspeicher automatisch jede Stunde überprüft, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingung erfüllt ist, wird ein neuer Sampling-Auftrag ausgelöst.
 
-Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
+Die Stichprobengröße der Überprüfung hängt von der Gesamtzahl der Entitäten in Ihrem Profilspeicher ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
 
 | Entitäten im Profilspeicher | Stichprobengröße |
 | ------------------------- | ----------- |
@@ -385,7 +386,7 @@ Die geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführu
 
 Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweisungen zum Erstellen, Bearbeiten und Verwenden von Zeitplänen mithilfe der API finden Sie im Tutorial zum Auswerten und Aufrufen von Segmentergebnissen, insbesondere im Abschnitt zur [geplanten Auswertung mithilfe der API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![Der Umschalter zum Planen aller Zielgruppen wird in Audience Portal hervorgehoben.](../images/ui/audience-portal/browse-audiences-scheduled.png)
+![Der Umschalter zum Planen aller Zielgruppen ist im Zielgruppenportal hervorgehoben.](../images/ui/audience-portal/browse-audiences-scheduled.png)
 
 ## Erstellen einer Zielgruppe {#create-audience}
 
@@ -395,7 +396,7 @@ Sie können **[!UICONTROL Zielgruppe erstellen]** auswählen, um eine Zielgruppe
 
 Es wird ein Pop-up angezeigt, in dem Sie auswählen können, ob Sie eine Zielgruppe oder Regeln erstellen möchten.
 
-![Ein Popover, das die beiden Typen anzeigt of Zielgruppen, die Sie erstellen können.](../images/ui/audience-portal/create-audience-type.png)
+![Ein Pop-up, das die beiden Typen anzeigt of Zielgruppen, die Sie erstellen können.](../images/ui/audience-portal/create-audience-type.png)
 
 ### Zielgruppenkomposition {#audience-composition}
 
@@ -411,15 +412,15 @@ Wenn Sie **[!UICONTROL Regel erstellen]** auswählen, gelangen Sie zum Segment B
 
 ### Komposition föderierter Zielgruppen {#fac}
 
-Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie mit der Adobe Federated Audience Komposition neue Zielgruppen aus Unternehmenssätzen erstellen, ohne die zugrunde liegenden Daten zu kopieren und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die mit dem Enterprise Data Warehouse verknüpft wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
+Zusätzlich zu Zielgruppenkompositionen und Segmentdefinitionen können Sie die Federated-Audience-Komposition von Adobe verwenden, um neue Zielgruppen aus Unternehmensdatensätzen zu erstellen, ohne die zugrunde liegenden Daten zu kopieren, und diese Zielgruppen in Adobe Experience Platform Audience Portal zu speichern. Sie können auch bestehende Zielgruppen in Adobe Experience Platform anreichern, indem Sie zusammengestellte Zielgruppendaten verwenden, die aus dem Enterprise Data Warehouse zusammengeführt wurden. Lesen Sie das Handbuch zu [Komposition föderierter Zielgruppen](https://experienceleague.adobe.com/de/docs/federated-audience-composition/using/home).
 
-![Eine Liste der Zielgruppen, die in Federated Audience Komposition für Ihr Unternehmen erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
+![Eine Liste von Zielgruppen, die in der Federated-Audience-Komposition für Ihre Organisation erstellt wurden.](../images/ui/overview/federated-audience-composition.png)
 
 ## Importieren einer Zielgruppe {#import-audience}
 
 >[!IMPORTANT]
 >
-Um eine extern generierte Zielgruppe zu importieren, müssen Sie **** über die folgenden Berechtigungen verfügen: [!UICONTROL Segmente anzeigen], [!UICONTROL Segmente verwalten] und [!UICONTROL Zielgruppe importieren]. Weitere Informationen zu diesen Berechtigungen finden Sie in der [Zugriffskontrolle - Übersicht](../../access-control/home.md#permissions) .
+Um eine extern generierte Zielgruppe zu importieren, **müssen** über die folgenden Berechtigungen verfügen: [!UICONTROL Segmente anzeigen], [!UICONTROL Segmente verwalten] und [!UICONTROL Zielgruppe importieren]. Weitere Informationen zu diesen Berechtigungen finden Sie unter [Zugriffssteuerung - Übersicht](../../access-control/home.md#permissions).
 
 Sie können **[!UICONTROL Zielgruppe importieren]** auswählen, um eine extern generierte Zielgruppe zu importieren.
 
@@ -433,9 +434,9 @@ Der Workflow **[!UICONTROL Zielgruppen-CSV importieren]** wird angezeigt. Sie k�
 >
 Die extern generierte Zielgruppe **muss** im CSV-Format vorliegen, darf **maximal** 25 Spalten enthalten und muss kleiner als 1 GB sein.
 >
-Außerdem können Sie **keine Leerzeichen oder Gedankenstriche in der ersten Zeile oder den zugehörigen Spalten der CSV verwenden.**
+Darüber hinaus **Sie** Leerzeichen oder Gedankenstriche in der ersten Zeile oder den zugehörigen Spalten der CSV-Datei nicht verwenden.
 >
-Der Wert der ersten Zeile kann beispielsweise &quot;FirstName&quot;oder &quot;First_Name&quot;lauten, darf jedoch nicht &quot;First Name&quot;oder &quot;First-Name&quot;lauten.
+Der Wert der ersten Zeile kann beispielsweise „FirstName“ oder „First_Name“ sein, er darf jedoch nicht „First Name“ oder „First-Name“ lauten.
 
 Nach Auswahl der zu importierenden CSV-Datei wird eine Liste mit Beispieldaten für diese extern generierte Zielgruppe angezeigt. Nachdem Sie die Richtigkeit der Beispieldaten bestätigt haben, wählen Sie **[!UICONTROL Weiter]** aus.
 
@@ -443,17 +444,17 @@ Nach Auswahl der zu importierenden CSV-Datei wird eine Liste mit Beispieldaten f
 
 Die Seite **[!UICONTROL Zielgruppendetails]** erscheint. Sie können Informationen über Ihre Zielgruppe hinzufügen, einschließlich Name, Beschreibung, primäre Identität und Identity-Namespace-Wert.
 
-Beim Import der extern generierten Zielgruppe müssen Sie eine der Spalten auswählen, die das primäre Identitätsfeld sein soll, und den Namespace-Wert angeben. Beachten Sie, dass alle verbleibenden Felder als **Payload-Attribute** betrachtet werden. Diese Attribute gelten als **nicht dauerhaft**, da sie nur zum Zwecke der Personalisierung mit dieser Zielgruppe verknüpft werden und **nicht** mit dem Profil verbunden sind.
+Beim Importieren der extern generierten Zielgruppe müssen Sie eine der Spalten als primäres Identitätsfeld auswählen und den Namespace-Wert angeben. Beachten Sie, dass alle verbleibenden Felder als &quot;**&quot;** werden. Diese Attribute gelten als **nicht beständig** da sie nur zur Personalisierung mit dieser Zielgruppe verknüpft sind und **nicht** mit dem Profil verbunden sind.
 
 ![Die Seite [!UICONTROL Zielgruppendetails] wird angezeigt.](../images/ui/audience-portal/import-audience-audience-details.png)
 
-Sie können optional auch zusätzliche Details zu Ihrer extern generierten Zielgruppe hinzufügen, z. B. die Angabe einer ID, die Definition der Zusammenführungsrichtlinie oder die Bearbeitung des Spaltendatentyps.
+Sie können Ihrer extern generierten Zielgruppe optional auch einige zusätzliche Details hinzufügen, z. B. eine ID zuweisen, ihre Zusammenführungsrichtlinie definieren oder ihren Spaltendatentyp bearbeiten.
 
 >[!NOTE]
 >
-Wenn Sie eine benutzerdefinierte externe Zielgruppen-ID verwenden, muss diese den folgenden Richtlinien entsprechen:
+Wenn Sie eine benutzerdefinierte externe Zielgruppen-ID verwenden, müssen Sie die folgenden Richtlinien einhalten:
 >
-- Er muss **mit einem Buchstaben (a-z oder A-Z), einem Unterstrich (_) oder einem Dollarzeichen ($) beginnen.**
+- Sie **muss** mit einem Buchstaben (a-z oder A-Z), einem Unterstrich (_) oder einem Dollarzeichen ($) beginnen.
 - Alle nachfolgenden Zeichen können alphanumerisch (a-z, A-Z, 0-9), Unterstriche (_) oder Dollarzeichen ($) sein.
 
 Nachdem Sie die Zielgruppendetails ausgefüllt haben, wählen Sie **[!UICONTROL Weiter]** aus.
@@ -468,16 +469,16 @@ Nachdem Sie bestätigt haben, dass die Details korrekt sind, wählen Sie **[!UIC
 
 >[!IMPORTANT]
 >
-Standardmäßig haben extern erstellte Zielgruppen einen Datenablauf von 30 Tagen. Die Datengültigkeit wird zurückgesetzt, wenn die Audience aktualisiert oder geändert wird.
+Standardmäßig laufen die Daten extern generierter Zielgruppen 30 Tage ab. Der Ablauf der Daten wird zurückgesetzt, wenn die Zielgruppe in irgendeiner Weise aktualisiert oder geändert wird.
 >
-Wenn Ihre extern generierte Zielgruppe sensible und/oder gesundheitsbezogene Informationen enthält, müssen Sie **1} die erforderlichen Datennutzungsbezeichnungen anwenden, bevor Sie sie für ein beliebiges Ziel aktivieren.** Da Variablen aus extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten Sie **nicht** Einwilligungsdaten in Ihre CSV-Datei aufnehmen.
+Wenn Ihre extern generierte Zielgruppe außerdem sensible und/oder gesundheitsbezogene Informationen enthält, **müssen** die erforderlichen Datennutzungskennzeichnungen vor der Aktivierung auf ein beliebiges Ziel anwenden. Da Variablen von extern generierten Zielgruppen im Data Lake und nicht im Echtzeit-Kundenprofil gespeichert werden, sollten **nicht** Einverständnisdaten in Ihre CSV-Datei einschließen.
 >
-Weitere Informationen zum Anwenden von Datennutzungsbezeichnungen finden Sie in der Dokumentation zu [Verwalten von Bezeichnungen](../../access-control/abac/ui/labels.md). Allgemeine Informationen zu Datennutzungsbezeichnungen in Platform finden Sie in der [Übersicht über Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) . Informationen zur Funktionsweise von Einwilligungen in extern generierten Zielgruppen finden Sie in den [häufig gestellten Fragen zu Zielgruppen](../faq.md#consent) .
+Weitere Informationen zum Anwenden von Datennutzungskennzeichnungen finden Sie in der Dokumentation unter [ von Kennzeichnungen](../../access-control/abac/ui/labels.md). Um mehr über Datennutzungskennzeichnungen in Platform im Allgemeinen zu erfahren, lesen Sie [Datennutzungskennzeichnungen - Übersicht](../../data-governance/labels/overview.md). Informationen zur Funktionsweise des Einverständnisses in extern generierten Zielgruppen finden Sie in den [Häufig gestellte Fragen zu Zielgruppen](../faq.md#consent).
 
 ## Nächste Schritte
 
-Nachdem Sie diese Übersicht gelesen haben, sollten Sie Audience Portal verwenden können, um Zielgruppen effektiv zu verwalten, zu erstellen und in Adobe Experience Platform zu importieren.
+Nach dem Lesen dieser Übersicht sollten Sie in der Lage sein, Zielgruppenportal zu verwenden, um Zielgruppen effektiv zu verwalten, zu erstellen und in Adobe Experience Platform zu importieren.
 
 Für weitere Informationen zur Verwendung der Segmentierungsdienst-Benutzeroberfläche lesen Sie bitte den [Überblick über die Segmentierungs-Service-Benutzeroberfläche](./overview.md).
 
-Lesen Sie die [häufig gestellten Fragen](../faq.md), um häufig gestellte Fragen zu Audience Portal zu erhalten.
+Häufig gestellte Fragen zu Audience Portal finden Sie unter [Häufig gestellte Fragen](../faq.md).

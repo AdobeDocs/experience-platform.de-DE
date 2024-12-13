@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für Edge-Segmentierung
 description: Erfahren Sie, wie Sie die Edge-Segmentierung nutzen können, um Segmentdefinitionen in Platform direkt auszuwerten und so Anwendungsfälle für die Personalisierung auf derselben und der nächsten Seite zu ermöglichen.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 90%
+source-wordcount: '594'
+ht-degree: 81%
 
 ---
 
@@ -40,15 +40,15 @@ Eine Abfrage kann mithilfe der Edge-Segmentierung ausgewertet werden, wenn sie e
 | Einzelnes Ereignis innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. |
 | Einzelnes Ereignis mit einem Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. |
 | Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. |
-| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden auftritt. |
+| Segment von Segmenten | Jede Segmentdefinition, die eine oder mehrere Batch- oder Streaming-Segmentdefinitionen enthält. **Hinweis:** Wenn das Segment von Segmenten mit **Batch**-Segmentdefinitionen verwendet wird, kann es **24 Stunden**, bis eine Profildisqualifizierung erfolgt. Wenn das Segment von Segmenten mit **Streaming**-Segmentdefinitionen verwendet wird, erfolgt die Profildisqualifizierung auf Streaming-Weise. |
 | Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. |
 
 Im folgenden Szenario wird eine Segmentdefinition **nicht** für die Edge-Segmentierung aktiviert:
 
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
    - Wenn die im Ereignis `inSegment` enthaltene Segmentdefinition jedoch nur ein Profil ist, **wird** die Segmentdefinition für die Edge-Segmentierung aktiviert.
-- Die Segmentdefinition verwendet &quot;Jahr ignorieren&quot;als Teil ihrer Zeitbeschränkungen.
+- Die Segmentdefinition verwendet „Jahr ignorieren“ als Teil ihrer Zeitbeschränkungen.
 
 ## Nächste Schritte
 

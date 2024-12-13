@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Streaming-Segmentierung
 description: Mit der Streaming-Segmentierung in Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf die Relevanz der Daten konzentrieren. Im Rahmen der Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform aufgenommen werden. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, während Daten an Platform übermittelt werden. Das bedeutet, dass die Segmentzugehörigkeit auch ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 86%
+source-wordcount: '1468'
+ht-degree: 83%
 
 ---
 
@@ -28,16 +28,16 @@ Mit der Streaming-Segmentierung in [!DNL Adobe Experience Platform] können Kund
 
 >[!NOTE]
 >
->Damit die Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weitere Informationen zum Aktivieren der geplanten Segmentierung finden Sie in der [Audience Portal-Übersicht](./audience-portal.md#scheduled-segmentation) .
+>Damit die Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für die Organisation aktivieren. Weitere Informationen zur Aktivierung der geplanten Segmentierung finden Sie unter [Zielgruppenportal - Übersicht](./audience-portal.md#scheduled-segmentation).
 
 Eine Abfrage wird automatisch mithilfe der Streaming-Segmentierung ausgewertet, wenn sie eines der folgenden Kriterien erfüllt:
 
 | Abfragetyp | Details |
 | ---------- | ------- |
-| Einzelereignis innerhalb eines Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb eines Zeitfensters von weniger als 24 Stunden verweist. |
+| Einzelnes Ereignis innerhalb eines Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die innerhalb eines Zeitfensters von weniger als 24 Stunden auf ein einzelnes eingehendes Ereignis verweist. |
 | Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden erfolgt. |
-| Segment von Segmenten | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis**: Wenn ein Segment von Segmenten verwendet wird, erfolgt **alle 24 Stunden** eine Profildisqualifizierung. |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden auftritt. |
+| Segment von Segmenten | Jede Segmentdefinition, die eine oder mehrere Batch- oder Streaming-Segmentdefinitionen enthält. **Hinweis:** Wenn das Segment von Segmenten mit **Batch**-Segmentdefinitionen verwendet wird, kann es **24 Stunden**, bis eine Profildisqualifizierung erfolgt. Wenn das Segment von Segmenten mit **Streaming**-Segmentdefinitionen verwendet wird, erfolgt die Profildisqualifizierung auf Streaming-Weise. |
 | Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. |
 
 Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
@@ -46,7 +46,7 @@ Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Sz
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
 - Die Segmentdefinition umfasst eine Kombination aus einem einzelnen Ereignis und einem `inSegment`-Ereignis.
    - Wenn die im `inSegment`-Ereignis enthaltene Segmentdefinition jedoch nur ein Profil ist, wird die Segmentdefinition für die Streaming-Segmentierung **aktiviert**.
-- Die Segmentdefinition verwendet &quot;Jahr ignorieren&quot;als Teil ihrer Zeitbeschränkungen.
+- Die Segmentdefinition verwendet „Jahr ignorieren“ als Teil ihrer Zeitbeschränkungen.
 
 Bitte beachten Sie bei der Streaming-Segmentierung die folgenden Richtlinien:
 
@@ -73,7 +73,7 @@ Darunter befindet sich ein Liniendiagramm, das die Anzahl der neuen Zielgruppen 
 >
 >Eine Segmentdefinition gilt als qualifiziert, wenn es von der Statuslosigkeit oder vom Status „beendet“ zum Status „realisiert“ wechselt. Eine Segmentdefinition gilt als nicht qualifiziert, wenn es von realisiert zu beendet wechselt.
 >
->Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Übersicht über Audience Portal](./audience-portal.md#customize).
+>Weitere Informationen zu diesen Status finden Sie in der Statustabelle in der [Audience Portal - Übersicht](./audience-portal.md#customize).
 
 ![Die Karte für Profile im Zeitverlauf wird hervorgehoben und zeigt ein Liniendiagramm der Profile im Zeitverlauf an.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
@@ -119,6 +119,6 @@ Wenn Sie also feststellen, dass die Zahl unter „Letzte X Tage“ null ist und 
 
 Es dauert bis zu einer Stunde, bis eine Segmentdefinition verfügbar ist.
 
-### Gibt es Einschränkungen beim Streamen von Daten?
+### Gibt es Einschränkungen bei den Daten, die in gestreamt werden?
 
-Damit Streaming-Daten in der Streaming-Segmentierung verwendet werden können, muss zwischen den eingetretenen Ereignissen **1} ein Abstand vorhanden sein.** Wenn zu viele Ereignisse innerhalb derselben Sekunde gestreamt werden, behandelt Platform diese Ereignisse als Bot-generierte Daten und sie werden verworfen. Es hat sich bewährt, **mindestens** fünf Sekunden zwischen den Ereignisdaten zu verwenden, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.
+Damit gestreamte Daten in der Streaming-Segmentierung verwendet werden können **muss** Abstand zwischen den in gestreamten Ereignissen bestehen. Wenn innerhalb derselben Sekunde zu viele Ereignisse gestreamt werden, behandelt Platform diese Ereignisse als von Bots generierte Daten und verwirft sie. Als Best Practice sollten Sie **mindestens** fünf Sekunden zwischen den Ereignisdaten haben, um sicherzustellen, dass die Daten ordnungsgemäß verwendet werden.
