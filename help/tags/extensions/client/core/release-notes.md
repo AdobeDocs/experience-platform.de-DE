@@ -2,10 +2,10 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 89%
+source-wordcount: '1651'
+ht-degree: 88%
 
 ---
 
@@ -15,14 +15,20 @@ ht-degree: 89%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
+## 23. Oktober 2024
+
+v3.4.2
+
+* Behebung eines Schemavalidierungsfehlers für das Formular -> Änderungsereignis, wenn „und mit bestimmten Eigenschaftswerten…“ aktiv ist.
+
 ## 29. März 2023
 
 v3.4.1
 
-* Fügt neue webnative Delegationsereignisse hinzu:
+* Fügt neue Web-native Delegate-Ereignisse hinzu:
    * Keydown
    * KeyUp
-* Fügt die Möglichkeit hinzu, mit vielen Werten (&quot;Weitere hinzufügen&quot;-Optionen) gegen die folgenden Delegaten zu testen:
+* Fügt die Möglichkeit hinzu, Tests für viele Werte („Weitere hinzufügen“-Optionen) mit den folgenden Delegaten durchzuführen:
    * Events
       * Änderung
    * Bedingungen
@@ -31,7 +37,7 @@ v3.4.1
       * Query String Parameter
       * Traffic-Quelle
       * Variable
-* Ändert den &quot;events/EntersViewport&quot;-Delegaten dahingehend, dass er die [Schnittstellenbeobachtungs-API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) anstelle der manuellen Erkennung von Elementen verwendet, die in den Viewport gelangen.
+* Ändert den Delegaten events/EntersViewport, um die [Schnittstellenbeobachtungs-API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) anstelle der manuellen Erkennung von Elementen zu verwenden, die in den Viewport eintreten.
 * Entfernt Code, der DTM-Cookies zu LocalStorage migriert hat.
 * Protokolliert eine Warnung auf der Konsole, wenn die LocalStorage- und SessionStorage-APIs nicht verfügbar sind.
 
@@ -117,13 +123,13 @@ v2.0.4
 
 * Unterstützung von Datenelementen für verschiedene Felder hinzugefügt – Die Unterstützung von Datenelementen wurde den folgenden Ereignissen hinzugefügt: „Zeit auf Seite“, „Betreten des Viewports“, „Hover“ und „Abgespielte Medienzeit“. Zusätzlich zu den folgenden Bedingungen: „Besuchszeit pro Site“ und „Vergleich von Werten“
 * Fügt Unterstützung für das Standardverhalten von Strg/Befehlstaste+Klick und auch Mittelmausklick bei Verwendung der Linkverzögerung hinzu.
-* **Die Linkverzögerung beim Klickereignis wurde als &quot;nicht mehr unterstützt&quot;markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
+* **Link-Verzögerung beim Klickereignis als „nicht mehr unterstützt“ markiert.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
 
 ## 6. Januar 2021
 
 v1.9.0
 
-* **Neue Aktion &quot;Trigger-Direktaufruf&quot;** - Die Haupterweiterung enthält jetzt einen neuen Aktionstyp namens `Trigger Direct Call`.  Dieser kann verwendet werden, um eine Direktaufrufregel über eine Aktion aus einer anderen Regel auszulösen. Er wird direkt der Methode `_satellite.track()` zugeordnet. Vielen Dank an Jan Exner für diesen Beitrag.
+* **Neue Aktion &quot;Trigger Direct Call** - Die Haupterweiterung enthält jetzt einen neuen Aktionstyp namens `Trigger Direct Call`.  Dieser kann verwendet werden, um eine Direktaufrufregel über eine Aktion aus einer anderen Regel auszulösen. Er wird direkt der Methode `_satellite.track()` zugeordnet. Vielen Dank an Jan Exner für diesen Beitrag.
 
 ## 8. Dezember 2020
 
@@ -181,7 +187,7 @@ v1.6.2
 
 v1.6.1
 
-* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das eine Nonce referenziert. Falls konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Durch diese Änderung wird die Verwendung einer CSP mit einer Nonce unterstützt, sodass Launch-Skripte weiterhin in einer CSP-Umgebung geladen werden. Weitere Informationen zur Verwendung von Tags mit einer CSP finden Sie [hier](../../../ui/client-side/content-security-policy.md).
+* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das eine Nonce referenziert. Wenn konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Durch diese Änderung wird die Verwendung einer CSP mit einer Nonce unterstützt, sodass Launch-Skripte weiterhin in einer CSP-Umgebung geladen werden. Weitere Informationen zur Verwendung von Tags mit einer CSP finden Sie [hier](../../../ui/client-side/content-security-policy.md).
 
 ## 18. Juni 2019
 
@@ -210,7 +216,7 @@ v1.4.2
 
 * **Option „Kohorte beibehalten“** – Die Option, eine Kohorte dauerhaft beizubehalten, wurde zur Sampling-Bedingung hinzugefügt. Dadurch wird die Beispielkohorte für einen Benutzer sitzungsübergreifend beibehalten oder beendet. Wenn beispielsweise das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für eine bestimmte Besucherin bzw. einen bestimmten Besucher „true“ zurückgibt, gibt sie in allen nachfolgenden Ausführungen der Bedingung für dieselbe Person ebenfalls „true“ zurück. Wenn das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für eine bestimmte Besucherin bzw. für einen bestimmten Besucher „false“ zurückgibt, gibt sie gleichermaßen in allen nachfolgenden Ausführungen der Bedingung für dieselbe Person ebenfalls „false“ zurück.
 * **Fehlerbehebung** – Es wurde ein Problem behoben, durch das eine Regel mithilfe eines Seitenende-Ereignisses und einer benutzerdefinierten Code-Aktion auf einer Seite, auf der Tags zwar synchron geladen, aber nicht ordnungsgemäß installiert wurden (kein Aufruf von `_satellite.pageBottom()`), Inhalte der Website gelöscht hat.
-* **Fehlerbehebung** - Es wurde ein Problem behoben, bei dem der Viewport-Aufruf nicht funktionierte, wenn die Tag-Bibliothek asynchron geladen wurde und das Laden abgeschlossen wurde, nachdem das DOMContentLoaded-Ereignis des Browsers ausgelöst wurde.
+* **Fehlerbehebung** - Es wurde ein Problem behoben, bei dem Enters Viewport nicht funktionierte, wenn die Tag-Bibliothek asynchron geladen wurde und das Laden abgeschlossen wurde, nachdem das DOMContentLoaded-Ereignis des Browsers ausgelöst wurde.
 
 ## 24. Mai 2018
 
