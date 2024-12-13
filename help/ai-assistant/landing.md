@@ -2,9 +2,9 @@
 title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: d2de642b7e84d3c4fad57cf0052afa67878dcac0
+source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '629'
 ht-degree: 1%
 
 ---
@@ -77,57 +77,37 @@ Sehen Sie sich die folgenden Videos an, um Ihr Wissen über die Funktionen und A
 
 Sehen Sie sich das folgende Video an, um einen Überblick über den KI-Assistenten zu erhalten.
 
-+++Auswählen, um ein Übersichtsvideo des KI-Assistenten anzuzeigen
-
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche des KI-Assistenten](ui-guide.md).
-
-+++
 
 ### Zugriff auf den KI-Assistenten
 
 Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf den KI-Assistenten für Ihre Organisationen und Benutzer konfigurieren.
 
-+++Wählen Sie diese Option aus, um ein Video über den Zugriff auf den KI-Assistenten anzuzeigen.
-
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Weitere Informationen finden Sie im [Handbuch zum Zugriff auf den KI-Assistenten](access.md).
-
-+++
 
 ### Verwenden von KI-Assistenten-Produktwissen zur Verkürzung der Onboarding-Zeit
 
 Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit Ihrem Produktwissen im KI-Assistenten die Onboarding-Zeit verkürzen können.
 
-+++Sehen Sie sich ein Video zur Verwendung des KI-Assistenten an, um die Onboarding-Zeit zu verkürzen.
-
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 Weitere Informationen finden Sie unter [Produktwissen im KI-Assistenten](home.md#product-knowledge)
-
-+++
 
 ### Verwenden Sie den KI-Assistenten, um Ihre Zielgruppen zu überladen
 
 Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Ihre Zielgruppe entrümpeln und Ihre Marketing-Vorgänge optimieren können.
 
-+++Wählen Sie diese Option aus, um ein Video zur Verwendung des KI-Assistenten anzuzeigen, mit dem die Zielgruppen übersichtlich dargestellt werden
-
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
-
-+++
 
 ### Verwenden des Bedienfelds „Auffindbarkeit“, um Ihnen den Einstieg zu erleichtern
 
 Sehen Sie sich das folgende Video an, um mehr über das Bedienfeld „Auffindbarkeit“ im KI-Assistenten und darüber zu erfahren, wie Sie es verwenden können, um mit dem KI-Assistenten zu beginnen
 
-+++Auswählen, um ein Video zur Auffindbarkeit anzuzeigen
-
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
-
-+++
 
 ## Anwendungsfallbibliothek für KI-Assistenten
 
@@ -150,7 +130,7 @@ In den folgenden Videos finden Sie weitere Anwendungsbeispiele für den KI-Assis
 
 >[!ENDTABS]
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Zusätzliche Ressourcen
 
 >[!BEGINSHADEBOX]
 
