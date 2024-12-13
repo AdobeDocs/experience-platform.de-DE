@@ -1,33 +1,33 @@
 ---
-title: AI-Assistent in der Adobe Experience Platform-Produktdokumentation
+title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
+source-git-commit: 86edf0c8eeca5b3d2be5776664c397fcf5028e29
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '688'
 ht-degree: 1%
 
 ---
 
-# AI-Assistent in der Adobe Experience Platform-Produktdokumentation
+# KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 
-AI Assistant in Adobe Experience Platform ist ein Dialogwerkzeug, mit dem Sie Ihre Workflows mit Experience Platform-Anwendungen und -Diensten beschleunigen können. Verwenden Sie den KI-Assistenten, um Ihre Gesamtproduktivität zu steigern, Ihr Verständnis von Produktwissen und betrieblichen Einblicken zu vertiefen sowie Empfehlungen für Ihre Abfragen und geschäftlichen Anwendungsfälle zu sammeln.
+Der KI-Assistent in Adobe Experience Platform ist ein Gesprächstool, mit dem Sie Ihre Workflows mit Experience Platform-Anwendungen und -Services beschleunigen können. Verwenden Sie den KI-Assistenten, um Ihre Gesamtproduktivität zu steigern, Ihr Verständnis für Produktkenntnisse und betriebliche Erkenntnisse zu erweitern sowie Empfehlungen zu sammeln, die für Ihre Abfragen und geschäftlichen Anwendungsfälle relevant sind.
 
-Der AI-Assistent unterstützt Experience Platform, Real-Time CDP, Adobe Journey Optimizer und Customer Journey Analytics.
+Der KI-Assistent unterstützt Experience Platform, Real-Time CDP, Adobe Journey Optimizer und Customer Journey Analytics.
 
 ## Erste Schritte
 
-Lesen Sie zunächst das Material in den unten stehenden Links, um sich mit den Konzepten und Funktionen des AI Assistant vertraut zu machen.
+Lesen Sie zunächst das Material unter den unten stehenden Links, um sich mit den Konzepten und Funktionen des KI-Assistenten vertraut zu machen.
 
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
     <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>Grundlegendes zu Ihren Datenobjekten</strong><br/>Rufen Sie operative Einblicke zu Ihren Datenobjekten ab, um eine bessere Ansicht zu ihrem Status, ihrer Verwendung und ihrer Auswirkungen auf die Sprache zu erhalten.</div>
+    <div><strong>Datenobjekte verstehen</strong><br/> Abrufen von operativen Einblicken zu Ihren Datenobjekten, um einen besseren Überblick über deren Status, Nutzung und Auswirkungen auf die Herkunft zu erhalten.</div>
     </td>
     <td>
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>Verbessern Sie Ihr Lernen</strong><br/>Entdecken, beheben und erweitern Sie Ihr Verständnis von Produktwissen, ohne Ihre Workflows zu unterbrechen.</div>
+    <div><strong>Erweitern Sie Ihr </strong><br/>: Entdecken, beheben und erweitern Sie Ihr Wissen über Produkte, ohne Ihre Workflows zu unterbrechen.</div>
     </td>
   </tr>
   <tr style="border: 0;">
@@ -39,15 +39,15 @@ Lesen Sie zunächst das Material in den unten stehenden Links, um sich mit den K
 
 ## Neue Funktionen
 
-Hier erhalten Sie einen Einblick in die neuesten Verbesserungen des AI-Assistenten, einschließlich der Funktionen, die sich derzeit in der Alpha- oder Beta-Phase befinden.
+Verschaffen Sie sich einen Überblick über die neuesten Verbesserungen im KI-Assistenten, einschließlich der Funktionen, die sich derzeit in der Alpha- oder Beta-Phase befinden.
 
 >[!BEGINTABS]
 
->[!TAB Überwachen bedeutender Änderungen]
+>[!TAB Überwachen signifikanter Änderungen]
 
-### Überwachung wesentlicher Änderungen und Vorhersage von Zielgruppen
+### Überwachung signifikanter Änderungen und Prognose von Audiences
 
-Sie können den AI-Assistenten verwenden, um signifikante Änderungen zu überwachen und Wachstumsprognosen für Ihre Zielgruppe und Datensatzgrößen bereitzustellen. Anschließend können Sie diese Informationen verwenden, um die Integrität Ihrer Zielgruppendaten sicherzustellen und zukunftsorientierte Projektionen zur Unterstützung datenbasierter Entscheidungen anzubieten.
+Sie können den KI-Assistenten verwenden, um signifikante Änderungen zu überwachen und Wachstumsprognosen für Ihre Audience und Datensatzgrößen bereitzustellen. Anschließend können Sie diese Informationen verwenden, um die Integrität Ihrer Zielgruppendaten sicherzustellen und zukunftsgerichtete Prognosen anzubieten, um dateninformierte Entscheidungsfindungen zu unterstützen.
 
 [![Bild](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/audience-forecasting.md)
 
@@ -55,71 +55,97 @@ Sie können den AI-Assistenten verwenden, um signifikante Änderungen zu überwa
 
 ### Schätzen der Zielgruppengröße und -neigung
 
-Sie können die Funktionen zur Schätzung der natürlichen Sprache des AI-Assistenten verwenden, um die Größe der Zielgruppen zu schätzen und die Tendenzen der Zielgruppe vorherzusagen, sodass Sie leichter auf Einblicke in Ihre Zielgruppen zugreifen können.
+Sie können die Funktionen zur Schätzung der natürlichen Sprache des KI-Assistenten verwenden, um die Größe der Zielgruppe zu schätzen und die Neigung der Zielgruppe vorherzusagen, und so einfacher auf Einblicke in Ihre Zielgruppen zugreifen.
 
 [![Bild](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/natural-language.md)
 
->[!TAB XDM-Feldsuche]
+>[!TAB XDM-Felderkennung]
 
-### Entdecken Sie XDM-Felder für die Erstellung von Zielgruppen
+### XDM-Felder für die Zielgruppenerstellung
 
-Sie können den AI-Assistenten verwenden, um Ihre Entdeckung von Experience-Datenmodell (XDM)-Feldern zu unterstützen, die Sie dann zum Erstellen von Zielgruppen in Experience Platform verwenden können.
+Mithilfe des KI-Assistenten können Sie Experience-Datenmodell (XDM)-Felder identifizieren, mit denen Sie dann Zielgruppen in Experience Platform erstellen können.
 
 [![Bild](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
 >[!ENDTABS]
 
-## Video-Bibliothek
+## Videobibliothek
 
-In den folgenden Videos erfahren Sie mehr über die Funktionen und Anwendungsfälle von AI Assistant:
+Sehen Sie sich die folgenden Videos an, um Ihr Wissen über die Funktionen und Anwendungsfälle des KI-Assistenten weiter zu vertiefen:
 
 ### KI-Assistent kennenlernen
 
 Sehen Sie sich das folgende Video an, um einen Überblick über den KI-Assistenten zu erhalten.
 
++++Auswählen, um ein Übersichtsvideo des KI-Assistenten anzuzeigen
+
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
-Weitere Informationen finden Sie im Handbuch [AI Assistant UI Guide](ui-guide.md).
+Weitere Informationen finden Sie im [Handbuch zur Benutzeroberfläche des KI-Assistenten](ui-guide.md).
 
-### Zugriff auf den AI-Assistenten erhalten
++++
 
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf AI Assistant für Ihre Organisationen und Benutzer konfigurieren.
+### Zugriff auf den KI-Assistenten
+
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf den KI-Assistenten für Ihre Organisationen und Benutzer konfigurieren.
+
++++Wählen Sie diese Option aus, um ein Video über den Zugriff auf den KI-Assistenten anzuzeigen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
-Weitere Informationen finden Sie im Zugriffsleitfaden [AI Assistant Access Guide](access.md).
+Weitere Informationen finden Sie im [Handbuch zum Zugriff auf den KI-Assistenten](access.md).
 
-### Verwenden Sie das KI Assistant-Produktwissen, um die Onboarding-Zeit zu verkürzen
++++
 
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI Assistant-Produktwissen die Onboarding-Zeit verkürzen können.
+### Verwenden von KI-Assistenten-Produktwissen zur Verkürzung der Onboarding-Zeit
+
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit Ihrem Produktwissen im KI-Assistenten die Onboarding-Zeit verkürzen können.
+
++++Sehen Sie sich ein Video zur Verwendung des KI-Assistenten an, um die Onboarding-Zeit zu verkürzen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
-Weitere Informationen finden Sie unter [Produktwissen im AI-Assistenten](home.md#product-knowledge)
+Weitere Informationen finden Sie unter [Produktwissen im KI-Assistenten](home.md#product-knowledge)
 
-### Verwenden Sie den KI-Assistenten, um Ihre Zielgruppen zu deklarieren.
++++
 
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Ihre Zielgruppe aufheben und Ihre Marketing-Vorgänge optimieren können.
+### Verwenden Sie den KI-Assistenten, um Ihre Zielgruppen zu überladen
+
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit dem KI-Assistenten Ihre Zielgruppe entrümpeln und Ihre Marketing-Vorgänge optimieren können.
+
++++Wählen Sie diese Option aus, um ein Video zur Verwendung des KI-Assistenten anzuzeigen, mit dem die Zielgruppen übersichtlich dargestellt werden
 
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
 
-## Anwendungsfallbibliothek für AI Assistant
++++
+
+### Verwenden des Bedienfelds „Auffindbarkeit“, um Ihnen den Einstieg zu erleichtern
+
+Sehen Sie sich das folgende Video an, um mehr über das Bedienfeld „Auffindbarkeit“ im KI-Assistenten und darüber zu erfahren, wie Sie es verwenden können, um mit dem KI-Assistenten zu beginnen
+
++++Auswählen, um ein Video zur Auffindbarkeit anzuzeigen
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
+
++++
+
+## Anwendungsfallbibliothek für KI-Assistenten
 
 >[!BEGINTABS]
 
 >[!TAB Bloginhalt]
 
-Lesen Sie für Anwendungsbeispiele für den AI-Assistenten Folgendes:
+Im Folgenden finden Sie Anwendungsbeispiele für KI-Assistenten:
 
-* [Reduzieren Sie die Onboarding-Zeit für neue Mitglieder Ihres Teams](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [Deklarieren Sie Ihre Zielgruppen und optimieren Sie Ihre Marketing-Vorgänge](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [Überprüfen von Abhängigkeiten und Minimieren des Risikos bei Datenaktualisierungen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Verkürzen Sie die Onboarding-Zeit für neue Mitglieder Ihres Teams](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
+* [Beseitigen Sie die Zielgruppen und optimieren Sie Ihre Marketing-Abläufe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [Überprüfen Sie Abhängigkeiten und minimieren Sie Risiken bei Datenaktualisierungen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
->[!TAB Zusätzlicher Videoinhalt]
+>[!TAB Zusätzliche Videoinhalte]
 
-Sehen Sie sich die folgenden Videos an, um weitere Anwendungsbeispiele für AI Assistant zu erhalten:
+In den folgenden Videos finden Sie weitere Anwendungsbeispiele für den KI-Assistenten:
 
-* [Entsperren Sie die Leistung des KI-Assistenten](https://www.youtube.com/watch?v=J48CNmcV7wc)
+* [Entfesseln Sie die Leistungsfähigkeit des KI-Assistenten](https://www.youtube.com/watch?v=J48CNmcV7wc)
 * [KI-Assistent für Zielgruppen kennenlernen](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
@@ -128,17 +154,21 @@ Sehen Sie sich die folgenden Videos an, um weitere Anwendungsbeispiele für AI A
 
 >[!BEGINSHADEBOX]
 
-**Lesen Sie das AI Assistant Security-Faktenblatt**
+**Lesen Sie das Sicherheits-Factsheet zum KI-Assistenten**
 
-Weitere Informationen zum AI-Assistenten finden Sie im [Sicherheitsdatenblatt für den AI-Assistenten in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+Weitere Informationen zu AI Assistant finden Sie im [Sicherheitsfaktenblatt für AI Assistant in Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
 >[!ENDSHADEBOX]
 
-Unter den unten stehenden Links erhalten Sie weitere Informationen zu Anwendungsfällen, Funktionen und vielem mehr von AI Assistant.
+Sehen Sie sich das folgende Video an, um weitere Informationen zu den Sicherheitsfunktionen des KI-Assistenten zu erhalten:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+Klicken Sie auf die folgenden Links, um mehr über Anwendungsfälle, Funktionen und vieles mehr von KI-Assistenten zu erfahren.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="./home.md" target="_blank">Dokumentation</a> - <a href="./ui-guide.md" target="_blank">UI-Handbuch</a> - <a href="./access.md" target="_blank">Zugriff auf den AI-Assistenten</a> - <a href="./privacy.md" target="_blank">Datenschutz, Sicherheit und Governance</a> - <a href="./faq.md" target="_blank">FAQ</a>
+<a href="./home.md" target="_blank">Dokumentation</a> - <a href="./ui-guide.md" target="_blank">UI-Handbuch</a> - <a href="./access.md" target="_blank">Zugriff auf KI-</a> - <a href="./privacy.md" target="_blank">Datenschutz, Sicherheit und Governance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
 <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">Dokumentation</a>
