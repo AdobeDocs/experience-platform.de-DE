@@ -1,8 +1,8 @@
 ---
-description: Erfahren Sie mehr über die IP-Adressen, die Sie zu Ihrer Zulassungsliste hinzufügen müssen, um Adobe Experience Platform-Quellen erfolgreich verwenden zu können.
-title: IP-Adressen-Zulassungsliste für Quellen
+description: Erfahren Sie mehr über die IP-Adressen, die Sie Ihrer Zulassungsliste hinzufügen müssen, um Adobe Experience Platform-Quellen erfolgreich verwenden zu können.
+title: ZULASSUNGSLISTE der IP-Adressen für Quellen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 2c069df7552b5f03f3edbbf0bccd4ba7cbe397d3
+source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 30%
@@ -11,11 +11,11 @@ ht-degree: 30%
 
 # IP-Adressen-Zulassungsliste
 
-Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie den Traffic für den Datenübertragungsdienst fließen lassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen.
+Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie den Traffic für den Datenübertragungs-Service fließen lassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Performance-Einbußen führen.
 
-## IP-Adressen-Zulassungsliste für Batch-Quellen {#batch}
+## ZULASSUNGSLISTE der IP-Adressen für Batch-Quellen {#batch}
 
-Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, damit der Traffic für den Datenübertragungsdienst für Batch-Quellen fließt.
+Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um den Traffic für den Datenübertragungs-Service für Batch-Quellen fließen zu lassen.
 
 >[!BEGINTABS]
 
@@ -40,8 +40,13 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `20.232.89.104/29`
 - `20.98.195.172/32`
 - `172.210.218.144/28`
+- `48.211.4.136/29`
+- `48.211.4.144/28`
+- `48.211.4.160/29`
+- `40.84.85.144/28`
+- `40.84.85.192/28`
 
->[!TAB NLD2: Europe]
+>[!TAB NLD2: Europa]
 
 ### NLD2: Europa
 
@@ -53,7 +58,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
->[!TAB AUS5: Australia]
+>[!TAB AUS5: Australien]
 
 ### AUS5: Australien
 
@@ -65,8 +70,10 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `20.53.46.0/26`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+- `20.213.194.144/29`
+- `20.227.120.32/27`
 
->[!TAB CAN2: Canada]
+>[!TAB CAN2: Kanada]
 
 ### CAN2: Kanada
 
@@ -79,7 +86,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `52.228.86.144/29`
 - `52.246.155.224/28`
 
->[!TAB IND2: India]
+>[!TAB IND2: Indien]
 
 ### IND2: Indien
 
@@ -95,9 +102,9 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 
 >[!ENDTABS]
 
-## IP-Adressen-Zulassungsliste für Streaming-Quellen {#streaming}
+## ZULASSUNGSLISTE von IP-Adressen für Streaming-Quellen {#streaming}
 
-Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, damit der Traffic für den Datenübertragungsdienst für Streaming-Quellen wie [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) und [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) fließt.
+Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, um den Traffic für den Datenübertragungs-Service für Streaming-Quellen wie [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) und [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) fließen zu lassen.
 
 >[!BEGINTABS]
 
@@ -128,7 +135,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `52.254.107.80/28`
 - `20.186.185.227`
 
->[!TAB NLD2: Europe]
+>[!TAB NLD2: Europa]
 
 ### NLD2: Europa
 
@@ -155,7 +162,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `51.138.16.192/28`
 - `51.138.12.100`
 
->[!TAB AUS5: Australia]
+>[!TAB AUS5: Australien]
 
 ### AUS5: Australien
 
@@ -185,7 +192,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `20.227.35.177`
 - `20.43.104.48/28`
 
->[!TAB CAN2: Canada]
+>[!TAB CAN2: Kanada]
 
 ### CAN2: Kanada
 
@@ -245,7 +252,7 @@ Sie müssen die folgenden IP-Adressen zu Ihrer Zulassungsliste hinzufügen, dami
 - `20.26.128.247`
 - `20.26.64.112/28`
 
->[!TAB IND2: India]
+>[!TAB IND2: Indien]
 
 ### IND2: Indien
 
