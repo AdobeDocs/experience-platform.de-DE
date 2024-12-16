@@ -2,9 +2,9 @@
 title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
+source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,14 @@ Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie den Zugriff auf de
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Weitere Informationen finden Sie im [Handbuch zum Zugriff auf den KI-Assistenten](access.md).
+
+### Grundlegendes zu Produktwissen im KI-Assistenten
+
+Sehen Sie sich das folgende Video an, um mehr über Produktkenntnisse im KI-Assistenten zu erfahren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+Weitere Informationen finden Sie unter [Produktwissen im KI-Assistenten](home.md#product-knowledge)
 
 ### Verwenden von KI-Assistenten-Produktwissen zur Verkürzung der Onboarding-Zeit
 
