@@ -5,10 +5,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
 role: Admin,User
-source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
+source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
 workflow-type: tm+mt
-source-wordcount: '1262'
-ht-degree: 85%
+source-wordcount: '1267'
+ht-degree: 84%
 
 ---
 
@@ -25,29 +25,29 @@ ht-degree: 85%
 * API-Tutorials {#api}
    * [Aktivieren von Daten für dateibasierte Ziele mithilfe der Flow Service-API](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API](./api/streaming-destinations.md)
-   * [Verbindung zu dateibasierten E-Mail-Marketing-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren](./api/connect-activate-batch-destinations.md)
+   * [Verbinden mit dateibasierten E-Mail-Marketing-Zielen und Aktivieren von Daten mithilfe der Flow Service-API](./api/connect-activate-batch-destinations.md)
    * [Aktivieren von Zielgruppen für Batch-Ziele über die Ad-hoc-Aktivierungs-API](./api/ad-hoc-activation-api.md)
    * [Bearbeiten des Ziels](./api/edit-destination.md)
    * [Aktualisieren von Ziel-Datenflüssen](./api/update-destination-dataflows.md)
    * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
    * [Datensätze exportieren](/help/destinations/api/export-datasets.md)
-   * [ Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
+   * [Sortieren und Filtern von API-Antworten für Ziele](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
-   * Daten für Ziele aktivieren{#activate}
+   * Aktivieren von Daten für Ziele{#activate}
       * [Aktivierungsübersicht](./ui/activation-overview.md)
       * [Aktivieren von Zielgruppen für Streaming-Zielgruppenexport-Ziele](./ui/activate-segment-streaming-destinations.md)
       * [Aktivieren von Zielgruppen für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md)
       * [Aktivieren von Zielgruppen für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md)
       * [Aktivieren von Zielgruppen für Edge-Personalisierungsziele](./ui/activate-edge-personalization-destinations.md)
-      * [Suchen nach Profilattributen am Edge in Echtzeit](./ui/activate-edge-profile-lookup.md)
-      * [Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-IDs](./ui/activate-curated-destinations.md)
+      * [Profilattribute am Edge in Echtzeit nachschlagen](./ui/activate-edge-profile-lookup.md)
+      * [Aktivieren von Zielgruppen für kuratierte Ziele basierend auf LiveRamp-Kennungen](./ui/activate-curated-destinations.md)
       * [Aktivieren von potenziellen Zielgruppen für Ziele](./ui/activate-prospect-audiences.md)
       * [Kontozielgruppen für Ziele aktivieren](./ui/activate-account-audiences.md)
-      * [Exportieren von Dateien On-Demand an Batch-Ziele über die Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
-      * [Exportieren von Datensätzen über die Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
+      * [Exportieren von Dateien nach Bedarf an Batch-Ziele mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-file-now.md)
+      * [Exportieren von Datensätzen mithilfe der Experience Platform-Benutzeroberfläche](./ui/export-datasets.md)
       * [(Beta) Verwenden Sie das XDM-Attribut der letzten Qualifikationszeit in den neuen Beta-Cloud-Speicherzielen](./ui/activate-last-qualification-time.md)
       * [Verwenden von berechneten Feldern zum Exportieren von Arrays als Zeichenfolgen](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
@@ -56,7 +56,7 @@ ht-degree: 85%
    * [Bearbeiten von Aktivierungsdatenflüssen](./ui/edit-activation.md)
    * [Löschen von Zielen](./ui/delete-destinations.md)
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
-   * [Dateiformatierungsoptionen für dateibasierte Ziele konfigurieren](./ui/batch-destinations-file-formatting-options.md)
+   * [Konfigurieren von Dateiformatierungsoptionen für dateibasierte Ziele](./ui/batch-destinations-file-formatting-options.md)
    * [Abonnieren von kontextbezogenen Zielwarnhinweisen](ui/alerts.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
@@ -66,7 +66,7 @@ ht-degree: 85%
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate-Verbindung](./catalog/adobe/marketo-measure-ultimate.md)
       * [Zielgruppenfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
-      * [Verbindung zur Zusammenstellung von Federated Audience (begrenzte Verfügbarkeit)](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Verbindung zur Federated Audience Composition (eingeschränkte Verfügbarkeit)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Werbeziele{#advertising}
       * [(Beta) Acxiom-Zielgruppenverteilung](./catalog/advertising/acxiom-audience-distribution.md)
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
@@ -87,19 +87,19 @@ ht-degree: 85%
       * [Google Ad Manager-Verbindung](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-Verbindung](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match-Verbindung](./catalog/advertising/google-customer-match.md)
-      * [(Beta) Google-Kundenabgleich und DV360-Verbindung](./catalog/advertising/google-customer-match-dv360.md)
+      * [(Beta) Google Customer Match + DV360-Verbindung](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
       * [LiveRamp – Onboarding-Verbindung](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Verteilungsverbindung](./catalog/advertising/liveramp-distribution.md)
-      * [Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [Magnite-Streaming-Echtzeit-Verbindung](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Magnitrat](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Magnite Streaming Echtzeit-Verbindung](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
       * [Pinterest-Verbindungs-Upgrade](./catalog/advertising/pinterest-upgrade.md)
-      * [Verbindung zum PubMatic Connect](./catalog/advertising/pubmatic.md)
+      * [PubMatic Connect-Verbindung](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads-Verbindung](./catalog/advertising/snap-inc.md)
       * [Verbindung mit The Trade Desk](./catalog/advertising/tradedesk.md)
       * [(Beta) The Trade Desk CRM-Verbindung ](./catalog/advertising/tradedesk-emails.md)
@@ -137,9 +137,9 @@ ht-degree: 85%
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
-      * [IP-Adresse Zulassungsliste für dateibasierte Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [AUF DIE ZULASSUNGSLISTE SETZEN IP-Adresse für dateibasierte Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-Ziele (Customer Relationship Management) {#crm}
-      * [Verbindung zum Hubraum](./catalog/crm/hubspot.md)
+      * [Hubspot-Verbindung](./catalog/crm/hubspot.md)
       * [Salesforce-CRM-Verbindung](./catalog/crm/salesforce.md)
       * [Verbindung mit Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Outreach-Verbindung](catalog/crm/outreach.md)
@@ -148,12 +148,12 @@ ht-degree: 85%
       * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
       * [Zeta-Marketing-Plattform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * Daten- und Identitätspartner {#data-partner}
-      * [Acxiom Prospect-Unterdrückung](./catalog/data-partner/acxiom-prospect-suppression.md)
-      * [Acxiom-Datenverbesserung](./catalog/data-partner/acxiom-data-enhancement.md)
-      * [Merkury Enterprise-Verbindungen](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+   * {#data-partner} für Daten- und Identitätspartner
+      * [Unterdrückung potenzieller Acxiom-Kunden](./catalog/data-partner/acxiom-prospect-suppression.md)
+      * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
       * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
-   * eCommerce-Ziele {#ecommerce}
+   * E-Commerce-Ziele {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * E-Mail-Ziele {#email}
       * [Bizible-Erweiterung](./catalog/email/bizible.md)
@@ -175,13 +175,15 @@ ht-degree: 85%
       * [SendGrid-Verbindung](./catalog/email-marketing/sendgrid.md)
    * Tag-Erweiterungen {#launch-extensions}
       * [Übersicht über Tag-Erweiterungen](./catalog/launch-extensions/overview.md)
+   * Marketing-Automatisierung {#marketing-automation}
+      * [RainFocus-Teilnehmerprofile](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * Ziele für mobile Interaktion {#mobile-engagement}
       * [Ziele für mobile Interaktion – Übersicht](./catalog/mobile-engagement/overview.md)
       * [Airship Attributes-Verbindung](./catalog/mobile-engagement/airship-attributes.md)
       * [Airship Tags-Verbindung](./catalog/mobile-engagement/airship-tags.md)
       * [Braze-Verbindung](./catalog/mobile-engagement/braze.md)
       * [Line-Verbindung](./catalog/mobile-engagement/line.md)
-      * [Verbindungsverbindung](./catalog/mobile-engagement/moengage.md)
+      * [Moengage-Verbindung](./catalog/mobile-engagement/moengage.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
       * [(Eingeschränkte Verfügbarkeit) Zielgruppenanalyse](./catalog/personalization/audience-analysis.md)
@@ -201,7 +203,7 @@ ht-degree: 85%
    * Social-Media-Ziele{#social}
       * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
-      * [(Firmen) Verbindung zwischen LinkedIn Matched Audiences](./catalog/social/linkedin-b2b.md)
+      * [(Firmen) Verbindung mit LinkedIn Matched Audiences](./catalog/social/linkedin-b2b.md)
       * [Verbindung für zugeordnete LinkedIn-Zielgruppen](./catalog/social/linkedin.md)
       * [TikTok-Verbindung](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences]-Verbindung](./catalog/social/twitter.md)
@@ -210,7 +212,7 @@ ht-degree: 85%
       * [IP-Adressen-Zulassungsliste für Streaming-Ziele](./catalog/streaming/ip-address-allow-list.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
-      * [Qualtrics Automation destination](./catalog/survey/qualtrics-automations.md)
+      * [Ziel von Qualtrics Automations](./catalog/survey/qualtrics-automations.md)
       * [Foresee-Erweiterungsziel](./catalog/survey/foresee.md)
       * [InMoment-Erweiterung](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback-Erweiterung](./catalog/survey/qualtrics.md)
@@ -262,7 +264,7 @@ ht-degree: 85%
          * [Konfigurieren eines Azure Data Lake Storage-Ziels mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Konfigurieren eines Data Landing Zone-Ziels (DLZ) mit benutzerdefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Konfigurieren eines SFTP-Ziels mit vordefinierten Dateiformatierungsoptionen und benutzerdefinierter Dateinamenkonfiguration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-         * [Konfigurieren eines dateibasierten Ziels für den Export von Interessensgruppen](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
+         * [Konfigurieren eines dateibasierten Ziels zum Exportieren von potenziellen Zielgruppen](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * API-Referenz zum Ziel-Authoring {#authoring-api}
       * [API-Referenz zum Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Vorgänge des Ziel-Servers {#server-operations}
