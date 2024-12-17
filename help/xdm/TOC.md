@@ -5,9 +5,9 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Sehen Sie sich einen Überblick über das XDM-System (Experience-Datenmodell) in Experience Platform an und erfahren Sie, wie Sie Klassen und Schemafeldgruppen zur Standardisierung von Erlebnisdaten verwenden.
 feature: Schemas
 role: Developer
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 77%
 
 ---
@@ -29,20 +29,21 @@ ht-degree: 77%
       * [Gesundheitswesen](./schema/industries/healthcare.md)
       * [Telekommunikation](./schema/industries/telecom.md)
       * [Reisen und Touristik](./schema/industries/travel-hospitality.md)
-   * Datenmodell für das Gesundheitswesen V2 {#healthcare}
-      * [Gesundheitswesen V2](./schema/healthcare/healthcare-v2.md)
+   * Gesundheitsdatenmodell v2 - {#healthcare}
+      * [Healthcare v2](./schema/healthcare/healthcare-v2.md)
       * Klassen {#classes}
          * [Standort](./schema/healthcare/classes/location.md)
       * Feldergruppen {#field-groups}
          * [Konto](./schema/healthcare/field-groups/account.md)
-         * [Pflegeplan](./schema/healthcare/field-groups/care-plan.md)
-         * [Reichweite](./schema/healthcare/field-groups/coverage.md)
+         * [Ernennung](./schema/healthcare/field-groups/appointment.md)
+         * [Versorgungsplan](./schema/healthcare/field-groups/care-plan.md)
+         * [Abdeckung](./schema/healthcare/field-groups/coverage.md)
          * [Ziel](./schema/healthcare/field-groups/goal.md)
          * [Immunisierung](./schema/healthcare/field-groups/immunization.md)
          * [Standort](./schema/healthcare/field-groups/location.md)
          * [Medizin](./schema/healthcare/field-groups/medication.md)
-         * [Medikationskosten](./schema/healthcare/field-groups/medication-dispense.md)
-         * [Mediationsanfrage](./schema/healthcare/field-groups/medication-request.md)
+         * [Medikamentenabgabe](./schema/healthcare/field-groups/medication-dispense.md)
+         * [Medikamentenanforderung](./schema/healthcare/field-groups/medication-request.md)
          * [Organisation](./schema/healthcare/field-groups/organization.md)
          * [Patient](./schema/healthcare/field-groups/patient.md)
          * [Anwendende](./schema/healthcare/field-groups/practioner.md)
@@ -51,14 +52,14 @@ ht-degree: 77%
          * [Adresse](./schema/healthcare/data-types/address.md)
          * [Anmerkung](./schema/healthcare/data-types/annotation.md)
          * [Verfügbarkeit](./schema/healthcare/data-types/availability.md)
-         * [Codeable Concept](./schema/healthcare/data-types/codeable-concept.md)
+         * [codierbares Konzept](./schema/healthcare/data-types/codeable-concept.md)
          * [Codeable Reference](./schema/healthcare/data-types/codeable-reference.md)
          * [Kodierung](./schema/healthcare/data-types/coding.md)
-         * [Kontaktpunkt](./schema/healthcare/data-types/contact-point.md)
+         * [Ansprechpartner](./schema/healthcare/data-types/contact-point.md)
          * [Dosierung](./schema/healthcare/data-types/dosage.md)
          * [Dauer](./schema/healthcare/data-types/duration.md)
          * [Erweiterte Kontaktdetails](./schema/healthcare/data-types/extended-contact-detail.md)
-         * [Menschname](./schema/healthcare/data-types/human-name.md)
+         * [Menschenname](./schema/healthcare/data-types/human-name.md)
          * [Kennung](./schema/healthcare/data-types/identifier.md)
          * [Geld](./schema/healthcare/data-types/money.md)
          * [Zeitraum](./schema/healthcare/data-types/period.md)
@@ -68,8 +69,8 @@ ht-degree: 77%
          * [Verhältnis](./schema/healthcare/data-types/ratio.md)
          * [Referenz](./schema/healthcare/data-types/reference.md)
          * [Wiederholen](./schema/healthcare/data-types/repeat.md)
-         * [Einfache Menge](./schema/healthcare/data-types/simple-quantity.md)
-         * [Zeit](./schema/healthcare/data-types/timing.md)
+         * [einfache Menge](./schema/healthcare/data-types/simple-quantity.md)
+         * [Timing](./schema/healthcare/data-types/timing.md)
          * [Virtueller Dienst](./schema/healthcare/data-types/virtual-service-detail.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
 * Klassen {#classes}
@@ -108,7 +109,7 @@ ht-degree: 77%
       * [XDM-Geschäftspersonenkomponenten](./field-groups/profile/business-person-components.md)
       * [XDM-Geschäftspersonendetails](./field-groups/profile/business-person-details.md)
    * XDM Individual Prospect Profile {#prospect-profile}
-      * [Details zur Partnervorschau (Beispiel)](./field-groups/prospect-profile/partner-prospect-details.md)
+      * [Details zum potenziellen Partner (Beispiel)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Volle Adobe Analytics-Erweiterung](./field-groups/event/analytics-full-extension.md)
       * [Werbedetails](./field-groups/event/advertising-details.md)
@@ -127,7 +128,7 @@ ht-degree: 77%
       * [Flugreservierung](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/event/iab.md)
       * [Unterkunftsreservierung](./field-groups/event/lodging-reservation.md)
-      * [Details zur MediaAnalytics-Interaktion](./field-groups/event/mediaanalytics-interaction.md)
+      * [Details zur Media Analytics-Interaktion](./field-groups/event/mediaanalytics-interaction.md)
       * [Preisanfragedetails](./field-groups/event/quote-request-details.md)
       * [Buchungsdetails](./field-groups/event/reservation-details.md)
       * [Sitetool-Details](./field-groups/event/sitetool-details.md)
@@ -140,7 +141,7 @@ ht-degree: 77%
    * XDM Business Campaign-Mitglieder {#b2b-campaign-members}
       * [XDM Business Campaign-Mitgliederdetails](./field-groups/b2b-campaign-members/details.md)
    * Medizin {#medication}
-      * [Medizin im Gesundheitswesen](./field-groups/medication/healthcare-medication.md)
+      * [Arzneimittel](./field-groups/medication/healthcare-medication.md)
    * Plan {#plan}
       * [Details zum Gesundheitsplan](./field-groups/plan/healthcare-plan-details.md)
    * Produkt {#product}
@@ -148,7 +149,7 @@ ht-degree: 77%
       * [Produktkategorie](./field-groups/product/product-category.md)
    * Anbieter {#provider}
       * [Gesundheitsdienstleister](./field-groups/provider/healthcare-provider.md)
-   * Shared {#shared}
+   * Freigegebene {#shared}
       * [Audit-Details des externen Quellsystems](./field-groups/shared/external-source-system-audit-details.md)
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}
@@ -157,27 +158,27 @@ ht-degree: 77%
    * [Adresse](./data-types/address.md)
    * [Advertising-Detailsammlung](./data-types/advertising-details-collection.md)
    * [Advertising Details Reporting](./data-types/advertising-details-reporting.md)
-   * [Sammlung mit Advertising-Pod-Details](./data-types/advertising-pod-details-collection.md)
-   * [Berichterstellung zu Advertising-Pod-Details](./data-types/advertising-pod-details-reporting.md)
+   * [Advertising Pod-Detailsammlung](./data-types/advertising-pod-details-collection.md)
+   * [Berichte zu Advertising Pod-Details](./data-types/advertising-pod-details-reporting.md)
    * [Anwendung](./data-types/application.md)
    * [B2B-Quelle](./data-types/b2b-source.md)
    * [Beacon](./data-types/beacon.md)
    * [Browser-Details](./data-types/browser-details.md)
    * [Warenkorb](./data-types/cart.md)
    * [Kategoriedaten](./data-types/category-data.md)
-   * [Kapiteldetails-Sammlung](./data-types/chapter-details-collection.md)
-   * [Berichte zu Kapiteldetails](./data-types/chapter-details-reporting.md)
+   * [Sammlung von Kapiteldetails](./data-types/chapter-details-collection.md)
+   * [Berichterstellung zu Kapiteldetails](./data-types/chapter-details-reporting.md)
    * [Commerce-Umfang](./data-types/commerce-scope.md)
    * [Commerce](./data-types/commerce.md)
    * [Zustimmungszeichenfolge](./data-types/consent-string.md)
    * [Zustimmungen und Voreinstellungen](./data-types/consents.md)
    * [Währung](./data-types/currency.md)
-   * [Sammlung mit benutzerspezifischen Metadatendetails](./data-types/custom-metadata-details-collection.md)
-   * [Berichterstellung zu benutzerspezifischen Metadatendetails](./data-types/custom-metadata-details-reporting.md)
+   * [Sammlung benutzerdefinierter Metadatendetails](./data-types/custom-metadata-details-collection.md)
+   * [Berichte zu benutzerdefinierten Metadatendetails](./data-types/custom-metadata-details-reporting.md)
    * [Gerät](./data-types/device.md)
    * [E-Mail-Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
-   * [Sammlung mit Fehlerdetails](./data-types/error-details-collection.md)
+   * [Fehlerdetails-Sammlung](./data-types/error-details-collection.md)
    * [Erlebniskanal](./data-types/experience-channel.md)
    * [Audit-Attribute des externen Quellsystems](./data-types/external-source-system-audit-attributes.md)
    * [Finanzkonto](./data-types/financial-account.md)
@@ -195,13 +196,13 @@ ht-degree: 77%
    * [Impressions](./data-types/impressions.md)
    * [Interne Site-Suche](./data-types/internal-site-search.md)
    * [Schlüssel-Wert-Paar](./data-types/key-value-pair.md)
-   * [Liste der Status-Endsammlung](./data-types/list-of-states-end-collection.md)
-   * [Liste der Statuszustände - Sammlung starten](./data-types/list-of-states-start-collection.md)
+   * [Liste der Status End Collection](./data-types/list-of-states-end-collection.md)
+   * [Liste der Status: Sammlung starten](./data-types/list-of-states-start-collection.md)
    * [Marketing](./data-types/marketing.md)
    * [Maßnahme](./data-types/measure.md)
    * [Details zur Mediensammlung](./data-types/media-collection-details.md)
-   * [Medien-Ereignisinformationen](./data-types/media-event-information.md)
-   * [Medienberichterstellungsdetails](./data-types/media-reporting-details.md)
+   * [Informationen zu Medienereignissen](./data-types/media-event-information.md)
+   * [Details zu Medienberichten](./data-types/media-reporting-details.md)
    * [Bestellung](./data-types/order.md)
    * [POI-Details](./data-types/poi-details.md)
    * [POI-Interaktion](./data-types/poi-interaction.md)
@@ -210,18 +211,18 @@ ht-degree: 77%
    * [Person](./data-types/person.md)
    * [Telefonnummer](./data-types/phone-number.md)
    * [Ortskontext](./data-types/place-context.md)
-   * [Player-Statusberichte](./data-types/player-state-data-reporting.md)
+   * [Bericht zu Player-Statusdaten](./data-types/player-state-data-reporting.md)
    * [Postanschrift](./data-types/postal-address.md)
    * [Produktlistenelement](./data-types/product-list-item.md)
-   * [Datenerfassung mit QoE-Daten (Qualität der Erfahrung)](./data-types/qoe-data-details-collection.md)
-   * [Berichterstellung zu QoE-Datendetails](./data-types/qoe-data-details-reporting.md)
-   * [Erstattungsbetrag](./data-types/refund-item.md)
+   * [Datenerfassung für QoE (Quality of Experience)](./data-types/qoe-data-details-collection.md)
+   * [QoE-Datendetailberichte](./data-types/qoe-data-details-reporting.md)
+   * [Rückzahlungsposten](./data-types/refund-item.md)
    * [Anforderungsliste](./data-types/requisition-list.md)
-   * [Rückgabeelement](./data-types/return-item.md)
-   * [Rückgabe](./data-types/return.md)
+   * [Rücksendung](./data-types/return-item.md)
+   * [Rückkehrend](./data-types/return.md)
    * [Suche](./data-types/search.md)
-   * [Sammlung von Sitzungsdetails](./data-types/session-details-collection.md)
-   * [Sitzungsdetails-Reporting](./data-types/session-details-reporting.md)
+   * [Sammlung der Sitzungsdetails](./data-types/session-details-collection.md)
+   * [Berichte zu Sitzungsdetails](./data-types/session-details-reporting.md)
    * [Lieferung](./data-types/shipping.md)
    * [Abonnement](./data-types/subscription.md)
    * [Telekom-Abonnement](./data-types/telecom-subscription.md)
@@ -247,7 +248,7 @@ ht-degree: 77%
       * [Beziehungsfelder](./ui/fields/relationship.md)
       * [Erforderliche Felder](./ui/fields/required.md)
    * [Feldbasierte Workflows](./ui/field-based-workflows.md)
-   * [Erstellung von Schemata, die durch maschinelles Lernen unterstützt werden](./ui/ml-assisted-schema-creation.md)
+   * [Durch maschinelles Lernen unterstützte Schemaerstellung](./ui/ml-assisted-schema-creation.md)
    * [Generieren von Beispiel-XDM-Daten](./ui/sample.md)
    * [Exportieren von XDM-Schemata](./ui/export.md)
 * Schemaregistrierungs-API {#api}
