@@ -2,9 +2,9 @@
 title: KI-Assistent in der Adobe Experience Platform-Produktdokumentation
 description: Erste Schritte mit dem KI-Assistenten in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
+source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,14 @@ Sie können die Funktionen zur Schätzung der natürlichen Sprache des KI-Assist
 Mithilfe des KI-Assistenten können Sie Experience-Datenmodell (XDM)-Felder identifizieren, mit denen Sie dann Zielgruppen in Experience Platform erstellen können.
 
 [![Bild](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
+
+>[!TAB KI-Assistent für den Kunden-Support]
+
+### KI-Assistent für Kunden-Support
+
+Sie können den KI-Assistenten für den Kunden-Support verwenden, um eine nahtlose Fehlerbehebung durchzuführen, ohne Ihre Workflows verlassen zu müssen. Bei Bedarf können Support-Administratoren jetzt den KI-Assistenten für den Kunden-Support verwenden, um Support-Tickets zu erstellen, einschließlich Kontext- und Sitzungsdetails aus Ihren Interaktionen mit dem KI-Assistenten.
+
+[![Bild](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
 

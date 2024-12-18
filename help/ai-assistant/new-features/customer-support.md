@@ -2,7 +2,8 @@
 title: KI-Assistent für Kunden-Support
 description: Erfahren Sie, wie Sie mit dem KI-Assistenten die Fehlerbehebung und den Prozess der Einreichung von Support-Tickets optimieren können.
 badge: Alpha
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ Erhalten Sie sofortige Antworten auf häufig gestellte Support-Fragen aus von Ex
 * **Produktrechtliche Dokumentation** die genaue und lizenzorientierte Informationen bereitstellt.
    * Beispielfragen:
       * „Was ist die Beschränkung für Batch-Segmentierungsaufträge in Adobe Experience Platform Activation?“
-„Was ist die Grenze für den durchschnittlichen Profilreichhaltigkeit in Adobe Experience Platform Activation?“
+      * „Was ist die Grenze für den durchschnittlichen Profilreichhaltigkeit in Adobe Experience Platform Activation?“
 
 ## Erstellung von Support-Fällen
 
