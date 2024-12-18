@@ -4,9 +4,9 @@ title: Exportieren von Datensätzen mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Datensätze an ausgewählte Ziele exportieren können.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5138'
+source-wordcount: '5146'
 ht-degree: 11%
 
 ---
@@ -2469,6 +2469,10 @@ Beachten Sie den Unterschied im Dateiformat zwischen den beiden Dateitypen, wenn
 ## Umgang mit API-Fehlern {#api-error-handling}
 
 Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für Experience Platform-API-Fehlermeldungen. Weitere Informationen [ Interpretieren von Fehlerantworten finden Sie unter ](/help/landing/troubleshooting.md#api-status-codes)API-Status-Codes[ und ](/help/landing/troubleshooting.md#request-header-errors)Fehler in der Anfragekopfzeile im Handbuch zur Platform-Fehlerbehebung .
+
+## Bekannte Einschränkungen {#known-limitations}
+
+Ansicht [Bekannte Einschränkungen](/help/destinations/ui/export-datasets.md#known-limitations) zu Datensatzexporten.
 
 ## Häufig gestellte Fragen {#faq}
 
