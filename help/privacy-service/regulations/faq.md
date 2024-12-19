@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; DSGVO; DSGVO; DSGVO; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; FAQ; FAQ; Regulierung; Regulierung; Verordnungen; Datenschutz; Datenschutz
+keywords: Experience Platform;Startseite;beliebte Themen;DSGVO;DSGVO;CCPA;CCPA;PDPA;PDPA;LGPD;LGPD;FAQ;FAQ;Regulierung;Regulierung;Vorschriften;Vorschriften;Datenschutz;Datenschutz;
 solution: Experience Platform
 title: Häufig gestellte Fragen zu Datenschutzbestimmungen
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützten gesetzlichen Datenschutzbestimmungen und deren Implementierung in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1606'
 ht-degree: 32%
 
 ---
@@ -17,7 +17,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu unterstützte
 
 >[!NOTE]
 >
->Definitionen zu den verschiedenen in diesem Dokument verwendeten Begriffen finden Sie im Handbuch [Terminologie der Datenschutzverordnung](terminology.md) .
+>Definitionen der verschiedenen in diesem Dokument verwendeten Begriffe finden Sie im Handbuch [Terminologie für Datenschutzbestimmungen](terminology.md).
 
 ## Allgemeine Fragen
 
@@ -25,13 +25,13 @@ Die folgenden Fragen beziehen sich auf alle von Experience Cloud unterstützten 
 
 ### Auf wen wirken sich die unterstützten Datenschutzbestimmungen aus?
 
-Die von Experience Cloud](./overview.md) unterstützten [Datenschutzbestimmungen gelten für alle Organisationen, die personenbezogene Daten von Bürgern innerhalb der jeweiligen Rechtsordnungen der jeweiligen Rechtsordnung speichern und verarbeiten, unabhängig vom geografischen Standort der Organisation.
+Die [Datenschutzbestimmungen, die von Experience Cloud unterstützt werden](./overview.md) gelten für alle Organisationen, die personenbezogene Daten von Bürgern innerhalb der jeweiligen Gerichtsbarkeit der Vorschriften speichern und verarbeiten, unabhängig vom geografischen Standort des Unternehmens.
 
 ### Was sind personenbezogene Daten?
 
 Personenbezogene Daten sind alle Informationen, die eine natürliche Person (das „Datensubjekt“) betreffen und die zur direkten oder indirekten Identifikation dieser Person verwendet werden können. Dabei kann es sich um einen beliebigen Namen, ein Foto, eine E-Mail-Adresse, Bankdaten, Beiträge auf Social-Networking-Websites, medizinische Informationen oder eine Computer-IP-Adresse handeln.
 
-Die folgenden Kennungen werden häufig in Experience Cloud-Anwendungen verwendet und können Datenschutzbestimmungen unterliegen:
+Die folgenden Kennungen werden häufig in Experience Cloud-Anwendungen verwendet und könnten Datenschutzanforderungen unterliegen:
 
 * Name
 * Postadresse
@@ -47,71 +47,71 @@ Personenbezogene Daten können auch Informationen über Aktivitäten im Internet
 * Suchverlauf
 * Informationen zur Interaktion eines Verbrauchers mit einer Website, Anwendung oder Werbung
 
-Obwohl die Datenschutzbestimmungen eine breite Palette personenbezogener Daten abdecken, schreiben die Standardvertragsbedingungen vor, dass vertrauliche personenbezogene Daten (wie SSN, Führerscheininformationen, Finanzkontoinformationen und biometrische Daten) generell nicht importiert und in Experience Cloud-Anwendungen verwendet werden dürfen.
+Obwohl die Datenschutzbestimmungen eine Vielzahl personenbezogener Daten abdecken, schreiben die Standardvertragsbedingungen der Adobe vor, dass sensible personenbezogene Daten (wie SSN, Führerscheininformationen, Finanzkontoinformationen und biometrische Daten) in Experience Cloud-Anwendungen generell verboten sind.
 
 ### Was ist der Unterschied zwischen einem Datenverantwortlichen und einem Datenverarbeiter?
 
 Ein **Datenverantwortlicher** ist die Stelle, die die Ziele, Bedingungen und Wege der Verarbeitung personenbezogener Daten bestimmt, während der **Datenverarbeiter** eine Stelle ist, die personenbezogene Daten im Auftrag des Datenverantwortlichen verarbeitet.
 
-Ein **Datenverantwortlicher** ist die Person oder Organisation, die befugt und dafür verantwortlich ist, Entscheidungen über die Erhebung, Verwendung oder Weitergabe personenbezogener Daten zu treffen. Ein **Datenverarbeiter** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Verwendung oder Offenlegung der personenbezogenen Daten und der Leitung des Datenverantwortlichen tätig ist.
+Ein **Datenverantwortlicher** ist die Person oder Organisation, die befugt und verantwortlich ist, Entscheidungen bezüglich der Erhebung, Verwendung oder Offenlegung personenbezogener Daten zu treffen. Ein **Auftragsverarbeiter** ist die Person oder Organisation, die im Zusammenhang mit der Erhebung, Nutzung oder Offenlegung der personenbezogenen Daten und der Anweisung des Datenverantwortlichen tätig ist.
 
 ### Was ist der Unterschied zwischen der ausdrücklichen und eindeutigen Zustimmung der betroffenen Person?
 
-**Explizite Einwilligung** bezieht sich auf einen Standard der Einwilligung, der einen spezifischen, informierten und eindeutigen Hinweis auf die Wünsche der betroffenen Person in mündlicher oder schriftlicher Form beinhaltet. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
+**Explizite Einwilligung** bezieht sich auf einen Einwilligungsstandard, der eine konkrete, informierte und eindeutige mündliche oder schriftliche Angabe der Wünsche der betroffenen Person umfasst. Einfach ausgedrückt, muss die betroffene Person wörtlich und ausdrücklich „Ich stimme zu“ oder „Ich stimme zu“ sagen, damit die Einwilligung als ausdrücklich erachtet wird. Darüber hinaus muss es genauso einfach sein, die Zustimmung zu widerrufen wie sie zu erteilen.
 
-**Eindeutige (implizite) Einwilligung** bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, aber dennoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass die betroffene Person durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
+**Einwilligung (implizit)** Einwilligung, die nicht explizit von der betroffenen Person erteilt wurde, aber dennoch eindeutig ist. Beispielsweise erfolgt während des Anmeldevorgangs für eine Unternehmens-Website eine Benachrichtigung, dass die betroffene Person durch die Angabe einer E-Mail-Adresse dem Erhalt von E-Mails zu Sonderangeboten zustimmt. Liest die betroffene Person die Mitteilung, reicht die positive Handlung der Eingabe ihrer E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
 
-Bei vielen Vorschriften wie der DSGVO ist eine ausdrückliche Zustimmung für die Verarbeitung sensibler personenbezogener Daten erforderlich, wobei nur eine &quot;Opt-in&quot;-Klausel ausreicht. Für nicht vertrauliche Daten ist jedoch eine eindeutige (implizite) Zustimmung zulässig.
+Bei vielen Vorschriften wie der DSGVO ist für die Verarbeitung sensibler personenbezogener Daten eine ausdrückliche Einwilligung erforderlich, wobei eine „Opt-in“ allein genügt. Bei nicht sensiblen Daten ist jedoch eine eindeutige (implizite) Zustimmung akzeptabel.
 
-### Können Datensubjekte unter einem bestimmten Alter ihre Einwilligung geben?
+### Können betroffene Personen unter einem bestimmten Alter ihr Einverständnis erteilen?
 
-In vielen Datenschutzbestimmungen ist festgelegt, dass betroffene Personen, die jünger als ein bestimmtes Alter sind, keine Einwilligung zur Erhebung ihrer personenbezogenen Daten einholen können. Einige Verordnungen sehen vor, dass der Inhaber der elterlichen Verantwortung für die betroffene Person in diesen Fällen die Einwilligung erteilt, aber nicht in allen Fällen. In der folgenden Tabelle ist das Mindestalter für die Einwilligung von Datensubjekten in die einzelnen Verordnungen aufgeführt, wobei Hinweise für weitere Informationen beigefügt werden:
+Viele Datenschutzbestimmungen sehen vor, dass eine betroffene Person, die unter einem bestimmten Alter ist, der Erhebung ihrer personenbezogenen Daten rechtlich nicht zustimmen kann. Einige Vorschriften ermöglichen in diesen Fällen die Einwilligung des Inhabers der elterlichen Verantwortung für die betroffene Person, aber nicht für alle Fälle. In der folgenden Tabelle ist das Mindestalter für die Einwilligung der betroffenen Personen in die einzelnen Verordnungen aufgeführt, mit Hinweisen für weitere Informationen:
 
-| Regelung | Alter der Einwilligung | Anmerkungen |
+| Regelung | Alter des Einverständnisses | Anmerkungen |
 | --- | --- | --- |
-| CCPA (Kalifornien) | 16 | <ul><li>Die elterliche Zustimmung kann nur für Datensubjekte ab 13 Jahren erteilt werden.</li><li>Die Erhebung personenbezogener Daten von Personen unter 13 Jahren ist streng verboten.</li></ul> |
-| DSGVO (Europäische Union) | 16 | <ul><li>Einige EU-Mitgliedstaaten können zu diesem Zweck ein Gesetz für ein niedrigeres Alter vorsehen, jedoch nicht weniger als 13.</li><li>Die elterliche Zustimmung muss für alle Datensubjekte unter der Altersgrenze erteilt werden.</li></ul> |
-| LGPD (Brasilien) | 13 | <ul><li>Die elterliche Zustimmung muss für alle Datensubjekte unter der Altersgrenze erteilt werden.</li><li>Die Einwilligung kann von einer 13- bis 18-jährigen natürlichen Person erteilt werden, solange die Verarbeitung ihrer personenbezogenen Daten in ihrem besten Interesse erfolgt.</li></ul> |
-| PDPA (Thailand) | 10 | <ul><li>Die elterliche Zustimmung muss für alle Datensubjekte unter der Altersgrenze erteilt werden.</li></ul> |
+| CCPA (California) | 16 | <ul><li>Eine elterliche Einwilligung kann nur für Personen ab 13 Jahren erteilt werden.</li><li>Die Erhebung personenbezogener Daten von Personen unter 13 Jahren ist strengstens untersagt.</li></ul> |
+| DSGVO (Europäische Union) | 16 | <ul><li>Einige Mitgliedstaaten der EU können zu diesem Zweck ein Gesetz für ein niedrigeres Alter vorsehen, das jedoch nicht unter 13 liegen darf.</li><li>Die Einwilligung der Eltern muss für alle betroffenen Personen unter dem Mindestalter erteilt werden.</li></ul> |
+| LGPD (Brasilien) | 13 | <ul><li>Die Einwilligung der Eltern muss für alle betroffenen Personen unter dem Mindestalter erteilt werden.</li><li>Eine Einwilligung kann von einer 13- bis 18-jährigen natürlichen Person erteilt werden, solange die Verarbeitung ihrer personenbezogenen Daten in ihrem besten Interesse erfolgt.</li></ul> |
+| PDPA (Thailand) | 10 | <ul><li>Die Einwilligung der Eltern muss für alle betroffenen Personen unter dem Mindestalter erteilt werden.</li></ul> |
 
 <!-- | New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> | -->
 
 ### Wie viele Tage hat ein Unternehmen Zeit, um auf die Anfrage eines Verbrauchers hinsichtlich Zugriff auf oder Löschung personenbezogener Daten zu reagieren?
 
-Wenn das Unternehmen personenbezogene Daten gesammelt hat und die Identität eines bestimmten Verbrauchers authentifizieren oder überprüfen kann, können Datenschutzbestimmungen ein bestimmtes Zeitfenster für die Erfüllung einer Verbraucheranfrage vorsehen. In der folgenden Tabelle sind die Zeitfenster für jede Verordnung mit Anmerkungen zu einigen Ausnahmen aufgeführt:
+Wenn das Unternehmen personenbezogene Daten erfasst hat und die Identität eines bestimmten Verbrauchers authentifizieren oder überprüfen kann, ermöglichen die Datenschutzbestimmungen ein bestimmtes Zeitfenster, in dem eine Verbraucheranfrage erfüllt werden kann. In der folgenden Tabelle sind die geltenden Zeitfenster für jede Verordnung aufgeschlüsselt, mit einigen Ausnahmen:
 
 >[!NOTE]
 >
->Der Zeitrahmen für die Reaktion in &quot;Tagen&quot;spiegelt die Fristen wider, die jedes Regulierungsgesetz für die Erfüllung einer Verbraucheranfrage vorsieht.
+>Der Zeitrahmen, in dem in „Tagen“ reagiert werden muss, spiegelt die Fristen wider, die in jedem einzelnen Regulierungsgesetz für den Abschluss einer Verbraucheranfrage vorgesehen sind.
 
 | Regelung | Zeitrahmen für die Antwort | Anmerkungen |
 | --- | --- | --- |
-| CCPA (Kalifornien) | 45 Tage | |
-| DSGVO (Europäische Union) | 30 Tage | Wenn die Anfrage komplex ist oder zahlreiche Anfragen von demselben Datensubjekt gestellt wurden, kann die Anfrage auf 60 Tage verlängert werden. |
+| CCPA (California) | 45 Tage | |
+| DSGVO (Europäische Union) | 30 Tage | |
 | LGPD (Brasilien) | 15 Tage | |
-| PDPA (Thailand) | 30 Tage | Falls ein Unternehmen nicht innerhalb des Compliance-Fensters auf die Anfrage einer betroffenen Person antworten kann, hat das Unternehmen zusätzlich 30 Tage nach dem Datum, an dem es nicht in der Lage war, die Anfrage schriftlich an die betroffene Person zu beantworten. |
+| PDPA (Thailand) | 30 Tage | Wenn ein Unternehmen nicht innerhalb des Zeitfensters, in dem die betroffene Person ihre Anfrage erfüllt, auf die Anfrage antworten kann, verfügt das Unternehmen über eine zusätzliche Frist von 30 Tagen ab dem Datum, an dem es nicht in der Lage war, der betroffenen Person schriftlich zu antworten. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
 ### Muss mein Unternehmen einen Datenschutzbeauftragten ernennen?
 
-Wenn die Datenoperationen Ihres Unternehmens unter die gesetzlichen Bestimmungen der DSGVO, der LGPD oder der PDPA fallen, müssen Sie in den folgenden Fällen einen Datenschutzbeauftragten (DPO) ernennen:
+Wenn die Datenoperationen Ihres Unternehmens unter die rechtlichen Zuständigkeiten der DSGVO, der LGPD oder des PDPA fallen, müssen Sie in den folgenden Fällen einen Datenschutzbeauftragten (Data Protection Officer, DPO) ernennen:
 
-* Ihre Einrichtung ist eine Behörde
+* Ihre Organisation ist eine Behörde
 * Ihr Unternehmen führt eine umfassende systematische Überwachung durch
-* Ihr Unternehmen verarbeitet personenbezogene Daten in großem Maßstab.
+* Ihre Organisation verarbeitet vertrauliche personenbezogene Daten in großem Umfang.
 
 >[!IMPORTANT]
 >
->Im Gegensatz zu anderen Verordnungen schreibt der CCPA dies als Anforderung vor. Es wird jedoch allgemein empfohlen, dass ein Unternehmen zur Wahrung der Datenschutzbestimmungen über eine qualifizierte individuelle Überwachung der Datenerfassung und -speicherung sowie über die Beantwortung von Kundenanfragen verfügen muss.
+>Im Gegensatz zu anderen Vorschriften sieht der CCPA dies als Anforderung vor. Es wird jedoch allgemein empfohlen, dass ein Unternehmen, um die Einhaltung der Datenschutzbestimmungen zu gewährleisten, über eine qualifizierte individuelle Überwachung der Datenerfassung und Speicherung von Verbraucherdaten sowie über die Beantwortung von Kundenanfragen verfügen muss.
 
-### Wie kann ich Datenschutzanfragen von Verbrauchern unterstützen, wenn ich Daten unterhalte, die unter Datenschutzbestimmungen fallen?
+### Wie kann ich Datenschutzanfragen von Verbrauchern unterstützen, wenn ich Daten pflege, die von Datenschutzbestimmungen abgedeckt sind?
 
-Sobald Sie die erforderlichen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen an kompatible Experience Cloud-Apps senden. Weitere Informationen finden Sie in der [[!DNL Privacy Service] Übersicht](../home.md) . Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
+Sobald Sie die notwendigen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen von Verbrauchern an kompatible Experience Cloud-Anwendungen senden. Weitere Informationen finden [[!DNL Privacy Service]  in ](../home.md)Übersicht“. Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
->Die kalifornische Regulierungsbehörde wird noch weitere Leitlinien dazu vorlegen, welche Datentypen für Datenschutzanfragen von Verbrauchern infrage kommen.
+>Die kalifornische Regulierungsbehörde wird noch weitere Leitlinien dazu vorlegen, welche Arten von Daten für Datenschutzanfragen von Verbrauchern infrage kommen.
 
 ## CCPA-Fragen
 
@@ -126,9 +126,9 @@ Gemäß der Definition des CCPA gelten für Adobe und seine Kunden folgende Roll
 
 Als Dienstleister sammelt und verarbeitet Adobe personenbezogene Daten im Auftrag des Unternehmens und ist vertraglich dazu verpflichtet, diese Daten nur für die in der Vereinbarung festgelegten Zwecke zu verwenden.
 
-Angesichts dieser Beziehung und der Vertragssprache mit der Adobe wäre eine Offenlegung an die Adobe wahrscheinlich nicht als &quot;Verkauf&quot;zu betrachten, für den die Unternehmen eine Bekanntmachung vorlegen und die Zustimmung ersuchen müssten.
+Angesichts dieser Beziehung und der Vertragssprache der Adobe wären Offenlegungen gegenüber Adobe wahrscheinlich nicht als „Verkauf“ anzusehen, für den die Unternehmen eine Mitteilung vorlegen und um Zustimmung bitten müssten.
 
-Adobe-Dienste können jedoch verwendet werden, um bestimmte Daten auszutauschen und Übertragungen an Dritte zu ermöglichen. Diese Übertragungen Dritter könnten als &quot;Verkauf&quot;betrachtet werden und erfordern rechtlich die Offenlegung und Zustimmung. Kunden sollten mit ihrem Rechtsbeistand zusammenarbeiten, um einzelne Anwendungsfälle hinsichtlich der geltenden Anforderungen auszuwerten.
+Adobe-Dienste können jedoch verwendet werden, um bestimmte Daten auszutauschen und Übertragungen an Dritte zu ermöglichen. Diese Übertragungen durch Dritte könnten als „Verkauf“ betrachtet werden und erforderten rechtlich eine Offenlegung und Zustimmung. Kunden sollten mit ihrem Rechtsbeistand zusammenarbeiten, um einzelne Anwendungsfälle hinsichtlich der geltenden Anforderungen auszuwerten.
 
 ### Bietet Adobe weitere Tools, die bei der Erfüllung von CCPA-Anforderungen hilfreich sein können?
 
@@ -144,7 +144,7 @@ Die folgenden Fragen beziehen sich speziell auf die DSGVO.
 
 Eine **Verordnung** ist ein bindender legislativer Rechtsakt, der in der gesamten EU durchgesetzt wird. Eine **Richtlinie** ist ein Rechtsakt, der ein Ziel festlegt, das alle EU-Länder erreichen müssen. Es ist jedoch Sache der einzelnen Länder, darüber zu entscheiden, wie dies erfolgt.
 
-Es ist wichtig festzustellen, dass es sich bei der DSGVO um eine Verordnung handelt, während es sich bei der früheren Gesetzgebung (der Datenschutzrichtlinie) um eine Richtlinie handelt.
+Es ist wichtig zu beachten, dass es sich bei der DSGVO um eine Verordnung handelt, im Gegensatz zu den vorherigen Rechtsvorschriften (der Datenschutzrichtlinie), bei denen es sich um eine Richtlinie handelt.
 
 ### Wie wirkt sich die DSGVO auf die Richtlinie zu Datenverletzungen aus?
 
@@ -152,8 +152,8 @@ Vorgeschlagene Vorschriften zu Datenverstößen beziehen sich in erster Linie au
 
 ## PDPA-Fragen
 
-Die folgenden Fragen beziehen sich speziell auf die PDPA.
+Die folgenden Fragen beziehen sich speziell auf das PDPA.
 
-### Was sind vertrauliche personenbezogene Daten?
+### Was sind sensible personenbezogene Daten?
 
-Das PDPA enthält strenge Anforderungen an die Erhebung und Speicherung sensibler personenbezogener Daten, die personenbezogene Daten in Bezug auf Rasse oder ethnische Herkunft, politische Meinungen, religiöse oder philosophische Überzeugungen, Strafregister, Gewerkschaftsmitgliedschaften, genetische Daten, biometrische Daten, Gesundheitsakten sowie sexuelle Orientierung oder Vorlieben enthalten.
+Das PDPA enthält strenge Anforderungen an die Erfassung und Speicherung sensibler personenbezogener Daten, die personenbezogene Daten umfassen, die sich auf die rassische oder ethnische Herkunft, politische Meinungen, religiöse oder philosophische Überzeugungen, Strafregister, Gewerkschaftsmitgliedschaften, genetische Daten, biometrische Daten, Gesundheitsakten und sexuelle Orientierung oder Präferenzen beziehen.
