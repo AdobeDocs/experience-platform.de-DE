@@ -5,7 +5,7 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
+source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 4%
@@ -26,7 +26,7 @@ In der folgenden Tabelle sind die empfohlenen Klassen und Schemafeldgruppen für
 | **Verbrauchererlebnis für Versicherungen**: Verbessern Sie die digitale Akquise und die Erlebnisse von Verbrauchern, die Versicherungen kaufen. Zu den Beispielen gehören: <li> Verstehen des Verbraucherverhaltens zum Senden von Werbe-E-Mails oder zielgerichteten Anzeigen von Drittanbietern an Personen, die auf Seiten zugreifen, die allgemeine Informationen enthalten (z. B. Pläne, Plannamen/Ebenen, Medicaid oder Wellness-Programme)</li><li> Senden von Informationen über die Herzgesundheit, um das Markenbewusstsein zu schärfen, oder Anfragen zur Planung von Impfungen an Personen, die nach Informationen über die Herzgesundheit und Impfstoffe suchen. </li> | <ul><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>[Konto](./field-groups/account.md)</li><li>[Medikamentenabgabe](./field-groups/medication-dispense.md)</li><li>[Medikamentenanfrage](./field-groups/medication-request.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Standort](./classes/location.md)**:<ul><li>[Ort](./field-groups/location.md)</li></ul><li>**[Medizin](../../classes/medication.md)**:<ul><li>[Medizin](./field-groups/medication.md)</li><li>[Medikamentenabgabe](./field-groups/medication-dispense.md)</li><li>[Medikamentenanfrage](./field-groups/medication-request.md)</li></ul></li><li>**[Provider](../../classes/provider.md)**:<ul><li>[Konto](./field-groups/account.md)</li><li>[Medikamentenabgabe](./field-groups/medication-dispense.md)</li><li>[Medikamentenanfrage](./field-groups/medication-request.md)</li></ul><li>**[Plan](../../classes/plan.md)**:<ul><li>[Ziel](./field-groups/coverage.md)</li></ul></li></ul> |
 | **Verbessertes Anbietererlebnis**: Verwenden von Anbieterdaten aus dem EMR-System, um alternative Anbieter auf der Grundlage von Terminverfügbarkeit, Standort und Fachgebiet vorzuschlagen. <br> <br>Verbessern der Anbietersuche, um Ergebnisse mit der gewünschten Verfügbarkeit anzuzeigen, Überprüfen, ob der ausgewählte Anbieter Teil des Payor-Netzwerks ist, und Bereitstellen von Kostenschätzungen. | <ul><li>**[Individuelle XDM-Profile](../../classes/individual-profile.md)**:<ul><li>[Termin](./field-groups/appointment.md)</li><li>[Organisation](./field-groups/organization.md)</li><li>[Patient](./field-groups/patient.md)</li><li>[Praktiker](./field-groups/practioner.md)</li><li>[Planung](./field-groups/schedule.md)</li></ul></li><li>**[Standort](./classes/location.md)**:<ul><li>[Ort](./field-groups/location.md)</li></ul><li>**[Provider](../../classes/provider.md)**:<ul><li>[Termin](./field-groups/appointment.md)</li><li>[Organisation](./field-groups/organization.md)</li><li>[Praktiker](./field-groups/practioner.md)</li><li>[Planung](./field-groups/schedule.md)</li></ul></li></ul> |
 
-{style="table-layout:auto"}
+{style="table-layout:fixed"}
 
 ## Datentypen {#data-types}
 
