@@ -2,9 +2,9 @@
 keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
 title: Wählen Sie ein Produktprofil aus, um Zugriffssteuerungsberechtigungen zu bearbeiten
-description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs „Zugriffssteuerung“ beschrieben. Um die Zugriffskontrolle für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer Organisation sein, die über ein Abonnement für Experience Platform verfügt.
+description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs „Zugriffssteuerung“ beschrieben. Um die Zugriffssteuerung für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator eines Unternehmens sein, das über ein Abonnement für Experience Platform verfügt.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ca204a6bdbf867268e774d5db6f8e5941d38f0ae
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 60%
@@ -13,11 +13,11 @@ ht-degree: 60%
 
 # Wählen Sie ein Produktprofil aus, um seine Zugriffssteuerungsberechtigungen zu verwalten
 
-Um die Zugriffskontrolle für [!DNL Experience Platform] über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer Organisation sein, die über ein Abonnement für [!DNL Experience Platform] verfügt. Während Adobe flexible Administrationshierarchien für Unternehmen unterstützt, müssen Sie über Systemadministrator-, Produkt- oder Produktprofiladministrator-Berechtigungen verfügen, um die Zugriffskontrolle zu konfigurieren. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+Um die Zugriffssteuerung für [!DNL Experience Platform] über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator eines Unternehmens sein, das über ein Abonnement für [!DNL Experience Platform] verfügt. Während Adobe flexible Administratorhierarchien für Unternehmen unterstützt, benötigen Sie zum Konfigurieren der Zugriffssteuerung Systemadministrator-, Produktadministrator- oder Produktprofiladministrator-Berechtigungen. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 Wenn Sie keine Administratorrechte haben, wenden Sie sich an Ihren Systemadministrator, um Zugriff zu erhalten.
 
-Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die Seite **[!UICONTROL Übersicht]** für die Organisation angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat, sowie weitere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation als Ganzes. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, um den Arbeitsbereich „Zugriffssteuerung“ für Ihre Platform-Integration zu öffnen.
+Sobald Sie über Administratorrechte verfügen, wechseln Sie zur [Adobe Admin Console](https://adminconsole.adobe.com) und melden Sie sich mit Ihren Adobe-Anmeldedaten an. Nach der Anmeldung wird die **[!UICONTROL Übersicht]** für die Organisation angezeigt, für die Sie Administratorrechte haben. Auf dieser Seite werden die Produkte angezeigt, die Ihr Unternehmen abonniert hat, sowie andere Steuerelemente zum Hinzufügen von Benutzern und Administratoren zur Organisation als Ganzes. Wählen Sie **[!UICONTROL Adobe Experience Platform]**, um den Arbeitsbereich „Zugriffssteuerung“ für Ihre Platform-Integration zu öffnen.
 
 ![select-product](../images/select-product.png)
 
@@ -30,3 +30,4 @@ Das vorliegende Benutzerhandbuch konzentriert sich auf die Verwendung der [!DNL 
 ## Nächste Schritte
 
 Nachdem Sie sich mit dem Arbeitsbereich „Zugriffskontrolle“ vertraut gemacht haben, fahren Sie mit dem nächsten Schritt fort, um ein [neues Profil zu erstellen](create-profile.md).
+
