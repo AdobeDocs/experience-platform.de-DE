@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Definieren von Identitätsfeldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie ein Identitätsfeld in der Experience Platform-Benutzeroberfläche definieren.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
+source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 16%
+source-wordcount: '651'
+ht-degree: 15%
 
 ---
 
@@ -43,6 +43,10 @@ Zusätzliche Steuerelemente werden angezeigt, nachdem Sie das Kontrollkästchen 
 Wählen **[!UICONTROL unter]** Identity-Namespace) im Dropdown-Menü den entsprechenden Namespace für das Identitätsfeld aus. Die von Adobe bereitgestellten Standard-Namespaces werden zusammen mit den von Ihrem Unternehmen definierten benutzerdefinierten Namespaces aufgelistet.
 
 Wenn Sie fertig sind, wählen **[!UICONTROL Übernehmen]** aus, um die Änderung auf das Schema anzuwenden.
+
+>[!IMPORTANT]
+>
+>Wenn bereits ein primäres Identitätsfeld festgelegt ist, können Sie das primäre Identitätsfeld in Ihrem Schema ändern, indem Sie die oben genannten Schritte ausführen. Sie müssen jedoch alle zugehörigen Datensätze im Profil deaktivieren und erneut aktivieren, damit die Änderung wirksam wird.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
