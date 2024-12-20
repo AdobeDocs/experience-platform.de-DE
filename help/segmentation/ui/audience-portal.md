@@ -2,9 +2,9 @@
 title: Zielgruppen-Portal - Übersicht
 description: Erfahren Sie, wie Sie mit Audience Portal Zielgruppen in Adobe Experience Platform anzeigen, verwalten und erstellen können.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4571'
 ht-degree: 54%
 
 ---
@@ -249,7 +249,7 @@ Nachdem Sie bestätigt haben, dass die richtigen Zielgruppen aufgelistet sind, k
 
 >[!NOTE]
 >
-Wenn Sie eine flexible Zielgruppenauswertung für Zielgruppen ausführen, für die bereits eine Aktivierung festgelegt wurde [nach der Segmentauswertung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), werden die Zielgruppen aktiviert, sobald der flexible Zielgruppenauswertungsauftrag abgeschlossen ist, unabhängig von vorherigen täglichen Aktivierungsaufträgen.
+Wenn Sie eine flexible Zielgruppenbewertung ausführen, müssen Sie sicherstellen, dass die Häufigkeit auf „Nach **[!UICONTROL Segmentbewertung“]** ist. Bei der Ausführung einer flexiblen Zielgruppenauswertung für Zielgruppen, für die bereits eine Aktivierung festgelegt ist [nach der Segmentevaluierung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), werden Zielgruppen unabhängig von vorherigen täglichen Aktivierungsvorgängen sofort nach Abschluss des flexiblen Zielgruppenauswertungsauftrags aktiviert.
 
 ## Zielgruppendetails {#audience-details}
 

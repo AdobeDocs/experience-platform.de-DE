@@ -1,13 +1,13 @@
 ---
-title: Kontozielgruppen
-description: Erfahren Sie, wie Sie Zielgruppen für Konten erstellen und verwenden, um Kontoprofile in nachgelagerten Zielen auszuwählen.
+title: Konto-Zielgruppen
+description: Erfahren Sie, wie Sie Konto-Zielgruppen erstellen und verwenden, um Account-Profile in nachgelagerten Zielen auszuwählen.
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P-Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1518'
-ht-degree: 22%
+source-wordcount: '1495'
+ht-degree: 23%
 
 ---
 
@@ -15,88 +15,88 @@ ht-degree: 22%
 
 >[!AVAILABILITY]
 >
->Kontozielgruppen sind nur in der [B2B edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) und der [B2P Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p) verfügbar.
+>Account-Zielgruppen sind nur in der [B2B edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) und der [B2P Edition von Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p) verfügbar.
 
-Mit der Kontosegmentierung können Sie mit Adobe Experience Platform die gesamte Einfachheit und Komplexität der Marketing-Segmentierungserfahrung von benutzerbezogenen Zielgruppen zu kontobasierten Zielgruppen bringen.
+Mit der Segmentierung von Accounts ermöglicht Ihnen Adobe Experience Platform, die volle Einfachheit und Raffinesse des Marketing-Segmentierungs-Erlebnisses von personenbasierten Zielgruppen zu Account-basierten Zielgruppen zu bringen.
 
-Kontozielgruppen können als Eingabe für kontobasierte Ziele verwendet werden, sodass Sie die Personen innerhalb dieser Konten in nachgelagerten Diensten ansprechen können. Sie können beispielsweise kontobasierte Zielgruppen verwenden, um Datensätze aller Konten abzurufen, die **nicht** über Kontaktinformationen für Personen mit dem Titel Chief Operating Officer (COO) oder Chief Marketing Officer (CMO) verfügen.
+Account-Zielgruppen können als Eingabe für Account-basierte Ziele verwendet werden, sodass Sie die Personen in diesen Konten in nachgelagerten Services ansprechen können. Beispielsweise können Sie Account-basierte Zielgruppen verwenden, um Datensätze für alle Konten abzurufen, die **keine** Kontaktinformationen für Personen mit dem Titel Chief Operating Officer (COO) oder Chief Marketing Officer (CMO) haben.
 
 ## Terminologie {#terminology}
 
-Bevor Sie mit Kontozielgruppen beginnen, sollten Sie sich die Unterschiede zwischen den verschiedenen Zielgruppentypen ansehen:
+Bevor Sie mit Konto-Zielgruppen beginnen, überprüfen Sie die Unterschiede zwischen den verschiedenen Zielgruppentypen:
 
-- **Konto-Zielgruppen**: Eine Konto-Zielgruppe ist eine Zielgruppe, die mit den Profildaten **Konto** erstellt wird. Kontoprofildaten können verwendet werden, um Zielgruppen zu erstellen, die Personen in nachgelagerten Konten ansprechen. Weiterführende Informationen zu Kontoprofilen finden Sie in der [Kontoprofilübersicht](../../rtcdp/accounts/account-profile-overview.md).
-- **Zielgruppen für Personen**: Eine Zielgruppe für Personen ist eine Zielgruppe, die mithilfe von Profildaten vom Typ **Kunde** erstellt wird. Kundenprofildaten können verwendet werden, um Zielgruppen zu erstellen, die auf die Kundengruppe Ihres Unternehmens ausgerichtet sind. Weiterführende Informationen zu Kundenprofilen finden Sie in der [Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md) .
-- **Interessante Zielgruppen**: Eine potenzielle Zielgruppe ist eine Zielgruppe, die mithilfe von Profildaten vom Typ **Interessent** erstellt wird. Mit potenziellen Profildaten können Sie Zielgruppen von nicht authentifizierten Benutzern erstellen. Weiterführende Informationen zu potenziellen Profilen finden Sie in der [Profilübersicht für Interessenten](../../profile/ui/prospect-profile.md).
+- **Konto-Zielgruppen**: Eine Konto-Zielgruppe ist eine Zielgruppe, die mithilfe von Profildaten **Konto** erstellt wird. Account-Profildaten können verwendet werden, um Audiences zu erstellen, die Personen in nachgelagerten Accounts ansprechen. Weiterführende Informationen zu Account-Profilen finden Sie in der [Account-Profilübersicht](../../rtcdp/accounts/account-profile-overview.md).
+- **Personen-Zielgruppen**: Eine Personen-Zielgruppe ist eine Zielgruppe, die mithilfe von **Kunden-)** erstellt wird. Kundenprofildaten können verwendet werden, um Zielgruppen zu erstellen, die auf die Kunden Ihres Unternehmens ausgerichtet sind. Weitere Informationen zu Kundenprofilen finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+- **Interessenten-Zielgruppen**: Eine Interessenten-Zielgruppe ist eine Zielgruppe, die mithilfe von Profildaten **Interessenten** erstellt wird. Daten von Interessentenprofilen können verwendet werden, um Zielgruppen von nicht authentifizierten Benutzern zu erstellen. Weitere Informationen zu Interessentenprofilen finden Sie im Abschnitt [Übersicht über Interessentenprofile](../../profile/ui/prospect-profile.md).
 
 ## Zugriff {#access}
 
-Um auf Kontozielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** im Abschnitt **[!UICONTROL Konten]** aus.
+Um auf Konto-Zielgruppen zuzugreifen, wählen Sie **[!UICONTROL Zielgruppen]** im Abschnitt **[!UICONTROL Konten]** aus.
 
-![Die Schaltfläche &quot;Zielgruppen&quot;wird im Abschnitt &quot;Konten&quot;hervorgehoben.](../images/ui/account-audiences/select.png)
+![Die Schaltfläche „Zielgruppen“ ist im Abschnitt „Konten“ hervorgehoben.](../images/ui/account-audiences/select.png)
 
-Die Seite [!UICONTROL Durchsuchen] wird angezeigt und enthält eine Liste aller Zielgruppen des Kontos für die Organisation.
+Die Seite [!UICONTROL Durchsuchen] wird mit einer Liste aller Konto-Zielgruppen für die Organisation angezeigt.
 
-![Die Zielgruppen des Kontos, die zur Organisation gehören, werden angezeigt.](../images/ui/account-audiences/browse.png)
+![Die Konto-Zielgruppen, die zur Organisation gehören, werden angezeigt.](../images/ui/account-audiences/browse.png)
 
-Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Profilanzahl, Ursprung, Lebenszyklusstatus, Erstellungsdatum und Datum der letzten Aktualisierung.
+Diese Ansicht listet Informationen zur Zielgruppe auf, einschließlich Name, Profilanzahl, Herkunft, Lebenszyklusstatus, Erstellungsdatum und Datum der letzten Aktualisierung.
 
-Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimmten Kontozielgruppen zu suchen und diese zu sortieren. Weitere Informationen zu dieser Funktion finden Sie in der [Audience Portal-Übersicht](./audience-portal.md#manage-audiences) .
+Sie können auch die Such- und Filterfunktion verwenden, um schnell nach bestimmten Konto-Zielgruppen zu suchen und zu sortieren. Weitere Informationen zu dieser Funktion finden Sie im Abschnitt [Zielgruppenportal - Übersicht](./audience-portal.md#manage-audiences).
 
 ## Zielgruppe erstellen {#create}
 
 >[!NOTE]
 >
->Kontozielgruppen werden mit der **Batch**-Segmentierung ausgewertet und alle 24 Stunden ausgewertet.
+>Account-Zielgruppen werden mithilfe der **Batch**-Segmentierung ausgewertet und alle 24 Stunden ausgewertet.
 
-Um eine Konto-Audience zu erstellen, wählen Sie auf der Seite [!UICONTROL Durchsuchen] die Option **[!UICONTROL Audience erstellen]** aus.
+Um eine Konto-Zielgruppe zu erstellen, wählen **[!UICONTROL auf der Seite [!UICONTROL Durchsuchen] die Option]** Zielgruppe erstellen“ aus.
 
-![Die Schaltfläche [!UICONTROL Audience erstellen] wird auf der Seite zum Durchsuchen der Zielgruppe des Kontos hervorgehoben.](../images/ui/account-audiences/select-create-audience.png)
+![Die Schaltfläche [!UICONTROL Zielgruppe erstellen] auf der Seite zum Durchsuchen von Kontozielgruppen ist hervorgehoben.](../images/ui/account-audiences/select-create-audience.png)
 
 Der Segment Builder wird angezeigt. Die Kontoattribute und Zielgruppen werden in der linken Navigationsleiste angezeigt. Auf der Registerkarte [!UICONTROL Attribute] können Sie sowohl von Platform erstellte als auch benutzerdefinierte Attribute hinzufügen.
 
 ![Der Segment Builder wird angezeigt. Beachten Sie, dass nur die Attribute und Zielgruppen angezeigt werden.](../images/ui/account-audiences/segment-builder.png)
 
-Beachten Sie bei der Erstellung von Kontozielgruppen, dass Ereignisse unter **[!UICONTROL Personen]** aufgelistet werden, anstatt ihre eigene Registerkarte zu sein, da diese Attribute mit Personen verknüpft sind.
+Beachten Sie beim Erstellen von Konto-Zielgruppen, dass Ereignisse unter **[!UICONTROL Personen]** aufgeführt werden, anstatt als eigene Registerkarte zu fungieren, da diese Attribute mit Personen verknüpft sind.
 
-![Der Speicherort für Ereignisse, der sich im Ordner [!UICONTROL Personen] befindet, wird hervorgehoben.](../images/ui/account-audiences/attributes.png)
+![Der Speicherort für die Suche nach Ereignissen, der sich im Ordner [!UICONTROL People] befindet, ist hervorgehoben.](../images/ui/account-audiences/attributes.png)
 
-Auf der Registerkarte [!UICONTROL Zielgruppen] können Sie zuvor erstellte personenbasierte Zielgruppen hinzufügen, die bei der Erstellung Ihrer eigenen Kontozielgruppe erstellt werden sollen.
+Auf der Registerkarte [!UICONTROL Zielgruppen] können Sie zuvor erstellte personenbasierte Zielgruppen hinzufügen, auf die Sie bei der Erstellung Ihrer eigenen Konto-Zielgruppe aufbauen können.
 
-![Die Registerkarte &quot;Zielgruppen&quot;im Segment Builder wird hervorgehoben.](../images/ui/account-audiences/audiences.png)
+![Die Registerkarte „Zielgruppen“ im Segment Builder ist hervorgehoben.](../images/ui/account-audiences/audiences.png)
 
 Weitere Informationen zur Verwendung von Segment Builder finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](./segment-builder.md).
 
-### Beziehungen herstellen {#relationships}
+### Erstellen von Beziehungen {#relationships}
 
-Standardmäßig zeigt die Benutzeroberfläche von Segment Builder für Kontozielgruppen die direkte Beziehung zwischen einem Konto und einer Person an. Für Kontozielgruppen stehen jedoch andere Beziehungstypen zur Verfügung.
+Standardmäßig zeigt die Segment Builder-Benutzeroberfläche für Konto-Zielgruppen die direkte Beziehung zwischen einem Konto und einer Person an. Es sind jedoch andere Beziehungstypen für Konto-Zielgruppen verfügbar.
 
-Um die alternativen Beziehungstypen zu verwenden, wählen Sie ![das Einstellungssymbol](../../images/icons/settings.png) aus.
+Um die alternativen Beziehungstypen zu verwenden, wählen Sie ![Einstellungssymbol](../../images/icons/settings.png) aus.
 
-![Das Einstellungssymbol wird im Abschnitt &quot;Felder&quot;hervorgehoben.](../images/ui/account-audiences/select-settings.png)
+![Das Einstellungssymbol ist im Abschnitt Felder hervorgehoben.](../images/ui/account-audiences/select-settings.png)
 
-Wählen Sie auf der Registerkarte [!UICONTROL Einstellungen] die Option **[!UICONTROL Beziehungsselektoren anzeigen]** im Abschnitt **[!UICONTROL Beziehung der Felder]** aus.
+Wählen Sie auf [!UICONTROL  Registerkarte ]Einstellungen **[!UICONTROL im Abschnitt**[!UICONTROL  Beziehung der Felder ]**die Option]** Beziehungsselektoren anzeigen“ aus.
 
-![Der Umschalter Verknüpfungsauswahl anzeigen ist im Bereich Beziehung der Felder auf der Registerkarte Einstellungen ausgewählt.](../images/ui/account-audiences/show-relation-selectors.png)
+![Der Umschalter Beziehungsselektoren anzeigen ist im Abschnitt Beziehung von Feldern auf der Registerkarte Einstellungen ausgewählt.](../images/ui/account-audiences/show-relation-selectors.png)
 
-Wählen Sie erneut ![das Einstellungssymbol](../../images/icons/settings.png) aus, um zur Registerkarte [!UICONTROL Felder] zurückzukehren. Sie können jetzt den Abschnitt **[!UICONTROL Beziehungen herstellen]** sehen, in dem Sie feststellen können, wie das Konto mit der Person verbunden ist und wie die Person mit der Gelegenheit verbunden ist.
+Wählen Sie erneut ![Einstellungssymbol](../../images/icons/settings.png) aus, um zur Registerkarte [!UICONTROL Felder] zurückzukehren. Jetzt können Sie den Abschnitt **[!UICONTROL Beziehungen herstellen]** sehen, in dem Sie festlegen können, wie das Konto mit der Person verbunden ist und wie die Person mit der Opportunity verbunden ist.
 
-![Der Abschnitt Beziehungen herstellen wird hervorgehoben und zeigt die Optionen zum Herstellen einer Verbindung zwischen einem Konto und einer Person und zum Herstellen einer Verbindung zu einer Gelegenheit an.](../images/ui/account-audiences/establish-relationships.png)
+![Der Abschnitt Beziehungen herstellen ist hervorgehoben und zeigt die Optionen zum Verbinden eines Kontos mit einer Person und zum Verbinden einer Person mit einer Opportunity an.](../images/ui/account-audiences/establish-relationships.png)
 
-Beim Verbinden des Kontos mit der Person können Sie aus den folgenden Optionen wählen:
-
-| Option | Beschreibung |
-| ------ | ----------- |
-| Direkte Beziehung | Die direkte Verbindung zwischen dem Konto und der Person Dies gibt an, mit welchen Konten jede Person über das Array von `accountID` -Werten im Array `personComponents` des Personenschemas verknüpft ist. Dieser Pfad wird am häufigsten verwendet. |
-| Kundenbeziehung | Die Beziehung zwischen dem Konto und der Person, die durch das Objekt `accountPersonRelation` definiert wird. Dieser Pfad ermöglicht es auch, jede Person mit mehreren Konten zu verbinden. Sie wird verwendet, wenn Ihr Unternehmen aus Ihren Quelldaten eine explizite Beziehungstabelle definiert hat. |
-| Chancen-/Personenbeziehung | Die Beziehung zwischen der Gelegenheit und der Person, die durch das `opportunityPersonRelation` -Objekt definiert wird. Dadurch wird die Person mit einem Konto verbunden, indem sie von der Opportunity zur Opportunity zum Konto wechselt. Auf diese Weise können Sie beschreiben, bei welchen Unternehmen die Person mit Chancen verbunden ist. |
-
-Wenn Sie die Gelegenheit mit der Person verbinden, können Sie aus den folgenden Optionen wählen:
+Beim Verbinden des Kontos mit der Person können Sie aus den folgenden Optionen auswählen:
 
 | Option | Beschreibung |
 | ------ | ----------- |
-| Konto | Die direkte Verbindung zwischen dem Konto und der Gelegenheit. Wenn Sie dies in einer Konto-Zielgruppe verwenden, verbindet dieser Pfad alle Personen im Unternehmen mit der Möglichkeit. |
-| Chancen-/Personenbeziehung | Die Beziehung zwischen der Chance und der Person, die auf dem Opportunity-Person-Objekt basiert. Dieser Weg verbindet nur Personen, die als an einer Gelegenheit beteiligt identifiziert wurden. |
+| Direkte Beziehung | Die direkte Verbindung zwischen dem Konto und der Person. Dies gibt an, mit welchen Konten jede Person über das Array von `accountID` im `personComponents`-Array im Personenschema verknüpft ist. Dieser Pfad ist der am häufigsten verwendete. |
+| Konto-Personen-Beziehung | Die Beziehung zwischen dem Konto und der Person, die durch das `accountPersonRelation` definiert wird. Dieser Pfad ermöglicht es auch, dass jede Person mit mehreren Konten verbunden sein kann. Er wird verwendet, wenn Ihr Unternehmen eine explizite Beziehungstabelle aus Ihren Quelldaten definiert hat. |
+| Opportunity-Person-Beziehung | Die Beziehung zwischen der Opportunity und der Person, die durch das `opportunityPersonRelation` definiert wird. Dadurch wird die Person mit einem Konto verbunden, indem von der Opportunity-Person zur Opportunity zum Konto gewechselt wird. Auf diese Weise können Sie beschreiben, bei welchen Unternehmen die Person Opportunities zugeordnet ist. |
+
+Beim Verbinden der Opportunity mit der Person können Sie aus den folgenden Optionen wählen:
+
+| Option | Beschreibung |
+| ------ | ----------- |
+| Konto | Die direkte Verbindung zwischen dem Konto und der Opportunity. Wenn Sie dies in einer Konto-Zielgruppe verwenden, verbindet dieser Pfad alle Personen im Unternehmen mit der Opportunity. |
+| Opportunity-Person-Beziehung | Die Beziehung zwischen der Opportunity und der Person, die auf dem Opportunity-Person-Objekt basiert. Dieser Pfad verbindet nur Personen, die speziell als an einer Opportunity beteiligt identifiziert wurden, mit dieser Opportunity. |
 
 Nachdem Sie die gewünschte Beziehung hergestellt haben, können Sie die erforderlichen Personen-Zielgruppen zu Ihrer Segmentdefinition hinzufügen.
 
@@ -104,23 +104,23 @@ Nachdem Sie die gewünschte Beziehung hergestellt haben, können Sie die erforde
 
 >[!NOTE]
 >
->Nur eine begrenzte Anzahl von Zielen unterstützt Kontozielgruppen. Stellen Sie sicher, dass das Ziel, das Sie aktivieren möchten, um Kontozielgruppen zu unterstützen, bevor Sie diesen Prozess fortsetzen.
+>Nur eine begrenzte Anzahl von Zielen unterstützt Konto-Zielgruppen. Bitte stellen Sie sicher, dass das Ziel, das Sie aktivieren möchten, Konto-Zielgruppen unterstützt, bevor Sie diesen Prozess fortsetzen.
 
-Nachdem Sie Ihre Zielgruppe erstellt haben, können Sie die Zielgruppe für andere nachgelagerte Dienste aktivieren.
+Nachdem Sie Ihr Zielgruppenkonto erstellt haben, können Sie die Zielgruppe für andere nachgelagerte Services aktivieren.
 
-Wählen Sie die Zielgruppe aus, die Sie aktivieren möchten, gefolgt von **[!UICONTROL Für Ziel aktivieren]**.
+Wählen Sie die Zielgruppe aus, die Sie aktivieren möchten, und dann **[!UICONTROL Für Ziel aktivieren]**.
 
-![Die Schaltfläche [!UICONTROL In Ziel aktivieren] ist im Schnellaktionsmenü für die ausgewählte Zielgruppe hervorgehoben.](../images/ui/account-audiences/activate.png)
+![Die Schaltfläche [!UICONTROL Für Ziel aktivieren] ist im Schnellaktionsmenü für die ausgewählte Zielgruppe hervorgehoben.](../images/ui/account-audiences/activate.png)
 
-Die Seite [!UICONTROL Ziel aktivieren] wird angezeigt. Weitere Informationen zum Aktivierungsprozess, einschließlich unterstützter Ziele und Details zu Feldzuordnungen, finden Sie im Tutorial [Kontozielgruppen aktivieren](/help/destinations/ui/activate-account-audiences.md) .
+Die [!UICONTROL Ziel aktivieren] wird angezeigt. Weitere Informationen zum Aktivierungsprozess, einschließlich unterstützter Ziele und Details zu Feldzuordnungen, finden Sie im Tutorial [Aktivieren von Konto](/help/destinations/ui/activate-account-audiences.md) .
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Handbuchs erhalten Sie jetzt ein besseres Verständnis dafür, wie Sie Ihre Kontozielgruppen in Adobe Experience Platform erstellen und verwenden. Informationen zur Verwendung anderer Zielgruppentypen in Platform finden Sie im [UI-Handbuch für den Segmentation Service](./overview.md).
+Nach dem Lesen dieses Handbuchs wissen Sie jetzt besser, wie Sie Ihre Konto-Zielgruppen in Adobe Experience Platform erstellen und verwenden. Informationen zur Verwendung anderer Arten von Zielgruppen in Platform finden Sie im [Handbuch zur Benutzeroberfläche des Segmentierungs-Services](./overview.md).
 
 ## Anhang {#appendix}
 
-Im folgenden Abschnitt finden Sie weitere Informationen zu Kontozielgruppen.
+Im folgenden Abschnitt finden Sie weitere Informationen zu Konto-Zielgruppen.
 
 ### Validierung der Kontosegmentierung {#validation}
 
@@ -194,24 +194,20 @@ Im folgenden Abschnitt finden Sie weitere Informationen zu Kontozielgruppen.
 >title="Verstoß gegen eine Einschränkung"
 >abstract="Die Zielgruppe verstößt gegen eine Einschränkung. Weitere Informationen hierzu finden Sie im verknüpften Dokument."
 
-Bei der Verwendung von Kontozielgruppen muss die Zielgruppe **1} die folgenden Einschränkungen erfüllen:**
+Bei Verwendung von Konto-Zielgruppen muss **Zielgruppe** folgenden Einschränkungen einhalten:
 
->[!NOTE]
->
->Die folgende Liste zeigt die **standardmäßigen** -Begrenzungen für Kontozielgruppen. Diese Werte **können** entsprechend den vom Administrator Ihres Unternehmens implementierten Einstellungen ändern.
-
-- Das maximale Lookback-Fenster für Erlebnisereignisse beträgt **30 Tage**.
+- Das maximale Lookback-Fenster für Erlebnisereignisse beträgt **30**.
 - Die maximale Tiefe verschachtelter Container beträgt **5**.
    - Das bedeutet, dass Sie beim Erstellen Ihrer Zielgruppe **nicht** mehr als fünf verschachtelte Container haben dürfen.
 - Die maximale Anzahl von Regeln innerhalb eines einzelnen Containers beträgt **5**.
-   - Das bedeutet, dass Ihre Audience **nicht mehr als fünf Regeln haben kann, aus denen Ihre Audience besteht.**
-- Die maximale Anzahl von Querentitäten, die verwendet werden können, ist **5**.
+   - Das bedeutet, dass Ihre Zielgruppe **kann** mehr als fünf Regeln haben kann, aus denen Ihre Zielgruppe besteht.
+- Die maximale Anzahl von Cross-Entities, die verwendet werden können, beträgt **5**.
    - Eine übergreifende Entität ist der Fall, wenn Sie zwischen verschiedenen Entitäten in Ihrer Zielgruppe wechseln. So können Sie beispielsweise von einem Konto zu einer Person zu einer Marketingliste wechseln.
-- Benutzerdefinierte Entitäten **können nicht** verwendet werden.
+- Benutzerdefinierte Entitäten **können** nicht verwendet werden.
 - Die maximale Anzahl von Werten, die für ein einzelnes Feld überprüft werden können, beträgt **50**.
-   - Wenn Sie beispielsweise das Feld &quot;Stadt&quot;haben, können Sie diesen Wert mit 50 Stadtnamen vergleichen.
-- Kontozielgruppen **können** keine `inSegment` -Ereignisse verwenden.
-- Kontozielgruppen **können keine sequenziellen Ereignisse verwenden.**
-- Kontozielgruppen **können keine Karten verwenden**.
+   - Wenn Sie beispielsweise das Feld „Stadtname“ haben, können Sie diesen Wert mit 50 Stadtnamen vergleichen.
+- Konto-Zielgruppen **können** Ereignisse `inSegment` verwenden.
+- Konto-Zielgruppen **können** sequenzielle Ereignisse verwenden.
+- Konto-Zielgruppen **können** Zuordnungen verwenden.
 - Die maximale Tiefe von verschachtelten Arrays beträgt **5**.
-- Die maximale Anzahl verschachtelter Objekte ist **10**.
+- Die maximale Anzahl verschachtelter Objekte beträgt **10**.
