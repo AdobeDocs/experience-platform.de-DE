@@ -4,10 +4,10 @@ title: Edge-Segmentierung mithilfe der API
 description: Dieses Dokument enthält Beispiele für die Verwendung der Edge-Segmentierung mit der Segmentierungs-Service-API von Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
+source-git-commit: 828a586f0264147676da5c43c73d3b3b9d50b9c2
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 73%
+source-wordcount: '809'
+ht-degree: 70%
 
 ---
 
@@ -47,7 +47,7 @@ Damit ein Segment mithilfe der Edge-Segmentierung ausgewertet werden kann, muss 
 | Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. |
 | Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters von weniger als 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem oder mehreren Profilattributen verweist und innerhalb eines relativen Zeitfensters von weniger als 24 Stunden auftritt. |
 | Segment von Segmenten | Jede Segmentdefinition, die eine oder mehrere Batch- oder Streaming-Segmentdefinitionen enthält. **Hinweis:** Wenn das Segment von Segmenten mit **Batch**-Segmentdefinitionen verwendet wird, kann es **24 Stunden**, bis eine Profildisqualifizierung erfolgt. Wenn das Segment von Segmenten mit **Streaming**-Segmentdefinitionen verwendet wird, erfolgt die Profildisqualifizierung auf Streaming-Weise. |
-| Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die **innerhalb der letzten 24 Stunden** auf mehrere Ereignisse verweist und (optional) ein oder mehrere Profilattribute hat. |
+| Mehrere Ereignisse mit einem Profilattribut | Jede Segmentdefinition, die auf mehrere nicht sequenzielle Ereignisse **innerhalb der letzten 24**) verweist und (optional) ein oder mehrere Profilattribute hat. |
 
 Zusätzlich **muss** das Segment an eine Zusammenführungsrichtlinie gebunden sein, die an Edge aktiv ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Handbuch zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
 
