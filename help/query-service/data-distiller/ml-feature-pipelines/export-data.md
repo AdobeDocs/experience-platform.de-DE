@@ -1,6 +1,6 @@
 ---
 title: Exportieren von Daten in externe ML-Umgebungen
-description: Erfahren Sie, wie Sie einen vorbereiteten Trainings-Datensatz, der mit Data Distiller erstellt wurde, an einem Cloud-Speicherort freigeben können, den Ihre ML-Umgebung für Schulungen und Auswertungen Ihres Modells lesen kann.
+description: Erfahren Sie, wie Sie einen mit Data Distiller erstellten vorbereiteten Trainings-Datensatz an einem Cloud-Speicherort freigeben, den Ihre ML-Umgebung zum Trainieren und Bewerten Ihres Modells lesen kann.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
@@ -9,15 +9,15 @@ ht-degree: 6%
 
 ---
 
-# Daten in externe ML-Umgebungen exportieren
+# Exportieren von Daten in externe ML-Umgebungen
 
-In diesem Dokument wird gezeigt, wie Sie einen vorbereiteten Trainings-Datensatz, der mit Data Distiller erstellt wurde, an einem Cloud-Speicher freigeben können, den Ihre ML-Umgebung zum Trainieren und Scoring Ihres Modells lesen kann. Das Beispiel hier exportiert den Trainings-Datensatz in die [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Sie können das Speicherziel nach Bedarf ändern, um mit Ihrer Umgebung für maschinelles Lernen zu arbeiten.
+In diesem Dokument wird gezeigt, wie ein mit Data Distiller erstellter vorbereiteter Schulungsdatensatz an einem Cloud-Speicherort freigegeben wird, den Ihre ML-Umgebung zum Trainieren und Bewerten Ihres Modells lesen kann. Das folgende Beispiel exportiert den Trainings-Datensatz in die [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Sie können das -Speicherziel nach Bedarf ändern, um mit Ihrer maschinellen Lernumgebung zu arbeiten.
 
-Der [Flussdienst für Ziele](https://developer.adobe.com/experience-platform-apis/references/destinations/) wird verwendet, um die Funktions-Pipeline abzuschließen, indem ein Datensatz mit berechneten Funktionen an einen geeigneten Cloud-Speicher gelandet wird.
+Der [Flow Service für Ziele](https://developer.adobe.com/experience-platform-apis/references/destinations/) wird verwendet, um die Funktions-Pipeline abzuschließen, indem ein Datensatz mit berechneten Funktionen an einem entsprechenden Cloud-Speicherort abgelegt wird.
 
 ## Erstellen der Quellverbindung {#create-source-connection}
 
-Die Quellverbindung ist für die Konfiguration der Verbindung zu Ihrem Adobe Experience Platform-Datensatz verantwortlich, damit der resultierende Fluss genau weiß, wo nach den Daten gesucht werden soll und in welchem Format.
+Die Quellverbindung ist für die Konfiguration der Verbindung zu Ihrem Adobe Experience Platform-Datensatz verantwortlich, sodass der resultierende Fluss genau weiß, wo nach den Daten gesucht werden soll und in welchem Format.
 
 ```python
 from aepp import flowservice
@@ -35,18 +35,18 @@ source_connection_id = source_res["id"]
 
 ## Erstellen der Zielverbindung {#create-target-connection}
 
-Die Zielverbindung ist für die Verbindung mit dem Zieldateisystem verantwortlich. Dazu müssen zunächst eine Basisverbindung zum Cloud-Speicher-Konto erstellt werden (in diesem Beispiel die Dateneinstiegszone ), dann eine Zielverbindung zu einem bestimmten Dateipfad mit den angegebenen Komprimierungs- und Formatoptionen.
+Die Zielverbindung ist für die Verbindung mit dem Zieldateisystem verantwortlich. Dazu muss zunächst eine Basisverbindung zum Cloud-Speicherkonto (in diesem Beispiel die Data Landing Zone) und dann eine Zielverbindung zu einem bestimmten Dateipfad mit angegebenen Komprimierungs- und Formatoptionen erstellt werden.
 
-Die verfügbaren Cloud-Speicher-Ziele werden jeweils anhand einer Verbindungsspezifikations-ID identifiziert:
+Die verfügbaren Cloud-Speicher-Ziele werden jeweils durch eine Verbindungsspezifikations-ID identifiziert:
 
 | Cloud-Speichertyp | Verbindungsspezifikations-ID |
 |-----------------------|--------------------------------------|
-| Amazon S3 | 4fce964d-3f37-408f-9778-e597338a21ee |
+| Amazon S3 | 4FCE964D-3F37-408F-9778-E597338A21EE |
 | Azur Blob-Speicherung | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 | Azure Data Lake | be2c3209-53bc-47e7-ab25-145db8b873e1 |
 | Data Landing Zone | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
 | Google Cloud Storage | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
-| SFTP | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
+| SFTP | 36965A81-B1C6-401B-99F8-22508F1E6A26 |
 
 ```python
 connection_spec_id = "10440537-2a7b-4583-ac39-ed38d4b848e8"
@@ -79,22 +79,22 @@ target_res = flow_conn.createTargetConnection(
 target_connection_id = target_res["id"]
 ```
 
-## Erstellen des Datenflusses {#create-data-flow}
+## Datenfluss erstellen {#create-data-flow}
 
 Der letzte Schritt besteht darin, einen Datenfluss zwischen dem in der Quellverbindung angegebenen Datensatz und dem in der Zielverbindung angegebenen Zieldateipfad zu erstellen.
 
 Jeder verfügbare Cloud-Speichertyp wird durch eine Flussspezifikations-ID identifiziert:
 
-| Cloud-Speichertyp | Flow Spec ID |
+| Cloud-Speichertyp | Flussspezifikations-ID |
 |-----------------------|--------------------------------------|
-| Amazon S3 | 269ba276-16fc-47db-92b0-c1049a3c131f |
+| Amazon S3 | 269BA276-16FC-47DB-92B0-C1049A3C131F |
 | Azur Blob-Speicherung | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Azure Data Lake | 17be2013-2549-41ce-96e7-a70363bec293 |
 | Data Landing Zone | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
 | Google Cloud Storage | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
 | SFTP | 354d6aad-4754-46e4-a576-1b384561c440 |
 
-Der folgende Code erstellt einen Datenfluss mit einem Zeitplan, der weit in die Zukunft beginnt. Auf diese Weise können Sie Ad-hoc-Flüsse während der Modellentwicklung Trigger werden. Sobald Sie über ein trainiertes Modell verfügen, können Sie den Zeitplan des Datenflusses aktualisieren, um den Funktionsdatensatz nach dem gewünschten Zeitplan freizugeben.
+Der folgende Code erstellt einen Datenfluss mit einem Zeitplan, der weit in der Zukunft beginnen soll. Auf diese Weise können Sie Ad-hoc-Flüsse während der Modellentwicklung mit Triggern versehen. Sobald Sie über ein trainiertes Modell verfügen, können Sie den Zeitplan des Datenflusses aktualisieren, um den Funktionsdatensatz nach dem gewünschten Zeitplan freizugeben.
 
 ```python
 import time
@@ -136,7 +136,7 @@ flow_res = flow_conn.createFlow(
 dataflow_id = flow_res["id"]
 ```
 
-Mit dem erstellten Datenfluss können Sie jetzt einen Ad-hoc-Ablauf ausführen, um den Funktionsdatensatz nach Bedarf freizugeben:
+Nachdem der Datenfluss erstellt wurde, können Sie jetzt einen Trigger für eine Ad-hoc-Flussausführung erstellen, um den Funktionsdatensatz bei Bedarf freizugeben:
 
 ```python
 from aepp import connector
@@ -170,7 +170,7 @@ activation_res
 
 ## Optimierte Freigabe für Data Landing Zone
 
-Um einen Datensatz einfacher für die Data Landing Zone freizugeben, stellt die Bibliothek `aepp` eine Funktion `exportDatasetToDataLandingZone` bereit, mit der die oben genannten Schritte in einem einzelnen Funktionsaufruf ausgeführt werden:
+Um die Freigabe eines Datensatzes für die Data Landing Zone zu erleichtern, stellt die `aepp`-Bibliothek eine `exportDatasetToDataLandingZone` Funktion bereit, die die oben genannten Schritte in einem einzigen Funktionsaufruf ausführt:
 
 ```python
 from aepp import exportDatasetToDataLandingZone
@@ -188,4 +188,4 @@ dataflow_id = export.createDataFlowRunIfNotExists(
 )
 ```
 
-Dieser Code erstellt die Quellverbindung, die Zielverbindung und den Datenfluss basierend auf den bereitgestellten Parametern und führt einen Ad-hoc-Ablauf des Datenflusses in einem einzigen Schritt aus.
+Dieser Code erstellt die Quellverbindung, die Zielverbindung und den Datenfluss basierend auf den bereitgestellten Parametern und führt in einem einzigen Schritt eine Ad-hoc-Ausführung des Datenflusses aus.

@@ -1,6 +1,6 @@
 ---
-title: Auf Experience Platform aufbauende Anwendungs- und Intelligent Services
-description: In diesem Video erhalten Sie einen Überblick über die auf Adobe Experience Platform aufbauenden Anwendungen und intelligenten Dienste, die Experience Cloud Applications&mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI und Customer AI ergänzen.
+title: Anwendung und Intelligent Services auf Experience Platform
+description: In diesem Video erhalten Sie einen Überblick über die Programme und Intelligent Services, die auf Adobe Experience Platform aufbauen und die Experience Cloud-Programme und -AMP;mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI und Kunden-KI ergänzen.
 kt: 4333
 audience: all
 doc-type: video
@@ -14,11 +14,11 @@ ht-degree: 5%
 
 ---
 
-# Auf Experience Platform aufbauende Anwendungs- und Intelligent Services
+# Auf Experience Platform aufbauende Programme und Intelligent Services
 
-In diesem Video erhalten Sie einen Überblick über die auf Experience Platform aufbauenden Anwendungs- und Intelligent Services.
+In diesem Video erhalten Sie einen Überblick über die Anwendung und Intelligent Services, die auf Experience Platform aufbauen.
 
-Weitere Informationen finden Sie unter den Links in der Dokumentation zu den einzelnen Anwendungen:
+Weitere Informationen finden Sie unter den Links in der Dokumentation zu den einzelnen Programmen:
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=de)
 * [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)

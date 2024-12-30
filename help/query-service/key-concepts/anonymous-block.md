@@ -54,11 +54,11 @@ END
 $$;
 ```
 
-## Anonymer Block für Drittanbieter-Kunden {#third-party-clients}
+## Anonymer Block mit Drittanbieter-Clients {#third-party-clients}
 
-Bestimmte Drittanbieter-Clients benötigen möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil des Skripts als einzelne Anweisung verarbeitet werden soll. Wenn Sie eine Fehlermeldung erhalten, wenn Sie Query Service mit einem Drittanbieter-Client verwenden, sollten Sie die Dokumentation des Drittanbieter-Clients zur Verwendung eines SQL-Blocks lesen.
+Bestimmte Drittanbieter-Clients benötigen möglicherweise eine separate Kennung vor und nach einem SQL-Block, um anzugeben, dass ein Teil des Skripts als einzelne Anweisung gehandhabt werden soll. Wenn Sie bei der Verwendung des Abfrage-Services mit einem Drittanbieter-Client eine Fehlermeldung erhalten, sollten Sie sich bezüglich der Verwendung eines SQL-Blocks in der Dokumentation des Drittanbieter-Clients informieren.
 
-Beispielsweise erfordert **DbVisualizer**, dass das Trennzeichen der einzige Text in der Zeile sein muss. In DbVisualizer ist der Standardwert für die Begin-ID `--/` und für die End-ID `/`. Nachfolgend finden Sie ein Beispiel für einen anonymen Block in DbVisualizer:
+Beispielsweise erfordert **DbVisualizer**, dass das Trennzeichen der einzige Text in der Zeile ist. In DbVisualizer ist der Standardwert für die Anfangskennung `--/` und für die Endkennung `/`. Ein Beispiel für einen anonymen Block in DbVisualizer finden Sie unten:
 
 ```SQL
 --/
@@ -72,10 +72,10 @@ $$;
 /
 ```
 
-Insbesondere für DbVisualizer gibt es in der Benutzeroberfläche auch die Option &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Weitere Informationen finden Sie in der Dokumentation zu [DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) .
+Insbesondere für DbVisualizer gibt es in der Benutzeroberfläche auch eine Option zum &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Weitere Informationen finden [ in der Dokumentation ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer)DbVisualizer“.
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. Weitere Informationen zum Schreiben von Abfragen finden Sie im [Handbuch zur Ausführung von Abfragen](../best-practices/writing-queries.md) .
+Durch das Lesen dieses Dokuments verstehen Sie nun anonyme Blöcke und ihre Struktur besser. Weitere Informationen zum [ von Abfragen finden ](../best-practices/writing-queries.md) im „Handbuch zur Abfrageausführung“.
 
-Außerdem sollten Sie mehr über [die Verwendung anonymer Bausteine mit dem Muster für das inkrementelle Laden](./incremental-load.md) erfahren, um die Abfrageleistung zu erhöhen.
+Sie sollten auch das Thema über [Verwendung anonymer Blöcke mit dem Design-Muster zum inkrementellen Laden“ lesen](./incremental-load.md) um die Abfrageeffizienz zu erhöhen.

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Cloud; Erste Schritte; Content-Tagging; beliebte Themen; Intelligent Services
+keywords: Experience Cloud;Erste Schritte;Inhalts-Tagging;beliebte Themen;Intelligent Services
 solution: Experience Platform
-title: Übersicht über Content Tagging
-description: Content Tagging ist eine Reihe von KI-Diensten, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren, optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
+title: Übersicht über Inhalts-Tagging
+description: Inhalts-Tagging ist eine Reihe von KI-Services, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren, optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
@@ -11,36 +11,36 @@ ht-degree: 1%
 
 ---
 
-# Übersicht über Content Tagging
+# Übersicht über Inhalts-Tagging
 
-Content Tagging ist eine Reihe von KI-Diensten, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren und optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
+Inhalts-Tagging ist eine Reihe von KI-Services, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren und optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
 
-Alle Marken streben nach einem perfekten Kundenerlebnis. Sie versuchen ständig, bessere Antworten auf alle Aspekte Ihrer Kunden-Touchpoints zu finden.
+Alle Marken sind bestrebt, ein perfektes Kundenerlebnis zu bieten. Sie sind ständig bemüht, bessere Antworten auf alle Aspekte Ihrer Kunden-Touchpoints zu finden.
 
-Inhalt ist eine wesentliche Komponente dieser Erlebnisse. Um Marketing-Fragen besser beantworten zu können, müssen Sie den Inhalt und die Interaktionen Ihrer Kunden damit verstehen. Mit Content Tagging erfahren Sie, welche Funktionen des Inhalts Sie für Ihre Kunden bereitstellen. Mithilfe dieser Einblicke können Sie Erlebnisse personalisieren und KPIs steigern.
+Inhalte sind ein wesentlicher Bestandteil dieser Erlebnisse. Um Marketing-Fragen besser beantworten zu können, müssen Sie Inhalte und die Interaktionen Ihrer Kunden damit verstehen. Mit Inhalts-Tagging können Sie erfahren, welche Funktionen der von Ihnen bereitgestellten Inhalte bei Ihren Kunden Anklang finden. Mit diesen Einblicken können Sie Erlebnisse personalisieren und KPIs optimieren.
 
-## Funktionen des Content Tagging-Dienstes
+## Funktionen des Content-Tagging-Dienstes
 
-| Content-Typ | Funktionen | Übersicht über die Funktionen |
+| Content-Typ | Funktionen | Überblick über die Funktionen |
 | --- | --- | --- |
-| Text | - Keyword-Tagging <br> | - Automatische Extraktion von Suchbegriffen und Tags aus Unternehmensdokumenten und Webseiten mithilfe eines vordefinierten KI-Dienstes. <br> |
-| Bilder | - Farbmarkierung <br> - Optische Zeichenerkennung (OCR) | - Extrahieren Sie exakt dominante Farben (Etiketten und hexadezimale Werte) und deren Gewichtung aus einem Produktbild. <br> - Extrahieren Sie genau jeden vorhandenen Text aus einem Produktbild. |
+| Text | - Keyword-Tagging <br> | - Extrahieren Sie Keywords und Tags automatisch aus Unternehmensdokumenten und Web-Seiten mithilfe eines vordefinierten KI-Services. <br> |
+| Bilder | - Farb-Tagging-<br> - Optische Zeichenerkennung (OCR) | - Extrahieren Sie die dominanten Farben (Beschriftungen und Hexadezimalwerte) und deren Gewichtung aus einem Produktbild. <br> - Extrahieren Sie den vorhandenen Text präzise aus einem Produktbild. |
 
-## Grundlegendes zum Content-Tagging
+## Grundlegendes zu Inhalts-Tagging
 
-Die Gesamtvision von Content Tagging ist in drei Schritte unterteilt, um eine optimale Kundeninteraktion zu erzielen und kundenorientierte KPIs zu maximieren.
+Die Gesamtvision von Content-Tagging ist in drei Schritte unterteilt, um eine optimale Kundeninteraktion zu erreichen und kundenorientierte KPIs zu maximieren.
 
-**Schritt 1: Inhalt verstehen**
-- Extrahieren intelligenter Funktionen und Metadaten.
-- Organisieren Sie Inhalte (Tag, Kategorisierung, Gruppe, Deduplizierung).
-- Verknüpfen Sie Inhaltsdaten mit Assets.
+**Schritt 1: Grundlegendes zum Inhalt**
+- Extrahieren Sie intelligente Funktionen und Metadaten.
+- Inhalte organisieren (Taggen, Kategorisieren, Gruppieren, Deduplizieren).
+- Verknüpfen von Inhaltsdaten mit Assets.
 
-**Schritt 2: Grundlegendes zum Kunden**
+**Schritt 2: Den Kunden verstehen**
 - Verknüpfen von Kundenaktionen mit Inhaltsfunktionen.
-- Erhalten Sie die Präferenzen und Affinitäten des Kunden aus Inhalten und Aktionen.
-- Fügen Sie dem Kundenprofil Voreinstellungen hinzu.
+- Erhalten Sie die Voreinstellungen und Affinitäten der Kundinnen und Kunden aus Inhalten und Aktionen.
+- Hinzufügen von Voreinstellungen zum Kundenprofil.
 
 **Schritt 3: Erlebnisoptimierung aktivieren**
-- Verwenden Sie das Kundenprofil, um verbesserte, personalisierte Erlebnisse in der Sitzung und für nachfolgende Erlebnisse bereitzustellen.
-- Verwenden Sie Inhaltsfunktionen, um Einblicke in das Verhalten von Kunden zu erhalten, die KPIs steuern.
-- Verwenden Sie Inhaltseinblicke, um die Inhaltserstellung, -bearbeitung und -auswahl zu verbessern.
+- Verwenden Sie das Kundenprofil, um in Sitzungen und für nachfolgende Erlebnisse verbesserte, personalisierte Erlebnisse bereitzustellen.
+- Verwenden Sie Inhaltsfunktionen, um Einblicke in das Verhalten von Kunden zu erhalten, die für KPIs ausschlaggebend sind.
+- Verwenden Sie Inhaltserkenntnisse, um die Inhaltserstellung, -erstellung und -auswahl zu verbessern.

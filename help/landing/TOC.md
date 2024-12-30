@@ -6,7 +6,7 @@ user-guide-description: Erfahren Sie mit Handbüchern, Dokumentation und Tutoria
 source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 85%
 * Dokumentation zu Platform {#documentation}
    * [Übersicht](documentation/overview.md)
    * [Sprachunterstützung](documentation/language-support.md)
-* Auf Plattform {#ecosystem} erstellte Anwendungen
+* Auf Platform {#ecosystem} aufbauende Anwendungen
    * [Übersicht](application-services.md)
    * [Adobe Real-Time Customer Data Platform (alle Editionen)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=de)
    * [Programme und Intelligent Services (Video)](video/application-intelligent-services.md)
@@ -68,16 +68,16 @@ ht-degree: 85%
    * [Datenverschlüsselung](./governance-privacy-security/encryption.md)
    * Kundenverwaltete Schlüssel {#customer-managed-keys}
       * [Kundenverwaltete Schlüssel](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [Konfigurieren eines Azure Key Vault](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-      * [Einrichten von CMK mithilfe der API](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-      * [Einrichten von CMK über die Benutzeroberfläche](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+      * [Konfigurieren eines Azure-Schlüsseltresors](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
+      * [Verwenden der API zum Einrichten von CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
+      * [Verwenden der Benutzeroberfläche zum Einrichten von CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Lizenznutzung und Leitlinien {#license}
    * [Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechtigungen](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Lizenznutzungs-Dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
-   * [Datenvolumen insgesamt](./license-usage-and-guardrails/total-data-volume.md)
-   * [Adobe Journey Optimizer-Limits](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
-   * [Customer Journey Analytics-Limits](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
-   * [Real-Time CDP-Limits](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
+   * [Gesamtes Datenvolumen](./license-usage-and-guardrails/total-data-volume.md)
+   * [Adobe Journey Optimizer-Leitplanken](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Customer Journey Analytics-Leitplanken](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Real-Time CDP-Leitplanken](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)
 * [Migration von Data Lake Gen2](adls2-gen2-migration.md)
 * [Glossar](glossary.md)

@@ -3,7 +3,7 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
-description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil behandelt.
+description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für das Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
@@ -20,17 +20,17 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 
 >[!NOTE]
 >
->In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Profildatenspeicher in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Platform Data Lake planen, lesen Sie zusätzlich zu diesem Tutorial das Handbuch zur Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md).[
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Profildatenspeicher in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Data Lake von Platform beabsichtigen, lesen Sie zusätzlich zu diesem Tutorial [ Handbuch ](../catalog/privacy.md) Verarbeitung von Datenschutzanfragen im Data Lake .
 >
 >Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
 >[!IMPORTANT]
 >
->Die Datenschutzanfrage in diesem Handbuch betrifft nicht personenbezogene B2B-Entitäten. **Nicht**
+>Die Datenschutzanfrage in diesem Handbuch **nicht** B2B-Nicht-Personen-Entitäten.
 
 ## Erste Schritte
 
-Dieses Handbuch setzt ein Verständnis der folgenden [!DNL Platform] -Komponenten voraus:
+Dieses Handbuch setzt ein Verständnis der folgenden [!DNL Platform] voraus:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [[!DNL Identity Service]](../identity-service/home.md): Löst das grundlegende Problem der Fragmentierung von Kundenerlebnisdaten, indem Identitäten geräte- und systemübergreifend zusammengeführt werden.
@@ -46,14 +46,14 @@ Weitere Informationen zu Identitäts-Namespaces in [!DNL Experience Platform] fi
 
 ## Übermitteln von Anfragen {#submit}
 
-In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für [!DNL Real-Time Customer Profile] mithilfe der [!DNL Privacy Service]-API oder -Benutzeroberfläche stellen. Bevor Sie diese Abschnitte lesen, sollten Sie die Dokumentation zur [Privacy Service-API](../privacy-service/api/getting-started.md) oder zur [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) lesen oder sich dessen bewusst sein. Diese Dokumente enthalten vollständige Schritte zum Senden eines Datenschutzauftrags, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
+In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für [!DNL Real-Time Customer Profile] mithilfe der [!DNL Privacy Service]-API oder -Benutzeroberfläche stellen. Bevor Sie diese Abschnitte lesen, sollten Sie die Dokumentation zur [Privacy Service-API](../privacy-service/api/getting-started.md) oder zur [Privacy Service-Benutzeroberfläche](../privacy-service/ui/overview.md) lesen. Diese Dokumente enthalten vollständige Schritte zum Senden eines Datenschutzauftrags, einschließlich der richtigen Formatierung gesendeter Benutzeridentitätsdaten in Anfrage-Payloads.
 
 >[!IMPORTANT]
 >
->Privacy Service kann nur [!DNL Profile] -Daten mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszusammenfügung vornimmt. Weitere Informationen finden Sie im Abschnitt zu [Einschränkungen bei Zusammenführungsrichtlinien](#merge-policy-limitations) .
+>Privacy Service kann [!DNL Profile] Daten nur mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung durchführt. Weitere Informationen finden Sie im Abschnitt [Einschränkungen ](#merge-policy-limitations) Zusammenführungsrichtlinien“.
 >
->Beachten Sie, dass Datenschutzanfragen asynchron innerhalb der regulatorischen Anforderungen verarbeitet werden. Die Zeit, die diese für die Durchführung benötigen, kann variieren. Wenn Änderungen an Ihren [!DNL Profile] -Daten auftreten, während eine Anfrage noch verarbeitet wird, ist nicht garantiert, dass diese eingehenden Datensätze auch in dieser Anfrage verarbeitet werden. Es wird garantiert, dass nur Profile gelöscht werden, die zum Zeitpunkt der Anforderung des Datenschutzauftrags im Data Lake oder Profilspeicher gespeichert sind. Wenn Sie während des Löschvorgangs Profildaten zum Betreff einer Löschanfrage erfassen, ist nicht garantiert, dass alle Profilfragmente gelöscht werden.
->Es liegt in Ihrer Verantwortung, zum Zeitpunkt einer Löschanfrage alle in Platform oder Profile Service eingehenden Daten zu kennen, da diese Daten in Ihre Datensatzspeicher eingefügt werden. Sie müssen bei der Erfassung von Daten, die gelöscht wurden oder werden, vorsichtig sein.
+>Beachten Sie, dass Datenschutzanfragen innerhalb der regulatorischen Anforderungen asynchron verarbeitet werden und die Dauer bis zum Abschluss variieren kann. Wenn Änderungen an Ihren [!DNL Profile] Daten auftreten, während eine Anfrage noch verarbeitet wird, ist nicht garantiert, dass diese eingehenden Datensätze auch in dieser Anfrage verarbeitet werden. Es werden nur Profile gelöscht, die zum Zeitpunkt der Anforderung des Datenschutzauftrags im Data Lake oder Profilspeicher gespeichert sind. Wenn Sie Profildaten im Zusammenhang mit dem Betreff einer Löschanfrage während des Löschvorgangs aufnehmen, ist nicht garantiert, dass alle Profilfragmente gelöscht werden.
+>Es liegt in Ihrer Verantwortung, zum Zeitpunkt einer Löschanfrage über eingehende Daten in Platform oder im Profil-Service Bescheid zu wissen, da diese Daten in Ihre Datensatzspeicher eingefügt werden. Sie müssen bei der Aufnahme von Daten, die gelöscht wurden oder werden, vorsichtig sein.
 
 ### Verwenden der API
 
@@ -61,15 +61,15 @@ Beim Erstellen von Vorgangsanfragen in der API müssen alle IDs innerhalb von `u
 
 >[!NOTE]
 >
->Je nach Identitätsdiagramm und der Verteilung Ihrer Profilfragmente in Platform-Datensätzen müssen Sie möglicherweise mehr als eine ID für jeden Kunden angeben. Weitere Informationen finden Sie im nächsten Abschnitt [Profilfragmente](#fragments) .
+>Je nach Identitätsdiagramm und der Art und Weise, wie Ihre Profilfragmente in Platform-Datensätzen verteilt werden, müssen Sie möglicherweise mehr als eine ID für jeden Kunden angeben. Weitere Informationen finden Sie [ nächsten Abschnitt ](#fragments)Profilfragmente“.
 
-Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Um die mit einer Identität verknüpften Profildaten zu löschen, muss das Array den Wert `ProfileService` enthalten. Um die Identitätsdiagrammzuordnungen des Kunden zu löschen, muss das Array den Wert `identity` enthalten.
+Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Um die mit einer Identität verknüpften Profildaten zu löschen, muss das Array den Wert `ProfileService` enthalten. Um die Identitätsdiagramm-Zuordnungen des Kunden zu löschen, muss das Array den Wert `identity` enthalten.
 
 >[!NOTE]
 >
->Weitere Informationen zu den Auswirkungen der Verwendung von `ProfileService` und `identity` im Array `include` finden Sie im Abschnitt zu [Profilanfragen und Identitätsanfragen](#profile-v-identity) weiter unten in diesem Dokument.
+>Weitere Informationen zu den Auswirkungen [ Verwendung von `ProfileService` und `identity` innerhalb des `include`-Arrays finden Sie ](#profile-v-identity) Abschnitt zu Profilanfragen und Identitätsanfragen weiter unten in diesem Dokument.
 
-Die folgende Anfrage erstellt einen neuen Datenschutzauftrag für die Daten eines einzelnen Kunden im [!DNL Profile] -Store. Im Array `userIDs` werden zwei Identitätswerte für den Kunden bereitgestellt: einer mit dem standardmäßigen Identitäts-Namespace `Email` und der andere mit einem benutzerdefinierten Namespace `Customer_ID`. Er enthält auch den Produktwert für [!DNL Profile] (`ProfileService`) im Array `include` :
+Die folgende Anfrage erstellt einen neuen Datenschutzauftrag für die Daten eines einzelnen Kunden im [!DNL Profile]. Im `userIDs`-Array werden zwei Identitätswerte für den Kunden bereitgestellt; einer davon verwendet den standardmäßigen Identity-Namespace von `Email` und der andere einen benutzerdefinierten Namespace von `Customer_ID`. Sie enthält auch den Produktwert für [!DNL Profile] (`ProfileService`) im `include`-Array:
 
 **Anfrage**
 
@@ -118,7 +118,7 @@ curl -X POST \
 
 **Produktantwort**
 
-Beim Profil-Service wird nach Abschluss des Datenschutzauftrags eine Antwort im JSON-Format mit Informationen zu den angeforderten Benutzer-IDs zurückgegeben.
+Für den Profil-Service wird nach Abschluss des Datenschutzauftrags eine Antwort im JSON-Format mit Informationen zu den angeforderten Benutzer-IDs zurückgegeben.
 
 ```json
 {
@@ -168,15 +168,15 @@ Beim Profil-Service wird nach Abschluss des Datenschutzauftrags eine Antwort im 
 
 ### Verwenden der Benutzeroberfläche
 
-Stellen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche sicher, dass Sie unter **[!UICONTROL Produkte]** die Option **[!UICONTROL AEP Data Lake]** und/oder **[!UICONTROL Profil]** auswählen, um Aufträge für Daten zu verarbeiten, die im Data Lake bzw. in [!DNL Real-Time Customer Profile] gespeichert sind.
+Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!UICONTROL AEP Data Lake]** und/oder **[!UICONTROL Profile]** unter **[!UICONTROL Produkte]** aus, um Vorgänge für Daten zu verarbeiten, die im Data Lake bzw. [!DNL Real-Time Customer Profile] gespeichert sind.
 
-![Eine Zugriffsanfrage, die in der Benutzeroberfläche erstellt wird, wobei die Option Profil unter Produkte ausgewählt ist](./images/privacy/product-value.png)
+![Eine Zugriffsanfrage wird in der Benutzeroberfläche erstellt, wobei die Profiloption unter „Produkte“ ausgewählt ist](./images/privacy/product-value.png)
 
 ## Profilfragmente in Datenschutzanfragen {#fragments}
 
-Im [!DNL Profile] -Datenspeicher bestehen die personenbezogenen Daten eines einzelnen Kunden häufig aus mehreren Profilfragmenten, die über das Identitätsdiagramm mit der Person verknüpft sind. Bei Datenschutzanfragen an den [!DNL Profile] -Store ist es wichtig zu beachten, dass Anfragen nur auf der Ebene der Profilfragmente und nicht auf dem gesamten Profil verarbeitet werden.
+Im [!DNL Profile] Datenspeicher bestehen die personenbezogenen Daten für einen einzelnen Kunden häufig aus mehreren Profilfragmenten, die über das Identitätsdiagramm mit der Person verknüpft sind. Beachten Sie bei Datenschutzanfragen an den [!DNL Profile], dass Anfragen nur auf der Ebene der Profilfragmente und nicht im gesamten Profil verarbeitet werden.
 
-Angenommen, Sie speichern Kundenattributdaten in drei separaten Datensätzen, die verschiedene Kennungen verwenden, um diese Daten einzelnen Kunden zuzuordnen:
+Betrachten Sie beispielsweise eine Situation, in der Sie Kundenattributdaten in drei separaten Datensätzen speichern, die verschiedene Kennungen verwenden, um diese Daten mit einzelnen Kunden zu verknüpfen:
 
 | Datensatzname | Feld „Primärer Identitätswert“ | Gespeicherte Attribute |
 | --- | --- | --- |
@@ -184,9 +184,9 @@ Angenommen, Sie speichern Kundenattributdaten in drei separaten Datensätzen, di
 | Datensatz 2 | `email_id` | `firstName`, `lastName` |
 | Datensatz 3 | `email_id` | `mlScore` |
 
-Einer der Datensätze verwendet `customer_id` als primäre Kennung, während die anderen beiden `email_id` verwenden. Wenn Sie eine Datenschutzanfrage (Zugriff oder Löschung) nur mit `email_id` als Benutzer-ID-Wert senden sollten, werden nur die Attribute `firstName`, `lastName` und `mlScore` verarbeitet, während `address` nicht betroffen ist.
+Einer der Datensätze verwendet `customer_id` als primäre Kennung, während die beiden anderen `email_id` verwenden. Wenn Sie eine Datenschutzanfrage (Zugriff oder Löschen) nur mit `email_id` als Benutzer-ID-Wert senden, werden nur die Attribute `firstName`, `lastName` und `mlScore` verarbeitet, während `address` nicht betroffen sind.
 
-Um sicherzustellen, dass Ihre Datenschutzanfragen alle relevanten Kundenattribute verarbeiten, müssen Sie die primären Identitätswerte für alle relevanten Datensätze angeben, in denen diese Attribute gespeichert werden können (maximal neun IDs pro Kunde). Weitere Informationen zu Feldern, die üblicherweise als Identitäten markiert sind, finden Sie im Abschnitt zu Identitätsfeldern in den [Grundlagen der Schemakomposition](../xdm/schema/composition.md#identity) .
+Um sicherzustellen, dass Ihre Datenschutzanfragen alle relevanten Kundenattribute verarbeiten, müssen Sie die primären Identitätswerte für alle entsprechenden Datensätze angeben, in denen diese Attribute gespeichert werden können (bis zu neun IDs pro Kunde). Siehe Abschnitt zu Identitätsfeldern in den [Grundlagen der Schemakomposition](../xdm/schema/composition.md#identity) für weitere Informationen zu Feldern, die häufig als Identitäten markiert sind.
 
 ## Verarbeitung von Löschanfragen {#delete}
 
@@ -194,35 +194,35 @@ Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage e
 
 >[!IMPORTANT]
 >
->Datenschutzlöschanfragen sind nicht unmittelbar und können je nach betroffenen Diensten und anderen Faktoren, die sich auf den geografischen Standort auswirken, variieren. Der Zeitrahmen für die Fertigstellung von Datenschutzaufträgen kann zwischen 15 und 45 Tagen betragen, ist jedoch nicht garantiert.
+>Anfragen zum Löschen von Datenschutzanfragen werden nicht sofort gestellt und können je nach den betroffenen Services und anderen relevanten Faktoren wie dem geografischen Standort variieren. Der Zeitrahmen für den Abschluss von Datenschutzaufträgen kann zwischen 15 und 45 Tagen betragen, ist jedoch nicht garantiert.
 
-Je nachdem, ob Sie auch Identity Service (`identity`) und den Data Lake (`aepDataLake`) als Produkte in Ihrer Datenschutzanfrage nach Profil (`ProfileService`) aufgenommen haben, werden verschiedene mit dem Profil verknüpfte Datensätze zu unterschiedlichen Zeitpunkten aus dem System entfernt:
+Je nachdem, ob Sie in Ihrer Datenschutzanfrage für Profil (`ProfileService`) auch Identity Service (`identity`) und den Data Lake (`aepDataLake`) als Produkte einbezogen haben, werden verschiedene Datensätze, die sich auf das Profil beziehen, zu möglicherweise unterschiedlichen Zeiten aus dem System entfernt:
 
-| Produkte inbegriffen | Effekte |
+| Enthaltene Produkte | Effekte |
 | --- | --- |
-| Nur `ProfileService` | Das Profil wird sofort gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das Identitätsdiagramm des Profils bleibt jedoch erhalten und das Profil kann möglicherweise rekonstruiert werden, wenn neue Daten mit denselben Identitäten erfasst werden. Die mit dem Profil verknüpften Daten verbleiben ebenfalls im Data Lake. |
+| Nur `ProfileService` | Das Profil wird sofort gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das Identitätsdiagramm des Profils bleibt jedoch erhalten und das Profil kann möglicherweise rekonstruiert werden, wenn neue Daten mit denselben Identitäten aufgenommen werden. Die mit dem Profil verknüpften Daten verbleiben ebenfalls im Data Lake. |
 | `ProfileService` und `identity` | Das Profil und das zugehörige Identitätsdiagramm werden sofort gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Die mit dem Profil verknüpften Daten verbleiben im Data Lake. |
-| `ProfileService` und `aepDataLake` | Das Profil wird sofort gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das Identitätsdiagramm des Profils bleibt jedoch erhalten und das Profil kann möglicherweise rekonstruiert werden, wenn neue Daten mit denselben Identitäten erfasst werden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten weich gelöscht und stehen daher keinem [!DNL Platform]-Dienst zur Verfügung. Nach Abschluss des Auftrags werden die Daten vollständig aus dem Data Lake entfernt. |
-| `ProfileService`, `identity` und `aepDataLake` | Das Profil und das zugehörige Identitätsdiagramm werden sofort gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten weich gelöscht und stehen daher keinem [!DNL Platform]-Dienst zur Verfügung. Nach Abschluss des Auftrags werden die Daten vollständig aus dem Data Lake entfernt. |
+| `ProfileService` und `aepDataLake` | Das Profil wird sofort gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde. Das Identitätsdiagramm des Profils bleibt jedoch erhalten und das Profil kann möglicherweise rekonstruiert werden, wenn neue Daten mit denselben Identitäten aufgenommen werden.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
+| `ProfileService`, `identity` und `aepDataLake` | Das Profil und das zugehörige Identitätsdiagramm werden sofort gelöscht, sobald Platform die Bestätigung sendet, dass die Löschanfrage empfangen wurde.<br><br>Wenn das Data Lake-Produkt antwortet, dass die Anfrage empfangen wurde und derzeit verarbeitet wird, werden die mit dem Profil verknüpften Daten vorläufig gelöscht und stehen somit keinem [!DNL Platform]-Service mehr zur Verfügung. Sobald der Auftrag abgeschlossen ist, werden die Daten vollständig aus dem Data Lake entfernt. |
 
-Weitere Informationen zum Tracking der Auftragsstatus finden Sie in der [[!DNL Privacy Service] Dokumentation](../privacy-service/home.md#monitor) .
+Weitere Informationen zum Verfolgen [[!DNL Privacy Service]  Auftragsstatus finden ](../privacy-service/home.md#monitor) in der Dokumentation .
 
 ### Profilanfragen versus Identitätsanfragen {#profile-v-identity}
 
-Wenn eine Löschanfrage für Profil (`ProfileService`), aber nicht für Identity Service (`identity`) durchgeführt wird, entfernt der resultierende Auftrag die erfassten Attributdaten für einen Kunden (oder eine Gruppe von Kunden), entfernt jedoch nicht die im Identitätsdiagramm eingerichteten Verknüpfungen.
+Wenn eine Löschanfrage für Profil (`ProfileService`), aber nicht für Identity Service (`identity`) gestellt wird, entfernt der resultierende Auftrag die erfassten Attributdaten für einen Kunden (oder eine Reihe von Kunden), aber nicht die im Identitätsdiagramm eingerichteten Verknüpfungen.
 
-Beispielsweise entfernt eine Löschanfrage, die die `email_id` und `customer_id` eines Kunden verwendet, alle unter diesen IDs gespeicherten Attributdaten. Alle Daten, die anschließend unter dem gleichen `customer_id` erfasst werden, werden jedoch weiterhin mit dem entsprechenden `email_id` verknüpft, da die Zuordnung noch vorhanden ist.
+Beispiel: Eine Löschanfrage, die die `email_id` eines Kunden verwendet und `customer_id` alle Attributdaten entfernt, die unter diesen IDs gespeichert sind. Alle Daten, die anschließend unter demselben `customer_id` aufgenommen werden, werden jedoch weiterhin mit dem entsprechenden `email_id` verknüpft, da die Verknüpfung noch besteht.
 
-Um das Profil und alle Identitätszuordnungen für einen bestimmten Kunden zu entfernen, stellen Sie sicher, dass Sie sowohl Profil als auch Identity Service als Zielprodukte in Ihre Löschanfragen aufnehmen.
+Um das Profil und alle Identitätszuordnungen für einen bestimmten Kunden zu entfernen, stellen Sie sicher, dass Sie sowohl Profil als auch Identity Service als Zielprodukte in Ihre Löschanfragen einbeziehen.
 
-### Einschränkungen von Zusammenführungsrichtlinien {#merge-policy-limitations}
+### Einschränkungen bei Zusammenführungsrichtlinien {#merge-policy-limitations}
 
-Privacy Service kann nur [!DNL Profile] -Daten mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszusammenfügung vornimmt. Wenn Sie über die Benutzeroberfläche überprüfen möchten, ob Ihre Datenschutzanfragen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit dem Typ [!UICONTROL ID-Zusammenfügung] mit **[!DNL None]** verwenden. Mit anderen Worten: Sie können keine Zusammenführungsrichtlinie verwenden, bei der [!UICONTROL ID-Stitching] auf [!UICONTROL Privates Diagramm] festgelegt ist.
+Privacy Service kann [!DNL Profile] Daten nur mithilfe einer Zusammenführungsrichtlinie verarbeiten, die keine Identitätszuordnung durchführt. Wenn Sie die Benutzeroberfläche verwenden, um zu bestätigen, ob Ihre Datenschutzanfragen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit **[!DNL None]** als Typ „ID[!UICONTROL Zuordnung] verwenden. Mit anderen Worten: Sie können keine Zusammenführungsrichtlinie verwenden, bei der [!UICONTROL ID-Zuordnung] auf &quot;[!UICONTROL  Diagramm“ ] ist.
 
->![Die ID-Zuordnung der Zusammenführungsrichtlinie ist auf &quot;None&quot;](./images/privacy/no-id-stitch.png) festgelegt
+>![Die ID-Zuordnung der Zusammenführungsrichtlinie ist auf „Keine“ festgelegt](./images/privacy/no-id-stitch.png)
 
 ## Nächste Schritte
 
-In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Experience Platform] erhalten. Um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen, lesen Sie weiterhin die Dokumentation in diesem Handbuch.
+In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Experience Platform] erhalten. Lesen Sie die in diesem Handbuch bereitgestellte Dokumentation, um Ihr Verständnis für die Verwaltung von Identitätsdaten und die Erstellung von Datenschutzaufträgen zu vertiefen.
 
-Informationen zur Verarbeitung von Datenschutzanfragen für [!DNL Platform] -Ressourcen, die nicht von [!DNL Profile] verwendet werden, finden Sie im Dokument zur Verarbeitung von Datenschutzanfragen im Data Lake [.](../catalog/privacy.md)
+Informationen zur Verarbeitung von Datenschutzanfragen für [!DNL Platform] Ressourcen, die nicht von [!DNL Profile] verwendet werden, finden [ im Dokument zur Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md).

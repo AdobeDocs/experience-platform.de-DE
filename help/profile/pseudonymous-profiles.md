@@ -13,7 +13,7 @@ ht-degree: 86%
 
 # Ablauf von Daten pseudonymer Profile
 
-In Adobe Experience Platform können Sie Ablaufzeiten für Pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
+In Adobe Experience Platform können Sie Ablaufzeiten für pseudonyme Profile konfigurieren, sodass Sie automatisch Daten aus dem Profilspeicher entfernen können, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
 ## Pseudonymes Profil {#pseudonymous-profile}
 
@@ -77,12 +77,12 @@ Für einen typischen Anwendungsfall können Sie den Ablauf von Erlebnisereignisd
 
 - Der Ablauf von Daten pseudonymer Profile erfolgt auf **Sandbox**-Ebene. Sie können unterschiedliche Konfigurationen für Produktions- und Entwicklungs-Sandboxes auswählen.
 - Wenn Sie diese Funktion aktiviert haben, wird das Löschen von Profilen **dauerhaft**. Es gibt **keine** Möglichkeit, die gelöschten Profile zurückzusetzen oder wiederherzustellen.
-- Dies ist **kein** einmaliger Bereinigungsvorgang. Das Ablaufdatum der pseudonymen Profildaten wird einmal täglich ausgeführt und löscht Profile, die der Eingabe des Kunden entsprechen.
+- Dies ist **kein** einmaliger Bereinigungsvorgang. Ablauf von Daten pseudonymer Profile wird einmal täglich ausgeführt und löscht Profile, die mit der Eingabe des Kunden übereinstimmen.
 - **Alle** Profile, die als pseudonyme Profile definiert sind, sind von Ablauf von Daten pseudonymer Profile betroffen. Es kommt dabei **nicht** darauf an, ob das Profil nur ein Erlebnisereignis ist oder nur Profilattribute enthält.
 - Diese Bereinigung findet **nur** im Profil statt. Identity Service kann die gelöschten Identitäten innerhalb des Diagramms nach der Bereinigung weiterhin anzeigen, wenn das Profil zwei oder mehr pseudonyme Identitäten aufweist (z. B. `AAID` und `ECID`). Diese Diskrepanz wird in naher Zukunft angegangen.
-- Der Ablauf der pseudonymen Profildaten wird **nicht** sofort ausgeführt und kann bis zu drei Tage dauern.
+- Ablauf von Daten pseudonymer Profile **nicht** sofort ausgeführt und kann bis zu drei Tage dauern, bis sie verarbeitet werden.
 
-### Wie interagiert der Datenablauf bei Pseudonymen Profilen mit Limits für Identity Service-Daten?
+### Wie interagiert Ablauf von Daten pseudonymer Profile mit Leitplanken für Identity Service-Daten?
 
-- Das Löschsystem ](../identity-service/guardrails.md) des Identitätsdienstes [ &quot;first-in, first-out&quot;(Erstanmeldung) könnte ECIDs aus dem Identitätsdiagramm löschen, die im Identity Service gespeichert sind.
-- Wenn dieses Löschungsverhalten dazu führt, dass ein ausschließlich ECID-basiertes Profil im Echtzeit-Kundenprofil (Profilspeicher) gespeichert wird, löscht der Ablauf der Profildaten für Pseudonyme Profile dieses Profil aus dem Profilspeicher.
+- Das Identity Service-[ „first-in, first-out“-Löschsystem ](../identity-service/guardrails.md) ECIDs aus dem Identitätsdiagramm löschen, die in Identity Service gespeichert sind.
+- Wenn dieses Löschverhalten dazu führt, dass ein Nur-ECID-Profil im Echtzeit-Kundenprofil (Profilspeicher) gespeichert wird, wird dieses Profil nach Ablauf von Daten pseudonymer Profile aus dem Profilspeicher gelöscht.

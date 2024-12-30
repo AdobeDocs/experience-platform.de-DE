@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
-title: Erstellen eines Trendberichts zu Ereignissen
-description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um einen Trendbericht mit Ereignissen über einen bestimmten Datumsbereich zu erstellen, der nach Datum gruppiert ist.
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;experienceEvent-Abfragen;experienceEvent-Abfrage;Erlebnisereignisabfrage;
+title: Erstellen eines Trendberichts mit Ereignissen
+description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um einen Trend-Bericht mit Ereignissen über einen bestimmten Datumsbereich gruppiert nach Datum zu erstellen.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -12,17 +12,17 @@ ht-degree: 6%
 
 # Erstellen eines Trendberichts mit Ereignissen
 
-Dieses Dokument enthält ein Beispiel für SQL, das erforderlich ist, um einen Trendbericht mit Ereignissen nach Tag über einen bestimmten Datumsbereich zu erstellen. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Im Abschnitt [Nächste Schritte](#next-steps) finden Sie weitere Anwendungsfälle, bei denen [!DNL Experience Events] zum Generieren von Besucherberichten erforderlich ist.
+Dieses Dokument enthält ein Beispiel für den erforderlichen SQL-Code, um einen Trend-Bericht zu Ereignissen nach Tag über einen bestimmten Datumsbereich zu erstellen. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die ExperienceEvent-Klasse des Experience-Datenmodells (XDM) dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Service interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Weitere Anwendungsfälle, bei ](#next-steps) Besucherberichte erstellt werden [!DNL Experience Events], finden Sie [ Abschnitt „Nächste Schritte“.
 
-Berichte bieten Ihnen Zugriff auf Ihre Platform-Daten, um die strategischen geschäftlichen Einblicke Ihres Unternehmens zu nutzen. Mit diesen Berichten können Sie Ihre Platform-Daten auf verschiedene Weise untersuchen, Schlüsselmetriken in leicht verständlichen Formaten anzeigen und die daraus resultierenden Einblicke teilen.
+Berichte bieten Ihnen Zugriff auf Ihre Platform-Daten, um die strategischen geschäftlichen Einblicke Ihres Unternehmens zu nutzen. Mit diesen Berichten können Sie Ihre Platform-Daten auf verschiedene Weise untersuchen, Schlüsselmetriken in leicht verständlichen Formaten anzeigen und die resultierenden Erkenntnisse teilen.
 
-Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch Kombination von Query Service mit [!DNL Experience Events] können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit [!DNL Experience Events].
+Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch die Kombination von Abfrage-Service und [!DNL Experience Events] können Sie Verhaltenstrends bei Ihren Benutzenden effektiv verfolgen. Im folgenden Dokument finden Sie Beispiele für Abfragen mit [!DNL Experience Events].
 
 ## Ziele
 
-Im folgenden Beispiel wird ein Trendbericht mit Ereignissen über einen bestimmten Datumsbereich erstellt, der nach Datum gruppiert ist. In diesem SQL-Beispiel werden verschiedene Analytics-Werte als `A`, `B` und `C` zusammengefasst und dann die Anzahl der Parkas zusammengefasst, die über den Zeitraum eines Monats angezeigt wurden.
+Im folgenden Beispiel wird ein Trendbericht mit Ereignissen über einen bestimmten Datumsbereich erstellt, der nach Datum gruppiert ist. Insbesondere fasst dieses SQL-Beispiel verschiedene Analysewerte als `A`, `B` und `C` zusammen und addiert dann, wie oft Parkas im Laufe eines Monats angesehen wurden.
 
-Die Zeitstempelspalte in [!DNL Experience Event] Datensätzen liegt im UTC-Format vor. Im Beispiel wird die Funktion `from_utc_timestamp()` verwendet, um den Zeitstempel von UTC in EDT umzuwandeln, und anschließend wird mit der Funktion `date_format()` das Datum vom Rest des Zeitstempels isoliert.
+Die Zeitstempelspalte in [!DNL Experience Event] Datensätzen weist das UTC-Format auf. Im Beispiel wird die Funktion `from_utc_timestamp()` verwendet, um den Zeitstempel von UTC in EDT umzuwandeln, und dann die Funktion `date_format()` verwendet, um das Datum vom Rest des Zeitstempels zu isolieren.
 
 ```sql
 SELECT 
@@ -43,7 +43,7 @@ GROUP BY Day
 ORDER BY Day ASC, pageViews DESC;
 ```
 
-Die Ergebnisse dieser Abfrage sind unten dargestellt.
+Die Ergebnisse dieser Abfrage werden unten angezeigt.
 
 ```console
      Day     | pageViews |   A    |   B   |    C    | viewedParkas
@@ -84,10 +84,10 @@ Die Ergebnisse dieser Abfrage sind unten dargestellt.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie Query Service mit [!DNL Experience Events] verwenden können, um Verhaltenstrends unter Ihren Benutzern effektiv zu verfolgen.
+Durch das Lesen dieses Dokuments können Sie besser verstehen, wie Sie den Abfrage-Service mit [!DNL Experience Events] verwenden können, um Verhaltenstrends bei Ihren Benutzenden effektiv zu verfolgen.
 
-Lesen Sie die folgenden Dokumente, um mehr über andere besucherbasierte Anwendungsfälle zu erfahren, die [!DNL Experience Events] verwenden:
+Weitere Informationen zu anderen besucherbasierten Anwendungsfällen, die [!DNL Experience Events] verwenden, finden Sie in den folgenden Dokumenten:
 
-- [Rufen Sie eine Liste von Besuchern ab, die nach der Anzahl der Seitenansichten organisiert sind.](./visitors-by-number-of-page-views.md)
+- [Abrufen einer Liste von Besuchern, sortiert nach der Anzahl der Seitenansichten.](./visitors-by-number-of-page-views.md)
 - [Auflisten der vorherigen Sitzungen eines Besuchers.](./list-visitor-sessions.md)
-- [Zeigen Sie einen Rollup-Bericht eines Besuchers an.](./roll-up-report-of-a-visitor.md)
+- [Anzeigen eines Datenaggregationsberichts eines Besuchers.](./roll-up-report-of-a-visitor.md)

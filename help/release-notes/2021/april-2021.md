@@ -51,7 +51,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 
 ### Customer AI
 
-In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile skaliert zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, für einzelne Profile in großem Maßstab benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |

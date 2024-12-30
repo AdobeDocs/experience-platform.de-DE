@@ -11,15 +11,15 @@ ht-degree: 14%
 
 # Explorative Datenanalyse
 
-Dieses Dokument enthält einige grundlegende Beispiele und Best Practices für die Verwendung von Data Distiller zur Untersuchung und Analyse von Daten aus einem [!DNL Python] -Notebook.
+Dieses Dokument enthält einige grundlegende Beispiele und Best Practices für die Verwendung von Data Distiller zum Untersuchen und Analysieren von Daten aus einem [!DNL Python]-Notebook.
 
 ## Erste Schritte
 
-Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie eine Verbindung zu Data Distiller in Ihrem [!DNL Python] -Notebook hergestellt haben. Anweisungen zum Verbinden eines [!DNL Python] Notebooks mit Data Distiller](./establish-connection.md) finden Sie in der Dokumentation .[
+Bevor Sie mit diesem Handbuch fortfahren, stellen Sie sicher, dass Sie eine Verbindung zu Data Distiller in Ihrem [!DNL Python]-Notebook erstellt haben. In der Dokumentation finden Sie Anweisungen zum Verbinden [ Notebooks mit  [!DNL Python]  Distiller](./establish-connection.md).
 
-## Abrufen von Basisstatistiken {#basic-statistics}
+## Erfassen grundlegender Statistiken {#basic-statistics}
 
-Verwenden Sie den unten stehenden Code, um die Anzahl der Zeilen und eindeutigen Profile in einem Datensatz abzurufen.
+Verwenden Sie den folgenden Code, um die Anzahl der Zeilen und eindeutigen Profile in einem Datensatz abzurufen.
 
 ```python
 table_name = 'ecommerce_events'
@@ -40,16 +40,16 @@ df
 | --- | ----------- | -------------- |
 | 0 | 1276563 | 1276563 |
 
-## Erstellen einer Stichprobenversion großer Datensätze {#create-dataset-sample}
+## Erstellen einer beispielhaften Version großer Datensätze {#create-dataset-sample}
 
-Wenn der Datensatz, den Sie abfragen möchten, sehr groß ist oder wenn keine genauen Ergebnisse aus explorativen Abfragen erforderlich sind, verwenden Sie die [Sampling-Funktion](../../key-concepts/dataset-samples.md), die für Data Distiller-Abfragen verfügbar ist. Dies ist ein zweistufiger Prozess:
+Wenn der abzufragende Datensatz sehr groß ist oder keine exakten Ergebnisse aus explorativen Abfragen erforderlich sind, verwenden Sie die [Sampling-Funktion](../../key-concepts/dataset-samples.md) die für Data Distiller-Abfragen verfügbar ist. Dies ist ein zweistufiger Prozess:
 
-- Analysieren Sie zunächst den Datensatz mit **analyze** , um eine Version mit einer Stichprobe mit einem bestimmten Stichprobenverhältnis zu erstellen.
-- Abfragen Sie als Nächstes die beprobte Version des Datensatzes. Je nach den Funktionen, die Sie auf den Datensatz mit gesampelten Datensätzen anwenden, können Sie die Ausgabe auf die Zahlen auf den vollständigen Datensatz skalieren
+- Analysieren **zunächst** Datensatz, um eine Stichprobenversion mit einem bestimmten Stichprobenverhältnis zu erstellen
+- Fragen Sie anschließend die Beispielversion des Datensatzes ab. Je nach den Funktionen, die Sie auf den abgetasteten Datensatz anwenden, möchten Sie die Ausgabe möglicherweise auf die Zahlen im vollständigen Datensatz skalieren
 
-### Beispiel für 5 % erstellen {#create-sample}
+### Erstellen einer 5 %-Stichprobe {#create-sample}
 
-Im folgenden Beispiel wird der Datensatz analysiert und ein 5 %-Beispiel erstellt:
+Im folgenden Beispiel wird der Datensatz analysiert und eine 5%ige Stichprobe erstellt:
 
 ```python
 # A sampling rate of 10 is 100% in Query Service, so for 5% use a sampling rate 0.5
@@ -64,7 +64,7 @@ qs_cursor.query(analyze_table_query, output="raw")
 
 ### Beispiele anzeigen {#view-sample}
 
-Mit der Funktion &quot;`sample_meta`&quot;können Sie alle Samples anzeigen, die aus einem bestimmten Datensatz erstellt wurden. Der folgende Codeausschnitt zeigt die Verwendung der Funktion `sample_meta` .
+Sie können die `sample_meta`-Funktion verwenden, um alle Beispiele anzuzeigen, die aus einem bestimmten Datensatz erstellt wurden. Der folgende Codeausschnitt zeigt, wie Sie die `sample_meta`-Funktion verwenden.
 
 ```python
 sampled_version_of_table_query = f'''SELECT sample_meta('{table_name}')'''
@@ -75,15 +75,15 @@ df_samples
 
 **Beispielausgabe**:
 
-|   | sample_table_name | sample_dataset_id | parent_dataset_id | sample_type | sampling_rate | filter_condition_on_source_dataset | sample_num_rows | Erstellt |
+|   | sample_table_name | sample_dataset_id | parent_dataset_id | sample_type | Sampling_Rate | filter_condition_on_source_dataset | sample_num_rows | Erstellt |
 |---|---|---|---|---|---|---|---|---|
-| 0 | cmle_synthetisch_data_experience_event_dataset_c... | 650f7a09ed6c3e28d34d7fc2 | 64fb4d7a7d748828d304a2f4 | einheitlich | 0,5 | 6427 | 23.09.2023 | 11:51:37 |
+| 0 | CMLE_SYNTHETIC_DATA_EXPERIENCE_EVENT_DATASET_C… | 650f7a09ed6c3e28d34d7fc2 | 64FB4D7A7D748828D304A2F4 | gleichförmig | 0,5 | 6427 | 23/09/2023 | 11:51:37 |
 
 {style="table-layout:auto"}
 
-### Beispiel abfragen {#query-sample-data}
+### Abfrage Ihres Beispiels {#query-sample-data}
 
-Sie können Ihr Beispiel direkt abfragen, indem Sie auf den Namen der Beispieltabelle aus den zurückgegebenen Metadaten verweisen. Anschließend können Sie die Ergebnisse mit dem Stichprobenverhältnis multiplizieren, um eine Schätzung zu erhalten.
+Sie können Ihr Beispiel direkt abfragen, indem Sie auf den Beispieltabellennamen aus den zurückgegebenen Metadaten verweisen. Sie können dann die Ergebnisse mit dem Sampling-Verhältnis multiplizieren, um eine Schätzung zu erhalten.
 
 ```python
 sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sample_table_name"].iloc[0]
@@ -105,9 +105,9 @@ Approximate count: 1284600.0 using 5.0% sample
 
 ## E-Mail-Trichteranalyse {#email-funnel-analysis}
 
-Eine Trichteranalyse ist eine Methode, um die Schritte zu verstehen, die zum Erreichen eines Zielergebnisses erforderlich sind, und wie viele Benutzer jeden dieser Schritte durchlaufen. Das folgende Beispiel zeigt eine einfache Trichteranalyse der Schritte, die zu einem Benutzer führen, der einen Newsletter abonniert. Das Abonnementergebnis wird durch den Ereignistyp `web.formFilledOut` dargestellt.
+Eine Trichteranalyse dient zum Verständnis der Schritte, die zum Erreichen eines Zielergebnisses erforderlich sind, und der Anzahl der Benutzer, die die einzelnen Schritte durchlaufen. Das folgende Beispiel zeigt eine einfache Trichteranalyse der Schritte, die dazu führen, dass ein Benutzer einen Newsletter abonniert. Das Abonnementergebnis wird durch einen Ereignistyp von `web.formFilledOut` dargestellt.
 
-Führen Sie zunächst eine Abfrage aus, um die Anzahl der Benutzer bei jedem Schritt abzurufen.
+Führen Sie zunächst eine Abfrage aus, um die Anzahl der Benutzer in jedem Schritt abzurufen.
 
 ```python
 simple_funnel_analysis_query = f'''SELECT eventType, COUNT(DISTINCT _id) as "distinctUsers",COUNT(_id) as "distinctEvents" FROM {table_name} GROUP BY eventType ORDER BY distinctUsers DESC'''
@@ -136,9 +136,9 @@ funnel_df
 
 {style="table-layout:auto"}
 
-### Plotabfrageergebnisse {#plot-results}
+### Plotten der Abfrageergebnisse {#plot-results}
 
-Zeichnen Sie anschließend die Abfrageergebnisse mithilfe der Bibliothek [!DNL Python] `plotly` auf:
+Zeichnen Sie anschließend die Abfrageergebnisse mithilfe der [!DNL Python] `plotly`:
 
 ```python
 import plotly.express as px
@@ -154,16 +154,16 @@ fig.show()
 
 ![Eine Infografik des eventType-E-Mail-Trichters.](../../images/data-distiller/email-funnel.png)
 
-## Ereigniskorrelationen {#event-correlations}
+## Ereignis-Korrelationen {#event-correlations}
 
-Eine weitere gängige Analyse besteht darin, Korrelationen zwischen Ereignistypen und einem Zielkonversionsereignistyp zu berechnen. In diesem Beispiel wird das Abonnementereignis durch `web.formFilledOut` dargestellt. In diesem Beispiel werden die in den Data Distiller-Abfragen verfügbaren [!DNL Spark]-Funktionen verwendet, um die folgenden Schritte durchzuführen:
+Eine weitere gängige Analyse besteht darin, Korrelationen zwischen Ereignistypen und einem Zielkonversionsereignistyp zu berechnen. In diesem Beispiel wird das Abonnementereignis durch `web.formFilledOut` dargestellt. In diesem Beispiel werden die in Distiller-Datenabfragen verfügbaren [!DNL Spark] verwendet, um die folgenden Schritte auszuführen:
 
 1. Zählen Sie die Anzahl der Ereignisse für jeden Ereignistyp nach Profil.
-2. Aggregieren Sie die Zählungen der einzelnen Ereignistypen über Profile hinweg und berechnen Sie die Korrelationen der einzelnen Ereignistypen mit `web,formFilledOut`.
-3. Wandeln Sie den Dataframe der Zählungen und Korrelationen in eine Tabelle der Pearson-Korrelationskoeffizienten jeder Funktion (Ereignistypzählungen) mit dem Zielereignis um.
-4. Visualisieren Sie die Ergebnisse in einem Diagramm.
+2. Aggregieren Sie die Anzahl jedes Ereignistyps über Profile hinweg und berechnen Sie die Korrelationen jedes Ereignistyps mit `web,formFilledOut`.
+3. Transformiert den Datenrahmen der Zählungen und Korrelationen in eine Tabelle der Pearson-Korrelationskoeffizienten jeder Funktion (Anzahl der Ereignistypen) mit dem Zielereignis.
+4. Visualisieren Sie die Ergebnisse in einer Zeichnung.
 
-Die [!DNL Spark] -Funktionen aggregieren die Daten, um eine kleine Tabelle mit Ergebnissen zurückzugeben, sodass Sie diese Art von Abfrage für den vollständigen Datensatz ausführen können.
+Die [!DNL Spark] aggregieren die Daten und geben eine kleine Ergebnistabelle zurück, sodass Sie diese Art der Abfrage für den gesamten Datensatz ausführen können.
 
 ```python
 large_correlation_query=f'''
@@ -213,15 +213,15 @@ large_correlation_df
 
 **Beispielausgabe**:
 
-|   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totaUsers | propositionDisplays_totaUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | ... | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteracts | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
+|   | webFormsFilled_totalUsers | advertisingClicks_totalUsers | productViews_totalUsers | productPurchases_totalUsers | propositionDismisses_totalUsers | propositionDisplays_totalUsers | propositionInteracts_totalUsers | emailClicks_totalUsers | emailOpens_totalUsers | webLinksClicks_totalUsers | … | webForms_advertisingClicks | webForms_productViews | webForms_productPurchases | webForms_propositionDismisses | webForms_propositionInteractions | webForms_emailClicks | webForms_emailOpens | webForms_emailSends | webForms_webLinkClicks | webForms_webPageViews |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | ... | 0,026805 | 0,2779 | Keine | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | Keine |
+| 0 | 17860 | 7610 | 37915 | 0 | 2889 | 37650 | 2964 | 51581 | 239028 | 37581 | … | 0,026805 | 0,2779 | Keine | 0,06014 | 0,143656 | 0,305657 | 0,218874 | 0,192836 | 0,259353 | Keine |
 
 {style="table-layout:auto"}
 
-### Umwandeln von Zeilen in Korrelationen von Ereignistypen {#event-type-correlation}
+### Zeile in Ereignistyp-Korrelation umwandeln {#event-type-correlation}
 
-Wandeln Sie anschließend die einzelne Datenzeile in der oben stehenden Abfrageausgabe in eine Tabelle um, die die Korrelationen der einzelnen Ereignistypen mit dem Zielabonnement-Ereignis anzeigt:
+Wandeln Sie anschließend die einzelne Datenzeile in der obigen Abfrageausgabe in eine Tabelle um, die die Korrelationen der einzelnen Ereignistypen mit dem Zielabonnement-Ereignis anzeigt:
 
 ```python
 cols = large_correlation_df.columns
@@ -236,20 +236,20 @@ corrdf.fillna(0)
 
 |    | Variable | Wert | Funktion | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
-| 0 | `webForms_EmailOpens` | 0,218874 | EmailOpens | 0,218874 |
-| 1 | `webForms_advertisingClicks` | 0,026805 | advertisingClicks | 0,026805 |
+| 0 | `webForms_EmailOpens` | 0,218874 | E-Mail-Öffnungen | 0,218874 |
+| 1 | `webForms_advertisingClicks` | 0,026805 | AdvertisingClicks | 0,026805 |
 | 2 | `webForms_productViews` | 0,277900 | productViews | 0,277900 |
 | 3 | `webForms_productPurchases` | 0,000000 | productPurchases | 0,000000 |
 | 4 | `webForms_propositionDismisses` | 0,060140 | propositionDismisses | 0,060140 |
-| 5 | `webForms_propositionInteracts` | 0,143656 | propositionInteracts | 0,143656 |
+| 5 | `webForms_propositionInteracts` | 0,143656 | propositionInteractions | 0,143656 |
 | 6 | `webForms_emailClicks` | 0,305657 | emailClicks | 0,305657 |
-| 7 | `webForms_emailOpens` | 0,218874 | emailOpens | 0,218874 |
+| 7 | `webForms_emailOpens` | 0,218874 | E-Mail-Öffnungen | 0,218874 |
 | 8 | `webForms_emailSends` | 0,192836 | emailSends | 0,192836 |
 | 9 | `webForms_webLinkClicks` | 0,259353 | webLinkClicks | 0,259353 |
 | 10 | `webForms_webPageViews` | 0,000000 | webPageViews | 0,000000 |
 
 
-Schließlich können Sie die Korrelationen mit der Bibliothek `matplotlib` [!DNL Python] visualisieren:
+Schließlich können Sie die Korrelationen mit der `matplotlib` [!DNL Python]-Bibliothek visualisieren:
 
 ```python
 import matplotlib.pyplot as plt
@@ -258,8 +258,8 @@ sns.barplot(data=corrdf.fillna(0), y="feature", x="pearsonCorrelation")
 ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
-![Ein Balkendiagramm der Pearson-Korrelation der Ereignisse der Ereignisergebnisse](../../images/data-distiller/pearson-correlations.png)
+![Ein Balkendiagramm der Pearson-Korrelation von Ereignissen von Ereignisergebnissen](../../images/data-distiller/pearson-correlations.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie mit Data Distiller Daten aus einem [!DNL Python] -Notebook analysieren und analysieren können. Der nächste Schritt beim Erstellen von Funktions-Pipelines von Experience Platform, um benutzerdefinierte Modelle in Ihrer maschinellen Lernumgebung zu speisen, besteht darin, [Funktionen für maschinelles Lernen zu entwickeln](./feature-engineering.md).
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit Data Distiller Daten aus einem [!DNL Python]-Notebook untersuchen und analysieren können. Der nächste Schritt beim Erstellen von Funktions-Pipelines vom Experience Platform zur Bereitstellung benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Funktionen für maschinelles Lernen zu entwickeln](./feature-engineering.md).

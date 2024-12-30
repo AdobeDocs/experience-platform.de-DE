@@ -47,10 +47,10 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) ermöglicht es, Ereignisdaten schnell zu erfassen und in wenigen einfachen Schritten Server-seitig an Meta für Anzeigenkonversionen weiterzuleiten. |
+| Neuer Schnellstart-Workflow für die Meta Conversions-API (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für die Meta Conversions-API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview?lang=de#quick-start) ermöglicht es, Ereignisdaten schnell zu erfassen und in wenigen einfachen Schritten Server-seitig an Meta für Anzeigenkonversionen weiterzuleiten. |
 | Neuer Schnellstart-Workflow für das Mobile SDK (Beta) | Greifen Sie über die Startseite der Datenerfassung unter „Erste Schritte“ auf neue Schnellstart-Workflows zu! Der [Schnellstart-Workflow für das Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) ermöglicht die schnelle Implementierung des Mobile SDK und die Validierung einfacher Ereignisse auf Mobilgeräten in nur wenigen einfachen Schritten. |
 | [!DNL Braze]-Erweiterung zur Ereignisweiterleitung | Mit der Ereignisweiterleitungserweiterung [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de) können die im Adobe Experience Platform Edge Network erfassten Daten genutzt und in Form von Server-seitigen Ereignissen mithilfe der [!DNL Braze]-APIs für die Benutzernachverfolgung an [!DNL Braze] gesendet werden. |
-| [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Mit der Erweiterung [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform-Edge Network zu erfassen und mithilfe der [!DNL Epsilon] Event API an [!DNL Epsilon] zu senden. |
+| [!DNL Epsilon]-Erweiterung zur Ereignisweiterleitung | Mit der [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html)-Erweiterung können Sie die Ereignisweiterleitung nutzen, um Ereignisinformationen im Adobe Experience Platform-Edge Network zu erfassen und über die [!DNL Epsilon]-API an [!DNL Epsilon] zu senden. |
 | [!DNL Mixpanel]-Erweiterung zur Ereignisweiterleitung | Die [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=de)-Erweiterung ermöglicht es, die Ereignisweiterleitung zu nutzen, um Ereignisinformationen im Adobe Experience Platform Edge Network zu erfassen und über die API zur Nachverfolgung von Ereignissen an Mixpanel zu senden. |
 
 {style="table-layout:auto"}
@@ -121,11 +121,11 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | --- | --- | --- |
 | Klasse | [[!UICONTROL Angebotselement]](https://github.com/adobe/xdm/pull/1678/files) | Klasse, die ein Angebot darstellt. |
 | Klasse | [[!UICONTROL Entscheidungselement]](https://github.com/adobe/xdm/pull/1678/files) | Ein Element, das einer Entscheidung unterzogen werden kann. Die Ausgabe eines Entscheidungsprozesses ist ein oder mehrere Entscheidungselemente. |
-| Klasse | [[!UICONTROL Timeout des Mediensitzungs-Servers]](https://github.com/adobe/xdm/pull/1676/files) | Dies gibt die Zeit in Sekunden an, die zwischen der letzten bekannten Interaktion des Benutzers und dem Zeitpunkt, zu dem die Sitzung geschlossen wurde, vergangen ist. |
-| Feldergruppe | [[!UICONTROL Berechnete XDM-Profile-Attribute]](https://github.com/adobe/xdm/pull/1686/files) | Dadurch werden berechnete Attribute aus internen Adobe-Diensten zu eingehenden Kundendaten hinzugefügt. Dies sollte von Kunden nicht zur Aufnahme von Daten verwendet werden. |
-| Datentyp | [[!UICONTROL Rückerstattungselement]](https://github.com/adobe/xdm/pull/1685/files) | Gibt an, ob eine Erstattung mit einer Bestellung verbunden ist, und definiert die Art der Erstattung, den Betrag und die zugehörige Währung. |
+| Klasse | [[!UICONTROL Zeitüberschreitung des Mediensitzungs-Servers]](https://github.com/adobe/xdm/pull/1676/files) | Dies gibt die Zeit in Sekunden an, die zwischen der letzten bekannten Interaktion des Benutzers und dem Zeitpunkt des Schließens der Sitzung vergangen ist. |
+| Feldergruppe | [[!UICONTROL Berechnete Attribute des XDM-Profils]](https://github.com/adobe/xdm/pull/1686/files) | Dadurch werden den eingehenden Kundendaten berechnete Attribute aus internen Adobe-Services hinzugefügt. Dies sollte von Kundinnen und Kunden nicht zur Aufnahme von Daten verwendet werden. |
+| Datentyp | [[!UICONTROL Erstattungselement]](https://github.com/adobe/xdm/pull/1685/files) | Gibt an, ob eine Rückerstattung mit einer Bestellung verknüpft ist, und definiert die Art der Rückerstattung, den Betrag und die zugehörige Währung. |
 | Datentyp | [[!UICONTROL Kategoriedaten]](https://github.com/adobe/xdm/pull/1677/files) | Dieser neue Datentyp stellt die Kategorie eines Produkts dar. |
-| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1682/files) | Für Target Classification-Datensätze wurde ein neues XDM-Schema erstellt. Es enthält eine Reihe von Metadatenfeldern, die Target-Aktivitäten und -Erlebnisse klassifizieren. |
+| Schema | [[!UICONTROL Adobe Target-Klassifizierungsfelder]](https://github.com/adobe/xdm/pull/1682/files) | Für Zielklassifizierungsdatensätze wurde ein neues XDM-Schema erstellt. Sie enthält einen Satz von Metadatenfeldern, mit denen Target-Aktivitäten und -Erlebnisse klassifiziert werden. |
 
 {style="table-layout:auto"}
 
@@ -133,17 +133,17 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Feldgruppe | [[!UICONTROL Details der Inhaltskomponente]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde aus [!UICONTROL Details der Inhaltskomponente] entfernt |
-| Feldergruppe | [[!UICONTROL AJO-Entitäts-Tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO Entity-Tags wurden zu [!UICONTROL AJO Entity Fields] hinzugefügt, die einer Journey oder Kampagne entsprechen. |
-| Feldgruppe | (Mehrfach) | Es wurden mehrere Felder für die allgemeinen Felder [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) hinzugefügt. |
-| Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Medienberichte]](https://github.com/adobe/xdm/pull/1670/files) hinzugefügt. |
+| Feldgruppe | [[!UICONTROL Details der Inhaltskomponente]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` wurde aus [!UICONTROL Inhaltskomponentendetails“ ] |
+| Feldergruppe | [[!UICONTROL AJO-Entitäts-Tags]](https://github.com/adobe/xdm/pull/1672/files) | AJO-Entitäts-Tags zu [!UICONTROL AJO-Entitätsfeldern] hinzugefügt, die einer Journey oder Kampagne entsprechen |
+| Feldgruppe | (Mehrfach) | Es wurden mehrere Felder für die gemeinsamen Felder des Schrittereignisses [[!UICONTROL Journey Orchestration hinzugefügt]](https://github.com/adobe/xdm/pull/1671/files) |
+| Feldgruppe | (Mehrfach) | [Es wurden mehrere XDM-Ereignistypen für [!UICONTROL Medienberichte“ ]](https://github.com/adobe/xdm/pull/1670/files). |
 | Feldergruppe | [!UICONTROL Workfront-Änderungsereignis] | Die Feldergruppen `Full Record` und `Accessor Employee Ids` wurden hinzugefügt. |
-| Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/pull/1685/files) | Der [!UICONTROL Erstattungsbetrag] wurde hinzugefügt, um den gegebenenfalls für den Artikel zurückerstatteten Betrag anzugeben. |
-| Datentyp | [[!UICONTROL Auftrag ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Erstattungsliste] wurde zur Liste der Erstattungen für diese Bestellung hinzugefügt. |
-| Datentyp | [[!UICONTROL Produktlistenelement ]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden zur Liste der Kategoriedaten dieses Produkts hinzugefügt. |
-| Datentyp | [!UICONTROL Informationen zu Sitzungsdetails] | Das Zeichenfolgenfeld `pev3` wurde hinzugefügt, das [den Typ des für die Berichterstellung verwendeten Medien-Streams angibt](https://github.com/adobe/xdm/pull/1676/files). Außerdem wurde die Eigenschaft `pccr` hinzugefügt, um anzugeben, ob eine Umleitung erfolgt ist. |
-| Datentyp | [!UICONTROL Anforderungsliste] | Stellt die Eigenschaften der [Anforderungsliste](https://github.com/adobe/xdm/pull/1675/files) bereit. Dazu gehören Name, ID und Beschreibung. |
-| Datentyp | [!UICONTROL Commerce] | Der Datentyp [Commerce wurde aktualisiert, um ](https://github.com/adobe/xdm/pull/1675/files) `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` und `requisitionList` einzuschließen. |
+| Datentyp | [[!UICONTROL Produktlistenelement]](https://github.com/adobe/xdm/pull/1685/files) | Der [!UICONTROL Erstattungsbetrag] wurde hinzugefügt, um den für den Artikel erstatteten Betrag anzugeben, falls vorhanden. |
+| Datentyp | [](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Erstattungsliste] wurde der Liste der Erstattungen für diese Bestellung hinzugefügt. |
+| Datentyp | [[!UICONTROL Produktlistenelement ]](https://github.com/adobe/xdm/pull/1677/files) | Produktkategorien wurden der Liste der Kategoriedaten dieses Produkts hinzugefügt. |
+| Datentyp | [!UICONTROL Informationen zu Sitzungsdetails] | Das `pev3` Zeichenfolgenfeld wurde hinzugefügt, das [den Typ des für das Reporting verwendeten Medien-Streams angibt](https://github.com/adobe/xdm/pull/1676/files). Die `pccr` Eigenschaft gibt an, ob eine Umleitung stattgefunden hat. |
+| Datentyp | [!UICONTROL Anforderungsliste] | Stellt [ Eigenschaften der Anforderungsliste ](https://github.com/adobe/xdm/pull/1675/files). Dazu gehören Name, ID und Beschreibung. |
+| Datentyp | [!UICONTROL Commerce] | Der Datentyp [Commerce wurde aktualisiert](https://github.com/adobe/xdm/pull/1675/files) um `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` und `requisitionList` einzuschließen. |
 
 {style="table-layout:auto"}
 

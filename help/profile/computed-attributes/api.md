@@ -1,6 +1,6 @@
 ---
 title: API-Endpunkt für berechnete Attribute
-description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen.
+description: Erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen können.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
@@ -13,48 +13,48 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Der Zugriff auf die API ist eingeschränkt. Informationen zum Zugriff auf die API für berechnete Attribute erhalten Sie beim Adobe-Support.
+>Der Zugriff auf die API ist eingeschränkt. Wenden Sie sich an den Adobe-Support, um zu erfahren, wie Sie Zugriff auf die API für berechnete Attribute erhalten.
 
-Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Dieses Handbuch enthält Beispiel-API-Aufrufe zum Ausführen grundlegender CRUD-Vorgänge mithilfe des `/attributes` -Endpunkts.
+Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Dieses Handbuch enthält Beispiel-API-Aufrufe zum Ausführen grundlegender CRUD-Vorgänge mit dem `/attributes`-Endpunkt.
 
-Um mehr über berechnete Attribute zu erfahren, lesen Sie zunächst die [Übersicht über berechnete Attribute](overview.md).
+Um mehr über berechnete Attribute zu erfahren, lesen Sie zunächst den Abschnitt [Berechnete Attribute - Übersicht](overview.md).
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Kundenprofil-API](https://www.adobe.com/go/profile-apis-en).
 
-Bevor Sie fortfahren, lesen Sie zunächst das Erste-Schritte-Handbuch zur [Profil-API}, das Links zur empfohlenen Dokumentation enthält, eine Anleitung zum Lesen der in diesem Dokument angezeigten Beispiel-API-Aufrufe sowie wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.](../api/getting-started.md)
+Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte mit der Profil-API](../api/getting-started.md) mit Links zur empfohlenen Dokumentation, einer Anleitung zum Lesen der Beispiel-API-Aufrufe, die in diesem Dokument angezeigt werden, und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer Experience Platform-API erforderlich sind.
 
-Lesen Sie außerdem die Dokumentation für den folgenden Dienst:
+Lesen Sie außerdem die Dokumentation für den folgenden Service:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
-   - [Erste Schritte mit der Schemaregistrierung](../../xdm/api/getting-started.md#know-your-tenant_id): Informationen zu Ihrem `{TENANT_ID}`, der in den Antworten in diesem Handbuch angezeigt wird, werden bereitgestellt.
+   - [Erste Schritte mit der Schemaregistrierung](../../xdm/api/getting-started.md#know-your-tenant_id): Informationen zu Ihrer `{TENANT_ID}`, die in den Antworten in diesem Handbuch enthalten sind, werden bereitgestellt.
 
-## Liste berechneter Attribute abrufen {#list}
+## Abrufen einer Liste berechneter Attribute {#list}
 
-Sie können eine Liste aller berechneten Attribute für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/attributes` senden.
+Sie können eine Liste aller berechneten Attribute für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den `/attributes`-Endpunkt senden.
 
 **API-Format**
 
-Der `/attributes`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Diese Parameter sind zwar optional, doch wird ihre Verwendung dringend empfohlen, um bei der Auflistung von Ressourcen den teuren Verwaltungsaufwand zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren berechneten Attribute abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+Der `/attributes`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Obwohl diese Parameter optional sind, wird ihre Verwendung dringend empfohlen, um kostspieligen Aufwand bei der Auflistung von Ressourcen zu reduzieren. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren berechneten Attribute abgerufen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /attributes
 GET /attributes?{QUERY_PARAMETERS}
 ```
 
-Beim Abrufen einer Liste berechneter Attribute können die folgenden Abfrageparameter verwendet werden:
+Beim Abrufen einer Liste von berechneten Attributen können die folgenden Abfrageparameter verwendet werden:
 
 | Abfrageparameter | Beschreibung | Beispiel |
 | --------------- | ----------- | ------- |
-| `limit` | Ein Parameter, der die maximale Anzahl von Elementen angibt, die als Teil der Antwort zurückgegeben werden. Der Mindestwert dieses Parameters ist 1 und der Höchstwert 40. Wenn dieser Parameter nicht enthalten ist, werden standardmäßig 20 Elemente zurückgegeben. | `limit=20` |
-| `offset` | Ein Parameter, der die Anzahl der Elemente angibt, die vor der Rückgabe der Elemente übersprungen werden sollen. | `offset=5` |
-| `sortBy` | Ein Parameter, der die Reihenfolge angibt, in der die zurückgegebenen Elemente sortiert werden. Zu den verfügbaren Optionen gehören `name`, `status`, `updateEpoch` und `createEpoch`. Sie können auch auswählen, ob eine Sortierung in aufsteigender oder absteigender Reihenfolge erfolgen soll, indem Sie vor der Sortieroption kein &quot;`-`&quot; angeben oder einfügen. Standardmäßig werden die Elemente in absteigender Reihenfolge nach `updateEpoch` sortiert. | `sortBy=name` |
-| `property` | Ein Parameter, mit dem Sie nach verschiedenen berechneten Attributfeldern filtern können. Zu den unterstützten Eigenschaften gehören `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch` und `status`. Die unterstützten Vorgänge hängen von der aufgeführten Eigenschaft ab. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `limit` | Ein -Parameter, der die maximale Anzahl der als Teil der Antwort zurückgegebenen Elemente angibt. Der Mindestwert dieses Parameters ist 1 und der Höchstwert 40. Wenn dieser Parameter nicht enthalten ist, werden standardmäßig 20 Elemente zurückgegeben. | `limit=20` |
+| `offset` | Ein -Parameter, der die Anzahl der Elemente angibt, die übersprungen werden sollen, bevor die Elemente zurückgegeben werden. | `offset=5` |
+| `sortBy` | Ein -Parameter, der die Reihenfolge angibt, in der die zurückgegebenen Elemente sortiert werden. Zu den verfügbaren Optionen gehören `name`, `status`, `updateEpoch` und `createEpoch`. Sie können auch auswählen, ob in auf- oder absteigender Reihenfolge sortiert werden soll, indem Sie keine `-` vor der Sortieroption einfügen oder einfügen. Standardmäßig werden die Elemente nach `updateEpoch` in absteigender Reihenfolge sortiert. | `sortBy=name` |
+| `property` | Ein Parameter, mit dem Sie nach verschiedenen berechneten Attributfeldern filtern können. Zu den unterstützten Eigenschaften gehören `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch` und `status`. Die unterstützten Vorgänge hängen von der aufgelisteten Eigenschaft ab. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten drei berechneten Attribute abgerufen, die in Ihrem Unternehmen aktualisiert wurden.
+Die folgende Anfrage ruft die letzten drei berechneten Attribute ab, die in Ihrer Organisation aktualisiert wurden.
 
 +++ Eine Beispielanfrage zum Abrufen einer Liste berechneter Attribute.
 
@@ -70,7 +70,7 @@ curl -X GET https://platform.adobe.io/data/core/ca/attributes?limit=3 \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der letzten 3 aktualisierten berechneten Attribute zurück, die zu Ihrer Organisation und Sandbox gehören.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste der letzten 3 aktualisierten berechneten Attribute zurückgegeben, die zu Ihrer Organisation und Sandbox gehören.
 
 +++ Eine Beispielantwort zum Abrufen einer Liste berechneter Attribute.
 
@@ -211,14 +211,14 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der letzten 3
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `_links` | Ein Objekt, das die Paginierungsinformationen enthält, die für den Zugriff auf die letzte Ergebnisseite, die nächste Ergebnisseite, die vorherige Ergebnisseite oder die aktuelle Ergebnisseite erforderlich sind. |
-| `computedAttributes` | Ein Array, das die berechneten Attribute basierend auf Ihren Abfrageparametern enthält. Weitere Informationen zum berechneten Attribut-Array finden Sie im Abschnitt [Abrufen eines bestimmten berechneten Attributs ](#get). |
-| `_page` | Ein Objekt, das Metadaten zu den zurückgegebenen Ergebnissen enthält. Dazu gehören Informationen zum aktuellen Versatz, zur Anzahl der zurückgegebenen berechneten Attribute, zur Gesamtanzahl der berechneten Attribute sowie zur Beschränkung der zurückgegebenen berechneten Attribute. |
+| `computedAttributes` | Ein Array, das die auf der Grundlage Ihrer Abfrageparameter berechneten Attribute enthält. Weitere Informationen zum Array der berechneten Attribute finden Sie im Abschnitt [Abrufen eines bestimmten berechneten Attributs](#get). |
+| `_page` | Ein -Objekt, das Metadaten zu den zurückgegebenen Ergebnissen enthält. Dazu gehören Informationen über den aktuellen Offset, die Anzahl der zurückgegebenen berechneten Attribute, die Gesamtzahl der berechneten Attribute sowie die Beschränkung der zurückgegebenen berechneten Attribute. |
 
 +++
 
 ## Berechnetes Attribut erstellen {#create}
 
-Um ein berechnetes Attribut zu erstellen, stellen Sie zunächst eine POST-Anfrage an den `/attributes` -Endpunkt mit einem Anfragetext, der die Details des berechneten Attributs enthält, das Sie erstellen möchten.
+Um ein berechnetes Attribut zu erstellen, stellen Sie zunächst eine POST-Anfrage an den `/attributes`-Endpunkt mit einem Anfragetext, der die Details des berechneten Attributs enthält, das Sie erstellen möchten.
 
 **API-Format**
 
@@ -228,7 +228,7 @@ POST /attributes
 
 **Anfrage**
 
-+++ Eine Beispielanfrage zum Erstellen eines neuen berechneten Attributs.
++++ Beispielanfrage zum Erstellen eines neuen berechneten Attributs.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ca/attributes \
@@ -257,16 +257,16 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `name` | Der Name des berechneten Attributfelds als Zeichenfolge. Der Name des berechneten Attributs darf nur aus alphanumerischen Zeichen ohne Leerzeichen oder Unterstriche bestehen. Dieser Wert **muss** unter allen berechneten Attributen eindeutig sein. Als Best Practice sollte dieser Name eine camelCase-Version von `displayName` sein. |
-| `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation dabei hilft, das richtige berechnete Attribut zu bestimmen, das verwendet werden soll. |
-| `displayName` | Der Anzeigename für das berechnete Attribut. Dies ist der Name, der angezeigt wird, wenn Sie Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche auflisten. |
-| `expression` | Ein Objekt, das den Abfrageausdruck des berechneten Attributs darstellt, das Sie erstellen möchten. |
+| `name` | Der Name des berechneten Feldnamenfelds als Zeichenfolge. Der Name des berechneten Attributs darf nur aus alphanumerischen Zeichen ohne Leerzeichen oder Unterstriche bestehen. Dieser Wert **muss** unter allen berechneten Attributen eindeutig sein. Als Best Practice sollte dieser Name eine CamelCase-Version des `displayName` sein. |
+| `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation helfen kann, das richtige zu verwendende berechnete Attribut zu ermitteln. |
+| `displayName` | Der Anzeigename für das berechnete Attribut. Dies ist der Name, der angezeigt wird, wenn Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche aufgelistet werden. |
+| `expression` | Ein -Objekt, das den Abfrageausdruck des berechneten Attributs darstellt, das Sie erstellen möchten. |
 | `expression.type` | Der Typ des Ausdrucks. Derzeit wird nur PQL unterstützt. |
 | `expression.format` | Das Format des Ausdrucks. Derzeit wird nur `pql/text` unterstützt. |
-| `expression.value` | Der -Wert des Ausdrucks. |
-| `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs mithilfe einer schnellen Aktualisierung auf dem neuesten Stand gehalten wird. Derzeit sollte dieser Wert auf `false` gesetzt werden. |
-| `duration` | Ein Objekt, das den Lookback-Zeitraum für das berechnete Attribut darstellt. Der Lookback-Zeitraum gibt an, wie weit zurück zum Berechnen des berechneten Attributs geguckt werden kann. |
-| `duration.count` | Ein number -Wert, der die Dauer des Lookback-Zeitraums darstellt. Die möglichen Werte hängen vom Wert des Felds `duration.unit` ab. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
+| `expression.value` | Der Wert des Ausdrucks. |
+| `keepCurrent` | Ein boolescher Wert, der darüber bestimmt, ob der Wert des berechneten Attributs durch schnelle Aktualisierung auf dem neuesten Stand gehalten wird oder nicht. Derzeit sollte dieser Wert auf `false` gesetzt werden. |
+| `duration` | Ein -Objekt, das den Lookback-Zeitraum für das berechnete Attribut darstellt. Der Lookback-Zeitraum gibt an, wie weit das berechnete Attribut zurückgeschaut werden kann. |
+| `duration.count` | Eine Zahl, die die Dauer für den Lookback-Zeitraum darstellt. Die möglichen Werte hängen vom Wert des `duration.unit` ab. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | Eine Zeichenfolge, die die Zeiteinheit darstellt, die für den Lookback-Zeitraum verwendet wird. Mögliche Werte sind: `HOURS`, `DAYS`, `WEEKS` und `MONTHS`. |
 | `status` | Der Status des berechneten Attributs. Mögliche Werte sind `DRAFT` und `NEW`. |
 
@@ -274,9 +274,9 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem neu erstellten berechneten Attribut zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Informationen zu Ihrem neu erstellten berechneten Attribut zurückgegeben.
 
-+++ Eine Beispielantwort beim Erstellen eines neuen berechneten Attributs.
++++ Beispielantwort beim Erstellen eines neuen berechneten Attributs.
 
 ```json
 {
@@ -318,14 +318,14 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 | `id` | Die systemgenerierte ID Ihres neu erstellten berechneten Attributs. |
 | `status` | Der Status des berechneten Attributs. Dies kann entweder `DRAFT` oder `NEW` sein. |
 | `createEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut erstellt wurde, in Sekunden. |
-| `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut zuletzt aktualisiert wurde (in Sekunden). |
+| `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut zuletzt aktualisiert wurde, in Sekunden. |
 | `createdBy` | Die ID des Benutzers, der das berechnete Attribut erstellt hat. |
 
 +++
 
 ## Abrufen eines bestimmten berechneten Attributs {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten berechneten Attribut abrufen, indem Sie eine GET-Anfrage an den `/attributes` -Endpunkt senden und im Anfragepfad die Kennung des berechneten Attributs angeben, das Sie abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten berechneten Attribut abrufen, indem Sie eine GET-Anfrage an den `/attributes`-Endpunkt senden und im Anfragepfad die ID des berechneten Attributs angeben, das Sie abrufen möchten.
 
 **API-Format**
 
@@ -349,7 +349,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b1
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zum angegebenen berechneten Attribut zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit detaillierten Informationen zum angegebenen berechneten Attribut zurück.
 
 +++ Eine Beispielantwort beim Abrufen eines bestimmten berechneten Attributs.
 
@@ -391,32 +391,32 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `id` | Eine eindeutige, schreibgeschützte, systemgenerierte ID, die bei anderen API-Vorgängen zum Verweisen auf das berechnete Attribut genutzt werden kann. |
-| `type` | Eine Zeichenfolge, die anzeigt, dass das zurückgegebene Objekt ein berechnetes Attribut ist. |
-| `name` | Der Name des berechneten Attributs. |
-| `displayName` | Der Anzeigename für das berechnete Attribut. Dies ist der Name, der angezeigt wird, wenn Sie Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche auflisten. |
-| `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation dabei hilft, das richtige berechnete Attribut zu bestimmen, das verwendet werden soll. |
+| `type` | Eine Zeichenfolge, die anzeigt, dass das zurückgegebene -Objekt ein berechnetes Attribut ist. |
+| `name` | Der Name für das berechnete Attribut. |
+| `displayName` | Der Anzeigename für das berechnete Attribut. Dies ist der Name, der angezeigt wird, wenn Ihre berechneten Attribute in der Adobe Experience Platform-Benutzeroberfläche aufgelistet werden. |
+| `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn mehrere berechnete Attribute definiert wurden, da es anderen in Ihrer Organisation helfen kann, das richtige zu verwendende berechnete Attribut zu ermitteln. |
 | `imsOrgId` | Die ID der Organisation, zu der das berechnete Attribut gehört. |
 | `sandbox` | Das Sandbox-Objekt enthält Details zur Sandbox, in der das berechnete Attribut konfiguriert wurde. Diese Daten werden aus der in der Anfrage gesendeten Sandbox-Kopfzeile extrahiert. Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md). |
-| `path` | Der `path` zum berechneten Attribut. |
-| `keepCurrent` | Ein boolescher Wert, der bestimmt, ob der Wert des berechneten Attributs mithilfe einer schnellen Aktualisierung auf dem neuesten Stand gehalten wird. |
-| `expression` | Ein Objekt, das den Ausdruck des berechneten Attributs enthält. |
-| `mergeFunction` | Ein Objekt, das die Zusammenführungsfunktion für das berechnete Attribut enthält. Dieser Wert basiert auf dem entsprechenden Aggregationsparameter innerhalb des Ausdrucks des berechneten Attributs. Mögliche Werte sind `SUM`, `MIN`, `MAX` und `MOST_RECENT`. |
+| `path` | Die `path` zum berechneten Attribut. |
+| `keepCurrent` | Ein boolescher Wert, der darüber bestimmt, ob der Wert des berechneten Attributs durch schnelle Aktualisierung auf dem neuesten Stand gehalten wird oder nicht. |
+| `expression` | Ein -Objekt, das den Ausdruck des berechneten Attributs enthält. |
+| `mergeFunction` | Ein Objekt, das die Zusammenführungsfunktion für das berechnete Attribut enthält. Dieser Wert basiert auf dem entsprechenden Aggregationsparameter im Ausdruck des berechneten Attributs. Zu den möglichen Werten gehören `SUM`, `MIN`, `MAX` und `MOST_RECENT`. |
 | `status` | Der Status des berechneten Attributs. Dies kann einer der folgenden Werte sein: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED` oder `DISABLED`. |
 | `schema` | Ein Objekt, das Informationen zum Schema enthält, in dem der Ausdruck ausgewertet wird. Derzeit wird nur `_xdm.context.profile` unterstützt. |
 | `lastEvaluationTs` | Ein Zeitstempel, der angibt, wann das berechnete Attribut zuletzt ausgewertet wurde. |
 | `createEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut erstellt wurde, in Sekunden. |
-| `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut zuletzt aktualisiert wurde (in Sekunden). |
+| `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut zuletzt aktualisiert wurde, in Sekunden. |
 | `createdBy` | Die ID des Benutzers, der das berechnete Attribut erstellt hat. |
 
 +++
 
-## Löschen eines bestimmten berechneten Attributs {#delete}
+## Bestimmtes berechnetes Attribut löschen {#delete}
 
-Sie können ein bestimmtes berechnetes Attribut löschen, indem Sie eine DELETE-Anfrage an den `/attributes` -Endpunkt senden und im Anfragepfad die Kennung des berechneten Attributs angeben, das Sie löschen möchten.
+Sie können ein bestimmtes berechnetes DELETE löschen, indem Sie eine Attributanfrage an den `/attributes`-Endpunkt stellen und im Anfragepfad die Kennung des berechneten Attributs angeben, das Sie löschen möchten.
 
 >[!IMPORTANT]
 >
->Die Löschanfrage kann nur zum Löschen berechneter Attribute mit dem Status **draft** (`DRAFT`) verwendet werden. Dieser Endpunkt **kann nicht** zum Löschen berechneter Attribute in einem anderen Status verwendet werden.
+>Die Löschanfrage kann nur zum Löschen berechneter Attribute mit dem Status **Entwurf)**`DRAFT`) verwendet werden. Dieser Endpunkt **kann** nicht verwendet werden, um berechnete Attribute in einem anderen Status zu löschen.
 
 **API-Format**
 
@@ -426,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Der `id` -Wert des berechneten Attributs, das Sie löschen möchten. |
+| `{ATTRIBUTE_ID}` | Der `id` des berechneten Attributs, das Sie löschen möchten. |
 
 **Anfrage**
 
@@ -444,7 +444,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 202 mit Details zum gelöschten berechneten Attribut zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 202 mit Details zum gelöschten berechneten Attribut zurückgegeben.
 
 +++ Eine Beispielantwort beim Löschen eines berechneten Attributs.
 
@@ -485,16 +485,16 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 mit Details zum gelöschten b
 
 +++
 
-## Aktualisieren eines bestimmten berechneten Attributs
+## Spezifisches berechnetes Attribut aktualisieren
 
-Sie können ein bestimmtes berechnetes Attribut aktualisieren, indem Sie eine PATCH-Anfrage an den `/attributes` -Endpunkt senden und im Anfragepfad die Kennung des berechneten Attributs angeben, das Sie aktualisieren möchten.
+Sie können ein bestimmtes berechnetes Attribut aktualisieren, indem Sie eine PATCH-Anfrage an den `/attributes`-Endpunkt senden und im Anfragepfad die ID des berechneten Attributs angeben, das Sie aktualisieren möchten.
 
 >[!IMPORTANT]
 >
 >Beim Aktualisieren eines berechneten Attributs können nur die folgenden Felder aktualisiert werden:
 >
->- Wenn der aktuelle Status `NEW` lautet, kann der Status nur in `DISABLED` geändert werden.
->- Wenn der aktuelle Status `DRAFT` lautet, können Sie die Werte der folgenden Felder ändern: `name`, `description`, `keepCurrent`, `expression` und `duration`. Sie können auch den Status von `DRAFT` in `NEW` ändern. Änderungen an systemgenerierten Feldern wie `mergeFunction` oder `path` geben einen Fehler zurück.
+>- Wenn der aktuelle Status `NEW` ist, kann der Status nur in `DISABLED` geändert werden.
+>- Wenn der aktuelle Status `DRAFT` ist, können Sie die Werte der folgenden Felder ändern: `name`, `description`, `keepCurrent`, `expression` und `duration`. Sie können auch den Status von `DRAFT` in `NEW` ändern. Alle Änderungen an systemgenerierten Feldern wie `mergeFunction` oder `path` geben einen Fehler zurück.
 >- Wenn der aktuelle Status entweder `PROCESSING` oder `PROCESSED` ist, kann der Status nur in `DISABLED` geändert werden.
 
 **API-Format**
@@ -505,11 +505,11 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | Der `id` -Wert des berechneten Attributs, das Sie aktualisieren möchten. |
+| `{ATTRIBUTE_ID}` | Der `id` des berechneten Attributs, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird der Status des berechneten Attributs von `DRAFT` auf `NEW` aktualisiert.
+Die folgende Anfrage aktualisiert den Status des berechneten Attributs von `DRAFT` auf `NEW`.
 
 +++ Eine Beispielanfrage zum Aktualisieren eines berechneten Attributs.
 
@@ -536,7 +536,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ca/attributes/1e8d0d77-b2bb-4b
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem neu aktualisierten berechneten Attribut zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Informationen zu Ihrem neu aktualisierten berechneten Attribut zurück.
 
 +++ Eine Beispielantwort beim Aktualisieren eines berechneten Attributs.
 
@@ -579,4 +579,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Nächste Schritte
 
-Nachdem Sie die Grundlagen berechneter Attribute kennen gelernt haben, können Sie mit der Definition dieser Attribute für Ihre Organisation beginnen. Um zu erfahren, wie Sie berechnete Attribute in der Experience Platform-Benutzeroberfläche verwenden, lesen Sie das Handbuch [über die Benutzeroberfläche für berechnete Attribute](./ui.md).
+Nachdem Sie nun die Grundlagen von berechneten Attributen gelernt haben, können Sie damit beginnen, sie für Ihr Unternehmen zu definieren. Informationen zur Verwendung berechneter Attribute in der Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche für berechnete Attribute](./ui.md).

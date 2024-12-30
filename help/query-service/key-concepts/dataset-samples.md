@@ -19,11 +19,11 @@ Um Ihnen bei der Verwaltung Ihrer Beispiele für die annähernde Abfrageverarbei
 
 - [Datensatzbeispiele](#dataset-samples)
    - [Erste Schritte {#get-started}](#getting-started-get-started)
-   - [Erstellen einer einheitlichen Stichprobe für einen beliebigen Datensatz {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [Optional ein Filterkriterium {#optional-filter-criteria} angeben](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [Liste der Beispiele anzeigen {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [Beispieldatensatz {#query-sample-datasets} abfragen](#query-the-sample-dataset-query-sample-datasets)
-   - [Beispiele für Datensätze löschen {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
+   - [Erstellen einer einheitlichen {#create-a-sample} für zufällige Datensätze](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Geben Sie optional einen {#optional-filter-criteria} für Filterkriterien an](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Anzeigen der Liste der {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [Abfragen des Beispiel-Datensatzes {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [Löschen von Datensatzbeispielen {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## Erste Schritte {#get-started}
 

@@ -1,8 +1,8 @@
 ---
-keywords: OCR; Textpräsenz; optische Zeichenerkennung
+keywords: OCR;Textpräsenz;optische Zeichenerkennung
 solution: Experience Platform
-title: Textpräsenz und optische Zeichenerkennung
-description: In der Content Tagging API kann der Dienst für die Texterkennung (OCR) angeben, ob in einem Bild Text vorhanden ist. Wenn Text vorhanden ist, kann OCR den Text zurückgeben.
+title: Textpräsenz- und optische Zeichenerkennung
+description: In der Content-Tagging-API kann der Service für Textpräsenz-/optische Zeichenerkennung (OCR) anzeigen, ob Text in einem bestimmten Bild vorhanden ist. Wenn Text vorhanden ist, kann OCR den Text zurückgeben.
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 4%
 
 ---
 
-# Textpräsenz und optische Zeichenerkennung
+# Textpräsenz- und optische Zeichenerkennung
 
-Der Dienst für die Texterkennung/optische Zeichenerkennung (OCR) kann bei einem Bild angeben, ob im Bild Text vorhanden ist. Wenn Text vorhanden ist, kann OCR den Text zurückgeben.
+Der Service „Textpräsenz-/Optische Zeichenerkennung (OCR)“ kann bei einem gegebenen Bild anzeigen, ob Text im Bild vorhanden ist. Wenn Text vorhanden ist, kann OCR den Text zurückgeben.
 
-Die folgende Abbildung wurde in der Beispielanfrage in diesem Dokument verwendet:
+Die folgende Abbildung wurde in der in diesem Dokument gezeigten Beispielanfrage verwendet:
 
 ![Beispielbild](../images/sample_image.png)
 
@@ -74,13 +74,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den Text zurück, der in der Liste `tags` für jedes in der Anfrage übergebene Bild erkannt wurde. Wenn in einem bestimmten Bild kein Text vorhanden ist, ist `is_text_present` 0 und `tags` eine leere Liste.
+Bei einer erfolgreichen Antwort wird der Text zurückgegeben, der in der `tags` für jedes Bild erkannt wurde, das in der Anfrage übergeben wurde. Wenn ein bestimmtes Bild keinen Text enthält, ist `is_text_present` 0 und `tags` ist eine leere Liste.
 
-[result0, result1, ...]: Liste der Antworten für jedes Eingabedokument. Jedes Ergebnis enthält ein Dict mit Schlüsseln:
+[result0, result1, …]: Liste der Antworten für jedes Eingabedokument. Jedes Ergebnis ist ein dict mit Schlüsseln:
 
-1. request_element_id: Index der Eingabedatei für diese Antwort, 0 für das erste Bild in der Dokumentliste der Anforderung, 1 für das nächste usw.
-2. Tags: Liste der Wörterbücher, jedes Wörterbuch hat zwei Schlüssel: Text, das ein erkanntes Wort aus dem Bild ist, und Relevanz, die als Bruchteil des Bereichs des Begrenzungsrahmens des extrahierten Textes im Vergleich zum vollständigen Bild berechnet wird. 0,01 würde in einen Text übersetzen, der mindestens 1 % des Bildes umfasst.
-3. is_text_present: 0 oder 1, je nachdem, ob im Bild Text vorhanden ist. Wenn die Tags 0 sind, ist die Liste leer.
+1. REQUEST_ELEMENT_ID: Entsprechender Index der Eingabedatei für diese Antwort, 0 für das erste Bild in der Dokumentliste der Anfrage, 1 für das nächste usw.
+2. Tags: Liste der Wörterbücher Jedes Wörterbuch hat zwei Schlüssel: Text, der ein erkanntes Wort aus dem Bild ist, und Relevanz, die als der Bruchteil des Bereichs des Begrenzungsrahmens des extrahierten Textes im Vergleich zum vollständigen Bild berechnet wird. 0,01 würde in einen Text übersetzt werden, der mindestens 1 % des Bildes einnimmt.
+3. is_text_present: 0 oder 1, je nachdem, ob Text im Bild vorhanden ist. Wenn Tags den Wert 0 haben, ist die Liste leer.
 
 ```json
 {
@@ -197,19 +197,19 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `documents` | Liste der JSON-Elemente mit jedem Element in der Liste, das ein Bild darstellt. Alle Parameter, die als Teil dieser Liste übergeben werden, überschreiben den außerhalb der Liste angegebenen globalen Parameter für das entsprechende Listenelement. | Ja |
-| `sensei:multipart_field_name` | field_name zum Lesen des Eingabedateipfads. | Ja |
-| `repo:path` | Vordefinierte URL für Bild-Asset. | Ja |
-| `sensei:repoType` | &quot;HTTP&quot;(für vorsignierte URL). | Nein |
-| `dc:format` | Kodiertes Format des Eingabebilds. Für die Bildkodierung sind nur Bildformate wie jpeg, jpg, png und tiff zulässig. Das dc:format wird mit den zulässigen Formaten abgeglichen. | Nein |
-| `correct_with_dictionary` | Ob die Wörter mit einem englischen Wörterbuch korrigiert werden sollen? Wenn diese Option nicht aktiviert ist, können möglicherweise nicht englische Wörter erkannt werden. Der Standardwert ist &quot;True&quot;: aktiviert.) Beachten Sie, dass es bei Aktivierung des Wörterbuchs nicht notwendig ist, immer ein englisches Wort zu erhalten. Wir versuchen, es zu korrigieren, aber wenn es innerhalb einer bestimmten Bearbeitungsentfernung nicht möglich ist, geben wir das ursprüngliche Wort zurück. | Nein |
-| `filter_with_dictionary` | Ob die Wörter so gefiltert werden sollen, dass sie nur die Wörter aus dem englischen Wörterbuch enthalten? Wenn diese Option aktiviert ist, gehören die zurückgegebenen Wörter immer zum großen Englisch , das 470.000 Wörter umfasst. | Nein |
-| `min_probability` | Wie hoch ist die Mindestwahrscheinlichkeit für die erkannten Wörter? Nur die Wörter, die aus dem Bild extrahiert werden und eine höhere Wahrscheinlichkeit als min_wahrscheinlicher haben, werden vom Dienst zurückgegeben. Der Standardwert ist auf 0,2 festgelegt. | Nein |
-| `min_relevance` | Was ist die minimale Relevanz für die erkannten Wörter? Nur die Wörter, die aus dem Bild extrahiert werden und eine größere Relevanz als min_relevant haben, werden vom Dienst zurückgegeben. Der Standardwert ist auf 0,01 festgelegt. Die Relevanz wird als Anteil des Bereichs des extrahierten Begrenzungsrahmens für Text im Vergleich zum vollständigen Bild berechnet. 0,01 würde in einen Text übersetzen, der mindestens 1 % des Bildes umfasst. | Nein |
+| `documents` | Liste der JSON-Elemente, wobei jedes Element in der Liste ein Bild darstellt. Alle Parameter, die als Teil dieser Liste übergeben werden, überschreiben den globalen Parameter, der außerhalb der Liste für das entsprechende Listenelement angegeben ist. | Ja |
+| `sensei:multipart_field_name` | field_name, aus dem der Eingabedateipfad gelesen werden soll. | Ja |
+| `repo:path` | Vordefinierte URL zum Bild-Asset. | Ja |
+| `sensei:repoType` | „HTTP“ (für vordefinierte URL). | Nein |
+| `dc:format` | Kodiertes Format des Eingabebildes. Für die Bildcodierung sind nur Bildformate wie JPEG, JPG, PNG und TIFF zulässig. Das dc:format wird mit zulässigen Formaten abgeglichen. | Nein |
+| `correct_with_dictionary` | Ob die Wörter mit einem englischen Wörterbuch korrigiert werden sollen? Wenn diese Option nicht aktiviert ist, könnten nicht-englische Wörter erkannt werden. Der Standardwert ist „true“ (aktiviert). Beachten Sie, dass Sie bei eingeschaltetem Wörterbuch nicht immer ein englisches Wort erhalten müssen. Wir versuchen, es zu korrigieren, aber wenn es in einer bestimmten Bearbeitungsdistanz nicht möglich ist, geben wir das Originalwort zurück. | Nein |
+| `filter_with_dictionary` | Gibt an, ob die Wörter so gefiltert werden sollen, dass sie nur Wörter aus dem englischen Wörterbuch enthalten? Wenn diese Option aktiviert ist, gehören die zurückgegebenen Wörter immer zu dem großen englischen , das 470.000 Wörter umfasst. | Nein |
+| `min_probability` | Wie hoch ist die Mindestwahrscheinlichkeit für die erkannten Wörter? Nur Wörter, die aus dem Bild extrahiert wurden und eine höhere Wahrscheinlichkeit als „min_probability“ aufweisen, werden vom Service zurückgegeben. Der Standardwert ist 0,2. | Nein |
+| `min_relevance` | Welches ist die Mindestrelevanz für die erkannten Wörter? Der Service gibt nur Wörter zurück, die aus dem Bild extrahiert wurden und eine größere Relevanz als „min_relevant“ haben. Der Standardwert ist 0,01. Die Relevanz wird als Bruchteil des Bereichs des Begrenzungsrahmens des extrahierten Textes im Vergleich zum vollständigen Bild berechnet. 0,01 würde in einen Text übersetzt werden, der mindestens 1 % des Bildes einnimmt. | Nein |
 
 | Name | Datentyp | Erforderlich | Standard | Werte | Beschreibung |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | – | – | – | Vordefinierte URL des Bildes, aus dem Text extrahiert werden soll. |
+| `repo:path` | string | – | – | – | Vordefinierte URL des Bildes, aus dem Text extrahiert werden muss. |
 | `sensei:repoType` | Zeichenfolge | – | – | HTTPS | Typ des Repositorys, in dem das Bild gespeichert wird. |
-| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie das Bild als mehrteiliges Argument übergeben, anstatt vorsignierte URLs zu verwenden. |
-| `dc:format` | Zeichenfolge | Ja | – | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | Die Bildkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |
+| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie das Bild als mehrteiliges Argument übergeben, anstatt vordefinierte URLs zu verwenden. |
+| `dc:format` | Zeichenfolge | Ja | – | „image/jpg“, <br>„image/jpeg“, <br>„image/png“, <br>„image/tiff“ | Die Bildkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |

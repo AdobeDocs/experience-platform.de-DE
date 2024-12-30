@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Rollen und Projektphasen
 
-In diesem Video erhalten Sie einen Überblick über die Rollen, Phasen und wichtigsten Ergebnisse eines erfolgreichen Adobe Experience Platform-Projekts.
+Dieses Video bietet einen Überblick über die Rollen, Phasen und wichtigsten Ergebnisse, die an einem erfolgreichen Adobe Experience Platform-Projekt beteiligt sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32807?quality=12&learn=on)

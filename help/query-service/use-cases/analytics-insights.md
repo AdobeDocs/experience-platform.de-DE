@@ -1,6 +1,6 @@
 ---
-title: Analytics Insights für Web- und Mobile-Interaktionen
-description: In diesem Dokument wird erläutert, wie Sie mithilfe von Query Service praktische Einblicke aus erfassten Adobe Analytics-Daten erstellen können.
+title: Analytics Insights für Web- und mobile Interaktionen
+description: In diesem Dokument wird erläutert, wie Sie mit Query Service umsetzbare Einblicke aus aufgenommenen Adobe Analytics-Daten erstellen können.
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 1%
 
 ---
 
-# Analytics-Einblicke für Web- und mobile Interaktionen
+# Analytics Insights für Web- und mobile Interaktionen
 
-Mit Adobe Experience Platform können Sie Daten aus Adobe Analytics Report Suites mithilfe von XDM-Feldern (Experience-Datenmodell) erfassen, um Datensätze zu füllen. Diese Analysedaten werden entsprechend der [!DNL XDM ExperienceEvent] -Klasse geändert. Query Service kann diese Daten dann nutzen, indem SQL-Abfragen ausgeführt werden, um wertvolle Einblicke aus dem Verhalten eines Benutzers gegenüber den digitalen Plattformen zu erhalten.
+Mit Adobe Experience Platform können Sie Daten aus Adobe Analytics Report Suites mithilfe von Experience-Datenmodell (XDM)-Feldern aufnehmen, um Datensätze auszufüllen. Diese Analytics-Daten werden entsprechend der [!DNL XDM ExperienceEvent] geändert. Query Service kann diese Daten dann verwenden, indem SQL-Abfragen ausgeführt werden, um wertvolle Einblicke aus dem Verhalten eines Benutzers über die digitalen Plattformen zu generieren.
 
-Dieses Dokument bietet eine Vielzahl von SQL-Beispielabfragen, die gängige Anwendungsfälle beim Erstellen von Einblicken aus Web- und mobilen Analytics-Daten veranschaulichen.
+Dieses Dokument enthält eine Vielzahl von SQL-Beispielabfragen, die gängige Anwendungsfälle beim Erstellen von Einblicken aus Web- und Mobile-Analytics-Daten zeigen.
 
-Weitere Informationen zur Erfassung und Zuordnung von Analysedaten finden Sie in der Dokumentation zu Analytics-Feldzuordnungen ](../../sources/connectors/adobe-applications/mapping/analytics.md) .[
+Weitere Informationen [ Aufnehmen und Zuordnen von Analytics-Daten finden ](../../sources/connectors/adobe-applications/mapping/analytics.md) in der Dokumentation zu Analytics-Feldzuordnungen .
 
 ## Erste Schritte
 
-Für jeden der folgenden Anwendungsfälle wird ein parametrisiertes SQL-Abfragebeispiel als Vorlage bereitgestellt, die Sie anpassen können. Geben Sie Parameter an, wo immer Sie in den SQL-Beispielen `{ }` für den Datensatz, das eVar, das Ereignis oder den Zeitrahmen sehen, den Sie bewerten möchten.
+Für jeden der folgenden Anwendungsfälle wird ein parametrisiertes SQL-Abfragebeispiel als Vorlage bereitgestellt, die Sie anpassen können. Geben Sie Parameter an, wo immer Sie `{ }` in den SQL-Beispielen für den Datensatz, die eVar, das Ereignis oder den Zeitrahmen sehen, den Sie auswerten möchten.
 
 ## Ziele
 
 Die folgenden Beispiele zeigen SQL-Abfragen für gängige Anwendungsfälle zur Analyse Ihrer Adobe Analytics-Daten.
 
-### Generieren der Besucherzahl für jede Stunde an einem bestimmten Tag
+### Generieren der Besucheranzahl für jede Stunde an einem bestimmten Tag
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
@@ -37,7 +37,7 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
-### Identifizieren der 10 am häufigsten angezeigten Seiten an einem bestimmten Tag
+### Ermitteln der 10 am häufigsten angezeigten Seiten an einem bestimmten Tag
 
 ```SQL
 SELECT web.webpagedetails.name AS Page_Name,
@@ -61,7 +61,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### Die 10 am meisten gewünschten Städte basierend auf der Benutzeraktivität identifizieren
+### Die 10 beliebtesten Städte auf Basis der Benutzeraktivität identifizieren
 
 ```sql
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city,
@@ -73,7 +73,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### Die 10 am häufigsten angezeigten Produkte identifizieren
+### 10 am häufigsten angesehene Produkte identifizieren
 
 ```sql
 SELECT Product_SKU,
@@ -88,7 +88,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-### Ermitteln Sie die 10 höchsten Bestelleinnahmen.
+### Ermitteln Sie die 10 höchsten Umsätze.
 
 ```sql
 SELECT Purchase_ID,

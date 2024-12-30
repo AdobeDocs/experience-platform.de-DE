@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Herunterladen von Bewertungen; Customer AI; beliebte Themen; Exportieren; Exportieren; Herunterladen von Kundenai; Bewertung von Kundenai
+keywords: Experience Platform;Scores herunterladen;Kunden-KI;beliebte Themen;Exportieren;Exportieren;Kunden-KI-Download;Kunden-KI-Scores
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Herunterladen von Bewertungen in Customer AI
-description: Mit Customer AI können Sie Bewertungen im Parquet-Dateiformat herunterladen.
+title: Scores in Kunden-KI herunterladen
+description: Mit Kunden-KI können Sie Scores im Parquet-Dateiformat herunterladen.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
@@ -12,22 +12,22 @@ ht-degree: 72%
 
 ---
 
-# Herunterladen von Bewertungen in Customer AI
+# Scores in Kunden-KI herunterladen
 
 Dieses Dokument dient als Anleitung zum Herunterladen von Ergebnissen für Customer AI.
 
 ## Erste Schritte
 
-Mit Customer AI können Sie Bewertungen im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Customer AI-Bewertungen in den [Ersten Schritten](../getting-started.md) gelesen und abgeschlossen haben.
+Mit Kunden-KI können Sie Scores im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Customer AI-Bewertungen in den [Ersten Schritten](../getting-started.md) gelesen und abgeschlossen haben.
 
-Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Customer AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
+Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Service-Instanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-KI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
 Derzeit gibt es zwei Möglichkeiten, Customer AI-Bewertungen herunterzuladen:
 
-1. Wenn Sie die Bewertungen auf der jeweiligen Ebene herunterladen möchten und/oder das Echtzeit-Kundenprofil nicht aktiviert ist, navigieren Sie zu [Suchen Ihrer Datensatz-ID](#dataset-id).
+1. Wenn Sie die Bewertungen auf individueller Ebene herunterladen möchten und/oder das Echtzeit-Kundenprofil nicht aktiviert ist, navigieren Sie zunächst zu [Ermitteln Ihrer Datensatz-ID](#dataset-id).
 2. Wenn Sie Profil aktiviert haben und Segmente herunterladen möchten, die Sie mit Customer AI konfiguriert haben, gehen Sie zu [Herunterladen eines mit Customer AI konfigurierten Segments](#segment).
 
-## Datensatz-ID ermitteln {#dataset-id}
+## Ermitteln der Datensatz-ID {#dataset-id}
 
 Klicken Sie in Ihrer Dienstinstanz für Customer AI-Einblicke auf das Dropdown-Menü *Mehr Aktionen* und wählen Sie **[!UICONTROL Auf Bewertungen zugreifen]** aus.
 
@@ -39,7 +39,7 @@ Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen 
 
 ## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
-Mithilfe Ihrer Datensatz-ID aus dem vorherigen Schritt müssen Sie die Catalog-API aufrufen, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für den Parameter limit query auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../../catalog/api/filter-data.md).
+Unter Verwendung Ihrer Datensatz-ID aus dem vorherigen Schritt müssen Sie einen Aufruf an die Katalog-API durchführen, um eine Batch-ID abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für den Abfrageparameter Limit auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../../catalog/api/filter-data.md).
 
 **API-Format**
 
@@ -63,7 +63,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Batch-Kennung `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert des zurückgegebenen -Objekts die Batch-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
 
 ```json
 {
@@ -245,7 +245,7 @@ Um Ihre Dateidaten herunterzuladen, stellen Sie eine GET-Anfrage an den `"href"`
 
 >[!NOTE]
 >
->Wenn Sie diese Anfrage direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, eine Ausgabe nach den Kopfzeilen Ihrer Anfrage hinzuzufügen. Im folgenden Anfragebeispiel wird `--output {FILENAME.FILETYPE}` verwendet.
+>Wenn Sie diese Anfrage direkt in der Befehlszeile ausführen, werden Sie möglicherweise aufgefordert, nach den Headern Ihrer Anfrage eine Ausgabe hinzuzufügen. Im folgenden Anfragebeispiel wird `--output {FILENAME.FILETYPE}` verwendet.
 
 **API-Format**
 
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Stellen Sie sicher, dass Sie sich im richtigen Verzeichnis oder Ordner befinden, in dem die Datei gespeichert werden soll, bevor Sie die GET anfordern.
+>Stellen Sie sicher, dass Sie sich in dem richtigen Verzeichnis befinden, in dem Ihre Datei gespeichert werden soll, bevor Sie die GET-Anfrage stellen.
 
 **Antwort**
 
@@ -279,13 +279,13 @@ Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. 
 
 ![Endgerät](../images/download-scores/response.png)
 
-## Herunterladen eines mit Customer AI konfigurierten Segments {#segment}
+## Herunterladen eines mit Kunden-KI konfigurierten Segments {#segment}
 
 Alternativ können Sie Ihre Bewertungsdaten herunterladen, indem Sie Ihre Zielgruppe in einen Datensatz exportieren. Nachdem ein Segmentierungsauftrag erfolgreich abgeschlossen wurde (der Wert des `status`-Attributs lautet „SUCCEEDED“ (GELUNGEN)), können Sie Ihre Zielgruppe in einen Datensatz exportieren. In diesem Datensatz ist die Zielgruppe zugänglich und bearbeitbar. Weitere Informationen zur Segmentierung finden Sie in [Segmentierung – Übersicht](../../../segmentation/home.md).
 
 >[!IMPORTANT]
 >
->Um diese Exportmethode zu verwenden, muss das Echtzeit-Kundenprofil für den Datensatz aktiviert werden.
+>Um diese Exportmethode verwenden zu können, muss das Echtzeit-Kundenprofil für den Datensatz aktiviert sein.
 
 Im Abschnitt zum [Exportieren eines Segments](../../../segmentation/tutorials/evaluate-a-segment.md) im Handbuch zur Segmentauswertung werden die erforderlichen Schritte zum Exportieren eines Zielgruppendatensatzes beschrieben. Das Handbuch beschreibt und enthält Beispiele für Folgendes:
 

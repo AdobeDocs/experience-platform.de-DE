@@ -12,61 +12,61 @@ ht-degree: 6%
 
 ---
 
-# Anhang zum Privacy Service API-Handbuch
+# Anhang zum Privacy Service-API-Handbuch
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit der Adobe Experience Platform Privacy Service-API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zur Arbeit mit der Adobe Experience Platform Privacy Service-API.
 
-## Standardmäßige Identitäts-Namespaces {#standard-namespaces}
+## Standard-Identity-Namespaces {#standard-namespaces}
 
-Alle Identitäten, die an [!DNL Privacy Service] gesendet werden, müssen unter einem bestimmten Identitäts-Namespace bereitgestellt werden. Identitäts-Namespaces sind eine Komponente von [Adobe Experience Platform Identity Service](../../identity-service/home.md) , die den Kontext angibt, auf den sich eine Identität bezieht.
+Alle Identitäten, die an [!DNL Privacy Service] gesendet werden, müssen unter einem bestimmten Identity-Namespace bereitgestellt werden. Identity-Namespaces sind eine Komponente von [Adobe Experience Platform Identity Service](../../identity-service/home.md) die den Kontext angeben, auf den sich eine Identität bezieht.
 
-In der folgenden Tabelle sind mehrere häufig verwendete, vordefinierte Identitätstypen aufgeführt, die von [!DNL Experience Platform] zur Verfügung gestellt werden, zusammen mit den zugehörigen `namespace` -Werten:
+In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitätstypen aufgeführt, die von [!DNL Experience Platform] bereitgestellt werden, zusammen mit den zugehörigen `namespace`:
 
 | Identitätstyp | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | E-Mail | `Email` | `6` |
 | Telefon | `Phone` | `7` |
 | ADOBE ADVERTISING CLOUD ID | `AdCloud` | `411` |
-| Adobe Audience Manager UUID | `CORE` | `0` |
+| ADOBE AUDIENCE MANAGER UUID | `CORE` | `0` |
 | ADOBE EXPERIENCE CLOUD ID | `ECID` | `4` |
 | ADOBE TARGET ID | `TNTID` | `9` |
-| [!DNL Apple] ID für Advertiser | `IDFA` | `20915` |
-| [!DNL Google] Anzeigen-ID | `GAID` | `20914` |
-| [!DNL Windows] AID | `WAID` | `8` |
+| [!DNL Apple]-ID für Werbetreibende | `IDFA` | `20915` |
+| [!DNL Google]-ID | `GAID` | `20914` |
+| [!DNL Windows] | `WAID` | `8` |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Jeder Identitätstyp verfügt auch über einen `namespaceId` Integer-Wert, der anstelle der `namespace` -Zeichenfolge verwendet werden kann, wenn die `type` -Eigenschaft der Identität auf &quot;namespaceId&quot;gesetzt wird. Weitere Informationen finden Sie im Abschnitt zu [Namespace-Qualifikatoren](#namespace-qualifiers) .
+>Jeder Identitätstyp verfügt außerdem über einen `namespaceId` ganzzahligen Wert, der anstelle der `namespace` Zeichenfolge verwendet werden kann, wenn die `type` Eigenschaft der Identität auf „namespaceId“ festgelegt wird. Weitere Informationen finden Sie im Abschnitt [Namespacequalifizierer](#namespace-qualifiers).
 
-Sie können eine Liste der von Ihrem Unternehmen verwendeten Identitäts-Namespaces abrufen, indem Sie eine GET-Anfrage an den `idnamespace/identities` -Endpunkt in der [!DNL Identity Service] -API richten. Weitere Informationen finden Sie im [Entwicklerhandbuch für Identity Service](../../identity-service/api/getting-started.md) .
+Sie können eine Liste der von Ihrem Unternehmen verwendeten Identity-Namespaces abrufen, indem Sie eine GET-Anfrage an den `idnamespace/identities`-Endpunkt in der [!DNL Identity Service]-API stellen. Weitere Informationen finden Sie [Identity Service](../../identity-service/api/getting-started.md)Entwicklerhandbuch).
 
-## Namespace-Kennungen
+## Namespace-Qualifizierer
 
-Bei der Angabe eines `namespace` -Werts in der [!DNL Privacy Service]-API muss ein **Namespace-Qualifizierer** in einen entsprechenden `type`-Parameter aufgenommen werden. In der folgenden Tabelle sind die verschiedenen akzeptierten Namespace-Qualifikatoren aufgeführt.
+Beim Angeben eines `namespace` in der [!DNL Privacy Service]-API muss **(Namespace-**) in einen entsprechenden `type` eingefügt werden. In der folgenden Tabelle sind die verschiedenen zulässigen Namespace-Qualifizierer aufgeführt.
 
 | Qualifizierer | Definition |
 | --------- | ---------- |
-| `standard` | Einer der Standard-Namespaces, der global definiert wird und nicht an einen bestimmten Datensatz der Organisation gebunden ist (z. B. E-Mail, Telefonnummer usw.). Namespace-ID wird bereitgestellt. |
-| `custom` | Ein eindeutiger Namespace, der im Kontext einer Organisation erstellt wurde und nicht über die [!DNL Experience Cloud] freigegeben wurde. Der Wert stellt den Anzeigenamen (&quot;name&quot;-Feld) dar, nach dem gesucht werden soll. Namespace-ID wird bereitgestellt. |
-| `integrationCode` | Integrationscode - ähnlich wie &quot;benutzerdefiniert&quot;, jedoch speziell definiert als Integrationscode einer zu suchenden Datenquelle. Namespace-ID wird bereitgestellt. |
-| `namespaceId` | Gibt an, dass der Wert die tatsächliche ID des Namespace ist, der über den Namespace-Dienst erstellt oder zugeordnet wurde. |
-| `unregistered` | Eine Freiform-Zeichenfolge, die nicht im Namespace-Dienst definiert ist und &quot;unverändert&quot;angewendet wird. Jede Anwendung, die diese Arten von Namespaces verarbeitet, überprüft sie und behandelt sie gegebenenfalls für den Unternehmenskontext und den Datensatz. Es wird keine Namespace-ID angegeben. |
-| `analytics` | Ein benutzerdefinierter Namespace, der intern in [!DNL Analytics] und nicht im Namespace-Dienst zugeordnet wird. Dies wird direkt wie in der ursprünglichen Anfrage angegeben ohne Namespace-ID übergeben. |
-| `target` | Ein benutzerdefinierter Namespace, der intern von [!DNL Target] und nicht im Namespace-Dienst verstanden wird. Dies wird direkt wie in der ursprünglichen Anfrage angegeben ohne Namespace-ID übergeben. |
+| `standard` | Einer der global definierten Standard-Namespaces, die nicht an einen einzelnen Unternehmensdatensatz gebunden sind (z. B. E-Mail, Telefonnummer usw.). Namespace-ID angegeben. |
+| `custom` | Ein eindeutiger Namespace, der im Kontext einer Organisation erstellt und nicht über die [!DNL Experience Cloud] hinweg freigegeben wird. Der Wert stellt den Anzeigenamen („name“-Feld) dar, nach dem gesucht werden soll. Namespace-ID angegeben. |
+| `integrationCode` | Integrations-Code - ähnlich wie „custom“, aber speziell definiert als der Integrations-Code einer zu suchenden Datenquelle. Namespace-ID angegeben. |
+| `namespaceId` | Gibt an, dass der Wert die tatsächliche ID des Namespace ist, der über den Namespace-Service erstellt oder zugeordnet wurde. |
+| `unregistered` | Eine Freiformzeichenfolge, die nicht im Namespace-Service definiert ist und unverändert übernommen wird. Jede Anwendung, die diese Art von Namespaces verarbeitet, vergleicht sie und verarbeitet sie, sofern für den Unternehmenskontext und den Datensatz geeignet. Es wird keine Namespace-ID angegeben. |
+| `analytics` | Ein benutzerdefinierter Namespace, der intern in [!DNL Analytics] und nicht im Namespace-Service zugeordnet ist. Dieser wird direkt, wie in der ursprünglichen Anfrage angegeben, ohne Namespace-ID übergeben |
+| `target` | Ein benutzerdefinierter Namespace, der intern von [!DNL Target] verstanden wird, nicht im Namespace-Service. Dieser wird direkt, wie in der ursprünglichen Anfrage angegeben, ohne Namespace-ID übergeben |
 
 {style="table-layout:auto"}
 
-## Angenommene Produktwerte
+## Akzeptierte Produktwerte
 
-In der folgenden Tabelle sind die zulässigen Werte für die Angabe eines Adobe-Produkts im Attribut `include` einer Anfrage zur Auftragserstellung aufgeführt.
+In der folgenden Tabelle sind die akzeptierten Werte für die Angabe eines Adobe-Produkts im `include` einer Vorgangserstellungsanfrage aufgeführt.
 
 >[!NOTE]
 >
->Bei den Werten für die Produktliste wird nicht zwischen Groß- und Kleinschreibung unterschieden. Camel-Case wird empfohlen, aber nicht erzwungen.
+>Bei den Werten für die Liste der Produkte wird nicht zwischen Groß- und Kleinschreibung unterschieden. Camel-Case wird empfohlen, aber nicht erzwungen.
 
-| Produkt | Wert zur Verwendung im Attribut `include` |
+| Produkt | Wert zur Verwendung im `include` |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
@@ -76,8 +76,8 @@ In der folgenden Tabelle sind die zulässigen Werte für die Angabe eines Adobe-
 | Adobe Experience Platform (Echtzeit-Kundenprofil) | `profileService` |
 | Adobe Pass-Authentifizierung | `primetimeAuthentication` |
 | Adobe Target | `target` |
-| Kundenattribute (CRS) | `CRS` |
-| Journey-Management von Kunden | `cjm` |
+| Kundenattribute (CRM) | `CRS` |
+| Kunden-Journey-Management | `cjm` |
 | Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 | Marketo Measure | `marketomeasure` |

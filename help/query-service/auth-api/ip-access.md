@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; Sicherheit; IP-Zugriff; QS-Auth; API-Handbuch; Query Service; IP-Bereiche
-title: IP-Zugriffs-Endpunkt
-description: Erfahren Sie, wie Sie IP-Bereiche für den Sandbox-Zugriff in Query Service mithilfe des IP Access API-Endpunkts verwalten.
+keywords: Experience Platform; Sicherheit; IP-Zugriff; QS-Auth; API-Handbuch; Abfrage-Service; IP-Bereiche
+title: IP-Zugriffsendpunkt
+description: Erfahren Sie, wie Sie IP-Bereiche für den Sandbox-Zugriff im Abfrage-Service mithilfe des IP-Zugriffs-API-Endpunkts verwalten.
 role: Developer
 exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
 source-git-commit: d0f4a295928b000b6091172800e453d79dc44e3a
@@ -11,29 +11,29 @@ ht-degree: 5%
 
 ---
 
-# IP-Zugriffs-Endpunkt
+# IP-Zugriffsendpunkt
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
+>Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
-Um den Datenzugriff innerhalb einer angegebenen Query Service-Sandbox zu sichern, verwenden Sie den IP-Zugriffendpunkt, um zulässige IP-Bereiche zu verwalten. Mit dieser API können Sie IP-Bereiche abrufen, konfigurieren oder löschen, die mit der ID Ihres Unternehmens verknüpft sind.
+Um den Datenzugriff innerhalb einer angegebenen Abfrage-Service-Sandbox zu sichern, verwenden Sie den IP-Zugriffsendpunkt, um die zulässigen IP-Bereiche zu verwalten. Mit dieser API können Sie IP-Bereiche abrufen, konfigurieren oder löschen, die mit der ID Ihres Unternehmens verknüpft sind.
 
-Sie können mit der IP-Zugriffs-API die folgenden Aktionen durchführen:
+Mit der IP-Zugriffs-API können Sie die folgenden Aktionen ausführen:
 
-- **Abrufen aller IP-Bereiche**
-- **Festlegen neuer IP-Bereiche**
-- **Vorhandene IP-Bereiche löschen**
+- **Alle IP-Bereiche abrufen**
+- **Neue IP-Bereiche festlegen**
+- **Löschen vorhandener IP-Bereiche**
 
-Dieses Dokument behandelt die Anfragen und Antworten, die Sie vom `/security/ip-access` -Endpunkt aus senden und empfangen können.
+In diesem Dokument werden die Anfragen und Antworten behandelt, die Sie vom `/security/ip-access`-Endpunkt senden und empfangen können.
 
 >[!NOTE]
 >
->Sie müssen über ein Benutzer-Token verfügen, um diese API aufrufen zu können. Informationen zum Erwerb der erforderlichen Werte für die einzelnen Header finden Sie im Leitfaden [Erste Schritte](./getting-started.md) .
+>Sie müssen über ein Benutzer-Token verfügen, um diese API aufzurufen. Informationen [ Erhalten der erforderlichen Werte für jede ](./getting-started.md) Kopfzeilen finden Sie im Abschnitt Erste Schritte .
 
-## Abrufen aller IP-Bereiche {#fetch-all-ip-ranges}
+## Alle IP-Bereiche abrufen {#fetch-all-ip-ranges}
 
-Rufen Sie eine Liste aller für Ihre Sandbox konfigurierten IP-Bereiche ab. Wenn keine IP-Bereiche festgelegt sind, sind standardmäßig alle IPs zulässig und die Antwort gibt eine leere Liste in `allowedIpRanges` zurück.
+Rufen Sie eine Liste aller für Ihre Sandbox konfigurierten IP-Bereiche ab. Wenn keine IP-Bereiche festgelegt sind, sind standardmäßig alle IP-Adressen zulässig und die Antwort gibt in `allowedIpRanges` eine leere Liste zurück.
 
 **API-Format**
 
@@ -53,7 +53,7 @@ curl -X GET https://platform.adobe.io/data/foundation/queryauth/security/ip-acce
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der zulässigen IP-Bereiche der Sandbox zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste der zulässigen IP-Bereiche der Sandbox zurückgegeben.
 
 ```json
 {
@@ -67,22 +67,22 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste der zulässig
 }
 ```
 
-Die folgende Tabelle enthält eine Beschreibung und ein Beispiel für die Eigenschaften des Antwortschemas:
+Die folgende Tabelle enthält eine Beschreibung und ein Beispiel der Eigenschaften des Antwortschemas:
 
 | Eigenschaft | Beschreibung | Beispiel |
 |------------------|---------------------------------------------|-----------------------------------------------------------------------------------------------|
 | `imsOrg` | Organisations-ID für die Sandbox. | `{ORG_ID}` |
-| `sandboxName` | Name der Sandbox, in der IP-Einschränkungen gelten. | `prod` |
-| `channel` | Der Zugriffsmodus für IP-Einschränkungen. Derzeit ist der einzige akzeptierte Wert `data_distiller`. Dieser Wert bedeutet, dass IP-Einschränkungen auf PSQL- oder JDBC-Verbindungen angewendet werden. | `data_distiller` |
-| `allowedIpRanges` | Liste der zulässigen IPs im CIDR- oder festem IP-Format. Jeder Eintrag kann eine optionale Beschreibung enthalten. | `[{"ipRange": "136.23.110.0/23", "description": "VPN-1 gateway IPs"}]` |
+| `sandboxName` | Name der Sandbox, für die IP-Einschränkungen gelten. | `prod` |
+| `channel` | Der Zugriffsmodus für IP-Einschränkungen. Derzeit ist der einzige akzeptierte Wert `data_distiller`. Dieser Wert gibt an, dass IP-Einschränkungen auf PSQL- oder JDBC-Verbindungen angewendet werden. | `data_distiller` |
+| `allowedIpRanges` | Liste der zulässigen IPs im CIDR- oder festen IP-Format. Jeder Eintrag kann eine optionale Beschreibung enthalten. | `[{"ipRange": "136.23.110.0/23", "description": "VPN-1 gateway IPs"}]` |
 
 >[!NOTE]
 >
->Das Feld `allowedIpRanges` kann zwei Arten von IP-Spezifikationen enthalten:<br><ul><li>**CIDR**: Standardmäßige CIDR-Notation (z. B. `"136.23.110.0/23"`) zur Definition von IP-Bereichen.</li><li>**Feste IP-Adresse**: Einzelne IP-Adressen für individuelle Zugriffsberechtigungen (z. B. `"101.10.1.1"`).</li></ul>
+>Das Feld `allowedIpRanges` kann zwei Arten von IP-Spezifikationen enthalten:<br><ul><li>**CIDR.**: Standard-CIDR-Notation (z. B. `"136.23.110.0/23"`) zum Definieren von IP-Bereichen.</li><li>**Feste IP**: Einzelne IPs für einzelne Zugriffsberechtigungen (z. B. `"101.10.1.1"`).</li></ul>
 
-## Einrichten neuer IP-Bereiche
+## Neue IP-Bereiche festlegen
 
-Überschreiben Sie vorhandene IP-Bereiche, indem Sie eine neue Liste für die Sandbox festlegen. Für diesen Vorgang ist eine vollständige Liste der IP-Bereiche erforderlich, einschließlich der Bereiche, die unverändert bleiben.
+Bestehende IP-Bereiche überschreiben, indem eine neue Liste für die Sandbox festgelegt wird. Dieser Vorgang erfordert eine vollständige Liste der IP-Bereiche, einschließlich der unveränderten Bereiche.
 
 **API-Format**
 
@@ -111,7 +111,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/security/ip-acce
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den neu konfigurierten IP-Bereichen zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den neu konfigurierten IP-Bereichen zurückgegeben.
 
 ```json
 {
@@ -129,7 +129,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den neu konfig
 
 ## IP-Bereiche löschen {#delete-ip-ranges}
 
-Entfernen Sie alle konfigurierten IP-Bereiche für die Sandbox. Durch diese Aktion werden die IP-Bereiche gelöscht und die gelöschte IP-Liste zurückgegeben.
+Entfernen Sie alle konfigurierten IP-Bereiche für die Sandbox. Diese Aktion löscht die IP-Bereiche und gibt die gelöschte IP-Liste zurück.
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/security/ip-a
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den gelöschten IP-Bereichen zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den gelöschten IP-Bereichen zurückgegeben.
 
 ```json
 {

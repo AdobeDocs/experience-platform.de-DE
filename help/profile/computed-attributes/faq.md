@@ -1,6 +1,6 @@
 ---
 title: Häufig gestellte Fragen zu berechneten Attributen
-description: Hier finden Sie Antworten auf häufig gestellte Fragen zur Verwendung berechneter Attribute.
+description: Erfahren Sie Antworten auf häufig gestellte Fragen zur Verwendung berechneter Attribute.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
@@ -11,65 +11,65 @@ ht-degree: 1%
 
 # Häufig gestellte Fragen
 
-In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Im Folgenden finden Sie eine Liste häufig gestellter Fragen zu berechneten Attributen.
+In Adobe Experience Platform sind berechnete Attribute Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Im Folgenden finden Sie eine Liste häufig gestellter Fragen zu berechneten Attributen.
 
 ## Wie erhalte ich Zugriff auf berechnete Attribute?
 
-Um Zugriff auf berechnete Attribute zu erhalten, benötigen Sie die entsprechenden Berechtigungen (**Berechnete Attribute anzeigen** und **Berechnete Attribute verwalten**). Weitere Informationen zu den erforderlichen Berechtigungen finden Sie in der Dokumentation zur Zugriffskontrolle [1}. ](../../access-control/home.md) Informationen zum Anwenden dieser Berechtigungen finden Sie im [Berechtigungshandbuch verwalten](../../access-control/ui/permissions.md) .
+Für den Zugriff auf berechnete Attribute benötigen Sie die entsprechenden Berechtigungen (**Berechnete Attribute anzeigen** und **Berechnete Attribute verwalten**). Weitere Informationen zu den erforderlichen Berechtigungen finden Sie in der [Dokumentation zur Zugriffssteuerung](../../access-control/home.md). Informationen zum Anwenden dieser Berechtigungen finden Sie im [Handbuch zum Verwalten von Berechtigungen](../../access-control/ui/permissions.md).
 
-## Welche Datensätze tragen zu berechneten Attributberechnungen bei?
+## Welche Datensätze tragen zur Berechnung berechneter Attribute bei?
 
-Bei berechneten Attributen werden für das Echtzeit-Kundenprofil aktivierte Erlebnisereignis-Datensätze zur Berechnung berechneter Attribute berücksichtigt.
+Berechnete Attribute berücksichtigen für die Berechnung berechneter Attribute Echtzeit-Kundenprofil-aktivierte Erlebnisereignis-Datensätze.
 
 ## Welche Experience-Datenmodell (XDM)-Felder können zum Erstellen berechneter Attribute verwendet werden?
 
-Alle XDM-Felder in Ihrem Experience Event Vereinigungsschema können zum Erstellen berechneter Attribute verwendet werden.
+Alle XDM-Felder im Vereinigungsschema Ihres Erlebnisereignisses können zum Erstellen berechneter Attribute verwendet werden.
 
-## Was bedeuten &quot;letzte Bewertung&quot;und &quot;letzte Auswertung&quot;?
+## Was bedeuten „Letzte Auswertung“ und „Letzter Auswertungsstatus“?
 
-Die letzte Bewertung bezieht sich auf den Zeitstempel, bis zu dem Ereignisse in der letzten erfolgreichen Ausführung berücksichtigt werden. Der letzte Bewertungsstatus bezieht sich darauf, ob der letzte Bewertungslauf erfolgreich war oder nicht.
+Zuletzt ausgewertet bezieht sich auf den Zeitstempel, bis zu dem Ereignisse beim letzten erfolgreichen Durchgang berücksichtigt werden. Der letzte Auswertungsstatus bezieht sich darauf, ob der letzte Auswertungsdurchgang erfolgreich war oder nicht.
 
-## Kann ich die Aktualisierungshäufigkeit wählen? Wie wird das entschieden?
+## Kann ich die Aktualisierungshäufigkeit auswählen? Wie wird das entschieden?
 
-Die Aktualisierungshäufigkeit wird automatisch anhand des Lookback-Zeitraums Ihres berechneten Attributs bestimmt. Weitere Informationen hierzu finden Sie im Abschnitt [Lookback-Zeitraum](./overview.md#lookback-periods) der Übersicht über berechnete Attribute.
+Die Aktualisierungshäufigkeit wird automatisch anhand der Lookback-Periode Ihres berechneten Attributs bestimmt. Weiterführende Informationen hierzu finden Sie im Abschnitt [Lookback-Zeitraum](./overview.md#lookback-periods) der Übersicht über berechnete Attribute.
 
-## Wie wirkt sich die Gültigkeit von Erlebnisereignisdaten auf Berechnungen aus?
+## Wie wirken sich Abläufe von Erlebnisereignisdaten auf Berechnungen aus?
 
-Berechnete Attributberechnungen werden für die definierte Lookback-Dauer in der ersten Auswertung aufgestockt und basierend auf inkrementellen Ereignissen für nachfolgende Aktualisierungen aktualisiert. Daher sind diese Berechnungen **nicht** von den Erlebnisereignis-Datenabläufen der alten Daten nach der ersten Auswertung betroffen.
+Berechnete Attributberechnungen werden für die definierte Lookback-Dauer in der ersten Auswertung aufgestockt und basierend auf inkrementellen Ereignissen für nachfolgende Aktualisierungen aktualisiert. Daher sind diese Berechnungen **nicht** von den Gültigkeitsdauern von Erlebnisereignisdaten der alten Daten nach der ersten Auswertung betroffen.
 
-Wenn Sie beispielsweise ein berechnetes Attribut erstellen, das monatlich mit einem Lookback-Zeitraum von drei Monaten ausgewertet wird, wird für die erste Auswertung das berechnete Attribut für alle Ereignisse innerhalb dieses Lookback-Zeitraums von drei Monaten berechnet. Selbst wenn der Datensatz &quot;Erlebnisereignis&quot;einen Datenablauf von einem Monat hat, wirkt sich dieser Datenablauf auf **nicht** auf die monatliche Aktualisierung des berechneten Attributs aus, da der Bewertungsablauf des nächsten Monats die Ereignisse inkrementell aggregiert und die Berechnung aktualisiert.
+Wenn Sie beispielsweise ein berechnetes Attribut erstellen, das monatlich mit einem dreimonatigen Lookback-Zeitraum ausgewertet wird, berechnet das berechnete Attribut für die erste Auswertung alle Ereignisse innerhalb dieses dreimonatigen Lookback-Zeitraums. Selbst wenn der Erlebnisereignis-Datensatz eine Datengültigkeit von einem Monat hat, wirkt sich diese Datengültigkeit **nicht** auf die monatliche Aktualisierung der berechneten Attribute aus, da die Auswertungsausführung des nächsten Monats Ereignisse inkrementell aggregiert und die Berechnung aktualisiert.
 
 >[!NOTE]
 >
->Abgelaufene Daten **können nicht** später durch ein berechnetes Attribut aufgestockt werden. Der Ablauf der Ereignisdatensatzdaten **kann** die Fähigkeit einschränken, den Wert des berechneten Attributs zu einem späteren Zeitpunkt zu überprüfen. Um den berechneten Attributwert zu validieren, sollte der Lookback-Zeitraum **innerhalb** der Grenzen der Datenabläufe bleiben.
+>Abgelaufene Daten **können** später durch ein berechnetes Attribut aufgestockt werden. Ablauf von Ereignisdatensatzdaten **kann** die Möglichkeit einschränken, den Wert des berechneten Attributs zu einem späteren Zeitpunkt zu überprüfen. Um den berechneten Attributwert zu überprüfen, sollte Ihr Lookback-Zeitraum innerhalb **Grenzen** Datenablaufs bleiben.
 
-## Kann ich ein berechnetes Attribut basierend auf einem anderen berechneten Attribut erstellen?
+## Kann ich ein berechnetes Attribut auf der Grundlage eines anderen berechneten Attributs erstellen?
 
-Da berechnete Attribute mit Experience Event-Feldern erstellt werden und sich in einem Profilfeld befinden, ist es nicht möglich, ein berechnetes Attribut direkt zu verwenden, um ein weiteres berechnetes Attribut zu erstellen.
+Da berechnete Attribute mithilfe von Erlebnisereignisfeldern erstellt werden und sich in einem Profilfeld befinden, gibt es keine Möglichkeit, ein berechnetes Attribut direkt zum Erstellen eines anderen berechneten Attributs zu verwenden.
 
-## Gibt es Einschränkungen bei der Anzahl berechneter Attribute, die ich erstellen kann?
+## Gibt es Beschränkungen für die Anzahl der berechneten Attribute, die ich erstellen kann?
 
-Ja, die Anzahl der berechneten Attribute, die Sie erstellen können, ist begrenzt. Weitere Informationen erhalten Sie in der Produktbeschreibung oder im Adobe Account Team.
+Ja, die Anzahl der berechneten Attribute, die Sie erstellen können, ist begrenzt. Weitere Informationen entnehmen Sie bitte der Produktbeschreibung oder wenden Sie sich an das Adobe Account Team.
 
 ## Gibt es nachgelagerte Auswirkungen auf die Deaktivierung eines berechneten Attributs?
 
-Bevor Sie Ihr berechnetes Attribut deaktivieren, sollten Sie **1} diese aus Ihren nachgelagerten Systemen (z. B. Segmentierung, Journey oder Ziele) entfernen, da es Komplikationen geben kann, die auftreten, wenn sie nicht entfernt werden.**
+Bevor Sie Ihr berechnetes Attribut deaktivieren **sollten** Sie es aus Ihren nachgelagerten Systemen (wie Segmentierung, Journey oder Zielen) entfernen, da es zu Komplikationen kommen kann, wenn sie nicht entfernt werden.
 
-## Was passiert, wenn ich ein berechnetes Attribut deaktiviert habe? {#inactive-status}
+## Was passiert, wenn ich ein berechnetes Attribut deaktiviere? {#inactive-status}
 
-Wenn ein berechnetes Attribut deaktiviert oder inaktiv gemacht wird, wird es nicht mehr aktualisiert. Daher kann dieses berechnete Attribut **kann nicht** in der Profilsuche oder anderen nachgelagerten Verwendungen verwendet werden.
+Wenn ein berechnetes Attribut deaktiviert oder inaktiv gemacht wird, wird es nicht mehr aktualisiert. Daher kann dieses berechnete Attribut **nicht** bei der Profilsuche oder anderen nachgelagerten Verwendungen verwendet werden.
 
-## Wie können berechnete Attribute die Interaktion fördern?
+## Wie fördern berechnete Attribute die Interaktion?
 
-Berechnete Attribute fördern die Profilanreicherung, indem Sie Ihre Ereignisattribute auf einer zusammengeführten Profilebene aggregieren. Sie können beispielsweise Marketing-E-Mails mit dem zuletzt angezeigten Produkt personalisieren.
+Berechnete Attribute fördern die Profilanreicherung durch die Aggregation Ihrer Ereignisattribute auf der Ebene eines zusammengeführten Profils. Sie können beispielsweise Marketing-E-Mails mit dem zuletzt angezeigten Produkt personalisieren.
 
-## Wie oft werden berechnete Attribute ausgewertet? Bezieht sich dies auf den Zeitplan für die Zielgruppenbewertung?
+## Wie oft werden berechnete Attribute ausgewertet? Ist dies mit dem Zeitplan für die Zielgruppenauswertung verbunden?
 
-Berechnete Attribute werden in einer **Batch**-Häufigkeit ausgewertet, die **unabhängig** vom Zeitplan Ihrer Zielgruppen-, Ziel- und Journey-Auswertung ist. Das bedeutet, dass das berechnete Attribut unabhängig vom Segmentierungstyp (Batch-Segmentierung oder Streaming-Segmentierung) nach seinem eigenen Zeitplan (stündlich, täglich, wöchentlich oder monatlich) bewertet wird.
+Berechnete Attribute werden in einer **Batch**-Häufigkeit ausgewertet, die **unabhängig** dem Zeitplan Ihrer Zielgruppe-, Ziel- und Journey-Auswertung ist. Das bedeutet, dass das berechnete Attribut unabhängig vom Segmentierungstyp (Batch- oder Streaming-Segmentierung) nach einem eigenen Zeitplan ausgewertet wird (stündlich, täglich, wöchentlich oder monatlich).
 
-Die erste Auswertung Ihres berechneten Attributs erfolgt innerhalb der 24 Stunden nach seiner **Erstellung**. Die nachfolgenden Batch-Auswertungen erfolgen stündlich, täglich, wöchentlich oder monatlich, abhängig vom definierten Lookback-Zeitraum.
+Die erste Auswertung Ihres berechneten Attributs erfolgt innerhalb der 24 Stunden nach seiner **Erstellung**. Die nachfolgenden Batch-Auswertungen erfolgen stündlich, täglich, wöchentlich oder monatlich, je nach definiertem Lookback-Zeitraum.
 
-Wenn beispielsweise am 9. Oktober um 12:00 Uhr UTC eine erste Bewertung erfolgt, werden die folgenden Bewertungen zu folgenden Zeiten durchgeführt:
+Wenn beispielsweise am 9. Oktober um 12 Uhr UTC eine erste Auswertung erfolgt, würden die nachfolgenden Auswertungen zu folgenden Zeiten erfolgen:
 
 - Nächste tägliche Aktualisierung: 12 Uhr UTC am 10. Oktober
 - Nächste wöchentliche Aktualisierung: 12 Uhr UTC am 15. Oktober
@@ -77,26 +77,26 @@ Wenn beispielsweise am 9. Oktober um 12:00 Uhr UTC eine erste Bewertung erfolgt,
 
 >[!IMPORTANT]
 >
->Dies ist nur der Fall, wenn die schnelle Aktualisierung **nicht** aktiviert ist. Informationen dazu, wie sich der Lookback-Zeitraum ändert, wenn eine schnelle Aktualisierung aktiviert ist, finden Sie im Abschnitt [Schnelle Aktualisierung](./overview.md#fast-refresh) .
+>Dies ist nur der Fall, wenn die schnelle Aktualisierung **nicht** aktiviert ist. Informationen dazu, wie sich die Lookback-Periode ändert, wenn die schnelle Aktualisierung aktiviert ist, finden Sie [ Abschnitt „Schnelle Aktualisierung](./overview.md#fast-refresh).
 
-Sowohl die Aktualisierungen für **Wöchentlich** als auch für **Monatlich** finden am Anfang der **Kalenderwoche** (dem Sonntag der neuen Woche) oder am Anfang des **Kalendermonats** (dem ersten des neuen Monats) statt, im Gegensatz zu genau einer Woche oder einem Monat nach dem ersten Bewertungsdatum.
+Die **wöchentliche** und **monatliche** Aktualisierung erfolgt am Beginn der **Kalenderwoche** (Sonntag der neuen Woche) oder am Beginn des **Kalendermonats** (der erste des neuen Monats), im Gegensatz zu genau einer Woche oder einem Monat nach dem ersten Auswertungsdatum.
 
 >[!NOTE]
 >
->Der berechnete Attributwert ist **nicht** , der nach jedem Evaluierungsablauf sofort im Profil aktualisiert wird. Um sicherzustellen, dass der aktualisierte Wert in Ihren Profilen enthalten ist, sollten Sie einen Puffer von einigen Stunden zwischen der Auswertungszeit und der Nutzung berechneter Attribute berücksichtigen. Der Aktualisierungszeitplan für berechnete Attribute ist **systembestimmt** und **kann nicht** geändert werden. Weitere Informationen erhalten Sie bei der Adobe-Kundenunterstützung.
+>Der berechnete Attributwert wird **nicht** nach jedem Auswertungsdurchgang im Profil aktualisiert. Um sicherzustellen, dass der aktualisierte Wert in Ihren Profilen enthalten ist, sollten Sie einen Puffer von einigen Stunden zwischen der Auswertungszeit und der Verwendung berechneter Attribute in Betracht ziehen. Der berechnete Aktualisierungszeitplan für das Attribut **(systembestimmt** und **kann** geändert werden. Für weitere Informationen wenden Sie sich bitte an die Kundenunterstützung von Adobe.
 
-## Wie interagieren berechnete Attribute mit Zielgruppen, die mithilfe der Streaming-Segmentierung ausgewertet werden?
+## Wie interagieren berechnete Attribute mit Zielgruppen, die mithilfe der Streaming-Segmentierung bewertet wurden?
 
-Wenn eine durch Streaming-Segmentierung bewertete Zielgruppe ein berechnetes Attribut verwendet, wird der **neueste Wert** des berechneten Attributs verwendet, während die Zielgruppe ausgewertet wird. Wenn die Zielgruppe beispielsweise nach Kaufereignissen sucht, bezieht sich die Zielgruppe beim Eintreten des Kaufereignisses auf den zuletzt ausgewerteten berechneten Attributwert.
+Wenn eine Zielgruppe, die für die Streaming-Segmentierung ausgewertet wird, ein berechnetes Attribut verwendet, verwendet sie den **neuesten Wert** des berechneten Attributs, während die Zielgruppe ausgewertet wird. Wenn die Zielgruppe beispielsweise nach Kaufereignissen sucht, verweist die Zielgruppe auf den zuletzt ausgewerteten berechneten Attributwert, wenn das Kaufereignis eintritt.
 
 ## Kann ich berechnete Attribute in Edge verwenden?
 
-Wie jedes andere Profilattribut sind berechnete Attribute verfügbar und können an Edges verwendet werden. Bitte beachten Sie, dass berechnete Attribute am Edge **nicht** berechnet werden.
+Wie jedes andere Profilattribut sind berechnete Attribute verfügbar und können an Kanten verwendet werden. Beachten Sie, dass berechnete Attribute **nicht** in Edge berechnet werden.
 
-## Wie werden Datennutzungsbezeichnungen auf berechnete Attribute angewendet?
+## Wie werden Datennutzungsbeschriftungen auf berechnete Attribute angewendet?
 
-Berechnete Attribute leiten automatisch Datennutzungsbezeichnungen aus den Quellfeldern und Datensätzen ab, die zur Definition der berechneten Attribute verwendet wurden. Dadurch wird sichergestellt, dass Ihre Verhaltensdaten angemessen verwendet werden.
+Berechnete Attribute leiten automatisch Datennutzungsbeschriftungen von den Quellfeldern und Datensätzen ab, die zur Definition der berechneten Attribute verwendet wurden. Dadurch wird sichergestellt, dass Ihre Verhaltensdaten ordnungsgemäß verwendet werden.
 
 ## Wie verwende ich berechnete Attribute mit Adobe Journey Optimizer?
 
-Um berechnete Attribute in Journey zu verwenden, müssen Sie die Feldergruppe `SystemComputedAttributes` zur Experience Platform-Datenquelle hinzufügen. Weitere Informationen zum Konfigurieren der Experience Platform-Datenquelle finden Sie im [Adobe Experience Platform-Datenquellenhandbuch](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Um berechnete Attribute in Journey zu verwenden, müssen Sie die `SystemComputedAttributes` Feldergruppe zur Experience Platform-Datenquelle hinzufügen. Weitere Informationen zum Konfigurieren der Experience Platform-Datenquelle finden Sie im Handbuch zu Adobe Experience Platform-Datenquellen [](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

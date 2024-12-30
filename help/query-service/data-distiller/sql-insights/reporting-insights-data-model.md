@@ -1,5 +1,5 @@
 ---
-title: Anleitung zu Query Accelerated Store Reporting Insights
+title: Anleitung für Reporting-Insights des abfragebeschleunigten Speichers
 description: Erfahren Sie, wie Sie mit dem Abfrage-Service ein Reporting-Insights-Datenmodell zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
 source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
@@ -9,13 +9,13 @@ ht-degree: 82%
 
 ---
 
-# Leitfaden zu Query Accelerated Store Reporting Insights
+# Handbuch zu Reporting-Insights des abfragebeschleunigten Speichers
 
 Mit dem abfragebeschleunigten Speicher können Sie die Zeit und die Verarbeitungsleistung reduzieren, die erforderlich sind, um entscheidende Erkenntnisse aus Ihren Daten zu gewinnen. Normalerweise werden die Daten in regelmäßigen Abständen (beipielsweise stündlich oder täglich) verarbeitet, wobei aggregierte Ansichten erstellt und in Berichten wiedergegeben werden. Die Analyse dieser aus den aggregierten Daten erstellten Berichte führt zu Insights, die zur Verbesserung der Unternehmens-Performance beitragen sollen. Der abfragebeschleunigte Speicher bietet einen Cache-Service, Gleichzeitigkeit, Interaktivität und eine zustandslose API. Es wird jedoch davon ausgegangen, dass die Daten vorverarbeitet und für aggregierte Abfragen optimiert sind und nicht für die Abfrage von Rohdaten.
 
-Mit dem Abfrage-beschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder ein vorhandenes Adobe Real-time Customer Data Platform-Datenmodell erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Insights-Datenmodell von Real-Time Customer Data Platform, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Mit dem abfragebeschleunigten Speicher können Sie ein benutzerdefiniertes Datenmodell erstellen und/oder ein vorhandenes Adobe Real-time Customer Data Platform-Datenmodell erweitern. Die gewonnenen Reporting-Insights können Sie dann in ein Reporting-/Visualisierungs-Framework Ihrer Wahl einbetten. Siehe die Dokumentation zum Insights-Datenmodell von Real-Time Customer Data Platform, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Zielgruppen und Ziele und ermöglicht die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
+Das Real-Time CDP-Datenmodell von Adobe Experience Platform bietet Einblicke in Profile, Zielgruppen und Ziele und aktiviert die Real-Time CDP-Insight-Dashboards. Dieses Dokument führt Sie durch den Prozess der Erstellung Ihres Reporting-Insights-Datenmodells und zeigt Ihnen, wie Sie Real-Time CDP-Datenmodelle bei Bedarf erweitern können.
 
 ## Voraussetzungen
 
@@ -23,7 +23,7 @@ In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus 
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Weitere Informationen finden Sie in der Dokumentation zu [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store) und [licensing](../../data-distiller/license-usage.md) , die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Bitte beachten Sie die [](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich bitte an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ## Erstellen eines Reporting-Insights-Datenmodells
 
@@ -33,7 +33,7 @@ Zu Beginn verfügen Sie über ein erstes Datenmodell aus Ihren Quellen (möglich
 
 ![Ein Entitäts-Relations-Diagramm (ERD) des Zielgruppen-Insight-Benutzermodells.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die Dimensionstabelle/-datensatz `externalaudiencemapping` ordnet die externe ID einem Ziel und einer Zielgruppe in Platform zu.
+In diesem Beispiel basiert die Tabelle/der Datensatz `externalaudiencereach` auf einer ID und verfolgt die unteren und oberen Grenzen für die Anzahl der Treffer. Die `externalaudiencemapping` Dimensionstabelle/der Datensatz ordnet die externe ID einem Ziel und einer Audience in Platform zu.
 
 ## Erstellen eines Modells für Reporting-Insights mit Data Distiller
 
@@ -129,7 +129,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## Erweitern Ihres Datenmodells mit dem Real-Time CDP Insights-Datenmodell
 
-Sie können Ihr Zielgruppenmodell mit zusätzlichen Details erweitern, um eine umfangreichere Dimensionstabelle zu erstellen. Sie können beispielsweise den Zielgruppennamen und Zielnamen der externen Zielgruppenkennung zuordnen. Verwenden Sie dazu Query Service , um einen neuen Datensatz zu erstellen oder zu aktualisieren und ihn zum Zielgruppenmodell hinzuzufügen, das Zielgruppen und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm veranschaulicht das Konzept dieser Datenmodellerweiterung.
+Sie können Ihr Zielgruppenmodell mit zusätzlichen Details erweitern, um eine umfangreichere Dimensionstabelle zu erstellen. Sie können beispielsweise den Zielgruppennamen und den Zielnamen der externen Zielgruppenkennung zuordnen. Verwenden Sie dazu den Abfrage-Service, um einen neuen Datensatz zu erstellen oder zu aktualisieren, und fügen Sie ihn dem Zielgruppenmodell hinzu, das Zielgruppen und Ziele mit einer externen Identität kombiniert. Das folgende Diagramm veranschaulicht das Konzept dieser Datenmodellerweiterung.
 
 ![Ein ERD-Diagramm, das das Real-Time CDP-Insight-Datenmodell und das abfragebeschleunigte Speichermodell verbindet.](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
 
@@ -166,7 +166,7 @@ Verwenden Sie den Befehl `SHOW datagroups;`, um die Erstellung der zusätzlichen
 
 ## Abfragen Ihres erweiterten Reporting-Insights-Datenmodells mit beschleunigtem Speicher
 
-Nachdem das `audienceinsight`-Datenmodell erweitert wurde, kann es nun abgefragt werden. Die folgende SQL-Tabelle zeigt die Liste der zugeordneten Ziele und Zielgruppen.
+Nachdem das `audienceinsight`-Datenmodell erweitert wurde, kann es nun abgefragt werden. Die folgende SQL-Abfrage zeigt die Liste der zugeordneten Ziele und Zielgruppen.
 
 ```sql
 SELECT a.ext_custom_audience_id,
@@ -207,7 +207,7 @@ ext_custom_audience_id | destination_name |       audience_name        | destina
 
 Nachdem Sie Ihr benutzerdefiniertes Datenmodell erstellt haben, können Sie Ihre Daten mit benutzerdefinierten Abfragen und benutzerdefinierten Dashboards visualisieren.
 
-Die folgende SQL-Tabelle enthält eine Aufschlüsselung der Übereinstimmungsanzahl nach Zielgruppen in einem Ziel und eine Aufschlüsselung der einzelnen Zielgruppen nach Zielgruppen.
+Die folgende SQL-Abfrage liefert eine Aufschlüsselung der Anzahl der Übereinstimmungen nach Zielgruppen in einem Ziel und eine Aufschlüsselung jedes Ziels von Zielgruppen nach Zielgruppe.
 
 ```sql
 SELECT b.destination_name,
@@ -226,6 +226,6 @@ LIMIT  5000
 
 Die folgende Abbildung zeigt ein Beispiel für die möglichen benutzerdefinierten Visualisierungen unter Verwendung Ihres Reporting-Insights-Datenmodells.
 
-![Eine Übereinstimmungszählung nach Ziel und Zielgruppen-Widget, das aus dem neuen Datenmodell der Berichtseinblicke erstellt wurde.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
+![Ein Widget für die Anzahl der Übereinstimmungen nach Ziel und Zielgruppe, das aus dem neuen Reporting-Insights-Datenmodell erstellt wurde.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
 Ihr benutzerdefiniertes Datenmodell ist in der Liste der verfügbaren Datenmodelle im benutzerdefinierten Dashboard-Arbeitsbereich zu finden. Eine Anleitung zur Verwendung Ihres benutzerdefinierten Datenmodells finden Sie im [Handbuch zum benutzerdefinierten Dashboard](../../../dashboards/standard-dashboards.md).

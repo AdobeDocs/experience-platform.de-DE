@@ -33,38 +33,38 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Feldtypbeschränkungen für Felder gleicher Hierarchie | Nachdem ein XDM-Feld als ein bestimmter Typ definiert wurde, müssen alle anderen Felder mit demselben Namen und derselben Hierarchie denselben Feldtyp verwenden, unabhängig von den Klassen oder Schemafeldgruppen, in denen sie verwendet werden. Wenn beispielsweise eine Feldergruppe für die XDM [!DNL Profile]-Klasse ein `profile.age` -Feld vom Typ &quot;integer&quot;enthält, kann eine ähnliche Feldergruppe für XDM [!DNL ExperienceEvent] kein `profile.age` -Feld vom Typ &quot;string&quot;haben. Um einen anderen Feldtyp zu verwenden, muss das Feld eine andere Hierarchie aufweisen als das zuvor definierte Feld (z. B. `profile.person.age`). Diese Funktion soll Konflikte verhindern, wenn Schemas in einer Vereinigung zusammengeführt werden. Die Beschränkung wirkt sich zwar nicht rückwirkend auf vorhandene Schemas aus, es wird jedoch dringend empfohlen, Ihre Schemas auf Konflikte mit Feldtypen zu überprüfen und sie nach Bedarf zu bearbeiten. |
-| Feldvalidierung unter Berücksichtigung der Groß-/Kleinschreibung | Benutzerdefinierte Felder auf derselben Ebene müssen unabhängig von der Groß-/Kleinschreibung unterschiedliche Namen haben. Wenn Sie beispielsweise ein benutzerdefiniertes Feld namens &quot;E-Mail&quot;hinzufügen, können Sie kein weiteres benutzerdefiniertes Feld auf derselben Ebene namens &quot;E-Mail&quot;hinzufügen. |
+| Feldtyp-Einschränkungen für Felder gleicher Hierarchie | Nachdem ein XDM-Feld als bestimmter Typ definiert wurde, müssen alle anderen Felder desselben Namens und derselben Hierarchie denselben Feldtyp verwenden, unabhängig von den Klassen oder Schemafeldgruppen, in denen sie verwendet werden. Wenn beispielsweise eine Feldergruppe für die XDM-[!DNL Profile] ein `profile.age` Feld vom Typ „integer“ enthält, kann eine ähnliche Feldergruppe für XDM-[!DNL ExperienceEvent] kein `profile.age` Feld vom Typ „string“ haben. Um einen anderen Feldtyp zu verwenden, muss das Feld eine andere Hierarchie als das zuvor definierte Feld aufweisen (z. B. `profile.person.age`). Diese Funktion soll Konflikte verhindern, wenn Schemas in einer Vereinigung zusammengeführt werden. Obwohl sich die Einschränkung nicht rückwirkend auf vorhandene Schemata auswirkt, wird dringend empfohlen, die Schemata auf Konflikte von Feldtypen zu überprüfen und nach Bedarf zu bearbeiten. |
+| Validierung von Feldern mit Unterscheidung von Groß- und Kleinschreibung | Benutzerdefinierte Felder auf derselben Ebene müssen unabhängig von der Groß-/Kleinschreibung unterschiedliche Namen haben. Wenn Sie beispielsweise ein benutzerdefiniertes Feld mit dem Namen „E-Mail“ hinzufügen, können Sie auf derselben Ebene kein weiteres benutzerdefiniertes Feld mit dem Namen „E-Mail“ hinzufügen. |
 
 **Bekannte Probleme**
 
 * Keine
 
-Weitere Informationen zum Arbeiten mit XDM unter Verwendung der [!DNL Schema Registry]-API und der [!DNL Schema Editor]-Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
+Weitere Informationen zum Arbeiten mit XDM mithilfe der [!DNL Schema Registry]-API und [!DNL Schema Editor] Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
-Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, auf Anfrage auf ihre personenbezogenen Daten zuzugreifen bzw. diese Daten aus Ihren Datenspeichern löschen zu lassen. Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie diese Datenanforderungen Ihrer Kunden verwalten können. Mit [!DNL Privacy Service] können Sie Anfragen zum Zugriff auf und zum Löschen von personenbezogenen oder privaten Kundendaten aus Adobe Experience Cloud-Anwendungen stellen, was die automatische Einhaltung gesetzlicher und organisatorischer Datenschutzbestimmungen erleichtert.
+Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, auf Anfrage auf ihre personenbezogenen Daten zuzugreifen bzw. diese Daten aus Ihren Datenspeichern löschen zu lassen. Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, die Sie bei der Verwaltung dieser Datenanfragen Ihrer Kunden unterstützen. Mit [!DNL Privacy Service] können Sie Anfragen für den Zugriff auf und die Löschung von personenbezogenen oder privaten Kundendaten aus Adobe Experience Cloud-Programmen stellen, was die automatische Einhaltung gesetzlicher und unternehmensinterner Datenschutzbestimmungen erleichtert.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
 | [!DNL Privacy Service]-Rebranding | Der früher als „GDPR Service“ bezeichnete Service wurde in [!DNL Privacy Service] umbenannt, da der Service erweitert wurde, um neben der DSGVO auch andere Vorschriften zu unterstützen. |
-| Neue API-Endpunkte | Der Basispfad für die [!DNL Privacy Service] -API wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` aktualisiert. |
-| Neue erforderliche `regulation`-Eigenschaft | Bei der Erstellung neuer Aufträge in der [!DNL Privacy Service]-API muss eine `regulation`-Eigenschaft in der Anfrage-Payload angegeben werden, die angibt, nach welcher Vorschrift der Auftrag verfolgt werden soll. Zulässige Werte sind `gdpr` und `ccpa`. |
-| Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe [!DNL Primetime Authentication], wobei `primetimeAuthentication` als Produktwert verwendet wird. |
-| Verbesserungen der Privacy Service-Benutzeroberfläche | Separate Auftragsverfolgungsseiten für DSGVO- und CCPA-Vorschriften. Neue Dropdown-Liste **Regelungstyp **Dropdown, um zwischen Tracking-Daten für DSGVO und CCPA zu wechseln. |
+| Neue API-Endpunkte | Der Basispfad für die [!DNL Privacy Service]-API wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` aktualisiert. |
+| Neue erforderliche `regulation`-Eigenschaft | Bei der Erstellung neuer Aufträge in der [!DNL Privacy Service]-API muss eine `regulation`-Eigenschaft in der Anfrage-Payload angegeben werden, die angibt, nach welcher Vorschrift der Auftrag verfolgt werden soll. Akzeptierte Werte sind `gdpr` und `ccpa`. |
+| Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe-[!DNL Primetime Authentication], wobei `primetimeAuthentication` als Produktwert verwendet wird. |
+| Verbesserungen der Privacy Service-Benutzeroberfläche | Separate Auftrags-Tracking-Seiten für DSGVO- und CCPA-Vorschriften. Neuer **Regulierungstyp** Dropdown zum Umschalten zwischen Tracking-Daten für DSGVO und CCPA. |
 
 **Bekannte Probleme**
 
 * Keine
 
-Weitere Informationen zu [!DNL Privacy Service] erhalten Sie in der [Privacy Service-Übersicht](../../privacy-service/home.md).
+Für weitere Informationen zu [!DNL Privacy Service] lesen Sie zunächst die [Übersicht über den Privacy Service ](../../privacy-service/home.md).
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten mithilfe von [!DNL Platform] -Diensten strukturieren, beschriften und erweitern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -72,9 +72,9 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Unterstützung für Kundenattributdaten | Benutzeroberflächen- und API-Unterstützung für die Erstellung von Streaming-Connectoren zur Erfassung von Kundenattributdaten. |
-| Zusätzliche Dateiformatunterstützung für Cloud-Speicher | Die Dateiaufnahme aus Cloud-Speichern unterstützt jetzt XDM-konforme Parquet- und JSON-Dateiformate. |
-| Unterstützung für Zugriffssteuerungsberechtigungen | Das Framework für die Zugriffskontrolle in Adobe Experience Platform bietet die Berechtigungen, die erforderlich sind, um bei der Datenerfassung Zugriff auf Quellen zu gewähren. Je nach Berechtigungsstufe kann ein Benutzer Quellen anzeigen, Quellen verwalten oder den Zugriff ganz verweigern. |
+| Unterstützung für Kundenattributdaten | UI- und API-Unterstützung für die Erstellung von Streaming-Connectoren zur Aufnahme von Kundenattributdaten. |
+| Zusätzliche Unterstützung von Dateiformaten für Cloud-Speicher | Die Dateiaufnahme aus Cloud-Speichern unterstützt jetzt XDM-konforme Parquet- und JSON-Dateiformate. |
+| Unterstützung für Zugriffssteuerungsberechtigungen | Das Zugriffssteuerungs-Framework in Adobe Experience Platform bietet die Berechtigungen, die erforderlich sind, um Zugriff auf Quellen in der Datenaufnahme zu gewähren. Je nach Berechtigungsstufe kann ein Benutzer Quellen anzeigen, Quellen verwalten oder den Zugriff ganz verweigern. |
 
 **Zugriffssteuerungsberechtigungen**
 
@@ -91,13 +91,13 @@ Weitere Informationen zu Quellen finden Sie unter [Quellen - Übersicht](../../s
 
 ## Ziele {#destinations}
 
-In [Real-Time CDP](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
+In [Real-Time CDP](../../rtcdp/overview.md) sind Ziele vorgefertigte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Unterstützung für Zugriffssteuerungsberechtigungen | Die Funktion Ziele in Real-Time CDP funktioniert mit Zugriffssteuerungsberechtigungen von Adobe Experience Platform. Je nach Berechtigungsstufe Ihres Benutzers können Sie Ziele anzeigen, verwalten und aktivieren. |
+| Unterstützung für Zugriffssteuerungsberechtigungen | Die Funktion „Ziele“ in Real-Time CDP arbeitet mit Zugriffssteuerungsberechtigungen für Adobe Experience Platform. Abhängig von der Berechtigungsstufe Ihrer Benutzerin bzw. Ihres Benutzers können Sie Ziele anzeigen, verwalten und aktivieren. |
 
 **Zugriffssteuerungsberechtigungen**
 
@@ -105,7 +105,7 @@ In [Real-Time CDP](../../rtcdp/overview.md) sind Ziele vordefinierte Integration
 |--- | --- | ---|
 | Ziele | Verwalten von Zielen | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
 | Ziele | Anzeigen von Zielen | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **Durchsuchen**. |
-| Ziele | Aktivieren von Zielen | Möglichkeit, Daten für Ziele zu aktivieren. Für diese Berechtigung muss entweder &quot;Ziele verwalten&quot;oder &quot;Ziele anzeigen&quot;zum Produktprofil hinzugefügt werden. |
+| Ziele | Aktivieren von Zielen | Möglichkeit, Daten für Ziele zu aktivieren. Für diese Berechtigung ist es erforderlich, dass dem Produktprofil entweder „Ziele verwalten“ oder „Ziele anzeigen“ hinzugefügt wird. |
 
 **Bekannte Probleme**
 

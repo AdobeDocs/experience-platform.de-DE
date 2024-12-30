@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Erste Schritte; Inhalt; Tagging von Inhalten; Farbmarkierung; Farbextraktion;
+keywords: Experience Platform;Erste Schritte;Inhalt;Inhalts-Tagging;Farb-Tagging;Farbextraktion;
 solution: Experience Platform
-title: Farb-Tagging in der Inhalts-Tagging-API
-description: Der Color Tagging-Dienst kann, wenn ihm ein Bild gegeben wird, das Histogramm der Pixelfarben berechnen und sie anhand dominanter Farben in Behältern sortieren.
+title: Farb-Tagging in der Content-Tagging-API
+description: Der Farb-Tagging-Service kann bei der Bereitstellung eines Bildes das Histogramm der Pixelfarben berechnen und diese nach dominanten Farben in Buckets sortieren.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 # Farb-Tagging
 
-Der Farb-Tagging-Dienst kann, wenn er ein Bild erhält, ein Histogramm von Pixelfarben berechnen und diese anhand dominanter Farben in Behälter sortieren. Die Farben der Bildpixel werden in 40 vorherrschende Farben zusammengefasst, die für das Farbspektrum repräsentativ sind. Ein Histogramm mit Farbwerten wird dann unter diesen 40 Farben berechnet. Der Dienst weist zwei Varianten auf:
+Der Farb-Tagging-Service kann bei der Bereitstellung eines Bildes ein Histogramm der Pixelfarben berechnen und diese nach dominanten Farben in Buckets sortieren. Die Farben in den Bildpixeln werden in 40 vorherrschende Farben zusammengefasst, die für das Farbspektrum repräsentativ sind. Aus diesen 40 Farben wird dann ein Histogramm der Farbwerte berechnet. Der Service kann in zwei Varianten angeboten werden:
 
 **Farb-Tagging (Vollbild)**
 
@@ -21,16 +21,16 @@ Diese Methode extrahiert ein Farbhistogramm über das gesamte Bild.
 
 **Farb-Tagging (mit Maske)**
 
-Diese Methode verwendet einen auf tiefem Lernen basierenden Vordergrundextraktor zur Identifizierung von Objekten im Vordergrund. Sobald die Vordergrundobjekte extrahiert wurden, wird ein Histogramm über die dominanten Farben für die Vordergrund- und Hintergrundbereiche sowie das gesamte Bild berechnet.
+Diese Methode verwendet einen auf Deep Learning basierenden Vordergrundextraktor, um Objekte im Vordergrund zu identifizieren. Nach dem Extrahieren der Vordergrundobjekte wird ein Histogramm über den dominanten Farben für den Vordergrund und den Hintergrund zusammen mit dem gesamten Bild berechnet.
 
-**Tonextraktion**
+**Tonabnahme**
 
-Zusätzlich zu den oben erwähnten Varianten können Sie den Dienst so konfigurieren, dass ein Histogramm mit Tönen abgerufen wird für:
+Zusätzlich zu den oben genannten Varianten können Sie den Service so konfigurieren, dass ein Histogramm von Tönen für Folgendes abgerufen wird:
 
 - Das Gesamtbild (bei Verwendung der vollständigen Bildvariante)
-- Das Gesamtbild sowie die Vordergrund- und Hintergrundbereiche (bei Verwendung der Variante mit Maskierung)
+- Das Gesamtbild sowie die Vorder- und Hintergrundbereiche (bei Verwendung der Variante mit Maskierung)
 
-Das folgende Bild wurde in dem in diesem Dokument gezeigten Beispiel verwendet:
+Die folgende Abbildung wurde in dem in diesem Dokument gezeigten Beispiel verwendet:
 
 ![Testbild](../images/QQAsset1.jpg)
 
@@ -42,7 +42,7 @@ POST /services/v2/predict
 
 **Anfrage - vollständige Bildvariante**
 
-Die folgende Beispielanfrage verwendet die Vollbildmethode für das Farb-Tagging und extrahiert Farben aus einem Bild basierend auf den in der Payload bereitgestellten Eingabeparametern. Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispiel-Payload .
+Die folgende Beispielanfrage verwendet die Full-Image-Methode für das Farb-Tagging und extrahiert Farben aus einem Bild basierend auf den in der Payload bereitgestellten Eingabeparametern. Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispiel-Payload .
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -83,13 +83,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Antwort - vollständige Bildvariante**
 
-Eine erfolgreiche Antwort gibt die Details der extrahierten Farben zurück. Jede Farbe wird durch einen `feature_value` -Schlüssel dargestellt, der die folgenden Informationen enthält:
+Eine erfolgreiche Antwort gibt die Details der extrahierten Farben zurück. Jede Farbe wird durch einen `feature_value` dargestellt, der die folgenden Informationen enthält:
 
 - Ein Farbname
-- Der Prozentwert dieser Farbe im Verhältnis zum Bild
+- Der Prozentsatz, um den diese Farbe in Bezug auf das Bild angezeigt wird
 - Der RGB-Wert der Farbe
 
-`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`bedeutet, dass die gefundenen Farben weiß sind, was in 58,34 % des Bildes zu finden ist und einen durchschnittlichen RGB-Wert von 254, 254, 243 aufweist.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`bedeutet, dass die gefundene Farbe Weiß ist, was in 58,34 % des Bildes zu finden ist, und einen mittleren RGB-Wert von 254, 254, 243 hat.
 
 ```json
 {
@@ -157,11 +157,11 @@ Eine erfolgreiche Antwort gibt die Details der extrahierten Farben zurück. Jede
 }]
 ```
 
-Beachten Sie, dass das Ergebnis hier eine Farbe für den Bildbereich &quot;insgesamt&quot;extrahiert hat.
+Beachten Sie, dass für das Ergebnis hier Farbe aus dem gesamten Bildbereich extrahiert wurde.
 
 **Anfrage - maskierte Bildvariante**
 
-Die folgende Beispielanfrage verwendet die Maskierungsmethode für das Farb-Tagging. Dies wird aktiviert, indem der Parameter `enable_mask` in der Anfrage auf `true` gesetzt wird.
+Die folgende Beispielanfrage verwendet die Maskierungsmethode für Farb-Tagging. Dies wird aktiviert, indem in der Anfrage der `enable_mask` auf `true` gesetzt wird.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -204,7 +204,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 >[!NOTE]
 >
->Darüber hinaus ist der Parameter `retrieve_tone` in der obigen Anfrage ebenfalls auf `true` gesetzt. Dies ermöglicht es uns, ein Tonverteilungs-Histogramm über warme, neutrale und kühle Töne in den gesamten, Vordergrund- und Hintergrundbereichen des Bildes abzurufen.
+>Darüber hinaus wird der `retrieve_tone` Parameter in der obigen Anfrage ebenfalls auf `true` gesetzt. Auf diese Weise können wir ein Tonverteilungs-Histogramm über warme, neutrale und kalte Töne in den gesamten, Vordergrund- und Hintergrundbereichen des Bildes abrufen.
 
 **Antwort - maskierte Bildvariante**
 
@@ -354,18 +354,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-Zusätzlich zu den Farben des Gesamtbilds können Sie jetzt auch Farben aus den Vordergrund- und Hintergrundbereichen sehen. Da der Tonabruf für jeden der oben genannten Bereiche aktiviert ist, können Sie auch das Histogramm eines Tons abrufen.
+Zusätzlich zu den Farben aus dem Gesamtbild können Sie jetzt auch Farben aus den Vordergrund- und Hintergrundbereichen sehen. Da der Tonabruf für jede der oben genannten Regionen aktiviert ist, können Sie auch das Histogramm eines Tons abrufen.
 
 **Eingabeparameter**
 
 | Name | Datentyp | Erforderlich | Standard | Werte | Beschreibung |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array (Document-Object) | Ja | – | Siehe unten | Liste der JSON-Elemente mit jedem Element in der Liste, das ein Dokument darstellt. |
-| `top_n` | number | Nein | 0 | Nicht negative Ganzzahl | Anzahl der zurückzugebenden Ergebnisse. 0, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit einem Schwellenwert ist die Anzahl der zurückgegebenen Ergebnisse kleiner als die beiden Begrenzungen. |
-| `min_coverage` | number | Nein | 0,05 | Real number | Deckungsschwellenwert, über den die Ergebnisse zurückgegeben werden müssen. Parameter ausschließen , um alle Ergebnisse zurückzugeben. |
-| `resize_image` | number | Nein | True | True/False | Gibt an, ob die Größe des Eingabebilds geändert werden soll oder nicht. Standardmäßig wird die Größe der Bilder auf 320 x 320 Pixel geändert, bevor die Farbextrahierung durchgeführt wird. Zu Debugging-Zwecken können wir auch zulassen, dass der Code auf Vollbild ausgeführt wird, indem wir dies auf `False` setzen. |
-| `enable_mask` | number | Nein | False | True/False | Aktiviert/Deaktiviert die Farbextraktion |
-| `retrieve_tone` | number | Nein | False | True/False | Aktiviert/Deaktiviert die Tonextraktion |
+| `documents` | Array (Document-Object) | Ja | – | Siehe unten | Liste der JSON-Elemente, wobei jedes Element in der Liste ein Dokument darstellt. |
+| `top_n` | number | Nein | 0 | Ganzzahl ohne negative Auswirkung | Anzahl der zurückzugebenden Ergebnisse. 0, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit einem Schwellenwert ist die Anzahl der zurückgegebenen Ergebnisse kleiner als beide Grenzen. |
+| `min_coverage` | number | Nein | 0,05 | Reelle Zahl | Schwellenwert für die Abdeckung, ab dem die Ergebnisse zurückgegeben werden müssen. Parameter ausschließen, um alle Ergebnisse zurückzugeben. |
+| `resize_image` | number | Nein | True | true/false | Gibt an, ob die Größe des Eingabebilds geändert werden soll. Standardmäßig werden die Bilder auf 320*320 Pixel skaliert, bevor die Farbextraktion durchgeführt wird. Zu Debuggingzwecken können wir zulassen, dass der Code auch auf dem vollständigen Bild ausgeführt wird, indem wir dies auf `False` setzen. |
+| `enable_mask` | number | Nein | False | true/false | Aktiviert/Deaktiviert die Farbextraktion |
+| `retrieve_tone` | number | Nein | False | true/false | Aktiviert/Deaktiviert die Tonextraktion |
 
 **Dokumentobjekt**
 
@@ -373,5 +373,5 @@ Zusätzlich zu den Farben des Gesamtbilds können Sie jetzt auch Farben aus den 
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | – | – | – | Vordefinierte URL des Dokuments. |
 | `sensei:repoType` | Zeichenfolge | – | – | HTTPS | Typ des Repositorys, in dem das Bild gespeichert wird. |
-| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie die Bilddatei als mehrteiliges Argument übergeben, anstatt vorsignierte URLs zu verwenden. |
-| `dc:format` | Zeichenfolge | Ja | – | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | Die Bildkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |
+| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie die Bilddatei als mehrteiliges Argument übergeben, anstatt vordefinierte URLs zu verwenden. |
+| `dc:format` | Zeichenfolge | Ja | – | „image/jpg“,<br>„image/jpeg“,<br>„image/png“,<br>„image/tiff“ | Die Bildkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |

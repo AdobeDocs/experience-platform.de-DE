@@ -36,7 +36,7 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 
 | Widget | Dashboard | Beschreibung |
 | ------ | --------- | ----------- |
-| [!UICONTROL Trend hinzugefügter Profile] | Profile | Dieses Widget verwendet ein Liniendiagramm, um die Gesamtanzahl der zusammengeführten Profile zu veranschaulichen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. |
+| [!UICONTROL Trend hinzugefügter Profile] | Profile | Dieses Widget verwendet ein Liniendiagramm, um die Gesamtzahl der zusammengeführten Profile zu veranschaulichen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. |
 | [!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind] | Profile | Dieses Widget zeigt in einer einzigen Metrik die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen und veranschaulicht in einem Doughnut-Diagramm den proportionalen Unterschied zwischen ihren Summen. |
 | [!UICONTROL Zielgruppengröße] | Profile | Dieses Widget bietet eine zweispaltige Tabelle, die bis zu 20 Segmente und die Gesamtzahl der in den einzelnen Segmenten enthaltenen Zielgruppen auflistet. Die Liste hängt von der angewendeten Zusammenführungsrichtlinie ab und ist entsprechend der Gesamtzahl der Zielgruppen von der größten bis zur kleinsten sortiert. |
 | [!UICONTROL Trend der Profilanzahl] | Profile | Dieses Widget verwendet ein Liniendiagramm, um den Trend der Gesamtanzahl der im System enthaltenen Profile im Zeitverlauf zu veranschaulichen. Die Daten können über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |

@@ -15,19 +15,19 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->Der Endpunkt `/content` befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
+>Der `/content`-Endpunkt befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die Funktionalität und Dokumentation können sich ändern.
 
-Verwenden Sie den `/content` -Endpunkt, um *Zugriffsinformationen* sicher abzurufen (die Informationen, auf die ein Datenschutzsubjekt berechtigterweise Zugriff anfordern kann). Die in der Antwort auf eine `/jobs/{JOB_ID}` -GET-Anfrage angegebene Download-URL verweist auf einen Adobe-Dienstendpunkt. Anschließend können Sie eine GET-Anfrage an `/jobs/:JOB_ID/content` senden, um Ihre Kundendaten im JSON-Format zurückzugeben. Diese Zugriffsmethode implementiert mehrere Ebenen der Authentifizierung und Zugriffskontrolle, um die Sicherheit zu erhöhen.
+Verwenden Sie den `/content`-Endpunkt zum sicheren Abrufen *Zugriffsinformationen* (die Informationen, auf die eine betroffene Person zu Recht zugreifen kann) für Ihre Kunden. Die in der Antwort auf eine `/jobs/{JOB_ID}` GET-Anfrage angegebene Download-URL verweist auf einen Adobe Service-Endpunkt. Sie können dann eine GET-Anfrage an `/jobs/:JOB_ID/content` stellen, um Ihre Kundendaten im JSON-Format zurückzugeben. Diese Zugriffsmethode implementiert mehrere Authentifizierungs- und Zugriffssteuerungsebenen, um die Sicherheit zu erhöhen.
 
-Bevor Sie dieses Handbuch verwenden, lesen Sie bitte das Erste-Schritte-Handbuch ](./getting-started.md) , um Informationen zu den erforderlichen Authentifizierungskopfzeilen zu erhalten, das im folgenden Beispiel-API-Aufruf vorgestellt wird.[
+Bevor Sie dieses Handbuch verwenden, lesen Sie das [Erste Schritte](./getting-started.md) um Informationen zu den erforderlichen Authentifizierungskopfzeilen zu erhalten, die im folgenden Beispiel-API-Aufruf dargestellt werden.
 
 >[!TIP]
 >
->Wenn Sie die Auftrags-ID für die benötigten Zugriffsinformationen derzeit nicht kennen, rufen Sie den Endpunkt `/jobs` auf und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Eine vollständige Liste der verfügbaren Abfrageparameter finden Sie im [Endpunkthandbuch zu Datenschutzaufträgen](./privacy-jobs.md).
+>Wenn Sie die Auftrags-ID für die benötigten Zugriffsinformationen derzeit nicht kennen, rufen Sie den `/jobs`-Endpunkt auf und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Eine vollständige Liste der verfügbaren Abfrageparameter finden Sie im [Handbuch zu Datenschutzaufträgen](./privacy-jobs.md).
 
-## Abrufen von Datenschutzauftragsinformationen
+## Abrufen von Informationen zu Datenschutzaufträgen
 
-Um Informationen zu einem bestimmten Auftrag abzurufen, z. B. dessen aktuellen Verarbeitungsstatus, fügen Sie den Wert &quot;`jobId`&quot;des Auftrags in den Pfad einer GET-Anfrage zum `/jobs` -Endpunkt ein.
+Um Informationen über einen bestimmten Auftrag abzurufen, z. B. seinen aktuellen Verarbeitungsstatus, fügen Sie die `jobId` dieses Auftrags in den Pfad einer GET-Anfrage an den `/jobs`-Endpunkt ein.
 
 **API-Format**
 
@@ -53,7 +53,7 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 
 >[!NOTE]
 >
->Datenschutzaufträge müssen den Status `complete` aufweisen, um den Wert `downloadUrl` enthalten zu können.
+>Datenschutzaufträge müssen den Status `complete` aufweisen, um die `downloadUrl` zu enthalten.
 
 ```json
 {
@@ -87,36 +87,36 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 |----------------------|---------------------------------------------------------------------------------------------------------------|
 | `jobId` | Eine eindeutige Kennung für den Datenschutzauftrag. |
 | `requestId` | Eine eindeutige Kennung für die spezifische Anfrage an den Privacy Service. |
-| `userKey` | `userKey` ist der `key` -Wert, den Sie beim Senden der Datenschutzanfrage angegeben haben. Der Wert `key` ist Ihre Möglichkeit, eine für Sie sinnvolle Kennung für das Datensubjekt bereitzustellen. Es handelt sich normalerweise um eine eindeutige Kennung, die Ihr System zur Verfolgung dieser betroffenen Person erstellt hat. TIPP: Sie können alle aktiven Datenschutzaufträge auflisten und Ihre `key` mit jedem Auftrag vergleichen. |
-| `action` | Die Art der angeforderten Aktion. Die zulässigen Werte sind `access` und `delete`. |
+| `userKey` | `userKey` ist der `key` Wert, den Sie beim Senden der Datenschutzanfrage angegeben haben. Der `key` ist Ihre Möglichkeit, eine für Sie sinnvolle Kennung für die betroffene Person anzugeben. Es handelt sich normalerweise um eine eindeutige Kennung, die Ihr System zum Tracking dieser betroffenen Person erstellt hat. TIPP: Sie können alle aktiven Datenschutzaufträge auflisten und Ihre `key` mit den einzelnen Aufträgen vergleichen. |
+| `action` | Der Typ der angeforderten Aktion. Die akzeptierten Werte sind `access` und `delete`. |
 | `status` | Der aktuelle Status des Datenschutzauftrags. |
 | `submittedBy` | Die E-Mail-Adresse der Person, die den Datenschutzauftrag gesendet hat. |
 | `createdDate` | Datum und Uhrzeit der Erstellung des Datenschutzauftrags. |
 | `lastModifiedDate` | Datum und Uhrzeit der letzten Änderung des Datenschutzauftrags. |
-| `userIds` | Ein Array mit Benutzer-IDs und zugehörigen Informationen. |
-| `userIds.namespace` | Der für die Benutzer-ID verwendete Namespace. |
-| `userIds.value` | Der tatsächliche Wert der Benutzer-ID. |
+| `userIds` | Ein Array, das Benutzerkennung und zugehörige Informationen enthält. |
+| `userIds.namespace` | Der für die Benutzerkennung verwendete Namespace. |
+| `userIds.value` | Der tatsächliche Wert der Benutzerkennung. |
 | `userIds.type` | Der Typ der Kennung (z. B. `standard` oder `custom`). |
-| `userIds.namespaceId` | Eine Kennung für den Namespace, der zur Kategorisierung und Verwaltung von Benutzeridentitäten verwendet wird. |
-| `userIds.isDeletedClientSide` | Ein boolescher Wert, der angibt, ob die Kennung clientseitig gelöscht wurde. |
-| `productResponses` | Ein Array mit Antworten aus verschiedenen Produkten oder Diensten, die sich auf den Datenschutzauftrag beziehen. |
+| `userIds.namespaceId` | Eine Kennung für den Namespace, der zum Kategorisieren und Verwalten von Benutzeridentitäten verwendet wird. |
+| `userIds.isDeletedClientSide` | Ein boolescher Wert, der angibt, ob die Kennung Client-seitig gelöscht wurde. |
+| `productResponses` | Ein Array, das Antworten aus verschiedenen Produkten oder Services enthält, die sich auf den Datenschutzauftrag beziehen. |
 | `productResponses.product` | Der Name des Produkts oder der Dienstleistung, mit dem bzw. der Informationen über die betroffene Person erfasst wurden. |
-| `productResponses.retryCount` | Die Häufigkeit, mit der die Anfrage wiederholt wurde. |
+| `productResponses.retryCount` | Die Häufigkeit, mit der die Anfrage erneut versucht wurde. |
 | `productResponses.processedDate` | Datum und Uhrzeit der Verarbeitung der Produktantwort. |
 | `productResponses.productStatusResponse` | Ein Objekt, das den Status der Produktantwort enthält. |
 | `productResponses.productStatusResponse.status` | Der Status der Produktantwort. |
-| `downloadURL` | Dieses Attribut stellt einen Endpunkt bereit, der 60 Tage nach Abschluss des Auftrags aufgerufen werden kann. Der Status des Auftrags muss `complete` und der `action` muss `access` sein. Andernfalls fehlt dieses Feld. |
-| `regulation` | Das regulatorische Framework, unter dem die Datenschutzanfrage verarbeitet wird, z. B. `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha` usw. |
+| `downloadURL` | Dieses Attribut stellt einen Endpunkt bereit, der 60 Tage nach Abschluss des Auftrags aufzurufen ist. Der Status des Auftrags muss `complete` und der `action` muss `access` sein. Andernfalls fehlt dieses Feld. |
+| `regulation` | Der rechtliche Rahmen, in dem die Datenschutzanfrage verarbeitet wird, z. B. `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha` usw. |
 
 {style="table-layout:auto"}
 
 ## Abrufen von Kundenzugriffsinformationen {#retrieve-access-data}
 
-Um die &quot;Zugriffsinformationen&quot;abzurufen, die als Antwort auf die Abfrage des Datensubjekts erstellt wurden, stellen Sie eine GET-Anfrage an den `/jobs/{JOB_ID}/content` -Endpunkt. Die Antwort ist eine ZIP-Datei (*.zip), die einen Ordner mit Unterordnern für jedes Produkt enthält, das Daten zum Datensubjekt enthält.
+Um die „Zugriffsinformationen“ zu erhalten, die als Antwort auf die Abfrage Ihrer betroffenen Person erstellt werden, stellen Sie eine GET-Anfrage an den `/jobs/{JOB_ID}/content`-Endpunkt. Die Antwort ist eine ZIP-Datei (*.zip), die einen Ordner mit Unterordnern für jedes Produkt enthält, das Daten über die betroffene Person enthält.
 
 >[!TIP]
 >
->Sie benötigen eine bestimmte Auftrags-ID, um diese Anfrage ausführen zu können. Wenn Sie die spezifische Auftrags-ID abrufen müssen, stellen Sie zunächst eine GET-Anfrage an den `/jobs` -Endpunkt und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Detaillierte Informationen einschließlich der zulässigen Abfrageparameter finden Sie im [Endpoint-Handbuch zu Datenschutzaufträgen](./privacy-jobs.md).
+>Sie benötigen eine bestimmte Auftrags-ID, um diese Anfrage zu stellen. Wenn Sie die spezifische Auftrags-ID abrufen müssen, stellen Sie zunächst eine GET-Anfrage an den `/jobs`-Endpunkt und verwenden Sie zusätzliche Abfrageparameter, um die Ergebnisse zu filtern. Detaillierte Informationen einschließlich der zulässigen Abfrageparameter finden Sie im [Handbuch zu Datenschutzaufträgen](./privacy-jobs.md).
 
 **API-Format**
 
@@ -126,7 +126,7 @@ GET /jobs/{JOB_ID}/content
 
 **Anfrage**
 
-Die folgende Anfrage gibt &quot;Zugriffsinformationen&quot;für die in der Anfrage angegebene Auftrags-ID zurück.
+Die folgende Anfrage gibt „Zugriffsinformationen“ für die in der Anfrage angegebene Vorgangs-ID zurück.
 
 ```shell
 curl -X GET \
@@ -139,5 +139,5 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort ist eine ZIP-Datei (*.zip). Die Informationen werden normalerweise im JSON-Format zurückgegeben, obwohl dies nicht garantiert werden kann. Extrahierte Daten können in jedem beliebigen Format zurückgegeben werden.
+Die Antwort ist eine ZIP-Datei (*.zip). Die Informationen werden normalerweise im JSON-Format zurückgegeben, dies kann jedoch nicht garantiert werden. Die extrahierten Daten können in jedem beliebigen Format zurückgegeben werden.
 

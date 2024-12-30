@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; Intelligent Services; beliebte Themen; intelligenter Dienst; Intelligent Service
+keywords: Experience Platform;Startseite;Intelligent Services;beliebte Themen;Intelligent Service;Intelligent Service
 solution: Experience Platform
 title: Vorbereiten von Daten für die Verwendung in Intelligent Services
-description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden dazu Experience-Datenmodell (XDM)-Schemas.
+description: Damit Intelligent Services Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. Intelligent Services verwenden Experience-Datenmodell(XDM)-Schemata, um dies zu erreichen.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
 workflow-type: tm+mt
@@ -13,45 +13,45 @@ ht-degree: 2%
 
 # Vorbereiten von Daten für die Verwendung in [!DNL Intelligent Services]
 
-Damit [!DNL Intelligent Services] Einblicke aus Ihren Marketing-Ereignisdaten gewinnen kann, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. [!DNL Intelligent Services] nutzt [!DNL Experience Data Model] (XDM)-Schemas, um dies zu erreichen. Insbesondere müssen alle in [!DNL Intelligent Services] verwendeten Datensätze dem XDM-Schema Consumer ExperienceEvent (CEE) entsprechen oder den Adobe Analytics-Connector verwenden. Darüber hinaus unterstützt Customer AI den Adobe Audience Manager-Connector.
+Damit [!DNL Intelligent Services] Einblicke aus Ihren Marketing-Ereignisdaten gewinnen können, müssen die Daten semantisch angereichert und in einer Standardstruktur verwaltet werden. [!DNL Intelligent Services] nutzen [!DNL Experience Data Model] (XDM)-Schemata, um dies zu erreichen. Insbesondere müssen alle Datensätze, die in [!DNL Intelligent Services] verwendet werden, dem Consumer ExperienceEvent (CEE)-XDM-Schema entsprechen oder den Adobe Analytics-Connector verwenden. Darüber hinaus unterstützt Kunden-KI den Adobe Audience Manager-Connector.
 
-Dieses Dokument bietet allgemeine Anleitungen zum Zuordnen Ihrer Marketing-Ereignisdaten aus mehreren Kanälen zum CEE-Schema sowie Informationen zu wichtigen Feldern innerhalb des Schemas, anhand derer Sie bestimmen können, wie Ihre Daten effektiv der Struktur zugeordnet werden können. Wenn Sie planen, Adobe Analytics-Daten zu verwenden, lesen Sie bitte den Abschnitt für die [Adobe Analytics-Datenvorbereitung](#analytics-data). Wenn Sie planen, Adobe Audience Manager-Daten zu verwenden (nur Customer AI), lesen Sie den Abschnitt für die [Adobe Audience Manager-Datenvorbereitung](#AAM-data).
+Dieses Dokument enthält allgemeine Anleitungen zum Zuordnen Ihrer Marketing-Ereignisdaten aus mehreren Kanälen zum CEE-Schema und enthält Informationen zu wichtigen Feldern innerhalb des Schemas, damit Sie ermitteln können, wie Sie Ihre Daten effektiv ihrer Struktur zuordnen können. Wenn Sie Adobe Analytics-Daten verwenden möchten, lesen Sie bitte den Abschnitt zur [Vorbereitung von Adobe Analytics-Daten](#analytics-data). Wenn Sie Adobe Audience Manager-Daten verwenden möchten (nur Kunden-KI), lesen Sie bitte den Abschnitt [Adobe Audience Manger-Datenvorbereitung](#AAM-data).
 
 ## Datenanforderungen
 
-[!DNL Intelligent Services] erfordert je nach dem erstellten Ziel unterschiedliche Mengen historischer Daten. Unabhängig davon müssen die Daten, die Sie für **all** [!DNL Intelligent Services] vorbereiten, sowohl positive als auch negative Journey/-Ereignisse enthalten. Negative und positive Ereignisse verbessern die Modellgenauigkeit und -genauigkeit.
+[!DNL Intelligent Services] benötigen je nach erstelltem Ziel unterschiedliche Mengen historischer Daten. Unabhängig davon müssen die Daten, die Sie für **alle**-[!DNL Intelligent Services] vorbereiten, sowohl positive als auch negative Journey/Ereignisse enthalten. Sowohl negative als auch positive Ereignisse verbessern die Modellgenauigkeit und -genauigkeit.
 
-Wenn Sie beispielsweise Customer AI verwenden, um die Tendenz zum Kauf eines Produkts vorherzusagen, benötigt das Modell für Customer AI sowohl Beispiele für erfolgreiche Kaufpfade als auch Beispiele für nicht erfolgreiche Pfade. Dies liegt daran, dass Customer AI während der Modellschulung versucht zu verstehen, welche Ereignisse und Journey zu einem Kauf führen. Dazu gehören auch die Aktionen von Kunden, die nichts gekauft haben, z. B. von Personen, die ihre Journey beim Hinzufügen eines Artikels zum Warenkorb angehalten haben. Diese Kunden können jedoch ähnliche Verhaltensweisen aufweisen. Customer AI kann jedoch Einblicke bieten und die wichtigsten Unterschiede und Faktoren, die zu einem höheren Tendenzwert führen, detailliert aufzeigen. In ähnlicher Weise erfordert Attribution AI sowohl Ereignistypen als auch Journey, um Metriken wie Touchpoint-Effektivität, Top-Konversionspfade und Aufschlüsselungen nach Touchpoint-Position anzuzeigen.
+Wenn Sie beispielsweise Kunden-KI verwenden, um die Kauftendenz eines Produkts vorherzusagen, benötigt das Modell für Kunden-KI sowohl Beispiele für erfolgreiche Kaufpfade als auch Beispiele für nicht erfolgreiche Pfade. Dies liegt daran, dass Kunden-KI bei der Modellschulung untersucht, welche Ereignisse und Journey zu einem Kauf führen. Dies umfasst auch die Aktionen, die von Kunden durchgeführt wurden, die nicht gekauft haben, z. B. eine Person, die ihren Journey gestoppt hat, als sie einen Artikel zum Warenkorb hinzufügte. Diese Kunden weisen möglicherweise ähnliche Verhaltensweisen auf. Kunden-KI kann jedoch Einblicke bieten und die wichtigsten Unterschiede und Faktoren aufschlüsseln, die zu einem höheren Neigungs-Score führen. In ähnlicher Weise erfordert Attribution AI sowohl Ereignistypen als auch Journey, um Metriken wie Touchpoint-Effektivität, Top-Konversionspfade und Aufschlüsselungen nach Touchpoint-Position anzuzeigen.
 
-Weitere Beispiele und Informationen zu Anforderungen an historische Daten finden Sie im Abschnitt [Customer AI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI](./attribution-ai/input-output.md#data-requirements) mit Anforderungen an historische Daten in der Eingabe-/Ausgabedokumentation.
+Weitere Beispiele und Informationen zu historischen Datenanforderungen finden Sie im Abschnitt [Kunden-KI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI ](./attribution-ai/input-output.md#data-requirements) Historische Datenanforderungen in der Eingabe-/Ausgabedokumentation.
 
-### Richtlinien für die Datenzuordnung
+### Richtlinien für das Zusammenfügen von Daten
 
-Es wird empfohlen, die Ereignisse eines Benutzers nach Möglichkeit einer gemeinsamen ID zuzuordnen. Beispielsweise können Sie Benutzerdaten mit &quot;id1&quot;über 10 Ereignisse hinweg haben. Später hat derselbe Benutzer die Cookie-ID gelöscht und wird bei den nächsten 20 Ereignissen als &quot;id2&quot;aufgezeichnet. Wenn Sie wissen, dass id1 und id2 demselben Benutzer entsprechen, sollten Sie alle 30 Ereignisse mit einer gemeinsamen ID verknüpfen.
+Es wird empfohlen, die Ereignisse einer Benutzerin oder eines Benutzers nach Möglichkeit über eine gemeinsame ID hinweg zuzuordnen. Beispielsweise können Benutzerdaten mit „id1“ über 10 Ereignisse verteilt sein. Später hat derselbe Benutzer die Cookie-ID gelöscht und wird für die nächsten 20 Ereignisse als „id2“ aufgezeichnet. Wenn Sie wissen, dass ID1 und ID2 demselben Benutzer bzw. derselben Benutzerin entsprechen, empfiehlt es sich, alle 30 Ereignisse mit einer gemeinsamen ID zusammenzufügen.
 
-Ist dies nicht möglich, sollten Sie jeden Satz von Ereignissen beim Erstellen Ihrer Modelleingabedaten als einen anderen Benutzer behandeln. Dadurch werden die besten Ergebnisse bei Modellschulung und -bewertung sichergestellt.
+Wenn dies nicht möglich ist, sollten Sie beim Erstellen Ihrer Modelleingabedaten jeden Satz von Ereignissen als einen anderen Benutzer behandeln. Dadurch werden die besten Ergebnisse beim Modell-Training und Scoring sichergestellt.
 
 ## Workflow-Zusammenfassung
 
-Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Platform oder extern gespeichert werden. In diesem Abschnitt werden die erforderlichen Schritte für die beiden Szenarien zusammengefasst.
+Der Vorbereitungsprozess hängt davon ab, ob Ihre Daten in Adobe Experience Platform oder extern gespeichert werden. In diesem Abschnitt werden die erforderlichen Schritte zusammengefasst, die Sie bei beiden Szenarien ausführen müssen.
 
 ### Vorbereitung externer Daten
 
-Wenn Ihre Daten außerhalb von Experience Platform gespeichert werden, müssen Sie Ihre Daten den erforderlichen und relevanten Feldern in einem [Consumer ExperienceEvent-Schema](#cee-schema) zuordnen. Dieses Schema kann mit benutzerdefinierten Feldergruppen erweitert werden, um Ihre Kundendaten besser zu erfassen. Nach der Zuordnung können Sie einen Datensatz mit Ihrem Customer ExperienceEvent-Schema erstellen und [Ihre Daten in Platform aufnehmen](../ingestion/home.md). Der CEE-Datensatz kann dann beim Konfigurieren eines [!DNL Intelligent Service] ausgewählt werden.
+Wenn Ihre Daten außerhalb von Experience Platform gespeichert werden, müssen Sie Ihre Daten den erforderlichen und relevanten Feldern in einem „Consumer ExperienceEvent[Schema ](#cee-schema). Dieses Schema kann mit benutzerdefinierten Feldergruppen erweitert werden, um Ihre Kundendaten besser zu erfassen. Nach der Zuordnung können Sie einen Datensatz mit Ihrem Consumer ExperienceEvent-Schema erstellen und [Ihre Daten in Platform aufnehmen](../ingestion/home.md). Der CEE-Datensatz kann dann beim Konfigurieren eines [!DNL Intelligent Service] ausgewählt werden.
 
-Je nach dem zu verwendenden [!DNL Intelligent Service] können unterschiedliche Felder erforderlich sein. Beachten Sie, dass es sich als Best Practice empfiehlt, einem Feld Daten hinzuzufügen, wenn die Daten verfügbar sind. Weitere Informationen zu den erforderlichen Feldern finden Sie im Handbuch [Attribution AI](./attribution-ai/input-output.md) oder [Kunden-KI](./customer-ai/data-requirements.md) mit Datenanforderungen .
+Je nach gewünschter [!DNL Intelligent Service] können verschiedene Felder erforderlich sein. Beachten Sie, dass es sich als Best Practice empfiehlt, einem Feld Daten hinzuzufügen, wenn die Daten verfügbar sind. Weitere Informationen zu den erforderlichen Feldern finden Sie im Handbuch zu den Datenanforderungen für {](./attribution-ai/input-output.md)}Attribution AI [ oder ](./customer-ai/data-requirements.md)Kunden-KI).[
 
-### Adobe Analytics-Datenvorbereitung {#analytics-data}
+### Datenvorbereitung in Adobe Analytics {#analytics-data}
 
-Customer AI und Attribution AI unterstützen nativ Adobe Analytics-Daten. Um Adobe Analytics-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Analytics-Quell-Connector](../sources/tutorials/ui/create/adobe-applications/analytics.md) einzurichten.
+Kunden-KI und Attribution AI unterstützen nativ Adobe Analytics-Daten. Um Adobe Analytics-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Analytics-Quell-Connector) ](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
-Sobald der Quell-Connector Ihre Daten an Experience Platform streamt, können Sie Adobe Analytics während der Instanzkonfiguration als Datenquelle gefolgt von einem Datensatz auswählen. Alle erforderlichen Schemafeldgruppen und individuellen Felder werden während der Verbindungseinrichtung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format ETL (Extract, Transform, Load) verschieben.
+Sobald der Quell-Connector Ihre Daten in Experience Platform streamt, können Sie Adobe Analytics als Datenquelle und anschließend während der Konfiguration Ihrer Instanz einen Datensatz auswählen. Alle erforderlichen Schemafeldgruppen und einzelnen Felder werden bei der Einrichtung der Verbindung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format abfragen (Extract, Transform, Load).
 
-Wenn Sie die Daten, die über den Adobe Analytics-Quell-Connector auf Adobe Experience Platform übertragen werden, mit den Adobe Analytics-Daten vergleichen, treten möglicherweise einige Diskrepanzen auf. Der Analytics Source-Connector kann während der Transformation in ein Experience-Datenmodell (XDM)-Schema Zeilen ablegen. Es kann mehrere Gründe dafür geben, dass die gesamte Zeile für die Umwandlung nicht geeignet ist. Dazu gehören fehlende Zeitstempel, fehlende Personen-IDs, ungültige oder große Personen-IDs, ungültige Analysewerte und mehr.
+Wenn Sie die Daten, die über den Adobe Analytics-Quell-Connector nach Adobe Experience Platform übertragen werden, mit den Adobe Analytics-Daten vergleichen, können Sie einige Diskrepanzen feststellen. Der Analytics Source-Connector kann beim Konvertieren in ein Experience-Datenmodell (XDM)-Schema Zeilen ignorieren. Es kann mehrere Gründe dafür geben, dass die gesamte Zeile nicht für die Umwandlung geeignet ist, darunter fehlende Zeitstempel, fehlende Personen-IDs, ungültige oder große Personen-IDs, ungültige Analysewerte und mehr.
 
-Weitere Informationen und Beispiele finden Sie in der Dokumentation zum [Vergleichen von Adobe Analytics- und Customer Journey Analytics-Daten](https://www.adobe.com/go/compare-aa-data-to-cja-data). Dieser Artikel soll Ihnen dabei helfen, diese Unterschiede zu diagnostizieren und zu beheben, sodass Sie und Ihr Team Adobe Experience Platform-Daten für Intelligent Services verwenden können, ohne dass Bedenken hinsichtlich der Datenintegrität bestehen.
+Weitere Informationen und Beispiele finden Sie in der Dokumentation zu [Vergleichen von Adobe Analytics- und Customer Journey Analytics-Daten](https://www.adobe.com/go/compare-aa-data-to-cja-data). Dieser Artikel soll Ihnen dabei helfen, diese Unterschiede zu diagnostizieren und zu beheben, damit Sie und Ihr Team Adobe Experience Platform-Daten für Intelligent Services ohne Beeinträchtigung der Datenintegrität verwenden können.
 
-Führen Sie in Adobe Experience Platform Query Services die folgende Abfrage &quot;Total Records&quot;zwischen Start- und Endzeitstempel nach channel.typeAtSource aus, um die Anzahl nach Marketing-Kanälen zu ermitteln.
+Führen Sie in Adobe Experience Platform Query Services die folgende Abfrage zur Gesamtzahl der Datensätze zwischen Start- und Endzeitstempel nach channel.typeAtSource aus, um die Anzahl nach Marketing-Kanälen zu finden.
 
 ```SELECT channel.typeAtSource as typeAtSource,
        Count(_id) AS Records 
@@ -65,92 +65,92 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Der Adobe Analytics-Connector benötigt bis zu vier Wochen, um Daten aufzustocken. Wenn Sie kürzlich eine Verbindung eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für den Kunden oder Attribution AI erforderliche Mindestlänge von Daten aufweist. Überprüfen Sie die Abschnitte mit den Verlaufsdaten in [Customer AI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI](./attribution-ai/input-output.md#data-requirements) und überprüfen Sie, ob Sie über genügend Daten für Ihr Prognoseziel verfügen.
+>Die Aufstockung von Daten durch den Adobe Analytics-Connector dauert bis zu vier Wochen. Wenn Sie kürzlich eine Verbindung eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für Kunden oder Attribution AI erforderliche Mindestlänge von Daten aufweist. Lesen Sie die Abschnitte zu historischen Daten in [Kunden-KI](./customer-ai/data-requirements.md#data-requirements) oder [Attribution AI ](./attribution-ai/input-output.md#data-requirements) und stellen Sie sicher, dass Sie über genügend Daten für Ihr Prognoseziel verfügen.
 
-### Adobe Audience Manager-Datenvorbereitung (nur Customer AI) {#AAM-data}
+### Datenvorbereitung in Adobe Audience Manager (nur Kunden-KI) {#AAM-data}
 
-Customer AI unterstützt nativ Adobe Audience Manager-Daten. Um Audience Manager-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Audience Manager-Quell-Connector](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) einzurichten.
+Kunden-KI unterstützt nativ Adobe Audience Manager-Daten. Um Audience Manager-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Audience Manager-Quell-Connector einzurichten](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
-Sobald der Quell-Connector Ihre Daten an Experience Platform streamt, können Sie Adobe Audience Manager während Ihrer Customer AI-Konfiguration als Datenquelle gefolgt von einem Datensatz auswählen. Alle Schemafeldgruppen und einzelnen Felder werden während der Verbindungseinrichtung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format ETL (Extract, Transform, Load) verschieben.
+Nachdem der Quell-Connector Ihre Daten in Experience Platform gestreamt hat, können Sie Adobe Audience Manager als Datenquelle und anschließend während Ihrer Kunden-KI-Konfiguration einen Datensatz auswählen. Alle Schemafeldgruppen und einzelnen Felder werden bei der Einrichtung der Verbindung automatisch erstellt. Sie müssen die Datensätze nicht im CEE-Format abfragen (Extract, Transform, Load).
 
 >[!IMPORTANT]
 >
->Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die erforderliche Mindestlänge von Daten aufweist. Lesen Sie den Abschnitt zu historischen Daten in der [Eingabe-/Ausgabedokumentation](./customer-ai/data-requirements.md) für Customer AI und überprüfen Sie, ob Sie über genügend Daten für Ihr Prognoseziel verfügen.
+>Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die erforderliche Mindestlänge von Daten aufweist. Lesen Sie den Abschnitt zu historischen Daten in der [Eingabe-/Ausgabedokumentation](./customer-ai/data-requirements.md) für Kunden-KI und stellen Sie sicher, dass Sie über genügend Daten für Ihr Prognoseziel verfügen.
 
-### [!DNL Experience Platform] Datenvorbereitung
+### [!DNL Experience Platform]
 
-Wenn Ihre Daten bereits in [!DNL Platform] gespeichert sind und nicht über die Quell-Connectoren von Adobe Analytics oder Adobe Audience Manager (nur Customer AI) streamen, führen Sie die folgenden Schritte aus. Es wird dennoch empfohlen, das CEE-Schema zu verstehen.
+Wenn Ihre Daten bereits in [!DNL Platform] gespeichert sind und nicht über Adobe Analytics oder Adobe Audience Manager (nur Kunden-KI) gestreamt werden, führen Sie die folgenden Schritte aus. Es wird dennoch empfohlen, das CEE-Schema zu verstehen.
 
-1. Überprüfen Sie die Struktur des [Consumer ExperienceEvent-Schemas](#cee-schema) und stellen Sie fest, ob Ihre Daten seinen Feldern zugeordnet werden können.
-2. Wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und es in [!DNL Intelligent Services] aufzunehmen. Befolgen Sie andernfalls die Schritte in diesem Handbuch](#mapping) , wenn Sie die Daten selbst zuordnen möchten.[
+1. Überprüfen Sie die Struktur des Schemas [Consumer ExperienceEvent](#cee-schema) und stellen Sie fest, ob Ihre Daten dessen Feldern zugeordnet werden können.
+2. Wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und in [!DNL Intelligent Services] aufzunehmen, oder [führen Sie die Schritte in diesem Handbuch aus](#mapping) wenn Sie die Daten selbst zuordnen möchten.
 
 ## Grundlegendes zum CEE-Schema {#cee-schema}
 
-Das Schema Consumer ExperienceEvent beschreibt das Verhalten einer Person in Bezug auf digitale Marketing-Ereignisse (Web oder Mobil) sowie Online- oder Offline-Commerce-Aktivitäten. Die Verwendung dieses Schemas ist für [!DNL Intelligent Services] erforderlich, da es semantisch genau definierte Felder (Spalten) enthält, sodass unbekannte Namen vermieden werden, die sonst dazu führen würden, dass die Daten weniger klar sind.
+Das Consumer ExperienceEvent-Schema beschreibt das Verhalten eines Kontakts im Zusammenhang mit digitalen Marketing-Ereignissen (Web oder Mobile) sowie mit Online- oder Offline-Commerce-Aktivitäten. Die Verwendung dieses Schemas ist für [!DNL Intelligent Services] aufgrund seiner semantisch klar definierten Felder (Spalten) erforderlich, wobei unbekannte Namen vermieden werden, die die Daten ansonsten weniger klar machen würden.
 
-Das CEE-Schema erfasst wie alle XDM ExperienceEvent-Schemas den zeitreihenbasierten Status des Systems, in dem ein Ereignis (oder eine Reihe von Ereignissen) aufgetreten ist, einschließlich des Zeitpunkts und der Identität des beteiligten Subjekts. Erlebnisereignisse sind Faktenaufzeichnungen dessen, was geschehen ist, und sind somit unveränderlich und stellen dar, was ohne Aggregation oder Interpretation passiert ist.
+Wie alle XDM ExperienceEvent-Schemata erfasst auch das CEE-Schema den zeitreihenbasierten Status des Systems, wenn ein Ereignis (oder eine Reihe von Ereignissen) aufgetreten ist, einschließlich des Zeitpunkts und der Identität des betroffenen Subjekts. Erlebnisereignisse sind Tatsachenaufzeichnungen über das Geschehene und daher unveränderlich und stellen dar, was ohne Aggregation oder Interpretation passiert ist.
 
-[!DNL Intelligent Services] verwendet mehrere Schlüsselfelder in diesem Schema, um Einblicke aus Ihren Marketing-Ereignisdaten zu generieren, die sich alle auf der Stammebene befinden und erweitert werden, um die erforderlichen Unterfelder anzuzeigen.
+[!DNL Intelligent Services] verwenden mehrere Schlüsselfelder in diesem Schema, um Einblicke aus Ihren Marketing-Ereignisdaten zu generieren, die alle auf der Stammebene gefunden und erweitert werden können, um die erforderlichen Unterfelder anzuzeigen.
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Wie alle XDM-Schemas ist auch die CEE-Schemafeldgruppe erweiterbar. Mit anderen Worten, der CEE-Feldergruppe können zusätzliche Felder hinzugefügt werden, und bei Bedarf können verschiedene Varianten in mehrere Schemas aufgenommen werden.
+Wie alle XDM-Schemata ist die Schemafeldgruppe CEE erweiterbar. Mit anderen Worten können der CEE-Feldergruppe zusätzliche Felder hinzugefügt werden und verschiedene Varianten können bei Bedarf in mehrere Schemata aufgenommen werden.
 
-Ein vollständiges Beispiel für die Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Darüber hinaus können Sie die folgende [JSON-Datei](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) anzeigen und kopieren, um ein Beispiel dafür zu erhalten, wie Daten entsprechend dem CEE-Schema strukturiert sein können. Sehen Sie sich diese beiden Beispiele an, wenn Sie mehr über die im folgenden Abschnitt beschriebenen Schlüsselfelder erfahren, um zu bestimmen, wie Sie Ihre eigenen Daten dem Schema zuordnen können.
+Ein vollständiges Beispiel für die Feldergruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Darüber hinaus können Sie die folgende (JSON[Datei) anzeigen und kopieren](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um ein Beispiel dafür zu erhalten, wie Daten entsprechend dem CEE-Schema strukturiert werden können. Siehe beide Beispiele, während Sie mehr über die im folgenden Abschnitt beschriebenen Schlüsselfelder erfahren, um zu bestimmen, wie Sie Ihre eigenen Daten dem Schema zuordnen können.
 
 ## Schlüsselfelder
 
-Es gibt mehrere Schlüsselfelder in der CEE-Feldergruppe, die verwendet werden sollten, damit [!DNL Intelligent Services] nützliche Einblicke generiert. In diesem Abschnitt werden der Anwendungsfall und die erwarteten Daten für diese Felder beschrieben und Links zur Referenzdokumentation für weitere Beispiele bereitgestellt.
+Es gibt mehrere Schlüsselfelder innerhalb der CEE-Feldergruppe, die verwendet werden sollten, damit [!DNL Intelligent Services] nützliche Einblicke gewinnen können. In diesem Abschnitt werden der Anwendungsfall und die erwarteten Daten für diese Felder beschrieben. Außerdem finden Sie Links zur Referenzdokumentation für weitere Beispiele.
 
-### Obligatorische Felder
+### Pflichtfelder
 
-Es wird zwar dringend empfohlen, alle Schlüsselfelder zu verwenden, es gibt jedoch zwei Felder, die **erforderlich** sind, damit [!DNL Intelligent Services] funktioniert:
+Die Verwendung aller Schlüsselfelder wird zwar dringend empfohlen, es gibt jedoch zwei Felder, die **erforderlich** sind, damit [!DNL Intelligent Services] funktioniert:
 
 * [Ein primäres Identitätsfeld](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) (nur für Attribution AI obligatorisch)
+* [xdm:channel](#channel) (nur für Attribution AI erforderlich)
 
 #### Primäre Identität {#identity}
 
-Eines der Felder in Ihrem Schema muss als primäres Identitätsfeld festgelegt werden, mit dem [!DNL Intelligent Services] jede Instanz von Zeitreihendaten mit einer einzelnen Person verknüpfen kann.
+Eines der Felder in Ihrem Schema muss als primäres Identitätsfeld festgelegt werden, mit dem [!DNL Intelligent Services] jede Instanz von Zeitreihendaten mit einer einzelnen Person verknüpfen können.
 
-Sie müssen basierend auf der Quelle und der Art Ihrer Daten festlegen, welches Feld als primäre Identität verwendet werden soll. Ein Identitätsfeld muss einen **Identitäts-Namespace** enthalten, der den Typ der Identitätsdaten angibt, die das Feld als Wert erwartet. Zu den gültigen Namespace-Werten gehören:
+Sie müssen basierend auf der Quelle und der Art Ihrer Daten das Feld ermitteln, das am besten als primäre Identität verwendet werden kann. Ein Identitätsfeld muss einen **Identity-Namespace** enthalten, der den Typ der Identitätsdaten angibt, den das Feld als Wert erwartet. Zu den gültigen Namespace-Werten gehören:
 
 >[!NOTE]
 >
->Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
+>Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
 
-* &quot;email&quot;
-* &quot;phone&quot;
-* &quot;mcid&quot;(für Adobe Audience Manager IDs)
-* &quot;aaid&quot;(für Adobe Analytics IDs)
+* „E-Mail“
+* „Telefon“
+* „mcid“ (für Adobe Audience Manager IDs)
+* „aaid“ (für Adobe Analytics IDs)
 
-Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwenden sollten, wenden Sie sich an Adobe Consulting Services , um die beste Lösung zu ermitteln. Wenn keine primäre Identität festgelegt ist, verwendet die Anwendung &quot;Intelligent Service&quot;das folgende Standardverhalten:
+Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwenden sollten, wenden Sie sich an Adobe Consulting Services, um die beste Lösung zu ermitteln. Wenn keine primäre Identität festgelegt ist, verwendet die Intelligent Service-Anwendung das folgende Standardverhalten:
 
 | Standard | Attributions-KI | Kunden-KI |
 | --- | --- | --- |
 | Identitätsspalte | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
 | Namespace | AAID | ECID |
 
-Um eine primäre Identität festzulegen, navigieren Sie auf der Registerkarte **[!UICONTROL Schemas]** zu Ihrem Schema und wählen Sie den Hyperlink für den Schemanamen aus, um den **[!DNL Schema Editor]** zu öffnen.
+Um eine primäre Identität festzulegen, navigieren Sie von der Registerkarte **[!UICONTROL Schemata]** zu Ihrem Schema und wählen Sie den Hyperlink für den Schemanamen aus, um das **[!DNL Schema Editor]** zu öffnen.
 
-![Navigieren zum Schema](./images/data-preparation/navigate_schema.png)
+![Zu Schema navigieren](./images/data-preparation/navigate_schema.png)
 
-Navigieren Sie anschließend zu dem Feld, das Sie als primäre Identität festlegen möchten, und wählen Sie es aus. Das Menü **[!UICONTROL Feldeigenschaften]** wird für dieses Feld geöffnet.
+Navigieren Sie dann zu dem Feld, das Sie als primäre Identität verwenden möchten, und wählen Sie es aus. Das **[!UICONTROL Feldeigenschaften]** Menü wird für dieses Feld geöffnet.
 
-![Wählen Sie das Feld aus](./images/data-preparation/find_field.png)
+![Feld auswählen](./images/data-preparation/find_field.png)
 
-Scrollen Sie im Menü **[!UICONTROL Feldeigenschaften]** nach unten, bis Sie das Kontrollkästchen **[!UICONTROL Identität]** finden. Nachdem Sie das Kontrollkästchen aktiviert haben, wird die Option zum Festlegen der ausgewählten Identität als **[!UICONTROL Primäre Identität]** angezeigt. Aktivieren Sie dieses Kontrollkästchen ebenfalls.
+Scrollen Sie im Menü **[!UICONTROL Feldeigenschaften]** nach unten, bis Sie das Kontrollkästchen **[!UICONTROL Identität]** finden. Nach dem Aktivieren des Kontrollkästchens wird die Option zum Festlegen der ausgewählten Identität als **[!UICONTROL Primäre Identität]** angezeigt. Aktivieren Sie dieses Kontrollkästchen ebenfalls.
 
 ![Kontrollkästchen aktivieren](./images/data-preparation/set_primary_identity.png)
 
-Als Nächstes müssen Sie einen **[!UICONTROL Identity-Namespace]** aus der Liste der vordefinierten Namespaces im Dropdown-Menü angeben. In diesem Beispiel wird der ECID-Namensbereich ausgewählt, da eine Adobe Audience Manager ID `mcid.id` verwendet wird. Wählen Sie **[!UICONTROL Anwenden]** aus, um die Aktualisierungen zu bestätigen, und klicken Sie dann oben rechts auf **[!UICONTROL Speichern]** , um die Änderungen am Schema zu speichern.
+Als Nächstes müssen Sie einen **[!UICONTROL Identity-Namespace]** aus der Liste der vordefinierten Namespaces im Dropdown-Menü angeben. In diesem Beispiel wird der ECID-Namespace ausgewählt, da ein Adobe Audience Manager-ID-`mcid.id` verwendet wird. Wählen Sie **[!UICONTROL Anwenden]** aus, um die Aktualisierungen zu bestätigen, und wählen Sie dann **[!UICONTROL Speichern]** in der oberen rechten Ecke, um die Änderungen an Ihrem Schema zu speichern.
 
 ![Speichern Sie die Änderungen](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
-Dieses Feld gibt den Zeitpunkt an, zu dem das Ereignis aufgetreten ist. Dieser Wert muss als Zeichenfolge gemäß ISO 8601-Standard angegeben werden.
+Dieses Feld stellt den Zeitpunkt dar, zu dem das Ereignis aufgetreten ist. Dieser Wert muss gemäß ISO 8601 als Zeichenfolge angegeben werden.
 
 #### xdm:channel {#channel}
 
@@ -158,7 +158,7 @@ Dieses Feld gibt den Zeitpunkt an, zu dem das Ereignis aufgetreten ist. Dieser W
 >
 >Dieses Feld ist nur bei Verwendung von Attribution AI erforderlich.
 
-Dieses Feld stellt den mit dem ExperienceEvent verknüpften Marketingkanal dar. Das Feld enthält Informationen zum Kanaltyp, Medientyp und Standorttyp.
+Dieses Feld stellt den Marketing-Kanal für das ExperienceEvent dar. Das Feld enthält Informationen zum Kanaltyp, Medientyp und Standorttyp.
 
 ![](./images/data-preparation/channel.png)
 
@@ -173,30 +173,30 @@ Dieses Feld stellt den mit dem ExperienceEvent verknüpften Marketingkanal dar. 
 }
 ```
 
-Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:channel` finden Sie in der Spezifikation des [Erlebniskanalschemas](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) . Beispiele für Zuordnungen finden Sie in der Tabelle [unter ](#example-channels).
+Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:channel` finden Sie in der Spezifikation [Experience-Kanal](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) . Einige Beispielzuordnungen finden Sie in der [Tabelle unten](#example-channels).
 
 #### Beispiel für Kanalzuordnungen {#example-channels}
 
-Die folgende Tabelle enthält einige Beispiele für Marketingkanäle, die dem Schema `xdm:channel` zugeordnet sind:
+Die folgende Tabelle enthält einige Beispiele für Marketing-Kanäle, die dem `xdm:channel`-Schema zugeordnet sind:
 
 | Kanal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Paid Search | https:/<span>/ns.adobe.com/xdm/channel-types/search | bezahlt | Klicks |
-| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | Earned | Klicks |
+| Sozial - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | verdient | Klicks |
 | Anzeige | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | Klicks |
 | E-Mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | bezahlt | Klicks |
-| Interner Referrer | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | Klicks |
-| Display ViewThrough | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | Impressionen |
-| QR-Code-Umleitung | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | Klicks |
-| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | Eigentümer | Klicks |
+| Interne Referenz | https:/<span>/ns.adobe.com/xdm/channel-types/direct | in Besitz | Klicks |
+| Ansicht anzeigen durch | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | Impressionen |
+| QR-Code-Umleitung | https:/<span>/ns.adobe.com/xdm/channel-types/direct | in Besitz | Klicks |
+| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | in Besitz | Klicks |
 
 ### Empfohlene Felder
 
-Die übrigen Schlüsselfelder werden in diesem Abschnitt beschrieben. Diese Felder sind zwar nicht unbedingt erforderlich, damit [!DNL Intelligent Services] funktioniert, es wird jedoch dringend empfohlen, so viele davon wie möglich zu verwenden, um umfassendere Einblicke zu erhalten.
+Die übrigen Schlüsselfelder sind in diesem Abschnitt beschrieben. Diese Felder sind zwar nicht unbedingt erforderlich, damit [!DNL Intelligent Services] funktionieren, es wird jedoch dringend empfohlen, so viele wie möglich davon zu verwenden, um umfassendere Einblicke zu erhalten.
 
 #### xdm:productListItems
 
-Dieses Feld ist ein Array von Artikeln, die von einem Kunden ausgewählte Produkte darstellen, einschließlich Produkt-SKU, Name, Preis und Menge.
+Dieses Feld ist ein Array von Elementen, die von einem Kunden ausgewählte Produkte darstellen, einschließlich der Produkt-SKU, des Namens, des Preises und der Menge.
 
 ![](./images/data-preparation/productListItems.png)
 
@@ -221,11 +221,11 @@ Dieses Feld ist ein Array von Artikeln, die von einem Kunden ausgewählte Produk
 ]
 ```
 
-Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:productListItems` finden Sie in der Spezifikation für das [Commerce-Detailschema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md).
+Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für die `xdm:productListItems` finden Sie in der Spezifikation [Commerce-Details](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) .
 
 #### xdm:commerce
 
-Dieses Feld enthält Commerce-spezifische Informationen zum ExperienceEvent, einschließlich Bestellnummer und Zahlungsinformationen.
+Dieses Feld enthält Commerce-spezifische Informationen zum ExperienceEvent, einschließlich der Bestellnummer und Zahlungsinformationen.
 
 ![](./images/data-preparation/commerce.png)
 
@@ -259,11 +259,11 @@ Dieses Feld enthält Commerce-spezifische Informationen zum ExperienceEvent, ein
   }
 ```
 
-Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:commerce` finden Sie in der Spezifikation für das [Commerce-Detailschema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md).
+Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für die `xdm:commerce` finden Sie in der Spezifikation [Commerce-Details](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) .
 
 #### xdm:web
 
-Dieses Feld stellt Webdetails zum ExperienceEvent dar, z. B. die Interaktion, die Seitendetails und den Referrer.
+Dieses Feld stellt Web-Details dar, die sich auf das ExperienceEvent beziehen, z. B. die Interaktion, Seitendetails und den Referrer.
 
 ![](./images/data-preparation/web.png)
 
@@ -289,11 +289,11 @@ Dieses Feld stellt Webdetails zum ExperienceEvent dar, z. B. die Interaktion, di
 }
 ```
 
-Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:productListItems` finden Sie in der Spezifikation des [ExperienceEvent-Webdetailschemas](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) .
+Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für die `xdm:productListItems` finden Sie in der Spezifikation [ExperienceEvent-Web-Details](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) .
 
 #### xdm:marketing
 
-Dieses Feld enthält Informationen zu Marketingaktivitäten, die mit dem Touchpoint aktiv sind.
+Dieses Feld enthält Informationen zu Marketing-Aktivitäten, die mit dem Touchpoint aktiv sind.
 
 ![](./images/data-preparation/marketing.png)
 
@@ -307,27 +307,27 @@ Dieses Feld enthält Informationen zu Marketingaktivitäten, die mit dem Touchpo
 }
 ```
 
-Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:productListItems` finden Sie in der Spezifikation für [Marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md).
+Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:productListItems` finden Sie in der Spezifikation [Marketing-](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md)).
 
-## Daten zuordnen und erfassen {#mapping}
+## Zuordnen und Aufnehmen von Daten {#mapping}
 
-Nachdem Sie ermittelt haben, ob Ihre Marketing-Ereignisdaten dem CEE-Schema zugeordnet werden können, müssen Sie im nächsten Schritt ermitteln, welche Daten Sie in [!DNL Intelligent Services] importieren möchten. Alle historischen Daten, die in [!DNL Intelligent Services] verwendet werden, müssen innerhalb des Zeitfensters von mindestens vier Monaten mit Daten liegen, zuzüglich der Anzahl der Tage, die als Lookback-Zeitraum vorgesehen sind.
+Nachdem Sie ermittelt haben, ob Ihre Marketing-Ereignisdaten dem CEE-Schema zugeordnet werden können, besteht der nächste Schritt darin, zu bestimmen, welche Daten Sie in [!DNL Intelligent Services] importieren müssen. Alle in [!DNL Intelligent Services] verwendeten historischen Daten müssen innerhalb des Mindestzeitfensters von vier Monaten liegen, plus der Anzahl der Tage, die als Lookback-Zeitraum vorgesehen sind.
 
-Wenden Sie sich nach der Entscheidung über den zu sendenden Datenbereich an Adobe Consulting Services , um Ihre Daten dem Schema zuzuordnen und in den Dienst zu integrieren.
+Nachdem Sie den Datenbereich bestimmt haben, den Sie senden möchten, wenden Sie sich an Adobe Consulting Services, um Ihre Daten dem Schema zuzuordnen und in den Service aufzunehmen.
 
-Wenn Sie über ein [!DNL Adobe Experience Platform] -Abonnement verfügen und die Daten selbst zuordnen und erfassen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
+Wenn Sie über ein [!DNL Adobe Experience Platform]-Abonnement verfügen und die Daten selbst zuordnen und aufnehmen möchten, führen Sie die im folgenden Abschnitt beschriebenen Schritte aus.
 
 ### Verwenden von Adobe Experience Platform
 
 >[!NOTE]
 >
->Die folgenden Schritte erfordern ein Abonnement für Experience Platform. Wenn Sie keinen Zugriff auf Platform haben, fahren Sie mit dem Abschnitt [Nächste Schritte](#next-steps) fort.
+>Für die folgenden Schritte ist ein Abonnement von Experience Platform erforderlich. Wenn Sie keinen Zugriff auf Platform haben, fahren Sie mit dem Abschnitt [nächsten Schritte](#next-steps) fort.
 
-In diesem Abschnitt wird der Workflow für die Zuordnung und Aufnahme von Daten in Experience Platform zur Verwendung in [!DNL Intelligent Services] beschrieben, einschließlich Links zu Tutorials für detaillierte Schritte.
+In diesem Abschnitt wird der Workflow für die Zuordnung und Aufnahme von Daten in Experience Platform zur Verwendung in [!DNL Intelligent Services] beschrieben, einschließlich Links zu Tutorials mit detaillierten Schritten.
 
 #### Erstellen eines CEE-Schemas und -Datensatzes
 
-Wenn Sie bereit sind, Ihre Daten für die Aufnahme vorzubereiten, besteht der erste Schritt darin, ein neues XDM-Schema zu erstellen, das die CEE-Feldergruppe verwendet. In den folgenden Tutorials wird das Erstellen eines neuen Schemas in der Benutzeroberfläche oder API erläutert:
+Wenn Sie bereit sind, Ihre Daten für die Aufnahme vorzubereiten, besteht der erste Schritt darin, ein neues XDM-Schema zu erstellen, das die CEE-Feldergruppe verwendet. In den folgenden Tutorials wird erläutert, wie Sie ein neues Schema in der Benutzeroberfläche oder API erstellen:
 
 * [Erstellen eines Schemas in der Benutzeroberfläche](../xdm/tutorials/create-schema-ui.md)
 * [Erstellen eines Schemas in der API](../xdm/tutorials/create-schema-api.md)
@@ -336,36 +336,36 @@ Wenn Sie bereit sind, Ihre Daten für die Aufnahme vorzubereiten, besteht der er
 >
 >Die obigen Tutorials folgen einem allgemeinen Workflow zum Erstellen eines Schemas. Bei der Auswahl einer Klasse für das Schema müssen Sie die **XDM ExperienceEvent-Klasse** verwenden. Nachdem diese Klasse ausgewählt wurde, können Sie die CEE-Feldergruppe zum Schema hinzufügen.
 
-Nachdem Sie die CEE-Feldergruppe zum Schema hinzugefügt haben, können Sie weitere Feldergruppen hinzufügen, die für zusätzliche Felder in Ihren Daten erforderlich sind.
+Nachdem Sie die CEE-Feldergruppe zum Schema hinzugefügt haben, können Sie bei Bedarf weitere Feldergruppen für zusätzliche Felder in Ihren Daten hinzufügen.
 
-Nachdem Sie das Schema erstellt und gespeichert haben, können Sie einen neuen Datensatz erstellen, der auf diesem Schema basiert. In den folgenden Tutorials wird der Prozess zum Erstellen eines neuen Datensatzes in der Benutzeroberfläche oder API erläutert:
+Nachdem Sie das Schema erstellt und gespeichert haben, können Sie einen neuen Datensatz basierend auf diesem Schema erstellen. In den folgenden Tutorials wird erläutert, wie Sie einen neuen Datensatz in der Benutzeroberfläche oder API erstellen:
 
-* [Erstellen Sie einen Datensatz in der Benutzeroberfläche](../catalog/datasets/user-guide.md#create) (folgen Sie dem Workflow für die Verwendung eines vorhandenen Schemas)
-* [Datensatz in der API erstellen](../catalog/datasets/create.md)
+* [Erstellen eines Datensatzes in der Benutzeroberfläche](../catalog/datasets/user-guide.md#create) (befolgen Sie den Workflow zur Verwendung eines vorhandenen Schemas)
+* [Erstellen eines Datensatzes in der API](../catalog/datasets/create.md)
 
 Nachdem der Datensatz erstellt wurde, können Sie ihn in der Platform-Benutzeroberfläche im Arbeitsbereich **[!UICONTROL Datensätze]** finden.
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Identitätsfelder zum Datensatz hinzufügen
+#### Hinzufügen von Identitätsfeldern zum Datensatz
 
-Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics] oder einer anderen externen Quelle abrufen, können Sie ein Schemafeld als Identitätsfeld festlegen. Um ein Schemafeld als Identitätsfeld festzulegen, sehen Sie sich den Abschnitt zum Festlegen von Identitätsfeldern im Tutorial [UI-Tutorial](../xdm/tutorials/create-schema-ui.md#identity-field) oder im [API-Tutorial](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) zum Erstellen eines Schemas an.
+Wenn Sie Daten aus [!DNL Adobe Audience Manager], [!DNL Adobe Analytics] oder einer anderen externen Quelle importieren, haben Sie die Möglichkeit, ein Schemafeld als Identitätsfeld festzulegen. Um ein Schemafeld als Identitätsfeld festzulegen, lesen Sie den Abschnitt zum Festlegen von Identitätsfeldern im [UI-Tutorial](../xdm/tutorials/create-schema-ui.md#identity-field) oder [API-Tutorial](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) zum Erstellen eines Schemas.
 
-Wenn Sie Daten aus einer lokalen CSV-Datei erfassen, können Sie mit dem nächsten Abschnitt über die [Zuordnung und Aufnahme von Daten](#ingest) fortfahren.
+Wenn Sie Daten aus einer lokalen CSV-Datei erfassen, können Sie mit dem nächsten Abschnitt zum Thema [Zuordnen und Aufnehmen von Daten“ ](#ingest).
 
-#### Daten zuordnen und erfassen {#ingest}
+#### Zuordnen und Aufnehmen von Daten {#ingest}
 
-Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Platform erfassen. Anweisungen dazu, wie Sie dies in der Benutzeroberfläche durchführen, finden Sie im Tutorial zum [Zuordnen einer CSV-Datei zu einem XDM-Schema](../ingestion/tutorials/map-csv/overview.md) . Sie können die folgende [JSON-Beispieldatei](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) verwenden, um den Aufnahmevorgang zu testen, bevor Sie Ihre eigenen Daten verwenden.
+Nachdem Sie ein CEE-Schema und einen Datensatz erstellt haben, können Sie mit der Zuordnung Ihrer Datentabellen zum Schema beginnen und diese Daten in Platform aufnehmen. Anweisungen dazu, wie Sie [ der Benutzeroberfläche durchführen, finden Sie im Tutorial ](../ingestion/tutorials/map-csv/overview.md) Zuordnen einer CSV-Datei zu einem XDM-Schema . Sie können die folgende [JSON-Beispieldatei) verwenden](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) um den Aufnahmeprozess zu testen, bevor Sie Ihre eigenen Daten verwenden.
 
-Nachdem ein Datensatz ausgefüllt wurde, kann derselbe Datensatz zur Aufnahme zusätzlicher Datendateien verwendet werden.
+Sobald ein Datensatz ausgefüllt wurde, kann derselbe Datensatz zum Aufnehmen zusätzlicher Datendateien verwendet werden.
 
-Wenn Ihre Daten in einer unterstützten Drittanbieteranwendung gespeichert sind, können Sie auch einen [Quell-Connector](../sources/home.md) erstellen, um Ihre Marketing-Ereignisdaten in Echtzeit in [!DNL Platform] zu erfassen.
+Wenn Ihre Daten in einem unterstützten Drittanbieterprogramm gespeichert sind, können Sie auch einen [Quell-Connector](../sources/home.md) erstellen, um Ihre Marketing-Ereignisdaten in Echtzeit in [!DNL Platform] aufzunehmen.
 
 ## Nächste Schritte {#next-steps}
 
-Dieses Dokument enthält allgemeine Anleitungen zum Vorbereiten Ihrer Daten für die Verwendung in [!DNL Intelligent Services]. Wenn Sie je nach Anwendungsfall zusätzliche Beratung benötigen, wenden Sie sich an den Adobe Consulting-Support.
+Dieses Dokument enthält allgemeine Anleitungen zum Vorbereiten Ihrer Daten für die Verwendung in [!DNL Intelligent Services]. Wenn Sie zusätzliche Beratung basierend auf Ihrem Anwendungsfall benötigen, wenden Sie sich bitte an den Adobe Consulting-Support.
 
-Nachdem Sie einen Datensatz erfolgreich mit Ihren Kundenerlebnisdaten ausgefüllt haben, können Sie mit [!DNL Intelligent Services] Einblicke generieren. Erste Schritte finden Sie in den folgenden Dokumenten:
+Nachdem Sie einen Datensatz mit Ihren Kundenerlebnisdaten erfolgreich ausgefüllt haben, können Sie [!DNL Intelligent Services] verwenden, um Einblicke zu generieren. Informationen zu den ersten Schritten finden Sie in den folgenden Dokumenten:
 
 * [Attribution AI – Übersicht](./attribution-ai/overview.md)
 * [Customer AI – Übersicht](./customer-ai/overview.md)

@@ -10,7 +10,7 @@ ht-degree: 91%
 
 ---
 
-# Auditprotokolle in Customer AI
+# Audit-Protokolle in Kunden-KI
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, werden Benutzeraktivitäten innerhalb des Kunden-KI-Workflows jetzt in Audit-Protokollen erfasst, um benutzergesteuerte Änderungen an den Kunden-KI-Modellen nachzuvollziehen. Diese Protokolle bilden einen Audit-Trail, der Ihnen bei der Fehlerbehebung und Ihrem Unternehmen helfen kann, die Richtlinien zur Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.  Wenn Sie dem US-amerikanischen Health Insurance Portability and Accounability Act (HIPAA) zum Schutz von Patientendaten unterliegen und zulässige sensible personenbezogene Daten über Attributions-KI oder Kunden-KI erstellen, empfangen, verwalten oder übertragen, sind Sie für die Ausführung einer Geschäftspartnervereinbarung mit Adobe und Healthcare Shield-Lizenzierung verantwortlich.
 
@@ -18,8 +18,8 @@ In einem Audit-Protokoll wird festgehalten, wer welche Aktion wann ausgeführt h
 
 [Die im Arbeitsbereich „Kunden-KI “ausgewählten Audit-Protokolle](../../customer-ai/images/data-governance/audit-logs-cai.png)
 
-## Zugriff auf Prüfprotokolle
+## Zugriff auf Auditprotokolle
 
-Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei auftretenden Aktivitäten automatisch Prüfprotokolle erfasst. Sie müssen die Datenerfassung in Audit-Protokollen nicht manuell aktivieren.
+Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei Aktivitäten automatisch Auditprotokolle erfasst. Sie müssen die Datenerfassung in Audit-Protokollen nicht manuell aktivieren.
 
 Um Audit-Protokolle anzeigen und exportieren zu können, benötigen Sie in der Adobe-Konsole die Zugriffsberechtigung zum Zugriff auf Audit-Protokolle. Informationen zum Verwalten individueller Berechtigungen für Kunden-KI-Funktionen finden Sie in der [Dokumentation zur Zugriffssteuerung](../cai-data-governance/access-controls.md).

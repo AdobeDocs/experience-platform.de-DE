@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Experience Platform-API-Grundlagen
-description: In diesem Dokument erhalten Sie einen kurzen Überblick über einige der zugrunde liegenden Technologien und Syntaxen, die mit Experience Platform-APIs verbunden sind.
+title: Experience Platform API-Grundlagen
+description: Dieses Dokument bietet einen kurzen Überblick über einige zugrunde liegende Technologien und Syntaxen, die mit Experience Platform-APIs verbunden sind.
 role: Developer
 feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
@@ -13,17 +13,17 @@ ht-degree: 50%
 
 ---
 
-# Experience Platform-API-Grundlagen
+# Experience Platform API-Grundlagen
 
-Adobe Experience Platform-APIs setzen verschiedene zugrunde liegende Technologien und Syntaxen ein, die für eine effektive Verwaltung von JSON-basierten [!DNL Platform] -Ressourcen wichtig sind. Dieses Dokument bietet einen kurzen Überblick über diese Technologien sowie Links zur externen Dokumentation für weitere Informationen.
+Adobe Experience Platform-APIs verwenden mehrere zugrunde liegende Technologien und Syntaxen, die für das effektive Verwalten von JSON-basierten [!DNL Platform] wichtig sind. Dieses Dokument bietet einen kurzen Überblick über diese Technologien sowie Links zur externen Dokumentation für weitere Informationen.
 
 ## JSON Pointer {#json-pointer}
 
-JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) zur Identifizierung bestimmter Werte in JSON-Dokumenten. Ein JSON Pointer ist eine Zeichenfolge aus Token, die durch `/`-Zeichen getrennt sind und entweder Objektschlüssel oder Array-Indizes angeben. Die Token können eine Zeichenfolge oder eine Zahl sein. JSON Pointer-Zeichenfolgen werden in vielen PATCH-Vorgängen für [!DNL Platform] -APIs verwendet, wie weiter unten in diesem Dokument beschrieben wird. Weitere Informationen zu JSON Pointer finden Sie in der Dokumentation [JSON Pointer – Überblick](https://rapidjson.org/md_doc_pointer.html).
+JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) zur Identifizierung bestimmter Werte in JSON-Dokumenten. Ein JSON Pointer ist eine Zeichenfolge aus Token, die durch `/`-Zeichen getrennt sind und entweder Objektschlüssel oder Array-Indizes angeben. Die Token können eine Zeichenfolge oder eine Zahl sein. JSON-Zeiger -Zeichenfolgen werden in vielen PATCH-Vorgängen für [!DNL Platform]-APIs verwendet, wie weiter unten in diesem Dokument beschrieben. Weitere Informationen zu JSON Pointer finden Sie in der Dokumentation [JSON Pointer – Überblick](https://rapidjson.org/md_doc_pointer.html).
 
 ### Beispiel für ein JSON-Schema-Objekt
 
-Die folgende JSON-Datei stellt ein vereinfachtes XDM-Schema dar, dessen Felder mithilfe von JSON Pointer-Zeichenfolgen referenziert werden können. Beachten Sie, dass alle Felder, die mit benutzerdefinierten Schemafeldergruppen hinzugefügt wurden (z. B. `loyaltyLevel`), unter einem `_{TENANT_ID}` -Objekt benannt sind, während Felder, die mit Kernfeldgruppen hinzugefügt wurden (z. B. `fullName`), nicht.
+Das folgende JSON stellt ein vereinfachtes XDM-Schema dar, dessen Felder mit JSON Pointer-Zeichenfolgen referenziert werden können. Beachten Sie, dass alle Felder, die mithilfe benutzerdefinierter Schemafeldgruppen (z. B. `loyaltyLevel`) hinzugefügt wurden, unter einem `_{TENANT_ID}`-Objekt einen Namespace aufweisen, während Felder, die mithilfe von Kernfeldgruppen (z. B. `fullName`) hinzugefügt wurden, dies nicht tun.
 
 ```json
 {
@@ -87,18 +87,18 @@ Die folgende JSON-Datei stellt ein vereinfachtes XDM-Schema dar, dessen Felder m
 | JSON Pointer | wird zu |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Gibt einen Verweis auf das Feld `fullName` zurück, das von einer Kernfeldgruppe bereitgestellt wird.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Gibt einen Verweis auf das Feld `loyaltyLevel` zurück, das von einer benutzerdefinierten Feldergruppe bereitgestellt wird.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Gibt einen Verweis auf das `fullName`-Feld zurück, das von einer Kernfeldgruppe bereitgestellt wird.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Gibt einen Verweis auf das `loyaltyLevel` Feld zurück, das von einer benutzerdefinierten Feldergruppe bereitgestellt wird.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->Beim Umgang mit den Attributen `xdm:sourceProperty` und `xdm:destinationProperty` von [!DNL Experience Data Model] (XDM)-Deskriptoren müssen alle `properties` -Schlüssel **excluded** aus der JSON Pointer-Zeichenfolge sein. Weitere Informationen finden Sie im Unterhandbuch zum [!DNL Schema Registry] API-Entwicklerhandbuch zu [Deskriptoren](../xdm/api/descriptors.md) .
+>Beim Umgang mit den `xdm:sourceProperty`- und `xdm:destinationProperty`-Attributen von [!DNL Experience Data Model] (XDM)-Deskriptoren müssen alle `properties` Schlüssel aus **JSON-**-Zeichenfolge ausgeschlossen) werden. Weitere Informationen finden Sie im Entwicklerhandbuch für die [!DNL Schema Registry]-API unter [Deskriptoren](../xdm/api/descriptors.md) .
 
 ## JSON Patch {#json-patch}
 
-Es gibt viele PATCH-Vorgänge für [!DNL Platform] -APIs, die JSON Patch-Objekte für ihre Anfrage-Payloads akzeptieren. JSON Patch ist ein standardisiertes Format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) zur Beschreibung von Änderungen an einem JSON-Dokument. Damit können Sie Teilaktualisierungen zu JSON definieren, ohne das gesamte Dokument in einem Anfragetext senden zu müssen.
+Es gibt viele PATCH-Vorgänge für [!DNL Platform]-APIs, die JSON-Patch-Objekte für ihre Anfrage-Payloads akzeptieren. JSON Patch ist ein standardisiertes Format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) zur Beschreibung von Änderungen an einem JSON-Dokument. Damit können Sie Teilaktualisierungen zu JSON definieren, ohne das gesamte Dokument in einem Anfragetext senden zu müssen.
 
 ### Beispiel für ein JSON Patch-Objekt
 
@@ -109,7 +109,7 @@ Es gibt viele PATCH-Vorgänge für [!DNL Platform] -APIs, die JSON Patch-Objekte
 }
 ```
 
-* `op`: Die Art des Patch-Vorgangs. Obwohl JSON Patch mehrere verschiedene Vorgangsarten unterstützt, sind nicht alle PATCH-Vorgänge in [!DNL Platform] -APIs mit jedem Vorgangstyp kompatibel. Verfügbare Vorgangsarten sind:
+* `op`: Die Art des Patch-Vorgangs. JSON Patch unterstützt zwar mehrere verschiedene Vorgangstypen, jedoch sind nicht alle PATCH-Vorgänge in [!DNL Platform] APIs mit jedem Vorgangstyp kompatibel. Verfügbare Vorgangsarten sind:
    * `add`
    * `remove`
    * `replace`
@@ -126,4 +126,4 @@ JSON-Schema ist ein Format, mit dem die Struktur von JSON-Daten beschrieben und 
 
 ## Nächste Schritte
 
-In diesem Dokument wurden einige der Technologien und Syntaxen für die Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] vorgestellt. Weitere Informationen zum Arbeiten mit Platform-APIs, einschließlich Best Practices, finden Sie im Leitfaden [Erste Schritte](api-guide.md) . Antworten auf häufig gestellte Fragen finden Sie im [Handbuch zur Fehlerbehebung bei Platform](troubleshooting.md).
+In diesem Dokument wurden einige der Technologien und Syntaxen vorgestellt, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] verbunden sind. Weitere Informationen zum Arbeiten mit Platform[APIs, einschließlich Best ](api-guide.md), finden Sie im Handbuch „Erste Schritte“. Antworten auf häufig gestellte Fragen finden Sie im [Handbuch zur Fehlerbehebung bei Platform](troubleshooting.md).

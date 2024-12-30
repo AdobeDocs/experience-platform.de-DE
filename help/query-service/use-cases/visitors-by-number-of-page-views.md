@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
-title: Besucher nach Anzahl Seitenansichten auflisten
-description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um eine Liste von Besuchern abzurufen, die nach der Anzahl der Seitenansichten organisiert ist.
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;experienceEvent-Abfragen;experienceEvent-Abfrage;Erlebnisereignisabfrage;
+title: Besuchende nach Anzahl der Seitenansichten auflisten
+description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um eine Liste der Besucher abzurufen, die nach der Anzahl der Seitenansichten organisiert ist.
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -10,15 +10,15 @@ ht-degree: 1%
 
 ---
 
-# Besucher nach der Anzahl der Seitenansichten auflisten
+# Besuchende nach Anzahl der Seitenansichten auflisten
 
-Dieses Dokument enthält ein Beispiel für SQL, das zum Abrufen einer Liste von Besuchern erforderlich ist, die nach der Anzahl der Seitenansichten organisiert sind. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Im Abschnitt [Nächste Schritte](#next-steps) finden Sie weitere Anwendungsfälle, bei denen [!DNL Experience Events] zum Generieren von Besucherberichten erforderlich ist.
+Dieses Dokument enthält ein Beispiel für den SQL-Code, der zum Abrufen einer Besucherliste erforderlich ist, die nach der Anzahl der Seitenansichten organisiert ist. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die ExperienceEvent-Klasse des Experience-Datenmodells (XDM) dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Service interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Weitere Anwendungsfälle, bei ](#next-steps) Besucherberichte erstellt werden [!DNL Experience Events], finden Sie [ Abschnitt „Nächste Schritte“.
 
-Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch Kombination von Query Service mit [!DNL Experience Events] können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit [!DNL Experience Events].
+Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch die Kombination von Abfrage-Service und [!DNL Experience Events] können Sie Verhaltenstrends bei Ihren Benutzenden effektiv verfolgen. Im folgenden Dokument finden Sie Beispiele für Abfragen mit [!DNL Experience Events].
 
 ## Ziel
 
-Im folgenden Beispiel wird ein Bericht erstellt, in dem die 10 IDs der Benutzer aufgelistet werden, die die meisten Seiten angezeigt haben.
+Im folgenden Beispiel wird ein Bericht erstellt, der die 10 IDs der Benutzer auflistet, die die meisten Seiten angesehen haben.
 
 ```sql
 SELECT 
@@ -50,10 +50,10 @@ Die Abfrageergebnisse werden in der folgenden Tabelle angezeigt.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie Query Service mit [!DNL Experience Events] verwenden können, um Benutzer aufzulisten, die die meisten Seiten angesehen haben.
+Durch das Lesen dieses Dokuments erhalten Sie ein besseres Verständnis dafür, wie Sie Query Service mit [!DNL Experience Events] verwenden können, um Benutzer aufzulisten, die die meisten Seiten angesehen haben.
 
 In den folgenden Anwendungsfällen erfahren Sie mehr über andere besucherbasierte Anwendungsfälle:
 
 - [Auflisten der vorherigen Sitzungen eines Besuchers.](./list-visitor-sessions.md)
-- [Zeigen Sie einen Rollup-Bericht eines Besuchers an.](./roll-up-report-of-a-visitor.md)
-- [Erstellen Sie einen Trendbericht mit Ereignissen nach Tag.](./trended-report-of-events.md)
+- [Anzeigen eines Datenaggregationsberichts eines Besuchers.](./roll-up-report-of-a-visitor.md)
+- [Erstellen Sie einen Trend-Bericht mit Ereignissen nach Tag.](./trended-report-of-events.md)

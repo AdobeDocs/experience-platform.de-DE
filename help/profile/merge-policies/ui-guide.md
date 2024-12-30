@@ -24,7 +24,7 @@ Um mehr über Zusammenführungsrichtlinien und ihre Rolle in der Experience Plat
 Dieses Handbuch setzt ein Verständnis mehrerer wichtiger [!DNL Experience Platform] Funktionen voraus. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
 * [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform Identity-Dienst](../../identity-service/home.md): Ermöglicht das Echtzeit-Kundenprofil durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in [!DNL Platform] erfasst werden.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in [!DNL Platform] aufgenommen werden.
 * [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Zusammenführungsrichtlinien anzeigen {#view-merge-policies}
@@ -34,13 +34,13 @@ Dieses Handbuch setzt ein Verständnis mehrerer wichtiger [!DNL Experience Platf
 >title="Zusammenführungsrichtlinie nicht gefunden"
 >abstract="Das bedeutet, dass die angeforderte Zusammenführungsrichtlinie von Platform nicht gefunden wurde. Versuchen Sie eine der folgenden Lösungen, um diesen Fehler zu beheben:<ul><li>Stellen Sie sicher, dass die richtige Zusammenführungsrichtlinien-ID in der URL aufgeführt ist.</li><li>Stellen Sie sicher, dass Sie über die richtige Kombination aus Organisation und Sandbox für die Zusammenführungsrichtlinie verfügen, auf die Sie zugreifen möchten.</li></ul>"
 
-In der Benutzeroberfläche von [!DNL Experience Platform] können Sie mit Zusammenführungsrichtlinien beginnen, indem Sie im linken Navigationsbereich die Option **[!UICONTROL Profile]** auswählen und dann die Registerkarte **[!UICONTROL Zusammenführungsrichtlinien]** auswählen.
+In der [!DNL Experience Platform] Benutzeroberfläche können Sie mit Zusammenführungsrichtlinien beginnen, indem Sie im linken Navigationsbereich **[!UICONTROL Profile]** auswählen und dann die Registerkarte **[!UICONTROL Zusammenführungsrichtlinien]** auswählen.
 
 Diese Registerkarte enthält eine Liste aller vorhandenen Zusammenführungsrichtlinien für Ihre Organisation sowie Details für jede Zusammenführungsrichtlinie, einschließlich des Richtliniennamen, ob die Zusammenführungsrichtlinie die standardmäßige Zusammenführungsrichtlinie ist oder nicht, sowie die Schemaklasse, auf die sich die Zusammenführungsrichtlinie bezieht.
 
 ![Die Seite zum Durchsuchen von Zusammenführungsrichtlinien wird angezeigt.](../images/merge-policies/landing.png)
 
-Um auszuwählen, welche Details sichtbar sind, oder zusätzliche Spalten zur Anzeige hinzuzufügen, wählen Sie ![das Symbol für Spalteneinstellungen](../../images/icons/column-settings.png) und wählen Sie einen Spaltennamen aus, um ihn zur Ansicht hinzuzufügen oder daraus zu entfernen.
+Um zu entscheiden, welche Details angezeigt werden sollen, oder um der Anzeige weitere Spalten hinzuzufügen, wählen Sie ![das Symbol Spalteneinstellungen ](../../images/icons/column-settings.png) und wählen Sie einen Spaltennamen aus, um ihn der Ansicht hinzuzufügen oder daraus zu entfernen.
 
 ![Die verfügbaren Optionen zum Anpassen der Seite zum Durchsuchen von Zusammenführungsrichtlinien werden angezeigt.](../images/merge-policies/adjust-view.png)
 
@@ -64,18 +64,18 @@ Im ersten Schritt des Workflows können Sie Ihre Zusammenführungsrichtlinie kon
    * **[!UICONTROL Keine]**: Keine Identitätszusammenfügung durchführen.
    * **[!UICONTROL Privates Diagramm]**: Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
 * **[!UICONTROL Standardmäßige Zusammenführungsrichtlinie]**: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie der Standard für Ihre Organisation sein soll oder nicht. Wenn die Auswahl aktiviert ist, werden Sie in einer Warnung aufgefordert zu bestätigen, dass Sie die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation ändern möchten. Weitere Informationen zu standardmäßigen Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](overview.md).
-  ![Ein Popup, das erklärt, was passiert, wenn die Zusammenführungsrichtlinie als standardmäßige Zusammenführungsrichtlinie festgelegt ist.](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Zusammenführungsrichtlinie „Active-On-Edge“]**: Ein Umschalt-Button, mit dem Sie festlegen können, ob diese Zusammenführungsrichtlinie in den Randbereichen aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit eine Zielgruppe an der Kante aktiviert werden kann (als Edge-Zielgruppe markiert), muss sie an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante als aktiv markiert ist. Wenn eine Zielgruppe **nicht** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am Rand markiert ist, wird die Zielgruppe nicht als aktiv am Rand markiert und als Streaming-Zielgruppe markiert. Darüber hinaus kann jede Sandbox in einer Organisation nur über eine **1} Zusammenführungsrichtlinie verfügen, die an der Kante aktiv ist.**
+  ![Ein Pop-up, in dem erläutert wird, was passiert, wenn die Zusammenführungsrichtlinie als standardmäßige Zusammenführungsrichtlinie festgelegt ist.](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Zusammenführungsrichtlinie „Active-On-Edge“]**: Ein Umschalt-Button, mit dem Sie festlegen können, ob diese Zusammenführungsrichtlinie in den Randbereichen aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit eine Zielgruppe in Edge aktiviert (als Edge-Zielgruppe markiert) werden kann, muss sie an eine Zusammenführungsrichtlinie gebunden sein, die als in Edge aktiv markiert ist. Wenn eine Zielgruppe **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird die Zielgruppe nicht als im Randbereich aktiv, sondern als Streaming-Zielgruppe markiert. Darüber hinaus kann jede Sandbox in einer Organisation nur über **eine** Zusammenführungsrichtlinie verfügen, die im Randbereich aktiv ist.
 
 Nachdem die erforderlichen Felder ausgefüllt wurden, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Workflow fortzufahren.
 
-![Ein abgeschlossener Bildschirm &quot;Konfigurieren&quot;mit hervorgehobener Schaltfläche &quot;Weiter&quot;.](../images/merge-policies/create-complete.png)
+![Ein abgeschlossener Bildschirm Konfigurieren mit hervorgehobener Schaltfläche Weiter.](../images/merge-policies/create-complete.png)
 
 ## [!UICONTROL Vereinigungsschema anzeigen] {#view-union-schema}
 
 Beim Erstellen oder Bearbeiten einer Zusammenführungsrichtlinie können Sie das Vereinigungsschema für die ausgewählte Schemaklasse durch die Auswahl von **[!UICONTROL Vereinigungsschema anzeigen]** anzeigen.
 
-![Die Schaltfläche &quot;Vereinigungsschema anzeigen&quot;wird im Workflow Neue Zusammenführungsrichtlinie hervorgehoben.](../images/merge-policies/view-union-schema.png)
+![Die Schaltfläche „Vereinigungsschema anzeigen“ ist im Workflow „Neue Zusammenführungsrichtlinie“ hervorgehoben.](../images/merge-policies/view-union-schema.png)
 
 Dadurch wird das Dialogfeld [!UICONTROL Vereinigungsschema anzeigen] geöffnet, in dem alle beitragenden Schemata, Identitäten und Beziehungen angezeigt werden, die mit dem Vereinigungsschema verknüpft sind. Sie können das Dialogfeld verwenden, um das Vereinigungsschema auf die gleiche Weise zu untersuchen, wie Sie dies tun, indem Sie auf die Registerkarte [!UICONTROL Vereinigungsschema] im Abschnitt [!UICONTROL Profile] der Platform-Benutzeroberfläche zugreifen.
 
@@ -101,7 +101,7 @@ Wenn Sie **[!UICONTROL Zeitstempel ordered]** als Zusammenführungsmethode ausw�
 >
 >Die Zahl in Klammern neben **[!UICONTROL Profildatensätze]** (z. B. `(37)` in der Abbildung) zeigt die Gesamtanzahl der einzuschließenden Profildatensätze an.
 
-![Ein Bild, das die ausgewählte zeitstempelsortierte Zusammenführungsmethode anzeigt.](../images/merge-policies/timestamp-ordered.png)
+![Ein Bild, das die ausgewählte Zusammenführungsmethode Zeitstempel geordnet anzeigt.](../images/merge-policies/timestamp-ordered.png)
 
 >[!TAB Datensatzpriorität]
 
@@ -117,7 +117,7 @@ Wenn Datensätze ausgewählt sind, werden sie zum Abschnitt **[!UICONTROL Datens
 
 Bei Auswahl eines Datensatzes wird auch der Abschnitt **[!UICONTROL Vereinigungsschema]** aktualisiert und die Felder im Vereinigungsschema angezeigt, zu denen jeder Datensatz Daten beiträgt. Weitere Informationen zu Vereinigungsschemata, einschließlich der Interaktion mit Visualisierungen in der Benutzeroberfläche, finden Sie im [UI-Handbuch für Vereinigungsschemas](../ui/union-schema.md)
 
-![Ein Bild, das die ausgewählte Datensatzpriorität zusammen mit den entsprechenden Einstellungen anzeigt, die Sie auswählen müssen, ob diese Option aktiviert ist.](../images/merge-policies/dataset-precedence.png)
+![Ein Bild, das die ausgewählte Datensatzpriorität zusammen mit den entsprechenden Einstellungen anzeigt, die Sie auswählen müssen, wenn diese Option aktiviert ist.](../images/merge-policies/dataset-precedence.png)
 
 >[!ENDTABS]
 
@@ -149,7 +149,7 @@ Wenn Datensätze ausgewählt sind, werden sie im Abschnitt [!UICONTROL Datensät
 
 ExperienceEvent-Datensätze können nicht manuell sortiert werden. Stattdessen werden die Attribute in den ExperienceEvent-Datensätzen an die Profil-Datensätze angehängt, wenn sie Teil desselben Profilfragments sind.
 
-Ähnlich wie bei der Auswahl von Profildatensätzen wird durch die Auswahl eines ExperienceEvent-Datensatzes auch der Abschnitt **[!UICONTROL Vereinigungsschema]** aktualisiert und die Felder im Vereinigungsschema angezeigt, zu denen jeder Datensatz Daten beiträgt. Weitere Informationen zu Vereinigungsschemas, einschließlich der Interaktion mit den Visualisierungen in der Benutzeroberfläche, finden Sie im Handbuch [UI für Vereinigungsschemas](../ui/union-schema.md) .
+Ähnlich wie bei der Auswahl von Profildatensätzen wird durch die Auswahl eines ExperienceEvent-Datensatzes auch der Abschnitt **[!UICONTROL Vereinigungsschema]** aktualisiert und die Felder im Vereinigungsschema angezeigt, zu denen jeder Datensatz Daten beiträgt. Weitere Informationen zu Vereinigungsschemata, einschließlich der Interaktion mit Visualisierungen in der Benutzeroberfläche, finden Sie im [Handbuch zur Benutzeroberfläche des Vereinigungsschemas](../ui/union-schema.md).
 
 ![Die auswählbaren ExperienceEvent-Datensätze werden angezeigt.](../images/merge-policies/dataset-precedence-experienceevent.png)
 
@@ -195,7 +195,7 @@ Wenn der Bildschirm **[!UICONTROL Zusammenführungsrichtlinie bearbeiten]** ange
 
 Wählen Sie **[!UICONTROL Weiter]** aus, um den Arbeitsablauf für Zusammenführungsrichtlinien zu durchlaufen und die in der Zusammenführungsrichtlinie enthaltene Zusammenführungsmethode und Datensätze zu aktualisieren.
 
-![Der Workflow &quot;Zusammenführungsrichtlinie bearbeiten&quot;wird angezeigt.](../images/merge-policies/edit-screen.png)
+![Der Workflow Zusammenführungsrichtlinie bearbeiten wird angezeigt.](../images/merge-policies/edit-screen.png)
 
 Nachdem Sie die erforderlichen Änderungen vorgenommen haben, überprüfen Sie Ihre Zusammenführungsrichtlinie und wählen Sie **[!UICONTROL Beenden]** aus, um Ihre Änderungen zu speichern und zur Registerkarte [!UICONTROL Zusammenführungsrichtlinien] zurückzukehren.
 
@@ -203,13 +203,13 @@ Nachdem Sie die erforderlichen Änderungen vorgenommen haben, überprüfen Sie I
 >
 >Das Ändern einer Zusammenführungsrichtlinie kann sich auf die Segmentierung und die Profilergebnisse auswirken, da dadurch die Art und Weise verändert wird, wie Datenkonflikte gelöst werden. Prüfen Sie die Änderungen an Ihren Zusammenführungsrichtlinien sorgfältig, bevor Sie sie speichern.
 
-![Die Überprüfungsseite für den Workflow &quot;Richtlinien bearbeiten&quot;wird angezeigt.](../images/merge-policies/edit-review.png)
+![Die Überprüfungsseite für den Workflow „Richtlinie bearbeiten“ wird angezeigt.](../images/merge-policies/edit-review.png)
 
 ## Verstöße gegen Data Governance-Richtlinien
 
-Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte [!DNL Platform] -Daten ausführen dürfen oder nicht.
+Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte [!DNL Platform] ausführen dürfen oder nicht.
 
-Wenn beispielsweise eine Zusammenführungsrichtlinie verwendet wurde, um eine Zielgruppe zu erstellen, die für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation über eine Datennutzungsrichtlinie verfügte, die den Export bestimmter Daten an Dritte verhinderte, erhalten Sie beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern, eine Benachrichtigung über einen Verstoß gegen die Data Governance-Richtlinie **[!UICONTROL erkannt]** .
+Wenn zum Beispiel eine Zusammenführungsrichtlinie zum Erstellen einer Zielgruppe verwendet wurde, die für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation eine Datennutzungsrichtlinie aufwiese, die den Export bestimmter Daten an Dritte verhinderte, würden Sie beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern, eine **[!UICONTROL Verletzung der Data Governance]** Richtlinie erkannt) erhalten.
 
 Diese Benachrichtigung enthält eine Liste der Datennutzungsrichtlinien, die verletzt wurden, und ermöglicht Ihnen das Anzeigen von Details zur Verletzung, indem Sie eine Richtlinie aus der Liste auswählen. Bei Auswahl einer verletzten Richtlinie liefert der Tab **[!UICONTROL Datenverlaufskontrolle]** den Grund für die Verletzung und die betroffenen Aktivierungen. So erhalten Sie genauere Details zur Verletzung der jeweiligen Datennutzungsrichtlinie.
 
@@ -217,4 +217,4 @@ Um mehr über Data Governance in Adobe Experience Platform zu erfahren, lesen Si
 
 ## Nächste Schritte
 
-Nachdem Sie Zusammenführungsrichtlinien für Ihre Organisation erstellt und konfiguriert haben, können Sie diese verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppen aus Ihren Profildaten zu erstellen. Weitere Informationen zum Erstellen und Verwenden von Zielgruppen mit der [!DNL Experience Platform] -Benutzeroberfläche und APIs finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md) .
+Nachdem Sie Zusammenführungsrichtlinien für Ihre Organisation erstellt und konfiguriert haben, können Sie sie verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und aus Ihren Profildaten Zielgruppen zu erstellen. Weitere Informationen [ Erstellen und Verwenden von Audiences mithilfe der [!DNL Experience Platform]-Benutzeroberfläche und von APIs finden Sie in der ](../../segmentation/home.md)Segmentierungsübersicht) .

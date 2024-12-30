@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared statement;prepared;sql
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;vorbereitete Anweisungen;vorbereitet;SQL;
 solution: Experience Platform
 title: Vorbereitete Anweisungen in Query Service
-description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen als Vorlage zu verwenden. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage.
+description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen zu erstellen. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 78%
 
 # Vorbereitete Anweisungen
 
-In SQL dienen vorbereitete Anweisungen dazu, ähnliche Abfragen oder Aktualisierungen als Vorlagen zu erstellen. Adobe Experience Platform [!DNL Query Service] unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage. Dies kann die Leistung optimieren, da Sie eine Abfrage nicht mehr wiederholt erneut analysieren müssen.
+In SQL dienen vorbereitete Anweisungen dazu, ähnliche Abfragen oder Aktualisierungen als Vorlagen zu erstellen. Adobe Experience Platform [!DNL Query Service] unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage. Dies kann die Leistung optimieren, da Sie eine Abfrage nicht mehr wiederholt neu parsen müssen.
 
 ## Verwenden von vorbereiteten Anweisungen
 
@@ -23,7 +23,7 @@ Bei Verwendung vorbereiteter Anweisungen werden die folgenden Syntaxen unterstü
 - [EXECUTE](#execute)
 - [DEALLOCATE](#deallocate)
 
-### Vorbereiten einer vorbereiteten Anweisung {#prepare}
+### Vorbereitete Anweisung {#prepare}
 
 Diese SQL-Abfrage speichert die geschriebene SELECT-Abfrage mit dem Namen `PLAN_NAME`. Sie können Variablen, z. B. `$1`, anstelle von tatsächlichen Werten nutzen. Diese vorbereitete Erklärung wird während der aktuellen Sitzung gespeichert. Beachten Sie, dass bei den Plannamen **nicht** zwischen Groß- und Kleinschreibung unterschieden wird.
 
@@ -39,7 +39,7 @@ PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### Vorbereitete Anweisung ausführen {#execute}
+### Ausführen einer vorbereiteten Anweisung {#execute}
 
 Diese SQL-Abfrage verwendet die vorbereitete Anweisung, die zuvor erstellt wurde.
 
@@ -55,7 +55,7 @@ EXECUTE {PLAN_NAME}('{PARAMETERS}')
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Zuweisung einer vorbereiteten Anweisung aufheben {#deallocate}
+### Aufheben der Zuordnung einer vorbereiteten Anweisung {#deallocate}
 
 Diese SQL-Abfrage dient zum Löschen der benannten vorbereiteten Anweisung.
 

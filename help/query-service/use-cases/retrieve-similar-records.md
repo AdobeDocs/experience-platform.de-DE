@@ -1,6 +1,6 @@
 ---
-title: Abrufen ähnlicher Datensätze mit Funktionen mit höherer Reihenfolge
-description: Erfahren Sie, wie Sie anhand einer Ähnlichkeitsmetrik und eines Ähnlichkeitsschwellenwerts ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen identifizieren und abrufen. Dieser Workflow kann aussagekräftige Beziehungen oder Überschneidungen zwischen verschiedenen Datensätzen hervorheben.
+title: Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung
+description: Erfahren Sie, wie Sie ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen basierend auf einer Ähnlichkeitsmetrik und einem Ähnlichkeitsschwellenwert identifizieren und abrufen können. Dieser Workflow kann aussagekräftige Beziehungen oder Überschneidungen zwischen unterschiedlichen Datensätzen hervorheben.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
 source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
 workflow-type: tm+mt
@@ -9,85 +9,85 @@ ht-degree: 3%
 
 ---
 
-# Abrufen ähnlicher Datensätze mit Funktionen höherer Reihenfolge
+# Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung
 
-Verwenden Sie Data Distiller-Funktionen in höherer Reihenfolge, um eine Vielzahl gängiger Anwendungsfälle zu lösen. Um ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen zu identifizieren und abzurufen, verwenden Sie die Filter-, Transform- und Reduzierungsfunktionen, wie in diesem Handbuch beschrieben. Informationen dazu, wie Funktionen mit höherer Reihenfolge zur Verarbeitung komplexer Datentypen verwendet werden können, finden Sie in der Dokumentation zum Verwalten von Array- und Zuordnungsdatentypen ](../sql/higher-order-functions.md).[
+Verwenden Sie Funktionen höherer Ordnung in Data Distiller, um eine Vielzahl gängiger Anwendungsfälle zu lösen. Um ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen zu identifizieren und abzurufen, verwenden Sie die in diesem Handbuch beschriebenen Funktionen zum Filtern, Transformieren und Reduzieren. Informationen dazu, wie Funktionen höherer Ordnung zur Verarbeitung komplexer Datentypen verwendet werden können, finden Sie in der Dokumentation zu [Verwalten von Arrays und Zuordnen von Datentypen](../sql/higher-order-functions.md).
 
-Verwenden Sie dieses Handbuch, um Produkte aus verschiedenen Datensätzen zu identifizieren, die eine signifikante Ähnlichkeit in ihren Eigenschaften oder Attributen aufweisen. Diese Methode bietet u. a. Lösungen für Datendeduplizierung, Datensatzverknüpfung, Empfehlungssysteme, Informationsabruf und Textanalyse.
+Verwenden Sie dieses Handbuch, um Produkte aus verschiedenen Datensätzen zu identifizieren, die in ihren Eigenschaften oder Attributen eine signifikante Ähnlichkeit aufweisen. Diese Methode bietet Lösungen für: Datendeduplizierung, Datensatzverknüpfung, Empfehlungssysteme, Informationsabruf und Textanalyse usw.
 
-In diesem Dokument wird die Implementierung eines Ähnlichkeitsjoin beschrieben, bei dem dann die Data Distiller-Funktionen in höherer Reihenfolge verwendet werden, um die Ähnlichkeit zwischen Datensätzen zu berechnen und sie anhand ausgewählter Attribute zu filtern. Für jeden Schritt des Prozesses werden SQL-Code-Snippets und Erklärungen bereitgestellt. Der Workflow implementiert Ähnlichkeitsverbindungen mithilfe der Jaccard-Ähnlichkeitsmessung und -Tokenisierung mithilfe von Data Distiller-Funktionen höherer Reihenfolge. Diese Methoden werden dann verwendet, um ähnliche oder verwandte Datensätze basierend auf einer Ähnlichkeitsmetrik aus einem oder mehreren Datensätzen zu identifizieren und abzurufen. Zu den wichtigsten Abschnitten des Prozesses gehören: [Tokenisierung mit Funktionen höherer Reihenfolge](#data-transformation), der [Kreuzjoin der eindeutigen Elemente](#cross-join-unique-elements), die [Berechnung der Ähnlichkeit von Jaccard](#compute-the-jaccard-similarity-measure) und die [schwellenbasierte Filterung](#similarity-threshold-filter).
+In diesem Dokument wird der Prozess der Implementierung eines Ähnlichkeits-Joins beschrieben, der dann mithilfe von Data Distiller-Funktionen höherer Ordnung die Ähnlichkeit zwischen Datensätzen berechnet und anhand ausgewählter Attribute filtert. SQL-Code-Snippets und Erläuterungen werden für jeden Schritt des Prozesses bereitgestellt. Der Workflow implementiert Ähnlichkeits-Joins mithilfe des Jaccard-Ähnlichkeitsmaßes und der Tokenisierung mithilfe von Data Distiller-Funktionen höherer Ordnung. Diese Methoden werden dann verwendet, um ähnliche oder verwandte Datensätze aus einem oder mehreren Datensätzen basierend auf einer Ähnlichkeitsmetrik zu identifizieren und abzurufen. Zu den wichtigsten Abschnitten des Prozesses gehören: [Tokenisierung mithilfe von Funktionen höherer Ordnung](#data-transformation) der [Cross-Join von eindeutigen Elementen](#cross-join-unique-elements) die [Jaccard-](#compute-the-jaccard-similarity-measure) und die [Schwellenwert-basierte Filterung](#similarity-threshold-filter).
 
 ## Voraussetzungen
 
 Bevor Sie mit diesem Dokument fortfahren, sollten Sie mit den folgenden Konzepten vertraut sein:
 
-- Ein **Ähnlichkeitsjoin** ist ein Vorgang, der anhand eines Messwerts der Ähnlichkeit zwischen den Datensätzen Verweise aus einer oder mehreren Tabellen identifiziert und abruft. Die wichtigsten Voraussetzungen für einen Ähnlichkeitsjoin sind:
-   - **Ähnlichkeitsmetrik**: Ein Ähnlichkeitsjoin beruht auf einer vordefinierten Ähnlichkeitsmetrik oder einem vordefinierten Maß. Zu diesen Metriken gehören: die Jaccard-Ähnlichkeit, die Ähnlichkeit von Kosinen, Bearbeitungsabstände usw. Die Metrik hängt von der Art der Daten und dem Anwendungsfall ab. Diese Metrik quantifiziert, wie ähnlich oder unähnlich zwei Datensätze sind.
-   - **Schwellenwert**: Mit einem Schwellenwert für die Ähnlichkeit wird bestimmt, wann die beiden Datensätze als ähnlich genug angesehen werden, um in das Join-Ergebnis aufgenommen zu werden. Datensätze, deren Ähnlichkeitswert über dem Schwellenwert liegt, werden als Übereinstimmungen betrachtet.
-- Der Index **Jaccard similarity** oder die Jaccard-Ähnlichkeitsmessung ist eine Statistik, mit der die Ähnlichkeit und Vielfalt von Stichprobensätzen gemessen wird. Dies ist definiert als die Größe der Schnittmenge geteilt durch die Größe der Vereinigung der Stichprobensätze. Die Jaccard-Ähnlichkeitsmessung liegt zwischen null und eins. Eine Jaccard-Ähnlichkeit von null zeigt an, dass keine Ähnlichkeit zwischen den Sets besteht, und eine Jaccard-Ähnlichkeit von eins zeigt an, dass die Sets identisch sind.
-  ![Ein Venendiagramm zur Veranschaulichung der Jaccard-Ähnlichkeitsmessung.](../images/use-cases/jaccard-similarity.png)
-- **Funktionen mit höherer Reihenfolge** in Data Distiller sind dynamische Inline-Tools, die Daten direkt in SQL-Anweisungen verarbeiten und umwandeln. Durch diese vielseitigen Funktionen entfällt die Notwendigkeit mehrerer Schritte bei der Datenbearbeitung, insbesondere bei [komplexen Typen wie Arrays und Maps](../sql/higher-order-functions.md). Durch die Steigerung der Abfragenerffizienz und die Vereinfachung von Umwandlungen tragen Funktionen mit höherer Reihenfolge zu einer agileren Analyse und besseren Entscheidungsfindung in verschiedenen Geschäftsszenarien bei.
+- Ein **Ähnlichkeits-Join** ist ein Vorgang, der Datensatzpaare aus einer oder mehreren Tabellen identifiziert und abruft, basierend auf einem Maß der Ähnlichkeit zwischen den Datensätzen. Die wichtigsten Anforderungen für einen Ähnlichkeits-Join sind wie folgt:
+   - **Ähnlichkeitsmetrik**: Ein Ähnlichkeitsverbund beruht auf einer vordefinierten Ähnlichkeitsmetrik oder -kennzahl. Zu diesen Metriken gehören: die Jaccard-Ähnlichkeit, die Kosinus-Ähnlichkeit, die Bearbeitungsentfernung usw. Die Metrik hängt von der Art der Daten und dem Anwendungsfall ab. Diese Metrik quantifiziert, wie ähnlich oder unähnlich zwei Datensätze sind.
+   - **Schwellenwert**: Ein Ähnlichkeitsschwellenwert wird verwendet, um zu bestimmen, wann die beiden Datensätze als ähnlich genug betrachtet werden, um in das Join-Ergebnis aufgenommen zu werden. Datensätze mit einem Ähnlichkeitswert über dem Schwellenwert werden als Übereinstimmungen betrachtet.
+- Der **Jaccard-Ähnlichkeits**-Index oder die Jaccard-Ähnlichkeitsmessung ist eine Statistik, die verwendet wird, um die Ähnlichkeit und Vielfalt von Beispielsätzen zu messen. Sie wird definiert als die Größe der Schnittmenge dividiert durch die Größe der Vereinigung der Stichprobensätze. Die Jaccard-Ähnlichkeitsmessung erfolgt im Bereich von null bis eins. Eine Jaccard-Ähnlichkeit von null zeigt keine Ähnlichkeit zwischen den Sätzen an, und eine Jaccard-Ähnlichkeit von eins zeigt an, dass die Sätze identisch sind.
+  ![Ein Venn-Diagramm zur Veranschaulichung der Jaccard-Ähnlichkeitsmessung.](../images/use-cases/jaccard-similarity.png)
+- **Funktionen höherer Ordnung** in Data Distiller sind dynamische Inline-Tools, die Daten direkt in SQL-Anweisungen verarbeiten und transformieren. Diese vielseitigen Funktionen machen mehrere Schritte bei der Datenbearbeitung überflüssig, insbesondere beim [Umgang mit komplexen Typen wie Arrays und Karten](../sql/higher-order-functions.md). Durch die Verbesserung der Abfrageeffizienz und die Vereinfachung von Transformationen tragen Funktionen höherer Ordnung zu einer agileren Analyse und besseren Entscheidungsfindung in verschiedenen Geschäftsszenarien bei.
 
 ## Erste Schritte
 
-Die Data Distiller-SKU ist erforderlich, um die Funktionen mit höherer Reihenfolge für Ihre Adobe Experience Platform-Daten auszuführen. Wenn Sie nicht über die Data Distiller-SKU verfügen, wenden Sie sich für weitere Informationen an Ihren Adobe-Kundenbetreuer.
+Die Data Distiller SKU ist erforderlich, um die übergeordneten Funktionen für Ihre Adobe Experience Platform-Daten auszuführen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich an den Kundendienst von Adobe, um weitere Informationen zu erhalten.
 
-## Ähnlichkeit feststellen {#establish-similarity}
+## Ähnlichkeit herstellen {#establish-similarity}
 
-Dieser Anwendungsfall erfordert eine Kennzahl zur Ähnlichkeit von Textzeichenfolgen, die später verwendet werden können, um einen Schwellenwert für die Filterung festzulegen. In diesem Beispiel stellen die Produkte in Satz A und Satz B die Wörter in zwei Dokumenten dar.
+Dieser Anwendungsfall erfordert ein Ähnlichkeitsmaß zwischen Textzeichenfolgen, das später verwendet werden kann, um einen Schwellenwert für die Filterung festzulegen. In diesem Beispiel stellen die Produkte in Satz A und Satz B die Wörter in zwei Dokumenten dar.
 
-Die Jaccard-Ähnlichkeitsmessung kann auf eine Vielzahl von Datentypen angewendet werden, einschließlich Textdaten, kategorischen Daten und Binärdaten. Sie eignet sich auch für die Echtzeit- oder Batch-Verarbeitung, da die Berechnung für große Datensätze rechnereffizient erfolgen kann.
+Das Jaccard-Ähnlichkeitsmaß kann auf eine Vielzahl von Datentypen angewendet werden, darunter Textdaten, kategoriale Daten und Binärdaten. Es eignet sich auch für die Echtzeit- oder Batch-Verarbeitung, da es für große Datensätze rechnereffizient berechnet werden kann.
 
-Produktsatz A und Satz B enthalten die Testdaten für diesen Workflow.
+Die Produktgruppen A und B enthalten die Testdaten für diesen Workflow.
 
 - Produktsatz A: `{iPhone, iPad, iWatch, iPad Mini}`
 - Produktsatz B: `{iPhone, iPad, Macbook Pro}`
 
-Um die Jaccard-Ähnlichkeit zwischen den Produktsätzen A und B zu berechnen, suchen Sie zunächst die **Schnittmenge** (gemeinsame Elemente) der Produktsätze. In diesem Fall `{iPhone, iPad}`. Suchen Sie als Nächstes die **Vereinigung** (alle eindeutigen Elemente) beider Produktsätze. In diesem Beispiel `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
+Um die Jaccard-Ähnlichkeit zwischen den Produktsätzen A und B zu berechnen, suchen Sie zunächst die **Schnittmenge** (gemeinsame Elemente) der Produktsätze. In diesem Fall, `{iPhone, iPad}`. Suchen Sie als Nächstes **Vereinigung** (alle eindeutigen Elemente) beider Produktsätze. In diesem Beispiel `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
 
-Verwenden Sie abschließend die Jaccard-Ähnlichkeitsformel: `J(A,B) = A∪B / A∩B` , um die Ähnlichkeit zu berechnen.
+Verwenden Sie abschließend die Jaccard-Ähnlichkeitsformel: `J(A,B) = A∪B / A∩B`, um die Ähnlichkeit zu berechnen.
 
-J = Jaccard-Entfernung
+J = Jaccard-Abstand
 A = Satz 1
 B = Satz 2
 
-Die Jaccard-Ähnlichkeit zwischen den Produktsätzen A und B beträgt 0,4. Dies weist auf eine mäßige Ähnlichkeit zwischen den in den beiden Dokumenten verwendeten Wörtern hin. Diese Ähnlichkeit zwischen den beiden Sätzen definiert die Spalten in der Ähnlichkeitsverknüpfung. Diese Spalten stellen Informationen oder mit den Daten verknüpfte Eigenschaften dar, die in einer Tabelle gespeichert sind und zur Durchführung der Ähnlichkeitsberechnungen verwendet werden.
+Die Jaccard-Ähnlichkeit zwischen den Produktsätzen A und B beträgt 0,4. Dies deutet auf eine mäßige Ähnlichkeit zwischen den in den beiden Dokumenten verwendeten Wörtern hin. Diese Ähnlichkeit zwischen den beiden Sätzen definiert die Spalten im Ähnlichkeitsjoin. Diese Spalten stellen Informationen oder Merkmale dar, die mit den Daten verknüpft sind und in einer Tabelle gespeichert sind und zur Durchführung der Ähnlichkeitsberechnungen verwendet werden.
 
-### Paarweise Jaccard-Berechnung mit Zeichenfolgenähnlichkeit {#pairwise-similarity}
+### Paarweise Jaccard-Berechnung mit Zeichenfolgen-Ähnlichkeit {#pairwise-similarity}
 
-Um die Ähnlichkeiten zwischen Zeichenfolgen genauer zu vergleichen, muss die paarweise Ähnlichkeit berechnet werden. Die paarweise Ähnlichkeit teilt hochdimensionale Objekte zu kleineren dimensionalen Objekten zum Vergleich und zur Analyse auf. Dazu wird eine Textzeichenfolge in kleinere Teile oder Einheiten (Token) unterteilt. Dabei kann es sich um einzelne Briefe, Gruppen von Briefen (wie Silben) oder ganze Wörter handeln. Die Ähnlichkeit wird für jedes Token-Paar zwischen jedem Element in Satz A mit jedem Element in Satz B berechnet. Diese Tokenisierung bietet eine Grundlage für analytische und berechnete Vergleiche, Beziehungen und Erkenntnisse, die aus den Daten gezogen werden können.
+Um die Ähnlichkeiten zwischen Zeichenfolgen genauer zu vergleichen, muss die paarweise Ähnlichkeit berechnet werden. Durch die paarweise Ähnlichkeit werden hochdimensionale Objekte in kleinere dimensionale Objekte zum Vergleich und zur Analyse aufgeteilt. Dazu wird eine Textzeichenfolge in kleinere Teile oder Einheiten (Token) unterteilt. Dabei kann es sich um einzelne Buchstaben, Buchstabengruppen (wie Silben) oder ganze Wörter handeln. Die Ähnlichkeit wird für jedes Token-Paar zwischen jedem Element in Satz A und jedem Element in Satz B berechnet. Diese Tokenisierung bietet eine Grundlage für analytische und computergestützte Vergleiche, Beziehungen und Einblicke, die aus den Daten gewonnen werden können.
 
-Für die paarweise Berechnung der Ähnlichkeit verwendet dieses Beispiel Zeichen in bi-Gramm (zwei Zeichen-Token), um eine Ähnlichkeitsübereinstimmung zwischen den Textzeichenfolgen der Produkte in Satz A und Satz B zu vergleichen. Ein Bikro ist eine Folge von zwei Elementen oder Elementen in einer bestimmten Sequenz oder einem bestimmten Text. Sie können dies zu n Gramm verallgemeinern.
+Für die paarweise Ähnlichkeitsberechnung verwendet dieses Beispiel Zeichenbingramme (zwei Zeichen-Token), um eine Ähnlichkeitsübereinstimmung zwischen den Textzeichenfolgen der Produkte in Satz A und Satz B zu vergleichen. Ein Bigramm ist eine aufeinander folgende Folge von zwei Elementen oder Elementen in einer bestimmten Folge oder einem bestimmten Text. Man kann das auf Ngramme verallgemeinern.
 
-In diesem Beispiel wird davon ausgegangen, dass die Groß-/Kleinschreibung keine Rolle spielt und Leerzeichen nicht berücksichtigt werden sollten. Gemäß diesen Kriterien haben Set A und Set B die folgenden bi-Gramm:
+In diesem Beispiel wird davon ausgegangen, dass die Groß-/Kleinschreibung keine Rolle spielt und dass Leerzeichen nicht berücksichtigt werden sollten. Nach diesen Kriterien weisen Satz A und Satz B die folgenden Bigramme auf:
 
-Produktsatz A bi-Gramm:
+Bi-Gramm-Produktset A:
 
-- iPhone (5): &quot;ip&quot;, &quot;ph&quot;, &quot;ho&quot;, &quot;on&quot;, &quot;ne&quot;
-- iPad (3): &quot;ip&quot;, &quot;pa&quot;, &quot;ad&quot;
-- iWatch (5): &quot;iw&quot;, &quot;wa&quot;, &quot;at&quot;, &quot;tc&quot;, &quot;ch&quot;
-- iPad Mini (7): &quot;ip&quot;, &quot;pa&quot;, &quot;ad&quot;, &quot;dm&quot;, &quot;mi&quot;, &quot;in&quot;, &quot;ni&quot;
+- iPhone (5): „IP“, „PH“, „HO“, „ON“, „NE“
+- iPad (3): „IP“, „PA“, „AD“
+- iWatch (5): „iw“, „wa“, „at“, „tc“, „ch“
+- iPad Mini (7): „ip“, „pa“, „ad“, „dm“, „mi“, „in“, „ni“
 
-Produktsatz B bi-Gramm:
+Bi-Gramm-Produktgruppe B:
 
-- iPhone (5): &quot;ip&quot;, &quot;ph&quot;, &quot;ho&quot;, &quot;on&quot;, &quot;ne&quot;
-- iPad (3): &quot;ip&quot;, &quot;pa&quot;, &quot;ad&quot;
-- Macbook Pro (9): &quot;Ma&quot;, &quot;ac&quot;, &quot;cb&quot;, &quot;bo&quot;, &quot;oo&quot;, &quot;ok&quot;, &quot;kp&quot;, &quot;pr&quot;, &quot;ro&quot;
+- iPhone (5): „IP“, „PH“, „HO“, „ON“, „NE“
+- iPad (3): „IP“, „PA“, „AD“
+- MacBook Pro (9): „Ma“, „ac“, „cb“, „bo“, „oo“, „ok“, „kp“, „pr“, „ro“
 
 Als Nächstes berechnen Sie den Jaccard-Ähnlichkeitskoeffizienten für jedes Paar:
 
-|                   | iPhone (Set B) | iPad (Set B) | Macbook Pro (Set B) |
+|                   | iPhone (Satz B) | iPad (Satz B) | MacBook Pro (Set B) |
 |-------------------|----------------------------------------------|---------------------------------------------|-------------------------------------------|
-| iPhone (Set A) | (Schnittmenge: 5, Vereinigung: 5) = 5 / 5 = 1 | (Schnittmenge: 1, Vereinigung: 7) =1 / 7 Mobi 0,14 | (Schnittmenge: 0, Vereinigung: 14) = 0 / 14 = 0 |
-| iPad (Set A) | (Schnittmenge: 1, Vereinigung: 7) = 1 / 7 Über 0,14 | (Schnittmenge: 3, Vereinigung: 3) = 3 / 3 = 1 | (Schnittmenge: 0, Vereinigung: 12) = 0 / 12 = 0 |
-| iWatch (Set A) | (Schnittmenge: 0, Vereinigung: 8) = 0 / 8 = 0 | (Schnittmenge: 0, Vereinigung: 8) = 0 / 8 = 0 | (Schnittmenge: 0, Vereinigung: 8) = 0 / 8 = 0 |
-| iPad Mini (Set A) | (Schnittmenge: 1, Vereinigung: 11) = 1 / 11 Mobi 0,09 | (Schnittmenge: 3, Vereinigung: 7) = 3 / 7 Über 0,43 | (Schnittmenge: 0, Vereinigung: 16) = 0 / 16 = 0 |
+| iPhone (Satz A) | (Schnittmenge: 5, Vereinigung: 5) = 5 / 5 = 1 | (Schnittmenge: 1, Vereinigung: 7) =1 / 7 ≈ 0,14 | (Schnittmenge: 0, Vereinigung: 14) = 0 / 14 = 0 |
+| iPad (Satz A) | (Schnittmenge: 1, Vereinigung: 7) = 1 / 7 ≈ 0,14 | (Schnittmenge: 3, Vereinigung: 3) = 3 / 3 = 1 | (Schnittmenge: 0, Vereinigung: 12) = 0 / 12 = 0 |
+| iWatch (Set A) | (Schnittmenge: 0, Vereinigung: 8) = 0 / 8 = 0 | (Schnittmenge: 0, Vereinigung: 8) = 0 / 8 = 0 | (Schnittmenge: 0, Vereinigung: 8) = 0 / 8 =0 |
+| iPad Mini (Set A) | (Schnittmenge: 1, Vereinigung: 11) = 1 / 11 ≈ 0,09 | (Schnittmenge: 3, Vereinigung: 7) = 3 / 7 ≈ 0,43 | (Schnittmenge: 0, Vereinigung: 16) = 0 / 16 = 0 |
 
 {style="table-layout:auto"}
 
-## Testdaten mit SQL erstellen {#create-test-data}
+## Erstellen der Testdaten mit SQL {#create-test-data}
 
-Verwenden Sie die Anweisung SQL CREATE TABLE , um manuell eine Testtabelle für die Produktsätze zu erstellen.
+Um manuell eine Testtabelle für die Produktsätze zu erstellen, verwenden Sie die SQL CREATE TABLE-Anweisung.
 
 ```SQL {line-numbers="true"}
 CREATE TABLE featurevector1 AS SELECT *
@@ -103,15 +103,15 @@ FROM (
 SELECT * FROM featurevector1;
 ```
 
-Die folgenden Beschreibungen enthalten eine Aufschlüsselung des obigen SQL-Codeblocks:
+Die folgenden Beschreibungen enthalten eine Aufschlüsselung des obigen SQL-Code-Blocks:
 
-- Zeile 1: `CREATE TEMP TABLE featurevector1 AS`: Diese Anweisung erstellt eine temporäre Tabelle namens `featurevector1`. Temporäre Tabellen sind in der Regel nur innerhalb der aktuellen Sitzung verfügbar und werden automatisch am Ende der Sitzung abgelegt.
-- Zeile 1 und 2: `SELECT * FROM (...)`: Dieser Teil des Codes ist eine Unterabfrage, mit der die in die Tabelle `featurevector1` eingefügten Daten generiert werden.
-Innerhalb der Unterabfrage werden mehrere `SELECT` -Anweisungen mit dem Befehl `UNION ALL` kombiniert. Jede `SELECT` -Anweisung generiert eine Datenzeile mit den angegebenen Werten für die `ProductName` -Spalte.
-- Zeile 3: `SELECT 'iPad' AS ProductName`: Dadurch wird eine Zeile mit dem Wert `iPad` in der Spalte `ProductName` generiert.
-- Zeile 5: `SELECT 'iPhone'`: Dadurch wird eine Zeile mit dem Wert `iPhone` in der Spalte `ProductName` generiert.
+- Zeile 1: `CREATE TEMP TABLE featurevector1 AS`: Diese Anweisung erstellt eine temporäre Tabelle mit dem Namen `featurevector1`. Temporäre Tabellen sind in der Regel nur innerhalb der aktuellen Sitzung zugänglich und werden automatisch am Ende der Sitzung entfernt.
+- Zeile 1 und 2: `SELECT * FROM (...)`: Dieser Teil des Codes ist eine Unterabfrage, die zum Generieren der Daten verwendet wird, die in die `featurevector1` eingefügt werden.
+Innerhalb der Unterabfrage werden mehrere `SELECT`-Anweisungen mithilfe des `UNION ALL`-Befehls kombiniert. Jede `SELECT`-Anweisung generiert eine Datenzeile mit den angegebenen Werten für die `ProductName`.
+- Zeile 3: `SELECT 'iPad' AS ProductName`: Dadurch wird eine Zeile mit dem in der `ProductName` Spalte `iPad` Wert generiert.
+- Zeile 5: `SELECT 'iPhone'`: Dadurch wird eine Zeile mit dem in der `ProductName` Spalte `iPhone` Wert generiert.
 
-Die SQL-Anweisung erstellt eine Tabelle wie unten dargestellt:
+Die SQL-Anweisung erstellt eine Tabelle, wie unten dargestellt:
 
 |   | `ProductName` |
 |---|---------------|
@@ -122,7 +122,7 @@ Die SQL-Anweisung erstellt eine Tabelle wie unten dargestellt:
 
 {style="table-layout:auto"}
 
-Verwenden Sie die folgende SQL-Anweisung, um den zweiten Funktionsvektor zu erstellen:
+Um den zweiten Merkmalsvektor zu erstellen, verwenden Sie die folgende SQL-Anweisung:
 
 ```SQL
 CREATE TABLE featurevector2 AS SELECT *
@@ -138,34 +138,34 @@ SELECT * FROM featurevector2;
 
 ## Datenumwandlungen {#data-transformation}
 
-In diesem Beispiel müssen mehrere Aktionen durchgeführt werden, um die Sets genau zu vergleichen. Zunächst werden alle Leerzeichen aus den Funktionsvektoren entfernt, da davon ausgegangen wird, dass sie nicht zur Ähnlichkeitsmessung beitragen. Anschließend werden alle im Funktionsvektor vorhandenen Duplikate entfernt, da sie die Rechenverarbeitung verschwenden. Als Nächstes werden Token mit zwei Zeichen (in Gramm) aus den Funktionsvektoren extrahiert. In diesem Beispiel wird davon ausgegangen, dass sie sich überschneiden.
+In diesem Beispiel müssen mehrere Aktionen ausgeführt werden, um die Sätze genau zu vergleichen. Zunächst werden Leerzeichen aus den Merkmalsvektoren entfernt, da angenommen wird, dass sie nicht zum Ähnlichkeitsmaß beitragen. Dann werden alle Duplikate im Merkmalsvektor entfernt, da sie die Rechenverarbeitung verschwenden. Als Nächstes werden Token aus zwei Zeichen (Bigramm) aus den Merkmalsvektoren extrahiert. In diesem Beispiel wird von einer Überlappung ausgegangen.
 
 >[!NOTE]
 >
->Zu Veranschaulichungszwecken werden die verarbeiteten Spalten für jeden Schritt neben dem Funktionsvektor hinzugefügt.
+>Zu Illustrationszwecken werden die verarbeiteten Spalten für jeden Schritt neben dem Merkmalsvektor hinzugefügt.
 
-Die folgenden Abschnitte veranschaulichen die erforderlichen Datenumwandlungen wie Deduplizierung, Entfernen von Leerzeichen und Konvertierung in Kleinbuchstaben, bevor der Tokenisierungsprozess gestartet wird.
+Die folgenden Abschnitte veranschaulichen die erforderlichen Datenumwandlungen wie Deduplizierung, Entfernen von Leerzeichen und Konvertierung in Kleinbuchstaben, bevor der Prozess der Tokenisierung gestartet wird.
 
 ### Deduplizierung {#deduplication}
 
-Verwenden Sie als Nächstes die `DISTINCT` -Klausel, um Duplikate zu entfernen. In diesem Beispiel gibt es keine Duplikate. Es ist jedoch ein wichtiger Schritt, die Genauigkeit von Vergleichen zu verbessern. Die erforderliche SQL-Anweisung wird unten angezeigt:
+Verwenden Sie anschließend die `DISTINCT`-Klausel, um Duplikate zu entfernen. In diesem Beispiel gibt es keine Duplikate. Es ist jedoch ein wichtiger Schritt, die Genauigkeit eines Vergleichs zu verbessern. Die erforderliche SQL wird unten angezeigt:
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct FROM featurevector1
 SELECT DISTINCT(ProductName) AS featurevector2_distinct FROM featurevector2
 ```
 
-### Entfernen von Leerzeichen {#whitespace-removal}
+### Entfernung von Leerzeichen {#whitespace-removal}
 
-In der folgenden SQL-Anweisung werden die Leerzeichen aus den Feature Vectors entfernt. Der Teil `replace(ProductName, ' ', '') AS featurevector1_nospaces` der Abfrage nimmt die Spalte `ProductName` aus der Tabelle `featurevector1` und verwendet die Funktion `replace()`. Die Funktion `REPLACE` ersetzt alle Vorkommnisse eines Leerzeichens (&#39; &#39;) durch eine leere Zeichenfolge (&#39;&#39;). Dadurch werden alle Leerzeichen aus den `ProductName` -Werten entfernt. Das Ergebnis wird als `featurevector1_nospaces` Alias angezeigt.
+In der folgenden SQL-Anweisung werden die Leerzeichen aus den Funktionsvektoren entfernt. Der `replace(ProductName, ' ', '') AS featurevector1_nospaces` Teil der Abfrage übernimmt die `ProductName` aus der `featurevector1` und verwendet die `replace()`. Die Funktion `REPLACE` ersetzt alle Vorkommen eines Leerzeichens (&#39; &#39;) durch eine leere Zeichenfolge (&#39;&#39;). Dadurch werden effektiv alle Leerzeichen aus den `ProductName` entfernt. Das Ergebnis wird als `featurevector1_nospaces` Alias angegeben.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, replace(ProductName, ' ', '') AS featurevector1_nospaces FROM featurevector1
 ```
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-|   | featurevektor1_distinct | featurevektor1_nospaces |
+|   | featureVector1_distinct | featureVector1_nospaces |
 |---|---|---|
 | 1 | iPad Mini | iPadMini |
 | 2 | iPad | iPad |
@@ -174,9 +174,9 @@ Die Ergebnisse sind in der folgenden Tabelle dargestellt:
 
 {style="table-layout:auto"}
 
-Die SQL-Anweisung und ihre Ergebnisse für den zweiten Funktionsvektor sind unten dargestellt:
+Die SQL-Anweisung und ihre Ergebnisse für den zweiten Merkmalsvektor werden unten angezeigt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector2_distinct, replace(ProductName, ' ', '') AS featurevector2_nospaces FROM featurevector2
@@ -184,38 +184,38 @@ SELECT DISTINCT(ProductName) AS featurevector2_distinct, replace(ProductName, ' 
 
 Die Ergebnisse werden wie folgt angezeigt:
 
-|   | featurevektor2_distinct | featurevektor2_nospaces |
+|   | featureVector2_distinct | featureVector2_nospaces |
 |---|---|---|
 | 1 | iPad | iPad |
-| 2 | Macbook Pro | MacbookPro |
+| 2 | MacBook Pro | MacBookPro |
 | 3 | iPhone | iPhone |
 
 {style="table-layout:auto"}
 
 +++
 
-### In Kleinbuchstaben konvertieren {#lowercase-conversion}
+### In Kleinbuchstaben umwandeln {#lowercase-conversion}
 
-Anschließend wird die SQL dahingehend verbessert, dass die Produktnamen in Kleinbuchstaben konvertiert und alle Leerzeichen entfernt werden. Die untere Funktion (`lower(...)`) wird auf das Ergebnis der Funktion `replace()` angewendet. Die untere Funktion konvertiert alle Zeichen in den geänderten `ProductName` -Werten in Kleinbuchstaben. Dadurch wird sichergestellt, dass die Werte unabhängig von der Originalschreibweise in Kleinbuchstaben geschrieben werden.
+Anschließend wird die SQL verbessert, um die Produktnamen in Kleinbuchstaben zu konvertieren und alle Leerzeichen zu entfernen. Die untere Funktion (`lower(...)`) wird auf das Ergebnis der `replace()` angewendet. Die Funktion LOWER wandelt alle Zeichen der geänderten `ProductName` in Kleinbuchstaben um. Dadurch wird sichergestellt, dass die Werte unabhängig von ihrer ursprünglichen Groß-/Kleinschreibung in Kleinbuchstaben geschrieben werden.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform FROM featurevector1;
 ```
 
-Das Ergebnis dieser Aussage ist:
+Das Ergebnis dieser Anweisung ist:
 
-|   | featurevektor1_distinct | featurevektor1_transform |
+|   | featureVector1_distinct | featureVector1_transform |
 |---|---|---|
-| 1 | iPad Mini | ipadmini |
+| 1 | iPad Mini | IPadmini |
 | 2 | iPad | iPad |
 | 3 | iWatch | iWatch |
 | 4 | iPhone | iPhone |
 
 {style="table-layout:auto"}
 
-Die SQL-Anweisung und ihre Ergebnisse für den zweiten Funktionsvektor sind unten dargestellt:
+Die SQL-Anweisung und ihre Ergebnisse für den zweiten Merkmalsvektor werden unten angezeigt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector2_distinct, lower(replace(ProductName, ' ', '')) AS featurevector2_transform FROM featurevector2
@@ -223,21 +223,21 @@ SELECT DISTINCT(ProductName) AS featurevector2_distinct, lower(replace(ProductNa
 
 Die Ergebnisse werden wie folgt angezeigt:
 
-|   | featurevektor2_distinct | featurevektor2_transform |
+|   | featureVector2_distinct | featureVector2_transform |
 |---|---|---|
-| 1 | iPad | ipad |
-| 2 | Macbook Pro | macbookpro |
+| 1 | iPad | iPad |
+| 2 | MacBook Pro | macBookPro |
 | 3 | iPhone | iPhone |
 
 {style="table-layout:auto"}
 
 +++
 
-### Token mit SQL extrahieren {#tokenization}
+### Extrahieren von Token mithilfe von SQL {#tokenization}
 
-Der nächste Schritt ist die Tokenisierung oder Textaufteilung. Tokenisierung ist der Prozess, Text in einzelne Begriffe zu unterteilen. In der Regel besteht dies darin, Sätze in Wörter zu unterteilen. In diesem Beispiel werden Zeichenfolgen in bi-Gramm (und in Gramm höherer Ordnung) aufgeteilt, indem Token mit SQL-Funktionen wie `regexp_extract_all` extrahiert werden. Für eine wirksame Tokenisierung müssen überschneidende bi-Gramm generiert werden.
+Der nächste Schritt ist Tokenisierung oder Textaufteilung. Bei der Tokenisierung wird Text in einzelne Begriffe aufgeteilt. Typischerweise beinhaltet dies, Sätze in Wörter aufzuteilen. In diesem Beispiel werden Zeichenfolgen in Bigramme (und höherrangige N-Gramme) aufgeteilt, indem Token mithilfe von SQL-Funktionen wie `regexp_extract_all` extrahiert werden. Für eine effektive Tokenisierung müssen sich überschneidende Bigramme generiert werden.
 
-Die SQL wurde weiter verbessert und verwendet nun `regexp_extract_all`. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` Dieser Teil der Abfrage verarbeitet die geänderten `ProductName` -Werte weiter, die im vorherigen Schritt erstellt wurden. Es verwendet die Funktion `regexp_extract_all()` , um alle nicht überlappenden Teilzeichenfolgen von ein bis zwei Zeichen aus den geänderten und kleingeschriebenen `ProductName` -Werten zu extrahieren. Das Muster für reguläre Ausdrücke `.{2}` entspricht Teilzeichenfolgen von zwei Zeichen in der Länge. Der Teil `regexp_extract_all(..., '.{2}', 0)` der Funktion extrahiert dann alle übereinstimmenden Unterzeichenfolgen aus dem Eingabetext.
+Die SQL-Abfrage wurde weiter verbessert, um `regexp_extract_all` zu verwenden. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` Dieser Teil der Abfrage verarbeitet die im vorherigen Schritt erstellten geänderten `ProductName` weiter. Es verwendet die `regexp_extract_all()`-Funktion, um alle nicht überlappenden Teilzeichenfolgen von einem bis zwei Zeichen aus den geänderten `ProductName` in Kleinbuchstaben zu extrahieren. Das Muster für `.{2}` reguläre Ausdrücke sucht nach Teilzeichenfolgen mit einer Länge von zwei Zeichen. Der `regexp_extract_all(..., '.{2}', 0)` Teil der Funktion extrahiert dann alle übereinstimmenden Teilzeichenfolgen aus dem Eingabetext.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform, 
@@ -245,24 +245,24 @@ regexp_extract_all(lower(replace(ProductName, ' ', '')) , '.{2}', 0) AS tokens
 FROM featurevector1;
 ```
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-|   | featurevektor1_distinct | featurevektor1_transform | Token |
+|   | featureVector1_distinct | featureVector1_transform | Token |
 |---|--------------------------|--------------|------------------------|
-| 1 | iPad Mini | ipadmini | {&quot;ip&quot;,&quot;ad&quot;,&quot;mi&quot;,&quot;ni&quot;} |
-| 2 | iPad | iPad | {&quot;ip&quot;,&quot;ad&quot;} |
-| 3 | iWatch | iWatch | {&quot;iw&quot;,&quot;at&quot;, &quot;ch&quot;} |
-| 4 | iPhone | iPhone | {&quot;ip&quot;,&quot;ho&quot;,&quot;ne&quot;} |
+| 1 | iPad Mini | IPadmini | {„IP“,„AD“,„MI“,„NI“} |
+| 2 | iPad | iPad | {„IP“,„AD“} |
+| 3 | iWatch | iWatch | {„iw“,„at“, „ch“} |
+| 4 | iPhone | iPhone | {„IP“,„HO“,„NE“} |
 
 {style="table-layout:auto"}
 
 +++
 
-Um die Genauigkeit weiter zu verbessern, muss SQL zur Erstellung überlappender Token verwendet werden. Beispielsweise fehlt in der obigen Zeichenfolge &quot;iPad&quot;das Token &quot;pa&quot;. Um dies zu beheben, verschieben Sie den Lookahead-Operator (mit `substring`) um einen Schritt und generieren Sie die bi-Gramm.
+Um die Genauigkeit weiter zu verbessern, muss die SQL verwendet werden, um sich überschneidende Token zu erstellen. Bei der obigen Zeichenfolge &quot;iPad&quot; fehlt beispielsweise das Token „pa“. Um dies zu beheben, verschieben Sie den Lookahead-Operator (mit `substring`) um einen Schritt und generieren Sie die Bi-Gramme.
 
-Ähnlich wie im vorherigen Schritt extrahiert `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` aus dem modifizierten Produktnamen aus zwei Zeichen, beginnt jedoch mit dem zweiten Zeichen mit der `substring` -Methode, um überlappende Token zu erstellen. Anschließend kombiniert die Funktion `array_union()` in den Zeilen 3-7 (`array_union(...) AS tokens`) die Arrays von zweistelligen Sequenzen, die von den beiden Extraktionen des regulären Ausdrucks erhalten werden. Dadurch wird sichergestellt, dass das Ergebnis eindeutige Token aus nicht überlappenden und überlappenden Sequenzen enthält.
+Ähnlich wie im vorherigen Schritt extrahiert `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` aus dem geänderten Produktnamen zweistellige Sequenzen, beginnt jedoch mit dem zweiten Zeichen unter Verwendung der `substring`-Methode, um überlappende Token zu erstellen. Als Nächstes kombiniert die Funktion `array_union()` in den Zeilen 3-7 (`array_union(...) AS tokens`) die Arrays von zweistelligen Sequenzen, die durch die beiden Extraktionen regulärer Ausdrücke erhalten werden. Dadurch wird sichergestellt, dass das Ergebnis eindeutige Token aus nicht überlappenden und überlappenden Sequenzen enthält.
 
 ```SQL {line-numbers="true"}
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, 
@@ -274,28 +274,28 @@ SELECT DISTINCT(ProductName) AS featurevector1_distinct,
 FROM featurevector1;
 ```
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-|   | featurevektor1_distinct | featurevektor1_transform | Token |
+|   | featureVector1_distinct | featureVector1_transform | Token |
 |---|--------------------------|--------------|------------------------|
-| 1 | iPad Mini | ipadmini | {&quot;ip&quot;,&quot;ad&quot;,&quot;mi&quot;,&quot;ni&quot;,&quot;pa&quot;,&quot;dm&quot;,&quot;in&quot;} |
-| 2 | iPad | iPad | {&quot;ip&quot;,&quot;ad&quot;,&quot;pa&quot;} |
-| 3 | iWatch | iWatch | {&quot;iw&quot;,&quot;at&quot;,&quot;ch&quot;,&quot;wa&quot;,&quot;tc&quot;} |
-| 4 | iPhone | iPhone | {&quot;ip&quot;,&quot;ho&quot;,&quot;ne&quot;,&quot;ph&quot;,&quot;on&quot;} |
+| 1 | iPad Mini | IPadmini | {„IP“,„AD“,„MI“,„NI“,„PA“,„DM“,„IN“} |
+| 2 | iPad | iPad | {„IP“,„AD“,„PA“} |
+| 3 | iWatch | iWatch | {„iw“,„at“,„ch“,„wa“,„tc“} |
+| 4 | iPhone | iPhone | {„IP“,„HO“,„NE“,„PH“,„ON“} |
 
 {style="table-layout:auto"}
 
 +++
 
-Die Verwendung von `substring` als Lösung des Problems hat jedoch Einschränkungen. Wenn Sie Token aus dem Text basierend auf Tri-Gramm (drei Zeichen) erstellen würden, würde die Verwendung von zwei `substrings` erforderlich sein, um zweimal nach vorne zu suchen, um die erforderlichen Verschiebungen zu erhalten. Für 10 Gramm benötigen Sie neun `substring` Ausdrücke. Dies würde den Code aufblasen und unhaltbar machen. Die Verwendung von einfachen regulären Ausdrücken ist nicht geeignet. Es bedarf eines neuen Ansatzes.
+Die Verwendung von `substring` als Lösung des Problems weist jedoch Einschränkungen auf. Wenn Sie Token aus dem Text erstellen würden, der auf Dreigrammen (drei Zeichen) basiert, würde es die Verwendung von zwei `substrings` erfordern, zweimal nach vorne zu schauen, um die erforderlichen Verschiebungen zu erhalten. Um 10 Gramm zu machen, bräuchte man neun `substring`. Dadurch würde der Code aufgebläht und unhaltbar werden. Die Verwendung einfacher regulärer Ausdrücke ist nicht geeignet. Wir brauchen einen neuen Ansatz.
 
 ### Anpassen der Länge des Produktnamens {#length-adjustment}
 
-Das SQl kann mit der Sequenz- und Längenfunktion verbessert werden. Im folgenden Beispiel generiert `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 3)` eine Zahlenfolge von eins bis zur Länge des modifizierten Produktnamen abzüglich drei. Wenn der geänderte Produktname beispielsweise &quot;ipadmini&quot;mit einer Zeichenlänge von acht Zeichen ist, werden Zahlen von einem bis fünf (acht bis drei) generiert.
+Mit den Abfolge- und Längenfunktionen lässt sich der SQl verbessern. Im folgenden Beispiel generiert `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 3)` eine Zahlenfolge von 1 bis zur Länge des geänderten Produktnamens minus 3. Wenn der geänderte Produktname beispielsweise „ipadmini“ mit einer Zeichenlänge von acht lautet, werden Zahlen von eins bis fünf (acht bis drei) generiert.
 
-Die nachstehende Anweisung extrahiert eindeutige Produktnamen und unterteilt jeden Namen in Zeichenfolgen (Token) mit einer Länge von vier Zeichen, ohne Leerzeichen, und stellt sie in zwei Spalten dar. Eine Spalte zeigt die eindeutigen Produktnamen und die andere Spalte die generierten Token.
+Die nachstehende Anweisung extrahiert eindeutige Produktnamen und unterteilt dann jeden Namen in Sequenzen von Zeichen (Token) mit vier Zeichenlängen, wobei Leerzeichen ausgeschlossen werden, und stellt sie als zwei Spalten dar. Eine Spalte zeigt die eindeutigen Produktnamen und die andere Spalte zeigt die generierten Token.
 
 ```SQL
 SELECT
@@ -308,16 +308,16 @@ FROM
   featurevector1;
 ```
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-|   | featurevektor1_distinct | Token |
+|   | featureVector1_distinct | Token |
 |---|--------------------------|------------------------|
-| 1 | iPad Mini | {&quot;ipad&quot;,&quot;padm&quot;,&quot;admi&quot;,&quot;dmin&quot;,&quot;mini&quot;} |
-| 2 | iPad | {&quot;ipad&quot;} |
-| 3 | iWatch | {&quot;iwat&quot;,&quot;watc&quot;,&quot;atch&quot;} |
-| 4 | iPhone | {&quot;ipho&quot;,&quot;phon&quot;,&quot;hone&quot;} |
+| 1 | iPad Mini | {„iPad“,„padm“,„admin“,„admin“,„mini“} |
+| 2 | iPad | {„iPad“} |
+| 3 | iWatch | {„iwat“,„watch“,„watch“} |
+| 4 | iPhone | {„ipho“,„phon“,„phone“} |
 
 {style="table-layout:auto"}
 
@@ -325,7 +325,7 @@ Die Ergebnisse sind in der folgenden Tabelle dargestellt:
 
 ### Festlegen der Token-Länge {#ensure-set-token-length}
 
-Der Anweisung können zusätzliche Bedingungen hinzugefügt werden, um sicherzustellen, dass die erzeugten Sequenzen eine bestimmte Länge aufweisen. Die folgende SQL-Anweisung erweitert die Logik der Tokenerstellung, indem die Funktion `transform` komplexer wird. Die Anweisung verwendet die Funktion `filter` innerhalb von `transform`, um sicherzustellen, dass die generierten Sequenzen eine Länge von sechs Zeichen haben. Sie behandelt die Fälle, in denen dies nicht möglich ist, indem sie diesen Positionen NULL-Werte zuweist.
+Der Anweisung können zusätzliche Bedingungen hinzugefügt werden, um sicherzustellen, dass die generierten Sequenzen eine bestimmte Länge aufweisen. Die folgende SQL-Anweisung erweitert die Token-Generierungslogik, indem sie die `transform` komplexer macht. Die Anweisung verwendet die Funktion `filter` in `transform`, um sicherzustellen, dass die generierten Sequenzen sechs Zeichen lang sind. Es behandelt die Fälle, in denen dies nicht möglich ist, indem NULL-Werte diesen Positionen zugewiesen werden.
 
 ```SQL
 SELECT
@@ -344,30 +344,30 @@ FROM
   featurevector1;
 ```
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-|   | featurevektor1_distinct | Token |
+|   | featureVector1_distinct | Token |
 |---|--------------------------|------------------------|
-| 1 | iPad Mini | {&quot;ipadmi&quot;,&quot;padmin&quot;,&quot;admini&quot;} |
+| 1 | iPad Mini | {„ipadmin“,„padmin“,„admin“} |
 | 2 | iPad | {null} |
-| 3 | iWatch | {&quot;iwatch&quot;} |
-| 4 | iPhone | {&quot;iphone&quot;} |
+| 3 | iWatch | {„iWatch“} |
+| 4 | iPhone | {„iPhone“} |
 
 {style="table-layout:auto"}
 
 +++
 
-## Lösungen mit Data Distiller-Funktionen in höherer Reihenfolge durchsuchen {#higher-order-function-solutions}
+## Erkunden von Lösungen mit Data Distiller-Funktionen höherer Ordnung {#higher-order-function-solutions}
 
-Funktionen mit höherer Reihenfolge sind leistungsstarke Konstrukte, mit denen Sie &quot;Programmierung&quot;wie Syntax in Data Distiller implementieren können. Sie können verwendet werden, um eine Funktion über mehrere Werte in einem Array zu iterieren.
+Funktionen höherer Ordnung sind leistungsstarke Konstrukte, mit denen Sie „Programmierung“ wie Syntax in Data Distiller implementieren können. Sie können verwendet werden, um eine Funktion über mehrere Werte in einem Array zu iterieren.
 
-Im Kontext von Data Distiller eignen sich Funktionen mit höherer Reihenfolge ideal zum Erstellen von n Gramm und Iterieren von Zeichensatzsequenzen.
+Im Kontext von Data Distiller eignen sich Funktionen höherer Ordnung ideal für die Erstellung von N-Grammen und die Iteration über Zeichenfolgen.
 
-Die Funktion &quot;`reduce`&quot;, insbesondere wenn sie in durch `transform` generierten Sequenzen verwendet wird, bietet eine Möglichkeit, kumulative Werte oder Aggregate abzuleiten, die in verschiedenen Analyse- und Planungsprozessen ausschlaggebend sein können.
+Die `reduce` Funktion bietet insbesondere bei Verwendung in von `transform` erzeugten Sequenzen die Möglichkeit, kumulative Werte oder Aggregate abzuleiten, die in verschiedenen Analyse- und Planungsprozessen von zentraler Bedeutung sein können.
 
-In der unten stehenden SQl-Anweisung aggregiert die Funktion `reduce()` beispielsweise Elemente in einem Array mithilfe eines benutzerdefinierten Aggregators. Es simuliert eine for -Schleife, um die kumulativen Summen aller Ganzzahlen zu erstellen, die **von 1 bis 5. 2.**`1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4`
+In der folgenden SQL-Anweisung aggregiert die Funktion `reduce()` beispielsweise Elemente in einem Array mithilfe eines benutzerdefinierten Aggregators. Es simuliert eine for-Schleife, um **die kumulativen Summen aller Ganzzahlen zu erstellen** von 1 bis 5. `1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4`.
 
 ```SQL {line-numbers="true"}
 SELECT transform(
@@ -382,22 +382,22 @@ SELECT transform(
 
 Im Folgenden finden Sie eine Analyse der SQL-Anweisung:
 
-- Zeile 1: `transform` wendet die Funktion `x -> reduce` auf jedes in der Sequenz generierte Element an.
-- Zeile 2: `sequence(1, 5)` generiert eine Folge von Zahlen von 1 bis 5.
-- Zeile 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` führt einen Reduzierungsvorgang für jedes Element x in der Sequenz durch (von 1 bis 5).
-   - Die Funktion `reduce` verwendet einen anfänglichen Akkumulatorwert von 0, eine Sequenz von 1 bis zum aktuellen Wert von `x` und eine Funktion der höheren Reihenfolge `(acc, y) -> acc + y`, um die Zahlen hinzuzufügen.
-   - Die Funktion der höheren Reihenfolge `acc + y` kumuliert die Summe, indem der aktuelle Wert `y` zum Akkumulator `acc` hinzugefügt wird.
-- Zeile 8: `AS sum_result` benennt die resultierende Spalte in sum_result um.
+- Zeile 1: `transform` wendet die Funktion `x -> reduce` auf jedes Element an, das in der Sequenz generiert wurde.
+- Zeile 2: `sequence(1, 5)` generiert eine Zahlenfolge von 1 bis 5.
+- Zeile 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` führt für jedes Element x in der Sequenz (von 1 bis 5) einen Reduktionsvorgang durch.
+   - Die Funktion `reduce` benötigt einen anfänglichen Akkumulatorwert von 0, eine Sequenz von 1 bis zum aktuellen Wert von `x` und eine Funktion höherer Ordnung, `(acc, y) -> acc + y` die Zahlen hinzuzufügen.
+   - Die Funktion höherer Ordnung sammelt `acc + y` Summe durch Addition des aktuellen `y` zum `acc`.
+- Zeile 8: `AS sum_result` benennt die resultierende Spalte in „sum_result“ um.
 
-Zusammenfassend lässt sich sagen, dass diese Funktion mit höherer Reihenfolge zwei Parameter (`acc` und `y`) akzeptiert und den auszuführenden Vorgang definiert, in diesem Fall also `y` zum Akkumulator `acc` hinzufügt. Diese Funktion in höherer Reihenfolge wird für jedes Element in der Sequenz während des Reduzierungsprozesses ausgeführt.
+Zusammenfassend lässt sich sagen, dass diese Funktion höherer Ordnung zwei Parameter (`acc` und `y`) annimmt und den auszuführenden Vorgang definiert, der in diesem Fall das Hinzufügen von `y` zur `acc` des Akkumulators ist. Diese Funktion höherer Ordnung wird für jedes Element in der Sequenz während des Reduktionsprozesses ausgeführt.
 
-Die Ausgabe dieser Anweisung ist eine einzelne Spalte (`sum_result`), die die kumulativen Summen der Zahlen von einer bis fünf enthält.
+Die Ausgabe dieser Anweisung ist eine einzelne Spalte (`sum_result`), die die kumulativen Summen von Zahlen von 1 bis 5 enthält.
 
-### Der Wert von Funktionen mit höherer Reihenfolge {#value-of-higher-order-functions}
+### Der Wert von Funktionen höherer Ordnung {#value-of-higher-order-functions}
 
-In diesem Abschnitt wird eine reduzierte Version einer tri-Gramm-SQL-Anweisung analysiert, um den Wert von Funktionen mit höherer Reihenfolge in Data Distiller besser zu verstehen, um n-Gramm effizienter zu erstellen.
+In diesem Abschnitt wird eine abgespeckte Version einer Drei-Gramm-SQL-Anweisung analysiert, um den Wert von Funktionen höherer Ordnung in Data Distiller besser zu verstehen, um N-Gramm effizienter zu erstellen.
 
-Die folgende Anweisung arbeitet mit der Spalte `ProductName` in der Tabelle `featurevector1`. Es wird ein Satz aus dreistelligen Unterzeichenfolgen erzeugt, die aus den modifizierten Produktnamen in der Tabelle abgeleitet werden, wobei Positionen aus der erzeugten Sequenz verwendet werden.
+Die folgende Anweisung bezieht sich auf die `ProductName` in der `featurevector1`. Es erzeugt einen Satz von dreistelligen Teilzeichenfolgen, die aus den geänderten Produktnamen innerhalb der Tabelle abgeleitet werden, wobei Positionen verwendet werden, die aus der generierten Sequenz erhalten wurden.
 
 ```SQL {line-numbers="true"}
 SELECT
@@ -411,21 +411,21 @@ FROM
 
 Im Folgenden finden Sie eine Analyse der SQL-Anweisung:
 
-- Zeile 2: `transform` wendet eine Funktion höherer Reihenfolge auf jede Ganzzahl in der Sequenz an.
-- Zeile 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` generiert eine Folge von Ganzzahlen von `1` bis zur Länge des modifizierten Produktnamen abzüglich zwei.
-   - `length(lower(replace(ProductName, ' ', '')))` berechnet die Länge des `ProductName`, nachdem es in Kleinbuchstaben geschrieben und Leerzeichen entfernt wurde.
-   - `- 2` subtrahiert zwei von der Länge, um sicherzustellen, dass die Sequenz gültige Startpositionen für 3-stellige Unterzeichenfolgen generiert. Durch Subtraktion 2 wird sichergestellt, dass Sie an jeder Startposition genügend Zeichen haben, um eine 3-stellige Unterzeichenfolge zu extrahieren. Die Teilzeichenfolgen-Funktion funktioniert hier wie ein Suchvorgangsoperator.
-- Zeile 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` ist eine Funktion höherer Reihenfolge, die auf jeder Integer `i` in der generierten Sequenz ausgeführt wird.
-   - Die Funktion `substring(...)` extrahiert eine 3-stellige Unterzeichenfolge aus der Spalte `ProductName`.
-   - Vor dem Extrahieren der Teilzeichenfolge konvertiert `lower(replace(ProductName, ' ', ''))` die `ProductName` in Kleinbuchstaben und entfernt Leerzeichen, um Konsistenz zu gewährleisten.
+- Zeile 2: `transform` wendet auf jede Ganzzahl in der Sequenz eine Funktion höherer Ordnung an.
+- Zeile 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` generiert eine Sequenz von Ganzzahlen von `1` bis zur Länge des geänderten Produktnamens minus zwei.
+   - `length(lower(replace(ProductName, ' ', '')))` berechnet die Länge des `ProductName`, nachdem er in Kleinbuchstaben geschrieben und Leerzeichen entfernt wurde.
+   - `- 2` subtrahiert zwei von der Länge, um sicherzustellen, dass die Sequenz gültige Startpositionen für 3-stellige Teilzeichenfolgen erzeugt. Durch die Subtraktion von 2 wird sichergestellt, dass jeder Startposition genügend Zeichen folgen, um eine 3-stellige Teilzeichenfolge zu extrahieren. Die Teilzeichenfolgen-Funktion funktioniert hier wie ein Lookahead-Operator.
+- Zeile 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` ist eine Funktion höherer Ordnung, die auf jede ganzzahlige `i` in der generierten Sequenz angewendet wird.
+   - Die `substring(...)`-Funktion extrahiert eine 3-stellige Teilzeichenfolge aus der `ProductName`.
+   - Vor dem Extrahieren der Teilzeichenfolge wandelt `lower(replace(ProductName, ' ', ''))` die `ProductName` in Kleinbuchstaben um und entfernt Leerzeichen, um die Konsistenz sicherzustellen.
 
-Die Ausgabe ist eine Liste von Teilzeichenfolgen mit einer Länge von drei Zeichen, die aus den modifizierten Produktnamen extrahiert werden, basierend auf den in der Sequenz angegebenen Positionen.
+Die Ausgabe ist eine Liste von Unterzeichenfolgen mit drei Zeichen Länge, die aus den geänderten Produktnamen extrahiert werden, basierend auf den in der Sequenz angegebenen Positionen.
 
-## Ergebnisse filtern {#filter-results}
+## Filtern der Ergebnisse {#filter-results}
 
-Die Funktion `filter` mit nachfolgenden [Datenumwandlungen](#data-transformation) ermöglicht eine verfeinerte und präzisere Extraktion relevanter Informationen aus Textdaten. Auf diese Weise können Sie Einblicke gewinnen, die Datenqualität verbessern und bessere Entscheidungsprozesse erleichtern.
+Die `filter`-Funktion mit anschließenden [Datenumwandlungen](#data-transformation) ermöglicht eine verfeinerte und präzisere Extraktion relevanter Informationen aus Textdaten. Auf diese Weise können Sie Erkenntnisse gewinnen, die Datenqualität verbessern und bessere Entscheidungsprozesse ermöglichen.
 
-Die Funktion `filter` in der folgenden SQL-Anweisung dient dazu, die Reihenfolge der Positionen innerhalb der Zeichenfolge, aus der Unterzeichenfolgen mithilfe der nachfolgenden Transformationsfunktion extrahiert werden, zu verfeinern und zu begrenzen.
+Die Funktion `filter` in der folgenden SQL-Anweisung dient dazu, die Sequenz von Positionen innerhalb der Zeichenfolge, aus denen Teilzeichenfolgen mit der nachfolgenden Transformationsfunktion extrahiert werden, zu verfeinern und zu begrenzen.
 
 ```SQL
 SELECT
@@ -443,21 +443,21 @@ FROM
   featurevector1;
 ```
 
-Die Funktion `filter` generiert eine Sequenz gültiger Startpositionen innerhalb des modifizierten `ProductName` und extrahiert Teilzeichenfolgen einer bestimmten Länge. Es sind nur Startpositionen zulässig, die die Extraktion einer siebenstelligen Unterzeichenfolge ermöglichen.
+Die `filter`-Funktion erzeugt eine Sequenz gültiger Startpositionen innerhalb der modifizierten `ProductName` und extrahiert Teilzeichenfolgen einer bestimmten Länge. Es sind nur Startpositionen zulässig, die die Extraktion einer siebenstelligen Teilzeichenfolge ermöglichen.
 
-Die Bedingung `i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))` stellt sicher, dass die Startposition `i` plus `6` (die Länge der gewünschten siebenstelligen Unterzeichenfolge minus 1) nicht die Länge der modifizierten `ProductName` überschreitet.
+Die Bedingung `i -> i + 6 <= length(lower(replace(ProductName, ' ', '')))` stellt sicher, dass die Startposition `i` plus `6` (die Länge der gewünschten siebenstelligen Teilzeichenfolge minus eins) die Länge der geänderten `ProductName` nicht überschreitet.
 
-Die Anweisung `CASE` wird verwendet, um Unterzeichenfolgen basierend auf ihrer Länge bedingt ein- oder auszuschließen. Es sind nur siebenstellige Unterzeichenfolgen enthalten, andere werden durch NULL ersetzt. Diese Unterzeichenfolgen werden dann von der Funktion `transform` verwendet, um eine Sequenz von Unterzeichenfolgen aus der Spalte `ProductName` in der Tabelle `featurevector1` zu erstellen.
+Die `CASE` Anweisung wird verwendet, um Teilzeichenfolgen basierend auf ihrer Länge bedingt ein- oder auszuschließen. Nur siebenteilige Unterzeichenfolgen sind enthalten; andere werden durch NULL ersetzt. Diese Unterzeichenfolgen werden dann von der Funktion `transform` verwendet, um eine Sequenz von Unterzeichenfolgen aus der Spalte `ProductName` in der `featurevector1` zu erstellen.
 
 >[!TIP]
 >
->Sie können die Funktion [parametrisierte Vorlagen](../ui/parameterized-queries.md) verwenden, um Logik in Ihren Abfragen wiederzuverwenden und abzustrakte Logik zu verwenden. Wenn Sie beispielsweise Funktionen von Dienstprogrammen für allgemeine Zwecke erstellen (z. B. die oben für die Tokenisierung von Zeichenfolgen angezeigte), können Sie mit Data Distiller parametrierte Vorlagen verwenden, bei denen die Zeichenanzahl ein Parameter wäre.
+>Sie können die Funktion [parametrisierte Vorlagen](../ui/parameterized-queries.md) verwenden, um Logik in Ihren Abfragen wiederzuverwenden und zu abstrahieren. Wenn Sie beispielsweise allgemeine Dienstprogrammfunktionen (wie die oben für das Tokenisieren von Zeichenfolgen angezeigte) erstellen, können Sie parametrisierte Data Distiller-Vorlagen verwenden, bei denen die Anzahl der Zeichen ein Parameter wäre.
 
-## Berechnen der Cross-Join-Funktion für eindeutige Elemente über zwei Funktionsvektoren hinweg {#cross-join-unique-elements}
+## Berechnung der Kreuzverbindung eindeutiger Elemente über zwei Merkmalsvektoren {#cross-join-unique-elements}
 
-Die Identifizierung der Unterschiede oder Diskrepanzen zwischen den beiden Datensätzen basierend auf einer spezifischen Datenumwandlung ist ein gängiger Prozess, um die Datengenauigkeit zu wahren, die Datenqualität zu verbessern und die Konsistenz über Datensätze hinweg sicherzustellen.
+Das Identifizieren der Unterschiede oder Diskrepanzen zwischen den beiden Datensätzen auf der Grundlage einer bestimmten Transformation der Daten ist ein gängiger Prozess, um die Datengenauigkeit aufrechtzuerhalten, die Datenqualität zu verbessern und die Konsistenz über Datensätze hinweg sicherzustellen.
 
-Diese SQL-Anweisung unten extrahiert die eindeutigen Produktnamen, die in &quot;`featurevector2`&quot;, aber nicht in &quot;`featurevector1`&quot;vorhanden sind, nachdem die Transformationen angewendet wurden.
+Mit der folgenden SQL-Anweisung werden die eindeutigen Produktnamen extrahiert, die nach der Anwendung der Transformationen in `featurevector2`, aber nicht in `featurevector1` vorhanden sind.
 
 ```SQL
 SELECT lower(replace(ProductName, ' ', '')) FROM featurevector2
@@ -467,25 +467,25 @@ SELECT lower(replace(ProductName, ' ', '')) FROM featurevector1;
 
 >[!TIP]
 >
->Zusätzlich zu `EXCEPT` können Sie je nach Anwendungsfall auch `UNION` und `INTERSECT` verwenden. Außerdem können Sie mit `ALL` - oder `DISTINCT` -Klauseln experimentieren, um den Unterschied zwischen dem Einschließen aller Werte und der Rückgabe nur der eindeutigen Werte für die angegebenen Spalten anzuzeigen.
+>Zusätzlich zu `EXCEPT` können Sie je nach Anwendungsfall auch `UNION` und `INTERSECT` verwenden. Außerdem können Sie mit `ALL`- oder `DISTINCT`-Klauseln experimentieren, um den Unterschied zwischen dem Einschließen aller Werte und dem Zurückgeben nur der eindeutigen Werte für die angegebenen Spalten zu sehen.
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-|   | lower(replace(ProductName, &#39;, &#39;&#39;)) |
+|   | lower(replace(ProductName, &#39; &#39;, &#39;&#39;)) |
 |---|---------------------------------------|
-| 1 | macbookpro |
+| 1 | macBookPro |
 
 {style="table-layout:auto"}
 
 +++
 
-Führen Sie als Nächstes einen Join durch, um Elemente aus den beiden Funktionsvektoren zu kombinieren und so Elementpaare zum Vergleich zu erstellen. Der erste Schritt in diesem Prozess besteht darin, einen tokenisierten Vektor zu erstellen.
+Führen Sie anschließend eine Kreuzverknüpfung durch, um Elemente aus den beiden Elementvektoren zu kombinieren und Elementpaare für einen Vergleich zu erstellen. Der erste Schritt in diesem Prozess besteht darin, einen Token-basierten Vektor zu erstellen.
 
-Ein tokenisierter Vektor ist eine strukturierte Darstellung von Textdaten, bei der jedes Wort, jeder Satz oder jede Einheit der Bedeutung (Token) in ein numerisches Format konvertiert wird. Diese Konvertierung ermöglicht es den Algorithmen zur Verarbeitung natürlicher Sprachen, Textinformationen zu verstehen und zu analysieren.
+Ein Token-Vektor ist eine strukturierte Darstellung von Textdaten, bei der jedes Wort, jede Wortgruppe oder jede Bedeutungseinheit (Token) in ein numerisches Format konvertiert wird. Diese Konversion ermöglicht es Algorithmen zur Verarbeitung natürlicher Sprachen, Textinformationen zu verstehen und zu analysieren.
 
-Der nachstehende SQl erstellt einen tokenisierten Vektor.
+Der unten stehende SQL-Code erstellt einen Token-Vektor.
 
 ```SQL
 CREATE TABLE featurevector1tokenized AS SELECT
@@ -507,24 +507,24 @@ SELECT * FROM featurevector1tokenized;
 
 >[!NOTE]
 >
->Wenn Sie [!DNL DbVisualizer] verwenden, aktualisieren Sie nach dem Erstellen oder Löschen einer Tabelle die Datenbankverbindung, sodass der Metadaten-Cache der Tabelle aktualisiert wird. Data Distiller gibt keine Metadaten-Aktualisierungen aus.
+>Wenn Sie [!DNL DbVisualizer] verwenden, aktualisieren Sie nach dem Erstellen oder Löschen einer Tabelle die Datenbankverbindung, damit der Metadaten-Cache der Tabelle aktualisiert wird. Data Distiller sendet keine Metadatenaktualisierungen.
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-|   | featurevektor1_distinct | Token |
+|   | featureVector1_distinct | Token |
 |---|--------------------------|------------------------|
-| 1 | ipadmini | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} |
-| 2 | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} |
-| 3 | iwatch | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} |
-| 4 | iPhone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} |
+| 1 | IPadmini | {„IP“,„PA“,„AD“,„DM“,„MI“,„IN“,„NI“} |
+| 2 | iPad | {„IP“,„PA“,„AD“} |
+| 3 | iWatch | {„iw“,„wa“,„at“,„tc“,„ch“} |
+| 4 | iPhone | {„IP“,„PH“,„HO“,„ON“,„NE“} |
 
 {style="table-layout:auto"}
 
 +++
 
-Wiederholen Sie dann den Prozess für `featurevector2`:
+Wiederholen Sie dann den Vorgang für `featurevector2`:
 
 ```SQL
 CREATE TABLE featurevector2tokenized AS 
@@ -546,21 +546,21 @@ FROM
 SELECT * FROM featurevector2tokenized;
 ```
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-|   | featurevektor2_distinct | Token |
+|   | featureVector2_distinct | Token |
 |---|--------------------------|------------------------|
-| 1 | ipadmini | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} |
-| 2 | macbookpro | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} |
-| 3 | iPhone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} |
+| 1 | IPadmini | {„IP“,„PA“,„AD“} |
+| 2 | macBookPro | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} |
+| 3 | iPhone | {„IP“,„PH“,„HO“,„ON“,„NE“} |
 
 {style="table-layout:auto"}
 
 +++
 
-Nachdem beide tokenisierten Vektoren abgeschlossen sind, können Sie nun den Cross-Join erstellen. Dies wird in der folgenden SQL angezeigt:
+Nachdem beide Token-Vektoren abgeschlossen sind, können Sie jetzt die Kreuzverknüpfung erstellen. Dies wird in der folgenden SQL angezeigt:
 
 ```SQL {line-numbers="true"}
 SELECT
@@ -574,38 +574,38 @@ CROSS JOIN
     featurevector2tokenized B;
 ```
 
-Im Folgenden finden Sie eine Zusammenfassung des SQl, das zum Erstellen des Joins verwendet wird:
+Im Folgenden finden Sie eine Zusammenfassung des SQL-Codes, der zum Erstellen des Querverweises verwendet wurde:
 
-- Zeile 2: `A.featurevector1_distinct AS SetA_ProductNames` wählt die Spalte `featurevector1_distinct` aus der Tabelle `A` aus und weist ihr den Alias `SetA_ProductNames` zu. Dieser Abschnitt von SQL führt zu einer Liste unterschiedlicher Produktnamen aus dem ersten Datensatz.
-- Zeile 4: `A.tokens AS SetA_tokens1` wählt die Spalte `tokens` aus der Tabelle oder Unterabfrage `A` aus und weist ihr den Alias `SetA_tokens1` zu. Dieser Abschnitt von SQL führt zu einer Liste tokenisierter Werte, die mit den Produktnamen aus dem ersten Datensatz verknüpft sind.
-- Zeile 8: Der Vorgang `CROSS JOIN` kombiniert alle möglichen Kombinationen von Zeilen aus den beiden Datensätzen. Anders ausgedrückt: Jeder Produktname und die zugehörigen Token aus der ersten Tabelle (`A`) werden mit jedem Produktnamen und den zugehörigen Token aus der zweiten Tabelle (`B`) verknüpft. Dies führt zu einem kartesischen Produkt der beiden Datensätze, wobei jede Zeile in der Ausgabe eine Kombination aus einem Produktnamen und den zugehörigen Token aus beiden Datensätzen darstellt.
+- Zeile 2: `A.featurevector1_distinct AS SetA_ProductNames` wählt die Spalte `featurevector1_distinct` aus der `A` aus und weist ihr einen `SetA_ProductNames` zu. Dieser Abschnitt von SQL führt zu einer Liste mit unterschiedlichen Produktnamen aus dem ersten Datensatz.
+- Zeile 4: `A.tokens AS SetA_tokens1` wählt die `tokens` aus der Tabelle oder der `A` aus und weist ihr einen `SetA_tokens1` zu. Dieser Abschnitt von SQL führt zu einer Liste von Token-Werten, die mit den Produktnamen aus dem ersten Datensatz verknüpft sind.
+- Zeile 8: Der `CROSS JOIN` Vorgang kombiniert alle möglichen Kombinationen von Zeilen aus den beiden Datensätzen. Mit anderen Worten: Es paart jeden Produktnamen und seine zugehörigen Token aus der ersten Tabelle (`A`) mit jedem Produktnamen und seinen zugehörigen Token aus der zweiten Tabelle (`B`). Dies führt zu einem kartesischen Produkt der beiden Datensätze, wobei jede Zeile in der Ausgabe eine Kombination aus einem Produktnamen und den zugehörigen Token aus beiden Datensätzen darstellt.
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
 | * | SetA_ProductNames | SetB_ProductNames | SetA_tokens 1 | SetB_tokens 2 |
 |---|---------------------|-------------------|---|---|
-| 1 | ipadmini | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} |
-| 2 | ipadmini | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} |
-| 3 | ipadmini | iPhone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} |
-| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} |
-| 5 | ipad | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} |
-| 6 | ipad | iPhone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} |
-| 7 | iwatch | ipad | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} |
-| 8 | iwatch | macbookpro | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} |
-| 9 | iwatch | iPhone | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} |
-| 10 | iPhone | ipad | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} |
-| 11 | iPhone | macbookpro | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} |
-| 12 | iPhone | iPhone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} |
+| 1 | IPadmini | iPad | {„IP“,„PA“,„AD“,„DM“,„MI“,„IN“,„NI“} | {„IP“,„PA“,„AD“} |
+| 2 | IPadmini | macBookPro | {„IP“,„PA“,„AD“,„DM“,„MI“,„IN“,„NI“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} |
+| 3 | IPadmini | iPhone | {„IP“,„PA“,„AD“,„DM“,„MI“,„IN“,„NI“} | {„IP“,„PH“,„HO“,„ON“,„NE“} |
+| 4 | iPad | iPad | {„IP“,„PA“,„AD“} | {„IP“,„PA“,„AD“} |
+| 5 | iPad | macBookPro | {„IP“,„PA“,„AD“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} |
+| 6 | iPad | iPhone | {„IP“,„PA“,„AD“} | {„IP“,„PH“,„HO“,„ON“,„NE“} |
+| 7 | iWatch | iPad | {„iw“,„wa“,„at“,„tc“,„ch“} | {„IP“,„PA“,„AD“} |
+| 8 | iWatch | macBookPro | {„iw“,„wa“,„at“,„tc“,„ch“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} |
+| 9 | iWatch | iPhone | {„iw“,„wa“,„at“,„tc“,„ch“} | {„IP“,„PH“,„HO“,„ON“,„NE“} |
+| 10 | iPhone | iPad | {„IP“,„PH“,„HO“,„ON“,„NE“} | {„IP“,„PA“,„AD“} |
+| 11 | iPhone | macBookPro | {„IP“,„PH“,„HO“,„ON“,„NE“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} |
+| 12 | iPhone | iPhone | {„IP“,„PH“,„HO“,„ON“,„NE“} | {„IP“,„PH“,„HO“,„ON“,„NE“} |
 
 {style="table-layout:auto"}
 
 +++
 
-## Berechnung der Jaccard-Ähnlichkeitsmessung {#compute-the-jaccard-similarity-measure}
+## Jaccard-Ähnlichkeitsmessung berechnen {#compute-the-jaccard-similarity-measure}
 
-Als Nächstes berechnen Sie den Jaccard-Ähnlichkeitskoeffizienten, um eine Ähnlichkeitsanalyse zwischen den beiden Sätzen von Produktnamen durchzuführen, indem Sie deren tokenisierte Darstellungen vergleichen. Die Ausgabe des unten stehenden SQL-Skripts liefert Folgendes: Produktnamen aus beiden Sets, ihre tokenisierten Darstellungen, die Anzahl der gemeinsamen und gesamten eindeutigen Token und den berechneten Jaccard-Ähnlichkeitskoeffizienten für jedes Paar von Datensätzen.
+Als Nächstes berechnen Sie mithilfe des Jaccard-Ähnlichkeitskoeffizienten, wie Sie eine Ähnlichkeitsanalyse zwischen den beiden Sätzen von Produktnamen durchführen, indem Sie ihre Token-Darstellungen vergleichen. Die Ausgabe des unten stehenden SQL-Scripts liefert die folgenden Informationen: Produktnamen aus beiden Sätzen, ihre Token-Darstellung, die Anzahl der allgemeinen und der gesamten eindeutigen Token und der berechnete Jaccard-Ähnlichkeitskoeffizient für jedes Paar von Datensätzen.
 
 
 ```SQL {line-numbers="true"}
@@ -631,38 +631,38 @@ FROM
     );
 ```
 
-Im Folgenden finden Sie eine Zusammenfassung der SQL, die zur Berechnung des Jaccard-Ähnlichkeitskoeffizienten verwendet wird:
+Im Folgenden finden Sie eine Zusammenfassung des SQL-Codes, der zur Berechnung des Jaccard-Ähnlichkeitskoeffizienten verwendet wird:
 
-- Zeile 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` berechnet die Anzahl der Token, die sowohl für `SetA_tokens1` als auch für `SetB_tokens2` verwendet werden. Diese Berechnung erfolgt durch Berechnung der Größe der Schnittmenge der beiden Token-Arrays.
-- Zeile 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` berechnet die Gesamtanzahl der eindeutigen Token sowohl für `SetA_tokens1` als auch für `SetB_tokens2`. Diese Zeile berechnet die Größe der Vereinigung der beiden Arrays von Token.
-- Zeile 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` berechnet die Jaccard-Ähnlichkeit zwischen den Token-Sets. Diese Zeilen teilen die Größe der Token-Schnittmenge durch die Größe der Token-Vereinigung und runden das Ergebnis auf zwei Dezimalstellen. Das Ergebnis ist ein Wert zwischen null und eins, wobei einer die vollständige Ähnlichkeit anzeigt.
+- Zeile 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` berechnet die Anzahl von Token, die sowohl für `SetA_tokens1` als auch für `SetB_tokens2` gelten. Diese Berechnung wird durch die Berechnung der Größe der Schnittmenge der beiden Token-Arrays erreicht.
+- Zeile 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` berechnet die Gesamtzahl der eindeutigen Token für `SetA_tokens1` und `SetB_tokens2`. Diese Zeile berechnet die Größe der Vereinigung der beiden Token-Arrays.
+- Zeile 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` berechnet die Jaccard-Ähnlichkeit zwischen den Token-Sätzen. Diese Linien teilen die Größe der Token-Schnittmenge durch die Größe der Token-Vereinigung und runden das Ergebnis auf zwei Dezimalstellen. Das Ergebnis ist ein Wert zwischen null und eins, wobei eins eine vollständige Ähnlichkeit anzeigt.
 
-Die Ergebnisse sind in der folgenden Tabelle dargestellt:
+Die Ergebnisse sind in der folgenden Tabelle aufgeführt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
-| * | SetA_ProductNames | SetB_ProductNames | SetA_tokens 1 | SetB_tokens 2 | token_intersect_count | token_intersect_count | Ähnlichkeit von Jaccard |
+| * | SetA_ProductNames | SetB_ProductNames | SetA_tokens 1 | SetB_tokens 2 | token_intersect_count | token_intersect_count | Jaccard-Ähnlichkeit |
 |---|---------------------|-------------------|---------------------------------------|-------------------------------------------------|----|----|----|
-| 1 | ipadmini | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 7 | 0,43 |
-| 2 | ipadmini | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 16 | 0,0 |
-| 3 | ipadmini | iPhone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 11 | 0,09 |
-| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 3 | 1,0 |
-| 5 | ipad | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 12 | 0,0 |
-| 6 | ipad | iPhone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 7 | 0,14 |
-| 7 | iwatch | ipad | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 0 | 8 | 0,0 |
-| 8 | iwatch | macbookpro | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 14 | 0,0 |
-| 9 | iwatch | iPhone | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 0 | 10 | 0,0 |
-| 10 | iPhone | ipad | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 1 | 7 | 0,14 |
-| 11 | iPhone | macbookpro | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 14 | 0,0 |
-| 12 | iPhone | iPhone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 5 | 5 | 1,0 |
+| 1 | IPadmini | iPad | {„IP“,„PA“,„AD“,„DM“,„MI“,„IN“,„NI“} | {„IP“,„PA“,„AD“} | 3 | 7 | 0,43 |
+| 2 | IPadmini | macBookPro | {„IP“,„PA“,„AD“,„DM“,„MI“,„IN“,„NI“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} | 0 | 16 | 0,0 |
+| 3 | IPadmini | iPhone | {„IP“,„PA“,„AD“,„DM“,„MI“,„IN“,„NI“} | {„IP“,„PH“,„HO“,„ON“,„NE“} | 1 | 11 | 0,09 |
+| 4 | iPad | iPad | {„IP“,„PA“,„AD“} | {„IP“,„PA“,„AD“} | 3 | 3 | 1,0 |
+| 5 | iPad | macBookPro | {„IP“,„PA“,„AD“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} | 0 | 12 | 0,0 |
+| 6 | iPad | iPhone | {„IP“,„PA“,„AD“} | {„IP“,„PH“,„HO“,„ON“,„NE“} | 1 | 7 | 0,14 |
+| 7 | iWatch | iPad | {„iw“,„wa“,„at“,„tc“,„ch“} | {„IP“,„PA“,„AD“} | 0 | 8 | 0,0 |
+| 8 | iWatch | macBookPro | {„iw“,„wa“,„at“,„tc“,„ch“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} | 0 | 14 | 0,0 |
+| 9 | iWatch | iPhone | {„iw“,„wa“,„at“,„tc“,„ch“} | {„IP“,„PH“,„HO“,„ON“,„NE“} | 0 | 10 | 0,0 |
+| 10 | iPhone | iPad | {„IP“,„PH“,„HO“,„ON“,„NE“} | {„IP“,„PA“,„AD“} | 1 | 7 | 0,14 |
+| 11 | iPhone | macBookPro | {„IP“,„PH“,„HO“,„ON“,„NE“} | {„ma“,„ac“,„cb“,„bo“,„oo“,„ok“,„kp“,„pr“,„ro“} | 0 | 14 | 0,0 |
+| 12 | iPhone | iPhone | {„IP“,„PH“,„HO“,„ON“,„NE“} | {„IP“,„PH“,„HO“,„ON“,„NE“} | 5 | 5 | 1,0 |
 
 {style="table-layout:auto"}
 
 +++
 
-## Filtern von Ergebnissen basierend auf dem Jaccard-Schwellenwert für Ähnlichkeit {#similarity-threshold-filter}
+## Filtern von Ergebnissen nach dem Jaccard-Ähnlichkeitsschwellenwert {#similarity-threshold-filter}
 
-Filtern Sie schließlich die Ergebnisse anhand eines vordefinierten Schwellenwerts, um nur die Paare auszuwählen, die den Ähnlichkeitskriterien entsprechen. Die folgende SQL-Anweisung filtert die Produkte mit einem Jaccard-Ähnlichkeitskoeffizienten von mindestens 0,4. Dadurch werden die Ergebnisse auf Paare reduziert, die einen erheblichen Grad an Ähnlichkeit aufweisen.
+Filtern Sie die Ergebnisse schließlich nach einem vordefinierten Schwellenwert, um nur die Paare auszuwählen, die die Ähnlichkeitskriterien erfüllen. Die folgende SQL-Anweisung filtert die Produkte mit einem Jaccard-Ähnlichkeitskoeffizienten von mindestens 0,4. Dadurch werden die Ergebnisse auf Paare eingegrenzt, die einen wesentlichen Ähnlichkeitsgrad aufweisen.
 
 ```SQL
 SELECT 
@@ -695,14 +695,14 @@ FROM
 WHERE jaccard_similarity>=0.4
 ```
 
-Die Ergebnisse dieser Abfrage geben die Spalten für die Ähnlichkeitsverknüpfung an, wie unten dargestellt:
+Die Ergebnisse dieser Abfrage geben die Spalten für den Ähnlichkeits-Join an, wie unten dargestellt:
 
-+++Auswählen zum Erweitern
++++Zum Erweitern auswählen
 
 |   | SetA_ProductNames | SetA_ProductNames |
 |---|--------------------------|------------------------|
-| 1 | ipadmini | ipad |
-| 2 | ipad | ipad |
+| 1 | IPadmini | iPad |
+| 2 | iPad | iPad |
 | 3 | iPhone | iPhone |
 
 {style="table-layout:auto"}
@@ -711,10 +711,10 @@ Die Ergebnisse dieser Abfrage geben die Spalten für die Ähnlichkeitsverknüpfu
 
 ### Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie diese Logik jetzt verwenden, um aussagekräftige Beziehungen oder Überschneidungen zwischen verschiedenen Datensätzen hervorzuheben. Die Möglichkeit, Produkte aus verschiedenen Datensätzen zu identifizieren, die sich in ihren Eigenschaften oder Attributen erheblich ähneln, bietet zahlreiche reale Anwendungen. Diese Logik kann für Szenarien wie die folgenden verwendet werden:
+Durch Lesen dieses Dokuments können Sie jetzt diese Logik verwenden, um aussagekräftige Beziehungen oder Überschneidungen zwischen unterschiedlichen Datensätzen hervorzuheben. Die Möglichkeit, Produkte aus verschiedenen Datensätzen zu identifizieren, deren Merkmale oder Attribute sich stark ähneln, hat zahlreiche reale Anwendungen. Diese Logik kann für Szenarien wie die folgenden verwendet werden:
 
-- Produktabgleich: Um ähnliche Produkte für Kunden zu gruppieren oder zu empfehlen.
-- Datenbereinigung: Verbesserung der Datenqualität.
-- Korbanalyse für den Markt: Hier erhalten Sie Einblicke in das Kundenverhalten, die Präferenzen und potenzielle Crossselling-Möglichkeiten.
+- Produktabgleich: Um ähnliche Produkte zu gruppieren oder Kunden zu empfehlen.
+- Datenbereinigung: zur Verbesserung der Datenqualität.
+- Warenkorbanalyse: Um Einblicke in das Kundenverhalten, die Vorlieben und potenzielle Cross-Selling-Möglichkeiten zu erhalten.
 
-Wenn Sie dies noch nicht getan haben, sollten Sie die [AI/ML Feature Pipeline - Übersicht ](../data-distiller/ml-feature-pipelines/overview.md) lesen. In dieser Übersicht erfahren Sie, wie Data Distiller und Ihr bevorzugtes maschinelles Lernen benutzerdefinierte Datenmodelle erstellen können, die Ihre Marketing-Anwendungsfälle mit Experience Platform-Daten unterstützen.
+Wenn Sie dies noch nicht getan haben, empfehlen wir, die [Übersicht über die KI/ML-Feature-Pipeline](../data-distiller/ml-feature-pipelines/overview.md) zu lesen. Verwenden Sie diese Übersicht, um zu erfahren, wie Data Distiller und Ihr bevorzugtes maschinelles Lernen benutzerdefinierte Datenmodelle erstellen können, die Ihre Marketing-Anwendungsfälle mit Experience Platform-Daten unterstützen.

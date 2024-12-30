@@ -15,7 +15,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Da Warnhinweise sowohl in Produktions- als auch in Entwicklungs-Sandboxes unterstützt werden, können Sie sie in jeder beliebigen Sandbox abonnieren. Wenn eine Sandbox zurückgesetzt wird, werden auch alle Abonnementwarnungen zurückgesetzt und beim Löschen einer Sandbox werden alle Abonnementwarnungen gelöscht.
+>Da Warnhinweise sowohl in Produktions- als auch in Entwicklungs-Sandboxes unterstützt werden, können Sie sie in jeder beliebigen Sandbox abonnieren. Wenn eine Sandbox zurückgesetzt wird, werden auch alle Abonnement-Warnhinweise zurückgesetzt. Wenn eine Sandbox gelöscht wird, werden alle Abonnement-Warnhinweise gelöscht.
 
 Mit Adobe Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Experience Platform-Aktivitäten abonnieren. Warnhinweise verringern oder beseitigen die Notwendigkeit, die [[!DNL Observability Insights] API](../api/overview.md) abzufragen, um zu überprüfen, ob ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob Fehler aufgetreten sind.
 
@@ -83,13 +83,13 @@ Um mit Warnhinweisen in der Platform-Benutzeroberfläche zu arbeiten, müssen Si
 >
 >Weitere Informationen zum Verwalten von Berechtigungen in Platform finden Sie in der [Dokumentation zur Zugangssteuerung](../../access-control/ui/overview.md).
 
-Mit der Berechtigung Warnhinweise anzeigen können Sie erhaltene Warnhinweise anzeigen, indem Sie oben rechts das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) auswählen.
+Mit der Berechtigung „Warnhinweise anzeigen“ können Sie erhaltene Warnhinweise anzeigen, indem Sie oben rechts das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) auswählen.
 
 ![](../images/alerts/overview/ui.png)
 
 >[!NOTE]
 >
-> Wählen Sie einen Warnhinweis aus, um zu einem zugehörigen Dashboard zu navigieren, um detaillierte Informationen dazu zu erhalten, warum der Warnhinweis ausgelöst wurde.
+> Wählen Sie einen Warnhinweis aus, um zu einem zugehörigen Dashboard zu navigieren, um genauere Informationen zur Ursache des Warnhinweises zu erhalten.
 
 Darüber hinaus ermöglicht die Registerkarte [!UICONTROL Warnhinweise] in der Benutzeroberfläche es einzelnen Benutzern, sich für bestimmte Warnhinweistypen zu abonnieren, und gibt Administratoren die Möglichkeit, Warnhinweisregeln vollständig zu aktivieren oder zu deaktivieren. Weitere Informationen zum Verwalten von Warnhinweisen finden Sie im [Handbuch zur Benutzeroberfläche](./ui.md).
 

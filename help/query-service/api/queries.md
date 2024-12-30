@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; API-Handbuch; Abfragen; Abfrage; Query Service
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;API-Handbuch;Abfragen;Abfrage;Abfrage-Service;
 solution: Experience Platform
-title: Query API Endpoint
-description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des /queries -Endpunkts in der Query Service-API ausführen können.
+title: API-Endpunkt für Abfragen
+description: In den folgenden Abschnitten werden Aufrufe beschrieben, die Sie mit dem /queries-Endpunkt in der Abfrage-Service-API ausführen können.
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,15 +12,15 @@ ht-degree: 20%
 
 ---
 
-# Abfrage-Endpunkt
+# Abfrageendpunkt
 
-## Beispiel-API-Aufrufe
+## Beispiel für API-Aufrufe
 
-In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mit dem `/queries` -Endpunkt in der [!DNL Query Service] -API tätigen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden Aufrufe beschrieben, die Sie mit dem `/queries`-Endpunkt in der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Abruf einer Abfrageliste
+### Abrufen einer Liste von Abfragen
 
-Sie können eine Liste aller Abfragen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/queries` senden.
+Sie können eine Liste aller Abfragen für Ihre Organisation abrufen, indem Sie eine GET-Anfrage an den `/queries`-Endpunkt senden.
 
 **API-Format**
 
@@ -33,21 +33,21 @@ GET /queries?{QUERY_PARAMETERS}
 
 **Abfrageparameter**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflistung von Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Abfragen abgerufen.
+Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Auflistung von Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Abfragen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die älteste erstellte Abfrage zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` , um das Datum 7. September 2020 anzugeben. Ein komplexeres Beispiel würde als `2022-11-05T08:15:30-05:00` geschrieben und entspricht dem Wert vom 5. November 2022, 8:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`) gekennzeichnet. Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
-| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state` und `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). Beispielsweise gibt `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` alle Abfragen mit der angegebenen ID zurück. |
-| `excludeSoftDeleted` | Gibt an, ob eine Abfrage einbezogen werden soll, bei der eine weiche Löschung vorgenommen wurde. Beispiel: `excludeSoftDeleted=false` enthält **soft gelöschte Abfragen**. (*Boolesch, Standardwert: true*) |
-| `excludeHidden` | Gibt an, ob benutzergesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, enthält **nicht benutzergesteuerte Abfragen, wie z. B. CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen.** (*Boolesch, Standardwert: true*) |
-| `isPrevLink` | Der Abfrageparameter `isPrevLink` wird für die Paginierung verwendet. Die Ergebnisse des API-Aufrufs werden anhand ihres `created`-Zeitstempels und der `orderby` -Eigenschaft sortiert. Beim Navigieren auf den Ergebnisseiten wird `isPrevLink` beim Zurückblättern auf &quot;true&quot;gesetzt. Die Reihenfolge der Abfrage wird umgekehrt. Siehe &quot;Weiter&quot;- und &quot;Prev&quot;-Links als Beispiele. |
+| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse zu sortieren. Wenn kein Startdatum angegeben wird, gibt der API-Aufruf zuerst die älteste erstellte Abfrage zurück und listet dann weiterhin neuere Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen verschiedene Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07`, um das Datum 7. September 2020 auszudrücken. Ein komplexeres Beispiel würde als `2022-11-05T08:15:30-05:00` geschrieben und entspricht dem 5. November 2022, 8:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Offset versehen werden und wird durch das Suffix „Z“ (`2020-01-01T01:01:01Z`) gekennzeichnet. Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state` und `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (ungleich) und `~` (enthält). Beispielsweise gibt `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` alle Abfragen mit der angegebenen ID zurück. |
+| `excludeSoftDeleted` | Gibt an, ob eine Abfrage, die vorläufig gelöscht wurde, einbezogen werden soll. `excludeSoftDeleted=false` werden beispielsweise Abfragen **einschließen** vorläufig gelöschte Abfragen. (*Boolesch, Standardwert: true*) |
+| `excludeHidden` | Gibt an, ob nicht benutzergesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf „false“ gesetzt **,** nicht benutzergesteuerte Abfragen wie CURSOR-Definitionen, FETCH oder Metadatenabfragen. (*Boolesch, Standardwert: true*) |
+| `isPrevLink` | Der `isPrevLink` Abfrageparameter wird für die Paginierung verwendet. Die Ergebnisse des API-Aufrufs werden anhand ihres `created` Zeitstempels und der `orderby`-Eigenschaft sortiert. Beim Navigieren durch die Ergebnisseiten wird `isPrevLink` auf „true“ gesetzt, wenn rückwärts gepaggt wird. Dadurch wird die Reihenfolge der Abfrage umgekehrt. Siehe die Links „Weiter“ und „Zurück“ als Beispiele. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die neueste für Ihr Unternehmen erstellte Abfrage abgerufen.
+Mit der folgenden Anfrage wird die neueste für Ihre Organisation erstellte Abfrage abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragen für die angegebene Organisation als JSON zurück. Die folgende Antwort gibt die neueste für Ihr Unternehmen erstellte Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit einer Liste von Abfragen für die angegebene Organisation als JSON zurück. Die folgende Antwort gibt die neueste Abfrage zurück, die für Ihre Organisation erstellt wurde.
 
 ```json
 {
@@ -120,7 +120,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragen 
 
 ### Erstellen einer Abfrage
 
-Sie können eine neue Abfrage erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/queries` senden.
+Sie können eine neue Abfrage erstellen, indem Sie eine POST-Anfrage an den `/queries`-Endpunkt senden.
 
 **API-Format**
 
@@ -130,7 +130,7 @@ POST /queries
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Abfrage mit einer SQL-Anweisung, die in der Payload bereitgestellt wird:
+Die folgende Anfrage erstellt eine neue Abfrage mit einer SQL-Anweisung in der Payload:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -150,7 +150,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
     }  
 ```
 
-Im folgenden Anforderungsbeispiel wird eine neue Abfrage mit einer vorhandenen Abfragevorlagen-ID erstellt.
+Im folgenden Anfragebeispiel wird eine neue Abfrage mit einer vorhandenen Abfragevorlagen-ID erstellt.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -173,14 +173,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
 | `name` | Der Name Ihrer SQL-Abfrage. |
 | `description` | Die Beschreibung Ihrer SQL-Abfrage. |
-| `queryParameters` | Eine Schlüsselwertpaarung zum Ersetzen von parametrisierten Werten in der SQL-Anweisung. Dies ist nur erforderlich, wenn **Sie** Parameter verwenden, die in der von Ihnen bereitgestellten SQL ersetzt werden. An diesen Schlüsselwertpaaren wird keine Wertüberprüfung durchgeführt. |
-| `templateId` | Die eindeutige Kennung für eine bereits vorhandene Abfrage. Sie können dies anstelle einer SQL-Anweisung angeben. |
+| `queryParameters` | Ein Schlüssel-Wert-Paar, das alle parametrisierten Werte in der SQL-Anweisung ersetzt. Dies ist nur erforderlich **wenn** Parameterersetzungen innerhalb der von Ihnen angegebenen SQL verwenden. Für diese Schlüssel-Wert-Paare wird keine Überprüfung des Werttyps durchgeführt. |
+| `templateId` | Die eindeutige Kennung für eine bereits vorhandene Abfrage. Sie können dies anstelle einer SQL-Anweisung bereitstellen. |
 | `insertIntoParameters` | (Optional) Wenn diese Eigenschaft definiert ist, wird diese Abfrage in eine INSERT INTO-Abfrage konvertiert. |
 | `ctasParameters` | (Optional) Wenn diese Eigenschaft definiert ist, wird diese Abfrage in eine CTAS-Abfrage konvertiert. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten Abfrage zurück. Nachdem die Abfrage aktiviert wurde und erfolgreich ausgeführt wurde, ändert sich die `state` von `SUBMITTED` in `SUCCESS`.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 202 (Akzeptiert) mit Details zur neu erstellten Abfrage zurückgegeben. Sobald die Abfrage aktiviert wurde und erfolgreich ausgeführt wurde, ändert sich die `state` von `SUBMITTED` in `SUCCESS`.
 
 ```json
 {
@@ -223,11 +223,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu I
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` verwenden, um [Ihre erstellte Abfrage abzubrechen](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` verwenden, um [erstellte Abfrage abzubrechen](#cancel-a-query).
 
 ### Abfrage nach ID abrufen
 
-Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET-Anfrage an den `/queries` -Endpunkt senden und im Anfragepfad den `id` -Wert der Abfrage angeben.
+Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET-Anfrage an den `/queries`-Endpunkt senden und den `id` der Abfrage im Anfragepfad angeben.
 
 **API-Format**
 
@@ -237,7 +237,7 @@ GET /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id` -Wert der Abfrage, die Sie abrufen möchten. |
+| `{QUERY_ID}` | Der `id` der Abfrage, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -251,7 +251,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit detaillierten Informationen zur angegebenen Abfrage zurück.
 
 ```json
 {
@@ -294,11 +294,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` verwenden, um [Ihre erstellte Abfrage abzubrechen](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` verwenden, um [erstellte Abfrage abzubrechen](#cancel-a-query).
 
-### Abbrechen oder Soft Löschen einer Abfrage
+### Abfrage abbrechen oder vorläufig löschen
 
-Sie können eine bestimmte Abfrage abbrechen oder sanft löschen lassen, indem Sie eine PATCH-Anfrage an den `/queries` -Endpunkt senden und im Anfragepfad den `id` -Wert der Abfrage angeben.
+Sie können einen Abbruch oder ein Soft Delete für eine bestimmte Abfrage anfordern, indem Sie eine PATCH-Anfrage an den `/queries`-Endpunkt senden und den `id` der Abfrage im Anfragepfad angeben.
 
 **API-Format**
 
@@ -308,7 +308,7 @@ PATCH /queries/{QUERY_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id` -Wert der Abfrage, an der Sie den Vorgang durchführen möchten. |
+| `{QUERY_ID}` | Der `id` der Abfrage, für die Sie den Vorgang ausführen möchten. |
 
 
 **Anfrage**
@@ -329,11 +329,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Der Typ des Vorgangs, der für die Ressource ausgeführt werden soll. Die zulässigen Werte sind `cancel` und `soft_delete`. Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel ` festlegen. Beachten Sie, dass der Soft-Löschvorgang die Rückgabe der Abfrage bei GET-Anfragen stoppt, sie jedoch nicht aus dem System löscht. |
+| `op` | Der Typ des Vorgangs, der mit der Ressource durchgeführt werden soll. Die zulässigen Werte sind `cancel` und `soft_delete`. Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel ` festlegen. Beachten Sie, dass der Soft Delete-Vorgang verhindert, dass die Abfrage bei GET-Anfragen zurückgegeben wird, sie jedoch nicht aus dem System löscht. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurück:
+Bei einer erfolgreichen Antwort wird der HTTP-Status 202 (Akzeptiert) mit der folgenden Meldung zurückgegeben:
 
 ```json
 {

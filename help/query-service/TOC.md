@@ -26,31 +26,31 @@ ht-degree: 76%
    - Abgeleitete Datensätze {#derived-datasets}
       - [Übersicht](data-distiller/derived-datasets/overview.md)
       - [Erstellen abgeleiteter Datensätze mit SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
-      - [Erstellen von dezimalbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - SQL Insights für erweiterte App-Berichterstellung {#sql-insights}
+      - [Erstellen von dezilbasierten abgeleiteten Datensätzen](data-distiller/derived-datasets/decile-based-derived-attributes.md)
+   - SQL Insights für erweiterte App-Reporting-{#sql-insights}
       - [Übersicht](data-distiller/sql-insights/overview.md)
       - [Abfrage pro Modus](data-distiller/sql-insights/query-pro-mode.md)
       - [Beschleunigte Abfragen senden](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Handbuch zum Reporting-Insights-Datenmodell](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - AI-/ML-Funktions-Pipelines {#ml-feature-pipelines}
+   - KI/ML-Funktions-Pipelines {#ml-feature-pipelines}
       - [Übersicht](data-distiller/ml-feature-pipelines/overview.md)
-      - [Herstellen einer Verbindung zu Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Verbinden mit Jupyter-Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Explorative Datenanalyse](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
-      - [Technische Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
-      - [Daten in ML-Umgebungen exportieren](data-distiller/ml-feature-pipelines/export-data.md)
-      - [End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Statistiken zu Data Distiller und maschinelles Lernen {#advanced-statistics}
+      - [Engineering-Funktionen für ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Exportieren von Daten in ML-Umgebungen](data-distiller/ml-feature-pipelines/export-data.md)
+      - [End-to-End-Workflow zur Anreicherung von KI/ML-Daten](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Data Distiller-Statistiken und {#advanced-statistics} für maschinelles Lernen
    - [Übersicht](advanced-statistics/overview.md)
    - [Funktionsentwicklung](advanced-statistics/feature-engineering.md)
    - [Modelle](advanced-statistics/models.md)
-Modelle implementieren {#implement-models}
-      - [Modelle implementieren](advanced-statistics/implement-models/implement-models.md)
+Implementieren von Modellen {#implement-models}
+      - [Implementieren von Modellen](advanced-statistics/implement-models/implement-models.md)
       - [Regression](advanced-statistics/implement-models/regression.md)
       - [Klassifizierung](advanced-statistics/implement-models/classification.md)
       - [Clustering](advanced-statistics/implement-models/clustering.md)
-   - [Merkmalumwandlung](advanced-statistics/feature-transformation.md)
-- Data Distiller Audiences {#data-distiller-audiences}
-   - [Erstellen externer Zielgruppen mit SQL](data-distiller-audiences/overview.md)
+   - [Funktionstransformation](advanced-statistics/feature-transformation.md)
+- Data Distiller Audiences-{#data-distiller-audiences}
+   - [Erstellen externer Zielgruppen mithilfe von SQL](data-distiller-audiences/overview.md)
 - Beispiele {#use-cases}
    - [Übersicht](use-cases/overview.md)
    - [Abgebrochenes Durchsuchen](use-cases/abandoned-browse.md)
@@ -65,7 +65,7 @@ Modelle implementieren {#implement-models}
    - [Auflisten der Seitenansichten von Benutzenden](use-cases/list-visitor-sessions.md)
    - [Besuchende nach Seitenansichten auflisten](use-cases/visitors-by-number-of-page-views.md)
    - [Tendenz-Bewertung](use-cases/propensity-score.md)
-   - [Abrufen ähnlicher Datensätze mit Funktionen höherer Reihenfolge](use-cases/retrieve-similar-records.md)
+   - [Abrufen ähnlicher Datensätze mit Funktionen höherer Ordnung](use-cases/retrieve-similar-records.md)
    - [Zurückgeben und Verwenden von Merchandising-Variablen aus Analysedaten ](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Anzeigen des Roll-up-Berichts für Besuchende](use-cases/roll-up-report-of-a-visitor.md)
@@ -79,14 +79,14 @@ Modelle implementieren {#implement-models}
    - [Deduplizierung von Daten](key-concepts/deduplication.md)
    - [Datensatzbeispiele](key-concepts/dataset-samples.md)
    - [Berechnung der Datensatzstatistiken](key-concepts/dataset-statistics.md)
-- Distiller-Hyperwürfel {#hypercubes}
-   - [Effiziente Big-Data-Analyse mit Hyperwürfen](hypercubes/overview.md)
+- Data Distiller Hypercubes-{#hypercubes}
+   - [Effiziente Big-Data-Analyse mit Hypercubes](hypercubes/overview.md)
 - Clients mit Query Service verbinden {#clients}
    - [Kundenverbindungen – Überblick](clients/overview.md)
    - [SSL-Modi](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
-   - [GitHub-Kopilot](./clients/github-copilot.md)
+   - [GitHub-Copilot](./clients/github-copilot.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [Postico](clients/postico.md)
@@ -113,7 +113,7 @@ Modelle implementieren {#implement-models}
    - [Abfragevorlagen](api/query-templates.md)
    - [Beschleunigte Abfragen](api/accelerated-queries.md)
    - [Abonnements von Warnhinweisen](api/alert-subscriptions.md)
-- Data Distiller Authorization API {#auth-api}
+- Data Distiller Authorization API-{#auth-api}
    - [Übersicht](auth-api/overview.md)
    - [Erste Schritte](auth-api/getting-started.md)
    - [IP-Zugriff](auth-api/ip-access.md)
@@ -130,7 +130,7 @@ Modelle implementieren {#implement-models}
    - [SQL – Übersicht](sql/overview.md)
    - [SQL-Syntax](sql/syntax.md)
    - [Adobe-definierte Funktionen](sql/adobe-defined-functions.md)
-   - [Funktionen mit höherer Reihenfolge](sql/higher-order-functions.md)
+   - [Funktionen höherer Ordnung](sql/higher-order-functions.md)
    - [Spark SQL-Funktionen](sql/spark-sql-functions.md)
    - [Metadatenbefehle](sql/metadata.md)
    - [Vorbereitete Anweisungen](sql/prepared-statements.md)

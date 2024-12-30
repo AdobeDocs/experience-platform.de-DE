@@ -41,9 +41,9 @@ Es gibt Verbesserungen bei einer Reihe von Funktionen von Adobe Experience Platf
 
 ### Neue B2B- und B2P-Editionen {#editions}
 
-Es stehen neue B2B- und B2P-Editionen zur Verfügung, die B2B-Daten und -Funktionen sowohl für Real-Time CDP- als auch für Platform Activation-Produkte bieten.
+Neue B2B- und B2P-Editionen, die B2B-Daten und -Funktionen sowohl in Real-Time CDP als auch in Platform Activation-Produkten ermöglichen, sind zum Kauf verfügbar.
 
-Weitere Informationen zu Real-Time CDP B2B Edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
+Weitere Informationen zu Real-Time CDP B2B edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
 
 ### Neue Marketo-Connectoren für Datenquelle und Ziel {#marketo}
 
@@ -60,9 +60,9 @@ Standard-B2B-XDM-Klassen, -Feldergruppen und -Datentypen sind für alle Platform
 
 | Funktion | Beschreibung |
 |-----------|--------------|
-| Standard-B2B-XDM-Klassen | Real-time Customer Data Platform B2B Edition bietet verschiedene Standard-XDM, die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen, Kampagnen und mehr erfassen. |
+| Standard-B2B-XDM-Klassen | Real-time Customer Data Platform B2B edition bietet mehrere standardmäßige XDM-Dateien, die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen. |
 
-Weitere Informationen zur Erfassung von B2B-Datenentitäten finden Sie in der Dokumentation zu [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) .
+Weitere Informationen zur [ von B2B-Datenentitäten finden Sie ](../../rtcdp/schemas/b2b.md) der Dokumentation zu Schemas in Real-time Customer Data Platform B2B edition .
 
 ### (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API {#ad-hoc-activation}
 
@@ -88,6 +88,6 @@ Die in Real-time Customer Data Platform verfügbare Kunden-KI dient dazu, in gro
 | Funktion | Beschreibung |
 |-----------|-------------|
 | Unterstützung für mehrere Datensätze | Kunden-KI kann jetzt mühelos mehrere Datensätze direkt in der Benutzeroberfläche erfassen, ohne dass jeder Datensatz zugeordnet und zusammengeführt werden muss. Diese neue zeitsparende Funktion bietet leistungsfähigere und genauere Scores mit umfangreicheren Daten aus mehreren Datensätzen. |
-| Benutzerdefinierte Profilattribute | Kunden-KI unterstützt jetzt die Definition benutzerdefinierter Profildatensatzfelder (mit Zeitstempeln) in Ihren Daten zusätzlich zu standardmäßigen Ereignisfeldern. Mit dieser Option können Sie zusätzliche Profilattribute hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. |
+| Benutzerdefinierte Profilattribute | Kunden-KI unterstützt jetzt die Definition benutzerdefinierter Profildatensatzfelder (mit Zeitstempeln) in Ihren Daten zusätzlich zu standardmäßigen Ereignisfeldern. Mit dieser Option können Sie zusätzliche, von Ihnen als einflussreich erachtete Profilattribute hinzufügen, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. |
 
 Weitere Informationen zu Kunden-KI finden Sie in der [Dokumentation zu Kunden-KI](../../intelligent-services/customer-ai/overview.md).

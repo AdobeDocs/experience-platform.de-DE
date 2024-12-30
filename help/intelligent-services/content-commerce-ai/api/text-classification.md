@@ -1,8 +1,8 @@
 ---
-keywords: Text-Classification; Text-Classification
+keywords: Textklassifizierung;Textklassifizierung
 solution: Experience Platform
-title: Textklassifizierung in der Inhalts- und Commerce-API
-description: Der Text-Classification-Dienst kann ein Textfragment in eine oder mehrere Beschriftungen klassifizieren. Die Classification kann aus einer einzigen Bezeichnung, mehreren Beschriftungen oder hierarchischen Strukturen bestehen.
+title: Textklassifizierung in der Content and Commerce AI-API
+description: Wenn der Textklassifizierungs-Service ein Textfragment erhält, kann er es in eine oder mehrere Kennzeichnungen klassifizieren. Die Klassifizierung kann einteilig, mehrteilig oder hierarchisch sein.
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
 source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
 workflow-type: tm+mt
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Content und Commerce AI befinden sich in der Beta-Phase. Die Dokumentation kann sich ändern.
+>Content and Commerce AI befindet sich in der Beta-Phase. Die Dokumentation kann sich ändern.
 
-Der Text-Classification-Dienst kann ein Textfragment in eine oder mehrere Beschriftungen klassifizieren. Die Classification kann aus einer einzigen Bezeichnung, mehreren Beschriftungen oder hierarchischen Strukturen bestehen.
+Wenn der Textklassifizierungs-Service ein Textfragment erhält, kann er es in eine oder mehrere Kennzeichnungen klassifizieren. Die Klassifizierung kann einteilig, mehrteilig oder hierarchisch sein.
 
 **API-Format**
 
@@ -27,11 +27,11 @@ POST /services/v1/predict
 
 **Anfrage**
 
-Die folgende Anfrage klassifiziert Text aus einem Fragment anhand der in der Payload bereitgestellten Eingabeparameter. Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispiel-Payload .
+Die folgende Anfrage klassifiziert Text aus einem Fragment basierend auf den in der Payload bereitgestellten Eingabeparametern. Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispiel-Payload .
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welcher [!DNL Sensei Content Framework] verwendet wird. Vergewissern Sie sich, dass Sie über den korrekten &quot;`analyzer_id`&quot;-Wert verfügen, bevor Sie Ihre Anfrage stellen. Wenden Sie sich an das Beta-Team von Content und Commerce AI , um Ihr `analyzer_id` für diesen Dienst zu erhalten.
+>`analyzer_id` bestimmt, welche [!DNL Sensei Content Framework] verwendet wird. Vergewissern Sie sich, dass Sie über die richtigen `analyzer_id` verfügen, bevor Sie Ihre Anfrage stellen. Wenden Sie sich an das Beta-Team von Content and Commerce AI , um Ihre `analyzer_id` für diesen Service zu erhalten.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -60,17 +60,17 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die [!DNL Sensei]-Dienst-ID, unter der Ihre Anfrage bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet wird. Wenden Sie sich bei benutzerdefinierten Diensten an das AI-Team von Content und Commerce, um eine benutzerdefinierte ID einzurichten. | Ja |
-| `application-id` | Die Kennung der erstellten Anwendung. | Ja |
-| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Dokument darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem `data` -Array außer Kraft. Jede der verbleibenden Eigenschaften, die unten in dieser Tabelle aufgeführt sind, kann innerhalb von `data` überschrieben werden. | Ja |
-| `language` | Sprache des Eingabetexts. Der Standardwert lautet `en`. | Nein |
-| `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anfragetexts oder einer signierten URL für einen S3-Behälter ist. Der Standardwert für diese Eigenschaft ist `inline`. | Nein |
-| `encoding` | Das Kodierungsformat des Eingabetexts. Dies kann `utf-8` oder `utf-16` sein. Der Standardwert für diese Eigenschaft ist `utf-8`. | Nein |
-| `threshold` | Der Schwellenwert des Punktes (0 bis 1), über dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert &quot;`0`&quot;, um alle Ergebnisse zurückzugeben. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
-| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert &quot;`0`&quot;, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Limits. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
-| `custom` | Alle benutzerdefinierten Parameter, die weitergegeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, damit sie funktioniert. | Nein |
-| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht übergeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
-| `content` | Der vom Text-Classification-Dienst verwendete Inhalt. Der Inhalt kann als roher Text (Inhaltstyp &quot;inline&quot;) verwendet werden. <br> Wenn der Inhalt eine Datei auf S3 ist (&#39;s3-bucket&#39; Inhaltstyp), übergeben Sie die signierte URL. | Ja |
+| `analyzer_id` | Die [!DNL Sensei]-Service-ID, unter der Ihre Anfrage bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich für benutzerdefinierte Services an das KI-Team für Inhalte und Commerce, um eine benutzerdefinierte ID einzurichten. | Ja |
+| `application-id` | Die ID der erstellten Anwendung. | Ja |
+| `data` | Ein Array, das ein JSON-Objekt enthält, wobei jedes Objekt im Array ein Dokument darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, überschreiben die globalen Parameter, die außerhalb des `data`-Arrays angegeben werden. Alle verbleibenden Eigenschaften, die unten in dieser Tabelle beschrieben werden, können in `data` überschrieben werden. | Ja |
+| `language` | Sprache des Eingabetextes. Der Standardwert lautet `en`. | Nein |
+| `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anfragetexts oder eine signierte URL für einen S3-Bucket ist. Der Standardwert für diese Eigenschaft ist `inline`. | Nein |
+| `encoding` | Das Kodierungsformat des Eingabetextes. Dies kann `utf-8` oder `utf-16` sein. Der Standardwert für diese Eigenschaft ist `utf-8`. | Nein |
+| `threshold` | Der Schwellenwert des Scores (0 bis 1), bei dessen Überschreitung die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0` , um alle Ergebnisse zurückzugeben. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
+| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0` , um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse der niedrigere der beiden festgelegten Grenzwerte. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
+| `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. Diese Eigenschaft erfordert ein gültiges JSON-Objekt, um zu funktionieren. | Nein |
+| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wurde. Wenn diese nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
+| `content` | Der vom Textklassifizierungs-Service verwendete Inhalt. Bei dem Inhalt kann es sich um Rohtext handeln (Content-Typ „inline„). <br> Wenn es sich bei dem Inhalt um eine Datei auf S3 (&#39;s3-Bucket&#39; Inhaltstyp) handelt, übergeben Sie die signierte URL. | Ja |
 
 **Antwort**
 

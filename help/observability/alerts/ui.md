@@ -21,7 +21,7 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie einen Verlauf d
 
 Wählen Sie zunächst im linken Navigationsbereich **[!UICONTROL Warnhinweise]** aus.
 
-![Warnt die Seite, die im linken Navigationsbereich [!UICONTROL Warnhinweise] markiert.](../images/alerts/ui/workspace.png)
+![Warnhinweisseite mit hervorgehobener [!UICONTROL Warnhinweise] im linken Navigationsbereich.](../images/alerts/ui/workspace.png)
 
 ## Verwalten von Warnhinweisregeln {#manage-rules}
 
@@ -31,97 +31,97 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die verfügbaren Regel
 
 Wählen Sie eine Regel aus der Liste aus, um ihre Beschreibung und ihre Konfigurationsparameter in der rechten Leiste anzuzeigen, einschließlich Schwellenwert und Schweregrad.
 
-![Eine Warnregel wurde mit Details in der rechten Leiste hervorgehoben.](../images/alerts/ui/rule-details.png)
+![Eine hervorgehobene Warnregel mit Details in der rechten Leiste.](../images/alerts/ui/rule-details.png)
 
 Wählen Sie auf die Auslassungspunkte (**...**) neben dem Namen einer Regel klicken, zeigt eine Dropdown-Liste die Steuerelemente zum Aktivieren oder Deaktivieren des Warnhinweises (je nach seinem aktuellen Status) und zum Abonnieren oder Abbestellen von E-Mail-Benachrichtigungen für den Warnhinweis.
 
-![Die ausgewählten Ellipsen zeigen das Dropdown-Menü an.](../images/alerts/ui/disable-subscribe.png)
+![Die ausgewählten Auslassungszeichen zeigen das Dropdown-Menü an.](../images/alerts/ui/disable-subscribe.png)
 
 ## Warnhinweis-Abonnierende verwalten {#manage-subscribers}
 
 >[!NOTE]
 >
-> Um eine Warnung einer Adobe-Benutzer-ID, einer externen E-Mail-Adresse oder einer E-Mail-Gruppenliste zuzuweisen, müssen Sie Administrator sein.
+> Um einen Warnhinweis einer Adobe-Benutzer-ID, einer externen E-Mail-Adresse oder einer E-Mail-Gruppenliste zuzuweisen, müssen Sie Administrator sein.
 
 Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die verfügbaren Regeln aufgelistet, die einen Warnhinweis auslösen können.
 
-![Eine Liste der verfügbaren Warnungsregeln, die auf der Registerkarte [!UICONTROL Durchsuchen] angezeigt werden.](../images/alerts/ui/rules.png)
+![Eine Liste der verfügbaren Warnhinweisregeln, die auf der Registerkarte [!UICONTROL Durchsuchen] angezeigt wird.](../images/alerts/ui/rules.png)
 
-Wählen Sie die Auslassungszeichen (**...**) neben dem Namen einer Regel aus. Ein Dropdown-Menü zeigt Steuerelemente an. Wählen Sie **[!UICONTROL Warnhinweis-Abonnenten verwalten]** aus.
+Klicken Sie auf die Auslassungszeichen (**…**) neben dem Namen einer Regel. In einem Dropdown-Menü werden dann Steuerelemente angezeigt. Wählen **[!UICONTROL Warnhinweis-Abonnenten verwalten]** aus.
 
-![Wählen Sie die Ellipsen aus, um das Dropdownmenü anzuzeigen. Die Option [!UICONTROL Abonnenten des Warnhinweises verwalten] ist hervorgehoben.](../images/alerts/ui/manage-alert-subscribers.png)
+![Wählen Sie die Auslassungszeichen aus, um das Dropdown-Menü anzuzeigen. Die [!UICONTROL Option „Warnhinweis-Abonnenten verwalten] ist hervorgehoben.](../images/alerts/ui/manage-alert-subscribers.png)
 
-Die Seite [!UICONTROL Warnhinweis-Abonnenten verwalten] wird angezeigt. Um Benachrichtigungen bestimmten Benutzern zuzuweisen, geben Sie ihre Adobe-Benutzer-ID, ihre externe E-Mail-Adresse oder eine E-Mail-Gruppenliste ein und drücken Sie die Eingabetaste.
+Die [!UICONTROL Warnhinweis-Abonnenten verwalten] wird angezeigt. Um Benachrichtigungen bestimmten Benutzern zuzuweisen, geben Sie deren Adobe-Benutzer-ID, externe E-Mail-Adresse oder eine E-Mail-Gruppenliste ein und drücken Sie dann die Eingabetaste.
 
 >[!NOTE]
 >
->Um diese Benachrichtigung gleichzeitig an mehrere Benutzer zu senden, geben Sie eine Liste mit Benutzer-IDs oder E-Mail-Adressen getrennt durch Kommas an.
+>Um diese Benachrichtigung an mehrere Benutzer gleichzeitig zu senden, geben Sie eine Liste der Benutzer-IDs oder E-Mail-Adressen an, die durch Kommas getrennt sind.
 
-![Die Seite zum Verwalten von Abonnenten von Warnhinweisen mit den eingegebenen E-Mail-Adressen.](../images/alerts/ui/manage-alert-add-email.png)
+![Die Seite „Warnhinweis-Abonnenten verwalten“ mit den eingegebenen E-Mail-Adressen.](../images/alerts/ui/manage-alert-add-email.png)
 
 Die E-Mail-Adressen werden in der Liste der aktuellen Abonnenten angezeigt. Wählen Sie **[!UICONTROL Aktualisieren]** aus.
 
-![Die Seite zum Verwalten von Warnhinweis-Abonnenten, auf der Abonnenten und [!UICONTROL Aktualisieren] hervorgehoben werden.](../images/alerts/ui/manage-alert-subscribers-added-email.png)
+![Die Seite „Warnhinweis-Abonnenten verwalten“ mit Hervorhebung von Abonnentinnen und Abonnenten und [!UICONTROL Aktualisieren].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
-Sie haben Ihrer Benachrichtigungsliste erfolgreich Benutzer hinzugefügt. Die gesendeten Benutzer erhalten jetzt E-Mail-Benachrichtigungen zu diesem Warnhinweis, wie in der Abbildung unten dargestellt.
+Sie haben Benutzer erfolgreich zu Ihrer Benachrichtigungsliste für Warnhinweise hinzugefügt. Die gesendeten Benutzer erhalten jetzt E-Mail-Benachrichtigungen für diesen Warnhinweis, wie in der Abbildung unten dargestellt.
 
-![Ein E-Mail-Beispiel für die erhaltene Warnhinweis-Benachrichtigung.](../images/alerts/ui/manage-alert-subscribers-email.png)
+![Ein E-Mail-Beispiel für die empfangene Warnbenachrichtigung.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Aktivieren von E-Mail-Warnungen {#enable-email}
+## E-Mail-Warnhinweise aktivieren {#enable-email}
 
 Warnhinweise können direkt an Ihre E-Mail gesendet werden.
 
-Wählen Sie das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) im oberen Band rechts aus, um Benachrichtigungen und Mitteilungen anzuzeigen. Wählen Sie im angezeigten Dropdown-Menü das Zahnradsymbol (![Zahnradsymbol](/help/images/icons/settings.png)) aus, um auf die Seite mit den Experience Cloud-Voreinstellungen zuzugreifen.
+Wählen Sie das Glockensymbol (![Glockensymbol](/help/images/icons/bell.png)) im oberen Menüband auf der rechten Seite aus, um Benachrichtigungen und Ankündigungen anzuzeigen. Wählen Sie im angezeigten Dropdown-Menü das Zahnradsymbol (![Zahnradsymbol](/help/images/icons/settings.png)) aus, um die Seite mit den Experience Cloud-Voreinstellungen aufzurufen.
 
 ![Eine Liste von Warnhinweisen, die das Glockensymbol und das Zahnradsymbol hervorheben.](../images/alerts/ui/edit-preferences.png)
 
-Die Seite **Profil** wird angezeigt. Wählen Sie im linken Navigationsbereich **[!UICONTROL Benachrichtigungen]** aus, um auf die Voreinstellungen für E-Mail-Warnungen zuzugreifen.
+Die **&quot;**&quot; wird angezeigt. Wählen Sie **[!UICONTROL linken Navigationsbereich die Option]** Benachrichtigungen“ aus, um auf die E-Mail-Warnhinweiseinstellungen zuzugreifen.
 
-![Die Profilseite, die im linken Navigationsbereich [!UICONTROL Benachrichtigungen] hervorhebt.](../images/alerts/ui/profile.png)
+![Die Profilseite mit hervorgehobener [!UICONTROL  &quot;]&quot; im linken Navigationsbereich.](../images/alerts/ui/profile.png)
 
-Scrollen Sie zum Abschnitt **E-Mails** am unteren Rand der Seite und wählen Sie **[!UICONTROL Instant notifications]** aus.
+Scrollen Sie zum Abschnitt **E** unten auf der Seite und wählen Sie **[!UICONTROL Sofortige Benachrichtigungen]**
 
-![Der auf der Profilseite hervorgehobene Abschnitt &quot;E-Mails&quot;.](../images/alerts/ui/notifications.png)
+![Der Abschnitt „E-Mails“, der auf der Profilseite hervorgehoben ist.](../images/alerts/ui/notifications.png)
 
-Alle Warnungen, die Sie abonniert haben, werden jetzt an die E-Mail-Adresse gesendet, die mit Ihrem Adobe ID-Konto verbunden ist.
+Alle Warnhinweise, die Sie abonniert haben, werden jetzt an die E-Mail-Adresse gesendet, die mit Ihrem Adobe ID-Konto verbunden ist.
 
-## Warnschwellenwert anpassen {#alert-threshold}
+## Warnschwelle anpassen {#alert-threshold}
 
-Die Warnschwellen können für die folgenden Warnhinweistypen angepasst werden:
+Warnschwellenwerte können für die folgenden Warnhinweistypen angepasst werden:
 
 | Warnhinweistyp | Benutzerdefinierter Parameter |
 |---|---|
 | Verzögerung bei Segmentvorgängen | Verzögerungsschwellenwert |
 | Verzögerung beim Segmentexport | Verzögerungsschwellenwert |
-| Verzögerung des Zielflussablaufs | Verzögerungsschwellenwert |
+| Verzögerung bei der Ausführung des Zielflusses | Verzögerungsschwellenwert |
 | Verzögerung bei der Ausführung des Identity Service-Flusses | Verzögerungsschwellenwert |
 | Verzögerung bei der Ausführung eines Profilflusses | Verzögerungsschwellenwert |
-| Verzögerung bei der Ausführung von Quellen | Verzögerungsschwellenwert |
+| Verzögerung bei Flussausführung an der Quelle | Verzögerungsschwellenwert |
 | Verzögerung der Abfrageausführung | Verzögerungsschwellenwert |
-| Aktivierungsübersprungrate überschritten | Fehlerschwellenwert |
-| Fehlerrate der Quellenaufnahme überschritten | Fehlerschwellenwert |
+| Aktivierungsüberspringrate überschritten | Fehlerschwellenwert |
+| Fehlerrate bei der Quellaufnahme überschritten | Fehlerschwellenwert |
 
-Wählen Sie die Auslassungszeichen (**...**) neben dem Namen einer Regel aus. Ein Dropdown-Menü zeigt Steuerelemente an. Wählen Sie **[!UICONTROL Bearbeiten]** aus.
+Klicken Sie auf die Auslassungszeichen (**…**) neben dem Namen einer Regel. In einem Dropdown-Menü werden dann Steuerelemente angezeigt. Wählen Sie **[!UICONTROL Bearbeiten]** aus.
 
-![Die Option [!UICONTROL Bearbeiten] ist für die ausgewählte Regel hervorgehoben.](../images/alerts/ui/threshold-edit.png)
+![Die Option [!UICONTROL Bearbeiten] für die ausgewählte Regel ist hervorgehoben.](../images/alerts/ui/threshold-edit.png)
 
-Die Seite **[!UICONTROL Warnhinweis anpassen]** wird angezeigt. Aktualisieren Sie den Schwellenwert auf die gewünschten Minuten und wählen Sie dann **[!UICONTROL Bestätigen]** aus.
+Die **[!UICONTROL Warnhinweis anpassen]** wird angezeigt. Aktualisieren Sie den Schwellenwert auf die gewünschten Minuten und klicken Sie dann auf **[!UICONTROL Bestätigen]**.
 
-![Die Warnhinweisseite anpassen , auf der die Optionen [!UICONTROL Schwellenwert] und [!UICONTROL Bestätigen] hervorgehoben werden.](../images/alerts/ui/threshold-update.png)
+![Die Warnhinweisseite mit Hervorhebung der Optionen [!UICONTROL Schwellenwert] und [!UICONTROL Bestätigen].](../images/alerts/ui/threshold-update.png)
 
-Sie werden zur Seite **[!UICONTROL Warnhinweise]** zurückgeleitet. Um die Schwellenwerte für die Warnung anzuzeigen, wählen Sie die Regel aus der Liste aus. Die Schwellenwerte für den Warnhinweis werden in der rechten Leiste angezeigt, einschließlich Details wie Status und Schweregrad.
+Sie kehren zur Seite &quot;**[!UICONTROL &quot;]**. Um die Schwellenwerteinstellungen für den Warnhinweis anzuzeigen, wählen Sie die Regel aus der Liste aus. Sie können die Schwellenwerteinstellungen für den Warnhinweis in der rechten Leiste sehen, einschließlich Details wie Status und Schweregrad.
 
-![Ein Warnhinweis, der Details in der rechten Leiste anzeigt und [!UICONTROL Schwellenwert] markiert.](../images/alerts/ui/threshold-view.png)
+![Ein hervorgehobener Warnhinweis mit Details in der rechten Leiste und Hervorhebung [!UICONTROL Schwellenwert].](../images/alerts/ui/threshold-view.png)
 
 ## Anzeigen des Warnhinweisverlaufs {#alert-history}
 
 Die Registerkarte **[!UICONTROL Verlauf]** zeigt den Verlauf der empfangenen Warnhinweise für Ihre Organisation, einschließlich der Regel, die den jeweiligen Warnhinweis ausgelöst hat, des Auslösedatums und ggf. des Auflösungsdatums.
 
-![Eine Liste der empfangenen Warnungen wird auf der Registerkarte [!UICONTROL Verlauf] angezeigt.](../images/alerts/ui/history.png)
+![Eine Liste der empfangenen Warnhinweise wird auf der Registerkarte [!UICONTROL Verlauf] angezeigt.](../images/alerts/ui/history.png)
 
 Wenn Sie einen aufgelisteten Warnhinweis auswählen, werden weitere Details in der rechten Leiste angezeigt, einschließlich einer kurzen Zusammenfassung des Ereignisses, das den Warnhinweis ausgelöst hat.
 
-![Ein Warnhinweis, der Details in der rechten Leiste anzeigt.](../images/alerts/ui/history-details.png)
+![Ein hervorgehobener Warnhinweis mit Details in der rechten Leiste.](../images/alerts/ui/history-details.png)
 
 ## Nächste Schritte
 

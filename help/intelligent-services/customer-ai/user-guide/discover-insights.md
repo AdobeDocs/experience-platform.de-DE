@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen; Kundendateneinblicke
+keywords: Experience Platform;Einblicke;Kunden-KI;beliebte Themen;Kunden-KI-Einblicke
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Insights mit Customer AI
-description: Dieses Dokument dient als Leitfaden für die Interaktion mit Einblicken von Dienstinstanzen in der Benutzeroberfläche von Intelligent Services Customer AI.
+title: Einblicke gewinnen mit Kunden-KI
+description: Dieses Dokument dient als Anleitung für die Interaktion mit Einblicken in Service-Instanzen in der Benutzeroberfläche der Intelligent Services-Kunden-KI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -12,223 +12,223 @@ ht-degree: 6%
 
 ---
 
-# Einblicke in Customer AI
+# Einblicke mit Kunden-KI gewinnen
 
-Customer AI als Teil von Intelligent Services bietet Marketing-Experten die Möglichkeit, Adobe Sensei zu nutzen, um vorherzusagen, was Ihre Kunden als Nächstes tun werden. Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Bereitstellung ausgewählt wird.
+Kunden-KI als Teil von Intelligent Services bietet Marketing-Experten die Möglichkeit, Adobe Sensei zu nutzen, um vorherzusagen, was Ihre Kunden als Nächstes tun werden. Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Das ist möglich, ohne dass die geschäftlichen Anforderungen in eine Aufgabe für maschinelles Lernen umgewandelt werden müssen, indem ein Algorithmus, ein Training oder eine Bereitstellung ausgewählt wird.
 
-Dieses Dokument dient als Leitfaden für die Interaktion mit Einblicken von Dienstinstanzen in der Benutzeroberfläche von Intelligent Services Customer AI.
+Dieses Dokument dient als Anleitung für die Interaktion mit Einblicken in Service-Instanzen in der Benutzeroberfläche der Intelligent Services-Kunden-KI.
 
 ## Erste Schritte
 
-Um Einblicke in Customer AI zu nutzen, benötigen Sie eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Customer AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
+Um Insights für Kunden-KI nutzen zu können, benötigen Sie eine Service-Instanz mit dem Status Erfolgreicher Durchlauf . Um eine neue Service-Instanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-KI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
-## Übersicht über die Dienstinstanz
+## Service-Instanz - Übersicht
 
-Wählen Sie in der Benutzeroberfläche von [!DNL Adobe Experience Platform] im linken Navigationsbereich die Option **[!UICONTROL Dienste]** aus. Der Browser *Dienste* wird angezeigt und zeigt verfügbare Intelligent Services an. Wählen Sie im Container für Customer AI **[!UICONTROL Öffnen]** aus.
+Wählen Sie in der [!DNL Adobe Experience Platform]-Benutzeroberfläche **[!UICONTROL Dienste]** im linken Navigationsbereich aus. Der *Services*-Browser wird angezeigt und zeigt verfügbare Intelligent Services an. Wählen Sie im Container für Kunden-KI **[!UICONTROL Öffnen]** aus.
 
 ![Zugreifen auf Ihre Instanz](../images/insights/navigate-to-service.png)
 
-Die Seite des Customer AI-Service wird angezeigt. Auf dieser Seite werden Dienstinstanzen von Customer AI aufgelistet und Informationen zu ihnen angezeigt, einschließlich Name der Instanz, Tendenztyp, Häufigkeit der Ausführung der Instanz und Status der letzten Aktualisierung.
+Die Seite Kunden-KI-Service wird angezeigt. Auf dieser Seite werden Service-Instanzen von Kunden-KI aufgelistet und Informationen zu ihnen angezeigt, einschließlich des Namens der Instanz, des Neigungstyps, der Häufigkeit der Ausführung der Instanz und des Status der letzten Aktualisierung.
 
 >[!NOTE]
 >
->Nur Dienstinstanzen, die erfolgreiche Scoring-Läufe abgeschlossen haben, verfügen über Einblicke.
+>Nur Service-Instanzen, die erfolgreiche Bewertungsdurchgänge abgeschlossen haben, verfügen über Einblicke.
 
 ![Instanz erstellen](../images/insights/dashboard.png)
 
-Wählen Sie einen Dienstinstanznamen aus, der gestartet werden soll.
+Wählen Sie einen Namen für die Service-Instanz aus, um zu beginnen.
 
 ![Instanz erstellen](../images/insights/click-the-name.png)
 
-Als Nächstes wird die Insight-Seite für diese Dienstinstanz mit der Option &quot;**[!UICONTROL Neueste Bewertungen]**&quot;oder &quot;**[!UICONTROL Leistungszusammenfassung]**&quot;angezeigt. Die Standardregisterkarte **[!UICONTROL Neueste Bewertungen]** enthält Visualisierungen Ihrer Daten. Die Visualisierungen und die Möglichkeiten, die Daten zu nutzen, werden in diesem Handbuch ausführlicher erläutert.
+Als Nächstes wird die Insights-Seite für diese Service-Instanz mit der Option angezeigt, &quot;**[!UICONTROL Scores“]** &quot;**[!UICONTROL &quot;]**. Die Standardregisterkarte **[!UICONTROL Letzte Bewertungen]** enthält Visualisierungen Ihrer Daten. Die Visualisierungen und die Möglichkeiten, die Sie mit den Daten haben, werden in diesem Handbuch ausführlicher erläutert.
 
-Die Registerkarte **[!UICONTROL Leistungszusammenfassung]** enthält die tatsächlichen Abwanderungs- oder Konversionsraten für jeden Neigungsbehälter. Weitere Informationen finden Sie im Abschnitt zu den Metriken mit der [Leistungszusammenfassung](#performance-metrics).
+Die Registerkarte **[!UICONTROL Leistungszusammenfassung]** zeigt die tatsächlichen Abwanderungs- oder Konversionsraten für jeden Neigungs-Bucket an. Weitere Informationen finden Sie im Abschnitt zu [Leistungszusammenfassungsmetriken](#performance-metrics).
 
 ![Setup-Seite](../images/insights/landing_page_insights.png)
 
 ## Details zur Dienstinstanz
 
-Es gibt zwei Möglichkeiten, Details der Dienstinstanz anzuzeigen: über das Dashboard oder innerhalb der Dienstinstanz.
+Es gibt zwei Möglichkeiten, Details einer Service-Instanz anzuzeigen: im Dashboard oder innerhalb der Service-Instanz.
 
 ### Dashboard der Dienstinstanz
 
-Um eine Übersicht über die Details der Dienstinstanz im Dashboard anzuzeigen, wählen Sie einen Dienstinstanzcontainer aus, wobei der mit dem Namen verknüpfte Hyperlink vermieden wird. Dadurch wird eine rechte Leiste mit zusätzlichen Details geöffnet. Die Steuerelemente enthalten Folgendes:
+Um einen Überblick über die Details der Service-Instanz im Dashboard zu erhalten, wählen Sie einen Service-Instanz-Container aus und vermeiden Sie so den Hyperlink, der an den Namen angehängt ist. Dadurch wird eine rechte Leiste geöffnet, die zusätzliche Details bereitstellt. Die Steuerelemente enthalten Folgendes:
 
-- **[!UICONTROL Bearbeiten]**: Durch Auswahl von **[!UICONTROL Bearbeiten]** können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung und die Scoring-Häufigkeit der Instanz bearbeiten.
-- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die derzeit ausgewählte Dienstinstanz kopiert, die eingerichtet ist. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
-- **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz, einschließlich aller historischen Ausführungen, löschen.
+- **[!UICONTROL Bearbeiten]**: Wenn Sie **[!UICONTROL Bearbeiten]** auswählen, können Sie eine vorhandene Service-Instanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
+- **[!UICONTROL Klonen]**: Wenn Sie **[!UICONTROL Klonen]** auswählen, wird die aktuell ausgewählte Service-Instanz kopiert. Anschließend können Sie den Workflow ändern, um kleinere Anpassungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
+- **[!UICONTROL Löschen]**: Sie können eine Service-Instanz löschen, einschließlich aller historischen Ausführungen.
 - **[!UICONTROL Datenquelle]**: Ein Link zu dem von dieser Instanz verwendeten Datensatz.
-- **[!UICONTROL Ausführungsfrequenz]**: Wie oft und wann ein Scoring ausgeführt wird.
+- **[!UICONTROL Ausführungshäufigkeit]**: Wie oft und wann ein Scoring-Durchgang stattfindet.
 - **[!UICONTROL Score-Definition]**: Ein kurzer Überblick über das Ziel, das Sie für diese Instanz konfiguriert haben.
 
 ![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->Wenn ein Scoring-Lauf fehlschlägt, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird unter **Letzte Ausführungsdetails** in der rechten Leiste aufgeführt, die nur für fehlgeschlagene Ausführungen sichtbar ist.
+>Schlägt ein Scoring-Durchgang fehl, wird eine Fehlermeldung angezeigt. Die Fehlermeldung wird in der rechten Leiste unter **Details des letzten Durchgangs** aufgeführt, die nur für fehlgeschlagene Durchgänge sichtbar ist.
 
-![Fehlerausführungsmeldung](../images/insights/failed-run.png)
+![Fehlermeldung ausführen](../images/insights/failed-run.png)
 
-### Dropdown &quot;Weitere Einblicke anzeigen&quot;
+### Dropdown „Weitere Einblicke“ anzeigen
 
-Die zweite Möglichkeit, zusätzliche Details für eine Dienstinstanz anzuzeigen, finden Sie auf der Insight-Seite. Wählen Sie oben rechts **[!UICONTROL Mehr anzeigen]** aus, um eine Dropdown-Liste zu füllen. Details wie die Punktzahl-Definition, der Erstellungszeitpunkt, der Tendenztyp und die verwendeten Datensätze werden aufgelistet. Weitere Informationen zu den aufgelisteten Eigenschaften finden Sie unter [Konfigurieren einer Customer AI-Instanz](./configure.md).
+Die zweite Möglichkeit, zusätzliche Details für eine Service-Instanz anzuzeigen, befindet sich auf der Insights-Seite. Wählen Sie **[!UICONTROL Mehr anzeigen]** oben rechts aus, um eine Dropdown-Liste zu füllen. Es werden Details wie die Score-Definition, der Zeitpunkt ihrer Erstellung, der Neigungstyp und die verwendeten Datensätze aufgeführt. Weitere Informationen zu den aufgeführten Eigenschaften finden Sie unter [Konfigurieren einer Kunden-KI-Instanz](./configure.md).
 
 ![Mehr anzeigen](../images/insights/landing-show-more.png)
 
-### Popover zur Vorschau von Customer AI-Datensätzen
+### Popover für die Vorschau eines Kunden-KI-Datensatzes
 
-Wenn mehrere Datensätze von Customer AI verwendet werden, wird ein Hyperlink mit der Bezeichnung **[!UICONTROL Mehrere]** gefolgt von der Anzahl der Datensätze in eckigen Klammern `()` bereitgestellt.
+Wenn Kunden-KI mehr als einen Datensatz verwendet, wird ein Hyperlink mit der Bezeichnung **[!UICONTROL Mehrere]** gefolgt von der Anzahl der Datensätze in Klammern `()` bereitgestellt.
 
-![mehrere Datensätze](../images/insights/insights-multi-datasets.png)
+![Mehrere Datensätze](../images/insights/insights-multi-datasets.png)
 
-Wenn Sie die Verknüpfung mit mehreren Datensätzen auswählen, wird das Popup-Fenster für die Vorschau des Customer AI-Datensatzes geöffnet. Jede Farbe in der Vorschau stellt einen Datensatz dar, wie der Farbschlüssel links neben den Datensatzspalten zeigt. In diesem Beispiel sehen Sie, dass nur **Datensatz 1** die Spalte `PROP1` enthält.
+Wenn Sie den Link Mehrere Datensätze auswählen, wird das Popup für die Datensatzvorschau in der Kundinnen- und Kunden-KI geöffnet. Jede Farbe in der Vorschau stellt einen Datensatz dar, wie durch den Farbschlüssel links neben den Datensatzspalten angezeigt. In diesem Beispiel sehen Sie, dass nur **Datensatz 1** die `PROP1` enthält.
 
 ![Mehr anzeigen](../images/insights/dataset-preview.png)
 
 ### Bearbeiten einer Instanz
 
-Um eine Instanz zu bearbeiten, wählen Sie in der oberen rechten Navigation **[!UICONTROL Bearbeiten]** aus.
+Um eine Instanz zu bearbeiten, wählen **[!UICONTROL Bearbeiten]** in der oberen rechten Navigationsleiste aus.
 
 ![Auf Bearbeiten-Schaltfläche klicken](../images/insights/edit-button.png)
 
-Das Dialogfeld &quot;Bearbeiten&quot;wird angezeigt, in dem Sie den Namen, die Beschreibung, den Status und die Scoring-Häufigkeit der Instanz bearbeiten können. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, wählen Sie rechts unten **[!UICONTROL Speichern]** aus.
+Das Dialogfeld „Bearbeiten“ wird angezeigt, in dem Sie den Namen, die Beschreibung, den Status und die Bewertungsfrequenz der Instanz bearbeiten können. Um Ihre Änderungen zu bestätigen und das Dialogfeld zu schließen, wählen **[!UICONTROL in]** rechten unteren Ecke „Speichern“ aus.
 
 ![Bearbeiten-Popup-Fenster](../images/insights/edit-instance.png)
 
 ### Mehr Aktionen
 
-Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie **[!UICONTROL Mehr Aktionen]** auswählen, wird eine Dropdown-Liste geöffnet, in der Sie einen der folgenden Vorgänge auswählen können:
+Die Schaltfläche **[!UICONTROL Mehr Aktionen]** befindet sich in der oberen rechten Navigation neben **[!UICONTROL Bearbeiten]**. Wenn Sie **[!UICONTROL Mehr Aktionen]** auswählen, wird ein Dropdown-Menü geöffnet, in dem Sie einen der folgenden Vorgänge auswählen können:
 
-- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird die eingerichtete Dienstinstanz kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
+- **[!UICONTROL Klonen]**: Wenn Sie **[!UICONTROL Klonen]** auswählen, wird die eingerichtete Service-Instanz kopiert. Anschließend können Sie den Workflow ändern, um kleinere Anpassungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
 - **[!UICONTROL Löschen]**: Löscht die Instanz.
-- **[!UICONTROL Auf Bewertungen zugreifen]**: Durch Auswahl von **[!UICONTROL Auf Bewertungen zugreifen]** wird ein Dialogfeld geöffnet, das einen Link zum Tutorial [Herunterladen von Bewertungen für Customer AI](./download-scores.md) enthält. Außerdem enthält das Dialogfeld die Datensatz-ID, die zum Ausführen von API-Aufrufen erforderlich ist.
-- **[!UICONTROL Ausführungsverlauf anzeigen]**: Ein Dialogfeld mit einer Liste aller mit der Dienstinstanz verknüpften Scoring-Läufe wird angezeigt.
+- **[!UICONTROL Auf Scores zugreifen]**: Wenn Sie **[!UICONTROL Auf Scores zugreifen]** auswählen, wird ein Dialogfeld geöffnet, das einen Link zum Tutorial [Herunterladen von Scores für Kunden-KI](./download-scores.md) bereitstellt. Das Dialogfeld enthält auch die Datensatz-ID, die für API-Aufrufe erforderlich ist.
+- **[!UICONTROL Ausführungsverlauf anzeigen]** Ein Dialogfeld mit einer Liste aller mit der Dienstinstanz verbundenen Bewertungsdurchgänge wird angezeigt.
 
 ![Mehr Aktionen](../images/insights/more-actions.png)
 
 ## Bewertungszusammenfassung {#scoring-summary}
 
-Die Bewertungszusammenfassung zeigt die Gesamtzahl der bewerteten Profile und kategorisiert sie in Behälter mit hoher, mittlerer und niedriger Tendenz. Die Tendenzbehälter werden anhand des Punktbereichs bestimmt, niedrig ist kleiner als 24, mittel ist 25 bis 74 und hoch ist über 74. Jeder Behälter hat eine der Legende entsprechende Farbe.
+Die Scoring-Zusammenfassung zeigt die Gesamtzahl der bewerteten Profile an und kategorisiert sie in Buckets mit hoher, mittlerer und geringer Neigung. Die Tendenz-Buckets werden anhand des Score-Bereichs bestimmt: niedrig ist kleiner als 24, mittel ist 25 bis 74 und hoch ist über 74. Jeder Bucket hat eine der Legende entsprechende Farbe.
 
 >[!NOTE]
 >
->Wenn es sich um einen Konversionsintensitätswert handelt, werden die hohen Werte grün und die niedrigen Punkte rot angezeigt. Wenn Sie die Abwanderungsneigung vorhersagen, wird diese gespiegelt, die hohen Werte sind rot und die niedrigen Werte grün. Der mittlere Eimer bleibt gelb, unabhängig vom gewählten Tendenztyp.
+>Wenn es sich um einen Konversionsneigungs-Score handelt, werden die hohen Werte in grün und die niedrigen Werte in rot angezeigt. Wenn Sie eine Abwanderungsneigung vorhersagen, wird diese umgekehrt. Die Highscores sind rot und die Low Scores grün. Der mittlere Bucket bleibt unabhängig vom ausgewählten Neigungstyp gelb.
 
-![Bewertungszusammenfassung](../images/insights/scoring-summary.png)
+![Scoring-Zusammenfassung](../images/insights/scoring-summary.png)
 
-Sie können den Mauszeiger über eine beliebige Farbe im Ring bewegen, um zusätzliche Informationen anzuzeigen, z. B. einen Prozentsatz und die Gesamtzahl der Profile, die zu einem Behälter gehören.
+Sie können den Mauszeiger über eine beliebige Farbe auf dem Ring bewegen, um zusätzliche Informationen anzuzeigen, z. B. einen Prozentsatz und die Gesamtzahl der Profile, die zu einem Bucket gehören.
 
 ![](../images/insights/scoring-ring.png)
 
-## Verteilung der Werte
+## Verteilung der Scores
 
-Die Karte **[!UICONTROL Verteilung der Punktzahl]** bietet eine visuelle Zusammenfassung der Population basierend auf dem Ergebnis. Die Farben, die Sie auf der Karte [!UICONTROL Verteilung der Bewertungen] sehen, entsprechen dem Typ des generierten Tendenzwerts. Wenn Sie den Mauszeiger über eine der Scoring-Distributionen bewegen, erhalten Sie die genaue Anzahl, die zu dieser Distribution gehört.
+Die Karte **[!UICONTROL Verteilung der Scores]** bietet eine visuelle Zusammenfassung der Population basierend auf der Bewertung. Die Farben, die Sie auf der Karte [!UICONTROL Verteilung der Scores] sehen, stellen den Typ des generierten Neigungs-Scores dar. Wenn Sie den Mauszeiger über eine der Scoring-Verteilungen bewegen, wird die genaue Anzahl angezeigt, die zu dieser Verteilung gehört.
 
-![Verteilung der Punktzahl](../images/insights/distribution-of-scores.png)
+![Verteilung der Scores](../images/insights/distribution-of-scores.png)
 
 ## Einflussfaktoren
 
-Für jeden Punktebehälter wird eine Karte generiert, die die 10 wichtigsten Einflussfaktoren für diesen Behälter anzeigt. Die Einflussfaktoren geben Ihnen zusätzliche Details darüber, warum Ihre Kunden zu verschiedenen Punktgruppen gehören.
+Für jeden Score-Bucket wird eine Karte generiert, die die 10 wichtigsten Einflussfaktoren für diesen Bucket anzeigt. Die Einflussfaktoren geben Ihnen zusätzliche Details darüber, warum Ihre Kunden zu verschiedenen Score-Buckets gehören.
 
 ![Einflussfaktoren](../images/insights/influential-factors.png)
 
-### Drilldowns für Einflussfaktoren
+### Drilldowns mit Einflussfaktoren
 
-Wenn Sie den Mauszeiger über einen der wichtigsten Einflussfaktoren bewegen, werden die Daten weiter aufgeschlüsselt. Sie erhalten eine Übersicht darüber, warum bestimmte Profile zu einer Tendenzbehälter gehören. Je nach Faktor können Ihnen Zahlenwerte, Kategorienwerte oder boolesche Werte zugewiesen werden. Das folgende Beispiel zeigt kategorische Werte nach Region.
+Wenn Sie den Mauszeiger über einen der wichtigsten Einflussfaktoren bewegen, werden die Daten weiter aufgeschlüsselt. Sie erhalten einen Überblick darüber, warum bestimmte Profile zu einem Neigungs-Bucket gehören. Je nach Faktor können Zahlen, kategoriale oder boolesche Werte angegeben werden. Im folgenden Beispiel werden kategoriale Werte nach Region angezeigt.
 
 ![Drilldown-Screenshot](../images/insights/drilldown.png)
 
-Darüber hinaus können Sie mithilfe von Drilldowns einen Verteilungsfaktor vergleichen, wenn er in zwei oder mehr Tendenzbehälter auftritt, und spezifischere Segmente mit diesen Werten erstellen. Das folgende Beispiel zeigt den ersten Anwendungsfall:
+Darüber hinaus können Sie mithilfe von Drilldowns einen Verteilungsfaktor vergleichen, wenn er in zwei oder mehr Neigungs-Buckets auftritt, und spezifischere Segmente mit diesen Werten erstellen. Das folgende Beispiel veranschaulicht den ersten Anwendungsfall:
 
 ![](../images/insights/drilldown-compare.png)
 
-Sie können sehen, dass Profile mit geringer Konversionsneigung einen kürzlichen Besuch auf den Webseiten adobe.com weniger wahrscheinlich gemacht haben. Der Faktor &quot;Tage seit dem letzten WebVisit&quot;deckt nur 8 % ab, verglichen mit 26 % bei mittleren Tendenzprofilen. Mithilfe dieser Zahlen können Sie die Verteilung innerhalb der einzelnen Behälter anhand des Faktors vergleichen. Diese Informationen können verwendet werden, um darauf hinzuweisen, dass die Neuigkeit bei Webbesuch im Bereich der geringen Tendenz nicht so einflussreich ist wie bei der Gruppe der mittleren Tendenz.
+Sie können sehen, dass Profile mit geringer Konversionsneigung mit geringerer Wahrscheinlichkeit kürzlich die Web-Seiten von adobe.com besucht haben. Der Faktor „Tage seit dem letzten WebVisit“ hat eine Abdeckung von nur 8 %, verglichen mit 26 % bei Profilen mit mittlerer Neigung. Mithilfe dieser Zahlen können Sie die Verteilung innerhalb jedes Behälters für den Faktor vergleichen. Diese Informationen können verwendet werden, um darauf zu schließen, dass die Neuigkeit bei WebVisit im Bucket mit niedriger Neigung nicht so einflussreich ist wie im Bucket mit mittlerer Neigung.
 
 ### Erstellen eines Segments
 
-Wenn Sie die Schaltfläche **[!UICONTROL Segment erstellen]** in einem der Behälter für niedrige, mittlere und hohe Neigung auswählen, werden Sie zum Segment-Builder weitergeleitet.
+Durch Klicken auf **[!UICONTROL Schaltfläche]** Segment erstellen“ in einem der Buckets für niedrige, mittlere und hohe Neigung werden Sie zu Segment Builder weitergeleitet.
 
 >[!NOTE]
 >
->Die Schaltfläche **[!UICONTROL Segment erstellen]** ist nur verfügbar, wenn das Echtzeit-Kundenprofil für den Datensatz aktiviert ist. Weitere Informationen zum Aktivieren des Echtzeit-Kundenprofils finden Sie in der Übersicht über das [Echtzeit-Kundenprofil](../../../rtcdp/overview.md) .
+>Die Schaltfläche **[!UICONTROL Segment erstellen]** ist nur verfügbar, wenn das Echtzeit-Kundenprofil für den Datensatz aktiviert ist. Weitere Informationen zum Aktivieren des Echtzeit-Kundenprofils finden Sie unter [Echtzeit-Kundenprofil - Übersicht](../../../rtcdp/overview.md).
 
 ![Klicken Sie auf Segment erstellen](../images/insights/influential-factors-create-segment.png)
 
 ![Erstellen eines Segments](../images/insights/create-segment.png)
 
-Der Segment Builder wird verwendet, um ein Segment zu definieren. Bei Auswahl von **[!UICONTROL Segment erstellen]** auf der Seite &quot;Einblicke&quot;fügt Customer AI die ausgewählten Behälterinformationen automatisch zum Segment hinzu. Um die Erstellung Ihres Segments abzuschließen, füllen Sie einfach die Container **Name** und **Beschreibung** aus, die sich in der rechten Leiste der Benutzeroberfläche des Segmentaufbaus befinden. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, wählen Sie oben rechts **[!UICONTROL Speichern]** aus.
+Segment Builder wird zum Definieren eines Segments verwendet. Bei Auswahl von **[!UICONTROL Segment erstellen]** auf der Insights-Seite fügt Kunden-KI die ausgewählten Buckets-Informationen automatisch zum Segment hinzu. Um die Erstellung Ihres Segments abzuschließen, füllen Sie einfach **Container** Name“ und **Beschreibung** aus, die sich in der rechten Leiste der Segment Builder-Benutzeroberfläche befinden. Nachdem Sie dem Segment einen Namen und eine Beschreibung gegeben haben, wählen **[!UICONTROL oben]** die Option „Speichern“ aus.
 
 >[!NOTE]
 >
->Da die Tendenzwerte in das jeweilige Profil geschrieben werden, sind sie im Segment Builder wie alle anderen Profilattribute verfügbar. Wenn Sie zum Segment Builder navigieren, um neue Segmente zu erstellen, können Sie alle verschiedenen Tendenzwerte unter Ihrem Namespace Customer AI anzeigen.
+>Da die Neigungs-Scores in das jeweilige Profil geschrieben werden, sind sie im Segment Builder wie alle anderen Profilattribute verfügbar. Wenn Sie zum Segment Builder navigieren, um neue Segmente zu erstellen, können Sie alle verschiedenen Tendenz-Scores unter Ihrem Namespace Customer AI sehen.
 
-![Segmentfüllung in ](../images/insights/segment-saving.png)
+![Segmentausfüllung](../images/insights/segment-saving.png)
 
-Um Ihr neues Segment in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie im linken Navigationsbereich **[!UICONTROL Segmente]** aus. Die Seite **[!UICONTROL Durchsuchen]** wird angezeigt und zeigt alle verfügbaren Segmente an.
+Um Ihr neues Segment in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL linken Navigationsbereich]** Segmente“ aus. Die Seite **[!UICONTROL Durchsuchen]** wird angezeigt und zeigt alle verfügbaren Segmente an.
 
-![Alle Ihre Segmente](../images/insights/Segments-dashboard.png)
+![Alle Segmente](../images/insights/Segments-dashboard.png)
 
 ## Historische Leistung {#historical-performance}
 
-Die Registerkarte **[!UICONTROL Leistungszusammenfassung]** enthält die tatsächlichen Abwanderungs- oder Konversionsraten, die in die von Customer AI bewerteten Tendenzbehälter aufgeteilt sind.
+Die Registerkarte **[!UICONTROL Leistungszusammenfassung]** zeigt die tatsächlichen Abwanderungs- oder Konversionsraten, aufgeschlüsselt in jeden der von Kunden-KI bewerteten Neigungs-Buckets.
 
-![Registerkarte &quot;Leistungszusammenfassung&quot;](../images/insights/summary_tab.png)
+![Registerkarte „Leistungszusammenfassung“](../images/insights/summary_tab.png)
 
-Zunächst werden nur erwartete Raten (gepunktete Linien) angezeigt. Die erwarteten Raten werden angezeigt, wenn kein Scoring-Lauf stattgefunden hat und noch keine Daten verfügbar sind. Sobald jedoch ein Ergebnisfenster vorüber ist, wird die erwartete Rate durch eine tatsächliche Rate (feste Linie) ersetzt.
+Zunächst werden nur die erwarteten Raten (gestrichelte Linien) angezeigt. Die erwarteten Raten werden angezeigt, wenn kein Scoring-Durchgang stattgefunden hat und noch keine Daten verfügbar sind. Sobald jedoch ein Ergebnisfenster bestanden ist, wird die erwartete Rate durch eine tatsächliche Rate ersetzt (durchgezogene Linie).
 
-Wenn Sie den Mauszeiger über die Zeilen bewegen, werden das Datum und die tatsächliche/erwartete Rate für diesen Tag in diesem Behälter angezeigt.
+Wenn Sie den Mauszeiger über die Zeilen bewegen, werden das Datum und der tatsächliche/erwartete Kurs für diesen Tag in diesem Behälter angezeigt.
 
 ![Bucket-Beispiel](../images/insights/churn_tab.png)
 
-Sie können den Zeitrahmen nach den erwarteten und tatsächlichen angezeigten Raten filtern. Wählen Sie das Symbol **Kalendersymbol** ![ ](/help/images/icons/calendar.png) und dann einen neuen Datumsbereich aus. Die Ergebnisse in den einzelnen Behältern werden aktualisiert und innerhalb des neuen Datumsbereichs angezeigt.
+Sie können den Zeitrahmen nach den erwarteten und tatsächlichen Raten filtern, die angezeigt werden. Wählen Sie das **Kalendersymbol** ![Symbol](/help/images/icons/calendar.png) und wählen Sie dann einen neuen Datumsbereich aus. Die Ergebnisse in den einzelnen Buckets werden aktualisiert, sodass sie innerhalb des neuen Datumsbereichs angezeigt werden.
 
 ![Datumsauswahl](../images/insights/date_selector.png)
 
-### Individuelle Scoring-Ausführungsraten
+### Individuelle Scoring-Durchlaufraten
 
-In der unteren Hälfte der Registerkarte **[!UICONTROL Leistungszusammenfassung]** werden die Ergebnisse für jeden einzelnen Scoring-Lauf angezeigt. Wählen Sie das Dropdown-Datum oben rechts aus, um die Ergebnisse für einen anderen Scoring-Lauf anzuzeigen.
+Die untere Hälfte der Registerkarte **[!UICONTROL Leistungszusammenfassung]** zeigt die Ergebnisse für jeden einzelnen Scoring-Durchgang an. Wählen Sie oben rechts das Dropdown-Datum aus, um die Ergebnisse für einen anderen Scoring-Durchgang anzuzeigen.
 
-Je nachdem, ob Sie Abwanderung oder Konversion vorhersagen, zeigt das Diagramm [!UICONTROL Verteilung der Werte] die Verteilung der Profile an, die in jeder einzelnen Erhöhung aktiviert/konvertiert und nicht umgestellt/nicht konvertiert wurden.
+Je nachdem, ob Sie Abwanderung oder Konversion vorhersagen, zeigt das Diagramm [!UICONTROL Verteilung der Scores] die Verteilung der Profile an, die in jedem Inkrement abgewandert/konvertiert und nicht abgewandert/nicht konvertiert sind.
 
-![individuelles Scoring](../images/insights/scoring_tab.png)
+![Individuelle Bewertung](../images/insights/scoring_tab.png)
 
 ## Modellauswertung {#model-evaluation}
 
-Zusätzlich zum Tracking der prognostizierten und tatsächlichen Ergebnisse im Zeitverlauf auf der Registerkarte &quot;Historische Leistung&quot;haben Marketingexperten im Tab Modellauswertung noch mehr Transparenz in Bezug auf die Modellqualität. Sie können die Diagramme Steigerung und Gewinne verwenden, um die Unterschiede bei der Verwendung eines prädiktiven Modells im Vergleich zum zufälligen Targeting zu ermitteln. Darüber hinaus können Sie bestimmen, wie viele positive Ergebnisse bei jedem Score-Cutoff erfasst werden. Dies ist nützlich für die Segmentierung und für die Abstimmung der Kapitalrendite auf Marketing-Aktionen.
+Zusätzlich zur Verfolgung der prognostizierten und tatsächlichen Ergebnisse im Zeitverlauf auf der Registerkarte Historische Leistung können Marketing-Experten mit der Registerkarte Modellbewertung noch mehr Transparenz über die Modellqualität erzielen. Sie können die Diagramme Steigerung und Gewinne verwenden, um die Unterschiede zwischen der Verwendung eines prädiktiven Modells und zufälligem Targeting zu bestimmen. Darüber hinaus können Sie festlegen, wie viele positive Ergebnisse bei jedem Score-Cutoff erfasst würden. Dies ist bei der Segmentierung und für die Abstimmung des ROI mit Marketing-Aktionen nützlich.
 
-### Lift-Diagramm
+### Steigerungsdiagramm
 
 ![Steigerungsdiagramm](../images/user-guide/lift-chart.png)
 
-Das Steigerungsdiagramm misst die Verbesserung der Verwendung eines Vorhersagemodells anstelle von zufälligem Targeting.
+Das Steigerungsdiagramm misst die Verbesserung bei der Verwendung eines prädiktiven Modells anstelle von zufälligem Targeting.
 
-Zu den hochwertigen Modellindikatoren gehören:
+Indikatoren für hochwertige Modelle umfassen:
 
-- Hohe Steigerungswerte in den ersten Dezimalstellen. Das bedeutet, dass das Modell gut darin ist, die Benutzer zu identifizieren, die die größte Neigung haben, die gewünschten Aktionen durchzuführen.
-- Absteigende Steigerungswerte Dies bedeutet, dass Kunden mit höheren Werten mit höherer Wahrscheinlichkeit die Aktion von Interesse ausführen als Kunden mit niedrigeren Werten.
+- Hohe Steigerungswerte in den ersten paar Dezilen. Das bedeutet, dass das Modell gut geeignet ist, um die Benutzer mit der höchsten Neigung zu identifizieren, die gewünschte Aktion durchzuführen.
+- Absteigende Steigerungswerte. Dies bedeutet, dass Kunden mit höheren Scores eher die gewünschte Aktion ausführen als Personen mit niedrigeren Scores.
 
-### Gewinnerdiagramm
+### Gewinndiagramm
 
 ![Gewinndiagramm](../images/user-guide/gains-chart.png)
 
-Das Diagramm für kumulative Gewinne misst den Prozentsatz der positiven Ergebnisse, die durch Targeting-Ergebnisse über einem bestimmten Schwellenwert erfasst werden. Nach Sortierung der Kunden nach Tendenzwert von hoch bis niedrig wird die Population in Dezimalstellen aufgeteilt - 10 gleich große Gruppen. Ein perfektes Modell würde alle positiven Ergebnisse in den höchsten Punktzahlen erfassen. Eine zufällige Basismethode erfasst positive Ergebnisse proportional zur Größe der Gruppe. Bei der Zielgruppenbestimmung würden 30 % der Benutzer 30 % der Ergebnisse erfassen.
+Das Diagramm der kumulativen Gewinne misst den Prozentsatz der positiven Ergebnisse, die erfasst werden, wenn Scores oberhalb eines bestimmten Schwellenwerts anvisiert werden. Nachdem Sie die Kundinnen und Kunden nach dem Neigungs-Score von hoch nach niedrig sortiert haben, wird die Population in Dezilen, 10 gleich große Gruppen, aufgeteilt. Ein perfektes Modell würde alle positiven Ergebnisse in den höchsten Score-Dezilen erfassen. Eine Basismethode der zufälligen Zielgruppenbestimmung erfasst positive Ergebnisse proportional zur Größe der Gruppe - bei einer Zielgruppenbestimmung von 30 % der Benutzenden würden 30 % der Ergebnisse erfasst.
 
-Zu den hochwertigen Modellindikatoren gehören:
+Indikatoren für hochwertige Modelle umfassen:
 
-- Die kumulierten Gewinne nähern sich 100% schnell.
-- Die kumulierte Gewinnkurve für das Modell ist näher an der oberen linken Ecke des Diagramms.
-- Das Diagramm für kumulierte Gewinne kann verwendet werden, um die Bewertungsabbrüche für die Segmentierung und das Targeting zu bestimmen. Wenn das Modell beispielsweise 70 % der positiven Ergebnisse in den ersten 2 Bewertungsdezimeln erfasst, wird erwartet, dass das Targeting von Benutzern mit PerzentilScore > 80 ca. 70 % der positiven Ergebnisse erfasst.
+- Die kumulativen Gewinne nähern sich schnell 100%.
+- Die Kurve der kumulierten Gewinne für das Modell befindet sich näher an der oberen linken Ecke des Diagramms.
+- Das Diagramm für kumulative Gewinne kann verwendet werden, um die Score-Abschläge für Segmentierung und Targeting zu bestimmen. Wenn das Modell beispielsweise 70 % der positiven Ergebnisse in den ersten 2 Score-Dezilen erfasst, wird erwartet, dass beim Targeting von Benutzern mit einem Perzentil-Score > 80 etwa 70 % der positiven Ergebnisse erfasst werden.
 
 ### AUC (Fläche unter der Kurve)
 
-Die AUC spiegelt die Stärke der Beziehung zwischen dem Rang nach Bewertung und dem Auftreten des prognostizierten Ziels wider. Ein **AUC** -Wert von 0,5 bedeutet, dass das Modell nicht besser ist als eine zufällige Schätzung. Eine **AUC** von 1 bedeutet, dass das Modell perfekt vorhersagen kann, wer die entsprechende Aktion ausführen wird.
+Die AUC spiegelt die Stärke der Beziehung zwischen der Rangfolge nach Score und dem Auftreten des prognostizierten Ziels wider. Eine **AUC** von 0,5 bedeutet, dass das Modell nicht besser ist als eine zufällige Schätzung. Eine **AUC** von 1 bedeutet, dass das Modell perfekt vorhersagen kann, wer die entsprechende Aktion ausführen wird.
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Einblicke einer Customer AI-Dienstinstanz beschrieben. Sie können jetzt mit dem Tutorial zum Herunterladen von Bewertungen in Customer AI](./download-scores.md) fortfahren oder die anderen verfügbaren Handbücher für Adobe Intelligent Services](../../home.md) durchsuchen.[[
+In diesem Dokument werden die Einblicke beschrieben, die von einer Kunden-KI-Service-Instanz bereitgestellt werden. Sie können jetzt mit dem Tutorial zum [Herunterladen von Scores in Kunden-KI](./download-scores.md) fortfahren oder die anderen [Adobe Intelligent Services](../../home.md)Handbücher durchsuchen, die angeboten werden.
 
 ## Zusätzliche Ressourcen
 
-Im folgenden Video wird beschrieben, wie Sie mit Customer AI die Ausgabe der Modelle und Einflussfaktoren anzeigen können.
+Im folgenden Video wird erläutert, wie Sie mit Kunden-KI die Ausgabe der Modelle und Einflussfaktoren anzeigen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)

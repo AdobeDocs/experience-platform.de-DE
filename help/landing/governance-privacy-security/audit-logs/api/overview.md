@@ -1,5 +1,5 @@
 ---
-title: Audit Query API-Anleitung
+title: Handbuch zur Audit Query API
 description: Audit Query ist eine RESTful-API, mit der Entwickler sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 role: Developer
 feature: Audits, API
@@ -13,14 +13,14 @@ ht-degree: 9%
 
 # [!DNL Audit Query]-API-Handbuch
 
-Die API [!DNL Audit Query] bietet Endpunkte, mit denen Sie Ereignisdaten programmgesteuert für verschiedene Adobe Experience Platform-Funktionen abrufen und überwachen können. Die Endpunkte sind unten dargestellt. Wichtige Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie im Leitfaden [Erste Schritte](./getting-started.md) .
+Die [!DNL Audit Query]-API stellt Endpunkte bereit, mit denen Sie Ereignisdaten für verschiedene Adobe Experience Platform-Funktionen programmgesteuert abrufen und überwachen können. Die Endpunkte sind unten beschrieben. Wichtige Informationen [ erforderlichen Kopfzeilen, zum Lesen von Beispiel](./getting-started.md)API-Aufrufen und mehr finden Sie im Handbuch „Erste Schritte“.
 
 Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Audit Query] API-Swagger](https://www.adobe.io/experience-platform-apis/references/audit-query/).
 
 ## Events
 
-Audit-Ereignisse bieten Einblicke in Benutzeraktionen in Platform, einschließlich Aktionstyp, Datum und Uhrzeit, E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzlichen Attributen für den Aktionstyp für verschiedene Funktionen in Adobe Experience Platform. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im Handbuch [Ereignisendpunkt-Handbuch](./events.md).
+Audit-Ereignisse bieten Einblicke in Benutzeraktionen in Platform, einschließlich Aktionstyp, Datum und Uhrzeit, E-Mail-ID der Person, die die Aktion ausgeführt hat, und zusätzliche Attribute, die für den Aktionstyp für verschiedene Funktionen in Adobe Experience Platform relevant sind. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im [Handbuch zu Ereignisendpunkten](./events.md).
 
 ## Exportieren
 
-Mit dem Audit-Export können Sie Ereignisdaten abrufen, indem Sie die Ereignisse angeben, die Sie in der Payload abrufen möchten. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im [Export-Endpunkthandbuch](./export.md).
+Der Auditexport ermöglicht es Ihnen, Ereignisdaten abzurufen, indem Sie die Ereignisse angeben, die Sie in der Payload abrufen möchten. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im [Handbuch zu Exportendpunkten](./export.md).

@@ -1,6 +1,6 @@
 ---
-title: Technische Funktionen für maschinelles Lernen
-description: Erfahren Sie, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln, die von einem maschinellen Lernmodell genutzt werden können. Verwenden Sie Data Distiller, um ML-Funktionen im Maßstab zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben.
+title: Engineering-Funktionen für maschinelles Lernen
+description: Erfahren Sie, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln, die von einem maschinellen Lernmodell genutzt werden können. Verwenden Sie Data Distiller, um ML-Funktionen im benötigten Umfang zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
@@ -9,22 +9,22 @@ ht-degree: 13%
 
 ---
 
-# Technische Funktionen für maschinelles Lernen
+# Ingenieurfunktionen für maschinelles Lernen
 
-Dieses Dokument zeigt, wie Sie Daten in Adobe Experience Platform in **features** oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Dieser Prozess wird als **Funktionsentwicklung** bezeichnet. Verwenden Sie Data Distiller, um ML-Funktionen im Maßstab zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben. Dies umfasst Folgendes:
+In diesem Dokument wird gezeigt, wie Sie Daten in Adobe Experience Platform in **Funktionen** oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Dieser Prozess wird als „Feature **&quot;**. Verwenden Sie Data Distiller, um ML-Funktionen im benötigten Umfang zu berechnen und diese Funktionen für Ihre maschinelle Lernumgebung freizugeben. Dies umfasst Folgendes:
 
-1. Erstellen Sie eine Abfragevorlage, um die Zielbeschriftungen und Funktionen zu definieren, die Sie für Ihr Modell berechnen möchten
+1. Erstellen Sie eine Abfragevorlage, um die Zielbeschriftungen und -funktionen zu definieren, die Sie für Ihr Modell berechnen möchten
 2. Ausführen der Abfrage und Speichern der Ergebnisse in einem Trainings-Datensatz
 
-## Trainings-Daten definieren {#define-training-data}
+## Definieren von Schulungsdaten {#define-training-data}
 
-Das folgende Beispiel zeigt eine Abfrage zum Ableiten von Trainings-Daten aus einem Experience Events-Datensatz für ein Modell, um die Neigung eines Benutzers vorherzusagen, einen Newsletter zu abonnieren. Abonnementereignisse werden durch den Ereignistyp &quot;`web.formFilledOut`&quot;dargestellt und andere Verhaltensereignisse im Datensatz werden verwendet, um Funktionen auf Profilebene abzuleiten, um Abonnements vorherzusagen.
+Das folgende Beispiel zeigt eine Abfrage zum Ableiten von Schulungsdaten aus einem Erlebnisereignis-Datensatz für ein Modell, um die Neigung eines Benutzers vorherzusagen, einen Newsletter zu abonnieren. Abonnementereignisse werden durch den Ereignistyp `web.formFilledOut` dargestellt. Andere Verhaltensereignisse im Datensatz werden verwendet, um Funktionen auf Profilebene abzuleiten und Abonnements vorherzusagen.
 
-### Positive und negative Bezeichnungen abfragen {#query-positive-and-negative-labels}
+### Abfrage von positiven und negativen Kennzeichnungen {#query-positive-and-negative-labels}
 
-Ein vollständiger Datensatz zum Trainieren eines (beaufsichtigten) maschinellen Lernmodells umfasst eine Zielvariable oder einen Titel, die bzw. der das voraussichtliche Ergebnis darstellt, sowie eine Reihe von Funktionen oder erklärenden Variablen, die zur Beschreibung der Beispielprofile verwendet werden, die zum Trainieren des Modells verwendet werden.
+Ein vollständiger Datensatz für das Training eines (überwachten) Modells für maschinelles Lernen enthält eine Zielvariable oder -bezeichnung, die das vorherzusagende Ergebnis darstellt, und einen Satz von Funktionen oder erklärenden Variablen, die zur Beschreibung der Beispielprofile verwendet werden, die zum Trainieren des Modells verwendet werden.
 
-In diesem Fall ist die Beschriftung eine Variable mit dem Namen `subscriptionOccurred`, die gleich 1 ist, wenn das Benutzerprofil über ein Ereignis mit dem Typ `web.formFilledOut` verfügt, andernfalls 0. Die folgende Abfrage gibt eine Gruppe von 50.000 Benutzern aus dem Ereignis-Datensatz zurück, einschließlich aller Benutzer mit positiven Bezeichnungen (`subscriptionOccurred = 1`) sowie eines Sets, die zufällig ausgewählt wurden, mit negativen Bezeichnungen, um die Beispielgröße für 50.000 Benutzer abzuschließen. Dadurch wird sichergestellt, dass die Trainings-Daten sowohl positive als auch negative Beispiele enthalten, aus denen das Modell lernen kann.
+In diesem Fall ist die Bezeichnung eine Variable mit der Bezeichnung `subscriptionOccurred` , die gleich 1 ist, wenn das Benutzerprofil ein Ereignis mit dem Typ `web.formFilledOut` hat, andernfalls ist es 0. Die folgende Abfrage gibt einen Satz von 50.000 Benutzern aus dem Ereignisdatensatz zurück, einschließlich aller Benutzer mit positiven Kennzeichnungen (`subscriptionOccurred = 1`) plus einem Satz zufällig ausgewählter Benutzer mit negativen Kennzeichnungen, um die Stichprobengröße von 50.000 Benutzern abzuschließen. Dadurch wird sichergestellt, dass die Trainings-Daten sowohl positive als auch negative Beispiele für das Modell enthalten, aus denen gelernt werden kann.
 
 ```python
 from aepp import queryservice
@@ -54,7 +54,7 @@ df_labels.head()
 
 **Beispielausgabe**
 
-Anzahl der Klassen: 50000
+Anzahl Klassen: 50000
 
 |   | eventType | userId | subscriptionOccurred | random_row_number_for_user |
 | ---  |   ---  |   ---  |   ---  |   --- | 
@@ -68,26 +68,26 @@ Anzahl der Klassen: 50000
 
 ### Aggregieren von Ereignissen zur Definition von Funktionen für ML {#define-features}
 
-Mit einer geeigneten Abfrage können Sie die Ereignisse im Datensatz in aussagekräftige, numerische Merkmale erfassen, die zum Trainieren eines Tendenzmodells verwendet werden können. Unten finden Sie Beispielereignisse:
+Mit einer entsprechenden Abfrage können Sie die Ereignisse im Datensatz in aussagekräftigen numerischen Funktionen erfassen, die zum Trainieren eines Tendenzmodells verwendet werden können. Beispielereignisse werden unten angezeigt:
 
-- **Anzahl der E-Mails**, die zu Marketingzwecken gesendet und vom Benutzer empfangen wurden.
-- Teil dieser E-Mails, die **geöffnet** waren.
-- Teil dieser E-Mails, in dem der Benutzer **den Link ausgewählt hat**.
-- **Anzahl der angezeigten Produkte**.
-- Anzahl der **Vorschläge, die mit** interagiert wurden.
-- Anzahl der verworfenen **Vorschläge**.
-- Anzahl der ausgewählten **** Links.
-- Anzahl der Minuten zwischen zwei aufeinander folgenden E-Mails.
-- Anzahl der Minuten zwischen zwei aufeinander folgenden geöffneten E-Mails.
+- **Anzahl der E** Mails, die zu Marketing-Zwecken gesendet und vom Benutzer empfangen wurden.
+- Teil dieser E-Mails, die **geöffnet** wurden.
+- Teil dieser E-Mails, bei dem der Benutzer **ausgewählt** den Link.
+- **Anzahl der Produkte** die angezeigt wurden.
+- Anzahl der **Vorschläge, mit denen interagiert wurde**.
+- Anzahl **abgelehnten Vorschläge**.
+- Anzahl **ausgewählten Links**.
+- Anzahl der Minuten zwischen zwei aufeinander folgenden empfangenen E-Mails.
+- Anzahl der Minuten zwischen zwei aufeinander folgenden geöffneten E-Mails
 - Anzahl der Minuten zwischen zwei aufeinander folgenden E-Mails, in denen der Benutzer den Link tatsächlich ausgewählt hat.
 - Anzahl der Minuten zwischen zwei aufeinander folgenden Produktansichten.
-- Anzahl der Minuten zwischen zwei Vorschlägen, mit denen interagiert wurde
-- Anzahl der Minuten zwischen zwei verworfenen Vorschlägen.
+- Anzahl der Minuten zwischen zwei Vorschlägen, mit denen interagiert wurde.
+- Anzahl der Minuten zwischen zwei abgelehnten Vorschlägen.
 - Anzahl der Minuten zwischen zwei ausgewählten Links.
 
 Die folgende Abfrage aggregiert diese Ereignisse:
 
-+++Auswählen zum Anzeigen einer Beispielabfrage
++++Auswählen, um Beispielabfrage anzuzeigen
 
 ```python
 query_features = f"""
@@ -146,7 +146,7 @@ df_features.head()
 
 **Beispielausgabe**
 
-|   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpen | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
+|   | userId | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteractions | Vorschlag abgelehnt | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN |
@@ -156,11 +156,11 @@ df_features.head()
 
 {style="table-layout:auto"}
 
-#### Kombinieren von Bezeichnungen und Funktionsabfragen {#combine-queries}
+#### Kombinieren von Kennzeichnungen und Funktionen in Abfragen {#combine-queries}
 
-Schließlich können die Bezeichnungsabfrage und die Funktionenabfrage zu einer einzigen Abfrage kombiniert werden, die einen Trainings-Datensatz mit Bezeichnungen und Funktionen zurückgibt:
+Schließlich können die Abfragebeschriftungen und die Abfragefeatures zu einer einzigen Abfrage kombiniert werden, die einen Trainings-Datensatz mit Beschriftungen und Funktionen zurückgibt:
 
-+++Auswählen zum Anzeigen einer Beispielabfrage
++++Auswählen, um Beispielabfrage anzuzeigen
 
 ```python
 query_training_set = f"""
@@ -229,30 +229,30 @@ df_training_set.head()
 
 **Beispielausgabe**
 
-|  | userId | eventType | Zeitstempel | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpen | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
+|  | userId | eventType | Zeitstempel | subscriptionOccurred | EmailsReceived | emailsOpened | E-Mails angeklickt | productsViewed | propositionInteractions | Vorschlag abgelehnt | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17.13.2023:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 06.06.2023:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Keine | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19.18.2023:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Keine | NaN | 7 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17.06.2023 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 19.06.2023:01:06.55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Keine | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19.06.2023 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Keine | NaN | 7 |
 | 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21.06.2023 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
 | 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21.06.2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Keine | NaN | 1 |
 
 {style="table-layout:auto"}
 
-## Erstellen einer Abfragevorlage zur inkrementellen Berechnung von Trainings-Daten
+## Erstellen einer Abfragevorlage zur inkrementellen Berechnung von Schulungsdaten
 
-Es ist typisch, ein Modell regelmäßig mit aktualisierten Trainings-Daten neu zu trainieren, um die Genauigkeit des Modells im Laufe der Zeit beizubehalten. Als Best Practice für eine effiziente Aktualisierung Ihres Trainings-Datensatzes können Sie eine Vorlage aus Ihrer Trainings-Set-Abfrage erstellen, um neue Trainings-Daten schrittweise zu berechnen. Auf diese Weise können Sie Bezeichnungen und Funktionen nur aus Daten berechnen, die seit der letzten Aktualisierung der Trainings-Daten zum ursprünglichen Experience Events-Datensatz hinzugefügt wurden, und die neuen Bezeichnungen und Funktionen in den vorhandenen Trainings-Datensatz einfügen.
+Es ist üblich, ein Modell regelmäßig mit aktualisierten Trainingsdaten neu zu trainieren, um die Genauigkeit des Modells über die Zeit hinweg aufrechtzuerhalten. Als Best Practice zur effizienten Aktualisierung Ihres Trainings-Datensatzes können Sie eine Vorlage aus Ihrer Trainings-Set-Abfrage erstellen, um neue Trainings-Daten inkrementell zu berechnen. Auf diese Weise können Sie Beschriftungen und Funktionen nur aus Daten berechnen, die seit der letzten Aktualisierung der Schulungsdaten zum ursprünglichen Erlebnisereignis-Datensatz hinzugefügt wurden, und die neuen Beschriftungen und Funktionen in den vorhandenen Schulungsdatensatz einfügen.
 
-Dazu müssen einige Änderungen an der Trainings-Set-Abfrage vorgenommen werden:
+Dies erfordert einige Änderungen an der Trainings-Set-Abfrage:
 
-- Fügen Sie eine Logik hinzu, um einen neuen Trainings-Datensatz zu erstellen, falls dieser nicht vorhanden ist, und fügen Sie andernfalls die neuen Bezeichnungen und Funktionen in den vorhandenen Trainings-Datensatz ein. Dies erfordert eine Reihe von zwei Versionen der Trainings-Set-Abfrage:
+- Fügen Sie Logik hinzu, um einen neuen Trainings-Datensatz zu erstellen, falls er nicht vorhanden ist, und fügen Sie andernfalls die neuen Beschriftungen und Funktionen in den vorhandenen Trainings-Datensatz ein. Dies erfordert eine Reihe von zwei Versionen der Trainings-Set-Abfrage:
    - Verwenden Sie zunächst die Anweisung `CREATE TABLE IF NOT EXISTS {table_name} AS` .
-   - Verwenden Sie als Nächstes die `INSERT INTO {table_name}` -Anweisung für den Fall, dass der Trainings-Datensatz bereits vorhanden ist.
-- Fügen Sie eine `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` -Anweisung hinzu, um die Abfrage auf Ereignisdaten zu beschränken, die innerhalb eines bestimmten Intervalls hinzugefügt wurden. Das Präfix `$` für die Snapshot-IDs zeigt an, dass es sich um Variablen handelt, die bei der Ausführung der Abfragevorlage übergeben werden.
+   - Verwenden Sie anschließend die `INSERT INTO {table_name}` für den Fall, dass der Trainings-Datensatz bereits vorhanden ist
+- Fügen Sie eine `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` Anweisung hinzu, um die Abfrage auf Ereignisdaten zu beschränken, die innerhalb eines bestimmten Intervalls hinzugefügt wurden. Das `$` Präfix für die Momentaufnahme-IDs gibt an, dass es sich um Variablen handelt, die bei der Ausführung der Abfragevorlage übergeben werden.
 
-Die Anwendung dieser Änderungen führt zur folgenden Abfrage:
+Das Anwenden dieser Änderungen führt zur folgenden Abfrage:
 
-+++Auswählen zum Anzeigen einer Beispielabfrage
++++Auswählen, um Beispielabfrage anzuzeigen
 
 ```python
 ctas_table_name = "propensity_training_set"
@@ -407,7 +407,7 @@ print(f"Template for propensity training data created as ID {template_id}")
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
-Wenn die Vorlage gespeichert ist, können Sie die Abfrage jederzeit ausführen, indem Sie auf die Vorlagen-ID verweisen und den Bereich der Snapshot-IDs angeben, die in die Abfrage einbezogen werden sollen. Mit der folgenden Abfrage werden die Momentaufnahmen des ursprünglichen Experience Events-Datensatzes abgerufen:
+Nachdem die Vorlage gespeichert wurde, können Sie die Abfrage jederzeit ausführen, indem Sie auf die Vorlagen-ID verweisen und den Bereich der Momentaufnahme-IDs angeben, die in die Abfrage aufgenommen werden sollen. Die folgende Abfrage ruft die Momentaufnahmen des ursprünglichen Erlebnisereignis-Datensatzes ab:
 
 ```python
 query_snapshots = f"""
@@ -422,7 +422,7 @@ ORDER BY snapshot_generation ASC
 df_snapshots = dd_cursor.query(query_snapshots, output="dataframe")
 ```
 
-Der folgende Code veranschaulicht die Ausführung der Abfragevorlage und verwendet die ersten und letzten Momentaufnahmen, um den gesamten Datensatz abzufragen:
+Der folgende Code veranschaulicht die Ausführung der Abfragevorlage unter Verwendung der ersten und letzten Momentaufnahmen zur Abfrage des gesamten Datensatzes:
 
 ```python
 snapshot_start_id = str(df_snapshots["snapshot_id"].iloc[0])
@@ -484,4 +484,4 @@ Query completed successfully in 473.8 seconds
 
 ## Nächste Schritte:
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Der nächste Schritt beim Erstellen von Funktions-Pipelines aus Experience Platform, um benutzerdefinierte Modelle in Ihrer maschinellen Lernumgebung zu speisen, besteht darin, [Feature-Datensätze zu exportieren](./export-data.md).
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie Daten in Adobe Experience Platform in Funktionen oder Variablen umwandeln können, die von einem maschinellen Lernmodell genutzt werden können. Der nächste Schritt beim Erstellen von Funktions-Pipelines vom Experience Platform zum Einspeisen benutzerdefinierter Modelle in Ihrer maschinellen Lernumgebung besteht darin, [Funktionsdatensätze zu exportieren](./export-data.md).

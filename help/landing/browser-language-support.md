@@ -12,11 +12,11 @@ ht-degree: 33%
 
 # Browser- und Sprachunterstützung für die Experience Platform-Benutzeroberfläche
 
-Die Benutzeroberfläche von Adobe Experience Platform unterstützt mehrere Browser und Sprachen.
+Die Benutzeroberfläche von Adobe Experience Platform wurde entwickelt, um mehrere Browser und Sprachen zu unterstützen.
 
-## Browserunterstützung
+## Browser-Unterstützung
 
-Die Platform-Benutzeroberfläche wurde für die optimale Verwendung in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge entwickelt. Möglicherweise haben Sie bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern Probleme.
+Die Platform-Benutzeroberfläche wurde für eine optimale Funktionsweise in den **neuesten Versionen** von Google Chrome, Safari, Firefox und Microsoft Edge entwickelt. Bei der Verwendung bestimmter Funktionen in älteren Browserversionen können Probleme auftreten.
 
 | Betriebssystem | Unterstützte Browser |
 |---|---|
@@ -51,12 +51,12 @@ Die Standardsprache der Benutzeroberfläche wird durch die in Ihrem Benutzerprof
 
 Gehen Sie wie folgt vor, um Ihre Sprache zu ändern:
 
-1. Melden Sie sich bei Ihrem Experience Platform-Konto an.
-1. Drücken Sie `Ctrl + i` , um das Menü mit den Kontoinformationen aufzurufen.
+1. Beim Experience Platform-Konto anmelden.
+1. Drücken Sie `Ctrl + i`, um das Menü Kontoinformationen aufzurufen.
 1. Navigieren Sie zu **[!UICONTROL Bevorzugte Sprachen]**.
 1. Wählen Sie Ihre Voreinstellungen für die erste und zweite Sprache aus.
-1. Wählen Sie **[!UICONTROL Speichern]** aus und schließen Sie das Fenster.
+1. Wählen Sie **[!UICONTROL Speichern]** und schließen Sie das Fenster.
 
 >[!NOTE]
 >
-> Durch die Auswahl einer Region wird auch die Sprache für Inhalte auf Adobe.com festgelegt.
+> Wenn Sie eine Region auswählen, wird auch die Sprache für den Inhalt auf Adobe.com festgelegt.

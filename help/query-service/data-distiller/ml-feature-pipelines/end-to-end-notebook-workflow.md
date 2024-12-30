@@ -1,6 +1,6 @@
 ---
-title: End-to-End-Workflow für die Anreicherung von AI-/ML-Data Pipeline
-description: Verwenden Sie Cloud-basierte Notebook-Umgebungen für maschinelles Lernen, um eine Schulung zu erstellen und ein Tendenzmodell zu bewerten, das Abonnementkonversionen aus Adobe Experience Platform-Daten vorhersagt.
+title: End-to-End-Workflow der KI/ML-Datenpipeline-Anreicherung
+description: Verwenden Sie Cloud-basierte Notebooks für maschinelle Lernumgebungen, um ein Modell für Schulung und Bewertung mit Tendenzwerten zu erstellen, das Abonnementkonversionen aus Adobe Experience Platform-Daten vorhersagt.
 hide: true
 hidefromtoc: true
 exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
@@ -18,56 +18,56 @@ Old title:
 # AI/ML data pipeline enrichment end-to-end workflow
 -->
 
-# End-to-End-Workflow für die Anreicherung der AI-/ML-Datenpipeline
+# End-to-End-Workflow zur Anreicherung von KI/ML-Daten
 
 Verwenden Sie Data Distiller, um Ihre Pipelines für maschinelles Lernen mit hochwertigen Kundenerlebnisdaten anzureichern, die in Adobe Experience Platform erfasst und kuratiert wurden.
 
-Dieses Dokument bietet eine Reihe Cloud-basierter Notebook-Umgebungen für maschinelles Lernen, die einen durchgängigen Workflow demonstrieren. Der Workflow verwendet Ihre bevorzugten Tools für das maschinelle Lernen, um benutzerdefinierte Datenmodelle zu erstellen, die Ihre Marketing-Anwendungsfälle mit Experience Platform-Daten unterstützen.
+Dieses Dokument enthält eine Reihe von Cloud-basierten Notebooks für die maschinelle Lernumgebung, die einen durchgängigen Workflow demonstrieren. Der Workflow verwendet Ihre bevorzugten Tools für maschinelles Lernen, um benutzerdefinierte Datenmodelle zu erstellen, die Ihre Marketing-Anwendungsfälle mit Experience Platform-Daten unterstützen.
 
-Dieser Workflow erfordert die Verwendung von [!DNL Python] Notebooks in Ihren Umgebungen für maschinelles Lernen. Anweisungen zum Einstieg in diese [!DNL Python] Notebooks finden Sie in den entsprechenden Readme-Dateien.
+Dieser Workflow erfordert die Verwendung [!DNL Python] Notebooks in Ihren Umgebungen für maschinelles Lernen. Eine Anleitung für die ersten Schritte mit diesen [!DNL Python]-Notebooks finden Sie in den jeweiligen Readme-Dateien.
 
-Bevor Sie mit diesem Handbuch fortfahren, führen Sie die Schritte aus, die in der Übersicht über AI-/ML-Feature-Pipelines ](./overview.md) beschrieben sind, um die Verwendung der Python-Beispiel-Notebooks zu aktivieren, die in diesem Anwendungsfall für die KI/ML-Feature-Pipeline verwendet werden.[
+Bevor Sie mit diesem Handbuch fortfahren, führen Sie die Schritte aus, die unter [Übersicht über KI-/ML-Feature-Pipelines](./overview.md) beschrieben sind, um die Verwendung der in diesem Anwendungsfall für KI-/ML-Feature-Pipelines verwendeten Python-Beispielnotebooks zu aktivieren.
 
-## Notebooks mit der Cloud-Umgebung für maschinelles Lernen {#cmle-notebooks}
+## Cloud-Notebooks für maschinelles Lernen {#cmle-notebooks}
 
-Der durchgängige Workflow kann auf der Basis der zur Workflow-Implementierung verwendeten Dienste in drei große Phasen unterteilt werden.
+Der End-to-End-Workflow kann basierend auf den Services, die zur Implementierung des Workflows verwendet werden, in drei große Phasen unterteilt werden.
 
-- Die erste Erforschung und Vorbereitung von Platform-Daten beruht auf Platform-Diensten.
-- Modellschulung und -bewertung nutzt Tools in Ihrer Cloud-basierten ML-Umgebung. Zu den gebräuchlichen Optionen für ML-Plattformen zählen: Databricks ML, AWS Sagemaker, DataRobot usw.
-- Wenn Sie Ergebnisse zurück in Platform erfassen und auf diesen Werten basierende code-basierte Zielgruppenerstellung und -aktivierung auf Grundlage dieser Bewertungen erneut auf Platform-Dienste zurücksetzen.
+- Die anfängliche Untersuchung und Vorbereitung von Platform-Daten beruht auf Platform-Services.
+- Das Modell-Training und die Bewertung nutzt Tools in Ihrer Cloud-basierten ML-Umgebung. Zu den gängigen Optionen für ML-Plattformen gehören: Databricks ML, AWS Sagemaker, DataRobot usw.
+- Die erneute Aufnahme von Scores in Platform und die auf diesen Scores basierende Erstellung und Aktivierung von Code-basierten Zielgruppen würden wiederum auf Platform-Services angewiesen sein.
 
-Alle diese Phasen können jedoch in einem oder mehreren Notebooks Ihrer ML-Umgebung ausgeführt werden, ohne dass der Benutzer zwischen Platform und seinen Cloud-basierten ML-Tools wechseln muss.
+Alle diese Phasen können jedoch in einem oder mehreren Notebooks aus Ihrer ML-Umgebung ausgeführt werden, ohne dass der Benutzer den Kontext zwischen Platform und seinen Cloud-basierten ML-Tools wechseln muss.
 
-Die typischen Schritte dieses durchgängigen Workflows wurden in eine Reihe modularer Notebooks unterteilt, die zusammen die Schritte zeigen, die bei einem typischen maschinellen Lernprojekt mit Platform-Daten erforderlich sind. Dies erleichtert die Verwendung der Notebooks als Referenz für die Implementierung spezifischer Aktivitäten sowie die Auswahl und Anpassung von Code aus den entsprechenden Notebooks, um einen realen Anwendungsfall zu implementieren. In der Praxis kann ein Datenwissenschaftler ein einzelnes Notebook vorbereiten, das die End-to-End-Pipeline für sein ML-Projekt implementiert. Alternativ kann ein Datenwissenschaftler den Beispielcode einfach anpassen, um Platform-Daten abzufragen und sie in seiner ML-Umgebung verfügbar zu machen, bevor er das Projekt fortsetzt, um UI-basierte Funktionen in seiner ML-Plattform zu verwenden.
+Die typischen Schritte dieses durchgängigen Flusses wurden in eine Reihe modularer Notebooks unterteilt, die zusammengenommen die Schritte eines typischen Projekts für maschinelles Lernen mit Platform-Daten zeigen. Dies erleichtert die Verwendung der Notebooks als Referenz für die Implementierung spezifischer Aktivitäten und die Auswahl und Anpassung von Code aus den entsprechenden Notebooks, um einen realen Anwendungsfall zu implementieren. In der Praxis kann ein Datenwissenschaftler ein einzelnes Notebook vorbereiten, das die End-to-End-Pipeline für sein ML-Projekt implementiert. Alternativ kann ein Datenwissenschaftler den Beispiel-Code einfach anpassen, um Platform-Daten abzufragen und in seiner ML-Umgebung verfügbar zu machen, bevor das Projekt weiterhin UI-basierte Funktionen in seiner ML-Plattform verwendet.
 
-Die im verknüpften Repository enthaltenen Beispiel-Notebooks werden unten kurz beschrieben. Die detaillierte Dokumentation für jedes Notebook ist mit dem Code in den Notebooks selbst verknüpft.
+Die im verknüpften Repository enthaltenen Beispiel-Notebooks werden nachfolgend kurz beschrieben. Eine ausführliche Dokumentation zu jedem Notebook ist mit dem Code in den Notebooks selbst durchsetzt.
 
 <!-- Below is the meat - the how to (but without links or details) -->
 
-### Generieren synthetischer Daten {#generate-synthetic-data}
+### Synthetische Daten generieren {#generate-synthetic-data}
 
-Dieses Notebook bietet Code zum Generieren von Datensätzen synthetischer Profile und Erlebnisereignisse in Ihrer Plattform, die zur Veranschaulichung des CMLE-Workflows verwendet werden.
+Dieses Notebook bietet Code zum Generieren von Datensätzen mit synthetischen Profilen und Erlebnisereignissen in Ihrer Plattform, der zur Veranschaulichung des XML-Workflows verwendet wird.
 
-### EDA und Funktionen mit Query Service {#eda-and-featurization-with-query-service}
+### EDA und Feature mit Query Service {#eda-and-featurization-with-query-service}
 
-Dieses Notebook enthält Beispiele für die explorative Analyse von Platform-Datensätzen mithilfe interaktiver Abfragen über Platform Query Service. Diesen werden Beispiele für Funktionsabfragen folgen, um einen Trainings-Datensatz für das Beispiel-Tendenzmodell zu erstellen.
+Dieses Notebook enthält Beispiele für die explorative Analyse von Platform-Datensätzen, die interaktive Abfragen über den Platform-Abfrage-Service verwenden. Darauf folgen Beispiele für Featureabfragen zum Erstellen eines Trainings-Datensatzes für das Beispiel-Neigungs-Modell.
 
-### Exportieren von Trainings-Daten {#export-training-data}
+### Exportieren von Schulungsdaten {#export-training-data}
 
-Dieses Notebook veranschaulicht den Export des Trainings-Datensatzes in Cloud-Speicher, der von Ihren ML-Tools gelesen werden kann.
+Dieses Notebook veranschaulicht den Export des Schulungsdatensatzes in den Cloud-Speicher, der von Ihren ML-Tools gelesen werden kann.
 
-### Tendenzmodell trainieren {#train-a-propensity-model}
+### Trainieren eines Tendenzmodells {#train-a-propensity-model}
 
-Dieses Notebook zeigt das Training eines Tendenzmodells. Dabei wird von Databricks ML als Ihre ML-Umgebung ausgegangen, aber allgemein geschrieben (d. h. ohne starken Einsatz von Databricks-spezifischen Funktionen/APIs), sodass sie an andere Plattformen angepasst werden kann.
+Dieses Notebook veranschaulicht das Trainieren eines Tendenzmodells. Es setzt voraus, dass Databricks ML Ihre ML-Umgebung ist, wird jedoch generisch geschrieben (d. h. ohne starken Einsatz von Databricks-spezifischen Funktionen/APIs), sodass es an andere Plattformen angepasst werden kann.
 
-### Tendenzmodell bewerten
+### Bewerten des Tendenzmodells
 
-Dieses Notebook veranschaulicht die Auswertung des trainierten Tendenzmodells, um einen Datensatz mit Tendenzwerten für jedes Platform-Kundenprofil zu erstellen.
+Dieses Notebook veranschaulicht die Bewertung des trainierten Tendenzmodells, um einen Datensatz mit Tendenzwerten für jedes Platform-Kundenprofil zu erstellen.
 
-### Aufnehmen von Bewertungen in AEP
+### Scores in AEP aufnehmen
 
-Dieses kurze Notebook veranschaulicht die Erfassung des Datensatzes mit Tendenzwerten zur Anreicherung der Kundenprofile in AEP.
+Dieses kurze Notebook veranschaulicht die Aufnahme des Datensatzes mit Tendenz-Scores, um die Kundenprofile in AEP anzureichern.
 
 ### Erstellen und Aktivieren von Zielgruppen aus Code
 
-Dieses Notebook veranschaulicht, wie Benutzer Zielgruppen aus den Bewertungen erstellen und diese Zielgruppen über Platform-Apps aus ihrem Notebook-Code aktivieren können.
+Dieses Notebook zeigt, wie Benutzende aus den Bewertungen Zielgruppen erstellen und diese Zielgruppen über Platform-Apps aus ihrem Notebook-Code aktivieren können.

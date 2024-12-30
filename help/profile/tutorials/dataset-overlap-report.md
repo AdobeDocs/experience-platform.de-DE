@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; Reporting; Bericht zur Datensatzüberlappung; Profildaten
-title: Generieren des Datensatzüberlagerungsberichts
+keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Reporting;Bericht zur Datensatzüberschneidung;Profildaten
+title: Erstellen des Berichts zur Datensatzüberschneidung
 type: Tutorial
-description: In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberlappung mithilfe der Echtzeit-Kundenprofil-API erforderlich sind.
+description: In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberschneidung mithilfe der Echtzeit-Kundenprofil-API erforderlich sind.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -13,31 +13,31 @@ ht-degree: 2%
 
 # Erstellen eines Berichts zur Datensatzüberschneidung
 
-Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des [!DNL Profile]-Stores Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (Profile) beitragen.
+Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des [!DNL Profile] Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (Profilen) beitragen.
 
-Dieser Bericht bietet nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung Ihrer Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten.
+Dieser Bericht bietet nicht nur Einblicke in Ihre Daten, sondern kann Ihnen auch bei Maßnahmen zur Optimierung Ihrer Lizenznutzung helfen, z. B. beim Festlegen einer Beschränkung der Lebensdauer bestimmter Daten.
 
-In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberlappung mithilfe der [!DNL Real-Time Customer Profile] -API und zur Interpretation der Ergebnisse für Ihre Organisation erforderlich sind.
+In diesem Tutorial werden die Schritte beschrieben, die zum Generieren des Berichts zur Datensatzüberschneidung mithilfe der [!DNL Real-Time Customer Profile]-API und zur Interpretation der Ergebnisse für Ihr Unternehmen erforderlich sind.
 
 ## Erste Schritte
 
-Um Adobe Experience Platform-APIs verwenden zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen, um die Werte zu erfassen, die Sie für die erforderlichen Kopfzeilen benötigen. Weitere Informationen zu Experience Platform-APIs finden Sie in der Dokumentation [Erste Schritte mit Platform-APIs](../../landing/api-guide.md) .
+Um Adobe Experience Platform-APIs verwenden zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen, um die Werte zu erfassen, die Sie für die erforderlichen Kopfzeilen benötigen. Weitere Informationen zu Experience Platform-APIs finden Sie in der Dokumentation [Erste Schritte mit Platform-APIs](../../landing/api-guide.md).
 
 Die erforderlichen Kopfzeilen für alle API-Aufrufe in diesem Tutorial sind:
 
-* `Authorization: Bearer {ACCESS_TOKEN}`: Für die Kopfzeile `Authorization` ist ein Zugriffstoken erforderlich, dem das Wort `Bearer` vorangestellt wird. Ein neuer Zugriffstoken-Wert muss alle 24 Stunden generiert werden.
-* `x-api-key: {API_KEY}`: Der `API Key` wird auch als `Client ID` bezeichnet und ist ein Wert, der nur einmal generiert werden muss.
+* `Authorization: Bearer {ACCESS_TOKEN}`: Für die `Authorization`-Kopfzeile ist ein Zugriffstoken mit vorangestelltem Wort `Bearer` erforderlich. Alle 24 Stunden muss ein neuer Wert für das Zugriffs-Token generiert werden.
+* `x-api-key: {API_KEY}`: Die `API Key` wird auch als `Client ID` bezeichnet und ist ein Wert, der nur einmal generiert werden muss.
 * `x-gw-ims-org-id: {ORG_ID}`: Die Organisations-ID muss nur einmal generiert werden.
 
-Nachdem Sie das Authentifizierungs-Tutorial abgeschlossen und die Werte für die erforderlichen Kopfzeilen erfasst haben, können Sie mit dem Aufrufen der Echtzeit-Kunden-API beginnen.
+Nachdem Sie das Authentifizierungs-Tutorial abgeschlossen und die Werte für die erforderlichen Kopfzeilen erfasst haben, können Sie mit Aufrufen an die Echtzeit-Kunden-API beginnen.
 
-## Bericht zur Datensatzüberschneidung über die Befehlszeile erstellen
+## Bericht zur Datensatzüberschneidung mithilfe der Befehlszeile generieren
 
-Wenn Sie mit der Verwendung der Befehlszeile vertraut sind, können Sie die folgende cURL-Anfrage verwenden, um den Bericht zur Datensatzüberlappung zu generieren, indem Sie eine GET-Anfrage an `/previewsamplestatus/report/dataset/overlap` ausführen.
+Wenn Sie mit der Verwendung der Befehlszeile vertraut sind, können Sie die folgende cURL-Anfrage verwenden, um den Bericht zur Datensatzüberschneidung zu generieren, indem Sie eine GET-Anfrage an `/previewsamplestatus/report/dataset/overlap` ausführen.
 
 **Anfrage**
 
-Die folgende Anfrage verwendet den Parameter `date` , um den letzten Bericht für das angegebene Datum zurückzugeben.
+Die folgende Anfrage verwendet den `date`-Parameter, um den letzten Bericht für das angegebene Datum zurückzugeben.
 
 ```shell
 curl -X GET \
@@ -49,11 +49,11 @@ curl -X GET \
 
 | Parameter | Beschreibung |
 |---|---|
-| `date` | Geben Sie das Datum des zurückzugebenden Berichts an. Wenn am Datum mehrere Berichte ausgeführt wurden, wird der neueste Bericht für dieses Datum zurückgegeben. Wenn für das angegebene Datum kein Bericht vorhanden ist, wird der HTTP-Status-Fehler 404 (Nicht gefunden) zurückgegeben. Wenn kein Datum angegeben ist, wird der neueste Bericht zurückgegeben. Format: JJJJ-MM-TT. Beispiel: `date=2024-12-31` |
+| `date` | Geben Sie das Datum des zurückzugebenden Berichts an. Wenn am Datum mehrere Berichte ausgeführt wurden, wird der aktuelle Bericht für dieses Datum zurückgegeben. Wenn für das angegebene Datum kein Bericht vorhanden ist, wird der Fehler HTTP-Status 404 (Nicht gefunden) zurückgegeben. Wenn kein Datum angegeben wird, wird der letzte Bericht zurückgegeben. Format: JJJJ-MM-TT. Beispiel: `date=2024-12-31` |
 
 **Antwort**
 
-Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Datensatzüberlappung zurück. Der Bericht enthält ein `data` -Objekt, das kommagetrennte Listen mit Datensätzen und deren jeweiligen Profilzählern enthält. Weitere Informationen zum Lesen des Berichts finden Sie im Abschnitt zum [Interpretieren der Berichtdaten zur Datensatzüberlappung](#interpret-the-report) später in diesem Tutorial.
+Bei einer erfolgreichen Anfrage wird der HTTP-Status 200 (OK) und der Bericht zur Datensatzüberschneidung zurückgegeben. Der Bericht enthält ein `data`, das kommagetrennte Listen von Datensätzen und die jeweilige Profilanzahl enthält. Weitere Informationen zum Lesen des Berichts finden Sie im Abschnitt [Interpretieren der Berichtsdaten zur Datensatzüberschneidung](#interpret-the-report) weiter unten in diesem Tutorial.
 
 ```json
 {
@@ -66,28 +66,28 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Date
 }
 ```
 
-### Bericht zur Datensatzüberschneidung mit Postman generieren
+### Erstellen eines Berichts zur Datensatzüberschneidung mit Postman
 
-Postman ist eine kollaborative Plattform für die API-Entwicklung und eignet sich für die Visualisierung von API-Aufrufen. Es kann kostenlos von der [Postman-Website](https://www.postman.com) heruntergeladen werden und bietet eine benutzerfreundliche Benutzeroberfläche für die Ausführung von API-Aufrufen. Die folgenden Screenshots verwenden die Postman-Benutzeroberfläche.
+Postman ist eine kollaborative Plattform für die API-Entwicklung und nützlich für die Visualisierung von API-Aufrufen. Es kann kostenlos von der [Postman-Website heruntergeladen werden ](https://www.postman.com) bietet eine benutzerfreundliche Benutzeroberfläche zum Ausführen von API-Aufrufen. Die folgenden Screenshots verwenden die Benutzeroberfläche von Postman.
 
 **Anfrage**
 
 Um den Bericht zur Datensatzüberschneidung mit Postman anzufordern, führen Sie die folgenden Schritte aus:
 
-* Wählen Sie über das Dropdown-Menü GET als Anfragetyp aus.
+* Wählen Sie mithilfe des Dropdown-Menüs GET als Anfragetyp aus.
 * Geben Sie die erforderlichen Kopfzeilen in die Spalte `KEY` ein:
    * `Authorization`
    * `x-api-key`
    * `x-gw-ims-org-id`
-* Geben Sie die Werte, die Sie bei der Authentifizierung generiert haben, in die Spalte `VALUE` ein, ersetzen Sie die Klammern (`{{ }}`) und alle Inhalte in den geschweiften Klammern.
-* Geben Sie den Anfragepfad mit oder ohne den optionalen Parameter `date` ein:
+* Geben Sie die Werte, die Sie bei der Authentifizierung generiert haben, in die Spalte `VALUE` ein und ersetzen Sie dabei die geschweiften Klammern (`{{ }}`) und den gesamten Inhalt in den geschweiften Klammern.
+* Geben Sie den Anfragepfad mit oder ohne den optionalen `date` ein:
   `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap`\
   oder
   `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=YYYY-MM-DD`
 
 | Parameter | Beschreibung |
 |---|---|
-| `date` | Geben Sie das Datum des zurückzugebenden Berichts an. Wenn am Datum mehrere Berichte ausgeführt wurden, wird der neueste Bericht für dieses Datum zurückgegeben. Wenn für das angegebene Datum kein Bericht vorhanden ist, wird der HTTP-Status-Fehler 404 (Nicht gefunden) zurückgegeben. Wenn kein Datum angegeben ist, wird der neueste Bericht zurückgegeben. <br/>Format: JJJJ-MM-TT. Beispiel: `date=2024-12-31` |
+| `date` | Geben Sie das Datum des zurückzugebenden Berichts an. Wenn am Datum mehrere Berichte ausgeführt wurden, wird der aktuelle Bericht für dieses Datum zurückgegeben. Wenn für das angegebene Datum kein Bericht vorhanden ist, wird der Fehler HTTP-Status 404 (Nicht gefunden) zurückgegeben. Wenn kein Datum angegeben wird, wird der letzte Bericht zurückgegeben. <br/>Format: JJJJ-MM-TT. Beispiel: `date=2024-12-31` |
 
 Nachdem der Anfragetyp, die Kopfzeilen, Werte und der Pfad abgeschlossen sind, wählen Sie **Senden** aus, um die API-Anfrage zu senden und den Bericht zu generieren.
 
@@ -95,27 +95,27 @@ Nachdem der Anfragetyp, die Kopfzeilen, Werte und der Pfad abgeschlossen sind, w
 
 **Antwort**
 
-Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Datensatzüberlappung zurück. Der Bericht enthält ein `data` -Objekt, das kommagetrennte Listen mit Datensätzen und deren jeweiligen Profilzählern enthält. Weitere Informationen zum Lesen des Berichts finden Sie im Abschnitt zum [Interpretieren der Berichtdaten zur Datensatzüberlappung](#interpret-the-report).
+Bei einer erfolgreichen Anfrage wird der HTTP-Status 200 (OK) und der Bericht zur Datensatzüberschneidung zurückgegeben. Der Bericht enthält ein `data`, das kommagetrennte Listen von Datensätzen und die jeweilige Profilanzahl enthält. Weitere Informationen zum Lesen des Berichts finden Sie im Abschnitt [Interpretieren der Berichtsdaten zur Datensatzüberschneidung](#interpret-the-report).
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
-## Interpretieren der Berichtsdaten zu Datensatzüberschneidungen {#interpret-the-report}
+## Interpretieren der Berichtsdaten zur Datensatzüberschneidung {#interpret-the-report}
 
-Der Bericht zur generierten Datensatzüberschneidung bietet einen Zeitstempel, der das Datum und die Uhrzeit des Berichts sowie ein Datenobjekt anzeigt, das eindeutige Kombinationen aus Datensatz-IDs als kommagetrennte Listen enthält. Die folgenden Abschnitte enthalten zusätzliche Informationen zu den Komponenten des Berichts.
+Der generierte Bericht zur Datensatzüberschneidung enthält einen Zeitstempel, der das Datum und die Uhrzeit des Berichts anzeigt, sowie ein Datenobjekt, das eindeutige Kombinationen von Datensatz-IDs als kommagetrennte Listen enthält. Die folgenden Abschnitte enthalten zusätzliche Informationen zu den Komponenten des Berichts.
 
 ### Zeitstempel des Berichts
 
-Die `reportTimestamp` entspricht dem in der API-Anfrage angegebenen Datum oder, falls kein Datum angegeben wurde, dem Zeitstempel des letzten Berichts.
+Die `reportTimestamp` entspricht dem in der API-Anfrage angegebenen Datum oder, wenn kein Datum angegeben wurde, dem Zeitstempel des letzten Berichts.
 
 ### Liste der Datensatz-IDs
 
-Das Objekt `data` enthält eindeutige Kombinationen aus Datensatz-IDs als kommagetrennte Listen mit der entsprechenden Profilanzahl für diese Kombination von Datensätzen.
+Das `data`-Objekt enthält eindeutige Kombinationen von Datensatz-IDs als kommagetrennte Listen mit der entsprechenden Profilanzahl für diese Kombination von Datensätzen.
 
 >[!NOTE]
 >
->Die Summe aller Profilzahlen, die mit jeder Zeile des Datensatzüberschneidungsberichts verknüpft sind, sollte der Gesamtanzahl der Profile in Ihrer Organisation entsprechen.
+>Die Summe aller Profilzahlen, die mit jeder Zeile des Berichts zur Datensatzüberschneidung verknüpft sind, sollte der Gesamtzahl der Profile in Ihrer Organisation entsprechen.
 
-Um die Ergebnisse des Berichts zu interpretieren, sehen Sie sich folgendes Beispiel an:
+Um die Ergebnisse des Berichts zu interpretieren, sehen Sie sich das folgende Beispiel an:
 
 ```json
   "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
@@ -125,11 +125,11 @@ Um die Ergebnisse des Berichts zu interpretieren, sehen Sie sich folgendes Beisp
 
 Dieser Bericht enthält die folgenden Informationen:
 
-* Es gibt 123 Profile, die aus Daten der folgenden Datensätze bestehen: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
+* Es gibt 123 Profile, die aus Daten aus den folgenden Datensätzen bestehen: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Es gibt 454.412 Profile, die aus Daten aus diesen beiden Datensätzen bestehen: `5d92921872831c163452edc8` und `5eb2cdc6fa3f9a18a7592a98`.
-* Es gibt 107 Profile, die nur aus Daten aus dem Datensatz `5eeda0032af7bb19162172a7` bestehen.
-* Insgesamt gibt es 454.642 Profile in der Organisation.
+* Es gibt 107 Profile, die nur aus Daten aus Datensatz `5eeda0032af7bb19162172a7` bestehen.
+* Es gibt insgesamt 454.642 Profile in der Organisation.
 
 ## Nächste Schritte
 
-Nach Abschluss dieses Tutorials können Sie jetzt den Bericht zur Datensatzüberlappung mithilfe der Echtzeit-Kundenprofil-API generieren. Um mehr über die Arbeit mit Profildaten sowohl in der API als auch in der Experience Platform-Benutzeroberfläche zu erfahren, lesen Sie zunächst die [Dokumentation zur Profilübersicht](../home.md).
+Nach Abschluss dieses Tutorials können Sie jetzt den Bericht zur Datensatzüberschneidung mit der Echtzeit-Kundenprofil-API generieren. Um mehr über die Verwendung von Profildaten in der API und der Experience Platform-Benutzeroberfläche zu erfahren, lesen Sie zunächst die [Dokumentation Profilübersicht](../home.md).

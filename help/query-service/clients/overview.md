@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;verbinden;mit Abfrage-Service verbinden;aqua data studio;Aqua Data Studio;Looker;Looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
 title: Verbinden von Clients mit dem Abfragedienst
-description: In diesem Dokument wird beschrieben, wie Sie über verschiedene Desktop-Client-Anwendungen eine Verbindung zu Query Service herstellen und diese Verbindungen überprüfen können.
+description: In diesem Dokument wird erläutert, wie Sie eine Verbindung zum Abfrage-Service von einer Vielzahl von Desktop-Client-Anwendungen aus herstellen und diese Verbindungen überprüfen können.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
 source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 # Clients mit [!DNL Query Service] verbinden
 
-In diesem Abschnitt wird beschrieben, wie Sie von verschiedenen Desktop-Client-Programmen aus eine Verbindung zu [!DNL Query Service] herstellen und diese Verbindungen überprüfen können. [!DNL Query Service] verwendet das Protokoll [!DNL PostgreSQL], daher wird in den Anweisungen in diesem Abschnitt erläutert, wie Sie mit den [!DNL PostgreSQL] -Tools und -Treibern eine Verbindung herstellen und Abfragen schreiben können.
+In diesem Abschnitt wird beschrieben, wie Sie eine Verbindung zu [!DNL Query Service] von einer Vielzahl von Desktop-Client-Anwendungen aus herstellen und diese Verbindungen überprüfen. [!DNL Query Service] verwendet das [!DNL PostgreSQL]. In den Anweisungen in diesem Abschnitt wird daher erläutert, wie Sie [!DNL PostgreSQL] Tools und Treiber verwenden können, um Abfragen zu verbinden und zu schreiben.
 
 >[!IMPORTANT]
 >
->Die TLS/SSL-Zertifikate für Produktionsumgebungen für die Query Service Interactive Postgres API wurden am Mittwoch, 24. Januar 2024 aktualisiert.<br>Obwohl dies eine jährliche Anforderung ist, hat sich in diesem Fall auch das Stammzertifikat in der Kette geändert, da der Adobe TLS/SSL-Zertifikatanbieter seine Zertifikathierarchie aktualisiert hat. Dies kann sich auf bestimmte Postgres-Clients auswirken, wenn in ihrer Liste der Zertifizierungsstellen das Stammzertifikat fehlt. Beispielsweise muss einem PSQL-CLI-Client möglicherweise die Root-Zertifikate zu einer expliziten Datei `~/postgresql/root.crt` hinzugefügt werden, da dies andernfalls zu einem Fehler führen kann. Beispiel: `psql: error: SSL error: certificate verify failed`. Weitere Informationen zu diesem Problem finden Sie in der [offiziellen PostgreSQL-Dokumentation](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) .<br>Das Stammzertifikat, das hinzugefügt werden soll, kann von [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem) heruntergeladen werden.
+>Die TLS/SSL-Zertifikate in Produktionsumgebungen für die interaktive Postgres-API des Abfrage-Services wurden am Mittwoch, 24. Januar 2024 aktualisiert.<br>Obwohl dies eine jährliche Anforderung ist, hat sich in diesem Fall auch das Stammzertifikat in der Kette geändert, da die Zertifikatanbieter von Adobe TLS/SSL ihre Zertifikatshierarchie aktualisiert haben. Dies kann sich auf bestimmte Postgres-Clients auswirken, wenn in ihrer Liste der Zertifizierungsstellen das Stammzertifikat fehlt. Beispielsweise müssen einem PSQL-CLI-Client die Stammzertifikate möglicherweise zu einer expliziten `~/postgresql/root.crt` hinzugefügt werden, da dies sonst zu einem Fehler führen kann. Beispiel: `psql: error: SSL error: certificate verify failed`. Weitere Informationen zu [ Problem finden Sie in ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) offiziellen PostgreSQL-Dokumentation .<br>Das hinzuzufügende Stammzertifikat kann von [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem heruntergeladen ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Anweisungen werden für folgende Clients bereitgestellt:
 
@@ -32,4 +32,4 @@ Anweisungen werden für folgende Clients bereitgestellt:
 
 >[!IMPORTANT]
 >
->Als Power BI- und Tableau-Benutzer können Sie über die Registerkarte Query Service-Anmeldedaten eine Verbindung zu Ihren BI-Tools herstellen. Anweisungen zum Verbinden Ihrer BI-Tools mit Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics) finden Sie in der Dokumentation zu den Anmeldedaten .[
+>Als Power BI- und Tableau-Anwender können Sie Customer Journey Analytics über die Registerkarte Anmeldeinformationen des Abfrage-Service mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden (Verbinden [ BI-Tools mit dem Customer Journey Analytics) finden Sie in der Dokumentation ](../ui/credentials.md#connect-to-customer-journey-analytics) Anmeldedaten .

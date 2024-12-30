@@ -1,6 +1,6 @@
 ---
-title: Fuzzy Match in Query Service
-description: Erfahren Sie, wie Sie eine Übereinstimmung mit Ihren Platform-Daten durchführen, die Ergebnisse aus mehreren Datensätzen kombiniert, indem Sie ungefähr eine Zeichenfolge Ihrer Wahl abgleichen.
+title: Ungenaue Übereinstimmung im Abfrage-Service
+description: Erfahren Sie, wie Sie eine Übereinstimmung für Ihre Platform-Daten durchführen, die Ergebnisse aus mehreren Datensätzen kombiniert, indem Sie ungefähr mit einer Zeichenfolge Ihrer Wahl übereinstimmen.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# Fuzzy Match in Query Service
+# Ungenaue Übereinstimmung im Abfrage-Service
 
-Verwenden Sie eine &quot;unscharfe&quot;Übereinstimmung Ihrer Adobe Experience Platform-Daten, um die wahrscheinlichsten, ungefähren Übereinstimmungen zurückzugeben, ohne nach Zeichenfolgen mit identischen Zeichen suchen zu müssen. Dies ermöglicht eine wesentlich flexiblere Suche nach Ihren Daten und erleichtert den Zugriff auf Ihre Daten, indem Zeit und Mühe eingespart werden.
+Verwenden Sie eine „ungefähre“ Übereinstimmung in Ihren Adobe Experience Platform-Daten, um die wahrscheinlichsten ungefähren Übereinstimmungen zurückzugeben, ohne nach Zeichenfolgen mit identischen Zeichen suchen zu müssen. Dies ermöglicht eine wesentlich flexiblere Suche nach Ihren Daten und macht Ihre Daten durch Zeit- und Arbeitseinsparungen leichter zugänglich.
 
-Statt zu versuchen, die Suchzeichenfolgen neu zu formatieren, um sie abzugleichen, analysiert die unscharfe Übereinstimmung das Verhältnis der Ähnlichkeit zwischen zwei Sequenzen und gibt den Prozentsatz der Ähnlichkeit zurück. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) wird für diesen Prozess empfohlen, da seine Funktionen besser dazu geeignet sind, Zeichenfolgen in komplexeren Situationen im Vergleich zu [!DNL regex] oder [!DNL difflib] zuzuordnen.
+Anstatt zu versuchen, die Suchzeichenfolgen neu zu formatieren, um sie zuzuordnen, analysiert die Fuzzy-Übereinstimmung das Verhältnis der Ähnlichkeit zwischen zwei Sequenzen und gibt den Prozentsatz der Ähnlichkeit zurück. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) wird für diesen Prozess empfohlen, da seine Funktionen besser geeignet sind, Zeichenfolgen in komplexeren Situationen abzugleichen als in [!DNL regex] oder [!DNL difflib].
 
-Das in diesem Anwendungsfall bereitgestellte Beispiel konzentriert sich auf das Abgleichen ähnlicher Attribute aus einer Hotelzimmersuche über zwei verschiedene Reisebüro-Datensätze hinweg. Das Dokument zeigt, wie Zeichenfolgen anhand ihres Ähnlichkeitsgrads mit großen separaten Datenquellen abgeglichen werden. In diesem Beispiel vergleicht die Fuzzy Match die Suchergebnisse für die Funktionen eines Zimmers der Reisebüros Luma und Acme.
+Das in diesem Anwendungsbeispiel dargestellte Beispiel konzentriert sich auf das Abgleichen ähnlicher Attribute aus einer Hotelzimmersuche über zwei verschiedene Reisebüro-Datensätze hinweg. Das Dokument zeigt, wie Zeichenfolgen anhand ihres Ähnlichkeitsgrads aus großen separaten Datenquellen abgeglichen werden. In diesem Beispiel vergleicht Fuzzy Match die Suchergebnisse nach den Funktionen eines Zimmers der Reisebüros Luma und Acme.
 
 ## Erste Schritte {#getting-started}
 
-Im Rahmen dieses Prozesses müssen Sie ein Modell für maschinelles Lernen trainieren. In diesem Dokument wird davon ausgegangen, dass Sie über Kenntnisse in einer oder mehreren Umgebungen für maschinelles Lernen verfügen.
+Im Rahmen dieses Prozesses müssen Sie ein Modell für maschinelles Lernen trainieren. Dieses Dokument setzt Kenntnisse über eine oder mehrere maschinelle Lernumgebungen voraus.
 
-In diesem Beispiel werden [!DNL Python] und die Entwicklungsumgebung [!DNL Jupyter Notebook] verwendet. Obwohl viele Optionen verfügbar sind, wird [!DNL Jupyter Notebook] empfohlen, da es sich um eine Open-Source-Webanwendung mit niedrigen Rechenanforderungen handelt. Sie kann von [der offiziellen Jupyter-Site](https://jupyter.org/) heruntergeladen werden.
+In diesem Beispiel werden [!DNL Python] und die [!DNL Jupyter Notebook] Entwicklungsumgebung verwendet. Obwohl viele Optionen verfügbar sind, wird [!DNL Jupyter Notebook] empfohlen, da es sich um eine Open-Source-Webanwendung mit geringen Rechenanforderungen handelt. Es kann von der offiziellen Jupyter[Website heruntergeladen ](https://jupyter.org/).
 
-Bevor Sie beginnen, müssen Sie die erforderlichen Bibliotheken importieren. [!DNL FuzzyWuzzy] ist eine Open-Source-Bibliothek mit dem Namen [!DNL Python], die auf der Bibliothek [!DNL difflib] aufbaut und zum Abgleichen von Zeichenfolgen verwendet wird. Es verwendet [!DNL Levenshtein Distance], um die Unterschiede zwischen Sequenzen und Mustern zu berechnen. [!DNL FuzzyWuzzy] hat die folgenden Anforderungen:
+Bevor Sie beginnen, müssen Sie die erforderlichen Bibliotheken importieren. [!DNL FuzzyWuzzy] ist eine Open-Source-[!DNL Python]-Bibliothek, die auf der [!DNL difflib]-Bibliothek aufbaut und zum Abgleichen von Zeichenfolgen verwendet wird. Es verwendet [!DNL Levenshtein Distance], um die Unterschiede zwischen Sequenzen und Mustern zu berechnen. [!DNL FuzzyWuzzy] hat die folgenden Anforderungen:
 
 - [!DNL Python] 2.4 (oder höher)
 - [!DNL Python-Levenshtein]
@@ -34,25 +34,25 @@ Verwenden Sie in der Befehlszeile den folgenden Befehl, um [!DNL FuzzyWuzzy] zu 
 pip install fuzzywuzzy
 ```
 
-Oder verwenden Sie den folgenden Befehl, um auch [!DNL Python-Levenshtein] zu installieren:
+Oder verwenden Sie den folgenden Befehl, um [!DNL Python-Levenshtein] ebenfalls zu installieren:
 
 ```console
 pip install fuzzywuzzy[speedup]
 ```
 
-Weitere technische Informationen zu [!DNL Fuzzywuzzy] finden Sie in der [offiziellen Dokumentation](https://pypi.org/project/fuzzywuzzy/).
+Weitere technische Informationen zu [!DNL Fuzzywuzzy] finden Sie in ihrer [offiziellen Dokumentation](https://pypi.org/project/fuzzywuzzy/).
 
-### Verbindung zu Query Service herstellen
+### Verbindung zum Abfrage-Service herstellen
 
-Sie müssen Ihr maschinelles Lernmodell mit Query Service verbinden, indem Sie Ihre Anmeldedaten für die Verbindung angeben. Es können sowohl ablaufende als auch nicht ablaufende Anmeldeinformationen bereitgestellt werden. Weitere Informationen zum Erwerb der erforderlichen Anmeldeinformationen finden Sie im [Handbuch zu Anmeldeinformationen](../ui/credentials.md) . Wenn Sie [!DNL Jupyter Notebook] verwenden, lesen Sie bitte das vollständige Handbuch unter [Verbindung zu Query Service herstellen](../clients/jupyter-notebook.md).
+Sie müssen Ihr maschinelles Lernmodell mit dem Abfrage-Service verbinden, indem Sie Ihre Verbindungsberechtigungen angeben. Es können sowohl ablaufende als auch nicht ablaufende Anmeldeinformationen angegeben werden. Weitere Informationen zum [ der erforderlichen Anmeldeinformationen finden ](../ui/credentials.md) im „Handbuch zu Anmeldeinformationen“. Wenn Sie [!DNL Jupyter Notebook] verwenden, lesen Sie bitte die vollständige Anleitung unter [Verbindung zum Abfrage-Service](../clients/jupyter-notebook.md).
 
-Importieren Sie außerdem das Paket [!DNL numpy] in Ihre [!DNL Python]-Umgebung, um die lineare Algebra zu aktivieren.
+Stellen Sie außerdem sicher, dass Sie das [!DNL numpy] Paket in Ihre [!DNL Python] importieren, um lineare Algebra zu aktivieren.
 
 ```python
 import numpy as np
 ```
 
-Die folgenden Befehle sind erforderlich, um von [!DNL Jupyter Notebook] aus eine Verbindung mit Query Service herzustellen:
+Die folgenden Befehle sind erforderlich, um eine Verbindung zum Abfrage-Service von [!DNL Jupyter Notebook] aus herzustellen:
 
 ```python
 import psycopg2
@@ -67,11 +67,11 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-Ihre [!DNL Jupyter Notebook] -Instanz ist jetzt mit Query Service verbunden. Wenn die Verbindung erfolgreich hergestellt wurde, wird keine Meldung angezeigt. Wenn die Verbindung fehlgeschlagen ist, wird ein Fehler angezeigt.
+Ihre [!DNL Jupyter Notebook] ist jetzt mit dem Abfrage-Service verbunden. Wenn die Verbindung erfolgreich hergestellt wurde, wird keine Meldung angezeigt. Wenn die Verbindung fehlschlägt, wird ein Fehler angezeigt.
 
-### Draw-Daten aus dem Luma-Datensatz {#luma-dataset}
+### Daten aus dem Luma-Datensatz zeichnen {#luma-dataset}
 
-Daten für die Analyse werden aus dem ersten Datensatz mit den folgenden Befehlen gezogen. Aus Gründen der Kürze wurden die Beispiele auf die ersten 10 Ergebnisse der Spalte beschränkt.
+Die zu analysierenden Daten werden aus dem ersten Datensatz mit den folgenden Befehlen extrahiert. Der Kürze halber wurden die Beispiele auf die ersten 10 Ergebnisse der Spalte beschränkt.
 
 ```python
 cur.execute('''SELECT * FROM luma;
@@ -83,7 +83,7 @@ luma[:10]
 
 Wählen Sie **Ausgabe** aus, um das zurückgegebene Array anzuzeigen.
 
-+++Output
++++Ausgabe
 
 ```console
 array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
@@ -96,9 +96,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Draw-Daten aus dem Acme-Datensatz {#acme-dataset}
+### Daten aus dem Acme-Datensatz zeichnen {#acme-dataset}
 
-Daten für die Analyse werden nun aus dem zweiten Datensatz mit den folgenden Befehlen abgerufen. Auch hier waren die Beispiele aus Gründen der Kürze auf die ersten 10 Ergebnisse der Spalte beschränkt.
+Die zu analysierenden Daten werden nun mit den folgenden Befehlen aus dem zweiten Datensatz abgerufen. Zur Vereinfachung wurden die Beispiele auf die ersten 10 Ergebnisse der Spalte beschränkt.
 
 ```python
 cur.execute('''SELECT * FROM acme;
@@ -110,7 +110,7 @@ acme[:10]
 
 Wählen Sie **Ausgabe** aus, um das zurückgegebene Array anzuzeigen.
 
-+++Output
++++Ausgabe
 
 ```console
 array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
@@ -123,11 +123,11 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Erstellen einer unscharfen Scoring-Funktion {#fuzzy-scoring}
+### Erstellen einer Fuzzy-Scoring-Funktion {#fuzzy-scoring}
 
-Als Nächstes müssen Sie `fuzz` aus der FuzzyWuzzy-Bibliothek importieren und einen partiellen Quotientenvergleich der Strings durchführen. Mit der Funktion für das Teilverhältnis können Sie eine Übereinstimmung mit Teilzeichenfolgen durchführen. Hierbei wird die kürzeste Zeichenfolge verwendet und mit allen Unterzeichenfolgen abgeglichen, die dieselbe Länge aufweisen. Die Funktion gibt ein prozentuales Ähnlichkeitsverhältnis von bis zu 100 % zurück. Beispielsweise würde die Funktion für das Teilverhältnis die folgenden Zeichenfolgen &quot;Deluxe Room&quot;, &quot;1 King Bed&quot;und &quot;Deluxe King Room&quot;vergleichen und eine Ähnlichkeitsbewertung von 69 % zurückgeben.
+Als Nächstes müssen Sie `fuzz` aus der FuzzyWuzzy-Bibliothek importieren und einen Teilverhältnisvergleich der Zeichenfolgen ausführen. Mit der Funktion für das Teilverhältnis können Sie die Zuordnung von Teilzeichenfolgen durchführen. Hierbei wird die kürzeste Zeichenfolge verwendet und mit allen Unterzeichenfolgen abgeglichen, die dieselbe Länge aufweisen. Die Funktion gibt ein prozentuales Ähnlichkeitsverhältnis von bis zu 100 % zurück. Beispielsweise würde die Funktion für das Teilverhältnis die folgenden Zeichenfolgen „Deluxe Zimmer“, „1 King Bett“ und „Deluxe Zimmer mit Kingsize-Bett“ vergleichen und einen Ähnlichkeitswert von 69 % zurückgeben.
 
-Im Anwendungsfall zur Übereinstimmung von Hotelzimmern wird dies mit den folgenden Befehlen durchgeführt:
+Im Anwendungsfall „Hotelzimmer-Match“ geschieht dies mithilfe der folgenden Befehle:
 
 ```python
 from fuzzywuzzy import fuzz
@@ -135,16 +135,16 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-Importieren Sie als Nächstes `cdist` aus der [!DNL SciPy]-Bibliothek, um den Abstand zwischen den einzelnen Paaren in den beiden Eingaben zu berechnen. Dadurch werden die Bewertungen unter allen Paaren von Hotelzimmern berechnet, die von den einzelnen Reisebüros bereitgestellt werden.
+Importieren Sie als Nächstes `cdist` aus der [!DNL SciPy]-Bibliothek, um den Abstand zwischen den einzelnen Paaren in den beiden Sammlungen von Eingaben zu berechnen. Dieser Parameter berechnet die Bewertungen für alle Zimmerpaare, die von den einzelnen Reisebüros bereitgestellt werden.
 
 ```python
 from scipy.spatial.distance import cdist
 pairwise_distance =  cdist(luma.reshape((-1,1)),acme.reshape((-1,1)),compute_match_score)
 ```
 
-### Erstellen Sie Zuordnungen zwischen den beiden Spalten mithilfe der unscharfen Join-Punktzahl.
+### Erstellen Sie Zuordnungen zwischen den beiden Spalten mithilfe des Fuzzy-Join-Punkts
 
-Nachdem die Spalten nun auf der Grundlage der Entfernung bewertet wurden, können Sie die Paare indizieren und nur Treffer beibehalten, die höher als ein bestimmter Prozentsatz waren. In diesem Beispiel werden nur Paare beibehalten, die mit einem Wert von 70 % oder höher übereinstimmen.
+Nachdem die Spalten auf der Grundlage der Entfernung bewertet wurden, können Sie die Paare indizieren und nur Übereinstimmungen beibehalten, die höher als ein bestimmter Prozentsatz waren. In diesem Beispiel werden nur Paare beibehalten, die mit einem Score von 70 % oder höher übereinstimmen.
 
 ```python
 matched_pairs = []
@@ -154,15 +154,15 @@ for i,c1 in enumerate(luma):
         matched_pairs.append((luma[i].replace("'","''"),acme[j].replace("'","''")))
 ```
 
-Die Ergebnisse können mit dem folgenden Befehl angezeigt werden. Aus Gründen der Kürze sind die Ergebnisse auf zehn Zeilen beschränkt.
+Die Ergebnisse können mit dem folgenden Befehl angezeigt werden. Der Kürze halber sind die Ergebnisse auf zehn Zeilen beschränkt.
 
 ```python
 matched_pairs[:10]
 ```
 
-Wählen Sie **Ausgabe** aus, um die Ergebnisse anzuzeigen.
+Wählen Sie **Ausgabe**, um die Ergebnisse anzuzeigen.
 
-+++Output
++++Ausgabe
 
 ```console
 [('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
@@ -187,9 +187,9 @@ Die Ergebnisse werden dann mithilfe von SQL mit dem folgenden Befehl abgeglichen
 matching_sql = ' OR '.join(["(e.luma = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
 ```
 
-## Anwenden der Zuordnungen für unscharfe Verknüpfungen in Query Service {#mappings-for-query-service}
+## Anwenden der Zuordnungen für den Fuzzy-Join im Abfrage-Service {#mappings-for-query-service}
 
-Als Nächstes werden die Paare, die mit hoher Scoring übereinstimmen, mithilfe von SQL verknüpft, um einen neuen Datensatz zu erstellen.
+Als Nächstes werden die übereinstimmenden Paare mit hoher Punktzahl mithilfe von SQL verbunden, um einen neuen Datensatz zu erstellen.
 
 ```python
 :
@@ -202,9 +202,9 @@ WHERE
 [r for r in cur]
 ```
 
-Wählen Sie **Ausgabe** aus, um die Ergebnisse dieses Joins anzuzeigen.
+Wählen **Ausgabe**, um die Ergebnisse dieses Joins anzuzeigen.
 
-+++Output
++++Ausgabe
 
 ```console
 [('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
@@ -350,9 +350,9 @@ Wählen Sie **Ausgabe** aus, um die Ergebnisse dieses Joins anzuzeigen.
 
 +++
 
-### Unscharfe Übereinstimmungsergebnisse in Platform speichern {#save-to-platform}
+### Fuzzy-Match-Ergebnisse in Platform speichern {#save-to-platform}
 
-Schließlich können die Ergebnisse der unscharfen Übereinstimmung als Datensatz gespeichert werden, der in Adobe Experience Platform mit SQL verwendet werden kann.
+Schließlich können die Ergebnisse der Fuzzy Match-Abfrage mithilfe von SQL als Datensatz in Adobe Experience Platform gespeichert werden.
 
 ```python
 cur.execute(''' 

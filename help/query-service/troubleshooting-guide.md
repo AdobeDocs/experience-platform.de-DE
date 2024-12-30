@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;abfrage-service;Abfrage-Service;Handbuch zur Fehlerbehebung;FAQ;Fehlerbehebung
 solution: Experience Platform
-title: Abfragen Dienst und Daten Distiller häufig gestellte Fragen
-description: Dieses Dokument enthält häufig gestellte Fragen und Antworten zu Query Service und Data Distiller. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
+title: Häufig gestellte Fragen zu Query Service und Data Distiller
+description: Dieses Dokument enthält häufige Fragen und Antworten zu Query Service und Data Distiller. Zu den Themen gehören der Datenexport, Tools von Drittanbietern und PSQL-Fehler.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
 workflow-type: tm+mt
@@ -13,23 +13,23 @@ ht-degree: 83%
 
 # Häufig gestellte Fragen zu Query Service und Data Distiller
 
-In diesem Dokument werden häufig gestellte Fragen zu Query Service und Data Distiller beantwortet. Es enthält auch häufig erkannte Fehlercodes, während das Produkt &quot;Abfragen&quot;zur Datenvalidierung verwendet oder umgewandelte Daten zurück in den Daten-Pool geschrieben wird. Fragen und Informationen zur Fehlerbehebung bei anderen Adobe Experience Platform-Diensten finden Sie im [Handbuch zur Experience Platform-Fehlerbehebung](../landing/troubleshooting.md).
+In diesem Dokument werden häufig gestellte Fragen zu Query Service und Data Distiller beantwortet. Es enthält auch häufig angezeigte Fehler-Codes bei der Verwendung des Produkts „Abfragen“ für die Datenvalidierung oder das Zurückschreiben umgewandelter Daten in den Data Lake. Fragen und Fehlerbehebungen für andere Adobe Experience Platform-Services finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platform](../landing/troubleshooting.md).
 
-Um zu klären, wie Query Service und Data Distiller in Adobe Experience Platform zusammenarbeiten, finden Sie hier zwei grundlegende Fragen.
+Zwei grundlegende Fragen erläutern die Zusammenarbeit von Query Service und Data Distiller in Adobe Experience Platform.
 
-## Welche Beziehung besteht zwischen Query Service und Data Distiller?
+## Welche Beziehung besteht zwischen dem Abfrage-Service und Data Distiller?
 
-Query Service und Data Distiller sind unterschiedliche, einander ergänzende Komponenten, die spezielle Datenabfragen ermöglichen. Query Service wurde für Ad-hoc-Abfragen entwickelt, mit denen erfasste Daten untersucht, validiert und getestet werden können, ohne den Data Lake zu verändern. Im Gegensatz dazu konzentriert sich Data Distiller auf Batch-Abfragen, die Daten transformieren und anreichern, wobei Ergebnisse zur zukünftigen Verwendung zurück in den Data Lake gespeichert werden. Batch-Abfragen in Data Distiller können geplant, überwacht und verwaltet werden, was eine tiefere Datenverarbeitung und -bearbeitung unterstützt, die Query Service allein nicht erleichtert.
+Query Service und Data Distiller sind unterschiedliche, komplementäre Komponenten, die spezielle Datenabfragefunktionen bereitstellen. Query Service ist für Ad-hoc-Abfragen konzipiert, um aufgenommene Daten zu untersuchen, zu validieren und mit ihnen zu experimentieren, ohne den Data Lake zu ändern. Im Gegensatz dazu konzentriert sich Data Distiller auf Batch-Abfragen, die Daten transformieren und anreichern, wobei die Ergebnisse zur zukünftigen Verwendung zurück in den Data Lake gespeichert werden. Batch-Abfragen in Data Distiller können geplant, überwacht und verwaltet werden, wodurch eine tiefer gehende Datenverarbeitung und -bearbeitung unterstützt wird, die durch den Abfrage-Service allein nicht möglich ist.
 
-Mit Query Service lassen sich schnelle Einblicke gewinnen, während Data Distiller tief greifende, beständige Datenumwandlungen ermöglicht.
+Gemeinsam ermöglicht Query Service schnelle Einblicke, während Data Distiller tief greifende, persistente Datenumwandlungen ermöglicht.
 
-## Was ist der Unterschied zwischen Query Service und Data Distiller?
+## Was ist der Unterschied zwischen Abfrage-Service und Data Distiller?
 
-**Abfrage Dienst**: Wird für SQL-Abfragen verwendet, die sich auf die Untersuchung, Tauglichkeitsprüfung und das Experimentieren von Daten konzentrieren. Ausgaben werden nicht im Data Lake gespeichert und die Ausführungszeit ist auf 10 Minuten beschränkt. Ad-hoc-Abfragen eignen sich für einfache interaktive Datenprüfungen und -analysen.
+**Abfrage-Service**: Wird für SQL-Abfragen verwendet, die sich auf die Untersuchung, Validierung und das Experimentieren von Daten konzentrieren. Ausgaben werden nicht im Data Lake gespeichert und die Ausführungszeit ist auf 10 Minuten beschränkt. Ad-hoc-Abfragen eignen sich für einfache, interaktive Datenprüfungen und -analysen.
 
-**Daten Distiller**: Ermöglicht Batchabfragen, die Daten verarbeiten, bereinigen und anreichern, wobei die Ergebnisse wieder im Data Lake gespeichert werden. Diese Abfragen unterstützen eine längere Ausführung (bis zu 24 Stunden) und zusätzliche Funktionen liken die Planung, Überwachung und beschleunigte Berichte. Daten Distiller eignet sich ideal für die tiefgreifende Datenbearbeitung und geplante Datenverarbeitung Aufgaben.
+**Data Distiller**: Ermöglicht Batch-Abfragen, die Daten verarbeiten, bereinigen und anreichern, wobei die Ergebnisse im Data Lake gespeichert werden. Diese Abfragen unterstützen eine längere Ausführung (bis zu 24 Stunden) und zusätzliche Funktionen wie Planung, Überwachung und beschleunigtes Reporting. Data Distiller eignet sich ideal für detaillierte Datenmanipulationen und geplante Datenverarbeitungsaufgaben.
 
-Ausführlichere Informationen finden Sie in der Dokument](./packaging.md) für die [Query Dienst-Verpackung.
+Ausführlichere Informationen finden Sie [ Dokument zum ](./packaging.md) von Query Service.
 
 ## Fragenkategorien {#categories}
 
@@ -37,7 +37,7 @@ Die folgende Liste von Antworten auf häufig gestellte Fragen ist in folgende Ka
 
 - [Allgemein](#general)
 - [Data Distiller](#data-distiller)
-- [Abfrage UI](#queries-ui)
+- [Benutzeroberfläche für Abfragen](#queries-ui)
 - [Datensatzbeispiele](#dataset-samples)
 - [Exportieren von Daten](#exporting-data)
 - [SQL-Syntax](#sql-syntax) 
@@ -326,7 +326,7 @@ Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitte
 
 Sie sollten auch in der Dokumentation nachlesen, wie Sie [geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und über [die API](./api/scheduled-queries.md) durchführen können.
 
-Beachten Sie, dass Sie bei Verwendung der [!DNL Query Editor] Registerkarte einen Zeitplan nur zu einem Abfrage hinzufügen können, der bereits erstellt und gespeichert wurde. Dies gilt nicht für die [!DNL Query Service]-API.
+Beachten Sie, dass Sie bei Verwendung der [!DNL Query Editor] nur einen Zeitplan zu einer Abfrage hinzufügen können, die bereits erstellt und gespeichert wurde. Dies gilt nicht für die [!DNL Query Service]-API.
 +++
 
 ### Was bedeutet die Fehlermeldung „Sitzungs-Limit erreicht“?
@@ -608,22 +608,22 @@ Ja, die attributbasierte Zugriffssteuerung wird erzwungen, wenn sie konfiguriert
 Nein, Query Service unterstützt den Befehl „INSERT OVERWRITE INTO“ nicht.
 +++
 
-### Wie häufig werden die Nutzungsdaten im Dashboard zur Lizenznutzung für Data Distiller Compute Hours aktualisiert?
+### Wie oft werden die Nutzungsdaten im Lizenznutzungs-Dashboard für Data Distiller Compute Hours aktualisiert?
 
 +++Antwort
-Die Lizenznutzung Dashboard für Daten Distiller Computerstunden wird viermal täglich, alle sechs Stunden, aktualisiert.
+Das Lizenznutzungs-Dashboard für Data Distiller-Computerstunden wird viermal täglich alle sechs Stunden aktualisiert.
 +++
 
-### Kann ich den Befehl CREATE VIEW verwenden, ohne Daten Distiller Zugriff zu haben?
+### Kann ich den Befehl „CREATE VIEW“ ohne Zugriff auf Data Distiller verwenden?
 
 +++Antwort
-Ja, Sie können command auch ohne Daten Distiller Zugriff verwenden `CREATE VIEW` . Dieser Befehl bietet eine logische Ansicht der Daten, schreibt sie jedoch nicht zurück in den Daten-Pool.
+Ja, Sie können `CREATE VIEW` Befehl ohne Zugriff auf Data Distiller verwenden. Dieser Befehl bietet eine logische Ansicht von Daten, schreibt sie jedoch nicht zurück in den Data Lake.
 +++
 
-### Kann ich anonyme Bausteine in DbVisualizer verwenden?
+### Kann ich anonyme Blöcke in DbVisualizer verwenden?
 
 +++Antwort
-Ja. Einige Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherweise vor und nach einem SQL-Block eine separate Kennung, um anzugeben, dass ein Teil eines Skripts als einzelne Anweisung behandelt werden soll. Weitere Informationen finden Sie in der [Dokumentation zu anonymen Bausteinen](./key-concepts/anonymous-block.md) oder in der [offiziellen DbVisualizer-Dokumentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) .
+Ja. Bestimmte Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherweise eine separate Kennung vor und nach einem SQL-Block, um anzugeben, dass ein Teil eines Skripts als einzelne Anweisung gehandhabt werden soll. Weitere Informationen finden Sie in der [Dokumentation zu anonymen Blöcken](./key-concepts/anonymous-block.md) oder in [offiziellen DbVisualizer-Dokumentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## Data Distiller {#data-distiller}
@@ -631,39 +631,39 @@ Ja. Einige Drittanbieter-Clients wie DbVisualizer benötigen jedoch möglicherwe
 ### Wie wird die Lizenznutzung von Data Distiller verfolgt und wo kann ich diese Informationen sehen?
 
 +++Antwort\
-Die Hauptmetrik, die zur Verfolgung der Nutzung von Batch-Abfragen verwendet wird, ist die &quot;Compute Hour&quot;. Sie haben Zugriff auf diese Informationen und Ihren aktuellen Verbrauch über das [Nutzungs-Dashboard für Lizenzen](../dashboards/guides/license-usage.md).
+Die Hauptmetrik zur Verfolgung der Batch-Abfragenutzung ist „Compute Hour“. Sie haben über das Dashboard „Lizenznutzung[ Zugriff auf diese Informationen und ](../dashboards/guides/license-usage.md) aktuellen Verbrauch.
 +++
 
 ### Was ist eine Compute Hour?
 
 +++Antwort\
-Computestunden sind die messen Zeit, die die Query Dienst-Engines benötigen, um Daten zu lesen, zu verarbeiten und wieder in den Data Lake zu schreiben, wenn ein Batch-Abfrage ausgeführt wird.
+Berechnungsstunden sind die Zeit, die die Abfrage-Service-Engines zum Lesen, Verarbeiten und Zurückschreiben von Daten in den Data Lake benötigen, wenn eine Batch-Abfrage ausgeführt wird.
 +++
 
 ### Wie werden Compute Hours gemessen?
 
 +++Antwort\
-Compute Hours werden kumulativ für alle von Ihnen autorisierten Sandboxen gemessen.
+Berechnungsstunden werden kumulativ für alle autorisierten Sandboxes gemessen.
 +++
 
-### Warum bemerke ich manchmal eine Variation im Compute-Stunden-Verbrauch, Linear wenn ich denselben Abfrage nacheinander ausführe?
+### Warum bemerke ich manchmal Schwankungen beim Verbrauch der Rechenstunden, selbst wenn ich dieselbe Abfrage nacheinander ausführe?
 
 +++Antwort\
-Die Berechnungsstunden für eine Abfrage können aufgrund verschiedener Faktoren schwanken. Dazu gehören das verarbeitete Datenvolumen, die Komplexität Umwandlung Operationen innerhalb der SQL-Abfrage und so weiter. Query Dienst skaliert den Cluster basierend auf den oben genannten Parametern für jede Abfrage, was zu Unterschieden in den Computestunden Lead kann.
+Die Berechnung der Stunden für eine Abfrage kann aufgrund mehrerer Faktoren schwanken. Dazu gehören das verarbeitete Datenvolumen, die Komplexität der Umwandlungsvorgänge innerhalb der SQL-Abfrage usw. Query Service skaliert den Cluster basierend auf den oben genannten Parametern für jede Abfrage, was zu Unterschieden bei den Rechenstunden führen kann.
 +++
 
-### Ist es normal, eine Verringerung der Rechenstunden zu bemerken, wenn ich dieselbe Abfrage mit denselben Daten über einen langen Zeitraum ausführe? Woran kann das liegen?
+### Ist es normal, eine Verringerung der Compute Hours zu bemerken, wenn ich dieselbe Abfrage über einen langen Zeitraum mit denselben Daten ausführe? Warum kann das passieren?
 
 +++Antwort\
-Die Backend-Infrastruktur wird ständig verbessert, um die Nutzungs- und Verarbeitungszeit von Compute Hour zu optimieren. Daher werden Sie möglicherweise Änderungen im Laufe der Zeit feststellen, wenn Leistungsverbesserungen implementiert werden.
+Die Backend-Infrastruktur wird ständig verbessert, um die Auslastung und Verarbeitungszeit der Rechenstunden zu optimieren. Daher kann es vorkommen, dass sich die Leistung im Laufe der Zeit verbessert.
 +++
 
-## Abfragebenutzeroberfläche
+## Benutzeroberfläche für Abfragen
 
-### Beim Versuch, eine Verbindung mit Query Service herzustellen, hängt &quot;Abfrage erstellen&quot;an &quot;Verbindung initialisieren...&quot;. Wie kann ich das Problem beheben?
+### Die Meldung „Abfrage erstellen“ bleibt beim Versuch, eine Verbindung zum Abfrage-Service herzustellen, hängen „Verbindung wird initialisiert…“. Wie behebe ich das Problem?
 
 +++Antwort
-Wenn &quot;Abfrage erstellen&quot;bei &quot;Verbindung initialisieren..&quot;hängt, ist dies wahrscheinlich ein Verbindungs- oder Sitzungsproblem. Aktualisieren Sie den Browser, wenn Sie die Platform-Benutzeroberfläche verwenden, und versuchen Sie es erneut.
+Wenn die Option „Abfrage erstellen“ bei „Verbindung wird initialisiert…“ hängt, handelt es sich wahrscheinlich um ein Verbindungs- oder Sitzungsproblem. Aktualisieren Sie den Browser, wenn Sie die Platform-Benutzeroberfläche verwenden, und versuchen Sie es erneut.
 +++
 
 ## Datensatzbeispiele
@@ -671,7 +671,7 @@ Wenn &quot;Abfrage erstellen&quot;bei &quot;Verbindung initialisieren..&quot;hä
 ### Kann ich Beispiele für einen Systemdatensatz erstellen?
 
 +++Antwort 
-Nr. Schreibberechtigungen sind auf Systemdatensätze beschränkt, sodass Sie keine Beispiele erstellen können.
+Nr. Schreibberechtigungen sind auf Systemdatensätze beschränkt, sodass keine Beispiele erstellt werden können.
 +++
 
 ## Exportieren von Daten {#exporting-data}
@@ -722,10 +722,10 @@ and timestamp < to_timestamp('2022-07-23');
 
 ## SQL-Syntax
 
-### Wird das MERGE INTO von Data Distiller oder Query Service unterstützt?
+### Wird MERGE INTO von Data Distiller oder Query Service unterstützt?
 
 +++Antwort
-Das Konstrukt MERGE INTO SQL wird von Data Distiller oder Query Service nicht unterstützt.
+Das MERGE INTO SQL-Konstrukt wird von Data Distiller oder Query Service nicht unterstützt.
 +++
 
 ## ITAS-Abfragen
@@ -733,7 +733,7 @@ Das Konstrukt MERGE INTO SQL wird von Data Distiller oder Query Service nicht un
 ### Was sind ITAS-Abfragen?
 
 +++Antwort
-INSERT IN Abfragen werden als ITAS-Abfragen bezeichnet. Beachten Sie, dass CREATE TABLE-Abfragen als CTAS-Abfragen bezeichnet werden.
+INSERT INTO-Abfragen werden als ITAS-Abfragen bezeichnet. Beachten Sie, dass CREATE TABLE-Abfragen als CTAS-Abfragen bezeichnet werden.
 +++
 
 ## Drittanbieter-Tools {#third-party-tools}

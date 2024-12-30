@@ -1,6 +1,6 @@
 ---
 title: Übersichtsvideo zu Adobe Experience Platform
-description: In diesem Video erhalten Sie einen schnellen Überblick darüber, was Adobe Experience Platform ist und welche geschäftlichen Herausforderungen damit gelöst werden.
+description: In diesem Video erhalten Sie einen kurzen Überblick über Adobe Experience Platform und die damit verbundenen geschäftlichen Herausforderungen.
 kt: 4804
 audience: all
 doc-type: video
@@ -16,8 +16,8 @@ ht-degree: 7%
 
 # Überblick über Adobe Experience Platform
 
-Dieses Video bietet eine kurze Einführung in das Experience Platform und beschreibt einige der damit gelösten geschäftlichen Herausforderungen.
+In diesem Video erhalten Sie eine kurze Einführung in das Experience Platform und einen Überblick über einige der geschäftlichen Herausforderungen, die damit gelöst werden können.
 
-Um mehr zu erfahren, lesen Sie zunächst die [Experience Platform-Übersicht](../home.md).
+Um mehr darüber zu erfahren, lesen Sie zunächst die Übersicht über die [Experience Platform](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

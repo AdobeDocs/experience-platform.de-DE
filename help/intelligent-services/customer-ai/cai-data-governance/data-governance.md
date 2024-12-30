@@ -12,7 +12,7 @@ ht-degree: 97%
 
 ---
 
-# Customer AI und Data Governance in Customer AI
+# Kunden-KI und Data Governance in Kunden-KI
 
 Alle Einstellungen in Bezug auf die Data Governance in Kunden-KI werden von Adobe Experience Platform übernommen.
 

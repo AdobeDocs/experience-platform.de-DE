@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; Schreiben von Abfragen; Schreiben von Abfragen;
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;Abfragen schreiben;Abfrage schreiben;
 solution: Experience Platform
-title: Allgemeine Anleitung für die Ausführung von Abfragen in Query Service
+title: Allgemeine Leitlinien für die Ausführung von Abfragen im Abfrage-Service
 type: Tutorial
-description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
+description: In diesem Dokument werden wichtige Informationen beschrieben, die Sie beim Schreiben von Abfragen in Adobe Experience Platform Query Service beachten sollten.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
@@ -12,45 +12,45 @@ ht-degree: 4%
 
 ---
 
-# Allgemeine Anleitung für die Ausführung von Abfragen in [!DNL Query Service]
+# Allgemeine Leitlinien für die Ausführung von Abfragen in [!DNL Query Service]
 
-In diesem Dokument werden wichtige Details zum Schreiben von Abfragen in Adobe Experience Platform [!DNL Query Service] beschrieben.
+In diesem Dokument werden wichtige Informationen beschrieben, die Sie beim Schreiben von Abfragen in Adobe Experience Platform [!DNL Query Service] beachten sollten.
 
-Ausführliche Informationen zur SQL-Syntax, die in [!DNL Query Service] verwendet wird, finden Sie in der Dokumentation zur [SQL-Syntax](../sql/syntax.md).
+Ausführliche Informationen zur in [!DNL Query Service] verwendeten SQL-Syntax finden Sie in der [SQL-Syntax-Dokumentation](../sql/syntax.md).
 
-## Ausführungsmodelle von Abfragen
+## Abfrageausführungsmodelle
 
-Adobe Experience Platform [!DNL Query Service] verfügt über zwei Modelle zur Ausführung von Abfragen: interaktiv und nicht interaktiv. Die interaktive Ausführung wird in Business Intelligence-Tools zur Abfrageentwicklung und Berichterstellung verwendet, während nicht interaktive im Rahmen eines Datenverarbeitungs-Workflows für größere Aufträge und operative Abfragen verwendet werden.
+Adobe Experience Platform [!DNL Query Service] verfügt über zwei Modelle der Abfrageausführung: interaktiv und nicht interaktiv. Die interaktive Ausführung wird für die Abfrageentwicklung und die Berichterstellung in Business Intelligence-Tools verwendet, während die nicht interaktive Ausführung für größere Aufträge und operative Abfragen als Teil eines Datenverarbeitungs-Workflows verwendet wird.
 
-### Ausführung der interaktiven Abfrage
+### Interaktive Abfrageausführung
 
-Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service] -Benutzeroberfläche oder [über einen verbundenen Client](../clients/overview.md) gesendet werden. Wenn Sie [!DNL Query Service] über einen verbundenen Client ausführen, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
+Abfragen können interaktiv ausgeführt werden, indem sie über die [!DNL Query Service]-Benutzeroberfläche oder [über einen verbundenen Client) gesendet ](../clients/overview.md). Wenn [!DNL Query Service] über einen verbundenen Client ausgeführt wird, wird eine aktive Sitzung zwischen dem Client und [!DNL Query Service] ausgeführt, bis entweder die gesendete Abfrage zurückgegeben wird oder eine Zeitüberschreitung auftritt.
 
-Die Ausführung der interaktiven Abfrage weist die folgenden Einschränkungen auf:
+Die interaktive Ausführung von Abfragen hat die folgenden Einschränkungen:
 
 | Parameter | Einschränkung |
 | --------- | ---------- |
 | Zeitüberschreitung der Abfrage | 10 Minuten |
-| Maximale zurückgegebene Zeilen | 50.000 |
+| Maximal zurückgegebene Zeilen | 50.000 |
 | Maximale Anzahl gleichzeitiger Abfragen | 5 |
 
 >[!NOTE]
 >
->Um die maximale Zeilenbegrenzung zu überschreiben, fügen Sie `LIMIT 0` in Ihre Abfrage ein. Die Abfrage-Zeitüberschreitung von 10 Minuten gilt weiterhin.
+>Um die Begrenzung der maximalen Zeilen zu überschreiben, fügen Sie `LIMIT 0` in Ihre Abfrage ein. Die maximale Wartezeit von 10 Minuten für die Abfrage gilt weiterhin.
 
-Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurückgegeben und **nicht** beibehalten. Damit die Ergebnisse als Datensatz in [!DNL Experience Platform] beibehalten werden können, muss die Abfrage die Syntax `CREATE TABLE AS SELECT` verwenden.
+Standardmäßig werden die Ergebnisse interaktiver Abfragen an den Client zurückgegeben und **nicht** beibehalten. Um die Ergebnisse als Datensatz in [!DNL Experience Platform] beizubehalten, muss die Abfrage die `CREATE TABLE AS SELECT` Syntax verwenden.
 
-### Nicht-interaktive Abfrageausführung
+### Nicht interaktive Abfrageausführung
 
-Abfragen, die über die [!DNL Query Service] -API gesendet werden, werden nicht interaktiv ausgeführt. Nicht interaktive Ausführung bedeutet, dass [!DNL Query Service] den API-Aufruf erhält und die Abfrage in der Reihenfolge ausführt, in der sie empfangen wird. Nicht interaktive Abfragen führen immer dazu, dass entweder ein neuer Datensatz in [!DNL Experience Platform] erstellt wird, um die Ergebnisse zu erhalten, oder dass neue Zeilen in einen vorhandenen Datensatz eingefügt werden.
+Über die [!DNL Query Service]-API gesendete Abfragen werden nicht interaktiv ausgeführt. Eine nicht interaktive Ausführung bedeutet, dass [!DNL Query Service] den API-Aufruf erhält und die Abfrage in der Reihenfolge ausführt, in der sie empfangen wird. Nicht interaktive Abfragen führen immer entweder zur Generierung eines neuen Datensatzes, [!DNL Experience Platform] die Ergebnisse zu erhalten, oder zur Einfügung neuer Zeilen in einen vorhandenen Datensatz.
 
-## Zugreifen auf ein bestimmtes Feld in einem Objekt
+## Zugriff auf ein bestimmtes Feld innerhalb eines Objekts
 
-Um auf ein Feld innerhalb eines Objekts in Ihrer Abfrage zuzugreifen, können Sie die Punktnotation (`.`) oder die Klammernotation (`[]`) verwenden. Die folgende SQL-Anweisung verwendet die Punktnotation, um das Objekt `endUserIds` bis zum Objekt `mcid` zu durchlaufen.
+Um auf ein Feld innerhalb eines Objekts in Ihrer Abfrage zuzugreifen, können Sie entweder die Punktnotation (`.`) oder die Klammernotation (`[]`) verwenden. Die folgende SQL-Anweisung verwendet Punktnotation, um das `endUserIds` Objekt bis zum `mcid` Objekt zu durchlaufen.
 
 >[!NOTE]
 >
->Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
+>Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -62,9 +62,9 @@ LIMIT 1
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | Der Name Ihrer Analysetabelle. |
+| `{ANALYTICS_TABLE_NAME}` | Der Name Ihrer Analytics-Tabelle. |
 
-Die folgende SQL-Anweisung verwendet die Klammer-Notation, um das Objekt `endUserIds` bis zum Objekt `mcid` zu durchlaufen.
+Die folgende SQL-Anweisung verwendet die Klammernotation, um das `endUserIds` Objekt bis zum `mcid` Objekt zu durchlaufen.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -76,13 +76,13 @@ LIMIT 1
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | Der Name Ihrer Analysetabelle. |
+| `{ANALYTICS_TABLE_NAME}` | Der Name Ihrer Analytics-Tabelle. |
 
 >[!NOTE]
 >
->Da jeder Anmerkungstyp die gleichen Ergebnisse zurückgibt, können Sie die gewünschte Option beliebig wählen.
+>Da jeder Notierungstyp dieselben Ergebnisse zurückgibt, entspricht die von Ihnen gewählte Methode Ihren Vorlieben.
 
-Beide der obigen Beispielabfragen geben anstelle eines einzelnen Werts ein reduziertes Objekt zurück:
+Beide obigen Beispielabfragen geben ein reduziertes Objekt anstelle eines einzelnen Werts zurück:
 
 ```console
               endUserIds._experience.mcid   
@@ -91,13 +91,13 @@ Beide der obigen Beispielabfragen geben anstelle eines einzelnen Werts ein reduz
 (1 row)
 ```
 
-Das zurückgegebene `endUserIds._experience.mcid` -Objekt enthält die entsprechenden Werte für die folgenden Parameter:
+Das zurückgegebene `endUserIds._experience.mcid`-Objekt enthält die entsprechenden Werte für die folgenden Parameter:
 
 - `id`
 - `namespace`
 - `primary`
 
-Wenn die Spalte nur bis zum Objekt deklariert ist, wird das gesamte Objekt als Zeichenfolge zurückgegeben. Um nur die ID anzuzeigen, verwenden Sie:
+Wenn die Spalte nur für das -Objekt deklariert wird, wird das gesamte -Objekt als Zeichenfolge zurückgegeben. Um nur die ID anzuzeigen, verwenden Sie:
 
 ```sql
 SELECT endUserIds._experience.mcid.id
@@ -116,11 +116,11 @@ LIMIT 1
 
 ## Anführungszeichen
 
-Einfache Anführungszeichen, doppelte Anführungszeichen und Backquotes verwenden unterschiedliche Verwendungen in Query Service-Abfragen.
+Einfache Anführungszeichen, doppelte Anführungszeichen und rückwärtige Anführungszeichen werden in Abfragen des Abfrage-Service unterschiedlich verwendet.
 
-### Einzelne Anführungszeichen
+### Einfache Anführungszeichen
 
-Das einfache Anführungszeichen (`'`) wird zum Erstellen von Textzeichenfolgen verwendet. Beispielsweise kann es in der Anweisung `SELECT` verwendet werden, um einen statischen Textwert im Ergebnis zurückzugeben, und in der `WHERE`-Klausel, um den Inhalt einer Spalte zu bewerten.
+Das einfache Anführungszeichen (`'`) wird verwendet, um Textzeichenfolgen zu erstellen. Beispielsweise kann sie in der `SELECT`-Anweisung verwendet werden, um einen statischen Textwert im Ergebnis zurückzugeben, und in der `WHERE`-Klausel, um den Inhalt einer Spalte auszuwerten.
 
 Die folgende Abfrage deklariert einen statischen Textwert (`'datasetA'`) für eine Spalte:
 
@@ -134,7 +134,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Die folgende Abfrage verwendet eine in Anführungszeichen gesetzte Zeichenfolge (`'homepage'`) in ihrer WHERE-Klausel, um Ereignisse für eine bestimmte Seite zurückzugeben.
+Die folgende Abfrage verwendet eine Zeichenfolge in einfachen Anführungszeichen (`'homepage'`) in ihrer WHERE-Klausel, um Ereignisse für eine bestimmte Seite zurückzugeben.
 
 ```sql
 SELECT 
@@ -148,9 +148,9 @@ LIMIT 10
 
 ### Doppelte Anführungszeichen
 
-Das doppelte Anführungszeichen (`"`) dient zum Deklarieren einer Kennung mit Leerzeichen.
+Das doppelte Anführungszeichen (`"`) wird verwendet, um eine Kennung mit Leerzeichen zu deklarieren.
 
-In der folgenden Abfrage werden doppelte Anführungszeichen verwendet, um Werte aus angegebenen Spalten zurückzugeben, wenn eine Spalte einen Leerzeichen in ihrer Kennung enthält:
+Die folgende Abfrage verwendet doppelte Anführungszeichen, um Werte aus angegebenen Spalten zurückzugeben, wenn eine Spalte ein Leerzeichen in ihrer Kennung enthält:
 
 ```sql
 SELECT
@@ -165,11 +165,11 @@ FROM
 
 >[!NOTE]
 >
->Doppelte Anführungszeichen **können nicht** mit Feldzugriff auf Punktnotation verwendet werden.
+>Doppelte Anführungszeichen **können nicht** mit der Punktnotation verwendet werden.
 
-### Rücke Anführungszeichen
+### Zurück Anführungszeichen
 
-Das Backquote-Anführungszeichen `` ` `` wird verwendet, um reservierte Spaltennamen **nur** zu maskieren, wenn die Syntax für Punktnotation verwendet wird. Da beispielsweise `order` ein reserviertes Wort in SQL ist, müssen Sie Backquotes verwenden, um auf das Feld `commerce.order` zuzugreifen:
+Die `` ` `` für rückwärts gerichtete Anführungszeichen wird verwendet, um reservierte Spaltennamen (nur **) bei** Verwendung der Punktnotation-Syntax mit Escape-Zeichen zu versehen. Da `order` beispielsweise ein reserviertes Wort in SQL ist, müssen Sie für den Zugriff auf das Feld `commerce.order` Anführungszeichen verwenden:
 
 ```sql
 SELECT 
@@ -179,7 +179,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Rücke Anführungszeichen werden auch verwendet, um auf ein Feld zuzugreifen, das mit einer Zahl beginnt. Um beispielsweise auf das Feld `30_day_value` zuzugreifen, müssen Sie die Notation des Backquots verwenden.
+Backquotes werden auch verwendet, um auf ein Feld zuzugreifen, das mit einer Zahl beginnt. Um beispielsweise auf die `30_day_value` zuzugreifen, müssten Sie die Notation „Zurück“ verwenden.
 
 ```SQL
 SELECT
@@ -189,7 +189,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Rücke Anführungszeichen sind **nicht** erforderlich, wenn Sie die Klammer-Notation verwenden.
+Wenn Sie Klammernotation verwenden **sind** Anführungszeichen erforderlich.
 
 ```sql
  SELECT
@@ -201,11 +201,11 @@ Rücke Anführungszeichen sind **nicht** erforderlich, wenn Sie die Klammer-Nota
 
 ## Anzeigen von Tabelleninformationen
 
-Nachdem Sie eine Verbindung zu Query Service hergestellt haben, können Sie alle verfügbaren Tabellen auf Platform anzeigen, indem Sie entweder die Befehle `\d` oder `SHOW TABLES` verwenden.
+Nachdem Sie eine Verbindung zum Abfrage-Service hergestellt haben, können Sie alle verfügbaren Tabellen in Platform mit den Befehlen `\d` oder `SHOW TABLES` anzeigen.
 
-### Standardtabellenansicht
+### Standard-Tabellenansicht
 
-Der Befehl `\d` zeigt die standardmäßige Ansicht [!DNL PostgreSQL] für die Auflistung von Tabellen an. Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
+Der Befehl `\d` zeigt die standardmäßige [!DNL PostgreSQL] für die Auflistung von Tabellen an. Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
 ```sql
              List of relations
@@ -218,7 +218,7 @@ Der Befehl `\d` zeigt die standardmäßige Ansicht [!DNL PostgreSQL] für die Au
 
 ### Detaillierte Tabellenansicht
 
-Der Befehl `SHOW TABLES` ist ein benutzerdefinierter Befehl, der detailliertere Informationen über die Tabellen bereitstellt. Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
+`SHOW TABLES` Befehl ist ein benutzerdefinierter Befehl, der detailliertere Informationen zu den Tabellen bereitstellt. Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -230,9 +230,9 @@ Der Befehl `SHOW TABLES` ist ein benutzerdefinierter Befehl, der detailliertere 
 
 ### Schemainformationen
 
-Um genauere Informationen über die Schemas in der Tabelle anzuzeigen, können Sie den Befehl `\d {TABLE_NAME}` verwenden, wobei `{TABLE_NAME}` der Name der Tabelle ist, deren Schemadaten Sie anzeigen möchten.
+Um detailliertere Informationen über die Schemata in der Tabelle anzuzeigen, können Sie den Befehl `\d {TABLE_NAME}` verwenden, wobei `{TABLE_NAME}` der Name der Tabelle ist, deren Schemainformationen angezeigt werden sollen.
 
-Das folgende Beispiel zeigt die Schemainformationen für die Tabelle `luma_midvalues` , die mit `\d luma_midvalues` angezeigt werden würden:
+Das folgende Beispiel zeigt die Schemainformationen für die `luma_midvalues`, die durch Verwendung von `\d luma_midvalues` angezeigt würden:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -255,9 +255,9 @@ Das folgende Beispiel zeigt die Schemainformationen für die Tabelle `luma_midva
  search            | search                      |           |          | 
 ```
 
-Zusätzlich können Sie weitere Informationen zu einer bestimmten Spalte erhalten, indem Sie den Namen der Spalte an den Tabellennamen anhängen. Dies würde im Format `\d {TABLE_NAME}_{COLUMN}` geschrieben.
+Darüber hinaus können Sie weitere Informationen zu einer bestimmten Spalte erhalten, indem Sie den Namen der Spalte an den Tabellennamen anhängen. Dies würde im Format `\d {TABLE_NAME}_{COLUMN}` geschrieben.
 
-Das folgende Beispiel zeigt zusätzliche Informationen für die Spalte `web` und wird mithilfe des folgenden Befehls aufgerufen: `\d luma_midvalues_web`:
+Das folgende Beispiel zeigt zusätzliche Informationen für die `web` Spalte und wird mithilfe des folgenden Befehls aufgerufen: `\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -269,9 +269,9 @@ Das folgende Beispiel zeigt zusätzliche Informationen für die Spalte `web` und
 
 ## Datensätze verknüpfen
 
-Sie können mehrere Datensätze zusammenführen, um Daten aus anderen Datensätzen in Ihre Abfrage aufzunehmen.
+Sie können mehrere Datensätze verbinden, um Daten aus anderen Datensätzen in Ihre Abfrage aufzunehmen.
 
-Im folgenden Beispiel würden die beiden folgenden Datensätze (`your_analytics_table` und `custom_operating_system_lookup`) hinzugefügt und eine `SELECT` -Anweisung für die 50 wichtigsten Betriebssysteme nach Anzahl der Seitenansichten erstellt.
+Das folgende Beispiel würde die beiden folgenden Datensätze (`your_analytics_table` und `custom_operating_system_lookup`) verbinden und eine `SELECT`-Anweisung für die 50 wichtigsten Betriebssysteme nach Anzahl der Seitenansichten erstellen.
 
 **Abfrage**
 
@@ -290,7 +290,7 @@ LIMIT 50;
 
 **Ergebnisse**
 
-| OperatingSystem | PageViews |
+| Betriebssystem | Seitenansichten |
 | --------------- | --------- |
 | Windows 7 | 2781979,0 |
 | Windows XP | 1669824,0 |
@@ -311,20 +311,20 @@ LIMIT 50;
 
 ## Deduplizierung
 
-Query Service unterstützt die Deduplizierung von Daten oder das Entfernen doppelter Zeilen aus Daten. Weiterführende Informationen zur Deduplizierung finden Sie im [Handbuch zur Query Service-Deduplizierung](../key-concepts/deduplication.md) .
+Der Abfrage-Service unterstützt die Datendeduplizierung oder das Entfernen doppelter Zeilen aus Daten. Weitere Informationen zur Deduplizierung finden Sie im [Handbuch zur Deduplizierung des Abfrage-Service](../key-concepts/deduplication.md).
 
-## Zeitzonenberechnungen in Query Service
+## Zeitzonenberechnungen im Abfrage-Service
 
-Query Service standardisiert persistente Daten in Adobe Experience Platform mithilfe des UTC-Zeitstempelformats. Weitere Informationen zur Übersetzung Ihrer Zeitzonenanforderung in und von einem UTC-Zeitstempel finden Sie im Abschnitt [FAQs zum Ändern der Zeitzone von und zu einem UTC-Zeitstempel](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
+Query Service standardisiert persistierte Daten in Adobe Experience Platform mithilfe des UTC-Zeitstempelformats. Weitere Informationen zur Übersetzung Ihrer Zeitzonenanforderungen in und aus einem UTC-Zeitstempel finden Sie im [FAQ-Abschnitt zum Ändern der Zeitzone in und von einem UTC-Zeitstempel](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie einige wichtige Aspekte beim Schreiben von Abfragen mit [!DNL Query Service] erläutert. Weitere Informationen zur Verwendung der SQL-Syntax zum Schreiben Ihrer eigenen Abfragen finden Sie in der Dokumentation zur [SQL-Syntax](../sql/syntax.md).
+In diesem Dokument haben Sie eine Einleitung zu wichtigen Überlegungen beim Schreiben von Abfragen mit [!DNL Query Service] erhalten. Weitere Informationen zur Verwendung der SQL-Syntax zum Schreiben eigener Abfragen finden Sie in der [SQL-Syntax-Dokumentation](../sql/syntax.md).
 
-Weitere Beispiele für Abfragen, die in Query Service verwendet werden können, finden Sie in der folgenden Anwendungsfalldokumentation:
+Weitere Beispiele für Abfragen, die im Abfrage-Service verwendet werden können, finden Sie in der Dokumentation zu folgenden Anwendungsfällen:
 
-- [Analytics-Erkenntnisse](../use-cases/analytics-insights.md)
+- [Analytics Insights](../use-cases/analytics-insights.md)
 - [Erstellen eines Trendberichts mit Ereignissen](../use-cases/trended-report-of-events.md)
-- [Anzeigen eines Rollup-Berichts eines Besuchers](../use-cases/roll-up-report-of-a-visitor.md)
+- [Anzeigen eines Datenaggregationsberichts eines Besuchers](../use-cases/roll-up-report-of-a-visitor.md)
 - [Auflisten der Seitenansichten von Benutzenden](../use-cases/list-visitor-sessions.md)
-- [Besucher nach der Anzahl der Seitenansichten auflisten](../use-cases/visitors-by-number-of-page-views.md)
+- [Besuchende nach Anzahl der Seitenansichten auflisten](../use-cases/visitors-by-number-of-page-views.md)

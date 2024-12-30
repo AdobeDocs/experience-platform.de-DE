@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Benutzerhandbuch; Kundenhilfe; beliebte Themen; Instanz konfigurieren; Instanz erstellen
+keywords: Experience Platform;Benutzerhandbuch;Kunden-KI;beliebte Themen;Instanz konfigurieren;Instanz erstellen;
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Konfigurieren einer Customer AI-Instanz
-description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
+title: Konfigurieren einer Kunden-KI-Instanz
+description: KI-/ML-Services bieten Kunden-KI als benutzerfreundlichen Adobe Sensei-Service, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -15,29 +15,29 @@ ht-degree: 7%
 
 # Konfigurieren einer Customer AI-Instanz
 
-Mit Customer AI als Teil von AI/ML Services können Sie benutzerdefinierte Tendenzwerte generieren, ohne sich um maschinelles Lernen kümmern zu müssen.
+Kunden-KI als Teil von KI-/ML-Services ermöglicht es Ihnen, benutzerdefinierte Tendenzwerte zu generieren, ohne sich über maschinelles Lernen Gedanken machen zu müssen.
 
-AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
+KI-/ML-Services bieten Kunden-KI als benutzerfreundlichen Adobe Sensei-Service, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 
-## Erstellen einer Instanz {#set-up-your-instance}
+## Instanz erstellen {#set-up-your-instance}
 
-Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Dienste]** aus. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Wählen Sie im Container für Customer AI **[!UICONTROL Öffnen]** aus.
+Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Services]** in der linken Navigationsleiste aus. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Wählen Sie im Container für Kunden-KI **[!UICONTROL Öffnen]** aus.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-Die Benutzeroberfläche von **Customer AI** wird angezeigt und zeigt alle Dienstinstanzen an.
+Die **Kunden-KI**-Benutzeroberfläche wird angezeigt und zeigt alle Ihre Service-Instanzen an.
 
-- Sie finden die Metrik **[!UICONTROL Gesamte Profile mit Bewertungen]** unten rechts im Container **[!UICONTROL Instanz erstellen]** . Diese Metrik verfolgt die Gesamtzahl der Profile, die von Customer AI für das aktuelle Kalenderjahr bewertet wurden, einschließlich aller Sandbox-Umgebungen und aller gelöschten Dienstinstanzen.
+- Die Metrik **[!UICONTROL Gesamtzahl der bewerteten Profile]** befindet sich unten rechts im Container **[!UICONTROL Instanz erstellen]**. Diese Metrik verfolgt die Gesamtzahl der von Kunden-KI im aktuellen Kalenderjahr bewerteten Profile, einschließlich aller Sandbox-Umgebungen und gelöschter Service-Instanzen.
 
 ![](../images/user-guide/total-profiles.png)
 
-Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Benutzeroberfläche bearbeitet, geklont und gelöscht werden. Um diese Steuerelemente anzuzeigen, wählen Sie eine Instanz aus Ihren vorhandenen **[!UICONTROL Dienstinstanzen]** aus. Die Steuerelemente enthalten Folgendes:
+Dienstinstanzen können mithilfe der Steuerelemente auf der rechten Seite der Benutzeroberfläche bearbeitet, geklont und gelöscht werden. Um diese Steuerelemente anzuzeigen, wählen Sie eine Instanz aus Ihren vorhandenen **[!UICONTROL Service-Instanzen]** aus. Die Steuerelemente enthalten Folgendes:
 
-- **[!UICONTROL Bearbeiten]**: Durch Auswahl von **[!UICONTROL Bearbeiten]** können Sie eine vorhandene Dienstinstanz ändern. Sie können den Namen, die Beschreibung und die Scoring-Häufigkeit der Instanz bearbeiten.
-- **[!UICONTROL Klonen]**: Durch Auswahl von **[!UICONTROL Klonen]** wird das derzeit ausgewählte Dienstinstanzsetup kopiert. Anschließend können Sie den Workflow ändern, um kleinere Änderungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
-- **[!UICONTROL Löschen]**: Sie können eine Dienstinstanz einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Bewertungen, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
-- **[!UICONTROL Datenquelle]**: Ein Link zu dem von dieser Instanz verwendeten Datensatz. Wenn mehrere Datensätze verwendet werden, wird durch Auswahl des Hyperlink-Texts das Popup-Fenster für die Datensatzvorschau geöffnet.
-- **[!UICONTROL Letzte Ausführungsdetails]**: Dies wird nur angezeigt, wenn eine Ausführung fehlschlägt. Informationen dazu, warum die Ausführung fehlgeschlagen ist, wie z. B. Fehlercodes, werden hier angezeigt.
+- **[!UICONTROL Bearbeiten]**: Wenn Sie **[!UICONTROL Bearbeiten]** auswählen, können Sie eine vorhandene Service-Instanz ändern. Sie können den Namen, die Beschreibung und die Bewertungsfrequenz der Instanz bearbeiten.
+- **[!UICONTROL Klonen]**: Wenn Sie **[!UICONTROL Klonen]** auswählen, wird die aktuell ausgewählte Dienstinstanz-Einrichtung kopiert. Anschließend können Sie den Workflow ändern, um kleinere Anpassungen vorzunehmen, und ihn in eine neue Instanz umbenennen.
+- **[!UICONTROL Löschen]**: Sie können eine Service-Instanz einschließlich aller historischen Ausführungen löschen. Der entsprechende Ausgabedatensatz wird aus Platform gelöscht. Scores, die mit dem Echtzeit-Kundenprofil synchronisiert wurden, werden jedoch nicht gelöscht.
+- **[!UICONTROL Datenquelle]**: Ein Link zu dem von dieser Instanz verwendeten Datensatz. Wenn mehrere Datensätze verwendet werden, wird durch Auswahl des Hyperlink-Texts das Popover für die Datensatzvorschau geöffnet.
+- **[!UICONTROL Details des letzten Durchgangs]**: Wird nur angezeigt, wenn ein Durchgang fehlschlägt. Hier werden Informationen darüber angezeigt, warum der Durchlauf fehlgeschlagen ist, z. B. Fehlercodes.
 - **[!UICONTROL Score-Definition]**: Ein kurzer Überblick über das Ziel, das Sie für diese Instanz konfiguriert haben.
 
 ![](../images/user-guide/service-instance-panel.png)
@@ -48,172 +48,172 @@ Um eine neue Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]*
 
 ## Einrichten
 
-Der Workflow für die Instanzerstellung wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Einrichten]** .
+Der Workflow zur Instanzerstellung wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Einrichten]**.
 
 Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Instanz angeben müssen:
 
-- **[!UICONTROL Name]:** Der Name der Instanz wird an allen Stellen verwendet, an denen Customer AI-Bewertungen angezeigt werden. Daher sollten Namen beschreiben, was die Prognosewerte darstellen. Beispiel: &quot;Wahrscheinlichkeit einer Kündigung eines Zeitschriftenabonnements&quot;.
+- **[!UICONTROL Name]:** Der Name der Instanz wird überall dort verwendet, wo Kunden-KI-Bewertungen angezeigt werden. Daher sollten Namen beschreiben, was die Prognosewerte darstellen. Beispiel: „Wahrscheinlichkeit, ein Zeitschriftenabo zu stornieren“.
 
 - **[!UICONTROL Beschreibung]:** Eine Beschreibung, die angibt, was Sie vorhersagen möchten.
 
-- **[!UICONTROL Propensity type]:** Der Tendenztyp bestimmt den Zweck des Wertes und der Metrikpolarität. Sie können entweder **[!UICONTROL Abwanderung]** oder **[!UICONTROL Konversion]** wählen. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Auswertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
+- **[!UICONTROL Neigungstyp]:** Der Neigungstyp bestimmt die Absicht des Scores und die Metrikpolarität. Sie können entweder **[!UICONTROL Abwanderung]** oder **[!UICONTROL Konversion]** wählen. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Auswertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
 
 ![Setup-Bildschirm](../images/user-guide/create-instance.png)
 
-Geben Sie die erforderlichen Werte ein und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
+Geben Sie die erforderlichen Werte ein und wählen Sie dann **[!UICONTROL Weiter]**, um fortzufahren.
 
 ## Daten auswählen {#select-data}
 
-Standardmäßig verwendet Customer AI Adobe Analytics-, Adobe Audience Manager-, Erlebnisereignisse im Allgemeinen und Erlebnisereignisdaten für Verbraucher, um Tendenzwerte zu berechnen. Bei der Auswahl eines Datensatzes werden nur Datensätze aufgelistet, die mit Customer AI kompatibel sind. Um einen Datensatz auszuwählen, wählen Sie das Symbol (**+**) neben dem Datensatznamen aus oder aktivieren Sie das Kontrollkästchen, um mehrere Datensätze gleichzeitig hinzuzufügen. Verwenden Sie die Suchoption, um schnell die Datensätze zu finden, an denen Sie interessiert sind.
+Standardmäßig verwendet Kunden-KI Adobe Analytics, Adobe Audience Manager, Erlebnisereignisse im Allgemeinen und Kundenerlebnisereignisdaten, um Tendenzwerte zu berechnen. Bei der Auswahl eines Datensatzes werden nur diejenigen aufgelistet, die mit Kunden-KI kompatibel sind. Um einen Datensatz auszuwählen, klicken Sie auf das Symbol (**+**) neben dem Datensatznamen oder aktivieren Sie das Kontrollkästchen, um mehrere Datensätze gleichzeitig hinzuzufügen. Verwenden Sie die Suchoption, um die Datensätze, die Sie interessieren, schnell zu finden.
 
-![Wählen Sie den Datensatz aus und suchen Sie nach ihm](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
+![Auswählen und Suchen nach Datensatz](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
-Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die Schaltfläche **[!UICONTROL Hinzufügen]** aus, um die Datensätze zum Vorschaufenster für den Datensatz hinzuzufügen.
+Nachdem Sie die gewünschten Datensätze ausgewählt haben, klicken Sie auf die Schaltfläche **[!UICONTROL Hinzufügen]**, um die Datensätze zum Bereich für die Datensatzvorschau hinzuzufügen.
 
-![Datensatz auswählen](../images/user-guide/select-datasets.png)
+![Datensätze auswählen](../images/user-guide/select-datasets.png)
 
-Wenn Sie das Infosymbol ![Infosymbol](/help/images/icons/info.png) neben dem Datensatz auswählen, wird das Popup-Fenster für die Datensatzvorschau geöffnet.
+Wenn Sie das Informationssymbol ![Informationssymbol](/help/images/icons/info.png) neben dem Datensatz auswählen, wird das Popover für die Datensatzvorschau geöffnet.
 
-![Wählen Sie den Datensatz aus und suchen Sie nach ihm](../images/user-guide/dataset-info.png)
+![Auswählen und Suchen nach Datensatz](../images/user-guide/dataset-info.png)
 
-Die Datensatzvorschau enthält Daten wie die letzte Aktualisierungszeit, das Quellschema und eine Vorschau der ersten zehn Spalten.
+Die Datensatzvorschau enthält Daten wie die Zeit der letzten Aktualisierung, das Quellschema und eine Vorschau der ersten zehn Spalten.
 
-Wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Entwürfe zu speichern, während Sie den Workflow fortsetzen. Sie können auch Entwurfsmodellkonfigurationen speichern und mit dem nächsten Schritt im Workflow fortfahren. Verwenden Sie **[!UICONTROL Speichern und fortfahren]** , um Entwürfe während der Modellkonfigurationen zu erstellen und zu speichern. Die Funktion ermöglicht die Erstellung und Speicherung von Entwürfen der Modellkonfiguration und ist insbesondere dann nützlich, wenn Sie im Konfigurations-Workflow viele Felder definieren müssen.
+Wählen Sie **[!UICONTROL Speichern]**, um Ihre Entwürfe zu speichern, während Sie den Workflow durchlaufen. Sie können auch Modellkonfigurationen von Entwürfen speichern und zum nächsten Schritt im Workflow wechseln. Verwenden Sie **[!UICONTROL Speichern und fortfahren]** um Entwürfe während der Modellkonfigurationen zu erstellen und zu speichern. Mit der Funktion können Sie Entwürfe der Modellkonfiguration erstellen und speichern. Dies ist besonders nützlich, wenn Sie viele Felder im Konfigurations-Workflow definieren müssen.
 
-![Der Workflow &quot;Erstellen&quot;auf der Registerkarte &quot;Customer AI von Data Science Services&quot;mit Speichern und Speichern und Fortsetzen wurde hervorgehoben.](../images/user-guide/cai-save-and-exit.png)
+![Der Workflow „Erstellen“ auf der Registerkarte „Kunden-KI von Data Science Services“ mit den hervorgehobenen Optionen „Speichern und speichern und fortfahren“.](../images/user-guide/cai-save-and-exit.png)
 
-### Datensatzvollständigkeit {#dataset-completeness}
+### Datensatz-Vollständigkeit {#dataset-completeness}
 
-In der Datensatzvorschau gibt es einen prozentualen Wert für die Vollständigkeit des Datensatzes. Dieser Wert liefert einen schnellen Überblick darüber, wie viele Spalten in Ihrem Datensatz leer/null sind. Wenn ein Datensatz viele fehlende Werte enthält und diese Werte an anderer Stelle erfasst werden, wird dringend empfohlen, den Datensatz mit den fehlenden Werten einzubeziehen. In diesem Beispiel ist die Personen-ID leer, jedoch wird die Personen-ID in einem separaten Datensatz erfasst, der eingeschlossen werden kann.
+In der Datensatzvorschau gibt es einen Prozentwert für die Vollständigkeit des Datensatzes . Dieser Wert bietet einen schnellen Schnappschuss davon, wie viele Spalten in Ihrem Datensatz leer/null sind. Wenn ein Datensatz viele fehlende Werte enthält und diese Werte an anderer Stelle erfasst werden, wird dringend empfohlen, den Datensatz mit den fehlenden Werten einzubeziehen. In diesem Beispiel ist die Personen-ID leer. Die Personen-ID wird jedoch in einem separaten Datensatz erfasst, der einbezogen werden kann.
 
 >[!NOTE]
 >
->Die Vollständigkeit des Datensatzes wird mithilfe des maximalen Schulungsfensters für Customer AI (ein Jahr) berechnet. Das bedeutet, dass Daten, die älter als ein Jahr sind, bei der Anzeige Ihres Datensatzvollständigkeitswerts nicht berücksichtigt werden.
+>Die Vollständigkeit des Datensatzes wird anhand des maximalen Trainings-Fensters für Kunden-KI (ein Jahr) berechnet. Das bedeutet, dass Daten, die älter als ein Jahr sind, beim Anzeigen Ihres Datensatzvollständigkeitswerts nicht berücksichtigt werden.
 
-![Vollständigkeit des Datensatzes](../images/user-guide/dataset-info-2.png)
+![Datensatz-Vollständigkeit](../images/user-guide/dataset-info-2.png)
 
 ### Identität auswählen {#identity}
 
-Sie können jetzt mehrere Datensätze auf Grundlage der Identitätszuordnung (Feld) miteinander verknüpfen. Sie müssen einen Identitätstyp (auch als &quot;Identitäts-Namespace&quot;bezeichnet) und einen Identitätswert in diesem Namespace auswählen. Wenn Sie innerhalb Ihres Schemas unter demselben Namespace mehr als ein Feld als Identität zugewiesen haben, werden alle zugewiesenen Identitätswerte im Dropdown-Menü &quot;Identität&quot;angezeigt, dem der Namespace vorangestellt wird, z. B. `EMAIL (personalEmail.address)` oder `EMAIL (workEmail.address)`.
+Sie können jetzt mehrere Datensätze anhand der Identitätszuordnung (Feld) miteinander verbinden. Sie müssen einen Identitätstyp (auch als „Identity-Namespace“ bezeichnet) und einen Identitätswert innerhalb dieses Namespace auswählen. Wenn Sie innerhalb Ihres Schemas unter demselben Namespace mehr als ein Feld als Identität zugewiesen haben, werden alle zugewiesenen Identitätswerte in der Dropdown-Liste Identität mit vorangestelltem Namespace angezeigt, z. B. `EMAIL (personalEmail.address)` oder `EMAIL (workEmail.address)`.
 
-[denselben Namespace auswählen](../images/user-guide/cai-identity-map.png)
+[Selben Namespace auswählen](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
->Für jeden ausgewählten Datensatz muss derselbe Identitätstyp (Namespace) verwendet werden. Neben dem Identitätstyp wird in der Identitätsspalte ein grünes Häkchen angezeigt, das angibt, dass Datensätze kompatibel sind. Wenn Sie beispielsweise den Namespace Phone und `mobilePhone.number` als Kennung verwenden, müssen alle Kennungen für die verbleibenden Datensätze den Namespace Phone enthalten und verwenden.
+>Für jeden ausgewählten Datensatz muss derselbe Identitätstyp (Namespace) verwendet werden. Neben dem Identitätstyp wird in der Identitätsspalte ein grünes Häkchen angezeigt, das angibt, dass Datensätze kompatibel sind. Wenn Sie beispielsweise den Namespace Telefon und `mobilePhone.number` als Kennung verwenden, müssen alle Kennungen für die übrigen Datensätze den Namespace Telefon enthalten und verwenden.
 
-Um eine Identität auszuwählen, wählen Sie den unterstrichenen Wert in der Identitätsspalte aus. Das Popover zur Identitätsauswahl wird angezeigt.
+Um eine Identität auszuwählen, wählen Sie den unterstrichenen Wert in der Spalte Identität aus. Das Pop-up Identität auswählen wird angezeigt.
 
 <!-- ![select same namespace](../images/user-guide/identity-type.png) -->
-[denselben Namespace auswählen](../images/user-guide/cai-identity-namespace.png)
+[Selben Namespace auswählen](../images/user-guide/cai-identity-namespace.png)
 
-Wenn innerhalb eines Namespace mehr als eine Identität verfügbar ist, wählen Sie das richtige Identitätsfeld für Ihren Anwendungsfall aus. Beispielsweise sind im E-Mail-Namespace zwei E-Mail-Identitäten verfügbar: eine Arbeit und eine persönliche E-Mail. Je nach Anwendungsfall ist es wahrscheinlicher, dass eine persönliche E-Mail ausgefüllt wird, und nützlicher bei individuellen Prognosen. Das bedeutet, dass `EMAIL (personalEmail.address)` als Identität ausgewählt wird.
+Falls in einem Namespace mehr als eine Identität verfügbar ist, stellen Sie sicher, dass Sie das richtige Identitätsfeld für Ihren Anwendungsfall auswählen. Im E-Mail-Namespace sind beispielsweise zwei E-Mail-Identitäten verfügbar: eine geschäftliche und eine persönliche E-Mail. Je nach Anwendungsfall ist eine persönliche E-Mail mit größerer Wahrscheinlichkeit ausgefüllt und kann für individuelle Prognosen nützlicher sein. Dies bedeutet, dass `EMAIL (personalEmail.address)` als Identität ausgewählt wird.
 
-![Datensatz-Schlüssel nicht ausgewählt](../images/user-guide/select-identity.png)
+![Datensatzschlüssel nicht ausgewählt](../images/user-guide/select-identity.png)
 
 >[!NOTE]
 >
-> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und ihn mithilfe des Schemaeditors [1} einem Identitäts-Namespace zuweisen. ](../../../xdm/schema/composition.md#identity) Weitere Informationen zu Namespaces und Identitäten finden Sie in der Dokumentation zu [Identity Service-Namespaces](../../../identity-service/features/namespaces.md) .
+> Wenn für einen Datensatz kein gültiger Identitätstyp (Namespace) vorhanden ist, müssen Sie eine primäre Identität festlegen und sie mithilfe des [-Editors einem Identity-Namespace ](../../../xdm/schema/composition.md#identity). Weitere Informationen zu Namespaces und Identitäten finden Sie in der Dokumentation [Identity Service-Namespaces](../../../identity-service/features/namespaces.md) .
 
 ## Ziel definieren {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
-Der Schritt **[!UICONTROL Ziel definieren]** wird angezeigt und bietet eine interaktive Umgebung, in der Sie ein Prognoseziel visuell definieren können. Ein Ziel besteht aus einem oder mehreren Ereignissen, bei denen das Auftreten eines jeden Ereignisses auf der Bedingung basiert, die es enthält. Ziel einer Customer AI-Instanz ist es, die Wahrscheinlichkeit zu bestimmen, mit der ihr Ziel innerhalb eines bestimmten Zeitraums erreicht wird.
+Der **[!UICONTROL Ziel definieren]** wird angezeigt und bietet eine interaktive Umgebung, in der Sie ein Prognoseziel visuell definieren können. Ein Ziel besteht aus einem oder mehreren Ereignissen, bei denen das Auftreten eines jeden Ereignisses auf der Bedingung basiert, die es enthält. Ziel einer Customer AI-Instanz ist es, die Wahrscheinlichkeit zu bestimmen, mit der ihr Ziel innerhalb eines bestimmten Zeitraums erreicht wird.
 
-Um ein Ziel zu erstellen, wählen Sie **[!UICONTROL Feldnamen eingeben]** und danach ein Feld aus der Dropdown-Liste. Wählen Sie die zweite Eingabe, eine Klausel für die Ereignisbedingung, und geben Sie dann optional den Zielwert an, um das Ereignis abzuschließen. Zusätzliche Ereignisse können konfiguriert werden, indem Sie **[!UICONTROL Ereignis hinzufügen]** auswählen. Schließen Sie schließlich das Ziel ab, indem Sie einen Prognosezeitrahmen in Anzahl von Tagen anwenden, und wählen Sie dann **[!UICONTROL Weiter]** aus.
+Um ein Ziel zu erstellen, wählen **[!UICONTROL Feldnamen eingeben]** und dann ein Feld aus der Dropdown-Liste aus. Wählen Sie die zweite Eingabe aus, eine -Klausel für die Bedingung des Ereignisses, und geben Sie dann optional den Zielwert an, um das Ereignis abzuschließen. Weitere Ereignisse können durch Auswahl von „Ereignis hinzufügen **[!UICONTROL konfiguriert]**. Schließen Sie abschließend das Ziel ab, indem Sie einen Prognosezeitrahmen in der Anzahl der Tage anwenden, und wählen Sie dann **[!UICONTROL Weiter]** aus.
 
 <!-- ![](../images/user-guide/define-a-goal.png) -->
 ![](../images/user-guide/cai-define-a-goal.png)
 
-### Erfolgt und tritt nicht auf
+### Passiert und findet nicht statt
 
-Beim Definieren Ihres Ziels haben Sie die Möglichkeit, **[!UICONTROL Wird ausgeführt]** oder **[!UICONTROL Wird nicht ausgeführt]** auszuwählen. Wenn Sie **[!UICONTROL Vorkommen]** auswählen, müssen die von Ihnen definierten Ereignisbedingungen erfüllt sein, damit die Ereignisdaten eines Kunden in die Insight-Benutzeroberfläche aufgenommen werden.
+Bei der Definition Ihres Ziels haben Sie die Möglichkeit, **[!UICONTROL Wird auftreten]** oder **[!UICONTROL Wird nicht auftreten]** auszuwählen. Wenn Sie **[!UICONTROL Wird auftreten]** auswählen, müssen die von Ihnen definierten Ereignisbedingungen erfüllt sein, damit die Ereignisdaten eines Kunden in die Insights-Benutzeroberfläche aufgenommen werden.
 
-Wenn Sie beispielsweise eine App einrichten möchten, um vorherzusagen, ob ein Kunde einen Kauf tätigt, können Sie **[!UICONTROL Vorkommen]** gefolgt von **[!UICONTROL Alle]** auswählen und dann **commerce.purchase.id** (oder ein ähnliches Feld) und **[!UICONTROL Vorhanden]** als Operator eingeben.
+Wenn Sie beispielsweise eine App einrichten möchten, um vorherzusagen, ob eine Kundin oder ein Kunde einen Kauf tätigt, können Sie **[!UICONTROL Wird eintreten]** gefolgt von **[!UICONTROL Alle von]** auswählen und dann **commerce.purchases.id** (oder ein ähnliches Feld) und **[!UICONTROL exists]** als Operator eingeben.
 
 <!-- ![will occur](../images/user-guide/occur.png) -->
 ![wird auftreten](../images/user-guide/cai-will-occur.png)
 
-Es kann jedoch vorkommen, dass Sie vorhersagen möchten, ob ein Ereignis innerhalb eines bestimmten Zeitraums nicht eintritt. Um ein Ziel mit dieser Option zu konfigurieren, wählen Sie **[!UICONTROL Wird nicht ausgeführt]** aus dem Dropdown-Menü auf oberster Ebene aus.
+Es kann jedoch Fälle geben, in denen Sie vorhersagen möchten, ob ein Ereignis in einem bestimmten Zeitraum nicht eintreten wird. Um ein Ziel mit dieser Option zu konfigurieren, wählen Sie **[!UICONTROL Wird nicht auftreten]** aus der Dropdown-Liste der obersten Ebene aus.
 
-Wenn Sie beispielsweise vorhersagen möchten, welche Kunden weniger engagiert sind und Ihre Kontoanmeldeseite im nächsten Monat nicht besuchen. Wählen Sie **[!UICONTROL Wird nicht ausgeführt]** gefolgt von **[!UICONTROL Alle von]** und geben Sie dann **web.webInteraction.URL** (oder ein ähnliches Feld) und **[!UICONTROL entspricht]** als Operator mit **account-login** als Wert ein.
+Wenn Sie beispielsweise vorhersagen möchten, welche Kundinnen und Kunden weniger interagieren und Ihre Konto-Anmeldeseite im nächsten Monat nicht besuchen werden, Wählen Sie **[!UICONTROL Wird nicht auftreten]** gefolgt von **[!UICONTROL Alle von]** und geben Sie dann **web.webInteraction.URL** (oder ein ähnliches Feld) und **[!UICONTROL gleich]** als Operator mit **account-login** als Wert ein.
 
-![wird nicht auftreten](../images/user-guide/not-occur.png)
+![Passiert nicht](../images/user-guide/not-occur.png)
 
-### Alle und beliebige von
+### Alle und alle von
 
-In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen können Sie das Auftreten eines Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen haben wird, wählen Sie die Option **[!UICONTROL Alle von]** aus der Dropdown-Liste der zweiten Ebene auf der Seite **[!UICONTROL Ziel definieren]** aus.
+In einigen Fällen möchten Sie möglicherweise vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen möchten Sie das Auftreten eines beliebigen Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob eine Kundin oder ein Kunde über eine Kombination von Ereignissen verfügt, wählen Sie die Option **[!UICONTROL Alle von]** aus der Dropdown-Liste der zweiten Ebene auf der Seite **[!UICONTROL Ziel definieren]** aus.
 
-Sie können beispielsweise vorhersagen, ob ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel wird durch zwei Bedingungen definiert: einen `commerce.order.purchaseID` **exists** und den `productListItems.SKU` **equals** bestimmten Wert.
+Beispielsweise können Sie vorhersagen, ob eine Kundin oder ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel wird durch zwei Bedingungen definiert: einen `commerce.order.purchaseID` **vorhanden** und den `productListItems.SKU` **gleich** bestimmten Wert.
 
-![Alles Beispiel](../images/user-guide/all-of.png)
+![Beispiel](../images/user-guide/all-of.png)
 
-Um vorherzusagen, ob ein Kunde ein Ereignis aus einem bestimmten Satz hat, können Sie die Option **[!UICONTROL Beliebig von]** verwenden.
+Um vorherzusagen, ob ein Kunde ein Ereignis aus einem bestimmten Satz haben wird, können Sie die Option **[!UICONTROL Beliebig von]** verwenden.
 
-Sie können beispielsweise vorhersagen, ob ein Kunde eine bestimmte URL oder eine Webseite mit einem bestimmten Namen besucht. Dieses Prognoseziel wird durch zwei Bedingungen definiert: `web.webPageDetails.URL` **beginnt mit** einem bestimmten Wert und `web.webPageDetails.name` **beginnt mit** einem bestimmten Wert.
+Beispielsweise können Sie vorhersagen, ob eine Kundin oder ein Kunde eine bestimmte URL oder eine Webseite mit einem bestimmten Namen besucht. Dieses Prognoseziel wird durch zwei Bedingungen definiert: `web.webPageDetails.URL` **beginnt mit** einem bestimmten Wert und `web.webPageDetails.name` **beginnt mit** einem bestimmten Wert.
 
 ![Beliebiges Beispiel](../images/user-guide/any-of.png)
 
-### Förderfähige Population *(optional)*
+### Geeignete Population *(optional)*
 
 Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es wurde eine qualifizierte Zielgruppe angegeben. Sie können eine qualifizierte Zielgruppe angeben, indem Sie Bedingungen festlegen, um Profile auf Grundlage von Ereignissen ein- oder auszuschließen.
 
-![berücksichtigungsfähige Population](../images/user-guide/eligible-population.png)
+![Geeignete Population](../images/user-guide/eligible-population.png)
 
-### Benutzerdefinierte Ereignisse (*optional*) {#custom-events}
+### Benutzerspezifische Ereignisse (*optional*) {#custom-events}
 
-Wenn Sie zusätzlich zu den [Standardereignisfeldern](../data-requirements.md#standard-events) zusätzliche Informationen haben, die von Customer AI zum Generieren von Tendenzwerten verwendet werden, wird eine Option für benutzerdefinierte Ereignisse bereitgestellt. Mit dieser Option können Sie zusätzliche Ereignisse hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und zu genaueren Ergebnissen beitragen kann. Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen.
+Wenn Sie zusätzlich zu den [Standardereignisfeldern“, die von Kunden-KI ](../data-requirements.md#standard-events) Generieren von Tendenz-Scores verwendet werden, über zusätzliche Informationen verfügen, wird eine Option für benutzerdefinierte Ereignisse bereitgestellt. Mit dieser Option können Sie zusätzliche Ereignisse hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und zu genaueren Ergebnissen führen kann. Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen.
 
 >[!NOTE]
 >
-> Eine ausführliche Erklärung dazu, wie sich benutzerdefinierte Ereignisse auf die Ergebnisse der Customer AI-Bewertung auswirken, finden Sie im Abschnitt [Beispiel eines benutzerdefinierten Ereignisses](#custom-event) .
+> Eine ausführliche Erläuterung der Auswirkungen benutzerdefinierter Ereignisse auf die Ergebnisse der Kunden-KI-Bewertung finden Sie [ Abschnitt „Beispiel für benutzerdefiniertes ](#custom-event)&quot;.
 
 ![Ereignisfunktion](../images/user-guide/event-feature.png)
 
-Um ein benutzerdefiniertes Ereignis hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniertes Ereignis hinzufügen]** aus. Geben Sie anschließend einen benutzerdefinierten Ereignisnamen ein und ordnen Sie ihn dem Ereignisfeld in Ihrem Schema zu. Benutzerdefinierte Ereignisnamen werden anstelle des Feldwerts angezeigt, wenn Einflussfaktoren und andere Einblicke betrachtet werden. Das bedeutet, dass der benutzerdefinierte Ereignisname anstelle der ID/des Werts des Ereignisses verwendet wird. Weitere Informationen dazu, wie benutzerspezifische Ereignisse angezeigt werden, finden Sie im Abschnitt [Beispiel für benutzerspezifische Ereignisse](#custom-event). Diese zusätzlichen benutzerspezifischen Ereignisse werden von Customer AI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
+Um ein benutzerdefiniertes Ereignis hinzuzufügen, wählen Sie **[!UICONTROL Benutzerdefiniertes Ereignis hinzufügen]** aus. Geben Sie als Nächstes einen benutzerdefinierten Ereignisnamen ein und ordnen Sie ihn dann dem Ereignisfeld in Ihrem Schema zu. Bei der Betrachtung von Einflussfaktoren und anderen Einblicken werden benutzerdefinierte Ereignisnamen anstelle der Feldwerte angezeigt. Das bedeutet, dass der benutzerdefinierte Ereignisname anstelle der ID/des Werts des Ereignisses verwendet wird. Weitere Informationen zur Anzeige benutzerdefinierter Ereignisse finden Sie [ Abschnitt „Beispiel für benutzerdefiniertes Ereignis](#custom-event). Diese zusätzlichen benutzerspezifischen Ereignisse werden von Kunden-KI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
 
-![Feld für benutzerspezifisches Ereignis](../images/user-guide/custom-event.png)
+![Feld für benutzerdefiniertes Ereignis](../images/user-guide/custom-event.png)
 
-Wählen Sie anschließend den zu verwendenden Benutzer aus der Dropdown-Liste der verfügbaren Benutzer aus. Es werden nur Benutzer aufgelistet, die mit dem Ereignis kompatibel sind.
+Wählen Sie anschließend den gewünschten Operator aus der Dropdown-Liste Verfügbare Operatoren aus. Es werden nur mit dem Ereignis kompatible Operatoren aufgelistet.
 
-![Benutzerspezifischer Ereignisoperator](../images/user-guide/custom-operator.png)
+![Benutzer benutzerdefinierter Ereignisse](../images/user-guide/custom-operator.png)
 
-Geben Sie abschließend die Feldwerte an, wenn der ausgewählte Benutzer einen Wert benötigt. In diesem Beispiel müssen wir nur sehen, ob eine Hotel- oder Restaurantreservierung vorhanden ist. Wenn wir jedoch genauer sein wollten, könnten wir den Operator gleich verwenden und einen genauen Wert in die Werteaufforderung eingeben.
+Geben Sie abschließend die Feldwerte ein, sofern der ausgewählte Operator einen benötigt. In diesem Beispiel müssen wir nur sehen, ob eine Hotel- oder Restaurantreservierung vorhanden ist. Wenn wir jedoch genauer sein wollten, konnten wir den Operator Gleich verwenden und einen exakten Wert in die Eingabeaufforderung eingeben.
 
-![Benutzerdefinierter Ereignisfeldwert](../images/user-guide/custom-value.png)
+![Feldwert für benutzerdefiniertes Ereignis](../images/user-guide/custom-value.png)
 
-Wählen Sie nach Abschluss **[!UICONTROL Weiter]** oben rechts aus, um fortzufahren.
+Klicken Sie nach Abschluss **[!UICONTROL oben rechts]** „Weiter“, um fortzufahren.
 
 ### Benutzerdefinierte Profilattribute (*optional*)
 
-Zusätzlich zu den von Customer AI zum Generieren von Tendenzwerten verwendeten [Standardereignisfeldern](../data-requirements.md#standard-events) können Sie in Ihren Daten wichtige Profil-Datensatzfelder (mit Zeitstempeln) definieren. Mit dieser Option können Sie zusätzliche Profilattribute hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. Durch das Hinzufügen benutzerdefinierter Profilattribute kann Customer AI außerdem besser zeigen, wie bestimmte Profile zu einem Tendenzbehälter gelangten.
+Zusätzlich zu den [Standardereignisfeldern“, die von Kunden-KI zum Generieren von Tendenz-Scores verwendet werden, können Sie wichtige Profildatensatzfelder (mit Zeitstempeln](../data-requirements.md#standard-events) in Ihren Daten definieren. Mit dieser Option können Sie zusätzliche, von Ihnen als einflussreich erachtete Profilattribute hinzufügen, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. Darüber hinaus können Kunden-KI durch das Hinzufügen benutzerdefinierter Profilattribute besser darstellen, wie bestimmte Profile in einem Neigungs-Bucket endeten.
 
 >[!NOTE]
 >
->Das Hinzufügen eines benutzerdefinierten Profilattributs folgt demselben Workflow wie das Hinzufügen eines benutzerdefinierten Ereignisses. Ähnlich wie bei benutzerspezifischen Ereignissen wirken sich benutzerdefinierte Profilattribute auf die Modellbewertung auf die gleiche Weise aus. Eine ausführliche Erläuterung finden Sie im Abschnitt [Beispiel für ein benutzerspezifisches Ereignis](#custom-event) .
+>Das Hinzufügen eines benutzerdefinierten Profilattributs folgt demselben Workflow wie das Hinzufügen eines benutzerdefinierten Ereignisses. Ähnlich wie benutzerdefinierte Ereignisse wirken sich benutzerdefinierte Profilattribute auf die gleiche Weise auf die Bewertung Ihres Modells aus. Eine ausführliche Erläuterung finden Sie im Abschnitt [Beispiel für ein benutzerdefiniertes ](#custom-event)).
 
-![Fügen Sie ein benutzerdefiniertes Profilattribut hinzu](../images/user-guide/profile-attributes.png)
+![Benutzerdefiniertes Profilattribut hinzufügen](../images/user-guide/profile-attributes.png)
 
-#### Profilattribute aus dem Profil-Snapshot-Export auswählen
+#### Wählen Sie Profilattribute aus dem Export von Profilschnappschüssen aus
 
-Sie können auch Profilattribute aus dem täglichen Profil-Snapshot-Export einbeziehen. Diese Attribute werden mit dem Profil-Snapshot-Export synchronisiert und zeigen den zuletzt verfügbaren Wert an. Sie werden automatisch angezeigt und erfordern nicht, dass im Konfigurationsschritt ein Datensatz ausgewählt wird.
+Sie können auch wählen, Profilattribute aus dem täglichen Profil-Schnappschuss-Export einzubeziehen. Diese Attribute werden mit dem Profil-Schnappschuss-Export synchronisiert und zeigen den zuletzt verfügbaren Wert an. Sie werden automatisch angezeigt und erfordern nicht, dass im Konfigurationsschritt ein Datensatz ausgewählt wird.
 
 >[!WARNING]
 >
-> Wählen Sie kein Profilattribut aus, das aufgrund des Prognoseziels aktualisiert wurde oder in hohem Maße mit dem Prognoseziel korreliert ist. Dies führt zu Datenlecks und Überanpassung des Modells. Beispiel: `total_purchases_in_the_last_3_months` ist ein Attribut, das die Kaufkonversion vorhersagt.
+> Wählen Sie kein Profilattribut aus, das infolge des Prognoseziels aktualisiert wurde oder stark mit dem Prognoseziel korreliert. Dies führt zu Datenlecks und Überanpassung des Modells. Beispielsweise ist `total_purchases_in_the_last_3_months` ein Attribut, das eine Kaufkonvertierung vorhersagt.
 
-### Beispiel für benutzerspezifisches Ereignis hinzufügen {#custom-event}
+### Beispiel für ein benutzerdefiniertes Ereignis hinzufügen {#custom-event}
 
-Im folgenden Beispiel werden ein benutzerdefiniertes Ereignis und ein Profilattribut zu einer Customer AI-Instanz hinzugefügt. Ziel der Customer AI-Instanz ist es, die Wahrscheinlichkeit vorherzusagen, mit der ein Kunde in den nächsten 60 Tagen ein weiteres Luma-Produkt kaufen wird. Normalerweise werden Produktdaten mit einer Produkt-SKU verknüpft. In diesem Fall ist die SKU `prd1013`. Nachdem das Customer AI-Modell trainiert/bewertet wurde, kann diese SKU mit einem Ereignis verknüpft und als Einflussfaktor für einen Tendenzbehälter angezeigt werden.
+Im folgenden Beispiel werden ein benutzerdefiniertes Ereignis und Profilattribut zu einer Kunden-KI-Instanz hinzugefügt. Das Ziel der Customer AI-Instanz ist es, die Wahrscheinlichkeit vorherzusagen, mit der ein Kunde in den nächsten 60 Tagen ein anderes Luma-Produkt kaufen wird. Normalerweise sind Produktdaten mit einer Produkt-SKU verknüpft. In diesem Fall ist die SKU `prd1013`. Nachdem das Kunden-KI-Modell trainiert/bewertet wurde, kann diese SKU mit einem Ereignis verknüpft und als Einflussfaktor für einen Neigungs-Bucket angezeigt werden.
 
-Customer AI wendet automatisch die Generierung von Funktionen wie &quot;Tage seit&quot;oder &quot;Anzahl der&quot;gegen benutzerspezifische Ereignisse wie **Kauf ansehen** an. Wenn dieses Ereignis als einflussreicher Faktor für die hohe, mittlere oder niedrige Neigung von Kunden betrachtet wurde, zeigt Customer AI es als `Days since prd1013 purchase` oder `Count of prd1013 purchase` an. Wenn Sie dies als benutzerspezifisches Ereignis erstellen, können Sie dem Ereignis einen neuen Namen geben, um die Ergebnisse viel leichter zu lesen. Beispiel: `Days since Watch purchase`. Darüber hinaus verwendet Customer AI dieses Ereignis für Training und Scoring, selbst wenn es sich bei dem Ereignis nicht um ein Standardereignis handelt. Dies bedeutet, dass Sie mehrere Ereignisse hinzufügen können, die Ihrer Meinung nach Einfluss haben könnten, und Ihr Modell weiter anpassen können, indem Sie Daten wie Reservierungen, Besucherprotokolle und andere Ereignisse einschließen. Das Hinzufügen dieser Datenpunkte erhöht die Genauigkeit und Genauigkeit Ihres Customer AI-Modells weiter.
+Kunden-KI wendet die Funktionsgenerierung wie „Tage seit“ oder „Anzahl der Tage“ automatisch auf benutzerdefinierte Ereignisse wie **Kauf ansehen** an. Wenn dieses Ereignis als einflussreicher Faktor dafür angesehen wurde, warum Kunden eine hohe, mittlere oder niedrige Neigung haben, zeigt Kunden-KI es als `Days since prd1013 purchase` oder `Count of prd1013 purchase` an. Durch Erstellen dieses Ereignisses als benutzerdefiniertes Ereignis können Sie dem Ereignis einen neuen Namen geben, der die Lesbarkeit der Ergebnisse erheblich erleichtert. Beispiel: `Days since Watch purchase`. Darüber hinaus nutzt Kunden-KI dieses Ereignis für die Schulung und Bewertung, auch wenn das Ereignis kein Standardereignis ist. Dies bedeutet, dass Sie mehrere Ereignisse hinzufügen können, von denen Sie glauben, dass sie Einfluss auf Ihr Modell haben, und Ihr Modell weiter anpassen können, indem Sie Daten wie Reservierungen, Besucherprotokolle und andere Ereignisse einbeziehen. Durch das Hinzufügen dieser Datenpunkte wird die Genauigkeit und Genauigkeit Ihres Kunden-KI-Modells weiter erhöht.
 
-![Beispiel eines benutzerdefinierten Ereignisses](../images/user-guide/custom-event-name.png)
+![Beispiel für ein benutzerdefiniertes Ereignis](../images/user-guide/custom-event-name.png)
 
 ## Optionen festlegen
 
-Im Schritt &quot;Optionen festlegen&quot;können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignisse definieren und **[!UICONTROL Profil]** ein-/ausschalten.
+Mit dem Schritt „Optionen festlegen“ können Sie einen Zeitplan konfigurieren, um Prognoseausführungen zu automatisieren, Prognoseausschlüsse zu definieren, um bestimmte Ereignisse zu filtern, und **[!UICONTROL Profil]** ein-/auszuschalten.
 
 ### Zeitplan konfigurieren *(optional)* {#configure-a-schedule}
 
@@ -223,37 +223,37 @@ Um einen Scoring-Zeitplan einzurichten, konfigurieren Sie zunächst die **[!UICO
 
 ### Prognoseausschlüsse *(optional)*
 
-Wenn Ihr Datensatz Spalten enthielt, die als Testdaten hinzugefügt wurden, können Sie diese Spalte oder dieses Ereignis zu einer Ausschlussliste hinzufügen, indem Sie **[!UICONTROL Ausschluss hinzufügen]** auswählen und anschließend das Feld eingeben, das Sie ausschließen möchten. Dadurch wird verhindert, dass Ereignisse, die bestimmte Bedingungen erfüllen, beim Generieren von Werten ausgewertet werden. Diese Funktion kann verwendet werden, um irrelevante Dateneingaben oder Promotions herauszufiltern.
+Wenn Ihr Datensatz Spalten enthält, die als Testdaten hinzugefügt wurden, können Sie diese Spalte oder dieses Ereignis zu einer Ausschlussliste hinzufügen, indem Sie **[!UICONTROL Ausschluss hinzufügen]** auswählen und dann das Feld eingeben, das Sie ausschließen möchten. Dadurch wird verhindert, dass Ereignisse, die bestimmte Bedingungen erfüllen, beim Generieren von Scores ausgewertet werden. Diese Funktion kann verwendet werden, um irrelevante Dateneingaben oder Promotions herauszufiltern.
 
-Um ein Ereignis auszuschließen, wählen Sie **[!UICONTROL Ausschluss hinzufügen]** und definieren Sie das Ereignis. Um einen Ausschluss zu entfernen, wählen Sie die Auslassungszeichen (**[!UICONTROL ...]**) oben rechts im Ereigniscontainer aus und klicken Sie dann auf **[!UICONTROL Container entfernen]**.
+Um ein Ereignis auszuschließen, wählen Sie **[!UICONTROL Ausschluss hinzufügen]** aus und definieren Sie das Ereignis. Um einen Ausschluss zu entfernen, klicken Sie auf die Auslassungszeichen (**[!UICONTROL …]**) oben rechts im Ereignis-Container und wählen Sie dann **[!UICONTROL Container entfernen]**.
 
 ![](../images/user-guide/exclusion.png)
 
 ### Profil-Umschalter
 
-Mit dem Profil -Umschalter kann Customer AI die Scoring-Ergebnisse in das Echtzeit-Kundenprofil exportieren. Durch Deaktivieren dieses Umschalters wird verhindert, dass die Ergebnisse der Modellbewertung zum Profil hinzugefügt werden. Die Ergebnisse der Customer AI-Bewertung sind weiterhin verfügbar, wenn diese Funktion deaktiviert ist.
+Mit dem Umschalter Profil kann Kunden-KI die Bewertungsergebnisse in das Echtzeit-Kundenprofil exportieren. Wenn Sie diesen Umschalter deaktivieren, werden die Scoring-Ergebnisse der Modelle nicht zum Profil hinzugefügt. Kunden-KI-Bewertungsergebnisse sind weiterhin verfügbar, wobei diese Funktion deaktiviert ist.
 
-Wenn Sie Customer AI zum ersten Mal verwenden, können Sie diese Funktion deaktivieren, bis Sie mit den Modellausgabeergebnissen zufrieden sind. Dadurch wird verhindert, dass Sie mehrere Scoring-Datensätze in Ihre Kundenprofile hochladen und gleichzeitig Ihr Modell optimieren. Nachdem Sie die Kalibrierung des Modells abgeschlossen haben, können Sie das Modell mithilfe der [Klonoption](#set-up-your-instance) von der Seite **Dienstinstanzen** klonen. Auf diese Weise können Sie eine Kopie Ihres Modells erstellen und das Profil aktivieren.
+Bei der ersten Verwendung von Kunden-KI können Sie diese Funktion deaktivieren, bis Sie mit den Modellausgabeergebnissen zufrieden sind. Dadurch wird verhindert, dass beim Optimieren Ihres Modells mehrere Scoring-Datensätze in Ihre Kundenprofile hochgeladen werden. Nachdem Sie Ihr Modell fertig kalibriert haben, können Sie das Modell mithilfe der Option [Klonen](#set-up-your-instance) auf der Seite **Service-Instanzen** klonen. Auf diese Weise können Sie eine Kopie Ihres Modells erstellen und das Profil aktivieren.
 
 ![Profil-Umschalter](../images/user-guide/advanced-workflow-save.png)
 
-Nachdem Sie Ihren Scoring-Zeitplan, die Prognoseausschlüsse und den Profilwechsel, an dem Sie möchten, eingerichtet haben, wählen Sie oben rechts **[!UICONTROL Beenden]** aus, um Ihre Customer AI-Instanz zu erstellen.
+Nachdem Sie Ihren Scoring-Zeitplan, Prognoseausschlüsse und den Profilumschalter, in dem Sie ihn haben möchten, festgelegt haben, wählen Sie oben rechts **[!UICONTROL Beenden]** aus, um Ihre Kunden-KI-Instanz zu erstellen.
 
 Wenn die Instanz erfolgreich erstellt wurde, wird sofort eine Prognose ausgeführt; nachfolgende Ausführungen erfolgen dann gemäß Ihrem definierten Zeitplan.
 
 >[!NOTE]
 >
->Je nach Größe der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
+>Je nach Größe der Eingabedaten kann es bis zu 24 Stunden dauern, bis die Prognoseausführungen abgeschlossen sind.
 
-In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine Prognose ausgeführt. Nach erfolgreichem Abschluss der Ausführung werden Profile mit Bewertungsdaten automatisch mit prognostizierten Werten ausgefüllt, wenn der Profil-Umschalter aktiviert ist. Warten Sie bis zu 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
+In diesem Abschnitt haben Sie eine Instanz der Kunden-KI konfiguriert und einen Prognosedurchgang ausgeführt. Nach erfolgreichem Abschluss des Durchgangs werden bewertete Insights automatisch mit prognostizierten Werten ausgefüllt, wenn der Umschalter Profil aktiviert ist. Warten Sie bis zu 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie erfolgreich eine Instanz von Customer AI konfiguriert und Tendenzwerte generiert. Sie können jetzt den Segment Builder verwenden, um [Kundensegmente mit prognostizierten Werten](./create-segment.md) oder [ zu erstellen und Einblicke mit Customer AI](./discover-insights.md) zu erhalten.
+In diesem Tutorial haben Sie erfolgreich eine Instanz von Kunden-KI konfiguriert und Tendenz-Scores generiert. Sie können jetzt Segment Builder verwenden, um [Kundensegmente mit prognostizierten Werten zu erstellen](./create-segment.md) oder [Einblicke mit Kunden-KI zu ](./discover-insights.md).
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video unterstützt Sie beim Verständnis des Konfigurations-Workflows für Customer AI. Darüber hinaus werden Best Practices und Anwendungsfallbeispiele bereitgestellt.
+Das folgende Video soll Ihnen dabei helfen, den Konfigurations-Workflow für Kunden-KI besser zu verstehen. Darüber hinaus werden Best Practices und Anwendungsbeispiele bereitgestellt.
 
 >[!IMPORTANT]
 >

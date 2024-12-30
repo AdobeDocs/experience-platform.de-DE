@@ -77,7 +77,7 @@ Adobe Experience Platform bietet mehrere [!DNL dashboards], in denen basierend a
 
 ### Profil-Dashboards
 
-Das Dashboard &quot;Profile&quot;zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher unter Experience Platform hat.
+Das Dashboard „Profile“ zeigt Informationen über die Attributdaten (Datensatzdaten) an, die sich in Ihrem Unternehmen im Profilspeicher in Experience Platform befinden.
 
 **Aktualisierte Funktionen**
 

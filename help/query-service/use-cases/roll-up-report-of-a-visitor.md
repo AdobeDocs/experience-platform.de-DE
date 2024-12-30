@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
-title: Anzeigen eines Rollup-Berichts für einen bestimmten Besucher
-description: Das folgende Dokument enthält Beispiele für Abfragen, die Erlebnisereignisse in Adobe Experience Platform Query Service beinhalten.
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;experienceEvent-Abfragen;experienceEvent-Abfrage;Erlebnisereignisabfrage;
+title: Anzeigen eines Datenaggregationsberichts für eine bestimmte Besucherin oder einen bestimmten Besucher
+description: Das folgende Dokument enthält Beispiele für Abfragen zu Erlebnisereignissen in Adobe Experience Platform Query Service.
 exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -10,15 +10,15 @@ ht-degree: 1%
 
 ---
 
-# Anzeigen eines Rollup-Berichts für einen bestimmten Besucher
+# Anzeigen eines Datenaggregationsberichts für eine bestimmte Besucherin oder einen bestimmten Besucher
 
-Dieses Dokument bietet ein SQL-Beispiel zum Aggregieren von Daten aus mehreren Analytics-Eigenschaften für einen bestimmten Benutzer und zum Anzeigen dieser Daten in einem Bericht. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Im Abschnitt [Nächste Schritte](#next-steps) finden Sie weitere Anwendungsfälle, bei denen [!DNL Experience Events] zum Generieren von Besucherberichten erforderlich ist.
+Dieses Dokument enthält ein SQL-Beispiel zum Aggregieren von Daten aus mehreren Analytics-Eigenschaften für einen bestimmten Benutzer und zum Anzeigen dieser Daten in einem Bericht. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die ExperienceEvent-Klasse des Experience-Datenmodells (XDM) dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Service interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Weitere Anwendungsfälle, bei ](#next-steps) Besucherberichte erstellt werden [!DNL Experience Events], finden Sie [ Abschnitt „Nächste Schritte“.
 
-Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch Kombination von Query Service mit [!DNL Experience Events] können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit [!DNL Experience Events].
+Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch die Kombination von Abfrage-Service und [!DNL Experience Events] können Sie Verhaltenstrends bei Ihren Benutzenden effektiv verfolgen. Im folgenden Dokument finden Sie Beispiele für Abfragen mit [!DNL Experience Events].
 
 ## Ziel
 
-Das folgende SQL-Beispiel zeigt, wie ein aggregierter Bericht mit verschiedenen Analysewerten für einen bestimmten Benutzer angezeigt wird.
+Das folgende SQL-Beispiel zeigt, wie ein Aggregatbericht mit verschiedenen Analysewerten für einen bestimmten Benutzer angezeigt wird.
 
 ```sql
 SELECT 
@@ -49,10 +49,10 @@ Die Abfrageergebnisse werden in der folgenden Tabelle angezeigt.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie Query Service mit [!DNL Experience Events] verwenden, um einen aggregierten Bericht mit Analysewerten für einen bestimmten Benutzer anzuzeigen.
+Durch dieses Dokument erhalten Sie ein besseres Verständnis dafür, wie Sie den Abfrage-Service mit [!DNL Experience Events] verwenden, um einen aggregierten Bericht mit Analysewerten für einen bestimmten Benutzer anzuzeigen.
 
 In den folgenden Anwendungsfällen erfahren Sie mehr über andere besucherbasierte Anwendungsfälle:
 
-- [Rufen Sie eine Liste von Besuchern ab, die nach der Anzahl der Seitenansichten organisiert sind.](./visitors-by-number-of-page-views.md)
+- [Abrufen einer Liste von Besuchern, sortiert nach der Anzahl der Seitenansichten.](./visitors-by-number-of-page-views.md)
 - [Auflisten der vorherigen Sitzungen eines Besuchers.](./list-visitor-sessions.md)
-- [Erstellen Sie einen Trendbericht mit Ereignissen nach Tag.](./trended-report-of-events.md)
+- [Erstellen Sie einen Trend-Bericht mit Ereignissen nach Tag.](./trended-report-of-events.md)

@@ -29,9 +29,9 @@ Aktualisierungen vorhandener Funktionen:
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Die auf Adobe Experience Platform aufbauende Real-time Customer Data Platform (Real-Time CDP) hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. Real-Time CDP kombiniert mehrere Unternehmensdatenquellen, um in Echtzeit einheitliche Profile zu erstellen, die über alle Kanäle und Geräte hinweg personalisierte Kundenerlebnisse bieten.
+Die auf Adobe Experience Platform aufbauende Real-time Customer Data Platform (Real-Time CDP) hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile mit intelligenter Entscheidungsfindung auf der gesamten Kunden-Journey zu aktivieren. Real-Time CDP kombiniert mehrere Unternehmensdatenquellen, um in Echtzeit einheitliche Profile zu erstellen, mit denen eine personalisierte Eins-zu-eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitgestellt werden kann.
 
-[!DNL Real-Time Customer Data Platform] enthält Tools für Data Governance, Identitätsverwaltung, erweiterte Segmentierung und Datenwissenschaft, damit Sie Profile erstellen und Zielgruppen definieren sowie umfassende Einblicke gewinnen und gleichzeitig strikte Data Governance-Richtlinien durchsetzen können.
+[!DNL Real-Time Customer Data Platform] umfasst Tools für Data Governance, Identity Management, erweiterte Segmentierung und Datenwissenschaft, damit Sie Profile erstellen und Zielgruppen definieren, umfassende Einblicke gewinnen und gleichzeitig strikte Data-Governance-Richtlinien durchsetzen können.
 
 Adobe bietet Verbindungen zu einem großen Partnernetzwerk sowie native Integrationen mit Adobe Experience Cloud, damit Sie Zielgruppen nahtlos aktivieren und über alle Kanäle hinweg für herausragende Kundenerlebnisse sorgen können – von der Personalisierung vor Ort oder in Apps über E-Mail bis hin zu Paid Media, Callcentern, vernetzten Geräten und mehr.
 
@@ -42,29 +42,29 @@ Mit Real-Time CDP können Sie:
 * Erstellen Sie mit KI und maschinellem Lernen auf Basis von Adobe Sensei – entwickelt für Marketer – praktische Einblicke und skalieren Sie Zielgruppen.
 * Schaffen Sie in Echtzeit personalisierte Erlebnisse über alle Kanäle und Ziele hinweg.
 
-Weitere Informationen finden Sie in der [Real-time Customer Data Platform-Dokumentation](../../rtcdp/overview.md).
+Weitere Informationen finden Sie in der Dokumentation zu [Real-time Customer Data Platform](../../rtcdp/overview.md).
 
 **Wichtigste Funktionen**
 
 | Funktion | Beschreibung |
 |---|---|
-| Ziele | Vordefinierte Integrationen mit Zielplattformen, die von Adobe [!DNL Real-Time Customer Data Platform] unterstützt werden und die Daten nahtlos für diese Partner aktivieren. Weitere Informationen finden Sie unten unter [Ziele](#destinations) . |
-| Dashboard für Metriken auf der Startseite | Die Startseite von Real-time Customer Data Platform (Real-Time CDP) enthält ein Metrik-Dashboard, das Informationen zu Profilen und Segmenten anzeigt. Die Startseite enthält auch Links zu Lernmaterialien. Siehe den Abschnitt zu den [Real-time Customer Data Platform-Metriken](#real-time-customer-data-platform-metrics) unten. |
-| Quellen | Sie können Daten aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System. Weitere Informationen finden Sie unten im Abschnitt [Quellen](#sources) . |
+| Ziele | Vorkonfigurierte Integrationen mit Zielplattformen, die von Adobe-[!DNL Real-Time Customer Data Platform] unterstützt werden und Daten nahtlos für diese Partner aktivieren. Weitere Informationen finden [ unter ](#destinations)Ziele“. |
+| Dashboard der Startseitenmetriken | Die Startseite von Real-time Customer Data Platform (Real-Time CDP) enthält ein Dashboard mit Metriken, das Informationen zu Profilen und Segmenten anzeigt. Die Startseite enthält auch Links zu Lernmaterialien. Siehe den Abschnitt [Real-time Customer Data Platform-Metriken](#real-time-customer-data-platform-metrics) weiter unten. |
+| Quellen | Sie können Daten aus einer Vielzahl von Quellen aufnehmen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM. Weitere Informationen finden Sie [ Abschnitt ](#sources)Quellen“ weiter unten. |
 
-**[!DNL Real-Time Customer Data Platform]metrics**
+**[!DNL Real-Time Customer Data Platform]Metriken**
 
-Die Startseite von Real-time Customer Data Platform (Real-Time CDP) mit einem Metriken-Dashboard wird angezeigt, wenn Sie sich bei Real-Time CDP anmelden.
+Die Startseite von Real-time Customer Data Platform (Real-Time CDP), die ein Dashboard für Metriken enthält, wird angezeigt, wenn Sie sich bei Real-Time CDP anmelden.
 
-Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Real-Time CDP bietet Metrikkarten für das gesamte Erlebnis. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
+Die Startseite ist nur einer der Orte, an denen Metrikkarten angezeigt werden. Real-Time CDP bietet Metrikkarten für Ihr gesamtes Erlebnis. Diese Metriken informieren Sie über die Daten-, Profil- und Segmentzielgruppen im System.
 
-Wenn bei der Anmeldung bei Real-Time CDP keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Bei der Datenerfassung wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen.
+Wenn beim Anmelden bei Real-Time CDP keine Daten im System vorhanden sind, wird das Dashboard auf der Startseite nicht angezeigt. In dem Fall enthält die Startseite Lernmaterial für die erstmalige Nutzung. Beim Erfassen von Daten wird das Dashboard automatisch aktualisiert, um Informationen zu diesen Daten anzuzeigen.
 
-Weitere Informationen finden Sie in der [Übersicht über Real-time Customer Data Platform-Metriken](../../rtcdp/home-page-dashboards.md)
+Weitere Informationen finden Sie in der Übersicht über die [Real-time Customer Data Platform-Metriken](../../rtcdp/home-page-dashboards.md)
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die von Adobe Real-time Customer Data Platform unterstützt werden und die Daten nahtlos für diese Partner aktivieren. Weitere Informationen finden Sie im Artikel [Ziele - Übersicht](../../destinations/home.md) .
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die von Real-time Customer Data Platform von Adobe unterstützt werden und Daten nahtlos für diese Partner aktivieren. Weitere Informationen finden Sie im Artikel [Ziele - Übersicht](../../destinations/home.md) .
 
 **Verfügbare Ziele**
 
@@ -73,18 +73,18 @@ Mit der November-Version unterstützt Adobe Real-time Customer Data Platform die
 * Advertising: [!DNL Google]
 * E-Mail-Marketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md) .
+Informationen zu [ einzelnen Ziele finden ](../../destinations/catalog/overview.md) im Zielkatalog .
 
 **Bekannte Einschränkungen**
 
-* Das Steuerelement zum Ermöglichen benutzerdefinierter Aktivierungszeitpläne im Aktivierungsfluss (Schritt &quot;Planung&quot;) ist bei der ersten Version nicht verfügbar.
-* Es gibt derzeit keine Möglichkeit, eine Zielkonfiguration zu bearbeiten oder zu löschen. Um diese Einschränkung zu umgehen, können Sie das Ziel in der oberen rechten Ecke der [Zieldetailseite](../../destinations/ui/destination-details-page.md) aktivieren oder deaktivieren.
-* Es gibt derzeit keine Überprüfung für Kontodetails, Pfad oder Anmeldeinformationen, wenn eine Verbindung zu Ihrem Ziel- oder Speicherkonto hergestellt wird. Vergewissern Sie sich, dass Sie die richtigen Anmeldeinformationen eingeben und auf Rechtschreibfehler oder Tippfehler prüfen.
-* Mit der ersten Veröffentlichung sind keine Anmeldeinformationen erneuert worden. Sobald ein Konto abgelaufen ist oder aktualisiert werden muss, müssen Sie eine neue Zielverbindung erstellen und Ihre zuvor zugeordneten Segmente neu erstellen.
+* Das Steuerelement zum Zulassen benutzerdefinierter Aktivierungszeitpläne im Aktivierungsfluss (Zeitplanschritt) ist in der ersten Version nicht verfügbar.
+* Es gibt derzeit keine Möglichkeit, eine Zielkonfiguration zu bearbeiten oder zu löschen. Um diese Einschränkung zu umgehen, können Sie das Ziel oben rechts auf der Seite mit den [ aktivieren oder ](../../destinations/ui/destination-details-page.md).
+* Beim Herstellen einer Verbindung zu Ihrem Ziel- oder Speicherkonto ist derzeit keine Validierung für Kontodetails, Pfad oder Anmeldeinformationen vorhanden. Vergewissern Sie sich, dass Sie die richtigen Anmeldeinformationen eingeben und überprüfen Sie sie auf Rechtschreibfehler oder Tippfehler.
+* Bei der ersten Version sind keine Erneuerung der Anmeldeinformationen vorhanden. Sobald ein Konto abgelaufen ist oder aktualisiert werden muss, müssen Sie eine neue Zielverbindung erstellen und Ihre zuvor zugeordneten Segmente neu zuordnen.
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten mithilfe von [!DNL Platform] -Diensten strukturieren, beschriften und erweitern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Diese Quellverbindungen ermöglichen Ihnen eine Authentifizierung mit Ihren Datenspeichern und CRM-Diensten, die Festlegung von Zeiten für Erfassungsläufe und die Verwaltung des Durchsatzes bei der Datenerfassung.
 
@@ -93,27 +93,27 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 | Funktion | Beschreibung |
 | ---------- | ------------ |
 | Quellen-Benutzeroberfläche | Neue Benutzeroberfläche zum Erstellen, Anzeigen und Verwalten von Quellverbindungen. |
-| Überarbeitete Workflows für CRM-Connectoren | Neuer intuitiver Arbeitsablauf für die Benutzeroberfläche zum Erstellen und Verwalten von [!DNL Microsoft Dynamics] - und [!DNL Salesforce] -Connectoren. |
-| Connector-Unterstützung für Cloud-basierte Speicher | Connectoren können jetzt auf Cloud-basierte Speicher zugreifen. Zu den neuen Quellen gehören [!DNL Amazon S3], [!DNL Azure Blob] und FTP/SFTP-Server. |
+| Überarbeitete Workflows für CRM-Connectoren | Neuer intuitiver Benutzeroberflächen-Workflow zum Erstellen und Verwalten von [!DNL Microsoft Dynamics] und [!DNL Salesforce] Connectoren. |
+| Connector-Unterstützung für Cloud-basierte Speicher | Connectoren können jetzt auf Cloud-basierte Speicher zugreifen. Zu den neuen Quellen gehören [!DNL Amazon S3]-, [!DNL Azure Blob]- und FTP-/SFTP-Server. |
 
 **Bekannte Probleme**
 
-* Source-Connectoren für Cloud-basierte Speicher unterstützen nicht die Erfassung komprimierter Dateien.
+* Source-Connectoren für Cloud-basierte Speicher unterstützen die Aufnahme komprimierter Dateien nicht.
 
 Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](../../sources/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Mit Adobe Experience Platform [!DNL Data Science Workspace] können Datenwissenschaftler nahtlos Einblicke aus Daten und Inhalten aus Adobe-Anwendungen und Drittanbietersystemen generieren, indem sie Modelle für maschinelles Lernen erstellen und umsetzen. [!DNL Data Science Workspace] ist eng in [!DNL Platform] integriert und ermöglicht den End-to-End-Lebenszyklus der Datenwissenschaft, einschließlich der Erforschung und Vorbereitung von XDM-Daten, gefolgt von der Entwicklung und Inbetriebnahme von Modellen, um [!DNL Real-Time Customer Profile] automatisch mit Einblicken aus maschinellem Lernen anzureichern.
+Mit Adobe Experience Platform [!DNL Data Science Workspace] können Datenwissenschaftler nahtlos Einblicke aus Daten und Inhalten in Adobe-Anwendungen und Drittanbietersystemen generieren, indem sie Modelle für maschinelles Lernen erstellen und umsetzen. [!DNL Data Science Workspace] ist eng in [!DNL Platform] integriert und unterstützt den gesamten Datenwissenschafts-Lebenszyklus, einschließlich der Untersuchung und Vorbereitung von XDM-Daten, gefolgt von der Entwicklung und Operationalisierung von Modellen zur automatischen Anreicherung von [!DNL Real-Time Customer Profile] mit Einblicken aus maschinellem Lernen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
-| Datenzugriff mit dem [!DNL Platform] SDK | Vordefinierte Rezepte und Starter-Notebooks in [!DNL Python] verwenden jetzt das [!DNL Platform]-SDK für den Zugriff auf Daten. |
-| Unterstützung für Sandboxes | Unterstützung bevorstehender Sandbox-Funktionen (aktuell in Beta-Version), einschließlich der Möglichkeit, Notebooks und Rezepte in Entwicklungs- oder Produktions-Sandboxes zu isolieren. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md). |
+| Datenzugriff mit [!DNL Platform] SDK | Vordefinierte Rezepte und Starter-Notebooks in [!DNL Python] verwenden jetzt [!DNL Platform] SDK für den Datenzugriff. |
+| Unterstützung für Sandboxes | Unterstützung bevorstehender Sandbox-Funktionen (derzeit in der Beta-Phase), einschließlich der Möglichkeit, Notebooks und Rezepte in Entwicklungs- oder Produktions-Sandboxes zu isolieren. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](../../sandboxes/home.md). |
 
-Weitere Informationen finden Sie in der [Übersicht über Data Science Workspace](../../data-science-workspace/home.md).
+Weitere Informationen finden Sie unter [Übersicht über Data Science Workspace](../../data-science-workspace/home.md).
 
 ## [!DNL Experience Data Model] (XDM)-System {#xdm}
 
@@ -125,30 +125,30 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 | Funktion | Beschreibung |
 | ---------- | ------------ |
-| Benachrichtigungsschema | Neues Schema, das Benachrichtigungsdaten darstellt, die während des Datenerfassungsprozesses gesendet werden. |
-| Adobe AdCloud-DSP | Es wurden fünf neue Schemata hinzugefügt, die Adobe Advertising Cloud-Demand-Plattform-Metadaten (DSP) darstellen: Platzierung, Kampagne, Paket, Advertiser, Konto. |
-| Schemafelder für ExperienceEvent-Implementierungsdetails | Neue ExperienceEvent-Feldergruppen, die ein Standardfeld hinzufügen, um Informationen über die Software zu speichern, mit der das Ereignis erfasst wird. |
-| [!DNL Profile Privacy] Feldergruppen | Neue Profilfeldgruppen, die Felder hinzufügen, um allgemeine Abmelde- und Verkaufs-/Freigabe-Abmeldesignale für [!DNL Real-Time Customer Profile] zu akzeptieren. |
-| Formatbegrenzungen für `xdm:alternateDisplayInfo` | Die Felder &quot;Titel&quot;und &quot;Beschreibung&quot;für `xdm:alternateDisplayInfo` müssen beide Zeichenfolgen sein, um die Validierung zu bestehen. |
-| Namensänderung: XDM [!DNL Individual Profile] | Der &quot;Titel&quot;der Klasse &quot;XDM [!DNL Profile]&quot;wurde auf &quot;XDM [!DNL Individual Profile]&quot;aktualisiert. Die formale `$id` der Klasse hat sich nicht geändert. |
+| Benachrichtigungsschema | Neues Schema, das die Benachrichtigungsdaten darstellt, die während der Datenaufnahme gesendet werden. |
+| Adobe AdCloud-DSP-Schemata | Es wurden fünf neue Schemata hinzugefügt, um DSP-Metadaten (Demand Side Platform) von Adobe Advertising Cloud darzustellen: Platzierung, Kampagne, Package, Advertiser, Konto. |
+| Schemafeldgruppen für ExperienceEvent-Implementierungsdetails | Neue ExperienceEvent-Feldergruppen, die ein Standardfeld hinzufügen, um Informationen über die Software zu speichern, die zum Erfassen des Ereignisses verwendet wird. |
+| [!DNL Profile Privacy] Feldergruppen | Neue Profilfeldgruppen, die Felder hinzufügen, um allgemeine Opt-out- und Opt-out-Signale für Verkäufe/Freigabe für [!DNL Real-Time Customer Profile] zu akzeptieren. |
+| Formateinschränkungen für `xdm:alternateDisplayInfo` | Die Felder „Titel“ und „Beschreibung“ für `xdm:alternateDisplayInfo` müssen beide Zeichenfolgen sein, damit die Validierung erfolgreich ist. |
+| Namensänderung: XDM [!DNL Individual Profile] | Der „Titel“ der Klasse „XDM [!DNL Profile]&quot; wurde in „XDM [!DNL Individual Profile]&quot; geändert. Die formale `$id` der Klasse hat sich nicht geändert. |
 
 **Bekannte Probleme**
 
 * Keine.
 
-Weitere Informationen zum Arbeiten mit XDM unter Verwendung der [!DNL Schema Registry]-API und der [!DNL Schema Editor]-Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
+Weitere Informationen zum Arbeiten mit XDM mithilfe der [!DNL Schema Registry]-API und [!DNL Schema Editor] Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
 
 ## [!DNL Real-Time Customer Profile] {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Mit [!DNL Real-Time Customer Profile] können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenfassen, die eine verwertbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Das [!DNL Real-Time Customer Profile] ermöglicht eine ganzheitliche Sicht auf jede einzelne Kundin und jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
-| Verbesserungen bei der Suche nach [!DNL Profile] | Benutzer können jetzt Profile mithilfe von Referenzdeskriptoren und verwandten Entitäten nachschlagen. |
-| Daten für einen bestimmten Datensatz bereinigen | Benutzer können jetzt Daten für einen bestimmten Datensatz oder Batch mithilfe der API für Systemaufträge löschen.[!DNL Profile] |
-| Edge [!DNL Profile]-Abfrageverbesserungen | Anwendungen können Edge [!DNL Profile] jetzt anhand einer der Identitäten eines bestimmten Profils abfragen. |
-| Zusammenführungsrichtlinien pro Projektion konfigurieren | Anwendungen können jetzt Zusammenführungsrichtlinien für jede Projektion konfigurieren, um eine Ansicht der Daten zu generieren, die von einer bestimmten Zusammenführungsrichtlinie verwaltet werden. |
-| Berechnete Attribute | Berechnete Attribute berechnen automatisch den Wert von Feldern basierend auf anderen Werten, Berechnungen und Ausdrücken. Berechnete Attribute dienen auf der Profilebene dazu, Werte wie &quot;Gesamtkauf&quot;, &quot;Lebenszeitwert&quot;oder &quot;Trichterstatus&quot;basierend auf einem eingehenden Ereignis, einem eingehenden Ereignis und Profildaten oder einem eingehenden Ereignis, Profildaten und historischen Ereignissen zu aggregieren. |
+| Verbesserungen bei der [!DNL Profile] | Benutzer können jetzt Profile mithilfe von Referenzdeskriptoren und zugehörigen Entitäten suchen. |
+| Bereinigen von Daten für einen bestimmten Datensatz | Benutzer können jetzt Daten für einen bestimmten Datensatz oder Batch mithilfe der Vorgangs-API des [!DNL Profile] löschen. |
+| Verbesserungen bei Edge [!DNL Profile]-Abfragen | Programme können jetzt Edge-[!DNL Profile] nach einer beliebigen Identität eines bestimmten Profils abfragen. |
+| Konfigurieren von Zusammenführungsrichtlinien pro Projektion | Anwendungen können jetzt Zusammenführungsrichtlinien pro Projektion konfigurieren, um eine Ansicht der Daten zu generieren, die von einer bestimmten Zusammenführungsrichtlinie gesteuert wird. |
+| Berechnete Attribute | Berechnete Attribute berechnen den Wert von Feldern automatisch anhand anderer Werte, Berechnungen und Ausdrücke. Berechnete Attribute arbeiten auf Profilebene, um Werte wie „Gesamtkauf“, „Lebenszeitwert“ oder „Trichterstatus“ basierend auf einem eingehenden Ereignis, einem eingehenden Ereignis und Profildaten oder einem eingehenden Ereignis, Profildaten und historischen Ereignissen zu aggregieren. |
 
 **Fehlerkorrekturen**
 
@@ -158,7 +158,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 * Keine.
 
-Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] -Daten, finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [ in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -168,23 +168,23 @@ Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfl
 
 | Funktion | Beschreibung |
 | -----------| ---------- |
-| Geplante Segmentierung | Benutzer können jetzt die geplante Segmentbewertung für alle Segmente über die Benutzeroberfläche und die API aktivieren. Nach der Aktivierung werden alle Segmente einmal täglich ausgewertet. Dies hat keine Auswirkungen auf die On-Demand-Segmentierungsfunktionen, die weiterhin wie bisher funktionieren.<br/><br/>Hinweis: Die Funktion für die geplante Segmentierung kann nicht in Sandboxes mit mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] verwendet werden. |
-| Streaming-Segmentierung  | Die Unterstützung für die kontinuierliche Auswertung von Segmenten (Streaming-Segmentierung) ermöglicht die Auswertung der meisten Segmentregeln, da die Daten an [!DNL Platform] übergeben werden. Diese Funktion bedeutet, dass die Segmentzugehörigkeit aktuell ist, ohne dass geplante Segmentierungsaufträge ausgeführt werden müssen. Es gelten einige Ausnahmen, z. B. Segmente, die Beziehungen mit mehreren Entitäten nutzen, oder mit angereicherten Payloads. |
-| Segmente als Bausteine | Beim Erstellen von Segmenten mithilfe der Segment Builder-Benutzeroberfläche können Benutzer jetzt zuvor definierte Segmente als Bausteine für weitere Segmente verwenden. <ul><li>Referenzieren der aktuellen Zielgruppenzugehörigkeit: Aktualisiert sich beim Ein- und Austritt von Zielgruppen aus der Zielgruppe.</li><li>Logik kopieren: Nehmen Sie die ausgewählte Segmentdefinition und duplizieren Sie sie im neuen Segment.</li></ul> |
+| Geplante Segmentierung | Benutzer können jetzt die geplante Segmentauswertung für alle Segmente über die Benutzeroberfläche und die API aktivieren. Nach der Aktivierung werden alle Segmente einmal täglich ausgewertet. Dies wirkt sich nicht auf die On-Demand-Segmentierungsfunktionen aus, die weiterhin wie zuvor funktionieren.<br/><br/>Hinweis: Die geplante Segmentierungsfunktion kann nicht in Sandboxes mit mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] verwendet werden. |
+| Streaming-Segmentierung  | Unterstützung für die kontinuierliche Auswertung von Segmenten (Streaming-Segmentierung) ermöglicht es, die meisten Segmentregeln auszuwerten, während die Daten in [!DNL Platform] übermittelt werden. Diese Funktion bedeutet, dass die Segmentzugehörigkeit auf dem neuesten Stand ist, ohne dass geplante Segmentierungsaufträge ausgeführt werden müssen. Es gelten einige Ausnahmen, z. B. Segmente, die Beziehungen mit mehreren Entitäten nutzen, oder Segmente mit angereicherten Payloads. |
+| Segmente als Bausteine | Beim Erstellen von Segmenten mit der Segment Builder-Benutzeroberfläche können Benutzende jetzt zuvor definierte Segmente als Bausteine für zusätzliche Segmente verwenden. <ul><li>Referenzieren der aktuellen Zielgruppenzugehörigkeit: Aktualisierungen, wenn Personen in Zielgruppen hinein- und heraus wechseln.</li><li>Logik kopieren: Die ausgewählte Segmentdefinition nehmen und im neuen Segment duplizieren.</li></ul> |
 | Anzeigen der Segmentzugehörigkeit nach ID-Namespace | Die Segmentzugehörigkeit kann jetzt nach ID-Namespace (E-Mail, ECID und Gesamtanzahl) angezeigt werden. |
 | RBAC-Unterstützung | Segment Builder bietet jetzt Unterstützung für grundlegende rollenbasierte Zugriffssteuerungen und Berechtigungen. |
-| Erweiterte Unterstützung für die Freigabe externer Zielgruppen zwischen [!DNL Platform] und Adobe-Lösungen | Benutzer können jetzt externe (nicht-[!DNL Experience Platform]) Zielgruppen-Metadaten in Szenarien einbringen, in denen die Anzahl der Zielgruppen groß ist oder a priori nicht bekannt ist. Diese Version beinhaltet den Zugriff auf [!DNL Audience Manager] -Metadaten für Kunden, die den Lösungs-Connector bereitgestellt haben. Diese Zielgruppen-Metadaten können in Segment Builder verwendet werden, um neue [!DNL Experience Platform] -Segmente zu erstellen. <br/><br/> Darüber hinaus stehen nun in [!DNL Experience Platform] erstellte Segmente zur Verwendung in integrierten Adobe-Lösungen, einschließlich [!DNL Audience Manager], [!DNL Target] und [!DNL Ad Cloud], zur Verfügung. |
+| Verbesserte Unterstützung für die Freigabe externer Zielgruppen zwischen [!DNL Platform]- und Adobe-Lösungen | Benutzende können jetzt externe (nicht [!DNL Experience Platform]) Zielgruppen-Metadaten in Szenarien einbringen, in denen die Anzahl der Zielgruppen groß oder von vornherein nicht bekannt ist. Diese Version umfasst den Zugriff auf [!DNL Audience Manager] Metadaten für Kunden, die den Lösungs-Connector bereitgestellt haben. Diese Zielgruppen-Metadaten können in Segment Builder verwendet werden, um neue [!DNL Experience Platform] zu erstellen. <br/><br/> Darüber hinaus sind in [!DNL Experience Platform] erstellte Segmente jetzt für die Verwendung in integrierten Adobe-Lösungen verfügbar, einschließlich [!DNL Audience Manager], [!DNL Target] und [!DNL Ad Cloud]. |
 
 **Fehlerkorrekturen**
 
-* Es wurde ein Fehler behoben, der dazu führte, dass bei der Segmentierung mit mehreren Entitäten bei verschachtelten Beziehungen Nullprofile zurückgegeben wurden.
+* Es wurde ein Problem behoben, das dazu führte, dass bei der Segmentierung mehrerer Entitäten im Falle verschachtelter Beziehungen null Profile zurückgegeben wurden.
 * Es wurde ein Problem behoben, bei dem die Ausschlusslogik irreführende Ergebnisse zurückgab.
-* Verbesserte Lesbarkeit für Ordner mit mehreren Entitäten. Jetzt wird der Anzeigename der XDM-Klasse angezeigt.
-* Es wurde ein zeitweiliger Fehler behoben, bei dem mehrere Kopien desselben XDM-Ordners angezeigt wurden.
-* Nachrichten werden jetzt erzeugt, um einen Benutzer zu informieren, wenn für die ausgewählte Zusammenführungsrichtlinie keine Segmentschätzungen verfügbar sind.
+* Verbesserte Lesbarkeit für Ordner mit mehreren Entitäten. Sie zeigen jetzt den Anzeigenamen der XDM-Klasse an.
+* Es wurde ein zeitweiliges Problem behoben, bei dem mehrere Kopien desselben XDM-Ordners erschienen.
+* Die Nachricht wird jetzt erstellt, um Benutzende darüber zu informieren, ob Segmentschätzungen für die ausgewählte Zusammenführungsrichtlinie nicht verfügbar sind.
 
 **Bekannte Probleme**
 
 * Keine.
 
-Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentation Service - Übersicht](../../segmentation/home.md) .
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie unter [Segmentierungs-Service - Übersicht](../../segmentation/home.md).

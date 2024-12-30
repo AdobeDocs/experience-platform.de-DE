@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen; Kundendatensegmente
+keywords: Experience Platform;Einblicke;Kunden-KI;beliebte Themen;Kunden-KI-Segmente
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
-title: Kundensegmente mit prognostizierten Werten erstellen
-description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit dem Segment Builder beschrieben.
+title: Erstellen von Kundensegmenten mit prognostizierten Scores
+description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt finden Sie Schritte zum Erstellen von Segmenten mit Segment Builder.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
 source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profi
 
 >[!IMPORTANT]
 >
->Um diese Methode verwenden zu können, muss das Echtzeit-Kundenprofil für den Datensatz aktiviert werden.
+>Um diese Methode verwenden zu können, muss das Echtzeit-Kundenprofil für den Datensatz aktiviert sein.
 
 Klicken Sie in der Benutzeroberfläche von Platform im linken Navigationsbereich auf **[!UICONTROL Segmente]** und dann auf **[!UICONTROL Segment erstellen]**.
 
@@ -34,10 +34,10 @@ Geben Sie in der rechten Spalte *Segmenteigenschaften* einen Namen für das Segm
 
 ![](../images/user-guide/properties_new.png)
 
-Klicken Sie über der linken Spalte *Felder* auf das Symbol **Zahnrad** und wählen Sie eine *Zusammenführungsrichtlinie* aus der Dropdownliste aus. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
+Klicken Sie über der linken Spalte *Felder* auf das Symbol **Zahnrad** und wählen Sie *Zusammenführungsrichtlinie* aus der Dropdown-Liste. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
 
 ![](../images/user-guide/merge_policy_new.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe von Segment Builder erfolgreich Zielgruppen basierend auf ihren Tendenzwerten gefunden. Sie können nun Ihre Zielgruppen ansprechen, indem Sie diese für Ziele aktivieren. Weiterführende Informationen dazu finden Sie unter [Ziele – Übersicht](../../../destinations/home.md).
+In diesem Tutorial haben Sie mithilfe von Segment Builder erfolgreich Zielgruppen gefunden, die auf ihren Neigungs-Scores basieren. Sie können nun Ihre Zielgruppen ansprechen, indem Sie diese für Ziele aktivieren. Weiterführende Informationen dazu finden Sie unter [Ziele – Übersicht](../../../destinations/home.md).

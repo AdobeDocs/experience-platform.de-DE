@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; API-Handbuch; Verbindungsparameter; Query Service
+keywords: Experience Platform;Startseite;beliebte Themen;Query Service;API-Handbuch;Verbindungsparameter;Query Service;
 solution: Experience Platform
-title: Verbindungsparameter-API-Endpunkt
-description: Sie können Ihre Verbindungsparameter für die Verwendung des interaktiven Dienstes abrufen, indem Sie eine GET-Anfrage an den Endpunkt /connection_parameters senden.
+title: API-Endpunkt für Verbindungsparameter
+description: Sie können Ihre Verbindungsparameter zur Verwendung des interaktiven Services abrufen, indem Sie eine GET-Anfrage an den Endpunkt /connection_parameters stellen.
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,15 +12,15 @@ ht-degree: 29%
 
 ---
 
-# Endpunkt der Verbindungsparameter
+# Verbindungsparameter-Endpunkt
 
-## Beispiel-API-Aufruf
+## Beispiel für API-Aufruf
 
-Im folgenden Abschnitt werden Sie durch den API-Aufruf geführt, den Sie mit der [!DNL Query Service] -API ausführen können. Der Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Der folgende Abschnitt führt Sie durch den API-Aufruf, den Sie mit der [!DNL Query Service]-API ausführen können. Der Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Verbindungsparameter anfordern
 
-Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an den `/connection_parameters` -Endpunkt senden. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Service herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
+Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an den `/connection_parameters`-Endpunkt senden. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Service herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
 
 **API-Format**
 

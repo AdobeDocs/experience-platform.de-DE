@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; geplante Abfragen; geplante Abfrage;
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;geplante Abfragen;geplante Abfrage;
 solution: Experience Platform
-title: Zeitplan-Endpunkt
-description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für geplante Abfragen mit der Query Service-API ausführen können.
+title: Zeitpläne-Endpunkt
+description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie für geplante Abfragen mit der Abfrage-Service-API ausführen können.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,15 +12,15 @@ ht-degree: 31%
 
 ---
 
-# Endpunkt &quot;Zeitpläne&quot;
+# Zeitpläne-Endpunkt
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit beginnen, die [!DNL Query Service]-API aufzurufen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der [!DNL Query Service] -API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie damit beginnen, die [!DNL Query Service]-API aufzurufen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Liste geplanter Abfragen abrufen
+### Abrufen einer Liste geplanter Abfragen
 
-Sie können eine Liste aller geplanten Abfragen für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/schedules` senden.
+Sie können eine Liste aller geplanten Abfragen für Ihre Organisation abrufen, indem Sie eine GET-Anfrage an den `/schedules`-Endpunkt senden.
 
 **API-Format**
 
@@ -41,12 +41,12 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Au
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
-| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse anzuordnen. Wenn kein Startdatum angegeben ist, gibt der API-Aufruf zuerst die älteste erstellte geplante Abfrage zurück und listet dann weiterhin die neuesten Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen unterschiedliche Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07` , um das Datum 7. September 2020 anzugeben. Ein komplexeres Beispiel würde als `2022-11-05T08:15:30-05:00` geschrieben und entspricht dem Wert vom 5. November 2022, 8:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Versatz angegeben werden und wird durch das Suffix &quot;Z&quot;(`2020-01-01T01:01:01Z`) gekennzeichnet. Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
+| `start` | Geben Sie einen Zeitstempel im ISO-Format an, um die Ergebnisse zu sortieren. Wenn kein Startdatum angegeben wird, gibt der API-Aufruf zuerst die älteste erstellte geplante Abfrage zurück und listet dann weiterhin neuere Ergebnisse auf.<br> ISO-Zeitstempel ermöglichen verschiedene Granularitätsstufen in Datum und Uhrzeit. Die grundlegenden ISO-Zeitstempel haben das Format: `2020-09-07`, um das Datum 7. September 2020 auszudrücken. Ein komplexeres Beispiel würde als `2022-11-05T08:15:30-05:00` geschrieben und entspricht dem 5. November 2022, 8:15:30 Uhr, US Eastern Standard Time. Eine Zeitzone kann mit einem UTC-Offset versehen werden und wird durch das Suffix „Z“ (`2020-01-01T01:01:01Z`) gekennzeichnet. Wenn keine Zeitzone angegeben wird, wird standardmäßig null verwendet. |
 | `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `templateId` und `userId`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als) und `==` (gleich). Beispielsweise gibt `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` alle geplanten Abfragen zurück, bei denen die Benutzer-ID wie angegeben ist. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die neueste geplante Abfrage abgerufen, die für Ihr Unternehmen erstellt wurde.
+Die folgende Anfrage ruft die neueste geplante Abfrage ab, die für Ihre Organisation erstellt wurde.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste geplanter Abfragen für die angegebene Organisation zurück. Die folgende Antwort gibt die neueste geplante Abfrage zurück, die für Ihr Unternehmen erstellt wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit einer Liste geplanter Abfragen für die angegebene Organisation zurück. Die folgende Antwort gibt die neueste geplante Abfrage zurück, die für Ihre Organisation erstellt wurde.
 
 ```json
 {
@@ -124,7 +124,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste geplanter Abf
 
 ### Neue geplante Abfrage erstellen
 
-Sie können eine neue geplante Abfrage erstellen, indem Sie eine POST-Anfrage an den `/schedules` -Endpunkt senden. Wenn Sie eine geplante Abfrage in der API erstellen, wird sie auch im Abfrage-Editor angezeigt. Weitere Informationen zu geplanten Abfragen in der Benutzeroberfläche finden Sie in der [Dokumentation zum Abfrage-Editor](../ui/user-guide.md#scheduled-queries) .
+Sie können eine neue geplante Abfrage erstellen, indem Sie eine POST-Anfrage an den `/schedules`-Endpunkt senden. Wenn Sie eine geplante Abfrage in der API erstellen, wird sie auch im Abfrage-Editor angezeigt. Weitere Informationen zu geplanten Abfragen in der Benutzeroberfläche finden Sie in der [Dokumentation zum Abfrage-Editor](../ui/user-guide.md#scheduled-queries).
 
 **API-Format**
 
@@ -161,12 +161,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Der Name der Datenbank, für die Sie eine geplante Abfrage erstellen. |
 | `query.sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
 | `query.name` | Der Name der geplanten Abfrage. |
-| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In diesem Beispiel bedeutet &quot;30 * * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird.<br><br>Alternativ können Sie die folgenden Kurzausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *` .</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *` .</li><li>`@weekly`: Die Abfrage wird einmal pro Woche, am Sonntag, um Mitternacht, ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * 0` .</li><li>`@monthly`: Die Abfrage wird einmal im Monat am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *` .</li><li>`@yearly`: Die Abfrage wird einmal im Jahr am 1. Januar um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `1 0 0 1 1 *` . |
+| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In diesem Beispiel bedeutet „30 * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird.<br><br>Alternativ können Sie die folgenden kurzen Ausdrücke verwenden:<ul><li>`@once`: Die Abfrage wird nur einmal ausgeführt.</li><li>`@hourly`: Die Abfrage wird stündlich zu Beginn der Stunde ausgeführt. Dies entspricht dem Cron-Ausdruck `0 * * * *`.</li><li>`@daily`: Die Abfrage wird einmal täglich um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * *`.</li><li>`@weekly`: Die Abfrage wird einmal pro Woche, am Sonntag um Mitternacht, ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 * * 0`.</li><li>`@monthly`: Die Abfrage wird einmal monatlich am ersten Tag des Monats um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `0 0 1 * *`.</li><li>`@yearly`: Die Abfrage wird einmal jährlich am 1. Januar um Mitternacht ausgeführt. Dies entspricht dem Cron-Ausdruck `1 0 0 1 1 *`. |
 | `schedule.startDate` | Das Startdatum für Ihre geplante Abfrage, geschrieben als UTC-Zeitstempel. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten geplanten Abfrage zurück. Sobald die geplante Abfrage aktiviert ist, ändert sich die `state` von `REGISTERING` in `ENABLED`.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 202 (Akzeptiert) mit Details zur neu erstellten geplanten Abfrage zurückgegeben. Nachdem die geplante Abfrage aktiviert wurde, ändert sich die `state` von `REGISTERING` in `ENABLED`.
 
 ```json
 {
@@ -219,11 +219,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu I
 
 >[!NOTE]
 >
->Sie können den Wert `_links.delete` verwenden, um [Ihre erstellte geplante Abfrage zu löschen](#delete-a-specified-scheduled-query).
+>Sie können den Wert von `_links.delete` verwenden, um [die erstellte geplante Abfrage zu löschen](#delete-a-specified-scheduled-query).
 
-### Anforderungsdetails einer angegebenen geplanten Abfrage
+### Anfragedetails einer angegebenen geplanten Abfrage
 
-Sie können Informationen zu einer bestimmten geplanten Abfrage abrufen, indem Sie eine GET-Anfrage an den `/schedules` -Endpunkt senden und im Anfragepfad die entsprechende Kennung angeben.
+Sie können Informationen zu einer bestimmten geplanten Abfrage abrufen, indem Sie eine GET-Anfrage an den `/schedules`-Endpunkt senden und im Anfragepfad die Kennung angeben.
 
 **API-Format**
 
@@ -247,7 +247,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen geplanten Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zur angegebenen geplanten Abfrage zurück.
 
 ```json
 {
@@ -302,17 +302,17 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen g
 
 >[!NOTE]
 >
->Sie können den Wert `_links.delete` verwenden, um [Ihre erstellte geplante Abfrage zu löschen](#delete-a-specified-scheduled-query).
+>Sie können den Wert von `_links.delete` verwenden, um [die erstellte geplante Abfrage zu löschen](#delete-a-specified-scheduled-query).
 
 ### Aktualisieren der Details einer angegebenen geplanten Abfrage
 
-Sie können die Details für eine angegebene geplante Abfrage aktualisieren, indem Sie eine PATCH-Anfrage an den `/schedules` -Endpunkt senden und dessen Kennung im Anfragepfad angeben.
+Sie können die Details für eine bestimmte geplante Abfrage aktualisieren, indem Sie eine PATCH-Anfrage an den `/schedules`-Endpunkt senden und im Anfragepfad dessen ID angeben.
 
 Für die PATCH-Anfrage werden zwei Pfade unterstützt: `/state` und `/schedule/schedule`.
 
-### Geplanten Abfragestatus aktualisieren
+### Status der geplanten Abfrage aktualisieren
 
-Sie können den Status der ausgewählten geplanten Abfrage aktualisieren, indem Sie die Eigenschaft `path` auf `/state` und die Eigenschaft `value` auf `enable` oder `disable` setzen.
+Sie können den Status der ausgewählten geplanten Abfrage aktualisieren, indem Sie die `path`-Eigenschaft auf `/state` und die `value`-Eigenschaft `enable` oder `disable` festlegen.
 
 **API-Format**
 
@@ -322,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` -Wert der geplanten Abfrage, die Sie PATCH möchten. |
+| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie PATCH möchten. |
 
 
 **Anfrage**
@@ -348,9 +348,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Der Vorgang, der gemäß dem Abfragezeitplan ausgeführt werden soll. Der zulässige Wert ist `replace`. |
-| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` auf `/state` setzen. |
-| `value` | Der aktualisierte Wert von `/state`. Dieser Wert kann entweder als `enable` oder als `disable` festgelegt werden, um die geplante Abfrage zu aktivieren oder zu deaktivieren. |
+| `op` | Der für den Abfragezeitplan auszuführende Vorgang. Der akzeptierte Wert ist `replace`. |
+| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` auf `/state` festlegen. |
+| `value` | Der aktualisierte Wert von `/state`. Dieser Wert kann entweder als `enable` oder `disable` festgelegt werden, um die geplante Abfrage zu aktivieren oder zu deaktivieren. |
 
 **Antwort**
 
@@ -363,9 +363,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgende
 }
 ```
 
-### Geplanten Abfragezeitplan aktualisieren
+### Zeitplan für geplante Abfragen aktualisieren
 
-Sie können den Cron-Zeitplan der geplanten Abfrage aktualisieren, indem Sie die Eigenschaft `path` im Anfrageinhalt auf `/schedule/schedule` setzen. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Sie können den Cron-Zeitplan der geplanten Abfrage aktualisieren, indem Sie die `path` Eigenschaft im Anfrageinhalt auf `/schedule/schedule` festlegen. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **API-Format**
 
@@ -375,7 +375,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` -Wert der geplanten Abfrage, die Sie PATCH möchten. |
+| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie PATCH möchten. |
 
 **Anfrage**
 
@@ -400,9 +400,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Der Vorgang, der gemäß dem Abfragezeitplan ausgeführt werden soll. Der zulässige Wert ist `replace`. |
-| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Zeitplan der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` auf `/schedule/schedule` setzen. |
-| `value` | Der aktualisierte Wert von `/schedule`. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird die geplante Abfrage also stündlich mit der 45-Minuten-Markierung ausgeführt. |
+| `op` | Der für den Abfragezeitplan auszuführende Vorgang. Der akzeptierte Wert ist `replace`. |
+| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Zeitplan der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` auf `/schedule/schedule` festlegen. |
+| `value` | Der aktualisierte Wert von `/schedule`. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird die geplante Abfrage also stündlich mit der Marke von 45 Minuten ausgeführt. |
 
 **Antwort**
 
@@ -415,9 +415,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgende
 }
 ```
 
-### Bestimmte geplante Abfrage löschen
+### Löschen einer angegebenen geplanten Abfrage
 
-Sie können eine angegebene geplante Abfrage löschen, indem Sie eine DELETE-Anfrage an den `/schedules` -Endpunkt senden und im Anfragepfad die Kennung der geplanten Abfrage angeben, die Sie löschen möchten.
+Sie können eine bestimmte geplante Abfrage löschen, indem Sie eine DELETE-Anfrage an den `/schedules`-Endpunkt senden und im Anfragepfad die ID der geplanten Abfrage angeben, die Sie löschen möchten.
 
 >[!NOTE]
 >
@@ -431,7 +431,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Der `id` -Wert der geplanten Abfrage, die Sie DELETE haben möchten. |
+| `{SCHEDULE_ID}` | Der `id` der geplanten Abfrage, die Sie DELETE erstellen möchten. |
 
 **Anfrage**
 

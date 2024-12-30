@@ -47,17 +47,17 @@ In der folgenden Tabelle finden Sie eine Übersicht über die verfügbaren Berec
 
 Um die Berechtigungen für den Privacy Service zu verwalten, melden Sie sich bei [Admin Console](https://adminconsole.adobe.com/) an und wählen Sie **[!UICONTROL Produkte]** in der oberen Navigationsleiste. Wählen Sie von hier aus **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![Die Admin Console mit der Privacy Service-Produktkarte ist hervorgehoben.](./images/permissions/privacy-service-card.png)
+![Die Admin Console mit der hervorgehobenen Privacy Service-Produktkarte.](./images/permissions/privacy-service-card.png)
 
 ### Auswählen oder Erstellen eines Produktprofils
 
 Auf dem nächsten Bildschirm sehen Sie eine Liste der verfügbaren Produktprofile für Privacy Service unter Ihrer Organisation. Wenn keine Produktprofile vorhanden sind, wählen Sie **[!UICONTROL Neues Profil]**, um eines zu erstellen. Wenn Sie in Ihrer Organisation mehrere Rollen oder Benutzergruppen haben, die unterschiedliche Zugriffsrechte benötigen, sollten Sie für jede dieser Gruppen ein eigenes Produktprofil erstellen.
 
-![Die Admin Console mit dem Privacy Service-Produktprofil ist hervorgehoben.](./images/permissions/select-or-create-profile.png)
+![Die Admin Console mit dem hervorgehobenen Privacy Service-Produktprofil.](./images/permissions/select-or-create-profile.png)
 
 Nachdem Sie ein Produktprofil ausgewählt haben, können Sie auf der Registerkarte **[!UICONTROL Berechtigungen]** mit der [Bearbeitung der Berechtigungen](#edit-permissions) für das Profil beginnen oder auf der Registerkarte **[!UICONTROL Benutzer]** mit der [Zuweisung von Benutzern](#assign-users) für das Profil beginnen.
 
-![Die Registerkarte &quot;Berechtigungen&quot;für eine Produktprofil-Admin Console.](./images/permissions/users-permissions-tabs.png)
+![Die Registerkarte „Berechtigungen“ für eine Produktprofil-Admin Console.](./images/permissions/users-permissions-tabs.png)
 
 ### Bearbeiten der Berechtigungen für das Profil {#edit-permissions}
 
@@ -65,15 +65,15 @@ Wählen Sie auf der Registerkarte **[!UICONTROL Berechtigungen]** eine der angez
 
 Wenn Sie die Berechtigungen für ein Profil bearbeiten, werden die verfügbaren Berechtigungen in der linken Spalte aufgelistet, während diejenigen, die im Profil enthalten sind, in der rechten Spalte aufgeführt werden. Wählen Sie die aufgelisteten Berechtigungen aus, um sie zwischen den beiden Spalten zu verschieben.
 
-![Die verfügbaren und eingeschlossenen Berechtigungsspalten.](./images/permissions/edit-permissions.png)
+![Die Spalten der verfügbaren und der eingeschlossenen Berechtigungen.](./images/permissions/edit-permissions.png)
 
 Berechtigungen sind in Kategorien unterteilt. Um zwischen Kategorien zu wechseln, wählen Sie die gewünschte Kategorie in der linken Navigationsleiste.
 
-![Der Abschnitt [!UICONTROL Opt-out vom Verkauf] unter &quot;Berechtigungen&quot;.](./images/permissions/switch-category.png)
+![Der Abschnitt [!UICONTROL Opt-out vom Verkauf] unter „Berechtigungen“](./images/permissions/switch-category.png)
 
 Wählen Sie **[!UICONTROL Speichern]**, sobald Sie die Konfiguration der Berechtigungen abgeschlossen haben.
 
-![Die Berechtigungskonfiguration für das Produktprofil mit hervorgehobenem Speichern.](./images/permissions/save-permissions.png)
+![Die Berechtigungskonfiguration für das Produktprofil mit hervorgehobener Option „Speichern“.](./images/permissions/save-permissions.png)
 
 Die Ansicht des Produktprofils wird mit den hinzugefügten Berechtigungen wieder angezeigt.
 
@@ -83,17 +83,17 @@ Die Ansicht des Produktprofils wird mit den hinzugefügten Berechtigungen wieder
 
 Um dem Produktprofil Benutzer zuzuweisen (und ihnen die konfigurierten Berechtigungen des Profils zu gewähren), wählen Sie die Registerkarte **[!UICONTROL Benutzer]**, gefolgt von **[!UICONTROL Benutzer hinzufügen]**.
 
-![Die Registerkarte &quot;Benutzer&quot;für ein Produktprofil in Admin Console.](./images/permissions/manage-users.png)
+![Die Registerkarte „Benutzer“ für ein Produktprofil in Admin Console.](./images/permissions/manage-users.png)
 
 Weitere Informationen zur Verwaltung von Benutzern für ein Produktprofil finden Sie in der [Dokumentation zu Admin Console](https://helpx.adobe.com/de/enterprise/using/manage-product-profiles.html).
 
-### Migrieren von Legacy-API-Anmeldeinformationen zum Profil {#migrate-tech-accounts}
+### Migrieren von Legacy-API-Anmeldedaten zum Profil {#migrate-tech-accounts}
 
 >[!NOTE]
 >
->Dieser Abschnitt gilt nur für bestehende API-Anmeldeinformationen, die erstellt wurden, bevor die Privacy Service-Berechtigungen in Adobe Admin Console integriert wurden. Für neue Anmeldeinformationen werden Produktprofile (und deren Berechtigungen) stattdessen über [Adobe Developer Console-Projekte](https://developer.adobe.com/developer-console/docs/guides/projects/) zugewiesen.<br><br>Weitere Informationen finden Sie im Abschnitt [Zuweisung von Produktprofilen zu einem Projekt](./api/getting-started.md#product-profiles) im Handbuch zu den ersten Schritten mit der Privacy Service-API.
+>Dieser Abschnitt gilt nur für bestehende API-Anmeldedaten, die erstellt wurden, bevor die Privacy Service-Berechtigungen in Adobe Admin Console integriert wurden. Für neue Anmeldedaten werden Produktprofile (und deren Berechtigungen) stattdessen über [Adobe Developer Console-Projekte](https://developer.adobe.com/developer-console/docs/guides/projects/) zugewiesen.<br><br>Weitere Informationen finden Sie im Abschnitt [Zuweisung von Produktprofilen zu einem Projekt](./api/getting-started.md#product-profiles) im Handbuch zu den ersten Schritten mit der Privacy Service-API.
 
-Bislang benötigten technische Konten kein Produktprofil für Integrationen und Berechtigungen. Aufgrund neuer Verbesserungen an den Privacy Service-Berechtigungen ist es jetzt jedoch erforderlich, ältere API-Anmeldeinformationen in das Produktprofil zu migrieren. Diese Aktualisierung ermöglicht die Vergabe differenzierter Berechtigungen an technische Kontoinhaber und Kontoinhaberinnen. Führen Sie die im Folgenden beschriebenen Schritte aus, um die technischen Kontoberechtigungen für Privacy Service zu aktualisieren.
+Bislang benötigten technische Konten kein Produktprofil für Integrationen und Berechtigungen. Aufgrund neuer Verbesserungen an den Privacy Service-Berechtigungen ist es jetzt jedoch erforderlich, ältere API-Anmeldedaten in das Produktprofil zu migrieren. Diese Aktualisierung ermöglicht die Vergabe differenzierter Berechtigungen an technische Kontoinhaber und Kontoinhaberinnen. Führen Sie die im Folgenden beschriebenen Schritte aus, um die technischen Kontoberechtigungen für Privacy Service zu aktualisieren.
 
 #### Aktualisieren technischer Kontoberechtigungen {#update-tech-account-permissions}
 
@@ -129,13 +129,13 @@ Im Dialogfeld [!UICONTROL API konfigurieren] werden die verfügbaren Produktprof
 
 #### Bestätigen der Anwendung Ihrer Einstellungen {#confirm-applied-settings}
 
-Um zu bestätigen, dass Ihre Einstellungen auf das Konto angewendet wurden. kehren Sie zu [Admin Console](https://adminconsole.adobe.com/) zurück und navigieren Sie zu Ihrem neu erstellten Produktprofil. Wählen Sie die Registerkarte **[!UICONTROL API-Anmeldeinformationen]** aus, um eine Liste der verknüpften Projekte aufzurufen. Das Projekt, das in Developer Console verwendet wird, wo Sie das Produktprofil dem technischen Konto zugewiesen haben, wird in der Liste der Anmeldeinformationen angezeigt. Der Name der jeweiligen API-Anmeldeinformationen besteht aus dem Projektnamen mit einer zufällig generierten, am Ende angehängten Zahl. Wählen Sie bestimmte Anmeldeinformationen aus, um das Bedienfeld [!UICONTROL Details] zu öffnen.
+Um zu bestätigen, dass Ihre Einstellungen auf das Konto angewendet wurden. kehren Sie zu [Admin Console](https://adminconsole.adobe.com/) zurück und navigieren Sie zu Ihrem neu erstellten Produktprofil. Wählen Sie die Registerkarte **[!UICONTROL API-Anmeldedaten]** aus, um eine Liste der verknüpften Projekte aufzurufen. Das Projekt, das in Developer Console verwendet wird, wo Sie das Produktprofil dem technischen Konto zugewiesen haben, wird in der Liste der Anmeldedaten angezeigt. Der Name der jeweiligen API-Anmeldedaten besteht aus dem Projektnamen mit einer zufällig generierten, am Ende angehängten Zahl. Wählen Sie bestimmte Anmeldedaten aus, um das Bedienfeld [!UICONTROL Details] zu öffnen.
 
-![Ein Produktprofil in Admin Console mit hervorgehobener Registerkarte „API-Anmeldeinformationen“ und einer hervorgehobenen Reihe von Projekt-Anmeldeinformationen.](./images/permissions/confirm-credentials-in-admin-console.png)
+![Ein Produktprofil in Admin Console mit hervorgehobener Registerkarte „API-Anmeldedaten“ und einer hervorgehobenen Reihe von Projekt-Anmeldedaten.](./images/permissions/confirm-credentials-in-admin-console.png)
 
-Das Bedienfeld [!UICONTROL Details] enthält Angaben zu den jeweiligen API-Anmeldeinformationen, einschließlich der zugehörigen technischen ID, des API-Schlüssels, des Erstellungsdatums und des Datums der letzten Änderung sowie der zugehörigen Adobe-Produkte.
+Das Bedienfeld [!UICONTROL Details] enthält Angaben zu den jeweiligen API-Anmeldedaten, einschließlich der zugehörigen technischen ID, des API-Schlüssels, des Erstellungsdatums und des Datums der letzten Änderung sowie der zugehörigen Adobe-Produkte.
 
-![Das hervorgehobene Bedienfeld „Details“ für API-Anmeldeinforamtionen in Admin Console.](./images/permissions/admin-console-details-panel.png)
+![Das hervorgehobene Bedienfeld „Details“ für API-Anmeldedaten in der Admin Console.](./images/permissions/admin-console-details-panel.png)
 
 ## Nächste Schritte
 

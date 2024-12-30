@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; adobe definierte Funktionen; sql;
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;von Adobe definierte Funktionen;SQL;
 solution: Experience Platform
-title: Adobe-definierte SQL-Funktionen in Query Service
-description: Dieses Dokument enthält Informationen zu Adobe-definierten Funktionen, die in Adobe Experience Platform Query Service verfügbar sind.
+title: Adobe-definierte SQL-Funktionen im Abfrage-Service
+description: Dieses Dokument enthält Informationen zu Adobe-definierten Funktionen, die im Abfrage-Service von Adobe Experience Platform verfügbar sind.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 13%
 
 ---
 
-# Adobe-definierte SQL-Funktionen in Query Service
+# Adobe-definierte SQL-Funktionen im Abfrage-Service
 
-Adobe-definierte Funktionen, hier ADFs genannt, sind vordefinierte Funktionen in Adobe Experience Platform Query Service, mit denen gängige geschäftsbezogene Aufgaben für [!DNL Experience Event]-Daten durchgeführt werden können. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html), wie sie in Adobe Analytics vorhanden sind.
+Adobe-definierte Funktionen, hier als ADFs bezeichnet, sind vordefinierte Funktionen im Adobe Experience Platform Query Service, die Sie bei der Durchführung gängiger geschäftsbezogener Aufgaben im Zusammenhang mit [!DNL Experience Event]-Daten unterstützen. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) wie die in Adobe Analytics.
 
 Dieses Dokument enthält Informationen zu Adobe-definierten Funktionen, die in [!DNL Query Service] verfügbar sind.
 
 >[!NOTE]
 >
->Die Experience Cloud ID (ECID) wird auch als MCID bezeichnet und wird weiterhin in Namespaces verwendet.
+>Die Experience Cloud-ID (ECID) wird auch als MCID bezeichnet und weiterhin in Namespaces verwendet.
 
 ## Window-Funktionen {#window-functions}
 
-Ein großer Teil der Business-Logik setzt voraus, die Kontaktpunkte (bzw. „Touchpoints“) zu erfassen, an denen ein Kunde mit Ihrem Unternehmen interagiert, und diese nach dem Zeitpunkt ihres Eintretens zu sortieren. Diese Unterstützung wird von [!DNL Spark] SQL in Form von Fensterfunktionen bereitgestellt. Window-Funktionen sind Teil von Standard-SQL und werden von einer Vielzahl anderer SQL-Engines unterstützt.
+Ein großer Teil der Business-Logik setzt voraus, die Kontaktpunkte (bzw. „Touchpoints“) zu erfassen, an denen ein Kunde mit Ihrem Unternehmen interagiert, und diese nach dem Zeitpunkt ihres Eintretens zu sortieren. Diese Unterstützung wird durch [!DNL Spark] SQL in Form von Fensterfunktionen bereitgestellt. Window-Funktionen sind Teil von Standard-SQL und werden von einer Vielzahl anderer SQL-Engines unterstützt.
 
 Eine Window-Funktion aktualisiert eine Aggregation und gibt für jede Zeile in Ihrer sortierten Untergruppe ein einzelnes Element zurück. Die einfachste Aggregationsfunktion lautet `SUM()`. `SUM()` berechnet aus den von Ihnen angegebenen Zeilen die Summe. Wenden Sie `SUM()` stattdessen auf ein Fenster an, wird es in eine Window-Funktion umgewandelt und die kumulative Summe für jede Zeile ausgegeben.
 
-Die meisten der [!DNL Spark] SQL-Helfer sind Window-Funktionen, die jede Zeile in Ihrem Fenster aktualisieren, wobei der Status dieser Zeile hinzugefügt wird.
+Der Großteil der [!DNL Spark] SQL-Helper sind Fensterfunktionen, die jede Zeile im Fenster aktualisieren, wobei der Status dieser Zeile hinzugefügt wird.
 
 **Abfragesyntax**
 
@@ -37,17 +37,17 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 | Parameter | Beschreibung | Beispiel |
 | --------- | ----------- | ------- |
-| `{PARTITION}` | Eine auf einer Spalte oder einem verfügbaren Feld basierende Untergruppe von Zeilen. | `PARTITION BY endUserIds._experience.mcid.id` |
-| `{ORDER}` | Eine Spalte oder ein verfügbares Feld, mit der die Teilmenge(n) sortiert wird(n). | `ORDER BY timestamp` |
+| `{PARTITION}` | Eine Untergruppe von Zeilen basierend auf einer Spalte oder einem verfügbaren Feld. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | Eine Spalte oder ein verfügbares Feld, die bzw. das zum Sortieren der Teilmenge oder Zeilen verwendet wird. | `ORDER BY timestamp` |
 | `{FRAME}` | Eine Untergruppe der Zeilen in einer Partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionization
 
-Wenn Sie mit [!DNL Experience Event] -Daten arbeiten, die von einer Website, einer Mobile App, einem interaktiven Sprachreaktionssystem oder einem anderen Kanal für Kundeninteraktionen stammen, ist es hilfreich, Ereignisse um einen verwandten Aktivitätszeitraum zu gruppieren. In der Regel haben Sie eine bestimmte Absicht, Ihre Aktivität zu steuern, wie z. B. die Suche nach einem Produkt, die Zahlung einer Rechnung, das Prüfen des Kontostandes, das Ausfüllen einer Anwendung usw.
+Wenn Sie mit [!DNL Experience Event] Daten arbeiten, die von einer Website, einer Mobile App, einem interaktiven Sprachantwortsystem oder einem anderen Kundeninteraktionskanal stammen, ist es hilfreich, wenn Ereignisse um einen damit verbundenen Zeitraum gruppiert werden können. In der Regel verfolgen Sie eine bestimmte Absicht, Ihre Aktivität voranzutreiben, z. B. die Suche nach einem Produkt, die Bezahlung einer Rechnung, die Überprüfung des Kontostands, das Ausfüllen einer Anwendung usw.
 
-Diese Gruppierung oder Sitzungserstellung von Daten hilft bei der Zuordnung der Ereignisse, um mehr Kontext über das Kundenerlebnis zu finden.
+Diese Gruppierung oder Sitzungserstellung von Daten hilft bei der Verknüpfung der Ereignisse, um mehr Kontext über das Kundenerlebnis zu erfahren.
 
-Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation zu [kontextabhängigen Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [Kontextabhängige Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Abfragesyntax**
 
@@ -57,10 +57,10 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Das Zeitstempelfeld im Datensatz. |
+| `{TIMESTAMP}` | Das Zeitstempelfeld, das im Datensatz gefunden wurde. |
 | `{EXPIRATION_IN_SECONDS}` | Die Anzahl der Sekunden, die zwischen Ereignissen erforderlich sind, um das Ende der aktuellen Sitzung und den Beginn einer neuen Sitzung zu qualifizieren. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions) .
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -96,7 +96,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
+Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -104,14 +104,14 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` an
 
 | Parameter | Beschreibung |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | Die Zeitdifferenz in Sekunden zwischen dem aktuellen Datensatz und dem vorherigen Datensatz. |
-| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1 für den Schlüssel, der in der Funktion `PARTITION BY` der Window-Funktion definiert ist. |
+| `{TIMESTAMP_DIFF}` | Der Zeitunterschied in Sekunden zwischen dem aktuellen Datensatz und dem vorherigen Datensatz. |
+| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1, für den Schlüssel, der in der `PARTITION BY` der Fensterfunktion definiert ist. |
 | `{IS_NEW}` | Ein boolescher Wert, der angibt, ob ein Datensatz der erste einer Sitzung ist. |
 | `{DEPTH}` | Die Tiefe des aktuellen Datensatzes innerhalb der Sitzung. |
 
 ### SESS_START_IF
 
-Diese Abfrage gibt den Sitzungsstatus für die aktuelle Zeile basierend auf dem aktuellen Zeitstempel und dem angegebenen Ausdruck zurück und startet eine neue Sitzung mit der aktuellen Zeile.
+Diese Abfrage gibt den Status der Sitzung für die aktuelle Zeile basierend auf dem aktuellen Zeitstempel und dem gegebenen Ausdruck zurück und startet eine neue Sitzung mit der aktuellen Zeile.
 
 **Abfragesyntax**
 
@@ -121,10 +121,10 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Das Zeitstempelfeld im Datensatz. |
-| `{TEST_EXPRESSION}` | Ein Ausdruck, mit dem Sie die Datenfelder überprüfen möchten. Beispiel: `application.launches > 0`. |
+| `{TIMESTAMP}` | Das Zeitstempelfeld, das im Datensatz gefunden wurde. |
+| `{TEST_EXPRESSION}` | Ein Ausdruck, mit dem Sie die Felder der Daten überprüfen möchten. Beispiel: `application.launches > 0`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions) .
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -161,7 +161,7 @@ SELECT
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
+Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -169,14 +169,14 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` an
 
 | Parameter | Beschreibung |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | Die Zeitdifferenz in Sekunden zwischen dem aktuellen Datensatz und dem vorherigen Datensatz. |
-| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1 für den Schlüssel, der in der Funktion `PARTITION BY` der Window-Funktion definiert ist. |
+| `{TIMESTAMP_DIFF}` | Der Zeitunterschied in Sekunden zwischen dem aktuellen Datensatz und dem vorherigen Datensatz. |
+| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1, für den Schlüssel, der in der `PARTITION BY` der Fensterfunktion definiert ist. |
 | `{IS_NEW}` | Ein boolescher Wert, der angibt, ob ein Datensatz der erste einer Sitzung ist. |
 | `{DEPTH}` | Die Tiefe des aktuellen Datensatzes innerhalb der Sitzung. |
 
 ### SESS_END_IF
 
-Diese Abfrage gibt den Sitzungsstatus für die aktuelle Zeile basierend auf dem aktuellen Zeitstempel und dem angegebenen Ausdruck zurück, beendet die aktuelle Sitzung und startet in der nächsten Zeile eine neue Sitzung.
+Diese Abfrage gibt den Status der Sitzung für die aktuelle Zeile basierend auf dem aktuellen Zeitstempel und dem angegebenen Ausdruck zurück, beendet die aktuelle Sitzung und startet eine neue Sitzung in der nächsten Zeile.
 
 **Abfragesyntax**
 
@@ -186,10 +186,10 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Das Zeitstempelfeld im Datensatz. |
-| `{TEST_EXPRESSION}` | Ein Ausdruck, mit dem Sie die Datenfelder überprüfen möchten. Beispiel: `application.launches > 0`. |
+| `{TIMESTAMP}` | Das Zeitstempelfeld, das im Datensatz gefunden wurde. |
+| `{TEST_EXPRESSION}` | Ein Ausdruck, mit dem Sie die Felder der Daten überprüfen möchten. Beispiel: `application.launches > 0`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions) .
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -226,7 +226,7 @@ SELECT
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
+Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -234,21 +234,21 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` an
 
 | Parameter | Beschreibung |
 | ---------- | ------------- |
-| `{TIMESTAMP_DIFF}` | Die Zeitdifferenz in Sekunden zwischen dem aktuellen Datensatz und dem vorherigen Datensatz. |
-| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1 für den Schlüssel, der in der Funktion `PARTITION BY` der Window-Funktion definiert ist. |
+| `{TIMESTAMP_DIFF}` | Der Zeitunterschied in Sekunden zwischen dem aktuellen Datensatz und dem vorherigen Datensatz. |
+| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1, für den Schlüssel, der in der `PARTITION BY` der Fensterfunktion definiert ist. |
 | `{IS_NEW}` | Ein boolescher Wert, der angibt, ob ein Datensatz der erste einer Sitzung ist. |
 | `{DEPTH}` | Die Tiefe des aktuellen Datensatzes innerhalb der Sitzung. |
 
 
 ## Pathing
 
-Pfade können verwendet werden, um die Interaktionstiefe des Kunden zu verstehen, die beabsichtigten Schritte eines Erlebnisses wie geplant zu bestätigen und potenzielle Schmerzpunkte zu identifizieren, die sich auf den Kunden auswirken.
+Die Pfade können verwendet werden, um die Interaktionstiefe des Kunden zu verstehen, zu bestätigen, dass die beabsichtigten Schritte eines Erlebnisses wie vorgesehen funktionieren, und potenzielle Probleme zu identifizieren, die sich auf den Kunden auswirken.
 
-Die folgenden ADFs unterstützen die Erstellung von Pfadansichten aus ihren vorherigen und nächsten Beziehungen. Sie können vorherige und nächste Seiten erstellen oder mehrere Ereignisse durchlaufen, um Pfade zu erstellen.
+Die folgenden ADFs unterstützen die Erstellung von Pfadansichten aus ihren vorherigen und nächsten Beziehungen. Sie können vorherige Seiten und nächste Seiten erstellen oder mehrere Ereignisse durchlaufen, um Pfade zu erstellen.
 
 ### Vorherige Seite
 
-Legt den vorherigen Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Funktion `WINDOW` mit einem Frame von `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` konfiguriert ist, durch das die ADF die aktuelle Zeile und alle nachfolgenden Zeilen anzeigt.
+Legt den vorherigen Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Funktion `WINDOW` mit einem Frame konfiguriert ist, in dem `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` ADF so eingestellt wird, dass die aktuelle Zeile und alle nachfolgenden Zeilen betrachtet werden.
 
 **Abfragesyntax**
 
@@ -259,10 +259,10 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{KEY}` | Die Spalte oder das Feld aus dem Ereignis. |
-| `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der anzeigt, ob Null `{KEY}` -Werte ignoriert werden sollen. Der Standardwert ist `false`. |
+| `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Standardmäßig ist der Wert 1. |
+| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob `{KEY}` Nullwerte ignoriert werden sollen. Standardmäßig ist der Wert `false`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions) .
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -295,11 +295,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `previous_page` angegeben. Der Wert in der Spalte `previous_page` basiert auf dem in der ADF verwendeten `{KEY}`.
+Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `previous_page` angegeben. Der Wert in der Spalte `previous_page` basiert auf dem im automatischen Dokumenteinzug verwendeten `{KEY}`.
 
 ### Nächste Seite
 
-Legt den nächsten Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Funktion `WINDOW` mit einem Frame von `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` konfiguriert ist, durch das die ADF die aktuelle Zeile und alle nachfolgenden Zeilen anzeigt.
+Legt den nächsten Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Funktion `WINDOW` mit einem Frame konfiguriert ist, in dem `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` ADF so eingestellt wird, dass die aktuelle Zeile und alle nachfolgenden Zeilen betrachtet werden.
 
 **Abfragesyntax**
 
@@ -310,10 +310,10 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{KEY}` | Die Spalte oder das Feld aus dem Ereignis. |
-| `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der anzeigt, ob Null `{KEY}` -Werte ignoriert werden sollen. Der Standardwert ist `false`. |
+| `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Standardmäßig ist der Wert 1. |
+| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob `{KEY}` Nullwerte ignoriert werden sollen. Standardmäßig ist der Wert `false`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions) .
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -347,15 +347,15 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `previous_page` angegeben. Der Wert in der Spalte `previous_page` basiert auf dem in der ADF verwendeten `{KEY}`.
+Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `previous_page` angegeben. Der Wert in der Spalte `previous_page` basiert auf dem im automatischen Dokumenteinzug verwendeten `{KEY}`.
 
 ## Zeit zwischen
 
-Mit der Zeit-zwischen können Sie das latente Kundenverhalten innerhalb eines bestimmten Zeitraums vor oder nach dem Eintreten eines Ereignisses untersuchen.
+Mithilfe der Zeitspanne zwischen den Ereignissen können Sie das latente Kundenverhalten innerhalb eines bestimmten Zeitraums vor oder nach dem Eintreten eines Ereignisses untersuchen.
 
 ### Zeit zwischen vorheriger Übereinstimmung
 
-Diese Abfrage gibt eine Zahl zurück, die die Zeiteinheit seit der Anzeige des vorherigen übereinstimmenden Ereignisses darstellt. Wenn kein übereinstimmendes Ereignis gefunden wurde, wird null zurückgegeben.
+Diese Abfrage gibt eine Zahl zurück, die die Zeiteinheit darstellt, seit das vorherige übereinstimmende Ereignis gesehen wurde. Wenn kein übereinstimmendes Ereignis gefunden wurde, wird null zurückgegeben.
 
 **Abfragesyntax**
 
@@ -367,11 +367,11 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Ein Zeitstempelfeld im Datensatz, das bei allen Ereignissen aufgefüllt ist. |
-| `{EVENT_DEFINITION}` | Der Ausdruck, der das vorherige Ereignis qualifizieren soll. |
-| `{TIME_UNIT}` | Die Einheit der Ausgabe. Mögliche Werte sind Tage, Stunden, Minuten und Sekunden. Standardmäßig beträgt der Wert Sekunden. |
+| `{TIMESTAMP}` | Ein Zeitstempelfeld im Datensatz, das bei allen Ereignissen ausgefüllt wird. |
+| `{EVENT_DEFINITION}` | Der Ausdruck, um das vorherige Ereignis zu qualifizieren. |
+| `{TIME_UNIT}` | Die Ausgabeeinheit. Mögliche Werte sind Tage, Stunden, Minuten und Sekunden. Standardmäßig ist der Wert Sekunden. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions) .
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -415,11 +415,11 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `average_minutes_since_registration` angegeben. Der Wert in der Spalte `average_minutes_since_registration` entspricht der Zeitdifferenz zwischen dem aktuellen und dem vorherigen Ereignis. Die Zeiteinheit wurde zuvor in `{TIME_UNIT}` definiert.
+Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `average_minutes_since_registration` angegeben. Der Wert in der `average_minutes_since_registration` Spalte ist der Zeitunterschied zwischen dem aktuellen und dem vorherigen Ereignis. Die Zeiteinheit wurde zuvor in der `{TIME_UNIT}` definiert.
 
 ### Zeit zwischen nächster Übereinstimmung
 
-Diese Abfrage gibt eine negative Zahl zurück, die die Zeiteinheit hinter dem nächsten übereinstimmenden Ereignis darstellt. Wenn kein übereinstimmendes Ereignis gefunden wird, wird null zurückgegeben.
+Diese Abfrage gibt eine negative Zahl zurück, die die Zeiteinheit darstellt, die hinter dem nächsten übereinstimmenden Ereignis liegt. Wenn kein übereinstimmendes Ereignis gefunden wird, wird null zurückgegeben.
 
 **Abfragesyntax**
 
@@ -429,11 +429,11 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{TIMESTAMP}` | Ein Zeitstempelfeld im Datensatz, das bei allen Ereignissen aufgefüllt ist. |
-| `{EVENT_DEFINITION}` | Der Ausdruck, der das nächste Ereignis qualifizieren soll. |
-| `{TIME_UNIT}` | (Optional) Die AusgabEinheit. Mögliche Werte sind Tage, Stunden, Minuten und Sekunden. Standardmäßig beträgt der Wert Sekunden. |
+| `{TIMESTAMP}` | Ein Zeitstempelfeld im Datensatz, das bei allen Ereignissen ausgefüllt wird. |
+| `{EVENT_DEFINITION}` | Der Ausdruck, um das nächste Ereignis zu qualifizieren. |
+| `{TIME_UNIT}` | (Optional) Die Ausgabeeinheit. Mögliche Werte sind Tage, Stunden, Minuten und Sekunden. Standardmäßig ist der Wert Sekunden. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions) .
+Eine Erläuterung der Parameter innerhalb der `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -477,14 +477,14 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `average_minutes_until_order_confirmation` angegeben. Der Wert in der Spalte `average_minutes_until_order_confirmation` entspricht der Zeitdifferenz zwischen dem aktuellen und dem nächsten Ereignis. Die Zeiteinheit wurde zuvor in `{TIME_UNIT}` definiert.
+Für die angegebene Beispielabfrage werden die Ergebnisse in der Spalte `average_minutes_until_order_confirmation` angegeben. Der Wert in der Spalte `average_minutes_until_order_confirmation` ist der Zeitunterschied zwischen dem aktuellen und dem nächsten Ereignis. Die Zeiteinheit wurde zuvor in der `{TIME_UNIT}` definiert.
 
 ## Nächste Schritte
 
-Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mit [!DNL Query Service] auf Ihre eigenen [!DNL Experience Event]-Datensätze zuzugreifen. Weitere Informationen zu Authoring-Abfragen in [!DNL Query Service] finden Sie in der Dokumentation zum [Erstellen von Abfragen](../best-practices/writing-queries.md).
+Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mithilfe von [!DNL Query Service] auf Ihre eigenen [!DNL Experience Event]-Datensätze zuzugreifen. Weitere Informationen zum Erstellen von Abfragen in [!DNL Query Service] finden Sie in der Dokumentation unter [Erstellen von Abfragen](../best-practices/writing-queries.md).
 
 ## Zusätzliche Ressourcen
 
-Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Darüber hinaus werden im Video auch Beispiele für einzelne Eigenschaften in einem XDM-Objekt verwendet, Adobe-definierte Funktionen verwendet und CREATE TABLE AS SELECT (CTAS) verwendet.
+Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Darüber hinaus verwendet das Video Beispiele für einzelne Eigenschaften in einem XDM-Objekt, für die Verwendung von Adobe-definierten Funktionen und für die Verwendung von CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)

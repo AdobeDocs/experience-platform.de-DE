@@ -1,6 +1,6 @@
 ---
-title: Feature Engineering SQL-Erweiterung
-description: Erfahren Sie mehr über die SQL-Erweiterung der Data Distiller-Funktionen zur Vorverarbeitung von Daten für eine erweiterte statistische Modellierung. Sie umfasst die verfügbaren Techniken zur Extraktion, Transformation und Auswahl von Funktionen.
+title: SQL-Erweiterung für Feature Engineering
+description: Erfahren Sie mehr über die SQL-Erweiterung Data Distiller Feature Engineering zur Vorverarbeitung von Daten für die erweiterte statistische Modellierung. Es behandelt die verfügbaren Techniken zur Extraktion, Transformation und Auswahl von Funktionen.
 role: Developer
 exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
 source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
@@ -10,65 +10,65 @@ ht-degree: 1%
 
 ---
 
-# Funktionstechnische SQL-Erweiterung
+# SQL-Erweiterung für Feature Engineering
 
 >[!AVAILABILITY]
 >
->Diese Funktion steht Kunden zur Verfügung, die das Data Distiller-Add-on erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
+>Diese Funktion steht Kunden zur Verfügung, die das Add-on Data Distiller erworben haben. Weitere Informationen erhalten Sie bei Ihrer bzw. Ihrem Adobe-Support-Mitarbeitenden.
 
-Um Ihre Anforderungen an die Funktionsentwicklung zu erfüllen, verwenden Sie die SQL Transformer-Erweiterung, um die Vorverarbeitung Ihrer Daten zu vereinfachen und zu automatisieren. Verwenden Sie diese Erweiterung, um Funktionen zu erstellen und nahtlose Experimente mit verschiedenen Techniken der Funktionsentwicklung zu genießen, einschließlich der Zuordnung dieser Funktionen zu Modellen. Für dezentrales Computing konzipiert, können Sie Funktionen für große Datensätze parallel und skalierbar entwickeln und damit die für die Datenvorverarbeitung erforderliche Zeit mit der Data Distiller-Funktionstechnik-SQL-Erweiterung erheblich verkürzen.
+Verwenden Sie die SQL Transformer-Erweiterung, um die Vorverarbeitung Ihrer Daten zu vereinfachen und zu automatisieren, um Ihre Funktionsanforderungen zu erfüllen. Verwenden Sie diese Erweiterung, um Funktionen zu erstellen und nahtlose Experimente mit verschiedenen Techniken der Funktionstechnik zu genießen, einschließlich der Verknüpfung mit Modellen. Das für verteilte Datenverarbeitung entwickelte Feature Engineering kann für große Datensätze parallel und skalierbar durchgeführt werden, wodurch die für die Datenvorverarbeitung erforderliche Zeit mit der SQL-Erweiterung Data Distiller Feature Engineering erheblich verkürzt wird.
 
-## Technischer Überblick {#technique-overview}
+## Übersicht über die Technik {#technique-overview}
 
-Die Funktionen der Funktionsentwicklung decken drei Hauptbereiche ab: Funktionsextrahierung, Funktionsumwandlung und Funktionsauswahl. Jeder Bereich enthält spezifische Funktionen, die dazu bestimmt sind, Ihre Datenvorverarbeitung zu extrahieren, zu konvertieren, zu fokussieren und zu verbessern.
+Die Funktionen des Feature Engineering decken drei Hauptbereiche ab: Feature Extraction, Feature Transformation und Feature Selection. Jeder Bereich beinhaltet spezielle Funktionen, die entwickelt wurden, um Ihre Datenvorverarbeitung zu extrahieren, zu konvertieren, zu fokussieren und zu verbessern.
 
 ### Funktionsextraktion {#feature-extraction}
 
-Extrahieren Sie relevante Informationen aus Ihren Daten, insbesondere Textdaten, und konvertieren Sie sie in ein numerisches Format, das von den unterstützten Modellen genutzt, umgewandelt und abgeleitet werden kann. Verwenden Sie die folgenden Funktionen, um die Funktionsextraktion durchzuführen:
+Extrahieren Sie relevante Informationen aus Ihren -Daten, insbesondere Textdaten, und konvertieren Sie sie in ein numerisches Format, das die unterstützten Modelle nutzen oder transformieren und Datensätze ableiten können. Verwenden Sie die folgenden Funktionen, um die Funktionsextraktion durchzuführen:
 
-- **[Texttransformator](./feature-transformation.md#textual-transformations)**: Konvertieren Sie Textdaten in numerische Funktionen.
-- **[Zähler-Vectorizer](./feature-transformation.md#countvectorizer)**: Wandeln Sie eine Sammlung von Textdokumenten in Vektoren von Token-Zählungen um.
-- **[N-Gramm](./feature-transformation.md#ngram)**: Generiert Sequenzen von n Gramm aus Textdaten.
-- **[Behobene Wörter entfernen](./feature-transformation.md#stopwordsremover)**: Filtern Sie häufige Wörter heraus, die keine bedeutende Bedeutung haben.
-- **[TF-IDF](./feature-transformation.md#tf-idf)**: Messen Sie die Bedeutung von Wörtern in einem Dokument in Bezug auf einen Korpus.
-- **[Tokenizer](./feature-transformation.md#tokenizer)**: Unterteilen Sie Text in einzelne Begriffe (Wörter).
-- **[Word2VEC](./feature-transformation.md#word2vec)**: Ordnen Sie Wörter zu Vektoren fester Größe zu und erstellen Sie Worteinbettungen.
+- **[Texttransformator](./feature-transformation.md#textual-transformations)**: Konvertiert Textdaten in numerische Funktionen.
+- **[Count Vectorizer](./feature-transformation.md#countvectorizer)**: Wandelt eine Sammlung von Textdokumenten in Vektoren der Token-Anzahl um.
+- **[N-Gramm](./feature-transformation.md#ngram)**: Generieren von N-Gramm-Sequenzen aus Textdaten.
+- **[Stoppwörter entfernen](./feature-transformation.md#stopwordsremover)**: Filtern Sie häufig verwendete Wörter heraus, die keine signifikante Bedeutung haben.
+- **[TF-IDF](./feature-transformation.md#tf-idf)**: Messen der Bedeutung von Wörtern in einem Dokument in Bezug auf ein Korpus.
+- **[Tokenizer](./feature-transformation.md#tokenizer)**: Schlüsselt Text in einzelne Begriffe (Wörter) auf.
+- **[Word2Vec](./feature-transformation.md#word2vec)**: Ordnen Sie Wörter Vektoren fester Größe zu und erstellen Sie Worteinbettungen.
 
-### Merkmalumwandlung {#feature-transformation}
+### Funktionstransformation {#feature-transformation}
 
-Verwenden Sie nicht nur Funktionen zum Extrahieren, sondern auch die folgenden allgemeinen Transformatoren, um Ihre Funktionen für erweiterte statistische Modelle und abgeleitete Datensätze vorzubereiten. Wenden Sie Skalierung, Normalisierung oder Kodierung an, um sicherzustellen, dass Ihre Funktionen auf derselben Skala und mit einer ähnlichen Verteilung vorliegen.
+Verwenden Sie neben dem Extrahieren von Funktionen die folgenden allgemeinen Transformatoren, um Ihre Funktionen für erweiterte statistische Modelle und abgeleitete Datensätze vorzubereiten. Wenden Sie Skalierung, Normalisierung oder Kodierung an, um sicherzustellen, dass sich Ihre Funktionen auf derselben Skalierung befinden und eine ähnliche Verteilung haben.
 
 #### Allgemeine Transformatoren
 
-Nachstehend finden Sie eine Liste von Tools zur Verarbeitung einer Vielzahl von Datentypen, mit denen Sie Ihren Datenvorverarbeitungs-Workflow verbessern können.
+Nachfolgend finden Sie eine Liste von Tools zur Verarbeitung einer Vielzahl von Datentypen zur Verbesserung Ihres Workflows für die Datenvorverarbeitung.
 
-- **[Numerischer Imputer](./feature-transformation.md#numeric-imputer)**: Füllen Sie fehlende Werte in numerischen Spalten mit einem bestimmten Wert aus, z. B. Mittelwert oder Median.
-- **[String-Imputer](./feature-transformation.md#string-imputer)**: Ersetzen Sie fehlende Zeichenfolgenwerte durch einen angegebenen Wert, z. B. die häufigste Zeichenfolge in der Spalte.
-- **[Vector Assembler](./feature-transformation.md#vector-assembler)**: Kombinieren Sie mehrere Spalten in einer einzigen Vektorspalte, um Daten für Modelle für maschinelles Lernen vorzubereiten.
-- **[Boolescher Rechner](./feature-transformation.md#boolean-imputer)**: Füllen Sie fehlende boolesche Werte mit einem angegebenen Wert aus, z. B. `true` oder `false`.
+- **[Numerischer Computer](./feature-transformation.md#numeric-imputer)**: Füllen Sie fehlende Werte in numerischen Spalten mit einem angegebenen Wert, z. B. dem Mittelwert oder Median.
+- **[Zeichenfolgencomputer](./feature-transformation.md#string-imputer)**: Ersetzen Sie fehlende Zeichenfolgenwerte durch einen angegebenen Wert, z. B. die häufigste Zeichenfolge in der Spalte.
+- **[Vektor-Assembler](./feature-transformation.md#vector-assembler)**: Kombinieren Sie mehrere Spalten in einer einzelnen Vektorspalte, um Daten für Modelle für maschinelles Lernen vorzubereiten.
+- **[Boolescher Computer](./feature-transformation.md#boolean-imputer)**: Füllen Sie fehlende boolesche Werte mit einem angegebenen Wert, z. B. `true` oder `false`.
 
 #### Numerische Transformatoren
 
-Wenden Sie diese Verfahren an, um numerische Daten effektiv zu verarbeiten und zu skalieren und so die Modellleistung zu verbessern.
+Wenden Sie diese Techniken an, um numerische Daten effektiv zu verarbeiten und zu skalieren und so die Modellleistung zu verbessern.
 
-- **[Binarizer](./feature-transformation.md#binarizer)**: Konvertieren Sie kontinuierliche Funktionen in binäre Werte basierend auf einem Schwellenwert.
-- **[Bucketizer](./feature-transformation.md#bucketizer)**: Ordnen Sie kontinuierliche Funktionen in separaten Behältern zu.
-- **[Min-Max-Skalierung](./feature-transformation.md#minmaxscaler)**: Skaliert Funktionen in einen bestimmten Bereich um, normalerweise [0, 1].
-- **[Max Abs Scaler](./feature-transformation.md#maxabsscaler)**: Skaliert Funktionen in den Bereich [-1, 1] um, ohne die Sparsamkeit zu ändern.
-- **[Normalizer](./feature-transformation.md#normalizer)**: Normalisieren Sie Vektoren so, dass sie die Standardeinheit aufweisen.
-- **[Quantile Discretizer](./feature-transformation.md#quantilediscretizer)**: Konvertieren Sie kontinuierliche Funktionen in kategorische Merkmale, indem Sie sie in Quantile unterteilen.
-- **[Standardskalierer](./feature-transformation.md#standardscaler)**: Normalisieren Sie Funktionen so, dass sie eine Standardabweichung und/oder einen Nullmittelwert aufweisen.
+- **[Binarizer](./feature-transformation.md#binarizer)**: Konvertiert fortlaufende Funktionen in Binärwerte basierend auf einem Schwellenwert.
+- **[Bucketizer](./feature-transformation.md#bucketizer)**: Ordnen Sie kontinuierliche Funktionen in diskreten Buckets zu.
+- **[Min-Max Scaler](./feature-transformation.md#minmaxscaler)**: Skalieren Sie die Funktionen auf einen bestimmten Bereich, normalerweise [0, 1].
+- **[Max Abs Scaler](./feature-transformation.md#maxabsscaler)**: Skalieren Sie die Funktionen auf den Bereich [-1, 1] ohne die Sparsity zu verändern.
+- **[Normalizer](./feature-transformation.md#normalizer)**: Normalisieren Sie Vektoren, um eine Einheitsnorm zu erhalten.
+- **[Quantile Discretizer](./feature-transformation.md#quantilediscretizer)**: Wandelt kontinuierliche Funktionen in kategoriale Funktionen um, indem sie in Quantile klassifiziert werden.
+- **[Standardskalierer](./feature-transformation.md#standardscaler)**: Normalisieren Sie Funktionen so, dass sie eine Standardabweichung von der Einheit und/oder einen Nullmittelwert aufweisen.
 
-#### Kategorische Transformatoren
+#### Kategorietransformatoren
 
-Verwenden Sie diese Transformatoren, um kategorische Daten in Formate zu konvertieren und zu kodieren, die für Modelle für maschinelles Lernen geeignet sind.
+Verwenden Sie diese Transformatoren, um kategoriale Daten in Formate zu konvertieren und zu kodieren, die für Modelle für maschinelles Lernen geeignet sind.
 
-- **[String-Indexer](./feature-transformation.md#stringindexer)**: Konvertieren Sie kategorische Zeichenfolgendaten in numerische Indizes.
-- **[Ein Hot Encoder](./feature-transformation.md#onehotencoder)**: Ordnen Sie kategorische Daten binären Vektoren zu.
+- **[String-Indexer](./feature-transformation.md#stringindexer)**: Konvertiert kategoriale Zeichenfolgendaten in numerische Indizes.
+- **[One Hot Encoder](./feature-transformation.md#onehotencoder)**: Kategoriale Daten in binäre Vektoren zuordnen.
 
 ### Funktionsauswahl {#feature-selection}
 
-Anschließend konzentrieren Sie sich auf die Auswahl einer Untergruppe der wichtigsten Funktionen aus dem Originalsatz. Dieser Prozess trägt dazu bei, die Dimensionalität Ihrer Daten zu reduzieren, die Verarbeitung Ihrer Modelle zu vereinfachen und die Gesamtleistung des Modells zu verbessern.
+Als Nächstes konzentrieren Sie sich auf die Auswahl einer Teilmenge der wichtigsten Funktionen aus dem ursprünglichen Satz. Dieser Prozess trägt dazu bei, die Dimensionalität Ihrer Daten zu reduzieren, wodurch die Verarbeitung Ihrer Modelle erleichtert und die Gesamtleistung des Modells verbessert wird.
 
 <!-- Commented out as it 
 ## Supported machine learning algorithms {#supported-ml-algorithms}
@@ -88,10 +88,10 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 - **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. -->
 
-## Umsetzung der OPTIONS-Klausel {#options-clause}
+## Implementierung der OPTIONS-Klausel {#options-clause}
 
-Wenn Sie Ihr Modell definieren, verwenden Sie die `OPTIONS`-Klausel, um den Algorithmus und seine Parameter anzugeben. Legen Sie zunächst den Parameter `type` fest, um den verwendeten Algorithmus anzugeben, z. B. `K-Means`. Definieren Sie dann die relevanten Parameter in der `OPTIONS`-Klausel als Schlüssel-Wert-Paare, um Ihr Modell zu optimieren. Wenn Sie bestimmte Parameter nicht anpassen möchten, wendet das System die Standardeinstellungen an. Die Funktionen und Standardwerte der einzelnen Parameter finden Sie in der entsprechenden Dokumentation .
+Verwenden Sie beim Definieren des Modells die `OPTIONS`-Klausel, um den Algorithmus und seine Parameter anzugeben. Legen Sie zunächst den `type` fest, um den verwendeten Algorithmus anzugeben, z. B. `K-Means`. Definieren Sie dann die relevanten Parameter in der `OPTIONS`-Klausel als Schlüssel-Wert-Paare, um Ihr Modell fein abzustimmen. Wenn Sie bestimmte Parameter nicht anpassen möchten, wendet das System die Standardeinstellungen an. Informationen zur Funktion und zu den Standardwerten der einzelnen Parameter finden Sie in der entsprechenden Dokumentation .
 
 ### Nächste Schritte
 
-Nachdem Sie die in diesem Dokument beschriebenen Techniken der Funktionsentwicklung kennengelernt haben, wechseln Sie zum Dokument [Modelle](./models.md) . Sie führt Sie durch den Prozess der Erstellung, Schulung und Verwaltung vertrauenswürdiger Modelle mithilfe der von Ihnen entwickelten Funktionen. Nachdem Ihre Modelle erstellt wurden, fahren Sie mit dem Dokument [Erweiterte statistische Modelle implementieren fort.](./implement-models/implement-models.md). Dieses Dokument dient als Überblick und verlinkt zu ausführlichen Handbüchern für verschiedene Modellierungstechniken, einschließlich Clustering, Klassifizierung und Regression. In diesen Dokumenten erfahren Sie, wie Sie verschiedene vertrauenswürdige Modelle in Ihren SQL-Workflows konfigurieren und implementieren und Ihre Modelle für erweiterte Datenanalysen optimieren können.
+Nachdem Sie die in diesem Dokument beschriebenen Techniken zum Erstellen von Funktionen gelernt haben, fahren Sie mit dem Dokument [Modelle](./models.md) fort. Es führt Sie durch den Prozess der Erstellung, Schulung und Verwaltung vertrauenswürdiger Modelle mit den von Ihnen entwickelten Funktionen. Fahren Sie nach der Erstellung der Modelle mit dem Dokument [Implementieren erweiterter statistischer Modelle“ fort.](./implement-models/implement-models.md). Dieses Dokument dient als Übersicht und verweist auf ausführliche Anleitungen für verschiedene Modellierungstechniken, einschließlich Clustering, Klassifizierung und Regression. In diesen Dokumenten erfahren Sie, wie Sie verschiedene vertrauenswürdige Modelle in Ihren SQL-Workflows konfigurieren und implementieren und Ihre Modelle für die erweiterte Datenanalyse optimieren können.

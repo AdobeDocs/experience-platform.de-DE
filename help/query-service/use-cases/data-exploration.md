@@ -1,6 +1,6 @@
 ---
-title: Erkunden, Fehlerbehebung und Überprüfen der Batch-Erfassung mit SQL
-description: Erfahren Sie, wie Sie den Datenerfassungsprozess in Adobe Experience Platform verstehen und verwalten. In diesem Dokument wird beschrieben, wie Sie Batches überprüfen und erfasste Daten abfragen.
+title: Erkunden, Fehlerbehebung und Verifizierung der Batch-Aufnahme mit SQL
+description: Erfahren Sie, wie Sie den Datenaufnahmeprozess in Adobe Experience Platform verstehen und verwalten. Dieses Dokument beschreibt, wie Batches überprüft und aufgenommene Daten abgefragt werden.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
 source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
@@ -9,64 +9,64 @@ ht-degree: 0%
 
 ---
 
-# Batch-Erfassung mit SQL analysieren, beheben und überprüfen
+# Erkunden, Fehlerbehebung und Verifizierung der Batch-Aufnahme mit SQL
 
-In diesem Dokument wird beschrieben, wie Sie Datensätze in erfassten Batches mit SQL überprüfen und validieren. In diesem Dokument lernen Sie Folgendes:
+In diesem Dokument wird erläutert, wie Sie Datensätze in aufgenommenen Batches mit SQL überprüfen und validieren können. In diesem Dokument erfahren Sie, wie Sie:
 
-- Zugreifen auf Datensatz-Batch-Metadaten
-- Fehlerbehebung und Gewährleistung der Datenintegrität durch Abfragen von Batches
+- Zugriff auf Datensatz-Batch-Metadaten
+- Fehlerbehebung und Gewährleistung der Datenintegrität durch die Abfrage von Batches
 
 >[!NOTE]
 >
->Einige Screenshots in diesem Handbuch stammen aus [!DNL DBVisualizer]. Informationen zum [Verbinden von Query Service mit DBVisualizer](../clients/dbvisulaizer.md) oder anderen [BI-Tools von Drittanbietern](../clients/overview.md) finden Sie in der verknüpften Dokumentation.
+>Einige Screenshots in diesem Handbuch stammen von [!DNL DBVisualizer]. Informationen zum Verbinden [Abfrage-Service mit DBVisualizer](../clients/dbvisulaizer.md) oder anderen [BI-Tools von Drittanbietern](../clients/overview.md) finden Sie in der verknüpften Dokumentation.
 
 ## Voraussetzungen
 
-Um Ihr Verständnis der in diesem Dokument behandelten Konzepte zu vermitteln, sollten Sie über die folgenden Themen verfügen:
+Um Ihnen das Verständnis der in diesem Dokument besprochenen Konzepte zu erleichtern, sollten Sie über Kenntnisse in den folgenden Themen verfügen:
 
-- **Datenerfassung**: In der [Übersicht über die Datenerfassung](../../ingestion/home.md) erfahren Sie mehr über die Grundlagen der Datenerfassung in der Plattform, einschließlich der verschiedenen beteiligten Methoden und Prozesse.
-- **Batch-Erfassung**: Informationen zu den grundlegenden Konzepten der Batch-Erfassung finden Sie in der [Übersicht zur Batch-Aufnahme-API](../../ingestion/batch-ingestion/overview.md) . Insbesondere, was ein &quot;Batch&quot;ist und wie er im Datenerfassungsprozess von Platform funktioniert.
-- **Systemmetadaten in Datensätzen**: In der [Übersicht über den Katalogdienst](../../catalog/home.md) erfahren Sie, wie Systemmetadatenfelder zum Verfolgen und Abfragen erfasster Daten verwendet werden.
-- **Experience-Datenmodell (XDM)**: In der [Übersicht über die Schemas-Benutzeroberfläche](../../xdm/ui/overview.md) und den [&#39;Grundlagen der Schemakomposition&#39;](../../xdm/schema/composition.md) erfahren Sie mehr über XDM-Schemas und darüber, wie sie die Struktur und das Format der in Platform erfassten Daten darstellen und validieren.
+- **Datenaufnahme**: In der [Übersicht zur Datenaufnahme](../../ingestion/home.md) erfahren Sie mehr über die Grundlagen, wie Daten in Platform aufgenommen werden, einschließlich der verschiedenen Methoden und Prozesse.
+- **Batch-Aufnahme**: In der [Übersicht zur Batch-Aufnahme-](../../ingestion/batch-ingestion/overview.md) erfahren Sie mehr über die grundlegenden Konzepte der Batch-Aufnahme. Im Einzelnen geht es darum, was ein „Batch“ ist und wie er im Rahmen der Datenaufnahme von Platform funktioniert.
+- **Systemmetadaten in Datensätzen**: In der [Übersicht über den Katalog-Service](../../catalog/home.md) erfahren Sie, wie Systemmetadatenfelder verwendet werden, um aufgenommene Daten zu verfolgen und abzufragen.
+- **Experience-Datenmodell (XDM)**: In der [Übersicht über die ](../../xdm/ui/overview.md) von Schemas und den [Grundlagen der Schemakomposition&#39; erfahren ](../../xdm/schema/composition.md) mehr über XDM-Schemas und darüber, wie sie die Struktur und das Format der in Platform aufgenommenen Daten darstellen und validieren.
 
-## Zugreifen auf Datensatz-Batch-Metadaten {#access-dataset-batch-metadata}
+## Zugriff auf Datensatz-Batch-Metadaten {#access-dataset-batch-metadata}
 
-Verwenden Sie den SQL-Befehl `set drop_system_columns=false` in Ihrem Abfrage-Editor, um sicherzustellen, dass in den Abfrageergebnissen Systemspalten (Metadatenspalten) enthalten sind. Dadurch wird das Verhalten Ihrer SQL-Abfragesitzung konfiguriert. Diese Eingabe muss wiederholt werden, wenn Sie eine neue Sitzung starten.
+Um sicherzustellen, dass Systemspalten (Metadatenspalten) in den Abfrageergebnissen enthalten sind, verwenden Sie die SQL-`set drop_system_columns=false` im Abfrage-Editor. Dadurch wird das Verhalten Ihrer SQL-Abfragesitzung konfiguriert. Diese Eingabe muss wiederholt werden, wenn Sie eine neue Sitzung starten.
 
-Führen Sie anschließend eine SELECT all -Anweisung aus, um die Ergebnisse aus dem Datensatz anzuzeigen, z. B. `select * from movie_data`, um die Systemfelder des Datensatzes anzuzeigen. Die Ergebnisse enthalten zwei neue Spalten auf der rechten Seite `_acp_system_metadata` und `_ACP_BATCHID`. Die Metadatenspalten `_acp_system_metadata` und `_ACP_BATCHID` helfen bei der Identifizierung der logischen und physischen Partitionen der aufgenommenen Daten.
+Führen Sie als Nächstes eine SELECT ALL-Anweisung aus, um die Systemfelder des Datensatzes anzuzeigen, z. B. `select * from movie_data`, um die Ergebnisse des Datensatzes anzuzeigen. Die Ergebnisse umfassen zwei neue Spalten auf der rechten Seite `_acp_system_metadata` und `_ACP_BATCHID`. Die Metadatenspalten `_acp_system_metadata` und `_ACP_BATCHID` helfen bei der Identifizierung der logischen und physischen Partitionen der aufgenommenen Daten.
 
-![Die DBVisualizer-Benutzeroberfläche mit der Tabelle &quot;movie_data&quot;und den zugehörigen Metadatenspalten, die angezeigt und hervorgehoben werden.](../images/use-cases/movie_data-table-with-metadata-columns.png)
+![Die DBVisualizer-Benutzeroberfläche mit der Movie_data-Tabelle und ihren Metadatenspalten, die angezeigt und hervorgehoben werden.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Bei der Erfassung von Daten in Platform wird ihnen anhand der eingehenden Daten eine logische Partition zugewiesen. Diese logische Partition wird durch `_acp_system_metadata.sourceBatchId` dargestellt. Diese ID hilft bei der logischen Gruppierung und Identifizierung der Daten-Batches, bevor sie verarbeitet und gespeichert werden.
+Wenn Daten in Platform aufgenommen werden, wird ihnen auf der Grundlage der eingehenden Daten eine logische Partition zugewiesen. Diese logische Partition wird durch `_acp_system_metadata.sourceBatchId` dargestellt. Diese ID hilft, die Datenstapel logisch zu gruppieren und zu identifizieren, bevor sie verarbeitet und gespeichert werden.
 
-Nachdem die Daten verarbeitet und in den Data Lake aufgenommen wurden, wird ihnen eine physische Partition zugewiesen, die durch `_ACP_BATCHID` dargestellt wird. Diese ID spiegelt die tatsächliche Speicherpartition im Data Lake wider, in dem sich die erfassten Daten befinden.
+Nachdem die Daten verarbeitet und in den Data Lake aufgenommen wurden, wird ihnen eine physische Partition zugewiesen, die durch `_ACP_BATCHID` dargestellt wird. Diese ID spiegelt die tatsächliche Speicherpartition im Data Lake wider, in dem sich die aufgenommenen Daten befinden.
 
-### Verwenden Sie SQL, um logische und physische Partitionen zu verstehen. {#understand-partitions}
+### SQL verwenden, um logische und physische Partitionen zu verstehen {#understand-partitions}
 
-Um zu verstehen, wie die Daten nach der Aufnahme gruppiert und verteilt werden, verwenden Sie die folgende Abfrage, um die Anzahl unterschiedlicher physischer Partitionen (`_ACP_BATCHID`) für jede logische Partition (`_acp_system_metadata.sourceBatchId`) zu zählen.
+Um zu verstehen, wie die Daten nach der Aufnahme gruppiert und verteilt werden, verwenden Sie die folgende Abfrage, um die Anzahl der verschiedenen physischen Partitionen (`_ACP_BATCHID`) für jede logische Partition (`_acp_system_metadata.sourceBatchId`) zu zählen.
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data
 GROUP BY _acp_system_metadata
 ```
 
-Die Ergebnisse dieser Abfrage werden in der Abbildung unten dargestellt.
+Die Ergebnisse dieser Abfrage werden in der folgenden Abbildung dargestellt.
 
-![Die Ergebnisse einer Abfrage, die die Anzahl unterschiedlicher physischer Partitionen für jede logische Partition anzeigt.](../images/use-cases/logical-and-physical-partition-count.png)
+![Die Ergebnisse einer Abfrage, um die Anzahl der verschiedenen physischen Partitionen für jede logische Partition anzuzeigen.](../images/use-cases/logical-and-physical-partition-count.png)
 
-Diese Ergebnisse zeigen, dass die Anzahl der Eingangs-Batches nicht notwendigerweise mit der Anzahl der Ausgabe-Batches übereinstimmt, da das System bestimmt, wie die Daten am effizientesten im Data Lake gestapelt und gespeichert werden.
+Diese Ergebnisse zeigen, dass die Anzahl der Eingabestapel nicht unbedingt mit der Anzahl der Ausgabestapel übereinstimmt, da das System festlegt, wie die Daten am effizientesten im Data Lake stapelweise gespeichert werden.
 
-Für die Zwecke dieses Beispiels wird davon ausgegangen, dass Sie eine CSV-Datei in Platform aufgenommen und einen Datensatz mit dem Namen `drug_checkout_data` erstellt haben.
+Für dieses Beispiel wird davon ausgegangen, dass Sie eine CSV-Datei in Platform aufgenommen und einen Datensatz mit dem Namen `drug_checkout_data` erstellt haben.
 
-Die Datei &quot;`drug_checkout_data`&quot; ist ein tief verschachtelter Satz von 35.000 Datensätzen. Verwenden Sie die SQL-Anweisung &quot;`SELECT * FROM drug_orders;`&quot;, um eine Vorschau des ersten Datensatzes im JSON-basierten `drug_orders` Datensatz anzuzeigen.
+Die `drug_checkout_data`-Datei ist ein tief verschachtelter Satz von 35.000 Datensätzen. Verwenden Sie die SQL-Anweisung `SELECT * FROM drug_orders;`, um eine Vorschau des ersten Satzes von Datensätzen im JSON-basierten `drug_orders`-Datensatz anzuzeigen.
 
-Das folgende Bild zeigt eine Vorschau der Datei und ihrer Datensätze.
+Die folgende Abbildung zeigt eine Vorschau der Datei und ihrer Datensätze.
 
-![Eine Vorschau des ersten Datensatzes im JSON-basierten Datensatz &quot;droid_orders&quot;.](../images/use-cases/drug-orders-preview.png)
+![Eine Vorschau des ersten Satzes von Datensätzen im JSON-basierten drogen_orders-Datensatz.](../images/use-cases/drug-orders-preview.png)
 
-### Verwenden Sie SQL, um Einblicke in den Batch-Erfassungsvorgang zu generieren. {#sql-insights-on-batch-ingestion}
+### SQL verwenden, um Einblicke in den Batch-Erfassungsvorgang zu generieren {#sql-insights-on-batch-ingestion}
 
-Verwenden Sie die nachstehende SQL-Anweisung, um Einblicke in die Gruppierung und Verarbeitung der Eingabedatensätze durch den Datenerfassungsprozess zu geben.
+Verwenden Sie die unten stehende SQL-Anweisung, um Einblicke in die Gruppierung und Verarbeitung der Eingabedatensätze durch den Datenaufnahmeprozess in Batches zu erhalten.
 
 ```sql
 SELECT _acp_system_metadata,
@@ -76,37 +76,37 @@ FROM   drug_orders
 GROUP  BY _acp_system_metadata 
 ```
 
-Die Abfrageergebnisse sind in der Abbildung unten dargestellt.
+Die Abfrageergebnisse werden in der Abbildung unten angezeigt.
 
-![Eine Tabelle, die die Verteilung der Art und Weise anzeigt, wie Eingabe-Batches mit Datensatzzählungen gleichzeitig gemeistert wurden.](../images/use-cases/distribution-of-input-batches.png)
+![Eine Tabelle, die die Verteilung der Verarbeitung der Eingabestapel zu einem Zeitpunkt mit Datensatzzählungen anzeigt.](../images/use-cases/distribution-of-input-batches.png)
 
-Die Ergebnisse zeigen die Effizienz und das Verhalten des Datenerfassungsprozesses. Obwohl drei Eingangs-Batches erstellt wurden - mit jeweils 2000, 24000 und 9000 Datensätzen -, blieb bei der Kombination und Deduplizierung der Datensätze nur ein einziger Batch erhalten.
+Die Ergebnisse zeigen die Effizienz und das Verhalten des Datenerfassungsprozesses. Obwohl drei Eingabestapel erstellt wurden - jeder mit 2000, 24000 und 9000 Datensätzen -, wenn die Datensätze kombiniert und dedupliziert wurden, blieb nur ein eindeutiger Batch übrig.
 
 >[!NOTE]
 >
->Alle Datensätze, die in einem Datensatz sichtbar sind, sind diejenigen, die erfolgreich erfasst wurden. Eine erfolgreiche Batch-Erfassung bedeutet nicht, dass alle Datensätze vorhanden sind, die von der Quelleingabe gesendet wurden. Sie müssen nach Fehlern bei der Datenerfassung suchen, um die Batches/Datensätze zu finden, in denen die Daten nicht erfasst wurden.
+>Bei allen Datensätzen, die in einem Datensatz sichtbar sind, handelt es sich um diejenigen, die erfolgreich aufgenommen wurden. Eine erfolgreiche Batch-Aufnahme bedeutet nicht, dass alle Datensätze vorhanden sind, die von der Quelleingabe gesendet wurden. Sie müssen nach Fehlern bei der Datenaufnahme suchen, um die Batches/Datensätze zu finden, die es nicht in geschafft haben.
 
 ## Validieren eines Batches mit SQL {#validate-a-batch-with-SQL}
 
-Überprüfen Sie anschließend die Datensätze, die mit SQL in den Datensatz aufgenommen wurden.
+Überprüfen Sie anschließend die Datensätze, die in den Datensatz aufgenommen wurden, mit SQL.
 
 >[!TIP]
 >
->Um die Batch-Kennung und die mit dieser Batch-Kennung verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Platform erfassen. Lesen Sie das Handbuch zum [Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von AI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md).
+>Um die Batch-ID und die mit dieser Batch-ID verknüpften Abfragedatensätze abzurufen, müssen Sie zunächst einen Batch in Platform erstellen. Wenn Sie den Prozess selbst testen möchten, können Sie CSV-Daten in Platform aufnehmen. Lesen Sie das Handbuch zum [ (Zuordnen einer CSV-Datei zu einem vorhandenen XDM-Schema mithilfe von KI-generierten Empfehlungen](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Nachdem Sie einen Batch erfasst haben, müssen Sie für den Datensatz, in den Sie Daten aufgenommen haben, zur Registerkarte [!UICONTROL Datensatzaktivität] navigieren.
+Nachdem Sie einen Batch aufgenommen haben, müssen Sie zur Registerkarte [!UICONTROL Datensatzaktivität] für den Datensatz navigieren, in den Sie Daten aufgenommen haben.
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Datensätze]** aus, um das Dashboard [!UICONTROL Datensätze] zu öffnen. Wählen Sie anschließend den Namen des Datensatzes auf der Registerkarte [!UICONTROL Durchsuchen] aus, um auf den Bildschirm [!UICONTROL Datensatzaktivität] zuzugreifen.
+Wählen Sie in der Experience Platform-Benutzeroberfläche **[!UICONTROL Datensätze]** im linken Navigationsbereich aus, um das Dashboard [!UICONTROL Datensätze] zu öffnen. Wählen Sie als Nächstes den Namen des Datensatzes auf der Registerkarte [!UICONTROL Durchsuchen] aus, um auf den Bildschirm [!UICONTROL Datensatzaktivität] zuzugreifen.
 
-![Das Dashboard der Platform UI-Datensätze mit Datensätzen, deren Datensätze im linken Navigationsbereich hervorgehoben sind.](../images/use-cases/datasets-workspace.png)
+![Das Dashboard der Platform-Benutzeroberfläche mit Datensätzen, die in der linken Navigation hervorgehoben sind.](../images/use-cases/datasets-workspace.png)
 
-Die Ansicht [!UICONTROL Datensatzaktivität] wird angezeigt. Diese Ansicht enthält Details zu Ihrem ausgewählten Datensatz. Sie enthält alle erfassten Batches, die in einem Tabellenformat angezeigt werden.
+Die [!UICONTROL Datensatzaktivität] wird angezeigt. Diese Ansicht enthält Details zum ausgewählten Datensatz. Er umfasst alle aufgenommenen Batches, die im Tabellenformat angezeigt werden.
 
-Wählen Sie einen Batch aus der Liste der verfügbaren Batches aus und kopieren Sie die [!UICONTROL Batch-Kennung] aus dem Detailbereich auf der rechten Seite.
+Wählen Sie einen Stapel aus der Liste der verfügbaren Stapel aus und kopieren [!UICONTROL Batch-ID] aus dem Detailbereich auf der rechten Seite.
 
-![Die Benutzeroberfläche &quot;Experience Platform-Datensätze&quot;mit den erfassten Datensätzen, deren Batch-Kennung hervorgehoben ist.](../images/use-cases/batch-id.png)
+![Die Benutzeroberfläche zum Experience Platform von Datensätzen, die die aufgenommenen Datensätze mit einer hervorgehobenen Batch-ID anzeigt.](../images/use-cases/batch-id.png)
 
-Rufen Sie dann mit der folgenden Abfrage alle Datensätze ab, die im Datensatz als Teil dieses Batches enthalten waren:
+Verwenden Sie als Nächstes die folgende Abfrage, um alle Datensätze abzurufen, die im Datensatz als Teil dieses Batches enthalten waren:
 
 ```sql
 SELECT * FROM movie_data
@@ -114,18 +114,18 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-Das Schlüsselwort `_ACP_BATCHID` wird zum Filtern der [!UICONTROL Batch-Kennung] verwendet.
+Das Keyword `_ACP_BATCHID` wird zum Filtern der [!UICONTROL Batch-ID“ ].
 
 >[!TIP]
 >
->Die `LIMIT` -Klausel ist hilfreich, wenn Sie die Anzahl der angezeigten Zeilen beschränken möchten, aber eine Filterbedingung ist empfehlenswerter.
+>Die `LIMIT`-Klausel ist hilfreich, wenn Sie die Anzahl der angezeigten Zeilen einschränken möchten, aber eine Filterbedingung ist wünschenswerter.
 
-Wenn Sie diese Abfrage im Abfrage-Editor ausführen, werden die Ergebnisse auf 100 Zeilen gekürzt. Der Abfrage-Editor ist für schnelle Vorschau und Untersuchung konzipiert. Um bis zu 50.000 Zeilen abzurufen, können Sie ein Tool eines Drittanbieters wie DBVisualizer oder DBeaver verwenden.
+Beim Ausführen dieser Abfrage im Abfrage-Editor werden die Ergebnisse auf 100 Zeilen gekürzt. Der Abfrage-Editor ist für schnelle Vorschauen und Untersuchungen konzipiert. Zum Abrufen von bis zu 50.000 Zeilen können Sie ein Tool eines Drittanbieters wie DBVisualizer oder DBeaver verwenden.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments haben Sie die Grundlagen der Überprüfung und Validierung von Datensätzen in aufgenommenen Batches im Rahmen des Datenerfassungsprozesses gelernt. Sie haben auch Einblicke in den Zugriff auf Batch-Metadaten von Datensätzen, das Verständnis logischer und physischer Partitionen und die Abfrage bestimmter Batches mithilfe von SQL-Befehlen erhalten. Dieses Wissen kann Ihnen dabei helfen, die Datenintegrität sicherzustellen und Ihre Datenspeicherung in Platform zu optimieren.
+Durch das Lesen dieses Dokuments haben Sie die Grundlagen gelernt, um Datensätze in aufgenommenen Batches im Rahmen der Datenaufnahme zu überprüfen und zu validieren. Sie haben außerdem Einblicke in den Zugriff auf Datensatz-Batch-Metadaten, das Verständnis logischer und physischer Partitionen und das Abfragen bestimmter Batches mithilfe von SQL-Befehlen erhalten. Mit diesem Wissen können Sie die Datenintegrität sicherstellen und die Datenspeicherung in Platform optimieren.
 
-Als Nächstes sollten Sie die Datenerfassung durchführen, um die gelernten Konzepte anzuwenden. Erfassen Sie einen Beispieldatensatz in Platform mit den bereitgestellten Beispieldateien oder Ihren eigenen Daten. Wenn Sie dies noch nicht getan haben, lesen Sie das Tutorial zum [Erfassen von Daten in Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+Als Nächstes sollten Sie die Datenaufnahme üben, um die erlernten Konzepte anzuwenden. Nehmen Sie einen Beispieldatensatz mit den bereitgestellten Beispieldateien oder Ihren eigenen Daten in Platform auf. Wenn Sie dies noch nicht getan haben, lesen Sie das Tutorial zum [Aufnehmen von Daten in Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
-Alternativ können Sie erfahren, wie Sie [Abfragen von Service mit einer Vielzahl von Desktop-Clientanwendungen verbinden und überprüfen](../clients/overview.md), um Ihre Datenanalysefunktionen zu verbessern.
+Alternativ können Sie lernen, wie Sie [Query Service mit einer Vielzahl von Desktop-Client-Anwendungen verbinden und überprüfen](../clients/overview.md) um Ihre Datenanalysefunktionen zu verbessern.

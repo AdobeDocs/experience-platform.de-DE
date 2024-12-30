@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Zusammenführungsrichtlinie in Adobe Experience Platform
-description: In diesem Video erhalten Sie ein grundlegendes Verständnis der Zusammenführungsrichtlinien in Adobe Experience Platform und eine Erläuterung der Definition von Zusammenführungsrichtlinien mithilfe der Platform-Benutzeroberfläche.
+description: In diesem Video erhalten Sie ein grundlegendes Verständnis von Zusammenführungsrichtlinien in Adobe Experience Platform und Erläuterungen dazu, wie Sie Zusammenführungsrichtlinien mithilfe der Platform-Benutzeroberfläche definieren.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,10 +19,10 @@ ht-degree: 16%
 
 # Erstellen einer Zusammenführungsrichtlinie in der Experience Platform-Benutzeroberfläche
 
-In diesem Video erhalten Sie ein grundlegendes Verständnis der Zusammenführungsrichtlinien in Adobe Experience Platform und eine Übersicht darüber, wie Zusammenführungsrichtlinien mithilfe der Platform-Benutzeroberfläche definiert werden. Um mehr über Zusammenführungsrichtlinien zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+In diesem Video erhalten Sie einen Überblick über Zusammenführungsrichtlinien in Adobe Experience Platform und darüber, wie Sie Zusammenführungsrichtlinien mithilfe der Platform-Benutzeroberfläche definieren. Um mehr über Zusammenführungsrichtlinien zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 >[!NOTE]
 >
->Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [UI-Handbuch für Zusammenführungsrichtlinien](../merge-policies/ui-guide.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch [Benutzeroberfläche für Zusammenführungsrichtlinien](../merge-policies/ui-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)

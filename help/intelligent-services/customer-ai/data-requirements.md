@@ -83,7 +83,7 @@ Sie können XDM-Schemata für Erlebnis- oder Kundenerlebnisereignisse bei Eingab
 
 ### Von Kunden-KI verwendete Standardfeldgruppen {#standard-events}
 
-Erlebnisereignisse werden zur Bestimmung verschiedener Kundenverhaltensweisen verwendet. Je nachdem, wie Ihre Daten strukturiert sind, umfassen die unten aufgeführten Ereignistypen möglicherweise nicht alle Verhaltensweisen Ihres Kunden. Sie müssen selbst bestimmen, welche Felder über die erforderlichen Daten verfügen, um Web- oder andere kanalspezifische Benutzeraktivitäten klar und eindeutig zu identifizieren. Abhängig vom Prognoseziel können unterschiedliche Felder erforderlich sein.
+Erlebnisereignisse werden zur Bestimmung verschiedener Kundenverhaltensweisen verwendet. Je nach Strukturierung Ihrer Daten umfassen die unten aufgeführten Ereignistypen möglicherweise nicht alle Verhaltensweisen Ihrer Kundinnen und Kunden. Sie müssen selbst bestimmen, welche Felder über die erforderlichen Daten verfügen, um Web- oder andere kanalspezifische Benutzeraktivitäten klar und eindeutig zu identifizieren. Abhängig vom Prognoseziel können unterschiedliche Felder erforderlich sein.
 
 >[!NOTE]
 >
@@ -159,7 +159,7 @@ Standardmäßig sucht Kunden-KI nach Benutzenden, die in den letzten 45 Tagen ak
 
 Die folgenden Beispiele zeigen, wie Sie mit einer einfachen Formel die erforderliche Mindestmenge an Daten ermitteln können. Wenn Sie über mehr Daten als die Mindestanforderung verfügen, liefert Ihr Modell wahrscheinlich genauere Ergebnisse. Wird die erforderliche Mindestmenge unterschritten, schlägt das Modell fehl, da in diesem Fall nicht genügend Daten für das Modell-Training vorhanden sind.
 
-Customer AI verwendet ein Überlebensmodell, um die Wahrscheinlichkeit eines Ereignisses zu einem bestimmten Zeitpunkt zu schätzen und Einflussfaktoren zu identifizieren, zusammen mit beaufsichtigtem Lernen, das positive und negative Populationen definiert, und Entscheidungsbäumen wie `lightgbm`, um einen Wahrscheinlichkeitswert zu generieren.
+Kunden-KI verwendet ein Überlebensmodell, um die Wahrscheinlichkeit zu schätzen, dass ein Ereignis zu einem bestimmten Zeitpunkt auftritt, und Einflussfaktoren zu identifizieren, sowie beaufsichtigtes Lernen, das positive und negative Populationen definiert, und entscheidungsbasierte Bäume wie `lightgbm`, um einen Wahrscheinlichkeitswert zu generieren.
 
 **Formel**:
 
@@ -187,7 +187,7 @@ So stellen Sie die erforderliche Mindestaufbewahrungsdauer für die im System vo
 
    - Erforderliche Daten = 60 Tage + 30 Tage = 90 Tage
 
-- Sie möchten vorhersagen, ob eine Benutzerin oder ein Benutzer in den nächsten sieben Tagen wahrscheinlich eine Uhr kaufen wird, **ohne** eine explizite geeignete Population anzugeben. In diesem Fall wird die berechtigte Population standardmäßig auf &quot;diejenigen, die in den letzten 45 Tagen aktiv waren&quot;gesetzt und das Ergebnisfenster beträgt 7 Tage.
+- Sie möchten vorhersagen, ob eine Benutzerin oder ein Benutzer in den nächsten sieben Tagen wahrscheinlich eine Uhr kaufen wird, **ohne** eine explizite geeignete Population anzugeben. In diesem Fall wird die geeignete Population standardmäßig auf „diejenigen, die in den letzten 45 Tagen aktiv waren“ festgelegt und das Ergebnisfenster beträgt 7 Tage.
 
    - Eignungs-Lookback-Fenster = 45 Tage
 

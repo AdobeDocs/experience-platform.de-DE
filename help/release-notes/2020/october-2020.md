@@ -14,13 +14,13 @@ ht-degree: 23%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: Donnerstag, 14. Oktober 2020**
+**Veröffentlichungsdatum: 14. Oktober 2020**
 
 - [Datenvorbereitung](#data-prep)
 - [Echtzeit-Kundenprofil](#profile)
 - [Segmentierungs-Service](#segmentation)
 - [Quellen](#sources)
-- [Zeit bis Wert](#time-to-value)
+- [Time to Value](#time-to-value)
 
 ## Datenvorbereitung {#data-prep}
 
@@ -30,21 +30,21 @@ Die Datenvorbereitung ermöglicht es Dateningenieurinnen und -ingenieuren, Daten
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| `is_set`-Funktion | Mit der Funktion `is_set` können Sie überprüfen, ob ein Attribut in den Quelldaten vorhanden ist. `is_set` kann in Kombination mit `is_empty` verwendet werden, um sowohl das Vorhandensein des Attributs als auch das Vorhandensein des Werts im Attribut zu überprüfen. |
+| `is_set`-Funktion | Mit der Funktion `is_set` können Sie überprüfen, ob in den Quelldaten ein -Attribut vorhanden ist. `is_set` kann in Kombination mit `is_empty` verwendet werden, um sowohl das Vorhandensein des -Attributs als auch das Vorhandensein des -Werts innerhalb des -Attributs zu überprüfen. |
 | `get_values`-Funktion | Mit der Funktion `get_values` können Sie die Werte aus der Eingabezuordnung für einen beliebigen Schlüssel abrufen. |
 
-Weitere Informationen finden Sie in der [Datenvorbereitung - Übersicht](../../data-prep/home.md) .
+Weitere Informationen finden Sie unter [Datenvorbereitung - Übersicht](../../data-prep/home.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Mit [!DNL Real-Time Customer Profile] können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenfassen, die eine verwertbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Ihre Kundinnen und Kunden, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Das [!DNL Real-Time Customer Profile] ermöglicht eine ganzheitliche Sicht auf jede einzelne Kundin und jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, Darstellung jeder Kundeninteraktion mit Zeitstempel bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| API-Ergänzungen für die Profilvorschau | Die Profilvorschau-API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Aufschlüsselung der gesamten Profilfragmente in Ihrer Organisation anzuzeigen und die Verteilung der Profilfragmente über Identitäts-Namespaces hinweg anzuzeigen. |
-| Aktualisierungen der Schema-Ansicht von Vereinigungen | In der Experience Platform-Benutzeroberfläche können Benutzer leichter Informationen zu allen Schemas und Datensätzen finden, die zum Vereinigungsschema beitragen, sowie wichtige Oberflächenattribute wie Identitäts- und Beziehungsfelder. Diese Aktualisierungen verbessern die Fehlerbehebung und die Überprüfung der korrekten Konfiguration von Profilen, der korrekten Zuordnung von Identitäten und der erfolgreichen Erfassung von Daten. |
+| Hinzufügungen zur Profilvorschau-API | Die Profilvorschau-API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Aufschlüsselung der gesamten Profilfragmente in Ihrer Organisation sowie die Verteilung der Profilfragmente über Identity-Namespaces anzuzeigen. |
+| Aktualisierungen der Vereinigungsschemaansicht | In der Experience Platform-Benutzeroberfläche können Benutzende Informationen zu allen Schemata und Datensätzen, die zum Vereinigungsschema beitragen, sowie Attribute von Oberflächenschlüsseln wie Identitäts- und Beziehungsfelder leichter finden. Diese Aktualisierungen verbessern die Möglichkeit, Probleme zu beheben und zu überprüfen, ob Profile korrekt konfiguriert und Identitäten korrekt zugeordnet wurden und Daten erfolgreich aufgenommen wurden. |
 
-Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] -Daten, finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen zu [!DNL Real-Time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden [ in der Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -56,13 +56,13 @@ Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche u
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Entfernung der Streaming-Segmentierung begrenzen | Die Beschränkung von sieben Tagen für den Lookback-Zeitraum wurde entfernt. |
+| Entfernung des Streaming-Segmentierungslimits | Das Sieben-Tage-Limit für den Lookback-Zeitraum wurde entfernt. |
 
-Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md)
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierung - Übersicht](../../segmentation/home.md)
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten mithilfe von [!DNL Platform] -Diensten strukturieren, beschriften und erweitern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen aufnehmen und ermöglicht es Ihnen gleichzeitig, diese Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform] bietet eine RESTful-API und eine interaktive Benutzeroberfläche, mit der Sie auf einfache Weise Quellverbindungen für verschiedene Datenanbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -70,49 +70,49 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| SSH-Authentifizierungsunterstützung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Platform] über RSA/DSA Open SSH-Schlüssel verbinden. Weitere Informationen finden Sie in der [SFTP - Übersicht](../../sources/connectors/cloud-storage/sftp.md) . |
-| UX-Verbesserungen | Sie können Ihren Datensatz während der Datenerfassung für [!DNL Profile] aktivieren. Weitere Informationen finden Sie im Tutorial zum Workflow [Cloud-Speicher-Datenfluss](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
+| Unterstützung der SSH-Authentifizierung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Platform] verbinden, indem Sie RSA/DSA Open SSH-Schlüssel verwenden. Weitere Informationen finden Sie [ „SFTP](../../sources/connectors/cloud-storage/sftp.md)Übersicht“. |
+| UX-Verbesserungen | Sie können Ihren Datensatz während der Datenaufnahme für die [!DNL Profile] aktivieren. Weitere Informationen finden Sie [ Tutorial zum ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)Cloud-Datenspeicherungs-Workflow) . |
 
 Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
 
-## Zeit bis Wert {#time-to-value}
+## Time to Value {#time-to-value}
 
-Mit Adobe Experience Platform können Marketingbetriebsteams eine 360-Grad-Ansicht ihrer Kunden erstellen, ohne dass umfangreiche Data Engineering-Kenntnisse erforderlich sind. Ziel ist es, Teams und Wert durch Datengeschwindigkeit zu beschleunigen.
+Adobe Experience Platform ermöglicht es Marketing-Teams, eine 360-Grad-Sicht auf ihre Kunden zu erstellen, ohne dass umfangreiche Daten-Engineering-Kenntnisse erforderlich sind. Das Ziel besteht darin, Teams zu beschleunigen und durch Datengeschwindigkeit einen Mehrwert zu erzielen.
 
-&quot;Time to Value&quot;schneidet Personas zwischen. Data Engineers können Aufgaben effizient und beschleunigt mit Transparenz der Datenaktivität erledigen, sodass ein robustes, skalierbares Echtzeit-Kundenprofil schneller verfügbar ist. Marketingexperten können dann das vollständige, zuverlässige Kundenprofil für die Segmentierung und Aktivierung verwenden.
+Die „Time to Value“ erstreckt sich über Personas hinweg. Dateningenieure können Aufgaben effizient und schneller mit Transparenz der Datenaktivität erledigen, sodass ein robustes, skalierbares Echtzeit-Kundenprofil früher verfügbar ist. Marketing-Experten können dann das vollständige, robuste Kundenprofil für die Segmentierung und Aktivierung verwenden.
 
-### Funktionsmerkmale
+### Feature-Highlights
 
 #### Schema
 
-Verbessert die Benutzerfreundlichkeit und den Arbeitsablauf und bietet vordefinierte Einblicke, Standardisierung und Transparenz von Schlüsselfeldern in Schemakompositionen. Stellt die Datenherkunft für die Kombination einzelner Datenmodelle, die als &quot;Vereinigungsschema&quot;dargestellt werden, bereit und bietet Einblicke in die Struktur und die Inhaltsstoffe des Echtzeit-Kundenprofils.
+Aktualisiert die Benutzerfreundlichkeit und den Workflow und bietet vordefinierte Einblicke, Standardisierung und Transparenz von Schlüsselfeldern in Schemakompositionen. Zeigt die Datenherkunft für die Kombination einzelner Datenmodelle, die als „Vereinigungsschema“ dargestellt werden, und bietet Einblicke in die Struktur und die Inhaltsstoffe des Echtzeit-Kundenprofils.
 
-- Schema-Workflow-Aktualisierung
-   - Verwenden Sie Verknüpfungen für den gängigsten Typ von XDM-Schemas mit automatisierten Einstellungen im Schema-Editor und in den Empfehlungen für Schemafelder basierend auf Ihren Zielen.
+- Upgrade des Schema-Workflows
+   - Verwenden Sie Tastaturbefehle für den häufigsten Typ von XDM-Schemata mit automatisierten Einstellungen im Schema-Editor und Schemafeldgruppenempfehlungen basierend auf Ihren Zielen
    - Steigerung der Workflow-Effizienz durch Auswahl und Vorschau mehrerer Feldergruppen
-   - Transparenz in Bezug auf die Schlüsselattribute der Schemakomposition, einschließlich Identität, Beziehung sowie erforderliche und veraltete Felder
-- Unionschema-Datenherkunft und Transparenz der Schlüsselattribute
+   - Transparenz bei Schlüsselattributen der Schemakomposition, einschließlich Identität, Beziehung und erforderlichen und verworfenen Feldern
+- Transparenz der Datenherkunft und der Schlüsselattribute des Vereinigungsschemas
 
-#### Datenerfassung und -erfassung
+#### Datenaufnahme und -erfassung
 
-Bei der Aktualisierung der automatischen Zuordnung, Zuordnungsvorschau und Benutzerfreundlichkeit werden Daten von jeder Plattform oder Quelle zur Verwendung in Profil, nachfolgender Segmentierung und Aktivierung eingefügt. Das System verfügt über die Effizienz und Intelligenz, um diesen Prozess auch für Personen außerhalb der IT zu vereinfachen.
+Die automatische Zuordnung, die Zuordnungsvorschau und die Benutzerfreundlichkeits-Aktualisierung bringen Daten von jeder Plattform oder Quelle für die Verwendung im Profil, in der nachgelagerten Segmentierung und bei der Aktivierung ein. Das System verfügt über die Effizienz und Intelligenz, um diesen Prozess einfacher zu verwenden, auch für Personen außerhalb der IT.
 
-- Einfacherer Zugriff auf Datenquellen mit der Katalogseitenkarte und dem Inline-Aktionsmuster der Datentabelle
-- Berechnetes Feld/Ausdruck für die Datenerfassung
+- Einfacherer Zugriff auf Datenquellen mit einer Katalogseitenkarte und einem Inline-Aktionsmuster-Upgrade für Datentabellen
+- Berechnetes Feld/Ausdruck für die Datenaufnahme
 - Empfehlungen zur Datenzuordnung beschleunigen den Aufnahmeprozess
-- Zuordnen von Vorschau und Überprüfungen
+- Zuordnungsvorschau und Validierungen
 
 #### Profilkonfiguration
 
-Mit dem marketerfreundlichen Profil-Viewer mit Anpassung können Sie die Zusammensetzung eines Profils für die Verwendung in Segmentierung, Planung und Aktivierungsfällen verstehen. Der konsolidierte Workflow optimiert das Profil durch einen schrittweisen Workflow für die Zusammenführungsrichtlinie auf kontrollierte und effiziente Weise.
+Ein marketerfreundlicher Profil-Viewer mit Anpassung hilft Ihnen, die Komposition eines Profils zur Verwendung in Segmentierungs-, Planungs- und Aktivierungsfällen zu verstehen. Der konsolidierte Workflow hydriert das Profil auf kontrollierte und effiziente Weise, indem er einen schrittweisen Workflow für Zusammenführungsrichtlinien bereitstellt.
 
-- Zeigen Sie jedes einzelne Profil in einem erweiterten Profil-Viewer an, der ein Dashboard mit vollständiger Anpassung anzeigt und so gruppierte kanalübergreifende Daten basierend auf den Geschäftszielen des Marketing-Experten ermöglicht.
-- Bearbeiten Sie die standardmäßigen und benutzerdefinierten Attribute im Widget Grundlegende Informationen entsprechend den Geschäftsanforderungen.
-- Passen Sie Widgets mit Attributen aus dem Echtzeit-Kundenprofil mithilfe der Vereinigungsschemaauswahl an. Das Vereinigungsschema wird von den zugrunde liegenden Datenmodellen abgeleitet, die bei der Profildatenerfassung verwendet werden.
+- Zeigen Sie jedes einzelne Profil in einem erweiterten Profil-Viewer an, der ein Dashboard mit vollständiger Anpassung anzeigt, sodass kanalübergreifende Daten basierend auf den Geschäftszielen des Marketing-Experten gruppiert werden können.
+- Bearbeiten Sie die standardmäßigen und benutzerdefinierten Attribute im Widget Basisinformationen entsprechend den Geschäftsanforderungen.
+- Passen Sie Widgets mit Attributen aus dem Echtzeit-Kundenprofil mithilfe der Vereinigungsschema-Auswahl an. Das Vereinigungsschema wird von den zugrunde liegenden Datenmodellen abgeleitet, die bei der Profildatenaufnahme verwendet werden.
 
 
 #### Überwachung
 
-Gewährt Transparenz des Datenflusses und gibt Einblicke in den Zustand des Datenverkehrs, der über Quell-Connectoren in das System geleitet wird. So erhalten Sie mehr Self-Service und schnellere Handlungsmöglichkeiten bei der Fehlerbehebung.
+Stellt Transparenz des Datenflusses sicher und gibt Einblicke in den Zustand des Datenverkehrs in das System von den Quell-Connectoren aus, wodurch mehr Self-Service und schnellere Reaktionsfähigkeit für die Fehlerbehebung bereitgestellt werden.
 
-- Überwachen Sie alle Durchsatzausführungen und sehen Sie sich eine detaillierte Ansicht jedes Durchlaufs an, einschließlich Abschlussstatus, Ausführungsdauer, Liste der verarbeiteten Dateien, Fehler und ausführbarer Diagnosen.
+- Überwachen Sie alle Flussausführungen und sehen Sie eine detaillierte Ansicht jedes Durchgangs, einschließlich Abschlussstatus, Ausführungsdauer, Liste der verarbeiteten Dateien, Fehler und ausführbaren Diagnosen

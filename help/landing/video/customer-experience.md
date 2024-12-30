@@ -1,6 +1,6 @@
 ---
 title: Ein durch Experience Platform unterstütztes Kundenerlebnis
-description: Dieses Video folgt einem hypothetischen Erlebnis, das mit Adobe Experience Platform erstellt wurde, wie aus der Sicht eines Kunden ersichtlich ist. Erfahren Sie, wie Experience Platform ein umfangreiches, relevantes und Echtzeit-Erlebnis schafft.
+description: In diesem Video wird ein hypothetisches Erlebnis mit Adobe Experience Platform aus der Perspektive eines Kunden gezeigt. Erfahren Sie, wie Experience Platform ein eindrucksvolles, relevantes und Echtzeiterlebnis bietet.
 kt: 4339
 audience: all
 doc-type: video
@@ -16,6 +16,6 @@ ht-degree: 18%
 
 # Ein durch Experience Platform unterstütztes Kundenerlebnis
 
-Erfahren Sie, wie Experience Platform ein umfangreiches, relevantes und Echtzeit-Erlebnis für Kunden schafft, indem Sie sich dieses Video ansehen, das einem hypothetischen Erlebnis folgt, das mit Platform erstellt wurde, wie aus der Sicht eines Kunden ersichtlich ist.
+Sehen Sie sich an, wie Experience Platform Kunden ein ansprechendes, relevantes Echtzeit-Erlebnis bietet. Dazu sehen Sie sich dieses Video an, das einem hypothetischen Erlebnis folgt, das mit Platform aus der Perspektive eines Kunden erstellt wurde.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)

@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
-title: Auflisten der Seitenansichten eines Benutzers
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;Abfrage-Service;experienceEvent-Abfragen;experienceEvent-Abfrage;Erlebnisereignisabfrage;
+title: Auflisten der Seitenansichten von Benutzenden
 description: Erfahren Sie, wie Sie Abfragen schreiben, die Erlebnisereignisse verwenden, um eine Liste der letzten 100 Seiten zu erstellen, die ein bestimmter Benutzer verwendet hat.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
@@ -12,9 +12,9 @@ ht-degree: 8%
 
 # Auflisten der Seitenansichten von Benutzenden
 
-Dieses Dokument enthält ein Beispiel für die SQL, die erforderlich ist, um die Seitenansichten eines bestimmten Benutzers aufzulisten. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Im Abschnitt [Nächste Schritte](#next-steps) finden Sie weitere Anwendungsfälle, bei denen [!DNL Experience Events] zum Generieren von Besucherberichten erforderlich ist.
+Dieses Dokument enthält ein Beispiel für die SQL, die erforderlich ist, um die Seitenansichten eines bestimmten Benutzers aufzulisten. Mit Adobe Experience Platform Query Service können Sie Abfragen schreiben, die [!DNL Experience Events] verwenden, um eine Vielzahl von Anwendungsfällen zu erfassen. Erlebnisereignisse werden durch die ExperienceEvent-Klasse des Experience-Datenmodells (XDM) dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Service interagiert. Erlebnisereignisse können sogar für die Zeitbereichsanalyse verwendet werden. Weitere Anwendungsfälle, bei ](#next-steps) Besucherberichte erstellt werden [!DNL Experience Events], finden Sie [ Abschnitt „Nächste Schritte“.
 
-Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch Kombination von Query Service mit [!DNL Experience Events] können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit [!DNL Experience Events].
+Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch die Kombination von Abfrage-Service und [!DNL Experience Events] können Sie Verhaltenstrends bei Ihren Benutzenden effektiv verfolgen. Im folgenden Dokument finden Sie Beispiele für Abfragen mit [!DNL Experience Events].
 
 ## Ziel
 
@@ -36,7 +36,7 @@ ORDER BY timestamp
 LIMIT 100;
 ```
 
-Die Ergebnisse dieser Abfrage sind unten dargestellt.
+Die Ergebnisse dieser Abfrage werden unten angezeigt.
 
 ```console
       timestamp       |  referrerType  |                            referrer                                |                 pageName            |  A  |  B  |  C  | pageViews
@@ -65,10 +65,10 @@ Die Ergebnisse dieser Abfrage sind unten dargestellt.
 
 ## Nächste Schritte {#next-steps}
 
-Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie Query Service mit [!DNL Experience Events] verwenden können, um die Seitenansichten als angegebenen Benutzer aufzulisten.
+Durch das Lesen dieses Dokuments können Sie besser verstehen, wie Sie den Abfrage-Service mit [!DNL Experience Events] verwenden, um die Seitenansichten als ein bestimmter Benutzer aufzulisten.
 
 In den folgenden Anwendungsfällen erfahren Sie mehr über andere besucherbasierte Anwendungsfälle:
 
-- [Rufen Sie eine Liste von Besuchern ab, die nach der Anzahl der Seitenansichten organisiert sind.](./visitors-by-number-of-page-views.md)
-- [Zeigen Sie einen Rollup-Bericht eines Besuchers an.](./roll-up-report-of-a-visitor.md)
-- [Erstellen Sie einen Trendbericht mit Ereignissen nach Tag.](./trended-report-of-events.md)
+- [Abrufen einer Liste von Besuchern, sortiert nach der Anzahl der Seitenansichten.](./visitors-by-number-of-page-views.md)
+- [Anzeigen eines Datenaggregationsberichts eines Besuchers.](./roll-up-report-of-a-visitor.md)
+- [Erstellen Sie einen Trend-Bericht mit Ereignissen nach Tag.](./trended-report-of-events.md)

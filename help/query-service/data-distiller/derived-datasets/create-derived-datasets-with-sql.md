@@ -1,6 +1,6 @@
 ---
-title: Abgeleitete Datensätze mit SQL erstellen
-description: Erfahren Sie, wie Sie mit SQL einen abgeleiteten Datensatz erstellen, der für Profile aktiviert ist, und wie Sie den Datensatz für das Echtzeit-Kundenprofil und den Segmentierungsdienst verwenden.
+title: Erstellen abgeleiteter Datensätze mit SQL
+description: Erfahren Sie, wie Sie SQL verwenden, um einen abgeleiteten Datensatz zu erstellen, der für Profil aktiviert ist, und wie Sie den Datensatz für das Echtzeit-Kundenprofil und den Segmentierungs-Service verwenden.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
 source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
@@ -11,39 +11,39 @@ ht-degree: 2%
 
 # Erstellen abgeleiteter Datensätze mit SQL
 
-Erfahren Sie, wie Sie mit SQL-Abfragen Daten aus vorhandenen Datensätzen bearbeiten und transformieren können, um einen abgeleiteten Datensatz zu erstellen, der für Profile aktiviert ist. Dieser Workflow bietet eine effiziente, alternative Methode zum Erstellen abgeleiteter Datensätze für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils.
+Erfahren Sie, wie Sie mit SQL-Abfragen Daten aus vorhandenen Datensätzen bearbeiten und transformieren können, um einen abgeleiteten Datensatz zu erstellen, der für Profil aktiviert ist. Dieser Workflow bietet eine effiziente, alternative Methode zum Erstellen abgeleiteter Datensätze für Ihre geschäftlichen Anwendungsfälle des Echtzeit-Kundenprofils.
 
-In diesem Dokument werden verschiedene praktische SQL-Erweiterungen beschrieben, die einen abgeleiteten Datensatz zur Verwendung mit dem Echtzeit-Kundenprofil generieren. Der Workflow vereinfacht den Prozess, den Sie andernfalls über verschiedene API-Aufrufe oder Interaktionen mit der Platform-Benutzeroberfläche durchführen müssten.
+In diesem Dokument werden verschiedene praktische SQL-Erweiterungen beschrieben, die einen abgeleiteten Datensatz für die Verwendung mit dem Echtzeit-Kundenprofil generieren. Der Workflow vereinfacht den Prozess, den Sie andernfalls durch verschiedene API-Aufrufe oder Platform-Benutzeroberflächeninteraktionen abschließen müssten.
 
-In der Regel würde das Generieren und Veröffentlichen eines abgeleiteten Datensatzes für das Echtzeit-Kundenprofil die folgenden Schritte umfassen:
+Normalerweise umfasst das Generieren und Veröffentlichen eines abgeleiteten Datensatzes für das Echtzeit-Kundenprofil die folgenden Schritte:
 
-* Erstellen Sie einen Identitäts-Namespace, falls noch kein vorhanden ist.
+* Erstellen Sie einen Identity-Namespace, falls noch kein Namespace vorhanden ist.
 * Erstellen Sie bei Bedarf den Datentyp, um den abgeleiteten Datensatz zu speichern.
 * Erstellen Sie eine Feldergruppe mit diesem Datentyp, um die abgeleiteten Datensatzinformationen zu speichern.
 * Erstellen oder weisen Sie eine primäre Identitätsspalte mit dem zuvor erstellten Namespace zu.
-* Erstellen Sie ein Schema mit der zuvor erstellten Feldergruppe und dem zuvor erstellten Datentyp.
-* Erstellen Sie mit Ihrem Schema einen neuen Datensatz und aktivieren Sie ihn bei Bedarf für das Profil.
-* Markieren Sie optional einen Datensatz als profilaktiviert.
+* Erstellen Sie ein Schema mit der zuvor erstellten Feldergruppe und dem Datentyp.
+* Erstellen Sie mithilfe Ihres Schemas einen neuen Datensatz und aktivieren Sie ihn bei Bedarf für das Profil.
+* Optional können Sie einen Datensatz als profilaktiviert markieren.
 
-Nach Abschluss der oben genannten Schritte können Sie den Datensatz ausfüllen. Wenn Sie den Datensatz für Profil aktiviert haben, können Sie auch Segmente erstellen, die auf den neuen Datensatz verweisen, und mit der Erstellung von Einblicken beginnen.
+Nachdem Sie die oben genannten Schritte ausgeführt haben, können Sie den Datensatz ausfüllen. Wenn Sie den Datensatz für das Profil aktiviert haben, können Sie auch Segmente erstellen, die auf den neuen Datensatz verweisen, und mit der Erstellung von Einblicken beginnen.
 
-Mit Query Service können Sie alle oben aufgeführten Aktionen mithilfe von SQL-Abfragen durchführen. Dies umfasst bei Bedarf Änderungen an Ihren Datensätzen und Feldergruppen.
+Query Service ermöglicht Ihnen, alle oben aufgeführten Aktionen mithilfe von SQL-Abfragen durchzuführen. Dazu gehört, bei Bedarf Änderungen an Ihren Datensätzen und Feldergruppen vorzunehmen.
 
 ## Erstellen einer Tabelle mit einer Option, um sie für ein Profil zu aktivieren {#enable-dataset-for-profile}
 
 >[!NOTE]
 >
->Bei der unten bereitgestellten SQL-Abfrage wird von der Verwendung eines bereits vorhandenen Namespace ausgegangen.
+>Die unten bereitgestellte SQL-Abfrage setzt die Verwendung eines bereits vorhandenen Namespace voraus.
 
-Verwenden Sie eine &quot;Tabelle als Auswahl erstellen&quot;(CTAS)-Abfrage, um einen Datensatz zu erstellen, Datentypen zuzuweisen, eine primäre Identität festzulegen, ein Schema zu erstellen und ihn als profilaktiviert zu markieren. Die folgende SQL-Beispielanweisung erstellt einen Datensatz und stellt ihn für Real-time Customer Data Platform (Real-Time CDP) zur Verfügung. Ihre SQL-Abfrage entspricht dem Format, das im folgenden Beispiel gezeigt wird:
+Verwenden Sie eine Abfrage vom Typ Tabelle als Auswahl erstellen (CTAS), um einen Datensatz zu erstellen, Datentypen zuzuweisen, eine primäre Identität festzulegen, ein Schema zu erstellen und ihn als profilaktiviert zu markieren. Die folgende SQL-Beispielanweisung erstellt einen Datensatz und stellt ihn für Real-time Customer Data Platform (Real-Time CDP) zur Verfügung. Ihre SQL-Abfrage folgt dem Format, das im folgenden Beispiel gezeigt wird:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
-Folgende Datentypen werden unterstützt: boolean, date, datetime, text, float, bigint, integer, map, array sowie structure/row.
+Die unterstützten Datentypen sind: Boolesch, Datum, Datum/Uhrzeit, Text, Gleitkommazahl, bigint, Ganzzahl, Zuordnung, Array und Struct/Row.
 
-Der unten stehende SQl-Codeblock bietet Beispiele zum Definieren von Struktur-/Zeilen-, Zuordnungs- und Array-Datentypen. Zeile eins zeigt die Zeilensyntax. Zeile 2 zeigt die Syntax der Zuordnung und Zeile 3 die Syntax des Arrays.
+Der folgende SQL-Codeblock enthält Beispiele zum Definieren von Struktur-/Zeilen-, Zuordnungs- und Array-Datentypen. Zeile 1 zeigt die Zeilensyntax. Zeile zwei zeigt die Zuordnungssyntax und Zeile drei die Array-Syntax.
 
 ```sql {line-numbers="true"}
 ROW (Column_name <data_type> [, column name <data_type> ]*)
@@ -51,9 +51,9 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Alternativ können Datensätze auch über die Platform-Benutzeroberfläche für das Profil aktiviert werden. Weitere Informationen zum Markieren eines Datensatzes als für ein Profil aktiviert finden Sie in der Dokumentation [Aktivieren eines Datensatzes für das Echtzeit-Kundenprofil ](../../../catalog/datasets/user-guide.md#enable-profile) .
+Alternativ können Datensätze auch über die Platform-Benutzeroberfläche für Profile aktiviert werden. Weitere Informationen zum Markieren eines Datensatzes als für Profil aktiviert finden Sie in der [Aktivieren eines Datensatzes für das Echtzeit-Kundenprofil](../../../catalog/datasets/user-guide.md#enable-profile).
 
-In der folgenden Beispielabfrage wird der Datensatz `decile_table` mit `id` als primäre Identitätsspalte erstellt und hat den Namespace `IDFA`. Es verfügt auch über ein Feld mit dem Namen `decile1Month` des Zuordnungs-Datentyps. Die erstellte Tabelle (`decile_table`) ist für das Profil aktiviert.
+In der folgenden Beispielabfrage wird der `decile_table` Datensatz mit `id` als primäre Identitätsspalte erstellt und weist den Namespace `IDFA` auf. Es gibt auch ein Feld namens `decile1Month` vom Datentyp Zuordnung . Die erstellte Tabelle (`decile_table`) ist für Profil aktiviert.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,21 +69,21 @@ Created Table DataSet Id
 (1 row)
 ```
 
-Verwenden Sie `label='PROFILE'` für einen `CREATE TABLE` -Befehl, um einen profilaktivierten Datensatz zu erstellen. Die Funktion `upsert` ist standardmäßig aktiviert. Die `upsert` -Funktion kann mit dem Befehl `ALTER` überschrieben werden, wie im folgenden Beispiel gezeigt.
+Verwenden Sie `label='PROFILE'` auf einem `CREATE TABLE`, um einen profilaktivierten Datensatz zu erstellen. Die `upsert` ist standardmäßig aktiviert. Die `upsert` kann mithilfe des Befehls `ALTER` überschrieben werden, wie im folgenden Beispiel gezeigt.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
 ```
 
-Weitere Informationen zur Verwendung des Befehls [ALTER TABLE](../../sql/syntax.md#alter-table) und des Befehls [label als Teil einer CTAS-Abfrage](../../sql/syntax.md#create-table-as-select) finden Sie in der SQl-Syntaxdokumentation .
+Weitere Informationen zur Verwendung des Befehls [ALTER TABLE](../../sql/syntax.md#alter-table) und „label“ als Teil einer CTAS[Abfrage finden Sie in der SQL](../../sql/syntax.md#create-table-as-select)Syntaxdokumentation .
 
-## Konstrukte, die bei der Verwaltung von abgeleiteten Datensätzen über SQL helfen
+## Konstrukte zur Unterstützung der Verwaltung abgeleiteter Datensätze mithilfe von SQL
 
-Die unten beschriebenen Funktionen sind bei der Verwaltung von abgeleiteten Datensätzen über SQL von großem Vorteil.
+Die unten beschriebenen Funktionen sind bei der Verwaltung abgeleiteter Datensätze über SQL von großem Nutzen.
 
 ### Vorhandene Datensätze ändern, damit sie für das Profil aktiviert werden {#enable-existing-dataset-for-profile}
 
-Das SQL-Konstrukt ALTER TABLE kann verwendet werden, um vorhandene Datensätze für das Profil zu aktivieren. Dazu muss ein profilaktiviertes Tag sowohl zum Schema als auch zum entsprechenden Datensatz hinzugefügt werden.
+Das SQL-Konstrukt ALTER TABLE kann verwendet werden, um vorhandene Datensätze für das Profil zu aktivieren. Dies erfordert, dass sowohl dem Schema als auch dem entsprechenden Datensatz ein profilaktiviertes Tag hinzugefügt wird.
 
 ```sql
 ALTER TABLE your_decile_table ADD label 'PROFILE';
@@ -91,69 +91,69 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 
 >[!NOTE]
 >
->Bei erfolgreicher Ausführung des Befehls `ALTER TABLE` gibt die Konsole `ALTER SUCCESS` zurück.
+>Bei erfolgreicher Ausführung des `ALTER TABLE`-Befehls gibt die Konsole `ALTER SUCCESS` zurück.
 
-### Primäre Identität zu einem vorhandenen Datensatz hinzufügen {#add-primary-identity}
+### Hinzufügen einer primären Identität zu einem vorhandenen Datensatz {#add-primary-identity}
 
-Markieren Sie eine vorhandene Spalte in einem Datensatz als primären Identitätssatz. Andernfalls tritt ein Fehler auf. Um eine primäre Identität mithilfe von SQL festzulegen, verwenden Sie das unten dargestellte Abfrageformat.
+Markieren Sie eine vorhandene Spalte in einem Datensatz als primären Identitätssatz. Andernfalls führt dies zu einem Fehler. Um eine primäre Identität mithilfe von SQL festzulegen, verwenden Sie das unten angezeigte Abfrageformat.
 
 ```sql
 ALTER TABLE <your_table_name> ADD CONSTRAINT primary identity NAMESPACE
 ```
 
-Beispiel:
+z. B.:
 
 ```sql
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
 
-Im bereitgestellten Beispiel ist `id2` eine vorhandene Spalte in `test1_dataset`.
+Im angegebenen Beispiel ist `id2` eine vorhandene Spalte in `test1_dataset`.
 
 ### Datensatz für Profil deaktivieren {#disable-dataset-for-profile}
 
-Wenn Sie Ihre Tabelle für Profilzwecke deaktivieren möchten, müssen Sie den DROP-Befehl verwenden. Unten finden Sie eine SQL-Beispielanweisung, die `DROP` verwendet.
+Wenn Sie Ihre Tabelle für die Verwendung durch Profile deaktivieren möchten, müssen Sie den DROP-Befehl verwenden. Nachfolgend finden Sie eine Beispiel-SQL-Anweisung mit dem `DROP` USES .
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
 ```
 
-Beispiel:
+z. B.:
 
 ```sql
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-Diese SQL-Anweisung bietet eine effiziente alternative Methode zur Verwendung eines API-Aufrufs. Weitere Informationen finden Sie in der Dokumentation zum [Deaktivieren eines Datensatzes für die Verwendung mit Real-Time CDP mithilfe der Datensatz-API](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+Diese SQL-Anweisung bietet eine effiziente Alternative zur Verwendung eines API-Aufrufs. Weitere Informationen finden Sie in der Dokumentation zum [Deaktivieren eines Datensatzes für die Verwendung mit Real-Time CDP mithilfe der Datasets-API](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
-### Zulassen der Aktualisierung und des Einfügens von Funktionen für Ihren Datensatz {#enable-upsert-functionality-for-dataset}
+### Zulassen, dass Funktionen für den Datensatz aktualisiert und eingefügt werden {#enable-upsert-functionality-for-dataset}
 
-Mit dem UPSERT-Befehl können Sie einen neuen Datensatz einfügen oder vorhandene Daten in eine Tabelle aktualisieren. Insbesondere können Sie eine vorhandene Zeile aktualisieren, wenn ein angegebener Wert bereits in einer Tabelle vorhanden ist, oder eine neue Zeile einfügen, wenn der angegebene Wert noch nicht vorhanden ist.
+Mit dem Befehl UPSERT können Sie einen neuen Datensatz einfügen oder vorhandene Daten in einer Tabelle aktualisieren. Insbesondere können Sie eine vorhandene Zeile aktualisieren, wenn ein angegebener Wert bereits in einer Tabelle vorhanden ist, oder eine neue Zeile einfügen, wenn der angegebene Wert noch nicht vorhanden ist.
 
-Unten finden Sie eine Beispielanweisung, die das richtige Format verwendet.
+Nachfolgend finden Sie eine Beispielanweisung mit dem richtigen Format.
 
 ```sql
 ALTER TABLE table_name ADD LABEL 'UPSERT';
 ```
 
-Beispiel:
+z. B.:
 
 ```sql
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-Diese SQL-Anweisung bietet eine effiziente alternative Methode zur Verwendung eines API-Aufrufs. Weitere Informationen finden Sie in der Dokumentation zum Aktivieren eines Datensatzes für die Verwendung mit Real-Time CDP und UPSERT mithilfe der Datensatz-API](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).[
+Diese SQL-Anweisung bietet eine effiziente Alternative zur Verwendung eines API-Aufrufs. Weitere Informationen finden Sie in der Dokumentation zum [Aktivieren eines Datensatzes für die Verwendung mit Real-Time CDP und UPSERT mithilfe der Datasets-API](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
 
-### Deaktivieren Sie die Aktualisierungs- und Einfügefunktionen für Ihren Datensatz. {#disable-upsert-functionality-for-dataset}
+### Funktion zum Aktualisieren und Einfügen für Ihren Datensatz deaktivieren {#disable-upsert-functionality-for-dataset}
 
 Dieser Befehl deaktiviert die Möglichkeit, Zeilen zu aktualisieren und in Ihren Datensatz einzufügen.
 
-Unten finden Sie eine Beispielanweisung, die das richtige Format verwendet.
+Nachfolgend finden Sie eine Beispielanweisung mit dem richtigen Format.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'UPSERT';
 ```
 
-Beispiel:
+z. B.:
 
 ```sql
 ALTER TABLE table_with_a_decile DROP label 'UPSERT';
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Zusätzliche Tabelleninformationen für jede Tabelle anzeigen {#show-labels-for-tables}
 
-Zusätzliche Metadaten werden für profilaktivierte Datensätze beibehalten. Verwenden Sie den Befehl `SHOW TABLES` , um eine zusätzliche Spalte `labels` anzuzeigen, die Informationen zu allen Beschriftungen enthält, die mit Tabellen verknüpft sind.
+Zusätzliche Metadaten werden für profilaktivierte Datensätze beibehalten. Verwenden Sie den Befehl `SHOW TABLES` , um eine zusätzliche `labels` anzuzeigen, die Informationen zu Beschriftungen bereitstellt, die mit Tabellen verknüpft sind.
 
 Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
@@ -174,13 +174,13 @@ Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 (3 rows)
 ```
 
-Aus dem Beispiel können Sie sehen, dass `table_with_a_decile` für das Profil aktiviert und mit Bezeichnungen wie [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&#39;PROFILE&#39;](#enable-existing-dataset-for-profile) angewendet wurde, wie zuvor beschrieben.
+Im Beispiel sehen Sie, dass `table_with_a_decile` für das Profil aktiviert und mit Kennzeichnungen wie [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&#39;PROFILE&#39;](#enable-existing-dataset-for-profile) wie zuvor beschrieben angewendet wurde.
 
 ### Erstellen einer Feldergruppe mit SQL
 
-Feldergruppen können jetzt mithilfe von SQL erstellt werden. Dies bietet eine Alternative zur Verwendung des Schema-Editors in der Platform-Benutzeroberfläche oder zum Ausführen eines API-Aufrufs für die Schemaregistrierung.
+Feldergruppen können jetzt mithilfe von SQL erstellt werden. Dies bietet eine Alternative zur Verwendung des Schema-Editors in der Platform-Benutzeroberfläche oder einem API-Aufruf an die Schemaregistrierung.
 
-Unten finden Sie eine Beispielanweisung zum Erstellen einer Feldergruppe.
+Nachfolgend finden Sie eine Beispielanweisung zum Erstellen einer Feldergruppe.
 
 ```sql
 CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> primary identity namespace <namespace>, [field_name_2 >data_type>]) [ WITH(LABEL='PROFILE') ];
@@ -188,10 +188,10 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 
 >[!IMPORTANT]
 >
->Die Feldergruppenerstellung über SQL schlägt fehl, wenn die Markierung `label` nicht in der Anweisung angegeben ist oder die Feldergruppe bereits existiert.
->Stellen Sie sicher, dass die Abfrage eine &quot;`IF NOT EXISTS`&quot;-Klausel enthält, um zu verhindern, dass die Abfrage fehlschlägt, da die Feldergruppe bereits vorhanden ist.
+>Die Feldergruppenerstellung über SQL schlägt fehl, wenn das `label`-Flag nicht in der Anweisung angegeben wird oder wenn die Feldergruppe bereits vorhanden ist.
+>Stellen Sie sicher, dass die Abfrage eine `IF NOT EXISTS`-Klausel enthält, um zu vermeiden, dass die Abfrage fehlschlägt, da die Feldergruppe bereits vorhanden ist.
 
-Ein Beispiel für die reale Welt könnte in etwa dem unten gezeigten ähneln.
+Ein reales Beispiel könnte in etwa wie unten dargestellt aussehen.
 
 ```sql
 CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, decile3Month map<text, integer>, decile6Month map<text, integer>, decile9Month map<text, integer>, decile12Month map<text, integer>, decilelietime map<text, integer>) WITH (LABEL-'PROFILE');
@@ -199,17 +199,17 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 Bei erfolgreicher Ausführung dieser Anweisung wird die erstellte Feldergruppen-ID zurückgegeben. Beispiel `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Weitere Informationen zu alternativen Methoden finden Sie in der Dokumentation zum [Erstellen einer neuen Feldergruppe im Schema Editor](../../../xdm/ui/resources/field-groups.md#create) oder zur Verwendung der [Schema Registry-API](../../../xdm/api/field-groups.md#create) .
+Weitere Informationen zu alternativen Methoden finden Sie in [ Dokumentation zum Erstellen einer neuen Feldergruppe ](../../../xdm/ui/resources/field-groups.md#create) Schema-Editor oder [ Verwendung ](../../../xdm/api/field-groups.md#create) Schema-Registrierungs-API .
 
-### Eine Feldergruppe ablegen
+### Feldergruppe ablegen
 
-Gelegentlich kann es erforderlich sein, eine Feldergruppe aus der Schema Registry zu entfernen. Führen Sie dazu den Befehl `DROP FIELDGROUP` mit der Feldergruppen-ID aus.
+Gelegentlich kann es erforderlich sein, eine Feldergruppe aus der Schemaregistrierung zu entfernen. Dazu führen Sie den Befehl `DROP FIELDGROUP` mit der Feldgruppen-ID aus.
 
 ```sql
 DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
 ```
 
-Beispiel:
+z. B.:
 
 ```sql
 DROP FIELDGROUP field_group_for_test123;
@@ -217,11 +217,11 @@ DROP FIELDGROUP field_group_for_test123;
 
 >[!IMPORTANT]
 >
->Das Löschen einer Feldergruppe über SQL schlägt fehl, wenn die Feldergruppe nicht vorhanden ist. Stellen Sie sicher, dass die Anweisung eine `IF EXISTS` -Klausel enthält, um zu verhindern, dass die Abfrage fehlschlägt.
+>Das Löschen einer Feldergruppe über SQL schlägt fehl, wenn die Feldergruppe nicht vorhanden ist. Stellen Sie sicher, dass die Anweisung eine `IF EXISTS`-Klausel enthält, um ein Fehlschlagen der Abfrage zu vermeiden.
 
-### Alle Feldgruppennamen und -IDs für Ihre Tabellen anzeigen
+### Alle Namen und IDs der Feldergruppen für die Tabellen anzeigen
 
-Der Befehl `SHOW FIELDGROUPS` gibt eine Tabelle zurück, die den Namen, die fieldgroupId und den Eigentümer der Tabellen enthält.
+Der Befehl `SHOW FIELDGROUPS` gibt eine Tabelle zurück, die den Namen, die Feldgruppen-ID und den Eigentümer der Tabellen enthält.
 
 Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
@@ -237,4 +237,4 @@ Nachfolgend finden Sie ein Beispiel für die Ausgabe dieses Befehls:
 
 ## Nächste Schritte
 
-Nachdem Sie dieses Dokument gelesen haben, können Sie besser verstehen, wie Sie SQL verwenden, um ein Profil zu erstellen und aktivierten Datensatz basierend auf abgeleiteten Datensätzen zu aktualisieren. Sie können diesen Datensatz jetzt mit Batch-Aufnahme-Workflows verwenden, um Ihre Profildaten zu aktualisieren. Um mehr über die Aufnahme von Daten in Adobe Experience Platform zu erfahren, lesen Sie bitte zunächst die [Übersicht zur Datenaufnahme](../../../ingestion/home.md).
+Nach dem Lesen dieses Dokuments wissen Sie besser, wie Sie SQL verwenden können, um ein Profil und einen upsert-aktivierten Datensatz basierend auf abgeleiteten Datensätzen zu erstellen. Sie können diesen Datensatz jetzt mit Batch-Aufnahme-Workflows verwenden, um Aktualisierungen an Ihren Profildaten vorzunehmen. Um mehr über die Aufnahme von Daten in Adobe Experience Platform zu erfahren, lesen Sie bitte zunächst die [Übersicht zur Datenaufnahme](../../../ingestion/home.md).

@@ -35,7 +35,7 @@ Diese erforderlichen Werte werden aus Ihren Adobe Experience Platform-Anmeldedat
 
 >[!IMPORTANT]
 >
->Als Power BI- oder Tableau-Benutzer können Sie über die Registerkarte Query Service-Anmeldedaten eine Verbindung zu Ihren BI-Tools herstellen. Anweisungen zum Verbinden Ihrer BI-Tools mit Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics) finden Sie in der Dokumentation zu den Anmeldedaten .[
+>Als Power BI- oder Tableau-Anwender können Sie Customer Journey Analytics über die Registerkarte Anmeldeinformationen des Abfrage-Service mit Ihren BI-Tools verbinden. Anleitungen zum Verbinden (Verbinden [ BI-Tools mit dem Customer Journey Analytics) finden Sie in der Dokumentation ](../ui/credentials.md#connect-to-customer-journey-analytics) Anmeldedaten .
 
 ![Der Experience Platform-Arbeitsbereich „Abfragen“, auf dem die Registerkarte „Anmeldedaten“ und Anmeldedaten mit ihrem Ablaufdatum hervorgehoben sind.](../images/clients/power-bi/query-service-credentials-page.png)
 

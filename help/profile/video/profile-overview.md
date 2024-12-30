@@ -1,6 +1,6 @@
 ---
-title: Videoübersicht zum Echtzeit-Kundenprofil
-description: In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und eine Übersicht über das Durchsuchen von Profilen in der Platform-Benutzeroberfläche.
+title: Videoüberblick über das Echtzeit-Kundenprofil
+description: In diesem Video erhalten Sie grundlegende Informationen zum Echtzeit-Kundenprofil in Adobe Experience Platform und zum Durchsuchen von Profilen in der Platform-Benutzeroberfläche.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -18,10 +18,10 @@ ht-degree: 18%
 
 # Übersicht zum Echtzeit-Kundenprofil
 
-In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und erfahren, wie Daten aus mehreren Quellen zusammengeführt werden, um ein zentralisiertes Profil für jeden Ihrer Kunden zu erstellen. Um mehr über die Funktionen und Funktionen des Echtzeit-Kundenprofils zu erfahren, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../home.md).
+In diesem Video erhalten Sie einen Überblick über das Echtzeit-Kundenprofil in Adobe Experience Platform und darüber, wie Daten aus verschiedenen Quellen zusammengeführt werden, um ein zentralisiertes Profil für jeden einzelnen Ihrer Kunden zu erstellen. Weitere Informationen zu den Funktionen des Echtzeit-Kundenprofils finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../home.md).
 
 >[!NOTE]
 >
->Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Handbuch zur Profil-Benutzeroberfläche](../ui/user-guide.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch zur [-Benutzeroberfläche](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

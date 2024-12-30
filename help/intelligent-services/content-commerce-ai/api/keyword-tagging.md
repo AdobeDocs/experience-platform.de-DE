@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; Erste Schritte; Inhalt; Inhalts-Tagging-API; Keyword-Tagging; Keyword-Tagging
+keywords: Experience Platform;Erste Schritte;Inhalt;Inhalts-Tagging-KI;Keyword-Tagging;Keyword-Tagging
 solution: Experience Platform
-title: Keyword-Tagging in der Inhalts-Tagging-API
-description: Der Keyword-Tagging-Dienst extrahiert bei der Bereitstellung eines Textdokuments automatisch Suchbegriffe oder Suchbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Unternehmen (NER) und unbeaufsichtigten Keyword-Tagging-Algorithmen verwendet.
+title: Keyword-Tagging in der Content-Tagging-API
+description: Wenn der Keyword-Tagging-Service ein Textdokument bereitstellt, extrahiert automatisch Keywords oder Schlüsselsätze, die das Thema des Dokuments am besten beschreiben. Um Keywords zu extrahieren, wird eine Kombination aus NER (Named Entity Recognition) und unkontrollierten Keyword-Tagging-Algorithmen verwendet.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
@@ -13,22 +13,22 @@ ht-degree: 6%
 
 # Keyword-Tagging
 
-Wenn ein Textdokument angegeben wird, extrahiert der Keyword-Tagging-Dienst automatisch Suchbegriffe oder Schlüsselbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Unternehmen (NER) und unbeaufsichtigten Keyword-Tagging-Algorithmen verwendet.
+Bei einem gegebenen Textdokument extrahiert der Keyword-Tagging-Service automatisch Keywords oder Schlüsselbegriffe, die das Thema des Dokuments am besten beschreiben. Um Keywords zu extrahieren, wird eine Kombination aus NER (Named Entity Recognition) und unkontrollierten Keyword-Tagging-Algorithmen verwendet.
 
-In der folgenden Tabelle sind die benannten Entitäten aufgeführt, die [!DNL Content Tagging] identifizieren kann:
+In der folgenden Tabelle sind die benannten Entitäten aufgeführt, die [!DNL Content Tagging] identifizieren können:
 
-| Entitätsname | Beschreibung |
+| Name der Entität | Beschreibung |
 | --- | --- |
 | PERSON | Menschen, auch fiktive. |
 | GPE | Länder, Städte und Staaten. |
-| LOC | Nicht-GPE-Orte, Gebirgszüge und Wasserkörper. |
+| LOC | Nicht-GPE-Standorte, Gebirgszüge und Gewässer. |
 | FAC | Gebäude, Flughäfen, Autobahnen, Brücken usw. |
-| ORG | Unternehmen, Agenturen, Einrichtungen usw. |
-| PRODUKT | Objekte, Fahrzeuge, Lebensmittel usw. (Keine Dienste.) |
-| EVENT | Benannte Hurrikane, Kämpfe, Kriege, Sportveranstaltungen usw. |
+| ORG | Unternehmen, Agenturen, Institutionen usw. |
+| PRODUKT | Objekte, Fahrzeuge, Lebensmittel usw. (Keine Services.) |
+| EVENT | Benannte Hurrikane, Schlachten, Kriege, Sportveranstaltungen usw. |
 | WORK_OF_ART | Titel von Büchern, Liedern usw. |
-| GESETZ | Spezifische Dokumente, die in Gesetze umgewandelt wurden. |
-| SPRACHE | Jede benannte Sprache. |
+| GESETZ | Spezifische Dokumente wurden zu Gesetzen. |
+| SPRACHE | Beliebige spezifische Sprache. |
 
 **API-Format**
 
@@ -38,7 +38,7 @@ POST /services/v2/predict
 
 **Anfrage**
 
-Die folgende Anfrage extrahiert Suchbegriffe aus einem Dokument basierend auf den in der Payload bereitgestellten Eingabeparametern.
+Die folgende Anfrage extrahiert Schlüsselwörter aus einem Dokument basierend auf den in der Payload bereitgestellten Eingabeparametern.
 
 Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispiel-Payload .
 
@@ -90,12 +90,12 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `top_n` | Anzahl der zurückzugebenden Ergebnisse. 0, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit einem Schwellenwert liegt die Anzahl der zurückgegebenen Ergebnisse unter beiden Beschränkungen. | Nein |
-| `min_relevance` | Punktschwellenwert, unterhalb dessen Ergebnisse zurückgegeben werden müssen. Schließen Sie den Parameter aus, um alle Ergebnisse zurückzugeben. | Nein |
-| `min_key_phrase_length` | Mindestanzahl von Wörtern, die in Schlüsselwörtern erforderlich sind. | Nein |
-| `max_key_phrase_length` | Maximale Anzahl an Wörtern, die in Schlüsselwörtern erforderlich sind. | Nein |
-| `last_semantic_unit_type` | Gibt in der hierarchischen Antwort nur semantische Einheiten bis zur angegebenen Ebene zurück. &quot;key_phrase&quot;gibt nur Schlüsselbegriffe zurück, &quot;linked_entity&quot;gibt nur Schlüsselbegriffe und die zugehörigen verknüpften Entitäten zurück und &quot;concept&quot;gibt Schlüsselbegriffe, verknüpfte Entitäten und Konzepte zurück. | Nein |
-| `entity_types` | Typen von Entitäten, die als Schlüsselbegriffe zurückgegeben werden sollen. | Nein |
+| `top_n` | Anzahl der zurückzugebenden Ergebnisse. 0, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit einem Schwellenwert ist die Anzahl der zurückgegebenen Ergebnisse kleiner als beide Grenzen. | Nein |
+| `min_relevance` | Score-Schwellenwert, unterhalb dessen Ergebnisse zurückgegeben werden müssen. Schließen Sie den Parameter aus, um alle Ergebnisse zurückzugeben. | Nein |
+| `min_key_phrase_length` | Minimale Anzahl an Wörtern, die in den Schlüsselsätzen benötigt werden. | Nein |
+| `max_key_phrase_length` | Maximale Anzahl an Wörtern, die in Schlüsselsätzen benötigt werden. | Nein |
+| `last_semantic_unit_type` | Gibt nur semantische Einheiten bis zur angegebenen Ebene in der hierarchischen Antwort zurück. „key_phrase“ gibt nur Schlüsselbegriffe zurück, „linked_entity“ gibt nur Schlüsselbegriffe und deren entsprechende verknüpfte Entitäten zurück und „concept“ gibt Schlüsselbegriffe, verknüpfte Entitäten und Konzepte zurück. | Nein |
+| `entity_types` | Typen von Entitäten, die als Schlüsselsätze zurückgegeben werden sollen. | Nein |
 
 **Dokumentobjekt**
 
@@ -103,12 +103,12 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | string | – | – | – | Vordefinierte URL des Dokuments, aus dem Schlüsselbegriffe extrahiert werden sollen. |
 | `sensei:repoType` | Zeichenfolge | – | – | HTTPS | Typ des Repositorys, in dem das Dokument gespeichert wird. |
-| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie das Dokument als mehrteiliges Argument übergeben, anstatt vorsignierte URLs zu verwenden. |
-| `dc:format` | Zeichenfolge | Ja | – | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | Die Dokumentkodierung wird vor der Verarbeitung mit den zulässigen Eingabekodierungstypen abgeglichen. |
+| `sensei:multipart_field_name` | Zeichenfolge | – | – | – | Verwenden Sie dies, wenn Sie das Dokument als mehrteiliges Argument übergeben, anstatt vordefinierte URLs zu verwenden. |
+| `dc:format` | Zeichenfolge | Ja | – | „text/plain“,<br>„application/pdf“,<br>„text/pdf“,<br>„text/html“,<br>„text/rtf“,<br>„application/rtf“,<br>„application/msword“,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document“,<br>„application/mspowerpoint“,<br>&quot;application/vnd.ms-powerpoint“,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation“ | Die Dokumentcodierung wird vor der Verarbeitung mit den zulässigen Eingabecodierungstypen abgeglichen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüsselwörter im `response` -Array enthält.
+Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüsselwörter im `response`-Array enthält.
 
 ```json
 {

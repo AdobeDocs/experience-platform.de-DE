@@ -13,7 +13,7 @@ ht-degree: 78%
 
 # Gültigkeitsdauern von Erlebnisereignissen
 
-In Adobe Experience Platform können Sie die Ablaufzeiten für alle Erlebnisereignisse konfigurieren, die in einen Datensatz erfasst werden, der für [Echtzeit-Kundenprofil](./home.md) aktiviert ist. Auf diese Weise können Sie automatisch Daten aus dem Profilspeicher entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
+In Adobe Experience Platform können Sie Gültigkeitsdauern für alle Erlebnisereignisse konfigurieren, die in einen Datensatz aufgenommen werden, der für das Echtzeit[Kundenprofil aktiviert ](./home.md). Auf diese Weise können Sie automatisch Daten aus dem Profilspeicher entfernen, die für Ihre Anwendungsfälle nicht mehr gültig oder nützlich sind.
 
 Gültigkeitsdauern von Erlebnisereignissen können nicht über die Platform-Benutzeroberfläche oder APIs konfiguriert werden. Stattdessen müssen Sie sich an den Support wenden, um Gültigkeitsdauern von Erlebnisereignissen für Ihre erforderlichen Datensätze zu aktivieren.
 
@@ -26,7 +26,7 @@ Gültigkeitsdauern von Erlebnisereignissen können nicht über die Platform-Benu
 Nachdem Gültigkeitsdauern von Erlebnisereignissen für einen Datensatz mit aktiviertem Profil aktiviert wurden, wendet Platform die Gültigkeitswerte für jedes erfasste Ereignis in einem zweistufigen Prozess automatisch an:
 
 1. Bei allen neuen Daten, die in den Datensatz aufgenommen werden, wird der Ablaufwert zur Aufnahmezeit auf der Grundlage des Ereignis-Zeitstempels angewendet.
-1. Für alle bereits vorhandenen Daten im Datensatz wird der Ablaufwert rückwirkend als einmaliger Systemauftrag zur Aufstockung angewendet. Sobald der Gültigkeitswert im Datensatz platziert wurde, werden Ereignisse, die älter als der Gültigkeitswert sind, bei Ausführung des Systemauftrags sofort gelöscht. Alle anderen Ereignisse werden entfernt, sobald sie ihre Ablaufwerte aus dem Ereigniszeitstempel erreichen. Wenn alle Erlebnisereignisse entfernt wurden und das Profil keine Profilattribute mehr aufweist, existiert das Profil nicht mehr.
+1. Für alle bereits vorhandenen Daten im Datensatz wird der Ablaufwert rückwirkend als einmaliger Systemauftrag zur Aufstockung angewendet. Sobald der Gültigkeitswert im Datensatz platziert wurde, werden Ereignisse, die älter als der Gültigkeitswert sind, bei Ausführung des Systemauftrags sofort gelöscht. Alle anderen Ereignisse werden entfernt, sobald sie ihre Gültigkeitswerte vom Zeitstempel des Ereignisses erreichen. Wenn alle Erlebnisereignisse entfernt wurden und das Profil keine Profilattribute mehr hat, ist das Profil nicht mehr vorhanden.
 
 >[!WARNING]
 >
@@ -40,17 +40,17 @@ Wenn Sie beispielsweise am 15. Mai einen Gültigkeitswert von 30 Tagen angewende
 
 ## Auswirkungen auf die Segmentierung
 
-Sie müssen sicherstellen, dass die Lookback-Fenster für Ihre Zielgruppen innerhalb der Ablaufgrenzen ihrer abhängigen Datensätze liegen, um die Ergebnisse genau zu halten. Wenn Sie beispielsweise einen Ablaufwert von 30 Tagen anwenden und eine Zielgruppe verwenden, die versucht, Daten aus bis zu 45 Tagen anzuzeigen, ist die resultierende Zielgruppe wahrscheinlich ungenau.
+Sie müssen sicherstellen, dass sich die Lookback-Fenster für Ihre Zielgruppen innerhalb der Gültigkeitsgrenzen ihrer abhängigen Datensätze befinden, um die Ergebnisse genau zu halten. Wenn Sie beispielsweise einen Gültigkeitswert von 30 Tagen anwenden und eine Zielgruppe haben, die versucht, Daten von vor bis zu 45 Tagen anzuzeigen, ist die resultierende Zielgruppe wahrscheinlich ungenau.
 
 Daher sollten Sie nach Möglichkeit für alle Datensätze denselben Gültigkeitswert für Erlebnisereignisse beibehalten, um die Auswirkungen verschiedener Gültigkeitswerte auf verschiedene Datensätze in Ihrer Segmentierungslogik zu vermeiden.
 
 ## Häufig gestellte Fragen {#faq}
 
-Im folgenden Abschnitt finden Sie häufig gestellte Fragen zum Ablauf von Erlebnisereignissen:
+Im folgenden Abschnitt finden Sie häufig gestellte Fragen zum Ablauf von Erlebnisereignisdaten:
 
-### Worin unterscheidet sich das Ablaufdatum von Erlebnisereignisdaten vom Ablauf der pseudonymen Profildaten?
+### Wie unterscheidet sich Ablauf von Erlebnisereignisdaten vom Ablauf von Daten pseudonymer Profile?
 
-Das Auslaufen von Erlebnisereignisdaten und das Auslaufen von Pseudonymen Profildaten sind komplementäre Funktionen.
+Ablauf von Erlebnisereignisdaten und Ablauf von Daten pseudonymer Profile sind komplementäre Funktionen.
 
 #### Granularität
 

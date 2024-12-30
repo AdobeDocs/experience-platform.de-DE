@@ -21,7 +21,7 @@ ht-degree: 91%
 * [Edge-Profile](edge-profiles.md)
 * [Gültigkeitsdauern von Erlebnisereignissen](event-expirations.md)
 * [Ablauf von pseudonymen Profilen](pseudonymous-profiles.md)
-* [Bestellung von Kundenzeitstempeln](customer-timestamp-ordering.md)
+* [Kunden-Zeitstempel sortieren](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)

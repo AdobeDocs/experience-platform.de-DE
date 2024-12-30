@@ -28,13 +28,13 @@ Adobe Experience Platform ist eines der leistungsfähigsten, flexibelsten und of
 
 ## [!DNL Experience Platform] Dokumentation
 
-Die Dokumentation zu [!DNL Experience Platform] wird für eine Vielzahl von Funktionen und Anwendungen in verschiedenen Formaten bereitgestellt. Weitere Informationen zu den verfügbaren Dokumentationstypen finden Sie unter [Platform-Dokumentation – Übersicht](documentation/overview.md).
+[!DNL Experience Platform] Dokumentation wird für eine Vielzahl von Funktionen und Anwendungen in verschiedenen Formaten bereitgestellt. Weitere Informationen zu den verfügbaren Dokumentationstypen finden Sie unter [Platform-Dokumentation – Übersicht](documentation/overview.md).
 
 Um mehr über einen bestimmten Service von [!DNL Platform] zu erfahren, kehren Sie zur [Dokumentations-Landingpage](https://experienceleague.adobe.com/docs/experience-platform.html?lang=de) zurück und wählen Sie das entsprechende Handbuch aus.
 
-### Dokumentation für Anwendungen, die auf [!DNL Experience Platform] basieren
+### Dokumentation für Programme, die auf [!DNL Experience Platform] basieren
 
-Adobe hat mehrere Anwendungen auf dem Experience Platform erstellt. Die Dokumentation für diese Anwendungen finden Sie in den eigenen Handbüchern, die Sie unten finden:
+Adobe hat mehrere Anwendungen auf Experience Platform erstellt. Die Dokumentation zu diesen Programmen finden Sie in den jeweiligen Handbüchern, die unten verlinkt sind:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,7 +43,7 @@ Adobe hat mehrere Anwendungen auf dem Experience Platform erstellt. Die Dokument
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-Im folgenden Video werden die Anwendungsfälle jeder Anwendung beschrieben, die auf Experience Platform aufbaut.
+Im folgenden Video werden die Anwendungsfälle der einzelnen Programme beschrieben, die auf dem Experience Platform basieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 

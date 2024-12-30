@@ -1,6 +1,6 @@
 ---
-title: Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
-description: Dieses Handbuch bietet eine umfassende Demonstration zur Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
+title: Verfolgen Sie Datensignale, um den Lebenszeitwert Ihrer Kunden zu generieren
+description: Dieses Handbuch bietet eine umfassende Demonstration der Verwendung von Data Distiller und benutzerdefinierten Dashboards mit Real-time Customer Data Platform zur Messung und Visualisierung des Kundenlebenszeitwerts.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
 source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
@@ -9,109 +9,109 @@ ht-degree: 7%
 
 ---
 
-# Tracking von Datensignalen zur Generierung Ihres Kundenlebenszeitwerts
+# Verfolgen Sie Datensignale, um den Lebenszeitwert Ihrer Kunden zu generieren
 
-Sie können Real-time Customer Data Platform verwenden, um den Kundenlebenszeitwert (CLV) zu verfolgen und diese Metrik mit benutzerdefinierten Dashboards zu visualisieren. Mithilfe von Data Distiller und benutzerdefinierten Dashboards können Sie messen, wie wertvoll ein Kunde für Ihr Unternehmen in der gesamten Beziehung ist. Die Kenntnis des CLV kann Ihnen dabei helfen, die Strategien Ihres Unternehmens zu entwickeln, um neue Kunden zu gewinnen und gleichzeitig die bestehenden zu behalten und Gewinnspannen zu halten.
+Sie können Real-time Customer Data Platform verwenden, um den Kunden-Lebenszeitwert (CLV) zu verfolgen und diese Metrik mit benutzerdefinierten Dashboards zu visualisieren. Mithilfe von Data Distiller und benutzerdefinierten Dashboards können Sie messen, wie wertvoll ein Kunde für Ihr Unternehmen über die gesamte Beziehung hinweg ist. Wenn Sie den CLV kennen, können Sie die Strategien Ihres Unternehmens entwickeln, um neue Kunden zu gewinnen, während Sie die bestehenden beibehalten und die Gewinnmargen beibehalten.
 
-Die folgende Infografik zeigt den Zyklus der Datenerfassung, -bearbeitung, -analyse und -nutzung, der leistungsstarke Daten zur Verbesserung Ihrer Marketing-Kampagnen generiert.
+Die folgende Infografik zeigt den Zyklus von Datenerfassung, -bearbeitung, -analyse und -aktivierung, der leistungsstarke Daten generiert, um Ihre Marketing-Kampagnen zu verbessern.
 
-![Die Rundreise-Infografik von Daten von Beobachtung über Analyse bis Aktion.](../images/use-cases/infographic-use-case-cycle.png)
+![Die Roundtrip-Infografik der Daten von Beobachtung über Analyse bis hin zu Aktion.](../images/use-cases/infographic-use-case-cycle.png)
 
-Dieser durchgängige Anwendungsfall zeigt, wie Datensignale erfasst und geändert werden können, um das abgeleitete Attribut für den Kundenlebenszeitwert zu berechnen. Diese abgeleiteten Datensätze können dann auf Ihre Real-Time CDP-Profildaten angewendet werden und können mit benutzerdefinierten Dashboards verwendet werden, um ein Dashboard für die Insight-Analyse zu erstellen. Über Data Distiller können Sie das Real-Time CDP Insight-Datenmodell erweitern und mithilfe der von CLV abgeleiteten Datensätze und Dashboard-Einblicke eine neue Zielgruppe erstellen und für ein gewünschtes Ziel aktivieren. Diese leistungsstarken Zielgruppen können dann zur Unterstützung Ihrer nächsten Marketing-Kampagne verwendet werden.
+Dieser End-to-End-Anwendungsfall zeigt, wie Datensignale erfasst und geändert werden können, um das abgeleitete Attribut für den Kundenlebenszeitwert zu berechnen. Diese abgeleiteten Datensätze können dann auf Ihre Real-Time CDP-Profildaten angewendet werden und stehen für die Verwendung mit benutzerdefinierten Dashboards zur Verfügung, um ein Dashboard für die Einsichtsanalyse zu erstellen. Über Data Distiller können Sie das Real-Time CDP-Insights-Datenmodell erweitern und die von CLV abgeleiteten Datensätze und Dashboard-Insights verwenden, um eine neue Audience zu erstellen und sie für ein gewünschtes Ziel zu aktivieren. Diese leistungsstarken Zielgruppen können dann für Ihre nächste Marketing-Kampagne verwendet werden.
 
-Dieses Handbuch soll Ihnen dabei helfen, Ihr Kundenerlebnis besser zu verstehen, indem Sie Datensignale über wichtige Touchpoints hinweg messen, die CLV steuern und einen ähnlichen Anwendungsfall in Ihrer Umgebung implementieren. Der gesamte Prozess wird in der Abbildung unten zusammengefasst.
+Dieser Leitfaden soll Ihnen dabei helfen, Ihr Kundenerlebnis besser zu verstehen, indem Datensignale über wichtige Touchpoints hinweg gemessen werden, die CLV unterstützen, und einen ähnlichen Anwendungsfall in Ihrer Umgebung implementieren. Der gesamte Prozess wird in der folgenden Abbildung zusammengefasst.
 
-![Eine Infografik der umfassenden Schritte, die zur Verwendung des Kundenlebenszeitwerts erforderlich sind.](../images/use-cases/implementation-steps.png)
+![Eine Infografik der allgemeinen Schritte, die zur Nutzung des Kundenlebenszeitwerts erforderlich sind.](../images/use-cases/implementation-steps.png)
 
 ## Erste Schritte {#getting-started}
 
-Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
+Dieses Handbuch setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Query Service](../home.md): Bietet eine Benutzeroberfläche und eine RESTful-API, mit der Sie SQL-Abfragen zur Analyse und Anreicherung Ihrer Daten verwenden können.
-* [Segmentation Service](../../segmentation/home.md): Ermöglicht Ihnen das Generieren von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
+* [Abfrage-](../home.md): Bietet eine Benutzeroberfläche und eine RESTful-API, in der Sie SQL-Abfragen verwenden können, um Ihre Daten zu analysieren und anzureichern.
+* [Segmentierungs-](../../segmentation/home.md): Ermöglicht das Generieren von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten.
 
 ## Voraussetzungen
 
-Für dieses Handbuch müssen Sie die SKU [Data Distiller](../data-distiller/overview.md) als Teil Ihres Paketangebots verwenden. Wenden Sie sich an Ihren Adobe-Kundenbetreuer, wenn Sie sich nicht sicher sind, ob Sie über dieses Angebot verfügen.
+Für dieses Handbuch müssen Sie die [Data Distiller](../data-distiller/overview.md) SKU als Teil Ihres Paketangebots haben. Wenn Sie sich nicht sicher sind, ob Sie über diese verfügen, wenden Sie sich an Ihren Adobe-Support-Mitarbeiter.
 
-## abgeleiteten Datensatz erstellen {#create-derived-dataset}
+## Erstellen eines abgeleiteten Datensatzes {#create-derived-dataset}
 
-Der erste Schritt bei der Erstellung Ihrer CLV besteht darin, einen abgeleiteten Datensatz aus den von Benutzeraktionen erfassten Datensignalen zu erstellen. Dieser besondere Anwendungsfall wird in einem separaten Dokument über ein Treueprogramm für Fluggesellschaften erfasst. Informationen dazu, wie Sie mit dem Query Service [dezimalbasierte abgeleitete Datensätze für die Verwendung mit Ihren Profildaten erstellen, finden Sie im Handbuch](./deciles-use-case.md) . Vollständige Beispiele und Erläuterungen zu den folgenden Schritten finden Sie im Dokument:
+Der erste Schritt bei der Erstellung Ihrer CLV besteht darin, einen abgeleiteten Datensatz aus den Datensignalen zu erstellen, die von Benutzeraktionen erfasst werden. Dieser spezielle Anwendungsfall wird in einem separaten Dokument über ein Treueprogramm für Fluggesellschaften erfasst. Informationen dazu, wie Sie mit dem [-Service dezilbasierte abgeleitete Datensätze für die Verwendung mit Ihren Profildaten erstellen, finden Sie im Handbuch ](./deciles-use-case.md) . Ausführliche Beispiele und Erläuterungen finden Sie im Dokument, in dem die folgenden Schritte erläutert werden:
 
-* Erstellen Sie ein Schema, das die Dezile-Bucketing ermöglicht.
-* Verwenden Sie Query Service zum Erstellen von Dezimalstellen.
-* Generieren von Dezimaldatensätzen.
+* Erstellen Sie ein Schema, um Dezile-Bucketing zuzulassen.
+* Verwenden Sie den Abfrage-Service, um Dezilen zu erstellen.
+* Generieren von Dezildatensätzen.
 * Aktivieren Sie das Schema zur Verwendung im Echtzeit-Kundenprofil.
-* Erstellen Sie einen Identitäts-Namespace und markieren Sie ihn als primäre Kennung.
-* Erstellen Sie eine Abfrage zur Berechnung der Dezimalzahlen über einen Lookback-Zeitraum.
+* Erstellen Sie einen Identity-Namespace und markieren Sie ihn als primäre Kennung.
+* Erstellen Sie eine Abfrage zur Berechnung von Dezilen über einen Lookback-Zeitraum.
 
-## Erweitern des Insight-Datenmodells und Planen von Aktualisierungen {#extend-data-model-and-set-refresh-schedule}
+## Erweitern des Insights-Datenmodells und Planen von Aktualisierungen {#extend-data-model-and-set-refresh-schedule}
 
-Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein vorhandenes Adobe Real-Time CDP-Datenmodell erweitern, um mit Ihren CLV-Berichtseinblicken zu interagieren. In der Dokumentation erfahren Sie, wie Sie mit Query Service ein Berichtseinblicke-Datenmodell für die Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards erstellen ](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). [ Das Tutorial umfasst die folgenden Schritte:
+Als Nächstes müssen Sie ein benutzerdefiniertes Datenmodell erstellen oder ein vorhandenes Adobe Real-Time CDP-Datenmodell erweitern, um mit Ihren CLV-Reporting-Insights interagieren zu können. Weitere Informationen finden Sie in der Dokumentation [ Erstellen eines Reporting-Insights-Datenmodells über den Abfrage-Service zur Verwendung mit beschleunigten Speicherdaten und benutzerdefinierten Dashboards](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Das Tutorial umfasst die folgenden Schritte:
 
-* Erstellen Sie ein Modell für die Berichterstellung von Einblicken mit Data Distiller.
-* Erstellen Sie Tabellen, Beziehungen und füllen Sie Daten aus.
-* Abfragen des Reporting-Insight-Datenmodells.
-* Erweitern Sie Ihr Datenmodell mit dem Real-Time CDP Insight-Datenmodell.
+* Erstellen Sie mit Data Distiller ein Modell für Reporting-Insights.
+* Erstellen von Tabellen und Beziehungen und Auffüllen von Daten
+* Abfragen des Reporting-Insights-Datenmodells.
+* Erweitern Ihres Datenmodells mit dem Real-Time CDP Insights-Datenmodell.
 * Erstellen Sie Dimensionstabellen, um Ihr Reporting-Insights-Modell zu erweitern.
 * Abfragen Ihres erweiterten Reporting-Insights-Datenmodells mit beschleunigtem Speicher
 
 Siehe die Dokumentation zum Insights-Datenmodell von Real-Time Customer Data Platform, um zu erfahren, wie Sie [Ihre SQL-Abfragevorlagen anpassen können, um Real-Time CDP-Berichte für Ihre Marketing- und KPI-Anwendungsfälle zu erstellen.](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Stellen Sie sicher, dass Sie einen Zeitplan festlegen, um Ihr benutzerdefiniertes Datenmodell in einem normalen Cadence zu aktualisieren. Dadurch wird sichergestellt, dass die Daten bei Bedarf im Rahmen Ihrer Aufnahme-Pipeline zurückgesendet und Ihre benutzerdefinierten Dashboards gefüllt werden. Weitere Informationen zum Einrichten des Zeitplans finden Sie im [Leitfaden zur Planung von Abfragen](../ui/query-schedules.md#create-schedule) .
+Stellen Sie sicher, dass Sie einen Zeitplan festlegen, um Ihr benutzerdefiniertes Datenmodell regelmäßig zu aktualisieren. Dadurch wird sichergestellt, dass die Daten bei Bedarf als Teil der Aufnahme-Pipeline zurückgegeben werden und die benutzerdefinierten Dashboards gefüllt werden. Informationen zum Einrichten [ Zeitplans finden ](../ui/query-schedules.md#create-schedule) im Handbuch zum Planen von Abfragen .
 
-## Erstellen eines Dashboards zum Erfassen von Einblicken {#build-a-custom-dashboard}
+## Erstellen eines Dashboards zur Erfassung von Insights {#build-a-custom-dashboard}
 
-Nachdem Sie Ihr benutzerdefiniertes Datenmodell erstellt haben, können Sie Ihre Daten mit benutzerdefinierten Abfragen und benutzerdefinierten Dashboards visualisieren. Eine vollständige Anleitung zum [Erstellen eines benutzerdefinierten Dashboards](../../dashboards/standard-dashboards.md) finden Sie in der Übersicht über benutzerdefinierte Dashboards . Das UI-Handbuch enthält Details zu:
+Nachdem Sie Ihr benutzerdefiniertes Datenmodell erstellt haben, können Sie Ihre Daten mit benutzerdefinierten Abfragen und benutzerdefinierten Dashboards visualisieren. Vollständige Anleitungen zum Erstellen eines benutzerdefinierten Dashboards finden Sie in der Übersicht [ benutzerdefinierten Dashboards ](../../dashboards/standard-dashboards.md). Das Handbuch zur Benutzeroberfläche enthält Details zu:
 
-* So erstellen Sie ein Widget.
-* Verwendung des Widget Composers.
+* Erstellen eines Widgets.
+* Verwendung des Widget-Composers.
 
-Nachfolgend finden Sie Beispiele für benutzerdefinierte CLV-Widgets, die Dezimalgruppen verwenden.
+Beispiele für benutzerdefinierte CLV-Widgets, die Dezil-Buckets verwenden, finden Sie unten.
 
-![Eine Sammlung von benutzerdefinierten dezimalbasierten CLTV-Widgets.](../images/use-cases/deciles-user-defined-dashboard.png)
+![Eine Sammlung benutzerdefinierter dezilbasierter CLTV-Widgets.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## Hochleistungszielgruppen erstellen und aktivieren {#create-and-activate-audiences}
+## Erstellen und Aktivieren von leistungsstarken Zielgruppen {#create-and-activate-audiences}
 
-Der nächste Schritt besteht darin, eine Segmentdefinition zu erstellen und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten zu generieren. Informationen zum Erstellen und Aktivieren von Zielgruppen in Platform finden Sie im Handbuch zur Benutzeroberfläche von Segment Builder [1 . ](../../segmentation/ui/segment-builder.md) Das Handbuch enthält Abschnitte zu folgenden Themen:
+Der nächste Schritt besteht darin, eine Segmentdefinition zu erstellen und Zielgruppen aus Ihren Echtzeit-Kundenprofildaten zu generieren. Informationen zum Erstellen und Aktivieren von Zielgruppen in Platform [ Sie im Handbuch zur Segment Builder](../../segmentation/ui/segment-builder.md)Benutzeroberfläche . Das Handbuch enthält Abschnitte zu folgenden Themen:
 
 * Segmentdefinitionen mit einer Kombination aus Attributen, Ereignissen und vorhandenen Zielgruppen als Bausteinen erstellen.
-* Verwenden Sie die Arbeitsfläche des Regel-Builders und Container, um die Reihenfolge zu steuern, in der die Segmentierungsregeln ausgeführt werden.
+* Verwenden Sie die Arbeitsfläche und Container des Regel-Builders, um die Reihenfolge zu steuern, in der die Segmentierungsregeln ausgeführt werden.
 * Schätzungen der voraussichtlichen Zielgruppe anzeigen, sodass Sie Ihre Segmentdefinitionen nach Bedarf anpassen können.
 * Alle Segmentdefinitionen für geplante Segmentierung aktivieren.
 * Spezifische Segmentdefinitionen für Streaming-Segmentierung aktivieren.
 
-Alternativ dazu steht auch ein [Segment Builder-Video-Tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) für weitere Informationen zur Verfügung.
+Alternativ steht auch ein [Segment Builder-Video-Tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) zur Verfügung, um weitere Informationen zu erhalten.
 
-## Aktivieren der Audience für eine E-Mail-Kampagne {#activate-audience-for-campaign}
+## Aktivieren Ihrer Audience für eine E-Mail-Kampagne {#activate-audience-for-campaign}
 
-Sobald Sie Ihre Audience erstellt haben, können Sie sie für ein Ziel aktivieren. Platform unterstützt eine Vielzahl von E-Mail-Dienstanbietern (ESPs), mit denen Sie Ihre E-Mail-Marketing-Aktivitäten verwalten können, z. B. das Senden von Werbe-E-Mail-Kampagnen.
+Nachdem Sie Ihre Zielgruppe erstellt haben, können Sie sie für ein Ziel aktivieren. Platform unterstützt eine Vielzahl von E-Mail-Service-Anbietern (ESPs), mit denen Sie Ihre E-Mail-Marketing-Aktivitäten verwalten können, z. B. E-Mail-Kampagnen zu Werbezwecken.
 
-Unter [Übersicht über E-Mail-Marketing-Ziele](../../destinations/catalog/email-marketing/overview.md#connect-destination) finden Sie eine Liste der unterstützten Ziele, in die Sie Daten exportieren möchten (z. B. die Seite [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) ).
+Unter [E-Mail-Marketing-Ziele - ](../../destinations/catalog/email-marketing/overview.md#connect-destination) finden Sie eine Liste der unterstützten Ziele, an die Sie Daten exportieren möchten (z. B. die Seite [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)).
 
-## Anzeigen der zurückgegebenen Analysedaten aus Ihrer Kampagne {#post-campaign-data-analysis}
+## Anzeigen der von Ihrer Kampagne zurückgegebenen Analysedaten {#post-campaign-data-analysis}
 
-Die Daten aus Quellen können jetzt im Rahmen einer geplanten Aktualisierung Ihres Datenmodells im beschleunigten Datenspeicher [schrittweise verarbeitet](../key-concepts/incremental-load.md) werden. Alle Antwortereignisse von Kunden können bei ihrem Auftreten oder in Batches in Adobe Experience Platform aufgenommen werden. Ihr Datenmodell kann je nach Einstellungen oder Quell-Connectoren einmal oder mehrmals täglich aktualisiert werden. Weitere Informationen finden Sie in der [Batch-Aufnahme-API - Übersicht](../../ingestion/batch-ingestion/api-overview.md) oder in der [Streaming-Erfassung - Übersicht](../../ingestion/streaming-ingestion/overview.md) .
+Die Daten aus Quellen können jetzt [inkrementell verarbeitet](../key-concepts/incremental-load.md) als Teil einer geplanten Aktualisierung Ihres Datenmodells im beschleunigten Datenspeicher. Alle Antwortereignisse von Kunden können direkt oder in Batches in Adobe Experience Platform aufgenommen werden. Ihr Datenmodell kann einmal oder mehrmals täglich aktualisiert werden, je nach Ihren Einstellungen oder Quell-Connectoren. Weitere Informationen finden [ in der ](../../ingestion/batch-ingestion/api-overview.md) zur Batch[Aufnahme-API oder ](../../ingestion/streaming-ingestion/overview.md) Streaming-Aufnahme .
 
-Sobald Ihr Datenmodell aktualisiert wurde, stellen Ihre benutzerdefinierten Dashboard-Widgets aussagekräftige Signale bereit, mit denen Sie den Lebenszeitwert von Kunden messen und visualisieren können.
+Sobald Ihr Datenmodell aktualisiert wurde, liefern Ihre benutzerdefinierten Dashboard-Widgets aussagekräftige Signale, mit denen Sie den Kundenlebenszeitwert messen und visualisieren können.
 
-![Ein benutzerdefiniertes Widget, das die Anzahl der geöffneten E-Mails entsprechend ihrer Zielgruppe und E-Mail-Kampagne anzeigt.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![Ein benutzerdefiniertes Widget, mit dem die Anzahl der geöffneten E-Mails entsprechend ihrer Audience und E-Mail-Kampagne angezeigt wird.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 Für Ihre benutzerdefinierte Analyse stehen verschiedene Visualisierungsoptionen zur Verfügung.
 
-![Die E-Mail, die vom Kampagnenbehälter-Widget geöffnet wurde.](../images/use-cases/email-opened-by-campaign-buckets.png)
+![Das Widget „Von Kampagnen-Buckets geöffnete E-Mails“.](../images/use-cases/email-opened-by-campaign-buckets.png)
 
-Diese Einblicke können Ihnen wiederum bei der Entwicklung Ihrer Geschäftsstrategien für nachfolgende Kampagnen helfen.
+Diese Erkenntnisse können Ihnen wiederum dabei helfen, Ihre Geschäftsstrategien für nachfolgende Kampagnen zu entwickeln.
 
 ![Eine Sammlung von vier benutzerdefinierten Widgets, die die Ergebnisse der E-Mail-Kampagne detailliert beschreiben.](../images/use-cases/example-widgets.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments sollten Sie besser verstehen, wie Sie mit Real-time Customer Data Platform die CLV-Metrik (Customer Lifetime Value) verfolgen und visualisieren können. Um mehr über die vielen geschäftlichen Anwendungsfälle zu erfahren, die über Query Service und Experience Platform behandelt werden, sollten Sie die folgenden Dokumente lesen:
+Durch das Lesen dieses Dokuments sollten Sie besser verstehen, wie Sie mit Real-time Customer Data Platform die Metrik des Kundenlebenszeitwerts (Customer Lifetime Value, CLV) verfolgen und visualisieren können. Um mehr über die vielen geschäftlichen Anwendungsfälle zu erfahren, die über Query Service und Experience Platform abgedeckt werden, sollten Sie die folgenden Dokumente lesen:
 
-* [Ein durchgängiges Beispiel für einen abgebrochenen Browseranwendungsfall, der die Vielseitigkeit und Vorteile von Query Service demonstriert.](./abandoned-browse.md)
-* [Verwendung von Query Service und maschinellem Lernen zur Bestimmung und Filterung von Bot-Aktivitäten anhand des echten Besucher-Traffics auf einer Online-Website](./bot-filtering.md)
-* [So führen Sie eine Übereinstimmung mit Ihren Platform-Daten durch, bei der Ergebnisse aus mehreren Datensätzen kombiniert werden, indem Sie ungefähr eine Zeichenfolge Ihrer Wahl abgleichen.](./fuzzy-match.md)
+* [Ein Beispiel, das von Anfang bis Ende zeigt, wie vielseitig und vorteilhaft Query Service ist.](./abandoned-browse.md)
+* [Verwendung des Abfrage-Service und des maschinellen Lernens zum Ermitteln und Filtern der Bot-Aktivität aus dem echten Online-Besucher-Traffic einer Website](./bot-filtering.md)
+* [Erfahren Sie, wie Sie eine Übereinstimmung für Ihre Platform-Daten durchführen, die Ergebnisse aus mehreren Datensätzen kombiniert, indem Sie ungefähr mit einer Zeichenfolge Ihrer Wahl übereinstimmen.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

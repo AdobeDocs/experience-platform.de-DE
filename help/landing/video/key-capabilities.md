@@ -1,6 +1,6 @@
 ---
-title: Schlüsselfunktionen von Experience Platform
-description: In diesem Video werden die wichtigsten Funktionen von Adobe Experience Platform&amp, mdash, Erstellen von umsetzbaren, intelligenten Echtzeit-Kundenprofilen, Anreichern von Daten und Ableiten von mehr Einblicken mit KI/ML-Modellen und -Datenabfragen, Innovieren mit offenen und zusammenstellbaren Komponenten, Verbessern der Bereitstellung und Personalisierung von Echtzeit-Erlebnissen und Gewinnen Sie Vertrauen in Governance-, Sicherheits- und Datenschutzkontrollen.
+title: Die wichtigsten Funktionen von Experience Platform
+description: In diesem Video werden die wichtigsten Funktionen von Adobe Experience Platform&mdash;Erstellen umsetzbarer, intelligenter Echtzeit-Kundenprofile;Anreichern von Daten und Ableiten weiterer Einblicke mit KI/ML-Modellen und Datenabfragen;Innovationen mit offenen und zusammenstellbaren Komponenten;Verbessern der Bereitstellung und Personalisierung von Echtzeit-Erlebnissen;und Gewinnen von Vertrauen mit Governance, Sicherheit und Datenschutzkontrollen.
 kt: 4332
 audience: all
 doc-type: video
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 # Wichtigste Funktionen von Experience Platform
 
-In diesem Video werden die wichtigsten Funktionen von Experience Platform beschrieben:
+In diesem Video werden die wichtigsten Funktionen von Experience Platform besprochen:
 
-1. Erstellen von umsetzbaren, intelligenten Echtzeit-Kundenprofilen
-1. Anreichern von Daten und Ableiten von mehr Einblicken mit KI/ML-Modellen und Datenabfragen
-1. Innovieren mit offenen und zusammenstellbaren Komponenten
-1. Verbessern der Bereitstellung und Personalisierung von Echtzeit-Erlebnissen
-1. Vertrauen in Governance, Sicherheit und Datenschutzkontrollen gewinnen
+1. Erstellen umsetzbarer, intelligenter Echtzeit-Kundenprofile
+1. Daten anreichern und mit KI/ML-Modellen und Datenabfragen mehr Erkenntnisse gewinnen
+1. Innovation mit offenen und zusammensetzbaren Komponenten
+1. Verbesserung der Bereitstellung und Personalisierung von Echtzeit-Erlebnissen
+1. Vertrauen gewinnen mit Governance-, Sicherheits- und Datenschutzkontrollen
 
 >[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)

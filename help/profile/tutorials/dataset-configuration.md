@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Datensatz aktivieren
-title: Datensatz für Profil- und Identitätsdienst mithilfe von APIs konfigurieren
+title: Konfigurieren eines Datensatzes für Profil und Identity Service mithilfe von APIs
 type: Documentation
-description: Erfahren Sie, wie Sie einen Datensatz für die Verwendung mit Echtzeit-Kundenprofil und Identity Service mithilfe von Adobe Experience Platform-APIs aktivieren.
+description: Erfahren Sie, wie Sie einen Datensatz mithilfe von Adobe Experience Platform-APIs für die Verwendung mit Echtzeit-Kundenprofil und Identity Service aktivieren.
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -11,8 +11,8 @@ ht-degree: 8%
 
 ---
 
-# Datensatz für Profil mithilfe von APIs konfigurieren
+# Konfigurieren eines Datensatzes für Profile mithilfe von APIs
 
-Das Tutorial zur Aktivierung eines Datensatzes zur Verwendung im Echtzeit-Kundenprofil und im Adobe Experience Platform Identity Service umfasst Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes. In diesem Tutorial werden auch Schritte zum Erfassen von Daten in den Datensatz und zum Bestätigen der erfolgreichen Aufnahme von Daten in Profil und Identity Service beschrieben.
+Die Anleitung zur Aktivierung eines Datensatzes zur Verwendung im Echtzeit-Kundenprofil und in Adobe Experience Platform Identity Service umfasst Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes. In diesem Tutorial werden auch die Schritte zur Aufnahme von Daten in den Datensatz und zur Bestätigung der erfolgreichen Aufnahme von Daten in Profile und Identity Service beschrieben.
 
-Um auf dieses Tutorial zuzugreifen, besuchen Sie das Tutorial [Datensatz für Profil und Identität mithilfe von APIs aktivieren](../../catalog/datasets/enable-for-profile.md), Teil der Dokumentation zu Datensätzen.
+Um auf dieses Tutorial zuzugreifen, konsultieren Sie das Tutorial [Aktivieren eines Datensatzes für Profil und Identität mithilfe von APIs](../../catalog/datasets/enable-for-profile.md), das Teil der Datensatzdokumentation ist.

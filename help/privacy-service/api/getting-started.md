@@ -12,17 +12,17 @@ ht-degree: 18%
 
 # Authentifizierung und Zugriff auf die Privacy Service-API
 
-In diesem Handbuch erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Adobe Experience Platform Privacy Service-API durchführen.
+Dieses Handbuch bietet eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Adobe Experience Platform Privacy Service-API durchführen.
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Handbuch setzt ein Verständnis von [Privacy Service](../home.md) voraus und wie Sie damit Zugriffs- und Löschanfragen Ihrer Datensubjekte (Kunden) in allen Adobe Experience Cloud-Anwendungen verwalten können.
+Dieses Handbuch setzt Grundkenntnisse des [Privacy Service ](../home.md) und dessen Verwaltung von Zugriffs- und Löschanfragen von betroffenen Personen (Kunden) in allen Adobe Experience Cloud-Programmen voraus.
 
-Um Zugriffsberechtigungen für die API zu erstellen, muss ein Administrator in Ihrem Unternehmen zuvor Produktprofile für den Privacy Service in Adobe Admin Console eingerichtet haben. Das Produktprofil, das Sie einer API-Integration zuweisen, bestimmt, welche Berechtigungen diese Integration beim Zugriff auf Privacy Service-Funktionen besitzt. Weitere Informationen finden Sie im Handbuch zum [Verwalten von Privacy Service-Berechtigungen](../permissions.md) .
+Um Zugriffsberechtigungen für die API zu erstellen, muss ein Administrator in Ihrem Unternehmen zuvor Produktprofile für den Privacy Service in Adobe Admin Console eingerichtet haben. Das Produktprofil, das Sie einer API-Integration zuweisen, bestimmt, welche Berechtigungen diese Integration beim Zugriff auf Privacy Service-Funktionen hat. Privacy Service Weitere Informationen finden Sie im Handbuch [Verwalten ](../permissions.md) Benutzerberechtigungen“.
 
 ## Sammeln von Werten für erforderliche Kopfzeilen {#gather-values-required-headers}
 
-Um die Privacy Service-API aufrufen zu können, müssen Sie zunächst Ihre Zugriffsberechtigungen erfassen, damit sie in den erforderlichen Kopfzeilen verwendet werden können:
+Um die Privacy Service-API aufzurufen, müssen Sie zunächst Ihre Zugangsdaten erfassen, damit sie in den erforderlichen Kopfzeilen verwendet werden können:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -36,75 +36,75 @@ Die Schritte zum Generieren dieser Werte werden im Folgenden detailliert beschri
 
 Wechseln Sie zur [Adobe-Entwicklerkonsole](https://developer.adobe.com/console) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die im Tutorial [Erstellen eines leeren Projekts](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in der Dokumentation zur Entwicklerkonsole beschriebenen Schritte aus.
 
-Nachdem Sie ein neues Projekt erstellt haben, wählen Sie **[!UICONTROL Zum Projekt hinzufügen]** und dann **[!UICONTROL API]** aus dem Dropdown-Menü.
+Nachdem Sie ein neues Projekt erstellt haben, wählen Sie **[!UICONTROL Zum Projekt hinzufügen]** und wählen Sie **[!UICONTROL API]** aus dem Dropdown-Menü aus.
 
-![Die API-Option, die aus dem Dropdown-Menü [!UICONTROL Zu Projekt hinzufügen] auf der Seite mit den Projektdetails in Developer Console ausgewählt wird](../images/api/getting-started/add-api-button.png)
+![Die API-Option, die aus der Dropdown[!UICONTROL Liste Zu Projekt hinzufügen] auf der Seite mit den Projektdetails in Developer Console ausgewählt wird](../images/api/getting-started/add-api-button.png)
 
 #### Privacy Service-API auswählen {#select-privacy-service-api}
 
-Der Bildschirm **[!UICONTROL API hinzufügen]** wird angezeigt. Wählen Sie **[!UICONTROL Experience Cloud]** aus, um die Liste der verfügbaren APIs einzuschränken, und wählen Sie dann die Karte für die **[!UICONTROL Privacy Service-API]** aus, bevor Sie **[!UICONTROL Weiter]** auswählen.
+Der Bildschirm **[!UICONTROL API hinzufügen]** wird angezeigt. Wählen Sie **[!UICONTROL Experience Cloud]** aus, um die Liste der verfügbaren APIs einzugrenzen, und wählen Sie dann die Karte für **[!UICONTROL Privacy Service-API]** aus, bevor Sie **[!UICONTROL Weiter]** auswählen.
 
-![Die aus der Liste der verfügbaren APIs ausgewählte Privacy Service-API-Karte](../images/api/getting-started/add-privacy-service-api.png)
+![Die Privacy Service-API-Karte, die aus der Liste der verfügbaren APIs ausgewählt wird](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->Wählen Sie die Option **[!UICONTROL Dokumente anzeigen]** aus, um in einem separaten Browserfenster zur vollständigen [Privacy Service-API-Referenzdokumentation](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) zu navigieren.
+>Wählen Sie die Option **[!UICONTROL Dokumente anzeigen]**, um in einem separaten Browserfenster zur vollständigen [Privacy Service-API-Referenzdokumentation zu navigieren](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
-Wählen Sie anschließend den Authentifizierungstyp aus, um Zugriffstoken zu generieren und auf die Privacy Service-API zuzugreifen.
+Wählen Sie als Nächstes den Authentifizierungstyp aus, um Zugriffstoken zu generieren und auf die Privacy Service-API zuzugreifen.
 
 >[!IMPORTANT]
 >
->Wählen Sie die Methode **[!UICONTROL OAuth Server-zu-Server]** aus, da dies künftig die einzige unterstützte Methode sein wird. Die Methode **[!UICONTROL Dienstkonto (JWT)]** wird nicht mehr unterstützt. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum auf die neue OAuth Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet] .{type=negative}[Generieren Sie ein JSON-Web-Token (JWT)](/help/landing/api-authentication.md#jwt).
+>Wählen Sie die **[!UICONTROL OAuth Server-zu-Server]**-Methode aus, da dies in Zukunft die einzige unterstützte Methode ist. Die Methode **[!UICONTROL Service-Konto (JWT]** ist veraltet. Während Integrationen, die die JWT-Authentifizierungsmethode verwenden, bis zum 1. Januar 2025 weiterhin funktionieren, empfiehlt Adobe dringend, vorhandene Integrationen vor diesem Datum zu der neuen OAuth-Server-zu-Server-Methode zu migrieren. Weitere Informationen finden Sie im Abschnitt [!BADGE Veraltet]{type=negative}[Generieren eines JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt).
 
-![Wählen Sie die Authentifizierungsmethode OAuth Server-zu-Server .](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
+![Wählen Sie die OAuth Server-zu-Server-Authentifizierungsmethode aus.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
-#### Berechtigungen über Produktprofile zuweisen {#product-profiles}
+#### Zuweisen von Berechtigungen über Produktprofile {#product-profiles}
 
-Der letzte Konfigurationsschritt besteht darin, die Produktprofile auszuwählen, von denen diese Integration ihre Berechtigungen erbt. Wenn Sie mehr als ein Profil auswählen, werden die zugehörigen Berechtigungssätze für die Integration kombiniert.
+Der letzte Konfigurationsschritt besteht darin, die Produktprofile auszuwählen, von denen diese Integration die Berechtigungen erbt. Wenn Sie mehr als ein Profil auswählen, werden dessen Berechtigungssätze für die Integration kombiniert.
 
 >[!NOTE]
 >
-Produktprofile und die granularen Berechtigungen, die sie bereitstellen, werden von Administratoren über Adobe Admin Console erstellt und verwaltet. Weitere Informationen finden Sie im Handbuch zu [Privacy Service-Berechtigungen](../permissions.md) .
+Produktprofile und die granularen Berechtigungen, die sie bereitstellen, werden von Administratoren über Adobe Admin Console erstellt und verwaltet. Weitere Informationen finden Sie im Handbuch zu {0](../permissions.md)Privacy Service-Berechtigungen}.[
 
-Wählen Sie abschließend **[!UICONTROL Konfigurierte API speichern]** aus.
+Klicken Sie abschließend auf **[!UICONTROL Konfigurierte API speichern]**.
 
-![Ein einzelnes Produktprofil, das aus der Liste ausgewählt wird, bevor die Konfiguration gespeichert wird](../images/api/getting-started/select-product-profiles.png)
+![Vor dem Speichern der Konfiguration wird ein einzelnes Produktprofil aus der Liste ausgewählt](../images/api/getting-started/select-product-profiles.png)
 
 Nachdem die API zum Projekt hinzugefügt wurde, zeigt die Seite **[!UICONTROL Privacy Service-API]** für das Projekt die folgenden Anmeldeinformationen an, die für alle Aufrufe an Privacy Service-APIs erforderlich sind:
 
-* `{API_KEY}` ([!UICONTROL Client-ID])
-* `{ORG_ID}` ([!UICONTROL Organisations-ID])
+* `{API_KEY}` ([!UICONTROL Client ID])
+* `{ORG_ID}` ([!UICONTROL Organization ID])
 
 ![Integrationsinformationen nach dem Hinzufügen einer API in Developer Console.](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 
 ### Authentifizierung für jede Sitzung {#authentication-each-session}
 
-Die letzte erforderliche Berechtigung, die Sie erfassen müssen, ist Ihre `{ACCESS_TOKEN}`, die in der Autorisierungskopfzeile verwendet wird. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um die API weiterhin verwenden zu können.
+Die letzten erforderlichen Anmeldeinformationen, die Sie erfassen müssen, sind Ihre `{ACCESS_TOKEN}`, die in der Autorisierungskopfzeile verwendet werden. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}` muss alle 24 Stunden ein neues Token generiert werden, um die API weiter verwenden zu können.
 
-Im Allgemeinen gibt es zwei Methoden zum Generieren eines Zugriffstokens:
+Im Allgemeinen gibt es zwei Methoden zum Generieren eines Zugriffs-Tokens:
 
-* [Generieren Sie das Token manuell](#manual-token) zum Testen und Entwickeln.
-* [Automatisieren der Tokengenerierung](#auto-token) für API-Integrationen.
+* [Token manuell generieren](#manual-token) zum Testen und Entwickeln.
+* [Automatisieren der Token-](#auto-token) für API-Integrationen.
 
 #### Manuelles Generieren eines Tokens {#manual-token}
 
-Um manuell einen neuen `{ACCESS_TOKEN}` zu generieren, navigieren Sie zu **[!UICONTROL Anmeldeinformationen]** > **[!UICONTROL OAuth Server-to-Server]** und wählen Sie **[!UICONTROL Zugriffstoken generieren]**, wie unten dargestellt.
+Um ein neues `{ACCESS_TOKEN}` manuell zu generieren, navigieren Sie zu **[!UICONTROL Anmeldeinformationen]** > **[!UICONTROL OAuth Server-zu-Server]** und wählen Sie **[!UICONTROL Zugriffstoken generieren]** aus, wie unten dargestellt.
 
-![Eine Bildschirmaufzeichnung darüber, wie ein Zugriffstoken in der Developer Console-Benutzeroberfläche generiert wird.](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
+![Eine Bildschirmaufzeichnung, die anzeigt, wie ein Zugriffstoken in der Developer Console-Benutzeroberfläche generiert wird.](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
 
 Es wird ein neues Zugriffs-Token generiert und eine Schaltfläche zum Kopieren des Tokens in die Zwischenablage bereitgestellt. Dieser Wert wird für den erforderlichen [!DNL Authorization]-Header verwendet und muss im Format `Bearer {ACCESS_TOKEN}` angegeben werden.
 
 #### Token-Generierung automatisieren {#auto-token}
 
-Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffstoken zu generieren. Weitere Informationen finden Sie im Abschnitt über die Verwendung von Postman zum Authentifizieren und Testen von API-Aufrufen](/help/landing/api-authentication.md#use-postman) im Experience Platform API-Authentifizierungshandbuch.[
+Sie können auch eine Postman-Umgebung und -Sammlung verwenden, um Zugriffs-Token zu generieren. Weitere Informationen finden Sie im Abschnitt über [Verwendung von Postman zum Authentifizieren und Testen von API](/help/landing/api-authentication.md#use-postman)Aufrufen im Experience Platform-API-Authentifizierungshandbuch.
 
 ## Lesen von Beispiel-API-Aufrufen {#read-sample-api-calls}
 
-Jedes Endpunkthandbuch enthält Beispiel-API-Aufrufe, die zeigen, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zu [Lesen von Beispiel-API-Aufrufen](../../landing/api-guide.md#sample-api) im Erste-Schritte-Handbuch für Platform-APIs.
+Jedes Endpunkt-Handbuch enthält Beispiel-API-Aufrufe, um zu demonstrieren, wie Sie Ihre Anfragen formatieren. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie [ Abschnitt zum Lesen von Beispiel](../../landing/api-guide.md#sample-api)API-Aufrufen in den Ersten Schritten für Platform-APIs.
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie erste Aufrufe an die Privacy Service-API stellen. Wählen Sie eine der Endpunktleitfäden für die ersten Schritte aus:
+Nachdem Sie nun wissen, welche Kopfzeilen zu verwenden sind, können Sie erste Aufrufe an die Privacy Service-API stellen. Wählen Sie zunächst eines der Handbücher zu den Endpunkten aus:
 
 * [Datenschutzaufträge](./privacy-jobs.md)
 * [Einverständnis](./consent.md)

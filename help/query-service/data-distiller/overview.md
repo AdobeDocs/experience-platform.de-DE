@@ -1,6 +1,6 @@
 ---
-title: Data Distiller - Übersicht
-description: Eine Zusammenfassung der Data Distiller-Nutzungsbeschränkungen für Query Service-Daten im Zusammenhang mit Ihrer Lizenzberechtigung.
+title: Übersicht über Data Distiller
+description: Eine Zusammenfassung der Datennutzungsbeschränkungen von Distiller für Abfrage-Service-Daten in Bezug auf Ihre Lizenzberechtigung.
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# Data Distiller - Übersicht
+# Übersicht über Data Distiller
 
-Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Experience Platform enthält. Mit Data Distiller können Sie nach der Erfassung Datenvorbereitung (z. B. Reinigung, Formatierung und Bearbeitung) für Echtzeit-Kundenprofile oder Analytics-Anwendungsfälle durchführen, indem Sie in Query Service Batch-Abfragen ausführen. Ihre Verwendung von Data Distiller hängt von Ihrer Berechtigung für plattformbasierte Anwendungen ab.
+Data Distiller ist ein Package, das eine Untergruppe der Funktionen von Adobe Experience Platform enthält. Mit Data Distiller können Sie Daten nach der Aufnahme für Echtzeit-Kundenprofile oder analytische Anwendungsfälle vorbereiten (z. B. bereinigen, gestalten und bearbeiten), indem Sie Batch-Abfragen im Abfrage-Service ausführen. Ihre Verwendung von Data Distiller hängt von Ihren Berechtigungen für Platform-basierte Programme ab.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Leitplanken
 
-Weitere Informationen zu Standardbeschränkungen für Query Service-Daten im Zusammenhang mit Ihrer Lizenzberechtigung finden Sie im Dokument [Limits für Query Service](../guardrails.md) .
+Siehe das Dokument [Leitplanken für den Abfrage](../guardrails.md) bezüglich der standardmäßigen Nutzungsbeschränkungen für Abfrage-Service-Daten in Bezug auf Ihre Lizenzberechtigung.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

@@ -29,7 +29,7 @@ In der Dokumentation finden Sie Anweisungen dazu, wie Sie mit dem Abfrage-Editor
 
 >[!TIP]
 >
->Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine praktische Möglichkeit bietet, zum Arbeitsbereich &quot;Planung von Abfragen&quot;zu navigieren. Informationen zum Ausführen von Abfragen für eine benutzerdefinierte Cadence finden Sie in der Dokumentation [Planung von Abfragen](./query-schedules.md) .
+>Wenn Sie eine Abfrage im Abfrage-Editor speichern, wird eine Bestätigungsmeldung angezeigt, die Sie über die erfolgreiche Aktion informiert. Diese Popup-Nachricht enthält einen Link, der eine einfache Möglichkeit bietet, zum Arbeitsbereich Planung von Abfragen zu navigieren. Weitere Informationen zum Ausführen von [ mit benutzerdefinierter Kadenz finden ](./query-schedules.md) in der Dokumentation zum Planen von Abfragen .
 
 ## Abfragevorlagen durchsuchen {#browse}
 
@@ -41,13 +41,13 @@ Um relevante Vorlageninformationen zu finden, klicken Sie auf eine beliebige Abf
 
 ![Das Detailbedienfeld im Arbeitsbereich „Abfragen“ mit hervorgehobener Abfrage-ID.](../images/ui/query-templates/details-panel.png)
 
-Im Detailbereich können Sie die folgenden Aktionen ausführen:
+Im Bedienfeld Details können Sie die folgenden Aktionen ausführen:
 
-* Wählen Sie **[!UICONTROL Als CTAS ausführen]** aus, um eine neue Tabelle zu erstellen, indem Sie Daten aus einer oder mehreren vorhandenen Tabellen auswählen. Diese Option ist nur verfügbar, wenn Sie über eine SELECT-Abfrage verfügen.
-* Wählen Sie **[!UICONTROL Zeitplan hinzufügen]** aus, um mit der Bearbeitung des Zeitplans für Ihre Abfragevorlage zu beginnen.
-* Wählen Sie **[!UICONTROL Zeitplan anzeigen]** aus, um zur Registerkarte [!UICONTROL Zeitpläne] im Abfrage-Editor zu navigieren. Diese Ansicht enthält alle Planinformationen, die mit der Abfrage verknüpft sind.
+* Wählen Sie **[!UICONTROL Als CTAS ausführen]** aus, um eine neue Tabelle zu erstellen, indem Sie Daten aus einer oder mehreren vorhandenen Tabellen auswählen. Diese Option ist nur verfügbar, wenn Sie eine SELECT-Abfrage haben.
+* Wählen Sie **[!UICONTROL Zeitplan hinzufügen]**, um mit der Bearbeitung des Zeitplans für Ihre Abfragevorlage zu beginnen.
+* Wählen Sie **[!UICONTROL Zeitplan anzeigen]** aus, um zur Registerkarte [!UICONTROL Zeitpläne] des Abfrage-Editors zu navigieren. Diese Ansicht enthält alle Zeitplaninformationen, die mit der Abfrage verknüpft sind.
 * Wählen Sie **[!UICONTROL Abfrage löschen]** aus, um die Vorlage zu löschen.
-* Wählen Sie den Vorlagennamen aus, um zum Abfrage-Editor zu navigieren, in dem die SQL vorab zur Bearbeitung ausgefüllt ist.
+* Wählen Sie den Vorlagennamen aus, um zum Abfrage-Editor zu navigieren, in dem die SQL zur Bearbeitung vorausgefüllt ist.
 
 ### Erstellen einer Vorlage mithilfe der Abfrage-Service-API
 

@@ -12,7 +12,7 @@ ht-degree: 98%
 
 ---
 
-# Attributbasierte Zugriffssteuerung in Customer AI
+# Attributbasierte Zugriffssteuerung in Kunden-KI
 
 >[!IMPORTANT]
 >

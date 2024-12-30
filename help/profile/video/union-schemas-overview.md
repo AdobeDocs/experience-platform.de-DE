@@ -1,6 +1,6 @@
 ---
-title: Übersicht über Vereinigungsschemas
-description: In diesem Video erhalten Sie ein grundlegendes Verständnis der Vereinigungsschemas in Adobe Experience Platform und eine Anleitung zur Erforschung eines Vereinigungsschemas mithilfe der Platform-Benutzeroberfläche.
+title: Übersicht über Vereinigungsschemata
+description: In diesem Video erhalten Sie ein grundlegendes Verständnis von Vereinigungsschemata in Adobe Experience Platform und einen Überblick darüber, wie Sie ein Vereinigungsschema mithilfe der Platform-Benutzeroberfläche untersuchen.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,10 +19,10 @@ ht-degree: 17%
 
 # Übersicht über Vereinigungsschemata
 
-In diesem Video erhalten Sie ein grundlegendes Verständnis der Vereinigungsschemas in Adobe Experience Platform und eine Anleitung zur Erforschung eines Vereinigungsschemas mithilfe der Platform-Benutzeroberfläche. Weitere Informationen zu Vereinigungsschemas finden Sie im Handbuch [Vereinigungsschemas - UI-Handbuch](../ui/union-schema.md) .
+In diesem Video erhalten Sie ein grundlegendes Verständnis von Vereinigungsschemata in Adobe Experience Platform und einen Überblick darüber, wie Sie ein Vereinigungsschema mithilfe der Platform-Benutzeroberfläche untersuchen. Weitere Informationen zu Vereinigungsschemata finden Sie im [Handbuch zur Benutzeroberfläche für Vereinigungsschemata](../ui/union-schema.md).
 
 >[!NOTE]
 >
->Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [UI-Handbuch für Vereinigungsschemas](../ui/union-schema.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch [UI für Vereinigungsschemata](../ui/union-schema.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)

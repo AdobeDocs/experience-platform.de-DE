@@ -1,5 +1,5 @@
 ---
-title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln mithilfe der API
+title: Einrichten und Konfigurieren von kundenverwalteten Schlüsseln mit der -API
 description: Erfahren Sie, wie Sie Ihre CMK-App mit Ihrem Azure-Mandanten einrichten und Ihre Verschlüsselungsschlüssel-ID an Adobe Experience Platform senden.
 role: Developer
 feature: API, Privacy
@@ -11,26 +11,26 @@ ht-degree: 49%
 
 ---
 
-# Einrichten und Konfigurieren von kundenverwalteten Schlüsseln mithilfe der API
+# Einrichten und Konfigurieren von kundenverwalteten Schlüsseln mit der -API
 
-In diesem Dokument wird der Prozess zum Aktivieren der Funktion für kundenverwaltete Schlüssel (CMK) in Adobe Experience Platform mithilfe der API beschrieben. Anweisungen zum Abschließen dieses Prozesses mithilfe der Benutzeroberfläche finden Sie im Dokument [CMK-Setup für die Benutzeroberfläche](./ui-set-up.md).
+In diesem Dokument wird der Prozess zum Aktivieren der Funktion für kundenverwaltete Schlüssel (CMK) in Adobe Experience Platform mithilfe der -API beschrieben. Anweisungen zum Abschließen dieses Prozesses mithilfe der Benutzeroberfläche finden Sie im [UI CMK-Setup-Dokument](./ui-set-up.md).
 
 ## Voraussetzungen
 
-Um den Abschnitt [!UICONTROL Verschlüsselung] in Adobe Experience Platform anzuzeigen und aufzurufen, müssen Sie eine Rolle erstellt und dieser Rolle die Berechtigung [!UICONTROL Kundenverwalteten Schlüssel verwalten] zugewiesen haben. Jeder Benutzer mit der Berechtigung [!UICONTROL Kunden-verwalteten Schlüssel verwalten] kann CMK für seine Organisation aktivieren.
+Um den Abschnitt [!UICONTROL Verschlüsselung] in Adobe Experience Platform anzuzeigen, müssen Sie eine Rolle erstellt und dieser Rolle die Berechtigung [!UICONTROL Kundenverwalteten Schlüssel verwalten] zugewiesen haben. Jeder Benutzer, der über die Berechtigung [!UICONTROL Kundenverwalteten Schlüssel verwalten] verfügt, kann für seine Organisation CMK aktivieren.
 
-Weiterführende Informationen zum Zuweisen von Rollen und Berechtigungen in Experience Platform finden Sie in der Dokumentation [Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de) .
+Weitere Informationen zur Zuweisung von Rollen und Berechtigungen in Experience Platform finden Sie in der [Dokumentation zu Berechtigungen konfigurieren](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=de).
 
-Um CMK zu aktivieren, muss Ihr [[!DNL Azure] Key Vault](./azure-key-vault-config.md) mit den folgenden Einstellungen konfiguriert werden:
+Um CMK zu aktivieren[[!DNL Azure]  muss Ihr Schlüsseltresor mit ](./azure-key-vault-config.md) Einstellungen konfiguriert werden:
 
 * [Bereinigungsschutz aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Soft-Delete aktivieren](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Konfigurieren des Zugriffs mithilfe der rollenbasierten Zugriffskontrolle [!DNL Azure] 2}](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Konfigurieren eines [!DNL Azure] Schlüssel-Vault](./azure-key-vault-config.md)
+* [Konfigurieren des Zugriffs mithilfe  [!DNL Azure]  rollenbasierten Zugriffssteuerung](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [Konfigurieren  [!DNL Azure]  Schlüsseltresors](./azure-key-vault-config.md)
 
 ## Einrichten der CMK-App {#register-app}
 
-Nachdem Sie Ihren Key Vault konfiguriert haben, müssen Sie sich für die CMK-Anwendung registrieren, die mit Ihrem [!DNL Azure] -Mandanten verknüpft wird.
+Nachdem Sie Ihren Schlüsseltresor konfiguriert haben, müssen Sie sich für das CMK-Programm registrieren, das sich mit Ihrem [!DNL Azure] verknüpft.
 
 ### Erste Schritte
 
@@ -38,7 +38,7 @@ Zum Registrieren des CMK-Programms müssen Sie Aufrufe an Platform-APIs durchfü
 
 Während das Authentifizierungshandbuch Anweisungen zum Generieren Ihres eigenen eindeutigen Werts für die erforderliche `x-api-key`-Anfragekopfzeile enthält, verwenden alle API-Vorgänge in diesem Handbuch stattdessen den statischen Wert `acp_provisioning`. Sie müssen allerdings weiterhin eigene Werte für `{ACCESS_TOKEN}` und `{ORG_ID}` angeben.
 
-In allen in diesem Handbuch angezeigten API-Aufrufen wird `platform.adobe.io` als Stammpfad verwendet, der standardmäßig auf den VA7-Bereich verweist. Wenn Ihr Unternehmen eine andere Region verwendet, muss auf `platform` ein Bindestrich und der Ihrer Organisation zugewiesene Regionscode folgen: `nld2` für NLD2 oder `aus5` für AUS5 (z. B. `platform-aus5.adobe.io`). Wenn Sie die Region Ihres Unternehmens nicht kennen, wenden Sie sich an Ihren Systemadministrator.
+In allen in diesem Handbuch gezeigten API-Aufrufen wird `platform.adobe.io` als Stammpfad verwendet, der standardmäßig auf die VA7-Region verweist. Wenn Ihr Unternehmen eine andere Region verwendet, muss auf `platform` ein Bindestrich und der Ihrer Organisation zugewiesene Regionscode folgen: `nld2` für NLD2 oder `aus5` für AUS5 (z. B.: `platform-aus5.adobe.io`). Wenn Sie die Region Ihres Unternehmens nicht kennen, wenden Sie sich an Ihren Systemadministrator.
 
 ### Abrufen einer Authentifizierungs-URL {#fetch-authentication-url}
 
@@ -70,43 +70,43 @@ Eine erfolgreiche Antwort gibt eine `applicationRedirectUrl`-Eigenschaft zurück
 
 Kopieren Sie die `applicationRedirectUrl`-Adresse und fügen Sie sie in einen Browser ein, um ein Authentifizierungsdialogfeld zu öffnen. Wählen Sie **[!DNL Accept]** aus, um den Service-Prinzipal der CMK-App zu Ihrem [!DNL Azure]-Mandanten hinzuzufügen.
 
-![Ein Dialogfeld mit einer Microsoft-Berechtigungsanfrage, in dem [!UICONTROL Accept] hervorgehoben ist.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![Dialogfeld für Microsoft-Berechtigungsanfragen mit hervorgehobener [!UICONTROL Akzeptieren]-Option.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### Zuweisen der CMK-App zu einer Rolle {#assign-to-role}
 
 Navigieren Sie nach Abschluss des Authentifizierungsprozesses zu Ihrem [!DNL Azure]-Schlüsseltresor und wählen Sie **[!DNL Access control]** in der linken Navigation aus. Wählen Sie von hier aus **[!DNL Add]** gefolgt von **[!DNL Add role assignment]** aus.
 
-![Das Microsoft Azure-Dashboard mit [!DNL Add] und [!DNL Add role assignment] hervorgehoben.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![Das Microsoft Azure-Dashboard mit hervorgehobenen [!DNL Add] und [!DNL Add role assignment].](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 Im nächsten Bildschirm werden Sie aufgefordert, eine Rolle für diese Zuweisung auszuwählen. Wählen Sie **[!DNL Key Vault Crypto Service Encryption User]** aus, bevor Sie auf **[!DNL Next]** klicken, um fortzufahren.
 
 >[!NOTE]
 >
->Wenn Sie über die [!DNL Managed-HSM Key Vault]-Ebene verfügen, müssen Sie die **[!DNL Managed HSM Crypto Service Encryption User]**-Benutzerrolle auswählen.
+>Wenn Sie über die [!DNL Managed-HSM Key Vault] verfügen, müssen Sie die **[!DNL Managed HSM Crypto Service Encryption User]** Benutzerrolle auswählen.
 
-![Das Microsoft Azure-Dashboard mit dem hervorgehobenen [!DNL Key Vault Crypto Service Encryption User].](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![Das Microsoft Azure-Dashboard mit hervorgehobenem [!DNL Key Vault Crypto Service Encryption User].](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 Wählen Sie auf dem nächsten Bildschirm **[!DNL Select members]** aus, um ein Dialogfeld in der rechten Leiste zu öffnen. Verwenden Sie die Suchleiste, um den Service-Prinzipal für das CMK-Programm zu suchen und ihn aus der Liste auszuwählen. Wenn Sie fertig sind, klicken Sie auf **[!DNL Save]**.
 
 >[!NOTE]
 >
->Wenn Sie Ihr Programm in der Liste nicht finden, wurde Ihr Service-Prinzipal in Ihrem Mandanten nicht akzeptiert. Wenden Sie sich an Ihren [!DNL Azure] -Administrator oder -Support-Mitarbeiter, um sicherzustellen, dass Sie über die richtigen Berechtigungen verfügen.
+>Wenn Sie Ihr Programm in der Liste nicht finden, wurde Ihr Service-Prinzipal in Ihrem Mandanten nicht akzeptiert. Um sicherzustellen, dass Sie über die richtigen Berechtigungen verfügen, wenden Sie sich an Ihren [!DNL Azure] oder Vertreter.
 
 ## Aktivieren der Konfiguration des Verschlüsselungsschlüssels auf Experience Platform {#send-to-adobe}
 
 Nach der Installation der CMK-App in [!DNL Azure] können Sie Ihre Verschlüsselungsschlüssel-ID an Adobe senden. Wählen Sie in der linken Navigation **[!DNL Keys]** aus, gefolgt vom Namen des Schlüssels, den Sie senden möchten.
 
-![Das Microsoft Azure-Dashboard mit dem Objekt [!DNL Keys] und dem Schlüsselnamen hervorgehoben.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![Das Microsoft Azure-Dashboard mit dem hervorgehobenen [!DNL Keys] und dem hervorgehobenen Schlüsselnamen.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Wählen Sie die neueste Version des Schlüssels aus, und seine Detailseite wird angezeigt. Von hier aus können Sie optional die zulässigen Vorgänge für den Schlüssel konfigurieren.
 
 >[!IMPORTANT]
 >
->Die für den Schlüssel mindestens erforderlichen Vorgänge sind die Berechtigungen **[!DNL Wrap Key]** und **[!DNL Unwrap Key]**. Sie können [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign] und [!DNL Verify] einbeziehen, falls Sie möchten.
+>Die minimal zulässigen Vorgänge für den Schlüssel sind die Berechtigungen **[!DNL Wrap Key]** und **[!DNL Unwrap Key]** . Sie können bei Bedarf [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign] und [!DNL Verify] einbeziehen.
 
 Das Feld **[!UICONTROL Schlüsselkennung]** zeigt die URI-Kennung für den Schlüssel an. Kopieren Sie diesen URI-Wert zur Verwendung im nächsten Schritt.
 
-![Die Schlüsseldetails des Microsoft Azure-Dashboards mit den Abschnitten [!DNL Permitted operations] und der URL-Schlüssel zum Kopieren wurden hervorgehoben.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![Die Details zum Microsoft Azure-Dashboard-Schlüssel mit den hervorgehobenen Abschnitten &quot;[!DNL Permitted operations]&quot; und „URL des Kopierschlüssels“.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Nachdem Sie den Schlüsseltresor-URI erhalten haben, können Sie ihn mit einer POST-Anfrage an den CMK-Konfigurations-Endpunkt senden.
 
@@ -116,7 +116,7 @@ Nachdem Sie den Schlüsseltresor-URI erhalten haben, können Sie ihn mit einer P
 
 **Anfrage**
 
-+++ Eine Beispielanfrage zum Senden des Schlüssel-Vault-URI an den CMK-Konfigurationsendpunkt.
++++ Eine Beispielanfrage zum Senden des Schlüsseltresor-URI an den CMK-Konfigurationsendpunkt.
 
 ```shell
 curl -X POST \
@@ -137,16 +137,16 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Ein Name für die Konfiguration. Stellen Sie sicher, dass Sie sich diesen Wert merken, da der Konfigurationsstatus in einem [späteren Schritt](#check-status) überprüft werden muss. Bei dem Wert ist die Groß-/Kleinschreibung zu beachten. |
+| `name` | Ein Name für die Konfiguration. Stellen Sie sicher, dass Sie sich diesen Wert merken, da er erforderlich ist, um den Konfigurationsstatus in einem [ Schritt zu überprüfen](#check-status). Bei dem Wert ist die Groß-/Kleinschreibung zu beachten. |
 | `type` | Der Konfigurationstyp. Muss auf `BYOK_CONFIG` festgelegt werden. |
-| `imsOrgId` | Ihre Organisations-ID. Diese ID muss mit dem unter der Kopfzeile `x-gw-ims-org-id` angegebenen Wert übereinstimmen. |
+| `imsOrgId` | Ihre Organisations-ID. Diese ID muss mit dem Wert übereinstimmen, der unter der `x-gw-ims-org-id`-Kopfzeile angegeben wird. |
 | `configData` | Diese Eigenschaft enthält die folgenden Details zur Konfiguration:<ul><li>`providerType`: Muss auf `AZURE_KEYVAULT` festgelegt werden.</li><li>`keyVaultKeyIdentifier`: Der URI für den Schlüsseltresor, den Sie [zuvor](#send-to-adobe) kopiert haben.</li></ul> |
 
 +++
 
 **Antwort**
 
-+++ Die erfolgreiche Antwort gibt die Details des Konfigurationsauftrags zurück.
++++ Die erfolgreiche Antwort gibt die Details des Konfigurationsvorgangs zurück.
 
 ```json
 {
@@ -170,7 +170,7 @@ curl -X POST \
 
 +++
 
-Der Auftrag sollte die Verarbeitung innerhalb weniger Minuten abschließen.
+Der Vorgang sollte die Verarbeitung innerhalb weniger Minuten abschließen.
 
 ## Überprüfen des Konfigurationsstatus {#check-status}
 
@@ -219,11 +219,11 @@ curl -X GET \
 
 Das `status`-Attribut kann einen von vier Werten mit folgenden Bedeutungen haben:
 
-1. `RUNNING`: Prüft, ob Platform auf den Schlüssel und den Schlüssel-Vault zugreifen kann.
+1. `RUNNING`: Überprüft, ob Platform auf den Schlüssel und den Schlüsseltresor zugreifen kann.
 1. `UPDATE_EXISTING_RESOURCES`: Das System fügt den Schlüsseltresor und den Schlüsselnamen zu den Datenspeichern in allen Sandboxes in Ihrer Organisation hinzu.
-1. `COMPLETED`: Der Schlüssel und der Schlüsselname wurden den Datenspeichern erfolgreich hinzugefügt.
+1. `COMPLETED`: Der Schlüsseltresor und der Schlüsselname wurden erfolgreich zu den Datenspeichern hinzugefügt.
 1. `FAILED`: Es ist ein Problem aufgetreten, das in erster Linie mit dem Schlüssel, dem Schlüsseltresor oder der Einrichtung der Multi-Mandanten-App-zusammenhängt.
 
 ## Nächste Schritte
 
-Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihre Organisation erfolgreich aktiviert. Daten, die in Primärdatenspeicher erfasst werden, werden jetzt mit den Schlüsseln in Ihrem [!DNL Azure] Key Vault verschlüsselt und entschlüsselt. Weitere Informationen zur Datenverschlüsselung in Adobe Experience Platform finden Sie in der [Verschlüsselungsdokumentation](../encryption.md).
+Durch Ausführung der oben genannten Schritte haben Sie CMK für Ihre Organisation erfolgreich aktiviert. Daten, die in primäre Datenspeicher aufgenommen werden, werden jetzt mit dem oder den Schlüssel(n) in Ihrem [!DNL Azure]-Schlüsseltresor ver- und entschlüsselt. Weitere Informationen zur Datenverschlüsselung in Adobe Experience Platform finden Sie unter [Verschlüsselungsdokumentation](../encryption.md).

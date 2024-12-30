@@ -1,6 +1,6 @@
 ---
 title: SQL Insights
-description: Erfahren Sie mehr über die Anwendungsfälle, die wichtigsten Funktionen und erforderlichen Schritte zur Entwicklung eines SQL Insights-Dashboards mit Data Distiller. Erfahren Sie, wie die SQL Insights-Funktion in Data Distiller die Transparenz verbessert und betriebliche Einblicke in verschiedene Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen erhält.
+description: Erfahren Sie mehr über die Anwendungsfälle, grundlegenden Funktionen und erforderlichen Schritte zur Entwicklung eines SQL-Insights-Dashboards mit Data Distiller. Erfahren Sie, wie die SQL Insights-Funktion in Data Distiller die Transparenz verbessern und operative Einblicke in verschiedene Dimensionen wie Profile, Audiences, Kampagnen, Journey, Berechtigungen und Einverständnis erhalten kann.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
 source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
@@ -11,71 +11,71 @@ ht-degree: 5%
 
 # SQL Insights
 
-Erstellen Sie maßgeschneiderte Berichtsdatenmodelle, um tiefere Einblicke zu gewinnen, Strategien zu optimieren und Analysen an spezifische Geschäftsanforderungen mit Data Distiller SQL Insights anzupassen. Verwenden Sie die SQL Insights-Funktion, um die Transparenz zu erhöhen und operative Einblicke aus Ihren Adobe Experience Platform-Daten über Dimensionen wie Profile, Zielgruppen, Kampagnen, Journey, Berechtigungen und Einverständniserklärungen hinweg zu gewinnen. Diese Funktion bietet eine vielseitige, adaptive Lösung, um die Berichtsdatenmodelle Ihres Unternehmens an Ihre spezifischen Geschäftsanforderungen anzupassen.
+Erstellen Sie maßgeschneiderte Reporting-Datenmodelle, um tiefere Einblicke zu gewinnen, Strategien zu optimieren und die Analyse an spezifische Geschäftsanforderungen mit Data Distiller SQL Insights anzupassen. Verwenden Sie die SQL Insights-Funktion, um die Transparenz zu erhöhen und operative Einblicke aus Ihren Adobe Experience Platform-Daten in Dimensionen wie Profile, Audiences, Kampagnen, Journey, Berechtigungen und Einverständnis zu erhalten. Diese Funktion bietet eine vielseitige, adaptive Lösung, mit der Sie die Reporting-Datenmodelle Ihres Unternehmens an Ihre spezifischen Geschäftsanforderungen anpassen können.
 
-Um [Ihre SQL Insights](../../../dashboards/sql-insights-query-pro-mode/overview.md) zu visualisieren, können Sie [query pro mode](../../../dashboards/sql-insights-query-pro-mode/overview.md) verwenden, um komplexe Analysen mit benutzerdefinierten SQL-Abfragen durchzuführen und Ihre Daten in leicht verständliche Diagramme umzuwandeln. Verwenden Sie den Abfragepro-Modus, um individuelle Einblicke und Visualisierungen in Ihren Dashboards zu erstellen und sowohl technische als auch nicht technische Zielgruppen zu berücksichtigen, indem Sie Ihre Einblicke als CSV-Dateien herunterladen.
+Um [SQL Insights zu visualisieren](../../../dashboards/sql-insights-query-pro-mode/overview.md) können Sie den [query pro mode](../../../dashboards/sql-insights-query-pro-mode/overview.md) verwenden, um komplexe Analysen mit benutzerdefinierten SQL-Abfragen durchzuführen und Ihre Daten in leicht verständliche Diagramme umzuwandeln. Verwenden Sie den Abfrage-Pro-Modus, um maßgeschneiderte Einblicke und Visualisierungen in Ihren Dashboards zu erstellen und sowohl technische als auch nicht-technische Zielgruppen zu bedienen, indem Sie Ihre Einblicke als CSV-Dateien herunterladen.
 
-In diesem Dokument werden die Anwendungsfälle, grundlegenden Funktionen und erforderlichen Schritte zum Entwickeln eines SQL Insights-Dashboards mit Data Distiller beschrieben.
+In diesem Dokument werden die Anwendungsfälle, wesentlichen Funktionen und erforderlichen Schritte zur Entwicklung eines SQL Insights-Dashboards mit Data Distiller beschrieben.
 
 ## Voraussetzungen
 
-In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen zu dieser Funktion finden Sie in der Dokumentation zu [benutzerdefinierten Dashboards](../../../dashboards/standard-dashboards.md) .
+In diesem Tutorial werden benutzerdefinierte Dashboards verwendet, um Daten aus Ihrem benutzerdefinierten Datenmodell innerhalb der Platform-Benutzeroberfläche zu visualisieren. Weitere Informationen [ diese Funktion finden Sie in der ](../../../dashboards/standard-dashboards.md) zu benutzerdefinierten Dashboards .
 
 ## Erste Schritte
 
-Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Weitere Informationen finden Sie in der Dokumentation zu [packaging](../../packaging.md), [guardrails](../../guardrails.md#query-accelerated-store) und [licensing](../../data-distiller/license-usage.md) , die sich auf die Data Distiller SKU bezieht. Wenn Sie nicht über die Data Distiller-SKU verfügen, wenden Sie sich für weitere Informationen an Ihren Adobe-Kundenbetreuer.
+Die Data Distiller SKU ist erforderlich, um ein benutzerdefiniertes Datenmodell für Ihre Reporting-Insights zu erstellen und um die Real-Time CDP-Datenmodelle zu erweitern, die angereicherte Platform-Daten enthalten. Siehe die [Packaging](../../packaging.md), [Leitplanken](../../guardrails.md#query-accelerated-store) und [Lizenzierung](../../data-distiller/license-usage.md), die sich auf die Data Distiller SKU beziehen. Wenn Sie nicht über die Data Distiller SKU verfügen, wenden Sie sich an den Kundendienst von Adobe, um weitere Informationen zu erhalten.
 
 ## Anwendungsfälle für SQL Insights {#use-cases}
 
-Im Folgenden finden Sie gängige Anwendungsfälle, die effektiv über SQL Insights in Data Distiller adressiert werden können.
+Im Folgenden finden Sie gängige Anwendungsfälle, die effektiv durch SQL Insights in Data Distiller behoben werden können.
 
 ### Transparenz der Profil- und Zielgruppennutzung {#usage-transparency}
 
-**Herausforderung:** Aufschlüsseln der KPIs (Key Performance Indicators) nach bestimmten Kriterien wie Geschäftseinheiten, Treuestatus oder Customer Lifetime Value (CLTV).
+**Herausforderung:** Aufschlüsselung der Key Performance Indicators (KPIs) nach bestimmten Kriterien wie Geschäftseinheiten, Treuestatus oder Customer Lifetime Value (CLTV).
 
-**SQL Insights Solution:** Data Distiller ermöglicht die Erweiterung der Berichtsdatenmodelle in Adobe Experience Platform, wodurch [ benutzerdefinierte Profilattribute wie CLTV](../../use-cases/customer-lifetime-value.md) oder der Treuestatus hinzugefügt werden können.
+**SQL Insights-Lösung:** Data Distiller ermöglicht die Erweiterung von Reporting-Datenmodellen in Adobe Experience Platform und [ das Hinzufügen benutzerdefinierter Profilattribute wie CLTV ](../../use-cases/customer-lifetime-value.md) Treuestatus.
 
-### Tracking von Einverständnisanomalien {#consent-anomaly-tracking}
+### Anomalieverfolgung für Einverständnis {#consent-anomaly-tracking}
 
-**Herausforderung:** Anleitung zum Anwenden von Zielgruppenüberschneidungen und zur Größenanpassung von Trendzeilenberichten auf benutzerdefinierte Zustimmungsattribute für Kanäle wie E-Mail, SMS und Telefon.
+**Herausforderung:** Anwenden von Trend-Zeilenberichten zu Zielgruppenüberschneidungen und -größen auf benutzerdefinierte Einverständnisattribute für Kanäle wie E-Mail, SMS und Telefon.
 
-**SQL Insights Solution:** Das Berichtsdatenmodell kann erweitert werden, um Änderungen an Zustimmungsvoreinstellungen im Laufe der Zeit zu verfolgen. Dazu gehört das Erstellen zusätzlicher Fakten- und Dimensionstabellen zum Trend von Zustimmungsvoreinstellungen und zum Planen der [inkrementellen Datenaktualisierung](../../key-concepts/incremental-load.md).
+**SQL Insights-Lösung** Das Berichtsdatenmodell kann erweitert werden, um Änderungen der Einverständnisvoreinstellungen im Laufe der Zeit zu verfolgen. Dazu gehört die Erstellung zusätzlicher Fakten- und Dimensionstabellen für die Voreinstellungen für das Trend-Einverständnis und [ Planung (inkrementelle Datenaktualisierung](../../key-concepts/incremental-load.md).
 
 ### Optimieren der Zielgruppensegmentierungsstrategie {#optimize-audience-segmentation-strategy}
 
-**Herausforderung:** Wie integrieren Sie modellgenerierte Tendenzwerte für maschinelles Lernen (ML) in ihre KPI-Berichte für Zielgruppen.
+**Herausforderung:** Integrieren von durch das ML-Modell (maschinelles Lernen) generierten Tendenzwerten in die KPI-Berichte der Zielgruppe.
 
-**SQL Insights Solution:** Data Distiller ermöglicht die Einbeziehung von [Propensity Scores aus benutzerdefinierten ML-Modellen](../../use-cases/propensity-score.md), wodurch die Berechnung der aggregierten Werte auf Zielgruppenebene erleichtert wird. Diese Daten können dann zusammen mit standardmäßigen KPIs gemeldet werden.
+**SQL Insights-Lösung:** Data Distiller ermöglicht die Einbeziehung von [Tendenz-Scores aus benutzerdefinierten ML-Modellen](../../use-cases/propensity-score.md) wodurch die Berechnung aggregierter Scores auf Audience-Ebene erleichtert wird. Diese Daten können dann zusammen mit Standard-KPIs gemeldet werden.
 
 ### Zielgruppenerweiterung {#audience-expansion}
 
-**Herausforderung:** Wie Sie mehr als nur Profilzahlen in Zielgruppenüberschneidungsberichten abrufen und zusätzliche demografische Daten oder Voreinstellungen erhalten, um Zielgruppenerweiterungsstrategien zu steuern.
+**Herausforderung:** Sie, wie Sie in Berichten zu Zielgruppenüberschneidungen mehr als nur Profilzahlen erfassen und zusätzliche demografische Daten oder Voreinstellungen für Zielgruppenerweiterungsstrategien erhalten.
 
-**SQL Insights Solution:** Durch Erweiterung des Berichtsdatenmodells können Benutzer zusätzliche Profilattribute einbinden, wodurch der Bericht zur Zielgruppenüberschneidung mit relevanten demografischen Daten und Voreinstellungen angereichert wird.
+**SQL Insights-Lösung** Durch die Erweiterung des Berichtsdatenmodells können Benutzer zusätzliche Profilattribute einbeziehen, wodurch der Bericht zur Zielgruppenüberschneidung um relevante demografische Daten und Voreinstellungen erweitert wird.
 
-## Wichtige Funktionen zum Generieren von SQL Insights {#key-capabilities}
+## Schlüsselfunktionen zum Generieren von SQL Insights {#key-capabilities}
 
-In der folgenden Abbildung werden einige wichtige Funktionen zum Generieren von SQL Insights hervorgehoben. Zu diesen Funktionen gehören:
+Die folgende Abbildung zeigt einige wichtige Funktionen zum Generieren von SQL Insights. Zu diesen Funktionen gehören:
 
-1. **Datenvisualisierungen:** Einbeziehen visueller Elemente wie Trends und Balkendiagramme für eine umfassende Ansicht von Datentrends.
-1. **Dashboard-Authoring:** Aktivierung der Erstellung benutzerdefinierter Dashboards, die auf bestimmte Anwendungsfälle zugeschnitten sind, und Bereitstellung eines personalisierteren und gezielteren Analyseerlebnisses.
-1. **Flexible SQL-Datenmodellierung:** Verwenden Sie einen vielseitigen SQL-Datenmodellierungsansatz, der es Benutzern ermöglicht, verschiedene Datensätze nahtlos zu kombinieren und zu bearbeiten, wodurch Anpassungsfähigkeit und Analysetiefe verbessert werden.
-1. **Beschleuniger Speicher:** Implementierung eines beschleunigten Speichermechanismus, um aggregierte Einblicke effizient über SQL bereitzustellen und so einen optimierten und schnellen Zugriff auf wertvolle Informationen zu gewährleisten.
-1. **BI-Konnektivität:** Erleichterung der nahtlosen Integration mit gängigen Business Intelligence-Tools (BI), einschließlich Power BI, Tableau, Looker und Apache Superset. Diese Konnektivität stellt die Kompatibilität mit verschiedenen BI-Umgebungen sicher und bietet Anwendern die Flexibilität, ihr bevorzugtes Tool für detaillierte Analysen und Berichte zu verwenden.
+1. **Datenvisualisierungen:** Sie visuelle Elemente wie Trends und Balkendiagramme ein, um eine umfassende Ansicht der Datentrends zu erhalten.
+1. **Dashboard-Authoring:** Erstellung benutzerdefinierter Dashboards, die auf bestimmte Anwendungsfälle zugeschnitten sind, wodurch ein stärker personalisiertes und zielgerichtetes Analyseerlebnis geboten wird.
+1. **Flexible SQL-Datenmodellierung:** Verwenden Sie einen vielseitigen SQL-Datenmodellierungsansatz, der es Benutzern ermöglicht, verschiedene Datensätze nahtlos zu kombinieren und zu bearbeiten, wodurch die Anpassungsfähigkeit und die Analysetiefe verbessert werden.
+1. **Beschleunigter Speicher:** Implementieren eines beschleunigten Speichermechanismus zur effizienten Bereitstellung aggregierter Einblicke über SQL, um einen optimierten und schnellen Zugriff auf wertvolle Informationen sicherzustellen.
+1. **BI-Konnektivität:** nahtlose Integration mit gängigen Business Intelligence-Tools (BI), einschließlich Power BI, Tableau, Looker und Apache Superset. Diese Konnektivität stellt die Kompatibilität mit verschiedenen BI-Umgebungen sicher und bietet Benutzern die Flexibilität, ihr bevorzugtes Tool für die ausführliche Analyse und Berichterstellung zu verwenden.
 
-![ Visuelle Darstellungen der wichtigsten Funktionen von Data Distiller SQL Insights.](../../images/data-distiller/sql-insights/key-capabilities-of-customizable-insights.png)
+![Visuelle Darstellungen der Schlüsselfunktionen von Data Distiller SQL Insights.](../../images/data-distiller/sql-insights/key-capabilities-of-customizable-insights.png)
 
 ## Schritte zum Erstellen von SQL Insights {#steps-to-create}
 
-Um ein SQL Insights-Dashboard in Data Distiller zu entwickeln, folgen Sie den unten stehenden Anweisungen.
+Gehen Sie wie folgt vor, um in Data Distiller ein SQL Insights-Dashboard zu entwickeln.
 
-1. **Ad-hoc-Abfrageerforschung:** Beginnen Sie mit der Ausführung von Ad-hoc-Abfragen `SELECT`, um Rohdaten im Data Lake zu untersuchen. Dies ermöglicht eine spontane, explorative Datenanalyse zum Experimentieren und Validieren von Daten, in denen die Ergebnisse der Abfragen nicht im Data Lake gespeichert sind.
-1. **Nutzung der Batch-Abfrage:** Verwenden Sie Batch-Abfragen, um [geplante Aufträge zu erstellen](../../api/scheduled-queries.md#create-a-new-scheduled-query), um Insights-Aggregattabellen zu generieren und so einen systematischen und automatisierten Ansatz bei der Datenverarbeitung sicherzustellen. Batch-Abfragen führen Abfragen aus `INSERT TABLE AS SELECT` und `CREATE TABLE AS SELECT`, um Daten zu bereinigen, zu formen, zu bearbeiten und anzureichern. Die Ergebnisse dieser Abfragen werden im Data Lake gespeichert.
-1. **Laden aggregierter Einblicke:** Laden Sie die generierten aggregierten Einblicke in den beschleunigten Speicher und verwenden Sie SQL, um Abfragen zu testen, und stellen Sie die Genauigkeit und Effizienz des Datenabrufs sicher. Informationen dazu, wie Sie &quot;[stateless&quot;-Abfragen an den beschleunigten Speicher vornehmen](../../api/accelerated-queries.md), finden Sie in der Dokumentation.
-1. **Zugriff und Integration:** Greifen Sie nahtlos auf die im beschleunigten Speicher gespeicherten Einblicke zu, indem Sie sie in Adobe Experience Platform [Benutzerdefinierte Dashboards](../../../dashboards/standard-dashboards.md) oder andere bevorzugte Business Intelligence-Tools (BI) integrieren. Diese Integrationen mit Clients von Drittanbietern ermöglichen ein kohärentes und intuitives Benutzererlebnis.
+1. **Ad-hoc-Abfrage-Exploration:** Führen Sie zunächst Ad-hoc-`SELECT`-Abfragen aus, um Rohdaten im Data Lake zu untersuchen. Dies ermöglicht eine spontane explorative Datenanalyse zum Experimentieren und Validieren von Daten, bei denen die Ergebnisse der Abfragen nicht im Data Lake gespeichert werden.
+1. **Nutzung von Batch-Abfragen:** Verwenden Sie Batch-Abfragen, um [geplante Aufträge zu erstellen](../../api/scheduled-queries.md#create-a-new-scheduled-query) um Insights-Aggregattabellen zu generieren und so einen systematischen und automatisierten Ansatz für die Datenverarbeitung sicherzustellen. Batch-Abfragen führen `INSERT TABLE AS SELECT` und `CREATE TABLE AS SELECT` Abfragen aus, um Daten zu bereinigen, zu formen, zu bearbeiten und anzureichern. Die Ergebnisse dieser Abfragen werden im Data Lake gespeichert.
+1. **Laden aggregierter Insights:** Laden der generierten aggregierten Insights in den beschleunigten Speicher und Verwenden von SQL zum Testen von Abfragen sowie zum Sicherstellen der Genauigkeit und Effizienz des Datenabrufs. Weitere Informationen zum [Erstellen statusloser Abfragen an den beschleunigten Speicher](../../api/accelerated-queries.md) finden Sie in der Dokumentation.
+1. **Zugriff und Integration:** Greifen Sie nahtlos auf die Erkenntnisse zu, die im beschleunigten Speicher gespeichert sind, indem Sie sie mit Adobe Experience Platform [benutzerdefinierten Dashboards](../../../dashboards/standard-dashboards.md) oder anderen bevorzugten Business Intelligence-Tools (BI) integrieren. Diese Integrationen mit Drittanbieter-Clients ermöglichen Benutzern ein einheitliches und intuitives Benutzererlebnis.
 
-![Eine Infografik, die die vier Schritte zur SQL Insights-Anleitung in Data Distiller veranschaulicht.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
+![Eine Infografik, die die vier Schritte zum Erstellen von SQL Insights in Data Distiller veranschaulicht.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments verfügen Sie nun über ein besseres Verständnis der Anwendungsfälle, der wesentlichen Funktionen und der erforderlichen Schritte zur Entwicklung eines SQL Insights-Dashboards mit Data Distiller. Weitere Informationen zum Erstellen von maßgeschneiderten Berichtsdatenmodellen finden Sie im Leitfaden zum [Reporting-Einblicke-Datenmodell](./reporting-insights-data-model.md) .
+Durch das Lesen dieses Dokuments haben Sie jetzt ein besseres Verständnis für die Anwendungsfälle, wesentlichen Funktionen und erforderlichen Schritte zur Entwicklung eines SQL-Insights-Dashboards mit Data Distiller. Weitere Informationen zum Erstellen maßgeschneiderter Reporting-Datenmodelle finden Sie im [Reporting Insights-Datenmodell-Handbuch](./reporting-insights-data-model.md).

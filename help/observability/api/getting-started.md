@@ -2,7 +2,7 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 solution: Experience Platform
 title: Erste Schritte mit der Observability Insights-API
-description: Mit der Observability Insights-API können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. Dieses Dokument bietet eine Einführung in die grundlegenden Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Observability Insights-API durchführen.
+description: Mit der Observability Insights-API können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Observability Insights-API durchführen.
 exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 51%
 
 # Erste Schritte mit der [!DNL Observability Insights]-API
 
-Mit der API [!DNL Observability Insights] können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [!DNL Observability Insights]-API durchführen.
+Mit der [!DNL Observability Insights]-API können Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen abrufen. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [!DNL Observability Insights]-API durchführen.
 
 ## Lesen von Beispiel-API-Aufrufen
 
-In der Dokumentation der [!DNL Observability Insights]-API wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum Lesen von Beispiel-API-Aufrufen im Handbuch zur Fehlerbehebung bei Experience Platform [1.](../../landing/troubleshooting.md)
+In der Dokumentation der [!DNL Observability Insights]-API wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum Lesen von Beispiel-API-Aufrufen im Fehlerbehebungshandbuch für [Experience Platform](../../landing/troubleshooting.md).
 
 ## Erforderliche Kopfzeilen
 
@@ -27,10 +27,10 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Für alle Anfragen an [!DNL Platform] -APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 ## Nächste Schritte
 
-Um Aufrufe mit der [!DNL Observability Insights] -API zu tätigen, fahren Sie mit dem [Metriken-Endpunkthandbuch](./metrics.md) fort.
+Um mit Aufrufen mit der [!DNL Observability Insights]-API zu beginnen, fahren Sie mit dem [Handbuch zu Metriken-Endpunkten](./metrics.md) fort.

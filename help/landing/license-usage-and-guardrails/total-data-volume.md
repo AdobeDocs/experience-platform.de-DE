@@ -1,21 +1,21 @@
 ---
-title: Metrik "Datenvolumen insgesamt"
-description: Erfahren Sie mehr über die neue Metrik "Datenvolumen insgesamt"und wie sie die Metrik für den vorherigen durchschnittlichen Profilumfang ersetzt.
+title: Metrik für das gesamte Datenvolumen
+description: Erfahren Sie mehr über die neue Metrik „Gesamtdatenvolumen“ und darüber, wie sie die frühere Metrik „Durchschnittlicher Profilreichtum“ ersetzt.
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba85d4e5a481b0eff53e1d87311c395934f585
+exl-id: 4b21d25c-b82b-4d1a-83ce-b510f02fd160
+source-git-commit: 5550e757eae95e529d74115df9bbe9b635d25ec8
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 1%
 
 ---
 
+# Metrik für das gesamte Datenvolumen
 
-# Metrik &quot;Datenvolumen insgesamt&quot;
+Ab dem 24. September 2024 wird die Metrik Gesamtdatenvolumen die vorherige Metrik Durchschnittlicher Profilreichhaltigkeit ersetzen.
 
-Ab dem 24. September 2024 ersetzt die Metrik Datenvolumen insgesamt die vorherige Metrik der durchschnittlichen Profilreichweite.
-
-Das Datenvolumen insgesamt stellt die Gesamtdatenmenge dar, die für das Echtzeit-Kundenprofil von Adobe Experience Platform zur Verwendung in Interaktionsarbeitsabläufen verfügbar ist. Dieser Wert entspricht der Metrik Addressable Audience , multipliziert mit der durchschnittlichen Profilreichweite.
+Das Gesamtdatenvolumen stellt die Gesamtmenge der Daten dar, die für das Echtzeit-Kundenprofil von Adobe Experience Platform zur Verwendung in Interaktions-Workflows verfügbar sind. Dieser Wert entspricht der Metrik Adressierbare Zielgruppe multipliziert mit der durchschnittlichen Profilreichhaltigkeit.
 
 ## Häufig gestellte Fragen {#faq}
 
@@ -23,28 +23,28 @@ Im folgenden Abschnitt finden Sie häufig gestellte Fragen zu diesem Update.
 
 ### Warum wurde diese Änderung vorgenommen?
 
-Diese Änderung wurde vorgenommen, um die Einhaltung der Lizenzberechtigungsmetriken zu vereinfachen. Wir haben oft von Kunden gehört, dass es für sie schwierig ist, die Reichweite des durchschnittlichen Profils zu verstehen und zu bewältigen. Mit dieser Änderung hoffen wir, dass Sie Ihre lizenzierte Nutzung des Echtzeit-Kundenprofils besser verstehen und verwalten können.
+Diese Änderung wurde vorgenommen, um die Einhaltung der Lizenzberechtigungsmetriken zu vereinfachen. Wir haben oft von Kunden gehört, dass sie die durchschnittliche Reichweite von Profilen schwer verstehen und verwalten können. Mit dieser Änderung hoffen wir, dass Sie Ihre lizenzierte Verwendung des Echtzeit-Kundenprofils besser verstehen und verwalten können.
 
-### Ändert diese Änderung der Metrik meine Berechtigung für den Profilspeicher?
+### Ändert sich durch diese Metrikänderung meine Berechtigung für den Profilspeicher?
 
-Nein. Ihre Berechtigung für den Profilspeicher bleibt unverändert, da das Datenvolumen insgesamt der ansprechbaren Zielgruppe entspricht, multipliziert mit Ihrer berechtigten durchschnittlichen Profilreichweite.
+Nein. Die Berechtigung für den Profilspeicher bleibt gleich wie zuvor, da das Gesamtdatenvolumen der adressierbaren Zielgruppe entspricht, multipliziert mit der berechtigten durchschnittlichen Profilreichhaltigkeit.
 
-### Hat diese Änderung Auswirkungen auf die von mir gekauften Berechtigungspakete?
+### Hat diese Änderung Auswirkungen auf die von mir erworbenen Berechtigungspakete?
 
 Nein. Sie erhalten weiterhin die Vorteile der Berechtigungspakete, die Sie zuvor gekauft haben.
 
-### Wie kommt es, dass ich einen anderen Wert für mein Gesamtdatenvolumen im Vergleich zu meiner Profilspeicher-Berechtigung sehe?
+### Warum sehe ich für mein Gesamtdatenvolumen einen anderen Wert als für meine Berechtigung für den Profilspeicher?
 
-Gesamtdatenvolumen stellt die **Gesamtsumme** an Daten dar, die für Profile zur Verwendung in Interaktions-Workflows verfügbar sind. Die Messung wurde aktualisiert, um deterministischer und erklärbarer zu werden. Die meisten Benutzer sollten **nicht** eine signifikante Änderung zwischen ihrem Gesamtdatenvolumen und ihrem gesamten Profilspeicher sehen. Wenn Sie Bedenken haben, wenden Sie sich bitte an Ihren Kundendienstmitarbeiter.
+Das Gesamtdatenvolumen stellt die **gesamte** Datenmenge dar, die für Profil zur Verwendung in Interaktions-Workflows verfügbar ist. Die Messung wurde aktualisiert, um deterministischer und erklärbarer zu sein. Die meisten Benutzer sollten **nicht** eine wesentliche Änderung zwischen ihrem gesamten Datenvolumen und ihrem gesamten Profilspeicher sehen. Wenn Sie Bedenken haben, erstellen Sie bitte ein Ticket bei Ihrem Kundendienstmitarbeiter.
 
-### Muss ich meine Änderungen neu erstellen, um weiterhin meine durchschnittliche Profilreichweite zu verwalten?
+### Muss ich meine Änderungen neu erstellen, um meine durchschnittliche Reichweite des Profils weiterhin zu verwalten?
 
-Nein. Alle Aktionen wie Filtern, Deaktivieren des Profils für Datensätze sowie Einrichten von Erlebnisereignisabläufen und pseudonymen Profildatenabläufen spielen weiterhin eine Rolle bei der Verwaltung des Gesamtdatenvolumens.
+Nein. Alle Aktionen wie Filtern, Deaktivieren von Profilen für Datensätze sowie das Einrichten von Gültigkeitsdauern von Erlebnisereignissen und Ablauf von Daten pseudonymer Profile spielen weiterhin eine Rolle bei der Verwaltung des gesamten Datenvolumens.
 
-### Warum ist die Datei, die ich in die Sandbox aufgenommen habe, im Vergleich zum Gesamtdatenvolumen unterschiedlich groß?
+### Warum hat die Größe der in die Sandbox aufgenommenen Datei eine andere als das gesamte Datenvolumen?
 
-Profil optimiert Daten für eine schnelle Verarbeitung, um die Personalisierungs- und Interaktionsarbeitsabläufe auszuführen, für die das System entwickelt wurde. Die Dateigröße auf Client-Seite kann sich aufgrund von Faktoren wie Kodierung, Komprimierung und Format vom Gesamtdatenvolumen unterscheiden.
+Das Profil optimiert Daten für eine schnelle Verarbeitung, um die Personalisierungs- und Interaktions-Workflows auszuführen, für die das System entwickelt wurde. Die Dateigröße auf der Client-Seite kann sich vom gesamten Datenvolumen unterscheiden, da Faktoren wie die Art der Kodierung, Komprimierung und das Format eine Rolle spielen.
 
-### Gilt diese Änderung für SKUs, die über eine gemeinsame Beschränkung für Profil und Data Lake verfügen?
+### Gilt diese Änderung für SKUs, die sowohl für Profil als auch für Data Lake ein gemeinsames Limit haben?
 
-Kunden mit SKUs, die die Durchschnittliche Profilgenauigkeit zwischen Profil und Data Lake gemeinsam haben, sehen weiterhin die Metrik Gesamtnutzte Datenspeicherung und sehen **nicht** die Metrik Durchschnittliche Profilreichweite .
+Kunden, die SKUs verwenden, bei denen für Profil und Data Lake das Kriterium „Durchschnittlicher Profilreichhaltigkeit“ verwendet wurde, sehen weiterhin die Metrik „Total Consumed Storage“ und **nicht** die Metrik „Durchschnittlicher Profilreichhaltigkeit“.

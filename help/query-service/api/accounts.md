@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; Query Service; API-Handbuch; Query Service; Query Service-Konten; Konten;
+keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Service;API-Handbuch;Abfrage-Service;Abfrage-Service-Konten;Konten;
 solution: Experience Platform
-title: Konto-API-Endpunkt
-description: Sie können ein Query Service-Konto für beständig erstellen.
+title: API-Endpunkt für Konten
+description: Sie können ein Abfrage-Service-Konto für persistente erstellen.
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Konten-Endpunkt
 
-In Adobe Experience Platform Query Service werden Konten verwendet, um nicht ablaufende Anmeldeinformationen zu erstellen, die Sie mit externen SQL-Clients verwenden können. Sie können den Endpunkt `/accounts` in der Query Service-API verwenden, mit dem Sie programmatisch Ihre Query Service-Integrationskonten erstellen, abrufen, bearbeiten und löschen können (auch als technisches Konto bezeichnet).
+Im Abfrage-Service von Adobe Experience Platform werden Konten verwendet, um nicht ablaufende Anmeldeinformationen zu erstellen, die Sie mit externen SQL-Clients verwenden können. Sie können den `/accounts`-Endpunkt in der Abfrage-Service-API verwenden, mit dem Sie programmgesteuert Ihre Query Service-Integrationskonten (auch als technisches Konto bezeichnet) erstellen, abrufen, bearbeiten und löschen können.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der Query Service-API. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der Abfrage-Service-API. Bevor Sie fortfahren, lesen Sie den Abschnitt [Erste Schritte](./getting-started.md). Dort erhalten Sie wichtige Informationen darüber, wie Sie die API aufrufen und die erforderlichen Kopfzeilen sowie Beispiele für API-Aufrufe lesen können.
 
 ## Konto erstellen
 
-Sie können ein Integrationskonto für Query Service erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/accounts` senden.
+Sie können ein Query Service-Integrationskonto erstellen, indem Sie eine POST-Anfrage an den `/accounts`-Endpunkt senden.
 
 **API-Format**
 
@@ -32,7 +32,7 @@ POST /accounts
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird ein neues Query Service-Integrationskonto für Ihre Organisation erstellt.
+Mit der folgenden Anfrage wird ein neues Query Service-Integrationskonto für Ihr Unternehmen erstellt.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
@@ -54,12 +54,12 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | -------- | ----------- |
 | `accountName` | **Erforderlich** Der Name des Query Service-Integrationskontos. |
 | `assignedToUser` | **Erforderlich** Die Adobe ID, für die das Query Service-Integrationskonto erstellt wird. |
-| `credential` | *(Optional)* Die Berechtigung, die für die Integration von Query Service verwendet wird. Wenn kein Wert angegeben wird, generiert das System automatisch eine Berechtigung für Sie. |
-| `description` | *(Optional)* Eine Beschreibung für das Query Service-Integrationskonto. |
+| `credential` | *(Optional)* Die Berechtigung, die für die Integration des Abfrage-Service verwendet wird. Wenn nicht anders angegeben, generiert das System automatisch eine Berechtigung für Sie. |
+| `description` | *(Optional)* Eine Beschreibung für das Integrationskonto des Abfrage-Service. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu erstellten Query Service-Integrationskonto zurück. Sie können diese Kontodetails verwenden, um Query Service mit externen Clients zu verbinden.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu Ihrem neu erstellten Query Service-Integrationskonto zurückgegeben. Sie können diese Kontodetails verwenden, um den Abfrage-Service mit externen Clients zu verbinden.
 
 ```json
 {
@@ -72,12 +72,12 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu erstellte
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `technicalAccountName` | Der Name Ihres Query Service-Integrationskontos. |
-| `technicalAccountId` | Die ID Ihres Query Service-Integrationskontos. Dies stellt zusammen mit dem `credential` Ihr Kennwort für Ihr Konto zusammen. |
-| `credential` | Die Berechtigung Ihres Query Service-Integrationskontos. Dies stellt zusammen mit dem `technicalAccountId` Ihr Kennwort für Ihr Konto zusammen. |
+| `technicalAccountId` | Die ID Ihres Query Service-Integrationskontos. Zusammen mit dem `credential` bildet dies Ihr Passwort für Ihr Konto. |
+| `credential` | Die Anmeldedaten für Ihr Query Service-Integrationskonto. Zusammen mit dem `technicalAccountId` bildet dies Ihr Passwort für Ihr Konto. |
 
-## Konto aktualisieren
+## Aktualisieren eines Kontos
 
-Sie können Ihr Query Service-Integrationskonto aktualisieren, indem Sie eine PUT-Anfrage an den `/accounts` -Endpunkt senden.
+Sie können Ihr Query Service-Integrationskonto aktualisieren, indem Sie eine PUT-Anfrage an den `/accounts`-Endpunkt senden.
 
 **API-Format**
 
@@ -87,7 +87,7 @@ POST /accounts/{ACCOUNT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | Die ID des Query Service-Integrationskontos, das Sie aktualisieren möchten. |
+| `{ACCOUNT_ID}` | Die ID des Abfrage-Service-Integrationskontos, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -111,12 +111,12 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 | -------- | ----------- |
 | `accountName` | *(Optional)* Der aktualisierte Name für das Query Service-Integrationskonto. |
 | `assignedToUser` | *(Optional)* Die aktualisierte Adobe ID, mit der das Query Service-Integrationskonto verknüpft ist. |
-| `credential` | *(Optional)* Die aktualisierte Berechtigung für Ihr Query Service-Konto. |
-| `description` | *(Optional)* Die aktualisierte Beschreibung für das Query Service-Integrationskonto. |
+| `credential` | *(Optional)* Die aktualisierte Berechtigung für Ihr Abfrage-Service-Konto. |
+| `description` | *(Optional)* Die aktualisierte Beschreibung für das Integrationskonto des Abfrage-Services. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem neu aktualisierten Query Service-Integrationskonto zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Informationen zu Ihrem neu aktualisierten Query Service-Integrationskonto zurückgegeben.
 
 ```json
 {
@@ -135,7 +135,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Informationen zu Ihrem ne
 
 ## Alle Konten auflisten
 
-Sie können eine Liste aller Query Service-Integrationskonten abrufen, indem Sie eine GET-Anfrage an den `/accounts` -Endpunkt senden.
+Sie können eine Liste aller Query Service-Integrationskonten abrufen, indem Sie eine GET-Anfrage an den `/accounts`-Endpunkt senden.
 
 **API-Format**
 
@@ -155,7 +155,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste aller Query Service-Integrationskonten zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Liste aller Query Service-Integrationskonten zurückgegeben.
 
 ```json
 {
@@ -204,9 +204,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste aller Query S
 }
 ```
 
-## Konto löschen
+## Löschen eines Kontos
 
-Sie können Ihr Integrationskonto für Query Service löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/accounts` senden.
+Sie können Ihr Query Service-Integrationskonto löschen, indem Sie eine DELETE-Anfrage an den `/accounts`-Endpunkt senden.
 
 **API-Format**
 
@@ -216,7 +216,7 @@ DELETE /accounts/{ACCOUNT_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | Die ID des Query Service-Integrationskontos, das Sie löschen möchten. |
+| `{ACCOUNT_ID}` | Die ID des Abfrage-Service-Integrationskontos, das Sie löschen möchten. |
 
 **Anfrage**
 
@@ -230,7 +230,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Meldung zurück, dass das Konto erfolgreich gelöscht wurde.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit einer Meldung zurückgegeben, die besagt, dass das Konto erfolgreich gelöscht wurde.
 
 ```json
 {

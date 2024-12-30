@@ -11,7 +11,7 @@ ht-degree: 97%
 
 ---
 
-# Governance-Richtlinien in Customer AI
+# Governance-Richtlinien in Kunden-KI
 
 Nachdem Sie den Workflow zum Erstellen eines Modells und Senden der Modellkonfiguration abgeschlossen haben, wird durch die [Durchsetzung von Richtlinien](/help/data-governance/enforcement/auto-enforcement.md) überprüft, ob Verstöße vorliegen. Wenn ein Richtlinienverstoß auftritt, wird ein Popup angezeigt, das angibt, dass eine oder mehrere Richtlinien verletzt wurden. Dadurch soll sichergestellt werden, dass Ihre Datenvorgänge und Marketing-Aktionen in Platform mit Datennutzungsrichtlinien konform sind.
 
