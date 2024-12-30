@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;Attribute-Based Access Control;attributbasierte Zugriffssteuerung
-title: Erste Schritte mit der attributbasierten Access Control-API
-description: Mit der Attributbasierten Access Control-API können Sie Rollen und Zugriffsrichtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+keywords: Experience Platform;Startseite;beliebte Themen;attributbasierte Zugriffssteuerung;attributbasierte Zugriffssteuerung
+title: Erste Schritte mit der attributbasierten Zugriffssteuerungs-API
+description: Mit der attributbasierten Zugriffssteuerungs-API können Sie Rollen und Zugriffsrichtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -13,7 +13,7 @@ ht-degree: 69%
 
 # Erste Schritte mit der attributbasierten Zugriffssteuerungs-API
 
-Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der attributbasierten Zugriffssteuerungs-API unterstützen, um Rollen, Produkte, Berechtigungskategorien und Berechtigungssätze in Adobe Experience Platform zu verwalten, sowie Beispiel-API-Aufrufe für die Durchführung verschiedener Vorgänge.
+In diesem Entwicklerhandbuch finden Sie Anweisungen zur Verwendung der attributbasierten Zugriffssteuerungs-API zum Verwalten von Rollen, Produkten, Berechtigungskategorien und Berechtigungssätzen in Adobe Experience Platform sowie Beispiele für API-Aufrufe zum Ausführen verschiedener Vorgänge.
 
 ## Lesen von Beispiel-API-Aufrufen
 
@@ -39,7 +39,7 @@ Für alle Anfragen mit einer Payload (POST, PUT, PATCH) wird eine zusätzliche K
 
 Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie nun das restliche Entwicklerhandbuch lesen. Jeder Abschnitt enthält wichtige Informationen zu ihren Endpunkten und veranschaulicht Beispiel-API-Aufrufe zur Durchführung von CRUD-Vorgängen. Zu jedem Aufruf gehören das allgemeine API-Format, eine Beispielanfrage mit erforderlichen Kopfzeilen und ordnungsgemäß formatierten Payloads sowie eine Beispielantwort eines erfolgreichen Aufrufs.
 
-In den folgenden API-Tutorials erfahren Sie, wie Sie Aufrufe an die attributbasierte Zugriffssteuerungs-API starten:
+In den folgenden API-Tutorials erfahren Sie, wie Sie Aufrufe an die attributbasierte Zugriffssteuerungs-API durchführen:
 
-* [Benutzerendpunkt](./roles.md)
-* [Endpunkt &quot;Produkte&quot;](./products.md)
+* [Roles-Endpunkt](./roles.md)
+* [Produkt-Endpunkt](./products.md)

@@ -16,10 +16,10 @@ ht-degree: 85%
 # Zugangssteuerung {#access-control}
 
 * [Zugangssteuerung – Übersicht](home.md)
-* Attributbasierte Zugriffssteuerung {#abac}
+* Attributbasierte {#abac}
    * [Übersicht](abac/overview.md)
    * [End-to-End-Handbuch](abac/end-to-end-guide.md)
-   * [Verwenden von Zugriffsbeschriftungen zum Verwalten des Benutzerzugriffs auf Ziel-Datenflüsse](/help/access-control/abac/apply-access-labels-destinations.md)
+   * [Verwenden von Zugriffsbeschriftungen zur Verwaltung des Benutzerzugriffs auf Zieldatenflüsse](/help/access-control/abac/apply-access-labels-destinations.md)
    * Berechtigungen {#permissions-ui}
       * [Durchsuchen](abac/ui/browse.md)
       * [Beschriftungen](abac/ui/labels.md)
@@ -28,10 +28,10 @@ ht-degree: 85%
       * [Rollen](abac/ui/roles.md)
       * [Sandboxes](abac/ui/sandboxes.md)
       * [Benutzende](abac/ui/users.md)
-   * Berechtigungs-Manager {#permissions-manager}
+   * Berechtigungs-Manager-{#permissions-manager}
       * [Übersicht](abac/permission-manager/overview.md)
       * [Berechtigungen](abac/permission-manager/permissions.md)
-   * Attributbasierte Zugriffssteuerungs-API {#abac-api}
+   * Attributbasierte Zugriffssteuerung - API-{#abac-api}
       * [Übersicht](abac/api/overview.md)
       * [Erste Schritte](abac/api/getting-started.md)
       * [Rollen](abac/api/roles.md)

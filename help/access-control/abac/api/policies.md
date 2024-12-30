@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Control;attribute-based access control
+keywords: Experience Platform;Startseite;beliebte Themen;api;attributbasierte Zugriffssteuerung;attributbasierte Zugriffssteuerung
 solution: Experience Platform
-title: API-Endpunkt "Access Control Policies"
-description: Mit dem Endpunkt /policies in der API für die attributbasierte Zugriffssteuerung können Sie Richtlinien in Adobe Experience Platform programmgesteuert verwalten.
+title: API-Endpunkt für Zugriffssteuerungsrichtlinien
+description: Mit dem Endpunkt /policies in der attributbasierten Zugriffssteuerungs-API können Sie Richtlinien in Adobe Experience Platform programmgesteuert verwalten.
 role: Developer
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
 source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
@@ -12,25 +12,25 @@ ht-degree: 10%
 
 ---
 
-# Endpunkt &quot;Zugriffskontrollrichtlinien&quot;
+# Endpunkt für Zugriffssteuerungsrichtlinien
 
 >[!NOTE]
 >
->Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über die Rolle &quot;org admin&quot;für die angeforderte Organisation verfügen.
+>Wenn ein Benutzer-Token übergeben wird, muss der Benutzer des Tokens über eine „org admin“-Rolle für die angeforderte Organisation verfügen.
 
-Zugriffskontrollrichtlinien sind Anweisungen, die Attribute zusammenführen, um zulässige und unzulässige Maßnahmen festzulegen. Diese Richtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben. Mit dem Endpunkt `/policies` in der attributbasierten Zugriffssteuerungs-API können Sie Richtlinien programmgesteuert verwalten, einschließlich Informationen zu den Regeln, die sie steuern, sowie zu den jeweiligen Subjektbedingungen.
+Zugriffssteuerungsrichtlinien sind Anweisungen, die Attribute zusammenführen, um zulässige und unzulässige Aktionen festzulegen. Diese Richtlinien können entweder lokal oder global sein und andere Richtlinien überschreiben. Der `/policies`-Endpunkt in der attributbasierten Zugriffssteuerungs-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Richtlinien, einschließlich Informationen zu den für sie geltenden Regeln und zu ihren jeweiligen Betreffbedingungen.
 
 >[!IMPORTANT]
 >
->Dieser Endpunkt darf nicht mit dem `/policies` -Endpunkt in der [Policy Service-API](../../../data-governance/api/policies.md) verwechselt werden, der zum Verwalten von Datennutzungsrichtlinien verwendet wird.
+>Dieser Endpunkt ist nicht mit dem `/policies`-Endpunkt in der [Policy Service API](../../../data-governance/api/policies.md) zu verwechseln, der zur Verwaltung von Datennutzungsrichtlinien verwendet wird.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der API für die attributbasierte Zugriffskontrolle. Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der attributbasierten Zugriffssteuerungs-API. Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
 ## Abrufen einer Liste von Richtlinien {#list}
 
-Stellen Sie eine GET-Anfrage an den `/policies` -Endpunkt, um alle in Ihrem Unternehmen vorhandenen Richtlinien aufzulisten.
+Stellen Sie eine GET-Anfrage an den `/policies`-Endpunkt, um alle in Ihrem Unternehmen vorhandenen Richtlinien aufzulisten.
 
 **API-Format**
 
@@ -40,7 +40,7 @@ GET /policies
 
 **Anfrage**
 
-Die folgende Anfrage ruft eine Liste der vorhandenen Richtlinien ab.
+Mit der folgenden Anfrage wird eine Liste der vorhandenen Richtlinien abgerufen.
 
 ```shell
 curl -X GET \
@@ -52,7 +52,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste der vorhandenen Richtlinien zurück.
+Eine erfolgreiche Antwort gibt eine Liste vorhandener Richtlinien zurück.
 
 ```json
 {
@@ -133,25 +133,25 @@ Eine erfolgreiche Antwort gibt eine Liste der vorhandenen Richtlinien zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die einer Richtlinie entspricht. Diese Kennung wird automatisch generiert und kann zum Nachschlagen, Aktualisieren und Löschen einer Richtlinie verwendet werden. |
-| `imsOrgId` | Die Organisation, auf die die abgefragte Richtlinie zugreifen kann. |
+| `id` | Die ID, die einer Richtlinie entspricht. Diese Kennung wird automatisch generiert und kann zum Suchen, Aktualisieren und Löschen einer Richtlinie verwendet werden. |
+| `imsOrgId` | Die Organisation, in der die abgefragte Richtlinie verfügbar ist. |
 | `createdBy` | Die ID des Benutzers, der die Richtlinie erstellt hat. |
-| `createdAt` | Der Zeitpunkt der Erstellung der Richtlinie. Die Eigenschaft `createdAt` wird im Unix-Epoch-Zeitstempel angezeigt. |
+| `createdAt` | Der Zeitpunkt, zu dem die Richtlinie erstellt wurde. Die `createdAt`-Eigenschaft wird im Unix-Epochenzeitstempel angezeigt. |
 | `modifiedBy` | Die ID des Benutzers, der die Richtlinie zuletzt aktualisiert hat. |
-| `modifiedAt` | Der Zeitpunkt der letzten Aktualisierung der Richtlinie. Die Eigenschaft `modifiedAt` wird im Unix-Epoch-Zeitstempel angezeigt. |
+| `modifiedAt` | Der Zeitpunkt, zu dem die Richtlinie zuletzt aktualisiert wurde. Die `modifiedAt`-Eigenschaft wird im Unix-Epochenzeitstempel angezeigt. |
 | `name` | Der Name der Richtlinie. |
 | `description` | (Optional) Eine Eigenschaft, die hinzugefügt werden kann, um weitere Informationen zu einer bestimmten Richtlinie bereitzustellen. |
 | `status` | Der aktuelle Status einer Richtlinie. Diese Eigenschaft definiert, ob eine Richtlinie derzeit `active` oder `inactive` ist. |
-| `subjectCondition` | Die für einen Betreff geltenden Bedingungen. Ein Betreff ist ein Benutzer mit bestimmten Attributen, der Zugriff auf eine Ressource anfordert, um eine Aktion durchzuführen. In diesem Fall sind `subjectCondition` abfrageähnliche Bedingungen, die auf die Betreffattribute angewendet werden. |
-| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreffende erfolgreich eine Aktion für die Ressource durchführt. |
-| `rules.effect` | Der Effekt, der nach Berücksichtigung der Werte für `action`, `condition` und `resource` auftritt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
-| `rules.resource` | Das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht.  Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
-| `rules.condition` | Die für eine Ressource geltenden Bedingungen. Wenn es sich beispielsweise bei einer Ressource um ein Schema handelt, können für ein Schema bestimmte Bezeichnungen angewendet werden, die dazu beitragen, dass eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
-| `rules.action` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
+| `subjectCondition` | Die Bedingungen, die auf ein Subjekt angewendet werden. Ein Subjekt ist ein Benutzer mit bestimmten Attributen, der Zugriff auf eine Ressource anfordert, um eine Aktion durchzuführen. In diesem Fall sind `subjectCondition` abfragebasierte Bedingungen, die auf die Betreffattribute angewendet werden. |
+| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreff erfolgreich eine Aktion auf der Ressource durchführen kann. |
+| `rules.effect` | Der Effekt, der sich nach der Berücksichtigung von Werten für `action`, `condition` und `resource` ergibt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
+| `rules.resource` | Das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht.  Bei Ressourcen kann es sich um Dateien, Anwendungen, Server oder sogar APIs handeln. |
+| `rules.condition` | Die auf eine Ressource angewendeten Bedingungen. Wenn eine Ressource beispielsweise ein Schema ist, können auf ein Schema bestimmte Kennzeichnungen angewendet werden, die dazu beitragen, ob eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
+| `rules.action` | Die Aktion, die ein Subjekt für eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
 
 ## Richtliniendetails nach ID nachschlagen {#lookup}
 
-Stellen Sie eine GET-Anfrage an den `/policies` -Endpunkt und geben Sie dabei eine Richtlinien-ID im Anfragepfad ein, um Informationen zu dieser einzelnen Richtlinie abzurufen.
+Stellen Sie eine GET-Anfrage an den `/policies`-Endpunkt, während Sie im Anfragepfad eine Richtlinien-ID angeben, um Informationen über diese einzelne Richtlinie abzurufen.
 
 **API-Format**
 
@@ -177,7 +177,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Anfrage werden Informationen zur ID der abgefragten Richtlinie zurückgegeben.
+Bei einer erfolgreichen Anfrage werden Informationen zur abgefragten Richtlinien-ID zurückgegeben.
 
 ```json
 {
@@ -229,26 +229,26 @@ Bei einer erfolgreichen Anfrage werden Informationen zur ID der abgefragten Rich
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die einer Richtlinie entspricht. Diese Kennung wird automatisch generiert und kann zum Nachschlagen, Aktualisieren und Löschen einer Richtlinie verwendet werden. |
-| `imsOrgId` | Die Organisation, auf die die abgefragte Richtlinie zugreifen kann. |
+| `id` | Die ID, die einer Richtlinie entspricht. Diese Kennung wird automatisch generiert und kann zum Suchen, Aktualisieren und Löschen einer Richtlinie verwendet werden. |
+| `imsOrgId` | Die Organisation, in der die abgefragte Richtlinie verfügbar ist. |
 | `createdBy` | Die ID des Benutzers, der die Richtlinie erstellt hat. |
-| `createdAt` | Der Zeitpunkt der Erstellung der Richtlinie. Die Eigenschaft `createdAt` wird im Unix-Epoch-Zeitstempel angezeigt. |
+| `createdAt` | Der Zeitpunkt, zu dem die Richtlinie erstellt wurde. Die `createdAt`-Eigenschaft wird im Unix-Epochenzeitstempel angezeigt. |
 | `modifiedBy` | Die ID des Benutzers, der die Richtlinie zuletzt aktualisiert hat. |
-| `modifiedAt` | Der Zeitpunkt der letzten Aktualisierung der Richtlinie. Die Eigenschaft `modifiedAt` wird im Unix-Epoch-Zeitstempel angezeigt. |
+| `modifiedAt` | Der Zeitpunkt, zu dem die Richtlinie zuletzt aktualisiert wurde. Die `modifiedAt`-Eigenschaft wird im Unix-Epochenzeitstempel angezeigt. |
 | `name` | Der Name der Richtlinie. |
 | `description` | (Optional) Eine Eigenschaft, die hinzugefügt werden kann, um weitere Informationen zu einer bestimmten Richtlinie bereitzustellen. |
 | `status` | Der aktuelle Status einer Richtlinie. Diese Eigenschaft definiert, ob eine Richtlinie derzeit `active` oder `inactive` ist. |
-| `subjectCondition` | Die für einen Betreff geltenden Bedingungen. Ein Betreff ist ein Benutzer mit bestimmten Attributen, der Zugriff auf eine Ressource anfordert, um eine Aktion durchzuführen. In diesem Fall sind `subjectCondition` abfrageähnliche Bedingungen, die auf die Betreffattribute angewendet werden. |
-| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreffende erfolgreich eine Aktion für die Ressource durchführt. |
-| `rules.effect` | Der Effekt, der nach Berücksichtigung der Werte für `action`, `condition` und `resource` auftritt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
-| `rules.resource` | Das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht.  Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
-| `rules.condition` | Die für eine Ressource geltenden Bedingungen. Wenn es sich beispielsweise bei einer Ressource um ein Schema handelt, können für ein Schema bestimmte Bezeichnungen angewendet werden, die dazu beitragen, dass eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
-| `rules.action` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
+| `subjectCondition` | Die Bedingungen, die auf ein Subjekt angewendet werden. Ein Subjekt ist ein Benutzer mit bestimmten Attributen, der Zugriff auf eine Ressource anfordert, um eine Aktion durchzuführen. In diesem Fall sind `subjectCondition` abfragebasierte Bedingungen, die auf die Betreffattribute angewendet werden. |
+| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreff erfolgreich eine Aktion auf der Ressource durchführen kann. |
+| `rules.effect` | Der Effekt, der sich nach der Berücksichtigung von Werten für `action`, `condition` und `resource` ergibt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
+| `rules.resource` | Das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht.  Bei Ressourcen kann es sich um Dateien, Anwendungen, Server oder sogar APIs handeln. |
+| `rules.condition` | Die auf eine Ressource angewendeten Bedingungen. Wenn eine Ressource beispielsweise ein Schema ist, können auf ein Schema bestimmte Kennzeichnungen angewendet werden, die dazu beitragen, ob eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
+| `rules.action` | Die Aktion, die ein Subjekt für eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
 
 
 ## Erstellen einer Richtlinie {#create}
 
-Um eine neue Richtlinie zu erstellen, stellen Sie eine POST-Anfrage an den `/policies` -Endpunkt.
+Um eine neue Richtlinie zu erstellen, stellen Sie eine POST-Anfrage an den `/policies`-Endpunkt.
 
 **API-Format**
 
@@ -258,7 +258,7 @@ POST /policies
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Richtlinie mit dem Namen &quot;`acme-integration-policy`&quot;.
+Die folgende Anfrage erstellt eine neue Richtlinie mit dem Namen `acme-integration-policy`.
 
 ```shell
 curl -X POST \
@@ -288,15 +288,15 @@ curl -X POST \
 | `name` | Der Name der Richtlinie. |
 | `description` | (Optional) Eine Eigenschaft, die hinzugefügt werden kann, um weitere Informationen zu einer bestimmten Richtlinie bereitzustellen. |
 | `imsOrgId` | Die Organisation, die die Richtlinie enthält. |
-| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreffende erfolgreich eine Aktion für die Ressource durchführt. |
-| `rules.effect` | Der Effekt, der nach Berücksichtigung der Werte für `action`, `condition` und `resource` auftritt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
-| `rules.resource` | Das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht.  Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
-| `rules.condition` | Die für eine Ressource geltenden Bedingungen. Wenn es sich beispielsweise bei einer Ressource um ein Schema handelt, können für ein Schema bestimmte Bezeichnungen angewendet werden, die dazu beitragen, dass eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
-| `rules.action` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
+| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreff erfolgreich eine Aktion auf der Ressource durchführen kann. |
+| `rules.effect` | Der Effekt, der sich nach der Berücksichtigung von Werten für `action`, `condition` und `resource` ergibt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
+| `rules.resource` | Das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht.  Bei Ressourcen kann es sich um Dateien, Anwendungen, Server oder sogar APIs handeln. |
+| `rules.condition` | Die auf eine Ressource angewendeten Bedingungen. Wenn eine Ressource beispielsweise ein Schema ist, können auf ein Schema bestimmte Kennzeichnungen angewendet werden, die dazu beitragen, ob eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
+| `rules.action` | Die Aktion, die ein Subjekt für eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
 
 **Antwort**
 
-Bei einer erfolgreichen Anfrage wird die neu erstellte Richtlinie zurückgegeben, einschließlich der eindeutigen Richtlinien-ID und der zugehörigen Regeln.
+Eine erfolgreiche Anfrage gibt die neu erstellte Richtlinie zurück, einschließlich der eindeutigen Richtlinien-ID und der zugehörigen Regeln.
 
 ```json
 {
@@ -326,18 +326,18 @@ Bei einer erfolgreichen Anfrage wird die neu erstellte Richtlinie zurückgegeben
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung, die einer Richtlinie entspricht. Diese Kennung wird automatisch generiert und kann zum Nachschlagen, Aktualisieren und Löschen einer Richtlinie verwendet werden. |
+| `id` | Die ID, die einer Richtlinie entspricht. Diese Kennung wird automatisch generiert und kann zum Suchen, Aktualisieren und Löschen einer Richtlinie verwendet werden. |
 | `name` | Der Name einer Richtlinie. |
-| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreffende erfolgreich eine Aktion für die Ressource durchführt. |
-| `rules.effect` | Der Effekt, der nach Berücksichtigung der Werte für `action`, `condition` und `resource` auftritt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
-| `rules.resource` | Das Asset oder Objekt, auf das ein Betreff zugreifen kann oder nicht.  Ressourcen können Dateien, Anwendungen, Server oder sogar APIs sein. |
-| `rules.condition` | Die für eine Ressource geltenden Bedingungen. Wenn es sich beispielsweise bei einer Ressource um ein Schema handelt, können für ein Schema bestimmte Bezeichnungen angewendet werden, die dazu beitragen, dass eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
-| `rules.action` | Die Aktion, die ein Betreff gegen eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
+| `rules` | Der Regelsatz, der eine Richtlinie definiert. Regeln definieren, welche Attributkombinationen zulässig sind, damit der Betreff erfolgreich eine Aktion auf der Ressource durchführen kann. |
+| `rules.effect` | Der Effekt, der sich nach der Berücksichtigung von Werten für `action`, `condition` und `resource` ergibt. Mögliche Werte sind: `permit`, `deny` oder `indeterminate`. |
+| `rules.resource` | Das Asset oder Objekt, auf das ein Subjekt zugreifen kann oder nicht.  Bei Ressourcen kann es sich um Dateien, Anwendungen, Server oder sogar APIs handeln. |
+| `rules.condition` | Die auf eine Ressource angewendeten Bedingungen. Wenn eine Ressource beispielsweise ein Schema ist, können auf ein Schema bestimmte Kennzeichnungen angewendet werden, die dazu beitragen, ob eine Aktion gegen dieses Schema zulässig oder unzulässig ist. |
+| `rules.action` | Die Aktion, die ein Subjekt für eine abgefragte Ressource ausführen darf. Mögliche Werte sind: `read`, `create`, `edit` und `delete`. |
 
 
 ## Aktualisieren einer Richtlinie nach Richtlinien-ID {#put}
 
-Um die Regeln einer einzelnen Richtlinie zu aktualisieren, stellen Sie eine PUT-Anfrage an den `/policies` -Endpunkt und geben Sie dabei die ID der Richtlinie an, die Sie im Anfragepfad aktualisieren möchten.
+Um die Regeln einer einzelnen Richtlinie zu aktualisieren, stellen Sie eine PUT-Anfrage an den `/policies`-Endpunkt, wobei Sie im Anfragepfad die ID der Richtlinie angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -404,9 +404,9 @@ Eine erfolgreiche Antwort gibt die aktualisierte Richtlinie zurück.
 }
 ```
 
-## Aktualisieren von Richtlinieneigenschaften {#patch}
+## Richtlinieneigenschaften aktualisieren {#patch}
 
-Um die Eigenschaften einer einzelnen Richtlinie zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/policies` -Endpunkt und geben Sie dabei die ID der Richtlinie an, die Sie im Anfragepfad aktualisieren möchten.
+Um die Eigenschaften einer einzelnen Richtlinie zu aktualisieren, stellen Sie eine PATCH-Anfrage an den `/policies`-Endpunkt, wobei Sie im Anfragepfad die ID der Richtlinie angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -420,7 +420,7 @@ PATCH /policies/{POLICY_ID}
 
 **Anfrage**
 
-Die folgende Anfrage ersetzt den Wert von `/description` in der Richtlinien-ID `c3863937-5d40-448d-a7be-416e538f955e`.
+Die folgende Anfrage ersetzt den Wert `/description` in der Richtlinien-ID `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X PATCH \
@@ -441,13 +441,13 @@ curl -X PATCH \
 
 | Funktionsweise | Beschreibung |
 | --- | --- |
-| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren der Rolle erforderliche Aktion definiert wird. Die Operationen umfassen `add`, `replace` und `remove`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zum Aktualisieren der Rolle erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Der Pfad des zu aktualisierenden Parameters. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird die abgefragte Richtlinien-ID mit aktualisierter Beschreibung zurückgegeben.
+Eine erfolgreiche Antwort gibt die abgefragte Richtlinien-ID mit der aktualisierten Beschreibung zurück.
 
 ```json
 {
@@ -477,7 +477,7 @@ Bei einer erfolgreichen Antwort wird die abgefragte Richtlinien-ID mit aktualisi
 
 ## Löschen einer Richtlinie {#delete}
 
-Um eine Richtlinie zu löschen, stellen Sie eine DELETE-Anfrage an den `/policies` -Endpunkt und geben Sie dabei die ID der Richtlinie an, die Sie löschen möchten.
+Um eine Richtlinie zu löschen, stellen Sie eine DELETE-Anfrage an den `/policies`-Endpunkt, wobei Sie die ID der Richtlinie angeben, die Sie löschen möchten.
 
 **API-Format**
 
@@ -491,7 +491,7 @@ DELETE /policies/{POLICY_ID}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Richtlinie mit der ID `c3863937-5d40-448d-a7be-416e538f955e` gelöscht.
+Die folgende Anfrage löscht die Richtlinie mit der ID `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X DELETE \
@@ -505,4 +505,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für die Richtlinie ausführen. Sie erhalten den HTTP-Status 404 (Nicht gefunden), da die Richtlinie aus der Verwaltung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an die Richtlinie stellen. Sie erhalten den HTTP-Status 404 (Nicht gefunden), da die Richtlinie aus der Administration entfernt wurde.
